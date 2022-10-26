@@ -43,7 +43,7 @@ A meeting lifecycle includes pre-meeting, in-meeting, and post-meeting app exper
 
 ## User types in Teams
 
-Teams supports user types, such as in-tenant, guest, federated or external user in a Teams meeting. Each user type can have one of the [user roles in Teams meeting](#user-roles-in-teams-meeting).
+Teams supports user types, such as in-tenant, [guest](/microsoftteams/non-standard-users#guests), [federated or external](/microsoftteams/non-standard-users#federated-users), [anonymous](/microsoftteams/non-standard-users#anonymous-users) user in a Teams meeting. Each user type can have one of the [user roles in Teams meeting](#user-roles-in-teams-meeting).
 
 > [!NOTE]
 >
@@ -58,7 +58,9 @@ The following list details the various user types along with their accessibility
     > [!NOTE]
     > Teams users can add apps when they host meetings or chats with other organizations. When an external users share apps to the meeting, all the user can access the app. The host organization's data policies and data sharing practices of the third-party apps shared by that user's organization, will be in effect.
 
-* **Anonymous**: Anonymous users don't have an Azure AD identity and aren't federated with a tenant. The anonymous participants are like external users, but their identity isn't shown in the meeting. Anonymous users can't access apps in a meeting window. An anonymous user can be a presenter or an attendee, but can't be an organizer.
+* **Anonymous**: Anonymous users don't have an Azure AD identity and aren't federated with a tenant. The anonymous participants are like external users, but their identity isn't shown in the meeting. Anonymous users can access apps in a meeting window. An anonymous user can be a presenter or an attendee, but can't be an organizer.
+
+    **Anonymous user authentication flow**: As anonymous users aren't AAD accounts, skype token isn't available for third-party apps. This means that `getAuthToken` in client SDK will fail if called. Ensure to detect anonymous users in the meetings and display the correct experiences for the anonymous users. You can use [Get user context](~/tabs/how-to/access-teams-context.md#get-context-by-using-the-microsoft-teams-javascript-library) API to determine whether user is anonymous or not and redirect to the SSO page of the app.
 
     > [!NOTE]
     > Anonymous users inherit the global default user-level app permission policy. For more information, see [manage Apps](/microsoftteams/non-standard-users#anonymous-user-in-meetings-access).
