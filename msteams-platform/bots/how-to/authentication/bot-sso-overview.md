@@ -75,4 +75,16 @@ Flow for authentication app user being authenticated for the first time:
     1. The Sign in page is rendered.
     1. The app user signs in and granted access to the bot from Azure AD.
 
+Flow for authenticating app user at subsequent bot access:
+
+1. An app user attempts to access the Teams bot app by sending a message to the bot service.
+    1. The message that app user sends is received by Teams client, which sends it to the bot service.
+    1. If the app user's consent isn't needed, the bot service receives a token, and then it's sent to the Bot Framework token service.
+    1. If the app user has used the bot service earlier, the token is saved in the Bot Framework token service.
+    1. Check for existing valid token for the app user: The Bot Framework token checks for existing token for the app user. If it exists, the app user is given access. If not, it checks the token cache for a valid token. If a token exists that hasn't expired, the app user is given access.
+ 1. If the token has expired, the authentication falls back to the sign-in prompt and the app user must sign in to use the bot app.
+    1. The Sign in button pops up in Teams.
+    1. The Sign in page is rendered.
+    1. The app user signs in and granted access to the bot from Azure AD.
+
 For a bot or a message extension app, the bot app sends an OAuth Card to Teams Client. This card is used to get access token from Azure AD using `tokenExchangeResource`. A bot or message extension app can have more than one active endpoint. The first time app user would receive consent request for all active endpoints. Following app user's consent, Teams Client sends the token received from Azure AD to the bot app using `tokenExchange`. The bot app can then parse the token to retrieve the app user's information, such as email address.
