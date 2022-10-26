@@ -22,7 +22,7 @@ A workflow bot allows users to interact with an Adaptive Card, enabled by the Ad
 
 Users can create a workflow bot to respond to Adaptive Card that is triggered by end users. Adaptive Card action handler provides one or more buttons in the card to ask for user's input by calling APIs. The APIs send another Adaptive Card in conversation to respond to the respective card action.
 
-:::image type="content" source="../../../assets/images/sbs-workflow-bot/sbs-workflow-bot-final-output.png" alt-text="Workflow bot final output with a button":::
+:::image type="content" source="../../../assets/images/sbs-workflow-bot/sbs-workflow-bot-final-output.png" alt-text="Workflow bot final output with a button" lightbox="../../../assets/images/sbs-workflow-bot/sbs-workflow-bot-final-output.png" :::
 
 ## Card action handler
 
