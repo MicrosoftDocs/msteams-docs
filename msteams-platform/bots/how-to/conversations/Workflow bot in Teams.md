@@ -17,8 +17,8 @@ A workflow bot allows users to interact with an Adaptive Card, enabled by the Ad
 1. Provides user-specific views, and is always up-to-date.
 1. Simplifies programming model with TeamsFx SDK.
 
-> [!NOTE]
-> You can choose the installation target when adding the app. For more install options, see [Distribute your Teams app](../../../concepts/deploy-and-publish/apps-publish-overview.md).
+   > [!NOTE]
+   > You can choose the installation target when adding the app. For more install options, see [Distribute your Teams app](../../../concepts/deploy-and-publish/apps-publish-overview.md).
 
 Users can create a workflow bot to respond to Adaptive Card that is triggered by end users. Adaptive Card action handler provides one or more buttons in the card to ask for user's input by calling APIs. The APIs send another Adaptive Card in conversation to respond to the respective card action.
 
@@ -33,7 +33,7 @@ The following diagram illustrates how to respond to an Adaptive Card action with
 :::image type="content" source="../../../assets/images/sbs-workflow-bot/sbs-workflow-bot-action-card.png" alt-text="workflow bot card action handler diagram" lightbox="../../../assets/images/sbs-workflow-bot/sbs-workflow-bot-action-card.png":::
 
 * **Action card**: The card where you define your action that users can invoke (DoStuff button).
-* **Card action handler**: Triggered when users invoke the corresponding card action (its `triggerVerb` is same as the `verb` property in adaptive card action). It can send a response card to respond to the action.
+* **Card action handler**: Triggered when users invoke the corresponding card action (its `triggerVerb` is same as the `verb` property in Adaptive Card action). It can send a response card to respond to the action.
 * **Response card**: The card which respond to the action when user invokes it from the action card.
 
 To handle card actions with TeamsFx SDK, each card action handler should implement `TeamsFxAdaptiveCardActionHandler` interface. This is the interface definition for `TeamsFxAdaptiveCardActionHandler`:
@@ -87,7 +87,7 @@ Steps you can follow to add card actions:
 
 ### Add an action to your Adaptive Card
 
-User universal action `Action.Execute` defines your action in an Adaptive Card, which can be rendered as a button in the card. Here's a sample `Action.Execute` action:
+User universal action `Action.Execute` defines your action in an Adaptive Card, which can be rendered as a button in the card. `Action.Execute` is a sample action:
 
 ```
 
@@ -221,7 +221,7 @@ When you want to return an error response message to the client, you can apply `
 :::image type="content" source="../../../assets/images/sbs-workflow-bot/error-message-response.png" alt-text="error response message displayed":::
 
 > [!NOTE]
-> For more information about the invoke response format, see [Response format](/adaptive-cards/authoring-cards/universal-action-model).
+> For more information about the invoke response format, see [Response format](/adaptive-cards/authoring-cards/universal-action-model?branch=pr-en-us-7193)
 
 ### Customize Adaptive Card content
 
@@ -260,7 +260,7 @@ As illustrated, user-specific views are refreshed from a base card, when card2 i
 
 * First option enables user-specific view refresh with SDK. The base card can be sent as a command response or a card action response. You can enable user-specific view refresh in `handleCommandReceived` of a command handler, or in `handleActionInvoked` of card action handler where the base card is returned. In the following sample a base card returns as command response that can auto-refresh to specific user, such as the command sender. You can use `refresh(refreshVerb, userIds, data)` method from the `@microsoft/adaptivecards-tools` library to inject a refresh section into your base card. To define the refresh section, ensure that you provide the following:
 
-  1. `userIds`: A set of user MRIs for those who can trigger auto-refresh. For more information on how to add in `userIds` list in refresh section of Adaptive Card, see [Fetch roster or user profile](/microsoftteams/platform/bots/how-to/get-teams-context?branch=pr-en-us-7291&tabs=dotnet).
+  1. `userIds`: A set of user MRIs for those who can trigger auto-refresh. For more information on how to add in `userIds` list in refresh section of Adaptive Card, see [Fetch the roster or user profile](../get-teams-context.md#fetch-the-roster-or-user-profile)
   1. `verb`: A string to identify the refresh action.
   1. `data`: An optional data to associate with the refresh action.
 
