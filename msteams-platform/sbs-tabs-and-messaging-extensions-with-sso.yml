@@ -20,7 +20,7 @@ items:
 
     * After the first sign in, Azure AD SSO allows the user to sign in automatically.
     * Allows the user to sign in to other devices without entering sign in credentials again.
-    * Obtains a token for the signed in user.
+    * Obtains token for the signed in user.
 
    This step-by-step guide helps you to create tabs and message extensions enabling Azure AD SSO authentication. You'll see the following output:
 
@@ -62,7 +62,7 @@ items:
   content: |
     The following steps guide you to:
 
-    * Create Azure Bot resource to register bot with Azure Bot service.
+    * Create Azure Bot resource to register bot with Azure Bot Service.
     * Create client secret that enables SSO authentication of the bot.
     * Add Microsoft Teams channel to deploy the bot to a Teams channel.
     * Create a ngrok tunnel to the endpoints of your web server.
@@ -84,7 +84,7 @@ items:
 
        :::image type="content" source="./assets/images/Tab-ME-SSO/azure-subscription.png" alt-text="Azure subscription.":::
 
-       You can also create a new resource group, select **Create new** > enter resource name > select **OK**. Select the required location from **New resource group location** dropdown list.
+       You can also create a new resource group. Select **Create new** > enter resource name > select **OK**. Select the required location from **New resource group location** dropdown list.
 
        :::image type="content" source="~/assets/images/bots/newresource.png" alt-text="Screenshot showing the new resource group location.":::
 
@@ -100,7 +100,7 @@ items:
 
        :::image type="content" source="./assets/images/Tab-ME-SSO/tenant-review.png" alt-text="tenant review.":::
 
-    1. If the validation passes, select **Create**.
+    1. If the validation is passed, select **Create**.
 
         It takes a few moments for your bot service to be provisioned.
 
@@ -129,7 +129,7 @@ items:
 
        :::image type="content" source="~/assets/images/Tab-ME-SSO/newclientsecret_1.png" alt-text="Screenshot showing the selection of new client secret.":::
 
-       The **Add a client secret** window appears.  
+       **Add a client secret** window appears.  
 
     1. Enter **Description** to the client secret.
     
@@ -200,7 +200,7 @@ items:
 - title: Configure SSO for your tab 
   durationInMinutes: 1
   content: | 
-    1. Go to the [Azure portal](https://portal.azure.com/).
+    1. Go to [Azure portal](https://portal.azure.com/).
 
     1. Select **Azure Active Directory**.
 
@@ -359,7 +359,7 @@ items:
 
        :::image type="content" source="./assets/images/Tab-ME-SSO/app-setting-folder_1.png" alt-text="app location.":::
 
-    1. Open **appsettings.json** in **Visual Studio **Code**.
+    1. Open **appsettings.json** in Visual Studio Code.
 
     1. Update the following information:  
 
@@ -396,7 +396,7 @@ items:
 - title: Build and run the service
   durationInMinutes: 1
   content: |
-    **To build and run the service using latest version of Visual Studio or Command line**
+    **To build and run the service using the latest version of Visual Studio or Command line**
 
     # [Visual Studio](#tab/vs2019)
 
@@ -415,7 +415,7 @@ items:
 
           :::image type="content" source="./assets/images/sbs-outgoing-webhooks/outgoing-webhook-certificate.png" alt-text="Trust Certificate.":::
 
-          A webpage opens with a message **Your bot is ready!**
+          A webpage appears with a message **Your bot is ready!**
 
           :::image type="content" source="./assets/images/Tab-ME-SSO/bot-completion-explorer.png" alt-text="App ready.":::
 
@@ -483,7 +483,7 @@ items:
 
           :::image type="content" source="./assets/images/Tab-ME-SSO/sign-in-sso1_1.png" alt-text= "sign in.":::
 
-      1. Enter your credentials in sign-in box, and select **Next**.
+      1. Enter your credentials in **Sign in** window, and select **Next**.
 
           :::image type="content" source="./assets/images/Tab-ME-SSO/sign-in-box.png" alt-text= "sign-in box.":::
       
