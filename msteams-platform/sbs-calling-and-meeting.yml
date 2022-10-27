@@ -133,10 +133,14 @@ items:
         :::image type="content" source="./assets/images/calls-and-meetings/powershell_1.png" alt-text="Screenshot shows the PowerShell.":::
 
     1. Run the following command in PowerShell to verify whether the policy is created successfully or not. Replace the policy name with your defined policy name.
-    
+
+     
         ```PowerShell
         Get-CsApplicationAccessPolicy -Identity “<<policy-identity/policy-name>>”
         ```
+
+    > [!NOTE]
+    > Make sure that your file's running scripts are not disabled in your system. For more information, see ![about execution policies](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.2)
 
     **To add API permissions for downstream calls**
 
