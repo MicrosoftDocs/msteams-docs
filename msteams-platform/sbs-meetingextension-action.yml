@@ -61,13 +61,13 @@ items:
   content: |
     To create and register your bot in Microsoft Azure Active Directory (Azure AD), create a tunnel using ngrok, add messaging endpoint, and then perform the following steps:
 
-    * Create Azure bot resource to register bot with Azure bot service.
+    * Create Azure Bot resource to register bot with Azure Bot Service.
     * Create client secret to enable SSO authentication of the bot.
     * Add Teams channel to deploy the bot to a Teams channel.
     * Use ngrok to create a tunnel to your web server's endpoints.
-    * Add messaging endpoint to the created ngrok tunnel.
+    * Add messaging endpoint to the ngrok tunnel you created.
 
-    **To create Azure bot resource**
+    **To create Azure Bot resource**
 
     1. Go to the [Microsoft Azure portal](https://portal.azure.com/).
     1. Select **Create a resource**.
@@ -100,7 +100,7 @@ items:
 
        :::image type="content" source="~/assets/images/sbs-messagingextension-action/register-bot-2_1.png" alt-text="Screenshot showing the creation of Microsoft App ID.":::
 
-    1. Once the validation is passed, select **Create**.
+    1. If the validation passes, select **Create**.
 
         It takes a few moments for your bot service to be provisioned. 
 
@@ -207,7 +207,7 @@ items:
 
     1. Select **Azure Active Directory**.
 
-    1. In the left navigation pane, select **App Registrations**.
+    1. In the left navigation pane, select **App registrations**.
 
     1. Select your bot.
 
@@ -242,7 +242,7 @@ items:
     
     1. Enter the following details to configure scope:
     
-         * Enter `access_as_user` as the **Scope name**.
+         * In the panel that appears, enter `access_as_user` as the **Scope name**.
   
          * Set **Who can consent?** to `Admins and users`.
   
@@ -290,7 +290,7 @@ items:
 
        :::image type="content" source="../msteams-platform/assets/images/meetings-side-panel/clientapps.png" alt-text="Screenshot showing the client app."::: 
   
-    1. In the left pane, select **API Permissions**. 
+    1. In the left pane, select **API permissions**. 
 
        > [!NOTE]
        > Users need to consent to these permissions only if the Azure AD app is registered in a different tenant.
