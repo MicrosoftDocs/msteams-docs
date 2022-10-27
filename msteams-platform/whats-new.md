@@ -26,7 +26,6 @@ Microsoft Teams platform features that are available to all app developers.
 
 **2022 October**
 
-* ***October 30, 2022***: [Enable app caching to improve subsequent launch time of the apps](apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#app-caching)
 * ***October 27, 2022***: [Introducing Workflow bot for Teams](sbs-gs-workflow-bot.yml)
 * ***October 26, 2022***: [Build an in-meeting document signing app](apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#build-an-in-meeting-document-signing-app)
 * ***October 19, 2022***: [Developer Portal for Teams is now available for GCC tenants](concepts/build-and-test/teams-developer-portal.md).
@@ -290,7 +289,8 @@ Developer preview is a public program that provides early access to unreleased T
 
 **2022 October**
 
-***October 11, 2022***: [Generate a deep link to share content to stage in meetings.](apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#generate-a-deep-link-to-share-content-to-stage-in-meetings)
+* ***October 30, 2022***: [Enable app caching to improve launch time of the apps to the meeting stage](apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#app-caching).
+* ***October 11, 2022***: [Generate a deep link to share content to stage in meetings.](apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#generate-a-deep-link-to-share-content-to-stage-in-meetings).
 
 :::column-end:::
 :::row-end:::

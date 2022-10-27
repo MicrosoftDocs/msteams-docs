@@ -286,6 +286,7 @@ App caching helps you to improve launch time of the apps that are loaded in the 
 
 > [!NOTE]
 >
+> * Currently app caching is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
 > * App caching is supported only for tabs loaded in the meeting side panel in Teams desktop client.
 > * App caching is not supported on chats, channels, and personal apps.
 
