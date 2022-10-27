@@ -331,7 +331,7 @@ microsoftTeams.appInitialization.notifySuccess();
 
 1. Single-page apps that use client-side routing for page navigation is the type of app that can benefit from app caching. It's also recommended that the same domain is used across all contexts of your app launch. Using bar.foo.com for chats and baz.foo.com for personal app isn't recommended as you need to go to the new domain in the load handler.
 
-1. Apps need to re-register for events in the load handler, for example themeChange, focusEnter. Teams client won't send any notifications to the app when cached. If your app is a stateful app that requires notifications even when cached, caching might not be the right solution. Reach out to explore options.
+1. Apps need to re-register for events in the load handler, for example, themeChange and focusEnter. Teams client won't send any notifications to the app when cached. If your app requires notifications even when cached, caching might not be the right solution. Reach out to explore options.
 
 1. App caching is supported only in the T1 Teams desktop client. In the web client, even if the app registers load handlers, the app will be evicted from the cache after the unload sequence completes.
 
