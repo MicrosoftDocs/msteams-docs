@@ -212,7 +212,7 @@ To add a deep link to share content on stage, you need to have an app context. T
 The query parameters for the app context are:
 
 * `appID`: This is the ID that can be obtained from the app manifest.
-* `appSharingUrl`: The URL which needs to be shared on stage should be a valid domain defined in the app manifest. If the URL isn't a valid domain, an error dialog will pop up to provide the user with a description of the error.
+* `appSharingUrl`: The URL, which needs to be shared on stage should be a valid domain defined in the app manifest. If the URL isn't a valid domain, an error dialog will pop up to provide the user with a description of the error.
 * `useMeetNow`: This includes a boolean parameter that can be either true or false.
   * **True**: When the `UseMeetNow` value is true and if there's no ongoing meeting, a new Meet now meeting will be initiated. When there's an ongoing meeting, this value will be ignored.
 
@@ -260,9 +260,29 @@ To share the entire app to stage, in the app manifest, you must configure `meeti
 > [!NOTE]
 > For your app to pass validation, when you create a deep link from your website, web app, or Adaptive Card, use **Share in meeting** as the string or copy.
 
+## Build an in-meeting document signing app
+
+You can build an in-meeting app for enabling meeting participants to sign documents in real time. It facilitates reviewing and signing documents in a single session. The participants can sign the documents using their current tenant identity.
+
+You can use an in-meeting signing app to:
+
+* Add documents to be reviewed during a meeting
+* Share documents to be reviewed to main stage
+* Sign documents using the signer’s identity
+
+The participants can review and sign documents, such as purchase agreements and purchase orders.
+
+:::image type="content" source="../assets/images/sbs-inmeeting-doc-signing/final-output.png" alt-text="In-meeting document signing app":::
+
+The following participant roles may be involved during the meeting:
+
+* **Document creator**: This role can add their own documents to be reviewed and signed.
+* **Signer**: This role can sign reviewed documents.
+* **Reader**: This role can view the documents added to the meeting.
+
 ## App caching
 
-App caching helps you to improve subsequent launch time of the apps that are loaded in the meeting side panel.
+App caching helps you to improve launch time of the apps that are loaded in the meeting side panel.
 
 > [!NOTE]
 >
@@ -271,7 +291,7 @@ App caching helps you to improve subsequent launch time of the apps that are loa
 
 ### Enable app caching
 
-To enable app caching in your meetings side panel, follow the steps:
+To enable app caching in your meeting side panel, follow the steps:
 
 1. Call `microsoftTeams.registerBeforeUnloadHandler` and `microsoftTeams.registerOnLoadHandler`.
 
@@ -279,33 +299,33 @@ To enable app caching in your meetings side panel, follow the steps:
 
 1. Dispose resources and perform any cleanup needed in the `beforeUnload handler`, then invoke the `readyToUnload` callback to notify Teams client that the app unload flow is complete.
 
-The following is the flow diagram of first launch of the app in meeting stage:
+The following is the flow diagram of the app added to the meeting stage without app caching:
 
 :::image type="content" source="../assets/images/saas-offer/first-launch-app.png" alt-text="This screenshot shows the flow of the first launch of the app in meeting stage.":::
 
-The following is the flow diagram of cached launch of the app in meeting stage:
+The following is the flow diagram of a cached app when it's added to the meeting stage:
 
 :::image type="content" source="../assets/images/saas-offer/cached-launch-app.png" alt-text="This screenshot shows the flow of the cached launch of the app in meeting stage.":::
 
-Enable app caching to host the embedded app in webview and it's reused when users go to different instances of the app within a window.
+App caching hosts the embedded app in webview and reused when users go to different instances of the app within a window.
 
-The webview of the app remains in the DOM and it's hidden when users go out of the app and it's shown when users return to the app. Any audio that is playing is muted when the app is cached.
+The webview of the app remains in the DOM. The webview is hidden when the users go out of the app and shown when the users return to the app. When the app is cached, any audio that is playing is muted.
 
 > [!NOTE]
 > If the app caching is not enabled, the webview is recreated every time the users go out and return to the app.
 
-Following are the parameters to control the conditions that cause apps to be added or removed from the cache:
+Following are the parameters to control the conditions for the apps to be added or removed from the cache:
 
-1. The maximum cache size is one for apps in meetings. When the cache size is exceeded, the LRU app will be evicted.
-1. When the app is cached, memory (working set) usage must not exceed 225 MB.
-1. If the user doesn't return to the app within 20 minutes, app is removed from the cache.
+1. The maximum cache size for apps in meetings is 1 MB. When the cache size is exceeded, the app is removed from the cache.
+1. When the app is cached, the memory (working set) usage must not exceed 225 MB.
+1. If the user doesn't return to the app within 20 minutes, the app is removed from the cache.
 1. The maximum time for Teams to receive the `readyToUnload` signal from the app is 30 seconds.
-1. The grace period to get memory usage down after the app cached is 1 min.
-1. App caching can't be enabled if the system memory is less than 4 GB or the available free memory is less than 1 GB (512 MB on Mac).
-1. Side panel is the only FrameContext supported for app caching in meetings.
+1. The grace period to get memory usage down after the app is cached is 1 minute.
+1. You can't enable app caching if the system memory is less than 4 GB or the available free memory is less than 1 GB (512 MB on Mac).
+1. Side panel is the only supported FrameContext for app caching in meetings.
 1. When the app is cached, CPU usage must not exceed 5%.
 1. When the app is cached, the number of SDK requests shouldn't exceed five for every 12 seconds.
-1. The cache state is monitored every 12 seconds and the apps that don’t meet the requirements are removed.
+1. The cache state is monitored every 12 seconds and the apps that don’t meet the requirements are removed from the cache.
 
 ### Code example
 
@@ -329,57 +349,41 @@ microsoftTeams.appInitialization.notifySuccess();
 
 ### Limitations
 
-1. Single-page apps that use client-side routing for page navigation is the type of app that can benefit from app caching. It's also recommended that the same domain is used across all contexts of your app launch. Using bar.foo.com for chats and baz.foo.com for personal app isn't recommended as you need to go to the new domain in the load handler.
+1. Single-page apps that use client-side routing for page navigation can benefit from app caching. It's recommended that the same domain is used across all contexts of your app launch. For example, using *bar.foo.com* for chats and *baz.foo.com* for personal app isn't recommended as you need to go to the new domain in the load handler.
 
-1. Apps need to re-register for events in the load handler, for example, themeChange and focusEnter. Teams client won't send any notifications to the app when cached. If your app requires notifications even when cached, caching might not be the right solution. Reach out to explore options.
+1. Apps need to re-register for events such as `themeChange` and `focusEnter` in the load handler. Teams client won't send any notifications to the app when cached. If your app requires notifications even when cached, caching might not be the right solution.
 
-1. App caching is supported only in the T1 Teams desktop client. In the web client, even if the app registers load handlers, the app will be evicted from the cache after the unload sequence completes.
+1. App caching is supported only in Teams desktop client. In Teams web client, even if the app registers load handlers, the app is removed from the cache after the unload sequence is completed.
 
-1. Register the `load` and `beforeUnload` handlers in your launch sequence. The app isn't cached, if the Teams client doesn’t have these registrations.
+1. Register the `load` and `beforeUnload` handlers early in your launch sequence. If the Teams client doesn’t identify these registrations before the user goes out of the app, the app isn't cached.
 
-1. The Teams client invokes the `loadHandler` only after the `unload` sequence of your app completes. For example, if a user launches tab A of your app, then launches tab B of your app, tab B won't get the load signal until tab B invokes the `readyToUnload` callback or times out.
+1. The Teams client invokes the `loadHandler` only after the `unload` sequence of the app is completed. For example, if a user launches tab A of your app and then launches tab B of the same app, tab B won't get the load signal until the tab B invokes the `readyToUnload` callback.
 
-1. After an app moves to the cached state, it will have a grace period of one minute to get the memory usage under the allowed threshold, which is currently 225 MB. Memory value used for this check is the workingSetSize of the webview as reported by the Electron [getappMetrics](https://www.electronjs.org/docs/latest/api/app#appgetappmetrics) API.
+1. After an app moves to the cached state, it has a one minute grace period to get the memory usage under the allowed threshold of 225 MB. <!-- The Memory value used for this check is the *workingSetSize* of the webview as reported by the Electron [getappMetrics](https://www.electronjs.org/docs/latest/api/app#appgetappmetrics) API. -->
 
-1. It's recommended that the same domain is used across all contexts of your app launch. Using bar.foo.com for chats and baz.foo.com for personal app isn't recommended as you need to go to the new domain in the load handler.
+1. Apps are cached on a per-window basis. An app cached in a meeting window can't be reused in a channel.
 
-1. Apps are cached on a per-window basis. An app cached in a meeting window can't be reused in a channel in the main window.
+1. App caching isn't supported for the meeting stage or Task module contexts, because these can be opened on top of the tab and the same webview can't be used to render the content in the tab and the Task module.
 
-1. App caching isn't supported for the stage or task module, because these can be opened on top of the tab, in which case you wouldn't be able to reuse the same webview to render.
+1. App caching happens on a per app (not on a per tab) basis within the same window. The same webview is reused as users launch your tab from various contexts like channels, chat, and personal app.
 
-1. App caching happens on a per app (not on a per tab) basis within the same window. The same webview is reused as users launch your tab from various contexts like channels, chat, and personal app once app caching is supported in these contexts.
+1. Apps are expected to sleep when cached as it uses minimal compute or network resources and minimize SDK requests. All the register handlers and the following SDK requests are allowed when the app is cached:
 
-1. Apps are expected to sleep when cached as it uses minimal compute or network resources and minimize SDK requests. The following SDK requests are allowed when the app is cached: `initialize`, `notifyappLoaded`, `notifySuccess`, `notifyFailure`, `notifyExpectedFailure`, `getContext`,  `getAuthToken`, `readyToUnload`, `getConfig/getSettings`, and all the register handlers. Most other SDK requests are blocked when the app is cached.
+   * `initialize`
+   * `notifyappLoaded`
+   * `notifySuccess`
+   * `notifyFailure`
+   * `notifyExpectedFailure`
+   * `getContext`
+   * `getAuthToken`
+   * `readyToUnload`
+   * `getConfig/getSettings`
 
-1. Register only the `beforeUnload` handler if your app doesn't require app caching but needs time to safely save state (if you want to ensure that going away from your app doesn't cause app content to be abruptly removed from the DOM). If the app hasn’t registered for the `load` event, it will be removed from the DOM after the unload flow completes.
+1. Register only the `beforeUnload` handler if your app doesn't require app caching but needs time to safely save state (if you want to ensure that going away from your app doesn't cause app content to be abruptly removed from the DOM). If the app hasn’t registered for the `load` event, it's removed from the DOM after the unload flow completes.
 
-1. Use the guidance in this document to onboard your app to app caching in Teams meetings first. Meetings are the first surface to support app caching in our new React stack, but if your app is also available in other contexts (channels and chat), app caching support in legacy Angular stack will kick in if your app registers `load/beforeUnload` handlers.
-
-1. To avail the app caching support only in meetings, register the `load/beforeUnload` handlers only if the context is side panel. App caching for various contexts will be supported through the React stack.
-
-1. App caching isn't available in meetings where the invited member count is more than 20 participants.
+1. App caching isn't supported for meetings where the meeting participants are more than 20.
 
 1. App caching isn't supported for apps that require device permissions as per the manifest.
-
-## Build an in-meeting document signing app
-
-You can build an in-meeting app for enabling meeting participants to sign documents in real time. It facilitates reviewing and signing documents in a single session. The participants can sign the documents using their current tenant identity.
-
-You can use an in-meeting signing app to:
-
-* Add documents to be reviewed during a meeting
-* Share documents to be reviewed to main stage
-* Sign documents using the signer’s identity
-
-The participants can review and sign documents, such as purchase agreements and purchase orders.
-
-:::image type="content" source="../assets/images/sbs-inmeeting-doc-signing/final-output.png" alt-text="In-meeting document signing app":::
-
-The following participant roles may be involved during the meeting:
-
-* **Document creator**: This role can add their own documents to be reviewed and signed.
-* **Signer**: This role can sign reviewed documents.
-* **Reader**: This role can view the documents added to the meeting.
 
 ## Code sample
 
