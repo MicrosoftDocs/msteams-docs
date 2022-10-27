@@ -2,7 +2,7 @@
 title: Use Graph APIs to fetch transcript
 description: Describes the APIs to fetch meeting transcripts
 ms.localizationpriority: high
-ms.topic: concept
+ms.topic: conceptual
 ---
 # Use Graph APIs to fetch transcript
 
