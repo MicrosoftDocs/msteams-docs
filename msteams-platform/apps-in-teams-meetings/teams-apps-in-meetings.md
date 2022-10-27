@@ -60,7 +60,7 @@ The following list details the various user types along with their accessibility
 
 * **Anonymous**: Anonymous users don't have an Azure AD identity and aren't federated with a tenant. The anonymous participants are like external users, but their identity isn't shown in the meeting. Anonymous users can access apps in a meeting window. An anonymous user can be a presenter or an attendee, but can't be an organizer.
 
-    **Anonymous user authentication flow**: As anonymous users aren't AAD accounts, skype token isn't available for third-party apps. This means that `getAuthToken` in client SDK will fail if called. Ensure to detect anonymous users in the meetings and display the correct experiences for the anonymous users. You can use [Get user context](~/tabs/how-to/access-teams-context.md#get-context-by-using-the-microsoft-teams-javascript-library) API to determine whether user is anonymous or not and redirect to the SSO page of the app.
+    **Anonymous user authentication flow**: Anonymous users aren't AAD accounts and skype token isn't available for anonymous users in third-party apps. This means that if `getAuthToken` is called in client SDK it would fail. Ensure that your app identifies the anonymous users and provides the correct experience in the meetings. You can use [Get user context](~/tabs/how-to/access-teams-context.md#get-context-by-using-the-microsoft-teams-javascript-library) API to determine whether user is anonymous or not and redirect to the SSO page of the app.
 
     > [!NOTE]
     > Anonymous users inherit the global default user-level app permission policy. For more information, see [manage Apps](/microsoftteams/non-standard-users#anonymous-user-in-meetings-access).
