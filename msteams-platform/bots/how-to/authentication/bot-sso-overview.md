@@ -91,7 +91,7 @@ Flow for authenticating app user at subsequent bot access:
     1. The app user signs in and granted access to the bot from Azure AD.
 
 Notes:
-
+ 
 1. The authentication flow isn't completely same as for tabs. If the developer wants to use the Teams identity to seek consent, they would need to implement authentication without using Bot Framework token store.
     1. It follows that there would initially be two ways to implement authentication: using token store, or not using it.
 
