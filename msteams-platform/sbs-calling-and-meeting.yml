@@ -140,12 +140,12 @@ items:
         ```
 
     > [!NOTE]
-    > Make sure that your file's running scripts are not disabled in your system. For more information, see ![about execution policies](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.2)
+    > Ensure your file's running scripts are not disabled in your system. For more information, see [about execution policies](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.2)
 
     **To add API permissions for downstream calls**
 
     > [!NOTE]
-    > Make sure that your account can grant admin consent for Microsoft. After adding permissions, select `Grant admin consent for Microsoft` to know the status of the consent.
+    > Ensure your account can grant admin consent for Microsoft. After adding permissions, select `Grant admin consent for Microsoft` to know the status of the consent.
 
     1. Select **API permissions** in **Manage** pane of your bot.
     1. Select **Add a permission**. **Request API permissions** window appears.
