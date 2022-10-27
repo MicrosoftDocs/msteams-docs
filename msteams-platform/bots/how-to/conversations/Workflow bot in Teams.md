@@ -237,9 +237,9 @@ When Adaptive Cards are sent in a Teams channel or group chat, all users can see
 
 :::image type="content" source="../../../assets/images/sbs-workflow-bot/sbs-workflow-bot-base-card.png" alt-text="Diagramatic view of user specific auto-refresh model" lightbox="../../../assets/images/sbs-workflow-bot/sbs-workflow-bot-base-card.png":::
 
-* **Base card**: The bot sends a message with the base version of the card. This base card can be sent as a bot notification, command response, or any other card action response. All members of the conversation can view the same response. The base card will be automatically refreshed to the user defined `userId` in the `refresh` property of the base card.
+* **Base card**: The bot sends a message with the base version of the card. This base card can be sent as a bot notification, command response, or any other card action response. All members of the conversation can view the same response. The base card is automatically refreshed to the user defined `userId` in the `refresh` property of the base card.
 
-* **Refresh behavior**: After the user views the message, Teams client automatically triggers a refresh after a minute of the last refresh response. The user-specific view handler will be invoked to return a card view (`Response Card`) for specific user (`UserA`). Other users in the conversation, can still view the base card.
+* **Refresh behavior**: After the user views the message, Teams client automatically triggers a refresh a minute after the last refresh response. The user-specific view handler is invoked to return a card view (`Response Card`) for specific user (`UserA`). Other users in the conversation can still view the base card.
 
 The following gif image illustrates how user-specific view is displayed in Teams:
 
@@ -389,7 +389,7 @@ export const commandBot = new ConversationBot({
 
 ### Access Microsoft Graph
 
-If you're responding to a command that needs to access Microsoft Graph data of an already logged-in Teams user, you can do so by single sign-on (SSO) with their Teams user token. Read more about how Teams Toolkit can help you to [add single sign-on to Teams app](../../../toolkit/add-single-sign-on.md).
+If you're responding to a command that needs to access Microsoft Graph data of an already signed in Teams user, you can do so by single sign-on (SSO) with their Teams user token. Read more about how Teams Toolkit can help you to [add single sign-on to Teams app](../../../toolkit/add-single-sign-on.md).
 
 ### Connect to existing APIs
 
@@ -399,7 +399,7 @@ You need to often connect to existing APIs for retrieving data to send to Teams.
 
 ### How to extend workflow bot with notification feature?
 
-The notification feature adds the ability for your application to send Adaptive Cards in response to external events. For example, when a message is posted to an Event Hub, your application can respond and send an appropriate Adaptive Card to Teams.
+The notification feature adds the ability in your application to send Adaptive Cards in response to external events. For example, when a message is posted to an Event Hub, your application can respond and send an appropriate Adaptive Card to Teams.
 
 To add the notification feature:
 
@@ -424,7 +424,7 @@ To add the notification feature:
 
    ```
 
-1. To quickly add a sample notification triggered by HTTP request, you can add the following sample code in `bot\src\index.js(ts)`:
+1. You can add the following sample code in your sample notification triggered by HTTP request to your file `bot\src\index.js(ts)`:
 
    ```index.js(ts)
 
@@ -439,7 +439,7 @@ To add the notification feature:
 
    ```
 
-1. Uninstall your previous bot installation from Teams, and select `F5` to start your application.
+1. Uninstall your previous bot from Teams, and select `F5` to start your application.
 
 1. Send a notification to the bot installation targets (channel/group chat/personal chat) by using your favorite tool to send HTTP POST request to `https://localhost:3978/api/notification`.
 
@@ -450,11 +450,10 @@ The default workflow bot comes with command and response. See, [how to add more 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Placeholder for workflow bot SBS]
+> [Create Teams workflow bot](../../../sbs-gs-workflow-bot.yml)
 
 ## See also
 
-* [Placeholder for workflow bot SBS]
 * [**Teams proactive messaging code samples**](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging/csharp)
 * [Send proactive notifications to users](/azure/bot-service/bot-builder-howto-proactive-message)
 * [Build your first bot app using JavaScript](../../../sbs-gs-bot.yml)
