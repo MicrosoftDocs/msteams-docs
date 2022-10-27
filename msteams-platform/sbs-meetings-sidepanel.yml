@@ -16,13 +16,13 @@ items:
   content: |
     The meeting side panel enhances your in-meeting experience and helps organizers and presenters to have different set of views and actions.
 
-    Key features of meeting side panel:
+    Key features of the meeting side panel:
 
-    * Provision to add new agenda point.
-    * Adds the agenda as text input to the **Side Panel** list.
+    * Provision to add a new agenda point.
+    * Adds the agenda as text input to the side panel list.
     * Publishes the agenda list to the meeting chat.
     
-    This step-by-step guide helps you to generate meeting side panel to add and publish agenda. You'll see the following output:
+    This step-by-step guide helps you to generate a meeting side panel to add and publish an agenda. You'll see the following output:
 
        :::image type="content" source="~/assets/images/meetings-side-panel/sidepanelondesktopmobile.png" alt-text="Your Token":::
 
@@ -60,7 +60,7 @@ items:
    1. Select **Clone**. 
            
       > [!NOTE]
-      > If you encounter the error "Filename too long," apply the git command 'git config --system core.longpaths true' in your administrator terminal of choice.
+      > If you encounter the error "Filename too long," apply the git command `git config --system core.longpaths true` in your administrator terminal of choice.
 
 - title: Create and register your bot
   durationInMinutes: 5
@@ -123,7 +123,7 @@ items:
 
       Perform the following steps if you've created a new **Microsoft App ID**:
 
-    1. In the left panel, select **Configuration**. 
+    1. In the left pane, select **Configuration**. 
 
        > [!TIP]
        > Save the **Microsoft App ID** or **Client ID** for future reference.
@@ -167,7 +167,7 @@ items:
     
     1. Select **Agree**.
 
-       ::::image type="content" source="~/assets/images//meetings-side-panel/terms_2.png" alt-text="Terms of service":::
+       :::image type="content" source="~/assets/images/meetings-side-panel/terms_2.png" alt-text="Terms of service":::
 
     1. Select **Apply**.  
     
@@ -186,21 +186,21 @@ items:
 
     1. From ngrok, copy the HTTPS URL.
 
-       :::image type="content" source="../msteams-platform/assets/images/ngrok-url_1.png" alt-text="ngrok HTTPS URL":::
+       :::image type="content" source="../msteams-platform/assets/images/meetings-side-panel/ngrok-url_1.png" alt-text="ngrok HTTPS URL":::
 
         > [!NOTE]
         > The HTTPS URL in your ngrok is your fully qualified domain name.
         > The `WebAppDomain` is a fully qualified domain name that doesn't include `https://` in it.
 
-    1. In **Settings** for the Azure bot that you created, select **Configuration**.
+    1. In **Settings**, select **Configuration**.
 
-    1. In **Messaging endpoint**, use the HTTPS URL available from ngrok and at the end of the URL add **/api/messages**.
+    1. In **Messaging endpoint**, use the HTTPS URL available from ngrok and add **/api/messages** at the end of the URL .
 
        :::image type="content" source="~/assets/images/meetings-side-panel/messaging-endpoint_1.png" alt-text="Messaging Endpoint":::
 
     1. Select **Apply**.
 
-        You have successfully set up a bot in Azure Bot Service.
+        You have successfully set up a bot in Azure bot service.
 
 
 - title: Update the Azure AD app registration
@@ -237,7 +237,7 @@ items:
 
     1. Select **Add a scope**. 
 
-       :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/selectscope_1.png" alt-text="Select scope":::
+       :::image type="content" source="../msteams-platform/assets/images/meetings-side-panel/selectscope_1.png" alt-text="Select scope":::
     
     1. In the **Add a scope** pane that appears, enter `access_as_user` as the **Scope name**.
   
