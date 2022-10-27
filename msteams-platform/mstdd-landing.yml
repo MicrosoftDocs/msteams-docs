@@ -185,18 +185,14 @@ landingContent:
           url: ~/sbs-meeting-token-generator.yml
         - text: Generate meeting sidepanel
           url: ~/sbs-meetings-sidepanel.yml
-
-
-    - linkListType: tutorial
-      links:
         - text: Send activity feed notification 
           url:  ~/sbs-graphactivity-feedbroadcast.yml
-        - text: Build an in-meeting document signing app
-          url:  ~/sbs-inmeeting-document-signing.yml
 
 
     - linkListType: tutorial
       links:
+        - text: Build an in-meeting document signing app
+          url:  ~/sbs-inmeeting-document-signing.yml
         - text: Build command bot with JavaScript
           url: sbs-gs-commandbot.yml
         - text: Build notification bot with JavaScript
@@ -215,6 +211,10 @@ landingContent:
           url: ~/sbs-outgoing-webhooks.yml
         - text: Unfurl links in Teams using bot
           url: ~/sbs-botbuilder-linkunfurling.yml
+
+
+    - linkListType: tutorial
+      links:
         - text: Build Teams connectors
           url: ~/sbs-teams-connectors.yml
         
