@@ -58,12 +58,7 @@ You can create the conversation if it doesn't exist or you don't know the `conve
 
 To create the conversation, you need a `userId`, `tenantId`, and `serviceUrl`.
 
-For `serviceUrl`, use the value from an incoming activity triggering the flow or one of the global service URLs. The following is an example for the `serviceUrl`:
-
-```csharp
-var serviceUrl = "https://smba.trafficmanager.net/uk/";
-MicrosoftAppCredentials.TrustServiceUrl(serviceUrl);
-```
+For `serviceUrl`, use the value from an incoming activity triggering the flow or one of the global service URLs.
 
 If the `serviceUrl` isn't available from an incoming activity triggering the proactive scenario, use the following global URL endpoints:
 
