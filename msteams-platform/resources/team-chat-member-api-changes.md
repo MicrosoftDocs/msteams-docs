@@ -69,4 +69,4 @@ Following are the upcoming API changes:
 * By late 2022, bots can't proactively retrieve the `userPrincipalName` or `email` properties for members of a chat or team. Bots must use the Graph APIs to retrieve the required information. The new `GetConversationPagedMembers` API can't return the `userPrincipalName` and `email` properties from late 2022. Bots must use Graph API with an access token to retrieve information.
 
     > [!NOTE]
-    > We recommend you to use the [Graph API](/graph/api/user-get?view=graph-rest-1.0&tabs=http&preserve-view=true#examples) with an access token to retrieve information.
+    > We recommend you to use the [Graph API](/graph/api/user-get?view=graph-rest-1.0&tabs=http&preserve-view=true#examples) with an access token to retrieve information
