@@ -491,7 +491,7 @@ You can follow these steps to add SSO using Teams Toolkit in Visual Studio:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso-vs/vs-2022-preview-select-teams.png" alt-text="Select a Microsoft teams project by searching for teams." lightbox="../assets/images/teams-toolkit-v2/add-sso-vs/vs-2022-preview-select-teams.png":::
 
-1. Select to create a new Teams application, uncheck the **Configure the single sign-on** check box and select **create**.
+1. Select to create a new Teams application from the list of **application type**, uncheck the **Configure the single sign-on** check box and select **create**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso-vs/vs-2022-preview-create-teamsapp-sso-uncheck.png" alt-text="select the teams app to be created and uncheck sso check box" lightbox="../assets/images/teams-toolkit-v2/add-sso-vs/vs-2022-preview-create-teamsapp-sso-uncheck.png":::
 
