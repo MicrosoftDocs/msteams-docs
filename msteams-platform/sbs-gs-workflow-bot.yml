@@ -115,7 +115,7 @@ items:
     
         :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-teams-app.png" alt-text=" select option create a new teams app.":::
     
-    1. Under **Scenario-based Teams apps** select **Workflow bot** as the capability that you want to build in your app.
+    1. Under **Scenario-based Teams apps**, select **Workflow bot** as the capability that you want to build in your app.
     
         :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-capabilities-workflow.png" alt-text=" select option Work flow bot for capabilities" lightbox="./assets/images/sbs-workflow-bot/sbs-workflow-bot-capabilities-workflow.png":::
     
@@ -178,7 +178,7 @@ items:
     |`src/cardActions/doStuffActionHandler.js(ts)` | Responds to the `doStuff` card action.|
     |`src/cardModels.js(ts)` | The default Adaptive Card data model.|
     
-    The following file implements the core workflow bot on the Bot Framework, you generally don't need to customize these files:
+    The following file implements the core workflow bot on the Bot Framework, you generally don't need to customize this file:
     
     | File/Folder | Content |
     |   ---  |   ---   |
