@@ -8,17 +8,17 @@ ms.localizationpriority: high
 
 # Workflow bot in Teams
 
-A workflow bot allows users to interact with an Adaptive Card, enabled by the Adaptive Card action handler feature. You can create a workflow bot in many scenarios for your end users like incident management, ticketing, approval workflow, project management cards. The other simplified use cases are creating & assigning a work item with workflow bot and syncing the content to Azure DevOps/Jira system. A workflow bot can be installed into a team, group chat, or as personal app, depending on different scopes. The default command logic simply returns an Adaptive Card. You can customize this logic with your business requirement. For the customization, you need to call your existing APIs.
+A workflow bot allows users to interact with an Adaptive Card, enabled by the Adaptive Card action handler feature. You can create a workflow bot in many scenarios for your end users like incident management, ticketing, approval workflow, and project management cards. The other simplified use cases are creating and assigning a work item with workflow bot and syncing the content to Azure DevOps/Jira system. A workflow bot can be installed into a team, group chat, or as personal app, depending on different scopes. The default command logic returns an Adaptive Card. You can customize this logic with your business requirement. For the customization, you need to call your existing APIs.
 
 **Advantages of creating a workflow bot**:
 
 1. Automates business processes and repetitive workflows without leaving the context of conversations.
-1. Sequential workflow supports users through various cards progressively without sending additional cards.
+1. Supports users with sequential workflow through various cards progressively, without sending additional cards.
 1. Provides user-specific views, and is always up-to-date.
 1. Simplifies programming model with TeamsFx SDK.
 
    > [!NOTE]
-   > You can choose the installation target when adding the app. For more install options, see [Distribute your Teams app](../../../concepts/deploy-and-publish/apps-publish-overview.md).
+   > You can choose the installation target when adding the app. For more install options, see [distribute your Teams app](../../../concepts/deploy-and-publish/apps-publish-overview.md).
 
 Users can create a workflow bot to respond to Adaptive Card that is triggered by end users. Adaptive Card action handler provides one or more buttons in the card to ask for user's input by calling APIs. The APIs send another Adaptive Card in conversation to respond to the respective card action.
 
@@ -26,7 +26,7 @@ Users can create a workflow bot to respond to Adaptive Card that is triggered by
 
 ## Card action handler
 
-To simplify the creation of a workflow bot, the TeamsFx SDK provides an Adaptive Card action handler (`TeamsFxAdaptiveCardActionHandler`). You can now focus only on the development of business requirement to respond to the card action without learning the Bot Framework.
+To simplify the creation of a workflow bot, the TeamsFx SDK provides an Adaptive Card action handler (`TeamsFxAdaptiveCardActionHandler`). You can focus only on the development of business requirement to respond to the card action without learning the Bot Framework.
 
 The following diagram illustrates how to respond to an Adaptive Card action with TeamsFx SDK:
 
@@ -36,7 +36,7 @@ The following diagram illustrates how to respond to an Adaptive Card action with
 * **Card action handler**: Triggered when users invoke the corresponding card action (its `triggerVerb` is same as the `verb` property in Adaptive Card action). It can send a response card to respond to the action.
 * **Response card**: The card which respond to the action when user invokes it from the action card.
 
-To handle card actions with TeamsFx SDK, each card action handler should implement `TeamsFxAdaptiveCardActionHandler` interface. This is the interface definition for `TeamsFxAdaptiveCardActionHandler`:
+To handle card actions with TeamsFx SDK, each card action handler must implement `TeamsFxAdaptiveCardActionHandler` interface. This is the interface definition for `TeamsFxAdaptiveCardActionHandler`:
 
 ``` Export interface
 
@@ -160,7 +160,7 @@ Add action handler to implement `TeamsFxAdaptiveCardActionHandler` for processin
     ```
 
    > [!NOTE]
-   > You can follow this section to customize the card action handler according to your business need.
+   > You can follow the code sample to customize the card action handler according to your business need.
 
 ### Register the action handler
 
@@ -182,7 +182,7 @@ To register the action handler, follow these steps:
    ```
 
    > [!NOTE]
-   > For more code snippets and details, see [Respond to card actions in Teams](https://github.com/OfficeDev/TeamsFx/wiki/Respond-to-card-actions-in-Teams)
+   > For more code snippets and details, see [respond to card actions in Teams](https://github.com/OfficeDev/TeamsFx/wiki/Respond-to-card-actions-in-Teams)
 
 ## Customize the action response
 
@@ -221,7 +221,7 @@ When you want to return an error response message to the client, you can apply `
 :::image type="content" source="../../../assets/images/sbs-workflow-bot/error-message-response.png" alt-text="error response message displayed":::
 
 > [!NOTE]
-> For more information about the invoke response format, see [Response format](/adaptive-cards/authoring-cards/universal-action-model?branch=pr-en-us-7193)
+> For more information about the invoke response format, see [response format](/adaptive-cards/authoring-cards/universal-action-model?branch=pr-en-us-7193)
 
 ### Customize Adaptive Card content
 
@@ -260,7 +260,7 @@ As illustrated, user-specific views are refreshed from a base card, when card2 i
 
 * First option enables user-specific view refresh with SDK. The base card can be sent as a command response or a card action response. You can enable user-specific view refresh in `handleCommandReceived` of a command handler, or in `handleActionInvoked` of card action handler where the base card is returned. In the following sample a base card returns as command response that can auto-refresh to specific user, such as the command sender. You can use `refresh(refreshVerb, userIds, data)` method from the `@microsoft/adaptivecards-tools` library to inject a refresh section into your base card. To define the refresh section, ensure that you provide the following:
 
-  1. `userIds`: A set of user MRIs for those who can trigger auto-refresh. For more information on how to add in `userIds` list in refresh section of Adaptive Card, see [Fetch the roster or user profile](../get-teams-context.md#fetch-the-roster-or-user-profile)
+  1. `userIds`: A set of user MRIs for those who can trigger auto-refresh. For more information on how to add in `userIds` list in refresh section of Adaptive Card, see [fetch the roster or user profile](../get-teams-context.md#fetch-the-roster-or-user-profile)
   1. `verb`: A string to identify the refresh action.
   1. `data`: An optional data to associate with the refresh action.
 
