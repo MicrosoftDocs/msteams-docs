@@ -43,7 +43,7 @@ items:
      | &nbsp; | [Microsoft Teams and a Teams account](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chats, meetings, calls, and all in one place. |
      | &nbsp; | [Windows PowerShell](/microsoftteams/teams-powershell-install) | Install by executing all the commands. |
 
-- title: Setup calling and meeting bot
+- title: Set up calling and meeting bot
   durationInMinutes: 5
   content: |
     Register an application using app registration in the Microsoft Azure portal for your app to integrate with the Microsoft identity platform and call Microsoft Graph. Perform the following:
@@ -51,7 +51,7 @@ items:
     1. Create a ngrok tunnel to the endpoints of your web server.
     1. Create Azure bot resource to register bot with Azure bot service.
     1. Create client secret that enables SSO authentication of the bot.
-    1. Create a policy for a demo tenant user for creating the online meetings using PowerShell.
+    1. Create a policy for a demo tenant user for creating online meetings using PowerShell.
     1. Add API permissions for downstream calls.
     1. Create bot channel registration in Azure account.
     1. Add Microsoft Teams channel to deploy the bot to a Teams channel.
@@ -67,14 +67,14 @@ items:
 
     **Register an app in Azure:**
 
-    1. Go to the [Azure portal](https://portal.azure.com/) using your personal Microsoft account.
-    1. Select the **Azure Active Directory**.
-    1. In the left pane, Select **App registrations**.
+    1. Go to [Azure portal](https://portal.azure.com/) using your personal Microsoft account.
+    1. Select **Azure Active Directory**.
+    1. In the left pane, select **App registrations**.
     1. Select **New registration**.
     
         :::image type="content" source="./assets/images/calls-and-meetings/azure-active-directory.png" alt-text="Azure active directory.":::
     
-    The **Register an application** window appears. Enter your application's registration information.
+    **Register an application** window appears. Enter your application's registration information.
 
       1. In **Name**, enter the application name that is displayed to users.
 
@@ -98,7 +98,7 @@ items:
     1. In **Manage**, select **Certificates & secrets**.
     1. Select **Client secrets** > **New client secret**.
 
-    The **Add a client secret** window appears.
+    **Add a client secret** window appears.
 
       1. Enter **Description** to the client secret.
       1. Select **Add**.
@@ -111,7 +111,7 @@ items:
 
     **Run PowerShell script to create a policy**
 
-    1. Create a policy for a demo tenant user for creating the online meetings using the following PowerShell script:
+    1. Create a policy for a demo tenant user for creating online meetings using the following PowerShell script:
 
         > [!NOTE]
         > Run Windows PowerShell PSI as an administrator and execute the script.
@@ -172,14 +172,14 @@ items:
 
         :::image type="content" source="./assets/images/calls-and-meetings/azure-bot_1.png" alt-text="Screenshot showing the Azure bot homepage.":::
       
-       The **Create an Azure Bot** window appears.
+       **Create an Azure Bot** window appears.
 
     1. Enter bot handle name in **Bot handle** field.
     1. Select your **Subscription** and **Resource group** from the dropdown list.
         
         :::image type="content" source="./assets/images/calls-and-meetings/create-azure-bot.png" alt-text="Screenshot showing the creation of Azure bot.":::
       
-       You can also create a new resource group, select **Create new** > enter resource name > select **OK**.
+       You can also create a new resource group. Select **Create new** > enter resource name > select **OK**.
     
     1. Select the required location from **New resource group location** dropdown list, if you've created a new resource group.
 
@@ -195,7 +195,7 @@ items:
 
         :::image type="content" source="./assets/images/calls-and-meetings/review-create_1.png" alt-text="Screenshot showing the selection of multi tenant.":::
 
-    1. If the validation passes, select **Create**.
+    1. If the validation is passed, select **Create**.
 
        It takes a few moments for your bot service to be provisioned.
 
@@ -216,7 +216,7 @@ items:
         
         :::image type="content" source="./assets/images/calls-and-meetings/channels-teams_1.png" alt-text="Screenshot showing channels Teams.":::
     
-    1. Select the checkbox to accept the **Terms of service**
+    1. Select the checkbox to accept the **Terms of Service**.
     1. Select **Agree**.
 
         :::image type="content" source="~/assets/images/calls-and-meetings/terms.png" alt-text="Terms of service":::
@@ -255,7 +255,7 @@ items:
 - title: Update and create Teams app package
   durationInMinutes: 1
   content: |
-    Configure the bot sample to understand how to authenticate conversational bot in Microsoft Teams and create the Teams app package and upload it to the organization.
+    Configure the bot sample to understand how to authenticate conversational bot in Microsoft Teams and create the Teams app package, and upload it to the organization.
     
     1. Update appsettings.json in Visual Studio.
     1. Update manifest.json in Visual Studio and compress it to the zip file in File Explorer.
@@ -273,7 +273,7 @@ items:
     1. Open the **appsettings.json** file in Visual Studio and update configuration for the bot.
 
         * You can obtain the `MicrosoftAppId` from the bot's configuration page. The `MicrosoftAppPassword` is the Value for client secret ID that you saved previously.
-        * You can obtain the `Tenant ID` or `UserId` from the link of the account used to sign in to the Teams. Follow the path in the image to get the link for `tenant ID`:
+        * You can obtain the `tenantId` or `UserId` from the link of the account used to sign in to the Teams. Follow the path in the image to get the link for `tenantId`:
         
             :::image type="content" source="./assets/images/calls-and-meetings/teams-final.png" alt-text="Screenshot showing the Teams link.":::
         
@@ -296,7 +296,7 @@ items:
 
        
         > [!NOTE]
-        > `Tenant ID` or `UserId` of the Teams account denotes from where you want to initiate the call, and `DisplayName` and `UserId` of the users denotes to whom you want to redirect or transfer the call.
+        > `TenantId` or `UserId` of the Teams account denotes from where you want to initiate the call, and `DisplayName` and `UserId` of the users denote to whom you want to redirect or transfer the call.
 
     1. Replace `MicrosoftAppId`, `ClientId`, `AppId` with your **Application (client) ID** and `MicrosoftAppPassword`, `ClientSecret`, and `AppSecret` with your **Value**.
     1. Update `BotBaseUrl` with your `ngrok` URL.
@@ -320,7 +320,7 @@ items:
     
         > [!NOTE]
         > The `manifest.zip` shouldn't contain any extra folders in it. It should have `manifest json` source file, `color` icon, and `outline` icon inside the zip folder.
-        > Upload your manifest in your demo tenant for organization or your Teams account and run your solution in Visual Studio.
+        > Upload your manifest in your demo tenant for organization or your Teams account, and run your solution in Visual Studio.
     
     1. Go to Teams.
     1. To upload `manifest.zip`, select **Apps > Manage your apps > Upload an app > Upload a custom app**.
@@ -334,7 +334,7 @@ items:
 
         You can interact with this bot after debugging in Visual Studio.
 
-- title: Interaction with the calling and meeting bot
+- title: Interaction with calling and meeting bot
   durationInMinutes: 2
   content: |
     Bot allows you to access services and content in a dedicated space within a channel or in a chat.
@@ -346,11 +346,11 @@ items:
 
         :::image type="content" source="./assets/images/calls-and-meetings/bot-with-adaptive-card.png" alt-text="Adaptive card in bot.":::
 
-    1. You can ask bot to create a call.
+    1. Select **Create Call**. 
 
         :::image type="content" source="./assets/images/calls-and-meetings/placed-call.png" alt-text="Screenshot showing the placed call.":::
 
-    1. You can ask bot to transfer the call.
+    1. Select **Transfer Call**.
 
         :::image type="content" source="./assets/images/calls-and-meetings/transfer-call.png" alt-text="Screenshot shows the transfer call.":::
 
