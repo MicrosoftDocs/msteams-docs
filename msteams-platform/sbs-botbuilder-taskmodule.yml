@@ -81,12 +81,13 @@ items:
     1. Select **Create**.
     1. Enter required bot handle name in **Bot handle**.
     1. Select your **Subscription** and **Resource group** from the dropdown list.
-        
+    1. Select required **Data residency (preview)**.
+
         :::image type="content" source="~/assets/images/Teams-task-module/review-plus-create_2.png" alt-text="Select resource Azure bot"::: 
     
        To create a new resource group, select **Create new** > enter resource name > select **OK**. Select the required location from **New resource group location** dropdown list.
        
-        ![New resource group location](~/assets/images/bots/newresource.png)
+        :::image type="content" source="~/assets/images/bots/newresource.png" alt-text="Screenshot shows how to bot setting details in Azure portal.":::
 
     1. Select **MultiTenant** under Bot Type.
 
@@ -99,7 +100,7 @@ items:
 
     1. Select **Review + create**.
 
-        ![Microsoft App ID](~/assets/images/Teams-task-module/multi-tenant-option.png)
+        :::image type="content" source="~/assets/images/Teams-task-module/multi-tenant-option.png" alt-text="Screenshot shows how to select resource in Azure bot."::: 
 
     1. Once the validation is passed, select **Create**. 
 
@@ -107,11 +108,11 @@ items:
 
     1. Select **Go to resource**. 
 
-        ![Deploy App](~/assets/images/Teams-task-module/bot-deployment_1.png)
+        :::image type="content" source="~/assets/images/Teams-task-module/bot-deployment_1.png" alt-text="Screenshot shows how to select go to resource in Azure portal."::: 
 
         Your Azure bot is created.
-
-        ![Azure bot resource created](~/assets/images/Teams-task-module/bot-page_1.png)
+        
+        :::image type="content" source="~/assets/images/Teams-task-module/bot-page_1.png" alt-text="Screenshot shows bot created in Azure portal."::: 
 
     **To create client secret**
 
@@ -121,8 +122,8 @@ items:
 
        > [!TIP]
        > Save the **Microsoft App ID** or **Client ID** for future reference.
-
-        ![Microsoft ID created](~/assets/images/Teams-task-module/manage.png)
+        
+        :::image type="content" source="~/assets/images/Teams-task-module/manage.png" alt-text="Screenshot shows how to set configuration in Azure portal.":::
 
     1. Next to **Microsoft App ID**, select **Manage**.
 
@@ -149,7 +150,7 @@ items:
 
     1. Select **Home**.
 
-        ![Home page](~/assets/images/Teams-task-module/gotohome_1.png)
+        :::image type="content" source="~/assets/images/Teams-task-module/gotohome_1.png" alt-text="Screenshot shows how to select Home in Azure portal.":::
 
     1. Select your bot from **Recent resources**.
 
@@ -161,11 +162,11 @@ items:
     
     1. Select **Agree**.
 
-          ![Terms of service](~/assets/images/Teams-task-module/terms_1.png)
+          :::image type="content" source="~/assets/images/Teams-task-module/terms_1.png" alt-text="Screenshot shows how to select agree to terms and service in Azure portal.":::
+          
+    1. Select **Apply**.
 
-    1. Select **Save**.
-
-          ![Select Teams](~/assets/images/Teams-task-module/configteams_1.png)  
+          :::image type="content" source="~/assets/images/Teams-task-module/configteams_1.png" alt-text="Screenshot shows how to select apply to terms and service in Azure portal."::: 
     
     **To create tunnel for local web server**
 
@@ -342,11 +343,11 @@ items:
 
         ![App settings](~/assets/images/Teams-task-module/appsettings_1.png)
 
-    1. Go to `manifest.json`` in cloned repository.
+    1. Go to **manifest.json** in cloned repository.
 
         :::image type="content" source="~/assets/images/Teams-task-module/manifestlocation_1.png" alt-text="Manifest file location":::
     
-    1. Open `manifest.json`` in latest version of Visual Studio and make the following changes:
+    1. Open **manifest.json** in latest version of Visual Studio and make the following changes:
 
          * Replace all occurrences of `YourDeployedBotUrl.com` with `WebAppDomain` name.
          * Replace all occurrences of `<<YOUR-MICROSOFT-APP-ID>>` with bot's **Microsoft App ID**.
