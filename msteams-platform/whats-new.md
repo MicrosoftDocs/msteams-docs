@@ -13,7 +13,7 @@ zone_pivot_groups: What-new-features
 Discover Microsoft Teams platform features that are generally available (GA). You can now get latest Teams platform updates by subscribing to the RSS feed [![download feed](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates). For more information, see [configure RSS feed](#get-latest-updates).
 
 ## Generally available
- 
+
 :::row:::
 :::column:::
 
@@ -26,6 +26,7 @@ Microsoft Teams platform features that are available to all app developers.
 
 **2022 October**
 
+* ***October 27, 2022***: [Introducing Workflow bot for Teams](sbs-gs-workflow-bot.yml)
 * ***October 19, 2022***: [Developer Portal for Teams is now available for GCC tenants](concepts/build-and-test/teams-developer-portal.md).
 * ***October 13, 2022***: [Configure NavBar and create an overflow menu for multiple actions](concepts/design/personal-apps.md#configure-and-add-multiple-actions-in-navbar).
 * ***October 13, 2022***: [Configure back button of an app](concepts/design/personal-apps.md#configure-back-button).
