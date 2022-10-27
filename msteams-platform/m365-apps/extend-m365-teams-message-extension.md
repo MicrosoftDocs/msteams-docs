@@ -18,7 +18,7 @@ The process to update your search-based Teams message extension involves the fol
 > * Add an Outlook channel for your bot.
 > * Sideload your updated app in Teams.
 
-The rest of this guide walks you through the above steps and show how to preview your message extension in Outlook for Windows desktop and Web.
+The rest of this guide walks you through these steps and shows how to preview your message extension in Outlook for Windows desktop and web.
 
 ## Prerequisites
 
@@ -92,7 +92,7 @@ Open your Teams app manifest and update the `$schema` and `manifestVersion` with
 
 ---
 
-If you used Teams Toolkit to create your message extension app, you can use it to validate the changes to your manifest file and identify any errors. Open the command palette `Ctrl+Shift+P` and find **Teams: Validate manifest file**.
+If you used Teams Toolkit to create your message extension app, you can use it to validate the changes to your manifest file and identify any errors. Open the command palette (`Ctrl+Shift+P`) and find **Teams: Validate manifest file**.
 
 ## Add an Outlook channel for your bot
 
@@ -115,7 +115,7 @@ For users to interact with your message extension from Outlook, you need to add 
 ## Update Microsoft Azure Active Directory (Azure AD) app registration for SSO
 
 > [!NOTE]
-> You can skip the step if you're using the [sample app](#quickstart) provided in this tutorial, as the scenario doesn't involve Azure Active Directory (AAD) Single Sign-On authentication.
+> You can skip this step if you're using the [sample app](#quickstart) provided in this tutorial, as the scenario doesn't involve Azure Active Directory (AAD) Single Sign-On authentication.
 
 Azure Active Directory (AD) Single-sign on (SSO) for message extensions works the same way in Outlook [as it does in Teams](/microsoftteams/platform/bots/how-to/authentication/auth-aad-sso-bots). However, you need to add several client application identifiers to the Azure AD app registration of your bot in your tenant's *App registrations* portal.
 
@@ -135,7 +135,7 @@ Azure Active Directory (AD) Single-sign on (SSO) for message extensions works th
 
 ## Sideload your updated message extension in Teams
 
-The final step is to sideload your updated message extension ([app package](/microsoftteams/platform/concepts/build-and-test/apps-package)) in Teams. Once completed, your message extension appears in your installed *Apps* from the compose message area.
+The final step is to sideload your updated message extension ([app package](/microsoftteams/platform/concepts/build-and-test/apps-package)) into Teams. Once completed, your message extension appears in your installed *Apps* from the compose message area.
 
 1. Package your Teams application (manifest and app [icons](/microsoftteams/platform/resources/schema/manifest-schema#icons)) in a zip file. If you used Teams Toolkit to create your app, you can easily do this using the **Zip Teams metadata package** option in the *Deployment* menu of Teams Toolkit.
 
