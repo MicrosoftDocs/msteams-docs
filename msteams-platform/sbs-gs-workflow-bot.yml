@@ -106,7 +106,7 @@ items:
   content: |
     To build workflow bot using Visual Studio Code, perform the following steps:
     1. Open Visual Studio Code.
-    1. Select the Teams Toolkit :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code Side Bar.
+    1. Select the **Teams Toolkit** :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code Side Bar.
     1. Select **Create a new Teams** app.
       
         :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-create.png" alt-text="create a new teams app in side panel.":::
@@ -115,7 +115,7 @@ items:
     
         :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-teams-app.png" alt-text=" select option create a new teams app.":::
     
-    1. Under **Scenario-based Teams apps** select Workflow bot as the capability that you want to build in your app.
+    1. Under **Scenario-based Teams apps** select **Workflow bot** as the capability that you want to build in your app.
     
         :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-capabilities-workflow.png" alt-text=" select option Work flow bot for capabilities" lightbox="./assets/images/sbs-workflow-bot/sbs-workflow-bot-capabilities-workflow.png":::
     
@@ -142,7 +142,7 @@ items:
         
         :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-scaffolding1.png" alt-text="your app is created with the scaffolding visible in the side panel":::
     
-    1. Select Run and Debug :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/run-debug-icon.png"::: icon from the Visual Studio Code Side Bar.
+    1. Select **Run and Debug** :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/run-debug-icon.png"::: icon from the Visual Studio Code Side Bar.
     
     1. Select **Debug (Edge)** or **Debug (Chrome)** from the dropdown list.
     
