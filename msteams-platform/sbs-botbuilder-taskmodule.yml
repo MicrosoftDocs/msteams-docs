@@ -399,7 +399,7 @@ items:
     dotnet run
     ```
    
-    ![Dotnet](~/assets/images/Teams-task-module/dotnetruncmd.png)
+    :::image type="content" source="~/assets/images/Teams-task-module/dotnetruncmd.png" alt-text="Screenshot shows the command prompt of dotnet run."::: 
 
 - title: Upload Task Module app
   durationInMinutes: 1
@@ -452,11 +452,11 @@ items:
 
     1. Select **Submit**.
 
-       ![Adaptive card text](~/assets/images/Teams-task-module/adaptive-card-text.png)
+       :::image type="content" source="~/assets/images/Teams-task-module/adaptive-card-text.png" alt-text="Screenshot shows Adaptive card message box.":::
 
        **Adaptive Card** sends an acknowledgment message.
-
-       ![Adaptive card submit](~/assets/images/Teams-task-module/adaptive-card-submit.png)
+       
+       :::image type="content" source="~/assets/images/Teams-task-module/adaptive-card-submit.png" alt-text="Screenshot shows the Adaptive card sends an acknowledgment message.":::
 
     1. Select **Custom Form** from **Task Module Invocation from Hero Card** or **Task Module Invocation from Adaptive Card**.
 
