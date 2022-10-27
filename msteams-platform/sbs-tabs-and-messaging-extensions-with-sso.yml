@@ -62,17 +62,17 @@ items:
   content: |
     The following steps guide you to:
 
-    * Create Azure bot resource to register bot with Azure bot service.
+    * Create Azure Bot resource to register bot with Azure Bot service.
     * Create client secret that enables SSO authentication of the bot.
     * Add Microsoft Teams channel to deploy the bot to a Teams channel.
-    * Use ngrok to create a tunnel to your web server's endpoints.
+    * Create a ngrok tunnel to the endpoints of your web server.
     * Add messaging endpoint to the ngrok tunnel you created.
 
-    **To create Azure bot resource**
+    **To create Azure Bot resource**
 
     1. Go to the [Microsoft Azure portal](https://portal.azure.com/).
     1. Select **Create a resource**.
-    1. In the search box, enter **Azure bot**.
+    1. In the search box, enter **Azure Bot**.
     1. Select **Enter**.
     1. Select **Azure Bot**.
 
@@ -100,7 +100,7 @@ items:
 
        :::image type="content" source="./assets/images/Tab-ME-SSO/tenant-review.png" alt-text="tenant review.":::
 
-    1. Once the validation passes, select **Create**.
+    1. If the validation passes, select **Create**.
 
         It takes a few moments for your bot service to be provisioned.
 
@@ -174,7 +174,7 @@ items:
      ngrok http --host-header=localhost 3978
      ```
      > [!TIP]
-     > If you encounter **ERR_NGROK_4018**, follow the steps, as displayed in the command prompt to sign up and authenticate ngrok. Then run the `ngrok http --host-header=localhost
+     > If you encounter **ERR_NGROK_4018**, follow the steps, as displayed in the command prompt to sign up and authenticate ngrok. Then run the `ngrok http --host-header=localhost`
     
     **To add messaging endpoint**
 
@@ -186,7 +186,7 @@ items:
         > The HTTPS URL in your ngrok is your fully qualified domain name.
         > The `WebAppDomain` is a fully qualified domain name that doesn't include `https://` in it.
 
-    1. In **Settings**, select **Configuration**.
+    1. In **Settings** for the Azure bot that you created, select **Configuration**.
 
     1. In **Messaging endpoint**, use the HTTPS URL available from ngrok and at the end of the URL add **/api/messages**.
 
@@ -204,7 +204,7 @@ items:
 
     1. Select **Azure Active Directory**.
 
-    1. From the left pane, select **App Registrations**.
+    1. From the left pane, select **App registrations**.
 
     1. Select your bot.
 
@@ -365,8 +365,9 @@ items:
 
          * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
          * Set `"MicrosoftAppPassword"` to your bot's client secret ID value.
-         * Set `"DOMAIN-NAME"` to your ngrok URL.
+         * Set `"SiteUrl"` to your ngrok URL.
          * Set `"ConnectionName"` to the name of OAuth connection setting.
+         * Set `"TenantId"` to the tenant ID of the tenant where the app is used.
          * Set `"ClientId"` to your bot's **Microsoft App ID**.
          * Set `"AppSecret"` to your bot's client secret ID value.
          * Set `"ApplicationIdURI"` in the form of `api://*******.ngrok.io/botid-{AppID}`.
@@ -382,7 +383,7 @@ items:
     
     1. Open `manifest.json` in **Visual Studio Code** and make the following changes:
 
-         * Set `[DOMAIN-NAME]` with your ngrok domain name. 
+         * Set `[DOMAIN-NAME]` with your ngrok URL.
          * Set `[YOUR-MICROSOFT-APP-ID]` with your bot's **Microsoft App ID**.
 
              > [!NOTE]
@@ -490,7 +491,7 @@ items:
 
           :::image type="content" source="./assets/images/Tab-ME-SSO/consent-box.png" alt-text= "consent box.":::
 
-      1. Open message extension and select your application.
+      1. Select message extension and select your application.
 
       1. Select your profile under search box. You'll see the following output:
 
