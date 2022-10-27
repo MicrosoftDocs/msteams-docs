@@ -18,106 +18,6 @@ The following image shows the share in meeting button on the web app:
 
 During the meeting, when a user selects the **Share in meeting** button from the third-party web app or document, it launches a deep link to the meeting stage and opens the app as a web view in the meeting stage. For the meeting participants to interact with third-party web app or document, they must have meeting extension of the app or document installed in their Teams client. If they don't have meeting extension, Teams prompts participants to install the meeting extension.
 
-## Enable share in meeting
-
-The following are three different methods to enable share in meeting, you can use one of the method to enable share in meeting:
-
-### Method 1
-
-The following steps scans your web page to locate any HTML elements with the class name of type `teams-share-in-meeting-button` and dynamically generate share in meeting buttons in your page.
-
-1. Add the `launcher.js` script on your webpage.
-
-   ```html
-   <script async defer src="https://teams.microsoft.com/share/launcher.js"></script>
-   ```
-
-2. Add an HTML element on your webpage with the `teams-share-in-meeting-button` in the `class` attribute, the app ID (from manifest) in the `data-app-id` attribute, and the link to share in the `data-href` attribute. You can also include the `data-entity-name` and `data-description` attributes.
-
-   ```html
-   <div
-     class="teams-share-in-meeting-button"
-     data-href="https://<link-to-be-shared>"
-     data-app-id="<app-id>"
-     data-entity-name="<app-name>"
-     data-entity-description="<app-content-description>"
-     >
-   </div>
-   ```
-
-3. Following are the additional attributes to customize share in meeting button:
-   * `data-button-type`: Specifies the background color of the button (`primaryShareInMeeting` or `secondaryShareInMeeting`).
-   * `data-button-size`: Specifies the size of the button in pixel.
-   * `data-target`: Specifies whether the link opens in the same window, new tab, or a new window.
-   * `data-locale`: Specifies the desired user language.
-
-### Method 2
-
-`async shareToMicrosoftTeams.renderButtons(options)` renders all share buttons that have the class name **teams-share-button** or **teams-share-in-meeting-button** on the page. If an `options (optional)` object is supplied with a list of elements as shown in the following code, those elements are rendered into the share buttons or share in meeting buttons.
-
-```javascript
-options (optional): { elements?: HTMLElement[], shareInMeetingElements?: HTMLElement[] }
-```
-
-1. Add the `launcher.js` script on your webpage.
-
-   ```html
-   <script async defer src="https://teams.microsoft.com/share/launcher.js" onload="onLoadComplete()"></script>
-   ```
-
-2. Create an HTML element and specify the required attributes. After the launcher script is fully loaded, ensure that the rendering logic is executed.
-
-   ```javascript
-   async function onLoadComplete() {
-      const shareInMeetingButton = document.createElement("div");
-      shareInMeetingButton.setAttribute("data-app-id", "<app-id>");
-      shareInMeetingButton.textContent = "Share Test App"
-      shareInMeetingButton.setAttribute("data-href", "<app-content-url>");
-      shareInMeetingButton.setAttribute("data-button-type", "secondaryShareInMeeting");
-      shareInMeetingButton.setAttribute("data-locale", "fr-CA");
-      await window.shareToMicrosoftTeams.renderButtons({elements: [], shareInMeetingElements: [shareInMeetingButton]});
-   }  
-   ```
-
-### Method 3
-
-`async shareInMeetingClickHandler(content: IShareInMeetingContent)` creates a callback handler for share in meeting button, which can be executed by selecting a button or menu.
-
-1. Add the `launcher.js` script on your webpage.
-
-   ```html
-   <script async defer src="https://teams.microsoft.com/share/launcher.js" onload="onLoadComplete()"></script>
-   ```
-
-2. Create an HTML element and add the `shareToMicrosoftTeams.shareInMeetingClickHandler` to its `onClick` attribute. After the launcher script is fully loaded, ensure that the onclick logic is created.
-
-   ```javascript
-   async function onLoadComplete() {
-      var customShareInMeetingButton = document.createElement("a");
-      customShareInMeetingButton.onclick = window.shareToMicrosoftTeams.shareInMeetingClickHandler({
-      url: "<app-content-url>",
-      appId: "<app-id>",
-      entityName: "<app-entity-name>",
-      entityDescription: "<app-content-description>",
-      });
-   }
-   ```
-
-### Full launcher.js definition
-
-| Property | HTML attribute | Type | Required | Default | Description |
-| -------------- | ---------------------- | --------------------- | ------- |  ------- |---------------------------------------------------------------------- |
-| url | `data-href` | String | Yes | NA | URL of the app content to share. |
-| appId | `data-app-id` | String | Yes | NA | ID of the app to share. |
-| entityName | `data-entity-name` | String | No | NA | App entity name. |
-| entityDescription | `data-entity-description` | String | No | NA | Description of app content to share. |
-| locale | `data-locale` | String | No | en-US | User preferred language. |
-| target | `data-target` | String | No | self | Specifies whether the link open in the same window, new tab, or new window. |
-| buttonType | `data-button-type` | String | No | primaryShareInMeeting | Specifies the button background color: `primaryShareInMeeting` or `secondaryShareInMeeting`. |
-| buttonSize | `data-button-size` | String | No | NA | Button size in pixels. |
-
-## Deep link format
-
 When you select the share in meeting button, it launches a deep link to the meeting stage. The following is the deep link format:
 
 `msteams:/l/meeting-share?deeplinkId=GUID&fqdn=string&appContext={json}`
@@ -152,6 +52,98 @@ Optional:
 "additionalInfo": "<Passed on further down for consumption as required>"
 }
 ```
+
+## Enable share in meeting
+
+The following are three different methods to enable share in meeting, you can use one of the method to enable share in meeting:
+
+**Method 1**: You can scan your web page to locate any HTML elements with the class name of type `teams-share-in-meeting-button` and dynamically generate share in meeting buttons in your page.
+
+1. Add the `launcher.js` script on your webpage.
+
+   ```html
+   <script async defer src="https://teams.microsoft.com/share/launcher.js"></script>
+   ```
+
+2. Add an HTML element on your webpage with the `teams-share-in-meeting-button` in the `class` attribute, the app ID (from manifest) in the `data-app-id` attribute, and the link to share in the `data-href` attribute. You can also include the `data-entity-name` and `data-description` attributes.
+
+   ```html
+   <div
+     class="teams-share-in-meeting-button"
+     data-href="https://<link-to-be-shared>"
+     data-app-id="<app-id>"
+     data-entity-name="<app-name>"
+     data-entity-description="<app-content-description>"
+     >
+   </div>
+   ```
+
+3. Following are the additional attributes to customize share in meeting button:
+   * `data-button-type`: Specifies the background color of the button (`primaryShareInMeeting` or `secondaryShareInMeeting`).
+   * `data-button-size`: Specifies the size of the button in pixel.
+   * `data-target`: Specifies whether the link opens in the same window, new tab, or a new window.
+   * `data-locale`: Specifies the desired user language.
+
+**Method 2**: `async shareToMicrosoftTeams.renderButtons(options)` renders all share buttons that have the class name **teams-share-button** or **teams-share-in-meeting-button** on the page. If an `options (optional)` object is supplied with a list of elements as shown in the following code, those elements are rendered into the share buttons or share in meeting buttons.
+
+```javascript
+options (optional): { elements?: HTMLElement[], shareInMeetingElements?: HTMLElement[] }
+```
+
+1. Add the `launcher.js` script on your webpage.
+
+   ```html
+   <script async defer src="https://teams.microsoft.com/share/launcher.js" onload="onLoadComplete()"></script>
+   ```
+
+2. Create an HTML element and specify the required attributes. After the launcher script is fully loaded, ensure that the rendering logic is executed.
+
+   ```javascript
+   async function onLoadComplete() {
+      const shareInMeetingButton = document.createElement("div");
+      shareInMeetingButton.setAttribute("data-app-id", "<app-id>");
+      shareInMeetingButton.textContent = "Share Test App"
+      shareInMeetingButton.setAttribute("data-href", "<app-content-url>");
+      shareInMeetingButton.setAttribute("data-button-type", "secondaryShareInMeeting");
+      shareInMeetingButton.setAttribute("data-locale", "fr-CA");
+      await window.shareToMicrosoftTeams.renderButtons({elements: [], shareInMeetingElements: [shareInMeetingButton]});
+   }  
+   ```
+
+**Method 3**: `async shareInMeetingClickHandler(content: IShareInMeetingContent)` creates a callback handler for share in meeting button, which can be executed by selecting a button or menu.
+
+1. Add the `launcher.js` script on your webpage.
+
+   ```html
+   <script async defer src="https://teams.microsoft.com/share/launcher.js" onload="onLoadComplete()"></script>
+   ```
+
+2. Create an HTML element and add the `shareToMicrosoftTeams.shareInMeetingClickHandler` to its `onClick` attribute. After the launcher script is fully loaded, ensure that the onclick logic is created.
+
+   ```javascript
+   async function onLoadComplete() {
+      var customShareInMeetingButton = document.createElement("a");
+      customShareInMeetingButton.onclick = window.shareToMicrosoftTeams.shareInMeetingClickHandler({
+      url: "<app-content-url>",
+      appId: "<app-id>",
+      entityName: "<app-entity-name>",
+      entityDescription: "<app-content-description>",
+      });
+   }
+   ```
+
+The following are the launcher.js definitions:
+
+| Property | HTML attribute | Type | Required | Default | Description |
+| -------------- | ---------------------- | --------------------- | ------- |  ------- |---------------------------------------------------------------------- |
+| url | `data-href` | String | Yes | NA | URL of the app content to share. |
+| appId | `data-app-id` | String | Yes | NA | ID of the app to share. |
+| entityName | `data-entity-name` | String | No | NA | App entity name. |
+| entityDescription | `data-entity-description` | String | No | NA | Description of app content to share. |
+| locale | `data-locale` | String | No | en-US | User preferred language. |
+| target | `data-target` | String | No | self | Specifies whether the link open in the same window, new tab, or new window. |
+| buttonType | `data-button-type` | String | No | primaryShareInMeeting | Specifies the button background color: `primaryShareInMeeting` or `secondaryShareInMeeting`. |
+| buttonSize | `data-button-size` | String | No | NA | Button size in pixels. |
 
 ## End user experience on third-party apps
 
