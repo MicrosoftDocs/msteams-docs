@@ -24,7 +24,7 @@ To set up your development environment:
 
 You need a Microsoft 365 developer subscription sandbox tenant to set up your dev environment. If you don't already have one, create a [sandbox tenant](/office/developer-program/microsoft-365-developer-program-get-started) or get a test tenant through your organization.
 
-You'll also need to enable sideloading for your tenant:
+You also need to enable sideloading for your tenant:
 
  1. Sign in to [Teams admin center](https://admin.teams.microsoft.com/dashboard) with your test tenant credentials.
 

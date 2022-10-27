@@ -176,7 +176,7 @@ You can pin the app for quick access, or you can find your app in the ellipses (
 Here's how to preview your app running in Office and Outlook, web and Windows desktop clients.
 
 > [!NOTE]
-> Uninstalling your app from Teams also removes it from the **More Apps** catalogs in Outlook and Office. If you're using the Teams Toolkit sample app provided above.
+> IIf you use a Teams Toolkit sample app and uninstall it from Teams, it'll also be removed from the **More Apps** catalogs in Outlook and Office.
 
 ### Outlook on Windows
 
