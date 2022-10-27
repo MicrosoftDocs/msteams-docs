@@ -15,7 +15,7 @@ items:
 - durationInMinutes: 1
   content: |
     The workflow bot allows users to interact with an Adaptive Card enabled by the Adaptive Card action handler feature in the workflow bot app. When you respond to the triggered Adaptive Card action, then a sequential workflow is completed.
-    When you get an Adaptive Card, it provides one or more buttons in the card to ask for your input. You can also call an API, and then send another Adaptive Card in your conversation in response to the card action.
+    When you get an Adaptive Card, it provides one or more buttons in the card for your input. You can also call an API, and then send another Adaptive Card in your conversation in response to the card action.
     In this tutorial, you'll learn:
       * How to build workflow bot with Teams Toolkit.
       * About the directory structure of your app.
@@ -110,16 +110,20 @@ items:
     1. Select **Create a new Teams** app.
       
         :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-create.png" alt-text="create a new teams app in side panel.":::
-    1. Select Create a new Teams app option to create an app using Teams Toolkit.
+    
+    1. Select **Create a new Teams** app option to create an app using Teams Toolkit.
     
         :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-teams-app.png" alt-text=" select option create a new teams app.":::
+    
     1. Under **Scenario-based Teams apps** select Workflow bot as the capability that you want to build in your app.
     
         :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-capabilities-workflow.png" alt-text=" select option Work flow bot for capabilities" lightbox="./assets/images/sbs-workflow-bot/sbs-workflow-bot-capabilities-workflow.png":::
-    1. Select TypeScript as the programming language.
+    
+    1. Select **TypeScript** as the programming language.
     
         :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-program-lang.png" alt-text=" select option type script for programming language":::
-    1. Select Default folder to store your project root folder in default location.
+    
+    1. Select **Default folder** to store your project root folder in default location.
       
         > [!NOTE]
         > You can also change the default location by selecting **Browse...**
@@ -131,17 +135,21 @@ items:
         > Ensure that you use only alphanumeric characters in the application name.
         
         :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-app-name.png" alt-text="enter application name":::
-    1. Select Enter.
+    
+    1. Select **Enter**.
         
     1. The workflow bot is created in a few seconds, and you can see the scaffolding.
         
         :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-scaffolding1.png" alt-text="your app is created with the scaffolding visible in the side panel":::
+    
     1. Select Run and Debug :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/run-debug-icon.png"::: icon from the Visual Studio Code Side Bar.
     
-    1. Select Debug (Edge) or Debug (Chrome) from the dropdown list.
+    1. Select **Debug (Edge)** or **Debug (Chrome)** from the dropdown list.
     
        :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-local-debug1.png" alt-text="your app is created with the scaffolding visible in the side panel":::    
+    
     1. Select **Start Debugging** button.
+    
     1. Select **Add**.
         :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-add-app.png" alt-text="select add to add your workflow bot app":::
     ### Take tour of source code
@@ -170,13 +178,13 @@ items:
     |`src/cardActions/doStuffActionHandler.js(ts)` | Responds to the `doStuff` card action.|
     |`src/cardModels.js(ts)` | The default Adaptive Card data model.|
     
-    The following files implement the core workflow bot on the Bot Framework. You generally don't need to customize these files.
+    The following file implements the core workflow bot on the Bot Framework, you generally don't need to customize these files:
     
     | File/Folder | Content |
     |   ---  |   ---   |
     | `src/internal/initialize.js(ts)`| Application initialization and bot message handling.|
     
-    The following files are project-related files. You generally don't need to customize these files.
+    The following files are project-related files, you generally don't need to customize these files:
     
     | File/Folder | Content |
     |   ---  |   ---   |
@@ -200,7 +208,7 @@ items:
   content: |
     Did you come up with something like this?
 
-    :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-debug-output2.png" alt-text="select add to add your workflow bot app" lightbox="assets/images/sbs-workflow-bot/sbs-workflow-bot-debug-output2.png":::
+    :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-debug-output2.png" alt-text="select add to add your workflow bot app":::
     
 - content: |
     You've completed the tutorial to get started with workflow bot for Microsoft Teams.
