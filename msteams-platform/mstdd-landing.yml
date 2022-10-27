@@ -191,6 +191,8 @@ landingContent:
       links:
         - text: Send activity feed notification 
           url:  ~/sbs-graphactivity-feedbroadcast.yml
+        - text: Build an in-meeting document signing app
+          url:  ~/sbs-inmeeting-document-signing.yml
 
 
     - linkListType: tutorial
