@@ -42,7 +42,9 @@
   - name: Build notification bot with JavaScript
     href: sbs-gs-notificationbot.yml
   - name: Build command bot with JavaScript
-    href: sbs-gs-commandbot.yml  
+    href: sbs-gs-commandbot.yml 
+  - name: Build workflow bot
+    href: sbs-gs-workflow-bot.yml
   - name: Code samples
     href: https://github.com/OfficeDev/Microsoft-Teams-Samples
 - name: Plan your app
@@ -141,8 +143,6 @@
           href: toolkit/TeamsFx-preview-and-customize-app-manifest.md
         - name: Edit Azure AD manifest
           href: toolkit/AAD-manifest-customization.md
-      - name: TeamsFx SDK
-        href: toolkit/TeamsFx-SDK.md
       - name: Debug your Teams app
         items: 
         - name: Overview
@@ -174,7 +174,9 @@
       - name: Integrate with Developer Portal
         href: toolkit/Integrate-with-developer-portal.md
     - name: FAQ
-      href: toolkit/faq.md        
+      href: toolkit/faq.md  
+  - name: TeamsFx SDK
+    href: toolkit/TeamsFx-SDK.md      
   - name: Teams Toolkit CLI
     href: toolkit/TeamsFx-CLI.md
   - name: Developer Portal for Teams
@@ -383,7 +385,7 @@
   - name: Enable and configure apps for Teams meetings
     items:
     - name: Build tabs for meeting
-      href: apps-in-teams-meetings/build-tabs-for-meeting.md
+      href: apps-in-teams-meetings/build-tabs-for-meeting.md 
     - name: Build apps for meeting stage
       href: apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md
     - name: Build in-meeting notification for meeting
@@ -397,7 +399,7 @@
   - name: Get meeting transcripts using Graph APIs
     items:
     - name: Overview
-      href: graph-api/meeting-transcripts/overview-transcripts.md
+      href: graph-api/meeting-transcripts/overview-transcripts.md 
     - name: Fetch meeting ID and organizer ID
       href: graph-api/meeting-transcripts/fetch-id.md
       displayName: Obtain meeting details using user-level notification, tenant-level notification
