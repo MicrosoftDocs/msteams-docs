@@ -12,7 +12,7 @@ The resource-specific consent (RSC) permissions model, originally developed for 
 
 Using RSC, you can now request team owners to consent for a bot to receive user messages across standard channels in a team without being @mentioned. The capability is enabled by specifying the `ChannelMessage.Read.Group` or `ChatMessage.Read.Chat` permissions in the manifest of an RSC enabled Teams app. The conversation owners can grant consent during the app installation or upgrade process.
 
-Bots can receive all groupchat messages in a team when consented to during app installation.
+Bots can receive all group chat messages in a team when consented to during app installation.
 
 For more information about enabling RSC for your app, see [resource-specific consent](../../../graph-api/rsc/resource-specific-consent.md).
 
