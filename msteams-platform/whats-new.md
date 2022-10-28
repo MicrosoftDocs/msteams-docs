@@ -26,7 +26,7 @@ Microsoft Teams platform features that are available to all app developers.
 
 **2022 October**
 
-* ***October 27, 2022***: [Support global routing for bot APIs](bots/how-to/conversations/send-proactive-messages.md#create-the-conversation).
+* ***October 28, 2022***: [Support global routing for bot APIs](bots/how-to/conversations/send-proactive-messages.md#create-the-conversation).
 * ***October 27, 2022***: [Introducing Workflow bot for Teams](sbs-gs-workflow-bot.yml)
 * ***October 26, 2022***: [Build an in-meeting document signing app](apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#build-an-in-meeting-document-signing-app)
 * ***October 19, 2022***: [Developer Portal for Teams is now available for GCC tenants](concepts/build-and-test/teams-developer-portal.md).
