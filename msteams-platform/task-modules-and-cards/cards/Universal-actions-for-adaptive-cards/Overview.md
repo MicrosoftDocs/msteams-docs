@@ -38,13 +38,11 @@ The following image shows the current inconsistent action model:
 
 With the Universal Actions for Adaptive Cards, you can use `Action.Execute` for action handling across different platforms.
 
-`Action.Execute` works across all hubs, including Teams and Outlook and isn't a replacement to `Action.Submit`.
-
-For example, if you want an external system to do an action and the result of the action must be sent back to your conversation using [Messaging Extension](../../../messaging-extensions/what-are-messaging-extensions.md), `Action.Execute` isn't supported.
+`Action.Execute` works across all hubs, including Teams and Outlook and isn't a replacement of `Action.Submit`. For example, if you want an external system to do an action and the result of the action must be sent back to your conversation using [Messaging Extension](../../../messaging-extensions/what-are-messaging-extensions.md), `Action.Execute` isn't supported.
 
 For [link unfurling cards](../../../messaging-extensions/how-to/link-unfurling.md) such as Hero and Thumbnail Cards, you must call `Action.Submit`.
 
-In addition, an Adaptive Card can be returned as response for an `Action.Execute` triggered invoke request.
+In addition, an Adaptive Card can be returned as a response for an `Action.Execute` triggered invoke request.
 
 The following image shows the new Universal Action model:
 
