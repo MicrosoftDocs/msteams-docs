@@ -153,7 +153,7 @@ The final step is to sideload your updated message extension ([app package](/mic
 
     :::image type="content" source="../assets/images/teams-upload-custom-app.png" alt-text="The screenshot is an example that shows the 'Upload a customized app' option in Teams.":::
 
-After being sideloaded through Teams, your message extension is available in Outlook for Windows desktop and web.
+After it's sideloaded through Teams, your message extension is available in Outlook for Windows desktop and web.
 
 ## Preview your message extension in Outlook
 
