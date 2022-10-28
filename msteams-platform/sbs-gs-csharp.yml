@@ -2,7 +2,7 @@
 title: Build your first app using C#
 metadata:
   title: Hello World with C#
-  description: In this tutorial, you'll learn to build Hello World app with C#.
+  description: In this tutorial, you'll learn to build Hello World app with C# by setting up a new project, build and deploy tab, bot and message extension apps.
   audience: Developer
   level: Beginner
   ms.date: 08/24/2021
@@ -16,15 +16,14 @@ items:
   content: |
     Start Microsoft Teams app development by building your first app with a tab, a bot, and a message extension capability.
 
-    >This app will have all capabilities and each has its own UI and UX:
+    This app will have all capabilities and each has its own UI and UX:
 
-    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/prerequisites/your-helloworld-app.png" alt-text="Diagram showing this app has three features." border="true":::
+    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/prerequisites/your-helloworld-app.png" alt-text="Diagram showing this app has three features.":::
 
     In this tutorial, you'll learn:
 
-    - How to set up a new project
-    - How to build three apps with a different capability each—tab, bot, and message extension using C# and Visual Studio 2019
-    - How to deploy your app from Developer Portal
+    - How to set up a new project.
+    - How to build apps with tab capability using C# and Visual Studio.
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -34,61 +33,47 @@ items:
     | &nbsp; | Install | For using... |
     | --- | --- | --- |
     | **Required** | &nbsp; | &nbsp; |
-    | &nbsp; | [Visual Studio 2019](https://visualstudio.com/download)<br> Install one of the following two workloads:<br> • **ASP.NET and web development** <br> • **.NET Core cross-platform development** | .NET. You can install the free community edition of Visual Studio 2019, and install the workloads also. |
-    | &nbsp; | [Git](https://git-scm.com/downloads) | Git to use the Sample C# app repo from GitHub. |
-    | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bot and message extension) require inbound connections. You need to expose your development system to Teams through a tunnel. A tunnel is not required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
-    | &nbsp; | [Teams Toolkit](#install-teams-toolkit) | A Visual Studio 2019 extension that creates a project scaffolding for your app. Use latest version. |
-    | &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and distribute your Teams app including to your organization or the Teams store. |
+    | &nbsp; | [Visual Studio 2022 version 17.3](https://visualstudio.microsoft.com)<br> Install one of the following two workloads:<br> • **ASP.NET and web development** <br> • **.NET Core cross-platform development** | You can install the enterprise version in Visual Studio 2022, and install the workloads. |
+    | &nbsp; | [Teams Toolkit](#install-teams-toolkit) | A Visual Studio extension that creates a project scaffolding for your app. Use latest version. |
     | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call - all in one place. |
-    | **Optional** | &nbsp; | &nbsp; |
-    | &nbsp; | [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack) and [Microsoft Azure CLI](/cli/azure/install-azure-cli) | Azure tools to access stored data or to deploy a cloud-based backend for your Teams app in Azure. |
-    
-
-    ## Verify git installation
-
-    If Visual Studio installation prompts you to add `git` to the path, select it. 
-   
-    To verify the version of git installed:
-
-    1. Open a terminal window. 
-    2. Run the following command to verify the `git` version installed on your machine:
-
-        ```bash
-        $ git --version
-        ```
-
-        Output example: `git version 2.17.1.windows.2`
 
     ## Install Teams Toolkit
 
     Teams Toolkit helps simplify the development process with tools to create a project scaffolding for your app. It creates the necessary directory structure for all selected capabilities with the required files in place, ready to build the project.
 
-    Teams Toolkit is available as a Visual Studio 2019 extension.
+    Teams Toolkit is available as an extension in Visual Studio.
 
-    To install Teams Toolkit extension:
+    You can download the latest Visual Studio installer from the [Visual Studio download page](https://visualstudio.microsoft.com).
 
-    1. Open Visual Studio 2019 and select the **Extensions** > **Manage Extensions**.
-    1. In the search box, enter **Teams Toolkit**.
-    1. Select **Download** next to the Teams Toolkit.
+    > [!NOTE]
+    > You'll need to first install the Visual Studio installer before installing Visual Studio.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/install-teams-toolkit-vs19.png" alt-text="Image shows installation for Teams Toolkit"::: 
+    After you open the Visual Studio installer, in the pop-up workloads window.
+
+      1. Select the box **ASP.NET and web development** workload.
+      1. Select the box **Microsoft Teams development tools** in the installation details panel.
+      1. Select **Install**.
+
+          :::image type="content" source="~/assets/images/teams-toolkit-overview/visual-studio-install_1.png" alt-text="Visual studio-installation":::
+
+      1. Select **Launch** to open Visual Studio.
+
+          :::image type="content" source="~/assets/images/teams-toolkit-v2/visual-studio-launch1.png" alt-text="Launch visual studio":::
+          
+         > [!IMPORTANT]
+         > You're recommended to download Visual Studio 2022 17.3.0 version, since Teams Toolkit for Visual Studio is GA in this version. This article is written for Visual Studio 2022 17.3.0 version. Teams Toolkit version 17.3.* or higher.
+
+      1. Select **Extensions** > **Manage Extensions**.
+
+          :::image type="content" source="~/assets/images/teams-toolkit-v2/select-extension.png" alt-text="Select Extensions.":::
+
+         The following Manage Extension window appears:
+
+          :::image type="content" source="~/assets/images/teams-toolkit-v2/manage-extension.png" alt-text="Manage Extensions.":::
+
+      1. Select **Installed** and you can see **Teams Toolkit** extension installed.
     
-        The changes are available after you close Visual Studio 2019. It's required as Visual Studio 2019 must restart after the installing the extension.
-
-    1. Select **Close**.
-    
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/toolkit-installed.png" alt-text="Image shows installation done for Teams Toolkit" lightbox="~/assets/images/teams-toolkit-v2/toolkit-installed.png" border="true":::
-    
-    1. Close Visual Studio 2019.
-        
-        The VSIX installer opens with instructions for installing the extension.
-
-    1. Follow the instructions of VSIX installer to complete the installation of the toolkit.
-    1. Open Visual Studio 2019 again.
-    
-    The Teams Apps will be available as a template in Visual Studio 2019.
-
-    You also can find the Teams Toolkit on the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit).
+          :::image type="content" source="~/assets/images/teams-toolkit-v2/select-ttk.png" alt-text="Select Teams Toolkit":::
 
     ## Set up your Teams development tenant
 
@@ -129,544 +114,136 @@ items:
 
     ## Get a free Azure account
 
-    If you wish to host your app or access resources in Azure, you must have an Azure subscription. [Create a free account](https://azure.microsoft.com/free/) before you begin.
+    If you wish to host your app or access resources in Azure, you must have an Azure subscription. Create a free account before you begin.
 
-    Now you've got all tools and set up your accounts. Next, let's set up your development environment and start building!
+    Now you’ve got all tools and set up your account. Next, let's set up your development environment and start building! Select the app you want to do first
 
-    > [!NOTE]
-    > Use a suitable terminal window on your platform. These examples use Git Bash but can be run on most platforms.
-
-    Open the latest version of Visual Studio and install any updates.
-
-    You can use the same terminal window to run the commands in this tutorial.
-
-    <a name="DownloadSample"></a>
-
-    ## Download the sample
-
-    For this tutorial, use the [Hello, World!](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-hello-world/csharp) sample in C#. You can download and clone it from GitHub.
-    
-    To use this sample, clone the sample repo in one of the following ways:
-    
-    - [Using Git Bash](#to-use-git-bash-to-clone-the-sample-repo)
-    - [Using Visual Studio 2019](#to-use-visual-studio-2019-to-clone-the-sample-repo)
-    
-    ### To use Git Bash to clone the sample repo
-    
-    - Run the following command in a terminal window to clone the sample repository to your computer:
-
-        ```bash
-        git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
-        ```
-        The sample repo for C# app is cloned on your computer in the default location.
-
-        > [!TIP]
-        > You can [fork](https://help.github.com/articles/fork-a-repo/) this [repository](https://github.com/OfficeDev/Microsoft-Teams-Samples) to modify and save your changes to GitHub.
-
-        <a name="BuildRun"></a>
-
-        You can view the cloned repository by opening it in Visual Studio 2019. 
-
-    ### To use Visual Studio 2019 to clone the sample repo
-
-    1. Open Visual Studio 2019.
-    1. Select **Clone a repository**.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/csharp-clone-repo.png" alt-text="Clone sample repo for c# Teams app" border="true":::
-
-    1. Enter `https://github.com/OfficeDev/Microsoft-Teams-Samples.git` as path for cloning the repo:
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/repo-clone-path.png" alt-text="Clone sample repo for c# Teams app" border="true":::
-
-    1. Enter the location where you want to clone the repo, and select **Clone**.
-
-        The sample repo is cloned, and Visual Studio opens. You can view the cloned repo in the **Solution Explorer**.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/csharp-repo-cloned.png" alt-text="Sample repo for c# Teams app cloned" border="true":::
-
-    Now that you've got the sample repo cloned, let's build your first C# app for Teams.
-
-- title: Build and run your first C# app
+- title: Create project workspace for your tab app using C#
   durationInMinutes: 1
   content: |
 
-    After you've cloned the repo for C# sample app, you can build and run the app in your local environment.
+   Start Microsoft Teams app development by creating your first app. This app uses the tab capability.
+    
+    If the prerequisites are in place, let's begin!
 
-    In this page, you'll learn to:
-    1. [Build your first app](#build-your-first-app)
-    1. [Deploy your sample app locally](#deploy-your-sample-app-locally)
+    The following steps help you to create project workspace for your tab app in Visual Studio
 
-    ## Build your first app
+    1. Open Visual Studio.
 
-    You can view the project structure in the **Solution Explorer** after the workspace is created. Now, you're to build and run your app.
+       The following page appears:
 
-    **To build and run the cloned sample**
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/visual-studio.png" alt-text="Open Visual Studio":::
 
-    1. Open the solution file **Microsoft.Teams.Samples.HelloWorld.sln** from the **Microsoft-Teams-Samples/samples/app-hello-world/csharp** directory of the sample.
+    1. Select **Create a new project**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/hello-world-sln-open.png" alt-text="Image showing Hello World solution directory structure" border="true":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/select-create-project.png" alt-text="Select create project":::
 
-    1. Select the **Project** menu, and select **Microsoft.Teams.Samples.HelloWorld.Web Properties**.
+    1. Enter **Teams** in the search box.
+    1. Select **Microsoft Teams App** and select **Next**.
+    
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/enter-teams.png" alt-text="Enter Teams":::
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/vs-project-menu.png" alt-text="Image showing Project menu to select Properties option" border="true":::
+       Configure your new project page appears.
 
-    1. Select **Debug** from the left pane of the **Properties** window.
+    1. Enter the following details to configure your new project.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/vs-project-properties.png" alt-text="Image showing Properties window" border="true":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/enter-project-name.png" alt-text="Enter Project name":::
 
-    1. Move through the screen to view the **Web Server Settings**.
+        1. Enter required project name in **Project name**.
+        1. Select required location to save project files and folders.
+        1. Select **Create**.
+    
+       Create a new Teams application window displays:
 
-    1. Make the following settings in **Debug** pane:
-        - Set **App URL** to `http://localhost:3333/`.
-        - Clear **Enable SSL**.
+    1. Select **Tab** and select **Create**.   
 
-            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/vs-project-web-server-settings.png" alt-text="Image showing Web server settings for C# project properties" border="true":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/select-tab.png" alt-text="Select tab":::
 
-    1. Select **Build Solution** from the **Build** menu.
+       Now Teams tab app is created in a few seconds.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/app-build-complete.png" alt-text="Image showing build completed" border="true":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/tap-app-in-vs.png" alt-text="Project Creation":::     
 
-    1. Select the **F5** key, or select **Start Debugging** from the **Debug** menu to run the sample.
+    ## Take a tour of tab app source code
+      
+    Teams Toolkit provides all components for building an app. After creating the project, you can view the project folders and files under **Solution Explorer**.  
 
-        When the app starts, a browser window opens. It shows the root of your app. You can go to the following URLs to verify that all the app URLs are loading:
+      :::image type="content" source="~/assets/images/teams-toolkit-v2/solution explorer.png" alt-text="Solution Explorer"::: 
 
-        - `https://localhost:3333/`
+    Although you're free to choose any UI framework (or not to use any), this sample template code provides a scaffolding with React components.
 
-            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/local-host-after-debug.png" alt-text="Image showing local host" border="true":::
+    Among other items in this directory structure, the Toolkit maintains:
 
-        - `https://localhost:3333/hello`
+    | Folder name | Contents |
+    | --- | --- |
+    | `.fx/configs` | Configuration files that user can customize for the Teams app. |
+    | - `.fx/configs/config.<envName>.json` | Configuration file for every environment. |
+    | - `.fx/configs/azure.parameters.<envName>.json` | Parameters file for Azure BICEP provision for every environment. |
+    | - `.fx/configs/projectSettings.json` | Global project settings that apply to all environments. |
+    | - `.fx/states` | Provision output that is generated by Teams Toolkit.  The toolkit creates this folder after you provision resources for your app. |
+    | - `.fx/states/state.<envName>.json` | Provision output file for every environment. |
+    | - `.fx/states/<env>.userdata` | Sensitive user data for the provision output for every environment. |
+    | `templates/appPackage` | App manifest template files, and the app icons: color.png and outline.png. |
+    | - `templates/appPackage/manifest.template.json` | App manifest for running the app in local or remote environment.  |
+    | `templates/azure` | BICEP template files |
 
-            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/local-host-hello.png" alt-text="Image showing Hello page of the app" border="true":::
-
-        - `https://localhost:3333/first`
-
-            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/local-host-first-tab.png" alt-text="Image showing first tab of the app" border="true":::
-
-        - `https://localhost:3333/second`
-
-            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/local-host-second-tab.png" alt-text="Image showing second tab of the app" border="true":::
-
-        > [!Note]
-        > If you receive an error `Could not find a part of the path … bin\roslyn\csc.exe`, update the package with the command `Update-Package Microsoft.CodeDom.Providers.DotNetCompilerPlatform -r`.
-
-    ## Deploy your sample app locally
-
-    Microsoft Teams apps are web applications that provide one or more capabilities. Make your app available on the internet so that the Teams platform can load it. Host your app using `ngrok` to create a tunnel to the local process on your computer.
-
-    After you host your app, make a note of its root URL, such as `https://yourteamsapp.ngrok.io` or `https://yourteamsapp.azurewebsites.net`.
-
-    ### Tunnel using ngrok
-
-    After you install ngrok, you can create a tunnel to deploy your app locally:
-
-    1. Open a new terminal window.
-    1. Run the following command to create a tunnel. The sample app uses port 3333.
-
-        ```bash
-        ngrok http 3333 -host-header=localhost:3333
-        ````
-        The ngrok tunnel is created. Here's an example:
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/csharp-ngrok-tunnel.png" alt-text="Image showing ngrok tunnel" border="true":::
-
-        You can try adding `hello`, `first`, or `second` to the ngrok tunnel url to view different tab pages of the app.
-        
-        Ngrok listens to requests from the internet and routes them to your app running on port 3333.
-
-    To verify the app's local deployment:
-
-    1. Open the browser.
-    1. Load your app using the following URL:
-
-        `https://<forwarding address in ngrok console session>/`
-
-        Here's an example of the URL:
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/csharp-ngrok-verify-tunnel.png" alt-text="Image showing C# app running locally on ngrok tunnel" border="true":::
-
-    1. Make a note of the forwarding address in ngrok console. You need this URL to deploy your app in Teams.
-
-        > [!NOTE]
-        > If you've used a different port during [build](#build-your-first-app), ensure you use the same port number to setup the `ngrok` tunnel.
-        > [!TIP]
-        > It's a good idea to run `ngrok` in a different terminal window. It helps to keep `ngrok` from interfering with the app, when you'll need to stop, rebuild, and rerun the app. The `ngrok` session provides useful debugging information in this window.
-        > [!IMPORTANT]
-        > If you use the free version of ngrok, your app will be available only during the current session on your development machine. It isn't available if the machine is shut down or goes to sleep. When you restart the service, it returns a new address. Then, you must update every location that uses the outdated address. Remember this step when sharing the app for testing.
-
-- title: Configure your first C# app using Developer Portal
+- title: Build and run your first tab app using C#
   durationInMinutes: 1
   content: |
 
-    You can use [Developer Portal](https://dev.teams.microsoft.com/) to upload the app package to Teams and configure app capabilities. Developer Portal is a Teams app that simplifies the creation and registration of an app. Install from the Teams store!
+    After you set up your project workspace with Teams Toolkit, build your tab app. 
+    You'll need to sign in to your Microsoft 365 account.
+
+    ## Sign in to your Microsoft 365 account
+
+    Use your Microsoft 365 account to sign in to Teams. If you're using a Microsoft 365 developer program tenant, the admin account you set up while registering is your Microsoft 365 account.
+
+    1. Right-click on **Mytabapp** under **Solution Mytabapp**.
+
+    1. Select **Teams Toolkit** > **Prepare Teams App Dependencies**.
+
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/teams-app-dependencies.png" alt-text="Teams app Dependencies":::
     
-    After you build and test your Teams app, you can configure and preview it using Developer Portal.
-    
-    In this page, you'll learn to [configure the app package in Developer Portal](#configure-the-app-package-in-developer-portal).
+    1. Select **Microsoft 365 Account** and select **Continue**. 
 
-    <details>
-    <summary>Publish option in Visual Studio 2019</summary>
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/select-m365-account.png" alt-text="Select-M365-account":::
 
-    This tutorial uses Developer Portal to configure app capabilities and publish your app. 
-    
-    However, Visual Studio 2019 has built-in support for app deployment to different providers, including Azure:
+    ## Build and run your app locally in Visual Studio
 
-    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/publish-to-azure.png" alt-text="Image showing the Publish to Azure menu item in Visual Studio 2019" border="true":::
+    To build and run your app locally:
 
-    Microsoft Azure hosts your .NET application on a free tier. It uses shared infrastructure that is sufficient to run the `Hello World` sample. For more information, see [creating a new free Azure account](https://azure.microsoft.com/free/).
+    1. From Visual Studio, select **F5** or **Debug** > **Start Debugging** to run the application in debug mode.
 
-    If you use this option, you can enter the details of the Azure site and Azure resources and publish your app. 
-    
-    For this tutorial, you do not need to use this step.
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/start-debugging.png" alt-text="Start Debugging":::
 
-    </details>
+       Teams web client opens in a browser window.
 
-    ## Configure the app package in Developer Portal
+    1. Sign in with your Microsoft 365 account, if prompted. 
 
-    You can use [Developer Portal](https://dev.teams.microsoft.com/) to configure the app package and its capabilities. Developer Portal is a Teams app that simplifies the creation and registration of an app. Install from the Teams store!
+    1. Select **Add** when prompted to sideload the app onto Teams on your local machine.
 
-    Configuring the app package includes:
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/select-add.png" alt-text="Select Add":::
 
-    1. [Importing the app package to Developer Portal](#import-the-app-package-in-developer-portal)
-    1. [Configuring app capabilities](#configure-your-app-capabilities)
+       Congratulations, your first tab app is running on Teams!
 
-    ### Import the app package in Developer Portal
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/final-output-vs.png" alt-text="Final Output for VS":::
 
-    To import the app package:
+      <details>
+      <summary>Learn how to troubleshoot if your app doesn't run locally.</summary>
 
-    1. Open Microsoft Teams.
+      To successfully run your app in Teams, ensure that you've enabled sideloading in your Teams account. You can learn more about sideloading in the Prerequisites section.
 
-    1. Select the **Store** :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-store-icon.png"::: icon from the left-hand bar.
-
-    1. Search for **Developer Portal** in the search bar, and select **Developer Portal**.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/select-dev-portal-app.png" alt-text="Select Developer Portal app" border="true":::
-
-    1. Select **Open**.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/open-dev-portal.png" alt-text="Image showing open Developer Portal app" border="true":::
-
-        The Developer Portal opens.
-
-    1. Select the **Apps** tab.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/dev-portal-app.png" alt-text="Developer Portal app" border="true":::
-
-    1. Select **Import app**.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/import-app-in-dev-portal.png" alt-text="Image showing Import app button" border="true":::
-
-    1. Select the app package `helloworldapp.zip` from the following path in your C# sample repo directory structure:
-
-        `<path to cloned C# repo>/Source/Repos/Microsoft-Teams-Samples/samples/app-hello-world/csharp/Microsoft.Teams.Samples.HelloWorld.Web/bin/Debug/netcoreapp3.1`
-
-        The **Hello World** app is imported in Developer Portal.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/app-imported-dev-portal.png" alt-text="Image showing app imported in Teams" border="true":::
-
-    ### Take a tour of your app in Developer Portal
-
-    After you've imported your app to Developer Portal, you can view its details, including the manifest file.
-
-    #### View app information
-
-    1. Select **Basic Information** from the left pane of Developer Portal.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/dev-portal-left-pane-basic.png" alt-text="Image shows the left pane of Developer Portal" border="true":::
-
-    1. Note the following information from the basic information:
-        - App ID
-        - Developer Information
-        - App URLs
-
-    1. Select **Branding** from the left pane to view the branding information.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-app-branding.png" alt-text="Image showing branding information of the app" border="true":::
-
-        These details are important if you are writing a new app for distribution.
-
-    #### View app features
-
-    - Select **App features** from the left pane of Developer Portal.
-
-        The App features appear in the right pane. You can view cards for Personal app, Bot, and Message Extension.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-csharp-app-features.png" alt-text="Image showing features of the app" border="true":::
-
-    #### View the app manifest
-
-    You use the manifest file to configure capabilities, required resources, and other important attributes for your app.
-
-    To view the app manifest:
-
-    - Select **Publish** from the left panel to open the dropdown list, and then select **App package**.
-        
-        The manifest file appears on the right pane.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/app-manifest-dev-portal.png" alt-text="Image showing App manifest file in Developer Portal" border="true":::
-
-    ### Configure your app capabilities
-
-    After you've imported your app into Developer Portal, the next step is to configure app capabilities. Developer Portal contains all the app information in different sections. It makes configuring the app capabilities easy.
-
-    Using Developer Portal, you can:
-    - [Configure personal tab app](#configure-personal-tab-app)
-    - [Configure bot](#configure-bot)
-    - [Configure message extension](#configure-message-extension)
-
-    #### Configure personal tab app
-
-    To configure personal tab app:
-
-    1. Select the :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/ellipse-icon.png"::: icon on the **Personal app** card on the **App features** pane, and select **Edit**.
-
-        The details for Hello tab appear.
-
-    1. Select the :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/ellipse-icon.png"::: icon for Hello tab, and select **Edit** to open the app details for updating.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-edit-tab.png" alt-text="Image showing Hello tab menu" border="true":::
-
-    1. Enter the app details for the Hello tab in **Add a tab to your personal app**.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-add-personal-tab-details.png" alt-text="Image showing Hello tab details" border="true":::
-
-        Enter the following details:
-        - **Name**: Hello tab.
-        - **Content URL** and **Website URL**: the forwarding address in ngrok console session.
-        - **Context**: Select **Personal tab**.
-
-    1. Select **Update**.
-
-        The details of the Hello tab appear on the **Personal app** pane.
-
-    1. Select **Save**.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-save-tab-update.png" alt-text="Image showing Hello tab details to be saved" border="true":::
-    
-        The **Personal app** pane now shows the new tab and an About tab created automatically.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-about-tab-added.png" alt-text="Image showing Hello tab and About tab details" border="true":::
-
-    #### Configure bot
-
-    It's easy to add the bots functionality to your app. The Hello World sample app already has a bot as its part, but you must register it with Teams.
-
-    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-bot-no-id.png" alt-text="Image showing bot app imported with no app ID" border="true":::
-
-    The bot that was imported from the sample doesn't have an associated app ID. You'll need to delete it, and create a new bot. Developer Portal creates a new app ID, and registers it with Teams.
-
-    Adding and configuring a bot involves:
-
-    1. [Adding a new bot](#to-add-a-new-bot)
-    1. [Adding bot to app](#to-add-bot-to-app)
-    1. [Configuring bot scope](#to-configure-bot-scope)
-
-    ##### To add a new bot
-
-    1. Select the :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/ellipse-icon.png"::: icon on the **Bot** card on the **App features** pane, and select **Delete**.
-
-    1. Select **Tools** to add capability.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/tools-option.png" alt-text="Image showing Tools option" border="true":::
-    
-    1. Select **Bot management** on the **Tools** pane.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-tools-bot-card.png" alt-text="Image showing bot management pane" border="true":::
-
-    1. Select **+ New Bot** on the **Bot management** pane.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-bot-management-new-bot.png" alt-text="Image showing new bot option" border="true":::
-
-    1. Enter a suitable name for your bot, and select **Add**.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-add-bot.png" alt-text="Image showing how to add bot" border="true":::
-
-        The **Configure** pane appears showing details of the new bot in the left pane.
-
-    1. Enter the forwarding URL from the `ngrok` console, and select **Save**.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-configure-bot-endpoint.png" alt-text="Image showing how to add bot endpoint" border="true":::
-
-    1. Select **Client secrets** and then select **Add a client secret to your bot** to generate a password for the bot.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-add-client-secret-pane.png" alt-text="Image showing Client secret section" border="true":::
-
-        Developer Portal generates a password for the bot.
-
-        You can use the :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/copy-icon.png"::: icon to copy the password. For this tutorial, you don't need to copy it.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-client-secret-generated.png" alt-text="Image showing Client secret generated" border="true":::
-
-    1. Select **OK**.
-
-    1. Select **< Bots** to return to **Bot management** pane.
-
-        The **Bot management** pane shows the new Bot added with an app ID.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-bot-mgmt-pane.png" alt-text="Image showing new bot with app ID" border="true":::
-
-    1. Ensure that you save the Bot ID along with the password from the **Client secret** section.
-
-    ##### To add bot to app
-
-    1. Open the **App features** pane, and select the **Bot** card.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-bot-card.png" alt-text="Image showing bot card" border="true":::
-
-        The **Bot** pane appears.
-
-    1. Select your bot app from **Select an existing bot**.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-add-new-bot-app.png" alt-text="Image showing how to add an existing bot app" border="true":::
-
-        The new bot is added to your app with its own app ID.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-new-bot-added.png" alt-text="Image showing new bot added to app" border="true":::
-
-    ##### To configure bot scope
-
-    1. Select the :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/ellipse-icon.png"::: icon on the new **Bot** card, and select **Edit**.
-
-    1. Move through the **Bot** pane to view the **Commands** section, and select **+ Add a Command**.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-bot-add-command.png" alt-text="Image showing commands section" border="true":::
-
-    1. Enter a suitable name and description for the **Command**.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-add-bot-command.png" alt-text="Image showing how to add commands details" border="true":::
-
-    1. Select all the three scopes for the command, and select **Add**.
-        - **Personal**
-        - **Team**
-        - **Group Chat**
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-bot-command-add.png" alt-text="Image showing how to save commands details" border="true":::
-
-        The new command is added to the **Commands** section of the **Bot** pane.
-
-    1. Select **Save**.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-save-new-bot-command.png" alt-text="Image showing commands details to be saved" border="true":::
-
-        The command details are saved.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-bot-command-added.png" alt-text="Image showing commands details saved" border="true":::
-
-    1. Open **App features** pane, and select **Personal app** card to view your app's tab details.
-
-        You'll see that a tab for your new chat bot is added to your app.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-tab-chat-tab-conf.png" alt-text="Image showing chat bot configured" border="true":::
-
-    #### Configure message extension
-
-    Message extensions let users ask for information from your service and post that information. The information is posted in the form of cards into the channel conversation. Message extensions appear at the bottom of the compose box.
-
-    To add a new message extension:
-
-    1. Select the :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/ellipse-icon.png"::: icon on the **Message Extension** card on the **App features** pane, and select **Delete**.
-
-    1. Select **Message Extension** from the **App features** pane.
-
-    1. Select the name of your bot app from the **Select an existing bot** dropdown list on the **Message extension** pane.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-msgext-select-bot.png" alt-text="Image showing Message extension pane to select existing bot" border="true":::
-
-    1. Select **Save**.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-msgext-save.png" alt-text="Image showing Message extension save button" border="true":::
-
-        The message extension is saved, and the **Commands** section appears on the **Message extension** pane.
-
-    1. Select **+ Add a command** to define the scope of what your message extension app can do.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-msgext-add-command.png" alt-text="Image showing Command section" border="true":::
-
-    1. Ensure that **Search** is selected as the type of command you want to add in the **Add a command** dialog.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-msgext-add-new-command.png" alt-text="Image showing Add a Command dialog" border="true":::
-
-    1. Enter suitable information the following details:
-        - Command ID
-        - Command title
-        - Command description
-
-    1. Move through the dialog to view the remaining details.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-msgext-add-command-b.png" alt-text="Image showing remaining details in Add a Command dialog" border="true":::
-
-    1. Ensure **Make default** is selected.
-    1. Select the following contexts for the message extension command:
-        - Command box
-        - Compose box
-        - Message
-    1. Enter suitable information for the following details:
-        - Parameter name
-        - Parameter title
-        - Parameter description
-
-    1. Select **Text** as the type of input.
-    1. Select **Save**
-    1. The message extension command is saved, and shows on the list of commands in the **Message extension** pane.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-msgext-command-added.png" alt-text="Image showing new Command added" border="true":::
-
-    1. Select **Save**.
-    1. Open **App features** pane.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-app-capabilities-configured.png" alt-text="Image showing capabilities configured for Hello World app" border="true":::
-
-        You'll see all three capabilities - personal tab app, bot, and message extension - configured for the Hello World app. The next step is to register your app in Teams and test your app.
-
-- title: Preview and test your first C# app
+      </details>   
+           
+- title: Congratulations!
   durationInMinutes: 1
   content: |
 
-    After you've imported your app and configured the capabilities in Developer Portal, you can preview and test the sample app.
+    You've done it!
 
-    ## Preview your app in Teams
+    You've created a tab app.
 
-    After configuring the capabilities of your app, you can preview and test your app in Teams in the local environment.
+    Now that you've learned to create a basic app.
 
-    To preview your app:
+    That's it! Teams Toolkit adds the scaffolding for the new capability to your app's directory structure. 
 
-    1. Select **Preview in Teams** from the Developer Portal toolbar.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/preview-in-teams.png" alt-text="Image showing Preview button" border="true"lightbox="~/assets/images/teams-toolkit-v2/preview-in-teams.png":::
-
-        The Developer Portal informs you that your app is sideloaded successfully.
-
-    1. Select the **Store** :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-store-icon.png"::: icon.
-    1. Select **Manage your apps**.
-       Your app is listed in the sideloaded apps. 
-    1. Find your app using the search box, select the three-dots in its row.
-    1. Select the **View** option.
-        The **Add** page appears for your app.
-    1. Select **Add** to load the app on Teams.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/add-nodejs-app-sideload.png" alt-text="Image showing Add app dialog" border="true":::
-
-        Your app is now available in Teams. You can view all the tabs and test the capabilities:
-
-        - Hello tab:
-
-            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/helloworld-tab.png" alt-text="Image showing Hello tab in local environment" border="true":::
-
-        - Chat bot:
-
-            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/helloworld-bot.png" alt-text="Image showing the app's bot in local environment" border="true":::
-
-            You can send a message using the chat.
-
-            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/helloworld-bot-chat.png" alt-text="Image showing chat in local environment" border="true":::
-
-        - Message extension:
-
-            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/helloworld-msgext.png" alt-text="Image showing message extension in local environment" border="true":::
-
-            You can try a search using the message extension.
-
-            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/helloworld-msgext-query.png" alt-text="Image showing search using message extension in local environment" border="true"lightbox="~/assets/images/teams-toolkit-v2/helloworld-msgext-query.png":::
-
-        - About tab:
-
-            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/helloworld-about.png" alt-text="Image showing About tab in local environment" border="true":::
+    You've completed the tutorial to build tab app using C#.

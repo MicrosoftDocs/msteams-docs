@@ -1,7 +1,7 @@
 ---
 title: Extend a Teams message extension across Microsoft 365
-description: Here's how to update your search-based Teams message extension to run in Outlook
-ms.date: 05/24/2022
+description: Learn how to update your search-based message extension to run in Outlook, in addition to Microsoft Teams.
+ms.date: 10/10/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: high
@@ -14,9 +14,9 @@ The process to update your search-based Teams message extension to run Outlook i
 
 > [!div class="checklist"]
 >
-> * Update your app manifest
-> * Add an Outlook channel for your bot
-> * Sideload your updated app in Teams
+> * Update your app manifest.
+> * Add an Outlook channel for your bot.
+> * Sideload your updated app in Teams.
 
 The rest of this guide will walk you through these steps and show you how to preview your message extension in both Outlook for Windows desktop and outlook.com.
 
@@ -24,13 +24,17 @@ The rest of this guide will walk you through these steps and show you how to pre
 
 To complete this tutorial, you'll need:
 
-* A Microsoft 365 Developer Program sandbox tenant
-* Enrollment in *Office 365 Targeted Releases* for your sandbox tenant
-* A test environment with Office apps installed from the Microsoft 365 Apps *Beta Channel*
-* (Optional) Microsoft Visual Studio Code with the Teams Toolkit extension
+* A Microsoft 365 Developer Program sandbox tenant.
+* Enrollment in *Office 365 Targeted Releases* for your sandbox tenant.
+* A test environment with Office apps installed from the Microsoft 365 Apps *Beta Channel*.
+* (Optional) Microsoft Visual Studio Code with the Teams Toolkit extension.
 
 > [!div class="nextstepaction"]
-> [Publish Teams apps extended for Microsoft 365](publish.md)
+> [Install prerequisites](prerequisites.md)
+
+## Link unfurling
+
+If your search-based message extension supports [link unfurling](../messaging-extensions/how-to/link-unfurling.md) in Teams, completing the steps of this tutorial also enables link unfurling in Outlook on the web and Windows desktop environments. The [Code samples](#code-sample) section below provides a simple link unfurling app for testing.
 
 ## Prepare your message extension for the upgrade
 
@@ -92,7 +96,7 @@ In Microsoft Teams, a message extension consists of a web service that you host 
 
 For users to interact with your message extension from Outlook, you'll need to add an Outlook channel to your bot:
 
-1. From [Microsoft Azure portal](https://portal.azure.com) (or [Bot Framework portal](https://dev.botframework.com) if you previously registered there), navigate to your bot resource.
+1. From [Microsoft Azure portal](https://portal.azure.com) (or [Bot Framework portal](https://dev.botframework.com) if you previously registered there), go to your bot resource.
 
 1. From *Settings*, select **Channels**.
 
@@ -100,16 +104,16 @@ For users to interact with your message extension from Outlook, you'll need to a
 
     :::image type="content" source="images/azure-bot-channel-message-extensions.png" alt-text="Add an Outlook 'Message Extensions' channel for your bot from the Azure Bot Channels pane":::
 
-1. Confirm that your Outlook channel is listed along with Microsoft Teams in your bot's **Channels** pane.
+1. Confirm that your Outlook channel is listed along with Teams in your bot's **Channels** pane.
 
-    :::image type="content" source="images/azure-bot-channels.png" alt-text="Azure Bot Channels pane listing both Microsoft Teams and Outlook channels":::
+    :::image type="content" source="images/azure-bot-channels.png" alt-text="Azure Bot Channels pane listing both Teams and Outlook channels":::
 
 ## Update Microsoft Azure Active Directory (Azure AD) app registration for SSO
 
 > [!NOTE]
 > You can skip the step if you're using the [sample app](#quickstart) provided in this tutorial, as the scenario doesn't involve Azure Active Directory (AAD) Single Sign-On authentication.
 
-Azure Active Directory (AD) Single-sign on (SSO) for message extensions works the same way in Outlook [as it does in Teams](/microsoftteams/platform/bots/how-to/authentication/auth-aad-sso-bots). However you need to add several client application identifiers to the Azure AD app registration of your bot in your tenant's *App registrations* portal.
+Azure Active Directory (AD) Single-sign on (SSO) for message extensions works the same way in Outlook [as it does in Teams](/microsoftteams/platform/bots/how-to/authentication/auth-aad-sso-bots). However, you need to add several client application identifiers to the Azure AD app registration of your bot in your tenant's *App registrations* portal.
 
 1. Sign in to [Azure portal](https://portal.azure.com) with your sandbox tenant account.
 1. Open **App registrations**.
@@ -127,7 +131,7 @@ Azure Active Directory (AD) Single-sign on (SSO) for message extensions works th
 
 ## Sideload your updated message extension in Teams
 
-The final step is to sideload your updated message extension ([app package](/microsoftteams/platform/concepts/build-and-test/apps-package)) in Microsoft Teams. Once completed, your message extension will appear in your installed *Apps* from the compose message area.
+The final step is to sideload your updated message extension ([app package](/microsoftteams/platform/concepts/build-and-test/apps-package)) in Teams. Once completed, your message extension will appear in your installed *Apps* from the compose message area.
 
 1. Package your Teams application (manifest and app [icons](/microsoftteams/platform/resources/schema/manifest-schema#icons)) in a zip file. If you used Teams Toolkit to create your app, you can easily do this using the **Zip Teams metadata package** option in the *Deployment* menu of Teams Toolkit.
 
@@ -180,7 +184,7 @@ Your message extension is listed, it opens an adjacent pane to display search re
  While your updated message extension will continue to run in Teams with full [feature support for message extensions](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions), there are limitations in this early preview of the Outlook-enabled experience to be aware of:
 
 * Message extensions in Outlook are limited to the mail [*compose* context](/microsoftteams/platform/resources/schema/manifest-schema#composeextensions). Even if your Teams message extension includes `commandBox` as a *context* in its manifest, the current preview is limited to the mail composition (`compose`) option. Invoking a message extension from the global Outlook *Search* box isn't supported.
-* [Action-based message extension](/microsoftteams/platform/messaging-extensions/how-to/action-commands/define-action-command?tabs=AS) command aren't supported in Outlook. If your app has both search- and action-based commands, it will surface in Outlook but the action menu won't be available.
+* [Action-based message extension](/microsoftteams/platform/messaging-extensions/how-to/action-commands/define-action-command?tabs=AS) command aren't supported in Outlook. If your app has both search- and action-based commands, it will surface in Outlook, but the action menu won't be available.
 * Insertion of more than five [Adaptive Cards](/microsoftteams/platform/task-modules-and-cards/cards/design-effective-cards?tabs=design) in an email isn't supported; Adaptive Cards v1.4 and later aren't supported.
 * [Card actions](/microsoftteams/platform/task-modules-and-cards/cards/cards-actions?tabs=json) of type `messageBack`, `imBack`, `invoke`, and `signin` aren't supported for inserted cards. Support is limited to `openURL`: on click, the user will be redirected to the specified URL in a new tab.
 
@@ -195,6 +199,7 @@ As you test your message extension, you can identify the source (originating fro
 | **Sample Name** | **Description** | **Node.js** |
 |---------------|--------------|--------|
 | NPM Search Connector | Use Teams Toolkit to build a message extension app. Works in Teams, Outlook. |  [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/NPM-search-connector-M365) |
+| Teams Link Unfurling | Simple Teams app to demonstrate link unfurling. Works in Teams, Outlook. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/55.teams-link-unfurling)
 
 ## Next step
 

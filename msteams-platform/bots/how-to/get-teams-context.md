@@ -1,11 +1,10 @@
 ---
 title: Get Teams specific context for your bot
 author: surbhigupta
-description: How to get Microsoft Team's specific context for your bot, including the conversation roster, single member or team's details, channel list, code samples.
+description: Get Teams specific context for your bot, fetch user profile, get single member, team's, list of channels in a team details. Sample on create a new channel thread.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-keywords: bot context roster user profile channel list
 ---
 # Get Teams specific context for your bot
 
@@ -203,7 +202,7 @@ Response body
 
 * * *
 
-After you get details of a single member, you can get details of the team. Currently, to retrieve information for a team, use the Microsoft Teams bot APIs `TeamsInfo.GetMemberDetailsAsync` for C# or `TeamsInfo.getTeamDetails` for TypeScript.
+After you get details of a single member, you can get details of the team. Currently, to retrieve information for a team, use the Teams bot APIs `TeamsInfo.GetMemberDetailsAsync` for C# or `TeamsInfo.getTeamDetails` for TypeScript.
 
 ## Get team's details
 
@@ -278,7 +277,7 @@ Response body
 
 * * *
 
-After you get details of the team, you can get the list of channels in a team. Currently, to retrieve information for a list of channels in a team, use the Microsoft Teams bot APIs `TeamsInfo.GetTeamChannelsAsync` for C# or `TeamsInfo.getTeamChannels` for TypeScript APIs.
+After you get details of the team, you can get the list of channels in a team. Currently, to retrieve information for a list of channels in a team, use the Teams bot APIs `TeamsInfo.GetTeamChannelsAsync` for C# or `TeamsInfo.getTeamChannels` for TypeScript APIs.
 
 ## Get the list of channels in a team
 
@@ -369,3 +368,7 @@ Response body
 
 > [!div class="nextstepaction"]
 > [Send and receive files through the bot](~/bots/how-to/bots-filesv4.md)
+
+## See also
+
+[Localize your app](../../concepts/build-and-test/apps-localization.md)

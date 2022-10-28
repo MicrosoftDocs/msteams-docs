@@ -1,9 +1,8 @@
 ---
 title: Real-time media calls and online meetings with Microsoft Teams
-description: Understand key concepts in building bot that can conduct real-time audio and video calls and online meetings. Learn about media sessions, frame rate, audio/video format, and reference to developer resources
+description: Learn how Real-time Media Platform enables bots to interact with Microsoft Teams calls and meetings. Explore, media sessions, frames and frame rate, audio and video format, active speakers, video subscription. 
 ms.topic: conceptual
 ms.localizationpriority: medium
-keywords: audio stream video stream audio/video calling meeting real-time media application-hosted media service-hosted media
 ---
 
 # Real-time media calls and meetings with Microsoft Teams

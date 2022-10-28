@@ -1,7 +1,7 @@
 ---
 title: Receive all conversation messages with RSC
 author: surbhigupta12
-description: Receive all conversation messages with RSC
+description: Enable bots to receive all channel messages without being @mentioned using RSC permissions. Read on webApplicationInfo or authorization section in manifest.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ---
@@ -32,9 +32,9 @@ The `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permissions in a
 
 For your bot to receive all channel messages, RSC must be configured in the Teams app manifest with the `ChannelMessage.Read.Group` permission specified in the `webApplicationInfo` property.
 
-![Update app manifest](~/bots/how-to/conversations/Media/appmanifest.png)
-
 The following list describes the `webApplicationInfo` object:
+
+:::image type="content" source="~/bots/how-to/conversations/Media/appmanifest.png" alt-text="Screenshot of app manifest update.":::
 
 * **id**: Your Azure Active Directory (AAD) app ID. The app ID can be the same as your bot ID.
 * **resource**: Any string. The resource field has no operation in RSC, but must be added with a value to avoid error response.
@@ -62,28 +62,31 @@ The following steps guide you to sideload and validate bot that receives all cha
 1. Select or create a team.
 1. Select the ellipses &#x25CF;&#x25CF;&#x25CF; from the left pane. The drop-down menu appears.
 1. Select **Manage team** from the drop-down menu. The details appear:
-
-    ![Managing apps in team](~/bots/how-to/conversations/Media/managingteam.png)
-
-      :::image type="content" source="Media/managingteam.png" alt-text="managing team"border="true":::
+   
+   :::image type="content" source="Media/managingteam.png" alt-text="managing team"border="true":::
 
 1. Select **Apps**. Multiple apps appear.
 1. Select **Upload a custom app** from the lower right corner":
+   
+   :::image type="content" source="Media/managingteam.png" alt-text="Screenshot of Managing team option in Teams application.":::
 
-      :::image type="content" source="Media/uploadingcustomapp.png" alt-text="uploading custom app":::
-  
-1. Select the app package from the **Open** dialog box.
-1. Select **Open**:
+1. Select **Apps**. Multiple apps appear.
 
-      :::image type="content" source="Media/selectapppackage.png" alt-text="Select the app package"lightbox="Media/selectapppackage.png"border="true":::
+1. Select **Upload a custom app** from the lower right corner.
+
+     :::image type="content" source="Media/uploadingcustomapp.png" alt-text="Screenshot of upload a custom app option.":::
+
+1. Select **Open**.
+
+     :::image type="content" source="Media/selectapppackage.png" alt-text="Screenshot of the open dialog box to select the app package." lightbox="Media/selectapppackage.png":::
 
 1. Select **Add** from the app details pop-up, to add the bot to your selected team:
 
-      :::image type="content" source="Media/addingbot.png" alt-text="Adding bot"lightbox="Media/addingbot.png"border="true":::
+      :::image type="content" source="Media/addingbot.png" alt-text="Screenshot of the Add button to add a bot to a team." lightbox="Media/addingbot.png":::
 
 1. Select a channel and enter a message in the channel for your bot:
 
-      :::image type="content" source="Media/botreceivingmessage.png" alt-text="Bot receiving message"lightbox="Media/botreceivingmessage.png"border="true":::
+      :::image type="content" source="Media/botreceivingmessage.png" alt-text="Screenshot of a bot receiving message in a channel." lightbox="Media/botreceivingmessage.png":::
 
    The bot receives the message without being @mentioned.
 
@@ -146,6 +149,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 // When rsc is enabled the method will be called even when bot is addressed without being @mentioned
 this.onMessage(async (context, next) => {
    await context.sendActivity(MessageFactory.text("Using RSC the bot can receive messages across channels or chats in team without being @mentioned."))
+
    await next();
 });
 ```
@@ -165,3 +169,4 @@ this.onMessage(async (context, next) => {
 * [Resource-specific consent](/microsoftteams/resource-specific-consent)
 * [Test resource-specific consent](/microsoftteams/platform/graph-api/rsc/test-resource-specific-consent)
 * [Upload custom app in Teams](~/concepts/deploy-and-publish/apps-upload.md)
+* [List replies to messages in a channel](/graph/api/chatmessage-list-replies?view=graph-rest-1.0&tabs=http&preserve-view=true)

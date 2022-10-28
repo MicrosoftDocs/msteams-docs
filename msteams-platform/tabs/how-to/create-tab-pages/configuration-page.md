@@ -1,9 +1,8 @@
 ---
 title: Create a configuration page
 author: surbhigupta
-description: Learn how to create a configuration page to configure a channel or group chat for settings, such as, getting context data, inserting placeholders, and authentication using code examples.
-keywords: teams tabs group channel configurable
-ms.localizationpriority: medium
+description: Create configuration page to collect information from user. Also, get context data for Microsoft Teams tabs, know about authentication, modify or remove tabs.
+ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
 ---
@@ -19,7 +18,7 @@ A configuration page is a special type of [content page](content-page.md). The u
 
 ## Configure a channel or group chat tab
 
-The application must reference the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) and call `app.initialize()`. The URLs used must be secured HTTPS endpoints and available from the cloud.
+The application must reference the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client) and call `app.initialize()`. The URLs used must be secured HTTPS endpoints and are available from the cloud.
 
 ### Example
 
@@ -33,17 +32,19 @@ The following code is an example of corresponding code for the configuration pag
 
 ```html
 <head>
-    <script src='https://statics.teams.cdn.office.net/sdk/v2.0.0/js/MicrosoftTeams.min.js'></script>
-</head>
+    <script src="https://res.cdn.office.net/teams-js/2.2.0/js/MicrosoftTeams.min.js" 
+      integrity="sha384yBjE++eHeBPzIg+IKl9OHFqMbSdrzY2S/LW3qeitc5vqXewEYRWegByWzBN/chRh" 
+      crossorigin="anonymous" >
+    </script>
 <body>
     <button onclick="(document.getElementById('icon').src = '/images/iconGray.png'); colorClickGray()">Select Gray</button>
     <img id="icon" src="/images/teamsIcon.png" alt="icon" style="width:100px" />
     <button onclick="(document.getElementById('icon').src = '/images/iconRed.png'); colorClickRed()">Select Red</button>
 
     <script>
-        app.initialize();
+        await microsoftTeams.app.initialize();
         let saveGray = () => {
-            pages.config.registerOnSaveHandler((saveEvent) => {
+            microsoftTeams.pages.config.registerOnSaveHandler((saveEvent) => {
                 const configPromise = pages.config.setConfig({
                     websiteUrl: "https://yourWebsite.com",
                     contentUrl: "https://yourWebsite.com/gray",
@@ -57,7 +58,7 @@ The following code is an example of corresponding code for the configuration pag
         }
 
         let saveRed = () => {
-            pages.config.registerOnSaveHandler((saveEvent) => {
+            microsoftTeams.pages.config.registerOnSaveHandler((saveEvent) => {
                 const configPromise = pages.config.setConfig({
                     websiteUrl: "https://yourWebsite.com",
                     contentUrl: "https://yourWebsite.com/red",
@@ -76,14 +77,14 @@ The following code is an example of corresponding code for the configuration pag
         const colorClickGray = () => {
             gr.display = "block";
             rd.display = "none";
-            pages.config.setValidityState(true);
+            microsoftTeams.pages.config.setValidityState(true);
             saveGray()
         }
 
         const colorClickRed = () => {
             rd.display = "block";
             gr.display = "none";
-            pages.config.setValidityState(true);
+            microsoftTeams.pages.config.setValidityState(true);
             saveRed();
         }
     </script>
@@ -165,13 +166,14 @@ Choosing the appropriate button triggers either `saveGray()` or `saveRed()`, and
 * The `pages.config.registerOnSaveHandler()` event handler is triggered.
 * **Save** on the app's configuration page, is enabled.
 
-The configuration page code informs Teams that the configuration requirements are satisfied and the installation can proceed. When the user selects **Save**, the parameters of `pages.config.setConfig()` are set, as defined by the `Config` interface. For more information, see [config interface](/javascript/api/@microsoft/teams-js/pages.config.Config?view=msteams-client-js-latest&preserve-view=true). `saveEvent.notifySuccess()` is called to indicate that the content URL has successfully resolved.
+The configuration page code informs Teams that the configuration requirements are met and the installation can proceed. When the user selects **Save**, the parameters of `pages.config.setConfig()` are set, as defined by the `Config` interface. For more information, see [config interface](/javascript/api/@microsoft/teams-js/pages.config?). `saveEvent.notifySuccess()` is called to indicate that the content URL has successfully resolved.
 
 >[!NOTE]
 >
->* You have 30 seconds to complete the save operation (the callback to registerOnSaveHandler) before the timeout. After the timeout, a generic error message appears.
+>* You have 30 seconds to complete the save operation (the callback to `registerOnSaveHandler`) before the timeout. After the timeout, a generic error message appears.
 >* If you register a save handler using `registerOnSaveHandler()`, the callback must invoke `saveEvent.notifySuccess()` or `saveEvent.notifyFailure()` to indicate the outcome of the configuration.
 >* If you do not register a save handler, the `saveEvent.notifySuccess()` call is made automatically when the user selects **Save**.
+>* Ensure to have unique `entityId`. Duplicate `entityId` redirects to the first instance of the tab.
 
 ### Get context data for your tab settings
 
@@ -209,7 +211,7 @@ After your page uploads, Teams updates the query string placeholders with releva
 
 ```html
 <script>
-   app.initialize();
+   await microsoftTeams.app.initialize();
    const getId = () => {
         let urlParams = new URLSearchParams(document.location.search.substring(1));
         let blueTeamId = urlParams.get('team');
@@ -239,7 +241,7 @@ document.write(getId());
 
 ### Use the `getContext()` function to retrieve context
 
-The `app.getContext()` function returns a promise that resolves with the [context interface](/javascript/api/@microsoft/teams-js/app.context?view=msteams-client-js-latest&preserve-view=true) object.
+The `app.getContext()` function returns a promise that resolves with the [context interface](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest&preserve-view=true) object.
 
 The following code provides an example of adding this function to the configuration page to retrieve context values:
 
@@ -250,7 +252,8 @@ The following code provides an example of adding this function to the configurat
 
 <span id="user"></span>
 ...
-<script>
+<script type="module">
+    import {app} from 'https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js';
     const contextPromise = app.getContext();
     contextPromise.
         then((context) => {
@@ -286,13 +289,14 @@ Authenticate before allowing a user to configure your app. Otherwise, your conte
 
 ## Modify or remove a tab
 
-Set your manifest's `canUpdateConfiguration` property to `true`. It enables the users to modify, reconfigure, or rename a channel or group tab. Inform the user about the impact on content when a tab is removed. To do this, include a removal options page in the app, and set a value for the `removeUrl` property in the `setConfig()` (formerly `setSettings()`) configuration. The user can uninstall personal tabs but cannot modify them. For more information, see [create a removal page for your tab](~/tabs/how-to/create-tab-pages/removal-page.md).
+Set your manifest's `canUpdateConfiguration` property to `true`. It enables the users to modify or reconfigure a channel or group tab. You can rename your tab only through Teams user interface. Inform the user about the impact on content when a tab is removed. To do this, include a removal options page in the app, and set a value for the `removeUrl` property in the `setConfig()` (formerly `setSettings()`) configuration. The user can uninstall personal tabs but can't modify them. For more information, see [create a removal page for your tab](~/tabs/how-to/create-tab-pages/removal-page.md).
 
 Microsoft Teams `setConfig()` (formerly `setSettings()`) configuration for removal page:
 
 # [TeamsJS v2](#tab/teamsjs-v2)
 
 ```javascript
+import { pages } from "@microsoft/teams-js";
 const configPromise = pages.config.setConfig({
     contentUrl: "add content page URL here",
     entityId: "add a unique identifier here",

@@ -1,15 +1,16 @@
 ---
 title: Live Share quick start
+author: surbhigupta
 description:  In this module, learn how to quickly try the Dice Roller sample
-ms.topic: concept
+ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: stevenic
----
+ms.date: 04/07/2022
 ---
 
 # Quick start guide
 
-Get started with Live Share SDK using the Dice Roller sample. This get started is an evolution of the [Fluid Framework Quick Start](https://fluidframework.com/docs/start/quick-start/) and is designed to quickly run a Live Share SDK based [Dice Roller sample](https://github.com/microsoft/live-share-sdk/tree/main/samples/01.dice-roller) on your computer's localhost.
+Get started with Live Share SDK using the Dice Roller sample is an evolution of the [Fluid Framework Quick Start](https://fluidframework.com/docs/start/quick-start/) and is designed to quickly run a Live Share SDK based [Dice Roller sample](https://github.com/microsoft/live-share-sdk/tree/main/samples/01.dice-roller) on your computer's localhost.
 
 :::image type="content" source="../assets/images/teams-live-share/dice-roller.png" alt-text="DiceRoller Sample":::
 
@@ -18,7 +19,7 @@ Get started with Live Share SDK using the Dice Roller sample. This get started i
 
 ## Set up your development environment
 
-To get started, install the following:
+To get started, install:
 
 * [Node.js](https://nodejs.org/en/download): The Live Share SDK supports Node.js LTS versions 12.17 and later.
 * [Latest version of Visual Studio Code](https://code.visualstudio.com/).
@@ -31,25 +32,25 @@ To get started, install the following:
 1. Clone the [Live Share SDK](https://github.com/microsoft/live-share-sdk) repository to test the sample app:
 
     ```bash
-    $ git clone https://github.com/microsoft/live-share-sdk.git
+    git clone https://github.com/microsoft/live-share-sdk.git
     ```
 
 1. Run the following command to go to the Dice Roller sample app folder:
 
    ```bash
-    $ cd live-share-sdk\samples\01.dice-roller
+    cd live-share-sdk\samples\01.dice-roller
    ```
 
 1. Run the following command to install the dependency package:
 
     ```bash
-    $ npm install
+    npm install
     ```
 
 1. Run the following command to start the client and the local server:
 
    ```bash
-   $ npm start
+   npm start
    ```
   
      A new browser tab opens a `http://localhost:8080` url and the Dice Roller game appears.

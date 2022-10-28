@@ -1,11 +1,10 @@
 ---
 title: Plan your app overview
 author: heath-hamilton
-description: Introduce the elements of planning an app, understanding use cases, app capabilities, and other Teams features.
+description: Understand use case and Microsoft Teams app features, map use cases, plan responsive tabs for mobile. Learn Teams features and availability for GCC, GCC-High, and DOD.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-keywords: entry points extensibility use cases device capability
 ---
 
 # Plan your app with Teams features
@@ -16,15 +15,15 @@ At its heart, Teams is a collaboration platform. It's also a social platform, is
 
 In this section, learn how to:
 
-* Identify and map use cases to Teams features
-* Use planning checklist
-* Plan beyond app deployment
+* Identify and map use cases to Teams features.
+* Use planning checklist.
+* Plan beyond app deployment.
 
 ## Plan with Teams
 
 Teams as a platform offers you toolkits, libraries, and apps at every stage of app development. Let's break it down to app building lifecycle:
 
-:::image type="content" source="../assets/images/app-fundamentals/plan-app.png" alt-text="Illustration shows planning your app" border="true":::
+:::image type="content" source="../assets/images/app-fundamentals/plan-app.png" alt-text="Illustration shows planning your app":::
 
 * [Before you build](#before-you-build)
 * [During build](#during-build)
@@ -49,9 +48,9 @@ Understanding the user and their concern are the first indicators of how a Teams
 
 * **Use Teams as a platform**: Teams platform helps you build a single- or multi-capability app. Your Teams app is supported by the integrated products and services that strengthen the app experience.
 
-    :::image type="content" source="../assets/images/overview/teams-solution.png" alt-text="Conceptual representation of the Teams solution." border="true":::
+    :::image type="content" source="../assets/images/overview/teams-solution.png" alt-text="Conceptual representation of the Teams solution.":::
 
-    Your apps appear on Teams as Tabs, Bots, Message Extensions, Connectors and Webhooks, or as a multi-capability app. These capabilities are powered at the backend by Azure, Microsoft Graph, SharePoint, and Power apps that help automate tasks and processes.
+    Your apps appear on Teams as Tabs, Bots, Messaging Extensions, Connectors and Webhooks, or as a multi-capability app. These capabilities are powered at the backend by Azure, Microsoft Graph, SharePoint, and Power apps that help automate tasks and processes.
 
     Together, these capabilities bring your app solution to life.
 
@@ -62,17 +61,9 @@ Understanding the user and their concern are the first indicators of how a Teams
 * Integrate your app with Teams and other apps, such as Microsoft 365, Microsoft Graph, and more.
 * Use Developer Portal to configure, manage, and deploy your app.
 
-#### Government Community Cloud
+### Government Community Cloud
 
 Government Community Cloud (GCC) is a government focused copy of the commercial environment. Department of Defense (DOD) and Federal contractors must meet the stringent cybersecurity and compliance requirements. For this purpose, GCC-High was created to meet the needs of DOD and Federal contractors. GCC-High is a copy of the DOD cloud but exists in its own sovereign environment. The DOD cloud is built for the Department of Defense only.
-
-Endpoints for government cloud are:
-
-| Tenant | GCC | GCC-High | DOD |
-|-------------|---------|---|---|
-|Teams client|`https://teams.microsoft.com`|`https://gov.teams.microsoft.us/`|`https://dod.teams.microsoft.us/` |
-|Teams admin |`https://admin.teams.microsoft.com/`|`https://admin.gov.teams.microsoft.us/`|`https://admin.dod.teams.microsoft.us`|
-|Microsoft Graph |`https://graph.microsoft.com`|`https://graph.microsoft.us`|`https://dod-graph.microsoft.us`|
 
 The following table includes Teams features and availability for GCC, GCC-High, and DOD:
 
@@ -81,17 +72,18 @@ The following table includes Teams features and availability for GCC, GCC-High, 
 | Teams owned apps as in internally developed apps | ✔️ App is enabled if it has GCC | ✔️ App is enabled if it has GCC-High | ✔️ App is enabled if it has DOD |
 | Microsoft apps | ✔️ Microsoft apps compliant with GCC | ✔️ Microsoft apps compliant with GCC-High | ✔️ Microsoft apps compliant with DOD |
 | 3P or third-party apps | ✔️ Third-party apps are available. Disabled by default and tenant admin use their own discretion to enable it. | ❌ | ❌ |
-| Custom or Lob tab apps |  ✔️ | ✔️(****Compliance UI***) | ✔️(****Compliance UI***) |
-| Custom or Lob bots | ✔️ | ✔️(****Compliance UI***) | ❌ |
-| Custom message extensions | ✔️ | ✔️ | ❌ |
+| Bots | ✔️ | ❌ | ❌ |
+| Custom or Lob tab apps |  ✔️ | ✔️ | ✔️ |
 | Sideloading apps | ✔️ | ❌ | ❌ |
+| Custom or Lob bots | ✔️ | ❌ | ❌ |
+| Custom messaging extensions | ❌ | ❌ | ❌ |
 | Custom connectors | ❌ | ❌ | ❌ |
 
-****Compliance UI***: By enabling third-party communications, customers accept that such communication is being processed through the third party and not Microsoft. The customer is solely responsible for mitigating risks associated with connecting with third party bots in their services. Microsoft does not endorse and makes no warranties, express, or implied concerning the security of third parties the customer allows to connect with their service. Enabling bots will extend your system boundary beyond this tenant based on the bot you choose to leverage. It is your responsibility to ensure that this meets your compliance requirements including FedRAMP, DFARS, ITAR, etc. It is your responsibility to evaluate the risk and compliance of any endpoint and URL that you connect to.
+**Compliance UI**: By enabling third-party communications, customers accept that such communication is being processed through the third party and not Microsoft. The customer is solely responsible for mitigating risks associated with connecting with third party bots in their services. Microsoft doesn't endorse and makes no warranties, express, or implied concerning the security of third parties the customer allows to connect with their service. Enabling bots will extend your system boundary beyond this tenant based on the bot you choose to leverage. It is your responsibility to ensure that this meets your compliance requirements including FedRAMP, DFARS, ITAR, etc. It is your responsibility to evaluate the risk and compliance of any endpoint and URL that you connect to.
 
 The following list helps to identify the availability of GCC, GCC-High, and DOD for the features:
 
-* For third-party apps, see [web apps](../samples/integrating-web-apps.md) and [meeting app extensibility](../apps-in-teams-meetings/meeting-app-extensibility.md).
+* For third-party apps, see [web apps](../samples/integrating-web-apps.md) and [meeting app extensibility](../apps-in-teams-meetings/teams-apps-in-meetings.md).
 * For bots, see [build your first conversational bot for Teams](../get-started/first-app-bot.md), [designing your Teams bot](../bots/design/bots.md), [add bots to Microsoft Teams apps](../resources/bot-v3/bots-overview.md), and [bots in Teams](../bots/what-are-bots.md).
 * For sideloading apps, see [enable your Teams app to be customized](../concepts/design/enable-app-customization.md), [distribute your Microsoft Teams app](../concepts/deploy-and-publish/apps-publish-overview.md), and [Upload your app in Teams](../concepts/deploy-and-publish/apps-upload.md).
 * For custom connectors, see [create Office 365 connectors for Teams](../webhooks-and-connectors/how-to/connectors-creating.md).

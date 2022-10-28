@@ -2,12 +2,12 @@
 title: Share meeting stage in Teams 
 metadata:
   title: Share meeting stage in Team
-  description: In this tutorial, you'll learn to set up a Meeting stage view for Teams.
+  description: With this learning module, learn how to set up a Meeting stage view for Teams to add status details for collaboration.
   audience: Developer
   level: Beginner
   ms.date: 12/06/2021
   ms.topic: interactive-tutorial
-  nextTutorialHref: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
+  nextTutorialHref: apps-in-teams-meetings/build-tabs-for-meeting.md
   nextTutorialTitle: Read more to enable and configure apps for meetings
   ms.custom: mvc
   ms.localizationpriority: high
@@ -18,12 +18,12 @@ items:
 
     **Key features of share meeting stage in Teams**
 
-    * Add status details in the side panel
-    * Add details for collaboration 
+    * Add status details in the side panel.
+    * Add details for collaboration.
     
     This step-by-step guide helps you to share meeting stage in Teams to add status details for collaboration. You'll see the following output:
 
-      :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/stage view.png" alt-text="meetings stage view" border="true":::
+      :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/stage view.png" alt-text="meetings stage view":::
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -41,9 +41,9 @@ items:
 
      You must have working knowledge of the following technologies:
 
-    * [C#](https://docs.microsoft.com/dotnet/csharp/fundamentals/tutorials/how-to-display-command-line-arguments)
+    * [C#](/dotnet/csharp/fundamentals/tutorials/how-to-display-command-line-arguments)
     * [ECMAScript6](http://es6-features.org/#Constants)
-    * [Latest version of ASP.NET core](https://docs.microsoft.com/aspnet/core/?view=aspnetcore-3.1) 
+    * [Latest version of ASP.NET core](/aspnet/core/?view=aspnetcore-3.1) 
     * [Latest version of React.JS](https://reactjs.org/tutorial/tutorial.html) 
 
 - title: Set up local environment
@@ -54,9 +54,12 @@ items:
     1. Select **Code**.
     1. From the dropdown menu, select **Open with GitHub Desktop**.
 
-       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/clone-repository.png" alt-text="cloning the repository" border="true":::
+       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/clone-repository.png" alt-text="cloning the repository":::
 
     1. Select **Clone**. 
+
+       > [!NOTE]
+       > If you encounter the error "Filename too long," apply the git command 'git config --system core.longpaths true' in your administrator terminal of choice.
 
 - title: Set up tunnel for local web server
   durationInMinutes: 1
@@ -64,46 +67,46 @@ items:
     Use ngrok or Command Prompt to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
 
      ```bash
-     ngrok http -host-header=localhost 3978
+     ngrok http --host-header=localhost 3978
      ``` 
        > [!TIP]
-       > If you encounter **ERR_NGROK_4018**, follow the steps, as displayed in the Command Prompt to sign up and authenticate ngrok. Then run the `ngrok http -host-header=localhost 3978` command.
+       > If you encounter **ERR_NGROK_4018**, follow the steps, as displayed in the Command Prompt to sign up and authenticate ngrok. Then run the `ngrok http --host-header=localhost 3978` command.
 
-      :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/ngrok1.png" alt-text="tunnel using command prompt" border="true":::
+      :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/ngrok1.png" alt-text="tunnel using command prompt":::
  
 - title: Set up manifest file
   durationInMinutes: 1
   content: |
-    1. Navigate to **manifest.json** in node.js folder in cloned repository.
+    1. Go to **manifest.json** in node.js folder in cloned repository.
 
-        :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/manifest-path1.png" alt-text="path for manifest.json" border="true":::
+        :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/manifest-path1.png" alt-text="path for manifest.json":::
 
     1. Open **manifest.json** in Visual Studio and make the following changes:
 
-         * Replace `<<App-ID>>` with your bot's **Microsoft App ID**
-         * Replace `<<BASE-URL>>` to the fully qualified your ngrok domain name
-         * Replace `<<VALID DOMAIN>>` with your fully qualified ngrok domain name
+         * Replace `<<App-ID>>` with your bot's **Microsoft App ID**.
+         * Replace `<<BASE-URL>>` to the fully qualified your ngrok domain name.
+         * Replace `<<VALID DOMAIN>>` with your fully qualified ngrok domain name.
          
-         :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/manifest file-1.png" alt-text="manifest file" border="true":::   
+         :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/manifest file-1.png" alt-text="manifest file":::   
 
 - title: Build and run client app using npm 
   durationInMinutes: 1 
   content: |
-    1. In your cloned repository, navigate to **samples** > **meetings-stage-view** > **nodejs**.
+    1. In your cloned repository, go to **samples** > **meetings-stage-view** > **nodejs**.
 
     1. Copy the **nodejs** folder path.
 
-       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/app-manifest1.png" alt-text="folder path" border="true":::
+       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/app-manifest1.png" alt-text="folder path":::
 
     1. Open a new **Command Prompt** window, change the current directory to the copied **nodejs** path.
 
-       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/nodejs-path.png" alt-text="path for nodejs" border="true":::
+       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/nodejs-path.png" alt-text="path for nodejs":::
 
     1. Run the following command in the **Command Prompt** to download packages and dependencies:
 
        ```Command-Prompt
         npm install
-        ```  
+       ```  
 
     1. Run the following command in the **Command Prompt** to start the app:
 
@@ -111,46 +114,46 @@ items:
        npm start
        ```
 
-       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/npm install.png" alt-text="build and run" border="true":::
+       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/npm install.png" alt-text="build and run":::
        
 - title: Add meeting stage to Teams  
   durationInMinutes: 1
   content: |
 
-    1. In your cloned repository, navigate to **samples> meetings-stage-view> nodejs> Manifest**.
+    1. In your cloned repository, go to **samples> meetings-stage-view> nodejs> Manifest**.
 
     1. Create a .zip with the following files that are present in the **Manifest** folder: 
        * manifest.json
        * icon-outline.png
        * icon-color.png
 
-       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/meeting-stage-view-file1.png" alt-text="manifest" border="true":::
+       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/meeting-stage-view-file1.png" alt-text="manifest":::
     
     1. Create a Teams meeting with a few presenters and attendees.
    
     1. After the meeting is created, go to the meeting details page and select **Add an app**.
 
-       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/addapp.png" alt-text="Add an app" border="true":::
+       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/addapp.png" alt-text="Add an app":::
        
     1. In the pop-up window, select **Manage apps**.
 
-       :::image type="content" source="../msteams-platform/assets/meeting-token-generator-manageapps.png" alt-text="manage apps" border="true":::
+       :::image type="content" source="../msteams-platform/assets/meeting-token-generator-manageapps.png" alt-text="manage apps":::
 
     1. Select **Upload a custom app**. 
 
-       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/upload-custom-app.png" alt-text="upload a file" border="true":::
+       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/upload-custom-app.png" alt-text="upload a file":::
 
     1. Select **Open** to upload the .zip file that you created in the **Manifest** folder.
 
-       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/meeting-stage-view-upload-app1.png" alt-text="upload the app" border="true":::
+       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/meeting-stage-view-upload-app1.png" alt-text="upload the app":::
 
     1. Select **Add**.
 
-       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/add-an-app-in meeting.png" alt-text="add app in meeting" border="true":::
+       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/add-an-app-in meeting.png" alt-text="add app in meeting":::
 
        The **Manage apps** section displays the list of applications.
 
-       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/list-of-apps.png" alt-text="list of applications" border="true":::
+       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/list-of-apps.png" alt-text="list of applications":::
 
 - title: Interact with the app in Teams
   durationInMinutes: 1
@@ -161,37 +164,37 @@ items:
     
        In the app selection page, the app is displayed as **App In Meeting**.
   
-       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/app in meeting.png" alt-text="app in meetings stage view" border="false":::
+       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/app in meeting.png" alt-text="app in meetings stage view":::
     
     1. Select the **App In Meeting**.
     
     1. Select **Save**.
 
-       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/welcome app.png" alt-text="welcome to app" border="false":::
+       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/welcome app.png" alt-text="welcome to app":::
    
     1. Start the meeting. 
     
        The icon is visible in the meeting control bar.
        
-       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/meeting app in teams.png" alt-text="meeting app" border="false":::
+       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/meeting app in teams.png" alt-text="meeting app":::
 
     1. To update the sprint status task, add:
 
        * **Assigned To**
        * **Description**
 
-       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/add-status.png" alt-text="add status in meeting" border="false":::
+       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/add-status.png" alt-text="add status in meeting":::
        
        App in side panel view:
 
-       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/side panel view.png" alt-text="panel view" border="false":::
+       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/side panel view.png" alt-text="panel view":::
 
 - title: Complete challenge
   durationInMinutes: 1
   content: |
     Did you come up with something like this?
 
-    :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/stage view.png" alt-text="stage view output" border="false":::
+    :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/stage view.png" alt-text="stage view output":::
 
 - content: |
     You've completed the tutorial to get started with share meeting stage in Teams.
