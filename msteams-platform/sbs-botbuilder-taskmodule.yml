@@ -81,7 +81,8 @@ items:
     1. Select **Create**.
     1. Enter required bot handle name in **Bot handle**.
     1. Select your **Subscription** and **Resource group** from the dropdown list.
-        
+    1. Select required **Data residency (preview)**.
+
         :::image type="content" source="~/assets/images/Teams-task-module/review-plus-create_2.png" alt-text="Select resource Azure bot"::: 
     
        To create a new resource group, select **Create new** > enter resource name > select **OK**. Select the required location from **New resource group location** dropdown list.
@@ -340,7 +341,7 @@ items:
          * Set `"MicrosoftAppTenantId"` to the tenant ID of the tenant where the app is used.
          * Set `"BaseUrl"` to the fully qualified domain name (https to io).
 
-        ![App settings](~/assets/images/Teams-task-module/appsettings_1.png)
+        :::image type="content" source="~/assets/images/Teams-task-module/appsettings_1.png" alt-text="Screenshot shows appsetting.json in visual studio.":::
 
     1. Go to **manifest.json** in the cloned repository.
 
@@ -363,7 +364,7 @@ items:
        1. Launch the latest version of Visual Studio.
        1. Go to **File** > **Open** > **Project/Solution**.
     
-          ![Open file](~/assets/images/Teams-task-module/VSopenfile.png)
+          :::image type="content" source="~/assets/images/Teams-task-module/VSopenfile.png" alt-text="Screenshot shows the open file with folder location.":::
 
        1. Select **TeamsTaskModule.csproj** file from **54.teams-task-module** folder.
 
@@ -371,13 +372,13 @@ items:
 
        1. Open **Solution Explorer** from **View**.
 
-          ![Solution Explorer](~/assets/images/Teams-task-module/solutionexplorer_1.png)
+          :::image type="content" source="~/assets/images/Teams-task-module/solutionexplorer_1.png" alt-text="Screenshot shows the open solution explorer.":::
 
        1. Right-click to select **TeamsTaskModule**.
 
        1. Select **Set as Startup Project**.
 
-          ![Solution Explorer](~/assets/images/Teams-task-module/startup_1.png)
+          :::image type="content" source="~/assets/images/Teams-task-module/startup_1.png" alt-text="Screenshot shows how to select set as startup project.":::
 
        1. Press **F5** to run the project.
     
@@ -398,7 +399,7 @@ items:
     dotnet run
     ```
    
-    ![Dotnet](~/assets/images/Teams-task-module/dotnetruncmd.png)
+    :::image type="content" source="~/assets/images/Teams-task-module/dotnetruncmd.png" alt-text="Screenshot shows the command prompt of dotnet run."::: 
 
 - title: Upload Task Module app
   durationInMinutes: 1
@@ -451,11 +452,11 @@ items:
 
     1. Select **Submit**.
 
-       ![Adaptive card text](~/assets/images/Teams-task-module/adaptive-card-text.png)
+       :::image type="content" source="~/assets/images/Teams-task-module/adaptive-card-text.png" alt-text="Screenshot shows Adaptive card message box.":::
 
        **Adaptive Card** sends an acknowledgment message.
-
-       ![Adaptive card submit](~/assets/images/Teams-task-module/adaptive-card-submit.png)
+       
+       :::image type="content" source="~/assets/images/Teams-task-module/adaptive-card-submit.png" alt-text="Screenshot shows the Adaptive card sends an acknowledgment message.":::
 
     1. Select **Custom Form** from **Task Module Invocation from Hero Card** or **Task Module Invocation from Adaptive Card**.
 
