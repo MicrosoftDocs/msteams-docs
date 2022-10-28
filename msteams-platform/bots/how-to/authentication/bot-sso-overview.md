@@ -52,13 +52,31 @@ The following image shows how SSO works when a Teams app user attempts to access
 
 | # | Interaction | What's going on |
 | --- | --- | --- |
-| 1 | Bot service → Teams Client | The SSO flow for a Teams bot app is triggered when an app user sends a message (or an activity) to the bot service. The app user uses the Teams client to send a message to the bot service. On receiving the message, the bot sends a OAuth Card to Teams client with a request for a token. |
-| 2 | Teams Client → Azure AD | The Teams client receives the OAuth card and the token exchange request from the bot service. It sends this OAuth Card to Azure AD requesting for an access token. |
-| 3 | Azure AD → Consent dialog | If the current app user is using your bot service for the first time, Teams client displays request prompt to consent. The app user (or the administrator) must give consent to Teams for using the app user's Teams identity to obtain access token from Azure AD. |
-| 4 | Bot service → Bot Framework Token service | Following app user's consent, the bot service registers the token with Bot Framework Token service. |
-| 5 | Bot Framework Token service → Azure AD | The Bot Framework Token service requests Azure AD for token exchange. It also validates the access token that it receives from Azure AD for the app user, and stores it. |
-| 6 | Bot Framework Token service → Bot service | The Bot Framework Token service shares the validated access token with the Bot service, and the app user is given access. The app user doesn't need to consent for Microsoft Graph permissions as the app user can access them using the access token received from Azure AD. |
+| 1 | App user → Teams Client |  |
+| 2 | Teams Client → Bot service |  |
+| 3 | Bot service → Bot Framework token service |  |
+| 4 |   |  |
+| 5 |   |  |
+| 6 |   |  |
 
+<!--
+Points from SME response:
+
+1. The message that app user sends is received by the Teams service, which sends it to the bot.
+
+    1. If the app user has previously signed in, a token is saved in the Bot Framework token store.
+    2. The bot calls the Bot Framework token service which checks for an existing token for the app user in the token store. If it exists, the app user is given access.
+    3. If no token is available, the bot triggers the auth flow.
+
+2. The bot calls the Bot Framework token service to obtain a sign in link for the user, and send it to Teams service which forwards it to the client.
+
+3. After the Teams client receives the OAuth card for the app user, if Single Sign On is enabled, it sends a token exchange request for the app user back to the Teams service which sends it to the bot.
+
+4. The bot calls the token service, attempting to exchange the received token. If the user has not previously consented, the exchange will fail and the bot sends back a failure notice. In this case, the Teams client displays a message to the app user for giving consent.
+    1. In case the consent is required, the authentication falls back to the sign-in prompt and the app user must sign in to use the bot app. The Sign in button pops up in Teams, and then AAD Sign in page is rendered when clicked.
+    2. The app user signs in and grants access to the bot.
+
+The token for the app user is stored in the token store.-->
 
 <!--
 Message to Teams client > Teams client to Teams bot service > Bot > Token store > If not found at token store -> check Cache for valid token > If token isn't in cache (or expired) -> Bot sends OAuth card to Token store to get sign in url for OAuth card for the app user > Teams client gets OAuth card and sends it for Token exchange request > Bot seeks consent to exchange token > if consent fails -> Teams client shows the sign-in prompt -> Teams client/Bot saves the token in Token store-->
