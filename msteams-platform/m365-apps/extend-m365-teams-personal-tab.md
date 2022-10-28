@@ -225,7 +225,7 @@ To preview your app running in Office on the web:
 
 To view your app running in Office app for Android:
 
-1. Launch the Office app and sign in using your dev tenant account. If the Office app for Android was already running prior to sideloading your app in Teams, you need to restart it in order to see it among your installed apps.
+1. Launch the Office app and sign in using your dev tenant account. If the Office app for Android was already running prior to sideloading your app in Teams, you need to restart it in order to see in your installed apps.
 1. Select the **Apps** icon. Your sideloaded app appears among installed apps.
 1. Select your app icon to launch your app in Office app for Android.
 
