@@ -6,7 +6,7 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ---
 
-# Receive all channel messages with RSC
+# Receive all conversation messages with RSC
 
 The resource-specific consent (RSC) permissions model, originally developed for Teams Graph APIs, is extended to bot scenarios.
 
