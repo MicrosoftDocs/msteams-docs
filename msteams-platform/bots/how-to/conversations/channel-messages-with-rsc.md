@@ -120,6 +120,8 @@ The following steps guide you to sideload and validate bot that receives all cha
 
    :::image type="content" source="../../../assets/images/bots/Bot_NoMention.png" alt-text="No mention.":::
 
+---
+
 ## Code snippets
 
 The following code provides an example of RSC permissions:
