@@ -155,5 +155,3 @@ Encoded
 
 * [Message extensions link unfurling](~/messaging-extensions/how-to/link-unfurling.md)
 * [Teams tabs](~/tabs/what-are-tabs.md)
-* [Create a personal tab](~/tabs/how-to/create-personal-tab.md)
-* [Create a channel or group tab](~/tabs/how-to/create-channel-group-tab.md)

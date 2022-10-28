@@ -122,6 +122,3 @@ After the remove handler is executed, `removeEvent.notifySuccess()` or `removeEv
 ## See also
 
 * [Teams tabs](~/tabs/what-are-tabs.md)
-* [Create a personal tab](~/tabs/how-to/create-personal-tab.md)
-* [Create a channel or group tab](~/tabs/how-to/create-channel-group-tab.md)
-* [Create a configuration page](~/tabs/how-to/create-tab-pages/configuration-page.md)

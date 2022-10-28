@@ -676,8 +676,5 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 ## See also
 
 * [Teams tabs](~/tabs/what-are-tabs.md)
-* [Create a personal tab](~/tabs/how-to/create-personal-tab.md)
 * [Tabs on mobile](~/tabs/design/tabs-mobile.md)
-* [Build tabs with Adaptive Cards](~/tabs/how-to/build-adaptive-card-tabs.md)
-* [Create a removal page](~/tabs/how-to/create-tab-pages/removal-page.md)
 * [Add a SharePoint page as a tab in Teams](https://support.microsoft.com/en-us/office/add-a-sharepoint-page-list-or-document-library-as-a-tab-in-teams-131edef1-455f-4c67-a8ce-efa2ebf25f0b)

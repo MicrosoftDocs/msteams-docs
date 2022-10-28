@@ -335,7 +335,3 @@ If you choose to have your channel or group tab appear on the Teams mobile clien
 ## See also
 
 * [Teams tabs](~/tabs/what-are-tabs.md)
-* [Create a personal tab](~/tabs/how-to/create-personal-tab.md)
-* [Create a channel or group tab](~/tabs/how-to/create-channel-group-tab.md)
-* [Create a content page](~/tabs/how-to/create-tab-pages/content-page.md)
-* [Tabs on mobile](~/tabs/design/tabs-mobile.md)

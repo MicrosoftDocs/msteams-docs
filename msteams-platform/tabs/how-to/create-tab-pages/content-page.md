@@ -135,7 +135,5 @@ To show the loading indicator:
 ## See also
 
 * [Teams tabs](~/tabs/what-are-tabs.md)
-* [Create a personal tab](~/tabs/how-to/create-personal-tab.md)
 * [Tabs link unfurling and Stage View](~/tabs/tabs-link-unfurling.md)
-* [Create a configuration page](~/tabs/how-to/create-tab-pages/configuration-page.md)
 * [DevTools for Microsoft Teams tabs](~/tabs/how-to/developer-tools.md)

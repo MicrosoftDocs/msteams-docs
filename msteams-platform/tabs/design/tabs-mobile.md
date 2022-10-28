@@ -77,6 +77,4 @@ If you are sideloading your app or publishing to an organization's app catalog, 
 
 * [Tab design guidelines](~/tabs/design/tabs.md)
 * [Teams tabs](~/tabs/what-are-tabs.md)
-* [Create a personal tab](~/tabs/how-to/create-personal-tab.md)
-* [Create a channel or group tab](~/tabs/how-to/create-channel-group-tab.md)
 * [Plan for Teams mobile - Teams](~/concepts/design/plan-responsive-tabs-for-teams-mobile.md)
