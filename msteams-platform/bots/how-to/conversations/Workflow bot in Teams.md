@@ -307,6 +307,8 @@ To register the action handler, follow these steps:
    > [!NOTE]
    > To learn more about extending the Workflow bot template, see [respond to card actions in Teams](https://github.com/OfficeDev/TeamsFx/wiki/Respond-to-card-actions-in-Teams)
 
+---
+
 ## Customize the action response
 
 You can use the `adaptiveCardResponse` property in handler to customize how the bot sends the Adaptive Card to users. There are three options to customize:
