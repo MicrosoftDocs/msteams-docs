@@ -371,4 +371,5 @@ Response body
 
 ## See also
 
-[Localize your app](../../concepts/build-and-test/apps-localization.md)
+* [Localize your app](../../concepts/build-and-test/apps-localization.md)
+* [Get profilePhoto](/graph/api/profilephoto-get)
