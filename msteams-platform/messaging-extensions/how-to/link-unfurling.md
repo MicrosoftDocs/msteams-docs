@@ -187,9 +187,11 @@ Following is an example of the response:
 
 ## Remove link unfurling cache
 
-When a user shares a link in a meeting, the Teams app unfurls the link to an adaptive card. The link unfurling result is cached for 30 minutes.
+When a user shares a link in a meeting, the Teams app unfurls the link to an adaptive card. The link unfurling result is cached in Teams for 30 minutes. You can update your apps to set a cache policy and remove cache for the app, which helps you build contextual experiences for your app to show different content in an adaptive card when the app's link is shared in a different context in Teams.
 
-You can now remove the link unfurling cache to show different content in an adaptive card when the link is shared in a different context. To remove link unfurling cache, use the following json payload example:
+To remove link unfurling cache, update your app with `type` as `setcachepolicy` under the `suggestedActions` property. Teams doesn't cache the results for the app links with the `"type": "setCachePolicy"`.
+
+The following JSON payload example for `suggestedActions` property:
 
 ```json
 "suggestedActions": {
