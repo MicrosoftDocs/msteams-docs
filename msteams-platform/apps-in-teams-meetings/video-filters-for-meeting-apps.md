@@ -408,7 +408,7 @@ Here are some examples of category 1 diversity:
 
 * Skin tones
 
-The filter app must cater to at least one type of Category 1 diversity.
+The filter app must cater to at least one type of category 1 diversity.
 
    1. A filer app must provide filters across the spectrum for its chosen type of diversity. For example, if the filter app caters to white skin tones, it should also cater to  darker skin tones.
 
@@ -424,45 +424,11 @@ Here are some examples of category 2 diversity:
 
 * Hair
 
-A video filter app can cater to at least one type of Category 2 diversity.
+A video filter app can cater to at least one type of category 2 diversity.
 
    1. A filer app must provide filters across the spectrum for its chosen type of diversity. For example, if the video filter app caters to hair color, then it should cater to general hair color types such as black, white, grey, red, golden, and so on.
 
    1. The number of  filters in the diversity category should cater to at least three filters across the extreme and middle ends of the spectrum.
-
-# [Category 3: Must Avoid](#tab/category-3)
-
-Here are some examples of category 3 diversity:
-
-* Eyes: Shape and size spectrum
-* Ethnicity
-* National origin
-* Cultural identity
-* Physical ability
-* Mental ability
-* Personal interests
-* Education
-* Citizenship
-* Religious beliefs
-* Location
-* Familial status
-* Relationship status
-* Socioeconomic status
-* Life experiences
-* Job function
-* Place of work
-* Management status
-* Employment status
-* Pay type
-* Seniority
-* Union affiliation
-* Political beliefs
-* Moral compass
-* Outlook on life
-* Epistemology
-* Any other type not mentioned above
-
-A video filter app must avoid the diversities in Category 3.
 
 ---
 
