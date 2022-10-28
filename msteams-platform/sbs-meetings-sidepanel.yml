@@ -24,7 +24,7 @@ items:
     
     This step-by-step guide helps you to generate a meeting side panel to add and publish an agenda. You'll see the following output:
 
-       :::image type="content" source="~/assets/images/meetings-side-panel/sidepanelondesktopmobile.png" alt-text="Your Token":::
+       :::image type="content" source="~/assets/images/meetings-side-panel/sidepanelondesktopmobile_1.png" alt-text="Your Token":::
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -96,7 +96,7 @@ items:
 
     1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected. 
     
-       You can either select **Use existing app registration** and enter **Existing app ID** and **Existing app password**, or select **Create new Microsoft App ID**.
+        You can also select **Use existing app registration** and enter existing **App ID**, **App tenant ID**, and **MSI resource ID**.**.
 
        > [!NOTE]
        > You can't create more than one bot with the same **Microsoft App ID**.
@@ -169,7 +169,9 @@ items:
 
        :::image type="content" source="~/assets/images/meetings-side-panel/terms_2.png" alt-text="Terms of service":::
 
-    1. Select **Apply**.  
+    1. Select **Apply**.
+
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/apply-teams_1.png" alt-text="microsoft teams":::
     
     **To create tunnel for local web server**
 
@@ -194,7 +196,7 @@ items:
 
     1. In **Settings**, select **Configuration**.
 
-    1. In **Messaging endpoint**, use the HTTPS URL available from ngrok and add **/api/messages** at the end of the URL .
+    1. In **Messaging endpoint**, use the HTTPS URL available from ngrok and add **/api/messages** at the end of the URL.
 
        :::image type="content" source="~/assets/images/meetings-side-panel/messaging-endpoint_1.png" alt-text="Messaging Endpoint":::
 
@@ -257,13 +259,13 @@ items:
   
     1. Select **Add scope** to save.
 
-        :::image type="content" source="~/assets/images/meetings-side-panel/addascope_1.png" alt-text="Add a scope":::
+        :::image type="content" source="~/assets/images/meetings-side-panel/addascope_2.png" alt-text="Add a scope":::
 
         > [!NOTE]
         > The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.</br>
            `api://*******.ngrok.io/00000000-0000-0000-0000-000000000000/access_as_user`
 
-        :::image type="content" source="~/assets/images/meetings-side-panel/scopes.png" alt-text="Scopes":::
+        :::image type="content" source="~/assets/images/meetings-side-panel/scopes_1.png" alt-text="Scopes":::
   
     1. In the **Authorized client applications** section, identify the applications that you want to authorize for your app’s web application. 
     
@@ -281,7 +283,7 @@ items:
 
     1. Select **Authorized scopes**.
 
-         :::image type="content" source="~/assets/images/meetings-side-panel/authorizedscope.png" alt-text="Add client application 2":::
+         :::image type="content" source="~/assets/images/meetings-side-panel/authorizedscope_1.png" alt-text="Add client application 2":::
 
        The following image displays the client ID:
 
@@ -359,7 +361,7 @@ items:
 - title: Build and run the service
   durationInMinutes: 1
   content: |
-    **To build and run the service using latest version of Visual Studio or Command line**
+    **To build and run the service using the latest version of Visual Studio or Command line**
 
     # [Visual Studio](#tab/vs)
 
@@ -471,7 +473,7 @@ items:
   content: |
     Did you come up with something like this?
 
-       :::image type="content" source="~/assets/images/meetings-side-panel/sidepanelondesktopmobile.png" alt-text="Token in Meet"::: 
+       :::image type="content" source="~/assets/images/meetings-side-panel/sidepanelondesktopmobile_1.png" alt-text="Token in Meet"::: 
 
 
 - content: |
