@@ -32,7 +32,7 @@ The following diagram illustrates how to respond to an Adaptive Card action with
 
 :::image type="content" source="../../../assets/images/sbs-workflow-bot/sbs-workflow-bot-action-card.png" alt-text="workflow bot card action handler diagram" lightbox="../../../assets/images/sbs-workflow-bot/sbs-workflow-bot-action-card.png":::
 
-* **Action card**: The card where you define your action that users can invoke (DoStuff button).
+* **Action card**: The card where you define your action that users can invoke (for example, the `DoStuff` button).
 * **Card action handler**: Triggered when users invoke the corresponding card action (its `triggerVerb` is same as the `verb` property in Adaptive Card action). It can send a response card to respond to the action.
 * **Response card**: The card which respond to the action when user invokes it from the action card.
 
@@ -89,8 +89,7 @@ Steps you can follow to add card actions:
 
 User universal action `Action.Execute` defines your action in an Adaptive Card, which can be rendered as a button in the card. `Action.Execute` is a sample action:
 
-```
-
+```JASON
 { 
   "type": "AdaptiveCard", 
   "body": [
@@ -341,8 +340,7 @@ You need to design the user-specific Adaptive Card to refresh specific users suc
 
 Add handler that implements `TeamsFxAdaptiveCardActionHandler` to process the refresh invoke activity that is automatically triggered in Teams.
 
-```
-
+```JASON
 import responseCard from "../adaptiveCards/responseCard.json";
 
 export class Handler1 implements TeamsFxBotCardActionHandler {
@@ -374,7 +372,6 @@ export class Handler1 implements TeamsFxBotCardActionHandler {
 Register the refresh action handler in `bot/src/internal/initialize.js(ts)`:
 
 ```initialize.js(ts)
-
 export const commandBot = new ConversationBot({
   ...
   cardAction: {
