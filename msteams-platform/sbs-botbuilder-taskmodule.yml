@@ -341,7 +341,7 @@ items:
          * Set `"MicrosoftAppTenantId"` to the tenant ID of the tenant where the app is used.
          * Set `"BaseUrl"` to the fully qualified domain name (https to io).
 
-        ![App settings](~/assets/images/Teams-task-module/appsettings_1.png)
+        :::image type="content" source="~/assets/images/Teams-task-module/appsettings_1.png" alt-text="Screenshot shows appsetting.json in visual studio.":::
 
     1. Go to **manifest.json** in the cloned repository.
 
@@ -364,7 +364,7 @@ items:
        1. Launch the latest version of Visual Studio.
        1. Go to **File** > **Open** > **Project/Solution**.
     
-          ![Open file](~/assets/images/Teams-task-module/VSopenfile.png)
+          :::image type="content" source="~/assets/images/Teams-task-module/VSopenfile.png" alt-text="Screenshot shows the open file with folder location.":::
 
        1. Select **TeamsTaskModule.csproj** file from **54.teams-task-module** folder.
 
@@ -372,13 +372,13 @@ items:
 
        1. Open **Solution Explorer** from **View**.
 
-          ![Solution Explorer](~/assets/images/Teams-task-module/solutionexplorer_1.png)
+          :::image type="content" source="~/assets/images/Teams-task-module/solutionexplorer_1.png" alt-text="Screenshot shows the open solution explorer.":::
 
        1. Right-click to select **TeamsTaskModule**.
 
        1. Select **Set as Startup Project**.
 
-          ![Solution Explorer](~/assets/images/Teams-task-module/startup_1.png)
+          :::image type="content" source="~/assets/images/Teams-task-module/startup_1.png" alt-text="Screenshot shows how to select set as startup sroject.":::
 
        1. Press **F5** to run the project.
     
