@@ -416,7 +416,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/app-package-uploaded.png"alt-text="Screenshot for the SPFx package uploaded to SharePoint site":::
 
-       You can either publish to Teams or select the sharepoint site.
+       You can either publish to Teams or select the Sharepoint site.
 
         * Publish to Teams (#publish-to-teams)
         * Select the link of the SharePoint site (#select-the-link-of-the-sharepoint-site)
@@ -491,7 +491,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/spfx-distribute-apps.png" alt-text="Distribute apps for SharePoint.":::
 
-        The Apps for SharePoint home page opens. Your app is listed in this page.
+        The Apps for SharePoint home page open. Your app is listed in this page.
 
     1. Select the **FILES** tab.
 
