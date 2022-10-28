@@ -67,8 +67,8 @@ items:
   content: |
     The following steps help you to create and register your bot in Azure portal:
 
-    * Create Azure bot resource to register bot with Azure bot service.
-    * Create client secret to enable SSO authentication of the bot.
+    * Create Azure Bot resource to register bot with Azure Bot service.
+    * Create client secret to enable single sign-on (SSO) authentication of the bot.
     * Add Teams channel to deploy the bot.
     * Use ngrok to create a tunnel to your web server's endpoints.
     * Add messaging endpoint to the ngrok tunnel you created.
@@ -89,7 +89,7 @@ items:
        
        :::image type="content" source="~/assets/images/meetings-side-panel/review-plus-create.png" alt-text="Select resource Azure bot":::
     
-       You can also create a new resource group, select **Create new** > enter resource name > select **OK**. Select required location from **New resource group location** dropdown list.
+       You can also create a new resource group. Select **Create new** > enter resource name > select **OK**. Select required location from **New resource group location** dropdown list.
        For more information, see [create resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups).
 
        :::image type="content" source="~/assets/images/bots/newresource.png" alt-text="New resource group location":::
@@ -107,7 +107,7 @@ items:
 
        :::image type="content" source="./assets/images/meetings-side-panel/tenant-review_1.png" alt-text="tenant review.":::
 
-    1. Once the validation passed, select **Create**. 
+    1. If the validation is passed, select **Create**.
 
         It takes a few moments for your bot service to be provisioned. 
 
@@ -366,7 +366,7 @@ items:
        1. Open **Visual Studio**.
        1. Go to **File** > **Open** > **Project/Solution**.
     
-           :::image type="content" source="~/assets/images/Tab-ME-SSO/open-project1.png" alt-text="Open file":::
+           :::image type="content" source="~/assets/images/meetings-side-panel/open-project1.png" alt-text="Open file":::
 
        1. Select **SidePanel.csproj** file from **csharp** folder.
 
@@ -378,7 +378,7 @@ items:
 
             :::image type="content" source="~/assets/images/meetings-side-panel/certificate.png" alt-text="Trust Certificate":::
 
-          A webpage opens with a message **Your bot is ready!**.
+          A webpage appears with a message **Your bot is ready!**.
 
            :::image type="content" source="~/assets/images/meetings-side-panel/appisready_1.png" alt-text="App ready"::: 
 
@@ -392,7 +392,7 @@ items:
     ```
     :::image type="content" source="~/assets/images/meetings-side-panel/dotnetruncmd.png" alt-text="Dotnet"::: 
       
-- title: Add Meetings Side Panel to Teams
+- title: Add meetings side panel to Teams
   durationInMinutes: 1
   content: |
 
