@@ -1,5 +1,5 @@
 ### YamlMime:Tutorial
-title: Generate meeting 
+title: Generate in-meeting notifications
 metadata:
   title: Generate in-meeting notifications
   description: With this learning module, learn how to send reply to in-meeting notifications using bot in Teams with attendees.
@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Teams helps you to generate and interact with in-meeting notifications using bot.
+    Microsoft Teams helps you to generate and interact with in-meeting notifications using bot.
 
     **Key features of in-meeting notifications**:
 
