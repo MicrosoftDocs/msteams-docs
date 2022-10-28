@@ -21,7 +21,7 @@ items:
     * Presents the user with a modal pop-up to collect or display information.
     * Triggers the action commands from the compose message area, the command box, or from a message. 
 
-    This step-by-step guide helps you to build Teams action-based message extension to initiate actions from compose message and message area. You'll see the following output:
+    This step-by-step guide helps you to build Teams action based message extension to initiate actions from compose message and message area. You'll see the following output:
        
       :::image type="content" source="./assets/images/sbs-messagingextension-action/sharemessageoutput1.png" alt-text="output.":::
     
@@ -100,7 +100,7 @@ items:
 
        :::image type="content" source="~/assets/images/sbs-messagingextension-action/register-bot-2_1.png" alt-text="Screenshot showing the creation of Microsoft App ID.":::
 
-    1. If the validation passes, select **Create**.
+    1. If the validation is passed, select **Create**.
 
         It takes a few moments for your bot service to be provisioned. 
 
@@ -129,7 +129,7 @@ items:
 
        :::image type="content" source="~/assets/images/meetings-side-panel/newclientsecret_1.png" alt-text="Screenshot showing the selection of new client secret.":::
     
-       The **Add a client secret** window appears.  
+       **Add a client secret** window appears.  
 
     1. Enter **Description** to the client secret.
     
@@ -238,7 +238,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/selectscope_1.png" alt-text="Select scope":::
 
-       The **Add a scope** window appears.
+       **Add a scope** window appears.
     
     1. Enter the following details to configure scope:
     
@@ -341,7 +341,7 @@ items:
   content: |
     1. Go to **appsettings.json** in the cloned repository.
 
-        :::image type="content" source="./assets/images/sbs-messagingextension-action/appsettingslocation_1.png" alt-text="location.":::
+       :::image type="content" source="./assets/images/sbs-messagingextension-action/appsettingslocation_1.png" alt-text="location.":::
 
     1. Open **appsettings.json** in the latest version of Visual Studio and update the following information:  
 
@@ -351,18 +351,18 @@ items:
          * Leave `"MicrosoftAppTenantId"` blank for MultiTenant bot.
          * Set `"BaseUrl"` to the fully qualified domain name.
 
-        :::image type="content" source="./assets/images/sbs-messagingextension-action/json-file_1.png" alt-text="Json file.":::
+         :::image type="content" source="./assets/images/sbs-messagingextension-action/json-file_1.png" alt-text="Json file.":::
 
     1. Go to **manifest.json** in the cloned repository.
 
-        :::image type="content" source="./assets/images/sbs-messagingextension-action/manifest location.png" alt-text="manifest location.":::
+       :::image type="content" source="./assets/images/sbs-messagingextension-action/manifest location.png" alt-text="manifest location.":::
     
     1. Open **manifest.json** in latest version of Visual Studio and make the following changes:
 
          * Replace the `<<validDomains>>` with your fully qualified domain name.
          * Replace all occurrences of `<<Microsoft-App-ID>>` with your bot's **Microsoft App ID**.
 
-        :::image type="content" source="./assets/images/sbs-messagingextension-action/manifest_1.png" alt-text="manifest file." lightbox="./assets/images/sbs-messagingextension-action/manifest_1.png" :::
+         :::image type="content" source="./assets/images/sbs-messagingextension-action/manifest_1.png" alt-text="manifest file." lightbox="./assets/images/sbs-messagingextension-action/manifest_1.png" :::
 
 
 - title: Build and run the service
@@ -387,7 +387,7 @@ items:
 
           :::image type="content" source="./assets/images/sbs-messagingextension-action/certificate_1.png" alt-text="certificate.":::
 
-          A webpage opens with a message **Your bot is ready!**.
+          A webpage appears with a message **Your bot is ready!**.
 
           :::image type="content" source="./assets/images/sbs-messagingextension-action/appisready.png" alt-text="App ready."::: 
 
@@ -432,7 +432,7 @@ items:
   content: |
     1. Select **Create Card** command from the compose box command list.
 
-       :::image type="content" source="./assets/images/sbs-messagingextension-action/create-card.png" alt-text="create card.":::
+       :::image type="content" source="./assets/images/sbs-messagingextension-action/create-card_1.png" alt-text="create card.":::
 
     1. Enter your information in the modal pop-up.
 
@@ -448,7 +448,7 @@ items:
 
        :::image type="content" source="./assets/images/sbs-messagingextension-action/sharemessage.png" alt-text="Share card.":::
 
-    1. Select the checkbox if you need to include image and submit.
+    1. Select the checkbox if you need to include image and **Submit**.
 
        :::image type="content" source="./assets/images/sbs-messagingextension-action/sharemessageoutput.png" alt-text="Submit output.":::
 
