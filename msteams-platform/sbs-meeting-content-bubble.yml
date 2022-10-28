@@ -244,7 +244,7 @@ items:
   
     1. Set **Who can consent?** to `Admins and users`.
   
-    1. To configure the admin and user consent prompts with appropriate values for `access_as_user` scope, provide the following information in the fields:</br>
+    1. To configure the admin and user consent prompts with appropriate values for `access_as_user` scope, provide the following information in the fields:
     
          * Enter `Teams can access the user’s profile` as **Admin consent display name**.
 
@@ -264,7 +264,7 @@ items:
 
 
        > [!NOTE]
-       > The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.</br>
+       > The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.
            `api://****.ngrok.io/00000000-0000-0000-0000-000000000000/access_as_user`
   
         :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-add-scope_1.png" alt-text="Scope":::
@@ -304,7 +304,7 @@ items:
 
     1. Select **Delegated permissions**.
 
-    1. Add the following permissions:</br>
+    1. Add the following permissions:
          * **email**
          * **offline_access**
          * **OpenId**
