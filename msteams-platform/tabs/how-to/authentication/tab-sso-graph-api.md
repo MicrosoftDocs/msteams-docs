@@ -197,7 +197,9 @@ If you need to access Microsoft Graph data, configure your server-side code to:
 1. Use token cache serialization in MSAL.NET to cache the new access token for multiple, if required.
 
 > [!IMPORTANT]
-> As a best practice for security, always use the server-side code to make Microsoft Graph calls, or other calls that require passing an access token. Never return the OBO token to the client to enable the client to make direct calls to Microsoft Graph. This helps protect the token from being intercepted or leaked.
+> - As a best practice for security, always use the server-side code to make Microsoft Graph calls, or other calls that require passing an access token. Never return the OBO token to the client to enable the client to make direct calls to Microsoft Graph. This helps protect the token from being intercepted or leaked.
+> 
+> - Do not use `notifySuccess` result to return token information to the parent page. Use localStorage to avoid passing the token via notifySuccess; instead we send the item key. 
 
 ## Known limitations
 
