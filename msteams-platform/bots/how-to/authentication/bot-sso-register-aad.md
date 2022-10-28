@@ -311,13 +311,12 @@ Congratulations! You've completed the app configuration in Azure AD required to 
 
 To create and configure your app for enabling SSO in Azure AD:
 
-- **Create an app registration in Azure AD**
+- [**Configure your app in Azure AD**](#configure-your-app-in-azure-ad)
   - Configure scope for access token, application ID URI, and trusted client IDs
   - Configure access token version
-- **Create and deploy bot resource in Azure AD**
-- **Configure bot resource in Azure AD**
-  - Add messaging endpoint
-  - Update OAuth connection
+- [**Configure bot resource in Azure AD**](#configure-bot-resource-in-azure-ad)
+  - [To configure messaging endpoint](#to-configure-messaging-endpoint-1)
+  - [To update OAuth connection](#to-update-oauth-connection-1)
 
 ## Configure your app in Azure AD
 
