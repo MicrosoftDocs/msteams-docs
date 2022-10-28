@@ -80,7 +80,7 @@ For more information on initialization customization, see [additional initializa
 
 Steps you can follow to add card actions with JavaScript and TypeScript:
 
-# [JavaScript](#tab/JS)
+### [JavaScript](#tab/JS)
 
 1. [Add an action to your Adaptive Card](#add-an-action-to-your-adaptive-card)
 1. [Respond with new Adaptive Card](#respond-with-new-adaptive-card)
@@ -143,7 +143,7 @@ You can create a new file, `bot/src/adaptiveCards/doSomethingResponse.json` as a
 
 You can handle a new action invoked by Adaptive Card with TeamsFx SDK's class `TeamsFxAdaptiveCardActionHandler`. You can create a new file `bot/src/cardActions/doSomethingActionHandler.js`:
 
-    ```
+```
     const { AdaptiveCards } = require("@microsoft/adaptivecards-tools");
     const { AdaptiveCardResponse, InvokeResponseFactory } = require("@microsoft/teamsfx");
     const responseCard = require("../adaptiveCards/doSomethingResponse.json");
@@ -161,7 +161,7 @@ You can handle a new action invoked by Adaptive Card with TeamsFx SDK's class `T
 
        DoSomethingActionHandler,
     }
-    ```
+```
 
    > [!NOTE]
    >
@@ -180,7 +180,7 @@ To register the action handler, follow these steps:
 1. Go to `bot/src/internal/initialize.js(ts)`.
 1. Update your `conversationBot` initialization to enable `cardAction` feature and add the handler to actions array:
 
-   ```initialize.js(ts)
+```initialize.js(ts)
       const conversationBot = new ConversationBot({ 
      ... 
      cardAction: { 
@@ -191,12 +191,12 @@ To register the action handler, follow these steps:
        ], 
      } 
    });
-   ```
+```
 
    > [!NOTE]
    > To learn more about extending the Workflow bot template, see [respond to card actions in Teams](https://github.com/OfficeDev/TeamsFx/wiki/Respond-to-card-actions-in-Teams)
 
-# [TypeScript](#tab/TS)
+### [TypeScript](#tab/TS)
 
 1. [Add an action to your Adaptive Card](#add-an-action-to-your-adaptive-card)
 1. [Respond with new Adaptive Card](#respond-with-new-adaptive-card)
@@ -259,7 +259,7 @@ You can create a new file, `bot/src/adaptiveCards/doSomethingResponse.json` as a
 
 You can handle a new action invoked by Adaptive Card with TeamsFx SDK's class `TeamsFxAdaptiveCardActionHandler`. You can create a new file `bot/src/cardActions/doSomethingActionHandler.js`:
 
-    ```
+```
     const { AdaptiveCards } = require("@microsoft/adaptivecards-tools");
     const { AdaptiveCardResponse, InvokeResponseFactory } = require("@microsoft/teamsfx");
     const responseCard = require("../adaptiveCards/doSomethingResponse.json");
@@ -272,7 +272,7 @@ You can handle a new action invoked by Adaptive Card with TeamsFx SDK's class `T
             return InvokeResponseFactory.adaptiveCard(responseCardJson);
         } 
     }
-    ```
+```
 
    > [!NOTE]
    >
@@ -575,7 +575,7 @@ The default workflow bot comes with command and response. See, [how to add more 
 
 ## See also
 
-* [**Teams proactive messaging code samples**](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging/csharp)
+* [Teams proactive messaging code samples](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging/csharp)
 * [Send proactive notifications to users](/azure/bot-service/bot-builder-howto-proactive-message)
 * [Build your first bot app using JavaScript](../../../sbs-gs-bot.yml)
 * [Build notification bot with JavaScript to send a proactive message](../../../sbs-gs-notificationbot.yml)
