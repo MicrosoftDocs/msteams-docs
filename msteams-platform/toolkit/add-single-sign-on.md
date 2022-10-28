@@ -401,7 +401,7 @@ To make this work in your application:
 
     By doing this, the HTML pages used for auth redirect will be copied when building this bot project.
 
-1. Update `templates/appPackage/aad.template.json` your scopes which used in `handleMessageExtensionQueryWithToken`.
+1. Update `templates/appPackage/aad.template.json` your scopes, which used in `handleMessageExtensionQueryWithToken`.
 
     ```json
     "requiredResourceAccess": [
