@@ -42,7 +42,7 @@ With the Universal Actions for Adaptive Cards, you can use `Action.Execute` for 
 
 For [link unfurling cards](../../../messaging-extensions/how-to/link-unfurling.md) such as Hero and Thumbnail Cards, you must call `Action.Submit`.
 
-In addition, an Adaptive Card can be returned as response for an `Action.Execute` triggered invoke request.
+In addition, an Adaptive Card can be returned as a response for an `Action.Execute` triggered invoke request.
 
 The following image shows the new Universal Action model:
 
