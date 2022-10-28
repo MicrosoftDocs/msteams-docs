@@ -56,26 +56,24 @@ landingContent:
         url: https://gitter.im/OfficeDev/home
     - linkListType: whats-new
       links:
+      - text: Developer Portal for Teams is now available for GCC tenants
+        url: concepts/build-and-test/teams-developer-portal.md
+      - text: Live Share canvas
+        url: apps-in-teams-meetings/teams-live-share-canvas.md
+      - text: Generate a deep link to share content to stage in meetings
+        url: apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#generate-a-deep-link-to-share-content-to-stage-in-meetings
+      - text: Manage SaaS licenses for third party apps in Teams
+        url: concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md#manage-license-for-third-party-apps-in-teams
+      - text: Update Apple App Store Connect Team ID on Partner Center
+        url: concepts/deploy-and-publish/appsource/prepare/update-apple-store-team-connect-id.md
       - text: Introduced meeting app support for Scheduled Channel Meetings
-        url: apps-in-teams-meetings/meeting-app-extensibility.md
+        url: apps-in-teams-meetings/teams-apps-in-meetings.md
       - text: Introduced Teams Toolkit for Visual Studio 2022
         url: toolkit/teams-toolkit-fundamentals.md
       - text: Collaboration controls [Developer preview]
         url: samples/collaboration-control.md
       - text: Build shared channels
         url: concepts/build-and-test/Shared-channels.md
-      - text: Introduced app manifest v1.14
-        url: resources/schema/manifest-schema.md
-      - text: Enhanced collaboration with Live Share SDK [Developer preview]
-        url: apps-in-teams-meetings/teams-live-share-overview.md
-      - text: Update conversation and installation events in your Teams bot [Developer preview]
-        url:  bots/how-to/conversations/subscribe-to-conversation-events.md
-      - text: Submit your Outlook- and Office-enabled apps to the Teams store
-        url: m365-apps/overview.md
-      - text: App guidance and what's new in TeamsJS version 2.0.0
-        url: tabs/how-to/using-teams-client-sdk.md
-      - text: Teams Toolkit version 4.0.0 for Visual Studio Code is now GA
-        url: toolkit/teams-toolkit-fundamentals.md   
 
 - title: Get started
   linkLists:
@@ -105,6 +103,8 @@ landingContent:
         url: sbs-gs-commandbot.yml
       - text: Build notification bot with JavaScript
         url: sbs-gs-notificationbot.yml
+      - text: Build workflow bot
+        url: sbs-gs-workflow-bot.yml
      
 - title: Monetize your app
   linkLists:
@@ -135,8 +135,8 @@ landingContent:
         url: ~/concepts/design/design-teams-app-overview.md
       - text: Code samples
         url: https://github.com/OfficeDev/Microsoft-Teams-Samples
-      - text: Unified meetings apps
-        url:  ~/apps-in-teams-meetings/meeting-app-extensibility.md
+      - text: Build apps for Teams meeting stage
+        url:  ~/apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md
     - linkListType: whats-new
       links:
       - text: What's new
@@ -191,6 +191,8 @@ landingContent:
       links:
         - text: Send activity feed notification 
           url:  ~/sbs-graphactivity-feedbroadcast.yml
+        - text: Build an in-meeting document signing app
+          url:  ~/sbs-inmeeting-document-signing.yml
 
 
     - linkListType: tutorial
@@ -232,6 +234,8 @@ landingContent:
   linkLists:
   - linkListType: concept
     links:
+    - text: Publish Teams apps in Microsoft Teams store
+      url: /training/modules/microsoft-teams-publish-app-to-store
     - text: Distribution
       url: ~/concepts/deploy-and-publish/apps-publish-overview.md
     - text: Upload your app in Microsoft Teams

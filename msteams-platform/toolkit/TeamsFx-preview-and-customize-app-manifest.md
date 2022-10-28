@@ -90,11 +90,11 @@ To preview manifest file using Visual Studio Code:
   
   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/provision.png" alt-text="Screenshot is an example of showing the selection of provision in the cloud resource.":::
 
-To preview manifest file using command palatte:
+To preview manifest file using command palette:
 
 * Trigger **Teams: Provision in the cloud** from command palette.
 
-  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/command palatte.png" alt-text="Screenshot is an example of showing provision cloud resource using command palatte.":::
+  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/command palatte.png" alt-text="Screenshot is an example of showing provision cloud resource using command palette.":::
 
 It generates configuration for remote Teams app, and builds package and preview manifest under `build/appPackage` folder.
 
@@ -220,7 +220,7 @@ The following list provides supported placeholders in `manifest.template.json`:
      }
      ```
 
-2. You can navigate to configuration file by selecting any one of the config placeholders **Go to config file** or **View the state file** in `manifest.template.json`.
+2. You can go to configuration file by selecting any one of the config placeholders **Go to config file** or **View the state file** in `manifest.template.json`.
 
 ### Validate manifest
 
@@ -241,14 +241,14 @@ During operations such as, **Zip Teams metadata package**, Teams Toolkit validat
 
 ## To preview values for local and dev environment
 
-In `manifest.template.json`, you can navigate to codelens to preview the values for `local` and `dev` environment.
+In `manifest.template.json`, you can go to codelens to preview the values for `local` and `dev` environment.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/codelens.png" alt-text="Screenshot is an example of showing preview values for local and dev environment.":::
 
 > [!NOTE]
 > Provision the environment or execute local debug to generate values for placeholders.
 
-You can navigate to state file or configuration file by selecting the codelens, which provides a drop-down list with all the environment names. After selecting one environment, the corresponding state file or configuration file opens.
+You can go to state file or configuration file by selecting the codelens, which provides a drop-down list with all the environment names. After selecting one environment, the corresponding state file or configuration file opens.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-environment.png" alt-text="Screenshot is an example of showing the selection of an environment.":::
 
@@ -345,7 +345,7 @@ The changes are updated to Teams Developer Portal.
 
 > [!NOTE]
 >
-> * Select **Overwrite and update** or **Cancel** from the **Warning** dialog box to make any maual updates that can be overwritten in the Develope Portal.
+> * Select **Overwrite and update** or **Cancel** from the **Warning** dialog box to make any manual updates that can be overwritten in the Developer Portal.
 > * When you create a Teams command bot using Visual Studio, two app IDs are registered in Azure Active Directory. You can identify the app IDs in the Developer Portal as **Application client ID** under Basic information and existing **Bot ID** under **App features**.
 
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-overwrite.png" alt-text="Screenshot is an example of showing the update warning." lightbox="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-overwrite.png":::

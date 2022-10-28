@@ -15,7 +15,7 @@ A content page is a webpage that is rendered within the Teams client, which is a
 * A channel or group custom tab: The content page is displayed after the user pins and configures the tab in the appropriate context.
 * A [task module](~/task-modules-and-cards/what-are-task-modules.md): You can create a content page and embed it as a webview inside a task module. The page is rendered inside the modal pop-up.
 
-This article is specific to using content pages as tabs; however most of the guidance here applies regardless of how the content page is presented to the user.
+This article is specific to using content pages as tabs; however, most of the guidance here applies regardless of how the content page is presented to the user.
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
@@ -41,13 +41,16 @@ The following code provides an example of how your page and the Teams client com
 <html>
 <head>
 ...
-    <script src= 'https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js'></script>
+    <script src="https://res.cdn.office.net/teams-js/2.2.0/js/MicrosoftTeams.min.js" 
+      integrity="sha384yBjE++eHeBPzIg+IKl9OHFqMbSdrzY2S/LW3qeitc5vqXewEYRWegByWzBN/chRh" 
+      crossorigin="anonymous" >
+    </script>
 ...
+</head>
 <body>
 ...
-    <script type="module">
-        import {app} from 'https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js';
-        await app.initialize();
+    <script>
+    microsoftTeams.app.initialize();
     </script>
 ...
 </body>
@@ -63,7 +66,6 @@ The following code provides an example of how your page and the Teams client com
     <script src= 'https://statics.teams.cdn.office.net/sdk/v1.10.0/js/MicrosoftTeams.min.js'></script>
 ...
 </head>
-
 <body>
 ...
     <script>
@@ -81,7 +83,7 @@ You can access additional content by using the SDK to interact with Teams, creat
 
 ### Use the SDK to interact with Teams
 
-The [Teams client JavaScript SDK](~/tabs/how-to/using-teams-client-sdk.md) provides many additional functions that you can find useful while developing your content page.
+The [Teams client JavaScript SDK](~/tabs/how-to/using-teams-client-sdk.md) provides many more functions that you can find useful while developing your content page.
 
 ### Deep links
 
@@ -89,7 +91,7 @@ You can create deep links to entities in Teams. They're used to create links tha
 
 ### Task modules
 
-A task module is a modal pop-up experience that you can trigger from your tab. In a content page, use task modules to present forms for gathering additional information, displaying the details of an item in a list, or presenting the user with additional information. The task modules themselves can be additional content pages, or created completely using Adaptive Cards. For more information, see [using task modules in tabs](~/task-modules-and-cards/task-modules/task-modules-tabs.md).
+A task module is a modal pop-up experience that you can trigger from your tab. In a content page, use task modules to present forms for gathering additional information, displaying the details of an item in a list, or presenting the user with additional information. The task modules themselves can be additional content pages or created completely using Adaptive Cards. For more information, see [using task modules in tabs](~/task-modules-and-cards/task-modules/task-modules-tabs.md).
 
 ### Valid domains
 
@@ -112,9 +114,9 @@ To show the loading indicator:
 
 1. Add `"showLoadingIndicator": true` to your manifest.
 1. Call `app.initialize();`.
-1. As a **mandatory** step, call `app.notifySuccess()` to notify Teams that your app has successfully loaded. Then, Teams hides the loading indicator, if applicable. If `notifySuccess`  is not called within 30 seconds, Teams assumes that your app timed out, and displays an error screen with a retry option.
+1. As a **mandatory** step, call `app.notifySuccess()` to notify Teams that your app has successfully loaded. Then, Teams hides the loading indicator, if applicable. If `notifySuccess`  isn't called within 30 seconds, Teams assumes that your app timed out, and displays an error screen with a retry option.
 1. **Optionally**, if you're ready to print to the screen and wish to lazy load the rest of your application's content, you can hide the loading indicator manually by calling `app.notifyAppLoaded();`.
-1. If your application doesn't load, you can call `app.notifyFailure({reason: app.FailedReason.Timeout, message: "failure message"});` to let Teams know about the failure and, optionally, provide a failure message. An error screen is shown to the user. The following code shows the enumeration that defines the possible reasons you can indicate for the application's failure to load:
+1. If your application doesn't load, you can call `app.notifyFailure({reason: app.FailedReason.Timeout, message: "failure message"});` to let Teams know about the failure and optionally provide a failure message. `notifyFailure` doesn't show custom message. An error screen is shown to the user. The following code shows the enumeration that defines the possible reasons you can indicate for the application's failure to load:
 
     ```typescript
     /* List of failure reasons */

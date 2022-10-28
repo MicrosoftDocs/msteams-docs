@@ -1,6 +1,6 @@
 ---
 title: Prepare your store submission  
-description: Learn the final steps before submitting your Microsoft Teams app to be listed on the store. Learn to validate your app package. Know how to update Apple App Store Connect Team ID on Partner Center.
+description: Final steps before you submit your Microsoft Teams app to be listed on the store. Validate app package and complete publisher verification and attestation.
 ms.topic: how-to
 ms.localizationpriority: high
 author: heath-hamilton
@@ -198,7 +198,7 @@ During submission, you're asked to categorize your app. You can categorize your 
 | Content management |
 | Files & documents |
 | Workflow & business management |
-| IT/Admin | 
+| IT/Admin |
 | Human resources & recruiting|
 | Developer tools |
 | Meetings & scheduling |

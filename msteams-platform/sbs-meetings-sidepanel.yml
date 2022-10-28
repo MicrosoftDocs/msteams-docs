@@ -7,7 +7,7 @@ metadata:
   level: Beginner
   ms.date: 12/06/2021
   ms.topic: interactive-tutorial
-  nextTutorialHref: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
+  nextTutorialHref: apps-in-teams-meetings/build-tabs-for-meeting.md
   nextTutorialTitle: Read more to enable and configure apps for meetings
   ms.custom: mvc
   ms.localizationpriority: high
@@ -31,13 +31,16 @@ items:
   content: |
     Ensure you install the following tools and set up your development environment:  
 
-    * [Microsoft Teams](https://teams.microsoft.com/) with valid account
-    * [Latest version of Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)
-    * [Latest version of.NET Core SDK](https://dotnet.microsoft.com/download) 
-    * [Latest version of Visual Studio](https://visualstudio.microsoft.com/downloads/)
-    * [Latest version of nodejs](https://nodejs.org/en/download/)
-    * [SignalR](/aspnet/signalr/overview/getting-started/tutorial-getting-started-with-signalr-and-mvc) to update agenda in real-time
-    * [Latest version of ngrok](https://ngrok.com/download) only for devbox testing or any equivalent tunneling solution
+     | &nbsp; | Install | For using... |
+     | --- | --- | --- |
+     | **Required** | &nbsp; | &nbsp; |
+     | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call and all in one place.|
+     | &nbsp; | [Visual Studio 2022 version 17.3](https://visualstudio.microsoft.com)<br> Install one of the following two workloads:<br> • **ASP.NET and web development** <br> • **.NET Core cross-platform development** | You can install the enterprise version in Visual Studio 2022, and install the workloads. |
+     | &nbsp; | [.NET Core SDK version 3.1](https://dotnet.microsoft.com/en-us/download) | Customized bindings for local debugging and Azure Functions app deployments. If you haven't installed the .NET 3.1 (or later) SDK globally, the portable version can be installed. |
+     | &nbsp; | [Node.js and NPM](https://nodejs.org/) | Back-end JavaScript runtime environment. Use the latest v16 LTS release.|
+     | &nbsp; | [Latest version of Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) | You can install the package using npm or yarn. |
+     | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots, message extensions, and incoming webhooks) require inbound connections. A tunnel connects your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
+     | &nbsp; | [SignalR](/aspnet/signalr/overview/getting-started/tutorial-getting-started-with-signalr-and-mvc) | Install to update agenda in real-time. |
     
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
@@ -333,7 +336,7 @@ items:
 - title: Set up app settings and manifest files
   durationInMinutes: 1
   content: |
-    1. Navigate to **appsettings.json** in cloned repository.
+    1. Go to **appsettings.json** in cloned repository.
 
           :::image type="content" source="~/assets/images/meetings-side-panel/appsettingslocation.png" alt-text="App settings location":::
 
@@ -346,7 +349,7 @@ items:
           :::image type="content" source="~/assets/images/meetings-side-panel/appsettings.png" alt-text="App settings":::
           
 
-    1. Navigate to **manifest.json** in cloned repository.
+    1. Go to **manifest.json** in cloned repository.
 
          :::image type="content" source="~/assets/images/meetings-side-panel/manifestlocation.png" alt-text="Manifest file location":::
     
@@ -365,7 +368,7 @@ items:
     # [Visual Studio](#tab/vs)
 
        1. Open **Visual Studio**.
-       1. Navigate to **File** > **Open** > **Project/Solution**.
+       1. Go to **File** > **Open** > **Project/Solution**.
     
            :::image type="content" source="~/assets/images/meetings-side-panel/VSopenfile.png" alt-text="Open file":::
 
@@ -386,7 +389,7 @@ items:
         
     # [Command line](#tab/cli)
 
-    Navigate to **samples > meetings-sidepanel > csharp > Side Panel** in a Command Prompt window and enter the following command:
+    Go to **samples > meetings-sidepanel > csharp > Side Panel** in a Command Prompt window and enter the following command:
 
     ```bash
     dotnet run
@@ -397,7 +400,7 @@ items:
   durationInMinutes: 1
   content: |
 
-    1. In your cloned repository, navigate to **csharp > Side Panel > Manifest**.
+    1. In your cloned repository, go to **csharp > Side Panel > Manifest**.
 
     1. Create a .zip with the following files that are present in the **Manifest** folder: 
        * manifest.json

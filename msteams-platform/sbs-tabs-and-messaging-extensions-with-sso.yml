@@ -31,11 +31,14 @@ items:
   content: |
     Ensure you install the following tools and set up your development environment:  
 
-    * [Microsoft Teams](https://teams.microsoft.com/) with valid account
-    * [.NET Core SDK](https://dotnet.microsoft.com/download) version 3.1
-    * [Latest version of Visual Studio](https://visualstudio.microsoft.com/downloads/)
-    * [ngrok](https://ngrok.com/download) latest version (only for devbox testing) or any equivalent tunneling solution
-    * [Microsoft 365 developer account](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) or access to Teams account with the appropriate permissions to install an app
+    | &nbsp; | Install | For using... |
+     | --- | --- | --- |
+     | **Required** | &nbsp; | &nbsp; |
+     | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call and all in one place.|
+     | &nbsp; | [Microsoft 365 developer account](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | Access to Teams account with the appropriate permissions to install an app. |
+     | &nbsp; | [.NET Core SDK version 3.1](https://dotnet.microsoft.com/en-us/download) | Customized bindings for local debugging and Azure Functions app deployments. If you haven't installed the .NET 3.1 (or later) SDK globally, the portable version can be installed. |
+     | &nbsp; | [Visual Studio 2022 version 17.3](https://visualstudio.microsoft.com)<br> Install one of the following two workloads:<br> • **ASP.NET and web development** <br> • **.NET Core cross-platform development** | You can install the enterprise version in Visual Studio 2022, and install the workloads. |
+     | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots, message extensions, and incoming webhooks) require inbound connections. A tunnel connects your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
 
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
@@ -335,7 +338,7 @@ items:
 - title: Set up app settings
   durationInMinutes: 1
   content: |
-    1. Navigate to **appsettings.json** in cloned repository.
+    1. Go to **appsettings.json** in cloned repository.
 
         ![App settings location](~/assets/images/Tab-ME-SSO/app-setting-folder.png)
 
@@ -354,7 +357,7 @@ items:
 - title: Set up manifest file
   durationInMinutes: 1
   content: |
-    1. Navigate to `manifest.json` in cloned repository.
+    1. Go to `manifest.json` in cloned repository.
 
         ![Manifest file location](~/assets/images/Tab-ME-SSO/folder-manifest.png)
     
@@ -378,7 +381,7 @@ items:
     # [Visual Studio 2019](#tab/vs2019)
 
        1. Launch **Visual Studio 2019**.
-       1. Navigate to **File** > **Open** > **Project/Solution**.
+       1. Go to **File** > **Open** > **Project/Solution**.
     
           ![Open file](~/assets/images/Tab-ME-SSO/open-project1.png)
 
@@ -403,7 +406,7 @@ items:
         
     # [Command line](#tab/cli)
 
-    Navigate to the **csharp** folder in a Command Prompt window and enter the following command:
+    Go to the **csharp** folder in a Command Prompt window and enter the following command:
 
     ```bash
     dotnet run
@@ -414,7 +417,7 @@ items:
 - title: Upload SSO App to Teams
   durationInMinutes: 1
   content: |
-    1. In your cloned repository, navigate to **csharp > App SSO Sample > TeamsAppManifest**.
+    1. In your cloned repository, go to **csharp > App SSO Sample > TeamsAppManifest**.
 
     1. Create a .zip with the following files that are present in the **Manifest** folder: 
        * manifest.json

@@ -53,6 +53,9 @@ conceptualContent:
   # Card
     - title: Learn
       links:
+        - url: /training/modules/microsoft-teams-publish-app-to-store
+          itemType: learn
+          text: Publish Teams apps in Microsoft Teams store
         - url: /training/modules/intro-microsoft-teams-apps
           itemType: learn
           text: Build apps for Microsoft Teams
@@ -119,7 +122,7 @@ conceptualContent:
         - url:  /microsoftteams/platform/resources/schema/manifest-schema
           itemType: reference
           text: Manifest schema for Teams apps
-        - url:  https://adoption.microsoft.com/extensibility-look-book/scenarios/
+        - url:  https://developer.microsoft.com/microsoft-teams/app-development-resources/?filter=commonscenarios
           itemType: reference
           text: Build scenarios for Teams apps
         - url:  https://developer.microsoft.com/microsoft-teams/app-development-resources
