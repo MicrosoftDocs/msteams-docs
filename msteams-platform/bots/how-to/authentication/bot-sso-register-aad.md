@@ -49,6 +49,7 @@ By the end of this tutorial, you should have configured:
 
 > [!NOTE]
 > This section assumes that you've created an app and a bot resource in Azure AD.
+> - For more information about creating an app in Azure AD, see [To register a new app in Azure AD](../../../tabs/how-to/authentication/tab-sso-register-aad.md#to-register-a-new-app-in-azure-ad).
 > - For more information about creating and configuring your bot resource in Azure AD, see [Create Teams conversation bot](../../../sbs-teams-conversation-bot.yml).
 
 Select one of the following two ways to configure your bot resource for SSO in Azure AD.
@@ -335,7 +336,7 @@ You'll need to register your app in Azure AD and configure the tenancy and app's
 
 > [!NOTE]
 > Microsoft Teams Toolkit registers the Azure AD application in an SSO project. You can skip this section if you've used Teams Toolkit to create your app. However, you would need to configure permissions and scope, and trust client applications.
-
+<!--
 <details>
 <summary><b>Learn how to register your app in Azure AD</b></summary>
 
@@ -390,6 +391,7 @@ You'll need to register your app in Azure AD and configure the tenancy and app's
     Your app is registered in Azure AD. You should now have app ID for your bot app.
 
 </details>
+-->
 
 ### Configure scope for access token
 
