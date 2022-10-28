@@ -10,15 +10,11 @@ ms.localizationpriority: medium
 
 The resource-specific consent (RSC) permissions model, originally developed for Teams Graph APIs, is being extended to bot scenarios.
 
-Using RSC, you can now request team owners to consent for a bot to receive user messages across standard channels in a team without being @mentioned. The capability is enabled by specifying the `ChannelMessage.Read.Group` or `ChatMessage.Read.Chat` permissions in the manifest of an RSC enabled Teams app. The conversation owners can grant consent during the app installation or upgrade process.
-
-Bots can receive all group chat messages in a team when consented to during app installation.
-
-For more information about enabling RSC for your app, see [resource-specific consent](../../../graph-api/rsc/resource-specific-consent.md).
+Using RSC, you can request team owners to consent for a bot to receive user messages across standard channels and group chats in a team without being @mentioned. The capability is enabled by specifying the `ChannelMessage.Read.Group` or `ChatMessage.Read.Chat` permissions in the manifest of an RSC enabled Teams app. The conversation owners can grant consent during the app installation or upgrade process. Bots can receive all group chat messages in a team when consented to during app installation. For more information about enabling RSC for your app, see [resource-specific consent](../../../graph-api/rsc/resource-specific-consent.md).
 
 ## Enable bots to receive all channel or chat messages
 
-The `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permissions in a Teams app manifest enable a specified graph application to get all messages in channels and chats respectively, where the Teams app has been consented to, and installed. A bot defined in an app manifest with one or both RSC permissions, receives all messages without being @mentioned in conversations where the permissions apply.
+The `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permissions in a Teams app manifest enable a specified graph application to get all messages in channels and chats respectively, where the Teams app has been consented to, and installed. A bot defined in an app manifest with one or both RSC permissions, receives all messages without being @mentioned in conversations and group chats where the permissions apply.
 
 > [!NOTE]
 >
@@ -57,7 +53,7 @@ The following code provides an example of the app manifest:
 
 > [!NOTE]
 >
-> Group chat messages without being @ mentioned in a chat is available only in [public developer preview for Teams](../../../resources/dev-preview/developer-preview-intro.md)
+> Receive messages in group chat messages without being @ mentioned is available only in [public developer preview for Teams](../../../resources/dev-preview/developer-preview-intro.md)
 
 # [Channel messages](#tab/channel)
 
