@@ -1465,3 +1465,7 @@ It's important to know that new events can be added anytime in the future and yo
 
 > [!div class="nextstepaction"]
 > [Send proactive messages](~/bots/how-to/conversations/send-proactive-messages.md)
+
+## See also
+
+[Triggers in Bot Framework Composer](/composer/concept-events-and-triggers)
