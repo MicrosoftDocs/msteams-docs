@@ -64,8 +64,8 @@ The following code provides an example of the app manifest:
 The following steps guide you to sideload and validate bot that receives all channel messages in a Team without being @mentioned:
 
 1. Select or create a team.
-1. Select the ellipses &#x25CF;&#x25CF;&#x25CF; from the left pane. The drop-down menu appears.
-1. Select **Manage team** from the drop-down menu. The details appear:
+1. Select the ellipses &#x25CF;&#x25CF;&#x25CF; from the left pane. The dropdown menu appears.
+1. Select **Manage team** from the dropdown menu. The details appear:
 
    :::image type="content" source="Media/managingteam.png" alt-text="Screenshot of Managing team option in Teams application.":::
 
@@ -94,8 +94,8 @@ The following steps guide you to sideload and validate bot that receives all cha
 The following steps guide you to sideload and validate bot that receives all chat messages without being @ mentioned in a chat:
 
 1. Select or create a group chat.
-1. Select the ellipses &#x25CF;&#x25CF;&#x25CF; from the group chat. The drop-down menu appears.
-1. Select **Manage apps** from the drop-down menu.
+1. Select the ellipses &#x25CF;&#x25CF;&#x25CF; from the group chat. The dropdown menu appears.
+1. Select **Manage apps** from the dropdown menu.
 
    :::image type="content" source="../../../assets/images/bots/Chats_Manage_Apps_Entry.png" alt-text="Manage apps in team.":::
 
