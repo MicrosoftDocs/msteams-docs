@@ -15,7 +15,7 @@ Microsoft Teams provides single sign-on function for application to obtain signe
 
 ::: zone pivot="visual-studio-code"
 
-## Add single sign-on to Teams app for Visual Studio Code
+## Add SSO to Teams app for Visual Studio Code
 
 For applications that interact with the user in a chat, a Team, or a channel, SSO manifests as an Adaptive Card, which the user can interact with to invoke the Azure AD consent flow.
 
@@ -109,7 +109,7 @@ To enable SSO in your application, follow these steps:
 
 #### Set up the Azure AD redirects
 
-1. Move the `auth/bot/public` folder to `bot/src`. This folder contains HTML pages that the bot application hosts. When single sign-on flow is initiated with Azure AD, it redirects the user to the HTML pages.
+1. Move the `auth/bot/public` folder to `bot/src`. This folder contains HTML pages that the bot application hosts. When SSO flow is initiated with Azure AD, it redirects the user to the HTML pages.
 1. Modify your `bot/src/index` to add the appropriate `restify` routes to HTML pages.
 
    ```ts
@@ -467,9 +467,9 @@ For more information about TeamsFx SDK, see:
 
 ::: zone pivot="visual-studio"
 
-## Add single sign-on to Teams app for Visual Studio
+## Add SSO to Teams app for Visual Studio
 
-For applications that interact with the user in a chat, a Team, or a channel, SSO manifests as an Adaptive Card, which the user can interact with to invoke the Azure AD consent flow.
+For applications that interact with the user in a chat, a Team, or a channel, single sign-on (SSO) manifests as an Adaptive Card, which the user can interact with to invoke the Azure AD consent flow.
 
 ## Enable SSO support
 
