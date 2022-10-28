@@ -70,7 +70,7 @@ The [get members](/microsoftteams/platform/bots/how-to/get-teams-context#fetch-t
 | `userRole` | `anonymous`, represents anonymous user. |
 
 > [!NOTE]
-> The ID received from the bot APIs and the Teams client SDK API are not the same.
+> The ID received from the bot APIs and the Teams client library API are not the same.
 
 ### ConversationUpdate activity MembersAdded and MembersRemoved
 
