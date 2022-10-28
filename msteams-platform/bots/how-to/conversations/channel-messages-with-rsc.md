@@ -57,7 +57,7 @@ The following code provides an example of the app manifest:
 
 > [!NOTE]
 >
-> Group chat messages without being @ mentioned in a chat is available only in [Public developer preview for Teams](../resources/dev-preview/developer-preview-intro.md).
+> Group chat messages without being @ mentioned in a chat is available only in [public developer preview for Teams](../../../resources/dev-preview/developer-preview-intro.md)
 
 # [Channel messages](#tab/channel)
 
@@ -95,11 +95,11 @@ The following steps guide you to sideload and validate bot that receives all cha
 
 1. Select or create a group chat.
 1. Select the ellipses &#x25CF;&#x25CF;&#x25CF; from the group chat. The drop-down menu appears.
-1. Select **Manage apps** from the drop-down menu:
+1. Select **Manage apps** from the drop-down menu.
 
    :::image type="content" source="./assets/images/bots/RSC/Chats_Manage_Apps_Entry.png" alt-text= "Manage apps in team.":::
 
-1. Select **Upload a custom app** from the lower right corner of **Manage apps**:
+1. Select **Upload a custom app** from the lower right corner of **Manage apps**.
 
     :::image type="content" source="./assets/images/bots/RSC/Chats_Manage_Apps_Page.png" alt-text= "Uploading custom app.":::
 
@@ -108,17 +108,17 @@ The following steps guide you to sideload and validate bot that receives all cha
 
     :::image type="content" source="./assets/images/bots/RSC/Chats_Sideload_App_FilePicker.png" alt-text= "Selecting app package.":::
 
-1. Select **Add** from the app details pop-up, to add the bot to your selected group chat:
+1. Select **Add** from the app details pop-up, to add the bot to your selected group chat.
 
     :::image type="content" source="./assets/images/bots/RSC/Chats_Install_Dialog.png" alt-text= "Adding the bot.":::
 
-1. Enter a message in the group chat for your bot:
+1. Enter a message in the group chat for your bot.
 
    :::image type="content" source="./assets/images/bots/RSC/Bot_ReceiveMessage.png" alt-text= "Bot receives message.":::
 
-   The bot receives the message without being @mentioned:
+   The bot receives the message without being @mentioned.
 
-   :::image type="content" source="./assets/images/bots/Bot_NoMention.png" alt-text= "No mention.":::
+   :::image type="content" source="./assets/images/bots/RSC/Bot_NoMention.png" alt-text= "No mention.":::
 
 ## Code snippets
 
