@@ -58,20 +58,13 @@ Select one of the following two ways to configure your bot resource for SSO in A
 
 <!--Before you enable SSO for your bot app, you must create and configure your bot resource in Azure AD. For more information, see [Create Teams conversation bot](../../../sbs-teams-conversation-bot.yml).-->
 
-Update the bot resource details in Azure AD for enabling SSO.
+To configure your bot resource for enabling SSO in Azure AD:
 
-You'll need to configure a bot resource in Azure AD beforehand. This includes:
 - **[Add messaging endpoint](#add-messaging-endpoint)**
   - **[Configure your app for SSO in Azure AD](#configure-your-app-in-azure-ad)**: You'll need to register your app with Azure AD before you configure it. Then, to enable it for SSO:
     - Configure scope for access token, application ID URI, and trusted client IDs
     - Configure access token version
 - **[Update OAuth connection](#update-oauth-connection)**
-
-To enable SSO for the bot resource:
-
-- Add messaging endpoint
-- Enable access token, app ID URI, and trusted client IDs
-- Update OAuth connection
 
 ### Add messaging endpoint
 
@@ -316,9 +309,7 @@ Congratulations! You've completed the app configuration in Azure AD required to 
 
 # [Configure SSO using Azure AD app ID](#tab/windows)
 
-Configure an Azure AD app
-
-To create and configure your app in Azure AD for enabling SSO:
+To create and configure your app for enabling SSO in Azure AD:
 
 - Create an app registration in Azure AD
   - Configure scope for access token, application ID URI, and trusted client IDs
