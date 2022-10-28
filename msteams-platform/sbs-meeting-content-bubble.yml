@@ -57,7 +57,7 @@ items:
    1. Select **Code**.
    1. From the dropdown menu, select **Open with GitHub Desktop**.
 
-     :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-clonerepository_1.png" alt-text="Clone repository":::
+       :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-clonerepository_1.png" alt-text="Clone repository":::
 
    1. Select **Clone**. 
 
@@ -216,7 +216,7 @@ items:
 
     1. Select **Azure Active Directory**.
 
-    1. In the left navigation panel, select **App Registrations**.
+    1. In the left panel, select **App Registrations**.
 
     1. Select your bot.
 
@@ -325,8 +325,7 @@ items:
 
              :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-platform-web_1.png" alt-text="Web":::
 
-         1. Enter the redirect URI for your app by appending `auth-end` to fully qualified domain name:</br> 
-           `https://your ngrok/auth-end`. </br>
+         1. Enter the redirect URI for your app by appending `auth-end` to fully qualified domain name, `https://your ngrok/auth-end`.
 
          1. Enable **Implicit grant and hybrid flows** by selecting the following checkboxes:
              * **ID tokens**
@@ -387,7 +386,7 @@ items:
 
            :::image type="content" source="~/assets/images/meeting-content-bubble/your-bot-is-ready.png" alt-text="App ready"::: 
     
-- title: Add in-meeting notifications App to Teams
+- title: Add in-meeting notifications app to Teams
   durationInMinutes: 1
   content: |
 
@@ -428,7 +427,7 @@ items:
 
     1. Go to Teams meeting chat.
     
-    1. **in-meeting notifications Demo** app sends an automatic reply to the meeting chat.
+    1. **In-meeting notifications Demo** app sends an automatic reply to the meeting chat.
 
          :::image type="content" source="~/assets/images/meeting-content-bubble/content-bubble-demo-first-reply.png" alt-text="in-meeting notifications Demo reply"::: 
 
