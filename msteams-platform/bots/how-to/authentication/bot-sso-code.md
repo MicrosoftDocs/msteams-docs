@@ -247,7 +247,7 @@ To update your app's code:
 
 If the app user is using the application for the first time and user consent is required, the following dialog box appears:
 
-:::image type="content" source="../../../assets/images/authentication/SSO-bots-auth/bot-consent-box.png" alt-text="Consent dialog for bot SSO":::
+:::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-consent.png" alt-text="Consent dialog for bot SSO" border="false":::
 
 When the user selects **Continue**, one of the following events occurs:
 
