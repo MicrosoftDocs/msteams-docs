@@ -105,6 +105,8 @@ landingContent:
         url: sbs-gs-commandbot.yml
       - text: Build notification bot with JavaScript
         url: sbs-gs-notificationbot.yml
+      - text: Build workflow bot
+        url: sbs-gs-workflow-bot.yml
      
 - title: Monetize your app
   linkLists:
@@ -193,6 +195,8 @@ landingContent:
       links:
         - text: Send activity feed notification 
           url:  ~/sbs-graphactivity-feedbroadcast.yml
+        - text: Build an in-meeting document signing app
+          url:  ~/sbs-inmeeting-document-signing.yml
 
 
     - linkListType: tutorial
