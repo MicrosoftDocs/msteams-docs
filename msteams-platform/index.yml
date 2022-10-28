@@ -122,7 +122,7 @@ conceptualContent:
         - url:  /microsoftteams/platform/resources/schema/manifest-schema
           itemType: reference
           text: Manifest schema for Teams apps
-        - url:  https://adoption.microsoft.com/extensibility-look-book/scenarios/
+        - url:  https://developer.microsoft.com/microsoft-teams/app-development-resources/?filter=commonscenarios
           itemType: reference
           text: Build scenarios for Teams apps
         - url:  https://developer.microsoft.com/microsoft-teams/app-development-resources
