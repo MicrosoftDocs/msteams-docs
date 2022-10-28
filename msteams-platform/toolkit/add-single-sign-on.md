@@ -619,7 +619,7 @@ The following steps help you to enable SSO in your application.
         });
         ```
 
-5. Register your command in the Teams app manifest. Open `Templates/appPackage/manifest.template.json`, and add the following lines under `command` in `commandLists` of your bot:
+5. You can open `Templates/appPackage/manifest.template.json`, and add the following lines under `command` in `commandLists` of your bot to register your command in the Teams app manifest:
 
    ```JSON
    {
