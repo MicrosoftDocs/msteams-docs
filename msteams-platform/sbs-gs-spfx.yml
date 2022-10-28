@@ -416,7 +416,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/app-package-uploaded.png"alt-text="Screenshot for the SPFx package uploaded to SharePoint site":::
 
-       You can either publish to Teams or select the Sharepoint site.
+       You can either publish to Teams or select the SharePoint site.
 
         * Publish to Teams (#publish-to-teams)
         * Select the link of the SharePoint site (#select-the-link-of-the-sharepoint-site)
