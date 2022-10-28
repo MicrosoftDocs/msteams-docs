@@ -14,17 +14,17 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-   The Azure Active Directory Single sign-on (Azure AD SSO) helps to authenticate users in Teams. 
+   The Azure Active Directory Single sign-on (Azure AD SSO) helps to authenticate users in Microsoft Teams. 
 
    **Key aspects of the step-by-step guide of Azure AD SSO for tabs and message extensions**:
 
-    * After the first sign-in, Azure AD SSO allows the user to sign in automatically.
-    * Allows the user to sign in to other devices without entering sign-in credentials again.
-    * Obtains token for the logged-in user.   
+    * After the first sign in, Azure AD SSO allows the user to sign in automatically.
+    * Allows the user to sign in to other devices without entering sign in credentials again.
+    * Obtains token for the signed in user.   
 
    This step-by-step guide helps you to create tabs and message extensions enabling Azure AD SSO authentication. You'll see the following output:
 
-     ![Congratulation image](~/assets/images/Tab-ME-SSO/hello-megan-profile245.png)   
+     :::image type="content" source="~/assets/images/Tab-ME-SSO/hello-megan-profile245.png" alt-text="SSO for tabs and message extensions":::   
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -52,8 +52,8 @@ items:
     1. Select **Code**.
     1. From the dropdown menu, select **Open with GitHub Desktop**.
 
-       ![Clone repository](~/assets/images/meeting-token-generator/meeting-token-generator-clonerepository.png)
-
+       :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-clonerepository.png" alt-text="Clone repository":::
+       
     1. Select **Clone**. 
 
 - title: Create and register your bot in Azure AD portal
@@ -83,7 +83,7 @@ items:
     1. To create a new resource group, select the required location from **New resource group location** dropdown list.
         For more information, see [Create resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups).
         
-        ![Register bot](~/assets/images/Tab-ME-SSO/register-bot.png)
+        :::image type="content" source="~/assets/images/Tab-ME-SSO/register-bot.png" alt-text="Register a bot.":::
 
     1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected. 
     
@@ -95,7 +95,7 @@ items:
     1. Select **Type of App** as `Multi Tenant`.
     1. Select **Review + create**.
 
-       ![Register bot](~/assets/images/Tab-ME-SSO/register-bot-2.png)
+       :::image type="content" source="~/assets/images/Tab-ME-SSO/register-bot-2.png" alt-text="Review and create a bot.":::
 
     1. If the validation passes, select **Create**.
 
@@ -103,11 +103,11 @@ items:
 
     1. Select **Go to resource**. 
 
-        ![Deploy App](~/assets/images/Tab-ME-SSO/go-to-resource.png)
+        :::image type="content" source="~/assets/images/Tab-ME-SSO/go-to-resource.png" alt-text="Deploy an app.":::
 
         Your Azure bot is created.
 
-        ![Deploy App](~/assets/images/Tab-ME-SSO/app-overview.png)
+        :::image type="content" source="~/assets/images/Tab-ME-SSO/app-overview.png" alt-text="Deploy an app.":::
 
     **To create client secret**
 
