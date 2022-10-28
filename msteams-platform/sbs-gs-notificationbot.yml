@@ -377,7 +377,7 @@ items:
 
     ## Deploy your app to Azure
 
-      Under **DEPLOYMENT**, you can provision for necessary cloud resources, and your app's code is copied into the created cloud resources.
+      Under **DEPLOYMENT**, you can provision for necessary cloud resources and your app's code is copied into the created cloud resources.
 
     # [Visual Studio Code](#tab/vscode)
 
