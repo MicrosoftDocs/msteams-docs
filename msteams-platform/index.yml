@@ -53,6 +53,9 @@ conceptualContent:
   # Card
     - title: Learn
       links:
+        - url: /training/modules/microsoft-teams-publish-app-to-store
+          itemType: learn
+          text: Publish Teams apps in Microsoft Teams store
         - url: /training/modules/intro-microsoft-teams-apps
           itemType: learn
           text: Build apps for Microsoft Teams
