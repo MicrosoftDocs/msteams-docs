@@ -169,7 +169,7 @@ You can handle a new action invoked by Adaptive Card with TeamsFx SDK's class `T
    > * `actionData` is the data associated with the action, which may include dynamic user input or some contextual data provided in the data property of your action.
    > * If an Adaptive Card is returned, the existing card is replaced with it by default.
 
-You can customize the action in this step, such as calling an API, processing data, and any other action as per your business need.
+You can customize the action in this step, such as calling an API, processing data, or any other action as per your business need.
 
 **Register the action handler**
 
@@ -275,7 +275,7 @@ You can handle a new action invoked by Adaptive Card with TeamsFx SDK's class `T
    > * `actionData` is the data associated with the action, which may include dynamic user input or some contextual data provided in the data property of your action.
    > * If an Adaptive Card is returned, the existing card is replaced with it by default.
 
-You can customize the action in this step, such as calling an API, processing data, and any other action as per your business need.
+You can customize the action in this step, such as calling an API, processing data, or any other action as per your business need.
 
 **Register the action handler**
 
@@ -372,7 +372,7 @@ Steps to implement this pattern with TeamsFx SDK:
 1. [Enable refresh in base Adaptive Card](#enable-refresh-in-base-adaptive-card)
 1. [Add user-specific Adaptive Cards](#add-user-specific-adaptive-cards)
 1. [Add card action handler to refresh views](#add-card-action-handler-to-refresh-views)
-1. [Register action handler](#register-the-action-handler-1)
+1. [Register action handler](#register-the-action-handler)
 
 #### Enable refresh in base Adaptive Card
 
