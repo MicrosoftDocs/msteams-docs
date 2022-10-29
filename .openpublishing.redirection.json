@@ -758,11 +758,11 @@
       },
       {
         "source_path": "msteams-platform/toolkit/visual-studio-code-overview.md",
-        "redirect_url": "/microsoftteams/toolkit/teams-toolkit-fundamentals"
+        "redirect_url": "/microsoftteams/platform/toolkit/teams-toolkit-fundamentals"
       },
       {
         "source_path": "msteams-platform/toolkit/visual-studio-code-tab-sso.md",
-        "redirect_url": "/microsoftteams/toolkit/teams-toolkit-fundamentals"
+        "redirect_url": "/microsoftteams/platform/toolkit/teams-toolkit-fundamentals"
       },
       {
         "source_path": "msteams-platform/get-started/deploy-csharp-app-studio.md",
