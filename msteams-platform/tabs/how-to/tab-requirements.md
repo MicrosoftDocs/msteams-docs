@@ -1,7 +1,7 @@
 ---
 title: Prerequisites
 author: surbhigupta
-description: In this article, learn the prerequisites to build Microsoft Teams personal, channel, or group tab tab. Know the tools required to build your tab.
+description: In this article, learn the prerequisites to build Microsoft Teams personal, channel, or group tab. Know the tools required to build your tab.
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
@@ -25,7 +25,7 @@ Ensure that you adhere to the following prerequisites while building your Teams 
 
 * Style your tabs based on the Teams client's theme, design, and intent. Tabs work best when they're built to address a specific need and focus on a small set of tasks or a subset of data that is relevant to the tab's channel location.
 
-* Within your content page, add a reference to [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client) using script tags. After your page loads, make a call to `app.initialize()`, otherwise your page will not be displayed.
+* Within your content page, add a reference to [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client) using script tags. After your page loads, make a call to `app.initialize()`, otherwise your page won't be displayed.
 
 * For authentication to work on mobile clients, you must upgrade to Teams JavaScript SDK 1.4.1 and later.
 
