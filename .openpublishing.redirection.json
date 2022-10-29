@@ -794,11 +794,11 @@
       },
       {
         "source_path": "msteams-platform/toolkit/create-new-teams-app-for-Visual-Studio.md",
-        "redirect_url": "/microsoftteams/toolkit/create-new-project"
+        "redirect_url": "/microsoftteams/platform/toolkit/create-new-project"
       },
       {
         "source_path": "msteams-platform/toolkit/debug-teams-app-visual-studio.md",
-        "redirect_url": "/microsoftteams/toolkit/debug-overview"
+        "redirect_url": "/microsoftteams/platform/toolkit/debug-overview"
       },
       {
         "source_path": "msteams-platform/toolkit/deploy-teams-app.md",
