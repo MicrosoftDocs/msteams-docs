@@ -802,7 +802,7 @@
       },
       {
         "source_path": "msteams-platform/toolkit/deploy-teams-app.md",
-        "redirect_url": "/microsoftteams/toolkit/deploy"
+        "redirect_url": "/microsoftteams/platform/toolkit/deploy"
       },
       {
         "source_path": "msteams-platform/toolkit/teams-toolkit-overview-visual-studio.md",
