@@ -407,7 +407,7 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
 <!--- TBD: This steps seems to be removed from main now so commenting it for now.
 
-1. Select **Import an existing app** in the **Manifest editor** to begin updating the app package for your tab. The source code comes with its own partially complete manifest. The name of your app package is `tab.zip`. It is available from the following path:
+Select **Import an existing app** in the **Manifest editor** to begin updating the app package for your tab. The source code comes with its own partially complete manifest. The name of your app package is `tab.zip`. It is available from the following path:
 --->
 
 1. The name of your app package is `tab.zip`. It's available in the following path:
