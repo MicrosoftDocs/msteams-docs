@@ -234,6 +234,8 @@ landingContent:
   linkLists:
   - linkListType: concept
     links:
+    - text: Publish Teams apps in Microsoft Teams store
+      url: /training/modules/microsoft-teams-publish-app-to-store
     - text: Distribution
       url: ~/concepts/deploy-and-publish/apps-publish-overview.md
     - text: Upload your app in Microsoft Teams
