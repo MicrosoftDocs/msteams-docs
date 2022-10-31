@@ -10,7 +10,7 @@ zone_pivot_groups: enable-sso
 
 <!--Single sign-on (SSO) allows a user to access an application or a web service after signing-in only once. The app users never have to go through authentication again.-->
 
-::: zone pivot="<bot-app>"
+::: zone pivot="bot-app"
 
 With SSO in Teams, app users have the advantage of using Teams to access apps. After logging into Teams using Microsoft or Microsoft 365 account, app users can use your app without needing to sign in again. Your app is available to app users on any device with access granted through Azure AD.
 
@@ -90,7 +90,7 @@ For a bot or a message extension app, the bot app sends an OAuth Card to Teams C
 
 ::: zone-end
 
-::: zone pivot="<mex-app>"
+::: zone pivot="mex-app"
 
 [!INCLUDE [msgex-sso-code](../../../includes/messaging-extensions/msgex-sso-code.md)]
 
