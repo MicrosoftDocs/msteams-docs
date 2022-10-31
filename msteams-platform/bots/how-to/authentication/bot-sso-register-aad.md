@@ -4,7 +4,7 @@ description: Describes configuring your bot app with Azure AD for enabling SSO
 ms.topic: how-to
 ms.localizationpriority: high 
 ---
-# Configure your bot app in Azure AD
+# Enable SSO for your bot app in Azure AD
 
 Azure AD provides app users access to your bot app. It's based on the app user's Teams identity. The app user who has signed into Teams can be given access to your bot app.
 
