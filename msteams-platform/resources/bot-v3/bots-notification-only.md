@@ -43,4 +43,4 @@ To enable this, set `isNotificationOnly` to `true`.
 
 ## Best practices and limitations
 
-* Notification-only bots use proactive messaging to communicate with the user. For more information, see [Proactive messaging for bots](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md).
+Notification-only bots use proactive messaging to communicate with the user. For more information, see [Proactive messaging for bots](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md).

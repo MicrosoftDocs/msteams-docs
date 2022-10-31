@@ -19,7 +19,7 @@ In general, the recommended approach is to sign the user in with the bot using t
 
 This flow works best if your identity provider implements the OAuth 2.0 protocol. You can then associate the Teams user ID with the user’s credentials from your own identity service.
 
-   ![Associating identities](~/assets/images/bots/associating_contexts.png)
+   :::image type="content" source="../../assets/images/bots/associating_contexts.png" alt-text="Screenshot shows the associating identities.":::
 
 ## Constructing deep links to tabs in messages from your bot
 
@@ -28,7 +28,7 @@ You want to use tabs to show more content that can fit inside of a card, or prov
 Deep links rely on an entityId, which is an opaque value that maps to a unique entity in your system. When the tab is created, you store some simple state. For example, flag on your backend indicating the tab is created in the channel. When your bot constructs a message, it can target the entityId associated with that tab.
 
 > [!NOTE]
-> in personal chats, because tabs are “static” and installed with the app, you can always assume their existence and thus construct deep links accordingly.
+> In personal chats, because tabs are *static* and installed with the app, you can always assume their existence and thus construct deep links accordingly.
 
 ## Sending notifications for tab updates
 
