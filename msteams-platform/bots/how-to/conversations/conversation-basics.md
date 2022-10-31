@@ -22,7 +22,7 @@ A bot behaves differently depending on the conversation it's involved in:
 
 * Bots in channel and group chat conversations require the user to @mention the bot to invoke it in a channel.
 
-* Bots in a one-to-one conversation don't require an @mention. All messages sent by the user are routed to your bot.
+* Bots in a one-to-one conversation don't require an @mention. All messages sent by the user routes to your bot.
 
 > [!NOTE]
 > Bots can be enabled to receive all channel messages in a team without being @mentioned using resource-specific consent (RSC) permissions. This feature is currently available in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md) only. For more information, see [receive all channel messages with RSC](channel-messages-with-rsc.md).
