@@ -70,7 +70,7 @@ items:
     * Create Azure Bot resource to register bot with Azure Bot service.
     * Create client secret to enable single sign-on (SSO) authentication of the bot.
     * Add Teams channel to deploy the bot.
-    * Use ngrok to create a tunnel to your web server's endpoints.
+    * Create a ngrok tunnel to your web server's endpoints.
     * Add messaging endpoint to the ngrok tunnel you created.
 
     **To create Azure bot resource**
@@ -213,7 +213,7 @@ items:
 
     1. Select **Azure Active Directory**.
 
-    1. In the left navigation panel, select **App Registrations**.
+    1. In the left navigation pane, select **App registrations**.
 
     1. Select your bot.
 
@@ -235,7 +235,7 @@ items:
 
         > [!NOTE]
         > If you're using a tunneling service such as ngrok, ensure you update the value whenever your ngrok subdomain changes.
-        > `For example: api://f631****.ngrok.io/92c11075-c629-4a1e-ab58-02b4fd4204c2`, where `f631****.ngrok.io` is the new ngrok subdomain name.
+        > For example: `api://f631****.ngrok.io/92c11075-c629-4a1e-ab58-02b4fd4204c2`, where `f631****.ngrok.io` is the new ngrok subdomain name.
 
     1. Select **Add a scope**. 
 
@@ -289,7 +289,7 @@ items:
 
          :::image type="content" source="~/assets/images/meetings-side-panel/clientapps.png" alt-text="Client applications"::: 
   
-    1. In the left pane, select **API Permissions**. 
+    1. In the left pane, select **API permissions**. 
 
        > [!NOTE]
        > Users need to consent to these permissions only if the Azure AD app is registered in a different tenant.
@@ -311,7 +311,7 @@ items:
 
         :::image type="content" source="~/assets/images/meetings-side-panel/other-permissions_1.png" alt-text="Other permissions":::
 
-    1. From the left panel, select **Authentication** to set a redirect URI. 
+    1. From the left pane, select **Authentication** to set a redirect URI. 
 
        > [!NOTE]
        > If an app isn't granted IT admin consent, users must provide consent the first time they use an app.
@@ -374,12 +374,12 @@ items:
 
            :::image type="content" source="~/assets/images/meetings-side-panel/Tokenfileready_1.png" alt-text="Solution File":::
 
-       1. Press **F5** to run the project. You can run using Visual Studio or `dotnet run` in the appropriate folder.
+       1. Press **F5** to run the project. You can run using Visual Studio or `.Net` in the appropriate folder.
 
        1. Navigate to `samples\meetings-sidepanel\csharp\ClientApp` folder and execute the command.
 
            ```bash
-           # npx @fluidframework/azure-local-service@latest
+           npx @fluidframework/azure-local-service@latest
            ```
     
        1. Select **Yes** if the following dialog appears:
@@ -415,7 +415,7 @@ items:
     
     1. Create a meeting with a few presenters and attendees.
    
-    1. After the meeting is created, go to the meeting details page, and select **+** to add an app.
+    1. After the meeting is created, go to the meeting details page, and select **Apps** to add an app.
  
     1. In the pop-up window, select **Manage apps**.
 
@@ -439,7 +439,7 @@ items:
    
     1. Go to Teams meeting.
     
-    1. Select **Add an app**. 
+    1. Select **Apps**. 
     
        In the app selection page, the app is displayed as **Side Panel**.
   
@@ -451,7 +451,7 @@ items:
 
         :::image type="content" source="~/assets/images/meetings-side-panel/welcomeapp_1.png" alt-text="Welcome App"::: 
    
-       The app is visible in the meeting Side Panel.         
+       The app is visible in the meeting side panel.         
 
 - title: Interact with the app in Teams
   durationInMinutes: 1
@@ -462,7 +462,7 @@ items:
 
         :::image type="content" source="~/assets/images/meetings-side-panel/sidepanelinmeet_1.png" alt-text="Token in Meet"::: 
 
-    1. Enter a new agenda item to the **Agenda for today** list and select **Add**.
+    1. Enter a new agenda item and select **Add**.
 
         :::image type="content" source="~/assets/images/meetings-side-panel/newagenda_1.png" alt-text="New Agenda"::: 
 
