@@ -9,7 +9,7 @@ ms.author: lomeybur
 
 # Permissions in Teams app
 
-Permissions for Teams app are managed in two places, depending on the app feature:
+Permission for Teams app is managed in two places, depending on the app feature:
 
 * [Resource-specific consent (RSC)](#resource-specific-consent)
 * [Azure Active Directory (Azure AD)](#azure-active-directory)
@@ -18,7 +18,7 @@ Permissions for Teams app are managed in two places, depending on the app featu
 
 ## Resource-specific consent
 
-RSC is a Microsoft Teams and Microsoft Graph API integration that enables your app to use API endpoints to manage specific resources, either Teams or chats, within an organization. For more information, see [enable resource-specific consent in Teams](../rsc/resource-specific-consent.md).
+RSC is a Microsoft Teams and Microsoft Graph API integration that enables your app to use API endpoints to manage specific resources, either teams or chats, within an organization. For more information, see [enable resource-specific consent in Teams](../rsc/resource-specific-consent.md).
 
 RSC permissions are only available to Teams apps installed on the Teams client and are currently not part of the Azure AD portal and are declared in the Teams app manifest (JSON) file.
 
@@ -39,15 +39,15 @@ The bot or messaging extension ID is generated based on the following registrat
 * Azure AD portal
 * Developer or Bot Framework portal
 
-**Azure AD portal**
+#### Azure AD portal
 
 When a bot or messaging extension is registered on Azure AD portal, it will have an Azure AD app ID associated with it, which can be found in **Azure AD** portal > **App Registrations**. Endpoints and other bot configurations are managed in the Azure portal.
 
-**Developer or Bot Framework portal**
+#### Developer or Bot Framework portal
 
-When a bot or messaging extension is registered in the Developer or Bot Framework portal, it will not have an Azure AD ID. However, the bot or messaging extension ID can be found on the Bot Framework portal. Endpoints and other bot configurations are managed in the Bot Framework portal.
+When a bot or messaging extension is registered in the Developer or Bot Framework portal, it will not have an Azure AD app ID. However, the bot or messaging extension ID can be found on the Bot Framework portal. Endpoints and other bot configurations are managed in the Bot Framework portal.
 
-Other Teams' specific configuration for the bot can be managed in the Developer portal section for the app.
+Other Teams specific configuration for the bot can be managed in the Developer portal section for the app.
 
 ### Connectors
 
