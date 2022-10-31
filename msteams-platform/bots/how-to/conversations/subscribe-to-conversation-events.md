@@ -1468,4 +1468,4 @@ It's important to know that new events can be added anytime in the future and yo
 
 ## See also
 
-[Triggers in Bot Framework Composer](/composer/concept-events-and-triggers)
+* [Triggers in Bot Framework Composer](/composer/concept-events-and-triggers)
