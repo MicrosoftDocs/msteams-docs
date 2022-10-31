@@ -66,11 +66,6 @@ You can use the Teams bot APIs to get information for members of a chat or team.
 > [!div class="nextstepaction"]
 > [Bots and SDKs](~/bots/bot-features.md)
 
-## Next step
-
-> [!div class="nextstepaction"]
-> [Bots and SDKs](~/bots/bot-features.md)
-
 ## See also
 
 * [Create a bot for Teams](../resources/bot-v3/bots-create.md)
