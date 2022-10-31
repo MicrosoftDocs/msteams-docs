@@ -386,7 +386,7 @@ As illustrated, user-specific views are refreshed from a base card, when card2 i
 
 In the following sample a base card returns as command response that can auto-refresh to specific user, such as the command sender:
 
-      ```
+```
         import baseCard from "../adaptiveCards/baseCard.json";
         import { AdaptiveCards } from "@microsoft/adaptivecards-tools";
 
@@ -407,7 +407,7 @@ In the following sample a base card returns as command response that can auto-re
             return MessageFactory.attachment(CardFactory.adaptiveCard(responseCard));
         }
       }
-      ```
+```
 
 * Second option enables user-specific view to refresh your Adaptive Card. This is a sample refresh action defined in `baseCard.json`:
 
