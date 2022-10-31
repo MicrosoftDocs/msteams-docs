@@ -6,7 +6,7 @@ ms.topic: reference
 ---
 # Glossary
 
-Common terms and definitions used in Teams developer documentation.
+Common terms and definitions used in Microsoft Teams developer documentation.
 
 ## A
 
