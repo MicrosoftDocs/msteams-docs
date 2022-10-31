@@ -241,7 +241,7 @@ The client ID displays on the page.
 > [!NOTE]
 > You can authorize more than one client application. Repeat the steps of this procedure for configuring another authorized client application.
 
-You've successfully configured access token scope, permissions, and client applications. Ensure that you note and save the application ID URI. Next, you can configure the access token version.
+You've successfully configured app scope, permissions, and client applications. Ensure that you note and save the application ID URI. Next, you can configure the access token version.
 
 #### Configure access token version
 
@@ -265,14 +265,15 @@ You must define the access token version that is acceptable for your app. This c
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/update-aad-manifest-msg.png" alt-text="Manifest updated":::
 
-### Update OAuth connection
+You've updated the access token version. The Azure AD app configuration is completed, and now you must enable SSO support for your bot resource by configuring OAuth connection.
 
-For a bot to support SSO, you must update its OAuth connection settings. This process associates the bot with:
+### Configure OAuth connection
 
-- Azure AD
-- The Azure AD app associated with the bot
-- The app ID URI
-- The permissions required by the bot to obtain an access token
+For a bot to support SSO, you must update its OAuth connection settings. This process associates the bot with app details that you configured for your Azure AD app:
+
+- Azure AD app ID, which is the client ID
+- Tenant ID
+- Scope and permissions
 
 With the Client ID and Client secret provided, the token store exchanges the token for a graph token with defined permissions.
 
@@ -313,7 +314,7 @@ With the Client ID and Client secret provided, the token store exchanges the tok
 1. Select **Save**.
 1. Select **Apply**.
 
-Congratulations! You've completed the app configuration in Azure AD required to enable SSO for your bot app.
+Congratulations! You've completed the app configuration in Azure AD app and bot resource required to enable SSO for your bot app.
 
 # [Configure SSO using Azure AD app ID](#tab/windows)
 
