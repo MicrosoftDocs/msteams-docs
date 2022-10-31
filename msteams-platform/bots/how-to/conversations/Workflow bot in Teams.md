@@ -173,7 +173,7 @@ You can customize the action in this step, such as calling an API, processing da
 
 **Register the action handler**
 
-You need to configure each new card action in the ConversationBot, that enables the conversational flow of the workflow bot template. You can navigate to `bot/src/internal/initialize.js` file and update the `actions` array of the `cardAction` property.
+You need to configure each new card action in the `conversationBot`, that enables the conversational flow of the workflow bot template. You can navigate to `bot/src/internal/initialize.js` file and update the `actions` array of the `cardAction` property.
 
 To register the action handler, follow these steps:
 
@@ -279,7 +279,7 @@ You can customize the action in this step, such as calling an API, processing da
 
 **Register the action handler**
 
-You need to configure each new card action in the ConversationBot, that enables the conversational flow of the workflow bot template. You can navigate to `bot/src/internal/initialize.js` file and update the `actions` array of the `cardAction` property.
+You need to configure each new card action in the `conversationBot`, that enables the conversational flow of the workflow bot template. You can navigate to `bot/src/internal/initialize.js` file and update the `actions` array of the `cardAction` property.
 
 To register the action handler, follow these steps:
 
@@ -378,11 +378,13 @@ Steps to implement this pattern with TeamsFx SDK:
 
 As illustrated, user-specific views are refreshed from a base card, when card2 is refreshed from card1. You need to enable auto-refresh on the base card, such as the card1. There are two options to achieve this:
 
-* First option enables user-specific view refresh with SDK. The base card can be sent as a command response or a card action response. You can enable user-specific view refresh in `handleCommandReceived` of a command handler, or in `handleActionInvoked` of card action handler where the base card is returned. In the following sample a base card returns as command response that can auto-refresh to specific user, such as the command sender. You can use `refresh(refreshVerb, userIds, data)` method from the `@microsoft/adaptivecards-tools` library to inject a refresh section into your base card. To define the refresh section, ensure that you provide the following:
+* First option enables user-specific view refresh with SDK. The base card can be sent as a command response or a card action response. You can enable user-specific view refresh in `handleCommandReceived` of a command handler, or in `handleActionInvoked` of card action handler where the base card is returned. You can use `refresh(refreshVerb, userIds, data)` method from the `@microsoft/adaptivecards-tools` library to inject a refresh section into your base card. To define the refresh section, ensure that you provide the following:
 
   1. `userIds`: A set of user MRIs for those who can trigger auto-refresh. For more information on how to add in `userIds` list in refresh section of Adaptive Card, see [fetch the roster or user profile](../get-teams-context.md#fetch-the-roster-or-user-profile)
   1. `verb`: A string to identify the refresh action.
   1. `data`: An optional data to associate with the refresh action.
+
+In the following sample a base card returns as command response that can auto-refresh to specific user, such as the command sender:
 
       ```
         import baseCard from "../adaptiveCards/baseCard.json";
@@ -437,7 +439,7 @@ You need to replace `${userID}` with user MRI in code, while rendering your card
 
 #### Add user-specific Adaptive Cards
 
-You need to design the user-specific Adaptive Card to refresh specific users such as  `responseCard.json` for userA in the sample. To get started, you can create a `responseCard.json` with the following content, and put it in `bot/src/adaptiveCards` folder:
+You need to design the user-specific Adaptive Card to refresh specific users such as  `responseCard.json` for `userA` in the sample. To get started, you can create a `responseCard.json` with the following content, and put it in `bot/src/adaptiveCards` folder:
 
 ```responseCard.json
 
