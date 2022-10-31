@@ -3,7 +3,7 @@
 Before you add code to enable SSO, ensure that you've registered your app with Azure AD.
 
 > [!div class="nextstepaction"]
-> [Configure your app with Azure AD](msgex-sso-register-aad.md)
+> [Configure your app with Azure AD](../../messaging-extensions/how-to/authentication/msgex-sso-register-aad.md)
 
 You need to configure your app's code to obtain an access token from Azure AD. The access token is issued on behalf of the bot app.
 
@@ -11,7 +11,7 @@ You need to configure your app's code to obtain an access token from Azure AD. T
 > SSO handlers except `OnTeamsMessagingExtensionQueryAsync` and `OnTeamsAppBasedLinkQueryAsync` from the `TeamsMessagingExtensionsSearchAuthConfigBot.cs` file aren't supported.
 
 > [!NOTE]
-> If you've build your Teams app using Microsoft Teams Toolkit, you can enable SSO for your app using the instructions in the Tools and SDKs module. For more information, see [Add single sign-on to Teams app](../../../toolkit/add-single-sign-on.md).
+> If you've build your Teams app using Microsoft Teams Toolkit, you can enable SSO for your app using the instructions in the Tools and SDKs module. For more information, see [Add single sign-on to Teams app](~/toolkit/add-single-sign-on.md).
 
 This section covers:
 
@@ -201,11 +201,11 @@ To update your app's code:
 
 If the app user is using the application for the first time, consent is required for SSO authentication.
 
-:::image type="content" source="../../../assets/images/authentication/teams-sso-mex/me-sso-profile-select.png" alt-text="SSO authentication for message extension app":::
+:::image type="content" source="~/assets/images/authentication/teams-sso-mex/me-sso-profile-select.png" alt-text="SSO authentication for message extension app":::
 
 When the app user selects the user name, validation is done using the Teams identity.
 
-:::image type="content" source="../../../assets/images/authentication/teams-sso-mex/me-sso-completed.png" alt-text="SSO authentication completed for message extension app":::
+:::image type="content" source="~/assets/images/authentication/teams-sso-mex/me-sso-completed.png" alt-text="SSO authentication completed for message extension app":::
 
 The consent dialog that appears is for open-id scopes defined in Azure AD. The app user must give consent only once. After consenting, the app user can access and use your message extension app for the granted permissions and scopes.
 
@@ -215,7 +215,7 @@ The consent dialog that appears is for open-id scopes defined in Azure AD. The a
 > - If the tenant administrator has granted consent on behalf of the tenant, app users don't need to be prompted for consent at all. This means that the app users don't see the consent dialogs, and can access the app seamlessly.
 > - If your Azure AD app is registered in the same tenant from which you're requesting an authentication in Teams, the app user can't be asked to consent, and is granted an access token right away. App users consent to these permissions only if the Azure AD app is registered in a different tenant.
 
-If you encounter any errors, see [Troubleshoot SSO authentication in Teams](../../../tabs/how-to/authentication/tab-sso-troubleshooting.md).
+If you encounter any errors, see [Troubleshoot SSO authentication in Teams](~/tabs/how-to/authentication/tab-sso-troubleshooting.md).
 
 ## Add code to receive the token
 
@@ -466,4 +466,4 @@ This section provides Bot authentication v3 SDK sample.
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Update Teams app manifest and preview the app](msgex-sso-manifest.md)
+> [Update Teams app manifest and preview the app](../../messaging-extensions/how-to/authentication/msgex-sso-manifest.md)
