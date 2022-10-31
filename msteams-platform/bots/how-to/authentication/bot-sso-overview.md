@@ -25,7 +25,7 @@ App users sign in to Teams using either personal Microsoft account or Microsoft 
 - The app user needs to give consent to Teams for using the identity to access for using your bot.
 - The app user can access the app on web, desktop, or mobile client.
 
-### Enhance user experience with SSO
+<!--### Enhance user experience with SSO
 
 Here's what your app users get with SSO experience:
 
@@ -34,7 +34,7 @@ Here's what your app users get with SSO experience:
 - After consenting to Teams the first time, the app user can use your app with no further need of consent, even on any other device. For this reason, it offers a better user experience.
   - Alternatively, the tenant administrator can grant consent on behalf of the app users. In this scenario, when the tenant administrator consents for app users in the tenant, the app users don't need to be prompted for consent at all. This means that the app users don't see the consent dialogs, and can access the app seamlessly.
 - The access token is pre-fetched by Teams to improve performance and load time of the app in Teams environment.
-- App users don't need to memorize or record several passwords to access and use apps in Teams environment.
+- App users don't need to memorize or record several passwords to access and use apps in Teams environment.-->
 
 > [!NOTE]
 > App users can't give permission to some permission scopes, such as `Sites.ReadWrite.All`, which allows the app user to read and write to all SharePoint and OneDrive assets in the tenant. For such scopes, only the tenant administrator than grant consent on an app user's behalf.
