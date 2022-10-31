@@ -46,7 +46,7 @@ Now, let's see what happens at the backend during runtime to achieve SSO experie
 
 Achieve SSO in a bot app by obtaining access token for the Teams app user who's currently logged in. This process involves the bot app client and server, Teams client, and Azure AD. During this interaction, the app user must give consent for using Teams identity to obtain the access token in a multi-tenant environment.
 
-The following image shows how SSO works when a Teams app user attempts to access the bot app:
+The following image shows how SSO works when a Teams app user attempts to access the bot or message extension app:
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/sso-runtime-seqd-bots.png" alt-text="Bots at runtime" lightbox="../../../assets/images/authentication/teams-sso-bots/sso-runtime-seqd-bots.png":::
 
