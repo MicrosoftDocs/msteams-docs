@@ -516,11 +516,11 @@
         href: tabs/how-to/authentication/tab-sso-manifest.md
       - name: Grant Microsoft Graph permissions and scopes
         href: tabs/how-to/authentication/tab-sso-graph-api.md
-    - name: Enable SSO for your bot app
+    - name: Enable SSO for your bot and message extension app
       items:
-      - name: Overview for bot SSO
+      - name: Overview
         href: bots/how-to/authentication/bot-sso-overview.md
-      - name: Configure your bot app in Azure AD
+      - name: Configure your app in Azure AD
         href: bots/how-to/authentication/bot-sso-register-aad.md
       - name: Add code to enable SSO
         href: bots/how-to/authentication/bot-sso-code.md
@@ -528,18 +528,6 @@
         href: bots/how-to/authentication/bot-sso-manifest.md
       - name: Grant Microsoft Graph permissions and scopes
         href: bots/how-to/authentication/bot-sso-graph-api.md
-    - name: Enable SSO for message extension app
-      items:
-      - name: Configure your app in Azure AD
-        href: messaging-extensions/how-to/authentication/msgex-sso-register-aad.md
-      - name: Add code to enable SSO
-        href: messaging-extensions/how-to/authentication/msgex-sso-code.md
-      - name: Update manifest for SSO and preview app
-        href: messaging-extensions/how-to/authentication/msgex-sso-manifest.md
-      - name: Grant Microsoft Graph permissions and scopes
-        href: messaging-extensions/how-to/authentication/msgex-sso-graph-api.md
-    - name: Troubleshoot SSO authentication
-      href: tabs/how-to/authentication/tab-sso-troubleshooting.md
   - name: Use third party IdP authentication
     items:
     - name: Overview
