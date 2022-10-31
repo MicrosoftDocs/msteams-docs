@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Calling and meeting bot provides basic functionalities like create a call, join a call, transfer or redirect a call, join a scheduled meeting, and invite the participants by integrating cloud communications API Graph API.
+    Calling and meeting bot provides basic functionalities like create a call, join a call, transfer or redirect a call, join a scheduled meeting, and invite the participants by integrating cloud communications Graph API.
     
     Bots can interact with Teams calls and meetings using real time voice, video, and screen sharing. With Microsoft Graph APIs for calls and online meetings, Teams apps can now interact with users using voice and video to enhance the experience. These APIs allow you to add the following new features:
 
@@ -46,11 +46,11 @@ items:
 - title: Set up calling and meeting bot
   durationInMinutes: 5
   content: |
-    Register an application using app registration in the Microsoft Azure portal for your app to integrate with the Microsoft identity platform and call Microsoft Graph. Perform the following:
+    Register an application using app registration in the Microsoft Azure portal for your app to integrate with the Microsoft identity platform and call Microsoft Graph API. Perform the following:
 
     1. Create a ngrok tunnel to the endpoints of your web server.
     1. Create Azure bot resource to register bot with Azure bot service.
-    1. Create client secret that enables SSO authentication of the bot.
+    1. Create client secret that enables single sign-on (SSO) authentication of the bot.
     1. Create a policy for a demo tenant user for creating online meetings using PowerShell.
     1. Add API permissions for downstream calls.
     1. Create bot channel registration in Azure account.
@@ -139,8 +139,8 @@ items:
         Get-CsApplicationAccessPolicy -Identity “<<policy-identity/policy-name>>”
         ```
 
-    > [!NOTE]
-    > Ensure your file's running scripts are not disabled in your system. For more information, see [about execution policies](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.2)
+        > [!NOTE]
+        > Ensure running scripts are not disabled in your system. For more information, see [about execution policies](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.2).
 
     **To add API permissions for downstream calls**
 
@@ -268,7 +268,7 @@ items:
 
         :::image type="content" source="./assets/images/calls-and-meetings/git_1.png" alt-text="Screenshot showing the repo download.":::
 
-    1. Ensure to note the path of the repository that is downloaded.
+    1. Ensure to note the path of the downloaded repository.
     1. In the **File Explorer**, go to **Microsoft-Teams-Samples-main** > **samples** > **bot-calling-meeting** > **csharp** folder.
     1. Open the **appsettings.json** file in Visual Studio and update configuration for the bot.
 
