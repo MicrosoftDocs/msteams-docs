@@ -569,7 +569,7 @@ The following steps help you to enable SSO in your application.
     builder.Services.AddSingleton<BotFrameworkAuthentication, ConfigurationBotFrameworkAuthentication>();
     ```
 
-    1. After you find the code, add the following:
+    2. After you find the code, add the following:
 
     ```csharp
      builder.Services.AddRazorPages();
@@ -593,14 +593,14 @@ The following steps help you to enable SSO in your application.
         }).ValidateDataAnnotations();
     ```
 
-    2. You can find and delete the following code:
+    3. You can find and delete the following code:
 
         ```csharp
         // Create the bot as a transient. In this case the ASP Controller is expecting an IBot.
         builder.Services.AddTransient<IBot, TeamsBot>();
         ```
 
-    3. You can find the following code:
+    4. You can find the following code:
 
         ```csharp
         app.UseEndpoints(endpoints =>
@@ -609,7 +609,7 @@ The following steps help you to enable SSO in your application.
         });
         ```
 
-    4. After you find the code, replace with:
+    5. After you find the code, replace with:
 
         ```csharp
         app.UseEndpoints(endpoints =>
@@ -654,13 +654,13 @@ The following steps help you to add a new command, after you've added SSO in you
     }
     ```
 
-   1. You can find the following line to register a new command:
+    1. You can find the following line to register a new command:
 
       ```csharp
       ((SsoDialog)_dialog).addCommand("showUserInfo", "show", SsoOperations.ShowUserInfo);
       ```
 
-   2. After you find the line, add the following to register a new command `"photo"` and hook up with method `'GetUserImageInfo'`:
+    2. After you find the line, add the following to register a new command `"photo"` and hook up with method `'GetUserImageInfo'`:
 
     ```csharp
     ((SsoDialog)_dialog).addCommand("getUserImageInfo", "photo", SsoOperations.GetUserImageInfo);
