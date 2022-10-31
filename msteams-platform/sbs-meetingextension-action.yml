@@ -14,22 +14,22 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Message extensions allow users to interact with web services in the Microsoft Teams client. They help to initiate actions in an external system from the compose message area, the command box, or directly from a message.
+    Teams action based message extensions allow users to interact with web services in the Microsoft Teams client. This message extension helps to initiate actions in an external system from the compose message area, the command box, or directly from a message.
 
     **Key features of action based message extension:**
 
     * Presents the user with a modal pop-up to collect or display information.
     * Triggers the action commands from the compose message area, the command box, or from a message. 
 
-    This step-by-step guide helps you to build Teams action based message extension to initiate actions from compose message and message area. You'll see the following output:
+    This step-by-step guide helps you to build Teams action based message extension to initiate actions from compose message and message area. By the end of this tutorial, you can achieve the following output:
        
-      :::image type="content" source="./assets/images/sbs-messagingextension-action/sharemessageoutput1.png" alt-text="output.":::
+    :::image type="content" source="./assets/images/sbs-messagingextension-action/sharemessageoutput1.png" alt-text="output.":::
     
 
 - title: Prerequisites
   durationInMinutes: 1
   content: |
-    Ensure you install the following tools and set up your development environment:
+    Ensure that you install the following tools and set up your development environment:
 
      | &nbsp; | Install | For using... |
      | --- | --- | --- |
@@ -61,7 +61,7 @@ items:
   content: |
     To create and register your bot in Microsoft Azure Active Directory (Azure AD), create a tunnel using ngrok, add messaging endpoint, and then perform the following steps:
 
-    * Create Azure Bot resource to register bot with Azure Bot Service.
+    * Create Azure Bot resource to register bot with Azure Bot service.
     * Create client secret to enable single sign-on (SSO) authentication of the bot.
     * Add Teams channel to deploy the bot to a Teams channel.
     * Use ngrok to create a tunnel to your web server's endpoints.
@@ -74,10 +74,12 @@ items:
     1. In the search box, enter **Azure Bot**.
     1. Select **Enter**.
     1. Select **Azure Bot**.
+    1. Select **Create**.
 
          :::image type="content" source="./assets/images/azure-bot_1.png" alt-text="Azure bot.":::
 
-    1. Select **Create**.
+    **Create an Azure Bot** window appears.
+
     1. Enter required bot handle name in **Bot handle**.
     1. Select your **Subscription** and **Resource group** from the respective dropdown list.
         
@@ -106,11 +108,11 @@ items:
 
     1. Select **Go to resource**. 
 
-        :::image type="content" source="./assets/images/sbs-messagingextension-action/created-azure-bot_1.png" alt-text="Azure bot resource created.":::
+       :::image type="content" source="./assets/images/sbs-messagingextension-action/created-azure-bot_1.png" alt-text="Azure bot resource created.":::
    
-        Your Azure bot is created and you can see the **Resource group** and **Subscription ID** in the Azure bot.
+       Your Azure bot is created and you can see the **Resource group** and **Subscription ID** in the Azure bot.
 
-        :::image type="content" source="./assets/images/sbs-messagingextension-action/created-azure-bot_2.png" alt-text="Azure bot resource created2.":::
+       :::image type="content" source="./assets/images/sbs-messagingextension-action/created-azure-bot_2.png" alt-text="Azure bot resource created2.":::
 
     **To create client secret**
 
@@ -137,13 +139,13 @@ items:
 
        :::image type="content" source="./assets/images/sbs-messagingextension-action/add-a-clientsecret_1.png" alt-text="Add client secret to app.":::
 
-    1. In the **Value** column, select **Copy to clipboard**.
+    1. In the **Value**, select **Copy to clipboard**.
 
          :::image type="content" source="./assets/images/sbs-messagingextension-action/client-secret_1.png" alt-text="Value of client secret.":::
 
        
        > [!TIP]
-       > Save the **Client secrets** value or app password for future reference.
+       > Save the client secrets **Value** or app password for future reference.
 
     **To add the Teams channel**
 
@@ -186,18 +188,17 @@ items:
        :::image type="content" source="../msteams-platform/assets/images/sbs-messagingextension-action/ngrok-url.png" alt-text="ngrok HTTPS URL":::
 
         > [!NOTE]
-        > The HTTPS URL in your ngrok is your fully qualified domain name.
-        > The `WebAppDomain` is a fully qualified domain name that doesn't include `https://` in it.
+        > The HTTPS URL in your ngrok is a domain name that doesn't include `https://`.
 
     1. In **Settings**, select **Configuration**.
 
-    1. In **Messaging endpoint**, use the HTTPS URL available from ngrok and at the end of the URL add **/api/messages**.
+    1. In **Messaging endpoint**, add the HTTPS URL from ngrok and at the end of the URL add **/api/messages**.
 
         :::image type="content" source="./assets/images/sbs-messagingextension-action/appuri_1.png" alt-text="App uri.":::
 
     1. Select **Apply**.
 
-        You have successfully set up a bot in Azure Bot Service.
+        You have successfully set up a bot in Azure Bot service.
 
 
 - title: Update the Azure AD app registration
@@ -206,6 +207,8 @@ items:
     1. Go to the [Azure portal](https://portal.azure.com/).
 
     1. Select **Azure Active Directory**.
+
+       :::image type="content" source="./assets/images/sbs-messagingextension-action/AAD_1.png" alt-text="Azure Directory.":::
 
     1. In the left navigation pane, select **App registrations**.
 
@@ -219,20 +222,17 @@ items:
 
        :::image type="content" source="./assets/images/sbs-messagingextension-action/set-exposeanapi_2.png" alt-text="Expose an API.":::
 
-    1. Set the **Application ID URI** in the form of `api://{AppID}`.
+    1. Set the **Application ID URI** in the form of `api://*******.ngrok.io/{AppID}`.
 
        :::image type="content" source="./assets/images/sbs-messagingextension-action/set-link_1.png" alt-text="set link.":::
 
-    1. Insert the `WebAppDomain` value between `api://` and `/{AppID}`.</br>
-        `api://*******.ngrok.io/{AppID}`</br>
-        
        The following image shows the domain name:
         
         :::image type="content" source="./assets/images/sbs-messagingextension-action/exposeanapi_1.png" alt-text="Expose.":::
 
         > [!NOTE]
-        > If you're using a tunneling service such as ngrok, ensure you update the value whenever your ngrok subdomain changes.
-        > `For example: api://*******.ngrok.io/00000000-000-0000-0000-000000000`, where `********.ngrok.io` is the new ngrok subdomain name.
+        > If you're using a tunneling service such as ngrok, ensure that you update the value whenever your ngrok subdomain changes.
+        > For example: `api://*******.ngrok.io/00000000-000-0000-0000-000000000`, where `********.ngrok.io` is the new ngrok subdomain name.
 
     1. Select **Add a scope**. 
 
@@ -242,7 +242,7 @@ items:
     
     1. Enter the following details to configure scope:
     
-         * In the panel that appears, enter `access_as_user` as the **Scope name**.
+         * Enter `access_as_user` as the **Scope name**.
   
          * Set **Who can consent?** to `Admins and users`.
   
@@ -303,7 +303,7 @@ items:
 
     1. Select **Delegated permissions**. 
     
-    1. Add the following permissions:</br>
+    1. Add the following API permissions:</br>
          * **email**
          * **offline_access**
          * **OpenId**
@@ -317,19 +317,19 @@ items:
     1. From the left pane, select **Authentication** to set a redirect URI. 
 
        > [!NOTE]
-       > If an app isn't granted IT admin consent, users must provide consent the first time they use an app.
+       > If an app isn't granted IT admin consent, the users must provide consent for the first time they use the app.
                
          1. Select **Add a platform**.
          1. Select **Web**.
 
             :::image type="content" source="./assets/images/sbs-messagingextension-action/web_1.png" alt-text="web." lightbox="./assets/images/sbs-messagingextension-action/web_1.png":::
 
-         1. Enter the redirect URI for your app by appending `auth-end` to fully qualified domain name:</br> 
+         1. Enter the **Redirect URIs** for your app by appending `auth-end` to domain name:</br> 
            `https://*******.ngrok.io/auth-end`. </br>
 
          1. Enable **Implicit grant and hybrid flows** by selecting the following checkboxes:
-             * **ID tokens**
-             * **Access tokens**
+             * **Access tokens (used for implicit flows)**
+             * **ID tokens (used for implicit and hybrid flows)**
    
          1. Select **Configure**.
 
@@ -345,11 +345,11 @@ items:
 
     1. Open **appsettings.json** in the latest version of Visual Studio and update the following information:  
 
-         * Set `"MicrosoftAppType"` to **MultiTenant**.
+         * Set `"MicrosoftAppType"` to **Multi Tenant**.
          * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
          * Set `"MicrosoftAppPassword"` to your bot's **Value** of the **Client Secret ID**.
-         * Leave `"MicrosoftAppTenantId"` blank for MultiTenant bot.
-         * Set `"BaseUrl"` to the fully qualified domain name.
+         * Leave `"MicrosoftAppTenantId"` as blank for Multi Tenant bot.
+         * Set `"BaseUrl"` to the ngrok domain name.
 
          :::image type="content" source="./assets/images/sbs-messagingextension-action/json-file_1.png" alt-text="Json file.":::
 
@@ -359,7 +359,7 @@ items:
     
     1. Open **manifest.json** in latest version of Visual Studio and make the following changes:
 
-         * Replace the `<<validDomains>>` with your fully qualified domain name.
+         * Replace the `<<validDomains>>` with ngrok domain name.
          * Replace all occurrences of `<<Microsoft-App-ID>>` with your bot's **Microsoft App ID**.
 
          :::image type="content" source="./assets/images/sbs-messagingextension-action/manifest_1.png" alt-text="manifest file." lightbox="./assets/images/sbs-messagingextension-action/manifest_1.png" :::
@@ -373,7 +373,7 @@ items:
     # [Latest version of Visual Studio](#tab/latestversionofvisualstudio)
 
        1. Launch the latest version of Visual Studio.
-       1. Go to **File** > **Open** > **Project/Solution**.
+       1. Select **File** > **Open** > **Project/Solution**.
     
           :::image type="content" source="./assets/images/sbs-messagingextension-action/VSopenfile_1.png" alt-text="open file.":::
 
@@ -402,12 +402,12 @@ items:
    
     ![Dotnet](~/assets/images/sbs-messagingextension-action/dotnetruncmd.png)
       
-- title: Add Action Message Extension app to Teams
+- title: Add action message extension app to Teams
   durationInMinutes: 1
   content: |
     1. In your cloned repository, go to **csharp_dotnetcore > 51.teams-messaging-extensions-action > TeamsAppManifest**.
 
-    1. Create a .zip with the following files that are present in the **Manifest** folder: 
+    1. Create a .zip with the following files in the **Manifest** folder:
        * manifest.json
        * icon-outline.png
        * icon-color.png
@@ -434,7 +434,7 @@ items:
 
        :::image type="content" source="./assets/images/sbs-messagingextension-action/create-card_1.png" alt-text="create card.":::
 
-    1. Enter your information in the modal pop-up.
+    1. Enter the card information in the modal pop-up.
 
        :::image type="content" source="./assets/images/sbs-messagingextension-action/output-card.png" alt-text="information.":::
 
@@ -444,11 +444,11 @@ items:
 
     1. Right-click the card.
        
-    1. Go to **More actions** > **Share Message**.
+    1. Select **More actions** > **Share Message**.
 
        :::image type="content" source="./assets/images/sbs-messagingextension-action/sharemessage.png" alt-text="Share card.":::
 
-    1. Select the checkbox if you need to include image and **Submit**.
+    1. Select the checkbox to include image and select **Submit**.
 
        :::image type="content" source="./assets/images/sbs-messagingextension-action/sharemessageoutput.png" alt-text="Submit output.":::
 
