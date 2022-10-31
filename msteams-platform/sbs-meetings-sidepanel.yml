@@ -182,7 +182,7 @@ items:
      ```
 
     > [!TIP]
-    > If you encounter **ERR_NGROK_4018**, follow the steps provided in the Command Prompt to sign up and authenticate ngrok. Then run the `ngrok http --host-header=localhost 3978` command.
+    > If you encounter **ERR_NGROK_4018**, follow the steps provided in the Command Prompt to sign up and authenticate ngrok. Then run the `ngrok http --host-header=localhost 3001` command.
 
     **To add messaging endpoint**
 
@@ -374,7 +374,13 @@ items:
 
            :::image type="content" source="~/assets/images/meetings-side-panel/Tokenfileready_1.png" alt-text="Solution File":::
 
-       1. Press **F5** to run the project.
+       1. Press **F5** to run the project. You can run using Visual Studio or `dotnet run` in the appropriate folder.
+
+       1. Navigate to `samples\meetings-sidepanel\csharp\ClientApp` folder and execute the command.
+
+           ```bash
+           # npx @fluidframework/azure-local-service@latest
+           ```
     
        1. Select **Yes** if the following dialog appears:
 
@@ -457,6 +463,8 @@ items:
         :::image type="content" source="~/assets/images/meetings-side-panel/sidepanelinmeet_1.png" alt-text="Token in Meet"::: 
 
     1. Enter a new agenda item to the **Agenda for today** list and select **Add**.
+
+        :::image type="content" source="~/assets/images/meetings-side-panel/newagenda_1.png" alt-text="New Agenda"::: 
 
        The new agenda is added in the list.
 
