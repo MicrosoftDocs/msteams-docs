@@ -548,7 +548,7 @@ The following steps help you to enable SSO in your application.
    * Microsoft.Bot.Builder >= 4.17.1
 
 2. You can create `Pages` folder and move files in `Auth/bot/Pages` folder.
-    `Auth/bot/Pages` folder contains HTML pages that are hosted by bot application. When SSO flows are initiated with Azure AD, those flows will redirect the user to the pages.
+    `Auth/bot/Pages` folder contains HTML pages that are hosted by bot application. When SSO flows are initiated with Azure AD, the flows will redirect user to the pages.
 
 3. You can create `SSO` folder and move files in `Auth/bot/SSO` folder to `SSO`. This folder contains two files as a reference for SSO implementation:
 
@@ -569,7 +569,7 @@ The following steps help you to enable SSO in your application.
     builder.Services.AddSingleton<BotFrameworkAuthentication, ConfigurationBotFrameworkAuthentication>();
     ```
 
-    After you find the code, add the following:
+    1. After you find the code, add the following:
 
     ```csharp
      builder.Services.AddRazorPages();
@@ -609,7 +609,7 @@ The following steps help you to enable SSO in your application.
         });
         ```
 
-        After you find the code, replace with:
+    4. After you find the code, replace with:
 
         ```csharp
         app.UseEndpoints(endpoints =>
@@ -635,7 +635,7 @@ The following steps help you to enable SSO in your application.
 
 The following steps help you to add a new command, after you've added SSO in your project:
 
-1. You can create a new method in class SsoOperations in `SSO/SsoOperations` and add your own business logic to call Graph API:
+1. You can create a new method in class `SsoOperations` in `SSO/SsoOperations` and add your own business logic to call Graph API:
 
     ```csharp
     public static async Task GetUserImageInfo(ITurnContext stepContext, string token, BotAuthenticationOptions botAuthOptions)
@@ -654,26 +654,26 @@ The following steps help you to add a new command, after you've added SSO in you
     }
     ```
 
-2. You can find the following line to register a new command:
+   1. You can find the following line to register a new command:
 
-    ```csharp
-    ((SsoDialog)_dialog).addCommand("showUserInfo", "show", SsoOperations.ShowUserInfo);
-    ```
+      ```csharp
+      ((SsoDialog)_dialog).addCommand("showUserInfo", "show", SsoOperations.ShowUserInfo);
+      ```
 
-    After you find the line, add the following to register a new command `"photo"` and hook up with method `'GetUserImageInfo'`:
+   2. After you find the line, add the following to register a new command `"photo"` and hook up with method `'GetUserImageInfo'`:
 
     ```csharp
     ((SsoDialog)_dialog).addCommand("getUserImageInfo", "photo", SsoOperations.GetUserImageInfo);
     ```
 
-3. You can open `templates/appPackage/manifest.template.json`, and add the following lines under `command` in `commandLists` of your bot to register your command in the Teams app manifest.:
+    3. You can open `templates/appPackage/manifest.template.json`, and add the following lines under `command` in `commandLists` of your bot to register your command in the Teams app manifest.:
 
-   ```JSON
-   {
-       "title": "photo",
-       "description": "Show user photo size using Single Sign On feature"
-   }
-   ```
+      ```JSON
+      {
+          "title": "photo",
+          "description": "Show user photo size using Single Sign On feature"
+      }
+      ```
 
    > [!NOTE]
    > Currently, the instructions apply only to command bot.
