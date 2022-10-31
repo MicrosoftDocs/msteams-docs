@@ -139,11 +139,13 @@ You can create a new file, `bot/src/adaptiveCards/doSomethingResponse.json` as a
 
 **Add action handler**
 
-You can handle a new action invoked by Adaptive Card with TeamsFx SDK's class `TeamsFxAdaptiveCardActionHandler`. You can create a new file `bot/src/cardActions/doSomethingActionHandler.js`:
+You can handle a new action invoked by Adaptive Card with TeamsFx SDK's class `TeamsFxAdaptiveCardActionHandler`.
 
 ### [JavaScript](#tab/JS)
 
-```
+You can create a new file `bot/src/cardActions/doSomethingActionHandler.js`:
+
+```doSomethingActionHandler.js
     const { AdaptiveCards } = require("@microsoft/adaptivecards-tools");
     const { AdaptiveCardResponse, InvokeResponseFactory } = require("@microsoft/teamsfx");
     const responseCard = require("../adaptiveCards/doSomethingResponse.json");
@@ -165,7 +167,9 @@ You can handle a new action invoked by Adaptive Card with TeamsFx SDK's class `T
 
 ### [TypeScript](#tab/TS)
 
-```
+You can create a new file `bot/src/cardActions/doSomethingActionHandler.ts`:
+
+```doSomethingActionHandler.ts
     const { AdaptiveCards } = require("@microsoft/adaptivecards-tools");
     const { AdaptiveCardResponse, InvokeResponseFactory } = require("@microsoft/teamsfx");
     const responseCard = require("../adaptiveCards/doSomethingResponse.json");
@@ -374,7 +378,7 @@ You need to design the user-specific Adaptive Card to refresh specific users suc
 
 Add handler that implements `TeamsFxAdaptiveCardActionHandler` to process the refresh invoke activity that is automatically triggered in Teams.
 
-```JASON
+```TypeScript
 import responseCard from "../adaptiveCards/responseCard.json";
 
 export class Handler1 implements TeamsFxBotCardActionHandler {
