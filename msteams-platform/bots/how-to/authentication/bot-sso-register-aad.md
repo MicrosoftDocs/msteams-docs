@@ -561,7 +561,7 @@ You'll need to create a bot resource, create client secret, and enable it for Te
 Before you enable SSO for your bot app, you must create and configure your bot resource in Azure AD. For more information, see [Create Teams conversation bot](../../../sbs-teams-conversation-bot.yml).
 
 > [!NOTE]
-> Ensure that when you create your bot resource, select the application ID of your the Azure AD app, which was generated when you [registered your app](to-register-a-new-app-in-azure-ad).
+> Ensure that when you create your bot resource, select the application ID of your the Azure AD app, which was generated when you [To register a new app in Azure AD](../../../tabs/how-to/authentication/tab-sso-register-aad.md#to-register-a-new-app-in-azure-ad).
 
 To enable SSO for the bot resource:
 - Add messaging endpoint
