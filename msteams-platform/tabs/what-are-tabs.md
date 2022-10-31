@@ -85,5 +85,6 @@ You can have multiple channels or group tabs, and up to 16 personal tabs per app
 
 ## See also
 
+* [Design your tab for Microsoft Teams](design/tabs.md)
 * [Device capabilities](../concepts/device-capabilities/device-capabilities-overview.md)
 * [Tabs on mobile](design/tabs-mobile.md#tabs-on-mobile)

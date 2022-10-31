@@ -60,5 +60,6 @@ Now let's build your tab. But first select your choice of tab to build:
 
 ## See also
 
-* [Teams tabs](~/tabs/what-are-tabs.md)
+* [Build your first tab app using JavaScript](../../sbs-gs-javascript.yml)
+* [Register your tab app in Azure AD](authentication/tab-sso-register-aad.md)
 * [Tabs on mobile](~/tabs/design/tabs-mobile.md)

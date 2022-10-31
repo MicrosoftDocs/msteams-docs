@@ -334,4 +334,8 @@ If you choose to have your channel or group tab appear on the Teams mobile clien
 
 ## See also
 
-* [Teams tabs](~/tabs/what-are-tabs.md)
+* [Update manifest for SSO and preview app](../authentication/tab-sso-manifest.md)
+* [Configure third party OAuth IdP authentication](../authentication/auth-tab-aad.md)
+* [Create Office 365 Connectors](../../../webhooks-and-connectors/how-to/connectors-creating.md)
+* [Get context for your tab](../access-teams-context.md)
+* [Tabs on mobile](../../design/tabs-mobile.md)

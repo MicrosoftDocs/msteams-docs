@@ -620,6 +620,7 @@ If you create a bot with a **personal** scope, it appears in the first tab posit
 
 ## See also
 
-* [Teams tabs](~/tabs/what-are-tabs.md)
-* [Tabs on mobile](~/tabs/design/tabs-mobile.md)
 * [Share to Teams from personal app or tab](~/concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md)
+* [Developer Portal for Teams](../../concepts/build-and-test/teams-developer-portal.md)
+* [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
+* [Build tabs with Adaptive Cards](build-adaptive-card-tabs.md)
