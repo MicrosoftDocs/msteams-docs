@@ -149,7 +149,7 @@ Your app name plays a critical role for users to discover your app on the Micros
 * Inconsistent usage of app name throughout the app’s functionality.
 * Mismatch between the app name mentioned in the app manifest submitted as part of the app package and Partner Center.
 * App names appended with *Beta*, *Dev*, and *Prod* to indicate app isn't production ready.
-* App submissions where the developer has changed the app name, but the old app name is sill used within the app.
+* App submissions where the developer has changed the app name, but the old app name is still used within the app.
 
 ## Support link
 
