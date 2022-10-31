@@ -3,14 +3,10 @@ title: Overview to authentication using SSO in Teams with Azure AD
 description: Learn about Single sign-on (SSO) authentication in Teams and how to enable it in bots and message extension.
 ms.topic: conceptual
 ms.localizationpriority: high
-keywords: teams authentication bots message extension Microsoft Azure Active Directory (Azure AD) SSO access token app manifest 
-zone_pivot_groups: enable-sso
 ---
 # Enable SSO for bot app
 
 <!--Single sign-on (SSO) allows a user to access an application or a web service after signing-in only once. The app users never have to go through authentication again.-->
-
-::: zone pivot="bot-app"
 
 With SSO in Teams, app users have the advantage of using Teams to access apps. After logging into Teams using Microsoft or Microsoft 365 account, app users can use your app without needing to sign in again. Your app is available to app users on any device with access granted through Azure AD.
 
@@ -87,11 +83,3 @@ Points from SME response:
 The token for the app user is stored in the token store.-->
 
 For a bot or a message extension app, the bot app sends an OAuth Card to Teams Client. This card is used to get access token from Azure AD using `tokenExchangeResource`. A bot or message extension app can have more than one active endpoint. The first time app user would receive consent request for all active endpoints. Following app user's consent, Teams Client sends the token received from Azure AD to the bot app using `tokenExchange`. The bot app can then parse the token to retrieve the app user's information, such as email address.
-
-::: zone-end
-
-::: zone pivot="mex-app"
-
-[!INCLUDE [msgex-sso-code](../../../includes/messaging-extensions/msgex-sso-code.md)]
-
-::: zone-end

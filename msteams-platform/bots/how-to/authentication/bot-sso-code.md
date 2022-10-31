@@ -3,6 +3,7 @@ title: Code configuration for enabling SSO for bots
 description: Describes code configuration for enabling SSO for bots
 ms.topic: how-to
 ms.localizationpriority: high
+zone_pivot_groups: enable-sso
 ---
 # Add code to enable SSO in your bot app
 
@@ -20,6 +21,8 @@ This section covers:
 
 1. [Update development environment variables](#update-development-environment-variables)
 1. [Add code to handle an access token](#add-code-to-handle-an-access-token)
+
+::: zone pivot="bot-app"
 
 ## Update development environment variables
 
@@ -467,6 +470,14 @@ Use the following code snippet to handle the access token in case the app user l
 
 > [!div class="nextstepaction"]
 > [Update Teams app manifest and preview the app](bot-sso-manifest.md)
+
+::: zone-end
+
+::: zone pivot="mex-app"
+
+[!INCLUDE [msgex-sso-code](../../../includes/messaging-extensions/msgex-sso-code.md)]
+
+::: zone-end
 
 
 <!--
