@@ -568,6 +568,8 @@
   - name: Get started
     href: /graph/toolkit/get-started/build-a-microsoft-teams-tab
     displayName: Access, report, MSAL2
+  - name: Teams app permissions
+    href: graph-api/app-permissions/teams-app-permissions.md
   - name: Resource-specific consent
     href: graph-api/rsc/resource-specific-consent.md
     displayName: Permissions, delegated
