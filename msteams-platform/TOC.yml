@@ -274,8 +274,6 @@
   - name: Build tabs with Adaptive Cards
     href: tabs/how-to/build-adaptive-card-tabs.md
     displayName: Slow load times, iFrame constartints, invoke activities, task module, task fetch, task submit, authentication
-  - name: Use Fluid with Microsoft Teams
-    href: tabs/how-to/using-fluid-msteam.md
   - name: Tabs link unfurling and Stage View
     href: tabs/tabs-link-unfurling.md
     displayName: Tab in stage view
