@@ -97,13 +97,8 @@ Real-time media refers to scenarios where media must be processed in real-time, 
 
 * [Graph API reference](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true)
 * [Sample apps](https://github.com/microsoftgraph/microsoft-graph-comms-samples)
-* [Registering a bot that supports calls and online meetings](./registering-calling-bot.md)
-* [Graph permissions for calls and online meetings bots](./registering-calling-bot.md#add-graph-permissions)
 * [How to develop calling and online meeting bots on your computer](./debugging-local-testing-calling-meeting-bots.md)
-* [Requirements and considerations for application-hosted media bots](./requirements-considerations-application-hosted-media-bots.md)
-* [Technical information on handling incoming call notifications](./call-notifications.md)
 * [Set up an auto attendant](/microsoftteams/create-a-phone-system-auto-attendant)
 * [Set up auto answer for Microsoft Teams Rooms on Android and Teams video phone devices](/microsoftteams/set-up-auto-answer-on-teams-android)
 * [Teams recording policy](/MicrosoftTeams/teams-recording-policy)
-* [Work with communications API in Microsoft Graph](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true)
 * [Enable an event as online meeting in Outlook calendar](/graph/outlook-calendar-online-meetings?tabs=http)
