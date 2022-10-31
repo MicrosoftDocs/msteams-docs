@@ -26,34 +26,46 @@ The `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permissions in a
 
 For your bot to receive all channel messages, RSC must be configured in the Teams app manifest with the `ChannelMessage.Read.Group` permission specified in the `webApplicationInfo` property.
 
-:::image type="content" source="~/bots/how-to/conversations/Media/appmanifest.png" alt-text="Screenshot of app manifest update.":::
+For more information about manifest schema, see [app manifest schema for Teams](../../../resources/schema/manifest-schema.md).
+
+:::image type="content" source="../../../assets/images/bots/RSC/appmanifest_1.png" alt-text="app manifest":::
 
 The following list describes the `webApplicationInfo` object:
 
-* **id**: Your Microsoft Azure Active Directory (AAD) app ID. The app ID can be the same as your bot ID.
-* **resource**: Any string. The resource field has no operation in RSC, but must be added with a value to avoid error response.
-* **applicationPermissions**: RSC permissions for your app with `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` must be specified. For more information, see [resource-specific permissions](/microsoftteams/platform/graph-api/rsc/resource-specific-consent#resource-specific-permissions).
+* **webApplicationInfo.id**: Your Microsoft Azure Active Directory (AAD) app ID. The app ID can be the same as your bot ID.
+* **webApplicationInfo.resource**: Any string. The resource field has no operation in RSC, but must be added with a value to avoid error response.
+* **authorization.permissions.resourceSpecific**: RSC permissions for your app with either or both `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat`must be specified and it depends on the conversation contexts relevant to your app.  For more information, see [resource-specific permissions](/microsoftteams/platform/graph-api/rsc/resource-specific-consent#resource-specific-permissions).
 
-For more information, see [resource-specific consent](../../../graph-api/rsc/resource-specific-consent.md)
+For more information, see [resource-specific consent](../../../graph-api/rsc/resource-specific-consent.md).
 
-The following code provides an example of the app manifest:
+The following code provides an example of the app manifest version 1.12 or higher:
 
 ```json
 "webApplicationInfo": {
-  "id": "XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
-  "resource": "https://AnyString",
-  "applicationPermissions": [
-    "ChannelMessage.Read.Group"
-    "ChatMessage.Read.Chat"
-  ]
-}
+        "id": "5ba934a5-3c72-40f1-aef0-0469ca82611c",
+        "resource": "https://AnyString"
+    },
+    "authorization": {
+        "permissions": {
+            "resourceSpecific": [
+                {
+                    "type": "Application",
+                    "name": "ChannelMessage.Read.Group"
+                },
+                {
+                    "type": "Application",
+                    "name": "ChatMessage.Read.Chat"
+                }
+            ]
+        }
+    },
 ```
 
 ## Sideload in a conversation to test
 
 > [!NOTE]
 >
-> Receive messages in group chat messages without being @ mentioned is available only in [public developer preview for Teams](../../../resources/dev-preview/developer-preview-intro.md)
+> Receive messages in group chat messages without being @mentioned is available only in [public developer preview for Teams](../../../resources/dev-preview/developer-preview-intro.md)
 
 # [Channel messages](#tab/channel)
 
@@ -61,7 +73,7 @@ The following steps guide you to sideload and validate bot that receives all cha
 
 1. Select or create a team.
 1. Select the ellipses &#x25CF;&#x25CF;&#x25CF; from the left pane. The dropdown menu appears.
-1. Select **Manage team** from the dropdown menu. The details appear:
+1. Select **Manage team** from the dropdown menu.
 
    :::image type="content" source="Media/managingteam.png" alt-text="Screenshot of Managing team option in Teams application.":::
 
@@ -75,7 +87,7 @@ The following steps guide you to sideload and validate bot that receives all cha
 
       :::image type="content" source="Media/selectapppackage.png" alt-text="Screenshot of the open dialog box to select the app package." lightbox="Media/selectapppackage.png":::
 
-1. Select **Add** from the app details pop-up, to add the bot to your selected team:
+1. Select **Add** from the app details pop-up, to add the bot to your selected team.
 
       :::image type="content" source="Media/addingbot.png" alt-text="Screenshot of the Add button to add a bot to a team." lightbox="Media/addingbot.png":::
 
@@ -87,7 +99,7 @@ The following steps guide you to sideload and validate bot that receives all cha
 
 # [Chat messages](#tab/chat)
 
-The following steps guide you to sideload and validate bot that receives all chat messages without being @ mentioned in a chat:
+The following steps guide you to sideload and validate bot that receives all chat messages without being @mentioned in a chat:
 
 1. Select or create a group chat.
 1. Select the ellipses &#x25CF;&#x25CF;&#x25CF; from the group chat. The dropdown menu appears.
@@ -100,7 +112,7 @@ The following steps guide you to sideload and validate bot that receives all cha
    :::image type="content" source="../../../assets/images/bots/Chats_Manage_Apps_Page.png" alt-text="Uploading custom app.":::
 
 1. Select the app package from the **Open** dialog box.
-1. Select **Open**:
+1. Select **Open**.
 
    :::image type="content" source="../../../assets/images/bots/Chats_Sideload_App_FilePicker.png" alt-text= "Selecting app package.":::
 
