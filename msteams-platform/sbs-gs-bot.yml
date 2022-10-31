@@ -276,6 +276,7 @@ items:
     | `.fx/configs/config.<envName>.json` | Configuration file for every environment. |
     | `.fx/configs/azure.parameters.<envName>.json` | Parameters file for Azure BICEP provision for every environment. |
     | `.fx/configs/projectSettings.json` | Global project settings that apply to all environments. |
+    | `.fx/configs/ngrok.yml` | Ngrok settings|
     | `bot` |  Code for the Bot capability needed at runtime. |
     | `bot/teamsBot.js` | Main entry point for the bot app. |
     | `templates/appPackage` | App manifest template files, and the app icons, color.png and outline.png. |
@@ -343,6 +344,9 @@ items:
 
     1. Select **F5** in Visual Studio Code to run your app in debug mode.
 
+        > [!NOTE]
+        > If Teams Toolkit is unable to check a particular prerequisite, it prompts you to check it.
+
         <!-- markdownlint-disable MD033 -->
 
         <details>
@@ -354,19 +358,16 @@ items:
           - You're logged in with a Microsoft 365 account.
           - Sideloading is enabled for your Microsoft 365 account.
           - Supported Node.js version is installed.
-          - NPM packages for bot app are installed.
           - Ngrok is installed.
           - Port required by bot app is available.
-
-          > [!NOTE]
-          > If Teams Toolkit is unable to check a particular prerequisite, it prompts you to check it.
-
-        2. Starts Ngrok to create a HTTP tunnel.
-        3. Registers the app in Azure AD and configures the app.
-        4. Registers the bot app in Bot Framework and configures the bot app.
-        5. Registers the app in Teams Developer Portal and configures the app.
-        6. Starts the bot app.
-        7. Starts Teams in a web browser and sideloads the bot app.
+          
+        2. Install npm packages.
+        3. Starts Ngrok to create a HTTP tunnel.
+        4. Registers the app in Azure AD and configures the app.
+        5. Registers the bot app in Bot Framework and configures the bot app.
+        6. Registers the app in Teams Developer Portal and configures the app.
+        7. Starts the bot app.
+        8. Starts Teams in a web browser and sideloads the bot app.
 
 
         </details>
@@ -374,7 +375,7 @@ items:
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/f5-build-and-run.png" alt-text="Screenshot showing when F5 key is pressed for debugging.":::
 
         > [!NOTE]
-        > When you run the app for the first time, all dependencies are downloaded, and the app is built. A browser window automatically opens when the build is complete. This process can take 3-5 minutes to complete.
+        > When you run the app for the first time, all dependencies are downloaded, and the app is built. A browser window automatically opens when the build is complete. This process can take three to five minutes to complete.
 
         Teams runs your app in a web browser.
 

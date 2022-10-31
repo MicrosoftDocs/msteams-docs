@@ -43,7 +43,7 @@ items:
    | --- | --- | --- |
    | **Required** | &nbsp; | &nbsp; |
    | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use version 1.55 or later. |
-   | &nbsp; | [Teams Toolkit](#install-the-teams-toolkit) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use 4.0.0 version. |
+   | &nbsp; | [Teams Toolkit](#tabpanel_1_vscode) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use 4.0.0 version. |
    | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. Use the latest v16 LTS release.|
    | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call - all in one place.|
    | &nbsp; | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
@@ -357,17 +357,17 @@ items:
           * You're logged in with a Microsoft 365 account.
           * Sideloading is enabled for your Microsoft 365 account.
           * Supported Node.js version is installed.
-          * NPM packages for tab app are installed.
           * Development certificate for localhost is installed.           
           * Port is available for the tab app.
 
           > [!NOTE]
           > If Teams Toolkit is unable to check a particular prerequisite, it prompts you to check it.
 
-        2. Registers the app with Azure AD and configures the app.
-        3. Registers the app in Teams Developer Portal and configures the app.
-        4. Starts the tab app.
-        5. Starts Teams in a web browser and sideloads the tab app.
+        2. Install NPM packages.
+        3. Registers the app with Azure AD and configures the app.
+        4. Registers the app in Teams Developer Portal and configures the app.
+        5. Starts the tab app.
+        6. Starts Teams in a web browser and sideloads the tab app.
 
         </details>
 
