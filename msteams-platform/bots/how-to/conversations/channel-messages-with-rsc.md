@@ -8,6 +8,10 @@ ms.localizationpriority: medium
 
 # Receive all conversation messages with RSC
 
+> [!NOTE]
+>
+> The ability for bots to receive all messages in chats using ChatMessage.Read.Chat is available only in [public developer preview for Teams](../../../resources/dev-preview/developer-preview-intro.md)
+
 The resource-specific consent (RSC) permissions model, originally developed for Teams Graph APIs, is being extended to bot scenarios.
 
 Using RSC, you can request team owners to consent for a bot to receive user messages across standard channels and group chats in a team without being @mentioned. The capability is enabled by specifying the `ChannelMessage.Read.Group` or `ChatMessage.Read.Chat` permissions in the manifest of an RSC enabled Teams app. The conversation owners can grant consent during the app installation or upgrade process. Bots can receive all group chat messages in a team when consented to during app installation. For more information about enabling RSC for your app, see [resource-specific consent](../../../graph-api/rsc/resource-specific-consent.md).
@@ -41,31 +45,72 @@ For more information, see [resource-specific consent](../../../graph-api/rsc/res
 The following code provides an example of the app manifest version 1.12 or higher:
 
 ```json
-"webApplicationInfo": {
+{
+    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.12/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.12",
+    "version": "1.0.0",
+    "id": "4972dc1a-24d1-41b9-a298-afba4a5a20fb",
+    "packageName": "com.vucorp.rscechobot",
+    "developer": {
+        "name": "VuCorp",
+        "websiteUrl": "https://www.vucorp.com",
+        "privacyUrl": "https://www.vucorp.com/privacy",
+        "termsOfUseUrl": "https://www.vucorp.com/tos"    },
+    "icons": {
+        "color": "color.png",
+        "outline": "outline.png"    },
+    "name": {
+        "short": "RscEchoBot",
+        "full": "Echo bot with RSC configured for all conversation messages"    },
+    "description": {
+        "short": "Echo bot with RSC configured for all channel and chat messages",
+        "full": "Echo bot configured with all channel and chat messsages RSC permission in manifest"    },
+    "accentColor": "#FFFFFF",
+    "staticTabs": [
+        {
+            "entityId": "conversations",
+            "scopes": [
+                "personal"            ]
+        },
+        {
+            "entityId": "about",
+            "scopes": [
+                "personal"            ]
+        }
+    ],
+    "webApplicationInfo": {
         "id": "5ba934a5-3c72-40f1-aef0-0469ca82611c",
-        "resource": "https://AnyString"
-    },
+        "resource": "https://AnyString"    },
     "authorization": {
         "permissions": {
             "resourceSpecific": [
                 {
                     "type": "Application",
-                    "name": "ChannelMessage.Read.Group"
-                },
+                    "name": "ChannelMessage.Read.Group"                },
                 {
                     "type": "Application",
-                    "name": "ChatMessage.Read.Chat"
-                }
+                    "name": "ChatMessage.Read.Chat"                }
             ]
         }
     },
+    "bots": [
+        {
+            "botId": "5ba934a5-3c72-40f1-aef0-0469ca82611c",
+            "scopes": [
+                "personal",
+                "team",
+                "groupchat"            ],
+            "supportsFiles": false,
+            "isNotificationOnly": false        }
+    ],
+    "permissions": [
+        "identity",
+        "messageTeamMembers"    ],
+    "validDomains": []
+}
 ```
 
 ## Sideload in a conversation to test
-
-> [!NOTE]
->
-> Receive messages in group chat messages without being @mentioned is available only in [public developer preview for Teams](../../../resources/dev-preview/developer-preview-intro.md)
 
 # [Channel messages](#tab/channel)
 
