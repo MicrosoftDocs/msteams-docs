@@ -561,37 +561,37 @@ The following steps help you to enable SSO in your application.
     > [!NOTE]
     > Ensure to replace `{Your_NameSpace}` with your project namespace.
 
-4. You can update `Program.cs`
+4. You can update `Program.cs`.
 
     1. You can find the following code:
 
-    ```csharp
-    builder.Services.AddSingleton<BotFrameworkAuthentication, ConfigurationBotFrameworkAuthentication>();
-    ```
+       ```csharp
+        builder.Services.AddSingleton<BotFrameworkAuthentication,          ConfigurationBotFrameworkAuthentication>();
+       ```
 
     2. After you find the code, add the following:
 
-    ```csharp
-     builder.Services.AddRazorPages();
-        // Create the Bot Framework Adapter with error handling enabled.                                        
-        builder.Services.AddSingleton<IBotFrameworkHttpAdapter, AdapterWithErrorHandler>();
-        builder.Services.AddSingleton<IStorage, MemoryStorage>();
-        // Create the Conversation state. (Used by the Dialog system itself.)
-        builder.Services.AddSingleton<ConversationState>();
-        // The Dialog that will be run by the bot.
-        builder.Services.AddSingleton<SsoDialog>();
-        // Create the bot as a transient. In this case the ASP Controller is expecting an IBot.
-        builder.Services.AddTransient<IBot, TeamsSsoBot<SsoDialog>>();
-        builder.Services.AddOptions<AuthenticationOptions>().Bind(builder.Configuration.GetSection("TeamsFx").GetSection(AuthenticationOptions.Authentication)).ValidateDataAnnotations();
-        builder.Services.AddOptions<BotAuthenticationOptions>().Configure<IOptions<AuthenticationOptions>>((botAuthOption, authOptions) => {
-            AuthenticationOptions authOptionsValue = authOptions.Value;
-            botAuthOption.ClientId = authOptionsValue.ClientId;
-            botAuthOption.ClientSecret = authOptionsValue.ClientSecret;
-            botAuthOption.OAuthAuthority = authOptionsValue.OAuthAuthority;
-            botAuthOption.ApplicationIdUri = authOptionsValue.ApplicationIdUri;
-            botAuthOption.InitiateLoginEndpoint = authOptionsValue.Bot.InitiateLoginEndpoint;
-        }).ValidateDataAnnotations();
-    ```
+       ```csharp
+         builder.Services.AddRazorPages();
+           // Create the Bot Framework Adapter with error handling enabled.                                        
+           builder.Services.AddSingleton<IBotFrameworkHttpAdapter, AdapterWithErrorHandler>();
+           builder.Services.AddSingleton<IStorage, MemoryStorage>();
+           // Create the Conversation state. (Used by the Dialog system itself.)
+           builder.Services.AddSingleton<ConversationState>();
+           // The Dialog that will be run by the bot.
+           builder.Services.AddSingleton<SsoDialog>();
+           // Create the bot as a transient. In this case the ASP Controller is expecting an IBot.
+           builder.Services.AddTransient<IBot, TeamsSsoBot<SsoDialog>>();
+           builder.Services.AddOptions<AuthenticationOptions>().Bind(builder.Configuration.GetSection("TeamsFx").GetSection(AuthenticationOptions.Authentication)).ValidateDataAnnotations();
+           builder.Services.AddOptions<BotAuthenticationOptions>().Configure<IOptions<AuthenticationOptions>>((botAuthOption, authOptions) => {
+               AuthenticationOptions authOptionsValue = authOptions.Value;
+               botAuthOption.ClientId = authOptionsValue.ClientId;
+               botAuthOption.ClientSecret = authOptionsValue.ClientSecret;
+               botAuthOption.OAuthAuthority = authOptionsValue.OAuthAuthority;
+               botAuthOption.ApplicationIdUri = authOptionsValue.ApplicationIdUri;
+               botAuthOption.InitiateLoginEndpoint = authOptionsValue.Bot.InitiateLoginEndpoint;
+           }).ValidateDataAnnotations();
+       ```
 
     3. You can find and delete the following code:
 
@@ -656,24 +656,24 @@ The following steps help you to add a new command, after you've added SSO in you
 
     1. You can find the following line to register a new command:
 
-      ```csharp
-      ((SsoDialog)_dialog).addCommand("showUserInfo", "show", SsoOperations.ShowUserInfo);
-      ```
+       ```csharp
+         ((SsoDialog)_dialog).addCommand("showUserInfo", "show", SsoOperations.ShowUserInfo);
+       ```
 
     2. After you find the line, add the following to register a new command `"photo"` and hook up with method `'GetUserImageInfo'`:
 
-    ```csharp
-    ((SsoDialog)_dialog).addCommand("getUserImageInfo", "photo", SsoOperations.GetUserImageInfo);
-    ```
+       ```csharp
+       ((SsoDialog)_dialog).addCommand("getUserImageInfo", "photo", SsoOperations.GetUserImageInfo);
+       ```
 
     3. You can open `templates/appPackage/manifest.template.json`, and add the following lines under `command` in `commandLists` of your bot to register your command in the Teams app manifest.:
 
-      ```JSON
-      {
-          "title": "photo",
-          "description": "Show user photo size using Single Sign On feature"
-      }
-      ```
+       ```JSON
+       {
+           "title": "photo",
+           "description": "Show user photo size using Single Sign On feature"
+       }
+       ```
 
    > [!NOTE]
    > Currently, the instructions apply only to command bot.
