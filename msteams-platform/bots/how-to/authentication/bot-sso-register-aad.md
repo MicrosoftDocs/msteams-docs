@@ -30,7 +30,7 @@ The first step to enable SSO for your bot resource is to configure it in the Azu
 You can enable SSO for your Teams bot app in two ways:
 
 - **Configure SSO using bot ID**:
-  - Create bot resource and link it to the app ID of the already registered app
+  - Create bot resource and an app ID (You can also link it to the app ID of the already registered app)
   - Configure messaging endpoint and OAuth connection for the bot resource
   - Configure access token, app ID URI, and trusted client IDs for the linked Azure AD app
 - **Configure SSO using Azure AD app ID**:
@@ -42,9 +42,9 @@ By the end of this tutorial, you should have configured:
 
 - Application ID
 - Bot ID
-- Application ID URL
-- Application scope and permissions
 - Access token
+  - Application ID URI
+  - Scope, permissions, and authorized client IDs
 - Messaging endpoint and OAuth settings
 
 > [!NOTE]
@@ -90,6 +90,8 @@ Messaging endpoint is where messages are sent to your bot. It enables communicat
 1. Select **Apply**.
 
     The messaging endpoint is created.
+
+You've configured the messaging endpoint for your bot resource. Next, you must enable SSO for the Azure AD app.
 
 ### Enable SSO for Azure AD app
 
@@ -167,6 +169,8 @@ You need:
 
 1. Note and save the Application ID URI. You'll need it for updating the Teams app manifest later.
 
+The application ID URI is configured. You can now define scope and permissions for your app.
+
 ##### To configure API scope
 
 1. Select **+ Add a scope** in the **Scopes defined by this API** section.
@@ -193,6 +197,8 @@ You need:
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/scope-added-msg.png" alt-text="Scope added message displayed" border="true":::
 
     The new scope you defined displays on the page.
+
+The scope and permissions are now configured. Configure the authorized client applications for your Azure AD app.
 
 ##### To configure authorized client application
 
@@ -234,6 +240,8 @@ The client ID displays on the page.
 
 > [!NOTE]
 > You can authorize more than one client application. Repeat the steps of this procedure for configuring another authorized client application.
+
+You've successfully configured access token scope, permissions, and client applications. Ensure that you note and save the application ID URI. Next, you can configure the access token version.
 
 #### Configure access token version
 
