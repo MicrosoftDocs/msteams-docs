@@ -51,9 +51,9 @@ Webhooks and connectors connect your bot to your web services. Using webhooks an
 
 ## Advantages of bots
 
-Bots in Microsoft Teams can be part of a one-on-one conversation, a group chat, or a channel in a team. Each scope provides unique opportunities and challenges for your conversational bot.
+Bots in Microsoft Teams can be part of a one-to-one conversation, a group chat, or a channel in a team. Each scope provides unique opportunities and challenges for your conversational bot.
 
-| In a channel | In a group chat | In a one-on-one chat |
+| In a channel | In a group chat | In a one-to-one chat |
 | :-- | :-- | :-- |
 | Massive reach | Fewer members | Traditional way |
 | Concise individual interactions | @mention to bot  | Q&A bots |
@@ -61,7 +61,7 @@ Bots in Microsoft Teams can be part of a one-on-one conversation, a group chat, 
 
 ### In a channel
 
-Channels contain threaded conversations between multiple people even up to two thousand. This potentially gives your bot massive reach, but individual interactions must be concise. Traditional multi-turn interactions don't work. Instead, you must look to use interactive cards or task modules, or move the conversation to a one-on-one conversation to collect lots of information. Your bot only has access to messages where it's `@mentioned`. You can retrieve additional messages from the conversation using Microsoft Graph and organization-level permissions.
+Channels contain threaded conversations between multiple people even up to two thousand. This potentially gives your bot massive reach, but individual interactions must be concise. Traditional multi-turn interactions don't work. Instead, you must look to use interactive cards or task modules, or move the conversation to a one-to-one conversation to collect lots of information. Your bot only has access to messages where it's `@mentioned`. You can retrieve additional messages from the conversation using Microsoft Graph and organization-level permissions.
 
 Bots work better in a channel in the following cases:
 
@@ -76,15 +76,15 @@ Group chats are non-threaded conversations between three or more people. They te
 
 In the cases where bots work better in a channel also work better in a group chat.
 
-### In a one-on-one chat
+### In a one-to-one chat
 
-One-on-one chat is a traditional way for a conversational bot to interact with a user. A few examples of one-on-one conversational bots are:
+One-to-one chat is a traditional way for a conversational bot to interact with a user. A few examples of one-to-one conversational bots are:
 
 * Q&A bots
 * bots that initiate workflows in other systems.
 * bots that tell jokes.
 * bots that take notes.
-Before creating one-on-one chatbots, consider whether a conversation-based interface is the best way to present your functionality.
+Before creating one-to-one chatbots, consider whether a conversation-based interface is the best way to present your functionality.
 
 ## Disadvantages of bots
 
@@ -161,7 +161,7 @@ this.onMessage(async (turnContext, next) => {
 
 ---
 
-The following code provides an example of bot activity for a one-on-one chat:
+The following code provides an example of bot activity for a one-to-one chat:
 
 # [C#](#tab/dotnet)
 
