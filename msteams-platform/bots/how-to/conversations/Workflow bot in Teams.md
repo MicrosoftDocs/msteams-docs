@@ -110,7 +110,7 @@ You can add a new action (button) to an Adaptive Card by defining it in the JSON
 ```
 
 > [!NOTE]
-> When the action is invoked in Teams, verb property is required, so that the TeamsFx conversation SDK can invoke the corresponding action handler. Ensure to provide a global unique string for the verb property, when you're using a general string that might cause a collision with other bot. This can avoid an unexpected behavior.
+> When the action is invoked in Teams, verb property is required, so that the TeamsFx conversation SDK can invoke the corresponding action handler. Ensure to provide a global unique string for the verb property, when you're using a general string that might cause a collision with other bot. This can avoid unexpected behavior.
 
 **Respond with new Adaptive Card**
 
@@ -196,7 +196,7 @@ You can customize the action in this step, such as calling an API, processing da
 
 **Register the action handler**
 
-You need to configure each new card action in the `conversationBot`, that enables the conversational flow of the workflow bot template. You can navigate to `bot/src/internal/initialize.js` file and update the `actions` array of the `cardAction` property.
+You need to configure each new card action in the `conversationBot`, that enables the conversational flow of the workflow bot template. You can navigate to `bot/src/internal/initialize.js(ts)` file and update the `actions` array of the `cardAction` property.
 
 To register the action handler, follow these steps:
 
