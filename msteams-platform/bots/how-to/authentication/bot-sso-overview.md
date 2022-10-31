@@ -52,13 +52,13 @@ The following image shows how SSO works when a Teams app user attempts to access
 
 | # | Interaction | What's going on |
 | --- | --- | --- |
-| 1 | Teams Client → Bot service | The message that app user sends is received by the Teams client, which sends it to the bot. <br> If the app user has previously signed in, a token is saved in the Bot Framework token store. • The bot calls the Bot Framework token service which checks for an existing token for the app user in the token store. If it exists, the app user is given access. <br> • If no token is available, the bot triggers the auth flow. |
+| 1 | Teams Client → Bot service | The message that app user sends is received by the Teams client, which sends it to the bot. <br> If the app user has previously signed in, a token is saved in the Bot Framework token store. <br> • The bot calls the Bot Framework token service which checks for an existing token for the app user in the token store. If it exists, the app user is given access. <br> • If no token is available, the bot triggers the auth flow. |
 | 2 | Bot service → Bot Framework token service | The bot calls the Bot Framework token service to obtain a sign in link for the user. |
 | 3 | Bot Framework token service → Teams client | Bot Framework token service sends the request fpr sign-in link to the bot service, which forwards it to the Teams client. |
 | 4 | Teams client → Bot service | After the Teams client receives the OAuth card for the app user, if Single Sign On is enabled, it sends a token exchange request for the app user back to the bot. |
 | 5 | Bot service → Bot Framework token service | The bot calls the token service, attempting to exchange the received token.  |
 | 6 | Bot Framework token service → Azure AD | For the app user who's using the bot service for the first time, the exchange can occur only after app user gives their consent.  The Teams client displays a message to the app user for giving consent. |
-| 7 | Azure AD → Teams client | For the app user who's using the bot service for the first time, the token exchange can occur only after app user gives their consent. The Teams client displays a message to the app user for giving consent. <br> • The authentication falls back to the sign-in prompt and the app user must sign in to use the bot app. The Sign in button pops up in Teams, and then Azure AD Sign in page is rendered when clicked. • The app user signs in and grants access to the bot service. |
+| 7 | Azure AD → Teams client | For the app user who's using the bot service for the first time, the token exchange can occur only after app user gives their consent. The Teams client displays a message to the app user for giving consent. <br> • The authentication falls back to the sign-in prompt and the app user must sign in to use the bot app. The Sign in button pops up in Teams, and then Azure AD Sign in page is rendered when clicked. <br> • The app user signs in and grants access to the bot service. |
 | 8 | Bot service -> Bot Framework token service | The token for the app user is stored in the token store. |
 
 > [!NOTE]
