@@ -39,7 +39,7 @@ If you set the card version to less than 1.4 and use either or both, `refresh` p
 
 | Client | Behavior |
 | :-- | :-- |
-| Teams | Your card stops working. Card is not refreshed and `Action.Execute` does not render depending on the version of the Teams client. To ensure maximum compatibility in Teams, define `Action.Execute` with an `Action.Submit` in the fallback property. |
+| Teams | Your card stops working. Card isn't refreshed and `Action.Execute` doesn't render depending on the version of the Teams client. To ensure maximum compatibility in Teams, define `Action.Execute` with an `Action.Submit` in the fallback property. |
 
 For more information on how to support older clients, see [backward compatibility](#backward-compatibility).
 
@@ -63,7 +63,7 @@ The following are the features of UserIds in refresh:
 
 * UserIds is an array of user MRIs, which is part of the `refresh` property in Adaptive Cards.
 
-* If the `userIds` list property is specified as `userIds: []` in the refresh section of the card, the card is not automatically refreshed. Instead, a **Refresh Card** option is displayed to the user in the triple dot menu in Teams web client or desktop and in the long press context menu in Teams mobile, that is, Android or iOS to manually refresh the card. Alternatively, you may choose to skip `userIds` in the refresh property altogether in case the scenario involves <=60 members in Teams group chats or channels. The Teams client automatically invokes refresh calls for all the users if the group or channel has <=60 users.
+* If the `userIds` list property is specified as `userIds: []` in the refresh section of the card, the card isn't automatically refreshed. Instead, a **Refresh Card** option is displayed to the user in the triple dot menu in Teams web client or desktop and in the long press context menu in Teams mobile, that is, Android or iOS to manually refresh the card. Alternatively, you may choose to skip `userIds` in the refresh property altogether in case the scenario involves <=60 members in Teams group chats or channels. The Teams client automatically invokes refresh calls for all the users if the group or channel has <=60 users.
 
 * UserIds property is added because channels in Teams can include a large number of members. If all members are viewing the channel at the same time, an unconditional automatic refresh results in many concurrent calls to the bot. The `userIds` property must always be included to identify which users must get an automatic refresh with a maximum of *60 (sixty) user MRIs*.
 
@@ -110,8 +110,8 @@ For more information, see [backward compatibility on Teams](/adaptive-cards/auth
 
 |Sample name | Description | .NETCore | Node.js |
 |----------------|-----------------|--------------|--------------|
-| Teams catering bot | Create a bot that accepts food order using Adaptive Cards. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-catering/csharp)| Not yet available |
-| Sequential Workflows Adaptive Cards | Demonstrate how to implement Sequential Workflows, User Specific Views, and up to date Adaptive Cards in bots. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) .|
+| Teams catering bot | Create a bot that accepts food order using Adaptive Cards. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-catering/csharp)| NA |
+| Sequential Workflows Adaptive Cards | Demonstrate how to implement Sequential Workflows, User Specific Views, and up to date Adaptive Cards in bots. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) |
 
 ## See also
 
