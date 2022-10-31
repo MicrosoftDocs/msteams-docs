@@ -134,7 +134,7 @@ When you select the back button in a Teams app, you will return to the Teams pla
 
 To navigate within the app, configure the back button so that when you select the back button, you can go back to previous steps and navigate within the app.
 
-To **Configure back button**, call [registerBackButtonHandler](/javascript/api/@microsoft/teams-js/pages.backstack?view=msteams-client-js-latest&preserve-view=true&branch=pr-en-us-6801&preserve-view=true) API, which handles the functionality of the back button depending on one of the following conditions:
+To **Configure back button**, call [registerBackButtonHandler](/javascript/api/@microsoft/teams-js/pages.backstack?view=msteams-client-js-latest&preserve-view=true&preserve-view=true) API, which handles the functionality of the back button depending on one of the following conditions:
 
 * When `registerBackButtonHandler` is set to `false`, the JavaScript SDK calls the `navigateBack` API and the Teams platform handles the back button.
 * When `registerBackButtonHandler` is set to `true`, the app handles the functionality of back button (you can go back to previous steps and navigate within the app), and the Teams platform takes no further actions.
@@ -254,5 +254,5 @@ These other design guidelines may help depending on the scope of your personal a
 
 * [Designing your tab](../../tabs/design/tabs.md)
 * [Designing your bot](../../bots/design/bots.md)
-* [registerBackButtonHandler](/javascript/api/@microsoft/teams-js/pages.backstack?view=msteams-client-js-latest&preserve-view=true&branch=pr-en-us-6801&preserve-view=true)
+* [registerBackButtonHandler](/javascript/api/@microsoft/teams-js/pages.backstack?view=msteams-client-js-latest&preserve-view=true&preserve-view=true)
 * [DisplayMode enum](/javascript/api/@microsoft/teams-js/menus.displaymode?view=msteams-client-js-latest&preserve-view=true)

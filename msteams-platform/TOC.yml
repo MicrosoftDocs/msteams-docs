@@ -268,6 +268,8 @@
   - name: Get context for your tab
     href: tabs/how-to/access-teams-context.md
     displayName: User context, authentication flow from Microsoft Azure Active Directory, retrieve context, theme changes
+  - name: Navigate within personal tabs
+    href: tabs/how-to/personal-tab-navigation.md
   - name: Build apps for shared channels
     href: concepts/build-and-test/shared-channels.md
     displayName: Cross-tenant notifications, context for shared channel, apps and permissions in shared channels
