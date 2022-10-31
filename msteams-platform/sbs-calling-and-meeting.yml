@@ -130,9 +130,11 @@ items:
 
     1. Replace `azure-client-id` with your **Microsoft App ID** and `object-id` with the **Tenant ID** of your account used to sign in to the Teams. Copy the link as shown in the following image and you can find the tenant ID of your Teams account in the link obtained:
 
-       1. Select **Teams**.
-       1. Select the ellipse ●●●.
-       1. Select **Get link to team**.
+        1. Select **Teams**.
+
+        1. Select the ellipse ●●●.
+
+        1. Select **Get link to team**.
        
         :::image type="content" source="./assets/images/calls-and-meetings/teams-final.png" alt-text="Screenshot shows the replacement of Microsoft-App ID.":::
        
@@ -285,11 +287,14 @@ items:
 
         * You can obtain the `MicrosoftAppId` from the bot's configuration page. The `MicrosoftAppPassword` is the value for client secret ID that you saved previously.
         * You can obtain the `tenantId` or `UserId` from the link of the account used to sign in to the Teams. Follow the path in the image to get the link for `tenantId`:
-          1. Select **Teams**.
-          1. Select ellipses ●●●.
-          1. Select **Get link to team**.
+          
+           1. Select **Teams**.
 
-            :::image type="content" source="./assets/images/calls-and-meetings/teams-final.png" alt-text="Screenshot showing the Teams link.":::
+           1. Select ellipses ●●●.
+
+           1. Select **Get link to team**.
+
+           :::image type="content" source="./assets/images/calls-and-meetings/teams-final.png" alt-text="Screenshot showing the Teams link.":::
         
         * You can obtain the `displayName` and `id` from [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) site:
 
