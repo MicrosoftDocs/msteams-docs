@@ -11,7 +11,8 @@ ms.author: anclear
 
 This document builds on the article on [how bots work](https://aka.ms/how-bots-work) in the core [Bot Framework documentation](https://aka.ms/azure-bot-service-docs). The primary difference between bots developed for Microsoft Teams and the core Bot Framework is in the features provided in Teams.
 
-To organize the conversational logic for your bot, an activity handler is used. Activities are handled in two ways using Teams activity handlers and bot logic. The Teams activity handler adds support for Teams-specific events and interactions. The bot object contains the conversational reasoning or logic for a turn and exposes a turn handler, which is the method that can accept incoming activities from the bot adapter.
+An activity handler is used to organize the conversational logic for your bot.
+Activities are handled in two ways using Teams activity handlers and bot logic. The Teams activity handler adds support for Teams-specific events and interactions. The bot object contains the conversational reasoning or logic for a turn and exposes a turn handler, which is the method that can accept incoming activities from the bot adapter.
 
 ## Teams activity handlers
 
@@ -187,7 +188,7 @@ The bot logic processes incoming activities from one or more of your bot channel
 
 Activity handlers are different in context of a team, where a new member is added to the team instead of a message thread.
 
-The list of handlers defined in `ActivityHandler` includes the following:
+The list of handlers defined in `ActivityHandler` includes the following events:
 
 | Event | Handler | Description |
 | :-- | :-- | :-- |
@@ -203,7 +204,7 @@ The list of handlers defined in `ActivityHandler` includes the following:
 
 #### Teams specific activity handlers
 
-The `TeamsActivityHandler` extends the list of handlers in the core Bot Framework handlers section to include the following:
+The `TeamsActivityHandler` extends the list of handlers in the core Bot Framework handlers section to include the following events:
 
 | Event | Handler | Description |
 | :-- | :-- | :-- |
@@ -216,7 +217,7 @@ The `TeamsActivityHandler` extends the list of handlers in the core Bot Framewor
 
 #### Teams invoke activities
 
-The list of Teams activity handlers called from the `OnInvokeActivityAsync` Teams activity handler includes the following:
+The list of Teams activity handlers called from the `OnInvokeActivityAsync` Teams activity handler includes the following invoke types:
 
 | Invoke types                    | Handler                              | Description                                                  |
 | :-----------------------------  | :----------------------------------- | :----------------------------------------------------------- |
@@ -240,7 +241,7 @@ The Invoke activities listed in this section are for conversational bots in Team
 
 Activity handlers are different in context of a team, where the new member is added to the team instead of a message thread.
 
-The list of handlers defined in `ActivityHandler` includes the following:
+The list of handlers defined in `ActivityHandler` includes the following events:
 
 | Event | Handler | Description |
 | :-- | :-- | :-- |
@@ -255,7 +256,7 @@ The list of handlers defined in `ActivityHandler` includes the following:
 
 #### Teams specific activity handlers
 
-The `TeamsActivityHandler` extends the list of handlers in the core Bot Framework handlers section to include the following:
+The `TeamsActivityHandler` extends the list of handlers in the core Bot Framework handlers section to include the following events:
 
 | Event | Handler | Description |
 | :-- | :-- | :-- |
@@ -292,7 +293,7 @@ The invoke activities listed in this section are for conversational bots in Team
 
 Activity handlers are different in context of a team, where the new member is added to the team instead of a message thread.
 
-The list of handlers defined in `ActivityHandler` includes the following:
+The list of handlers defined in `ActivityHandler` includes the following events:
 
 | Event | Handler | Description |
 | :-- | :-- | :-- |
@@ -308,7 +309,7 @@ The list of handlers defined in `ActivityHandler` includes the following:
 
 #### Teams specific activity handlers
 
-The `TeamsActivityHandler` extends the list of handlers from the core Bot Framework handlers section to include the following:
+The `TeamsActivityHandler` extends the list of handlers from the core Bot Framework handlers section to include the following events:
 
 | Event | Handler | Description |
 | :-- | :-- | :-- |
@@ -321,7 +322,7 @@ The `TeamsActivityHandler` extends the list of handlers from the core Bot Framew
 
 #### Teams invoke activities
 
-The list of Teams activity handlers called from the `on_invoke_activity` Teams activity handler includes the following:
+The list of Teams activity handlers called from the `on_invoke_activity` Teams activity handler includes the following invoke types:
 
 | Invoke types                    | Handler                              | Description                                                  |
 | :-----------------------------  | :----------------------------------- | :----------------------------------------------------------- |
