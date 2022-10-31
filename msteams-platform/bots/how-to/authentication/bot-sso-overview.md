@@ -4,7 +4,7 @@ description: Learn about Single sign-on (SSO) authentication in Teams and how to
 ms.topic: conceptual
 ms.localizationpriority: high
 ---
-# Enable SSO for bot app
+# Enable SSO for your app
 
 <!--Single sign-on (SSO) allows a user to access an application or a web service after signing-in only once. The app users never have to go through authentication again.-->
 
@@ -14,11 +14,12 @@ Here's what you'll learn in this section:
 
 1. **SSO user experience**: Teams offers your app users a true SSO experience. App users can use your app without signing in again.
 2. **SSO in Teams at runtime**: Your bot app interacts with Azure AD at runtime for one-time authentication and authorization for your app users.
-3. **Enable SSO for your bot app**: Implement the tasks involved to implement SSO in your bot app.
+
+This section covers SSO configuration required for bot and messaging extension apps.
 
 ## SSO user experience in Teams
 
-App users sign in to Teams using either personal Microsoft account or Microsoft 365 account. You can take advantage of this, and use SSO to authenticate and authorize the app users. Azure AD provides app users access to your bot app. It's based on the app user's Teams identity. The app user who has signed into Teams can be given access to your bot app.
+App users sign in to Teams using either personal Microsoft account or Microsoft 365 account. You can take advantage of this, and use SSO to authenticate and authorize the app users. Azure AD provides app users access to your bot or message extension app. It's based on the app user's Teams identity. The app user who has signed into Teams can be given access to your app.
 
 - Teams authenticates and stores the identity of its app user.
 - Your bot uses the stored identity of the app user who is already validated by Teams.
