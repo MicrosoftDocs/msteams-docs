@@ -34,8 +34,8 @@ After you've identified the app scope, it's time to understand the following thr
 
    Provide complete app experiences to engage on mobile. As your users engage with your app, provide full immersive experience on mobile, either at par or better than desktop experience. To provide good experience for your users, make all use cases responsive on mobile.
 
-> [!TIP]
-> To get information on the design guidelines, see [design process for Teams apps](design-teams-app-process.md).
+    > [!TIP]
+    > To get information on the design guidelines, see [design process for Teams apps](design-teams-app-process.md).
 
 ## Use cases
 
