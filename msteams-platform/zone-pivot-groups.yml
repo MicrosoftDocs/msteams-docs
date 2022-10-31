@@ -43,7 +43,7 @@ groups:
   prompt: Before you begin, select the app for which you want to add code to enable SSO
   pivots:
   - id: bot-app
-    title: Add code to enable SSO for your bot app
+    title: Add code for bot app
   - id: mex-app
-    title: Add code to enable SSO for your message extension app    
+    title: Add code for message extension app    
 
