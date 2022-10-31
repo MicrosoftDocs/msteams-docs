@@ -291,6 +291,8 @@ Developer preview is a public program that provides early access to unreleased T
 
 ***October 11, 2022***: [Generate a deep link to share content to stage in meetings.](apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#generate-a-deep-link-to-share-content-to-stage-in-meetings)
 
+***October 31, 2022***: [Enable bots to receive all chat messages without @mentioned] [Receive all conversation messages with RSC](bots/how-to/conversations/channel-messages-with-rsc.md).
+
 :::column-end:::
 :::row-end:::
 
