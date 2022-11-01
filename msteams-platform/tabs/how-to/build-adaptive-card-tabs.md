@@ -432,7 +432,6 @@ The following code shows a reissued request example:
 
 ## See also
 
-* [Adaptive Card](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
-* [Teams tabs](~/tabs/what-are-tabs.md)
-* [Tabs on mobile](~/tabs/design/tabs-mobile.md)
-* [Form completion feedback](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)
+* [Cards](../../task-modules-and-cards/what-are-cards.md)
+* [Use task modules in tabs](../../task-modules-and-cards/task-modules/task-modules-tabs.md)
+* [Form completion feedback](../../bots/how-to/conversations/conversation-messages.md#form-completion-feedback)
