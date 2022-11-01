@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Microsoft Teams calling and meeting bot provides basic functionalities such as create a call, join a call, transfer or redirect a call, join a scheduled meeting, and invite the participants by integrating cloud communications Graph API.
+    Microsoft Teams calling and meeting bot provides basic functionalities such as, create a call, join a call, transfer or redirect a call, join a scheduled meeting, and invite the participants by integrating cloud communications Graph API.
     
     Bots can interact with Teams calls and meetings using real time voice, video, and screen sharing. With Microsoft Graph APIs for calls and online meetings, Teams apps can interact with users using voice and video to enhance their experience. These APIs allow you to add the following new features:
 
