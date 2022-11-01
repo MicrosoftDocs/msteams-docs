@@ -57,7 +57,7 @@ items:
     1. Add Microsoft Teams channel to deploy the bot to a Teams channel.
     1. Add messaging endpoint to the ngrok tunnel you created.
 
-    **Create ngrok tunnel:**
+    **Create ngrok tunnel**
 
     Use ngrok to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
 
@@ -65,7 +65,7 @@ items:
     ngrok http --host-header=rewrite 3978
     ```
 
-    **Register an app in Azure:**
+    **Register an app in Azure**
 
     1. Go to [Azure portal](https://portal.azure.com/) using your personal Microsoft account.
     1. Select **Azure Active Directory**.
