@@ -154,6 +154,6 @@ Encoded
 ## See also
 
 * [Add link unfurling](../messaging-extensions/how-to/link-unfurling.md)
-* [composeExtensions.commands](../resources/schema/manifest-schema.md#composeextensionscommands)
+* [composeExtensions](../resources/schema/manifest-schema.md#composeextensions)
 * [Build tabs with Adaptive Cards](how-to/build-adaptive-card-tabs.md)
 * [Create deep links](../concepts/build-and-test/deep-links.md)
