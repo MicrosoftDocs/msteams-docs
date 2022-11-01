@@ -86,7 +86,7 @@ items:
         
          :::image type="content" source="./assets/images/sbs-messagingextension-action/create-azurebot_1.png" alt-text="Select resource Azure bot.":::
     
-       You can also create a new resource group. Select **Create new** > enter resource name > select **OK**. Select the required location from **New resource group location** dropdown list.
+       You can create a new resource group. Select **Create new** > enter resource name > select **OK**. Select the required location from **New resource group location** dropdown list.
         
         :::image type="content" source="~/assets/images/bots/newresource.png" alt-text="Screenshot showing the new resource group location.":::
        
@@ -94,7 +94,7 @@ items:
     
     1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected. 
     
-       You can also select **Use existing app registration** and enter **App ID**, **App tenant ID**, and **MSI resource ID**.
+       You can select **Use existing app registration** and enter **App ID**, **App tenant ID**, and **MSI resource ID**.
 
        > [!NOTE]
        > You can't create more than one bot with the same **Microsoft App ID**.
