@@ -16,9 +16,9 @@ items:
   content: |
     The meeting side panel enhances your in-meeting experience and helps organizers and presenters to have different sets of views and actions.
 
-    Key features of the meeting side panel:
+    Key features of the meeting side panel are:
 
-    * Provision to add a new agenda point.
+    * Provisions to add a new agenda point.
     * Adds the agenda as text input to the side panel list.
     * Publishes the agenda list to the meeting chat.
     
@@ -60,7 +60,7 @@ items:
    1. Select **Clone**. 
            
       > [!NOTE]
-      > If you encounter the error "Filename too long," apply the git command `git config --system core.longpaths true` in your administrator terminal.
+      > If you encounter the error "Filename too long," apply the git command `git config --system core.longpaths true` in your administrator terminal of choice.
 
 - title: Create and register your bot
   durationInMinutes: 5
@@ -146,7 +146,7 @@ items:
 
          :::image type="content" source="~/assets/images/meetings-side-panel/clientsecret_1.png" alt-text="Add client secret to app":::
 
-    1. In the **Value**, select **Copy to clipboard** to copy the value details.
+    1. Select **Copy to clipboard** to copy the **Value** details.
 
          :::image type="content" source="~/assets/images/meetings-side-panel/clientvalue.png" alt-text="Value of client secret":::
        
