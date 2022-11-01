@@ -61,7 +61,6 @@ items:
   content: |
     To create and register your bot in Microsoft Azure Active Directory (Azure AD), perform the following steps:
 
-    * Create a ngrok tunnel to the endpoints of your web server.
     * Create Azure Bot resource to register bot with Azure Bot service.
     * Create client secret to enable single sign-on (SSO) authentication of the bot.
     * Create bot channel registration in Azure account.
