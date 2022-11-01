@@ -114,8 +114,8 @@ items:
 
          :::image type="content" source="./assets/images/calls-and-meetings/client-secret_2.png" alt-text="Screenshirt showing the value being copied to clipboard.":::
 
-        > [!TIP]
-        > Save the client secrets **Value** or app password for future reference.
+          > [!TIP]
+          > Save the client secrets **Value** or app password for future reference.
 
     **Run PowerShell script to create a policy**
 
