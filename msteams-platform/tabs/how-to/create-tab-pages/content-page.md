@@ -106,7 +106,7 @@ Starting with [manifest schema v1.7](../../../resources/schema/manifest-schema.m
 
 > [!NOTE]
 >
-> * The behavior on mobile clients isn't configurable through the native loading indicator property. Mobile clients show this indicator by default across content pages and iframe-based task modules. This indicator on mobile is shown when a request is made to fetch content and gets dismissed as soon as the request gets completed.
+> The behavior on mobile clients isn't configurable through the native loading indicator property. Mobile clients show this indicator by default across content pages and iframe-based task modules. This indicator on mobile is shown when a request is made to fetch content and gets dismissed as soon as the request gets completed.
 
 If you indicate `showLoadingIndicator : true`  in your app manifest, then all tab configuration, content, removal pages, and all iframe-based task modules must follow these steps:
 
@@ -116,7 +116,7 @@ To show the loading indicator:
 1. Call `app.initialize();`.
 1. As a **mandatory** step, call `app.notifySuccess()` to notify Teams that your app has successfully loaded. Then, Teams hides the loading indicator, if applicable. If `notifySuccess`  isn't called within 30 seconds, Teams assumes that your app timed out, and displays an error screen with a retry option.
 1. **Optionally**, if you're ready to print to the screen and wish to lazy load the rest of your application's content, you can hide the loading indicator manually by calling `app.notifyAppLoaded();`.
-1. If your application doesn't load, you can call `app.notifyFailure({reason: app.FailedReason.Timeout, message: "failure message"});` to let Teams know about the failure and, optionally, provide a failure message. An error screen is shown to the user. The following code shows the enumeration that defines the possible reasons you can indicate for the application's failure to load:
+1. If your application doesn't load, you can call `app.notifyFailure({reason: app.FailedReason.Timeout, message: "failure message"});` to let Teams know about the failure and optionally provide a failure message. `notifyFailure` doesn't show custom message. An error screen is shown to the user. The following code shows the enumeration that defines the possible reasons you can indicate for the application's failure to load:
 
     ```typescript
     /* List of failure reasons */

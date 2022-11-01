@@ -76,7 +76,7 @@ You can configure authentication for multiple platforms as long as the URL is un
 
 ### To configure authentication for a platform
 
-1. Open the app you registered in the the [Azure portal](https://ms.portal.azure.com/).
+1. Open the app you registered in the [Azure portal](https://ms.portal.azure.com/).
 
 1. Select **Manage** > **Authentication** from the left pane.
 
