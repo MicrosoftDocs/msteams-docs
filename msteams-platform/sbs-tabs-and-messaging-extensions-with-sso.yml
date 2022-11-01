@@ -75,10 +75,12 @@ items:
     1. In the search box, enter **Azure Bot**.
     1. Select **Enter**.
     1. Select **Azure Bot**.
-
-       :::image type="content" source="./assets/images/azure-bot_1.png" alt-text="Azure bot.":::
-         
     1. Select **Create**.
+
+       :::image type="content" source="./assets/images/Tab-ME-SSO/azure-bot_1.png" alt-text="Azure bot.":::
+         
+    **Create an Azure Bot** window appears.
+
     1. Enter required bot handle name in **Bot handle**.
     1. Select your **Subscription** and **Resource group** from the respective dropdown list.
 
@@ -137,7 +139,7 @@ items:
 
        :::image type="content" source="./assets/images/Tab-ME-SSO/add-client-id.png" alt-text="Add client secret to app.":::
 
-    1. In the **Value** column, select **Copy to clipboard** to copy value details.
+    1. In the **Value**, select **Copy to clipboard** to copy the value details.
 
        :::image type="content" source="./assets/images/Tab-ME-SSO/client-ids_1.png" alt-text="Value of client secret.":::
          
@@ -156,6 +158,8 @@ items:
 
     1. Select **Microsoft Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.
 
+       :::image type="content" source="~/assets/images/Tab-ME-SSO/channel-teams_1.png" alt-text="Select Teams in channels":::
+    
     1. Select the checkbox to accept the **Terms of Service**.
     
     1. Select **Agree**.
@@ -183,18 +187,17 @@ items:
         ![ngrok HTTPS URL](~/assets/images/Tab-ME-SSO/ngrok-image.png)
 
         > [!NOTE]
-        > The HTTPS URL in your ngrok is your fully qualified domain name.
-        > The `WebAppDomain` is a fully qualified domain name that doesn't include `https://` in it.
+        > The HTTPS URL in your ngrok is domain name that doesn't include `https://`.
 
-    1. In **Settings** for the Azure bot that you created, select **Configuration**.
+    1. In **Settings**, select **Configuration**.
 
-    1. In **Messaging endpoint**, use the HTTPS URL available from ngrok and at the end of the URL add **/api/messages**.
+    1. In **Messaging endpoint**, add the HTTPS URL from ngrok and at the end of the URL add **/api/messages**.
 
        :::image type="content" source="./assets/images/Tab-ME-SSO/messaging-endpoint_1.png" alt-text="Messaging Endpoint.":::
         
     1. Select **Apply**.
 
-        You have successfully set up a bot in Azure Bot Service.
+        You have successfully set up a bot in Azure Bot service.
 
 
 - title: Configure SSO for your tab 
@@ -204,11 +207,15 @@ items:
 
     1. Select **Azure Active Directory**.
 
+       :::image type="content" source="./assets/images/Tab-ME-SSO/azure directory.png" alt-text="azure directory.":::
+
     1. From the left pane, select **App registrations**.
 
     1. Select your bot.
 
-    1. Select **Expose an API**.
+       :::image type="content" source="./assets/images/Tab-ME-SSO/app reg.png" alt-text="app reg.":::
+
+    1. Under Manage, Select **Expose an API**.
 
     1. Select **Set**.
 
@@ -226,9 +233,13 @@ items:
        
        :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/selectscope_1.png" alt-text="Select scope":::
     
-    1. In the panel that appears, enter `access_as_user` as the **Scope name**.
+    **Add a scope** window appears.
+
+    1. Enter the following details to configure scope:
+
+       * Enter `access_as_user` as the **Scope name**.
   
-    1. Set **Who can consent?** to `Admins and users`.
+       * Set **Who can consent?** to `Admins and users`.
   
     1. To configure the admin and user consent prompts with appropriate values for `access_as_user` scope, provide the following information in the fields:</br>
  
@@ -287,7 +298,7 @@ items:
 
     1. Select **Delegated permissions**.
 
-    1. Add the following permissions:</br>
+    1. Add the following API permissions:</br>
         * **email**
         * **offline_access**
         * **OpenId**
@@ -307,12 +318,12 @@ items:
 
             :::image type="content" source="./assets/images/Tab-ME-SSO/configure-platform1_1.png" alt-text="web platform.":::
 
-         1. Enter the redirect URI for your app by appending `auth-end` to fully qualified domain name:</br> 
+         1. Enter the redirect URI for your app by appending `auth-end` to domain name:</br> 
            `https://your ngrok/auth-end`. </br>
 
          1. Enable **Implicit grant and hybrid flows** by selecting the following checkboxes:
-             * **ID tokens**
-             * **Access tokens**
+             * **ID tokens (used for implicit flows)**
+             * **Access tokens (used for implicit and hybrid flows)**
    
          1. Select **Configure**.
 
@@ -364,12 +375,12 @@ items:
     1. Update the following information:  
 
          * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
-         * Set `"MicrosoftAppPassword"` to your bot's client secret ID value.
+         * Set `"MicrosoftAppPassword"` to your bot's client secret ID **Value**.
          * Set `"SiteUrl"` to your ngrok URL.
          * Set `"ConnectionName"` to the name of OAuth connection setting.
          * Set `"TenantId"` to the tenant ID of the tenant where the app is used.
          * Set `"ClientId"` to your bot's **Microsoft App ID**.
-         * Set `"AppSecret"` to your bot's client secret ID value.
+         * Set `"AppSecret"` to your bot's client secret ID **Value**.
          * Set `"ApplicationIdURI"` in the form of `api://*******.ngrok.io/botid-{AppID}`.
 
         :::image type="content" source="./assets/images/Tab-ME-SSO/app-setting1.png" alt-text="App settings.":::
@@ -401,7 +412,7 @@ items:
     # [Visual Studio](#tab/vs2019)
 
        1. Launch the latest version of Visual Studio.
-       1. Go to **File** > **Open** > **Project/Solution**.
+       1. Select **File** > **Open** > **Project/Solution**.
     
           ![Open file](~/assets/images/Tab-ME-SSO/open-project1.png)
 
@@ -473,7 +484,7 @@ items:
 
          :::image type="content" source="./assets/images/Tab-ME-SSO/not-login11_1.png" alt-text="not login.":::
 
-      1. Select ellipses **...** to open message extension.
+      1. Select ellipse ●●● to open message extension app.
              
       1. Select your new SSO application.
 
@@ -491,7 +502,7 @@ items:
 
           :::image type="content" source="./assets/images/Tab-ME-SSO/consent-box.png" alt-text= "consent box.":::
 
-      1. Select message extension and select your application.
+      1. Select message extension and your application.
 
       1. Select your profile under search box. You'll see the following output:
 
