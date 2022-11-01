@@ -11,7 +11,7 @@ ms.localizationpriority: high
 
 > [!IMPORTANT]
 >
-> Tabs with Adaptive Cards are currently only supported as personal apps.
+> Tabs with Adaptive Cards are only supported as personal apps.
 
 When developing a tab using the traditional method, you might run into these issues:
 
@@ -40,7 +40,7 @@ Before you start using Adaptive Cards to build tabs, you must:
 Personal apps that render tabs must include a `staticTabs` array in their app manifest. Adaptive Card tabs are rendered when the `contentBotId` property is provided in the `staticTab` definition. Static tab definitions must contain either a `contentBotId`, specifying an Adaptive Card tab or a `contentUrl`, specifying a typical hosted web content tab experience.
 
 > [!NOTE]
-> The `contentBotId` property is currently available in manifest version 1.9 or later.
+> The `contentBotId` property is available in manifest version 1.9 or later.
 
 Provide the `contentBotId` property with the `botId` that the Adaptive Card tab must communicate with. The `entityId` configured for the Adaptive Card tab is sent in the `tabContext` parameter of each invoke request, and can be used to differentiate Adaptive Card Tabs that are powered by the same bot. For more information about other static tab definition fields, see [manifest schema](../../resources/schema/manifest-schema.md#statictabs).
 

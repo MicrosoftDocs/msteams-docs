@@ -104,6 +104,6 @@ Apps must function cross-tenants in installation and usage. The following table 
 ## See also
 
 * [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
-* [Microsoft Teams Connect shared channels](shared-channels.md)
+* [Shared channels in Microsoft Teams](/MicrosoftTeams/shared-channels)
 * [Channel resource type](/graph/api/resources/channel)
 * [Retension policy for Teams locations](/microsoft-365/compliance/create-retention-policies)
