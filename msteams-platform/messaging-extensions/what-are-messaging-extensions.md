@@ -1,7 +1,7 @@
 ---
 title: Message extensions
 author: surbhigupta
-description: Learn how message extensions are used, it's types, and scenarios where it's used on the Microsoft Teams platform. Samples on action and searched based message extension.
+description: Learn how message extensions are used, its types, and scenarios where its used on the Microsoft Teams platform. Samples on action and searched based message extension.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
@@ -37,7 +37,7 @@ A message extension consists of a web service that you host and an app manifest,
 > [!NOTE]
 > Though you can create the web service manually, use [Bot Framework SDK](https://github.com/microsoft/botframework-sdk) to work with the protocol.
 
-In the app manifest for Teams app, a single message extension is defined with up to 10 different commands. Each command defines a type, such as action or search and the locations in the client from where it is invoked. The invoke locations are compose message area, command bar, and message. On invoke, the web service receives an HTTPS message with a JSON payload including all the relevant information. Respond with a JSON payload, allowing the Teams client to know the next interaction to enable.
+In the app manifest for Teams app, a single message extension is defined with up to 10 different commands. Each command defines a type, such as action or search and the locations in the client from where it's invoked. The invoke locations are compose message area, command bar, and message. On invoke, the web service receives an HTTPS message with a JSON payload including all the relevant information. Respond with a JSON payload, allowing the Teams client to know the next interaction to enable.
 
 ## Types of message extension commands
 
@@ -232,7 +232,7 @@ async handleTeamsMessagingExtensionQuery(context, query) {
 |------------|-------------|----------------|------------|------------|
 | Message extension with action-based commands | This sample illustrates how to build an action-based message extension. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/51.teams-messaging-extensions-action) |
 | Message extension with search-based commands | This sample illustrates how to build a Search-based Message Extension. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/50.teams-messaging-extension-search) |
-|Message extension action for task scheduling|This sample illustrates how to schedule a task from message extension action command and get a reminder card at a scheduled date and time.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-message-reminder/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-message-reminder/nodejs)|
+|Message extension action for task scheduling|This sample illustrates how to schedule a task from message extension action command and get a reminder card at a scheduled date and time.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-message-reminder/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-message-reminder/nodejs)| NA |
 
 ## Next step
 
