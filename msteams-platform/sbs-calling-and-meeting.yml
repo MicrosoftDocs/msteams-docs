@@ -139,7 +139,7 @@ items:
 
         1. Select **Get link to team**.
        
-        :::image type="content" source="./assets/images/calls-and-meetings/teams-final.png" alt-text="Screenshot shows the replacement of Microsoft-App ID.":::
+           :::image type="content" source="./assets/images/calls-and-meetings/teams-final.png" alt-text="Screenshot shows the replacement of Microsoft-App ID.":::
        
     1. Add `PolicyName`, `azure-client-id`, `policy-description`, and `object-id` in the PowerShell script.
     1. Sign in with your Teams account when PowerShell prompts.
