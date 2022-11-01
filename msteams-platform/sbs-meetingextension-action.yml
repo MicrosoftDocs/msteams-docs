@@ -346,11 +346,11 @@ items:
 
     1. Open **appsettings.json** in the latest version of Visual Studio and update the following information:  
 
-         * Set `"MicrosoftAppType"` to **Multi Tenant**.
-         * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
-         * Set `"MicrosoftAppPassword"` to your bot's **Value** of the **Client Secret ID**.
-         * Leave `"MicrosoftAppTenantId"` as blank for Multi Tenant bot.
-         * Set `"BaseUrl"` to the ngrok domain name.
+         * Replace `"MicrosoftAppType"` to **Multi Tenant**.
+         * Replace `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
+         * Replace `"MicrosoftAppPassword"` to your bot's **Value** of the **Client Secret ID**.
+         * Replace `"MicrosoftAppTenantId"` as blank for Multi Tenant bot.
+         * Replace `"BaseUrl"` to the ngrok domain name.
 
          :::image type="content" source="./assets/images/sbs-messagingextension-action/json-file_1.png" alt-text="Json file.":::
 
