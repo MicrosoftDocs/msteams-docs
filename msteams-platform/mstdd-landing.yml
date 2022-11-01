@@ -1,7 +1,7 @@
 ### YamlMime:Landing
 
 title: Microsoft Teams developer documentation # < 60 chars
-summary: Welcome to overview of Microsoft Teams developer documentation. Microsoft Teams apps bring key information, common tools, and trusted processes to where people increasingly gather, learn, and work. # < 160 chars
+summary: Welcome to overview of Microsoft Teams developer documentation. Teams apps bring key information, common tools, and trusted processes to where people increasingly gather, learn, and work. # < 160 chars
 
 metadata:
   title: Microsoft Teams developer documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
@@ -185,18 +185,14 @@ landingContent:
           url: ~/sbs-meeting-token-generator.yml
         - text: Generate meeting sidepanel
           url: ~/sbs-meetings-sidepanel.yml
-
-
-    - linkListType: tutorial
-      links:
         - text: Send activity feed notification 
           url:  ~/sbs-graphactivity-feedbroadcast.yml
-        - text: Build an in-meeting document signing app
-          url:  ~/sbs-inmeeting-document-signing.yml
 
 
     - linkListType: tutorial
       links:
+        - text: Build an in-meeting document signing app
+          url:  ~/sbs-inmeeting-document-signing.yml
         - text: Build command bot with JavaScript
           url: sbs-gs-commandbot.yml
         - text: Build notification bot with JavaScript
@@ -215,6 +211,10 @@ landingContent:
           url: ~/sbs-outgoing-webhooks.yml
         - text: Unfurl links in Teams using bot
           url: ~/sbs-botbuilder-linkunfurling.yml
+
+
+    - linkListType: tutorial
+      links:
         - text: Build Teams connectors
           url: ~/sbs-teams-connectors.yml
         
@@ -234,6 +234,8 @@ landingContent:
   linkLists:
   - linkListType: concept
     links:
+    - text: Publish Teams apps in Microsoft Teams store
+      url: /training/modules/microsoft-teams-publish-app-to-store
     - text: Distribution
       url: ~/concepts/deploy-and-publish/apps-publish-overview.md
     - text: Upload your app in Microsoft Teams
