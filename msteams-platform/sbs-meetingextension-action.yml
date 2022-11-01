@@ -257,7 +257,7 @@ items:
 
          * Enter `Enable Teams to call this app’s APIs with the same rights as the user` as **User consent description**.
   
-    1. Ensure that **State** is set to **Enabled**.
+    1. Set **State** to **Enabled**.
   
     1. Select **Add scope** to save.
 
