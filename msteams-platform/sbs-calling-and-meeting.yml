@@ -317,8 +317,8 @@ items:
               :::image type="content" source="./assets/images/calls-and-meetings/graph-explorer_2.png" alt-text="Graph Explorer." lightbox="./assets/images/calls-and-meetings/graph-explorer_2.png":::
 
        
-        > [!NOTE]
-        > `TenantId` or `UserId` of the Teams account denotes from where you want to initiate the call, and `DisplayName` and `UserId` of the users denote to whom you want to redirect or transfer the call.
+            > [!NOTE]
+            > `TenantId` or `UserId` of the Teams account denotes from where you want to initiate the call, and `DisplayName` and `UserId` of the users denote to whom you want to redirect or transfer the call.
 
     1. Replace `MicrosoftAppId`, `ClientId`, `AppId` with **Application (client) ID** and `MicrosoftAppPassword`, `ClientSecret`, and `AppSecret` with **Value**.
     1. Replace `BotBaseUrl` with `ngrok` URL.
