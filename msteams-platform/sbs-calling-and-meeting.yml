@@ -297,7 +297,7 @@ items:
 
            1. Select **Get link to team**.
 
-           :::image type="content" source="./assets/images/calls-and-meetings/teams-final.png" alt-text="Screenshot showing the Teams link.":::
+         :::image type="content" source="./assets/images/calls-and-meetings/teams-final.png" alt-text="Screenshot showing the Teams link.":::
         
         * You can obtain the `displayName` and `id` from [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) site:
 
