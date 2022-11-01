@@ -139,7 +139,7 @@ items:
 
        :::image type="content" source="./assets/images/Tab-ME-SSO/add-client-id.png" alt-text="Add client secret to app.":::
 
-    1. In the **Value**, select **Copy to clipboard** to copy the value details.
+    1. Select **Copy to clipboard** to copy the **Value** details.
 
        :::image type="content" source="./assets/images/Tab-ME-SSO/client-ids_1.png" alt-text="Value of client secret.":::
          
