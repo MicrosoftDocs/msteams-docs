@@ -110,9 +110,12 @@ items:
  
          :::image type="content" source="./assets/images/calls-and-meetings/add-client_2.png" alt-text="Screenshot showing the client secret being added."lightbox="./assets/images/calls-and-meetings/add-client_2.png":::
 
-    1. In the **Value**, select **Copy to clipboard** and save the client secret value for future reference.
+      1. Select **Copy to clipboard** to copy the **Value** details.
 
         :::image type="content" source="./assets/images/calls-and-meetings/client-secret_2.png" alt-text="Screenshirt showing the value being copied to clipboard.":::
+
+        > [!TIP]
+        > Save the client secrets **Value** or app password for future reference.
 
     **Run PowerShell script to create a policy**
 
@@ -318,9 +321,9 @@ items:
         > `TenantId` or `UserId` of the Teams account denotes from where you want to initiate the call, and `DisplayName` and `UserId` of the users denote to whom you want to redirect or transfer the call.
 
     1. Replace `MicrosoftAppId`, `ClientId`, `AppId` with **Application (client) ID** and `MicrosoftAppPassword`, `ClientSecret`, and `AppSecret` with **Value**.
-    1. Update `BotBaseUrl` with `ngrok` URL.
-    1. Update `TenantId` and `UserId`.
-    1. Update `DisplayName` and `Id`.
+    1. Replace `BotBaseUrl` with `ngrok` URL.
+    1. Replace `TenantId` and `UserId`.
+    1. Replace `DisplayName` and `Id`.
 
         :::image type="content" source="./assets/images/calls-and-meetings/appsettings_1.png" alt-text="Screenshot showing the Appsettings Json.":::
 
