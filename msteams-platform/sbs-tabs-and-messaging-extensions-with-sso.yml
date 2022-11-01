@@ -18,8 +18,8 @@ items:
 
    **Key aspects of the step-by-step guide of Azure AD SSO for tabs and message extensions**:
 
-    * After the first sign in, Azure AD SSO allows the user to sign in automatically.
-    * Allows the user to sign in to other devices without entering sign in credentials again.
+    * Allows the user to sign in automatically after the first sign in.
+    * Allows the user to sign in to other devices without entering credentials again.
     * Obtains token for the signed in user.
 
    This step-by-step guide helps you to create tabs and message extensions enabling Azure AD SSO authentication. You'll see the following output:
@@ -30,7 +30,7 @@ items:
 - title: Prerequisites
   durationInMinutes: 1
   content: |
-    Ensure you install the following tools and set up your development environment:  
+    Ensure that you install the following tools and set up your development environment:  
 
     | &nbsp; | Install | For using... |
      | --- | --- | --- |
@@ -60,7 +60,7 @@ items:
 - title: Create and register your bot in Azure AD portal
   durationInMinutes: 5
   content: |
-    The following steps guide you to:
+    To create and register your bot in Microsoft Azure AD, perform the following steps:
 
     * Create Azure Bot resource to register bot with Azure Bot Service.
     * Create client secret that enables SSO authentication of the bot.
