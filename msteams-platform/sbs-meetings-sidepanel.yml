@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    The meeting side panel enhances your in-meeting experience and helps organizers and presenters to have different set of views and actions.
+    The meeting side panel enhances your in-meeting experience and helps organizers and presenters to have different sets of views and actions.
 
     Key features of the meeting side panel:
 
@@ -22,7 +22,7 @@ items:
     * Adds the agenda as text input to the side panel list.
     * Publishes the agenda list to the meeting chat.
     
-    This step-by-step guide helps you to generate a meeting side panel to add and publish an agenda. You'll see the following output:
+    This step-by-step guide helps you to generate meeting side panel to add and publish an agenda. You'll see the following output:
 
        :::image type="content" source="~/assets/images/meetings-side-panel/sidepanelondesktopmobile_1.png" alt-text="Your Token":::
 
@@ -60,7 +60,7 @@ items:
    1. Select **Clone**. 
            
       > [!NOTE]
-      > If you encounter the error "Filename too long," apply the git command `git config --system core.longpaths true` in your administrator terminal of choice.
+      > If you encounter the error "Filename too long," apply the git command `git config --system core.longpaths true` in your administrator terminal.
 
 - title: Create and register your bot
   durationInMinutes: 5
@@ -203,7 +203,7 @@ items:
 
     1. Select **Apply**.
 
-        You have successfully set up a bot in Azure bot service.
+        You have successfully set up a bot in Azure Bot service.
 
 
 - title: Update the Azure AD app registration
@@ -220,7 +220,7 @@ items:
 
     1. Select your bot.
 
-       :::image type="content" source="~/assets/images/meetings-side-panel/appregister_1.png" alt-text="App registration":::
+       :::image type="content" source="~/assets/images/meetings-side-panel/appregister_2.png" alt-text="App registration":::
 
     1. Under **Manage**, select **Expose an API**.
 
@@ -264,7 +264,7 @@ items:
   
     1. Set **State** to **Enabled**.
   
-    1. Select **Add scope** to save.
+    1. Select **Add scope**.
 
         :::image type="content" source="~/assets/images/meetings-side-panel/addascope_2.png" alt-text="Add a scope":::
 
@@ -329,7 +329,7 @@ items:
 
             :::image type="content" source="~/assets/images/meetings-side-panel/webauth_1.png" alt-text="Web":::
 
-         1. Enter the redirect URI for your app by appending `auth-end` to fully qualified domain name:</br> 
+         1. Enter the redirect URI for your app by appending `auth-end` to domain name:</br> 
            `https://your ngrok/auth-end`. </br>
 
          1. Enable **Implicit grant and hybrid flows** by selecting the following checkboxes:
@@ -362,7 +362,7 @@ items:
     
     1. Open **manifest.json** in Visual Studio and make the following changes:
 
-         * Replace all occurrences of `<<Your_Domain_URL>>` with your fully qualified ngrok domain name.
+         * Replace all occurrences of `<<Your_Domain_URL>>` with your ngrok domain name.
          * Replace all occurrences of `<<Microsoft-App-ID>>` with your bot's **Microsoft App ID**.
 
          :::image type="content" source="~/assets/images/meetings-side-panel/manifest-2_1.png" alt-text="Manifest image2":::
@@ -383,7 +383,7 @@ items:
 
            :::image type="content" source="~/assets/images/meetings-side-panel/Tokenfileready_1.png" alt-text="Solution File":::
 
-       1. Press **F5** to run the project. You can run using Visual Studio or `.Net` in the appropriate folder.
+       1. Press **F5** to run the project. You can run using Visual Studio or .NET in the appropriate folder.
 
        1. Navigate to `samples\meetings-sidepanel\csharp\ClientApp` folder and execute the command.
 
@@ -409,7 +409,7 @@ items:
     ```
     :::image type="content" source="~/assets/images/meetings-side-panel/dotnetruncmd.png" alt-text="Dotnet"::: 
       
-- title: Add meetings side panel to Teams
+- title: Add meeting side panel to Teams
   durationInMinutes: 1
   content: |
 
@@ -450,12 +450,12 @@ items:
     
     1. Select **Apps**. 
     
-       In the app selection page, the app is displayed as **Side Panel**.
+       In the app selection page, the **Side Panel** app is displayed.
+
+    1. Select the **Side Panel** app.
   
         :::image type="content" source="~/assets/images/meetings-side-panel/appicon-2.png" alt-text="App icon in Teams"::: 
 
-    1. Select the **Side Panel** app.
-    
     1. Select **Save**.
 
         :::image type="content" source="~/assets/images/meetings-side-panel/welcomeapp_1.png" alt-text="Welcome App"::: 
@@ -488,7 +488,7 @@ items:
 - title: Complete challenge
   durationInMinutes: 1
   content: |
-    Did you come up with something like this?
+    Did you come up with output like this?
 
        :::image type="content" source="~/assets/images/meetings-side-panel/sidepanelondesktopmobile_1.png" alt-text="Token in Meet"::: 
 
