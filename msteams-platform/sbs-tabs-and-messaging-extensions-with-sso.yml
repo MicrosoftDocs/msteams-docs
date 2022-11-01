@@ -312,7 +312,7 @@ items:
     1. From the left pane, select **Authentication** to set a redirect URI. 
 
        > [!NOTE]
-       > If an app isn't granted IT admin consent, users must provide consent the first time they use an app.
+       > If an app isn't granted IT admin consent, users must provide consent the first time they use the app.
                
          1. Select **Add a platform** > **Web**.
 
