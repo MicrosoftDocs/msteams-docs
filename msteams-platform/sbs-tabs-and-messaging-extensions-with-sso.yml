@@ -16,7 +16,7 @@ items:
   content: |
    The Azure Active Directory single sign-on (Azure AD SSO) helps to authenticate users in Teams. 
 
-   **Key aspects of the step-by-step guide of Azure AD SSO for tabs and message extensions**:
+   **Key aspects of Azure AD SSO**:
 
     * Allows the user to sign in automatically after the first sign in.
     * Allows the user to sign in to other devices without entering credentials again.
@@ -86,7 +86,7 @@ items:
 
        :::image type="content" source="./assets/images/Tab-ME-SSO/azure-subscription.png" alt-text="Azure subscription.":::
 
-       You can also create a new resource group. Select **Create new** > enter resource name > select **OK**. Select the required location from **New resource group location** dropdown list.
+       You can create a new resource group. Select **Create new** > enter resource name > select **OK**. Select the required location from **New resource group location** dropdown list.
 
        :::image type="content" source="~/assets/images/bots/newresource.png" alt-text="Screenshot showing the new resource group location.":::
 
@@ -133,7 +133,7 @@ items:
 
        **Add a client secret** window appears.  
 
-    1. Enter **Description** to the client secret.
+    1. Enter **Description** of the client secret.
     
     1. Select **Add**.
 
@@ -215,7 +215,7 @@ items:
 
        :::image type="content" source="./assets/images/Tab-ME-SSO/app reg.png" alt-text="app reg.":::
 
-    1. Under Manage, Select **Expose an API**.
+    1. Under **Manage**, Select **Expose an API**.
 
     1. Select **Set**.
 
@@ -251,9 +251,9 @@ items:
 
        * Enter `Enable Teams to call this app’s APIs with the same rights as the user` as **User consent description**.
 
-    1. Ensure that **State** is set to **Enabled**.
+    1. Set **State** to **Enabled**.
 
-    1. Select **Add scope** to save.
+    1. Select **Add scope**.
 
        :::image type="content" source="./assets/images/Tab-ME-SSO/add-a-scope_1.png" alt-text="Scopes.":::
 
@@ -394,8 +394,8 @@ items:
     
     1. Open `manifest.json` in **Visual Studio Code** and make the following changes:
 
-         * Set `[DOMAIN-NAME]` with your ngrok URL.
-         * Set `[YOUR-MICROSOFT-APP-ID]` with your bot's **Microsoft App ID**.
+         * Set `DOMAIN-NAME` with your ngrok URL.
+         * Set `YOUR-MICROSOFT-APP-ID` with your bot's **Microsoft App ID**.
 
              > [!NOTE]
              > Depending on the scenario `[YOUR-MICROSOFT-APP-ID]` and `[DOMAIN-NAME]` may occur multiple times.
@@ -472,7 +472,7 @@ items:
        :::image type="content" source="./assets/images/Tab-ME-SSO/add-sso-app_1.png" alt-text="add app.":::
     
     1. Send a message to the bot. 
-    1. The bot performs SSO and display profile card along with option prompt to view token.
+    1. The bot performs SSO and displays profile card along with option prompt to view token.
 
        :::image type="content" source="./assets/images/Tab-ME-SSO/Congratulation-image_1.png" alt-text="Congratulation image.":::
 
