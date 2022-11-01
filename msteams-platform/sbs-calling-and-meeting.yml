@@ -24,7 +24,7 @@ items:
 
     Create a bot and specify additional information and permissions to use these Graph APIs in a Teams app.
  
-    This step-by-step guide helps you to create a bot with calling and meeting functionality. By the end of this tutorial, you can achieve the following output:
+    This step-by-step guide helps you to set up Teams calling and meeting bot. By the end of this tutorial, you can achieve the following output:
 
     :::image type="content" source="./assets/images/calls-and-meetings/final-output.png" alt-text="Final output.":::
 
