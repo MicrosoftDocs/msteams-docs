@@ -154,11 +154,11 @@ Choose either **Select Gray** or **Select Red** button in the configuration page
 
 The following image displays the tab content with **Gray** icon selected:
 
-:::image type="content" source="../../../assets/images/tab-images/configure-tab-with-gray.png" alt-text="The screenshot is an example of gray icon selected in the configuration page.":::
+:::image type="content" source="../../../assets/images/tab-images/configure-tab-with-gray.png" alt-text="Screenshot shows the configure tab with select gray.":::
 
 The following image displays the tab content with **Red** icon selected:
 
-:::image type="content" source="../../../assets/images/tab-images/configure-tab-with-red.png" alt-text="Screenshot is an example that shows configure tab with select red.":::
+:::image type="content" source="../../../assets/images/tab-images/configure-tab-with-red.png" alt-text="Screenshot shows the configure tab with select red.":::
 
 Choosing the appropriate button triggers either `saveGray()` or `saveRed()`, and invokes the following:
 
@@ -334,8 +334,9 @@ If you choose to have your channel or group tab appear on the Teams mobile clien
 
 ## See also
 
-* [Teams tabs](~/tabs/what-are-tabs.md)
-* [Create a personal tab](~/tabs/how-to/create-personal-tab.md)
-* [Create a channel or group tab](~/tabs/how-to/create-channel-group-tab.md)
-* [Create a content page](~/tabs/how-to/create-tab-pages/content-page.md)
-* [Tabs on mobile](~/tabs/design/tabs-mobile.md)
+* [Build tabs for Teams](../../what-are-tabs.md)
+* [Update manifest for SSO and preview app](../authentication/tab-sso-manifest.md)
+* [Configure third party OAuth IdP authentication](../authentication/auth-tab-aad.md)
+* [Create Office 365 Connectors](../../../webhooks-and-connectors/how-to/connectors-creating.md)
+* [Get context for your tab](../access-teams-context.md)
+* [Tabs on mobile](../../design/tabs-mobile.md)
