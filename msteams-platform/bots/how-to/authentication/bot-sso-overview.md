@@ -53,13 +53,16 @@ For a bot or a message extension app, the bot app sends an OAuth Card to Teams C
 
 ## Enable SSO for a Teams app
 
-This section describes the tasks involved in implementing SSO for a Teams app.
+The bot and message extension apps use Bot Framework to handle communication with the app users.
 
-To enable SSO for a Teams bot or message extension app:
+**Bot app**: Also referred to as a chatbot or conversational bot, it's service that runs simple and repetitive tasks for app users. Bots can be part of a larger application or be a standalone service.
+**Message extension app**: It's a web service you host that can be invoked from within Teams client. It utilizes the messaging schema of a bot to ensure secure communication. You'll need to register your web service as a bot to enable SSO for your message extension app.
 
-1. **Configure app with Azure AD**: Create an Azure AD app to generate an app ID and application ID URI. For generating access token, you configure scopes and authorize trusted client applications. The configuration required in Azure AD for bot and message extension apps are similar. 
+This section describes the tasks involved in implementing SSO for a Teams bot or message extension app. To enable SSO for a Teams bot or message extension app:
+
+1. **Configure app with Azure AD**: Create an Azure AD app to generate an app ID and application ID URI. For generating access token, you configure scopes and authorize trusted client applications. The configuration required in Azure AD for enabling SSO in a bot and message extension apps are the same.
 1. **Add code**: Add the code to handle access token, sending this token to your app's server code in the Authorization header, and validating the access token when it's received. The code required to enable SSO in a bot app is different from a message extension app. This section allows you to select the app for which you want to add code for enabling SSO.
-1. **Update Teams app manifest**: Update your Teams Client app manifest with the app ID and application ID URI generated on Azure AD to allow Teams to request access tokens on behalf of your app. The update required in the manifest file is similar for bot and message extension apps.
+1. **Update Teams app manifest**: Update your Teams Client app manifest with the app ID and application ID URI generated on Azure AD to allow Teams to request access tokens on behalf of your app. The update required in the manifest file is same for bot and message extension apps.
 
 ## Next step
 

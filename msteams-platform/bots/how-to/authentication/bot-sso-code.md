@@ -38,19 +38,6 @@ To update the development environment variables:
     - For `MicrosoftAppPassword`, update the Bot registration client secret.
     - For `ConnectionName`, update the name of the OAuth connection you configured in Azure AD.
     - For `MicrosoftAppTenantId`, update the tenant ID.
-<!--
-1. Update the variable `MICROSOFT_APP_PASSWORD` and its value as shown below:
-
-    ```text
-    MICROSOFT_APP_PASSWORD=<client secret from Azure AD>
-    ```
-
-1. Add a new variable in the environment file for configuring OAuth connection setting as shown below:
-
-    ```text
-    SSO_CONNECTION_NAME={{OAUTH_CONNECTION_SETTING_NAME}}
-    ```
--->
 
 1. Save the file.
 
@@ -352,9 +339,6 @@ async loginStep(stepContext) {
 > [!NOTE]
 > The code snippets use the Waterfall Dialog bot. For more information about Waterfall Dialog, see [About component and waterfall dialogs](/azure/bot-service/bot-builder-concept-waterfall-dialogs?view=azure-bot-service-4.0&preserve-view=true).
 
-<!--
-The `turnContext.activity.value` is of type [TokenExchangeInvokeRequest](/dotnet/api/microsoft.bot.schema.tokenexchangeinvokerequest?view=botbuilder-dotnet-stable&preserve-view=true). It contains the token that can be used by your bot. You must store the tokens and refresh them as needed by the app user.-->
-
 ### Validate the access token
 
 Web APIs on your server must decode the access token, and verify if it's sent from the client.
@@ -362,15 +346,13 @@ Web APIs on your server must decode the access token, and verify if it's sent fr
 > [!NOTE]
 > If you use Bot Framework, it handles the access token validation. If you don't use Bot Framework, follow the guidelines given in this section.
 
-For more information about validating access token, see [Validate tokens](/azure/active-directory/develop/access-tokens.md#validate-tokens)
-
-<!--The token is a JSON Web Token (JWT), which means that validation works just like token validation in most standard OAuth flows. The web APIs must decode access token. Optionally, you can copy and paste access token manually into a tool, such as jwt.ms.-->
+For more information about validating access token, see [Validate tokens](/azure/active-directory/develop/access-tokens.md#validate-tokens).
 
 There are a number of libraries available that can handle JWT validation. Basic validation includes:
 
-- Checking that the token is well-formed
-- Checking that the token was issued by the intended authority
-- Checking that the token is targeted to the web API
+- Checking that the token is well-formed.
+- Checking that the token was issued by the intended authority.
+- Checking that the token is targeted to the web API.
 
 Keep in mind the following guidelines when validating the token:
 
@@ -466,11 +448,6 @@ Use the following code snippet to handle the access token in case the app user l
 | --- | --- | --- | --- | --- |
 | Bot framework SDK | This sample code demonstrates how to get started with authentication in a bot for Microsoft Teams. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/csharp_dotnetcore/BotConversationSsoQuickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/js)  | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/js) |
 
-## Next step
-
-> [!div class="nextstepaction"]
-> [Update Teams app manifest and preview the app](bot-sso-manifest.md)
-
 ::: zone-end
 
 ::: zone pivot="mex-app"
@@ -479,49 +456,7 @@ Use the following code snippet to handle the access token in case the app user l
 
 ::: zone-end
 
+## Next step
 
-<!--
-Code for requesting access token from live site
-```csharp
-    var attachment = new Attachment
-            {
-                Content = new OAuthCard
-                {
-                    TokenExchangeResource = new TokenExchangeResource
-                    {
-                        Id = requestId
-                    }
-                },
-                ContentType = OAuthCard.ContentType,
-            };
-            var activity = MessageFactory.Attachment(attachment);
-
-            // NOTE: This activity needs to be sent in the 1:1 conversation between the bot and the user. 
-            // If the bot supports group and channel scope, this code should be updated to send the request to the 1:1 chat. 
-
-       await turnContext.SendActivityAsync(activity, cancellationToken);
-```
-Code for receiving access token from live site
-```csharp
-    protected override async Task<InvokeResponse> OnInvokeActivityAsync
-    (ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
-            {
-                try
-                {
-                    if (turnContext.Activity.Name == SignInConstants.TokenExchangeOperationName && turnContext.Activity.ChannelId == Channels.Msteams)
-                    {
-                        await OnTokenResponseEventAsync(turnContext, cancellationToken);
-                        return new InvokeResponse() { Status = 200 };
-                    }
-                    else
-                    {
-                        return await base.OnInvokeActivityAsync(turnContext, cancellationToken);
-                    }
-                }
-                catch (InvokeResponseException e)
-                {
-                    return e.CreateInvokeResponse();
-                }
-            }
-```
->
+> [!div class="nextstepaction"]
+> [Update Teams app manifest and preview the app](bot-sso-manifest.md)

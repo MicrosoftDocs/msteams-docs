@@ -1,5 +1,5 @@
 ---
-title: Configure your app in Azure AD
+title: Configure your message extension app in Azure AD
 description: Describes registering your Teams app with Azure AD
 ms.topic: how-to
 ms.localizationpriority: high 

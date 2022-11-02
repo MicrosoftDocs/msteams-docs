@@ -15,7 +15,7 @@ See the following video to learn about SSO in an app:
 
 ## Enable SSO in Azure AD
 
-The bot and message extension apps use Bot Framework for app user authentication. You must create and configure a bot resource and an app in Azure AD portal.
+The bot and message extension apps use Bot Framework for implementing authentication. You must create and configure a bot resource and an app in Azure AD portal.
 
 The first step to enable SSO for your bot resource is to configure it in the Azure AD. You can enable SSO for your Teams bot app in two ways:
 
