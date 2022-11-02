@@ -288,7 +288,7 @@ App caching helps you to improve subsequent launch time of the apps that are loa
 >
 > * Currently app caching is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
 > * App caching is supported only for tabs loaded in the meeting side panel in Teams desktop client.
-> * App caching is not supported on chats, channels, and personal apps.
+> * Currently, app caching is not supported on chats, channels, and personal apps.
 
 ### Enable app caching
 
@@ -308,7 +308,7 @@ The following is the flow diagram of a cached app when it's added to the meeting
 
 :::image type="content" source="../assets/images/saas-offer/cached-launch-app.png" alt-text="This screenshot shows the flow of the cached launch of the app in meeting stage.":::
 
-App caching hosts the embedded app in webview and reused when users go to different instances of the app within a window.
+After you enable App Caching, the webview that used to host the embedded App gets reused as users navigate to different instances of the app within a Window
 
 The webview of the app remains in the DOM. The webview is hidden when the users go out of the app and shown when the users return to the app. When the app is cached, any audio that is playing is muted.
 
@@ -317,12 +317,12 @@ The webview of the app remains in the DOM. The webview is hidden when the users 
 
 Following are the parameters to control the conditions for the apps to be added or removed from the cache:
 
-* The maximum cache size for apps in meetings is 1 MB. When the cache size is exceeded, the app is removed from the cache.
+* The maximum cache size is one apps in meetings. When the cache size is exceeded, the least recently used app is removed from the cache.
 * When the app is cached, the memory (working set) usage must not exceed 225 MB.
 * If the user doesn't return to the app within 20 minutes, the app is removed from the cache.
 * The maximum time for Teams to receive the `readyToUnload` signal from the app is 30 seconds.
 * The grace period to get memory usage down after the app is cached is 1 minute.
-* You can't enable app caching if the system memory is less than 4 GB or the available free memory is less than 1 GB (512 MB on Mac).
+* App caching is disabled, if the system memory is less than 4 GB or the available free memory is less than 1 GB (512 MB on Mac).
 * Side panel is the only supported FrameContext for app caching in meetings.
 * When the app is cached, CPU usage must not exceed 5%.
 * When the app is cached, the number of SDK requests shouldn't exceed five for every 12 seconds.
@@ -358,7 +358,7 @@ microsoftTeams.appInitialization.notifySuccess();
 
 * Register the `load` and `beforeUnload` handlers early in your launch sequence. If the Teams client doesn’t identify these registrations before the user goes out of the app, the app isn't cached.
 
-* The Teams client invokes the `loadHandler` only after the `unload` sequence of the app is completed. For example, if a user launches tab A of your app and then launches tab B of the same app, tab B won't get the load signal until the tab B invokes the `readyToUnload` callback.
+* The Teams client invokes the `loadHandler` only after the `unload` sequence of the app is completed. For example, if a user launches tab A of your app and then launches tab B of the same app, tab B won't get the load signal until the tab A invokes the `readyToUnload` callback.
 
 * After an app moves to the cached state, it has a one minute grace period to get the memory usage under the allowed threshold of 225 MB. <!-- The Memory value used for this check is the *workingSetSize* of the webview as reported by the Electron [getappMetrics](https://www.electronjs.org/docs/latest/api/app#appgetappmetrics) API. -->
 
