@@ -199,7 +199,7 @@ You need to configure each new card action in the `conversationBot`, that enable
 The following steps help you to register the action handler:
 
 1. You can open file `bot/src/internal/initialize.js(ts)`.
-1. You need to update your `conversationBot` initialization, and enable `cardAction` feature and add the handler to actions array:
+1. You need to update your `conversationBot` initialization, to enable `cardAction` feature and add the handler to actions array:
 
    ```initialize.js(ts)
          const conversationBot = new ConversationBot({ 
@@ -438,7 +438,7 @@ The following steps help you to add the notification feature:
 
 1. You can navigate to file `bot\src\internal\initialize.js(ts)`.
 
-1. You need to update your `conversationBot` initialization to enable notification feature:
+1. You need to update your `conversationBot` initialization, to enable the notification feature:
 
    ```initialize.js(ts)
 
