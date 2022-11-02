@@ -282,7 +282,7 @@ The following participant roles may be involved during the meeting:
 
 ## App caching
 
-App caching helps you to improve launch time of the apps that are loaded in the meeting side panel.
+App caching helps you to improve subsequent launch time of the apps that are loaded in the meeting side panel.
 
 > [!NOTE]
 >
