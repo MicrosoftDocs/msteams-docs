@@ -287,7 +287,7 @@ To enable an Adaptive Card based Loop component, add the `metadata` and `webUrl`
 | [`metadata`](https://adaptivecards.io/explorer/) | Metadata | Defines various metadata properties typically not used for rendering the card | No |
 | [`webUrl`](https://adaptivecards.io/explorer/Metadata.html) | String | URL that uniquely identifies the card and serves as a browser fallback that can be used by some hosts.|No|
 
-The following code shows an example of an Adaptive Card based Loop component with `metadata` and `webUrl`:
+The following code shows an example of an Adaptive Card based Loop component with `metadata` and `webUrl` properties:
 
 ```json
 {
