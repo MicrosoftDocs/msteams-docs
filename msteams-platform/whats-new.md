@@ -26,7 +26,7 @@ Teams platform features that are available to all app developers.
 
 **2022 November**
 
-* ***October 29, 2022***: [Configure an Adaptive Card based Loop component.](task-modules-and-cards/cards/cards-reference.md#adaptive-card-based-loop-component)
+* ***November 02, 2022***: [Configure an Adaptive Card based Loop component.](task-modules-and-cards/cards/cards-reference.md#adaptive-card-based-loop-component)
 * ***November 02, 2022***: [Support global routing for bot APIs](bots/how-to/conversations/send-proactive-messages.md#create-the-conversation).
 
 :::column-end:::

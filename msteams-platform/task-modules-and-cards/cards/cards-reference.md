@@ -280,9 +280,7 @@ Following is an example of an Adaptive Card based loop component:
 
 :::image type="content" source="~/assets/images/adaptive-cards/adaptive-card-loop.png" alt-text="Example of an Adaptive Card loop component.":::
 
-To enable an Adaptive Card based Loop component, add the `metadata` and `webUrl` properties to the [Adaptive Card schema](https://adaptivecards.io/explorer/).
-
-Following table describes the `metadata` and `webUrl` properties:
+To enable an Adaptive Card based Loop component, add the `metadata` and `webUrl` properties to the [Adaptive Card schema](https://adaptivecards.io/explorer/). Following table describes the `metadata` and `webUrl` properties:
 
 |Property|Type|Description|Required|
 |---|---|---|---|
