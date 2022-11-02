@@ -199,7 +199,7 @@ You need to configure each new card action in the `conversationBot`, that enable
 The following steps help you to register the action handler:
 
 1. You can open file `bot/src/internal/initialize.js(ts)`.
-1. You need to update your `conversationBot` initialization, to enable `cardAction` feature and add the handler to actions array:
+1. You need to update your `conversationBot` initialization, and enable `cardAction` feature and add the handler to actions array:
 
    ```initialize.js(ts)
          const conversationBot = new ConversationBot({ 
@@ -374,7 +374,7 @@ You need to design the user-specific Adaptive Card to refresh specific users suc
 
 #### Add card action handler to refresh views
 
-Add handler that implements `TeamsFxAdaptiveCardActionHandler` to process the refresh invoke activity that is automatically triggered in Teams.
+You can add handler that implements `TeamsFxAdaptiveCardActionHandler` to process the refresh invoke activity that is automatically triggered in Teams.
 
 ```TypeScript
 import responseCard from "../adaptiveCards/responseCard.json";
@@ -405,7 +405,7 @@ export class Handler1 implements TeamsFxBotCardActionHandler {
 
 #### Register the action handler
 
-Register the refresh action handler in `bot/src/internal/initialize.js(ts)`:
+You can register the refresh action handler in `bot/src/internal/initialize.js(ts)`:
 
 ```initialize.js(ts)
 export const commandBot = new ConversationBot({
@@ -434,9 +434,9 @@ You need to often connect to existing APIs for retrieving data to send to Teams.
 
 The notification feature adds the ability in your application to send Adaptive Cards in response to external events. For example, when a message is posted to an Event Hub, your application can respond and send an appropriate Adaptive Card to Teams.
 
-To add the notification feature:
+The following steps help you to add the notification feature:
 
-1. You can go to file `bot\src\internal\initialize.js(ts)`.
+1. You can navigate to file `bot\src\internal\initialize.js(ts)`.
 
 1. You need to update your `conversationBot` initialization to enable notification feature:
 
