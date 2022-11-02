@@ -25,7 +25,9 @@ A bot behaves differently depending on the conversation it's involved in:
 * Bots in a one-to-one conversation don't require an @mention. All messages sent by the user routes to your bot.
 
 > [!NOTE]
-> Bots can be enabled to receive all channel messages in a team without being @mentioned using resource-specific consent (RSC) permissions. This feature is currently available in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md) only. For more information, see [receive all channel messages with RSC](channel-messages-with-rsc.md).
+
+> * Bots can be enabled to receive all channel messages in a team without being @mentioned using resource-specific consent (RSC) permissions.
+> * The ability for bots to receive all messages in chats using `ChatMessage.Read.Chat` is available only in [public developer preview for Teams](../../../resources/dev-preview/developer-preview-intro.md). For more information, see [receive all channel messages with RSC](channel-messages-with-rsc.md).
 
 For the bot to work in a particular conversation or scope, add support to that scope in the [app manifest](~/resources/schema/manifest-schema.md).
 

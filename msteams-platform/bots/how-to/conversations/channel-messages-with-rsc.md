@@ -16,7 +16,7 @@ Using RSC, you can request team owners consent for a bot to receive user message
 
 > [!NOTE]
 >
-> The ability for bots to receive all messages in chats using ChatMessage.Read.Chat is available only in [public developer preview for Teams](../../../resources/dev-preview/developer-preview-intro.md).
+> The ability for bots to receive all messages in chats using `ChatMessage.Read.Chat` is available only in [public developer preview for Teams](../../../resources/dev-preview/developer-preview-intro.md).
 
 The `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permissions in a Teams app manifest enable a specified graph application to get all messages in channels and chats respectively, where the Teams app has been consented to, and installed. A bot defined in an app manifest with either or both RSC permissions, receives all messages without being @mentioned in conversations and group chats where the permissions apply.
 
@@ -47,63 +47,75 @@ The following code provides an example of the app manifest version 1.12 or highe
     "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.12/MicrosoftTeams.schema.json",
     "manifestVersion": "1.12",
     "version": "1.0.0",
-    "id": "4972dc1a-24d1-41b9-a298-afba4a5a20fb",
-    "packageName": "com.vucorp.rscechobot",
+    "id": "8239c8f3-ed78-4512-933e-babfd28856f1",
+    "packageName": "com.contoso.rscechobot",
     "developer": {
-        "name": "VuCorp",
-        "websiteUrl": "https://www.vucorp.com",
-        "privacyUrl": "https://www.vucorp.com/privacy",
-        "termsOfUseUrl": "https://www.vucorp.com/tos"    },
+        "name": "Contoso",
+        "websiteUrl": "https://www.contoso.com",
+        "privacyUrl": "https://www.contoso.com/privacy",
+        "termsOfUseUrl": "https://www.contoso.com/tos"
+    },
     "icons": {
         "color": "color.png",
-        "outline": "outline.png"    },
+        "outline": "outline.png"
+    },
     "name": {
         "short": "RscEchoBot",
-        "full": "Echo bot with RSC configured for all conversation messages"    },
+        "full": "Echo bot with RSC configured for all conversation messages"
+    },
     "description": {
         "short": "Echo bot with RSC configured for all channel and chat messages",
-        "full": "Echo bot configured with all channel and chat messsages RSC permission in manifest"    },
+        "full": "Echo bot configured with all channel and chat messsages RSC permission in manifest"
+    },
     "accentColor": "#FFFFFF",
     "staticTabs": [
         {
             "entityId": "conversations",
             "scopes": [
-                "personal"            ]
+                "personal"
+            ]
         },
         {
             "entityId": "about",
             "scopes": [
-                "personal"            ]
+                "personal"
+            ]
         }
     ],
     "webApplicationInfo": {
-        "id": "5ba934a5-3c72-40f1-aef0-0469ca82611c",
-        "resource": "https://AnyString"    },
+        "id": "07338883-af76-47b3-86e4-2603c50be638",
+        "resource": "https://AnyString"
+    },
     "authorization": {
         "permissions": {
             "resourceSpecific": [
                 {
                     "type": "Application",
-                    "name": "ChannelMessage.Read.Group"                },
+                    "name": "ChannelMessage.Read.Group"
+                },
                 {
                     "type": "Application",
-                    "name": "ChatMessage.Read.Chat"                }
+                    "name": "ChatMessage.Read.Chat"
+                }
             ]
         }
     },
     "bots": [
         {
-            "botId": "5ba934a5-3c72-40f1-aef0-0469ca82611c",
+            "botId": "07338883-af76-47b3-86e4-2603c50be638",
             "scopes": [
                 "personal",
                 "team",
-                "groupchat"            ],
+                "groupchat"
+            ],
             "supportsFiles": false,
-            "isNotificationOnly": false        }
+            "isNotificationOnly": false
+        }
     ],
     "permissions": [
         "identity",
-        "messageTeamMembers"    ],
+        "messageTeamMembers"
+    ],
     "validDomains": []
 }
 ```
