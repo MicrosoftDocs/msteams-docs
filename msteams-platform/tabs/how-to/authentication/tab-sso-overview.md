@@ -3,13 +3,10 @@ title: Overview to authentication for tabs using SSO in Teams with Azure AD
 description: Learn about Single sign-on (SSO) authentication in Teams and how to enable it in tabs.
 ms.topic: conceptual
 ms.localizationpriority: high
-keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) SSO access token app manifest 
 ---
 # Enable SSO for tab app
 
-<!--Single sign-on (SSO) allows a user to access an application or a web service after signing-in only once. The app users never have to go through authentication again.-->
-
-With SSO in Teams, app users have the advantage of using Teams to access apps. After logging into Teams using Microsoft or Microsoft 365 account, app users can use your app without needing to sign in again. Your app is available to app users on any device with access granted through Azure AD.
+With SSO in Teams, app users have the advantage of using Teams to access tab apps. After logging into Teams using Microsoft or Microsoft 365 account, app users can use your app without needing to sign in again. Your app is available to app users on any device with access granted through Azure AD.
 
 Here's what you'll learn in this section:
 
@@ -87,16 +84,16 @@ Some scenarios where you can use the SSO API to authenticate your app users are:
 
 To achieve SSO at runtime, configure your app to enable SSO for authenticating and authorizing app users.
 
-## Enable SSO for a Teams app
+## Enable SSO for a Teams tab app
 
 This section describes the tasks involved in implementing SSO for a Teams app. These tasks are language- and framework-agnostic.
 
-To enable SSO for a Teams app:
+To enable SSO for a Teams tab app:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/enable-sso.png" alt-text="Steps to enable SSO for tab" lightbox="../../../assets/images/authentication/teams-sso-tabs/enable-sso.png":::
 
 1. **Configure app with Azure AD**: Create an Azure AD app to generate an app ID and application ID URI. For generating access token, you configure scopes and authorize trusted client applications.
-2. **Update code**: Add the code to handle access token, sending this token to your app's server code in the Authorization header, and validating the access token when it's received.
+2. **Add code**: Add the code to handle access token, sending this token to your app's server code in the Authorization header, and validating the access token when it's received.
 3. **Update Teams app manifest**: Update your Teams Client app manifest with the app ID and application ID URI generated on Azure AD to allow Teams to request access tokens on behalf of your app.
 
 ## Third-party cookies on iOS

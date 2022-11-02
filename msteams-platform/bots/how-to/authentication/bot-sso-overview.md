@@ -6,9 +6,7 @@ ms.localizationpriority: high
 ---
 # Enable SSO for your app
 
-<!--Single sign-on (SSO) allows a user to access an application or a web service after signing-in only once. The app users never have to go through authentication again.-->
-
-With SSO in Teams, app users have the advantage of using Teams to access apps. After logging into Teams using Microsoft or Microsoft 365 account, app users can use your app without needing to sign in again. Your app is available to app users on any device with access granted through Azure AD.
+With SSO in Teams, app users have the advantage of using Teams to access bot or message extension apps. After logging into Teams using Microsoft or Microsoft 365 account, app users can use your app without needing to sign in again. Your app is available to app users on any device with access granted through Azure AD.
 
 Here's what you'll learn in this section:
 
@@ -52,6 +50,16 @@ The following image shows how SSO works when a Teams app user attempts to access
 > In Step 5, if the app user hasn't previously consented, the exchange will fail and the bot sends back a failure notice. In this case, the Teams client displays a message to the app user for giving consent.
 
 For a bot or a message extension app, the bot app sends an OAuth Card to Teams Client. This card is used to get access token from Azure AD using `tokenExchangeResource`. A bot or message extension app can have more than one active endpoint. The first time app user would receive consent request for all active endpoints. Following app user's consent, Teams Client sends the token received from Azure AD to the bot app using `tokenExchange`. The bot app can then parse the token to retrieve the app user's information, such as email address.
+
+## Enable SSO for a Teams app
+
+This section describes the tasks involved in implementing SSO for a Teams app.
+
+To enable SSO for a Teams bot or message extension app:
+
+1. **Configure app with Azure AD**: Create an Azure AD app to generate an app ID and application ID URI. For generating access token, you configure scopes and authorize trusted client applications. The configuration required in Azure AD for bot and message extension apps are similar. 
+1. **Add code**: Add the code to handle access token, sending this token to your app's server code in the Authorization header, and validating the access token when it's received. The code required to enable SSO in a bot app is different from a message extension app. This section allows you to select the app for which you want to add code for enabling SSO.
+1. **Update Teams app manifest**: Update your Teams Client app manifest with the app ID and application ID URI generated on Azure AD to allow Teams to request access tokens on behalf of your app. The update required in the manifest file is similar for bot and message extension apps.
 
 <!--
 Points from SME response:
