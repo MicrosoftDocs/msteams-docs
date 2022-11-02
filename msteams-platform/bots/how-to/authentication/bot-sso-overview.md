@@ -64,7 +64,7 @@ To enable SSO for a Teams bot or message extension app:
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Enable SSO for your bot app in Azure AD](bot-sso-register-aad.md)
+> [Enable SSO for your app in Azure AD](bot-sso-register-aad.md)
 
 <!--
 Points from SME response:

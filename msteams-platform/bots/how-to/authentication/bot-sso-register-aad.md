@@ -4,20 +4,20 @@ description: Describes configuring your bot app with Azure AD for enabling SSO
 ms.topic: how-to
 ms.localizationpriority: high 
 ---
-# Enable SSO for your bot app in Azure AD
+# Configure your app in Azure AD
 
-Azure AD provides app users access to your bot app. It's based on the app user's Teams identity. The app user who has signed into Teams can be given access to your bot app.
+Azure AD provides app users access to your bot or message extension app. The app user who has signed into Teams can be given access to your app.
 
-See the following video to learn about SSO in a bot app:
+See the following video to learn about SSO in an app:
 <br>
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OASc]
 <br>
 
-## Configure SSO for your bot resource in Azure AD
+## Enable SSO in Azure AD
 
-The first step to enable SSO for your bot resource is to configure it in the Azure AD portal. The following details must be configured for enabling your SSO for your bot in Azure AD:
+The bot and message extension apps use Bot Framework for app user authentication. You must create and configure a bot resource and app in Azure AD.
 
-You can enable SSO for your Teams bot app in two ways:
+The first step to enable SSO for your bot resource is to configure it in the Azure AD portal. You can enable SSO for your Teams bot app in two ways:
 
 - **Configure SSO using bot resource**:
   - Create bot resource and an app ID (You can also link it to the app ID of the already registered app).
