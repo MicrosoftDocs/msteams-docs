@@ -1,14 +1,15 @@
 ---
 title: Workflow bot in Teams
+author: surbhigupta
 description: Learn how to send a response to card action in Teams workflow bot, add more card actions and customize action responses.
 ms.topic: conceptual
-ms.author: surbhigupta
+ms.author: v-amprasad
 ms.localizationpriority: high
 ---
 
 # Workflow bot in Teams
 
-A workflow bot allows users to interact with an Adaptive Card, enabled by the Adaptive Card action handler feature. You can create a workflow bot in many scenarios for your users such as incident management, ticketing, approval workflow, and project management cards. The other simplified use cases are creating and assigning a work item with workflow bot and syncing the content to Azure DevOps/Jira system.
+A workflow bot allows users to interact with an Adaptive Card, enabled by the Adaptive Card action handler feature. You can create a workflow bot in many scenarios for your users such as incident management, ticketing, approval workflow, and project management cards. An example of a use case is, that you can create and assign a work item with workflow bot and sync the content to Azure DevOps/Jira system.
 
 A workflow bot can be installed into a team, group chat, or as personal app, depending on different scopes. The default command logic returns an Adaptive Card. You can customize this logic with your business requirement. For the customization, you need to call your existing APIs.
 
@@ -492,5 +493,5 @@ The default workflow bot comes with command and response. See, [how to add more 
 * [Build bots for Teams](../../what-are-bots.md)
 * [Build your first bot app using JavaScript](../../../sbs-gs-bot.yml)
 * [Build notification bot with JavaScript](../../../sbs-gs-notificationbot.yml)
-* [Cards](../../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
+* [Adaptive Cards](../../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
 * [Conversation basics](conversation-basics.md)
