@@ -1,8 +1,8 @@
 ---
 title: Add single sign-on to your Teams apps
-author: zyxiaoyuer
+author: surbhigupta
 description: In this module, learn how to add single sign-on (SSO) of Teams Toolkit, enable SSO support, update your application to use SSO
-ms.author: surbhigupta
+ms.author: v-amprasad
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/20/2022
@@ -11,17 +11,17 @@ zone_pivot_groups: teams-app-platform
 
 # Add single sign-on to Teams app
 
-Microsoft Teams provides single sign-on function for application to obtain signed-in Teams user token to access Microsoft Graph and other APIs. Teams Toolkit facilitates the interaction by abstracting some of the Azure AD flows and integrations behind some simple APIs. This enables you to add single sign-on (SSO) features easily to your Teams application
+Microsoft Teams provides single sign-on (SSO) function for application to obtain signed-in Teams user token to access Microsoft Graph and other APIs. Teams Toolkit facilitates the interaction by abstracting some of the Azure AD flows and integrations behind some simple APIs. This enables you to add SSO features easily to your Teams application
 
 ::: zone pivot="visual-studio-code"
 
 ## Add SSO to Teams app for Visual Studio Code
 
-For applications that interact with the user in a chat, a Team, or a channel, SSO manifests as an Adaptive Card, which the user can interact with to invoke the Azure AD consent flow.
+For applications that interact with the user in a chat, Team, or channel, SSO manifests as an Adaptive Card, which the user can interact with to invoke the Azure AD consent flow.
 
 ## Enable SSO support
 
-Teams Toolkit helps you to add SSO to the following Teams capabilities:
+Teams Toolkit helps you to add SSO to the following Teams capabilities in Visual Studio Code:
 
 * Tab
 * Bot
@@ -469,11 +469,11 @@ For more information about TeamsFx SDK, see:
 
 ## Add SSO to Teams app for Visual Studio
 
-For applications that interact with the user in a chat, a Team, or a channel, single sign-on (SSO) manifests as an Adaptive Card, which the user can interact with to invoke the Azure AD consent flow.
+For applications that interact with the user in a chat, Team, or channel, SSO manifests as an Adaptive Card, which the user can interact with to invoke the Azure AD consent flow.
 
 ## Enable SSO support
 
-Teams Toolkit helps you to add SSO to the following Teams capabilities:
+Teams Toolkit helps you to add SSO to the following Teams capabilities in Visual Studio:
 
 * Tab
 * Notification bot: restify server
@@ -491,7 +491,9 @@ You can follow these steps to add SSO using Teams Toolkit in Visual Studio:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso-vs/vs-2022-preview-select-teams.png" alt-text="Select a Microsoft teams project by searching for teams." lightbox="../assets/images/teams-toolkit-v2/add-sso-vs/vs-2022-preview-select-teams.png":::
 
-1. Select to create a new Teams application from the list of **application type**, uncheck the **Configure the single sign-on** check box and select **create**.
+1. Select to create a new Teams application from the list of **application type**, uncheck the **Configure the single sign-on** check box.
+
+1. Select **create**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso-vs/vs-2022-preview-create-teamsapp-sso-uncheck.png" alt-text="select the teams app to be created and uncheck sso check box" lightbox="../assets/images/teams-toolkit-v2/add-sso-vs/vs-2022-preview-create-teamsapp-sso-uncheck.png":::
 
@@ -536,7 +538,7 @@ The following steps help you to enable SSO in your application.
 
 1. You can move `GetUserProfile.razor` file from `Auth/tab` folder to `Components/` folder. `GetUserProfile` file implements a function that uses TeamsFx SDK to call Microsoft Graph API to get the user info.
 
-1. You can replace the `AddSSO` component with `GetUserProfile` component. You can do this by replacing the following line: `<AddSSO />` with `<GetUserProfile />` in `Components/Welcome.razor` file.
+1. After getting the user info, you can replace the `AddSSO` component with `GetUserProfile` component. You can do this by replacing the following line: `<AddSSO />` with `<GetUserProfile />` in `Components/Welcome.razor` file.
 
 </details>
 <details>
@@ -550,7 +552,7 @@ The following steps help you to enable SSO in your application.
 2. You can create `Pages` folder and move files in `Auth/bot/Pages` folder.
     `Auth/bot/Pages` folder contains HTML pages that are hosted by bot application. When SSO flows are initiated with Azure AD, the flows will redirect user to the pages.
 
-3. You can create `SSO` folder and move files in `Auth/bot/SSO` folder to `SSO`. This folder contains two files as a reference for SSO implementation:
+3. After the user is redirected to the pages, you can create `SSO` folder and move files in `Auth/bot/SSO` folder to `SSO`. This folder contains two files as a reference for SSO implementation:
 
     * `SsoDialog.cs`: This file creates a `ComponentDialog` that is used for SSO.
 
@@ -561,7 +563,7 @@ The following steps help you to enable SSO in your application.
     > [!NOTE]
     > Ensure to replace `{Your_NameSpace}` with your project namespace.
 
-4. You can update `Program.cs`.
+4. You can now update `Program.cs`.
 
     1. You can find the following code:
 
@@ -600,7 +602,7 @@ The following steps help you to enable SSO in your application.
         builder.Services.AddTransient<IBot, TeamsBot>();
         ```
 
-    4. You can find the following code:
+    4. You can now find the following code:
 
         ```csharp
         app.UseEndpoints(endpoints =>
@@ -654,7 +656,7 @@ The following steps help you to add a new command, after you've added SSO in you
     }
     ```
 
-    1. You can find the following line to register a new command:
+    1. You can now find the following line to register a new command:
 
        ```csharp
          ((SsoDialog)_dialog).addCommand("showUserInfo", "show", SsoOperations.ShowUserInfo);
