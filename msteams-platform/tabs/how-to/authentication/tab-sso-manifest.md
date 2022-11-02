@@ -7,7 +7,7 @@ keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) 
 ---
 # Update manifest for SSO and preview app
 
-Before you update Teams app manifest, ensure that you've configure code to enable SSO in your tab app.
+Before you update Teams app manifest, ensure that you've configured code to enable SSO in your tab app.
 
 > [!div class="nextstepaction"]
 > [Configure code](tab-sso-code.md)
@@ -44,7 +44,7 @@ For more information, see [webApplicationInfo](../../../resources/schema/manifes
   > - The manifest folder should be at the root of your project. For more information, see [Create a Microsoft Teams app package](../../../concepts/build-and-test/apps-package.md).
   > - For more information on learning how to create a manifest.json, see [Reference: Manifest schema for Microsoft Teams](../../../resources/schema/manifest-schema.md).
 
-1. Open the manifest.json file
+1. Open the `manifest.json` file
 1. Append the following code snippet to the manifest file to add the new property:
 
     ```json

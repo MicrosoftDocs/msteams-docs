@@ -1,17 +1,17 @@
 ---
-title: Update manifest for enabling SSO for bots
-description: Describes updating manifest for enabling SSO for bots
+title: Update manifest for enabling SSO for bot and messaging extension
+description: Describes updating manifest for enabling SSO for bot and message extension
 ms.topic: how-to
 ms.localizationpriority: high
 ---
-# Update app manifest for SSO and preview your bot app
+# Update app manifest for SSO and preview your app
 
-Before you update Teams app manifest, ensure that you've configure code to enable SSO in your bot app.
+Before you update Teams app manifest, ensure that you've configured code to enable SSO in your app.
 
 > [!div class="nextstepaction"]
 > [Add code](bot-sso-code.md)
 
-You've registered your bot app in Azure AD, and obtained an app ID. You've also configured your code to receive bot token. Now, you must update the Teams app manifest to enable SSO for your bot app. The Teams app manifest describes how an app integrates into Teams.
+You've registered your bot app in Azure AD. You've also configured code to receive token. Now, you must update the Teams app manifest to enable SSO for your app. The Teams app manifest describes how an app integrates into Teams.
 
 ## webApplicationInfo property
 
@@ -33,7 +33,7 @@ For more information, see [webApplicationInfo](../../../resources/schema/manifes
 
 ## To configure Teams app manifest
 
-1. Open the bot app project.
+1. Open the app project.
 2. Open the manifest folder.
 
   > [!NOTE]
@@ -41,7 +41,7 @@ For more information, see [webApplicationInfo](../../../resources/schema/manifes
   > - The manifest folder should be at the root of your project. For more information, see [Create a Microsoft Teams app package](../../../concepts/build-and-test/apps-package.md).
   > - For more information on learning how to create a manifest.json, see [Reference: Manifest schema for Microsoft Teams](../../../resources/schema/manifest-schema.md).
 
-1. Open the manifest.json file.
+1. Open the `manifest.json` file.
 1. Add one of the following code snippets to the manifest file to add the new property.
 
     - If your app has a standalone bot, add the following code snippet:
