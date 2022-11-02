@@ -8,11 +8,6 @@ ms.localizationpriority: high
 
 Azure AD provides app users access to your bot or message extension app. The app user who has signed into Teams can be given access to your app.
 
-See the following video to learn about SSO in an app:
-<br>
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OASc]
-<br>
-
 ## Enable SSO in Azure AD
 
 The bot and message extension apps use Bot Framework for implementing authentication. You must create and configure a bot resource and an app in Azure AD portal.
@@ -48,17 +43,15 @@ Select one of the following two ways to configure your bot resource for SSO in A
 
 # [Configure SSO using bot resource](#tab/botid)
 
-<!--Before you enable SSO for your bot app, you must create and configure your bot resource in Azure AD. For more information, see [Create Teams conversation bot](../../../sbs-teams-conversation-bot.yml).-->
-
 To configure your bot resource for enabling SSO in Azure AD:
 
-- **[Add messaging endpoint](#add-messaging-endpoint)**
+- **[Configure messaging endpoint](#configure-messaging-endpoint)**
   - **[Configure your app for SSO in Azure AD](#configure-your-app-in-azure-ad)**: You'll need to register your app with Azure AD before you configure it. Then, to enable it for SSO:
     - Configure scope for access token, application ID URI, and trusted client IDs
     - Configure access token version
 - **[Configure OAuth connection](#configure-oauth-connection)**
 
-### Add messaging endpoint
+### Configure messaging endpoint
 
 Messaging endpoint is where messages are sent to your bot. It enables communicate with your bot.
 
@@ -81,7 +74,7 @@ Messaging endpoint is where messages are sent to your bot. It enables communicat
 
 1. Select **Apply**.
 
-    The messaging endpoint is created.
+    The messaging endpoint is configured.
 
 You've configured the messaging endpoint for your bot resource. Next, you must enable SSO for the Azure AD app.
 
@@ -89,7 +82,7 @@ You've configured the messaging endpoint for your bot resource. Next, you must e
 
 You need to configure permissions and scopes, authorize client applications, and update manifest for your Azure AD app. These configurations help invoke SSO for your bot app.
 
-#### Configure scope for access token
+#### Configure scope for the access token
 
 Configure scope (permission) options for sending access token to Teams Client, and authorizing trusted client applications to enable SSO.
 
@@ -204,13 +197,6 @@ The scope and permissions are now configured. Configure the authorized client ap
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-client-app.png" alt-text="Add a client ID" border="true":::
 
-<!--   
-    > [!NOTE]
-    >
-    > - The client IDs for Teams mobile, desktop, and web application are the actual IDs that you should add.
-    > - For a Teams bot app, you'll need either Web or SPA, as you can't have a mobile or desktop client application in Teams.
--->
-
 1. Choose one of the following client IDs:
 
    | Use client ID | For authorizing... |
@@ -291,7 +277,7 @@ With the Client ID and Client secret provided, the token store exchanges the tok
     :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/new-config-setting.png" alt-text="OAuth configuration settings" border="true":::
 
     1. Enter a name for the configuration setting.
-    1. Select **Azure Active Directory v2** as the service provider. /Check if this value is as per code sample.  Or if any user can select it. /
+    1. Select the service provider.
 
         The remaining configuration details appear.
 
@@ -328,72 +314,14 @@ To create and configure your app for enabling SSO in Azure AD:
 
 ## Configure your Azure AD app
 
-You can configure your bot app in Azure AD to configure the scope and permissions for access tokens.
+You can configure the scope and permissions for access tokens in your app.
 
-You'll need to register your app in Azure AD and configure the tenancy and app's platform before you can configure it. Azure AD generates a new app ID that you must note. You'll need to update it later in the Teams app manifest file.
-
-> [!NOTE]
-> Microsoft Teams Toolkit registers the Azure AD application in an SSO project. You can skip this section if you've used Teams Toolkit to create your app. However, you would need to configure permissions and scope, and trust client applications.
-<!--
-<details>
-<summary><b>Learn how to register your app in Azure AD</b></summary>
-
-### To register a new app in Azure AD
-
-1. Open the [Azure portal](https://ms.portal.azure.com/) on your web browser.
-   The Microsoft Azure AD Portal page opens.
-
-2. Select the **App registrations** icon.
-
-   :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/azure-portal.png" alt-text="Azure AD Portal page." border="true":::
-
-   The **App registrations** page appears.
-
-3. Select **+ New registration** icon.
-
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/app-registrations.png" alt-text="New registration page on Azure AD Portal." border="true":::
-
-    The **Register an application** page appears.
-
-4. Enter the name of your app that you want to be displayed to the app user. You can change this name at a later stage, if you want to.
-
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/register-app.png" alt-text="App registration page on Azure AD Portal." border="true":::
-
-5. Select the type of user account that can access your app. You can choose from single- or multi-tenant options, or Private Microsoft account.
-
-    <details>
-    <summary><b>Options for supported account types</b></summary>
-
-    | Option | Select this option to... |
-    | --- | --- |
-    | Accounts in this organizational directory only  (Microsoft only - Single tenant) | Build an application for use only by users (or guests) in your tenant. <br> Often called LOB application, this app is a single-tenant application in the Microsoft identity platform. |
-    | Accounts in any organizational directory (Any Azure AD directory - Multi-tenant) | Let users in any Azure AD tenant use your application. This option is appropriate if, for example, you're building a SaaS application, and you intend to make it available to multiple organizations. <br> This type of app is known as a multi-tenant application in the Microsoft identity platform.|
-    | Accounts in any organizational directory (Any Azure AD directory - Multi-tenant) and personal Microsoft accounts | Target the widest set of customers. <br> By selecting this option, you're registering a multi-tenant application that can support app users who have personal Microsoft accounts also. |
-    | Personal Microsoft accounts only | Build an application only for users who have personal Microsoft accounts. |
-
-    </details>
-
-6. Enter the redirect URI for enabling SSO for a bot app.
-
-7. Select **Register**.
-    A message pops up on the browser stating that the app was created.
-
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/app-created-msg.png" alt-text="Register app on Azure AD Portal." border="true":::
-
-    The page with app ID and other configurations is displayed.
-
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/aad-app-regd.png" alt-text="App registration is successful." border="true":::
-
-8. Note and save the app ID from **Application (client) ID**. You'll need it for updating the Teams app manifest later.
-
-    Your app is registered in Azure AD. You should now have app ID for your bot app.
-
-</details>
--->
+> [!IMPORTANT]
+> Ensure that you've registered your app in Azure AD. At registration, Azure AD generates a new app ID that you must note. You'll need to update it later in the Teams app manifest file.
 
 ### Configure scope for access token
 
-After you've registered your app, configure scope (permission) options. You need it for sending access token to Teams client and authorize trusted client applications.
+You must configure scope (permission) options for your Azure AD app. You need it for sending access token to Teams client and authorize trusted client applications.
 
 To configure scope and authorize trusted client applications, you'll need:
 
