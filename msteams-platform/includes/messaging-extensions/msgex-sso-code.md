@@ -33,19 +33,7 @@ To update the development environment variables:
     - For `MicrosoftAppPassword`, update the Bot registration client secret.
     - For `ConnectionName`, update the name of the OAuth connection you configured in Azure AD.
     - For `MicrosoftAppTenantId`, update the tenant ID.
-<!--
-1. Find the variable `MICROSOFT_APP_PASSWORD` and update its value as shown below:
 
-    ```text
-    MICROSOFT_APP_PASSWORD=<client secret from Azure AD>
-    ```
-
-1. Add a new variable in the `./env` file for configuring OAuth connection setting as shown below:
-
-    ```text
-    SSO_CONNECTION_NAME={{OAUTH_CONNECTION_SETTING_NAME}}
-    ```
--->
 1. Save the file.
 
 You've now configured the required environment variables for your bot app and for SSO. Next, add the code for handling bot tokens.
@@ -63,7 +51,7 @@ To update your app's code:
 
     # [csharp](#tab/cs1)
 
-    Add the following code snippet to `AdapterWithErrorHandler.cs` (or the equivalent class in your app's code:
+    Add the following code snippet to `AdapterWithErrorHandler.cs` (or the equivalent class in your app's code):
 
     ```csharp
     base.Use(new TeamsSSOTokenExchangeMiddleware(storage, configuration["ConnectionName"]));
@@ -71,7 +59,7 @@ To update your app's code:
 
     # [JavaScript](#tab/js1)
     
-    Add the following code snippet to `index.js` (or the equivalent class in your app's code:
+    Add the following code snippet to `index.js` (or the equivalent class in your app's code):
     
     ```JavaScript
     const {TeamsSSOTokenExchangeMiddleware} = require('botbuilder');
@@ -141,6 +129,8 @@ To update your app's code:
 
     # [JavaScript](#tab/js2)
     
+    After you add the code to `index.js`, your code should be as shown below:
+
     ```JavaScript
     adapter.onTurnError = async (context, error) => {
         // This check writes out errors to console log .vs. app insights.
