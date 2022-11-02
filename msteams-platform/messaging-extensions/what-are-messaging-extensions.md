@@ -242,7 +242,7 @@ async handleTeamsMessagingExtensionQuery(context, query) {
 ## See also
 
 * [App capabilities mapped to features](../concepts/design/map-use-cases.md#app-capabilities-mapped-to-features)
-* [Build your first tab app using JavaScript](../sbs-gs-javascript.yml)
+* [Hello World with JavaScript](../sbs-gs-javascript.yml)
 * [Designing your Microsoft Teams message extension](design/messaging-extension-design.md)
 * [Define message extension action commands](how-to/action-commands/define-action-command.md)
 * [Define message extension search commands](how-to/search-commands/define-search-command.md)
