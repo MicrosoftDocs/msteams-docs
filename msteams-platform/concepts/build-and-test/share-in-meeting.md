@@ -27,7 +27,7 @@ The query parameters are:
 
 * `deeplinkId`: **GUID/UUID** used for telemetry correlation​.
 
-* `fqdn`: It is needed in Teams deep link service for tenant or for account checking. When the meeting is scheduled for Teams for Life, the `fqdn`value must be **teams.live.com** and for Teams for business, the `fqdn` value must be **teams.microsoft.com** or **team.microsoft.us** (for Gov). Teams client finds the right linked identity and suggests switching to the right one.​
+* `fqdn`: It is needed in Teams deep link service for tenant or for account checking. When the meeting is scheduled for Teams for Life, the `fqdn` value must be **teams.live.com** and for Teams for business, the `fqdn` value must be **teams.microsoft.com** or **team.microsoft.us** (for Gov). Teams client finds the right linked identity and suggests switching to the right one.​
 
 Example: `https://teams.microsoft.com/l/meeting-share?deeplinkId=ACCC6AFE-449D-4AF3-8D3E-E8A7B3AB1280&fqdn=teams.microsoft.com&appContext=`
 
