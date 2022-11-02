@@ -306,7 +306,14 @@ With the Client ID and Client secret provided, the token store exchanges the tok
 1. Select **Save**.
 1. Select **Apply**.
 
-Congratulations! You've completed the app configuration in Azure AD app and bot resource required to enable SSO for your bot app.
+Congratulations! You've completed the following app configuration in Azure AD required to enable SSO for your bot app:
+
+- Application ID
+- Bot ID
+- Access token
+  - Application ID URI
+  - Scope, permissions, and authorized client IDs
+- Messaging endpoint and OAuth settings
 
 # [Configure SSO using Azure AD app](#tab/windows)
 
@@ -623,7 +630,14 @@ To enable SSO for the bot resource:
 1. Select **Save**.
 1. Select **Apply**.
 
-Congratulations! You've completed the app configuration in Azure AD required to enable SSO for your bot app.
+Congratulations! You've completed the following app configuration in Azure AD required to enable SSO for your bot app:
+
+- Application ID
+- Bot ID
+- Access token
+  - Application ID URI
+  - Scope, permissions, and authorized client IDs
+- Messaging endpoint and OAuth settings
 
 ---
 
