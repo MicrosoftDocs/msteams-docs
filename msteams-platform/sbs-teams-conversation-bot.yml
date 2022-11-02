@@ -161,7 +161,7 @@ items:
 
     1. From ngrok, copy the HTTPS URL (https to io).
             
-        ![ngrok HTTPS URL](~/assets/images/Tab-ME-SSO/ngrok-image.png)
+        ![ngrok HTTPS URL](~/assets/images/conversation-bot/ngrok-image.png)
 
         > [!NOTE]
         > The HTTPS URL in your ngrok is domain name that doesn't include `https://`.
@@ -277,7 +277,7 @@ items:
 
     1. Select **Yes** if the following dialog appears:
 
-       :::image type="content" source="./assets/images/sbs-outgoing-webhooks/outgoing-webhook-certificate.png" alt-text="Trust Certificate.":::
+       :::image type="content" source="./assets/images/conversation-bot/certificate.png" alt-text="Trust Certificate.":::
     
        A webpage appears with a message **Your bot is ready!**
 
