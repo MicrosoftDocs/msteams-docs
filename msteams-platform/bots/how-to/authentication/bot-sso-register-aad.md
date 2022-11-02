@@ -48,8 +48,8 @@ Select one of the following two ways to configure your bot resource for SSO in A
 To configure your bot resource for enabling SSO in Azure AD:
 
 - **[Configure messaging endpoint](#configure-messaging-endpoint)**
-  - **[Configure your app for SSO in Azure AD](#configure-your-app-in-azure-ad)**: You'll need to register your app with Azure AD before you configure it. Then, to enable it for SSO:
-    - [Configure scope for access token, application ID URI, and trusted client IDs](#configure-scope-for-the-access-token)
+  - **[Configure your app for SSO in Azure AD](#configure-your-app-in-azure-ad)**:
+    - [Configure scope for the access token](#configure-scope-for-the-access-token)
     - [Configure access token version](#configure-access-token-version)
     - [Create client secret](#create-client-secret)
 - **[Configure OAuth connection](#configure-oauth-connection)**
@@ -339,8 +339,8 @@ Congratulations! You've completed the following app configuration in Azure AD re
 To create and configure your app for enabling SSO in Azure AD:
 
 - [**Configure your Azure AD app**](#configure-your-azure-ad-app)
-  - [Configure scope for access token, application ID URI, and trusted client IDs](#configure-scope-for-access-token)
-  - [Configure access token version](#configure-the-access-token-version)
+  - [Configure scope for access token](#configure-scope-for-access-token)
+  - [Configure the access token version](#configure-the-access-token-version)
   - [Create client secret for your app](#create-client-secret-for-your-app)
 - [**Configure bot resource in Azure AD**](#configure-bot-resource-in-azure-ad)
   - [To configure messaging endpoint](#to-configure-messaging-endpoint)
