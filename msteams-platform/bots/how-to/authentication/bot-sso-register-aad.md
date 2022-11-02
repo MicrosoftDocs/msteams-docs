@@ -1,6 +1,6 @@
 ---
-title: Configure bot app in Azure AD
-description: Describes configuring your bot app with Azure AD for enabling SSO
+title: Configure your app in Azure AD
+description: Describes configuring your bot or message extension app with Azure AD for enabling SSO
 ms.topic: how-to
 ms.localizationpriority: high 
 ---
@@ -319,14 +319,14 @@ Congratulations! You've completed the following app configuration in Azure AD re
 
 To create and configure your app for enabling SSO in Azure AD:
 
-- [**Configure your app in Azure AD**](#configure-your-app-in-azure-ad)
+- [**Configure your Azure AD app**](#configure-your-azure-ad-app)
   - Configure scope for access token, application ID URI, and trusted client IDs
   - Configure access token version
 - [**Configure bot resource in Azure AD**](#configure-bot-resource-in-azure-ad)
-  - [To configure messaging endpoint](#to-configure-messaging-endpoint-1)
+  - [To configure messaging endpoint](#to-configure-messaging-endpoint)
   - [To update OAuth connection](#to-update-oauth-connection-1)
 
-## Configure your app in Azure AD
+## Configure your Azure AD app
 
 You can configure your bot app in Azure AD to configure the scope and permissions for access tokens.
 
