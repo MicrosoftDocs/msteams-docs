@@ -1031,6 +1031,7 @@ sampleEffect1Element.addEventListener("click", function () {
 * [Teams authentication flow for tabs](../tabs/how-to/authentication/auth-flow-tab.md)
 * [Apps for Teams meetings](teams-apps-in-meetings.md)
 * [Live Share SDK](teams-live-share-overview.md)
+* [Teams cloud meeting recording](/microsoftteams/cloud-recording)
 
 ## Next steps
 
