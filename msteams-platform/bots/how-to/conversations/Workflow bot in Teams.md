@@ -139,7 +139,7 @@ You can create a new file, `bot/src/adaptiveCards/doSomethingResponse.json` as a
 
 **Add action handler**
 
-You can handle a new action invoked by Adaptive Card with TeamsFx SDK's class `TeamsFxAdaptiveCardActionHandler`.
+You can handle a new action invoked by Adaptive Card with TeamsFx SDK's class `TeamsFxAdaptiveCardActionHandler`. You can customize the action in this step, such as calling an API, processing data, or any other action as per your business need.
 
 ### [JavaScript](#tab/JS)
 
@@ -192,8 +192,6 @@ You can create a new file `bot/src/cardActions/doSomethingActionHandler.ts`:
    > * `actionData` is the data associated with the action, which may include dynamic user input or some contextual data provided in the data property of your action.
    > * If an Adaptive Card is returned, the existing card is replaced with it by default.
 
-You can customize the action in this step, such as calling an API, processing data, or any other action as per your business need.
-
 **Register the action handler**
 
 You need to configure each new card action in the `conversationBot`, that enables the conversational flow of the workflow bot template. You can navigate to `bot/src/internal/initialize.js(ts)` file and update the `actions` array of the `cardAction` property.
@@ -203,18 +201,18 @@ To register the action handler, follow these steps:
 1. Go to `bot/src/internal/initialize.js(ts)`.
 1. Update your `conversationBot` initialization to enable `cardAction` feature and add the handler to actions array:
 
-```initialize.js(ts)
-      const conversationBot = new ConversationBot({ 
-     ... 
-     cardAction: { 
-       enabled: true, 
-       actions: [ 
-         new DoStuffActionHandler(),
-         new DoSomethingActionHandler() 
-       ], 
-     } 
-   });
-```
+   ```initialize.js(ts)
+         const conversationBot = new ConversationBot({ 
+        ... 
+        cardAction: { 
+          enabled: true, 
+          actions: [ 
+            new DoStuffActionHandler(),
+            new DoSomethingActionHandler() 
+          ], 
+        } 
+      });
+   ```
 
    > [!NOTE]
    > To learn more about extending the Workflow bot template, see [respond to card actions in Teams](https://github.com/OfficeDev/TeamsFx/wiki/Respond-to-card-actions-in-Teams)
@@ -280,9 +278,9 @@ The following gif image illustrates how user-specific view is displayed in Teams
 
 :::image type="content" source="../../../assets/images/sbs-workflow-bot/user-specific-views.gif" alt-text="User-specific view in teams displayed" lightbox="../../../assets/images/sbs-workflow-bot/user-specific-views.gif":::
 
-### Steps to add user-specific view
+### Add user-specific view
 
-Steps to implement this pattern with TeamsFx SDK:
+The following Steps help you to add user-specific view with TeamsFx SDK:
 
 1. [Enable refresh in base Adaptive Card](#enable-refresh-in-base-adaptive-card)
 1. [Add user-specific Adaptive Cards](#add-user-specific-adaptive-cards)
@@ -299,7 +297,7 @@ As illustrated, user-specific views are refreshed from a base card, when card2 i
   1. `verb`: A string to identify the refresh action.
   1. `data`: An optional data to associate with the refresh action.
 
-In the following sample a base card returns as command response that can auto-refresh to specific user, such as the command sender:
+In the following sample, a base card returns as command response that can auto-refresh to specific user, such as the command sender:
 
 ```
         import baseCard from "../adaptiveCards/baseCard.json";
@@ -465,12 +463,12 @@ To add the notification feature:
 
       server.post("/api/notification", async (req, res) => {
 
-     for (const target of await conversationBot.notification.installations()) {
+      for (const target of await conversationBot.notification.installations()) {
        await target.sendMessage("This is a sample notification message");
      }
 
-     res.json({});
-   });
+      res.json({});
+     });
 
    ```
 
