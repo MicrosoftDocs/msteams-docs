@@ -56,6 +56,8 @@ landingContent:
         url: https://gitter.im/OfficeDev/home
     - linkListType: whats-new
       links:
+      - text: Support global routing for bot APIs
+        url: bots/how-to/conversations/send-proactive-messages.md#create-the-conversation
       - text: Developer Portal for Teams is now available for GCC tenants
         url: concepts/build-and-test/teams-developer-portal.md
       - text: Live Share canvas
