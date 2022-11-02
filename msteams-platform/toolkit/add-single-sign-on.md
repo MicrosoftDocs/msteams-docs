@@ -656,26 +656,26 @@ The following steps help you to add a new command, after you've added SSO in you
     }
     ```
 
-    1. You can now find the following line to register a new command:
+1. You can now find the following line to register a new command:
 
-       ```csharp
-         ((SsoDialog)_dialog).addCommand("showUserInfo", "show", SsoOperations.ShowUserInfo);
-       ```
+   ```csharp
+      ((SsoDialog)_dialog).addCommand("showUserInfo", "show", SsoOperations.ShowUserInfo);
+   ```
 
-    2. After you find the line, add the following to register a new command `"photo"` and hook up with method `'GetUserImageInfo'`:
+1. After you find the line, add the following to register a new command `"photo"` and hook up with method `'GetUserImageInfo'`:
 
-       ```csharp
+    ```csharp
        ((SsoDialog)_dialog).addCommand("getUserImageInfo", "photo", SsoOperations.GetUserImageInfo);
-       ```
+    ```
 
-    3. You can open `templates/appPackage/manifest.template.json`, and add the following lines under `command` in `commandLists` of your bot to register your command in the Teams app manifest.:
+1. You can open `templates/appPackage/manifest.template.json`, and add the following lines under `command` in `commandLists` of your bot to register your command in the Teams app manifest.:
 
-       ```JSON
+   ```JSON
        {
            "title": "photo",
            "description": "Show user photo size using Single Sign On feature"
        }
-       ```
+    ```
 
    > [!NOTE]
    > Currently, the instructions apply only to command bot.
