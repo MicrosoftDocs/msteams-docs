@@ -332,6 +332,7 @@ Congratulations! You've completed the following app configuration in Azure AD re
 - Access token
   - Application ID URI
   - Scope, permissions, and authorized client IDs
+  - client secret
 - Messaging endpoint and OAuth settings
 
 # [Configure SSO using Azure AD app](#tab/windows)
@@ -630,6 +631,7 @@ Congratulations! You've completed the following app configuration in Azure AD re
 - Access token
   - Application ID URI
   - Scope, permissions, and authorized client IDs
+  - client secret
 - Messaging endpoint and OAuth settings
 
 ---
