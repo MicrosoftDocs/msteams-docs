@@ -45,5 +45,6 @@ No, you must provide your own padding or margins to the left and right of all ap
 
 ## See also
 
+* [Build tabs for Teams](../tabs/what-are-tabs.md)
 * [Create a personal tab](../tabs/how-to/create-personal-tab.md)
 * [Create a channel tab or group tab](../tabs/how-to/create-channel-group-tab.md)

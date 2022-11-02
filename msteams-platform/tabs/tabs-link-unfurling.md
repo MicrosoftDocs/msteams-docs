@@ -153,6 +153,7 @@ Encoded
 
 ## See also
 
+* [Build tabs for Teams](what-are-tabs.md)
 * [Add link unfurling](../messaging-extensions/how-to/link-unfurling.md)
 * [composeExtensions](../resources/schema/manifest-schema.md#composeextensions)
 * [Build tabs with Adaptive Cards](how-to/build-adaptive-card-tabs.md)

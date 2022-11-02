@@ -432,6 +432,8 @@ The following code shows a reissued request example:
 
 ## See also
 
+* [Build tabs for Teams](../what-are-tabs.md)
+* [Tabs on mobile](../design/tabs-mobile.md)
 * [Cards](../../task-modules-and-cards/what-are-cards.md)
 * [Use task modules in tabs](../../task-modules-and-cards/task-modules/task-modules-tabs.md)
 * [Form completion feedback](../../bots/how-to/conversations/conversation-messages.md#form-completion-feedback)

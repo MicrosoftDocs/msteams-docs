@@ -134,6 +134,7 @@ To show the loading indicator:
 
 ## See also
 
+* [Build tabs for Teams](../../what-are-tabs.md)
 * [Create a personal tab](../create-personal-tab.md)
 * [Create a channel tab or group tab](../create-channel-group-tab.md)
 * [App manifest schema for Teams](../../../resources/schema/manifest-schema.md)
