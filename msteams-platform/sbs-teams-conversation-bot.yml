@@ -73,7 +73,8 @@ items:
     1. Enter bot handle name in **Bot handle** field.
     1. Select your **Subscription** from the dropdown list.
     1. Select your existing **Resource group** from the dropdown list or create a new resource group, select **Create new**, enter resource name, select **OK**, and select required location from **New resource group location** dropdown list.
-   
+    1. Select required **Data residency (preview)**.
+    
         :::image type="content" source="./assets/images/conversation-bot/create-azure-bot.png" alt-text="Create Azure bot.":::
 
     1. Select **Type of App** as **Multi Tenant** for **Microsoft App ID**.
