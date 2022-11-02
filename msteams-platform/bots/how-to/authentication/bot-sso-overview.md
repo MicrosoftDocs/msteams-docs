@@ -61,6 +61,11 @@ To enable SSO for a Teams bot or message extension app:
 1. **Add code**: Add the code to handle access token, sending this token to your app's server code in the Authorization header, and validating the access token when it's received. The code required to enable SSO in a bot app is different from a message extension app. This section allows you to select the app for which you want to add code for enabling SSO.
 1. **Update Teams app manifest**: Update your Teams Client app manifest with the app ID and application ID URI generated on Azure AD to allow Teams to request access tokens on behalf of your app. The update required in the manifest file is similar for bot and message extension apps.
 
+## Next step
+
+> [!div class="nextstepaction"]
+> [Enable SSO for your bot app in Azure AD](bot-sso-register-aad.md)
+
 <!--
 Points from SME response:
 
