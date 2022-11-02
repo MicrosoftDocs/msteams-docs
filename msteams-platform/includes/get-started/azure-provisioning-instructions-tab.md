@@ -29,7 +29,7 @@ Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-tool
    > [!NOTE]
    > Your app is hosted using Azure resources.
    >
-   >For more information, see [Create resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal.)
+   >For more information, see [Create resource group.](/azure/azure-resource-manager/management/manage-resource-groups-portal)
 
     A dialog warns you that costs may be incurred when running resources in Azure.
 
