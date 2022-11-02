@@ -196,10 +196,10 @@ You can create a new file `bot/src/cardActions/doSomethingActionHandler.ts`:
 
 You need to configure each new card action in the `conversationBot`, that enables the conversational flow of the workflow bot template. You can navigate to `bot/src/internal/initialize.js(ts)` file and update the `actions` array of the `cardAction` property.
 
-To register the action handler, follow these steps:
+The following steps help you to register the action handler:
 
-1. Go to `bot/src/internal/initialize.js(ts)`.
-1. Update your `conversationBot` initialization to enable `cardAction` feature and add the handler to actions array:
+1. You can open file `bot/src/internal/initialize.js(ts)`.
+1. You need to update your `conversationBot` initialization, to enable `cardAction` feature and add the handler to actions array:
 
    ```initialize.js(ts)
          const conversationBot = new ConversationBot({ 
@@ -436,9 +436,9 @@ The notification feature adds the ability in your application to send Adaptive C
 
 To add the notification feature:
 
-1. Go to `bot\src\internal\initialize.js(ts)`.
+1. You can go to file `bot\src\internal\initialize.js(ts)`.
 
-1. Update your `conversationBot` initialization to enable notification feature:
+1. You need to update your `conversationBot` initialization to enable notification feature:
 
    ```initialize.js(ts)
 
@@ -472,9 +472,9 @@ To add the notification feature:
 
    ```
 
-1. Uninstall your previous bot from Teams, and select `F5` to start your application.
+1. You need to uninstall your previous bot from Teams, and select `F5` to start your application.
 
-1. Send a notification to the bot installation targets (channel/group chat/personal chat) by using your favorite tool to send HTTP POST request to `https://localhost:3978/api/notification`.
+1. You can now send a notification to the bot installation targets (channel/group chat/personal chat) by using your favorite tool to send HTTP POST request to `https://localhost:3978/api/notification`.
 
 ### How to extend workflow bot with command and response feature?
 
