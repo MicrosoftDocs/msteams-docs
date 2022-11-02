@@ -163,3 +163,4 @@ Follow the [step-by-step guide](../../../sbs-messagingextension-searchcommand.ym
 * [Task modules](../../../task-modules-and-cards/what-are-task-modules.md)
 * [App manifest schema for Teams](../../../resources/schema/manifest-schema.md)
 * [Developer Portal for Teams](../../../concepts/build-and-test/teams-developer-portal.md)
+* [Message extensions](../../what-are-messaging-extensions.md)

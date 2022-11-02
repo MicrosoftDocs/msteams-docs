@@ -420,4 +420,6 @@ The default query has the same structure as any regular user query, with the `na
 
 ## See also
 
-[Add configuration to a message extension](~/get-started/first-message-extension.md)
+* [Message extensions](../../what-are-messaging-extensions.md)
+* [Build your first tab app using JavaScript](../../../sbs-gs-javascript.yml)
+* [composeExtensions](../../../resources/schema/manifest-schema.md#composeextensions)
