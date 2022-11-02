@@ -281,8 +281,9 @@ The `theme` argument in the function is a string with a value of `default`, `dar
 
 ## See also
 
-* [Tab design guidelines](../../tabs/design/tabs.md)
-* [Teams tabs](~/tabs/what-are-tabs.md)
-* [Create a personal tab](~/tabs/how-to/create-personal-tab.md)
-* [Create a channel or group tab](~/tabs/how-to/create-channel-group-tab.md)
-* [Use task modules in tabs](~/task-modules-and-cards/task-modules/task-modules-tabs.md)
+* [Build tabs for Teams](../what-are-tabs.md)
+* [Design your tab for Microsoft Teams](../design/tabs.md)
+* [Enable SSO for tab app](authentication/tab-sso-overview.md)
+* [Microsoft Teams Connect shared channels](../../concepts/build-and-test/shared-channels.md)
+* [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
+* [Use task modules in tabs](../../task-modules-and-cards/task-modules/task-modules-tabs.md)
