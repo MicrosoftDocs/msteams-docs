@@ -8,7 +8,9 @@ ms.localizationpriority: high
 
 # Workflow bot in Teams
 
-A workflow bot allows users to interact with an Adaptive Card, enabled by the Adaptive Card action handler feature. You can create a workflow bot in many scenarios for your end users like incident management, ticketing, approval workflow, and project management cards. The other simplified use cases are creating and assigning a work item with workflow bot and syncing the content to Azure DevOps/Jira system. A workflow bot can be installed into a team, group chat, or as personal app, depending on different scopes. The default command logic returns an Adaptive Card. You can customize this logic with your business requirement. For the customization, you need to call your existing APIs.
+A workflow bot allows users to interact with an Adaptive Card, enabled by the Adaptive Card action handler feature. You can create a workflow bot in many scenarios for your users such as incident management, ticketing, approval workflow, and project management cards. The other simplified use cases are creating and assigning a work item with workflow bot and syncing the content to Azure DevOps/Jira system.
+
+A workflow bot can be installed into a team, group chat, or as personal app, depending on different scopes. The default command logic returns an Adaptive Card. You can customize this logic with your business requirement. For the customization, you need to call your existing APIs.
 
 **Advantages of creating a workflow bot**:
 
@@ -20,7 +22,7 @@ A workflow bot allows users to interact with an Adaptive Card, enabled by the Ad
    > [!NOTE]
    > You can choose the installation target when adding the app. For more install options, see [distribute your Teams app](../../../concepts/deploy-and-publish/apps-publish-overview.md).
 
-Users can create a workflow bot to respond to Adaptive Card that is triggered by end users. Adaptive Card action handler powered by TeamsFx SDK can execute the Adaptive Card universal action (Action.Execute) that is triggered by end users. In response to this respective card action in the conversation another Adaptive Card is sent by the Adaptive card action handler.
+You can create a workflow bot to respond to Adaptive Card that is triggered by users. Adaptive Card action handler powered by TeamsFx SDK can execute the Adaptive Card universal action (Action.Execute) that is triggered by end users. In response to this respective card action in the conversation another Adaptive Card is sent by the Adaptive card action handler.
 
 :::image type="content" source="../../../assets/images/sbs-workflow-bot/sbs-workflow-bot-final-output.png" alt-text="Workflow bot final output with a button" lightbox="../../../assets/images/sbs-workflow-bot/sbs-workflow-bot-final-output.png" :::
 
@@ -487,7 +489,8 @@ The default workflow bot comes with command and response. See, [how to add more 
 
 ## See also
 
-* [Teams proactive messaging code samples](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging/csharp)
-* [Send proactive notifications to users](/azure/bot-service/bot-builder-howto-proactive-message)
+* [Build bots for Teams](../../what-are-bots.md)
 * [Build your first bot app using JavaScript](../../../sbs-gs-bot.yml)
-* [Build notification bot with JavaScript to send a proactive message](../../../sbs-gs-notificationbot.yml)
+* [Build notification bot with JavaScript](../../../sbs-gs-notificationbot.yml)
+* [Cards](../../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
+* [Conversation basics](conversation-basics.md)
