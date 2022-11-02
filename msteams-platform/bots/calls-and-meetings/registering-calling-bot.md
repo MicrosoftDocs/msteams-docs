@@ -94,7 +94,7 @@ You can rely on an administrator to grant the permissions your app needs at the 
 
 ## Step-by-step guide
 
-Follow the [step-by-step guide](../../sbs-calling-and-meeting.yml) to set up calling and meeting in a bot.
+Follow the [step-by-step guide](../../sbs-calling-and-meeting.yml) to set up Teams calling and meeting bot.
 
 ## Next step
 
