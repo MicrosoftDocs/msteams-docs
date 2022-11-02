@@ -74,7 +74,6 @@ items:
 
     1. Enter bot handle name in **Bot handle**.
     1. Select your **Subscription** and **Resource group** from the dropdown list.
-    1. Select required **Data residency (preview)**.
     
        :::image type="content" source="./assets/images/conversation-bot/create-azure-bot.png" alt-text="Create Azure bot.":::
 
@@ -280,9 +279,9 @@ items:
 
        :::image type="content" source="./assets/images/sbs-outgoing-webhooks/outgoing-webhook-certificate.png" alt-text="Trust Certificate.":::
     
-    A webpage appears with a message **Your bot is ready!**
+       A webpage appears with a message **Your bot is ready!**
 
-        :::image type="content" source="./assets/images/conversation-bot/bot.png" alt-text="Bot ready screen.":::
+       :::image type="content" source="./assets/images/conversation-bot/bot.png" alt-text="Bot ready screen.":::
 
     **To upload the app to Teams**
 
@@ -290,11 +289,11 @@ items:
 
     1. Select **Apps** > **Manage your apps**.
 
-       :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/manageapps_1.png" alt-text="Manage apps":::
+       :::image type="content" source="../msteams-platform/assets/images/conversation-bot/manageapps_1.png" alt-text="Manage apps":::
    
     1. Select **Upload an app** > **Upload a custom app**.
 
-       :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/uploadapp_1.png" alt-text="Upload custom app":::
+       :::image type="content" source="../msteams-platform/assets/images/conversation-bot/uploadapp_1.png" alt-text="Upload custom app":::
 
     1. Select **Open** to upload the .zip file that you created in the Manifest folder.
     
@@ -302,7 +301,7 @@ items:
 
     1. Select **Add** to install conversation bot in Teams.
 
-        :::image type="content" source="./assets/images/conversation-bot/add-app-teams.png" alt-text="Add App to Teams.":::
+       :::image type="content" source="./assets/images/conversation-bot/add-app-teams_1.png" alt-text="Add App to Teams.":::
 
         You can interact with the bot.
 
