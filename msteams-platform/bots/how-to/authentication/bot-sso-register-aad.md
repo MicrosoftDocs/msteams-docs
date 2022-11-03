@@ -39,7 +39,7 @@ By the end of this tutorial, you should have configured:
   - Application ID URI
   - Scope, permissions, and authorized client IDs
   - Client secret
-- Messaging endpoint and OAuth settings
+- Messaging endpoint and OAuth connection
 
 Select one of the following two ways to configure your bot resource for SSO in Azure AD.
 
@@ -193,7 +193,8 @@ The application ID URI is configured. You can now define scope and permissions f
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/scope-added-msg.png" alt-text="Scope added message displayed" border="true":::
 
-    The new scope you defined displays on the page.
+    > [!NOTE]
+    > The new scope you defined displays on the page. Ensure that you note and save the scope that you've configured. You'll need it to update OAuth connection later.
 
 The scope and permissions are now configured. Next, you must configure the authorized client applications for your Azure AD app.
 
@@ -328,6 +329,8 @@ With the app (client) ID and client secret provided, the Bot Framework Token Sto
 
 1. Move through the **Configuration** page and select **Add OAuth Connection Settings**.
 
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-oauth-connection.png" alt-text="OAuth connection button":::
+
     The **New Connection Setting** page appears.
 
 1. Enter the OAuth configuration settings for the Azure bot.
@@ -341,11 +344,11 @@ With the app (client) ID and client secret provided, the Bot Framework Token Sto
 
         :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/new-config-setting-b.png" alt-text="Additional fields for OAuth configuration " border="true":::
 
-    1. Enter the client ID that was generated when you created the bot app.
+    1. Enter the app (client) ID for the Azure AD app.
     1. Enter the client secret that you've created for your bot.
     1. Enter the application ID URI of your bot in the **Token Exchange URL**.
-    1. Type **common** as the value for tenant.
-    1. Enter the scope that you defined when you configured the permissions.
+    1. Enter the tenant ID.
+    1. Enter the scope that you defined when you configured the scope and permissions.
 
 1. Select **Save**.
 1. Select **Apply**.
@@ -358,7 +361,7 @@ Congratulations! You've completed the following app configuration in Azure AD re
   - Application ID URI
   - Scope, permissions, and authorized client IDs
   - Client secret
-- Messaging endpoint and OAuth settings
+- Messaging endpoint and OAuth connection
 
 # [Configure SSO using Azure AD app](#tab/windows)
 
@@ -657,7 +660,7 @@ Congratulations! You've completed the following app configuration in Azure AD re
   - Application ID URI
   - Scope, permissions, and authorized client IDs
   - Client secret
-- Messaging endpoint and OAuth settings
+- Messaging endpoint and OAuth connection
 
 ---
 
