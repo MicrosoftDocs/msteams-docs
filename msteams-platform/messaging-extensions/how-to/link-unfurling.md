@@ -36,7 +36,7 @@ To add link unfurling to your app manifest, add a new `messageHandlers` array to
 > [!NOTE]
 > Ensure not to add domains that are not in your control, either directly, or through wildcards. For example, `yourapp.onmicrosoft.com` is valid, but `*.onmicrosoft.com` is not valid. The top-level domains are prohibited, for example, `*.com`, `*.org`.
 
-## Add link unfurling using Developer Portal
+### Add link unfurling using Developer Portal
 
 1. Open **Developer Portal** from the Microsoft Teams client and then select the **Apps** tab.
 
@@ -63,7 +63,7 @@ To add link unfurling to your app manifest, add a new `messageHandlers` array to
 
    :::image type="content" source="../../assets/images/tdp/add-domain-button.PNG" alt-text="Screenshot of the message handlers section in Developer Portal." lightbox="../../assets/images/tdp/add-domain.PNG":::
 
-## Add link unfurling manually
+### Add link unfurling manually
 
 > [!NOTE]
 > If authentication is added through Azure AD, [unfurl links in Teams using bot](/microsoftteams/platform/sbs-botbuilder-linkunfurling?tabs=vs&tutorial-step=4).
