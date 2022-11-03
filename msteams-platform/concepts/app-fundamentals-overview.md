@@ -69,15 +69,14 @@ The following table includes Teams features and availability for GCC, GCC-High, 
 
 | Features   | GCC | GCC-High | DOD |
 |-------------|---------|---|---|
-| Teams owned apps as in internally developed apps | ✔️ App is enabled if it has GCC | ✔️ App is enabled if it has GCC-High | ✔️ App is enabled if it has DOD |
-| Microsoft apps | ✔️ Microsoft apps compliant with GCC | ✔️ Microsoft apps compliant with GCC-High | ✔️ Microsoft apps compliant with DOD |
-| 3P or third-party apps | ✔️ Third-party apps are available. Disabled by default and tenant admin use their own discretion to enable it. | ❌ | ❌ |
-| Bots | ✔️ | ❌ | ❌ |
-| Custom or Lob tab apps |  ✔️ | ✔️ | ✔️ |
+| Teams owned apps (internally developed apps) | ✔️ App is enabled if it has **GCC** in **supportedTenantRegions** in it's appDefinition | ✔️ App is enabled if it has **GCCH** in **supportedTenantRegions** in it's appDefinition | ✔️ App is enabled if it has **DOD** in **supportedTenantRegions** in it's appDefinition |
+| 3P or third-party apps | ✔️ | ❌ | ❌ |
+| Lob apps | ✔️ | ✔️ | ✔️ |
 | Sideloading apps | ✔️ | ❌ | ❌ |
-| Custom or Lob bots | ✔️ | ❌ | ❌ |
-| Custom messaging extensions | ❌ | ❌ | ❌ |
-| Custom connectors | ❌ | ❌ | ❌ |
+| Tabs |  ✔️ | ✔️ | ✔️ |
+| Bots | ✔️ | ✔️ | ❌ |
+| Message extensions | ✔️ | ✔️ | ❌ |
+| Connectors | ✔️ | ❌ | ❌ |
 
 **Compliance UI**: By enabling third-party communications, customers accept that such communication is being processed through the third party and not Microsoft. The customer is solely responsible for mitigating risks associated with connecting with third party bots in their services. Microsoft doesn't endorse and makes no warranties, express, or implied concerning the security of third parties the customer allows to connect with their service. Enabling bots will extend your system boundary beyond this tenant based on the bot you choose to leverage. It is your responsibility to ensure that this meets your compliance requirements including FedRAMP, DFARS, ITAR, etc. It is your responsibility to evaluate the risk and compliance of any endpoint and URL that you connect to.
 
