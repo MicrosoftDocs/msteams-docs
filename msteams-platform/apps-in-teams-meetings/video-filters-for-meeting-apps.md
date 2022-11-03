@@ -388,49 +388,20 @@ You can upload the video filter app to your organization's store or publish the 
 
 ## Diversity and Inclusion requirements
 
-The following are the guiding principles for defining requirements and app approval process:
+The following are the diversity and inclusion requirements:
 
-1. The brand of Microsoft as a diverse and inclusive company shouldn't be tarnished.
-1. The video filters feature should be perceived as diverse and inclusive.
-1. The filter app developer should provide filters only within their area of expertise.
-1. A filter shouldn't allow dysmorphia. For example, morphing the face, eyes, and nose, to skinnier, fatter, or distorted.
-1. A filter shouldn't be offensive or contain objectionable content.
-1. A filter thumbnail should be inclusive. For example, it shouldn't indicate to the user that only a certain type of person can use this filter.
+### App level
 
-A filter should cater to only the required types of diversity, and actively avoid touching other types of diversities. The following are the diversity categories for video filters:
-</br>
+* The video effects app developer should provide effects only within their area of expertise.
+* The video effects should be as diverse and inclusive as possible.
+* The video effects app must provide effects across the spectrum of gender identity and equally distributed.
+* The video effects app must provide effects across the spectrum of skin tones
 
-# [Category 1: Must cater to](#tab/category-1)
+### Effect level
 
-Here are some examples of category 1 diversity:
-
-* Gender identity
-
-* Skin tones
-
-The filter app must cater to at least one type of category 1 diversity.
-
-   1. A filer app must provide filters across the spectrum for its chosen type of diversity. For example, if the filter app caters to white skin tones, it should also cater to  darker skin tones.
-
-   1. The number of  filters in the diversity category should cater to at least three filters across the extreme and middle ends of the spectrum. For example, if the filter app caters to skin tone, then the app must have at least one filter for each white, black and middle skin tone in the color spectrum.
-
-# [Category 2: May cater to](#tab/category-2)
-
-Here are some examples of category 2 diversity:
-
-* Age
-
-* Eyes
-
-* Hair
-
-A video filter app can cater to at least one type of category 2 diversity.
-
-   1. A filer app must provide filters across the spectrum for its chosen type of diversity. For example, if the video filter app caters to hair color, then it should cater to general hair color types such as black, white, grey, red, golden, and so on.
-
-   1. The number of  filters in the diversity category should cater to at least three filters across the extreme and middle ends of the spectrum.
-
----
+* The effect shouldn't allow dysmorphia.
+* The effect shouldn't be offensive or contain objectionable content.
+* Above requirements are equally valid for effect thumbnails.
 
 ## Code sample
 
