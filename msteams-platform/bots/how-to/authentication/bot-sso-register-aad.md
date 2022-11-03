@@ -114,7 +114,7 @@ You need:
 
 1. Select **Manage**.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-configuration.png" alt-text="Bot resource configuration" border="false":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-config-manage.png" alt-text="Bot resource configuration" border="false":::
 
     The Azure AD app page appears.
 
@@ -301,7 +301,7 @@ A client secret is a string that the application uses to prove its identity when
    > [!IMPORTANT]
    > Ensure that you copy the value of client secret right after you create it. The value is visible only at the time when the client secret is created, and can't be viewed after that.
 
-The Azure AD app configuration is completed, and now you must enable SSO support for your bot resource by configuring OAuth connection.
+The Azure AD app configuration is complete, and now you must enable SSO support for your bot resource by configuring OAuth connection.
 
 ### Configure OAuth connection
 
@@ -311,7 +311,7 @@ For a bot to support SSO, you must update its OAuth connection settings. This pr
 - Tenant ID
 - Scope and permissions
 
-With the Client ID and Client secret provided, the token store exchanges the token for a graph token with defined permissions.
+With the app (client) ID and client secret provided, the Bot Framework Token Store exchanges the token for a graph token with defined permissions.
 
 #### To update OAuth connection
 
