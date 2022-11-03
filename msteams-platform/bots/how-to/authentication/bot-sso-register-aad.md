@@ -515,13 +515,13 @@ To configure scope and authorize trusted client applications, you'll need:
 
 ### Configure the access token version
 
-You must define the access token version that is acceptable for your app. This configuration is made in the Azure AD application manifest.
+You must define the access token version for your app. This configuration is made in the Azure AD application manifest.
 
 #### To define access token version
 
 1. Select **Manage** > **Manifest** from the left pane.
 
-   :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/azure-portal-manifest.png" alt-text="Azure AD portal Manifest" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/azure-portal-manifest.png" alt-text="Azure AD portal Manifest" border="true":::
 
     The Azure AD application manifest appears.
 
@@ -533,11 +533,9 @@ You must define the access token version that is acceptable for your app. This c
 
     A message pops up on the browser stating that the manifest was updated successfully.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/update-aad-manifest-msg.png" alt-text="Manifest updated message":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/update-aad-manifest-msg.png" alt-text="Manifest updated":::
 
-Congratulations! You've completed the app configuration in Azure AD required to enable SSO for your bot app.
-
-Next, you must configure a bot resource in Azure AD.
+You've updated the access token version. Next, you'll create a client secret for your app next.
 
 ### Create client secret for your app
 
@@ -574,7 +572,7 @@ A client secret is a string that the application uses to prove its identity when
    > [!IMPORTANT]
    > Ensure that you copy the value of client secret right after you create it. The value is visible only at the time when the client secret is created, and can't be viewed after that.
 
-The configuration for Azure AD app is complete, and now you can configure your bot resource for SSO.
+The configuration for Azure AD app is complete, and now you can configure your bot resource for enabling SSO.
 
 ## Configure bot resource in Azure AD
 
