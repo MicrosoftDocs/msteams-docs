@@ -26,7 +26,7 @@ The following image is an example of link unfurling using the Azure DevOps messa
 
 See the following video to learn more about link unfurling:
 <br>
-> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OFZG>]
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OFZG]
 <br>
 
 ## Add link unfurling to your app manifest
@@ -92,7 +92,7 @@ First, you need to add the `messageHandlers` array to your app manifest and enab
 
 For a complete manifest example, see [manifest reference](~/resources/schema/manifest-schema.md).
 
-## Enable zero install for link unfurling
+## Zero install for link unfurling
 
 Zero install link unfurling helps you unfurl previews for your shared links even before a user  discovered or installed your app in Teams. You can anonymously unfurl cards with a new invoke request or create a pre-authenticated Adaptive Card preview for users before they install or authenticate your app.
 
@@ -255,30 +255,30 @@ To get your app ready for zero install link unfurling, follow these steps:
 
    For more information, see [Action type invoke](~/task-modules-and-cards/cards/cards-actions.md#action-type-invoke).
 
-### Example
+   The following is an example of the `invoke` request:
 
-# [C#/.NET](#tab/dotnet)
+   # [C#/.NET](#tab/dotnet)
 
-   ```csharp
-   protected override async Task<MessagingExtensionResponse> OnTeamsAppBasedLinkQueryAsync(ITurnContext<IInvokeActivity> turnContext, AppBasedLinkQuery query, CancellationToken cancellationToken)
-   {
-       //You'll use the query.link value to search your service and create a card response
-       var card = new HeroCard
-       {
-           Title = "Hero Card",
-           Text = query.Url,
-           Images = new List<CardImage> { new CardImage("https://raw.githubusercontent.com/microsoft/botframework-sdk/master/icon.png") },
-       };
+      ```csharp
+      protected override async Task<MessagingExtensionResponse> OnTeamsAppBasedLinkQueryAsync(ITurnContext<IInvokeActivity> turnContext, AppBasedLinkQuery query, CancellationToken cancellationToken)
+      {
+          //You'll use the query.link value to search your service and create a card response
+          var card = new HeroCard
+             {
+              Title = "Hero Card",
+              Text = query.Url,
+              Images = new List<CardImage> { new CardImage("https://raw.githubusercontent.com/microsoft/botframework-sdk/master/icon.png") },
+          };
 
-       var attachments = new MessagingExtensionAttachment(HeroCard.ContentType, null, card);
-       var result = new MessagingExtensionResult(AttachmentLayoutTypes.List, "result", new[] { attachments }, null, "test unfurl");
+          var attachments = new MessagingExtensionAttachment(HeroCard.ContentType, null, card);
+          var result = new MessagingExtensionResult(AttachmentLayoutTypes.List, "result", new[] { attachments }, null, "test unfurl");
 
-       return new MessagingExtensionResponse(result);
-   }
+          return new MessagingExtensionResponse(result);
+      }
 
-   ```
+      ```
 
-# [JavaScript/Node.js](#tab/javascript)
+   # [JavaScript/Node.js](#tab/javascript)
 
    ```javascript
    class TeamsLinkUnfurlingBot extends TeamsActivityHandler {
@@ -302,7 +302,7 @@ To get your app ready for zero install link unfurling, follow these steps:
    }
    ```
 
-# [JSON](#tab/json)
+   # [JSON](#tab/json)
 
    Following is an example of the `invoke` sent to your bot:
 
@@ -354,25 +354,41 @@ To get your app ready for zero install link unfurling, follow these steps:
    }
    ```
 
-* * *
+   * * *
 
-### Advantages
+1. Advantages and limitations.
 
-Zero install link unfurling helps you provide enhanced experience to the users, such as:
+   Zero install link unfurling helps you provide enhanced experience to the users, such as:
 
-* Unfurl helpful previews for your links that users share in Teams even before they've installed your app.
+   * Unfurl helpful previews for your links that users share in Teams even before they've installed your app.
 
-* Create welcome card for your app to show a preview with the placeholder fields.
+   * Create welcome card for your app to show a preview with the placeholder fields.
 
-### Limitations
+   The following are the limitations:
 
-The following are the limitations:
+   * The bot can only send back a response as `result` or `auth` as the value for the `type` property in response to the `composeExtension/anonymousQueryLink` invoke request. The user can log an error for all other response types, such as, silentAuth and config.
 
-* The bot can only send back a response as `result` or `auth` as the value for the `type` property in response to the `composeExtension/anonymousQueryLink` invoke request. The user can log an error for all other response types, such as, silentAuth and config.
+   * The bot can't send back an acv2 card in response to the `composeExtension/anonymousQueryLink` invoke request, either as a result or as a pre-auth card in auth.
 
-* The bot can't send back an acv2 card in response to the `composeExtension/anonymousQueryLink` invoke request, either as a result or as a pre-auth card in auth.
+   * If the bot selects to send back the `"type": "auth"` with a pre-auth card, the Teams client strips away any action buttons from the card, and adds a sign in action button to get users to authenticate into your app.<br/>
+  
+   # [Advantages](#tab/advantages)
 
-* If the bot selects to send back the `"type": "auth"` with a pre-auth card, the Teams client strips away any action buttons from the card, and adds a sign in action button to get users to authenticate into your app.
+   Zero install link unfurling helps you provide enhanced experience to the users, such as:
+
+   * Unfurl helpful previews for your links that users share in Teams even before they've installed your app.
+
+   * Create welcome card for your app to show a preview with the placeholder fields.
+
+   # [limitations](#tab/limitations)
+
+   The following are the limitations:
+
+    * The bot can only send back a response as `result` or `auth` as the value for the `type` property in response to the `composeExtension/anonymousQueryLink` invoke request. The user can log an error for all other response types, such as, silentAuth and config.
+
+    * The bot can't send back an acv2 card in response to the `composeExtension/anonymousQueryLink` invoke request, either as a result or as a pre-auth card in auth.
+
+    * If the bot selects to send back the `"type": "auth"` with a pre-auth card, the Teams client strips away any action buttons from the card, and adds a sign in action button to get users to authenticate into your app.<br/>
 
 ## Step-by-step guide
 
