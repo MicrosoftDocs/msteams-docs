@@ -367,6 +367,8 @@ To get your app ready for zero install link unfurling, follow these steps:
 
     # [Limitations](#tab/limitations)
 
+    The following are the limitations:
+
      * The bot can only send back a response as `result` or `auth` as the value for the `type` property in response to the `composeExtension/anonymousQueryLink` invoke request. The user can log an error for all other response types, such as, *silentAuth* and *config*.
 
     * The bot can't send back an acv2 card in response to the `composeExtension/anonymousQueryLink` invoke request, either as a result or as a pre-auth card in auth.
