@@ -57,7 +57,7 @@ landingContent:
     - linkListType: whats-new
       links:
       - text: Enable app caching to improve subsequent launch time of the apps to the meeting stage [Developer preview]
-        url: apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#app-caching
+        url: apps-in-teams-meetings/build-tabs-for-meeting.md#app-caching
       - text: Support global routing for bot APIs
         url: bots/how-to/conversations/send-proactive-messages.md#create-the-conversation
       - text: Developer Portal for Teams is now available for GCC tenants
