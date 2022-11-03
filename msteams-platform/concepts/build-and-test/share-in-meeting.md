@@ -54,7 +54,7 @@ Optional:
 
 The following are three different methods to enable share in meeting, you can use one of the methods depending on how much control you want on the share in meeting buttons displayed on your web page:
 
-# [Method 1](#tab/Method 1)
+# [Method 1](#tab/method-1)
 
 This method is the simplest way to quickly display the share in meeting buttons with minimal customizations. It allows you to customize the button styles, size, and languages.
 
@@ -85,7 +85,7 @@ You can scan your web page to locate any HTML elements with the class name of ty
    * `data-target`: Specifies whether the link opens in the same window, new tab, or a new window.
    * `data-locale`: Specifies the desired user language.
 
-# [Method 2](#tab/Method 2)
+# [Method 2](#tab/method-2)
 
 `async shareToMicrosoftTeams.renderButtons(options)` renders all share buttons that have the class name **teams-share-button** or **teams-share-in-meeting-button** on the page. If an `options (optional)` object is supplied with a list of elements as shown in the following code, those elements are rendered into the share buttons or share in meeting buttons.
 
@@ -113,7 +113,7 @@ options (optional): { elements?: HTMLElement[], shareInMeetingElements?: HTMLEle
    }  
    ```
 
-# [Method 3](#tab/Method 3)
+# [Method 3](#tab/method-3)
 
 `async shareInMeetingClickHandler(content: IShareInMeetingContent)` creates a callback handler for share in meeting button, which can be executed by selecting a button or menu.
 
