@@ -1,17 +1,5 @@
-## Add code to enable SSO in your message extension app
-
-Before you add code to enable SSO, ensure that you've registered your app with Azure AD.
-
-> [!div class="nextstepaction"]
-> [Configure your app in Azure AD](../../bots/how-to/authentication/bot-sso-register-aad.md)
-
-You need to configure your app's code to obtain an access token from Azure AD. The access token is issued on behalf of the bot app.
-
 > [!NOTE]
 > SSO handlers except `OnTeamsMessagingExtensionQueryAsync` and `OnTeamsAppBasedLinkQueryAsync` from the `TeamsMessagingExtensionsSearchAuthConfigBot.cs` file aren't supported.
-
-> [!NOTE]
-> If you've build your Teams app using Microsoft Teams Toolkit, you can enable SSO for your app using the instructions in the Tools and SDKs module. For more information, see [Add single sign-on to Teams app](~/toolkit/add-single-sign-on.md).
 
 This section covers:
 
