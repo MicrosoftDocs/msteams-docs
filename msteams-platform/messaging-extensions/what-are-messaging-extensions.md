@@ -241,6 +241,11 @@ async handleTeamsMessagingExtensionQuery(context, query) {
 
 ## See also
 
-* [Define search message extension command](~/messaging-extensions/how-to/search-commands/define-search-command.md)
-* [Create a message extension](../build-your-first-app/build-messaging-extension.md)
-* [Universal Actions for search based messaging extensions](how-to/search-commands/universal-actions-for-search-based-message-extensions.md)
+* [App capabilities mapped to features](../concepts/design/map-use-cases.md#app-capabilities-mapped-to-features)
+* [Build your first message extension app using JavaScript](../sbs-gs-msgext.yml)
+* [Designing your Microsoft Teams message extension](design/messaging-extension-design.md)
+* [Define message extension action commands](how-to/action-commands/define-action-command.md)
+* [Define message extension search commands](how-to/search-commands/define-search-command.md)
+* [Add link unfurling](how-to/link-unfurling.md)
+* [App manifest schema for Teams](../resources/schema/manifest-schema.md)
+* [Developer Portal for Teams](../concepts/build-and-test/teams-developer-portal.md)

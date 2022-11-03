@@ -103,8 +103,8 @@ You can also listen for an event when the users selects **Close (X)** in the con
 
 ## See also
 
-* [Teams tabs](~/tabs/what-are-tabs.md)
-* [Create a personal tab](~/tabs/how-to/create-personal-tab.md)
-* [Create a channel or group tab](~/tabs/how-to/create-channel-group-tab.md)
+* [Build tabs for Teams](../what-are-tabs.md)
+* [Create a personal tab](create-personal-tab.md)
+* [Create a channel tab or group tab](create-channel-group-tab.md)
+* [Build tabs with Adaptive Cards](build-adaptive-card-tabs.md)
 * [Tabs on mobile](~/tabs/design/tabs-mobile.md)
-* [Build tabs with Adaptive Cards](~/tabs/how-to/build-adaptive-card-tabs.md)
