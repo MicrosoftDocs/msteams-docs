@@ -153,7 +153,8 @@ Encoded
 
 ## See also
 
-* [Message extensions link unfurling](~/messaging-extensions/how-to/link-unfurling.md)
-* [Teams tabs](~/tabs/what-are-tabs.md)
-* [Create a personal tab](~/tabs/how-to/create-personal-tab.md)
-* [Create a channel or group tab](~/tabs/how-to/create-channel-group-tab.md)
+* [Build tabs for Teams](what-are-tabs.md)
+* [Add link unfurling](../messaging-extensions/how-to/link-unfurling.md)
+* [composeExtensions](../resources/schema/manifest-schema.md#composeextensions)
+* [Build tabs with Adaptive Cards](how-to/build-adaptive-card-tabs.md)
+* [Create deep links](../concepts/build-and-test/deep-links.md)
