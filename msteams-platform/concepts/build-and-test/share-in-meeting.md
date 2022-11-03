@@ -56,7 +56,7 @@ The following are three different methods to enable share in meeting, you can us
 
 # [Method 1](#tab/method-1)
 
-This method is the simplest way to quickly display the share in meeting buttons with minimal customizations. It allows you to customize the button styles, size, and languages.
+This method is the simplest way to quickly display the share in meeting buttons with minimal customizations.
 
 You can scan your web page to locate any HTML elements with the class name of type `teams-share-in-meeting-button` and dynamically generate share in meeting buttons in your page.
 
@@ -87,7 +87,9 @@ You can scan your web page to locate any HTML elements with the class name of ty
 
 # [Method 2](#tab/method-2)
 
-`async shareToMicrosoftTeams.renderButtons(options)` renders all share buttons that have the class name **teams-share-button** or **teams-share-in-meeting-button** on the page. If an `options (optional)` object is supplied with a list of elements as shown in the following code, those elements are rendered into the share buttons or share in meeting buttons.
+Use this method to have some control over which button to render dynamically or when the script gets executed.
+
+The `async shareToMicrosoftTeams.renderButtons(options)` API renders all share button that have the class name **teams-share-button** or **teams-share-in-meeting-button** on the page. If an `options (optional)` object is supplied with a list of elements as shown in the following code, those elements are rendered into the share buttons or share in meeting buttons.
 
 ```javascript
 options (optional): { elements?: HTMLElement[], shareInMeetingElements?: HTMLElement[] }
@@ -115,7 +117,9 @@ options (optional): { elements?: HTMLElement[], shareInMeetingElements?: HTMLEle
 
 # [Method 3](#tab/method-3)
 
-`async shareInMeetingClickHandler(content: IShareInMeetingContent)` creates a callback handler for share in meeting button, which can be executed by selecting a button or menu.
+Use this method to have complete control over how and when to generate the button.
+
+The `async shareInMeetingClickHandler(content: IShareInMeetingContent)` API creates a callback handler for share in meeting button, which can be executed by selecting a button or menu.
 
 1. Add the `launcher.js` script on your webpage.
 
