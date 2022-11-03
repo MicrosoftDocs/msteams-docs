@@ -372,8 +372,8 @@ To create and configure your app for enabling SSO in Azure AD:
   - [Configure the access token version](#configure-the-access-token-version)
   - [Create client secret for your app](#create-client-secret-for-your-app)
 - [**Configure bot resource in Azure AD**](#configure-bot-resource-in-azure-ad)
-  - [To configure messaging endpoint](#to-configure-messaging-endpoint)
-  - [To update OAuth connection](#to-update-oauth-connection-1)
+  - [Configure messaging endpoint for your bot resource](#configure-messaging-endpoint-for-your-bot-resource)
+  - [Configure OAuth connection for your bot resource](#configure-oauth-connection-for-your-bot-resource)
 
 ## Configure your Azure AD app
 
@@ -547,41 +547,46 @@ A client secret is a string that the application uses to prove its identity when
 
 1. Select **Manage** > **Certificates & secrets**.
 
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/client-secret-menu.png" alt-text="Client secret menu option":::
+
+    The **Certificates & secrets** page appears.
+
 2. Select **+ New client secret**.
 
-    :::image type="content" source="../../../assets/images/adaptive-cards/client-secret.png" alt-text="Client secret page":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/client-secret.png" alt-text="Client secret page":::
 
    The **Add a client secret** page appears.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-client-secret.png" alt-text="Add a client secret page" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/add-client-secret.png" alt-text="Add a client secret page" border="true":::
 
-3. Enter the description.
-4. Select the duration of validity for the secret.
+    1. Enter the description.
+    1. Select the duration of validity for the secret.
+
 5. Select **Add**.
 
    A message pops up on the browser stating that the client secret was updated, and the client secret displays on the page.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/client-secret-added.png" alt-text="Client secret added":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/client-secret-added.png" alt-text="Client secret added":::
 
 6. Select the copy button next to the **Value** of client secret.
-7. Save the value that you copied for later use.
+7. Save the value that you copied. You'll need it later for updating code.
 
-   > [!NOTE]
+   > [!IMPORTANT]
    > Ensure that you copy the value of client secret right after you create it. The value is visible only at the time when the client secret is created, and can't be viewed after that.
 
 The configuration for Azure AD app is complete, and now you can configure your bot resource for SSO.
 
 ## Configure bot resource in Azure AD
 
-To enable SSO for your bot resource:
-
-- [To configure messaging endpoint](#to-configure-messaging-endpoint)
-- [To update OAuth connection](#to-update-oauth-connection)
-
 Before you enable SSO for your bot app, you must create and configure your bot resource in Azure AD. For more information, see [Create Teams conversation bot](../../../sbs-teams-conversation-bot.yml).
 
 > [!NOTE]
 > Ensure that when you create your bot resource, select the application ID of your the Azure AD app, which was generated when you [To register a new app in Azure AD](../../../tabs/how-to/authentication/tab-sso-register-aad.md#to-register-a-new-app-in-azure-ad).
+
+To enable SSO for your bot resource:
+
+- [To configure messaging endpoint](#to-configure-messaging-endpoint)
+- [To update OAuth connection](#to-update-oauth-connection)
 
 ### Configure messaging endpoint for your bot resource
 
