@@ -24,7 +24,7 @@ The Azure DevOps message extension uses link unfurling to look for URLs pasted i
 
 See the following video to learn more about link unfurling:
 <br>
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OFZG]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OFZG>]
 <br>
 
 ## Add link unfurling to your app manifest
@@ -191,5 +191,7 @@ Follow the [step-by-step guide](../../sbs-botbuilder-linkunfurling.yml) to unfur
 
 ## See also
 
-* [Cards](~/task-modules-and-cards/what-are-cards.md)
-* [Tabs link unfurling and Stage View](~/tabs/tabs-link-unfurling.md)
+* [Message extensions](../what-are-messaging-extensions.md)
+* [Adaptive Cards](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
+* [Tabs link unfurling and Stage View](../../tabs/tabs-link-unfurling.md)
+* [composeExtensions](../../resources/schema/manifest-schema.md#composeextensions)

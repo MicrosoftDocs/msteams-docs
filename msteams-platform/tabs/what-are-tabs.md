@@ -16,7 +16,7 @@ Tabs are Teams-aware webpages embedded in Microsoft Teams. They're simple HTML `
 
 The following image shows personal tabs:
 
-:::image type="content" source="../assets/images/tabs/personaltab.png" alt-text="Personal tab" lightbox="../assets/images/tabs/personaltab.png":::
+:::image type="content" source="../assets/images/tabs/personaltab.png" alt-text="Screenshot shows an example of a personal tab in Teams desktop client.":::
 
 The following image shows Contoso channel tabs:
 
@@ -85,9 +85,7 @@ You can have multiple channels or group tabs, and up to 16 personal tabs per app
 
 ## See also
 
-* [Custom tabs in Microsoft Teams](/microsoftteams/built-in-custom-tabs#develop-custom-tabs)
-* [Request device permissions](../concepts/device-capabilities/native-device-permissions.md)
-* [Integrate media capabilities](../concepts/device-capabilities/media-capabilities.md)
-* [Integrate a QR or barcode scanner](../concepts/device-capabilities/qr-barcode-scanner-capability.md)
-* [Integrate location capabilities](../concepts/device-capabilities/location-capability.md)
+* [Design your tab for Microsoft Teams](design/tabs.md)
+* [Device capabilities](../concepts/device-capabilities/device-capabilities-overview.md)
 * [Tabs on mobile](design/tabs-mobile.md#tabs-on-mobile)
+* [App capabilities mapped to features](../concepts/design/map-use-cases.md#app-capabilities-mapped-to-features)
