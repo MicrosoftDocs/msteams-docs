@@ -13,12 +13,12 @@ zone_pivot_groups: teams-app-platform
 
 Teams Toolkit makes it simple to get started with app development for Microsoft Teams using Visual Studio and Visual Studio Code.
 
-* Start with a project template or from a sample
-* Save setup time with automated app registration and configuration
-* Run and debug to Teams directly from familiar tools
-* Smart defaults for hosting in Azure using infrastructure-as-code and Bicep
-* Create unique configurations like dev, test, and prod using the Environments feature
-* Bring your app to your organization or the Teams App Store using built-in publishing tools
+* Start with a project template or from a sample.
+* Save setup time with automated app registration and configuration.
+* Run and debug to Teams directly from familiar tools.
+* Smart defaults for hosting in Azure using infrastructure-as-code and Bicep.
+* Create unique configurations like dev, test, and prod using the Environments feature.
+* Bring your app to your organization or the Teams App Store using built-in publishing tools.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey2.png" alt-text="User Journey of the Teams Toolkit" lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey2.png":::
 
@@ -77,6 +77,6 @@ Quickly access Teams Developer Portal, where you can configure, distribute, and 
 
 ## See also
 
-* [Create new Teams app in Visual Studio](create-new-teams-app-for-Visual-Studio.md)
+* [Create a new Teams app in Visual Studio](create-new-project.md)
 * [Provision cloud resources using Visual Studio](provision-cloud-resources.md)
-* [Deploy Teams app to the cloud using Visual Studio](deploy-teams-app.md)
+* [Deploy Teams app to the cloud using Visual Studio](deploy.md)
