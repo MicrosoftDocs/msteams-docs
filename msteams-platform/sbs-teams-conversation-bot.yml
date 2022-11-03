@@ -233,15 +233,15 @@ items:
 
           1. Select **Get link to team**.
 
-            :::image type="content" source="./assets/images/conversation-bot/teams-link-new_1.png" alt-text="Tenant ID path in Teams.":::
+             :::image type="content" source="./assets/images/conversation-bot/teams-link-new_1.png" alt-text="Tenant ID path in Teams.":::
             
           1. Select **Copy**.
 
-            :::image type="content" source="./assets/images/conversation-bot/tenant-id.png" alt-text="Copy Teams link.":::
+             :::image type="content" source="./assets/images/conversation-bot/tenant-id.png" alt-text="Copy Teams link.":::
 
           1. Copy the **tenant Id** from the URL.
 
-            :::image type="content" source="./assets/images/conversation-bot/url-tenantid_1.png" alt-text="TenantID.":::
+             :::image type="content" source="./assets/images/conversation-bot/url-tenantid_1.png" alt-text="TenantID.":::
 
     1. Select **Save**.    
         
