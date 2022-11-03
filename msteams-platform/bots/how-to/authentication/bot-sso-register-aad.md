@@ -205,9 +205,14 @@ The scope and permissions are now configured. Configure the authorized client ap
 
     The **Add a client application** page appears.
 
-1. Enter the appropriate client ID for the Teams Client for the applications that you want to authorize for your app’s web application.
+1. Enter the appropriate Microsoft 365 client ID for the applications that you want to authorize for your app’s web application.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-client-app.png" alt-text="Add a client ID" border="true":::
+
+    > [!NOTE]
+    >
+    > - The Microsoft 365 client IDs for mobile, desktop, and web applications for Teams, Office, and Outlook are the actual IDs that you should add.
+    > - If your app has a tab app, you'll need either Web or SPA, as you can't have a mobile or desktop client application in Teams.
 
 1. Choose one of the following client IDs:
 
@@ -215,6 +220,10 @@ The scope and permissions are now configured. Configure the authorized client ap
    | --- | --- |
    | 1fec8e78-bce4-4aaf-ab1b-5451cc387264 | Teams mobile or desktop application |
    | 5e3ce6c0-2b1f-4285-8d4b-75ee78787346 | Teams web application |
+   | 4765445b-32c6-49b0-83e6-1d93765276ca | Office web application |
+   | 0ec893e0-5785-4de6-99da-4ed124e5296c | Office desktop application |
+   | d3590ed6-52b3-4102-aeff-aad2292ab01c | Outlook desktop, mobile application |
+   | bc59ab01-8403-45c6-8796-ac3ef710b3e3 | Outlook web application |
 
 1. Select the application ID URI you created for your app in **Authorized scopes** to add the scope to the web API you exposed.
 
@@ -224,14 +233,14 @@ A message pops up on the browser stating that the authorized client app was adde
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/update-app-auth-msg.png" alt-text="Client ID added message" border="true":::
 
-The client ID displays on the page.
+The authorized app's client ID displays on the page.
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/client-app-added.png" alt-text="Client ID added and displayed" border="true":::
 
 > [!NOTE]
 > You can authorize more than one client application. Repeat the steps of this procedure for configuring another authorized client application.
 
-You've successfully configured app scope, permissions, and client applications. Ensure that you note and save the application ID URI. Next, you can configure the access token version.
+You've successfully configured app scope, permissions, and client applications. Ensure that you note and save the application ID URI. Next, you configure the access token version.
 
 #### Configure access token version
 

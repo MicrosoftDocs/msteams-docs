@@ -208,7 +208,7 @@ To configure scope and authorize trusted client applications, you'll need:
 
     The **Add a client application** page appears.
 
-1. Enter the appropriate Microsoft 365 client ID for the Teams Client for the applications that you want to authorize for your app’s web application.
+1. Enter the appropriate Microsoft 365 client ID for the applications that you want to authorize for your app’s web application.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-client-app.png" alt-text="Add a client application":::
 
@@ -236,12 +236,14 @@ To configure scope and authorize trusted client applications, you'll need:
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/update-app-auth-msg.png" alt-text="Client application added message":::
 
-    The client ID displays on the page.
+    The authorized app's client ID displays on the page.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/client-app-added.png" alt-text="Client app added and displayed":::
 
 > [!NOTE]
 > You can authorize more than one client application. Repeat the steps of this procedure for configuring another authorized client application.
+
+You've successfully configured app scope, permissions, and client applications. Ensure that you note and save the application ID URI. Next, you configure the access token version.
 
 ### Configure access token version
 
