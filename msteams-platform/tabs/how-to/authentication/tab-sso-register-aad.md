@@ -247,7 +247,7 @@ You've successfully configured app scope, permissions, and client applications. 
 
 ### Configure access token version
 
-You must define the access token version that is acceptable for your app. This configuration is made in the Azure AD application manifest.
+You must define the access token version for your app. This configuration is made in the Azure AD application manifest.
 
 #### To define the access token version
 

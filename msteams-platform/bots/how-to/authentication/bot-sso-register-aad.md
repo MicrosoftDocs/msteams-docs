@@ -38,7 +38,7 @@ By the end of this tutorial, you should have configured:
 - Access token
   - Application ID URI
   - Scope, permissions, and authorized client IDs
-  - client secret
+  - Client secret
 - Messaging endpoint and OAuth settings
 
 Select one of the following two ways to configure your bot resource for SSO in Azure AD.
@@ -195,7 +195,7 @@ The application ID URI is configured. You can now define scope and permissions f
 
     The new scope you defined displays on the page.
 
-The scope and permissions are now configured. Configure the authorized client applications for your Azure AD app.
+The scope and permissions are now configured. Next, you must configure the authorized client applications for your Azure AD app.
 
 ##### To configure authorized client application
 
@@ -244,7 +244,7 @@ You've successfully configured app scope, permissions, and client applications. 
 
 #### Configure access token version
 
-You must define the access token version that is acceptable for your app. This configuration is made in the Azure AD application manifest.
+You must define the access token version for your app. This configuration is made in the Azure AD application manifest.
 
 ##### To define the access token version
 
@@ -264,7 +264,7 @@ You must define the access token version that is acceptable for your app. This c
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/update-aad-manifest-msg.png" alt-text="Manifest updated":::
 
-You've updated the access token version. The Azure AD app configuration is completed, and now you must enable SSO support for your bot resource by configuring OAuth connection.
+You've updated the access token version. Next, you'll create a client secret for your app next.
 
 #### Create client secret
 
@@ -291,10 +291,12 @@ A client secret is a string that the application uses to prove its identity when
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/client-secret-added.png" alt-text="Client secret added":::
 
 6. Select the copy button next to the **Value** of client secret.
-7. Save the value that you copied for later use.
+7. Save the value that you copied. You'll need it later for updating code.
 
-   > [!NOTE]
+   > [!IMPORTANT]
    > Ensure that you copy the value of client secret right after you create it. The value is visible only at the time when the client secret is created, and can't be viewed after that.
+
+The Azure AD app configuration is completed, and now you must enable SSO support for your bot resource by configuring OAuth connection.
 
 ### Configure OAuth connection
 
@@ -350,7 +352,7 @@ Congratulations! You've completed the following app configuration in Azure AD re
 - Access token
   - Application ID URI
   - Scope, permissions, and authorized client IDs
-  - client secret
+  - Client secret
 - Messaging endpoint and OAuth settings
 
 # [Configure SSO using Azure AD app](#tab/windows)
@@ -649,7 +651,7 @@ Congratulations! You've completed the following app configuration in Azure AD re
 - Access token
   - Application ID URI
   - Scope, permissions, and authorized client IDs
-  - client secret
+  - Client secret
 - Messaging endpoint and OAuth settings
 
 ---
