@@ -28,7 +28,7 @@ Azure AD configuration enables SSO for your tab app in Teams. It responds with a
 It's helpful if you learn about the configuration for registering your app on Azure AD beforehand. Ensure that you've prepared to configure the following details prior to registering your app:
 
 - **Single- or multi-tenant options**: Will your application be used in only the Microsoft 365 tenant where it's registered, or will many Microsoft 365 tenants use it? Applications written for one enterprise are typically single-tenant. Applications written by an independent software vendor and used by many customers need to be multi-tenant so each customer's tenant can access the application.
-- **Application ID URI**: It's a globally unique URI that identifies the web API you expose for your app's access through scopes. It's also referred to as an identifier URI. The application ID URI includes the app ID and the subdomain where your app is hosted. Your application's domain name and the domain name you register for your Azure AD application should be the same. Currently, multiple domains per app aren't supported.
+- **Application ID URI**: It's a globally unique URI that identifies the web API you expose for your app's access through scopes. It's also referred to as an identifier URI. The application ID URI includes the app ID and the subdomain where your app is hosted. Your application's domain name and the domain name you register for your Azure AD application must be the same. Currently, multiple domains per app aren't supported.
 - **Scope**: It's the permission that an authorized app user or your app can be granted for accessing a resource exposed by the API.
 
 > [!NOTE]
@@ -102,7 +102,7 @@ You'll need to register your app in Azure AD and configure the tenancy and app's
 
 8. Note and save the app ID from **Application (client) ID**. You'll need it for updating the Teams app manifest later.
 
-    Your app is registered in Azure AD. You should now have app ID for your tab app.
+    Your app is registered in Azure AD. You now have app ID for your tab app.
 
 </details>
 
@@ -135,11 +135,11 @@ To configure scope and authorize trusted client applications, you'll need:
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/set-app-id-uri.png" alt-text="Application ID URI":::
 
     - The **Application ID URI** is pre-filled with app ID (GUID) in the format `api://{AppID}`.
-    - The application ID URI format should be: `api://fully-qualified-domain-name.com/{AppID}`.
+    - The application ID URI format must be: `api://fully-qualified-domain-name.com/{AppID}`.
     - Insert the `fully-qualified-domain-name.com` between `api://` and `{AppID}` (which is, GUID). For example, api://example.com/{AppID}.
 
     where,
-    - `fully-qualified-domain-name.com` is the human-readable domain name from which your tab app is served. Your application's domain name and the domain name you register for your Azure AD application should be the same.
+    - `fully-qualified-domain-name.com` is the human-readable domain name from which your tab app is served. Your application's domain name and the domain name you register for your Azure AD application must be the same.
 
       If you're using a tunneling service, such as ngrok, you must update this value whenever your ngrok subdomain changes.
     - `AppID` is the app ID (GUID) that was generated when you registered your app. You can view it in the **Overview** section.
@@ -214,7 +214,7 @@ To configure scope and authorize trusted client applications, you'll need:
 
     > [!NOTE]
     >
-    > - The Microsoft 365 client IDs for mobile, desktop, and web applications for Teams, Office, and Outlook are the actual IDs that you should add.
+    > - The Microsoft 365 client IDs for mobile, desktop, and web applications for Teams, Office, and Outlook are the actual IDs that you must add.
     > - For a Teams tab app, you'll need either Web or SPA, as you can't have a mobile or desktop client application in Teams.
 
     1. Choose one of the following client IDs:
