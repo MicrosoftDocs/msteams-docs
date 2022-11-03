@@ -11,7 +11,7 @@ zone_pivot_groups: teams-app-platform
 
 # Deploy Teams app to the cloud
 
-Teams Toolkit helps you to deploy or upload the frontend and backend code in your application to your provisioned cloud resources in Azure.
+Teams Toolkit helps you to deploy or upload the front-end and back-end code in your application to your provisioned cloud resources in Azure.
 
 ::: zone pivot="visual-studio-code"
 
@@ -19,9 +19,9 @@ Teams Toolkit helps you to deploy or upload the frontend and backend code in you
 
 You can deploy the following to the cloud:
 
-* The tab, such as frontend applications are deployed to Azure storage and configured for static web hosting or a sharepoint site.
-* The backend APIs are deployed to Azure functions.
-* The bot or message extension is deployed to Azure app service.
+* The tab, such as front-end applications are deployed to Azure Storage and configured for static web hosting or a sharepoint site.
+* The back-end APIs are deployed to Azure Functions.
+* The bot or message extension is deployed to Azure App Service.
 
   > [!NOTE]
   > Before you deploy app code to Azure cloud, you need to successfully complete the [provisioning of cloud resources](provision.md).
@@ -37,13 +37,13 @@ The Get started guides help you to deploy using Teams Toolkit. You can use the f
 
 | Teams app workload | Source code | Build artifact| Target resource |
 |-------------|----------|---------------|---------------|
-|Tabs with React </br> The frontend workload| `yourProjectFolder/tabs`| `tabs/build` |Azure storage |
+|Tabs with React </br> The frontend workload| `yourProjectFolder/tabs`| `tabs/build` |Azure Storage |
 |Tabs with SharePoint </br> The frontend workload | `yourProjectFolder/SPFx`| `SPFx/sharepoint/solution` |SharePoint app catalog |
-|APIs on Azure functions </br> The backend workload | `yourProjectFolder/api`| Not applicable |Azure functions |
-|Bots and message extensions </br> The backend workload | `yourProjectFolder/bot` | Not applicable | Azure app service |
+|APIs on Azure Functions </br> The backend workload | `yourProjectFolder/api`| Not applicable |Azure Functions |
+|Bots and message extensions </br> The backend workload | `yourProjectFolder/bot` | Not applicable | Azure App Service |
 
 > [!NOTE]
-> When you include Azure API management resource in your project and trigger deploy, you can publish your APIs in Azure functions to Azure API management service.
+> When you include Azure API management resource in your project and trigger deploy, you can publish your APIs in Azure Functions to Azure API management service.
 
 ::: zone-end
 
@@ -53,9 +53,9 @@ The Get started guides help you to deploy using Teams Toolkit. You can use the f
 
 The following apps can be deployed in Visual Studio:
 
-* The tab app, such as frontend applications are deployed to Azure storage, configured for static web hosting.
-* The notification bot app with Azure function triggers can be deployed to Azure functions.
-* The bot app or message extension can be deployed to Azure app services.
+* The tab app, such as frontend applications are deployed to Azure Storage, configured for static web hosting.
+* The notification bot app with Azure Functions triggers can be deployed to Azure Functions.
+* The bot app or message extension can be deployed to Azure App Services.
 
 After deploying, you can preview the app in Teams client or the web browser before you can start using.
 
@@ -74,7 +74,7 @@ After deploying, you can preview the app in Teams client or the web browser befo
 
    :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/vs-deploy-confirmation.png" alt-text="Deploy to cloud confirmation dialog":::
 
-   After the deploy process is completed, you can see a pop-up with the confirmation that it has been successfully deployed. You can also check the status in the output window.
+   After the deploy process is completed, you can see a pop-up with the confirmation that it is successfully deployed. You can also check the status in the output window.
 
    :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/VS-deploy-popup.png" alt-text="deploy to cloud popup":::
 

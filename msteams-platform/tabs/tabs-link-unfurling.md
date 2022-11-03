@@ -40,9 +40,9 @@ When the user enters a URL on the Teams desktop client, the bot is invoked and r
 
 The following images display a stage opened from an Adaptive Card:
 
-[![Open a stage from Adaptive Card](~/assets/images/tab-images/open-stage-from-adaptive-card1.png)](~/assets/images/tab-images/open-stage-from-adaptive-card1.png#lightbox)
+:::image type="content" source="../assets/images/tab-images/open-stage-from-adaptive-card1.png" alt-text="Screenshot shows the open stage from Adaptive card."lightbox="~/assets/images/tab-images/open-stage-from-adaptive-card1.png":::
 
-[![Open a stage](~/assets/images/tab-images/open-stage-from-adaptive-card2.png)](~/assets/images/tab-images/open-stage-from-adaptive-card2.png#lightbox)
+:::image type="content" source="../assets/images/tab-images/open-stage-from-adaptive-card2.png" alt-text="Screenshot shows the open stage from card."lightbox="~/assets/images/tab-images/open-stage-from-adaptive-card2.png":::
 
 ### Example
 
@@ -153,7 +153,8 @@ Encoded
 
 ## See also
 
-* [Message extensions link unfurling](~/messaging-extensions/how-to/link-unfurling.md)
-* [Teams tabs](~/tabs/what-are-tabs.md)
-* [Create a personal tab](~/tabs/how-to/create-personal-tab.md)
-* [Create a channel or group tab](~/tabs/how-to/create-channel-group-tab.md)
+* [Build tabs for Teams](what-are-tabs.md)
+* [Add link unfurling](../messaging-extensions/how-to/link-unfurling.md)
+* [composeExtensions](../resources/schema/manifest-schema.md#composeextensions)
+* [Build tabs with Adaptive Cards](how-to/build-adaptive-card-tabs.md)
+* [Create deep links](../concepts/build-and-test/deep-links.md)

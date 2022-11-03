@@ -59,6 +59,11 @@ The following table describes tab availability and behavior when the app is list
 |Channel and group tab|Yes|Tab opens in the device's default browser instead of the Teams mobile client using your app's `websiteUrl` configuration, which must also be included in your source code's `setSettings()` [function](/microsoftteams/platform/tabs/how-to/using-teams-client-sdk#settings-namespace). However, users can view the tab in the Teams mobile client by selecting **More** next to the app and choosing **Open**, which triggers your app’s `contentUrl` configuration.|
 |Personal app|No|Not applicable|
 
+> [!NOTE]
+> The bot messages are shown in the chat section if a mobile app has both the bot and tab capabilities.
+>
+> When you select **Chat** of the bot app and select **More (...)**, you can't see the tab capability of that app in the list. However, if you select **More (...)** from the lower right of the **Chat** section, you can view the tab app with a link to the bot app capability of that app.
+
 ### Apps not on Teams store
 
 If you are sideloading your app or publishing to an organization's app catalog, tab behavior is the same as Teams store apps approved by Microsoft for mobile.
@@ -70,8 +75,12 @@ If you are sideloading your app or publishing to an organization's app catalog, 
 
 ## See also
 
-* [Tab design guidelines](~/tabs/design/tabs.md)
-* [Teams tabs](~/tabs/what-are-tabs.md)
-* [Create a personal tab](~/tabs/how-to/create-personal-tab.md)
-* [Create a channel or group tab](~/tabs/how-to/create-channel-group-tab.md)
-* [Plan for Teams mobile - Teams](~/concepts/design/plan-responsive-tabs-for-teams-mobile.md)
+* [Build tabs for Teams](../what-are-tabs.md)
+* [Build tabs with Adaptive Cards](../how-to/build-adaptive-card-tabs.md)
+* [Create a personal tab](../how-to/create-personal-tab.md)
+* [Plan responsive tabs for Teams mobile](../../concepts/design/plan-responsive-tabs-for-teams-mobile.md)
+* [Design your tab for Microsoft Teams](tabs.md)
+* [DevTools for Microsoft Teams tabs](../how-to/developer-tools.md)
+* [Test your app](../../concepts/build-and-test/test-app-overview.md)
+* [Distribute your Microsoft Teams app](../../concepts/deploy-and-publish/apps-publish-overview.md)
+* [Create Teams app package](../../concepts/build-and-test/apps-package.md)
