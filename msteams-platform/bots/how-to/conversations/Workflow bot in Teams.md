@@ -9,7 +9,7 @@ ms.localizationpriority: high
 
 # Workflow bot in Teams
 
-A workflow bot allows users to interact with an Adaptive Card, enabled by the Adaptive Card action handler feature. You can create a workflow bot in many scenarios for your users such as incident management, ticketing, approval workflow, and project management cards. An example of a use case is, that you can create and assign a work item with workflow bot and sync the content to Azure DevOps/Jira system.
+A workflow bot allows users to interact with an Adaptive Card, enabled by the Adaptive Card action handler feature. You can create a workflow bot in many scenarios for your users such as incident management, ticketing, approval workflow, and project management cards. As for a use case scenario, you can create and assign a work item with workflow bot and sync the content to Azure DevOps/Jira system.
 
 A workflow bot can be installed into a team, group chat, or as personal app, depending on different scopes. The default command logic returns an Adaptive Card. You can customize this logic with your business requirement. For the customization, you need to call your existing APIs.
 
@@ -79,9 +79,9 @@ You can update the initialization logic to:
 
 For more information on initialization customization, see [additional initialization customization](https://github.com/OfficeDev/TeamsFx/wiki/Respond-to-chat-commands-in-Teams#customize-initialization)
 
-## Add card action
+## Add card actions
 
-Steps you can follow to add card actions with JavaScript and TypeScript:
+To add card actions with JavaScript and TypeScript, you can perform following:
 
 1. Add an action to your Adaptive Card.
 1. Respond with new Adaptive Card.
@@ -117,9 +117,7 @@ You can add a new action (button) to an Adaptive Card by defining it in the JSON
 
 **Respond with new Adaptive Card**
 
-You can return a new Adaptive Card for each action invoked to display the response to end user.
-
-You can create a new file, `bot/src/adaptiveCards/doSomethingResponse.json` as a response for the `doSomething` action with the following content:
+You can return a new Adaptive Card for each action invoked to display the response to end user. You need to create a new file, `bot/src/adaptiveCards/doSomethingResponse.json` as a response for the `doSomething` action with the following content:
 
 ```
 {
@@ -142,7 +140,7 @@ You can create a new file, `bot/src/adaptiveCards/doSomethingResponse.json` as a
 
 **Add action handler**
 
-You can handle a new action invoked by Adaptive Card with TeamsFx SDK's class `TeamsFxAdaptiveCardActionHandler`. You can customize the action in this step, such as calling an API, processing data, or any other action as per your business need.
+You can handle a new action invoked by Adaptive Card with TeamsFx SDK's class `TeamsFxAdaptiveCardActionHandler`. You need to customize the action in this step, such as calling an API, processing data, or any other action as per your business need.
 
 ### [JavaScript](#tab/JS)
 
@@ -296,7 +294,7 @@ As illustrated, user-specific views are refreshed from a base card, when card2 i
 
 * First option enables user-specific view refresh with SDK. The base card can be sent as a command response or a card action response. You can enable user-specific view refresh in `handleCommandReceived` of a command handler, or in `handleActionInvoked` of card action handler where the base card is returned. You can use `refresh(refreshVerb, userIds, data)` method from the `@microsoft/adaptivecards-tools` library to inject a refresh section into your base card. To define the refresh section, ensure that you provide the following:
 
-  1. `userIds`: A set of user MRIs for those who can trigger auto-refresh. For more information on how to add in `userIds` list in refresh section of Adaptive Card, see [fetch the roster or user profile](../get-teams-context.md#fetch-the-roster-or-user-profile)
+  1. `userIds`: A set of user MRIs for those who can trigger auto-refresh. For more information on how to add in `userIds` list in refresh section of Adaptive Card, see [fetch the roster or user profile](../get-teams-context.md#fetch-the-roster-or-user-profile).
   1. `verb`: A string to identify the refresh action.
   1. `data`: An optional data to associate with the refresh action.
 
