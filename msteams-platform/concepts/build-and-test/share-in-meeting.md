@@ -27,7 +27,7 @@ The query parameters are:
 
 * `deeplinkId`: **GUID/UUID** used for telemetry correlation​.
 
-* `fqdn`: It is needed in Teams deep link service for tenant or for account checking. When the meeting is scheduled for Teams for Life, the `fqdn` value must be **teams.live.com** and for Teams for business, the `fqdn` value must be **teams.microsoft.com** or **team.microsoft.us** (for Gov). Teams client finds the right linked identity and suggests switching to the right one.​
+* `fqdn`: It's needed in Teams deep link service for tenant or for account checking. When the meeting is scheduled for Teams for Life, the `fqdn` value must be **teams.live.com** and for Teams for business, the `fqdn` value must be **teams.microsoft.com** or **team.microsoft.us** (for Gov). Teams client finds the right linked identity and suggests switching to the right one.​
 
 Example: `https://teams.microsoft.com/l/meeting-share?deeplinkId=ACCC6AFE-449D-4AF3-8D3E-E8A7B3AB1280&fqdn=teams.microsoft.com&appContext=`
 
@@ -52,9 +52,13 @@ Optional:
 
 ## Enable share in meeting
 
-The following are three different methods to enable share in meeting, you can use one of the method to enable share in meeting:
+The following are three different methods to enable share in meeting, you can use one of the methods depending on how much control you want on the share in meeting buttons displayed on your web page:
 
-**Method 1**: You can scan your web page to locate any HTML elements with the class name of type `teams-share-in-meeting-button` and dynamically generate share in meeting buttons in your page.
+# [Method 1](#tab/Method 1)
+
+This method is the simplest way to quickly display the share in meeting buttons with minimal customizations. It allows you to customize the button styles, size, and languages.
+
+You can scan your web page to locate any HTML elements with the class name of type `teams-share-in-meeting-button` and dynamically generate share in meeting buttons in your page.
 
 1. Add the `launcher.js` script on your webpage.
 
@@ -81,7 +85,9 @@ The following are three different methods to enable share in meeting, you can us
    * `data-target`: Specifies whether the link opens in the same window, new tab, or a new window.
    * `data-locale`: Specifies the desired user language.
 
-**Method 2**: `async shareToMicrosoftTeams.renderButtons(options)` renders all share buttons that have the class name **teams-share-button** or **teams-share-in-meeting-button** on the page. If an `options (optional)` object is supplied with a list of elements as shown in the following code, those elements are rendered into the share buttons or share in meeting buttons.
+# [Method 2](#tab/Method 2)
+
+`async shareToMicrosoftTeams.renderButtons(options)` renders all share buttons that have the class name **teams-share-button** or **teams-share-in-meeting-button** on the page. If an `options (optional)` object is supplied with a list of elements as shown in the following code, those elements are rendered into the share buttons or share in meeting buttons.
 
 ```javascript
 options (optional): { elements?: HTMLElement[], shareInMeetingElements?: HTMLElement[] }
@@ -107,7 +113,9 @@ options (optional): { elements?: HTMLElement[], shareInMeetingElements?: HTMLEle
    }  
    ```
 
-**Method 3**: `async shareInMeetingClickHandler(content: IShareInMeetingContent)` creates a callback handler for share in meeting button, which can be executed by selecting a button or menu.
+# [Method 3](#tab/Method 3)
+
+`async shareInMeetingClickHandler(content: IShareInMeetingContent)` creates a callback handler for share in meeting button, which can be executed by selecting a button or menu.
 
 1. Add the `launcher.js` script on your webpage.
 
@@ -128,6 +136,8 @@ options (optional): { elements?: HTMLElement[], shareInMeetingElements?: HTMLEle
       });
    }
    ```
+
+---
 
 The following are the launcher.js definitions:
 
