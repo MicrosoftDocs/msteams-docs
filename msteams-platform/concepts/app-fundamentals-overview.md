@@ -69,7 +69,7 @@ The following table includes Teams features and availability for GCC, GCC-High, 
 
 | Features   | GCC | GCC-High | DOD |
 |-------------|---------|---|---|
-| Teams owned apps (internally developed apps) | ✔️ App is enabled if it has **GCC** in **supportedTenantRegions** in it's appDefinition | ✔️ App is enabled if it has **GCCH** in **supportedTenantRegions** in it's appDefinition | ✔️ App is enabled if it has **DOD** in **supportedTenantRegions** in it's appDefinition |
+| Teams owned apps (internally developed apps) | ✔️ App is enabled if it has **GCC** in **supportedTenantRegions** in its appDefinition | ✔️ App is enabled if it has **GCCH** in **supportedTenantRegions** in its appDefinition | ✔️ App is enabled if it has **DOD** in **supportedTenantRegions** in its appDefinition |
 | 3P or third-party apps | ✔️ | ❌ | ❌ |
 | Lob apps | ✔️ | ✔️ | ✔️ |
 | Sideloading apps | ✔️ | ❌ | ❌ |
