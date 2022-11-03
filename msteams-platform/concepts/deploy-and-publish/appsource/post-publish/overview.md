@@ -18,11 +18,6 @@ Data for newly published apps takes about a week to appear in the report.
 
 ## Publish updates to your app
 
-> [!NOTE]
-> Teams store has evolved:
->
-> Previously, the links were copied by selecting ellipses on the app tile. With the updated Teams store experience, you will access the same from the details tab of the apps. This update will be generally available (GA) by March 01, 2022.
-
 You can submit changes to your app (such as new features or even metadata) in Partner Center. These changes require a new review process.
 
 Ensure the following when publishing updates:
