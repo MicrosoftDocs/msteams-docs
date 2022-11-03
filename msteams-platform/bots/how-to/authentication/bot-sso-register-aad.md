@@ -569,30 +569,19 @@ A client secret is a string that the application uses to prove its identity when
    > [!NOTE]
    > Ensure that you copy the value of client secret right after you create it. The value is visible only at the time when the client secret is created, and can't be viewed after that.
 
+The configuration for Azure AD app is complete, and now you can configure your bot resource for SSO.
 
 ## Configure bot resource in Azure AD
 
 To enable SSO for your bot resource:
 
-- [To configure messaging endpoint](#to-configure-messaging-endpoint): Messaging endpoint is where messages are sent to your bot. It enables communication with your bot.
-- [To update OAuth connection](#to-update-oauth-connection): For a bot to support SSO, you must update its OAuth connection settings. This process associates the bot with:
-
-  - Azure AD application associated with the bot
-  - The app's application ID URI
-  - The permissions that the bot needs to obtain an access token
-
-  With the Client ID and Client secret provided, the token store exchanges the token for a graph token with defined permissions.
-
-You'll need to create a bot resource, create client secret, and enable it for Teams before enabling SSO. Note the client secret for your bot resource. You'll need to update it later to update OAuth connection.
+- [To configure messaging endpoint](#to-configure-messaging-endpoint)
+- [To update OAuth connection](#to-update-oauth-connection)
 
 Before you enable SSO for your bot app, you must create and configure your bot resource in Azure AD. For more information, see [Create Teams conversation bot](../../../sbs-teams-conversation-bot.yml).
 
 > [!NOTE]
 > Ensure that when you create your bot resource, select the application ID of your the Azure AD app, which was generated when you [To register a new app in Azure AD](../../../tabs/how-to/authentication/tab-sso-register-aad.md#to-register-a-new-app-in-azure-ad).
-
-To enable SSO for the bot resource:
-- Add messaging endpoint
-- Update OAuth connection
 
 ### Configure messaging endpoint for your bot resource
 
@@ -621,7 +610,17 @@ Messaging endpoint is where messages are sent to your bot. It enables communicat
 
 Now, you must configure the OAuth connection to enable SSO for your bot resource.
 
-### To update OAuth connection
+### Configure OAuth connection for your bot resource
+
+For a bot to support SSO, you must update its OAuth connection settings. This process associates the bot with app details that you configured for your Azure AD app:
+
+- Azure AD app ID, which is the client ID
+- Tenant ID
+- Scope and permissions
+
+With the app (client) ID and client secret provided, the Bot Framework Token Store exchanges the token for a graph token with defined permissions.
+
+#### To update OAuth connection for your bot resource
 
 1. Open the [Azure portal](https://ms.portal.azure.com/) on your web browser.
    The Microsoft Azure Bot page opens.
