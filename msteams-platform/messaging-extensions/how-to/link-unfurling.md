@@ -380,6 +380,7 @@ Follow the [step-by-step guide](../../sbs-botbuilder-linkunfurling.yml) to unfur
 
 ## See also
 
-* [Cards](~/task-modules-and-cards/what-are-cards.md)
-* [Tabs link unfurling and Stage View](~/tabs/tabs-link-unfurling.md)
-* [SSO authentication for bots](../../bots/how-to/authentication/auth-aad-sso-bots.md)
+* [Message extensions](../what-are-messaging-extensions.md)
+* [Adaptive Cards](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
+* [Tabs link unfurling and Stage View](../../tabs/tabs-link-unfurling.md)
+* [composeExtensions](../../resources/schema/manifest-schema.md#composeextensions)
