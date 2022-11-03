@@ -356,33 +356,33 @@ To get your app ready for zero install link unfurling, follow these steps:
 
    * * *
 
-1. Advantages and limitations.
+1.  Advantages and limitations.
 
-   Zero install link unfurling helps you provide enhanced experience to the users, such as:
+    Zero install link unfurling helps you provide enhanced experience to the users, such as:
 
-   * Unfurl helpful previews for your links that users share in Teams even before they've installed your app.
+    * Unfurl helpful previews for your links that users share in Teams even before they've installed your app.
 
-   * Create welcome card for your app to show a preview with the placeholder fields.
+    * Create welcome card for your app to show a preview with the placeholder fields.
 
-   The following are the limitations:
+    The following are the limitations:
 
-   * The bot can only send back a response as `result` or `auth` as the value for the `type` property in response to the `composeExtension/anonymousQueryLink` invoke request. The user can log an error for all other response types, such as, silentAuth and config.
+    * The bot can only send back a response as `result` or `auth` as the value for the `type` property in response to the `composeExtension/anonymousQueryLink` invoke request. The user can log an error for all other response types, such as, silentAuth and config.
 
-   * The bot can't send back an acv2 card in response to the `composeExtension/anonymousQueryLink` invoke request, either as a result or as a pre-auth card in auth.
+    * The bot can't send back an acv2 card in response to the `composeExtension/anonymousQueryLink` invoke request, either as a result or as a pre-auth card in auth.
 
-   * If the bot selects to send back the `"type": "auth"` with a pre-auth card, the Teams client strips away any action buttons from the card, and adds a sign in action button to get users to authenticate into your app.<br/>
+    * If the bot selects to send back the `"type": "auth"` with a pre-auth card, the Teams client strips away any action buttons from the card, and adds a sign in action button to get users to authenticate into your app.<br/>
   
-   # [Advantages](#tab/advantages)
+    # [Advantages](#tab/advantages)
 
-   Zero install link unfurling helps you provide enhanced experience to the users, such as:
+    Zero install link unfurling helps you provide enhanced experience to the users, such as:
 
-   * Unfurl helpful previews for your links that users share in Teams even before they've installed your app.
+    * Unfurl helpful previews for your links that users share in Teams even before they've installed your app.
 
-   * Create welcome card for your app to show a preview with the placeholder fields.
+    * Create welcome card for your app to show a preview with the placeholder fields.
 
-   # [limitations](#tab/limitations)
+    # [limitations](#tab/limitations)
 
-   The following are the limitations:
+    The following are the limitations:
 
     * The bot can only send back a response as `result` or `auth` as the value for the `type` property in response to the `composeExtension/anonymousQueryLink` invoke request. The user can log an error for all other response types, such as, silentAuth and config.
 
