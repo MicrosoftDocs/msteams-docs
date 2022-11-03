@@ -360,7 +360,7 @@ With the app (client) ID and client secret provided, the Bot Framework Token Sto
 1. Select **Save**.
 1. Select **Apply**.
 
-Congratulations! You've completed the following app configuration in Azure AD required to enable SSO for your bot app:
+Congratulations! You've completed the following app configurations in Azure AD required to enable SSO for your bot app:
 
 - Application ID
 - Bot ID
@@ -691,7 +691,7 @@ With the app (client) ID and client secret provided, the Bot Framework Token Sto
 1. Select **Save**.
 1. Select **Apply**.
 
-Congratulations! You've completed the following app configuration in Azure AD required to enable SSO for your bot app:
+Congratulations! You've completed the following app configurations in Azure AD required to enable SSO for your bot app:
 
 - Application ID
 - Bot ID

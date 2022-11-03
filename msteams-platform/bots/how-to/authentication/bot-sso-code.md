@@ -7,7 +7,7 @@ zone_pivot_groups: enable-sso
 ---
 # Add code to enable SSO in your bot app
 
-Before you add code to enable SSO, ensure that you've configured your app with Azure AD.
+Before you add code to enable SSO, ensure that you've configured your app and bot resource in Azure AD portal.
 
 > [!div class="nextstepaction"]
 > [Configure bot app in Azure AD](bot-sso-register-aad.md)
@@ -15,7 +15,7 @@ Before you add code to enable SSO, ensure that you've configured your app with A
 You need to configure your app's code to obtain an access token from Azure AD. The access token is issued on behalf of the bot app.
 
 > [!NOTE]
-> If you've build your Teams app using Microsoft Teams Toolkit, you can enable SSO for your app using the instructions in the Tools and SDKs module. For more information, see [Add single sign-on to Teams app](../../../toolkit/add-single-sign-on.md). Teams Toolkit supports SSO for JavaScript and TypeScript apps in Visual Studio Code. For C# apps, Teams Toolkit 17.4 preview 3.
+> If you've build your Teams app using Microsoft Teams Toolkit, you can enable SSO for your app using the instructions in the Tools and SDKs module. For more information, see [Add single sign-on to Teams app](../../../toolkit/add-single-sign-on.md). Teams Toolkit supports SSO for JavaScript and TypeScript apps in Visual Studio Code, and in Teams Toolkit 17.4 preview 3 for C# apps.
 
 This section covers:
 
@@ -26,7 +26,7 @@ This section covers:
 
 ## Update development environment variables
 
-You've configured client secret and OAuth connection setting for the app in Azure AD. You must configure your bot app code with these variables.
+You've configured client secret and OAuth connection setting for the app in Azure AD. You must configure the code with these values.
 
 To update the development environment variables:
 
@@ -34,8 +34,8 @@ To update the development environment variables:
 1. Open the environment file for your project.
 1. Update the following variables:
 
-    - For `MicrosoftAppId`, update the Bot registration ID from Azure AD.
-    - For `MicrosoftAppPassword`, update the Bot registration client secret.
+    - For `MicrosoftAppId`, update the bot ID from Azure AD.
+    - For `MicrosoftAppPassword`, update the client secret.
     - For `ConnectionName`, update the name of the OAuth connection you configured in Azure AD.
     - For `MicrosoftAppTenantId`, update the tenant ID.
 
@@ -136,7 +136,7 @@ To update your app's code:
     
     # [JavaScript](#tab/js2)
     
-    After you add the `AdapterWithErrorHandler.cs`, your code should be as shown below:
+    After you add the code snippet for `TeamsSSOTokenExchangeMiddleware`, your code should be as shown below:
     
     ```JavaScript
     // index.js is used to setup and configure your bot
@@ -241,14 +241,14 @@ If the app user is using the application for the first time and user consent is 
 
 When the user selects **Continue**, one of the following events occurs:
 
-* If the bot UI has a sign-in button, the sign-in flow for bots is activated. You can determine the permissions that require app user's consent. Use this approach if your app requires Graph permissions other than `openid`.
+- If the bot UI has a sign-in button, the sign-in flow for bots is activated. You can determine the permissions that require app user's consent. Use this approach if your app requires Graph permissions other than `openid`.
 
-* If the bot doesn't have a sign-in button on the OAuth card, user consent is required for a minimal set of permissions. This token is useful for basic authentication and to get the app user's email address.
+- If the bot doesn't have a sign-in button on the OAuth card, app user consent is required for a minimal set of permissions. This token is useful for basic authentication and to get the app user's email address.
 
 The consent dialog that appears is for open-id scopes defined in Azure AD. The app user must give consent only once. After consenting, the app user can access and use your bot app for the granted permissions and scopes.
 
 > [!NOTE]
-> After the app user consents, they're not required to consent again for any other permissions. If, however, the consent prompt fails to let the app user access, the bot app falls back to sign-in card.
+> After the app user consents, they're not required to consent again for any other permissions. If the permissions defined in Azure AD scope are modified, then the app user may need to consent again. If, however, the consent prompt fails to let the app user access, the bot app falls back to sign-in card.
 
 > [!IMPORTANT]
 > Scenarios where consent dialogs are not needed:
@@ -337,7 +337,7 @@ async loginStep(stepContext) {
 ---
 
 > [!NOTE]
-> The code snippets use the Waterfall Dialog bot. For more information about Waterfall Dialog, see [About component and waterfall dialogs](/azure/bot-service/bot-builder-concept-waterfall-dialogs?view=azure-bot-service-4.0&preserve-view=true).
+> The code snippets use the Waterfall Dialog. For more information, see [About component and waterfall dialogs](/azure/bot-service/bot-builder-concept-waterfall-dialogs?view=azure-bot-service-4.0&preserve-view=true).
 
 ### Validate the access token
 
