@@ -96,7 +96,7 @@ For a complete manifest example, see [manifest reference](~/resources/schema/man
 
 Zero install link unfurling helps you unfurl previews for your shared links even before a user  discovered or installed your app in Teams. You can anonymously unfurl cards with a new invoke request or create a pre-authenticated Adaptive Card preview for users before they install or authenticate your app.
 
-The following image provides sequential flow to enable and use zero install link unfurling:
+The following image provides a sequential flow to enable and use zero install link unfurling:
 
    :::image type="content" source="../../assets/images/tdp/user-flow-image.PNG" alt-text="Screenshot of the link unfurling code user flow." lightbox="../../assets/images/tdp/user-flow-image.PNG":::
 
@@ -104,7 +104,7 @@ The following image provides sequential flow to enable and use zero install link
 
 To get your app ready for zero install link unfurling, follow these steps:
 
-1. Set the manifest property `supportsAnonymousAccess` to TRUE.
+1. Set the manifest property `supportsAnonymousAccess` to true.
 
 1. Set your app to handle the new invoke request `composeExtension/anonymousQueryLink` in the manifest.
 
@@ -202,7 +202,7 @@ To get your app ready for zero install link unfurling, follow these steps:
       }
       ```
 
-   1. For auth: You need to send back a response with the `type` as `auth` with an optional pre-auth card in the attachments. Use the following template:
+   1. For auth scenarios: You need to send back a response with the `type` as `auth` with an optional pre-auth card in the attachments. Use the following template:
   
       ```json
       {
@@ -234,7 +234,7 @@ To get your app ready for zero install link unfurling, follow these steps:
       }
       ```
 
-1. Pre-auth card (For auth only): Create a card preview to unfurl your links for users who don't have your app installed. You can either create a pre-templated card or add relevant placeholder fields for the users to update. The users can learn about the app even before they’ve installed it.
+1. Pre-auth card (for auth only): Create a card preview to unfurl your links for users who don't have your app installed. You can either create a pre-templated card or add relevant placeholder fields for the users to update. The users can learn about the app even before they’ve installed it.
 
    You can create customized card and add relevant fields. The users can fill in the required information as per the fields. The following image illustrates a customized card preview:
 
@@ -357,38 +357,21 @@ To get your app ready for zero install link unfurling, follow these steps:
 
 1.  Advantages and limitations.
 
-    Zero install link unfurling helps you provide enhanced experience to the users, such as:
-
-    * Unfurl helpful previews for your links that users share in Teams even before they've installed your app.
-
-    * Create welcome card for your app to show a preview with the placeholder fields.
-
-    The following are the limitations:
-
-    * The bot can only send back a response as `result` or `auth` as the value for the `type` property in response to the `composeExtension/anonymousQueryLink` invoke request. The user can log an error for all other response types, such as, silentAuth and config.
-
-    * The bot can't send back an acv2 card in response to the `composeExtension/anonymousQueryLink` invoke request, either as a result or as a pre-auth card in auth.
-
-    * If the bot selects to send back the `"type": "auth"` with a pre-auth card, the Teams client strips away any action buttons from the card, and adds a sign in action button to get users to authenticate into your app.<br/>
-  
     # [Advantages](#tab/advantages)
 
     Zero install link unfurling helps you provide enhanced experience to the users, such as:
 
-    * Unfurl helpful previews for your links that users share in Teams even before they've installed your app.
+    * Unfurl previews for your links that users share in Teams even before they've installed your app.
 
-    * Create welcome card for your app to show a preview with the placeholder fields.
+    * Create a welcome card for your app to show a preview with the placeholder fields.
 
-    # [limitations](#tab/limitations)
+    # [Limitations](#tab/limitations)
 
-    The following are the limitations:
-
-    * The bot can only send back a response as `result` or `auth` as the value for the `type` property in response to the `composeExtension/anonymousQueryLink` invoke request. The user can log an error for all other response types, such as, silentAuth and config.
+     * The bot can only send back a response as `result` or `auth` as the value for the `type` property in response to the `composeExtension/anonymousQueryLink` invoke request. The user can log an error for all other response types, such as, *silentAuth* and *config*.
 
     * The bot can't send back an acv2 card in response to the `composeExtension/anonymousQueryLink` invoke request, either as a result or as a pre-auth card in auth.
 
     * If the bot selects to send back the `"type": "auth"` with a pre-auth card, the Teams client strips away any action buttons from the card, and adds a sign in action button to get users to authenticate into your app.
-
     ---
 
 ## Step-by-step guide
