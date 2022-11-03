@@ -66,7 +66,7 @@ Messaging endpoint is where messages are sent to your bot. It enables communicat
 1. Open the [Azure portal](https://ms.portal.azure.com/) on your web browser.
    The Microsoft Azure Bot page opens.
 
-1. Enter the name of your bot resource in **Search** box, and open it.
+1. Enter the name of your bot resource in **Search** box, and select **Enter** to open it.
 
 1. Select **Settings** > **Configurations**.
 
@@ -86,11 +86,11 @@ You've configured the messaging endpoint for your bot resource. Next, you must e
 
 ### Enable SSO for Azure AD app
 
-You need to configure permissions and scopes, authorize client applications, and update manifest for your Azure AD app. These configurations help invoke SSO for your bot app.
+You must configure permissions and scopes, authorize client applications, and update manifest for your Azure AD app. These configurations help invoke SSO for your bot app.
 
 #### Configure scope for the access token
 
-Configure scope (permission) options for sending access token to Teams Client, and authorizing trusted client applications to enable SSO.
+Configure scope (permission) options for sending access token to Teams client, and authorizing trusted client applications to enable SSO.
 
 You need:
 
@@ -104,23 +104,29 @@ You need:
 
    The Microsoft Azure Bot page opens.
 
-1. Enter the name of your Azure AD app in **Search** box, and open your app.
+1. Enter the name of your bot resource in **Search** box, and select **Enter** to open it.
 
 1. Select **Settings** > **Configuration**.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-configuration.png" alt-text="Configure OAUth settings for your bot app" border="false":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-app-menu.png" alt-text="bot-config-menu.png":::
 
     The **Configuration** page appears.
 
 1. Select **Manage**.
 
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-configuration.png" alt-text="Bot resource configuration" border="false":::
+
     The Azure AD app page appears.
+
+    The new app ID for the app appears on this page. Note and save this app ID. You'll need to update it in the Teams manifest later. If you used the ID of an existing app when you created the bot resource, that app ID appears in this page.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/aad-app-regd.png" alt-text="Bot app page":::
 
 1. Select **Manage** > **Expose an API** from the left pane.
 
     The **Expose an API** page appears.
 
-1. Select **Set** to generate application ID URI in the form of `api://{AppID}`.
+1. Select **Set** to generate application ID URI.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/expose-an-api.png" alt-text="Set app ID URI." border="true":::
 
