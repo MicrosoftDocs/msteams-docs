@@ -118,7 +118,7 @@ You need:
 
     The Azure AD app page appears.
 
-    The new app ID for the app appears on this page. Note and save this app ID. You'll need to update it in the Teams manifest later. If you used the ID of an existing app when you created the bot resource, that app ID appears in this page.
+    The new app ID (client ID) for the app appears on this page. Note and save this app ID. You'll need to update it in the Teams manifest later. If you used the ID of an existing app when you created the bot resource, then ID of that app appears in this page.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/aad-app-regd.png" alt-text="Bot app page":::
 
