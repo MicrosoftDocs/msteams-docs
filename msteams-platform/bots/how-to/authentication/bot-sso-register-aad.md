@@ -59,7 +59,7 @@ To enable SSO for your app in Azure AD:
 
 ## Configure messaging endpoint
 
-Messaging endpoint is where messages are sent to your bot. It enables communicate with your bot.
+Messaging endpoint is where messages are sent to your bot. It enables communication with your bot.
 
 ### To configure messaging endpoint for your bot resource
 
@@ -198,7 +198,7 @@ The application ID URI is configured. You can now define scope and permissions f
 
 The scope and permissions are now configured. Next, you must configure the authorized client applications for your Azure AD app.
 
-##### To configure authorized client application
+#### To configure authorized client application
 
 1. Move through the **Expose an API** page to the **Authorized client application** section, and select **+ Add a client application**.
 
@@ -304,7 +304,7 @@ A client secret is a string that the application uses to prove its identity when
 
 The Azure AD app configuration is complete, and now you must enable SSO support for your bot resource by configuring OAuth connection.
 
-### Configure OAuth connection
+## Configure OAuth connection
 
 For a bot to support SSO, you must update its OAuth connection settings. This process associates the bot with app details that you configured for your Azure AD app:
 
@@ -314,7 +314,7 @@ For a bot to support SSO, you must update its OAuth connection settings. This pr
 
 With the app (client) ID and client secret provided, the Bot Framework Token Store exchanges the token for a graph token with defined permissions.
 
-#### To update OAuth connection
+### To update OAuth connection
 
 1. Open the [Azure portal](https://ms.portal.azure.com/) on your web browser.
    The Microsoft Azure Bot page opens.
@@ -603,7 +603,7 @@ The configuration for Azure AD app is complete, and now you can configure your b
 Before you enable SSO for your bot app, you must create and configure your bot resource in Azure AD. For more information, see [Create Teams conversation bot](../../../sbs-teams-conversation-bot.yml).
 
 > [!NOTE]
-> Ensure that when you create your bot resource, select the application ID of your the Azure AD app, which was generated when you [To register a new app in Azure AD](../../../tabs/how-to/authentication/tab-sso-register-aad.md#to-register-a-new-app-in-azure-ad).
+> Ensure that when you create your bot resource, select the application ID of your the Azure AD app that you registered.
 
 To enable SSO for your bot resource:
 
@@ -612,7 +612,7 @@ To enable SSO for your bot resource:
 
 ### Configure messaging endpoint for your bot resource
 
-Messaging endpoint is where messages are sent to your bot. It enables communicate with your bot.
+Messaging endpoint is where messages are sent to your bot. It enables communication with your bot.
 
 #### To configure messaging endpoint
 
