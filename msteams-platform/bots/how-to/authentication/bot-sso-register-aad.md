@@ -614,8 +614,8 @@ Before you enable SSO for your bot app, you must create and configure your bot r
 
 To enable SSO for your bot resource:
 
-- [To configure messaging endpoint](#to-configure-messaging-endpoint)
-- [To update OAuth connection](#to-update-oauth-connection)
+- [Configure messaging endpoint for your bot resource](#configure-messaging-endpoint-for-your-bot-resource)
+- [Configure OAuth connection for your bot resource](#configure-oauth-connection-for-your-bot-resource)
 
 ### Configure messaging endpoint for your bot resource
 
