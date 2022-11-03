@@ -57,11 +57,11 @@ To enable SSO for your app in Azure AD:
 > [!IMPORTANT]
 > Ensure that when you create your bot resource, you select the option to create a new app ID. You can also use an existing app ID, if you've already registered an app in Azure AD portal.
 
-### Configure messaging endpoint
+## Configure messaging endpoint
 
 Messaging endpoint is where messages are sent to your bot. It enables communicate with your bot.
 
-#### To configure messaging endpoint for your bot resource
+### To configure messaging endpoint for your bot resource
 
 1. Open the [Azure portal](https://ms.portal.azure.com/) on your web browser.
    The Microsoft Azure Bot page opens.
@@ -84,21 +84,21 @@ Messaging endpoint is where messages are sent to your bot. It enables communicat
 
 You've configured the messaging endpoint for your bot resource. Next, you must enable SSO for the Azure AD app.
 
-### Enable SSO for Azure AD app
+## Enable SSO for Azure AD app
 
 You must configure permissions and scopes, authorize client applications, and update manifest for your Azure AD app. These configurations help invoke SSO for your bot app.
 
-#### Configure scope for the access token
+### Configure scope for the access token
 
 Configure scope (permission) options for sending access token to Teams client, and authorizing trusted client applications to enable SSO.
 
 You need:
 
-- [To configure application ID URI](#to-configure-application-id-uri)
-- [To configure API scope](#to-configure-api-scope)
-- [To configure authorized client application](#to-configure-authorized-client-application)
+- [To configure application ID URI](#to-configure-application-id-uri): Configure scope (permission) options for your app. You'll expose a web API, and configure the application ID URI.
+- [To configure API scope](#to-configure-api-scope): Define scope for the API, and the users who can consent for a scope. You can let only admins provide consent for higher-privileged permissions.
+- [To configure authorized client application](#to-configure-authorized-client-application): Create authorized client IDs for applications that you want to pre-authorize. It allows the app user to access the app scopes (permissions) you've configured, without requiring any further consent. Pre-authorize only those client applications you trust as your app users won't have the opportunity to decline consent.
 
-##### To configure application ID URI
+#### To configure application ID URI
 
 1. Open the [Azure portal](https://ms.portal.azure.com/) on your web browser.
 
@@ -168,7 +168,7 @@ You need:
 
 The application ID URI is configured. You can now define scope and permissions for your app.
 
-##### To configure API scope
+#### To configure API scope
 
 1. Select **+ Add a scope** in the **Scopes defined by this API** section.
 
@@ -243,11 +243,11 @@ The authorized app's client ID displays on the page.
 
 You've successfully configured app scope, permissions, and client applications. Ensure that you note and save the application ID URI. Next, you configure the access token version.
 
-#### Configure access token version
+### Configure access token version
 
 You must define the access token version for your app. This configuration is made in the Azure AD application manifest.
 
-##### To define the access token version
+#### To define the access token version
 
 1. Select **Manage** > **Manifest** from the left pane.
 
@@ -377,7 +377,7 @@ To create and configure your app for enabling SSO in Azure AD:
 
 ## Configure your Azure AD app
 
-You can configure the scope and permissions for access tokens in your app.
+You must configure permissions and scopes, authorize client applications, and update manifest for your Azure AD app. These configurations help invoke SSO for your bot app.
 
 > [!IMPORTANT]
 > Ensure that you've registered your app in Azure AD. At registration, Azure AD generates a new app ID that you must note. You'll need to update it later in the Teams app manifest file.
