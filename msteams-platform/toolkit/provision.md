@@ -41,8 +41,6 @@ The following list shows the resource creation for different types of app and Az
 |Resource|Purpose|Description |
 |----------|--------------------------------|-----|
 | Azure storage | Host your tab app | Enables static web app feature to host your tab app |
-| App service plan for simple auth | Host the web app of Simple Auth |Not applicable |
-| Web app for simple auth | Host simple auth server to gain access to other services in your single page application | Adds user assigned identity to access other Azure resources |
 | User assigned identity | Authenticate Azure service-to-service requests | Shared across different capabilities and resources |
 
 </details>
@@ -383,7 +381,7 @@ The following list shows the resource creation for different types of app and Az
 | Resource | Purpose | Description |
 | --- | --- | --- |
 | App service plan | Hosts your web app of tab. | Not applicable |
-| App service | Hosts your Blazor tab app and simple auth server that helps gain access to other services. | Adds user assigned identity to access other Azure resources. |
+| App service | Hosts your Blazor tab app. | Not applicable |
 | Manage identity | Authenticate Azure service-to-service requests. | Shares across different capabilities and resources. |
 
 </details>
