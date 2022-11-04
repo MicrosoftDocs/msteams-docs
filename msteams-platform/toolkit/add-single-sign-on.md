@@ -546,8 +546,8 @@ The following steps help you to enable SSO in your application.
 </b></summary>
 
 1. Ensure to upgrade your SDK version to:
-   * TeamsFx: >= 1.1.0
-   * `Microsoft.Bot.Builder` >= 4.17.1
+   * TeamsFx, version 1.1.0 or newer.
+   * `Microsoft.Bot.Builder`, version 4.17.1 or newer.
 
 2. You can create a `Pages` folder, and move files to `Auth/bot/Pages`.
     `Auth/bot/Pages` folder contain HTML pages that are hosted by bot application. When SSO flows are initiated with Azure AD, the flows will redirect user to these pages.
