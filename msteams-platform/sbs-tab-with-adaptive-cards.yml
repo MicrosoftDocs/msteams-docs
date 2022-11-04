@@ -335,7 +335,7 @@ items:
 
         ![Desktop Mobile screenshot](~/assets/images/adaptive-cards/desktop-mobile-screenshot.png)
 
-- title: Interacting with the Tab in Teams
+- title: Interacte with the Tab in Teams
   durationInMinutes: 1
   content: |
     Tabs allow you to access services and content in a dedicated space within a channel or in a chat.
