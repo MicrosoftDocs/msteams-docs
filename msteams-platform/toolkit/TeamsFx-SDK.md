@@ -55,7 +55,7 @@ npm install @microsoft/teamsfx
 
 ### TeamsFx class
 
-TeamsFx class instance access all TeamsFx settings from environment variables by default. You can also set customized configuration values to override the default values. Check [override configuration](#override-configuration) for details.
+TeamsFx class instance access all TeamsFx settings from environment variables by default. You can also set customized configuration values to override the default values. Check [override configuration](#override-configuration-for-teamsFx-class) for details.
 When creating a TeamsFx instance, you also need to specify the identity type.
 There are two identity types:
 
