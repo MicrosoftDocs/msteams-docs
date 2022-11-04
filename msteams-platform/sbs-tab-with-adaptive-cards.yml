@@ -225,7 +225,7 @@ items:
    
     1. Select **Configure**.
 
-       :::image type="content" source="~/assets/images/adaptive-cards/configure-web_1png" alt-text="Configure web.":::
+       :::image type="content" source="~/assets/images/adaptive-cards/configure-web_1.png" alt-text="Configure web.":::
 
        The Redirect URI is added to the Azure bot resource.
 
@@ -387,7 +387,7 @@ items:
 
     1. Tab/fetch is the first invoke request that your bot receives when a user opens an Adaptive Card tab. When your bot receives the request, it either sends a tab continue response or a tab auth response.
 
-       :::image type="content" source="../msteams-platform/assets/images/adaptive-cards/Sample Task Module.png" alt-text="sample task module":::
+       :::image type="content" source="../msteams-platform/assets/images/adaptive-cards/sample-task-module.png" alt-text="sample task module":::
 
     1. **Submit function of Adaptive Card**
        **task/submit** request is triggered to your bot with the corresponding data through the Action. 
