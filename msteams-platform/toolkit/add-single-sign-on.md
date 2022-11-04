@@ -514,14 +514,14 @@ The following table lists the changes Teams Toolkit makes in your project:
 
    |**Type**|**File**|**Purpose**|
    |--------|--------|-----------|
-   |Create|`aad.template.json` under `template/appPackage`|Azure AD application manifest represents your Azure AD app. `template/appPackage` helps to register an Azure AD app during local debug or provision stage.|
-   |Modify|`manifest.template.json` under `template/appPackage`|A `webApplicationInfo` object is added into your Teams app manifest template. Teams requires this field to enable SSO. The change is in effect when you trigger local debug or provision.|
-   |Modify|`appsettings.json` and `appsettings.Development.json`|Configs that will be used by TeamsFx SDK will be added into your app settings. Please update add the 'TeamsFx' object if you have other appsettings files.|
+   |Create|`aad.template.json` under `template/appPackage`|Azure AD application manifest represents your Azure AD app. `template/appPackage` helps you to register an Azure AD app during local debug or provision stage.|
+   |Modify|`manifest.template.json` under `template/appPackage`|`webApplicationInfo` object is added into your Teams app manifest template. Teams requires this field to enable SSO. The change is in effect, when you trigger local debug or provision.|
+   |Modify|`appsettings.json` and `appsettings.Development.json`|Configs are used and added by TeamsFx SDK to your app settings. You can update and add the `TeamsFx` object if you have other `appsettings` files.|
    |Create|`Auth/tab`|Reference code, auth redirect pages and a `README.md` file is generated in this path for a tab project.|
    |Create|`Auth/bot`|Reference code, auth redirect pages and a `README.md` file is generated in this path for a bot project.|
 
 > [!NOTE]
-> By adding SSO, Teams Toolkit doesn't change anything in the cloud until you trigger local debug. You can update your code to ensure that SSO is working in the project.
+> By adding SSO, Teams Toolkit doesn't change anything in the cloud until you trigger local debug. You can update your code to ensure SSO is working in the project.
 
 ## Update your application to use SSO
 
@@ -545,20 +545,20 @@ The following steps help you to enable SSO in your application.
 <summary><b>Bot project
 </b></summary>
 
-1. You can upgrade your SDK and ensure your SDK version is:
+1. Ensure to upgrade your SDK version to:
    * TeamsFx: >= 1.1.0
    * Microsoft.Bot.Builder >= 4.17.1
 
-2. You can create `Pages` folder and move files in `Auth/bot/Pages` folder.
-    `Auth/bot/Pages` folder contains HTML pages that are hosted by bot application. When SSO flows are initiated with Azure AD, the flows will redirect user to the pages.
+2. You can create a `Pages` folder, and move files to `Auth/bot/Pages`.
+    `Auth/bot/Pages` folder contain HTML pages that are hosted by bot application. When SSO flows are initiated with Azure AD, the flows will redirect user to these pages.
 
-3. After the user is redirected to the pages, you can create `SSO` folder and move files in `Auth/bot/SSO` folder to `SSO`. This folder contains two files as a reference for SSO implementation:
+3. After the user is redirected to these pages, you can create `SSO` folder and move files in `Auth/bot/SSO`. This folder contains three files as a reference for SSO implementation:
 
-    * `SsoDialog.cs`: This file creates a `ComponentDialog` that is used for SSO.
+   1. `SsoDialog.cs`: This file creates a `ComponentDialog` that is used for SSO.
 
-    * `TeamsSsoBot.cs`: This file creates a `TeamsActivityHandler` with `SsoDialog` that adds and triggers a command `showUserInfo`.
+   1. `TeamsSsoBot.cs`: This file creates a `TeamsActivityHandler` with `SsoDialog` that adds and triggers a command `showUserInfo`.
 
-    * `SsoOperations.cs`: This file implements a class in the function to get user info with SSO token. You can follow this method and create your own, that requires SSO token.
+   1. `SsoOperations.cs`: This file implements a class in the function to get user info with SSO token. You can follow this method and create your own, that requires SSO token.
 
     > [!NOTE]
     > Ensure to replace `{Your_NameSpace}` with your project namespace.
