@@ -306,12 +306,13 @@ The following gif image illustrates how user-specific view is displayed in Teams
 
 The following Steps help you to add user-specific view with TeamsFx SDK:
 
-1. [Enable refresh in base Adaptive Card](#enable-refresh-in-base-adaptive-card)
-1. [Add user-specific Adaptive Cards](#add-user-specific-adaptive-cards)
-1. [Add card action handler to refresh views](#add-card-action-handler-to-refresh-views)
-1. [Register action handler](#register-the-action-handler)
+<br>
 
-#### Enable refresh in base Adaptive Card
+</details>
+
+<details>
+
+<summary><b>Enable refresh in base Adaptive Card</b></summary>
 
 As illustrated, user-specific views are refreshed from a base card, when card2 is refreshed from card1. You need to enable auto-refresh on the base card, such as the card1. There are two options to achieve this:
 
@@ -374,7 +375,13 @@ In the following sample, a base card returns as command response that can auto-r
 
 You need to replace `${userID}` with user MRI in code, while rendering your card content.
 
-#### Add user-specific Adaptive Cards
+<br>
+
+</details>
+
+<details>
+
+<summary><b>Add user-specific Adaptive Cards</b></summary>
 
 You need to design the user-specific Adaptive Card to refresh specific users such as  `responseCard.json` for `userA` in the sample. To get started, you can create a `responseCard.json` with the following content, and put it in `bot/src/adaptiveCards` folder:
 
@@ -396,7 +403,13 @@ You need to design the user-specific Adaptive Card to refresh specific users suc
 
 ```
 
-#### Add card action handler to refresh views
+<br>
+
+</details>
+
+<details>
+
+<summary><b>Add card action handler to refresh views</b></summary>
 
 You can add handler that implements `TeamsFxAdaptiveCardActionHandler` to process the refresh invoke activity that is automatically triggered in Teams.
 
@@ -427,7 +440,13 @@ export class Handler1 implements TeamsFxBotCardActionHandler {
 }
 ```
 
-#### Register the action handler
+<br>
+
+</details>
+
+<details>
+
+<summary><b>Register the action handler</b></summary>
 
 You can register the refresh action handler in `bot/src/internal/initialize.js(ts)`:
 
@@ -443,6 +462,10 @@ export const commandBot = new ConversationBot({
 })
 
 ```
+
+<br>
+
+</details>
 
 ### Access Microsoft Graph
 
