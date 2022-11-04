@@ -17,7 +17,7 @@ Single sign-on authentication in Microsoft Azure Active Directory (Azure AD) sil
 
 See the following video to learn about single sign-on (SSO) support for bots:
 <br>
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OASc]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OASc>]
 <br>
 
 ## Bot SSO at runtime
@@ -275,7 +275,9 @@ The response with the token is sent through an invoke activity with the same sch
 **sign in/tokenExchange**, and the **value** field. The **value** field contains the **Id**, a string of the initial request to get the token and the **token** field, a string value including the token.
 
 >[!NOTE]
-> You might receive multiple responses for a given request if the user has multiple active endpoints. You must deduplicate the responses with the token.
+>
+> * You might receive multiple responses for a given request if the user has multiple active endpoints. You must deduplicate the responses with the token.
+> * With latest SDK updates token exchange and deduplication is handled by `TeamsSSOTokenExchangeMiddleware`. If the activity name is `signin` or `tokenExchange` the middleware will attempt to exchange the token and deduplicate the incoming call by ensuring that only one exchange request is processed. For more information, see [`TeamsSSOTokenExchangeMiddleware`](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation-sso-quickstart/csharp_dotnetcore/BotConversationSsoQuickstart/AdapterWithErrorHandler.cs#L26).
 
 ##### C# code to handle the invoke activity
 
