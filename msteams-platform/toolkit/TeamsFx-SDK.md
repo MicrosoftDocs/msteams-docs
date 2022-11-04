@@ -93,9 +93,12 @@ You can learn more about user identity and application identity in the following
 > You need admin consent for resources.
 </details>
 
+> [!NOTE]
+> TeamsFx class has been deprecated and will be removed from the SDK in the future, please use `TeamsUserCredential`, `OnBehalfOfUserCredential` and `AppCredential` instead.
+
 ### Credential
 
-To initialize TeamsFx, you must choose the required identity type. Post specifying the identity type SDK uses different type of credential class. These represent the identity and get access token by corresponding auth flow. Credential classes implement `TokenCredential` interface that is broadly used in Azure library APIs designed to provide access tokens for specific scopes. Other APIs rely on credential call `TeamsFx:getCredential()` to get an instance of `TokenCredential`. For more information on credential and auth flow related classes, see [credential folder](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/credential).
+Credential classes implement `TokenCredential` interface that is broadly used in Azure library APIs designed to provide access tokens for specific scopes. For more information on credential and auth flow related classes, see [credential folder](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/credential).
 
 There are three credential classes to simplify authentication. Here's the corresponding scenarios for each credential class target.
 
@@ -104,7 +107,20 @@ There are three credential classes to simplify authentication. Here's the corres
 
 `TeamsUserCredential` represents Teams current user's identity. For the first time user's credentials are authenticated, then Teams SSO does the On-Behalf-Of flow for token exchange. SDK uses this credential when you choose user identity in browser environment.
 
-The required configurations are: `initiateLoginEndpoint` and `clientId`.
+
+Below is an example to create `TeamsUserCredential`:
+
+```ts
+const authConfig: TeamsUserCredentialAuthConfig = {
+  clientId: process.env.REACT_APP_CLIENT_ID,
+  initiateLoginEndpoint: process.env.REACT_APP_START_LOGIN_PAGE_URL,
+};
+
+const credential = new TeamsUserCredential(authConfig);
+```
+
+Required configurations are `initiateLoginEndpoint` and `clientId` which can be found inside type `TeamsUserCredentialAuthConfig`
+
 </details>
 
 <details>
@@ -112,7 +128,21 @@ The required configurations are: `initiateLoginEndpoint` and `clientId`.
 
 `OnBehalfOfUserCredential` uses On-Behalf-Of flow and require Teams SSO token, in Azure function or bot scenarios. TeamsFx SDK uses the following credential when you choose user identity in Node.js environment.
 
-Required configuration: `authorityHost`, `tenantId`, `clientId`, `clientSecret` or `certificateContent`.
+Below is an example to create `OnBehalfOfUserCredential`:
+
+```ts
+const oboAuthConfig: OnBehalfOfCredentialAuthConfig = {
+  authorityHost: process.env.M365_AUTHORITY_HOST,
+  clientId: process.env.M365_CLIENT_ID,
+  tenantId: process.env.M365_TENANT_ID,
+  clientSecret: process.env.M365_CLIENT_SECRET,
+};
+
+const oboCredential = new OnBehalfOfUserCredential(ssoToken, oboAuthConfig);
+```
+
+Required configurations are `authorityHost`, `tenantId`, `clientId`, `clientSecret` or `certificateContent` which can be found inside type `OnBehalfOfCredentialAuthConfig`
+
 </details>
 
 <details>
@@ -120,7 +150,19 @@ Required configuration: `authorityHost`, `tenantId`, `clientId`, `clientSecret` 
 
 `AppCredential` represents the app identity. You can use app identity when user isn't involved, for example in a time-triggered automation job. TeamsFx SDK uses the following credential when you choose app identity in Node.js environment.
 
-Required configuration: `tenantId`, `clientId`, `clientSecret` or `certificateContent`.
+Below is an example to create `AppCredential`:
+
+```ts
+const appAuthConfig: AppCredentialAuthConfig = {
+  authorityHost: process.env.M365_AUTHORITY_HOST,
+  clientId: process.env.M365_CLIENT_ID,
+  tenantId: process.env.M365_TENANT_ID,
+  clientSecret: process.env.M365_CLIENT_SECRET,
+};
+const appCredential = new AppCredential(appAuthConfig);
+```
+
+Required configurations are `authorityHost`, `tenantId`, `clientId`, `clientSecret` or `certificateContent` which can be found inside type `AppCredentialAuthConfig`
 </details>
 
 ### Bot SSO
@@ -129,13 +171,35 @@ Bot related classes are stored under [bot folder](https://github.com/OfficeDev/T
 
 `TeamsBotSsoPrompt` integrates with bot framework. It simplifies the authentication process when you develop bot application and want to use the bot SSO.
 
-Required configuration: `initiateLoginEndpoint`, `tenantId`, `clientId`, and `applicationIdUri`.
+Below is an example to create `TeamsBotSsoPrompt`:
+
+```ts
+const TeamsBotSsoPromptId = "TEAMS_BOT_SSO_PROMPT";
+
+const settings: TeamsBotSsoPromptSettings = {
+  scopes: ["User.Read"],
+  timeout: 900000,
+  endOnInvalidMessage: true,
+};
+
+const authConfig: OnBehalfOfCredentialAuthConfig = {
+  authorityHost: process.env.SDK_INTEGRATION_TEST_AAD_AUTHORITY_HOST!,
+  clientId: process.env.SDK_INTEGRATION_TEST_M365_AAD_CLIENT_ID!,
+  tenantId: process.env.SDK_INTEGRATION_TEST_AAD_TENANT_ID!,
+  clientSecret: process.env.SDK_INTEGRATION_TEST_M365_AAD_CLIENT_SECRET!,
+};
+const loginUrl = process.env.INITIATE_LOGIN_ENDPOINT;
+const ssoPrompt = new TeamsBotSsoPrompt(authConfig, loginUrl, TeamsBotSsoPromptId, settings);
+```
 
 ### Supported functions
 
 TeamsFx SDK provides several functions to ease the configuration for third-party libraries. They're located under [core folder](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/core).
 
-* Microsoft Graph Service:`createMicrosoftGraphClient` and `MsGraphAuthProvider` help to create authenticated Graph instance.
+* Microsoft Graph Service:`createMicrosoftGraphClient`, `createMicrosoftGraphClientWithCredential` and `MsGraphAuthProvider` help to create authenticated Graph instance.
+> [!NOTE]
+> `createMicrosoftGraphClient` function has been deprecated and will be removed from the SDK in the future, we recommend you to use `createMicrosoftGraphClientWithCredential` instead for better coding experience.
+
 * SQL:`getTediousConnectionConfig` returns a tedious connection config.
 
     Required configuration:
@@ -143,7 +207,12 @@ TeamsFx SDK provides several functions to ease the configuration for third-party
   * If you want to use user identity, then `sqlServerEndpoint`, `sqlUsername` and `sqlPassword` are required.
   * If you want to use MSI identity, then `sqlServerEndpoint`and `sqlIdentityId` are required.
 
-### Override configuration
+  > [!NOTE]
+  > `getTediousConnectionConfig` function has been deprecated and will be removed from the SDK in the future, we recommend you compose your own Tedious configuration for better flexibility
+
+### Override configuration for TeamsFx class
+> [!NOTE]
+> TeamsFx class has been deprecated and will be removed from the SDK in the future, please use `TeamsUserCredential`, `OnBehalfOfUserCredential` and `AppCredential` instead.
 
 You can pass custom config when creating a new `TeamsFx` instance to override default configuration or set required fields when `environment variables` are missing.
 
@@ -204,6 +273,27 @@ try {
   }
 }
 ```
+> [!NOTE]
+> TeamsFx class has been deprecated and will be removed from the SDK in the future, and above code is not recommended, you can use `TeamsUserCredential` instead as below:
+
+```ts
+try {
+  const authConfig: TeamsUserCredentialAuthConfig = {
+    clientId: process.env.REACT_APP_CLIENT_ID,
+    initiateLoginEndpoint: process.env.REACT_APP_START_LOGIN_PAGE_URL,
+  };
+
+  const credential = new TeamsUserCredential(authConfig);  
+  await credential.login("User.Read");
+} catch (err: unknown) {
+  if (err instanceof ErrorWithCode && err.code !== ErrorCode.ConsentFailed) {
+    throw err;
+  } else {
+    // Silently fail because user cancels the consent dialog
+    return;
+  }
+}
+```
 
 If credential instance is used in other library such as Microsoft Graph, it's possible that error is caught and transformed.
 
@@ -215,30 +305,39 @@ This section provides several code snippets for common scenarios that are relate
     <details>
     <summary><b>Use graph API in tab app</b></summary>
 
-    This code snippet shows you how to use `TeamsFx` and `createMicrosoftGraphClient` to get user profiles from Microsoft Graph. It also shows you how to catch and resolve a `GraphError`.
+    This code snippet shows you how to use `TeamsUserCredential` and `createMicrosoftGraphClientWithCredential` to get user profiles from Microsoft Graph in tab app. It also shows you how to catch and resolve a `GraphError`.
 
     1. Import the classes needed.
 
     ```typescript
     import {
-      createMicrosoftGraphClient,
-      TeamsFx,
+      createMicrosoftGraphClientWithCredential,
+      TeamsUserCredential,
     } from "@microsoft/teamsfx";
     ```
 
-    2. Use `TeamsFx.login()` to get user consent.
+    2. Create `TeamsUserCredential` instance
+    ```typescript
+    const authConfig: TeamsUserCredentialAuthConfig = {
+      clientId: process.env.REACT_APP_CLIENT_ID,
+      initiateLoginEndpoint: process.env.REACT_APP_START_LOGIN_PAGE_URL,
+    };
+
+    const teamsUserCredential = new TeamsUserCredential(authConfig);
+    ```
+
+    2. Use `teamsUserCredential.login()` to get user consent.
 
     ```typescript
     // Put these code in a call-to-action callback function to avoid browser blocking automatically showing up pop-ups.
-    await teamsfx.login(["User.Read"]); // Login with scope
+    await teamsUserCredential.login(["User.Read"]); // Login with scope
     ```
 
     3. You can initialize a TeamsFx instance and graph client and get information from MS Graph by this client.
 
     ```typescript
     try {
-      const teamsfx = new TeamsFx();
-      const graphClient = createMicrosoftGraphClient(teamsfx, ["User.Read"]); // Initializes MS Graph SDK using our MsGraphAuthProvider
+      const graphClient = createMicrosoftGraphClientWithCredential(teamsUserCredential, ["User.Read"]); // Initializes MS Graph SDK using our MsGraphAuthProvider
       const profile = await graphClient.api("/me").get();
     } catch (err: unknown) {
       // ErrorWithCode is handled by Graph client
@@ -318,18 +417,30 @@ This section provides several code snippets for common scenarios that are relate
     ```typescript
     const { ConversationState, MemoryStorage } = require("botbuilder");
     const { DialogSet, WaterfallDialog } = require("botbuilder-dialogs");
-    const { TeamsBotSsoPrompt } = require("@microsoft/teamsfx");
+    const { TeamsBotSsoPrompt, OnBehalfOfCredentialAuthConfig, TeamsBotSsoPromptSettings } = require("@microsoft/teamsfx");
 
     const convoState = new ConversationState(new MemoryStorage());
     const dialogState = convoState.createProperty("dialogState");
     const dialogs = new DialogSet(dialogState);
 
-    const teamsfx = new TeamsFx();
-    dialogs.add(
-      new TeamsBotSsoPrompt(teamsfx, "TeamsBotSsoPrompt", {
-        scopes: ["User.Read"],
-      })
-    );    
+    const TeamsBotSsoPromptId = "TEAMS_BOT_SSO_PROMPT";
+
+    const settings: TeamsBotSsoPromptSettings = {
+      scopes: ["User.Read"],
+      timeout: 900000,
+      endOnInvalidMessage: true,
+    };
+
+    const authConfig: OnBehalfOfCredentialAuthConfig = {
+      authorityHost: process.env.SDK_INTEGRATION_TEST_AAD_AUTHORITY_HOST!,
+      clientId: process.env.SDK_INTEGRATION_TEST_M365_AAD_CLIENT_ID!,
+      tenantId: process.env.SDK_INTEGRATION_TEST_AAD_TENANT_ID!,
+      clientSecret: process.env.SDK_INTEGRATION_TEST_M365_AAD_CLIENT_SECRET!,
+    };
+    const loginUrl = process.env.INITIATE_LOGIN_ENDPOINT;
+    const ssoPrompt = new TeamsBotSsoPrompt(authConfig, loginUrl, TeamsBotSsoPromptId, settings);
+
+    dialogs.add(ssoPrompt);    
     ```
 
     2. Begin the dialog and sign-in.
@@ -360,11 +471,19 @@ This section provides several code snippets for common scenarios that are relate
     <details>
     <summary><b>Use Graph API in Message Extension</b></summary>
 
-    This code snippet shows you how to override `handleTeamsMessagingExtensionQuery` extends from `TeamsActivityHandler`, and use `handleMessageExtensionQueryWithToken` provided by TeamsFx sdk to sign-in to get an access token:
+    This code snippet shows you how to override `handleTeamsMessagingExtensionQuery` extends from `TeamsActivityHandler`, and use `handleMessageExtensionQueryWithSSO` provided by TeamsFx sdk to sign-in to get an access token:
 
     ```typescript
+
+    const authConfig: OnBehalfOfCredentialAuthConfig = {
+      authorityHost: process.env.SDK_INTEGRATION_TEST_AAD_AUTHORITY_HOST!,
+      clientId: process.env.SDK_INTEGRATION_TEST_M365_AAD_CLIENT_ID!,
+      tenantId: process.env.SDK_INTEGRATION_TEST_AAD_TENANT_ID!,
+      clientSecret: process.env.SDK_INTEGRATION_TEST_M365_AAD_CLIENT_SECRET!,
+    };
+    const loginUrl = process.env.INITIATE_LOGIN_ENDPOINT;
     public async handleTeamsMessagingExtensionQuery(context: TurnContext, query: any): Promise<any> {
-      return await handleMessageExtensionQueryWithToken(context, null, 'User.Read', 
+      return await handleMessageExtensionQueryWithSSO(context, authConfig, loginUrl, 'User.Read', 
         async (token: MessageExtensionTokenResponse) => {
           // ... continue to query with access token ...
         });
@@ -384,11 +503,18 @@ This section provides several code snippets for common scenarios that are relate
     import {
       CommandMessage,
       TriggerPatterns,
-      TeamsFx,
-      createMicrosoftGraphClient,
+      createMicrosoftGraphClientWithCredential,
       TeamsFxBotSsoCommandHandler,
       TeamsBotSsoPromptTokenResponse,
     } from "@microsoft/teamsfx";
+
+    const authConfig: OnBehalfOfCredentialAuthConfig = {
+      authorityHost: process.env.SDK_INTEGRATION_TEST_AAD_AUTHORITY_HOST!,
+      clientId: process.env.SDK_INTEGRATION_TEST_M365_AAD_CLIENT_ID!,
+      tenantId: process.env.SDK_INTEGRATION_TEST_AAD_TENANT_ID!,
+      clientSecret: process.env.SDK_INTEGRATION_TEST_M365_AAD_CLIENT_SECRET!,
+    };
+    const loginUrl = process.env.INITIATE_LOGIN_ENDPOINT;
 
     export class ProfileSsoCommandHandler implements TeamsFxBotSsoCommandHandler {
       triggerPatterns: TriggerPatterns = "profile";
@@ -398,11 +524,11 @@ This section provides several code snippets for common scenarios that are relate
         message: CommandMessage,
         tokenResponse: TeamsBotSsoPromptTokenResponse,
       ): Promise<string | Partial<Activity> | void> {
-        // Init TeamsFx instance with SSO token
-        const teamsfx = new TeamsFx().setSsoToken(tokenResponse.ssoToken);
+
+        const oboCredential = new OnBehalfOfUserCredential(tokenResponse.ssoToken, oboAuthConfig);
 
         // Add scope for your Azure AD app. For example: Mail.Read, etc.
-        const graphClient = createMicrosoftGraphClient(teamsfx, ["User.Read"]);
+        const graphClient = createMicrosoftGraphClientWithCredential(oboCredential, ["User.Read"]);
       
         // Call graph api use `graph` instance to get user profile information
         const me = await graphClient.api("/me").get();
@@ -429,15 +555,18 @@ This section provides several code snippets for common scenarios that are relate
     1. You can use `CreateApiClient` provided by TeamsFx sdk to call Azure Function:
 
     ```typescript
-    async function callFunction(teamsfx?: TeamsFx) {
-      const teamsfx = new TeamsFx();
+    async function callFunction() {
+      const authConfig: TeamsUserCredentialAuthConfig = {
+        clientId: process.env.REACT_APP_CLIENT_ID,
+        initiateLoginEndpoint: process.env.REACT_APP_START_LOGIN_PAGE_URL,
+      };
 
-      // Get the credential.
-      const credential = teamsfx.getCredential(); 
+      const teamsUserCredential = new TeamsUserCredential(authConfig);
+
       // Create an API client by providing the token and endpoint.
       const apiClient = CreateApiClient(
-        teamsfx.getConfig("YOUR_API_ENDPOINT"), // Create an API Client that uses SSO token to authenticate requests
-        new BearerTokenAuthProvider(async () =>  (await credential.getToken(""))!.token) // Call API hosted in Azure Functions on behalf of user to inject token to request header
+        "https://YOUR_API_ENDPOINT", // Create an API Client that uses SSO token to authenticate requests
+        new BearerTokenAuthProvider(async () =>  (await teamsUserCredential.getToken(""))!.token) // Call API hosted in Azure Functions on behalf of user to inject token to request header
       );
 
       // Send a GET request to "RELATIVE_API_PATH", "/api/functionName" for example.
@@ -449,10 +578,16 @@ This section provides several code snippets for common scenarios that are relate
     You can also use `axios` library to call Azure Function.
 
     ```typescript
-    async function callFunction(teamsfx?: TeamsFx) {
-      const accessToken = await teamsfx.getCredential().getToken(""); // Get SSO token 
-      // teamsfx.getConfig("apiEndpoint") will read REACT_APP_FUNC_ENDPOINT environment variable 
-      const endpoint = teamsfx.getConfig("apiEndpoint");
+    async function callFunction() {
+      const authConfig: TeamsUserCredentialAuthConfig = {
+        clientId: process.env.REACT_APP_CLIENT_ID,
+        initiateLoginEndpoint: process.env.REACT_APP_START_LOGIN_PAGE_URL,
+      };
+
+      const teamsUserCredential = new TeamsUserCredential(authConfig);
+
+      const accessToken = await teamsUserCredential.getToken(""); // Get SSO token 
+      const endpoint = "https://YOUR_API_ENDPOINT";
       const response = await axios.default.get(endpoint + "/api/" + functionName, {
         headers: {
           authorization: "Bearer " + accessToken.token,
@@ -471,11 +606,18 @@ This section provides several code snippets for common scenarios that are relate
       teamsfxContext: TeamsfxContext
     ): Promise<Response> {
       const res: Response = { status: 200, body: {},};
-      // ...
-      teamsfx = new TeamsFx().setSsoToken(accessToken);
+      
+      const authConfig: OnBehalfOfCredentialAuthConfig = {
+        authorityHost: process.env.SDK_INTEGRATION_TEST_AAD_AUTHORITY_HOST!,
+        clientId: process.env.SDK_INTEGRATION_TEST_M365_AAD_CLIENT_ID!,
+        tenantId: process.env.SDK_INTEGRATION_TEST_AAD_TENANT_ID!,
+        clientSecret: process.env.SDK_INTEGRATION_TEST_M365_AAD_CLIENT_SECRET!,
+      };
+      const oboCredential = new OnBehalfOfUserCredential(tokenResponse.ssoToken, oboAuthConfig);
+
       // Query user's information from the access token.
       try {
-        const currentUser: UserInfo = await teamsfx.getUserInfo();
+        const currentUser: UserInfo = await oboCredential.getUserInfo();
         if (currentUser && currentUser.displayName) {
           res.body.userInfoMessage = `User display name is ${currentUser.displayName}.`;
         } else {
@@ -485,7 +627,7 @@ This section provides several code snippets for common scenarios that are relate
       }
       // Create a graph client to access user's Microsoft 365 data after user has consented.
       try {
-        const graphClient: Client = createMicrosoftGraphClient(teamsfx, [".default"]);
+        const graphClient: Client = createMicrosoftGraphClientWithCredential(oboCredential, [".default"]);
         const profile: any = await graphClient.api("/me").get();
         res.body.graphClientMessage = profile;
       } catch (e) {
@@ -504,23 +646,22 @@ This section provides several code snippets for common scenarios that are relate
 
     This code snippet shows you how to use certificate-based application permission to get the token that can be used to call Graph API.
 
-    1. You can initialize the `authConfig` by providing a `PEM-encoded key certificate`.
+    1. You can initialize the `appAuthConfig` by providing a `PEM-encoded key certificate`.
 
     ```typescript
-    const authConfig = {
-      clientId: process.env.M365_CLIENT_ID,
-      certificateContent: "The content of a PEM-encoded public/private key certificate",
+    const appAuthConfig: AppCredentialAuthConfig = {
       authorityHost: process.env.M365_AUTHORITY_HOST,
+      clientId: process.env.M365_CLIENT_ID,
       tenantId: process.env.M365_TENANT_ID,
-    };    
+      certificateContent: 'PEM-encoded key certificate',
+    };
     ```
 
-    2. You can use the `authConfig` to get the token.
+    2. You can use the `AppCredential` to get the token.
 
     ```typescript
-    const teamsfx = new TeamsFx(IdentityType.App);
-    teamsfx.setCustomeConfig(authConfig);
-    const token = teamsfx.getCredential().getToken();    
+    const appCredential = new AppCredential(appAuthConfig);
+    const token = appCredential.getToken();    
     ```
 
     </details>
@@ -533,20 +674,19 @@ This section provides several code snippets for common scenarios that are relate
     1. You can initialize the `authConfig` by providing a `client secret`.
 
     ```typescript
-    const authConfig = {
-      clientId: process.env.M365_CLIENT_ID,
-      clientSecret: process.env.M365_CLIENT_SECRET,
+    const appAuthConfig: AppCredentialAuthConfig = {
       authorityHost: process.env.M365_AUTHORITY_HOST,
+      clientId: process.env.M365_CLIENT_ID,
       tenantId: process.env.M365_TENANT_ID,
-    };    
+      clientSecret: process.env.M365_CLIENT_SECRET,
+    };
     ```
 
     2. You can use the `authConfig` to get the token.
 
     ```typescript
-    const teamsfx = new TeamsFx(IdentityType.App);
-    teamsfx.setCustomeConfig(authConfig);
-    const token = teamsfx.getCredential().getToken();    
+    const appCredential = new AppCredential(appAuthConfig);
+    const token = appCredential.getToken();    
     ```
 
     For more information on sample to use graph API in bot application, see the [hello-world-tab-with-backend sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-tab-with-backend).
@@ -563,19 +703,17 @@ This section provides several code snippets for other scenarios that are related
   This code snippet shows you how to call an existing API in Bot by `ApiKeyProvider`.
 
   ```typescript
-  const teamsfx = new TeamsFx();
-
   // Create an API Key auth provider. In addition to APiKeyProvider, following auth providers are also available:
   // BearerTokenAuthProvider, BasicAuthProvider, CertificateAuthProvider.
   const authProvider = new ApiKeyProvider("YOUR_API_KEY_NAME",
-    teamsfx.getConfig("YOUR_API_KEY_VALUE"), // This reads the value of YOUR_API_KEY_VALUE environment variable.
+    "YOUR_API_KEY_VALUE",
     ApiKeyLocation.Header
   );
 
   // Create an API client using above auth provider.
   // You can also implement AuthProvider interface and use it here.
   const apiClient = createApiClient(
-    teamsfx.getConfig("YOUR_API_ENDPOINT"), // This reads YOUR_API_ENDPOINT environment variable.
+    "YOUR_API_ENDPOINT",
     authProvider
   );
 
@@ -619,6 +757,7 @@ This section provides several code snippets for other scenarios that are related
 
   > [!NOTE]
   > For more information on sample to access SQL database in Azure function, see [share-now sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/share-now).
+  > `getTediousConnectionConfig` function has been deprecated and will be removed from the SDK in the future, we recommend you compose your own Tedious configuration for better flexibility
 
 </details>
 
