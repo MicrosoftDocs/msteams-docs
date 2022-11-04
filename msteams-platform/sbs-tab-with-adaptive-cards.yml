@@ -248,7 +248,7 @@ items:
 
     1. Add user permissions that your app requires to downstream APIs, for example, `User.Read`
     
-    1. Select *Add permissions**.
+    1. Select **Add permissions**.
 
        :::image type="content" source="~/assets/images/adaptive-cards/add-permissions_1.png" alt-text="add permission.":::
 
@@ -312,7 +312,7 @@ items:
          * Replace `ConnectionName` to the name of OAuth connection setting.
          * Replace  `ApplicationBaseUrl`to your ngrok domain name.
 
-      :::image type="content" source="./assets/images/adaptive-cards/appsettings-json_1.png" alt-text="appsettings-json":::
+         :::image type="content" source="./assets/images/adaptive-cards/appsettings-json_1.png" alt-text="appsettings-json":::
 
     1. Select **Save**.
 
@@ -333,14 +333,12 @@ items:
          * Replace `contentBotId` to your bot's **Microsoft App ID**.
          * Replace  `ApplicationBaseUrl`to your ngrok domain name.
 
-       ::image type="content" source="./assets/images/adaptive-cards/manifest-json_2.png" alt-text="appsettings-json":::
-
-        ![Manifest config](~/assets/images/adaptive-cards/manifest-vsc.png)
+       :::image type="content" source="./assets/images/adaptive-cards/manifest-json_2.png" alt-text="appsettings-json":::
 
     1. In the File Explorer, go to the **AppPackage** folder.
     1. Zip the contents of the **AppPackage** folder to create `manifest.zip`.
 
-       ::image type="content" source="./assets/images/adaptive-cards/zip.png" alt-text="zip file":::
+       :::image type="content" source="./assets/images/adaptive-cards/zip.png" alt-text="zip file":::
 
         > [!NOTE]
         > The `manifest.zip` must not contain any additional folders in it. It must have **manifest** json source file, **color** icon, and **outline** icon inside the zip folder.
@@ -373,7 +371,7 @@ items:
 
     1. In the left pane of the Teams, select the ellipses ●●● and choose your app from the list.
     1. Tab showing Adaptive card with action controls.
-    1. Select *Sign In**.
+    1. Select **Sign In**.
 
        :::image type="content" source="../msteams-platform/assets/images/adaptive-cards/adaptive-cards-tab-action-controls_1.png" alt-text="Tab showing Adaptive card with action controls":::
    
