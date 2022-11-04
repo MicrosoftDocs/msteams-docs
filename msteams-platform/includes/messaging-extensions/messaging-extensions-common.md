@@ -2,7 +2,7 @@
 
 A message extension is a cloud-hosted service that listens to user requests and responds with structured data, such as a [card](~/task-modules-and-cards/what-are-cards.md). You integrate your service with Microsoft Teams via Bot Framework `Activity` objects. Our .NET and Node.js extensions for the Bot Builder SDK can help you add message extension functionality to your app.
 
-![Diagram of message flow for message extensions](~/assets/images/compose-extensions/ceflow.png)
+:::image type="content" source="../../assets/images/compose-extensions/ceflow.png" alt-text="Screenshot shows the message flow for message extensions.":::
 
 ### Register in the Bot Framework
 
