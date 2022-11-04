@@ -247,15 +247,15 @@ You can use the `adaptiveCardResponse` property in handler to customize how the 
 
 * The response card is replaced by the current card where the button is defined for the interactor that triggers the action. The users in the conversation can still view the original action card `AdaptiveCardResponse.ReplaceForInteractor`. This is the default behavior.
 
-   :::image type="content" source="../../../assets/images/sbs-workflow-bot/replace-for-interactor.png" alt-text="Customize how the bot sends adaptive card" lightbox="../../../assets/images/sbs-workflow-bot/replace-for-interactor.png:::
+   :::image type="content" source="../../../assets/images/sbs-workflow-bot/replace-for-interactor.png" alt-text="Customize how the bot sends adaptive card" lightbox="../../../assets/images/sbs-workflow-bot/replace-for-interactor.png":::
 
 * The response card is replaced by the action card for all users in the chat, and they can view the response card `AdaptiveCardResponse.ReplaceForAll`.
 
-   :::image type="content" source="../../../assets/images/sbs-workflow-bot/replace-for-all.png" alt-text="Replaced the action card for all" lightbox="../../../assets/images/sbs-workflow-bot/replace-for-all.png:::
+   :::image type="content" source="../../../assets/images/sbs-workflow-bot/replace-for-all.png" alt-text="Replaced the action card for all" lightbox="../../../assets/images/sbs-workflow-bot/replace-for-all.png":::
 
 * The response card is sent as a separate message in the conversation that can't replace the action card. All users in the chat can view the response card `AdaptiveCardResponse.NewForAll`.
 
-   :::image type="content" source="../../../assets/images/sbs-workflow-bot/new-for-all.png" alt-text="Response card sent for all as new" lightbox="../../../assets/images/sbs-workflow-bot/new-for-all.png:::
+   :::image type="content" source="../../../assets/images/sbs-workflow-bot/new-for-all.png" alt-text="Response card sent for all as new" lightbox="../../../assets/images/sbs-workflow-bot/new-for-all.png":::
 
 ### Respond with text message
 
@@ -300,7 +300,7 @@ When Adaptive Cards are sent in a Teams channel or group chat, all users can see
 
 The following gif image illustrates how user-specific view is displayed in Teams:
 
-:::image type="content" source="../../../assets/images/sbs-workflow-bot/user-specific-views.png" alt-text="User-specific view in teams displayed" lightbox="../../../assets/images/sbs-workflow-bot/user-specific-views.png:::
+:::image type="content" source="../../../assets/images/sbs-workflow-bot/user-specific-views.png" alt-text="User-specific view in teams displayed" lightbox="../../../assets/images/sbs-workflow-bot/user-specific-views.png":::
 
 ### Add user-specific view
 
