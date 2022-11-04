@@ -284,7 +284,7 @@ When you want to return an error response message to the client, you can apply `
 
 You can edit the file `src/adaptiveCards/helloworldCommand.json` to customize Adaptive Card to your preference. The file `src/cardModels.ts` defines a data structure used to fill data for the Adaptive Card.
 
-The binding between the modal and the Adaptive Card is done by matching name such as, `CardData.title` maps to `${title}` in Adaptive Card). You can add, edit, or remove properties, and their bindings to customize the Adaptive Card to your needs.
+The binding between the model and the Adaptive Card is done by matching name such as, `CardData.title` maps to `${title}` in Adaptive Card). You can add, edit, or remove properties, and their bindings to customize the Adaptive Card to your needs.
 
 You can also add new cards, if needed for your application. To build different types of Adaptive Cards with a list or a table of dynamic content using `ColumnSet` and `FactSet`, see [TeamsFx-Samples](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/adaptive-card-notification).
 
@@ -304,7 +304,7 @@ The following gif image illustrates how user-specific view is displayed in Teams
 
 ### Add user-specific view
 
-The following Steps help you to add user-specific view with TeamsFx SDK:
+The following steps help you to add user-specific view with TeamsFx SDK:
 
 <br>
 
