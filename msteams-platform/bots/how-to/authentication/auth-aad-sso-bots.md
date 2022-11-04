@@ -276,7 +276,7 @@ The response with the token is sent through an invoke activity with the same sch
 >[!NOTE]
 > You might receive multiple responses for a given request if the user has multiple active endpoints. You must deduplicate the responses with the token.
 
-##### C# code to handle the invoke activity
+##### C# code
 
 ```csharp
     protected override async Task<InvokeResponse> OnInvokeActivityAsync
@@ -300,8 +300,6 @@ The response with the token is sent through an invoke activity with the same sch
                 }
             }
 ```
-
-The `turnContext.activity.value` is of type [TokenExchangeInvokeRequest](/dotnet/api/microsoft.bot.schema.tokenexchangeinvokerequest?view=botbuilder-dotnet-stable&preserve-view=true) and contains the token that can be further used by your bot. You must store the tokens for performance reasons and refresh them.
 
 ### Token exchange failure
 
