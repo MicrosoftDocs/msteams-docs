@@ -89,7 +89,7 @@ The following table shows the changes that can be seen in the files of your app 
 |Bot, message extension and tab|Includes bot or tab-related&nbsp;information in the teamsfx and provision files that are for integrating Azure functions.|Files under `templates/azure/teamsfx` are updated, and `templates/azure/provision/xxx`.bicep files are regenerated.|
 |Bot, message extension and tab|Ensures your project is set with right configurations for newly added capability.|Files under `.fx/config` are regenerated|
 
-## Step-by-step guide
+## Step-by-step guides
 
 * Follow the [step-by-step](../sbs-gs-commandbot.yml) guide to build command bot in Microsoft Teams.
 
