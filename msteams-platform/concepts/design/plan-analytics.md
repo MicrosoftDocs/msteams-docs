@@ -81,7 +81,7 @@ Besides the generic reports for daily, weekly, and monthly active users, time sp
 
 Instrumenting your code with analytics markers (also known as telemetry markers) is a standard web application development practice. Robust telemetry instrumentation in your code is critical for long-term success. It helps you to measure both aggregate and user-specific metrics, which is required to determine product, growth, marketing, and business decisions.
 
-Before you begin, always remember to handle user data in accordance with your strict data handling and privacy policies, and in compliance with your regulatory obligations. The rest of this document simply recommends the in-context data you can use but doesn't supersede your regulatory obligations.
+Before you begin, always remember to handle user data in accordance with your strict data handling and privacy policies, and in compliance with your regulatory obligations. The rest of this document only recommends the in-context data you can use but doesn't supersede your regulatory obligations.
 
 There are two types of data instrumentation relevant for your Teams app:
 
@@ -102,17 +102,17 @@ You can classify Teams platform features into broadly two constructs:
 
 #### Hosted web canvas constructs
 
-Visual canvas-oriented capabilities are Teams-aware webpages embedded in Microsoft Teams, such as tabs, personal apps, task modules (displaying an embedded iframe), stage views, meeting tabs, shared meeting stage, and in-meeting dialogs. They are hosted in the cloud with the rest of your SaaS app that runs in the web browser.
+Visual canvas-oriented capabilities are Teams-aware webpages embedded in Microsoft Teams, such as tabs, personal apps, task modules (displaying an embedded iframe), stage views, meeting tabs, shared meeting stage, and in-meeting dialogs. They're hosted in the cloud with the rest of your SaaS app that runs in the web browser.
 
-These webpages often have the instrumentation done for core SaaS web app needs. You just need to capture Teams-specific events and handle them for Teams-specific instrumentation in your code. What comes in handy for your analytics needs is the fact that tabs are “Teams-aware” webpages.
+These webpages often have the instrumentation done for core SaaS web app needs. You just need to capture Teams-specific events and handle them for Teams-specific instrumentation in your code. It's handy for your analytics needs that tabs are “Teams-aware” webpages.
 
 When you build a [tab](../../tabs/how-to/tab-requirements.md), add the [Teams JavaScript client SDK](/javascript/api/overview/msteams-client) to your tab's content or configuration page. It ensures that your page can access Teams-specific information or [context](../../tabs/how-to/access-teams-context.md). Use this information for useful user-specific insights, such as:
 
-- Microsoft 365 tenant ID (Azure AD tenant) for the current user (`tid`). In Microsoft 365 or Azure AD, a tenant is representative of an organization, that is, the user’s company. The Microsoft 365 tenant ID is specifically useful to find out and log which Microsoft 365 tenant the user belongs to. Once you know the tenant ID, you can find out the tenant domain for the organization, which often reveals the organization’s name, using this Graph API. Ensure to invoke this API in your Microsoft 365 Developer tenant since you’ll be able to consent to the required tenant administrator permission it needs.
+- Microsoft 365 tenant ID (Azure AD tenant) for the current user (`tid`). In Microsoft 365 or Azure AD, a tenant is representative of an organization, that is, the user’s company. The Microsoft 365 tenant ID is useful to find out and log which Microsoft 365 tenant the user belongs to. Once you know the tenant ID, you can find out the tenant domain for the organization, which often reveals the organization’s name, using this Graph API. Ensure to invoke this API in your Microsoft 365 Developer tenant since you’ll be able to consent to the required tenant administrator permission it needs.
 - License type assigned to the user and the SKU for the current user’s tenant. Possible values are F1, E1, E3, and E5 enterprise plans for (licenseType) and enterprise, free, edu, unknown for (`tenantSKU`).
 - The context where the tab URL is loaded. Some possible values can be content page, task module, tab settings dialog, tab remove dialog, meeting sidePanel etc. (`frameContext`).
 - Host client type where tab is loaded. Possible values are Android, IoS, web, desktop, surfaceHub, etc. (`hostClientType`). You can slice your analytics data.
-- Locale awareness for the user to indicate language for example, en-us, fr-fr, ja-jp etc. (app locale).
+- Locale awareness for the user to indicate language, for example, en-us, fr-fr, ja-jp etc. (app locale).
 - User Principal Name or login hint (user name) of the current user in the current tenant (usually user’s email address).
 - Team name and channel name where the channel tab is added (teamName, channelName).
 - Unique ID for the current app session inside a tab used for correlating telemetry data (`appSessionId`).
@@ -132,7 +132,7 @@ After you extract the Teams-specific information from the tab context, use it as
 
 #### Conversational constructs
 
-Conversation or chat-oriented capabilities include bots, message extensions, cards and task modules (displaying an adaptive card) that are created for Teams users. You'll need to capture and handle Teams-specific events for data instrumentation for your app. A bot can access additional context data about a team, chat, meeting, 1:1 call or group call where it's installed.
+Conversation or chat-oriented capabilities include bots, message extensions, cards and task modules (displaying an adaptive card) that are created for Teams users. You'll need to capture and handle Teams-specific events for data instrumentation for your app. A bot can access additional context data about a team, chat, meeting, 1:1 call, or group call where it's installed.
 
 Use this information for enriching the bot's functionality and the user experience:
 
@@ -140,7 +140,7 @@ Use this information for enriching the bot's functionality and the user experien
 
 - Use the user’s Azure AD user or object ID to find the user’s first name, surname, email address, tenant ID, and user’s role in the team. Leverage these details as described for hosted web canvas constructs above.
 
-- If your bot is installed in a team, query it for metadata about that team including the Azure AD group ID and the team’s name. It can also query the list of channels in the team which returns channel IDs and names. Leverage this information for configuration, setup, and personalization.
+- If your bot is installed in a team, query it for metadata about that team including the Azure AD group ID and the team’s name. It can also query the list of channels in the team, which returns channel IDs and names. Leverage this information for configuration, setup, and personalization.
 
 - Using the Meeting Details API, get a meeting's or call’s static metadata, such as type of meeting such as `GroupCall`, `OneToOneCall`, `Adhoc`, `Broadcast`, `MeetNow`, `Recurring`, `Scheduled`, or `Unknown`; conversation type, organizer tenant ID, etc.
 
