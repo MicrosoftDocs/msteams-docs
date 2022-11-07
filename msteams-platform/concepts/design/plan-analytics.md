@@ -22,7 +22,7 @@ This information helps you analyze the data against your business goals, take co
 
 **But Teams app usage report must suffice, isn’t it?**
 
-As the app’s developer, you can track your app’s usage in the [Teams app usage report](../deploy-and-publish/appsource/post-publish/overview.md#analyze-app-usage) in Partner Center within a week after publishing your app on the marketplace. The usage report provides standard metrics that enable you to track user demand, user churn and frequency of usage for your app. These reports are available at an aggregate level, such as:
+As the app’s developer, you can track your app’s usage in the [Teams app usage report](../deploy-and-publish/appsource/post-publish/overview.md#analyze-app-usage) in Partner Center within a week after publishing your app on the marketplace. The usage report provides standard metrics that enable you to track user demand, user churn, and frequency of usage for your app. These reports are available at an aggregate level, such as:
 
 - Monthly, Daily, and Weekly active users
 - Retention and intensity charts
@@ -54,7 +54,7 @@ Besides the generic reports for daily, weekly, and monthly active users, time sp
 - **Aggregate metrics**
   - Which scope or UI entry point (for example, personal app, channel, group chat) is the most used by your users to invoke your app and begin a new app session inside Teams?
   - How many days on an average do users use your app in the first week after installing the app?
-  - Week over week or month over month new user retention cohort analysis for your app or specific capabilities (for example, personal app or bot) in your app?
+  - Week-over-week or month-over-month new user retention cohort analysis for your app or specific capabilities (for example, personal app or bot) in your app?
   - How many users use your app only on Teams mobile clients?
   - How many users have used the camera device capability in your app?
   - What does the funnel analysis for your app from app installation to activation to engagement to retention and finally, monetization reveal? Where are the drop-offs happening?
@@ -63,7 +63,7 @@ Besides the generic reports for daily, weekly, and monthly active users, time sp
   - Which organization has seen the maximum number of installations for your app in the last 30 days?
   - Which organizations do the users installing your app in the last 14 days belong to?
   - Which organization has seen the maximum number of trial sign-ups for your app in the last seven days?
-  - What types of meetings (GroupCall, OneToOneCall, Adhoc, Broadcast, MeetNow, Recurring or Scheduled) is your app used in?
+  - What types of meetings (`GroupCall`, `OneToOneCall`, `Adhoc`, `Broadcast`, `MeetNow`, `Recurring` or `Scheduled`) is your app used in?
 
 - **User-specific metrics**
   - Which users are yet to experience the channel tabs capability you’ve implemented in your app in the last app update?
@@ -81,19 +81,19 @@ Besides the generic reports for daily, weekly, and monthly active users, time sp
 
 Instrumenting your code with analytics markers (also known as telemetry markers) is a standard web application development practice. Robust telemetry instrumentation in your code is critical for long-term success. It helps you to measure both aggregate and user-specific metrics, which is required to determine product, growth, marketing, and business decisions.
 
-Before you begin, always remember to handle user data in accordance with your strict data handling and privacy policies and in compliance with your regulatory obligations. The rest of this document simply recommends the in-context data you can use but does not supersede your regulatory obligations.
+Before you begin, always remember to handle user data in accordance with your strict data handling and privacy policies, and in compliance with your regulatory obligations. The rest of this document simply recommends the in-context data you can use but doesn't supersede your regulatory obligations.
 
 There are two types of data instrumentation relevant for your Teams app:
 
-- **Data instrumentation for your core SaaS product or app**: This is required for your browser-based SaaS app. This instrumentation is often already done in your browser-based SaaS app's code. You can select analytics, customer lifecycle analytics and conversion analytics metrics such as bounce rate, page views, unique visitor count, session counts, engagement time, select through rate etc. and many more for your web app.
+- **Data instrumentation for your core SaaS product or app**: It's required for your browser-based SaaS app. This instrumentation is often already done in your browser-based SaaS app's code. You can select analytics, customer lifecycle analytics, and conversion analytics metrics such as bounce rate, page views, unique visitor count, session counts, engagement time, select through rate etc., and many more for your web app.
 
-- **Data instrumentation in your app specific to Teams**: This is required additionally in your SaaS app when you surface it inside of the Teams client. Your app may have Teams platform capabilities, such as bots, message extensions etc. It may also have experiences to address use cases unique to Teams such as meeting extensions, intelligent M365-aware scenarios using Microsoft Graph, link unfurling etc.
+- **Data instrumentation in your app specific to Teams**: It's required additionally in your SaaS app when you surface it inside of the Teams client. Your app may have Teams platform capabilities, such as bots, message extensions etc. It may also have experiences to address use cases unique to Teams such as meeting extensions, intelligent M365-aware scenarios using Microsoft Graph, link unfurling, etc.
 
-  This is what is covered in more detail in the rest of this document.
+It's covered in more detail in the rest of this document.
 
 ### Data instrumentation in your app specific to Teams
 
-Below are guidelines and pointers regarding what to look for, which events to capture, how to instrument telemetry markers, where to fetch Teams-relevant information that will help you plan and implement analytics for your app. Since your Teams apps can be tabs, bots, message extensions, cards, stage views etc. or any combination of these [capabilities and UI constructs](../../overview-explore.md#teams-app-features) across personal or shared scopes, it's best to understand, plan and implement your instrumentation around each of these capabilities.
+Below are guidelines and pointers regarding what to look for, which events to capture, how to instrument telemetry markers, where to fetch Teams-relevant information that will help you plan and implement analytics for your app. Since your Teams apps can be tabs, bots, message extensions, cards, stage views etc. or any combination of these [capabilities and UI constructs](../../overview-explore.md#teams-app-features) across personal or shared scopes, it's best to understand, plan, and implement your instrumentation around each of these capabilities.
 
 You can classify Teams platform features into broadly two constructs:
 
@@ -108,7 +108,7 @@ These webpages often have the instrumentation done for core SaaS web app needs. 
 
 When you build a [tab](../../tabs/how-to/tab-requirements.md), add the [Teams JavaScript client SDK](/javascript/api/overview/msteams-client) to your tab's content or configuration page. It ensures that your page can access Teams-specific information or [context](../../tabs/how-to/access-teams-context.md). Use this information for useful user-specific insights, such as:
 
-- Microsoft 365 tenant ID (Azure AD tenant) for the current user (tid). In Microsoft 365 or Azure AD, a tenant is representative of an organization, that is, the user’s company. The Microsoft 365 tenant ID is specifically useful to find out and log which Microsoft 365 tenant the user belongs to. Once you know the tenant ID, you can find out the tenant domain for the organization, which often reveals the organization’s name, using this Graph API. Ensure to invoke this API in your Microsoft 365 Developer tenant since you’ll be able to consent to the required tenant administrator permission it needs.
+- Microsoft 365 tenant ID (Azure AD tenant) for the current user (`tid`). In Microsoft 365 or Azure AD, a tenant is representative of an organization, that is, the user’s company. The Microsoft 365 tenant ID is specifically useful to find out and log which Microsoft 365 tenant the user belongs to. Once you know the tenant ID, you can find out the tenant domain for the organization, which often reveals the organization’s name, using this Graph API. Ensure to invoke this API in your Microsoft 365 Developer tenant since you’ll be able to consent to the required tenant administrator permission it needs.
 - License type assigned to the user and the SKU for the current user’s tenant. Possible values are F1, E1, E3, and E5 enterprise plans for (licenseType) and enterprise, free, edu, unknown for (`tenantSKU`).
 - The context where the tab URL is loaded. Some possible values can be content page, task module, tab settings dialog, tab remove dialog, meeting sidePanel etc. (`frameContext`).
 - Host client type where tab is loaded. Possible values are Android, IoS, web, desktop, surfaceHub, etc. (`hostClientType`). You can slice your analytics data.
@@ -124,9 +124,9 @@ After you extract the Teams-specific information from the tab context, use it as
 | Track Teams-specific information | Outcome |
 | --- | --- |
 | User's organization | Track demand for your app, especially if you offer trial period for new sign-ups or freemium offering for your SaaS product for Sales outreach, onboard organization, check in for assistance. |
-| User's organization and role | Use license type and tenant SKU to construct a customer profile for the Teams user, slice your analytics data such as usage, sessions, retention etc. accordingly and tailor your features, experiences etc. accordingly. |
+| User's organization and role | Use license type and tenant SKU to construct a customer profile for the Teams user. Slice your analytics data, such as, usage, sessions, retention, etc. accordingly, and tailor your features, experiences etc. accordingly. |
 | Host client type, locale and usage context inferences from team or channel names | Enrich the customer’s profile in your user analytics. |
-| Use frame context to get information about the context in which the user is using your app, user's journey and usage pattern from various surface areas, capabilities, and scopes. | Craft your user's experiences accordingly and invest more in capabilities popular with your users. |
+| Use frame context to get information about the context in which the user is using your app, user's journey, and usage pattern from various surface areas, capabilities, and scopes. | Craft your user's experiences accordingly and invest more in capabilities popular with your users. |
 | User's email address to associate a meaningful, real-world identity with the Teams user, and can provide the Microsoft 365 tenant organization’s domain address that is, contoso.onmicrosoft.com. | Identify the organization the user belongs to. The email address of the user can be used to complete the user’s profile and communicate with the user for activation, re-marketing, and re-engagement. However, be careful not to misuse this channel or spam the user. |
 | Obtain and store the unique Azure AD user or object ID at the time of app (bot) installation. | Send any proactive notification to the user via your bot. |
 
@@ -138,11 +138,11 @@ Use this information for enriching the bot's functionality and the user experien
 
 - Query the bot for the list of members and their basic user profiles, including Teams user IDs and Microsoft Azure AD information, such as name and Azure AD user or object ID.
 
-- Use the user’s Azure AD user or object ID to find the user’s first name, surname, email address, tenant ID and user’s role in the team. Leverage these details as described for hosted web canvas constructs above.
+- Use the user’s Azure AD user or object ID to find the user’s first name, surname, email address, tenant ID, and user’s role in the team. Leverage these details as described for hosted web canvas constructs above.
 
-- If your bot is installed in a team, query it for metadata about that team including the Azure AD group ID and the team’s name. It can also query the list of channels in the team which returns channel ids and names. Leverage this information for configuration, setup, and personalization.
+- If your bot is installed in a team, query it for metadata about that team including the Azure AD group ID and the team’s name. It can also query the list of channels in the team which returns channel IDs and names. Leverage this information for configuration, setup, and personalization.
 
-- Using the Meeting Details API, get a meeting's or call’s static metadata, such as type of meeting such as GroupCall, OneToOneCall, Ad hoc, Broadcast, MeetNow, Recurring, Scheduled, or Unknown; conversation type, organizer tenant ID etc.
+- Using the Meeting Details API, get a meeting's or call’s static metadata, such as type of meeting such as `GroupCall`, `OneToOneCall`, `Adhoc`, `Broadcast`, `MeetNow`, `Recurring`, `Scheduled`, or `Unknown`; conversation type, organizer tenant ID, etc.
 
 Each activity sent by Teams to your bot will contain the `turnContext` object from which all these relevant fields can be retrieved. All of which can be leveraged in a similar fashion as described for hosted web canvas constructs.
 
