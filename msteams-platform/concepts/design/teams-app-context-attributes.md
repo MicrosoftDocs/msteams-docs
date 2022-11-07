@@ -11,7 +11,7 @@ ms.author: surbhigupta
 
 Developing an app in Teams gives you access to certain context and user data unique to Teams and Microsoft 365 services. While your app reports above Telemetry, combining it with these attributes gives more insights, useful context around events that help in decision making.
 
-Each platform capability or extensibility point exposes different set of user properties and Teams context. As you build your telemetry monitoring, make just use of combination of the attributes given in the following sections.
+Each platform capability or extensibility point exposes a different set of user properties and Teams context. As you build your telemetry monitoring, make just use of the combination of the attributes given in the following sections.
 
 ## Tab
 
@@ -19,7 +19,7 @@ A tab is Teams aware web page iframed in Teams. In addition to instrumentation t
 
 - **App information**:
 
-  - `page.id` and `page.subPageId`: indicates developer defined ID of the page and element or sub page within a page.
+  - `page.id` and `page.subPageId`: indicates developer defined ID of the page and element or sub-page within a page.
   - `isFullScreen`: Indicates whether the page is in full-screen mode.
   - `isMultiWindow`: Indicates whether the page is accessed as a pop out window.
   - `app.theme`: Indicates the user interface theme being used, that is, default, dark, contrast
@@ -35,7 +35,7 @@ A tab is Teams aware web page iframed in Teams. In addition to instrumentation t
 
 | Personal | Teams or Channel | Group chat | Meeting |
 | --- | --- | --- | --- |
-| &nbsp; | `team.internalId` and `channel.id`: ID of Team and Channel where tab is `associated team.type`. <br> - different types of team in O365 for Education channel.channelType <br> – indicates whether channel is private, regular, or shared. | `chat.Id`: chat ID if the tab is added to a Group Chat context | `meeting.ID`: ID of the meeting used by tab when running in meeting context. |
+| &nbsp; | `team.internalId` and `channel.id`: ID of Team and Channel where tab is `associated team.type`. <br> - Different types of team in O365 for Education `channel.channelType`. <br> – Indicates whether channel is private, regular, or shared. | `chat.Id`: Chat ID if the tab is added to a Group Chat context. | `meeting.ID`: ID of the meeting used by tab when running in meeting context. |
 
 ## Bot
 
@@ -59,7 +59,7 @@ Bot is a conversational interface that has a publicly accessible web service hos
 
 ## Messaging Extension
 
-Search messaging extensions allow to search external system and bring results into Teams; Action Message extensions allow to initiate action in external system. Whenever a web page based task module gets invoked from action message extension, telemetry is handled the same as iframed web pages in tab. Messaging extension also provides further context on invoking:
+Search messaging extensions allow to search external system and bring results into Teams; Action Message extensions allow to initiate action in external system. Whenever a web page-based task module gets invoked from action message extension, telemetry is handled the same as iframed web pages in tab. Messaging extension also provides further context on invoking:
 
 - **App information**:
 
