@@ -16,13 +16,26 @@ To invoke share to stage, users can select the **Share to Stage** icon on the to
 
 ## App manifest settings for apps in meeting stage
 
-To share an app to the meeting stage, update the `context` property in the app manifest as follows:
+To share an app to the meeting stage, update the `context` and `authorization` properties in the app manifest as follows:
 
 ```json
-"context":[ 
-    "meetingSidePanel", 
-    "meetingStage" 
-     ] 
+{ 
+"context": [
+        "meetingSidePanel", 
+        "meetingStage" 
+     ]
+    },
+  "authorization": {
+    "permissions": {
+      "orgWide": [],
+      "resourceSpecific": [
+    { 
+     "name": "MeetingStage.Write.Chat",
+     "type": "Delegated"
+    }
+     ]
+    }
+  }
 ```
 
 ## Advanced share to stage APIs
@@ -266,9 +279,9 @@ You can build an in-meeting app for enabling meeting participants to sign docume
 
 You can use an in-meeting signing app to:
 
-- Add documents to be reviewed during a meeting
-- Share documents to be reviewed to main stage
-- Sign documents using the signer’s identity
+* Add documents to be reviewed during a meeting
+* Share documents to be reviewed to main stage
+* Sign documents using the signer’s identity
 
 The participants can review and sign documents, such as purchase agreements and purchase orders.
 
@@ -276,9 +289,9 @@ The participants can review and sign documents, such as purchase agreements and 
 
 The following participant roles may be involved during the meeting:
 
-- **Document creator**: This role can add their own documents to be reviewed and signed.
-- **Signer**: This role can sign reviewed documents.
-- **Reader**: This role can view the documents added to the meeting.
+* **Document creator**: This role can add their own documents to be reviewed and signed.
+* **Signer**: This role can sign reviewed documents.
+* **Reader**: This role can view the documents added to the meeting.
 
 ## Code sample
 
