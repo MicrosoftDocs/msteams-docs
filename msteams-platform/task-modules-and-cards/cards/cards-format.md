@@ -518,7 +518,7 @@ The following code shows an example of formatting for Markdown connector cards:
 > [!NOTE]
 > Overflow menu on Adaptive Cards is available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md) only.
 
-Adaptive Card in Teams supports overflow menu. You can populate an overflow menu for all the secondary actions in an Adaptive Card. An overflow menu in an Adaptive Card can be added to the following::
+Adaptive Card in Teams supports overflow menu. You can populate an overflow menu for all the secondary actions in an Adaptive Card. An overflow menu in an Adaptive Card can be added to the following:
 
 * [Actions](https://adaptivecards.io/explorer/ActionSet.html): In actions, the primary buttons appear on the Adaptive Card and the secondary buttons are inside the overflow menu.
 
@@ -531,13 +531,13 @@ Adaptive Card in Teams supports overflow menu. You can populate an overflow menu
 
 ### Enable overflow menu
 
-To enable overflow menu specify primary or secondary buttons in the schema, configure the `mode` property with the value as `primary` or `secondary`.  The following table describes the `mode` property:
+To enable overflow menu, configure the `mode` property with the value as `primary` or `secondary` in the Adaptive Card schema. The following table describes the `mode` property:
 
 |Property|Type|Required|Description|
 |---|---|---|---|
 |`mode`| Enum (Primary, Secondary) |No |Whether or not the Action is a primary or secondary Action. Secondary actions will be collapsed into an overflow menu.|
 
-The following is an example of the `mode` property in the `actions` type and the `ActionSet` element.
+The following is an example of the `mode` property in the `actions` type and the `ActionSet` element:
 
 **Actions**
 
