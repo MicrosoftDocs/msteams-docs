@@ -346,3 +346,8 @@ Now that you've familiarized yourself with bot activity handlers, let us see how
 
 > [!div class="nextstepaction"]
 > [Conversation basics](~/bots/how-to/conversations/conversation-basics.md)
+
+## See also
+
+* [Create a bot](../resources/bot-v3/bots-create.md)
+* [Get Teams specific context for your bot](how-to/get-teams-context.md)

@@ -201,11 +201,12 @@ this.onMessage(async (context, next) => {
 
 ## See also
 
-* [Calls and meetings bots](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)
-* [Bot conversations](~/bots/how-to/conversations/conversation-basics.md)
-* [Bot command menus](~/bots/how-to/create-a-bot-commands-menu.md)
-* [Create custom triggers in Bot Framework Composer](/composer/how-to-create-custom-triggers)
-* [Authentication flow for bots in Microsoft Teams](~/bots/how-to/authentication/auth-flow-bot.md)
-* [Use task modules from bots](~/task-modules-and-cards/task-modules/task-modules-bots.md)
+* [Calls and online meetings bots](calls-and-meetings/calls-meetings-bots-overview.md)
+* [Conversation basics](how-to/conversations/conversation-basics.md)
+* [Create a commands menu](how-to/create-a-bot-commands-menu.md)
+* [Create custom triggers](/composer/how-to-create-custom-triggers)
+* [Authentication flow for bots in Microsoft Teams](how-to/authentication/auth-flow-bot.md)
+* [Use task modules in tabs](../task-modules-and-cards/task-modules/task-modules-tabs.md)
 * [Publish your bot to Azure](/azure/bot-service/bot-builder-deploy-az-cli)
 * [API reference for the Bot Framework Connector service](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference)
+* [Types of cards](../task-modules-and-cards/cards/cards-reference.md)

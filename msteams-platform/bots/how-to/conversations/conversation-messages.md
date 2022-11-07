@@ -501,3 +501,4 @@ The general retry guidance for each status code is listed in the following table
 * [Send and receive files through the bot](~/bots/how-to/bots-filesv4.md)
 * [Send tenant ID and conversation ID to the request headers of the bot](~/bots/how-to/conversations/request-headers-of-the-bot.md)
 * [Localize your app](../../../concepts/build-and-test/apps-localization.md)
+* [Get Teams specific context for your bot](../get-teams-context.md)

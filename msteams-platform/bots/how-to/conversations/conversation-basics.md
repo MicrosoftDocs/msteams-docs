@@ -37,3 +37,7 @@ A bot can also send proactive messages to users. A proactive message is any mess
 
 > [!div class="nextstepaction"]
 > [Messages in bot conversations](~/bots/how-to/conversations/conversation-messages.md)
+
+## See also
+
+* [Have a conversation with a Microsoft Teams bot](../../../resources/bot-v3/bot-conversations/bots-conversations.md)
