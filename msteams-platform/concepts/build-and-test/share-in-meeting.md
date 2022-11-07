@@ -9,13 +9,13 @@ keywords: Share in Meeting
 
 Share in meeting allows users to share documents or third-party web apps to the meeting stage. The meeting participants can collaborate and interact with the third-party web apps or edit the documents together.
 
-The following image shows the share in meeting button on the web app:
+The following image shows the Share in meeting button on the web app:
 
 :::image type="content" source="../../assets/images/share-in-teams-meeting/web-app.png" alt-text="Screenshot shows share in meeting button on the web app.":::
 
 During the meeting, when a user selects the **Share in meeting** button from the third-party web app or document, it launches a deep link to the meeting stage and opens the app as a web view in the meeting stage. For the meeting participants to interact with third-party web app or document, they must have meeting extension of the app or document installed in their Teams client. If they don't have meeting extension, Teams prompts participants to install the meeting extension.
 
-When you select the share in meeting button, it launches a deep link to the meeting stage. The following is the deep link format:
+When you select the Share in meeting button, it launches a deep link to the meeting stage. The following is the deep link format:
 
 `msteams:/l/meeting-share?deeplinkId=GUID&fqdn=string&appContext={json}`
 
@@ -52,7 +52,7 @@ Optional:
 
 ## Enable share in meeting
 
-The following are three different methods to enable share in meeting, you can use one of the methods depending on how much control you want on the share in meeting buttons displayed on your web page:
+The following are three different methods to enable Share in meeting. You can use one of the methods depending on how much control you want on the share in meeting buttons displayed on your web page:
 
 # [Method 1](#tab/method-1)
 
@@ -66,7 +66,7 @@ You can scan your web page to locate any HTML elements with the class name of ty
    <script async defer src="https://teams.microsoft.com/share/launcher.js"></script>
    ```
 
-2. Add an HTML element on your webpage with the `teams-share-in-meeting-button` in the `class` attribute, the app ID (from manifest) in the `data-app-id` attribute, and the link to share in the `data-href` attribute. You can also include the `data-entity-name` and `data-description` attributes.
+2. Add an HTML element on your webpage with the `teams-share-in-meeting-button` in the `class` attribute, the app ID (from manifest) in the `data-app-id` attribute, and the link to share in the `data-href` attribute. You can also include the `data-entity-name` and `data-entity-description` attributes.
 
    ```html
    <div
@@ -79,7 +79,7 @@ You can scan your web page to locate any HTML elements with the class name of ty
    </div>
    ```
 
-3. Following are the additional attributes to customize share in meeting button:
+3. Following are the additional attributes to customize Share in meeting button:
    * `data-button-type`: Specifies the background color of the button (`primaryShareInMeeting` or `secondaryShareInMeeting`).
    * `data-button-size`: Specifies the size of the button in pixel.
    * `data-target`: Specifies whether the link opens in the same window, new tab, or a new window.
@@ -119,7 +119,7 @@ options (optional): { elements?: HTMLElement[], shareInMeetingElements?: HTMLEle
 
 Use this method to have complete control over how and when to generate the button.
 
-The `async shareInMeetingClickHandler(content: IShareInMeetingContent)` API creates a callback handler for share in meeting button, which can be executed by selecting a button or menu.
+The `async shareInMeetingClickHandler(content: IShareInMeetingContent)` API creates a callback handler for Share in meeting button, which can be executed by selecting a button or menu.
 
 1. Add the `launcher.js` script on your webpage.
 
@@ -152,13 +152,13 @@ The following are the launcher.js definitions:
 | entityName | `data-entity-name` | String | No | NA | App entity name. |
 | entityDescription | `data-entity-description` | String | No | NA | Description of app content to share. |
 | locale | `data-locale` | String | No | en-US | User preferred language. |
-| target | `data-target` | String | No | self | Specifies whether the link open in the same window, new tab, or new window. |
+| target | `data-target` | String | No | self | Specifies whether the link opens in the same window, new tab, or new window. |
 | buttonType | `data-button-type` | String | No | primaryShareInMeeting | Specifies the button background color: `primaryShareInMeeting` or `secondaryShareInMeeting`. |
 | buttonSize | `data-button-size` | String | No | NA | Button size in pixels. |
 
 ## End user experience on third-party apps
 
-After you enable share in meeting on third-party apps, you can share the apps to the meeting stage. To access, follow the steps:
+After you enable Share in meeting on third-party apps, you can share the apps to the meeting stage. To access, follow the steps:
 
 If meeting extension is installed:
 
