@@ -141,17 +141,17 @@ User retention measures how frequent users come back to use the product. It esse
 
 **Goal**: Provide sufficient, differentiated value to end user improving their willingness to pay.
 
-Happiness intends to measure your user’s attitude towards your product and can translate to their willingness to pay, refer other users to your product. Happiness is mostly self-reported. There are leading indicators such as collecting feedback, satisfaction rating, and lagging indicators include new subscriptions and users preferring to use Teams app over other modalities.
+Happiness intends to measure your user’s attitude towards your product and can translate to their willingness to pay and to refer other users to your product. Happiness is mostly self-reported. There are leading indicators such as, collecting feedback, satisfaction rating. Lagging indicators include new subscriptions and users preferring to use Teams app over other modalities.
 
 > [!TIP]
 >
 > - Happiness should be measured in context at right time and contextualized to user. Sending a generic survey on a fixed date might not give accurate happiness measurement as users might not remember their experience.
-> - Integrate product driven feedback capture, rating mechanisms for users to easily submit feedback and rating in the flow, after completing Core Action.
+> - Integrate product driven feedback capture and rating mechanisms for users to easily submit feedback and rating in the flow after completing core action.
 > - Provide adequate product support, helpdesk for users to get their queries clarified, and report bugs and feedback.
 
 | Telemetry | Insight |
 | --- | --- |
-| • App NPS from app source. | • Net promoter score. <br> • Azure AD and tenant information. |
+| • App Net Promoter Score (NPS) from app source. | • Net Promoter Score. <br> • Azure AD and tenant information. |
 | • % of happy or satisfied users. | • Drill down at tenant level. <br> • Report trend over time. |
 | • % users using Teams app vs. web, or mobile app. | • Report month over month. |
 | • User feedback on experience after completing core action. | • Introduce product led way for collecting feedback after completing core action (for example, in-app message to submit feedback). |
