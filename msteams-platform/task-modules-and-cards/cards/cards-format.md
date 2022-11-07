@@ -15,7 +15,7 @@ Following are the two ways to add rich text formatting to your cards:
 
 Cards support formatting in the text property only, not in the title or subtitle properties. Formatting can be specified using a subset of XML or HTML formatting or Markdown, depending on the card type. For current and future development of Adaptive Cards, Markdown formatting is recommended.
 
-Formatting support differs between card types. Rendering of the card can differ slightly between the desktop and the mobile Microsoft Teams clients, as well as Teams in the desktop browser.
+Formatting support differs between card types. Rendering of the card can differ slightly between the desktop and the mobile Microsoft Teams clients, and Teams in the desktop browser.
 
 You can include an inline image with any Teams card. Supported image formats are .png, .jpg, or .gif formats. Keep the dimensions within 1024 x 1024 pixels and file size less than 1 MB. Animated .gif images aren't supported. For more information, see [types of cards](./cards-reference.md#inline-card-images).
 
@@ -25,7 +25,7 @@ You can format Adaptive Cards and Office 365 Connector cards with Markdown that 
 
 The following card types support Markdown formatting in Teams:
 
-* Adaptive Cards: Markdown is supported in Adaptive Card `Textblock` field, as well as `Fact.Title` and `Fact.Value`. HTML isn't supported in Adaptive Cards.
+* Adaptive Cards: Markdown is supported in Adaptive Card `Textblock` field, and `Fact.Title` and `Fact.Value`. HTML isn't supported in Adaptive Cards.
 * Office 365 Connector cards: Markdown and limited HTML is supported in Office 365 Connector cards in the text fields.
 
 You can use newlines for Adaptive Cards using `\r` or `\n` escape sequences for newlines in lists. Formatting is different between the desktop and the mobile versions of Teams for Adaptive Cards. Card-based mentions are supported in web, desktop, and mobile clients. You can use the information masking property to mask specific information, such as password or sensitive information from users within the Adaptive Card `Input.Text` input element. You can expand the width of an Adaptive Card using the `width` object. You can enable typeahead support within Adaptive Cards and filter the set of input choices as the user types the input. You can use the `msteams` property to add the ability to display images in stage view selectively.
@@ -518,44 +518,50 @@ The following code shows an example of formatting for Markdown connector cards:
 > [!NOTE]
 > Overflow menu on Adaptive Cards is available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md) only.
 
-Overflow menu is added to Adaptive Cards. You can select up to six primary buttons that appear on the Adaptive Card. Any additional buttons also known as secondary buttons are placed inside the overflow menu.
+Adaptive Card in Teams supports overflow menu. You can populate an overflow menu for all the secondary actions in an Adaptive Card. An overflow menu in an Adaptive Card can be added to the following::
+
+* [Actions](https://adaptivecards.io/explorer/ActionSet.html): In actions, the primary buttons appear on the Adaptive Card and the secondary buttons are inside the overflow menu.
+
+* [ActionSet](https://adaptivecards.io/explorer/ActionSet.html): ActionSet is a combination of multiple actions in an Adaptive Card. Each action set can have an overflow menu.
+
+> [!NOTE]
+> An Adaptive Card supports up to six primary actions to be viewed on the card. Any additional primary action is viewed in the overflow menu.
 
   ![overflow](~/assets/images/Cards/overflow-menu-gif.gif)
 
-Following are the two types of overflow menu:
-
-* [Actions](https://adaptivecards.io/explorer/ActionSet.html): In actions, primary set of buttons appear on the Adaptive Card and the secondary buttons are inside the overflow menu.
-
-* [Action set](https://adaptivecards.io/explorer/ActionSet.html): Action set is a combination of multiple actions in an Adaptive Card. Each action set can have an overflow menu.
-
 ### Enable overflow menu
 
-To enable overflow menu specify primary or secondary buttons in the schema, configure the `mode` property with the value as `primary` or `secondary`. Following is an example, on how to use the `mode` property for actions and action set.
+To enable overflow menu specify primary or secondary buttons in the schema, configure the `mode` property with the value as `primary` or `secondary`.  The following table describes the `mode` property:
+
+|Property|Type|Required|Description|
+|---|---|---|---|
+|`mode`| Enum (Primary, Secondary) |No |Whether or not the Action is a primary or secondary Action. Secondary actions will be collapsed into an overflow menu.|
+
+The following is an example of the `mode` property in the `actions` type and the `ActionSet` element.
 
 **Actions**
 
-In the following example, there are two primary actions (by default) and one secondary action. The secondary action creates an overflow menu.
+In the following example, there are two primary actions and one secondary action. The secondary action creates an overflow menu.
 
-``` json
+```json
 {
-    "type": "AdaptiveCard",
-     "title":"set due date"
-          },
-          {  
-            "type": "Action.openurl",
-            "title": "view",
+   "type": "AdaptiveCard",
+   "actions": [
+        {
+            "type": "Action.Submit",
+            "title": "Set due date"
+        },
+        {
+            "type": "Action.OpenUrl",
+            "title": "View",
             "url": "https://adaptivecards.io"
-              
-          },
-          {
-
-            "type": "Action.submit",
+        },
+        {
+            "type": "Action.Submit",
             "title": "Delete",
             "mode": "secondary"
-
-          }
-      ]
-   
+        }
+    ]
 }
 ```
 
@@ -603,11 +609,15 @@ When a user selects the overflow menu on a desktop, the buttons that are set as 
 
 # [Mobile](#tab/mobile)
 
-When a user selects the overflow menu on mobile, Adaptive Card displays the buttons that are defined. There's an integrated sheet that displays an overflow menu with card related tasks with a message option. A long press on any message displays a list of related messages. This option is available only for actions.
+When a user selects the overflow menu on mobile, the Adaptive Card displays the buttons that are defined. There's an integrated sheet that displays an overflow menu with card related tasks with a message option. A long press on any message displays a list of related messages. This option is available only for actions.
 
   :::image type="content" source="../../assets/images/over-flow-menu-mob-1.png" alt-text="Screenshot shows an example of overflow menu on Teams mobile.":::
 
 ---
+
+The overflow menu behaves differently on a bot sent card and a message extension card. The overflow menu on a bot sent card shows up as a popup context menu and on the message extension card it shows up at the top-right corner under the more (**...**) icon.
+
+:::image type="content" source="../../assets/images/Cards/overflow-menu-card-beahvior.png" alt-text="The screenshot shows an example of the overflow menu behavior in a bot sent card and a messaging extension card.":::
 
 ## Format cards with HTML
 
@@ -737,13 +747,13 @@ On iOS, HTML formatting appears as shown in the following image:
 
 :::image type="content" source="../../assets/images/Cards/card-formatting-xml-mobile-v2.png" alt-text="HTML formatting in the iOS client":::
 
-Character formatting, such as bold and italic aren't rendered on iOS.
+Character formatting, such as bold and italic isn't rendered on iOS.
 
 On Android, HTML formatting appears as shown in the following image:
 
 :::image type="content" source="../../assets/images/Cards/card-formatting-xml-android-60.png" alt-text="HTML formatting in the Android client":::
 
-Character formatting, such as bold and italic display correctly on Android.
+Character formatting, such as bold and italic displays correctly on Android.
 
 ### Format example for simple cards
 
