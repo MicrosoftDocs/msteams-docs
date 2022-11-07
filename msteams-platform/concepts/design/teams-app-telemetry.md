@@ -39,12 +39,12 @@ As your solution scales across multiple platforms (web, mobile platforms, and Te
 
 ## What telemetry data do I track in my Teams app?
 
-It is important to plan for the kind of data, metrics and events you want to monitor as you develop your Teams app. Your product’s North Star metric would guide you in establishing the right set of metrics, core user action and key events relevant for your business.
+It's important to plan for the kind of data, metrics, and events you want to monitor as you develop your Teams app. Your product’s North Star metric would guide you in establishing the right set of metrics, core user action, and key events relevant for your business.
 
 :::row:::
     :::column span="":::
 
-    To have long-term sustainability in our ecosystem an app must have good growth of new users. The second attribute is engagement and retention. Users must be coming back to the app and continue to find value in it and use it. Lastly, the third quality is revenue. The app must provide sufficient value to users, such that there is willingness to pay. Apps must possess all three of these qualities to be successful long-term on our platform. If any of these three qualities are missing that app has a low probability of success on our platform.
+    To have long-term sustainability in the ecosystem an app must have good growth of new users. The second attribute is engagement and retention. Users must come back to the app and continue to find value in it and use it. Lastly, the third quality is revenue. The app must provide sufficient value to users, such that there is willingness to pay. Apps must possess all three of these qualities to be successful for long-term on the platform. If any of these three qualities are missing in an app, it has a low probability of success on the platform.
 
     :::column-end:::
     :::column span="":::
@@ -58,7 +58,7 @@ Your telemetry strategy should ensure measuring of your product across these thr
 
 ### Monitor events for your app
 
-For the purposes of this article, let’s use the HEART framework to indicate representative set of metrics, events you should consider monitoring for your solution. Note that the following list isn't exhaustive, and you're encouraged to add additional telemetry relevant to your business and product.
+For the purposes of this article, let’s use the HEART framework to indicate representative set of metrics and events you should consider monitoring for your solution. Note that the following list isn't exhaustive, and you're encouraged to add additional telemetry relevant to your business and product.
 
 :::image type="content" source="../../assets/images/app-fundamentals/monitor-telemetry.png" alt-text="Monitor events for your app" border="false":::
 
@@ -67,25 +67,25 @@ For the purposes of this article, let’s use the HEART framework to indicate re
 **Goal**: Acquire new users who can start exploring the app thereby maintaining a healthy top of the funnel. Discovery and adoption of new apps happen in one of the following ways:
 
 - User searches and installs the app on their own.
-- User stumbles upon the app when it’s shared in a chat, meeting, or channel by another user. (tab or Adaptive Card).
+- User stumbles upon the app when it’s shared in a chat, meeting, or channel by another user, (tab or Adaptive Card).
 - Admin installs the app for users and the app sends a welcome message.
 
-Telemetry designed to improve adoption should aim at improving discoverability of the app and its features as well. The likelihood of discovering an app among new users increases when existing users start using the app in collaborative scope. For example, adding channel or meeting tab, adding a bot to channel, sharing messaging extension card in a group chat.
+Telemetry designed to improve adoption should aim at improving discoverability of the app and its features as well. The likelihood of discovering an app among new users increases when existing users start using the app in collaborative scope. For example, adding channel or meeting tab, adding a bot to channel, or sharing messaging extension card in a group chat.
 
 > [!TIP]
 >
-> - Measure usage of app in collaborative scope, time taken to discover your app features in collaborative or meeting scope. If the usage is low or time taken is high, socialize said features better in app or via marketing efforts.
+> - Measure usage of app in collaborative scope and the time taken to discover your app features in collaborative or meeting scope. If the usage is low or time taken is high, socialize said features better in app or via marketing efforts.
 > - While measuring overall adoption is good to start, measure adoption at a platform capability and feature level.
 
 | Telemetry | Insights |
 | --- | --- |
-| • Users installing the app in R1, R7, R14, R28 days. <br> • # Sign-ins (if app has sign-in). | • App level adoption broken down at tenant, region, segment. <br> • Segment users based on Azure AD profile. <br> • Segment by tenant, org name. |
+| • Users installing the app in R1, R7, R14, R28 days. <br> • # Sign-ins (if app has sign-in). | • App level adoption broken down at tenant, region, and segment. <br> • Segment users based on Azure AD profile. <br> • Segment by tenant and org name. |
 | • Average time taken to first use (click on tab, bot, Adaptive Card, and meeting). | • Report at a feature or platform capability level to measure feature level adoption. |
-| • Extensibility point of first discovery <br> • Scope of first discovery. | • Use the data to measure which extensibility point and scope are most used to discover your app by your end users. |
-| • % of link unfurls leading to app installation. | • Users interested in installing app, post discovery. |
+| • Extensibility point of first discovery. <br> • Scope of first discovery. | • Use the data to measure which extensibility point and scope are most used to discover your app by your end users. |
+| • % of link unfurls leading to app installation. | • Users interested in installing app, post-discovery. |
 | • Average time taken to add app in collaborative scope - in channel, group chat, and meeting. | • Usage penetration within the app. |
-| • % of users adding app in collaborative scope | • Helps in determining the potential for virality, that is, organic discovery and use by new users. |
-| • % of users configuring the app after adding it in channel or group chat | • If app isn't configured on the day of install, there's 5% chance of user configuring it in the following week. |
+| • % of users adding app in collaborative scope. | • Helps in determining the potential for virality, that is, organic discovery and use by new users. |
+| • % of users configuring the app after adding it in channel or group chat. | • If app isn't configured on the day of install, there's 5% chance of user configuring it in the following week. |
 
 #### Engagement and task success
 
