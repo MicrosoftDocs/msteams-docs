@@ -21,8 +21,8 @@ As your solution scales across multiple platforms (web, mobile platforms, Teams)
 
 :::image type="content" source="../../assets/images/app-fundamentals/telemetry-in-layers.png" alt-text="Telemetry in layers" border="false":::
 
-- **Core Application Telemetry**: Core Telemetry includes tracking and measuring of application-level metrics independent of the platform, client or surface area used by end user. A typical SaaS solution measures application sign-ups, trials, purchases, monthly or annual recurring revenue, aggregated number of users, churn among other data. If you have an existing SaaS solution, you would most likely be tracking these metrics already.
-- **Modality specific Telemetry**: At a presentation level, your application is accessed by your end user across different modalities. Each modality has its own unique user interaction points. This is metadata that facilitates telemetry capture unique to that modality. For example, viewing a product might be tracked via page view in a web app vs. screen tracking in mobile app. Telemetry at this layer includes:
+- **Core Application Telemetry**: Core Telemetry includes tracking and measuring of application-level metrics. It's independent of the platform, client, or surface area used by the end user. A typical SaaS solution measures application sign-ups, trials, purchases, monthly or annual recurring revenue, aggregated number of users, and churn among other data. If you have an existing SaaS solution, you may be tracking these metrics already.
+- **Modality specific Telemetry**: At a presentation level, your application is accessed by your end user across different modalities. Each modality has its own unique user interaction points. This metadata facilitates telemetry capture unique to that modality. For example, viewing a product might be tracked via page view in a web app vs. screen tracking in mobile app. Telemetry at this layer includes:
 
   - User Interactions: User clicks, views, sessions, system, and custom events in the modality
   - Application performance monitoring: Performance measures such as time to load, response time of the solution in the modality
@@ -53,7 +53,7 @@ Your telemetry strategy should ensure measuring of your product across these thr
 
 ### Monitor events for your app
 
-For the purposes of this article, let’s use the HEART framework to indicate representative set of metrics, events you should consider monitoring for your solution. Please note that the below list is not exhaustive, and you are encouraged to add additional telemetry relevant to your business and product.
+For the purposes of this article, let’s use the HEART framework to indicate representative set of metrics, events you should consider monitoring for your solution. Note that the following list isn't exhaustive, and you're encouraged to add additional telemetry relevant to your business and product.
 
 :::image type="content" source="../../assets/images/app-fundamentals/monitor-telemetry.png" alt-text="Monitor events for your app" border="false":::
 
@@ -80,15 +80,15 @@ Telemetry designed to improve adoption should aim at improving discoverability o
 | • % of link unfurls leading to app installation | • Users interested in installing app, post discovery |
 | • Average time taken to add app in collaborative scope - in Channel, Group Chat, Meeting | • Usage penetration within the app |
 | • % of users adding app in collaborative scope | • Helps in determining the potential for virality, that is, organic discovery and use by new users |
-| • % of users configuring the app after adding it in channel or group chat | • If app is not configured on day of install, there is 5% chance of user configuring it in following week |
+| • % of users configuring the app after adding it in channel or group chat | • If app isn't configured on day of install, there's 5% chance of user configuring it in following week |
 
 #### Engagement & task success
 
 **Goal**: Grow number of engaged quality users  who complete core actions within the app.
 
-Core Action is defined as that User Action which is central to the business and directly contributes towards the North Star.  For example, if you are an IT Ticketing solution provider, your core user action could be ‘Creating a Ticket’ with the steps of searching an issue, escalations being key business events in the user journey funnel that propel the users towards the core action.
+Core Action is defined as that User Action, which is central to the business and directly contributes towards the North Star.  For example, if you're an IT Ticketing solution provider, your core user action could be ‘Creating a Ticket’ with the steps of searching an issue, escalations being key business events in the user journey funnel that propel the users towards the core action.
 
-Engagement intends to measure the intensity and depth of interaction between user and your app. Intensity of engagement measures how much user is using the app (for example, number of core actions done in the app) and depth of interaction measures the number of various platform capabilities, scopes, app features that user has interacted.
+Engagement intends to measure the intensity and depth of interaction between user and your app. Intensity of engagement measures how much a user is using the app (for example, number of core actions done in the app) and depth of interaction measures the number of various platform capabilities, scopes, and app features with which a user has interacted.
 
 > [!TIP]
 >
@@ -98,7 +98,7 @@ Engagement intends to measure the intensity and depth of interaction between use
 
 | Telemetry | Comments |
 | --- | --- |
-| • # App users (R7, R14, R28) – DAU and MAU <br> • # App Users Trendline | • App & Feature level engagement <br> • Segment users based on AAD profile, <br> • Report by Client – Desktop, Web and Mobile <br> • Segment by Tenant, Org Name <br> • Segment by product feature (Active users at feature level) |
+| • # App users (R7, R14, R28) – DAU and MAU <br> • # App Users Trendline | • App & Feature level engagement <br> • Segment users based on Azure AD profile, <br> • Report by Client – Desktop, Web and Mobile <br> • Segment by Tenant, Org Name <br> • Segment by product feature (Active users at feature level) |
 | • % of users using key features in Teams App Vs. using the same feature in Web / Native App | • Indicates discoverability, ease of use, and value of using the feature within Teams App  <br> • Report at app feature level |
 | • #, % users using the app across different scopes (R28) | • Engagement penetration <br> • Report by scope <br> • Ability to drill down by capability |
 | • #, % users using the app in different platform capabilities (R28) <br> • #, % Interacting with Tab <br> • #, % Interacting with Messaging extension <br> • #, % Interacting with Bot <br> • #, % Interacting with side panel in meeting <br> • #, % Interacting with Stage view | • Engagement and value prop of app capabilities <br> • If usage of any of platform capabilities is low, consider drilling into details on ease of use, value add. |
@@ -113,7 +113,7 @@ Engagement intends to measure the intensity and depth of interaction between use
 
 **Goal**: Improve product stickiness by way of accruing benefits the more a user engages with the app.
 
-User retention measures how frequent users come back to use the product. It essentially measures frequency of engagement. Users will repeatedly use your product if they get more benefits, the more they use a product, and their switching costs are high. For example, when a user starts adding tasks, action items they track as part of your app, it may help in better coordination across projects and gradually it becomes costlier to abandon your task management system.
+User retention measures how frequent users come back to use the product. It essentially measures frequency of engagement. Users will repeatedly use your product if they get more benefits, the more they use a product, and the switching costs are high. For example, when a user starts adding tasks, action items they track as part of your app, it may help in better coordination across projects and gradually it becomes costlier to abandon your task management system.
 
 > [!TIP]
 >
@@ -125,7 +125,7 @@ User retention measures how frequent users come back to use the product. It esse
 | Telemetry | Insight |
 | --- | --- |
 | • New User Retention cohort analysis (week over week, month over month) | • Retention breakdown by client – Teams Desktop, Web & Mobile App, Non-Teams Web App <br> • Drill down to a tenant level |
-| • User churn in 14 days, 28 days, 56 days, 72 days | • User churn <br> • Drill down to a tenant level <br> • Platform Capability and feature drill down <br> • Churn breakdown by client: Teams Desktop, Web & Mobile App, Non-Teams Web App |
+| • User churn in 14 days, 28 days, 56 days, 72 days | • User churn <br> • Drill down to a tenant level <br> • Platform Capability and feature drill-down <br> • Churn breakdown by client: Teams Desktop, Web & Mobile App, Non-Teams Web App |
 | • #, % users using app in more than 1 scope | • Depth of engagement. Goal would be to encourage use of app across different scopes |
 | • #, % users using more than 1 capability of the app | • Depth of engagement <br> • Goal would be to encourage users to use different platform capabilities supported by app |
 | • Mean time between [Core Action 1,2..] per user | • Intensity of engagement <br> • Report at tenant level <br> • Goal would be to reduce this time to promote recurring usage |
@@ -136,7 +136,7 @@ User retention measures how frequent users come back to use the product. It esse
 
 **Goal**: Provide sufficient, differentiated value to end user improving their willingness to pay.
 
-Happiness intends to measure your user’s attitude towards your product and can translate to their willingness to pay, refer other users to your product. Happiness is mostly self-reported. There are leading indicators such as collecting feedback, satisfaction rating, lagging indicators include new subscriptions, users preferring to use Teams app over other modalities.
+Happiness intends to measure your user’s attitude towards your product and can translate to their willingness to pay, refer other users to your product. Happiness is mostly self-reported. There are leading indicators such as collecting feedback, satisfaction rating, and lagging indicators include new subscriptions and users preferring to use Teams app over other modalities.
 
 > [!TIP]
 >
@@ -146,7 +146,7 @@ Happiness intends to measure your user’s attitude towards your product and can
 
 | Telemetry | Insight |
 | --- | --- |
-| • App NPS from app source | • Net Promoter Score <br> • AAD, Tenant information |
+| • App NPS from app source | • Net Promoter Score <br> • Azure AD, Tenant information |
 | • % of happy / satisfied users | • Drill down at tenant level <br> • Report trend over time |
 | • % users using Teams App Vs. Web or Mobile App | • Report month over month |
 | • User feedback on experience after completing Core Action | • Introduce product led way for collecting feedback after completing Core Action (for example, in-app message to submit feedback) |
