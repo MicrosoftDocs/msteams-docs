@@ -371,4 +371,5 @@ Response body
 
 ## See also
 
-[Localize your app](../../concepts/build-and-test/apps-localization.md)
+* [Localize your app](../../concepts/build-and-test/apps-localization.md)
+* [Get the profile photo of a user, a group, a team, or an Outlook contact](/graph/api/profilephoto-get)

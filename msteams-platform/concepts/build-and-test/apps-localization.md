@@ -157,4 +157,4 @@ If you provide localized versions of your application, the users respond with th
 
 ## See also
 
-[Localize JSON schema reference](~/resources/schema/localization-schema.md)
+* [Localize JSON schema reference](~/resources/schema/localization-schema.md)
