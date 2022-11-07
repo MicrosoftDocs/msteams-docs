@@ -29,7 +29,7 @@ As the app’s developer, you can track your app’s usage in the [Teams app usa
 - Users who have used your app more than five days in the last month
 - Platform, operating system, and geographic split of users for your app, etc.
 
-Teams usage reports can't provide you in-depth analytics of what goes on inside your app and specific user-level analytics. Such analytics include a user’s journey within your app or a user’s engagement with specific features and scenario completions within your app.
+Teams usage reports can't provide you with in-depth analytics of what goes on inside your app and specific user-level analytics. Such analytics include a user’s journey within your app or a user’s engagement with specific features and scenario completions within your app.
 
 Your app on Teams is essentially a web-based service hosted elsewhere, for example, Azure cloud. It's embedded to be surfaced inside Microsoft Teams shell where end-users can use your app. This applies to your app irrespective of the [platform capabilities](../../overview-explore.md) used, such as tabs, bots, message extensions, meeting extensions, cards, task modules etc. as all of these capabilities are a means to surface web-based experiences inside Teams.
 
@@ -60,7 +60,7 @@ Besides the generic reports for daily, weekly, and monthly active users, time sp
   - What types of meetings (GroupCall, OneToOneCall, Adhoc, Broadcast, MeetNow, Recurring or Scheduled) is your app used in?
 
 - **User-specific metrics**
-  - Which users are yet to experience channel tabs capability you’ve implemented in your app in the last app update?
+  - Which users are yet to experience the channel tabs capability you’ve implemented in your app in the last app update?
   - Which users haven't completed the onboarding inside the personal app?
   - Among the users who have installed the app in the last one week, which users haven't returned to the app even once for engagement after installation?
   - Which users have installed the app but haven't signed-into the app yet?
@@ -75,7 +75,7 @@ Besides the generic reports for daily, weekly, and monthly active users, time sp
 
 Instrumenting your code with analytics markers (also known as telemetry markers) is a standard web application development practice. Robust telemetry instrumentation in your code is critical for long-term success. It helps you to measure both aggregate and user-specific metrics, which is required to determine product, growth, marketing, and business decisions.
 
-Before you begin, always remember to handle user data in accordance with your strict data handling and privacy policies and in compliance with your regulatory obligations. The rest of this document simply recommends the in-context data you can use, but does not supersede your regulatory obligations.
+Before you begin, always remember to handle user data in accordance with your strict data handling and privacy policies and in compliance with your regulatory obligations. The rest of this document simply recommends the in-context data you can use but does not supersede your regulatory obligations.
 
 There are two types of data instrumentation relevant for your Teams app:
 
@@ -102,7 +102,7 @@ These webpages often have the instrumentation done for core SaaS web app needs. 
 
 When you build a [tab](../../tabs/how-to/tab-requirements.md), add the [Teams JavaScript client SDK](/javascript/api/overview/msteams-client) to your tab's content or configuration page. It ensures that your page can access Teams-specific information or [context](../../tabs/how-to/access-teams-context.md). Use this information for useful user-specific insights, such as:
 
-- Microsoft 365 tenant ID (Azure AD tenant) for the current user (tid). In Microsoft 365 or Azure AD, a tenant is representative of an organization that is, the user’s company. The Microsoft 365 tenant ID is specifically useful to find out and log which Microsoft 365 tenant the user is belonging to. Once you know the tenant ID, you can find out the tenant domain for the organization, which often reveals the organization’s name, using this Graph API. Ensure to invoke this API in your Microsoft 365 Developer tenant since you’ll be able to consent to the required tenant administrator permission it needs.
+- Microsoft 365 tenant ID (Azure AD tenant) for the current user (tid). In Microsoft 365 or Azure AD, a tenant is representative of an organization, that is, the user’s company. The Microsoft 365 tenant ID is specifically useful to find out and log which Microsoft 365 tenant the user belongs to. Once you know the tenant ID, you can find out the tenant domain for the organization, which often reveals the organization’s name, using this Graph API. Ensure to invoke this API in your Microsoft 365 Developer tenant since you’ll be able to consent to the required tenant administrator permission it needs.
 - License type assigned to the user and the SKU for the current user’s tenant. Possible values are F1, E1, E3, and E5 enterprise plans for (licenseType) and enterprise, free, edu, unknown for (`tenantSKU`).
 - The context where the tab URL is loaded. Some possible values can be content page, task module, tab settings dialog, tab remove dialog, meeting sidePanel etc. (`frameContext`).
 - Host client type where tab is loaded. Possible values are Android, IoS, web, desktop, surfaceHub, etc. (`hostClientType`). You can slice your analytics data.
@@ -140,4 +140,4 @@ Use this information for enriching the bot's functionality and the user experien
 
 Each activity sent by Teams to your bot will contain the `turnContext` object from which all these relevant fields can be retrieved. All of which can be leveraged in a similar fashion as described for hosted web canvas constructs.
 
-Since message extensions are based on the bot channel, most of the above apply to message extensions as well.
+Since message extensions are based on the bot channel, most of the above applies to message extensions as well.
