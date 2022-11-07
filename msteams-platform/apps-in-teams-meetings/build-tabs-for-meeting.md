@@ -282,6 +282,10 @@ microsoftTeams.appInitialization.notifySuccess();
 
 * App caching isn't supported for apps that require device permissions as per the manifest.
 
+### Sample app
+
+You can upload a [sample app](https://github.com/kpolnitz/app-caching-test-app) to see how app caching works and loading time of the sample app in the meeting side panel.
+
 ## Code sample
 
 |Sample name | Description | C# | Node.js |
