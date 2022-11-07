@@ -9,7 +9,7 @@ ms.author: surbhigupta
 
 # Plan for Teams app telemetry
 
-After an app is distributed in an organization or in Teams App Store, it's important to track how users are interacting with the app. With growing app users, number of app installs might not be a relevant metric. Understanding how users interact with the app, the kind of audience, what they're looking for, what features are most or least used are crucial items in advising future development strategy.
+After an app is distributed in an organization or in Teams App Store, it's important to track how users are interacting with the app. With growing app users, the number of app installs might not be a relevant metric. Understanding how users interact with the app, the kind of audience, what they're looking for, what features are most or least used are crucial items in advising future development strategy.
 
 App analytics help understand user behavior, motivation, friction points that can help developer make informed decisions around feature investments, enhancements, and adoption for the app.
 
@@ -24,7 +24,7 @@ As your solution scales across multiple platforms (web, mobile platforms, Teams)
 - **Core Application Telemetry**: Core Telemetry includes tracking and measuring of application-level metrics independent of the platform, client or surface area used by end user. A typical SaaS solution measures application sign-ups, trials, purchases, monthly or annual recurring revenue, aggregated number of users, churn among other data. If you have an existing SaaS solution, you would most likely be tracking these metrics already.
 - **Modality specific Telemetry**: At a presentation level, your application is accessed by your end user across different modalities. Each modality has its own unique user interaction points. This is metadata that facilitates telemetry capture unique to that modality. For example, viewing a product might be tracked via page view in a web app vs. screen tracking in mobile app. Telemetry at this layer includes:
 
-  - User Interactions: User clicks, views, sessions, system and custom events in the modality
+  - User Interactions: User clicks, views, sessions, system, and custom events in the modality
   - Application performance monitoring: Performance measures such as time to load, response time of the solution in the modality
   - Modality specific metadata: device, browser information, tenant information
 
@@ -62,10 +62,10 @@ For the purposes of this article, let’s use the HEART framework to indicate re
 **Goal**: Acquire new users who can start exploring the app thereby maintaining a healthy top of the funnel. Discovery and adoption of new apps happen in one of the following ways:
 
 - User searches and installs the app on their own
-- User stumbles upon the app when it’s shared in a chat, meeting or channel by another user. (Tab or adaptive card)
-- Admin installs the app for users and app sends a welcome message
+- User stumbles upon the app when it’s shared in a chat, meeting, or channel by another user. (Tab or adaptive card)
+- Admin installs the app for users and the app sends a welcome message
 
-Telemetry designed to improve adoption should aim at improving discoverability of the app and its features as well. Likelihood of discovering an app among new users increases more when existing users start using the app in collaborative scope. For example, adding channel or meeting tab, adding a bot to channel, sharing messaging extension card in a group chat.
+Telemetry designed to improve adoption should aim at improving discoverability of the app and its features as well. The likelihood of discovering an app among new users increases more when existing users start using the app in collaborative scope. For example, adding channel or meeting tab, adding a bot to channel, sharing messaging extension card in a group chat.
 
 > [!TIP]
 >
@@ -93,7 +93,7 @@ Engagement intends to measure the intensity and depth of interaction between use
 > [!TIP]
 >
 > - It is important to measure engagement, usage not just at overall app level but at individual app capability and feature level as well. Decide on Core Actions and Key Business events that define engaged users for your business. Just signing in or viewing the app may not be quality engagement.
-> - Core action is specific to your business and you should ideally have one core action correlating to your product’s North Start. Do not have more than 2-3 Core Actions.
+> - Core action is specific to your business, and you should ideally have one core action correlating to your product’s North Start. Do not have more than 2-3 Core Actions.
 > - Key Business events are auxiliary actions that user may take in their journey towards performing Core Action. Key Business events can help prepare a funnel view on how many users are going through the ideal user journey and determine points where drop offs are high.
 
 | Telemetry | Comments |
@@ -113,7 +113,7 @@ Engagement intends to measure the intensity and depth of interaction between use
 
 **Goal**: Improve product stickiness by way of accruing benefits the more a user engages with the app.
 
-User retention measures how frequent users come back to use the product. It essentially measures frequency of engagement. Users will repeatedly use your product if they get more benefits, the more they use a product and their switching costs are high. For example, when a user starts adding tasks, action items they track as part of your app, it may help in better coordination across projects and gradually it becomes costlier to abandon your task management system.
+User retention measures how frequent users come back to use the product. It essentially measures frequency of engagement. Users will repeatedly use your product if they get more benefits, the more they use a product, and their switching costs are high. For example, when a user starts adding tasks, action items they track as part of your app, it may help in better coordination across projects and gradually it becomes costlier to abandon your task management system.
 
 > [!TIP]
 >
@@ -142,11 +142,11 @@ Happiness intends to measure your user’s attitude towards your product and can
 >
 > - Happiness should be measured in context at right time and contextualized to user. Sending a generic survey on a fixed date might not give accurate happiness measurement as users might not remember their experience.
 > - Integrate product driven feedback capture, rating mechanisms for users to easily submit feedback and rating in the flow, after completing Core Action.
-> - Provide adequate product support, helpdesk for users to get their queries clarified, report bugs and feedback.
+> - Provide adequate product support, helpdesk for users to get their queries clarified, and report bugs and feedback.
 
 | Telemetry | Insight |
 | --- | --- |
 | • App NPS from app source | • Net Promoter Score <br> • AAD, Tenant information |
 | • % of happy / satisfied users | • Drill down at tenant level <br> • Report trend over time |
 | • % users using Teams App Vs. Web or Mobile App | • Report month over month |
-| • User feedback on experience after completing Core Action | • Introduce product led way for collecting feedback after completing Core Action (for example, In app message to submit feedback) |
+| • User feedback on experience after completing Core Action | • Introduce product led way for collecting feedback after completing Core Action (for example, in-app message to submit feedback) |
