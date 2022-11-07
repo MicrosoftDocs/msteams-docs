@@ -9,19 +9,19 @@ ms.author: surbhigupta
 
 # Azure Application Insights
 
-Your application telemetry can be captured and analyzed in any telemetry service of your choice. It is recommended to choose a telemetry service that allows tracking of custom events and reporting it with custom context-based attributes.
+Your application telemetry can be captured and analyzed in any telemetry service of your choice. It's recommended that you use a telemetry service that allows tracking custom events and reporting it with custom context-based attributes.
 
-[Azure Application Insights](/azure/azure-monitor/app/app-insights-overview), a feature of [Azure Monitor](/azure/azure-monitor/) helps in tracking and monitoring app telemetry. It allows developers to instrument the app, track relevant metrics, custom business events in your Teams app across desktop, web, or mobile clients.
+[Azure Application Insights](/azure/azure-monitor/app/app-insights-overview), a feature of [Azure Monitor](/azure/azure-monitor/) helps in tracking and monitoring app telemetry. It allows developers to instrument the app, track relevant metrics, and custom business events. You can track events in your Teams app across desktop, web, or mobile clients.
 
-While Azure Applications Insights does auto-instrumentation to automatically collect performance, error data, and HTTP requests without code changes, most of the telemetry described in the previous section requires capturing custom events. This requires Application Insights SDK to your application code.
+Azure Applications Insights does auto-instrumentation to automatically collect performance, error data, and HTTP requests without code changes. Note that the telemetry described in the [previous section](teams-app-context-attributes.md) requires capturing custom events. It requires adding Application Insights SDK to your application code.
 
 - Follow the guidance [here](/azure/azure-monitor/app/api-custom-events-metrics.md#prep) to add Application Insights SDK to your code.
-- Use [TrackEvent](/azure/azure-monitor/app/usage-overview.md#custom-business-events) to instrument and track custom events important for your business and metrics mentioned above.
+- Use [TrackEvent](/azure/azure-monitor/app/usage-overview.md#custom-business-events) to instrument and track custom events important for your business and metrics mentioned in [Plan for Teams app context and Attributes](teams-app-context-attributes.md).
 - The [retention workbook](/azure/azure-monitor/app/usage-retention) provides user retention analysis out of box. The workbook allows measuring retention by pre-defined custom events.
 - [User Flows](/azure/azure-monitor/app/usage-flows) provides useful insight on how your users navigate through the app and can be used for tracking custom events as well.
 
 ## Telemetry as an Investment
 
-While collecting telemetry, using the generated analytics is important for improving your app experience, guiding your roadmap, the investment goes beyond the solution. This investment provides a window into your user’s mind, collecting behavior patterns that can help you find the crucial product market fit.
+Collecting telemetry using the generated analytics is important for improving your app experience and guiding your roadmap. However, your investment in planning analytics and using telemetry goes beyond the solution. It provides a window into your user’s mind and collecting behavior patterns that can help you find the crucial product market fit.
 
-Analyzing your solution usage, insights on features that your end users value enough to pay can help shape the long-term strategy for your organization and future solutions that you build.
+Analyzing your solution usage and insights on features that your end users value enough to pay can help shape the long-term strategy for your organization and future solutions that you build.
