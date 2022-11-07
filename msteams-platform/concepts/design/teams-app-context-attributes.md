@@ -55,7 +55,7 @@ Bot is a conversational interface that has a publicly accessible web service hos
 
 | Personal | Teams or Channel | Group chat | Meeting |
 | --- | --- | --- | --- |
-| `readReceiptInfo.IsMessageRead()` can be used to get read receipts for select bot messages. | • `TurnContext.Activity.TeamsGetTeamInfo()`: Get details of the team where bot is installed. <br> • `TeamsInfo.GetTeamChannelsAsync`: retrieves list of channels in the installed Team. <br> • On `installationUpdate` event, `conversation.ID` provides channel ID where bot is installed. | On `installationUpdate` event, `conversation.ID` provides chat ID where bot is installed. | On `installationUpdate` event, `conversation.ID` provides ID of meeting chat where bot is installed. |
+| Use `readReceiptInfo.IsMessageRead()` to get read receipts for select bot messages. | • `TurnContext.Activity.TeamsGetTeamInfo()`: Get details of the team where bot is installed. <br> • `TeamsInfo.GetTeamChannelsAsync`: retrieves list of channels in the installed Team. <br> • `installationUpdate` event: `conversation.ID` provides channel ID where bot is installed. | On `installationUpdate` event, `conversation.ID` provides chat ID where bot is installed. | On `installationUpdate` event, `conversation.ID` provides ID of meeting chat where bot is installed. |
 
 ## Messaging extension
 
