@@ -251,7 +251,9 @@ You can use the `adaptiveCardResponse` property in handler to customize how the 
 
 * The response card is replaced by the action card for all users in the chat, and they can view the response card `AdaptiveCardResponse.ReplaceForAll`.
 
-   :::image type="content" source="../../../assets/images/sbs-workflow-bot/replace-for-all.png" alt-text="Replaced the action card for all" lightbox="../../../assets/images/sbs-workflow-bot/replace-for-all.png":::
+   :::image type="content" source="../../../assets/images/sbs-workflow-bot/replace-for-all1.png" alt-text="Replaced the action card for all with the acknowledge button" lightbox="../../../assets/images/sbs-workflow-bot/replace-for-all1.png":::
+
+   :::image type="content" source="../../../assets/images/sbs-workflow-bot/replace-for-all2.png" alt-text="Replaced the action card for all" lightbox="../../../assets/images/sbs-workflow-bot/replace-for-all2.png":::
 
 * The response card is sent as a separate message in the conversation that can't replace the action card. All users in the chat can view the response card `AdaptiveCardResponse.NewForAll`.
 
