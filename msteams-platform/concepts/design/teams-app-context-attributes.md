@@ -19,7 +19,7 @@ A tab is Teams aware web page iframed in Teams. In addition to instrumentation t
 
 - **App information**:
 
-  - `page.id` and `page.subPageId`: indicates developer defined ID of the page and element or sub-page within a page.
+  - `page.id` and `page.subPageId`: indicates developer defined ID of the page and element or subpage within a page.
   - `isFullScreen`: Indicates whether the page is in full-screen mode.
   - `isMultiWindow`: Indicates whether the page is accessed as a pop out window.
   - `app.theme`: Indicates the user interface theme being used, that is, default, dark, contrast
@@ -66,7 +66,7 @@ Search messaging extensions allow searching an external system and bringing resu
   - `value.context.theme`: user’s client theme can be one of default, contrast, or dark.
   - `value.CommandContext`: context from where extension was invoked – `message`, `compose`, and `commandbox`.
   - `channelData.tenant.id`: Tenant ID of the invoking user.
-  - `composeExtension` or `queryLink`: Instrument by handling this invoke request. This provides an event every time a URL is unfurled in a tenant. `TurnContext` can provide tenant and other related details.
+  - `composeExtension` or `queryLink`: Instrument by handling this invoke request. It provides an event every time a URL is unfurled in a tenant. `TurnContext` can provide tenant and other related details.
 
 - **User Information**:
 
@@ -78,7 +78,7 @@ Search messaging extensions allow searching an external system and bringing resu
 
 ## Meeting apps
 
-Meeting apps include tabs that work pre and post meetings, meeting side panel that are iframed web pages and in-meeting notification.
+Meeting apps include tabs that work pre- and post-meetings, meeting side panel that is iframed web pages and in-meeting notification.
 
 - **MeetingTab**: when run in context of meeting, tabs get the meeting ID. All context information for tabs from earlier section on ‘Tab’ apply for meeting tabs too.
 - **Meeting Information**: TeamsInfo.GetMeetingInfoAsync API provides meeting specific details:
@@ -97,7 +97,7 @@ Meeting apps include tabs that work pre and post meetings, meeting side panel th
 
 - **Cards**: Teams supports cards to be sent as messages across scopes. Cards are client-side UI containers and can be sent by a bot or through a Messaging extension. Cards support certain actions, which are handled by the bot service. Instrumenting may happen in these events:
 
-  - `openURL`: Instrumenting openURL calls will require an intermediary web page to be setup with instrumentation logic and which redirects to the destination URL.
+  - `openURL`: Instrumenting openURL calls will require an intermediary web page to be set up with instrumentation logic and which redirects to the destination URL.
   - `messageBack`: Sends a message and payload to the bot with metadata:
     - `from.id`: Azure AD ID of the user who clicked the card button.
     - `entities`: provides locale, platform, timezone and client information.
@@ -112,7 +112,7 @@ Meeting apps include tabs that work pre and post meetings, meeting side panel th
 
   - `signin`: Initiates OAuth flow via bot. Include instrumentation of authentication event to capture this event.
 
-- **Task Module**: Task modules are modal popup experiences which can contain iframed web page or an Adaptive card. `TaskInfo` object provides metadata about task module including its width, height,  information on whether it contains a card or web page.
+- **Task Module**: Task modules are modal popup experiences, which can contain iframed web page or an Adaptive card. `TaskInfo` object provides metadata about task module including its width, height,  information on whether it contains a card or web page.
 
   - If the task module contains an iframed web page, include telemetry in the web page to track user action. In addition, it will contain context the same as a tab context.
   - If the task module contains an adaptive card: all card related telemetry would work when the Adaptive card is inside a task module.
