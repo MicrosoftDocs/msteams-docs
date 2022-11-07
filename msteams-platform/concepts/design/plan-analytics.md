@@ -31,19 +31,25 @@ As the app’s developer, you can track your app’s usage in the [Teams app usa
 
 Teams usage reports can't provide you with in-depth analytics of what goes on inside your app and specific user-level analytics. Such analytics include a user’s journey within your app or a user’s engagement with specific features and scenario completions within your app.
 
-Your app on Teams is essentially a web-based service hosted elsewhere, for example, Azure cloud. It's embedded to be surfaced inside Microsoft Teams shell where end-users can use your app. This applies to your app irrespective of the [platform capabilities](../../overview-explore.md) used, such as tabs, bots, message extensions, meeting extensions, cards, task modules etc. as all of these capabilities are a means to surface web-based experiences inside Teams.
+Your app on Teams is essentially a web-based service hosted elsewhere, for example, Azure cloud. It's embedded and surfaced inside Microsoft Teams shell where end-users can use your app. This applies to your app irrespective of the [platform capabilities](../../overview-explore.md) used, such as tabs, bots, message extensions, meeting extensions, cards, task modules etc. as all of these capabilities are a means to surface web-based experiences inside Teams.
 
-Plan analytics for the Teams app you’re building the same way as you do for your SaaS product that runs on the web browser.
+Plan analytics for the Teams app the same way as you do for a SaaS product that runs on the web browser.
 
 ## Plan early for analytics
 
-Plan analytics for your Teams app at the dev design and solution architecture stage. For Teams-specific capabilities, such as conversational constructs that is, bots, message extensions etc., you'll need to plan and implement analytics instrumentation, capture relevant events, and context from the SDK methods from scratch.
+Plan analytics for your Teams app at the dev design and solution architecture stage. For Teams-specific capabilities, such as conversational constructs like bots, message extensions etc., you'll need to plan and implement analytics instrumentation, capture relevant events, and context from the SDK methods from scratch.
 
-At the time your production Teams app is live on the marketplace and customers start using it, your analytics and data infrastructure should be fully operational so that you don’t miss tracking instrumentation markers getting fired, Teams-specific events and the relevant, contextual information contained in these events, some of which are triggered for you to capture in your SaaS backend for later use. For example, the Azure AD user ID for a Teams user should be captured when a specific bot event is fired at the time of installation of the bot app for the user. This user ID once mapped to the user’s real-world profile identify such as email address will allow you to be able to then send proactive notifications to the user later via the bot.
+At the time your production Teams app is live on the marketplace and customers start using it, your analytics and data infrastructure should be fully operational. It ensures that you don’t miss tracking:
+
+- Instrumentation markers getting fired
+- Teams-specific events and the relevant
+- Contextual information contained in these events, some of which are triggered for you to capture in your SaaS backend for later use.
+
+For example, the Azure AD user ID for a Teams user should be captured when a specific bot event is fired when a user installs the bot app. This user ID can be mapped to the user’s real-world profile identify such as, email address. It allows you to be able to then send proactive notifications to the user later via the bot.
 
 ### Aggregate and user-specific insights
 
-Besides the generic reports for daily, weekly, and monthly active users, time spent in your app etc., implementing analytics will allow you to get aggregate and user-specific insights:
+Besides the generic reports for daily, weekly, and monthly active users, time spent in your app etc., implementing analytics allows you to get aggregate and user-specific insights:
 
 - **Aggregate metrics**
   - Which scope or UI entry point (for example, personal app, channel, group chat) is the most used by your users to invoke your app and begin a new app session inside Teams?
