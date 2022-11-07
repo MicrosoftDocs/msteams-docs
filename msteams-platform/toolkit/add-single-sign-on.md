@@ -473,7 +473,7 @@ For applications that interact with the user in a chat, Team, or channel, SSO ma
 
 ## Enable SSO support
 
-Teams Toolkit helps you to add SSO to the following Teams capabilities in Visual Studio:
+Teams Toolkit helps you add SSO to the following Teams capabilities in Visual Studio:
 
 * Tab
 * Notification bot: restify server
@@ -502,7 +502,7 @@ You can follow these steps to add SSO using Teams Toolkit in Visual Studio:
    :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso-vs/vs-2022-preview-create-teamsapp.png" alt-text="enter project and solution name" lightbox="../assets/images/teams-toolkit-v2/add-sso-vs/vs-2022-preview-create-teamsapp.png":::
 
    > [!NOTE]
-   > You can also change the default location of your project by selecting **...**
+   > You can also change the default location of your project by selecting **... (Ellipses)**
 
 1. After the project is created with the new Teams application, select **Project** > **Teams Toolkit** > **Add Authentication Code**.
 
@@ -521,7 +521,7 @@ The following table lists the changes Teams Toolkit makes in your project:
    |Create|`Auth/bot`|Reference code, auth redirect pages and a `README.md` file is generated in this path for a bot project.|
 
 > [!NOTE]
-> Teams Toolkit doesn't change anything in the cloud by adding SSO, until you trigger local debug. You can update your code to ensure SSO is working in the project.
+> Teams Toolkit doesn't change anything in the cloud by adding SSO, until you trigger a local debug. You can update your code to ensure SSO is working in the project.
 
 ## Update your application to use SSO
 
@@ -550,9 +550,9 @@ The following steps help you to enable SSO in your application:
    * `Microsoft.Bot.Builder`, version 4.17.1 or newer.
 
 2. You can create a `Pages` folder, and move files to `Auth/bot/Pages`.
-    `Auth/bot/Pages` folder contain HTML pages that are hosted by bot application. When SSO flows are initiated with Azure AD, the flows will redirect user to these pages.
+    `Auth/bot/Pages` folder contain HTML pages that are hosted by bot application. When SSO flows are initiated with Azure AD, the flows will redirect the user to these pages.
 
-3. After the user is redirected to these pages, you can create `SSO` folder and move files in `Auth/bot/SSO`. This folder contains three files as a reference for SSO implementation:
+3. After the user is redirected to the HTML pages, you can create `SSO` folder and move files in `Auth/bot/SSO`. This folder contains three files as a reference for SSO implementation:
 
    1. `SsoDialog.cs`: This file creates a `ComponentDialog` that is used for SSO.
 
@@ -696,7 +696,7 @@ To view your Azure AD application in Azure Portal, see [view Azure AD applicatio
 
 The following concepts help you to authenticate SSO in Teams:
 
-* SSO authentication with Azure AD silently refreshes the authentication token to minimize the number of times users need to enter their sign-in credentials.
+* SSO authentication with Azure AD refreshes the authentication token in the background, to minimize the number of times users need to enter their sign-in credentials.
 
 * Users don't have to provide consent again in another device as they're signed in automatically, while using the app.
 
@@ -707,7 +707,7 @@ Teams tabs and bots have similar flow for SSO support, for more information, see
 
 ### Simplified SSO with TeamsFx
 
-TeamsFx helps to reduce your tasks by using SSO and accessing cloud resources down to single line statements with zero configuration. With TeamsFx SDK, you can write user authentication code in a simplified way using credentials such as for browser environment, the user identity is `TeamsUserCredential`.
+TeamsFx helps to reduce your tasks by using SSO and accessing cloud resources down to single line statements with zero configuration. With TeamsFx SDK, you can write user authentication code with the user identity `TeamsUserCredential`, just the way it does in a browser environment.
 
 For more information about TeamsFx SDK, see:
 
