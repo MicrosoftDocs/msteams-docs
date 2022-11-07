@@ -707,7 +707,7 @@ Teams tabs and bots have similar flow for SSO support, for more information, see
 
 ### Simplified SSO with TeamsFx
 
-TeamsFx helps to reduce your tasks by using SSO and accessing cloud resources down to single line statements with zero configuration. With TeamsFx SDK, you can write user authentication code with the user identity `TeamsUserCredential`, just the way it does in a browser environment.
+TeamsFx helps to reduce your tasks by using SSO and accessing cloud resources down to single line statements with zero configuration. With TeamsFx SDK, you can write user authentication code with the user identity `TeamsUserCredential`, such as in a browser environment.
 
 For more information about TeamsFx SDK, see:
 
