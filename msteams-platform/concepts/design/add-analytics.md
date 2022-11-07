@@ -9,7 +9,7 @@ ms.author: surbhigupta
 
 # Azure Application Insights
 
-Your Application telemetry can be captured and analyzed in any telemetry service of your choice. It is recommended to choose a telemetry service that allows tracking of custom events and reporting it with custom context based attributes.
+Your application telemetry can be captured and analyzed in any telemetry service of your choice. It is recommended to choose a telemetry service that allows tracking of custom events and reporting it with custom context-based attributes.
 
 [Azure Application Insights](/azure/azure-monitor/app/app-insights-overview), a feature of [Azure Monitor](/azure/azure-monitor/) helps in tracking and monitoring app telemetry. It allows developers to instrument the app, track relevant metrics, custom business events in your Teams app across desktop, web, or mobile clients.
 
