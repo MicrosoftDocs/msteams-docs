@@ -15,17 +15,17 @@ Each platform capability or extensibility point exposes a different set of user 
 
 ## Tab
 
-A tab is Teams aware web page iframed in Teams. In addition to instrumentation that you might have included in your app’s web page, Teams tab provides more context information including:
+A tab is a Teams-aware web page iframed in Teams. In addition to instrumentation that you might have included in your app’s web page, Teams tab provides more context information including:
 
 - **App information**:
 
-  - `page.id` and `page.subPageId`: indicates developer defined ID of the page and element or subpage within a page.
+  - `page.id` and `page.subPageId`: Indicates developer defined ID of the page and element or subpage within a page.
   - `isFullScreen`: Indicates whether the page is in full-screen mode.
   - `isMultiWindow`: Indicates whether the page is accessed as a pop out window.
-  - `app.theme`: Indicates the user interface theme being used, that is, default, dark, contrast
-  - `app.locale`: locale that user has configured for the app (for example, en-us).
-  - `app.host.clientType`: Type of host client, that is, android, iOS, desktop, web.
-  - `app.host.sessionID`: Unique ID for the current Host session for use in correlating telemetry data.
+  - `app.theme`: Indicates the user interface theme being used, that is, default, dark, or contrast
+  - `app.locale`: Locale that user has configured for the app (for example, en-us).
+  - `app.host.clientType`: Type of host client, that is, Android, iOS, desktop, web.
+  - `app.host.sessionID`: Unique ID for the current host session for use in correlating telemetry data.
 
 - **User information**:
 
@@ -35,7 +35,7 @@ A tab is Teams aware web page iframed in Teams. In addition to instrumentation t
 
 | Personal | Teams or Channel | Group chat | Meeting |
 | --- | --- | --- | --- |
-| &nbsp; | `team.internalId` and `channel.id`: ID of Team and Channel where tab is `associated team.type`. <br> - Different types of team in O365 for Education `channel.channelType`. <br> – Indicates whether channel is private, regular, or shared. | `chat.Id`: Chat ID if the tab is added to a Group Chat context. | `meeting.ID`: ID of the meeting used by tab when running in meeting context. |
+| NA | `team.internalId` and `channel.id`: ID of the team and channel where the tab is associated `team.type`. <br> • Different types of teams in O365 for Education `channel.channelType`. <br> • Indicates whether channel is private, regular, or shared. | `chat.Id`: Chat ID if the tab is added to a Group Chat context. | `meeting.ID`: ID of the meeting used by tab when running in meeting context. |
 
 ## Bot
 
@@ -43,21 +43,21 @@ Bot is a conversational interface that has a publicly accessible web service hos
 
 - **App information**:
 
-  - `TurnContext.Locale`: locale that user has configured for the app.
-  - `TurnContext.Activity.Timestamp`: timestamp when a message was sent.
-  - `TurnContext.Activity.LocalTimezone`: name of timezone for the message sent.
+  - `TurnContext.Locale`: Locale that user has configured for the app.
+  - `TurnContext.Activity.Timestamp`: Timestamp when a message was sent.
+  - `TurnContext.Activity.LocalTimezone`: Name of timezone for the message sent.
 
 - **User Information**:
 
   - `TurnContext.Activity.From.AadObjectId`: Azure AD ID of the sender.
-  - `ChannelData.Tenant.id`: Tenant ID passed via TurnContext.
+  - `ChannelData.Tenant.id`: Tenant ID passed via `TurnContext`.
   - `TeamsInfo.GetMembersAsync`: Get members of the chat or channel where bot has received a message.
 
 | Personal | Teams or Channel | Group chat | Meeting |
 | --- | --- | --- | --- |
-| `readReceiptInfo.IsMessageRead()` can be used to get read receipts for select bot messages. | `turnContext.Activity.TeamsGetTeamInfo()`: Get details of the team where bot is installed TeamsInfo.`GetTeamChannelsAsync`: retrieves list of channels in the installed Team On `installationUpdate` event, `conversation.ID` provides channel ID where bot is installed. | On `installationUpdate` event, `conversation.ID` provides chat ID where bot is installed. | On `installationUpdate` event, `conversation.ID` provides ID of meeting chat where bot is installed. |
+| `readReceiptInfo.IsMessageRead()` can be used to get read receipts for select bot messages. | • `turnContext.Activity.TeamsGetTeamInfo()`: Get details of the team where bot is installed. <br> • `TeamsInfo.GetTeamChannelsAsync`: retrieves list of channels in the installed Team. <br> • On `installationUpdate` event, `conversation.ID` provides channel ID where bot is installed. | On `installationUpdate` event, `conversation.ID` provides chat ID where bot is installed. | On `installationUpdate` event, `conversation.ID` provides ID of meeting chat where bot is installed. |
 
-## Messaging Extension
+## Messaging extension
 
 Search messaging extensions allow searching an external system and bringing results into Teams; Action Message extensions allow initiating an action in an external system. Whenever a web page-based task module gets invoked from an action message extension, telemetry is handled the same way as iframed web pages in a tab. A Messaging extension also provides context on invoking:
 
@@ -118,3 +118,8 @@ Meeting apps include tabs that work pre- and post-meetings, meeting side panel t
   - If the task module contains an adaptive card: all card related telemetry would work when the Adaptive card is inside a task module.
 
 `microsoftTeams.tasks.startTask` and `microsoftTeams.tasks.submitTask` are used to invoke a task module and submit information entered in a task module respectively. Instrumenting these events can help map user progress.
+
+
+## See also
+
+[Microsoft Teams Client SDK](/javascript/api/@microsoft/teams-js/app.teaminfo)
