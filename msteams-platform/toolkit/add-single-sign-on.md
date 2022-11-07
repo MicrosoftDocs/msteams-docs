@@ -11,7 +11,7 @@ zone_pivot_groups: teams-app-platform
 
 # Add single sign-on to Teams app
 
-Microsoft Teams provides single sign-on (SSO) function for application to obtain signed-in Teams user token to access Microsoft Graph and other APIs. Teams Toolkit facilitates the interaction by abstracting some of the Azure AD flows and integrations behind some simple APIs. This enables you to add SSO features easily to your Teams application
+Microsoft Teams provides single sign-on (SSO) function for application to obtain signed-in Teams user token to access Microsoft Graph and other APIs. Teams Toolkit facilitates the interaction by abstracting some of the Microsoft Azure Active Directory (Azure AD) flows and integrations behind some simple APIs. This enables you to add SSO features easily to your Teams application
 
 ::: zone pivot="visual-studio-code"
 
@@ -716,7 +716,7 @@ For more information about TeamsFx SDK, see:
 
 ## How to use an existing Azure AD app
 
-Follow the [instruction](https://github.com/OfficeDev/TeamsFx/wiki/Using-existing-Azure-AD-app-in-TeamsFx-project) to use an existing Azure AD app in your TeamsFx project.
+To use an existing Azure AD app in your TeamsFx project, you can follow these [instructions](https://github.com/OfficeDev/TeamsFx/wiki/Using-existing-Azure-AD-app-in-TeamsFx-project).
 
 ::: zone-end
 
