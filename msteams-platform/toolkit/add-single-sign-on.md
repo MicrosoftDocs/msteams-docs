@@ -525,7 +525,7 @@ The following table lists the changes Teams Toolkit makes in your project:
 
 ## Update your application to use SSO
 
-The following steps help you to enable SSO in your application.
+The following steps help you to enable SSO in your application:
 
 > [!NOTE]
 > The changes are based on the scaffold templates.
@@ -611,7 +611,7 @@ The following steps help you to enable SSO in your application.
         });
         ```
 
-    5. You can it replace with:
+    5. You can replace it with:
 
         ```csharp
         app.UseEndpoints(endpoints =>
