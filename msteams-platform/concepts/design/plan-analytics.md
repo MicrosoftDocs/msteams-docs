@@ -96,7 +96,7 @@ These data instrumentation types are covered in more detail in the rest of this 
 
 ### Data instrumentation in your app specific to Teams
 
-Below are guidelines and pointers regarding what to look for, which events to capture, how to instrument telemetry markers, where to fetch Teams-relevant information that will help you plan and implement analytics for your app. Since your Teams apps can be tabs, bots, message extensions, cards, stage views etc. or any combination of these [capabilities and UI constructs](../../overview-explore.md#teams-app-features) across personal or shared scopes, it's best to understand, plan, and implement your instrumentation around each of these capabilities.
+Below are guidelines and pointers regarding what to look for, which events to capture, how to instrument telemetry markers, and where to fetch Teams-relevant information that will help you plan and implement analytics for your app. Since your Teams apps can have tabs, bots, message extensions, cards, stage views etc. or any combination of these [capabilities and UI constructs](../../overview-explore.md#teams-app-features) across personal or shared scopes, it's best to understand, plan, and implement your instrumentation around each of these capabilities.
 
 You can classify Teams platform features into broadly two constructs:
 
@@ -111,9 +111,9 @@ These webpages often have the instrumentation done for core SaaS web app needs. 
 
 When you build a [tab](../../tabs/how-to/tab-requirements.md), add the [Teams JavaScript client SDK](/javascript/api/overview/msteams-client) to your tab's content or configuration page. It ensures that your page can access Teams-specific information or [context](../../tabs/how-to/access-teams-context.md). Use this information for useful user-specific insights, such as:
 
-- Microsoft 365 tenant ID (Azure AD tenant) for the current user (`tid`). In Microsoft 365 or Azure AD, a tenant is representative of an organization, that is, the user’s company. The Microsoft 365 tenant ID is useful to find out and log which Microsoft 365 tenant the user belongs to. Once you know the tenant ID, you can find out the tenant domain for the organization, which often reveals the organization’s name, using this Graph API. Ensure to invoke this API in your Microsoft 365 Developer tenant since you’ll be able to consent to the required tenant administrator permission it needs.
-- License type assigned to the user and the SKU for the current user’s tenant. Possible values are F1, E1, E3, and E5 enterprise plans for (licenseType) and enterprise, free, edu, unknown for (`tenantSKU`).
-- The context where the tab URL is loaded. Some possible values can be content page, task module, tab settings dialog, tab remove dialog, meeting sidePanel etc. (`frameContext`).
+- Microsoft 365 tenant ID (Azure AD tenant) for the current user (`tid`). In Microsoft 365 or Azure AD, a tenant is representative of an organization, that is, the user’s company. The Microsoft 365 tenant ID is useful to find out and log which Microsoft 365 tenant the user belongs to. Once you know the tenant ID, you can find out the tenant domain for the organization, which often reveals the organization’s name, using this [Graph API](/graph/api/tenantrelationship-findtenantinformationbytenantid). Ensure to invoke this API in your Microsoft 365 Developer tenant since you’ll be able to consent to the required tenant administrator permission it needs.
+- License type assigned to the user and the SKU for the current user’s tenant. Possible values are F1, E1, E3, and E5 enterprise plans for (`licenseType`) and enterprise, free, edu, and unknown for (`tenantSKU`).
+- The context where the tab URL is loaded. Some possible values can be content page, task module, tab settings dialog, tab remove dialog, meeting sidePanel, etc. (`frameContext`).
 - Host client type where tab is loaded. Possible values are Android, IoS, web, desktop, surfaceHub, etc. (`hostClientType`). You can slice your analytics data.
 - Locale awareness for the user to indicate language, for example, en-us, fr-fr, ja-jp etc. (app locale).
 - User Principal Name or login hint (user name) of the current user in the current tenant (usually user’s email address).
@@ -126,27 +126,27 @@ After you extract the Teams-specific information from the tab context, use it as
 
 | Track Teams-specific information | Outcome |
 | --- | --- |
-| User's organization | Track demand for your app, especially if you offer trial period for new sign-ups or freemium offering for your SaaS product for Sales outreach, onboard organization, check in for assistance. |
-| User's organization and role | Use license type and tenant SKU to construct a customer profile for the Teams user. Slice your analytics data, such as, usage, sessions, retention, etc. accordingly, and tailor your features, experiences etc. accordingly. |
+| User's organization. | Track demand for your app, especially if you offer trial period for new sign-ups or freemium offering for your SaaS product for sales outreach, onboard organization, check in for assistance. |
+| User's organization and role. | Use license type and tenant SKU to construct a customer profile for the Teams user. Slice your analytics data, such as, usage, sessions, retention, etc. accordingly, and tailor your features, experiences, etc. accordingly. |
 | Host client type, locale and usage context inferences from team or channel names | Enrich the customer’s profile in your user analytics. |
 | Use frame context to get information about the context in which the user is using your app, user's journey, and usage pattern from various surface areas, capabilities, and scopes. | Craft your user's experiences accordingly and invest more in capabilities popular with your users. |
-| User's email address to associate a meaningful, real-world identity with the Teams user, and can provide the Microsoft 365 tenant organization’s domain address that is, contoso.onmicrosoft.com. | Identify the organization the user belongs to. The email address of the user can be used to complete the user’s profile and communicate with the user for activation, re-marketing, and re-engagement. However, be careful not to misuse this channel or spam the user. |
+| User's email address to associate a meaningful, real-world identity with the Teams user, and provide the Microsoft 365 tenant organization’s domain address that is, contoso.onmicrosoft.com. | Identify the organization the user belongs to. The email address of the user can be used to complete the user’s profile and communicate with the user for activation, re-marketing, and re-engagement. However, be careful not to misuse this channel or spam the user. |
 | Obtain and store the unique Azure AD user or object ID at the time of app (bot) installation. | Send any proactive notification to the user via your bot. |
 
 #### Conversational constructs
 
-Conversation or chat-oriented capabilities include bots, message extensions, cards and task modules (displaying an adaptive card) that are created for Teams users. You'll need to capture and handle Teams-specific events for data instrumentation for your app. A bot can access additional context data about a team, chat, meeting, 1:1 call, or group call where it's installed.
+Conversation or chat-oriented capabilities include bots, message extensions, cards and task modules (displaying an Adaptive Card) that are created for Teams users. You'll need to capture and handle Teams-specific events for data instrumentation for your app. A bot can access additional context data about a team, chat, meeting, 1:1 call, or group call where it's installed.
 
 Use this information for enriching the bot's functionality and the user experience:
 
 - Query the bot for the list of members and their basic user profiles, including Teams user IDs and Microsoft Azure AD information, such as name and Azure AD user or object ID.
 
-- Use the user’s Azure AD user or object ID to find the user’s first name, surname, email address, tenant ID, and user’s role in the team. Leverage these details as described for hosted web canvas constructs above.
+- Use the user’s Azure AD user or object ID to find the user’s first name, surname, email address, tenant ID, and user’s role in the team. Leverage these details as described for hosted web canvas constructs.
 
 - If your bot is installed in a team, query it for metadata about that team including the Azure AD group ID and the team’s name. It can also query the list of channels in the team, which returns channel IDs and names. Leverage this information for configuration, setup, and personalization.
 
-- Using the Meeting Details API, get a meeting's or call’s static metadata, such as type of meeting such as `GroupCall`, `OneToOneCall`, `Adhoc`, `Broadcast`, `MeetNow`, `Recurring`, `Scheduled`, or `Unknown`; conversation type, organizer tenant ID, etc.
+- Using the Meeting Details API, get a meeting's or call’s static metadata, such as type of meeting (for example, `GroupCall`, `OneToOneCall`, `Adhoc`, `Broadcast`, `MeetNow`, `Recurring`, `Scheduled`, or `Unknown`), conversation type, organizer tenant ID, etc.
 
-Each activity sent by Teams to your bot will contain the `turnContext` object from which all these relevant fields can be retrieved. All of which can be leveraged in a similar fashion as described for hosted web canvas constructs.
+Each activity sent by Teams to your bot will contain the `turnContext` object from which all these relevant fields can be retrieved. You can leverage them in a similar way as described for hosted web canvas constructs.
 
 Since message extensions are based on the bot channel, most of the above applies to message extensions as well.
