@@ -49,19 +49,19 @@ For example, the Azure AD user ID for a Teams user should be captured when a spe
 
 ### Aggregate and user-specific insights
 
-Besides the generic reports for daily, weekly, and monthly active users, time spent in your app etc., implementing analytics allows you to get aggregate and user-specific insights:
+Besides the generic reports for daily, weekly, and monthly active users, time spent in your app, etc., implementing analytics allows you to get aggregate and user-specific insights:
 
 - **Aggregate metrics**
-  - Which scope or UI entry point (for example, personal app, channel, group chat) is the most used by your users to invoke your app and begin a new app session inside Teams?
+  - Which scope or UI entry point (like personal app, channel, group chat) is the most used by your users to invoke your app and begin a new app session inside Teams?
   - How many days on an average do users use your app in the first week after installing the app?
-  - Week-over-week or month-over-month new user retention cohort analysis for your app or specific capabilities (for example, personal app or bot) in your app?
+  - What is the week-over-week or month-over-month new user retention cohort analysis for your app or specific capabilities (like personal app or bot) in your app?
   - How many users use your app only on Teams mobile clients?
   - How many users have used the camera device capability in your app?
-  - What does the funnel analysis for your app from app installation to activation to engagement to retention and finally, monetization reveal? Where are the drop-offs happening?
-  - How many users have installed your app in the last one week?
+  - What does the funnel analysis reveal for your app across phases, from app installation to activation to engagement to retention and finally, monetization? Where are the drop-offs happening?
+  - How many users have installed your app in the past one week?
   - How many users have churned from your app in the last three months? What is the resulting quarterly churn rate?
-  - Which organization has seen the maximum number of installations for your app in the last 30 days?
-  - Which organizations do the users installing your app in the last 14 days belong to?
+  - Which organization has seen the maximum number of installations for your app in the past 30 days?
+  - Which organizations do the users installing your app in the past 14 days belong to?
   - Which organization has seen the maximum number of trial sign-ups for your app in the last seven days?
   - What types of meetings (`GroupCall`, `OneToOneCall`, `Adhoc`, `Broadcast`, `MeetNow`, `Recurring` or `Scheduled`) is your app used in?
 
@@ -69,27 +69,30 @@ Besides the generic reports for daily, weekly, and monthly active users, time sp
   - Which users are yet to experience the channel tabs capability you’ve implemented in your app in the last app update?
   - Which users haven't completed the onboarding inside the personal app?
   - Among the users who have installed the app in the last one week, which users haven't returned to the app even once for engagement after installation?
-  - Which users have installed the app but haven't signed-into the app yet?
-  - How many times has a specific user used your Teams app in the last 30 days?
-  - How many days a specific user has actively used your app in the last seven days?
+  - Which users have installed the app but haven't signed-in to the app yet?
+  - How many times has a specific user used your Teams app in the past 30 days?
+  - How many days a specific user has actively used your app in the past seven days?
   - When was the last time a specific user used your app in Teams?
   - What has been a specific app user’s journey inside Teams?
-  - Which users have churned from your app in the last three months?
+  - Which users have churned from your app in the past three months?
   - Has a specific user used your app in a Teams meeting?
 
 ## Instrumenting your app for analytics
 
-Instrumenting your code with analytics markers (also known as telemetry markers) is a standard web application development practice. Robust telemetry instrumentation in your code is critical for long-term success. It helps you to measure both aggregate and user-specific metrics, which is required to determine product, growth, marketing, and business decisions.
+Instrumenting your code with analytics markers (also known as telemetry markers) is a standard web application development practice. Robust telemetry instrumentation in your code is critical for long-term success. It helps you to measure both aggregate and user-specific metrics. It's required to determine product, growth, marketing, and business decisions.
 
-Before you begin, always remember to handle user data in accordance with your strict data handling and privacy policies, and in compliance with your regulatory obligations. The rest of this document only recommends the in-context data you can use but doesn't supersede your regulatory obligations.
+Before you begin, always remember to handle user data in accordance with your strict data handling and privacy policies, and in compliance with your regulatory obligations. 
+
+> [!NOTE]
+> The rest of this document only recommends the in-context data you can use but doesn't supersede your regulatory obligations.
 
 There are two types of data instrumentation relevant for your Teams app:
 
-- **Data instrumentation for your core SaaS product or app**: It's required for your browser-based SaaS app. This instrumentation is often already done in your browser-based SaaS app's code. You can select analytics, customer lifecycle analytics, and conversion analytics metrics such as bounce rate, page views, unique visitor count, session counts, engagement time, select through rate etc., and many more for your web app.
+- **Data instrumentation for your core SaaS product or app**: It's required for your browser-based SaaS app. This instrumentation is often already done in your browser-based SaaS app's code. You can select analytics, customer lifecycle analytics, and conversion analytics metrics such as, bounce rate, page views, unique visitor count, session counts, engagement time, select through rate, and many more for your web app.
 
-- **Data instrumentation in your app specific to Teams**: It's required additionally in your SaaS app when you surface it inside of the Teams client. Your app may have Teams platform capabilities, such as bots, message extensions etc. It may also have experiences to address use cases unique to Teams such as meeting extensions, intelligent M365-aware scenarios using Microsoft Graph, link unfurling, etc.
+- **Data instrumentation in your app specific to Teams**: It's required additionally in your SaaS app when you surface it inside of the Teams client. Your app may have Teams platform capabilities such as, bots, message extensions, etc. It may also have experiences to address use cases unique to Teams such as meeting extensions, intelligent M365-aware scenarios using Microsoft Graph, link unfurling, etc.
 
-It's covered in more detail in the rest of this document.
+These data instrumentation types are covered in more detail in the rest of this document.
 
 ### Data instrumentation in your app specific to Teams
 
