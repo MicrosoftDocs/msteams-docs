@@ -9,15 +9,15 @@ ms.author: surbhigupta
 
 # Plan for Teams app telemetry
 
-After an app is distributed in an organization or in Teams App Store, it's important to track how users are interacting with the app. With growing app users, the number of app installs might not be a relevant metric. Understanding how users interact with the app, the kind of audience, what they're looking for, what features are most or least used are crucial items in advising future development strategy.
+After an app is distributed in an organization or in Teams App store, it's important to track how users are interacting with the app. With growing app users, the number of app installs might not be a relevant metric. Understanding how users interact with the app, the kind of audience, what they're looking for, and what features are most or least used are crucial items in advising future development strategy.
 
-App analytics help understand user behavior, motivation, friction points that can help developer make informed decisions around feature investments, enhancements, and adoption for the app.
+App analytics help understand user behavior, motivation, friction points that can help the developer make informed decisions about feature investments, enhancements, and adoption for the app.
 
 ## Why is Teams App Telemetry important?
 
-If you're a SaaS developer, you would already have telemetry tracked for some of your core business metrics. Your SaaS product might have an existing web app, or a mobile app, and you've now introduced a new Teams app. The Teams app is another surface to expose your solution to your end user, another window to your SaaS landscape.
+If you're a SaaS developer, you would already have telemetry tracked for some of your core business metrics. Your SaaS product might have an existing web app, or a mobile app, and you've now introduced a new Teams app. The Teams app is another surface to expose your solution to your end user. It's another window to your SaaS landscape.
 
-As your solution scales across multiple platforms (web, mobile platforms, Teams), it’s important to view your telemetry in layers:
+As your solution scales across multiple platforms (web, mobile platforms, and Teams), it’s important to view your telemetry in layers:
 
 :::image type="content" source="../../assets/images/app-fundamentals/telemetry-in-layers.png" alt-text="Telemetry in layers" border="false":::
 
