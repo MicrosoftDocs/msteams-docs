@@ -990,4 +990,9 @@ private static Attachment GetAdaptiveCardAttachmentFromFile(string fileName)
 
 ## See also
 
-[Define action commands](~/messaging-extensions/how-to/action-commands/define-action-command.md)
+* [Cards](../../../task-modules-and-cards/what-are-cards.md)
+* [People Picker in Adaptive Cards](../../../task-modules-and-cards/cards/people-picker.md)
+* [Task modules](../../../task-modules-and-cards/what-are-task-modules.md)
+* [App manifest schema for Teams](../../../resources/schema/manifest-schema.md)
+* [Define message extension action commands](define-action-command.md)
+* [Message extensions](../../what-are-messaging-extensions.md)

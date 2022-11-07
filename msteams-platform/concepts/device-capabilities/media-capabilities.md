@@ -46,7 +46,7 @@ Update your Teams app [manifest.json](../../resources/schema/manifest-schema.md#
 The [selectMedia](/javascript/api/@microsoft/teams-js/media#@microsoft-teams-js-media-selectmedia), [getMedia](/javascript/api/@microsoft/teams-js/media.media#@microsoft-teams-js-media-media-getmedia), and [viewImages](/javascript/api/@microsoft/teams-js/media#@microsoft-teams-js-media-viewimages) APIs enable you to use native media capabilities as follows:
 
 * Use the native **microphone** to allow users to **record audio** (record 10 minutes of conversation) from the device.
-* Use native **camera control** to allow users to **capture and attach images** and **capture videos** (record upto 5 minutes of video) on the go.
+* Use native **camera control** to allow users to **capture and attach images** and **capture videos** (record up to five minutes of video) on the go.
 * Use native **gallery support** to allow users to **select device images** as attachments.
 * Use native **image viewer control** to **preview multiple images** at one time.
 * Support **large image transfer** (from 1 MB to 50 MB) through the SDK bridge.
@@ -56,8 +56,9 @@ The [selectMedia](/javascript/api/@microsoft/teams-js/media#@microsoft-teams-js-
 > [!IMPORTANT]
 >
 > * The `selectMedia`, `getMedia`, and `viewImages` APIs can be invoked from multiple Teams surfaces, such as task modules, tabs, and personal apps. For more information, see [Entry points for Teams apps](../extensibility-points.md).</br>
-> * `selectMedia` API supports both camera and microphone capabilities through different input configurations.
+> * The `selectMedia` API supports both camera and microphone capabilities through different input configurations.
 > * The `selectMedia` API for accessing microphone capability supports for mobile clients only.
+> * The maximum count of images uploaded is determined by [`maxMediaCount`](/javascript/api/@microsoft/teams-js/media.mediainputs#@microsoft-teams-js-media-mediainputs-maxmediacount) and also by the total size of array returned by the `selectMedia` API. Ensure that the array size doesn't exceed 4 MB, if the array size exceeds 4 MB, the API generates an error code 10000 that is SIZE_EXCEEDED error.
 
 The following table lists set of APIs to enable your device's media capabilities:
 
