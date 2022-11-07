@@ -9,7 +9,7 @@ ms.author: surbhigupta
 
 # Plan for Teams app context and Attributes
 
-Developing an app in Teams gives you access to certain context and user data unique to Teams and Microsoft 365 services. While your app reports above Telemetry, combining it with these attributes gives more insights, useful context around events that help in decision making.
+Developing an app in Teams gives you access to certain context and user data unique to Teams and Microsoft 365 services. While your app reports the Telemetry data for app events, combining it with these attributes gives more insights and useful context for events, which helps in decision making.
 
 Each platform capability or extensibility point exposes a different set of user properties and Teams context. As you build your telemetry monitoring, make just use of the combination of the attributes given in the following sections.
 
@@ -59,14 +59,14 @@ Bot is a conversational interface that has a publicly accessible web service hos
 
 ## Messaging Extension
 
-Search messaging extensions allow to search external system and bring results into Teams; Action Message extensions allow to initiate action in external system. Whenever a web page-based task module gets invoked from action message extension, telemetry is handled the same as iframed web pages in tab. Messaging extension also provides further context on invoking:
+Search messaging extensions allow searching an external system and bringing results into Teams; Action Message extensions allow initiating an action in an external system. Whenever a web page-based task module gets invoked from an action message extension, telemetry is handled the same way as iframed web pages in a tab. A Messaging extension also provides context on invoking:
 
 - **App information**:
 
   - `value.context.theme`: user’s client theme can be one of default, contrast, or dark.
-  - `value.CommandContext`: context from where extension was invoked – ‘message’, ‘compose’, ‘commandbox’.
+  - `value.CommandContext`: context from where extension was invoked – `message`, `compose`, and `commandbox`.
   - `channelData.tenant.id`: Tenant ID of the invoking user.
-  - `composeExtension` or `queryLink`: Instrument by handling this invoke request. This provides event every time URL is unfurled in a tenant. `TurnContext` can provide tenant and other related details.
+  - `composeExtension` or `queryLink`: Instrument by handling this invoke request. This provides an event every time a URL is unfurled in a tenant. `TurnContext` can provide tenant and other related details.
 
 - **User Information**:
 
