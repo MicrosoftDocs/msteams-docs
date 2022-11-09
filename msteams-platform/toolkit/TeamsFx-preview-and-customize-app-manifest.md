@@ -357,7 +357,5 @@ The changes are updated to Teams Developer Portal.
 * [Manage multiple environments](TeamsFx-multi-env.md)
 * [Reference: Manifest schema for Microsoft Teams](../resources/schema/manifest-schema.md)
 * [Public developer preview for Microsoft Teams](../resources/dev-preview/developer-preview-intro.md)
-
 * [Provision cloud resources using Visual Studio](provision-cloud-resources.md)
-
-* [Deploy Teams app to the cloud using Visual Studio](deploy-teams-app.md)
+* [Deploy Teams app to the cloud using Visual Studio](deploy.md#deploy-teams-app-to-the-cloud-using-visual-studio)
