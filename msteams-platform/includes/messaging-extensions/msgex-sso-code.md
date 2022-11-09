@@ -6,7 +6,7 @@ This section covers:
 1. [Update development environment variables](#update-development-environment-variables)
 1. [Add code to request a token](#add-code-to-request-a-token)
 1. [Add code to receive the token](#add-code-to-receive-the-token)
-1. [Configure OAuth connection](#configure-oauth-connection)
+1. [Add token to Bot Framework Token Store](#add-token-to-bot-framework-token-store)
 1. [Handle app user log out](#handle-app-user-log-out)
 
 ## Update development environment variables
@@ -314,7 +314,7 @@ The following is a typical decoded payload of an access token.
 }
 ```
 
-## Configure OAuth connection
+## Add token to Bot Framework Token Store
 
 If you're using the OAuth connection, you must update or add the token in the Bot Framework Token store. Use the following code snippet example to add to the `TeamsMessagingExtensionsSearchAuthConfigBot.cs` file for updating or adding the token in the store:
 
