@@ -483,9 +483,9 @@ You need to often connect to existing APIs for retrieving data to send to Teams.
 
 <details>
 
-<summary><b>How to extend workflow bot with notification feature?</b></summary>
+<summary><b>How to extend workflow bot with notification?</b></summary>
 
-The notification feature adds the ability in your application to send Adaptive Cards in response to external events. For example, when a message is posted to an Event Hub, your application can respond and send an appropriate Adaptive Card to Teams.
+Notifications add the ability in your application to send Adaptive Cards in response to external events. For example, when a message is posted to an Event Hub, your application can respond and send an appropriate Adaptive Card to Teams.
 
 The following steps help you to add the notification feature:
 
@@ -535,7 +535,7 @@ The following steps help you to add the notification feature:
 
 <details>
 
-<summary><b>How to extend workflow bot with command and response feature?</b></summary>
+<summary><b>How to extend workflow bot with command and response?</b></summary>
 
 The default workflow bot comes with command and response. See, [how to add more command and response](https://github.com/OfficeDev/TeamsFx/wiki/Respond-to-chat-commands-in-Teams#How-to-add-more-command-and-response).
 
