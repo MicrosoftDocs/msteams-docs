@@ -15,7 +15,7 @@ You've configured client secret and OAuth connection setting for the app in Azur
 
 To update the development environment variables:
 
-1. Open the bot app project.
+1. Open the app project.
 1. Open the `./env` file for your project.
 1. 1. Update the following variables:
 
@@ -316,7 +316,10 @@ The following is a typical decoded payload of an access token.
 
 ## Add token to Bot Framework Token Store
 
-If you're using the OAuth connection, you must update or add the token in the Bot Framework Token store. Use the following code snippet example to add to the `TeamsMessagingExtensionsSearchAuthConfigBot.cs` file for updating or adding the token in the store:
+If you're using the OAuth connection, you must update or add the token in the Bot Framework Token store. Add the following code snippet example to `TeamsMessagingExtensionsSearchAuthConfigBot.cs` (or the equivalent file in your app's code) for updating or adding the token in the store:
+
+> [!NOTE]
+> You can find the sample `TeamsMessagingExtensionsSearchAuthConfigBot.cs` in [Tab, Bot and Message Extension (ME) SSO](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp/App%20SSO%20Sample/Bots).
 
 ```c#
 protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
