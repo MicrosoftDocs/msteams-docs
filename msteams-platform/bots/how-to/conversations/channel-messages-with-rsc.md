@@ -127,7 +127,7 @@ The following code provides an example of the app manifest version 1.12 or highe
 The following steps guide you to sideload and validate bot that receives all channel messages in a Team without being @mentioned:
 
 1. Select or create a team.
-1. Select the ellipses &#x25CF;&#x25CF;&#x25CF; from the left pane. The dropdown menu appears.
+1. Select &#x25CF;&#x25CF;&#x25CF; from the left pane. The dropdown menu appears.
 1. Select **Manage team** from the dropdown menu.
 
    :::image type="content" source="Media/managingteam.png" alt-text="Screenshot of Managing team option in Teams application.":::
