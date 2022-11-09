@@ -14,15 +14,15 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Adaptive Card tabs are a new way to build tabs in Teams. Instead of embedding web content in an IFrame, you can render Adaptive Cards to a tab. While the front end is rendered with Adaptive Cards, the backend is powered by a bot. The bot is responsible for accepting requests and responding appropriately with the Adaptive Card that is rendered.
+    Adaptive Card tabs are a new way to build tabs in Teams. Instead of embedding web content in an IFrame, you can render Adaptive Cards to a tab. The front end is rendered with Adaptive Cards, and the backend is powered by a bot. The bot is responsible for accepting requests and responding appropriately with the Adaptive Card that is rendered.
 
-    You can build your tabs with relevant user interface (UI) building blocks native on desktop, web, and mobile.
+    You can build your tabs with relevant user interface (UI) building blocks which are native to desktop, web, and mobile.
 
     This article helps you to understand:
     
     * The changes required to be made to the app manifest.
-    * Identifies how the invoke activity requests and sends information in tab with Adaptive Cards.
-    * Effect on the task module workflow.
+    * How the invoke activity requests and sends information in tab with the Adaptive Cards.
+    * Effects on the task module workflow.
     
     This step-by-step guide helps you to build tabs with Adaptive Cards on desktop and mobile. You'll see the following output:
 
@@ -326,7 +326,7 @@ items:
     1. In the File Explorer, go to **Microsoft-Teams-Samples** > **samples** > **tab-adaptive-cards** > **csharp** > **TabWithAdpativeCardFlow** > **AppPackage** to open the folder.
     1. Select the `manifest.json` file.
 
-       ::image type="content" source="./assets/images/adaptive-cards/manifest-json_1.png" alt-text="appsettings-json":::
+       :::image type="content" source="./assets/images/adaptive-cards/manifest-json_1.png" alt-text="appsettings-json":::
 
     1. Open the `manifest.json` file in Visual Studio Code and make the following changes:
 
