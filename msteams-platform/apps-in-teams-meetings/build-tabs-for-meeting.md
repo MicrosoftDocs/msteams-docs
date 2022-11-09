@@ -190,7 +190,7 @@ App caching helps you to improve subsequent launch time of the apps that are loa
 
 To enable app caching in your meeting side panel, follow the steps:
 
-1. Call `microsoftTeams.registerBeforeUnloadHandler` and `microsoftTeams.registerOnLoadHandler`.
+1. Call `microsoftTeams.registerBeforeUnloadHandler` and `microsoftTeams.registerOnLoadHandler` (Work in Progress).
 
 1. Use `contentUrl` and `entityId` into the load handler to route to the correct page within your app and invoke `notifySuccess/notifyFailure` to notify Teams client that the app initialization flow is complete.
 
@@ -294,7 +294,7 @@ The following are the limitations for app caching:
 | In-meeting notification | Demonstrates how to implement in-meeting notification using bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs) | NA |
 | In-meeting document signing | Demonstrates how to implement a document signing Teams app. Includes sharing specific app content to stage, Teams SSO and user specific stage view. | [View](https://github.com/officedev/microsoft-teams-samples/tree/main/samples/meetings-share-to-stage-signing/csharp) | NA | NA |
 | In-meeting document signing | Demonstrates how to implement a document signing Teams app. Includes sharing specific app content to stage, Teams SSO and user specific stage view. | [View](https://github.com/officedev/microsoft-teams-samples/tree/main/samples/meetings-share-to-stage-signing/csharp) | NA | NA |
-| App caching | Sample app to show how app caching works in the meeting side panel. | NA | NA | [View](https://github.com/kpolnitz/app-caching-test-app) |
+| App caching | Sample app to show how app caching works in the meeting side panel. | NA | NA | [View (Work in Progress)](https://github.com/kpolnitz/app-caching-test-app) |
 
 > [!NOTE]
 >
