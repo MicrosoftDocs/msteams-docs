@@ -9,7 +9,7 @@ ms.localizationpriority: high
 
 # Workflow bot in Teams
 
-A workflow bot allows users to interact with an Adaptive Card. The Adaptive Card action handler enables the Adaptive card to converse in the Teams app. You can create a workflow bot in multiple scenarios for your users to enhance the user experience, such as incident management, ticketing, approval workflow, and project management cards. You can create and assign a work item with workflow bot and sync the content to Azure DevOps or Jira system.
+A workflow bot allows users to interact with an Adaptive Card. Adaptive Card action handler enables the Adaptive card to converse in Teams app. You can create a workflow bot in multiple scenarios for your users to enhance the user experience, such as incident management, ticketing, approval workflow, and project management cards. You can create and assign a work item with workflow bot and sync the content to Azure DevOps or Jira system.
 
 A workflow bot can be installed into a team, group chat, or as personal app, depending on different scopes. The default command logic returns an Adaptive Card. You can customize this logic with your business requirement. For the customization, you need to call your existing APIs.
 
@@ -21,7 +21,7 @@ A workflow bot can be installed into a team, group chat, or as personal app, dep
 1. Simplifies programming model with TeamsFx SDK.
 
    > [!NOTE]
-   > You can choose the capability that you want to install, when adding the app. For more information, see [configure default install options](../../../concepts/deploy-and-publish/apps-publish-overview.md#configure-default-install-options).
+   > You can select the capability that you want to install, when adding the app. For more information, see [configure default install options](../../../concepts/deploy-and-publish/apps-publish-overview.md#configure-default-install-options).
 
 You can create a workflow bot to respond to the Adaptive Card triggered by users. Adaptive Card action handler powered by TeamsFx SDK can execute the Adaptive Card universal action `Action.Execute` triggered by users. In response to this respective card action in the conversation another Adaptive Card is sent by the Adaptive card action handler.
 
@@ -39,7 +39,7 @@ The following diagram illustrates how to respond to an Adaptive Card action with
 1. **Card action handler**: Triggered when users invoke the corresponding card action, its `triggerVerb` is same as the `verb` property in Adaptive Card action. It can send a response card to respond to the action.
 1. **Response card**: The card that responds to the action when user invokes it from the action card.
 
-To handle card actions with TeamsFx SDK, each card action handler must implement `TeamsFxAdaptiveCardActionHandler` interface. This is the interface definition for `TeamsFxAdaptiveCardActionHandler`:
+To handle card actions with TeamsFx SDK, each card action handler must implement the `TeamsFxAdaptiveCardActionHandler` interface. This is the interface definition for `TeamsFxAdaptiveCardActionHandler`:
 
 ``` Export interface
 
@@ -243,7 +243,7 @@ The following steps help you to register the action handler:
 
 ## Customize the action response
 
-You can use the `adaptiveCardResponse` property in handler to customize how the bot sends the Adaptive Card to users. There are three options to customize:
+You can use the `adaptiveCardResponse` property in handler to customize how the bot sends the Adaptive Card to users. You can follow any of the three options to customize:
 
 * The response card is replaced by the current card where the button is defined for the interactor that triggers the action. The users in the conversation can still view the original action card `AdaptiveCardResponse.ReplaceForInteractor`. This is the default behavior.
 
@@ -286,7 +286,7 @@ When you want to return an error response message to the client, you can apply `
 
 You can edit the file `src/adaptiveCards/helloworldCommand.json` to customize Adaptive Card to your preference. The file `src/cardModels.ts` defines a data structure used to fill data for the Adaptive Card.
 
-The binding between the model and the Adaptive Card is done by matching name such as, `CardData.title` maps to `${title}` in Adaptive Card). You can add, edit, or remove properties, and their bindings to customize the Adaptive Card to your needs.
+The binding between the model and the Adaptive Card is done by matching name such as, `CardData.title` maps to `${title}` in Adaptive Card. You can add, edit, or remove properties, and their bindings to customize the Adaptive Card to your needs.
 
 You can also add new cards, if needed for your application. To build different types of Adaptive Cards with a list or a table of dynamic content using `ColumnSet` and `FactSet`, see [TeamsFx-Samples](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/adaptive-card-notification).
 
