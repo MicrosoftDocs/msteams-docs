@@ -9,7 +9,7 @@ ms.localizationpriority: high
 
 # Workflow bot in Teams
 
-A workflow bot allows users to interact with an Adaptive Card, enabled by the Adaptive Card action handler feature. You can create a workflow bot in multiple scenarios for your users to enhance the user experience, such as incident management, ticketing, approval workflow, and project management cards. You can create and assign a work item with workflow bot and sync the content to Azure DevOps or Jira system.
+A workflow bot allows users to interact with an Adaptive Card. The Adaptive Card action handler enables the Adaptive card to converse in the Teams app. You can create a workflow bot in multiple scenarios for your users to enhance the user experience, such as incident management, ticketing, approval workflow, and project management cards. You can create and assign a work item with workflow bot and sync the content to Azure DevOps or Jira system.
 
 A workflow bot can be installed into a team, group chat, or as personal app, depending on different scopes. The default command logic returns an Adaptive Card. You can customize this logic with your business requirement. For the customization, you need to call your existing APIs.
 
@@ -35,9 +35,9 @@ The following diagram illustrates how to respond to an Adaptive Card action with
 
 :::image type="content" source="../../../assets/images/sbs-workflow-bot/sbs-workflow-bot-action-card.png" alt-text="workflow bot card action handler diagram" lightbox="../../../assets/images/sbs-workflow-bot/sbs-workflow-bot-action-card.png":::
 
-* **Action card**: The card where you define your action that users can invoke for example, the `DoStuff`.
-* **Card action handler**: Triggered when users invoke the corresponding card action, its `triggerVerb` is same as the `verb` property in Adaptive Card action. It can send a response card to respond to the action.
-* **Response card**: The card that responds to the action when user invokes it from the action card.
+1. **Action card**: The card where you define your action that users can invoke for example, the `DoStuff`.
+1. **Card action handler**: Triggered when users invoke the corresponding card action, its `triggerVerb` is same as the `verb` property in Adaptive Card action. It can send a response card to respond to the action.
+1. **Response card**: The card that responds to the action when user invokes it from the action card.
 
 To handle card actions with TeamsFx SDK, each card action handler must implement `TeamsFxAdaptiveCardActionHandler` interface. This is the interface definition for `TeamsFxAdaptiveCardActionHandler`:
 
@@ -68,7 +68,7 @@ TeamsFxAdaptiveCardActionHandler
 
 ## Customize initialization
 
-The default initialization is located in `bot/src/internal/initialize.js(ts)`.
+You can initialize the workflow bot with your own adapter or customize after initialization. The default initialization is located in `bot/src/internal/initialize.js(ts)`.
 
 You can update the initialization logic to:
 
@@ -212,7 +212,7 @@ The following is an example of action handler:
 
 <details>
 
-<summary><b>Register the action handler*</b></summary>
+<summary><b>Register the action handler</b></summary>
 
 You need to configure each new card action in the `conversationBot`, that enables the conversational flow of the workflow bot template. You can navigate to `bot/src/internal/initialize.js(ts)` file and update the `actions` array of the `cardAction` property.
 
@@ -292,13 +292,13 @@ You can also add new cards, if needed for your application. To build different t
 
 ## Auto-refresh to user-specific view
 
-When Adaptive Cards are sent in a Teams channel or group chat, all users can see the same card content. With the new refresh model for Adaptive Cards universal action, users can have a user-specific view. The auto-refresh also facilitates scenarios like approvals, poll creator controls, ticketing, incident management, and project management cards. The following diagram illustrates how to provide user-specific view with `refresh` model:
+When Adaptive Cards are sent in a Teams channel or group chat, all users can see the same card content. With the new refresh model for Adaptive Cards universal action, users can have a user-specific view. The auto-refresh also facilitates scenarios such as approvals, poll creator controls, ticketing, incident management, and project management cards. The following diagram illustrates how to provide user-specific view with `refresh` model:
 
 :::image type="content" source="../../../assets/images/sbs-workflow-bot/sbs-workflow-bot-base-card.png" alt-text="Diagramatic view of user specific auto-refresh model" lightbox="../../../assets/images/sbs-workflow-bot/sbs-workflow-bot-base-card.png":::
 
-* **Base card**: The bot sends a message with the base version of the card. This base card can be sent as a bot notification, command response, or any other card action response. All members of the conversation can view the same response. The base card is automatically refreshed to the user defined `userId` in the `refresh` property of the base card.
+1. **Base card**: The bot sends a message with the base version of the card. This base card can be sent as a bot notification, command response, or any other card action response. All members of the conversation can view the same response. The base card is automatically refreshed to the user defined `userId` in the `refresh` property of the base card.
 
-* **Refresh behavior**: After the user views the message, Teams client automatically triggers a refresh a minute after the last refresh response. The user-specific view handler is invoked to return a card view `Response Card` for specific user `UserA`. Other users in the conversation can still view the base card.
+1. **Refresh behavior**: After the user views the message, Teams client automatically triggers a refresh a minute after the last refresh response. The user-specific view handler is invoked to return a card view `Response Card` for specific user `UserA`. Other users in the conversation can still view the base card.
 
 The following image illustrates how user-specific view is displayed in Teams:
 
@@ -543,10 +543,9 @@ The default workflow bot comes with command and response. See, [how to add more 
 
 </details>
 
-## Next step
+## Step-by-step guide
 
-> [!div class="nextstepaction"]
-> [Create Teams workflow bot](../../../sbs-gs-workflow-bot.yml)
+> Follow the [step-by-step](../../../sbs-gs-workflow-bot.yml) guide to build Teams workflow bot.
 
 ## See also
 
