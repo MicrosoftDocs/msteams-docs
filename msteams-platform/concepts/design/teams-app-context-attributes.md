@@ -119,7 +119,13 @@ Meeting apps include tabs that work pre- and post-meetings, meeting side panel t
 
 `microsoftTeams.tasks.startTask` and `microsoftTeams.tasks.submitTask` are used to invoke a task module and submit information entered in a task module respectively. Instrumenting these events can help map user progress.
 
+## Next step
+
+> [!div class="nextstepaction"]
+> [Azure Application Insights](add-analytics.md)
 
 ## See also
 
-[Microsoft Teams Client SDK](/javascript/api/@microsoft/teams-js/app.teaminfo)
+- [Microsoft Teams Client SDK](/javascript/api/@microsoft/teams-js/app.teaminfo)
+- [Plan analytics for your Teams app](plan-analytics.md)
+- [Plan your app with Teams features](../app-fundamentals-overview.md)

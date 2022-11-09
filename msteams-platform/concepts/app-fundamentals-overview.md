@@ -38,6 +38,8 @@ Understanding the user and their concern are the first indicators of how a Teams
 
 * **Map your use cases**: Map common use cases to Teams features based on requirements, such as sharing, collaborating, workflows, relevant social platforms, and more.
 
+* **Plan analytics**: Plan to analyze the analysis and telemetry data against your business goals, take corrective action by fixing issues, and intervening in the user journey or plan further enhancements to your app.
+
 * **Plan responsive tabs for Teams mobile**: It covers common scenarios and helps with planning apps for Teams mobile.
 
 ### During build
@@ -100,3 +102,4 @@ The following list helps to identify the availability of GCC, GCC-High, and DOD 
 * [Planning checklist](../concepts/design/planning-checklist.md)
 * [Considerations for Teams integration](../samples/integrating-web-apps.md)
 * [Build your first Microsoft Teams app](../build-your-first-app/build-first-app-overview.md)
+* [Plan analytics for your Teams app](design/plan-analytics.md)

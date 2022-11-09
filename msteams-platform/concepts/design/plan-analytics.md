@@ -150,3 +150,7 @@ Use this information for enriching the bot's functionality and the user experien
 Each activity sent by Teams to your bot will contain the `turnContext` object from which all these relevant fields can be retrieved. You can leverage them in a similar way as described for hosted web canvas constructs.
 
 Since message extensions are based on the bot channel, most of the above applies to message extensions as well.
+
+## See also
+
+[Plan for Teams app telemetry](teams-app-telemetry.md)

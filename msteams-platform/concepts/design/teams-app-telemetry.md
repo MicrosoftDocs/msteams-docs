@@ -155,3 +155,8 @@ Happiness intends to measure your user’s attitude towards your product and can
 | • % of happy or satisfied users. | • Drill down at tenant level. <br> • Report trend over time. |
 | • % users using Teams app vs. web, or mobile app. | • Report month over month. |
 | • User feedback on experience after completing core action. | • Introduce product led way for collecting feedback after completing core action (for example, in-app message to submit feedback). |
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Plan for Teams app context and Attributes](teams-app-context-attributes.md)
