@@ -558,7 +558,7 @@ The following steps help you to enable SSO in your application:
 
    1. `TeamsSsoBot.cs`: This file creates a `TeamsActivityHandler` with `SsoDialog` that adds and triggers a command `showUserInfo`.
 
-   1. `SsoOperations.cs`: This file implements a class in the function to get user info with SSO token. You can follow this method and create your own, that requires SSO token.
+   1. `SsoOperations.cs`: This file implements a class in the function to get user info with SSO token. You can follow the method defined in `SsoOperations.cs` and create your own, that requires SSO token.
 
     > [!NOTE]
     > Ensure to replace `{Your_NameSpace}` with your project namespace.
