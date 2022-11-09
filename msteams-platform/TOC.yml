@@ -320,6 +320,8 @@
       href: bots/how-to/update-and-delete-bot-messages.md      
     - name: Request headers of the bot
       href: bots/how-to/conversations/request-headers-of-the-bot.md
+    - name: Workflow bot in Teams
+      href: bots/how-to/conversations/Workflow bot in Teams.md
   - name: Get Teams specific context for your bot
     href: bots/how-to/get-teams-context.md
     displayName: Fetch roster or user profile
