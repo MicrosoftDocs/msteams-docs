@@ -20,14 +20,14 @@ To share an app to the meeting stage, you must configure the context and RSC per
 
 1. Update the `context` property in the app manifest as follows:
 
-```json
-"context":[ 
-    "meetingSidePanel", 
-    "meetingStage" 
-     ] 
-```
+    ```json
+    "context":[ 
+        "meetingSidePanel", 
+        "meetingStage" 
+         ] 
+    ```
 
-2. Obtain the RSC permissions by configuring the `authorization` property, and the `name` and `type` in the `resourceSpecific` field. For example:
+2. Obtain the RSC permissions by configuring the `authorization` property, and the `name` and `type` in the `resourceSpecific` field as follows:
 
     ```json
     "authorization": {
@@ -70,20 +70,7 @@ The `shareAppContentToStage` API enables you to share specific parts of your app
 
 ### Prerequisite
 
-* To use the `shareAppContentToStage` API, you must obtain the RSC permissions. In the app manifest, configure the `authorization` property, and the `name` and `type` in the `resourceSpecific` field. For example:
-
-    ```json
-    "authorization": {
-        "permissions": { 
-        "resourceSpecific": [
-        { 
-         "name": "MeetingStage.Write.Chat",
-         "type": "Delegated"
-        }
-        ]
-    }
-    }
-    ```
+* Ensure that the [context and RSC permissions](#app-manifest-settings-for-apps-in-meeting-stage) are configured in the app manifest.
 
 * `appContentUrl` must be allowed by `validDomains` array inside manifest.json, else the API returns a 501 error.
 
