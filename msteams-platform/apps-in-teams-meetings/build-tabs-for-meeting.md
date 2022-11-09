@@ -73,7 +73,7 @@ The following image shows a tab added to the meeting details page in the Teams m
 
 A public scheduled channel meeting has the same list of apps as its parent team. Installing an app to a channel meeting also makes it available in the parent team, and vice versa.
 
-However, the tab instances in a channel meeting are separate from the tabs in the channel itself. For example, suppose a *Development* channel has a *Polly* tab. If you create a *Standup* meeting in that channel, that meeting would not have a *Polly* tab, until you explicitly [add the tab to the meeting](#meeting-details-view).
+However, the tab instances in a channel meeting are separate from the tabs in the channel itself. For example, suppose a *Development* channel has a *Polly* tab. If you create a *Standup* meeting in that channel, that meeting wouldn't have a *Polly* tab, until you explicitly [add the tab to the meeting](#meeting-details-view).
 
 In public scheduled channel meetings, after a meeting tab is added, you can select the meeting object in the meeting details page to access the tab.
 
@@ -213,11 +213,11 @@ The webview of the app remains in the Document Object Model (DOM). The webview i
 
 Following are the parameters to control the conditions for the apps to be added or removed from the cache:
 
-* Only one app is supported in the cache for app caching. When there is more than one app with app caching in a meeting, then the least recently used app is removed from the cache.
+* Only one app is supported in the cache for app caching. When there's more than one app with app caching in a meeting, then the least recently used app is removed from the cache.
 * When the app is cached, the memory (working set) usage must not exceed 225 MB.
 * If the user doesn't return to the app within 20 minutes, the app is removed from the cache.
 * The maximum time for Teams to receive the `readyToUnload` signal from the app is 30 seconds.
-* The grace period to get memory usage down after the app is cached is one minute.
+* The app has one-minute grace period to get the memory usage down after the app is cached.
 * App caching is disabled if the system memory is less than 4 GB or the available free memory is less than 1 GB (512 MB on Mac).
 * Side panel is the only supported FrameContext for app caching in meetings.
 * When the app is cached, CPU usage must not exceed 5%.
@@ -226,7 +226,7 @@ Following are the parameters to control the conditions for the apps to be added 
 
 ### Code example
 
-The following code snippet is an example of `registerBeforeUnloadHandler` and `registerOnLoadHandler` API's:
+The following code snippet is an example of `registerBeforeUnloadHandler` and `registerOnLoadHandler` APIs:
 
 ```javascript
 microsoftTeams.registerBeforeUnloadHandler((readyToUnload) => { 
@@ -248,7 +248,7 @@ microsoftTeams.appInitialization.notifySuccess();
 
 * Single-page apps that use client-side routing for page navigation can benefit from app caching. It's recommended that the same domain is used across all contexts of your app launch. For example, using *bar.foo.com* for chats and *baz.foo.com* for personal app isn't recommended as you need to go to the new domain in the load handler.
 
-* Apps need to re-register for events such as `themeChange`, `focusEnter`, and so on in the load handler. Teams client won't send any notifications to the app when cached. If your app requires notifications even when cached, caching might not be the right solution.
+* Apps need to re-register for events such as `themeChange`, `focusEnter`, and so on, in the load handler. Teams client won't send any notifications to the app when cached. If your app requires notifications even when cached, caching might not be the right solution.
 
 * App caching is supported only in Teams desktop client. In Teams web client, even if the app registers load handlers, the app is removed from the cache after the unload sequence is completed.
 
@@ -256,7 +256,7 @@ microsoftTeams.appInitialization.notifySuccess();
 
 * The Teams client invokes the `loadHandler` only after the `unload` sequence of the app is completed. For example, if a user launches tab A of your app and then launches tab B of the same app, tab B won't get the load signal until the tab A invokes the `readyToUnload` callback.
 
-* After an app moves to the cached state, it has a one minute grace period to get the memory usage under the allowed threshold of 225 MB. If the app exceeds the threshold for more than a minute, the app is removed from the cache. The memory usage value of the app is the *workingSetSize* of the webview in the Electron [getappMetrics API](https://www.electronjs.org/docs/latest/api/app#appgetappmetrics).
+* After an app moves to the cached state, it has a one-minute grace period to get the memory usage under the allowed threshold of 225 MB. If the app exceeds the threshold for more than a minute, the app is removed from the cache. The memory usage value of the app is the *workingSetSize* of the webview in the Electron [getappMetrics API](https://www.electronjs.org/docs/latest/api/app#appgetappmetrics).
 
 * Apps are cached on a per-window basis.
 
@@ -276,7 +276,7 @@ microsoftTeams.appInitialization.notifySuccess();
   * `readyToUnload`
   * `getConfig/getSettings`
 
-* Register only the `beforeUnload` handler if your app doesn't require app caching but needs time to safely save state (if you want to ensure that going away from your app doesn't cause app content to be abruptly removed from the DOM). If the app isn't registered for the `load` event, it's removed from the DOM after the unload flow completes.
+* Register only the `beforeUnload` handler if your app doesn't require app caching but needs time to safely save state (if you want to ensure that going away from your app doesn't cause the app content to be abruptly removed from the DOM). If the app isn't registered for the `load` event, it's removed from the DOM after the unload flow completes.
 
 * App caching isn't supported for meetings where the meeting participants are more than 20.
 
