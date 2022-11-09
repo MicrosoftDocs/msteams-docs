@@ -18,7 +18,7 @@ In this section, you'll learn to:
 
 ## Configure API permissions in Azure AD
 
-You can configure Graph scopes in Azure AD as required for your app. Delegated permissions are used by apps that require signed-in access. A signed-in app user or administrator must consent to them. Your bot app can consent on behalf of the signed-in user when it calls Microsoft Graph.
+You can configure Graph scopes in Azure AD as required for your app. Delegated permissions are used by apps that require signed-in access. A signed-in app user or administrator must consent to them. Your app can consent on behalf of the signed-in user when it calls Microsoft Graph.
 
 ### To configure API permissions
 
@@ -89,7 +89,7 @@ You can configure authentication for multiple platforms as long as the URL is un
 
     The **Configure platforms** page appears.
 
-1. Select the platform that you want to configure for your bot app. You can choose the platform type from web or SPA.
+1. Select the platform that you want to configure for your app. You can choose the platform type from web or SPA.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/configure-platform.png" alt-text="Select web platform" border="true":::
 
@@ -114,36 +114,4 @@ You can configure authentication for multiple platforms as long as the URL is un
 
 After you've completed the configuration in Azure AD, you must update the code to acquire access token for Microsoft Graph. For more information, see [Bot framework SDK](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/46.teams-auth/SimpleGraphClient.cs).
 
-When you run the bot, the first time the app user interacts with the bot, the app user is prompted to consent for Graph permissions. After the app user gives consent, the Graph permissions are granted.
-
-<!--
-## Acquire access token for MS Graph
-
-You'll need to acquire access token for Microsoft Graph.
-
-### Configure code to fetch access token
-
-The following code provides an example of using the access token obtained in the OAuth process to submit a request for permissions to Microsoft Graph.
-
-```TypeScript
-    public async displayMicrosoftGraphDataStep(stepContext: WaterfallStepContext): Promise<DialogTurnResult> {
-      // get token from prev step (or directly from the prompt itself)
-      const tokenResponse = stepContext.result;
-      if (!tokenResponse?.token) {
-        await stepContext.context.sendActivity("Login not successful, please try again.");
-      } else {
-        const msGraphClient = new MsGraphHelper(tokenResponse?.token);
-    
-        const user = await msGraphClient.getCurrentUser();
-        await stepContext.context.sendActivity(`Thank you for signing in ${user.displayName as string} (${user.userPrincipalName as string})!`);
-        await stepContext.context.sendActivity(`I can retrieve your details from Microsoft Graph using my support for SSO! For example...`);
-    
-        const email = await msGraphClient.getMostRecentEmail();
-        await stepContext.context.sendActivity(`Your most recent email about "${email.subject as string}" was received at ${new Date(email.receivedDateTime as string).toLocaleString()}.`);
-      }
-
-      return await stepContext.endDialog();
-    }
-```
--->
-
+The app user is prompted to consent for Graph permissions on the first time they use it. After the app user gives consent, the Graph permissions are granted.
