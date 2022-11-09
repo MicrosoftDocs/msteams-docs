@@ -107,11 +107,11 @@ The following image provides a sequential flow to enable and use zero install li
 
 To get your app ready for zero install link unfurling, follow these steps:
 
-1. Set the manifest property `supportsAnonymousAccess` to true.
+1. Set the property `supportsAnonymousAccess` to true in the [manifest schema](../../resources/schema/manifest-schema.md).
 
-1. Set your app to handle the new invoke request `composeExtension/anonymousQueryLink` in the manifest.
+1. Set your app to handle the new invoke request `composeExtension/anonymousQueryLink`.
 
-   Example of the app manifest declaration:
+   Example of the new invoke request:
 
    :::image type="content" source="../../assets/images/tdp/link-unfurl_1.PNG" alt-text="Screenshot of the invoke request  `composeExtension/anonymousQueryLink` declaration in the manifest." lightbox="../../assets/images/tdp/link-unfurl_1.PNG":::
 
@@ -243,9 +243,12 @@ To get your app ready for zero install link unfurling, follow these steps:
 
    :::image type="content" source="../../assets/images/tdp/custom-card.PNG" alt-text="Screenshot of the customized card with fields for user to update." lightbox="../../assets/images/tdp/custom-card.PNG":::
 
-   If you've not customized your card, Teams unfurls a default preview card that prompts users to sign in. The following image illustrates a default preview card:
+   The following image illustrates a default preview card:
 
    :::image type="content" source="../../assets/images/tdp/default-preview-card.PNG" alt-text="Screenshot of the link unfurling code default preview card." lightbox="../../assets/images/tdp/default-preview-card.PNG":::
+
+     > [!NOTE]
+     > After the link is pasted in the message compose area, Teams unfurls the link into a card and prompts the user to sign in to the app. If the user doesn't sign in to the app, the link isn't posted as a card in the chat.
 
 1. Handle the `composeExtension/queryLink` invoke: After adding the domain to the app manifest, you must update your web service code to handle the invoke request. Use the received URL to search your service and create a card response. If you respond with more than one card, only the first card response is used.
 
@@ -389,3 +392,4 @@ Follow the [step-by-step guide](../../sbs-botbuilder-linkunfurling.yml) to unfur
 * [Adaptive Cards](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
 * [Tabs link unfurling and Stage View](../../tabs/tabs-link-unfurling.md)
 * [composeExtensions](../../resources/schema/manifest-schema.md#composeextensions)
+* [Bot activity handlers](../../bots/bot-basics.md)
