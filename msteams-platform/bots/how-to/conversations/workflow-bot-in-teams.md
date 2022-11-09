@@ -243,7 +243,7 @@ The following steps help you to register the action handler:
 
 ## Customize the action response
 
-You can use the `adaptiveCardResponse` property in handler to customize how the bot sends the Adaptive Card to users. You can follow any of the three options to customize:
+You can use the `adaptiveCardResponse` property in handler to customize how the bot sends the Adaptive Card to users. Following are the three options to customize:
 
 * The response card is replaced by the current card where the button is defined for the interactor that triggers the action. The users in the conversation can still view the original action card `AdaptiveCardResponse.ReplaceForInteractor`. This is the default behavior.
 
