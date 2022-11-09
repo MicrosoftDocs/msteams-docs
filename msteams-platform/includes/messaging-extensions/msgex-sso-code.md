@@ -59,6 +59,9 @@ To update your app's code:
     
     ---
 
+    >[!NOTE]
+    > You might receive multiple responses for a given request if the user has multiple active endpoints. You must eliminate all duplicate or redundant responses with the token. For more information about **signin/tokenExchange**, see [TeamsSSOTokenExchangeMiddleware Class](/python/api/botbuilder-core/botbuilder.core.teams.teams_sso_token_exchange_middleware.teamsssotokenexchangemiddleware?view=botbuilder-py-latest#remarks&preserve-view=true).
+
 1. Use the following code snippet for requesting a token.
 
     # [csharp](#tab/cs2)
@@ -218,11 +221,11 @@ To update your app's code:
 
 ### Consent dialog for getting access token
 
-If the app user is using the application for the first time, consent is required for SSO authentication.
+If the app user is using your app for the first time, they may be required to consent for SSO authentication.
 
 :::image type="content" source="~/assets/images/authentication/teams-sso-mex/me-sso-profile-select.png" alt-text="SSO authentication for message extension app":::
 
-When the app user selects the user name, validation is done using the Teams identity.
+When the app user selects the user name, the permission is granted and they can use the app.
 
 :::image type="content" source="~/assets/images/authentication/teams-sso-mex/me-sso-completed.png" alt-text="SSO authentication completed for message extension app":::
 
@@ -240,9 +243,6 @@ If you encounter any errors, see [Troubleshoot SSO authentication in Teams](~/ta
 
 The response with the token is sent through an invoke activity with the same schema as other invoke activities that the bots receive today. The only difference is the invoke name,
 **sign in/tokenExchange**, and the **value** field. The **value** field contains the **Id**, a string of the initial request to get the token and the **token** field, a string value including the token.
-
->[!NOTE]
-> You might receive multiple responses for a given request if the user has multiple active endpoints. You must eliminate all duplicate or redundant responses with the token. For more information about **signin/tokenExchange**, see [TeamsSSOTokenExchangeMiddleware Class](/python/api/botbuilder-core/botbuilder.core.teams.teams_sso_token_exchange_middleware.teamsssotokenexchangemiddleware?view=botbuilder-py-latest#remarks&preserve-view=true).
 
 Use the following code snippet example to invoke response:
 
@@ -320,9 +320,7 @@ async loginStep(stepContext) {
 > [!NOTE]
 > The code snippets use the Waterfall Dialog bot. For more information about Waterfall Dialog, see [About component and waterfall dialogs](/azure/bot-service/bot-builder-concept-waterfall-dialogs?view=azure-bot-service-4.0&preserve-view=true).
 
-<!--The `turnContext.activity.value` is of type [TokenExchangeInvokeRequest](/dotnet/api/microsoft.bot.schema.tokenexchangeinvokerequest?view=botbuilder-dotnet-stable&preserve-view=true) and contains the token that can be further used by your bot. You must store the tokens for performance reasons and refresh them.-->
-
-You receive the token in `OnTeamsMessagingExtensionQueryAsync` handler in the `turnContext.Activity.Value` payload or in the `OnTeamsAppBasedLinkQueryAsync`, depending on which scenario you're enabling the SSO for:
+You receive the token in `OnTeamsMessagingExtensionQueryAsync` handler in the `turnContext.Activity.Value` payload or in the `OnTeamsAppBasedLinkQueryAsync`, depending on which scenario you're enabling SSO for:
 
 ```json
 JObject valueObject=JObject.FromObject(turnContext.Activity.Value);
@@ -346,9 +344,9 @@ For more information about validating access token, see [Validate tokens](/azure
 
 There are a number of libraries available that can handle JWT validation. Basic validation includes:
 
-- Checking that the token is well-formed
-- Checking that the token was issued by the intended authority
-- Checking that the token is targeted to the web API
+- Checking that the token is well-formed.
+- Checking that the token was issued by the intended authority.
+- Checking that the token is targeted to the web API.
 
 Keep in mind the following guidelines when validating the token:
 
@@ -511,5 +509,5 @@ This section provides Bot authentication v3 SDK sample.
 | **Sample name** | **Description** | **C#** | **Node.js** | **Python** |
 |---------------|------------|------------|-------------|---------------|
 | Bot authentication | This sample shows how to get started with authentication in a bot for Teams. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth) |
-| Tab, Bot and Message Extension (ME) SSO | This sample shows SSO for Tab, Bot and ME - search, action, link unfurl. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | NA |
-|Tab, Bot, and Message extension| This sample shows how to check authentication in Bot,Tab, and Message extension with SSO | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-auth/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-auth/nodejs) | NA |
+| Tab, bot, and Message extension (ME) SSO | This sample shows SSO for tab, bot and Message extension - search, action, link unfurl. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | NA |
+|Tab, bot, and Message extension | This sample shows how to check authentication in bot, tab, and Message extension with SSO | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-auth/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-auth/nodejs) | NA |
