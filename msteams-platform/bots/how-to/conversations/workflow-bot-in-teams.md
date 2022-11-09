@@ -87,7 +87,7 @@ To add card actions with JavaScript and TypeScript, you can perform the followin
 
 <details>
 
-<summary><b>Add an action to your Adaptive Card</b></summary>
+<summary><b>1. Add an action to your Adaptive Card</b></summary>
 
 You can add a new action (button) to an Adaptive Card by defining it in the JSON file, such as add a new `DoSomething` action to the `src/adaptiveCards/helloworldCommandResponse.json` file. This is a sample action type `Action.Execute`:
 
@@ -122,7 +122,7 @@ When the action is invoked in Teams, verb property is required, so that the Team
 
 <details>
 
-<summary><b>Respond with new Adaptive Card</b></summary>
+<summary><b>2. Respond with new Adaptive Card</b></summary>
 
 You can return a new Adaptive Card for each action invoked to display the response to end user. You need to create a new file, `bot/src/adaptiveCards/doSomethingResponse.json` as a response for the `doSomething` action with the following content:
 
@@ -151,7 +151,7 @@ You can return a new Adaptive Card for each action invoked to display the respon
 
 <details>
 
-<summary><b>Add action handler</b></summary>
+<summary><b>3. Add action handler</b></summary>
 
 You can handle a new action invoked by Adaptive Card with TeamsFx SDK's class `TeamsFxAdaptiveCardActionHandler`. You need to customize the action in this step, such as calling an API, processing data, or any other action as per your business need.
 
@@ -212,7 +212,7 @@ The following is an example of action handler:
 
 <details>
 
-<summary><b>Register the action handler</b></summary>
+<summary><b>4. Register the action handler</b></summary>
 
 You need to configure each new card action in the `conversationBot` that enables the conversational flow of the workflow bot template. You can navigate to `bot/src/internal/initialize.js(ts)` file and update the `actions` array of the `cardAction` property.
 
@@ -383,7 +383,7 @@ You need to replace `${userID}` with user MRI in code, while rendering your card
 
 <details>
 
-<summary><b>Add user-specific Adaptive Cards</b></summary>
+<summary><b>2. Add user-specific Adaptive Cards</b></summary>
 
 You need to design the user-specific Adaptive Card to refresh specific users such as  `responseCard.json` for `userA` in the sample. To get started, you can create a `responseCard.json` with the following content, and save it in `bot/src/adaptiveCards` folder:
 
@@ -411,7 +411,7 @@ You need to design the user-specific Adaptive Card to refresh specific users suc
 
 <details>
 
-<summary><b>Add card action handler to refresh views</b></summary>
+<summary><b>3. Add card action handler to refresh views</b></summary>
 
 You can add handler that implements `TeamsFxAdaptiveCardActionHandler` to process the refresh invoke activity that is automatically triggered in Teams.
 
@@ -448,7 +448,7 @@ export class Handler1 implements TeamsFxBotCardActionHandler {
 
 <details>
 
-<summary><b>Register the action handler</b></summary>
+<summary><b>4. Register the action handler</b></summary>
 
 You can register the refresh action handler in `bot/src/internal/initialize.js(ts)`:
 
