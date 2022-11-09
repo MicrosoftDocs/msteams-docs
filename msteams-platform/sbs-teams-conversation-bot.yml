@@ -20,9 +20,9 @@ items:
     * Additional functionality to manage conversation flow and state.
     * Simple way to incorporate cognitive services, such as Natural Language Processing (NLP).
 
-    When your bot is added to a group or team, an introduction message is sent. The message provides a brief description of the bot's features and how to use them.
+    When your bot is added to a group or a team, an introduction message is sent. The message provides a brief description of the bot's features and how to use them.
  
-    This step-by-step guide helps you to create basic conversation bot in the Teams application. You'll see the following output:
+    This step-by-step guide helps you to create a basic conversation bot in the Teams application. You'll see the following output:
 
     :::image type="content" source="./assets/images/conversation-bot/final-output.png" alt-text="Final output."lightbox="assets/images/conversation-bot/final-output.png":::
 
@@ -224,7 +224,7 @@ items:
         * Replace `"MicrosoftAppType"`to **Multitenant**.
         * Replace `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
         * Replace `"MicrosoftAppPassword"` to your bot's client secret ID **Value**.
-        * Replace your `"MicrosoftAppTenantId"` to your tenant ID. You can obtain the tenant ID from the link of the account used to login to the Teams. 
+        * Replace your `"MicrosoftAppTenantId"` to your tenant ID. You can obtain the tenant ID from the link of the account used to sign in to the Teams. 
           Follow the path in the image to get the link for tenant Id:
         
           1. Select **Teams**.
@@ -254,7 +254,7 @@ items:
        :::image type="content" source="./assets/images/conversation-bot/manifest location.png" alt-text="Manifest.":::
 
     1. Open the **manifest.json** file in Visual Studio and make the following changes:
-       * Replace `"{id}"`and `"{botId}"` to your bot's **Microsoft App ID**.
+       * Replace `"id"`and `"botId"` to your bot's **Microsoft App ID**.
        * Replace `"validDomains"` to your ngrok domain excluding `https://`.
 
         :::image type="content" source="./assets/images/conversation-bot/manifest_1.png" alt-text="Manifest.":::
