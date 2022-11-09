@@ -26,7 +26,7 @@ To update the development environment variables:
 
 1. Save the file.
 
-You've now configured the required environment variables for your bot app and for SSO. Next, add the code for handling bot tokens.
+You've now configured the required environment variables for your bot app and for SSO. Next, add the code for handling tokens.
 
 ## Add code to request a token
 
@@ -122,6 +122,45 @@ To update your app's code:
     After you add the code to `index.js`, your code should be as shown below:
 
     ```JavaScript
+    // index.js is used to setup and configure your bot
+
+    // Import required pckages
+    const path = require('path');
+    
+    // Read botFilePath and botFileSecret from .env file.
+    const ENV_FILE = path.join(__dirname, '.env');
+    require('dotenv').config({ path: ENV_FILE });
+    
+    const restify = require('restify');
+    
+    // Import required bot services.
+    // See https://aka.ms/bot-services to learn more about the different parts of a bot.
+    const {
+        CloudAdapter,
+        ConversationState,
+        MemoryStorage,
+        UserState,
+        ConfigurationBotFrameworkAuthentication,
+        TeamsSSOTokenExchangeMiddleware
+    } = require('botbuilder');
+    
+    const { TeamsBot } = require('./bots/teamsBot');
+    const { MainDialog } = require('./dialogs/mainDialog');
+    const { env } = require('process');
+    
+    const botFrameworkAuthentication = new ConfigurationBotFrameworkAuthentication(process.env);
+    
+    var conname = env.connectionName;
+    
+    console.log(`\n${ conname } is the con name`);
+    
+    // Create adapter.
+    // See https://aka.ms/about-bot-adapter to learn more about how bots work.
+    const adapter = new CloudAdapter(botFrameworkAuthentication);
+    const memoryStorage = new MemoryStorage();
+    const tokenExchangeMiddleware = new TeamsSSOTokenExchangeMiddleware(memoryStorage, env.connectionName);
+    
+    adapter.use(tokenExchangeMiddleware);
     adapter.onTurnError = async (context, error) => {
         // This check writes out errors to console log .vs. app insights.
         // NOTE: In production environment, you should consider logging this to Azure
@@ -173,6 +212,7 @@ To update your app's code:
         // Route received a request to adapter for processing
         await adapter.process(req, res, (context) => bot.run(context));
     });
+
     ```
 
 ---
