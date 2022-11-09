@@ -246,7 +246,7 @@ microsoftTeams.appInitialization.notifySuccess();
 
 ### Limitations
 
-The following are the limitation for app caching:
+The following are the limitations for app caching:
 
 * Single-page apps that use client-side routing for page navigation can benefit from app caching. It's recommended that the same domain is used across all contexts of your app launch. For example, using *bar.foo.com* for chats and *baz.foo.com* for personal app isn't recommended as you need to go to the new domain in the load handler.
 
