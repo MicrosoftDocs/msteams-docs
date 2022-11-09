@@ -199,7 +199,7 @@ items:
 
     1. In **Messaging endpoint**, add the HTTPS URL from ngrok and at the end of the URL add /api/messages.
 
-       :::image type="content" source="~/assets/images/meetings-side-panel/messaging-endpoint_1.png" alt-text="Screenshot showing the adding of ngrok and at the end of the URL  addition of /api/messages in the messaging endpoint.":::
+       :::image type="content" source="~/assets/images/meetings-side-panel/messaging-endpoint_1.png" alt-text="Screenshot showing the adding of ngrok and at the end of the URL addition of /api/messages in the messaging endpoint.":::
 
     1. Select **Apply**.
 
@@ -220,7 +220,7 @@ items:
 
     1. Select your bot.
 
-       :::image type="content" source="~/assets/images/meetings-side-panel/appregister_2.png" alt-text="Screenshot showing the selection of app registration and selction of the bot you have created ij azure portal.":::
+       :::image type="content" source="~/assets/images/meetings-side-panel/appregister_2.png" alt-text="Screenshot showing the selection of app registration and selection of the bot you have created in azure portal.":::
 
     1. Under **Manage**, select **Expose an API**.
 
@@ -278,7 +278,7 @@ items:
     
     1. Select **Add a client application**. 
 
-       :::image type="content" source="~/assets/images/meetings-side-panel/selectclientapp.png" alt-text="Screenshot showing the selection of add a client application.":::
+       :::image type="content" source="~/assets/images/meetings-side-panel/selectclientapp.png" alt-text="Screenshot showing the selection of adding client application.":::
 
     1. Enter each of the following client IDs and select the authorized scope:
 
@@ -358,7 +358,7 @@ items:
 
     1. Go to **manifest.json** in the cloned repository.
 
-         :::image type="content" source="~/assets/images/meetings-side-panel/manifestlocation_1.png" alt-text="Screenshot showing the selection of Manifest file location":::
+         :::image type="content" source="~/assets/images/meetings-side-panel/manifestlocation_1.png" alt-text="Screenshot showing the selection of Manifest file.":::
     
     1. Open **manifest.json** in Visual Studio and make the following changes:
 
