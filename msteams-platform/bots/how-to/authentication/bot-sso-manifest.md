@@ -11,7 +11,7 @@ Before you update Teams app manifest, ensure that you've configured code to enab
 > [!div class="nextstepaction"]
 > [Add code](bot-sso-code.md)
 
-You've registered your bot app in Azure AD. You've also configured code to receive token. Now, you must update the Teams app manifest to enable SSO for your app. The Teams app manifest describes how an app integrates into Teams.
+You've registered your app and bot resource in Azure AD. You've also configured code to handle tokens. Now, you must update the Teams app manifest to enable SSO for your app. The Teams app manifest describes how an app integrates into Teams.
 
 ## webApplicationInfo property
 
@@ -159,13 +159,13 @@ For more information, see [webApplicationInfo](../../../resources/schema/manifes
 </details>
 
 > [!NOTE]
-> During debug, you can use ngrok to test your app in Azure AD. In that case, you need to replace the subdomain in `api://subdomain.example.com/00000000-0000-0000-0000-000000000000` with the ngrok url. You'll need to update the url whenever your ngrok subdomain changes For example, api://23c3-103-50-148-128.ngrok.io/bccfbe67-e08b-4ec1-a7fd-e0aaf41a097c.
+> During debug, you can use ngrok to test your app in Azure AD. In that case, you need to replace the subdomain in `api://subdomain.example.com/00000000-0000-0000-0000-000000000000` with the ngrok URL. You'll need to update the URL whenever your ngrok subdomain changes. For example, api://23c3-103-50-148-128.ngrok.io/bccfbe67-e08b-4ec1-a7fd-e0aaf41a097c.
 
 ## Sideload and Preview in Teams
 
-You've configured the bot app to enable SSO. You can now sideload your bot app in Teams, and preview it in Teams environment.
+You've configured the app to enable SSO. You can now sideload your app in Teams, and preview it in Teams environment.
 
-To preview your bot app in Teams:
+To preview your app in Teams:
 
 1. Create an app package.
 
@@ -177,19 +177,19 @@ To preview your bot app in Teams:
 
     The options to upload an app appear.
 
-1. Select **Upload a custom app** to sideload the bot app to Teams.
+1. Select **Upload a custom app** to sideload the app into Teams.
 
 1. Select your app package zip file, and then select **Add**.
 
-    The bot app is sideloaded. The dialog appears to inform you of the permissions that may be required.
+    The app is sideloaded. The consent dialog appears to inform you of the permissions that may be required.
 
 1. Select **Continue**.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-consent.png" alt-text="Bot consent message" border="false":::
 
-  Teams opens the bot app and you can use it.
+  Teams opens the app and you can use it.
 
-  Congratulations! You've enabled SSO for your bot app.
+  Congratulations! You've enabled SSO for your bot or message extension app.
 
 ## SSO support in Developer Portal
 
@@ -198,6 +198,7 @@ You can also upload your SSO-enabled app in Developer Portal. To enable SSO supp
 1. Open Developer Portal.
 1. Select **Tools**, and from the list of apps that appears select your app to open it in Developer Portal.
 1. Select **Configure**.
+
     The **Configure** page appears.
 
 1. Enter the messaging endpoint you configured in Azure AD as **Endpoint address**.
