@@ -35,7 +35,7 @@ The following diagram illustrates how to respond to an Adaptive Card action with
 
 :::image type="content" source="../../../assets/images/sbs-workflow-bot/sbs-workflow-bot-action-card.png" alt-text="workflow bot card action handler diagram" lightbox="../../../assets/images/sbs-workflow-bot/sbs-workflow-bot-action-card.png":::
 
-1. **Action card**: The card where you define your action that users can invoke for example, the `DoStuff`.
+1. **Action card**: The card where you define your action that users can invoke, for example the `DoStuff`.
 1. **Card action handler**: Triggered when users invoke the corresponding card action, its `triggerVerb` is same as the `verb` property in Adaptive Card action. It can send a response card to respond to the action.
 1. **Response card**: The card that responds to the action when user invokes it from the action card.
 
@@ -214,7 +214,7 @@ The following is an example of action handler:
 
 <summary><b>Register the action handler</b></summary>
 
-You need to configure each new card action in the `conversationBot`, that enables the conversational flow of the workflow bot template. You can navigate to `bot/src/internal/initialize.js(ts)` file and update the `actions` array of the `cardAction` property.
+You need to configure each new card action in the `conversationBot` that enables the conversational flow of the workflow bot template. You can navigate to `bot/src/internal/initialize.js(ts)` file and update the `actions` array of the `cardAction` property.
 
 The following steps help you to register the action handler:
 
@@ -483,7 +483,7 @@ You need to often connect to existing APIs for retrieving data to send to Teams.
 
 <details>
 
-<summary><b>How to extend workflow bot with notification?</b></summary>
+<summary><b>How to extend workflow bot with notifications?</b></summary>
 
 Notifications add the ability in your application to send Adaptive Cards in response to external events. For example, when a message is posted to an Event Hub, your application can respond and send an appropriate Adaptive Card to Teams.
 
