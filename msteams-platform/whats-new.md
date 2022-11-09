@@ -289,7 +289,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 **2022 November**
 
-***November 04, 2022***: [Enable app caching to improve subsequent launch time of the apps to the meeting side panel](apps-in-teams-meetings/build-tabs-for-meeting.md#app-caching).
+***November 09, 2022***: [Enable app caching to improve subsequent launch time of the apps to the meeting side panel](apps-in-teams-meetings/build-tabs-for-meeting.md#app-caching).
 
 :::column-end:::
 :::row-end:::

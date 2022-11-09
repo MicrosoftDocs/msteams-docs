@@ -226,7 +226,7 @@ Following are the parameters to control the conditions for the apps to be added 
 
 ### Code example
 
-The following code snippet is an example to enable app caching on your app in Teams meeting:
+The following code snippet is an example of `registerBeforeUnloadHandler` and `registerOnLoadHandler` API's:
 
 ```javascript
 microsoftTeams.registerBeforeUnloadHandler((readyToUnload) => { 
