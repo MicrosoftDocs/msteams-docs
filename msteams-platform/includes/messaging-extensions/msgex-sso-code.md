@@ -64,9 +64,8 @@ To update your app's code:
     # [csharp](#tab/cs2)
 
     After you add the `AdapterWithErrorHandler.cs`, your code should be as shown below:
-    
+
     ```csharp
-        ```csharp
     public class AdapterWithErrorHandler : CloudAdapter
     {
         public AdapterWithErrorHandler(
