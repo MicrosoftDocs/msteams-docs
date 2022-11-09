@@ -89,7 +89,7 @@ items:
     1. Enter required bot handle name in **Bot handle**.
     1. Select your **Subscription** and **Resource group** from the respective dropdown list.
        
-       :::image type="content" source="~/assets/images/meetings-side-panel/review-plus-create.png" alt-text="Screenshot showing the selection of "create" while creating an Azure bot.":::
+       :::image type="content" source="~/assets/images/meetings-side-panel/review-plus-create.png" alt-text="Screenshot showing the selection of create while creating an Azure bot.":::
     
        You can create a new resource group. Select **Create new** > enter resource name > select **OK**. Select required location from **New resource group location** dropdown list.
        For more information, see [create resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups).
@@ -144,7 +144,7 @@ items:
     
     1. Select **Add**.
 
-         :::image type="content" source="~/assets/images/meetings-side-panel/clientsecret_1.png" alt-text="Screenshot showing the selection of "Add" in order to add a client secret.":::
+         :::image type="content" source="~/assets/images/meetings-side-panel/clientsecret_1.png" alt-text="Screenshot showing the selection of add in order to add a client secret.":::
 
     1. Select **Copy to clipboard** to copy the **Value** details.
 
@@ -169,11 +169,11 @@ items:
     
     1. Select **Agree**.
 
-       :::image type="content" source="~/assets/images/meetings-side-panel/terms_2.png" alt-text="Screenshot showing the selection of "Agree" from terms of service.":::
+       :::image type="content" source="~/assets/images/meetings-side-panel/terms_2.png" alt-text="Screenshot showing the selection of agree from terms of service.":::
 
     1. Select **Apply**.
 
-       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/apply-teams_1.png" alt-text="Screenshot showing the selection of "Apply" to Microsoft Teams commercial(most common).":::
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/apply-teams_1.png" alt-text="Screenshot showing the selection of apply to Microsoft Teams commercial.":::
     
     **To create tunnel for local web server**
 
@@ -226,7 +226,7 @@ items:
 
     1. Select **Set**.
 
-       :::image type="content" source="~/assets/images/meetings-side-panel/exposeanapi_1.png" alt-text="Screenshot showing the selection of "Set" under expose an API.":::
+       :::image type="content" source="~/assets/images/meetings-side-panel/exposeanapi_1.png" alt-text="Screenshot showing the selection of set under expose an API.":::
 
     1. Set the **Application ID URI** in the form of `api://your ngrok/botid-{AppID}`.
 
