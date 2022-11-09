@@ -489,7 +489,7 @@ Teams tabs and bots have similar flow for SSO support, for more information, see
 Teams Toolkit helps you add SSO to the following Teams capabilities in Visual Studio:
 
 * Tab
-* Notification bot: restify server
+* Notification bot: Restify server
 * Command bot
 
 ### Add SSO using Visual Studio
