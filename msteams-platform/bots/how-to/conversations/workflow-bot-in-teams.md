@@ -491,7 +491,7 @@ The following steps help you to add the notification feature:
 
 1. You can navigate to file `bot\src\internal\initialize.js(ts)`.
 
-1. You need to update your `conversationBot` initialization, to enable the notification feature:
+1. You need to update your `conversationBot` initialization, to enable the notifications:
 
    ```initialize.js(ts)
 
