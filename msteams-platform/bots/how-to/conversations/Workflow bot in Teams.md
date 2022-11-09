@@ -81,7 +81,7 @@ For more information on initialization customization, see [additional initializa
 
 ## Add card actions
 
-To add card actions with JavaScript and TypeScript, you can perform following:
+To add card actions with JavaScript and TypeScript, you can perform the following:
 
 <br>
 
@@ -300,7 +300,7 @@ When Adaptive Cards are sent in a Teams channel or group chat, all users can see
 
 * **Refresh behavior**: After the user views the message, Teams client automatically triggers a refresh a minute after the last refresh response. The user-specific view handler is invoked to return a card view `Response Card` for specific user `UserA`. Other users in the conversation can still view the base card.
 
-The following gif image illustrates how user-specific view is displayed in Teams:
+The following image illustrates how user-specific view is displayed in Teams:
 
 :::image type="content" source="../../../assets/images/sbs-workflow-bot/user-specific-views.png" alt-text="User-specific view in teams displayed" lightbox="../../../assets/images/sbs-workflow-bot/user-specific-views.png":::
 
@@ -316,7 +316,7 @@ The following steps help you to add user-specific view with TeamsFx SDK:
 
 <summary><b>Enable refresh in base Adaptive Card</b></summary>
 
-As illustrated, user-specific views are refreshed from a base card, when card2 is refreshed from card1. You need to enable auto-refresh on the base card, such as the card1. There are two options to achieve this:
+As illustrated, user-specific views are refreshed from a base card, when card2 is refreshed from card1. You need to enable auto-refresh on the base card, such as card1. There are two options to achieve this:
 
 * First option enables user-specific view refresh with SDK. The base card can be sent as a command response or a card action response. You can enable user-specific view refresh in `handleCommandReceived` of a command handler, or in `handleActionInvoked` of card action handler where the base card is returned. You can use `refresh(refreshVerb, userIds, data)` method from the `@microsoft/adaptivecards-tools` library to inject a refresh section into your base card. To define the refresh section, ensure that you provide the following:
 
@@ -385,7 +385,7 @@ You need to replace `${userID}` with user MRI in code, while rendering your card
 
 <summary><b>Add user-specific Adaptive Cards</b></summary>
 
-You need to design the user-specific Adaptive Card to refresh specific users such as  `responseCard.json` for `userA` in the sample. To get started, you can create a `responseCard.json` with the following content, and put it in `bot/src/adaptiveCards` folder:
+You need to design the user-specific Adaptive Card to refresh specific users such as  `responseCard.json` for `userA` in the sample. To get started, you can create a `responseCard.json` with the following content, and save it in `bot/src/adaptiveCards` folder:
 
 ```responseCard.json
 
