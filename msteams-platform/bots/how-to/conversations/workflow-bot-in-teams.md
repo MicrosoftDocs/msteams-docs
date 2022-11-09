@@ -314,7 +314,7 @@ The following steps help you to add user-specific view with TeamsFx SDK:
 
 <details>
 
-<summary><b>Enable refresh in base Adaptive Card</b></summary>
+<summary><b>1. Enable refresh in base Adaptive Card</b></summary>
 
 As illustrated, user-specific views are refreshed from a base card, when card2 is refreshed from card1. You need to enable auto-refresh on the base card, such as card1. There are two options to achieve this:
 
