@@ -194,7 +194,7 @@ To enable app caching in your meeting side panel, follow the steps:
 
 1. Use `contentUrl` and `entityId` into the load handler to route to the correct page within your app and invoke `notifySuccess/notifyFailure` to notify Teams client that the app initialization flow is complete.
 
-1. Dispose resources and perform any cleanup needed in the `beforeUnload handler`, then invoke the `readyToUnload` callback to notify Teams client that the app unload flow is complete.
+1. Dispose resources and perform any clean-up needed in the `beforeUnload handler`, then invoke the `readyToUnload` callback to notify Teams client that the app unload flow is complete.
 
 The following is the flow diagram of the app added to the meeting stage without app caching:
 
@@ -217,7 +217,7 @@ Following are the parameters to control the conditions for the apps to be added 
 * When the app is cached, the memory (working set) usage must not exceed 225 MB.
 * If the user doesn't return to the app within 20 minutes, the app is removed from the cache.
 * The maximum time for Teams to receive the `readyToUnload` signal from the app is 30 seconds.
-* The grace period to get memory usage down after the app is cached is 1 minute.
+* The grace period to get memory usage down after the app is cached is one minute.
 * App caching is disabled if the system memory is less than 4 GB or the available free memory is less than 1 GB (512 MB on Mac).
 * Side panel is the only supported FrameContext for app caching in meetings.
 * When the app is cached, CPU usage must not exceed 5%.
@@ -256,7 +256,7 @@ microsoftTeams.appInitialization.notifySuccess();
 
 * The Teams client invokes the `loadHandler` only after the `unload` sequence of the app is completed. For example, if a user launches tab A of your app and then launches tab B of the same app, tab B won't get the load signal until the tab A invokes the `readyToUnload` callback.
 
-* After an app moves to the cached state, it has a one minute grace period to get the memory usage under the allowed threshold of 225 MB. If the app exceeds the threshold for more than a minute, the app is removed from the cache. The Memory usage value of the app is the *workingSetSize* of the webview in the Electron [getappMetrics API](https://www.electronjs.org/docs/latest/api/app#appgetappmetrics).
+* After an app moves to the cached state, it has a one minute grace period to get the memory usage under the allowed threshold of 225 MB. If the app exceeds the threshold for more than a minute, the app is removed from the cache. The memory usage value of the app is the *workingSetSize* of the webview in the Electron [getappMetrics API](https://www.electronjs.org/docs/latest/api/app#appgetappmetrics).
 
 * Apps are cached on a per-window basis.
 
@@ -276,7 +276,7 @@ microsoftTeams.appInitialization.notifySuccess();
   * `readyToUnload`
   * `getConfig/getSettings`
 
-* Register only the `beforeUnload` handler if your app doesn't require app caching but needs time to safely save state (if you want to ensure that going away from your app doesn't cause app content to be abruptly removed from the DOM). If the app hasn’t registered for the `load` event, it's removed from the DOM after the unload flow completes.
+* Register only the `beforeUnload` handler if your app doesn't require app caching but needs time to safely save state (if you want to ensure that going away from your app doesn't cause app content to be abruptly removed from the DOM). If the app isn't registered for the `load` event, it's removed from the DOM after the unload flow completes.
 
 * App caching isn't supported for meetings where the meeting participants are more than 20.
 
@@ -291,8 +291,8 @@ You can upload a [sample app](https://github.com/kpolnitz/app-caching-test-app) 
 |Sample name | Description | C# | Node.js |
 |----------------|-----------------|--------------|----------------|
 | Meeting app | Demonstrates how to use the Meeting Token Generator app to request a token. The token is generated sequentially so that each participant has a fair opportunity to contribute in a meeting. The token is useful in situations like scrum meetings and Q&A sessions. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
-| Meeting stage sample | Sample app to show a tab in meeting stage for collaboration | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) |
-| Meeting side panel | Sample app to show how to add agenda in a meeting side panel | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) |-|
+| Meeting stage sample | Sample app to show a tab in meeting stage for collaboration. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) |
+| Meeting side panel | Sample app to show how to add agenda in a meeting side panel. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) |-|
 | In-meeting notification | Demonstrates how to implement in-meeting notification using bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs) |
 | In-meeting document signing | Demonstrates how to implement a document signing Teams app. Includes sharing specific app content to stage, Teams SSO and user specific stage view. | [View](https://github.com/officedev/microsoft-teams-samples/tree/main/samples/meetings-share-to-stage-signing/csharp) | NA |
 
