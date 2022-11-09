@@ -10,7 +10,11 @@ ms.localizationpriority: medium
 
 The resource-specific consent (RSC) permissions model, originally developed for Teams Graph APIs, is being extended to bot scenarios.
 
-Using RSC, you can request team owners consent for a bot to receive user messages across standard channels and group chats in a team without being @mentioned. The capability is enabled by specifying the `ChannelMessage.Read.Group` or `ChatMessage.Read.Chat` permissions in the manifest of a RSC enabled Teams app. The conversation owners can grant consent during the app installation or upgrade process. Bots can receive all group chat messages in a team when consented during app installation. For more information about enabling RSC for your app, see [resource-specific consent](../../../graph-api/rsc/resource-specific-consent.md).
+With RSC, conversation owners can consent for a bot to receive all user messages in standard channels and chats without being @mentioned. This can be enabled by specifying `ChannelMessage.Read.Group` or `ChatMessage.Read.Chat` permission strings in your Teams app manifest. Conversation owners can grant consent during the app installation or upgrade process after the app updates have been published.
+
+> [!IMPORTANT]
+>
+> For more information about enabling RSC for your app and inside of a tenant, see [resource-specific consent](../../../graph-api/rsc/resource-specific-consent.md)
 
 ## Enable bots to receive all channel or chat messages
 
@@ -22,23 +26,26 @@ The `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permissions in a
 
 > [!NOTE]
 >
-> * Services that need access to all Teams message data must use the Graph APIs that  provide access to archived data in channels and chats.
-> * Bots must use the `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permission appropriately to build and enhance engaging experience for users in the team or they will not pass the store approval. The app description must include how the bot uses the data it reads.
-> * The `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permission may not be used by bots to extract large amounts of customer data.
+> * Services that need access to all Teams message data must use the Graph APIs that provide access to archived data in channels and chats.
+> * Bots must use the `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permission appropriately to build and enhance engaging experience for users or they will not pass the store approval. The app description must include how the bot uses the data it reads.
+> * The `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permissions are being extended to bots. With user consent and app installation, these permissions will:
+
+* Allow a specified graph application to get all messages in channels and chats, respectively.
+* Enable a bot defined in the app manifest receives all conversations messages without being @mentioned in relevant contexts where the permissions apply.
 
 ## Update app manifest
 
-For your bot to receive all channel messages, RSC must be configured in the Teams app manifest with the `ChannelMessage.Read.Group` permission specified in the `webApplicationInfo` property.
+For your bot to receive all channel messages, RSC must be configured in the Teams app manifest with the `ChannelMessage.Read.Group` permission specified in the `authorization.permissions.resourceSpecific` property.
 
 For more information about manifest schema, see [app manifest schema for Teams](../../../resources/schema/manifest-schema.md).
 
-:::image type="content" source="../../../assets/images/bots/RSC/appmanifest_1.png" alt-text="app manifest":::
+:::image type="content" source="../../../assets/images/bots/RSC/appmanifest_2.png" alt-text="app manifest":::
 
-The following list describes the `webApplicationInfo` object:
+The following code provides an example of the app manifest:
 
 * **webApplicationInfo.id**: Your Microsoft Azure Active Directory (AAD) app ID. The app ID can be the same as your bot ID.
 * **webApplicationInfo.resource**: Any string. The resource field has no operation in RSC, but must be added with a value to avoid error response.
-* **authorization.permissions.resourceSpecific**: RSC permissions for your app with either or both `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat`must be specified and it depends on the conversation contexts relevant to your app.  For more information, see [resource-specific permissions](/microsoftteams/platform/graph-api/rsc/resource-specific-consent#resource-specific-permissions).
+* **authorization.permissions.resourceSpecific**: RSC permissions for your app with either or both `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` specified. For more information, see [resource-specific permissions](/microsoftteams/platform/graph-api/rsc/resource-specific-consent#resource-specific-permissions).
 
 The following code provides an example of the app manifest version 1.12 or higher:
 
@@ -120,7 +127,7 @@ The following code provides an example of the app manifest version 1.12 or highe
 }
 ```
 
-## Sideload in a conversation to test
+## Sideload in a conversation
 
 # [Channel messages](#tab/channel)
 
