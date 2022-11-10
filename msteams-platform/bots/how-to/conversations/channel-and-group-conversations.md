@@ -24,7 +24,7 @@ Bots in a group or channel only receive messages when they're mentioned @botname
 See the following video to learn about channel and group chat conversations with a bot:
 <br>
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4NzEs]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4NzEs>]
 <br>
 
 ## Design guidelines
@@ -277,7 +277,7 @@ Don't send a message in the following cases:
 
 ## Step-by-step guide
 
-Follow the [step-by-step guide](../../../sbs-teams-conversation-bot.yml), to create a Teams conversational bot.
+Follow the [step-by-step guide](../../../sbs-teams-conversation-bot.yml), to create Teams conversation bot.
 
 ## Next step
 
