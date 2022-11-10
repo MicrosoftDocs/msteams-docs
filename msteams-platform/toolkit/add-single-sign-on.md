@@ -580,15 +580,15 @@ The following steps help you to enable SSO in your application:
 
 4. You can now update `Program.cs`.
 
-    1. You can find the following code in the file `Program.cs`, and add the code blocks in step 2:
+    i. You can find the following code in the file `Program.cs`, and add the code blocks in step ii:
 
        ```csharp
         builder.Services.AddSingleton<BotFrameworkAuthentication,          ConfigurationBotFrameworkAuthentication>();
        ```
 
-    2. Code blocks to be added:
+   ii. Add the following code blocks:
 
-       ```csharp
+        ```csharp
          builder.Services.AddRazorPages();
            // Create the Bot Framework Adapter with error handling enabled.                                        
            builder.Services.AddSingleton<IBotFrameworkHttpAdapter, AdapterWithErrorHandler>();
@@ -610,14 +610,14 @@ The following steps help you to enable SSO in your application:
            }).ValidateDataAnnotations();
        ```
 
-    3. After you have added the code blocks, you can find and delete the following code in the file:
+  iii. After you've added the code blocks, you can find and delete the following code in the file:
 
-        ```csharp
+         ```csharp
         // Create the bot as a transient. In this case the ASP Controller is expecting an IBot.
         builder.Services.AddTransient<IBot, TeamsBot>();
         ```
 
-    4. Find the following code and replace it with the codes given in step 5:
+   iv. Find the following code and replace it with the codes given in step v:
 
         ```csharp
         app.UseEndpoints(endpoints =>
@@ -626,9 +626,9 @@ The following steps help you to enable SSO in your application:
         });
         ```
 
-    5. Replace the codes in step 4 with the following codes:
+    v. Replace the codes in step iv with the following codes:
 
-        ```csharp
+       ```csharp
         app.UseEndpoints(endpoints =>
         {
           endpoints.MapControllers();
