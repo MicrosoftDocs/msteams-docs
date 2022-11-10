@@ -83,6 +83,42 @@ Also, provided guidance how they can call Graph API get user profile photo.
 
 <br>
 
+## Notifications
+
+<br>
+<details>
+<summary>Notification Instability</summary>
+
+<br>
+Customer is using bot builder proactive message sample. Sample will not save object references. So, it is working with initial run and failing after that. Recommended to save conversation references to database and use the same for building conversation object to send proactive message.
+
+</details>
+
+<br>
+
+## PC
+
+<details>
+<summary>Where do you find MPN ID?</summary>
+
+<br>
+You need to fetch PC ID.
+
+</details>
+
+<br>
+
+<details>
+<summary>Not able to see Developer Tab in Partner Centre</summary>
+
+<br>
+
+// Raise a PC Ticket //
+
+</details>
+
+<br>
+
 ## Single sign-on
 
 <details>
@@ -139,6 +175,30 @@ Configure the application you're using to only execute HTML encoding of the scop
 
 <br>
 Code samples which has been shared is in .net /Node js.
+
+</details>
+
+<br>
+
+## Tabs
+
+<details>
+<summary>Customer was facing issue with deeplink to get the subEntityId or subPageId on mobile client while navigating from one tab to another tab.</summary>
+
+<br>
+Customer to upgrade the teams JavaScript client SDK to (@microsoft/teams-js": "^2.0.0") and it resolves the issue.
+
+</details>
+
+<br>
+
+## Task module
+
+<details>
+<summary>Partner reported issue with inconsistent behaviour of closing the task module in desktop and android. The current behaviour in mobile client will not be a blocker for partner since they can close it by clicking ‘ok’ in mobile. If partner wants to close the task module manually in desktop, then you can pass some string in the value property instead of passing it as empty.</summary>
+
+<br>
+No resolution required from the docs ( Platform Bug).
 
 </details>
 
