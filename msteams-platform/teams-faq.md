@@ -46,3 +46,40 @@ Work with Universal Actions for Adaptive Cards - Teams | Microsoft Docs to valid
 Use [Delete messages-Bot framework's DeleteActivity](~/bots/how-to/update-and-delete-bot-messages?tabs=dotnet#delete-messages) method.
 
 </details>
+
+<br>
+<details>
+<summary>How can I test the validity of the card schema via code, to avoid this in the future?</summary>
+
+Provided steps to test/validate adaptive card schema:“Adaptive cards editor(preview)” option from the Teams apps >>Developer portal >> Tools" and asked to refer Schema Explorer | Adaptive Cards.
+
+</details>
+
+<br>
+
+## Microsoft Graph
+
+<details>
+<summary>We are wondering when the user sets the preferred time to get a notification, can we also get their timezone automatically? Any function may be in graph API where we can get the user's location?</summary>
+
+<br>
+Response:
+You can use the following Grap API Get user mailbox settings - Microsoft Graph v1.0 | Microsoft Docs to get the user’s time zone like mentioned below.
+• GET /me/mailboxSettings/timeZone
+• GET /users/{id|userPrincipalName}/mailboxSettings/timeZone
+
+</details>
+
+<br>
+<details>
+<summary>Customer was looking for support to deploy the code in azure using teams toolkit, also asked few queries related to graph api get user profile photo.</summary>
+
+<br>
+Shared references to deploy the code using toolkit: Create a new Teams app using Teams Toolkit - Teams | Microsoft Docs
+TeamsFx Command Line Interface - Teams | Microsoft Docs
+Also, provided guidance how they can call Graph API get user profile photo.
+
+</details>
+
+<br>
+
