@@ -225,7 +225,7 @@ Following are the parameters to control the conditions for the apps to be added 
 * The cache state is monitored every 12 seconds and the apps that don’t meet the requirements are removed from the cache.
 
 > [!NOTE]
-> These parameters can get modified with configuration updates.
+> Based on the configuration updates, the parameters can be modified.
 
 ### Code example
 
@@ -251,7 +251,7 @@ microsoftTeams.appInitialization.notifySuccess();
 
 The following are the limitations for app caching:
 
-* Single-page apps that use client-side routing for page navigation can benefit from app caching. It's recommended that the same domain is used across all contexts of your app launch. For example, using *bar.foo.com* for chats and *baz.foo.com* for personal app isn't recommended as you need to go to the new domain in the load handler.
+* Single-page apps that use client-side routing for page navigation can benefit from app caching. It's recommended that the same domain is used across all contexts of your app launch.
 
 * Apps need to re-register for events such as `themeChange`, `focusEnter`, and so on, in the load handler. Teams client won't send any notifications to the app when cached. If your app requires notifications even when cached, caching might not be the right solution.
 
@@ -291,11 +291,17 @@ The following are the limitations for app caching:
 
 ### Troubleshooting
 
-**Error**: Apps are not being cached (i.e. Why is Load handler not invoked on subsequent navigation)?
+<br>
 
-* If app exceeds 225MB limit, try to keep your memory footprint under 225MB when cached.
+<details>
 
-* Check the amount of free memory on your system. App caching requires minimum of 4GB system memory and a minimum of 1GB free memory on Windows (500 MB free memory on Mac).
+<summary><b>Apps are not being cached? Why is load handler not invoked on subsequent navigation?</b></summary>
+
+* If app exceeds 225 MB limit, try to keep your memory footprint under 225 MB when cached.
+
+* Check the amount of free memory on your system. App caching requires minimum of 4 GB system memory and a minimum of 1 GB free memory on Windows (500 MB free memory on Mac).
+
+<br>
 
 ## Code sample
 
