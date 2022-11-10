@@ -269,7 +269,7 @@ The following are the limitations for app caching:
 
 * App caching happens on a per app (not on a per tab) basis within the same window.
 
-* Apps are expected to sleep when cached and it uses minimal compute or network resources and minimize SDK requests. All the register handlers and the following SDK requests are allowed when the app is cached:
+* Apps are expected to sleep when cached that is it uses minimal compute or network resources and minimizes SDK requests. All the register handlers and the following SDK requests are allowed when the app is cached:
 
   * `initialize`
   * `notifyappLoaded`
@@ -283,7 +283,7 @@ The following are the limitations for app caching:
 
 * Register only the `beforeUnload` handler if your app doesn't require app caching but needs time to safely save state (if you want to ensure that going away from your app doesn't cause the app content to be abruptly removed from the DOM). If the app isn't registered for the `load` event, it's removed from the DOM after the unload flow completes.
 
-* To avail the app caching support only in meetings, register the `load` or `beforeUnload` handlers if the context is `sidePanel`. Meetings is the first surface to support app caching. Currently, app caching isn't supported for channels, chat, and other contexts.
+* For app caching to support only in meetings, register the `load` or `beforeUnload` handlers if the context is `meetingSidePanel`. Meetings is the first surface to support app caching.
 
 * App caching isn't supported for meetings where the invited user count is more than 20.
 
