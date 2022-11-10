@@ -25,3 +25,8 @@ Azure Applications Insights does auto-instrumentation to automatically collect p
 Collecting telemetry using the generated analytics is important for improving your app experience and guiding your roadmap. However, your investment in planning analytics and using telemetry goes beyond the solution. It provides a window into your user’s mind and collecting behavior patterns that can help you find the crucial product market fit.
 
 Analyzing your solution usage and insights on features that your end users value enough to pay can help shape the long-term strategy for your organization and future solutions that you build.
+
+## See also
+
+- [Get started](../../get-started/get-started-overview.md)
+- [Explore Teams platform features](../../overview-explore.md)
