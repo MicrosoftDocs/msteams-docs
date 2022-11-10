@@ -473,7 +473,7 @@ For applications that interact with the user in a chat, Team, or channel, SSO ma
 
 **Advantages**
 
-The following are advantages of SSO in Teams:
+The following are the advantages of SSO in Teams:
 
 * SSO with Azure AD refreshes the authentication token in the background, which minimizes the number of times users need to enter their sign-in credentials.
 
@@ -563,7 +563,7 @@ The following steps help you to enable SSO in your application:
    * TeamsFx, version 1.1.0 or later.
    * `Microsoft.Bot.Builder`, version 4.17.1 or later.
 
-2. You can create a `Pages` folder, and move files to `Auth/bot/Pages`, which contains HTML pages that are hosted by bot application. When SSO flows are initiated with Azure AD, they redirect the user to these pages.
+2. You can create a `Pages` folder, and move files to `Auth/bot/Pages`, which contains HTML pages that are hosted by bot application. When SSO flows are initiated with Azure AD, they redirect the user to the HTML pages.
 
 3. After the user is redirected to the HTML pages, you can create `SSO` folder and move files in `Auth/bot/SSO`. This folder contains three files as a reference for SSO implementation:
 
