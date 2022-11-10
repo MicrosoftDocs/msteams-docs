@@ -70,7 +70,7 @@ The `shareAppContentToStage` API enables you to share specific parts of your app
 
 ### Prerequisite
 
-* `appContentUrl` must be allowed by `validDomains` array inside manifest.json, else the API returns a 501 error.
+`appContentUrl` must be allowed by `validDomains` array inside manifest.json, else the API returns a 501 error.
 
 ### Query parameter
 
