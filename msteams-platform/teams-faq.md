@@ -7,5 +7,5 @@ ms.localizationpriority: high
 
 # Frequently asked questions
 
-This sections contains the frequently asked questions and the answers.
+This section contains the frequently asked questions and the answers.
 
