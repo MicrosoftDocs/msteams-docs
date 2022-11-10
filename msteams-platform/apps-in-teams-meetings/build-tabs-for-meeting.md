@@ -190,7 +190,7 @@ App caching helps you to improve subsequent launch time of the apps that are loa
 
 To enable app caching in your meeting side panel, follow the steps:
 
-1. Call `microsoftTeams.registerBeforeUnloadHandler` and `microsoftTeams.registerOnLoadHandler` (Work in Progress).
+1. Call `microsoftTeams.registerBeforeUnloadHandler` and `microsoftTeams.registerOnLoadHandler` APIs (Work in Progress).
 
 1. Use `contentUrl` and `entityId` into the load handler to route to the correct page within your app and invoke `notifySuccess/notifyFailure` to notify Teams client that the app initialization flow is complete.
 
@@ -302,6 +302,8 @@ The following are the limitations for app caching:
 * Check the amount of free memory on your system. App caching requires minimum of 4 GB system memory and a minimum of 1 GB free memory on Windows (500 MB free memory on Mac).
 
 <br>
+
+---
 
 ## Code sample
 
