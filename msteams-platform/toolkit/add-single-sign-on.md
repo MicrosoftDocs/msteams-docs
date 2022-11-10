@@ -471,7 +471,7 @@ For more information about TeamsFx SDK, see:
 
 For applications that interact with the user in a chat, Team, or channel, SSO manifests as an Adaptive Card, which the user can interact with to invoke the Azure AD consent flow.
 
-## Advantages
+**Advantages**
 
 The following are advantages of SSO in Teams:
 
