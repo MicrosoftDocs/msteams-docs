@@ -580,7 +580,7 @@ The following steps help you to enable SSO in your application:
 
 4. You can now update `Program.cs`.
 
-    1. You can find the following code in the file `Program.cs`, and add the code blocks in step :
+    1. You can find the following code in the file `Program.cs`, and add the code blocks in step b:
 
        ```csharp
           builder.Services.AddSingleton<BotFrameworkAuthentication,              ConfigurationBotFrameworkAuthentication>();
@@ -617,7 +617,7 @@ The following steps help you to enable SSO in your application:
         builder.Services.AddTransient<IBot, TeamsBot>();
         ```
 
-    1. Find the following code and replace it with the codes given in step v:
+    1. Find the following code and replace it with the codes given in step e:
 
         ```csharp
         app.UseEndpoints(endpoints =>
@@ -626,7 +626,7 @@ The following steps help you to enable SSO in your application:
         });
         ```
 
-    1. Replace the codes in step iv with the following codes:
+    1. Replace the codes in step d with the following codes:
 
        ```csharp
         app.UseEndpoints(endpoints =>
