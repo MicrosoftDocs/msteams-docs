@@ -196,17 +196,17 @@ To enable app caching in your meeting side panel, follow the steps:
 
 1. Dispose resources and perform any cleanup needed in the `beforeUnload handler`, then invoke the `readyToUnload` callback to notify Teams client that the app unload flow is complete.
 
-The following is the flow diagram of the app added to the meeting stage without app caching:
+The following is the flow diagram of the app added to the meeting side panel without app caching:
 
-:::image type="content" source="../assets/images/saas-offer/first-launch-app.png" alt-text="This screenshot shows the flow of the first launch of the app in meeting stage.":::
+:::image type="content" source="../assets/images/saas-offer/first-launch-app.png" alt-text="This screenshot shows the flow of the first launch of the app in meeting side panel.":::
 
-The following is the flow diagram of a cached app when it's added to the meeting stage:
+The following is the flow diagram of a cached app when it's added to the meeting side panel:
 
-:::image type="content" source="../assets/images/saas-offer/cached-launch-app.png" alt-text="This screenshot shows the flow of the cached launch of the app in meeting stage.":::
+:::image type="content" source="../assets/images/saas-offer/cached-launch-app.png" alt-text="This screenshot shows the flow of the cached launch of the app in meeting side panel.":::
 
 After you enable app caching, the webview that is used to host the embedded app is reused as users navigate to different instances of the app within a window.
 
-The webview of the app remains in the Document Object Model (DOM). The webview is hidden when the users go out of the app and shown when the users return to the app. When the app is cached, any audio that is playing is muted.
+The webview of the app remains in the Document Object Model (DOM). The webview used to host the app is hidden when the users go out of the app and shown when the users return to the app. When the app is cached, any audio that is playing is muted.
 
 > [!NOTE]
 > If the app caching is not enabled, the webview is recreated every time the users go out and return to the app.
@@ -223,6 +223,9 @@ Following are the parameters to control the conditions for the apps to be added 
 * When the app is cached, CPU usage must not exceed 5%.
 * When the app is cached, the number of SDK requests shouldn't exceed five for every 12 seconds.
 * The cache state is monitored every 12 seconds and the apps that don’t meet the requirements are removed from the cache.
+
+> [!NOTE]
+> These parameters can get modified with configuration updates.
 
 ### Code example
 
@@ -266,7 +269,7 @@ The following are the limitations for app caching:
 
 * App caching happens on a per app (not on a per tab) basis within the same window.
 
-* Apps are expected to sleep when cached as it uses minimal compute or network resources and minimize SDK requests. All the register handlers and the following SDK requests are allowed when the app is cached:
+* Apps are expected to sleep when cached and it uses minimal compute or network resources and minimize SDK requests. All the register handlers and the following SDK requests are allowed when the app is cached:
 
   * `initialize`
   * `notifyappLoaded`
@@ -280,9 +283,17 @@ The following are the limitations for app caching:
 
 * Register only the `beforeUnload` handler if your app doesn't require app caching but needs time to safely save state (if you want to ensure that going away from your app doesn't cause the app content to be abruptly removed from the DOM). If the app isn't registered for the `load` event, it's removed from the DOM after the unload flow completes.
 
-* App caching isn't supported for meetings where the meeting participants are more than 20.
+* App caching isn't supported for meetings where the invited user count is more than 20.
 
 * App caching isn't supported for apps that require device permissions as per the manifest.
+
+### Troubleshooting
+
+**Error**: Apps are not being cached (i.e. Why is Load handler not invoked on subsequent navigation)?
+
+* If app exceeds 225MB limit, try to keep your memory footprint under 225MB when cached.
+
+* Check the amount of free memory on your system. App caching requires minimum of 4GB system memory and a minimum of 1GB free memory on Windows (500 MB free memory on Mac).
 
 ## Code sample
 
