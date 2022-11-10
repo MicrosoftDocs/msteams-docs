@@ -12,7 +12,7 @@ ms.author: v-amprasad
 
 The document guides you on how to add link unfurling to your app manifest using Developer Portal and manually. With link unfurling, your app can register to receive an `invoke` activity when URLs with a particular domain are pasted into the compose message area. The `invoke` contains the full URL that was pasted into the compose message area, and you can respond with a card that the user can unfurl, providing additional information or actions. This works similar to a search command with the URL serving as the search term. You can now add link unfurling to Microsoft Teams without installing app.
 
-:::image type="content" source="../../assets/images/tdp/link-unfurling-adaptive-cards1.png" alt-text="Screenshot shows an example of link unfurling without app installation." lightbox="../../assets/images/tdp/link-unfurling-adaptive-cards1.png":::
+:::image type="content" source="../../assets/images/tdp/link-unfurling-adaptive-cards1.png" alt-text="Screenshot shows the link unfurling expereince in a tree chat for a Teams app installed or not installed in Teams and other apps when the link is pasted in Teams compose message area." lightbox="../../assets/images/tdp/link-unfurling-adaptive-cards1.png":::
 
 > [!NOTE]
 >
@@ -61,7 +61,7 @@ To add link unfurling to your app manifest, add a new `messageHandlers` array to
 1. Select **Add a domain** under **Preview links** section and then enter valid domain.
 1. Select **Add**. The following image explains the process:
 
-   :::image type="content" source="../../assets/images/tdp/add-domain-button.PNG" alt-text="Screenshot of the message handlers section in Developer Portal." lightbox="../../assets/images/tdp/add-domain.PNG":::
+   :::image type="content" source="../../assets/images/tdp/add-domain-button.png" alt-text="Screenshot of the message handlers section in Developer Portal." lightbox="../../assets/images/tdp/add-domain.png":::
 
 ### Add link unfurling manually
 
@@ -101,7 +101,7 @@ Zero install link unfurling helps you unfurl previews for your shared links even
 
 The following image provides a sequential flow to enable and use zero install link unfurling:
 
-   :::image type="content" source="../../assets/images/tdp/user-flow-image.PNG" alt-text="Screenshot of the link unfurling code user flow." lightbox="../../assets/images/tdp/user-flow-image.PNG":::
+   :::image type="content" source="../../assets/images/tdp/user-flow-image.png" alt-text="Screenshot of the link unfurling code user flow." lightbox="../../assets/images/tdp/user-flow-image.png":::
 
 ### Enable zero install link unfurling
 
@@ -113,7 +113,7 @@ To get your app ready for zero install link unfurling, follow these steps:
 
    Example of the new invoke request:
 
-   :::image type="content" source="../../assets/images/tdp/link-unfurl_1.PNG" alt-text="Screenshot of the invoke request  `composeExtension/anonymousQueryLink` declaration in the manifest." lightbox="../../assets/images/tdp/link-unfurl_1.PNG":::
+   :::image type="content" source="../../assets/images/tdp/link-unfurl_1.png" alt-text="Screenshot of the invoke request  `composeExtension/anonymousQueryLink` declaration in the manifest." lightbox="../../assets/images/tdp/link-unfurl_1.png":::
 
    Example of the invoke request payload:
 
@@ -241,11 +241,11 @@ To get your app ready for zero install link unfurling, follow these steps:
 
    You can create customized card and add relevant fields. The users can fill in the required information as per the fields. The following image illustrates a customized card preview:
 
-   :::image type="content" source="../../assets/images/tdp/custom-card.PNG" alt-text="Screenshot of the customized card with fields for user to update." lightbox="../../assets/images/tdp/custom-card.PNG":::
+   :::image type="content" source="../../assets/images/tdp/custom-card.png" alt-text="Screenshot of the customized card with fields for user to update." lightbox="../../assets/images/tdp/custom-card.png":::
 
    The following image illustrates a default preview card:
 
-   :::image type="content" source="../../assets/images/tdp/default-preview-card.PNG" alt-text="Screenshot of the link unfurling code default preview card." lightbox="../../assets/images/tdp/default-preview-card.PNG":::
+   :::image type="content" source="../../assets/images/tdp/default-preview-card.png" alt-text="Screenshot of the link unfurling code default preview card." lightbox="../../assets/images/tdp/default-preview-card.png":::
 
      > [!NOTE]
      > After the link is pasted in the message compose area, Teams unfurls the link into a card and prompts the user to sign in to the app. If the user doesn't sign in to the app, the link isn't posted as a card in the chat.
