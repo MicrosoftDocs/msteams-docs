@@ -257,9 +257,9 @@
   - name: Create a content page
     href: tabs/how-to/create-tab-pages/content-page.md
     displayName: Loading indicator, personal-scoped custom tab, channel or group custom tab
-  - name: Create configuration page
+  - name: Create a configuration page
     href: tabs/how-to/create-tab-pages/configuration-page.md
-  - name: Create removal page
+  - name: Create a removal page
     href: tabs/how-to/create-tab-pages/removal-page.md
     displayName: Reconfigure tab, register remove handler
   - name: Tabs on mobile
@@ -799,8 +799,6 @@
       href: concepts/build-and-test/apps-localization.md
     - name: Localize JSON schema reference
       href: resources/schema/localization-schema.md
-  - name: Use silent authentication in Azure AD
-    href: tabs/how-to/authentication/auth-silent-aad.md
   - name: SameSite cookie attribute 
     href: resources/samesite-cookie-update.md
     displayName: Cookies

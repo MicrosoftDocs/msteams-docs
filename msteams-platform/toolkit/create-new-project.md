@@ -268,4 +268,4 @@ You can see Teams app templates already populated in Teams Toolkit for various T
 * [Prerequisites for all types of environment and create your Teams app](tools-prerequisites.md)
 * [Prepare to build apps using Microsoft Teams Toolkit](build-environments.md)
 * [Provision cloud resources using Visual Studio](provision-cloud-resources.md)
-* [Deploy Teams app to the cloud using Visual Studio](deploy-teams-app.md)
+* [Deploy Teams app to the cloud using Visual Studio](deploy.md#deploy-teams-app-to-the-cloud-using-visual-studio)

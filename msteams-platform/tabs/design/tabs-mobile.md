@@ -75,8 +75,12 @@ If you are sideloading your app or publishing to an organization's app catalog, 
 
 ## See also
 
-* [Tab design guidelines](~/tabs/design/tabs.md)
-* [Teams tabs](~/tabs/what-are-tabs.md)
-* [Create a personal tab](~/tabs/how-to/create-personal-tab.md)
-* [Create a channel or group tab](~/tabs/how-to/create-channel-group-tab.md)
-* [Plan for Teams mobile - Teams](~/concepts/design/plan-responsive-tabs-for-teams-mobile.md)
+* [Build tabs for Teams](../what-are-tabs.md)
+* [Build tabs with Adaptive Cards](../how-to/build-adaptive-card-tabs.md)
+* [Create a personal tab](../how-to/create-personal-tab.md)
+* [Plan responsive tabs for Teams mobile](../../concepts/design/plan-responsive-tabs-for-teams-mobile.md)
+* [Design your tab for Microsoft Teams](tabs.md)
+* [DevTools for Microsoft Teams tabs](../how-to/developer-tools.md)
+* [Test your app](../../concepts/build-and-test/test-app-overview.md)
+* [Distribute your Microsoft Teams app](../../concepts/deploy-and-publish/apps-publish-overview.md)
+* [Create Teams app package](../../concepts/build-and-test/apps-package.md)

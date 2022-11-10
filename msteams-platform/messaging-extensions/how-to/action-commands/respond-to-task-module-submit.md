@@ -611,4 +611,6 @@ The following section is a description of the entities in the `OnBehalfOf` Array
 
 ## See also
 
-[Respond to search command](~/messaging-extensions/how-to/search-commands/respond-to-search.md)
+* [App manifest schema for Teams](../../../resources/schema/manifest-schema.md)
+* [Respond to search command](../search-commands/respond-to-search.md)
+* [Message extensions](../../what-are-messaging-extensions.md)

@@ -835,7 +835,10 @@
       {
         "source_path": "msteams-platform/tabs/how-to/using-teams-client-sdk.md",
         "redirect_url": "/microsoftteams/platform/tabs/how-to/using-teams-client-library"
+      },
+      {
+        "source_path": "msteams-platform/tabs/how-to/authentication/auth-silent-aad.md",
+        "redirect_url": "microsoftteams/platform/concepts/authentication/authentication"
       }
     ]
 }
-
