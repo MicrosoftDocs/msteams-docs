@@ -70,8 +70,6 @@ The `shareAppContentToStage` API enables you to share specific parts of your app
 
 ### Prerequisite
 
-* Ensure that the [context and RSC permissions](#app-manifest-settings-for-apps-in-meeting-stage) are configured in the app manifest.
-
 * `appContentUrl` must be allowed by `validDomains` array inside manifest.json, else the API returns a 501 error.
 
 ### Query parameter
