@@ -49,7 +49,7 @@ You can also use the `pages.navigateToApp()` function, `pages.tabs.navigateToTab
 
 When a personal app has multiple tabs, you can use the Microsoft 365 host app's back button to go backwards through the navigational history. However that history doesn't include actions a user performs within a tab. If you need to enhance the back button experience, you can maintain your own internal navigation stack and configure a custom handler for back button selections. This is accomplished through the `registerBackButtonHandler()` function in the [pages.backStack](/javascript/api/@microsoft/teams-js/pages.backstack?view=msteams-client-js-latest&preserve-view=true) namespace.
 
-After you register the handler, it helps you to address the navigational request before the system takes action. If the handler is able to manage the request, it returns `true` so that the system knows no further action is necessary. Otherwise, in case the internal stack is empty, it returns `false` so that the system can call the `navigateBack()` function instead and take the appropriate action.
+After you register the handler, it helps you to address the navigational request before the system takes action. If the handler is able to manage the request, it returns `true` so that the system knows no further action is necessary. If the internal stack is empty, it returns `false` so that the system can call the `navigateBack()` function instead and take the appropriate action.
 
 ## Return focus to host app
 
