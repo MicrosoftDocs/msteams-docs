@@ -113,3 +113,33 @@ Implement react page with tab SSO and render the content as required. You can op
 </details>
 
 <br>
+<details>
+<summary>When user clicks on sign in button, popup is not opening. Because partner trying to open https://login.microsoftonline.com site from sign in button click. And signin end page is showing sdk timeout error. Asked to open sign in simple start page instead of login page directly. Issue resolved by doing the same.</summary>
+
+<br>
+No resolution required.
+
+</details>
+
+<br>
+<details>
+<summary>Customer was facing issues with generating the access token using the endpoint oauth2/v2.0/token. with grant type as "authorization_code".
+As we discussed with AAD team for the Issue generating MS access token using(v2.0 endpoint),
+Based on the event shared (Correlation ID 73454783-f0c5-4d48-9f8a-3ea6b5bd06f3 | 2022-09-19 06:48:00Z), the issue seems to reside on the scopes encoding, i.e., the scopes were encoded twice. </summary>
+
+<br>
+Configure the application you're using to only execute HTML encoding of the scopes once, so the scopes can be correctly sent and evaluated by AAD.
+
+</details>
+
+<br>
+
+<details>
+<summary>Implementation of Bot SSO in React .Partner is looking for guidance for the same.</summary>
+
+<br>
+Code samples which has been shared is in .net /Node js.
+
+</details>
+
+<br>
