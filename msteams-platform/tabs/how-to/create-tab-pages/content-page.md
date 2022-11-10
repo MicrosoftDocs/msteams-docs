@@ -106,7 +106,7 @@ Starting with [manifest schema v1.7](../../../resources/schema/manifest-schema.m
 
 > [!NOTE]
 >
-> * The behavior on mobile clients isn't configurable through the native loading indicator property. Mobile clients show this indicator by default across content pages and iframe-based task modules. This indicator on mobile is shown when a request is made to fetch content and gets dismissed as soon as the request gets completed.
+> The behavior on mobile clients isn't configurable through the native loading indicator property. Mobile clients show this indicator by default across content pages and iframe-based task modules. This indicator on mobile is shown when a request is made to fetch content and gets dismissed as soon as the request gets completed.
 
 If you indicate `showLoadingIndicator : true`  in your app manifest, then all tab configuration, content, removal pages, and all iframe-based task modules must follow these steps:
 
@@ -134,8 +134,8 @@ To show the loading indicator:
 
 ## See also
 
-* [Teams tabs](~/tabs/what-are-tabs.md)
-* [Create a personal tab](~/tabs/how-to/create-personal-tab.md)
-* [Tabs link unfurling and Stage View](~/tabs/tabs-link-unfurling.md)
-* [Create a configuration page](~/tabs/how-to/create-tab-pages/configuration-page.md)
+* [Build tabs for Teams](../../what-are-tabs.md)
+* [Create a personal tab](../create-personal-tab.md)
+* [Create a channel tab or group tab](../create-channel-group-tab.md)
+* [App manifest schema for Teams](../../../resources/schema/manifest-schema.md)
 * [DevTools for Microsoft Teams tabs](~/tabs/how-to/developer-tools.md)
