@@ -276,32 +276,12 @@ The response with the token is sent through an invoke activity with the same sch
 >[!NOTE]
 > You might receive multiple responses for a given request if the user has multiple active endpoints. You must deduplicate the responses with the token.
 
-##### C# code to handle the invoke activity
-
 ```csharp
-    protected override async Task<InvokeResponse> OnInvokeActivityAsync
-    (ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
-            {
-                try
-                {
-                    if (turnContext.Activity.Name == SignInConstants.TokenExchangeOperationName && turnContext.Activity.ChannelId == Channels.Msteams)
-                    {
-                        await OnTokenResponseEventAsync(turnContext, cancellationToken);
-                        return new InvokeResponse() { Status = 200 };
-                    }
-                    else
-                    {
-                        return await base.OnInvokeActivityAsync(turnContext, cancellationToken);
-                    }
-                }
-                catch (InvokeResponseException e)
-                {
-                    return e.CreateInvokeResponse();
-                }
-            }
+ protected override async Task OnTokenResponseEventAsync(ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken)
+        {
+            await Dialog.RunAsync(turnContext, ConversationState.CreateProperty<DialogState>(nameof(DialogState)), cancellationToken);
+        }
 ```
-
-The `turnContext.activity.value` is of type [TokenExchangeInvokeRequest](/dotnet/api/microsoft.bot.schema.tokenexchangeinvokerequest?view=botbuilder-dotnet-stable&preserve-view=true) and contains the token that can be further used by your bot. You must store the tokens for performance reasons and refresh them.
 
 ### Token exchange failure
 
