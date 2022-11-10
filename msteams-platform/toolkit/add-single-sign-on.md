@@ -580,13 +580,13 @@ The following steps help you to enable SSO in your application:
 
 4. You can now update `Program.cs`.
 
-    i. You can find the following code in the file `Program.cs`, and add the code blocks in step ii:
+    1. You can find the following code in the file `Program.cs`, and add the code blocks in step :
 
        ```csharp
-        builder.Services.AddSingleton<BotFrameworkAuthentication,          ConfigurationBotFrameworkAuthentication>();
+          builder.Services.AddSingleton<BotFrameworkAuthentication,              ConfigurationBotFrameworkAuthentication>();
        ```
 
-   ii. Add the following code blocks:
+    1. Add the following code blocks:
 
         ```csharp
          builder.Services.AddRazorPages();
@@ -610,14 +610,14 @@ The following steps help you to enable SSO in your application:
            }).ValidateDataAnnotations();
        ```
 
-  iii. After you've added the code blocks, you can find and delete the following code in the file:
+    1. After you've added the code blocks, you can find and delete the following code in the file:
 
          ```csharp
         // Create the bot as a transient. In this case the ASP Controller is expecting an IBot.
         builder.Services.AddTransient<IBot, TeamsBot>();
         ```
 
-   iv. Find the following code and replace it with the codes given in step v:
+    1. Find the following code and replace it with the codes given in step v:
 
         ```csharp
         app.UseEndpoints(endpoints =>
@@ -626,7 +626,7 @@ The following steps help you to enable SSO in your application:
         });
         ```
 
-    v. Replace the codes in step iv with the following codes:
+    1. Replace the codes in step iv with the following codes:
 
        ```csharp
         app.UseEndpoints(endpoints =>
@@ -698,8 +698,8 @@ The following steps help you to add a new command, after you've added SSO in you
 </details>
 <br>
 
-   > [!NOTE]
-   > Teams Toolkit uses the Azure AD manifest file to register an Azure AD application for SSO. You need to press F5 to debug your application and test your SSO configuration.
+  > [!NOTE]
+  > Teams Toolkit uses the Azure AD manifest file to register an Azure AD application for SSO. You need to press F5 to debug your application and test your SSO configuration.
 
 ## Customize Azure AD application registration
 
