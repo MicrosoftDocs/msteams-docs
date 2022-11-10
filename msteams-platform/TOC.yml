@@ -527,7 +527,7 @@
       - name: Grant Microsoft Graph permissions and scopes
         href: bots/how-to/authentication/bot-sso-graph-api.md
     - name: Troubleshoot SSO authentication
-      href: tabs/how-to/authentication/tab-sso-troubleshooting
+      href: tabs/how-to/authentication/tab-sso-troubleshooting.md
   - name: Use third party IdP authentication
     items:
     - name: Overview
