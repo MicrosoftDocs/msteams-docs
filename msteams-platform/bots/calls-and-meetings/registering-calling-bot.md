@@ -103,7 +103,7 @@ Follow the [step-by-step guide](../../sbs-calling-and-meeting.yml) to set up Tea
 
 ## See also
 
-* [Incoming call notifications](~/bots/calls-and-meetings/call-notifications.md)
+* [Calls and online meetings bots](calls-meetings-bots-overview.md)
 * [Develop calling and online meeting bots on your local PC](~/bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md)
 * [View app permission and grant admin consent](/MicrosoftTeams/app-permissions-admin-center)
 * [Working with the cloud communications API in Microsoft Graph](/graph/api/resources/communications-api-overview)
