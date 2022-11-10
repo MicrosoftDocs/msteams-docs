@@ -83,3 +83,33 @@ Also, provided guidance how they can call Graph API get user profile photo.
 
 <br>
 
+## Single sign-on
+
+<details>
+<summary>Partner asked few queries on SSO login flow and a way to redirect the user to auth from invoking an adaptive card. Also Partner needs a way to access the PROD app package and resources from azure since they lost access to prod subscription.</summary>
+
+<br>
+you can open the authentication page in the task module when clicks on the button. We do have a sample for opening the task module on button click mentioned here BotBuilder-Samples/teams_task_module_bot.py at main · microsoft/BotBuilder-Samples (github.com). You can replace the taskInfo.url with your auth page.
+
+</details>
+
+<br>
+
+<details>
+<summary>How we can change Application ID URI of SSO scope to use bot id also so that the consent window won't be required for Bot?</summary>
+
+<br>
+[Register your app on Azure AD](/bots/how-to/authentication/auth-aad-sso-bots#register-your-app-through-the-azure-ad-portal)
+
+</details>
+
+<br>
+<details>
+<summary>Customer's requirement is to open an iframe, it contains a react app (that displays sensitive information) from a bot task module securely. Can you suggest what is the best/easiest/standard approach to perform this operation?</summary>
+
+<br>
+
+Implement react page with tab SSO and render the content as required. You can open the same tab URL as task module from Bot.
+</details>
+
+<br>
