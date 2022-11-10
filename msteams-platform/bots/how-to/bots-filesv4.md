@@ -329,4 +329,7 @@ Follow the [step-by-step guide](../../sbs-file-handling-in-bot.yml) to upload fi
 
 ## See also
 
-[Protected APIs in Microsoft Teams](/graph/teams-protected-apis)
+* [Authentication flow for bots in Microsoft Teams](authentication/auth-flow-bot.md)
+* [Have a personal (one-on-one) conversation with a Microsoft Teams bot](../../resources/bot-v3/bot-conversations/bots-conv-personal.md)
+* [Get Teams specific context for your bot](get-teams-context.md)
+* [Protected APIs in Microsoft Teams](/graph/teams-protected-apis)
