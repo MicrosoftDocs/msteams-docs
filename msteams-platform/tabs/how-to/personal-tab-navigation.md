@@ -53,7 +53,7 @@ After you register the handler, it helps you to address the navigational request
 
 ## Return focus to host app
 
-After the user starts using elements within a tab, by default focus remains with the elements of your iFrame until the user selects outside of it. If it's a part of the user navigating with keyboard shortcuts (tab or F6) you can again focus to the host app. You can do this by using the [pages.returnFocus()](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest#@microsoft-teams-js-pages-returnfocus&preserve-view=true) function. The `returnFocus()` function accepts a boolean indicating the direction to advance focus within the host, `true` for forward and `false` for backwards. Generally, forward results in the search bar being highlighted and backwards results in the app bar being highlighted.
+After the user starts using elements within a tab, by default focus remains with the elements of your iFrame until the user selects outside of it. If it's a part of the user navigating with keyboard shortcuts (tab or F6), you can again focus to the host app. You can focus on the host app by using the [pages.returnFocus()](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest#@microsoft-teams-js-pages-returnfocus&preserve-view=true) function. The `returnFocus()` function accepts a boolean indicating the direction to advance focus within the host, `true` for forward and `false` for backwards. Generally, forward results in the search bar being highlighted and backwards results in the app bar being highlighted.
 
 ## See also
 
