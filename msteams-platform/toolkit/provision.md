@@ -11,17 +11,17 @@ zone_pivot_groups: teams-app-platform
 
 # Provision cloud resources
 
-TeamsFx integrates with Azure and Microsoft 365 cloud, which allows you to place your application in Azure with a single command. TeamsFx integrates with Azure Resource Manager that enables you to provision Azure resources, which your application needs for code approach.
+TeamsFx integrates with Azure and the Microsoft 365 cloud, which allows you to place your application in Azure with a single command. TeamsFx integrates with Azure Resource Manager, which enables you to provision Azure resources that your application needs for code approach.
 
 ::: zone pivot="visual-studio-code"
 
 ## Provision using Teams Toolkit in Visual Studio Code
 
-Provision is performed with single command in Teams Toolkit for Visual Studio Code or TeamsFx CLI. For more information, see [Provision Azure-based app](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=8)
+Provision is performed with single command in Teams Toolkit for Visual Studio Code or TeamsFx CLI. For more information, see [provision Azure-based app](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=8)
 
 ## Create Resources
 
-When you trigger provision command in Teams Toolkit or TeamsFx CLI, you can get the following resources:
+When you trigger the provision command in Teams Toolkit or TeamsFx CLI, you can get the following resources:
 
 * Microsoft Azure Active Directory (Azure AD) application under your Microsoft 365 tenant.
 * Teams app registration under your Microsoft 365 tenant's Teams platform.
@@ -30,7 +30,7 @@ When you trigger provision command in Teams Toolkit or TeamsFx CLI, you can get 
 When you create a new project, you can use all the Azure resources. The ARM template defines all the Azure resources and helps to create required Azure resources during provision. When you [add new capability resource](./add-resource.md) to an existing project, the updated ARM template reflects the latest change.
 
 > [!NOTE]
-> Azure services incur costs in your subscription, for more information on cost estimation, see [the pricing calculator](https://azure.microsoft.com/pricing/calculator/).
+> Azure services incur costs in your subscription. For more information on cost estimation, see [pricing calculator](https://azure.microsoft.com/pricing/calculator/).
 
 The following list shows the resource creation for different types of app and Azure resources:
 <br>
@@ -65,7 +65,7 @@ The following list shows the resource creation for different types of app and Az
 |Resource|Purpose| Description|
 |----------|--------------------------------|-----|
 | App service plan for function app | Host the function app |Not applicable |
-| Function app | Host your Azure functions APIs | Adds user assigned identity to access other Azure resources. <br /> Adds Cross-origin resource sharing (CORS) rule to allow requests from your tab app <br /> Adds authentication setting that only allows requests from your Teams app. <br /> Adds app settings required by [TeamsFx SDK](https://www.npmjs.com/package/@microsoft/teamsfx) |
+| Function app | Host your Azure functions APIs | Adds a user assigned identity to access other Azure resources. <br /> Adds Cross-origin resource sharing (CORS) rule to allow requests from your tab app <br /> Adds an authentication setting that only allows requests from your Teams app. <br /> Adds app settings required by [TeamsFx SDK](https://www.npmjs.com/package/@microsoft/teamsfx) |
 | Azure storage for function app | Required to create function app |Not applicable|
 | User assigned identity | Authenticate Azure service-to-service requests | Shared across different capabilities and resources |
 
@@ -103,7 +103,7 @@ The following list shows the resource creation for different types of app and Az
 
 |Resources|Purpose of this resource|
 |----------|--------------------------------|
-| Azure Key Vault Service | Manage secrets (e.g. Azure AD app client secret) used by other Azure Services |
+| Azure Key Vault Service | Manage secrets (for example, Azure AD app client secret) used by other Azure Services |
 | User Assigned Identity | Authenticate Azure service-to-service requests |
 
 </details>
@@ -111,40 +111,40 @@ The following list shows the resource creation for different types of app and Az
 
 ## Customize resource provision
 
-Teams Toolkit enables you to use an infrastructure-as-code approach to define Azure resources that you want to provision, and how you want to configure. The tool uses ARM template to define Azure resources. The ARM template is a set of bicep files that defines the infrastructure and configuration for your project. You can customize Azure resources by modifying the ARM template. For more information, see [bicep document](/azure/azure-resource-manager/bicep).
+Teams Toolkit enables you to use an infrastructure-as-code approach to define the Azure resources that you want to provision and how you want to configure. The tool uses ARM template to define Azure resources. The ARM template is a set of bicep files that defines the infrastructure and configuration for your project. You can customize Azure resources by modifying the ARM template. For more information, see [bicep document](/azure/azure-resource-manager/bicep).
 
-Provision with ARM involves changing the following sets of files, parameters and templates:
+Provision with ARM involves changing the following sets of files, parameters, and templates:
 
 * ARM parameter files (`azure.parameters.{your_env_name}.json`) located at `.fx/configs` folder, for passing parameters to templates.
 * ARM template files located at `templates/azure`, this folder contains following files:
 
-| File | Function | Allow customization |
-| --- | --- | --- |
-| main.bicep | Provide entry point for Azure resource provision | Yes |
-| provision.bicep | Create and configure Azure resources | Yes |
-| config.bicep | Add TeamsFx required configurations to Azure resources | Yes |
-| provision/xxx.bicep | Create and configure each Azure resource consumed by `provision.bicep` | Yes |
-| teamsfx/xxx.bicep | Add TeamsFx required configurations to each Azure resource consumed by `config.bicep`| No |
+   | File | Function | Allow customization |
+   | --- | --- | --- |
+   | main.bicep | Provide an entry point for Azure resource provision | Yes |
+   | provision.bicep | Create and configure Azure resources | Yes |
+   | config.bicep | Add TeamsFx required configurations to Azure resources | Yes |
+   | provision/xxx.bicep | Create and configure each Azure resource consumed by `provision.bicep` | Yes |
+   | teamsfx/xxx.bicep | Add TeamsFx required configurations to each Azure resource consumed by `config.bicep`| No |
 
 > [!NOTE]
-> When you add resources or capabilities to your project, `teamsfx/xxx.bicep` will be regenerated, you can't customize the same. To modify the bicep files, you can use Git to track your changes to `teamsfx/xxx.bicep` files, which helps you to not lose changes while adding resources or capabilities.
+> When you add resources or capabilities to your project, `teamsfx/xxx.bicep` is regenerated, you can't customize the same. To modify the bicep files, you can use Git to track your changes to `teamsfx/xxx.bicep` files, which helps you not lose changes while adding resources or capabilities.
 
 ### Azure AD parameters
 
-The ARM template files use placeholders for parameters. The purpose of these placeholders is to ensure creation of new resources for you in new environment. The actual values are resolved from `.fx/states/state.{env}.json`.
+The ARM template files use placeholders for parameters. The purpose of these placeholders is to ensure the creation of new resources for you in new environment. The actual values are resolved from `.fx/states/state.{env}.json`.
 
-There are two types of parameters such as Azure AD application related parameters and Azure resource-related parameters.
+There are two types of parameters such as: Azure AD application-related parameters and Azure resource-related parameters.
 
 ##### Azure AD application-related parameters
 
 | Parameter name | Default value place holder | Meaning of the place holder | How to customize |
 | --- | --- | --- | --- |
-| Microsoft 365 ClientId | {{state.fx-resource-aad-app-for-teams.clientId}} | Your app's Azure AD app client id created during provision | [Use an existing Azure AD app for your bot](#use-an-existing-azure-ad-app-for-your-bot) |
-| Microsoft 365 ClientSecret | {{state.fx-resource-aad-app-for-teams.clientSecret}} | Your app's Azure AD app client secret created during provision | [Use an existing Azure AD app for your Teams app](#use-an-existing-azure-ad-app-for-your-teams-app) |
+| Microsoft 365 ClientId | {{state.fx-resource-aad-app-for-teams.clientId}} | Your app's Azure AD app client Id is created during provision | [Use an existing Azure AD app for your bot](#use-an-existing-azure-ad-app-for-your-bot) |
+| Microsoft 365 ClientSecret | {{state.fx-resource-aad-app-for-teams.clientSecret}} | Your app's Azure AD app client secret is created during provision | [Use an existing Azure AD app for your Teams app](#use-an-existing-azure-ad-app-for-your-teams-app) |
 | Microsoft 365 TenantId | {{state.fx-resource-aad-app-for-teams.tenantId}} | Tenant Id of your app's Azure AD app | [Use an existing Azure AD app for your Teams app](#use-an-existing-azure-ad-app-for-your-teams-app)  |
 | Microsoft 365 OAuthAuthorityHost | {{state.fx-resource-aad-app-for-teams.oauthHost}} | OAuth authority host of your app's Azure AD app | [Use an existing Azure AD app for your Teams app](#use-an-existing-azure-ad-app-for-your-teams-app) |
 | botAadAppClientId | {{state.fx-resource-bot.botId}} | Bot's Azure AD app client Id created during provision | [Use an existing Azure AD app for your bot](#use-an-existing-azure-ad-app-for-your-bot) |
-| botAadAppClientSecret | {{state.fx-resource-bot.botPassword}} | Bot's Azure AD app client secret created during provision | [Use an existing Azure AD app for your bot](#use-an-existing-azure-ad-app-for-your-bot) |
+| botAadAppClientSecret | {{state.fx-resource-bot.botPassword}} | Bot's Azure AD app client secret is created during provision | [Use an existing Azure AD app for your bot](#use-an-existing-azure-ad-app-for-your-bot) |
 
 ##### Azure resource-related parameters
 
@@ -155,9 +155,9 @@ There are two types of parameters such as Azure AD application related parameter
 
 #### Referencing environment variables in parameter files
 
-If you don't want to hardcode the values in parameter files, for example, when the value is a secret. The parameter files support referencing the values from environment variables. You can use syntax `{{$env.YOUR_ENV_VARIABLE_NAME}}` in parameter values for the tool to resolve from current environment variable.
+If you don't want to hardcode the values in parameter files, for example, when the value is a secret. The parameter files support referencing the values from environment variables. You can use the syntax `{{$env.YOUR_ENV_VARIABLE_NAME}}` in parameter values for the tool to resolve the current environment variable.
 
-The following example reads the value of `mySelfHostedDbConnectionString` parameter from environment variable `DB_CONNECTION_STRING`:
+The following example reads the value of the `mySelfHostedDbConnectionString` parameter from the environment variable `DB_CONNECTION_STRING`:
 
 ```json
 ...
@@ -167,7 +167,7 @@ The following example reads the value of `mySelfHostedDbConnectionString` parame
 
 #### Customize ARM template files
 
-If the predefined templates doesn't meet your application requirement, you can customize the ARM templates under `templates/azure` folder. For example, you can customize the ARM template to create some additional Azure resources for your app. You need to have basic knowledge of bicep language, which is used to author ARM template. You can get started with bicep at [bicep documentation](/azure/azure-resource-manager/bicep/).
+If the predefined templates doesn't meet your application requirement, you can customize the ARM templates under `templates/azure` folder. For example, you can customize the ARM template to create some additional Azure resources for your app. You need to have basic knowledge of the bicep language, which is used to author ARM template. You can get started with bicep at [bicep documentation](/azure/azure-resource-manager/bicep/).
 
 > [!NOTE]
 > The ARM template is shared by all environments. You can use [conditional deployment](/azure/azure-resource-manager/bicep/conditional-resource-deployment) if the provision behavior varies between environments.
@@ -175,8 +175,8 @@ If the predefined templates doesn't meet your application requirement, you can c
 To ensure the TeamsFx tool functions properly, ensure you customize ARM template, which satisfies the following requirement. If you use other tool for further development, you can ignore these requirements.
 
 * Keep the folder structure and file name unchanged. The tool may append new content to existing files when you add more resources or capabilities to your project.
-* Keep the name of auto-generated parameters as well as its property names unchanged. The auto-generated parameters may be used when you add more resources or capabilities to your project.
-* Keep the output of auto-generated ARM template unchanged. You can add additional outputs to ARM template. The output is `.fx/states/state.{env}.json` and can be used in other features such as deploy, validate manifest file.
+* Keep the name of auto-generated parameters and its property names unchanged. The auto-generated parameters may be used when you add more resources or capabilities to your project.
+* Keep the output of the auto-generated ARM template unchanged. You can add additional outputs to the ARM template. The output is `.fx/states/state.{env}.json` and can be used in other features such as deploy, validate manifest file.
 
 ### Customization scenarios
 
@@ -184,7 +184,7 @@ You can customize the following scenarios:
 
 #### Use an existing Azure AD app for your Teams app
 
-You can add following configuration snippet to `.fx/configs/config.{env}.json` file to use an Azure AD app created by yourself for your Teams app. To create an Azure AD app, see <https://aka.ms/teamsfx-existing-aad-doc>.
+You can add the following configuration snippet to `.fx/configs/config.{env}.json` file to use an Azure AD app created by yourself for your Teams app. To create an Azure AD app, see <https://aka.ms/teamsfx-existing-aad-doc>.
 
 ```json
 "auth": {
@@ -195,7 +195,7 @@ You can add following configuration snippet to `.fx/configs/config.{env}.json` f
 }
 ```
 
-After adding the snippet, add your secret to related environment variable so the tool can resolve the actual secret during provision.
+After adding the snippet, add your secret to the related environment variable so the tool can resolve the actual secret during provision.
 
 > [!NOTE]
 > Ensure not to share the same Azure AD app in multiple environments. If you don't have permission to update the Azure AD app, you can get a warning with instructions about how to manually update the Azure AD app. Follow the instructions to update your Azure AD app after provision.
@@ -215,7 +215,7 @@ After adding the preceding snippet, add your secret to related environment varia
 
 #### Skip adding user for SQL database
 
-If you have insufficient permission error when the tool tries to add user to SQL database, you can add the following configuration snippet to `.fx/configs/config.{env}.json` file to skip adding SQL database user:
+If you have an insufficient permission error when the tool tries to add a user to the SQL database, you can add the following configuration snippet to `.fx/configs/config.{env}.json` file to skip adding the SQL database user:
 
 ```json
 "skipAddingSqlUser": true
@@ -526,7 +526,7 @@ The following example reads the value of `mySelfHostedDbConnectionString` parame
 
 If the predefined templates don't meet your application requirement, you can customize the ARM templates under `templates/azure` folder. For example, you can customize the ARM template to create some extra Azure resources for your app. You need to have basic knowledge of bicep language, which is used to author ARM template.
 
-To ensure the TeamsFx tool functions properly, customize ARM template, that satisfies the following requirement:
+To ensure the TeamsFx tool functions properly, customize ARM template that satisfies the following requirement:
 
 * Ensure that the folder structure and file name remain unchanged. The tool may append new content to the existing files when you add more resources or capabilities to your project.
 * Ensure that the name of auto-generated parameters and its property names remain unhanged. The auto-generated parameters may be used when you add more resources or capabilities to your project.
