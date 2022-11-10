@@ -335,7 +335,7 @@ items:
 
           1. Select **Add scope** to save.
 
-         :::image type="content" source="~/assets/images/bots/addscope.png" alt-text="Screenshot showing configuring scope.":::
+             :::image type="content" source="~/assets/images/bots/addscope.png" alt-text="Screenshot showing configuring scope.":::
 
        Your Application ID URI is created with **Scope name**.
 
