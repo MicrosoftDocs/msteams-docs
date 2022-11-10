@@ -12,7 +12,7 @@ ms.author: v-amprasad
 
 The document guides you on how to add link unfurling to your app manifest using Developer Portal and manually. With link unfurling, your app can register to receive an `invoke` activity when URLs with a particular domain are pasted into the compose message area. The `invoke` contains the full URL that was pasted into the compose message area, and you can respond with a card that the user can unfurl, providing additional information or actions. This works similar to a search command with the URL serving as the search term. You can now add link unfurling to Microsoft Teams without installing app.
 
-:::image type="content" source="../../assets/images/tdp/link-unfurling-adaptive-cards1.png" alt-text="Screenshot shows the link unfurling expereince in a tree chat for a Teams app installed or not installed in Teams and other apps when the link is pasted in Teams compose message area." lightbox="../../assets/images/tdp/link-unfurling-adaptive-cards1.png":::
+:::image type="content" source="../../assets/images/tdp/link-unfurling-adaptive-cards1.png" alt-text="Screenshot shows the link unfurling experience in a tree chat for a Teams app installed or not installed in Teams and other apps when the link is pasted in Teams compose message area." lightbox="../../assets/images/tdp/link-unfurling-adaptive-cards1.png":::
 
 > [!NOTE]
 >
@@ -97,7 +97,7 @@ For a complete manifest example, see [manifest reference](~/resources/schema/man
 > [!NOTE]
 > Currently, zero install for link unfurling is available only in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
 
-Zero install link unfurling helps you unfurl previews for your shared links even before a user  discovered or installed your app in Teams. You can anonymously unfurl cards with a new invoke request or create a pre-authenticated Adaptive Card preview for users before they install or authenticate your app.
+Zero install link unfurling helps you unfurl previews for your shared links even before a user discovered or installed your app in Teams. You can anonymously unfurl cards with a new invoke request or create a pre-authenticated Adaptive Card preview for users before they install or authenticate your app.
 
 The following image provides a sequential flow to enable and use zero install link unfurling:
 
