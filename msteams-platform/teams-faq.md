@@ -23,7 +23,7 @@ Resolution-to connect the Azure to MPN settings below developer tab.
 <br>
 
 <details>
-<summary>Partner reported that the tab menu was showing a white screen under the "more" section on the Teams mobile iOS client and for Teams dark mode. We have reproduced the issue with the provided details and observed that it's a common issue for Teams mobile iOS clients and only for dark mode. So, we've raised a bug request for the same</summary>
+<summary>Partner reported that the tab menu was showing a white screen under the "more" section on the Teams mobile iOS client and for Teams dark mode. We've reproduced the issue with the provided details and observed that it's a common issue for Teams mobile iOS clients and only for dark mode. So, we've raised a bug request for the same</summary>
 
 Platform Bug
 </details>
@@ -33,7 +33,7 @@ Platform Bug
 
 <br>
 <details>
-<summary>The bot is'nt supposed to crash when the card is invalid. It can fail to display it, but it shouldn't crash. Also the behavior should be consistent between web and mobile.</summary>
+<summary>The bot isn't supposed to crash when the card is invalid. It can fail to display it, but it shouldn't crash. Also the behavior should be consistent between web and mobile.</summary>
 
 Work with Universal Actions for Adaptive Cards - Teams | Microsoft Docs to validate.
 
@@ -43,13 +43,13 @@ Work with Universal Actions for Adaptive Cards - Teams | Microsoft Docs to valid
 <details>
 <summary>How can I remove specific messages from bot history? The only way I've found requires an activity ID (UpdateActivityAsync). Is there a way to get the chat history and find an activity ID of a specific message?</summary>
 
-Use [Delete messages-Bot framework's DeleteActivity](~/bots/how-to/update-and-delete-bot-messages?tabs=dotnet#delete-messages) method.
+Use Delete messages-Bot framework's DeleteActivity //  ~/bots/how-to/update-and-delete-bot-messages?tabs=dotnet#delete-messages // method.
 
 </details>
 
 <br>
 <details>
-<summary>How can I test the validity of the card schema via code, to avoid this in the future?</summary>
+<summary>How can I test the validity of the card schema via code, to avoid it in the future?</summary>
 
 Provided steps to test/validate adaptive card schema:“Adaptive cards editor(preview)” option from the Teams apps >>Developer portal >> Tools" and asked to refer Schema Explorer | Adaptive Cards.
 
@@ -60,7 +60,7 @@ Provided steps to test/validate adaptive card schema:“Adaptive cards editor(pr
 ## Microsoft Graph
 
 <details>
-<summary>We are wondering when the user sets the preferred time to get a notification, can we also get their timezone automatically? Any function may be in graph API where we can get the user's location?</summary>
+<summary>We're wondering when the user sets the preferred time to get a notification, can we also get their timezone automatically? Any function may be in graph API where we can get the user's location?</summary>
 
 <br>
 Response:
@@ -72,7 +72,7 @@ You can use the following Grap API Get user mailbox settings - Microsoft Graph v
 
 <br>
 <details>
-<summary>Customer was looking for support to deploy the code in azure using teams toolkit, also asked few queries related to graph api get user profile photo.</summary>
+<summary>Customer was looking for support to deploy the code in Azure using teams toolkit, also asked few queries related to graph api get user profile photo.</summary>
 
 <br>
 Shared references to deploy the code using toolkit: Create a new Teams app using Teams Toolkit - Teams | Microsoft Docs
@@ -90,7 +90,7 @@ Also, provided guidance how they can call Graph API get user profile photo.
 <summary>Notification Instability</summary>
 
 <br>
-Customer is using bot builder proactive message sample. Sample will not save object references. So, it is working with initial run and failing after that. Recommended to save conversation references to database and use the same for building conversation object to send proactive message.
+Customer is using bot builder proactive message sample. Sample won't save object references. So, it's working with initial run and failing after it. Recommended to saving conversation references to database and use the same for building conversation object to send proactive message.
 
 </details>
 
@@ -109,7 +109,7 @@ You need to fetch PC ID.
 <br>
 
 <details>
-<summary>Not able to see Developer Tab in Partner Centre</summary>
+<summary>Not able to see Developer Tab in Partner Center.</summary>
 
 <br>
 
@@ -122,17 +122,17 @@ You need to fetch PC ID.
 ## Single sign-on
 
 <details>
-<summary>Partner asked few queries on SSO login flow and a way to redirect the user to auth from invoking an adaptive card. Also Partner needs a way to access the PROD app package and resources from azure since they lost access to prod subscription.</summary>
+<summary>Partner asked few queries on SSO login flow and a way to redirect the user to auth from invoking an adaptive card. Also Partner needs a way to access the PROD app package and resources from Azure since they lost access to prod subscription.</summary>
 
 <br>
-you can open the authentication page in the task module when clicks on the button. We do have a sample for opening the task module on button click mentioned here BotBuilder-Samples/teams_task_module_bot.py at main · microsoft/BotBuilder-Samples (github.com). You can replace the taskInfo.url with your auth page.
+you can open the authentication page in the task module when selects the button. We do have a sample for opening the task module on button click mentioned here BotBuilder-Samples/teams_task_module_bot.py at main · microsoft/BotBuilder-Samples (github.com). You can replace the taskInfo.url with your auth page.
 
 </details>
 
 <br>
 
 <details>
-<summary>How we can change Application ID URI of SSO scope to use bot id also so that the consent window won't be required for Bot?</summary>
+<summary>How we can change Application ID URI of SSO scope to use bot ID also so that the consent window won't be required for Bot?</summary>
 
 <br>
 [Register your app on Azure AD](/bots/how-to/authentication/auth-aad-sso-bots#register-your-app-through-the-azure-ad-portal)
@@ -150,7 +150,7 @@ Implement react page with tab SSO and render the content as required. You can op
 
 <br>
 <details>
-<summary>When user clicks on sign in button, popup is not opening. Because partner trying to open https://login.microsoftonline.com site from sign in button click. And signin end page is showing sdk timeout error. Asked to open sign in simple start page instead of login page directly. Issue resolved by doing the same.</summary>
+<summary>When user selects sign in button, popup isn't opening. Because partner trying to open https://login.microsoftonline.com site from sign in button-click. And signin end page is showing sdk timeout error. Asked to open sign in simple start page instead of login page directly. Issue resolved by doing the same.</summary>
 
 <br>
 No resolution required.
@@ -160,21 +160,21 @@ No resolution required.
 <br>
 <details>
 <summary>Customer was facing issues with generating the access token using the endpoint oauth2/v2.0/token. with grant type as "authorization_code".
-As we discussed with AAD team for the Issue generating MS access token using(v2.0 endpoint),
-Based on the event shared (Correlation ID 73454783-f0c5-4d48-9f8a-3ea6b5bd06f3 | 2022-09-19 06:48:00Z), the issue seems to reside on the scopes encoding, i.e., the scopes were encoded twice. </summary>
+
+As we discussed with Azure AD team for the issue generating MS access token using (v2.0 endpoint), based on the event shared (Correlation ID 73454783-f0c5-4d48-9f8a-3ea6b5bd06f3 | 2022-09-19 06:48:00Z), the issue seems to reside on the scopes encoding, that is, the scopes were encoded twice. </summary>
 
 <br>
-Configure the application you're using to only execute HTML encoding of the scopes once, so the scopes can be correctly sent and evaluated by AAD.
+Configure the application you're using to only execute HTML encoding of the scopes once, so the scopes can be correctly sent and evaluated by Azure AD.
 
 </details>
 
 <br>
 
 <details>
-<summary>Implementation of Bot SSO in React .Partner is looking for guidance for the same.</summary>
+<summary>Implementation of Bot SSO in React. Partner is looking for guidance for the same.</summary>
 
 <br>
-Code samples which has been shared is in .net /Node js.
+Code sample has been shared is in .NET or Node js.
 
 </details>
 
@@ -195,10 +195,10 @@ Customer to upgrade the teams JavaScript client SDK to (@microsoft/teams-js": "^
 ## Task module
 
 <details>
-<summary>Partner reported issue with inconsistent behaviour of closing the task module in desktop and android. The current behaviour in mobile client will not be a blocker for partner since they can close it by clicking ‘ok’ in mobile. If partner wants to close the task module manually in desktop, then you can pass some string in the value property instead of passing it as empty.</summary>
+<summary>Partner reported issue with inconsistent behavior of closing the task module in desktop and android. The current behavior in mobile client won't be a blocker for partner since they can close it by clicking ‘ok’ in mobile. If partner wants to close the task module manually in desktop, then you can pass some string in the value property instead of passing it as empty.</summary>
 
 <br>
-No resolution required from the docs ( Platform Bug).
+No resolution required from the docs (Platform bug).
 
 </details>
 
