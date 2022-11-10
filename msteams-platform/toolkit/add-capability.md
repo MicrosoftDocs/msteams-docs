@@ -23,6 +23,7 @@ Adding capabilities with Teams Toolkit helps you to include additional features 
 |**Scenario-based Teams app**|             |
 | Notification bot | Notification bot proactively sends messages in Teams channel or group chat or personal chat. You can trigger the notification bot with a HTTP request, such as cards or texts. |SSO-enabled tab, tab|
 | Command bot | Command bot allows you to automate repetitive tasks using a command bot. It responds to simple commands sent in chats with adaptive cards. |SSO-enabled tab, tab|
+| Workflow bot| Workflow bot allows users to interact with an Adaptive Card enabled by the Adaptive Card action handler feature in the workflow bot app.|SSO-enabled tab, tab|
 
 > [!NOTE]
 > You can add tabs up to 16 instances. As for your bot and message extension, you can add one for each instance at a time.
@@ -88,11 +89,13 @@ The following table shows the changes that can be seen in the files of your app 
 |Bot, message extension and tab|Includes bot or tab-related&nbsp;information in the teamsfx and provision files that are for integrating Azure functions.|Files under `templates/azure/teamsfx` are updated, and `templates/azure/provision/xxx`.bicep files are regenerated.|
 |Bot, message extension and tab|Ensures your project is set with right configurations for newly added capability.|Files under `.fx/config` are regenerated|
 
-## Step-by-step guide
+## Step-by-step guides
 
-* Follow the [step-by-step](../sbs-gs-commandbot.yml) guide to build command bot in Microsoft Teams
+* Follow the [step-by-step](../sbs-gs-commandbot.yml) guide to build command bot in Microsoft Teams.
 
 * Follow the [step-by-step](../sbs-gs-notificationbot.yml) guide to build notification bot in Microsoft Teams.
+
+* Follow the [step-by-step](../sbs-gs-workflow-bot.yml) guide to build workflow bot in Microsoft Teams.
 
 ## See also
 

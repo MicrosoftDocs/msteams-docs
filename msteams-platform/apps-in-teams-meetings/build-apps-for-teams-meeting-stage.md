@@ -16,14 +16,31 @@ To invoke share to stage, users can select the **Share to Stage** icon on the to
 
 ## App manifest settings for apps in meeting stage
 
-To share an app to the meeting stage, update the `context` property in the app manifest as follows:
+To share an app to the meeting stage, you must configure the context and RSC permissions in the app manifest:
 
-```json
-"context":[ 
-    "meetingSidePanel", 
-    "meetingStage" 
-     ] 
-```
+1. Update the `context` property in the app manifest as follows:
+
+    ```json
+    "context":[ 
+        "meetingSidePanel", 
+        "meetingStage" 
+         ] 
+    ```
+
+2. Obtain the RSC permissions by configuring the `authorization` property, and the `name` and `type` in the `resourceSpecific` field as follows:
+
+    ```json
+    "authorization": {
+        "permissions": { 
+        "resourceSpecific": [
+        { 
+         "name": "MeetingStage.Write.Chat",
+         "type": "Delegated"
+        }
+        ]
+    }
+    }
+    ```
 
 ## Advanced share to stage APIs
 
@@ -53,22 +70,7 @@ The `shareAppContentToStage` API enables you to share specific parts of your app
 
 ### Prerequisite
 
-* To use the `shareAppContentToStage` API, you must obtain the RSC permissions. In the app manifest, configure the `authorization` property, and the `name` and `type` in the `resourceSpecific` field. For example:
-
-    ```json
-    "authorization": {
-        "permissions": { 
-        "resourceSpecific": [
-        { 
-         "name": "MeetingStage.Write.Chat",
-         "type": "Delegated"
-        }
-        ]
-    }
-    }
-    ```
-
-* `appContentUrl` must be allowed by `validDomains` array inside manifest.json, else the API returns a 501 error.
+`appContentUrl` must be allowed by `validDomains` array inside manifest.json, else the API returns a 501 error.
 
 ### Query parameter
 
@@ -260,6 +262,26 @@ To share the entire app to stage, in the app manifest, you must configure `meeti
 > [!NOTE]
 > For your app to pass validation, when you create a deep link from your website, web app, or Adaptive Card, use **Share in meeting** as the string or copy.
 
+## Build an in-meeting document signing app
+
+You can build an in-meeting app for enabling meeting participants to sign documents in real time. It facilitates reviewing and signing documents in a single session. The participants can sign the documents using their current tenant identity.
+
+You can use an in-meeting signing app to:
+
+- Add documents to be reviewed during a meeting
+- Share documents to be reviewed to main stage
+- Sign documents using the signer’s identity
+
+The participants can review and sign documents, such as purchase agreements and purchase orders.
+
+:::image type="content" source="../assets/images/sbs-inmeeting-doc-signing/final-output.png" alt-text="In-meeting document signing app":::
+
+The following participant roles may be involved during the meeting:
+
+- **Document creator**: This role can add their own documents to be reviewed and signed.
+- **Signer**: This role can sign reviewed documents.
+- **Reader**: This role can view the documents added to the meeting.
+
 ## Code sample
 
 |Sample name | Description | C# | Node.js |
@@ -267,6 +289,10 @@ To share the entire app to stage, in the app manifest, you must configure `meeti
 |Meeting stage sample | Sample app to show a tab in meeting stage for collaboration | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) |
 | In-meeting notification | Demonstrates how to implement in-meeting notification using bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs) |
 | In-meeting document signing | Demonstrates how to implement a document signing Teams app. Includes sharing specific app content to stage, Teams SSO and user specific stage view. | [View](https://github.com/officedev/microsoft-teams-samples/tree/main/samples/meetings-share-to-stage-signing/csharp) | NA |
+
+## Step-by-step guide
+
+Follow the [step-by-step guide](../sbs-inmeeting-document-signing.yml) to build an in-meeting document signing app.
 
 ## See also
 
