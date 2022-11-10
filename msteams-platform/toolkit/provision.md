@@ -11,7 +11,7 @@ zone_pivot_groups: teams-app-platform
 
 # Provision cloud resources
 
-TeamsFx integrates with Azure and the Microsoft 365 cloud, which allows you to place your application in Azure with a single command. TeamsFx integrates with Azure Resource Manager, which enables you to provision Azure resources that your application needs for code approach.
+TeamsFx integrates with Azure and the Microsoft 365 cloud, which allows you to place your application in Azure with a single command. TeamsFx integrates with Azure Resource Manager (ARM), which enables you to provision Azure resources that your application needs for code approach.
 
 ::: zone pivot="visual-studio-code"
 
