@@ -14,15 +14,17 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Microsoft Teams conversation bot allows users to interact with your web service through text, interactive cards, and task modules. Basic conversations are handled through the Bot Framework connector, a single REST API. This API enables your bot to communicate with Teams and other channels. The Bot Builder SDK provides the following features:
+    Microsoft Teams conversation bot allows users to interact with your web service through text, interactive cards, and task modules. Basic conversations are handled through the Bot Framework connector, a single REST API. This API enables your bot to communicate with Teams and other channels. 
+    
+    **Key features of Bot Builder SDK**
 
-    * Easy access to the Bot Framework connector.
-    * Additional functionality to manage conversation flow and state.
-    * Simple way to incorporate cognitive services, such as Natural Language Processing (NLP).
+    * Provides access to the Bot Framework connector.
+    * Manages conversation flow and state.
+    * Incorporates cognitive services, such as Natural Language Processing (NLP).
 
     When your bot is added to a group or a team, an introduction message is sent. The message provides a brief description of the bot's features and how to use them.
  
-    This step-by-step guide helps you to create a basic conversation bot in the Teams application. You'll see the following output:
+    This step-by-step guide helps you to create a conversation bot in the Teams application. You'll see the following output:
 
     :::image type="content" source="./assets/images/conversation-bot/final-output.png" alt-text="Final output."lightbox="assets/images/conversation-bot/final-output.png":::
 
