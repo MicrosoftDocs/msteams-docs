@@ -60,15 +60,15 @@ You can use the `\r` or `\n` escape sequences for newlines in lists. Using `\n\n
 
 On the desktop, Adaptive Card Markdown formatting appears as shown in the following image in both web browsers and in the Teams client application:
 
-:::image type="content" source="../../assets/images/Cards/Adaptive-markdown-desktop-client.png" alt-text="adaptive markdown desktop client":::
+:::image type="content" source="../../assets/images/Cards/Adaptive-markdown-desktop-client.png" alt-text="Screenshot shows an example of Adaptive Card Markdown formatting in Teams desktop client.":::
 
 On iOS, Adaptive Card Markdown formatting appears as shown in the following image:
 
-:::image type="content" source="../../assets/images/Cards/Adaptive-markdown-iOS-75.png" alt-text="Adaptive Card Markdown formatting in iOS":::
+:::image type="content" source="../../assets/images/Cards/Adaptive-markdown-iOS-75.png" alt-text="Screenshot shows an example of Adaptive Card Markdown formatting in Teams iOS Platform.":::
 
 On Android, Adaptive Card Markdown formatting appears as shown in the following image:
 
-:::image type="content" source="../../assets/images/Cards/Adaptive-markdown-Android.png" alt-text="Adaptive Card Markdown formatting in Android":::
+:::image type="content" source="../../assets/images/Cards/Adaptive-markdown-Android.png" alt-text="Screenshot shows an example of Adaptive Card Markdown formatting in Teams android Platform.":::
 
 For more information, see [text features in Adaptive Cards](/adaptive-cards/create/textfeatures).
 
@@ -180,7 +180,7 @@ The following table describes the newly supported user mention IDs:
 
 |IDs  | Supporting capabilities | Description | Example |
 |----------|--------|---------------|---------|
-| Azure AD object ID | Bot, Connector |  Azure AD user’s object ID | 49c4641c-ab91-4248-aebb-6a7de286397b |
+| Azure AD Object ID | Bot, Connector |  Azure AD user’s Object ID | 49c4641c-ab91-4248-aebb-6a7de286397b |
 | UPN | Bot, Connector | Azure AD user’s UPN | john.smith@microsoft.com |
 
 #### User mention in bots with Adaptive Cards
@@ -409,7 +409,7 @@ In an Adaptive Card, you can use the `msteams` property to add the ability to di
 }
 ```
 
-When users hover over the image, an expand icon appears at the top right corner as shown in the following image:
+When users hover over the image, an expand icon appears at the upper-right corner as shown in the following image:
 
 :::image type="content" source="../../assets/images/Cards/adaptivecard-hover-expand-icon.png" alt-text="Adaptive Card with expandable image":::
 
@@ -527,7 +527,7 @@ Adaptive Card in Teams supports overflow menu. You can populate an overflow menu
 > [!NOTE]
 > An Adaptive Card supports up to six primary actions to be viewed on the card. Any additional primary action is viewed in the overflow menu.
 
-  ![overflow](~/assets/images/Cards/overflow-menu-gif.gif)
+  :::image type="content" source="../../assets/images/Cards/overflow-menu-gif.gif" alt-text="GIF shows the overflow menu experience in an Adaptive Card.":::
 
 ### Enable overflow menu
 
@@ -535,7 +535,7 @@ To enable overflow menu, configure the `mode` property with the value as `primar
 
 |Property|Type|Required|Description|
 |---|---|---|---|
-|`mode`| Enum (Primary, Secondary) |No |Whether or not the Action is a primary or secondary Action. Secondary actions will be collapsed into an overflow menu.|
+|`mode`| Enum (Primary, Secondary) |No |Whether or not the action is a primary or secondary action. Secondary actions will be collapsed into an overflow menu.|
 
 The following is an example of the `mode` property in the `actions` type and the `ActionSet` element:
 
@@ -615,15 +615,15 @@ When a user selects the overflow menu on mobile, the Adaptive Card displays the 
 
 ---
 
-The overflow menu behaves differently on a bot sent card and a message extension card. The overflow menu on a bot sent card shows up as a popup context menu and on the message extension card it shows up at the top-right corner under the more (**...**) icon.
+The overflow menu behaves differently on a bot sent card and a message extension card. The overflow menu on a bot sent card shows up as a pop-up context menu and on the message extension card it shows up at the upper-right corner under the more (**...**) icon.
 
-:::image type="content" source="../../assets/images/Cards/overflow-menu-card-beahvior.png" alt-text="The screenshot shows an example of the overflow menu behavior in a bot sent card and a messaging extension card.":::
+:::image type="content" source="../../assets/images/Cards/overflow-menu-card-beahvior.png" alt-text="Screenshot shows an example of the overflow menu behavior in a bot sent card and a messaging extension card.":::
 
 ## Format cards with HTML
 
 The following card types support HTML formatting in Teams:
 
-* Office 365 Connector cards: Limited Markdown and HTML formatting is supported in Office 365 Connector cards.
+* Office 365 Connector cards: Limited Markdown and HTML formatting are supported in Office 365 Connector cards.
 * Hero and thumbnail cards: HTML tags are supported for simple cards, such as the hero and thumbnail cards.
 
 Formatting is different between the desktop and the mobile versions of Teams for Office 365 Connector cards and simple cards. In this section, you can go through the HTML format example for connector cards and simple cards.
@@ -651,11 +651,11 @@ In connector cards, newlines are rendered in HTML using the `<p>` tag.
 
 On the desktop, HTML formatting for connector cards appears as shown in the following image:
 
-:::image type="content" source="../../assets/images/Cards/Connector-desktop-html-combined.png" alt-text="HTML formatting for connector cards in the desktop client":::
+:::image type="content" source="../../assets/images/Cards/Connector-desktop-html-combined.png" alt-text="Screenshot shows HTML formatting for connector cards in the desktop client.":::
 
 On iOS, HTML formatting appears as shown in the following image:
 
-:::image type="content" source="../../assets/images/Cards/connector-iphone-html-combined-80.png" alt-text="HTML formatting for connector cards in the iOS client":::
+:::image type="content" source="../../assets/images/Cards/connector-iphone-html-combined-80.png" alt-text="Screenshot shows HTML formatting for connector cards in the iOS client.":::
 
 Connector cards using HTML for iOS include the following issues:
 
@@ -664,7 +664,7 @@ Connector cards using HTML for iOS include the following issues:
 
 On Android, HTML formatting appears as shown in the following image:
 
-:::image type="content" source="../../assets/images/Cards/connector-android-html-combined.png" alt-text="HTML formatting for connector cards in the Android client":::
+:::image type="content" source="../../assets/images/Cards/connector-android-html-combined.png" alt-text="Screenshot shows HTML formatting for connector cards in the Android client.":::
 
 ### Format sample for HTML connector cards
 
@@ -741,17 +741,17 @@ As there are resolution differences between the desktop and mobile platform, for
 
 On the desktop, HTML formatting appears as shown in the following image:
 
-:::image type="content" source="../../assets/images/Cards/card-formatting-xml-desktop-v2.png" alt-text="HTML formatting in the desktop client":::
+:::image type="content" source="../../assets/images/Cards/card-formatting-xml-desktop-v2.png" alt-text="Screenshot shows HTML formatting in the desktop client.":::
 
 On iOS, HTML formatting appears as shown in the following image:
 
-:::image type="content" source="../../assets/images/Cards/card-formatting-xml-mobile-v2.png" alt-text="HTML formatting in the iOS client":::
+:::image type="content" source="../../assets/images/Cards/card-formatting-xml-mobile-v2.png" alt-text="Screenshot shows HTML formatting in the iOS client.":::
 
 Character formatting, such as bold and italic isn't rendered on iOS.
 
 On Android, HTML formatting appears as shown in the following image:
 
-:::image type="content" source="../../assets/images/Cards/card-formatting-xml-android-60.png" alt-text="HTML formatting in the Android client":::
+:::image type="content" source="../../assets/images/Cards/card-formatting-xml-android-60.png" alt-text="Screenshot shows HTML formatting in the Android client.":::
 
 Character formatting, such as bold and italic displays correctly on Android.
 
