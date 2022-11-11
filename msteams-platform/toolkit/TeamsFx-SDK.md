@@ -10,7 +10,7 @@ ms.date: 11/29/2021
 
 # TeamsFx SDK
 
-TeamsFx helps to reduce your tasks by using Microsoft Teams Single-Sign-On (Teams SSO) and accessing cloud resources down to single line statements with zero configuration. You can use TeamsFx SDK in browser and Node.js environment. TeamsFx core functionalities can be accessed in client and server environment. You can write user authentication code in a simplified way for:
+TeamsFx helps to reduce your tasks by using Microsoft Teams single sign-on (SSO) and accessing cloud resources down to single line statements with zero configuration. TeamsFx SDK can be used in browser and Node.js environments. TeamsFx core functionalities can be accessed in client and server environments. You can write user authentication code for:
 
 * Teams tab
 * Teams bot
@@ -25,16 +25,18 @@ You need to install the following tools and set up your development environment:
    | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use version 1.55 or later. |
    | &nbsp; | [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)| A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use 4.0.0 version. |
    | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. Use the latest v16 LTS release.|
-   | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call - all in one place.|
+   | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call and all in one place.|
    | &nbsp; | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
 
 > [!NOTE]
 > If your project has installed `botbuilder` related [packages](https://github.com/Microsoft/botbuilder-js#packages) as dependencies, ensure they are of the same version.
 
+Ensure that the `botbuilder`-related [packages](https://github.com/Microsoft/botbuilder-js#packages) installed as dependencies for your project are the same version.
+
 You must have working knowledge of:
 
 * [Source code](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk)
-* [Package (NPM)](https://www.npmjs.com/package/@microsoft/teamsfx)
+* [Package (npm)](https://www.npmjs.com/package/@microsoft/teamsfx)
 * [API reference documentation](https://aka.ms/teamsfx-sdk-help)
 * [Samples](https://github.com/OfficeDev/TeamsFx-Samples)
 
@@ -55,7 +57,7 @@ npm install @microsoft/teamsfx
 
 ### TeamsFx class
 
-TeamsFx class instance access all TeamsFx settings from environment variables by default. You can also set customized configuration values to override the default values. Check [override configuration](#override-configuration-for-teamsfx-class) for details.
+TeamsFx class instance access all TeamsFx settings from the environment variables by default. You can also set customized configuration values to override the default values. Check [override configuration](#override-configuration-for-teamsfx-class) for details.
 When creating a TeamsFx instance, you also need to specify the identity type.
 There are two identity types:
 
@@ -106,7 +108,6 @@ There are three credential classes to simplify authentication. Here's the corres
 <summary><b> User Identity in browser environment </b></summary>
 
 `TeamsUserCredential` represents Teams current user's identity. For the first time user's credentials are authenticated, then Teams SSO does the On-Behalf-Of flow for token exchange. SDK uses this credential when you choose user identity in browser environment.
-
 
 Below is an example to create `TeamsUserCredential`:
 
@@ -197,6 +198,7 @@ const ssoPrompt = new TeamsBotSsoPrompt(authConfig, loginUrl, TeamsBotSsoPromptI
 TeamsFx SDK provides several functions to ease the configuration for third-party libraries. They're located under [core folder](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/core).
 
 * Microsoft Graph Service:`createMicrosoftGraphClient`, `createMicrosoftGraphClientWithCredential` and `MsGraphAuthProvider` help to create authenticated Graph instance.
+
 > [!NOTE]
 > `createMicrosoftGraphClient` function has been deprecated and will be removed from the SDK in the future, we recommend you to use `createMicrosoftGraphClientWithCredential` instead for better coding experience.
 
@@ -211,6 +213,7 @@ TeamsFx SDK provides several functions to ease the configuration for third-party
   > `getTediousConnectionConfig` function has been deprecated and will be removed from the SDK in the future, we recommend you compose your own Tedious configuration for better flexibility
 
 ### Override configuration for TeamsFx class
+
 > [!NOTE]
 > TeamsFx class has been deprecated and will be removed from the SDK in the future, please use `TeamsUserCredential`, `OnBehalfOfUserCredential` and `AppCredential` instead.
 
@@ -273,6 +276,7 @@ try {
   }
 }
 ```
+
 > [!NOTE]
 > TeamsFx class has been deprecated and will be removed from the SDK in the future, and above code is not recommended, you can use `TeamsUserCredential` instead as below:
 
@@ -317,6 +321,7 @@ This section provides several code snippets for common scenarios that are relate
     ```
 
     2. Create `TeamsUserCredential` instance
+
     ```typescript
     const authConfig: TeamsUserCredentialAuthConfig = {
       clientId: process.env.REACT_APP_CLIENT_ID,
