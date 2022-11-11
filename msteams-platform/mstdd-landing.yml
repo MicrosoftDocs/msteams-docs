@@ -75,7 +75,7 @@ landingContent:
         url: samples/collaboration-control.md
       - text: Build shared channels
         url: concepts/build-and-test/Shared-channels.md
-      - text: Enable bots to receive all conversation messages without @mentioned
+      - text: Enable bots to receive all chat messages without being @mentioned
         url: bots/how-to/conversations/channel-messages-with-rsc.md
         
 
