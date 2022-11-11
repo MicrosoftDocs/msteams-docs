@@ -13,9 +13,11 @@ This section contains the frequently asked questions and the answers.
 
 <br>
 <details>
-<summary>Publisher Attestation issue - the app needed to be published first(I attached the screenshot when I tried to submit the attestation). Before doing the Publisher Attestation. I think this is most likely to connect the Azure AD to an MPN account.</summary>
+<summary>How can I connect Azure AD to an MPN account?</summary>
 
-Publisher verification overview - Microsoft Entra | Microsoft LearnMark an app as publisher verified - Microsoft Entra | Microsoft Learn
+Question: Publisher Attestation issue - the app needed to be published first (I attached the screenshot when I tried to submit the attestation). Before doing the Publisher Attestation. I think this is most likely to connect the Azure AD to an MPN account.
+
+Solution: Publisher verification overview - Microsoft Entra | Microsoft LearnMark an app as publisher verified - Microsoft Entra | Microsoft Learn
 Docs didn't help - had to raise  PC ticket
 Resolution-to connect the Azure to MPN settings below developer tab.
 
@@ -23,9 +25,11 @@ Resolution-to connect the Azure to MPN settings below developer tab.
 <br>
 
 <details>
-<summary>Partner reported that the tab menu was showing a white screen under the "more" section on the Teams mobile iOS client and for Teams dark mode. We've reproduced the issue with the provided details and observed that it's a common issue for Teams mobile iOS clients and only for dark mode. So, we've raised a bug request for the same</summary>
+<summary>How can I remove the 'white screen' showing under the 'more' section on Teams mobile iOS client for Teams dark mode?</summary>
 
-Platform Bug
+Question: Partner reported that the tab menu was showing a white screen under the "more" section on the Teams mobile iOS client and for Teams dark mode. We've reproduced the issue with the provided details and observed that it's a common issue for Teams mobile iOS clients and only for dark mode. So, we've raised a bug request for the same.
+
+Solution: Platform Bug
 </details>
 <br>
 
