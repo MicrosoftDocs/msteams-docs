@@ -26,7 +26,7 @@ items:
     
     This step-by-step guide helps you to build tabs with Adaptive Cards on desktop and mobile. You'll see the following output:
 
-    ![Desktop Mobile screenshot](~/assets/images/adaptive-cards/desktop-mobile-screenshot.png)
+    :::image type="content" source="~/assets/images/adaptive-cards/desktop-mobile-screenshot.png" alt-text="Screenshot shows build tabs with Adaptive Cards on desktop and mobile.":::
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -77,34 +77,34 @@ items:
         
     1. Select **Type of App** as **Multi Tenant** for **Microsoft App ID**.
 
-        ![Multi Tenant](~/assets/images/adaptive-cards/multi-tenant.png)
+        :::image type="content" source="~/assets/images/adaptive-cards/multi-tenant.png" alt-text="Screenshot shows how to select Multi tenant.":::
 
         > [!NOTE]
         > In **Creation type** of Microsoft App ID section, **Create new Microsoft App ID** is already selected to create a new bot. You can also select **Use existing app registration**, if you've already registered a bot. Enter Microsoft App ID in **Existing app ID** field, and enter value in **Existing app password** field.
 
     1. Select **Review + create**.
 
-        ![Create Azure Bot](~/assets/images/adaptive-cards/create-azure-bot.png)
+        :::image type="content" source="~/assets/images/adaptive-cards/create-azure-bot.png" alt-text="Screenshot shows to select review + create.":::
 
     1. If the validation passes, select **Create**.
 
         It takes a few moments for your bot service to be provisioned.
 
-        ![Azure Bot validation](~/assets/images/adaptive-cards/validation-pane.png)
+        :::image type="content" source="~/assets/images/adaptive-cards/validation-pane.png" alt-text="Screenshot shows validation passes and your bot service to be provisioned.":::
 
     1. Select **Go to resource**. The bot and the related resources are listed in the resource group.
 
-        ![Go to resource](~/assets/images/adaptive-cards/go-to-resource-card.png)
+        :::image type="content" source="~/assets/images/adaptive-cards/go-to-resource-card.png" alt-text="Screenshot shows the bot and the related resources are listed in the resource group.":::
 
         Now your Azure bot is created.
 
-        ![Azure bot resource created](~/assets/images/adaptive-cards/azure-bot-ui.png)
+        :::image type="content" source="~/assets/images/adaptive-cards/azure-bot-ui.png" alt-text="Screenshot shows the Azure bot is created.":::
 
     **To create client secret**
 
     1. In **Settings**, select **Configuration**. Save the **Microsoft App ID** (client ID) for future reference.
 
-        ![Microsoft App ID](~/assets/images/adaptive-cards/config-microsoft-app-id.png)
+        :::image type="content" source="~/assets/images/adaptive-cards/config-microsoft-app-id.png" alt-text="Screenshot shows to select secret client.":::
 
         > [!NOTE]
         > Ensure **MultiTenant** is selected under **Bot Type**.
@@ -115,22 +115,21 @@ items:
 
     1. In the **Client secrets** section, select **New client secret**.**Add a client secret** window appears.  
 
-        ![New Client secret](~/assets/images/meetings-side-panel/newclientsecret.png)
+        :::image type="content" source="~/assets/images/meetings-side-panel/newclientsecret.png" alt-text="Screenshot shows add a client secret window.":::
         
-
     1. Enter **Description** and select **Add**.
  
-        ![Client secret](~/assets/images/adaptive-cards/client-secret.png)
+        :::image type="content" source="~/assets/images/adaptive-cards/client-secret.png" alt-text="Screenshot shows how to enter description.":::
 
     1. In the **Value** column, select **Copy to clipboard** and save the client secret ID for future reference.
 
-        ![Client secret value](~/assets/images/adaptive-cards/client-secret-value.png)
+        :::image type="content" source="~/assets/images/adaptive-cards/client-secret-value.png" alt-text="Screenshot shows how to save the client secret ID for future reference.":::
        
     **To add the Microsoft Teams channel**
 
     1. Go to **Home**.
 
-        ![Bot home page](~/assets/images/adaptive-cards/bot-home-page.png)
+        :::image type="content" source="~/assets/images/adaptive-cards/bot-home-page.png" alt-text="Screenshot shows home page of the Azure AD.":::
 
     1. Open your bot, which is listed in the **Recent resources** section.
     1. Select **Channels** in the left pane and select **Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.
@@ -139,11 +138,11 @@ items:
 
     1. Select the checkbox to accept the terms of service and select **Agree**.</br>
 
-        ![Select terms of service](~/assets/images/adaptive-cards/select-terms-of-service.png)
+        :::image type="content" source="~/assets/images/adaptive-cards/select-terms-of-service.png" alt-text="Screenshot shows how to select the checkbox to accept the terms of service.":::
 
     1. Select **Save**.
 
-        ![Select Teams](~/assets/images/adaptive-cards/select-teams.png)
+       :::image type="content" source="~/assets/images/adaptive-cards/select-teams.png" alt-text="Screenshot shows how to save Microsoft Teams channel.":::
 
     **To add messaging endpoint**
 
@@ -155,7 +154,7 @@ items:
 
     1. In **Messaging endpoint**, add the HTTPS URL generated from ngrok and at the end of the URL add **/api/messages**.
 
-        ![Messaging endpoint](~/assets/images/adaptive-cards/ngrok-messaging-endpoint.png)
+        :::image type="content" source="~/assets/images/adaptive-cards/ngrok-messaging-endpoint.png" alt-text="Screenshot shows how to add messaging endpoints.":::
 
     1. Select **Apply**.
 
@@ -185,11 +184,11 @@ items:
     1. Select **Web**.
     1. Enter **Redirect URIs** as `https://token.botframework.com/.auth/web/redirect` and select **Configure**.
 
-        ![Configure web redirect url](~/assets/images/adaptive-cards/configure-web-redirect-url.png)
+        :::image type="content" source="~/assets/images/adaptive-cards/configure-web-redirect-url.png" alt-text="Screenshot shows how to enter redirect URIs.":::
 
         The Redirect URI is added to the Azure bot resource.
 
-        ![Display web redirect url](~/assets/images/adaptive-cards/web-redirect-url-display.png)
+        :::image type="content" source="~/assets/images/adaptive-cards/web-redirect-url-display.png" alt-text="Screenshot shows redirect URI is added to the Azure bot resource.":::
 
     **To expose API endpoint**
 
@@ -197,7 +196,7 @@ items:
     1. Select **Set** for the Application ID URI.
     1. Use the **Application ID URL** shown and append `api://` instead of `https://` in the **ngrok url** and add at the beginning of the App ID URL.
 
-        ![App ID URI](~/assets/images/adaptive-cards/app-id-url.png)
+        :::image type="content" source="~/assets/images/adaptive-cards/app-id-url.png" alt-text="Screenshot shows the application ID URL.":::
 
     1. Select **Save**.
     1. Select **Add a scope**.
@@ -214,7 +213,7 @@ items:
 
     1. Ensure that **State** is set to **Enabled**.
 
-        ![Add a scope](~/assets/images/adaptive-cards/add-scope.png)
+        :::image type="content" source="~/assets/images/adaptive-cards/add-scope.png" alt-text="Screenshot shows to ensure the state is enabled.":::
 
     1. Select **Add scope**. The scope name automatically matches the Application ID URI, with **/access_as_user** added to the end.
 
@@ -224,7 +223,7 @@ items:
     * 1fec8e78-bce4-4aaf-ab1b-5451cc387264 (Teams mobile or desktop application)            
     * 5e3ce6c0-2b1f-4285-8d4b-75ee78787346 (Teams web application)</br>
 
-        ![Add client application](~/assets/images/adaptive-cards/add-client-application.png)      
+        :::image type="content" source="~/assets/images/adaptive-cards/add-client-application.png" alt-text="Screenshot shows how to add client secret.":::    
     
     **To add any necessary API permissions for downstream calls**
 
@@ -233,14 +232,14 @@ items:
     1. Select **Microsoft API's**. Then select **Microsoft Graph** and select **Delegated permissions**.
     1. Add any user **Delegated permissions** that your app requires to downstream APIs, for example, User.Read.</br>
 
-        ![API permissions](~/assets/images/adaptive-cards/add-permissions.png)
+        :::image type="content" source="~/assets/images/adaptive-cards/add-permissions.png" alt-text="Screenshot shows how to add API permissions.":::
 
     **To enable implicit grant**
     
     1. Select **Authentication** from the left pane.
     1. Select **Access tokens** and **ID tokens** checkboxes.</br>
 
-        ![Authentication Tokens](~/assets/images/adaptive-cards/authentication-tokens.png)
+        :::image type="content" source="~/assets/images/adaptive-cards/authentication-tokens.png" alt-text="Screenshot shows how to add authentication tokens.":::
 
     1. Select **Save** to save the changes.
 
@@ -252,7 +251,7 @@ items:
         > [!NOTE]
         > If you're already testing your bot in Teams, you must sign out this app and sign out Teams. Then sign in again to see this change.
 
-        ![Update Manifest](~/assets/images/adaptive-cards/manifest.png)
+        :::image type="content" source="~/assets/images/adaptive-cards/manifest.png" alt-text="Screenshot shows how to update the manifest.":::
 
     **To set up Bot Service connection**
 
@@ -285,7 +284,7 @@ items:
     1. Select **Code** and select the dropdown.
     1. Select **Download ZIP**.
 
-        ![Repo Download](~/assets/images/adaptive-cards/repo-download.png)
+        :::image type="content" source="~/assets/images/adaptive-cards/repo-download.png" alt-text="Screenshot shows how to configure and run your bot sample.":::
 
     1. Ensure to note the Path of the repository that is downloaded.
     1. In the File Explorer, Select the **Project**.
@@ -297,7 +296,7 @@ items:
         > [!NOTE]
         > You can obtain the `MicrosoftAppId` from the bot's Configuration page. The `MicrosoftAppPassword` is the Value for client secret ID that you saved previously.
 
-        ![Appsettings Json](~/assets/images/adaptive-cards/appsettings-json.png)
+        :::image type="content" source="~/assets/images/adaptive-cards/appsettings-json.png" alt-text="Screenshot shows how to appsetting file in visual studio.":::
 
     1. Select **Save**.
 
@@ -312,7 +311,7 @@ items:
     1. Open the `manifest.json` file in Visual Studio Code.
     1. In the `manifest.json` file, find **{contentBotId}** and **{Microsoft App ID} add your Microsoft App ID and save.
 
-        ![Manifest config](~/assets/images/adaptive-cards/manifest-vsc.png)
+        :::image type="content" source="~/assets/images/adaptive-cards/manifest-vsc.png" alt-text="Screenshot shows how to add your Microsoft app ID.":::
 
     1. In the File Explorer, go to the **AppPackage** folder.
     1. Zip the contents of the **AppPackage** folder to create `manifest.zip`.
@@ -324,13 +323,13 @@ items:
     1. To upload `manifest.zip`, select **Store > Manage your apps > Upload a custom app** and open `manifest.zip`.
     1. Select **Add** to add the tab to your chat.
 
-        ![Tab in Teams app](~/assets/images/adaptive-cards/tab-in-teams.png)
+        :::image type="content" source="~/assets/images/adaptive-cards/tab-in-teams.png" alt-text="Screenshot shows how to Tab in Teams app.":::
 
         You can interact with this tab by signing in.
 
     1. Send a message to the tab.
 
-        ![Desktop Mobile screenshot](~/assets/images/adaptive-cards/desktop-mobile-screenshot.png)
+        :::image type="content" source="~/assets/images/adaptive-cards/desktop-mobile-screenshot.png" alt-text="Screenshot shows how to send a message to the tab.":::
 
 - title: Interacting with the Tab in Teams
   durationInMinutes: 1
@@ -342,39 +341,39 @@ items:
     1. In the left pane of the Teams, select the ellipses ●●● and choose your app from the list.
     1. Tab showing Adaptive card with action controls.
 
-        ![Tab showing Adaptive card with action controls](~/assets/images/adaptive-cards/adaptive-cards-tab-action-controls.png)
+        :::image type="content" source="~/assets/images/adaptive-cards/adaptive-cards-tab-action-controls.png" alt-text="Screenshot shows how tab showing Adaptive card with action controls.":::
     
     1. Select **Sign In** and choose an account to access the tab.
 
-        ![Sign In](~/assets/images/adaptive-cards/sign-in-page.png)
+        :::image type="content" source="~/assets/images/adaptive-cards/sign-in-page.png" alt-text="Screenshot shows how to sign in and choose an account to access the tab.":::
 
     1. Select **Show Task Module** on the home page.
 
-        ![Show Task Module](~/assets/images/adaptive-cards/tab-home-page.png)
+        :::image type="content" source="~/assets/images/adaptive-cards/tab-home-page.png" alt-text="Screenshot shows the task module on home page.":::
 
     1. Tab/fetch is the first invoke request that your bot receives when a user opens an Adaptive Card tab. When your bot receives the request, it either sends a tab continue response or a tab auth response.
 
-        ![Sample Task Module](~/assets/images/adaptive-cards/sample-task-module.png)
+        :::image type="content" source="~/assets/images/adaptive-cards/sample-task-module.png" alt-text="Screenshot shows how to bot sends a tab continue response or a tab auth response.":::
 
     1. **Submit function of Adaptive Card**
        **task/submit** request is triggered to your bot with the corresponding data through the Action. 
 
-        ![Task Submit card](~/assets/images/adaptive-cards/task-submit.png)
+        :::image type="content" source="~/assets/images/adaptive-cards/task-submit.png" alt-text="Screenshot shows submit function of Adaptive Card.":::
 
     1. Tab keeps you signed in unless you select **Sign out**.
 
-        ![Sign out](~/assets/images/adaptive-cards/sign-out.png)
+        :::image type="content" source="~/assets/images/adaptive-cards/sign-out.png" alt-text="Screenshot shows how to sign out in adaptive card.":::
 
     1. Refresh to **Sign In** again.
 
-        ![Success Sign out](~/assets/images/adaptive-cards/success-sign-out.png)
+        :::image type="content" source="~/assets/images/adaptive-cards/success-sign-out.png" alt-text="Screenshot shows how to sign in again in adaptive card.":::
 
 - title: Complete challenge
   durationInMinutes: 1
   content: |
     Did you come up with something like this?
 
-    ![Desktop Mobile screenshot](~/assets/images/adaptive-cards/desktop-mobile-screenshot.png)
+    :::image type="content" source="~/assets/images/adaptive-cards/desktop-mobile-screenshot.png" alt-text="Screenshot shows final output of the tab with adaptive card.":::
     
 - content: |
     You've completed the tutorial to get started with Adaptive cards for Microsoft Teams using the Bot Framework.
