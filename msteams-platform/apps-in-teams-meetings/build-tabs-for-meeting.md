@@ -211,7 +211,7 @@ The webview of the app remains in the Document Object Model (DOM). The webview u
 > [!NOTE]
 > If the app caching is not enabled, the webview is recreated every time the users go out and return to the app.
 
-Following are the parameters to control the conditions for the apps to be added or removed from the cache:
+Following are the parameters to control the conditions for the apps to be added or removed from the cache (based on the configuration updates, the parameters can be modified):
 
 * Only one app is supported in the cache for app caching. When there's more than one app with app caching in a meeting, then the least recently used app is removed from the cache.
 * When the app is cached, the memory (working set) usage must not exceed 225 MB.
@@ -269,7 +269,7 @@ The following are the limitations for app caching:
 
 * App caching happens on a per app (not on a per tab) basis within the same window.
 
-* Apps are expected to sleep when cached that is it uses minimal compute or network resources and minimizes SDK requests. All the register handlers and the following SDK requests are allowed when the app is cached:
+* Apps are expected to sleep when cached (use minimal compute or network resources and minimizes SDK requests). All the register handlers and the following SDK requests are allowed when the app is cached:
 
   * `initialize`
   * `notifyappLoaded`
