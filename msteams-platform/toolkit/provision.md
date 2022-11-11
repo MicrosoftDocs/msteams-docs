@@ -185,8 +185,8 @@ To ensure the TeamsFx tool functions properly, ensure you customize ARM template
 
 You can customize the following scenarios:
 
-* [Use an existing Azure AD app for your Teams app](#use-an-existing-azure-ad-app-for-your-teams-app)
-* [Use an existing Azure AD app for your bot](#use-an-existing-azure-ad-app-for-your-bot)
+* [Use and existing Azure AD app for your Teams app](#use-an-existing-azure-ad-app-for-your-teams-app)
+* [Use an existing Azure AD app for your bot](#use-an-existing-azure-ad-app-for-your-bot-1)
 
 #### Use an existing Azure AD app for your Teams app
 
