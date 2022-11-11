@@ -21,24 +21,24 @@ To share an app to the meeting stage, you must configure the context and RSC per
 1. Update the `context` property in the app manifest as follows:
 
     ```json
-    "context":[ 
-        "meetingSidePanel", 
-        "meetingStage" 
-         ] 
+    "context": [
+      "meetingSidePanel",
+      "meetingStage"
+    ]
     ```
 
 2. Obtain the RSC permissions by configuring the `authorization` property, and the `name` and `type` in the `resourceSpecific` field as follows:
 
     ```json
     "authorization": {
-        "permissions": { 
+      "permissions": {
         "resourceSpecific": [
-        { 
-         "name": "MeetingStage.Write.Chat",
-         "type": "Delegated"
-        }
+          {
+            "name": "MeetingStage.Write.Chat",
+            "type": "Delegated"
+          }
         ]
-    }
+      }
     }
     ```
 
@@ -132,8 +132,8 @@ The JSON response body for the `getAppContentStageSharingState` API is:
 
 ```json
 {
-   "isAppSharing":true
-} 
+  "isAppSharing": true
+}
 ```
 
 ### Response codes
@@ -223,9 +223,10 @@ The query parameters for the app context are:
 Ensure that all the query parameters are properly URI encoded and the app context has to be encoded twice in the final URL. Following is an example.
 
 ```json
-var appContext= JSON.stringify({ "appSharingUrl" : "https://teams.microsoft.com/extensibility-apps/meetingapis/view", "appId": "9cc80a93-1d41-4bcb-8170-4b9ec9e29fbb", "useMeetNow":false })
-var encodedContext = encodeURIComponent(appcontext).replace(/'/g,"%27").replace(/"/g,"%22")
-var encodedAppContext = encodeURIComponent(encodedContext).replace(/'/g,"%27").replace(/"/g,"%22")
+var appContext= JSON.stringify({ 
+  "appSharingUrl" : "https://teams.microsoft.com/extensibility-apps/meetingapis/view",
+  "appId": "9cc80a93-1d41-4bcb-8170-4b9ec9e29fbb", "useMeetNow":false
+}) var encodedContext = encodeURIComponent(appcontext).replace(/'/g,"%27").replace(/"/g,"%22") var encodedAppContext = encodeURIComponent(encodedContext).replace(/'/g,"%27").replace(/"/g,"%22")
 ```
 
 A deep link can be launched either from the Teams web or from the Teams desktop client.
