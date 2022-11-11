@@ -21,11 +21,11 @@ Solution: Publisher verification overview - Microsoft Entra | Microsoft LearnMar
 Docs didn't help - had to raise  PC ticket
 Resolution-to connect the Azure to MPN settings below developer tab.
 
-<!--
+
 Links found:
-1. https://learn.microsoft.com/en-us/partner-center/partner-center-account-setup#update-preferred-email
-1. https://learn.microsoft.com/en-us/partner-center/merge-accounts
--->
+1. [Update preferred email](partner-center/partner-center-account-setup.md#update-preferred-email)
+1. [Merge your partner account with another partner account](partner-center/merge-accounts.md)
+
 </details>
 <br>
 
@@ -608,6 +608,8 @@ Send an email to <a href="mailto:teamsubm@microsoft.com">teamsubm@microsoft.com<
 <br>
 
 </details>
+
+<br>
 
 <details>
 
