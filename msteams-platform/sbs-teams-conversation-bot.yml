@@ -329,7 +329,7 @@ items:
     | **Result:** The bot responds to the message and mention the user. | **Result:** The bot sends the welcome card for you to interact with. |  **Result:** The bot sends an one-on-one message to each member in the current conversation. |
     | **Valid scopes:** personal, group chat, team chat. | **Valid scopes:** personal, group chat, team chat. |  **Valid scopes:** personal, group chat, team chat. |
 
-    You can select an option from the command list by typing **@TeamsConversationBot** or **What can I do?** text above in the compose area and send it.
+    You can select an option from the command list by typing **@TeamsConversationBot** or **What can I do?** text in the compose area and send it.
 
     :::image type="content" source="./assets/images/conversation-bot/final-output_1.png" alt-text="Final output":::
 
