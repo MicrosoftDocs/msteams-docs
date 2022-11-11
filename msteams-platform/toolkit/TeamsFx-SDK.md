@@ -29,9 +29,7 @@ You need to install the following tools and set up your development environment:
    | &nbsp; | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
 
 > [!NOTE]
-> If your project has installed `botbuilder` related [packages](https://github.com/Microsoft/botbuilder-js#packages) as dependencies, ensure they are of the same version.
-
-Ensure that the `botbuilder`-related [packages](https://github.com/Microsoft/botbuilder-js#packages) installed as dependencies for your project are the same version.
+> Ensure that the `botbuilder`related [packages](https://github.com/Microsoft/botbuilder-js#packages) installed as dependencies for your project are the same version.
 
 You must have working knowledge of:
 
@@ -57,8 +55,9 @@ npm install @microsoft/teamsfx
 
 ### TeamsFx class
 
-TeamsFx class instance access all TeamsFx settings from the environment variables by default. You can set customized configuration values to override the default values. For more information, check [override configuration](#override-configuration-for-teamsfx-class) for details.
+TeamsFx class instance access all TeamsFx settings from the environment variables by default. You can set customized configuration values to override the default values. For more information, see [override configuration](#override-configuration-for-teamsfx-class) for details.
 When creating a TeamsFx instance, you need to specify the identity type.
+
 There are two types of identity:
 
 * **User Identity**: Represents the current user of Teams.
@@ -96,7 +95,7 @@ You can learn more about user identity and application identity in the following
 </details>
 
 > [!NOTE]
-> TeamsFx class has been deprecated and will be removed from the SDK in the future, please use `TeamsUserCredential`, `OnBehalfOfUserCredential` and `AppCredential` instead.
+> TeamsFx class has been deprecated and will be removed from the SDK, use `TeamsUserCredential`, `OnBehalfOfUserCredential`, and `AppCredential` instead.
 
 ### Credential
 
@@ -199,8 +198,8 @@ TeamsFx SDK provides several functions to ease the configuration for third-party
 
 * Microsoft Graph Service:`createMicrosoftGraphClient`, `createMicrosoftGraphClientWithCredential`, and `MsGraphAuthProvider` helps to create authenticated Graph instance.
 
-> [!NOTE]
-> `createMicrosoftGraphClient` function has been deprecated and will be removed from the SDK.We recommend you to use `createMicrosoftGraphClientWithCredential` instead for better coding experience.
+  > [!NOTE]
+  > `createMicrosoftGraphClient` function has been deprecated and will be removed from the SDK. We recommend you to use `createMicrosoftGraphClientWithCredential` instead for better coding experience.
 
 * SQL:`getTediousConnectionConfig` returns a tedious connection config.
 
@@ -313,46 +312,46 @@ This section provides several code snippets for common scenarios that are relate
 
     1. Import the classes needed.
 
-    ```typescript
-    import {
-      createMicrosoftGraphClientWithCredential,
-      TeamsUserCredential,
-    } from "@microsoft/teamsfx";
-    ```
+       ```typescript
+       import {
+        createMicrosoftGraphClientWithCredential,
+        TeamsUserCredential,
+       } from "@microsoft/teamsfx";
+       ```
 
     2. Create `TeamsUserCredential` instance.
 
-    ```typescript
-    const authConfig: TeamsUserCredentialAuthConfig = {
-      clientId: process.env.REACT_APP_CLIENT_ID,
-      initiateLoginEndpoint: process.env.REACT_APP_START_LOGIN_PAGE_URL,
-    };
+       ```typescript
+       const authConfig: TeamsUserCredentialAuthConfig = {
+       clientId: process.env.REACT_APP_CLIENT_ID,
+       initiateLoginEndpoint: process.env.REACT_APP_START_LOGIN_PAGE_URL,
+       };
 
-    const teamsUserCredential = new TeamsUserCredential(authConfig);
-    ```
+       const teamsUserCredential = new TeamsUserCredential(authConfig);
+       ```
 
     2. Use `teamsUserCredential.login()` to get user consent.
 
-    ```typescript
-    // Put these code in a call-to-action callback function to avoid browser blocking automatically showing up pop-ups.
-    await teamsUserCredential.login(["User.Read"]); // Login with scope
-    ```
+       ```typescript
+       // Put these code in a call-to-action callback function to avoid browser blocking automatically showing up pop-ups.
+       await teamsUserCredential.login(["User.Read"]); // Login with scope
+       ```
 
     3. You can initialize a TeamsFx instance and graph client and get information from MS Graph by this client.
 
-    ```typescript
-    try {
-      const graphClient = createMicrosoftGraphClientWithCredential(teamsUserCredential, ["User.Read"]); // Initializes MS Graph SDK using our MsGraphAuthProvider
-      const profile = await graphClient.api("/me").get();
-    } catch (err: unknown) {
-      // ErrorWithCode is handled by Graph client
-      if (err instanceof GraphError && err.code?.includes(ErrorCode.UiRequiredError)) {
-        // Need to show login button to ask for user consent.
-      }
-    }
-    ```
+       ```typescript
+       try {
+        const graphClient = createMicrosoftGraphClientWithCredential(teamsUserCredential, ["User. Read"]); // Initializes MS Graph SDK using our MsGraphAuthProvider
+        const profile = await graphClient.api("/me").get();
+       } catch (err: unknown) {
+        // ErrorWithCode is handled by Graph client
+        if (err instanceof GraphError && err.code?.includes(ErrorCode.UiRequiredError)) {
+          // Need to show login button to ask for user consent.
+        }
+       }
+       ```
 
-    For more information on sample to use Graph API in tab app, see the [hello-world-tab sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-tab).
+    For more information on sample to use Graph API in tab app, see [hello-world-tab sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-tab).
 
     </details>
 
@@ -778,7 +777,7 @@ This section provides several code snippets for other scenarios that are related
 You can set customer log level and redirect outputs when using this library.
 
 > [!NOTE]
-> Logging is turned off by default, you can turn it on by setting log level.
+> Sign in is turned off by default, you can turn it on by setting log level.
 
 #### Enable log by setting log level
 
