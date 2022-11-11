@@ -409,10 +409,11 @@ For support and help on the product and services issues or developer community h
 
 <br>
 <details>
-<summary>Notification Instability</summary>
+<summary>How can I proactive bot and save conservation reference?</summary>
 
+Question: Notification Instability
 <br>
-Customer is using bot builder proactive message sample. Sample won't save object references. So, it's working with initial run and failing after it. Recommended to saving conversation references to database and use the same for building conversation object to send proactive message.
+Solution: It's recommended that you save conversation references to database and use the same for building conversation object to send proactive message.
 
 </details>
 
@@ -638,20 +639,34 @@ The following resources can also assist:
 ## Single sign-on
 
 <details>
-<summary>Partner asked few queries on SSO login flow and a way to redirect the user to auth from invoking an adaptive card. Also Partner needs a way to access the PROD app package and resources from Azure since they lost access to prod subscription.</summary>
+<summary>How can I validate an app user when they invoke an Adaptive Card? </summary>
 
+Question: Partner asked few queries on SSO login flow and a way to redirect the user to auth from invoking an adaptive card. Also Partner needs a way to access the PROD app package and resources from Azure since they lost access to prod subscription.
 <br>
-you can open the authentication page in the task module when selects the button. We do have a sample for opening the task module on button click mentioned here BotBuilder-Samples/teams_task_module_bot.py at main · microsoft/BotBuilder-Samples (github.com). You can replace the taskInfo.url with your auth page.
+Solution: You can open the authentication page in the task module when user selects the button.
+
+You can use the [code sample](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/54.teams-task-module/bots/teams_task_module_bot.py#L70) for opening the task module on button click. You can replace the taskInfo.url with your auth page.
 
 </details>
 
 <br>
 
 <details>
-<summary>How we can change Application ID URI of SSO scope to use bot ID also so that the consent window won't be required for Bot?</summary>
+<summary>Can I access the product app package from Azure AD?</summary>
 
 <br>
-[Register your app on Azure AD](/bots/how-to/authentication/auth-aad-sso-bots#register-your-app-through-the-azure-ad-portal)
+
+// Solution needed //
+
+</details>
+
+<br>
+
+<details>
+<summary>How can I change Application ID URI of SSO scope to use bot ID also so that the consent window won't be required for bot?</summary>
+
+<br>
+For more information, see [Register your app on Azure AD](/bots/how-to/authentication/auth-aad-sso-bots#register-your-app-through-the-azure-ad-portal).
 
 </details>
 
@@ -675,12 +690,13 @@ No resolution required.
 
 <br>
 <details>
-<summary>Customer was facing issues with generating the access token using the endpoint oauth2/v2.0/token. with grant type as "authorization_code".
-
-As we discussed with Azure AD team for the issue generating MS access token using (v2.0 endpoint), based on the event shared (Correlation ID 73454783-f0c5-4d48-9f8a-3ea6b5bd06f3 | 2022-09-19 06:48:00Z), the issue seems to reside on the scopes encoding, that is, the scopes were encoded twice. </summary>
+<summary>How can I generate the access token using the endpoint oauth2/v2.0/token with grant type as "authorization_code"?</summary>
 
 <br>
-Configure the application you're using to only execute HTML encoding of the scopes once, so the scopes can be correctly sent and evaluated by Azure AD.
+Question: As we discussed with Azure AD team for the issue generating MS access token using (v2.0 endpoint), based on the event shared (Correlation ID 73454783-f0c5-4d48-9f8a-3ea6b5bd06f3 | 2022-09-19 06:48:00Z), the issue seems to reside on the scopes encoding, that is, the scopes were encoded twice. </summary>
+
+<br>
+Solution: Configure the application you're using to only execute HTML encoding of the scopes once, so the scopes can be correctly sent and evaluated by Azure AD.
 
 </details>
 
