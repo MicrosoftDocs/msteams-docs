@@ -331,7 +331,7 @@ items:
 
     You can select an option from the command list by typing **@TeamsConversationBot** or **What can I do?** text above in the compose area and send it.
 
-    :::image type="content" source="./assets/images/conversation-bot/final-output_1.png" alt-text="Final output".:::
+    :::image type="content" source="./assets/images/conversation-bot/final-output_1.png" alt-text="Final output":::
 
 - title: Complete challenge
   durationInMinutes: 1
