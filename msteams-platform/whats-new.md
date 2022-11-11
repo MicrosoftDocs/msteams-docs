@@ -289,7 +289,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 **2022 November**
 
-***November 10, 2022***: [Zero install for link unfurling](messaging-extensions/how-to/link-unfurling.md#zero-install-for-link-unfurling).
+***November 11, 2022***: [Zero install for link unfurling](messaging-extensions/how-to/link-unfurling.md#zero-install-for-link-unfurling).
 
 :::column-end:::
 :::row-end:::
