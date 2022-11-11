@@ -195,11 +195,15 @@ While Live Share is in Preview, any limit to events emitted through Live Share i
 ## Microsoft Graph
 
 <details>
-<summary>We're wondering when the user sets the preferred time to get a notification, can we also get their timezone automatically? Any function may be in graph API where we can get the user's location?</summary>
+<summary>How can a user set their timezone to get notifications at a preferred time?</summary>
+
+Question: We're wondering when the user sets the preferred time to get a notification, can we also get their timezone automatically? Any function may be in graph API where we can get the user's location?
 
 <br>
-Response:
-You can use the following Grap API Get user mailbox settings - Microsoft Graph v1.0 | Microsoft Docs to get the user’s time zone like mentioned below.
+Solution:
+You can use the following Graph API [Get user mailbox settings](/graph/api/user-get-mailboxsettings.md#permissions).
+
+Microsoft Docs to get the user’s time zone as follows:
 • GET /me/mailboxSettings/timeZone
 • GET /users/{id|userPrincipalName}/mailboxSettings/timeZone
 
@@ -207,10 +211,12 @@ You can use the following Grap API Get user mailbox settings - Microsoft Graph v
 
 <br>
 <details>
-<summary>Customer was looking for support to deploy the code in Azure using teams toolkit, also asked few queries related to graph api get user profile photo.</summary>
+<summary>How can I deploy the code in Azure using teams toolkit, and use graph API get user profile photo?</summary>
+
+Question: Customer was looking for support to deploy the code in Azure using teams toolkit, also asked few queries related to graph api get user profile photo.
 
 <br>
-Shared references to deploy the code using toolkit: Create a new Teams app using Teams Toolkit - Teams | Microsoft Docs
+Solution: Shared references to deploy the code using toolkit: Create a new Teams app using Teams Toolkit - Teams | Microsoft Docs
 TeamsFx Command Line Interface - Teams | Microsoft Docs
 Also, provided guidance how they can call Graph API get user profile photo.
 
@@ -716,8 +722,7 @@ No resolution required from the docs (Platform bug).
 
 ## Teams toolkit
 
-FAQ for Provision cloud resources using Teams Toolkit // provision.md //
-
+FAQ for [Provision cloud resources](toolkit/provision.md)) using Teams Toolkit.
 <br>
 
 <details>
@@ -764,3 +769,17 @@ You can follow [provision SharePoint-based app](/microsoftteams/platform/sbs-gs-
 <br>
 
 </details>
+
+<br>
+<details>
+<summary>How can I deploy the code in Azure using teams toolkit, and use graph API get user profile photo?</summary>
+
+Question: Customer was looking for support to deploy the code in Azure using teams toolkit, also asked few queries related to graph api get user profile photo.
+
+<br>
+Solution: Shared references to deploy the code using toolkit: Create a new Teams app using Teams Toolkit - Teams | Microsoft Docs
+TeamsFx Command Line Interface - Teams | Microsoft Docs
+Also, provided guidance how they can call Graph API get user profile photo.
+
+</details>
+
