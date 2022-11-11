@@ -16,27 +16,31 @@ To invoke share to stage, users can select the **Share to Stage** icon on the to
 
 ## App manifest settings for apps in meeting stage
 
-To share an app to the meeting stage, update the `context` and `authorization` properties in the app manifest as follows:
+To share an app to the meeting stage, you must configure the context and RSC permissions in the app manifest:
 
-```json
-{ 
-"context": [
+1. Update the `context` property in the app manifest as follows:
+
+    ```json
+    "context":[ 
         "meetingSidePanel", 
         "meetingStage" 
-     ]
-    },
-  "authorization": {
-    "permissions": {
-      "orgWide": [],
-      "resourceSpecific": [
-    { 
-     "name": "MeetingStage.Write.Chat",
-     "type": "Delegated"
+         ] 
+    ```
+
+2. Obtain the RSC permissions by configuring the `authorization` property, and the `name` and `type` in the `resourceSpecific` field as follows:
+
+    ```json
+    "authorization": {
+        "permissions": { 
+        "resourceSpecific": [
+        { 
+         "name": "MeetingStage.Write.Chat",
+         "type": "Delegated"
+        }
+        ]
     }
-     ]
     }
-  }
-```
+    ```
 
 ## Advanced share to stage APIs
 
@@ -66,22 +70,7 @@ The `shareAppContentToStage` API enables you to share specific parts of your app
 
 ### Prerequisite
 
-* To use the `shareAppContentToStage` API, you must obtain the RSC permissions. In the app manifest, configure the `authorization` property, and the `name` and `type` in the `resourceSpecific` field. For example:
-
-    ```json
-    "authorization": {
-        "permissions": { 
-        "resourceSpecific": [
-        { 
-         "name": "MeetingStage.Write.Chat",
-         "type": "Delegated"
-        }
-        ]
-    }
-    }
-    ```
-
-* `appContentUrl` must be allowed by `validDomains` array inside manifest.json, else the API returns a 501 error.
+`appContentUrl` must be allowed by `validDomains` array inside manifest.json, else the API returns a 501 error.
 
 ### Query parameter
 
