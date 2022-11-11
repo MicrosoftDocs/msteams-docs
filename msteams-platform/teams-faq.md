@@ -45,7 +45,7 @@ Solution: Platform Bug
 <details>
 <summary>The bot isn't supposed to crash when the card is invalid. It can fail to display it, but it shouldn't crash. Also the behavior should be consistent between web and mobile.</summary>
 
-Work with Universal Actions for Adaptive Cards - Teams | Microsoft Docs to validate.
+[Work with Universal Actions for Adaptive Cards](task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-Universal-Actions-for-Adaptive-Cards.md)
 
 </details>
 <br>
