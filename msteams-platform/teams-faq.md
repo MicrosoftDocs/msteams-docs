@@ -43,9 +43,11 @@ Solution: Platform Bug
 
 <br>
 <details>
-<summary>The bot isn't supposed to crash when the card is invalid. It can fail to display it, but it shouldn't crash. Also the behavior should be consistent between web and mobile.</summary>
+<summary>How can I use Adaptive Cards with a bot so that the desktop app behavior is consistent between web and mobile apps?</summary>
 
-[Work with Universal Actions for Adaptive Cards](task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-Universal-Actions-for-Adaptive-Cards.md)
+Question: The bot isn't supposed to crash when the card is invalid. It can fail to display it, but it shouldn't crash. Also the behavior should be consistent between web and mobile.
+
+Solution: [Work with Universal Actions for Adaptive Cards](task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-Universal-Actions-for-Adaptive-Cards.md)
 
 </details>
 <br>
