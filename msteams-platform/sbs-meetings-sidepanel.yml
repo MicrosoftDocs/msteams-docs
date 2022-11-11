@@ -55,7 +55,7 @@ items:
    1. Select **Code**.
    1. From the dropdown menu, select **Open with GitHub Desktop**.
 
-      :::image type="content" source="./assets/images/meetings-side-panel/clonerepository_1.png" alt-text= "Screenshot showing the selection of Open with GitHub Desktop from the drop down menu.":::
+      :::image type="content" source="./assets/images/meetings-side-panel/clonerepository_1.png" alt-text= "Screenshot showing the selection of Open with GitHub Desktop from the dropdown menu.":::
 
    1. Select **Clone**. 
            
@@ -89,7 +89,7 @@ items:
     1. Enter required bot handle name in **Bot handle**.
     1. Select your **Subscription** and **Resource group** from the respective dropdown list.
        
-       :::image type="content" source="~/assets/images/meetings-side-panel/review-plus-create.png" alt-text="Screenshot showing the selection of create while creating an Azure bot.":::
+       :::image type="content" source="~/assets/images/meetings-side-panel/review-plus-create.png" alt-text="Screenshot showing the project details while creating an Azure bot.":::
     
        You can create a new resource group. Select **Create new** > enter resource name > select **OK**. Select required location from **New resource group location** dropdown list.
        For more information, see [create resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups).
@@ -220,7 +220,7 @@ items:
 
     1. Select your bot.
 
-       :::image type="content" source="~/assets/images/meetings-side-panel/appregister_2.png" alt-text="Screenshot showing the selection of app registration and selection of the bot you have created in azure portal.":::
+       :::image type="content" source="~/assets/images/meetings-side-panel/appregister_2.png" alt-text="Screenshot showing the selection of app registration and selection of the bot you have created in Azure portal.":::
 
     1. Under **Manage**, select **Expose an API**.
 
@@ -266,7 +266,7 @@ items:
   
     1. Select **Add scope**.
 
-        :::image type="content" source="~/assets/images/meetings-side-panel/addascope_2.png" alt-text="Screenshot showing the selection of Add a scope after providing all the details.":::
+        :::image type="content" source="~/assets/images/meetings-side-panel/addascope_2.png" alt-text="Screenshot showing the selection of Add scope after providing all the details.":::
 
         > [!NOTE]
         > The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.</br>
@@ -305,7 +305,7 @@ items:
 
     1. Select **Add a permission** > **Microsoft Graph**
 
-        :::image type="content" source="~/assets/images/meetings-side-panel/addpermission_1.png" alt-text="Screenshot showing the selection of Microsoft graph from API permissions."::: 
+        :::image type="content" source="~/assets/images/meetings-side-panel/addpermission_1.png" alt-text="Screenshot showing the selection of Microsoft Graph from API permissions."::: 
 
     1. Select **Delegated permissions**.
 
@@ -353,12 +353,12 @@ items:
          * Replace `"MicrosoftAppPassword"` to your bot's client secret ID **Value**.
          * Replace `"BaseUrl"` to the ngrok domain name.
 
-          :::image type="content" source="~/assets/images/meetings-side-panel/appsettings_1.png" alt-text="Screenshot showing the app settings where you need to replace MicrosoftApp ID, app password and baseurl.":::
+          :::image type="content" source="~/assets/images/meetings-side-panel/appsettings_1.png" alt-text="Screenshot showing the app settings where you need to replace MicrosoftApp ID, app password, and baseurl.":::
           
 
     1. Go to **manifest.json** in the cloned repository.
 
-         :::image type="content" source="~/assets/images/meetings-side-panel/manifestlocation_1.png" alt-text="Screenshot showing the selection of Manifest file.":::
+         :::image type="content" source="~/assets/images/meetings-side-panel/manifestlocation_1.png" alt-text="Screenshot showing the selection of manifest file.":::
     
     1. Open **manifest.json** in Visual Studio and make the following changes:
 
@@ -397,7 +397,7 @@ items:
 
           A webpage appears with a message **Your bot is ready!**.
 
-           :::image type="content" source="~/assets/images/meetings-side-panel/appisready_1.png" alt-text="Screenshot showing the app being ready."::: 
+           :::image type="content" source="~/assets/images/meetings-side-panel/appisready_1.png" alt-text="Screenshot showing the bot being ready."::: 
 
         
     # [Command line](#tab/cli)
@@ -436,7 +436,7 @@ items:
 
     1. Select **Open** to upload the .zip file that you created in the **Manifest** folder.
 
-        :::image type="content" source="~/assets/images/meetings-side-panel/selectzip_1.png" alt-text="Screenshot showing Selection of manifest zip file."::: 
+        :::image type="content" source="~/assets/images/meetings-side-panel/selectzip_1.png" alt-text="Screenshot showing selection of manifest zip file."::: 
 
     1. Select **Add**.
 
@@ -469,7 +469,7 @@ items:
 
     1. Select **Add New Agenda Item** to add a new agenda to the default agenda list.
 
-        :::image type="content" source="~/assets/images/meetings-side-panel/sidepanelinmeet_1.png" alt-text="Screenshot showing the adding of new agenda."::: 
+        :::image type="content" source="~/assets/images/meetings-side-panel/sidepanelinmeet_1.png" alt-text="Screenshot showing the addition of new agenda."::: 
 
     1. Enter a new agenda item and select **Add**.
 
