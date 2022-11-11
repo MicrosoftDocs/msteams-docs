@@ -277,7 +277,7 @@ Don't send a message in the following cases:
 
 ## Step-by-step guide
 
-Follow the [step-by-step guide](../../../sbs-teams-conversation-bot.yml), to create Teams conversation bot
+Follow the [step-by-step guide](../../../sbs-teams-conversation-bot.yml), to create Teams conversation bot.
 
 ## Next step
 

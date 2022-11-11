@@ -106,7 +106,7 @@ items:
 
        :::image type="content" source="./assets/images/conversation-bot/go-to-resource_1.png" alt-text="Go to resource card.":::
 
-       Your Azure bot is created and you can see the **Resource group** and **Subscription ID** in the Azure Bot.
+       Your Azure Bot is created and you can see the **Resource group** and **Subscription ID** in the Azure Bot.
 
        :::image type="content" source="./assets/images/conversation-bot/app-overview_1.png" alt-text="app overview." 
     
@@ -227,7 +227,7 @@ items:
         * Replace `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
         * Replace `"MicrosoftAppPassword"` to your bot's client secret ID **Value**.
         * Replace your `"MicrosoftAppTenantId"` to your tenant ID. You can obtain the tenant ID from the link of the account used to sign in to the Teams. 
-          Perform the following steps to get the link for tenantId:
+          Perform the following steps to get the link for **tenantId**:
         
           1. Select **Teams**.
 
@@ -261,7 +261,7 @@ items:
 
         :::image type="content" source="./assets/images/conversation-bot/manifest_1.png" alt-text="Manifest.":::
 
-    1. Zip the contents of the **TeamsAppManifest** folder to create **manifest.zip**.
+    1. Zip the contents of the **TeamsAppManifest** folder to create manifest.zip.
     
         > [!NOTE]
         > The `manifest.zip` must not contain any additional folders in it. It must have `manifest json` source file, `color` icon, and `outline` icon inside the zip folder.
@@ -329,9 +329,9 @@ items:
     | **Result:** The bot responds to the message and mention the user. | **Result:** The bot sends the welcome card for you to interact with. |  **Result:** The bot sends an one-on-one message to each member in the current conversation. |
     | **Valid scopes:** personal, group chat, team chat. | **Valid scopes:** personal, group chat, team chat. |  **Valid scopes:** personal, group chat, team chat. |
 
-    You can select an option from the command list by typing **@TeamsConversationBot** into the compose message area and send it.
+    You can select an option from the command list by typing **@TeamsConversationBot** or **What can I do?** text above in the compose area and send it.
 
-    :::image type="content" source="./assets/images/conversation-bot/final-output_1.png" alt-text="Final output."lightbox="assets/images/conversation-bot/final-output.png":::
+    :::image type="content" source="./assets/images/conversation-bot/final-output_1.png" alt-text="Final output".:::
 
 - title: Complete challenge
   durationInMinutes: 1
