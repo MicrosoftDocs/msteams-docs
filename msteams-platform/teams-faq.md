@@ -393,7 +393,7 @@ However, you can access the invite and manually add participant names to the **R
 
 <summary><b>Is there any support site where we can get more help on products and other issues?</b></summary>
 
-For support and help on the product and services issues or developer community help see, [Support and Feedback](microsoftteams/platform/feedback).
+For support and help on the product and services issues or developer community help see, [Support and Feedback](/microsoftteams/platform/feedback.md).
 
 </details>
 
