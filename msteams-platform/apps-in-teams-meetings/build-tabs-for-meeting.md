@@ -291,15 +291,11 @@ The following are the limitations for app caching:
 
 ### Troubleshooting
 
-<details>
-
-<summary><b>Apps are not being cached? Why is load handler not invoked on subsequent navigation?</b></summary>
+**Apps are not being cached? Why is load handler not invoked on subsequent navigation?**
 
 * If app exceeds 225 MB limit, try to keep your memory footprint under 225 MB when cached.
 
 * Check the amount of free memory on your system. App caching requires minimum of 4 GB system memory and a minimum of 1 GB free memory on Windows (500 MB free memory on Mac).
-
-</details>
 
 ## Code sample
 
