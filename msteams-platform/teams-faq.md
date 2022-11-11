@@ -258,9 +258,9 @@ Use the **User Creation Restriction** option to specify the users by synchronizi
 
 The following image shows user creation restrictions options:
 
-:::image type="content" source="../../assets/images/MoodleInstructions/faq-2.png" alt-text="sync":::
+:::image type="content" source="assets/images/MoodleInstructions/faq-2.png" alt-text="sync":::
 
-:::image type="content" source="../../assets/images/MoodleInstructions/faq-3.png" alt-text="Azure ad":::
+:::image type="content" source="assets/images/MoodleInstructions/faq-3.png" alt-text="Azure ad":::
 
 <br>
 
@@ -276,11 +276,11 @@ By default only Moodle administrators can configure synchronization. The team ow
 
 The following image shows the option **Allow configure course sync in course**:
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq-4.png" alt-text="admin":::
+:::image type="content" source="assets/images/MoodleInstructions/faq-4.png" alt-text="admin":::
 
 The following image shows synchronization of courses:
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq-5.png" alt-text="synchronization":::
+:::image type="content" source="assets/images/MoodleInstructions/faq-5.png" alt-text="synchronization":::
 
 <br>
 
@@ -328,11 +328,11 @@ Users who were unable to sign in at the start need to report the issue and verif
 
 The following image shows the error message received when user sign using their Microsoft 365 credentials:
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq-6.png" alt-text="report issue":::
+:::image type="content" source="assets/images/MoodleInstructions/faq-6.png" alt-text="report issue":::
 
 The following image shows the error in Azure portal:
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq-7.png" alt-text="Azure portal":::
+:::image type="content" source="assets/images/MoodleInstructions/faq-7.png" alt-text="Azure portal":::
 
 If the **Client secret** has expired, then user needs to generate a new **Client secret**, and update the configuration found on page. Users can sign in again after the **Client secret** has been updated, which can take up to 24 hours to re-provision.
 
@@ -348,7 +348,7 @@ Administrators can change the teams instance associated with a course through th
 
 The following image shows the teams instance:
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq-8.png" alt-text="teams instance":::
+:::image type="content" source="assets/images/MoodleInstructions/faq-8.png" alt-text="teams instance":::
 
 <br>
 
@@ -365,9 +365,9 @@ The user can face Atto Teams meeting issue if the icon reference is missing in t
 
 The following images show Toolbar icon after Toolbar configuration adjustment:
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq-9.png" alt-text="tool bar":::
+:::image type="content" source="assets/images/MoodleInstructions/faq-9.png" alt-text="tool bar":::
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq-10.png" alt-text="links icon":::
+:::image type="content" source="assets/images/MoodleInstructions/faq-10.png" alt-text="links icon":::
 
 For more information on editing Atto toolbar, see:
 
@@ -381,9 +381,9 @@ For more information on editing Atto toolbar, see:
 
 <summary><b>Do the meetings scheduled through Microsoft integration appear in Outlook or in Teams calendars? What is the standard timeline for the meetings to be displayed?</b></summary>
 
-The meetings scheduled through the app don't appear in the scheduler’s Outlook or Teams calendar as they're similar to Channel Meetings. All the members in the course channel can attend the meeting directly from the embedded channel link. For more information, see [Channel meetings] // https://www.knowledgewave.com/blog/benefits-of-channel-meetings-in-microsoft-teams //.
+The meetings scheduled through the app don't appear in the scheduler’s Outlook or Teams calendar as they're similar to Channel Meetings. All the members in the course channel can attend the meeting directly from the embedded channel link. For more information, see [Channel meetings](https://www.knowledgewave.com/blog/benefits-of-channel-meetings-in-microsoft-teams).
 
-However, you can access the invite and manually add participant names to the **Required** or **Optional** fields of the meeting invitation to display the remote meeting on their calendars. The standard timelines are based on the date the user specifies when the meeting is created. For more information, see [Limits and specifications for Teams] // /microsoftteams/limits-specifications-teams //.
+However, you can access the invite and manually add participant names to the **Required** or **Optional** fields of the meeting invitation to display the remote meeting on their calendars. The standard timelines are based on the date the user specifies when the meeting is created. For more information, see [Limits and specifications for Teams](/microsoftteams/limits-specifications-teams).
 
 <br>
 
@@ -393,7 +393,7 @@ However, you can access the invite and manually add participant names to the **R
 
 <summary><b>Is there any support site where we can get more help on products and other issues?</b></summary>
 
-For support and help on the product and services issues or developer community help see, [Support and Feedback] // /microsoftteams/platform/feedback //.
+For support and help on the product and services issues or developer community help see, [Support and Feedback](microsoftteams/platform/feedback).
 
 </details>
 
