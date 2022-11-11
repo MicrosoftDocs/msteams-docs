@@ -266,7 +266,7 @@ items:
   
     1. Select **Add scope**.
 
-        :::image type="content" source="~/assets/images/meetings-side-panel/addascope_2.png" alt-text="Screenshot showing the selection of Add scope after providing all the details.":::
+        :::image type="content" source="~/assets/images/meetings-side-panel/addascope_2.png" alt-text="Screenshot showing the selection of add a scope after providing all the details.":::
 
         > [!NOTE]
         > The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.</br>
