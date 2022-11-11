@@ -193,7 +193,7 @@ items:
 
     1. In **Messaging endpoint**, use the HTTPS URL available from ngrok and at the end of the URL add **/api/messages**.
 
-        :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/messaging-endpoint_1.png" alt-text="messaging endpoint":::
+        :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/messaging-endpoint_1.png" alt-text="messaging endpoint.":::
 
     1. Select **Apply**.
 
@@ -359,7 +359,7 @@ items:
 - title: Build and run the service
   durationInMinutes: 1
   content: |
-    **To build and run the service using the latest version of Visual Studio or Command line**
+    To build and run the service using the latest version of Visual Studio or Command line.
 
     # [Latest version of Visual Studio](#tab/latestversionofvisualstudio)
 
@@ -433,16 +433,14 @@ items:
 
        :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/addapp_1.png" alt-text="Add the app":::
 
-       A pop-up opens in a chat.
+       A pop-up window opens in a chat.
 
        :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/popup.png" alt-text="Chat":::
    
 - title: Interact with the app in Teams
   durationInMinutes: 1
   content: |
-    1. Select any option from the pop-up.
-
-    1. Enter text and select **send**.
+    1. Select any option from the pop-up window and send.
 
        :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/option1.png" alt-text="Option":::
 
