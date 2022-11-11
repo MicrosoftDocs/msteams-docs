@@ -26,7 +26,7 @@ The following image is an example of link unfurling using the Azure DevOps messa
 
 See the following video to learn more about link unfurling:
 <br>
-> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OFZG>]
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OFZG]
 <br>
 
 ## Add link unfurling to your app manifest
@@ -263,7 +263,7 @@ To get your app ready for zero install link unfurling, follow these steps:
 
    The following is an example of the `invoke` request:
 
-# [C#/.NET](#tab/dotnet)
+   # [C#/.NET](#tab/dotnet)
 
       ```csharp
       protected override async Task<MessagingExtensionResponse> OnTeamsAppBasedLinkQueryAsync(ITurnContext<IInvokeActivity> turnContext, AppBasedLinkQuery query, CancellationToken cancellationToken)
@@ -284,7 +284,7 @@ To get your app ready for zero install link unfurling, follow these steps:
 
       ```
 
-# [JavaScript/Node.js](#tab/javascript)
+   # [JavaScript/Node.js](#tab/javascript)
 
    ```javascript
    class TeamsLinkUnfurlingBot extends TeamsActivityHandler {
@@ -308,7 +308,7 @@ To get your app ready for zero install link unfurling, follow these steps:
    }
    ```
 
-# [JSON](#tab/json)
+   # [JSON](#tab/json)
 
    Following is an example of the `invoke` sent to your bot:
 
@@ -359,12 +359,11 @@ To get your app ready for zero install link unfurling, follow these steps:
      }
    }
    ```
-
    ---
 
-1. Advantages and limitations.
+1.  Advantages and limitations.
 
-# [Advantages](#tab/advantages)
+    # [Advantages](#tab/advantages)
 
     Zero install link unfurling helps you provide enhanced experience to the users, such as:
 
@@ -372,7 +371,7 @@ To get your app ready for zero install link unfurling, follow these steps:
 
     * Create a welcome card for your app to show a preview with the placeholder fields.
 
-# [Limitations](#tab/limitations)
+    # [Limitations](#tab/limitations)
 
     The following are the limitations:
 
