@@ -53,7 +53,7 @@ Solution: Platform Bug
 <details>
 <summary>How can I remove specific messages from bot history? The only way I've found requires an activity ID (UpdateActivityAsync). Is there a way to get the chat history and find an activity ID of a specific message?</summary>
 
-Use Delete messages-Bot framework's DeleteActivity //  ~/bots/how-to/update-and-delete-bot-messages?tabs=dotnet#delete-messages // method.
+Use Delete messages-Bot framework's DeleteActivity method: [Update and delete messages sent from bot](bots/how-to/update-and-delete-bot-messages.md#delete-messages)
 
 </details>
 
