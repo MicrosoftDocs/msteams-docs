@@ -615,7 +615,7 @@ When a user selects the overflow menu on mobile, the Adaptive Card displays the 
 
 ---
 
-The overflow menu behaves differently on a bot sent card and a message extension card. The overflow menu on a bot sent card shows up as a pop-up context menu and on the message extension card it shows up at the upper-right corner under the more (**...**) icon.
+The overflow menu behaves differently on a bot sent card and a message extension card. The overflow menu on a bot sent card shows up as a pop-up context menu and on the message extension card it shows up at the upper-right corner under the More options (**...**) icon.
 
 :::image type="content" source="../../assets/images/Cards/overflow-menu-card-beahvior.png" alt-text="Screenshot shows an example of the overflow menu behavior in a bot sent card and a messaging extension card.":::
 
