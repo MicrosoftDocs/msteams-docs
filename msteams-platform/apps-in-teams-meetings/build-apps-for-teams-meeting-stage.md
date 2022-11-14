@@ -12,7 +12,7 @@ ms.date: 04/07/2022
 
 Share to stage allows users to share an app to the meeting stage from the meeting side panel in an ongoing meeting. This sharing is interactive and collaborative in comparison to passive screen sharing.
 
-To invoke share to stage, users can select the **Share to Stage** icon on the top right side of the meeting side panel. **Share to Stage** icon is native to Teams client and selecting it shares the entire app to the meeting stage.
+To invoke share to stage, users can select the **Share to Stage** icon on the upper-right side of the meeting side panel. **Share to Stage** icon is native to Teams client and selecting it shares the entire app to the meeting stage.
 
 ## App manifest settings for apps in meeting stage
 
@@ -21,24 +21,24 @@ To share an app to the meeting stage, you must configure the context and RSC per
 1. Update the `context` property in the app manifest as follows:
 
     ```json
-    "context":[ 
-        "meetingSidePanel", 
-        "meetingStage" 
-         ] 
+    "context": [
+      "meetingSidePanel",
+      "meetingStage"
+    ]
     ```
 
 2. Obtain the RSC permissions by configuring the `authorization` property, and the `name` and `type` in the `resourceSpecific` field as follows:
 
     ```json
     "authorization": {
-        "permissions": { 
+      "permissions": {
         "resourceSpecific": [
-        { 
-         "name": "MeetingStage.Write.Chat",
-         "type": "Delegated"
-        }
+          {
+            "name": "MeetingStage.Write.Chat",
+            "type": "Delegated"
+          }
         ]
-    }
+      }
     }
     ```
 
@@ -78,7 +78,7 @@ The following table includes the query parameters:
 
 |Value|Type|Required|Description|
 |---|---|----|---|
-|**callback**| String | Yes | Callback contains two parameters, error and result. The *error* can either contain an error of type *SdkError*, or null when share is successful. The *result* can either contain a true value, if there's a successful share, or null when the share fails. |
+|**callback**| String | Yes | Callback contains two parameters, error and result. The *error* can either contain an error of type *SdkError* or null when share is successful. The *result* can either contain a true value if there's a successful share or null when the share fails. |
 |**appContentURL**| String | Yes | The URL that will be shared on to the stage. |
 
 ### Example
@@ -116,7 +116,7 @@ The following table includes the query parameter:
 
 |Value|Type|Required|Description|
 |---|---|----|---|
-|**callback**| String | Yes | Callback contains two parameters, error, and result. The *error* can either contain an error of type *SdkError*, in case of an error, or null when share is successful. The *result* can either contain an `IAppContentStageSharingState` object, when share is successful, or null, in case of an error.|
+|**callback**| String | Yes | Callback contains two parameters, error and result. The *error* can either contain an error of type *SdkError* in case of an error or null when share is successful. The *result* can either contain an `IAppContentStageSharingState` object when share is successful or null in case of an error.|
 
 ### Example
 
@@ -132,8 +132,8 @@ The JSON response body for the `getAppContentStageSharingState` API is:
 
 ```json
 {
-   "isAppSharing":true
-} 
+  "isAppSharing": true
+}
 ```
 
 ### Response codes
@@ -156,7 +156,7 @@ The following table includes the query parameter:
 
 |Value|Type|Required|Description|
 |---|---|----|---|
-|**callback**| String | Yes | Callback contains two parameters, error, and result. The *error* can either contain an error of type *SdkError*, or null when share is successful. The result can either contain an `IAppContentStageSharingCapabilities` object, when share is successful, or null, in case of an error.|
+|**callback**| String | Yes | Callback contains two parameters, error and result. The *error* can either contain an error of type *SdkError* or null when share is successful. The result can either contain an `IAppContentStageSharingCapabilities` object, when share is successful or null in case of an error.|
 
 ### Example
 
@@ -214,8 +214,8 @@ To add a deep link to share content on stage, you need to have an app context. T
 The query parameters for the app context are:
 
 * `appID`: This is the ID that can be obtained from the app manifest.
-* `appSharingUrl`: The URL, which needs to be shared on stage should be a valid domain defined in the app manifest. If the URL isn't a valid domain, an error dialog will pop up to provide the user with a description of the error.
-* `useMeetNow`: This includes a boolean parameter that can be either true or false.
+* `appSharingUrl`: The URL, which needs to be shared on stage should be a valid domain defined in the app manifest. If the URL isn't a valid domain, an error dialog appears to provide the user with a description of the error.
+* `useMeetNow`: This includes a Boolean parameter that can be either true or false.
   * **True**: When the `UseMeetNow` value is true and if there's no ongoing meeting, a new Meet now meeting will be initiated. When there's an ongoing meeting, this value will be ignored.
 
   * **False**: The default value of `UseMeetNow` is false, which means that when a deep link is shared to stage and there's no ongoing meeting, a calendar pop-up will appear. However, you can share directly during a meeting.
@@ -223,9 +223,10 @@ The query parameters for the app context are:
 Ensure that all the query parameters are properly URI encoded and the app context has to be encoded twice in the final URL. Following is an example.
 
 ```json
-var appContext= JSON.stringify({ "appSharingUrl" : "https://teams.microsoft.com/extensibility-apps/meetingapis/view", "appId": "9cc80a93-1d41-4bcb-8170-4b9ec9e29fbb", "useMeetNow":false })
-var encodedContext = encodeURIComponent(appcontext).replace(/'/g,"%27").replace(/"/g,"%22")
-var encodedAppContext = encodeURIComponent(encodedContext).replace(/'/g,"%27").replace(/"/g,"%22")
+var appContext= JSON.stringify({ 
+  "appSharingUrl" : "https://teams.microsoft.com/extensibility-apps/meetingapis/view",
+  "appId": "9cc80a93-1d41-4bcb-8170-4b9ec9e29fbb", "useMeetNow":false
+}) var encodedContext = encodeURIComponent(appcontext).replace(/'/g,"%27").replace(/"/g,"%22") var encodedAppContext = encodeURIComponent(encodedContext).replace(/'/g,"%27").replace(/"/g,"%22")
 ```
 
 A deep link can be launched either from the Teams web or from the Teams desktop client.
@@ -238,8 +239,8 @@ A deep link can be launched either from the Teams web or from the Teams desktop 
 
     |Deep link|Format|Example|
     |---------|---------|---------|
-    |To share the app and open Teams calendar, when UseMeeetNow is **false**, default.|`https://teams.microsoft.com/l/meeting-share?deeplinkId={deeplinkid}&fqdn={fqdn}}&lm=deeplink%22&appContext={encoded app context}`|`https://teams.microsoft.com/l/meeting-share?deeplinkId={sampleid}&fqdn=teams.microsoft.com&lm=deeplink%22&appContext=%257B%2522appSharingUrl%2522%253A%2522https%253A%252F%252Fteams.microsoft.com%252Fextensibility-apps%252Fmeetingapis%252Fview%2522%252C%2522appId%2522%253A%25229cc80a93-1d41-4bcb-8170-4b9ec9e29fbb%2522%252C%2522useMeetNow%2522%253Afalse%257D`|
-    |To share the app and initiate instant meeting, when UseMeeetNow is **true**.|`https://teams.microsoft.com/l/meeting-share?deeplinkId={deeplinkid}&fqdn={fqdn}}&lm=deeplink%22&appContext={encoded app context}`|`https://teams.microsoft.com/l/meeting-share?deeplinkId={sampleid}&fqdn=teams.microsoft.com&lm=deeplink%22&appContext=%257B%2522appSharingUrl%2522%253A%2522https%253A%252F%252Fteams.microsoft.com%252Fextensibility-apps%252Fmeetingapis%252Fview%2522%252C%2522appId%2522%253A%25229cc80a93-1d41-4bcb-8170-4b9ec9e29fbb%2522%252C%2522useMeetNow%2522%253Atrue%257D`|
+    |To share the app and open Teams calendar, when `UseMeeetNow` is **false**, default.|`https://teams.microsoft.com/l/meeting-share?deeplinkId={deeplinkid}&fqdn={fqdn}}&lm=deeplink%22&appContext={encoded app context}`|`https://teams.microsoft.com/l/meeting-share?deeplinkId={sampleid}&fqdn=teams.microsoft.com&lm=deeplink%22&appContext=%257B%2522appSharingUrl%2522%253A%2522https%253A%252F%252Fteams.microsoft.com%252Fextensibility-apps%252Fmeetingapis%252Fview%2522%252C%2522appId%2522%253A%25229cc80a93-1d41-4bcb-8170-4b9ec9e29fbb%2522%252C%2522useMeetNow%2522%253Afalse%257D`|
+    |To share the app and initiate instant meeting, when `UseMeeetNow` is **true**.|`https://teams.microsoft.com/l/meeting-share?deeplinkId={deeplinkid}&fqdn={fqdn}}&lm=deeplink%22&appContext={encoded app context}`|`https://teams.microsoft.com/l/meeting-share?deeplinkId={sampleid}&fqdn=teams.microsoft.com&lm=deeplink%22&appContext=%257B%2522appSharingUrl%2522%253A%2522https%253A%252F%252Fteams.microsoft.com%252Fextensibility-apps%252Fmeetingapis%252Fview%2522%252C%2522appId%2522%253A%25229cc80a93-1d41-4bcb-8170-4b9ec9e29fbb%2522%252C%2522useMeetNow%2522%253Atrue%257D`|
 
 * **Team desktop client**: Use the following format to launch a deep link from the Teams desktop client to share content on stage.
 
@@ -249,8 +250,8 @@ A deep link can be launched either from the Teams web or from the Teams desktop 
 
     |Deep link|Format|Example|
     |---------|---------|---------|
-    |To share the app and open Teams calendar, when UseMeeetNow is **false**, default.|`msteams:/l/meeting-share?   deeplinkId={deeplinkid}&fqdn={fqdn}&lm=deeplink%22&appContext={encoded app context}`|`msteams:/l/meeting-share?deeplinkId={sampleid}&fqdn=teams.microsoft.com&lm=deeplink%22&appContext=%257B%2522appSharingUrl%2522%253A%2522https%253A%252F%252Fteams.microsoft.com%252Fextensibility-apps%252Fmeetingapis%252Fview%2522%252C%2522appId%2522%253A%25229cc80a93-1d41-4bcb-8170-4b9ec9e29fbb%2522%252C%2522useMeetNow%2522%253Afalse%257D`|
-    |To share the app and initiate instant meeting, when UseMeeetNow is **true**.|`msteams:/l/meeting-share?   deeplinkId={deeplinkid}&fqdn={fqdn}&lm=deeplink%22&appContext={encoded app context}`|`msteams:/l/meeting-share?deeplinkId={sampleid}&fqdn=teams.microsoft.com&lm=deeplink%22&appContext=%257B%2522appSharingUrl%2522%253A%2522https%253A%252F%252Fteams.microsoft.com%252Fextensibility-apps%252Fmeetingapis%252Fview%2522%252C%2522appId%2522%253A%25229cc80a93-1d41-4bcb-8170-4b9ec9e29fbb%2522%252C%2522useMeetNow%2522%253Atrue%257D`|
+    |To share the app and open Teams calendar, when `UseMeeetNow` is **false**, default.|`msteams:/l/meeting-share?   deeplinkId={deeplinkid}&fqdn={fqdn}&lm=deeplink%22&appContext={encoded app context}`|`msteams:/l/meeting-share?deeplinkId={sampleid}&fqdn=teams.microsoft.com&lm=deeplink%22&appContext=%257B%2522appSharingUrl%2522%253A%2522https%253A%252F%252Fteams.microsoft.com%252Fextensibility-apps%252Fmeetingapis%252Fview%2522%252C%2522appId%2522%253A%25229cc80a93-1d41-4bcb-8170-4b9ec9e29fbb%2522%252C%2522useMeetNow%2522%253Afalse%257D`|
+    |To share the app and initiate instant meeting, when `UseMeeetNow` is **true**.|`msteams:/l/meeting-share?   deeplinkId={deeplinkid}&fqdn={fqdn}&lm=deeplink%22&appContext={encoded app context}`|`msteams:/l/meeting-share?deeplinkId={sampleid}&fqdn=teams.microsoft.com&lm=deeplink%22&appContext=%257B%2522appSharingUrl%2522%253A%2522https%253A%252F%252Fteams.microsoft.com%252Fextensibility-apps%252Fmeetingapis%252Fview%2522%252C%2522appId%2522%253A%25229cc80a93-1d41-4bcb-8170-4b9ec9e29fbb%2522%252C%2522useMeetNow%2522%253Atrue%257D`|
 
 The query parameters are:
 
@@ -286,9 +287,9 @@ The following participant roles may be involved during the meeting:
 
 |Sample name | Description | C# | Node.js |
 |----------------|-----------------|--------------|----------------|
-|Meeting stage sample | Sample app to show a tab in meeting stage for collaboration | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) |
+|Meeting stage sample | Sample app to show a tab in meeting stage for collaboration. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) |
 | In-meeting notification | Demonstrates how to implement in-meeting notification using bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs) |
-| In-meeting document signing | Demonstrates how to implement a document signing Teams app. Includes sharing specific app content to stage, Teams SSO and user specific stage view. | [View](https://github.com/officedev/microsoft-teams-samples/tree/main/samples/meetings-share-to-stage-signing/csharp) | NA |
+| In-meeting document signing | Demonstrates how to implement a document signing Teams app. Includes sharing specific app content to stage, Teams SSO, and user specific stage view. | [View](https://github.com/officedev/microsoft-teams-samples/tree/main/samples/meetings-share-to-stage-signing/csharp) | NA |
 
 ## Step-by-step guide
 
