@@ -27,7 +27,6 @@ Links found:
 1. [Merge your partner account with another partner account](/partner-center/merge-accounts.md)
 
 </details>
-<br>
 <details>
 <summary>How can I remove the 'white screen' showing under the 'more' section on Teams mobile iOS client for Teams dark mode?</summary>
 
@@ -48,7 +47,6 @@ Question: The bot isn't supposed to crash when the card is invalid. It can fail 
 Solution: [Work with Universal Actions for Adaptive Cards](task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-Universal-Actions-for-Adaptive-Cards.md)
 
 </details>
-<br>
 <details>
 <summary>How can I remove specific messages from bot history? The only way I've found requires an activity ID (UpdateActivityAsync). Is there a way to get the chat history and find an activity ID of a specific message?</summary>
 
@@ -62,7 +60,6 @@ Use Delete messages-Bot framework's DeleteActivity method: [Update and delete m
 Provided steps to test/validate adaptive card schema:“Adaptive cards editor(preview)” option from the Teams apps >>Developer portal >> Tools" and asked to refer Schema Explorer | Adaptive Cards.
 
 </details>
-<br>
 
 ## General
 
