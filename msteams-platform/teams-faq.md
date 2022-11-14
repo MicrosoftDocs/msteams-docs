@@ -254,6 +254,7 @@ The following table provides the actions and dependencies to be performed and ch
 |Permissions| Verify that the Azure application has the necessary permissions to run the synchronization.| For more information, see [Microsoft permissions](https://docs.moodle.org/311/en/Microsoft_365#Permissions).|
 | Full sync| Verify that **Perform a full sync each run** is enabled, and review the **Task Logs** for **Sync users with Azure AD**.| For more information, see [Enable full sync](https://docs.moodle.org/311/en/local_o365)</br>For more information, see [Check task logs](https://docs.moodle.org/311/en/local_o365#Sync_users_with_Azure_AD). |
 |Token refresh|Clean the **User sync delta token** in the local_o365 plugin.| For more information, see, [Token refresh](https://docs.moodle.org/38/en/Office365).|
+
 <!-- |Token refresh|Clean the **User sync delta token** in the local_o365 plugin| {moodle_url}\local_o365\acp.php?Mode=maintenance_cleandeltatoken| -->
 <br>
 </details>
