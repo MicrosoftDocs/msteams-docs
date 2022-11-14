@@ -539,18 +539,12 @@ You can use the [code sample](https://github.com/microsoft/BotBuilder-Samples/bl
 
 </details>
 
-<br>
-
 <details>
 <summary>Can I access the product app package from Azure AD?</summary>
-
-<br>
 
 // Solution needed //
 
 </details>
-
-<br>
 
 <details>
 <summary>How can I change Application ID URI of SSO scope to use bot ID also so that the consent window won't be required for bot?</summary>
@@ -560,7 +554,6 @@ For more information, see [Register your app on Azure AD](/bots/how-to/authentic
 
 </details>
 
-<br>
 <details>
 <summary>Customer's requirement is to open an iframe, it contains a react app (that displays sensitive information) from a bot task module securely. Can you suggest what is the best/easiest/standard approach to perform this operation?</summary>
 
@@ -569,16 +562,13 @@ For more information, see [Register your app on Azure AD](/bots/how-to/authentic
 Implement react page with tab SSO and render the content as required. You can open the same tab URL as task module from Bot.
 </details>
 
-<br>
 <details>
 <summary>How can I avoid SDK timeout error while the app user signs in?</summary>
 
-<br>
 Open sign in simple start page instead of login page directly. Issue resolved by doing the same.
 
 </details>
 
-<br>
 <details>
 <summary>How can I generate the access token using the endpoint oauth2/v2.0/token with grant type as "authorization_code"?</summary>
 
@@ -592,17 +582,12 @@ Links found: none for encoding scope for only HTML
 
 </details>
 
-<br>
-
 <details>
 <summary>Implementation of Bot SSO in React. Partner is looking for guidance for the same.</summary>
-
 <br>
 Code sample has been shared is in .NET or Node js.
 
 </details>
-
-<br>
 
 ## Tabs
 
@@ -614,8 +599,6 @@ Customer to upgrade the teams JavaScript client SDK to (@microsoft/teams-js": "^
 
 </details>
 
-<br>
-
 ## Task module
 
 <details>
@@ -625,8 +608,6 @@ Customer to upgrade the teams JavaScript client SDK to (@microsoft/teams-js": "^
 No resolution required from the docs (Platform bug).
 
 </details>
-
-<br>
 
 ## Teams toolkit
 
@@ -639,8 +620,6 @@ FAQ for [Provision cloud resources](toolkit/provision.md)) using Teams Toolkit.
 
 If you get errors with Teams Toolkit in Visual Studio Code, you can select **Get Help** on the error notification to go to the related document. If you're using TeamsFx CLI, there will be a hyperlink at the end of error message that points to the help doc. You can also view [provision help doc](https://aka.ms/teamsfx-arm-help) directly.
 
-<br>
-
 </details>
 
 <details>
@@ -651,8 +630,6 @@ If you get errors with Teams Toolkit in Visual Studio Code, you can select **Get
 2. If you have already provisioned current environment, you need to create a new environment and perform provision because ARM doesn't support moving resources.
 3. If you didn't provision current environment, you can trigger provision directly.
 
-<br>
-
 </details>
 
 <details>
@@ -660,8 +637,6 @@ If you get errors with Teams Toolkit in Visual Studio Code, you can select **Get
 <summary>How can I change resource group while provisioning?</summary>
 
 Before provision, the tool asks you if you want to create a new resource group or use an existing one. You can provide a new resource group name or choose an existing one in this step.
-
-<br>
 
 </details>
 
@@ -678,7 +653,6 @@ You can follow [provision SharePoint-based app](/microsoftteams/platform/sbs-gs-
 
 </details>
 
-<br>
 <details>
 <summary>How can I deploy the code in Azure using teams toolkit, and use graph API get user profile photo?</summary>
 
