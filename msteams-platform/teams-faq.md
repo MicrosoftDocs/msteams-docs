@@ -158,7 +158,6 @@ Microsoft Docs to get the user’s time zone as follows:
 • GET /users/{id|userPrincipalName}/mailboxSettings/timeZone
 
 </details>
-<br>
 <details>
 <summary>How can I deploy the code in Azure using teams toolkit, and use graph API get user profile photo?</summary>
 
@@ -172,7 +171,7 @@ TeamsFx Command Line Interface - Teams | Microsoft Docs
 Also, provided guidance how they can call Graph API get user profile photo.
 
 </details>
-<br>
+
 <details>
 <summary>Does Graph API work in Postman?</summary>
 <br>
@@ -180,7 +179,6 @@ You can use the Microsoft Graph Postman collection with Microsoft Graph APIs.
 
 For more information, see [Use Postman with the Microsoft Graph API](/graph/use-postman).
 </details>
-<br>
 <details>
 <summary>Does Graph API work in Microsoft Graph explorer?</summary>
 <br>
@@ -189,7 +187,6 @@ Yes, Graph API works in Microsoft Graph explorer.
 For more information, see [Graph explorer](https://developer.microsoft.com/graph/graph-explorer).
 
 </details>
-<br>
 
 ## Moodle FAQs
 
