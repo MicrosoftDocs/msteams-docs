@@ -291,14 +291,13 @@ Developer preview is a public program that provides early access to unreleased T
 
 **2022 November**
 
-***November 14, 2022***: [Enable app caching to improve subsequent launch time of the apps to the meeting side panel](apps-in-teams-meetings/build-tabs-for-meeting.md#app-caching).
+***October 11, 2022***: [Generate a deep link to share content to stage in meetings.](apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#generate-a-deep-link-to-share-content-to-stage-in-meetings)
 
 :::column-end:::
 :::row-end:::
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ------------------ |
-| 10/11/2022 | Generate a deep link to share content to stage in meetings. | Build apps for Teams meetings and calls > Enable and configure apps for Teams meetings > [Build apps for meeting stage](apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#generate-a-deep-link-to-share-content-to-stage-in-meetings) |
 | 09/23/2022 | Introduced meeting app support for Scheduled Channel Meetings. | Build apps for Teams meetings and calls > [Apps for Teams meetings and calls](apps-in-teams-meetings/teams-apps-in-meetings.md) |
 | 08/23/2022 | Share apps to the Teams meeting stage in mobile | Build apps for Teams meetings and calls > [Enable and configure apps for meetings](/microsoftteams/platform/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings) |
 | 08/10/2022 | Apps for scheduled public channel meetings | Build apps for Teams meetings and calls > [Overview](apps-in-teams-meetings/teams-apps-in-meetings.md) |
