@@ -385,7 +385,7 @@ The following steps help you to add user-specific view with TeamsFx SDK:
 
 <summary><b>2. Add user-specific Adaptive Card</b></summary>
 
-You need to design the user-specific Adaptive Card to refresh specific files such as  `responseCard.json` for `userA` in the sample. To get started, you can create a `responseCard.json` with the following content, and save it in `bot/src/adaptiveCards` folder:
+You need to design the user-specific Adaptive Card to refresh a specific response card such as `responseCard.json` for `userA` shown in the diagram for [refresh behavior](#auto-refresh-to-user-specific-view). To get started, you can create a `responseCard.json` with the following content, and save it in `bot/src/adaptiveCards` folder:
 
 ```responseCard.json
 
@@ -413,7 +413,7 @@ You need to design the user-specific Adaptive Card to refresh specific files suc
 
 <summary><b>3. Add card action handler to refresh views</b></summary>
 
-You can add handler that implements `TeamsFxAdaptiveCardActionHandler` to process the refresh invoke activity that is automatically triggered in Teams.
+You can add handler that implements `TeamsFxAdaptiveCardActionHandler` to process the refresh invoke activity that is automatically triggered in Teams:
 
 ```TypeScript
 import responseCard from "../adaptiveCards/responseCard.json";
@@ -450,7 +450,7 @@ export class Handler1 implements TeamsFxBotCardActionHandler {
 
 <summary><b>4. Register the action handler</b></summary>
 
-You can register the refresh action handler in `bot/src/internal/initialize.js(ts)`:
+You can register the refresh action handler in `bot/src/internal/initialize.js(ts)` with the following code:
 
 ```initialize.js(ts)
 export const commandBot = new ConversationBot({
