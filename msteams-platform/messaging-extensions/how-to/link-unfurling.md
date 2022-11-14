@@ -16,11 +16,12 @@ This document guides you on how to add link unfurling to your app manifest using
 >
 > * Currently, link unfurling is not supported on Mobile clients.
 > * The link unfurling result is cached for 30 minutes.
-> * Messaging extension commands are not required for Link unfurling. However, there must be at least one command in manifest as it is a mandatory property in messaging extensions. For more information, see [compose extensions](/microsoftteams/platform/resources/schema/manifest-schema)
+> * Only Adaptive Cards version 1.3 and earlier is supported in link unfurling.
+> * Messaging extension commands aren't required for Link unfurling. However, there must be at least one command in manifest as it is a mandatory property in messaging extensions. For more information, see [compose extensions](/microsoftteams/platform/resources/schema/manifest-schema)
 
 The Azure DevOps message extension uses link unfurling to look for URLs pasted into the compose message area pointing to a work item. In the following image, a user pasted a URL for an item in Azure DevOps that the message extension has resolved into a card:
 
-:::image type="content" source="~/assets/images/compose-extensions/messagingextensions_linkunfurling.png" alt-text="Example of link unfurling":::
+:::image type="content" source="~/assets/images/tdp/link-unfurling.png" alt-text="Example of link unfurling":::
 
 See the following video to learn more about link unfurling:
 <br>
@@ -77,6 +78,9 @@ For a complete manifest example, see [manifest reference](~/resources/schema/man
 ## Handle the `composeExtension/queryLink` invoke
 
 After adding the domain to the app manifest, you must update your web service code to handle the invoke request. Use the received URL to search your service and create a card response. If you respond with more than one card, only the first card response is used.
+
+> [!Note]
+> Response from the bot must include a `preview` property.
 
 The following card types are supported:
 
