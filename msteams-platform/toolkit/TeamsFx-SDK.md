@@ -183,10 +183,10 @@ const settings: TeamsBotSsoPromptSettings = {
 };
 
 const authConfig: OnBehalfOfCredentialAuthConfig = {
-  authorityHost: process.env.SDK_INTEGRATION_TEST_AAD_AUTHORITY_HOST!,
-  clientId: process.env.SDK_INTEGRATION_TEST_M365_AAD_CLIENT_ID!,
-  tenantId: process.env.SDK_INTEGRATION_TEST_AAD_TENANT_ID!,
-  clientSecret: process.env.SDK_INTEGRATION_TEST_M365_AAD_CLIENT_SECRET!,
+  authorityHost: process.env.M365_AUTHORITY_HOST,
+  clientId: process.env.M365_CLIENT_ID,
+  tenantId: process.env.M365_TENANT_ID,
+  clientSecret: process.env.M365_CLIENT_SECRET,
 };
 const loginUrl = process.env.INITIATE_LOGIN_ENDPOINT;
 const ssoPrompt = new TeamsBotSsoPrompt(authConfig, loginUrl, TeamsBotSsoPromptId, settings);
@@ -436,10 +436,10 @@ This section provides several code snippets for common scenarios that are relate
        };
 
        const authConfig: OnBehalfOfCredentialAuthConfig = {
-        authorityHost: process.env.SDK_INTEGRATION_TEST_AAD_AUTHORITY_HOST!,
-        clientId: process.env.SDK_INTEGRATION_TEST_M365_AAD_CLIENT_ID!,
-        tenantId: process.env.SDK_INTEGRATION_TEST_AAD_TENANT_ID!,
-        clientSecret: process.env.SDK_INTEGRATION_TEST_M365_AAD_CLIENT_SECRET!,
+        authorityHost: process.env.M365_AUTHORITY_HOST,
+        clientId: process.env.M365_CLIENT_ID,
+        tenantId: process.env.M365_TENANT_ID,
+        clientSecret: process.env.M365_CLIENT_SECRET,
        };
        const loginUrl = process.env.INITIATE_LOGIN_ENDPOINT;
        const ssoPrompt = new TeamsBotSsoPrompt(authConfig, loginUrl, TeamsBotSsoPromptId, settings);
@@ -480,10 +480,10 @@ This section provides several code snippets for common scenarios that are relate
     ```typescript
 
      const authConfig: OnBehalfOfCredentialAuthConfig = {
-      authorityHost: process.env.SDK_INTEGRATION_TEST_AAD_AUTHORITY_HOST!,
-      clientId: process.env.SDK_INTEGRATION_TEST_M365_AAD_CLIENT_ID!,
-      tenantId: process.env.SDK_INTEGRATION_TEST_AAD_TENANT_ID!,
-      clientSecret: process.env.SDK_INTEGRATION_TEST_M365_AAD_CLIENT_SECRET!,
+      authorityHost: process.env.M365_AUTHORITY_HOST,
+      clientId: process.env.M365_CLIENT_ID,
+      tenantId: process.env.M365_TENANT_ID,
+      clientSecret: process.env.M365_CLIENT_SECRET,
      };
      const loginUrl = process.env.INITIATE_LOGIN_ENDPOINT;
      public async handleTeamsMessagingExtensionQuery(context: TurnContext, query: any): Promise<any> {
@@ -513,10 +513,10 @@ This section provides several code snippets for common scenarios that are relate
      } from "@microsoft/teamsfx";
 
      const authConfig: OnBehalfOfCredentialAuthConfig = {
-      authorityHost: process.env.SDK_INTEGRATION_TEST_AAD_AUTHORITY_HOST!,
-      clientId: process.env.SDK_INTEGRATION_TEST_M365_AAD_CLIENT_ID!,
-      tenantId: process.env.SDK_INTEGRATION_TEST_AAD_TENANT_ID!,
-      clientSecret: process.env.SDK_INTEGRATION_TEST_M365_AAD_CLIENT_SECRET!,
+      authorityHost: process.env.M365_AUTHORITY_HOST,
+      clientId: process.env.M365_CLIENT_ID,
+      tenantId: process.env.M365_TENANT_ID,
+      clientSecret: process.env.M365_CLIENT_SECRET,
      };
      const loginUrl = process.env.INITIATE_LOGIN_ENDPOINT;
 
@@ -615,10 +615,10 @@ This section provides several code snippets for common scenarios that are relate
         const res: Response = { status: 200, body: {},};
 
         const authConfig: OnBehalfOfCredentialAuthConfig = {
-        authorityHost: process.env.SDK_INTEGRATION_TEST_AAD_AUTHORITY_HOST!,
-        clientId: process.env.SDK_INTEGRATION_TEST_M365_AAD_CLIENT_ID!,
-        tenantId: process.env.SDK_INTEGRATION_TEST_AAD_TENANT_ID!,
-        clientSecret: process.env.SDK_INTEGRATION_TEST_M365_AAD_CLIENT_SECRET!,
+          authorityHost: process.env.M365_AUTHORITY_HOST,
+          clientId: process.env.M365_CLIENT_ID,
+          tenantId: process.env.M365_TENANT_ID,
+          clientSecret: process.env.M365_CLIENT_SECRET,
         };
         const oboCredential = new OnBehalfOfUserCredential(tokenResponse.ssoToken, oboAuthConfig);
 
@@ -684,10 +684,10 @@ This section provides several code snippets for common scenarios that are relate
 
        ```typescript
        const appAuthConfig: AppCredentialAuthConfig = {
-       authorityHost: process.env.M365_AUTHORITY_HOST,
-       clientId: process.env.M365_CLIENT_ID,
-       tenantId: process.env.M365_TENANT_ID,
-       clientSecret: process.env.M365_CLIENT_SECRET,
+        authorityHost: process.env.M365_AUTHORITY_HOST,
+        clientId: process.env.M365_CLIENT_ID,
+        tenantId: process.env.M365_TENANT_ID,
+        clientSecret: process.env.M365_CLIENT_SECRET,
        };
        ```
 
