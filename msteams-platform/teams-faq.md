@@ -358,8 +358,6 @@ You need to fetch PC ID.
 
 </details>
 
-<br>
-
 <details>
 <summary>Not able to see Developer Tab in Partner Center.</summary>
 
@@ -369,11 +367,8 @@ You need to fetch PC ID.
 
 </details>
 
-<br>
-
 -- From [Create a Partner Center developer account](concepts/deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md). --
 
-<br>
 
 <details>
 
@@ -383,8 +378,6 @@ You can create a Partner Center account one of the following ways:
 
 * If you're new to Partner Center and don't have a Microsoft Network Account, [create an account using the Partner Center enrollment page](/office/dev/store/open-a-developer-account#create-an-account-using-the-partner-center-enrollment-page).
 * If you're already enrolled in the Microsoft Partner Network, [create an account directly from Partner Center using existing Microsoft Partner Center enrollments](/office/dev/store/open-a-developer-account#create-an-account-using-an-existing-partner-center-enrollment).
-
-<br>
 
 </details>
 
@@ -400,8 +393,6 @@ Open a [Partner Center support ticket](https://partner.microsoft.com/support/v2/
 | Topic | General Marketplace Help and How-to questions |
 | Subtopic| Office add-in |
 
-<br>
-
 </details>
 
 <details>
@@ -409,8 +400,6 @@ Open a [Partner Center support ticket](https://partner.microsoft.com/support/v2/
 <summary>Where can I get support for my Partner Center account issues?</summary>
 
 Visit the [publishers support page](https://aka.ms/marketplacepublishersupport) to search for your issue. If the guidance isn't helpful, create a [Partner Center support ticket](/azure/marketplace/partner-center-portal/support#how-to-open-a-support-ticket).
-
-<br>
 
 </details>
 
@@ -420,8 +409,6 @@ Visit the [publishers support page](https://aka.ms/marketplacepublishersupport) 
 
 See [manage your account through Partner Center](/office/dev/store/manage-account-settings-and-profile) for information.
 
-<br>
-
 </details>
 
 <details>
@@ -430,8 +417,6 @@ See [manage your account through Partner Center](/office/dev/store/manage-accoun
 
 The phone number has three parts: country code, area code, and telephone number. If your phone number doesn't include an area code, leave the second box empty and complete the third box.
 
-<br>
-
 </details>
 
 <details>
@@ -439,8 +424,6 @@ The phone number has three parts: country code, area code, and telephone number.
 <summary>How do I manage my account settings and partner profile in Partner Center?</summary>
 
 See [manage account settings and profile info](/windows/uwp/publish/manage-account-settings-and-profile#additional-settings-and-info) for information.
-
-<br>
 
 </details>
 
@@ -451,8 +434,6 @@ See [manage account settings and profile info](/windows/uwp/publish/manage-accou
 You received this error message because your [account verification status](/partner-center/verification-responses) is pending. Check your status in the Partner Center [dashboard](https://partner.microsoft.com/dashboard). Select the **Settings** gear icon and choose **Developer settings > Account > Account settings**.
 
 ![Partner Center verification status](~/assets/images/partner-center-verification-status.png)
-
-<br>
 
 </details>
 
@@ -465,8 +446,6 @@ There are three verification areas, **Email Ownership**, **Employment**, and **B
 If you're the primary contact, global admin, or account admin, you can monitor verification status and track progress on your profile page.
 
 Once verification process is complete, the status of your enrollment on the profile page changes from *pending* to *authorized*. The primary contact then receives an email from Microsoft within a few business days.
-
-<br>
 
 </details>
 
@@ -482,8 +461,6 @@ Remember the following about the email verification process:
 * You can request to resend the email by visiting your partner profile page and selecting the **Resend verification email** link.
 * To ensure you receive the email, safe-list **microsoft.com** as a secure domain and check your junk email folders.
 
-<br>
-
 </details>
 
 <details>
@@ -498,8 +475,6 @@ Try the following:
 * Work with your IT department to ensure that the verification emails are not blocked by your email server.
 * Adjust your server's spam filter to allow or safe-list all emails from **maccount@microsoft.com**.
 
-<br>
-
 </details>
 
 <details>
@@ -507,8 +482,6 @@ Try the following:
 <summary>How long does the employment verification process usually take?</summary>
 
 If all the submitted details are correct, the employment verification process takes about two hours to complete.
-
-<br>
 
 </details>
 
@@ -518,8 +491,6 @@ If all the submitted details are correct, the employment verification process ta
 
 If all the required documents are submitted, business verification takes one to two business days to complete.
 
-<br>
-
 </details>
 
 <details>
@@ -527,8 +498,6 @@ If all the required documents are submitted, business verification takes one to 
 <summary>If I reach out to the support team, will my ticket be expedited?</summary>
 
 Support tickets get resolved in a week. Check for updates sent to the email you provided when creating the support ticket.
-
-<br>
 
 </details>
 
@@ -544,11 +513,7 @@ Send an email to <a href="mailto:teamsubm@microsoft.com">teamsubm@microsoft.com<
   * Your seller ID.
   * A screenshot of the issue (if possible).
 
-<br>
-
 </details>
-
-<br>
 
 <details>
 
@@ -559,11 +524,7 @@ The following resources can also assist:
 * [Microsoft 365 app submission FAQ](/office/dev/store/appsource-submission-faq).
 * [Commercial marketplace documentation](/azure/marketplace/).
 
-<br>
-
 </details>
-
-<br>
 
 ## Single sign-on
 
