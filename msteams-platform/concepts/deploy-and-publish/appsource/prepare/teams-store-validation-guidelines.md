@@ -577,7 +577,7 @@ Use the following guidelines to write the Terms of use:
 
 [*Mandatory Fix*]
 
-Your app's support URLs must not require authentication. For example, users must not login to contact you.
+Your app's support URLs must not require authentication. For example, users must not sign in to contact you.
 <br></br>
 <details><summary>Expand to know more</summary>
 
@@ -1516,13 +1516,13 @@ You must demonstrate compliance with all laws where your app is distributed, if 
 
 After an internal Microsoft review, if the compliance demonstration is satisfactory, Microsoft may proceed with further certification of your app. If the compliance demonstration is unsatisfactory, Microsoft will keep you informed of the decision to not proceed with certification of your app.
 
-## App Functionality
+## App functionality
 
 * Workflows or content in the app must be related to the scope. [*Mandatory Fix*]
 * All app capabilities must be functional and must work properly as described in the AppSource or manifest long description. [*Mandatory Fix*]
-* Apps must always intimate the user before downloading any file or executable on the user’s environment. Any call to action (CTA), either text based or otherwise, that makes it clear to the user that a file or executable is downloaded on user action is allowed in the app. [*Mandatory Fix*]
+* Apps must always notify the user before downloading any file or executable on the user’s environment. Any call to action (CTA), text based or otherwise, that informs the user that a file or executable is downloaded based on user action is allowed in the app. [*Mandatory Fix*]
 
-## Mobile Experience
+## Mobile experience
 
 * Mobile add-ins must be free. There must not be any in-app content or links that promote upselling, online stores, or other requests for payment. Any accounts required for apps must have no charge for use and if time-limited, must not include any content indicating a need to pay.
 
