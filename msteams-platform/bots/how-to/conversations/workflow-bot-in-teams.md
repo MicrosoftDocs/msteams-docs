@@ -487,7 +487,7 @@ You need to often connect to existing APIs for retrieving data to send to Teams.
 
 Notifications add the ability in your application to send Adaptive Cards in response to external events. For example, when a message is posted to an Event Hub, your application can respond and send an appropriate Adaptive Card to Teams.
 
-The following steps help you to add the notification feature:
+The following steps help you to add the notification:
 
 1. You can navigate to file `bot\src\internal\initialize.js(ts)`.
 
