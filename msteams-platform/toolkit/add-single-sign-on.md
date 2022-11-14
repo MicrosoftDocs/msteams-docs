@@ -500,7 +500,7 @@ You can perform the following steps to add SSO using Teams Toolkit in Visual Stu
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso-vs/vs-2022-preview-create-proj.png" alt-text="open visual studio code to create a new project" lightbox="../assets/images/teams-toolkit-v2/add-sso-vs/vs-2022-preview-create-proj.png":::
 
-1. Select **Microsoft Teams app** project by searching for **Teams** in the **search box** and select **Next**.
+1. Select **Microsoft Teams app** project by searching for **teams** in the search box and select **Next**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso-vs/vs-2022-preview-select-teams.png" alt-text="Select a Microsoft teams project by searching for teams." lightbox="../assets/images/teams-toolkit-v2/add-sso-vs/vs-2022-preview-select-teams.png":::
 
@@ -550,9 +550,9 @@ The following steps help you to enable SSO in your application:
 <summary><b>Tab project
 </b></summary>
 
-1. You can move `GetUserProfile.razor` file from `Auth/tab` folder to `Components/` folder. `GetUserProfile` file implements a function that uses TeamsFx SDK to call Microsoft Graph API to get the user info.
+1. You can move `GetUserProfile.razor` file from the `Auth/tab` folder to the`Components/` folder. `GetUserProfile` file implements a function that uses TeamsFx SDK to call Microsoft Graph API to get the user info.
 
-1. After getting the user info, you can replace the `<AddSSO />` with `<GetUserProfile />` in `Components/Welcome.razor` file.
+1. After getting the user info, you can replace `<AddSSO />` with `<GetUserProfile />` in the `Components/Welcome.razor` file.
 
 </details>
 <details>
@@ -563,7 +563,7 @@ The following steps help you to enable SSO in your application:
    * TeamsFx, version 1.1.0 or later.
    * `Microsoft.Bot.Builder`, version 4.17.1 or later.
 
-2. You can create a `Pages` folder, and move files to `Auth/bot/Pages`, which contains HTML pages that are hosted by bot application. When SSO authentication process is initiated with Azure AD, they redirect user to the HTML pages.
+2. You can create a `Pages` folder, and move files to the `Auth/bot/Pages`, which contains HTML pages that are hosted by bot application. When SSO authentication process is initiated with Azure AD, they redirect user to the HTML pages.
 
 3. After the user is redirected to the HTML pages, you can create `SSO` folder and move files in `Auth/bot/SSO`. This folder contains three files as a reference for SSO implementation:
 
@@ -686,7 +686,7 @@ The following steps help you to add a new command, after you've added SSO in you
        ((SsoDialog)_dialog).addCommand("getUserImageInfo", "photo", SsoOperations.GetUserImageInfo);
     ```
 
-1. Open the file `templates/appPackage/manifest.template.json`, and add the following lines under `command` in `commandLists` of your bot to register your command in the Teams app manifest.:
+1. Open the file `templates/appPackage/manifest.template.json`, and add the following lines under `command` in `commandLists` of your bot to register your command in the Teams app manifest:
 
    ```JSON
        {
