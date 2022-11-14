@@ -18,13 +18,13 @@ items:
 
     You can build your tabs with relevant user interface (UI) building blocks, which are native to desktop, web, and mobile.
 
-    This article helps you to understand:
+    This article helps you understand:
     
     * The changes required to be made to the app manifest.
-    * How the invoke activity requests and sends information in tab with the Adaptive Cards.
+    * Identifies how the invoke activity requests and sends information in tab with the Adaptive Cards.
     * Effects on the task module workflow.
     
-    This step-by-step guide helps you to build tabs with Adaptive Cards on desktop and mobile. You'll see the following output:
+    This step-by-step guide helps you build tabs with the Adaptive Cards on desktop and mobile. You'll see the following output:
 
     :::image type="content" source="../msteams-platform/assets/images/adaptive-cards/desktop-mobile-screenshot.png" alt-text="Desktop Mobile screenshot":::
 
@@ -107,7 +107,7 @@ items:
 
        :::image type="content" source="~/assets/images/adaptive-cards/go-to-resource-card_1.png" alt-text="Go to resource.":::
 
-        Your Azure Bot is created and you can see the **Resource group** and **Subscription ID** in the Azure Bot.
+        Your Azure Bot is created, and you can see the **Resource group** and **Subscription ID** in the Azure Bot.
 
        :::image type="content" source="~/assets/images/adaptive-cards/azure-bot-ui_1.png" alt-text="azure bot resource created.":::
         
@@ -224,7 +224,7 @@ items:
 
     **To add necessary API permissions for downstream calls**
 
-    1. In the left pane, select **API permissions**
+    1. In the left pane, select **API permissions**.
     
        > [!NOTE]
        > Users need to consent to these permissions only if the Azure AD app is registered in a different tenant.
@@ -247,7 +247,7 @@ items:
     1. Ensure the config item is set to **"accessTokenAcceptedVersion": 2**. If not, change its value to **2** and select **Save**.
         
         > [!NOTE]
-        > If you're already testing your bot in Teams, you must sign out this app and sign out Teams. Then sign in again to see this change.
+        > If you're already testing your bot in Teams, you must sign out from this app and sign out from Teams. Then sign in again to see this change.
        
        :::image type="content" source="~/assets/images/adaptive-cards/manifest_1.png" alt-text="manifest.":::
 
