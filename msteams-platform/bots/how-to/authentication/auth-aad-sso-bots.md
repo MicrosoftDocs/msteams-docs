@@ -279,16 +279,12 @@ The response with the token is sent through an invoke activity with the same sch
 > * You might receive multiple responses for a given request if the user has multiple active endpoints. You must deduplicate the responses with the token.
 > * With latest SDK updates token exchange and deduplication is handled by `TeamsSSOTokenExchangeMiddleware`. If the activity name is `signin` or `tokenExchange` the middleware will attempt to exchange the token and deduplicate the incoming call by ensuring that only one exchange request is processed. For more information, see [`TeamsSSOTokenExchangeMiddleware`](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation-sso-quickstart/csharp_dotnetcore/BotConversationSsoQuickstart/AdapterWithErrorHandler.cs#L26).
 
-##### C# code to handle the invoke activity
-
 ```csharp
-   protected override async Task OnTokenResponseEventAsync(ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken)
+ protected override async Task OnTokenResponseEventAsync(ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken)
         {
             await Dialog.RunAsync(turnContext, ConversationState.CreateProperty<DialogState>(nameof(DialogState)), cancellationToken);
         }
 ```
-
-The `turnContext.activity.value` is of type [TokenExchangeInvokeRequest](/dotnet/api/microsoft.bot.schema.tokenexchangeinvokerequest?view=botbuilder-dotnet-stable&preserve-view=true) and contains the token that can be further used by your bot. You must store the tokens for performance reasons and refresh them.
 
 ### Token exchange failure
 
