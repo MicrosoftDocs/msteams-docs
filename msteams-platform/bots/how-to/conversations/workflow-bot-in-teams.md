@@ -383,9 +383,9 @@ The following steps help you to add user-specific view with TeamsFx SDK:
 
 <details>
 
-<summary><b>2. Add user-specific Adaptive Cards</b></summary>
+<summary><b>2. Add user-specific Adaptive Card</b></summary>
 
-You need to design the user-specific Adaptive Card to refresh specific users such as  `responseCard.json` for `userA` in the sample. To get started, you can create a `responseCard.json` with the following content, and save it in `bot/src/adaptiveCards` folder:
+You need to design the user-specific Adaptive Card to refresh specific files such as  `responseCard.json` for `userA` in the sample. To get started, you can create a `responseCard.json` with the following content, and save it in `bot/src/adaptiveCards` folder:
 
 ```responseCard.json
 
