@@ -375,7 +375,7 @@ The following steps help you to add user-specific view with TeamsFx SDK:
   }
   ```
 
-You need to replace `${userID}` with user MRI in code, while rendering your card content.
+  You need to replace `${userID}` with user MRI in code, while rendering your card content.
 
 <br>
 
