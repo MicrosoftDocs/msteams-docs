@@ -56,7 +56,7 @@ The following are three different methods to enable Share in meeting. You can us
 
 # [Method 1](#tab/method-1)
 
-This method is the simplest way to quickly display the share in meeting buttons with minimal customizations. You can customize the button styles, size, and languages.
+This method is the simplest way to display the share in meeting buttons with minimal customizations. You can customize the button styles, size, and languages.
 
 You can scan your web page to locate any HTML elements with the class name of type `teams-share-in-meeting-button` and dynamically generate share in meeting buttons in your page.
 
@@ -87,7 +87,7 @@ You can scan your web page to locate any HTML elements with the class name of ty
 
 # [Method 2](#tab/method-2)
 
-You can use this method to have some control over which button to render dynamically or when the script is executed. Script only executes when `window.shareToMicrosoftTeams.renderButtons()` is called. You can pass specific html elements through the `renderButtons({elements: [], shareInMeetingElements: [shareInMeetingButton])` API. You can customize the button styles, size, and languages.
+You can use this method to have some control over which button to render dynamically or when the script is executed. The script only executes when `window.shareToMicrosoftTeams.renderButtons()` is called. You can pass specific HTML elements through the `renderButtons({elements: [], shareInMeetingElements: [shareInMeetingButton])` API. You can customize the button styles, size, and languages.
 
 The `async shareToMicrosoftTeams.renderButtons(options)` API renders all share button that have the class name **teams-share-button** or **teams-share-in-meeting-button** on the page. If an `options (optional)` object is supplied with a list of elements as shown in the following code, those elements are rendered into the share buttons or share in meeting buttons.
 
@@ -117,7 +117,7 @@ options (optional): { elements?: HTMLElement[], shareInMeetingElements?: HTMLEle
 
 # [Method 3](#tab/method-3)
 
-You can use this method to have complete control over how the script is called and when to generate the button using the `window.shareToMicrosoftTeams.shareInMeetingClickHandler` API. You can controls how and where the buttons is generated. You only need to attach `window.shareToMicrosoftTeams.shareInMeetingClickHandler` API to the `onclick` attribute of the button. It can be attached to a link, a button, a dropdown menu, and so on. You have complete control of how the UI appears.
+You can use this method to have complete control over how the script is called and when to generate the button using the `window.shareToMicrosoftTeams.shareInMeetingClickHandler` API. You can control how and where the buttons are generated. You only need to attach the `window.shareToMicrosoftTeams.shareInMeetingClickHandler` API to the `onclick` attribute of the button. It can be attached to a link, button, dropdown menu, and so on. You have complete control of how the UI appears.
 
 The `async shareInMeetingClickHandler(content: IShareInMeetingContent)` API creates a callback handler for Share in meeting button, which can be executed by selecting a button or menu.
 
