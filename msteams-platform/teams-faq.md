@@ -88,7 +88,7 @@ Teams doesn't support that capability as yet.
 
 <details>
 
-<summary><b>Can I use my own Azure Fluid Relay service?</b></summary>
+<summary>Can I use my own Azure Fluid Relay service?</summary>
 
 Yes! When initializing Live Share, you can define your own `AzureConnectionConfig`. Live Share associates containers you create with meetings, but you'll need to implement the `ITokenProvider` interface to sign tokens for your containers. For example, you can use a provided `AzureFunctionTokenProvider`, which uses an Azure cloud function to request an access token from a server.
 
@@ -106,7 +106,7 @@ For more information, see [how to guide] // ./teams-live-share-how-to/how-to-cus
 
 <details>
 
-<summary><b>How long is data stored in Live Share's hosted service accessible?</b></summary>
+<summary>How long is data stored in Live Share's hosted service accessible?</summary>
 
 Any data sent or stored through Fluid containers created by Live Share's hosted Azure Fluid Relay service is accessible for 24 hours. If you want to persist data beyond 24 hours, you can replace our hosted Azure Fluid Relay service with your own. Alternatively, you can use your own storage provider in parallel to Live Share's hosted service.
 
@@ -116,7 +116,7 @@ Any data sent or stored through Fluid containers created by Live Share's hosted 
 
 <details>
 
-<summary><b>What meeting types does Live Share support?</b></summary>
+<summary>What meeting types does Live Share support?</summary>
 
 Scheduled meetings, one-on-one calls, group calls, and meet now are supported. Channel meetings aren't yet supported.
 
@@ -126,7 +126,7 @@ Scheduled meetings, one-on-one calls, group calls, and meet now are supported. C
 
 <details>
 
-<summary><b>Will Live Share's media package work with DRM content?</b></summary>
+<summary>Will Live Share's media package work with DRM content?</summary>
 
 No. Teams currently doesn't support encrypted media for tab applications on desktop. Chrome, Edge, and mobile clients are supported. For more information, you can [track the issue here](https://github.com/microsoft/live-share-sdk/issues/14).
 
@@ -135,7 +135,7 @@ No. Teams currently doesn't support encrypted media for tab applications on desk
 </details>
 
 <details>
-<summary><b>How many people can attend a Live Share session?</b></summary>
+<summary>How many people can attend a Live Share session?</summary>
 
 Currently, Live Share supports a maximum of 100 attendees per session. If this is something you're interested in, you can [start a discussion here](https://github.com/microsoft/live-share-sdk/discussions).
 
@@ -144,7 +144,7 @@ Currently, Live Share supports a maximum of 100 attendees per session. If this i
 </details>
 
 <details>
-<summary><b>Can I use Live Share's data structures outside of Teams?</b></summary>
+<summary>Can I use Live Share's data structures outside of Teams?</summary>
 
 Currently, Live Share packages require the Teams Client SDK to function properly. Features in `@microsoft/live-share` or `@microsoft/live-share-media` won't work outside Microsoft Teams. If this is something you're interested in, you can [start a discussion here](https://github.com/microsoft/live-share-sdk/discussions).
 
@@ -153,7 +153,7 @@ Currently, Live Share packages require the Teams Client SDK to function properly
 </details>
 
 <details>
-<summary><b>Can I use multiple Fluid containers?</b></summary>
+<summary>Can I use multiple Fluid containers?</summary>
 
 Currently, Live Share only supports having one container using our provided Azure Fluid Relay service. However, it's possible to use both a Live Share container and a container created by your own Azure Fluid Relay instance.
 
@@ -162,7 +162,7 @@ Currently, Live Share only supports having one container using our provided Azur
 </details>
 
 <details>
-<summary><b>Can I change my Fluid container schema after creating the container?</b></summary>
+<summary>Can I change my Fluid container schema after creating the container?</summary>
 
 Currently, Live Share doesn't support adding new `initialObjects` to the Fluid `ContainerSchema` after creating or joining a container. Because Live Share sessions are short-lived, this is most commonly an issue during development after adding new features to your app.
 
@@ -184,7 +184,7 @@ If you plan to update your app with new `SharedObject` or `LiveObject` instances
 </details>
 
 <details>
-<summary><b>Are there limits to how many change events I can emit through Live Share?</b></summary>
+<summary>Are there limits to how many change events I can emit through Live Share?</summary>
 
 While Live Share is in Preview, any limit to events emitted through Live Share isn't enforced. For optimal performance, you must debounce changes emitted through `SharedObject` or `LiveObject` instances to one message per 50 milliseconds or more. This is especially important when sending changes based on mouse or touch coordinates, such as when synchronizing cursor positions, inking, and dragging objects around a page.
 
@@ -250,7 +250,7 @@ For more information, see [Graph explorer](https://developer.microsoft.com/graph
 
 <details>
 
-<summary><b>What should I do if one or more of the course teams weren't created after synchronization?</b></summary>
+<summary>What should I do if one or more of the course teams weren't created after synchronization?</summary>
 
 Each Moodle course must have at least one faculty and one student matched to a Microsoft 365 AAD UPN account. The team can't be created, if the synchronization doesn't find a match.
 
@@ -262,7 +262,7 @@ Each team course instance must have an owner, and the synchronization sets the f
 
 <details>
 
-<summary><b>What should we do to remove Moodle login page when working from Teams? Can we force single sign-on (SSO)?</b></summary>
+<summary>What should we do to remove Moodle login page when working from Teams? Can we force single sign-on (SSO)?</summary>
 
 The users have multiple sign in options from the Moodle login page.
 
@@ -275,7 +275,7 @@ The users have multiple sign in options from the Moodle login page.
 
 <details>
 
-<summary><b>How can I specify which users to sync? I don’t want all Azure AD users synchronized with the Moodle website. </b></summary>
+<summary>How can I specify which users to sync? I don’t want all Azure AD users synchronized with the Moodle website. </summary>
 
 Use the **User Creation Restriction** option to specify the users by synchronizing the configuration options of the **local_o365** plugin. The dropdown menu to the left of the **filter** offers options such as Country, Company Name, and Language.
 
@@ -294,7 +294,7 @@ The following image shows user creation restrictions options:
 
 <details>
 
-<summary><b>We would like our faculty to be able to synchronize courses to Teams? Are Moodle administrators the only ones who can control synchronization of courses?</b></summary>
+<summary>We would like our faculty to be able to synchronize courses to Teams? Are Moodle administrators the only ones who can control synchronization of courses?</summary>
 
 By default only Moodle administrators can configure synchronization. The team owner can control if a course is synchronized to Teams and **Allow configure course sync in course** is enabled. In this case, the team owner is the faculty. The block displays the configuration option to individuals with the appropriate owner permissions.
 
@@ -314,7 +314,7 @@ The following image shows synchronization of courses:
 
 <details>
 
-<summary><b>We have followed the documentation, but the user accounts fail to sync AAD and Moodle. What should we do?</b></summary>
+<summary>We have followed the documentation, but the user accounts fail to sync AAD and Moodle. What should we do?</summary>
 
 The issue can be resolved before users perform the **Delta token clean up** as a final troubleshooting step.
 
@@ -333,7 +333,7 @@ The following table provides the actions and dependencies to be performed and ch
 
 <details>
 
-<summary><b>One or more users are unable to sign in using their Microsoft 365 credentials, although most users can sign in without an issue. What would be the cause of this inconsistency?</b></summary>
+<summary>One or more users are unable to sign in using their Microsoft 365 credentials, although most users can sign in without an issue. What would be the cause of this inconsistency?</summary>
 
 The reason for inconsistencies with users being able unable to sign using their Microsoft 365 credentials can be related to the user mapping operation during synchronization. To resolve the issue, perform the following steps:
 
@@ -348,7 +348,7 @@ The reason for inconsistencies with users being able unable to sign using their 
 
 <details>
 
-<summary><b>All users are unable to sign in using their Microsoft 365 credentials. What can we do to resolve this?</b></summary>
+<summary>All users are unable to sign in using their Microsoft 365 credentials. What can we do to resolve this?</summary>
 
 Users who were unable to sign in at the start need to report the issue and verify that the application **Client secret** hasn't expired.
 
@@ -368,7 +368,7 @@ If the **Client secret** has expired, then user needs to generate a new **Client
 
 <details>
 
-<summary><b>How to change the teams instance that is linked to a course?</b></summary>
+<summary>How to change the teams instance that is linked to a course?</summary>
 
 Administrators can change the teams instance associated with a course through the **Manage Teams Connections** page. Select **Connect** next to the course to be changed and select teams instance. If you use course reset to archive a team, you can link it back to the previous team.
 
@@ -382,7 +382,7 @@ The following image shows the teams instance:
 
 <details>
 
-<summary><b>Why isn’t the Atto Teams meeting integration showing up within the Atto editor?</b></summary>
+<summary>Why isn’t the Atto Teams meeting integration showing up within the Atto editor?</summary>
 
 The user can face Atto Teams meeting issue if the icon reference is missing in the **Toolbar config**, which displays the Teams icon within the Atto editor. User needs to add Teams meeting icon to the right of the links icon using the following steps:
 
@@ -405,7 +405,7 @@ For more information on editing Atto toolbar, see:
 
 <details>
 
-<summary><b>Do the meetings scheduled through Microsoft integration appear in Outlook or in Teams calendars? What is the standard timeline for the meetings to be displayed?</b></summary>
+<summary>Do the meetings scheduled through Microsoft integration appear in Outlook or in Teams calendars? What is the standard timeline for the meetings to be displayed?</summary>
 
 The meetings scheduled through the app don't appear in the scheduler’s Outlook or Teams calendar as they're similar to Channel Meetings. All the members in the course channel can attend the meeting directly from the embedded channel link. For more information, see [Channel meetings](https://www.knowledgewave.com/blog/benefits-of-channel-meetings-in-microsoft-teams).
 
@@ -417,7 +417,7 @@ However, you can access the invite and manually add participant names to the **R
 
 <details>
 
-<summary><b>Is there any support site where we can get more help on products and other issues?</b></summary>
+<summary>Is there any support site where we can get more help on products and other issues?</summary>
 
 For support and help on the product and services issues or developer community help see, [Support and Feedback](/microsoftteams/platform/feedback.md).
 
@@ -468,7 +468,7 @@ You need to fetch PC ID.
 
 <details>
 
-<summary><b>How do I create a Partner Center account?</b></summary>
+<summary>How do I create a Partner Center account?</summary>
 
 You can create a Partner Center account one of the following ways:
 
@@ -481,7 +481,7 @@ You can create a Partner Center account one of the following ways:
 
 <details>
 
-<summary><b>What if I can't find my account in Partner Center?</b></summary>
+<summary>What if I can't find my account in Partner Center?</summary>
 
 Open a [Partner Center support ticket](https://partner.microsoft.com/support/v2/?stage=1) and select the following:
 
@@ -497,7 +497,7 @@ Open a [Partner Center support ticket](https://partner.microsoft.com/support/v2/
 
 <details>
 
-<summary><b>Where can I get support for my Partner Center account issues?</b></summary>
+<summary>Where can I get support for my Partner Center account issues?</summary>
 
 Visit the [publishers support page](https://aka.ms/marketplacepublishersupport) to search for your issue. If the guidance isn't helpful, create a [Partner Center support ticket](/azure/marketplace/partner-center-portal/support#how-to-open-a-support-ticket).
 
@@ -507,7 +507,7 @@ Visit the [publishers support page](https://aka.ms/marketplacepublishersupport) 
 
 <details>
 
-<summary><b>How do I manage my Office Store account in Partner Center?</b></summary>
+<summary>How do I manage my Office Store account in Partner Center?</summary>
 
 See [manage your account through Partner Center](/office/dev/store/manage-account-settings-and-profile) for information.
 
@@ -517,7 +517,7 @@ See [manage your account through Partner Center](/office/dev/store/manage-accoun
 
 <details>
 
-<summary><b>My phone number doesn't have an area code, so how do I add it to my profile?</b></summary>
+<summary>My phone number doesn't have an area code, so how do I add it to my profile?</summary>
 
 The phone number has three parts: country code, area code, and telephone number. If your phone number doesn't include an area code, leave the second box empty and complete the third box.
 
@@ -527,7 +527,7 @@ The phone number has three parts: country code, area code, and telephone number.
 
 <details>
 
-<summary><b>How do I manage my account settings and partner profile in Partner Center?</b></summary>
+<summary>How do I manage my account settings and partner profile in Partner Center?</summary>
 
 See [manage account settings and profile info](/windows/uwp/publish/manage-account-settings-and-profile#additional-settings-and-info) for information.
 
@@ -537,7 +537,7 @@ See [manage account settings and profile info](/windows/uwp/publish/manage-accou
 
 <details>
 
-<summary><b>Why do I see a, "This account is not publish eligible," message when I try to submit my app?</b></summary>
+<summary>Why do I see a, "This account is not publish eligible," message when I try to submit my app?</summary>
 
 You received this error message because your [account verification status](/partner-center/verification-responses) is pending. Check your status in the Partner Center [dashboard](https://partner.microsoft.com/dashboard). Select the **Settings** gear icon and choose **Developer settings > Account > Account settings**.
 
@@ -549,7 +549,7 @@ You received this error message because your [account verification status](/part
 
 <details>
 
-<summary><b>What is verified in the Partner Center account verification process?</b></summary>
+<summary>What is verified in the Partner Center account verification process?</summary>
 
 There are three verification areas, **Email Ownership**, **Employment**, and **Business**. For more information, see [what is verified and how to respond](/partner-center/verification-responses#what-is-verified-and-how-to-respond).
 
@@ -563,7 +563,7 @@ Once verification process is complete, the status of your enrollment on the prof
 
 <details>
 
-<summary><b>My account verification status hasn't advanced beyond Email Ownership. How should I proceed?</b></summary>
+<summary>My account verification status hasn't advanced beyond Email Ownership. How should I proceed?</summary>
 
 During the **Email Ownership** verification process, a verification email is sent to the primary contact. Check your primary contact inbox for an email from **maccount@microsoft.com** with the subject line **Action needed: Verify your email account with Microsoft** and complete the email verification process. The verification email is sent to the address listed on your Partner Center account settings.
 
@@ -579,7 +579,7 @@ Remember the following about the email verification process:
 
 <details>
 
-<summary><b>I've checked my mail folders and haven't received the verification email. What must I do next?</b></summary>
+<summary>I've checked my mail folders and haven't received the verification email. What must I do next?</summary>
 
 Try the following:
 
@@ -595,7 +595,7 @@ Try the following:
 
 <details>
 
-<summary><b>How long does the employment verification process usually take?</b></summary>
+<summary>How long does the employment verification process usually take?</summary>
 
 If all the submitted details are correct, the employment verification process takes about two hours to complete.
 
@@ -605,7 +605,7 @@ If all the submitted details are correct, the employment verification process ta
 
 <details>
 
-<summary><b>How long does the business verification process usually take?</b></summary>
+<summary>How long does the business verification process usually take?</summary>
 
 If all the required documents are submitted, business verification takes one to two business days to complete.
 
@@ -615,7 +615,7 @@ If all the required documents are submitted, business verification takes one to 
 
 <details>
 
-<summary><b>If I reach out to the support team, will my ticket be expedited?</b></summary>
+<summary>If I reach out to the support team, will my ticket be expedited?</summary>
 
 Support tickets get resolved in a week. Check for updates sent to the email you provided when creating the support ticket.
 
@@ -625,7 +625,7 @@ Support tickets get resolved in a week. Check for updates sent to the email you 
 
 <details>
 
-<summary><b>I created a support ticket but haven't received an update in seven business days. Where can I get help?</b></summary>
+<summary>I created a support ticket but haven't received an update in seven business days. Where can I get help?</summary>
 
 Send an email to <a href="mailto:teamsubm@microsoft.com">teamsubm@microsoft.com</a> with the following details:
 
@@ -643,7 +643,7 @@ Send an email to <a href="mailto:teamsubm@microsoft.com">teamsubm@microsoft.com<
 
 <details>
 
-<summary><b>Where else can I go for Partner Center help?</b></summary>
+<summary>Where else can I go for Partner Center help?</summary>
 
 The following resources can also assist:
 
@@ -765,7 +765,7 @@ FAQ for [Provision cloud resources](toolkit/provision.md)) using Teams Toolkit.
 
 <details>
 
-<summary><b>How to troubleshoot?</b></summary>
+<summary>How to troubleshoot?</summary>
 
 If you get errors with Teams Toolkit in Visual Studio Code, you can select **Get Help** on the error notification to go to the related document. If you're using TeamsFx CLI, there will be a hyperlink at the end of error message that points to the help doc. You can also view [provision help doc](https://aka.ms/teamsfx-arm-help) directly.
 
@@ -775,7 +775,7 @@ If you get errors with Teams Toolkit in Visual Studio Code, you can select **Get
 
 <details>
 
-<summary><b>How can I switch to another Azure subscription while provisioning?</b></summary>
+<summary>How can I switch to another Azure subscription while provisioning?</summary>
 
 1. Switch subscription in current account or log out and select a new subscription.
 2. If you have already provisioned current environment, you need to create a new environment and perform provision because ARM doesn't support moving resources.
@@ -787,7 +787,7 @@ If you get errors with Teams Toolkit in Visual Studio Code, you can select **Get
 
 <details>
 
-<summary><b>How can I change resource group while provisioning?</b></summary>
+<summary>How can I change resource group while provisioning?</summary>
 
 Before provision, the tool asks you if you want to create a new resource group or use an existing one. You can provide a new resource group name or choose an existing one in this step.
 
@@ -797,7 +797,7 @@ Before provision, the tool asks you if you want to create a new resource group o
 
 <details>
 
-<summary><b>How can I provision sharepoint-based app?</b></summary>
+<summary>How can I provision sharepoint-based app?</summary>
 
 You can follow [provision SharePoint-based app](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4).
 
