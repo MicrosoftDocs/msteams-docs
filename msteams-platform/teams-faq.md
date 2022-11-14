@@ -225,15 +225,17 @@ Also, provided guidance how they can call Graph API get user profile photo.
 <br>
 
 <details>
-<summary>1. Does Graph API work in Postman?</summary>
+<summary>Does Graph API work in Postman?</summary>
 <br>
 You can use the Microsoft Graph Postman collection with Microsoft Graph APIs.
 
 For more information, see [Use Postman with the Microsoft Graph API](/graph/use-postman).
 </details>
+
 <br>
+
 <details>
-<summary>2. Does Graph API work in Microsoft Graph explorer?</summary>
+<summary>Does Graph API work in Microsoft Graph explorer?</summary>
 <br>
 Yes, Graph API works in Microsoft Graph explorer.
 
