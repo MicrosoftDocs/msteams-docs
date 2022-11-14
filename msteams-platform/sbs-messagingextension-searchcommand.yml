@@ -33,13 +33,13 @@ items:
      | &nbsp; | Install | For using... |
      | --- | --- | --- |
      | **Required** | &nbsp; | &nbsp; |
-     | &nbsp; | [Microsoft Teams](https://www.micrsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call and all in one place.|
+     | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call and all in one place.|
      | &nbsp; | [Visual Studio 2022 version 17.3](https://visualstudio.microsoft.com)<br> Install one of the following two workloads:<br> • ASP.NET and web development <br> • .NET Core cross-platform development | You can install the enterprise version in Visual Studio 2022, and install the workloads. |
      | &nbsp; | [.NET Core SDK version 3.1](https://dotnet.microsoft.com/en-us/download) | Customized bindings for local debugging and Azure Functions app deployments. If you haven't installed the .NET 3.1 (or later) SDK globally, the portable version can be installed. |
      | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots, message extensions, and incoming webhooks) require inbound connections. A tunnel connects your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
 
       > [!NOTE]
-      > After downloadoing ngrok, sign up and install [authtoken](https://ngrok.com/download).
+      > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
 
 
 - title: Set up local environment
@@ -87,7 +87,7 @@ items:
     1.  To create a new resource group, select the required location from **New resource group location** dropdown list.
         For more information, see [Create resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups).
 
-        :::image type="content" source="./assets/images/bots/newresource.png" alt-text="Screenshot showing the selection of new resource group location":::
+        :::image type="content" source="./assets/images/bots/newresource.png" alt-text="Screenshot showing the selection of new resource group location.":::
 
     1. Select **Type of App** as **MultiTenant**.
 
@@ -125,7 +125,7 @@ items:
 
     1. Next to **Microsoft App ID**, select **Manage**.
 
-       :::image type="content" source="~/assets/images/manage-bot-label_1.png" alt-text="Screenshot showing the selection of manage under for the creation of new client secret.":::
+       :::image type="content" source="~/assets/images/manage-bot-label_1.png" alt-text="Screenshot showing the selection of manage for the creation of new client secret.":::
 
     1. In the **Client secrets** section, select **New client secret**. 
 
@@ -137,7 +137,7 @@ items:
     
     1. Select **Add**.
 
-        :::image type="content" source="~/assets/images/Teams-Messaging-Extensions-Search/clientsecret_1.png" alt-text="Screenshot showing the adding of client secret.":::
+        :::image type="content" source="~/assets/images/Teams-Messaging-Extensions-Search/clientsecret_1.png" alt-text="Screenshot showing the addition of client secret.":::
 
     1. In the **Value** column, select **Copy to clipboard**.
 
@@ -343,7 +343,7 @@ items:
          * Set `"MicrosoftAppTenantId"` as blank.
          * Set `"BaseUrl"` to the fully qualified domain name (https to io).
 
-        :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/appsettings_1.png" alt-text="Screenshot showing the app settings where you need to replace MicrosoftApp ID, app password and baseurl.":::
+        :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/appsettings_1.png" alt-text="Screenshot showing the app settings where you need to replace MicrosoftApp ID, app password, and baseurl.":::
 
     1. Go to **manifest.json** in the cloned repository.
 
@@ -431,11 +431,11 @@ items:
 
     1. Select **Add**.
 
-       :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/addapp_1.png" alt-text="Screenshot showing the selection add app.":::
+       :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/addapp_1.png" alt-text="Screenshot showing the selection adding the app.":::
 
        A pop-up opens in a chat.
 
-       :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/popup.png" alt-text="Screenshot showing pop-up chat.":::
+       :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/popup.png" alt-text="Screenshot showing the pop-up window.":::
    
 - title: Interact with the app in Teams
   durationInMinutes: 1
