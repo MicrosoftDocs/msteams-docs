@@ -58,7 +58,7 @@ npm install @microsoft/teamsfx
 TeamsFx class instance access all TeamsFx settings from the environment variables by default. You can set customized configuration values to override the default values. For more information, see [override configuration](#override-configuration-for-teamsfx-class) for details.
 When creating a TeamsFx instance, you need to specify the identity type.
 
-There are two types of identity:
+The following are two type of identities:
 
 * **User Identity**: Represents the current user of Teams.
 * **Application Identity**: Represents the application itself.
@@ -777,7 +777,7 @@ This section provides several code snippets for other scenarios that are related
 You can set customer log level and redirect outputs when using this library.
 
 > [!NOTE]
-> Sign in is turned off by default, you can turn it on by setting log level.
+> Logging in is turned off by default, you can turn it on by setting log level.
 
 #### Enable log by setting log level
 
