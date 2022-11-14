@@ -504,7 +504,7 @@ You can perform the following steps to add SSO using Teams Toolkit in Visual Stu
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso-vs/vs-2022-preview-select-teams.png" alt-text="Select a Microsoft teams project by searching for teams." lightbox="../assets/images/teams-toolkit-v2/add-sso-vs/vs-2022-preview-select-teams.png":::
 
-1. Under **Create a new Teams application** select the required **application type**, clear the **Configure the single sign-on** check box.
+1. Under **Create a new Teams application** select the required **application type**, clear the **Configure with single sign-on** check box.
 
 1. Select **create**.
 
@@ -573,10 +573,10 @@ The following steps help you to enable SSO in your application:
 
    * `TeamsSsoBot.cs`: This file creates a `TeamsActivityHandler` with `SsoDialog` that adds and triggers a command `showUserInfo`.
 
-    > [!NOTE]
-    > Ensure to replace `{Your_NameSpace}` with your project namespace in the three files (`SsoDialog.cs`, `SsoOperations.cs`, and `TeamsSsoBot.cs`).
+     > [!NOTE]
+     > Ensure to replace `{Your_NameSpace}` with your project namespace in the three files (`SsoDialog.cs`, `SsoOperations.cs`, and `TeamsSsoBot.cs`).
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso-vs/vs-2022-preview-replace-namespace.png" alt-text="Replace name space with the your name space":::
+     :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso-vs/vs-2022-preview-replace-namespace.png" alt-text="Replace name space with the your name space":::
 
 4. You can now update `Program.cs`.
 
