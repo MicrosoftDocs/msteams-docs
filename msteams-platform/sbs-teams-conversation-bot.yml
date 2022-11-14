@@ -47,12 +47,12 @@ items:
   content: |
     Register your bot with Azure Bot service when you develop and host it in Azure. Perform the following steps:
 
-    * Create a ngrok tunnel to your web server's endpoints.
-    * Create bot channel registration in Azure account.
-    * Create client secret that enables single sign-on (SSO) authentication of the bot.
-    * Add API permissions for downstream calls.
-    * Add messaging endpoint to the ngrok tunnel you created.
-    * Add Teams channel to deploy the bot to a Teams channel.
+    1. Create a ngrok tunnel to your web server's endpoints.
+    1. Create bot channel registration in Azure account.
+    1. Create client secret that enables single sign-on (SSO) authentication of the bot.
+    1. Add API permissions for downstream calls.
+    1. Add messaging endpoint to the ngrok tunnel you created.
+    1. Add Teams channel to deploy the bot to a Teams channel.
 
     **To create a ngrok tunnel**
 
@@ -72,29 +72,29 @@ items:
     
        :::image type="content" source="./assets/images/conversation-bot/azure-bot_1.png" alt-text="Azure bot.":::
 
-       **Create an Azure Bot** window appears.
-
-    1. Enter the required bit handle name in **Bot handle**.
+       
+    1. In the **Create an Azure Bot** window that appears, enter the required bit handle name in **Bot handle**.
     1. Select your **Subscription** and **Resource group** from the dropdown list.
     
        :::image type="content" source="./assets/images/conversation-bot/create-azure-bot.png" alt-text="Create Azure bot.":::
 
-       You can optionally create a new resource group. Select **Create new** > enter resource name > select **OK**. Select the required location from **New resource group location** dropdown list.
+       You can optionally create a new resource group. Select **Create new** > enter resource name > select **OK**. Select the required location from the **New resource group location** dropdown list.
    
        :::image type="content" source="~/assets/images/conversation-bot/newresource_1.png" alt-text="Screenshot showing the new resource group location.":::
 
-    1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected. 
-    
-       You can select **Use existing app registration** and enter **App ID**, **App tenant ID**, and **MSI resource ID**.
+    1. In the **Microsoft App ID** section, Select **Type of App** as **Multi Tenant**.
+
+       :::image type="content" source="./assets/images/conversation-bot/tenant-review_1.png" alt-text="tenant review.":::
+
+    1. In the **Creation Type**, by default **Create new Microsoft App ID** is selected.
+       You can optionally select **Use existing app registration** and enter **App ID**, **App tenant ID**, and **MSI resource ID**.
 
        > [!NOTE]
        > You can't create more than one bot with the same **Microsoft App ID**.
 
-    1. Select **Type of App** as **Multi Tenant**.
-
     1. Select **Review + create**.
 
-       :::image type="content" source="./assets/images/Tab-ME-SSO/tenant-review.png" alt-text="tenant review.":::
+       :::image type="content" source="./assets/images/conversation-bot/tenant-review_2.png" alt-text="tenant review.":::
 
     1. If the validation passes, select **Create**.
 
@@ -127,13 +127,9 @@ items:
 
        :::image type="content" source="~/assets/images/Tab-ME-SSO/newclientsecret_1.png" alt-text="Screenshot showing the selection of new client secret.":::
 
-       **Add a client secret** window appears.
+    1. In the **Add a client secret** window that appears, enter **Description** of the client secret and select *Add*.
 
-    1. Enter **Description** of the client secret.
-
-    1. Select **Add**.
- 
-        :::image type="content" source="./assets/images/conversation-bot/add-client-secret_1.png" alt-text="Add client secret.":::
+       :::image type="content" source="./assets/images/conversation-bot/add-client-secret_1.png" alt-text="Add client secret.":::
 
     1. Select **Copy to clipboard** to copy the **Value** details.
 
@@ -153,7 +149,7 @@ items:
 
     1. Select **Application permissions**.
 
-    1. Select the required user permissions, for example, `User.Read`.
+    1. Select the required user permissions, for example, `User.Read.All`.
     
     1. Select **Add permissions**.
 
@@ -161,7 +157,7 @@ items:
 
     **To add messaging endpoint**
 
-    1. From ngrok, copy the HTTPS URL (https to io).
+    1. From ngrok, copy the HTTPS URL.
             
         ![ngrok HTTPS URL](~/assets/images/conversation-bot/ngrok-image.png)
 
@@ -184,7 +180,7 @@ items:
 
     1. Select your bot from **Recent Resources**.
     1. Select **Channels** in the left pane.
-    1. Select <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/> **Microsoft Teams**.    
+    1. Select **Microsoft Teams**.    
         
        :::image type="content" source="~/assets/images/Tab-ME-SSO/channel-teams_1.png" alt-text="Select Teams in channels":::
 
@@ -204,10 +200,10 @@ items:
   content: |
     Configure the bot to understand how to authenticate conversation bot in Teams, create the Teams app package, and upload it to the organization.
     
-    * Update appsettings.json in Visual Studio.
-    * Update manifest.json in Visual Studio and compress it to the zip file in the File Explorer.
-    * Run your solution in Visual Studio.
-    * Upload the bot to Teams.
+    1. Update appsettings.json in Visual Studio.
+    1. Update manifest.json in Visual Studio and compress it to the zip file in the File Explorer.
+    1. Run your solution in Visual Studio.
+    1. Upload the bot to Teams.
 
     **To update appsettings**
 
@@ -218,7 +214,7 @@ items:
         :::image type="content" source="./assets/images/calls-and-meetings/git_1.png" alt-text="Screenshot showing the repo download.":::
 
         > [!NOTE]
-        > Ensure to note the path of the repository that you downloaded.
+        > Ensure that you note the path of the repository that you downloaded.
 
     1. In the **File Explorer**, go to **botbuilder-samples** > **samples** > **csharp_dotnetcore** > **57.teams-conversation-bot**.
     1. Open the **appsettings.json** file in Visual Studio and update the configuration for the bot.
@@ -336,7 +332,7 @@ items:
 - title: Complete challenge
   durationInMinutes: 1
   content: |
-    Did you come up with output like this?
+    Did you come up with something like this?
 
     :::image type="content" source="./assets/images/conversation-bot/final-output.png" alt-text="Final output."lightbox="assets/images/conversation-bot/final-output.png":::
     
