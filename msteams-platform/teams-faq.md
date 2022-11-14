@@ -592,10 +592,11 @@ Code sample has been shared is in .NET or Node js.
 ## Tabs
 
 <details>
-<summary>Customer was facing issue with deeplink to get the subEntityId or subPageId on mobile client while navigating from one tab to another tab.</summary>
+<summary>How can I use deeplink to get the subEntityId or subPageId on mobile client while navigating from one tab to another tab?</summary>
 
+Question: Customer was facing issue with deeplink to get the subEntityId or subPageId on mobile client while navigating from one tab to another tab.
 <br>
-Customer to upgrade the teams JavaScript client SDK to (@microsoft/teams-js": "^2.0.0") and it resolves the issue.
+Solution: Upgrade the Teams JavaScript client SDK to (@microsoft/teams-js": "^2.0.0").
 
 </details>
 
