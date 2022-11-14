@@ -164,8 +164,11 @@ Microsoft Docs to get the user’s time zone as follows:
 
 Question: Customer was looking for support to deploy the code in Azure using teams toolkit, also asked few queries related to graph api get user profile photo.
 <br>
-Solution: Shared references to deploy the code using toolkit: Create a new Teams app using Teams Toolkit - Teams | Microsoft Docs
+Solution: Shared references to deploy the code using toolkit: Create a new Teams app using Teams 
+
+Toolkit - Teams | Microsoft Docs
 TeamsFx Command Line Interface - Teams | Microsoft Docs
+
 Also, provided guidance how they can call Graph API get user profile photo.
 
 </details>
