@@ -224,6 +224,24 @@ Also, provided guidance how they can call Graph API get user profile photo.
 
 <br>
 
+<details>
+<summary>1. Does Graph API work in Postman?</summary>
+<br>
+You can use the Microsoft Graph Postman collection with Microsoft Graph APIs.
+
+For more information, see [Use Postman with the Microsoft Graph API](/graph/use-postman).
+</details>
+<br>
+<details>
+<summary>2. Does Graph API work in Microsoft Graph explorer?</summary>
+<br>
+Yes, Graph API works in Microsoft Graph explorer.
+
+For more information, see [Graph explorer](https://developer.microsoft.com/graph/graph-explorer).
+
+</details>
+<br>
+
 ## Moodle FAQs
 
 <br>
@@ -681,10 +699,10 @@ Implement react page with tab SSO and render the content as required. You can op
 
 <br>
 <details>
-<summary>When user selects sign in button, popup isn't opening. Because partner trying to open https://login.microsoftonline.com site from sign in button-click. And signin end page is showing sdk timeout error. Asked to open sign in simple start page instead of login page directly. Issue resolved by doing the same.</summary>
+<summary>How can I avoid SDK timeout error while the app user signs in?</summary>
 
 <br>
-No resolution required.
+Open sign in simple start page instead of login page directly. Issue resolved by doing the same.
 
 </details>
 
@@ -697,6 +715,8 @@ Question: As we discussed with Azure AD team for the issue generating MS access 
 
 <br>
 Solution: Configure the application you're using to only execute HTML encoding of the scopes once, so the scopes can be correctly sent and evaluated by Azure AD.
+
+Links found: none for encoding scope for only HTML
 
 </details>
 
@@ -798,4 +818,3 @@ TeamsFx Command Line Interface - Teams | Microsoft Docs
 Also, provided guidance how they can call Graph API get user profile photo.
 
 </details>
-
