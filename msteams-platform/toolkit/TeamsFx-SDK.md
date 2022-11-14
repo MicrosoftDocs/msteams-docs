@@ -548,7 +548,7 @@ This section provides several code snippets for common scenarios that are relate
 
      ```
 
-    For more information about how to use this class in command bot, see [add single sign-on to Teams app](add-single-sign-on.md). And there's a [command-bot-with-sso](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/command-bot-with-sso) sample project, which you can try SSO command bot.
+    For more information about how to use class in command bot, see [add single sign-on to Teams app](add-single-sign-on.md). And there's a [command-bot-with-sso](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/command-bot-with-sso) sample project, which you can try SSO command bot.
 
     </details>
 
