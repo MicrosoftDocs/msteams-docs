@@ -239,9 +239,7 @@ Each Moodle course must have at least one faculty and one student matched to a M
 
 Each team course instance must have an owner, and the synchronization sets the faculty as the owner, with assumption that the faculty has Teams license.
 <br>
-
 </details>
-
 <details>
 <summary>What should we do to remove Moodle login page when working from Teams? Can we force single sign-on (SSO)?</summary>
 
@@ -251,7 +249,6 @@ The users have multiple sign in options from the Moodle login page.
 * To sign in manually to the Moodle portal see [Moodle](https://moodle.org/login/index.php).
 <br>
 </details>
-<br>
 <details>
 <summary>How can I specify which users to sync? I don’t want all Azure AD users synchronized with the Moodle website. </summary>
 
@@ -268,7 +265,6 @@ The following image shows user creation restrictions options:
 
 <br>
 </details>
-<br>
 <details>
 <summary>We would like our faculty to be able to synchronize courses to Teams? Are Moodle administrators the only ones who can control synchronization of courses?</summary>
 
@@ -286,7 +282,6 @@ The following image shows synchronization of courses:
 
 <br>
 </details>
-<br>
 <details>
 <summary>We have followed the documentation, but the user accounts fail to sync AAD and Moodle. What should we do?</summary>
 
@@ -303,7 +298,6 @@ The following table provides the actions and dependencies to be performed and ch
 <!-- |Token refresh|Clean the **User sync delta token** in the local_o365 plugin| {moodle_url}\local_o365\acp.php?Mode=maintenance_cleandeltatoken| -->
 <br>
 </details>
-<br>
 <details>
 <summary>One or more users are unable to sign in using their Microsoft 365 credentials, although most users can sign in without an issue. What would be the cause of this inconsistency?</summary>
 
@@ -316,7 +310,6 @@ The reason for inconsistencies with users being able unable to sign using their 
 
 <br>
 </details>
-<br>
 <details>
 <summary>All users are unable to sign in using their Microsoft 365 credentials. What can we do to resolve this?</summary>
 
@@ -334,7 +327,6 @@ If the **Client secret** has expired, then user needs to generate a new **Client
 
 <br>
 </details>
-<br>
 <details>
 <summary>How to change the teams instance that is linked to a course?</summary>
 
@@ -346,7 +338,6 @@ The following image shows the teams instance:
 
 <br>
 </details>
-<br>
 <details>
 <summary>Why isn’t the Atto Teams meeting integration showing up within the Atto editor?</summary>
 
@@ -367,7 +358,6 @@ For more information on editing Atto toolbar, see:
 * [Atto editor-Icon mapping] // https://docs.moodle.org/311/en/Atto_editor#:~:text=in%20the%20editor.-,Atto%20editor%20toolbar,-Atto%20Row%201 //
 <br>
 </details>
-<br>
 <details>
 <summary>Do the meetings scheduled through Microsoft integration appear in Outlook or in Teams calendars? What is the standard timeline for the meetings to be displayed?</summary>
 
@@ -377,7 +367,6 @@ However, you can access the invite and manually add participant names to the **R
 
 <br>
 </details>
-<br>
 <details>
 <summary>Is there any support site where we can get more help on products and other issues?</summary>
 
