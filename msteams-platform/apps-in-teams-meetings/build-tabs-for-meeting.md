@@ -204,7 +204,7 @@ The following is the flow diagram of a cached app when it's added to the meeting
 
 :::image type="content" source="../assets/images/saas-offer/cached-launch-app.png" alt-text="This screenshot shows the flow of the cached launch of the app in meeting side panel.":::
 
-After you opt for app caching, the webview that is used to host the embedded app is reused as users navigate to different instances of the app within a window.
+After you opt into app caching, the webview that is used to host the embedded app is reused as users navigate to different instances of the app within a window.
 
 The webview used to host the app is hidden when the users go out of the app and shown when the users return to the app. When the app is cached, any audio that is playing is muted.
 
