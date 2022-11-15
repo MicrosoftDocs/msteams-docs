@@ -301,7 +301,7 @@
       href: bots/how-to/conversations/conversation-messages.md
       displayName: Picture messages, attribution for bot message, status code responses, app localization using bot and tab.
       items:
-      - name: Receive all channel messages with RSC
+      - name: Receive all conversation messages with RSC
         href: bots/how-to/conversations/channel-messages-with-rsc.md
     - name: Create a commands menu
       href: bots/how-to/create-a-bot-commands-menu.md
@@ -799,8 +799,6 @@
       href: concepts/build-and-test/apps-localization.md
     - name: Localize JSON schema reference
       href: resources/schema/localization-schema.md
-  - name: Use silent authentication in Azure AD
-    href: tabs/how-to/authentication/auth-silent-aad.md
   - name: SameSite cookie attribute 
     href: resources/samesite-cookie-update.md
     displayName: Cookies
