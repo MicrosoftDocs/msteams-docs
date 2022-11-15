@@ -110,7 +110,7 @@ items:
 
      1. You can see the following output in the browser:
 
-         :::image type="content" source="../msteams-platform/assets/images/tab-device-permission_1/sbs-react.png" alt-text="Browser output":::     
+         :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/sbs-react_1.png" alt-text="Browser output":::     
 
 - title: Add tab device permission to Teams
   durationInMinutes: 1
