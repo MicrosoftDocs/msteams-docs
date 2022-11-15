@@ -196,7 +196,7 @@ To enable app caching in your meeting side panel, follow the steps:
 
 1. Dispose resources and perform any cleanup needed in the `beforeUnload handler`, then invoke the `readyToUnload` callback to notify Teams client that the app unload flow is complete.
 
-The following is the flow diagram of the app added to the meeting side panel without app caching:
+The following is the flow diagram of the first launch of an app that wants to opt into app caching (register the `load` or `beforeUnload` on the first launch of the app):
 
 :::image type="content" source="../assets/images/saas-offer/first-launch-app.png" alt-text="This screenshot shows the flow of the first launch of the app in meeting side panel.":::
 
@@ -204,9 +204,9 @@ The following is the flow diagram of a cached app when it's added to the meeting
 
 :::image type="content" source="../assets/images/saas-offer/cached-launch-app.png" alt-text="This screenshot shows the flow of the cached launch of the app in meeting side panel.":::
 
-After you enable app caching, the webview that is used to host the embedded app is reused as users navigate to different instances of the app within a window.
+After you opt for app caching, the webview that is used to host the embedded app is reused as users navigate to different instances of the app within a window.
 
-The webview of the app remains in the Document Object Model (DOM). The webview used to host the app is hidden when the users go out of the app and shown when the users return to the app. When the app is cached, any audio that is playing is muted.
+The webview used to host the app is hidden when the users go out of the app and shown when the users return to the app. When the app is cached, any audio that is playing is muted.
 
 > [!NOTE]
 > If the app caching is not enabled, the webview is recreated every time the users go out and return to the app.
@@ -281,9 +281,9 @@ The following are the limitations for app caching:
   * `readyToUnload`
   * `getConfig/getSettings`
 
-* Register only the `beforeUnload` handler if your app doesn't require app caching but needs time to safely save state (if you want to ensure that going away from your app doesn't cause the app content to be abruptly removed from the DOM). If the app isn't registered for the `load` event, it's removed from the DOM after the unload flow completes.
+* Register only the `beforeUnload` handler if your app doesn't require app caching but needs time to safely save state (if you want to ensure that going away from your app doesn't cause the app content to be abruptly removed from the Document Object Model (DOM)). If the app isn't registered for the `load` event, it's removed from the DOM after the unload flow completes.
 
-* For app caching to support only in meetings, register the `load` or `beforeUnload` handlers if the context is `meetingSidePanel`. Meetings is the first surface to support app caching.
+* For app caching to support only in meetings, register the `load` or `beforeUnload` handlers if the context is `meetingSidePanel`. Meetings is the first surface to support app caching. Even if app caching in other contexts such as `channels` and `chat` happens to work, it is not officially supported at this point and is subject to change.
 
 * App caching isn't supported for meetings where the invited user count is more than 20.
 
