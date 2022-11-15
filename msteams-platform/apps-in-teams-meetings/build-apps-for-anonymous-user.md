@@ -153,6 +153,7 @@ Anonymous users can view and interact with Adaptive Cards in the meeting chat. A
 
 ## See also
 
+* [Apps for Teams meetings and calls](teams-apps-in-meetings.md)
 * [Build apps for Teams meeting stage](build-apps-for-teams-meeting-stage.md)
 * [Meeting apps APIs](meeting-apps-apis.md)
 * [How Microsoft Teams bots work](/azure/bot-service/bot-builder-basics-teams)

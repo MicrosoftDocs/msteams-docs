@@ -141,4 +141,5 @@ For more information, see [media capabilities](../teams-live-share-media-capabil
 * [Live Share capabilities](../teams-live-share-capabilities.md)
 * [Live Share media capabilities](../teams-live-share-media-capabilities.md)
 * [Live Share FAQ](../teams-live-share-faq.md)
+* [Use Fluid with Teams](../../tabs/how-to/using-fluid-msteam.md)
 * [Teams apps in meetings](../teams-apps-in-meetings.md)

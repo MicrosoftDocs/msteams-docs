@@ -12,7 +12,7 @@ ms.date: 04/07/2022
 
 # Live Share SDK
 
-> [!VIDEO https://www.youtube.com/embed/971YIvosuUk]
+> [!VIDEO <https://www.youtube.com/embed/971YIvosuUk>]
 
 Live Share is an SDK designed to transform Teams apps into collaborative multi-user experiences without writing any dedicated back-end code. With Live Share, your users can co-watch, co-create, and co-edit during meetings.
 
@@ -186,4 +186,5 @@ For more information, see the custom Azure Fluid Relay service [how-to guide](./
 - [Live Share capabilities](teams-live-share-capabilities.md)
 - [Live Share media capabilities](teams-live-share-media-capabilities.md)
 - [Live Share FAQ](teams-live-share-faq.md)
+- [Use Fluid with Teams](../tabs/how-to/using-fluid-msteam.md)
 - [Teams apps in meetings](teams-apps-in-meetings.md)

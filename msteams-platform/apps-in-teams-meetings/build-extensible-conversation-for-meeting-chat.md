@@ -47,5 +47,6 @@ The following table provides the user types and lists the features that each use
 
 ## See also
 
+* [Apps for Teams meetings and calls](teams-apps-in-meetings.md)
 * [Designing your Microsoft Teams message extension](../messaging-extensions/design/messaging-extension-design.md)
 * [Designing task modules for your Microsoft Teams app](../task-modules-and-cards/task-modules/design-teams-task-modules.md)

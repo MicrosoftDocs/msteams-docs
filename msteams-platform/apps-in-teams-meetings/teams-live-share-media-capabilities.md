@@ -320,6 +320,7 @@ Additionally, add the following [RSC](/microsoftteams/platform/graph-api/rsc/res
 
 ## See also
 
+- [Use Fluid with Teams](../tabs/how-to/using-fluid-msteam.md)
 - [Live Share SDK FAQ](teams-live-share-faq.md)
 - [Live Share SDK reference docs](/javascript/api/@microsoft/live-share/)
 - [Live Share Media SDK reference docs](/javascript/api/@microsoft/live-share-media/)

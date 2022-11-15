@@ -360,4 +360,5 @@ After you're ready to deploy your code, you can use [Teams Toolkit](../toolkit/p
 - [Live Share SDK reference docs](/javascript/api/@microsoft/live-share/)
 - [Live Share Media SDK reference docs](/javascript/api/@microsoft/live-share-media/)
 - [Live Share FAQ](teams-live-share-faq.md)
+- [Use Fluid with Teams](../tabs/how-to/using-fluid-msteam.md)
 - [Teams apps in meetings](teams-apps-in-meetings.md)
