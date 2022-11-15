@@ -293,8 +293,6 @@ Developer preview is a public program that provides early access to unreleased T
 
 ***November 11, 2022***: [Enable bots to receive all chat messages without being @mentioned](bots/how-to/conversations/channel-messages-with-rsc.md)
 
-***November 11, 2022***: [Enable bots to receive all chat messages without being @mentioned](bots/how-to/conversations/channel-messages-with-rsc.md)
-
 :::column-end:::
 :::row-end:::
 
