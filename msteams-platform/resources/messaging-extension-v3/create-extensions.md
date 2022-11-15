@@ -708,6 +708,8 @@ public class MessagesController : ApiController
 }
 ```
 
+---
+
 ## See also
 
 [Bot Framework samples](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)

@@ -46,7 +46,7 @@ Ensure you have the following accounts before you start build your Teams app:
 | Accounts | For using| For environment type|
 | --- | --- |
 |[Microsoft 365 account with valid subscription](#microsoft-365-developer-program)|Teams developer account while developing an app.| JavaScript and SPFx|
-|[Azure account](accounts.md#azure-account-to-host-backend-resources)|Backend resources on Azure.| JavaScript and SPFx|
+|[Azure account](#azure-account)|Backend resources on Azure.| JavaScript and SPFx|
 |[SharePoint collection site administrator account](#sharepoint-collection-site-administrator-account) |Deployment for hosting.| SPFx|
 
 ### Microsoft 365 developer program

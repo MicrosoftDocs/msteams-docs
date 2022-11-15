@@ -119,7 +119,7 @@ The following image displays the corresponding screen:
 1. Select the **Publish** button after you finish  editing.
 
 1. Select **Add page to navigation** to have a quick reference to your page in the left navigation bar.
-The following image displays the tab in Sharepoint:
+The following image displays the tab in SharePoint:
 
    ![Tab in Sharepoint image](~/assets/images/tabs/tabs-in-sharepoint/image073.png)
 
