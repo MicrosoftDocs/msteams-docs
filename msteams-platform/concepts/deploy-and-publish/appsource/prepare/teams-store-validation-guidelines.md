@@ -1520,7 +1520,7 @@ After an internal Microsoft review, if the compliance demonstration is satisfact
 
 * Workflows or content in the app must be related to the scope. [*Mandatory Fix*]
 * All app capabilities must be functional and must work properly as described in the AppSource or manifest long description. [*Mandatory Fix*]
-* Apps must always notify the user before downloading any file or executable on the user’s environment. Any call to action (CTA), text based, or other that informs the user that a file or executable is downloaded based on user action is allowed in the app. [*Mandatory Fix*]
+* Apps must always notify the user before downloading any file or executable on the user’s environment. Any call to action (CTA), either text based or otherwise, that makes it clear to the user that a file or executable is downloaded on user action is allowed in the app. [*Mandatory Fix*]
 
 ## Mobile experience
 
