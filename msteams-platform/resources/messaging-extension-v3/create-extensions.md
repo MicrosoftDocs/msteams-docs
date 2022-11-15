@@ -10,7 +10,7 @@ ms.topic: how-to
 
 Action-based message extensions allow your users to trigger actions in external services while in Teams.
 
-![Example of message extension card](~/assets/images/compose-extensions/ceexample.png)
+:::image type="content" source="../../assets/images/compose-extensions/ceexample.png" alt-text="The screenshot is an example that shows the message extension card.":::
 
 [!include[Common content for creating extensions](~/includes/messaging-extensions/messaging-extensions-common.md)]
 
@@ -128,7 +128,7 @@ You can initiate actions from the compose message area and from a message using 
 
 Users can access message extension by selecting `Take action` from the overflow `...` menu, as shown in the image:
 
-![Example of initiating an action from a message](~/assets/images/compose-extensions/messageextensions_messageaction.png)
+:::image type="content" source="../../assets/images/compose-extensions/MessageExtensions_MessageAction.png" alt-text="The screenshot describes how to initiate an action from a message.":::
 
 To enable your message extension to work from a message, add the `context` parameter to your message extension's `commands` object in your app manifest as in the following example. Valid strings for the `context` array are `"message"`, `"commandBox"`, and `"compose"`. The default value is `["compose", "commandBox"]`. See the [define commands](#define-commands) section for complete details on the `context` parameter:
 
