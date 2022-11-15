@@ -137,7 +137,7 @@ At this point, the window closes and the control is passed to the Teams client. 
 
 |**Sample name** | **Description** |**.NET** | **Node.js**|
 |----------------|-----------------|--------------|----------------|
-|Message extensions - auth and config | A Message Extension that has a configuration page, accepts search requests, and returns results after the user has signed in. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config)|
+|Message extensions - auth and config | A Message Extension that has a configuration page, accepts search requests, and returns results after the user has signed in. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search-auth-config/csharp)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config)|
 
 ## See also
 

@@ -50,7 +50,7 @@ Sample code showing the bot authentication process:
 | **Sample name** | **Description** | **Node.js** | **.NET** | **Python** |
 |-----------------|----------------|--------------|----------|-----------|
 | Teams authentication | This sample demonstrates authentication in Microsoft Teams apps. | [View](https://github.com/OfficeDev/microsoft-teams-sample-auth-node) | | |
-| Bot authentication | This sample demonstrates how to use authentication for a bot running in Microsoft Teams | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth)
+| Bot authentication | This sample demonstrates how to use authentication for a bot running in Microsoft Teams | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/js) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-authentication/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-authentication/python)
 
 ## See also
 
