@@ -76,7 +76,7 @@ landingContent:
         url: toolkit/teams-toolkit-fundamentals.md
       - text: Collaboration controls [Developer preview]
         url: samples/collaboration-control.md
-     
+
 - title: Get started
   linkLists:
     - linkListType: get-started
