@@ -190,7 +190,7 @@ App caching helps you to improve subsequent launch time of the apps that are loa
 
 To enable app caching in your meeting side panel, follow the steps:
 
-1. Call `microsoftTeams.registerBeforeUnloadHandler` and `microsoftTeams.registerOnLoadHandler` APIs (Work in Progress).
+1. Call `teamsCore.registerBeforeUnloadHandler` and `teamsCore.registerOnLoadHandler` APIs.
 
 1. Use `contentUrl` and `entityId` into the load handler to route to the correct page within your app and invoke `notifySuccess/notifyFailure` to notify Teams client that the app initialization flow is complete.
 
@@ -229,21 +229,21 @@ Following are the parameters to control the conditions for the apps to be added 
 
 ### Code example
 
-The following code snippet is an example of `registerBeforeUnloadHandler` and `registerOnLoadHandler` APIs:
+The following code snippet is an example of `teamsCore.registerBeforeUnloadHandler` and `teamsCore.registerOnLoadHandler` APIs:
 
 ```javascript
-microsoftTeams.registerBeforeUnloadHandler((readyToUnload) => { 
+teamsCore.registerBeforeUnloadHandler((readyToUnload) => { 
 console.log("got beforeunload from TEAMS"); 
 // dispose resources and then invoke readyToUnload 
 readyToUnload(); 
 return true; 
 }); 
 
-microsoftTeams.registerOnLoadHandler((data) => { 
+teamsCore.registerOnLoadHandler((data) => { 
 console.log("got load from TEAMS", data.contentUrl, data.entityId); 
 // use contentUrl to route to correct page 
 // invoke notifySuccess when ready  
-microsoftTeams.appInitialization.notifySuccess(); 
+microsoftTeams.app.notifySuccess(); 
 }); 
 ```
 
@@ -271,12 +271,12 @@ The following are the limitations for app caching:
 
 * Apps are expected to sleep when cached (use minimal compute or network resources and minimizes SDK requests). All the register handlers and the following SDK requests are allowed when the app is cached:
 
-  * `initialize`
+  * `app.initialize`
   * `notifyappLoaded`
   * `notifySuccess`
   * `notifyFailure`
   * `notifyExpectedFailure`
-  * `getContext`
+  * `app.getContext`
   * `getAuthToken`
   * `readyToUnload`
   * `getConfig/getSettings`
