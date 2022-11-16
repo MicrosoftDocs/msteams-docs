@@ -232,7 +232,7 @@ items:
 
     1. Select **Add a scope**. 
 
-       :::image type="content" source="./assets/images/sbs-messagingextension-action/addascope.png" alt-text="Screenshot of Expose an API with Add a scope highlighted in red.":::
+       :::image type="content" source="./assets/images/sbs-messagingextension-action/addascope.png" alt-text="Screenshot of scopes defined by this API section with the Add a scope option highlighted in red.":::
     
     1. In the panel that appears, enter `access_as_user` as the **Scope name**.
   
@@ -258,29 +258,29 @@ items:
         > The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.</br>
            `api://2bb1****.ngrok.io/00000000-0000-0000-0000-000000000000/access_as_user`
 
-        :::image type="content" source="./assets/images/sbs-messagingextension-action/scopes.png" alt-text="Screenshot of Expose an API with the Scope highlighted in red.":::
+        :::image type="content" source="./assets/images/sbs-messagingextension-action/scopes.png" alt-text="Screenshot of scopes defined by this API section with the Scope highlighted in red.":::
 
     1. In the **Authorized client applications** section, identify the applications that you want to authorize for your app’s web application. 
     
     1. Select **Add a client application**. 
  
-        :::image type="content" source="./assets/images/sbs-messagingextension-action/clientapps.png" alt-text="Screenshot of Expose an API with Add a Client application highlighted in red.":::
+        :::image type="content" source="./assets/images/sbs-messagingextension-action/clientapps.png" alt-text="Screenshot of Authorized client applications with Add a Client application highlighted in red.":::
 
     1. Enter **Client ID**: `1fec8e78-bce4-4aaf-ab1b-5451cc387264` for Teams mobile or desktop application. 
  
-        :::image type="content" source="./assets/images/sbs-messagingextension-action/addclientapplication1.png" alt-text="Screenshot of Expose an API showing with the Client application 1 highlighted in red.":::
+        :::image type="content" source="./assets/images/sbs-messagingextension-action/addclientapplication1.png" alt-text="Screenshot of Add a client application page with the Client ID 1 highlighted in red.":::
 
        You can enter **Client ID**: `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` for Teams web application.
 
-        :::image type="content" source="./assets/images/sbs-messagingextension-action/addclientapplication2.png" alt-text="Screenshot of Expose an API showing with the Client application 2 highlighted in red.":::
+        :::image type="content" source="./assets/images/sbs-messagingextension-action/addclientapplication2.png" alt-text="Screenshot of Add a client application with the Client ID 2 highlighted in red.":::
 
     1. Select **Authorized scopes**.
 
-        :::image type="content" source="./assets/images/sbs-messagingextension-action/authorizedscope.png" alt-text="Screenshot of Expose an API with the showing Authorized scopes highlighted in red.":::
+        :::image type="content" source="./assets/images/sbs-messagingextension-action/authorizedscope.png" alt-text="Screenshot of Authorized scopes section under Expose an API page with the scope highlighted in red.":::
 
        The following image displays the client IDs:
 
-        :::image type="content" source="./assets/images/sbs-messagingextension-action/clientapp.png" alt-text="Screenshot of Expose an API with the client applications Id's highlighted in red.":::
+        :::image type="content" source="./assets/images/sbs-messagingextension-action/clientapp.png" alt-text="Screenshot of Authorized client applications under expose an API with the client ID's highlighted in red.":::
 
     1. In the left panel, select **API Permissions**. 
 
@@ -289,7 +289,7 @@ items:
 
     1. Select **Add a permission**.
 
-        :::image type="content" source="./assets/images/meetings-side-panel/addpermission.png" alt-text="Screenshot of API permissions with Add a permission highlighted in red.":::
+        :::image type="content" source="./assets/images/meetings-side-panel/addpermission.png" alt-text="Screenshot of Configured permissions with Add a permission highlighted in red.":::
 
     1. Select **Microsoft Graph**.
 
@@ -322,14 +322,14 @@ items:
    
          1. Select **Configure**.
 
-            :::image type="content" source="./assets/images/sbs-messagingextension-action/web.png" alt-text="Screenshot of Configure Web with the Redirect url, ID tokens and configure highlighted in red.":::
+            :::image type="content" source="./assets/images/sbs-messagingextension-action/web.png" alt-text="Screenshot of Configure Web page with the options Redirect URLs, token selections and Configure are highlighted in red.":::
 
 - title: Set up app settings and manifest files
   durationInMinutes: 1
   content: |
     1. Go to **appsettings.json** in cloned repository.
 
-        :::image type="content" source="./assets/images/sbs-messagingextension-action/appsettingslocation.png" alt-text="Screenshot of cloned repository with the appsettings highlighted in red.":::
+        :::image type="content" source="./assets/images/sbs-messagingextension-action/appsettingslocation.png" alt-text="Screenshot of cloned repository with the file path and appsettings JSON file highlighted in red.":::
 
     1. Open **appsettings.json** in latest version of Visual Studio and update the following information:  
 
@@ -339,11 +339,11 @@ items:
          * Leave `"MicrosoftAppTenantId"` blank for MultiTenant bot.
          * Set `"BaseUrl"` to the fully qualified domain name.
 
-        :::image type="content" source="./assets/images/sbs-messagingextension-action/json-file.png" alt-text="Screenshot of cloned repository with appsettings highlighted.":::
+        :::image type="content" source="./assets/images/sbs-messagingextension-action/json-file.png" alt-text="Screenshot of appsettings JSON file with appsettings highlighted.":::
 
     1. Go to `manifest.json` in cloned repository.
 
-        :::image type="content" source="./assets/images/sbs-messagingextension-action/manifestlocation.png" alt-text="Screenshot of cloned repository with the manifest highlighted in red.":::
+        :::image type="content" source="./assets/images/sbs-messagingextension-action/manifestlocation.png" alt-text="Screenshot of Teams App Manifest folder with the file path and manifest file highlighted in red..":::
 
     
     1. Open `manifest.json` in latest version of Visual Studio and make the following changes:
@@ -351,7 +351,7 @@ items:
          * Replace the `<<validDomains>>` with your fully qualified domain name.
          * Replace all occurrences of `<<Microsoft-App-ID>>` with your bot's **Microsoft App ID**.
 
-        :::image type="content" source="./assets/images/sbs-messagingextension-action/botid1.png" alt-text="Screenshot of manifest page with the bot Id and valid domain highlighted in red.":::
+        :::image type="content" source="./assets/images/sbs-messagingextension-action/botid1.png" alt-text="Screenshot of manifest page with the ID, bot ID and Valid domains highlighted in red.":::
 
 - title: Build and run the service
   durationInMinutes: 1
@@ -377,7 +377,7 @@ items:
 
           A webpage opens with a message **Your bot is ready!**.
 
-          :::image type="content" source="./assets/images/sbs-messagingextension-action/appisready.png" alt-text="Screenshot of webpage, Your bot is ready being highlighted!.":::
+          :::image type="content" source="./assets/images/sbs-messagingextension-action/appisready.png" alt-text="Screenshot of the webpage that displays Your bot is ready!.":::
 
         
     # [Command line](#tab/cli)
@@ -388,7 +388,7 @@ items:
     dotnet run
     ```
    
-    :::image type="content" source="./assets/images/sbs-messagingextension-action/dotnetruncmd.png" alt-text="Screenshot of Command Prompt-dot net run with the dotnet run command highlighted.":::
+    :::image type="content" source="./assets/images/sbs-messagingextension-action/dotnetruncmd.png" alt-text="Screenshot of Command Prompt-dotnet run with the dotnet run command.":::
 
 
       
@@ -402,7 +402,7 @@ items:
        * icon-outline.png
        * icon-color.png
 
-       :::image type="content" source="./assets/images/sbs-messagingextension-action/zipfile.png" alt-text="Screenshot of cloned repository. Messaging extension zip file highlighted in red.":::
+       :::image type="content" source="./assets/images/sbs-messagingextension-action/zipfile.png" alt-text="Screenshot of cloned repository with the Messaging extension zip file highlighted in red.":::
 
     1. Go to **Microsoft Teams**.
     
@@ -412,11 +412,11 @@ items:
     
     1. Select **Upload a custom app**.
 
-       :::image type="content" source="./assets/images/sbs-messagingextension-action/uploadacustomapp1.png" alt-text="Screenshot of Teams with the Upload a custom app highlighted in red.":::
+       :::image type="content" source="./assets/images/sbs-messagingextension-action/uploadacustomapp1.png" alt-text="Screenshot of Upload a custom app under manage your Apps in Microsoft Teams.":::
 
     1. Select **Open** to upload the .zip file that you created in the **Manifest** folder.
 
-       :::image type="content" source="./assets/images/sbs-messagingextension-action/openzipfile.png" alt-text="Screenshot of cloned repository. The Message extension zip file in Teams highlighted in red.":::
+       :::image type="content" source="./assets/images/sbs-messagingextension-action/openzipfile.png" alt-text="Screenshot of the cloned repository displaying the Messaging zip file.":::
 
     1. Select **Add**
 
@@ -428,15 +428,15 @@ items:
   content: |
     1. Select **Create Card** command from the compose box command list.
 
-       :::image type="content" source="./assets/images/sbs-messagingextension-action/create-card.png" alt-text="Screenshot of compose box. Create Card in the overflow menu highlighted in red.":::
+       :::image type="content" source="./assets/images/sbs-messagingextension-action/create-card.png" alt-text="Screenshot of message compose box overflow menu with Create Card is highlighted in red.":::
 
     1. Enter your information in the modal pop-up.
 
-       :::image type="content" source="./assets/images/sbs-messagingextension-action/output-card.png" alt-text="Screenshot of Action Messaging Extension Create Card. The modal popup-card highlighted in red.":::
+       :::image type="content" source="./assets/images/sbs-messagingextension-action/output-card.png" alt-text="The Screenshot shows the Create Card model pop-up of the Action Messaging Extension.":::
 
     1. Select **Submit**.
 
-       :::image type="content" source="./assets/images/sbs-messagingextension-action/submit.png" alt-text="Screenshot of Action Messaging Extension Create Card. The Submit option highlighted in red.":::
+       :::image type="content" source="./assets/images/sbs-messagingextension-action/submit.png" alt-text="Screenshot of Create Card model pop-up with the Submit option highlighted in red.":::
 
     1. Select (...) from the overflow menu.
        
@@ -444,11 +444,11 @@ items:
 
     1. Select **Share Message**.
 
-       :::image type="content" source="./assets/images/sbs-messagingextension-action/sharemessage.png" alt-text="Screenshot of compose message. The share message under more actions highlighted in red.":::
+       :::image type="content" source="./assets/images/sbs-messagingextension-action/sharemessage.png" alt-text="Screenshot of the message overflow menu. The Share Message and more actions are highlighted in red.":::
 
     1. Select the checkbox if you need to include image and submit.
 
-       :::image type="content" source="./assets/images/sbs-messagingextension-action/sharemessageoutput.png" alt-text="Screenshot of Action Messaging Extension with the include image in hero card and submit option highlighted in red.":::
+       :::image type="content" source="./assets/images/sbs-messagingextension-action/sharemessageoutput.png" alt-text="Screenshot of Action Messaging Extension with the include image in Hero Card check box and Submit option highlighted in red.":::
 
 - title: Complete challenge
   durationInMinutes: 1
