@@ -10,7 +10,7 @@ ms.date: 11/29/2021
 
 # TeamsFx SDK
 
-TeamsFx helps to reduce your tasks by using Microsoft Teams single sign-on (SSO) and accessing cloud resources down to single line statements with zero configuration. TeamsFx SDK can be used in browser and Node.js environments. TeamsFx core functionalities can be accessed in client and server environments. You can write user authentication code for:
+TeamsFx helps to reduce your tasks by using Microsoft Teams single sign-on (SSO) and accessing cloud resources down to single line statements with zero configuration. You can use TeamsFx SDK in the browser and Node.js environment. TeamsFx core functionalities can be accessed in client and server environments. You can write user authentication code for:
 
 * Teams tab
 * Teams bot
@@ -29,12 +29,12 @@ You need to install the following tools and set up your development environment:
    | &nbsp; | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
 
 > [!NOTE]
-> Ensure that the `botbuilder`related [packages](https://github.com/Microsoft/botbuilder-js#packages) installed as dependencies for your project are the same version.
+> If your project has installed `botbuilder`related [packages](https://github.com/Microsoft/botbuilder-js#packages) as dependencies, ensure they are of the same version.
 
 You must have working knowledge of:
 
 * [Source code](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk)
-* [Package (npm)](https://www.npmjs.com/package/@microsoft/teamsfx)
+* [Package (NPM)](https://www.npmjs.com/package/@microsoft/teamsfx)
 * [API reference documentation](https://aka.ms/teamsfx-sdk-help)
 * [Samples](https://github.com/OfficeDev/TeamsFx-Samples)
 
@@ -58,7 +58,7 @@ npm install @microsoft/teamsfx
 TeamsFx class instance access all TeamsFx settings from the environment variables by default. You can set customized configuration values to override the default values. For more information, see [override configuration](#override-configuration-for-teamsfx-class) for details.
 When creating a TeamsFx instance, you need to specify the identity type.
 
-The following are two type of identities:
+The following list provides the two different type of identities:
 
 * **User Identity**: Represents the current user of Teams.
 * **Application Identity**: Represents the application itself.
@@ -75,7 +75,7 @@ You can learn more about user identity and application identity in the following
 |----------------|-------------|
 | `new TeamsFx(IdentityType.User)`| Application is authenticated as current Teams user. |
 | `TeamsFx:setSsoToken()`| User identity in Node.js environment (without browser). |
-| `TeamsFx:getUserInfo()` | To get user's basic information. |
+| `TeamsFx:getUserInfo()` | To get user's basis information. |
 | `TeamsFx:login()` | It's used to let user perform consent process, if you want to use SSO to get access token for certain OAuth scopes. |
 
 > [!NOTE]
@@ -95,7 +95,7 @@ You can learn more about user identity and application identity in the following
 </details>
 
 > [!NOTE]
-> TeamsFx class has been deprecated and will be removed from the SDK, use `TeamsUserCredential`, `OnBehalfOfUserCredential`, and `AppCredential` instead.
+> TeamsFx class has been deprecated, use `TeamsUserCredential`, `OnBehalfOfUserCredential`, and `AppCredential` instead.
 
 ### Credential
 
@@ -141,7 +141,7 @@ const oboAuthConfig: OnBehalfOfCredentialAuthConfig = {
 const oboCredential = new OnBehalfOfUserCredential(ssoToken, oboAuthConfig);
 ```
 
-Required configurations are `authorityHost`, `tenantId`, `clientId`, `clientSecret` or `certificateContent` which can be found inside type `OnBehalfOfCredentialAuthConfig`.
+Required configurations are `authorityHost`, `tenantId`, `clientId`, `clientSecret`, or `certificateContent` which can be found inside type `OnBehalfOfCredentialAuthConfig`.
 
 </details>
 
@@ -162,7 +162,7 @@ const appAuthConfig: AppCredentialAuthConfig = {
 const appCredential = new AppCredential(appAuthConfig);
 ```
 
-Required configurations are `authorityHost`, `tenantId`, `clientId`, `clientSecret` or `certificateContent` which can be found inside type `AppCredentialAuthConfig`
+Required configurations are `authorityHost`, `tenantId`, `clientId`, `clientSecret`, or `certificateContent` which can be found inside type `AppCredentialAuthConfig`
 </details>
 
 ### Bot SSO
@@ -199,7 +199,7 @@ TeamsFx SDK provides several functions to ease the configuration for third-party
 * Microsoft Graph Service:`createMicrosoftGraphClient`, `createMicrosoftGraphClientWithCredential`, and `MsGraphAuthProvider` helps to create authenticated Graph instance.
 
   > [!NOTE]
-  > `createMicrosoftGraphClient` function has been deprecated and will be removed from the SDK. We recommend you to use `createMicrosoftGraphClientWithCredential` instead for better coding experience.
+  > `createMicrosoftGraphClient` function has been deprecated. We recommend you to use `createMicrosoftGraphClientWithCredential` instead for better coding experience.
 
 * SQL:`getTediousConnectionConfig` returns a tedious connection config.
 
@@ -209,12 +209,12 @@ TeamsFx SDK provides several functions to ease the configuration for third-party
   * If you want to use MSI identity, then `sqlServerEndpoint`and `sqlIdentityId` are required.
 
   > [!NOTE]
-  > `getTediousConnectionConfig` function has been deprecated and will be removed from the SDK. We recommend you compose your own Tedious configuration for better flexibility.
+  > `getTediousConnectionConfig` function has been deprecated. We recommend you compose your own Tedious configuration for better flexibility.
 
 ### Override configuration for TeamsFx class
 
 > [!NOTE]
-> TeamsFx class has been deprecated and will be removed from the SDK. Use `TeamsUserCredential`, `OnBehalfOfUserCredential`, and `AppCredential` instead.
+> TeamsFx class has been deprecated. Use `TeamsUserCredential`, `OnBehalfOfUserCredential`, and `AppCredential` instead.
 
 You can pass custom config when creating a new `TeamsFx` instance to override default configuration or set required fields when `environment variables` are missing.
 
@@ -223,7 +223,7 @@ You can pass custom config when creating a new `TeamsFx` instance to override de
 For tab project
 </b> </summary>
 
-If you've created tab project using Microsoft Visual Studio Code Toolkit, the following config values will be used from pre-configured environment variables:
+If you've created tab project using Microsoft Visual Studio Code Toolkit, the following config values is used from pre-configured environment variables:
 
 * authorityHost (REACT_APP_AUTHORITY_HOST)
 * tenantId (REACT_APP_TENANT_ID)
@@ -277,7 +277,7 @@ try {
 ```
 
 > [!NOTE]
-> TeamsFx class has been deprecated and will be removed from the SDK, and `ErrorWithCode` code is not recommended. You can use `TeamsUserCredential` instead as follow:
+> TeamsFx class has been deprecated, and `ErrorWithCode` code is not recommended. You can use `TeamsUserCredential` instead as follow:
 
 ```ts
 try {
@@ -302,7 +302,7 @@ If a credential instance is used in other library, such as Microsoft Graph, it's
 
 ## Microsoft Graph Scenarios
 
-This section provides several code snippets for common scenarios that are related to the Microsoft Graph. In such scenarios, user can call APIs using different permissions in different ends (frontend/backend).
+This section provides several code snippets for common scenarios that are related to the Microsoft Graph. In such scenarios, user can call APIs using different permissions in different ends, such as frontend or backend.
 
 * User delegate permission in frontend (Use `TeamsUserCredential`)
     <details>
@@ -330,14 +330,14 @@ This section provides several code snippets for common scenarios that are relate
        const teamsUserCredential = new TeamsUserCredential(authConfig);
        ```
 
-    2. Use `teamsUserCredential.login()` to get user consent.
+    3. Use `teamsUserCredential.login()` to get user consent.
 
        ```typescript
        // Put these code in a call-to-action callback function to avoid browser blocking automatically showing up pop-ups.
        await teamsUserCredential.login(["User.Read"]); // Login with scope
        ```
 
-    3. You can initialize a TeamsFx instance and graph client and get information from MS Graph by this client.
+    4. You can initialize a TeamsFx instance and graph client and get information from Microsoft Graph by this client.
 
        ```typescript
        try {
@@ -475,7 +475,7 @@ This section provides several code snippets for common scenarios that are relate
     <details>
     <summary><b>Use Graph API in Message Extension</b></summary>
 
-    The following code snippet shows you how to override `handleTeamsMessagingExtensionQuery` extends from `TeamsActivityHandler`, and use `handleMessageExtensionQueryWithSSO` provided by TeamsFx SDK to sign in to get an access token:
+    The following code snippet shows how to override `handleTeamsMessagingExtensionQuery` that extends from `TeamsActivityHandler`, and use `handleMessageExtensionQueryWithSSO` provided by TeamsFx SDK to sign in to get an access token:
 
     ```typescript
 
@@ -766,7 +766,7 @@ This section provides several code snippets for other scenarios that are related
 
   > [!NOTE]
   > For more information on sample to access SQL database in Azure Function, see [share-now sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/share-now). The
-  > `getTediousConnectionConfig` function has been deprecated and will be removed from the SDK, we recommend you to compose your own tedious configuration for better flexibility.
+  > `getTediousConnectionConfig` function has been deprecated, we recommend you to compose your own tedious configuration for better flexibility.
 
 </details>
 
@@ -777,7 +777,7 @@ This section provides several code snippets for other scenarios that are related
 You can set customer log level and redirect outputs when using this library.
 
 > [!NOTE]
-> Logging in is turned off by default, you can turn it on by setting log level.
+> Log in is turned off by default, you can turn it on by setting log level.
 
 #### Enable log by setting log level
 
