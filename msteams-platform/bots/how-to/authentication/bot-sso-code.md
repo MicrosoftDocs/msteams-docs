@@ -461,4 +461,4 @@ Use the following code snippet to handle the access token in case the app user l
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Update Teams app manifest and preview the app](bot-sso-manifest.md)
+> [Update manifest for SSO and preview app](bot-sso-manifest.md)

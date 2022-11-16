@@ -706,4 +706,4 @@ Congratulations! You've completed the following app configurations in Azure AD r
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Configure code to enable SSO](bot-sso-code.md)
+> [Add code to enable SSO](bot-sso-code.md)
