@@ -455,7 +455,7 @@ items:
   content: |
     Did you come up with something like this?
 
-        :::image type="content" source="~/assets/images/sbs-messagingextension-action/sharemessageoutput1.png" alt-text="Screenshot of the message extension output after you have successfully completed the step-by-step guide.":::
+    :::image type="content" source="./assets/images/sbs-messagingextension-action/botbuilder-sample.png" alt-text="Screenshot of GitHub web page. The menu entry titled Open with GitHub Desktop under Code dropdown menu is highlighted in red.":::
 
 - content: |
     You've completed the tutorial to get started with a **Action Message Extension** app!
