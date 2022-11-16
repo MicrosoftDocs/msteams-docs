@@ -203,7 +203,7 @@ You can create a new file `bot/src/cardActions/doSomethingActionHandler.ts`:
 The following is an example of action handler:
 
 * `triggerVerb` is the verb property of your action.
-* `actionData` is the data associated with the action, which may include dynamic user input or some contextual data provided in the data property of your action.
+* `actionData` is the data associated with the action, which may include dynamic user input, or some contextual data provided in the data property of your action.
 * If an Adaptive Card is returned, the existing card is replaced with it by default.
 
 <br>
