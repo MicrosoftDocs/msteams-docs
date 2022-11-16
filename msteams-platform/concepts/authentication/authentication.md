@@ -76,9 +76,6 @@ Enable authentication with SSO or third party OAuth IdPs in your tab app, bot ap
     :::column-end:::
 :::row-end:::
 
-> [!NOTE]
-> The Silent authentication page is moved to the Resources module. For more information, see [Silent authentication](../../tabs/how-to/authentication/auth-silent-aad.md).
-
 ## See also
 
 - [Enable single sign-on in a tab app](../../tabs/how-to/authentication/tab-sso-overview.md)
