@@ -1,5 +1,5 @@
 > [!NOTE]
-> SSO handlers except `OnTeamsMessagingExtensionQueryAsync` and `OnTeamsAppBasedLinkQueryAsync` from the `TeamsMessagingExtensionsSearchAuthConfigBot.cs` file aren't supported.
+> `OnTeamsMessagingExtensionQueryAsync` and `OnTeamsAppBasedLinkQueryAsync` from the `TeamsMessagingExtensionsSearchAuthConfigBot.cs` file are the only SSO handlers that are supported. Other SSO handlers aren't supported.
 
 This section covers:
 
