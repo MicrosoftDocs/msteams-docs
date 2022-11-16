@@ -194,7 +194,7 @@ To enable app caching in your meeting side panel, follow the steps:
 
 1. Use `contentUrl` and `entityId` into the load handler to route to the correct page within your app and invoke `notifySuccess/notifyFailure` to notify Teams client that the app initialization flow is complete.
 
-1. Dispose resources and perform any cleanup needed in the `beforeUnload handler`, then invoke the `readyToUnload` callback to notify Teams client that the app unload flow is complete.
+1. Dispose resources and perform any cleanup needed in the `beforeUnload` handler, then invoke the `readyToUnload` callback to notify Teams client that the app unload flow is complete.
 
 The following is the flow diagram of the first launch of an app that wants to opt into app caching (register the `load` or `beforeUnload` on the first launch of the app):
 
@@ -224,9 +224,6 @@ Following are the parameters to control the conditions for the apps to be added 
 * When the app is cached, the number of SDK requests shouldn't exceed five for every 12 seconds.
 * The cache state is monitored every 12 seconds and the apps that don’t meet the requirements are removed from the cache.
 
-> [!NOTE]
-> Based on the configuration updates, the parameters can be modified.
-
 ### Code example
 
 The following code snippet is an example of `teamsCore.registerBeforeUnloadHandler` and `teamsCore.registerOnLoadHandler` APIs:
@@ -243,7 +240,7 @@ teamsCore.registerOnLoadHandler((data) => {
 console.log("got load from TEAMS", data.contentUrl, data.entityId); 
 // use contentUrl to route to correct page 
 // invoke notifySuccess when ready  
-microsoftTeams.app.notifySuccess(); 
+teamsCore.notifySuccess(); 
 }); 
 ```
 
@@ -271,12 +268,12 @@ The following are the limitations for app caching:
 
 * Apps are expected to sleep when cached (use minimal compute or network resources and minimizes SDK requests). All the register handlers and the following SDK requests are allowed when the app is cached:
 
-  * `app.initialize`
+  * `initialize`
   * `notifyappLoaded`
   * `notifySuccess`
   * `notifyFailure`
   * `notifyExpectedFailure`
-  * `app.getContext`
+  * `getContext`
   * `getAuthToken`
   * `readyToUnload`
   * `getConfig/getSettings`
