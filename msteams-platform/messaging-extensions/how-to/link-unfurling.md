@@ -22,11 +22,11 @@ The document guides you on how to add link unfurling to your app manifest using 
 
 The following image is an example of link unfurling using the Azure DevOps message extension. When the Azure DevOps link is pasted into the Teams compose message area, the link unfurls into a card with the work item details:
 
-:::image type="content" source="~/assets/images/compose-extensions/messagingextensions_linkunfurling.png" alt-text="Example of link unfurling":::
+:::image type="content" source="../../assets/images/messaging-extension/messagingextensions_linkunfurl.png" alt-text="Screenshot of link urfurling example for Azure Dev Ops links pasted in teams compose message area.":::
 
 See the following video to learn more about link unfurling:
 <br>
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OFZG]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OFZG>]
 <br>
 
 ## Add link unfurling to your app manifest
@@ -91,6 +91,118 @@ First, you need to add the `messageHandlers` array to your app manifest and enab
 ```
 
 For a complete manifest example, see [manifest reference](~/resources/schema/manifest-schema.md).
+
+## Handle the `composeExtension/queryLink` invoke
+
+After adding the domain to the app manifest, you must update your web service code to handle the invoke request. Use the received URL to search your service and create a card response. If you respond with more than one card, only the first card response is used.
+
+The following card types are supported:
+
+* [Thumbnail card](~/task-modules-and-cards/cards/cards-reference.md#thumbnail-card)
+* [Hero card](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
+* [Office 365 Connector card](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
+* [Adaptive Card](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
+
+For more information, see [Action type invoke](~/task-modules-and-cards/cards/cards-actions.md#action-type-invoke).
+
+The following is an example of the `invoke` request:
+
+# [C#/.NET](#tab/dotnet)
+
+```csharp
+      protected override async Task<MessagingExtensionResponse> OnTeamsAppBasedLinkQueryAsync(ITurnContext<IInvokeActivity> turnContext, AppBasedLinkQuery query, CancellationToken cancellationToken)
+      {
+          //You'll use the query.link value to search your service and create a card response
+          var card = new HeroCard
+             {
+              Title = "Hero Card",
+              Text = query.Url,
+              Images = new List<CardImage> { new CardImage("https://raw.githubusercontent.com/microsoft/botframework-sdk/master/icon.png") },
+          };
+
+          var attachments = new MessagingExtensionAttachment(HeroCard.ContentType, null, card);
+          var result = new MessagingExtensionResult(AttachmentLayoutTypes.List, "result", new[] { attachments }, null, "test unfurl");
+
+          return new MessagingExtensionResponse(result);
+      }
+```
+
+# [JavaScript/Node.js](#tab/javascript)
+
+```javascript
+   class TeamsLinkUnfurlingBot extends TeamsActivityHandler {
+     handleTeamsAppBasedLinkQuery(context, query) {
+       const attachment = CardFactory.thumbnailCard('Thumbnail Card',
+         query.url,
+         ['https://raw.githubusercontent.com/microsoft/botframework-sdk/master/icon.png']);
+
+    const result = {
+      attachmentLayout: 'list',
+      type: 'result',
+      attachments: [attachment]
+    };
+
+    const response = {
+      composeExtension: result
+    };
+    return response;
+
+     }
+   }
+```
+
+# [JSON](#tab/json)
+
+   Following is an example of the `invoke` sent to your bot:
+
+```json
+   {
+     "type": "invoke",
+     "name": "composeExtension/queryLink",
+     "value": {
+    "url": "https://theurlsubmittedbyyouruser.trackeddomain.com/id/1234"
+     }
+
+   }
+```
+
+Following is an example of the response:
+
+```json
+   {
+     "composeExtension": {
+       "type": "result",
+       "attachmentLayout": "list",
+       "attachments": [
+         {
+           "contentType": "application/vnd.microsoft.teams.card.o365connector",
+           "content": {
+             "sections": [
+               {
+                 "activityTitle": "[85069]: Create a cool app",
+                 "activityImage": "https://placekitten.com/200/200"
+               },
+               {
+                 "title": "Details",
+                 "facts": [
+                   {
+                     "name": "Assigned to:",
+                     "value": "[Larry Brown](mailto:larryb@example.com)"
+                   },
+                   {
+                     "name": "State:",
+                     "value": "Active"
+                   }
+                 ]
+               }
+             ]
+           }
+         }
+       ]
+     }
+   }
+```
+---
 
 ## Zero install for link unfurling
 
@@ -250,120 +362,9 @@ To get your app ready for zero install link unfurling, follow these steps:
      > [!NOTE]
      > After the link is pasted in the message compose area, Teams unfurls the link into a card and prompts the user to sign in to the app. If the user doesn't sign in to the app, the link isn't posted as a card in the chat.
 
-1. Handle the `composeExtension/queryLink` invoke: After adding the domain to the app manifest, you must update your web service code to handle the invoke request. Use the received URL to search your service and create a card response. If you respond with more than one card, only the first card response is used.
+1. Advantages and limitations.
 
-   The following card types are supported:
-
-   * [Thumbnail card](~/task-modules-and-cards/cards/cards-reference.md#thumbnail-card)
-   * [Hero card](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
-   * [Office 365 Connector card](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
-   * [Adaptive Card](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
-
-   For more information, see [Action type invoke](~/task-modules-and-cards/cards/cards-actions.md#action-type-invoke).
-
-   The following is an example of the `invoke` request:
-
-   # [C#/.NET](#tab/dotnet)
-
-      ```csharp
-      protected override async Task<MessagingExtensionResponse> OnTeamsAppBasedLinkQueryAsync(ITurnContext<IInvokeActivity> turnContext, AppBasedLinkQuery query, CancellationToken cancellationToken)
-      {
-          //You'll use the query.link value to search your service and create a card response
-          var card = new HeroCard
-             {
-              Title = "Hero Card",
-              Text = query.Url,
-              Images = new List<CardImage> { new CardImage("https://raw.githubusercontent.com/microsoft/botframework-sdk/master/icon.png") },
-          };
-
-          var attachments = new MessagingExtensionAttachment(HeroCard.ContentType, null, card);
-          var result = new MessagingExtensionResult(AttachmentLayoutTypes.List, "result", new[] { attachments }, null, "test unfurl");
-
-          return new MessagingExtensionResponse(result);
-      }
-
-      ```
-
-   # [JavaScript/Node.js](#tab/javascript)
-
-   ```javascript
-   class TeamsLinkUnfurlingBot extends TeamsActivityHandler {
-     handleTeamsAppBasedLinkQuery(context, query) {
-       const attachment = CardFactory.thumbnailCard('Thumbnail Card',
-         query.url,
-         ['https://raw.githubusercontent.com/microsoft/botframework-sdk/master/icon.png']);
-
-    const result = {
-      attachmentLayout: 'list',
-      type: 'result',
-      attachments: [attachment]
-    };
-
-    const response = {
-      composeExtension: result
-    };
-    return response;
-
-     }
-   }
-   ```
-
-   # [JSON](#tab/json)
-
-   Following is an example of the `invoke` sent to your bot:
-
-   ```json
-   {
-     "type": "invoke",
-     "name": "composeExtension/queryLink",
-     "value": {
-    "url": "https://theurlsubmittedbyyouruser.trackeddomain.com/id/1234"
-     }
-
-   }
-   ```
-
-   Following is an example of the response:
-
-   ```json
-   {
-     "composeExtension": {
-       "type": "result",
-       "attachmentLayout": "list",
-       "attachments": [
-         {
-           "contentType": "application/vnd.microsoft.teams.card.o365connector",
-           "content": {
-             "sections": [
-               {
-                 "activityTitle": "[85069]: Create a cool app",
-                 "activityImage": "https://placekitten.com/200/200"
-               },
-               {
-                 "title": "Details",
-                 "facts": [
-                   {
-                     "name": "Assigned to:",
-                     "value": "[Larry Brown](mailto:larryb@example.com)"
-                   },
-                   {
-                     "name": "State:",
-                     "value": "Active"
-                   }
-                 ]
-               }
-             ]
-           }
-         }
-       ]
-     }
-   }
-   ```
-   ---
-
-1.  Advantages and limitations.
-
-    # [Advantages](#tab/advantages)
+   # [Advantages](#tab/advantages)
 
     Zero install link unfurling helps you provide enhanced experience to the users, such as:
 
@@ -371,7 +372,7 @@ To get your app ready for zero install link unfurling, follow these steps:
 
     * Create a welcome card for your app to show a preview with the placeholder fields.
 
-    # [Limitations](#tab/limitations)
+   # [Limitations](#tab/limitations)
 
     The following are the limitations:
 
