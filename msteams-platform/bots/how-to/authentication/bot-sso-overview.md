@@ -12,7 +12,7 @@ This section covers SSO configuration required for bot and messaging extension a
 
 ## SSO user experience in Teams
 
-App users sign in to Teams using either personal Microsoft account or Microsoft 365 account. You can take advantage of this, and use SSO to authenticate and authorize the app users. Azure AD provides app users access to your bot or message extension app. It's based on the app user's Teams identity:
+App users sign in to Teams using either personal Microsoft account or Microsoft 365 account. You can take advantage of this, and use SSO to authenticate and authorize the app users. Azure AD provides app users access to your bot or message extension app.
 
 - Teams authenticates and stores the identity of its app user.
 - Your bot uses the stored identity of the app user who is already validated by Teams.
@@ -36,7 +36,7 @@ The following image shows how SSO works when a Teams app user attempts to access
 | --- | --- | --- |
 | 1 | Teams client → Bot service | The message that app user sends is received by the Teams client, which sends it to the bot. <br> If the app user has previously signed in, a token is saved in the Bot Framework Token Store. <br> • The bot calls the Bot Framework Token Service which checks for an existing token for the app user in the Bot Framework Token Store. If it exists, the app user is given access. <br> • If no token is available, the bot triggers the auth flow. |
 | 2 | Bot service → Bot Framework Token Service | The bot calls the Bot Framework Token Service to obtain a sign in link for the user. |
-| 3 | Bot Framework Token Service → Teams client | • For bot app: Bot Framework Token Service sends the request for sign-in link to the bot service, which forwards it to the Teams client in an OAuth card. <br> • For message extension app: Instead of the OAuth card, the Bot Framework Token Service sends an invoke request. |
+| 3 | Bot Framework Token Service → Teams client | • **For bot app**: Bot Framework Token Service sends the request for sign-in link to the bot service, which forwards it to the Teams client in an OAuth card. <br> • **For message extension app**: Instead of the OAuth card, the Bot Framework Token Service sends an invoke request. |
 | 4 | Teams client → Bot service → Bot Framework Token Service → Azure AD | After the Teams client receives the OAuth card for the app user, if SSO is enabled, it sends a token exchange request for the app user back to the bot. The bot calls the Bot Framework Token Service, attempting to exchange the received token from Azure AD. |
 | 5 | Azure AD → Teams client | For the app user who's using the bot service for the first time, the token exchange can occur only after app user gives their consent. Teams client displays a message to the app user for giving consent. <br> In case the consent fails: <br> 1. The authentication falls back to the sign-in prompt and the app user must sign in to use the bot app. The sign-in button pops up in Teams client, and when app user selects it, the Azure AD sign-in page is rendered. <br> 2. The app user signs in and grants access to the bot service. |
 | 6 | Bot service -> Bot Framework Token Service | The token for the app user is stored in the Bot Framework Token Store. |
