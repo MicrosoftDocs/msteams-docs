@@ -72,21 +72,23 @@ First, you need to add the `messageHandlers` array to your app manifest and enab
 
 ```json
 ...
-"composeExtensions": [
-  {
-    "botId": "abc123456-ab12-ab12-ab12-abcdef123456",
-    "messageHandlers": [
-      {
-        "type": "link",
-        "value": {
-          "domains": [
-            "*.trackeddomain.com"
-          ]
+{
+  "composeExtensions": [
+    {
+      "botId": "abc123456-ab12-ab12-ab12-abcdef123456",
+      "messageHandlers": [
+        {
+          "type": "link",
+          "value": {
+            "domains": [
+              "*.trackeddomain.com"
+            ]
+          }
         }
-      }
-    ]
-  }
-],
+      ]
+    }
+  ]
+}
 ...
 ```
 
@@ -160,9 +162,8 @@ The following is an example of the `invoke` request:
      "type": "invoke",
      "name": "composeExtension/queryLink",
      "value": {
-    "url": "https://theurlsubmittedbyyouruser.trackeddomain.com/id/1234"
+       "url": "https://theurlsubmittedbyyouruser.trackeddomain.com/id/1234"
      }
-
    }
 ```
 
@@ -284,36 +285,36 @@ To get your app ready for zero install link unfurling, follow these steps:
 
       ```json
       {
-         "composeExtension": {
-           "type": "result",
-           "attachmentLayout": "list",
-           "attachments": [
+        "composeExtension": {
+          "type": "result",
+          "attachmentLayout": "list",
+          "attachments": [
             {
-         "contentType": "application/vnd.microsoft.teams.card.o365connector",
-         "content": {
-           "sections": [
-             {
-               "activityTitle": "[85069]: Create a cool app",
-               "activityImage": "https://placekitten.com/200/200"
-             },
-             {
-               "title": "Details",
-               "facts": [
-                 {
-                   "name": "Assigned to:",
-                   "value": "[Larry Brown](mailto:larryb@example.com)"
-                 },
-                 {
-                   "name": "State:",
-                   "value": "Active"
-                 }
-               ]
-             }
-           ]
-         }
-       }
-      ]
-      }
+              "contentType": "application/vnd.microsoft.teams.card.o365connector",
+              "content": {
+                "sections": [
+                  {
+                    "activityTitle": "[85069]: Create a cool app",
+                    "activityImage": "https://placekitten.com/200/200"
+                  },
+                  {
+                    "title": "Details",
+                    "facts": [
+                      {
+                    "name": "Assigned to:",
+                    "value": "[Larry Brown](mailto:larryb@example.com)"
+                      },
+                      {
+                    "name": "State:",
+                    "value": "Active"
+                      }
+                    ]
+                  }
+                 ]
+               }
+            }
+          ]
+        }
       }
       ```
 
@@ -321,31 +322,31 @@ To get your app ready for zero install link unfurling, follow these steps:
   
       ```json
       {
-       "composeExtension": {
-       "type": "auth",
-      "attachmentLayout": "list",
-      "attachments": [
-       {
-          "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-          "type": "AdaptiveCard",
-          "version": "1.5",
-          "actions": [],
-          "body": [
-             {
-               "type": "TextBlock",
-               "size": "medium",
-               "weight": "bolder",
-               "text": "Zero-install test app"
-             },
-             {
-               "type": "TextBlock",
-               "text": "Link your account with this app for a full experience",
-               "wrap": true
-             }
-           ]
-       }
-      ]
-      }
+         "composeExtension": {
+            "type": "auth",
+            "attachmentLayout": "list",
+            "attachments": [
+            {
+               "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+               "type": "AdaptiveCard",
+               "version": "1.5",
+               "actions": [],
+               "body": [
+                  {
+                  "type": "TextBlock",
+                  "size": "medium",
+                  "weight": "bolder",
+                  "text": "Zero-install test app"
+                  },
+                  {
+                  "type": "TextBlock",
+                  "text": "Link your account with this app for a full experience",
+                  "wrap": true
+                  }
+               ]
+            }
+            ]
+         }
       }
       ```
 
