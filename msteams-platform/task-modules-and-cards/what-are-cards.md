@@ -84,9 +84,7 @@ Adaptive Cards with Incoming Webhooks enable you to use the rich and flexible ca
 
 ## Overflow menu on Adaptive Cards
 
-Overflow menu is added to Adaptive Cards. You can select up to six primary buttons that appear on the Adaptive Card. Any another buttons also known as secondary buttons are placed inside the overflow menu.
-
-## Support for Azure Active Directory Object ID and UPN in user mention
+Adaptive Card in Teams supports overflow menu. You can populate an overflow menu for all the secondary actions in an Adaptive Card.
 
 ## Support for Azure AD Object ID and UPN in user mention
 
@@ -99,7 +97,7 @@ Bots with Adaptive Cards support user mention IDs, such as Microsoft Azure Activ
 
 ## See also
 
-- [Format cards in Teams](~/task-modules-and-cards/cards/cards-format.md)
-- [Design Adaptive Cards](~/task-modules-and-cards/cards/design-effective-cards.md)
-- [Adaptive cards in bots](../bots/how-to/conversations/conversation-messages.md#adaptive-cards)
-- [Adaptive Cards overflow menu](~/task-modules-and-cards/cards/cards-format.md#adaptive-cards-overflow-menu)
+* [Format cards in Teams](~/task-modules-and-cards/cards/cards-format.md)
+* [Design Adaptive Cards](~/task-modules-and-cards/cards/design-effective-cards.md)
+* [Adaptive cards in bots](../bots/how-to/conversations/conversation-messages.md#adaptive-cards)
+* [Adaptive Cards overflow menu](~/task-modules-and-cards/cards/cards-format.md#adaptive-cards-overflow-menu)
