@@ -19,7 +19,7 @@ There are two ways of invoking task modules:
 
 The next section provides details on invoking a task module using `task/fetch`.
 
-## Invoke a task module using task/fetch
+## Invoke a task module using `task/fetch`
 
 When the `value` object of the `invoke` card action or `Action.Submit` is initialized and when a user selects the button, an `invoke` message is sent to the bot. In the HTTP response to the `invoke` message, there's a [TaskInfo object](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object) embedded in a wrapper object, which Teams uses to display the task module.
 
@@ -56,12 +56,12 @@ The next section provides details on submitting the result of a task module.
 
 When the user is finished with the task module, submitting the result back to the bot is similar to the way it works with tabs. For more information, see [example of submitting the result of a task module](~/task-modules-and-cards/task-modules/task-modules-tabs.md#example-of-submitting-the-result-of-a-task-module). There are a few differences as follows:
 
-* HTML or JavaScript that is `TaskInfo.url`: Once you've validated what the user has entered, you call the `microsoftTeams.tasks.submitTask()` SDK function referred to hereafter as `submitTask()` for readability purposes. You can call `submitTask()` without any parameters if you want Teams to close the task module, but you must pass an object or a string to your `submitHandler`. Pass it as the first parameter, `result`. Teams invokes `submitHandler`, `err` is `null`, and `result` is the object or string you passed to `submitTask()`. When you call `submitTask()` with the optional `appIds` parameter, Teams validates that the app sending the result is the same that invoked the task module, and helps prevent malicious apps from retrieving the result. Multiple app IDs can be specified because a web app from a single underlying domain can power multiple apps across different environments and branding schemes. Your bot receives a `task/submit` message including `result`. For more information, see [payload of `task/fetch` and `task/submit` messages](#payload-of-taskfetch-and-tasksubmit-messages).
+* HTML or JavaScript that is `TaskInfo.url`: After you validate what the user has entered, you call the `microsoftTeams.tasks.submitTask()` SDK function referred to hereafter as `submitTask()` for readability purposes. You can call `submitTask()` without any parameters if you want Teams to close the task module, but you must pass an object or a string to your `submitHandler`. Pass it as the first parameter, `result`. Teams invokes `submitHandler`, `err` is `null`, and `result` is the object or string you passed to `submitTask()`. When you call `submitTask()` with the optional `appIds` parameter, Teams validates that the app sending the result is the same that invoked the task module, and helps prevent malicious apps from retrieving the result. Multiple app IDs can be specified because a web app from a single underlying domain can power multiple apps across different environments and branding schemes. Your bot receives a `task/submit` message including `result`. For more information, see [payload of `task/fetch` and `task/submit` messages](#payload-of-taskfetch-and-tasksubmit-messages).
 * Adaptive Card that is `TaskInfo.card`: The Adaptive Card body as filled in by the user is sent to the bot through a `task/submit` message when the user selects any `Action.Submit` button.
 
 The next section provides details on the flexibility of `task/submit`.
 
-## The flexibility of task/submit
+## Responds to the `task/submit` messages
 
 When the user finishes with a task module invoked from a bot, the bot always receives a `task/submit invoke` message. You have several options when responding to the `task/submit` message as follows:
 
@@ -76,7 +76,7 @@ When the user finishes with a task module invoked from a bot, the bot always rec
 
 The next section provides details on payload of `task/fetch` and `task/submit` messages.
 
-## Payload of task/fetch and task/submit messages
+## Payload of `task/fetch` and `task/submit` messages
 
 This section defines the schema of what your bot receives when it receives a `task/fetch` or `task/submit` Bot Framework `Activity` object. The following table provides the properties of payload of `task/fetch` and `task/submit` messages:
 
@@ -88,7 +88,9 @@ This section defines the schema of what your bot receives when it receives a `ta
 
 The next section provides an example of receiving and responding to `task/fetch` and `task/submit` invoke messages in Node.js.
 
-## Example of task/fetch and task/submit invoke messages in Node.js and C #
+## Example
+
+ The following tabs provides `task/fetch` and `task/submit` invoke messages in Node.js and C#:
 
 # [Node.js](#tab/nodejs)
 
