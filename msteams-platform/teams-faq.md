@@ -42,18 +42,19 @@ Solution: Platform Bug
 Question: The bot isn't supposed to crash when the card is invalid. It can fail to display it, but it shouldn't crash. Also the behavior should be consistent between web and mobile.
 
 Solution: [Work with Universal Actions for Adaptive Cards](task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-Universal-Actions-for-Adaptive-Cards.md)
-
+<br>
 </details>
 <details>
 <summary>How can I remove specific messages from bot history? The only way I've found requires an activity ID (UpdateActivityAsync). Is there a way to get the chat history and find an activity ID of a specific message?</summary>
 
 Use Delete messages-Bot framework's DeleteActivity method: [Update and delete messages sent from bot](bots/how-to/update-and-delete-bot-messages.md#delete-messages)
-
+<br>
 </details>
 <details>
 <summary>How can I test the validity of the card schema via code, to avoid it in the future?</summary>
 
 Provided steps to test/validate adaptive card schema:“Adaptive cards editor(preview)” option from the Teams apps >>Developer portal >> Tools" and asked to refer Schema Explorer | Adaptive Cards.
+<br>
 </details>
 
 ## Live share
@@ -70,18 +71,21 @@ While most of you find it beneficial to use our free hosted service, there may s
 * Develop features through Fluid Framework, for example, `SharedMap`, for your application outside of Teams.
 
 For more information, see [how to guide] // ./teams-live-share-how-to/how-to-custom-azure-fluid-relay.md // or visit the [Azure Fluid Relay documentation // /azure/azure-fluid-relay/ //.
+<br>
 </details>
 
 <details>
 <summary>How long is data stored in Live Share's hosted service accessible?</summary>
 
 Any data sent or stored through Fluid containers created by Live Share's hosted Azure Fluid Relay service is accessible for 24 hours. If you want to persist data beyond 24 hours, you can replace our hosted Azure Fluid Relay service with your own. Alternatively, you can use your own storage provider in parallel to Live Share's hosted service.
+<br>
 </details>
 
 <details>
 <summary>What meeting types does Live Share support?</summary>
 
 Scheduled meetings, one-on-one calls, group calls, and meet now are supported. Channel meetings aren't yet supported.
+<br>
 </details>
 
 <details>
@@ -89,24 +93,28 @@ Scheduled meetings, one-on-one calls, group calls, and meet now are supported. C
 <summary>Will Live Share's media package work with DRM content?</summary>
 
 No. Teams currently doesn't support encrypted media for tab applications on desktop. Chrome, Edge, and mobile clients are supported. For more information, you can [track the issue here](https://github.com/microsoft/live-share-sdk/issues/14).
+<br>
 </details>
 
 <details>
 <summary>How many people can attend a Live Share session?</summary>
 
 Currently, Live Share supports a maximum of 100 attendees per session. If this is something you're interested in, you can [start a discussion here](https://github.com/microsoft/live-share-sdk/discussions).
+<br>
 </details>
 
 <details>
 <summary>Can I use Live Share's data structures outside of Teams?</summary>
 
 Currently, Live Share packages require the Teams Client SDK to function properly. Features in `@microsoft/live-share` or `@microsoft/live-share-media` won't work outside Microsoft Teams. If this is something you're interested in, you can [start a discussion here](https://github.com/microsoft/live-share-sdk/discussions).
+<br>
 </details>
 
 <details>
 <summary>Can I use multiple Fluid containers?</summary>
 
 Currently, Live Share only supports having one container using our provided Azure Fluid Relay service. However, it's possible to use both a Live Share container and a container created by your own Azure Fluid Relay instance.
+<br>
 </details>
 
 <details>
@@ -126,12 +134,14 @@ If you plan to update your app with new `SharedObject` or `LiveObject` instances
 
 > [!NOTE]
 > Live Share does not currently support versioning your `ContainerSchema`, nor does it have any APIs dedicated to migrations.
+<br>
 </details>
 
 <details>
 <summary>Are there limits to how many change events I can emit through Live Share?</summary>
 
 While Live Share is in Preview, any limit to events emitted through Live Share isn't enforced. For optimal performance, you must debounce changes emitted through `SharedObject` or `LiveObject` instances to one message per 50 milliseconds or more. This is especially important when sending changes based on mouse or touch coordinates, such as when synchronizing cursor positions, inking, and dragging objects around a page.
+<br>
 </details>
 
 ## Microsoft Graph
