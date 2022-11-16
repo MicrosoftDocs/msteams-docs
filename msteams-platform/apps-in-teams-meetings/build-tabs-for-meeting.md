@@ -280,7 +280,7 @@ The following are the limitations for app caching:
 
 * Register only the `beforeUnload` handler if your app doesn't require app caching but needs time to safely save state (if you want to ensure that going away from your app doesn't cause the app content to be abruptly removed from the Document Object Model (DOM)). If the app isn't registered for the `load` event, it's removed from the DOM after the unload flow completes.
 
-* For app caching to support only in meetings, register the `load` or `beforeUnload` handlers if the context is `meetingSidePanel`. Meetings is the first surface to support app caching. Even if app caching in other contexts such as `channels` and `chat` happens to work, it is not officially supported at this point and is subject to change.
+* For app caching to support only in meetings, register the `load` or `beforeUnload` handlers if the context is `meetingSidePanel`. Meetings is the first surface to support app caching. Even if app caching in other contexts such as `channels` and `chat` happens to work, it isn't officially supported at this point and is subject to change.
 
 * App caching isn't supported for meetings where the invited user count is more than 20.
 
