@@ -26,6 +26,8 @@ Teams platform features that are available to all app developers.
 
 **2022 November**
 
+***November 14, 2022***: [Introducing single sign-on for Visual Studio](toolkit/add-single-sign-on.md).
+
 ***November 02, 2022***: [Support global routing for bot APIs](bots/how-to/conversations/send-proactive-messages.md#create-the-conversation).
 
 :::column-end:::
@@ -289,7 +291,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 **2022 November**
 
-***November 11, 2022***: [Zero install for link unfurling](messaging-extensions/how-to/link-unfurling.md#zero-install-for-link-unfurling).
+***November 16, 2022***: [Zero install for link unfurling](messaging-extensions/how-to/link-unfurling.md#zero-install-for-link-unfurling).
 
 :::column-end:::
 :::row-end:::
