@@ -43,17 +43,17 @@ if (pages.currentApp.isSupported()) {
 else {/*Handle situation where capability isn't supported*/}
 ```
 
-You can also use the `pages.navigateToApp()` function, `pages.tabs.navigateToTab()` function, or deep links for tab navigation, as shown in [Create deep links](~/concepts/build-and-test/deep-links.md#navigate-within-your-app). Best practice for all Teams apps (not just Microsoft 365 extended) using TeamsJS 2.x.x is to use the new navigation APIs.
+You can also use the `pages.navigateToApp()` function, `pages.tabs.navigateToTab()` function, or deep links for tab navigation, as shown in [Create deep links](~/concepts/build-and-test/deep-links.md#navigate-within-your-app).
 
 ## Configure back button navigation
 
-When a personal app has multiple tabs, you can use the Microsoft 365 host app's back button to go backwards through the navigational history. However that history doesn't include actions a user performs within a tab. If you need to enhance the back button experience, you can maintain your own internal navigation stack and configure a custom handler for back button selections. This is accomplished through the `registerBackButtonHandler()` function in the [pages.backStack](/javascript/api/@microsoft/teams-js/pages.backstack?view=msteams-client-js-latest&preserve-view=true) namespace.
+When a personal app has multiple tabs, a user can use the Microsoft 365 host app's back button to go backwards through the navigational history. However that history doesn't include actions a user performs within a tab. If you need to enhance the back button experience, you can maintain your own internal navigation stack and configure a custom handler for back button selections. This is accomplished through the `registerBackButtonHandler()` function in the [pages.backStack](/javascript/api/@microsoft/teams-js/pages.backstack?view=msteams-client-js-latest&preserve-view=true) namespace.
 
 After you register the handler, it helps you to address the navigational request before the system takes action. If the handler is able to manage the request, it returns `true` so that the system knows no further action is necessary. If the internal stack is empty, it returns `false` so that the system can call the `navigateBack()` function instead and take the appropriate action.
 
 ## Return focus to host app
 
-After the user starts using elements within a tab, by default focus remains with the elements of your iFrame until the user selects outside of it. If it's a part of the user navigating with keyboard shortcuts (tab or F6), you can again focus to the host app. You can focus on the host app by using the [pages.returnFocus()](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest#@microsoft-teams-js-pages-returnfocus&preserve-view=true) function. The `returnFocus()` function accepts a boolean indicating the direction to advance focus within the host, `true` for forward and `false` for backwards. Generally, forward results in the search bar being highlighted and backwards results in the app bar being highlighted.
+After the user starts using elements within a tab, by default focus remains with the elements of your iframe until the user selects outside of it. If it's a part of the user navigating with keyboard shortcuts (tab or F6), you can again focus to the host app. You can focus on the host app by using the [pages.returnFocus()](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest#@microsoft-teams-js-pages-returnfocus&preserve-view=true) function. The `returnFocus()` function accepts a boolean indicating the direction to advance focus within the host, `true` for forward and `false` for backwards. Generally, forward results in the search bar being highlighted and backwards results in the app bar being highlighted.
 
 ## See also
 
