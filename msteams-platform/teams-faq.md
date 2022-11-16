@@ -56,14 +56,6 @@ Use Delete messages-Bot framework's DeleteActivity method: [Update and delete m
 Provided steps to test/validate adaptive card schema:“Adaptive cards editor(preview)” option from the Teams apps >>Developer portal >> Tools" and asked to refer Schema Explorer | Adaptive Cards.
 </details>
 
-## General
-
-<details>
-<summary>How can I migrate of Team store app from one tenant to another tenant?</summary>
-<br>
-Teams doesn't support that capability as yet.
-</details>
-
 ## Live share
 
 <details>
@@ -664,4 +656,12 @@ Solution: Shared references to deploy the code using toolkit: Create a new Teams
 TeamsFx Command Line Interface - Teams | Microsoft Docs
 Also, provided guidance how they can call Graph API get user profile photo.
 
+</details>
+
+## Tenants
+
+<details>
+<summary>How can I migrate of Team store app from one tenant to another tenant?</summary>
+<br>
+Teams doesn't support that capability as yet.
 </details>

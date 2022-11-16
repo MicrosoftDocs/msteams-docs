@@ -242,6 +242,8 @@
       - name: Action extensions
         href: resources/messaging-extension-v3/create-extensions.md
 - name: Build tabs
+  href: teams-faq.md
+- name: Build tabs
   items:
   - name: Overview
     href: tabs/what-are-tabs.md
