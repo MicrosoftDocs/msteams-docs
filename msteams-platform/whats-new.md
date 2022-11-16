@@ -291,7 +291,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 **2022 November**
 
-* ***November 16, 2022***: [Adaptive Cards overflow menu](task-modules-and-cards/cards/cards-format.md#adaptive-cards-overflow-menu) [Developer preview]
+* ***November 16, 2022***: [Adaptive Cards overflow menu](task-modules-and-cards/cards/cards-format.md#adaptive-cards-overflow-menu)
 
 * ***November 11, 2022***: [Enable bots to receive all chat messages without being @mentioned](bots/how-to/conversations/channel-messages-with-rsc.md)
 

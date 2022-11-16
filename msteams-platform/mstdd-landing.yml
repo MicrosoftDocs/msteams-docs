@@ -56,7 +56,7 @@ landingContent:
         url: https://gitter.im/OfficeDev/home
     - linkListType: whats-new
       links:
-      - text: Adaptive Cards overflow menu
+      - text: Adaptive Cards overflow menu [Developer preview]
         url: task-modules-and-cards/cards/cards-format.md#adaptive-cards-overflow-menu
       - text: Support global routing for bot APIs
         url: bots/how-to/conversations/send-proactive-messages.md#create-the-conversation
