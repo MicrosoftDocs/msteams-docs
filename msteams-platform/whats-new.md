@@ -26,7 +26,7 @@ Teams platform features that are available to all app developers.
 
 **2022 November**
 
-* ***November 16, 2022***: [Adaptive Cards overflow menu](task-modules-and-cards/cards/cards-format.md#adaptive-cards-overflow-menu)
+* ***November 16, 2022***: [Adaptive Cards overflow menu](task-modules-and-cards/cards/cards-format.md#adaptive-cards-overflow-menu).
 
 * ***November 14, 2022***: [Introducing single sign-on for Visual Studio](toolkit/add-single-sign-on.md).
 
@@ -293,7 +293,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 **2022 November**
 
-***November 11, 2022***: [Enable bots to receive all chat messages without being @mentioned](bots/how-to/conversations/channel-messages-with-rsc.md)
+***November 11, 2022***: [Enable bots to receive all chat messages without being @mentioned](bots/how-to/conversations/channel-messages-with-rsc.md).
 
 :::column-end:::
 :::row-end:::
