@@ -104,7 +104,7 @@ Credential classes implement the `TokenCredential` interface that is broadly use
 There are three credential classes to simplify authentication. Here's the corresponding scenarios for each credential class target.
 
 <details>
-<summary><b> User Identity in browser environment </b></summary>
+<summary><b> User identity in browser environment </b></summary>
 
 `TeamsUserCredential` represents Teams current user's identity. For the first time user's credentials are authenticated, then Teams SSO does the  On-Behalf-Of flow for token exchange. SDK uses this credential when you choose user identity in the browser environment.
 
@@ -124,7 +124,7 @@ Required configurations are `initiateLoginEndpoint` and `clientId` which can be 
 </details>
 
 <details>
-<summary><b> User Identity in Node.js environment </b></summary>
+<summary><b> User identity in Node.js environment </b></summary>
 
 `OnBehalfOfUserCredential` uses On-Behalf-Of flow and require Teams SSO token, in Azure Function or bot scenarios. TeamsFx SDK uses the following credential when you choose user identity in Node.js environment.
 
@@ -146,7 +146,7 @@ Required configurations are `authorityHost`, `tenantId`, `clientId`, `clientSecr
 </details>
 
 <details>
-<summary><b> App Identity in Node.js environment </b></summary>
+<summary><b> App identity in Node.js environment </b></summary>
 
 `AppCredential` represents the app identity. You can use app identity when user isn't involved, for example in a time-triggered automation job. TeamsFx SDK uses the following credential when you choose app identity in Node.js environment.
 
