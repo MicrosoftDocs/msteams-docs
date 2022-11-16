@@ -240,7 +240,7 @@ teamsCore.registerOnLoadHandler((data) => {
 console.log("got load from TEAMS", data.contentUrl, data.entityId); 
 // use contentUrl to route to correct page 
 // invoke notifySuccess when ready  
-teamsCore.notifySuccess(); 
+app.notifySuccess(); 
 }); 
 ```
 
@@ -304,7 +304,7 @@ The following are the limitations for app caching:
 | In-meeting notification | Demonstrates how to implement in-meeting notification using bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs) | NA |
 | In-meeting document signing | Demonstrates how to implement a document signing Teams app. Includes sharing specific app content to stage, Teams SSO and user specific stage view. | [View](https://github.com/officedev/microsoft-teams-samples/tree/main/samples/meetings-share-to-stage-signing/csharp) | NA | NA |
 | In-meeting document signing | Demonstrates how to implement a document signing Teams app. Includes sharing specific app content to stage, Teams SSO and user specific stage view. | [View](https://github.com/officedev/microsoft-teams-samples/tree/main/samples/meetings-share-to-stage-signing/csharp) | NA | NA |
-| App caching | Sample app to show how app caching works in the meeting side panel. | NA | NA | [View (Work in Progress)](https://github.com/kpolnitz/app-caching-test-app) |
+| App caching | Sample app to show how app caching works in the meeting side panel. | NA | NA | [View (Work in Progress)](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/v-mfurquan/app-cache-meetings-nodejs/samples/app-cache-meetings/nodejs) |
 
 > [!NOTE]
 >
