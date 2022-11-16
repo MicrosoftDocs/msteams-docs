@@ -251,7 +251,7 @@ items:
         > [!NOTE]
         > If you're already testing your bot in Teams, you must sign out this app and sign out Teams. Then sign in again to see this change.
 
-        :::image type="content" source="~/assets/images/adaptive-cards/manifest.png" alt-text="Screenshot of manifest with accessTokenAcceptedVersion":2, highlighted in red.":::
+        :::image type="content" source="~/assets/images/adaptive-cards/manifest.png" alt-text="Screenshot of manifest with accessTokenAcceptedVersion 2, highlighted in red.":::
 
     **To set up Bot Service connection**
 
@@ -366,7 +366,7 @@ items:
 
     1. Refresh to **Sign In** again.
 
-        :::image type="content" source="~/assets/images/adaptive-cards/success-sign-out.png" alt-text="Screenshot of TabAdaptiveCard displaying Sign out successful. Refresh to Sign in again.
+        :::image type="content" source="~/assets/images/adaptive-cards/success-sign-out.png" alt-text="Screenshot of TabAdaptiveCard displaying Sign out successful. Refresh to Sign in again."
 - title: Complete challenge
   durationInMinutes: 1
   content: |
