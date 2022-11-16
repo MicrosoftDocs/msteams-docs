@@ -326,25 +326,25 @@ To get your app ready for zero install link unfurling, follow these steps:
             "type": "auth",
             "attachmentLayout": "list",
             "attachments": [
-            {
-               "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-               "type": "AdaptiveCard",
-               "version": "1.5",
-               "actions": [],
-               "body": [
-                  {
-                  "type": "TextBlock",
-                  "size": "medium",
-                  "weight": "bolder",
-                  "text": "Zero-install test app"
+               {
+                 "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+                 "type": "AdaptiveCard",
+                 "version": "1.5",
+                 "actions": [],
+                 "body": [
+                   {
+                     "type": "TextBlock",
+                     "size": "medium",
+                     "weight": "bolder",
+                     "text": "Zero-install test app"
                   },
                   {
-                  "type": "TextBlock",
-                  "text": "Link your account with this app for a full experience",
-                  "wrap": true
+                     "type": "TextBlock",
+                     "text": "Link your account with this app for a full experience",
+                     "wrap": true
                   }
-               ]
-            }
+                 ]
+               }
             ]
          }
       }
