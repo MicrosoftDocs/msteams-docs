@@ -16,7 +16,7 @@ items:
   content: |
     Microsoft Teams app that requires device permissions, such as location, camera, or microphone access, now require users to manually grant permission in the web browser. Previously, the browser handled how to grant access permissions, but now these permissions are handled in Teams.
 
-    This step-by-step guide helps you to grant tab device permission at Teams. You'll see the following output:
+    This step-by-step guide helps you grant tab device permission in Teams. You'll see the following output:
 
       :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/output1.png" alt-text="final output":::
 
