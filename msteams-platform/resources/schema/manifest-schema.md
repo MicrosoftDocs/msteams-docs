@@ -227,7 +227,8 @@ The following schema sample shows all extensibility options:
                         "domains": [
                             "mysite.someplace.com",
                             "othersite.someplace.com"
-                        ]
+                        ],
+                        "supportsAnonymizedPayloads": false
                     }
                 }
             ]
