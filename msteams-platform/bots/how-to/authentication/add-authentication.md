@@ -277,7 +277,7 @@ With the preliminary settings done, let's focus on the creation of the bot to us
 
     Depending on the characters in your bot secret, you may need to XML escape the password. For example, any ampersands (&) will need to be encoded as `&amp;`.
 
-     [!code-json[appsettings](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-authentication/csharp/appsettings.json?range=1-5)]
+     [!code-json[appsettings](~/../Microsoft-Teams-Samples/tree/main/samples/bot-teams-authentication/csharp/appsettings.json?range=1-5)]
 
 1. In the Solution Explorer, go to the `TeamsAppManifest` folder, open `manifest.json` and set `id` and `botId` to the **bot App ID** you saved at the time of the bot registration.
 
@@ -285,7 +285,7 @@ With the preliminary settings done, let's focus on the creation of the bot to us
 
 1. Clone [node-auth-sample][teams-auth-bot-js].
 1. In a console, go to the project: </br></br>
-`cd samples/javascript_nodejs/46.teams`  
+`cd samples/bot-conversation-sso-quickstart/js`  
 1. Install modules</br></br>
 `npm install`
 1. Update the **.env** configuration as follows:
