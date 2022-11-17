@@ -539,14 +539,9 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-bot-add-command.png" alt-text="Image showing commands section":::
 
-    1. Enter a suitable name and description for the **Command**.
+    1. Enter a suitable name and description for the **Command**. Select all the three scopes for the command in the bot page.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-add-bot-command.png" alt-text="Image showing how to add commands details":::
-
-    1. Select all the three scopes for the command in the bot page.
-        - **Personal**
-        - **Team**
-        - **Group Chat**
 
     1. Select all the three scopes for the command in the Add a bot command page, and select add.
         - **Personal**
