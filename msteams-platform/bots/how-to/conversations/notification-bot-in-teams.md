@@ -221,7 +221,7 @@ Following are the customizations you can make to extend the template to fit your
       ```
 
       > [!NOTE]
-      > [To prevent an undefined output, ensure that you install the bot app in the 'General' channel of a Team.]
+      > To prevent an undefined output, ensure that you install the bot app in the 'General' channel of a Team.
 
    * Send notifications to a specific person:
 
@@ -235,4 +235,4 @@ Following are the customizations you can make to extend the template to fit your
      ```
 
      > [!NOTE]
-       [To prevent an undefined output and the notification to a person not be missing, you need to include the specified user in the notification installation scope.]
+       To prevent an undefined output and the notification to a person not be missing, you need to include the specified user in the notification installation scope.
