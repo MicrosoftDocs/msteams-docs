@@ -19,13 +19,13 @@ The bot and message extension apps use Bot Framework for communicating with app 
 
 The first step to enable SSO for your bot resource is to configure it in the Azure AD. You can enable SSO for your app in two ways:
 
-- **Configure SSO using bot resource**: You can start by configuring SSO for your bot resource, and enable SSO for your Azure AD app. You'll configure:
+- **Configure SSO using bot resource and configure Azure AD app**: You can start by configuring SSO for your bot resource, and enable SSO for your Azure AD app. You'll configure:
 
   - For bot resource: Messaging endpoint and OAuth connection.
 
   - For Azure AD app: App ID URI, scope and permissions, trusted client IDs, access token version, and client secret.
 
-- **Configure SSO using Azure AD app**: You can start by configuring your Azure AD app, and then use this app ID in the bot resource when you enable SSO for it. You'll configure:
+- **Configure SSO using Azure AD app and then configuring bot resource**: You can start by configuring your Azure AD app, and then use this app ID in the bot resource when you enable SSO for it. You'll configure:
 
   - For Azure AD app: App ID URI, access token, trusted client IDs, access token version, and client secret.
 
@@ -48,9 +48,9 @@ By the end of this tutorial, you'll learn to configure:
   - Client secret
 - Messaging endpoint and OAuth connection
 
-Select one of the following two ways to enable SSO for your bot resource:
+Select one of the following two ways to configure SSO for your bot resource:
 
-# [Configure SSO using bot resource](#tab/botid)
+# [Using bot resource and configure Azure AD app](#tab/botid)
 
 To enable SSO for your app in Azure AD:
 
@@ -370,7 +370,7 @@ Congratulations! You've completed the following app configurations in Azure AD r
   - Client secret
 - Messaging endpoint and OAuth connection
 
-# [Configure SSO using Azure AD app](#tab/windows)
+# [Use Azure AD app and then configure bot resource](#tab/windows)
 
 To create and configure your app for enabling SSO in Azure AD:
 
