@@ -89,4 +89,5 @@ For card support, see [card formatting](~/task-modules-and-cards/cards/cards-for
 ## See also
 
 * [Build bots for Teams](../what-are-bots.md)
+* [Designing your Microsoft Teams bot](../design/bots.md)
 * [Adaptive Cards](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
