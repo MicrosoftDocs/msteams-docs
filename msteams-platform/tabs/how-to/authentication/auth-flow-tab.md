@@ -30,7 +30,7 @@ This section uses Azure AD as an example of a third party OAuth provider for ena
 1. The user interacts with the content on the tab configuration or content page, commonly a **Sign in** or **Log in** button.
 2. The tab constructs the URL for its auth start page. Optionally, it uses information from URL placeholders or calls `app.getContext()` Teams client SDK method to streamline the authentication experience for the user. For example, when authenticating with Azure AD, if the `login_hint` parameter is set to the user's email address, the user doesn't have to sign in if they've done so recently. This is because Azure AD uses the user's cached credentials. The pop-up window is shown briefly and then disappears.
 3. The tab then calls the `authentication.authenticate()` method.
-4. Teams opens the start page in an iframe in a pop-up window. The start page generates random `state` data, saves it for future validation, and redirects to the identity provider's `/authorize` endpoint, such as `https://login.microsoftonline.com/<tenant ID>/oauth2/authorize` for Azure AD. Replace `<tenant id>` with your own tenant id that is context.tid.
+4. Teams opens the start page in an iframe in a pop-up window. The start page generates random `state` data, saves it for future validation, and redirects to the identity provider's `/authorize` endpoint, such as `https://login.microsoftonline.com/<tenant ID>/oauth2/authorize` for Azure AD. Replace `<tenant id>` with your own tenant ID that is context.tid.
 Similar to other application auth flows in Teams, the start page must be on a domain that is in its `validDomains` list, and on the same domain as the post sign in redirect page.
 
     > [!NOTE]
@@ -56,6 +56,7 @@ Sample code showing the tab authentication process:
 | **Sample name** | **Description** | **C#** | **Node.js** |
 |-----------------|-----------------|-------------|------------|
 | Teams tab authentication | Authentication process for tabs using Azure AD. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-sample/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-sample/nodejs) |
+| App complete auth | This sample shows how to authenticate with Facebook using a user name and password in a bot, tab and messaging extension with sso. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-auth/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-auth/nodejs) |
 
 ## See also
 
