@@ -75,3 +75,4 @@ You can use the Teams bot APIs to get information for members of a chat or team.
 * [Build your first bot app using JavaScript](../sbs-gs-bot.yml)
 * [Add authentication to your Teams bot](how-to/authentication/add-authentication.md)
 * [Use task modules from bots](../task-modules-and-cards/task-modules/task-modules-bots.md)
+* [Create Incoming Webhooks](../webhooks-and-connectors/how-to/add-incoming-webhook.md)

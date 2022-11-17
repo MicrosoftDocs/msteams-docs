@@ -202,10 +202,7 @@ this.onMessage(async (context, next) => {
 ## See also
 
 * [Build bots for Teams](what-are-bots.md)
-* [Calls and online meetings bots](calls-and-meetings/calls-meetings-bots-overview.md)
-* [Messages in bot conversations](how-to/conversations/conversation-messages.md)
-* [Receive all conversation messages with RSC](how-to/conversations/channel-messages-with-rsc.md)
-* [Channel and group chat conversations with a bot](how-to/conversations/channel-and-group-conversations.md)
-* [Authentication flow for bots in Microsoft Teams](how-to/authentication/auth-flow-bot.md)
-* [Publish your bot to Azure](/azure/bot-service/bot-builder-deploy-az-cli)
 * [API reference for the Bot Framework Connector service](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference)
+* [Publish your bot to Azure](/azure/bot-service/bot-builder-deploy-az-cli)
+* [Authentication flow for bots in Microsoft Teams](how-to/authentication/auth-flow-bot.md)
+* [Channel and group chat conversations with a bot](how-to/conversations/channel-and-group-conversations.md)

@@ -41,7 +41,8 @@ A bot can also send proactive messages to users. A proactive message is any mess
 ## See also
 
 * [Build bots for Teams](../../what-are-bots.md)
-* [API reference for the Bot Framework Connector service](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference)
 * [Microsoft Teams bot](../../../resources/bot-v3/bot-conversations/bots-conversations.md)
 * [Bot activity handlers](../../bot-basics.md)
 * [Update and delete messages sent from bot](../update-and-delete-bot-messages.md)
+* [Adaptive Cards](../../../task-modules-and-cards/cards/people-picker.md)
+* [API reference for the Bot Framework Connector service](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference)
