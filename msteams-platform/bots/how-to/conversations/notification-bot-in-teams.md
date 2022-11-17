@@ -7,7 +7,7 @@ ms.author: v-amprasad
 ms.localizationpriority: high
 ---
 
-# Notification bot Teams
+# Notification bot in Teams
 
 A Notification bot in Microsoft Teams enables you to build applications that collaborate with events and send these messages as notifications to an individual person, chat, group or channel in Teams. You can send Notifications as plain text or [Adaptive Cards](../../../task-modules-and-cards/cards/cards-reference.md#adaptive-card).
 
@@ -22,7 +22,7 @@ Bot Framework SDK provides the functionality to [proactively message in Teams](s
 
 |**Event**  |**Behavior**  |
 |---------|---------|
-|The first time you install a Bot to a person, group, or Team.     |You need to add the target conversation reference to the storage.         |
+|The first time you install a bot to a person, group, or Team.     |You need to add the target conversation reference to the storage.         |
 |When the bot is uninstalled from a person, group, or Team.     |You need to remove the target conversation reference from the storage.         |
 |When the team is deleted that was installed by bot.     |You need to remove the target conversation reference from the storage.         |
 |When the team is restored that was installed by bot.     |You need to add the target conversation reference to the storage.         |
@@ -30,7 +30,7 @@ Bot Framework SDK provides the functionality to [proactively message in Teams](s
 
 When you send notifications, TeamsFx SDK creates new conversation from the selected conversation reference and sends messages. For advanced usage, you can directly access the conversation reference to execute your own bot logic:
 
-### [TypeScript](#tab/ts)
+# [TypeScript](#tab/ts)
 
 ```TypeScript
    // list all installation targets
@@ -43,7 +43,7 @@ for (const target of await bot.notification.installations()) {
 }
 ```
 
-### [.NET](#tab/.NET)
+# [.NET](#tab/dot net)
 
 ```.NET
    // list all installation targets
@@ -62,3 +62,7 @@ foreach (var target in await _conversation.Notification.GetInstallationsAsync())
 ```
 
 ---
+
+## Customize Notification
+
+Following are the customizations you can make to extend the template to fit your business requirements.
