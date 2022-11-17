@@ -88,4 +88,4 @@ Following are the customizations you can make to extend the template to fit your
        * You can use a `Cosmos DB` trigger to send notifications when a Cosmos document is created or updated.
 
          > [!NOTE]
-         > For more information on support triggers, see [Azure Functions supported triggers](/azure/azure-functions/functions-triggers-bindings?tabs=javascript).
+         > For more information on support triggers, see [Azure functions support triggers](/azure/azure-functions/functions-triggers-bindings?tabs=javascript).
