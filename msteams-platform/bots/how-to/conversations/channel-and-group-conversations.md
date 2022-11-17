@@ -290,5 +290,6 @@ Follow the [step-by-step guide](../../../sbs-teams-conversation-bot.yml), create
 * [Authenticate users in Microsoft Teams](../../../concepts/authentication/authentication.md)
 * [Task modules](../../../task-modules-and-cards/what-are-task-modules.md)
 * [Upload file in Teams using bot](../../../sbs-file-handling-in-bot.yml)
+* [Get Teams specific context for your bot](../get-teams-context.md)
 * [Create private channel on behalf of user](/graph/api/channel-post#example-2-create-private-channel-on-behalf-of-user)
 * [Connect a bot to Web Chat channel](/azure/bot-service/bot-service-channel-connect-webchat)

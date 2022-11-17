@@ -356,6 +356,8 @@ The following table provides a simple code sample that incorporates basic conver
 
 * [Build bots for Teams](../../what-are-bots.md)
 * [Channel and group chat conversations with a bot](channel-and-group-conversations.md)
+* [Respond to the task module submit action](../../../messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
 * [Send proactive notifications to users](/azure/bot-service/bot-builder-howto-proactive-message)
+* [Messages in bot conversations](conversation-messages.md)
 * [Build notification bot to send proactive messages](../../../sbs-gs-notificationbot.yml)
 * [TurnContext](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest"&preserve-view=true")

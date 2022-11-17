@@ -27,3 +27,4 @@ If the tenant or conversation ID isn't present in the activity or wasn't validat
 * [Build bots for Teams](../../what-are-bots.md)
 * [Conversation basics](conversation-basics.md)
 * [Bot activity handlers](../../bot-basics.md)
+* [Messages in bot conversations](conversation-messages.md)

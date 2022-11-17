@@ -223,7 +223,6 @@ this.onMessage(async (context, next) => {
 ## See also
 
 * [Build bots for Teams](../../what-are-bots.md)
-* [Conversation basics](conversation-basics.md)
 * [Resource-specific consent](/microsoftteams/resource-specific-consent)
 * [Test resource-specific consent](../../../graph-api/rsc/test-resource-specific-consent.md#prerequisites)
 * [Upload custom app in Teams](~/concepts/deploy-and-publish/apps-upload.md)

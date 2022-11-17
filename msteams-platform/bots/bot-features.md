@@ -202,6 +202,7 @@ this.onMessage(async (context, next) => {
 ## See also
 
 * [Build bots for Teams](what-are-bots.md)
+* [Create custom triggers in Bot Framework Composer](/composer/how-to-create-custom-triggers)
 * [API reference for the Bot Framework Connector service](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference)
 * [Publish your bot to Azure](/azure/bot-service/bot-builder-deploy-az-cli)
 * [Authentication flow for bots in Microsoft Teams](how-to/authentication/auth-flow-bot.md)

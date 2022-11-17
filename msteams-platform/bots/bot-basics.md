@@ -350,7 +350,7 @@ Now that you've familiarized yourself with bot activity handlers, let us see how
 ## See also
 
 * [Build bots for Teams](what-are-bots.md)
-* [Create a bot](../resources/bot-v3/bots-create.md)
+* [Teams JavaScript client SDK](../tabs/how-to/using-teams-client-sdk.md)
 * [App manifest schema for Teams](../resources/schema/manifest-schema.md)
 * [API reference for the Bot Framework Connector service](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference)
 * [Get Teams specific context for your bot](how-to/get-teams-context.md)
