@@ -551,7 +551,8 @@ items:
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-bot-command-add.png" alt-text="Image showing how to save commands details":::
 
         The new command is added to the **Commands** section of the **Bot** pane.
-       > [!NOTE] Select all the three scopes for the command on the bot page too.
+       > [!NOTE] 
+       > Select all the three scopes for the command on the bot page too.
 
     1. Select **Save**.
 
