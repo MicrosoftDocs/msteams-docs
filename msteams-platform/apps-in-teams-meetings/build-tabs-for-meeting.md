@@ -192,7 +192,7 @@ To enable app caching in your meeting side panel, follow the steps:
 
 1. Call `teamsCore.registerBeforeUnloadHandler` and `teamsCore.registerOnLoadHandler` APIs.
 
-1. Use `contentUrl` and `entityId` into the load handler to route to the correct page within your app and invoke `notifySuccess/notifyFailure` to notify Teams client that the app initialization flow is complete.
+1. Use `contentUrl` and `entityId` passed into the load handler to route to the correct page within your app and invoke `notifySuccess/notifyFailure` to notify Teams client that the app initialization flow is complete.
 
 1. Dispose resources and perform any cleanup needed in the `beforeUnload` handler, then invoke the `readyToUnload` callback to notify Teams client that the app unload flow is complete.
 
@@ -204,9 +204,7 @@ The following is the flow diagram of a cached app when it's added to the meeting
 
 :::image type="content" source="../assets/images/saas-offer/cached-launch-app.png" alt-text="This screenshot shows the flow of the cached launch of the app in meeting side panel.":::
 
-After you opt into app caching, the webview that is used to host the embedded app is reused as users navigate to different instances of the app within a window.
-
-The webview used to host the app is hidden when the users go out of the app and shown when the users return to the app. When the app is cached, any audio that is playing is muted.
+After you opt into app caching, the webview that is used to host the embedded app is reused as users navigate to different instances of the app within a window. The webview used to host the app is hidden when the users go out of the app and shown when the users return to the app. When the app is cached, any audio that is playing is muted.
 
 > [!NOTE]
 > If the app caching is not enabled, the webview is recreated every time the users go out and return to the app.
