@@ -30,7 +30,7 @@ Bot Framework SDK provides the functionality to [proactively message in Teams](s
 
 When you send notifications, TeamsFx SDK creates new conversation from the selected conversation reference and sends messages. For advanced usage, you can directly access the conversation reference to execute your own bot logic:
 
-# [TypeScript](#tab/ts)
+### [TypeScript](#tab/t s)
 
 ```TypeScript
    // list all installation targets
@@ -43,7 +43,7 @@ for (const target of await bot.notification.installations()) {
 }
 ```
 
-# [.NET](#tab/dot net)
+### [.NET](#tab/dot net)
 
 ```.NET
    // list all installation targets
