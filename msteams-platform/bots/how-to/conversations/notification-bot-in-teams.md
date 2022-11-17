@@ -73,7 +73,7 @@ Following are the customizations you can make to extend the template to fit your
        * Adding Timer trigger(s) from widely-used npm packages such as [cron](https://www.npmjs.com/package/cron), [node-schedule](https://www.npmjs.com/package/node-schedule), or from other packages.
 
          > [!NOTE]
-         > [By default Teams Toolkit scaffolds a single `restify` entry point in `src/index.js`.]
+         > By default Teams Toolkit scaffolds a single `restify` entry point in `src/index.js`.
 
    1. Azure Functions based notification
 
@@ -88,4 +88,4 @@ Following are the customizations you can make to extend the template to fit your
        * You can use a `Cosmos DB` trigger to send notifications when a Cosmos document is created or updated.
 
          > [!NOTE]
-         > [For more information on support triggers, see [Azure Functions supported triggers](/azure/azure-functions/functions-triggers-bindings?tabs=javascript).]
+         > For more information on support triggers, see [Azure Functions supported triggers](/azure/azure-functions/functions-triggers-bindings?tabs=javascript).
