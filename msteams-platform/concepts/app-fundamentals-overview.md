@@ -11,7 +11,7 @@ ms.author: lajanuar
 
 Building an awesome Teams app is all about finding the right combination of features to meet your user's needs. The design, features, and capabilities of an app stem from this purpose.
 
-At its heart, Teams is a collaboration platform. It's also a social platform, is natively cross-platform, sits at the heart of Office 365, and offers a personal canvas for you to create apps.
+At its heart, Teams is a collaboration platform. It's also a social platform and is natively cross-platform that sits at the heart of Office 365 and offers personal canvas for you to create apps.
 
 In this section, learn how to:
 
@@ -23,7 +23,7 @@ In this section, learn how to:
 
 Teams as a platform offers you toolkits, libraries, and apps at every stage of app development. Let's break it down to app building lifecycle:
 
-:::image type="content" source="../assets/images/app-fundamentals/plan-app.png" alt-text="Illustration shows planning your app.":::
+:::image type="content" source="../assets/images/app-fundamentals/plan-app.png" alt-text="Diagram shows the steps in the app planning lifecycle.":::
 
 * [Before you build](#before-you-build)
 * [During build](#during-build)
@@ -42,13 +42,13 @@ Understanding the user and their concern are the first indicators of how a Teams
 
 ### During build
 
-* **Create and Build app project**: With Teams, you can choose the build environment that best suits your app requirement. Use Teams Toolkit or other SDKs, such as C#, Blazor, Node.js, and more to get started.
+* **Create and build app project**: With Teams, you can choose the build environment that best suits your app requirement. Use Teams Toolkit or other SDKs, such as C#, Blazor, Node.js, and more to get started.
 
 * **Design your app UI**: Use Teams UI Toolkit and UI Library to design your app's layout.
 
 * **Use Teams as a platform**: Teams platform helps you build a single- or multi-capability app. Your Teams app is supported by the integrated products and services that strengthen the app experience.
 
-    :::image type="content" source="../assets/images/overview/teams-solution.png" alt-text="Conceptual representation of the Teams solution.":::
+    :::image type="content" source="../assets/images/overview/teams-solution.png" alt-text="Diagram that shows the conceptual representation of the Teams solution.":::
 
     Your apps appear on Teams as Tabs, Bots, Messaging Extensions, Connectors and Webhooks, or as a multi-capability app. These capabilities are powered at the backend by Azure, Microsoft Graph, SharePoint, and Power apps that help automate tasks and processes.
 
