@@ -4,7 +4,6 @@ description: Learn about authentication methods that you can enable in Teams app
 ms.topic: conceptual
 ms.localizationpriority: medium
 ---
-
 # Authenticate users in Microsoft Teams
 
 Authentication is all about validating app users, and securing the app and app users against unwarranted access. You can use an authentication method suitable for your app to validate app users who want to use the Teams app.
