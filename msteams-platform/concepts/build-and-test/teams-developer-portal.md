@@ -62,7 +62,7 @@ Follow the steps to import and manage your existing app in the Developer Portal.
 
 ## Changelog for Developer Portal
 
-In the **Changelog**, you can see all the latest release of new features, recent changes in APIs, important bug fixes and other developer products. This allows you to keep engaged with the latest updates in Teams.
+In the **Changelog**, you can see all the latest releases of new features, recent changes in APIs, important bug fixes, and other developer products. This allows you to stay engaged with the latest updates in Teams.
 
 :::image type="content" source="../../assets/images/tdp/changelog.png" alt-text="Screenshot shows the Changelog in developer portal.":::
 
