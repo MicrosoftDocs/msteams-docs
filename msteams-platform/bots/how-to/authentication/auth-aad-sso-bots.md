@@ -271,8 +271,7 @@ When the user selects **Continue**, the following events occur:
 
 #### Receive the bot token
 
-The response with the token is sent through an invoke activity with the same schema as other invoke activities that the bots receive today. The only difference is the invoke name,
-**sign in** or **tokenExchange**, and the **value** field. The **value** field contains the **Id**, a string of the initial request to get the token and the **token** field, a string value including the token.
+The response with the token is sent through an invoke activity with the same schema as other invoke activities that the bots receive today. The only difference is the invoke name, `signin` or `tokenExchange`, and the **value** field. The **value** field contains the **Id**, a string of the initial request to get the token and the **token** field, a string value including the token.
 
 >[!NOTE]
 >
