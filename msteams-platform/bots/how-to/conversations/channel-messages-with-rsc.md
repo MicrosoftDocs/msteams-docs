@@ -222,9 +222,11 @@ this.onMessage(async (context, next) => {
 
 ## See also
 
+* [Build bots for Teams](../../what-are-bots.md)
 * [Conversation basics](conversation-basics.md)
 * [Resource-specific consent](/microsoftteams/resource-specific-consent)
 * [Test resource-specific consent](/microsoftteams/platform/graph-api/rsc/test-resource-specific-consent)
+* [Prerequisites](../../../graph-api/rsc/test-resource-specific-consent.md#prerequisites)
 * [Upload custom app in Teams](~/concepts/deploy-and-publish/apps-upload.md)
-* [Resource-specific delegated permissions](../../../resources/schema/manifest-schema.md#resource-specific-delegated-permissions)
+* [Authorization permissions](../../../resources/schema/manifest-schema.md#authorization)
 * [List replies to messages in a channel](/graph/api/chatmessage-list-replies?view=graph-rest-1.0&tabs=http&preserve-view=true)

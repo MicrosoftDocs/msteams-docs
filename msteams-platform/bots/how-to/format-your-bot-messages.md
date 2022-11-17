@@ -85,3 +85,8 @@ For card support, see [card formatting](~/task-modules-and-cards/cards/cards-for
 
 > [!div class="nextstepaction"]
 > [Update and delete bot messages](~/bots/how-to/update-and-delete-bot-messages.md)
+
+## See also
+
+* [Build bots for Teams](../what-are-bots.md)
+* [Adaptive Cards](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)

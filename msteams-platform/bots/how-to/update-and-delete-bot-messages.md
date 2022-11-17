@@ -7,7 +7,7 @@ ms.localizationpriority: medium
 ms.author: anclear
 ---
 
-# Update and delete messages sent from bot 
+# Update and delete messages sent from bot
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
@@ -182,3 +182,9 @@ The following code sample demonstrates basics of conversations:
 
 > [!div class="nextstepaction"]
 > [Get Teams context](~/bots/how-to/get-teams-context.md)
+
+## See also
+
+* [Build bots for Teams](../what-are-bots.md)
+* [Conversation basics](conversations/conversation-basics.md)
+* [Cards](../../task-modules-and-cards/what-are-cards.md)

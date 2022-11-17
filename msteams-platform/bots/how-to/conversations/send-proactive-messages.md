@@ -89,7 +89,7 @@ See the following video to learn how to send proactive message from bots:
 
 <br>
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4NHyk]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4NHyk>]
 <br>
 
 ### Understand who blocked, muted, or uninstalled a bot
@@ -354,10 +354,8 @@ The following table provides a simple code sample that incorporates basic conver
 
 ## See also
 
-* [**Teams proactive messaging code samples**](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging/csharp)
-* [Channel and group chat conversations with a bot](~/bots/how-to/conversations/channel-and-group-conversations.md)
-* [Respond to the task module submit action](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
+* [Build bots for Teams](../../what-are-bots.md)
+* [Channel and group chat conversations with a bot](channel-and-group-conversations.md)
 * [Send proactive notifications to users](/azure/bot-service/bot-builder-howto-proactive-message)
-* [Build your first bot app using JavaScript](../../../sbs-gs-bot.yml)
 * [Build notification bot with JavaScript to send a proactive message](../../../sbs-gs-notificationbot.yml)
 * [TurnContext](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest"&preserve-view=true")
