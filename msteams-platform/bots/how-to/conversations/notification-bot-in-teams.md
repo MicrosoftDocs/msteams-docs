@@ -16,7 +16,7 @@ A Notification bot in Microsoft Teams enables you to build applications that col
 **Advantages**
 [Placeholder for advantages of Notification bot]
 
-## Notification based events
+## Notification based on events
 
 Bot Framework SDK provides the functionality to [proactively message in Teams](send-proactive-messages.md). TeamsFx SDK provides the functionality to manage bot's conversation references when bot event is triggered. TeamsFx SDK recognizes following bot events:
 
@@ -27,3 +27,38 @@ Bot Framework SDK provides the functionality to [proactively message in Teams](s
 |When the team is deleted that was installed by bot.     |You need to remove the target conversation reference from the storage.         |
 |When the team is restored that was installed by bot.     |You need to add the target conversation reference to the storage.         |
 |When the bot messages.     |You need to add the target conversation reference to the storage, if it doesn't exist.         |
+
+When you send notifications, TeamsFx SDK creates new conversation from the selected conversation reference and sends messages. For advanced usage, you can directly access the conversation reference to execute your own bot logic:
+
+### [TypeScript](#tab/ts)
+
+```TypeScript
+   // list all installation targets
+for (const target of await bot.notification.installations()) {
+    // call Bot Framework's adapter.continueConversation()
+    await target.adapter.continueConversation(target.conversationReference, async (context) => {
+        // your own bot logic
+        await context...
+    });
+}
+```
+
+### [.NET](#tab/.NET)
+
+```.NET
+   // list all installation targets
+foreach (var target in await _conversation.Notification.GetInstallationsAsync()) {
+    // call Bot Framework's adapter.ContinueConversationAsync()
+    await target.Adapter.ContinueConversationAsync(
+        target.BotAppId,
+        target.ConversationReference,
+        async (context, ctx) =>
+        {
+            // your own bot logic
+            await context...
+        },
+        cancellationToken);
+}
+```
+
+---
