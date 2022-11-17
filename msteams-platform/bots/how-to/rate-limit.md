@@ -174,4 +174,5 @@ The following table provides the per thread limit for all bots:
 ## See also
 
 * [Build bots for Teams](../what-are-bots.md)
+* [Conversation basics](conversations/conversation-basics.md)
 * [Manage a long-running operation](/azure/bot-service/bot-builder-howto-long-operations-guidance?view=azure-bot-service-4.0&preserve-view=true)
