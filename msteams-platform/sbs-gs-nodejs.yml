@@ -254,6 +254,9 @@ items:
         ```
         An ngrok tunnel is created. Here's an example of ngrok tunnel.
 
+        >[!NOTE]
+        Sign up to the `https://dashboard.ngrok.com/get-started/setup` if you are not a authorized user.
+
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/nodejs-ngrok-tunnel.png" alt-text="Image showing ngrok tunnel":::
 
         *Ngrok* listens to requests from the internet and will route them to your app running on port 3333.
