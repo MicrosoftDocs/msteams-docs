@@ -18,13 +18,13 @@ items:
 
     You can build your tabs with relevant user interface (UI) building blocks, which are native to desktop, web, and mobile.
 
-    This article helps you understand:
+    This article helps you to understand:
     
-    * The changes required to be made to the app manifest.
+    * Changes required to be made to the app manifest.
     * Identifies how the invoke activity requests and sends information in tab with the Adaptive Cards.
     * Effects on the task module workflow.
     
-    This step-by-step guide helps you build tabs with the Adaptive Cards on desktop and mobile. You'll see the following output:
+    This step-by-step guide helps you to build tabs with the Adaptive Cards on desktop and mobile. You'll see the following output:
 
     :::image type="content" source="../msteams-platform/assets/images/adaptive-cards/desktop-mobile-screenshot.png" alt-text="Desktop Mobile screenshot":::
 
@@ -78,7 +78,7 @@ items:
             
        :::image type="content" source="~/assets/images/adaptive-cards/resource-group_1.png" alt-text="resource group.":::
 
-       You can create a new resource group. Select **Create new** > enter resource name > select **OK**. Select the required location from **New resource group location** dropdown list, if you've created a new resource group.
+       You can create a new resource group. Select **Create new** > enter resource name > select **OK**. Select the required location from the **New resource group location** dropdown list, if you've created a new resource group.
 
         :::image type="content" source="~/assets/images/adaptive-cards/newresource_1.png" alt-text="Screenshot showing the new resource group location.":::
 
