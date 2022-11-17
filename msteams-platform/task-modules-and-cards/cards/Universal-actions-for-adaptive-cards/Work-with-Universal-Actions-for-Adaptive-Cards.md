@@ -115,6 +115,7 @@ For more information, see [backward compatibility on Teams](/adaptive-cards/auth
 
 ## See also
 
+* [Cards and task modules](../../cards-and-task-modules.md)
 * [Adaptive Card actions in Teams](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)
 * [How bots work](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true)
 * [Sequential Workflows](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/sequential-workflows.md)

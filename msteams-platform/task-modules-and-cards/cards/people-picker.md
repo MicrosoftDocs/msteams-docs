@@ -310,4 +310,5 @@ You can implement People Picker for efficient task management in different scena
 
 ## See also
 
-[Cards Reference](cards-reference.md)
+* [Cards and task modules](../cards-and-task-modules.md)
+* [Types of cards](cards-reference.md)

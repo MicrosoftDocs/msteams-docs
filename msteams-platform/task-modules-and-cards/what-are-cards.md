@@ -86,3 +86,6 @@ Bots with Adaptive Cards support user mention IDs, such as Microsoft Azure Activ
 * [Format cards in Teams](~/task-modules-and-cards/cards/cards-format.md)
 * [Design Adaptive Cards](~/task-modules-and-cards/cards/design-effective-cards.md)
 * [Adaptive cards in bots](../bots/how-to/conversations/conversation-messages.md#adaptive-cards)
+* [Cards and task modules](cards-and-task-modules.md)
+* [Types of cards](cards/cards-reference.md)
+* [Card actions](cards/cards-actions.md)
