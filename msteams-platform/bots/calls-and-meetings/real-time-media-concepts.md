@@ -66,5 +66,6 @@ Application-hosted media bots require .NET or C# and Windows Server. For more in
 
 ## See also
 
+* [Build bots for Teams](../what-are-bots.md)
 * [Calls and online meetings bots](calls-meetings-bots-overview.md)
 * [Supported media formats for bots](~/resources/media-formats.md)

@@ -95,6 +95,7 @@ Real-time media refers to scenarios where media must be processed in real-time, 
 
 ## See also
 
+* [Build bots for Teams](../what-are-bots.md)
 * [Working with the cloud communications API in Microsoft Graph](/graph/api/resources/communications-api-overview)
 * [Sample apps](https://github.com/microsoftgraph/microsoft-graph-comms-samples)
 * [App manifest schema for Teams](../../resources/schema/manifest-schema.md)

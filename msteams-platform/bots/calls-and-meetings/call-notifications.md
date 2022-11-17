@@ -92,6 +92,7 @@ For more information, see [validate inbound requests](https://github.com/microso
 
 ## See also
 
+* [Build bots for Teams](../what-are-bots.md)
 * [Calls and online meetings bots](calls-meetings-bots-overview.md)
 * [Working with the cloud communications API in Microsoft Graph](/graph/api/resources/communications-api-overview)
 * [Enable authentication using third-party OAuth provider](../../tabs/how-to/authentication/auth-flow-tab.md)
