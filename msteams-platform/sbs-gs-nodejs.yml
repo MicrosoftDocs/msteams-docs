@@ -255,7 +255,7 @@ items:
         An ngrok tunnel is created. Here's an example of ngrok tunnel.
 
         > [!NOTE]
-        > Sign up into `https://dashboard.ngrok.com/get-started/setup` if you are not a authorized user.
+        > If you're not an authorized user, sign in to `https://dashboard.ngrok.com/get-started/setup`.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/nodejs-ngrok-tunnel.png" alt-text="Image showing ngrok tunnel":::
 
