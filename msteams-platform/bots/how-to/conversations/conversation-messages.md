@@ -498,7 +498,7 @@ The general retry guidance for each status code is listed in the following table
 
 * [Build bots for Teams](../../what-are-bots.md)
 * [Bot activity handlers](../../bot-basics.md)
-* [Proactive messages](send-proactive-messages.md)
+* [Send proactive messages](send-proactive-messages.md)
 * [Subscribe to conversation events](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
 * [Send and receive files through the bot](~/bots/how-to/bots-filesv4.md)
 * [Send tenant ID and conversation ID to the request headers of the bot](request-headers-of-the-bot.md)
