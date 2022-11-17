@@ -30,8 +30,6 @@ Bot Framework SDK provides the functionality to [proactively message in Teams](s
 
 When you send notifications, TeamsFx SDK creates new conversation from the selected conversation reference and sends messages. For advanced usage, you can directly access the conversation reference to execute your own bot logic:
 
-### [TypeScript](#tab/t s)
-
 ```TypeScript
    // list all installation targets
 for (const target of await bot.notification.installations()) {
@@ -42,8 +40,6 @@ for (const target of await bot.notification.installations()) {
     });
 }
 ```
-
-### [.NET](#tab/dot net)
 
 ```.NET
    // list all installation targets
@@ -61,8 +57,35 @@ foreach (var target in await _conversation.Notification.GetInstallationsAsync())
 }
 ```
 
----
-
-## Customize Notification
+## Customize notification
 
 Following are the customizations you can make to extend the template to fit your business requirements.
+
+1. **Customize the trigger point from event source**
+
+   1. `Restify` based notification
+
+      When a HTTP request is sent to `src/index.js` entry point, the default implementation sends an Adaptive Card to Teams. You can customize this behavior by modifying `src/index.js`. A typical implementation might call an API to retrieve events, data, or both, which can send an Adaptive Card as required.
+
+      You can also add additional triggers by:
+
+       * Creating a new routing: `server.post("/api/new-trigger", ...)`.
+       * Adding Timer trigger(s) from widely-used npm packages such as [cron](https://www.npmjs.com/package/cron), [node-schedule](https://www.npmjs.com/package/node-schedule), or from other packages.
+
+         > [!NOTE]
+         > [By default Teams Toolkit scaffolds a single `restify` entry point in `src/index.js`.]
+
+   1. Azure Functions based notification
+
+       * When you select timer trigger, the default implemented Azure function timer trigger (`src/timerTrigger.ts`) sends an Adaptive Card every 30 seconds. You can edit the file `*Trigger/function.json` to customize the `schedule` property. For more information, see [Azure function documentation](/azure/azure-functions/functions-bindings-timer?tabs=in-process&pivots=programming-language-javascript).
+
+       * When you select `http` trigger, the trigger is hit by a HTTP request, and the default implementation sends an Adaptive Card to Teams.  You can change this behavior by customizing `src/*Trigger.ts`. This implementation can call an API to retrieve events, data, or both, which can send an Adaptive Card as required.
+
+       You can also add Azure function triggers, such as:
+
+       * You can use an `Event Hub` trigger to send notifications when an event is pushed to Azure Event Hub.
+
+       * You can use a `Cosmos DB` trigger to send notifications when a Cosmos document is created or updated.
+
+         > [!NOTE]
+         > [For more information on support triggers, see [Azure Functions supported triggers](/azure/azure-functions/functions-triggers-bindings?tabs=javascript).]
