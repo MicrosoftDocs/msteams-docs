@@ -26,9 +26,13 @@ Teams platform features that are available to all app developers.
 
 **2022 November**
 
-***November 14, 2022***: [Introducing single sign-on for Visual Studio](toolkit/add-single-sign-on.md).
+***November 17, 2022***: [Zero install for link unfurling](messaging-extensions/how-to/link-unfurling.md#zero-install-for-link-unfurling).
 
-***November 02, 2022***: [Support global routing for bot APIs](bots/how-to/conversations/send-proactive-messages.md#create-the-conversation).
+* ***November 16, 2022***: [Adaptive Cards overflow menu](task-modules-and-cards/cards/cards-format.md#adaptive-cards-overflow-menu).
+
+* ***November 14, 2022***: [Introducing single sign-on for Visual Studio](toolkit/add-single-sign-on.md).
+
+* ***November 02, 2022***: [Support global routing for bot APIs](bots/how-to/conversations/send-proactive-messages.md#create-the-conversation).
 
 :::column-end:::
 :::row-end:::
@@ -126,7 +130,7 @@ Explore updates from the previous GA releases listed here.
 |12/01/2021 | Introduced new store icon | • Design your app > App capabilities > [Designing your personal app for Microsoft Teams](concepts/design/personal-apps.md)</br> • Design your app > UI components > [Designing your Microsoft Teams app with advanced UI components](concepts/design/design-teams-app-advanced-ui-components.md) |
 |11/24/2021| Introduced step-by-step guide to generate meeting token | Build apps for Teams meetings > Enable and configure apps for meetings > [Step-by-step guide to create meeting token in Teams](sbs-meeting-token-generator.yml)|
 |11/17/2021| Updated Microsoft Teams store validation guidelines|[Store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)|
-|11/17/2021| Static and dynamic typeahead search for desktop and mobile users | • Build cards and task modules > Build cards > [Typeahead search in Adaptive Cards](task-modules-and-cards/cards/dynamic-search.md) </br> • Build cards and task modules > Build cards > Overview >  [Type-ahead search in Adaptive Cards](task-modules-and-cards/what-are-cards.md#type-ahead-search-in-adaptive-cards) </br> • Build cards and task modules > Overview > [Cards and task modules](task-modules-and-cards/cards-and-task-modules.md)|
+|11/17/2021| Static and dynamic typeahead search for desktop and mobile users | • Build cards and task modules > Build cards > [Typeahead search in Adaptive Cards](task-modules-and-cards/cards/dynamic-search.md) </br> • Build cards and task modules > Build cards > Overview >  [Typeahead search in Adaptive Cards](task-modules-and-cards/what-are-cards.md#typeahead search-in-adaptive-cards) </br> • Build cards and task modules > Overview > [Cards and task modules](task-modules-and-cards/cards-and-task-modules.md)|
 |11/13/2021| Bots can be enabled to receive all channel messages using resource-specific consent (RSC) | • Build bots > Bot conversations > Messages in bot conversations > [Receive all channel messages with RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md) </br> • Build bots > Bot conversations > [Bot conversation overview](~/bots/how-to/conversations/conversation-basics.md) </br> • Build bots > Bot conversations > [Channel and group conversations](~/bots/how-to/conversations/channel-and-group-conversations.md) |
 |10/28/2021| Monetize your Teams app with a transactable SaaS offer | Distribute your app > Publish to the Teams store > [Include a SaaS offer with your Teams app](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md) |
 |10/25/2021| Updated Get started module for Microsoft Teams Developer Documentation with new structure and procedures in a step-by-step guide | Get started > [Get started with your first Teams app](get-started/get-started-overview.md) |
@@ -291,7 +295,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 **2022 November**
 
-***November 16, 2022***: [Zero install for link unfurling](messaging-extensions/how-to/link-unfurling.md#zero-install-for-link-unfurling).
+***November 11, 2022***: [Enable bots to receive all chat messages without being @mentioned](bots/how-to/conversations/channel-messages-with-rsc.md).
 
 :::column-end:::
 :::row-end:::
