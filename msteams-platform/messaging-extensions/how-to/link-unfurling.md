@@ -207,9 +207,6 @@ Following is an example of the response:
 
 ## Zero install for link unfurling
 
-> [!NOTE]
-> Currently, zero install for link unfurling is available only in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
-
 Zero install link unfurling helps you unfurl previews for your shared links even before a user discovered or installed your app in Teams. You can anonymously unfurl cards with a new invoke request or create a pre-authenticated Adaptive Card preview for users before they install or authenticate your app.
 
 The following image provides a sequential flow to enable and use zero install link unfurling:
@@ -220,7 +217,7 @@ The following image provides a sequential flow to enable and use zero install li
 
 To get your app ready for zero install link unfurling, follow these steps:
 
-1. Set the property `supportsAnonymizedPayloads` to true in the [manifest schema](../../resources/schema/manifest-schema-dev-preview.md).
+1. Set the property `supportsAnonymizedPayloads` to true in the [manifest schema](../../resources/schema/manifest-schema.md).
 
 1. Set your app to handle the new invoke request `composeExtension/anonymousQueryLink`.
 
