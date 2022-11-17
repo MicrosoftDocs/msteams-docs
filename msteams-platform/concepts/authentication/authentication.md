@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 
 Authentication is all about validating app users, and securing the app and app users against unwarranted access. You can use an authentication method suitable for your app to validate app users who want to use the Teams app.
 
-Choose to add authentication for your app in one of the following two ways:
+Choose to add authentication for your app in one of the two ways:
 
 - **Enable single sign-on (SSO) in a Teams app**:
   SSO within Teams is an authentication method that uses an app user's Teams identity to provide them access to your app. A user who has logged into Teams doesn't need to log in again to your app within the Teams environment. With only a consent required from the app user, the Teams app retrieves access details for them from Azure Active Directory (AD). After the app user has given consent, they can access the app even from other devices without having to be validated again.
