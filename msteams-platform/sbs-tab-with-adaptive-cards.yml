@@ -202,7 +202,7 @@ items:
     **To add Redirect URI to the Azure Bot resource**
 
     
-    1. From the left pane, Select **Authentication** to set a redirect URI.
+    1. From the left pane, select **Authentication** to set a redirect URI.
     1. Select **Add a platform** > **Web**.
 
        :::image type="content" source="~/assets/images/adaptive-cards/configure-web-redirect-url_1.png" alt-text="Configure web redirect url.":::
