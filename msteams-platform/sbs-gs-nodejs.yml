@@ -255,7 +255,7 @@ items:
         An ngrok tunnel is created. Here's an example of ngrok tunnel.
 
         > [!NOTE]
-        > If you're not an authorized user, sign in to `https://dashboard.ngrok.com/get-started/setup`.
+        > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/nodejs-ngrok-tunnel.png" alt-text="Image showing ngrok tunnel":::
 
@@ -535,19 +535,19 @@ items:
 
     1. Select the :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/ellipse-icon.png"::: icon on the new **Bot** card, and select **Edit**.
 
+    1. Select all the three scopes for the command in the **Bot** page.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-bot-section.png" alt-text="Screenshot of an image showing bot section":::
+
     1. Move through the **Bot** pane to view the **Commands** section, and select **+ Add a Command**.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-bot-add-command.png" alt-text="Image showing commands section":::
 
-    1. Enter a suitable name and description for the **Command**. Select all the three scopes for the command in the bot page.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-add-bot-command.png" alt-text="Image showing how to add commands details":::
-
-    1. Select all the three scopes for the command in the Add a bot command page, and select add.
+    1. Enter a suitable name, description and select all the three scopes for the **Command** and select add. 
         - **Personal**
         - **Team**
         - **Group Chat**
-
+        
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-bot-command-add.png" alt-text="Image showing how to save commands details":::
 
         The new command is added to the **Commands** section of the **Bot** pane.
