@@ -10,14 +10,19 @@ Azure AD provides app users access to your bot or message extension app. The app
 
 ## SSO configuration in Azure AD portal
 
-The bot and message extension apps use Bot Framework for communicating with app users and implementing authentication. You must create and configure a bot resource and an app in Azure AD portal.
+The bot and message extension apps use Bot Framework for communicating with app users and implementing authentication.
+
+To configure SSO for your bot or message extension app, you'll need to:
+
+- Configure bot resource in Azure AD
+- Configure app in Azure AD
 
 > [!NOTE]
 > Ensure that you've created an app and a bot resource in Azure AD.
 > - For more information about creating an app in Azure AD, see [To register a new app in Azure AD](../../../tabs/how-to/authentication/tab-sso-register-aad.md#to-register-a-new-app-in-azure-ad).
 > - For more information about creating and configuring your bot resource in Azure AD, see [Create Teams conversation bot](../../../sbs-teams-conversation-bot.yml).
 
-The first step to enable SSO for your bot resource is to configure it in the Azure AD. You can enable SSO for your app in two ways:
+You can configure your bot resource and app in Azure AD for your bot or message extension app in one of the following two ways:
 
 - **Configure SSO using bot resource and configure Azure AD app**: You can start by configuring SSO for your bot resource, and enable SSO for your Azure AD app. You'll configure:
 
