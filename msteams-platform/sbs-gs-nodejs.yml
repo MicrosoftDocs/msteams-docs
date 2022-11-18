@@ -537,24 +537,24 @@ items:
 
     1. Select all the three scopes for the command in the **Bot** page.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-bot-section.png" alt-text="Screenshot of an image showing bot section":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-bot-section.png" alt-text="Screenshot of an image showing bot section in the Developer Portal.":::
 
     1. Move through the **Bot** pane to view the **Commands** section, and select **+ Add a Command**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-bot-add-command.png" alt-text="Image showing commands section":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-bot-add-command.png" alt-text="Screenshot of image showing commands section in the Developer Portal.":::
 
     1. Enter a suitable name, description and select all the three scopes for the **Command** and select add. 
         - **Personal**
         - **Team**
         - **Group Chat**
         
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-bot-command-add.png" alt-text="Image showing how to save commands details":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-bot-command-add.png" alt-text="Screenshot of image showing how to save commands details in Developer Portal.":::
 
         The new command is added to the **Commands** section of the **Bot** pane.
 
     1. Select **Save**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-save-new-bot-command.png" alt-text="Image showing commands details to be saved":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-save-new-bot-command.png" alt-text="Screenshot of image showing commands details to be saved":::
 
         The command details are saved.
 
