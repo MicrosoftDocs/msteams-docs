@@ -17,11 +17,11 @@ This document guides you on how to add link unfurling to your app manifest using
 > * Currently, link unfurling is not supported on Mobile clients.
 > * The link unfurling result is cached for 30 minutes.
 > * Only Adaptive Cards version 1.3 and earlier is supported in link unfurling.
-> * Messaging extension commands aren't required for Link unfurling. However, there must be at least one command in manifest as it is a mandatory property in messaging extensions. For more information, see [compose extensions](/microsoftteams/platform/resources/schema/manifest-schema)
+> * Messaging extension commands aren't required for Link unfurling. However, there must be at least one command in manifest as it is a mandatory property in messaging extensions. For more information, see [compose extensions](/microsoftteams/platform/resources/schema/manifest-schema).
 
 The Azure DevOps message extension uses link unfurling to look for URLs pasted into the compose message area pointing to a work item. In the following image, a user pasted a URL for an item in Azure DevOps that the message extension has resolved into a card:
 
-:::image type="content" source="~/assets/images/tdp/link-unfurling.png" alt-text="Example of link unfurling":::
+:::image type="content" source="~/assets/images/tdp/link-unfurling.png" alt-text="Screenshot of the adaptive card of an URL resolved by message extension.":::
 
 See the following video to learn more about link unfurling:
 <br>
@@ -98,7 +98,7 @@ For more information, see [Action type invoke](~/task-modules-and-cards/cards/ca
 ```csharp
 protected override async Task<MessagingExtensionResponse> OnTeamsAppBasedLinkQueryAsync(ITurnContext<IInvokeActivity> turnContext, AppBasedLinkQuery query, CancellationToken cancellationToken)
 {
-    //You'll use the query.link value to search your service and create a card response
+    //You'll use the query.link value to search your service and create a card response.
     var card = new HeroCard
     {
         Title = "Hero Card",
