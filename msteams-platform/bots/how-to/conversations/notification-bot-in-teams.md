@@ -261,3 +261,43 @@ Following are the customizations you can make to extend the template to fit your
 
    > [!NOTE]
    > To prevent an undefined output and a missing notification, you need to include the specified person in notification installation scope.
+
+## Customize initialization
+
+You need to create `ConversationBot` to send notification.
+
+> [!NOTE]
+> Code is generated in the project.
+
+# [JavaScript/TypeScript](#tab/jsts)
+
+```JS/TS
+/** Javascript/Typescript: bot/src/internal/initialize.*s **/
+const bot = new ConversationBot({
+    // The bot id and password to create BotFrameworkAdapter.
+    // See https://aka.ms/about-bot-adapter to learn more about adapters.
+    adapterConfig: {
+        appId: process.env.BOT_ID,
+        appPassword: process.env.BOT_PASSWORD,
+    },
+    // Enable notification
+    notification: {
+        enabled: true,
+    },
+});
+```
+
+# [.NET](#tab/dotnet4)
+
+```
+/** .NET **/
+// list all installation targets
+foreach (var target in await _conversation.Notification.GetInstallationsAsync()) {
+    // "Person" means this bot is installed as Personal app
+    if (target.Type == NotificationTargetType.Person)
+    {
+        // Directly notify the individual person
+        await target.SendAdaptiveCard(...);
+    }
+}
+```
