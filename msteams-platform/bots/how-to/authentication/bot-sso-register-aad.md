@@ -421,7 +421,7 @@ With the app (client) ID and client secret provided, the Bot Framework Token Sto
     1. Enter the scope that you defined when you configured the scope and permissions.
 
         > [!NOTE]
-        > For this tutorial, you can use openid profile User.Read User.ReadBasic.All as scope. This scope is suitable for using the [code sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/csharp_dotnetcore/BotConversationSsoQuickstart).
+        > For this tutorial, you can use openid profile User.Read User.ReadBasic.All as scope. This scope is suitable for using the [Code sample](bot-sso-code.md#code-sample).
 
 1. Select **Save**.
 1. Select **Apply**.
@@ -807,7 +807,7 @@ With the app (client) ID and client secret provided, the Bot Framework Token Sto
     1. Enter the scope that you defined when you configured the permissions.
 
         > [!NOTE]
-        > For this tutorial, you can use openid profile User.Read User.ReadBasic.All as scope. This scope is suitable for using the [code sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/csharp_dotnetcore/BotConversationSsoQuickstart).
+        > For this tutorial, you can use openid profile User.Read User.ReadBasic.All as scope. This scope is suitable for using the [Code sample](bot-sso-code.md#code-sample).
 
 1. Select **Save**.
 1. Select **Apply**.
