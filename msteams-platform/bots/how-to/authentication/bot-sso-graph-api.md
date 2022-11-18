@@ -13,8 +13,8 @@ Graph scopes, such as `User.Read` or `Mail.Read`, lets you specify how your app 
 In this section, you'll learn to:
 
 - [Configure API permissions in Azure AD](#configure-api-permissions-in-azure-ad)
-- [Configure authentication for different platforms](#configure-authentication-for-different-platforms)
-<!--- [Acquire access token for MS Graph](#acquire-access-token-for-ms-graph)-->
+<!---- [Configure authentication for different platforms](#configure-authentication-for-different-platforms)
+ [Acquire access token for MS Graph](#acquire-access-token-for-ms-graph)-->
 
 ## Configure API permissions in Azure AD
 
@@ -62,7 +62,7 @@ You can configure Graph scopes in Azure AD as required for your app. Delegated p
 
     You've configured your app with Microsoft Graph permissions.
 
-## Configure authentication for different platforms
+<!--## Configure authentication for different platforms
 
 Configuration for authentication depends on the platform or device where you want to target your app. You may need to configure redirect URIs, authentication settings, or platform-specific details.
 
@@ -110,7 +110,7 @@ You can configure authentication for multiple platforms as long as the URL is un
 
 1. Select **Configure**.
 
-    The platform is configured and displayed in the **Platform configurations** page.
+    The platform is configured and displayed in the **Platform configurations** page.-->
 
 After you've completed the configuration in Azure AD, you must update the code to acquire access token for Microsoft Graph. For more information, see [Bot framework SDK](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/46.teams-auth/SimpleGraphClient.cs).
 

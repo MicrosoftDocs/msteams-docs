@@ -59,6 +59,7 @@ To enable SSO for your app in Azure AD:
   - [Configure scope for the access token](#configure-scope-for-the-access-token)
   - [Configure access token version](#configure-access-token-version)
   - [Create client secret](#create-client-secret)
+  - [Configure redirect URL](#configure-redirect-url)
 - **[Configure OAuth connection](#configure-oauth-connection)**
 
 > [!IMPORTANT]
@@ -311,7 +312,7 @@ A client secret is a string that the application uses to prove its identity when
 
 You've configured the client secret. Next, you must configure the redirect URL.
 
-### Configure authentication for different platforms
+### Configure redirect URL
 
 Configuration for authentication depends on the platform or device where you want to target your app. You may need to configure redirect URIs, authentication settings, or platform-specific details.
 
@@ -322,7 +323,7 @@ Configuration for authentication depends on the platform or device where you wan
 
 You can configure authentication for multiple platforms as long as the URL is unique.
 
-#### To configure authentication for a platform
+#### To configure redirect URL
 
 1. Open the app you registered in the [Azure portal](https://ms.portal.azure.com/).
 
