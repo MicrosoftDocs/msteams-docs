@@ -658,6 +658,56 @@ A client secret is a string that the application uses to prove its identity when
    > [!IMPORTANT]
    > Ensure that you copy the value of client secret right after you create it. The value is visible only at the time when the client secret is created, and can't be viewed after that.
 
+### Configure redirect URL
+
+Configuration for authentication depends on the platform or device where you want to target your app. You may need to configure redirect URIs, authentication settings, or platform-specific details.
+
+> [!NOTE]
+>
+> - If your bot app hasn't been granted IT admin consent, app users have to provide consent the first time they use your app on a different platform.
+> - Implicit grant is not required if SSO is enabled on a bot app.
+
+You can configure authentication for multiple platforms as long as the URL is unique.
+
+#### To configure redirect URL
+
+1. Open the app you registered in the [Azure portal](https://ms.portal.azure.com/).
+
+1. Select **Manage** > **Authentication** from the left pane.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/azure-portal-platform.png" alt-text="Authenticate for platforms" border="true":::
+
+    The **Platform configurations** page appears.
+
+1. Select **+ Add a platform**.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/add-platform.png" alt-text="Add a platforms" border="true":::
+
+    The **Configure platforms** page appears.
+
+1. Select the platform that you want to configure for your app. You can choose the platform type from web or SPA.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/configure-platform.png" alt-text="Select web platform" border="true":::
+
+    <!--You can configure multiple platforms for a particular platform type. Ensure that the redirect URI is unique for every platform you configure.-->
+
+    The **Configure Web** page appears.
+
+    > [!NOTE]
+    > The configurations will be different based on the platform you select.
+
+1. Enter the configuration details for the platform.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/config-web-platform.png" alt-text="Configure web platform" border="true":::
+
+    1. Enter the redirect URI. The URI should be unique.
+    2. Enter the front-channel log-out URL.
+    3. Select the tokens you want Azure AD to send for your app.
+
+1. Select **Configure**.
+
+    The platform is configured and displayed in the **Platform configurations** page.
+
 The configuration for Azure AD app is complete, and now you can configure your bot resource for enabling SSO.
 
 ## Configure bot resource in Azure AD
