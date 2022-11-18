@@ -274,11 +274,11 @@ You must define the access token version for your app. This configuration is mad
 
 You've updated the access token version. Next, you'll create a client secret for your app next.
 
-#### Create client secret
+### Create client secret
 
 A client secret is a string that the application uses to prove its identity when requesting a token.
 
-##### To create a client secret for your app
+#### To create a client secret for your app
 
 1. Select **Manage** > **Certificates & secrets**.
 
@@ -308,6 +308,23 @@ A client secret is a string that the application uses to prove its identity when
 
    > [!IMPORTANT]
    > Ensure that you copy the value of client secret right after you create it. The value is visible only at the time when the client secret is created, and can't be viewed after that.
+
+You've configured the client secret. Next, you must configure the redirect URL.
+
+### Configure authentication for different platforms
+
+Configuration for authentication depends on the platform or device where you want to target your app. You may need to configure redirect URIs, authentication settings, or platform-specific details.
+
+> [!NOTE]
+>
+> - If your bot app hasn't been granted IT admin consent, app users have to provide consent the first time they use your app on a different platform.
+> - Implicit grant is not required if SSO is enabled on a bot app.
+
+You can configure authentication for multiple platforms as long as the URL is unique.
+
+#### To configure authentication for a platform
+
+
 
 The Azure AD app configuration is complete, and now you must enable SSO support for your bot resource by configuring OAuth connection.
 
