@@ -1,5 +1,5 @@
 ---
-title: Create a channel tab
+title: Create a channel tab or group tab
 author: laujan
 description: Create custom channel, group tab with Node.js, ASP.NET Core, ASP.NET Core MVC. Generate app, create package, build and run app, secret tunnel, upload to Teams
 ms.localizationpriority: high
@@ -8,7 +8,7 @@ ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
 ---
 
-# Create a channel tab
+# Create a channel tab or group tab
 
 Channel or group tabs deliver content to channels and group chats, which helps to create collaborative spaces around dedicated web-based content.
 
@@ -405,10 +405,10 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
 1. Open **Apps** and select **Import app**.
 
-<!--- TBD: This steps seems to be removed from main now so commenting it for now.
+   <!--- TBD: This steps seems to be removed from main now so commenting it for now.
 
-1. Select **Import an existing app** in the **Manifest editor** to begin updating the app package for your tab. The source code comes with its own partially complete manifest. The name of your app package is `tab.zip`. It is available from the following path:
---->
+   Select **Import an existing app** in the **Manifest editor** to begin updating the app package for your tab. The source code comes with its own partially complete manifest. The name of your app package is `tab.zip`. It is available from the following path:
+   --->
 
 1. The name of your app package is `tab.zip`. It's available in the following path:
 
@@ -675,9 +675,8 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
 ## See also
 
-* [Teams tabs](~/tabs/what-are-tabs.md)
-* [Create a personal tab](~/tabs/how-to/create-personal-tab.md)
-* [Tabs on mobile](~/tabs/design/tabs-mobile.md)
-* [Build tabs with Adaptive Cards](~/tabs/how-to/build-adaptive-card-tabs.md)
-* [Create a removal page](~/tabs/how-to/create-tab-pages/removal-page.md)
+* [Build tabs for Teams](../what-are-tabs.md)
+* [Create a personal tab](create-personal-tab.md)
+* [Developer Portal for Teams](../../concepts/build-and-test/teams-developer-portal.md)
+* [Build tabs with Adaptive Cards](build-adaptive-card-tabs.md)
 * [Add a SharePoint page as a tab in Teams](https://support.microsoft.com/en-us/office/add-a-sharepoint-page-list-or-document-library-as-a-tab-in-teams-131edef1-455f-4c67-a8ce-efa2ebf25f0b)
