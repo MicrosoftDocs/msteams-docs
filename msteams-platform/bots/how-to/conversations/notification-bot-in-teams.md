@@ -45,7 +45,7 @@ for (const target of await bot.notification.installations()) {
 
 # [C#/.NET](#tab/dotnet)
 
-```.NET
+```C#/.NET
    // list all installation targets
 foreach (var target in await _conversation.Notification.GetInstallationsAsync()) {
     // call Bot Framework's adapter.ContinueConversationAsync()
@@ -145,7 +145,7 @@ You can also add new cards if needed. How to build different types of Adaptive C
 
 # [C#/.NET](#tab/dotnet1)
 
-```.NET
+```C#/.NET
         // list all installation targets
         foreach (var target in await _conversation.Notification.GetInstallationsAsync()) {
         // "Channel" means this bot is installed to a Team (default to notify General channel)
@@ -196,7 +196,7 @@ You can also add new cards if needed. How to build different types of Adaptive C
 
 # [C#/.NET](#tab/dotnet2)
 
-```.NET
+```C#/.NET
            // list all installation targets
            foreach (var target in await _conversation.Notification.GetInstallationsAsync())     {
               // "Group" means this bot is installed to a Group Chat
@@ -233,7 +233,7 @@ You can also add new cards if needed. How to build different types of Adaptive C
 
 # [C#/.NET](#tab/dotnet3)
 
-```.NET
+```C#/.NET
         // list all installation targets
         foreach (var target in await _conversation.Notification.GetInstallationsAsync()) {
         // "Person" means this bot is installed as Personal   app
@@ -305,8 +305,8 @@ const bot = new ConversationBot({
 
 # [C#/.NET](#tab/dotnet4)
 
-```
-/** .NET **/
+```C#/.NET
+/** .NET: Program.cs or Startup.cs **/
 // list all installation targets
 foreach (var target in await _conversation.Notification.GetInstallationsAsync()) {
     // "Person" means this bot is installed as Personal app
@@ -317,6 +317,8 @@ foreach (var target in await _conversation.Notification.GetInstallationsAsync())
     }
 }
 ```
+
+---
 
 ## Customize adapter
 
