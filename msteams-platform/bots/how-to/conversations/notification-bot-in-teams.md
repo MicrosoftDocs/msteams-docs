@@ -108,7 +108,7 @@ Following are the customizations you can make to extend the template to fit your
 
 # [TypeScript](#tab/ts1)
 
-      ```TypeScript
+```TypeScript
                // list all installation targets
             for (const target of await bot.notification.   installations()) {
             // "Channel" means this bot is installed to a Team (default to notify General channel)
@@ -129,11 +129,11 @@ Following are the customizations you can make to extend the template to fit your
                }
              }
            }
-      ```
+```
 
 # [.NET](#tab/dotnet1)
 
-      ```.NET
+```.NET
         // list all installation targets
         foreach (var target in await _conversation.Notification.GetInstallationsAsync()) {
         // "Channel" means this bot is installed to a Team (default to notify General channel)
@@ -155,7 +155,7 @@ Following are the customizations you can make to extend the template to fit your
         }
       }
     }
-      ```
+```
 
 ---
 
@@ -163,7 +163,7 @@ Following are the customizations you can make to extend the template to fit your
 
 # [TypeScript](#tab/ts2)
 
-    ```TypeScript
+```TypeScript
             // list all installation targets
             for (const target of await bot.notification.installations()) {
             // "Group" means this bot is installed to a Group Chat
@@ -180,11 +180,11 @@ Following are the customizations you can make to extend the template to fit your
           }
         }
 
-    ```
+```
 
 # [.NET](#tab/dotnet2)
 
-    ```.NET
+```.NET
            // list all installation targets
            foreach (var target in await _conversation.Notification.GetInstallationsAsync())     {
               // "Group" means this bot is installed to a Group Chat
@@ -200,7 +200,7 @@ Following are the customizations you can make to extend the template to fit your
                  }
              }
           }
-    ```
+  ```
 
 ---
 
@@ -221,7 +221,7 @@ Following are the customizations you can make to extend the template to fit your
 
 # [.NET](#tab/dotnet3)
 
-  ```.NET
+```.NET
         // list all installation targets
         foreach (var target in await _conversation.Notification.GetInstallationsAsync()) {
         // "Person" means this bot is installed as Personal   app
