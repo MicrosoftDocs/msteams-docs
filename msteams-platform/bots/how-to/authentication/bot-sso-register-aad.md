@@ -324,7 +324,42 @@ You can configure authentication for multiple platforms as long as the URL is un
 
 #### To configure authentication for a platform
 
+1. Open the app you registered in the [Azure portal](https://ms.portal.azure.com/).
 
+1. Select **Manage** > **Authentication** from the left pane.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/azure-portal-platform.png" alt-text="Authenticate for platforms" border="true":::
+
+    The **Platform configurations** page appears.
+
+1. Select **+ Add a platform**.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/add-platform.png" alt-text="Add a platforms" border="true":::
+
+    The **Configure platforms** page appears.
+
+1. Select the platform that you want to configure for your app. You can choose the platform type from web or SPA.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/configure-platform.png" alt-text="Select web platform" border="true":::
+
+    <!--You can configure multiple platforms for a particular platform type. Ensure that the redirect URI is unique for every platform you configure.-->
+
+    The **Configure Web** page appears.
+
+    > [!NOTE]
+    > The configurations will be different based on the platform you select.
+
+1. Enter the configuration details for the platform.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/config-web-platform.png" alt-text="Configure web platform" border="true":::
+
+    1. Enter the redirect URI. The URI should be unique.
+    2. Enter the front-channel log-out URL.
+    3. Select the tokens you want Azure AD to send for your app.
+
+1. Select **Configure**.
+
+    The platform is configured and displayed in the **Platform configurations** page.
 
 The Azure AD app configuration is complete, and now you must enable SSO support for your bot resource by configuring OAuth connection.
 
