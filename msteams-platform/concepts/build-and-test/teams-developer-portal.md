@@ -66,7 +66,7 @@ In the **Changelog**, you can see all the latest releases of new features, recen
 
 :::image type="content" source="../../assets/images/tdp/changelog.png" alt-text="Screenshot shows the Changelog in developer portal.":::
 
-The Changelog gives you the updates based on the following categories:
+Changelog for Developer Portal gives you the updates based on the following categories:
 
 * Added
 * Changed
