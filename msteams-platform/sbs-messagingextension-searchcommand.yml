@@ -399,8 +399,7 @@ items:
     ```bash
     dotnet run
     ```
-   
-    :::image type="content" source="../../assets/images/Teams-Messaging-Extensions-Search/dotnetruncmd.PNG" alt-text="Screenshot displaying the Command Prompt - dotnet run":::
+    :::image type="content" source="~/assets/images/Teams-Messaging-Extensions-Search/dotnetruncmd.PNG" alt-text="Screenshot displaying the Command Prompt - dotnet run":::
 
 - title: Add Search Message Extension app
   durationInMinutes: 1
