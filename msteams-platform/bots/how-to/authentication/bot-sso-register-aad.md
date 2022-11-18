@@ -28,11 +28,14 @@ You can configure your bot resource and app in Azure AD for your bot or message 
 
   - For bot resource: Messaging endpoint and OAuth connection.
 
-  - For Azure AD app: App ID URI, scope and permissions, trusted client IDs, access token version, and client secret.
+    > [!NOTE]
+    > When you create your bot resource in Azure AD, you can select the option for creating a new app ID, or you can use an existing app ID if you've already registered your app in Azure AD.
+
+  - For Azure AD app: App ID URI, scope and permissions, trusted client IDs, access token version, client secret, and redirect URL.
 
 - **Configure SSO using Azure AD app and then configuring bot resource**: You can start by configuring your Azure AD app, and then use this app ID in the bot resource when you enable SSO for it. You'll configure:
 
-  - For Azure AD app: App ID URI, access token, trusted client IDs, access token version, and client secret.
+  - For Azure AD app: App ID URI, access token, trusted client IDs, access token version, client secret, and redirect URL.
 
   - For bot resource: Messaging endpoint and OAuth connection.
 
