@@ -46,6 +46,7 @@ By the end of this tutorial, you'll learn to configure:
   - Application ID URI
   - Scope, permissions, and authorized client IDs
   - Client secret
+  - Redirect URL
 - Messaging endpoint and OAuth connection
 
 Select one of the following two ways to configure SSO for your bot resource:
@@ -421,6 +422,7 @@ Congratulations! You've completed the following app configurations in Azure AD r
   - Application ID URI
   - Scope, permissions, and authorized client IDs
   - Client secret
+  - Redirect URL
 - Messaging endpoint and OAuth connection
 
 # [Use Azure AD app and then configure bot resource](#tab/windows)
@@ -752,6 +754,7 @@ Congratulations! You've completed the following app configurations in Azure AD r
   - Application ID URI
   - Scope, permissions, and authorized client IDs
   - Client secret
+  - Redirect URL
 - Messaging endpoint and OAuth connection
 
 ---
