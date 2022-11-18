@@ -345,7 +345,7 @@ bot.adapter.onTurnError = ...
 
 ## Create storage
 
-You can select to create your own storage. This storage can be used to implement notification connections. You can use the following code sample for creating your own storage:
+Storage can be used to implement notification connections. You can create your own storage. Following is a code sample for creating your own storage:
 
 # [TypeScript](#tab/ts4)
 
@@ -408,11 +408,11 @@ If storage is not provided, you can use a default local file storage, which stor
 For sample implementation to use Azure blob storage, see [add notification storage implementation sample](https://github.com/OfficeDev/TeamsFx-Samples/blob/ga/adaptive-card-notification/bot/src/storage/blobsStorage.ts).
 
 > [!NOTE]
-> It's recommended that you use your own shared storage for production environment.
+> Using your own shared storage for production environment is recommended.
 
 ## Add authentication for notification API
 
-If you choose HTTP trigger, the scaffolded notification API doesn't have authentication or authorization enabled. Ensure you add authentication or authorization for this API before using it for production. You can do so in the following ways:
+If you select HTTP trigger, the scaffolded notification API doesn't have authentication or authorization enabled. Ensure that you add an authentication or authorization for this API before using it for production. You can perform this in the following ways:
 
 * Use an API key. If you select Azure functions to host your notification bot, it provides [function access keys](/azure/azure-functions/security-concepts?tabs=v4#function-access-keys) that you can use.
 
