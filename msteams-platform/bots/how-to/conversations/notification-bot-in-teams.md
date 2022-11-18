@@ -30,7 +30,7 @@ Bot Framework SDK provides the functionality to [proactively message in Teams](s
 
 When you send notifications, TeamsFx SDK creates new conversation from the selected conversation reference and sends messages. For advanced usage, you can directly access the conversation reference to execute your own bot logic:
 
-# [TypeScript](#tab/typescript)
+# [TypeScript](#tab/ts)
 
 ```TypeScript
    // list all installation targets
@@ -43,7 +43,7 @@ for (const target of await bot.notification.installations()) {
 }
 ```
 
-# [.Net](#tab/dotnet)
+# [.NET](#tab/dotnet)
 
 ```.NET
    // list all installation targets
@@ -106,7 +106,9 @@ Following are the customizations you can make to extend the template to fit your
 
    * Send notifications to a channel:
 
-     ```TypeScript
+# [TypeScript](tab/ts)
+
+      ```TypeScript
           // list all installation targets
        for (const target of await bot.notification.   installations()) {
        // "Channel" means this bot is installed to a Team (default to notify General channel)
@@ -128,6 +130,8 @@ Following are the customizations you can make to extend the template to fit your
         }
       }
       ```
+
+# [.NET](#tab/dotnet)
 
       ```.NET
          // list all installation targets
@@ -152,8 +156,11 @@ Following are the customizations you can make to extend the template to fit your
         }
      }
         ```
+---
 
-   * Send notifications to a group chat:
+* Send notifications to a group chat:
+
+# [TypeScript](#tab/ts)
 
      ```TypeScript
        // list all installation targets
@@ -168,10 +175,12 @@ Following are the customizations you can make to extend the template to fit your
         for (const member of members) {
             await member.sendAdaptiveCard(...);
            
+            }
           }
         }
-      }
      ```
+
+# [.NET](#tab/dotnet)
 
      ```.NET
        // list all installation targets
@@ -190,8 +199,11 @@ Following are the customizations you can make to extend the template to fit your
          }
       }
       ```
+---
 
-   * Send notifications to a personal chat:
+* Send notifications to a personal chat:
+
+# [TypeScript](#tab/ts)
 
      ```TypeScript
        // list all installation targets
@@ -203,6 +215,8 @@ Following are the customizations you can make to extend the template to fit your
            }
        }
      ```
+
+# [.NET](#tab/dotnet)
 
      ```.NET
         // list all installation targets
@@ -216,7 +230,9 @@ Following are the customizations you can make to extend the template to fit your
      }
      ```
 
-   * Send notifications to a specific channel:
+---
+
+* Send notifications to a specific channel:
 
       ```TypeScript
          // find the first channel when the predicate is true.
@@ -229,7 +245,7 @@ Following are the customizations you can make to extend the template to fit your
       > [!NOTE]
       > To prevent an undefined output, ensure that you install the bot app in the 'General' channel of a Team.
 
-   * Send notifications to a specific person:
+* Send notifications to a specific person:
 
      ```TypeScript
 
