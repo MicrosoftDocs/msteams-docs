@@ -93,7 +93,7 @@ You can configure authentication for multiple platforms as long as the URL is un
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/configure-platform.png" alt-text="Select web platform" border="true":::
 
-    <!--You can configure multiple platforms for a particular platform type. Ensure that the redirect URI is unique for every platform you configure.-->
+    <!--You can configure multiple platforms for a particular platform type. Ensure that the redirect URI is unique for every platform you configure.--|
 
     The **Configure Web** page appears.
 
