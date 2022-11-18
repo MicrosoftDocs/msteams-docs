@@ -20,7 +20,7 @@ An Incoming Webhook lets external applications to share content in Microsoft Tea
 
 See the following video to learn how to create an Incoming Webhooks:
 <br>
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4ODcY]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4ODcY>]
 
 ## Key features of an Incoming Webhook
 
@@ -99,6 +99,7 @@ To remove an Incoming Webhook from a Teams channel, follow these steps:
 
 ## See also
 
+* [Webhooks and connectors](../what-are-webhooks-and-connectors.md)
 * [Create an Outgoing Webhook](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)
 * [Create an Office 365 Connector](~/webhooks-and-connectors/how-to/connectors-creating.md)
 * [Create and send messages](~/webhooks-and-connectors/how-to/connectors-using.md)
