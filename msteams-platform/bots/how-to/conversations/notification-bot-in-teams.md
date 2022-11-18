@@ -108,7 +108,7 @@ Following are the customizations you can make to extend the template to fit your
 
 # [TypeScript](tab/ts1)
 
-     ```TypeScript
+```TypeScript
                // list all installation targets
             for (const target of await bot.notification.   installations()) {
             // "Channel" means this bot is installed to a Team (default to notify General channel)
@@ -129,33 +129,34 @@ Following are the customizations you can make to extend the template to fit your
                }
              }
            }
-     ```
+```
 
 # [.NET](#tab/dotnet1)
 
-     ```.NET
-              // list all installation targets
-              foreach (var target in await _conversation.Notification.GetInstallationsAsync()) {
-              // "Channel" means this bot is installed to a Team (default to notify General channel)
-              if (target.Type == NotificationTargetType.Channel)
-            {
-             // Directly notify the Team (to the default General channel)
+```.NET
+        // list all installation targets
+        foreach (var target in await _conversation.Notification.GetInstallationsAsync()) {
+        // "Channel" means this bot is installed to a Team (default to notify General channel)
+        if (target.Type == NotificationTargetType.Channel)
+        {
+          // Directly notify the Team (to the default General channel)
              await target.SendAdaptiveCard(...);
 
-             // List all members in the Team then notify each member
-             var members = await target.GetMembersAsync();
-             foreach (var member in members) {
-             await member.SendAdaptiveCard(...);
-             }
+            // List all members in the Team then notify each member
+            var members = await target.GetMembersAsync();
+            foreach (var member in members) {
+            await member.SendAdaptiveCard(...);
+        }
 
-             // List all channels in the Team then notify each channel
-             var channels = await target.GetChannelsAsync();
-             foreach (var channel in channels) {
-                await channel.SendAdaptiveCard(...);
-              }
-            }
-         }
-    ```
+        // List all channels in the Team then notify each channel
+        var channels = await target.GetChannelsAsync();
+        foreach (var channel in channels) {
+        await channel.SendAdaptiveCard(...);
+        }
+      }
+    }
+```
+
 ---
 
 * Send notifications to a group chat:
