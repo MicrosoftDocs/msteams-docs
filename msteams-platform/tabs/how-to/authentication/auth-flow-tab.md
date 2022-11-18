@@ -55,7 +55,7 @@ Sample code showing the tab authentication process:
 
 | **Sample name** | **Description** | **C#** | **Node.js** |
 |-----------------|-----------------|-------------|------------|
-| Teams tab authentication | Authentication process for tabs using Azure AD. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-sample/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-sample/nodejs) |
+| App complete authentication | The sample demos authentication in a bot, tab, and messaging extension with Single sign-on (SSO) and in Facebook using username and password. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-auth/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-auth/nodejs) |
 
 ## See also
 
