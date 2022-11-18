@@ -336,7 +336,7 @@ Here's an example of the response:
 }
 ```
 
-Once the user completes the installation, your bot will receive another invoke message with `name = composeExtension/submitAction`, and `value.data.msteams.justInTimeInstall = true`.
+Once the user completes the installation, your bot will receive another invoke message with `name = composeExtension/submitAction` and `value.data.msteams.justInTimeInstall = true`.
 
 Here's an example of the invoke:
 

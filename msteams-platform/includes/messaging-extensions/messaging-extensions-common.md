@@ -8,7 +8,7 @@ A message extension is a cloud-hosted service that listens to user requests and 
 
 If you haven’t done so already, you must first register a bot with the Microsoft Bot Framework. The Microsoft app ID and callback endpoints for your bot, as defined there, will be used in your message extension to receive and respond to user requests. Remember to enable the Microsoft Teams channel for your bot.
 
-Record your bot app ID and app password, you'll need to provide the app ID in your app manifest.
+Take note of your bot app ID and app password, you'll need to provide the app ID in your app manifest.
 
 ### Update your app manifest
 
