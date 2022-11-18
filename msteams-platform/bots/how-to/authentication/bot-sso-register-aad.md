@@ -433,6 +433,7 @@ To create and configure your app for enabling SSO in Azure AD:
   - [Configure scope for access token](#configure-scope-for-access-token)
   - [Configure the access token version](#configure-the-access-token-version)
   - [Create client secret for your app](#create-client-secret-for-your-app)
+  - [Configure redirect URL for your app](#configure-redirect-url-for-your-app)
 - [**Configure bot resource in Azure AD**](#configure-bot-resource-in-azure-ad)
   - [Configure messaging endpoint for your bot resource](#configure-messaging-endpoint-for-your-bot-resource)
   - [Configure OAuth connection for your bot resource](#configure-oauth-connection-for-your-bot-resource)
@@ -658,7 +659,7 @@ A client secret is a string that the application uses to prove its identity when
    > [!IMPORTANT]
    > Ensure that you copy the value of client secret right after you create it. The value is visible only at the time when the client secret is created, and can't be viewed after that.
 
-### Configure redirect URL
+### Configure redirect URL for your app
 
 Configuration for authentication depends on the platform or device where you want to target your app. You may need to configure redirect URIs, authentication settings, or platform-specific details.
 
@@ -669,7 +670,7 @@ Configuration for authentication depends on the platform or device where you wan
 
 You can configure authentication for multiple platforms as long as the URL is unique.
 
-#### To configure redirect URL
+#### To configure redirect URL for your app
 
 1. Open the app you registered in the [Azure portal](https://ms.portal.azure.com/).
 
