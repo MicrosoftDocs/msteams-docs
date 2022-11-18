@@ -51,7 +51,7 @@ items:
     1. Select **Code**.
     1. From the dropdown menu, select **Open with GitHub Desktop**.
 
-       :::image type="content" source="./assets/images/sbs-messagingextension-action/botbuilder-sample.png" alt-text="Screenshot of GitHub web page. The menu entry titled Open with GitHub Desktop under Code dropdown menu is highlighted in red.":::
+       :::image type="content" source="./assets/images/sbs-messagingextension-action/botbuilder-sample.png" alt-text="Screenshot of GitHub web page. The Open with GitHub Desktop option under Code dropdown menu is highlighted in red.":::
 
     1. Select **Clone**. 
 
@@ -75,7 +75,7 @@ items:
     1. Select **Azure Bot**.
     1. Select **Create**.
 
-         :::image type="content" source="~/assets/images/azure-bot.png" alt-text="Screenshot of Azure bot create page with the Create option highlighted in red.":::
+         :::image type="content" source="~/assets/images/azure-bot.png" alt-text="Screenshot of Azure bot creation page with the Create option highlighted in red.":::
 
     1. Enter required bot handle name in **Bot handle**.
     1. Select your **Subscription** from the dropdown list.
@@ -121,11 +121,11 @@ items:
 
     1. Next to **Microsoft App ID**, select **Manage**.
 
-       :::image type="content" source="~/assets/images/manage-bot-label.png" alt-text="Screenshot of Microsoft App ID option under Configuration page with the Manage option highlighted.":::
+       :::image type="content" source="~/assets/images/manage-bot-label.png" alt-text="Screenshot of Microsoft App ID option under Configuration page with the Manage option highlighted in red.":::
 
     1. In the **Client secrets** section, select **New client secret**. 
 
-        :::image type="content" source="~/assets/images/sbs-messagingextension-action/adding-client-secret.png" alt-text="Screenshot of Add a client secret window with the Add option  highlighted in red.":::
+        :::image type="content" source="~/assets/images/sbs-messagingextension-action/adding-client-secret.png" alt-text="Screenshot of Add a client secret window with the Add option highlighted in red.":::
 
        The **Add a client secret** window appears.  
 
@@ -133,7 +133,7 @@ items:
     
     1. Select **Add**.
 
-        :::image type="content" source="~/assets/images/sbs-messagingextension-action/add-a-clientsecret.png" alt-text="Screenshot of Client secret showing the selection of Add while adding client secret.":::
+        :::image type="content" source="~/assets/images/sbs-messagingextension-action/add-a-clientsecret.png" alt-text="Screenshot of Add a client secret window with the Add option highlighted in red.":::
 
     1. In the **Value** column, select **Copy to clipboard**.
 
@@ -152,7 +152,7 @@ items:
 
     1. Select **Channels** in the left pane and select **Microsoft Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.
 
-       :::image type="content" source="./assets/images/adaptive-cards/channel-teams.png" alt-text="Screenshot of Azure bot Home page. The Channels option in the left pane and Microsoft Teams under Channel are highlighted in red.":::
+       :::image type="content" source="./assets/images/adaptive-cards/channel-teams.png" alt-text="Screenshot of Azure bot Home page. The Channels option in the left panel and Microsoft Teams under Channel are highlighted in red.":::
 
     1. Select the checkbox to accept the **Terms of Service**.
     
@@ -179,7 +179,7 @@ items:
 
     1. From ngrok, copy the HTTPS URL (https to io).
 
-       :::image type="content" source="../msteams-platform/assets/images/ngrok-url.png" alt-text="Screenshot of ngrok showing the HTTPS URL.":::
+       :::image type="content" source="../msteams-platform/assets/images/ngrok-url.png" alt-text="Screenshot of ngork with the HTTPS URL highlighted in red.":::
 
         > [!NOTE]
         > The HTTPS URL in your ngrok is your fully qualified domain name.
@@ -217,7 +217,7 @@ items:
 
     1. Set the **Application ID URI** in the form of `api://{AppID}`.
 
-       :::image type="content" source="./assets/images/sbs-messagingextension-action/set-link.png" alt-text="Screenshot of Expose an API with the Application ID highlighted in red.":::
+       :::image type="content" source="./assets/images/sbs-messagingextension-action/set-link.png" alt-text="Screenshot of Set the API ID URI under Expose an API page. The Application ID URI is highlighted in red.":::
 
     1. Insert the `WebAppDomain` value between `api://` and `/{AppID}`.</br>
         `api://2bb1****.ngrok.io/{AppID}`</br>
@@ -343,7 +343,7 @@ items:
 
     1. Go to `manifest.json` in cloned repository.
 
-        :::image type="content" source="./assets/images/sbs-messagingextension-action/manifestlocation.png" alt-text="Screenshot of Teams App Manifest folder with the file path and manifest file highlighted in red..":::
+        :::image type="content" source="./assets/images/sbs-messagingextension-action/manifestlocation.png" alt-text="Screenshot of Teams App Manifest folder with the file path and manifest file highlighted in red.":::
 
     
     1. Open `manifest.json` in latest version of Visual Studio and make the following changes:
