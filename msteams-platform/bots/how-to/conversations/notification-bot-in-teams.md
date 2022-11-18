@@ -30,7 +30,7 @@ Bot Framework SDK provides the functionality to [proactively message in Teams](s
 
 When you send notifications, TeamsFx SDK creates new conversation from the selected conversation reference and sends messages. For advanced usage, you can directly access the conversation reference to execute your own bot logic:
 
-# [TypeScript](#tab/type script)
+# [TypeScript](#tab/typescript)
 
 ```TypeScript
    // list all installation targets
@@ -43,7 +43,7 @@ for (const target of await bot.notification.installations()) {
 }
 ```
 
-# [.Net](#tab/dot net)
+# [.Net](#tab/dotnet)
 
 ```.NET
    // list all installation targets
@@ -100,7 +100,7 @@ Following are the customizations you can make to extend the template to fit your
 
     The file `src/adaptiveCards/notification-default.json` defines the default Adaptive Card. You can use the [Adaptive Card designer](https://adaptivecards.io/designer/) to help visually design your Adaptive Card UI. `src/cardModels.ts` defines a data structure that is used to load data for the Adaptive Card. The binding between the model and the Adaptive Card is done by name matching such as `CardData.title` maps to `${title}` in the Adaptive Card. You can add, edit, or remove properties and their bindings to customize the Adaptive Card as required.
 
-    You can also add new cards if needed. How to build different types of Adaptive Cards with a list or table of dynamic contents using `ColumnSet` and `FactSet`, see this [sample](<https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/adaptive-card-notification>).
+    You can also add new cards if needed. How to build different types of Adaptive Cards with a list or table of dynamic contents using `ColumnSet` and `FactSet`, see [Adaptive Card notification sample](<https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/adaptive-card-notification>).
 
 1. **Customize where notifications are sent**
 
