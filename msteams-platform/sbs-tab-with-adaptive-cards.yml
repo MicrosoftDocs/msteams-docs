@@ -368,23 +368,25 @@ items:
 
        :::image type="content" source="../msteams-platform/assets/images/adaptive-cards/sign-in-page.png" alt-text="sign-in-page":::
 
-    1. Select **Show Task Module** on the home page.
+    1. Select **Show Task Module** on the **Home** tab.
 
        :::image type="content" source="../msteams-platform/assets/images/adaptive-cards/tab-home-page.png" alt-text="tab-home-page":::
 
-    1. Tab/fetch is the first invoke request that your bot receives when a user opens an Adaptive Card tab. When your bot receives the request, it either sends a tab continue response or a tab auth response. Select **Close**.
+    1. Select **Close**.
+  
+          Tab/fetch is the first invoke request that your bot receives when a user opens an Adaptive Card tab. When your bot receives the request, it either sends a tab continue response or a tab auth response. Select **Close**.
 
-       :::image type="content" source="../msteams-platform/assets/images/adaptive-cards/sample-task-module.png" alt-text="sample task module":::
+          :::image type="content" source="../msteams-platform/assets/images/adaptive-cards/sample-task-module.png" alt-text="sample task module":::
 
-    1. The task/submit request is triggered to your bot with the corresponding data through the `Action.Submit` function of Adaptive Card. 
+          The task/submit request is triggered to your bot with the corresponding data through the `Action.Submit` function of Adaptive Card. 
 
-       :::image type="content" source="../msteams-platform/assets/images/adaptive-cards/task-submit.png" alt-text="task submit":::
+          :::image type="content" source="../msteams-platform/assets/images/adaptive-cards/task-submit.png" alt-text="task submit":::
 
-    1. Tab keeps you signed in unless you select **Sign out**.
+    1. Select **Sign out**.
 
        :::image type="content" source="../msteams-platform/assets/images/adaptive-cards/sign-out.png" alt-text="Sign out":::
 
-    1. Refresh to **Sign In** again.
+    1. Refresh to sign in again.
 
        :::image type="content" source="../msteams-platform/assets/images/adaptive-cards/success-sign-out.png" alt-text="success sign out":::
 
