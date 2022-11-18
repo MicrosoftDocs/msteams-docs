@@ -80,3 +80,4 @@ Quickly access Teams Developer Portal, where you can configure, distribute, and 
 * [Create a new Teams app in Visual Studio](create-new-project.md)
 * [Provision cloud resources using Visual Studio](provision-cloud-resources.md)
 * [Deploy Teams app to the cloud using Visual Studio](deploy.md)
+* [Developer Portal for Teams](../concepts/build-and-test/teams-developer-portal.md)
