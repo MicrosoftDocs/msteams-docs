@@ -9,7 +9,7 @@ ms.localizationpriority: high
 
 # Notification bot in Teams
 
-A Notification bot in Microsoft Teams enables you to build applications that collaborate with events and send these messages as notifications to an individual person, chat, group or channel in Teams. You can send Notifications as plain text or [Adaptive Cards](../../../task-modules-and-cards/cards/cards-reference.md#adaptive-card).
+A Notification bot in Microsoft Teams enables you to build applications that captures the events and send these messages as notifications to an individual person, chat, group or channel in Teams. You can send Notifications as plain text or [Adaptive Cards](../../../task-modules-and-cards/cards/cards-reference.md#adaptive-card).
 
 :::image type="content" source="../../../assets/images/notification-bot/notification-new-event.png" alt-text="new notification event sample":::
 
@@ -43,7 +43,7 @@ for (const target of await bot.notification.installations()) {
 }
 ```
 
-# [.NET](#tab/dotnet)
+# [C#/.NET](#tab/dotnet)
 
 ```.NET
    // list all installation targets
@@ -67,7 +67,11 @@ foreach (var target in await _conversation.Notification.GetInstallationsAsync())
 
 Following are the customizations you can make to extend the template to fit your business requirements.
 
-1. **Customize the trigger point from event source**
+<br>
+
+<details>
+
+<summary><b>1. Customize the trigger point from event source</b></summary>
 
    1. `Restify` based notification
 
@@ -96,15 +100,26 @@ Following are the customizations you can make to extend the template to fit your
          > [!NOTE]
          > For more information on support triggers, see [Azure functions support triggers](/azure/azure-functions/functions-triggers-bindings?tabs=javascript).
 
-1. **Customize the notification content**
+<br>
+</details>
 
-    The file `src/adaptiveCards/notification-default.json` defines the default Adaptive Card. You can use the [Adaptive Card designer](https://adaptivecards.io/designer/) to help visually design your Adaptive Card UI. `src/cardModels.ts` defines a data structure that is used to load data for the Adaptive Card. The binding between the model and the Adaptive Card is done by name matching such as `CardData.title` maps to `${title}` in the Adaptive Card. You can add, edit, or remove properties and their bindings to customize the Adaptive Card as required.
+<details>
 
-    You can also add new cards if needed. How to build different types of Adaptive Cards with a list or table of dynamic contents using `ColumnSet` and `FactSet`, see [Adaptive Card notification sample](<https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/adaptive-card-notification>).
+<summary><b>2. Customize the notification content</b></summary>
 
-1. **Customize where notifications are sent**
+The file `src/adaptiveCards/notification-default.json` defines the default Adaptive Card. You can use the [Adaptive Card designer](https://adaptivecards.io/designer/) to help visually design your Adaptive Card UI. `src/cardModels.ts` defines a data structure that is used to load data for the Adaptive Card. The binding between the model and the Adaptive Card is done by name matching such as `CardData.title` maps to `${title}` in the Adaptive Card. You can add, edit, or remove properties and their bindings to customize the Adaptive Card as required.
 
-   * Notifications to a channel:
+You can also add new cards if needed. How to build different types of Adaptive Cards with a list or table of dynamic contents using `ColumnSet` and `FactSet`, see [Adaptive Card notification sample](<https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/adaptive-card-notification>).
+
+<br>
+
+</details>
+
+<details>
+
+<summary><b>3. Customize where notifications are sent</b></summary>
+
+* Notifications to a channel:
 
 # [TypeScript](#tab/ts1)
 
@@ -131,7 +146,7 @@ Following are the customizations you can make to extend the template to fit your
            }
 ```
 
-# [.NET](#tab/dotnet1)
+# [C#/.NET](#tab/dotnet1)
 
 ```.NET
         // list all installation targets
@@ -182,7 +197,7 @@ Following are the customizations you can make to extend the template to fit your
 
 ```
 
-# [.NET](#tab/dotnet2)
+# [C#/.NET](#tab/dotnet2)
 
 ```.NET
            // list all installation targets
@@ -219,7 +234,7 @@ Following are the customizations you can make to extend the template to fit your
        }
   ```
 
-# [.NET](#tab/dotnet3)
+# [C#/.NET](#tab/dotnet3)
 
 ```.NET
         // list all installation targets
@@ -262,6 +277,10 @@ Following are the customizations you can make to extend the template to fit your
    > [!NOTE]
    > To prevent an undefined output and a missing notification, you need to include the specified person in notification installation scope.
 
+<br>
+
+</details>
+
 ## Customize initialization
 
 You need to create `ConversationBot` to send notification.
@@ -287,7 +306,7 @@ const bot = new ConversationBot({
 });
 ```
 
-# [.NET](#tab/dotnet4)
+# [C#/.NET](#tab/dotnet4)
 
 ```
 /** .NET **/
