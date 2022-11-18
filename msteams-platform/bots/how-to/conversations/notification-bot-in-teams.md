@@ -396,27 +396,27 @@ builder.Services.AddSingleton(sp =>
 
 ```
 
+---
+
+If storage is not provided, you can use a default local file storage, which stores notification connections into:
+
+* `.notification.localstore.json` if running locally.
+* `${process.env.TEMP}/.notification.localstore.json`, if `process.env.RUNNING_ON_AZURE` is set to "1".
 For sample implementation to use Azure blob storage, see [add notification storage implementation sample](https://github.com/OfficeDev/TeamsFx-Samples/blob/ga/adaptive-card-notification/bot/src/storage/blobsStorage.ts).
 
 > [!NOTE]
 > It's recommended that you use your own shared storage for production environment.
-> If storage is not provided, you can use a default local file storage, which stores notification connections into:
->
-> * `.notification.localstore.json` if running locally.
-> * `${process.env.TEMP}/.notification.localstore.json`, if `process.env.RUNNING_ON_AZURE` is set to "1".
-
----
 
 ## Add authentication for notification API
 
 If you choose HTTP trigger, the scaffolded notification API doesn't have authentication or authorization enabled. Ensure you add authentication or authorization for this API before using it for production. You can do so in the following ways:
 
-* Use an API Key. If you chose Azure Functions to host your notification bot, it already provides [function access keys](/azure/azure-functions/security-concepts?tabs=v4#function-access-keys), which may be helpful to you.
+* Use an API key. If you select Azure functions to host your notification bot, it provides [function access keys](/azure/azure-functions/security-concepts?tabs=v4#function-access-keys) that you can use.
 
 * Use an access token issued by Azure Active Directory.
 
 There can be more authentication or authorization solutions for an API. You can choose as required.
 
-# Connect to existing APIs
+## Connect to existing APIs
 
-If you want to invoke external APIs in your code but don't have the required SDK, the "Teams: Connect to an API" command in Microsoft Visual Studio Code Teams Toolkit extension, or "teamsfx add api-connection" command in TeamsFx CLI can be helpful to bootstrap code to call target APIs. For more information, see [connect to existing API](../../../toolkit/add-API-connection.md#steps-to-connect-to-api) document.
+If you don't have the required SDK, and want to invoke external APIs in your code. The "Teams: Connect to an API" command in Microsoft Visual Studio Code Teams Toolkit extension, or "teamsfx add api-connection" command in TeamsFx CLI can be used to bootstrap code to call target APIs. For more information, see [connect to existing API](../../../toolkit/add-API-connection.md#steps-to-connect-to-api) document.
