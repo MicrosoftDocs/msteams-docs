@@ -108,7 +108,7 @@ Following are the customizations you can make to extend the template to fit your
 
 # [TypeScript](tab/ts)
 
-      ```TypeScript
+```TypeScript
           // list all installation targets
        for (const target of await bot.notification.   installations()) {
        // "Channel" means this bot is installed to a Team (default to notify General channel)
@@ -129,11 +129,11 @@ Following are the customizations you can make to extend the template to fit your
          }
         }
       }
-      ```
+```
 
 # [.NET](#tab/dotnet)
 
-      ```.NET
+```.NET
          // list all installation targets
          foreach (var target in await _conversation.Notification.GetInstallationsAsync()) {
           // "Channel" means this bot is installed to a Team (default to notify General channel)
@@ -155,14 +155,15 @@ Following are the customizations you can make to extend the template to fit your
           }
         }
      }
-        ```
+```
+
 ---
 
 * Send notifications to a group chat:
 
 # [TypeScript](#tab/ts)
 
-     ```TypeScript
+```TypeScript
        // list all installation targets
        for (const target of await bot.notification.installations()) {
        // "Group" means this bot is installed to a Group Chat
@@ -178,11 +179,11 @@ Following are the customizations you can make to extend the template to fit your
             }
           }
         }
-     ```
+```
 
 # [.NET](#tab/dotnet)
 
-     ```.NET
+```.NET
        // list all installation targets
        foreach (var target in await _conversation.Notification.GetInstallationsAsync()) {
           // "Group" means this bot is installed to a Group Chat
@@ -198,14 +199,15 @@ Following are the customizations you can make to extend the template to fit your
              }
          }
       }
-      ```
+```
+
 ---
 
 * Send notifications to a personal chat:
 
 # [TypeScript](#tab/ts)
 
-     ```TypeScript
+```TypeScript
        // list all installation targets
        for (const target of await bot.notification.installations()) {
            // "Person" means this bot is installed as Personal app
@@ -214,11 +216,11 @@ Following are the customizations you can make to extend the template to fit your
                await target.sendAdaptiveCard(...);
            }
        }
-     ```
+```
 
 # [.NET](#tab/dotnet)
 
-     ```.NET
+```.NET
         // list all installation targets
         foreach (var target in await _conversation.Notification.GetInstallationsAsync()) {
         // "Person" means this bot is installed as Personal   app
@@ -228,33 +230,33 @@ Following are the customizations you can make to extend the template to fit your
           await target.SendAdaptiveCard(...);
        }
      }
-     ```
+```
 
 ---
 
 * Send notifications to a specific channel:
 
-      ```TypeScript
+```TypeScript
          // find the first channel when the predicate is true.
          const channel = await bot.notification.findChannel(c => Promise.resolve(c.info.name === "MyChannelName"));
 
         // send adaptive card to the specific channel. 
         await channel?.sendAdaptiveCard(...);
-      ```
+```
 
-      > [!NOTE]
-      > To prevent an undefined output, ensure that you install the bot app in the 'General' channel of a Team.
+   > [!NOTE]
+   > To prevent an undefined output, ensure that you install the bot app in the 'General' channel of a Team.
 
 * Send notifications to a specific person:
 
-     ```TypeScript
+```TypeScript
 
         // find the first person when the predicate is true.
         const member = await bot.notification.findMember(m => Promise.resolve(m.account.name === "Bob"));
 
         // send adaptive card to the specific person. 
         await member?.sendAdaptiveCard(...);
-     ```
+```
 
-     > [!NOTE]
-     > To prevent an undefined output and a missing notification, you need to include the specified person in notification installation scope.
+   > [!NOTE]
+   > To prevent an undefined output and a missing notification, you need to include the specified person in notification installation scope.
