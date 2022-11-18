@@ -207,6 +207,9 @@ The application ID URI is configured. You can now define scope and permissions f
     7. Select the **Enabled** option for state.
     8. Select **Add scope**.
 
+        > [!NOTE]
+        > For this tutorial, you can use openid profile User.Read User.ReadBasic.All as scope. This scope is suitable for using the [Code sample](bot-sso-code.md#code-sample).
+
     A message pops up on the browser stating that the scope was added.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/scope-added-msg.png" alt-text="Scope added message displayed" border="true":::
@@ -420,9 +423,6 @@ With the app (client) ID and client secret provided, the Bot Framework Token Sto
     1. Enter the tenant ID.
     1. Enter the scope that you defined when you configured the scope and permissions.
 
-        > [!NOTE]
-        > For this tutorial, you can use openid profile User.Read User.ReadBasic.All as scope. This scope is suitable for using the [Code sample](bot-sso-code.md#code-sample).
-
 1. Select **Save**.
 1. Select **Apply**.
 
@@ -557,6 +557,9 @@ The application ID URI is configured. You can now define scope and permissions f
     6. Enter the description for user consent description.
     7. Select the **Enabled** option for state.
     8. Select **Add scope**.
+
+        > [!NOTE]
+        > For this tutorial, you can use openid profile User.Read User.ReadBasic.All as scope. This scope is suitable for using the [Code sample](bot-sso-code.md#code-sample).
 
     A message pops up on the browser stating that the scope was added.
 
