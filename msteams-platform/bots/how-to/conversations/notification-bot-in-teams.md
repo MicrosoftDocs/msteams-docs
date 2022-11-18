@@ -104,7 +104,7 @@ Following are the customizations you can make to extend the template to fit your
 
 1. **Customize where notifications are sent**
 
-    * Notifications to a channel:
+   * Notifications to a channel:
 
 # [TypeScript](#tab/ts1)
 
