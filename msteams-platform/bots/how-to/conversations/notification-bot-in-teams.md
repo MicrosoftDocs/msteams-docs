@@ -104,7 +104,7 @@ Following are the customizations you can make to extend the template to fit your
 
 1. **Customize where notifications are sent**
 
-    * Send notifications to a channel:
+    * Notifications to a channel:
 
 # [TypeScript](tab/ts1)
 
@@ -159,7 +159,7 @@ Following are the customizations you can make to extend the template to fit your
 
 ---
 
-* Send notifications to a group chat:
+* Notifications to a group chat:
 
 # [TypeScript](#tab/ts2)
 
@@ -203,7 +203,7 @@ Following are the customizations you can make to extend the template to fit your
 
 ---
 
-* Send notifications to a personal chat:
+* Notifications to a personal chat:
 
 # [TypeScript](#tab/ts3)
 
@@ -234,7 +234,7 @@ Following are the customizations you can make to extend the template to fit your
 
 ---
 
-* Send notifications to a specific channel:
+* Notifications to a specific channel:
 
   ```TypeScript
          // find the first channel when the predicate is true.
@@ -247,7 +247,7 @@ Following are the customizations you can make to extend the template to fit your
    > [!NOTE]
    > To prevent an undefined output, ensure that you install the bot app in the 'General' channel of a Team.
 
-* Send notifications to a specific person:
+* Notifications to a specific person:
 
   ```TypeScript
 
