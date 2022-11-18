@@ -104,9 +104,9 @@ Following are the customizations you can make to extend the template to fit your
 
 1. **Customize where notifications are sent**
 
-   * Send notifications to a channel:
+* Send notifications to a channel:
 
-# [TypeScript](tab/ts)
+# [TypeScript](tab/ts1)
 
 ```TypeScript
           // list all installation targets
@@ -131,7 +131,7 @@ Following are the customizations you can make to extend the template to fit your
       }
 ```
 
-# [.NET](#tab/dotnet)
+# [.NET](#tab/dotnet1)
 
 ```.NET
          // list all installation targets
@@ -161,7 +161,7 @@ Following are the customizations you can make to extend the template to fit your
 
 * Send notifications to a group chat:
 
-# [TypeScript](#tab/ts)
+# [TypeScript](#tab/ts2)
 
 ```TypeScript
        // list all installation targets
@@ -181,7 +181,7 @@ Following are the customizations you can make to extend the template to fit your
         }
 ```
 
-# [.NET](#tab/dotnet)
+# [.NET](#tab/dotnet2)
 
 ```.NET
        // list all installation targets
@@ -205,7 +205,7 @@ Following are the customizations you can make to extend the template to fit your
 
 * Send notifications to a personal chat:
 
-# [TypeScript](#tab/ts)
+# [TypeScript](#tab/ts3)
 
 ```TypeScript
        // list all installation targets
@@ -218,7 +218,7 @@ Following are the customizations you can make to extend the template to fit your
        }
 ```
 
-# [.NET](#tab/dotnet)
+# [.NET](#tab/dotnet3)
 
 ```.NET
         // list all installation targets
