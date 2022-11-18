@@ -402,6 +402,7 @@ If storage is not provided, you can use a default local file storage, which stor
 
 * `.notification.localstore.json` if running locally.
 * `${process.env.TEMP}/.notification.localstore.json`, if `process.env.RUNNING_ON_AZURE` is set to "1".
+
 For sample implementation to use Azure blob storage, see [add notification storage implementation sample](https://github.com/OfficeDev/TeamsFx-Samples/blob/ga/adaptive-card-notification/bot/src/storage/blobsStorage.ts).
 
 > [!NOTE]
@@ -415,7 +416,7 @@ If you choose HTTP trigger, the scaffolded notification API doesn't have authent
 
 * Use an access token issued by Azure Active Directory.
 
-There can be more authentication or authorization solutions for an API. You can choose as required.
+There can be more authentication or authorization solutions for an API. You can select as required.
 
 ## Connect to existing APIs
 
