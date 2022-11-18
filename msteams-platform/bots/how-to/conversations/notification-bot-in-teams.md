@@ -9,12 +9,12 @@ ms.localizationpriority: high
 
 # Notification bot in Teams
 
-A Notification bot in Microsoft Teams enables you to build applications that captures the events and send these messages as notifications to an individual person, chat, group or channel in Teams. You can send Notifications as plain text or [Adaptive Cards](../../../task-modules-and-cards/cards/cards-reference.md#adaptive-card).
+Notification bot in Microsoft Teams enables you to build applications that captures the events and send them as notifications to an individual, chat, group, or channel in Teams. You can send notifications as plain text or [Adaptive Cards](../../../task-modules-and-cards/cards/cards-reference.md#adaptive-card).
 
 :::image type="content" source="../../../assets/images/notification-bot/notification-new-event.png" alt-text="new notification event sample":::
 
 **Advantages**
-[Placeholder for advantages of Notification bot]
+[Placeholder for advantages]
 
 ## Notification based on events
 
@@ -65,7 +65,7 @@ foreach (var target in await _conversation.Notification.GetInstallationsAsync())
 
 ## Customize notification
 
-Following are the customizations you can make to extend the template to fit your business requirements.
+Following are the customizations you can make to extend the notification template to fit your business requirements.
 
 <br>
 
@@ -75,9 +75,7 @@ Following are the customizations you can make to extend the template to fit your
 
    1. `Restify` based notification
 
-      When a HTTP request is sent to `src/index.js` entry point, the default implementation sends an Adaptive Card to Teams. You can customize this behavior by modifying `src/index.js`. A typical implementation might call an API to retrieve events, data, or both, which can send an Adaptive Card as required.
-
-      You can also add additional triggers by:
+      When a HTTP request is sent to `src/index.js` entry point, the default implementation sends an Adaptive Card to Teams. You can customize this by modifying `src/index.js`. A typical implementation might call an API to retrieve events, data, or both, which can send an Adaptive Card as required. You can also add additional triggers by:
 
        * Creating a new routing: `server.post("/api/new-trigger", ...)`.
        * Adding Timer trigger(s) from widely-used npm packages such as [cron](https://www.npmjs.com/package/cron), [node-schedule](https://www.npmjs.com/package/node-schedule), or from other packages.
@@ -89,13 +87,12 @@ Following are the customizations you can make to extend the template to fit your
 
        * When you select timer trigger, the default implemented Azure function timer trigger (`src/timerTrigger.ts`) sends an Adaptive Card every 30 seconds. You can edit the file `*Trigger/function.json` to customize the `schedule` property. For more information, see [Azure function documentation](/azure/azure-functions/functions-bindings-timer?tabs=in-process&pivots=programming-language-javascript).
 
-       * When you select `http` trigger, the trigger is hit by a HTTP request, and the default implementation sends an Adaptive Card to Teams.  You can change this behavior by customizing `src/*Trigger.ts`. This implementation can call an API to retrieve events, data, or both, which can send an Adaptive Card as required.
-
+       * When you select `http` trigger, it is hit by a HTTP request, and the default implementation sends an Adaptive Card to Teams.  You can change this by customizing `src/*Trigger.ts`. This implementation can call an API to retrieve events, data, or both, which can send an Adaptive Card as required.
        You can also add Azure function triggers, such as:
 
-       * You can use an `Event Hub` trigger to send notifications when an event is pushed to Azure Event Hub.
+       * `Event Hub` trigger to send notifications when an event is pushed to Azure Event Hub.
 
-       * You can use a `Cosmos DB` trigger to send notifications when a Cosmos document is created or updated.
+       * `Cosmos DB` trigger to send notifications when a Cosmos document is created or updated.
 
          > [!NOTE]
          > For more information on support triggers, see [Azure functions support triggers](/azure/azure-functions/functions-triggers-bindings?tabs=javascript).
@@ -275,7 +272,7 @@ You can also add new cards if needed. How to build different types of Adaptive C
    ```
 
    > [!NOTE]
-   > To prevent an undefined output and a missing notification, you need to include the specified person in notification installation scope.
+   > To prevent an undefined output and a missing notification, you need to include the specific person in notification installation scope.
 
 <br>
 
