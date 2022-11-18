@@ -426,6 +426,12 @@ With the app (client) ID and client secret provided, the Bot Framework Token Sto
 1. Select **Save**.
 1. Select **Apply**.
 
+After you've configured the OAuth connection, you can select **Test connection** to check if the OAuth connection is successful.
+
+:::image type="content" source="../../../assets/images/authentication/teams-sso-bots/test-oauth.png" alt-text="Test OAuth connection for your bot resource":::
+
+If the connection isn't successful, Azure AD, displays an error. You can verify all configurations and test again.
+
 Congratulations! You've completed the following app configurations in Azure AD required to enable SSO for your bot app:
 
 - Application ID
