@@ -66,16 +66,16 @@ From here, you can skip ahead to [sideload your app in Teams](#sideload-your-app
 
 Starting with version 1.16 of [SharePoint Framework](/sharepoint/dev/spfx/integrate-with-teams-introduction) (SPFx), Teams personal tabs built and hosted with SPFx are also supported in Outlook and Office. To update a SPFx Teams personal tab app, follow these steps:
 
-1. Ensure you have the latest version of SPFx
+1. Ensure you have the latest version of SPFx.
 
     ```
     npm install @microsoft/generator-sharepoint@latest --global
     ```
 
-1. [Update the app manifest](#update-the-app-manifest)
-1. [Update SDK references](#update-sdk-references)
+1. [Update the app manifest](#update-the-app-manifest).
+1. [Update the SDK references](#update-sdk-references).
 
-After updating the SDK references, [Sideload your app in Teams](#sideload-your-app-in-teams) to preview your SPFx personal tab app running in Outlook and Office. See [Extend Outlook and Office with the SharePoint Framework](/sharepoint/dev/spfx/office/overview) for more info.
+After you update the SDK references, [sideload your app in Teams](#sideload-your-app-in-teams) to preview your SPFx personal tab app running in Outlook and Office. For more information, see [Extend Outlook and Office with the SharePoint Framework](/sharepoint/dev/spfx/office/overview).
 
 ## Update the app manifest
 
