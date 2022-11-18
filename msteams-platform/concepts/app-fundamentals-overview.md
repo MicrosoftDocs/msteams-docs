@@ -58,7 +58,7 @@ Understanding the user and their concern are the first indicators of how a Teams
 
 ### Post-build
 
-* Integrate your app with Teams and other apps, such as Microsoft 365, Microsoft Graph, and more.
+* Integrate your app with Teams and other apps, such as  Microsoft 365, Microsoft Graph, and more.
 * Use Developer Portal to configure, manage, and deploy your app.
 
 ### Government Community Cloud
@@ -69,7 +69,7 @@ The following table includes Teams features and availability for GCC, GCC-High, 
 
 | Features   | GCC | GCC-High | DOD |
 |-------------|---------|---|---|
-| Teams owned apps as in internally developed apps | ✔️ App is enabled if it has GCC | ✔️ App is enabled if it has GCC-High | ✔️ App is enabled if it has DOD |
+| Teams owned apps as in internally developed apps | ✔️ App is enabled if it has GCC. | ✔️ App is enabled if it has GCC-High. | ✔️ App is enabled if it has DOD. |
 | Microsoft apps | ✔️ Microsoft apps compliant with GCC | ✔️ Microsoft apps compliant with GCC-High | ✔️ Microsoft apps compliant with DOD |
 | 3P or third-party apps | ✔️ Third-party apps are available. Disabled by default and tenant admin use their own discretion to enable it. | ❌ | ❌ |
 | Bots | ✔️ | ✔️ | ❌ |
