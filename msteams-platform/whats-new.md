@@ -294,7 +294,6 @@ Developer preview is a public program that provides early access to unreleased T
 **2022 November**
 
 * ***November 17, 2022***: [Manifest schema v1.5](resources/schema/manifest-schema.md).
-
 * ***November 11, 2022***: [Enable bots to receive all chat messages without being @mentioned](bots/how-to/conversations/channel-messages-with-rsc.md).
 :::column-end:::
 :::row-end:::
