@@ -257,9 +257,9 @@
   - name: Create a content page
     href: tabs/how-to/create-tab-pages/content-page.md
     displayName: Loading indicator, personal-scoped custom tab, channel or group custom tab
-  - name: Create configuration page
+  - name: Create a configuration page
     href: tabs/how-to/create-tab-pages/configuration-page.md
-  - name: Create removal page
+  - name: Create a removal page
     href: tabs/how-to/create-tab-pages/removal-page.md
     displayName: Reconfigure tab, register remove handler
   - name: Tabs on mobile
@@ -301,7 +301,7 @@
       href: bots/how-to/conversations/conversation-messages.md
       displayName: Picture messages, attribution for bot message, status code responses, app localization using bot and tab.
       items:
-      - name: Receive all channel messages with RSC
+      - name: Receive all conversation messages with RSC
         href: bots/how-to/conversations/channel-messages-with-rsc.md
     - name: Create a commands menu
       href: bots/how-to/create-a-bot-commands-menu.md
@@ -320,6 +320,8 @@
       href: bots/how-to/update-and-delete-bot-messages.md      
     - name: Request headers of the bot
       href: bots/how-to/conversations/request-headers-of-the-bot.md
+    - name: Workflow bot in Teams
+      href: bots/how-to/conversations/workflow-bot-in-teams.md
   - name: Get Teams specific context for your bot
     href: bots/how-to/get-teams-context.md
     displayName: Fetch roster or user profile
@@ -799,8 +801,6 @@
       href: concepts/build-and-test/apps-localization.md
     - name: Localize JSON schema reference
       href: resources/schema/localization-schema.md
-  - name: Use silent authentication in Azure AD
-    href: tabs/how-to/authentication/auth-silent-aad.md
   - name: SameSite cookie attribute 
     href: resources/samesite-cookie-update.md
     displayName: Cookies
