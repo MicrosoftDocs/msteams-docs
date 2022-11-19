@@ -44,8 +44,6 @@ items:
     
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
-    
-    
 
 - title: Set up local environment
   durationInMinutes: 1
@@ -205,7 +203,6 @@ items:
 
         You have successfully set up a bot in Azure Bot service.
 
-
 - title: Update the Azure AD app registration
   durationInMinutes: 1
   content: |
@@ -355,7 +352,6 @@ items:
 
           :::image type="content" source="~/assets/images/meetings-side-panel/appsettings_1.png" alt-text="Screenshot of appsettings JSON file with appsettings highlighted.":::
           
-
     1. Go to **manifest.json** in the cloned repository.
 
          :::image type="content" source="~/assets/images/meetings-side-panel/manifestlocation_1.png" alt-text="Screenshot of Teams App Manifest folder with the file path and manifest file highlighted in red.":::
@@ -398,8 +394,7 @@ items:
           A webpage appears with a message **Your bot is ready!**.
 
            :::image type="content" source="~/assets/images/meetings-side-panel/appisready_1.png" alt-text="Screenshot of the webpage that displays Your bot is ready!."::: 
-
-        
+ 
     # [Command line](#tab/cli)
 
     Go to **samples > meetings-sidepanel > csharp > Side Panel** in a Command Prompt window and enter the following command:
@@ -491,7 +486,6 @@ items:
     Did you come up with output like this?
 
        :::image type="content" source="~/assets/images/meetings-side-panel/sidepanelondesktopmobile_1.png" alt-text="Screenshot of the meeting Side Panel output after you have successfully completed the step-by-step guide."::: 
-
 
 - content: |
     You've completed the tutorial to get started with a **Side Panel** app!
