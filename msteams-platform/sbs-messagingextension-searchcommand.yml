@@ -41,7 +41,6 @@ items:
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
 
-
 - title: Set up local environment
   durationInMinutes: 1
   content: |
@@ -198,10 +197,10 @@ items:
 
         You have successfully set up a bot in Azure Bot Service.
 
-
 - title: Update the Azure AD app registration
   durationInMinutes: 1
   content: |
+
     1. Go to the [Microsoft Azure portal](https://portal.azure.com/).
 
     1. Select **Azure Active Directory**.
@@ -390,8 +389,7 @@ items:
           A webpage opens with a message **Your bot is ready!**.
 
           :::image type="content" source="~/assets/images/Teams-Messaging-Extensions-Search/appisready.png" alt-text="Screenshot of the webpage that displays Your bot is ready!."::: 
-
-        
+   
     # [Command line](#tab/cli)
 
     Go to **BotBuilder-Samples > samples > csharp_dotnetcore > 50.teams-messaging-extensions-search** in Command Prompt window and enter the following command:
@@ -451,7 +449,6 @@ items:
        1. Select **Project**.
 
           :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/project.png" alt-text="Screenshot of GitHub webpage displaying the project details.":::
-
 
 - title: Complete challenge
   durationInMinutes: 1
