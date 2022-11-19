@@ -25,7 +25,6 @@ items:
        
       :::image type="content" source="./assets/images/sbs-messagingextension-action/sharemessageoutput1.png" alt-text="Screenshot of the message extension output after you have successfully completed the step-by-step guide.":::
     
-
 - title: Prerequisites
   durationInMinutes: 1
   content: |
@@ -81,7 +80,6 @@ items:
     1. Select your **Subscription** from the dropdown list.
     1. Select your **Resource group** from the dropdown list. 
     
-        
         :::image type="content" source="./assets/images/sbs-messagingextension-action/create-azurebot.png" alt-text="Screenshot of Create an Azure Bot with the Resource group option highlighted in red.":::
     
        To create a new resource group (select **Create new** > enter resource name > select **OK**). Select the required location from **New resource group location** dropdown list.
@@ -194,7 +192,6 @@ items:
     1. Select **Apply**.
 
         You have successfully set up a bot in Azure Bot Service.
-
 
 - title: Update the Azure AD app registration
   durationInMinutes: 1
@@ -345,7 +342,6 @@ items:
 
         :::image type="content" source="./assets/images/sbs-messagingextension-action/manifestlocation.png" alt-text="Screenshot of Teams App Manifest folder with the file path and manifest file highlighted in red.":::
 
-    
     1. Open `manifest.json` in latest version of Visual Studio and make the following changes:
 
          * Replace the `<<validDomains>>` with your fully qualified domain name.
@@ -379,7 +375,6 @@ items:
 
           :::image type="content" source="./assets/images/sbs-messagingextension-action/appisready.png" alt-text="Screenshot of the webpage that displays Your bot is ready!.":::
 
-        
     # [Command line](#tab/cli)
 
     Go to **samples > csharp_dotnetcore > 51.teams-messaging-extensions-action** in Command Prompt window and enter the following command:
@@ -389,8 +384,6 @@ items:
     ```
    
     :::image type="content" source="./assets/images/sbs-messagingextension-action/dotnetruncmd.png" alt-text="Screenshot of Command Prompt - dotnet run with the dotnet run command.":::
-
-
       
 - title: Add Action Message Extension app to Teams
   durationInMinutes: 1
