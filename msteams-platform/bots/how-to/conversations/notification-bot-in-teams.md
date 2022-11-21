@@ -9,19 +9,19 @@ ms.localizationpriority: high
 
 # Notification bot in Teams
 
-Microsoft Teams Toolkit enables you to build applications that capture events and send them as notifications to an individual, chat, group, or channel in Teams. You can send notifications as plain text or [Adaptive Cards](../../../task-modules-and-cards/cards/cards-reference.md#adaptive-card). The notification bot template creates an app that sends a message to Teams with Adaptive Cards triggered by HTTP post request. The app template is built using the TeamsFx SDK, which provides a simple set of functions over the Microsoft Bot Framework to implement this scenario. You can create notification bot in multiple scenarios, such as notification can be sent in teams DevOps channel if there is a build failure. When creating a pull request, a review request link can be sent as a notification to the reviewer.
+Microsoft Teams Toolkit enables you to build applications that capture events and sends them as notifications to an individual, chat, group, or channel in Teams. You can send notifications as plain text or [Adaptive Cards](../../../task-modules-and-cards/cards/cards-reference.md#adaptive-card). The notification bot template creates an app that sends a message to Teams with Adaptive Cards triggered by HTTP post request. The app template is built using the TeamsFx SDK, which provides a simple set of functions over the Microsoft Bot Framework to implement this scenario. You can create notification bot in multiple scenarios, such as notification can be sent in teams DevOps channel if there is a build failure. When creating a pull request, a review request link can be sent as a notification to the reviewer.
 
 :::image type="content" source="../../../assets/images/notification-bot/notification-new-event.png" alt-text="new notification event sample":::
 
 **Advantages**
 
-1. Ease of sending notifications to personal chat, group chat, and in a channel using user friendly API from TeamsFx SDK.
-1. Enriching notifications by customizing them with an Adaptive Card.
-1. Multiple mechanisms to trigger notifications such as HTTP and Timer Trigger with Azure functions.
+* Facilitates notifications to personal chat, group chat, and in a channel using user friendly APIs from TeamsFx SDK.
+* Enriches notifications by customizing them with an Adaptive Card.
+* Provides multiple mechanisms to trigger notifications such as HTTP and Timer Trigger with Azure functions.
 
 **Limitation**
 
-Notification bot's only major limitation is that the bot application needs to be installed with the corresponding scope before sending notification.
+Limitation of notification bot is that the bot application needs to be installed with the corresponding scope before sending notification.
 
 ## Notification based on events
 
@@ -33,9 +33,9 @@ Bot Framework SDK provides the functionality to [proactively message in Teams](s
 |When the bot is uninstalled from a person, group, or Team.     |You need to remove the target conversation reference from the storage.         |
 |When the team, which is installed by bot is deleted.     |You need to remove the target conversation reference from the storage.         |
 |When the team, which is installed by bot is restored.     |You need to add the target conversation reference to the storage.         |
-|When the bot messages.     |You need to add the target conversation reference to the storage, if it doesn't exist.         |
+|When the bot sends messages.     |When the target conversation reference does not exist, you need to add it to the storage.         |
 
-When you send notifications, TeamsFx SDK creates a new conversation from the selected conversation reference and sends a message. For advanced usage, you can directly access the conversation reference to execute your own bot logic:
+When you send notifications, TeamsFx SDK creates a new conversation from the selected conversation reference and then sends a message. For advanced usage, you can directly access the conversation reference to execute your own bot logic:
 
 # [TypeScript](#tab/ts)
 
@@ -89,29 +89,34 @@ Following are the customizations you can make to extend the notification templat
 
 <summary><b>1. Customize the trigger point from event source</b></summary>
 
-   1. `Restify` based notification
+* `Restify` based notification
 
-      When HTTP request is sent to `src/index.js` entry point, the default implementation sends an Adaptive Card to Teams. You can customize this event by modifying `src/index.js`. A typical implementation might call an API to retrieve events, data, or both, which can send an Adaptive Card as required. You can also add additional triggers by:
+   When HTTP request is sent to `src/index.js` entry point, the default implementation sends an Adaptive Card to Teams. You can customize this event by modifying `src/index.js`. A typical implementation can call an API to retrieve events, data, or both that can send an Adaptive Card as required. You can also add additional triggers by:
 
-       * Creating a new routing: `server.post("/api/new-trigger", ...)`.
-       * Adding Timer trigger(s) from widely used npm packages such as [cron](https://www.npmjs.com/package/cron), [node-schedule](https://www.npmjs.com/package/node-schedule), or from other packages.
+  * Creating a new routing: `server.post("/api/new-trigger", ...)`.
+  * Adding Timer trigger(s) from widely used npm packages such as [cron](https://www.npmjs.com/package/cron), [node-schedule](https://www.npmjs.com/package/node-schedule), or from other packages.
 
-         > [!NOTE]
-         > By default Teams Toolkit scaffolds a single `restify` entry point in `src/index.js`.
+    > [!NOTE]
+    > By default Teams Toolkit scaffolds a single `restify` entry point in `src/index.js`.
 
-   1. Azure Functions based notification
+* Azure Functions based notification
 
-       * When you select timer trigger, the default implemented Azure function timer trigger (`src/timerTrigger.ts`) sends an Adaptive Card every 30 seconds. You can edit the file `*Trigger/function.json` to customize the `schedule` property. For more information, see [Azure function documentation](/azure/azure-functions/functions-bindings-timer?tabs=in-process&pivots=programming-language-javascript).
+  * When you select timer trigger, the default implemented Azure function timer trigger `src/timerTrigger.ts` sends an Adaptive Card every 30 seconds. You can edit the file `*Trigger/function.json` to customize the `schedule` property. For more information, see [Azure Function documentation](/azure/azure-functions/functions-bindings-timer?tabs=in-process&pivots=programming-language-javascript).
 
-       * When you select `http` trigger, it's hit by HTTP request, and the default implementation sends an Adaptive Card to Teams.  You can change this event by customizing `src/*Trigger.ts`. This implementation can call an API to retrieve events, data, or both, which can send an Adaptive Card as required.
-       You can also add Azure function triggers, such as:
+    :::image type="content" source="../../../assets/images/notification-bot/notification-timer-triggered.png" alt-text="sample of timer triggered notification":::
 
-       * `Event Hub` trigger to send notifications when an event is pushed to Azure Event Hub.
+  * When you select `http` trigger, it's hit by HTTP request, and the default implementation sends an Adaptive Card to Teams.  You can change this event by customizing `src/*Trigger.ts`. This implementation can call an API to retrieve events, data, or both, which can send an Adaptive Card as required.
 
-       * `Cosmos DB` trigger to send notifications when a Cosmos document is created or updated.
+    :::image type="content" source="../../../assets/images/notification-bot/notification-http-triggered.png" alt-text="sample of HTTP triggered notification":::
 
-         > [!NOTE]
-         > For more information on support triggers, see [Azure functions support triggers](/azure/azure-functions/functions-triggers-bindings?tabs=javascript).
+       You can also add Azure Function triggers, such as:
+
+  * `Event Hub` trigger to send notifications when an event is pushed to Azure Event Hub.
+
+  * `Cosmos DB` trigger to send notifications when a Cosmos document is created or updated.
+
+     > [!NOTE]
+     > For more information on support triggers, see [Azure Functions support triggers](/azure/azure-functions/functions-triggers-bindings?tabs=javascript).
 
 <br>
 </details>
@@ -338,7 +343,7 @@ foreach (var target in await _conversation.Notification.GetInstallationsAsync())
 
 ## Customize adapter
 
-You can customize by creating your own adapter or customize the adapter after initialization. Following are the code sample for creating your adapter:
+You can customize by creating your own adapter or customize the adapter after initialization. Following is the code sample for creating your adapter:
 
 ```Typescript
 
@@ -449,7 +454,7 @@ In the following table you can see the comparison of the two different ways:
 |&nbsp;   |Teams bot app  |Teams Incoming Webhook  |
 |---------|---------|---------|
 |Able to message individual person    |Yes      |No       |
-|Able to message group chat     |Yes         |         |
+|Able to message group chat     |Yes         |No         |
 |Able to message public channel     |Yes         |Yes         |
 |Able to message private channel     |No       |Yes       |
 |Able to send card message     |Yes       |Yes         |
@@ -474,7 +479,7 @@ TeamsFx provides you with an [Incoming Webhook Notification Sample](https://gith
 
 <summary><b>1. Why is the notification installations empty even though the bot app is installed in Teams?</b></summary>
 
-Teams sends an event only at the first installation, so if the bot app is already installed before your notification bot service is launched, the installation event either didn't reach the bot service or is omitted.
+Teams sends an event only at the first installation, if the bot app is already installed before your notification bot service is launched, the installation event either didn't reach the bot service or is omitted.
 
 You can resolve this in the following ways:
 
