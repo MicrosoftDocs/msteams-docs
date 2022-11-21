@@ -670,7 +670,7 @@ A client secret is a string that the application uses to prove its identity when
 
 5. Select **Add**.
 
-   A message pops up on the browser stating that the client secret was updated, and the client secret displays on the page.
+   A message appears on the browser stating that the client secret was updated, and the client secret displays on the page.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/client-secret-added.png" alt-text="Client secret added":::
 
@@ -678,7 +678,7 @@ A client secret is a string that the application uses to prove its identity when
 7. Save the value that you copied. You'll need it later for updating code.
 
    > [!IMPORTANT]
-   > Ensure that you copy the value of client secret right after you create it. The value is visible only at the time when the client secret is created, and can't be viewed after that.
+   > Ensure that you copy the value of client secret right after you create it. The value is visible only at the time when the client secret is created, and it can't be viewed after that.
 
 ### Configure redirect URL for your app
 
@@ -737,7 +737,7 @@ The configuration for Azure AD app is complete, and now you can configure your b
 Before you enable SSO for your bot app, you must create and configure your bot resource in Azure AD. For more information, see [Create Teams conversation bot](../../../sbs-teams-conversation-bot.yml).
 
 > [!NOTE]
-> Ensure that when you create your bot resource, select the application ID of your the Azure AD app that you registered.
+> Ensure that when you create your bot resource, you select the application ID of your Azure AD app that you registered.
 
 To enable SSO for your bot resource:
 
@@ -755,7 +755,7 @@ Messaging endpoint is where messages are sent to your bot. It enables communicat
 
 1. Enter the name of your bot resource in **Search** box, and select **Enter** to open it.
 
-1. Select **Settings** > **Configurations**.
+1. Select **Settings** > **Configuration**.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-app-menu.png" alt-text="bot-config-menu.png":::
 
@@ -812,7 +812,7 @@ With the app (client) ID and client secret provided, the Bot Framework Token Sto
     1. Enter the client ID that was generated when you created the bot app.
     1. Enter the client secret that you've created for your bot.
     1. Enter the application ID URI of your bot in the **Token Exchange URL**.
-    1. Enter the name for the tenant.
+    1. Enter the tenant ID.
     1. Enter the scope that you defined when you configured the permissions.
 
         > [!NOTE]
