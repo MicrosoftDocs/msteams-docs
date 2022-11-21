@@ -208,7 +208,7 @@ The application ID URI is configured. You can now define scope and permissions f
     8. Select **Add scope**.
 
         > [!NOTE]
-        > For this tutorial, you can use openid profile User.Read User.ReadBasic.All as scope. This scope is suitable for using the [Code sample](bot-sso-code.md#code-sample).
+        > For this tutorial, you can use openid profile User.Read User.ReadBasic.All as scope. This scope is suitable for using the [Code sample](bot-sso-code.md#code-sample). You can also add more Graph scopes and permissions. For more information, see [Extend your app with Microsoft Graph permissions and scopes](bot-sso-graph-api.md).
 
     A message appears on the browser stating that the scope was added.
 
@@ -368,8 +368,12 @@ You can configure authentication for multiple platforms as long as the URL is un
     :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/config-web-platform.png" alt-text="Configure web platform" border="true":::
 
     1. Enter the redirect URI. The URI should be unique.
-    2. Enter the front-channel log-out URL.
-    3. Select the tokens you want Azure AD to send for your app.
+
+        > [!NOTE]
+        > The URL mentioned in **Redirect URIs** is an example.
+    
+    1. Enter the front-channel log-out URL.
+    1. Select the tokens you want Azure AD to send for your app.
 
 1. Select **Configure**.
 
@@ -565,7 +569,7 @@ The application ID URI is configured. You can now define scope and permissions f
     8. Select **Add scope**.
 
         > [!NOTE]
-        > For this tutorial, you can use openid profile User.Read User.ReadBasic.All as scope. This scope is suitable for using the [Code sample](bot-sso-code.md#code-sample).
+        > For this tutorial, you can use openid profile User.Read User.ReadBasic.All as scope. This scope is suitable for using the [Code sample](bot-sso-code.md#code-sample). You can also add more Graph scopes and permissions. For more information, see [Extend your app with Microsoft Graph permissions and scopes](bot-sso-graph-api.md).
 
     A message appears on the browser stating that the scope was added.
 
@@ -711,8 +715,6 @@ You can configure authentication for multiple platforms as long as the URL is un
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/configure-platform.png" alt-text="Select web platform" border="true":::
 
-    <!--You can configure multiple platforms for a particular platform type. Ensure that the redirect URI is unique for every platform you configure.-->
-
     The **Configure Web** page appears.
 
     > [!NOTE]
@@ -723,8 +725,12 @@ You can configure authentication for multiple platforms as long as the URL is un
     :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/config-web-platform.png" alt-text="Configure web platform" border="true":::
 
     1. Enter the redirect URI. The URI should be unique.
-    2. Enter the front-channel log-out URL.
-    3. Select the tokens you want Azure AD to send for your app.
+
+        > [!NOTE]
+        > The URL mentioned in **Redirect URIs** is an example.
+
+    1. Enter the front-channel log-out URL.
+    1. Select the tokens you want Azure AD to send for your app.
 
 1. Select **Configure**.
 
