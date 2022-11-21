@@ -80,9 +80,9 @@ Test your app to verify your app’s correctness, functionality, and usage. Ensu
 
 * Unexpected error messages during the app usage, sign in, and sign-up experience and for scenarios where the app feature doesn't work as expected.
 
-:::image type="content" source="../../../assets/images/submission/validation-common-reasons-unexpected-error-scenarios.png" alt-text="Screenshot to show the unexpected error for scenarios where app feature doesn't work.":::
+   :::image type="content" source="../../../assets/images/submission/validation-common-reasons-unexpected-error-scenarios.png" alt-text="Screenshot to show the unexpected error for scenarios where app feature doesn't work.":::
 
-:::image type="content" source="../../../assets/images/submission/validation-common-reasons-unexpected-error-app-usage.png" alt-text="Screenshot to show the unexpected error message during app usage.":::
+   :::image type="content" source="../../../assets/images/submission/validation-common-reasons-unexpected-error-app-usage.png" alt-text="Screenshot to show the unexpected error message during app usage.":::
 
 * Ensure that your app is complete and ready to publish before you submit for review.
 
@@ -106,7 +106,7 @@ A great description can make your app stand out in the Microsoft Teams store and
 
 * References to the integrations, which aren't part of app functionality.
 
-:::image type="content" source="../../../assets/images/submission/validation-common-reasons-failed-reference-app-funtionality.png" alt-text="Screenshot shows an example for failed reference integration of app functionality.":::
+   :::image type="content" source="../../../assets/images/submission/validation-common-reasons-failed-reference-app-funtionality.png" alt-text="Screenshot shows an example for failed reference integration of app functionality.":::
 
 * Grammatical errors.
 
