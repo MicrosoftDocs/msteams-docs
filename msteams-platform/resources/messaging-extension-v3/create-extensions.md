@@ -16,7 +16,7 @@ Action-based message extensions allow your users to trigger actions in external 
 
 ## Action type message extensions
 
-To initiate actions from a message extension, set the `type` parameter to `action`. Below is an example of a manifest with a search and a create command. A single message extension can have up to 10 different commands and include multiple search- and action-based commands.
+To initiate actions from a message extension, set the `type` parameter to `action`. Below is an example of a manifest with a search and a create command. A single message extension can have up to 10 different commands and include multiple search-based and action-based commands.
 
  > [!NOTE]
  >`justInTimeInstall` functions when you upload an app to the app catalog but fails when you sideload an app.
@@ -126,7 +126,7 @@ To initiate actions from a message extension, set the `type` parameter to `actio
 
 You can initiate actions from the compose message area and also from a message using your message extension, which allows you to send the message contents to your bot for processing. You can optionally respond to that message using the method described in [Responding to submit](#responding-to-submit). The response is included as a reply to the message, which users can edit before submitting.
 
-Users can access message extension from **Take action** option of the overflow `...` menu, as shown in the image:
+Users can access message extension from **Take action** option of the overflow `...` menu, as shown in the following image:
 
 :::image type="content" source="../../assets/images/compose-extensions/MessageExtensions_MessageAction.png" alt-text="Screenshot describes how to initiate an action from a message.":::
 
