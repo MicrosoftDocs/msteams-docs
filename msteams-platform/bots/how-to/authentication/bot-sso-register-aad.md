@@ -86,7 +86,7 @@ Messaging endpoint is where messages are sent to your bot. It enables communicat
 
 1. Enter the name of your bot resource in **Search** box, and select **Enter** to open it.
 
-1. Select **Settings** > **Configurations**.
+1. Select **Settings** > **Configuration**.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-app-menu.png" alt-text="bot-config-menu.png":::
 
@@ -104,17 +104,17 @@ You've configured the messaging endpoint for your bot resource. Next, you must e
 
 ## Configure SSO for Azure AD app
 
-You must configure permissions and scopes, authorize client applications, update manifest and create client secret for your Azure AD app. These configurations help invoke SSO for your bot app.
+You must configure permissions and scopes, authorize client applications, update manifest, and create client secret for your Azure AD app. These configurations help invoke SSO for your bot app.
 
 ### Configure scope for the access token
 
-Configure scope (permission) options for sending access token to Teams client, and authorizing trusted client applications to enable SSO.
+Configure scope (permission) options for sending access token to Teams client and authorizing trusted client applications to enable SSO.
 
 You need:
 
-- [To configure application ID URI](#to-configure-application-id-uri): Configure scope (permission) options for your app. You'll expose a web API, and configure the application ID URI.
+- [To configure application ID URI](#to-configure-application-id-uri): Configure scope (permission) options for your app. You'll expose a web API and configure the application ID URI.
 - [To configure API scope](#to-configure-api-scope): Define scope for the API, and the users who can consent for a scope. You can let only admins provide consent for higher-privileged permissions.
-- [To configure authorized client application](#to-configure-authorized-client-application): Create authorized client IDs for applications that you want to pre-authorize. It allows the app user to access the app scopes (permissions) you've configured, without requiring any further consent. Pre-authorize only those client applications you trust as your app users won't have the opportunity to decline consent.
+- [To configure authorized client application](#to-configure-authorized-client-application): Create authorized client IDs for applications that you want to pre-authorize. It allows the app user to access the app scopes (permissions) you've configured, without requiring any further consent. Pre-authorize only those client applications you trust, as your app users won't have the opportunity to decline consent.
 
 #### To configure application ID URI
 
@@ -122,7 +122,7 @@ You need:
 
    The Microsoft Azure Bot page opens.
 
-1. Enter the name of your bot resource in **Search** box, and select **Enter** to open it.
+1. Enter the name of your bot resource in **Search** box, and then select **Enter** to open it.
 
 1. Select **Settings** > **Configuration**.
 
@@ -158,10 +158,10 @@ You need:
 
     > [!IMPORTANT]
     >
-    > - **Standalone bot**: If you're building a standalone bot, enter the application ID URI as api://botid-{YourBotId}. Here YourBotId is your Azure AD application ID.
-    > - **Application ID URI for app with multiple capabilities**: If you're building an app with a bot, a messaging extension, and a tab, enter the application ID URI as `api://fully-qualified-domain-name.com/BotId-{YourClientId}`, where the BotID is your bot app ID.
+    > - **Standalone bot**: If you're building a standalone bot, enter the application ID URI as api://botid-{YourBotId}. Here, {YourBotId} is your Azure AD application ID.
+    > - **Application ID URI for app with multiple capabilities**: If you're building an app with a bot, a messaging extension, and a tab, enter the application ID URI as `api://fully-qualified-domain-name.com/BotId-{YourClientId}`, where the BotId is your bot app ID.
     >
-    > - **Format for domain name**: Use lower case letters for domain name. Don't use upper case.
+    > - **Format for domain name**: Use lowercase letters for domain name. Don't use upper case.
     >
     >   For example, to create an app service or web app with resource name, 'demoapplication':
     >
@@ -170,11 +170,11 @@ You need:
     >   | *demoapplication* | **<https://demoapplication.example.net>** | All platforms.|
     >   | *DemoApplication* | **<https://DemoApplication.example.net>** | Desktop, web, and iOS only. It isn't supported in Android. |
     >
-    >    Use the lower case option *demoapplication* as base resource name.
+    >    Use the lowercase option *demoapplication* as base resource name.
 
 1. Select **Save**.
 
-    A message pops up on the browser stating that the application ID URI was updated.
+    A message appears on the browser stating that the application ID URI was updated.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-id-uri-msg.png" alt-text="Application ID URI message" border="true":::
 
@@ -182,7 +182,7 @@ You need:
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/app-id-uri-added.png" alt-text="Application ID URI is updated" border="true":::
 
-1. Note and save the Application ID URI. You'll need it for updating the Teams app manifest later.
+1. Note and save the application ID URI. You'll need it for updating the Teams app manifest later.
 
 The application ID URI is configured. You can now define scope and permissions for your app.
 
