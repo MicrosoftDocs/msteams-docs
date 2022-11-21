@@ -446,7 +446,7 @@ TeamsFx supports two ways to help you send notifications from your system to Tea
 
 In the following table you can see the comparison of the two different ways:
 
-|         |Teams bot app  |Teams Incoming Webhook  |
+|&nbsp;   |Teams bot app  |Teams Incoming Webhook  |
 |---------|---------|---------|
 |Able to message individual person    |Yes      |No       |
 |Able to message group chat     |Yes         |         |
