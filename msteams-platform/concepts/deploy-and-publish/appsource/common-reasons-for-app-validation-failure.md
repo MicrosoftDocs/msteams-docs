@@ -80,6 +80,10 @@ Test your app to verify your app’s correctness, functionality, and usage. Ensu
 
 * Unexpected error messages during the app usage, sign in, and sign-up experience and for scenarios where the app feature doesn't work as expected.
 
+:::image type="content" source="../../../assets/images/submission/validation-common-reasons-unexpected-error-scenarios.png" alt-text="Screenshot to show the unexpected error for scenarios where app feature doesn't work.":::
+
+:::image type="content" source="../../../assets/images/submission/validation-common-reasons-unexpected-error-app-usage.png" alt-text="Screenshot to show the unexpected error message during app usage.":::
+
 * Ensure that your app is complete and ready to publish before you submit for review.
 
 ## App description
@@ -90,6 +94,8 @@ A great description can make your app stand out in the Microsoft Teams store and
 
 * Region specific app name or functionality isn't called out in manifest and Partner Center app descriptions.
 
+   :::image type="content" source="../../../assets/images/submission/validation-common-reasons-region-specific-app.png" alt-text="Screenshot shows an example for failed scenario of region specific app name.":::
+
 * Limitations or account dependency on external accounts or services to complete Sign-In, Sign-Out, and Sign-Up experience aren't called out in app manifest and long description.
 
 * Short and full description in the app manifest doesn't highlight the app’s value proposition.
@@ -99,6 +105,8 @@ A great description can make your app stand out in the Microsoft Teams store and
 * App comparison with another app.
 
 * References to the integrations, which aren't part of app functionality.
+
+:::image type="content" source="../../../assets/images/submission/validation-common-reasons-failed-reference-app-funtionality.png" alt-text="Screenshot shows an example for failed reference integration of app functionality.":::
 
 * Grammatical errors.
 
