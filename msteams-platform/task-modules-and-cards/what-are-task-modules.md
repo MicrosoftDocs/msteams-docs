@@ -52,5 +52,7 @@ A task module includes the following as shown in the previous image:
 
 ## See also
 
+* [Cards and task modules](cards-and-task-modules.md)
 * [Cards](~/task-modules-and-cards/what-are-cards.md)
 * [Adaptive Cards overflow menu](~/task-modules-and-cards/cards/cards-format.md#adaptive-cards-overflow-menu)
+* [Cards](what-are-cards.md)

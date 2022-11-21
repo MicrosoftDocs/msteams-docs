@@ -88,7 +88,7 @@ This section defines the schema of what your bot receives when it receives a `ta
 
 The next section provides an example of receiving and responding to `task/fetch` and `task/submit` invoke messages in Node.js.
 
-## Example of task/fetch and task/submit invoke messages in Node.js and C#
+## Example of task/fetch and task/submit invoke messages in Node.js and C #
 
 # [Node.js](#tab/nodejs)
 
@@ -211,5 +211,6 @@ Follow the [step-by-step guide](../../sbs-botbuilder-taskmodule.yml) to create a
 
 ## See also
 
+* [Cards and task modules](../cards-and-task-modules.md)
 * [Microsoft Teams task module sample code in Node.js](https://github.com/OfficeDev/microsoft-teams-sample-task-module-nodejs/blob/master/src/TeamsBot.ts)
 * [Bot Framework samples](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)

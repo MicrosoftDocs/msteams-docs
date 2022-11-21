@@ -368,7 +368,7 @@ The following code shows an example of incoming invoke message:
 }
 ```
 
-## Action type sign in
+## Action type sign-in
 
 `signin` action type initiates an OAuth flow that permits bots to connect with secure services. For more information, see [authentication flow in bots](~/bots/how-to/authentication/auth-flow-bot.md).
 
@@ -489,7 +489,7 @@ The following code shows an example of Adaptive Cards with `imBack` action:
 }
 ```
 
-### Adaptive Cards with sign in action
+### Adaptive Cards with sign-in action
 
 To include a `signin` action with an Adaptive Card include the following details in the `msteams` object:
 
