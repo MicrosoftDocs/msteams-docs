@@ -79,7 +79,6 @@ items:
        > [!NOTE]
        > If you encounter the error "Filename too long," apply the git command 'git config --system core.longpaths true' in your administrator terminal of choice.
 
-
 - title: Create and register your bot 
   durationInMinutes: 5
   content: |
@@ -206,7 +205,6 @@ items:
       > [!TIP]
       > If you encounter **ERR_NGROK_4018**, follow the steps provided in the **Command Prompt** to sign up and authenticate ngrok. Then run the `ngrok http --host-header=localhost 3978` command.
 
-
     **To add messaging endpoint**
 
     1. From ngrok, copy the HTTPS URL.
@@ -226,7 +224,6 @@ items:
     1. Select **Apply**.
 
         You have successfully set up a bot in Azure Bot Service.
-
 
 - title: Update the Azure app registration for tab SSO
   durationInMinutes: 1
@@ -343,7 +340,6 @@ items:
        > [!NOTE]
        > If an app isn't granted IT admin consent, users must provide consent the first time they use an app. </br>
                
-        
          1. Select **Add a platform**.
          1. Select **Web**.
 
@@ -359,7 +355,6 @@ items:
          1. Select **Configure**.
 
          :::image type="content" source="~/assets/images/meeting-token-generator/sbs-configure-web.png" alt-text="Screenshot of Configure Web page with the options Redirect URLs, token selections and Configure are highlighted in red. ":::
-
 
 - title: Set up app settings
   durationInMinutes: 1
@@ -402,14 +397,12 @@ items:
            * `privacyUrl`
            * `termsOfUseUrl`
 
-
           :::image type="content" source="~/assets/images/meeting-token-generator/sbs-manifest 1 latest new.png" alt-text="Screenshot of Schema, ID, Resource, Company name, website Url, privacy Url, and termsofUseUrl are highlighted in red.":::
 
          * Replace all occurrences of `WebAppDomainName` with your ngrok domain name.
          * Replace all occurrences of `MicrosoftAppId` with your bot's **Microsoft App ID**.
 
           :::image type="content" source="~/assets/images/meeting-token-generator/sbs-manifest 2 Latest.png" alt-text="Screenshot of manifest page with the ConfigurationUrl, bot ID, and Valid domains highlighted in red.  ":::
-
 
 - title: Build client app using npm install
   durationInMinutes: 1
