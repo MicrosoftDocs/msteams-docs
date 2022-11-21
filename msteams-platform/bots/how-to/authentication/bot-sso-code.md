@@ -1,6 +1,6 @@
 ---
 title: Code configuration for enabling SSO for bots
-description: Describes code configuration for enabling SSO for bots
+description: Describes code configuration for enabling SSO for bots.
 ms.topic: how-to
 ms.localizationpriority: high
 zone_pivot_groups: enable-sso
@@ -43,7 +43,7 @@ To update the development environment variables:
 
 1. Save the file.
 
-You've now configured the required environment variables for your bot app and for SSO. Next, add the code for handling bot tokens.
+You've now configured the required environment variables for your bot app and SSO. Next, add the code for handling bot tokens.
 
 ## Add code to handle an access token
 
@@ -77,7 +77,7 @@ To update your app's code:
     ---
 
     >[!NOTE]
-    > You might receive multiple responses for a given request if the user has multiple active endpoints. You must eliminate all duplicate or redundant responses with the token. For more information about **signin/tokenExchange**, see [TeamsSSOTokenExchangeMiddleware Class](/python/api/botbuilder-core/botbuilder.core.teams.teams_sso_token_exchange_middleware.teamsssotokenexchangemiddleware?view=botbuilder-py-latest#remarks&preserve-view=true).
+    > You might receive multiple responses for a given request if the user has multiple active endpoints. You must eliminate all duplicate or redundant responses with the token. For more information about signin/tokenExchange, see [TeamsSSOTokenExchangeMiddleware Class](/python/api/botbuilder-core/botbuilder.core.teams.teams_sso_token_exchange_middleware.teamsssotokenexchangemiddleware?view=botbuilder-py-latest#remarks&preserve-view=true).
 
 1. Use the following code snippet for requesting a token.
 
@@ -106,7 +106,7 @@ To update your app's code:
                 // to add telemetry capture to your bot.
                 logger.LogError(exception, $"[OnTurnError] unhandled error : {exception.Message}");
 
-                // Send a message to the user
+                // Send a message to the user.
                 await turnContext.SendActivityAsync("The bot encountered an error or bug.");
                 await turnContext.SendActivityAsync("To continue to run this bot, please fix the bot source code.");
 
@@ -116,7 +116,7 @@ To update your app's code:
                     {
                         // Delete the conversationState for the current conversation to prevent the
                         // bot from getting stuck in a error-loop caused by being in a bad state.
-                        // ConversationState should be thought of as similar to "cookie-state" in a Web pages.
+                        // conversationState should be thought of as similar to "cookie-state" in a Web pages.
                         await conversationState.DeleteAsync(turnContext);
                     }
                     catch (Exception e)
@@ -125,7 +125,7 @@ To update your app's code:
                     }
                 }
 
-                // Send a trace activity, which will be displayed in the Bot Framework Emulator
+                // Send a trace activity, which will be displayed in the Bot Framework Emulator.
                 await turnContext.TraceActivityAsync(
                     "OnTurnError Trace",
                     exception.Message,
@@ -141,9 +141,9 @@ To update your app's code:
     After you add the code snippet for `TeamsSSOTokenExchangeMiddleware`, your code should be as shown below:
     
     ```JavaScript
-    // index.js is used to setup and configure your bot
+    // index.js is used to setup and configure your bot.
 
-    // Import required pckages
+    // Import required packages
     const path = require('path');
     
     // Read botFilePath and botFileSecret from .env file.
@@ -187,7 +187,7 @@ To update your app's code:
         //       configuration instructions.
         console.error(`\n [onTurnError] unhandled error: ${ error }`);
     
-        // Send a trace activity, which will be displayed in Bot Framework Emulator
+        // Send a trace activity, which will be displayed in Bot Framework Emulator.
         await context.sendTraceActivity(
             'OnTurnError Trace',
             `${ error }`,
@@ -195,10 +195,10 @@ To update your app's code:
             'TurnError'
         );
     
-        // Send a message to the user
+        // Send a message to the user.
         await context.sendActivity('The bot encountered an error or bug.');
         await context.sendActivity('To continue to run this bot, please fix the bot source code.');
-        // Clear out state
+        // Clear out state.
         await conversationState.delete(context);
     };
     
@@ -228,7 +228,7 @@ To update your app's code:
     
     // Listen for incoming requests.
     server.post('/api/messages', async (req, res) => {
-        // Route received a request to adapter for processing
+        // Route received a request to adapter for processing.
         await adapter.process(req, res, (context) => bot.run(context));
     });
     ```
