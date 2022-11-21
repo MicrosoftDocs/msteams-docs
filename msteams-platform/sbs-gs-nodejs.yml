@@ -585,7 +585,7 @@ items:
 
     1. Select **+ Add a command** to define the scope of what your message extension app can do.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-msgext-add-command.png" alt-text="Image showing Command section.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-msgext-add-command.png" alt-text="Screenshot of image showing Command section.":::
 
         The **Add a command** dialog.
 
