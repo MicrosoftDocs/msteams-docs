@@ -203,14 +203,14 @@ The application ID URI is configured. You can now define scope and permissions f
     3. Enter the **Admin consent display name**.
     4. Enter the description for admin consent.
     5. Enter the **User consent display name**.
-    6. Enter the description for user consent description.
+    6. Enter the user consent description.
     7. Select the **Enabled** option for state.
     8. Select **Add scope**.
 
         > [!NOTE]
         > For this tutorial, you can use openid profile User.Read User.ReadBasic.All as scope. This scope is suitable for using the [Code sample](bot-sso-code.md#code-sample).
 
-    A message pops up on the browser stating that the scope was added.
+    A message appears on the browser stating that the scope was added.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/scope-added-msg.png" alt-text="Scope added message displayed" border="true":::
 
@@ -234,7 +234,7 @@ The scope and permissions are now configured. Next, you must configure the autho
     > [!NOTE]
     >
     > - The Microsoft 365 client IDs for mobile, desktop, and web applications for Teams, Office, and Outlook are the actual IDs that you must add.
-    > - If your app has a tab app, you'll need either Web or SPA, as you can't have a mobile or desktop client application in Teams.
+    > - If your app has a tab app, you'll need either web or SPA, as you can't have a mobile or desktop client application in Teams.
 
 1. Choose one of the following client IDs:
 
@@ -244,14 +244,14 @@ The scope and permissions are now configured. Next, you must configure the autho
    | 5e3ce6c0-2b1f-4285-8d4b-75ee78787346 | Teams web application |
    | 4765445b-32c6-49b0-83e6-1d93765276ca | Office web application |
    | 0ec893e0-5785-4de6-99da-4ed124e5296c | Office desktop application |
-   | d3590ed6-52b3-4102-aeff-aad2292ab01c | Outlook desktop, mobile application |
+   | d3590ed6-52b3-4102-aeff-aad2292ab01c | Outlook desktop and mobile application |
    | bc59ab01-8403-45c6-8796-ac3ef710b3e3 | Outlook web application |
 
 1. Select the application ID URI you created for your app in **Authorized scopes** to add the scope to the web API you exposed.
 
 1. Select **Add application**.
 
-A message pops up on the browser stating that the authorized client app was added.
+A message appears on the browser stating that the authorized client app was added.
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/update-app-auth-msg.png" alt-text="Client ID added message" border="true":::
 
@@ -266,7 +266,7 @@ You've successfully configured app scope, permissions, and client applications. 
 
 ### Configure access token version
 
-You must define the access token version for your app. This configuration is made in the Azure AD application manifest.
+You must define the access token version for your app in the Azure AD application manifest.
 
 #### To define the access token version
 
@@ -280,13 +280,13 @@ You must define the access token version for your app. This configuration is mad
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/azure-manifest-value.png" alt-text="Value for accepted access token version" border="true":::
 
-1. Select **Save**
+1. Select **Save**.
 
-    A message pops up on the browser stating that the manifest was updated successfully.
+    A message appears on the browser stating that the manifest was updated successfully.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/update-aad-manifest-msg.png" alt-text="Manifest updated":::
 
-You've updated the access token version. Next, you'll create a client secret for your app next.
+You've updated the access token version. Next, you'll create a client secret for your app.
 
 ### Create client secret
 
@@ -313,7 +313,7 @@ A client secret is a string that the application uses to prove its identity when
 
 5. Select **Add**.
 
-   A message pops up on the browser stating that the client secret was updated, and the client secret displays on the page.
+   A message appears on the browser stating that the client secret was updated, and the client secret displays on the page.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/client-secret-added.png" alt-text="Client secret added":::
 
@@ -321,7 +321,7 @@ A client secret is a string that the application uses to prove its identity when
 7. Save the value that you copied. You'll need it later for updating code.
 
    > [!IMPORTANT]
-   > Ensure that you copy the value of client secret right after you create it. The value is visible only at the time when the client secret is created, and can't be viewed after that.
+   > Ensure that you copy the value of client secret right after you create it. The value is visible only at the time when the client secret is created, and it can't be viewed after that.
 
 You've configured the client secret. Next, you must configure the redirect URL.
 
