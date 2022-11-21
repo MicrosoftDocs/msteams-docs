@@ -1,7 +1,7 @@
 ---
 title: Teams Toolkit Overview
 author: zyxiaoyuer
-description: In this module, learn Teams Toolkit, Installation of Teams Toolkit, and User journey of Teams Toolkit
+description: Learn Teams Toolkit, Installation of Teams Toolkit, and User journey of Teams Toolkit
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
