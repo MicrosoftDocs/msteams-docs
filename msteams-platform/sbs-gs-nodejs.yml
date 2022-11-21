@@ -621,7 +621,7 @@ items:
     1. Select **Save**.
     1. Open **App features** pane.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/nj-app-capabilities-configured.png" alt-text="Screenshot of image showing capabilities configured for Hello World app":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/nj-app-capabilities-configured.png" alt-text="Screenshot of image showing capabilities configured for Hello World app.":::
 
         You'll see all three capabilities - personal tab app, bot, and message extension - configured for the Hello World app.
 
