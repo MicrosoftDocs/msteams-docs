@@ -56,15 +56,15 @@ You can install Teams Toolkit using the Extensions window in Visual Studio Code,
 
 1. Go to [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) in a web browser.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/install-ttk-marketplace.png" alt-text="Screenshot shows the installation of TTK Marketplace.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/install-ttk-marketplace_1.png" alt-text="Screenshot shows the installation of TTK Marketplace.":::
 
 1. Select **Install**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/Install-ttk.png" alt-text="Screenshot shows how to install TTK.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/Install-ttk_1.png" alt-text="Screenshot shows how to install TTK.":::
 
 1. From the pop-up window, select **Open** to launch Visual Studio Code.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-open.png" alt-text="Screenshot shows to select the open.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-open_1.png" alt-text="Screenshot shows to select the open.":::
 
    The Teams Toolkit extension page is shown in Visual Studio Code:
 
@@ -84,7 +84,7 @@ You can install Teams Toolkit using the Extensions window in Visual Studio Code,
 
 By default, Visual Studio Code automatically keeps Teams Toolkit up-to-date. If you want to install a different version, follow the steps:
 
-* Select the Extensions (:::image type="icon" source="../assets/images/teams-toolkit-v2/extension icon_2.PNG":::) icon from the Visual Studio Code activity bar.
+* Select the Extensions icon from the Visual Studio Code activity bar.
 * Enter **Teams Toolkit**  in the search box.
 * On the Teams Toolkit page, select the dropdown next to the **Uninstall** button.
 * Select **Install Another Version...** from the dropdown.
