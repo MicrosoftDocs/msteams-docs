@@ -42,7 +42,7 @@ You can install Teams Toolkit using the Extensions window in Visual Studio Code,
 
 1. Enter **Teams Toolkit** in the search box.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/install-toolkit2_2.png" alt-text="Screenshot show the Toolkit.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/install-toolkit-2_2.png" alt-text="Screenshot show the Toolkit.":::
 
 1. Select **Install**.
   
@@ -68,15 +68,15 @@ You can install Teams Toolkit using the Extensions window in Visual Studio Code,
 
    The Teams Toolkit extension page is shown in Visual Studio Code:
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/ttk-in-vsc.png" alt-text="Screenshot shows how to select TTK in VSC.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/ttk-in-vsc_1.png" alt-text="Screenshot shows how to select TTK in VSC.":::
 
 1. Select **Install**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-install-ttk.png" alt-text="Screenshot shows how to select Install TTK in VSC.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-install-ttk_2.png" alt-text="Screenshot shows how to select Install TTK in VSC.":::
 
    After successful installation of Teams Toolkit in Visual Studio Code, a Teams Toolkit icon appears in the Visual Studio Code activity bar.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/after-install.png" alt-text="Screenshot shows the after installation view.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/after-install_2.png" alt-text="Screenshot shows the after installation view.":::
 
 ---
 
