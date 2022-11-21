@@ -72,7 +72,7 @@ foreach (var target in await _conversation.Notification.GetInstallationsAsync())
 
 ## Notification bot installation
 
-A notification bot needs to be installed into a team, or a group chat, or as personal app, depending on the required scope. You can select the installation target before adding the bot to your App.
+A notification bot needs to be installed into a team, or a group chat, or as personal app, depending on the required scope. You need to select the installation target before adding the bot to your App.
 
 :::image type="content" source="../../../assets/images/notification-bot/notification-installation-scope.png" alt-text="add installation scope":::
 
@@ -442,7 +442,7 @@ If you don't have the required SDK, and want to invoke external APIs in your cod
 
 ### Teams bot application or Teams Incoming Webhook
 
-TeamsFx supports two ways to help you send notifications from your system to Teams by creating a Teams Bot Application or Teams Incoming Webhook.
+TeamsFx supports two ways to help you send notifications from your system to Teams by creating a Teams bot application or Teams Incoming Webhook.
 
 In the following table you can see the comparison of the two different ways:
 
@@ -474,12 +474,13 @@ TeamsFx provides you with an [Incoming Webhook Notification Sample](https://gith
 
 <summary><b>1. Why is the notification installations empty even though the bot app is installed in Teams?</b></summary>
 
-Teams sends an event only at the first installation, so if the bot app is already installed before your notification bot service is launched, the installation event is omitted or didn't reach the bot service.
+Teams sends an event only at the first installation, so if the bot app is already installed before your notification bot service is launched, the installation event either didn't reach the bot service or is omitted.
 
-You can resolve this by the following ways:
+You can resolve this in the following ways:
 
-* Send a message to your personal bot or mention your bot in GroupChat or Channel. This helps you to reach the bot service again with correct installation information.
-* Uninstall the bot app from Teams then redebug or relaunch it again. You can resend the installation event to bot service.
+* Send a message to your personal bot or mention your bot in group chat or channel, which helps you to reach the bot service again with correct installation information.
+* Uninstall the bot app from Teams then redebug or relaunch it. You can resend the installation event to bot service.
+
 Notification target connections are stored in the persistence storage. If you're using the default local file storage, all installations will be stored under `bot/.notification.localstore.json`.
 
 > [!NOTE]
@@ -491,9 +492,11 @@ Notification target connections are stored in the persistence storage. If you're
 
 <details>
 
-<summary><b>2.Why `BadRequest` or `BadArgument` error occurs when sending notification?</b></summary>
+<summary><b>2.Why "Bad Request" or "Bad Argument" error occurs when sending notification?</b></summary>
 
-If the notification installation doesn't match the bot ID or password that is running, you can get a "Failed to decrypt conversation ID" error. One possible cause for this is the bot ID or password is changed due to cleaning local state or reprovisioning. You can resolve this by cleaning your notification storage. After cleaning notify to reinstall your bot in Teams to ensure that the new installation is up-to-date. Each stored notification installation is bound with one bot. If you're able to check your notification storage, its bot field should match the bot you're running such as the bot ID having the same GUID.
+If the notification installation doesn't match the bot ID or password that is running, you can get a "Failed to decrypt conversation ID" error. One possible cause for this is the bot ID or password is changed due to cleaning local state or reprovisioning.
+
+You can resolve this by cleaning your notification storage. After cleaning, notify to reinstall your bot in Teams to ensure that the new installation is up-to-date. Each stored notification installation is bound with one bot. If you're able to check your notification storage, its bot field should match the bot you're running such as the bot ID having the same GUID.
 
 > [!NOTE]
 > In case of local storage the default location is `.notification.localstore.json`.
@@ -506,7 +509,7 @@ If the notification installation doesn't match the bot ID or password that is ru
 
 <summary><b>3. Why notification target is lost after restarting or redeploying the bot app?</b></summary>
 
-Notification target connections are stored in the persistence storage. If you're using the default local file storage, Azure Web App and Azure Functions will clean up the local file during a restart or redeploy. You can also uninstall the bot from Teams, then reinstall it to add connections again to the storage. Using your own shared storage for production environment is recommended.
+Notification target connections are stored in the persistence storage. If you're using the default local file storage, Azure web app and Azure Functions will clean up the local file during a restart or redeploy. You can also uninstall the bot from Teams, then reinstall it to again add connections to the storage. Using your own shared storage for production environment is recommended.
 
 <br>
 
@@ -516,7 +519,7 @@ Notification target connections are stored in the persistence storage. If you're
 
 <summary><b>4. Why is undefined returned when using the API `findChannel()`?</b></summary>
 
-You can encounter an undefined error, when the bot app is installed into other channels instead of the General channel. To fix this error you can uninstall the bot app from Teams and redebug and relaunch it again. Ensure that the bot app is installed into the `General` channel after you've redebug and relaunched.
+You can encounter an undefined error, when the bot app is installed into other channels instead of the General channel. To fix this error you can uninstall the bot app from Teams and redebug and relaunch it. Ensure that the bot app is installed into the `General` channel after you've redebug and relaunched.
 
 <br>
 
@@ -548,9 +551,9 @@ If azurite exits due to port in use, you can specify another listening port and 
 
 Perform the following steps to extend my notification bot to support command and response:
 
-1. Open file bot\src\internal\initialize.ts(js), update your conversationBot initialization to enable command and response:
+1. Open file `bot\src\internal\initialize.ts(js)`, update your `conversationBot` initialization to enable command and response:
 
-:::image type="content" source="../../../assets/images/notification-bot/notification-support-command-response.png" alt-text="add support command and response":::
+   :::image type="content" source="../../../assets/images/notification-bot/notification-support-command-response.png" alt-text="add support command and response", lightbox="../../../assets/images/notification-bot/notification-support-command-response.png":::
 
 1. How to add command and response to your bot, see the [instructions](https://github.com/OfficeDev/TeamsFx/wiki/Respond-to-chat-commands-in-Teams#How-to-add-more-command-and-response).
 
