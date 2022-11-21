@@ -13,7 +13,7 @@ zone_pivot_groups: teams-app-platform
 
 ::: zone pivot="visual-studio-code"
 
-Teams Toolkit makes it simple to get started with app development for Microsoft Teams using Visual Studio Code .
+Teams Toolkit makes it simple to get started with app development for Microsoft Teams using Visual Studio Code.
 
 * Start with a project template or from a sample.
 * Save setup time with automated app registration and configuration.
