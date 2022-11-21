@@ -10,7 +10,7 @@ ms.author: surbhigupta
 
 The <a href="https://dev.teams.microsoft.com" target="_blank">Developer Portal for Teams</a> is the primary tool for configuring, distributing, and managing your Microsoft Teams apps. With the Developer Portal, you can collaborate with colleagues on your app, set up runtime environments, and much more.
 
-:::image type="content" source="../../assets/images/tdp/tdp_home_1.png" alt-text="The screenshot is an example that shows the home page of the Developer Portal for Teams.":::
+:::image type="content" source="../../assets/images/tdp/tdp_home_1.png" alt-text="Screenshot shows the home page of the Developer Portal for Teams.":::
 
 > [!NOTE]
 >
@@ -28,28 +28,28 @@ The Developer Portal provides the following ways to register a Teams app:
 
 The Developer portal allows you to create a brand new app:
 
-1. Log into [Developer Portal](https://dev.teams.microsoft.com), select **Apps** from the left pane.
+1. Sign in to [Developer Portal](https://dev.teams.microsoft.com), select **Apps** from the left pane.
 
-   :::image type="content" source="../../assets/images/tdp/home-page.png" alt-text="The screenshot is an example that shows the Developer Portal for Teams home page.":::
+   :::image type="content" source="../../assets/images/tdp/home-page.png" alt-text="Screenshot shows the home page of the Developer Portal for Teams with the Apps option highlighted in red.":::
 
 1. Select **New app** and enter app name.
 
-   :::image type="content" source="../../assets/images/tdp/enter-app-name-tdp.png" alt-text="The screenshot shows how to create a brand new app in Developer Portal for Teams." lightbox="../../assets/images/tdp/create-new-app-in-tdp.png":::
+   :::image type="content" source="../../assets/images/tdp/enter-app-name-tdp.png" alt-text="Screenshot shows how to create a brand new app in Developer Portal for Teams." lightbox="../../assets/images/tdp/create-new-app-in-tdp.png":::
 
 1. Select **Add**.
 
 Now you've successfully created a brand new app and you can see all the basic information of the new app.
 
-:::image type="content" source="../../assets/images/tdp/basic-information-app-tdp.png" alt-text="The screenshot is an example that shows the basic information of the app you created in the Developer Portal for Teams.":::
+:::image type="content" source="../../assets/images/tdp/basic-information-app-tdp.png" alt-text="Screenshot shows the basic information of the app you created in the Developer Portal for Teams.":::
 
 ### Import an existing app
 
 Follow the steps to import and manage your existing app in the Developer Portal.
 
-1. In the Developer Portal, select **Apps** from the left pane.
+1. On the Developer Portal, select **Apps** from the left pane.
 1. Select **Import App**.
 
-   :::image type="content" source="../../assets/images/tdp/import-app.png" alt-text="The screenshot show how to import your existing app in Developer Portal for Teams to manage your apps.":::
+   :::image type="content" source="../../assets/images/tdp/import-app.png" alt-text="Screenshot shows how to import your existing app in Developer Portal for Teams to manage your apps.":::
 
 1. Select the app manifest file, and then select **Open**.
 1. Select **Import**.
@@ -62,11 +62,13 @@ Follow the steps to import and manage your existing app in the Developer Portal.
 
 ## Changelog for Developer Portal
 
-In the **Changelog**, you can see all the latest releases of new features, recent changes in APIs, important bug fixes, and other developer products. This allows you to stay engaged with the latest updates in Teams.
+Changelog for Developer Portal let's you stay engaged with the latest updates in Teams. You can view the updates about features, recent changes in APIs, important bug fixes, and other developer products.
 
-:::image type="content" source="../../assets/images/tdp/changelog.png" alt-text="Screenshot shows the Changelog in developer portal.":::
+To view the Changelog, log into [Developer Portal](https://dev.teams.microsoft.com) and select **Changelog** from the left pane.
 
-Changelog for Developer Portal gives you the updates based on the following categories:
+:::image type="content" source="../../assets/images/tdp/changelog.png" alt-text="Screenshot shows the Changelog in the Developer Portal.":::
+
+The updates for Changelog in the Developer Portal are categorized based on the following:
 
 * Added
 * Changed
