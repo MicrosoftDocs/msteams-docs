@@ -431,7 +431,7 @@ Use the following code snippet to handle the access token in case the app user l
             {
                 var text = innerDc.Context.Activity.Text.ToLowerInvariant();
 
-                // Allow logout anywhere in the command
+                // Allow logout anywhere in the command.
                 if (text.IndexOf("logout") >= 0)
                 {
                     // The UserTokenClient encapsulates the authentication processes.

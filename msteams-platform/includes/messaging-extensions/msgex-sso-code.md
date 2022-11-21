@@ -17,7 +17,7 @@ To update the development environment variables:
 
 1. Open the app project.
 1. Open the `./env` file for your project.
-1. 1. Update the following variables:
+1. Update the following variables:
 
     - For `MicrosoftAppId`, update the Bot registration ID from Azure AD.
     - For `MicrosoftAppPassword`, update the Bot registration client secret.
@@ -26,7 +26,7 @@ To update the development environment variables:
 
 1. Save the file.
 
-You've now configured the required environment variables for your bot app and for SSO. Next, add the code for handling tokens.
+You've now configured the required environment variables for your bot app and SSO. Next, add the code for handling tokens.
 
 ## Add code to request a token
 
@@ -60,7 +60,7 @@ To update your app's code:
     ---
 
     >[!NOTE]
-    > You might receive multiple responses for a given request if the user has multiple active endpoints. You must eliminate all duplicate or redundant responses with the token. For more information about **signin/tokenExchange**, see [TeamsSSOTokenExchangeMiddleware Class](/python/api/botbuilder-core/botbuilder.core.teams.teams_sso_token_exchange_middleware.teamsssotokenexchangemiddleware?view=botbuilder-py-latest#remarks&preserve-view=true).
+    > You might receive multiple responses for a given request if the user has multiple active endpoints. You must eliminate all duplicate or redundant responses with the token. For more information about signin/tokenExchange, see [TeamsSSOTokenExchangeMiddleware Class](/python/api/botbuilder-core/botbuilder.core.teams.teams_sso_token_exchange_middleware.teamsssotokenexchangemiddleware?view=botbuilder-py-latest#remarks&preserve-view=true).
 
 1. Use the following code snippet for requesting a token.
 
@@ -89,7 +89,7 @@ To update your app's code:
                 // to add telemetry capture to your bot.
                 logger.LogError(exception, $"[OnTurnError] unhandled error : {exception.Message}");
 
-                // Send a message to the user
+                // Send a message to the user.
                 await turnContext.SendActivityAsync("The bot encountered an error or bug.");
                 await turnContext.SendActivityAsync("To continue to run this bot, please fix the bot source code.");
 
@@ -98,7 +98,7 @@ To update your app's code:
                     try
                     {
                         // Delete the conversationState for the current conversation to prevent the
-                        // bot from getting stuck in a error-loop caused by being in a bad state.
+                        // bot from getting stuck in an error-loop caused by being in a bad state.
                         // ConversationState should be thought of as similar to "cookie-state" in a Web pages.
                         await conversationState.DeleteAsync(turnContext);
                     }
@@ -108,7 +108,7 @@ To update your app's code:
                     }
                 }
 
-                // Send a trace activity, which will be displayed in the Bot Framework Emulator
+                // Send a trace activity, which will be displayed in the Bot Framework Emulator.
                 await turnContext.TraceActivityAsync(
                     "OnTurnError Trace",
                     exception.Message,
@@ -124,9 +124,9 @@ To update your app's code:
     After you add the code to `index.js`, your code should be as shown below:
 
     ```JavaScript
-    // index.js is used to setup and configure your bot
+    // index.js is used to setup and configure your bot.
 
-    // Import required pckages
+    // Import required packages.
     const path = require('path');
     
     // Read botFilePath and botFileSecret from .env file.
@@ -165,12 +165,10 @@ To update your app's code:
     adapter.use(tokenExchangeMiddleware);
     adapter.onTurnError = async (context, error) => {
         // This check writes out errors to console log .vs. app insights.
-        // NOTE: In production environment, you should consider logging this to Azure
-        //       application insights. See https://aka.ms/bottelemetry for telemetry
-        //       configuration instructions.
+        // NOTE: In production environment, you should consider logging this to Azure application insights. See https://aka.ms/bottelemetry for telemetry configuration instructions.
         console.error(`\n [onTurnError] unhandled error: ${ error }`);
     
-        // Send a trace activity, which will be displayed in Bot Framework Emulator
+        // Send a trace activity, which will be displayed in Bot Framework Emulator.
         await context.sendTraceActivity(
             'OnTurnError Trace',
             `${ error }`,
@@ -178,10 +176,10 @@ To update your app's code:
             'TurnError'
         );
     
-        // Send a message to the user
+        // Send a message to the user.
         await context.sendActivity('The bot encountered an error or bug.');
         await context.sendActivity('To continue to run this bot, please fix the bot source code.');
-        // Clear out state
+        // Clear out state.
         await conversationState.delete(context);
     };
     
@@ -211,7 +209,7 @@ To update your app's code:
     
     // Listen for incoming requests.
     server.post('/api/messages', async (req, res) => {
-        // Route received a request to adapter for processing
+        // Route received a request to adapter for processing.
         await adapter.process(req, res, (context) => bot.run(context));
     });
 
@@ -242,7 +240,7 @@ If you encounter any errors, see [Troubleshoot SSO authentication in Teams](~/ta
 ## Add code to receive the token
 
 The response with the token is sent through an invoke activity with the same schema as other invoke activities that the bots receive today. The only difference is the invoke name,
-**sign in/tokenExchange**, and the **value** field. The **value** field contains the **Id**, a string of the initial request to get the token and the **token** field, a string value including the token.
+sign in/tokenExchange, and the **value** field. The **value** field contains the **Id**, a string of the initial request to get the token and the **token** field, a string value including the token.
 
 Use the following code snippet example to invoke response:
 
@@ -349,7 +347,7 @@ async loginStep(stepContext) {
 > [!NOTE]
 > The code snippets use the Waterfall Dialog bot. For more information about Waterfall Dialog, see [About component and waterfall dialogs](/azure/bot-service/bot-builder-concept-waterfall-dialogs?view=azure-bot-service-4.0&preserve-view=true).
 
-You receive the token in `OnTeamsMessagingExtensionQueryAsync` handler in the `turnContext.Activity.Value` payload or in the `OnTeamsAppBasedLinkQueryAsync`, depending on which scenario you're enabling SSO for:
+You receive the token in `OnTeamsMessagingExtensionQueryAsync` handler in the `turnContext.Activity.Value` payload or in the `OnTeamsAppBasedLinkQueryAsync`, depending on which scenario you're enabling SSO for.
 
 ```json
 JObject valueObject=JObject.FromObject(turnContext.Activity.Value);
@@ -362,14 +360,12 @@ if(valueObject["authentication"] !=null)
 
 ### Validate the access token
 
-Web APIs on your server must decode the access token, and verify if it's sent from the client. 
+Web APIs on your server must decode the access token and verify if it's sent from the client.
 
 > [!NOTE]
 > If you use Bot Framework, it handles the access token validation. If you don't use Bot Framework, follow the guidelines in this section.
 
-For more information about validating access token, see [Validate tokens](/azure/active-directory/develop/access-tokens.md#validate-tokens)
-
-<!--The token is a JSON Web Token (JWT), which means that validation works just like token validation in most standard OAuth flows. The web APIs must decode access token. Optionally, you can copy and paste access token manually into a tool, such as jwt.ms.-->
+For more information about validating access token, see [Validate tokens](/azure/active-directory/develop/access-tokens.md#validate-tokens).
 
 There are a number of libraries available that can handle JWT validation. Basic validation includes:
 
@@ -414,7 +410,7 @@ The following is a typical decoded payload of an access token.
 If you're using the OAuth connection, you must update or add the token in the Bot Framework Token store. Add the following code snippet example to `TeamsMessagingExtensionsSearchAuthConfigBot.cs` (or the equivalent file in your app's code) for updating or adding the token in the store:
 
 > [!NOTE]
-> You can find the sample `TeamsMessagingExtensionsSearchAuthConfigBot.cs` in [Tab, Bot and Message Extension (ME) SSO](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp/App%20SSO%20Sample/Bots).
+> You can find the sample `TeamsMessagingExtensionsSearchAuthConfigBot.cs` in [Tab, Bot, and Message Extension (ME) SSO](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp/App%20SSO%20Sample/Bots).
 
 ```c#
 protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
@@ -425,7 +421,7 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
              JObject authenticationObject = JObject.FromObject(valueObject["authentication"]);
              if (authenticationObject["token"] != null)
              {
-                 //If the token is NOT exchangeable, then return 412 to require user consent
+                 //If the token is NOT exchangeable, then return 412 to require user consent.
                  if (await TokenIsExchangeable(turnContext, cancellationToken))
                  {
                      return await base.OnInvokeActivityAsync(turnContext, cancellationToken).ConfigureAwait(false);
@@ -463,7 +459,7 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
          catch
  #pragma warning restore CA1031 //Do not catch general exception types
          {
-             //ignore exceptions
+             //ignore exceptions.
              //if token exchange failed for any reason, tokenExchangeResponse above remains null, and a failure invoke response is sent to the caller.
              //This ensures the caller knows that the invoke has failed.
          }
@@ -489,7 +485,7 @@ Use the following code snippet to handle the access token in case the app user l
             {
                 var text = innerDc.Context.Activity.Text.ToLowerInvariant();
 
-                // Allow logout anywhere in the command
+                // Allow logout anywhere in the command.
                 if (text.IndexOf("logout") >= 0)
                 {
                     // The UserTokenClient encapsulates the authentication processes.
@@ -538,5 +534,5 @@ This section provides Bot authentication v3 SDK sample.
 | **Sample name** | **Description** | **C#** | **Node.js** | **Python** |
 |---------------|------------|------------|-------------|---------------|
 | Bot authentication | This sample shows how to get started with authentication in a bot for Teams. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth) |
-| Tab, bot, and Message extension (ME) SSO | This sample shows SSO for tab, bot and Message extension - search, action, link unfurl. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | NA |
-|Tab, bot, and Message extension | This sample shows how to check authentication in bot, tab, and Message extension with SSO | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-auth/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-auth/nodejs) | NA |
+| Tab, bot, and Message extension (ME) SSO | This sample shows SSO for tab, bot, and message extension - search, action, link unfurl. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | NA |
+|Tab, bot, and Message extension | This sample shows how to check authentication in bot, tab, and message extension with SSO | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-auth/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-auth/nodejs) | NA |
