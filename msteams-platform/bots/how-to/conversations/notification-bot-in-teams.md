@@ -553,7 +553,7 @@ Perform the following steps to extend my notification bot to support command and
 
 1. Open file `bot\src\internal\initialize.ts(js)`, update your `conversationBot` initialization to enable command and response:
 
-   :::image type="content" source="../../../assets/images/notification-bot/notification-support-command-response.png" alt-text="add support command and response", lightbox="../../../assets/images/notification-bot/notification-support-command-response.png":::
+   :::image type="content" source="../../../assets/images/notification-bot/notification-support-command-response.png" alt-text="add support command and response" lightbox="../../../assets/images/notification-bot/notification-support-command-response.png":::
 
 1. How to add command and response to your bot, see the [instructions](https://github.com/OfficeDev/TeamsFx/wiki/Respond-to-chat-commands-in-Teams#How-to-add-more-command-and-response).
 
