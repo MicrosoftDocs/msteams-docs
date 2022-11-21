@@ -540,7 +540,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-bot-add-command.png" alt-text="Screenshot of image showing commands section in the Developer Portal.":::
 
-    1. Enter a suitable name, description and select all the three scopes for the **Command** and select add. 
+    1. Enter a suitable name and description, select all the three scopes for the **Command**, and select **Add**. 
         - **Personal**
         - **Team**
         - **Group Chat**
