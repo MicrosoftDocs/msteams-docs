@@ -112,7 +112,7 @@ items:
 
       Perform the following steps if you've created a new **Microsoft App ID**:
 
-    1. In the left panel, select **Configuration**. 
+    1. In the left pane, select **Configuration**. 
 
        > [!TIP]
        > Save the **Microsoft App ID** or **Client ID** for future reference.
@@ -150,7 +150,7 @@ items:
 
     1. Select **Channels** in the left pane and select **Microsoft Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.
 
-       :::image type="content" source="./assets/images/adaptive-cards/channel-teams.png" alt-text="Screenshot of Azure bot home page. The Channels option in the left panel and Microsoft Teams under Channel are highlighted in red.":::
+       :::image type="content" source="./assets/images/adaptive-cards/channel-teams.png" alt-text="Screenshot of Azure bot home page. The Channels option in the left pane and Microsoft Teams under Channel are highlighted in red.":::
 
     1. Select the checkbox to accept the **Terms of Service**.
     
@@ -200,7 +200,7 @@ items:
 
     1. Select **Azure Active Directory**.
 
-    1. In the left navigation panel, select **App Registrations**.
+    1. In the left pane, select **App Registrations**.
 
     1. Select your bot.
 
@@ -231,7 +231,7 @@ items:
 
        :::image type="content" source="./assets/images/sbs-messagingextension-action/addascope.png" alt-text="Screenshot of Scopes defined by this API section with the Add a scope option highlighted in red.":::
     
-    1. In the panel that appears, enter `access_as_user` as the **Scope name**.
+    1. In the pane that appears, enter `access_as_user` as the **Scope name**.
   
     1. Set **Who can consent?** to `Admins and users`.
   
@@ -252,8 +252,7 @@ items:
         :::image type="content" source="./assets/images/sbs-messagingextension-action/addascopeuser.png" alt-text="Screenshot of Add a scope with Add scope highlighted in red.":::
 
         > [!NOTE]
-        > The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.</br>
-           `api://2bb1****.ngrok.io/00000000-0000-0000-0000-000000000000/access_as_user`
+        > The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end. For example, `api://2bb1****.ngrok.io/00000000-0000-0000-0000-000000000000/access_as_user`.
 
         :::image type="content" source="./assets/images/sbs-messagingextension-action/scopes.png" alt-text="Screenshot of Scopes defined by this API section with the Scope highlighted in red.":::
 
@@ -279,7 +278,7 @@ items:
 
         :::image type="content" source="./assets/images/sbs-messagingextension-action/clientapp.png" alt-text="Screenshot of Authorized client applications under Expose an API with the client IDs highlighted in red.":::
 
-    1. In the left panel, select **API Permissions**. 
+    1. In the left pane, select **API Permissions**. 
 
        > [!NOTE]
        > Users need to consent to these permissions only if the Azure AD app is registered in a different tenant.
@@ -303,7 +302,7 @@ items:
 
          :::image type="content" source="./assets/images/sbs-messagingextension-action/other-permissions.png" alt-text="Screenshot of Request API permissions with Add permissions highlighted in red.":::
 
-    1. From the left panel, select **Authentication** to set a redirect URI. 
+    1. From the left pane, select **Authentication** to set a redirect URI. 
 
        > [!NOTE]
        > If an app isn't granted IT admin consent, users must provide consent the first time they use an app.
