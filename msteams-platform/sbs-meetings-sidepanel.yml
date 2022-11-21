@@ -113,7 +113,7 @@ items:
 
     1. Select **Go to resource**. 
 
-       :::image type="content" source="~/assets/images/meetings-side-panel/botdeployment_1.png" alt-text="Screenshot of deployment complete with Go to resource option highlighted in red.":::
+       :::image type="content" source="~/assets/images/meetings-side-panel/botdeployment_1.png" alt-text="Screenshot of deployment complete with the Go to resource option highlighted in red.":::
 
         Your Azure bot is created.
 
@@ -130,7 +130,7 @@ items:
 
     1. Next to **Microsoft App ID**, select **Manage**.
 
-       :::image type="content" source="~/assets/images/meetings-side-panel/manage-bot-label_1.png" alt-text="Screenshot of the Configuration page with the Manage option highlighted.":::
+       :::image type="content" source="~/assets/images/meetings-side-panel/manage-bot-label_1.png" alt-text="Screenshot of the Configuration page with the Manage option highlighted in red.":::
 
     1. In the **Client secrets** section, select **New client secret**. 
 
@@ -161,7 +161,7 @@ items:
 
     1. Select **Channels** in the left pane and select **Microsoft Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.
 
-       :::image type="content" source="./assets/images/meetings-side-panel/channel-teams_1.png" alt-text="Screenshot of Azure bot Home page. The Channels option in the left pane and Microsoft Teams under Channels are highlighted in red":::
+       :::image type="content" source="./assets/images/meetings-side-panel/channel-teams_1.png" alt-text="Screenshot of Azure bot Home page. The Channels option in the left pane and Microsoft Teams under Channels are highlighted in red.":::
 
     1. Select the checkbox to accept the **Terms of Service**.
     
@@ -302,7 +302,7 @@ items:
 
     1. Select **Add a permission** > **Microsoft Graph**
 
-        :::image type="content" source="~/assets/images/meetings-side-panel/addpermission_1.png" alt-text="Screenshot of Configured permissions with Add a permission highlighted in red"::: 
+        :::image type="content" source="~/assets/images/meetings-side-panel/addpermission_1.png" alt-text="Screenshot of Configured permissions with Add a permission highlighted in red."::: 
 
     1. Select **Delegated permissions**.
 
@@ -335,7 +335,7 @@ items:
    
          1. Select **Configure**.
 
-             :::image type="content" source="~/assets/images/meetings-side-panel/authend_1.png" alt-text="Screenshot of Configure Web page with the options Redirect URLs, token selections, and Configure are highlighted in red":::
+             :::image type="content" source="~/assets/images/meetings-side-panel/authend_1.png" alt-text="Screenshot of Configure Web page with the options Redirect URLs, token selections, and Configure are highlighted in red.":::
 
 - title: Set up app settings and manifest files
   durationInMinutes: 1
@@ -415,7 +415,7 @@ items:
        * icon-outline.png
        * icon-color.png
 
-         :::image type="content" source="~/assets/images/meetings-side-panel/zipfile_1.png" alt-text="Screenshot of cloned repository with the Side Manifest zip file highlighted in red"::: 
+         :::image type="content" source="~/assets/images/meetings-side-panel/zipfile_1.png" alt-text="Screenshot of cloned repository with the Side Manifest zip file highlighted in red."::: 
     
     1. Create a meeting with a few presenters and attendees.
    
@@ -427,7 +427,7 @@ items:
    
     1. Select **Upload a custom app**. 
 
-        :::image type="content" source="~/assets/images/meetings-side-panel/uploadcustomapp_1.png" alt-text="Screenshot of a banner displayed to build your own app where the Upload a custom app option highlighted in red"::: 
+        :::image type="content" source="~/assets/images/meetings-side-panel/uploadcustomapp_1.png" alt-text="Screenshot of a banner displayed to build your own app where the Upload a custom app option highlighted in red."::: 
 
     1. Select **Open** to upload the .zip file that you created in the **Manifest** folder.
 
