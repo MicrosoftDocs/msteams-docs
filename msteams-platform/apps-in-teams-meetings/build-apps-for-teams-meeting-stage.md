@@ -297,9 +297,10 @@ Follow the [step-by-step guide](../sbs-inmeeting-document-signing.yml) to build 
 
 ## See also
 
+* [Apps for Teams meetings](teams-apps-in-meetings.md)
 * [Enable authentication using third-party OAuth provider](../tabs/how-to/authentication/auth-flow-tab.md)
 * [Resource-specific consent](../graph-api/rsc/resource-specific-consent.md)
-* [Apps for Teams meetings](teams-apps-in-meetings.md)
+* [Adaptive Card](../task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 * [Build tabs for meeting](build-tabs-for-meeting.md)
 * [Build extensible conversation for meeting chat](build-extensible-conversation-for-meeting-chat.md)
 * [Build apps for anonymous users](build-apps-for-anonymous-user.md)

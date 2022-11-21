@@ -9,7 +9,7 @@ ms.topic: conceptual
 Your app can fetch transcripts of a meeting using the meeting ID and the user ID of the meeting organizer, also known as organizer ID. The Graph REST APIs fetch transcripts based on the meeting ID and organizer ID that are passed as parameters in the API.
 
 > [!NOTE]
-> The meeting ID for scheduled meetings may expire in some days if it's unused. It can be revived by using the meeting URL to join the meeting. For more information about meeting expiration timeline for different meeting types, see [Meeting expiration](/microsoftteams/limits-specifications-teams#meeting-expiration).
+> The meeting ID for scheduled meetings may expire in some days if it's unused. It can be revived by using the meeting URL to join the meeting. For more information about meeting expiration timeline for different meeting types, see [meeting expiration](/microsoftteams/limits-specifications-teams#meeting-expiration).
 
 To obtain meeting ID and organizer ID for fetching the transcript, choose one of the two ways:
 
@@ -31,7 +31,7 @@ When your app is notified of a subscribed meeting event, it can retrieve the mee
 
 Choose to subscribe your app to user-level notifications for getting transcripts of a particular user's meeting event. When a meeting is scheduled for that user, your app is notified. Your app can receive meeting notifications using calendar events as well.
 
-For subscribing your app to calendar events, see [Change notifications for Outlook resources in Microsoft Graph](/graph/outlook-change-notifications-overview).
+For subscribing your app to calendar events, see [change notifications for Outlook resources in Microsoft Graph](/graph/outlook-change-notifications-overview).
 
 Use the following example to subscribe to user-level notifications:
 
@@ -74,7 +74,7 @@ To obtain meeting ID and organizer ID from user-level notification:
 
 2. **Get meeting URL**: Use the event ID to retrieve `joinUrl` that contains the meeting URL.
 
-    For more information, see [Get event](/graph/api/event-get).
+    For more information, see [get event](/graph/api/event-get).
 
     Use the following example to request the meeting URL:
 
@@ -151,7 +151,7 @@ To obtain meeting ID and organizer ID from user-level notification:
 
     The chat ID is contained in `threadId`.
 
-4. **Subscribe to chat messages**: Use chat ID to subscribe your app to receive chat messages for that particular meeting. For more information, see [Subscribe to messages in a chat](/graph/teams-changenotifications-chatmessage#subscribe-to-messages-in-a-chat).
+4. **Subscribe to chat messages**: Use chat ID to subscribe your app to receive chat messages for that particular meeting. For more information, see [subscribe to messages in a chat](/graph/teams-changenotifications-chatmessage#subscribe-to-messages-in-a-chat).
 
     If you want your app to subscribe to messages with specific text, see [Subscribe to messages in a chat that contain certain text](/graph/teams-changenotifications-chatmessage#example-2-subscribe-to-messages-in-a-chat-that-contain-certain-text).
 
@@ -161,7 +161,7 @@ To obtain meeting ID and organizer ID from user-level notification:
 
 Tenant-level notifications are useful if your app is authorized to access all meeting transcripts across the tenant. Subscribe your app to be notified for events when transcription starts or call ends for scheduled online Teams meetings. After the meeting ends, your app can access and retrieve the meeting transcript.
 
-For subscribing your app to tenant-level notifications, see [Get change notifications](/graph/teams-changenotifications-chatmessage#subscribe-to-messages-across-all-chats).
+For subscribing your app to tenant-level notifications, see [get change notifications](/graph/teams-changenotifications-chatmessage#subscribe-to-messages-across-all-chats).
 
 When your app is notified about subscribed meeting events, it searches through the notifications for transcription started and meeting ended events. These events contain the chat ID, which is used to obtain chat entity, and eventually meeting ID and organizer ID.
 
@@ -474,6 +474,7 @@ The response payload contains:
 - The meeting ID in the `msGraphResourceId` member of the `details` property.
 - The organizer ID in the `id` member of the `organizer` property.
 <br>
+
 <details>
 <summary><b>Example</b>: Response payload for getting meeting details</b></summary>
 

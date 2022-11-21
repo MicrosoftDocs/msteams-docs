@@ -14,7 +14,7 @@ Every team has a different way of communicating and collaborating tasks. To achi
 
 ## Tabs in Teams meetings
 
-Tabs allow the meeting participants to access services and content in a specific space within a meeting. If you're new to Microsoft Teams tab development, see [Build tabs for Teams](/microsoftteams/platform/tabs/what-are-tabs).
+Tabs allow the meeting participants to access services and content in a specific space within a meeting. If you're new to Microsoft Teams tab development, see [build tabs for Teams](/microsoftteams/platform/tabs/what-are-tabs).
 
 Before creating a meeting tab, it's important to learn about the surfaces that are available to target the meeting chat view, meeting details view, meeting side panel view and meeting stage view.
 

@@ -944,13 +944,14 @@ The following table provides the response codes:
 
 ## See also
 
+* [Apps for Teams meetings](teams-apps-in-meetings.md)
 * [Enable authentication using third-party OAuth provider](../tabs/how-to/authentication/auth-flow-tab.md)
 * [App manifest schema for Teams](../resources/schema/manifest-schema.md)
 * [Resource-specific consent](../graph-api/rsc/resource-specific-consent.md)
 * [meeting module](/javascript/api/@microsoft/teams-js/microsoftteams.meeting)
-* [Apps for Teams meetings](teams-apps-in-meetings.md)
 * [Live Share SDK](teams-live-share-overview.md)
 * [Teams cloud meeting recording](/microsoftteams/cloud-recording)
+* [Build in-meeting notification for Teams meeting](in-meeting-notification-for-meeting.md)
 
 ## Next steps
 
