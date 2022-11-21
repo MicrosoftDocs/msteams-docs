@@ -63,6 +63,8 @@ This section describes the tasks involved in implementing SSO for a Teams bot or
 
 1. **Update Teams app manifest**: Update your Teams client app manifest with the app ID and application ID URI generated in Azure AD to allow Teams to request access tokens on behalf of your app. The update required in the manifest file is same for bot and message extension apps.
 
+1. **Configure Graph scopes and permissions**: You can add more scopes to your app by adding Microsoft Graph scopes and permissions.
+
 ## Next step
 
 > [!div class="nextstepaction"]
