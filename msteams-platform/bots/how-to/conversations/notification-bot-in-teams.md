@@ -9,12 +9,19 @@ ms.localizationpriority: high
 
 # Notification bot in Teams
 
-Notification bot in Microsoft Teams enables you to build applications that captures the events and send them as notifications to an individual, chat, group, or channel in Teams. You can send notifications as plain text or [Adaptive Cards](../../../task-modules-and-cards/cards/cards-reference.md#adaptive-card).
+Microsoft Teams Toolkit enables you to build applications that capture events and send them as notifications to an individual, chat, group, or channel in Teams. You can send notifications as plain text or [Adaptive Cards](../../../task-modules-and-cards/cards/cards-reference.md#adaptive-card). The the notification bot template creates an app that sends a message to Teams with Adaptive Cards triggered by HTTP post request. The app template is built using the TeamsFx SDK, which provides a simple set of functions over the Microsoft Bot Framework to implement this scenario. You can create notification bot in multiple scenarios such as notification sent in teams channel in case of a build failure, and when creating a pull request, a review request link sent as a notification to the reviewer.
 
 :::image type="content" source="../../../assets/images/notification-bot/notification-new-event.png" alt-text="new notification event sample":::
 
 **Advantages**
-[Placeholder for advantages]
+
+1. Ease of sending notifications to personal chat, group conversation and channel using developer-friendly API from TeamsFx SDK.
+1. Enriching notifications by customizing them with Adaptive Card.
+1. Multiple mechanism to trigger notifications such as HTTP and Timer Trigger with Azure Functions.
+
+**Limitation**
+
+Notification bot's only major limitation is that the bot application needs to be installed with the corresponding scope before sending notification.
 
 ## Notification based on events
 
@@ -62,6 +69,15 @@ foreach (var target in await _conversation.Notification.GetInstallationsAsync())
 ```
 
 ---
+
+## Notification bot installation
+
+A notification bot needs to be installed into a team, or a group chat, or as personal app, depending on the required scope. You can select the installation target before adding the bot to your App.
+
+:::image type="content" source="../../../assets/images/notification-bot/notification-installation-scope.png" alt-text="add installation scope":::
+
+> [!NOTE]
+> For more install options, see [configure default install options](../../../concepts/deploy-and-publish/apps-publish-overview.md#configure-default-install-options)
 
 ## Customize notification
 
@@ -423,3 +439,11 @@ There can be more authentication or authorization solutions for an API. You can 
 ## Connect to existing APIs
 
 If you don't have the required SDK, and want to invoke external APIs in your code. The "Teams: Connect to an API" command in Microsoft Visual Studio Code Teams Toolkit extension, or "teamsfx add api-connection" command in TeamsFx CLI can be used to bootstrap code to call target APIs. For more information, see [connect to existing API](../../../toolkit/add-API-connection.md#steps-to-connect-to-api) document.
+
+## See also
+
+* [Build bots for Teams](../../what-are-bots.md)
+* [Build your first bot app using JavaScript](../../../sbs-gs-bot.yml)
+* [Build notification bot with JavaScript](../../../sbs-gs-notificationbot.yml)
+* [Adaptive Cards](../../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
+* [Conversation basics](conversation-basics.md)
