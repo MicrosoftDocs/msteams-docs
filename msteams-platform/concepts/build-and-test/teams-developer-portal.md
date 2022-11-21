@@ -28,7 +28,7 @@ The Developer Portal provides the following ways to register a Teams app:
 
 The Developer portal allows you to create a brand new app:
 
-1. Sign in to [Developer Portal](https://dev.teams.microsoft.com), select **Apps** from the left pane.
+1. Sign in to [Developer Portal](https://dev.teams.microsoft.com) and select **Apps** from the left pane.
 
    :::image type="content" source="../../assets/images/tdp/home-page.png" alt-text="Screenshot shows the home page of the Developer Portal for Teams with the Apps option highlighted in red.":::
 
@@ -47,7 +47,7 @@ Now you've successfully created a brand new app and you can see all the basic in
 Follow the steps to import and manage your existing app in the Developer Portal.
 
 1. On the Developer Portal, select **Apps** from the left pane.
-1. Select **Import App**.
+1. Select **Import app**.
 
    :::image type="content" source="../../assets/images/tdp/import-app.png" alt-text="Screenshot shows how to import your existing app in Developer Portal for Teams to manage your apps.":::
 
@@ -64,7 +64,7 @@ Follow the steps to import and manage your existing app in the Developer Portal.
 
 Changelog for Developer Portal let's you stay engaged with the latest updates in Teams. You can view the updates about features, recent changes in APIs, important bug fixes, and other developer products.
 
-To view the Changelog, log into [Developer Portal](https://dev.teams.microsoft.com) and select **Changelog** from the left pane.
+To view the Changelog, sign in to [Developer Portal](https://dev.teams.microsoft.com) and select **Changelog** from the left pane.
 
 :::image type="content" source="../../assets/images/tdp/changelog.png" alt-text="Screenshot shows the Changelog in the Developer Portal.":::
 
