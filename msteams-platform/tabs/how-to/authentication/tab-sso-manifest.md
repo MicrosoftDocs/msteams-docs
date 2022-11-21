@@ -39,10 +39,10 @@ For more information, see [webApplicationInfo](../../../resources/schema/manifes
 1. Open the tab app project.
 2. Open the manifest folder.
 
-  > [!NOTE]
-  >
-  > - The manifest folder should be at the root of your project. For more information, see [Create a Microsoft Teams app package](../../../concepts/build-and-test/apps-package.md).
-  > - For more information on learning how to create a manifest.json, see [Reference: Manifest schema for Microsoft Teams](../../../resources/schema/manifest-schema.md).
+    > [!NOTE]
+    >
+    > - The manifest folder should be at the root of your project. For more information, see [Create a Microsoft Teams app package](../../../concepts/build-and-test/apps-package.md).
+    > - For more information on learning how to create a manifest.json, see [Reference: Manifest schema for Microsoft Teams](../../../resources/schema/manifest-schema.md).
 
 1. Open the `manifest.json` file
 1. Append the following code snippet to the manifest file to add the new property:

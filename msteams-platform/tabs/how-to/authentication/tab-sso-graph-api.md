@@ -25,13 +25,13 @@ You can configure additional Graph scopes in Azure AD for your app. These are de
 
 1. Open the app you registered in the [Azure portal](https://ms.portal.azure.com/).
 
-2. Select **Manage** > **API permission** from the left pane.
+2. Select **Manage** > **API permissions** from the left pane.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/api-permission-menu.png" alt-text="App permissions menu option.":::
 
     The **API permissions** page appears.
 
-3. Select **+ Add permissions** to add Microsoft Graph API permissions.
+3. Select **+ Add a permission** to add Microsoft Graph API permissions.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-permission.png" alt-text="App permissions page.":::
 

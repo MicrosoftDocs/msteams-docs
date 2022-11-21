@@ -1,6 +1,6 @@
 ---
 title: Extend your app with Microsoft Graph permissions
-description: Describes configuring API permissions with Microsoft Graph for bot and messaging extensipn apps
+description: Describes configuring API permissions with Microsoft Graph for bot and messaging extensipn apps.
 ms.topic: how-to
 ms.localizationpriority: high
 ---
@@ -10,27 +10,23 @@ You can extend your bot and message extension apps by using Microsoft Graph. The
 
 Graph scopes, such as `User.Read` or `Mail.Read`, lets you specify how your app accesses a Teams user's account. You need to specify your scopes in the authorization request.
 
-In this section, you'll learn to:
-
-- [Configure API permissions in Azure AD](#configure-api-permissions-in-azure-ad)
-<!---- [Configure authentication for different platforms](#configure-authentication-for-different-platforms)
- [Acquire access token for MS Graph](#acquire-access-token-for-ms-graph)-->
+In this section, you'll learn to [Configure API permissions in Azure AD](#configure-api-permissions-in-azure-ad).
 
 ## Configure API permissions in Azure AD
 
-You can configure Graph scopes in Azure AD as required for your app. Delegated permissions are used by apps that require signed-in access. A signed-in app user or administrator must consent to them. Your app can consent on behalf of the signed-in user when it calls Microsoft Graph.
+You can configure Graph scopes in Azure AD as required for your app. Delegated permissions are used by apps that require signed-in access. An app user or administrator who is signed-in must consent to them. Your app can consent on behalf of the signed-in user when it calls Microsoft Graph.
 
 ### To configure API permissions
 
 1. Open the app you registered in the [Azure portal](https://ms.portal.azure.com/).
 
-2. Select **Manage** > **API permission** from the left pane.
+2. Select **Manage** > **API permissions** from the left pane.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/api-permission-menu.png" alt-text="App permissions menu option." border="true":::
 
     The **API permissions** page appears.
 
-3. Select **+ Add permissions** to add Microsoft Graph API permissions.
+3. Select **+ Add a permission** to add Microsoft Graph API permissions.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/app-permission.png" alt-text="App permissions page." border="true":::
 
@@ -52,7 +48,7 @@ You can configure Graph scopes in Azure AD as required for your app. Delegated p
 
     You can also enter the permission name in the search box to find it.
 
-    A message pops up on the browser stating that the permissions were updated.
+    A message appears on the browser stating that the permissions were updated.
 
    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/updated-permission-msg.png" alt-text="Permissions updated message." border="true":::
 
@@ -61,56 +57,6 @@ You can configure Graph scopes in Azure AD as required for your app. Delegated p
    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/configured-permissions.png" alt-text="API permissions are configured." border="true":::
 
     You've configured your app with Microsoft Graph permissions.
-
-<!--## Configure authentication for different platforms
-
-Configuration for authentication depends on the platform or device where you want to target your app. You may need to configure redirect URIs, authentication settings, or platform-specific details.
-
-> [!NOTE]
->
-> - If your bot app hasn't been granted IT admin consent, app users have to provide consent the first time they use your app on a different platform.
-> - Implicit grant is not required if SSO is enabled on a bot app.
-
-You can configure authentication for multiple platforms as long as the URL is unique.
-
-### To configure authentication for a platform
-
-1. Open the app you registered in the [Azure portal](https://ms.portal.azure.com/).
-
-1. Select **Manage** > **Authentication** from the left pane.
-
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/azure-portal-platform.png" alt-text="Authenticate for platforms" border="true":::
-
-    The **Platform configurations** page appears.
-
-1. Select **+ Add a platform**.
-
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/add-platform.png" alt-text="Add a platforms" border="true":::
-
-    The **Configure platforms** page appears.
-
-1. Select the platform that you want to configure for your app. You can choose the platform type from web or SPA.
-
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/configure-platform.png" alt-text="Select web platform" border="true":::
-
-    <!--You can configure multiple platforms for a particular platform type. Ensure that the redirect URI is unique for every platform you configure.--|
-
-    The **Configure Web** page appears.
-
-    > [!NOTE]
-    > The configurations will be different based on the platform you select.
-
-1. Enter the configuration details for the platform.
-
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/config-web-platform.png" alt-text="Configure web platform" border="true":::
-
-    1. Enter the redirect URI. The URI should be unique.
-    2. Enter the front-channel log-out URL.
-    3. Select the tokens you want Azure AD to send for your app.
-
-1. Select **Configure**.
-
-    The platform is configured and displayed in the **Platform configurations** page.-->
 
 After you've completed the configuration in Azure AD, you must update the code to acquire access token for Microsoft Graph. For more information, see [Bot framework SDK](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/46.teams-auth/SimpleGraphClient.cs).
 

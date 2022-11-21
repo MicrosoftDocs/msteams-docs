@@ -1,6 +1,6 @@
 ---
 title: Update manifest for enabling SSO for bot and messaging extension
-description: Describes updating manifest for enabling SSO for bot and message extension
+description: Describes updating manifest to enable SSO for bot and message extension.
 ms.topic: how-to
 ms.localizationpriority: high
 ---
@@ -36,10 +36,10 @@ For more information, see [webApplicationInfo](../../../resources/schema/manifes
 1. Open the app project.
 2. Open the manifest folder.
 
-  > [!NOTE]
-  >
-  > - The manifest folder should be at the root of your project. For more information, see [Create a Microsoft Teams app package](../../../concepts/build-and-test/apps-package.md).
-  > - For more information on learning how to create a manifest.json, see [Reference: Manifest schema for Microsoft Teams](../../../resources/schema/manifest-schema.md).
+    > [!NOTE]
+    >
+    > - The manifest folder should be at the root of your project. For more information, see [Create a Microsoft Teams app package](../../../concepts/build-and-test/apps-package.md).
+    > - For more information on learning how to create a manifest.json, see [Reference: Manifest schema for Microsoft Teams](../../../resources/schema/manifest-schema.md).
 
 1. Open the `manifest.json` file.
 1. Add one of the following code snippets to the manifest file to add the new property.
@@ -64,9 +64,9 @@ For more information, see [webApplicationInfo](../../../resources/schema/manifes
         }
         ```
 
-    where,
-    - {Azure AD AppId} is the app ID you created when you registered your app in Azure AD. It's the GUID.
-    - {{Subdomain}.app ID URI} is the application ID URI that you registered when creating scope in Azure AD.
+        where,
+        - {Azure AD AppId} is the app ID you created when you registered your app in Azure AD. It's the GUID.
+        - {{Subdomain}.app ID URI} is the application ID URI that you registered when creating scope in Azure AD.
 
 4. Update the app ID from Azure AD in the **id** property.
 5. Update the subdomain URL in the following properties:
