@@ -609,16 +609,16 @@ The scope and permissions are now configured. Next, you must configure the autho
 
 1. Select **Add application**.
 
-A message appears on the browser stating that the authorized client app was added.
+    A message appears on the browser stating that the authorized client app was added.
 
-:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/update-app-auth-msg.png" alt-text="Client ID added message" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/update-app-auth-msg.png" alt-text="Client ID added message" border="true":::
 
-The authorized app's client ID displays on the page.
+    The authorized app's client ID displays on the page.
 
-:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/client-app-added.png" alt-text="Client ID added and displayed" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/client-app-added.png" alt-text="Client ID added and displayed" border="true":::
 
-> [!NOTE]
-> You can authorize more than one client application. Repeat the steps of this procedure for configuring another authorized client application.
+    > [!NOTE]
+    > You can authorize more than one client application. Repeat the steps of this procedure for configuring another authorized client application.
 
 You've successfully configured app scope, permissions, and client applications. Ensure that you note and save the application ID URI. Next, you configure the access token version.
 
