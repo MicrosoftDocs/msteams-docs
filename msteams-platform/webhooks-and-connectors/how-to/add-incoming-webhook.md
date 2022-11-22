@@ -95,7 +95,7 @@ To remove an Incoming Webhook from a Teams channel, follow these steps:
 
 | Sample Name           | Description | C#    |  TypeScript |
 |:---------------------|:--------------|:---------|:--------|
-|Incoming Webhook|This sample code demonstrates how to send card using Incoming Webhook. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/incoming-webhook/csharp)|[View](https://github.com/OfficeDev/TeamsFx-Samples/tree/release/incoming-webhook-notification) |
+|Incoming Webhook|This sample code demonstrates how to send card using Incoming Webhook. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/incoming-webhook/csharp)|[View](https://github.com/OfficeDev/TeamsFx-Samples/tree/release/Incoming-Webhook-notification) |
 
 ## See also
 
@@ -106,3 +106,5 @@ To remove an Incoming Webhook from a Teams channel, follow these steps:
 * [Build bots for Teams](../../bots/what-are-bots.md)
 * [Message extensions](../../messaging-extensions/what-are-messaging-extensions.md)
 * [Card actions](../../task-modules-and-cards/cards/cards-actions.md)
+* [Integrate web apps](../../samples/integrate-web-apps-overview.md)
+* [Secure access and data in Azure Logic Apps](/azure/logic-apps/logic-apps-securing-a-logic-app?tabs=azure-portal)
