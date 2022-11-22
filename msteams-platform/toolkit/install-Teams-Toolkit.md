@@ -42,7 +42,7 @@ You can install Teams Toolkit using **Extensions** in Visual Studio Code, or ins
 
 1. Enter **Teams Toolkit** in the search box.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/install-toolkit-2_2.png" alt-text="Screenshot show the Toolkit.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/install-toolkit-2_2_1.png" alt-text="Screenshot show the Toolkit.":::
 
 1. Select **Install**.
   
@@ -88,7 +88,7 @@ By default, Visual Studio Code automatically keeps Teams Toolkit up-to-date. If 
 
 1. Enter **Teams Toolkit**  in the search box.
 
-  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/TeamsToolkit-search.png" alt-text="Search for Teams Toolkit.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/TeamsToolkit-search.png" alt-text="Search for Teams Toolkit.":::
 
 3. Select Teams Toolkit.
 
@@ -96,11 +96,11 @@ By default, Visual Studio Code automatically keeps Teams Toolkit up-to-date. If 
 
 5. Select **Install Another Version...** from the dropdown.
 
-  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/InstallAnotherVersion.png" alt-text="Select other version of VS Code.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/InstallAnotherVersion.png" alt-text="Select other version of VS Code.":::
 
 6. Select the required version to install.
 
-  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/Olderversions of VS Code.png" alt-text="Other then the latest version of VS code.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/Olderversions of VS Code.png" alt-text="Other then the latest version of VS code.":::
 
 ## Install a pre-release version
 
