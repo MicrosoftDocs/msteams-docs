@@ -26,7 +26,7 @@ Now, let's see what happens at the backend during runtime to achieve SSO experie
 
 ## SSO in Teams at runtime
 
-Achieve SSO in a bot or message extension app by obtaining access token for the Teams app user who's currently signed in. This process involves the bot app client and server, Teams client, and Azure AD. During this interaction, the app user must give consent for using Teams identity to obtain the access token in a multi-tenant environment.
+Achieve SSO in a bot or message extension app by obtaining access token for the Teams app user who's currently signed in. This process involves the bot app client and server, Teams client, Bot Framework, and Azure AD. During this interaction, the app user must give consent to obtain the access token in a multi-tenant environment.
 
 The following image shows how SSO works when a Teams app user attempts to access the bot or message extension app:
 
@@ -64,7 +64,7 @@ This section describes the tasks involved in implementing SSO for a Teams bot or
 
 1. **Update Teams app manifest**: Update your Teams client app manifest with the app ID and application ID URI generated in Azure AD to allow Teams to request access tokens on behalf of your app. The update required in the manifest file is the same for bot and message extension apps.
 
-1. **Configure Graph scopes and permissions**: You can add more scopes to your app by adding Microsoft Graph scopes and permissions.
+1. **Configure Graph scopes and permissions**: You can add more scopes to your app by extending your app with Microsoft Graph permissions and scopes.
 
 ## Next step
 
