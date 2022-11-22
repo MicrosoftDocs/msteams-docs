@@ -9,17 +9,17 @@ ms.localizationpriority: high
 
 # Notification bot in Teams
 
-Microsoft Teams Toolkit enables you to build applications that capture events and sends them as notifications to an individual, chat, group, or channel in Teams. You can send notifications as plain text or [Adaptive Cards](../../../task-modules-and-cards/cards/cards-reference.md#adaptive-card). The notification bot template creates an app that sends a message to Teams with Adaptive Cards triggered by HTTP post request. The app template is built using the TeamsFx SDK, which provides a simple set of functions over Microsoft Bot Framework to implement your scenario. Following diagram shows a scenario where a travel agency builds app for their travelers to keep them up-to-date with the weather forecast of in advance so that they can be prepared in advance. This Teams app sends notifications to the travelers about the weather forecast:
+Microsoft Teams Toolkit enables you to build applications that capture events and send them as notifications to an individual, chat, group, or channel in Teams. You can send notifications as plain text or [Adaptive Cards](../../../task-modules-and-cards/cards/cards-reference.md#adaptive-card). The notification bot template creates an app that sends a message to Teams with Adaptive Cards triggered by HTTP post request. The app template is built using the TeamsFx SDK, which provides a simple set of functions over Microsoft Bot Framework to implement your scenario. Following diagram shows a scenario where a travel agency builds app for their customers to keep them up-to-date with the weather forecast in advance. This Teams app sends notifications to the travelers about the weather forecast:
 
 [Placeholder for notification illustration and flowchart]
 
-You can create notification bot in multiple scenarios, such as notification can be sent in teams DevOps channel if there is a build failure. When creating a pull request, a review request link can be sent as a notification to the reviewer.
+You can create notification bot in multiple scenarios, such as notification can be sent in teams DevOps channel if there's a build failure. When you create a pull request, a review request link can be sent as a notification to the reviewer.
 
 **Advantages**
 
-* Facilitates notifications to personal chat, group chat, and in a channel using user friendly APIs from TeamsFx SDK.
+* Facilitates notifications to a personal, group chat, and in a channel, using user friendly APIs from TeamsFx SDK.
 * Enriches notifications by customizing them with an Adaptive Card.
-* Provides multiple mechanisms to trigger notifications such as HTTP and Timer Trigger with Azure functions.
+* Provides multiple mechanisms to trigger notifications such as HTTP and Timer Trigger with Azure Functions.
 
 **Limitation**
 
@@ -27,7 +27,7 @@ Limitation of notification bot is that the bot application needs to be installed
 
 ## Notification based on events
 
-Bot Framework SDK provides the functionality to [proactively message in Teams](send-proactive-messages.md). TeamsFx SDK provides the functionality to manage bot's conversation references when a bot event is triggered. TeamsFx SDK recognizes following bot events:
+Bot Framework SDK provides the functionality to [proactively message in Teams](send-proactive-messages.md). TeamsFx SDK provides the functionality to manage bot's conversation references when a bot event is triggered. TeamsFx SDK recognizes the following bot events:
 
 |**Event**  |**Behavior**  |
 |---------|---------|
@@ -35,11 +35,11 @@ Bot Framework SDK provides the functionality to [proactively message in Teams](s
 |When the bot is uninstalled from a person, group, or Team.     |You need to remove the target conversation reference from the storage.         |
 |When the team, which is installed by bot is deleted.     |You need to remove the target conversation reference from the storage.         |
 |When the team, which is installed by bot is restored.     |You need to add the target conversation reference to the storage.         |
-|When the bot sends messages.     |When the target conversation reference does not exist, you need to add it to the storage.         |
+|When the bot sends messages.     |When the target conversation reference doesn't exist, you need to add it to the storage.         |
 
 :::image type="content" source="../../../assets/images/notification-bot/notification-new-event.png" alt-text="new notification event sample":::
 
-When you send notifications, TeamsFx SDK creates a new conversation from the selected conversation reference and then sends a message. For advanced usage, you can directly access the conversation reference to execute your own bot logic:
+When you send notifications, TeamsFx SDK creates a new conversation from the selected conversation reference, and then sends a message. For advanced usage, you can directly access the conversation reference to execute your own bot logic:
 
 # [TypeScript](#tab/ts)
 
@@ -103,7 +103,7 @@ Following are the customizations you can make to extend the notification templat
     > [!NOTE]
     > By default Teams Toolkit scaffolds a single `restify` entry point in `src/index.js`.
 
-* Azure Functions based notification
+* Azure Functions based notification:
 
   * When you select timer trigger, the default implemented Azure function timer trigger `src/timerTrigger.ts` sends an Adaptive Card every 30 seconds. You can edit the file `*Trigger/function.json` to customize the `schedule` property. For more information, see [Azure Function documentation](/azure/azure-functions/functions-bindings-timer?tabs=in-process&pivots=programming-language-javascript).
 
@@ -113,7 +113,7 @@ Following are the customizations you can make to extend the notification templat
 
     :::image type="content" source="../../../assets/images/notification-bot/notification-http-triggered.png" alt-text="sample of HTTP triggered notification":::
 
-       You can also add Azure Function triggers, such as:
+* You can also add Azure Function triggers, such as:
 
   * `Event Hub` trigger to send notifications when an event is pushed to Azure Event Hub.
 
@@ -283,7 +283,7 @@ You can also add new cards if needed. How to build different types of Adaptive C
    ```
 
    > [!NOTE]
-   > To prevent an undefined output, ensure that you install the bot app in the 'General' channel of a Team.
+   > To prevent an undefined output, ensure that you install the bot app in the General channel of a Team.
 
 * Notifications to a specific person:
 
@@ -425,7 +425,7 @@ builder.Services.AddSingleton(sp =>
 
 ---
 
-If storage isn't provided, you can use a default local file storage, which stores notification connections into:
+If storage is not provided, you can use a default local file storage, which stores notification connections into:
 
 * `.notification.localstore.json` if running locally.
 * `${process.env.TEMP}/.notification.localstore.json`, if `process.env.RUNNING_ON_AZURE` is set to "1".
@@ -441,13 +441,13 @@ If you select HTTP trigger, the scaffolded notification API doesn't have authent
 
 * Use an API key. If you select Azure functions to host your notification bot, it provides [function access keys](/azure/azure-functions/security-concepts?tabs=v4#function-access-keys) that you can use.
 
-* Use an access token issued by Azure Active Directory.
+* Use an access token issued by Azure Active Directory (Azure AD).
 
 There can be more authentication or authorization solutions for an API. You can select as required.
 
 ## Connect to existing APIs
 
-If you don't have the required SDK, and want to invoke external APIs in your code. The "Teams: Connect to an API" command in Microsoft Visual Studio Code Teams Toolkit extension, or "teamsfx add api-connection" command in TeamsFx CLI can be used to bootstrap code to call target APIs. For more information, see [connect to existing API](../../../toolkit/add-API-connection.md#steps-to-connect-to-api) document.
+If you don't have the required SDK, and want to invoke external APIs in your code. The "Teams: Connect to an API" command in Microsoft Visual Studio Code Teams Toolkit extension, or "teamsfx add api-connection" command in TeamsFx CLI can be used to bootstrap code to call target APIs. For more information, see [connect to existing API](../../../toolkit/add-API-connection.md#steps-to-connect-to-api).
 
 ### Teams bot application or Teams Incoming Webhook
 
@@ -457,13 +457,13 @@ In the following table you can see the comparison of the two different ways:
 
 |&nbsp;   |Teams bot app  |Teams Incoming Webhook  |
 |---------|---------|---------|
-|Able to message individual person    |Yes      |No       |
-|Able to message group chat     |Yes         |No         |
-|Able to message public channel     |Yes         |Yes         |
-|Able to message private channel     |No       |Yes       |
-|Able to send card message     |Yes       |Yes         |
-|Able to send welcome message     |Yes      |No         |
-|Able to retrieve Teams context     |Yes       |No       |
+|Message individual person    |Yes      |No       |
+|Message group chat     |Yes         |No         |
+|Message public channel     |Yes         |Yes         |
+|Message private channel     |No       |Yes       |
+|Send card message     |Yes       |Yes         |
+|Send welcome message     |Yes      |No         |
+|Retrieve Teams context     |Yes       |No       |
 |Require installation step on Teams     |Yes         |No         |
 |Require Azure resource     |Azure Bot Service         | No       |
 
@@ -473,7 +473,7 @@ Incoming Webhooks help in posting messages from apps to Teams. If Incoming Webho
 TeamsFx provides you with an [Incoming Webhook Notification Sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/incoming-webhook-notification#getting-started-with-incoming-webhook-notification-sample) that helps you:
 
 * How to create an incoming webhook in Teams.
-* How to send notifications using incoming webhooks with adaptive cards.
+* How to send notifications using incoming webhooks with Adaptive Cards.
 
 ### FAQ
 
@@ -483,7 +483,7 @@ TeamsFx provides you with an [Incoming Webhook Notification Sample](https://gith
 
 <summary><b>Why is the notification installations empty even though the bot app is installed in Teams?</b></summary>
 
-Teams sends an event only at the first installation, if the bot app is already installed before your notification bot service is launched, the installation event either didn't reach the bot service or is omitted.
+Team sends an event only at the first installation. If the bot app is already installed before your notification bot service is launched, the installation event either didn't reach the bot service or is omitted.
 
 You can resolve this in the following ways:
 
@@ -518,7 +518,9 @@ You can resolve this by cleaning your notification storage. After cleaning, noti
 
 <summary><b>Why notification target is lost after restarting or redeploying the bot app?</b></summary>
 
-Notification target connections are stored in the persistence storage. If you're using the default local file storage, Azure web app and Azure Functions will clean up the local file during a restart or redeploy. You can also uninstall the bot from Teams, then reinstall it to again add connections to the storage. Using your own shared storage for production environment is recommended.
+Notification target connections are stored in the persistence storage. If you're using the default local file storage, Azure web app and Azure Functions will clean up the local file during a restart or redeploy. You can also uninstall the bot from Teams, then install it to again add connections to the storage.
+
+Using your own shared storage for production environment is recommended.
 
 <br>
 
@@ -528,7 +530,7 @@ Notification target connections are stored in the persistence storage. If you're
 
 <summary><b>Why is undefined returned when using the API `findChannel()`?</b></summary>
 
-You can encounter an undefined error, when the bot app is installed into other channels instead of the General channel. To fix this error you can uninstall the bot app from Teams and redebug and relaunch it. Ensure that the bot app is installed into the `General` channel after you've redebug and relaunched.
+You can encounter an undefined error, when the bot app is installed into other channels instead of the General channel. To fix this error, you can uninstall the bot app from Teams and redebug and relaunch it. Ensure that the bot app is installed into the `General` channel after you've redebug and relaunched.
 
 <br>
 
@@ -538,7 +540,7 @@ You can encounter an undefined error, when the bot app is installed into other c
 
 <summary><b>Can I know all the targets my bot is installed in and out of the notification project?</b></summary>
 
-There are Microsoft Graph APIs to list apps installed in a team, group or chat. If required you need to iterate your team, group or chat into an installed app to be targeted. In the notification project, it uses persistence storage to store installation targets. For more information, see [notification based on events](#notification-based-on-events).
+There are Microsoft Graph APIs to list apps installed in a team, group or chat. If necessary you need to iterate your team, group or chat into an installed app to be targeted. In the notification project, it uses persistence storage to store installation targets. For more information, see [notification based on events](#notification-based-on-events).
 
 <br>
 
@@ -558,7 +560,7 @@ If azurite exits due to port in use, you can specify another listening port and 
 
 <summary><b>How to extend my notification bot to support command and response?</b></summary>
 
-Perform the following steps to extend my notification bot to support command and response:
+Perform the following steps to extend your notification bot to support command and response:
 
 1. Open file `bot\src\internal\initialize.ts(js)`, update your `conversationBot` initialization to enable command and response:
 
