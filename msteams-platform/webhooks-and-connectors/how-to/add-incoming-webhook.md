@@ -107,4 +107,5 @@ To remove an Incoming Webhook from a Teams channel, follow these steps:
 * [Message extensions](../../messaging-extensions/what-are-messaging-extensions.md)
 * [Card actions](../../task-modules-and-cards/cards/cards-actions.md)
 * [Integrate web apps](../../samples/integrate-web-apps-overview.md)
+* [Share to Teams from web apps](../../concepts/build-and-test/share-to-teams-from-web-apps.md)
 * [Secure access and data in Azure Logic Apps](/azure/logic-apps/logic-apps-securing-a-logic-app?tabs=azure-portal)
