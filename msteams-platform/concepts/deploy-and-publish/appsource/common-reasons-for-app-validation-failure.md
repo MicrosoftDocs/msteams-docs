@@ -183,6 +183,9 @@ Your app name plays a critical role for users to discover your app on the Micros
    :::image type="content" source="../../../assets/images/submission/validation-common-reason-fail-inconsistent-app-functionality.png" alt-text="Screenshot of image to show fail inconsistent usage of app name in app's functionality.":::
 
 * Mismatch between the app name mentioned in the app manifest submitted as part of the app package and Partner Center.
+
+   :::image type="content" source="../../../assets/images/submission/validation-common-reason-fail-partner-center-manifest-different.png" alt-text="Screenshot to show the failed scenario of partner center and manifest which are different.":::
+
 * App names appended with *Beta*, *Dev*, and *Prod* to indicate app isn't production ready.
 
    :::image type="content" source="../../../assets/images/submission/validation-common-reason-pass-app-name-beta-app-production.png" alt-text="Screenshot of image to show passed scenario of app names with beta, dev and prod.":::
@@ -213,9 +216,15 @@ You must update the app version declared in the manifest if you're submitting an
 
 Your app package must only contain your app’s manifest, color icon, and outline icon. App packages that contain any other additional files or folders fail app review.
 
+   :::image type="content" source="../../../assets/images/submission/validation-common-reason-pass-color-icon-outline.png" alt-text="Screenshot of image to show the passed scenario of color icon and outline icon.":::
+
+   :::image type="content" source="../../../assets/images/submission/validation-common-reason-fail-color-icon-outline.png" alt-text="Screenshot of image to show the failed scenario of color icon and outline icon.":::
+
 ## App UI
 
 Your app’s UI must not look incomplete and should be intuitive. Ensure that users aren't presented with a blank screen when performing an action on the App’s UI. Apps that have truncated or overlapping content and apps that display broken images fail app review.
+
+   :::image type="content" source="../../../assets/images/submission/validation-common-reason-failed-blank-screen-app-UI.png" alt-text="Screenshot of image to show the fail of blank screen in app's UI.":::
 
 ## Valid domains
 
