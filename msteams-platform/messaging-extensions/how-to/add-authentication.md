@@ -141,4 +141,4 @@ At this point, the window closes and the control is passed to the Teams client. 
 
 ## See also
 
-[Single sign-on (SSO) support for message extensions](~/messaging-extensions/how-to/enable-sso-auth-me.md)
+[Enable SSO for your bot and message extension app](../../bots/how-to/authentication/bot-sso-overview.md)

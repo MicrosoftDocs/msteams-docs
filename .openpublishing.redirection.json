@@ -841,7 +841,7 @@
         "redirect_url": "/microsoftteams/platform/bots/how-to/authentication/bot-sso-overview"
       },
       {
-        "source_path": "msteams-platform/bots/how-to/authentication/enable-SSO-auth-me.md",
+        "source_path": "msteams-platform/messaging-extensions/how-to/enable-SSO-auth-me.md",
         "redirect_url": "/microsoftteams/platform/bots/how-to/authentication/bot-sso-overview"
       }      
     ]
