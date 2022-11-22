@@ -75,20 +75,20 @@ The following steps help you to publish the app from Teams Toolkit:
      * Select **Publish to Teams** under **DEPLOYMENT** in treeview of Teams Toolkit.
      * Enter trigger **Teams: Publish to Teams** from command palette.
 
-  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-publish.png" alt-text="Select Publish":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-publish.png" alt-text="Select Publish":::
 
-2 Select **Install for your organization**.
+1. Select **Install for your organization**.
 
-  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/installforyourorganization.png" alt-text="Install for your organization":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/installforyourorganization.png" alt-text="Install for your organization":::
 
-  Now the app is successfully published to the admin portal and you see the following notice:
+   Now the app is successfully published to the admin portal and you see the following notice:
 
-  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/confirm-publish.png" alt-text="Confirm Publish":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/confirm-publish.png" alt-text="Confirm Publish":::
 
-  Now the app is available on the **Manage apps** of Microsoft Teams admin center, where you, and the admin can review and approve it.
+Now the app is available on the **Manage apps** of Microsoft Teams admin center, where you, and the admin can review and approve it.
 
-  > [!NOTE]
-  > The app doesn't publish to your organization's app store yet. The step submits the app to the Microsoft Teams admin center where you can approve it for publishing to your organization's app store.
+> [!NOTE]
+> The app doesn't publish to your organization's app store yet. The step submits the app to the Microsoft Teams admin center where you can approve it for publishing to your organization's app store.
 
 ### Approve on Admin Center
 
