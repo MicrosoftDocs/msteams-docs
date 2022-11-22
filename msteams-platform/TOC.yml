@@ -308,6 +308,8 @@
     - name: Channel and group chat conversations with a bot
       href: bots/how-to/conversations/channel-and-group-conversations.md
       displayName: Teams conversational bots
+    - name: Command bot in Teams
+      href: bots/how-to/conversations/command-bot-in-teams.md      
     - name: Conversation events in your Teams bot
       href: bots/how-to/conversations/subscribe-to-conversation-events.md 
       displayName: Message reaction events, event handling for install and uninstall events
