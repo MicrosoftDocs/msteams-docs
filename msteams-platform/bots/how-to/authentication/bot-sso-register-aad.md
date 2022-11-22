@@ -214,7 +214,7 @@ The application ID URI is configured. You can now define scope and permissions f
     > [!NOTE]
     > The new scope you defined displays on the page. Ensure that you note and save the scope that you've configured. You'll need it to update OAuth connection later.
 
-    The scope and permissions are now configured. Next, you must configure the authorized client applications for your Azure AD app.
+The scope and permissions are now configured. Next, you must configure the authorized client applications for your Azure AD app.
 
 #### To configure authorized client application
 
@@ -248,16 +248,16 @@ The application ID URI is configured. You can now define scope and permissions f
 
 1. Select **Add application**.
 
-A message appears on the browser stating that the authorized client app was added.
+    A message appears on the browser stating that the authorized client app was added.
 
-:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/update-app-auth-msg.png" alt-text="Client ID added message" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/update-app-auth-msg.png" alt-text="Client ID added message" border="true":::
 
-The authorized app's client ID displays on the page.
+    The authorized app's client ID displays on the page.
 
-:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/client-app-added.png" alt-text="Client ID added and displayed" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/client-app-added.png" alt-text="Client ID added and displayed" border="true":::
 
-> [!NOTE]
-> You can authorize more than one client application. Repeat the steps of this procedure for configuring another authorized client application.
+    > [!NOTE]
+    > You can authorize more than one client application. Repeat the steps of this procedure for configuring another authorized client application.
 
 You've successfully configured app scope, permissions, and client applications. Ensure that you note and save the application ID URI. Next, you configure the access token version.
 
@@ -427,11 +427,11 @@ With the app (client) ID and client secret provided, the Bot Framework Token Sto
 1. Select **Save**.
 1. Select **Apply**.
 
-After you've configured the OAuth connection, you can select **Test connection** to check if the OAuth connection is successful.
+    After you've configured the OAuth connection, you can select **Test connection** to check if the OAuth connection is successful.
 
-:::image type="content" source="../../../assets/images/authentication/teams-sso-bots/test-oauth.png" alt-text="Test OAuth connection for your bot resource":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/test-oauth.png" alt-text="Test OAuth connection for your bot resource":::
 
-If the connection isn't successful, Azure AD, displays an error. You can verify all configurations and test again.
+    If the connection isn't successful, Azure AD, displays an error. You can verify all configurations and test again.
 
 Congratulations! You've completed the following app configurations in Azure AD required to enable SSO for your bot app:
 
