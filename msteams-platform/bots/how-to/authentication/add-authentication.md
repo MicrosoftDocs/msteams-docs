@@ -267,8 +267,8 @@ With the preliminary settings done, let's focus on the creation of the bot to us
 # [C#/.NET](#tab/dotnet)
 
 1. Clone [cs-auth-sample][teams-auth-bot-cs].
-1. Launch Visual Studio.
-1. From the toolbar, select **File -> Open -> Project/Solution** and open the bot project.
+1. Open Visual Studio.
+1. From the toolbar, select **File > Open > Project/Solution** and open the bot project.
 1. In C#, Update **appsettings.json** as follows:
 
     - Set `ConnectionName` to the name of the identity provider connection you added to the bot registration. The name we used in this example is *BotTeamsAuthADv1*.
