@@ -33,6 +33,13 @@ Each message in a bot conversation is an `Activity` object of type `messageType:
 
 A bot can also send proactive messages to users. A proactive message is any message sent by a bot that isn't in response to a request from a user. You can format your bot messages to include rich cards that include interactive elements, such as buttons, text, images, audio, video, and so on. Bot can dynamically update messages after sending them, instead of having your messages as static snapshots of data. Messages can also be deleted using the Bot Framework's `DeleteActivity` method. The outgoing request to the bot shows conversation ID and tenant ID in the headers. The workflow bot is a type of conversational bot, which interacts with the users in the Adaptive Card. You can customize how the bot sends the Adaptive Card to the users.
 
+## Add SSO authentication to your conversation bots
+
+You can add single sign-on authentication to your conversation bot using the following steps:
+
+* [Create Teams conversation bot](../../../sbs-teams-conversation-bot.yml)
+* [Configure your bot app in Azure AD](/bots/how-to/authentication/bot-sso-register-aad)
+
 ## Next step
 
 > [!div class="nextstepaction"]
