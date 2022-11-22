@@ -86,9 +86,17 @@ By default, Visual Studio Code automatically keeps Teams Toolkit up-to-date. If 
 
 * Select the Extensions icon from the Visual Studio Code activity bar.
 * Enter **Teams Toolkit**  in the search box.
+
+  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/TeamsToolkit-search.png" alt-text="Search for Teams Toolkit.":::
+
 * On the Teams Toolkit page, select the dropdown next to the **Uninstall** button.
 * Select **Install Another Version...** from the dropdown.
+
+  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/InstallAnotherVersion.png" alt-text="Select other version of VS Code.":::
+
 * Select the required version to install.
+
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/Olderversions of VS Code.png" alt-text="Other then the latest version of VS code.":::
 
 ## Install a pre-release version
 
@@ -107,13 +115,13 @@ The Teams Toolkit for Visual Studio Code extension is available on GitHub. To do
 2. Select **Install** or **Modify** if Visual Studio is already installed.
 3. Select the **Workloads** tab, then select the **ASP.NET and web development** workload.
 4. On the right, select the **Microsoft Teams development tools** in the **Optional** section of the **Installation details** panel.
-5. Select **Modify** or **Install** to complete the installation.
+5. Select **Install** to complete the installation.
 
-   :::image type="content" source="../assets/images/teams-toolkit-overview/visual-studio-install_1.png" alt-text="Screenshot shows how to install Visual studio.":::
+   :::image type="content" source="../assets/images/teams-toolkit-overview/visual-studio-install_1_2.png" alt-text="Screenshot shows how to install Visual studio.":::
 
 6. After the installation completes, select **Launch** to open Visual Studio.
 
-    :::image type="content" source="../assets/images/teams-toolkit-overview/visual-studio-launch_1.png" alt-text="Screenshot shows how to launch visual studio.":::
+    :::image type="content" source="../assets/images/teams-toolkit-overview/visual-studio-launch_1_2.png" alt-text="Screenshot shows how to launch visual studio.":::
 
 ::: zone-end
 
