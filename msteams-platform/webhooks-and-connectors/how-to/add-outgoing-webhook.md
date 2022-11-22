@@ -244,5 +244,5 @@ Follow the [step-by-step guide](../../sbs-outgoing-webhooks.yml) to create Outgo
 * [Webhooks and connectors](../what-are-webhooks-and-connectors.md)
 * [Create and send messages](connectors-using.md)
 * [Create Incoming Webhooks](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
-* [Create Office 365 Connector](~/webhooks-and-connectors/how-to/connectors-creating.md)
+* [Create Office 365 Connectors](~/webhooks-and-connectors/how-to/connectors-creating.md)
 * [Adaptive Cards](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
