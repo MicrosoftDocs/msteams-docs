@@ -13,7 +13,7 @@ zone_pivot_groups: teams-app-platform
 
 ::: zone pivot="visual-studio-code"
 
-Teams Toolkit makes it simple to get started with app development for Microsoft Teams using Visual Studio Code .
+Teams Toolkit makes it simple to get started with app development for Microsoft Teams using Visual Studio Code.
 
 * Start with a project template or from a sample.
 * Save setup time with automated app registration and configuration.
@@ -42,7 +42,7 @@ Teams Toolkit makes it simple to get started with app development for Microsoft 
 
 ## Available for Visual Studio and Visual Studio Code
 
-Teams Toolkit is available for free for Visual Studio Code and supports Visual Studio 2022 Community, Professional, and Enterprise. For more information about installation and setup, see [install Teams Toolkit documentation](./install-Teams-Toolkit.md).
+Teams Toolkit is available for free for Visual Studio Code and supports Visual Studio 2022 Community, Professional, and Enterprise. For more information about installation and setup, see [install Teams Toolkit](./install-Teams-Toolkit.md).
 
 | Teams Toolkit | Visual Studio | Visual Studio Code |
 | - | ------------- | ------------------ |
@@ -53,7 +53,7 @@ Teams Toolkit is available for free for Visual Studio Code and supports Visual S
 
 ### Project templates
 
-Teams Toolkit reduces the complexity of getting started with templates for common line-of-business app scenarios and smart defaults to accelerate your time to production. If you're already familiar with Teams app development, you can also start directly with capability-focused templates. i.e. Tab, Bot, Messaging Extension.
+Teams Toolkit reduces the complexity of getting started with templates for common line-of-business app scenarios and smart defaults to accelerate your time to production. If you're already familiar with Teams app development, you can also start directly with capability-focused templates such as Tab, Bot, and Messaging Extension.
 
 ::: zone pivot="visual-studio-code"
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/create-new-app_2.png" alt-text="Create new Teams app menu in VS Code":::
@@ -65,13 +65,13 @@ Teams Toolkit reduces the complexity of getting started with templates for commo
 
 ### Automatic registration and configuration
 
-Save time and let the toolkit automatically register the app in Teams Developer Portal and configure settings like Azure Active Directory (Azure AD) automatically when you first run or debug the app. Sign in with your Microsoft 365 account to control where the app is configured and customize the included Azure AD manifest when you need flexibility.
+Save time and let the toolkit automatically register the app in Teams Developer Portal and configure settings like Azure Active Directory (Azure AD) automatically when you first run or debug the app. Sign in with your Microsoft 365 account to control where the app is configured and customized the included Azure AD manifest when you need flexibility.
 
 ::: zone pivot="visual-studio-code"
 
 ### Multiple environments
 
-With the environments features, you can create different groupings of cloud resources to make it simpler to run and test your app. Use the "dev" environment with your Azure subscription or create a new app with a different subscription for staging, test, and production.
+With the environments features, you can create different groupings of cloud resources to run and test your app. Use the "dev" environment with your Azure subscription or create a new app with a different subscription for staging, test, and production.
 
 ### Quick access to Teams Developer Portal
 
@@ -98,4 +98,3 @@ Quickly access Teams Developer Portal, where you can configure, distribute, and 
 * [Create a new Teams app in Visual Studio](create-new-project.md)
 * [Provision cloud resources using Visual Studio](provision-cloud-resources.md)
 * [Deploy Teams app to the cloud using Visual Studio](deploy.md)
-* [Developer Portal for Teams](../concepts/build-and-test/teams-developer-portal.md)
