@@ -619,10 +619,12 @@ Listen to your customers to understand their scenarios before implementing role 
 
 ## See also
 
+- [Teams apps in meetings](teams-apps-in-meetings.md)
 - [GitHub repository](https://github.com/microsoft/live-share-sdk)
 - [Resource-specific consent](../graph-api/rsc/resource-specific-consent.md)
 - [Live Share SDK reference docs](/javascript/api/@microsoft/live-share/)
 - [Live Share Media SDK reference docs](/javascript/api/@microsoft/live-share-media/)
 - [Live Share FAQ](teams-live-share-faq.md)
 - [Use Fluid with Teams](../tabs/how-to/using-fluid-msteam.md)
-- [Teams apps in meetings](teams-apps-in-meetings.md)
+- [Build Agile Poker using Live Share SDK](../sbs-teams-live-share.yml)
+- [Dice Roller code tutorial](teams-live-share-tutorial.md)

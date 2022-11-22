@@ -26,7 +26,7 @@ To fetch the transcript for a particular meeting:
 
 ## Configure permissions on Azure AD to access transcript
 
-Your app must have the required permissions for fetching transcripts. It can access and fetch transcripts for a Teams meeting using organization-wide application permissions or Resource-specific consent (RSC) application permissions for a particular meeting.
+Your app must have the required permissions for fetching transcripts. It can access and fetch transcripts for a Teams meeting using organization-wide application permissions or resource-specific consent (RSC) application permissions for a particular meeting.
 
 ### Use organization-wide application permissions
 
@@ -54,5 +54,5 @@ For more information about how your app can know when the meetings ends, see [Su
 
 ## See also
 
-- [Advanced meeting APIs](../../apps-in-teams-meetings/meeting-apps-apis.md)
 - [Apps for Teams meetings and calls](../../apps-in-teams-meetings/teams-apps-in-meetings.md)
+- [Advanced meeting APIs](../../apps-in-teams-meetings/meeting-apps-apis.md)

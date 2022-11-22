@@ -16,7 +16,7 @@ To obtain meeting ID and organizer ID for fetching the transcript, choose one of
 - [Subscribe to change notifications](#subscribe-to-change-notifications)
 - [Use Bot Framework](#use-bot-framework-to-get-meeting-id-and-organizer-id)
 
-### Subscribe to change notifications
+## Subscribe to change notifications
 
 You can subscribe your app to receive change notifications for scheduled meeting events. When your app is notified about the subscribed meeting events, it can obtain transcripts, if it's authorized via required Azure AD permissions.
 
@@ -27,7 +27,7 @@ Your app receives notification for the type of meeting events for which it's sub
 
 When your app is notified of a subscribed meeting event, it can retrieve the meeting ID and organizer ID from the notification message. Based on the meeting details obtained, your app can fetch the meeting transcripts after the meeting has ended.
 
-#### Obtain meeting details using user-level notification
+## Obtain meeting details using user-level notification
 
 Choose to subscribe your app to user-level notifications for getting transcripts of a particular user's meeting event. When a meeting is scheduled for that user, your app is notified. Your app can receive meeting notifications using calendar events as well.
 
@@ -527,3 +527,7 @@ You can try the following code sample for a bot app:
 
 > [!div class="nextstepaction"]
 > [Graph APIs for fetching transcripts](/graph/api/resources/calltranscript)
+
+## See also
+
+- [Apps for Teams meetings and calls](../../apps-in-teams-meetings/teams-apps-in-meetings.md)
