@@ -153,7 +153,7 @@ For more information, see [Create a bot for Teams](../create-a-bot-for-teams.md)
 ## Create the identity provider
 
 You need an identity provider that can be used for authentication.
-In this procedure, you'll use an Azure AD provider; other Azure AD supported identity providers can also be used.
+In this procedure, you'll use an Azure AD provider. Other Azure AD supported identity providers can also be used.
 
 1. In the [**Azure portal**][azure-portal], on the left navigation panel, select **Azure Active Directory**.
     > [!TIP]
@@ -170,7 +170,7 @@ In this procedure, you'll use an Azure AD provider; other Azure AD supported ide
        &#x2713; Set the URL to `https://token.botframework.com/.auth/web/redirect`.
    1. Select **Register**.
 
-1. Once it's created, Azure displays the **Overview** page for the app. Copy and save the following information to a file:
+1. After it's created, Azure displays the **Overview** page for the app. Copy and save the following information to a file:
 
     1. The **Application (client) ID** value. You'll use this value later as the *Client ID* when you register this Azure identity application with your bot.
     1. The **Directory (tenant) ID** value. You'll also use this value later as the *Tenant ID* to register this Azure identity application with your bot.
