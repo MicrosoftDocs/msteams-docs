@@ -113,7 +113,7 @@ Following are the customizations you can make to extend the notification templat
 
     :::image type="content" source="../../../assets/images/notification-bot/notification-http-triggered.png" alt-text="sample of HTTP triggered notification":::
 
-* You can also add Azure Function triggers, such as:
+* Azure Function triggers:
 
   * `Event Hub` trigger to send notifications when an event is pushed to Azure Event Hub.
 
