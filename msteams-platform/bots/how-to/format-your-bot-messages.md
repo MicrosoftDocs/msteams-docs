@@ -84,7 +84,7 @@ For card support, see [card formatting](~/task-modules-and-cards/cards/cards-for
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Update and delete bot messages](~/bots/how-to/update-and-delete-bot-messages.md)
+> [Update and delete messages sent from bot](update-and-delete-bot-messages.md)
 
 ## See also
 

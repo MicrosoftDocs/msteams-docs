@@ -181,7 +181,7 @@ The following code sample demonstrates basics of conversations:
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Get Teams context](~/bots/how-to/get-teams-context.md)
+> [Get Teams specific context for your bot](get-teams-context.md)
 
 ## See also
 

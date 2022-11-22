@@ -372,7 +372,7 @@ Response body
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Send and receive files through the bot](~/bots/how-to/bots-filesv4.md)
+> [Send and receive files using bot](bots-filesv4.md)
 
 ## See also
 

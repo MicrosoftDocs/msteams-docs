@@ -212,7 +212,7 @@ Following are the command menu best practices:
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Channel and group conversations](~/bots/how-to/conversations/channel-and-group-conversations.md)
+> [Channel and group chat conversations with a bot](conversations/channel-and-group-conversations.md)
 
 ## See also
 

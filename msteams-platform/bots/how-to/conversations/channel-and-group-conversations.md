@@ -24,7 +24,7 @@ Bots in a group or channel only receive messages when they're mentioned @botname
 See the following video to learn about channel and group chat conversations with a bot:
 <br>
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4NzEs]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4NzEs>]
 <br>
 
 ## Design guidelines
@@ -282,7 +282,7 @@ Follow the [step-by-step guide](../../../sbs-teams-conversation-bot.yml), create
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Subscribe to conversation events](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
+> [Conversation events in your Teams bot](subscribe-to-conversation-events.md)
 
 ## See also
 

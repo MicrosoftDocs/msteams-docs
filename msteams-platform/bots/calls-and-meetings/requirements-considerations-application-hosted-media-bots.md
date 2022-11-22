@@ -73,7 +73,7 @@ Application-hosted media bots samples are as follows:
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Supported media formats](~/resources/media-formats.md)
+> [Supported media formats for bots](../../resources/media-formats.md)
 
 ## See also
 

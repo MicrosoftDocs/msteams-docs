@@ -169,7 +169,7 @@ The following table provides the per thread limit for all bots:
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Calls and meetings bots](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)
+> [Calls and online meetings bots](../calls-and-meetings/calls-meetings-bots-overview.md)
 
 ## See also
 

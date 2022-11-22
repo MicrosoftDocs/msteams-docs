@@ -492,7 +492,7 @@ The general retry guidance for each status code is listed in the following table
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Bot command menus](~/bots/how-to/create-a-bot-commands-menu.md)
+> [Create a commands menu](../create-a-bot-commands-menu.md)
 
 ## See also
 
