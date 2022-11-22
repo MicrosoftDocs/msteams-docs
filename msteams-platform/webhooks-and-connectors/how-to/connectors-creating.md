@@ -248,8 +248,9 @@ Follow the [step-by-step guide](../../sbs-teams-connectors.yml) to build and tes
 
 * [Webhooks and connectors](../what-are-webhooks-and-connectors.md)
 * [Create an Incoming Webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
-* [Create Outgoing Webhooks](add-outgoing-webhook.md)
+* [Create an Outgoing Webhook](add-outgoing-webhook.md)
 * [Create and send messages](connectors-using.md)
 * [How admins can enable or disable connectors](/MicrosoftTeams/office-365-custom-connectors#enable-or-disable-connectors-in-teams)
 * [How admins can publish custom connectors within their org](/MicrosoftTeams/office-365-custom-connectors)
-* [Build notification bot with JavaScript](../../sbs-gs-notificationbot.yml)
+* [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
+* [getConfig](/javascript/api/@microsoft/teamsfx/teamsfxconfiguration?view=msteams-client-js-latest)
