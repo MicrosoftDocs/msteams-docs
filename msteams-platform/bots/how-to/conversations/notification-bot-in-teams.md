@@ -9,9 +9,9 @@ ms.localizationpriority: high
 
 # Notification bot in Teams
 
-Microsoft Teams Toolkit enables you to build applications that capture events and send them as notifications to an individual, chat, group, or channel in Teams. You can send notifications as plain text or [Adaptive Cards](../../../task-modules-and-cards/cards/cards-reference.md#adaptive-card). The notification bot template creates an app that sends a message to Teams with Adaptive Cards triggered by HTTP post request. The app template is built using the TeamsFx SDK, which provides a simple set of functions over Microsoft Bot Framework to implement your scenario. Following diagram shows a scenario where a travel agency builds app for their customers to keep them up-to-date with the weather forecast in advance. This Teams app sends notifications to the travelers about the weather forecast:
+Microsoft Teams Toolkit enables you to build applications that capture events and send them as notifications to an individual, chat, group, or channel in Teams. You can send notifications as plain text or [Adaptive Cards](../../../task-modules-and-cards/cards/cards-reference.md#adaptive-card). The notification bot template creates an app that sends a message to Teams with Adaptive Cards triggered by HTTP post request. The app template is built using the TeamsFx SDK, which provides a simple set of functions over Microsoft Bot Framework to implement your scenario. For example, in a scenario where a travel agency builds an app in Teams for their customers to keep them up-to-date with the weather forecast. In the following diagram you can see a Teams app sends notification to the travelers about the weather forecast:
 
-[Placeholder for notification illustration and flowchart]
+:::image type="content" source="../../../assets/images/notification-bot/notification-new-scenario-diagram.png" alt-text="weather forecast sample notification scenario":::
 
 You can create notification bot in multiple scenarios, such as notification can be sent in teams DevOps channel if there's a build failure. When you create a pull request, a review request link can be sent as a notification to the reviewer.
 
