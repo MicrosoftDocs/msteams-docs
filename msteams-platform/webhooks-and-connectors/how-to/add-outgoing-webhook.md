@@ -245,5 +245,4 @@ Follow the [step-by-step guide](../../sbs-outgoing-webhooks.yml) to create Outgo
 * [Create and send messages](connectors-using.md)
 * [Create an Incoming Webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
 * [Create an Office 365 Connector](~/webhooks-and-connectors/how-to/connectors-creating.md)
-* [App capabilities mapped to features](../../concepts/design/map-use-cases.md#app-capabilities-mapped-to-features)
-* [Build notification bot with JavaScript](../../sbs-gs-notificationbot.yml)
+* [Adaptive Cards](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
