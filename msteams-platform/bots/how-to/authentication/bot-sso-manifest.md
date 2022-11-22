@@ -163,7 +163,7 @@ For more information, see [webApplicationInfo](../../../resources/schema/manifes
 
 ## Sideload and Preview in Teams
 
-You've configured the app to enable SSO. You can now sideload your app in Teams, and preview it in Teams environment.
+You've configured the app to enable SSO. You can now sideload your app in Teams and preview it in Teams environment.
 
 To preview your app in Teams:
 
@@ -195,7 +195,7 @@ To preview your app in Teams:
 
 You can also upload your SSO-enabled app in Developer Portal. To enable SSO support in Developer Portal after you've imported it:
 
-1. Open Developer Portal.
+1. Open [Developer Portal](https://dev.teams.microsoft.com/home).
 1. Select **Tools**, and from the list of apps that appears select your app to open it in Developer Portal.
 1. Select **Configure**.
 
