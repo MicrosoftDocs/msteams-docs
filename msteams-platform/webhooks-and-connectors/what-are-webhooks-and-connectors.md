@@ -68,7 +68,7 @@ Actionable messages allow users to take action without leaving their email clien
 
 ## See also
 
-* [Create an Incoming Webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
+* [Create Incoming Webhooks](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
 * [App capabilities mapped to features](../concepts/design/map-use-cases.md#app-capabilities-mapped-to-features)
 * [Create an Office 365 Connector](~/webhooks-and-connectors/how-to/connectors-creating.md)
 * [Create and send messages](~/webhooks-and-connectors/how-to/connectors-using.md)
