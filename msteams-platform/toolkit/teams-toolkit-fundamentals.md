@@ -30,7 +30,7 @@ Teams Toolkit is available for free for Visual Studio Code. For more information
 
 | Teams Toolkit | Visual Studio Code |
 | - | ------------------ |
-| Installation | Available in the VS Marketplace |
+| Installation | Available in the VS Code Marketplace |
 | Build with | JavaScript, TypeScript, React, SPFx |
 
 ::: zone-end
