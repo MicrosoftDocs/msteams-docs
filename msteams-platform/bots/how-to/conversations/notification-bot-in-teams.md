@@ -9,9 +9,11 @@ ms.localizationpriority: high
 
 # Notification bot in Teams
 
-Microsoft Teams Toolkit enables you to build applications that capture events and sends them as notifications to an individual, chat, group, or channel in Teams. You can send notifications as plain text or [Adaptive Cards](../../../task-modules-and-cards/cards/cards-reference.md#adaptive-card). The notification bot template creates an app that sends a message to Teams with Adaptive Cards triggered by HTTP post request. The app template is built using the TeamsFx SDK, which provides a simple set of functions over the Microsoft Bot Framework to implement this scenario. You can create notification bot in multiple scenarios, such as notification can be sent in teams DevOps channel if there is a build failure. When creating a pull request, a review request link can be sent as a notification to the reviewer.
+Microsoft Teams Toolkit enables you to build applications that capture events and sends them as notifications to an individual, chat, group, or channel in Teams. You can send notifications as plain text or [Adaptive Cards](../../../task-modules-and-cards/cards/cards-reference.md#adaptive-card). The notification bot template creates an app that sends a message to Teams with Adaptive Cards triggered by HTTP post request. The app template is built using the TeamsFx SDK, which provides a simple set of functions over Microsoft Bot Framework to implement your scenario. Following diagram shows a scenario where a travel agency builds app for their travelers to keep them up-to-date with the weather forecast of in advance so that they can be prepared in advance. This Teams app sends notifications to the travelers about the weather forecast:
 
-:::image type="content" source="../../../assets/images/notification-bot/notification-new-event.png" alt-text="new notification event sample":::
+[Placeholder for notification illustration and flowchart]
+
+You can create notification bot in multiple scenarios, such as notification can be sent in teams DevOps channel if there is a build failure. When creating a pull request, a review request link can be sent as a notification to the reviewer.
 
 **Advantages**
 
@@ -34,6 +36,8 @@ Bot Framework SDK provides the functionality to [proactively message in Teams](s
 |When the team, which is installed by bot is deleted.     |You need to remove the target conversation reference from the storage.         |
 |When the team, which is installed by bot is restored.     |You need to add the target conversation reference to the storage.         |
 |When the bot sends messages.     |When the target conversation reference does not exist, you need to add it to the storage.         |
+
+:::image type="content" source="../../../assets/images/notification-bot/notification-new-event.png" alt-text="new notification event sample":::
 
 When you send notifications, TeamsFx SDK creates a new conversation from the selected conversation reference and then sends a message. For advanced usage, you can directly access the conversation reference to execute your own bot logic:
 
