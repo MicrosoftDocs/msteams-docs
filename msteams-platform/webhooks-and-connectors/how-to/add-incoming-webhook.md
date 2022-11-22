@@ -16,7 +16,7 @@ An Incoming Webhook lets external applications to share content in Microsoft Tea
 * Connectors
 
 > [!IMPORTANT]
-> You can choose to build notification bot Teams app other than Incoming Webhooks. They perform similarly but notification bot has more functionalities. For more information, see [Build notification bot with JavaScript](../../sbs-gs-notificationbot.yml) or [incoming webhook notification sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/incoming-webhook-notification). To get started, download [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) now and explore. For more information, see [Teams Toolkit documents](../../toolkit/teams-toolkit-fundamentals.md).
+> You can choose to build notification bot Teams app other than Incoming Webhooks. They perform similarly but notification bot has more functionalities. For more information, see [Build notification bot with JavaScript](../../sbs-gs-notificationbot.yml) or [Incoming Webhook notification sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/incoming-webhook-notification). To get started, download [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) now and explore. For more information, see [Teams Toolkit documents](../../toolkit/teams-toolkit-fundamentals.md).
 
 See the following video to learn how to create an Incoming Webhooks:
 <br>
@@ -105,4 +105,4 @@ To remove an Incoming Webhook from a Teams channel, follow these steps:
 * [Create and send messages](~/webhooks-and-connectors/how-to/connectors-using.md)
 * [Build bots for Teams](../../bots/what-are-bots.md)
 * [Message extensions](../../messaging-extensions/what-are-messaging-extensions.md)
-* [Build notification bot with JavaScript](../../sbs-gs-notificationbot.yml)
+* [Card actions](../../task-modules-and-cards/cards/cards-actions.md)
