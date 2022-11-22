@@ -23,11 +23,11 @@ items:
 
     * Proactive hello message in chat.  
 
-      :::image type="content" source="~/assets/images/proactive-scenario/proactive-helo1.png" alt-text="Proactive Hello message":::
+      :::image type="content" source="~/assets/images/proactive-scenario/proactive-helo1.png" alt-text="Screenshot shows the Proactive Hello message in Teams.":::
 
     * Proactive hello message as an Adaptive Card.
     
-      :::image type="content" source="~/assets/images/proactive-scenario/proactive-helo-in-adaptive-card.png" alt-text="Proactive Hello message in adaptive card"::: 
+      :::image type="content" source="~/assets/images/proactive-scenario/proactive-helo-in-adaptive-card.png" alt-text="Screenshot shows the Proactive Hello message in adaptive card."::: 
 
 - title: Prerequisites 
   durationInMinutes: 2
@@ -49,7 +49,7 @@ items:
     1.	Go to the extracted files and double-click **ProactiveBot.csproj**. The solution opens in Visual Studio.
     1.	In Visual Studio, right-click the project (**ProactiveBot**) and select **Build** to build the solution.
 
-        :::image type="content" source="~/assets/images/proactive-scenario/proactivebot-project1.png" alt-text="Proactive Bot Project":::
+        :::image type="content" source="~/assets/images/proactive-scenario/proactivebot-project1.png" alt-text="Screenshot shows the Proactive Bot Project.":::
 
         <br>
 
@@ -80,7 +80,7 @@ items:
         
     1. From ngrok, copy the HTTPS URL. 
 
-        :::image type="content" source="~/assets/images/proactive-scenario/ngrok-base-url1.png" alt-text="ngrok base URL."lightbox="~/assets/images/proactive-scenario/ngrok-base-url1.png":::   
+        :::image type="content" source="~/assets/images/proactive-scenario/ngrok-base-url1.png" alt-text="Screenshot shows the ngrok base URL."lightbox="~/assets/images/proactive-scenario/ngrok-base-url1.png":::   
 
 - title: Enable developer preview
   durationInMinutes: 1
@@ -90,7 +90,7 @@ items:
         1. In the left panel, select **Show All**.
         1. Select **Teams**.
     
-           :::image type="content" source="./assets/images/meeting-token-generator/meeting-token-generator-admincenter_1.png" alt-text="Admin center menu" border="true":::
+           :::image type="content" source="./assets/images/meeting-token-generator/meeting-token-generator-admincenter_1.png" alt-text="Screenshot shows the Admin center menu." border="true":::
 
 - title: Create and install Teams app
   durationInMinutes: 5
@@ -99,45 +99,45 @@ items:
 
        The following page appears:
 
-       :::image type="content" source="~/assets/images/proactive-scenario/developer-portal-intro.png" alt-text="Developer Portal Introduction":::
+       :::image type="content" source="~/assets/images/proactive-scenario/developer-portal-intro.png" alt-text="Screenshot shows the Developer Portal Home page.":::
  
     1. Select **Apps** > **Import app**.
 
-        :::image type="content" source="~/assets/images/proactive-scenario/upload-app-package.png" alt-text="Select-upload package":::  
+        :::image type="content" source="~/assets/images/proactive-scenario/upload-app-package.png" alt-text="Screenshot shows how to upload an app package.":::  
 
     1. Select **AppManifest** and select **Open**.
 
-        :::image type="content" source="~/assets/images/proactive-scenario/select-app-package.png" alt-text="Select App package":::
+        :::image type="content" source="~/assets/images/proactive-scenario/select-app-package.png" alt-text="Screenshot shows how to select app package.":::
 
     1. Select **Import**.
 
-         :::image type="content" source="~/assets/images/proactive-scenario/select-import.png" alt-text="Select Import":::
+         :::image type="content" source="~/assets/images/proactive-scenario/select-import.png" alt-text="Screenshot shows how to import an app.":::
 
         The following page appears:
 
-         :::image type="content" source="~/assets/images/proactive-scenario/proactive-message.png" alt-text="Proactive Message."lightbox="~/assets/images/proactive-scenario/proactive-message.png"::: 
+         :::image type="content" source="~/assets/images/proactive-scenario/proactive-message.png" alt-text="Screenshot shows the Proactive Message in Teams."lightbox="~/assets/images/proactive-scenario/proactive-message.png"::: 
 
     1. Select **App Features** > **Bot**.
     
-        :::image type="content" source="~/assets/images/proactive-scenario/select-app-features.png" alt-text="Select App Features":::
+        :::image type="content" source="~/assets/images/proactive-scenario/select-app-features.png" alt-text="Screenshot shows how to select App Features.":::
 
     1. Select **Create a new bot**.
 
-        :::image type="content" source="~/assets/images/proactive-scenario/select-bot.png" alt-text="Select bot":::     
+        :::image type="content" source="~/assets/images/proactive-scenario/select-bot.png" alt-text="Screenshot shows how to add bot to your app.":::     
         
     1. Select **New Bot**. 
     
-        :::image type="content" source="~/assets/images/proactive-scenario/create-new-bot.png" alt-text="Create new bot":::
+        :::image type="content" source="~/assets/images/proactive-scenario/create-new-bot.png" alt-text="Screenshot shows how to create a new bot.":::
 
         The **Add bot** window appears.
 
     1. Enter **Proactive Message bot** and select **Add**.
 
-         :::image type="content" source="~/assets/images/proactive-scenario/enter-proactive-message.png" alt-text="Enter Proactive Message":::
+         :::image type="content" source="~/assets/images/proactive-scenario/enter-proactive-message.png" alt-text="Screenshot shows how to enter Proactive Message.":::
 
         Now the Bot Proactive Message bot is successfully added to the application. You can see the **Bot Name** and **Bot ID**.
 
-         :::image type="content" source="~/assets/images/proactive-scenario/bot-name.png" alt-text="Bot Name and ID":::
+         :::image type="content" source="~/assets/images/proactive-scenario/bot-name.png" alt-text="Screenshot shows the Bot Name and ID.":::
 
        > [!TIP]
        > Save the **Bot ID** for future reference.
@@ -148,26 +148,26 @@ items:
 
     1. Select **Configure** and set the **Endpoint address** in the form of `https://your ngrok/api/messages`.
 
-        :::image type="content" source="~/assets/images/proactive-scenario/select-configure.png" alt-text="Select Configure":::
+        :::image type="content" source="~/assets/images/proactive-scenario/select-configure.png" alt-text="Screenshot shows how to configure your bot.":::
 
     1. Select **Client secrets** > **Add a client secret for your bot**.
 
-        :::image type="content" source="~/assets/images/proactive-scenario/secret.png" alt-text="Select Secret":::
+        :::image type="content" source="~/assets/images/proactive-scenario/secret.png" alt-text="Screenshot shows how to add client secret to your bot.":::
 
     1. The **New client secret generated** window appears and select **OK**.    
 
-        :::image type="content" source="~/assets/images/proactive-scenario/new-secret.png" alt-text="New Secret":::
+        :::image type="content" source="~/assets/images/proactive-scenario/new-secret.png" alt-text="Screenshot shows how to add new client secret.":::
 
         > [!TIP]
         > Save the **New client secret** value for future reference.
 
     1. Select the Apps :::image type="icon" source="~/assets/images/proactive-scenario/apps-icon.png"::: icon and select **Proactive Message Demo**.
 
-         :::image type="content" source="~/assets/images/proactive-scenario/select-apps.png" alt-text="Select Apps":::
+         :::image type="content" source="~/assets/images/proactive-scenario/select-apps.png" alt-text="Screenshot shows your app in Developer Portal.":::
 
         The following page appears:
 
-         :::image type="content" source="~/assets/images/proactive-scenario/overview-page.png" alt-text="Overview page":::
+         :::image type="content" source="~/assets/images/proactive-scenario/overview-page.png" alt-text="Screenshot shows the Overview page of your app in Developer Portal.":::
 
     1. Select **App Features** under **Configure** and select **Bot**.
 
