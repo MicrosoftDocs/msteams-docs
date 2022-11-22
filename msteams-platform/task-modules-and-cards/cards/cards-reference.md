@@ -968,11 +968,8 @@ The following cards are implemented by the Bot Framework, but aren't supported b
 
 * [Cards and task modules](../cards-and-task-modules.md)
 * [Task modules](~/task-modules-and-cards/what-are-task-modules.md)
-* [Format cards](~/task-modules-and-cards/cards/cards-format.md)
 * [Up to date cards](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/up-to-date-views.md)
 * [Work with Universal Actions for Adaptive Cards](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/work-with-universal-actions-for-adaptive-cards.md)
 * [Adaptive Cards overflow menu](~/task-modules-and-cards/cards/cards-format.md#adaptive-cards-overflow-menu)
-* [Form completion feedback](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)
-* [Form completion feedback](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)
 * [Create Office 365 Connectors](../../webhooks-and-connectors/how-to/connectors-creating.md)
-* [Webhooks and connectors](../../webhooks-and-connectors/what-are-webhooks-and-connectors.md)
+* [Form completion feedback](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)
