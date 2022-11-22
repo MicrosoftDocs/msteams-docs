@@ -477,7 +477,7 @@ TeamsFx provides you with an [Incoming Webhook Notification Sample](https://gith
 
 <details>
 
-<summary><b>1. Why is the notification installations empty even though the bot app is installed in Teams?</b></summary>
+<summary><b>Why is the notification installations empty even though the bot app is installed in Teams?</b></summary>
 
 Teams sends an event only at the first installation, if the bot app is already installed before your notification bot service is launched, the installation event either didn't reach the bot service or is omitted.
 
@@ -497,7 +497,7 @@ Notification target connections are stored in the persistence storage. If you're
 
 <details>
 
-<summary><b>2.Why "Bad Request" or "Bad Argument" error occurs when sending notification?</b></summary>
+<summary><b>Why "Bad Request" or "Bad Argument" error occurs when sending notification?</b></summary>
 
 If the notification installation doesn't match the bot ID or password that is running, you can get a "Failed to decrypt conversation ID" error. One possible cause for this is the bot ID or password is changed due to cleaning local state or reprovisioning.
 
@@ -512,7 +512,7 @@ You can resolve this by cleaning your notification storage. After cleaning, noti
 
 <details>
 
-<summary><b>3. Why notification target is lost after restarting or redeploying the bot app?</b></summary>
+<summary><b>Why notification target is lost after restarting or redeploying the bot app?</b></summary>
 
 Notification target connections are stored in the persistence storage. If you're using the default local file storage, Azure web app and Azure Functions will clean up the local file during a restart or redeploy. You can also uninstall the bot from Teams, then reinstall it to again add connections to the storage. Using your own shared storage for production environment is recommended.
 
@@ -522,7 +522,7 @@ Notification target connections are stored in the persistence storage. If you're
 
 <details>
 
-<summary><b>4. Why is undefined returned when using the API `findChannel()`?</b></summary>
+<summary><b>Why is undefined returned when using the API `findChannel()`?</b></summary>
 
 You can encounter an undefined error, when the bot app is installed into other channels instead of the General channel. To fix this error you can uninstall the bot app from Teams and redebug and relaunch it. Ensure that the bot app is installed into the `General` channel after you've redebug and relaunched.
 
@@ -532,7 +532,7 @@ You can encounter an undefined error, when the bot app is installed into other c
 
 <details>
 
-<summary><b>5. Can I know all the targets my bot is installed in and out of the notification project?</b></summary>
+<summary><b>Can I know all the targets my bot is installed in and out of the notification project?</b></summary>
 
 There are Microsoft Graph APIs to list apps installed in a team, group or chat. If required you need to iterate your team, group or chat into an installed app to be targeted. In the notification project, it uses persistence storage to store installation targets. For more information, see [notification based on events](#notification-based-on-events).
 
@@ -542,7 +542,7 @@ There are Microsoft Graph APIs to list apps installed in a team, group or chat. 
 
 <details>
 
-<summary><b>6. How to customize the azurite listening ports?</b></summary>
+<summary><b>How to customize the azurite listening ports?</b></summary>
 
 If azurite exits due to port in use, you can specify another listening port and update the connection string of `AzureWebJobsStorage` in `bot/local.settings.json`
 
@@ -552,7 +552,7 @@ If azurite exits due to port in use, you can specify another listening port and 
 
 <details>
 
-<summary><b>7. How to extend my notification bot to support command and response?</b></summary>
+<summary><b>How to extend my notification bot to support command and response?</b></summary>
 
 Perform the following steps to extend my notification bot to support command and response:
 
@@ -568,7 +568,7 @@ Perform the following steps to extend my notification bot to support command and
 
 <details>
 
-<summary><b>8. How to extend my notification bot to support adaptive card actions?</b></summary>
+<summary><b>How to extend my notification bot to support adaptive card actions?</b></summary>
 
 To add adaptive card actions in notification bot, see the following [steps](workflow-bot-in-teams.md#add-card-actions).
 
