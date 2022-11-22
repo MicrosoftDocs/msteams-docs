@@ -132,7 +132,7 @@ The Teams Toolkit for Visual Studio Code extension is available on GitHub. To do
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [create a new Teams project](create-new-project.md)
+> [Create a new Teams project](create-new-project.md)
 
 ## See also
 
