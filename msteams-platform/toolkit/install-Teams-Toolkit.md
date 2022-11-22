@@ -31,12 +31,12 @@ Before installing Teams Toolkit for Visual Studio, you need to [download and ins
 
 ## Install Teams Toolkit for Visual Studio Code
 
-You can install Teams Toolkit using the Extensions window in Visual Studio Code, or install it from the Visual Studio Code Marketplace.
+You can install Teams Toolkit using **Extensions** in Visual Studio Code, or install it from the Visual Studio Code Marketplace.
 
 # [Visual Studio Code](#tab/vscode)
 
 1. Launch **Visual Studio Code**.
-1. Open the Extensions window (**Ctrl+Shift+X** or **View > Extensions**).
+1. Open **Extensions** by selecting  **View > Extensions** or **Ctrl+Shift+X**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/install toolkit-1_2.png" alt-text="Screenshot shows how to install.":::
 
@@ -84,17 +84,21 @@ You can install Teams Toolkit using the Extensions window in Visual Studio Code,
 
 By default, Visual Studio Code automatically keeps Teams Toolkit up-to-date. If you want to install a different release version, follow the steps:
 
-* Select the Extensions icon from the Visual Studio Code activity bar.
-* Enter **Teams Toolkit**  in the search box.
+1. Select the **Extensions** icon from the Visual Studio Code activity bar.
+
+1. Enter **Teams Toolkit**  in the search box.
 
   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/TeamsToolkit-search.png" alt-text="Search for Teams Toolkit.":::
 
-* On the Teams Toolkit page, select the dropdown next to the **Uninstall** button.
-* Select **Install Another Version...** from the dropdown.
+3. Select Teams Toolkit.
+
+4. On the Teams Toolkit page, select the dropdown next to the **Uninstall** button.
+
+5. Select **Install Another Version...** from the dropdown.
 
   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/InstallAnotherVersion.png" alt-text="Select other version of VS Code.":::
 
-* Select the required version to install.
+6. Select the required version to install.
 
   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/Olderversions of VS Code.png" alt-text="Other then the latest version of VS code.":::
 
