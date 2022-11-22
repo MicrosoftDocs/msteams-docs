@@ -64,7 +64,7 @@ The following list provides the key features of Teams Toolkit:
 
 ### Project templates
 
-Teams Toolkit reduces the complexity of getting started with templates for common line-of-business app scenarios and smart defaults to accelerate your time to production. If you're already familiar with Teams app development, you can also start directly with capability-focused templates such as tabs, bots, and message extensions.
+You can start directly with capability-focused templates such as tabs, bots, and message extensions or by following existing samples if you're already familiar with Teams app development. Teams Toolkit reduces the complexity of getting started with templates for common line-of-business app scenarios and smart defaults to accelerate your time to production.
 
 ::: zone pivot="visual-studio-code"
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/create-new-app_2.png" alt-text="Create new Teams app menu in VS Code":::
@@ -76,7 +76,7 @@ Teams Toolkit reduces the complexity of getting started with templates for commo
 
 ### Automatic registration and configuration
 
-Save time and let the toolkit automatically register the app in Teams Developer Portal and configure settings like Azure Active Directory (Azure AD) automatically when you first run or debug the app. Sign in with your Microsoft 365 account to control where the app is configured and customized the included Azure AD manifest when you need flexibility.
+You can save time and let the toolkit automatically register the app in Teams Developer Portal. When you first run or debug the app, configure settings, such as Azure Active Directory (Azure AD) automatically. Sign in with your Microsoft 365 account to control where the app is configured and customized the included Azure AD manifest when you need flexibility.
 
 ::: zone pivot="visual-studio-code"
 
