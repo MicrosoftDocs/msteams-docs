@@ -74,7 +74,11 @@ Test your app to verify your app’s correctness, functionality, and usage. Ensu
 
 * Functional bugs that block app usage.
 
+   :::image type="content" source="../../../assets/images/submission/validation-common-reasons-functional-bugs-fail-block-app-usage.png" alt-text="Screenshot of failed functional bug for block app usage.":::
+
 * App crashes.
+
+   :::image type="content" source="../../../assets/images/submission/validation-common-reason-failed-app-crashes.png" alt-text="Screenshot of failed scenario of app crashes while testing.":::
 
 * Continuous loading of app surfaces that prevent completion of stated workflows that the app supports.
 
@@ -94,6 +98,8 @@ A great description can make your app stand out in the Microsoft Teams store and
 
 * Region specific app name or functionality isn't called out in manifest and Partner Center app descriptions.
 
+   :::image type="content" source="../../../assets/images/submission/validation-common-reasons-region-specific-pass-app.png" alt-text="Screenshot shows an example for pass scenario of region specific app name.":::
+
    :::image type="content" source="../../../assets/images/submission/validation-common-reasons-region-specific-app.png" alt-text="Screenshot shows an example for failed scenario of region specific app name.":::
 
 * Limitations or account dependency on external accounts or services to complete Sign-In, Sign-Out, and Sign-Up experience aren't called out in app manifest and long description.
@@ -106,11 +112,19 @@ A great description can make your app stand out in the Microsoft Teams store and
 
 * References to the integrations, which aren't part of app functionality.
 
+   :::image type="content" source="../../../assets/images/submission/validation-common-reasons-pass-reference-app-funtionality.png" alt-text="Screenshot shows an example for pass reference integration of app functionality.":::
+
    :::image type="content" source="../../../assets/images/submission/validation-common-reasons-failed-reference-app-funtionality.png" alt-text="Screenshot shows an example for failed reference integration of app functionality.":::
 
 * Grammatical errors.
 
 * App short and full description are same.
+
+   :::image type="content" source="../../../assets/images/submission/validation-common-reasons-pass-inadequate-app-description.png" alt-text="Screenshot to show the pass scenarios with inadequate app description.":::
+
+   :::image type="content" source="../../../assets/images/submission/validation-common-reasons-fail-inadequate-app-description.png" alt-text="Screenshot to show the failed scenarios with inadequate app description.":::
+
+   :::image type="content" source="../../../assets/images/submission/validation-common-reason-fail-app-description-truncation.png" alt-text="Screenshot of failed scenario of app description guidelines which has incomplete truncation":::
 
 ## Violation of Microsoft trademark and brand guidelines
 
@@ -136,7 +150,15 @@ You must avoid the following issues that occur in 20% of apps that are rejected 
 
 * Only one test account provided when there's a dependency with two test accounts to test collaboration scenarios.
 
+   :::image type="content" source="../../../assets/images/submission/validation-common-reason-failed-test-collaboration-scenarios.png" alt-text="Screenshot of the image for the failed scenario of test collaboration.":::
+
 * The provided test instructions and credentials aren't sufficient to complete app functional testing.
+
+   :::image type="content" source="../../../assets/images/submission/validation-common-reason-fail-no-test-instructions.png" alt-text="Screenshot of the image for no test instructions or credentials are sufficient.":::
+
+   :::image type="content" source="../../../assets/images/submission/validation-common-reason-pass-provided-test-instructions.png" alt-text="Screenshot of pass image for provided test instructions or credentials aren't sufficient.":::
+
+   :::image type="content" source="../../../assets/images/submission/validation-common-reason-fail-provided-test-instructions.png" alt-text="Screenshot of  fail image for provided test instructions or credentials aren't sufficient.":::
 
 ## Microsoft 365 App Compliance Program  
 
