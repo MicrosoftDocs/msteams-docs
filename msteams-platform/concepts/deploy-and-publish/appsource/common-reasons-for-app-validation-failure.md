@@ -20,7 +20,7 @@ Following are the most common reasons for your app to get rejected:
      :::image type="icon" source="../../../assets/icons/app-description-icon.png" link="#app-description":::
    :::column-end:::
    :::column span="":::
-      :::image type="icon" source="../../../assets/icons/trademark-icon.png" link="#violation-of-microsoft-trademark-and-brand-guidelines":::
+      :::image type="icon" source="../../../assets/icons/trademark-icon.png" link="#violation-of-microsoft-trademark-and-brand-guidelines.":::
    :::column-end:::
    :::column span="":::
       :::image type="icon" source="../../../assets/icons/testability-icon.png" link="#testability":::
