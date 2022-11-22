@@ -24,6 +24,15 @@ Teams Toolkit makes it simple to get started with app development for Microsoft 
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey2.png" alt-text="User Journey of the Teams Toolkit" lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey2.png":::
 
+## Available for Visual Studio Code
+
+Teams Toolkit is available for free for Visual Studio Code. For more information about installation and setup, see [install Teams Toolkit](./install-Teams-Toolkit.md).
+
+| Teams Toolkit | Visual Studio Code |
+| - | ------------------ |
+| Installation | Available in the VS Marketplace |
+| Build with | JavaScript, TypeScript, React, SPFx |
+
 ::: zone-end
 
 ::: zone pivot="visual-studio"
@@ -38,22 +47,24 @@ Teams Toolkit makes it simple to get started with app development for Microsoft 
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey3VS.png" alt-text="User Journey of the Teams Toolkit" lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey3VS.png":::
 
+## Available for Visual Studio
+
+Teams Toolkit is available for free for Visual Studio 2022 Community, Professional, and Enterprise. For more information about installation and setup, see [install Teams Toolkit](./install-Teams-Toolkit.md).
+
+| Teams Toolkit | Visual Studio |
+| - | ------------- |
+| Installation | Available in the Visual Studio Installer |
+| Build with | C#, .NET, ASP.NET, Blazor |
+
 ::: zone-end
-
-## Available for Visual Studio and Visual Studio Code
-
-Teams Toolkit is available for free for Visual Studio Code and supports Visual Studio 2022 Community, Professional, and Enterprise. For more information about installation and setup, see [install Teams Toolkit](./install-Teams-Toolkit.md).
-
-| Teams Toolkit | Visual Studio | Visual Studio Code |
-| - | ------------- | ------------------ |
-| Installation | Available in the Visual Studio Installer | Available in the VS Marketplace |
-| Build with | C#, .NET, ASP.NET, Blazor | JavaScript, TypeScript, React, SPFx |
 
 ## Features
 
+The following list provides the key features of Teams Toolkit:
+
 ### Project templates
 
-Teams Toolkit reduces the complexity of getting started with templates for common line-of-business app scenarios and smart defaults to accelerate your time to production. If you're already familiar with Teams app development, you can also start directly with capability-focused templates such as Tab, Bot, and Messaging Extensions.
+Teams Toolkit reduces the complexity of getting started with templates for common line-of-business app scenarios and smart defaults to accelerate your time to production. If you're already familiar with Teams app development, you can also start directly with capability-focused templates such as tabs, bots, and message extensions.
 
 ::: zone pivot="visual-studio-code"
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/create-new-app_2.png" alt-text="Create new Teams app menu in VS Code":::
@@ -71,11 +82,11 @@ Save time and let the toolkit automatically register the app in Teams Developer 
 
 ### Multiple environments
 
-With the environments features, you can create different groupings of cloud resources to run and test your app. Use the "dev" environment with your Azure subscription or create a new app with a different subscription for staging, test, and production.
+You can create different groupings of cloud resources to run and test your app. Use the "dev" environment with your Azure subscription or create a new app with a different subscription for staging, test, and production.
 
 ### Quick access to Teams Developer Portal
 
-Quickly access Teams Developer Portal, where you can configure, distribute, and manage your app. For more information, see [manage your Teams apps using Developer Portal](../concepts/build-and-test/manage-your-apps-in-developer-portal.md).
+You can access Teams Developer Portal quickly, where you can configure, distribute, and manage your app. For more information, see [manage your Teams apps using Developer Portal](../concepts/build-and-test/manage-your-apps-in-developer-portal.md).
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/build-environment-developer-portal-2.png" alt-text="Developer Portal":::
 
