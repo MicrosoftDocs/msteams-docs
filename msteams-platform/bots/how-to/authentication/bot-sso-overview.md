@@ -50,8 +50,9 @@ For a bot or a message extension app, the bot app sends an OAuth Card to Teams c
 
 The bot and message extension apps use Bot Framework to handle communication with the app users.
 
-**Bot app**: Also referred to as a chatbot or conversational bot, it's a service that runs simple and repetitive tasks for app users. Bots can be part of a larger application or be a standalone service.
-**Message extension app**: It's a web service you host that can be invoked from within Teams client. It utilizes the messaging schema of a bot to ensure secure communication. You'll need to register your web service as a bot to enable SSO for your message extension app.
+- **Bot app**: Also referred to as a chatbot or conversational bot, it's a service that runs simple and repetitive tasks for app users. Bots can be part of a larger application or be a standalone service.
+
+- **Message extension app**: It's a web service you host that can be invoked from within Teams client. It utilizes the messaging schema of a bot to ensure secure communication. You'll need to register your web service as a bot to enable SSO for your message extension app.
 
 This section describes the tasks involved in implementing SSO for a Teams bot or message extension app. To enable SSO for a Teams bot or message extension app:
 
