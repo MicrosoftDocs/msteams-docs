@@ -53,7 +53,7 @@ Teams Toolkit is available for free for Visual Studio Code and supports Visual S
 
 ### Project templates
 
-Teams Toolkit reduces the complexity of getting started with templates for common line-of-business app scenarios and smart defaults to accelerate your time to production. If you're already familiar with Teams app development, you can also start directly with capability-focused templates such as Tab, Bot, and Messaging Extension.
+Teams Toolkit reduces the complexity of getting started with templates for common line-of-business app scenarios and smart defaults to accelerate your time to production. If you're already familiar with Teams app development, you can also start directly with capability-focused templates such as Tab, Bot, and Messaging Extensions.
 
 ::: zone pivot="visual-studio-code"
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/create-new-app_2.png" alt-text="Create new Teams app menu in VS Code":::
