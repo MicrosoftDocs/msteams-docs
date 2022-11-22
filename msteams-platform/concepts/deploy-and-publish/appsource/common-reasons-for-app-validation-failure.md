@@ -177,13 +177,33 @@ Icons are one of the main elements people see when browsing the Microsoft Teams 
 Your app name plays a critical role for users to discover your app on the Microsoft Teams store. Ensure that your app name meets [app name guidelines](prepare/teams-store-validation-guidelines.md#app-name) and doesn't violate the [Microsoft Trademark and Brand Guidelines](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks). You must avoid the following violations that result in app rejection:
 
 * Inconsistent usage of app name throughout the app’s functionality.
+
+   :::image type="content" source="../../../assets/images/submission/validation-common-reason-pass-inconsistent-app-functionality.png" alt-text="Screenshot of image to show pass inconsistent usage of app name in app's functionality.":::
+
+   :::image type="content" source="../../../assets/images/submission/validation-common-reason-fail-inconsistent-app-functionality.png" alt-text="Screenshot of image to show fail inconsistent usage of app name in app's functionality.":::
+
 * Mismatch between the app name mentioned in the app manifest submitted as part of the app package and Partner Center.
 * App names appended with *Beta*, *Dev*, and *Prod* to indicate app isn't production ready.
+
+   :::image type="content" source="../../../assets/images/submission/validation-common-reason-pass-app-name-beta-app-production.png" alt-text="Screenshot of image to show passed scenario of app names with beta, dev and prod.":::
+
+   :::image type="content" source="../../../assets/images/submission/validation-common-reason-fail-app-name-beta-app-production.png" alt-text="Screenshot of image to show failed scenario of app names with beta, dev and prod.":::
+
 * App submissions where the developer has changed the app name, but the old app name is still used within the app.
+
+   :::image type="content" source="../../../assets/images/submission/validation-common-reason-fail-old-app-name.png" alt-text="Screenshot of image to show failed app submission for old app name which is still used.":::
 
 ## Support link
 
  Support links must not ask users for authentication and must lead directly to appropriate support information. You must ensure that your app includes a valid support link for users to contact.
+
+   :::image type="content" source="../../../assets/images/submission/validation-common-reason-pass-support-link.png" alt-text="Screenshot of image for passed support link containing contacts.":::
+
+   :::image type="content" source="../../../assets/images/submission/validation-common-reason-failed-support-link.png" alt-text="Screenshot of image for invalid support link.":::
+
+   :::image type="content" source="../../../assets/images/submission/validation-common-reason-failed-support-link-authentication.png" alt-text="Screenshot of image for invalid support link with authentication.":::
+
+   :::image type="content" source="../../../assets/images/submission/validation-common-reason-failed-support-link-insecure.png" alt-text="Screenshot of image for invalid support link is insecure.":::
 
 ## Manifest schema
 
