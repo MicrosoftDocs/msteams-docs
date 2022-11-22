@@ -26,7 +26,7 @@ Now, let's see what happens at the backend during runtime to achieve SSO experie
 
 ## SSO in Teams at runtime
 
-Achieve SSO in a bot or message extension app by obtaining access token for the Teams app user who's currently logged in. This process involves the bot app client and server, Teams client, and Azure AD. During this interaction, the app user must give consent for using Teams identity to obtain the access token in a multi-tenant environment.
+Achieve SSO in a bot or message extension app by obtaining access token for the Teams app user who's currently signed in. This process involves the bot app client and server, Teams client, Bot Framework, and Azure AD. During this interaction, the app user must give consent to obtain the access token in a multi-tenant environment.
 
 The following image shows how SSO works when a Teams app user attempts to access the bot or message extension app:
 
@@ -34,7 +34,7 @@ The following image shows how SSO works when a Teams app user attempts to access
 
 | # | Interaction | What's going on |
 | --- | --- | --- |
-| 1 | Teams client → Bot service | The message that app user sends is received by the Teams client, which sends it to the bot. <br> If the app user has previously signed in, a token is saved in the Bot Framework Token Store. <br> • The bot calls the Bot Framework Token Service which checks for an existing token for the app user in the Bot Framework Token Store. <br> • If the token exists, the app user is given access. <br> • If no token is available, the bot triggers the auth flow. |
+| 1 | Teams client → Bot service | The message that app user sends is received by the Teams client, which sends it to the bot. <br> If the app user has previously signed in, a token is saved in the Bot Framework Token Store. The bot calls the Bot Framework Token Service which checks for an existing token for the app user in the Bot Framework Token Store. <br> • If the token exists, the app user is given access. <br> • If no token is available, the bot triggers the auth flow. |
 | 2 | Bot service → Bot Framework Token Service | The bot calls the Bot Framework Token Service to obtain a sign in link for the user. |
 | 3 | Bot Framework Token Service → Teams client | • **For bot app**: Bot Framework Token Service sends the request for sign-in link to the bot service, which forwards it to the Teams client in an OAuth card. <br> • **For message extension app**: Instead of the OAuth card, the Bot Framework Token Service sends an invoke request. |
 | 4 | Teams client → Bot service → Bot Framework Token Service → Azure AD | After the Teams client receives the OAuth card for the app user, if SSO is enabled, it sends a token exchange request for the app user back to the bot. The bot calls the Bot Framework Token Service, attempting to exchange the received token from Azure AD. |
@@ -50,20 +50,21 @@ For a bot or a message extension app, the bot app sends an OAuth Card to Teams c
 
 The bot and message extension apps use Bot Framework to handle communication with the app users.
 
-**Bot app**: Also referred to as a chatbot or conversational bot, it's a service that runs simple and repetitive tasks for app users. Bots can be part of a larger application or be a standalone service.
-**Message extension app**: It's a web service you host that can be invoked from within Teams client. It utilizes the messaging schema of a bot to ensure secure communication. You'll need to register your web service as a bot to enable SSO for your message extension app.
+- **Bot app**: Also referred to as a chatbot or conversational bot, it's a service that runs simple and repetitive tasks for app users. Bots can be part of a larger application or be a standalone service.
+
+- **Message extension app**: It's a web service you host that can be invoked from within Teams client. It utilizes the messaging schema of a bot to ensure secure communication. You'll need to register your web service as a bot to enable SSO for your message extension app.
 
 This section describes the tasks involved in implementing SSO for a Teams bot or message extension app. To enable SSO for a Teams bot or message extension app:
 
-1. **Configure app with Azure AD**: Create an Azure AD app to generate an app ID and application ID URI. For generating access token, you configure scopes and authorize trusted client applications. The configuration required in Azure AD for enabling SSO in a bot and message extension apps are the same. Create a bot resource and configure it's client secret, messaging endpoint, and OAuth connection to enable SSO.
-1. **Add code**: Add the code to handle access token to send this token to your app's server code in the Authorization header, and to validate the access token when it's received. The code required to enable SSO in a bot app is different from a message extension app.
+1. **Configure app with Azure AD**: Create an Azure AD app to generate an app ID and application ID URI. For generating an access token, you configure scopes and authorize trusted client applications. The configuration required in Azure AD for enabling SSO in a bot and message extension apps is the same. Create a bot resource and configure it's client secret, messaging endpoint, and OAuth connection to enable SSO.
+1. **Add code**: Add the code to handle access token to send this token to your app's server code in the Authorization header, and to validate the access token when it's received. The code required to enable SSO in a bot app is different from code required for a message extension app.
 
     > [!NOTE]
     > This section allows you to select the app for which you want to add code for enabling SSO.
 
-1. **Update Teams app manifest**: Update your Teams client app manifest with the app ID and application ID URI generated in Azure AD to allow Teams to request access tokens on behalf of your app. The update required in the manifest file is same for bot and message extension apps.
+1. **Update Teams app manifest**: Update your Teams client app manifest with the app ID and application ID URI generated in Azure AD to allow Teams to request access tokens on behalf of your app. The update required in the manifest file is the same for bot and message extension apps.
 
-1. **Configure Graph scopes and permissions**: You can add more scopes to your app by adding Microsoft Graph scopes and permissions. 
+1. **Configure Graph scopes and permissions**: You can add more scopes to your app by extending your app with Microsoft Graph permissions and scopes.
 
 ## Next step
 
