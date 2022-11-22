@@ -100,7 +100,7 @@ To remove an Incoming Webhook from a Teams channel, follow these steps:
 ## See also
 
 * [Webhooks and connectors](../what-are-webhooks-and-connectors.md)
-* [Create an Outgoing Webhook](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)
+* [Create Outgoing Webhooks](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)
 * [Create an Office 365 Connector](~/webhooks-and-connectors/how-to/connectors-creating.md)
 * [Create and send messages](~/webhooks-and-connectors/how-to/connectors-using.md)
 * [Build bots for Teams](../../bots/what-are-bots.md)
