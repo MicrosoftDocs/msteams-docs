@@ -82,6 +82,8 @@ Test your app to verify your app’s correctness, functionality, and usage. Ensu
 
 * Continuous loading of app surfaces that prevent completion of stated workflows that the app supports.
 
+   :::image type="content" source="../../../assets/images/submission/validation-common-reason-fail-continuous-app.png" alt-text="Screenshot of image for failed loading of app surfaces.":::
+
 * Unexpected error messages during the app usage, sign in, and sign-up experience and for scenarios where the app feature doesn't work as expected.
 
    :::image type="content" source="../../../assets/images/submission/validation-common-reasons-unexpected-error-scenarios.png" alt-text="Screenshot to show the unexpected error for scenarios where app feature doesn't work.":::
@@ -192,6 +194,8 @@ Your app name plays a critical role for users to discover your app on the Micros
 
    :::image type="content" source="../../../assets/images/submission/validation-common-reason-fail-app-name-beta-app-production.png" alt-text="Screenshot of image to show failed scenario of app names with beta, dev and prod.":::
 
+   :::image type="content" source="../../../assets/images/submission/validation-common-reason-fail-domains-with-beta.png" alt-text="Screenshot to show the valid domains aren't appended with beta, dev and prod.":::
+
 * App submissions where the developer has changed the app name, but the old app name is still used within the app.
 
    :::image type="content" source="../../../assets/images/submission/validation-common-reason-fail-old-app-name.png" alt-text="Screenshot of image to show failed app submission for old app name which is still used.":::
@@ -212,7 +216,13 @@ Your app name plays a critical role for users to discover your app on the Micros
 
 The Teams app manifest describes how the app integrates into the Microsoft Teams product. Your app manifest must conform to a publicly released [manifest schema](../../../resources/schema/manifest-schema.md). If your app supports localization, ensure that use a localization manifest schema version 1.5 or later. App packages that contain preview schemas (not publicly released) fail app review.
 
+   :::image type="content" source="../../../assets/images/submission/validation-common-reason-pass-resource-URL-manifest.png" alt-text="Screenshot of image passed for resource URL in manifest.":::
+
+   :::image type="content" source="../../../assets/images/submission/validation-common-reason-fail-resource-URL-manifest.png" alt-text="Screenshot of image failed  for resource URL in manifest.":::
+
 You must update the app version declared in the manifest if you're submitting an app update. We recommend you to always use the latest publicly released manifest schema when submitting a new app or an app update and ensure that the manifest schema version in Microsoft Teams store and Microsoft AppSource is the same.
+
+   :::image type="content" source="../../../assets/images/submission/validation-common-reason-pass-app-version-number.png" alt-text="Screenshot to show the app version number incremented.":::
 
 Your app package must only contain your app’s manifest, color icon, and outline icon. App packages that contain any other additional files or folders fail app review.
 
@@ -242,9 +252,15 @@ You must ensure to provide the same developer name in your offer listing in both
 
 Your offer listing must include a valid privacy policy link. Offers with invalid, unsecured, and broken privacy policy links fail app review. Your privacy policy must follow the [privacy policy guidelines](prepare/teams-store-validation-guidelines.md#privacy-policy).
 
+   :::image type="content" source="../../../assets/images/submission/validation-common-reason-failed-invalid-unsecure-broken-privacy-policy.png" alt-text="Screenshot to show the invalid, unsecure and broken privacy policy.":::
+
+   :::image type="content" source="../../../assets/images/submission/validation-common-reason-failed-invalid-unsecure-broken-privacy-policy-links.png" alt-text="Screenshot to show the invalid, unsecure and broken privacy policy links.":::
+
 ## Terms of use
 
 Your offer listing must include a valid Terms of use link. Offers with invalid, unsecured, and broken Terms of use links fail app review. You must follow the [Terms of use guidelines](prepare/teams-store-validation-guidelines.md#terms-of-use).
+
+   :::image type="content" source="../../../assets/images/submission/validation-common-reason-fail-terms-of-use.png" alt-text="Screenshot of image for failed terms of use in production ready.":::
 
 ## See also
 
