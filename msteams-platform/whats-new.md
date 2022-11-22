@@ -26,6 +26,8 @@ Teams platform features that are available to all app developers.
 
 **2022 November**
 
+* ***November 22, 2022***: [Introducing Changelog for Developer Portal](concepts/build-and-test/teams-developer-portal.md#changelog-for-developer-portal).
+
 * ***November 18, 2022***: [Zero install for link unfurling](messaging-extensions/how-to/link-unfurling.md#zero-install-for-link-unfurling).
 
 * ***November 17, 2022***: [Manifest schema v1.5](resources/schema/manifest-schema.md).
