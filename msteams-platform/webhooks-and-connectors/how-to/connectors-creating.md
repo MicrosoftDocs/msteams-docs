@@ -64,7 +64,7 @@ To integrate the configuration experience:
 
 1. Register `microsoftTeams.pages.config.registerOnRemoveHandler()` event handler, which is called when the user removes connector.
 
-This event gives your service an opportunity to perform any clean up actions.
+This event gives your service an opportunity to perform any cleanup actions.
 
 The following code provides a sample HTML to create a connector configuration page without the customer service and support:
 
@@ -249,7 +249,7 @@ Follow the [step-by-step guide](../../sbs-teams-connectors.yml) to build and tes
 * [Webhooks and connectors](../what-are-webhooks-and-connectors.md)
 * [Create an Incoming Webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
 * [Create Outgoing Webhooks](add-outgoing-webhook.md)
+* [Create and send messages](connectors-using.md)
 * [How admins can enable or disable connectors](/MicrosoftTeams/office-365-custom-connectors#enable-or-disable-connectors-in-teams)
 * [How admins can publish custom connectors within their org](/MicrosoftTeams/office-365-custom-connectors)
 * [Build notification bot with JavaScript](../../sbs-gs-notificationbot.yml)
-* [Build your first bot app using JavaScript](../../sbs-gs-bot.yml)
