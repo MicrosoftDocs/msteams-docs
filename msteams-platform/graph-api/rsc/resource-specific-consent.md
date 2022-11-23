@@ -441,7 +441,7 @@ The following table provides resource-specific permissions for a team:
 
 For more information, see [team resource-specific consent permissions](/graph/permissions-reference#team-resource-specific-consent-permissions).
 
-### Resource-specific permissions for a chat
+### Resource-specific permissions for a chat or meeting
 
 The following table provides resource-specific permissions for a chat:
 
