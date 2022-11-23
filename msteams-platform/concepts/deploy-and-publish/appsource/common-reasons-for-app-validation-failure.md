@@ -106,6 +106,10 @@ A great description can make your app stand out in the Microsoft Teams store and
 
 * Limitations or account dependency on external accounts or services to complete Sign-In, Sign-Out, and Sign-Up experience aren't called out in app manifest and long description.
 
+   :::image type="content" source="../../../assets/images/submission/validation-common-reason-pass-long-description.png" alt-text="Screenshot of image to show failed scenario of long description of Microsoft.":::
+
+   :::image type="content" source="../../../assets/images/submission/validation-common-reason-fail-long-description.png" alt-text="Screenshot of image to show failed scenario of long description of Microsoft.":::
+
    :::image type="content" source="../../../assets/images/submission/validation-common-reason-pass-sign-up-app-description.png" alt-text="Screenshot of passed scenario of sign-up, contact details in app description must be hyperlinked.":::
 
    :::image type="content" source="../../../assets/images/submission/validation-common-reason-sign-up-app-description.png" alt-text="Screenshot of failed scenario of sign-up, contact details in app description must be hyperlinked.":::
@@ -116,6 +120,8 @@ A great description can make your app stand out in the Microsoft Teams store and
 
 * App comparison with another app.
 
+   :::image type="content" source="../../../assets/images/submission/validation-common-reason-failed-comparsion-app-description.png" alt-text="Screenshot of failed image of comparative app description":::
+
 * References to the integrations, which aren't part of app functionality.
 
    :::image type="content" source="../../../assets/images/submission/validation-common-reasons-pass-reference-app-funtionality.png" alt-text="Screenshot shows an example for pass reference integration of app functionality.":::
@@ -123,6 +129,10 @@ A great description can make your app stand out in the Microsoft Teams store and
    :::image type="content" source="../../../assets/images/submission/validation-common-reasons-failed-reference-app-funtionality.png" alt-text="Screenshot shows an example for failed reference integration of app functionality.":::
 
 * Grammatical errors.
+
+   :::image type="content" source="../../../assets/images/submission/validation-common-reason-pass-grammatical-error.png" alt-text="Screenshot of passed image for long description, grammatical errors and capitalization":::
+
+   :::image type="content" source="../../../assets/images/submission/validation-common-reason-fail-grammatical-error.png" alt-text="Screenshot of failed image for long description, grammatical errors and capitalization":::
 
    :::image type="content" source="../../../assets/images/submission/validation-common-reason-pass-MS-app-description.png" alt-text="Screenshot of passed image of Microsoft or MS in app description.":::
 
@@ -247,6 +257,8 @@ Your app package must only contain your app’s manifest, color icon, and outlin
 ## App UI
 
 Your app’s UI must not look incomplete and should be intuitive. Ensure that users aren't presented with a blank screen when performing an action on the App’s UI. Apps that have truncated or overlapping content and apps that display broken images fail app review.
+
+   :::image type="content" source="../../../assets/images/submission/validation-common-reason-fail-overlap-content.png" alt-text="Screenshot of image failed while overlapping the app.":::
 
    :::image type="content" source="../../../assets/images/submission/validation-common-reason-failed-blank-screen-app-UI.png" alt-text="Screenshot of image to show the fail of blank screen in app's UI.":::
 
