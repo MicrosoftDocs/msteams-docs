@@ -346,3 +346,11 @@ Now that you've familiarized yourself with bot activity handlers, let us see how
 
 > [!div class="nextstepaction"]
 > [Conversation basics](~/bots/how-to/conversations/conversation-basics.md)
+
+## See also
+
+* [Build bots for Teams](what-are-bots.md)
+* [Teams JavaScript client SDK](../tabs/how-to/using-teams-client-sdk.md)
+* [App manifest schema for Teams](../resources/schema/manifest-schema.md)
+* [API reference for the Bot Framework Connector service](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference)
+* [Get Teams specific context for your bot](how-to/get-teams-context.md)
