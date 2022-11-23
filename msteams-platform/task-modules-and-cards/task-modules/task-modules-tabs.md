@@ -129,10 +129,7 @@ function submit(type) {
     submitHandler = (err, result) => {
         console.log(`Submit handler - err: ${err}`);
         alert(
-            "Result = " +
-                JSON.stringify(result) +
-                "\nError = " +
-                JSON.stringify(err)
+            "Result = " + JSON.stringify(result) + "\nError = " + JSON.stringify(err)
         );
     };
 
