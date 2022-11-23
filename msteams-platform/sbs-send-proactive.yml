@@ -49,7 +49,7 @@ items:
     1.	Go to the extracted files and double-click **ProactiveBot.csproj**. The solution opens in Visual Studio.
     1.	In Visual Studio, right-click the project (**ProactiveBot**) and select **Build** to build the solution.
 
-        :::image type="content" source="~/assets/images/proactive-scenario/proactivebot-project1.png" alt-text="Screenshot shows the Proactive Bot Project.":::
+        :::image type="content" source="~/assets/images/proactive-scenario/proactivebot-project1.png" alt-text="Screenshot shows the Proactive Bot Project in Visual Studio and Build highlighted in red.":::
 
         <br>
 
@@ -80,7 +80,7 @@ items:
         
     1. From ngrok, copy the HTTPS URL. 
 
-        :::image type="content" source="~/assets/images/proactive-scenario/ngrok-base-url1.png" alt-text="Screenshot shows the ngrok base URL."lightbox="~/assets/images/proactive-scenario/ngrok-base-url1.png":::   
+        :::image type="content" source="~/assets/images/proactive-scenario/ngrok-base-url1.png" alt-text="Screenshot shows the ngrok base URL highlighted in red."lightbox="~/assets/images/proactive-scenario/ngrok-base-url1.png":::   
 
 - title: Enable developer preview
   durationInMinutes: 1
@@ -90,7 +90,7 @@ items:
         1. In the left panel, select **Show All**.
         1. Select **Teams**.
     
-           :::image type="content" source="./assets/images/meeting-token-generator/meeting-token-generator-admincenter_1.png" alt-text="Screenshot shows the Admin center menu." border="true":::
+           :::image type="content" source="./assets/images/meeting-token-generator/meeting-token-generator-admincenter_1.png" alt-text="Screenshot shows the Admin center menu with Teams highlighted in red." border="true":::
 
 - title: Create and install Teams app
   durationInMinutes: 5
