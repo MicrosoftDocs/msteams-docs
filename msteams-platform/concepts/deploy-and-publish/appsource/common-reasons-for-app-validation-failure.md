@@ -98,6 +98,10 @@ A great description can make your app stand out in the Microsoft Teams store and
 
 * Way forward information for new users such as, Sign Up or Get Started, or Help and Contact Us links aren't included in the manifest and AppSource full description.
 
+   :::image type="content" source="../../../assets/images/submission/validation-common-reason-pass-sign-up-app-description.png" alt-text="Screenshot of passed scenario of sign-up, contact details in app description must be hyperlinked.":::
+
+   :::image type="content" source="../../../assets/images/submission/validation-common-reason-sign-up-app-description.png" alt-text="Screenshot of failed scenario of sign-up, contact details in app description must be hyperlinked.":::
+
 * Region specific app name or functionality isn't called out in manifest and Partner Center app descriptions.
 
    :::image type="content" source="../../../assets/images/submission/validation-common-reasons-region-specific-pass-app.png" alt-text="Screenshot shows an example for pass scenario of region specific app name.":::
@@ -106,13 +110,13 @@ A great description can make your app stand out in the Microsoft Teams store and
 
 * Limitations or account dependency on external accounts or services to complete Sign-In, Sign-Out, and Sign-Up experience aren't called out in app manifest and long description.
 
-   :::image type="content" source="../../../assets/images/submission/validation-common-reason-pass-long-description.png" alt-text="Screenshot of image to show failed scenario of long description of Microsoft.":::
+   :::image type="content" source="../../../assets/images/submission/validation-common-reason-passed-limitation-called-out.png" alt-text="Screenshot of failed image to show the called out limitations.":::
+
+   :::image type="content" source="../../../assets/images/submission/validation-common-reason-failed-limitation-called-out.png" alt-text="Screenshot of failed image to show the called out limitations.":::
+
+   :::image type="content" source="../../../assets/images/submission/validation-common-reason-pass-long-description.png" alt-text="Screenshot of image to show passed scenario of long description of Microsoft.":::
 
    :::image type="content" source="../../../assets/images/submission/validation-common-reason-fail-long-description.png" alt-text="Screenshot of image to show failed scenario of long description of Microsoft.":::
-
-   :::image type="content" source="../../../assets/images/submission/validation-common-reason-pass-sign-up-app-description.png" alt-text="Screenshot of passed scenario of sign-up, contact details in app description must be hyperlinked.":::
-
-   :::image type="content" source="../../../assets/images/submission/validation-common-reason-sign-up-app-description.png" alt-text="Screenshot of failed scenario of sign-up, contact details in app description must be hyperlinked.":::
 
 * Short and full description in the app manifest doesn't highlight the app’s value proposition.
 
@@ -145,6 +149,8 @@ A great description can make your app stand out in the Microsoft Teams store and
    :::image type="content" source="../../../assets/images/submission/validation-common-reasons-fail-inadequate-app-description.png" alt-text="Screenshot to show the failed scenarios with inadequate app description.":::
 
    :::image type="content" source="../../../assets/images/submission/validation-common-reason-fail-app-description-truncation.png" alt-text="Screenshot of failed scenario of app description guidelines which has incomplete truncation":::
+
+   :::image type="content" source="../../../assets/images/submission/validation-common-reason-fail-app-display-ads.png" alt-text="Screenshot to show that apps failed to display ads.":::
 
 ## Violation of Microsoft trademark and brand guidelines
 
