@@ -57,7 +57,7 @@ landingContent:
     - linkListType: whats-new
       links:
       - text: Introduced location API
-        url: concepts/device-capabilities/native-device-permissions.md#introduced-location-api
+        url: concepts/device-capabilities/native-device-permissions.md
       - text: Zero install for link unfurling
         url: messaging-extensions/how-to/link-unfurling.md#zero-install-for-link-unfurling
       - text: Adaptive Cards overflow menu
