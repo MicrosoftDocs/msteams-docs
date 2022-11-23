@@ -1,8 +1,10 @@
 ---
 title: Request device permissions for your Microsoft Teams app
+author: v-amprasad
 description: How to update your app manifest in order to request access to native features that require user consent, such as scan QR, barcode, image, audio, and video capabilities
 ms.localizationpriority: medium
 ms.topic: how-to
+ms.author: surbhigupta
 ---
 
 # Request device permissions for your Teams app
@@ -212,7 +214,7 @@ For example:
 
 * To prompt the user to share location on the map interface, Teams app asks permission when you call `getLocation()`:
 
-    # [TeamsJS v2](#tab/teamsjs-v2)
+# [TeamsJS v2](#tab/teamsjs-v2)
 
     ```JavaScript
      function getLocation() {
@@ -221,7 +223,7 @@ For example:
      }).catch((error) => { /*Error getting location*/ })} 
     ```
 
-    # [TeamsJS v1](#tab/teamsjs-v1)
+# [TeamsJS v1](#tab/teamsjs-v1)
 
     ```JavaScript
      function getLocation() {
