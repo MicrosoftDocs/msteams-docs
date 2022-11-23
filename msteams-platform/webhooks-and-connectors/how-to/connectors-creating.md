@@ -13,7 +13,7 @@ With Microsoft Teams apps, you can add your existing Office 365 Connector or bui
 See the following video to learn how to create an Office 365 Connectors:
 <br>
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OIzv]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OIzv>]
 <br>
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
@@ -225,7 +225,7 @@ Follow the [step-by-step guide](../../sbs-teams-connectors.yml) to create and te
 
 ## Distribute webhook and connector
 
-1. [Set up an Incoming Webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md#create-an-incoming-webhook) directly for your team.
+1. [[Set up an Incoming Webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md#create-an-incoming-webhook)](add-incoming-webhook.md#create-incoming-webhooks-1) directly for your team.
 
 1. Add a [configuration page](~/webhooks-and-connectors/how-to/connectors-creating.md?#integrate-the-configuration-experience) and publish your Incoming Webhook in an Office 365 Connector.
 
