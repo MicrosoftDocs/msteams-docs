@@ -147,7 +147,7 @@ The following table provides resource-specific permissions for a user:
     1. [Check your app for added RSC permissions in a team](#check-your-app-for-added-rsc-permissions-in-a-team).
     1. [Check your app for added RSC permissions in a chat](#check-your-app-for-added-rsc-permissions-in-a-chat).
 
-## Consent to RSC permissions requested by an app
+## Configure consent settings
 
 In the case of delegated RSC permissions, as long as the given app has not been blocked by the tenant admin, authorized users can consent to permissions requested by the app.
 
@@ -393,7 +393,7 @@ Add a [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicat
 |---|---|---|
 |`id` |String |Your Azure AD app ID. For more information, see [register your app in the Azure AD portal](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).|
 |`resource`|String| This field has no operation in RSC, but must be added and have a value to avoid an error response; any string will do.|
-|`applicationPermissions`|Array of strings|RSC permissions for  your app. For more information, see [resource-specific permissions](resource-specific-consent.md#resource-specific-permissions).|
+|`applicationPermissions`|Array of strings|RSC permissions for  your app. For more information, see [RSC permissions for resource types](#rsc-permissions-for-resource-types).|
 
 Example for RSC in a team
 
@@ -477,7 +477,7 @@ In addition to the user being authorized to install apps in that scope, the foll
 
 If your Teams admin allows custom app uploads, you can [sideload your app](~/concepts/deploy-and-publish/apps-upload.md) directly to a specific team or chat.
 
-## RSC permissions granted to a specific resource
+## Check your app for added RSC permissions
 
 > [!IMPORTANT]
 > The RSC permissions are not attributed to a user. Calls are made with app permissions, not user delegated permissions. The app can be allowed to perform actions that the user cannot, such as deleting a tab. You must review the team owner's or chat owner's intent for your use before making RSC API calls. For more information, see [Microsoft Teams API overview](/graph/teams-concept-overview).
