@@ -62,7 +62,7 @@
     displayName: HTTPs, localhost, host your Teams app
   - name: Plan responsive tabs for Teams mobile
     href: concepts/design/plan-responsive-tabs-for-teams-mobile.md
-  - name: Plan analytics
+  - name: Plan analytics and telemetry
     items:
       - name: Analytics for Teams app
         href: concepts/design/plan-analytics.md
