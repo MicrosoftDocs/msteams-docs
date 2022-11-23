@@ -56,7 +56,7 @@ landingContent:
         url: https://gitter.im/OfficeDev/home
     - linkListType: whats-new
       links:
-      - text: Introduced location API
+      - text: Integrate location capabilities
         url: concepts/device-capabilities/location-capability.md
       - text: Zero install for link unfurling
         url: messaging-extensions/how-to/link-unfurling.md#zero-install-for-link-unfurling
