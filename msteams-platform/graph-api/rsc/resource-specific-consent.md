@@ -53,7 +53,7 @@ The RSC permissions are declared in your app manifest JSON file.
 
 ### Request RSC permissions for Teams app
 
-To request RSC permissions for an app, list the permissions that the app requires in the "authorization" section of the Teams app's manifest. The instructions can differ based on the manifest version of the app.
+To request RSC permissions for an app, list the permissions that the app requires in the authorization section of the Teams app's manifest. The instructions can differ based on the manifest version of the app.
 
 <br>
 
