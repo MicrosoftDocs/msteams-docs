@@ -196,6 +196,8 @@ You must avoid the following issues that occur in 20% of apps that are rejected 
 
 The Microsoft 365 App Compliance Program helps organizations assess and manage risk by evaluating security and compliance information about an app. You **must complete** [Publisher Verification](/azure/active-directory/develop/mark-app-as-publisher-verified) before you submit your app for review to publish on the Microsoft Teams store.
 
+   :::image type="content" source="../../../assets/images/submission/validation-common-reason-pass-AAD-consent.png" alt-text="Screenshot of passed image of AAD consent dialog.":::
+
 ## Violation of app icon guidelines
 
 Icons are one of the main elements people see when browsing the Microsoft Teams store. Your icons must communicate your app's brand and purpose while adhering to [App Icon guidelines](../../build-and-test/apps-package.md#app-icons). You must avoid the following violations that result in app rejection:
@@ -245,6 +247,8 @@ Your app name plays a critical role for users to discover your app on the Micros
 ## Manifest schema
 
 The Teams app manifest describes how the app integrates into the Microsoft Teams product. Your app manifest must conform to a publicly released [manifest schema](../../../resources/schema/manifest-schema.md). If your app supports localization, ensure that use a localization manifest schema version 1.5 or later. App packages that contain preview schemas (not publicly released) fail app review.
+
+   :::image type="content" source="../../../assets/images/submission/validation-common-reason-pass-webapplication-manifest.png" alt-text="Screenshot of the pass image for webApplicationInfo in manifest.":::
 
    :::image type="content" source="../../../assets/images/submission/validation-common-reason-pass-resource-URL-manifest.png" alt-text="Screenshot of image passed for resource URL in manifest.":::
 
