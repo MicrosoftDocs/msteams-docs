@@ -1,6 +1,5 @@
 ---
 title: Teams JavaScript client SDK
-author: heath-hamilton
 ms.author: surbhigupta
 description: In this module, Learn Microsoft Teams JavaScript client SDK, which can help you build app experiences hosted in an <iframe> in Teams, Office, and Outlook.
 ms.localizationpriority: high
@@ -100,7 +99,7 @@ The dialog capability doesn't yet support [Adaptive card dialogs](../../task-mod
 
 The `dialog.open` function currently only works for opening HTMl-based dialogs, and it returns a callback function (`PostMessageChannel`) you can use to pass messages (`ChildAppWindow.postMessage`) to the newly opened dialog.  `dialog.open` returns a callback (rather than a Promise) because it doesn't require app execution to pause waiting for the dialog to close (thus providing more flexibility for various user interaction patterns).
 
-## What's new in TeamsJS version 2.0
+## What's new in TeamsJS version 2.x.x
 
 There are two significant changes between TeamsJS 1.x.x versions and v.2.0.0 and later:
 
@@ -109,7 +108,7 @@ There are two significant changes between TeamsJS 1.x.x versions and v.2.0.0 and
 * [**APIs are now organized into *capabilities*.**](#apis-organized-into-capabilities) You can think of capabilities as logical groupings of APIs that provide similar functionality, such as `authentication`, `dialog`, `chat`, and `calendar`. Each namespace represents a separate capability.
 
 > [!TIP]
-> You can use the [Teams Toolkit extension](https://aka.ms/teams-toolkit) for Microsoft Visual Studio Code to simplify the [TeamsJS v.2.0 update process](#updating-to-the-teams-client-sdk-v200) for an existing Teams app.
+> You can use the [Teams Toolkit extension](https://aka.ms/teams-toolkit) for Microsoft Visual Studio Code to simplify the [TeamsJS version 2.x.x update process](#updating-to-the-teams-client-sdk-v200) for an existing Teams app.
 
 ### Backwards compatibility
 
@@ -127,7 +126,7 @@ Once you're able, the next step is to [update existing application code](#2-upda
 
 Enabling an existing Teams app to run in Outlook and Office requires all of the following:
 
-1. Dependency on TeamsJS version 2.0 ( `@microsoft/teams-js@2.0`) or later,
+1. Dependency on TeamsJS version 2.x.x ( `@microsoft/teams-js@2.0.0`) or later,
 
 2. [Modifying existing application code](#2-update-sdk-references) according to the required changes described in this article, and
 
@@ -211,7 +210,7 @@ async function example() {
 ---
 
 > [!TIP]
-> When you use [Teams Toolkit to update to TeamsJS v.2.0](#updating-to-the-teams-client-sdk-v200), the required updates are flagged for you with `TODO` comments in your client code.
+> When you use [Teams Toolkit to update to TeamsJS v.2.x.x](#updating-to-the-teams-client-sdk-v200), the required updates are flagged for you with `TODO` comments in your client code.
 
 ### APIs organized into capabilities
 
@@ -354,7 +353,7 @@ The `Context` interface has been moved to the `app` namespace and updated to gro
 
 A new property `app.Context.app.host.name` has been added to enable tabs to differentiate user experience depending on the host application.
 
-You can also visualize the changes by reviewing the `transformLegacyContextToAppContext` function in the [TeamsJS v.2.0 source](https://github.com/OfficeDev/microsoft-teams-library-js/blob/main/packages/teams-js/src/public/app.ts)  (*app.ts* file).
+You can also visualize the changes by reviewing the `transformLegacyContextToAppContext` function in the [TeamsJS version 2.x.x source](https://github.com/OfficeDev/microsoft-teams-library-js/blob/main/packages/teams-js/src/public/app.ts)  (*app.ts* file).
 
 | Original name in `Context` interface | New location in `app.Context` |
 | - | - |
@@ -403,9 +402,9 @@ You can also visualize the changes by reviewing the `transformLegacyContextToApp
 | `userTeamRole` | `app.Context.team.userRole`|
 | NA | `app.Context.app.host.name`|
 
-## Updating to the Teams client SDK v.2.0.0
+## Updating to the latest Teams client version
 
-The easiest way to update your Teams app to use TeamsJS v.2.0 is to use the [Teams Toolkit extension](https://aka.ms/teams-toolkit) for Visual Studio Code. This section will walk you through the steps to do that. If you prefer to manually update your code, see the [Callbacks converted to promises](#callbacks-converted-to-promises) and [APIs organized into capabilities](#apis-organized-into-capabilities) sections for more details on required API changes.
+The easiest way to update your Teams app to use TeamsJS v.2.x.x is to use the [Teams Toolkit extension](https://aka.ms/teams-toolkit) for Visual Studio Code. This section will walk you through the steps to do that. If you prefer to manually update your code, see the [Callbacks converted to promises](#callbacks-converted-to-promises) and [APIs organized into capabilities](#apis-organized-into-capabilities) sections for more details on required API changes.
 
 ### 1. Install the latest Teams Toolkit Visual Studio Code extension
 
@@ -419,13 +418,13 @@ To run in Outlook and Office, your app will need to depend on the [npm package](
 1. Open the *Command palette*: `Ctrl+Shift+P`
 1. Run the command `Teams: Upgrade Teams JS SDK references to support Outlook and Office apps`
 
-After completion, the utility will have updated your `package.json` file with the TeamsJS v.2.0 (`@microsoft/teams-js@2.0.0` or later) dependency, and your `*.js/.ts` and `*.jsx/.tsx` files will be updated with:
+After completion, the utility will have updated your `package.json` file with the TeamsJS version 2.x.x (`@microsoft/teams-js@2.0.0` or later) dependency, and your `*.js/.ts` and `*.jsx/.tsx` files will be updated with:
 
 > [!div class="checklist"]
 >
-> * `package.json` references to TeamsJS v.2.0
-> * Import statements for TeamsJS v.2.0
-> * [Function, Enum, and Interface calls](#apis-organized-into-capabilities) to TeamsJS v.2.0
+> * `package.json` references to TeamsJS version 2.x.x
+> * Import statements for TeamsJS version 2.x.x
+> * [Function, Enum, and Interface calls](#apis-organized-into-capabilities) to TeamsJS version 2.x.x
 > * `TODO` comment reminders to review areas that might be impacted by [Context](#updates-to-the-context-interface) interface changes
 > * `TODO` comment reminders to [convert callback functions to promises](#callbacks-converted-to-promises)
 
