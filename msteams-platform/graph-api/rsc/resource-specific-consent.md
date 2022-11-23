@@ -14,7 +14,19 @@ ms.topic: reference
 
 Resource-specific consent (RSC) is an authorization framework built by Microsoft Teams and Microsoft Identity that allows for granting scoped access to an application. Through RSC, an authorized user can give an application access to the data of only a specific instance of a resource type instead of giving broad access to each and every instance of a resource type in the entire tenant. For example, a person who owns both team A and team B can decide to give the Contoso app access to the data of only team A and not team B. The same concept of scoped data access applies to chats and meetings as well.
 
-**Note:** If a chat has a meeting or a call associated with it, then the relevant RSC permissions apply to those resources as well.
+> [!NOTE]
+> If a chat has a meeting or a call associated with it, then the relevant RSC permissions apply to those resources as well.
+
+## RSC permissions for resource types
+
+The granular, Teams-specific, RSC permissions define what an application can do within a specific resource. RSC permissions are available on the following resource types:
+
+* [Teams](#resource-specific-permissions-for-a-team) (includes the channels within those teams)
+* [Chats](#resource-specific-permissions-for-a-chat) (includes the meetings associated with those chats)
+* [Users](#resource-specific-permissions-for-a-user)
+
+> [!NOTE]
+> Some of the permissions listed here might not yet have GA for the features that are associated with them.
 
 ## Types of RSC permissions
 
@@ -31,176 +43,6 @@ All three, the Microsoft Graph SDK, Microsoft Bot Framework SDK, and Microsoft T
 |---------|---------|---------|---------|---------|---------|
 |Application| Microsoft Graph, Microsoft Bot Framework | >=1.6 | Teams, chats, and meetings | Microsoft Graph-based controls for chats and meetings; AAD portal-based controls for teams | In a team, anyone of the team’s owners. In a chat, anyone of the chat’s members. In a meeting, anyone of the meeting organizers or presenters |
 | Delegated | Microsoft Teams Client | >=1.12 | Teams, chats, meetings, and users | Always ON | Any user authorized to install an app in that specific scope. |
-
-## RSC permissions for resource types
-
-The granular, Teams-specific, RSC permissions define what an application can do within a specific resource. RSC permissions are available on the following resource types:
-
-* [Teams](#resource-specific-permissions-for-a-team) (includes the channels within those teams)
-* [Chats](#resource-specific-permissions-for-a-chat) (includes the meetings associated with those chats)
-* [Users](#resource-specific-permissions-for-a-user)
-
-> [!NOTE]
-> Some of the permissions listed here might not yet have GA for the features that are associated with them.
-
-### Resource-specific permissions for a team
-
-The following table provides resource-specific permissions for a team:
-
-| Application permission | Action | Delegate permissions | Application permissions |
-| ----- | ----- |----- |----- |
-|Channel.Create.Group|Create channels in this team. | NA | Supported |
-|Channel.Delete.Group|Delete channels in this team. | NA | Supported |
-|ChannelMeeting.ReadBasic.Group|Get the basic properties of this team's channel meetings.| NA | Supported |
-|ChannelMeetingParticipant.Read.Group|Get participant information for channel meetings associated with this team, such as name, role, ID, joined and left times.| NA | Supported |
-|ChannelMeetingActiveSpeaker.Read.Group|Get the list of participants who are currently sending audio into the channel meetings associated with this team.| Supported | NA |
-|ChannelMeetingAudioVideo.Stream.Group|Stream audio-video content from channel meetings associated with this team.| Supported | NA |
-|ChannelMeetingIncomingAudio.Detect.Group|Detect incoming audio in channel meetings associated with this team.| Supported | NA |
-|ChannelMeetingRecording.Read.Group|Get the recordings of all channel meetings associated with this team.| NA | Supported |
-|ChannelMeetingTranscript.Read.Group|Get the transcripts of all channel meetings associated with this team.| NA | Supported |
-|ChannelMeetingNotification.Send.Group|Send notifications for all the channel meetings associated with this team.| NA | Supported |
-|ChannelMeetingStage.Write.Group|Get content on the meeting stage of channel meetings associated with this team.| Supported | NA |
-|ChannelMessage.Read.Group|Get this team's channel messages. | NA | Supported |
-|ChannelMessage.Send.Group|Send messages to this team's channels.| NA | Supported |
-|ChannelSettings.Read.Group|Get this team's channel names, descriptions, and settings​.| NA | Supported |
-|ChannelSettings.ReadWrite.Group|Update this team's channel names, descriptions, and settings.​| NA | Supported |
-|InAppPurchase.Allow.Group|Show and complete in-app purchases for team members.| Supported | NA |
-|LiveShareSession.ReadWrite.Group| Create and synchronize Live Share sessions for meetings associated with this team. | Supported | NA |
-|MeetingParticipantReaction.Read.Group| Get reactions from participants in channel meetings associated with this team.| Supported | NA |
-|Member.Read.Group|Get this group's members.| NA | Supported |
-|Owner.Read.Group|Get this group's owners.| NA | Supported |
-|TeamsActivity.Send.Group|Create new notifications in the activity feeds of the users in this team. | NA | Supported |
-|TeamsAppInstallation.Read.Group|Get a list of this team's installed apps.| NA | Supported |
-|TeamMember.Read.Group|Get this team's members. | NA | Supported |
-|TeamSettings.Read.Group | Get this team's settings.| NA | Supported |
-|TeamSettings.ReadWrite.Group|Update this team's settings.| NA | Supported |
-|TeamsTab.Create.Group|Create tabs in this team. | NA | Supported |
-|TeamsTab.Delete.Group|Delete this team's tabs. | NA | Supported |
-|TeamsTab.Read.Group|Get a list of this team's tabs.| NA | Supported |
-|TeamsTab.ReadWrite.Group|Manage this team's tabs. | NA | Supported |
-
-For more information, see [team resource-specific consent permissions](/graph/permissions-reference#team-resource-specific-consent-permissions).
-
-### Resource-specific permissions for a chat
-
-The following table provides resource-specific permissions for a chat:
-
-|Application permission| Action | Delegate permissions | Application permissions |
-| ----- | ----- | ----- | ----- |
-| Calls.AccessMedia.Chat | Access media streams in calls associated with this chat or meeting. | NA | Supported |
-| Calls.JoinGroupCalls.Chat | Join calls associated with this chat or meeting. | NA | Supported |
-| ChatSettings.Read.Chat| Get this chat's settings.| NA | Supported |
-| ChatSettings.ReadWrite.Chat| Update this chat's settings. | NA | Supported |
-| ChatMessage.Read.Chat | Get this chat's messages.| NA | Supported |
-| ChatMessage.Send.Chat | Send messages to this chat. | NA | Supported |
-| ChatMessageReadReceipt.Read.Chat | Get the ID of the last seen message in this chat. | NA | Supported |
-| ChatMember.Read.Chat | Get this chat's members. | NA | Supported |
-| Chat.Manage.Chat | Manage this chat. | NA | Supported |
-| InAppPurchase.Allow.Chat | Show and complete in-app purchases for users in this chat and any associated meetings. | Supported | NA |
-| LiveShareSession.ReadWrite.Chat | Create and synchronize Live Share sessions for meetings associated with this chat. | Supported | NA |
-| MeetingStage.Write.Chat | Show content on the meeting stage of meetings associated with this chat. | Supported | NA |
-| MeetingParticipantReaction.Read.Chat | Get the reactions of participants in meetings associated with this chat. | Supported | NA |
-| TeamsTab.Read.Chat | Get this chat's tabs. | NA | Supported |
-| TeamsTab.Create.Chat | Create tabs in this chat. | NA | Supported |
-| TeamsTab.Delete.Chat | Delete this chat's tabs. | NA | Supported |
-| TeamsTab.ReadWrite.Chat | Manage this chat's tabs. | NA | Supported |
-| TeamsAppInstallation.Read.Chat | Get which apps are installed in this chat. | NA | Supported |
-| TeamsActivity.Send.Chat | Create new notifications in the activity feeds of the users in this chat. | NA | Supported |
-| OnlineMeetingIncomingAudio.Detect.Chat | Detect incoming audio in meetings associated with this chat. | Supported | NA |
-| OnlineMeetingActiveSpeaker.Read.Chat | Get the participants who are currently sending audio into the meetings associated with this chat. | Supported | NA |
-| OnlineMeetingAudioVideo.Stream.Chat | Stream audio-video content from meetings associated with this chat. | Supported | NA |
-| OnlineMeetingTranscript.Read.Chat | Get the transcripts of the meeting associated with this chat. | NA | Supported |
-| OnlineMeetingParticipant.Read.Chat | Get the participants of the meetings associated with this chat.| NA | Supported |
-| OnlineMeetingParticipant.ToggleIncomingAudio.Chat | Toggle incoming audio for participants in meetings associated with this chat. | Supported | NA |
-| OnlineMeeting.ReadBasic.Chat | Get basic properties, such as name, schedule, organizer, join link, and start/end notifications, of a meeting associated with this chat. | NA | Supported |
-| OnlineMeetingRecording.Read.Chat | Get the recordings of the meetings associated with this chat. | NA | Supported |
-| OnlineMeetingNotification.Send.Chat | Send notifications for the meetings associated with this chat. | NA | Supported |
-
-For more information, see [chat resource-specific consent permissions](/graph/permissions-reference#chat-resource-specific-consent-permissions).
-
-> [!NOTE]
-> Resource-specific permissions are only available to Teams apps installed on the Teams client and are currently not part of the Azure Active Directory (AAD) portal.
-
-### Resource-specific permissions for a user
-
-The following table provides resource-specific permissions for a user:
-
-|Application permission| Action | Delegate permissions | Application permissions |
-| ----- | ----- | ----- | ----- |
-| CameraStream.Read.User | Get the user's camera stream. | Supported | NA |
-| InAppPurchase.Allow.User | Show and complete in-app purchases. | Supported | NA |
-| MicrophoneStream.Read.User | Get the user's microphone stream. | Supported | NA |
-| MeetingParticipantReaction.Read.User | Get the user's reactions while participating in a meeting. | Supported | NA |
-| OutgoingVideoStream.Write.User | Modify the user's outgoing video. | Supported | NA |
-
-## Enable RSC in your application
-
-1. [Configure consent settings](#configure-consent-settings).
-    1. [Configure group owner consent settings for RSC in a team using the Azure AD portal](#configure-group-owner-consent-settings-for-rsc-in-a-team-using-the-azure-ad-portal).
-    1. [Configure chat owner consent settings for RSC in a chat using the Microsoft Graph APIs](#configure-chat-owner-consent-settings-for-rsc-in-a-chat-using-the-microsoft-graph-apis).
-1. [Register your app with Microsoft identity platform using the Azure AD portal](#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).
-1. [Review your application permissions in the Azure AD portal](#review-your-application-permissions-in-the-azure-ad-portal).
-1. [Obtain an access token from the identity platform](#obtain-an-access-token-from-the-microsoft-identity-platform).
-1. [Update your Teams app manifest](#update-your-teams-app-manifest).
-1. [Install your app directly in Teams](#sideload-your-app-in-teams).
-1. [Check your app for added RSC permissions](#check-your-app-for-added-rsc-permissions).
-    1. [Check your app for added RSC permissions in a team](#check-your-app-for-added-rsc-permissions-in-a-team).
-    1. [Check your app for added RSC permissions in a chat](#check-your-app-for-added-rsc-permissions-in-a-chat).
-
-## Configure consent settings
-
-In the case of delegated RSC permissions, as long as the given app has not been blocked by the tenant admin, authorized users can consent to permissions requested by the app.
-
-In the case of application permissions, in addition to not blocking the app, the tenant admin must also not have turned off app-only RSC permissions for all apps for the entire tenant. The tenant-level controls of app-only RSC permissions differ based on resource type.
-
-### Configure group owner consent settings for RSC in a team using the Azure AD portal
-
-You can enable or disable [group owner consent](/azure/active-directory/manage-apps/configure-user-consent-groups?tabs=azure-portal) directly within the Microsoft Azure portal:
-
-1. Sign in to the [Azure portal](https://portal.azure.com) as a [Global Administrator or Company Administrator](/azure/active-directory/roles/permissions-reference#global-administrator&preserve-view=true).
-1. Select **Azure Active Directory** > **Enterprise applications** > **Consent and permissions** > [**User consent settings**](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConsentPoliciesMenuBlade/UserSettings).
-1. Enable, disable, or limit user consent with the control labeled **Group owner consent for apps accessing data**. The default is **Allow group owner consent for all group owners**. For a team owner to install an app using RSC, group owner consent must be enabled for that user.
-
-    ![Azure RSC team configuration](../../assets/images/azure-rsc-team-configuration.png)
-
-In addition, you can enable or disable group owner consent using PowerShell, follow the steps outlined in [configure group owner consent using PowerShell](/azure/active-directory/manage-apps/configure-user-consent-groups?tabs=azure-powershell).
-
-### Configure chat owner consent settings for RSC in a chat using the Microsoft Graph APIs
-
-You can enable or disable RSC for chats using Graph API. The property `isChatResourceSpecificConsentEnabled` in [**teamsAppSettings**](/graph/api/teamsappsettings-update#example-1-enable-installation-of-apps-that-require-resource-specific-consent-in-chats-meetings) governs whether chat RSC is enabled in the tenant.
-
-   ![Graph RSC team configuration](../../assets/images/rsc/graph-rsc-chat-configuration.png)
-
-> The default value of the property **isChatResourceSpecificConsentEnabled** is based on whether [user consent settings](/azure/active-directory/manage-apps/configure-user-consent?tabs=azure-portal) is turned on or off in the tenant when RSC for chats is first used. This can be the first time a) retrieving [**teamsAppSettings**](/graph/api/teamsappsettings-get) or b) installing a Teams app with resource-specific permissions in a chat/meeting.
-
-In CY23H1, new controls will be introduced that allows tenant admins to allow or block RSC consent settings per app. Based on the sensitivity of the data being accessed instead of the current single master switch that enables or disables consent settings for app-only RSC permissions for all apps in the tenant.
-
-## Register your app with Microsoft identity platform using the Azure AD portal
-
-The Azure AD portal provides a central platform for you to register and configure your apps. Your app must be registered in the Azure AD portal to integrate with the identity platform and call Microsoft Graph APIs. For more information, see [register an application with the identity platform](/graph/auth-register-app-v2).
-
-> [!WARNING]
-> An Azure AD app ID must not be shared across multiple Teams apps. There must be a 1:1 mapping between a Teams app and an Azure AD app. Attempts to install multiple Teams apps which are associated with the same Azure AD app ID will cause installation or runtime failures.
-
-## Review your application permissions in the Azure AD portal
-
-1. Go to the **Home** > **App registrations** page and select your RSC app.
-1. Choose **API permissions** from the left pane and go through the list of **Configured permissions** for your app. If your app only makes RSC Graph API calls, delete all the permissions on that page. If your app also makes non-RSC calls, keep those permissions as required.
-
-> [!IMPORTANT]
-> The Azure AD portal cannot be used to request RSC permissions. RSC permissions are currently exclusive to Teams applications installed in the Teams client and are declared in the Teams app manifest (JSON) file.
-
-## Obtain an access token from the Microsoft identity platform
-
-To make Graph API calls, you must obtain an access token for your app from the identity platform. Before your app can get a token from the identity platform, it must be registered in the Azure AD portal. The access token contains information about your app and the permissions it has for the resources and APIs available through Microsoft Graph.
-
-You must have the following values from the Azure AD registration process to retrieve an access token from the identity platform:
-
-* The **Application ID** assigned by the app registration portal. If your app supports single sign-on (SSO) you must use the same Application ID for your app and SSO.
-* The **Client secret/password** or a public or private key pair that is **Certificate**. This isn't required for native apps.
-* A **Redirect URI** or reply URL for your app to receive responses from Azure AD.
-
-For more information, see [get access on behalf of a user](/graph/auth-v2-user?view=graph-rest-1.0#3-get-a-token&preserve-view=true) and [get access without a user](/graph/auth-v2-service).
 
 ## Update your Teams app manifest
 
@@ -473,9 +315,47 @@ In addition to the user being authorized to install apps in that scope, the foll
 * In the case of a chat, the user must be a member of the chat.
 * In the case of meetings, the user must be an organizer or presenter in the meeting.
 
-## Sideload your app in Teams
+## Enable RSC in your application
 
-If your Teams admin allows custom app uploads, you can [sideload your app](~/concepts/deploy-and-publish/apps-upload.md) directly to a specific team or chat.
+1. [Configure consent settings](#configure-consent-settings).
+    1. [Configure group owner consent settings for RSC in a team using the Azure AD portal](#configure-group-owner-consent-settings-for-rsc-in-a-team-using-the-azure-ad-portal).
+    1. [Configure chat owner consent settings for RSC in a chat using the Microsoft Graph APIs](#configure-chat-owner-consent-settings-for-rsc-in-a-chat-using-the-microsoft-graph-apis).
+1. [Register your app with Microsoft identity platform using the Azure AD portal](#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).
+1. [Review your application permissions in the Azure AD portal](#review-your-application-permissions-in-the-azure-ad-portal).
+1. [Obtain an access token from the identity platform](#obtain-an-access-token-from-the-microsoft-identity-platform).
+1. [Update your Teams app manifest](#update-your-teams-app-manifest).
+1. [Install your app directly in Teams](#sideload-your-app-in-teams).
+1. [Check your app for added RSC permissions](#check-your-app-for-added-rsc-permissions).
+    1. [Check your app for added RSC permissions in a team](#check-your-app-for-added-rsc-permissions-in-a-team).
+    1. [Check your app for added RSC permissions in a chat](#check-your-app-for-added-rsc-permissions-in-a-chat).
+
+## Configure consent settings
+
+In the case of delegated RSC permissions, as long as the given app has not been blocked by the tenant admin, authorized users can consent to permissions requested by the app.
+
+In the case of application permissions, in addition to not blocking the app, the tenant admin must also not have turned off app-only RSC permissions for all apps for the entire tenant. The tenant-level controls of app-only RSC permissions differ based on resource type.
+
+### Configure group owner consent settings for RSC in a team using the Azure AD portal
+
+You can enable or disable [group owner consent](/azure/active-directory/manage-apps/configure-user-consent-groups?tabs=azure-portal) directly within the Microsoft Azure portal:
+
+1. Sign in to the [Azure portal](https://portal.azure.com) as a [Global Administrator or Company Administrator](/azure/active-directory/roles/permissions-reference#global-administrator&preserve-view=true).
+1. Select **Azure Active Directory** > **Enterprise applications** > **Consent and permissions** > [**User consent settings**](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConsentPoliciesMenuBlade/UserSettings).
+1. Enable, disable, or limit user consent with the control labeled **Group owner consent for apps accessing data**. The default is **Allow group owner consent for all group owners**. For a team owner to install an app using RSC, group owner consent must be enabled for that user.
+
+    ![Azure RSC team configuration](../../assets/images/azure-rsc-team-configuration.png)
+
+In addition, you can enable or disable group owner consent using PowerShell, follow the steps outlined in [configure group owner consent using PowerShell](/azure/active-directory/manage-apps/configure-user-consent-groups?tabs=azure-powershell).
+
+### Configure chat owner consent settings for RSC in a chat using the Microsoft Graph APIs
+
+You can enable or disable RSC for chats using Graph API. The property `isChatResourceSpecificConsentEnabled` in [**teamsAppSettings**](/graph/api/teamsappsettings-update#example-1-enable-installation-of-apps-that-require-resource-specific-consent-in-chats-meetings) governs whether chat RSC is enabled in the tenant.
+
+   ![Graph RSC team configuration](../../assets/images/rsc/graph-rsc-chat-configuration.png)
+
+> The default value of the property **isChatResourceSpecificConsentEnabled** is based on whether [user consent settings](/azure/active-directory/manage-apps/configure-user-consent?tabs=azure-portal) is turned on or off in the tenant when RSC for chats is first used. This can be the first time a) retrieving [**teamsAppSettings**](/graph/api/teamsappsettings-get) or b) installing a Teams app with resource-specific permissions in a chat/meeting.
+
+In CY23H1, new controls will be introduced that allows tenant admins to allow or block RSC consent settings per app. Based on the sensitivity of the data being accessed instead of the current single master switch that enables or disables consent settings for app-only RSC permissions for all apps in the tenant.
 
 ## Check your app for added RSC permissions
 
@@ -518,6 +398,131 @@ For more information on how to get details of the apps installed in a specific t
     ![Graph explorer response to GET call for chat RSC permissions](../../assets/images/chat-graph-permissions.png)
 
 For more information on how to get details of apps installed in a specific chat, see [get the names and other details of apps installed in the specified chat](/graph/api/chat-list-installedapps#example-2-get-the-names-and-other-details-of-apps-installed-in-the-specified-chat).
+
+## Supported RSC permissions
+
+Following is a list of all the RSC permissions, categorized based on resource type and access mode.
+
+### Resource-specific permissions for a team
+
+The following table provides resource-specific permissions for a team:
+
+| Application permission | Action | Delegate permissions | Application permissions |
+| ----- | ----- |----- |----- |
+|Channel.Create.Group|Create channels in this team. | NA | Supported |
+|Channel.Delete.Group|Delete channels in this team. | NA | Supported |
+|ChannelMeeting.ReadBasic.Group|Get the basic properties of this team's channel meetings.| NA | Supported |
+|ChannelMeetingParticipant.Read.Group|Get participant information for channel meetings associated with this team, such as name, role, ID, joined and left times.| NA | Supported |
+|ChannelMeetingActiveSpeaker.Read.Group|Get the list of participants who are currently sending audio into the channel meetings associated with this team.| Supported | NA |
+|ChannelMeetingAudioVideo.Stream.Group|Stream audio-video content from channel meetings associated with this team.| Supported | NA |
+|ChannelMeetingIncomingAudio.Detect.Group|Detect incoming audio in channel meetings associated with this team.| Supported | NA |
+|ChannelMeetingRecording.Read.Group|Get the recordings of all channel meetings associated with this team.| NA | Supported |
+|ChannelMeetingTranscript.Read.Group|Get the transcripts of all channel meetings associated with this team.| NA | Supported |
+|ChannelMeetingNotification.Send.Group|Send notifications for all the channel meetings associated with this team.| NA | Supported |
+|ChannelMeetingStage.Write.Group|Get content on the meeting stage of channel meetings associated with this team.| Supported | NA |
+|ChannelMessage.Read.Group|Get this team's channel messages. | NA | Supported |
+|ChannelMessage.Send.Group|Send messages to this team's channels.| NA | Supported |
+|ChannelSettings.Read.Group|Get this team's channel names, descriptions, and settings​.| NA | Supported |
+|ChannelSettings.ReadWrite.Group|Update this team's channel names, descriptions, and settings.​| NA | Supported |
+|InAppPurchase.Allow.Group|Show and complete in-app purchases for team members.| Supported | NA |
+|LiveShareSession.ReadWrite.Group| Create and synchronize Live Share sessions for meetings associated with this team. | Supported | NA |
+|MeetingParticipantReaction.Read.Group| Get reactions from participants in channel meetings associated with this team.| Supported | NA |
+|Member.Read.Group|Get this group's members.| NA | Supported |
+|Owner.Read.Group|Get this group's owners.| NA | Supported |
+|TeamsActivity.Send.Group|Create new notifications in the activity feeds of the users in this team. | NA | Supported |
+|TeamsAppInstallation.Read.Group|Get a list of this team's installed apps.| NA | Supported |
+|TeamMember.Read.Group|Get this team's members. | NA | Supported |
+|TeamSettings.Read.Group | Get this team's settings.| NA | Supported |
+|TeamSettings.ReadWrite.Group|Update this team's settings.| NA | Supported |
+|TeamsTab.Create.Group|Create tabs in this team. | NA | Supported |
+|TeamsTab.Delete.Group|Delete this team's tabs. | NA | Supported |
+|TeamsTab.Read.Group|Get a list of this team's tabs.| NA | Supported |
+|TeamsTab.ReadWrite.Group|Manage this team's tabs. | NA | Supported |
+
+For more information, see [team resource-specific consent permissions](/graph/permissions-reference#team-resource-specific-consent-permissions).
+
+### Resource-specific permissions for a chat
+
+The following table provides resource-specific permissions for a chat:
+
+|Application permission| Action | Delegate permissions | Application permissions |
+| ----- | ----- | ----- | ----- |
+| Calls.AccessMedia.Chat | Access media streams in calls associated with this chat or meeting. | NA | Supported |
+| Calls.JoinGroupCalls.Chat | Join calls associated with this chat or meeting. | NA | Supported |
+| ChatSettings.Read.Chat| Get this chat's settings.| NA | Supported |
+| ChatSettings.ReadWrite.Chat| Update this chat's settings. | NA | Supported |
+| ChatMessage.Read.Chat | Get this chat's messages.| NA | Supported |
+| ChatMessage.Send.Chat | Send messages to this chat. | NA | Supported |
+| ChatMessageReadReceipt.Read.Chat | Get the ID of the last seen message in this chat. | NA | Supported |
+| ChatMember.Read.Chat | Get this chat's members. | NA | Supported |
+| Chat.Manage.Chat | Manage this chat. | NA | Supported |
+| InAppPurchase.Allow.Chat | Show and complete in-app purchases for users in this chat and any associated meetings. | Supported | NA |
+| LiveShareSession.ReadWrite.Chat | Create and synchronize Live Share sessions for meetings associated with this chat. | Supported | NA |
+| MeetingStage.Write.Chat | Show content on the meeting stage of meetings associated with this chat. | Supported | NA |
+| MeetingParticipantReaction.Read.Chat | Get the reactions of participants in meetings associated with this chat. | Supported | NA |
+| TeamsTab.Read.Chat | Get this chat's tabs. | NA | Supported |
+| TeamsTab.Create.Chat | Create tabs in this chat. | NA | Supported |
+| TeamsTab.Delete.Chat | Delete this chat's tabs. | NA | Supported |
+| TeamsTab.ReadWrite.Chat | Manage this chat's tabs. | NA | Supported |
+| TeamsAppInstallation.Read.Chat | Get which apps are installed in this chat. | NA | Supported |
+| TeamsActivity.Send.Chat | Create new notifications in the activity feeds of the users in this chat. | NA | Supported |
+| OnlineMeetingIncomingAudio.Detect.Chat | Detect incoming audio in meetings associated with this chat. | Supported | NA |
+| OnlineMeetingActiveSpeaker.Read.Chat | Get the participants who are currently sending audio into the meetings associated with this chat. | Supported | NA |
+| OnlineMeetingAudioVideo.Stream.Chat | Stream audio-video content from meetings associated with this chat. | Supported | NA |
+| OnlineMeetingTranscript.Read.Chat | Get the transcripts of the meeting associated with this chat. | NA | Supported |
+| OnlineMeetingParticipant.Read.Chat | Get the participants of the meetings associated with this chat.| NA | Supported |
+| OnlineMeetingParticipant.ToggleIncomingAudio.Chat | Toggle incoming audio for participants in meetings associated with this chat. | Supported | NA |
+| OnlineMeeting.ReadBasic.Chat | Get basic properties, such as name, schedule, organizer, join link, and start/end notifications, of a meeting associated with this chat. | NA | Supported |
+| OnlineMeetingRecording.Read.Chat | Get the recordings of the meetings associated with this chat. | NA | Supported |
+| OnlineMeetingNotification.Send.Chat | Send notifications for the meetings associated with this chat. | NA | Supported |
+
+For more information, see [chat resource-specific consent permissions](/graph/permissions-reference#chat-resource-specific-consent-permissions).
+
+> [!NOTE]
+> Resource-specific permissions are only available to Teams apps installed on the Teams client and are currently not part of the Azure Active Directory (AAD) portal.
+
+### Resource-specific permissions for a user
+
+The following table provides resource-specific permissions for a user:
+
+|Application permission| Action | Delegate permissions | Application permissions |
+| ----- | ----- | ----- | ----- |
+| CameraStream.Read.User | Get the user's camera stream. | Supported | NA |
+| InAppPurchase.Allow.User | Show and complete in-app purchases. | Supported | NA |
+| MicrophoneStream.Read.User | Get the user's microphone stream. | Supported | NA |
+| MeetingParticipantReaction.Read.User | Get the user's reactions while participating in a meeting. | Supported | NA |
+| OutgoingVideoStream.Write.User | Modify the user's outgoing video. | Supported | NA |
+
+## Register your app with Microsoft identity platform using the Azure AD portal
+
+The Azure AD portal provides a central platform for you to register and configure your apps. Your app must be registered in the Azure AD portal to integrate with the identity platform and call Microsoft Graph APIs. For more information, see [register an application with the identity platform](/graph/auth-register-app-v2).
+
+> [!WARNING]
+> An Azure AD app ID must not be shared across multiple Teams apps. There must be a 1:1 mapping between a Teams app and an Azure AD app. Attempts to install multiple Teams apps which are associated with the same Azure AD app ID will cause installation or runtime failures.
+
+## Review your application permissions in the Azure AD portal
+
+1. Go to the **Home** > **App registrations** page and select your RSC app.
+1. Choose **API permissions** from the left pane and go through the list of **Configured permissions** for your app. If your app only makes RSC Graph API calls, delete all the permissions on that page. If your app also makes non-RSC calls, keep those permissions as required.
+
+> [!IMPORTANT]
+> The Azure AD portal cannot be used to request RSC permissions. RSC permissions are currently exclusive to Teams applications installed in the Teams client and are declared in the Teams app manifest (JSON) file.
+
+## Obtain an access token from the Microsoft identity platform
+
+To make Graph API calls, you must obtain an access token for your app from the identity platform. Before your app can get a token from the identity platform, it must be registered in the Azure AD portal. The access token contains information about your app and the permissions it has for the resources and APIs available through Microsoft Graph.
+
+You must have the following values from the Azure AD registration process to retrieve an access token from the identity platform:
+
+* The **Application ID** assigned by the app registration portal. If your app supports single sign-on (SSO) you must use the same Application ID for your app and SSO.
+* The **Client secret/password** or a public or private key pair that is **Certificate**. This isn't required for native apps.
+* A **Redirect URI** or reply URL for your app to receive responses from Azure AD.
+
+For more information, see [get access on behalf of a user](/graph/auth-v2-user?view=graph-rest-1.0#3-get-a-token&preserve-view=true) and [get access without a user](/graph/auth-v2-service).
+
+## Sideload your app in Teams
+
+If your Teams admin allows custom app uploads, you can [sideload your app](~/concepts/deploy-and-publish/apps-upload.md) directly to a specific team or chat.
 
 ## Code sample
 
