@@ -13,8 +13,7 @@ You can enrich your Teams app with native device capabilities, such as camera, m
 
 > [!NOTE]
 >
-> * To integrate media capabilities within your Teams web client, desktop, and mobile see [Integrate media capabilities](mobile-camera-image-permissions.md).
-> * To integrate media capabilities within your Microsoft Teams web client, desktop, and mobile, see [Integrate media capabilities](media-capabilities.md).
+> * To integrate media capabilities within your Teams web client, desktop, and mobile see [Integrate media capabilities](media-capabilities.md).
 > * To integrate QR or barcode scanner capability within your Microsoft Teams mobile app, see [Integrate QR or barcode scanner capability in Teams](qr-barcode-scanner-capability.md).
 > * To integrate location capabilities within your Teams web client, desktop, and mobile, see [Integrate location capabilities](location-capability.md).
 
