@@ -81,19 +81,6 @@ For more information on `getLocation` and `showLocation`, see [LocationProps](/j
 > When your application or services access a Microsoft API that provides a location using the Bing Maps, you understand and agree that any content provided through Bing Maps, including geocodes, can only be used within the Microsoft API through which the content is provided. Your use of Bing Maps is governed by the Bing Maps End User Terms of Use available at go.microsoft.com/?linkid=9710837 and the Microsoft Privacy Statement available at go.microsoft.com/fwlink/?LinkID=248686.</br>
 > Further, you must provide a hypertext link to Bing Maps TOU, which is located here, either at the bottom of each page in your Application where the services can be accessed or viewed or within the terms of use of your application. You are responsible for notifying end users of changes to the Bing Maps TOU, and you will comply with Microsoft's reasonable instructions in doing so. You will not encourage or require any end user to breach the terms of the Bing Maps TOU. In the event, an end user breaches the Bing Maps TOU, Microsoft may immediately terminate this agreement.
 
-## Error handling
-
-Ensure to handle errors appropriately in your Teams app. The following table lists the error codes and the conditions under which the errors are generated:
-
-|Error code |  Error name     | Condition|
-| --------- | --------------- | -------- |
-| **100** | NOT_SUPPORTED_ON_PLATFORM | API is not supported on the current platform.|
-| **500** | INTERNAL_ERROR | Internal error is encountered while performing the required operation.|
-| **1000** | PERMISSION_DENIED |User denied location permissions to the Teams App or the web app.|
-| **4000** | INVALID_ARGUMENTS | API is invoked with wrong or insufficient mandatory arguments.|
-| **8000** | USER_ABORT |User cancelled the operation.|
-| **9000** | OLD_PLATFORM | User is on old platform build where implementation of the API is not present. Upgrading the build resolves the issue.|
-
 ### Code snippets
 
 * Call `getLocation` API to retrieve the location:
