@@ -113,6 +113,7 @@ The following table lists the error codes and their descriptions:
 
 ## See also
 
+* [Device capabilities](device-capabilities-overview.md)
 * [Integrate media capabilities](~/concepts/device-capabilities/media-capabilities.md)
 * [Integrate QR code or barcode scanner capability in Teams](qr-barcode-scanner-capability.md)
 * [Integrate location capabilities in Teams](location-capability.md)

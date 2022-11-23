@@ -212,7 +212,7 @@ For example:
 
 * To prompt the user to share location on the map interface, Teams app asks permission when you call `getLocation()`:
 
-    # [TeamsJS v2](#tab/teamsjs-v2)
+# [TeamsJS v2](#tab/teamsjs-v2)
 
     ```JavaScript
      function getLocation() {
@@ -221,7 +221,7 @@ For example:
      }).catch((error) => { /*Error getting location*/ })} 
     ```
 
-    # [TeamsJS v1](#tab/teamsjs-v1)
+# [TeamsJS v1](#tab/teamsjs-v1)
 
     ```JavaScript
      function getLocation() {
@@ -264,7 +264,10 @@ Device permissions are stored for every login session. It means that if you sign
 
 ## See also
 
+* [Device capabilities](device-capabilities-overview.md)
 * [Device permissions for the browser](browser-device-permissions.md)
 * [Integrate media capabilities](media-capabilities.md)
 * [Integrate QR or barcode scanner capability in Teams](qr-barcode-scanner-capability.md)
 * [Integrate location capabilities in Teams](location-capability.md)
+* [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
+* [Meeting apps APIs](../../apps-in-teams-meetings/meeting-apps-apis.md)
