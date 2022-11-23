@@ -215,7 +215,7 @@ For example:
         location.getLocation({ allowChooseLocation: true, showMap: true }).then((location) => { 
             let currentLocation = JSON.stringify(location);
      }).catch((error) => { /*Error getting location*/ })} 
-    ```
+```
 
 # [TeamsJS v1](#tab/teamsjs-v1)
 
@@ -231,11 +231,11 @@ For example:
 
 Here's how the device permissions prompts appear to users on mobile and desktop.
 
-# [Mobile](#tab/mobile)
+# [Mobile](#tab/mobile1)
 
    :::image type="content" source="~/assets/images/tabs/MobileLocationPermission.png" alt-text="Mobile location permission." border="true":::
 
-# [Desktop](#tab/desktop)
+# [Desktop](#tab/desktop1)
 
    <!-- ![Tabs desktop device permissions prompt](~/assets/images/tabs/device-permissions-prompt.png) -->
 

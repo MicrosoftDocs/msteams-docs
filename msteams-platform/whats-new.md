@@ -26,6 +26,8 @@ Teams platform features that are available to all app developers.
 
 **2022 November**
 
+* ***November 23, 2022***: [Request device permission](concepts/device-capabilities/native-device-permissions.md)
+
 * ***November 22, 2022***: [Enable SSO for your bot and message extension app](bots/how-to/authentication/bot-sso-overview.md).
 
 * ***November 18, 2022***: [Zero install for link unfurling](messaging-extensions/how-to/link-unfurling.md#zero-install-for-link-unfurling).
