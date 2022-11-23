@@ -9,7 +9,7 @@ ms.topic: overview
 
 # Device capabilities
 
-Microsoft Teams platform is continuously enhancing developer capabilities aligning with built-in first-party experiences. The enhanced Teams platform allows partners to integrate device capabilities, such as camera, QR or barcode scanner, photo gallery, microphone, and location with their web apps. This integration reduces the barrier to app development, speeds up development cycle, and creates new scenarios or use-cases for the developer community.
+Microsoft Teams platform is continuously enhancing developer capabilities aligning with built-in first-party experiences. The enhanced Teams platform allows partners to integrate device capabilities, such as camer, QR or barcode scanner, photo gallery, microphone, and location with their web apps. This integration reduces the barrier to app development, speeds up development cycle, and creates new scenarios or use-cases for the developer community.
 
 Device permissions are different in the browser. Previously, browser handled how to grant access permissions and now these permissions are handled in Teams. For more information, see [browser device permissions](browser-device-permissions.md).
 
