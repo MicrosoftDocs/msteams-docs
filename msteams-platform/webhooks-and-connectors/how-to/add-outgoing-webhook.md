@@ -21,13 +21,13 @@ The Outgoing Webhook acts as a bot and search for messages in channels using **@
 * Table with just a row is not really needed. Provide the content without tabulating it.
 --->
 
-See the following video to learn how to create an Outgoing Webhooks:
+See the following video to learn how to create Outgoing Webhooks:
 <br>
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OIzu]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OIzu>]
 <br>
 
-## Key features of Outgoing Webhook
+## Key features of Outgoing Webhooks
 
 The following table provides the features and description of Outgoing Webhooks:
 
@@ -69,7 +69,7 @@ To create an Outgoing Webhook, follow these steps:
 
 1. Select **Create**. The Outgoing Webhook is added to the current team's channel:
 
-    ![create Outgoing Webhook](~/assets/images/outgoingwebhook.png)
+    ![create Outgoing Webhooks](~/assets/images/outgoingwebhook.png)
 
 A [Hash-based Message Authentication Code (HMAC)](https://security.stackexchange.com/questions/20129/how-and-when-do-i-use-hmac/20301) dialogue box appears. It's a security token used to authenticate calls between Teams and the designated outside service. The HMAC security token doesn't expire and is unique for each configuration.
 
