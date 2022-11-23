@@ -125,7 +125,7 @@ You can use [JWT](https://jwt.ms) for inspecting the token.
 ## Bot SSO token error
 <br>
 <details>
-<summary>1. Token exchange failure.</summary>
+<summary>Token exchange failure.</summary>
 <br>
 If there's a token exchange failure, use the following code:
 
