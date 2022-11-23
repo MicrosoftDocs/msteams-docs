@@ -92,12 +92,10 @@ The following is the example of payload:
       "title": "Title",
       "height": "height",
       "width": "width",
-      "url":null,
-
-  "card": "Adaptive Card or Adaptive Card bot card attachment"
+      "url": null,
+      "card": "Adaptive Card or Adaptive Card bot card attachment",
       "fallbackUrl": null,
-
-  "completionBotID": "bot App ID"
+      "completionBotID": "bot App ID"
     }
   }
 }
@@ -107,33 +105,39 @@ The following is the example of Invoke request:
 
 ```javascript
 function submit(type) {
-            let taskInfo = {
-                title: null,
-                height: null,
-                width: null,
-                url: null,
-                card: null,
-                fallbackUrl: null,
-                completionBotId: null,
-            };
+    let taskInfo = {
+        title: null,
+        height: null,
+        width: null,
+        url: null,
+        card: null,
+        fallbackUrl: null,
+        completionBotId: null,
+    };
 
-taskInfo.title = "Task Module Demo";
-taskInfo.height = "medium";
-taskInfo.width = "medium";
+    taskInfo.title = "Task Module Demo";
+    taskInfo.height = "medium";
+    taskInfo.width = "medium";
 
-taskInfo.card =  "Adaptive card or adaptive card attachment code";
-taskInfo.fallbackUrl = taskInfo.url;
+    taskInfo.card = "Adaptive card or adaptive card attachment code";
+    taskInfo.fallbackUrl = taskInfo.url;
 
-if (type.includes('bot'))
-    {  taskInfo.completionBotId = "Bot App ID";}
+    if (type.includes("bot")) {
+        taskInfo.completionBotId = "Bot App ID";
+    }
 
-submitHandler = (err, result) => {
-            console.log(`Submit handler - err: ${err}`);
-            alert("Result = " + JSON.stringify(result) + "\nError = " + JSON.stringify(err));
-        };
+    submitHandler = (err, result) => {
+        console.log(`Submit handler - err: ${err}`);
+        alert(
+            "Result = " +
+                JSON.stringify(result) +
+                "\nError = " +
+                JSON.stringify(err)
+        );
+    };
 
- microsoftTeams.tasks.startTask(taskInfo, submitHandler);
-        }
+    microsoftTeams.tasks.startTask(taskInfo, submitHandler);
+}
 ```
 
 The next section gives an example of submitting the result of a task module.
