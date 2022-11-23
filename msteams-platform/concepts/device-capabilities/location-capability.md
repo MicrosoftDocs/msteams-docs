@@ -73,7 +73,10 @@ The following table lists the set of APIs to enable your device's location capab
 |`showLocation`| Shows location on map. |It takes a single input parameter location, which contains the coordinates of the location to be shown on the map.|
 
 > [!NOTE]
-> `showMap` conditions for True and False:<br> - True: Show location on map <br> - False: Do not show location on map <br>-(false,false): This configuration is only supported on mobile <br> -If `allowChooseLocation` is set to true, then `showMap` is ignored.<br> -`showMap`= false is not supported on Teams web or desktop.
+> For `getLocation` API:
+>
+> * If `allowChooseLocation` is set to true, then `showMap` is ignored.
+> * `showMap`= false is not supported on Teams web or desktop.
 
 For more information on `getLocation` and `showLocation`, see [LocationProps](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true).
 
