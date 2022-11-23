@@ -19,7 +19,7 @@ Crucial items in advising future development strategy include:
 
 App analytics help understand user behavior, motivation, friction points that can help the developer make informed decisions about feature investments, enhancements, and adoption for the app.
 
-## Why is Teams App Telemetry important?
+<!--## Why is Teams App Telemetry important?
 
 If you're a SaaS developer, you would already have telemetry tracked for some of your core business metrics. Your SaaS product might have an existing web app, or a mobile app, and you've now introduced a new Teams app. The Teams app is another surface to expose your solution to your end user. It's another window to your SaaS landscape.
 
@@ -35,7 +35,7 @@ As your solution scales across multiple platforms (web, mobile platforms, and Te
   - Application performance monitoring: Performance measures such as, time to load and response time of the solution in the modality.
   - Modality-specific metadata: Device, browser information, and tenant information.
 
-  For pre-existing modalities, you may already be tracking such information. As you add new modalities and new ways for your end user to experience your solution, it's important to add modality-specific telemetry.
+  For pre-existing modalities, you may already be tracking such information. As you add new modalities and new ways for your end user to experience your solution, it's important to add modality-specific telemetry.-->
 
 ## What telemetry data do I track in my Teams app?
 

@@ -70,8 +70,6 @@
         items:
         - name: Overview
           href: concepts/design/teams-app-telemetry.md
-        - name: Teams app context and attributes
-          href: concepts/design/teams-app-context-attributes.md
         - name: Azure Application Insights
           href: concepts/design/add-analytics.md
   - name: Plan to monetize your app

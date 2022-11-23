@@ -81,7 +81,25 @@ Besides the generic reports for daily, weekly, and monthly active users, time sp
 
 Instrumenting your code with analytics markers (also known as telemetry markers) is a standard web application development practice. Robust telemetry instrumentation in your code is critical for long-term success. It helps you to measure both aggregate and user-specific metrics. It's required to determine product, growth, marketing, and business decisions.
 
-Before you begin, always remember to handle user data in accordance with your strict data handling and privacy policies, and in compliance with your regulatory obligations. 
+### Why is Teams App Telemetry important?
+
+If you're a SaaS developer, you would already have telemetry tracked for some of your core business metrics. Your SaaS product might have an existing web app, or a mobile app, and you've now introduced a new Teams app. The Teams app is another surface to expose your solution to your end user. It's another window to your SaaS landscape.
+
+As your solution scales across multiple platforms (web, mobile platforms, and Teams), it’s important to view your telemetry in layers:
+
+:::image type="content" source="../../assets/images/app-fundamentals/telemetry-in-layers.png" alt-text="Telemetry in layers" border="false":::
+
+- **Core application telemetry**: Core telemetry includes tracking and measuring of application-level metrics. It's independent of the platform, client, or surface area used by the end user. A typical SaaS solution measures application sign-ups, trials, purchases, monthly or annual recurring revenue, aggregated number of users, and churn among other data. If you have an existing SaaS solution, you may be tracking these metrics already.
+
+- **Modality-specific telemetry**: At a presentation level, your application is accessed by your end user across different modalities. Each modality has its own unique user interaction points. This metadata facilitates telemetry capture unique to that modality. For example, viewing a product might be tracked via page view in a web app vs. screen tracking in mobile app. Telemetry at this layer includes:
+
+  - User interactions: User clicks, views, sessions, system, and custom events in the modality.
+  - Application performance monitoring: Performance measures such as, time to load and response time of the solution in the modality.
+  - Modality-specific metadata: Device, browser information, and tenant information.
+
+  For pre-existing modalities, you may already be tracking such information. As you add new modalities and new ways for your end user to experience your solution, it's important to add modality-specific telemetry.
+
+Before you begin, always remember to handle user data in accordance with your strict data handling and privacy policies, and in compliance with your regulatory obligations.
 
 > [!NOTE]
 > The rest of this document only recommends the in-context data you can use but doesn't supersede your regulatory obligations.
