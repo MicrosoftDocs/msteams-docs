@@ -116,7 +116,19 @@ items:
         The following page appears:
 
          :::image type="content" source="~/assets/images/proactive-scenario/proactive-message.png" alt-text="Screenshot shows the Proactive Message in Teams."lightbox="~/assets/images/proactive-scenario/proactive-message.png"::: 
+    
+    1. A default **App ID** is created and populated in **Basic information** section.
 
+    1. Add the Short and Long description  for your app in **Descriptions**.
+
+    1. In **Developer Information**, add the required details and in **Website (must be a valid HTTPS URL)** give your ngrok HTTPS URL.
+
+    1. In **App URLs**, update the Privacy policy to `https://<yourngrokurl>/privacy` and Terms of use to `https://<yourngrokurl>/termsofuse`.
+
+    1. Select **Save**.
+
+    1. In the **Domains** section, select **Add a domain** and enter your ngrok URL without the HTTPS prefix `<yourngrokurl>.ngrok.io`.
+    
     1. Select **App Features** > **Bot**.
     
         :::image type="content" source="~/assets/images/proactive-scenario/select-app-features.png" alt-text="Screenshot shows how to select App Features.":::
