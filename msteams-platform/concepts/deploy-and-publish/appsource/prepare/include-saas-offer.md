@@ -70,13 +70,7 @@ For complete instructions and API reference, see the [SaaS Fulfillment APIs docu
 
 When someone finishes buying a subscription plan for your app in the Teams store, the commercial marketplace will direct them to your landing page where they can manage the subscription (such as assign a license to a specific user in their org).
 
-Select **No, I would prefer to manage customer licenses myself** in such cases.
-
 For complete instructions, see [build the landing page for your SaaS offer](/azure/marketplace/azure-ad-transactable-saas-landing-page).
-
-When someone finishes buying a subscription plan for your app and wants to stay in the Teams, without directing them to your landing page, select **Yes, I would like Microsoft to manage customer licenses on my behalf**.
-
-For more information, see [manage license for third party apps in Teams](#manage-license-for-third-party-apps-in-teams).
 
 ### Best practices for landing pages
 
