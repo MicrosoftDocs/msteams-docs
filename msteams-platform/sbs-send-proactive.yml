@@ -103,15 +103,15 @@ items:
  
     1. Select **Apps** > **Import app**.
 
-        :::image type="content" source="~/assets/images/proactive-scenario/upload-app-package.png" alt-text="Screenshot shows how to upload an app package.":::  
+        :::image type="content" source="~/assets/images/proactive-scenario/upload-app-package.png" alt-text="Screenshot shows how to upload an app package with Import app button highlighted in red.":::  
 
     1. Select **AppManifest** and select **Open**.
 
-        :::image type="content" source="~/assets/images/proactive-scenario/select-app-package.png" alt-text="Screenshot shows how to select app package.":::
+        :::image type="content" source="~/assets/images/proactive-scenario/select-app-package.png" alt-text="Screenshot shows how to select app package with Open button highlighted in red.":::
 
     1. Select **Import**.
 
-         :::image type="content" source="~/assets/images/proactive-scenario/select-import.png" alt-text="Screenshot shows how to import an app.":::
+         :::image type="content" source="~/assets/images/proactive-scenario/select-import.png" alt-text="Screenshot shows how to import app with Import button highlighted in red.":::
 
         The following page appears:
 
@@ -131,21 +131,21 @@ items:
     
     1. Select **App Features** > **Bot**.
     
-        :::image type="content" source="~/assets/images/proactive-scenario/select-app-features.png" alt-text="Screenshot shows how to select App Features.":::
+        :::image type="content" source="~/assets/images/proactive-scenario/select-app-features.png" alt-text="Screenshot shows how to select App Features and Bot highlighted in red.":::
 
     1. Select **Create a new bot**.
 
-        :::image type="content" source="~/assets/images/proactive-scenario/select-bot.png" alt-text="Screenshot shows how to add bot to your app.":::     
+        :::image type="content" source="~/assets/images/proactive-scenario/select-bot.png" alt-text="Screenshot shows how to Create a new bot highlighted in red.":::     
         
     1. Select **New Bot**. 
     
-        :::image type="content" source="~/assets/images/proactive-scenario/create-new-bot.png" alt-text="Screenshot shows how to create a new bot.":::
+        :::image type="content" source="~/assets/images/proactive-scenario/create-new-bot.png" alt-text="Screenshot shows how to create a New bot highlighted in red.":::
 
         The **Add bot** window appears.
 
     1. Enter **Proactive Message bot** and select **Add**.
 
-         :::image type="content" source="~/assets/images/proactive-scenario/enter-proactive-message.png" alt-text="Screenshot shows how to enter Proactive Message.":::
+         :::image type="content" source="~/assets/images/proactive-scenario/enter-proactive-message.png" alt-text="Screenshot shows how to enter Proactive Message with Add button highlighted in red.":::
 
         Now the Bot Proactive Message bot is successfully added to the application. You can see the **Bot Name** and **Bot ID**.
 
@@ -160,22 +160,22 @@ items:
 
     1. Select **Configure** and set the **Endpoint address** in the form of `https://your ngrok/api/messages`.
 
-        :::image type="content" source="~/assets/images/proactive-scenario/select-configure.png" alt-text="Screenshot shows how to configure your bot.":::
+        :::image type="content" source="~/assets/images/proactive-scenario/select-configure.png" alt-text="Screenshot shows how to configure your bot and Save button highlighted in red.":::
 
     1. Select **Client secrets** > **Add a client secret for your bot**.
 
-        :::image type="content" source="~/assets/images/proactive-scenario/secret.png" alt-text="Screenshot shows how to add client secret to your bot.":::
+        :::image type="content" source="~/assets/images/proactive-scenario/secret.png" alt-text="Screenshot shows how to add client secret highlighted in red.":::
 
     1. The **New client secret generated** window appears and select **OK**.    
 
-        :::image type="content" source="~/assets/images/proactive-scenario/new-secret.png" alt-text="Screenshot shows how to add new client secret.":::
+        :::image type="content" source="~/assets/images/proactive-scenario/new-secret.png" alt-text="Screenshot shows the New client secret generated window with OK button highlighted in red.":::
 
         > [!TIP]
         > Save the **New client secret** value for future reference.
 
     1. Select the Apps :::image type="icon" source="~/assets/images/proactive-scenario/apps-icon.png"::: icon and select **Proactive Message Demo**.
 
-         :::image type="content" source="~/assets/images/proactive-scenario/select-apps.png" alt-text="Screenshot shows your app in Developer Portal.":::
+         :::image type="content" source="~/assets/images/proactive-scenario/select-apps.png" alt-text="Screenshot shows your Proactive message Demo app highlighted in red.":::
 
         The following page appears:
 
@@ -183,7 +183,7 @@ items:
 
     1. Select **App Features** under **Configure** and select **Bot**.
 
-         :::image type="content" source="~/assets/images/proactive-scenario/select-app-features1.png" alt-text="Screenshot shows how to add app features.":::
+         :::image type="content" source="~/assets/images/proactive-scenario/select-app-features1.png" alt-text="Screenshot shows how to add Bot in App features option highlighted in red.":::
 
     1. Select **Proactive Message bot** from the **Select an existing bot** dropdown.
 
@@ -191,7 +191,7 @@ items:
 
     1. Select **Personal** > **Save**.
 
-        :::image type="content" source="~/assets/images/proactive-scenario/select-personal.png" alt-text="Screenshot shows how to select scope for your bot.":::
+        :::image type="content" source="~/assets/images/proactive-scenario/select-personal.png" alt-text="Screenshot shows how to select scope and Save option highlighted in red.":::
 
     1. Open the **appsettings.json** file in Visual Studio and update the following information:
 
@@ -202,7 +202,7 @@ items:
 
     1. Select **Debug** > **Start Debugging**.
 
-        :::image type="content" source="~/assets/images/proactive-scenario/debug.png" alt-text="Screenshot shows how to debug your solution in Visual Studio.":::
+        :::image type="content" source="~/assets/images/proactive-scenario/debug.png" alt-text="Screenshot shows how to start debugging option highlighted in red.":::
 
        The corresponding proactive message sample appears:
 
@@ -210,11 +210,11 @@ items:
 
     1. Go back to Developer Portal, select **Preview in Teams**.
         
-        :::image type="content" source="~/assets/images/proactive-scenario/preview-teams.png" alt-text="Screenshot shows how to preview your app in Teams.":::
+        :::image type="content" source="~/assets/images/proactive-scenario/preview-teams.png" alt-text="Screenshot shows Preview in Teams option highlighted in red.":::
 
     1. Select **Add**.
 
-        :::image type="content" source="~/assets/images/proactive-scenario/select-add.png" alt-text="Screenshot shows how to add your app in Teams.":::
+        :::image type="content" source="~/assets/images/proactive-scenario/select-add.png" alt-text="Screenshot shows how to add your app in Teams with Add option highlighted in red.":::
 
        The following page appears.
 
@@ -240,20 +240,20 @@ items:
 
     1. Right-click **Dependencies**, select **Manage NuGet Packages**.
 
-        :::image type="content" source="~/assets/images/proactive-scenario/dependencies.png" alt-text="Screenshot shows the Proactive Dependencies in your solution.":::
+        :::image type="content" source="~/assets/images/proactive-scenario/dependencies.png" alt-text="Screenshot shows the Manage NuGet Packages in your solution highlighted in red.":::
 
     1. In **NuGet ProactiveBot**, select **Browse** and search for **AdaptiveCards**. 
     1. Select **Install**. 
 
-        :::image type="content" source="~/assets/images/proactive-scenario/select-adaptive cards.png" alt-text="Screenshot shows how to install Adaptive Cards,":::
+        :::image type="content" source="~/assets/images/proactive-scenario/select-adaptive cards.png" alt-text="Screenshot shows how to install Adaptive Cards by selecting install highlighted in red.":::
 
     1. In **Preview changes** window, select **OK**.
 
-        :::image type="content" source="~/assets/images/proactive-scenario/select-ok.png" alt-text="Screenshot shows the preview changes window.":::
+        :::image type="content" source="~/assets/images/proactive-scenario/select-ok.png" alt-text="Screenshot shows the preview changes window by selecting OK highlighted in red.":::
 
     1. Open the **NotifyController.cs** file under **Controllers**.
 
-        :::image type="content" source="~/assets/images/proactive-scenario/select-notify.png" alt-text="Screenshot shows how to select notifycontroller.cs in your solution.":::
+        :::image type="content" source="~/assets/images/proactive-scenario/select-notify.png" alt-text="Screenshot shows how to select notifycontroller.cs highlighted in red.":::
 
     1. Replace the existing `BotCallback` code with the following code to send the Adaptive Card message:     
         
