@@ -33,22 +33,29 @@ The following table lists Teams tabs and dialogs (task modules) capabilities (pu
 |-----------|--------------|-------|
 | app | Teams, Outlook, Office, Office app for Android | Namespace representing app initialization and lifecycle. |
 | appInitialization| | Deprecated. Replaced by `app` namespace. |
-| appInstallDialog | Teams||
+| appInstallDialog | Teams, Office ||
 | authentication | Teams, Outlook, Office, Office app for Android | |
-| calendar | Outlook ||
+| calendar | Outlook (Windows desktop only) ||
 | call | Teams||
 | chat |Teams||
 | dialog | Teams, Outlook, Office | Namespace representing dialogs (formerly named *task modules*. See notes on [Dialogs](#dialogs). |
+| geoLocation | ||
 | location |Teams| See notes on [App permissions](#app-permissions).|
 | mail | Outlook (Windows desktop only)||
 | media |Teams| See notes on [App permissions](#app-permissions).|
+| menus | Teams ||
+| monetization | Teams ||
 | pages | Teams, Outlook, Office, Office app for Android | Namespace representing page navigation. See notes on [Deep linking](#deep-linking). |
 | people |Teams||
-| settings || Deprecated. Replaced by `pages.config`.|
+| profile | ||
+| search | ||
 | sharing | Teams||
+| settings || Deprecated. Replaced by `pages.config`.|
+| stageView | Teams ||
 | tasks | | Deprecated. Replaced by `dialog` capability. See notes on [Dialogs](#dialogs).|
 | teamsCore | Teams | Namespace containing Teams-specific functionality.|
 | video | Teams||
+| webStorage | Teams ||
 
 #### App permissions
 
