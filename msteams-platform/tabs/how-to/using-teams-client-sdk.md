@@ -115,7 +115,7 @@ There are two significant changes between TeamsJS 1.x.x versions and v.2.0.0 and
 * [**APIs are now organized into *capabilities*.**](#apis-organized-into-capabilities) You can think of capabilities as logical groupings of APIs that provide similar functionality, such as `authentication`, `dialog`, `chat`, and `calendar`. Each namespace represents a separate capability.
 
 > [!TIP]
-> You can use the [Teams Toolkit extension](https://aka.ms/teams-toolkit) for Microsoft Visual Studio Code to simplify the [TeamsJS version 2.x.x update process](#updating-to-the-teams-client-sdk-v200) for an existing Teams app.
+> You can use the [Teams Toolkit extension](https://aka.ms/teams-toolkit) for Microsoft Visual Studio Code to simplify the [TeamsJS version 2.x.x update process](#updating-to-the-latest-teams-client-version) for an existing Teams app.
 
 ### Backwards compatibility
 
@@ -217,7 +217,7 @@ async function example() {
 ---
 
 > [!TIP]
-> When you use [Teams Toolkit to update to TeamsJS v.2.x.x](#updating-to-the-teams-client-sdk-v200), the required updates are flagged for you with `TODO` comments in your client code.
+> When you use [Teams Toolkit to update to TeamsJS v.2.x.x](#updating-to-the-latest-teams-client-version), the required updates are flagged for you with `TODO` comments in your client code.
 
 ### APIs organized into capabilities
 
