@@ -67,13 +67,14 @@ See [Install apps for users](/graph/api/userteamwork-post-installedapps?view=gra
 
 ## Examples
 
-Be sure that you authenticate and have a bearer token before creating a new conversation using the REST API.
+Be sure that you authenticate and have a [bearer token](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication    &tabs=multitenant#bot-to-connector) before creating a new conversation using the REST API.
 
 ```json
-POST /v3/conversations
+
+POST {Service URL of your bot}/v3/conversations
 {
   "bot": {
-    "id": "28:10j12ou0d812-2o1098-c1mjojzldxcj-1098028n ",
+    "id": "c38eda0f-e780-49ae-86f0-afb644203cf8",
     "name": "The Bot"
   },
   "members": [
@@ -88,6 +89,10 @@ POST /v3/conversations
   }
 }
 ```
+
+You can get the `{Service URL of your bot}` from `TurnContext` object like `turnContext.Activity.ServiceURL` parameter.
+
+Provide `id` as your bots app ID and `name` as your bots name. You can get the `members` `id` from your bots `TurnContext` object such as `turnContext.Activity.From.Id`. Similarly, `id` of tenant, from your bots `TurnContext` object such as `turnContext.Activity.ChannelData.Tenant.Id`.
 
 You must supply the user ID and the tenant ID. If the call succeeds, the API returns with the following response object.
 
