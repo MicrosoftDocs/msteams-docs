@@ -86,11 +86,10 @@ For more information on `getLocation` and `showLocation`, see [LocationProps](/j
 
 ### Code snippets
 
-* Call `getLocation` API to retrieve the location:
 
 # [TeamsJS v2](#tab/teamsjs-v2)
 
-**Calling `getLocation` API to retrieve the location:**
+* **Call `getLocation` API to retrieve the location:**
 
 ```javascript
 import {location} from "@microsoft/teams-js"
@@ -105,7 +104,7 @@ if(location.isSupported()) {
 else {/*Handle case where capability isn't supported */}
 ```
 
-**Calling `showLocation` API to display the location:**
+* **Call `showLocation` API to display the location:**
 
 ```javascript
 import {location} from "@microsoft/teams-js"
@@ -122,7 +121,7 @@ else {/*Handle case where capability isn't supported */}
 
 # [TeamsJS v1](#tab/teamsjs-v1)
 
-**Calling `getLocation` API to retrieve the location:**
+* **Call `getLocation` API to retrieve the location:**
 
 ```javascript
 let locationProps = {"allowChooseLocation":true,"showMap":true};
@@ -135,7 +134,7 @@ microsoftTeams.location.getLocation(locationProps, (err: microsoftTeams.SdkError
 });
 ```
 
-* Call `showLocation` API to display the location:
+* **Call `showLocation` API to display the location:**
 
 ```javascript
 let location = {"latitude":17,"longitude":17};
