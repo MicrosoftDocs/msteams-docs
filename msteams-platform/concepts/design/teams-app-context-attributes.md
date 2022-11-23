@@ -1,7 +1,7 @@
 ---
 title: Teams App Context and Attributes
 author: heath-hamilton
-description: Learn about Teams App Context and Attributes
+description: Learn about Teams App Context and Attributes.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta

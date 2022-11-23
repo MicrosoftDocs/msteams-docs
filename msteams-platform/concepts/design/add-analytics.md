@@ -1,7 +1,7 @@
 ---
 title: Azure Application Insights
 author: heath-hamilton
-description: Learn about adding insights for my Teams app in Azure AD
+description: Learn about adding insights for my Teams app in Azure AD.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta

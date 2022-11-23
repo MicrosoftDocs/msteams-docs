@@ -1,7 +1,7 @@
 ---
 title: Teams App Telemetry
 author: heath-hamilton
-description: Learn about Teams App Telemetry
+description: Learn about Teams App Telemetry.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
