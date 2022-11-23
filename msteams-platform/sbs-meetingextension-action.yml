@@ -16,7 +16,7 @@ items:
   content: |
     Teams action based message extensions allow users to interact with web services in the Microsoft Teams client. Message extensions help to initiate actions in an external system from the compose message area, the command box, or directly from a message.
 
-    **Key features of action based message extension**
+    **Key features of action based message extension**:
 
     * Presents the user with a modal pop-up to collect or display information.
     * Triggers the action commands from the compose message area, the command box, or from a message. 
