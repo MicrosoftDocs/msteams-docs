@@ -183,52 +183,52 @@ items:
 
     1. Select **App Features** under **Configure** and select **Bot**.
 
-         :::image type="content" source="~/assets/images/proactive-scenario/select-app-features1.png" alt-text="Select app features":::
+         :::image type="content" source="~/assets/images/proactive-scenario/select-app-features1.png" alt-text="Screenshot shows how to add app features.":::
 
     1. Select **Proactive Message bot** from the **Select an existing bot** dropdown.
 
-         :::image type="content" source="~/assets/images/proactive-scenario/select-send-proactive-message.png" alt-text="Select send proactive messages":::
+         :::image type="content" source="~/assets/images/proactive-scenario/select-send-proactive-message.png" alt-text="Screenshot shows how to select your bot.":::
 
     1. Select **Personal** > **Save**.
 
-        :::image type="content" source="~/assets/images/proactive-scenario/select-personal.png" alt-text="Select personal":::
+        :::image type="content" source="~/assets/images/proactive-scenario/select-personal.png" alt-text="Screenshot shows how to select scope for your bot.":::
 
     1. Open the **appsettings.json** file in Visual Studio and update the following information:
 
         * Set **MicrosoftAppID** to your bot ID.
         * Set **MicrosoftAppPassword** to your client secret ID value.
 
-       :::image type="content" source="~/assets/images/proactive-scenario/appsettings.png" alt-text="App Settings file":::
+       :::image type="content" source="~/assets/images/proactive-scenario/appsettings.png" alt-text="Screenshot shows how to open app settings file in Visual Studio.":::
 
     1. Select **Debug** > **Start Debugging**.
 
-        :::image type="content" source="~/assets/images/proactive-scenario/debug.png" alt-text="Select Debug":::
+        :::image type="content" source="~/assets/images/proactive-scenario/debug.png" alt-text="Screenshot shows how to debug your solution in Visual Studio.":::
 
        The corresponding proactive message sample appears:
 
-        :::image type="content" source="~/assets/images/proactive-scenario/proactive-confirm.png" alt-text="Proactive Confirm":::
+        :::image type="content" source="~/assets/images/proactive-scenario/proactive-confirm.png" alt-text="Screenshot shows your bot is ready in browser.":::
 
     1. Go back to Developer Portal, select **Preview in Teams**.
         
-        :::image type="content" source="~/assets/images/proactive-scenario/preview-teams.png" alt-text="Preview Teams":::
+        :::image type="content" source="~/assets/images/proactive-scenario/preview-teams.png" alt-text="Screenshot shows how to preview your app in Teams.":::
 
     1. Select **Add**.
 
-        :::image type="content" source="~/assets/images/proactive-scenario/select-add.png" alt-text="Select Add":::
+        :::image type="content" source="~/assets/images/proactive-scenario/select-add.png" alt-text="Screenshot shows how to add your app in Teams.":::
 
        The following page appears.
 
-        :::image type="content" source="~/assets/images/proactive-scenario/teams-open1.png" alt-text="Teams Open":::
+        :::image type="content" source="~/assets/images/proactive-scenario/teams-open1.png" alt-text="Screenshot shows proactive message bot in your Teams.":::
 
        Open the browser.
 
     1. Copy and paste the `http://localhost:3978/api/notify` URL in browser to get a proactive hello message in the chat.
 
-        :::image type="content" source="~/assets/images/proactive-scenario/url-paste.png" alt-text="URL Paste":::
+        :::image type="content" source="~/assets/images/proactive-scenario/url-paste.png" alt-text="Screenshot shows the URL in browser to get a proactive hello message in the chat.":::
 
     1. Go to Teams. You receive a proactive hello message from the bot when installation is successful.
 
-        :::image type="content" source="~/assets/images/proactive-scenario/proactive-reply.png" alt-text="Proactive reply":::
+        :::image type="content" source="~/assets/images/proactive-scenario/proactive-reply.png" alt-text="Screenshot shows the proactive message reply.":::
     
 
 - title: Add Adaptive Card to proactive message
@@ -236,24 +236,24 @@ items:
   content: |
     1. In Visual Studio, stop the debugging process.
 
-        :::image type="content" source="~/assets/images/proactive-scenario/stop-debugging.png" alt-text="Stop Debugging":::
+        :::image type="content" source="~/assets/images/proactive-scenario/stop-debugging.png" alt-text="Screenshot shows how to stop debugging your solution.":::
 
     1. Right-click **Dependencies**, select **Manage NuGet Packages**.
 
-        :::image type="content" source="~/assets/images/proactive-scenario/dependencies.png" alt-text="Proactive Dependencies":::
+        :::image type="content" source="~/assets/images/proactive-scenario/dependencies.png" alt-text="Screenshot shows the Proactive Dependencies in your solution.":::
 
     1. In **NuGet ProactiveBot**, select **Browse** and search for **AdaptiveCards**. 
     1. Select **Install**. 
 
-        :::image type="content" source="~/assets/images/proactive-scenario/select-adaptive cards.png" alt-text="select Adaptive Cards":::
+        :::image type="content" source="~/assets/images/proactive-scenario/select-adaptive cards.png" alt-text="Screenshot shows how to install Adaptive Cards,":::
 
     1. In **Preview changes** window, select **OK**.
 
-        :::image type="content" source="~/assets/images/proactive-scenario/select-ok.png" alt-text="select Ok":::
+        :::image type="content" source="~/assets/images/proactive-scenario/select-ok.png" alt-text="Screenshot shows the preview changes window.":::
 
     1. Open the **NotifyController.cs** file under **Controllers**.
 
-        :::image type="content" source="~/assets/images/proactive-scenario/select-notify.png" alt-text="Select Notify":::
+        :::image type="content" source="~/assets/images/proactive-scenario/select-notify.png" alt-text="Screenshot shows how to select notifycontroller.cs in your solution.":::
 
     1. Replace the existing `BotCallback` code with the following code to send the Adaptive Card message:     
         
@@ -287,7 +287,7 @@ items:
 
        The corresponding proactive message sample appears:
 
-        :::image type="content" source="~/assets/images/proactive-scenario/proactive-confirm.png" alt-text="Proactive Confirm":::
+        :::image type="content" source="~/assets/images/proactive-scenario/proactive-confirm.png" alt-text="Screenshot shows the proactive message in Teams.":::
 
     1. Go to Teams and uninstall your app. 
 
@@ -300,7 +300,7 @@ items:
   content: |
     Did you come up with something like this? This is how the proactive hello message in Adaptive Card appears:
     
-    :::image type="content" source="~/assets/images/proactive-scenario/proactive-helo-in-adaptive-card.png" alt-text="Proactive Hello message in adaptive card":::
+    :::image type="content" source="~/assets/images/proactive-scenario/proactive-helo-in-adaptive-card.png" alt-text="Screenshot shows the proactive Hello message in adaptive card.":::
 
 - content: |
     You've completed the scenario.
