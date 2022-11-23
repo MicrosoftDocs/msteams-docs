@@ -106,6 +106,10 @@ A great description can make your app stand out in the Microsoft Teams store and
 
 * Limitations or account dependency on external accounts or services to complete Sign-In, Sign-Out, and Sign-Up experience aren't called out in app manifest and long description.
 
+   :::image type="content" source="../../../assets/images/submission/validation-common-reason-pass-sign-up-app-description.png" alt-text="Screenshot of passed scenario of sign-up, contact details in app description must be hyperlinked.":::
+
+   :::image type="content" source="../../../assets/images/submission/validation-common-reason-sign-up-app-description.png" alt-text="Screenshot of failed scenario of sign-up, contact details in app description must be hyperlinked.":::
+
 * Short and full description in the app manifest doesn't highlight the app’s value proposition.
 
 * Supported app features aren't updated.
@@ -119,6 +123,10 @@ A great description can make your app stand out in the Microsoft Teams store and
    :::image type="content" source="../../../assets/images/submission/validation-common-reasons-failed-reference-app-funtionality.png" alt-text="Screenshot shows an example for failed reference integration of app functionality.":::
 
 * Grammatical errors.
+
+   :::image type="content" source="../../../assets/images/submission/validation-common-reason-pass-MS-app-description.png" alt-text="Screenshot of passed image of Microsoft or MS in app description.":::
+
+   :::image type="content" source="../../../assets/images/submission/validation-common-reason-failed-MS-app-description.png" alt-text="Screenshot of failed image of Microsoft or MS in app description.":::
 
 * App short and full description are same.
 
@@ -136,9 +144,15 @@ When referring to Microsoft trademarks, products names, and services, you must f
 
 * Abbreviating Microsoft as MS or MSFT in the offer listing, referencing the first instance of Microsoft Teams in the offer listing as **Teams** instead of **Microsoft Teams**.
 
+   :::image type="content" source="../../../assets/images/submission/validation-common-reason-paased-first-reference-teams.png" alt-text="Screenshot of image to show the passed reference instance of Microsoft Teams.":::
+
+   :::image type="content" source="../../../assets/images/submission/validation-common-reason-failed-first-reference-teams.png" alt-text="Screenshot of image to show the failed reference instance of Microsoft Teams.":::
+
 * Using Microsoft brand assets in the offer content without an express license from Microsoft.
 
 * Creating an offer listing (including the offer description, title, icon, screenshots, and videos) that impersonates or provides an impression that it's an official Microsoft app for the Microsoft Teams store.
+
+   :::image type="content" source="../../../assets/images/submission/validation-common-reason-fail-violation-microsoft-trademark-brand.png" alt-text="Screenshot of failed scenario of violation of Microsoft trademark and brand guidelines.":::
 
 ## Testability  
 
@@ -236,6 +250,10 @@ Your app’s UI must not look incomplete and should be intuitive. Ensure that us
 
    :::image type="content" source="../../../assets/images/submission/validation-common-reason-failed-blank-screen-app-UI.png" alt-text="Screenshot of image to show the fail of blank screen in app's UI.":::
 
+   :::image type="content" source="../../../assets/images/submission/validation-common-reason-pass-undo-app-UI.png" alt-text="Screenshot to show the pass scenario of undo button in app UI.":::
+
+   :::image type="content" source="../../../assets/images/submission/validation-common-reason-fail-undo-app-UI.png" alt-text="Screenshot to show the fail scenario of undo button in app UI.":::
+
 ## Valid domains
 
 Your app submission must adhere to the [external domains](/legal/marketplace/certification-policies) guidelines under Microsoft’s Commercial Marketplace Certification Policy. For your app to pass review, ensure that the valid domains listed in the app manifest are under your organization's direct control.
@@ -243,6 +261,8 @@ Your app submission must adhere to the [external domains](/legal/marketplace/cer
 ## Localization information
 
 You must include the localized language files in your app package if your app supports localization. The localization files must conform to the [Teams localization schema](../../build-and-test/apps-localization.md). Apps that support localization but are missing localization information in the app manifest fail app review.
+
+   :::image type="content" source="../../../assets/images/submission/validation-common-reason-failed-app-localization-manifest.png" alt-text="Screenshot of failed app that supports localization manifest.":::
 
 ## Provider or developer name mismatch
 
