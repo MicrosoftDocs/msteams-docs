@@ -56,8 +56,8 @@ landingContent:
         url: https://gitter.im/OfficeDev/home
     - linkListType: whats-new
       links:
-      - text: Request device permissions
-        url: concepts/device-capabilities/native-device-permissions#request-device-permissions
+      - text: Introduced location API
+        url: concepts/device-capabilities/native-device-permissions.md#introduced-location-api
       - text: Zero install for link unfurling
         url: messaging-extensions/how-to/link-unfurling.md#zero-install-for-link-unfurling
       - text: Adaptive Cards overflow menu
