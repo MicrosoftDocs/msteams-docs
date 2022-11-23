@@ -401,7 +401,14 @@ The following are the diversity and inclusion requirements:
 
 * The effect shouldn't allow dysmorphia.
 * The effect shouldn't be offensive or contain objectionable content.
-* Above requirements are equally valid for effect thumbnails.
+
+The requirements in this section are also valid for video effect thumbnails.
+
+## Permissions
+
+Microsoft Teams will request additional permission and consent (over and above usual permissions) from the user of your filter app, at the time of app installation. The language of the consent will be <Paste the checkbox consent language here>.
+
+You are responsible, as the app owner and publisher, to determine whether additional notices or consents are required in your app experience to meet your obligations under the Publisher Agreement---including but not limited to those obligations triggered by collection or processing of data that is or could be characterized as biometric data under applicable Data Protection Law.
 
 ## Code sample
 
