@@ -81,6 +81,27 @@ Besides the generic reports for daily, weekly, and monthly active users, time sp
 
 Instrumenting your code with analytics markers (also known as telemetry markers) is a standard web application development practice. Robust telemetry instrumentation in your code is critical for long-term success. It helps you to measure both aggregate and user-specific metrics. It's required to determine product, growth, marketing, and business decisions.
 
+> [!NOTE]
+> Before you begin, always remember to handle user data in accordance with your strict data handling and privacy policies, and in compliance with your regulatory obligations.
+
+There are two types of data instrumentation relevant for your Teams app:
+
+- [Data instrumentation for your core SaaS product or app](#data-instrumentation-for-your-core-saas-product-or-app)
+
+<!--It's required for your browser-based SaaS app. This instrumentation is often already done in your browser-based SaaS app's code. You can select analytics, customer lifecycle analytics, and conversion analytics metrics such as, bounce rate, page views, unique visitor count, session counts, engagement time, select through rate, and many more for your web app.-->
+
+- [Data instrumentation in your app specific to Teams](#data-instrumentation-in-your-app-specific-to-teams)
+<!-- It's required additionally in your SaaS app when you surface it inside of the Teams client. Your app may have Teams platform capabilities such as, bots, message extensions, etc. It may also have experiences to address use cases unique to Teams such as meeting extensions, intelligent M365-aware scenarios using Microsoft Graph, link unfurling, etc.-->
+
+These data instrumentation types are covered in more detail in the rest of this document.
+
+> [!NOTE]
+> The rest of this document only recommends the in-context data you can use but doesn't supersede your regulatory obligations.
+
+### Data instrumentation for your core SaaS product or app
+
+It's required for your browser-based SaaS app. This instrumentation is often already done in your browser-based SaaS app's code. You can select analytics, customer lifecycle analytics, and conversion analytics metrics such as, bounce rate, page views, unique visitor count, session counts, engagement time, select through rate, and many more for your web app.
+
 If you're a SaaS developer, you would already have telemetry tracked for some of your core business metrics. Your SaaS product might have an existing web app, or a mobile app, and you've now introduced a new Teams app. The Teams app is another surface to expose your solution to your end user. It's another window to your SaaS landscape.
 
 As your solution scales across multiple platforms (web, mobile platforms, and Teams), it’s important to view your telemetry in layers:
@@ -96,23 +117,6 @@ As your solution scales across multiple platforms (web, mobile platforms, and Te
   - Modality-specific metadata: Device, browser information, and tenant information.
 
   For pre-existing modalities, you may already be tracking such information. As you add new modalities and new ways for your end user to experience your solution, it's important to add modality-specific telemetry.
-
-> [!NOTE]
-> Before you begin, always remember to handle user data in accordance with your strict data handling and privacy policies, and in compliance with your regulatory obligations.
-
-There are two types of data instrumentation relevant for your Teams app:
-
-- Data instrumentation for your core SaaS product or app
-
-<!--It's required for your browser-based SaaS app. This instrumentation is often already done in your browser-based SaaS app's code. You can select analytics, customer lifecycle analytics, and conversion analytics metrics such as, bounce rate, page views, unique visitor count, session counts, engagement time, select through rate, and many more for your web app.-->
-
-- Data instrumentation in your app specific to Teams
-<!-- It's required additionally in your SaaS app when you surface it inside of the Teams client. Your app may have Teams platform capabilities such as, bots, message extensions, etc. It may also have experiences to address use cases unique to Teams such as meeting extensions, intelligent M365-aware scenarios using Microsoft Graph, link unfurling, etc.-->
-
-These data instrumentation types are covered in more detail in the rest of this document.
-
-> [!NOTE]
-> The rest of this document only recommends the in-context data you can use but doesn't supersede your regulatory obligations.
 
 ### Data instrumentation in your app specific to Teams
 
