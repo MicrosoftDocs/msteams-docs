@@ -64,7 +64,7 @@ Actionable messages allow users to take action without leaving their email clien
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Create an Outgoing Webhook](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)
+> [Create Outgoing Webhooks](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)
 
 ## See also
 
