@@ -10,7 +10,7 @@ ms.date: 11/29/2021
 
 # TeamsFx SDK
 
-TeamsFx helps to reduce your tasks by using Microsoft Teams single sign-on (SSO) and accessing cloud resources down to single line statements with zero configuration. You can use TeamsFx SDK in the browser and Node.js environment. TeamsFx core functionalities can be accessed in client and server environments. You can write user authentication code for:
+TeamsFx helps to reduce your tasks by using Microsoft Teams single sign-on (SSO) and accessing cloud resources down to single line statements with zero configuration. You can use TeamsFx SDK in the browser and Node.js environments. TeamsFx core functionalities can be accessed in client and server environments. You can write user authentication code for:
 
 * Teams tab
 * Teams bot
@@ -148,7 +148,7 @@ Required configurations are `authorityHost`, `tenantId`, `clientId`, `clientSecr
 <details>
 <summary><b> App identity in Node.js environment </b></summary>
 
-`AppCredential` represents the app identity. You can use app identity when user isn't involved, for example in a time-triggered automation job. TeamsFx SDK uses the following credential when you choose app identity in Node.js environment.
+`AppCredential` represents the app identity. You can use app identity when user isn't involved, for example, in a time-triggered automation job. TeamsFx SDK uses the following credential when you choose app identity in Node.js environment.
 
 The following code is an example to create `AppCredential`:
 
