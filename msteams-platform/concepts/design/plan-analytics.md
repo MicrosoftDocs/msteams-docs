@@ -54,7 +54,7 @@ Instrumenting your code with analytics markers (also known as telemetry markers)
 > [!NOTE]
 > Before you begin, always remember to handle user data in accordance with your strict data handling and privacy policies, and in compliance with your regulatory obligations.
 
-Teams App is another surface to expose your solution to your end user, another window to your SaaS landscape. As your solution scales across multiple platforms (web, mobile platforms, Teams), it’s important to view your telemetry in layers:
+Teams App is another surface to expose your solution to your end user, another window to your SaaS landscape. As your solution scales across multiple platforms (web, mobile platforms, and Teams), it’s important to view your telemetry in layers:
 
 :::image type="content" source="../../assets/images/app-fundamentals/telemetry-in-layers.png" alt-text="Telemetry in layers" border="false":::
 
