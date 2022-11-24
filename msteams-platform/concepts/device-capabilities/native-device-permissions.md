@@ -258,7 +258,10 @@ Device permissions are stored for every login session. It means that if you sign
 
 ## See also
 
+* [Device capabilities](device-capabilities-overview.md)
 * [Device permissions for the browser](browser-device-permissions.md)
 * [Integrate media capabilities](media-capabilities.md)
 * [Integrate QR or barcode scanner capability in Teams](qr-barcode-scanner-capability.md)
 * [Integrate location capabilities in Teams](location-capability.md)
+* [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
+* [Meeting apps APIs](../../apps-in-teams-meetings/meeting-apps-apis.md)

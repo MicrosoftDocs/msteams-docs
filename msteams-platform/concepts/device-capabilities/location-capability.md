@@ -86,7 +86,6 @@ For more information on `getLocation` and `showLocation`, see [LocationProps](/j
 
 ### Code snippets
 
-
 # [TeamsJS v2](#tab/teamsjs-v2)
 
 * **Call `getLocation` API to retrieve the location:**
@@ -170,6 +169,5 @@ You must ensure to handle these errors appropriately in your Teams app. The foll
 
 ## See also
 
-* [Integrate media capabilities](media-capabilities.md)
-* [Integrate QR code or barcode scanner capability in Teams](qr-barcode-scanner-capability.md)
-* [Integrate People Picker](people-picker-capability.md)
+* [Device capabilities](device-capabilities-overview.md)
+* [Meeting apps APIs](../../apps-in-teams-meetings/meeting-apps-apis.md)
