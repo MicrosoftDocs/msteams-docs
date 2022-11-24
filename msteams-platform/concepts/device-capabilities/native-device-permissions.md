@@ -1,8 +1,10 @@
 ---
 title: Request device permissions for your Microsoft Teams app
+author: surbhigupta
 description: How to update your app manifest in order to request access to native features that require user consent, such as scan QR, barcode, image, audio, and video capabilities
 ms.localizationpriority: medium
 ms.topic: how-to
+ms.author: surbhigupta
 ---
 
 # Request device permissions for your Teams app
@@ -11,13 +13,12 @@ You can enrich your Teams app with native device capabilities, such as camera, m
 
 > [!NOTE]
 >
-> * To integrate media capabilities within your Microsoft Teams web client, desktop, and mobile, see [Integrate media capabilities](media-capabilities.md).
+> * To integrate media capabilities within your Teams web client, desktop, and mobile see [Integrate media capabilities](media-capabilities.md).
 > * To integrate QR or barcode scanner capability within your Microsoft Teams mobile app, see [Integrate QR or barcode scanner capability in Teams](qr-barcode-scanner-capability.md).
 > * To integrate location capabilities within your Teams web client, desktop, and mobile, see [Integrate location capabilities](location-capability.md).
 
 ## Native device permissions
 
-You must request the device permissions to access native device capabilities. The device permissions work similarly for all app constructs, such as tabs, task modules, or messaging extensions. The user must go to the permissions page in Teams settings to manage device permissions. You can build richer experiences on the Teams platform with the help of device capabilities, such as:
 You must request the device permissions to access native device capabilities. The device permissions work similarly for all app constructs, such as tabs, task modules, or message extensions. The user must go to the permissions page in Teams settings to manage device permissions.
 By accessing the device capabilities, you can build richer experiences on the Teams platform, such as:
 
@@ -36,7 +37,6 @@ By accessing the device capabilities, you can build richer experiences on the Te
 ## Access device permissions
 
 The [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) provides the tools necessary for your Teams app to access the user’s [device permissions](#manage-permissions) and build a richer experience.
-
 While access to these features is standard in modern web browsers, you must inform Teams about the features you use by updating your app manifest. This update allows you to ask for permissions while your app runs on the Teams desktop.
 
 ## Manage permissions
@@ -50,9 +50,7 @@ A user can manage device permissions in Teams settings by selecting **Allow** or
 1. Select the app for which you need to choose the settings.
 1. Select your desired settings.
 
-    <!-- ![Device permissions mobile settings screen](../../assets/images/tabs/MobilePermissions.png) -->
-
-    :::image type="content" source="~/assets/images/tabs/MobilePermissions.png" alt-text="Mobile Permissions.":::
+    :::image type="content" source="~/assets/images/tabs/MobilePermissions.png" alt-text="Mobile Permissions." border="true":::
 
 # [Desktop](#tab/desktop)
 
@@ -60,8 +58,6 @@ A user can manage device permissions in Teams settings by selecting **Allow** or
 1. Select your profile icon in the upper right corner of the window.
 1. Select **Settings** > **Permissions** from the drop-down menu.
 1. Select your desired settings.
-
-   <!-- ![Device permissions desktop settings screen](~/assets/images/tabs/device-permissions.png) -->
 
    :::image type="content" source="~/assets/images/tabs/device-permissions.png" alt-text="Device permission.":::
 
@@ -157,7 +153,7 @@ For example:
         } 
     ```
 
-* Notifications prompt the user when you call `requestPermission()`:
+* Notifications prompts the user when you call `requestPermission()`:
 
     ```JavaScript
     Notification.requestPermission(function(result) { /* ... */ });
@@ -214,34 +210,32 @@ For example:
 
 # [TeamsJS v2](#tab/teamsjs-v2)
 
-    ```JavaScript
+```JavaScript
      function getLocation() {
         location.getLocation({ allowChooseLocation: true, showMap: true }).then((location) => { 
             let currentLocation = JSON.stringify(location);
      }).catch((error) => { /*Error getting location*/ })} 
-    ```
+```
 
 # [TeamsJS v1](#tab/teamsjs-v1)
 
-    ```JavaScript
+```JavaScript
      function getLocation() {
      microsoftTeams.location.getLocation({ allowChooseLocation: true, showMap: true }, (error: microsoftTeams.SdkError, location: microsoftTeams.location.Location) => {
          let currentLocation = JSON.stringify(location);
      });
      } 
-    ```
+```
 
-    ***
+***
 
 Here's how the device permissions prompts appear to users on mobile and desktop.
 
-# [Mobile](#tab/mobile)
+# [Mobile](#tab/mobile1)
 
-   <!-- ![Tabs mobile device permissions prompt](../../assets/images/tabs/MobileLocationPermission.png) -->
+   :::image type="content" source="~/assets/images/tabs/MobileLocationPermission.png" alt-text="Mobile location permission." border="true":::
 
-   :::image type="content" source="~/assets/images/tabs/MobileLocationPermission.png" alt-text="Mobile location permission.":::
-
-# [Desktop](#tab/desktop)
+# [Desktop](#tab/desktop1)
 
    <!-- ![Tabs desktop device permissions prompt](~/assets/images/tabs/device-permissions-prompt.png) -->
 
