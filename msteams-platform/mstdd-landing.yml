@@ -54,6 +54,8 @@ landingContent:
       links:
       - text: Share-in-meeting to share any document or third-party app to the meeting stage
         url: ~/concepts/build-and-test/share-in-meeting.md
+      - text: Integrate location capabilities
+        url: concepts/device-capabilities/location-capability.md
       - text: Zero install for link unfurling
         url: messaging-extensions/how-to/link-unfurling.md#zero-install-for-link-unfurling
       - text: Adaptive Cards overflow menu
@@ -65,9 +67,7 @@ landingContent:
       - text: Live Share canvas
         url: apps-in-teams-meetings/teams-live-share-canvas.md
       - text: Generate a deep link to share content to stage in meetings
-        url: concepts/build-and-test/share-in-meeting.md#generate-a-deep-link-to-share-content-to-stage-in-meetings
-      - text: Manage SaaS licenses for third party apps in Teams
-        url: concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md#manage-license-for-third-party-apps-in-teams
+        url: apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#generate-a-deep-link-to-share-content-to-stage-in-meetings
       - text: Update Apple App Store Connect Team ID on Partner Center
         url: concepts/deploy-and-publish/appsource/prepare/update-apple-store-team-connect-id.md
       - text: Introduced meeting app support for Scheduled Channel Meetings
