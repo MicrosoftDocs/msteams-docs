@@ -153,7 +153,7 @@ For example:
         } 
     ```
 
-* Notifications prompts the user when you call `requestPermission()`:
+* Notifications prompt the user when you call `requestPermission()`:
 
     ```JavaScript
     Notification.requestPermission(function(result) { /* ... */ });
@@ -243,9 +243,9 @@ Here's how the device permissions prompts appear to users on mobile and desktop.
 
 ---
 
-## Permission behavior across login sessions
+## Permission behavior across sign in sessions
 
-Device permissions are stored for every login session. It means that if you sign in to another instance of Teams, for example, on another computer, your device permissions from your previous sessions are not available. Therefore, you must re-consent to device permissions for the new session. It also means, if you sign out of Teams or switch tenants in Teams, your device permissions are deleted from the previous login session.  
+Device permissions are stored for every sign in session. It means that if you sign in to another instance of Teams, for example, on another computer, your device permissions from your previous sessions aren't available. Therefore, you must reconsent to device permissions for the new session. It also means, if you sign out of Teams or switch tenants in Teams, your device permissions are deleted from the previous sign in session.  
 
 > [!NOTE]
 > When you consent to the native device permissions, it is valid only for your _current_ login session.
