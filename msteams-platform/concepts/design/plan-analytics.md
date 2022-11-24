@@ -135,7 +135,7 @@ After you extract the Teams-specific information from the tab context, use it as
 
 #### Conversational constructs
 
-Conversation or chat-oriented capabilities include bots, message extensions, cards and task modules (displaying an Adaptive Card) that are created for Teams users. You'll need to capture and handle Teams-specific events for data instrumentation for your app. A bot can access additional context data about a team, chat, meeting, 1:1 call, or group call where it's installed.
+Conversation or chat-oriented capabilities include bots, message extensions, cards and task modules (displaying an Adaptive Card) that are created for Teams users. Conceptually, these are experiences only created for and available to users specifically inside Teams. You will need to capture Teams-specific events and handle them for Teams-specific instrumentation in your code for these constructs from scratch. A bot can access additional context data about a team, chat, meeting, 1:1 call, or group call where it's installed.
 
 Use this information for enriching the bot's functionality and the user experience:
 
