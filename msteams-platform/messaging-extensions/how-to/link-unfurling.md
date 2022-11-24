@@ -19,7 +19,7 @@ The document guides you on how to add link unfurling to your app manifest using 
 > * Currently, link unfurling is not supported on Mobile clients.
 > * The link unfurling result is cached for 30 minutes.
 > * Only Adaptive Cards version 1.3 and earlier is supported in link unfurling.
-> * Messagie extension commands aren't required for link unfurling. However, there must be at least one command in manifest as it is a mandatory property in message extensions. For more information, see [compose extensions](/microsoftteams/platform/resources/schema/manifest-schema).
+> * Message extension commands aren't required for link unfurling. However, there must be at least one command in manifest as it is a mandatory property in message extensions. For more information, see [compose extensions](/microsoftteams/platform/resources/schema/manifest-schema).
 
 The following image is an example of link unfurling when an Adaptive Card link is pasted into the Teams compose message area, the link unfurls into a card:
 
