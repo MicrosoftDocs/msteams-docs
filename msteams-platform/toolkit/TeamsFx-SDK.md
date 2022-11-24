@@ -201,7 +201,7 @@ TeamsFx SDK provides several functions to ease the configuration for third-party
   > [!NOTE]
   > `createMicrosoftGraphClient` function has been deprecated. We recommend you to use `createMicrosoftGraphClientWithCredential` instead for better coding experience.
 
-* SQL:`getTediousConnectionConfig` returns a tedious connection config.
+* SQL: The `getTediousConnectionConfig` returns a tedious connection config.
 
     Required configuration:
 
@@ -209,7 +209,7 @@ TeamsFx SDK provides several functions to ease the configuration for third-party
   * If you want to use MSI identity, then `sqlServerEndpoint`and `sqlIdentityId` are required.
 
   > [!NOTE]
-  > `getTediousConnectionConfig` function has been deprecated. We recommend you compose your own Tedious configuration for better flexibility.
+  > The `getTediousConnectionConfig` function has been deprecated. We recommend you compose your own Tedious configuration for better flexibility.
 
 ### Override configuration for TeamsFx class
 
