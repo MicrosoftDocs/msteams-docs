@@ -548,7 +548,7 @@ This section provides several code snippets for common scenarios that are relate
 
      ```
 
-    For more information about how to use class in command bot, see [add single sign-on to Teams app](add-single-sign-on.md). And there's a [command-bot-with-sso](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/command-bot-with-sso) sample project, which you can try SSO command bot.
+    For more information about how to implement SSO command handler in command bot, see [add single sign-on to Teams app](add-single-sign-on.md). And there's a [command-bot-with-sso](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/command-bot-with-sso) sample project, which you can try SSO command bot.
 
     </details>
 
@@ -766,7 +766,7 @@ This section provides several code snippets for other scenarios that are related
 
   > [!NOTE]
   > For more information on sample to access SQL database in Azure Function, see [share-now sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/share-now). The
-  > `getTediousConnectionConfig` function has been deprecated, we recommend you to compose your own tedious configuration for better flexibility.
+  > The `getTediousConnectionConfig` function has been deprecated, we recommend you to compose your own tedious configuration for better flexibility.
 
 </details>
 
@@ -777,7 +777,7 @@ This section provides several code snippets for other scenarios that are related
 You can set customer log level and redirect outputs when using this library.
 
 > [!NOTE]
-> Log in is turned off by default, you can turn it on by setting log level.
+> Logs is turned off by default, you can turn it on by setting log level.
 
 #### Enable log by setting log level
 
