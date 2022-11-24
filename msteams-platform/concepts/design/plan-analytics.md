@@ -54,6 +54,10 @@ Instrumenting your code with analytics markers (also known as telemetry markers)
 > [!NOTE]
 > Before you begin, always remember to handle user data in accordance with your strict data handling and privacy policies, and in compliance with your regulatory obligations.
 
+Teams App is another surface to expose your solution to your end user, another window to your SaaS landscape. As your solution scales across multiple platforms (web, mobile platforms, Teams), it’s important to view your telemetry in layers:
+
+:::image type="content" source="../../assets/images/app-fundamentals/telemetry-in-layers.png" alt-text="Telemetry in layers" border="false":::
+
 There are two types of data instrumentation relevant for your Teams app:
 
 - [Data instrumentation for your core SaaS product or app](#data-instrumentation-for-your-core-saas-product-or-app)
@@ -93,7 +97,7 @@ As your solution scales across multiple platforms (web, mobile platforms, and Te
 
 At a presentation level, your application is accessed by your end user across different modalities. Each modality has its own unique user interaction points, meta data that facilitates telemetry capture unique to that modality. For example, viewing a product might be tracked via page view in a web app vs. screen tracking in mobile app. This is the instrumentation that is required to be done additionally in your SaaS app because it's now surfacing inside of the Teams client. Your Teams app may have leveraged one or more of the platform capabilities only available inside Teams such as bots, message extensions etc. or you have crafted experiences to address use cases unique to Teams such as meeting extensions, intelligent M365-aware scenarios using Microsoft Graph, link unfurling, etc. This is what is covered in more detail in the rest of this document.
 
-#### Tracking Teams App Specific Telemetry
+## Tracking Teams App Specific Telemetry
 
 Below are guidelines and pointers regarding what to look for, which events to capture, how to instrument telemetry markers, and where to fetch Teams-relevant information that will help you plan and implement analytics for your app. Since your Teams apps can have tabs, bots, message extensions, cards, stage views etc. or any combination of these [capabilities and UI constructs](../../overview-explore.md#teams-app-features) across personal or shared scopes, it's best to understand, plan, and implement your instrumentation around each of these capabilities.
 
