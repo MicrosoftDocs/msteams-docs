@@ -44,3 +44,11 @@ You can add single sign-on authentication to your conversation bot using the fol
 
 > [!div class="nextstepaction"]
 > [Messages in bot conversations](~/bots/how-to/conversations/conversation-messages.md)
+
+## See also
+
+* [Build bots for Teams](../../what-are-bots.md)
+* [Bot activity handlers](../../bot-basics.md)
+* [Update and delete messages sent from bot](../update-and-delete-bot-messages.md)
+* [Adaptive Cards](../../../task-modules-and-cards/cards/people-picker.md)
+* [API reference for the Bot Framework Connector service](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference)
