@@ -35,7 +35,7 @@ All three, the Microsoft Graph SDK, Microsoft Bot Framework SDK, and Microsoft T
 
 | RSC mode or type | Supported SDKs | App manifest version | Resource types | RSC-related controls for the entire tenant | Who can consent to RSC permissions? |
 |---------|---------|---------|---------|---------|---------|
-|Application| Microsoft Graph, Microsoft Bot Framework | >=1.6 | Teams, chats, and meetings | Microsoft Graph-based controls for chats and meetings, AAD portal-based controls for teams. |In a team, any team owner. <br> In a chat, any chat member. <br> In a meeting, any meeting organizer or presenter. |
+|Application| Microsoft Graph, Microsoft Bot Framework | >=1.6 | Teams, chats, and meetings | Microsoft Graph-based controls for chats and meetings, AAD portal-based controls for teams. |• In a team, any team owner. <br> • In a chat, any chat member. <br> • In a meeting, any meeting organizer or presenter. |
 | Delegated | Microsoft Teams Client | >=1.12 | Teams, chats, meetings, and users | Always on | Any user authorized to install an app in that specific scope. |
 
 ## Update your Teams app manifest
@@ -294,20 +294,11 @@ Thereafter, whenever an app is installed by an authorized user within Microsoft 
 
 Apart from the tenant admin, who has the ability to grant any type of permission to any app, the set of users who are capable of granting RSC permissions varies based on the resource type and access mode. The following are the types of RSC permissions to an app:
 
-* [Delegated context RSC permissions](#delegated-context-rsc-permissions)
-* [Application context RSC permissions](#application-context-rsc-permissions)
-
-### Delegated context RSC permissions
-
-Any user authorized to install an app in a specific scope has the right to grant any RSC permissions requested by the app in that specific scope. For example, if regular members are allowed to install an app inside a team, then they also have the authority to grant delegated RSC permission to the app in that specific team.
-
-### Application context RSC permissions
-
-In addition to the user being authorized to install apps in that scope, the following additional constraints apply for the user to be able to grant an app RSC permission to access data in app-only mode:
-
-* In the case of a team, the user must be an owner of that team.
-* In the case of a chat, the user must be a member of the chat.
-* In the case of meetings, the user must be an organizer or presenter in the meeting.
+* Delegated context RSC permissions: Any user authorized to install an app in a specific scope has the right to grant any RSC permissions requested by the app in that specific scope. For example, if regular members are allowed to install an app inside a team, then they also have the authority to grant delegated RSC permission to the app in that specific team.
+* Application context RSC permissions: In addition to the user being authorized to install apps in that scope, the following additional constraints apply for the user to be able to grant an app RSC permission to access data in app-only mode:
+  * In the case of a team, the user must be an owner of that team.
+  * In the case of a chat, the user must be a member of the chat.
+  * In the case of meetings, the user must be an organizer or presenter in the meeting.
 
 ## Enable RSC in your application
 
