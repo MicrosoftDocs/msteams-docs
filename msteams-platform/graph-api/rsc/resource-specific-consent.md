@@ -35,7 +35,7 @@ All three, the Microsoft Graph SDK, Microsoft Bot Framework SDK, and Microsoft T
 
 | RSC mode or type | Supported SDKs | App manifest version | Resource types | RSC-related controls for the entire tenant | Who can consent to RSC permissions? |
 |---------|---------|---------|---------|---------|---------|
-|Application| Microsoft Graph, Microsoft Bot Framework | >=1.6 | Teams, chats, and meetings | Microsoft Graph-based controls for chats and meetings, AAD portal-based controls for teams. | <br> • In a team, any team owner. <br> • In a chat, any chat member. <br> • In a meeting, any meeting organizer or presenter. |
+|Application| Microsoft Graph, Microsoft Bot Framework | >=1.6 | Teams, chats, and meetings | Microsoft Graph-based controls for chats and meetings, AAD portal-based controls for teams. |In a team, any team owner. <br> In a chat, any chat member. <br> In a meeting, any meeting organizer or presenter. |
 | Delegated | Microsoft Teams Client | >=1.12 | Teams, chats, meetings, and users | Always on | Any user authorized to install an app in that specific scope. |
 
 ## Update your Teams app manifest
