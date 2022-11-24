@@ -70,8 +70,9 @@ These data instrumentation types are covered in more detail in the rest of this 
 
 ### Data instrumentation for your core SaaS product or app
 
-It's required for your browser-based SaaS app. This instrumentation is often already done in your browser-based SaaS app's code. You can select analytics, customer lifecycle analytics, and conversion analytics metrics such as, bounce rate, page views, unique visitor count, session counts, engagement time, select through rate, and many more for your web app.
+Data instrumentation is required for your browser-based SaaS app. This instrumentation is often already done in your browser-based SaaS app's code. You can select analytics, customer lifecycle analytics, and conversion analytics metrics such as, bounce rate, page views, unique visitor count, session counts, engagement time, select through rate, and many more for your web app.
 
+<!--
 If you're a SaaS developer, you would already have telemetry tracked for some of your core business metrics. Your SaaS product might have an existing web app, or a mobile app, and you've now introduced a new Teams app. The Teams app is another surface to expose your solution to your end user. It's another window to your SaaS landscape.
 
 As your solution scales across multiple platforms (web, mobile platforms, and Teams), it’s important to view your telemetry in layers:
@@ -86,7 +87,7 @@ As your solution scales across multiple platforms (web, mobile platforms, and Te
   - Application performance monitoring: Performance measures such as, time to load and response time of the solution in the modality.
   - Modality-specific metadata: Device, browser information, and tenant information.
 
-  For pre-existing modalities, you may already be tracking such information. As you add new modalities and new ways for your end user to experience your solution, it's important to add modality-specific telemetry.
+  For pre-existing modalities, you may already be tracking such information. As you add new modalities and new ways for your end user to experience your solution, it's important to add modality-specific telemetry.-->
 
 ### Data instrumentation in your app specific to Teams
 
