@@ -7,35 +7,9 @@ ms.localizationpriority: high
 ms.author: surbhigupta
 ---
 
-# Plan for Teams app telemetry
+# Design telemetry data for your Teams app
 
-<!--After an app is distributed in an organization or in Teams App store, it's important to track how users are interacting with the app. With growing app users, the number of app installs might not be a relevant metric.
-
-Crucial items in advising future development strategy include:
-
-- Understanding how users interact with the app.
-- The kind of audience, and what they're looking for.
-- Features that are most or least used.
-
-App analytics help understand user behavior, motivation, friction points that can help the developer make informed decisions about feature investments, enhancements, and adoption for the app.
-
-## Why is Teams App Telemetry important?
-
-If you're a SaaS developer, you would already have telemetry tracked for some of your core business metrics. Your SaaS product might have an existing web app, or a mobile app, and you've now introduced a new Teams app. The Teams app is another surface to expose your solution to your end user. It's another window to your SaaS landscape.
-
-As your solution scales across multiple platforms (web, mobile platforms, and Teams), it’s important to view your telemetry in layers:
-
-:::image type="content" source="../../assets/images/app-fundamentals/telemetry-in-layers.png" alt-text="Telemetry in layers" border="false":::
-
-- **Core application telemetry**: Core telemetry includes tracking and measuring of application-level metrics. It's independent of the platform, client, or surface area used by the end user. A typical SaaS solution measures application sign-ups, trials, purchases, monthly or annual recurring revenue, aggregated number of users, and churn among other data. If you have an existing SaaS solution, you may be tracking these metrics already.
-
-- **Modality-specific telemetry**: At a presentation level, your application is accessed by your end user across different modalities. Each modality has its own unique user interaction points. This metadata facilitates telemetry capture unique to that modality. For example, viewing a product might be tracked via page view in a web app vs. screen tracking in mobile app. Telemetry at this layer includes:
-
-  - User interactions: User clicks, views, sessions, system, and custom events in the modality.
-  - Application performance monitoring: Performance measures such as, time to load and response time of the solution in the modality.
-  - Modality-specific metadata: Device, browser information, and tenant information.
-
-  For pre-existing modalities, you may already be tracking such information. As you add new modalities and new ways for your end user to experience your solution, it's important to add modality-specific telemetry.-->
+After an app is distributed in an organization or in Teams App store, it's important to track how users are interacting with the app. With growing app users, the number of app installs might not be a relevant metric.
 
 It's important to plan for the kind of data, metrics, and events you want to monitor as you develop your Teams app. Your product’s North Star metric would guide you in establishing the right set of metrics, core user action, and key events relevant for your business.
 

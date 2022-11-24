@@ -7,7 +7,7 @@ ms.localizationpriority: high
 ms.author: surbhigupta
 ---
 
-# Azure Application Insights
+# Implement Azure Application Insights
 
 Your application telemetry can be captured and analyzed in any telemetry service of your choice. It's recommended that you use a telemetry service that allows tracking custom events and reporting it with custom context-based attributes.
 
