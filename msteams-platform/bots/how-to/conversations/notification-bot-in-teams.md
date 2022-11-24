@@ -109,7 +109,7 @@ Following are the customizations you can make to extend the notification templat
 
     :::image type="content" source="../../../assets/images/notification-bot/notification-timer-triggered.png" alt-text="sample of timer triggered notification":::
 
-  * When you select `http` trigger, it's hit by HTTP request, and the default implementation sends an Adaptive Card to Teams.  You can change this event by customizing `src/*Trigger.ts`. This implementation can call an API to retrieve events, data, or both, which can send an Adaptive Card as required.
+  * When you select `http` trigger, the HTTP request triggers the notification, and the default implementation sends an Adaptive Card to Teams.  You can change this event by customizing `src/*Trigger.ts`. This implementation can call an API to retrieve events, data, or both, which can send an Adaptive Card as required.
 
     :::image type="content" source="../../../assets/images/notification-bot/notification-http-triggered.png" alt-text="sample of HTTP triggered notification":::
 
