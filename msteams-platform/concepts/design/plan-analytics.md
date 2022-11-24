@@ -37,19 +37,18 @@ Plan analytics for the Teams app the same way as you do for a SaaS product that 
 
 ## Plan early for analytics
 
-Plan analytics for your Teams app at the development design and solution architecture stage. For Teams-specific capabilities, such as [conversational constructs](#conversational-constructs) like bots, message extensions etc., you'll need to plan and implement analytics instrumentation, capture relevant events, and context from the SDK methods from scratch.
+Plan analytics for your Teams app at the development design and solution architecture stage. For Teams-specific capabilities, such as [conversational constructs](#conversational-constructs) like bots, message extensions, etc., you'll need to plan and implement analytics instrumentation, capture relevant events, and context from the SDK methods from scratch.
 
 At the time your production Teams app is live on the marketplace and customers start using it, your analytics and data infrastructure should be fully operational. It ensures that you don’t miss tracking:
 
 - Instrumentation markers getting fired.
-- Teams-specific events and the relevant.
-- Contextual information contained in these events, some of which are triggered for you to capture in your SaaS backend for later use.
+- Teams-specific events and the relevant contextual information contained in these events, some of which are triggered for you to capture in your SaaS backend for later use.
 
 For example, the Azure AD user ID for a Teams user should be captured when a specific bot event is fired when a user installs the bot app. This user ID can be mapped to the user’s real-world profile identify such as, email address. It allows you to send proactive notifications to the user later via the bot.
 
 ## Instrumenting your app for analytics
 
-Instrumenting your code with analytics markers (also known as telemetry markers) is a standard web application development practice. Robust telemetry instrumentation in your code is critical for long-term success. It helps you to measure both aggregate and user-specific metrics. It's required to determine product, growth, marketing, and business decisions.
+Instrumenting your code with analytics markers (also known as telemetry markers) is a standard web application development practice. Robust telemetry instrumentation in your code is critical for long-term success. It helps you to measure both aggregate and user-specific metrics.
 
 > [!NOTE]
 > Before you begin, always remember to handle user data in accordance with your strict data handling and privacy policies, and in compliance with your regulatory obligations.
@@ -58,7 +57,7 @@ Teams App is another surface to expose your solution to your end user, another w
 
 :::image type="content" source="../../assets/images/app-fundamentals/telemetry-in-layers.png" alt-text="Telemetry in layers" border="false":::
 
-There are two types of data instrumentation relevant for your Teams app:
+There are two types of data instrumentation relevant for your solutuon:
 
 - [Data instrumentation for your core SaaS product or app](#data-instrumentation-for-your-core-saas-product-or-app)
 
@@ -66,8 +65,6 @@ There are two types of data instrumentation relevant for your Teams app:
 
 - [Data instrumentation in your app specific to Teams](#data-instrumentation-in-your-app-specific-to-teams)
 <!-- It's required additionally in your SaaS app when you surface it inside of the Teams client. Your app may have Teams platform capabilities such as, bots, message extensions, etc. It may also have experiences to address use cases unique to Teams such as meeting extensions, intelligent M365-aware scenarios using Microsoft Graph, link unfurling, etc.-->
-
-These data instrumentation types are covered in more detail in the rest of this document.
 
 > [!NOTE]
 > The rest of this document only recommends the in-context data you can use but doesn't supersede your regulatory obligations.
