@@ -347,7 +347,7 @@ foreach (var target in await _conversation.Notification.GetInstallationsAsync())
 
 ## Customize adapter
 
-You can customize by creating your own adapter or customize the adapter after initialization. Following is the code sample for creating your adapter:
+You can customize by creating your own adapter, or customize the adapter after initialization. Following is the code sample for creating your adapter:
 
 ```Typescript
 
@@ -451,7 +451,10 @@ If you don't have the required SDK, and want to invoke external APIs in your cod
 
 ### Teams bot application or Teams Incoming Webhook
 
-TeamsFx supports two ways to help you send notifications from your system to Teams by creating a Teams bot application or Teams Incoming Webhook.
+TeamsFx supports two ways to help you send notifications from your system to Teams:
+
+* Creating a Teams bot application.
+* Creating Teams Incoming Webhook.
 
 In the following table you can see the comparison of the two different ways:
 
@@ -487,7 +490,7 @@ Team sends an event only at the first installation. If the bot app is already in
 
 You can resolve this in the following ways:
 
-* Send a message to your personal bot or mention your bot in group chat or channel, which helps you to reach the bot service again with correct installation information.
+* Send a message to your personal bot or mention your bot in group chat, or channel, which helps you to reach the bot service again with correct installation information.
 * Uninstall the bot app from Teams then redebug or relaunch it. You can resend the installation event to bot service.
 
 Notification target connections are stored in the persistence storage. If you're using the default local file storage, all installations will be stored under `bot/.notification.localstore.json`.
@@ -540,7 +543,7 @@ You can encounter an undefined error, when the bot app is installed into other c
 
 <summary><b>Can I know all the targets my bot is installed in and out of the notification project?</b></summary>
 
-There are Microsoft Graph APIs to list apps installed in a team, group or chat. If necessary you need to iterate your team, group or chat into an installed app to be targeted. In the notification project, it uses persistence storage to store installation targets. For more information, see [notification based on events](#notification-based-on-events).
+There are Microsoft Graph APIs to list apps installed in a team, group, or chat. If necessary you need to iterate your team, group, or chat into an installed app to be targeted. In the notification project, it uses persistence storage to store installation targets. For more information, see [notification based on events](#notification-based-on-events).
 
 <br>
 
