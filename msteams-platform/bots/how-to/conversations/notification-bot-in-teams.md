@@ -282,7 +282,7 @@ You can also add new cards if needed. For more information on how to build diffe
    ```
 
    > [!NOTE]
-   > To prevent an undefined output, ensure that you install the bot app in the General channel of a Team.
+   > To prevent an undefined output, ensure that you install the bot app in the **General** channel of a Team.
 
 * Notifications to a specific person:
 
