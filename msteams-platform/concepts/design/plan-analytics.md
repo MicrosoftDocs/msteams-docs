@@ -71,7 +71,7 @@ There are two types of data instrumentation relevant for your solution:
 
 ### Data instrumentation for your core SaaS product or app
 
-This is the instrumentation that you will do for your browser-based SaaS app irrespective of whether you’re integrating with Teams or not. If you have a browser-based SaaS app, in all likelihood, you will have this instrumentation already done in your code. This is how you can see click analytics, customer lifecycle analytics, and conversion analytics metrics such as bounce rate, page views, unique visitor count, session counts, engagement time, click through rate etc. and many more for your web app.
+This is the instrumentation that you will do for your browser-based SaaS app irrespective of whether you’re integrating with Teams or not. If you have a browser-based SaaS app, in all likelihood, you will have this instrumentation already done in your code. This is how you can see click analytics and customer lifecycle analytics. You can also see conversion analytics metrics such as, bounce rate, page views, unique visitor count, session counts, engagement time, click through rate etc. and many more for your web app.
 
 <!--
 If you're a SaaS developer, you would already have telemetry tracked for some of your core business metrics. Your SaaS product might have an existing web app, or a mobile app, and you've now introduced a new Teams app. The Teams app is another surface to expose your solution to your end user. It's another window to your SaaS landscape.
@@ -135,7 +135,7 @@ After you extract the Teams-specific information from the tab context, use it as
 
 #### Conversational constructs
 
-Conversation or chat-oriented capabilities include bots, message extensions, cards and task modules (displaying an Adaptive Card) that are created for Teams users. Conceptually, these are experiences only created for and available to users specifically inside Teams. You will need to capture Teams-specific events and handle them for Teams-specific instrumentation in your code for these constructs from scratch. A bot can access additional context data about a team, chat, meeting, 1:1 call, or group call where it's installed.
+Conversation or chat-oriented capabilities include bots, message extensions, cards and task modules (displaying an Adaptive Card) that are created for Teams users. Conceptually, these are experiences only created for and available to users specifically inside Teams. You'll need to capture Teams-specific events and handle them for Teams-specific instrumentation in your code for these constructs from scratch. A bot can access additional context data about a team, chat, meeting, 1:1 call, or group call where it's installed.
 
 Use this information for enriching the bot's functionality and the user experience:
 
