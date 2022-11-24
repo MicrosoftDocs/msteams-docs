@@ -10,7 +10,7 @@ ms.date: 04/07/2022
 
 # Dice Roller code tutorial
 
-In the Dice Roller sample app, users are shown a dice with a button to roll it. When the dice is rolled, the Live Share SDK uses the Fluid Framework to sync the data across clients, so everyone sees the same result. To sync data, perform the following steps in the [app.js](https://github.com/microsoft/live-share-sdk/blob/main/samples/01.dice-roller/src/app.js) file:
+In the Dice Roller sample app, users are shown a dice with a button to roll it. When the dice is rolled, the Live Share SDK uses the Fluid Framework to sync the data across clients, so everyone sees the same result. To sync data, perform the following steps in the [app.js](https://github.com/microsoft/live-share-sdk/blob/main/samples/javascript/01.dice-roller/src/app.js) file:
 
 1. [Set up the application](#set-up-the-application)
 2. [Join a Fluid container](#join-a-fluid-container)
@@ -276,7 +276,7 @@ After you've started running your app locally with `npm run start`, you can then
 
 ### Create the app package to sideload into Teams
 
-1. Go to the Dice Roller sample folder `\live-share-sdk\samples\01.dice-roller` on your computer. You can also check the [`.\manifest\manifest.json`](https://github.com/microsoft/live-share-sdk/tree/main/samples/01.dice-roller/manifest) from the Dice Roller sample on GitHub.
+1. Go to the Dice Roller sample folder `\live-share-sdk\samples\01.dice-roller` on your computer. You can also check the [manifest.json](https://github.com/microsoft/live-share-sdk/blob/main/samples/javascript/01.dice-roller/manifest/manifest.json) from the Dice Roller sample on GitHub.
 
 1. Open manifest.json and update the configuration URL.
 
@@ -345,9 +345,9 @@ After you're ready to deploy your code, you can use [Teams Toolkit](../toolkit/p
 
 ## Code samples
 
-| Sample name | Description                                                     | JavaScript                                                                           |
-| :---------- | --------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
-| Dice Roller | Enable all connected clients to roll a die and view the result. | [View](https://github.com/microsoft/live-share-sdk/tree/main/samples/01.dice-roller) |
+| Sample name | Description | JavaScript |
+| :----- | -------------- | ----------- |
+| Dice Roller | Enable all connected clients to roll a die and view the result. | [View](https://github.com/microsoft/live-share-sdk/tree/main/samples/javascript/01.dice-roller) |
 
 ## Next step
 
