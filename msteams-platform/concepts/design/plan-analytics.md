@@ -18,7 +18,7 @@ You'll also be interested in monitoring many data points, such as:
 - How are users engaging with your app?
 - Which users have churned away after using your app for some time?
 
-This information helps you analyze the data against your business goals, take corrective action by fixing issues, and intervening in the user journey or plan further enhancements to your app.
+This information helps you analyze the data against your business goals, take corrective action by fixing issues, and intervening in the user journey or make informed decisions around feature investments, enhancements, and adoption for the app.
 
 **But Teams app usage report must suffice, isn’t it?**
 
@@ -31,7 +31,7 @@ As the app’s developer, you can track your app’s usage in the [Teams app usa
 
 Teams usage reports can't provide you with in-depth analytics of what goes on inside your app and specific user-level analytics. Such analytics include a user’s journey within your app or a user’s engagement with specific features and scenario completions.
 
-Your app on Teams is essentially a web-based service hosted elsewhere, for example, Azure cloud. It's embedded and surfaced inside Microsoft Teams shell where users can use your app. This applies to your app irrespective of the [platform capabilities](../../overview-explore.md) used, such as tabs, bots, message extensions, meeting extensions, cards, task modules etc. All of these capabilities are a means to surface web-based experiences inside Teams.
+Your app on Teams is essentially a web-based service hosted elsewhere, for example, Azure cloud. It's embedded and surfaced inside Microsoft Teams shell where users can use your app. This applies to your app irrespective of the [platform capabilities](../../overview-explore.md) used, such as tabs, bots, message extensions, meeting extensions, cards, task modules, etc. All of these capabilities are a means to surface web-based experiences inside Teams.
 
 Plan analytics for the Teams app the same way as you do for a SaaS product that runs on the web browser.
 
