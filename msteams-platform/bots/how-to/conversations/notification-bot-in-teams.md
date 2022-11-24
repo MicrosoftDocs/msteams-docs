@@ -9,21 +9,20 @@ ms.localizationpriority: high
 
 # Notification bot in Teams
 
-Microsoft Teams Toolkit enables you to build applications that capture events and send them as notifications to an individual, chat, group, or channel in Teams. You can send notifications as plain text or [Adaptive Cards](../../../task-modules-and-cards/cards/cards-reference.md#adaptive-card). The notification bot template creates an app that sends a message to Teams with Adaptive Cards triggered by HTTP post request. The app template is built using the TeamsFx SDK, which provides a simple set of functions over Microsoft Bot Framework to implement your scenario. For example, in a scenario where a travel agency builds an app in Teams for their customers to keep them up-to-date with the weather forecast. In the following diagram you can see a Teams app sends notification to the travelers about the weather forecast:
+Microsoft Teams Toolkit enables you to build applications that capture events and send them as notifications to a personal, groupchat, or a channel in Teams. You can send notifications as plain text or [Adaptive Cards](../../../task-modules-and-cards/cards/cards-reference.md#adaptive-card). The notification bot template creates an app that sends a message to Teams with Adaptive Cards triggered by HTTP post request. The app template is built using the TeamsFx SDK, which provides a simple set of functions over Microsoft Bot Framework to implement your requirement. For example, in a scenario where a travel agency builds an app in Teams for their customers to keep them up-to-date with the weather forecast. In the following diagram you can see a Teams app sends notification to the travelers about the weather forecast:
 
 :::image type="content" source="../../../assets/images/notification-bot/notification-new-scenario-diagram.png" alt-text="weather forecast sample notification scenario" lightbox="../../../assets/images/notification-bot/notification-new-scenario-diagram.png":::
 
-You can create notification bot in multiple scenarios, such as notification can be sent in teams DevOps channel if there's a build failure. When you create a pull request in GitHub, a review request link can be sent as a notification to the reviewer.
+You can create notification bot in a different scenario, such as notification can be sent in teams DevOps channel if there's a build failure.
 
 **Advantages**
 
-* Facilitates notifications to a personal, group chat, and in a channel, using user friendly APIs from TeamsFx SDK.
-* Enriches notifications by customizing them with an Adaptive Card.
-* Provides multiple mechanisms to trigger notifications such as HTTP and Timer Trigger with Azure Functions.
+* Facilitates notifications to a personal, groupchat, and in a channel, using APIs from TeamsFx SDK.
+* Enhances user experience by customizing notification with an Adaptive Card.
+* Provides multiple mechanisms to trigger notifications such as HTTP and schedule timer trigger with Azure Functions.
 
-**Limitation**
-
-Limitation of notification bot is that the bot application needs to be installed with the corresponding scope before sending notification.
+> [!NOTE]
+> Bot application needs to be installed with the corresponding scope before sending notification.
 
 ## Notification based on events
 
@@ -33,8 +32,8 @@ Bot Framework SDK provides the functionality to [proactively message in Teams](s
 |---------|---------|
 |The first time you install a bot to a person, group, or Team.     |You need to add the target conversation reference to the storage.         |
 |When the bot is uninstalled from a person, group, or Team.     |You need to remove the target conversation reference from the storage.         |
-|When the team, which is installed by bot is deleted.     |You need to remove the target conversation reference from the storage.         |
-|When the team, which is installed by bot is restored.     |You need to add the target conversation reference to the storage.         |
+|When the team installed by bot is deleted.     |You need to remove the target conversation reference from the storage.         |
+|When the team installed by bot is restored.     |You need to add the target conversation reference to the storage.         |
 |When the bot sends messages.     |When the target conversation reference doesn't exist, you need to add it to the storage.         |
 
 :::image type="content" source="../../../assets/images/notification-bot/notification-new-event.png" alt-text="new notification event sample":::
@@ -85,7 +84,7 @@ A notification bot needs to be installed into a team, or a group chat, or as per
 
 ## Customize notification
 
-Following are the customizations you can make to extend the notification template to fit your business requirements.
+You can make the following customizations to extend the notification template to fit your business need:
 
 <br>
 
@@ -95,17 +94,17 @@ Following are the customizations you can make to extend the notification templat
 
 * `Restify` based notification
 
-   When HTTP request is sent to `src/index.js` entry point, the default implementation sends an Adaptive Card to Teams. You can customize this event by modifying `src/index.js`. A typical implementation can call an API to retrieve events, data, or both that can send an Adaptive Card as required. You can also add additional triggers by:
+   When HTTP request is sent to `src/index.js` entry point, the default implementation sends an Adaptive Card to Teams. You can customize this event by modifying `src/index.js`. A typical implementation can call an API to retrieve events, data, or both that can send an Adaptive Card as required. You can perform the following to add additional triggers:
 
-  * Creating a new routing: `server.post("/api/new-trigger", ...)`.
-  * Adding Timer trigger(s) from widely used npm packages such as [cron](https://www.npmjs.com/package/cron), [node-schedule](https://www.npmjs.com/package/node-schedule), or from other packages.
+  * Create a new routing: `server.post("/api/new-trigger", ...)`.
+  * Add timer trigger(s) from widely used npm packages, such as [cron](https://www.npmjs.com/package/cron), [node-schedule](https://www.npmjs.com/package/node-schedule), or from other packages.
 
     > [!NOTE]
     > By default Teams Toolkit scaffolds a single `restify` entry point in `src/index.js`.
 
 * Azure Functions based notification:
 
-  * When you select timer trigger, the default implemented Azure function timer trigger `src/timerTrigger.ts` sends an Adaptive Card every 30 seconds. You can edit the file `*Trigger/function.json` to customize the `schedule` property. For more information, see [Azure Function documentation](/azure/azure-functions/functions-bindings-timer?tabs=in-process&pivots=programming-language-javascript).
+  * When you select timer trigger, the default implemented Azure Function timer trigger `src/timerTrigger.ts` sends an Adaptive Card every 30 seconds. You can edit the file `*Trigger/function.json` to customize the `schedule` property. For more information, see [Azure Function documentation](/azure/azure-functions/functions-bindings-timer?tabs=in-process&pivots=programming-language-javascript).
 
     :::image type="content" source="../../../assets/images/notification-bot/notification-timer-triggered.png" alt-text="sample of timer triggered notification":::
 
@@ -129,9 +128,9 @@ Following are the customizations you can make to extend the notification templat
 
 <summary><b>2. Customize the notification content</b></summary>
 
-The file `src/adaptiveCards/notification-default.json` defines the default Adaptive Card. You can use the [Adaptive Card designer](https://adaptivecards.io/designer/) to help visually design your Adaptive Card UI. `src/cardModels.ts` defines a data structure that is used to load data for the Adaptive Card. The binding between the model and the Adaptive Card is done by name matching such as `CardData.title` maps to `${title}` in the Adaptive Card. You can add, edit, or remove properties and their bindings to customize the Adaptive Card as required.
+The file `src/adaptiveCards/notification-default.json` defines the default Adaptive Card. You can use the [Adaptive Card designer](https://adaptivecards.io/designer/) to help visually design your Adaptive Card UI. `src/cardModels.ts` defines a data structure that is used to load data for the Adaptive Card. The binding between the card model and the Adaptive Card is done by matching name such as `CardData.title` maps to `${title}` in the Adaptive Card. You can add, edit, or remove properties and their bindings to customize the Adaptive Card as required.
 
-You can also add new cards if needed. How to build different types of Adaptive Cards with a list or table of dynamic contents using `ColumnSet` and `FactSet`, see [Adaptive Card notification sample](<https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/adaptive-card-notification>).
+You can also add new cards if needed. For more information on how to build different types of Adaptive Cards with a list or table of dynamic contents using `ColumnSet` and `FactSet`, see [Adaptive Card notification sample](<https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/adaptive-card-notification>).
 
 <br>
 
@@ -140,6 +139,82 @@ You can also add new cards if needed. How to build different types of Adaptive C
 <details>
 
 <summary><b>3. Customize where notifications are sent</b></summary>
+
+* Notifications to a personal chat:
+
+# [TypeScript](#tab/ts3)
+
+  ```TypeScript
+       // list all installation targets
+       for (const target of await bot.notification.installations()) {
+           // "Person" means this bot is installed as Personal app
+           if (target.type === "Person") {
+              // Directly notify the individual person
+               await target.sendAdaptiveCard(...);
+           }
+       }
+  ```
+
+# [C#/.NET](#tab/dotnet3)
+
+```C#/.NET
+        // list all installation targets
+        foreach (var target in await _conversation.Notification.GetInstallationsAsync()) {
+        // "Person" means this bot is installed as Personal   app
+           if (target.Type == NotificationTargetType.Person)
+       {
+          // Directly notify the individual person
+          await target.SendAdaptiveCard(...);
+       }
+     }
+  ```
+
+---
+
+* Notifications to a groupchat:
+
+# [TypeScript](#tab/ts2)
+
+```TypeScript
+            // list all installation targets
+            for (const target of await bot.notification.installations()) {
+            // "Group" means this bot is installed to a Group Chat
+            if (target.type === "Group") {
+            // Directly notify the Group Chat
+            await target.sendAdaptiveCard(...);
+
+            // List all members in the Group Chat then notify each member
+            const members = await target.members();
+            for (const member of members) {
+            await member.sendAdaptiveCard(...);
+           
+            }
+          }
+        }
+
+```
+
+# [C#/.NET](#tab/dotnet2)
+
+```C#/.NET
+           // list all installation targets
+           foreach (var target in await _conversation.Notification.GetInstallationsAsync())     {
+              // "Group" means this bot is installed to a Group Chat
+              if (target.Type == NotificationTargetType.Group)
+             {
+                // Directly notify the Group Chat
+                await target.SendAdaptiveCard(...);
+
+                // List all members in the Group Chat then notify each member
+                var members = await target.GetMembersAsync();
+                foreach (var member in members) {
+                await member.SendAdaptiveCard(...);
+                 }
+             }
+          }
+  ```
+
+---
 
 * Notifications to a channel:
 
@@ -193,82 +268,6 @@ You can also add new cards if needed. How to build different types of Adaptive C
       }
     }
 ```
-
----
-
-* Notifications to a group chat:
-
-# [TypeScript](#tab/ts2)
-
-```TypeScript
-            // list all installation targets
-            for (const target of await bot.notification.installations()) {
-            // "Group" means this bot is installed to a Group Chat
-            if (target.type === "Group") {
-            // Directly notify the Group Chat
-            await target.sendAdaptiveCard(...);
-
-            // List all members in the Group Chat then notify each member
-            const members = await target.members();
-            for (const member of members) {
-            await member.sendAdaptiveCard(...);
-           
-            }
-          }
-        }
-
-```
-
-# [C#/.NET](#tab/dotnet2)
-
-```C#/.NET
-           // list all installation targets
-           foreach (var target in await _conversation.Notification.GetInstallationsAsync())     {
-              // "Group" means this bot is installed to a Group Chat
-              if (target.Type == NotificationTargetType.Group)
-             {
-                // Directly notify the Group Chat
-                await target.SendAdaptiveCard(...);
-
-                // List all members in the Group Chat then notify each member
-                var members = await target.GetMembersAsync();
-                foreach (var member in members) {
-                await member.SendAdaptiveCard(...);
-                 }
-             }
-          }
-  ```
-
----
-
-* Notifications to a personal chat:
-
-# [TypeScript](#tab/ts3)
-
-  ```TypeScript
-       // list all installation targets
-       for (const target of await bot.notification.installations()) {
-           // "Person" means this bot is installed as Personal app
-           if (target.type === "Person") {
-              // Directly notify the individual person
-               await target.sendAdaptiveCard(...);
-           }
-       }
-  ```
-
-# [C#/.NET](#tab/dotnet3)
-
-```C#/.NET
-        // list all installation targets
-        foreach (var target in await _conversation.Notification.GetInstallationsAsync()) {
-        // "Person" means this bot is installed as Personal   app
-           if (target.Type == NotificationTargetType.Person)
-       {
-          // Directly notify the individual person
-          await target.SendAdaptiveCard(...);
-       }
-     }
-  ```
 
 ---
 
