@@ -191,18 +191,7 @@ public class NotifyController : ControllerBase
     {
         foreach (var conversationReference in _conversationReferences.Values) // Loop through all conversation references, you might need to update to get to it from your database.
         {
-            var newReference = new ConversationReference()
-        {
-            Bot = new ChannelAccount()
-            {
-                Id = conversationReference.Bot.Id
-            },
-            Conversation = new ConversationAccount()
-            {
-                Id = conversationReference.Conversation.Id
-            },
-            ServiceUrl = conversationReference.ServiceUrl,
-        };
+        
             await ((BotAdapter)_adapter).ContinueConversationAsync(_appId, newReference, BotCallback, default(CancellationToken));
         }
         
@@ -223,6 +212,22 @@ public class NotifyController : ControllerBase
     }
 }
 ```
+
+Example of a code snippet to demonstrate creating conversation reference.
+
+```csharp
+ var newReference = new ConversationReference()
+        {
+            Bot = new ChannelAccount()
+            {
+                Id = conversationReference.Bot.Id
+            },
+            Conversation = new ConversationAccount()
+            {
+                Id = conversationReference.Conversation.Id
+            },
+            ServiceUrl = conversationReference.ServiceUrl,
+        };
 
 # [TypeScript](#tab/typescript)
 
