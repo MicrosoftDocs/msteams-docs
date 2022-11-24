@@ -385,6 +385,25 @@ To get your app ready for zero install link unfurling, follow these steps:
     * If the bot selects to send back the `"type": "auth"` with a pre-auth card, the Teams client strips away any action buttons from the card, and adds a sign in action button to get users to authenticate into your app.
     ---
 
+## Remove link unfurling cache
+
+When a user shares a link in a meeting, the Teams app unfurls the link to an Adaptive Card. The link unfurling result is cached in Teams for 30 minutes. You can update your app to set a cache policy and remove cache for the app, which helps you to show different content in an Adaptive Card when the app's link is shared in a different context in Teams.
+
+To remove link unfurling cache, update your bot with the `type` as `setcachepolicy` under the `suggestedActions` property. Teams doesn't cache the results for the app links with the `"type": "setCachePolicy"`.
+
+The following JSON payload example for `suggestedActions` property:
+
+```json
+"suggestedActions": {
+            "actions": [
+                {
+                    "type": "setCachePolicy",
+                    "value": "{\"type\":\"no-cache\"}"
+                }
+            ]
+        },
+```
+
 ## Step-by-step guide
 
 Follow the [step-by-step guide](../../sbs-botbuilder-linkunfurling.yml) to unfurl links in Teams using bot.
