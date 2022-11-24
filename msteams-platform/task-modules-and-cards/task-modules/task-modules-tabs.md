@@ -104,37 +104,37 @@ The following is the example of payload:
 The following is the example of Invoke request:
 
 ```javascript
-function submit(type) {
-    let taskInfo = {
-        title: null,
-        height: null,
-        width: null,
-        url: null,
-        card: null,
-        fallbackUrl: null,
-        completionBotId: null,
-    };
+let taskInfo = {
+    title: "Task Module Demo",
+    height: "medium",
+    width: "medium",
+    card: null,
+    fallbackUrl: null,
+    completionBotId: null,
+};
 
-    taskInfo.title = "Task Module Demo";
-    taskInfo.height = "medium";
-    taskInfo.width = "medium";
-
-    taskInfo.card = "Adaptive card or adaptive card attachment code";
-    taskInfo.fallbackUrl = taskInfo.url;
-
-    if (type.includes("bot")) {
-        taskInfo.completionBotId = "Bot App ID";
-    }
-
-    submitHandler = (err, result) => {
-        console.log(`Submit handler - err: ${err}`);
-        alert(
-            "Result = " + JSON.stringify(result) + "\nError = " + JSON.stringify(err)
-        );
-    };
-
-    microsoftTeams.tasks.startTask(taskInfo, submitHandler);
+taskInfo.card = {
+    "type": "AdaptiveCard",
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.4",
+    "body": [
+        {
+            "type": "TextBlock",
+            "text": "This is sample adaptive card.",
+            "wrap": true
+        }
+    ]
 }
+
+submitHandler = (err, result) => {
+    console.log(`Submit handler - err: ${err}`);
+    alert(
+        "Result = " + JSON.stringify(result) + "\nError = " + JSON.stringify(err)
+    );
+};
+
+microsoftTeams.tasks.startTask(taskInfo, submitHandler);
+
 ```
 
 The next section gives an example of submitting the result of a task module.
