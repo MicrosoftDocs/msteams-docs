@@ -37,7 +37,7 @@ Plan analytics for the Teams app the same way as you do for a SaaS product that 
 
 ## Plan early for analytics
 
-Plan analytics for your Teams app at the development design and solution architecture stage. For Teams-specific capabilities, such as conversational constructs like bots, message extensions etc., you'll need to plan and implement analytics instrumentation, capture relevant events, and context from the SDK methods from scratch.
+Plan analytics for your Teams app at the development design and solution architecture stage. For Teams-specific capabilities, such as [conversational constructs](#conversational-constructs) like bots, message extensions etc., you'll need to plan and implement analytics instrumentation, capture relevant events, and context from the SDK methods from scratch.
 
 At the time your production Teams app is live on the marketplace and customers start using it, your analytics and data infrastructure should be fully operational. It ensures that you don’t miss tracking:
 
