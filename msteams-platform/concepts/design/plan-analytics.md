@@ -31,7 +31,7 @@ As the app’s developer, you can track your app’s usage in the [Teams app usa
 
 Teams usage reports can't provide you with in-depth analytics of what goes on inside your app and specific user-level analytics. Such analytics include a user’s journey within your app or a user’s engagement with specific features and scenario completions.
 
-Your app on Teams is essentially a web-based service hosted elsewhere, for example, Azure cloud. It is embedded and surfaced inside Microsoft Teams shell where users can use your app. It applies to your app irrespective of the [platform capabilities](../../overview-explore.md) used, such as tabs, bots, message extensions, meeting extensions, cards, task modules, etc. All of these capabilities are a means to surface web-based experiences inside Teams.
+Your app on Teams is essentially a web-based service hosted elsewhere, for example, Azure cloud. It is embedded and surfaced inside Microsoft Teams shell where users can use your app. This applies to your app irrespective of the [platform capabilities](../../overview-explore.md) used, such as tabs, bots, message extensions, meeting extensions, cards, task modules, etc. All of these capabilities are a means to surface web-based experiences inside Teams.
 
 Plan analytics for the Teams app the same way as you do for a SaaS product that runs on the web browser.
 
@@ -96,7 +96,7 @@ At a presentation level, your application is accessed by your end user across di
 
 ## Tracking Teams app specific telemetry
 
-Below are guidelines and pointers regarding what to look for, which events to capture, how to instrument telemetry markers, and where to fetch Teams-relevant information that will help you plan and implement analytics for your app. Since your Teams apps can be tabs, bots, message extensions, cards, stage views etc. or any combination of these [capabilities and UI constructs](../../overview-explore.md#teams-app-features) across personal or shared scopes, it's best to understand, plan, and implement your instrumentation around each of these capabilities.
+Below are guidelines and pointers regarding what to look for, which events to capture, how to instrument telemetry markers, and where to fetch Teams-relevant information that will help you plan and implement analytics for your app. Your Teams apps can be tabs, bots, message extensions, cards, stage views etc. or any combination of these [capabilities and UI constructs](../../overview-explore.md#teams-app-features) across personal or shared scopes. It's best to understand, plan, and implement your instrumentation around each of these capabilities.
 
 You can classify Teams platform features into broadly two constructs:
 
@@ -135,7 +135,7 @@ After you extract the Teams-specific information from the tab context, use it as
 
 #### Conversational constructs
 
-Conversation or chat-oriented capabilities include bots, message extensions, cards and task modules (displaying an Adaptive Card) that are created for Teams users. Conceptually, these are experiences only created for and available to users specifically inside Teams. You'll need to capture Teams-specific events and handle them for Teams-specific instrumentation in your code for these constructs from scratch. A bot can access additional context data about a team, chat, meeting, 1:1 call, or group call where it's installed.
+Conversation or chat-oriented capabilities include bots, message extensions, cards and task modules (displaying an Adaptive Card) that are created for Teams users. Conceptually, these experiences are created for and available only to users specifically inside Teams. You'll need to capture Teams-specific events and handle them for Teams-specific instrumentation in your code for these constructs from scratch. A bot can access additional context data about a team, chat, meeting, 1:1 call, or group call where it's installed.
 
 Use this information for enriching the bot's functionality and the user experience:
 
