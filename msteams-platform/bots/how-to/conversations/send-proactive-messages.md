@@ -192,7 +192,7 @@ public class NotifyController : ControllerBase
         foreach (var conversationReference in _conversationReferences.Values)
         {
         
-            await ((BotAdapter)_adapter).ContinueConversationAsync(_appId, newReference, BotCallback, default(CancellationToken));
+            await ((BotAdapter)_adapter).ContinueConversationAsync(_appId, conversationReference, BotCallback, default(CancellationToken));
         }
         
         // Let the caller know proactive messages have been sent
