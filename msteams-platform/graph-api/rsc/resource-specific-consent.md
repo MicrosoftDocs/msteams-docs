@@ -22,7 +22,7 @@ Resource-specific consent (RSC) is an authorization framework built by Microsoft
 The granular, Teams-specific, RSC permissions define what an application can do within a specific resource. RSC permissions are available on the following resource types:
 
 * [Teams](#resource-specific-permissions-for-a-team) (includes the channels within those teams)
-* [Chats](#resource-specific-permissions-for-a-chat) (includes the meetings associated with those chats)
+* [Chats](#resource-specific-permissions-for-a-chat-or-meeting) (includes the meetings associated with those chats)
 * [Users](#resource-specific-permissions-for-a-user)
 
 > [!NOTE]
