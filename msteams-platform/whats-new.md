@@ -32,7 +32,7 @@ Teams platform features that are available to all app developers.
 
 * ***November 18, 2022***: [Zero install for link unfurling](messaging-extensions/how-to/link-unfurling.md#zero-install-for-link-unfurling).
 
-* ***November 17, 2022***: [Manifest schema v1.5](resources/schema/manifest-schema.md).
+* ***November 17, 2022***: [Manifest schema v1.15](resources/schema/manifest-schema.md).
 
 * ***November 16, 2022***: [Adaptive Cards overflow menu](task-modules-and-cards/cards/cards-format.md#adaptive-cards-overflow-menu).
 
