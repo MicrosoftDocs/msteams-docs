@@ -29,11 +29,11 @@ A command bot needs to be installed into a team, or a group chat, or as personal
 
 ## Command and response
 
-The TeamsFx command and response bots are built using the [Bot Framework SDK](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0). The Bot Framework SDK provides [built-in message handler](../../bot-basics.md#teams-activity-handlers) to handle the incoming message activity, which requires you to understand the concept of Bot Framework such as the [event-driven conversation model](/azure/bot-service/bot-activity-handler-concept?view=azure-bot-service-4.0&tabs=javascript). TeamsFx SDK provides command-response abstraction layer to let the users focus on handling the command request according to the business requirement, without learning the Bot Framework SDK.
+The TeamsFx command and response bots are built using the [Bot Framework SDK](https://learn.microsoft.com/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&branch=pr-en-us-7494). The Bot Framework SDK provides [built-in message handler](../../bot-basics.md#teams-activity-handlers) to handle the incoming message activity, which requires you to understand the concept of Bot Framework such as the [event-driven conversation model](https://learn.microsoft.com/azure/bot-service/bot-activity-handler-concept?view=azure-bot-service-4.0&tabs=javascript&branch=pr-en-us-7494). TeamsFx SDK provides command-response abstraction layer to let the users focus on handling the command request according to the business requirement, without learning the Bot Framework SDK.
 
-TeamsFx SDK pulls [Bot Framework middleware](/azure/bot-service/bot-builder-concept-middleware?view=azure-bot-service-4.0) to handle the integration with the underlying activity handlers. If the received message text matches the command pattern provided in a `TeamsFxBotCommandHandler` instance, the middleware handles the incoming message activity and invokes the corresponding `handlerCommandReceived` function. After this process, the middleware calls `context.sendActivity` to send the command response returned from the `handlerCommandReceived` function to the user.
+TeamsFx SDK pulls [Bot Framework middleware](https://learn.microsoft.com/azure/bot-service/bot-builder-concept-middleware?view=azure-bot-service-4.0&branch=pr-en-us-7494) to handle the integration with the underlying activity handlers. If the received message text matches the command pattern provided in a `TeamsFxBotCommandHandler` instance, the middleware handles the incoming message activity and invokes the corresponding `handlerCommandReceived` function. After this process, the middleware calls `context.sendActivity` to send the command response returned from the `handlerCommandReceived` function to the user.
 
-Customize initialization
+## Customize initialization
 
 You can initialize with your own adapter or customize after initialization.
 
@@ -69,7 +69,7 @@ You can edit the manifest template file `templates\appPackage\manifest.template.
 * The command title that user types in the message compose area to trigger the command.
 * The command description for the command.
 
-:::image type="content" source="../../../assets/images/command-bot-teams/commandbot-add-command-definition.png" alt-text="add a command definition in manifest code sample":::
+  :::image type="content" source="../../../assets/images/command-bot-teams/commandbot-add-command-definition.png" alt-text="add a command definition in manifest code sample":::
 
 <br>
 </details>
@@ -82,7 +82,7 @@ You can build your response data in text format, or perform the following steps 
 
 * Prepare your Adaptive Card content in a JSON file such as `myCard.json` under the `bot/adaptiveCards` folder. Following is a sample Adaptive Card with JSON payload:
 
-```JASON
+  ```JASON
         {
             "type": "AdaptiveCard",
             "body": [
@@ -113,7 +113,7 @@ You can build your response data in text format, or perform the following steps 
             "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
             "version": "1.4"
         }
-```
+  ```
 
 * Import your card content into your code file where your command handler exists: `import myCard from "./adaptiveCards/myCard.json"`.
 
