@@ -277,15 +277,19 @@ Don't send a message in the following cases:
 
 ## Step-by-step guide
 
-Follow the [step-by-step guide](../../../sbs-teams-conversation-bot.yml), to create a Teams conversational bot.
+Follow the [step-by-step guide](../../../sbs-teams-conversation-bot.yml), create Teams conversation bot.
 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Subscribe to conversation events](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
+> [Conversation events in your Teams bot](subscribe-to-conversation-events.md)
 
 ## See also
 
-* [Get Teams context](~/bots/how-to/get-teams-context.md)
+* [Build bots for Teams](../../what-are-bots.md)
+* [Authenticate users in Microsoft Teams](../../../concepts/authentication/authentication.md)
+* [Task modules](../../../task-modules-and-cards/what-are-task-modules.md)
+* [Upload file in Teams using bot](../../../sbs-file-handling-in-bot.yml)
+* [Get Teams specific context for your bot](../get-teams-context.md)
 * [Create private channel on behalf of user](/graph/api/channel-post#example-2-create-private-channel-on-behalf-of-user)
 * [Connect a bot to Web Chat channel](/azure/bot-service/bot-service-channel-connect-webchat)

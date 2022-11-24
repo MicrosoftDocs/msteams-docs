@@ -257,9 +257,9 @@
   - name: Create a content page
     href: tabs/how-to/create-tab-pages/content-page.md
     displayName: Loading indicator, personal-scoped custom tab, channel or group custom tab
-  - name: Create configuration page
+  - name: Create a configuration page
     href: tabs/how-to/create-tab-pages/configuration-page.md
-  - name: Create removal page
+  - name: Create a removal page
     href: tabs/how-to/create-tab-pages/removal-page.md
     displayName: Reconfigure tab, register remove handler
   - name: Tabs on mobile
@@ -274,8 +274,6 @@
   - name: Build tabs with Adaptive Cards
     href: tabs/how-to/build-adaptive-card-tabs.md
     displayName: Slow load times, iFrame constartints, invoke activities, task module, task fetch, task submit, authentication
-  - name: Use Fluid with Microsoft Teams
-    href: tabs/how-to/using-fluid-msteam.md
   - name: Tabs link unfurling and Stage View
     href: tabs/tabs-link-unfurling.md
     displayName: Tab in stage view
@@ -303,7 +301,7 @@
       href: bots/how-to/conversations/conversation-messages.md
       displayName: Picture messages, attribution for bot message, status code responses, app localization using bot and tab.
       items:
-      - name: Receive all channel messages with RSC
+      - name: Receive all conversation messages with RSC
         href: bots/how-to/conversations/channel-messages-with-rsc.md
     - name: Create a commands menu
       href: bots/how-to/create-a-bot-commands-menu.md
@@ -322,6 +320,8 @@
       href: bots/how-to/update-and-delete-bot-messages.md      
     - name: Request headers of the bot
       href: bots/how-to/conversations/request-headers-of-the-bot.md
+    - name: Workflow bot in Teams
+      href: bots/how-to/conversations/workflow-bot-in-teams.md
   - name: Get Teams specific context for your bot
     href: bots/how-to/get-teams-context.md
     displayName: Fetch roster or user profile
@@ -502,14 +502,13 @@
   items:
   - name: Overview
     href: concepts/authentication/authentication.md
-    displayName: Authentication method
-  - name: Tabs
-    items:
-    - name: Enable SSO for tab app
+  - name: Enable SSO for your Teams app
+    items: 
+    - name: Enable SSO for your tab app
       items:
-      - name: Overview
+      - name: Overview for tab SSO
         href: tabs/how-to/authentication/tab-sso-overview.md
-      - name: Register your tab app in Azure AD
+      - name: Configure your tab app in Azure AD
         href: tabs/how-to/authentication/tab-sso-register-aad.md
       - name: Add code to enable SSO
         href: tabs/how-to/authentication/tab-sso-code.md
@@ -517,33 +516,32 @@
         href: tabs/how-to/authentication/tab-sso-manifest.md
       - name: Grant Microsoft Graph permissions and scopes
         href: tabs/how-to/authentication/tab-sso-graph-api.md
-        displayName: Configure authentication for different platforms
-      - name: Troubleshoot SSO authentication
-        href: tabs/how-to/authentication/tab-sso-troubleshooting.md
-    - name: Use third party OAuth IdP authentication
+    - name: Enable SSO for your bot and message extension app
       items:
       - name: Overview
-        href: tabs/how-to/authentication/auth-flow-tab.md
-      - name: Configure third party OAuth IdP authentication
-        href: tabs/how-to/authentication/auth-tab-aad.md
-      - name: Use external OAuth providers
-        href: tabs/how-to/authentication/auth-oauth-provider.md 
-  - name: Bots
+        href: bots/how-to/authentication/bot-sso-overview.md
+      - name: Configure your app in Azure AD
+        href: bots/how-to/authentication/bot-sso-register-aad.md
+      - name: Add code to enable SSO
+        href: bots/how-to/authentication/bot-sso-code.md
+      - name: Update manifest for SSO and preview app
+        href: bots/how-to/authentication/bot-sso-manifest.md
+      - name: Grant Microsoft Graph permissions and scopes
+        href: bots/how-to/authentication/bot-sso-graph-api.md
+    - name: Troubleshoot SSO authentication
+      href: tabs/how-to/authentication/tab-sso-troubleshooting.md
+  - name: Use third party IdP authentication
     items:
-    - name: Authentication flow in bots
-      href: bots/how-to/authentication/auth-flow-bot.md
-    - name: Add authentication to your bot
+    - name: Overview
+      href: tabs/how-to/authentication/auth-flow-tab.md
+    - name: Add third party IdP authentication to tab app
+      href: tabs/how-to/authentication/auth-tab-aad.md
+    - name: Add third party IdP authentication to bot app
       href: bots/how-to/authentication/add-authentication.md
-      displayName: Create an authentication-enabled bot, deploy the bot to Azure and associate it with an identity provider, integrate the bot within Microsoft Teams
-    - name: Use SSO authentication
-      href: bots/how-to/authentication/auth-aad-sso-bots.md
-  - name: Message extensions
-    items:
-    - name: Add authentication to your message extension
+    - name: Add third party IdP authentication to message extension app
       href: messaging-extensions/how-to/add-authentication.md
-      displayName: Configuration
-    - name: Enable SSO for message extensions
-      href: messaging-extensions/how-to/enable-SSO-auth-me.md 
+  - name: Use external OAuth providers
+    href: tabs/how-to/authentication/auth-oauth-provider.md
 - name: Integrate device capabilities
   items:
   - name: Overview
@@ -570,6 +568,8 @@
   - name: Get started
     href: /graph/toolkit/get-started/build-a-microsoft-teams-tab
     displayName: Access, report, MSAL2
+  - name: Teams app permissions
+    href: graph-api/app-permissions/teams-app-permissions.md
   - name: Resource-specific consent
     href: graph-api/rsc/resource-specific-consent.md
     displayName: Permissions, delegated
@@ -799,8 +799,6 @@
       href: concepts/build-and-test/apps-localization.md
     - name: Localize JSON schema reference
       href: resources/schema/localization-schema.md
-  - name: Use silent authentication in Azure AD
-    href: tabs/how-to/authentication/auth-silent-aad.md
   - name: SameSite cookie attribute 
     href: resources/samesite-cookie-update.md
     displayName: Cookies

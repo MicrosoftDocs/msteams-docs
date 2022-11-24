@@ -212,4 +212,10 @@ Following are the command menu best practices:
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Channel and group conversations](~/bots/how-to/conversations/channel-and-group-conversations.md)
+> [Channel and group chat conversations with a bot](conversations/channel-and-group-conversations.md)
+
+## See also
+
+* [Build bots for Teams](../what-are-bots.md)
+* [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
+* [Messages in bot conversations](conversations/conversation-messages.md)
