@@ -147,6 +147,4 @@ You must ensure to handle these errors appropriately in your Teams app. The foll
 ## See also
 
 * [Device capabilities](device-capabilities-overview.md)
-* [Integrate media capabilities](media-capabilities.md)
-* [Integrate QR code or barcode scanner capability in Teams](qr-barcode-scanner-capability.md)
-* [Integrate People Picker in Teams](people-picker-capability.md)
+* [Meeting apps APIs](../../apps-in-teams-meetings/meeting-apps-apis.md)

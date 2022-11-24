@@ -400,6 +400,7 @@ To enable, follow the steps:
 ## See also
 
 * [Device capabilities](device-capabilities-overview.md)
+* [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
 * [Integrate QR or barcode scanner capability in Teams](qr-barcode-scanner-capability.md)
 * [Integrate location capabilities in Teams](location-capability.md)
 * [Integrate People Picker](people-picker-capability.md)
