@@ -14,19 +14,13 @@ ms.topic: reference
 
 Resource-specific consent (RSC) is an authorization framework built by Microsoft Teams and Microsoft Identity that allows for granting scoped access to an application. Through RSC, an authorized user can give an application access to the data of only a specific instance of a resource type instead of giving broad access to each and every instance of a resource type in the entire tenant. For example, a person who owns both team A and team B can decide to give the Contoso app access to the data of only team A and not team B. The same concept of scoped data access applies to chats and meetings as well.
 
+RSC permissions are categorized based on:
+
+* The resource type to which data access is being granted.
+* The mode of data access.
+
 > [!NOTE]
 > If a chat has a meeting or a call associated with it, then the relevant RSC permissions apply to those resources as well.
-
-## RSC permissions for resource types
-
-The granular, Teams-specific, RSC permissions define what an application can do within a specific resource. RSC permissions are available on the following resource types:
-
-* [Teams](#resource-specific-permissions-for-a-team) (includes the channels within those teams)
-* [Chats](#resource-specific-permissions-for-a-chat-or-meeting) (includes the meetings associated with those chats)
-* [Users](#resource-specific-permissions-for-a-user)
-
-> [!NOTE]
-> Some of the permissions listed here might not yet have GA for the features that are associated with them.
 
 ## Types of RSC permissions
 
@@ -37,12 +31,12 @@ RSC permission determines which data access methods are allowed by the applicati
 
 ### API that supports RSC-based data access
 
-All three, the Microsoft Graph SDK, Microsoft Bot Framework SDK, and Microsoft Teams Client SDK, support fine-grained data access via RSC. The supported modes and resource types differ across the API surfaces.
+All three, the Microsoft Graph SDK, Microsoft Bot Framework SDK, and Microsoft Teams Client SDK, support fine-grained data access through RSC. The supported modes and resource types differ across the API surfaces.
 
 | RSC mode or type | Supported SDKs | App manifest version | Resource types | RSC-related controls for the entire tenant | Who can consent to RSC permissions? |
 |---------|---------|---------|---------|---------|---------|
-|Application| Microsoft Graph, Microsoft Bot Framework | >=1.6 | Teams, chats, and meetings | Microsoft Graph-based controls for chats and meetings; AAD portal-based controls for teams | In a team, anyone of the team’s owners. In a chat, anyone of the chat’s members. In a meeting, anyone of the meeting organizers or presenters |
-| Delegated | Microsoft Teams Client | >=1.12 | Teams, chats, meetings, and users | Always ON | Any user authorized to install an app in that specific scope. |
+|Application| Microsoft Graph, Microsoft Bot Framework | >=1.6 | Teams, chats, and meetings | Microsoft Graph-based controls for chats and meetings, AAD portal-based controls for teams. | <br> • In a team, any team owner. <br> • In a chat, any chat member. <br> • In a meeting, any meeting organizer or presenter. |
+| Delegated | Microsoft Teams Client | >=1.12 | Teams, chats, meetings, and users | Always on | Any user authorized to install an app in that specific scope. |
 
 ## Update your Teams app manifest
 
@@ -326,8 +320,8 @@ In addition to the user being authorized to install apps in that scope, the foll
 1. [Update your Teams app manifest](#update-your-teams-app-manifest).
 1. [Install your app directly in Teams](#sideload-your-app-in-teams).
 1. [Check your app for added RSC permissions](#check-your-app-for-added-rsc-permissions).
-    1. [Check your app for added RSC permissions in a team](#check-your-app-for-added-rsc-permissions-in-a-team).
-    1. [Check your app for added RSC permissions in a chat](#check-your-app-for-added-rsc-permissions-in-a-chat).
+    1. Check your app for added RSC permissions in a team.
+    1. Check your app for added RSC permissions in a chat.
 
 ## Configure consent settings
 
@@ -353,7 +347,7 @@ You can enable or disable RSC for chats using Graph API. The property `isChatRes
 
    ![Graph RSC team configuration](../../assets/images/rsc/graph-rsc-chat-configuration.png)
 
-> The default value of the property **isChatResourceSpecificConsentEnabled** is based on whether [user consent settings](/azure/active-directory/manage-apps/configure-user-consent?tabs=azure-portal) is turned on or off in the tenant when RSC for chats is first used. This can be the first time a) retrieving [**teamsAppSettings**](/graph/api/teamsappsettings-get) or b) installing a Teams app with resource-specific permissions in a chat/meeting.
+The default value of the property `isChatResourceSpecificConsentEnabled` is based on whether [user consent settings](/azure/active-directory/manage-apps/configure-user-consent?tabs=azure-portal) is turned on or off in the tenant when RSC for chats is first used. This can be the first time a) retrieving [**teamsAppSettings**](/graph/api/teamsappsettings-get) or b) installing a Teams app with resource-specific permissions in a chat or meeting.
 
 In CY23H1, new controls will be introduced that allows tenant admins to allow or block RSC consent settings per app. Based on the sensitivity of the data being accessed instead of the current single master switch that enables or disables consent settings for app-only RSC permissions for all apps in the tenant.
 
@@ -368,7 +362,11 @@ For application RSC permissions, list the permissions grants on that chat or tea
 
 After the app has been installed to a resource, you can use [Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) to view the permissions that have been granted to the app in the resource.
 
-### Check your app for added RSC permissions in a team
+<br>
+
+<details>
+
+<summary><b>Check your app for added RSC permissions in a team</b></summary>
 
 1. Get the team's **groupId** from Teams.
 1. In Teams, select **Teams** from the leftmost pane.
@@ -383,7 +381,15 @@ After the app has been installed to a resource, you can use [Graph Explorer](htt
 
 For more information on how to get details of the apps installed in a specific team, see [get the names and other details of apps installed in the specified team](/graph/api/team-list-installedapps#example-2-get-the-names-and-other-details-of-installed-apps).
 
-### Check your app for added RSC permissions in a chat
+<br>
+
+</details>
+
+<br>
+
+<details>
+
+<summary><b>Check your app for added RSC permissions in a chat</b></summary>
 
 1. Get the chat thread ID from the Teams *web* client.
 1. In the Teams web client, select **Chat** from the leftmost pane.
@@ -399,45 +405,56 @@ For more information on how to get details of the apps installed in a specific t
 
 For more information on how to get details of apps installed in a specific chat, see [get the names and other details of apps installed in the specified chat](/graph/api/chat-list-installedapps#example-2-get-the-names-and-other-details-of-apps-installed-in-the-specified-chat).
 
-## Supported RSC permissions
+<br>
 
-Following is a list of all the RSC permissions, categorized based on resource type and access mode.
+</details>
+
+## RSC permissions for resource types
+
+The following is a list of all the RSC permissions, categorized based on resource type and access mode.
+
+* [Teams](#resource-specific-permissions-for-a-team) (includes the channels within those teams)
+* [Chats](#resource-specific-permissions-for-a-chat-or-meeting) (includes the meetings associated with those chats)
+* [Users](#resource-specific-permissions-for-a-user)
+
+> [!NOTE]
+> Some of the permissions listed here might not yet have GA for the features that are associated with them.
 
 ### Resource-specific permissions for a team
 
 The following table provides resource-specific permissions for a team:
 
-| Application permission | Action | Delegate permissions | Application permissions |
+| Permission name | Action | Delegate mode | Application mode |
 | ----- | ----- |----- |----- |
-|Channel.Create.Group|Create channels in this team. | NA | Supported |
-|Channel.Delete.Group|Delete channels in this team. | NA | Supported |
-|ChannelMeeting.ReadBasic.Group|Get the basic properties of this team's channel meetings.| NA | Supported |
-|ChannelMeetingParticipant.Read.Group|Get participant information for channel meetings associated with this team, such as name, role, ID, joined and left times.| NA | Supported |
-|ChannelMeetingActiveSpeaker.Read.Group|Get the list of participants who are currently sending audio into the channel meetings associated with this team.| Supported | NA |
-|ChannelMeetingAudioVideo.Stream.Group|Stream audio-video content from channel meetings associated with this team.| Supported | NA |
-|ChannelMeetingIncomingAudio.Detect.Group|Detect incoming audio in channel meetings associated with this team.| Supported | NA |
-|ChannelMeetingRecording.Read.Group|Get the recordings of all channel meetings associated with this team.| NA | Supported |
-|ChannelMeetingTranscript.Read.Group|Get the transcripts of all channel meetings associated with this team.| NA | Supported |
-|ChannelMeetingNotification.Send.Group|Send notifications for all the channel meetings associated with this team.| NA | Supported |
-|ChannelMeetingStage.Write.Group|Get content on the meeting stage of channel meetings associated with this team.| Supported | NA |
-|ChannelMessage.Read.Group|Get this team's channel messages. | NA | Supported |
-|ChannelMessage.Send.Group|Send messages to this team's channels.| NA | Supported |
-|ChannelSettings.Read.Group|Get this team's channel names, descriptions, and settings​.| NA | Supported |
-|ChannelSettings.ReadWrite.Group|Update this team's channel names, descriptions, and settings.​| NA | Supported |
-|InAppPurchase.Allow.Group|Show and complete in-app purchases for team members.| Supported | NA |
-|LiveShareSession.ReadWrite.Group| Create and synchronize Live Share sessions for meetings associated with this team. | Supported | NA |
-|MeetingParticipantReaction.Read.Group| Get reactions from participants in channel meetings associated with this team.| Supported | NA |
-|Member.Read.Group|Get this group's members.| NA | Supported |
-|Owner.Read.Group|Get this group's owners.| NA | Supported |
-|TeamsActivity.Send.Group|Create new notifications in the activity feeds of the users in this team. | NA | Supported |
-|TeamsAppInstallation.Read.Group|Get a list of this team's installed apps.| NA | Supported |
-|TeamMember.Read.Group|Get this team's members. | NA | Supported |
-|TeamSettings.Read.Group | Get this team's settings.| NA | Supported |
-|TeamSettings.ReadWrite.Group|Update this team's settings.| NA | Supported |
-|TeamsTab.Create.Group|Create tabs in this team. | NA | Supported |
-|TeamsTab.Delete.Group|Delete this team's tabs. | NA | Supported |
-|TeamsTab.Read.Group|Get a list of this team's tabs.| NA | Supported |
-|TeamsTab.ReadWrite.Group|Manage this team's tabs. | NA | Supported |
+|`Channel.Create.Group`|Create channels in this team. | NA | Supported |
+|`Channel.Delete.Group`|Delete channels in this team. | NA | Supported |
+|`ChannelMeeting.ReadBasic.Group`|Get the basic properties of this team's channel meetings.| NA | Supported |
+|`ChannelMeetingParticipant.Read.Group`|Get participant information for channel meetings associated with this team, such as name, role, ID, joined and left times.| NA | Supported |
+|`ChannelMeetingActiveSpeaker.Read.Group`|Get the list of participants who are currently sending audio into the channel meetings associated with this team.| Supported | NA |
+|`ChannelMeetingAudioVideo.Stream.Group`|Stream audio-video content from channel meetings associated with this team.| Supported | NA |
+|`ChannelMeetingIncomingAudio.Detect.Group`|Detect incoming audio in channel meetings associated with this team.| Supported | NA |
+|`ChannelMeetingRecording.Read.Group`|Get the recordings of all channel meetings associated with this team.| NA | Supported |
+|`ChannelMeetingTranscript.Read.Group`|Get the transcripts of all channel meetings associated with this team.| NA | Supported |
+|`ChannelMeetingNotification.Send.Group`|Send notifications for all the channel meetings associated with this team.| NA | Supported |
+|`ChannelMeetingStage.Write.Group`|Get content on the meeting stage of channel meetings associated with this team.| Supported | NA |
+|`ChannelMessage.Read.Group`|Get this team's channel messages. | NA | Supported |
+|`ChannelMessage.Send.Group`|Send messages to this team's channels.| NA | Supported |
+|`ChannelSettings.Read.Group`|Get this team's channel names, descriptions, and settings​.| NA | Supported |
+|`ChannelSettings.ReadWrite.Group`|Update this team's channel names, descriptions, and settings.​| NA | Supported |
+|`InAppPurchase.Allow.Group`|Show and complete in-app purchases for team members.| Supported | NA |
+|`LiveShareSession.ReadWrite.Group`| Create and synchronize Live Share sessions for meetings associated with this team. | Supported | NA |
+|`MeetingParticipantReaction.Read.Group`| Get reactions from participants in channel meetings associated with this team.| Supported | NA |
+|`Member.Read.Group`|Get this group's members.| NA | Supported |
+|`Owner.Read.Group`|Get this group's owners.| NA | Supported |
+|`TeamsActivity.Send.Group`|Create new notifications in the activity feeds of the users in this team. | NA | Supported |
+|`TeamsAppInstallation.Read.Group`|Get a list of this team's installed apps.| NA | Supported |
+|`TeamMember.Read.Group`|Get this team's members. | NA | Supported |
+|`TeamSettings.Read.Group` | Get this team's settings.| NA | Supported |
+|`TeamSettings.ReadWrite.Group`|Update this team's settings.| NA | Supported |
+|`TeamsTab.Create.Group`|Create tabs in this team. | NA | Supported |
+|`TeamsTab.Delete.Group`|Delete this team's tabs. | NA | Supported |
+|`TeamsTab.Read.Group`|Get a list of this team's tabs.| NA | Supported |
+|`TeamsTab.ReadWrite.Group`|Manage this team's tabs. | NA | Supported |
 
 For more information, see [team resource-specific consent permissions](/graph/permissions-reference#team-resource-specific-consent-permissions).
 
@@ -445,36 +462,36 @@ For more information, see [team resource-specific consent permissions](/graph/pe
 
 The following table provides resource-specific permissions for a chat:
 
-|Application permission| Action | Delegate permissions | Application permissions |
+| Permission name | Action | Delegate mode | Application mode |
 | ----- | ----- | ----- | ----- |
-| Calls.AccessMedia.Chat | Access media streams in calls associated with this chat or meeting. | NA | Supported |
-| Calls.JoinGroupCalls.Chat | Join calls associated with this chat or meeting. | NA | Supported |
-| ChatSettings.Read.Chat| Get this chat's settings.| NA | Supported |
-| ChatSettings.ReadWrite.Chat| Update this chat's settings. | NA | Supported |
-| ChatMessage.Read.Chat | Get this chat's messages.| NA | Supported |
-| ChatMessage.Send.Chat | Send messages to this chat. | NA | Supported |
-| ChatMessageReadReceipt.Read.Chat | Get the ID of the last seen message in this chat. | NA | Supported |
-| ChatMember.Read.Chat | Get this chat's members. | NA | Supported |
-| Chat.Manage.Chat | Manage this chat. | NA | Supported |
-| InAppPurchase.Allow.Chat | Show and complete in-app purchases for users in this chat and any associated meetings. | Supported | NA |
-| LiveShareSession.ReadWrite.Chat | Create and synchronize Live Share sessions for meetings associated with this chat. | Supported | NA |
-| MeetingStage.Write.Chat | Show content on the meeting stage of meetings associated with this chat. | Supported | NA |
-| MeetingParticipantReaction.Read.Chat | Get the reactions of participants in meetings associated with this chat. | Supported | NA |
-| TeamsTab.Read.Chat | Get this chat's tabs. | NA | Supported |
-| TeamsTab.Create.Chat | Create tabs in this chat. | NA | Supported |
-| TeamsTab.Delete.Chat | Delete this chat's tabs. | NA | Supported |
-| TeamsTab.ReadWrite.Chat | Manage this chat's tabs. | NA | Supported |
-| TeamsAppInstallation.Read.Chat | Get which apps are installed in this chat. | NA | Supported |
-| TeamsActivity.Send.Chat | Create new notifications in the activity feeds of the users in this chat. | NA | Supported |
-| OnlineMeetingIncomingAudio.Detect.Chat | Detect incoming audio in meetings associated with this chat. | Supported | NA |
-| OnlineMeetingActiveSpeaker.Read.Chat | Get the participants who are currently sending audio into the meetings associated with this chat. | Supported | NA |
-| OnlineMeetingAudioVideo.Stream.Chat | Stream audio-video content from meetings associated with this chat. | Supported | NA |
-| OnlineMeetingTranscript.Read.Chat | Get the transcripts of the meeting associated with this chat. | NA | Supported |
-| OnlineMeetingParticipant.Read.Chat | Get the participants of the meetings associated with this chat.| NA | Supported |
-| OnlineMeetingParticipant.ToggleIncomingAudio.Chat | Toggle incoming audio for participants in meetings associated with this chat. | Supported | NA |
-| OnlineMeeting.ReadBasic.Chat | Get basic properties, such as name, schedule, organizer, join link, and start/end notifications, of a meeting associated with this chat. | NA | Supported |
-| OnlineMeetingRecording.Read.Chat | Get the recordings of the meetings associated with this chat. | NA | Supported |
-| OnlineMeetingNotification.Send.Chat | Send notifications for the meetings associated with this chat. | NA | Supported |
+| `Calls.AccessMedia.Chat` | Access media streams in calls associated with this chat or meeting. | NA | Supported |
+| `Calls.JoinGroupCalls.Chat` | Join calls associated with this chat or meeting. | NA | Supported |
+| `ChatSettings.Read.Chat`| Get this chat's settings.| NA | Supported |
+| `ChatSettings.ReadWrite.Chat`| Update this chat's settings. | NA | Supported |
+| `ChatMessage.Read.Chat` | Get this chat's messages.| NA | Supported |
+| `ChatMessage.Send.Chat` | Send messages to this chat. | NA | Supported |
+| `ChatMessageReadReceipt.Read.Chat` | Get the ID of the last seen message in this chat. | NA | Supported |
+| `ChatMember.Read.Chat` | Get this chat's members. | NA | Supported |
+| `Chat.Manage.Chat` | Manage this chat. | NA | Supported |
+| `InAppPurchase.Allow.Chat` | Show and complete in-app purchases for users in this chat and any associated meetings. | Supported | NA |
+| `LiveShareSession.ReadWrite.Chat` | Create and synchronize Live Share sessions for meetings associated with this chat. | Supported | NA |
+| `MeetingStage.Write.Chat` | Show content on the meeting stage of meetings associated with this chat. | Supported | NA |
+| `MeetingParticipantReaction.Read.Chat` | Get the reactions of participants in meetings associated with this chat. | Supported | NA |
+| `TeamsTab.Read.Chat`| Get this chat's tabs. | NA | Supported |
+| `TeamsTab.Create.Chat` | Create tabs in this chat. | NA | Supported |
+| `TeamsTab.Delete.Chat` | Delete this chat's tabs. | NA | Supported |
+| `TeamsTab.ReadWrite.Chat` | Manage this chat's tabs. | NA | Supported |
+| `TeamsAppInstallation.Read.Chat` | Get which apps are installed in this chat. | NA | Supported |
+| `TeamsActivity.Send.Chat` | Create new notifications in the activity feeds of the users in this chat. | NA | Supported |
+| `OnlineMeetingIncomingAudio.Detect.Chat` | Detect incoming audio in meetings associated with this chat. | Supported | NA |
+| `OnlineMeetingActiveSpeaker.Read.Chat` | Get the participants who are currently sending audio into the meetings associated with this chat. | Supported | NA |
+| `OnlineMeetingAudioVideo.Stream.Chat` | Stream audio-video content from meetings associated with this chat. | Supported | NA |
+| `OnlineMeetingTranscript.Read.Chat` | Get the transcripts of the meeting associated with this chat. | NA | Supported |
+| `OnlineMeetingParticipant.Read.Chat` | Get the participants of the meetings associated with this chat.| NA | Supported |
+| `OnlineMeetingParticipant.ToggleIncomingAudio.Chat` | Toggle incoming audio for participants in meetings associated with this chat. | Supported | NA |
+| `OnlineMeeting.ReadBasic.Chat` | Get basic properties, such as name, schedule, organizer, join link, and start/end notifications, of a meeting associated with this chat. | NA | Supported |
+| `OnlineMeetingRecording.Read.Chat` | Get the recordings of the meetings associated with this chat. | NA | Supported |
+| `OnlineMeetingNotification.Send.Chat` | Send notifications for the meetings associated with this chat. | NA | Supported |
 
 For more information, see [chat resource-specific consent permissions](/graph/permissions-reference#chat-resource-specific-consent-permissions).
 
@@ -485,13 +502,13 @@ For more information, see [chat resource-specific consent permissions](/graph/pe
 
 The following table provides resource-specific permissions for a user:
 
-|Application permission| Action | Delegate permissions | Application permissions |
+| Permission name | Action | Delegate mode | Application mode |
 | ----- | ----- | ----- | ----- |
-| CameraStream.Read.User | Get the user's camera stream. | Supported | NA |
-| InAppPurchase.Allow.User | Show and complete in-app purchases. | Supported | NA |
-| MicrophoneStream.Read.User | Get the user's microphone stream. | Supported | NA |
-| MeetingParticipantReaction.Read.User | Get the user's reactions while participating in a meeting. | Supported | NA |
-| OutgoingVideoStream.Write.User | Modify the user's outgoing video. | Supported | NA |
+| `CameraStream.Read.User`| Get the user's camera stream. | Supported | NA |
+| `InAppPurchase.Allow.User` | Show and complete in-app purchases. | Supported | NA |
+| `MicrophoneStream.Read.User` | Get the user's microphone stream. | Supported | NA |
+| `MeetingParticipantReaction.Read.User` | Get the user's reactions while participating in a meeting. | Supported | NA |
+| `OutgoingVideoStream.Write.User` | Modify the user's outgoing video. | Supported | NA |
 
 ## Register your app with Microsoft identity platform using the Azure AD portal
 
