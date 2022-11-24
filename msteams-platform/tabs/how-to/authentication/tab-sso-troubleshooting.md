@@ -185,4 +185,4 @@ To understand the bot behavior when the token exchange fails to trigger a consen
 
 > [!NOTE]
 >
-> In Web Teams Client, the password prompt is not shown because there is an Active AAD session in the browser which is used for authentication and acquire token. Whereas in Desktop Client, password prompt is shown because Desktop doesn't have any AAD session to be shared and is asked to login.
+> In the Web Teams client, the password prompt does not appear because there is an active Azure AD session in the browser which is used for authentication and to acquire token. Whereas in Desktop client, the password prompt appears because desktop doesn't have any AAD session to be shared and is asked to login.
