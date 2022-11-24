@@ -66,6 +66,9 @@ The following table includes the query parameters:
 
 # [C#](#tab/dotnet)
 
+* [SDK reference](https://learn.microsoft.com/en-us/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetingparticipantasync?view=botbuilder-dotnet-stable)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-context-app/csharp/MeetingContextApp/Bots/MeetingContextBot.cs#L19)
+
 ```csharp
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
 {
@@ -81,11 +84,9 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 }
 ```
 
-* [Reference document link](https://learn.microsoft.com/en-us/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetingparticipantasync?view=botbuilder-dotnet-stable)
-
-* [Reference code sample link](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-context-app/csharp/MeetingContextApp/Bots/MeetingContextBot.cs)
-
 # [JavaScript](#tab/javascript)
+
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-token-app/nodejs/server/bot/botActivityHandler.js#L30)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -109,8 +110,6 @@ export class MyBot extends TeamsActivityHandler {
     }
 }
 ```
-
-* [Reference code sample link](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-token-app/nodejs/server/bot/botActivityHandler.js)
 
 # [JSON](#tab/json)
 
@@ -202,6 +201,8 @@ The `Bot ID` is declared in the manifest and the bot receives a result object.
 > * The URL is the page, which loads as `<iframe>` in the in-meeting notification. The domain must be in the apps' `validDomains` array in your app manifest.
 
 # [C#](#tab/dotnet)
+* [SDK reference](https://learn.microsoft.com/en-us/dotnet/api/microsoft.bot.builder.teams.teamsactivityextensions.teamsnotifyuser?view=botbuilder-dotnet-stable#microsoft-bot-builder-teams-teamsactivityextensions-teamsnotifyuser(microsoft-bot-schema-iactivity))
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-proactive-messaging/csharp/proactive-cmd/Program.cs)
 
 ```csharp
 // Specifies the type of text data in an message attachment. 
@@ -214,12 +215,8 @@ activity.TeamsNotifyUser(true, "https://teams.microsoft.com/l/bubble/APP_ID?url=
 await turnContext.SendActivityAsync(activity).ConfigureAwait(false);
 ```
 
-* [Reference document link](https://learn.microsoft.com/en-us/dotnet/api/microsoft.bot.builder.teams.teamsactivityextensions.teamsnotifyuser?view=botbuilder-dotnet-stable#microsoft-bot-builder-teams-teamsactivityextensions-teamsnotifyuser(microsoft-bot-schema-iactivity))
-
-* [Reference code sample link](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-proactive-messaging/csharp/proactive-cmd/Program.cs)
-
-
 # [JavaScript](#tab/javascript)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L74)
 
 ```javascript
 // MessageFactory.text() : Specifies the type of text data in an message attachment.
@@ -234,9 +231,6 @@ replyActivity.channelData = {
 // Sends a message activity to the sender of the incoming activity.
 await context.sendActivity(replyActivity);
 ```
-
-* [Reference code sample link](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js)
-
 
 # [JSON](#tab/json)
 
@@ -392,6 +386,8 @@ The following table lists the query parameter:
 ### Example
 
 # [C#](#tab/dotnet)
+* [SDK reference](https://learn.microsoft.com/en-us/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetinginfoasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-teams-teamsinfo-getmeetinginfoasync(microsoft-bot-builder-iturncontext-system-string-system-threading-cancellationtoken))
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/graph-meeting-notification/csharp/MeetingNotification/Bots/MeetingNotificationBot.cs#L56)
 
 ```csharp
 // Gets the information for the given meeting id.
@@ -400,11 +396,6 @@ MeetingInfo result = await TeamsInfo.GetMeetingInfoAsync(turnContext);
 // Sends a message activity to the sender of the incoming activity. 
 await turnContext.SendActivityAsync(JsonConvert.SerializeObject(result));
 ```
-
-* [Reference document link](https://learn.microsoft.com/en-us/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetinginfoasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-teams-teamsinfo-getmeetinginfoasync(microsoft-bot-builder-iturncontext-system-string-system-threading-cancellationtoken))
-
-* [Reference code sample link](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/graph-meeting-notification/csharp/MeetingNotification/Bots/MeetingNotificationBot.cs)
-
 
 # [JavaScript](#tab/javascript)
 
@@ -705,6 +696,7 @@ The bot receives event through the `OnEventActivityAsync` handler. To deserializ
 The following code shows how to capture the metadata of a meeting that is `MeetingType`, `Title`, `Id`, `JoinUrl`, `StartTime`, and `EndTime` from a meeting start/end event:
 
 Meeting Start Event
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L34)
 
 ```csharp
 // Invoked when a Teams Meeting Start event activity is received from the connector.
@@ -716,6 +708,7 @@ protected override async Task OnTeamsMeetingStartAsync(MeetingStartEventDetails 
 ```
 
 Meeting End Event
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L51)
 
 ```csharp
 // Invoked when a Teams Meeting End event activity is received from the connector.
@@ -725,9 +718,6 @@ protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meet
     await turnContext.SendActivityAsync(JsonConvert.SerializeObject(meeting));
 }
 ```
-
-* [Reference code sample link](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs)
-
 
 ### Example of meeting start event payload
 
