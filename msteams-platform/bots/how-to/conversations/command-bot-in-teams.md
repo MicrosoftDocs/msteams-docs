@@ -31,7 +31,7 @@ A command bot needs to be installed into a team, or a group chat, or as personal
 
 The TeamsFx command and response bots are built using the [Bot Framework SDK](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0). The Bot Framework SDK provides [built-in message handler](../../bot-basics.md#teams-activity-handlers) to handle the incoming message activity, which requires you to understand the concept of Bot Framework such as the [event-driven conversation model](/azure/bot-service/bot-activity-handler-concept?view=azure-bot-service-4.0&tabs=javascript). TeamsFx SDK provides command-response abstraction layer to let the users focus on handling the command request according to the business requirement, without learning the Bot Framework SDK.
 
-TeamsFx SDK pulls [Bot Framework middleware](/azure/bot-service/bot-builder-concept-middleware?view=azure-bot-service-4.0) to handle the integration with the underlying activity handlers. If the received message text matches the command pattern provided in a `TeamsFxBotCommandHandler` instance, the middleware handles the incoming message activity and invokes the corresponding `handlerCommandReceived` function. After processing, the middleware calls `context.sendActivity` to send the command response returned from the `handlerCommandReceived` function to the user.
+TeamsFx SDK pulls [Bot Framework middleware](/azure/bot-service/bot-builder-concept-middleware?view=azure-bot-service-4.0) to handle the integration with the underlying activity handlers. If the received message text matches the command pattern provided in a `TeamsFxBotCommandHandler` instance, the middleware handles the incoming message activity and invokes the corresponding `handlerCommandReceived` function. After this process, the middleware calls `context.sendActivity` to send the command response returned from the `handlerCommandReceived` function to the user.
 
 Customize initialization
 
@@ -129,3 +129,81 @@ You can build your response data in text format, or perform the following steps 
 <details>
 
 <summary><b>3. Handle the command</b></summary>
+
+To handle the command, perform the following steps:
+
+1. Add a .ts/.js file such as `xxxCommandHandler.ts` under `bot/src` to handle your bot command, and include the following boilerplate code to get-started:
+
+   ```
+      import { Activity, TurnContext } from "botbuilder";
+      import { CommandMessage, TeamsFxBotCommandHandler, TriggerPatterns } from "@microsoft/teamsfx";
+      import { MessageBuilder } from "@microsoft/teamsfx";
+
+      export class xxxCommandHandler implements TeamsFxBotCommandHandler {
+          triggerPatterns: TriggerPatterns = "<string or RegExp pattern to trigger the command>";
+
+          async handleCommandReceived(
+             context: TurnContext,
+             message: CommandMessage
+          ): Promise<string | Partial<Activity>> {
+             // verify the command arguments which are received from the client if needed.
+             console.log(`Bot received message: ${message.text}`);
+
+             // do something to process your command and return message activity as the response.
+             // You can leverage `MessageBuilder` utilities from the `@microsoft/teamsfx` SDK 
+             // to facilitate building message with cards supported in Teams.
+         }    
+       }
+
+   ```
+
+1. Provide the `triggerPatterns` that can trigger this command handler. Usually it's the command name defined in your manifest, or you can use RegExp to handle a complex command such as with some options in the command message.
+
+1. Implement `handleCommandReceived` to handle the command and return a response that will be used to notify the end users.
+
+   * If needed you can retrieve useful information for the conversation from the `context` parameter.
+
+   * If needed parse command input:
+
+     * `message.text`: the use input message
+     * `message.matches`: the capture groups, if you use the RegExp for `triggerPatterns` to trigger the command.
+
+<br>
+
+</details>
+
+<details>
+
+<summary><b>4. Register the new command</b></summary>
+
+Open `bot\src\internal\initialize.ts` and update the call to `ConversationBot` constructor to include your new added command handlers.
+
+ ```
+       export const commandBot = new ConversationBot({
+           // The bot id and password to create BotFrameworkAdapter.
+           // See https://aka.ms/about-bot-adapter to learn more about adapters.
+           adapterConfig: {
+              appId: process.env.BOT_ID,
+              appPassword: process.env.BOT_PASSWORD,
+           },
+           command: {
+               enabled: true,
+               commands: [ new HelloWorldCommandHandler(), new xxxCommandHandler() ],
+           },
+      });
+ ```
+
+Additionally, you can use `registerCommand`, or `registerCommands` API from your `ConversationBot` instance to incrementally add your command(s) to a command bot.
+
+```
+    // register a single command
+    commandBot.command.registerCommand(new xxxCommandHandler());
+
+    // register a set of commands
+    commandBot.command.registerCommands([
+        new xxxCommandHandler(),
+        new yyyCommandHandler()
+    ]);
+```
+
+By completing the steps of adding a new command and response into your bot app, you can press F5 to local debug with the command-response bot. Otherwise use provision and deploy command to deploy the change to Azure.
