@@ -298,14 +298,8 @@ Follow the [step-by-step guide](../sbs-inmeeting-document-signing.yml) to build 
 ## See also
 
 * [Apps for Teams meetings](teams-apps-in-meetings.md)
-* [Enable authentication using third-party OAuth provider](../tabs/how-to/authentication/auth-flow-tab.md)
-* [Resource-specific consent](../graph-api/rsc/resource-specific-consent.md)
-* [Adaptive Card](../task-modules-and-cards/cards/cards-reference.md#adaptive-card)
-* [Build tabs for meeting](build-tabs-for-meeting.md)
-* [Build extensible conversation for meeting chat](build-extensible-conversation-for-meeting-chat.md)
-* [Build apps for anonymous users](build-apps-for-anonymous-user.md)
-* [Device capabilities](../concepts/device-capabilities/device-capabilities-overview.md)
+* [Resource-specific consent for delegated permissions](../resources/schema/manifest-schema.md#authorizationpermissions)
 * [Create deep links](../concepts/build-and-test/deep-links.md)
-* [Advanced meeting APIs](meeting-apps-apis.md)
+* [Meeting app APIs](meeting-apps-apis.md)
 * [Custom Together Mode scenes](~/apps-in-teams-meetings/teams-together-mode.md)
 * [Live Share SDK](teams-live-share-overview.md)
