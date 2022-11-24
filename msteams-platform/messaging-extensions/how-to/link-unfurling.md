@@ -21,13 +21,13 @@ The document guides you on how to add link unfurling to your app manifest using 
 > * Only Adaptive Cards version 1.3 and earlier is supported in link unfurling.
 > * Messagie extension commands aren't required for link unfurling. However, there must be at least one command in manifest as it is a mandatory property in message extensions. For more information, see [compose extensions](/microsoftteams/platform/resources/schema/manifest-schema).
 
-The following image is an example of link unfurling using the Azure DevOps message extension. When the Azure DevOps link is pasted into the Teams compose message area, the link unfurls into a card with the work item details:
+The following image is an example of link unfurling when an Adaptive Card link is pasted into the Teams compose message area, the link unfurls into a card:
 
-:::image type="content" source="../../assets/images/tdp/link-unfurling.png" alt-text="Screenshot of link urfurling example for an adaptive card pasted in teams compose message area.":::
+:::image type="content" source="../../assets/images/tdp/link-unfurling.png" alt-text="Screenshot of link urfurling example for an Adaptive Card pasted in teams compose message area.":::
 
 See the following video to learn more about link unfurling:
 <br>
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OFZG]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OFZG>]
 <br>
 
 ## Add link unfurling to your app manifest
@@ -367,7 +367,7 @@ To get your app ready for zero install link unfurling, follow these steps:
 
 1. Advantages and limitations.
 
-   # [Advantages](#tab/advantages)
+# [Advantages](#tab/advantages)
 
     Zero install link unfurling helps you provide enhanced experience to the users, such as:
 
@@ -375,7 +375,7 @@ To get your app ready for zero install link unfurling, follow these steps:
 
     * Create a welcome card for your app to show a preview with the placeholder fields.
 
-   # [Limitations](#tab/limitations)
+# [Limitations](#tab/limitations)
 
     The following are the limitations:
 
