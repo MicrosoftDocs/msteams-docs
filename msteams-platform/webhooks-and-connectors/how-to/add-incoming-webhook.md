@@ -21,12 +21,12 @@ An Incoming Webhook lets external applications to share content in Microsoft Tea
 > [!NOTE]
 >
 > * The message size limit is 28 KB. When the size exceeds 28 KB, you receive an error. For more information, see [limits and specifications for Microsoft Teams](/microsoftteams/limits-specifications-teams).
-> * If more than four requests are made in a second, the client connection is throttled until the window refreshes for the duration of the fixed rate. A [retry logic with exponential back-off](/azure/architecture/patterns/retry) can mitigate rate limiting for cases where requests exceed the limits within a second. Refer [HTTP 429 responses](../../bots/how-to/rate-limit.md#handle-http-429-responses) to avoid hitting the rate limits.
+> * If more than four requests are made in a second, the client connection is throttled until the window refreshes for the duration of the fixed rate. A [retry logic with exponential back-off](/azure/architecture/patterns/retry) can mitigate rate limiting for cases where requests exceed the limits within a second. To avoid hitting the rate limits, see [HTTP 429 responses](../../bots/how-to/rate-limit.md#handle-http-429-responses).
 
 See the following video to learn how to create Incoming Webhooks:
 <br>
 
-> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4ODcY>]
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4ODcY]
 
 ## Key features of Incoming Webhooks
 
