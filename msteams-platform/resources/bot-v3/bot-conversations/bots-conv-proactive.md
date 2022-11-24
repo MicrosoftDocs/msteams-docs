@@ -67,11 +67,14 @@ See [Install apps for users](/graph/api/userteamwork-post-installedapps?view=gra
 
 ## Examples
 
-Be sure that you authenticate and have a [bearer token](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication    &tabs=multitenant#bot-to-connector) before creating a new conversation using the REST API.
+Be sure that you authenticate and have a [bearer token](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication &tabs=multitenant#bot-to-connector) before creating a new conversation using the REST API.
+
+```http
+POST {Service URL of your bot}/v3/conversations
+```
 
 ```json
 
-POST {Service URL of your bot}/v3/conversations
 {
   "bot": {
     "id": "c38eda0f-e780-49ae-86f0-afb644203cf8",
@@ -88,6 +91,7 @@ POST {Service URL of your bot}/v3/conversations
     }
   }
 }
+
 ```
 
 You can get the `{Service URL of your bot}` from `TurnContext` object like `turnContext.Activity.ServiceURL` parameter.
