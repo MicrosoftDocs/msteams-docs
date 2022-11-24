@@ -64,11 +64,11 @@
     href: concepts/design/plan-responsive-tabs-for-teams-mobile.md
   - name: Plan analytics and telemetry
     items:
-      - name: Analytics for Teams app
+      - name: Plan Analytics for your Teams app
         href: concepts/design/plan-analytics.md
-      - name: Telemetry for Teams app
+      - name: Design telemetry data for your Teams app
         href: concepts/design/teams-app-telemetry.md
-      - name: Azure Application Insights
+      - name: Implement Azure Application Insights
         href: concepts/design/add-analytics.md
   - name: Plan to monetize your app
     href: concepts/design/plan-to-monetize.md
