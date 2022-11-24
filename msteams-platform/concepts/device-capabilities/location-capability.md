@@ -9,7 +9,7 @@ ms.author: surbhigupta
 
 # Integrate location capabilities
 
-You can integrate the location capabilities of native device with your Teams app.  
+You can integrate the location capabilities of native device with your Teams app .  
 
 You can use [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), which provides the tools necessary for your app to access the user’s [native device capabilities](native-device-permissions.md). Use the location APIs, such as [getLocation](/javascript/api/@microsoft/teams-js/location.locationprops) and [showLocation](/javascript/api/@microsoft/teams-js/location.locationprops?) to integrate the capabilities within your app.
 
