@@ -13,7 +13,7 @@ Microsoft Teams Toolkit enables you to build applications that capture events an
 
 :::image type="content" source="../../../assets/images/notification-bot/notification-new-scenario-diagram.png" alt-text="weather forecast sample notification scenario" lightbox="../../../assets/images/notification-bot/notification-new-scenario-diagram.png":::
 
-You can create notification bot in a different scenario, such as notification can be sent in teams DevOps channel if there's a build failure.
+You can create notification bot in different scenarios, such as a notification can be sent in teams DevOps channel if there's a build failure.
 
 **Advantages**
 
@@ -436,13 +436,13 @@ For sample implementation to use Azure blob storage, see [add notification stora
 
 ## Add authentication for notification API
 
-If you select HTTP trigger, the scaffolded notification API doesn't have authentication or authorization enabled. Ensure that you add an authentication or authorization for this API before using it for production. You can perform this in the following ways:
+If you select HTTP trigger, the scaffolded notification API doesn't have authentication or authorization enabled. Ensure that you add an authentication or authorization for the API before using it for production. You can perform this in the following ways:
 
-* Use an API key. If you select Azure functions to host your notification bot, it provides [function access keys](/azure/azure-functions/security-concepts?tabs=v4#function-access-keys) that you can use.
+* Use an API key. You can use [function access keys](/azure/azure-functions/security-concepts?tabs=v4#function-access-keys), if you select Azure Functions to host your notification bot.
 
 * Use an access token issued by Azure Active Directory (Azure AD).
 
-There can be more authentication or authorization solutions for an API. You can select as required.
+There can be more authentication or authorization solutions for an API, you can select as required.
 
 ## Connect to existing APIs
 
@@ -455,7 +455,7 @@ TeamsFx supports two ways to help you send notifications from your system to Tea
 * Creating a Teams bot application.
 * Creating Teams Incoming Webhook.
 
-In the following table you can see the comparison of the two different ways:
+In the following table, you can see the comparison of the two different ways:
 
 |&nbsp;   |Teams bot app  |Teams Incoming Webhook  |
 |---------|---------|---------|
@@ -466,16 +466,16 @@ In the following table you can see the comparison of the two different ways:
 |Send card message     |Yes       |Yes         |
 |Send welcome message     |Yes      |No         |
 |Retrieve Teams context     |Yes       |No       |
-|Require installation step on Teams     |Yes         |No         |
+|Require installation steps in Teams     |Yes         |No         |
 |Require Azure resource     |Azure Bot Service         | No       |
 
 ### Incoming Webhook notification
 
-Incoming Webhooks help in posting messages from apps to Teams. If Incoming Webhooks are enabled for a team in any channel, it exposes the HTTPS endpoint, which accepts correctly formatted JSON and inserts the messages into that channel. For example, you can create an Incoming Webhook in your DevOps channel, configure your build, and simultaneously deploy and monitor services to send alerts.
-TeamsFx provides you with an [Incoming Webhook Notification Sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/incoming-webhook-notification#getting-started-with-incoming-webhook-notification-sample) that helps you:
+Incoming Webhooks help in posting messages from apps to Teams. If Incoming Webhooks are enabled for a Team in any channel, it exposes the HTTPS endpoint, which accepts correctly formatted JSON and inserts the messages into that channel. For example, you can create an Incoming Webhook in your DevOps channel, configure your build, and simultaneously deploy and monitor services to send alerts.
+TeamsFx provides you with an [Incoming Webhook notification sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/incoming-webhook-notification#getting-started-with-incoming-webhook-notification-sample) that helps you:
 
-* How to create an incoming webhook in Teams.
-* How to send notifications using incoming webhooks with Adaptive Cards.
+* Create an Incoming Webhook in Teams.
+* Send notifications using Incoming Webhooks with Adaptive Cards.
 
 ### FAQ
 
@@ -485,11 +485,11 @@ TeamsFx provides you with an [Incoming Webhook Notification Sample](https://gith
 
 <summary><b>Why is the notification installations empty even though the bot app is installed in Teams?</b></summary>
 
-Team sends an event only at the first installation. If the bot app is already installed before your notification bot service is launched, the installation event either didn't reach the bot service or is omitted.
+Teams sends an event only at the first installation. If the bot app is already installed before your notification bot service is launched, the installation event either didn't reach the bot service or is omitted.
 
 You can resolve this in the following ways:
 
-* Send a message to your personal bot or mention your bot in group chat, or channel, which helps you to reach the bot service again with correct installation information.
+* Send a message to your personal bot or mention your bot in groupchat, or channel, which helps you to reach the bot service again with correct installation information.
 * Uninstall the bot app from Teams then redebug or relaunch it. You can resend the installation event to bot service.
 
 Notification target connections are stored in the persistence storage. If you're using the default local file storage, all installations will be stored under `bot/.notification.localstore.json`.
@@ -520,9 +520,7 @@ You can resolve this by cleaning your notification storage. After cleaning, noti
 
 <summary><b>Why notification target is lost after restarting or redeploying the bot app?</b></summary>
 
-Notification target connections are stored in the persistence storage. If you're using the default local file storage, Azure web app and Azure Functions will clean up the local file during a restart or redeploy. You can also uninstall the bot from Teams, then install it to again add connections to the storage.
-
-Using your own shared storage for production environment is recommended.
+Notification target connections are stored in the persistence storage. If you're using the default local file storage, Azure web app and Azure Functions will clean up the local file during a restart or redeploy. You can also uninstall the bot from Teams, then install it to again add connections to the storage. Using your own shared storage in production environment is recommended.
 
 <br>
 
@@ -530,9 +528,9 @@ Using your own shared storage for production environment is recommended.
 
 <details>
 
-<summary><b>Why is undefined returned when using the API `findChannel()`?</b></summary>
+<summary><b>Why is undefined error returned when using the API `findChannel()`?</b></summary>
 
-You can encounter an undefined error, when the bot app is installed into other channels instead of the General channel. To fix this error, you can uninstall the bot app from Teams and redebug and relaunch it. Ensure that the bot app is installed into the `General` channel after you've redebug and relaunched.
+You can encounter an undefined error, when the bot app is installed into other channels instead of the **General** channel. To fix this error, you can uninstall the bot app from Teams and redebug and relaunch it. Ensure that the bot app is installed into the `General` channel after you've redebug and relaunched.
 
 <br>
 
@@ -552,7 +550,7 @@ There are Microsoft Graph APIs to list apps installed in a team, group, or chat.
 
 <summary><b>How to customize the azurite listening ports?</b></summary>
 
-If azurite exits due to port in use, you can specify another listening port and update the connection string of `AzureWebJobsStorage` in `bot/local.settings.json`
+If azurite exits due to port in use, you can specify another listening port and update the connection string of `AzureWebJobsStorage` in `bot/local.settings.json`.
 
 <br>
 
