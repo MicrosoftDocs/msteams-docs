@@ -492,12 +492,14 @@ The general retry guidance for each status code is listed in the following table
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Bot command menus](~/bots/how-to/create-a-bot-commands-menu.md)
+> [Create a commands menu](../create-a-bot-commands-menu.md)
 
 ## See also
 
-* [Send proactive messages](~/bots/how-to/conversations/send-proactive-messages.md)
+* [Build bots for Teams](../../what-are-bots.md)
+* [Bot activity handlers](../../bot-basics.md)
+* [Send proactive messages](send-proactive-messages.md)
 * [Subscribe to conversation events](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
 * [Send and receive files through the bot](~/bots/how-to/bots-filesv4.md)
-* [Send tenant ID and conversation ID to the request headers of the bot](~/bots/how-to/conversations/request-headers-of-the-bot.md)
+* [Send tenant ID and conversation ID to the request headers of the bot](request-headers-of-the-bot.md)
 * [Localize your app](../../../concepts/build-and-test/apps-localization.md)

@@ -1,7 +1,7 @@
 ---
 title: Add authentication to your Teams bot
 author: surbhigupta
-description: Learn how to enable authentication using third-party OAuth provider to a bot app in Teams using Azure AD.
+description: Learn how to enable authentication using third-party provider to a bot app in Teams using Azure AD.
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
@@ -77,7 +77,7 @@ You use a resource group to create individual resources for the Bot Framework. F
 The Azure Bot resource registration registers your web service as a bot with the Bot Framework, which provides you a Microsoft App Id and App password (client secret).
 
 > [!IMPORTANT]
-> You only need to register your bot if it is not hosted in Azure. If you [created a bot](/azure/bot-service/abs-quickstart?view=azure-bot-service-4.0&viewFallbackFrom=azure-bot-service-3.0&preserve-view=true) through the Azure portal then it is already registered with the service. If you created your bot through the [Bot Framework](https://dev.botframework.com/bots/new) or [Developer Portal](../../../concepts/build-and-test/teams-developer-portal.md) your bot isn't registered in Azure.
+> You only need to register your bot if it's not hosted in Azure. If you [created a bot](/azure/bot-service/abs-quickstart?view=azure-bot-service-4.0&viewFallbackFrom=azure-bot-service-3.0&preserve-view=true) through the Azure portal then it's already registered with the service. If you created your bot through the [Bot Framework](https://dev.botframework.com/bots/new) or [Developer Portal](../../../concepts/build-and-test/teams-developer-portal.md) your bot isn't registered in Azure.
 
 1. Visit [**Azure portal**][azure-portal] and search for **Azure Bot** in **Create a resource** section.
 1. Open the **Azure Bot** and select **Create**.
@@ -114,7 +114,7 @@ To create client secret:
 
 1. Next to **Microsoft App ID**, select **Manage**.
 
-   :::image type="content" source="~/assets/images/manage-bot-label.png" alt-text="This screenshot shows how to create manage bot.":::
+   :::image type="content" source="~/assets/images/manage-bot-label.png" alt-text="This screenshot shows how to create and manage a bot.":::
 
 1. In the **Client secrets** section, select **New client secret**.**Add a client secret** window appears.
 
@@ -153,7 +153,7 @@ For more information, see [Create a bot for Teams](../create-a-bot-for-teams.md)
 ## Create the identity provider
 
 You need an identity provider that can be used for authentication.
-In this procedure, you'll use an Azure AD provider; other Azure AD supported identity providers can also be used.
+In this procedure, you'll use an Azure AD provider. Other Azure AD supported identity providers can also be used.
 
 1. In the [**Azure portal**][azure-portal], on the left navigation panel, select **Azure Active Directory**.
     > [!TIP]
@@ -170,7 +170,7 @@ In this procedure, you'll use an Azure AD provider; other Azure AD supported ide
        &#x2713; Set the URL to `https://token.botframework.com/.auth/web/redirect`.
    1. Select **Register**.
 
-1. Once it's created, Azure displays the **Overview** page for the app. Copy and save the following information to a file:
+1. After it's created, Azure displays the **Overview** page for the app. Copy and save the following information to a file:
 
     1. The **Application (client) ID** value. You'll use this value later as the *Client ID* when you register this Azure identity application with your bot.
     1. The **Directory (tenant) ID** value. You'll also use this value later as the *Tenant ID* to register this Azure identity application with your bot.
@@ -185,7 +185,7 @@ In this procedure, you'll use an Azure AD provider; other Azure AD supported ide
 
 ### Configure the identity provider connection and register it with the bot
 
-Note-there are two options for Service Providers here- Azure AD V1 and Azure AD V2.  The differences between the two providers are summarized [here](/azure/active-directory/azuread-dev/azure-ad-endpoint-comparison), but in general, V2 provides more flexibility with respect to changing bot permissions.  Graph API permissions are listed in the scopes field, and as new ones are added, bots will allow users to consent to the new permissions on the next sign in.  For V1, the bot consent must be deleted by the user for new permissions to be prompted in the OAuth dialog.
+Note: There are two options for Service Providers here, Azure AD V1 and Azure AD V2.  The differences between the two providers are summarized [here](/azure/active-directory/azuread-dev/azure-ad-endpoint-comparison), but in general, V2 provides more flexibility with respect to changing bot permissions.  Graph API permissions are listed in the scopes field, and as new ones are added, bots will allow users to consent to the new permissions on the next sign in.  For V1, the bot consent must be deleted by the user for new permissions to be prompted in the OAuth dialog.
 
 #### Microsoft Azure Active Directory (Azure AD) V1
 
@@ -267,8 +267,8 @@ With the preliminary settings done, let's focus on the creation of the bot to us
 # [C#/.NET](#tab/dotnet)
 
 1. Clone [cs-auth-sample][teams-auth-bot-cs].
-1. Launch Visual Studio.
-1. From the toolbar, select **File -> Open -> Project/Solution** and open the bot project.
+1. Open Visual Studio.
+1. From the toolbar, select **File > Open > Project/Solution** and open the bot project.
 1. In C#, Update **appsettings.json** as follows:
 
     - Set `ConnectionName` to the name of the identity provider connection you added to the bot registration. The name we used in this example is *BotTeamsAuthADv1*.
@@ -301,7 +301,7 @@ With the preliminary settings done, let's focus on the creation of the bot to us
 
 # [Python](#tab/python)
 
-1. Clone [py-auth-sample][teams-auth-bot-py] from the github repository.
+1. Clone [py-auth-sample][teams-auth-bot-py] from the GitHub repository.
 1. Update **config.py**:
 
     - Set `ConnectionName` to the name of the OAuth connection setting you added to your bot.
@@ -442,7 +442,7 @@ and when for these, and just reference that from here, along with the set of ste
 1. Go to the `TeamsAppManifest` folder and upload the zipped manifest.
 The following wizard is displayed:
 
-   :::image type="content" source="../../../assets/images/authentication/auth-bot-teams-upload.png" alt-text="This screenshot shows an example of the bot after it is uploaded into Teams.":::
+   :::image type="content" source="../../../assets/images/authentication/auth-bot-teams-upload.png" alt-text="This screenshot shows an example of the bot after it's uploaded into Teams.":::
 
 1. Select the **Add to a team** button.
 1. In the next window, select the team where you want to use the bot.
@@ -652,7 +652,7 @@ This section provides Bot authentication v3 SDK sample.
 [concept-dialogs]: /azure/bot-service/bot-builder-concept-dialog?view=azure-bot-service-4.0&preserve-view=true
 [simple-dialog]: /azure/bot-service/bot-builder-dialog-manage-conversation-flow?view=azure-bot-service-4.0&preserve-view=true
 
-[teams-auth-bot-cs]: https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-authentication/csharp
+[teams-auth-bot-cs] https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-authentication/csharp
 
 [teams-auth-bot-py]: https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-authentication/python
 
