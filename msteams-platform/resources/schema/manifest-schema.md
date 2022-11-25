@@ -864,13 +864,13 @@ Delegated permissions allow the app to access data on behalf of the signed-in us
     |**Name**|**Description**|
     |---|---|
     |`ChannelMeetingParticipant.Read.Group`| Allows the app to read participant information, including name, role, id, joined, and left times, of channel meetings associated with this team, on behalf of the signed-in user.|
-    |`ChannelMeetingIncomingAudio.Detect.Group`| Detect incoming audio in channel meetings associated with this team. |
-    | `ChannelMeetingActiveSpeaker.Read.Group`| Get the participants who are currently sending audio into the channel meetings associated with this team.|
-    |`ChannelMeetingAudioVideo.Stream.Group`| Stream audio-video content from channel meetings associated with this team. |
+    |`ChannelMeetingIncomingAudio.Detect.Group`| Allows the app to detect incoming audio in channel meetings associated with this team. |
+    | `ChannelMeetingActiveSpeaker.Read.Group`| Allows the app to read the participants who are currently sending audio into the channel meetings associated with this team.|
+    |`ChannelMeetingAudioVideo.Stream.Group`| Allows the app to stream audio-video content from channel meetings associated with this team. |
     |`InAppPurchase.Allow.Group`| Allows the app to show marketplace offers to users in this team and complete their purchases within the app, on behalf of the signed-in user.|
     |`ChannelMeetingStage.Write.Group`| Allows the app to show content on the meeting stage in channel meetings associated with this team, on behalf of the signed-in user.|
     |`LiveShareSession.ReadWrite.Group`|Allows the app to create and synchronize Live Share sessions for meetings associated with this team, and access related information about the meeting's roster, such as member's meeting role, on behalf of the signed-in user.|
-    |`MeetingParticipantReaction.Read.Group`| Read reactions of participants in channel meetings associated with this team.|
+    |`MeetingParticipantReaction.Read.Group`| Allows the app to read reactions of participants in channel meetings associated with this team.|
 
 * **Resource-specific delegated permissions for chats or meetings**
 
@@ -881,20 +881,20 @@ Delegated permissions allow the app to access data on behalf of the signed-in us
     |`OnlineMeetingParticipant.Read.Chat`|Allows the app to read participant information, including name, role, id, joined, and left times, of meeting associated with this chat, on behalf of the signed-in user.|
     |`OnlineMeetingParticipant.ToggleIncomingAudio.Chat`|Allows the app to toggle incoming audio for participants in meetings associated with this chat, on behalf of the signed-in user.|
     |`LiveShareSession.ReadWrite.Chat`|Allows the app to create and synchronize Live Share sessions for meetings associated with this chat, and access related information about the meeting's roster, such as member's meeting role, on behalf of the signed-in user.|
-    |`MeetingParticipantReaction.Read.Chat`| Get the reactions of participants in meetings associated with this chat.|
+    |`MeetingParticipantReaction.Read.Chat`| Allows the app to read reactions of participants in meetings associated with this chat.|
     |`OnlineMeetingIncomingAudio.Detect.Chat`|Allows the app to detect changes in the status of incoming audio in meetings associated with this chat, on behalf of the signed-in user.|
-    |`OnlineMeetingActiveSpeaker.Read.Chat`| Get the participants who are currently sending audio into the meetings associated with this chat.|
-    |`OnlineMeetingAudioVideo.Stream.Chat`| Stream audio-video content of meetings associated with this chat.|
+    |`OnlineMeetingActiveSpeaker.Read.Chat`| Allows the app to read participants who are currently sending audio into the meetings associated with this chat.|
+    |`OnlineMeetingAudioVideo.Stream.Chat`| Allows the app to stream audio-video content of meetings associated with this chat.|
 
 * **Resource-specific delegated permissions for users**
 
     |**Name**|**Description**|
     |---|---|
-    |`CameraStream.Read.User`|Get the user's camera stream.|
+    |`CameraStream.Read.User`|Allows the app to read user's camera stream.|
     |`InAppPurchase.Allow.User`|Allows the app to show the user marketplace offers and complete the user's purchases within the app, on behalf of the signed-in user.|
-    |`OutgoingVideoStream.Write.User`| Modify the user's outgoing video.|
-    |`MicrophoneStream.Read.User`| Get the user's microphone stream.|
-    |`MeetingParticipantReaction.Read.User`| Get the user's reactions while participating in a meeting.|
+    |`OutgoingVideoStream.Write.User`| Allows the app to modify the user's outgoing video.|
+    |`MicrophoneStream.Read.User`| Allows the app to read user's microphone stream.|
+    |`MeetingParticipantReaction.Read.User`| Allows the app to read user's reactions while participating in a meeting.|
 
 ## Create a manifest file
 

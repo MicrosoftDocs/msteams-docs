@@ -14,20 +14,22 @@ ms.topic: reference
 
 Resource-specific consent (RSC) is an authorization framework built by Microsoft Teams and Microsoft Identity that allows for granting scoped access to an application. Through RSC, an authorized user can give an application access to the data of only a specific instance of a resource type instead of giving broad access to every instance of a resource type in the entire tenant. For example, a person who owns both team A and team B can decide to give the Contoso app access to the data for only team A and not team B. The same concept of scoped data access applies to chats and meetings as well.
 
-RSC permissions are categorized based on:
-
-* The resource type to which data access is being granted.
-* The mode of data access.
-
 > [!NOTE]
 > If a chat has a meeting or a call associated with it, then the relevant RSC permissions apply to those resources as well.
 
 ## Types of RSC permissions
 
-RSC permission determines which data access methods are allowed by the application. There are two types of RSC permissions:
+RSC permissions are categorized based on the following:
 
-* **Application**: The app can access data without the presence of a signed-in user.
-* **Delegate**: The app can access data only in the context of a signed-in user’s session. No access is allowed in the absence of a signed-in user.
+* **The mode of data access**: RSC permission determines which data access methods are allowed by the application.
+There are two types of RSC permissions:
+  * Application: The app can access data without the presence of a signed-in user.
+  * Delegate: The app can access data only in the context of a signed-in user’s session. No access is allowed in the absence of a signed-in user.
+* **The resource types**: RSC permissions are available on the following resource types;
+
+  * [Team](#rsc-permissions-for-a-team) (includes the channels within those teams)
+  * [Chat or meeting](#rsc-permissions-for-a-chat-or-meeting) (includes the meetings associated with those chats)
+  * [User](#rsc-permissions-for-a-user)
 
 ### API that supports RSC-based data access
 
@@ -303,8 +305,8 @@ Apart from the tenant admin, who has the ability to grant any type of permission
 ## Enable RSC in your application
 
 1. [Configure consent settings](#configure-consent-settings).
-    1. [Configure group owner consent settings for RSC in a team using the Azure AD portal](#configure-group-owner-consent-settings-for-rsc-in-a-team-using-the-azure-ad-portal).
-    1. [Configure chat owner consent settings for RSC in a chat using the Microsoft Graph APIs](#configure-chat-owner-consent-settings-for-rsc-in-a-chat-using-the-microsoft-graph-apis).
+    1. Configure group owner consent settings for RSC in a team using the Azure AD portal.
+    1. Configure chat owner consent settings for RSC in a chat using the Microsoft Graph APIs.
 1. [Register your app with Microsoft identity platform using the Azure AD portal](#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).
 1. [Review your application permissions in the Azure AD portal](#review-your-application-permissions-in-the-azure-ad-portal).
 1. [Obtain an access token from the identity platform](#obtain-an-access-token-from-the-microsoft-identity-platform).
@@ -320,7 +322,11 @@ In the case of delegated RSC permissions, as long as the given app has not been 
 
 In the case of application permissions, in addition to not blocking the app, the tenant admin must also not have turned off app-only RSC permissions for all apps for the entire tenant. The tenant-level controls of app-only RSC permissions differ based on resource type.
 
-### Configure group owner consent settings for RSC in a team using the Azure AD portal
+<br>
+
+<details>
+
+<summary><b>Configure group owner consent settings for RSC in a team using the Azure AD portal</b></summary>
 
 You can enable or disable [group owner consent](/azure/active-directory/manage-apps/configure-user-consent-groups?tabs=azure-portal) directly within the Microsoft Azure portal:
 
@@ -332,7 +338,15 @@ You can enable or disable [group owner consent](/azure/active-directory/manage-a
 
 In addition, you can enable or disable group owner consent using PowerShell, follow the steps outlined in [configure group owner consent using PowerShell](/azure/active-directory/manage-apps/configure-user-consent-groups?tabs=azure-powershell).
 
-### Configure chat owner consent settings for RSC in a chat using the Microsoft Graph APIs
+<br>
+
+</details>
+
+<br>
+
+<details>
+
+<summary><b>Configure chat owner consent settings for RSC in a chat using the Microsoft Graph APIs</b></summary>
 
 You can enable or disable RSC for chats using Graph API. The property `isChatResourceSpecificConsentEnabled` in [**teamsAppSettings**](/graph/api/teamsappsettings-update#example-1-enable-installation-of-apps-that-require-resource-specific-consent-in-chats-meetings) governs whether chat RSC is enabled in the tenant.
     :::image type="content" source="../../assets/images/rsc/graph-rsc-chat-configuration.PNG" alt-text="Screenshot shows the Graph RSC team configuration.":::
@@ -340,6 +354,10 @@ You can enable or disable RSC for chats using Graph API. The property `isChatRes
 The default value of the property `isChatResourceSpecificConsentEnabled` is based on whether [user consent settings](/azure/active-directory/manage-apps/configure-user-consent?tabs=azure-portal) is turned on or off in the tenant when RSC for chats is first used. This can be the first time retrieving [teamsAppSettings](/graph/api/teamsappsettings-get) or installing a Teams app with resource-specific permissions in a chat or meeting.
 
 In CY23H1, new controls will be introduced that allow tenant admins to allow or block RSC consent settings per app based on the sensitivity of the data being accessed instead of the current single master switch that enables or disables consent settings for app-only RSC permissions for all apps in the tenant.
+
+<br>
+
+</details>
 
 ## Check your app for added RSC permissions
 
@@ -401,16 +419,12 @@ For more information on how to get details of apps installed in a specific chat,
 
 ## RSC permissions for resource types
 
-The following is a list of RSC permissions, categorized based on resource type and access mode.
-
-* [Resource-specific permissions for a team](#resource-specific-permissions-for-a-team) (includes the channels within those teams)
-* [Resource-specific permissions for a chat or meeting](#resource-specific-permissions-for-a-chat-or-meeting) (includes the meetings associated with those chats)
-* [Resource-specific permissions for a user](#resource-specific-permissions-for-a-user)
+The following list provides all the RSC permissions, categorized based on resource type and access mode.
 
 > [!NOTE]
 > Some of the permissions listed here might not yet have generally available (GA) for the features that are associated with them.
 
-### Resource-specific permissions for a team
+### RSC permissions for a team
 
 The following table provides resource-specific permissions for a team:
 
@@ -448,7 +462,7 @@ The following table provides resource-specific permissions for a team:
 
 For more information, see [team resource-specific consent permissions](/graph/permissions-reference#team-resource-specific-consent-permissions).
 
-### Resource-specific permissions for a chat or meeting
+### RSC permissions for a chat or meeting
 
 The following table provides resource-specific permissions for a chat or meeting:
 
@@ -488,7 +502,7 @@ For more information, see [chat resource-specific consent permissions](/graph/pe
 > [!NOTE]
 > Resource-specific permissions are only available to Teams apps installed on the Teams client and are currently not part of the Azure Active Directory (AAD) portal.
 
-### Resource-specific permissions for a user
+### RSC permissions for a user
 
 The following table provides resource-specific permissions for a user:
 
