@@ -8,7 +8,7 @@ ms.localizationpriority: high
 ---
 # Set up your dev environment for extending Teams apps across Microsoft 365
 
-The development environment for extending Teams apps across Microsoft 365 is similar to Microsoft Teams development. This article discusses specific configurations required to run preview builds of Microsoft Teams and Microsoft Office applications in order to preview Teams apps running in Outlook and Office .
+The development environment for extending Teams apps across Microsoft 365 is similar to Microsoft Teams development. This article discusses specific configurations required to run preview builds of Microsoft Teams and Microsoft Office applications in order to preview Teams apps running in Outlook and Office.
 
 To set up your development environment:
 
@@ -131,3 +131,7 @@ Create or update a Teams app to run across Microsoft 365:
 > [Enable a Teams personal tab for Office and Outlook](extend-m365-teams-personal-tab.md)
 > [!div class="nextstepaction"]
 > [Enable a Teams message extension for Outlook](extend-m365-teams-message-extension.md)
+
+## See also
+
+* [Extend Teams apps across Microsoft 365](https://learn.microsoft.com/microsoftteams/platform/m365-apps/overview)
