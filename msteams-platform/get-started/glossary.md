@@ -127,7 +127,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | [Microsoft Teams Platform](../concepts/app-fundamentals-overview.md) | The Microsoft Teams developer platform makes it easy for developers to integrate their own apps and services with Teams. |
 | [Microsoft Teams UI Library](../concepts/design/design-teams-app-ui-templates.md#microsoft-teams-ui-library) | Microsoft Teams UI Library helps you view and test individual Teams UI templates and related components in your browser. |
 | [Microsoft Teams UI Toolkit](../concepts/design/design-teams-app-ui-templates.md#microsoft-teams-ui-library) | Microsoft Teams UI Kit includes components and patterns that are designed specifically for building Teams apps. |
-| [Multi-tenant apps](/tabs/how-to/authentication/tab-sso-register-aad) | Multi-tenant apps are available to users in both their home tenant and other tenants. **See also**: [Single-tenant apps](#s) |
+| [Multi-tenant apps](/tabs/how-to/authentication/tab-sso-register-aad) | Multi-tenant apps are available to users in both their home tenant and other tenants. <br> **See also**: [Single-tenant apps](#s) |
 
 ## O
 
