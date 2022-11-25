@@ -94,7 +94,7 @@ You can make the following customizations to extend the notification template to
 
 * `Restify` based notification
 
-   When HTTP request is sent to `src/index.js` entry point, the default implementation sends an Adaptive Card to Teams. You can customize this event by modifying `src/index.js`. A typical implementation can call an API to retrieve events, data, or both that can send an Adaptive Card as required. You can perform the following to add additional triggers:
+   When HTTP request is sent to `src/index.js` entry point, the default implementation sends an Adaptive Card to Teams. You can customize this event by modifying `src/index.js`. A typical implementation can call an API to retrieve events, data, or both that can send an Adaptive Card as required. You can perform the following to add more triggers:
 
   * Create a new routing: `server.post("/api/new-trigger", ...)`.
   * Add timer trigger(s) from widely used npm packages, such as [cron](https://www.npmjs.com/package/cron), [node-schedule](https://www.npmjs.com/package/node-schedule), or from other packages.
@@ -424,7 +424,7 @@ builder.Services.AddSingleton(sp =>
 
 ---
 
-If storage is not provided, you can use a default local file storage, which stores notification connections into:
+If storage isn't provided, you can use a default local file storage, which stores notification connections into:
 
 * `.notification.localstore.json` if running locally.
 * `${process.env.TEMP}/.notification.localstore.json`, if `process.env.RUNNING_ON_AZURE` is set to "1".
@@ -452,7 +452,7 @@ If you don't have the required SDK, and want to invoke external APIs in your cod
 
 TeamsFx supports two ways to help you send notifications from your system to Teams:
 
-* Creating a Teams bot application.
+* Creating a Teams bot app.
 * Creating Teams Incoming Webhook.
 
 In the following table, you can see the comparison of the two different ways:
@@ -485,7 +485,7 @@ TeamsFx provides you with an [Incoming Webhook notification sample](https://gith
 
 <summary><b>Why is the notification installations empty even though the bot app is installed in Teams?</b></summary>
 
-Teams sends an event only at the first installation. If the bot app is already installed before your notification bot service is launched, the installation event either didn't reach the bot service or is omitted.
+Teams sends an event only at the first installation. If the bot app is already installed before your notification bot service is launched, that is because the installation event either didn't reach the bot service or is omitted.
 
 You can resolve this in the following ways:
 
