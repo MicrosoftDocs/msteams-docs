@@ -394,7 +394,7 @@ items:
 
            :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/VS-open-file_1.png" alt-text="visual studio":::      
         
-       1. Select **TeamsFileUpload.csproj** file from **samples => bot-file-upload => csharp** folder.
+       1. Select **TeamsFileUpload.csproj** file from **samples** > **bot-file-upload** > **csharp** folder.
 
            :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/project-file-location.png" alt-text="folder":::        
 
@@ -417,7 +417,7 @@ items:
  
      # [Command line](#tab/cli)
 
-     Go to **Microsoft-Teams-Samples > samples > bot-file-upload > csharp** in Command Prompt window and enter the following command:
+     Go to **Microsoft-Teams-Samples** > **samples** > **bot-file-upload** > **csharp** in Command Prompt window and enter the following command:
 
      ```bash
      dotnet run

@@ -368,7 +368,7 @@ items:
     
           :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/VS-open-file_1.png" alt-text="Open file":::
 
-       1. Select **TeamsMessagingExtensionsSearch.csproj** file from **msgext-search > csharp** folder.
+       1. Select **TeamsMessagingExtensionsSearch.csproj** file from **msgext-search** > **csharp** folder.
 
           :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/project-file.png" alt-text="cs proj file":::
 
@@ -389,7 +389,7 @@ items:
         
     # [Command line](#tab/cli)
 
-    Go to **Microsoft-Teams-Samples > samples > msgext-search > csharp** in Command Prompt window and enter the following command:
+    Go to **Microsoft-Teams-Samples** > **samples** > **msgext-search** > **csharp** in Command Prompt window and enter the following command:
 
     ```bash
     dotnet run
@@ -400,7 +400,7 @@ items:
 - title: Add Search Message Extension app
   durationInMinutes: 1
   content: |
-    1. In your cloned repository, go to **samples > msgext-search > csharp > TeamsAppManifest**.
+    1. In your cloned repository, go to **samples** > **msgext-search** > **csharp** > TeamsAppManifest**.
 
     1. Create a .zip with the following files that are present in the **TeamsAppManifest** folder: 
        * manifest.json

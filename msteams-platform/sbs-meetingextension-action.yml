@@ -395,7 +395,7 @@ items:
         
     # [Command line](#tab/cli)
 
-    Go to **samples > msgext-action > csharp** in Command Prompt window and enter the following command:
+    Go to **samples** > **msgext-action** > **csharp** in Command Prompt window and enter the following command:
 
     ```bash
     dotnet run
@@ -406,7 +406,7 @@ items:
 - title: Add action message extension app to Teams
   durationInMinutes: 1
   content: |
-    1. In your cloned repository, go to **samples > msgext-action > csharp > TeamsAppManifest**.
+    1. In your cloned repository, go to **samples** > **msgext-action** > **csharp** > **TeamsAppManifest**.
 
     1. Create a .zip with the following files in the **Manifest** folder:
        * manifest.json

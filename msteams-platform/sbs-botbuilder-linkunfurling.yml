@@ -383,7 +383,7 @@ items:
 
           :::image type="content" source="~/assets/images/Teams-link-unfurling/VSopenfile_1.png" alt-text="Screenshot showing the navigation of open file.":::
           
-       1. Select **TeamsLinkUnfurling.csproj** file from **samples > msgext-link-unfurling > csharp** folder.
+       1. Select **TeamsLinkUnfurling.csproj** file from **samples** > **msgext-link-unfurling** > **csharp** folder.
 
           :::image type="content" source="~/assets/images/Teams-link-unfurling/project-file-location.png" alt-text="Screenshot showing the select of folder.":::
       
@@ -403,7 +403,7 @@ items:
                   
     # [Command line](#tab/cli)
 
-    Go to **Microsoft-Teams-Samples > samples > msgext-link-unfurling > csharp** in Command Prompt window and enter the following command:
+    Go to **Microsoft-Teams-Samples** > **samples** > **msgext-link-unfurling** > **csharp** in Command Prompt window and enter the following command:
 
     ```bash
     dotnet run
@@ -415,7 +415,7 @@ items:
 - title: Upload Link Unfurling app
   durationInMinutes: 1
   content: |
-    1. In your cloned repository, go to **samples > msgext-link-unfurling > csharp > TeamsAppManifest**.
+    1. In your cloned repository, go to **samples** > **msgext-link-unfurling** > **csharp** > **TeamsAppManifest**.
 
     1. Create a .zip with the following files that are present in the **Manifest** folder: 
        * manifest.json
