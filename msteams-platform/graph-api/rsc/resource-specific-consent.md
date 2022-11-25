@@ -231,7 +231,7 @@ Add a [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicat
 |---|---|---|
 |`id` |String |Your Azure AD app ID. For more information, see [register your app in the Azure AD portal](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).|
 |`resource`|String| This field has no operation in RSC but must be added and have a value to avoid an error response; Any string will do.|
-|`applicationPermissions`|Array of strings|RSC permissions for  your app. For more information, see [RSC permissions for resource types](#rsc-permissions-for-resource-types).|
+|`applicationPermissions`|Array of strings|RSC permissions for  your app. For more information, see [Supported RSC permissions](#supported-rsc-permissions).|
 
 Example for RSC in a team:
 
@@ -417,7 +417,7 @@ For more information on how to get details of apps installed in a specific chat,
 
 </details>
 
-## RSC permissions for resource types
+## Supported RSC permissions
 
 The following list provides all the RSC permissions, categorized based on resource type and access mode.
 
