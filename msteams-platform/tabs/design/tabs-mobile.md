@@ -24,6 +24,7 @@ Apps [distributed through the Teams store](~/concepts/deploy-and-publish/appsour
 > * For all apps that are not distributed through the AppSource, the tabs open in an in-app webview within the Teams clients by default and there is no separate approval process required.
 > * The default behavior of apps is only applicable if distributed through the Teams store. By default, all tabs open in the Teams client.
 > * To initiate an evaluation of your app for mobile-friendliness, reach out to teamsubm@microsoft.com with your app details.
+> * If a mobile app has multiple tabs, whenever the user switches a tab, the tab doesn't reload.
 
 ## Authentication
 
@@ -62,8 +63,6 @@ The following table describes tab availability and behavior when the app is list
 > [!NOTE]
 >
 > * The bot messages are shown in the chat section if a mobile app has both the bot and tab capabilities.
->
-> * The tab does not reload whenever user switches tab if there are multiple tabs in mobile app.
 >
 > * When you select **Chat** of the bot app and select **More (...)**, you can't see the tab capability of that app in the list. However, if you select **More (...)** from the lower right of the **Chat** section, you can view the tab app with a link to the bot app capability of that app.
 
