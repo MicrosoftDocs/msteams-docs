@@ -1,13 +1,13 @@
 ---
-title: Azure Application Insights
+title: Implement your telemetry service
 author: heath-hamilton
-description: Learn about adding insights for my Teams app in Azure AD.
+description: Learn about adding insights for your Teams app in Azure AD.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
 ---
 
-# Implement Azure Application Insights
+# Implement your telemetry service
 
 Your application telemetry can be captured and analyzed in any telemetry service of your choice. It's recommended that you use a telemetry service that allows tracking custom events and reporting it with custom context-based attributes.
 

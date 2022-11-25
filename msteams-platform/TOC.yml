@@ -68,7 +68,7 @@
         href: concepts/design/plan-analytics.md
       - name: Design telemetry data for your Teams app
         href: concepts/design/teams-app-telemetry.md
-      - name: Implement Azure Application Insights
+      - name: Implement your telemetry service
         href: concepts/design/add-analytics.md
   - name: Plan to monetize your app
     href: concepts/design/plan-to-monetize.md
