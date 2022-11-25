@@ -1,13 +1,13 @@
 ---
-title: Teams App Telemetry
+title: Teams App Instrumentation
 author: heath-hamilton
-description: Learn about Teams App Telemetry.
+description: Learn about Teams App Instrumentation.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
 ---
 
-# Design telemetry data for your Teams app
+# Design instrumentation data for your Teams app
 
 After an app is distributed in an organization or in Teams App store, it's important to track how users are interacting with the app. With growing app users, the number of app installs might not be a relevant metric.
 
@@ -26,11 +26,11 @@ It's important to plan for the kind of data, metrics, and events you want to mon
     :::column-end:::
 :::row-end:::
 
-Your telemetry strategy should ensure measuring of your product across these three qualities.
+Your instrumentation strategy should ensure measuring of your product across these three qualities.
 
 ### Monitor events for your app
 
-For the purposes of this article, let’s use the HEART framework to indicate representative set of metrics and events you should consider monitoring for your solution. Note that the following list isn't exhaustive, and you're encouraged to add additional telemetry relevant to your business and product.
+For the purposes of this article, let’s use the HEART framework to indicate representative set of metrics and events you should consider monitoring for your solution. Note that the following list isn't exhaustive, and you're encouraged to add additional instrumentation relevant to your business and product.
 
 :::image type="content" source="../../assets/images/app-fundamentals/monitor-telemetry.png" alt-text="Monitor events for your app" border="false":::
 
@@ -42,14 +42,14 @@ For the purposes of this article, let’s use the HEART framework to indicate re
 - User stumbles upon the app when it’s shared in a chat, meeting, or channel by another user, (tab or Adaptive Card).
 - Admin installs the app for users and the app sends a welcome message.
 
-Telemetry designed to improve adoption should aim at improving discoverability of the app and its features as well. The likelihood of discovering an app among new users increases when existing users start using the app in collaborative scope. For example, adding channel or meeting tab, adding a bot to channel, or sharing messaging extension card in a group chat.
+Instrumentation designed to improve adoption should aim at improving discoverability of the app and its features as well. The likelihood of discovering an app among new users increases when existing users start using the app in collaborative scope. For example, adding channel or meeting tab, adding a bot to channel, or sharing messaging extension card in a group chat.
 
 > [!TIP]
 >
 > - Measure usage of app in collaborative scope and the time taken to discover your app features in collaborative or meeting scope. If the usage is low or time taken is high, socialize said features better in app or via marketing efforts.
 > - While measuring overall adoption is good to start, measure adoption at a platform capability and feature level.
 
-| Telemetry | Insights |
+| Instrumentation | Insights |
 | --- | --- |
 | • Users installing the app in R1, R7, R14, R28 days. <br> • # Sign-ins (if app has sign-in). | • App level adoption broken down at tenant, region, and segment. <br> • Segment users based on Azure AD profile. <br> • Segment by tenant and org name. |
 | • Average time taken to first use (click on tab, bot, Adaptive Card, and meeting). | • Report at a feature or platform capability level to measure feature level adoption. |
@@ -73,7 +73,7 @@ Engagement intends to measure the intensity and depth of interaction between the
 > - Core action is specific to your business, and you should have one core action correlating to your product’s North Star. Don't have more than 2-3 core actions.
 > - Key business events are auxiliary actions that users may take in their journey towards performing the core action. Key business events can help prepare a funnel view on how many users are going through the ideal user journey and determine points where drop offs are high.
 
-| Telemetry | Comments |
+| Instrumentation | Comments |
 | --- | --- |
 | • # App users (R7, R14, R28). – DAU and MAU. <br> • # App users trendline. | • App and feature level engagement <br> • Segment users based on Azure AD profile. <br> • Report by client –  desktop, web, and mobile. <br> • Segment by tenant and org name. <br> • Segment by product feature (active users at feature level). |
 | • % of users using key features in Teams app vs. using the same feature in a web or native app. | • Indicates discoverability, ease of use, and value of using the feature within Teams app. <br> • Report at app feature level. |
@@ -99,7 +99,7 @@ User retention measures how frequent users come back to use the product. It esse
 > - Users who perform creation events in your app have higher retention compared to users who passively consume information via notifications. Creation events depend on your business. For example, creating a ticket, creating a new post, a project board, etc.
 > - Apps used multiple times (>5 times) in a month have a better retention month over month. Recurring use cases with more frequency of usage improve retention.
 
-| Telemetry | Insight |
+| Instrumentation | Insight |
 | --- | --- |
 | • New user retention cohort analysis (week over week, month over month). | • Retention breakdown by client – Teams desktop, web, and mobile app, non-Teams web app. <br> • Drill down to a tenant level. |
 | • User churn in 14 days, 28 days, 56 days, 72 days. | • User churn. <br> • Drill down to a tenant level. <br> • Platform capability and feature drill-down. <br> • Churn breakdown by client: Teams desktop, web, and mobile app, non-Teams web app. |
@@ -121,7 +121,7 @@ Happiness intends to measure your user’s attitude towards your product and can
 > - Integrate product driven feedback capture and rating mechanisms for users to easily submit feedback and rating in the flow after completing core action.
 > - Provide adequate product support, helpdesk for users to get their queries clarified, and report bugs and feedback.
 
-| Telemetry | Insight |
+| Instrumentation | Insight |
 | --- | --- |
 | • App Net Promoter Score (NPS) from app source. | • Net Promoter Score. <br> • Azure AD and tenant information. |
 | • % of happy or satisfied users. | • Drill down at tenant level. <br> • Report trend over time. |
@@ -131,4 +131,4 @@ Happiness intends to measure your user’s attitude towards your product and can
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Plan for Teams app context and Attributes](teams-app-context-attributes.md)
+> [Plan for Teams app context and attributes](teams-app-context-attributes.md)

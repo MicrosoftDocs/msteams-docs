@@ -48,12 +48,12 @@ For example, the Azure AD user ID for a Teams user should be captured when a spe
 
 ## Instrumenting your app for analytics
 
-Instrumenting your code with analytics markers (also known as telemetry markers) is a standard web application development practice. Robust telemetry instrumentation in your code is critical for long-term success. It helps you to measure both aggregate and user-specific metrics.
+Instrumenting your code with analytics markers (also known as instrumentation markers) is a standard web application development practice. Robust instrumentation in your code is critical for long-term success. It helps you to measure both aggregate and user-specific metrics.
 
 > [!NOTE]
 > Before you begin, always remember to handle user data in accordance with your strict data handling and privacy policies, and in compliance with your regulatory obligations.
 
-Teams App is another surface to expose your solution to your end user, another window to your SaaS landscape. As your solution scales across multiple platforms (web, mobile platforms, and Teams), it’s important to view your telemetry in layers:
+Teams App is another surface to expose your solution to your end user, another window to your SaaS landscape. As your solution scales across multiple platforms (web, mobile platforms, and Teams), it’s important to view your instrumentation in layers:
 
 :::image type="content" source="../../assets/images/app-fundamentals/telemetry-in-layers.png" alt-text="Telemetry in layers" border="false":::
 
@@ -61,10 +61,7 @@ There are two types of data instrumentation relevant for your solution:
 
 - [Data instrumentation for your core SaaS product or app](#data-instrumentation-for-your-core-saas-product-or-app)
 
-<!--It's required for your browser-based SaaS app. This instrumentation is often already done in your browser-based SaaS app's code. You can select analytics, customer lifecycle analytics, and conversion analytics metrics such as, bounce rate, page views, unique visitor count, session counts, engagement time, select through rate, and many more for your web app.-->
-
 - [Data instrumentation in your app specific to Teams](#data-instrumentation-in-your-app-specific-to-teams)
-<!-- It's required additionally in your SaaS app when you surface it inside of the Teams client. Your app may have Teams platform capabilities such as, bots, message extensions, etc. It may also have experiences to address use cases unique to Teams such as meeting extensions, intelligent M365-aware scenarios using Microsoft Graph, link unfurling, etc.-->
 
 > [!NOTE]
 > The rest of this document only recommends the in-context data you can use but doesn't supersede your regulatory obligations.
@@ -73,30 +70,13 @@ There are two types of data instrumentation relevant for your solution:
 
 This is the instrumentation that you'll do for your browser-based SaaS app irrespective of whether you’re integrating with Teams or not. If you have a browser-based SaaS app, in all likelihood, you'll have this instrumentation already done in your code. This is how you can see click analytics and customer lifecycle analytics. You can also see conversion analytics metrics such as, bounce rate, page views, unique visitor count, session counts, engagement time, click through rate etc. and many more for your web app.
 
-<!--
-If you're a SaaS developer, you would already have telemetry tracked for some of your core business metrics. Your SaaS product might have an existing web app, or a mobile app, and you've now introduced a new Teams app. The Teams app is another surface to expose your solution to your end user. It's another window to your SaaS landscape.
-
-As your solution scales across multiple platforms (web, mobile platforms, and Teams), it’s important to view your telemetry in layers:
-
-:::image type="content" source="../../assets/images/app-fundamentals/telemetry-in-layers.png" alt-text="Telemetry in layers" border="false":::
-
-- **Core application telemetry**: Core telemetry includes tracking and measuring of application-level metrics. It's independent of the platform, client, or surface area used by the end user. A typical SaaS solution measures application sign-ups, trials, purchases, monthly or annual recurring revenue, aggregated number of users, and churn among other data. If you have an existing SaaS solution, you may be tracking these metrics already.
-
-- **Modality-specific telemetry**: At a presentation level, your application is accessed by your end user across different modalities. Each modality has its own unique user interaction points. This metadata facilitates telemetry capture unique to that modality. For example, viewing a product might be tracked via page view in a web app vs. screen tracking in mobile app. Telemetry at this layer includes:
-
-  - User interactions: User clicks, views, sessions, system, and custom events in the modality.
-  - Application performance monitoring: Performance measures such as, time to load and response time of the solution in the modality.
-  - Modality-specific metadata: Device, browser information, and tenant information.
-
-  For pre-existing modalities, you may already be tracking such information. As you add new modalities and new ways for your end user to experience your solution, it's important to add modality-specific telemetry.-->
-
 ### Data instrumentation in your app specific to Teams
 
-At a presentation level, your application is accessed by your end user across different modalities. Each modality has its own unique user interaction points, meta data that facilitates telemetry capture unique to that modality. For example, viewing a product might be tracked via page view in a web app vs. screen tracking in mobile app. This is the instrumentation that is required to be done additionally in your SaaS app because it's now surfacing inside of the Teams client. Your Teams app may have leveraged one or more of the platform capabilities only available inside Teams such as bots, message extensions etc. or you have crafted experiences to address use cases unique to Teams such as meeting extensions, intelligent M365-aware scenarios using Microsoft Graph, link unfurling, etc. Capturing telemetry from these unique Teams app experiences is covered in more detail in the rest of this document.
+At a presentation level, your application is accessed by your end user across different modalities. Each modality has its own unique user interaction points, meta data that facilitates instrumentation capture unique to that modality. For example, viewing a product might be tracked via page view in a web app vs. screen tracking in mobile app. This is the instrumentation that is required to be done additionally in your SaaS app because it's now surfacing inside of the Teams client. Your Teams app may have leveraged one or more of the platform capabilities only available inside Teams such as bots, message extensions etc. or you have crafted experiences to address use cases unique to Teams such as meeting extensions, intelligent M365-aware scenarios using Microsoft Graph, link unfurling, etc. Capturing instrumentation from these unique Teams app experiences is covered in more detail in the rest of this document.
 
-## Tracking Teams app specific telemetry
+## Tracking Teams app specific analytics
 
-Below are guidelines and pointers regarding what to look for, which events to capture, how to instrument telemetry markers, and where to fetch Teams-relevant information that will help you plan and implement analytics for your app. Your Teams apps can be tabs, bots, message extensions, cards, stage views etc. or any combination of these [capabilities and UI constructs](../../overview-explore.md#teams-app-features) across personal or shared scopes. It's best to understand, plan, and implement your instrumentation around each of these capabilities.
+Below are guidelines and pointers regarding what to look for, which events to capture, how to leverage instrumentation markers, and where to fetch Teams-relevant information that will help you plan and implement analytics for your app. Your Teams apps can be tabs, bots, message extensions, cards, stage views etc. or any combination of these [capabilities and UI constructs](../../overview-explore.md#teams-app-features) across personal or shared scopes. It's best to understand, plan, and implement your instrumentation around each of these capabilities.
 
 You can classify Teams platform features into broadly two constructs:
 
@@ -118,7 +98,7 @@ When you build a [tab](../../tabs/how-to/tab-requirements.md), add the [Teams Ja
 - Locale awareness for the user to indicate language, for example, en-us, fr-fr, ja-jp etc. (app locale).
 - User Principal Name or login hint (user name) of the current user in the current tenant (usually user’s email address).
 - Team name and channel name where the channel tab is added (teamName, channelName).
-- Unique ID for the current app session inside a tab used for correlating telemetry data (`appSessionId`).
+- Unique ID for the current app session inside a tab used for correlating instrumentation data (`appSessionId`).
 - Meeting ID is used by a tab running in the meeting context and is added for the response payload (`meetingId`).
 - Microsoft Azure AD ID of the current user.
 
@@ -184,4 +164,4 @@ Besides the obvious metrics in the SaaS world such as daily, weekly, monthly act
 
 ## See also
 
-[Plan for Teams app telemetry](teams-app-telemetry.md)
+[Design instrumentation data for your Teams app](teams-app-telemetry.md)
