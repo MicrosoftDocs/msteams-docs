@@ -122,7 +122,7 @@ You can build your response data in text format, or perform the following steps 
 * In your `handleCommandReceived` API, use `MessageBuilder.attachAdaptiveCardWithoutData` or `MessageBuilder.attachAdaptiveCard` to build a bot message activity with the Adaptive Card and return the message `return MessageBuilder.attachAdaptiveCardWithoutData(myCard);`.
 
 > [!NOTE]
-> For more information on how to build command and response using Adaptive Card with dynamic content, see this [section](#how-to-build-command-response-using-adaptive-card-with-dynamic-content).
+> For more information on how to build command and response using Adaptive Card with dynamic content, see this [section](#how-to-build-command-and-response-using-adaptive-card-with-dynamic-content).
 
 <br>
 
