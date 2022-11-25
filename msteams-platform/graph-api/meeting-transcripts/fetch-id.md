@@ -153,11 +153,11 @@ To obtain meeting ID and organizer ID from user-level notification:
 
 4. **Subscribe to chat messages**: Use chat ID to subscribe your app to receive chat messages for that particular meeting. For more information, see [subscribe to messages in a chat](/graph/teams-changenotifications-chatmessage#subscribe-to-messages-in-a-chat).
 
-    If you want your app to subscribe to messages with specific text, see [Subscribe to messages in a chat that contain certain text](/graph/teams-changenotifications-chatmessage#example-2-subscribe-to-messages-in-a-chat-that-contain-certain-text).
+    If you want your app to subscribe to messages with specific text, see [subscribe to messages in a chat that contain certain text](/graph/teams-changenotifications-chatmessage#example-2-subscribe-to-messages-in-a-chat-that-contain-certain-text).
 
 5. Follow steps for [tenant-level notifications](#obtain-meeting-details-using-tenant-level-notification) to obtain meeting ID and organizer ID.
 
-#### Obtain meeting details using tenant-level notification
+### Obtain meeting details using tenant-level notification
 
 Tenant-level notifications are useful if your app is authorized to access all meeting transcripts across the tenant. Subscribe your app to be notified for events when transcription starts or call ends for scheduled online Teams meetings. After the meeting ends, your app can access and retrieve the meeting transcript.
 
@@ -251,7 +251,7 @@ To obtain meeting ID and organizer ID from tenant-level notification:
 
 2. **Get chat entity**: Your app can retrieve the chat entity using the chat ID obtained in Step 1. Use the chat entity to get the URL for joining the call. The `joinWebUrl` member of the `onlineMeetingInfo` property contains this URL, and is used to obtain meeting ID eventually. The organizer ID is also a part of the response payload.
 
-    For more information about chat entity, see [Get chat](/graph/api/chat-get).
+    For more information about chat entity, see [get chat](/graph/api/chat-get).
 
     Use the following example to request chat entity based on the chat ID:
 
@@ -266,7 +266,7 @@ To obtain meeting ID and organizer ID from tenant-level notification:
         - If the meeting is an online Teams meeting, the `joinWebUrl` member of the `onlineMeetingInfo` property contains this URL.
         - If the meeting wasn't created as an online meeting from Teams client or Outlook client, it contains the `calendarEventId` member in the `onlineMeetingInfo` property. Your app can use the `calendarEventId` to obtain `joinUrl`, which is the same as `joinWebUrl`.
 
-      For more information about events, see [Get event](/graph/api/event-get?view=graph-rest-1.0&tabs=http&preserve-view=true).
+      For more information about events, see [get event](/graph/api/event-get?view=graph-rest-1.0&tabs=http&preserve-view=true).
 
       Examples for response payload scenarios depending on the type of join meeting URL:
 

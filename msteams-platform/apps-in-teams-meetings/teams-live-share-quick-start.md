@@ -78,5 +78,4 @@ To get started, install:
 * [Live Share Media SDK reference docs](/javascript/api/@microsoft/live-share-media/)
 * [Live Share capabilities](teams-live-share-capabilities.md)
 * [Live Share FAQ](teams-live-share-faq.md)
-* [Teams apps in meetings](teams-apps-in-meetings.md)
 * [Live Share SDK](teams-live-share-overview.md)

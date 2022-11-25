@@ -187,7 +187,7 @@ diceMap.on("valueChanged", updateDice);
 
 ## Write the side panel view
 
-The side panel view, loaded through the tab `contentUrl` with the `sidePanel` frame context, is displayed to the user in a side panel when they open your app within a meeting. The goal of side panel view is to let a user select content for the app prior to sharing the app to the meeting stage. For the Live Share SDK apps, the side panel view can also be used as a companion experience for the app. Calling [joinContainer()](/javascript/api/@microsoft/live-share/liveshareclient#@microsoft-live-share-liveshareclient-joincontainer) from the side panel view connects to the same Fluid container the stage view is connected to. This container can then be used to communicate with the stage view. Ensure that you're communicating with everyone's stage view _and_ side panel view.
+The side panel view, loaded through the tab `contentUrl` with the `sidePanel` frame context, is displayed to the user in a side panel when they open your app within a meeting. The goal of side panel view is to let a user select content for the app prior to sharing the app to the meeting stage. For the Live Share SDK apps, the side panel view can also be used as a companion experience for the app. Calling [joinContainer()](/javascript/api/@microsoft/live-share/liveshareclient#@microsoft-live-share-liveshareclient-joincontainer) from the side panel view connects to the same Fluid container the stage view is connected to. This container can then be used to communicate with the stage view. Ensure that you're communicating with everyone's stage view and side panel view.
 
 The sample's side panel view prompts the user to select the share to stage button.
 
@@ -356,9 +356,11 @@ After you're ready to deploy your code, you can use [Teams Toolkit](../toolkit/p
 
 ## See also
 
+- [Teams apps in meetings](teams-apps-in-meetings.md)
 - [GitHub repository](https://github.com/microsoft/live-share-sdk)
 - [Live Share SDK reference docs](/javascript/api/@microsoft/live-share/)
 - [Live Share Media SDK reference docs](/javascript/api/@microsoft/live-share-media/)
 - [Live Share FAQ](teams-live-share-faq.md)
 - [Use Fluid with Teams](../tabs/how-to/using-fluid-msteam.md)
-- [Teams apps in meetings](teams-apps-in-meetings.md)
+- [Build tabs for meeting](build-tabs-for-meeting.md)
+- [Tabs link unfurling and Stage View](../tabs/tabs-link-unfurling.md)

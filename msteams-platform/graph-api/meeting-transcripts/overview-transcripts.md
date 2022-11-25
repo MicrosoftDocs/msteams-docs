@@ -42,7 +42,7 @@ For more information about the meeting-specific RSC permissions that can be gran
 
 After you've configured the permissions, configure your app to receive change notifications for all relevant meeting events. Notifications contain meeting ID and organizer ID that help in accessing transcript content. Your app can fetch the transcript for a meeting when it's generated after it ends. The content of the transcript is available as `.vtt` or `.docx` file.
 
-For more information about how your app can know when the meetings ends, see [Subscribe to change notifications](fetch-id.md#subscribe-to-change-notifications) and [use Bot Framework to get meeting ID and organizer ID](fetch-id.md#use-bot-framework-to-get-meeting-id-and-organizer-id).
+For more information about how your app can know when the meetings ends, see [subscribe to change notifications](fetch-id.md#subscribe-to-change-notifications) and [use Bot Framework to get meeting ID and organizer ID](fetch-id.md#use-bot-framework-to-get-meeting-id-and-organizer-id).
 
 > [!NOTE]
 > The process for calling Graph APIs to access and retrieve transcripts remains the same for both meeting-specific RSC application permissions or organization-wide application permissions. These APIs currently support only scheduled meetings.
@@ -55,4 +55,5 @@ For more information about how your app can know when the meetings ends, see [Su
 ## See also
 
 - [Apps for Teams meetings and calls](../../apps-in-teams-meetings/teams-apps-in-meetings.md)
-- [Advanced meeting APIs](../../apps-in-teams-meetings/meeting-apps-apis.md)
+- [Meeting app APIs](../../apps-in-teams-meetings/meeting-apps-apis.md)
+-

@@ -184,7 +184,5 @@ For more information, see the custom Azure Fluid Relay service [how-to guide](./
 - [GitHub repository](https://github.com/microsoft/live-share-sdk)
 - [Live Share SDK reference docs](/javascript/api/@microsoft/live-share/)
 - [Live Share Media SDK reference docs](/javascript/api/@microsoft/live-share-media/)
-- [Live Share capabilities](teams-live-share-capabilities.md)
-- [Live Share media capabilities](teams-live-share-media-capabilities.md)
-- [Live Share FAQ](teams-live-share-faq.md)
 - [Use Fluid with Teams](../tabs/how-to/using-fluid-msteam.md)
+- [Meeting apps APIs](meeting-apps-apis.md)
