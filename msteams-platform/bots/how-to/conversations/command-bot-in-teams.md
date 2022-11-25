@@ -209,6 +209,9 @@ Additionally, you can use `registerCommand`, or `registerCommands` API from your
 ```
 
 By completing the steps of adding a new command and response into your bot app, you can press F5 to local debug with the command-response bot. Otherwise use provision and deploy command to deploy the change to Azure.
+<br>
+
+</details>
 
 ## Extend command bot with other bot scenarios
 
