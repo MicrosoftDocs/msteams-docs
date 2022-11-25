@@ -16,7 +16,7 @@ It's important to plan for the kind of data, metrics, and events you want to mon
 :::row:::
     :::column span="":::
 
-    To have long-term sustainability in the ecosystem an app must have good growth of new users. The second attribute is engagement and retention. Users must come back to the app and continue to find value in it and use it. Lastly, the third quality is revenue. The app must provide sufficient value to users, such that there is willingness to pay. Apps must possess all three of these qualities to be successful for long-term on the platform. If any of these three qualities are missing in an app, it has a low probability of success on the platform.
+    To have long-term sustainability in the ecosystem an app must have good growth of new users. The second attribute is engagement and retention. Users must come back to the app and continue to find value in it and use it. Lastly, the third quality is revenue. The app must provide sufficient value to users, such that there is willingness to pay. Apps must possess all three of these qualities to be successful long-term on the platform. If any of these three qualities are missing in an app, it has a low probability of success on the platform.
 
     :::column-end:::
     :::column span="":::
@@ -69,7 +69,7 @@ Engagement intends to measure the intensity and depth of interaction between the
 
 > [!TIP]
 >
-> - It's important to measure engagement and usage not just at the overall app level but at individual app capability and feature level also. Decide on core actions and key business events that define engaged users for your business. Just signing in or viewing the app may not be quality engagement.
+> - It's important to measure engagement and usage not just at the overall app level but also at individual app capability and feature level. Decide on core actions and key business events that define engaged users for your business. Just signing in or viewing the app may not be quality engagement.
 > - Core action is specific to your business, and you should have one core action correlating to your product’s North Star. Don't have more than 2-3 core actions.
 > - Key business events are auxiliary actions that users may take in their journey towards performing the core action. Key business events can help prepare a funnel view on how many users are going through the ideal user journey and determine points where drop offs are high.
 
