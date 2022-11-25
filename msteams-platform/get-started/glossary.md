@@ -164,7 +164,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | [Sideloading](../toolkit/publish.md#publish-to-individual-scope-or-sideload-permission) | A process where a Teams app is loaded to the Teams client to test it in the Teams environment before distributing it. |
 | [SidePanel](../sbs-meetings-sidepanel.yml) | A feature of Teams meeting app that enables you to customize experiences in a meeting that allow organizers and presenters to have different set of views and actions. |
 | [SPFx](../sbs-gs-spfx.yml) | SharePoint Framework (SPFx) is a development model to build client-side solutions for Microsoft Teams and SharePoint. |
-| [SSO](../concepts/authentication/authentication.md) | Acronym for Single sign-on, an authentication method in which a user needs to sign in to an independent service of a software platform (such as Microsoft 365) only once. The user is then able to access all services without having to go through authentication again. <br>**See also**: [Authentication](#a) |
+| [SSO](../concepts/authentication/authentication.md) | Acronym for Single sign-on, an authentication method in which a user needs to sign in to an independent service of a software platform (such as Microsoft 365) only once. The user is then able to access all services without having to go through authentication again. <br>**See also**: [Authentication](#a) | 
 | [Stage view](../sbs-meetings-stage-view.yml) | A user interface component that lets you render the content that is opened in full screen in Teams and pinned as a tab. It's invoked to surface web content within Teams. Note that it is *not* the same as meeting stage. <br>**See also**: [Meeting stage](#m) |
 | [Standalone app](../samples/integrating-web-apps.md) | A single-page or large, and complex app. The user can use some aspects of it in Teams. <br>**See also**: [Collaboration aap](#c) |
 | [Static search](../task-modules-and-cards/cards/dynamic-search.md) | A method of typeahead search that lets users search from pre-specified values in the Adaptive Cards payload. <br>**See also**: [Dynamic search](#d) |
@@ -179,6 +179,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | [Task modules](../task-modules-and-cards/what-are-task-modules.md) | A feature of Teams app to create modal pop-up for completing tasks, displaying videos, or dashboard. |
 | [Thread discussion](../tabs/design/tabs.md#thread-discussion) | A conversation posted on a channel or chat between users. <br>**See also** [Conversation](#c); [Channel](#c) |
 | [Teams](../overview.md) | Microsoft Teams is the ultimate message app for your organization. It's a workspace for real-time collaboration and communication, meetings, file and app sharing. |
+| Teams identity | The Microsoft 365 identity of an app user that is used to log in to Teams client, web, or mobile app. |
 | [Teams Toolkit](../toolkit/teams-toolkit-fundamentals.md) | The Microsoft Teams Toolkit enables you to create custom Teams apps directly within the Visual Studio Code environment.  |
 | [TeamsFx](../toolkit/teamsfx-cli.md) | TeamsFx is a text-based command line interface that accelerates Teams application development. It's also called TeamsFx CLI.|
 | [TeamsFx SDK](../toolkit/teamsfx-sdk.md) | TeamsFx SDK is pre-configured in scaffolded project using TeamsFx toolkit or CLI. |
