@@ -90,13 +90,13 @@ The Azure Bot resource registration registers your web service as a bot with the
 
 1. Select **Review + create**.
 
-   :::image type="content" source="../../../assets/images/adaptive-cards/create-azure-bot.png" alt-text="This screenshot show how to create Azure bot.":::
+   :::image type="content" source="../../../assets/images/adaptive-cards/create-azure-bot.png" alt-text="This screenshot shows how to create Azure bot.":::
 
 1. If the validation passes, select **Create**.
 
     It takes a few moments for your bot service to be provisioned.
 
-   :::image type="content" source="../../../assets/images/adaptive-cards/validation-pane.png" alt-text="This screenshot show how Azure bot validation passes.":::
+   :::image type="content" source="../../../assets/images/adaptive-cards/validation-pane.png" alt-text="This screenshot shows how Azure bot validation passes.":::
 
 1. Select **Go to resource**. The bot and the related resources are listed in the resource group.
 
