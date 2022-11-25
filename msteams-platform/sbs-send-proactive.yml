@@ -45,7 +45,7 @@ items:
 - title: Set up local environment
   durationInMinutes: 3
   content: |
-    1.	Download the [sample code](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/assets/downloads/SendProactiveMessages.zip) (Zip file) and extract the files.
+    1.	Download the [sample code](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/assets/downloads/SendProactiveMessages.zip) (.zip file) and extract the files.
     1.	Go to the extracted files and double-click **ProactiveBot.csproj**. The solution opens in Visual Studio.
     1.	In Visual Studio, right-click the project (**ProactiveBot**) and select **Build** to build the solution.
 
@@ -90,7 +90,7 @@ items:
         1. In the left pane, select **Show All**.
         1. Select **Teams**.
     
-           :::image type="content" source="./assets/images/meeting-token-generator/meeting-token-generator-admincenter_1.png" alt-text="Screenshot shows the Admin center menu with Teams highlighted in red." border="true":::
+           :::image type="content" source="./assets/images/meeting-token-generator/meeting-token-generator-admincenter_1.png" alt-text="Screenshot shows the Admin centers menu with Teams highlighted in red." border="true":::
 
 - title: Create and install Teams app
   durationInMinutes: 5
@@ -117,17 +117,17 @@ items:
 
          :::image type="content" source="~/assets/images/proactive-scenario/proactive-message.png" alt-text="Screenshot shows the Basic information screen of Proactive Message in Developer Portal."lightbox="~/assets/images/proactive-scenario/proactive-message.png"::: 
     
-    1. A default **App ID** is created and populated in **Basic information** section.
+    1. A default **App ID** is created and populated in the **Basic information** section.
 
-    1. Add the Short and Long description  for your app in **Descriptions**.
+    1. Add the Short and Long description for your app under **Descriptions**.
 
-    1. In **Developer Information**, add the required details and in **Website (must be a valid HTTPS URL)** give your ngrok HTTPS URL.
+    1. Under **Developer Information**, add developer pr company name and in **Website (must be a valid HTTPS URL)** give your ngrok HTTPS URL.
 
-    1. In **App URLs**, update the Privacy policy to `https://<yourngrokurl>/privacy` and Terms of use to `https://<yourngrokurl>/termsofuse`.
+    1. Under **App URLs**, update the Privacy policy to `https://<yourngrokurl>/privacy` and Terms of use to `https://<yourngrokurl>/termsofuse`.
 
     1. Select **Save**.
 
-    1. In the **Domains** section, select **Add a domain** and enter your ngrok URL without the HTTPS prefix `<yourngrokurl>.ngrok.io`.
+    1. Under **Domains**, select **Add a domain** and enter your ngrok URL without the HTTPS prefix `<yourngrokurl>.ngrok.io`.
     
     1. Select **App Features** > **Bot**.
     
