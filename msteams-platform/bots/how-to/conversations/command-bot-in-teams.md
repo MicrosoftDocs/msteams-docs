@@ -71,7 +71,7 @@ You can edit the manifest template file `templates\appPackage\manifest.template.
 * The command title that user types in the message compose area to trigger the command.
 * The command description for the command.
 
-  :::image type="content" source="../../../assets/images/command-bot-teams/commandbot-add-command-definition.png" alt-text="add a command definition in manifest code sample", lightbox="../../../assets/images/command-bot-teams/commandbot-add-command-definition.png":::
+  :::image type="content" source="../../../assets/images/command-bot-teams/commandbot-add-command-definition.png" alt-text="add a command definition in manifest code sample" lightbox="../../../assets/images/command-bot-teams/commandbot-add-command-definition.png":::
 
 <br>
 </details>
