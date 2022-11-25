@@ -13,7 +13,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | Term | Definition |
 | --- | --- |
 | [Action command](../messaging-extensions/how-to/action-commands/define-action-command.md) | A type of message extension app that uses a pop-up to collect or display information. <br>**See also**: [Message extension](#m); [Search commands](#s) |
-| Access token | An access token enables a client app to securely call protected web APIs. Access tokens are used by web APIs to perform authentication and authorization. **See also**: [Identity token](#i). <br> For more information, see [Access token](/azure/active-directory/develop/access-tokens). |
+| Access token | An access token enables a client app to securely call protected web APIs. Access tokens are used by web APIs to perform authentication and authorization. <br> **See also**: [Identity token](#i). <br> For more information, see [Access token](/azure/active-directory/develop/access-tokens). |
 | [Adaptive Cards](../task-modules-and-cards/what-are-cards.md) | An actionable content snippet added to a conversation by a bot or message extension. Use text, graphics, and buttons with these cards for rich communication. |
 | [App Catalog](../toolkit/publish.md) | A site that stores SharePoint and Office apps for an organization's internal use. <br>**See also**: [SPFx](#s) |
 | [App manifest](../resources/schema/manifest-schema.md) | The Teams app manifest describes how the app integrates into the Microsoft Teams product. Your manifest must conform to the [manifest schema](https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json). |
@@ -95,7 +95,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 
 | Term | Definition |
 | --- | --- |
-| [Identity provider](../concepts/authentication/authentication.md) | An entity which stores and provides credentials to the user. It also allows users to register themselves.  <br>**See also**: [Authentication](#a) |
+| [Identity provider](../concepts/authentication/authentication.md) | An entity which stores and provides credentials to the user. It also allows users to register themselves. <br>**See also**: [Authentication](#a) |
 | Identity token | An identity token is used for authenticating app users. It is used by an applications to verify if the app user is who as per the declared identity. <br> **See also**: [Access token](#a) <br> For more information, see [ID tokens](/azure/active-directory/develop/id-tokens).
 | [Incoming Webhook](../webhooks-and-connectors/how-to/add-incoming-webhook.md) | It lets an external app share content in Teams channels. These webhooks are used as tracking and notifying tools. <br>**See also**: [Webhook](#w); [Outgoing Webhook](#o) |
 | [In-meeting app experience](../apps-in-teams-meetings/teams-apps-in-meetings.md) | A stage of Teams meeting lifecycle. With the in-meeting app experience, you can engage participants during the meeting by using apps and the in-meeting dialog box. <br>**See also**: [Meeting lifecycle](#m) |
@@ -127,6 +127,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | [Microsoft Teams Platform](../concepts/app-fundamentals-overview.md) | The Microsoft Teams developer platform makes it easy for developers to integrate their own apps and services with Teams. |
 | [Microsoft Teams UI Library](../concepts/design/design-teams-app-ui-templates.md#microsoft-teams-ui-library) | Microsoft Teams UI Library helps you view and test individual Teams UI templates and related components in your browser. |
 | [Microsoft Teams UI Toolkit](../concepts/design/design-teams-app-ui-templates.md#microsoft-teams-ui-library) | Microsoft Teams UI Kit includes components and patterns that are designed specifically for building Teams apps. |
+| [Multi-tenant apps](/tabs/how-to/authentication/tab-sso-register-aad) | Multi-tenant apps are available to users in both their home tenant and other tenants. **See also**: [Single-tenant apps](#s) |
 
 ## O
 
@@ -165,6 +166,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | [SharePoint site collection](../sbs-gs-spfx.yml) | A collection site for SharePoint apps. You need to have an administrator account for this site before you can deploy your SPFx-based app on the SharePoint site. <br>**See also**: SPFx |
 | [Sideloading](../toolkit/publish.md#publish-to-individual-scope-or-sideload-permission) | A process where a Teams app is loaded to the Teams client to test it in the Teams environment before distributing it. |
 | [SidePanel](../sbs-meetings-sidepanel.yml) | A feature of Teams meeting app that enables you to customize experiences in a meeting that allow organizers and presenters to have different set of views and actions. |
+| [Single-tenant app](/tabs/how-to/authentication/tab-sso-register-aad) | Single-tenant apps are only available in the tenant they were registered in, also known as their home tenant. **See also**: [Multi-tenant apps](#m) |
 | [SPFx](../sbs-gs-spfx.yml) | SharePoint Framework (SPFx) is a development model to build client-side solutions for Microsoft Teams and SharePoint. |
 | [SSO](../concepts/authentication/authentication.md) | Acronym for Single sign-on, an authentication method in which a user needs to sign in to an independent service of a software platform (such as Microsoft 365) only once. The user is then able to access all services without having to go through authentication again. <br>**See also**: [Authentication](#a) | 
 | [Stage view](../sbs-meetings-stage-view.yml) | A user interface component that lets you render the content that is opened in full screen in Teams and pinned as a tab. It's invoked to surface web content within Teams. Note that it is *not* the same as meeting stage. <br>**See also**: [Meeting stage](#m) |
