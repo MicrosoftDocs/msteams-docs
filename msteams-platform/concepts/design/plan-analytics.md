@@ -9,7 +9,7 @@ ms.author: surbhigupta
 
 # Plan analytics for your Teams app
 
-As a developer you build an app for millions of Microsoft Teams users to achieve specific business or customer goals. For this purpose, you distribute it using one or more of the many distribution options available to you. After the app is published, you'll want to measure how your app is performing in the real-world.
+As a developer, you build an app for millions of Microsoft Teams users to achieve specific business or customer goals. For this purpose, you distribute it using one or more of the many distribution options available to you. After the app is published, you'll want to measure how your app is performing in the real-world.
 
 You'll also be interested in monitoring many data points, such as:
 
@@ -29,7 +29,7 @@ As the app’s developer, you can track your app’s usage in the [Teams app usa
 - Users who have used your app more than five days in the last month.
 - Platform, operating system, and geographic split of users for your app, etc.
 
-Teams usage reports can't provide you with in-depth analytics of what goes on inside your app and specific user-level analytics. Such analytics include a user’s journey within your app or a user’s engagement with specific features and scenario completions.
+Teams usage reports can't provide you with in-depth analytics of what goes on inside your app and specific user-level analytics. Such analytics include a user’s journey within your app or a user’s engagement with specific features and measuring scenario completions.
 
 Your app on Teams is essentially a web-based service hosted elsewhere, for example, Azure cloud. It is embedded and surfaced inside Microsoft Teams shell where users can use your app. This applies to your app irrespective of the [platform capabilities](../../overview-explore.md) used, such as tabs, bots, message extensions, meeting extensions, cards, task modules, etc. All of these capabilities are a means to surface web-based experiences inside Teams.
 
@@ -44,7 +44,7 @@ At the time your production Teams app is live on the marketplace and customers s
 - Instrumentation markers getting fired.
 - Teams-specific events and the relevant contextual information contained in these events, some of which are triggered for you to capture in your SaaS backend for later use.
 
-For example, the Azure AD user ID for a Teams user should be captured when a specific bot event is fired when a user installs the bot app. This user ID can be mapped to the user’s real-world profile identify such as, email address. It allows you to send proactive notifications to the user later via the bot.
+For example, the Azure AD user ID for a Teams user should be captured when a specific bot event is fired when a user installs the bot app. This user ID can be mapped to the user’s real-world profile identity such as, email address. It allows you to send proactive notifications to the user later via the bot.
 
 ## Instrumenting your app for analytics
 
@@ -92,7 +92,7 @@ As your solution scales across multiple platforms (web, mobile platforms, and Te
 
 ### Data instrumentation in your app specific to Teams
 
-At a presentation level, your application is accessed by your end user across different modalities. Each modality has its own unique user interaction points, meta data that facilitates telemetry capture unique to that modality. For example, viewing a product might be tracked via page view in a web app vs. screen tracking in mobile app. This is the instrumentation that is required to be done additionally in your SaaS app because it's now surfacing inside of the Teams client. Your Teams app may have leveraged one or more of the platform capabilities only available inside Teams such as bots, message extensions etc. or you have crafted experiences to address use cases unique to Teams such as meeting extensions, intelligent M365-aware scenarios using Microsoft Graph, link unfurling, etc. This is what is covered in more detail in the rest of this document.
+At a presentation level, your application is accessed by your end user across different modalities. Each modality has its own unique user interaction points, meta data that facilitates telemetry capture unique to that modality. For example, viewing a product might be tracked via page view in a web app vs. screen tracking in mobile app. This is the instrumentation that is required to be done additionally in your SaaS app because it's now surfacing inside of the Teams client. Your Teams app may have leveraged one or more of the platform capabilities only available inside Teams such as bots, message extensions etc. or you have crafted experiences to address use cases unique to Teams such as meeting extensions, intelligent M365-aware scenarios using Microsoft Graph, link unfurling, etc. Capturing telemetry from these unique Teams app experiences is covered in more detail in the rest of this document.
 
 ## Tracking Teams app specific telemetry
 
