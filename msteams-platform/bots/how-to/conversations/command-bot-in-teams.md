@@ -122,7 +122,7 @@ You can build your response data in text format, or perform the following steps 
 * In your `handleCommandReceived` API, use `MessageBuilder.attachAdaptiveCardWithoutData` or `MessageBuilder.attachAdaptiveCard` to build a bot message activity with the Adaptive Card and return the message `return MessageBuilder.attachAdaptiveCardWithoutData(myCard);`.
 
 > [!NOTE]
-> For more information on how to build command and response using Adaptive card with dynamic content, see this [section](#how-to-build-command-response-using-adaptive-card-with-dynamic-content).
+> For more information on how to build command and response using Adaptive Card with dynamic content, see this [section](#how-to-build-command-response-using-adaptive-card-with-dynamic-content).
 
 <br>
 
@@ -229,7 +229,7 @@ Adaptive Cards can be updated on user action to allow the user to progress throu
 
 The default pattern to trigger a command is through a defined keyword. You can also collect and process additional information retrieved from the trigger keyword. In addition to keyword match, you can also define your trigger pattern with [regular expressions](https://regex101.com/) and match against `message.text` with more controls.
 
-You can find any capture group in `message.matches`, when using regular expressions. The following example uses regular expression to capture strings after `reboot`, for example if user inputs `reboot myMachine`, `message.matches[1]`, it will capture `myMachine`:
+You can find any capture group in `message.matches`, when using regular expressions. The following example uses regular expression to capture strings after `reboot`, for example if user inputs `reboot myMachine`, `message.matches[1]`, it captures `myMachine`:
 
 ```
 
