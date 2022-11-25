@@ -54,7 +54,7 @@ Follow the steps to import and manage your existing app in the Developer Portal.
 1. Select the app manifest file, and then select **Open**.
 
    > [!NOTE]
-   > Ensure that the app package contains manifest.json, color icon file of 192x192 pixels, and outline icon file of 32x32 pixels.
+   > If there are nested folders or missing required files in app package, you may see error message as **Provided add-in package was not understood. Please, make sure that the file being submitted is a valid Office add-in package**.
 
 1. Select **Import**.
 
