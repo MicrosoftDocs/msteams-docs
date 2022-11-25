@@ -485,7 +485,7 @@ TeamsFx provides you with an [Incoming Webhook notification sample](https://gith
 
 <summary><b>Why is the notification installations empty even though the bot app is installed in Teams?</b></summary>
 
-Teams sends an event only at the first installation. If the bot app is already installed before your notification bot service is launched, that is because the installation event either didn't reach the bot service or is omitted.
+Teams sends an event only at the first installation. If the bot app is already installed before your notification bot service is launched, because the installation event either didn't reach the bot service or is omitted.
 
 You can resolve this in the following ways:
 
