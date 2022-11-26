@@ -130,19 +130,21 @@ The following code provides an example of OBO flow to fetch access token from th
 
 ### [C#](#tab/dotnet)
 
-```csharp
+* [SDK reference](https://learn.microsoft.com/en-us/dotnet/api/microsoft.identity.client.confidentialclientapplication.acquiretokenonbehalfof?source=recommendations&view=azure-dotnet)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/graph-app-installation-lifecycle/csharp/AppInstallation/Controllers/BaseController.cs)
 
+```csharp
 IConfidentialClientApplication app = ConfidentialClientApplicationBuilder.Create(<"Client id">)
                                                 .WithClientSecret(<"Client secret">)
                                                 .WithAuthority($"https://login.microsoftonline.com/<"Tenant id">")
                                                 .Build();
- 
             try
             {
                 var idToken = <"Client side token">;
                 UserAssertion assert = new UserAssertion(idToken);
                 List<string> scopes = new List<string>();
                 scopes.Add("https://graph.microsoft.com/User.Read");
+                // Acquires an access token for this application (usually a Web API) from the authority configured in the application
                 var responseToken = await app.AcquireTokenOnBehalfOf(scopes, assert).ExecuteAsync();
                 return responseToken.AccessToken.ToString();
             }
@@ -155,8 +157,10 @@ IConfidentialClientApplication app = ConfidentialClientApplicationBuilder.Create
 
 ### [Node.js](#tab/nodejs)
 
-```Node.js
+* [SDK reference](https://learn.microsoft.com/en-us/javascript/api/@azure/msal-node/confidentialclientapplication?view=azure-node-latest#@azure-msal-node-confidentialclientapplication-acquiretokenonbehalfof)
+* [sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs/src/server/tabs.js#L51-L94)
 
+```Node.js
 // Exchange client Id side token with server token
   app.post('/getProfileOnBehalfOf', function(req, res) {
         var tid = < "Tenant id" >
@@ -170,7 +174,6 @@ IConfidentialClientApplication app = ConfidentialClientApplicationBuilder.Create
                 clientSecret: < "Client Secret" >
       }
         });
-
         var oboPromise = new Promise((resolve, reject) => {
             msalClient.acquireTokenOnBehalfOf({
                 authority: `https://login.microsoftonline.com/${tid}`,

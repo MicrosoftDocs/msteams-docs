@@ -28,15 +28,20 @@ The following code shows an example of receiving a message:
 
 # [C#](#tab/dotnet)
 
+* [SDK reference](https://learn.microsoft.com/en-us/dotnet/api/microsoft.bot.builder.activityhandler.onmessageactivityasync?view=botbuilder-dotnet-stable)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-token-app/csharp/Bots/TokenBot.cs#L52)
+
 ```csharp
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
 {
+  // Sends an activity to the sender of the incoming activity.
   await turnContext.SendActivityAsync(MessageFactory.Text($"Echo: {turnContext.Activity.Text}"), cancellationToken);
 }
-
 ```
 
 # [TypeScript](#tab/typescript)
+
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-localization/nodejs/server/bot/botActivityHandler.js#L25)
 
 ```typescript
 
@@ -44,6 +49,7 @@ export class MyBot extends TeamsActivityHandler {
     constructor() {
         super();
         this.onMessage(async (context, next) => {
+            // Sends a message activity to the sender of the incoming activity.
             await context.sendActivity(`Echo: '${context.activity.text}'`);
             await next();
         });
@@ -54,10 +60,13 @@ export class MyBot extends TeamsActivityHandler {
 
 # [Python](#tab/python)
 
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-teams-authentication/python/bots/dialog_bot.py#L36)
+
 <!-- Verify -->
 ```python
 
 async def on_message_activity(self, turn_context: TurnContext):
+    // Sends a message activity to the sender of the incoming activity.
     return await turn_context.send_activity(MessageFactory.text(f"Echo: {turn_context.activity.text}"))
 
 ```
@@ -121,9 +130,13 @@ The following code shows an example of sending a message when a user is added to
 
 # [C#](#tab/dotnet)
 
+* [SDK reference](https://learn.microsoft.com/en-us/dotnet/api/microsoft.bot.builder.activityhandler.onmembersaddedasync?view=botbuilder-dotnet-stable)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-teams-authentication/csharp/Bots/TeamsBot.cs#L23)
+
 ```csharp
 protected override async Task OnMembersAddedAsync(IList<ChannelAccount> membersAdded, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
 {
+// Sends an activity to the sender of the incoming activity.
   await turnContext.SendActivityAsync(MessageFactory.Text($"Hello and welcome!"), cancellationToken);
 }
 
@@ -131,11 +144,13 @@ protected override async Task OnMembersAddedAsync(IList<ChannelAccount> membersA
 
 # [TypeScript](#tab/typescript)
 
-```typescript
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L43)
 
+```typescript
     this.onMembersAddedActivity(async (context, next) => {
         await Promise.all((context.activity.membersAdded || []).map(async (member) => {
             if (member.id !== context.activity.recipient.id) {
+              // Sends an activity to the sender of the incoming activity.
                 await context.sendActivity(
                     `Welcome to the team ${member.givenName} ${member.surname}`
                 );
@@ -144,18 +159,21 @@ protected override async Task OnMembersAddedAsync(IList<ChannelAccount> membersA
 
         await next();
     });
+
 ```
 
 # [Python](#tab/python)
 
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-teams-authentication/python/bots/auth_bot.py#L26)
+
 <!-- Verify -->
 
 ```python
-
 async def on_members_added_activity(
     self, members_added: [ChannelAccount], turn_context: TurnContext
 ):
     for member in teams_members_added:
+        // Sends a message activity to the sender of the incoming activity.
         await turn_context.send_activity(f"Welcome your new team member {member.id}")
     return
 
@@ -377,38 +395,50 @@ The following code shows an example of adding notifications to your message:
 
 # [C#](#tab/dotnet)
 
+* [SDK reference](https://learn.microsoft.com/en-us/dotnet/api/microsoft.bot.builder.activityhandler.onmessageactivityasync?view=botbuilder-dotnet-stable)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-token-app/csharp/Bots/TokenBot.cs#L52)
+
 ```csharp
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
 {
+  // Returns a simple text message.
   var message = MessageFactory.Text("You'll get a notification, if you've turned them on.");
   message.TeamsNotifyUser();
 
+  // Sends an activity to the sender of the incoming activity.
   await turnContext.SendActivityAsync(message);
 }
+
 ```
 
 # [TypeScript](#tab/typescript)
 
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-localization/nodejs/server/bot/botActivityHandler.js#L25)
+
 ```typescript
+
 this.onMessage(async (turnContext, next) => {
     let message = MessageFactory.text("You'll get a notification, if you've turned them on.");
     teamsNotifyUser(message);
-
+    // Sends an activity to the sender of the incoming activity.
     await turnContext.sendActivity(message);
 
     // By calling next() you ensure that the next BotHandler is run.
     await next();
 });
+
 ```
 
 # [Python](#tab/python)
+
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-teams-authentication/python/bots/dialog_bot.py#L36)
 
 ```python
 
 async def on_message_activity(self, turn_context: TurnContext):
     message = MessageFactory.text("You'll get a notification, if you've turned them on.")
     teams_notify_user(message)
-
+    // Sends an activity to the sender of the incoming activity.
     await turn_context.send_activity(message)
 
 ```
@@ -492,14 +522,12 @@ The general retry guidance for each status code is listed in the following table
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Create a commands menu](../create-a-bot-commands-menu.md)
+> [Bot command menus](~/bots/how-to/create-a-bot-commands-menu.md)
 
 ## See also
 
-* [Build bots for Teams](../../what-are-bots.md)
-* [Bot activity handlers](../../bot-basics.md)
-* [Send proactive messages](send-proactive-messages.md)
+* [Send proactive messages](~/bots/how-to/conversations/send-proactive-messages.md)
 * [Subscribe to conversation events](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
 * [Send and receive files through the bot](~/bots/how-to/bots-filesv4.md)
-* [Send tenant ID and conversation ID to the request headers of the bot](request-headers-of-the-bot.md)
+* [Send tenant ID and conversation ID to the request headers of the bot](~/bots/how-to/conversations/request-headers-of-the-bot.md)
 * [Localize your app](../../../concepts/build-and-test/apps-localization.md)

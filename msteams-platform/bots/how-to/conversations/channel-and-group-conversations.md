@@ -55,17 +55,23 @@ The following code shows an example of retrieving mentions:
 
 # [C#](#tab/dotnet)
 
+* [SDK reference](https://learn.microsoft.com/en-us/dotnet/api/microsoft.bot.builder.activityhandler.onmessageactivityasync?view=botbuilder-dotnet-stable)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-token-app/csharp/Bots/TokenBot.cs#L52)
+
 ```csharp
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
 {
+    // Resolves the mentions from the entities activity.
     Mention[] mentions = turnContext.Activity.GetMentions();
     if(mentions != null)
     {
         ChannelAccount firstMention = mentions[0].Mentioned;
+        // Sends a message activity to the sender of the incoming activity.
         await turnContext.SendActivityAsync($"Hello {firstMention.Name}");
     }
     else
     {
+        // Sends a message activity to the sender of the incoming activity.
         await turnContext.SendActivityAsync("Aw, no one was mentioned.");
     }
 }
@@ -73,21 +79,29 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 
 # [TypeScript](#tab/typescript)
 
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-localization/nodejs/server/bot/botActivityHandler.js#L25)
+
 ```typescript
 this.onMessage(async (turnContext, next) => {
+    // Resolves the mentions from the entities activity.
     const mentions = TurnContext.getMentions(turnContext.activity);
     if (mentions){
         const firstMention = mentions[0].mentioned;
+        // Sends a message activity to the sender of the incoming activity.
         await turnContext.sendActivity(`Hello ${firstMention.name}.`);
     } else {
+        // Sends a message activity to the sender of the incoming activity.
         await turnContext.sendActivity(`Aw, no one was mentioned.`);
     }
 
     await next();
 });
+
 ```
 
 # [JSON](#tab/json)
+
+* [SDK reference](https://learn.microsoft.com/en-us/microsoftteams/platform/resources/bot-v3/bot-conversations/bots-conv-channel#example-outgoing-message-with-user-mentioned)
 
 ```json
 {
@@ -133,6 +147,7 @@ this.onMessage(async (turnContext, next) => {
 
 ```python
 @staticmethod
+// Resolves the mentions from the entities of this activity.
 def get_mentions(activity: Activity) -> List[Mention]:
     result: List[Mention] = []
     if activity.entities is not None:
@@ -159,6 +174,9 @@ The following code shows an example of adding mentions to your messages:
 
 # [C#](#tab/dotnet)
 
+* [SDK reference](https://learn.microsoft.com/en-us/dotnet/api/microsoft.bot.builder.activityhandler.onmessageactivityasync?view=botbuilder-dotnet-stable)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L38)
+
 ```csharp
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
 {
@@ -167,15 +185,18 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
         Mentioned = turnContext.Activity.From,
         Text = $"<at>{XmlConvert.EncodeName(turnContext.Activity.From.Name)}</at>",
     };
-
+    // Returns a simple text message.
     var replyActivity = MessageFactory.Text($"Hello {mention.Text}.");
     replyActivity.Entities = new List<Entity> { mention };
-
+    // Sends an activity to the sender of the incoming activity.
     await turnContext.SendActivityAsync(replyActivity, cancellationToken);
 }
+
 ```
 
 # [TypeScript](#tab/typescript)
+
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-localization/nodejs/server/bot/botActivityHandler.js#L25)
 
 ```typescript
 this.onMessage(async (turnContext, next) => {
@@ -183,20 +204,24 @@ this.onMessage(async (turnContext, next) => {
         mentioned: turnContext.activity.from,
         text: `<at>${ new TextEncoder().encode(turnContext.activity.from.name) }</at>`,
     } as Mention;
-
+    // Returns a simple text message.
     const replyActivity = MessageFactory.text(`Hello ${mention.text}`);
     replyActivity.entities = [mention];
 
+    // Sends a message activity to the sender of the incoming activity.
     await turnContext.sendActivity(replyActivity);
 
     // By calling next() you ensure that the next BotHandler is run.
     await next();
 });
+
 ```
 
 # [JSON](#tab/json)
 
 The `text` field in the object in the `entities` array must match a portion of the message `text` field. If it doesn't, the mention is ignored.
+
+* [SDK reference](https://learn.microsoft.com/en-us/microsoftteams/platform/resources/bot-v3/bot-conversations/bots-conv-channel#example-outgoing-message-with-user-mentioned)
 
 ```json
 {
@@ -247,8 +272,9 @@ async def _mention_activity(self, turn_context: TurnContext):
             text=f"<at>{turn_context.activity.from_property.name}</at>",
             type="mention"
         )
-
+        // Returns a simple text message.
         reply_activity = MessageFactory.text(f"Hello {mention.text}")
+        // Sends a message activity to the sender of the incoming activity.
         reply_activity.entities = [Mention().deserialize(mention.serialize())]
         await turn_context.send_activity(reply_activity)
 ```
@@ -282,14 +308,10 @@ Follow the [step-by-step guide](../../../sbs-teams-conversation-bot.yml), create
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Conversation events in your Teams bot](subscribe-to-conversation-events.md)
+> [Subscribe to conversation events](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
 
 ## See also
 
-* [Build bots for Teams](../../what-are-bots.md)
-* [Authenticate users in Microsoft Teams](../../../concepts/authentication/authentication.md)
-* [Task modules](../../../task-modules-and-cards/what-are-task-modules.md)
-* [Upload file in Teams using bot](../../../sbs-file-handling-in-bot.yml)
-* [Get Teams specific context for your bot](../get-teams-context.md)
+* [Get Teams context](~/bots/how-to/get-teams-context.md)
 * [Create private channel on behalf of user](/graph/api/channel-post#example-2-create-private-channel-on-behalf-of-user)
 * [Connect a bot to Web Chat channel](/azure/bot-service/bot-service-channel-connect-webchat)
