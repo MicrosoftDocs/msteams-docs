@@ -265,6 +265,8 @@ The `text` field in the object in the `entities` array must match a portion of t
 
 # [Python](#tab/python)
 
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L29)
+
 ```python
 async def _mention_activity(self, turn_context: TurnContext):
         mention = Mention(

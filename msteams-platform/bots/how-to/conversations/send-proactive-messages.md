@@ -241,7 +241,7 @@ public class NotifyController : ControllerBase
 
 # [TypeScript](#tab/typescript)
 
-*[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/9906633fe8c90a1c48f36f30f28ce00cb94c89ed/samples/graph-proactive-installation/nodejs/bots/proactiveBot.js#L58)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/graph-proactive-installation/nodejs/bots/proactiveBot.js#L59)
 
 ```javascript
 
@@ -306,6 +306,7 @@ async def _message_all_members(self, turn_context: TurnContext):
         await turn_context.adapter.create_conversation(
             conversation_reference, get_ref, conversation_parameters
         )
+
     // Sends an activity to the sender of the incoming activity.
     await turn_context.send_activity(
         MessageFactory.text("All messages have been sent")

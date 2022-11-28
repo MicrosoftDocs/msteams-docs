@@ -496,6 +496,8 @@ When responding to the `edit` request, you should respond with a `task` response
 
 # [TypeScript/Node.js](#tab/typescript)
 
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msgext-search/nodejs/bots/teamsMessagingExtensionsSearchBot.js#L115)
+
 ```typescript
 teamChatConnector.onComposeExtensionSubmitAction((
     event: builder.IEvent,

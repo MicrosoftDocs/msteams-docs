@@ -44,7 +44,6 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-localization/nodejs/server/bot/botActivityHandler.js#L25)
 
 ```typescript
-
 export class MyBot extends TeamsActivityHandler {
     constructor() {
         super();
@@ -136,7 +135,7 @@ The following code shows an example of sending a message when a user is added to
 ```csharp
 protected override async Task OnMembersAddedAsync(IList<ChannelAccount> membersAdded, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
 {
-// Sends an activity to the sender of the incoming activity.
+  // Sends an activity to the sender of the incoming activity.
   await turnContext.SendActivityAsync(MessageFactory.Text($"Hello and welcome!"), cancellationToken);
 }
 
@@ -150,7 +149,7 @@ protected override async Task OnMembersAddedAsync(IList<ChannelAccount> membersA
     this.onMembersAddedActivity(async (context, next) => {
         await Promise.all((context.activity.membersAdded || []).map(async (member) => {
             if (member.id !== context.activity.recipient.id) {
-              // Sends an activity to the sender of the incoming activity.
+                // Sends an activity to the sender of the incoming activity.
                 await context.sendActivity(
                     `Welcome to the team ${member.givenName} ${member.surname}`
                 );

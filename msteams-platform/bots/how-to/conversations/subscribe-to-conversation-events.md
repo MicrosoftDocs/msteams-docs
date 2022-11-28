@@ -79,8 +79,9 @@ protected override async Task OnTeamsChannelCreatedAsync(ChannelInfo channelInfo
 
 <!-- From sample: botbuilder-js\libraries\botbuilder\tests\teams\conversationUpdate\src\conversationUpdateBot.ts -->
 
-```typescript
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L55)
 
+```typescript
 export class MyBot extends TeamsActivityHandler {
     constructor() {
         super();
@@ -138,6 +139,8 @@ export class MyBot extends TeamsActivityHandler {
 
 # [Python](#tab/python)
 
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L29)
+
 ```python
 async def on_teams_channel_created(
  self, channel_info: ChannelInfo, team_info: TeamInfo, turn_context: TurnContext
@@ -174,6 +177,8 @@ protected override async Task OnTeamsChannelRenamedAsync(ChannelInfo channelInfo
 ```
 
 # [TypeScript](#tab/typescript)
+
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L55)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -231,6 +236,8 @@ export class MyBot extends TeamsActivityHandler {
 
 # [Python](#tab/python)
 
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L29)
+
 ```python
 async def on_teams_channel_renamed(
  self, channel_info: ChannelInfo, team_info: TeamInfo, turn_context: TurnContext
@@ -263,6 +270,8 @@ protected override async Task OnTeamsChannelDeletedAsync(ChannelInfo channelInfo
 ```
 
 # [TypeScript](#tab/typescript)
+
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L55)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -322,6 +331,8 @@ export class MyBot extends TeamsActivityHandler {
 
 # [Python](#tab/python)
 
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L29)
+
 ```python
 async def on_teams_channel_deleted(
  self, channel_info: ChannelInfo, team_info: TeamInfo, turn_context: TurnContext
@@ -342,7 +353,7 @@ The following code shows an example of channel restored event:
 
 # [C#](#tab/dotnet)
 
-*[SDK refernce](https://learn.microsoft.com/en-us/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamschannelrestoredasync?view=botbuilder-dotnet-stable)
+* [SDK refernce](https://learn.microsoft.com/en-us/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamschannelrestoredasync?view=botbuilder-dotnet-stable)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msteams-application-qbot/Source/Microsoft.Teams.Apps.QBot.Web/Bot/BotActivityHandler.cs#L395)
 
 ```csharp
@@ -356,7 +367,7 @@ protected override async Task OnTeamsChannelRestoredAsync(ChannelInfo channelInf
 
 # [TypeScript](#tab/typescript)
 
-<!-- From sample: botbuilder-js\libraries\botbuilder\tests\teams\conversationUpdate\src\conversationUpdateBot.ts -->
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L55)
 
 ```typescript
 
@@ -416,6 +427,8 @@ export class MyBot extends TeamsActivityHandler {
 ```
 
 # [Python](#tab/python)
+
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L29)
 
 ```python
 async def on_teams_channel_restored(
@@ -479,6 +492,8 @@ protected override async Task OnTeamsMembersAddedAsync(IList<TeamsChannelAccount
 ```
 
 # [TypeScript](#tab/typescript)
+
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L55)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -596,6 +611,8 @@ The message your bot receives when the bot is added to a one-to-one chat.
 
 # [Python](#tab/python)
 
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L29)
+
 ```python
 async def on_teams_members_added(
  self, teams_members_added: [TeamsChannelAccount], turn_context: TurnContext
@@ -652,8 +669,9 @@ protected override async Task OnTeamsMembersRemovedAsync(IList<ChannelAccount> m
 
 # [TypeScript](#tab/typescript)
 
-```typescript
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L55)
 
+```typescript
 export class MyBot extends TeamsActivityHandler {
     constructor() {
         super();
@@ -721,6 +739,8 @@ The `channelData` object in the following payload example is based on adding a m
 
 # [Python](#tab/python)
 
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L29)
+
 ```python
 async def on_teams_members_removed(
  self, teams_members_removed: [TeamsChannelAccount], turn_context: TurnContext
@@ -755,6 +775,8 @@ protected override async Task OnTeamsTeamRenamedAsync(TeamInfo teamInfo, ITurnCo
 ```
 
 # [TypeScript](#tab/typescript)
+
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L55)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -810,6 +832,8 @@ export class MyBot extends TeamsActivityHandler {
 ```
 
 # [Python](#tab/python)
+
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L29)
 
 ```python
 // Bot is notified when the team is renamed.
@@ -927,6 +951,8 @@ protected override async Task OnTeamsTeamrestoredAsync(TeamInfo teamInfo, ITurnC
 
 # [TypeScript](#tab/typescript)
 
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L55)
+
 ```typescript
 export class MyBot extends TeamsActivityHandler {
     constructor() {
@@ -982,6 +1008,8 @@ export class MyBot extends TeamsActivityHandler {
 
 # [Python](#tab/python)
 
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L29)
+
 ```python
 // Invoked when a Team Restored event activity is received from the connector. Team Restored corresponds to the user restoring a team.
 async def on_teams_team_restored(
@@ -1015,6 +1043,8 @@ protected override async Task OnTeamsTeamArchivedAsync(TeamInfo teamInfo, ITurnC
 ```
 
 # [TypeScript](#tab/typescript)
+
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L55)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -1071,6 +1101,8 @@ export class MyBot extends TeamsActivityHandler {
 
 # [Python](#tab/python)
 
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L29)
+
 ```python
 // Invoked when a Team Archived event activity is received from the connector. Team Archived correspond to the user archiving a team
 async def on_teams_team_archived(
@@ -1104,6 +1136,8 @@ protected override async Task OnTeamsTeamUnarchivedAsync(TeamInfo teamInfo, ITur
 ```
 
 # [TypeScript](#tab/typescript)
+
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-suggested-actions/nodejs/bots/suggestedActionsBot.js#L51)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -1159,6 +1193,8 @@ export class MyBot extends TeamsActivityHandler {
 ```
 
 # [Python](#tab/python)
+
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L29)
 
 ```python
 // Invoked when a Team Unarchived event activity is received from the connector. Team Unarchived correspond to the user unarchiving a team.
@@ -1282,6 +1318,8 @@ export class MyBot extends TeamsActivityHandler {
 ```
 
 # [Python](#tab/python)
+
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L29)
 
 ```python
 // Override this in a derived class to provide logic for when reactions to a previous activity are added to the conversation.
@@ -1558,6 +1596,8 @@ async onInstallationUpdateActivity(context: TurnContext) {
 ```
 
 # [Python](#tab/python)
+
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L29)
 
 ```python
 // Override this in a derived class to provide logic specific to InstallationUpdate activities.
