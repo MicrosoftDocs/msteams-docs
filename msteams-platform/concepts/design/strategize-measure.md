@@ -14,7 +14,6 @@ ms.author: surbhigupta
 After an app is distributed in an organization or in Teams public app store, it's important to track how users are interacting with the app. With growing app users, the number of app installs might not be a relevant metric.
 
 It's important to plan for the kind of data, metrics, and events you want to monitor as you develop your Teams app. Your product’s North Star metric would guide you in establishing the right set of metrics, core user action, and key events relevant for your business.
-
 :::row:::
     :::column span="":::
     To have long-term sustainability in the ecosystem an app must have good growth of new users. The second attribute is engagement and retention. Users must come back to the app and continue to find value in it and use it. Lastly, the third quality is revenue. The app must provide sufficient value to users, such that there is willingness to pay. Apps must possess all three of these qualities to be successful long-term on the platform. If any of these three qualities are missing in an app, it has a low probability of success on the platform.
