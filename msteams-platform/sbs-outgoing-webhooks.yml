@@ -119,7 +119,7 @@ items:
 
        1. Update the **"contoso"** to "M365x712764" and HMAC in **AuthProvider.cs** file.  
 
-           :::image type="content" source="./assets/images//sbs-outgoing-webhooks/update-hmac2.png" alt-text="Screenshot to update Contoso to "M365x712764" and HMAC.":::
+           :::image type="content" source="./assets/images//sbs-outgoing-webhooks/update-hmac2.png" alt-text="Screenshot to update Contoso to M365x712764 and HMAC.":::
       
        1. Press **F5** to run the project.
 
