@@ -67,7 +67,6 @@ items:
 
     1. Choose the **Apps** tab from the navigation bar.
 
-       ![Choose](~/assets/images/sbs-outgoing-webhooks/app-selection.png)
        :::image type="content" source="..assets/images/sbs-outgoing-webhooks/app-selection.png" alt-text="Screenshot of choosing app from navigation highlighted in red.":::
 
     1. Use ngrok to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
@@ -78,7 +77,7 @@ items:
 
     1. From the window's lower-right corner, select **Create an Outgoing Webhook**.
 
-       ![Outgoing](~/assets/images/sbs-outgoing-webhooks/create-outgoing-webhook.png).
+       :::image type="content" source=".../assets/images/sbs-outgoing-webhooks/create-outgoing-webhook.png" alt-text="Screenshot of select an outgoing webhooks.":::
 
     1. Enter the following details:
      
@@ -97,13 +96,14 @@ items:
     1. Select **Create**. The Outgoing Webhook is added to the current team's channel.
 
         ![Create Outgoing Webhook](~/assets/images/sbs-outgoing-webhooks/select.png)
+        :::image type="content" source=".../assets/images/sbs-outgoing-webhooks/select.png" alt-text="Screenshot to select outgoing webhook to the current Team's channel.":::
 
     1. A `Hash-based Message Authentication Code (HMAC)` dialogue box appears. You can use the security token in **AuthProvider.cs** file to authenticate calls between Teams and any designated outside services. 
 
         > [!NOTE]
         > The Outgoing Webhook is available to the team's users, only if the URL is valid and the server, and client authentication tokens are equal. For example, an HMAC handshake.
                     
-         ![Code](~/assets/images/sbs-outgoing-webhooks/security-token.png)   
+         :::image type="content" source=".../assets/images/sbs-outgoing-webhooks/security-token.png" alt-text="Screenshot to add security token.":::   
 
 - title: Build and run the service
   durationInMinutes: 1
@@ -112,25 +112,25 @@ items:
 
        1. Go to **File** > **Open** > **Project/Solution**.
     
-           ![Open file](~/assets/images/sbs-messagingextension-action/VSopenfile.png)
+           :::image type="content" source=".../assets/images/sbs-messagingextension-action/VSopenfile.png" alt-text="Screenshot to open a project or solution.":::
 
        1. Select **WebhookSampleBot.sln** file from **csharp** folder.
 
-           ![Solution File](~/assets/images//sbs-outgoing-webhooks/open-project.png)
+           :::image type="content" source=".../assets/images//sbs-outgoing-webhooks/open-project.png" alt-text="Screenshot to select WebhookSampleBot.sln from csharp folder.":::
 
        1. Update the **"contoso"** to "M365x712764" and HMAC in **AuthProvider.cs** file.  
 
-           ![update](~/assets/images//sbs-outgoing-webhooks/update-hmac2.png)
+           :::image type="content" source=".../assets/images//sbs-outgoing-webhooks/update-hmac2.png" alt-text="Screenshot to update Contoso to "M365x712764" and HMAC.":::
       
        1. Press **F5** to run the project.
 
        1. Select **Yes** if the following dialog appears:
 
-           ![Trust Certificate](~/assets/images//sbs-outgoing-webhooks/outgoing-webhook-certificate.png)
+           :::image type="content" source=".../assets/images//sbs-outgoing-webhooks/outgoing-webhook-certificate.png" alt-text="Screenshot to select yes from the dialog window.":::
 
           A webpage displays local host information.
-
-           ![App ready](~/assets/images//sbs-outgoing-webhooks/outgoing-webhooks-ready.png)                  
+  
+           :::image type="content" source=".../assets/images//sbs-outgoing-webhooks/outgoing-webhooks-ready.png" alt-text="Screenshot of the image that displays host information.":::                
 
 - title: Interact with the app in Teams
   durationInMinutes: 1
@@ -141,7 +141,7 @@ items:
 
     1. Enter **\@mention** the name of the Outgoing Webhook to invoke it in the channel. 
 
-       ![message](~/assets/images/sbs-outgoing-webhooks/type-mention.png)
+       :::image type="content" source=".../assets/images/sbs-outgoing-webhooks/type-mention.png" alt-text="Screenshot of the image to enter the name of outgoing webhook.":::
 
     1. Select **send**.
 
@@ -150,14 +150,14 @@ items:
 
     1. The meeting chat displays new message.
 
-       ![ready](~/assets/images/sbs-outgoing-webhooks/output-result.png)
+       :::image type="content" source=".../assets/images/sbs-outgoing-webhooks/output-result.png" alt-text="Screenshot of the image to display the meeting chat.":::
        
 - title: Complete challenge
   durationInMinutes: 1
   content: |
     Did you come up with something like this?
 
-       ![ready](~/assets/images/sbs-outgoing-webhooks/output-result1.png)
+       :::image type="content" source=".../assets/images/sbs-outgoing-webhooks/output-result1.png" alt-text="Screenshot of the image to display final output.":::
 
 - content: |
     You've completed the tutorial to get started with an Outgoing Webhook app!
