@@ -453,8 +453,8 @@ If you don't have the required SDK, and want to invoke external APIs in your cod
 
 TeamsFx supports two ways to help you send notifications from your system to Teams:
 
-* Creating a Teams bot app.
-* Creating Teams Incoming Webhook.
+* Create a Teams bot app.
+* Create Teams Incoming Webhook.
 
 In the following table, you can see the comparison of the two different ways:
 
@@ -493,7 +493,7 @@ You can resolve this in the following ways:
 * Send a message to your personal bot or mention your bot in groupchat, or channel, which helps you to reach the bot service again with correct installation information.
 * Uninstall the bot app from Teams then redebug or relaunch it. You can resend the installation event to bot service.
 
-Notification target connections are stored in the persistence storage. If you're using the default local file storage, all installations will be stored under `bot/.notification.localstore.json`.
+Notification target connections are stored in the persistence storage. If you're using the default local file storage, all installations are stored under `bot/.notification.localstore.json`.
 
 > [!NOTE]
 > For more information to add your own storage, see [add storage](#add-storage).
@@ -521,7 +521,7 @@ You can resolve this by cleaning your notification storage. After cleaning, noti
 
 <summary><b>Why notification target is lost after restarting or redeploying the bot app?</b></summary>
 
-Notification target connections are stored in the persistence storage. If you're using the default local file storage, Azure web app and Azure Functions will clean up the local file during a restart or redeploy. You can also uninstall the bot from Teams, then install it to again add connections to the storage. Using your own shared storage in production environment is recommended.
+Notification target connections are stored in the persistence storage. If you're using the default local file storage, Azure web app and Azure Functions clean up the local file during a restart or redeploy. You can also uninstall the bot from Teams, then install it to again add connections to the storage. Using your own shared storage in production environment is recommended.
 
 <br>
 
@@ -531,7 +531,7 @@ Notification target connections are stored in the persistence storage. If you're
 
 <summary><b>Why is undefined error returned when using the API `findChannel()`?</b></summary>
 
-You can encounter an undefined error, when the bot app is installed into other channels instead of the **General** channel. To fix this error, you can uninstall the bot app from Teams and redebug and relaunch it. Ensure that the bot app is installed into the `General` channel after you've redebug and relaunched.
+You can encounter an undefined error, when the bot app is installed into other channels instead of the **General** channel. To fix this error, you can uninstall the bot app from Teams and redebug and relaunch it. After you've redebug and relaunched, ensure that the bot app is installed into the `General` channel .
 
 <br>
 
@@ -577,7 +577,7 @@ Perform the following steps to extend your notification bot to support command a
 
 <summary><b>How to extend my notification bot to support adaptive card actions?</b></summary>
 
-To add adaptive card actions in notification bot, see the following [steps](workflow-bot-in-teams.md#add-card-actions).
+To add adaptive card actions in notification bot, see the [steps](workflow-bot-in-teams.md#add-card-actions).
 
 <br>
 
