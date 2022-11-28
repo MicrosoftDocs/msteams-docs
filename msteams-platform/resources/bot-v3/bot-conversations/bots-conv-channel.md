@@ -192,4 +192,4 @@ Your bot can do more than send and receive messages in groups and teams. For ins
 
 ## See also
 
-[Bot Framework samples](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)
+[Bot Framework samples](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/README.md).
