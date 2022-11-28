@@ -12,7 +12,7 @@ ms.date: 11/29/2021
 
 TeamsFx helps to reduce your tasks by using Microsoft Teams single sign-on (SSO) and accessing cloud resources down to single line statements with zero configuration. You can use TeamsFx SDK in the browser and Node.js environments. TeamsFx core functionalities can be accessed in client and server environments. You can write user authentication code for:
 
-* Teams tab
+* Teams Tab
 * Teams bot
 * Azure Function
 
