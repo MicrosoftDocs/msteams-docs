@@ -49,6 +49,13 @@ With Microsoft Graph APIs for calls and online meetings, Teams apps can now inte
 
 You can use the Teams bot APIs to get information for members of a chat or team. See [changes to Teams bot APIs for fetching team or chat members](~/resources/team-chat-member-api-changes.md).
 
+## Add SSO authentication to your conversation bots
+
+You can add single sign-on authentication to your conversation bot using the following steps:
+
+* [Create Teams conversation bot](../sbs-teams-conversation-bot.yml)
+* [Configure your bot app in Azure AD](/bots/how-to/authentication/bot-sso-register-aad)
+
 <!--- TBD: For quick scanning, see if the above information can be itemized as a list.
 --->
 
@@ -68,11 +75,11 @@ You can use the Teams bot APIs to get information for members of a chat or team.
 
 ## See also
 
-* [Create a bot for Teams](../resources/bot-v3/bots-create.md)
 * [How Microsoft Teams bots work](/azure/bot-service/bot-builder-basics-teams)
-* [Register calls and meetings bot for Microsoft Teams](~/bots/calls-and-meetings/registering-calling-bot.md)
-* [Add authentication to your Teams bot](~/bots/how-to/authentication/add-authentication.md)
-* [Bot activity handlers](~/bots/bot-basics.md)
-* [Conversation events in your Teams bot](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
+* [Designing your Microsoft Teams bot](design/bots.md)
+* [Create a bot for Teams](../resources/bot-v3/bots-create.md)
+* [Test and debug your Microsoft Teams bot](../resources/bot-v3/bots-test.md)
 * [Build your first bot app using JavaScript](../sbs-gs-bot.yml)
-* [Build notification bot with JavaScript](../sbs-gs-notificationbot.yml)
+* [Add authentication to your Teams bot](how-to/authentication/add-authentication.md)
+* [Use task modules from bots](../task-modules-and-cards/task-modules/task-modules-bots.md)
+* [Create Incoming Webhooks](../webhooks-and-connectors/how-to/add-incoming-webhook.md)
