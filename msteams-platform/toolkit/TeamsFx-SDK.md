@@ -765,8 +765,7 @@ This section provides several code snippets for other scenarios that are related
       ```
 
   > [!NOTE]
-  > For more information on sample to access SQL database in Azure Function, see [share-now sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/share-now). The
-  > The `getTediousConnectionConfig` function has been deprecated, we recommend you to compose your own tedious configuration for better flexibility.
+  > For more information on sample to access SQL database in Azure Function, see [share-now sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/share-now). The `getTediousConnectionConfig` function has been deprecated, we recommend you to compose your own tedious configuration for better flexibility.
 
 </details>
 
