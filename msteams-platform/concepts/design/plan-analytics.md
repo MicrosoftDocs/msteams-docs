@@ -7,7 +7,9 @@ ms.localizationpriority: high
 ms.author: surbhigupta
 ---
 
-# Plan analytics for your Teams app
+# Overview
+
+<!--Plan analytics for your Teams app-->
 
 As a developer, you build an app for millions of Microsoft Teams users to achieve specific business or customer goals. For this purpose, you distribute it using one or more of the many distribution options available to you. After the app is published, you'll want to measure how your app is performing in the real-world.
 
