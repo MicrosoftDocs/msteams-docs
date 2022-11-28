@@ -168,6 +168,7 @@ Besides the obvious metrics in the SaaS world such as daily, weekly, monthly act
 
 Next, see how you should methodically craft your data instrumentation strategy and decide what to measure based on which specific insights you want to derive from your Teams app usage.
 
-## See also
+## Next step
 
-[Design instrumentation data for your Teams app](strategize-measure.md)
+> [!div class="nextstepaction"]
+[ Strategize and decide what to measure](strategize-measure.md)
