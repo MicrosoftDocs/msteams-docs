@@ -7,7 +7,9 @@ ms.localizationpriority: high
 ms.author: surbhigupta
 ---
 
-# Design instrumentation data for your Teams app
+# Strategize and decide what to measure
+
+<!--Design instrumentation data for your Teams app-->
 
 After an app is distributed in an organization or in Teams App store, it's important to track how users are interacting with the app. With growing app users, the number of app installs might not be a relevant metric.
 

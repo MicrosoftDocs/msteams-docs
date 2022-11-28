@@ -7,7 +7,9 @@ ms.localizationpriority: high
 ms.author: surbhigupta
 ---
 
-# Implement your analytics service
+# Plan code instrumentation using analytics service
+
+<!--Implement your analytics service-->
 
 Your application instrumentation can be captured and analyzed in any analytics service of your choice. It's recommended that you use a analytics service that allows tracking custom events and reporting it with custom context-based attributes.
 

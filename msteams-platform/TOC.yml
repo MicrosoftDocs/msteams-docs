@@ -64,11 +64,11 @@
     href: concepts/design/plan-responsive-tabs-for-teams-mobile.md
   - name: Plan analytics
     items:
-      - name: Plan Analytics for your Teams app
+      - name: Overview
         href: concepts/design/plan-analytics.md
-      - name: Design instrumentation data for your Teams app
+      - name: Strategize and decide what to measure
         href: concepts/design/teams-app-telemetry.md
-      - name: Implement your analytics service
+      - name: Plan code instrumentation using analytics service
         href: concepts/design/add-analytics.md
   - name: Plan to monetize your app
     href: concepts/design/plan-to-monetize.md
