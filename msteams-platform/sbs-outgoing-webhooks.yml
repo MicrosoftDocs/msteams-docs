@@ -63,11 +63,12 @@ items:
   content: |
     1. Select the required team, and then select **Manage team** from the (•••) dropdown menu.
 
-       ![Manage](~/assets/images/sbs-outgoing-webhooks/manage-team.png)
+       :::image type="content" source="..assets/images/sbs-outgoing-webhooks/manage-team.png" alt-text="Screenshot shows the sample to select the Manage Teams highlighted in red.":::
 
     1. Choose the **Apps** tab from the navigation bar.
 
        ![Choose](~/assets/images/sbs-outgoing-webhooks/app-selection.png)
+       :::image type="content" source="..assets/images/sbs-outgoing-webhooks/app-selection.png" alt-text="Screenshot of choosing app from navigation highlighted in red.":::
 
     1. Use ngrok to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
 
