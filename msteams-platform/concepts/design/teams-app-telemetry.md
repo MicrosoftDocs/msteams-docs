@@ -51,7 +51,7 @@ Instrumentation designed to improve adoption should aim at improving discoverabi
 > - Measure usage of app in collaborative scope and the time taken to discover your app features in collaborative or meeting scope. If the usage is low or time taken is high, socialize said features better in app or via marketing efforts.
 > - While measuring overall adoption is good to start, measure adoption at a platform capability and feature level.
 
-| Instrumentation | Insights |
+| Measure | Insights |
 | --- | --- |
 | • Users installing the app in R1, R7, R14, R28 days. <br> • # Sign-ins (if app has sign-in). | • App level adoption broken down at tenant, region, and segment. <br> • Segment users based on Azure AD profile. <br> • Segment by tenant and org name. |
 | • Average time taken to first use (click on tab, bot, Adaptive Card, and meeting). | • Report at a feature or platform capability level to measure feature level adoption. |
@@ -75,7 +75,7 @@ Engagement intends to measure the intensity and depth of interaction between the
 > - Core action is specific to your business, and you should have one core action correlating to your product’s North Star. Don't have more than 2-3 core actions.
 > - Key business events are auxiliary actions that users may take in their journey towards performing the core action. Key business events can help prepare a funnel view on how many users are going through the ideal user journey and determine points where drop offs are high.
 
-| Instrumentation | Comments |
+| Measure | Comments |
 | --- | --- |
 | • # App users (R7, R14, R28). – DAU and MAU. <br> • # App users trendline. | • App and feature level engagement <br> • Segment users based on Azure AD profile. <br> • Report by client –  desktop, web, and mobile. <br> • Segment by tenant and org name. <br> • Segment by product feature (active users at feature level). |
 | • % of users using key features in Teams app vs. using the same feature in a web or native app. | • Indicates discoverability, ease of use, and value of using the feature within Teams app. <br> • Report at app feature level. |
@@ -101,7 +101,7 @@ User retention measures how frequent users come back to use the product. It esse
 > - Users who perform creation events in your app have higher retention compared to users who passively consume information via notifications. Creation events depend on your business. For example, creating a ticket, creating a new post, a project board, etc.
 > - Apps used multiple times (>5 times) in a month have a better retention month over month. Recurring use cases with more frequency of usage improve retention.
 
-| Instrumentation | Insight |
+| Measure | Insight |
 | --- | --- |
 | • New user retention cohort analysis (week over week, month over month). | • Retention breakdown by client – Teams desktop, web, and mobile app, non-Teams web app. <br> • Drill down to a tenant level. |
 | • User churn in 14 days, 28 days, 56 days, 72 days. | • User churn. <br> • Drill down to a tenant level. <br> • Platform capability and feature drill-down. <br> • Churn breakdown by client: Teams desktop, web, and mobile app, non-Teams web app. |
@@ -123,7 +123,7 @@ Happiness intends to measure your user’s attitude towards your product and can
 > - Integrate product driven feedback capture and rating mechanisms for users to easily submit feedback and rating in the flow after completing core action.
 > - Provide adequate product support, helpdesk for users to get their queries clarified, and report bugs and feedback.
 
-| Instrumentation | Insight |
+| Measure | Insight |
 | --- | --- |
 | • App Net Promoter Score (NPS) from app source. | • Net Promoter Score. <br> • Azure AD and tenant information. |
 | • % of happy or satisfied users. | • Drill down at tenant level. <br> • Report trend over time. |
@@ -133,4 +133,4 @@ Happiness intends to measure your user’s attitude towards your product and can
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Plan for Teams app context and attributes](teams-app-context-attributes.md)
+> [Plan code instrumentation using analytics service](add-analytics.md)

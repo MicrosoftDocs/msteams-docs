@@ -1,5 +1,5 @@
 ---
-title: Plan analytics for your Teams app
+title: Analytics overview
 author: heath-hamilton
 description: Learn to plan and build analytics for your Teams app.
 ms.topic: conceptual
