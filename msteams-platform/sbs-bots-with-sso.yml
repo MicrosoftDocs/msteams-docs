@@ -203,8 +203,8 @@ items:
   
         :::image type="content" source="~/assets/images/bots/selectchannel_1.png" alt-text="Screenshot of the Azure portal. The menu entry titled channels.":::
 
-    1. Select **Microsoft Teams** :::image type="icon" source="~/assets/images/bots/teamsicon.png" alt-text="Screenshot of the Teams icon.". 
-    
+    1. Select **Microsoft Teams**.
+
         :::image type="content" source="~/assets/images/bots/select-microsoft-teams_1.png" alt-text="Screenshot of the Azure portal. The menu entry titled Teams.":::
 
     1. Select the checkbox to accept the **Terms of Service**.
@@ -264,7 +264,7 @@ items:
 
     1. From the left pane, select **Authentication** to set a redirect URI.
 
-         :::image type="content" source="~/assets/images/bots/select-authentication_1.png" alt-text="Select Authentication":::
+         :::image type="content" source="~/assets/images/bots/select-authentication_1.png" alt-text="Screenshot of the Azure portal. The menu entry titled authentication.":::
 
     1. In **Platform configurations**, select **Add a platform** to choose the platform on which you want to host the bot app. 
 
