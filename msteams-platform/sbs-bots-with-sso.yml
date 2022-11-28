@@ -117,6 +117,7 @@ items:
 
     1. Enter the following details to create Azure bot.
 
+
         1. Enter required bot handle name in **Bot handle**.
     
         1. Select your **Subscription** and **Resource group** from the dropdown list.
@@ -148,11 +149,11 @@ items:
 
     1. Select **Go to resource**.
 
-        :::image type="content" source="~/assets/images/bots/gotoresource_1.png" alt-text="Resource":::
+        :::image type="content" source="~/assets/images/bots/gotoresource_1.png" alt-text="Screenshot of the Azure portal. The menu entry titled go to resource.":::
 
        Your Azure bot is created. You can see the **Resource group** and **Subscription ID** details in the Azure bot.
 
-         :::image type="content" source="~/assets/images/bots/Azurebotresource_1.png" alt-text="Azure bot resource created":::
+         :::image type="content" source="~/assets/images/bots/Azurebotresource_1.png" alt-text="Screenshot of the Azure bot details in Azure portal.":::
 
     **To create client secret**
 
@@ -160,18 +161,18 @@ items:
 
     1. In the left pane, select **Configuration**.
 
-        :::image type="content" source="~/assets/images/bots/selectconfigure_1.png" alt-text="Select Configure":::
+        :::image type="content" source="~/assets/images/bots/selectconfigure_1.png" alt-text="Screenshot of the Azure portal. The menu entry titled configuration.":::
 
        > [!Tip]
        > Save the **Microsoft App ID** or **Client ID** for future reference.
     
     1. Next to **Microsoft App ID**, select **Manage**.
 
-       :::image type="content" source="~/assets/images/manage-bot-label_1.png" alt-text="manage bot":::
+       :::image type="content" source="~/assets/images/manage-bot-label_1.png" alt-text="Screenshot of the Azure portal. The menu entry titled manage.":::
 
     1. In the **Client secrets** section, select **New client secret**.
 
-          :::image type="content" source="~/assets/images/bots/newclientsecret_2.png" alt-text="Screenshot showing the selection of new client secret.":::
+          :::image type="content" source="~/assets/images/bots/newclientsecret_2.png" alt-text="Screenshot of the Azure portal. The menu entry titled new client secret.":::
 
        The **Add a client secret** window appears.
 
@@ -179,7 +180,7 @@ items:
     
     1. Select **Add**.
  
-        :::image type="content" source="~/assets/images/bots/addclientsecret_1.png" alt-text="Screenshot showing adding client secret to app.":::
+        :::image type="content" source="~/assets/images/bots/addclientsecret_1.png" alt-text="Screenshot of the Azure portal. The menu entry titled add client secret to the app.":::
 
     1. In the **Value** column, select copy to clipboard icon to copy the value details. 
 
@@ -192,29 +193,29 @@ items:
 
     1. Select **Home**.
 
-        :::image type="content" source="~/assets/images/bots/selecthome_1.png" alt-text="Home page":::
+        :::image type="content" source="~/assets/images/bots/selecthome_1.png" alt-text="Screenshot of the Azure portal. The menu entry titled home.":::
 
     1. Select your bot from **Recent resources**.
 
-        :::image type="content" source="~/assets/images/bots/select-recent-resources_1.png" alt-text="Select recent resources":::
+        :::image type="content" source="~/assets/images/bots/select-recent-resources_1.png" alt-text="Screenshot of the Azure portal. The menu entry titled with your recent resources.":::
 
     1. Select **Channels** in the left pane. 
   
-        :::image type="content" source="~/assets/images/bots/selectchannel_1.png" alt-text="Select recent":::
+        :::image type="content" source="~/assets/images/bots/selectchannel_1.png" alt-text="Screenshot of the Azure portal. The menu entry titled channels.":::
 
-    1. Select **Microsoft Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>. 
+    1. Select **Microsoft Teams** :::image type="icon" source="~/assets/images/bots/teamsicon.png" alt-text="Screenshot of the Teams icon.". 
     
-        :::image type="content" source="~/assets/images/bots/select-microsoft-teams_1.png" alt-text="Select Microsoft Teams":::
+        :::image type="content" source="~/assets/images/bots/select-microsoft-teams_1.png" alt-text="Screenshot of the Azure portal. The menu entry titled Teams.":::
 
     1. Select the checkbox to accept the **Terms of Service**.
     
     1. Select **Agree**.
 
-        :::image type="content" source="~/assets/images/bots/Terms-of-service_1.png" alt-text="Terms":::
+        :::image type="content" source="~/assets/images/bots/Terms-of-service_1.png" alt-text="Screenshot of the Azure portal. The menu entry titled agree.":::
 
     1. Select **Apply**.
 
-        :::image type="content" source="~/assets/images/bots/apply_1.png" alt-text="Screenshot showing the option apply":::
+        :::image type="content" source="~/assets/images/bots/apply_1.png" alt-text="Screenshot of the Azure portal. The menu entry titled apply.":::
     
     **To create tunnel for local web server**
 
@@ -230,7 +231,7 @@ items:
 
     1. From ngrok, copy the HTTPS URL.
 
-       :::image type="content" source="../msteams-platform/assets/images/ngrok-url1_1.png" alt-text="ngrok HTTPS URL":::
+       :::image type="content" source="../msteams-platform/assets/images/ngrok-url1_1.png" alt-text="Screenshot of the ngrok portal. The menu entry titled HTTPS URL.":::
 
         > [!NOTE]
         > The HTTPS URL in your ngrok is your fully qualified domain name.
@@ -240,11 +241,11 @@ items:
 
     1. In **Settings** for the Azure bot that you created, select **Configuration**.
 
-        :::image type="content" source="~/assets/images/bots/select-configuration_1.png" alt-text="Select Configuration":::
+        :::image type="content" source="~/assets/images/bots/select-configuration_1.png" alt-text="Screenshot of the Azure portal. The menu entry titled configuration.":::
 
     1. In **Messaging endpoint**, use the HTTPS URL available from ngrok and at the end of the URL add **/api/messages**.
 
-        :::image type="content" source="~/assets/images/bots/messagingURL_2.png" alt-text="Messaging endpoint":::
+        :::image type="content" source="~/assets/images/bots/messagingURL_2.png" alt-text="Screenshot of the Azure portal. The menu entry titled messaging endpoint.":::
 
     1. Select **Apply**.
 
