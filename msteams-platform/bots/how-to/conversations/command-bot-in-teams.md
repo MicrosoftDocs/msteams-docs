@@ -161,14 +161,14 @@ To handle the command, perform the following steps:
 
 1. Provide the `triggerPatterns` that can trigger the command handler. It's the command name defined in your manifest, or you can use RegExp to handle a complex command such as with some options in the command message.
 
-1. You can implement `handleCommandReceived` to handle the command and return a response that is used to notify the users.
+1. You can implement `handleCommandReceived` to handle the command and return a response that is used to notify the users:
 
    * If needed you can retrieve useful information for the conversation from the `context` parameter.
 
    * If needed parse command input:
 
      * `message.text`: Use the input message.
-     * `message.matches`: use the capture groups, if you use the RegExp for `triggerPatterns` to trigger the command.
+     * `message.matches`: Use the capture groups, if you use the RegExp for `triggerPatterns` to trigger the command.
 
 <br>
 
