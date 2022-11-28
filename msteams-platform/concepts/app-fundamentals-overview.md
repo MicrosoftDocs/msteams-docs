@@ -38,7 +38,7 @@ Understanding the user and their concern are the first indicators of how a Teams
 
 * **Map your use cases**: Map common use cases to Teams features based on requirements, such as sharing, collaborating, workflows, relevant social platforms, and more.
 
-* **Plan analytics and telemetry**: Plan to analyze the analysis and telemetry data against your business goals, take corrective action by fixing issues, and intervening in the user journey or plan further enhancements to your app.
+* **Plan analytics for your Teams app**: Plan to analyze the analysis and telemetry data against your business goals, take corrective action by fixing issues, and intervening in the user journey or plan further enhancements to your app.
 
 * **Plan responsive tabs for Teams mobile**: It covers common scenarios and helps with planning apps for Teams mobile.
 
@@ -57,6 +57,8 @@ Understanding the user and their concern are the first indicators of how a Teams
     Together, these capabilities bring your app solution to life.
 
 * **Integrate device capabilities**: You can integrate the native device capabilities in your app, such as camera, QR or barcode scanner, photo gallery, microphone, and location.
+
+* **Instrument code for analytics**: Instrument your Teams app code with analytics markers (also known as instrumentation markers) to measure both aggregate and user-specific metrics for your app when app users use it.
 
 ### Post-build
 
