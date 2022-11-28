@@ -116,7 +116,7 @@ Happiness intends to measure your user’s attitude towards your product and can
 >
 > - Happiness should be measured in context at right time and contextualized to user. Sending a generic survey on a fixed date might not give accurate happiness measurement as users might not remember their experience.
 > - Integrate product driven feedback capture and rating mechanisms for users to easily submit feedback and rating in the flow after completing core action.
-> - Provide adequate product support, helpdesk for users to get their queries clarified, and report bugs and feedback.
+> - Provide adequate product support, helpdesk for users to get their queries clarified, report bugs and provide feedback.
 
 | Measure | Insight |
 | --- | --- |
