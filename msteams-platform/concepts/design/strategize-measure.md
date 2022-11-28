@@ -133,4 +133,4 @@ Happiness intends to measure your user’s attitude towards your product and can
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Plan code instrumentation using analytics service](add-analytics.md)
+> [Plan code instrumentation using analytics service](plan-code-instrumentation.md)

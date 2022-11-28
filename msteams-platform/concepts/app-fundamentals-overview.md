@@ -102,4 +102,4 @@ The following list helps to identify the availability of GCC, GCC-High, and DOD 
 * [Planning checklist](../concepts/design/planning-checklist.md)
 * [Considerations for Teams integration](../samples/integrating-web-apps.md)
 * [Build your first Microsoft Teams app](../build-your-first-app/build-first-app-overview.md)
-* [Plan analytics for your Teams app](design/plan-analytics.md)
+* [Plan analytics for your Teams app](design/overview-analytics.md)

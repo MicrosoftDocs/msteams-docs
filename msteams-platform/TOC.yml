@@ -65,11 +65,11 @@
   - name: Plan analytics
     items:
       - name: Overview
-        href: concepts/design/plan-analytics.md
+        href: concepts/design/overview-analytics.md
       - name: Strategize and decide what to measure
-        href: concepts/design/teams-app-telemetry.md
+        href: concepts/design/strategize-measure.md
       - name: Plan code instrumentation using analytics service
-        href: concepts/design/add-analytics.md
+        href: concepts/design/plan-code-instrumentation.md
   - name: Plan to monetize your app
     href: concepts/design/plan-to-monetize.md
     displayName: Subscription, In-app purchases, Free trials, Test preview

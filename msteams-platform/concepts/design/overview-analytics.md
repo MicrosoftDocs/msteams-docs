@@ -170,4 +170,4 @@ Next, see how you should methodically craft your data instrumentation strategy a
 
 ## See also
 
-[Design instrumentation data for your Teams app](teams-app-telemetry.md)
+[Design instrumentation data for your Teams app](strategize-measure.md)
