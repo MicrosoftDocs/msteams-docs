@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Teams bots are conversational bots that run repetitive automated tasks done by the users, such as customer service. The user needs to sign in multiple times without single sign-on (SSO) authentication. With SSO authentication methods, the users don't need to sign-in to the bot multiple times.
+    Microsoft Teams bots are conversational bots that run repetitive automated tasks done by the users, such as customer service. The user needs to sign in multiple times without single sign-on (SSO) authentication. With SSO authentication methods, the users don't need to sign in to the bot multiple times.
     
     A bot behaves differently depending on the conversation it's involved in:
 
@@ -23,7 +23,7 @@ items:
     
     This step-by-step guide helps you to build a bot with SSO authentication. You'll see the following output:
 
-     :::image type="content" source="~/assets/images/bots/sbs-desktop-mobile.png" alt-text="Mobile signed in to bot":::
+     :::image type="content" source="~/assets/images/bots/sbs-desktop-mobile.png" alt-text=" Screenshot of the bot with SSO authentication output after you have successfully completed the step-by-step guide.":::
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -47,7 +47,7 @@ items:
 
     ### Check for sideloading option
 
-    After creating the app, you must load your app in Teams without distributing it. This loading is known as sideloading. Sign-in to your Microsoft 365 account to view this option.
+    After creating the app, you must load your app in Teams without distributing it. This loading is known as sideloading. Sign in to your Microsoft 365 account to view this option.
 
      > [!NOTE]
      > Sideloading is necessary for previewing and testing apps in Teams local environment. Enable Sideloading to preview and test your app in Teams locally.
@@ -60,7 +60,7 @@ items:
     1. Select **Manage your apps** > **Upload an app**.
     1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
 
-        :::image type="content" source="~/assets/images/bots/upload-custom-app1_1.png" alt-text="Illustration shows the option to upload a custom app in Teams.":::
+        :::image type="content" source="~/assets/images/bots/upload-custom-app1_1.png" alt-text="Screenshot of Teams apps menu. The menu entry titled upload an app.":::
 
         > [!NOTE]
         > If you don't have the option to upload a custom app, contact Teams administrator.
@@ -74,9 +74,9 @@ items:
     1. Select **Setup E5 subscription** from the welcome screen.
     1. Set up administrator account. After you finish, the following screen displays.
 
-          :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/microsoft-365.png" alt-text="Microsoft":::
+          :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/microsoft-365.png" alt-text="Screenshot of the Microsoft 365 Developer Program subscription.":::
 
-    1. Sign-in to Teams using the new administrator account. Now you should have the **Upload a custom app** option.
+    1. Sign in to Teams using the new administrator account. Now you should have the **Upload a custom app** option.
 
 - title: Create and register your bot
   durationInMinutes: 5
@@ -95,27 +95,28 @@ items:
 
     1. Select **Create a resource**.
 
-        :::image type="content" source="~/assets/images/bots/Createaresource_1.png" alt-text="Create Resource":::
+        :::image type="content" source="~/assets/images/bots/Createaresource_1.png" alt-text="Screenshot of the Azure portal. The menu entry titled Create Resource.":::
 
     1. In the search box, enter **Azure bot**.
 
-        :::image type="content" source="~/assets/images/bots/searchazurebot_1.png" alt-text="Create Resource":::
+        :::image type="content" source="~/assets/images/bots/searchazurebot_1.png" alt-text="Screenshot of the Azure portal. The menu entry titled search.":::
 
     1. Select **Enter**.
 
     1. Select **Azure Bot**.
 
-        :::image type="content" source="~/assets/images/bots/selectazurebot_1.png" alt-text="Select Azure Bot":::
+        :::image type="content" source="~/assets/images/bots/selectazurebot_1.png" alt-text="Screenshot of the Azure portal. The menu entry titled Azure Bot.":::
 
     1. Select **Create**.
 
-        :::image type="content" source="./assets/images/bots/azure-bot_1.png" alt-text="Azure bot.":::
+        :::image type="content" source="./assets/images/bots/azure-bot_1.png" alt-text="Screenshot of the Azure portal after selecting the Azure bot.":::
 
        The **Create an Azure Bot** window appears.
 
-        :::image type="content" source="~/assets/images/bots/azurebotpage.png" alt-text="Screenshot showing the Azure bot page.":::
+        :::image type="content" source="~/assets/images/bots/azurebotpage.png" alt-text="Screenshot of the Azure bot page after selecting the Azure bot.":::
 
     1. Enter the following details to create Azure bot.
+
 
         1. Enter required bot handle name in **Bot handle**.
     
@@ -148,11 +149,11 @@ items:
 
     1. Select **Go to resource**.
 
-        :::image type="content" source="~/assets/images/bots/gotoresource_1.png" alt-text="Resource":::
+        :::image type="content" source="~/assets/images/bots/gotoresource_1.png" alt-text="Screenshot of the Azure portal. The menu entry titled go to resource.":::
 
        Your Azure bot is created. You can see the **Resource group** and **Subscription ID** details in the Azure bot.
 
-         :::image type="content" source="~/assets/images/bots/Azurebotresource_1.png" alt-text="Azure bot resource created":::
+         :::image type="content" source="~/assets/images/bots/Azurebotresource_1.png" alt-text="Screenshot of the Azure bot details in Azure portal.":::
 
     **To create client secret**
 
@@ -160,18 +161,18 @@ items:
 
     1. In the left pane, select **Configuration**.
 
-        :::image type="content" source="~/assets/images/bots/selectconfigure_1.png" alt-text="Select Configure":::
+        :::image type="content" source="~/assets/images/bots/selectconfigure_1.png" alt-text="Screenshot of the Azure portal. The menu entry titled configuration.":::
 
        > [!Tip]
        > Save the **Microsoft App ID** or **Client ID** for future reference.
     
     1. Next to **Microsoft App ID**, select **Manage**.
 
-       :::image type="content" source="~/assets/images/manage-bot-label_1.png" alt-text="manage bot":::
+       :::image type="content" source="~/assets/images/manage-bot-label_1.png" alt-text="Screenshot of the Azure portal. The menu entry titled manage.":::
 
     1. In the **Client secrets** section, select **New client secret**.
 
-          :::image type="content" source="~/assets/images/bots/newclientsecret_2.png" alt-text="Screenshot showing the selection of new client secret.":::
+          :::image type="content" source="~/assets/images/bots/newclientsecret_2.png" alt-text="Screenshot of the Azure portal. The menu entry titled new client secret.":::
 
        The **Add a client secret** window appears.
 
@@ -179,7 +180,7 @@ items:
     
     1. Select **Add**.
  
-        :::image type="content" source="~/assets/images/bots/addclientsecret_1.png" alt-text="Screenshot showing adding client secret to app.":::
+        :::image type="content" source="~/assets/images/bots/addclientsecret_1.png" alt-text="Screenshot of the Azure portal. The menu entry titled add client secret to the app.":::
 
     1. In the **Value** column, select copy to clipboard icon to copy the value details. 
 
@@ -192,29 +193,29 @@ items:
 
     1. Select **Home**.
 
-        :::image type="content" source="~/assets/images/bots/selecthome_1.png" alt-text="Home page":::
+        :::image type="content" source="~/assets/images/bots/selecthome_1.png" alt-text="Screenshot of the Azure portal. The menu entry titled home.":::
 
     1. Select your bot from **Recent resources**.
 
-        :::image type="content" source="~/assets/images/bots/select-recent-resources_1.png" alt-text="Select recent resources":::
+        :::image type="content" source="~/assets/images/bots/select-recent-resources_1.png" alt-text="Screenshot of the Azure portal. The menu entry titled with your recent resources.":::
 
     1. Select **Channels** in the left pane. 
   
-        :::image type="content" source="~/assets/images/bots/selectchannel_1.png" alt-text="Select recent":::
+        :::image type="content" source="~/assets/images/bots/selectchannel_1.png" alt-text="Screenshot of the Azure portal. The menu entry titled channels.":::
 
-    1. Select **Microsoft Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>. 
+    1. Select **Microsoft Teams** :::image type="icon" source="~/assets/images/bots/teamsicon.png" alt-text="Screenshot of the Teams icon.". 
     
-        :::image type="content" source="~/assets/images/bots/select-microsoft-teams_1.png" alt-text="Select Microsoft Teams":::
+        :::image type="content" source="~/assets/images/bots/select-microsoft-teams_1.png" alt-text="Screenshot of the Azure portal. The menu entry titled Teams.":::
 
     1. Select the checkbox to accept the **Terms of Service**.
     
     1. Select **Agree**.
 
-        :::image type="content" source="~/assets/images/bots/Terms-of-service_1.png" alt-text="Terms":::
+        :::image type="content" source="~/assets/images/bots/Terms-of-service_1.png" alt-text="Screenshot of the Azure portal. The menu entry titled agree.":::
 
     1. Select **Apply**.
 
-        :::image type="content" source="~/assets/images/bots/apply_1.png" alt-text="Screenshot showing the option apply":::
+        :::image type="content" source="~/assets/images/bots/apply_1.png" alt-text="Screenshot of the Azure portal. The menu entry titled apply.":::
     
     **To create tunnel for local web server**
 
@@ -230,7 +231,7 @@ items:
 
     1. From ngrok, copy the HTTPS URL.
 
-       :::image type="content" source="../msteams-platform/assets/images/ngrok-url1_1.png" alt-text="ngrok HTTPS URL":::
+       :::image type="content" source="../msteams-platform/assets/images/ngrok-url1_1.png" alt-text="Screenshot of the ngrok portal. The menu entry titled HTTPS URL.":::
 
         > [!NOTE]
         > The HTTPS URL in your ngrok is your fully qualified domain name.
@@ -240,11 +241,11 @@ items:
 
     1. In **Settings** for the Azure bot that you created, select **Configuration**.
 
-        :::image type="content" source="~/assets/images/bots/select-configuration_1.png" alt-text="Select Configuration":::
+        :::image type="content" source="~/assets/images/bots/select-configuration_1.png" alt-text="Screenshot of the Azure portal. The menu entry titled configuration.":::
 
     1. In **Messaging endpoint**, use the HTTPS URL available from ngrok and at the end of the URL add **/api/messages**.
 
-        :::image type="content" source="~/assets/images/bots/messagingURL_2.png" alt-text="Messaging endpoint":::
+        :::image type="content" source="~/assets/images/bots/messagingURL_2.png" alt-text="Screenshot of the Azure portal. The menu entry titled messaging endpoint.":::
 
     1. Select **Apply**.
 
@@ -335,7 +336,7 @@ items:
 
           1. Select **Add scope** to save.
 
-         :::image type="content" source="~/assets/images/bots/addscope.png" alt-text="Screenshot showing configuring scope.":::
+             :::image type="content" source="~/assets/images/bots/addscope.png" alt-text="Screenshot showing configuring scope.":::
 
        Your Application ID URI is created with **Scope name**.
 
@@ -410,11 +411,9 @@ items:
 
     1. In **Configuration page**, select **Add OAuth Connection Settings**.
 
-        :::image type="content" source="~/assets/images/bots/select-configuration_2.png" alt-text="Select configuration1":::
+         :::image type="content" source="~/assets/images/bots/select-configuration_2.png" alt-text="Select configuration1":::
 
        The **New Connection Setting** window appears.
-
-         
 
     1. In **New Connection Setting**, enter the following details:
 
