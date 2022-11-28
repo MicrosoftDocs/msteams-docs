@@ -209,7 +209,7 @@ Now that you've gone through the sample scene.json, you can activate the custom 
 ## Activate custom Together Mode scenes
 
 > [!NOTE]
-> You can apply a custom Together Mode scene that is deployed by your tenant admin only if you have a [Teams Premium license](/MicrosoftTeams/enhanced-teams-experience?branch=danismith-t-pre-licensing).
+> You can apply a custom Together Mode scene that is deployed by your tenant admin only if you have a [Teams Premium license](/MicrosoftTeams/enhanced-teams-experience?branch=danismith-t-pre-licensing). 
 
 Get more information of how a user engages with scenes in custom Together Mode scenes.
 
