@@ -1,7 +1,7 @@
 ---
-title: Implement your instrumentation service
+title: Plan code instrumentation using analytics service
 author: heath-hamilton
-description: Learn about adding insights for your Teams app in Azure AD.
+description: Learn about planning code instrumentation using analytics service.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta

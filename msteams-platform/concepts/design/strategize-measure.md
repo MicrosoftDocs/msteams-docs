@@ -1,7 +1,7 @@
 ---
-title: Teams App Instrumentation
+title: Strategize and decide what to measure
 author: heath-hamilton
-description: Learn about Teams App Instrumentation.
+description: Learn about deciding what to measure
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
