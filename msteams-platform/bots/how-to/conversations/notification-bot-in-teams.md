@@ -92,7 +92,7 @@ You can make the following customizations to extend the notification template to
 
 <summary><b>1. Customize the trigger point from event source</b></summary>
 
-* `Restify` based notification.
+* `Restify` based notification
 
    When HTTP request is sent to `src/index.js` entry point, the default implementation sends an Adaptive Card to Teams. You can customize this event by modifying `src/index.js`. A typical implementation can call an API to retrieve events, data, or both that can send an Adaptive Card as required. You can perform the following to add more triggers:
 
@@ -122,6 +122,7 @@ You can make the following customizations to extend the notification template to
      > For more information on support triggers, see [Azure Functions support triggers](/azure/azure-functions/functions-triggers-bindings?tabs=javascript).
 
 <br>
+
 </details>
 
 <details>
@@ -485,7 +486,7 @@ TeamsFx provides you with an [Incoming Webhook notification sample](https://gith
 
 <summary><b>Why is the notification installations empty even though the bot app is installed in Teams?</b></summary>
 
-Teams sends an event only at the first installation. If the bot app is already installed before your notification bot service is launched, because the installation event either didn't reach the bot service or is omitted.
+Teams sends an event only at the first installation. If the bot app is already installed before your notification bot service is launched, the installation event either didn't reach the bot service or is omitted.
 
 You can resolve this in the following ways:
 
