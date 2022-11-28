@@ -92,7 +92,7 @@ You can make the following customizations to extend the notification template to
 
 <summary><b>1. Customize the trigger point from event source</b></summary>
 
-* `Restify` based notification
+* `Restify` based notification.
 
    When HTTP request is sent to `src/index.js` entry point, the default implementation sends an Adaptive Card to Teams. You can customize this event by modifying `src/index.js`. A typical implementation can call an API to retrieve events, data, or both that can send an Adaptive Card as required. You can perform the following to add more triggers:
 
