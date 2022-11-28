@@ -112,10 +112,10 @@ After you extract the Teams-specific information from the tab context, below are
 | --- | --- |
 | User's organization. | Track demand for your app, especially if you offer trial period for new sign-ups or freemium offering for your SaaS product for sales outreach, onboard organization, check in for assistance. |
 | User’s organization type and user’s role. | Use license type and tenant SKU to construct a customer profile for the Teams user. Slice your analytics data, such as, usage, sessions, retention, etc. accordingly, and tailor your features, experiences, etc. accordingly. |
-| Host client type, locale and usage context inferences from team or channel names | Enrich the customer’s profile in your user analytics. |
-| Frame context  | Get information about the context in which the user is using your app, user's journey, and usage pattern from various surface areas, capabilities, and scopes. Craft your user's experiences accordingly and invest more in capabilities popular with your users. |
-| User's email address | Associate a meaningful, real-world identity with the Teams user, and provide the Microsoft 365 tenant organization’s domain address that is, contoso.onmicrosoft.com. Identify the organization the user belongs to. The email address of the user can be used to complete the user’s profile and communicate with the user for activation, re-marketing, and re-engagement. However, be careful not to misuse this channel or spam the user. |
-| Azure AD user or object ID | Obtain and store the unique Azure AD user or object ID at the time of app (bot) installation. Send any proactive notification to the user via your bot. |
+| Host client type, locale and usage context inferences from team or channel names. | Enrich the customer’s profile in your user analytics. |
+| Frame context.  | Get information about the context in which the user is using your app, user's journey, and usage pattern from various surface areas, capabilities, and scopes. Craft your user's experiences accordingly and invest more in capabilities popular with your users. |
+| User's email address. | Associate a meaningful, real-world identity with the Teams user, and provide the Microsoft 365 tenant organization’s domain address that is, contoso.onmicrosoft.com. Identify the organization the user belongs to. The email address of the user can be used to complete the user’s profile and communicate with the user for activation, re-marketing, and re-engagement. However, be careful not to misuse this channel or spam the user. |
+| Azure AD user or object ID. | Obtain and store the unique Azure AD user or object ID at the time of app (bot) installation. Send any proactive notification to the user via your bot. |
 
 #### Conversational constructs
 
