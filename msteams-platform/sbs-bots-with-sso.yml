@@ -60,7 +60,7 @@ items:
     1. Select **Manage your apps** > **Upload an app**.
     1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
 
-        :::image type="content" source="~/assets/images/bots/upload-custom-app1_1.png" alt-text="Screenshot of Teams apps menu. The menu entry titled upload an app highlighted in red.":::
+        :::image type="content" source="~/assets/images/bots/upload-custom-app1_1.png" alt-text="Screenshot of Teams apps menu. The menu entry titled Upload an app highlighted in red.":::
 
         > [!NOTE]
         > If you don't have the option to upload a custom app, contact Teams administrator.
@@ -95,7 +95,7 @@ items:
 
     1. Select **Create a resource**.
 
-        :::image type="content" source="~/assets/images/bots/Createaresource_1.png" alt-text="Screenshot of the Azure portal. The menu entry titled Create Resource highlighted in red.":::
+        :::image type="content" source="~/assets/images/bots/Createaresource_1.png" alt-text="Screenshot of the Azure portal. The menu entry titled Create resource highlighted in red.":::
 
     1. In the search box, enter **Azure bot**.
 
