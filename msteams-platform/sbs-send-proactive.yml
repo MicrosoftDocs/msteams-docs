@@ -121,7 +121,7 @@ items:
 
     1. Under **Descriptions**, add the **Short description** and **Long description** for your app.
 
-    1. Under **Developer Information**, add developer or company name and in **Website (must be a valid HTTPS URL)** give your ngrok HTTPS URL.
+    1. Under **Developer information**, add developer or company name and in **Website (must be a valid HTTPS URL)** give your ngrok HTTPS URL.
 
     1. Under **App URLs**, update the **Privacy policy** to `https://<yourngrokurl>/privacy` and **Terms of use** to `https://<yourngrokurl>/termsofuse`.
 
@@ -129,7 +129,7 @@ items:
 
     1. Under **Domains**, select **Add a domain** and enter your ngrok URL without the HTTPS prefix `<yourngrokurl>.ngrok.io`.
     
-    1. Select **App Features** > **Bot**.
+    1. Select **App features** > **Bot**.
     
         :::image type="content" source="~/assets/images/proactive-scenario/select-app-features.png" alt-text="Screenshot shows App features screen of Proactive Message. The App features option under Configure and Bot options are highlighted in red.":::
 
