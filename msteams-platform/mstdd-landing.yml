@@ -56,6 +56,8 @@ landingContent:
         url: https://gitter.im/OfficeDev/home
     - linkListType: whats-new
       links:
+      - text: Plan analytics for your Teams app
+        url: concepts/design/overview-analytics.md
       - text: Integrate location capabilities
         url: concepts/device-capabilities/location-capability.md
       - text: Zero install for link unfurling
