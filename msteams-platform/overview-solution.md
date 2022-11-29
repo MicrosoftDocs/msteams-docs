@@ -88,7 +88,6 @@ From designing to building and distributing a Teams app, you can use various too
 
 - [Teams app that fits](overview.md)
 - [Design process for Microsoft Teams apps](concepts/design/design-teams-app-process.md)
-- [The Teams solution](overview-solution.md)
 - [Extend Teams apps across Microsoft 365](m365-apps/overview.md)
 - [Test your app](concepts/build-and-test/test-app-overview.md)
 - [Distribute your Microsoft Teams app](concepts/deploy-and-publish/apps-publish-overview.md)
