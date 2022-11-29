@@ -1,7 +1,7 @@
 ---
 title: Strategize and decide what to measure
 author: heath-hamilton
-description: Learn about deciding what to measure
+description: Learn about deciding what to measure using instrumentation data for your Teams app analytics
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
@@ -27,7 +27,7 @@ Your instrumentation strategy should ensure measuring of your product across the
 
 ### Monitor events for your app
 
-For the purposes of this article, let’s use the HEART framework to indicate representative set of metrics and events you should consider monitoring for your solution. Note that the following list isn't exhaustive, and you're encouraged to add additional instrumentation relevant to your business and product.
+For the purposes of this article, let’s use the HEART framework to indicate a representative set of metrics and events you should consider monitoring for your solution. Note that the following list isn't exhaustive, and you're encouraged to add additional instrumentation relevant to your business and product.
 
 :::image type="content" source="../../assets/images/app-fundamentals/monitor-telemetry.png" alt-text="Monitor events for your app" border="false":::
 
@@ -39,7 +39,7 @@ For the purposes of this article, let’s use the HEART framework to indicate re
 - User stumbles upon the app when it’s shared in a chat, meeting, or channel by another user, (tab or Adaptive Card).
 - Admin installs the app for users and the app sends a welcome message.
 
-Instrumentation designed to improve adoption should aim at improving discoverability of the app and its features as well. The likelihood of discovering an app among new users increases when existing users start using the app in collaborative scope. For example, adding channel or meeting tab, adding a bot to channel, or sharing messaging extension card in a group chat.
+Instrumentation designed to improve adoption should aim at improving discoverability of the app and its features as well. The likelihood of discovering an app among new users increases when existing users start using the app in collaborative scope. For example, adding a channel or meeting tab, adding a bot to channel, or sharing messaging extension card in a group chat.
  
 > [!TIP]
 >
@@ -93,7 +93,7 @@ User retention measures how frequent users come back to use the product. It esse
 >
 > - Users using multiple Teams platform capabilities are 20 – 35pp better retained than single capability users.
 > - Converting new users to engaged platform users in their first week improves retention.
-> - Users who perform creation events in your app have higher retention compared to users who passively consume information via notifications. Creation events depend on your business. For example, creating a ticket, creating a new post, a project board, etc.
+> - Users who perform creation events in your app have higher retention compared to users who passively consume information via notifications. Creation events depend on your business. For example, creating a ticket, creating a new post, a project board, and so on.
 > - Apps used multiple times (>5 times) in a month have a better retention month over month. Recurring use cases with more frequency of usage improve retention.
 
 | Measure | Insight |
