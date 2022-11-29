@@ -276,7 +276,7 @@ After you've started running your app locally with `npm run start`, you can then
 
 ### Create the app package to sideload into Teams
 
-1. Go to the Dice Roller sample folder `\live-share-sdk\samples\01.dice-roller` on your computer. You can also check the [manifest.json](https://github.com/microsoft/live-share-sdk/blob/main/samples/javascript/01.dice-roller/manifest/manifest.json) from the Dice Roller sample on GitHub.
+1. Go to the Dice Roller sample folder `\live-share-sdk\samples\javascript\01.dice-roller` on your computer. You can also check the [manifest.json](https://github.com/microsoft/live-share-sdk/blob/main/samples/javascript/01.dice-roller/manifest/manifest.json) from the Dice Roller sample on GitHub.
 
 1. Open manifest.json and update the configuration URL.
 

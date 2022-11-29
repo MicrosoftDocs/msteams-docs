@@ -38,7 +38,7 @@ To get started, install:
 1. Run the following command to go to the Dice Roller sample app folder:
 
    ```bash
-    cd live-share-sdk\samples\01.dice-roller
+    cd live-share-sdk\samples\javascript\01.dice-roller
    ```
 
 1. Run the following command to install the dependency package:
