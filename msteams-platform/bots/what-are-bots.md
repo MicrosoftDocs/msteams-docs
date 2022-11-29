@@ -83,3 +83,4 @@ You can add single sign-on authentication to your conversation bot using the fol
 * [Add authentication to your Teams bot](how-to/authentication/add-authentication.md)
 * [Use task modules from bots](../task-modules-and-cards/task-modules/task-modules-bots.md)
 * [Create Incoming Webhooks](../webhooks-and-connectors/how-to/add-incoming-webhook.md)
+* [Instrumenting for Teams app specific analytics](../concepts/design/overview-analytics.md#instrumenting-for-teams-app-specific-analytics)
