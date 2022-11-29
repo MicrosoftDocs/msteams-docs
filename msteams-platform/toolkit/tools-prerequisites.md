@@ -145,7 +145,7 @@ You can verify if the sideloading permission is enabled using either Visual Stud
 <details>
 <summary><b>Verify sideloading permission using Teams client</b></summary>
 
-1. In the Teams client, select **Apps** > **Manage your app** > **Upload an app**.
+1. In the Teams client, select **Apps** > **Manage your apps** > **Upload an app**.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/upload-app_1.png" alt-text="Publish an app":::
 
