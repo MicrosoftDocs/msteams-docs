@@ -27,7 +27,7 @@ Your instrumentation strategy should ensure measuring of your product across the
 
 ### Monitor events for your app
 
-For the purposes of this article, let’s use the HEART framework to indicate representative set of metrics and events you should consider monitoring for your solution. Note that the following list isn't exhaustive, and you're encouraged to add additional instrumentation relevant to your business and product.
+For the purposes of this article, let’s use the HEART framework to indicate a representative set of metrics and events you should consider monitoring for your solution. Note that the following list isn't exhaustive, and you're encouraged to add additional instrumentation relevant to your business and product.
 
 :::image type="content" source="../../assets/images/app-fundamentals/monitor-telemetry.png" alt-text="Monitor events for your app" border="false":::
 
@@ -39,7 +39,7 @@ For the purposes of this article, let’s use the HEART framework to indicate re
 - User stumbles upon the app when it’s shared in a chat, meeting, or channel by another user, (tab or Adaptive Card).
 - Admin installs the app for users and the app sends a welcome message.
 
-Instrumentation designed to improve adoption should aim at improving discoverability of the app and its features as well. The likelihood of discovering an app among new users increases when existing users start using the app in collaborative scope. For example, adding channel or meeting tab, adding a bot to channel, or sharing messaging extension card in a group chat.
+Instrumentation designed to improve adoption should aim at improving discoverability of the app and its features as well. The likelihood of discovering an app among new users increases when existing users start using the app in collaborative scope. For example, adding a channel or meeting tab, adding a bot to channel, or sharing messaging extension card in a group chat.
  
 > [!TIP]
 >
