@@ -66,6 +66,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
     if(mentions != null)
     {
         ChannelAccount firstMention = mentions[0].Mentioned;
+
         // Sends a message activity to the sender of the incoming activity.
         await turnContext.SendActivityAsync($"Hello {firstMention.Name}");
     }
@@ -83,10 +84,12 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 
 ```typescript
 this.onMessage(async (turnContext, next) => {
+    
     // Resolves the mentions from the entities activity.
     const mentions = TurnContext.getMentions(turnContext.activity);
     if (mentions){
         const firstMention = mentions[0].mentioned;
+
         // Sends a message activity to the sender of the incoming activity.
         await turnContext.sendActivity(`Hello ${firstMention.name}.`);
     } else {
@@ -185,9 +188,11 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
         Mentioned = turnContext.Activity.From,
         Text = $"<at>{XmlConvert.EncodeName(turnContext.Activity.From.Name)}</at>",
     };
+
     // Returns a simple text message.
     var replyActivity = MessageFactory.Text($"Hello {mention.Text}.");
     replyActivity.Entities = new List<Entity> { mention };
+
     // Sends an activity to the sender of the incoming activity.
     await turnContext.SendActivityAsync(replyActivity, cancellationToken);
 }
@@ -204,6 +209,7 @@ this.onMessage(async (turnContext, next) => {
         mentioned: turnContext.activity.from,
         text: `<at>${ new TextEncoder().encode(turnContext.activity.from.name) }</at>`,
     } as Mention;
+
     // Returns a simple text message.
     const replyActivity = MessageFactory.text(`Hello ${mention.text}`);
     replyActivity.entities = [mention];

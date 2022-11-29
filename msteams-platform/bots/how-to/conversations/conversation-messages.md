@@ -149,6 +149,7 @@ protected override async Task OnMembersAddedAsync(IList<ChannelAccount> membersA
     this.onMembersAddedActivity(async (context, next) => {
         await Promise.all((context.activity.membersAdded || []).map(async (member) => {
             if (member.id !== context.activity.recipient.id) {
+              
                 // Sends an activity to the sender of the incoming activity.
                 await context.sendActivity(
                     `Welcome to the team ${member.givenName} ${member.surname}`

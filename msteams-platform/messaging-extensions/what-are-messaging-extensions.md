@@ -84,7 +84,7 @@ The following code provides an example of action based for message extensions:
 ```csharp
      protected override Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionFetchTaskAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
         {
-            // Handle different actions using switch
+            // Handle different actions using switch.
             switch (action.CommandId)
             {
                 case "HTML":

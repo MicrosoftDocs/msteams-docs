@@ -515,7 +515,7 @@ teamChatConnector.onComposeExtensionSubmitAction((
                 teamChatConnector.send([msg.toMessage()],
                     (error) => {
                         if(error){
-                            //TODO: Handle error and callback
+                            // TODO: Handle error and callback.
                         }
                         else {
                             callback(null, null, 200);
@@ -525,7 +525,7 @@ teamChatConnector.onComposeExtensionSubmitAction((
             }
 
             else if (invokeValue.botMessagePreviewAction === 'edit') {
-              // Create the card and populate with user-inputted information
+              // Create the card and populate with user-inputted information.
               let card = { ... }
 
               let taskResponse = {
@@ -545,7 +545,7 @@ teamChatConnector.onComposeExtensionSubmitAction((
 
         else {
             let attachment = {
-                  //create adaptive card
+                  // Create adaptive card.
                 };
             let activity = new builder.Message().addAttachment(attachment).toMessage();
             let response = teamBuilder.ComposeExtensionResponse.messagePreview()
@@ -575,7 +575,7 @@ public class MessagesController : ApiController
 
         if (activity.Type == ActivityTypes.Invoke)
         {
-            // Initial task module presented to the user
+            // Initial task module presented to the user.
             if (activity.Name == "composeExtension/fetchTask")
             {
                 string task = GetTaskModule();
@@ -587,7 +587,7 @@ public class MessagesController : ApiController
                 dynamic activityValue = JObject.FromObject(activity.Value);
                 string botMessagePreviewAction = activityValue["botMessagePreviewAction"];
 
-                //This is the initial card response sent after the task module is submitted
+                // This is the initial card response sent after the task module is submitted.
                 if (botMessagePreviewAction is null)
                 {
                     string text = activityValue.data.cardMessage;
@@ -629,7 +629,7 @@ public class MessagesController : ApiController
                 }
                 else
                 {
-                    //This is the "send the card to the channel" event
+                    // This is the "send the card to the channel" event.
                     if (botMessagePreviewAction.Equals("send"))
                     {
                         string cardJson = JsonConvert.SerializeObject(activityValue.botActivityPreview[0].attachments[0].content);
@@ -648,7 +648,7 @@ public class MessagesController : ApiController
 
                         var result = await connectorClient.Conversations.SendToConversationAsync(response);
                     }
-                    //This is fired if the user edits the card before sending it
+                    // This is fired if the user edits the card before sending it.
                     else if (botMessagePreviewAction.Equals("edit"))
                     {
                         string task = GetTaskModule();
@@ -692,7 +692,7 @@ public class MessagesController : ApiController
 
         string cardJson = card.ToJson();
 
-        //Create the task module response
+        // Create the task module response.
         string task = $@"{{
                             'task': {{
                                 'type': 'continue',

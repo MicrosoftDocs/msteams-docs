@@ -24,6 +24,8 @@ Your bot can query for the list of members and their basic user profiles, includ
 The following sample code uses the paged endpoint for fetching the roster:
 
 # [C#](#tab/dotnet)
+* [SDK reference](https://learn.microsoft.com/en-us/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getpagedmembersasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-teams-teamsinfo-getpagedmembersasync(microsoft-bot-builder-iturncontext-system-nullable((system-int32))-system-string-system-threading-cancellationtoken))
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/graph-proactive-installation/csharp/ProactiveAppInstallation/Bots/ProactiveBot.cs#L78)
 
 ```csharp
 public class MyBot : TeamsActivityHandler
@@ -34,7 +36,8 @@ public class MyBot : TeamsActivityHandler
         string continuationToken = null;
 
         do
-        {
+        {   
+            // Gets a paginated list of members of one-on-one, group, or team conversation.
             var currentPage = await TeamsInfo.GetPagedMembersAsync(turnContext, 100, continuationToken, cancellationToken);
             continuationToken = currentPage.ContinuationToken;
             members.AddRange(currentPage.Members);
@@ -45,6 +48,8 @@ public class MyBot : TeamsActivityHandler
 ```
 
 # [TypeScript](#tab/typescript)
+* [SDK reference](https://learn.microsoft.com/en-us/javascript/api/botbuilder/teamsinfo?view=botbuilder-ts-latest#botbuilder-teamsinfo-getpagedmembers)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/graph-proactive-installation/nodejs/bots/proactiveBot.js#L38)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -57,6 +62,7 @@ export class MyBot extends TeamsActivityHandler {
             var members = [];
 
             do {
+                // Gets a paginated list of members of one-on-one, group, or team conversation.
                 var pagedMembers = await TeamsInfo.getPagedMembers(turnContext, 100, continuationToken);
                 continuationToken = pagedMembers.continuationToken;
                 members.push(...pagedMembers.members);
@@ -76,6 +82,7 @@ export class MyBot extends TeamsActivityHandler {
 async def _show_members(
     self, turn_context: TurnContext
 ):
+    # Get a conversationMember from a team.
     members = await TeamsInfo.get_team_members(turn_context)
 ```
 
@@ -131,18 +138,24 @@ You can also retrieve the details of a particular user using their Teams user ID
 The following sample code is used to get single member details:
 
 # [C#](#tab/dotnet)
+* [SDK reference](https://learn.microsoft.com/en-us/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmemberasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-teams-teamsinfo-getmemberasync(microsoft-bot-builder-iturncontext-system-string-system-threading-cancellationtoken))
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-sequential-flow-adaptive-cards/csharp/SequentialUserSpecificFlow/Bots/UserSpecificBot.cs#L37)
 
 ```csharp
 public class MyBot : TeamsActivityHandler
 {
     protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
-    {
+    {   
+        // Gets the account of a single conversation member.
+        // This works in one-on-one, group, and team scoped conversations.
         var member = await TeamsInfo.GetMemberAsync(turnContext, turnContext.Activity.From.Id, cancellationToken);
     }
 }
 ```
 
 # [TypeScript](#tab/typescript)
+* [SDK reference](https://learn.microsoft.com/en-us/javascript/api/botbuilder/teamsinfo?view=botbuilder-ts-latest#botbuilder-teamsinfo-getmember)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L157)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -161,11 +174,14 @@ export class MyBot extends TeamsActivityHandler {
 ```
 
 # [Python](#tab/python)
+* [SDK reference](https://learn.microsoft.com/en-us/python/api/botbuilder-core/botbuilder.core.teams.teamsinfo?view=botbuilder-py-latest#botbuilder-core-teams-teamsinfo-get-member)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L67)
 
 ```python
 async def _show_members(
     self, turn_context: TurnContext
 ):
+    # TeamsInfo.get_member: Gets the member of a team scoped conversation.
     member = await TeamsInfo.get_member(turn_context, turn_context.activity.from_property.id)
 ```
 
@@ -216,17 +232,22 @@ When installed in a team, your bot can query for metadata about that team includ
 The following sample code is used to get team's details:
 
 # [C#](#tab/dotnet)
+* [SDK reference](https://learn.microsoft.com/en-us/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getteamdetailsasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-teams-teamsinfo-getteamdetailsasync(microsoft-bot-builder-iturncontext-system-string-system-threading-cancellationtoken))
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msteams-application-qbot/Source/Microsoft.Teams.Apps.QBot.Web/Bot/QBotTeamInfo.cs#L44)
 
 ```csharp
 public class MyBot : TeamsActivityHandler
 {
     protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
     {
+        // Gets the details for the given team id. This only works in team scoped conversations.
+        // TeamsGetTeamInfo: Gets the TeamsInfo object from the current activity.
         TeamDetails teamDetails = await TeamsInfo.GetTeamDetailsAsync(turnContext, turnContext.Activity.TeamsGetTeamInfo().Id, cancellationToken);
         if (teamDetails != null) {
             await turnContext.SendActivityAsync($"The groupId is: {teamDetails.AadGroupId}");
         }
         else {
+            // Sends a message activity to the sender of the incoming activity.
             await turnContext.SendActivityAsync($"Message did not come from a channel in a team.");
         }
     }
@@ -234,6 +255,8 @@ public class MyBot : TeamsActivityHandler
 ```
 
 # [TypeScript](#tab/typescript)
+* [SDK reference](https://learn.microsoft.com/en-us/javascript/api/botbuilder/teamsinfo?view=botbuilder-ts-latest#botbuilder-teamsinfo-getteamdetails)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-complete-sample/nodejs/server/dialogs/teams/fetchTeamInfoDialog.js#L21)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -242,8 +265,12 @@ export class MyBot extends TeamsActivityHandler {
 
         // See https://aka.ms/about-bot-activity-message to learn more about the message and other activity types.
         this.onMessage(async (turnContext, next) => {
+
+            // Gets the details for the given team id.
             const teamDetails = await TeamsInfo.getTeamDetails(turnContext);
             if (teamDetails) {
+
+                // Sends a message activity to the sender of the incoming activity.
                 await turnContext.sendActivity(`The group ID is: ${teamDetails.aadGroupId}`);
             } else {
                 await turnContext.sendActivity('This message did not come from a channel in a team.');
@@ -257,11 +284,18 @@ export class MyBot extends TeamsActivityHandler {
 ```
 
 # [Python](#tab/python)
+* [SDK reference](https://learn.microsoft.com/en-us/python/api/botbuilder-core/botbuilder.core.teams.teamsinfo?view=botbuilder-py-latest#botbuilder-core-teams-teamsinfo-get-team-details)
 
 ```python
 async def _show_details(self, turn_context: TurnContext):
+
+    # Gets the details for the given team id.
     team_details = await TeamsInfo.get_team_details(turn_context)
+
+    # MessageFactory.text(): Specifies the type of text data in a message attachment.
     reply = MessageFactory.text(f"The team name is {team_details.name}. The team ID is {team_details.id}. The AADGroupID is {team_details.aad_group_id}.")
+
+    # Sends a message activity to the sender of the incoming activity.
     await turn_context.send_activity(reply)
 ```
 
@@ -296,20 +330,26 @@ Your bot can query the list of channels in a team.
 The following sample code is used to get the list of channels in a team:
 
 # [C#](#tab/dotnet)
+* [SDK reference](https://learn.microsoft.com/en-us/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getteamchannelsasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-teams-teamsinfo-getteamchannelsasync(microsoft-bot-builder-iturncontext-system-string-system-threading-cancellationtoken))
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msteams-application-qbot/Source/Microsoft.Teams.Apps.QBot.Web/Bot/QBotTeamInfo.cs#L57)
 
 ```csharp
 public class MyBot : TeamsActivityHandler
 {
+    // Override this in a derived class to provide logic specific to Message activities.
     protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
     {
+        // Returns a list of channels in a Team. This only works in team scoped conversations.
         IEnumerable<ChannelInfo> channels = await TeamsInfo.GetTeamChannelsAsync(turnContext, turnContext.Activity.TeamsGetTeamInfo().Id, cancellationToken);
 
+        // Sends a message activity to the sender of the incoming activity.
         await turnContext.SendActivityAsync($"The channel count is: {channels.Count()}");
     }
 }
 ```
 
 # [TypeScript](#tab/typescript)
+* [SDK reference](https://learn.microsoft.com/en-us/javascript/api/botbuilder/teamsinfo?view=botbuilder-ts-latest#botbuilder-teamsinfo-getteamchannels)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -318,8 +358,11 @@ export class MyBot extends TeamsActivityHandler {
 
         // See https://aka.ms/about-bot-activity-message to learn more about the message and other activity types.
         this.onMessage(async (turnContext, next) => {
+
+            // Supports retrieving channels hosted by a team.
             const channels = await TeamsInfo.getTeamChannels(turnContext);
 
+            // Sends a message activity to the sender of the incoming activity.
             await turnContext.sendActivity(`The channel count is: ${channels.length}`);
 
             // By calling next() you ensure that the next BotHandler is run.
@@ -335,6 +378,7 @@ export class MyBot extends TeamsActivityHandler {
 async def _show_channels(
     self, turn_context: TurnContext
 ):
+    # Supports retrieving channels hosted by a team.
     channels = await TeamsInfo.get_team_channels(turn_context)
     reply = MessageFactory.text(f"Total of {len(channels)} channels are currently in team")
     await turn_context.send_activity(reply)

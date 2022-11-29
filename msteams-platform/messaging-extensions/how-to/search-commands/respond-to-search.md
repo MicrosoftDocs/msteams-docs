@@ -30,7 +30,7 @@ The request parameters are found in the `value` object in the request, which inc
 ```csharp
 protected override async Task<MessagingExtensionResponse> OnTeamsMessagingExtensionQueryAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionQuery query, CancellationToken cancellationToken)
 {
-  //code to handle the query
+  // Code to handle the query.
 }
 ```
 
@@ -41,7 +41,7 @@ protected override async Task<MessagingExtensionResponse> OnTeamsMessagingExtens
 ```typescript
 class TeamsMessagingExtensionsSearch extends TeamsActivityHandler {
     async handleTeamsMessagingExtensionQuery(context, query) {
-  //code to handle the query
+  // Code to handle the query.
     }
 }
 ```
@@ -123,7 +123,7 @@ protected override async Task<MessagingExtensionResponse> OnTeamsMessagingExtens
 {
   var text = query?.Parameters?[0]?.Value as string ?? string.Empty;
 
-  //searches NuGet for a package
+  // Searches NuGet for a package.
   var obj = JObject.Parse(await (new HttpClient()).GetStringAsync($"https://azuresearch-usnc.nuget.org/query?q=id:{text}&prerelease=true"));
   var packages = obj["data"].Select(item => (item["id"].ToString(), item["version"].ToString(), item["description"].ToString()));
 
@@ -320,7 +320,7 @@ class TeamsMessagingExtensionsSearchBot extends TeamsActivityHandler {
 ```csharp
 protected override Task<MessagingExtensionResponse> OnTeamsMessagingExtensionSelectItemAsync(ITurnContext<IInvokeActivity> turnContext, JObject query, CancellationToken cancellationToken)
 {
-    // The Preview card's Tap should have a Value property assigned, this will be returned to the bot in this event. 
+    // The Preview card's Tap should have a Value property assigned, this will be returned to the bot in this event.
     var (packageId, version, description, projectUrl, iconUrl) = query.ToObject<(string, string, string, string, string)>();
 
     var card = new ThumbnailCard
@@ -383,7 +383,7 @@ async handleTeamsMessagingExtensionSelectItem(context, obj) {
 * * *
 
 > [!NOTE]
-> `OnTeamsMessagingExtensionSelectItemAsync` is not triggered in mobile teams application.
+> `OnTeamsMessagingExtensionSelectItemAsync` is not triggered in mobile Teams application.
 
 ## Default query
 

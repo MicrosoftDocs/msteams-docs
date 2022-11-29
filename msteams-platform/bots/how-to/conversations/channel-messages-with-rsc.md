@@ -195,8 +195,8 @@ The following code provides an example of the RSC permissions:
 
 ```csharp
 
-// Handle when a message is addressed to the bot. 
-// When rsc is enabled the method will be called even when bot is addressed without being @mentioned
+// Handle when a message is addressed to the bot.
+// When rsc is enabled the method will be called even when bot is addressed without being @mentioned.
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
 {
         // Sends an activity to the sender of the incoming activity.
@@ -206,13 +206,12 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 ```
 
 # [Node.js](#tab/nodejs)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-localization/nodejs/server/bot/botActivityHandler.js#L25)
 
 ```javascript
 
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-localization/nodejs/server/bot/botActivityHandler.js#L25)
-
-// Handle when a message is addressed to the bot. 
-// When rsc is enabled the method will be called even when bot is addressed without being @mentioned
+// Handle when a message is addressed to the bot.
+// When rsc is enabled the method will be called even when bot is addressed without being @mentioned.
 
 this.onMessage(async (context, next) => {
     // Sends a message activity to the sender of the incoming activity.

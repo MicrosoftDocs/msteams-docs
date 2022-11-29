@@ -145,7 +145,7 @@ export class MyBot extends TeamsActivityHandler {
 async def on_teams_channel_created(
  self, channel_info: ChannelInfo, team_info: TeamInfo, turn_context: TurnContext
 ):
- // Sends a message activity to the sender of the incoming activity.
+ # Sends a message activity to the sender of the incoming activity.
  return await turn_context.send_activity(
   MessageFactory.text(
    f"The new channel is {channel_info.name}. The channel id is {channel_info.id}"
@@ -337,7 +337,7 @@ export class MyBot extends TeamsActivityHandler {
 async def on_teams_channel_deleted(
  self, channel_info: ChannelInfo, team_info: TeamInfo, turn_context: TurnContext
 ):
-// Sends a message activity to the sender of the incoming activity.
+ # Sends a message activity to the sender of the incoming activity.
  return await turn_context.send_activity(
   MessageFactory.text(f"The deleted channel is {channel_info.name}")
  )
@@ -434,7 +434,7 @@ export class MyBot extends TeamsActivityHandler {
 async def on_teams_channel_restored(
  self, channel_info: ChannelInfo, team_info: TeamInfo, turn_context: TurnContext
 ):
-// Sends a message activity to the sender of the incoming activity.
+ # Sends a message activity to the sender of the incoming activity.
  return await turn_context.send_activity(
   MessageFactory.text(
    f"The restored channel is {channel_info.name}. The channel id is {channel_info.id}"
@@ -475,7 +475,7 @@ protected override async Task OnTeamsMembersAddedAsync(IList<TeamsChannelAccount
     {
         if (member.Id == turnContext.Activity.Recipient.Id)
         {
-            // Send a message to introduce the bot to the team
+            // Send a message to introduce the bot to the team.
             var heroCard = new HeroCard(text: $"The {member.Name} bot has joined {teamInfo.Name}");
             // Sends an activity to the sender of the incoming activity.
             await turnContext.SendActivityAsync(MessageFactory.Attachment(heroCard.ToAttachment()), cancellationToken);
@@ -618,7 +618,7 @@ async def on_teams_members_added(
  self, teams_members_added: [TeamsChannelAccount], turn_context: TurnContext
 ):
  for member in teams_members_added:
-..// Sends a message activity to the sender of the incoming activity.
+.. # Sends a message activity to the sender of the incoming activity.
   await turn_context.send_activity(
    MessageFactory.text(f"Welcome your new team member {member.id}")
   )
@@ -653,8 +653,8 @@ protected override async Task OnTeamsMembersRemovedAsync(IList<ChannelAccount> m
     {
         if (member.Id == turnContext.Activity.Recipient.Id)
         {
-            // The bot was removed
-            // You should clear any cached data you have for this team
+            // The bot was removed.
+            // You should clear any cached data you have for this team.
         }
         else
         {
@@ -746,7 +746,7 @@ async def on_teams_members_removed(
  self, teams_members_removed: [TeamsChannelAccount], turn_context: TurnContext
 ):
  for member in teams_members_removed:
-..// Sends a message activity to the sender of the incoming activity.
+..# Sends a message activity to the sender of the incoming activity.
   await turn_context.send_activity(
    MessageFactory.text(f"Say goodbye to {member.id}")
   )
@@ -786,6 +786,7 @@ export class MyBot extends TeamsActivityHandler {
         this.onTeamsTeamRenamedEvent(async (teamInfo: TeamInfo, turnContext: TurnContext, next: () => Promise<void>): Promise<void> => {
             const card = CardFactory.heroCard('Team Renamed', `${teamInfo.name} is the new Team name`);
             const message = MessageFactory.attachment(card);
+
             // Sends an activity to the sender of the incoming activity.
             await turnContext.sendActivity(message);
             await next();
@@ -836,11 +837,11 @@ export class MyBot extends TeamsActivityHandler {
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L29)
 
 ```python
-// Bot is notified when the team is renamed.
+# Bot is notified when the team is renamed.
 async def on_teams_team_renamed(
  self, team_info: TeamInfo, turn_context: TurnContext
 ):
-// Sends an activity to the sender of the incoming activity.
+ # Sends an activity to the sender of the incoming activity.
  return await turn_context.send_activity(
   MessageFactory.text(f"The new team name is {team_info.name}")
  )
@@ -861,7 +862,7 @@ The following code shows an example of team deleted event:
 ```csharp
 protected override async Task OnTeamsTeamDeletedAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
 {
-    // Handle delete event
+    // Handle delete event.
 }
 ```
 
@@ -873,7 +874,7 @@ export class MyBot extends TeamsActivityHandler {
         super();
         // Invoked when a Team Deleted event activity is received from the connector. Team Deleted corresponds to the user deleting a team.
         this.onTeamsTeamDeletedEvent(async (teamInfo: TeamInfo, turnContext: TurnContext, next: () => Promise<void>): Promise<void> => {
-            // Handle delete event
+            // Handle delete event.
             await next();
         });
     }
@@ -920,11 +921,11 @@ export class MyBot extends TeamsActivityHandler {
 # [Python](#tab/python)
 
 ```python
-// Invoked when a Team Deleted event activity is received from the connector. Team Deleted corresponds to the user deleting a team.
+# Invoked when a Team Deleted event activity is received from the connector. Team Deleted corresponds to the user deleting a team.
 async def on_teams_team_deleted(
  self, team_info: TeamInfo, turn_context: TurnContext
 ):
- // Handle delete event
+ # Handle delete event.
  )
 ```
 
@@ -1011,11 +1012,11 @@ export class MyBot extends TeamsActivityHandler {
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L29)
 
 ```python
-// Invoked when a Team Restored event activity is received from the connector. Team Restored corresponds to the user restoring a team.
+# Invoked when a Team Restored event activity is received from the connector. Team Restored corresponds to the user restoring a team.
 async def on_teams_team_restored(
  self, team_info: TeamInfo, turn_context: TurnContext
 ):
-// Sends an activity to the sender of the incoming activity.
+ # Sends an activity to the sender of the incoming activity.
  return await turn_context.send_activity(
   MessageFactory.text(f"The team name is {team_info.name}")
  )
@@ -1050,7 +1051,7 @@ protected override async Task OnTeamsTeamArchivedAsync(TeamInfo teamInfo, ITurnC
 export class MyBot extends TeamsActivityHandler {
     constructor() {
         super();
-        // Invoked when a Team Archived event activity is received from the connector. Team Archived 
+        // Invoked when a Team Archived event activity is received from the connector. Team Archived.
         this.onTeamsTeamArchivedEvent(async (teamInfo: TeamInfo, turnContext: TurnContext, next: () => Promise<void>): Promise<void> => {
             const card = CardFactory.heroCard('Team archived', `${teamInfo.name} is the team name`);
             const message = MessageFactory.attachment(card);
@@ -1104,11 +1105,11 @@ export class MyBot extends TeamsActivityHandler {
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L29)
 
 ```python
-// Invoked when a Team Archived event activity is received from the connector. Team Archived correspond to the user archiving a team
+# Invoked when a Team Archived event activity is received from the connector. Team Archived correspond to the user archiving a team.
 async def on_teams_team_archived(
  self, team_info: TeamInfo, turn_context: TurnContext
 ):
- // Sends an activity to the sender of the incoming activity.
+ # Sends an activity to the sender of the incoming activity.
  return await turn_context.send_activity(
   MessageFactory.text(f"The team name is {team_info.name}")
  )
@@ -1143,7 +1144,7 @@ protected override async Task OnTeamsTeamUnarchivedAsync(TeamInfo teamInfo, ITur
 export class MyBot extends TeamsActivityHandler {
     constructor() {
         super();
-        // Invoked when a Team Unarchived event activity is received from the connector. Team 
+        // Invoked when a Team Unarchived event activity is received from the connector. Team.
         this.onTeamsTeamUnarchivedEvent(async (teamInfo: TeamInfo, turnContext: TurnContext, next: () => Promise<void>): Promise<void> => {
             const card = CardFactory.heroCard('Team archived', `${teamInfo.name} is the team name`);
             const message = MessageFactory.attachment(card);
@@ -1197,11 +1198,11 @@ export class MyBot extends TeamsActivityHandler {
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L29)
 
 ```python
-// Invoked when a Team Unarchived event activity is received from the connector. Team Unarchived correspond to the user unarchiving a team.
+# Invoked when a Team Unarchived event activity is received from the connector. Team Unarchived correspond to the user unarchiving a team.
 async def on_teams_team_unarchived(
  self, team_info: TeamInfo, turn_context: TurnContext
 ):
-// Sends an activity to the sender of the incoming activity.
+# Sends an activity to the sender of the incoming activity.
  return await turn_context.send_activity(
   MessageFactory.text(f"The team name is {team_info.name}")
  )
@@ -1253,7 +1254,7 @@ protected override async Task OnReactionsAddedAsync(IList<MessageReaction> messa
 export class MyBot extends TeamsActivityHandler {
     constructor() {
         super();
-         // Override this in a derived class to provide logic for when reactions to a previous activity 
+         // Override this in a derived class to provide logic for when reactions to a previous activity.
         this.onReactionsAdded(async (context, next) => {
            const reactionsAdded = context.activity.reactionsAdded;
             if (reactionsAdded && reactionsAdded.length > 0) {
@@ -1322,20 +1323,20 @@ export class MyBot extends TeamsActivityHandler {
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L29)
 
 ```python
-// Override this in a derived class to provide logic for when reactions to a previous activity are added to the conversation.
+# Override this in a derived class to provide logic for when reactions to a previous activity are added to the conversation.
 async def on_reactions_added(
  self, message_reactions: List[MessageReaction], turn_context: TurnContext
 ):
  for reaction in message_reactions:
   activity = await self._log.find(turn_context.activity.reply_to_id)
   if not activity:
-    // Sends an activity to the sender of the incoming activity.
+    # Sends an activity to the sender of the incoming activity.
    await self._send_message_and_log_activity_id(
     turn_context,
     f"Activity {turn_context.activity.reply_to_id} not found in log",
    )
   else:
-    // Sends an activity to the sender of the incoming activity.
+    # Sends an activity to the sender of the incoming activity.
    await self._send_message_and_log_activity_id(
     turn_context,
     f"You added '{reaction.type}' regarding '{activity.text}'",
@@ -1378,7 +1379,7 @@ protected override async Task OnReactionsRemovedAsync(IList<MessageReaction> mes
 export class MyBot extends TeamsActivityHandler {
     constructor() {
         super();
-         // Override this in a derived class to provide logic for when reactions to a previous activity. 
+         // Override this in a derived class to provide logic for when reactions to a previous activity.
         this.onReactionsRemoved(async(context,next)=>{
             const reactionsRemoved = context.activity.reactionsRemoved;
             if (reactionsRemoved && reactionsRemoved.length > 0) {
@@ -1445,20 +1446,20 @@ export class MyBot extends TeamsActivityHandler {
 # [Python](#tab/python)
 
 ```python
-// Override this in a derived class to provide logic specific to removed activities.
+# Override this in a derived class to provide logic specific to removed activities.
 async def on_reactions_removed(
  self, message_reactions: List[MessageReaction], turn_context: TurnContext
 ):
  for reaction in message_reactions:
   activity = await self._log.find(turn_context.activity.reply_to_id)
   if not activity:
-     // Sends an activity to the sender of the incoming activity.
+    # Sends an activity to the sender of the incoming activity.
    await self._send_message_and_log_activity_id(
     turn_context,
     f"Activity {turn_context.activity.reply_to_id} not found in log",
    )
   else:
-     // Sends an activity to the sender of the incoming activity.
+    # Sends an activity to the sender of the incoming activity.
    await self._send_message_and_log_activity_id(
     turn_context,
     f"You removed '{reaction.type}' regarding '{activity.text}'",
@@ -1499,11 +1500,11 @@ protected override async Task OnInstallationUpdateActivityAsync(ITurnContext<IIn
     var activity = turnContext.Activity;
     if (string.Equals(activity.Action, "Add", StringComparison.InvariantCultureIgnoreCase))
     {
-        // TO:DO Installation workflow
+        // TO:DO Installation workflow.
     }
     else
     {
-        // TO:DO Uninstallation workflow
+        // TO:DO Uninstallation workflow.
     }
     return;
 }
@@ -1526,7 +1527,7 @@ protected override async Task OnInstallationUpdateAddAsync(ITurnContext<IInstall
 async onInstallationUpdateActivity(context: TurnContext) {
         var activity = context.activity.action;
         if(activity == "Add") {
-            // Sends an activity to the sender of the incoming activity to add.  
+            // Sends an activity to the sender of the incoming activity to add.
             await context.sendActivity(MessageFactory.text("Added"));
         }
         else {
@@ -1600,13 +1601,13 @@ async onInstallationUpdateActivity(context: TurnContext) {
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L29)
 
 ```python
-// Override this in a derived class to provide logic specific to InstallationUpdate activities.
+# Override this in a derived class to provide logic specific to InstallationUpdate activities.
 async def on_installation_update(self, turn_context: TurnContext):
    if turn_context.activity.action == "add": 
-    // Sends an activity to the sender of the incoming activity to add.  
+        # Sends an activity to the sender of the incoming activity to add.
        await turn_context.send_activity(MessageFactory.text("Added"))
    else:
-    // Sends an activity to the sender of the incoming activity to uninstalled.
+        # Sends an activity to the sender of the incoming activity to uninstalled.
        await turn_context.send_activity(MessageFactory.text("Uninstalled"))
 ```
 

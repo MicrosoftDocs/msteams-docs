@@ -195,7 +195,7 @@ public async Task<int> SendNotificationToAllUsersAsync(ITurnContext<IMessageActi
 {
    int msgSentCount = 0;
 
-   // Send notification to all the members
+   // Send notification to all the members.
    foreach (var conversationReference in _conversationReferences.Values)
    {
        await turnContext.Adapter.ContinueConversationAsync(_configuration["MicrosoftAppId"], conversationReference, BotCallback, cancellationToken);

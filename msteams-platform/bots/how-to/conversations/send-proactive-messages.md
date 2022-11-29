@@ -220,7 +220,7 @@ public class NotifyController : ControllerBase
             await ((BotAdapter)_adapter).ContinueConversationAsync(_appId, newReference, BotCallback, default(CancellationToken));
         }
         
-        // Let the caller know proactive messages have been sent
+        // Let the caller know proactive messages have been sent.
         return new ContentResult()
         {
             Content = "<html><body><h1>Proactive messages have been sent.</h1></body></html>",
@@ -250,7 +250,7 @@ async messageAllMembersAsync(context) {
 
     members.forEach(async (teamMember) => {
         const message = MessageFactory.text('Hello ${ teamMember.givenName } ${ teamMember.surname }. I\'m a Teams conversation bot.');
-        // A conversation reference for the conversation that contains this activity
+        // A conversation reference for the conversation that contains this activity.
         var ref = TurnContext.getConversationReference(context.activity);
         ref.user = teamMember;
 
@@ -278,7 +278,7 @@ async def _message_all_members(self, turn_context: TurnContext):
     team_members = await self._get_paged_members(turn_context)
 
     for member in team_members:
-        #A conversation reference for the conversation that contains this activity
+        # A conversation reference for the conversation that contains this activity.
         conversation_reference = TurnContext.get_conversation_reference(
             turn_context.activity
         )
@@ -307,7 +307,7 @@ async def _message_all_members(self, turn_context: TurnContext):
             conversation_reference, get_ref, conversation_parameters
         )
 
-    // Sends an activity to the sender of the incoming activity.
+    # Sends an activity to the sender of the incoming activity.
     await turn_context.send_activity(
         MessageFactory.text("All messages have been sent")
     )
