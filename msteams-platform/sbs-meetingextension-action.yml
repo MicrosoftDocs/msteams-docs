@@ -44,9 +44,9 @@ items:
 - title: Set up local environment
   durationInMinutes: 1
   content: |
-   Clone `BotBuilder-Samples` repository to your local GitHub:  
+   Clone `Microsoft-Teams-Samples` repository to your local GitHub:  
 
-    1. Open [BotBuilder-Samples](https://github.com/Microsoft/BotBuilder-Samples).
+    1. Open [Microsoft-Teams-Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples).
     1. Select **Code**.
     1. From the dropdown menu, select **Open with GitHub Desktop**.
 
@@ -359,7 +359,7 @@ items:
     
           :::image type="content" source="./assets/images/sbs-messagingextension-action/VSopenfile.png" alt-text="Screenshot of Visual Studio with the Project/Solution highlighted in red.":::
 
-       1. Select **TeamsMessagingExtensionsAction.csproj** file from **csharp_dotnet** folder.
+       1. Select **TeamsMessagingExtensionsAction.csproj** file from **csharp** folder.
 
           :::image type="content" source="./assets/images/sbs-messagingextension-action/openproject.png" alt-text="Screenshot of cloned repository with the TeamsMessagingExtensionsAction.csproj highlighted in red.":::
 
@@ -375,7 +375,7 @@ items:
 
     # [Command line](#tab/cli)
 
-    Go to **samples > csharp_dotnetcore > 51.teams-messaging-extensions-action** in Command Prompt window and enter the following command:
+    Go to **samples** > **msgext-action** > **csharp** in Command Prompt window and enter the following command:
 
     ```bash
     dotnet run
@@ -386,7 +386,7 @@ items:
 - title: Add Action Message Extension app to Teams
   durationInMinutes: 1
   content: |
-    1. In your cloned repository, go to **csharp_dotnetcore > 51.teams-messaging-extensions-action > TeamsAppManifest**.
+    1. In your cloned repository, go to **samples** > **msgext-action** > **csharp** > **TeamsAppManifest**.
 
     1. Create a .zip with the following files that are present in the **Manifest** folder: 
        * manifest.json
@@ -408,12 +408,7 @@ items:
     1. Select **Open** to upload the .zip file that you created in the **Manifest** folder.
 
        :::image type="content" source="./assets/images/sbs-messagingextension-action/openzipfile.png" alt-text="Screenshot of the cloned repository displaying the messaging zip file.":::
-
-    1. Select **Add**.
-
-       :::image type="content" source="./assets/images/sbs-messagingextension-action/add.png" alt-text="Screenshot of Action Messaging Extension in Teams with the Add option highlighted in red.":::
-    
-                    
+                      
 - title: Interact with the app in Teams
   durationInMinutes: 1
   content: |
