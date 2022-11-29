@@ -80,7 +80,7 @@ A notification bot needs to be installed into a team, or a group chat, or as per
 :::image type="content" source="../../../assets/images/notification-bot/notification-installation-scope.png" alt-text="add installation scope":::
 
 > [!NOTE]
-> For more install options, see [configure default install options](../../../concepts/deploy-and-publish/apps-publish-overview.md#configure-default-install-options)
+> For more install options, see [configure default install options](../../../concepts/deploy-and-publish/apps-publish-overview.md#configure-default-install-options).
 
 ## Customize notification
 
@@ -531,7 +531,7 @@ Notification target connections are stored in the persistence storage. If you're
 
 <summary><b>Why is undefined error returned when using the API `findChannel()`?</b></summary>
 
-You can encounter an undefined error, when the bot app is installed into other channels instead of the **General** channel. To fix this error, you can uninstall the bot app from Teams and redebug and relaunch it. After you've redebug and relaunched, ensure that the bot app is installed into the `General` channel .
+You can encounter an undefined error, when the bot app is installed into other channels instead of the **General** channel. To fix this error, you can uninstall the bot app from Teams and redebug and relaunch it. After you've redebug and relaunched, ensure that the bot app is installed into the **General** channel .
 
 <br>
 
@@ -577,7 +577,7 @@ Perform the following steps to extend your notification bot to support command a
 
 <summary><b>How to extend my notification bot to support adaptive card actions?</b></summary>
 
-To add adaptive card actions in notification bot, see the [steps](workflow-bot-in-teams.md#add-card-actions).
+To add Adaptive Card actions in notification bot, see the [steps](workflow-bot-in-teams.md#add-card-actions).
 
 <br>
 
