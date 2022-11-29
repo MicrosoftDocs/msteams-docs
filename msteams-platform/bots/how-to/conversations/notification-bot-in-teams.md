@@ -437,7 +437,7 @@ For sample implementation to use Azure blob storage, see [add notification stora
 
 ## Add authentication for notification API
 
-If you select HTTP trigger, the scaffolded notification API doesn't have authentication or authorization enabled. Ensure that you add an authentication or authorization for the API before using it for production. You can perform this in the following ways:
+If you select HTTP trigger, the scaffolded notification API doesn't have authentication or authorization enabled. Ensure that you add an authentication or authorization for the API before using it for production. You can perform either of the following:
 
 * Use an API key. You can use [function access keys](/azure/azure-functions/security-concepts?tabs=v4#function-access-keys), if you select Azure Functions to host your notification bot.
 
@@ -486,7 +486,7 @@ TeamsFx provides you with an [Incoming Webhook notification sample](https://gith
 
 <summary><b>Why is the notification installations empty even though the bot app is installed in Teams?</b></summary>
 
-Teams sends an event only at the first installation. If the bot app is already installed before your notification bot service is launched, the installation event either didn't reach the bot service or is omitted.
+Teams sends an event only at the first installation. If the bot app is already installed before your notification bot service is launched, the installation event, either didn't reach the bot service, or is omitted.
 
 You can resolve this in the following ways:
 
@@ -506,7 +506,7 @@ Notification target connections are stored in the persistence storage. If you're
 
 <summary><b>Why "Bad Request" or "Bad Argument" error occurs when sending notification?</b></summary>
 
-If the notification installation doesn't match the bot ID or password that is running, you can get a "Failed to decrypt conversation ID" error. One possible cause for this is the bot ID or password is changed due to cleaning local state or reprovisioning.
+If the notification installation doesn't match the bot ID or password, you can get a "Failed to decrypt conversation ID" error. One possible cause for this error is that the bot ID or password is changed due to cleaning local state or reprovisioning.
 
 You can resolve this by cleaning your notification storage. After cleaning, notify to reinstall your bot in Teams to ensure that the new installation is up-to-date. Each stored notification installation is bound with one bot. If you're able to check your notification storage, its bot field should match the bot you're running such as the bot ID having the same GUID.
 
@@ -531,7 +531,7 @@ Notification target connections are stored in the persistence storage. If you're
 
 <summary><b>Why is undefined error returned when using the API `findChannel()`?</b></summary>
 
-You can encounter an undefined error, when the bot app is installed into other channels instead of the **General** channel. To fix this error, you can uninstall the bot app from Teams and redebug and relaunch it. After you've redebug and relaunched, ensure that the bot app is installed into the **General** channel .
+You can encounter an undefined error, when the bot app is installed into other channels instead of the **General** channel. To fix this error, you can uninstall the bot app from Teams and redebug and relaunch it. After you've redebug and relaunched, ensure that the bot app is installed into the **General** channel.
 
 <br>
 
@@ -577,7 +577,7 @@ Perform the following steps to extend your notification bot to support command a
 
 <summary><b>How to extend my notification bot to support adaptive card actions?</b></summary>
 
-To add Adaptive Card actions in notification bot, see the [steps](workflow-bot-in-teams.md#add-card-actions).
+To add Adaptive Card actions in notification bot, see the [steps to add card actions](workflow-bot-in-teams.md#add-card-actions).
 
 <br>
 
