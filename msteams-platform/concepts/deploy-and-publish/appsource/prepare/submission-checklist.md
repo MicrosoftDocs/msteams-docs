@@ -64,7 +64,7 @@ Depending on your app functionality, you're required to provide Teams tenant con
 4. **Demo Video**: Provide a recording of your app so that Microsoft can fully understand its functionality.
 
 Here are sample test instructions for your reference:
-
+<br>
 <details>
 <summary><b>Sample EDU app</b></summary>
 
