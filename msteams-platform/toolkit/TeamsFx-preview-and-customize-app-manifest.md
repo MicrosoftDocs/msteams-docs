@@ -56,7 +56,7 @@ The following steps help to preview local manifest file by using preview option 
 
 1. Select **Preview** in the codelens of `manifest.template.json` file.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/preview-23.png" alt-text="Screenshot is an example showing the preview in the codelens of manifest file.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/preview-23.png" alt-text="Screenshot is an example showing the preview in the codelens of manifest file." lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/preview-23.png":::
 
 1. Select **local**.
 
@@ -78,9 +78,9 @@ The following steps help to preview local manifest file by using **Zip Teams met
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-env1.png" alt-text="Screenshot is an example of showing the selection of local in the environment.":::
 
-The preview local appears as shown in the image:
+Following image is a preview local:
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/preview-23.png" alt-text="Screenshot is an example of showing the preview of local.":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/preview-23.png" alt-text="Screenshot is an example of showing the preview of local." lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/preview-23.png":::
 
 ## Preview manifest file in remote environment
 
@@ -90,11 +90,9 @@ To preview manifest file using Visual Studio Code:
   
   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/provision.png" alt-text="Screenshot is an example of showing the selection of provision in the cloud resource.":::
 
-To preview manifest file using command palette:
+To preview manifest file using command palette. You can trigger **Teams: Provision in the cloud** from command palette.
 
-* Trigger **Teams: Provision in the cloud** from command palette.
-
-  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/command palatte.png" alt-text="Screenshot is an example of showing provision cloud resource using command palette.":::
+  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/command palatte.png" alt-text="Screenshot is an example of showing provision cloud resource using command palette." lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/command palatte.png":::
 
 It generates configuration for remote Teams app, and builds package and preview manifest under `build/appPackage` folder.
 
@@ -111,10 +109,10 @@ The following steps help to preview manifest file by using preview option in cod
 
 1. Select your environment.
 
-   > [!NOTE]
-   > If there are more than one environment, you need to select the environment you want to preview as shown in the image:
-
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview-1.png" alt-text="Screenshot is an example of showing the adding of environment.":::
+
+   > [!NOTE]
+   > If there are more than one environment, you need to select the environment you want to preview.
 
 The following steps help to preview manifest file by using **Zip Teams metadata package** option in remote environment:
 
@@ -122,7 +120,7 @@ The following steps help to preview manifest file by using **Zip Teams metadata 
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-manifest-json.png" alt-text="Screenshot is an example of showing the selection of manifest.template.json.":::
 
-1. Select the Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG"::: icon in the Visual Studio Code toolbar.
+1. Select the **Teams Toolkit** :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG"::: icon in the Visual Studio Code Activity Bar.
 
 1. Select **Zip Teams metadata package** under **DEPLOYMENT**.
 
@@ -133,7 +131,7 @@ The following steps help to preview manifest file by using **Zip Teams metadata 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview-1.png" alt-text="Screenshot is an example of showing the adding of environment.":::
 
    > [!NOTE]
-   > If there are more than one environment, you need to select the environment you want to preview as shown in the image:
+   > If there are more than one environment, you need to select the environment you want to preview.
 
 ## Sync local changes to Developer Portal
 
@@ -146,11 +144,11 @@ After previewing the manifest file, you can sync your local changes to Developer
 
    You can deploy Teams app manifest in any of the following ways:
 
-   * Go to `manifest.template.json` file, and right-click to select `Deploy Teams app manifest` from context menu.
+   * Right-click `manifest.template.json` file, and select **Deploy Teams app manifest** from context menu.
 
       :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/deploy-manifest.png" alt-text="Screenshot is an example of showing the selection of deploy Teams app manifest.":::
 
-   * Trigger `Teams: Deploy Teams app manifest` from command palette.
+   * Trigger **Teams: Deploy Teams app manifest** from command palette.
 
       :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/deploy-command.png" alt-text="Screenshot is an example of showing the deploy from command palette.":::
 
@@ -162,7 +160,7 @@ After previewing the manifest file, you can sync your local changes to Developer
 
    * Trigger **Teams: Update manifest to Teams platform** on the menu bar of `manifest.{env}.json`.
 
-      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/update-to-teams.png" alt-text="Screenshot is an example of showing the update to Teams platform on the menu bar of manifest.":::
+      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/update-to-teams.png" alt-text="Screenshot is an example of showing the update to Teams platform on the menu bar of manifest." lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/update-to-teams.png":::
 
 You can also trigger **Teams: Update manifest to Teams platform** from the command palette:
 
