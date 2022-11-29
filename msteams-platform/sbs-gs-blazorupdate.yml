@@ -599,7 +599,7 @@ items:
 
     1. Select **Provision**.
 
-       :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/permission-azure.png" alt-text="Screenshot of Teams Toolkit with Provision highlighted in red.:::
+       :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/permission-azure.png" alt-text="Screenshot of Teams Toolkit with Provision highlighted in red.":::
 
        It takes a few minutes for your resource group to provision in the cloud.
         
