@@ -224,22 +224,35 @@ Following are the parameters to control the conditions for the apps to be added 
 
 ### Code example
 
+The following code snippet is an example for `readyToUnload` callback function:
+
+```javascript
+// Using readyToUnload callback function
+const beforeUnloadHandler = (readyToUnload: () => void) => {
+  readyToUnload();
+  return true;
+};
+```
+
 The following code snippet is an example of `teamsCore.registerBeforeUnloadHandler` and `teamsCore.registerOnLoadHandler` APIs:
 
 ```javascript
-teamsCore.registerBeforeUnloadHandler((readyToUnload) => { 
-console.log("got beforeunload from TEAMS"); 
-// dispose resources and then invoke readyToUnload 
-readyToUnload(); 
-return true; 
-}); 
+microsoftTeams.app.initialize().then(() => {
 
-teamsCore.registerOnLoadHandler((data) => { 
-console.log("got load from TEAMS", data.contentUrl, data.entityId); 
-// use contentUrl to route to correct page 
-// invoke notifySuccess when ready  
-app.notifySuccess(); 
-}); 
+    microsoftTeams.teamsCore.registerBeforeUnloadHandler((readyToUnload) => {
+        const result = beforeUnloadHandler(readyToUnload);
+        // dispose resources and then invoke readyToUnload
+        console.log("got beforeunload from TEAMS");
+        return result;
+    });
+
+    microsoftTeams.teamsCore.registerOnLoadHandler((data) => {
+        console.log("got load from TEAMS", data.contentUrl, data.entityId);
+        // use contentUrl to route to correct page 
+        // invoke notifySuccess when ready  
+        app.notifySuccess();
+    });
+});
 ```
 
 ### Limitations
