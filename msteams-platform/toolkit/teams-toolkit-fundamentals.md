@@ -1,7 +1,7 @@
 ---
 title: Teams Toolkit Overview
 author: zyxiaoyuer
-description: Learn Teams Toolkit, Installation of Teams Toolkit, and User journey of Teams Toolkit
+description: Learn about Teams Toolkit, it's Installation, and User journey. Teams Toolkit is available for Visual Studio code and Visual Studio.
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
@@ -15,7 +15,7 @@ zone_pivot_groups: teams-app-platform
 
 Teams Toolkit makes it simple to get started with app development for Microsoft Teams using Visual Studio Code.
 
-* Start with a project template or from a sample.
+* Start with a project templates for common line-of-business app scenarios or from a sample.
 * Save setup time with automated app registration and configuration.
 * Run and debug to Teams directly from familiar tools.
 * Smart defaults for hosting in Azure using infrastructure-as-code and Bicep.
@@ -39,7 +39,7 @@ Teams Toolkit is available for free for Visual Studio Code. For more information
 
 Teams Toolkit makes it simple to get started with app development for Microsoft Teams using Visual Studio.
 
-* Start with a project template or from a sample.
+* Start with a project templates for common line-of-business app scenarios or from a sample.
 * Save setup time with automated app registration and configuration.
 * Run and debug to Teams directly from familiar tools.
 * Smart defaults for hosting in Azure using infrastructure-as-code and Bicep.
@@ -62,6 +62,22 @@ Teams Toolkit is available for free for Visual Studio 2022 Community, Profession
 
 The following list provides the key features of Teams Toolkit:
 
+::: zone pivot="visual-studio-code"
+
+* [Project templates](#project-templates)
+* [Automatic registration and configuration](#automatic-registration-and-configuration)
+* [Multiple environments](#multiple-environments)
+* [Quick access to Teams Developer Portal](#quick-access-to-teams-developer-portal)
+
+::: zone-end
+
+::: zone pivot="visual-studio"
+
+* [Project templates](#project-templates)
+* [Automatic registration and configuration](#automatic-registration-and-configuration)
+
+::: zone-end
+
 ### Project templates
 
 You can start directly with the capability-focused templates such as tabs, bots, and message extensions or by following existing samples if you're already familiar with Teams app development. Teams Toolkit reduces the complexity of getting started with templates for common line-of-business app scenarios and smart defaults to accelerate your time to production.
@@ -82,7 +98,7 @@ You can save time and let the toolkit automatically register the app in Teams De
 
 ### Multiple environments
 
-You can create different groupings of cloud resources to run and test your app. Use the "dev" environment with your Azure subscription or create a new app with a different subscription for staging, test, and production.
+You can create different groupings of cloud resources to run and test your app. Use the **dev** environment with your Azure subscription or create a new app with a different subscription for staging, test, and production.
 
 ### Quick access to Teams Developer Portal
 
