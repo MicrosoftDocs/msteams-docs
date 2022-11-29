@@ -65,6 +65,92 @@ Depending on your app functionality, you are required to provide Teams tenant co
 
 Here are sample test instructions for your reference:
 
+<details>
+<summary><b>Sample EDU app</b></summary>
+
+## About the app
+
+Contoso offers a web-based productivity tool that teachers use to grade students’ work. It supports teachers during the entire process of setting, correcting, marking, grading, and giving feedback on assignments. This can be about any subject and have any form, such as essays, papers, and letters. Additionally, the app offers various options, such as plagiarism checking to promote original writing, Team Hand-ins to stimulate collaborating in groups and Peer Assessment & Feedback to help students learn from each other.
+
+## Pre-requisites
+
+IMPORTANT: Before you start using Contoso within Teams, we assume that you have an educational tenant already filled with a school, classes/teams, teachers, and students. If not, you will see error 005 or 0010.
+
+## Test credentials
+
+Teacher #1
+
+- email: xxxxxxxxxx@contoso.com
+- password: xxxxxxxxxxx
+
+Student #1
+
+- email: xxxxxxxxxx@contoso.com
+- password: xxxxxxxxxxx
+
+Student #2
+
+- email: xxxxxxxxxx@contoso.com
+- password: xxxxxxxxxxx
+
+## App functionality
+
+### Contoso Dashboard
+
+When you go to the Contoso app within MS Teams, you first arrive at the dashboard page. This page provides at a glance information about texts that haven’t been handed-in yet, that still 4 need to be corrected and the ones that are corrected already and of which the feedback can be sent to the student. At ‘Assignments’ it shows the assignments that are currently active and by clicking on the big green button underneath that it is possible to create a new assignment in Contoso (that is through the needless integration also immediately visible in Microsoft Teams when created). Also, you can select a period and group/class here. 
+
+### Classes
+
+Through the integration of Contoso within MS Teams, it is possible to make a group or class within Teams which is afterwards automatically also created within Contoso (within Teams). See in the image below, the creation of ‘Lizzy’s trial class’.
+
+:::image type="content" source="../../../../assets/images/store-detail-page/edu-sample-class.png" alt-text="Education sample shows trial class":::
+
+On the next image you can see that this is also automatically visible within Contoso when you go to ‘My Classes/groups’ in the menu on the left.
+
+:::image type="content" source="../../../../assets/images/store-detail-page/edu-sample-class-group.png" alt-text="Education sample showing Contoso class group":::
+
+> [!NOTE]
+> The other way around it is unfortunately not possible yet. We would like to realize this in cooperation with Microsoft Teams. This would entail being possible to create a Class or Group in the app of Contoso in Microsoft Teams and that this would also be linked to the ‘Teams’ page within Microsoft Teams.
+
+### Assignments
+
+Within Microsoft Teams you can see the 'Assignments' icon in the left menu. Here you can see a list of assignments. It also shows the due date of the assignments and to what class these assignments are assigned to. Above the list of assignments there are three tabs visible: ‘Assigned’, ‘Returned’ and ‘Drafts’. ‘Assigned’ shows assignments that are sent to your classes, ‘Returned’ are the assignments that you received back from your students and that are ready to be corrected by you and ‘Drafts’ shows assignments that are created as a concept and that are not sent to your students yet. Next to ‘Drafts’, it is possible to filter assignments by class.
+
+When clicking on an assignment that’s in the list, you can see the status of the assignment per student. When you see ‘Not handed in’ next to the students name, it means that besides the student did not hand in the assignment, he/she also did not have a look at the assignment descriptions. When you see ‘Viewed’, it is not handed in yet, but the student did see the assignment description. When ‘Handed in’ you can start correcting the assignment.
+
+:::image type="content" source="../../../../assets/images/store-detail-page/edu-assignment.png" alt-text="Education sample showing class assignment":::
+
+### Creating a new assignment
+
+To create an assignment in Teams, go to Assignments and click then on Create (down left corner).
+
+:::image type="content" source="../../../../assets/images/store-detail-page/edu-sample-new-assignment.png" alt-text="Education sample showing new assignment":::
+
+As the template options are disabled for the use of Contoso within Microsoft Teams, click on the button to ‘create a new assignment (without an already existing template). You get to see the following screen. Choose a title that says something about the assignment so that you can later find the correct assignment based on the title.
+
+The status of the assignment can be ‘draft’, ‘published’, ‘closed’ or ‘hidden’. Automatically, this is on draft meaning that when saving this new assignment, it will be saved as a concept whereafter you would still need to send it to your students. By changing this to published, it will immediately send the assignment once you save it. It is always possible to change this later. For example, it is possible to prepare various assignments before you publish them. The ‘language of the text’ determines which database of observations will be used to check and give feedback on the text. Under the option ‘Allowed ways to hand in texts’ you can choose whether your students type their texts in Contoso (or copy and paste them from word/pages file), or that they upload a document in Contoso
+
+:::image type="content" source="../../../../assets/images/store-detail-page/edu-sample-app.png" alt-text="Education sample app":::
+
+:::image type="content" source="../../../../assets/images/store-detail-page/edu-sample-app-b.png" alt-text="Education sample showing sample app":::
+
+### Modify assignments
+
+It is possible to modify the assignments that were created. This is possible by going to Assignments in Teams, to click on the assignment you would like to modify and then to click on Contoso SV PRO.
+
+### Correcting documents and giving feedback
+
+Go to ‘Assignments’ or first to ‘Teams’, then choose your class/group and then select the assignment you would like to correct.
+
+### Observation database
+
+Once one or more words or parts of the text are selected, it is possible to place an observation with the text. This feedback can be given in the form of compliments, critical comments or open comments.
+
+:::image type="content" source="../../../../assets/images/store-detail-page/edu-sample-database.png" alt-text="Education sample database":::
+
+**Demo Video**
+
+</details>
 
 
 <!--Provide instructions and resources to help the reviewers test your app, including:
