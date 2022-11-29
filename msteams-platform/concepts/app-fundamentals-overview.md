@@ -38,7 +38,7 @@ Understanding the user and their concern are the first indicators of how a Teams
 
 * **Map your use cases**: Map common use cases to Teams features based on requirements, such as sharing, collaborating, workflows, relevant social platforms, and more.
 
-* **Plan analytics for your Teams app**: Plan to analyze the analysis and telemetry data against your business goals, take corrective action by fixing issues, and intervening in the user journey or plan further enhancements to your app.
+* **Plan analytics for your Teams app**: Plan to analyze the analysis and instrumentation data against your business goals, take corrective action by fixing issues, and intervening in the user journey or plan further enhancements to your app.
 
 * **Plan responsive tabs for Teams mobile**: It covers common scenarios and helps with planning apps for Teams mobile.
 
