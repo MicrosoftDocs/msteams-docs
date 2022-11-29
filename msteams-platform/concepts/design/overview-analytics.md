@@ -171,4 +171,4 @@ Next, see how you should methodically craft your data instrumentation strategy a
 ## Next step
 
 > [!div class="nextstepaction"]
-[ Strategize and decide what to measure](strategize-measure.md)
+> [Strategize and decide what to measure](strategize-measure.md)
