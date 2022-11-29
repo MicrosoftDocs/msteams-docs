@@ -35,7 +35,7 @@ The Microsoft Teams app validation tool helps you identify and fix issues before
 
 ## Compile testing instructions
 
-Provide instructions and resources to help the reviewers test your app, including:
+<!--Provide instructions and resources to help the reviewers test your app, including:
 
 * Test accounts
 * Credentials
@@ -65,7 +65,7 @@ If you must configure a Teams tenant to use your app, include those instructions
 
 ### Video (optional)
 
-Provide a recording of your app so that Microsoft can fully understand its functionality.
+Provide a recording of your app so that Microsoft can fully understand its functionality.-->
 
 ## Create your store listing details
 
