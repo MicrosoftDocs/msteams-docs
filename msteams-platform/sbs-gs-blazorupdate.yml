@@ -19,7 +19,7 @@ items:
     
     You can create a tab app and a bot app with Blazor and the latest version of Visual Studio.
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/blazor/your-blazor-helloworld-app.png" alt-text="Diagram showing this app has two features, tab and Bot.":::
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/blazor/your-blazor-helloworld-app.png" alt-text="Screenshot of the blazor app displaying the tab, Bot and Message Extension output after you have successfully completed the step-by-step guide.":::
 
     > [!NOTE]
     > Currently, Teams Toolkit doesn't support the message extension capability.
@@ -56,7 +56,7 @@ items:
     1. Open `vs_enterprise__3bed52501a604464b1eff2ce580fd4eb.exe` from your download folder.
     1. Select **Continue** in the **Visual Studio Installer** page to configure your installation.
 
-       :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/visual-studio-installer.png" alt-text="Select continue to configure your installation":::  
+       :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/visual-studio-installer.png" alt-text="Screenshot of Visual Studio Installer with continue option highlighted in red.":::  
 
     1. Select **ASP.NET and web development** under **Workloads**.
 
@@ -64,7 +64,7 @@ items:
        
     1. Select **Install**.
 
-       :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/vs.install.png" alt-text="Illustration shows the option to install Microsoft development tool.":::  
+       :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/vs.install.png" alt-text="Screenshot of Visual Studio Enterprise Preview with Asp.NET web development, Microsoft Teams development tools, and install option highlighted in red.":::  
        
      Your Visual Studio is installed in a few minutes.
     
@@ -109,7 +109,7 @@ items:
     1. Select **Manage your apps**.
     1. Select **Upload a custom app**. If you see the option, sideloading apps is enabled.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/prerequisites/upload-custom-app.png" alt-text="Illustration shows the option to upload a custom app in Teams.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/prerequisites/upload-custom-app.png" alt-text="Screenshot of Manage your apps with apps, Manage your apps, Upload an app, and Upload a customised app options highlighted in red.":::
 
         > [!NOTE]
         > If Teams doesn't show the option to upload a custom app, connect to your Teams administrator.
@@ -123,7 +123,7 @@ items:
     1. In the welcome screen, select **Set up E5 subscription**.
     1. Setup your administrator account. After you finish, the following screen appears.
 
-        :::image type="content" source="../msteams-platform/assets/images/build-your-first-app/dev-program-subscription.png" alt-text="Example of what you see after signing up for the Microsoft 365 developer program.":::
+        :::image type="content" source="../msteams-platform/assets/images/build-your-first-app/dev-program-subscription.png" alt-text="Screenshot of Microsoft 365 Developer Program displaying your Microsoft 365 developer subscriptions.":::
 
     1. Sign in to Teams using the administrator account you just set up. Verify that you have the **Upload a custom app** option in Teams.
 
@@ -138,7 +138,7 @@ items:
   content: |
     Start Teams app development by creating your first app. This app uses the tab capability.
     
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/blazor/your-blazor-helloworld-app1.png" alt-text="Diagram showing this app has one feature. Tab is highlighted.":::    
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/blazor/your-blazor-helloworld-app1.png" alt-text="Screenshot of the blazor app displaying the final output of tab app after you have successfully completed the step-by-step guide.":::    
 
     This tutorial walks you through the steps to create, run, and deploy your first Teams app using .NET/Blazor.
 
