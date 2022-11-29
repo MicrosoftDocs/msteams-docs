@@ -641,3 +641,8 @@ ms.topic: how-to
  "protocolProfileBehavior": {}
 }
 ```
+
+## See also
+
+* [Test your app](../../concepts/build-and-test/test-app-overview.md)
+* [Resource-specific consent](resource-specific-consent.md)
