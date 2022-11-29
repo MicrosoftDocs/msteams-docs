@@ -66,14 +66,14 @@ The following table includes the query parameters:
 
 # [C#](#tab/dotnet)
 
-* [SDK reference](https://learn.microsoft.com/en-us/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetingparticipantasync?view=botbuilder-dotnet-stable)
+* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetingparticipantasync?view=botbuilder-dotnet-stable&preserve-view=true)  
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-context-app/csharp/MeetingContextApp/Bots/MeetingContextBot.cs#L19)
 
 ```csharp
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
 {
   // Gets the details for the given meeting participant. 
-  // This only works in teams meeting scoped conversations.
+  // This only works in Teams meeting scoped conversations.
   TeamsMeetingParticipant participant = await TeamsInfo.GetMeetingParticipantAsync(turnContext, "yourMeetingId", "yourParticipantId", "yourParticipantTenantId").ConfigureAwait(false);
   TeamsChannelAccount member = participant.User;
   MeetingParticipantInfo meetingInfo = participant.Meeting;
@@ -95,7 +95,7 @@ export class MyBot extends TeamsActivityHandler {
         this.onMessage(async (context, next) => {
 
             // getMeetingParticipant : Gets the details for the given meeting participant. 
-            // This only works in teams meeting scoped conversations.
+            // This only works in Teams meeting scoped conversations.
             TeamsMeetingParticipant participant = getMeetingParticipant(turnContext, "yourMeetingId", "yourParticipantId", "yourTenantId");
             let member = participant.user;
             let meetingInfo = participant.meeting;
@@ -201,11 +201,12 @@ The `Bot ID` is declared in the manifest and the bot receives a result object.
 > * The URL is the page, which loads as `<iframe>` in the in-meeting notification. The domain must be in the apps' `validDomains` array in your app manifest.
 
 # [C#](#tab/dotnet)
-* [SDK reference](https://learn.microsoft.com/en-us/dotnet/api/microsoft.bot.builder.teams.teamsactivityextensions.teamsnotifyuser?view=botbuilder-dotnet-stable#microsoft-bot-builder-teams-teamsactivityextensions-teamsnotifyuser(microsoft-bot-schema-iactivity))
+
+* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityextensions.teamsnotifyuser?view=botbuilder-dotnet-stable#microsoft-bot-builder-teams-teamsactivityextensions-teamsnotifyuser(microsoft-bot-schema-iactivity)&preserve-view=true).
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-proactive-messaging/csharp/proactive-cmd/Program.cs)
 
 ```csharp
-// Specifies the type of text data in an message attachment. 
+// Specifies the type of text data in a message attachment.
 Activity activity = MessageFactory.Text("This is a meeting signal test");
 
 // Configures the current activity to generate a notification within Teams.
@@ -216,10 +217,11 @@ await turnContext.SendActivityAsync(activity).ConfigureAwait(false);
 ```
 
 # [JavaScript](#tab/javascript)
+
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L74)
 
 ```javascript
-// MessageFactory.text() : Specifies the type of text data in an message attachment.
+// MessageFactory.text(): Specifies the type of text data in a message attachment.
 const replyActivity = MessageFactory.text('Hi'); // this could be an adaptive card instead
 replyActivity.channelData = {
     notification: {
@@ -386,7 +388,8 @@ The following table lists the query parameter:
 ### Example
 
 # [C#](#tab/dotnet)
-* [SDK reference](https://learn.microsoft.com/en-us/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetinginfoasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-teams-teamsinfo-getmeetinginfoasync(microsoft-bot-builder-iturncontext-system-string-system-threading-cancellationtoken))
+
+* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetinginfoasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-teams-teamsinfo-getmeetinginfoasync(microsoft-bot-builder-iturncontext-system-string-system-threading-cancellationtoken)&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/graph-meeting-notification/csharp/MeetingNotification/Bots/MeetingNotificationBot.cs#L56)
 
 ```csharp
@@ -696,6 +699,7 @@ The bot receives event through the `OnEventActivityAsync` handler. To deserializ
 The following code shows how to capture the metadata of a meeting that is `MeetingType`, `Title`, `Id`, `JoinUrl`, `StartTime`, and `EndTime` from a meeting start/end event:
 
 Meeting Start Event
+
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L34)
 
 ```csharp
@@ -708,6 +712,7 @@ protected override async Task OnTeamsMeetingStartAsync(MeetingStartEventDetails 
 ```
 
 Meeting End Event
+
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L51)
 
 ```csharp
@@ -887,7 +892,7 @@ callback = (errcode, result) => {
             // Handle success code
         }
     }
-// The getIncomingClientAudioState API shows the current audio state
+// The getIncomingClientAudioState API shows the current audio state.
 microsoftTeams.meeting.getIncomingClientAudioState(this.callback)
 ```
 
@@ -944,7 +949,7 @@ callback = (error, result) => {
             // Handle success code
         }
     }
-// The toggleIncomingClientAudio API allows an app to toggle the incoming audio state
+// The toggleIncomingClientAudio API allows an app to toggle the incoming audio state.
 microsoftTeams.meeting.toggleIncomingClientAudio(this.callback)
 ```
   
