@@ -12,7 +12,7 @@ ms.date: 11/29/2021
 
 Teams Toolkit supports different environments for creating apps. Teams Toolkit helps to integrate Azure Functions capabilities and cloud services in the Teams app that you've built.
 
-:::image type="content" source="../assets/images/buildapps-TTK_1.png" alt-text="Prepare to build apps using Teams Toolkit":::
+:::image type="content" source="../assets/images/buildapps-TTK_1.png" alt-text="Prepare to build apps using Teams Toolkit" lightbox="../assets/images/buildapps-TTK_1.png":::
 
 ## Build environments
 
@@ -34,8 +34,8 @@ Teams Toolkit in Visual Studio Code supports building the following apps using J
 
 * Tab app: Your tab app can have web-based content. You can have a custom tab for your web content in Teams or add Teams-specific functionality to your web content.
 * Bot app: Bot can be chatbot or conversational bot that allows you to do simple and repetitive tasks such as customer service or support staff.
-* Notification bot: You can send messages in Teams channel or group or personal chat by Notification bots with HTTP request.
-* Command bot: You can automate repetitive tasks using command bot. Command bot helps you to respond simple queries or commands sent in chats.
+* Notification bot: You can send messages in Teams channel or group or personal chat by notification bots with HTTP request.
+* Command bot: You can automate repetitive tasks using a command bot. Command bot helps you to respond simple queries or commands sent in chats.
 * Message extensions: You can interact with your web service through buttons and forms in the Microsoft Teams client.
 
 ### Create your Teams app using SPFx
@@ -44,7 +44,7 @@ Teams Toolkit in Visual Studio Code allows you to create tab app using SPFx. Thi
 
 * Provides you easy integration with data residing in SharePoint to your Teams.
 * Integrates your SPFx solution with your business APIs secured with Microsoft Azure Active Directory (Azure AD).
-* Gives you Accesses to various open-source tools.
+* Gives you access to various open-source tools.
 * Creates powerful applications that can deliver a great UX.
 * Integrates with other Microsoft 365 workloads easily.
 * Delivers flexibility to host applications wherever needed.
@@ -52,10 +52,10 @@ Teams Toolkit in Visual Studio Code allows you to create tab app using SPFx. Thi
 ## Support for Azure Functions
 
 You can use Teams Toolkit to integrate [Azure Functions](/azure/azure-functions/functions-overview) capabilities into building apps. You can focus on the pieces of code that matter, and Azure Functions handles the rest.
-Azure Functions allows you to implement:
+Azure Functions provides "compute on-demand" in two significant ways:
 
-1. System logic into your readily available blocks of code. These blocks are called functions.
-1. As the requests increases, Azure Functions meets the requirement with as many resources and function instances as necessary.
+1. Allows you to implement system's logic into your readily available blocks of code. These blocks are called functions.
+1. Meets the requirement with as many resources and function instances as necessary as the requests increase.
 
 Azure Functions integrates with an array of [cloud services](add-resource.md#types-of-cloud-resources) to provide feature-rich implementations. The following are the common scenarios for Azure Functions:
 
