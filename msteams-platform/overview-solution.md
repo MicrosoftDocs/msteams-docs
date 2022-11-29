@@ -9,7 +9,6 @@ ms.date: 11/02/2021
 ---
 # The Teams solution
 
-
 The Microsoft Teams Platform is a powerful, flexible platform for creating apps for Teams. It provides a vast suite of development environments and tools to support app development.
 
 ## The user story
@@ -87,110 +86,13 @@ From designing to building and distributing a Teams app, you can use various too
 
 ## See also
 
-:::row:::
-    :::column span="1":::
-        **Plan your app**
-    :::column-end:::
-    :::column span="2":::
-        Understand and map your app use cases to Teams features.
-
-        > [!div class="nextstepaction"]
-        > [Plan your app](~/concepts/app-fundamentals-overview.md)
-    :::column-end:::
-:::row-end:::
-
-:::row:::
-    :::column span="1":::
-        **Design your app**
-    :::column-end:::
-    :::column span="2":::
-        Design your app UI with Teams UI Kit.
-
-        > [!div class="nextstepaction"]
-        > [Design your Teams app](~/concepts/design/design-teams-app-process.md)
-    :::column-end:::
-:::row-end:::
-
-:::row:::
-    :::column span="1":::
-        **Build your app**
-    :::column-end:::
-    :::column span="2":::
-        Looking for app development inspiration? Browse our list of real-world scenarios and industry solutions with high fidelity concept mocks to understand the various ways a Teams app can help your users.
-
-        > [!div class="nextstepaction"]
-        > [See app scenarios](https://adoption.microsoft.com/en-us/extensibility-look-book-gallery/)
-    :::column-end:::
-:::row-end:::
-
-:::row:::
-    :::column span="1":::
-        **Extend your app across Microsoft 365**
-    :::column-end:::
-    :::column span="2":::
-You can preview your Teams apps running in other high usage Microsoft 365 experiences with Teams JavaScript client SDK v2 Preview.
-
-        > [!div class="nextstepaction"]
-        > [Extend your app](m365-apps/overview.md)
-    :::column-end:::
-:::row-end:::
-
-:::row:::
-    :::column span="1":::
-        **Test your app**
-    :::column-end:::
-    :::column span="2":::
-        After integrating your app with Teams, you must test your app before publishing it.
-
-        > [!div class="nextstepaction"]
-        > [Test your app](concepts/build-and-test/test-app-overview.md)
-    :::column-end:::
-:::row-end:::
-
-:::row:::
-    :::column span="1":::
-        **Distribute your app**
-    :::column-end:::
-    :::column span="2":::
-        You can provide your Teams app to an individual, team, organization, or anyone who wants to use it.
-
-        > [!div class="nextstepaction"]
-        > [Distribute your app](~/concepts/deploy-and-publish/apps-publish-overview.md)
-    :::column-end:::
-:::row-end:::
-
-:::row:::
-    :::column span="1":::
-        **Monetize your app**
-    :::column-end:::
-    :::column span="2":::
-        Teams store offers app monetizing options, such as SaaS offers and In-app purchases. Choose the best monetizing option suitable for your Teams app.
-
-        > [!div class="nextstepaction"]
-        > [Monetize your app](concepts/deploy-and-publish/appsource/prepare/monetize-overview.md)
-    :::column-end:::
-:::row-end:::
-
-:::row:::
-    :::column span="1":::
-        **Integrate with Teams**
-    :::column-end:::
-    :::column span="2":::
-        Blend the features users love about an existing web app, service, or system with the collaborative features of Teams.
-
-        > [!div class="nextstepaction"]
-        > [Integrate an existing app](samples/integrating-web-apps.md)
-    :::column-end:::
-:::row-end:::
-
-:::row:::
-    :::column span="1":::
-        **A little code goes a long way**
-    :::column-end:::
-    :::column span="2":::
-        You don't need to be an expert programmer to build a great Teams app. Try one of several low-code solutions.
-
-        > [!div class="nextstepaction"]
-        > [Create a low-code app](samples/teams-low-code-solutions.md)
-    :::column-end:::
-:::row-end:::
+- [Teams app that fits](overview.md)
+- [Design process for Microsoft Teams apps](concepts/design/design-teams-app-process.md)
+- [The Teams solution](overview-solution.md)
+- [Extend Teams apps across Microsoft 365](m365-apps/overview.md)
+- [Test your app](concepts/build-and-test/test-app-overview.md)
+- [Distribute your Microsoft Teams app](concepts/deploy-and-publish/apps-publish-overview.md)
+- [Monetize your app](concepts/deploy-and-publish/appsource/prepare/monetize-overview.md)
+- [Considerations for Teams integration](samples/integrating-web-apps.md)
+- [Teams Toolkit Overview](toolkit/teams-toolkit-fundamentals.md)
+- [Developer Portal for Teams](concepts/build-and-test/teams-developer-portal.md)

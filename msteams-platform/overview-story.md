@@ -84,3 +84,8 @@ Next, explore some of Teams features that help you build an app solution.
 
 > [!div class="nextstepaction"]
 > [Explore Teams features](overview-explore.md)
+
+## See also
+
+* [Teams app that fits](overview.md)
+* [Understand your use cases](concepts/design/understand-use-cases.md)
