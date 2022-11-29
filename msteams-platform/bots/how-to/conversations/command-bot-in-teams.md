@@ -11,11 +11,12 @@ ms.localizationpriority: high
 
 Microsoft Teams allows you to automate simple and repetitive tasks in a conversation. You can build a command bot that can respond to simple commands sent in chats with Adaptive Cards. You can create a command bot template in Teams that responds to chat commands by displaying UI using an Adaptive Card. This enables users to send messages in Teams and your app can provide a response as required.
 
-The command bot template is built using the TeamsFx SDK, which provides a simple set of functions over the Microsoft Bot Framework to implement the scenario. You can build the command bot in different scenarios such as ...
+The command bot template is built using the TeamsFx SDK, which provides a simple set of functions over the Microsoft Bot Framework to implement the scenario. You can build the command bot in different scenarios such as ...[Placeholder for command bot scenarios]
 
 [Placeholder for command bot infographic image]
 
 **Advantages**
+
 [Placeholder for advantages of command bot]
 
 ## Command bot installation
@@ -25,7 +26,7 @@ A command bot needs to be installed into a team, or a group chat, or as personal
 :::image type="content" source="../../../assets/images/command-bot-teams/commandbot-installation.png" alt-text="installation option selection":::
 
 > [!NOTE]
-> For more install options, see [configure default install options](../../../concepts/deploy-and-publish/apps-publish-overview.md#configure-default-install-options)
+> For more install options, see [configure default install options](../../../concepts/deploy-and-publish/apps-publish-overview.md#configure-default-install-options).
 
 ## Command and response
 
@@ -223,13 +224,13 @@ Notifications add the ability for your app to send Adaptive Cards in response to
 
 ### Add workflow to your command bot
 
-Adaptive Cards can be updated on user action to allow the user to progress through a series of cards that require their input. You can define the actions and use a bot to return an Adaptive Card in response to user action. The actions can be linked into sequential workflows. You can follow the [steps to add the workflow card actions](workflow-bot-in-teams.md#add-card-actions) to your command bot. For more information on workflow bot, see [workflow bot in teams](workflow-bot-in-teams.md).
+Adaptive Cards can be updated by user action to allow the user to progress through a series of cards that require their input. You can define the actions and use a bot to return an Adaptive Card in response to the user action. The actions can be linked into sequential workflows. You can follow the [steps to add the workflow card actions](workflow-bot-in-teams.md#add-card-actions) to your command bot. For more information on workflow bot, see [workflow bot in teams](workflow-bot-in-teams.md).
 
 ## Customize trigger pattern
 
 The default pattern to trigger a command is through a defined keyword. You can also collect and process additional information retrieved from the trigger keyword. In addition to keyword match, you can also define your trigger pattern with [regular expressions](https://regex101.com/) and match against `message.text` with more controls.
 
-You can find any capture group in `message.matches`, when using regular expressions. The following example uses regular expression to capture strings after `reboot`, for example if user inputs `reboot myMachine`, `message.matches[1]`, it captures `myMachine`:
+You can find any capture group in `message.matches`, when using regular expressions. For example if user inputs `reboot myMachine`, `message.matches[1]`, it captures `myMachine`. The following example uses regular expression to capture strings after `reboot`:
 
 ```
 
@@ -264,7 +265,7 @@ Adaptive Card provides [template language](/adaptive-cards/templating/) to allow
 1. Model your card data.
 1. Use `MessageBuilder.attachAdaptiveCard` in the template with dynamic card data.
 
-You can also add new cards, if necessary for your application. For more information on how to build different types of Adaptive Cards with a list, or a table of dynamic contents using `ColumnSet`, and `FactSet`, see the [sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/adaptive-card-notification).
+You can also add new cards, if necessary for your application. For more information on how to build different types of Adaptive Cards with a list, or a table of dynamic contents using `ColumnSet`, and `FactSet`, see [sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/adaptive-card-notification).
 
 ### Access Microsoft Graph
 
