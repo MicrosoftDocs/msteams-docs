@@ -101,7 +101,7 @@ To create a free Microsoft 365 developer account, join the Microsoft 365 develop
 
    After the completion of the subscription, the following page appears:
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/m365-account.png" alt-text="M365 Account":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/m365-account_1.png" alt-text="M365 Account":::
 
 ### Azure account
 
@@ -128,32 +128,30 @@ You can verify if the sideloading permission is enabled using either Visual Stud
 <summary><b>Verify sideloading permission using Visual Studio Code</b></summary>
 
 1. Open **Visual Studio Code**.
-1. Select the Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG"::: icon from the Visual Studio Code activity bar.
+1. Select the **Teams Toolkit** from the Visual Studio Code activity bar.
 
    > [!NOTE]
    > If you're unable to see the option, see [install Teams Toolkit](install-Teams-Toolkit.md) to install Teams Toolkit extension in Visual Studio Code.
 1. Select **Sign in to Microsoft 365** under **ACCOUNTS** and sign in to your Microsoft 365 account.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/accounts.png" alt-text="accounts details":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/accounts1_1.png" alt-text="accounts details":::
 
 1. Check if you can see the option **Sideloading enabled** as you can see in the following image:
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/sideloading.png" alt-text="Enable sideloading":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/sideloading_1.png" alt-text="Enable sideloading":::
 
 </details>
 <br>
 <details>
 <summary><b>Verify sideloading permission using Teams client</b></summary>
 
-1. In the Teams client, select **Apps**.
-1. Select **Manage your app**.
-1. Select **Upload an app**.
+1. In the Teams client, select **Apps** > **Manage your app** > **Upload an app**.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/upload-app.png" alt-text="Publish an app":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/upload-app_1.png" alt-text="Publish an app":::
 
-4. Check if you can see the option **Upload a custom app** as you can see in the following image:
+1. Check if you can see the option **Upload a custom app** as you can see in the following image:
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/upload-custom-app1.png" alt-text="Upload a custom app":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/upload-custom-app1_1.png" alt-text="Upload a custom app":::
 
 </details>
 
@@ -170,7 +168,7 @@ If you have admin rights, perform the following steps to upload the custom app u
 
   1. Select the :::image type="icon" source="../assets/images/teams-toolkit-v2/showall icon.PNG"::: icon > **Teams**.
 
-       :::image type="content" source="../assets/images/teams-toolkit-v2/m365-admin-center.png" alt-text="Microsoft 365 Admin center":::
+       :::image type="content" source="../assets/images/teams-toolkit-v2/m365-admin-center_1.png" alt-text="Microsoft 365 Admin center":::
 
      > [!Note]
      > It can take up to 24 hours for the Teams option to appear. You can [upload your custom app to a Teams environment](/microsoftteams/upload-custom-apps) for testing and validation.
@@ -178,15 +176,15 @@ If you have admin rights, perform the following steps to upload the custom app u
   1. Sign in to Microsoft Teams admin center with your admin credentials.
   1. Select the :::image type="icon" source="../assets/images/teams-toolkit-v2/showall icon.PNG"::: icon > **Teams apps** > **Setup policies**.
 
-     :::image type="content" source="../assets/images/teams-toolkit-v2/m365-admin-center1.png" alt-text="Microsoft 365 Admin center1":::
+     :::image type="content" source="../assets/images/teams-toolkit-v2/m365-admin-center1_1.png" alt-text="Microsoft 365 Admin center1":::
 
   1. Select **Global (Org-wide default)**.
 
-     :::image type="content" source="../assets/images/teams-toolkit-v2/select-manage-policies.png" alt-text="Select Manage Policies":::
+     :::image type="content" source="../assets/images/teams-toolkit-v2/select-manage-policies_1.png" alt-text="Select Manage Policies":::
 
   1. Set toggle **Upload custom apps** to **On** position.
 
-     :::image type="content" source="../assets/images/teams-toolkit-v2/Upload-custom-apps.png" alt-text="Upload Custom Apps":::
+     :::image type="content" source="../assets/images/teams-toolkit-v2/Upload-custom-apps_1.png" alt-text="Upload Custom Apps":::
 
   5. Select **Save**.
 
