@@ -91,5 +91,6 @@ For example:
 
 ## See also
 
+* [Plan your app with Teams features](../app-fundamentals-overview.md)
 * [Planning checklist](../design/planning-checklist.md)
 * [Build your first Microsoft Teams app](../../get-started/get-started-overview.md)

@@ -129,7 +129,7 @@ There are a few options for [incorporating your app into the Teams calling exper
 
 #### Webhooks and connectors
 
-[Incoming webhooks](../../webhooks-and-connectors/what-are-webhooks-and-connectors.md#incoming-webhooks) are a simple way to automatically send notifications from another app to a Teams channel. With [outgoing webhooks](../../webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks), you can message your web service with an @mention.
+[Incoming Webhooks](../../webhooks-and-connectors/what-are-webhooks-and-connectors.md#incoming-webhooks) are a simple way to automatically send notifications from another app to a Teams channel. With [Outgoing Webhooks](../../webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks), you can message your web service with an @mention.
 
    :::column-end:::
 
@@ -183,4 +183,8 @@ A user can interact with an app on a canvas tab to do an activity or might choos
 
 ## See also
 
-[Integrate device capabilities](~/concepts/device-capabilities/device-capabilities-overview.md)
+* [Plan your app with Teams features](../app-fundamentals-overview.md)
+* [Build tabs for Teams](../../tabs/what-are-tabs.md)
+* [Build bots for Teams](../../bots/what-are-bots.md)
+* [Message extensions](../../messaging-extensions/what-are-messaging-extensions.md)
+* [Webhooks and connectors](../../webhooks-and-connectors/what-are-webhooks-and-connectors.md)

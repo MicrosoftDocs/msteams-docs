@@ -152,3 +152,7 @@ Teams doesn't host your app. When a user installs your app in Teams, they instal
 - **Plan the onboarding experience**: Craft your onboarding experience with your key users in mind. How you introduce a chat bot installed in a channel with a thousand people, is different when it's installed in a one-to-one chat.
 
 - **Plan for the future**: Identify new features the user will prefer in the current solution. Any new features may impact app design and architecture.
+
+## See also
+
+- [Plan your app with Teams features](../app-fundamentals-overview.md)

@@ -36,4 +36,5 @@ Establishing a monetizing option beforehand helps guide the app design, build, a
 
 ## See also
 
-[Monetize your app](../deploy-and-publish/appsource/prepare/monetize-overview.md)
+* [Plan your app with Teams features](../app-fundamentals-overview.md)
+* [Monetize your app](../deploy-and-publish/appsource/prepare/monetize-overview.md)
