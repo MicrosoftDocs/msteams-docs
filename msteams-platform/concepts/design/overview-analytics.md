@@ -172,3 +172,13 @@ Next, see how you should methodically craft your data instrumentation strategy a
 
 > [!div class="nextstepaction"]
 > [Strategize and decide what to measure](strategize-measure.md)
+
+## See also
+
+- [Plan your app with Teams features](../app-fundamentals-overview.md)
+- [Include a SaaS offer with your Teams app](../deploy-and-publish/appsource/prepare/include-saas-offer.md)
+- [Link unfurling](../../messaging-extensions/how-to/link-unfurling.md)
+- [Build bots for Teams](../../bots/what-are-bots.md)
+- [Build tabs for Teams](../../tabs/what-are-tabs.md)
+- [Message extensions](../../messaging-extensions/what-are-messaging-extensions.md)
+- [Teams Toolkit Overview](../../toolkit/teams-toolkit-fundamentals.md)
