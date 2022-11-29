@@ -52,6 +52,10 @@ Follow the steps to import and manage your existing app in the Developer Portal.
    :::image type="content" source="../../assets/images/tdp/import-app.png" alt-text="The screenshot show how to import your existing app in Developer Portal for Teams to manage your apps.":::
 
 1. Select the app manifest file, and then select **Open**.
+
+   > [!NOTE]
+   > If there are nested folders or missing required files in the app package folder, you receive an error message as **Provided add-in package was not understood. Please, make sure that the file being submitted is a valid Office add-in package**.
+
 1. Select **Import**.
 
 > [!NOTE]
