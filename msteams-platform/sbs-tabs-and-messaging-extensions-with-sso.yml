@@ -24,7 +24,7 @@ items:
 
    This step-by-step guide helps you to create tabs and message extensions enabling Azure AD SSO authentication. You'll see the following output:
 
-     :::image type="content" source="./assets/images/Tab-ME-SSO/hello-megan-profile245_1.png" alt-text="Congratulation image.":::
+     :::image type="content" source="./assets/images/Tab-ME-SSO/hello-megan-profile245_1.png" alt-text="Screenshot of the tab and message extension with SSO authentication output after you have successfully completed the step-by-step guide.":::
    
 
 - title: Prerequisites
@@ -53,7 +53,7 @@ items:
     1. Select **Code**.
     1. From the dropdown menu, select **Open with GitHub Desktop**.
 
-       :::image type="content" source="./assets/images/Tab-ME-SSO/clonerepository_1.png" alt-text= "Clone repository.":::
+       :::image type="content" source="./assets/images/Tab-ME-SSO/clonerepository_1.png" alt-text= "Screenshot of GitHub. The menu entry titled Open with GitHub Desktop highlighted in red.":::
 
     1. Select **Clone**. 
 
@@ -77,7 +77,7 @@ items:
     1. Select **Azure Bot**.
     1. Select **Create**.
 
-       :::image type="content" source="./assets/images/Tab-ME-SSO/azure-bot_1.png" alt-text="Azure bot.":::
+       :::image type="content" source="./assets/images/Tab-ME-SSO/azure-bot_1.png" alt-text="Screenshot of the Azure portal. The menu entry titled Azure Bot highlighted in red.":::
          
     **Create an Azure Bot** window appears.
 
