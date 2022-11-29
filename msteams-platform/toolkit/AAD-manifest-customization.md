@@ -273,7 +273,7 @@ You need to interact with Azure AD application during various stages of your Tea
 
     * Initially ignores some properties in the manifest file that requires more context, (such as replyUrls property that requires a local debug endpoint) during the creation of a new Azure AD application with the manifest file.
 
-    * After the local dev environment startup successfully, the Azure AD application's identifierUris, replyUrls, and other properties that aren't available during creation stage are updated accordingly.
+    * After the local dev environment starts successfully, the Azure AD application's identifierUris, replyUrls, and other properties that aren't available during creation stage are updated accordingly.
 
     * The changes you've done to your Azure AD application are loaded during next local debug session. You can see [Azure AD application changes](https://github.com/OfficeDev/TeamsFx/wiki/) to apply changes manually Azure AD application changes.
 
@@ -304,9 +304,9 @@ You need to interact with Azure AD application during various stages of your Tea
       |**Not supported properties**|**Reason**|
       |-----------|----------|
       |passwordCredentials|Not allowed in manifest|
-      |createdDateTime|Readonly and can't change|
-      |logoUrl|Readonly and can't change|
-      |publisherDomain|Readonly and can't change|
+      |createdDateTime|Read-only and can't change|
+      |logoUrl|Read-only and can't change|
+      |publisherDomain|Read-only and can't change|
       |oauth2RequirePostResponse|Doesn't exist in Graph API|
       |oauth2AllowUrlPathMatching|Doesn't exist in Graph API|
       |samlMetadataUrl|Doesn't exist in Graph API|

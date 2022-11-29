@@ -116,3 +116,4 @@ The following table lists the error codes and their descriptions:
 * [Integrate media capabilities](~/concepts/device-capabilities/media-capabilities.md)
 * [Integrate QR code or barcode scanner capability in Teams](qr-barcode-scanner-capability.md)
 * [Integrate location capabilities in Teams](location-capability.md)
+* [People picker component in Microsoft Graph Toolkit](/graph/toolkit/components/people-picker)

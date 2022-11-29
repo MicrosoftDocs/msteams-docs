@@ -1,7 +1,7 @@
 ---
 title: Respond to search command
 author: surbhigupta
-description: In this module, learn how to respond to the search command from a message extension in a Microsoft Teams app using code examples and samples
+description: Learn how to respond to the search command from a message extension in a Microsoft Teams app. Understand how to respond to the user request.
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: medium
@@ -410,8 +410,8 @@ The default query has the same structure as any regular user query, with the `na
 
 | Sample Name           | Description | .NET    | Node.js   |
 |:---------------------|:--------------|:---------|:--------|
-|Teams message extension action| Describes how to define action commands, create task module, and  respond to task module submit action. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) |
-|Teams message extension search   |  Describes how to define search commands and respond to searches.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
+|Teams message extension action| Describes how to define action commands, create task module, and  respond to task module submit action. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/nodejs) |
+|Teams message extension search   |  Describes how to define search commands and respond to searches.        |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/nodejs)|
 
 ## Next step
 
@@ -420,4 +420,6 @@ The default query has the same structure as any regular user query, with the `na
 
 ## See also
 
-[Add configuration to a message extension](~/get-started/first-message-extension.md)
+* [Message extensions](../../what-are-messaging-extensions.md)
+* [Build your first tab app using JavaScript](../../../sbs-gs-javascript.yml)
+* [composeExtensions](../../../resources/schema/manifest-schema.md#composeextensions)

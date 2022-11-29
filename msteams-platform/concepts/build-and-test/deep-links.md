@@ -1,6 +1,6 @@
 ---
 title: Create deep links 
-description: In this article, you'll learn how to create deep links and navigate them in your Microsoft Teams apps with tabs.
+description: In this article, learn how to create deep links and navigate them in your Microsoft Teams apps with tabs.
 ms.topic: how-to
 ms.localizationpriority: high
 ---
@@ -12,7 +12,7 @@ Deep links are a navigation mechanism that you can use to connect users with inf
 * Navigating the user to the content within one of your app's tabs. For instance, your app can have a bot that sends messages notifying the user of an important activity. When the user taps on the notification, the deep link navigates to the tab so that the user can view more details about the activity.
 * Your app automates or simplifies certain user tasks. You can  create a chat or schedule a meeting, by pre-populating the deep links with required parameters. Avoids the need for users to manually enter information.
 
-The Microsoft Teams JavaScript client SDK (TeamsJS) simplifies the process of navigation. For many scenarios, such as navigating to content and information within your tab or launching a chat dialog. The SDK provides typed APIs that provide improved experience and can replace the usage of deep links. These APIs are recommended for Teams apps that might be run in other hosts (Outlook, Office), as they also provide a way to check that the capability being used is supported by that host. The following sections show information about deep linking, but also highlight how scenarios that used to require it have changed with the v2 release of TeamsJS.
+The Microsoft Teams JavaScript client SDK (TeamsJS) simplifies the process of navigation. For many scenarios, such as navigating to content and information within your tab or launching a chat dialog. The typed APIs are recommended for Teams apps that run in other hosts, such as Outlook or Office, as they also provide a way to check if the host supports the capability in use. The following sections show information about deep linking, but also highlight how scenarios that used to require it have changed with the v2 release of TeamsJS.
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
@@ -61,7 +61,7 @@ For more information, see, [pages.shareDeepLink()](/javascript/api/@microsoft/te
 
 # [TeamsJS v1](#tab/teamsjs-v1)
 
-To implement this, you add a **copy link** action to each item, in whatever way best suits your UI. When the user takes this action, you call `shareDeepLink()` to display a dialog box containing a link that the user can copy to the clipboard. When you make this call, you also pass an ID for your item, which you get back in the [context](~/tabs/how-to/access-teams-context.md) when the link is followed and your tab is reloaded.
+To implement this, you add a **copy link** action to each item, in whatever way best suits your UI. When the user takes this action, you call `shareDeepLink()` to display a dialog box containing a link that the user can copy to the clipboard. When you make this call, pass an ID for your item. You get it back in [context](~/tabs/how-to/access-teams-context.md) when the link is followed and your tab is reloaded.
 
 ```javascript
 microsoftTeams.shareDeepLink({ subEntityId: <subEntityId>, subEntityLabel: <subEntityLabel>, subEntityWebUrl: <subEntityWebUrl> })
@@ -96,7 +96,7 @@ While it's recommended to use `shareDeepLink()` to generate a deep link to your 
 > [!NOTE]
 >
 > * Personal tabs have a `personal` scope, while channel and group tabs use `team` or `group` scopes. The two tab types have a slightly different syntax since only the configurable tab has a `channel` property associated with its context object. For more information on tab scopes, See the [manifest](~/resources/schema/manifest-schema.md) reference.
-> * Deep links work properly only if the tab was configured using the v0.4 or later library and because of that has an entity ID. Deep links to tabs without entity IDs still navigate to the tab but cannot provide the sub entity ID to the tab.
+> * Deep links work properly only if the tab was configured using the v0.4 or later library and because of that has an entity ID. Deep links to tabs without entity IDs still go to the tab but cannot provide the sub entity ID to the tab.
 
 Use the following format for a deep link that you can use in a bot, connector, or message extension card:
 
@@ -122,10 +122,10 @@ The query parameters are:
 | Parameter name | Description | Example |
 |:------------|:--------------|:---------------------|
 | `appId`&emsp; | The ID from Teams Admin Center. |fe4a8eba-2a31-4737-8e33-e5fae6fee194|
-| `entityId`&emsp; | The ID for the item in the tab, which you provided when [configuring the tab](~/tabs/how-to/create-tab-pages/configuration-page.md). When generating a URL for deep linking continue to use entityID as a parameter name in the URL. When configuring the tab the context object refers to the entityID as {page.id}. |Tasklist123|
+| `entityId`&emsp; | The ID for the item in the tab, which you provided when [configuring the tab](~/tabs/how-to/create-tab-pages/configuration-page.md). When generating a URL for deep linking, continue to use entityID as a parameter name in the URL. When configuring the tab, the context object refers to the entityID as {page.id}. |Tasklist123|
 | `entityWebUrl` or `subEntityWebUrl`&emsp; | An optional field with a fallback URL to use if the client doesn't support rendering the tab. | `https://tasklist.example.com/123` or `https://tasklist.example.com/list123/task456` |
 | `entityLabel` or `subEntityLabel`&emsp; | A label for the item in your tab, to use when displaying the deep link. | Task List 123 or "Task 456 |
-| `context.subEntityId`&emsp; | An ID for the item within the tab. When generating a URL for deep linking continue to use subEntityId as the parameter name in the URL. When configuring the tab the context object refers to the subEntityID as subPageID. |Task456 |
+| `context.subEntityId`&emsp; | An ID for the item within the tab. When generating a URL for deep linking, continue to use subEntityId as the parameter name in the URL. When configuring the tab, the context object refers to the subEntityID as subPageID. |Task456 |
 | `context.channelId`&emsp; | Microsoft Teams channel ID that is available from the tab [context](~/tabs/how-to/access-teams-context.md). This property is only available in configurable tabs with a scope of **team**. It isn't available in static tabs, which have a scope of **personal**.| 19:cbe3683f25094106b826c9cada3afbe0@thread.skype |
 | `chatId`&emsp; | ChatId that is available from the tab [context](~/tabs/how-to/access-teams-context.md) for group and meeting chat | 17:b42de192376346a7906a7dd5cb84b673@thread.v2 |
 | `contextType`&emsp; |  Chat is the only supported contextType for meetings | chat |
@@ -163,7 +163,7 @@ The query parameters are:
 
 ## Navigation from your tab
 
-You can navigate to content in Teams from your tab using TeamsJS or deep links. This is useful if your tab needs to connect users with other content in Teams, such as to a channel, message, another tab or even to open a scheduling dialog. Formerly, navigation might have required a deep link, but it can now in many instances be accomplished using the SDK. The following sections show both methods, but where possible use of the typed capabilities of the SDK is recommended.
+You can navigate to content in Teams from your tab using TeamsJS or deep links. This is useful if your tab needs to connect users with other content in Teams, such as to a channel, message, another tab, or to open a scheduling dialog. Formerly, navigation might have required a deep link, but it can now in many instances be accomplished using the SDK. The following sections show both methods, but where possible use of the typed capabilities of the SDK is recommended.
 
 One of the benefits of using TeamsJS, particularly for Teams app that might run in other hosts (Outlook and Office), is that it's possible to check that the host supports the capability you're attempting to use. To check a host's support of a capability, you can use the `isSupported()` function associated with the namespace of the API. The TeamsJS SDK organizes APIs into capabilities by way of namespaces. For example, prior to usage of an API in the `pages` namespace you can check the returned boolean value from `pages.isSupported()` and take the appropriate action within the context of your app and apps UI.  
 
@@ -318,7 +318,7 @@ To use this deep link with your bot, specify this as the URL target in your card
 
 ### Generate deep links to channel conversation
 
-Use this deep link format to navigate to a particular conversation within channel thread:
+Use this deep link format to go to a particular conversation within channel thread:
 
 `https://teams.microsoft.com/l/message/<channelId>/<parentMessageId>?tenantId=<tenantId>&groupId=<groupId>&parentMessageId=<parentMessageId>&teamName=<teamName>&channelName=<channelName>&createdTime=<createdTime>`
 
@@ -335,6 +335,27 @@ The query parameters are:
 
 > [!NOTE]
 > You can see `channelId` and `groupId` in the URL from the channel.
+
+### Generate deep links to chat messages
+
+Use this deep link format to navigate a user to a message in a personal or group chat in Teams:
+
+`http://teams.microsoft.com/l/message/{chatId}/{messageId}?context={"contextType":"chat"}`
+
+Example: `http://teams.microsoft.com/l/message/19:253f5895-9a62-4362-8d38-43f0205c702c_f1b94dcf-0aa3-4989-bcdf-ef4a5ed00f86@unq.gbl.spaces/1563480968434?context=%7B%22contextType%22:%22chat%22%7D`
+
+The query parameters are:
+
+* `chatId`: ChatId of the conversation. The supported format for `chatId` is 19:xxx. For example, `19:253f5895-9a62-4362-8d38-43f0205c702c_f1b94dcf-0aa3-4989-bcdf-ef4a5ed00f86@unq.gbl.spaces`.
+
+Apps can read a chat ID through app context in Teams, incoming payload to bot, or through [Microsoft Graph APIs](/graph/api/chat-get?view=graph-rest-1.0&tabs=http&preserve-view=true).
+
+  > [!NOTE]
+  > For One-on-One chats with bot, the incoming payload to bot contains the conversation ID in a:xxx format.
+
+* `messageId`: Each message in a chat has a unique ID. When a bot posts a message in chat, the `messageId` is returned. You can also get the `messageId` through [Microsoft Graph APIs](/graph/api/message-get?view=graph-rest-1.0&tabs=http&preserve-view=true). For example, `1563480968434`.
+
+* `context`: Specify the contextType as chat.
 
 ### Generate deep links to file in channel
 
@@ -379,12 +400,12 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 }
 ```
 
-### Deep linking to an app
+## Deep linking to an app
 
 Create a deep link for the app after the app is listed in the Teams store. To create a link to launch Teams, append the app ID to the following URL: `https://teams.microsoft.com/l/app/<your-app-id>`. A dialog box appears to install or open the app.
 
 > [!NOTE]
-> If your app has been approved for mobile platform, you can deep link to an app on mobile. Apple App Store Connect Team ID is required additionally for the deep link to work on Teams-iOS. For more information, see [how to update Apple App Store Connect Team ID](../deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md#update-apple-app-store-connect-team-id-on-partner-center).
+> If your app has been approved for mobile platform, you can deep link to an app on mobile. Apple App Store Connect Team ID is required additionally for the deep link to work on Teams-iOS. For more information, see [how to update Apple App Store Connect Team ID](../deploy-and-publish/appsource/prepare/update-apple-store-team-connect-id.md).
 
 ### Deep linking for SharePoint Framework tabs
 
@@ -405,9 +426,9 @@ The query parameters are:
 
 Example: `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&TaskList`
 
-### Navigate to an audio or audio-video call
+## Navigate to an audio or audio-video call
 
-You can invoke audio only or audio-video calls to a single user or a group of users, by specifying the call type and the participants. Before placing the call, Teams client prompts a confirmation to make the call. If there's group call, you can call a set of VoIP users and a set of PSTN users in the same deep link invocation.
+You can invoke audio only or audio-video calls to a single user or a group of users, by specifying the call type and the participants. Before placing the call, Teams client prompts a confirmation to make the call. For a group call, you can call a set of VoIP users and a set of PSTN users in the same deep link invocation.
 
 In a video call, the client will ask for confirmation and turn on the caller's video for the call. The receiver of the call has a choice to respond through audio only or audio and video, through the Teams call notification window.
 
@@ -427,7 +448,7 @@ else { /* handle case where capability isn't supported */ }
 
 ```
 
-#### Generate a deep link to a call
+## Generate a deep link to a call
 
 While use of the typed APIs of TeamsJS is recommended, you can also use a manually created deep link to start a call.
 

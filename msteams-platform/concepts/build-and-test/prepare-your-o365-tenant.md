@@ -41,7 +41,7 @@ To turn on the custom app uploading or sideloading for your developer tenant:
     > [!Note]
     > It can take up to 24 hours for the **Teams** option to appear. You can [upload your custom app to a Teams environment](/microsoftteams/upload-custom-apps#validate) for testing and validation in that time.
 
-3. Navigate to **Teams apps** > **Setup Policies** > **Global**.
+3. Go to **Teams apps** > **Setup Policies** > **Global**.
 
    ![Turn on sideload view](~/assets/images/prepare-test-tenant/turn-on-sideload.png)
 

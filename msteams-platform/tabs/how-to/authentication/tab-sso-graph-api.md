@@ -5,7 +5,7 @@ ms.topic: how-to
 ms.localizationpriority: high
 keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) Graph API Delegated permission access token scope
 ---
-# Extend tab app with Microsoft Graph permissions and scope
+# Extend tab app with Microsoft Graph permissions and scopes
 
 You can extend your tab app by using Microsoft Graph to allow users additional permissions, such as to view app user profile, to read mail, and more. Your app must ask for specific permission scopes to obtain the access tokens on app user's consent.
 
@@ -25,13 +25,13 @@ You can configure additional Graph scopes in Azure AD for your app. These are de
 
 1. Open the app you registered in the [Azure portal](https://ms.portal.azure.com/).
 
-2. Select **Manage** > **API permission** from the left pane.
+2. Select **Manage** > **API permissions** from the left pane.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/api-permission-menu.png" alt-text="App permissions menu option.":::
 
     The **API permissions** page appears.
 
-3. Select **+ Add permissions** to add Microsoft Graph API permissions.
+3. Select **+ Add a permission** to add Microsoft Graph API permissions.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-permission.png" alt-text="App permissions page.":::
 
@@ -76,7 +76,7 @@ You can configure authentication for multiple platforms as long as the URL is un
 
 ### To configure authentication for a platform
 
-1. Open the app you registered in the the [Azure portal](https://ms.portal.azure.com/).
+1. Open the app you registered in the [Azure portal](https://ms.portal.azure.com/).
 
 1. Select **Manage** > **Authentication** from the left pane.
 

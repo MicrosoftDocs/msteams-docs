@@ -1,7 +1,7 @@
 ---
 title: Teams solution for building apps
 author: heath-hamilton
-description: Learn the overview of Teams solution for building apps and provide support from planning your app to distributing it.
+description: Understand how to plan, design, build, extend to Microsoft 365, test, distribute, monetize, and integrate your app with Teams.
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar

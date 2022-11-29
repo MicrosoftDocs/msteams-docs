@@ -1,13 +1,13 @@
 ---
 title: Update and delete messages sent from your bot
 author: WashingtonKayaker
-description: Learn how to update and delete messages sent from your Microsoft Teams bot in different environments and with REST APIs using Code samples.
+description: Learn how to update and delete messages sent from your Microsoft Teams bot in different environments and with REST APIs using samples (.NET, Node.js, Python).
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
 ---
 
-# Update and delete messages sent from bot 
+# Update and delete messages sent from bot
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
@@ -176,9 +176,15 @@ The following code sample demonstrates basics of conversations:
 
 | **Sample name** | **Description** | **.NET** | **Node.js** | **Python** |
 |----------------------|-----------------|--------|-------------|--------|
-| Teams Conversation Basics  | Demonstrates basics of conversations in Teams including message update and delete. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
+| Teams Conversation Basics  | Demonstrates basics of conversations in Teams including message update and delete. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/python) |
 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Get Teams context](~/bots/how-to/get-teams-context.md)
+> [Get Teams specific context for your bot](get-teams-context.md)
+
+## See also
+
+* [Build bots for Teams](../what-are-bots.md)
+* [Conversation basics](conversations/conversation-basics.md)
+* [Cards](../../task-modules-and-cards/what-are-cards.md)

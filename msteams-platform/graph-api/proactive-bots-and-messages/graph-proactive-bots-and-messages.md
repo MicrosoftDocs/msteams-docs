@@ -1,6 +1,6 @@
 ---
 title: Use Microsoft Graph to authorize proactive bot installation and messaging in Teams
-description: This article describes proactive messaging in Teams and how to implement it. Learn about enabling proactive app installation and messaging using code sample. 
+description: Install app proactively using Graph APIs. Check if your bot is currently installed, retrieve the conversation chatId to send proactive message.
 ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar

@@ -1,7 +1,7 @@
 ---
 title: Create Office 365 Connectors
 author: laujan
-description: In this module, learn how to get started with Office 365 Connectors and add connector to Teams app in Microsoft Teams
+description: Get started with Office 365 Connectors. Add connector to Teams app in Microsoft Teams. Sample(.NET, Node.js) Office 365 Connector generating notifications to Teams channel.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/16/2021
@@ -81,17 +81,15 @@ The following code provides a sample HTML to create a connector configuration pa
     </section>
 </div>
 
-<script src="https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js" integrity="sha384-Q2Z9S56exI6Oz/ThvYaV0SUn8j4HwS8BveGPmuwLXe4CvCUEGlL80qSzHMnvGqee" crossorigin="anonymous"></script>
+<script src="https://res.cdn.office.net/teams-js/2.2.0/js/MicrosoftTeams.min.js" integrity="sha384-Q2Z9S56exI6Oz/ThvYaV0SUn8j4HwS8BveGPmuwLXe4CvCUEGlL80qSzHMnvGqee" crossorigin="anonymous"></script>
 <script src="/Scripts/jquery-1.10.2.js"></script>
 
-<script type="module">
-        import {app, pages} from 'https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js';
-        
+<script>
         function onClick() {
             pages.config.setValidityState(true);
         }
 
-        await app.initialize();
+        await microsoftTeams.app.initialize();
         pages.config.registerOnSaveHandler(function (saveEvent) {
             var radios = document.getElementsByName('notificationType');
 
@@ -143,7 +141,7 @@ The following table provides the parameters and the details of `getConfig` respo
 | `contentUrl` | The URL of the configuration page, as set by your code when calling `setConfig()`. |
 | `webhookUrl` | The webhook URL created for the connector. Use the webhook URL to POST structured JSON to send cards to the channel. The `webhookUrl` is returned only when the application returns data successfully. |
 | `appType` | The values returned can be `mail`, `groups`, or `teams` corresponding to the Office 365 Mail, Office 365 Groups, or Teams respectively. |
-| `userObjectId` | The unique ID corresponding to the Office 365 user who initiated the set up of the connector. It must be secured. This value can be used to associate the user in Office 365, who has set up the configuration in your service. |
+| `userObjectId` | The unique ID corresponding to the Office 365 user who initiated the setup of the connector. It must be secured. This value can be used to associate the user in Office 365, who has set up the configuration in your service. |
 
 #### Handle edits
 
@@ -157,7 +155,7 @@ This call is made as part of your save event handler. Then, when the `contentUrl
 
 #### Handle removals
 
-You can execute an event handler when the user removes an existing connector configuration. You register this handler by calling `microsoftTeams.pages.config.registerOnRemoveHandler()`. This handler is used to perform cleanup operations, such as removing entries from a database.
+You can execute an event handler when the user removes an existing connector configuration. You register this handler by calling `microsoftTeams.pages.config.registerOnRemoveHandler()`. This handler is used to perform clean up operations, such as removing entries from a database.
 
 ### Include the connector in your Manifest
 
@@ -179,7 +177,6 @@ The following *manifest.json* file contains the elements needed to test and subm
   "manifestVersion": "1.5",
   "id": "e9343a03-0a5e-4c1f-95a8-263a565505a5",
   "version": "1.0",
-  "packageName": "com.sampleapp",
   "developer": {
     "name": "Publisher",
     "websiteUrl": "https://www.microsoft.com",
@@ -228,7 +225,7 @@ Follow the [step-by-step guide](../../sbs-teams-connectors.yml) to create and te
 
 ## Distribute webhook and connector
 
-1. [Set up an Incoming Webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md#create-an-incoming-webhook) directly for your team.
+1. [Create Incoming Webhooks](add-incoming-webhook.md#create-incoming-webhooks) directly for your team.
 
 1. Add a [configuration page](~/webhooks-and-connectors/how-to/connectors-creating.md?#integrate-the-configuration-experience) and publish your Incoming Webhook in an Office 365 Connector.
 
@@ -249,10 +246,11 @@ Follow the [step-by-step guide](../../sbs-teams-connectors.yml) to build and tes
 
 ## See also
 
-* [Create and send messages](~/webhooks-and-connectors/how-to/connectors-using.md)
-* [Create an Incoming Webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
-* [Create an Office 365 Connector](~/webhooks-and-connectors/how-to/connectors-creating.md)
+* [Webhooks and connectors](../what-are-webhooks-and-connectors.md)
+* [Create Incoming Webhooks](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
+* [Create Outgoing Webhooks](add-outgoing-webhook.md)
+* [Create and send messages](connectors-using.md)
 * [How admins can enable or disable connectors](/MicrosoftTeams/office-365-custom-connectors#enable-or-disable-connectors-in-teams)
 * [How admins can publish custom connectors within their org](/MicrosoftTeams/office-365-custom-connectors)
-* [Build notification bot with JavaScript](../../sbs-gs-notificationbot.yml)
-* [Build your first bot app using JavaScript](../../sbs-gs-bot.yml)
+* [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
+* [getConfig](/javascript/api/@microsoft/teamsfx/teamsfxconfiguration?view=msteams-client-js-latest&preserve-view=true)
