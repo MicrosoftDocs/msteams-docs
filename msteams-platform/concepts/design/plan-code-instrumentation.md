@@ -1,7 +1,7 @@
 ---
 title: Plan code instrumentation using analytics service
 author: heath-hamilton
-description: Learn about planning code instrumentation using analytics service.
+description: Learn about planning code instrumentation using an analytics service.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
