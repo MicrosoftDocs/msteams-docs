@@ -44,13 +44,16 @@ items:
 - title: Set up local environment
   durationInMinutes: 1
   content: |
-   Clone `BotBuilder-Samples` repository to your local GitHub:  
+   Clone `Microsoft-Teams-Samples` repository to your local GitHub:  
 
-    1. Open [BotBuilder Samples](https://github.com/microsoft/BotBuilder-Samples).
+    1. Open [Microsoft-Teams-Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples).
     1. Select **Code**.
     1. From the dropdown menu, select **Open with GitHub Desktop**.
 
+generate-meeting-side-panel-sbs-testing
        :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/clonerepository_1.png" alt-text="Screenshot of GitHub web page. The option titled Open with GitHub Desktop under Code dropdown menu is highlighted in red.":::
+
+       :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/clone-repository.png" alt-text="Clone repository.":::
 
     1. Select **Clone**. 
 
@@ -331,7 +334,9 @@ items:
   content: |
     1. Go to **appsettings.json** in the cloned repository.
 
+generate-meeting-side-panel-sbs-testing
         :::image type="content" source="~/assets/images/Teams-Messaging-Extensions-Search/appsettingslocation_1.png" alt-text="Screenshot of cloned repository with the file path and appsettings JSON file highlighted in red.":::
+        :::image type="content" source="~/assets/images/Teams-Messaging-Extensions-Search/appsettings-file-location.png" alt-text="App settings location":::
 
     1. Open **appsettings.json** in the latest version of Visual Studio and update the following information:  
 
@@ -345,7 +350,10 @@ items:
 
     1. Go to **manifest.json** in the cloned repository.
 
+ generate-meeting-side-panel-sbs-testing
         :::image type="content" source="~/assets/images/Teams-Messaging-Extensions-Search/manifestlocation_1.png" alt-text="Screenshot of Teams App Manifest folder with the file path and manifest file highlighted in red.":::
+
+        :::image type="content" source="~/assets/images/Teams-Messaging-Extensions-Search/manifest-location.png" alt-text="Manifest file location":::
     
     1. Open **manifest.json** in the latest version of Visual Studio and make the following changes:
 
@@ -366,14 +374,18 @@ items:
     
           :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/VS-open-file_1.png" alt-text="Screenshot of Visual Studio with the File, Open, and Project/Solution highlighted in red.":::
 
-       1. Select **TeamsMessagingExtensionsSearch.csproj** file from **50.teams-messaging-extensions-search** folder.
+       1. Select **TeamsMessagingExtensionsSearch.csproj** file from **msgext-search** > **csharp** folder.
 
+generate-meeting-side-panel-sbs-testing
           :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/fileready_1.png" alt-text="Screenshot of cloned repository with the TeamsMessagingExtensionsSearch.csproj highlighted in red.":::
+
+          :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/project-file.png" alt-text="cs proj file":::
 
        1. Open **Solution Explorer** from **View**.
 
           :::image type="content" source="./assets/images/Teams-task-module/solutionexplorer_1.png" alt-text="Screenshot of Visual Studio with the menu item Solution Explorer under View is highlighted in red.":::
 
+generate-meeting-side-panel-sbs-testing
        1. Right-click to select **TeamsMessagingExtensionsSearch**.
 
        1. Select **Set as Startup Project**.
@@ -392,24 +404,30 @@ items:
    
     # [Command line](#tab/cli)
 
-    Go to **BotBuilder-Samples > samples > csharp_dotnetcore > 50.teams-messaging-extensions-search** in Command Prompt window and enter the following command:
+    Go to **Microsoft-Teams-Samples** > **samples** > **msgext-search** > **csharp** in Command Prompt window and enter the following command:
 
     ```bash
     dotnet run
     ```
+generate-meeting-side-panel-sbs-testing
     :::image type="content" source="~/assets/images/Teams-Messaging-Extensions-Search/dotnetruncmd.PNG" alt-text="Screenshot displaying the Command Prompt - dotnet run.":::
+   
+    ![Dotnet](~/assets/images/Teams-Messaging-Extensions-Search/dotnet-run-command.png)
 
 - title: Add Search Message Extension app
   durationInMinutes: 1
   content: |
-    1. In your cloned repository, go to **csharp_dotnetcore > 50.teams-messaging-extensions-search > TeamsAppManifest**.
+    1. In your cloned repository, go to **samples** > **msgext-search** > **csharp** > TeamsAppManifest**.
 
     1. Create a .zip with the following files that are present in the **TeamsAppManifest** folder: 
        * manifest.json
        * icon-outline.png
        * icon-color.png
 
+generate-meeting-side-panel-sbs-testing
        :::image type="content" source="~/assets/images/Teams-Messaging-Extensions-Search/zipfile_1.png" alt-text="Screenshot of cloned repository with the Search Command zip file highlighted in red."::: 
+
+       :::image type="content" source="~/assets/images/Teams-Messaging-Extensions-Search/manifest-zip.png" alt-text="Zip file"::: 
 
     1. Go to **Microsoft Teams**.
 
@@ -423,7 +441,11 @@ items:
 
     1. Select **Open** to upload the .zip file that you created in the **TeamsAppManifest** folder.
 
+generate-meeting-side-panel-sbs-testing
        :::image type="content" source="~/assets/images/Teams-Messaging-Extensions-Search/selectzipopen_1.png" alt-text="Screenshot of the cloned repository with the Search Command zip file and Open option highlighted in red.":::
+
+       :::image type="content" source="~/assets/images/Teams-Messaging-Extensions-Search/upload-manifest-zip.png" alt-text="Select zip file":::
+
 
     1. Select **Add**.
 
