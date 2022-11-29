@@ -11,7 +11,7 @@ ms.author: lajanuar
 
 Building an awesome Teams app is all about finding the right combination of features to meet your user's needs. The design, features, and capabilities of an app stem from this purpose.
 
-At its heart, Teams is a collaboration platform. It's also a social platform and is natively cross-platform that sits at the heart of Office 365 and offers personal canvas for you to create apps.
+At its heart, Teams is a collaboration platform. It's also a social platform and is natively cross-platform that sits at the heart of Office 365 and offers personal canvas for you to create apps .
 
 In this section, learn how to:
 
