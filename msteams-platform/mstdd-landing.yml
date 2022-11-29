@@ -61,7 +61,7 @@ landingContent:
     - linkListType: whats-new
       links:
       - text: Enable SSO for your bot and message extension app
-        url: bots/how-to/authentication/bot-sso-overview.md
+        url: bots/how-to/authentication/bot-sso-overview.md 
       - text: Integrate location capabilities
         url: concepts/device-capabilities/location-capability.md
       - text: Zero install for link unfurling
