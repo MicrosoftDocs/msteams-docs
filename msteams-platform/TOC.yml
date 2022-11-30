@@ -62,6 +62,14 @@
     displayName: HTTPs, localhost, host your Teams app
   - name: Plan responsive tabs for Teams mobile
     href: concepts/design/plan-responsive-tabs-for-teams-mobile.md
+  - name: Plan analytics for your Teams app
+    items:
+      - name: Overview
+        href: concepts/design/overview-analytics.md
+      - name: Strategize and decide what to measure
+        href: concepts/design/strategize-measure.md
+      - name: Plan code instrumentation using analytics service
+        href: concepts/design/plan-code-instrumentation.md
   - name: Plan to monetize your app
     href: concepts/design/plan-to-monetize.md
     displayName: Subscription, In-app purchases, Free trials, Test preview
