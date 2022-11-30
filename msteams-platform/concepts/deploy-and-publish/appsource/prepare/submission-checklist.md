@@ -68,7 +68,7 @@ Here are sample test instructions for your reference:
 
 <details>
 <summary><b>Sample 1: EDU app</b></summary>
-
+<!--
 - [About the EDU app](#about-the-edu-app)
 - [Pre-requisites](#pre-requisites)
 - [Test credentials](#test-credentials)
@@ -80,9 +80,9 @@ Here are sample test instructions for your reference:
     - [Modify assignments](#modify-assignments)
     - [Correcting documents and giving feedback](#correcting-documents-and-giving-feedback)
   - [Observation database](#observation-database)
-- [Demo Video](#demo-video)
+- [Demo Video](#demo-video)-->
 
-## About the EDU app
+**About the EDU app**
 
 Contoso offers a web-based productivity tool that teachers use to grade students’ work. It supports teachers during the entire process of setting, correcting, marking, grading, and giving feedback on assignments. This can be about any subject and have any form, such as essays, papers, and letters. Additionally, the app offers various options, such as plagiarism checking to promote original writing, Team Hand-ins to stimulate collaborating in groups and Peer Assessment & Feedback to help students learn from each other.
 
@@ -111,7 +111,7 @@ Student #2
 
 ### Contoso Dashboard
 
-When you go to the Contoso app within MS Teams, you first arrive at the dashboard page. This page provides at a glance information about texts that haven’t been handed-in yet, that still 4 need to be corrected and the ones that are corrected already and of which the feedback can be sent to the student. At ‘Assignments’ it shows the assignments that are currently active and by clicking on the green button underneath that it's possible to create a new assignment in Contoso (that is through the needless integration also immediately visible in Microsoft Teams when created). Also, you can select a period and group/class here. 
+When you go to the Contoso app within MS Teams, you first arrive at the dashboard page. This page provides at a glance information about texts that haven’t been handed-in yet, that still 4 need to be corrected and the ones that are corrected already and of which the feedback can be sent to the student. At ‘Assignments’ it shows the assignments that are currently active and by clicking on the green button underneath that it's possible to create a new assignment in Contoso (that is through the needless integration also immediately visible in Microsoft Teams when created). Also, you can select a period and group/class here.
 
 ### Classes
 
