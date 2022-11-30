@@ -65,8 +65,9 @@ Depending on your app functionality, you're required to provide Teams tenant con
 
 Here are sample test instructions for your reference:
 <br>
+
 <details>
-<summary><b>Sample EDU app</b></summary>
+<summary><b>Sample 1: EDU app</b></summary>
 
 ## About the app
 
@@ -152,6 +153,8 @@ Once one or more words or parts of the text are selected, it's possible to place
 
 </details>
 
+<details>
+<summary><b>Sample 2: 
 
 <!--Provide instructions and resources to help the reviewers test your app, including:
 
