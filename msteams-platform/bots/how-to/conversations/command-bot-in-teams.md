@@ -11,7 +11,7 @@ ms.localizationpriority: high
 
 Microsoft Teams allows you to automate simple and repetitive tasks in a conversation. You can build a command bot that can respond to simple commands sent in chats with Adaptive Cards. You can create a command bot template in Teams that responds to chat commands by displaying UI using an Adaptive Card. This enables users to send messages in Teams and your app can provide a response as required.
 
-The command bot template is built using the TeamsFx SDK, which provides a simple set of functions over the Microsoft Bot Framework to implement the scenario. You can build the command bot in different scenarios such as ...[Placeholder for command bot scenarios]
+The command bot template is built using the TeamsFx SDK, which provides a simple set of functions over the Microsoft Bot Framework to implement the scenario.
 
 [Placeholder for command bot infographic image]
 
@@ -21,7 +21,7 @@ The command bot template is built using the TeamsFx SDK, which provides a simple
 
 ## Command bot installation
 
-A command bot needs to be installed into a team, or a group chat, or as personal app, depending on the required scope. You need to select the installation target before adding the bot to your App.
+A command bot needs to be installed into a team, or a groupchat, or as personal app, depending on the required scope. You need to select the installation target before adding the bot to your App.
 
 :::image type="content" source="../../../assets/images/command-bot-teams/commandbot-installation.png" alt-text="installation option selection":::
 
@@ -38,7 +38,7 @@ TeamsFx SDK pulls [Bot Framework middleware](/azure/bot-service/bot-builder-conc
 
 You can initialize with your own adapter or customize after initialization.
 
-```
+```js(ts)
 
    // Create your own adapter
    const adapter = new BotFrameworkAdapter(...);
@@ -135,7 +135,7 @@ You can build your response data in text format, or perform the following steps 
 
 To handle the command, perform the following steps:
 
-1. Add a TypeScript or JavaScript file such as `xxxCommandHandler.ts` under `bot/src` to handle your bot command, and include the following boilerplate code to get started:
+1. Add a TypeScript or JavaScript file such as `xxxCommandHandler.ts` under `bot/src` to handle your bot command, and include the following sample code to get started:
 
    ```TypeScript
       import { Activity, TurnContext } from "botbuilder";
@@ -160,7 +160,7 @@ To handle the command, perform the following steps:
 
    ```
 
-1. Provide the `triggerPatterns` that can trigger the command handler. It's the command name defined in your manifest, or you can use RegExp to handle a complex command such as with some options in the command message.
+1. Provide the `triggerPatterns` that can trigger the command handler. It's the command name defined in your manifest, or you can use `RegExp` to handle a complex command such as with some options in the command message.
 
 1. You can implement `handleCommandReceived` to handle the command and return a response that is used to notify the users:
 
@@ -265,7 +265,7 @@ Adaptive Card provides [template language](/adaptive-cards/templating/) to allow
 1. Model your card data.
 1. Use `MessageBuilder.attachAdaptiveCard` in the template with dynamic card data.
 
-You can also add new cards, if necessary for your application. For more information on how to build different types of Adaptive Cards with a list, or a table of dynamic contents using `ColumnSet`, and `FactSet`, see [sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/adaptive-card-notification).
+You can also add new cards, if required for your application. For more information on how to build different types of Adaptive Cards with a list, or a table of dynamic contents using `ColumnSet`, and `FactSet`, see [sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/adaptive-card-notification).
 
 ### Access Microsoft Graph
 
@@ -273,9 +273,9 @@ If you're responding to a command that needs to access Microsoft Graph data of a
 
 ### Connect to existing APIs
 
-If you don't have the required SDK, and need to invoke external APIs in your code. The "Teams: Connect to an API" command in Microsoft Visual Studio Code Teams Toolkit extension, or "teamsfx add api-connection" command in TeamsFx CLI can be used to bootstrap code to call target APIs. For more information, see [connect to existing API](../../../toolkit/add-API-connection.md).
+If you don't have the required SDK, and need to invoke external APIs in your code. The `Teams: Connect to an API` command in Microsoft Visual Studio Code Teams Toolkit extension, or `teamsfx add api-connection` command in TeamsFx CLI can be used to bootstrap code to call target APIs. For more information, see [connect to existing API](../../../toolkit/add-API-connection.md).
 
-### FAQ
+## FAQ
 
 <br>
 
