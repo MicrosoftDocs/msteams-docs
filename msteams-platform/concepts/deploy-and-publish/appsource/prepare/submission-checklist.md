@@ -69,7 +69,20 @@ Here are sample test instructions for your reference:
 <details>
 <summary><b>Sample 1: EDU app</b></summary>
 
-## About the app
+- [About the EDU app](#about-the-edu-app)
+- [Pre-requisites](#pre-requisites)
+- [Test credentials](#test-credentials)
+- [App functionality](#app-functionality)
+  - [Contoso Dashboard](#contoso-dashboard)
+  - [Classes](#classes)
+  - [Assignments](#assignments)
+    - [Creating a new assignment](#creating-a-new-assignment)
+    - [Modify assignments](#modify-assignments)
+    - [Correcting documents and giving feedback](#correcting-documents-and-giving-feedback)
+  - [Observation database](#observation-database)
+- [Demo Video](#demo-video)
+
+## About the EDU app
 
 Contoso offers a web-based productivity tool that teachers use to grade students’ work. It supports teachers during the entire process of setting, correcting, marking, grading, and giving feedback on assignments. This can be about any subject and have any form, such as essays, papers, and letters. Additionally, the app offers various options, such as plagiarism checking to promote original writing, Team Hand-ins to stimulate collaborating in groups and Peer Assessment & Feedback to help students learn from each other.
 
@@ -121,7 +134,7 @@ When clicking on an assignment that’s in the list, you can see the status of t
 
 :::image type="content" source="../../../../assets/images/store-detail-page/edu-assignment.png" alt-text="Education sample showing class assignment":::
 
-### Creating a new assignment
+#### Creating a new assignment
 
 To create an assignment in Teams, go to Assignments and click then on Create (down left corner).
 
@@ -135,11 +148,11 @@ The status of the assignment can be ‘draft’, ‘published’, ‘closed’ o
 
 :::image type="content" source="../../../../assets/images/store-detail-page/edu-sample-app-b.png" alt-text="Education sample showing sample app":::
 
-### Modify assignments
+#### Modify assignments
 
 It's possible to modify the assignments that were created. This is possible by going to Assignments in Teams, to click on the assignment you would like to modify and then to click on Contoso SV PRO.
 
-### Correcting documents and giving feedback
+#### Correcting documents and giving feedback
 
 Go to ‘Assignments’ or first to ‘Teams’, then choose your class/group and then select the assignment you would like to correct.
 
@@ -149,12 +162,32 @@ Once one or more words or parts of the text are selected, it's possible to place
 
 :::image type="content" source="../../../../assets/images/store-detail-page/edu-sample-database.png" alt-text="Education sample database":::
 
-**Demo Video**
+## Demo Video
 
 </details>
-
+<br>
 <details>
-<summary><b>Sample 2: 
+<summary><b>Sample 2: ERP data transfer</b></summary>
+
+## About the ERP data transfer app
+
+Contoso is an PaaS/SaaS in cloud platform who transfers data between E-commerce, ERP, CRM, marketplace, mail automation platforms and shipping platforms. Contoso allows automatic transfer  between connected platforms, through its workflows. Users can activate and deactivate workflows with just a click after they connect to platforms, they are interested in.
+
+## Feature list
+
+Contoso E-commerce Manager:
+
+1. Connects e-commerce, ERP, marketplace, and shipping platforms.
+1. Allows automatic data transfer between platforms.
+1. Sends notices to Teams channels.
+1. The copy of orders by platform A to platform B can be approved or disapproved by cards on the Teams channel.
+
+## Installation
+
+Search the app “Contoso” between apps built for your organization and install it. (Specify if there are any steps to follow for installing the app).
+
+
+</details>
 
 <!--Provide instructions and resources to help the reviewers test your app, including:
 
