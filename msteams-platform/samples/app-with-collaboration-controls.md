@@ -146,6 +146,9 @@ Now you’ve successfully added the Collaboration controls to your application. 
 
 You can define settings for Collaboration controls for the business entity such as the table created in [new model-driven app](#create-a-new-model-driven-app-with-collaboration-controls-for-teams).
 
+> [!NOTE]
+> For information on how to configure Collaboration Manager for Loans product, see [Collaboration Manager for Loans](/industry/financial-services/collaboration-manager/configure).
+
 The settings that you can apply are as follows:
 
 |Settings|Used by|
@@ -311,7 +314,7 @@ Approvals allow users to request sign out from others when working in a record. 
 
       :::image type="content" source="../assets/images/collaboration-control/approval-request-form.png" alt-text="Screenshot is an example that shows the new approval request form.":::
 
-1. In the Approval request form, fill the required fields and select **Send**,which creates a request and added to the list.
+1. In the Approval request form, fill the required fields and select **Send**, which creates a request and added to the list.
 
       :::image type="content" source="../assets/images/collaboration-control/approvals-list.png" alt-text="Screenshot is an example that shows the list of approvals.":::
 

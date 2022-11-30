@@ -19,6 +19,10 @@ Teams Toolkit helps you to debug and preview your Microsoft Teams app locally. D
 
 Teams Toolkit in Visual Studio Code gives you the features to automate debugging of your Teams app locally. Visual Studio allows you to debug tab, bot, and message extension. You need to set up Teams Toolkit before you debug your app.
 
+> [!NOTE]
+>
+> You can upgrade your old Teams Toolkit project to use new tasks, for more information see [debug settings doc](https://aka.ms/teamsfx-debug-upgrade-new-tasks)
+
 ## Set up your Teams Toolkit for debugging
 
 The following steps help you to set up your Teams Toolkit before you initiate the debug process:
@@ -105,7 +109,7 @@ Runs tasks as defined in `.vscode/tasks.json`.
 
 The following image displays task names in the **OUTPUT** and **TERMINAL** tabs of the Visual Studio Code while running tab, bot or message extension, and Azure Functions.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/debug/Terminal.png" alt-text="Start app services":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/debug/Terminal1.png" alt-text="Start app services" lightbox="../assets/images/teams-toolkit-v2/debug/Terminal1.png":::
 
 ### Launches debug configurations
 
@@ -196,7 +200,7 @@ Perform the following steps using the Teams Toolkit to debug your app after you 
    > You can also use hot reload function of Visual Studio during debug. Learn more by visiting <https://aka.ms/teamsfx-vs-hotreload>.
 
    > [!NOTE]
-   > Ensure to post HTTP request to '<http://localhost:5130/api/notification>' to trigger notification, when you're debugging Notification Bot app. If you've selected HTTP trigger when creating the project, you can use any API tools such as curl (Windows Command Prompt), Postman, and so on.
+   > Ensure to post HTTP request to `http://localhost:5130/api/notification` to trigger notification, when you're debugging Notification Bot app. If you've selected HTTP trigger when creating the project, you can use any API tools such as curl (Windows Command Prompt), Postman, and so on.
 
    > [!TIP]
    > If you make any changes to Teams app manifest file (/templates/appPackage/manifest.template.json), ensure that you perform the Prepare Teams App Dependencies command. Before you try to run the Teams app again locally.

@@ -34,7 +34,7 @@ items:
      | --- | --- | --- |
      | **Required** | &nbsp; | &nbsp; |
      | &nbsp; | [Microsoft Teams with an account (not a guest account)](https://www.microsoft.com/microsoft-teams/download-app) |  Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call and all in one place. |
-     | &nbsp; | [Visual Studio 2022 version 17.3](https://visualstudio.microsoft.com)<br> Install one of the following two workloads:<br> • **ASP.NET and web development** <br> • **.NET Core cross-platform development** | You can install the enterprise version in Visual Studio 2022, and install the workloads. |
+     | &nbsp; | [Visual Studio 2022 version 17.3](https://visualstudio.microsoft.com)<br> Install one of the following two workloads:<br> • ASP.NET and web development <br> • .NET Core cross-platform development | You can install the enterprise version in Visual Studio 2022, and install the workloads. |
      | &nbsp; | [Microsoft 365 developer account](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | Access to Teams account with the appropriate permissions to install an app. |
      | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots, message extensions, and incoming webhooks) require inbound connections. A tunnel connects your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
 
@@ -43,24 +43,24 @@ items:
 
     ## Set up your Teams development tenant
 
-       A **tenant** is like a space or a container where you chat, share files, and run meetings for your organization in Teams. You can also sideload and test the app.
+    A **tenant** is like a space or a container where you chat, share files, and run meetings for your organization in Teams. You can also sideload and test the app.
 
     ### Check for sideloading option
 
-        After creating the app, you must load your app in Teams without distributing it. This loading is known as sideloading. Sign-in to your Microsoft 365 account to view this option.
+    After creating the app, you must load your app in Teams without distributing it. This loading is known as sideloading. Sign-in to your Microsoft 365 account to view this option.
 
-       > [!NOTE]
-       > Sideloading is necessary for previewing and testing apps in Teams local environment. Enable Sideloading to preview and test your app in Teams locally.
+     > [!NOTE]
+     > Sideloading is necessary for previewing and testing apps in Teams local environment. Enable Sideloading to preview and test your app in Teams locally.
 
-       Do you already have a tenant, and do you have the admin access? Let's check if you really do!
+    Do you already have a tenant, and do you have the admin access? Let's check if you really do!
 
     To verify sideload apps in Teams:
 
-    1. In the Teams client, select **Store**.
+    1. In the Teams client, select **Apps**.
     1. Select **Manage your apps** > **Upload an app**.
     1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
 
-        :::image type="content" source="~/assets/images/bots/upload-custom-app1.png" alt-text="Illustration shows the option to upload a custom app in Teams.":::
+        :::image type="content" source="~/assets/images/bots/upload-custom-app1_1.png" alt-text="Illustration shows the option to upload a custom app in Teams.":::
 
         > [!NOTE]
         > If you don't have the option to upload a custom app, contact Teams administrator.
@@ -86,12 +86,12 @@ items:
     1. Create Azure Bot resource to register bot with Azure Bot Service.
     1. Create client secret to enable SSO authentication of the bot.
     1. Add Teams channel to deploy the bot.
-    1. Use ngrok to create a tunnel to your web server's endpoints.
+    1. Create a tunnel to your web server's endpoints by using ngrok.
     1. Add messaging endpoint to the ngrok tunnel you created.
 
     **To create Azure Bot resource**
 
-    1. Go to the [Azure portal](https://portal.azure.com/). It may request you to sign in with your Microsoft account credentials.
+    1. Go to the [Azure portal](https://portal.azure.com/).
 
     1. Select **Create a resource**.
 
@@ -117,29 +117,23 @@ items:
 
     1. Enter the following details to create Azure bot.
 
-        1. Enter required bot handle name in **Bot handle** and it's a unique identifier for your bot.
+        1. Enter required bot handle name in **Bot handle**.
     
         1. Select your **Subscription** and **Resource group** from the dropdown list.
 
-          :::image type="content" source="~/assets/images/bots/Azurebotcreate.png" alt-text="Screenshot showing the details while creating resource Azure bot.":::
+             :::image type="content" source="~/assets/images/bots/Azurebotcreate.png" alt-text="Screenshot showing the details while creating resource Azure bot.":::
       
-           You can also create a new resource group by the following steps:
-
-              1. To create new resource group, select **Create new** > enter resource name > select **OK**.
-
-                   :::image type="content" source="~/assets/images/bots/newresourcecreation.png" alt-text="Screenshot showing the Selection of new resource group.":::
-
-              1. Select the required location from **New resource group location** dropdown list.
-
-                   :::image type="content" source="~/assets/images/bots/newresource.png" alt-text="Screenshot showing the new resource group location.":::
-
-        1. Select **Type of App** as **Multi Tenant**.
+        1. To create a new resource group, select **Create new** > enter resource name > **OK**. Now, select the required location from **New resource group location** dropdown list.
+        
+             :::image type="content" source="~/assets/images/bots/newresource.png" alt-text="Screenshot showing the new resource group location":::
+        
+        1. Select **Type of App** as **Multi Tenant**. 
 
         1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected.
     
-           You can also select **Use existing app registration** and enter existing **App ID**, **App tenant ID** and **MSI resource ID**.
+           You can also select **Use existing app registration** and enter existing **App ID**, **App tenant ID**, and **MSI resource ID**.
 
-            :::image type="content" source="~/assets/images/bots/Review-Create.png" alt-text="Screenshot showing the selection of multi tenant option. ":::
+             :::image type="content" source="~/assets/images/bots/Review-Create_1.png" alt-text="Screenshot showing the selection of multi tenant option. ":::
 
            > [!NOTE]
            > You can't create more than one bot with the same **Microsoft App ID**.
@@ -148,11 +142,9 @@ items:
     
     1. After the validation is passed, select **Create**.
 
-         :::image type="content" source="~/assets/images/bots/validationpass.png" alt-text="Screenshot showing the validation Pass.":::
+         :::image type="content" source="~/assets/images/bots/validationpass_1.png" alt-text="Screenshot showing the validation Pass.":::
   
-       It takes a few moments for your bot service to be provisioned and the following page appears.
-
-         :::image type="content" source="~/assets/images/bots/provisionpage_1.png" alt-text="Provision Page":::
+       It takes a few moments for your bot service to be provisioned.
 
     1. Select **Go to resource**.
 
@@ -170,7 +162,7 @@ items:
 
         :::image type="content" source="~/assets/images/bots/selectconfigure_1.png" alt-text="Select Configure":::
 
-       > [!Important]
+       > [!Tip]
        > Save the **Microsoft App ID** or **Client ID** for future reference.
     
     1. Next to **Microsoft App ID**, select **Manage**.
@@ -179,7 +171,7 @@ items:
 
     1. In the **Client secrets** section, select **New client secret**.
 
-          :::image type="content" source="~/assets/images/bots/newclientsecret.png" alt-text="Screenshot showing the selection of new client secret.":::
+          :::image type="content" source="~/assets/images/bots/newclientsecret_2.png" alt-text="Screenshot showing the selection of new client secret.":::
 
        The **Add a client secret** window appears.
 
@@ -187,13 +179,13 @@ items:
     
     1. Select **Add**.
  
-        :::image type="content" source="~/assets/images/bots/addclientsecret.png" alt-text="Screenshot showing adding client secret to app.":::
+        :::image type="content" source="~/assets/images/bots/addclientsecret_1.png" alt-text="Screenshot showing adding client secret to app.":::
 
     1. In the **Value** column, select copy to clipboard icon to copy the value details. 
 
         :::image type="content" source="~/assets/images/bots/valueclientsecret.png" alt-text="Screenshot showing the value of client secret copied to clipboard.":::
 
-       > [!Important]
+       > [!Tip]
        > Save the **Client secrets** value or app password for future reference.
        
     **Add bot to the Teams channel**
@@ -206,7 +198,7 @@ items:
 
         :::image type="content" source="~/assets/images/bots/select-recent-resources_1.png" alt-text="Select recent resources":::
 
-    1. Select **Channels** in the left pane, and select **Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>. 
+    1. Select **Channels** in the left pane. 
   
         :::image type="content" source="~/assets/images/bots/selectchannel_1.png" alt-text="Select recent":::
 
@@ -222,7 +214,7 @@ items:
 
     1. Select **Apply**.
 
-        :::image type="content" source="~/assets/images/bots/apply.png" alt-text="Screenshot showing the option apply":::
+        :::image type="content" source="~/assets/images/bots/apply_1.png" alt-text="Screenshot showing the option apply":::
     
     **To create tunnel for local web server**
 
@@ -238,7 +230,7 @@ items:
 
     1. From ngrok, copy the HTTPS URL.
 
-       :::image type="content" source="../msteams-platform/assets/images/ngrok-url.png" alt-text="ngrok HTTPS URL":::
+       :::image type="content" source="../msteams-platform/assets/images/ngrok-url1_1.png" alt-text="ngrok HTTPS URL":::
 
         > [!NOTE]
         > The HTTPS URL in your ngrok is your fully qualified domain name.
@@ -252,7 +244,7 @@ items:
 
     1. In **Messaging endpoint**, use the HTTPS URL available from ngrok and at the end of the URL add **/api/messages**.
 
-        :::image type="content" source="~/assets/images/bots/messagingURL_1.png" alt-text="Messaging endpoint":::
+        :::image type="content" source="~/assets/images/bots/messagingURL_2.png" alt-text="Messaging endpoint":::
 
     1. Select **Apply**.
 
@@ -304,18 +296,19 @@ items:
 
         :::image type="content" source="~/assets/images/bots/appidURI.png" alt-text="Screenshot showing the set option.":::
 
-    1. Use the Application ID URI shown and append **api://botid-** at the beginning of the URI.
+    1. Set the Application ID URI in the form of `api://botid-{your AppID}`.
 
     1. Select **Save**.
 
         :::image type="content" source="~/assets/images/bots/exposeAPI_1.png" alt-text="Screenshot showing save option.":::
     
-       > [!Important]
-       > Save the **Application ID URI** for future reference.
+       > [!NOTE]
+       > If you're using a tunneling service such as ngrok, ensure you update the value whenever your ngrok subdomain changes.
+       > For example: `api://f631****.ngrok.io/92c11075-c629-4a1e-ab58-02b4fd4204c2`, where `f631****.ngrok.io` is the new ngrok subdomain name.
 
     1. Select **Add a scope**.
 
-        :::image type="content" source="~/assets/images/bots/Addascope.png" alt-text="Screenshot showing adding a scope.":::
+        :::image type="content" source="~/assets/images/bots/Addascope_1.png" alt-text="Screenshot showing adding a scope.":::
 
        The **Add a scope** window appears.
 
@@ -384,11 +377,11 @@ items:
 
     1. Select **Add a permission**.
 
-       Request API permission page appears:
+       The **Request API permission** window appears.
 
     1. Select **Microsoft Graph**.
         
-        :::image type="content" source="~/assets/images/bots/select-microsoft-graph_1.png" alt-text="Screenshot showing the Selection of Microsoft Graph.":::
+        :::image type="content" source="~/assets/images/bots/select-microsoft-graph_2.png" alt-text="Screenshot showing the Selection of Microsoft Graph.":::
 
     1. Select **Delegated permissions**.
 
@@ -419,11 +412,11 @@ items:
 
         :::image type="content" source="~/assets/images/bots/select-configuration_2.png" alt-text="Select configuration1":::
 
-    The **New Connection Setting** window appears.
+       The **New Connection Setting** window appears.
 
-        :::image type="content" source="~/assets/images/bots/botserviceconnection.png" alt-text="Screenshot showing the bot Service connection.":::
+         
 
-    1. In **New Connection Setting** page, enter the following details:
+    1. In **New Connection Setting**, enter the following details:
 
         | Field | Value or description |
         | ----- | ----- |
@@ -435,7 +428,9 @@ items:
         | Tenant ID | Enter **common**. |
         | Scopes | Enter **User.Read** and also add all the **Scopes** required while specifying permissions to downstream APIs. |
 
-    1. Select **Save** > **Apply**.
+        :::image type="content" source="~/assets/images/bots/botserviceconnection.png" alt-text="Screenshot showing the bot Service connection.":::
+
+    1. Select **Save**.
 
        You have now configured SSO for your bot.
 
@@ -454,7 +449,7 @@ items:
 
     1. Select **BotSSOCSharp.csproj** file from **csharp_dotnetcore** folder.
 
-        :::image type="content" source="~/assets/images/bots/filepath.png" alt-text="Screenshot showing the folder path.":::
+        :::image type="content" source="~/assets/images/bots/filepath_1.png" alt-text="Screenshot showing the folder path.":::
 
     1. Open the **appsettings.json** file.
 
@@ -463,7 +458,7 @@ items:
         > [!NOTE]
         > You can obtain the `MicrosoftAppId` from the bot's Configuration page. The `MicrosoftAppPassword` is the Value for client secret ID that you saved previously in the Azure.
 
-         :::image type="content" source="~/assets/images/bots/appsettingsjson.png" alt-text="Sceenshot showing the appsettings json option.":::
+         :::image type="content" source="~/assets/images/bots/appsettingsjson.png" alt-text="Sceenshot showing the appsettings json option."lightbox="~/assets/images/bots/appsettingsjson.png":::
 
     1. Select **F5**  to run the project.
 
@@ -510,13 +505,13 @@ items:
        * icon-outline.png
        * icon-color.png
 
-        :::image type="content" source="~/assets/images/bots/manifest.png" alt-text="Screenshot showing how to zip a manifest folder":::
+        :::image type="content" source="~/assets/images/bots/manifest_1.png" alt-text="Screenshot showing how to zip a manifest folder":::
 
     1. Go to Teams client.
     1. Select **Store**.
     1. Select **Manage your apps**.
 
-        :::image type="content" source="~/assets/images/bots/manage-your-app.png" alt-text="Screenshot showing the selection of manage your app.":::
+        :::image type="content" source="~/assets/images/bots/manage-apps_3.png" alt-text="Screenshot showing the selection of manage your app.":::
 
     1. Select **Upload a custom app**.
     
@@ -528,7 +523,7 @@ items:
 
     1. Select **Add** to add the conversation bot to your chat.
 
-        :::image type="content" source="~/assets/images/bots/add-conversation-bot.png" alt-text="Screenshot showing the option add conversation bot.":::
+        :::image type="content" source="~/assets/images/bots/add-conversation-bot_1.png" alt-text="Screenshot showing the option add conversation bot.":::
 
         You can interact with the bot by sending it a message. The bot exchanges an SSO token and calls the Graph API on your behalf. It keeps you signed in unless you send a message to **sign-out**.
 
