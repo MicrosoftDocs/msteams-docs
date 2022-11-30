@@ -69,7 +69,7 @@ The following image illustrates mobile experience of typeahead search:
 > [!NOTE]
 >
 > * The `Input.ChoiceSet` control is based on the style and `isMultiSelect` properties.
-> * To use dynamic search typeahead in groupchat, the user must add groupchat scope to the app and install it to that particular group chat.
+> * To use dynamic typeahead search in group chat, the user must add `groupchat` scope to the app and install it to that particular group chat.
 
 ### Schema properties
 
