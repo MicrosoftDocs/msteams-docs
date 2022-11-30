@@ -176,7 +176,7 @@ Bot related classes are stored under [bot folder](https://github.com/OfficeDev/T
 
 The following code is an example to create `TeamsBotSsoPrompt`:
 
-```ts
+```typescript
 const TeamsBotSsoPromptId = "TEAMS_BOT_SSO_PROMPT";
 
 const settings: TeamsBotSsoPromptSettings = {
@@ -282,7 +282,7 @@ try {
 > [!NOTE]
 > TeamsFx class has been deprecated, and `ErrorWithCode` code is not recommended. You can use `TeamsUserCredential` instead as follow:
 
-```ts
+```typescript
 try {
   const authConfig: TeamsUserCredentialAuthConfig = {
     clientId: process.env.REACT_APP_CLIENT_ID,
