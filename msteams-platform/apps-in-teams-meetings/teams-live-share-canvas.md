@@ -441,10 +441,10 @@ Both the scenarios work well because the content can be viewed the same on all d
 
 ## Code samples
 
-| Sample name          | Description                            | JavaScript                                                                                |
-| -------------------- | -------------------------------------- | ----------------------------------------------------------------------------------------- |
-| Live Canvas demo     | Simple whiteboard application.         | [View](https://github.com/microsoft/live-share-sdk/tree/main/samples/03.live-canvas-demo) |
-| React media template | Draw over a synchronized video player. | [View](https://aka.ms/liveshare-mediatemplate)                                            |
+| Sample name | Description | JavaScript |
+| ------ | ----- | ---- |
+| Live Canvas demo | Simple whiteboard application. | [View](https://github.com/microsoft/live-share-sdk/tree/main/samples/javascript/03.live-canvas-demo) |
+| React media template | Draw over a synchronized video player. | [View](https://aka.ms/liveshare-mediatemplate) |
 
 ## Next step
 
