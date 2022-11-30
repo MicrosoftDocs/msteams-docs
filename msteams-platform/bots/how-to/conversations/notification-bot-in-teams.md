@@ -370,7 +370,7 @@ bot.adapter.onTurnError = ...
 
 ## Add storage
 
-Storage can be used to implement notification connections. You can add your own storage by the following code sample:
+Storage can be used to implement notification connections. You can add your own storage with the help of following code sample:
 
 # [TypeScript](#tab/ts4)
 
@@ -428,16 +428,16 @@ builder.Services.AddSingleton(sp =>
 If storage isn't provided, you can use a default local file storage, which stores notification connections into:
 
 * `.notification.localstore.json` if running locally.
-* `${process.env.TEMP}/.notification.localstore.json`, if `process.env.RUNNING_ON_AZURE` is set to "1".
+* `${process.env.TEMP}/.notification.localstore.json`, if `process.env.RUNNING_ON_AZURE` is set to 1.
 
 For sample implementation to use Azure blob storage, see [add notification storage implementation sample](https://github.com/OfficeDev/TeamsFx-Samples/blob/ga/adaptive-card-notification/bot/src/storage/blobsStorage.ts).
 
 > [!NOTE]
-> Using your own shared storage for production environment is recommended.
+> It's recommended to use your own shared storage for production environment.
 
 ## Add authentication for notification API
 
-If you select HTTP trigger, the scaffolded notification API doesn't have authentication or authorization enabled. Ensure that you add an authentication or authorization for the API before using it for production. You can perform either of the following:
+If you select HTTP trigger, the scaffolded notification API doesn't have authentication or authorization enabled. Ensure that you add authentication or authorization for the API before using it for production. You can perform either of the following:
 
 * Use an API key. You can use [function access keys](/azure/azure-functions/security-concepts?tabs=v4#function-access-keys), if you select Azure Functions to host your notification bot.
 
@@ -447,7 +447,7 @@ There can be more authentication or authorization solutions for an API, you can 
 
 ## Connect to existing APIs
 
-If you don't have the required SDK, and want to invoke external APIs in your code. The "Teams: Connect to an API" command in Microsoft Visual Studio Code Teams Toolkit extension, or "teamsfx add api-connection" command in TeamsFx CLI can be used to bootstrap code to call target APIs. For more information, see [connect to existing API](../../../toolkit/add-API-connection.md#steps-to-connect-to-api).
+If you don't have the required SDK, and want to invoke external APIs in your code. The `Teams: Connect to an API` command in Microsoft Visual Studio Code Teams Toolkit extension, or `teamsfx add api-connection` command in TeamsFx CLI can be used to bootstrap code to call target APIs. For more information, see [connect to existing API](../../../toolkit/add-API-connection.md#steps-to-connect-to-api).
 
 ### Teams bot application or Teams Incoming Webhook
 
@@ -504,11 +504,11 @@ Notification target connections are stored in the persistence storage. If you're
 
 <details>
 
-<summary><b>Why "Bad Request" or "Bad Argument" error occurs when sending notification?</b></summary>
+<summary><b>Why Bad Request or Bad Argument error occurs when sending notification?</b></summary>
 
-If the notification installation doesn't match the bot ID or password, you can get a "Failed to decrypt conversation ID" error. One possible cause for this error is that the bot ID or password is changed due to cleaning local state or reprovisioning.
+If the notification installation doesn't match the bot ID or password, you can get a **Failed to decrypt conversation ID** error. One possible cause for this error is that the bot ID or password is changed due to cleaning local state or reprovisioning.
 
-You can resolve this by cleaning your notification storage. After cleaning, notify to reinstall your bot in Teams to ensure that the new installation is up-to-date. Each stored notification installation is bound with one bot. If you're able to check your notification storage, its bot field should match the bot you're running such as the bot ID having the same GUID.
+You can resolve this by cleaning your notification storage. After cleaning, notify in Teams to reinstall your bot, and ensure that the new installation is up-to-date. Each stored notification installation is bound with one bot. If you're able to check your notification storage, its bot field should match the bot you're running such as the bot ID with the same GUID.
 
 > [!NOTE]
 > In case of local storage the default location is `.notification.localstore.json`.
@@ -521,7 +521,7 @@ You can resolve this by cleaning your notification storage. After cleaning, noti
 
 <summary><b>Why notification target is lost after restarting or redeploying the bot app?</b></summary>
 
-Notification target connections are stored in the persistence storage. If you're using the default local file storage, Azure web app and Azure Functions clean up the local file during a restart or redeploy. You can also uninstall the bot from Teams, then install it to again add connections to the storage. Using your own shared storage in production environment is recommended.
+Notification target connections are stored in the persistence storage. If you're using the default local file storage, Azure web app and Azure Functions clean up the local file during a restart or redeploy. You can also uninstall the bot from Teams, then install it to again add connections to the storage. It's recommended to use your own shared storage for production environment.
 
 <br>
 
