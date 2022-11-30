@@ -190,6 +190,62 @@ Contoso E-commerce Manager:
 
 Search the app “Contoso” between apps built for your organization and install it. (Specify if there are any steps to follow for installing the app).
 
+#### Login credentials
+
+Users need a Contoso subscription to use the app “Contoso”. Users can buy a subscription through the link in the info section.
+
+Your credentials to test Contoso app:
+
+User #1
+
+- email: xxxxxxxxxx@contoso.com
+- password: xxxxxxxxxxx
+
+User #2
+
+- email: xxxxxxxxxx@contoso.com
+- password: xxxxxxxxxxx
+
+#### Steps
+
+To use Contoso, users must connect to at least 2 platforms.  Contoso needs platform A and platform B to transfer data. They can find instructions to complete the form visiting our guides online here: https://www.xxxxxxxxxx.com/guide/.
+
+On the first login, users will have to authorize the App Contoso Manager to access the information shown on the pop-up. After that, users will find Microsoft 365 already connected.
+
+1. **Step 1:  Connect to platform A**: To connect to a platform, users must choose platform A from the list. Steps to test this feature:
+
+    1. In Apps, click on Connect a new app.
+    1. Choose the app you want to connect with (choose: “Platform A”).
+    1. Complete the form with the info required.
+    1. Users can find info (that is, API key, token, URL, secret key, and client ID) required by different apps in our online guide.
+    1. Click on Verify and save.
+
+1. **Step 2: Connect to platform B**: To connect to a platform, users must choose platform A from the list. Steps to test this feature:
+
+    1. In Apps, click on Connect a new app.
+    1. Choose the app you want to connect with (choose: “Platform A”).
+    1. Complete the form with the info required.
+    1. Users can find info (i.e., API key, token, URL, secret key, client ID) required by different apps in our online guide.
+    1. Click on Verify and save.
+
+### App Functionality
+
+Workflows are automations that allow several tasks to be repeated automatically, every time a trigger starts (i.e.: get an order by platform A).
+2 workflows are available in Contoso
+
+#### Workflow 1: Copy items from platform A to platform B
+
+This workflow requires platform A and platform B to work.
+This workflow copies all items and products from platform A to platform B. 
+
+Steps for workflow 1: (Provide screen shots)
+
+- Activate the workflow using the toggle.
+- Look at products already uploaded on platform A, by clicking on “products” Tab.
+
+Wait for automatic sync. After 15 minutes check your platform B to find the products.
+
+
 
 </details>
 
