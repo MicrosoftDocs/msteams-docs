@@ -940,7 +940,7 @@ The following code shows an example of team restored event:
 
 # [C#](#tab/dotnet)
 
-* [SDK reference](https://learn.microsoft.com/en-us/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsteamrestoredasync?view=botbuilder-dotnet-stable#definition&preserve-view=true)
+* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsteamrestoredasync?view=botbuilder-dotnet-stable#definition&preserve-view=true  
 
 ```csharp
 protected override async Task OnTeamsTeamrestoredAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -973,7 +973,7 @@ export class MyBot extends TeamsActivityHandler {
 
 # [JSON](#tab/json)
 
-* [SDK reference](https://learn.microsoft.com/en-us/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=json#team-restored)
+* [SDK reference](/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=json#team-restored)
 
 ```json
 { 
@@ -1033,7 +1033,7 @@ The following code shows an example of team archived event:
 
 # [C#](#tab/dotnet)
 
-* [SDK reference](https://learn.microsoft.com/en-us/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsteamarchivedasync?view=botbuilder-dotnet-stable#definition&preserve-view=true)
+* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsteamarchivedasync?view=botbuilder-dotnet-stable#definition&preserve-view=true)
 
 ```csharp
 protected override async Task OnTeamsTeamArchivedAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -1066,7 +1066,7 @@ export class MyBot extends TeamsActivityHandler {
 
 # [JSON](#tab/json)
 
-* [SDK reference](https://learn.microsoft.com/en-us/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=json#team-archived)
+* [SDK reference](/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=json#team-archived)
 
 ```json
 { 
@@ -1126,7 +1126,7 @@ The following code shows an example of team unarchived event:
 
 # [C#](#tab/dotnet)
 
-* [SDK reference](https://learn.microsoft.com/en-us/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsteamunarchivedasync?view=botbuilder-dotnet-stable#definition&preserve-view=true)
+* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsteamunarchivedasync?view=botbuilder-dotnet-stable#definition&preserve-view=true)
 
 ```csharp
 protected override async Task OnTeamsTeamUnarchivedAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -1159,7 +1159,7 @@ export class MyBot extends TeamsActivityHandler {
 
 # [JSON](#tab/json)
 
-* [SDK reference](https://learn.microsoft.com/en-us/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=json#team-unarchived)
+* [SDK reference](/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=json#team-unarchived)
 
 ```json
 { 
@@ -1228,7 +1228,7 @@ The following code shows an example of reactions to a bot message:
 
 # [C#](#tab/dotnet)
 
-* [SDK reference](https://learn.microsoft.com/en-us/dotnet/api/microsoft.bot.builder.activityhandler.onreactionsaddedasync?view=botbuilder-dotnet-stable#definition&preserve-view=true)
+* [SDK reference](/dotnet/api/microsoft.bot.builder.activityhandler.onreactionsaddedasync?view=botbuilder-dotnet-stable#definition&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-message-reaction/csharp/Bots/MessageReactionBot.cs#L26)
 
 ```csharp
@@ -1274,7 +1274,7 @@ export class MyBot extends TeamsActivityHandler {
 
 # [JSON](#tab/json)
 
-* [SDK reference](https://learn.microsoft.com/en-us/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=json#reactions-added-to-bot-message)
+* [SDK reference](/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=json#reactions-added-to-bot-message)
 
 ```json
 {
@@ -1353,7 +1353,7 @@ The following code shows an example of reactions removed from bot message:
 
 # [C#](#tab/dotnet)
 
-* [SDK reference](https://learn.microsoft.com/en-us/dotnet/api/microsoft.bot.builder.activityhandler.onreactionsremovedasync?view=botbuilder-dotnet-stable#definition)
+* [SDK reference](/dotnet/api/microsoft.bot.builder.activityhandler.onreactionsremovedasync?view=botbuilder-dotnet-stable#definition&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-message-reaction/csharp/Bots/MessageReactionBot.cs#L44)
 
 ```csharp
@@ -1399,7 +1399,7 @@ export class MyBot extends TeamsActivityHandler {
 
 # [JSON](#tab/json)
 
-* [SDK reference](https://learn.microsoft.com/en-us/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=json#reactions-removed-from-bot-message)
+* [SDK reference](/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=json#reactions-removed-from-bot-message)
 
 ```json
 {
@@ -1492,7 +1492,7 @@ In this example, the `conversation.id` of the `conversationUpdate` and `installa
 
 # [C#](#tab/dotnet)
 
-* [SDK reference](https://learn.microsoft.com/en-us/dotnet/api/microsoft.bot.builder.cloudadapterbase.continueconversationasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-cloudadapterbase-continueconversationasync(system-string-microsoft-bot-schema-activity-microsoft-bot-builder-botcallbackhandler-system-threading-cancellationtoken))
+* [SDK reference](/dotnet/api/microsoft.bot.builder.cloudadapterbase.continueconversationasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-cloudadapterbase-continueconversationasync(system-string-microsoft-bot-schema-activity-microsoft-bot-builder-botcallbackhandler-system-threading-cancellationtoken)&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L70-L80)
 
 ```csharp
@@ -1540,7 +1540,7 @@ async onInstallationUpdateActivity(context: TurnContext) {
 
 # [JSON](#tab/json)
 
-* [SDK reference](https://learn.microsoft.com/en-us/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=json#install-update-event)
+* [SDK reference](/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=json#install-update-event)
 
 ```json
 {
