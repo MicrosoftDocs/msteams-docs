@@ -24,7 +24,8 @@ Your bot can query for the list of members and their basic user profiles, includ
 The following sample code uses the paged endpoint for fetching the roster:
 
 # [C#](#tab/dotnet)
-* [SDK reference](https://learn.microsoft.com/en-us/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getpagedmembersasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-teams-teamsinfo-getpagedmembersasync(microsoft-bot-builder-iturncontext-system-nullable((system-int32))-system-string-system-threading-cancellationtoken))
+
+* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getpagedmembersasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-teams-teamsinfo-getpagedmembersasync(microsoft-bot-builder-iturncontext-system-nullable((system-int32))-system-string-system-threading-cancellationtoken))
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/graph-proactive-installation/csharp/ProactiveAppInstallation/Bots/ProactiveBot.cs#L78)
 
 ```csharp
@@ -48,7 +49,8 @@ public class MyBot : TeamsActivityHandler
 ```
 
 # [TypeScript](#tab/typescript)
-* [SDK reference](https://learn.microsoft.com/en-us/javascript/api/botbuilder/teamsinfo?view=botbuilder-ts-latest#botbuilder-teamsinfo-getpagedmembers)
+
+* [SDK reference](/javascript/api/botbuilder/teamsinfo?view=botbuilder-ts-latest#botbuilder-teamsinfo-getpagedmembers&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/graph-proactive-installation/nodejs/bots/proactiveBot.js#L38)
 
 ```typescript
@@ -138,7 +140,8 @@ You can also retrieve the details of a particular user using their Teams user ID
 The following sample code is used to get single member details:
 
 # [C#](#tab/dotnet)
-* [SDK reference](https://learn.microsoft.com/en-us/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmemberasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-teams-teamsinfo-getmemberasync(microsoft-bot-builder-iturncontext-system-string-system-threading-cancellationtoken))
+
+* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmemberasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-teams-teamsinfo-getmemberasync(microsoft-bot-builder-iturncontext-system-string-system-threading-cancellationtoken)&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-sequential-flow-adaptive-cards/csharp/SequentialUserSpecificFlow/Bots/UserSpecificBot.cs#L37)
 
 ```csharp
@@ -154,7 +157,8 @@ public class MyBot : TeamsActivityHandler
 ```
 
 # [TypeScript](#tab/typescript)
-* [SDK reference](https://learn.microsoft.com/en-us/javascript/api/botbuilder/teamsinfo?view=botbuilder-ts-latest#botbuilder-teamsinfo-getmember)
+
+* [SDK reference](/javascript/api/botbuilder/teamsinfo?view=botbuilder-ts-latest#botbuilder-teamsinfo-getmember&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L157)
 
 ```typescript
@@ -174,7 +178,8 @@ export class MyBot extends TeamsActivityHandler {
 ```
 
 # [Python](#tab/python)
-* [SDK reference](https://learn.microsoft.com/en-us/python/api/botbuilder-core/botbuilder.core.teams.teamsinfo?view=botbuilder-py-latest#botbuilder-core-teams-teamsinfo-get-member)
+
+* [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsinfo?view=botbuilder-py-latest#botbuilder-core-teams-teamsinfo-get-member&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L67)
 
 ```python
@@ -232,7 +237,8 @@ When installed in a team, your bot can query for metadata about that team includ
 The following sample code is used to get team's details:
 
 # [C#](#tab/dotnet)
-* [SDK reference](https://learn.microsoft.com/en-us/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getteamdetailsasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-teams-teamsinfo-getteamdetailsasync(microsoft-bot-builder-iturncontext-system-string-system-threading-cancellationtoken))
+
+* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getteamdetailsasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-teams-teamsinfo-getteamdetailsasync(microsoft-bot-builder-iturncontext-system-string-system-threading-cancellationtoken)&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msteams-application-qbot/Source/Microsoft.Teams.Apps.QBot.Web/Bot/QBotTeamInfo.cs#L44)
 
 ```csharp
@@ -255,7 +261,8 @@ public class MyBot : TeamsActivityHandler
 ```
 
 # [TypeScript](#tab/typescript)
-* [SDK reference](https://learn.microsoft.com/en-us/javascript/api/botbuilder/teamsinfo?view=botbuilder-ts-latest#botbuilder-teamsinfo-getteamdetails)
+
+* [SDK reference](/javascript/api/botbuilder/teamsinfo?view=botbuilder-ts-latest#botbuilder-teamsinfo-getteamdetails&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-complete-sample/nodejs/server/dialogs/teams/fetchTeamInfoDialog.js#L21)
 
 ```typescript
@@ -284,7 +291,8 @@ export class MyBot extends TeamsActivityHandler {
 ```
 
 # [Python](#tab/python)
-* [SDK reference](https://learn.microsoft.com/en-us/python/api/botbuilder-core/botbuilder.core.teams.teamsinfo?view=botbuilder-py-latest#botbuilder-core-teams-teamsinfo-get-team-details)
+
+* [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsinfo?view=botbuilder-py-latest#botbuilder-core-teams-teamsinfo-get-team-details&preserve-view=true)
 
 ```python
 async def _show_details(self, turn_context: TurnContext):
@@ -330,7 +338,8 @@ Your bot can query the list of channels in a team.
 The following sample code is used to get the list of channels in a team:
 
 # [C#](#tab/dotnet)
-* [SDK reference](https://learn.microsoft.com/en-us/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getteamchannelsasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-teams-teamsinfo-getteamchannelsasync(microsoft-bot-builder-iturncontext-system-string-system-threading-cancellationtoken))
+
+* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getteamchannelsasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-teams-teamsinfo-getteamchannelsasync(microsoft-bot-builder-iturncontext-system-string-system-threading-cancellationtoken)&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msteams-application-qbot/Source/Microsoft.Teams.Apps.QBot.Web/Bot/QBotTeamInfo.cs#L57)
 
 ```csharp
@@ -349,7 +358,8 @@ public class MyBot : TeamsActivityHandler
 ```
 
 # [TypeScript](#tab/typescript)
-* [SDK reference](https://learn.microsoft.com/en-us/javascript/api/botbuilder/teamsinfo?view=botbuilder-ts-latest#botbuilder-teamsinfo-getteamchannels)
+
+* [SDK reference](/javascript/api/botbuilder/teamsinfo?view=botbuilder-ts-latest#botbuilder-teamsinfo-getteamchannels&preserve-view=true)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {

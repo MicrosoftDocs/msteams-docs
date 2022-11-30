@@ -20,7 +20,8 @@ You can use dynamic message updates for scenarios, such as poll updates, modifyi
 It is not necessary for the new message to match the original in type. For example, if the original message contains an attachment, the new message can be a simple text message.
 
 # [C#](#tab/dotnet)
-* [SDK reference](https://learn.microsoft.com/en-us/dotnet/api/microsoft.bot.builder.botadapter.updateactivityasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-botadapter-updateactivityasync(microsoft-bot-builder-iturncontext-microsoft-bot-schema-activity-system-threading-cancellationtoken))
+
+* [SDK reference](/dotnet/api/microsoft.bot.builder.botadapter.updateactivityasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-botadapter-updateactivityasync(microsoft-bot-builder-iturncontext-microsoft-bot-schema-activity-system-threading-cancellationtoken)&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L257)
 
 To update an existing message, pass a new `Activity` object with the existing activity ID to the `UpdateActivityAsync` method of the `TurnContext` class. For more information, see [TurnContextClass](/dotnet/api/microsoft.bot.builder.turncontext?view=botbuilder-dotnet-stable&preserve-view=true).
@@ -147,7 +148,8 @@ Now that you have updated cards, you can delete messages using the Bot Framework
 In the Bot Framework, every message has its unique activity identifier. Messages can be deleted using the Bot Framework's `DeleteActivity` method.
 
 # [C#](#tab/dotnet)
-* [SDK reference](https://learn.microsoft.com/en-us/dotnet/api/microsoft.bot.builder.botadapter.deleteactivityasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-botadapter-deleteactivityasync(microsoft-bot-builder-iturncontext-microsoft-bot-schema-conversationreference-system-threading-cancellationtoken))
+
+* [SDK reference](/dotnet/api/microsoft.bot.builder.botadapter.deleteactivityasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-botadapter-deleteactivityasync(microsoft-bot-builder-iturncontext-microsoft-bot-schema-conversationreference-system-threading-cancellationtoken)&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L156)
 
 To delete a message, pass that activity's ID to the `DeleteActivityAsync` method of the `TurnContext` class. For more information, see [TurnContext.DeleteActivityAsync Method](/dotnet/api/microsoft.bot.builder.turncontext.deleteactivityasync?view=botbuilder-dotnet-stable&preserve-view=true).
