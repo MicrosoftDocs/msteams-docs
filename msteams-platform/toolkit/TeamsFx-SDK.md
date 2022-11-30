@@ -564,19 +564,16 @@ This section provides several code snippets for common scenarios that are relate
 
        ```typescript
        async function callFunction() {
-        const authConfig: TeamsUserCredentialAuthConfig = {
+         const authConfig: TeamsUserCredentialAuthConfig = {
         clientId: process.env.REACT_APP_CLIENT_ID,
         initiateLoginEndpoint: process.env.REACT_APP_START_LOGIN_PAGE_URL,
-        };
-
-       const teamsUserCredential = new TeamsUserCredential(authConfig);
-
+         };
+        const teamsUserCredential = new TeamsUserCredential(authConfig);
         // Create an API client by providing the token and endpoint.
-         const apiClient = CreateApiClient(
-         "https://YOUR_API_ENDPOINT", // Create an API Client that uses SSO token to authenticate requests
-         new BearerTokenAuthProvider(async () =>  (await teamsUserCredential.getToken(""))!.token) // Call API hosted in Azure Functions on behalf of user to inject token to request header
+        const apiClient = CreateApiClient(
+          "https://YOUR_API_ENDPOINT", // Create an API Client that uses SSO token to authenticate requests
+          new BearerTokenAuthProvider(async () =>  (await teamsUserCredential.getToken(""))!.token) // Call API hosted in Azure Functions on behalf of user to inject token to request header
         );
-
         // Send a GET request to "RELATIVE_API_PATH", "/api/functionName" for example.
          const response = await apiClient.get("RELATIVE_API_PATH");
          return response.data;
@@ -597,7 +594,7 @@ This section provides several code snippets for common scenarios that are relate
           const response = await axios.default.get(endpoint + "/api/" + functionName, {
             headers: {
               authorization: "Bearer " + accessToken.token,
-           },
+            },
           });
           return response.data;
         }    
