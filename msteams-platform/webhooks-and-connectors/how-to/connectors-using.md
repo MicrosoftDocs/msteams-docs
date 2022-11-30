@@ -138,7 +138,7 @@ An example of connector message is as follows:
 
 This message provides the following card in the channel:
 
-:::image type="content" source="../../assets/images/connectorcard.png" alt-text="Screenshot of a coonector card.":::
+:::image type="content" source="../../assets/images/connectorcard_1.png" alt-text="Screenshot of a coonector card.":::
 
 ## Send messages using cURL and PowerShell
 

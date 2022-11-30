@@ -212,9 +212,9 @@ The following *manifest.json* file contains the elements needed to test and subm
 
 To test your connector, upload it to a team with any other app. You can create a .zip package using the manifest file from the two icon files and connectors Developer Dashboard, modified as directed in [Include the connector in your Manifest](#include-the-connector-in-your-manifest).
 
-After you upload the app, open the connectors list from any channel. Scroll to the bottom to see your app in the **Uploaded** section:
+After you upload the app, open the connectors list from any channel. Scroll to the bottom to see your app in the **Uploaded** section.
 
-:::image type="content" source="../../assets/images/Connectors/connector_dialog_uploaded.png" alt-text="Screenshot of an upload section in connector dialog box.":::
+:::image type="content" source="../../assets/images/Connectors/connector_dialog_uploaded_1.png" alt-text="Screenshot of an upload section in connector dialog box.":::
 
 > [!NOTE]
 > The flow occurs entirely within Teams as a hosted experience.
