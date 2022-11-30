@@ -72,7 +72,7 @@ By now you are aware that the core focus at this stage is to announce the availa
 
     Include in-product CTAs prominently in your web SaaS product to let users know about your new/updated Teams collaborative app. You can leverage transient banners, notifications bar, what’s new notifications inside the SaaS product’s UI for all users or push notifications to relevant users such as those belonging to your customer organizations who use Microsoft 365. The banner/notification CTA can direct users to your app‘s landing page or directly to the app’s listing in Teams Marketplace.
 
-• **Free & extended trials for new Teams users**
+- **Free & extended trials for new Teams users**
 
     Since your goal at this stage is to achieve product-market fit for your app, it’s critical to learn how users are perceiving your new app and if they’re getting the intended value by using the app. If not already done for your core SaaS product, offer free trials to users who sign up for your app (and SaaS service) through the Teams channel. If you already offer trials for your SaaS product and your standard free trial period is 15 days, consider extending the trial period for Teams users to 30-60 days. Given you’ve built your Teams app for collaborative use cases, you will naturally want trial users to invite their colleagues as well to use your app in shared context inside Teams. An extended trial facilitates collaborative evaluation of your app and increases the likelihood of these users converting to paid and sticky customers.
 
