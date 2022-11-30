@@ -14,7 +14,7 @@ ms.date: 10/04/2022
 
 In conference rooms and classrooms across the globe, whiteboards are a pivotal part of collaboration. In modern times however, the whiteboard is no longer enough. With numerous digital tools such as PowerPoint being the focal point of collaboration in the modern era, it's essential to enable the same creative potential.
 
-To enable more seamless collaboration, Microsoft created PowerPoint Live, which has become instrumental to how people work in Teams. Presenters can annotate over slides for everyone to see, using pens, highlighters, and laser pointers to draw attention to key concepts. Using Live Share canvas, your app can bring the power of PowerPoint Live inking tools with minimal effort.
+To enable more seamless collaboration, Microsoft created PowerPoint Live, which has become instrumental to how people work in Microsoft Teams. Presenters can annotate over slides for everyone to see, using pens, highlighters, and laser pointers to draw attention to key concepts. Using Live Share canvas, your app can bring the power of PowerPoint Live inking tools with minimal effort.
 
 ## Install
 
@@ -441,10 +441,10 @@ Both the scenarios work well because the content can be viewed the same on all d
 
 ## Code samples
 
-| Sample name          | Description                            | JavaScript                                                                                |
-| -------------------- | -------------------------------------- | ----------------------------------------------------------------------------------------- |
-| Live Canvas demo     | Simple whiteboard application.         | [View](https://github.com/microsoft/live-share-sdk/tree/main/samples/03.live-canvas-demo) |
-| React media template | Draw over a synchronized video player. | [View](https://aka.ms/liveshare-mediatemplate)                                            |
+| Sample name | Description | JavaScript |
+| ------ | ----- | ---- |
+| Live Canvas demo | Simple whiteboard application. | [View](https://github.com/microsoft/live-share-sdk/tree/main/samples/javascript/03.live-canvas-demo) |
+| React media template | Draw over a synchronized video player. | [View](https://aka.ms/liveshare-mediatemplate) |
 
 ## Next step
 

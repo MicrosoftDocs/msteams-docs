@@ -121,7 +121,9 @@ After the remove handler is executed, `removeEvent.notifySuccess()` or `removeEv
 
 ## See also
 
-* [Teams tabs](~/tabs/what-are-tabs.md)
-* [Create a personal tab](~/tabs/how-to/create-personal-tab.md)
-* [Create a channel or group tab](~/tabs/how-to/create-channel-group-tab.md)
-* [Create a configuration page](~/tabs/how-to/create-tab-pages/configuration-page.md)
+* [Build tabs for Teams](../../what-are-tabs.md)
+* [App manifest schema for Teams](../../../resources/schema/manifest-schema.md)
+* [RemoveEvent interface](/javascript/api/@microsoft/teams-js/pages.config.removeevent)
+* [Get context for your tab](../access-teams-context.md)
+* [Create a personal tab](../create-personal-tab.md)
+* [Create a channel tab or group tab](../create-channel-group-tab.md)

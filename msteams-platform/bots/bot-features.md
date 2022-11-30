@@ -1,7 +1,7 @@
 ---
 title: Bots and SDKs
 author: surbhigupta
-description: In this article, learn about tools and Bot Framework SDKs(C#,Python,Java,JavaScript) for Microsoft Teams bots and it's advantages and disadvantages.
+description: In this article, learn about tools and Bot Framework SDKs(C#, Python, Java, JavaScript) for Microsoft Teams bots and it's advantages and disadvantages.
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
@@ -191,8 +191,8 @@ this.onMessage(async (context, next) => {
 
 |Sample name | Description | .NETCore | Node.js | Python|
 |----------------|-----------------|--------------|----------------|-------|
-| Teams conversation bot | Messaging and conversation event handling. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot)|
-| Bot samples | Set of bot samples | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore) |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python)|
+| Teams conversation bot | Messaging and conversation event handling. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/python)|
+| Bot samples | Set of bot samples | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk)|
 
 ## Next step
 
@@ -201,10 +201,9 @@ this.onMessage(async (context, next) => {
 
 ## See also
 
-* [Calls and meetings bots](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)
-* [Bot conversations](~/bots/how-to/conversations/conversation-basics.md)
-* [Bot command menus](~/bots/how-to/create-a-bot-commands-menu.md)
-* [Authentication flow for bots in Microsoft Teams](~/bots/how-to/authentication/auth-flow-bot.md)
-* [Use task modules from bots](~/task-modules-and-cards/task-modules/task-modules-bots.md)
-* [Publish your bot to Azure](/azure/bot-service/bot-builder-deploy-az-cli)
+* [Build bots for Teams](what-are-bots.md)
+* [Create custom triggers in Bot Framework Composer](/composer/how-to-create-custom-triggers)
 * [API reference for the Bot Framework Connector service](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference)
+* [Publish your bot to Azure](/azure/bot-service/bot-builder-deploy-az-cli)
+* [Authentication flow for bots in Microsoft Teams](how-to/authentication/auth-flow-bot.md)
+* [Channel and group chat conversations with a bot](how-to/conversations/channel-and-group-conversations.md)

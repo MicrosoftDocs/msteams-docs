@@ -1315,7 +1315,7 @@ async def on_reactions_removed(
 The bot receives an `installationUpdate` event when you install a bot to a conversation thread. Uninstallation of the bot from the thread also triggers the event. On installing a bot, the **action** field in the event is set to *add*, and when the bot is uninstalled the **action** field is set to *remove*.
 
 > [!NOTE]
-> When you upgrade an application, and then add or remove a bot, the action also triggers the `installationUpdate` event. The **action** field is set to *add-upgrade* if you add a bot or *remove-upgrade* if you remove a bot.
+> When you upgrade an application, the bot receives the `installationUpdate` event only to add or remove a bot from the manifest. For all other cases, the `installationUpdate` event isn't triggered. The **action** field is set to *add-upgrade* if you add a bot or *remove-upgrade* if you remove a bot.
 
 ### Install update event
 
@@ -1459,7 +1459,7 @@ It's important to know that new events can be added anytime in the future and yo
 
 | **Sample name** | **Description** | **.NET** | **Node.js** | **Python** |
 |----------|-----------------|----------|
-| Conversation bot | Sample code for bots conversation events. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)  | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
+| Conversation bot | Sample code for bots conversation events. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp)  | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/python) |
 
 ## Next step
 
@@ -1468,4 +1468,9 @@ It's important to know that new events can be added anytime in the future and yo
 
 ## See also
 
+* [Build bots for Teams](../../what-are-bots.md)
+* [API reference for the Bot Framework Connector service](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference)
+* [Channel and group chat conversations with a bot](channel-and-group-conversations.md)
+* [Receive all conversation messages with RSC](channel-messages-with-rsc.md)
+* [Create Teams conversation bot](../../../sbs-teams-conversation-bot.yml)
 * [Triggers in Bot Framework Composer](/composer/concept-events-and-triggers)
