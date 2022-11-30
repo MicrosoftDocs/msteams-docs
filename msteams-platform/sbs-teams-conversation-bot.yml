@@ -207,16 +207,17 @@ items:
 
     **To update appsettings**
 
-    1. Go to the repo https://github.com/Microsoft/botbuilder-samples.git.
+    1. Open [Microsoft-Teams-Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples).
     1. Select **Code**.
-    1. Select **Download ZIP** from the dropdown menu.
+    1. Select **Open with GitHub Desktop** from the dropdown menu.
 
-        :::image type="content" source="./assets/images/calls-and-meetings/git_1.png" alt-text="Screenshot showing the repo download.":::
+        :::image type="content" source="./assets/images/conversation-bot/clone-repository.png" alt-text="Screenshot showing the repo clone.":::
+      > [!NOTE]
+      > Ensure that you note the path of the repository that you cloned.
 
-        > [!NOTE]
-        > Ensure that you note the path of the repository that you downloaded.
+    1. Select **Clone**. 
 
-    1. In the **File Explorer**, go to **botbuilder-samples** > **samples** > **csharp_dotnetcore** > **57.teams-conversation-bot**.
+    1. In the **File Explorer**, go to **Microsoft-Teams-Samples** > **samples** > **bot-conversation** > **csharp**.
     1. Open the **appsettings.json** file in Visual Studio and update the configuration for the bot.
    
         * Replace `"MicrosoftAppType"`to **Multitenant**.
@@ -247,9 +248,9 @@ items:
 
     **To update manifest**
 
-    1. In the **File Explorer**, go to **botbuilder-samples** > **samples** > **csharp_dotnetcore** > **57.teams-conversation-bot** > **TeamsAppManifest**.
+    1. In the **File Explorer**, go to **Microsoft-Teams-Samples** > **samples** > **bot-conversation** > **csharp** > **TeamsAppManifest**.
     
-       :::image type="content" source="./assets/images/conversation-bot/manifest location.png" alt-text="Manifest.":::
+       :::image type="content" source="./assets/images/conversation-bot/manifest-file-location.png" alt-text="Manifest.":::
 
     1. Open the **manifest.json** file in Visual Studio and make the following changes:
        * Replace `"id"`and `"botId"` to your bot's **Microsoft App ID**.
@@ -270,10 +271,10 @@ items:
 
        ![Open file](~/assets/images/Tab-ME-SSO/open-project1.png)
 
-    1. Go to **botbuilder-samples** > **samples** > **csharp_dotnetcore** > **57.teams-conversation-bot**.
+    1. Go to **Microsoft-Teams-Samples** > **samples** > **bot-conversation** > **csharp**.
     1. Select `TeamsConversationBot.csproj` file.
 
-        :::image type="content" source="./assets/images/conversation-bot/visual-studio_2.png" alt-text="Visual Studio debug.":::
+        :::image type="content" source="./assets/images/conversation-bot/project-file-location.png" alt-text="Visual Studio debug.":::
 
     1. Select **F5** to run the project.
 
@@ -299,7 +300,7 @@ items:
 
     1. Select **Open** to upload the .zip file that you created in the TeamAppManifest folder.
     
-        :::image type="content" source="./assets/images/conversation-bot/upload-manifest_1.png" alt-text="Manifest upload in Teams.":::
+        :::image type="content" source="./assets/images/conversation-bot/upload-manifest-zip.png" alt-text="Manifest upload in Teams.":::
 
     1. Select **Add**.
 

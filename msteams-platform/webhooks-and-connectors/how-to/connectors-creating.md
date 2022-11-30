@@ -13,7 +13,7 @@ With Microsoft Teams apps, you can add your existing Office 365 Connector or bui
 See the following video to learn how to create an Office 365 Connectors:
 <br>
 
-> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OIzv>]
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OIzv]
 <br>
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
@@ -64,7 +64,7 @@ To integrate the configuration experience:
 
 1. Register `microsoftTeams.pages.config.registerOnRemoveHandler()` event handler, which is called when the user removes connector.
 
-This event gives your service an opportunity to perform any clean up actions.
+This event gives your service an opportunity to perform any cleanup actions.
 
 The following code provides a sample HTML to create a connector configuration page without the customer service and support:
 
@@ -225,7 +225,7 @@ Follow the [step-by-step guide](../../sbs-teams-connectors.yml) to create and te
 
 ## Distribute webhook and connector
 
-1. [Set up an Incoming Webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md#create-an-incoming-webhook) directly for your team.
+1. [Create Incoming Webhooks](add-incoming-webhook.md#create-incoming-webhooks) directly for your team.
 
 1. Add a [configuration page](~/webhooks-and-connectors/how-to/connectors-creating.md?#integrate-the-configuration-experience) and publish your Incoming Webhook in an Office 365 Connector.
 
@@ -246,10 +246,11 @@ Follow the [step-by-step guide](../../sbs-teams-connectors.yml) to build and tes
 
 ## See also
 
-* [Create and send messages](~/webhooks-and-connectors/how-to/connectors-using.md)
-* [Create an Incoming Webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
-* [Create an Office 365 Connector](~/webhooks-and-connectors/how-to/connectors-creating.md)
+* [Webhooks and connectors](../what-are-webhooks-and-connectors.md)
+* [Create Incoming Webhooks](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
+* [Create Outgoing Webhooks](add-outgoing-webhook.md)
+* [Create and send messages](connectors-using.md)
 * [How admins can enable or disable connectors](/MicrosoftTeams/office-365-custom-connectors#enable-or-disable-connectors-in-teams)
 * [How admins can publish custom connectors within their org](/MicrosoftTeams/office-365-custom-connectors)
-* [Build notification bot with JavaScript](../../sbs-gs-notificationbot.yml)
-* [Build your first bot app using JavaScript](../../sbs-gs-bot.yml)
+* [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
+* [getConfig](/javascript/api/@microsoft/teamsfx/teamsfxconfiguration?view=msteams-client-js-latest&preserve-view=true)
