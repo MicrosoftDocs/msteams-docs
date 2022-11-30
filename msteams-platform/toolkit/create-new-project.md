@@ -10,7 +10,7 @@ zone_pivot_groups: teams-app-platform
 ---
 # Create a new Teams project
 
-In this section, you can learn how to create new Teams project using Visual Studio Code and Visual Studio.
+In this section, you can learn how to create a new Teams project using Visual Studio Code and Visual Studio.
 
 ::: zone pivot="visual-studio-code"
 
