@@ -11,13 +11,15 @@ ms.localizationpriority: high
 
 Microsoft Teams allows you to automate simple and repetitive tasks in a conversation. You can build a command bot that can respond to simple commands sent in chats with Adaptive Cards. You can create a command bot template in Teams that responds to chat commands by displaying UI using an Adaptive Card. This enables users to send messages in Teams and your app can provide a response as required.
 
-The command bot template is built using the TeamsFx SDK, which provides a simple set of functions over the Microsoft Bot Framework to implement the scenario.
+The command bot template is built using the TeamsFx SDK, which provides a simple set of functions over the Microsoft Bot Framework to implement the scenario. Command bot can be used in different scenarios such as checking ticket status, and retrieve help information.
 
 [Placeholder for command bot infographic image]
 
 **Advantages**
 
-[Placeholder for advantages of command bot]
+1. Automates simple and repetitive tasks with a chat command.
+1. Simplifies programming model with TeamsFx SDK, built on Bot Framework SDK.
+1. Supports regular expressions for processing commands.
 
 ## Command bot installation
 
@@ -169,7 +171,7 @@ To handle the command, perform the following steps:
    * If needed parse command input:
 
      * `message.text`: Use the input message.
-     * `message.matches`: Use the capture groups, if you use the RegExp for `triggerPatterns` to trigger the command.
+     * `message.matches`: Use the capture groups, if you use the `RegExp` for `triggerPatterns` to trigger the command.
 
 <br>
 
@@ -209,7 +211,7 @@ Additionally, you can use `registerCommand`, or `registerCommands` API from your
     ]);
 ```
 
-By completing the steps of adding a new command and response into your bot app, you can press F5 to local debug with the command-response bot. Otherwise you can provision and deploy commands to deploy the change to Azure.
+By completing the steps of adding a new command and response into your bot app, you can press F5 to debug locally with the command-response bot. Otherwise you can provision and deploy commands to deploy the change to Azure.
 <br>
 
 </details>
