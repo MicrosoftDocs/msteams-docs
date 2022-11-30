@@ -430,7 +430,7 @@ items:
 
        :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/popup.png" alt-text="Chat":::
 
-    1. An Adaptive Card auto appears in the chat window, displaying the Nuget Package and Project details.
+    1. An Adaptive Card auto appears in the chat window.
 
        :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/option1.png" alt-text="Option":::
 
