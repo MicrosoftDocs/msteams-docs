@@ -80,7 +80,7 @@ Here are sample test instructions for your reference:
     - [Modify assignments](#modify-assignments)
     - [Correcting documents and giving feedback](#correcting-documents-and-giving-feedback)
   - [Observation database](#observation-database)
-- [Demo Video](#demo-video)
+- [Demo Video for EDU app](#demo-video-for-edu-app)
 
 ### About the EDU app
 
@@ -172,6 +172,12 @@ Once one or more words or parts of the text are selected, it's possible to place
 - [About the ERP data transfer app](#about-the-erp-data-transfer-app)
 - [Feature list for ERP data transfer app](#feature-list-for-erp-data-transfer-app)
 - [Installation](#installation)
+  - [Login credentials](#login-credentials)
+  - [Steps](#steps)
+- [ERP data transfer app functionality](#erp-data-transfer-app-functionality)
+  - [Workflow 1: Copy items from platform A to platform B](#workflow-1-copy-items-from-platform-a-to-platform-b)
+  - [Workflow 2: Copy orders from platform B to platform A](#workflow-2-copy-orders-from-platform-b-to-platform-a)
+- [Demo video for ERP data transfer](#demo-video-for-erp-data-transfer)
 
 ### About the ERP data transfer app
 
@@ -228,7 +234,7 @@ On the first login, users will have to authorize the App Contoso Manager to acce
     1. Users can find info (i.e., API key, token, URL, secret key, client ID) required by different apps in our online guide.
     1. Click on Verify and save.
 
-### App Functionality
+### ERP data transfer app functionality
 
 Workflows are automations that allow several tasks to be repeated automatically, every time a trigger starts (i.e.: get an order by platform A).
 2 workflows are available in Contoso
@@ -244,6 +250,59 @@ Steps for workflow 1: (Provide screen shots)
 - Look at products already uploaded on platform A, by clicking on “products” Tab.
 
 Wait for automatic sync. After 15 minutes check your platform B to find the products.
+
+#### Workflow 2: Copy orders from platform B to platform A
+
+This workflow requires platform A and platform B to work.
+The workflow copies new orders from platform A to platform B connected. Please note you must activate Workflow 1 to activate this Workflow.
+
+Steps for workflow 2: (Provide screen shots)
+
+- Activate the workflow using the toggle
+- Make an order on platform A (You must buy one of the products copied with Workflow #1, to complete this Workflow). Go to Link: https://xxxxxx.com and select the product to add to the cart
+- Choose a product and add it to the cart (You must buy one of the products copied from platform A with Workflow #1, to complete this Workflow)
+- Complete your order
+
+Wait for automatic sync: Contoso will automatically copy this order to your platform B. After 15 minutes check platform A to find the order
+
+> [!NOTE]
+> You must activate workflow 1 to activate workflow 2.
+
+### Demo video for ERP data transfer
+
+</details>
+<br>
+<details>
+<summary><b>Sample 3: Contoso DigiAssist</b></summary>
+
+### About the Contoso DigiAssist app
+
+Users can access data from their connected business apps using the chat-based collaboration application Contoso DigiAssist. Asking questions or requesting information allows users to communicate with Contoso DigiAssist. Users can also view data from connected apps in Adaptive Card format, rich text cards, or as a simple text response. 
+
+### Test credentials for Contoso DigiAssist app
+
+The following Tenant is already set up with a Contoso DigiAssist Subscription for testing purposes.
+
+Tenant Details: Contoso DigiAssist Org
+
+1. Admin user: admin@contosodigiassist.com | Password: XXXXXXXX
+2. Non-admin user #1: user@contosodigiassist.com | Password: XXXXXXXX
+3. Non-admin user #2: user@contosodigiassist.com | Password: XXXXXXXX
+4. Non-admin user #3: user@contosodigiassist.com | Password: XXXXXXXX
+
+### Configuration
+
+#### Pre-requisites for Contoso DigiAssist app
+
+- Admin needs to configure the Contoso DigiAssist for the organization
+- Must provide tenant admin consent
+- Tenant must have active subscription with Contoso DigiAssist
+
+#### Installation and Setup
+
+- Sideload the Contoso DigiAssist in Microsoft Teams.
+- In personal bot of DigiAssist send “Connect” command and enter the required admin credentials.
+- Select the “Contoso DigiAssist Org” from dropdown and click connect.
 
 
 
