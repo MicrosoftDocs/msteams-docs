@@ -165,7 +165,7 @@ Once one or more words or parts of the text are selected, it's possible to place
 ### Demo video for EDU app
 
 </details>
-<br>
+
 <details>
 <summary><b>Sample 2: ERP data transfer</b></summary>
 
@@ -271,13 +271,24 @@ Wait for automatic sync: Contoso will automatically copy this order to your plat
 ### Demo video for ERP data transfer
 
 </details>
-<br>
+
 <details>
 <summary><b>Sample 3: Contoso DigiAssist</b></summary>
 
+- [About the Contoso DigiAssist app](#about-the-contoso-digiassist-app)
+- [Test credentials for Contoso DigiAssist app](#test-credentials-for-contoso-digiassist-app)
+- [Configuration](#configuration)
+  - [Pre-requisites for Contoso DigiAssist app](#pre-requisites-for-contoso-digiassist-app)
+  - [Installation and Setup](#installation-and-setup)
+- [Testing workflow](#testing-workflow)
+  - [Personal Bot](#personal-bot)
+  - [Help Static Tab](#help-static-tab)
+- [Limitations, conditions, and exceptions](#limitations-conditions-and-exceptions)
+- [Resources and Videos](#resources-and-videos)
+
 ### About the Contoso DigiAssist app
 
-Users can access data from their connected business apps using the chat-based collaboration application Contoso DigiAssist. Asking questions or requesting information allows users to communicate with Contoso DigiAssist. Users can also view data from connected apps in Adaptive Card format, rich text cards, or as a simple text response. 
+Users can access data from their connected business apps using the chat-based collaboration application Contoso DigiAssist. Asking questions or requesting information allows users to communicate with Contoso DigiAssist. Users can also view data from connected apps in Adaptive Card format, rich text cards, or as a simple text response.
 
 ### Test credentials for Contoso DigiAssist app
 
