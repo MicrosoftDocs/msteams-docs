@@ -436,44 +436,44 @@ The following list provides all the RSC permissions categorized based on resourc
 
 ### RSC permissions for a team
 
-The following table provides RSC delegated permissions for a team:
+* The following table provides RSC delegated permissions for a team:
 
-| Permission name | Action |
-| ----- | ----- |
-|`ChannelMeetingActiveSpeaker.Read.Group`|Get the list of participants who are currently sending audio into the channel meetings associated with this team.|
-|`ChannelMeetingAudioVideo.Stream.Group`|Stream audio-video content from channel meetings associated with this team.|
-|`ChannelMeetingIncomingAudio.Detect.Group`|Detect incoming audio in channel meetings associated with this team.|
-|`ChannelMeetingStage.Write.Group`|Get content on the meeting stage of channel meetings associated with this team.|
-|`InAppPurchase.Allow.Group`|Show and complete in-app purchases for team members.|
-|`LiveShareSession.ReadWrite.Group`| Create and synchronize Live Share sessions for meetings associated with this team. |
-|`MeetingParticipantReaction.Read.Group`| Get reactions from participants in channel meetings associated with this team.|
+    | Permission name | Action |
+    | ----- | ----- |
+    |`ChannelMeetingActiveSpeaker.Read.Group`|Get the list of participants who are currently sending audio into the channel meetings associated with this team.|
+    |`ChannelMeetingAudioVideo.Stream.Group`|Stream audio-video content from channel meetings associated with this team.|
+    |`ChannelMeetingIncomingAudio.Detect.Group`|Detect incoming audio in channel meetings associated with this team.|
+    |`ChannelMeetingStage.Write.Group`|Get content on the meeting stage of channel meetings associated with this team.|
+    |`InAppPurchase.Allow.Group`|Show and complete in-app purchases for team members.|
+    |`LiveShareSession.ReadWrite.Group`| Create and synchronize Live Share sessions for meetings associated with this team. |
+    |`MeetingParticipantReaction.Read.Group`| Get reactions from participants in channel meetings associated with this team.|
 
-The following table provides RSC application permissions for a team:
+* The following table provides RSC application permissions for a team:
 
-| Permission name | Action |
-| ----- | ----- |
-|`Channel.Create.Group`|Create channels in this team. |
-|`Channel.Delete.Group`|Delete channels in this team. |
-|`ChannelMeeting.ReadBasic.Group`|Get the basic properties of this team's channel meetings.|
-|`ChannelMeetingParticipant.Read.Group`|Get participant information for channel meetings associated with this team, such as name, role, ID, joined time, and left time.|
-|`ChannelMeetingRecording.Read.Group`|Get the recordings of all channel meetings associated with this team.|
-|`ChannelMeetingTranscript.Read.Group`|Get the transcripts of all channel meetings associated with this team.|
-|`ChannelMeetingNotification.Send.Group`|Send notifications for all the channel meetings associated with this team.|
-|`ChannelMessage.Read.Group`|Get this team's channel messages. |
-|`ChannelMessage.Send.Group`|Send messages to this team's channels.|
-|`ChannelSettings.Read.Group`| Get this team's channel names, descriptions, and settings​.|
-|`ChannelSettings.ReadWrite.Group`|Update this team's channel names, descriptions, and settings.​|
-|`Member.Read.Group`|Get this group's members.|
-|`Owner.Read.Group`|Get this group's owners.|
-|`TeamsActivity.Send.Group`|Create new notifications in the activity feeds of the users in this team. |
-|`TeamsAppInstallation.Read.Group`|Get a list of this team's installed apps.|
-|`TeamMember.Read.Group`|Get this team's members. |
-|`TeamSettings.Read.Group` | Get this team's settings.|
-|`TeamSettings.ReadWrite.Group`|Update this team's settings.|
-|`TeamsTab.Create.Group`|Create tabs in this team. |
-|`TeamsTab.Delete.Group`|Delete this team's tabs. |
-|`TeamsTab.Read.Group`|Get a list of this team's tabs.|
-|`TeamsTab.ReadWrite.Group`|Manage this team's tabs. |
+    | Permission name | Action |
+    | ----- | ----- |
+    |`Channel.Create.Group`|Create channels in this team. |
+    |`Channel.Delete.Group`|Delete channels in this team. |
+    |`ChannelMeeting.ReadBasic.Group`|Get the basic properties of this team's channel meetings.|
+    |`ChannelMeetingParticipant.Read.Group`|Get participant information for channel meetings associated with this team, such as name, role, ID, joined time, and left time.|
+    |`ChannelMeetingRecording.Read.Group`|Get the recordings of all channel meetings associated with this team.|
+    |`ChannelMeetingTranscript.Read.Group`|Get the transcripts of all channel meetings associated with this team.|
+    |`ChannelMeetingNotification.Send.Group`|Send notifications for all the channel meetings associated with this team.|
+    |`ChannelMessage.Read.Group`|Get this team's channel messages. |
+    |`ChannelMessage.Send.Group`|Send messages to this team's channels.|
+    |`ChannelSettings.Read.Group`| Get this team's channel names, descriptions, and settings​.|
+    |`ChannelSettings.ReadWrite.Group`|Update this team's channel names, descriptions, and settings.​|
+    |`Member.Read.Group`|Get this group's members.|
+    |`Owner.Read.Group`|Get this group's owners.|
+    |`TeamsActivity.Send.Group`|Create new notifications in the activity feeds of the users in this team. |
+    |`TeamsAppInstallation.Read.Group`|Get a list of this team's installed apps.|
+    |`TeamMember.Read.Group`|Get this team's members. |
+    |`TeamSettings.Read.Group` | Get this team's settings.|
+    |`TeamSettings.ReadWrite.Group`|Update this team's settings.|
+    |`TeamsTab.Create.Group`|Create tabs in this team. |
+    |`TeamsTab.Delete.Group`|Delete this team's tabs. |
+    |`TeamsTab.Read.Group`|Get a list of this team's tabs.|
+    |`TeamsTab.ReadWrite.Group`|Manage this team's tabs. |
 
 For more information, see [team resource-specific consent permissions](/graph/permissions-reference#team-resource-specific-consent-permissions).
 
