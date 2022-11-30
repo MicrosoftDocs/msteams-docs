@@ -65,28 +65,28 @@ Depending on your app functionality, you're required to provide Teams tenant con
 
 Here are sample test instructions for your reference:
 <br>
-
+<br>
 <details>
 <summary><b>Sample 1: EDU app</b></summary>
 
 - [About the EDU app](#about-the-edu-app)
-- [Pre-requisites](#pre-requisites)
+- [Pre-requisites for EDU app](#pre-requisites-for-edu-app)
 - [Test credentials](#test-credentials)
 - [App functionality](#app-functionality)
-  - [Contoso Dashboard](#contoso-dashboard)
+  - [Contoso dashboard](#contoso-dashboard)
   - [Classes](#classes)
   - [Assignments](#assignments)
     - [Creating a new assignment](#creating-a-new-assignment)
     - [Modify assignments](#modify-assignments)
     - [Correcting documents and giving feedback](#correcting-documents-and-giving-feedback)
   - [Observation database](#observation-database)
-- [Demo Video for EDU app](#demo-video-for-edu-app)
+- [Demo video for EDU app](#demo-video-for-edu-app)
 
 ### About the EDU app
 
 Contoso offers a web-based productivity tool that teachers use to grade students’ work. It supports teachers during the entire process of setting, correcting, marking, grading, and giving feedback on assignments. This can be about any subject and have any form, such as essays, papers, and letters. Additionally, the app offers various options, such as plagiarism checking to promote original writing, Team Hand-ins to stimulate collaborating in groups and Peer Assessment & Feedback to help students learn from each other.
 
-### Pre-requisites
+### Pre-requisites for EDU app
 
 IMPORTANT: Before you start using Contoso within Teams, we assume that you have an educational tenant already filled with a school, classes/teams, teachers, and students. If not, you'll see error 005 or 0010.
 
@@ -109,7 +109,7 @@ Student #2
 
 ### App functionality
 
-#### Contoso Dashboard
+#### Contoso dashboard
 
 When you go to the Contoso app within MS Teams, you first arrive at the dashboard page. This page provides at a glance information about texts that haven’t been handed-in yet, that still 4 need to be corrected and the ones that are corrected already and of which the feedback can be sent to the student. At ‘Assignments’ it shows the assignments that are currently active and by clicking on the green button underneath that it's possible to create a new assignment in Contoso (that is through the needless integration also immediately visible in Microsoft Teams when created). Also, you can select a period and group/class here.
 
@@ -162,7 +162,7 @@ Once one or more words or parts of the text are selected, it's possible to place
 
 :::image type="content" source="../../../../assets/images/store-detail-page/edu-sample-database.png" alt-text="Education sample database":::
 
-### Demo Video
+### Demo video for EDU app
 
 </details>
 <br>
@@ -304,7 +304,34 @@ Tenant Details: Contoso DigiAssist Org
 - In personal bot of DigiAssist send “Connect” command and enter the required admin credentials.
 - Select the “Contoso DigiAssist Org” from dropdown and click connect.
 
+### Testing workflow
 
+#### Personal Bot
+
+The Contoso DigiAssist bot's purpose is to assist users with queries within the organization. Here are some sample questions for testing:
+
+- Show me my Claim status
+- Do I have Open ADO work items?
+- Show me my documents pending for review today
+- Get recent HR updates
+
+The Contoso DigiAssist will provide text-based responses or interactive Adaptive Card responses. Additional actions can be performed by using the buttons on Adaptive Cards.
+
+#### Help Static Tab
+
+The Contoso DigiAssist app for Microsoft Teams also includes a Help tab. This displays documentation specific to the ***DigiAssist app*** integration for Microsoft Teams.
+
+### Limitations, conditions, and exceptions
+
+- Users must complete authentication with third party applications from Contoso DigiAssist
+- NLP configuration and AI chatbot training must be performed on the Contoso DigiAssist app website
+- Users can only view the Custom adaptive cards on Mobile
+
+### Resources and Videos
+
+- Document Links included to help validation Team
+- End to End Teams App Integration Demo video links is included
+- Detailed Steps for configuration in form of PDF or a Video Link attached
 
 </details>
 
