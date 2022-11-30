@@ -13,7 +13,7 @@ With Microsoft Teams apps, you can add your existing Office 365 Connector or bui
 See the following video to learn how to create an Office 365 Connectors:
 <br>
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OIzv]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OIzv>]
 <br>
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
@@ -214,7 +214,7 @@ To test your connector, upload it to a team with any other app. You can create a
 
 After you upload the app, open the connectors list from any channel. Scroll to the bottom to see your app in the **Uploaded** section:
 
-![Screenshot of an uploaded section in connector dialog box](~/assets/images/connectors/connector_dialog_uploaded.png)
+:::image type="content" source="../../assets/images/Connectors/connector_dialog_uploaded.png" alt-text="Screenshot of an upload section in connector dialog box.":::
 
 > [!NOTE]
 > The flow occurs entirely within Teams as a hosted experience.
