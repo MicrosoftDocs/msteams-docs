@@ -439,7 +439,7 @@ items:
 - title: Interact with the app in Teams
   durationInMinutes: 1
   content: |
-       Search and select any query from the the pop-up window.
+       Search and select any query from the pop-up window.
 
         :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/popup.png" alt-text="Screenshot shows an example of a pop-up window showing a list of query options in a Teams chat.":::
 
