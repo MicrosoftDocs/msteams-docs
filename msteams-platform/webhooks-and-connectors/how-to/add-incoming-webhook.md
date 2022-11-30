@@ -18,6 +18,11 @@ An Incoming Webhook lets external applications to share content in Microsoft Tea
 > [!IMPORTANT]
 > You can choose to build notification bot Teams app other than Incoming Webhooks. They perform similarly but notification bot has more functionalities. For more information, see [Build notification bot with JavaScript](../../sbs-gs-notificationbot.yml) or [Incoming Webhook notification sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/incoming-webhook-notification). To get started, download [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) now and explore. For more information, see [Teams Toolkit documents](../../toolkit/teams-toolkit-fundamentals.md).
 
+> [!NOTE]
+>
+> * The message size limit is 28 KB. When the size exceeds 28 KB, you receive an error. For more information, see [limits and specifications for Microsoft Teams](/microsoftteams/limits-specifications-teams).
+> * If more than four requests are made in a second, the client connection is throttled until the window refreshes for the duration of the fixed rate. A [retry logic with exponential back-off](/azure/architecture/patterns/retry) can mitigate rate limiting for cases where requests exceed the limits within a second. To avoid hitting the rate limits, see [HTTP 429 responses](../../bots/how-to/rate-limit.md#handle-http-429-responses).
+
 See the following video to learn how to create Incoming Webhooks:
 <br>
 
