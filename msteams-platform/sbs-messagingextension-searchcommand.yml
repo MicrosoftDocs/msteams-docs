@@ -41,7 +41,6 @@ items:
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
 
-
 - title: Set up local environment
   durationInMinutes: 1
   content: |
@@ -52,7 +51,6 @@ items:
     1. From the dropdown menu, select **Open with GitHub Desktop**.
 
        :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/clone-repository.png" alt-text="Clone repository.":::
-
 
     1. Select **Clone**. 
 
@@ -198,7 +196,6 @@ items:
     1. Select **Apply**.
 
         You have successfully set up a bot in Azure Bot Service.
-
 
 - title: Update the Azure AD app registration
   durationInMinutes: 1
@@ -385,8 +382,7 @@ items:
           A webpage opens with a message **Your bot is ready!**.
 
           :::image type="content" source="~/assets/images/Teams-Messaging-Extensions-Search/appisready.png" alt-text="App ready"::: 
-
-        
+    
     # [Command line](#tab/cli)
 
     Go to **Microsoft-Teams-Samples** > **samples** > **msgext-search** > **csharp** in Command Prompt window and enter the following command:
@@ -430,7 +426,7 @@ items:
 - title: Interact with the app in Teams
   durationInMinutes: 1
   content: |
-    After you add the search extension, a pop-up window opens in a chat. Select any option from the window.
+    1. After you add the search extension, a pop-up window opens in a chat. Select any option from the window.
 
        :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/popup.png" alt-text="Chat":::
 
@@ -438,11 +434,11 @@ items:
 
        :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/option1.png" alt-text="Option":::
 
-    1. Select **Nuget Package**, a pop up window appears in a separate window displaying the details of Nuget Package.
+    1. Select **Nuget Package**. A pop up window appears with the details of Nuget Package.
 
        :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/nuget_1.png" alt-text="Nuget":::
 
-    1. Navigate to the extension in the chat section and Select **Project**. A pop up window appears in a separate window displaying the project details.
+    1. Navigate to the chat window and select **Project**. A pop-up window appears with the project details.
 
        :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/project.png" alt-text="Project":::
 
