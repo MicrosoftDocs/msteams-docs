@@ -55,8 +55,8 @@ The following code shows an example of retrieving mentions:
 
 # [C#](#tab/dotnet)
 
-* [SDK reference](/dotnet/api/microsoft.bot.builder.activityhandler.onmessageactivityasync?view=botbuilder-dotnet-stable&preserve-view=true)
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-token-app/csharp/Bots/TokenBot.cs#L52)
+* [SDK reference](/dotnet/api/microsoft.bot.schema.activity.getmentions?view=botbuilder-dotnet-stable#microsoft-bot-schema-activity-getmentions)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-archive-groupchat-messages/csharp/FetchGroupChatMessages/Bots/ActivityBot.cs#L182)
 
 ```csharp
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
@@ -79,8 +79,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 ```
 
 # [TypeScript](#tab/typescript)
-
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-localization/nodejs/server/bot/botActivityHandler.js#L25)
+* [SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#botbuilder-core-turncontext-getmentions)
 
 ```typescript
 this.onMessage(async (turnContext, next) => {
@@ -147,6 +146,7 @@ this.onMessage(async (turnContext, next) => {
 ```
 
 # [Python](#tab/python)
+* [SDK reference](/python/api/botbuilder-schema/botbuilder.schema.activity?view=botbuilder-py-latest#botbuilder-schema-activity-get-mentions)
 
 ```python
 @staticmethod
@@ -200,8 +200,6 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 ```
 
 # [TypeScript](#tab/typescript)
-
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-localization/nodejs/server/bot/botActivityHandler.js#L25)
 
 ```typescript
 this.onMessage(async (turnContext, next) => {
@@ -271,7 +269,7 @@ The `text` field in the object in the `entities` array must match a portion of t
 
 # [Python](#tab/python)
 
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L29)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L94)
 
 ```python
 async def _mention_activity(self, turn_context: TurnContext):
@@ -282,7 +280,7 @@ async def _mention_activity(self, turn_context: TurnContext):
         )
         // Returns a simple text message.
         reply_activity = MessageFactory.text(f"Hello {mention.text}")
-        // Sends a message activity to the sender of the incoming activity.
+        # Sends a message activity to the sender of the incoming activity.
         reply_activity.entities = [Mention().deserialize(mention.serialize())]
         await turn_context.send_activity(reply_activity)
 ```
