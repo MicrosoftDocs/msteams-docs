@@ -1,7 +1,7 @@
 ---
 title: Exploring Teams as a platform for building apps
 author: heath-hamilton
-description: Overview of exploring Microsoft Teams platform features.
+description: Microsoft Teams platform features for your app on desktop and mobile. Tabs, bots, messaging extension, webhook, connectors, Microsoft Graph, or Adaptive Cards.
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
@@ -11,7 +11,7 @@ ms.date: 11/02/2021
 
 With Teams, you can build your app in a feature-rich environment. Using Teams as a platform for building apps, you can extend the Teams capabilities for your desktop and mobile app solutions. Choose the best features for your app.
 
-:::image type="content" source="../msteams-platform/assets/images/overview/teams-platform.png" alt-text="Conceptual representation of Teams as a platform" border="false":::
+:::image type="content" source="../msteams-platform/assets/images/overview/teams-platform.png" alt-text="Conceptual representation of Teams as a platform":::
 
 ## Teams app features
 

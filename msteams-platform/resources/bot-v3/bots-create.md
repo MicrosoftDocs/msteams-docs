@@ -1,8 +1,7 @@
 ---
 title: Create a bot
-description: Describes how to create bots in Microsoft Teams
+description: In this module, learn how to create a bots using the Microsoft Bot Framework and ready to work in Microsoft Teams
 ms.topic: how-to
-keywords: teams bots creation
 ms.localizationpriority: medium
 ms.date: 12/07/2018
 ---
@@ -16,7 +15,7 @@ For more information, see [Bot Framework Documentation](/azure/bot-service/?view
 
 ## Create a bot for Microsoft Teams
 
-**Teams App Studio** is a tool that can help create your bot, and an app package that references your bot. It also contains a React control library and configurable samples for cards. For more information, see [Getting started with Teams App Studio](~/concepts/build-and-test/app-studio-overview.md). The steps that follow assume that you are hand configuring your bot and not using **Teams App Studio**:
+**Teams Developer Portal for Teams** is a tool that can help create your bot, and an app package that references your bot. It also contains a React control library and configurable samples for cards. For more information, see [Getting started with Teams Developer Portal for Teams](~/concepts/build-and-test/teams-developer-portal.md). The steps that follow assume that you are hand configuring your bot and not using **Teams Developer Portal for Teams**:
 
 1. Create the bot using [Bot Framework](https://dev.botframework.com/bots/new). **Be sure to add Microsoft Teams as a channel from the featured channels list after creating your bot.** Feel free to re-use any Microsoft App ID you generated if you've already created your app package/manifest.
 
@@ -42,10 +41,9 @@ For more information, see [Bot Framework Documentation](/azure/bot-service/?view
 > * When you edit the properties of an existing bot in the [list of your bots in Bot Framework](https://dev.botframework.com/bots) such as its "messaging endpoint," which is common when first developing a bot, especially if you use [ngrok](https://ngrok.com), you will see "Migration status" column and a blue "Migrate" button that will take you into the Microsoft Azure portal. Don't click on the "Migrate" button unless that's what you want to do; instead, click on the name of the bot and you can edit its properties:</br>
    ![Edit Bot Properties](~/assets/images/bots/bf-migrate-bot-to-azure.png)
 > * If you register your bot using Microsoft Azure, your bot code does not need to be *hosted* on Microsoft Azure.
-> * If you do register a bot using Azure portal, you must have a Microsoft Azure account. You can [create one for free](https://azure.microsoft.com/free/). To verify your identity when you create one, you must provide a credit card, but it won't be charged; it's always free to create and use bots with Microsoft Teams.
-> * You can now use App Studio to register/update app and bot information directly within Microsoft Teams. You'll only have to use the Azure portal for adding or configuring other Bot Framework channels such as Direct Line, Web Chat, Skype, and Facebook Messenger.
->* If you have been using App Studio, we recommend that you'd try the Developer Portal to configure, distribute, and manage your Teams apps. App Studio will be deprecated by June 30, 2022
+> * If you do register a bot using Azure portal, you must have a Microsoft Azure account. You can [create one for free](https://azure.microsoft.com/free/). To verify your identity when you create one, you must provide a credit card, but it won't be charged; it's always free to create and use bots with Teams.
+> * You can now use Developer Portal for Teams to register/update app and bot information directly within Teams. You'll only have to use the Azure portal for adding or configuring other Bot Framework channels such as Direct Line, Web Chat, Skype, and Facebook Messenger.
 
 ## See also
 
-[Bot Framework samples](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).
+[Bot Framework samples](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/README.md).

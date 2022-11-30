@@ -1,21 +1,25 @@
 ---
 title: Get Teams specific context for your bot
 author: surbhigupta
-description: How to get Microsoft Team's specific context for your bot, including the conversation roster, single member or team's details, channel list, code samples.
+description: Get Teams specific context for your bot, fetch user profile, get single member, team's, list of channels in a team details. Sample on create a new channel thread.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-keywords: bot context roster user profile channel list
 ---
 # Get Teams specific context for your bot
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-A bot can access additional context data about a team or chat where it is installed. This information can be used to enrich the bot's functionality and provide a more personalized experience.
+A bot can access additional context data about a team or chat where it's installed. This information can be used to enrich the bot's functionality and provide a more personalized experience.
 
 ## Fetch the roster or user profile
 
-Your bot can query for the list of members and their basic user profiles, including Teams user IDs and Microsoft Azure Active Directory (Azure AD) information, such as name and objectId. You can use this information to correlate user identities. For example, to check whether a user logged into a tab through Azure AD credentials, is a member of the team. For get conversation members, minimum or maximum page size depends on the implementation. Page size less than 50, are treated as 50, and greater than 500, are capped at 500. Even if you use the non-paged version, it is unreliable in large teams and must not be used. For more information, see [changes to Teams Bot APIs for fetching team or chat members](~/resources/team-chat-member-api-changes.md).
+Your bot can query for the list of members and their basic user profiles, including Teams user IDs and Microsoft Azure Active Directory (Azure AD) information, such as name and objectId. You can use this information to correlate user identities. For example, to check whether a user logged into a tab through Azure AD credentials is a member of the team. For get conversation members, minimum or maximum page size depends on the implementation. Page size less than 50, are treated as 50, and greater than 500, are capped at 500. Even if you use the non-paged version, it's unreliable in large teams and must not be used. For more information, see [changes to Teams Bot APIs for fetching team or chat members](~/resources/team-chat-member-api-changes.md).
+
+> [!NOTE]
+>
+> * Pagination is available in a team and a channel.
+> * Pagination isn't supported in chats. For chats, the entire roster is always returned.
 
 The following sample code uses the paged endpoint for fetching the roster:
 
@@ -203,7 +207,7 @@ Response body
 
 * * *
 
-After you get details of a single member, you can get details of the team. Currently, to retrieve information for a team, use the Microsoft Teams bot APIs `TeamsInfo.GetMemberDetailsAsync` for C# or `TeamsInfo.getTeamDetails` for TypeScript.
+After you get details of a single member, you can get details of the team. Currently, to retrieve information for a team, use the Teams bot APIs `TeamsInfo.GetMemberDetailsAsync` for C# or `TeamsInfo.getTeamDetails` for TypeScript.
 
 ## Get team's details
 
@@ -278,7 +282,7 @@ Response body
 
 * * *
 
-After you get details of the team, you can get the list of channels in a team. Currently, to retrieve information for a list of channels in a team, use the Microsoft Teams bot APIs `TeamsInfo.GetTeamChannelsAsync` for C# or `TeamsInfo.getTeamChannels` for TypeScript APIs.
+After you get details of the team, you can get the list of channels in a team. Currently, to retrieve information for a list of channels in a team, use the Teams bot APIs `TeamsInfo.GetTeamChannelsAsync` for C# or `TeamsInfo.getTeamChannels` for TypeScript APIs.
 
 ## Get the list of channels in a team
 
@@ -368,4 +372,13 @@ Response body
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Send and receive files through the bot](~/bots/how-to/bots-filesv4.md)
+> [Send and receive files using bot](bots-filesv4.md)
+
+## See also
+
+* [Build bots for Teams](../what-are-bots.md)
+* [Task modules](../../task-modules-and-cards/what-are-task-modules.md)
+* [Authenticate users in Microsoft Teams](../../concepts/authentication/authentication.md)
+* [Bot activity handlers](../bot-basics.md)
+* [Localize your app](../../concepts/build-and-test/apps-localization.md)
+* [Get the profile photo of a user, a group, a team, or an Outlook contact](/graph/api/profilephoto-get)

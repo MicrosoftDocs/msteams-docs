@@ -1,7 +1,7 @@
 ---
 title: Build apps for the Microsoft Teams platform
 author: heath-hamilton
-description: Get an overview of how developers can extend Microsoft Teams features with custom apps.
+description: Learn about Microsoft Teams, why should you build apps on Teams platform, and how does Teams app help meet business needs.
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
@@ -21,7 +21,7 @@ Organizations use it to connect with their customers, provide services, and shar
 
 Let's look at some areas where an app helps to meet a business need.
 
-:::image type="content" source="../msteams-platform/assets/images/overview/why-teams-apps.png" alt-text="Why should you build Teams apps?" border="false":::
+:::image type="content" source="../msteams-platform/assets/images/overview/why-teams-apps.png" alt-text="Why should you build Teams apps?":::
 
 | **Development Options** | **Business Opportunities** |
 | --- | --- |
@@ -33,7 +33,7 @@ You can build apps with Teams Developer platform by extending Teams capabilities
 
 ## Build apps with Microsoft Teams platform
 
-Microsoft Teams apps help your collaborative workspace to be more productive by bringing key information, common tools, and trusted processes to where people increasingly gather, learn, and work. Apps are how you extend the capabilities of Team platform to fit your requirements. Create something brand new or integrate an existing app, and you utilize benefits of Microsoft Teams platform for your particular business needs.
+Teams apps help your collaborative workspace to be more productive by bringing key information, common tools, and trusted processes to where people increasingly gather, learn, and work. Apps are how you extend the capabilities of Team platform to fit your requirements. Create something brand new or integrate an existing app, and you utilize benefits of Teams platform for your particular business needs.
 
 The benefits of building apps span from meeting organizational goals to increasing internal productivity.
 
@@ -45,9 +45,9 @@ Here's why Teams is best-suited for your app needs:
 
 - **Social interactions**
 
-    Teams is a social platform; custom social-focused apps encourage your team to extend your company culture into your collaboration space. Use apps for sending polls, letting people share feedback with each other, enabling connection and communication.
+    Teams is a social platform; custom social-focused apps encourage your team to extend your company culture into your collaboration space. Use apps for sending polls, letting people share feedback with each other, enabling connection, and communication.
 
-    :::image type="content" source="../msteams-platform/assets/images/overview/teams-apps-social.png" alt-text="Teams app for building team culture" border="false":::
+    :::image type="content" source="../msteams-platform/assets/images/overview/teams-apps-social.png" alt-text="Teams app for building team culture":::
 
 - **Common business processes**
 
@@ -55,7 +55,7 @@ Here's why Teams is best-suited for your app needs:
 
     In addition to automating repetitive workflows, you can use apps to help with communication issues. A chat bot is an easy replacement for emails and phone calls to IT or HR departments.
 
-    :::image type="content" source="../msteams-platform/assets/images/overview/teams-apps-bot.png" alt-text="Teams app for internal use" border="false":::
+    :::image type="content" source="../msteams-platform/assets/images/overview/teams-apps-bot.png" alt-text="Teams app for internal use":::
 
 - **Teams Store advantage**
 
@@ -65,11 +65,11 @@ Here's why Teams is best-suited for your app needs:
 
     If you've got an existing web app, SharePoint site (or SPFx extension), PowerApp, or other web-based application, it may make sense to enable some or all of it in Teams. Extending existing apps and porting interactive functionalities to Teams helps to grow user base and user engagement for your app.
 
-    :::image type="content" source="../msteams-platform/assets/images/overview/teams-apps-sp.png" alt-text="SharePoint site ported as a Teams tab" border="false":::
+    :::image type="content" source="../msteams-platform/assets/images/overview/teams-apps-sp.png" alt-text="SharePoint site ported as a Teams tab":::
 
 - **Personal apps with tabs and bots**
 
-    One-to-one conversational bots are one of the more open-ended features in Microsoft Teams. The conversation is just between the bot and your user. You have the flexibility of including task modules to simplify complex sets of information.
+    One-to-one conversational bots are one of the more open-ended features in Teams. The conversation is just between the bot and your user. You have the flexibility of including task modules to simplify complex sets of information.
 
     For example, if your app is a design tool with multiple collaborators, a shared bot that notifies all users helps to build user engagement.
 

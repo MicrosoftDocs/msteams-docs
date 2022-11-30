@@ -1,8 +1,7 @@
 ---
 title: Cards
-description: Describes cards and how they are used in bots, connectors, and message extensions
+description: In this module, learn what are cards and how they're used in bots, connectors, and message extensions.
 ms.localizationpriority: high
-keywords: connectors bots cards messaging
 ms.topic: overview
 ---
 
@@ -12,22 +11,32 @@ A card is a user interface (UI) container for short or related pieces of informa
 
 The bots for Teams support the following types of cards:
 
-* Adaptive Card
-* Hero card
-* List card
-* Office 365 Connector card
-* Receipt card
-* Signin card
-* Thumbnail card
-* Card collections
+- Adaptive Card
+- Hero card
+- List card
+- Office 365 Connector card
+- Receipt card
+- Sign-in card
+- Thumbnail card
+- Card collections
+- Overflow menu on Adaptive Cards
+
+- Adaptive Card
+- Hero card
+- List card
+- Office 365 Connector card
+- Receipt card
+- Sign in card
+- Thumbnail card
+- Card collections
 
 You can add rich text formatting to your cards using either Markdown or HTML, depending on the card type. Cards used by bots and message extensions in Microsoft Teams, add and respond to these card actions, `openUrl`, `messageBack`, `imBack`, `invoke`, and `signin`.
 
 Teams uses cards in three different places:
 
-* Connectors
-* Bots
-* Message extensions
+- Connectors
+- Bots
+- Message extensions
 
 ## Cards in connectors
 
@@ -49,29 +58,33 @@ All cards used by Teams are listed in [types of cards](~/task-modules-and-cards/
 
 ## Adaptive Cards
 
-[Adaptive Cards](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card) are a new cross product specification for cards in Microsoft products including bots, Cortana, Outlook, and Windows. They are the recommended card type for new Teams development. For general information from the Adaptive Cards team, see [Adaptive Cards overview](/adaptive-cards). You can use Adaptive Cards anywhere you use existing hero cards, Office 365 cards, and thumbnail cards.
+[Adaptive Cards](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card) are a new cross product specification for cards in Microsoft products including bots, Cortana, Outlook, and Windows. They're the recommended card type for new Teams development. For general information from the Adaptive Cards team, see [Adaptive Cards overview](/adaptive-cards). You can use Adaptive Cards anywhere you use existing hero cards, Office 365 cards, and thumbnail cards.
 
 In addition to Adaptive Cards, Teams supports two other types of cards:
 
-* Connector cards: Used as part of Office 365 Connectors.
-* Simple cards: Used from the Bot Framework, such as the thumbnail and hero cards.
+- Connector cards: Used as part of Office 365 Connectors.
+- Simple cards: Used from the Bot Framework, such as the thumbnail and hero cards.
 
 ### People Picker in Adaptive Cards
 
 [People Picker](cards/people-picker.md#people-picker-in-adaptive-cards) added as an input control in Adaptive Cards enable search and selection of people. You can use it in chats, channels, task modules, and tabs. The mobile and desktop clients support People Picker, which provides an inline typing experience.
 
-### Type-ahead search in Adaptive Cards  
+### Typeahead search in Adaptive Cards  
 
-Type ahead search added as an input control in Adaptive Cards enable [dynamic search](~/task-modules-and-cards/cards/dynamic-search.md) experience from a dynamically loaded dataset. It also allows users to do a type-ahead static search within a list with limited number of choices. The mobile and desktop clients support type ahead dynamic search experience.
+Typeahead search added as an input control in Adaptive Cards enable [dynamic search](~/task-modules-and-cards/cards/dynamic-search.md) experience from a dynamically loaded dataset. It also allows users to do a type-ahead static search within a list with limited number of choices. The mobile and desktop clients support type ahead dynamic search experience.
 
 ### Adaptive Cards and Incoming Webhooks
 
 > [!NOTE]
 >
-> * All native Adaptive Card schema elements, except `Action.Submit`, are fully supported.
-> * The supported actions are [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html), [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html), and [**Action.Execute**](/adaptive-cards/authoring-cards/universal-action-model#actionexecute).
+> - All native Adaptive Card schema elements, except `Action.Submit`, are fully supported.
+> - The supported actions are [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html), [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html), and [**Action.Execute**](/adaptive-cards/authoring-cards/universal-action-model#actionexecute).
 
-Adaptive Cards with Incoming Webhooks enables you to use the rich and flexible capabilities of Adaptive Cards. It sends data using Incoming Webhooks in Teams from their web service.
+Adaptive Cards with Incoming Webhooks enable you to use the rich and flexible capabilities of Adaptive Cards. It sends data using Incoming Webhooks in Teams from their web service.
+
+## Overflow menu on Adaptive Cards
+
+Adaptive Card in Teams supports overflow menu. You can populate an overflow menu for all the secondary actions in an Adaptive Card.
 
 ## Support for Azure AD Object ID and UPN in user mention
 
@@ -87,3 +100,4 @@ Bots with Adaptive Cards support user mention IDs, such as Microsoft Azure Activ
 * [Format cards in Teams](~/task-modules-and-cards/cards/cards-format.md)
 * [Design Adaptive Cards](~/task-modules-and-cards/cards/design-effective-cards.md)
 * [Adaptive cards in bots](../bots/how-to/conversations/conversation-messages.md#adaptive-cards)
+* [Adaptive Cards overflow menu](~/task-modules-and-cards/cards/cards-format.md#adaptive-cards-overflow-menu)

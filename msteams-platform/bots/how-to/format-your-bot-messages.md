@@ -1,14 +1,17 @@
 ---
 title: Format your bot messages
 author: surbhigupta
-description: Add rich formatting to your bot messages, such as strikethrough, ordered and unordered list, hyperlink, image link, and more.
+description: Learn how to format and style your bot messages such as strikethrough, ordered and unordered list, hyperlink, or image link. Understand cross-platform support.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
 ---
 # Format your bot messages
 
-Message formatting enables you to bring out the best in bot messages. You can format your bot messages to include rich cards that are attachments that contain interactive elements, such as buttons, text, images, audio, video, and so on.
+Message formatting enables you to bring out the best in bot messages. You can format your bot messages to include rich cards as attachments that contain interactive elements, such as buttons, text, images, and so on.
+
+> [!NOTE]
+> The bot message size limit is 40 KB. If the bot message size limit exceeds 40 KB, bot receives a `413` status code (`RequestEntityTooLarge`), which contains the error code `MessageSizeTooBig`. The bot message size limit includes the entire message payload encoded as UTF-16 and doesn't include Base64 encoded images.
 
 ## Format text content
 
@@ -26,11 +29,11 @@ Teams supports a subset of markdown and XML or HTML formatting tags.
 
 Currently, the following limitations apply to formatting:
 
-* Text-only messages do not support table formatting.
+* Text-only messages don't support table formatting.
 * Rich cards support formatting in the text property only, not in the title or subtitle properties.
-* Rich cards do not support markdown or table formatting.
+* Rich cards don't support markdown or table formatting.
 
-After you format text content, ensure that your formatting works across all platforms supported by Microsoft Teams.
+After you format text content, ensure that your formatting works across all platforms supported by Teams.
 
 ## Cross-platform support
 
@@ -38,17 +41,17 @@ Some styles are currently not supported across all platforms. The following tabl
 
 | Style                     | Text-only messages | Rich cards - XML only |
 | ---                       | :---: | :---: |
-| Bold                      | ✔ | ✖ |
-| Italic                    | ✔ | ✔ |
-| Header (levels 1&ndash;3) | ✖ | ✔ |
-| Strikethrough             | ✖ | ✔ |
-| Horizontal rule           | ✖ | ✖ |
-| Unordered list            | ✖ | ✔ |
-| Ordered list              | ✖ | ✔ |
-| Preformatted text         | ✔ | ✔ |
-| Blockquote                | ✔ | ✔ |
-| Hyperlink                 | ✔ | ✔ |
-| Image link                | ✔ | ✖ |
+| Bold                      | ✔️️ | ❌ |
+| Italic                    | ✔️ | ✔️ |
+| Header (levels 1&ndash;3) | ❌ | ✔️ |
+| Strikethrough             | ❌ | ✔️ |
+| Horizontal rule           | ❌ | ❌ |
+| Unordered list            | ❌ | ✔️ |
+| Ordered list              | ❌ | ✔️ |
+| Preformatted text         | ✔️ | ✔️ |
+| Blockquote                | ✔️ | ✔️ |
+| Hyperlink                 | ✔️ | ✔️ |
+| Image link                | ❌ | ❌ |
 
 After checking cross-platform support, ensure that support by individual platforms is also available.
 
@@ -62,17 +65,17 @@ The following table provides a list of styles, which are supported on desktop, i
 
 | Style                     | Desktop | iOS | Android |
 | ---                       | :---: | :---: | :---: |
-| Bold                      | ✔ | ✔ | ✔ |
-| Italic                    | ✔ | ✔ | ✔ |
-| Header (levels 1&ndash;3) | ✖ | ✖ | ✖ |
-| Strikethrough             | ✔ | ✔ | ✖ |
-| Horizontal rule           | ✖ | ✖ | ✖ |
-| Unordered list            | ✔ | ✖ | ✖ |
-| Ordered list              | ✔ | ✖ | ✖ |
-| Preformatted text         | ✔ | ✔ | ✔ |
-| Blockquote                | ✔ | ✔ | ✔ |
-| Hyperlink                 | ✔ | ✔ | ✔ |
-| Image link                | ✔ | ✔ | ✔ |
+| Bold                      | ✔️ | ✔️ | ✔️ |
+| Italic                    | ✔️ | ✔️ | ✔️ |
+| Header (levels 1&ndash;3) | ❌ | ❌ | ❌ |
+| Strikethrough             | ✔️ | ✔️ | ❌ |
+| Horizontal rule           | ❌ | ❌ | ❌ |
+| Unordered list            | ✔️ | ❌ | ❌ |
+| Ordered list              | ✔️ | ❌ | ❌ |
+| Preformatted text         | ✔️ | ✔️ | ✔️ |
+| Blockquote                | ✔️ | ✔️ | ✔️ |
+| Hyperlink                 | ✔️ | ✔️ | ✔️ |
+| Image link                | ❌ | ❌ | ❌ |
 
 ### Cards
 
@@ -81,4 +84,10 @@ For card support, see [card formatting](~/task-modules-and-cards/cards/cards-for
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Update and delete bot messages](~/bots/how-to/update-and-delete-bot-messages.md)
+> [Update and delete messages sent from bot](update-and-delete-bot-messages.md)
+
+## See also
+
+* [Build bots for Teams](../what-are-bots.md)
+* [Designing your Microsoft Teams bot](../design/bots.md)
+* [Adaptive Cards](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)

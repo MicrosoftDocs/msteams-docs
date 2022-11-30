@@ -1,10 +1,9 @@
 ---
 title: Up to date views
-description: Learn about up to date views using Universal Bot with Code samples
+description: In this module, learn about up to date cards views using Universal Bot with Code samples in Microsoft Teams
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-keywords: approval base card reject adaptive 
 ---
 
 # Up to date cards

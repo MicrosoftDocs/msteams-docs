@@ -202,6 +202,9 @@ The following resources can also assist:
 
 </details>
 
+> [!NOTE]
+> To enable end-users to install your app on the Teams iOS platform, see [Update Apple App Store Connect Team ID on Partner Center](update-apple-store-team-connect-id.md).
+
 ## Next step
 
 > [!div class="nextstepaction"]

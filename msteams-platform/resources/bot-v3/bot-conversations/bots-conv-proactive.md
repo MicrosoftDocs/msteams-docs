@@ -1,9 +1,8 @@
 ---
 title:  Proactive messaging for bots
-description: Learn how to use proactive messaging for bots in Microsoft Teams
+description: In this module, learn how to use proactive messaging for bots and best practices for proactive messaging in Microsoft Teams
 ms.topic: conceptual
 ms.localizationpriority: medium
-keywords: teams scenarios proactive messaging conversation bot
 ---
 # Proactive messaging for bots
 
@@ -11,11 +10,11 @@ keywords: teams scenarios proactive messaging conversation bot
 
 A proactive message is a message that is sent by a bot to start a conversation. You may want your bot to start a conversation for a number of reasons, including:
 
-* Welcome messages for personal bot conversations
-* Poll responses
-* External event notifications
+* Welcome messages for personal bot conversations.
+* Poll responses.
+* External event notifications.
 
-Sending a message to start a new conversation thread is different than sending a message in response to an existing conversation: when your bot starts a new conversation, there is no pre-existing conversation to post the message to. To send a proactive message, you need to:
+Sending a message to start a new conversation thread is different than sending a message in response to an existing conversation. When your bot starts a new conversation, there's no pre-existing conversation to post the message to. To send a proactive message, you need to:
 
 1. [Decide what you're going to say](#best-practices-for-proactive-messaging)
 1. [Obtain the user's unique ID and tenant ID](#obtain-necessary-user-information)
@@ -25,13 +24,13 @@ When creating proactive messages you **must** call `MicrosoftAppCredentials.Trus
 
 ## Best practices for proactive messaging
 
-Sending proactive messages is an effective way to communicate with your users. However, from the user's perspective, the message appears unprompted. If there is a welcome message, it will be the first time that they’ve interacted with your app. It's important to use this functionality and provide the complete information to the user to understand the purpose of this message.
+Sending proactive messages is an effective way to communicate with your users. However, from the user's perspective, the message appears unprompted. If there's a welcome message, it will be the first time that they’ve interacted with your app. It's important to use this functionality and provide the complete information to the user to understand the purpose of this message.
 
 Proactive messages generally fall into one of two categories, welcome messages or notifications.
 
 ### Welcome messages
 
-When using proactive messaging to send a welcome message to a user, ensure that from the user's perspective, the message appears unprompted. If there is a welcome message, it will be the first time that they’ve interacted with your app. The best welcome messages will include:
+When using proactive messaging to send a welcome message to a user, ensure that from the user's perspective, the message appears unprompted. If there's a welcome message, it will be the first time that they’ve interacted with your app. The best welcome messages will include:
 
 * **Why they are receiving this message**: It should be clear to the user why they're receiving this message. If your bot was installed in a channel and you sent a welcome message to all users, let them know what channel it was installed in and potentially who installed it.
 * **What do you offer**: What can they do with your app? What value can you bring to them?
@@ -65,17 +64,21 @@ Occasionally it may be necessary to proactively message users that haven't insta
 
 You can only install apps that are in your organizational app catalogue, or the Teams app store.
 
-See [Install apps for users](/graph/api/userteamwork-post-installedapps?view=graph-rest-1.0&tabs=http&preserve-view=true) in the Graph documentation for complete details. There is also a [sample in .NET](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176).
+See [Install apps for users](/graph/api/userteamwork-post-installedapps?view=graph-rest-1.0&tabs=http&preserve-view=true) in the Graph documentation for complete details. There's also a [sample in .NET](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176).
 
 ## Examples
 
-Be sure that you authenticate and have a bearer token before creating a new conversation using the REST API.
+Be sure that you authenticate and have a [bearer token](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication#bot-to-connector) before creating a new conversation using the REST API.
+
+```http
+POST {Service URL of your bot}/v3/conversations
+```
 
 ```json
-POST /v3/conversations
+
 {
   "bot": {
-    "id": "28:10j12ou0d812-2o1098-c1mjojzldxcj-1098028n ",
+    "id": "c38eda0f-e780-49ae-86f0-afb644203cf8",
     "name": "The Bot"
   },
   "members": [
@@ -89,7 +92,12 @@ POST /v3/conversations
     }
   }
 }
+
 ```
+
+You can get the `{Service URL of your bot}` from `TurnContext` object like `turnContext.Activity.ServiceURL` parameter.
+
+Provide `id` as your bot app ID and `name` as your bot name. You can get the `members` `id` from your bots `TurnContext` object such as `turnContext.Activity.From.Id`. Similarly, `id` of tenant, from your bots `TurnContext` object such as `turnContext.Activity.ChannelData.Tenant.Id`.
 
 You must supply the user ID and the tenant ID. If the call succeeds, the API returns with the following response object.
 
@@ -204,4 +212,4 @@ namespace Microsoft.Teams.TemplateBotCSharp.Dialogs
 
 ## See also
 
-[Bot Framework samples](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)
+[Bot Framework samples](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/README.md).

@@ -5,11 +5,11 @@
 
 **To upload your tab with App Studio**
 
-1. Go to Microsoft Teams. If you use the [web based version](https://teams.microsoft.com) you can inspect your front-end code using your browser's [developer tools](~/tabs/how-to/developer-tools.md).
+1. Go to Microsoft Teams. If you use the [web based version](https://teams.microsoft.com), you can inspect your front-end code using your browser's [developer tools](~/tabs/how-to/developer-tools.md).
 
 1. Go to **App Studio** and select the **Manifest editor** tab.
 
-1. Select **Import an existing app** in the **Manifest editor** to begin updating the app package for your tab. The source code comes with its own partially complete manifest. The name of your app package is `tab.zip`. It is available from the following path:
+1. Select **Import an existing app** in the **Manifest editor** to begin updating the app package for your tab. The source code comes with its own partially complete manifest. The name of your app package is `tab.zip`. It's available from the following path:
 
     ```bash
     /bin/Debug/netcoreapp2.2/tab.zip
@@ -19,11 +19,11 @@
 
 ### Update your app package with Manifest editor
 
-After you have uploaded your app package into App Studio, you must configure it.
+After you've uploaded your app package into App Studio, you must configure it.
 
 Select the tile for your newly imported tab in the right panel of the Manifest editor welcome page.
 
-There is a list of steps in the left-hand side of the Manifest editor, and on the right, a list of properties that must have values for each of those steps. Much of the information has been provided by your `manifest.json` but there are fields that you must update.
+There's a list of steps in the left-hand side of the Manifest editor, and on the right, a list of properties that must have values for each of those steps. Much of the information has been provided by your `manifest.json` but there are fields that you must update.
 
 #### Details: App details
 
