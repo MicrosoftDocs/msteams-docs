@@ -24,7 +24,7 @@ The Outgoing Webhook acts as a bot and search for messages in channels using **@
 See the following video to learn how to create Outgoing Webhooks:
 <br>
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OIzu]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OIzu>]
 <br>
 
 ## Key features of Outgoing Webhooks
@@ -46,7 +46,7 @@ To create an Outgoing Webhook, follow these steps:
 
 1. Select **Teams** from the left pane. The **Teams** page appears:
 
-    ![Teams channel](~/assets/images/teamschannel.png)
+    :::image type="content" source="../../assets/images/teamschannel.png" alt-text="Teams channel":::
 
 1. In the **Teams** page, select the required team to create an Outgoing Webhook and select the &#8226;&#8226;&#8226;. In the dropdown menu, select **Manage team**:
 
