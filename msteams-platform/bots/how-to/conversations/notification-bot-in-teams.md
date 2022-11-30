@@ -478,7 +478,7 @@ TeamsFx provides you with an [Incoming Webhook notification sample](https://gith
 * Create an Incoming Webhook in Teams.
 * Send notifications using Incoming Webhooks with Adaptive Cards.
 
-### FAQ
+## FAQ
 
 <br>
 
@@ -539,9 +539,9 @@ You can encounter an undefined error, when the bot app is installed into other c
 
 <details>
 
-<summary><b>Can I know all the targets my bot is installed in and out of the notification project?</b></summary>
+<summary><b>Can I know all the targets where my bot is installed in and out of the notification project?</b></summary>
 
-There are Microsoft Graph APIs to list apps installed in a team, group, or chat. If necessary you need to iterate your team, group, or chat into an installed app to be targeted. In the notification project, it uses persistence storage to store installation targets. For more information, see [notification based on events](#notification-based-on-events).
+There are Microsoft Graph APIs to list apps installed in a team, group, or chat. If required you need to iterate your team, group, or chat into an installed app to be targeted. In the notification project, it uses persistence storage to store installation targets. For more information, see [notification based on events](#notification-based-on-events).
 
 <br>
 
@@ -549,7 +549,7 @@ There are Microsoft Graph APIs to list apps installed in a team, group, or chat.
 
 <details>
 
-<summary><b>How to customize the azurite listening ports?</b></summary>
+<summary><b>How to customize the Azurite listening ports?</b></summary>
 
 If azurite exits due to port in use, you can specify another listening port and update the connection string of `AzureWebJobsStorage` in `bot/local.settings.json`.
 
@@ -575,7 +575,7 @@ Perform the following steps to extend your notification bot to support command a
 
 <details>
 
-<summary><b>How to extend my notification bot to support adaptive card actions?</b></summary>
+<summary><b>How to extend my notification bot to support Adaptive Card actions?</b></summary>
 
 To add Adaptive Card actions in notification bot, see the [steps to add card actions](workflow-bot-in-teams.md#add-card-actions).
 
