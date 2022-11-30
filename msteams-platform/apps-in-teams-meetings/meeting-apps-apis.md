@@ -72,14 +72,14 @@ The following table includes the query parameters:
 ```csharp
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
 {
-  // Gets the details for the given meeting participant.
+  // Gets the details for the given meeting participant. 
   // This only works in Teams meeting scoped conversations.
   TeamsMeetingParticipant participant = await TeamsInfo.GetMeetingParticipantAsync(turnContext, "yourMeetingId", "yourParticipantId", "yourParticipantTenantId").ConfigureAwait(false);
   TeamsChannelAccount member = participant.User;
   MeetingParticipantInfo meetingInfo = participant.Meeting;
   ConversationAccount conversation = participant.Conversation;
 
-  // Sends a message activity to the sender of the incoming activity.
+  // Sends a message activity to the sender of the incoming activity. 
   await turnContext.SendActivityAsync(MessageFactory.Text($"The participant role is: {meetingInfo.Role}"), cancellationToken);
 }
 ```
@@ -94,14 +94,14 @@ export class MyBot extends TeamsActivityHandler {
         super();
         this.onMessage(async (context, next) => {
 
-            // getMeetingParticipant: Gets the details for the given meeting participant.
+            // getMeetingParticipant : Gets the details for the given meeting participant. 
             // This only works in Teams meeting scoped conversations.
             TeamsMeetingParticipant participant = getMeetingParticipant(turnContext, "yourMeetingId", "yourParticipantId", "yourTenantId");
             let member = participant.user;
             let meetingInfo = participant.meeting;
             let conversation = participant.conversation;
 
-            // Sends a message activity to the sender of the incoming activity.
+            // Sends a message activity to the sender of the incoming activity. 
             await context.sendActivity(`The participant role is: '${meetingInfo.role}'`);
 
             // By calling next() you ensure that the next BotHandler is run.
@@ -212,7 +212,7 @@ Activity activity = MessageFactory.Text("This is a meeting signal test");
 // Configures the current activity to generate a notification within Teams.
 activity.TeamsNotifyUser(true, "https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID");
 
-// Sends a message activity to the sender of the incoming activity.
+// Sends a message activity to the sender of the incoming activity. 
 await turnContext.SendActivityAsync(activity).ConfigureAwait(false);
 ```
 
@@ -222,7 +222,7 @@ await turnContext.SendActivityAsync(activity).ConfigureAwait(false);
 
 ```javascript
 // MessageFactory.text(): Specifies the type of text data in a message attachment.
-const replyActivity = MessageFactory.text('Hi'); // this could be an adaptive card instead.
+const replyActivity = MessageFactory.text('Hi'); // this could be an adaptive card instead
 replyActivity.channelData = {
     notification: {
         alertInMeeting: true,
@@ -241,7 +241,7 @@ POST /v3/conversations/{conversationId}/activities
 ```
 
 ```json
-// In-meeting notification response.
+// In-meeting notification response
 {
     "type": "message",
     "text": "John Phillips assigned you a weekly todo",
@@ -396,7 +396,7 @@ The following table lists the query parameter:
 // Gets the information for the given meeting id.
 MeetingInfo result = await TeamsInfo.GetMeetingInfoAsync(turnContext);
 
-// Sends a message activity to the sender of the incoming activity.
+// Sends a message activity to the sender of the incoming activity. 
 await turnContext.SendActivityAsync(JsonConvert.SerializeObject(result));
 ```
 
@@ -706,7 +706,7 @@ Meeting Start Event
 // Invoked when a Teams Meeting Start event activity is received from the connector.
 protected override async Task OnTeamsMeetingStartAsync(MeetingStartEventDetails meeting, ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken)
 {
-    // Sends a message activity to the sender of the incoming activity.
+    // Sends a message activity to the sender of the incoming activity. 
     await turnContext.SendActivityAsync(JsonConvert.SerializeObject(meeting));
 }
 ```
@@ -886,10 +886,10 @@ The `getIncomingClientAudioState` API allows an app to get the incoming audio st
 ```javascript
 callback = (errcode, result) => {
         if (errcode) {
-            // Handle error code.
+            // Handle error code
         }
         else {
-            // Handle success code.
+            // Handle success code
         }
     }
 // The getIncomingClientAudioState API shows the current audio state.
@@ -943,10 +943,10 @@ The `toggleIncomingClientAudio` API allows an app to toggle the incoming audio s
 ```javascript
 callback = (error, result) => {
         if (error) {
-            // Handle error code.
+            // Handle error code
         }
         else {
-            // Handle success code.
+            // Handle success code
         }
     }
 // The toggleIncomingClientAudio API allows an app to toggle the incoming audio state.
@@ -991,5 +991,5 @@ The following table provides the response codes:
 * [Teams cloud meeting recording](/microsoftteams/cloud-recording)
 
 ## Next steps
- 
+
 [Build tabs for meeting](build-tabs-for-meeting.md)
