@@ -249,3 +249,4 @@ async handleTeamsMessagingExtensionQuery(context, query) {
 * [Add link unfurling](how-to/link-unfurling.md)
 * [App manifest schema for Teams](../resources/schema/manifest-schema.md)
 * [Developer Portal for Teams](../concepts/build-and-test/teams-developer-portal.md)
+* [Instrumenting for Teams app specific analytics](../concepts/design/overview-analytics.md#instrumenting-for-teams-app-specific-analytics)
