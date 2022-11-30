@@ -63,7 +63,7 @@ The following code shows an example of channel created event:
 # [C#](#tab/dotnet)
 
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L314)
-* [SDK reference](https://learn.microsoft.com/en-us/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamschannelcreatedasync?view=botbuilder-dotnet-stable)
+* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamschannelcreatedasync?view=botbuilder-dotnet-stable&preserve-view=true)
 
 ```csharp
 protected override async Task OnTeamsChannelCreatedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -99,7 +99,7 @@ export class MyBot extends TeamsActivityHandler {
 
 # [JSON](#tab/json)
 
-[SDK reference](https://learn.microsoft.com/en-us/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=json#channel-created)
+[SDK reference](/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=json#channel-created)
 
 ```json
 {
@@ -163,7 +163,7 @@ The following code shows an example of channel renamed event:
 
 # [C#](#tab/dotnet)
 
-* [SDK reference](https://learn.microsoft.com/en-us/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamschannelrenamedasync?view=botbuilder-dotnet-stable)
+* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamschannelrenamedasync?view=botbuilder-dotnet-stable&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L320)
 
 ```csharp
@@ -196,7 +196,7 @@ export class MyBot extends TeamsActivityHandler {
 
 # [JSON](#tab/json)
 
-[SDK reference](https://learn.microsoft.com/en-us/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=json#channel-renamed)
+[SDK reference](/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=json#channel-renamed)
 
 ```json
 {
@@ -257,7 +257,7 @@ The following code shows an example of channel deleted event:
 
 # [C#](#tab/dotnet)
 
-* [SDK reference](https://learn.microsoft.com/en-us/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamschanneldeletedasync?view=botbuilder-dotnet-stable)
+* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamschanneldeletedasync?view=botbuilder-dotnet-stable&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L326)
 
 ```csharp
@@ -291,7 +291,7 @@ export class MyBot extends TeamsActivityHandler {
 
 # [JSON](#tab/json)
 
-[SDK reference](https://learn.microsoft.com/en-us/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=json#channel-deleted)
+[SDK reference](/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=json#channel-deleted)
 
 ```json
 {
@@ -353,7 +353,7 @@ The following code shows an example of channel restored event:
 
 # [C#](#tab/dotnet)
 
-* [SDK refernce](https://learn.microsoft.com/en-us/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamschannelrestoredasync?view=botbuilder-dotnet-stable)
+* [SDK refernce](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamschannelrestoredasync?view=botbuilder-dotnet-stable&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msteams-application-qbot/Source/Microsoft.Teams.Apps.QBot.Web/Bot/BotActivityHandler.cs#L395)
 
 ```csharp
@@ -388,7 +388,7 @@ export class MyBot extends TeamsActivityHandler {
 
 # [JSON](#tab/json)
 
-[SDK reference](https://learn.microsoft.com/en-us/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=json#channel-restored)
+[SDK reference](/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=json#channel-restored)
 
 ```json
 {
@@ -465,7 +465,7 @@ The following code shows an example of team members added event:
 
 # [C#](#tab/dotnet)
 
-* [SDK reference](https://learn.microsoft.com/en-us/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmembersaddedasync?view=botbuilder-dotnet-stable)
+* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmembersaddedasync?view=botbuilder-dotnet-stable&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msteams-application-qbot/Source/Microsoft.Teams.Apps.QBot.Web/Bot/BotActivityHandler.cs#L133)
 
 ```csharp
@@ -519,7 +519,7 @@ export class MyBot extends TeamsActivityHandler {
 
 # [JSON](#tab/json)
 
-[SDK reference](https://learn.microsoft.com/en-us/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=json#members-added)
+[SDK reference](/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=json#members-added)
 
 The message your bot receives when the bot is added to a team.
 
@@ -643,7 +643,7 @@ The following code shows an example of team members removed event:
 
 # [C#](#tab/dotnet)
 
-* [SDK reference](https://learn.microsoft.com/en-us/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmembersremovedasync?view=botbuilder-dotnet-stable)
+* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmembersremovedasync?view=botbuilder-dotnet-stable&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msteams-application-qbot/Source/Microsoft.Teams.Apps.QBot.Web/Bot/BotActivityHandler.cs#L157)
 
 ```csharp
@@ -695,7 +695,7 @@ export class MyBot extends TeamsActivityHandler {
 
 # [JSON](#tab/json)
 
-[SDK reference](https://learn.microsoft.com/en-us/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=json#members-removed)
+[SDK reference](/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=json#members-removed)
 
 The `channelData` object in the following payload example is based on adding a member to a team rather than a group chat, or initiating a new one-to-one conversation:
 
@@ -752,6 +752,7 @@ async def on_teams_members_removed(
   )
  return
 ```
+
 ---
 
 ### Team renamed
@@ -762,7 +763,7 @@ The following code shows an example of team renamed event:
 
 # [C#](#tab/dotnet)
 
-* [SDK reference](https://learn.microsoft.com/en-us/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsteamrenamedasync?view=botbuilder-dotnet-stable#definition)
+* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsteamrenamedasync?view=botbuilder-dotnet-stable#definition&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L320)
 
 ```csharp
@@ -797,7 +798,7 @@ export class MyBot extends TeamsActivityHandler {
 
 # [JSON](#tab/json)
 
-* [SDK reference](https://learn.microsoft.com/en-us/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=json#team-renamed)
+* [SDK reference](/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=json#team-renamed)
 
 ```json
 { 
@@ -857,7 +858,7 @@ The following code shows an example of team deleted event:
 
 # [C#](#tab/dotnet)
 
-* [SDK reference](https://learn.microsoft.com/en-us/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsteamdeletedasync?view=botbuilder-dotnet-stable#definition)
+* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsteamdeletedasync?view=botbuilder-dotnet-stable#definition&preserve-view=true)
 
 ```csharp
 protected override async Task OnTeamsTeamDeletedAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -883,7 +884,7 @@ export class MyBot extends TeamsActivityHandler {
 
 # [JSON](#tab/json)
 
-* [SDK reference](https://learn.microsoft.com/en-us/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=json#team-deleted)
+* [SDK reference](/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=json#team-deleted)
 
 ```json
 { 
@@ -939,7 +940,7 @@ The following code shows an example of team restored event:
 
 # [C#](#tab/dotnet)
 
-* [SDK reference](https://learn.microsoft.com/en-us/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsteamrestoredasync?view=botbuilder-dotnet-stable#definition)
+* [SDK reference](https://learn.microsoft.com/en-us/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsteamrestoredasync?view=botbuilder-dotnet-stable#definition&preserve-view=true)
 
 ```csharp
 protected override async Task OnTeamsTeamrestoredAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -1032,7 +1033,7 @@ The following code shows an example of team archived event:
 
 # [C#](#tab/dotnet)
 
-* [SDK reference](https://learn.microsoft.com/en-us/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsteamarchivedasync?view=botbuilder-dotnet-stable#definition)
+* [SDK reference](https://learn.microsoft.com/en-us/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsteamarchivedasync?view=botbuilder-dotnet-stable#definition&preserve-view=true)
 
 ```csharp
 protected override async Task OnTeamsTeamArchivedAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -1125,7 +1126,7 @@ The following code shows an example of team unarchived event:
 
 # [C#](#tab/dotnet)
 
-* [SDK reference](https://learn.microsoft.com/en-us/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsteamunarchivedasync?view=botbuilder-dotnet-stable#definition)
+* [SDK reference](https://learn.microsoft.com/en-us/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsteamunarchivedasync?view=botbuilder-dotnet-stable#definition&preserve-view=true)
 
 ```csharp
 protected override async Task OnTeamsTeamUnarchivedAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -1227,7 +1228,7 @@ The following code shows an example of reactions to a bot message:
 
 # [C#](#tab/dotnet)
 
-* [SDK reference](https://learn.microsoft.com/en-us/dotnet/api/microsoft.bot.builder.activityhandler.onreactionsaddedasync?view=botbuilder-dotnet-stable#definition)
+* [SDK reference](https://learn.microsoft.com/en-us/dotnet/api/microsoft.bot.builder.activityhandler.onreactionsaddedasync?view=botbuilder-dotnet-stable#definition&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-message-reaction/csharp/Bots/MessageReactionBot.cs#L26)
 
 ```csharp
@@ -1539,7 +1540,7 @@ async onInstallationUpdateActivity(context: TurnContext) {
 
 # [JSON](#tab/json)
 
-* [SDK reference](https://learn.microsoft.com/en-us/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=json#install-update-event) 
+* [SDK reference](https://learn.microsoft.com/en-us/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=json#install-update-event)
 
 ```json
 {
