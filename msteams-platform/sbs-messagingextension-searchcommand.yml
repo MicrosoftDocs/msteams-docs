@@ -426,21 +426,14 @@ items:
 - title: Interact with the app in Teams
   durationInMinutes: 1
   content: |
-    1. After you add the search extension, a pop-up window opens in a chat. Select any option from the window.
+    1. After you add the search extension, a pop-up window opens in a chat. Select any option from the pop-up window.
 
        :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/popup.png" alt-text="Chat":::
 
-    1. An Adaptive Card auto appears in the chat window.
+    1. An Adaptive Card automatically appears in the chat.
 
        :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/option1.png" alt-text="Option":::
 
-    1. Select **Nuget Package**. A pop up window appears with the details of Nuget Package.
-
-       :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/nuget_1.png" alt-text="Nuget":::
-
-    1. Navigate to the chat window and select **Project**. A pop-up window appears with the project details.
-
-       :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/project.png" alt-text="Project":::
 
 - title: Complete challenge
   durationInMinutes: 1
