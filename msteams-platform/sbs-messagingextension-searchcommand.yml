@@ -432,20 +432,20 @@ items:
 
        :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/addapp_1.png" alt-text="Screenshot of Search Messaging Extension in Teams with the Add option highlighted in red.":::
 
-       A pop-up opens in a chat.
+       The message extension is added to Teams and a pop-up window opens in a chat.
 
        :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/popup.png" alt-text="Screenshot of a pop-up window opens in a chat displaying the option of your search query.":::
    
 - title: Interact with the app in Teams
   durationInMinutes: 1
   content: |
-       After you add the search extension, a pop-up window opens in a chat. Select any option from the pop-up window.
+       Search and select any query from the the pop-up window.
 
-        :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/popup.png" alt-text="Chat":::
+        :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/popup.png" alt-text="Screenshot shows an example of a pop-up window showing a list of query options in a Teams chat.":::
 
-       An Adaptive Card automatically appears in the chat.
+       An Adaptive Card appears in the chat.
 
-        :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/option1.png" alt-text="Option":::
+        :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/option1.png" alt-text="Screenshot shows an example of an Adaptive Card displayed in Teams chat.":::
 
 - title: Complete challenge
   durationInMinutes: 1
