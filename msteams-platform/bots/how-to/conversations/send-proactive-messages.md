@@ -202,8 +202,9 @@ public class NotifyController : ControllerBase
 
     public async Task<IActionResult> Get()
     {
-        foreach (var conversationReference in _conversationReferences.Values) // Loop of all conversation references must be updated to get it from backend system.
+        foreach (var conversationReference in _conversationReferences.Values)
         {
+
             var newReference = new ConversationReference()
         {
             Bot = new ChannelAccount()
@@ -238,6 +239,22 @@ public class NotifyController : ControllerBase
     }
 }
 ```
+
+Example of a code snippet to demonstrate creating conversation reference.
+
+```csharp
+ var newReference = new ConversationReference()
+        {
+            Bot = new ChannelAccount()
+            {
+                Id = conversationReference.Bot.Id
+            },
+            Conversation = new ConversationAccount()
+            {
+                Id = conversationReference.Conversation.Id
+            },
+            ServiceUrl = conversationReference.ServiceUrl,
+        };
 
 # [TypeScript](#tab/typescript)
 * [SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#botbuilder-core-turncontext-getconversationreference)
