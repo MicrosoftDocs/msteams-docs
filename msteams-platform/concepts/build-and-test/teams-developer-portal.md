@@ -62,7 +62,7 @@ Follow the steps to import and manage your existing app in the Developer Portal.
 
 ## Changelog for Developer Portal
 
-Changelog for Developer Portal let's you stay engaged with the latest updates in Teams. You can view the updates about features, recent changes in APIs, important bug fixes, and other developer products.
+Changelog for Developer Portal let's you stay engaged with the latest updates in Teams. You can view the updates about features, recent changes in APIs, and important bug fixes.
 
 To view the Changelog, sign in to [Developer Portal](https://dev.teams.microsoft.com) and select **Changelog** from the left pane.
 
@@ -70,12 +70,12 @@ To view the Changelog, sign in to [Developer Portal](https://dev.teams.microsoft
 
 The updates for Changelog in the Developer Portal are categorized based on the following:
 
-* Added
-* Changed
-* Removed
-* Fixed
-* Deprecated
-* Security
+* Added - Service or feature that are net new feature or capability.
+* Changed - Service or API that modified.
+* Removed - Service or API removed and may be replaced with a new and updated service.
+* Fixed - Service or API that was previously identified as a high-priority or breaking change issue that has been fixed or mitigated.
+* Deprecated - Service or API at the end of its life and deprecated.
+* Security - Important and critical security patch updates.
 
 ## See also
 
