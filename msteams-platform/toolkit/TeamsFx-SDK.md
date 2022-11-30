@@ -113,7 +113,7 @@ There are three credential classes to simplify authentication. Here's the corres
 
 The following code is an an example to create `TeamsUserCredential`:
 
-```ts
+```typescript
 const authConfig: TeamsUserCredentialAuthConfig = {
   clientId: process.env.REACT_APP_CLIENT_ID,
   initiateLoginEndpoint: process.env.REACT_APP_START_LOGIN_PAGE_URL,
@@ -133,7 +133,7 @@ Required configurations are `initiateLoginEndpoint` and `clientId` which can be 
 
 The following code is an example to create `OnBehalfOfUserCredential`:
 
-```ts
+```typescript
 const oboAuthConfig: OnBehalfOfCredentialAuthConfig = {
   authorityHost: process.env.M365_AUTHORITY_HOST,
   clientId: process.env.M365_CLIENT_ID,
@@ -155,7 +155,7 @@ Required configurations are `authorityHost`, `tenantId`, `clientId`, `clientSecr
 
 The following code is an example to create `AppCredential`:
 
-```ts
+```typescript
 const appAuthConfig: AppCredentialAuthConfig = {
   authorityHost: process.env.M365_AUTHORITY_HOST,
   clientId: process.env.M365_CLIENT_ID,
