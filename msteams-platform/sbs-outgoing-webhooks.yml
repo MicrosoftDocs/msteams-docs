@@ -138,11 +138,9 @@ items:
 
     1. Select **New conversation** to begin a conversation.
 
-    1. Enter **\@mention** the name of the Outgoing Webhook to invoke it in the channel. 
+    1. Enter **\@mention** the name of the Outgoing Webhook to invoke it in the channel and select send button. 
 
        :::image type="content" source="./assets/images/sbs-outgoing-webhooks/type-mention.png" alt-text="Screenshot shows @mention the name of Outgoing Webhook.":::
-
-    1. Select send button.
 
        > [!NOTE]
        >  You can send Adaptive Card, Hero card, and text messages as attachment with Outgoing Webhook.
