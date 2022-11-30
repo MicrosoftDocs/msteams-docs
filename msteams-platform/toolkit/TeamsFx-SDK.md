@@ -43,6 +43,9 @@ You must have working knowledge of:
 TeamsFx SDK is pre-configured in the scaffolded project using TeamsFx Toolkit or CLI.
 For more information, see [Teams app project](https://github.com/OfficeDev/TeamsFx/blob/main/packages/vscode-extension/README.md).
 
+ > [!Tip]
+ > The code snippets are updated for the latest TeamsFx SDK version 2.
+
 ### Install the `@microsoft/teamsfx` package
 
 Install the TeamsFx SDK for TypeScript or JavaScript with `npm`:
@@ -450,23 +453,23 @@ This section provides several code snippets for common scenarios that are relate
     2. Start the dialog and sign in.
 
        ```typescript
-         dialogs.add(
+       dialogs.add(
          new WaterfallDialog("taskNeedingLogin", [
           async (step) => {
-          return await step.beginDialog("TeamsBotSsoPrompt");
+            return await step.beginDialog("TeamsBotSsoPrompt");
           },
           async (step) => {
-          const token = step.result;
-            if (token) {
-            // ... continue with task needing access token ...
-            } else {
+           const token = step.result;
+           if (token) {
+             // ... continue with task needing access token ...
+           } else {
             await step.context.sendActivity(`Sorry... We couldn't log you in. Try again later.`);
             return await step.endDialog();
-            }
-          },
-          ])
-          );    
-       ```
+           }
+         },
+        ])
+       );    
+        ```
 
     For more information on sample to use graph API in bot application, see [bot-sso sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/bot-sso).
 
@@ -584,22 +587,20 @@ This section provides several code snippets for common scenarios that are relate
 
         ```typescript
         async function callFunction() {
-        const authConfig: TeamsUserCredentialAuthConfig = {
-        clientId: process.env.REACT_APP_CLIENT_ID,
-        initiateLoginEndpoint: process.env.REACT_APP_START_LOGIN_PAGE_URL,
-        };
-
-        const teamsUserCredential = new TeamsUserCredential(authConfig);
-
-        const accessToken = await teamsUserCredential.getToken(""); // Get SSO token 
-        const endpoint = "https://YOUR_API_ENDPOINT";
-        const response = await axios.default.get(endpoint + "/api/" + functionName, {
-         headers: {
-          authorization: "Bearer " + accessToken.token,
-          },
-         });
-        return response.data;
-         }    
+          const authConfig: TeamsUserCredentialAuthConfig = {
+            clientId: process.env.REACT_APP_CLIENT_ID,
+            initiateLoginEndpoint: process.env.REACT_APP_START_LOGIN_PAGE_URL,
+          };
+          const teamsUserCredential = new TeamsUserCredential(authConfig);
+          const accessToken = await teamsUserCredential.getToken(""); // Get SSO token 
+          const endpoint = "https://YOUR_API_ENDPOINT";
+          const response = await axios.default.get(endpoint + "/api/" + functionName, {
+            headers: {
+              authorization: "Bearer " + accessToken.token,
+           },
+          });
+          return response.data;
+        }    
 
         ```
 
@@ -657,12 +658,12 @@ This section provides several code snippets for common scenarios that are relate
     1. You can initialize the `appAuthConfig` by providing a `PEM-encoded key certificate`.
 
        ```typescript
-       const appAuthConfig: AppCredentialAuthConfig = {
-       authorityHost: process.env.M365_AUTHORITY_HOST,
-       clientId: process.env.M365_CLIENT_ID,
-       tenantId: process.env.M365_TENANT_ID,
-       certificateContent: 'PEM-encoded key certificate',
-       };
+        const appAuthConfig: AppCredentialAuthConfig = {
+          authorityHost: process.env.M365_AUTHORITY_HOST,
+          clientId: process.env.M365_CLIENT_ID,
+          tenantId: process.env.M365_TENANT_ID,
+          certificateContent: 'PEM-encoded key certificate',
+         };
 
        ```
 
