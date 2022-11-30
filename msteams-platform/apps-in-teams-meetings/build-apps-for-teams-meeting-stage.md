@@ -148,7 +148,13 @@ The following table provides the response codes:
 
 ## Get app content stage sharing capabilities API
 
-The `getAppContentStageSharingCapabilities` API enables you to fetch the app's capabilities for sharing to meeting stage.
+The `getAppContentStageSharingCapabilities` API enables you to fetch the app's capabilities for sharing the app content to meeting stage. Apps need to call the `getAppContentStageSharingCapabilities` API to either enable or disable the custom share to stage button for a meeting participant in the meeting side panel. The share to stage button must be disabled or hidden if a meeting participant doesn't have permission to share the app content to meeting stage.
+
+The app sharing capabilities depends on the tenant user type and participant roles in a meeting.
+
+* **User type**: In-tenant, guest, and external user type participants can share the app to stage and also see and interact with the app being shared on stage. Anonymous user can't see, share, or interact with the app that is being shared on the stage. For more information, see [user types in a meeting.](~/apps-in-teams-meetings/teams-apps-in-meetings.md#user-types-in-teams)
+
+* **User roles**: Participants with presenter and organizer user roles in a meeting can share the app to stage. Attendee won't have the share to stage button enabled and ability to share the app to stage. For more information, see [user roles in Teams meeting.](~/apps-in-teams-meetings/teams-apps-in-meetings.md#user-roles-in-teams-meeting)
 
 ### Query parameter
 
@@ -163,7 +169,7 @@ The following table includes the query parameter:
 ```javascript
 microsoftTeams.meeting.getAppContentStageSharingCapabilities((err, result) => {
     if (result.doesAppHaveSharePermission) {
-        // Indicates app has permission to share contents to meeting stage.
+        // Indicates if the meeting participant has permission to share content to the meeting stage.
     }
 });
 ```
