@@ -89,7 +89,7 @@ See the following video to learn how to send proactive message from bots:
 
 <br>
 
-> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4NHyk>]
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4NHyk]
 <br>
 
 ### Understand who blocked, muted, or uninstalled a bot
@@ -255,6 +255,7 @@ Example of a code snippet to demonstrate creating conversation reference.
             },
             ServiceUrl = conversationReference.ServiceUrl,
         };
+```
 
 # [TypeScript](#tab/typescript)
 * [SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#botbuilder-core-turncontext-getconversationreference)
@@ -286,7 +287,7 @@ async messageAllMembersAsync(context) {
 ```
 
 # [Python](#tab/python)
-* [SDK reference](/python/api/botbuilder-core/botbuilder.core.botadapter?view=botbuilder-py-latest#botbuilder-core-botadapter-continue-conversation&preserve-view=true)
+* [SDK reference](/python/api/botbuilder-core/botbuilder.core.botframeworkadapter?view=botbuilder-py-latest#botbuilder-core-botframeworkadapter-create-conversation&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L200)
 
 ```python
@@ -332,8 +333,6 @@ async def _message_all_members(self, turn_context: TurnContext):
 ```
 
 # [JSON](#tab/json)
-
-[SDK reference](/microsoftteams/platform/bots/how-to/conversations/send-proactive-messages?tabs=json)
 
 ```json
 POST /v3/conversations

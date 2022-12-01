@@ -213,7 +213,7 @@ private async Task BotCallback(ITurnContext turnContext, CancellationToken cance
 ```
 
 # [Node.js](#tab/nodejs)
-
+* [SDK reference](/javascript/api/botbuilder/cloudadapter?view=botbuilder-ts-latest#botbuilder-cloudadapter-continueconversationasync&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-initiate-thread-in-channel/nodejs/bots/teamsStartNewThreadInChannel.js#L20)
 
 ```javascript
