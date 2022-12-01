@@ -28,7 +28,7 @@ items:
 - title: Prerequisites
   durationInMinutes: 1
   content: |
-    Ensure you install the following tools and set up your development environment:  
+    Ensure that you install the following tools and set up your development environment:  
 
      | &nbsp; | Install | For using... |
      | --- | --- | --- |
@@ -96,7 +96,7 @@ items:
 
         :::image type="content" source="./assets/images/sbs-messagingextension-action/review-create.png" alt-text="Screenshot of Microsoft App ID section under Create an Azure Bot. The Type of App selected and Review plus create options are highlighted in red.":::
 
-    1. If the validation is passed, select **Create**. 
+    1. If the validation is passed, select **Create**.
 
         It takes a few moments for your bot service to be provisioned. 
 
@@ -104,7 +104,7 @@ items:
 
         :::image type="content" source="./assets/images/sbs-messagingextension-action/resource-file.png" alt-text="Screenshot of deployment complete with Go to resource option highlighted in red.":::
 
-        Your Azure bot is created.
+        An Azure bot is created.
 
         :::image type="content" source="./assets/images/sbs-messagingextension-action/created-azure-bot.png" alt-text="Screenshot of the Azure bot home page that is created.":::
 
@@ -133,12 +133,12 @@ items:
 
         :::image type="content" source="~/assets/images/sbs-messagingextension-action/add-a-clientsecret.png" alt-text="Screenshot of Add a client secret window with the Add option highlighted in red.":::
 
-    1. In the **Value** column, select **Copy to clipboard**.
+    1. In the **Value** column, select the **Copy to clipboard** icon.
 
          :::image type="content" source="~/assets/images/sbs-messagingextension-action/client-secret.png" alt-text="Screenshot of Client secret section with the Copy to clipboard icon highlighted in red.":::
        
        > [!TIP]
-       > Save the **Client secrets** value or app password for future reference.
+       > Save the client secret value or app password for future reference.
 
     **To add the Teams channel**
 
@@ -308,12 +308,12 @@ items:
                
          1. Select **Add a platform**.
          1. Select **Web**.
-         1. Enter the redirect URI for your app by appending `auth-end` to fully qualified domain name:</br> 
+         1. In the **Redirect URIs** box, enter the redirect URI for your app by appending `auth-end` to fully qualified domain name:</br> 
            `https://2bb1****.ngrok.io/auth-end`. </br>
 
-         1. Enable **Implicit grant and hybrid flows** by selecting the following checkboxes:
-             * **ID tokens**
-             * **Access tokens**
+         1. Select the following checkboxes under **Implicit grant and hybrid flows**:
+             * **Access tokens (used for implicit flows)**
+             * **ID tokens (used for implicit and hybrid flows)**
    
          1. Select **Configure**.
 
@@ -416,7 +416,7 @@ items:
 
        :::image type="content" source="./assets/images/sbs-messagingextension-action/create-card.png" alt-text="Screenshot of message compose box overflow menu with Create Card highlighted in red.":::
 
-    1. Enter your information in the modal pop-up.
+    1. Enter your information in the modal pop-up window.
 
        :::image type="content" source="./assets/images/sbs-messagingextension-action/output-card.png" alt-text="The Screenshot shows the Create Card model pop-up of the Action Messaging Extension.":::
 
@@ -424,7 +424,7 @@ items:
 
        :::image type="content" source="./assets/images/sbs-messagingextension-action/submit.png" alt-text="Screenshot of Create Card model pop-up with the Submit option highlighted in red.":::
 
-    1. Select (...) from the overflow menu.
+    1. Select **More options** (...) from the overflow menu.
        
     1. Go to **More actions**.
 
@@ -432,7 +432,7 @@ items:
 
        :::image type="content" source="./assets/images/sbs-messagingextension-action/sharemessage.png" alt-text="Screenshot of the message overflow menu. The Share Message and More actions are highlighted in red.":::
 
-    1. Select the checkbox if you need to include image and submit.
+    1. if you want to include an image, select the **Include image in Hero Card** checkbox and then select **Submit**.
 
        :::image type="content" source="./assets/images/sbs-messagingextension-action/sharemessageoutput.png" alt-text="Screenshot of Action Messaging Extension with the include image in Hero Card checkbox and Submit option highlighted in red.":::
 
