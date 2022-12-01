@@ -267,7 +267,7 @@ Wait for automatic sync. After 15 minutes, check your platform B to find the pro
 
 #### Workflow #2: Copy orders from platform B to platform A
 
-This workflow requires platform A and platform B to work. It copies new orders from platform A to platform B connected. Note that you must activate Workflow 1 to activate this Workflow.
+This workflow requires platform A and platform B to work. It copies new orders from platform A to platform B connected. You must activate Workflow 1 to activate this Workflow.
 
 Steps for workflow #2: (Provide screenshots)
 
