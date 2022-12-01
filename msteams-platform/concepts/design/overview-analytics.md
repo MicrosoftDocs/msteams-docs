@@ -176,9 +176,11 @@ Next, see how you should methodically craft your data instrumentation strategy a
 ## See also
 
 - [Plan your app with Teams features](../app-fundamentals-overview.md)
-- [Include a SaaS offer with your Teams app](../deploy-and-publish/appsource/prepare/include-saas-offer.md)
 - [Link unfurling](../../messaging-extensions/how-to/link-unfurling.md)
-- [Build bots for Teams](../../bots/what-are-bots.md)
-- [Build tabs for Teams](../../tabs/what-are-tabs.md)
-- [Message extensions](../../messaging-extensions/what-are-messaging-extensions.md)
-- [Teams Toolkit Overview](../../toolkit/teams-toolkit-fundamentals.md)
+- [Microsoft graph](/graph/teams-concept-overview)
+- [Bots](../../bots/what-are-bots.md)
+- [Tabs](../../tabs/what-are-tabs.md)
+- [Cards and task modules](../../task-modules-and-cards/cards-and-task-modules.md)
+- [Adaptive Cards](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
+- [Apps for Teams meetings and calls](../../apps-in-teams-meetings/teams-apps-in-meetings.md)
+- [Extend Teams apps across Microsoft 365](../../m365-apps/overview.md)

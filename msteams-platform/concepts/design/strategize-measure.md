@@ -133,7 +133,7 @@ Happiness intends to measure your user’s attitude towards your product and can
 ## See also
 
 - [Plan your app with Teams features](../app-fundamentals-overview.md)
-- [Teams Toolkit Overview](../../toolkit/teams-toolkit-fundamentals.md)
-- [Types of cards](../../task-modules-and-cards/cards/cards-reference.md)
-- [Message extensions](../../messaging-extensions/what-are-messaging-extensions.md)
-- [Build tabs for Teams](../../tabs/what-are-tabs.md)
+- [Adaptive Cards](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
+- [Tabs](../../tabs/what-are-tabs.md)
+- [Bots](../../bots/what-are-bots.md)
+- [Receive all conversation messages with RSC](../../bots/how-to/conversations/channel-messages-with-rsc.md)

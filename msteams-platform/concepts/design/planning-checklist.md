@@ -156,3 +156,11 @@ Teams doesn't host your app. When a user installs your app in Teams, they instal
 ## See also
 
 - [Plan your app with Teams features](../app-fundamentals-overview.md)
+- [Teams overview](/graph/teams-concept-overview)
+- [Build bots for Teams](../../bots/what-are-bots.md)
+- [Build bots for Teams](../../bots/what-are-bots.md)
+- [Message extensions](../../messaging-extensions/what-are-messaging-extensions.md)
+- [Adaptive Cards](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
+- [Enable SSO for tab app](../../tabs/how-to/authentication/tab-sso-overview.md)
+- [Enable SSO for your app](../../bots/how-to/authentication/bot-sso-overview.md)
+- [Create deep links](../build-and-test/deep-links.md)

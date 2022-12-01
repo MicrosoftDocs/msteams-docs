@@ -182,3 +182,4 @@ In the third stage, provide complete experience to your users. You can enable us
 * [Designing your bot](../../bots/design/bots.md)
 * [Designing task modules](../..//task-modules-and-cards/task-modules/design-teams-task-modules.md)
 * [Store validation guidelines](../deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)
+* [Tabs on mobile](../../tabs/design/tabs-mobile.md)

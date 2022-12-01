@@ -94,3 +94,7 @@ For example:
 * [Plan your app with Teams features](../app-fundamentals-overview.md)
 * [Planning checklist](../design/planning-checklist.md)
 * [Build your first Microsoft Teams app](../../get-started/get-started-overview.md)
+* [Webhooks and connectors](../../webhooks-and-connectors/what-are-webhooks-and-connectors.md)
+* [Bots](../../bots/what-are-bots.md)
+* [Tabs](../../tabs/what-are-tabs.md)
+* [Message extensions](../../messaging-extensions/what-are-messaging-extensions.md)
