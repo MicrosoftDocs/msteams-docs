@@ -103,5 +103,8 @@ microsoftTeams.media.scanBarCode((error: microsoftTeams.SdkError, decodedText: s
 
 ## See also
 
+* [Integrate media capabilities](media-capabilities.md)
+* [Integrate location capabilities](location-capability.md)
+* [Integrate People Picker](people-picker-capability.md)
 * [Device capabilities](device-capabilities-overview.md)
 * [App manifest schema for Teams](../../resources/schema/manifest-schema.md)

@@ -169,5 +169,8 @@ You must ensure to handle these errors appropriately in your Teams app. The foll
 
 ## See also
 
+* [Integrate media capabilities](media-capabilities.md)
+* [Integrate location capabilities](location-capability.md)
+* [Integrate People Picker](people-picker-capability.md)
 * [Device capabilities](device-capabilities-overview.md)
 * [Meeting apps APIs](../../apps-in-teams-meetings/meeting-apps-apis.md)
