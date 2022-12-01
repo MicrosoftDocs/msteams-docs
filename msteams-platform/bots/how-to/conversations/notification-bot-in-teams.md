@@ -13,7 +13,7 @@ Microsoft Teams Toolkit enables you to build applications that capture events an
 
 :::image type="content" source="../../../assets/images/notification-bot/notification-new-scenario-diagram.png" alt-text="weather forecast sample notification scenario" lightbox="../../../assets/images/notification-bot/notification-new-scenario-diagram.png":::
 
-You can create notification bot in other scenarios as well, such as a notification can be sent in teams DevOps channel if there's a build failure.
+You can create notification bot in other scenarios, such as a notification can be sent in teams DevOps channel if there's a build failure.
 
 **Advantages**
 
