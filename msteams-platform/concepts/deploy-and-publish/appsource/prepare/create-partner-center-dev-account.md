@@ -39,7 +39,7 @@ Open a [Partner Center support ticket](https://partner.microsoft.com/support/v2/
 | -------   | -------  |
 |Category| Commercial Marketplace|
 | Topic | General Marketplace Help and How-to questions |
-| Subtopic| Office add-in |
+| Subtopic| Microsoft 365 add-in |
 
 <br>
 
@@ -57,7 +57,7 @@ Visit the [publishers support page](https://aka.ms/marketplacepublishersupport) 
 
 <details>
 
-<summary><b>How do I manage my Office Store account in Partner Center?</b></summary>
+<summary><b>How do I manage my Microsoft 365 Store account in Partner Center?</b></summary>
 
 See [manage your account through Partner Center](/office/dev/store/manage-account-settings-and-profile) for information.
 

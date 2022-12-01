@@ -25,8 +25,8 @@ The rest of this guide walks you through these steps and shows how to preview yo
 To complete this tutorial, you need:
 
 * A Microsoft 365 Developer Program sandbox tenant.
-* Enrollment in *Office 365 Targeted Releases* for your sandbox tenant.
-* A test environment with Office apps installed from the Microsoft 365 Apps *Beta Channel*.
+* Enrollment in *Microsoft 365 Targeted Releases* for your sandbox tenant.
+* A test environment with Microsoft 365 apps installed from the Microsoft 365 Apps *Beta Channel*.
 * (Optional) Microsoft Visual Studio Code with the Teams Toolkit extension.
 
 > [!div class="nextstepaction"]
@@ -207,7 +207,7 @@ As you test your message extension, you can identify the source (originating fro
 
 ## Next step
 
-Publish your app to be discoverable in Teams, Outlook, and Office:
+Publish your app to be discoverable in Teams, Outlook, and Microsoft 365:
 
 > [!div class="nextstepaction"]
-> [Publish Teams apps for Outlook and Office](publish.md)
+> [Publish Teams apps for Outlook and Microsoft 365](publish.md)
