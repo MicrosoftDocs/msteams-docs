@@ -44,22 +44,22 @@ Depending on your app functionality, you're required to provide Teams tenant con
     - Admin account (required)
     - Non-admin accounts (required)
 
-        - Ensure test accounts are safe listed or configured with licenses keys (if applicable).
+        - Ensure that test accounts are safe listed or configured with licenses keys (if applicable).
         - If your app requires users to log in or connect to external services, provide the required credentials to complete the login or connection with external service.
-        - Ensure phone-based 2-way authentication is disabled for the test accounts.
-        - If the app provides a collaborative experience, provide a non-admin account for each user persona for example, If your app is used by Teachers and students, provide credentials for both of them.
-        - Ensure at least one account has access to premium or upgraded features (if applicable).
-        - All accounts you provide must include pre-populated data to help in testing for example, If your app helps to provide market insights based on the user profile, ensure market data is pre-populated along with a few user profiles.
-        - Provide at least one account that isn't pre-configured to properly test the first-run sign-in experience.
+        - Ensure that phone-based 2-way authentication is disabled for the test accounts.
+        - If the app provides a collaborative experience, provide a non-admin account for each user persona. For example, if your app is used by teachers and students, provide credentials for both user personas.
+        - Ensure that at least one account has access to premium or upgraded features (if applicable).
+        - All accounts you provide must include pre-populated data to help in testing. For example, if your app helps to provide market insights based on the user profile, ensure that market data is pre-populated along with a few user profiles.
+        - Provide at least one account that isn't pre-configured to test the first-run sign-in experience properly.
 
     > [!NOTE]
-    > These accounts must be utilized only for validation requirements. The Validation team will fully test your app, including first-run user experience.
-    > If your application is FREE for all users and anyone who intends to use your application can Sign up to use the app, you may indicate the same in the test notes. The validation team will use the sign up process as described.
+    > These accounts must be utilized only for validation requirements. The validation team will fully test your app, including first-run user experience.
+    > If your application is free for all users and anyone who intends to use your application can sign up to use the app, indicate the same in the test notes. The validation team will use the sign up process as described.
 
-3. Test Notes Provide details about your app's capabilities in Teams and the steps for testing each one. This helps the validation team to better understand your app and complete the testing for all functionalities in your app. If your app functionality includes event-based notifications, please list the instructions to trigger these events. For time-based notifications indicate the expected time for receiving these notifications.
+3. **Test Notes**: They provide details about your app's capabilities in Teams and the steps for testing each one. This helps the validation team to better understand your app and complete the testing for all functionalities in your app. If your app functionality includes event-based notifications, please list the instructions to trigger these events. For time-based notifications, indicate the expected time for receiving these notifications.
 
     > [!NOTE]
-    > While functional testing of the app is initiated based on the test notes provided, the validation team will not restrict the testing only to the test instructions provided.
+    > The functional testing of the app is initiated based on the test notes provided. However, the validation team will not restrict the testing only to the test instructions provided.
 
 4. **Demo Video**: Provide a recording of your app so that Microsoft can fully understand its functionality.
 
