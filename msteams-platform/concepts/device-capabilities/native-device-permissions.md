@@ -256,10 +256,14 @@ Device permissions are stored for every sign in session. It means that if you si
 |---------------|--------------|--------|
 |Device permissions | Use Microsoft Teams tab sample app to demonstrate device permissions |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs) |
 
+## Next step
+
+> [!div class="nextstepaction"]
+> [Device permissions for the browser](browser-device-permissions.md)
+
 ## See also
 
 * [Device capabilities](device-capabilities-overview.md)
-* [Device permissions for the browser](browser-device-permissions.md)
 * [Integrate media capabilities](media-capabilities.md)
 * [Integrate QR or barcode scanner capability in Teams](qr-barcode-scanner-capability.md)
 * [Integrate location capabilities in Teams](location-capability.md)

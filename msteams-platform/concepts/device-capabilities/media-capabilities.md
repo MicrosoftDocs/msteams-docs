@@ -405,3 +405,4 @@ To enable, follow the steps:
 * [Integrate People Picker](people-picker-capability.md)
 * [Requirements and considerations for application-hosted media bots](~/bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md)
 * [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
+* [Plan responsive tabs for Teams mobile](../design/plan-responsive-tabs-for-teams-mobile.md)
