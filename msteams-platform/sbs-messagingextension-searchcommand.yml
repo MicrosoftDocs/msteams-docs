@@ -319,8 +319,8 @@ items:
            `https://9179****.ngrok.io/auth-end`. </br>
 
          1. Enable **Implicit grant and hybrid flows** by selecting the following checkboxes:
-             * **ID tokens**
-             * **Access tokens**
+             * Access tokens (used for implicit flows)
+             * ID tokens (used for implicit and hybrid flows)
    
          1. Select **Configure**.
 
