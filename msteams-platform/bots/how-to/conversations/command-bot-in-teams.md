@@ -13,7 +13,7 @@ Microsoft Teams allows you to automate simple and repetitive tasks in a conversa
 
 The command bot template is built using the TeamsFx SDK, which provides a simple set of functions over the Microsoft Bot Framework to implement the scenario. Command bot can be used in different scenarios such as checking ticket status, and retrieve help information.
 
-[Placeholder for command bot infographic image]
+:::image type="content" source="../../../assets/images/command-bot-teams/commandbot-flowchart1.png" alt-text="creating command bot app with adaptive card flow chart" lightbox="../../../assets/images/command-bot-teams/commandbot-flowchart1.png":::
 
 **Advantages**
 
