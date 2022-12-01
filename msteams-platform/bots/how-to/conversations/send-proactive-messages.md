@@ -89,7 +89,7 @@ See the following video to learn how to send proactive message from bots:
 
 <br>
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4NHyk]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4NHyk>]
 <br>
 
 ### Understand who blocked, muted, or uninstalled a bot
@@ -204,19 +204,19 @@ public class NotifyController : ControllerBase
     {
         foreach (var conversationReference in _conversationReferences.Values)
         {
-
             var newReference = new ConversationReference()
-        {
-            Bot = new ChannelAccount()
             {
-                Id = conversationReference.Bot.Id
-            },
-            Conversation = new ConversationAccount()
-            {
-                Id = conversationReference.Conversation.Id
-            },
-            ServiceUrl = conversationReference.ServiceUrl,
-        };
+                Bot = new ChannelAccount()
+                {
+                  Id = conversationReference.Bot.Id
+                },
+                Conversation = new ConversationAccount()
+                {
+                    Id = conversationReference.Conversation.Id
+                },
+                ServiceUrl = conversationReference.ServiceUrl,
+            };
+
             // Sends a proactive message from the bot to a conversation.
             await ((BotAdapter)_adapter).ContinueConversationAsync(_appId, newReference, BotCallback, default(CancellationToken));
         }
@@ -333,6 +333,8 @@ async def _message_all_members(self, turn_context: TurnContext):
 ```
 
 # [JSON](#tab/json)
+
+[SDK reference](/microsoftteams/platform/bots/how-to/conversations/send-proactive-messages?tabs=json)
 
 ```json
 POST /v3/conversations

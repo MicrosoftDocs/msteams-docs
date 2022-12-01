@@ -99,6 +99,8 @@ export class MyBot extends TeamsActivityHandler {
 
 # [JSON](#tab/json)
 
+[SDK reference](/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=json#channel-created)
+
 ```json
 {
     "type": "conversationUpdate",
@@ -194,6 +196,8 @@ export class MyBot extends TeamsActivityHandler {
 
 # [JSON](#tab/json)
 
+[SDK reference](/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=json#channel-renamed)
+
 ```json
 {
     "type": "conversationUpdate",
@@ -287,6 +291,8 @@ export class MyBot extends TeamsActivityHandler {
 
 # [JSON](#tab/json)
 
+[SDK reference](/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=json#channel-deleted)
+
 ```json
 {
     "type": "conversationUpdate",
@@ -324,8 +330,8 @@ export class MyBot extends TeamsActivityHandler {
 ```
 
 # [Python](#tab/python)
-
 * [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?view=botbuilder-py-latest#botbuilder-core-teams-teamsactivityhandler-on-teams-channel-deleted&preserve-view=true)
+
 
 ```python
 async def on_teams_channel_deleted(
@@ -381,6 +387,8 @@ export class MyBot extends TeamsActivityHandler {
 ```
 
 # [JSON](#tab/json)
+
+[SDK reference](/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=json#channel-restored)
 
 ```json
 {
@@ -510,6 +518,8 @@ export class MyBot extends TeamsActivityHandler {
 ```
 
 # [JSON](#tab/json)
+
+[SDK reference](/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=json#members-added)
 
 The message your bot receives when the bot is added to a team.
 
@@ -658,7 +668,6 @@ protected override async Task OnTeamsMembersRemovedAsync(IList<ChannelAccount> m
 ```
 
 # [TypeScript](#tab/typescript)
-
 * [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onteamsmembersremovedevent&preserve-view=true)
 
 ```typescript
@@ -684,6 +693,8 @@ export class MyBot extends TeamsActivityHandler {
 ```
 
 # [JSON](#tab/json)
+
+[SDK reference](/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=json#members-removed)
 
 The `channelData` object in the following payload example is based on adding a member to a team rather than a group chat, or initiating a new one-to-one conversation:
 
@@ -750,7 +761,6 @@ Your bot is notified when the team is renamed. It receives a `conversationUpdate
 The following code shows an example of team renamed event:
 
 # [C#](#tab/dotnet)
-
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsteamrenamedasync?view=botbuilder-dotnet-stable#definition&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L349)
 
@@ -785,6 +795,8 @@ export class MyBot extends TeamsActivityHandler {
 ```
 
 # [JSON](#tab/json)
+
+* [SDK reference](/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=json#team-renamed)
 
 ```json
 { 
@@ -870,6 +882,8 @@ export class MyBot extends TeamsActivityHandler {
 ```
 
 # [JSON](#tab/json)
+
+* [SDK reference](/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=json#team-deleted)
 
 ```json
 { 
@@ -958,6 +972,8 @@ export class MyBot extends TeamsActivityHandler {
 ```
 
 # [JSON](#tab/json)
+
+* [SDK reference](/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=json#team-restored)
 
 ```json
 { 
@@ -1050,6 +1066,8 @@ export class MyBot extends TeamsActivityHandler {
 
 # [JSON](#tab/json)
 
+* [SDK reference](/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=json#team-archived)
+
 ```json
 { 
     "type": "conversationUpdate",
@@ -1141,6 +1159,8 @@ export class MyBot extends TeamsActivityHandler {
 
 # [JSON](#tab/json)
 
+* [SDK reference](/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=json#team-unarchived)
+
 ```json
 { 
     "type": "conversationUpdate",
@@ -1227,6 +1247,8 @@ protected override async Task OnReactionsAddedAsync(IList<MessageReaction> messa
 * [SDK reference](/javascript/api/botbuilder-core/activityhandler?view=botbuilder-ts-latest#botbuilder-core-activityhandler-onreactionsadded&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L55)
 
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L55)
+
 <!-- Verify -->
 
 ```typescript
@@ -1252,6 +1274,8 @@ export class MyBot extends TeamsActivityHandler {
 ```
 
 # [JSON](#tab/json)
+
+* [SDK reference](/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=json#reactions-added-to-bot-message)
 
 ```json
 {
@@ -1351,6 +1375,8 @@ protected override async Task OnReactionsRemovedAsync(IList<MessageReaction> mes
 * [SDK reference](/javascript/api/botbuilder-core/activityhandler?view=botbuilder-ts-latest#botbuilder-core-activityhandler-onreactionsremoved&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L63)
 
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L63)
+
 <!-- Verify -->
 
 ```typescript
@@ -1375,6 +1401,8 @@ export class MyBot extends TeamsActivityHandler {
 ```
 
 # [JSON](#tab/json)
+
+* [SDK reference](/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=json#reactions-removed-from-bot-message)
 
 ```json
 {
@@ -1467,7 +1495,6 @@ In this example, the `conversation.id` of the `conversationUpdate` and `installa
 > The selected channel id is only set on `installationUpdate` *add* events that are sent when an app is installed into a team.
 
 # [C#](#tab/dotnet)
-
 * [SDK reference](/dotnet/api/microsoft.bot.builder.activityhandler.oninstallationupdateactivityasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-activityhandler-oninstallationupdateactivityasync(microsoft-bot-builder-iturncontext((microsoft-bot-schema-iinstallationupdateactivity))-system-threading-cancellationtoken)&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L70-L80)
 
@@ -1515,6 +1542,8 @@ async onInstallationUpdateActivity(context: TurnContext) {
 ```
 
 # [JSON](#tab/json)
+
+* [SDK reference](/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=json#install-update-event)
 
 ```json
 {
