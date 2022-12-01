@@ -9,7 +9,9 @@ ms.localizationpriority: high
 
 # Notification bot in Teams
 
-Microsoft Teams Toolkit enables you to build applications that capture events and send them as notifications to a personal, groupchat, or a channel in Teams. You can send notifications as plain text or Adaptive Cards. The notification bot template creates an app that sends a message to Teams with Adaptive Cards triggered by HTTP post request. The app template is built using the TeamsFx SDK, which provides a simple set of functions over Microsoft Bot Framework to implement your requirement. For example, in a scenario where a travel agency builds an app in Teams for their customers to keep them up-to-date with the weather forecast. In the following diagram you can see a Teams app sends notification to the travelers about the destination weather forecast:
+Microsoft Teams Toolkit enables you to build applications that capture events and send them as notifications to a personal, groupchat, or a channel in Teams. You can send notifications as plain text or Adaptive Cards. The notification bot template creates an app that sends a message to Teams with Adaptive Cards triggered by HTTP post request.
+
+The app template is built using the TeamsFx SDK, which provides a simple set of functions over Microsoft Bot Framework to implement your requirement. For example, in a scenario where a travel agency builds an app in Teams for their customers to keep them up-to-date with the weather forecast. In the following diagram you can see a Teams app that sends notification to the travelers about the destination weather forecast:
 
 :::image type="content" source="../../../assets/images/notification-bot/notification-new-scenario-diagram.png" alt-text="weather forecast sample notification scenario" lightbox="../../../assets/images/notification-bot/notification-new-scenario-diagram.png":::
 
@@ -118,8 +120,7 @@ You can make the following customizations to extend the notification template to
 
   * `Cosmos DB` trigger to send notifications when a Cosmos document is created or updated.
 
-     > [!NOTE]
-     > For more information on support triggers, see [Azure Functions support triggers](/azure/azure-functions/functions-triggers-bindings?tabs=javascript).
+For more information on support triggers, see [Azure Functions support triggers](/azure/azure-functions/functions-triggers-bindings?tabs=javascript).
 
 <br>
 
@@ -143,8 +144,6 @@ You can also add new cards if needed. For more information on how to build diffe
 
 * Notifications to a personal chat:
 
-# [TypeScript](#tab/ts3)
-
   ```TypeScript
        // list all installation targets
        for (const target of await bot.notification.installations()) {
@@ -156,9 +155,7 @@ You can also add new cards if needed. For more information on how to build diffe
        }
   ```
 
-# [C#](#tab/dotnet3)
-
-```C#/.NET
+  ```C#
         // list all installation targets
         foreach (var target in await _conversation.Notification.GetInstallationsAsync()) {
         // "Person" means this bot is installed as Personal   app
@@ -170,13 +167,9 @@ You can also add new cards if needed. For more information on how to build diffe
      }
   ```
 
----
-
 * Notifications to a groupchat:
 
-# [TypeScript](#tab/ts2)
-
-```TypeScript
+  ```TypeScript
             // list all installation targets
             for (const target of await bot.notification.installations()) {
             // "Group" means this bot is installed to a Group Chat
@@ -193,11 +186,9 @@ You can also add new cards if needed. For more information on how to build diffe
           }
         }
 
-```
+  ```
 
-# [C#](#tab/dotnet2)
-
-```C#/.NET
+  ```C#
            // list all installation targets
            foreach (var target in await _conversation.Notification.GetInstallationsAsync())     {
               // "Group" means this bot is installed to a Group Chat
@@ -215,13 +206,9 @@ You can also add new cards if needed. For more information on how to build diffe
           }
   ```
 
----
-
 * Notifications to a channel:
 
-# [TypeScript](#tab/ts1)
-
-```TypeScript
+  ```TypeScript
                // list all installation targets
             for (const target of await bot.notification.   installations()) {
             // "Channel" means this bot is installed to a Team (default to notify General channel)
@@ -242,11 +229,9 @@ You can also add new cards if needed. For more information on how to build diffe
                }
              }
            }
-```
+  ```
 
-# [C#](#tab/dotnet1)
-
-```C#/.NET
+  ```C#
         // list all installation targets
         foreach (var target in await _conversation.Notification.GetInstallationsAsync()) {
         // "Channel" means this bot is installed to a Team (default to notify General channel)
@@ -268,9 +253,8 @@ You can also add new cards if needed. For more information on how to build diffe
         }
       }
     }
-```
 
----
+  ```
 
 * Notifications to a specific channel:
 
@@ -460,15 +444,15 @@ In the following table, you can see the comparison of the two different ways:
 
 |&nbsp;   |Teams bot app  |Teams Incoming Webhook  |
 |---------|---------|---------|
-|Message individual person    |Yes      |No       |
-|Message groupchat     |Yes         |No         |
-|Message public channel     |Yes         |Yes         |
-|Message private channel     |No       |Yes       |
-|Send card message     |Yes       |Yes         |
-|Send welcome message     |Yes      |No         |
-|Retrieve Teams context     |Yes       |No       |
-|Require installation steps in Teams     |Yes         |No         |
-|Require Azure resource     |Azure Bot Service         | No       |
+|Message individual person    | ✔️ | ❌ |
+|Message groupchat     | ✔️ | ❌ |
+|Message public channel     | ✔️ | ✔️ |
+|Message private channel     | ❌ | ✔️ |
+|Send card message     | ✔️ | ✔️ |
+|Send welcome message     | ✔️ | ❌ |
+|Retrieve Teams context     | ✔️ | ❌ |
+|Require installation steps in Teams     | ✔️ | ❌ |
+|Require Azure resource     |Azure Bot Service         | ❌ |
 
 ### Incoming Webhook notification
 
@@ -529,7 +513,7 @@ Notification target connections are stored in the persistence storage. If you're
 
 <details>
 
-<summary><b>Why is undefined error returned when using the API `findChannel()`?</b></summary>
+<summary><b>Why is undefined error returned when using the API findChannel()?</b></summary>
 
 You can encounter an undefined error, when the bot app is installed into other channels instead of the **General** channel. To fix this error, you can uninstall the bot app from Teams and redebug and relaunch it. After you've redebug and relaunched, ensure that the bot app is installed into the **General** channel.
 
@@ -577,7 +561,7 @@ Perform the following steps to extend your notification bot to support command a
 
 <summary><b>How to extend my notification bot to support Adaptive Card actions?</b></summary>
 
-To add Adaptive Card actions in notification bot, see the [steps to add card actions](workflow-bot-in-teams.md#add-card-actions).
+To add Adaptive Card actions in notification bot, see the steps to [add card actions](workflow-bot-in-teams.md#add-card-actions).
 
 <br>
 
@@ -590,6 +574,6 @@ To add Adaptive Card actions in notification bot, see the [steps to add card act
 * [Build your first bot app using JavaScript](../../../sbs-gs-bot.yml)
 * [Build notification bot with JavaScript](../../../sbs-gs-notificationbot.yml)
 * [Proactive messages](send-proactive-messages.md)
-* [Adaptive Cards](../../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
+* [Adaptive Cards](../../../task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 * [TeamsFx SDK](../../../toolkit/TeamsFx-SDK.md)
-* [Bot Framework SDK](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0)
+* [Bot Framework SDK](/azure/bot-service/bot-builder-basics)
