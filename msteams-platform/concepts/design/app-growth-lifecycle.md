@@ -235,3 +235,29 @@ To reiterate, this stage is all about putting learnings from previous ad-hoc, pi
 - **Include app in global outreach to Microsoft sellers**: Expose your solution to Microsoft field sellers and executives through an on-demand webinar featuring your speakers and content. Microsoft will post your on-demand webinar to an internal site and promote it to Microsoft sellers. Share the internal Microsoft on-demand webinar link with your Microsoft contacts as well. Connect with the Microsoft 365 ISV Benefits Service Desk to check eligibility, seek guidance and execute this motion.
 - **Host customer roundtables to promote the app**: Participate in a customer roundtable session with Microsoft to highlight the value of your Teams app to customers. Connect with the Microsoft 365 ISV Benefits Service Desk to check eligibility, seek guidance and execute this motion. Subsequently, a Microsoft Marketing Program Manager will reach out to you about participating in a customer roundtable session based on campaign alignment.
 
+### Succeeding with your collaborative app
+
+To wrap up, your collaborative app is now becoming a full-fledged strategic product line similar to your core SaaS product for the web browser or native apps for Windows or mobile phones. To maximize success for your customers and ROI for your business, here’re the initiatives and growth levers you must leverage:
+
+#### What should you as a developer do during this final stage?
+
+- **Wider TAM coverage across existing and prospect user base**:
+
+    Continue to increase the usage of your collaborative app on Teams through existing customer activation and new customer acquisition via the Teams marketplace or through sales-led customer deal wins leading with your app.
+
+- **Report & celebrate customer activation, deal wins & revenue**:
+
+    Share notable customer wins, customer success stories and resulting revenue from user acquisition or deal wins attributed to your Teams app with your Microsoft field, account or engineering representatives so that Microsoft can selectively drive executive visibility for your app and explore any possible GTM or marketing-drive acceleration for your app.
+
+- **Convert PQLs from Teams app into active sales pipeline**:
+
+    A core product-led growth initiative, capture Teams marketplace trials, trials sign-ups coming from your Teams app or freemium users as potential leads to be converted into paying customers. Remember to monitor the usage patterns, user retention and product value experienced by the trial or freemium users to determine which customers ca be converted through sales, customer success or direct product interventions (eg: upsell, upgrade prompts).
+
+- **Convert PQLs from Teams app into active sales pipeline**:
+
+    A core product-led growth initiative, capture Teams marketplace trials, trials sign-ups coming from your Teams app or freemium users as potential leads to be converted into paying customers. Remember to monitor the usage patterns, user retention and product value experienced by the trial or freemium users to determine which customers ca be converted through sales, customer success or direct product interventions (eg: upsell, upgrade prompts).
+
+- **Continuously reduce churn via product & analytics-led insights**:
+
+    Retaining users by providing them a sticky experience is key to growing your Teams app and realizing economic value from your product and GTM investments. Make sure you’ve implemented robust and granular analytics for your Teams app that serves your need to measure when and which users have churned or likely to churn from your app. You can them re-engage and re-target them via outreach channels within or outside your product.
+
