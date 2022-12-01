@@ -26,7 +26,7 @@ items:
     
     This step-by-step guide helps you to build tabs with the Adaptive Cards on desktop and mobile. You'll see the following output:
 
-    :::image type="content" source="../msteams-platform/assets/images/adaptive-cards/desktop-mobile-screenshot.png" alt-text="Desktop Mobile screenshot" lightbox="/assets/images/adaptive-cards/desktop-mobile-screenshot.png":::
+    :::image type="content" source="../msteams-platform/assets/images/adaptive-cards/desktop-mobile-screenshot.png" alt-text="Desktop Mobile screenshot" lightbox="../msteams-platform/assets/images/adaptive-cards/desktop-mobile-screenshot.png":::
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -364,8 +364,8 @@ items:
     
     Perform the following steps to use the tab:
 
-    1. In the left pane of the Teams, select ●●● and select your app from the list.
-    1. Tab shows the Adaptive Card with action controls.
+    1. In the left pane of the Teams, select ●●●.
+    1. Select your app from the list. The tab displays the Adaptive Card with action controls.
     1. Select **Sign In**.
 
        :::image type="content" source="../msteams-platform/assets/images/adaptive-cards/adaptive-cards-tab-action-controls_1.png" alt-text="Tab showing Adaptive card with action controls":::
@@ -395,7 +395,7 @@ items:
   content: |
     Did you come up with something like this?
 
-    :::image type="content" source="../msteams-platform/assets/images/adaptive-cards/desktop-mobile-screenshot.png" alt-text="Desktop Mobile screenshot" lightbox="/assets/images/adaptive-cards/desktop-mobile-screenshot.png":::::::::
+    :::image type="content" source="../msteams-platform/assets/images/adaptive-cards/desktop-mobile-screenshot.png" alt-text="Desktop Mobile screenshot" lightbox="../msteams-platform/assets/images/adaptive-cards/desktop-mobile-screenshot.png":::
 
     
 - content: |
