@@ -84,11 +84,12 @@ Here are sample test instructions for your reference:
 
 ### About the EDU app
 
-Contoso offers a web-based productivity tool that teachers use to grade students’ work. It supports teachers during the entire process of setting, correcting, marking, grading, and giving feedback on assignments. This can be about any subject and have any form, such as essays, papers, and letters. Additionally, the app offers various options, such as plagiarism checking to promote original writing, Team Hand-ins to stimulate collaborating in groups and Peer Assessment and Feedback to help students learn from each other.
+Contoso offers a web-based productivity tool that teachers use to grade students’ work. It supports teachers during the entire process of setting, correcting, marking, grading, and giving feedback on assignments. It can be done for any subject and have any form, such as essays, papers, and letters. Additionally, the app offers various options, such as plagiarism checking to promote original writing, Team hand-ins to stimulate collaborating in groups and peer assessment and feedback to help students learn from each other.
 
 ### Pre-requisites for EDU app
 
-IMPORTANT: Before you start using Contoso within Teams, we assume that you have an educational tenant already filled with a school, classes or teams, teachers, and students. If not, you'll see error 005 or 0010.
+> [!IMPORTANT]
+> Before you start using Contoso within Teams, we assume that you have an educational tenant already filled with a school, classes or teams, teachers, and students. If not, you'll see error 005 or 0010.
 
 ### Test credentials
 
@@ -111,11 +112,13 @@ Student #2
 
 #### Contoso dashboard
 
-When you go to the Contoso app within MS Teams, you first arrive at the dashboard page. This page provides at a glance information about texts that haven’t been handed-in yet, that still 4 need to be corrected and the ones that are corrected already and of which the feedback can be sent to the student. In the **Assignments** section, it shows the assignments that are currently active and by clicking on the green button underneath that it's possible to create a new assignment in Contoso (that is through the needless integration also immediately visible in Microsoft Teams when created). Also, you can select a period and group or class here.
+When you go to the Contoso app within Microsoft Teams, you first arrive at the dashboard page. This page provides at a glance information about texts that haven’t been handed-in yet, that still need to be corrected and the ones that are corrected already and of which the feedback can be sent to the student.
+
+In the **Assignments** section, it shows the assignments that are currently active and by clicking on the green button underneath that it's possible to create a new assignment in Contoso (that is through the needless integration also immediately visible in Microsoft Teams when created). You can also select a period and group or class here.
 
 #### Classes
 
-Through the integration of Contoso within MS Teams, it's possible to make a group or class within Teams, which is afterwards also created within Contoso (within Teams) automatically. See in the image below, the creation of ‘Lizzy’s trial class’.
+Through the integration of Contoso within Microsoft Teams, it's possible to make a group or class within Teams, which is afterwards also created within Contoso (within Teams) automatically. See in the image below, the creation of ‘Lizzy’s trial class’.
 
 :::image type="content" source="../../../../assets/images/store-detail-page/edu-sample-class.png" alt-text="Education sample shows trial class":::
 
@@ -124,7 +127,7 @@ In the next image, you can see that it's automatically visible within Contoso wh
 :::image type="content" source="../../../../assets/images/store-detail-page/edu-sample-class-group.png" alt-text="Education sample showing Contoso class group":::
 
 > [!NOTE]
-> The other way around it isn't possible yet. We would like to realize this in cooperation with Microsoft Teams. This would entail being possible to create a Class or Group in the app of Contoso in Microsoft Teams and that this would also be linked to the **Teams** page within Microsoft Teams.
+> The other way around it isn't possible yet. We'd like to realize this in cooperation with Microsoft Teams. This would entail being possible to create a Class or Group in the app of Contoso in Microsoft Teams and that this would also be linked to the **Teams** page within Microsoft Teams.
 
 #### Assignments
 
@@ -151,7 +154,7 @@ To create an assignment in Teams, go to **Assignments** and select **Create** (b
 
 As the template options are disabled for the use of Contoso within Microsoft Teams, select the  **Create a new assignment** button (without an already existing template). You get to see the following screen. Select a title that says something about the assignment so that you can later find the correct assignment based on the title.
 
-The status of the assignment can be **draft**, **published**, **closed** or **hidden**.
+The status of the assignment can be **draft**, **published**, **closed**, or **hidden**.
 
 Automatically, this status is visible on draft. It means that when you save this new assignment, it'll be saved as a concept after which, you'd still need to send it to your students. By changing the status to **Published**, it'll immediately send the assignment after you save it. It's always possible to change the status later. For example, it's possible to prepare various assignments before you publish them. The **language of the text** determines which database of observations will be used to check and give feedback on the text. Under the option **Allowed ways to hand in texts**, you can choose whether your students type their texts in Contoso (or copy and paste them from word/pages file), or that they upload a document in Contoso.
 
@@ -169,7 +172,7 @@ Go to **Assignments** or first to **Teams**, then choose your class or group and
 
 #### Observation database
 
-Once one or more words or parts of the text are selected, it's possible to place an observation with the text. This feedback can be given in the form of compliments, critical comments or open comments.
+After one or more words or parts of the text are selected, it's possible to place an observation with the text. This feedback can be given in the form of compliments, critical comments, or open comments.
 
 :::image type="content" source="../../../../assets/images/store-detail-page/edu-sample-database.png" alt-text="Education sample database":::
 
@@ -192,7 +195,7 @@ Once one or more words or parts of the text are selected, it's possible to place
 
 ### About the ERP data transfer app
 
-Contoso is an PaaS or SaaS in cloud platform who transfers data between E-commerce, ERP, CRM, marketplace, mail automation platforms and shipping platforms. Contoso allows automatic transfer  between connected platforms, through its workflows. Users can activate and deactivate workflows with just a click after they connect to platforms, they are interested in.
+Contoso is an PaaS or SaaS in cloud platform who transfers data between E-commerce, ERP, CRM, marketplace, mail automation platforms and shipping platforms. Contoso allows automatic transfer  between connected platforms, through its workflows. Users can activate and deactivate workflows in just one step after they connect to platforms, they're interested in.
 
 ### Feature list for ERP data transfer app
 
