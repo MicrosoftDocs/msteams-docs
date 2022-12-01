@@ -35,9 +35,9 @@ The Microsoft Teams app validation tool helps you identify and fix issues before
 
 ## Compile testing instructions
 
-Depending on your app functionality, you're required to provide Teams tenant configurations, a set of test accounts & test notes. Ensure you meet all requirements listed below to avoid app testability failures & delay in the app publishing process.
+Depending on your app functionality, you're required to provide Teams tenant configurations, a set of test accounts and test notes. Ensure you meet all requirements listed below to avoid app testability failures and delay in the app publishing process.
 
-1. **Tenant configurations**: You are required to configure a Teams tenant to test your app & provide test accounts (details below). To create a demo tenant refer to (link). Ensure your app is configured for this demo tenant. If applicable, safe listing/ connection to external services for this tenant should be done before submission of the app.
+1. **Tenant configurations**: You are required to configure a Teams tenant to test your app and provide test accounts (details below). To create a demo tenant refer to (link). Ensure your app is configured for this demo tenant. If applicable, safe listing or connection to external services for this tenant should be done before submission of the app.
 
 2. **Test Accounts**: Depending on your app's features, you need to provide all the following accounts:
 
@@ -45,18 +45,18 @@ Depending on your app functionality, you're required to provide Teams tenant con
     - Non-admin accounts (required)
 
         - Ensure test accounts are safe listed or configured with licenses keys (if applicable).
-        - If your app requires users to log in/connect to external services, provide the required credentials to complete the login/connection with external service.
+        - If your app requires users to log in or connect to external services, provide the required credentials to complete the login or connection with external service.
         - Ensure phone-based 2-way authentication is disabled for the test accounts.
-        - If the app provides a collaborative experience, provide a non-admin account for each user persona e.g. If your app is used by Teachers & students, provide credentials for both of them.
+        - If the app provides a collaborative experience, provide a non-admin account for each user persona e.g. If your app is used by Teachers and students, provide credentials for both of them.
         - Ensure at least one account has access to premium or upgraded features (if applicable).
-        - All accounts you provide must include pre-populated data to help in testing e.g. If your app helps to provide market insights based on the user profile, ensure market data is prepopulated along with a few user profiles.
+        - All accounts you provide must include pre-populated data to help in testing e.g. If your app helps to provide market insights based on the user profile, ensure market data is pre-populated along with a few user profiles.
         - Provide at least one account that isn't pre-configured to properly test the first-run sign-in experience.
 
     > [!NOTE]
-    > These accounts must be utilized only for validation requirements. The Validation team will fully test your app, including first-run user experience. 
-    > If your application is FREE for all users & anyone who intends to use your application can Sign up to use the app, you may indicate the same in the test notes. The validation team will use the sign up process as described.
+    > These accounts must be utilized only for validation requirements. The Validation team will fully test your app, including first-run user experience.
+    > If your application is FREE for all users and anyone who intends to use your application can Sign up to use the app, you may indicate the same in the test notes. The validation team will use the sign up process as described.
 
-3. Test Notes Provide details about your app's capabilities in Teams and the steps for testing each one. This helps the validation team to better understand your app & complete the testing for all functionalities in your app. If your app functionality includes event-based notifications, please list the instructions to trigger these events. For time-based notifications indicate the expected time for receiving these notifications.
+3. Test Notes Provide details about your app's capabilities in Teams and the steps for testing each one. This helps the validation team to better understand your app and complete the testing for all functionalities in your app. If your app functionality includes event-based notifications, please list the instructions to trigger these events. For time-based notifications indicate the expected time for receiving these notifications.
 
     > [!NOTE]
     > While functional testing of the app is initiated based on the test notes provided, the validation team will not restrict the testing only to the test instructions provided.
@@ -84,11 +84,11 @@ Here are sample test instructions for your reference:
 
 ### About the EDU app
 
-Contoso offers a web-based productivity tool that teachers use to grade students’ work. It supports teachers during the entire process of setting, correcting, marking, grading, and giving feedback on assignments. This can be about any subject and have any form, such as essays, papers, and letters. Additionally, the app offers various options, such as plagiarism checking to promote original writing, Team Hand-ins to stimulate collaborating in groups and Peer Assessment & Feedback to help students learn from each other.
+Contoso offers a web-based productivity tool that teachers use to grade students’ work. It supports teachers during the entire process of setting, correcting, marking, grading, and giving feedback on assignments. This can be about any subject and have any form, such as essays, papers, and letters. Additionally, the app offers various options, such as plagiarism checking to promote original writing, Team Hand-ins to stimulate collaborating in groups and Peer Assessment and Feedback to help students learn from each other.
 
 ### Pre-requisites for EDU app
 
-IMPORTANT: Before you start using Contoso within Teams, we assume that you have an educational tenant already filled with a school, classes/teams, teachers, and students. If not, you'll see error 005 or 0010.
+IMPORTANT: Before you start using Contoso within Teams, we assume that you have an educational tenant already filled with a school, classes or teams, teachers, and students. If not, you'll see error 005 or 0010.
 
 ### Test credentials
 
@@ -111,7 +111,7 @@ Student #2
 
 #### Contoso dashboard
 
-When you go to the Contoso app within MS Teams, you first arrive at the dashboard page. This page provides at a glance information about texts that haven’t been handed-in yet, that still 4 need to be corrected and the ones that are corrected already and of which the feedback can be sent to the student. At ‘Assignments’ it shows the assignments that are currently active and by clicking on the green button underneath that it's possible to create a new assignment in Contoso (that is through the needless integration also immediately visible in Microsoft Teams when created). Also, you can select a period and group/class here.
+When you go to the Contoso app within MS Teams, you first arrive at the dashboard page. This page provides at a glance information about texts that haven’t been handed-in yet, that still 4 need to be corrected and the ones that are corrected already and of which the feedback can be sent to the student. At ‘Assignments’ it shows the assignments that are currently active and by clicking on the green button underneath that it's possible to create a new assignment in Contoso (that is through the needless integration also immediately visible in Microsoft Teams when created). Also, you can select a period and group or class here.
 
 #### Classes
 
@@ -130,7 +130,7 @@ On the next image you can see that this is also automatically visible within Con
 
 Within Microsoft Teams you can see the 'Assignments' icon in the left menu. Here you can see a list of assignments. It also shows the due date of the assignments and to what class these assignments are assigned to. Above the list of assignments there are three tabs visible: ‘Assigned’, ‘Returned’ and ‘Drafts’. ‘Assigned’ shows assignments that are sent to your classes, ‘Returned’ are the assignments that you received back from your students and that are ready to be corrected by you and ‘Drafts’ shows assignments that are created as a concept and that aren't sent to your students yet. Next to ‘Drafts’, it's possible to filter assignments by class.
 
-When clicking on an assignment that’s in the list, you can see the status of the assignment per student. When you see ‘Not handed in’ next to the students name, it means that besides the student didn't hand in the assignment, he/she also didn't have a look at the assignment descriptions. When you see ‘Viewed’, it's not handed in yet, but the student did see the assignment description. When ‘Handed in’ you can start correcting the assignment.
+When clicking on an assignment that’s in the list, you can see the status of the assignment per student. When you see ‘Not handed in’ next to the students name, it means that besides the student didn't hand in the assignment, he or she also didn't have a look at the assignment descriptions. When you see ‘Viewed’, it's not handed in yet, but the student did see the assignment description. When ‘Handed in’ you can start correcting the assignment.
 
 :::image type="content" source="../../../../assets/images/store-detail-page/edu-assignment.png" alt-text="Education sample showing class assignment":::
 
@@ -154,7 +154,7 @@ It's possible to modify the assignments that were created. This is possible by g
 
 ##### Correcting documents and giving feedback
 
-Go to ‘Assignments’ or first to ‘Teams’, then choose your class/group and then select the assignment you would like to correct.
+Go to ‘Assignments’ or first to ‘Teams’, then choose your class or group and then select the assignment you would like to correct.
 
 #### Observation database
 
@@ -181,7 +181,7 @@ Once one or more words or parts of the text are selected, it's possible to place
 
 ### About the ERP data transfer app
 
-Contoso is an PaaS/SaaS in cloud platform who transfers data between E-commerce, ERP, CRM, marketplace, mail automation platforms and shipping platforms. Contoso allows automatic transfer  between connected platforms, through its workflows. Users can activate and deactivate workflows with just a click after they connect to platforms, they are interested in.
+Contoso is an PaaS or SaaS in cloud platform who transfers data between E-commerce, ERP, CRM, marketplace, mail automation platforms and shipping platforms. Contoso allows automatic transfer  between connected platforms, through its workflows. Users can activate and deactivate workflows with just a click after they connect to platforms, they are interested in.
 
 ### Feature list for ERP data transfer app
 
@@ -214,7 +214,7 @@ User #2
 
 #### Steps
 
-To use Contoso, users must connect to at least 2 platforms.  Contoso needs platform A and platform B to transfer data. They can find instructions to complete the form visiting our guides online here: https://www.xxxxxxxxxx.com/guide/.
+To use Contoso, users must connect to at least 2 platforms. Contoso needs platform A and platform B to transfer data. They can find instructions to complete the form visiting our guides online here: https://www.xxxxxxxxxx.com/guide/.
 
 On the first login, users will have to authorize the App Contoso Manager to access the information shown on the pop-up. After that, users will find Microsoft 365 already connected.
 
@@ -236,13 +236,13 @@ On the first login, users will have to authorize the App Contoso Manager to acce
 
 ### ERP data transfer app functionality
 
-Workflows are automations that allow several tasks to be repeated automatically, every time a trigger starts (i.e.: get an order by platform A).
+Workflow is an automation that allow several tasks to be repeated automatically, every time a trigger starts (i.e.: get an order by platform A).
 2 workflows are available in Contoso
 
 #### Workflow 1: Copy items from platform A to platform B
 
 This workflow requires platform A and platform B to work.
-This workflow copies all items and products from platform A to platform B. 
+This workflow copies all items and products from platform A to platform B.
 
 Steps for workflow 1: (Provide screen shots)
 
@@ -345,38 +345,6 @@ The Contoso DigiAssist app for Microsoft Teams also includes a Help tab. This di
 - Detailed Steps for configuration in form of PDF or a Video Link attached
 
 </details>
-
-<!--Provide instructions and resources to help the reviewers test your app, including:
-
-* Test accounts
-* Credentials
-* License keys
-
-You can add instructions in Partner Center or upload them to a publicly available location on SharePoint.
-
-### Feature list
-
-Provide details about your app's capabilities in Teams and steps for testing each one.
-
-### Accounts
-
-Provide test accounts if your app requires a license or backend safe listing. All accounts you provide must include pre-populated data to help in testing.
-
-Depending on your app's features, you may need to provide all the following accounts:
-
-* Admin account (required)
-* Non-admin account (required)
-* An account that isn't pre-configured to properly test the first-run sign-in experience (required)
-* An account with access to premium or upgraded features (if applicable)
-* Two accounts in the same tenant to test the collaboration experience for apps that work in shared contexts (if applicable)
-
-### Tenant configurations
-
-If you must configure a Teams tenant to use your app, include those instructions and admin and non-admin accounts for validation.
-
-### Video (optional)
-
-Provide a recording of your app so that Microsoft can fully understand its functionality.-->
 
 ## Create your store listing details
 
@@ -501,28 +469,28 @@ During submission, you're asked to categorize your app. You can categorize your 
 | Microsoft |
 | Education |
 | Productivity |
-| Images & video galleries |
+| Images and video galleries |
 | Project management |
 | Utilities |
 | Social |
 | Communication |
 | Content management |
-| Files & documents |
-| Workflow & business management |
+| Files and documents |
+| Workflow and business management |
 | IT/Admin |
-| Human resources & recruiting|
+| Human resources and recruiting|
 | Developer tools |
-| Meetings & scheduling |
-| Data visualization & BI |
-| Training & tutorial |
-| News & weather |
+| Meetings and scheduling |
+| Data visualization and BI |
+| Training and tutorial |
+| News and weather |
 | Customer support |
 | Reference |
-| Sales & marketing |
-| Look & feel |
-| Customer & contact management (CRM) |
+| Sales and marketing |
+| Look and feel |
+| Customer and contact management (CRM) |
 | Financial management |
-| Maps & feeds |
+| Maps and feeds |
 | Other |
 
 ### Localize your store listing
