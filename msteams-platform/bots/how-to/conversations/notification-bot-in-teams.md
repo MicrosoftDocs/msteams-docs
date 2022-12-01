@@ -9,7 +9,7 @@ ms.localizationpriority: high
 
 # Notification bot in Teams
 
-Microsoft Teams Toolkit enables you to build applications that capture events and send them as notifications to a personal, groupchat, or a channel in Teams. You can send notifications as plain text or [Adaptive Cards](../../../task-modules-and-cards/cards/cards-reference.md#adaptive-card). The notification bot template creates an app that sends a message to Teams with Adaptive Cards triggered by HTTP post request. The app template is built using the TeamsFx SDK, which provides a simple set of functions over Microsoft Bot Framework to implement your requirement. For example, in a scenario where a travel agency builds an app in Teams for their customers to keep them up-to-date with the weather forecast. In the following diagram you can see a Teams app sends notification to the travelers about the destination weather forecast:
+Microsoft Teams Toolkit enables you to build applications that capture events and send them as notifications to a personal, groupchat, or a channel in Teams. You can send notifications as plain text or Adaptive Cards. The notification bot template creates an app that sends a message to Teams with Adaptive Cards triggered by HTTP post request. The app template is built using the TeamsFx SDK, which provides a simple set of functions over Microsoft Bot Framework to implement your requirement. For example, in a scenario where a travel agency builds an app in Teams for their customers to keep them up-to-date with the weather forecast. In the following diagram you can see a Teams app sends notification to the travelers about the destination weather forecast:
 
 :::image type="content" source="../../../assets/images/notification-bot/notification-new-scenario-diagram.png" alt-text="weather forecast sample notification scenario" lightbox="../../../assets/images/notification-bot/notification-new-scenario-diagram.png":::
 
@@ -26,7 +26,7 @@ You can create notification bot in other scenarios, such as a notification can b
 
 ## Notification based on events
 
-Bot Framework SDK provides the functionality to [proactively message in Teams](send-proactive-messages.md). TeamsFx SDK provides the functionality to manage bot's conversation references when a bot event is triggered. TeamsFx SDK recognizes the following bot events:
+Bot Framework SDK provides the functionality to proactively message in Teams. TeamsFx SDK provides the functionality to manage bot's conversation references when a bot event is triggered. TeamsFx SDK recognizes the following bot events:
 
 |**Event**  |**Behavior**  |
 |---------|---------|
@@ -53,7 +53,7 @@ for (const target of await bot.notification.installations()) {
 }
 ```
 
-# [C#/.NET](#tab/dotnet)
+# [C#](#tab/dotnet)
 
 ```C#/.NET
    // list all installation targets
@@ -156,7 +156,7 @@ You can also add new cards if needed. For more information on how to build diffe
        }
   ```
 
-# [C#/.NET](#tab/dotnet3)
+# [C#](#tab/dotnet3)
 
 ```C#/.NET
         // list all installation targets
@@ -195,7 +195,7 @@ You can also add new cards if needed. For more information on how to build diffe
 
 ```
 
-# [C#/.NET](#tab/dotnet2)
+# [C#](#tab/dotnet2)
 
 ```C#/.NET
            // list all installation targets
@@ -244,7 +244,7 @@ You can also add new cards if needed. For more information on how to build diffe
            }
 ```
 
-# [C#/.NET](#tab/dotnet1)
+# [C#](#tab/dotnet1)
 
 ```C#/.NET
         // list all installation targets
@@ -328,7 +328,7 @@ const bot = new ConversationBot({
 });
 ```
 
-# [C#/.NET](#tab/dotnet4)
+# [C#](#tab/dotnet4)
 
 ```C#/.NET
 /** .NET: Program.cs or Startup.cs **/
@@ -397,7 +397,7 @@ const bot = new ConversationBot({
 
 ```
 
-# [C#/.NET](#tab/dotnet5)
+# [C#](#tab/dotnet5)
 
 ```C#/.NET
 
@@ -475,7 +475,7 @@ In the following table, you can see the comparison of the two different ways:
 Incoming Webhooks help in posting messages from apps to Teams. If Incoming Webhooks are enabled for a Team in any channel, it exposes the HTTPS endpoint, which accepts correctly formatted JSON and inserts the messages into that channel. For example, you can create an Incoming Webhook in your DevOps channel, configure your build, and simultaneously deploy and monitor services to send alerts.
 TeamsFx provides you with an [Incoming Webhook notification sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/incoming-webhook-notification#getting-started-with-incoming-webhook-notification-sample) that helps you:
 
-* Create an Incoming Webhook in Teams.
+* [Create an Incoming Webhook](../../../webhooks-and-connectors/how-to/add-incoming-webhook.md) in Teams.
 * Send notifications using Incoming Webhooks with Adaptive Cards.
 
 ## FAQ
@@ -585,8 +585,11 @@ To add Adaptive Card actions in notification bot, see the [steps to add card act
 
 ## See also
 
+* [Conversation basics](conversation-basics.md)
 * [Build bots for Teams](../../what-are-bots.md)
 * [Build your first bot app using JavaScript](../../../sbs-gs-bot.yml)
 * [Build notification bot with JavaScript](../../../sbs-gs-notificationbot.yml)
+* [Proactive messages](send-proactive-messages.md)
 * [Adaptive Cards](../../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
-* [Conversation basics](conversation-basics.md)
+* [TeamsFx SDK](../../../toolkit/TeamsFx-SDK.md)
+* [Bot Framework SDK](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0)
