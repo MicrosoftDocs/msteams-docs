@@ -153,7 +153,7 @@ As the template options are disabled for the use of Contoso within Microsoft Tea
 
 The status of the assignment can be **draft**, **published**, **closed** or **hidden**.
 
-Automatically, this is on draft meaning that when saving this new assignment, it'll be saved as a concept whereafter you would still need to send it to your students. By changing this to published, it'll immediately send the assignment once you save it. It's always possible to change this later. For example, it's possible to prepare various assignments before you publish them. The ‘language of the text’ determines which database of observations will be used to check and give feedback on the text. Under the option ‘Allowed ways to hand in texts’ you can choose whether your students type their texts in Contoso (or copy and paste them from word/pages file), or that they upload a document in Contoso.
+Automatically, this status is visible on draft. It means that when you save this new assignment, it'll be saved as a concept after which, you'd still need to send it to your students. By changing the status to **Published**, it'll immediately send the assignment after you save it. It's always possible to change the status later. For example, it's possible to prepare various assignments before you publish them. The **language of the text** determines which database of observations will be used to check and give feedback on the text. Under the option **Allowed ways to hand in texts**, you can choose whether your students type their texts in Contoso (or copy and paste them from word/pages file), or that they upload a document in Contoso.
 
 :::image type="content" source="../../../../assets/images/store-detail-page/edu-sample-app.png" alt-text="Education sample app":::
 
@@ -161,11 +161,11 @@ Automatically, this is on draft meaning that when saving this new assignment, it
 
 ##### Modify assignments
 
-It's possible to modify the assignments that were created. This is possible by going to Assignments in Teams, to click on the assignment you would like to modify and then to click on Contoso SV PRO.
+It's possible to modify the assignments that were created. You can go to **Assignments** in Teams and select the assignment you'd like to modify. Then, select Contoso SV PRO.
 
 ##### Correcting documents and giving feedback
 
-Go to ‘Assignments’ or first to ‘Teams’, then choose your class or group and then select the assignment you would like to correct.
+Go to **Assignments** or first to **Teams**, then choose your class or group and then select the assignment you would like to correct.
 
 #### Observation database
 
