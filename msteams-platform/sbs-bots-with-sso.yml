@@ -81,7 +81,7 @@ items:
 - title: Create and register your bot
   durationInMinutes: 5
   content: |
-    The following steps help you to create and register your bot in Azure portal:
+    The following steps help you to create and register your bot in Microsoft Azure portal:
 
     1. Create Azure Bot resource to register bot with Azure Bot Service.
     1. Create client secret to enable SSO authentication of the bot.
@@ -454,7 +454,7 @@ items:
     1. Update the **appsettings.json** configuration for the bot to use the `MicrosoftAppId` and `MicrosoftAppPassword`. Use the OAuth connection name as the **Connection Name**.
 
         > [!NOTE]
-        > You can obtain the `MicrosoftAppId` from the bot's Configuration page. The `MicrosoftAppPassword` is the value for client secret ID that you saved previously in the Azure.
+        > You can obtain the `MicrosoftAppId` from the bot's Configuration page. The `MicrosoftAppPassword` is the value for client secret ID that you saved previously in Azure portal.
 
          :::image type="content" source="~/assets/images/bots/appsettingsjson.png" alt-text="Screenshot of Visual Studio file explorer menu." lightbox="~/assets/images/bots/appsettingsjson.png":::
 
