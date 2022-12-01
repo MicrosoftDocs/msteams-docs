@@ -208,7 +208,7 @@ public class NotifyController : ControllerBase
             {
                 Bot = new ChannelAccount()
                 {
-                  Id = conversationReference.Bot.Id
+                    Id = conversationReference.Bot.Id
                 },
                 Conversation = new ConversationAccount()
                 {
