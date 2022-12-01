@@ -17,9 +17,9 @@ The command bot template is built using the TeamsFx SDK, which provides a simple
 
 **Advantages**
 
-1. Automates simple and repetitive tasks with a chat command.
-1. Simplifies programming model with TeamsFx SDK, built on Bot Framework SDK.
-1. Supports regular expressions for processing commands.
+* Automates simple and repetitive tasks with a chat command.
+* Simplifies programming model with TeamsFx SDK, built on Bot Framework SDK.
+* Supports regular expressions for processing commands.
 
 ## Command bot installation
 
@@ -27,14 +27,13 @@ A command bot needs to be installed into a team, or a groupchat, or as personal 
 
 :::image type="content" source="../../../assets/images/command-bot-teams/commandbot-installation.png" alt-text="installation option selection":::
 
-> [!NOTE]
-> For more install options, see [configure default install options](../../../concepts/deploy-and-publish/apps-publish-overview.md#configure-default-install-options).
+For more install options, see [configure default install options](../../../concepts/deploy-and-publish/apps-publish-overview.md#configure-default-install-options).
 
 ## Command and response
 
-The TeamsFx command and response bots are built using the [Bot Framework SDK](/azure/bot-service/bot-builder-basics). The Bot Framework SDK provides [built-in message handler](/microsoftteams/platform/bots/bot-basics?branch=pr-en-us-7494&tabs=csharp#teams-activity-handlers) to handle the incoming message activity, which requires you to understand the concept of Bot Framework such as the [event-driven conversation model](/azure/bot-service/bot-activity-handler-concept). TeamsFx SDK provides command-response abstraction layer to let the users focus on handling the command request according to the business need, without learning the Bot Framework SDK.
+The TeamsFx command and response bots are built using the Bot Framework SDK. The Bot Framework SDK provides built-in message handler to handle the incoming message activity, which requires you to understand the concept of Bot Framework such as the event-driven conversation model. TeamsFx SDK provides command-response abstraction layer to let the users focus on handling the command request according to the business need, without learning the Bot Framework SDK.
 
-TeamsFx SDK pulls [Bot Framework middleware](/azure/bot-service/bot-builder-concept-middleware) to handle the integration with the underlying activity handlers. If the received message text matches the command pattern provided in a `TeamsFxBotCommandHandler` instance, the middleware handles the incoming message activity and invokes the corresponding `handlerCommandReceived` function. After this process, the middleware calls `context.sendActivity` to send the command response returned from the `handlerCommandReceived` function to the user.
+TeamsFx SDK pulls Bot Framework middleware to handle the integration with the underlying activity handlers. If the received message text matches the command pattern provided in a `TeamsFxBotCommandHandler` instance, the middleware handles the incoming message activity and invokes the corresponding `handlerCommandReceived` function. After this process, the middleware calls `context.sendActivity` to send the command response returned from the `handlerCommandReceived` function to the user.
 
 ## Customize initialization
 
@@ -87,7 +86,7 @@ You can build your response data in text format, or perform the following steps 
 
 * Prepare your Adaptive Card content in a JSON file such as `myCard.json` under the `bot/adaptiveCards` folder. Following is a sample Adaptive Card with JSON payload:
 
-  ```JASON
+  ```JSON
         {
             "type": "AdaptiveCard",
             "body": [
@@ -124,8 +123,7 @@ You can build your response data in text format, or perform the following steps 
 
 * In your `handleCommandReceived` API, use `MessageBuilder.attachAdaptiveCardWithoutData` or `MessageBuilder.attachAdaptiveCard` to build a bot message activity with the Adaptive Card and return the message `return MessageBuilder.attachAdaptiveCardWithoutData(myCard);`.
 
-> [!NOTE]
-> For more information on how to build command and response using Adaptive Card with dynamic content, see this [section](#how-to-build-command-and-response-using-adaptive-card-with-dynamic-content).
+For more information on how to build command and response using Adaptive Card with dynamic content, see this [section](#how-to-build-command-and-response-using-adaptive-card-with-dynamic-content).
 
 <br>
 
@@ -321,3 +319,17 @@ For more information on how to add Adaptive Card actions to command bot, see [ad
 <br>
 
 </details>
+
+## See Also
+
+* [Conversation basics](conversation-basics.md)
+* [Build bots for Teams](../../what-are-bots.md)
+* [Build your first bot app using JavaScript](../../../sbs-gs-bot.yml)
+* [Build command bot with JavaScript](../../../sbs-gs-commandbot.yml)
+* [Proactive messages](send-proactive-messages.md)
+* [Adaptive Cards](../../../task-modules-and-cards/cards/cards-reference.md#adaptive-card)
+* [TeamsFx SDK](../../../toolkit/TeamsFx-SDK.md)
+* [Bot Framework SDK](/azure/bot-service/bot-builder-basics)
+* [Bot Framework middleware](/azure/bot-service/bot-builder-concept-middleware)
+* [Bot activity handlers](../../bot-basics.md)
+* [Event-driven conversations using an activity handler](/microsoftteams/platform/bots/bot-basics?branch=pr-en-us-7494&tabs=csharp#teams-activity-handlers)
