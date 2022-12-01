@@ -85,7 +85,6 @@ For a single sign-on experience in which the user is already signed into a clien
 
 ```JSON
    {
-
   "statusCode": 401,
   "type": "application/vnd.microsoft.activity.loginRequest",
   "value": {
@@ -159,3 +158,7 @@ For a single sign-on experience in which the user is already signed into a clien
 
 1. The bot uses the access token on behalf of the user to perform its actions.
 1. The bot returns a non-error response to the client (either a card or message).
+
+## See also
+
+[Work with Universal Actions for Adaptive Cards](Work-with-Universal-Actions-for-Adaptive-Cards.md)
