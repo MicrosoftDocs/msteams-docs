@@ -89,3 +89,10 @@ Next, explore some of Teams features that help you build an app solution.
 
 * [Teams app that fits](overview.md)
 * [Understand your use cases](concepts/design/understand-use-cases.md)
+* [Apps for Teams meetings and calls](apps-in-teams-meetings/teams-apps-in-meetings.md)
+* [Get started](get-started/get-started-overview.md)
+* [Authentication](concepts/authentication/authentication.md)
+* [Bots](bots/what-are-bots.md)
+* [Tabs](tabs/what-are-tabs.md)
+* [Adaptive Cards](task-modules-and-cards/cards/cards-reference.md)
+* [Message extensions](messaging-extensions/what-are-messaging-extensions.md)

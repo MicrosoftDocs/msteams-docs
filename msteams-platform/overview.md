@@ -82,4 +82,5 @@ Here's why Teams is best-suited for your app needs:
 
 - [Build tabs for Teams](tabs/what-are-tabs.md)
 - [Build bots for Teams](bots/what-are-bots.md)
-- [Message extensions](messaging-extensions/what-are-messaging-extensions.md)
+- [Build message extensions for Teams](messaging-extensions/what-are-messaging-extensions.md)
+- [Bot conversation for Teams](bots/how-to/conversations/conversation-basics.md)

@@ -87,11 +87,13 @@ From designing to building and distributing a Teams app, you can use various too
 ## See also
 
 - [Teams app that fits](overview.md)
-- [Design process for Microsoft Teams apps](concepts/design/design-teams-app-process.md)
-- [Extend Teams apps across Microsoft 365](m365-apps/overview.md)
+- [Plan your app](concepts/app-fundamentals-overview.md)
+- [Design your app](concepts/design/design-teams-app-process.md)
+- [Build your app](https://adoption.microsoft.com/en-us/extensibility-look-book-gallery/)
+- [Extend your app](m365-apps/overview.md)
 - [Test your app](concepts/build-and-test/test-app-overview.md)
-- [Distribute your Microsoft Teams app](concepts/deploy-and-publish/apps-publish-overview.md)
+- [Distribute your app](concepts/deploy-and-publish/apps-publish-overview.md)
 - [Monetize your app](concepts/deploy-and-publish/appsource/prepare/monetize-overview.md)
-- [Considerations for Teams integration](samples/integrating-web-apps.md)
-- [Teams Toolkit Overview](toolkit/teams-toolkit-fundamentals.md)
+- [Integrate an existing app](samples/integrating-web-apps.md)
+- [Create a low-code app](samples/teams-low-code-solutions.md)
 - [Developer Portal for Teams](concepts/build-and-test/teams-developer-portal.md)
