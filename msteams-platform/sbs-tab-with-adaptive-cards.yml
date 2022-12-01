@@ -26,7 +26,7 @@ items:
     
     This step-by-step guide helps you to build tabs with the Adaptive Cards on desktop and mobile. You'll see the following output:
 
-    :::image type="content" source="../msteams-platform/assets/images/adaptive-cards/desktop-mobile-screenshot.png" alt-text="Desktop Mobile screenshot":::
+    :::image type="content" source="../msteams-platform/assets/images/adaptive-cards/desktop-mobile-screenshot.png" alt-text="Desktop Mobile screenshot" lightbox="../../assets/images/adaptive-cards/desktop-mobile-screenshot.png":::
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -395,7 +395,7 @@ items:
   content: |
     Did you come up with something like this?
 
-    :::image type="content" source="../msteams-platform/assets/images/adaptive-cards/desktop-mobile-screenshot.png" alt-text="Desktop Mobile screenshot":::
+    :::image type="content" source="../msteams-platform/assets/images/adaptive-cards/desktop-mobile-screenshot.png" alt-text="Desktop Mobile screenshot" lightbox="../../assets/images/adaptive-cards/desktop-mobile-screenshot.png":::::::::
 
     
 - content: |
