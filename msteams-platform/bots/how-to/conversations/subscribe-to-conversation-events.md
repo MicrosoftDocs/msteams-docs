@@ -79,7 +79,7 @@ protected override async Task OnTeamsChannelCreatedAsync(ChannelInfo channelInfo
 
 <!-- From sample: botbuilder-js\libraries\botbuilder\tests\teams\conversationUpdate\src\conversationUpdateBot.ts -->
 
-* [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onteamschannelcreatedevent)
+* [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onteamschannelcreatedevent&preserve-view=true)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -139,7 +139,7 @@ export class MyBot extends TeamsActivityHandler {
 
 # [Python](#tab/python)
 
-* [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?view=botbuilder-py-latest#botbuilder-core-teams-teamsactivityhandler-on-teams-channel-created)
+* [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?view=botbuilder-py-latest#botbuilder-core-teams-teamsactivityhandler-on-teams-channel-created&preserve-view=true)
 
 ```python
 async def on_teams_channel_created(
@@ -178,7 +178,7 @@ protected override async Task OnTeamsChannelRenamedAsync(ChannelInfo channelInfo
 
 # [TypeScript](#tab/typescript)
 
-* [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onteamschannelrenamedevent)
+* [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onteamschannelrenamedevent&preserve-view=true)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -236,7 +236,7 @@ export class MyBot extends TeamsActivityHandler {
 
 # [Python](#tab/python)
 
-* [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?view=botbuilder-py-latest#botbuilder-core-teams-teamsactivityhandler-on-teams-channel-renamed)
+* [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?view=botbuilder-py-latest#botbuilder-core-teams-teamsactivityhandler-on-teams-channel-renamed&preserve-view=true)
 
 ```python
 async def on_teams_channel_renamed(
@@ -271,7 +271,7 @@ protected override async Task OnTeamsChannelDeletedAsync(ChannelInfo channelInfo
 
 # [TypeScript](#tab/typescript)
 
-* [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onteamschanneldeletedevent)
+* [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onteamschanneldeletedevent&preserve-view=true)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -331,7 +331,7 @@ export class MyBot extends TeamsActivityHandler {
 
 # [Python](#tab/python)
 
-* [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?view=botbuilder-py-latest#botbuilder-core-teams-teamsactivityhandler-on-teams-channel-deleted)
+* [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?&preserve-view=true)
 
 ```python
 async def on_teams_channel_deleted(
@@ -367,7 +367,7 @@ protected override async Task OnTeamsChannelRestoredAsync(ChannelInfo channelInf
 
 # [TypeScript](#tab/typescript)
 
-* [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onteamschannelrestoredevent)
+* [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onteamschannelrestoredevent&preserve-view=true)
 
 ```typescript
 
@@ -428,7 +428,7 @@ export class MyBot extends TeamsActivityHandler {
 
 # [Python](#tab/python)
 
-* [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?view=botbuilder-py-latest#botbuilder-core-teams-teamsactivityhandler-on-teams-channel-restored)
+* [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?view=botbuilder-py-latest#botbuilder-core-teams-teamsactivityhandler-on-teams-channel-restored&preserve-view=true)
 
 ```python
 async def on_teams_channel_restored(
@@ -493,7 +493,7 @@ protected override async Task OnTeamsMembersAddedAsync(IList<TeamsChannelAccount
 
 # [TypeScript](#tab/typescript)
 
-* [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onteamsmembersaddedevent)
+* [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onteamsmembersaddedevent&preserve-view=true)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -611,7 +611,7 @@ The message your bot receives when the bot is added to a one-to-one chat.
 
 # [Python](#tab/python)
 
-* [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?view=botbuilder-py-latest#botbuilder-core-teams-teamsactivityhandler-on-teams-members-added)
+* [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?view=botbuilder-py-latest#botbuilder-core-teams-teamsactivityhandler-on-teams-members-added&preserve-view=true)
 
 ```python
 async def on_teams_members_added(
@@ -669,7 +669,7 @@ protected override async Task OnTeamsMembersRemovedAsync(IList<ChannelAccount> m
 
 # [TypeScript](#tab/typescript)
 
-* [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onteamsmembersaddedevent)
+* [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onteamsmembersaddedevent&preserve-view=true)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -739,7 +739,7 @@ The `channelData` object in the following payload example is based on adding a m
 
 # [Python](#tab/python)
 
-* [SDK  reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?view=botbuilder-py-latest#botbuilder-core-teams-teamsactivityhandler-on-teams-members-removed)
+* [SDK  reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?view=botbuilder-py-latest#botbuilder-core-teams-teamsactivityhandler-on-teams-members-removed&preserve-view=true)
 
 ```python
 async def on_teams_members_removed(
@@ -777,7 +777,7 @@ protected override async Task OnTeamsTeamRenamedAsync(TeamInfo teamInfo, ITurnCo
 
 # [TypeScript](#tab/typescript)
 
-* [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onteamsteamrenamedevent)
+* [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onteamsteamrenamedevent&preserve-view=true)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -835,7 +835,7 @@ export class MyBot extends TeamsActivityHandler {
 
 # [Python](#tab/python)
 
-* [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?view=botbuilder-py-latest#botbuilder-core-teams-teamsactivityhandler-on-teams-team-renamed)
+* [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?view=botbuilder-py-latest#botbuilder-core-teams-teamsactivityhandler-on-teams-team-renamed&preserve-view=true)
 
 ```python
 # Bot is notified when the team is renamed.
@@ -868,7 +868,7 @@ protected override async Task OnTeamsTeamDeletedAsync(TeamInfo teamInfo, ITurnCo
 ```
 
 # [TypeScript](#tab/typescript)
-* [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onteamsteamdeletedevent)
+* [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onteamsteamdeletedevent&preserve-view=true)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -921,7 +921,7 @@ export class MyBot extends TeamsActivityHandler {
 ```
 
 # [Python](#tab/python)
-* [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?view=botbuilder-py-latest#botbuilder-core-teams-teamsactivityhandler-on-teams-team-deleted)
+* [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?view=botbuilder-py-latest#botbuilder-core-teams-teamsactivityhandler-on-teams-team-deleted&preserve-view=true)
 
 ```python
 # Invoked when a Team Deleted event activity is received from the connector. Team Deleted corresponds to the user deleting a team.
@@ -955,7 +955,7 @@ protected override async Task OnTeamsTeamrestoredAsync(TeamInfo teamInfo, ITurnC
 
 # [TypeScript](#tab/typescript)
 
-* [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onteamsteamrestoredevent)
+* [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onteamsteamrestoredevent&preserve-view=true)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -1012,7 +1012,7 @@ export class MyBot extends TeamsActivityHandler {
 
 # [Python](#tab/python)
 
-* [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?view=botbuilder-py-latest#botbuilder-core-teams-teamsactivityhandler-on-teams-team-restored)
+* [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?view=botbuilder-py-latest#botbuilder-core-teams-teamsactivityhandler-on-teams-team-restored&preserve-view=true)
 
 ```python
 # Invoked when a Team Restored event activity is received from the connector. Team Restored corresponds to the user restoring a team.
@@ -1048,7 +1048,7 @@ protected override async Task OnTeamsTeamArchivedAsync(TeamInfo teamInfo, ITurnC
 
 # [TypeScript](#tab/typescript)
 
-* [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onteamsteamarchivedevent)
+* [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onteamsteamarchivedevent&preserve-view=true)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -1105,7 +1105,7 @@ export class MyBot extends TeamsActivityHandler {
 
 # [Python](#tab/python)
 
-* [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?view=botbuilder-py-latest#botbuilder-core-teams-teamsactivityhandler-on-teams-team-archived)
+* [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?view=botbuilder-py-latest#botbuilder-core-teams-teamsactivityhandler-on-teams-team-archived&preserve-view=true)
 
 ```python
 # Invoked when a Team Archived event activity is received from the connector. Team Archived correspond to the user archiving a team.
@@ -1141,7 +1141,7 @@ protected override async Task OnTeamsTeamUnarchivedAsync(TeamInfo teamInfo, ITur
 
 # [TypeScript](#tab/typescript)
 
-* [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onteamsteamunarchivedevent)
+* [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onteamsteamunarchivedevent&preserve-view=true)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -1197,7 +1197,7 @@ export class MyBot extends TeamsActivityHandler {
 ```
 
 # [Python](#tab/python)
-* [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?view=botbuilder-py-latest#botbuilder-core-teams-teamsactivityhandler-on-teams-team-unarchived)
+* [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?view=botbuilder-py-latest#botbuilder-core-teams-teamsactivityhandler-on-teams-team-unarchived&preserve-view=true)
 
 ```python
 # Invoked when a Team Unarchived event activity is received from the connector. Team Unarchived correspond to the user unarchiving a team.
@@ -1322,7 +1322,7 @@ export class MyBot extends TeamsActivityHandler {
 
 # [Python](#tab/python)
 
-* [SDK reference](/python/api/botbuilder-core/botbuilder.core.activityhandler?view=botbuilder-py-latest#botbuilder-core-activityhandler-on-reactions-added)
+* [SDK reference](/python/api/botbuilder-core/botbuilder.core.activityhandler?view=botbuilder-py-latest#botbuilder-core-activityhandler-on-reactions-added&preserve-view=true)
 
 ```python
 # Override this in a derived class to provide logic for when reactions to a previous activity are added to the conversation.
@@ -1446,7 +1446,7 @@ export class MyBot extends TeamsActivityHandler {
 ```
 
 # [Python](#tab/python)
-* [SDK reference](/python/api/botbuilder-core/botbuilder.core.activityhandler?view=botbuilder-py-latest#botbuilder-core-activityhandler-on-reactions-removed)
+* [SDK reference](/python/api/botbuilder-core/botbuilder.core.activityhandler?view=botbuilder-py-latest#botbuilder-core-activityhandler-on-reactions-removed&preserve-view=true)
 
 ```python
 # Override this in a derived class to provide logic specific to removed activities.
@@ -1601,7 +1601,7 @@ async onInstallationUpdateActivity(context: TurnContext) {
 
 # [Python](#tab/python)
 
-* [SDK reference](/python/api/botbuilder-core/botbuilder.core.activityhandler?view=botbuilder-py-latest#botbuilder-core-activityhandler-on-installation-update)
+* [SDK reference](/python/api/botbuilder-core/botbuilder.core.activityhandler?view=botbuilder-py-latest#botbuilder-core-activityhandler-on-installation-update&preserve-view=true)
 
 ```python
 # Override this in a derived class to provide logic specific to InstallationUpdate activities.

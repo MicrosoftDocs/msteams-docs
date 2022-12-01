@@ -286,7 +286,7 @@ async messageAllMembersAsync(context) {
 ```
 
 # [Python](#tab/python)
-* [SDK reference](/python/api/botbuilder-core/botbuilder.core.botadapter?view=botbuilder-py-latest#botbuilder-core-botadapter-continue-conversation)
+* [SDK reference](/python/api/botbuilder-core/botbuilder.core.botadapter?view=botbuilder-py-latest#botbuilder-core-botadapter-continue-conversation&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L200)
 
 ```python

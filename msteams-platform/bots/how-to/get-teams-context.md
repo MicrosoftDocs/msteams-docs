@@ -79,7 +79,7 @@ export class MyBot extends TeamsActivityHandler {
 ```
 
 # [Python](#tab/python)
-* [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsinfo?view=botbuilder-py-latest#botbuilder-core-teams-teamsinfo-get-team-members)
+* [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsinfo?view=botbuilder-py-latest#botbuilder-core-teams-teamsinfo-get-team-members&preserve-view=true)
 
 ```python
 async def _show_members(
@@ -384,7 +384,7 @@ export class MyBot extends TeamsActivityHandler {
 ```
 
 # [Python](#tab/python)
-* [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsinfo?view=botbuilder-py-latest#botbuilder-core-teams-teamsinfo-get-team-channels)
+* [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsinfo?view=botbuilder-py-latest#botbuilder-core-teams-teamsinfo-get-team-channels&preserve-view=true)
 
 ```python
 async def _show_channels(
