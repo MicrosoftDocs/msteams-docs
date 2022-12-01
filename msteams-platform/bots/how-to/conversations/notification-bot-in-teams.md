@@ -75,7 +75,7 @@ foreach (var target in await _conversation.Notification.GetInstallationsAsync())
 
 ## Notification bot installation
 
-A notification bot needs to be installed into a team, or a group chat, or as personal app, depending on the required scope. You need to select the installation target before adding the bot to your App.
+A notification bot needs to be installed into a team, or a groupchat, or as personal app, depending on the required scope. You need to select the installation target before adding the bot to your app.
 
 :::image type="content" source="../../../assets/images/notification-bot/notification-installation-scope.png" alt-text="add installation scope":::
 
@@ -145,7 +145,7 @@ You can also add new cards if needed. For more information on how to build diffe
 
 # [TypeScript](#tab/ts3)
 
-  ```TypeScript
+    ```TypeScript
        // list all installation targets
        for (const target of await bot.notification.installations()) {
            // "Person" means this bot is installed as Personal app
@@ -154,7 +154,7 @@ You can also add new cards if needed. For more information on how to build diffe
                await target.sendAdaptiveCard(...);
            }
        }
-  ```
+    ```
 
 # [C#/.NET](#tab/dotnet3)
 
@@ -308,7 +308,7 @@ You can also add new cards if needed. For more information on how to build diffe
 You need to create `ConversationBot` to send notification.
 
 > [!NOTE]
-> The Code is generated in project.
+> The code is generated in project.
 
 # [JavaScript/TypeScript](#tab/jsts)
 
@@ -461,7 +461,7 @@ In the following table, you can see the comparison of the two different ways:
 |&nbsp;   |Teams bot app  |Teams Incoming Webhook  |
 |---------|---------|---------|
 |Message individual person    |Yes      |No       |
-|Message group chat     |Yes         |No         |
+|Message groupchat     |Yes         |No         |
 |Message public channel     |Yes         |Yes         |
 |Message private channel     |No       |Yes       |
 |Send card message     |Yes       |Yes         |
