@@ -168,7 +168,7 @@ The following image shows the directory structure of tab app with bot feature:
 
 ::: zone pivot="visual-studio"
 
-## Create a new Teams app in Visual Studio
+## Create new Teams app in Visual Studio
 
 Teams Toolkit provides Microsoft Teams app templates in Visual Studio to create Teams apps.  You can search and select the Teams app template that you require when you create a new project. You can have Teams app templates for creating:
 
