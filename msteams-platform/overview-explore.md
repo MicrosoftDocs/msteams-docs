@@ -41,11 +41,10 @@ You've had a short tour through some of Teams platform features. You're ready to
 ## See also
 
 * [Teams app that fits](overview.md)
-* [Build tabs for Teams](tabs/what-are-tabs.md)
-* [Build bots for Teams](bots/what-are-bots.md)
+* [Tabs](tabs/what-are-tabs.md)
+* [Bots](bots/what-are-bots.md)
 * [Message extensions](messaging-extensions/what-are-messaging-extensions.md)
 * [Webhooks and connectors](webhooks-and-connectors/what-are-webhooks-and-connectors.md)
-* [Types of cards](task-modules-and-cards/cards/cards-reference.md)
-* [Task modules](task-modules-and-cards/what-are-task-modules.md)
-* [Designing your Microsoft Teams meeting extension](apps-in-teams-meetings/design/designing-apps-in-meetings.md)
-* [Designing your personal app for Microsoft Teams](concepts/design/personal-apps.md)
+* [Adaptive Cards](task-modules-and-cards/cards/cards-reference.md)
+* [Cards and task modules](task-modules-and-cards/cards-and-task-modules.md)
+* [Microsoft Graph](/graph/teams-concept-overview)
