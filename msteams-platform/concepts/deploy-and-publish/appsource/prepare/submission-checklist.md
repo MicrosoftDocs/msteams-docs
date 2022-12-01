@@ -263,11 +263,11 @@ Steps for workflow #1: (Provide screen shots)
 1. Activate the workflow using the toggle.
 1. Look at products already uploaded on platform A, by selecting **products** tab.
 
-Wait for automatic sync. After 15 minutes check your platform B to find the products.
+Wait for automatic sync. After 15 minutes, check your platform B to find the products.
 
 #### Workflow #2: Copy orders from platform B to platform A
 
-This workflow requires platform A and platform B to work. It copies new orders from platform A to platform B connected. Please note you must activate Workflow 1 to activate this Workflow.
+This workflow requires platform A and platform B to work. It copies new orders from platform A to platform B connected. Note that you must activate Workflow 1 to activate this Workflow.
 
 Steps for workflow #2: (Provide screen shots)
 
@@ -277,7 +277,7 @@ Steps for workflow #2: (Provide screen shots)
 1. Choose a product and add it to the cart. (You must buy one of the products copied from platform A with Workflow #1, to complete this Workflow.)
 1. Complete your order.
 
-Wait for automatic sync. Contoso will automatically copy this order to your platform B. After 15 minutes check platform A to find the order
+Wait for automatic sync. Contoso will automatically copy this order to your platform B. After 15 minutes, check platform A to find the order
 
 > [!NOTE]
 > You must activate workflow 1 to activate workflow 2.
@@ -326,8 +326,8 @@ Tenant Details: Contoso DigiAssist Org
 #### Installation and Setup
 
 - Sideload the Contoso DigiAssist in Microsoft Teams.
-- In personal bot of DigiAssist send “Connect” command and enter the required admin credentials.
-- Select the “Contoso DigiAssist Org” from dropdown and click connect.
+- In the personal bot of DigiAssist, send the Connect command and enter the required admin credentials.
+- Select the **Contoso DigiAssist Org** from dropdown and select **Connect**.
 
 ### Testing workflow
 
@@ -335,28 +335,28 @@ Tenant Details: Contoso DigiAssist Org
 
 The Contoso DigiAssist bot's purpose is to assist users with queries within the organization. Here are some sample questions for testing:
 
-- Show me my Claim status
+- Show me my Claim status.
 - Do I have Open ADO work items?
-- Show me my documents pending for review today
-- Get recent HR updates
+- Show me my documents pending for review today.
+- Get recent HR updates.
 
 The Contoso DigiAssist will provide text-based responses or interactive Adaptive Card responses. Additional actions can be performed by using the buttons on Adaptive Cards.
 
 #### Help Static Tab
 
-The Contoso DigiAssist app for Microsoft Teams also includes a Help tab. This displays documentation specific to the ***DigiAssist app*** integration for Microsoft Teams.
+The Contoso DigiAssist app for Microsoft Teams also includes a **Help** tab. It displays documentation specific to the ***DigiAssist app*** integration for Microsoft Teams.
 
 ### Limitations, conditions, and exceptions
 
-- Users must complete authentication with third party applications from Contoso DigiAssist
-- NLP configuration and AI chatbot training must be performed on the Contoso DigiAssist app website
-- Users can only view the Custom adaptive cards on Mobile
+- Users must complete authentication with third-party applications from Contoso DigiAssist.
+- NLP configuration and AI chatbot training must be performed on the Contoso DigiAssist app website.
+- Users can only view the custom Adaptive Cards on Mobile.
 
 ### Resources and Videos
 
-- Document Links included to help validation Team
-- End to End Teams App Integration Demo video links is included
-- Detailed Steps for configuration in form of PDF or a Video Link attached
+- Document Links included to help validation team.
+- End to End Teams App Integration Demo video links is included.
+- Detailed Steps for configuration in form of PDF or a Video Link attached.
 
 </details>
 
