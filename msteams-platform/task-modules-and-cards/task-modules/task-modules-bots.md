@@ -205,7 +205,7 @@ The schema for Bot Framework card actions is different from Adaptive Card `Actio
 
 |Sample name | Description | .NET | Node.js|
 |----------------|-----------------|--------------|----------------|
-|Task module sample bots-V4 | Samples for creating task modules. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/54.teams-task-module)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/54.teams-task-module)|
+|Task module sample bots-V4 | Samples for creating task modules. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/nodejs)|
 
 ## Step-by-step guide
 
@@ -214,4 +214,4 @@ Follow the [step-by-step guide](../../sbs-botbuilder-taskmodule.yml) to create a
 ## See also
 
 * [Microsoft Teams task module sample code in Node.js](https://github.com/OfficeDev/microsoft-teams-sample-task-module-nodejs/blob/master/src/TeamsBot.ts)
-* [Bot Framework samples](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)
+* [Bot Framework samples](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/README.md)
