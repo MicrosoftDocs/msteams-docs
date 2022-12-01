@@ -13,7 +13,7 @@ Microsoft Teams Toolkit enables you to build applications that capture events an
 
 :::image type="content" source="../../../assets/images/notification-bot/notification-new-scenario-diagram.png" alt-text="weather forecast sample notification scenario" lightbox="../../../assets/images/notification-bot/notification-new-scenario-diagram.png":::
 
-You can create notification bot in different scenarios, such as a notification can be sent in teams DevOps channel if there's a build failure.
+You can create notification bot in other scenarios as well, such as a notification can be sent in teams DevOps channel if there's a build failure.
 
 **Advantages**
 
@@ -129,7 +129,7 @@ You can make the following customizations to extend the notification template to
 
 <summary><b>2. Customize the notification content</b></summary>
 
-The file `src/adaptiveCards/notification-default.json` defines the default Adaptive Card. You can use the [Adaptive Card designer](https://adaptivecards.io/designer/) to help visually design your Adaptive Card UI. `src/cardModels.ts` defines a data structure that is used to load data for the Adaptive Card. The binding between the card model and the Adaptive Card is done by matching name such as `CardData.title` maps to `${title}` in the Adaptive Card. You can add, edit, or remove properties and their bindings to customize the Adaptive Card as required.
+The file `src/adaptiveCards/notification-default.json` defines the default Adaptive Card. You can use the [Adaptive Card designer](https://adaptivecards.io/designer/) to help visually design your Adaptive Card UI. The `src/cardModels.ts` defines a data structure that is used to load data for the Adaptive Card. The binding between the card model and the Adaptive Card is done by matching name such as `CardData.title` maps to `${title}` in the Adaptive Card. You can add, edit, or remove properties and their bindings to customize the Adaptive Card as required.
 
 You can also add new cards if needed. For more information on how to build different types of Adaptive Cards with a list or table of dynamic contents using `ColumnSet` and `FactSet`, see [Adaptive Card notification sample](<https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/adaptive-card-notification>).
 
@@ -308,7 +308,7 @@ You can also add new cards if needed. For more information on how to build diffe
 You need to create `ConversationBot` to send notification.
 
 > [!NOTE]
-> Code is generated in the project.
+> The Code is generated in project.
 
 # [JavaScript/TypeScript](#tab/jsts)
 
@@ -551,7 +551,7 @@ There are Microsoft Graph APIs to list apps installed in a team, group, or chat.
 
 <summary><b>How to customize the Azurite listening ports?</b></summary>
 
-If azurite exits due to port in use, you can specify another listening port and update the connection string of `AzureWebJobsStorage` in `bot/local.settings.json`.
+If Azurite exits due to port in use, you can specify another listening port and update the connection string of `AzureWebJobsStorage` in `bot/local.settings.json`.
 
 <br>
 
