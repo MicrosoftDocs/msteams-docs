@@ -319,8 +319,8 @@ items:
            `https://9179****.ngrok.io/auth-end`. </br>
 
          1. Enable **Implicit grant and hybrid flows** by selecting the following checkboxes:
-             * **Access tokens (used for implicit flows)**
-             * **ID tokens (used for implicit and hybrid flows)**
+             * **ID tokens**
+             * **Access tokens**
    
          1. Select **Configure**.
 
@@ -432,20 +432,26 @@ items:
 
        :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/addapp_1.png" alt-text="Screenshot of Search Messaging Extension in Teams with the Add option highlighted in red.":::
 
-       The message extension is added to Teams and a pop-up window opens in a chat.
+       A pop-up opens in a chat.
 
        :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/popup.png" alt-text="Screenshot of a pop-up window opens in a chat displaying the option of your search query.":::
    
 - title: Interact with the app in Teams
   durationInMinutes: 1
   content: |
-       Search and select any query from the pop-up window.
+    1. Select any option from the pop-up.
 
-        :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/popup.png" alt-text="Screenshot shows an example of a pop-up window showing a list of query options in a Teams chat.":::
+    1. Enter text and select **send**.
 
-       An Adaptive Card appears in the chat.
+       :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/option1.png" alt-text="Screenshot of compose message box with the options from pop-up chat being displayed.":::
 
-        :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/option1.png" alt-text="Screenshot shows an example of an Adaptive Card displayed in Teams chat.":::
+       1. Select **Nuget Package**.
+
+          :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/nuget_1.png" alt-text="Screenshot of nuget webpage displaying the nuget package details.":::
+
+       1. Select **Project**.
+
+          :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/project.png" alt-text="Screenshot of GitHub webpage displaying the project details.":::
 
 - title: Complete challenge
   durationInMinutes: 1
@@ -456,3 +462,4 @@ items:
 
 - content: |
     You've completed the tutorial to get started with Teams message extensions search!
+
