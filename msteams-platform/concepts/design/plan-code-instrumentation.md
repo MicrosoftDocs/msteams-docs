@@ -1,7 +1,7 @@
 ---
 title: Plan code instrumentation using analytics service
 author: heath-hamilton
-description: Learn about planning code instrumentation using analytics service.
+description: Learn about planning code instrumentation using an analytics service.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
@@ -17,14 +17,14 @@ Your application instrumentation can be captured and analyzed in any analytics s
  
 Azure Applications Insights does auto-instrumentation to automatically collect performance, error data, and HTTP requests without code changes. Note that the instrumentation described in the [previous section](strategize-measure.md) requires capturing custom events. It requires adding Application Insights SDK to your application code.
 
-- Follow the guidance [here](/azure/azure-monitor/app/api-custom-events-metrics.md#prep) to add Application Insights SDK to your code.
-- Use [TrackEvent](/azure/azure-monitor/app/usage-overview.md#custom-business-events) to instrument and track custom events important for your business and metrics mentioned in [overview](overview-analytics.md).
+- Follow the guidance [here](/azure/azure-monitor/app/api-custom-events-metrics#prep) to add Application Insights SDK to your code.
+- Use [TrackEvent](/azure/azure-monitor/app/usage-overview#custom-business-events) to instrument and track custom events important for your business and metrics mentioned in [overview](overview-analytics.md).
 - The [retention workbook](/azure/azure-monitor/app/usage-retention) provides user retention analysis out of box. The workbook allows measuring retention by pre-defined custom events.
 - [User Flows](/azure/azure-monitor/app/usage-flows) provides useful insight on how your users navigate through the app and can be used for tracking custom events as well.
 
 ## Telemetry as an Investment
 
-Collecting instrumentation data using the generated analytics is important for improving your app experience and guiding your roadmap. However, your investment in planning analytics and using instrumentation goes beyond the solution. It provides a window into your user’s mind and collecting behavior patterns that can help you find the crucial product market fit.
+Collecting instrumentation data using the generated analytics is important for improving your app experience and guiding your roadmap. However, your investment in planning analytics and using instrumentation goes beyond the solution. It provides a window into your user’s mind and collects behavior patterns that can help you find the crucial product market fit.
 
 Analyzing your solution usage and insights on features that your end users value enough to pay can help shape the long-term strategy for your organization and future solutions that you build.
 
