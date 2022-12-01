@@ -8,7 +8,7 @@ ms.localizationpriority: medium
 
 # Authentication flow in Adaptive Cards universal actions
 
-Universal Actions for Adaptive Cards were introduced in the Adaptive Cards schema version v1.4. It introduces a new action type, Action.Execute and enables bot as the common backend for handling actions which work across apps, such as Teams and Outlook.
+Universal Actions for Adaptive Cards were introduced in the Adaptive Cards schema version v1.4. It introduces a new action type, Action.Execute and enables bot as the common backend for handling actions, which work across apps, such as Teams and Outlook.
 
 With Action.Execute, following are the major benefits to bot developers and users:
 
@@ -17,16 +17,16 @@ With Action.Execute, following are the major benefits to bot developers and user
 
 :::image type="content" source="../../../assets/images/authentication/adaptive-card-universal-action/incident.png" alt-text="Screenshot shows the incident creator, incident assignee and a participant all see different cards in the conversation.":::
 
-* Sequential View: Since Action.Execute buttons can return new Adaptive card in response which is shown to user, it can enable sequential flows, like a menu card scenario.
+* Sequential View: Since Action.Execute buttons can return new Adaptive card in response, which is shown to user, it can enable sequential flows, like a menu card scenario.
 * Up to Date View: Cards with auto refresh will fetch the latest data from bot service and it displays up to date information to user.
 
 To learn more about universal actions, see [Universal Actions for Adaptive Cards](Overview.md).
 
-If you want to add user specific views in instances where an Adaptive Card with universal action is shared in the context of a group chat or a channel, the user may need to be authenticated. In the past, users who were chatting one-on-one with the bot had to wait while the you sent them a separate auth card to authenticate. In order to communicate with the bot , user needs to switch from the group chat or channel as a result it disturbs the flow.
+If you want to add user specific views in instances where an Adaptive Card with universal action is shared in the context of a group chat or a channel, the user may need to be authenticated. In the past, users who were chatting one-on-one with the bot had to wait while the you sent them a separate auth card to authenticate. In order to communicate with the bot, user needs to switch from the group chat or channel as a result it disturbs the flow.
 
 ## Authentication flow in Action.Execute protocol
 
-Both OAuth and SSO, within the Action.Execute protocol which will enable authentication within the context of the group chat or channel conversation where the Adaptive Card is shared.
+Both OAuth and SSO, within the Action.Execute protocol, which will enable authentication within the context of the group chat or channel conversation where the Adaptive Card is shared.
 
 Bots can respond with login request in response to Action.Execute for:
 
@@ -53,7 +53,7 @@ For a OAuth or nominal sign-on experience in which the user is presented with a 
 
    :::image type="content" source="../../../assets/images/authentication/adaptive-card-universal-action/sign-in-button.png" alt-text="Screenshot shows the Sign-In button on the Adaptive card.":::
 
-1. The user will select on the sign-in link which will open a browser window to the configured connection"s identity provider"s sign-on page. The final redirect will land on a Token Service page offering an authorization code value.
+1. The user will select on the sign-in link, which will open a browser window to the configured connection"s identity provider"s sign-on page. The final redirect will land on a Token Service page offering an authorization code value.
 1. Teams client will create and send the adaptiveCard/action Invoke Activity with name. The value will include the state field containing the authorization code:
    * Senders MUST include a state field.
 1. The channel delivers this Invoke to the bot, which uses the authentication code to finalize retrieving the token with the Token Service. The Token Service delivers the user"s access token to the bot.
@@ -62,7 +62,7 @@ For a OAuth or nominal sign-on experience in which the user is presented with a 
 
    If the value in the state field is incorrect, the bot can return an error to the client as follows:
 
-   Clients can re-prompt the user for the correct authorization code or can send a different Action.Execute.
+   Clients can reprompt the user for the correct authorization code or can send a different Action.Execute.
 
 1. If the authorization code in state is correct, the bot uses the access token on behalf of the user to perform its actions.
 1. The bot returns a non-error response to the client (either a card or message).
@@ -118,7 +118,7 @@ For a single sign-on experience in which the user is already signed into a clien
    * Clients MAY ignore the tokenExchangeResource for any reason, including invalid values, errors retrieving exchangeable tokens, or not supporting the identity provider.
    * Clients that ignore the tokenExchangeResource SHOULD use the nominal sign-on flow.
 
-1. The client re-sends the original `adaptiveCard/action` to the bot along with the token as follows:
+1. The client resend the original `adaptiveCard/action` to the bot along with the token as follows:
 
    ```json
     {
