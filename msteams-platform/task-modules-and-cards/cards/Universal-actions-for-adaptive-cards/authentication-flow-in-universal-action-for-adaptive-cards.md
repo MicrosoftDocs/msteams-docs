@@ -26,7 +26,7 @@ If you want to add user specific views in instances where an Adaptive Card with 
 
 ## Authentication flow in Action.Execute protocol
 
-We are now enabling authentication flow, both OAuth and SSO, within the Action.Execute protocol which will enable authentication right within the context of the group chat or channel conversation where the Adaptive Card is shared.
+Both OAuth and SSO, within the Action.Execute protocol which will enable authentication within the context of the group chat or channel conversation where the Adaptive Card is shared.
 
 Bots can respond with login request in response to Action.Execute for:
 
@@ -44,21 +44,21 @@ To learn more about how to create an authentication-enabled bot, how to deploy t
 For a OAuth or nominal sign-on experience in which the user is presented with a sign-in button or link, the protocol is as follows:
 
 1. An adaptiveCard/action Invoke request is sent to the bot.
-1. The bot leverages the Token Service protocol to check if there is already a cached token for the user specified in the activity.from.id field on the channel specified in the activity.channelId field for the bot and connection that is configured.
-1. If there is a cached token, the bot can leverage this token. If there is not a token, the bot creates an OAuthCard and places it in the Response with the values:
+1. The bot uses the Token Service protocol to check if there's already a cached token for the user specified in the activity.from.id field on the channel specified in the activity.channelId field for the bot and connection that is configured.
+1. If there's a cached token, the bot can use this token. If there's not a token, the bot creates an OAuthCard and places it in the Response with the values:
    * Senders MUST include a value that adheres to the OAuthCard format.
    * Senders MUST include a connectionName. Receivers MAY ignore login requests with an empty or missing connectionName.
    * Senders MUST include either a button that has a non-empty buttons array.
-1. Upon receiving this response, Teams client will show a sign In button in the card footer where user can click.
+1. Upon receiving this response, Teams client will show a **Sign-In** button in the card footer where user can select.
 
-   :::image type="content" source="../../../assets/images/authentication/adaptive-card-universal-action/sign-in-button.png" alt-text="Sc":::
+   :::image type="content" source="../../../assets/images/authentication/adaptive-card-universal-action/sign-in-button.png" alt-text="Screenshot shows the Sign-In button on the Adaptive card.":::
 
-1. The user will click on the sign-in link which will open a browser window to the configured connection"s identity provider"s sign-on page. The final redirect will land on a Token Service page offering an authorization code value.
+1. The user will select on the sign-in link which will open a browser window to the configured connection"s identity provider"s sign-on page. The final redirect will land on a Token Service page offering an authorization code value.
 1. Teams client will create and send the adaptiveCard/action Invoke Activity with name. The value will include the state field containing the authorization code:
    * Senders MUST include a state field.
 1. The channel delivers this Invoke to the bot, which uses the authentication code to finalize retrieving the token with the Token Service. The Token Service delivers the user"s access token to the bot.
 
-   * Receivers MAY ignore the adaptiveCard/action invoke or reply with an error if there is a missing or empty state field.
+   * Receivers MAY ignore the adaptiveCard/action invoke or reply with an error if there's a missing or empty state field.
 
    If the value in the state field is incorrect, the bot can return an error to the client as follows:
 
@@ -75,13 +75,13 @@ Authentication steps for SSO are similar to that of a bot or tab in Teams. It in
 1. [Update your Teams application manifest for your bot](../../../bots/how-to/authentication/bot-sso-manifest.md)
 
 > [!NOTE]
-> To implement SSO flow, you must have personal scope declared for your bot in the app manifest. When a user invokes the SSO flow via the Adaptive Card Action.Execute protocol, the user is prompted to install the app in personal scope if it is not already installed.
+> To implement SSO flow, you must have personal scope declared for your bot in the app manifest. When a user invokes the SSO flow via the Adaptive Card Action.Execute protocol, the user is prompted to install the app in personal scope if it isn't already installed.
 
 For a single sign-on experience in which the user is already signed into a client experience and the bot wants to perform token exchange for a different registered application or resource on the same identity provider, the protocol is as follows:
 
 1. The channel sends an Invoke Action.Execute request to the bot.
-1. The bot leverages the Token Service protocol to check if there is already a cached token for the user specified in the activity.from.id field on the channel specified in the activity.channelId field for the bot and connection that is configured.
-1. If there is a cached token, the bot can leverage this token. If there is not a token, the bot creates an OAuthCard and places it in an Invoke Response with the values below, which include a tokenExchangeResource:
+1. The bot uses the Token Service protocol to check if there's already a cached token for the user specified in the activity.from.id field on the channel specified in the activity.channelId field for the bot and connection that is configured.
+1. If there's a cached token, the bot can use this token. If there's not a token, the bot creates an OAuthCard and places it in an Invoke Response with the values below, which include a tokenExchangeResource:
 
 ```JSON
    {
@@ -116,7 +116,7 @@ For a single sign-on experience in which the user is already signed into a clien
 
 1. This response is delivered through the channel to the client, which uses the tokenExchangeResource information and the client token to obtain an on-behalf-of token or exchangeable token from the identity provider:
    * Clients MAY ignore the tokenExchangeResource for any reason, including invalid values, errors retrieving exchangeable tokens, or not supporting the identity provider.
-   * Clients that ignore the tokenExchangeResource SHOULD leverage the nominal sign-on flow.
+   * Clients that ignore the tokenExchangeResource SHOULD use the nominal sign-on flow.
 
 1. The client re-sends the original `adaptiveCard/action` to the bot along with the token as follows:
 
@@ -146,7 +146,7 @@ For a single sign-on experience in which the user is already signed into a clien
 
 1. The channel delivers this Invoke to the bot, which uses the token to finalize the token exchange process with the Token Service and identity provider. The Token Service delivers the user"s access token to the bot.
    * Receivers MAY ignore the authentication if the value is malformed.
-   * Receivers that experience an error performing token exchange SHOULD respond with an error or a second loginRequest that does not include single sign-on information. If responding with an error, the error response MUST be:
+   * Receivers that experience an error performing token exchange SHOULD respond with an error or a second loginRequest that doesn't include single sign-on information. If responding with an error, the error response MUST be:
    * If the value in the state field is incorrect, the bot can return an error to the client as follows:
 
    ```json
