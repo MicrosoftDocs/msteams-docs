@@ -111,15 +111,15 @@ Student #2
 
 #### Contoso dashboard
 
-When you go to the Contoso app within MS Teams, you first arrive at the dashboard page. This page provides at a glance information about texts that haven’t been handed-in yet, that still 4 need to be corrected and the ones that are corrected already and of which the feedback can be sent to the student. At ‘Assignments’ it shows the assignments that are currently active and by clicking on the green button underneath that it's possible to create a new assignment in Contoso (that is through the needless integration also immediately visible in Microsoft Teams when created). Also, you can select a period and group or class here.
+When you go to the Contoso app within MS Teams, you first arrive at the dashboard page. This page provides at a glance information about texts that haven’t been handed-in yet, that still 4 need to be corrected and the ones that are corrected already and of which the feedback can be sent to the student. In the **Assignments** section, it shows the assignments that are currently active and by clicking on the green button underneath that it's possible to create a new assignment in Contoso (that is through the needless integration also immediately visible in Microsoft Teams when created). Also, you can select a period and group or class here.
 
 #### Classes
 
-Through the integration of Contoso within MS Teams, it's possible to make a group or class within Teams which is afterwards automatically also created within Contoso (within Teams). See in the image below, the creation of ‘Lizzy’s trial class’.
+Through the integration of Contoso within MS Teams, it's possible to make a group or class within Teams, which is afterwards also created within Contoso (within Teams) automatically. See in the image below, the creation of ‘Lizzy’s trial class’.
 
 :::image type="content" source="../../../../assets/images/store-detail-page/edu-sample-class.png" alt-text="Education sample shows trial class":::
 
-On the next image you can see that this is also automatically visible within Contoso when you go to ‘My Classes/groups’ in the menu on the left.
+In the next image, you can see that this is also automatically visible within Contoso when you go to ‘My Classes/groups’ in the menu on the left.
 
 :::image type="content" source="../../../../assets/images/store-detail-page/edu-sample-class-group.png" alt-text="Education sample showing Contoso class group":::
 
@@ -128,9 +128,18 @@ On the next image you can see that this is also automatically visible within Con
 
 #### Assignments
 
-Within Microsoft Teams you can see the 'Assignments' icon in the left menu. Here you can see a list of assignments. It also shows the due date of the assignments and to what class these assignments are assigned to. Above the list of assignments there are three tabs visible: ‘Assigned’, ‘Returned’ and ‘Drafts’. ‘Assigned’ shows assignments that are sent to your classes, ‘Returned’ are the assignments that you received back from your students and that are ready to be corrected by you and ‘Drafts’ shows assignments that are created as a concept and that aren't sent to your students yet. Next to ‘Drafts’, it's possible to filter assignments by class.
+Within Microsoft Teams, you can see the **Assignments** icon in the left menu. Here you can see a list of assignments. It also shows the due date of the assignments and to what class these assignments are assigned to. Above the list of assignments there are three tabs visible: **Assigned**, **Returned**, and **Drafts**.
 
-When clicking on an assignment that’s in the list, you can see the status of the assignment per student. When you see ‘Not handed in’ next to the students name, it means that besides the student didn't hand in the assignment, he or she also didn't have a look at the assignment descriptions. When you see ‘Viewed’, it's not handed in yet, but the student did see the assignment description. When ‘Handed in’ you can start correcting the assignment.
+- The **Assigned** tab shows assignments that are sent to your classes.
+- The **Returned** tab shows the assignments that the students returned, which are ready for checking.
+- The **Drafts** tab shows assignments that are created as a concept and that they aren't sent to your students yet.
+- Next to **Drafts**, it's possible to filter assignments by class.
+
+When clicking on an assignment that’s in the list, you can see the status of the assignment per student:
+
+- **Not handed in**: It means that the student didn't hand in the assignment, and that they didn't have a look at the assignment descriptions either.
+- **Viewed**: It mean that the assignment isn't handed in yet, but the student has seen the assignment description.
+- **Handed in**: It means that the student has submitted the assignment and you can start checking it.
 
 :::image type="content" source="../../../../assets/images/store-detail-page/edu-assignment.png" alt-text="Education sample showing class assignment":::
 
