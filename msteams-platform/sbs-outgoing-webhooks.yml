@@ -61,11 +61,13 @@ items:
 - title: Create Outgoing Webhooks
   durationInMinutes: 5
   content: |
-    1. Select the required team, and then select **Manage team** from the (•••) dropdown menu.
+    1. Go to **Microsoft Teams** and select **Teams** from the left pane.
+
+    1. Go to a team that you want, select **More options** (...), and then select **Manage team**.
 
        :::image type="content" source="./assets/images/sbs-outgoing-webhooks/manage-team.png" alt-text="Screenshot of Teams app with Manage team option under Contoso dropdown menu highlighted in red.":::
 
-    1. Choose the **Apps** tab from the navigation bar.
+    1. Select the **Apps** tab from the navigation bar.
 
        :::image type="content" source="./assets/images/sbs-outgoing-webhooks/app-selection.png" alt-text="Screenshot shows the selection of Apps tab under Contoso.":::
 
@@ -107,7 +109,7 @@ items:
 - title: Build and run the service
   durationInMinutes: 1
   content: |
-       1. Launch the latest version of Visual Studio.
+       1. Open **Visual Studio**.
 
        1. Go to **File** > **Open** > **Project/Solution**.
     
@@ -117,7 +119,7 @@ items:
 
            :::image type="content" source="./assets/images//sbs-outgoing-webhooks/open-project.png" alt-text="Screenshot shows to select WebhookSampleBot.sln from csharp folder.":::
 
-       1. Update the `contoso` to `M365x712764` and HMAC in **AuthProvider.cs** file.  
+       1. Go to **AuthProvider.cs** file. Update `contoso` to `M365x712764` and add HMAC.  
 
            :::image type="content" source="./assets/images//sbs-outgoing-webhooks/update-hmac2.png" alt-text="Screenshot shows to update Contoso to M365x712764 and HMAC in AuthProvider.cs file highlighted in red.":::
       
@@ -134,18 +136,18 @@ items:
 - title: Interact with the app in Teams
   durationInMinutes: 1
   content: |
-    1. Select **General** to start a new conversation.
+    1. Go to **Teams** and select **Teams** from the left pane.    
+    
+    1. Go to **General** > **New conversation**.
 
-    1. Select **New conversation** to begin a conversation.
-
-    1. To invoke an Outgoing Webhook in the channel, **@mention** the Outgoing Webhook name and select Send.
+    1. To invoke an Outgoing Webhook in the channel, **@mention** the Outgoing Webhook name and select the **Send** icon.
 
        :::image type="content" source="./assets/images/sbs-outgoing-webhooks/type-mention.png" alt-text="Screenshot shows @mention the name of Outgoing Webhook.":::
 
        > [!NOTE]
        >  You can send Adaptive Card, Hero card, and text messages as attachment with Outgoing Webhook.
 
-    1. The meeting chat displays new message.
+    1. The meeting chat displays a new message.
 
        :::image type="content" source="./assets/images/sbs-outgoing-webhooks/output-result.png" alt-text="Screenshot displays new message in Teams with the name of the Outgoing Webhook.":::
        
