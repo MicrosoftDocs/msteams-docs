@@ -301,10 +301,10 @@ items:
 
     1. Open the `appsettings.json` file in the Visual Studio Code and make the following changes:
          
-         * Replace `MicrosoftAppId` to your bot's **Microsoft App ID**.
-         * Replace `MicrosoftAppPassword` to your bot's client secret ID **Value**.
-         * Replace `ConnectionName` to the name of OAuth connection setting.
-         * Replace  `ApplicationBaseUrl`to your ngrok domain name.
+         * Replace `MicrosoftAppId` with your bot's **Microsoft App ID**.
+         * Replace `MicrosoftAppPassword` with your bot's client secret ID **Value**.
+         * Replace `ConnectionName` with the name of OAuth connection setting.
+         * Replace  `ApplicationBaseUrl` with your ngrok domain name.
 
          :::image type="content" source="./assets/images/adaptive-cards/appsettings-json_1.png" alt-text="appsettings-json":::
 
@@ -325,8 +325,8 @@ items:
 
     1. Open the `manifest.json` file in the Visual Studio Code and make the following changes:
 
-         * Replace `contentBotId` to your bot's **Microsoft App ID**.
-         * Replace  `validDomains`to your ngrok domain name.
+         * Replace `contentBotId` with your bot's **Microsoft App ID**.
+         * Replace  `validDomains` with your ngrok domain name.
 
        :::image type="content" source="./assets/images/adaptive-cards/manifest-json_2.png" alt-text="appsettings-json":::
 
@@ -364,13 +364,13 @@ items:
     
     Perform the following steps to use the tab:
 
-    1. In the left pane of the Teams, select ●●● and choose your app from the list.
+    1. In the left pane of the Teams, select ●●● and select your app from the list.
     1. Tab shows the Adaptive Card with action controls.
     1. Select **Sign In**.
 
        :::image type="content" source="../msteams-platform/assets/images/adaptive-cards/adaptive-cards-tab-action-controls_1.png" alt-text="Tab showing Adaptive card with action controls":::
    
-    1. Choose an account to access the tab.
+    1. Select an account to access the tab.
 
        :::image type="content" source="../msteams-platform/assets/images/adaptive-cards/sign-in-page.png" alt-text="sign-in-page":::
 
