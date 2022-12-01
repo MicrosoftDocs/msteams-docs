@@ -56,7 +56,7 @@ Depending on your app functionality, you're required to provide Teams tenant con
     > These accounts must be utilized only for validation requirements. The validation team will fully test your app, including first-run user experience.
     > If your application is free for all users and anyone who intends to use your application can sign up to use the app, indicate the same in the test notes. The validation team will use the sign up process as described.
 
-3. **Test Notes**: They provide details about your app's capabilities in Teams and the steps for testing each one. This helps the validation team to better understand your app and complete the testing for all functionalities in your app. If your app functionality includes event-based notifications, please list the instructions to trigger these events. For time-based notifications, indicate the expected time for receiving these notifications.
+3. **Test Notes**: They provide details about your app's capabilities in Teams and the steps for testing each one. This helps the validation team to better understand your app and complete the testing for all functionalities in your app. If your app functionality includes event-based notifications, list the instructions to trigger these events. For time-based notifications, indicate the expected time for receiving these notifications.
 
     > [!NOTE]
     > The functional testing of the app is initiated based on the test notes provided. However, the validation team will not restrict the testing only to the test instructions provided.
