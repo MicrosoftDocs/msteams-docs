@@ -37,7 +37,7 @@ The Microsoft Teams app validation tool helps you identify and fix issues before
 
 Depending on your app functionality, you're required to provide Teams tenant configurations, a set of test accounts and test notes. Ensure you meet all requirements listed below to avoid app testability failures and delay in the app publishing process.
 
-1. **Tenant configurations**: You are required to configure a Teams tenant to test your app and provide test accounts (details below). To create a demo tenant refer to (link). Ensure your app is configured for this demo tenant. If applicable, safe listing or connection to external services for this tenant should be done before submission of the app.
+1. **Tenant configurations**: You must configure a Teams tenant to test your app and provide test accounts (details below). To create a demo tenant refer to (link). Ensure your app is configured for this demo tenant. If applicable, safe listing or connection to external services for this tenant should be done before submission of the app.
 
 2. **Test Accounts**: Depending on your app's features, you need to provide all the following accounts:
 
@@ -47,9 +47,9 @@ Depending on your app functionality, you're required to provide Teams tenant con
         - Ensure test accounts are safe listed or configured with licenses keys (if applicable).
         - If your app requires users to log in or connect to external services, provide the required credentials to complete the login or connection with external service.
         - Ensure phone-based 2-way authentication is disabled for the test accounts.
-        - If the app provides a collaborative experience, provide a non-admin account for each user persona e.g. If your app is used by Teachers and students, provide credentials for both of them.
+        - If the app provides a collaborative experience, provide a non-admin account for each user persona for example, If your app is used by Teachers and students, provide credentials for both of them.
         - Ensure at least one account has access to premium or upgraded features (if applicable).
-        - All accounts you provide must include pre-populated data to help in testing e.g. If your app helps to provide market insights based on the user profile, ensure market data is pre-populated along with a few user profiles.
+        - All accounts you provide must include pre-populated data to help in testing for example, If your app helps to provide market insights based on the user profile, ensure market data is pre-populated along with a few user profiles.
         - Provide at least one account that isn't pre-configured to properly test the first-run sign-in experience.
 
     > [!NOTE]
@@ -231,12 +231,12 @@ On the first login, users will have to authorize the App Contoso Manager to acce
     1. In Apps, click on Connect a new app.
     1. Choose the app you want to connect with (choose: “Platform A”).
     1. Complete the form with the info required.
-    1. Users can find info (i.e., API key, token, URL, secret key, client ID) required by different apps in our online guide.
+    1. Users can find info (that is,, API key, token, URL, secret key, client ID) required by different apps in our online guide.
     1. Click on Verify and save.
 
 ### ERP data transfer app functionality
 
-Workflow is an automation that allow several tasks to be repeated automatically, every time a trigger starts (i.e.: get an order by platform A).
+Workflow is an automation that allow several tasks to be repeated automatically, every time a trigger starts (that is, get an order by platform A).
 2 workflows are available in Contoso
 
 #### Workflow 1: Copy items from platform A to platform B
