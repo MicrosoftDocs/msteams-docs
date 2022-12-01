@@ -154,7 +154,7 @@ You can also add new cards if needed. For more information on how to build diffe
                await target.sendAdaptiveCard(...);
            }
        }
-    ```
+  ```
 
 # [C#/.NET](#tab/dotnet3)
 
