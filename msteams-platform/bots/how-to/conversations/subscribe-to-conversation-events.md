@@ -1641,3 +1641,12 @@ It's important to know that new events can be added anytime in the future and yo
 
 > [!div class="nextstepaction"]
 > [Send proactive messages](~/bots/how-to/conversations/send-proactive-messages.md)
+
+## See also
+
+* [Build bots for Teams](../../what-are-bots.md)
+* [API reference for the Bot Framework Connector service](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference)
+* [Channel and group chat conversations with a bot](channel-and-group-conversations.md)
+* [Receive all conversation messages with RSC](channel-messages-with-rsc.md)
+* [Create Teams conversation bot](../../../sbs-teams-conversation-bot.yml)
+* [Triggers in Bot Framework Composer](/composer/concept-events-and-triggers)
