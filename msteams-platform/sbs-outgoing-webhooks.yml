@@ -138,7 +138,7 @@ items:
 
     1. Select **New conversation** to begin a conversation.
 
-    1. Enter **\@mention** the name of the Outgoing Webhook to invoke it in the channel and select send button. 
+    1. To invoke an Outgoing Webhook in the channel, **@mention** the Outgoing Webhook name and select Send.
 
        :::image type="content" source="./assets/images/sbs-outgoing-webhooks/type-mention.png" alt-text="Screenshot shows @mention the name of Outgoing Webhook.":::
 
