@@ -199,21 +199,10 @@ public class NotifyController : ControllerBase
 
     public async Task<IActionResult> Get()
     {
-        foreach (var conversationReference in _conversationReferences.Values) // Loop of all conversation references must be updated to get it from backend system.
+        foreach (var conversationReference in _conversationReferences.Values)
         {
-            var newReference = new ConversationReference()
-        {
-            Bot = new ChannelAccount()
-            {
-                Id = conversationReference.Bot.Id
-            },
-            Conversation = new ConversationAccount()
-            {
-                Id = conversationReference.Conversation.Id
-            },
-            ServiceUrl = conversationReference.ServiceUrl,
-        };
-            await ((BotAdapter)_adapter).ContinueConversationAsync(_appId, newReference, BotCallback, default(CancellationToken));
+        
+            await ((BotAdapter)_adapter).ContinueConversationAsync(_appId, conversationReference, BotCallback, default(CancellationToken));
         }
         
         // Let the caller know proactive messages have been sent
@@ -233,6 +222,22 @@ public class NotifyController : ControllerBase
     }
 }
 ```
+
+Example of a code snippet to demonstrate creating conversation reference.
+
+```csharp
+ var newReference = new ConversationReference()
+        {
+            Bot = new ChannelAccount()
+            {
+                Id = conversationReference.Bot.Id
+            },
+            Conversation = new ConversationAccount()
+            {
+                Id = conversationReference.Conversation.Id
+            },
+            ServiceUrl = conversationReference.ServiceUrl,
+        };
 
 # [TypeScript](#tab/typescript)
 
