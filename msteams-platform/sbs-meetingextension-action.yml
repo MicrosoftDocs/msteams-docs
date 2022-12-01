@@ -308,7 +308,7 @@ items:
                
          1. Select **Add a platform**.
          1. Select **Web**.
-         1. In the **Redirect URIs** box, enter the redirect URI for your app by appending `auth-end` to fully qualified domain name:</br> 
+         1. Enter the redirect URI for your app by appending `auth-end` to fully qualified domain name:</br> 
            `https://2bb1****.ngrok.io/auth-end`. </br>
 
          1. Select the following checkboxes under **Implicit grant and hybrid flows**:
