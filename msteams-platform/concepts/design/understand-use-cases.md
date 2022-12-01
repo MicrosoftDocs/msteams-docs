@@ -184,7 +184,10 @@ A user can interact with an app on a canvas tab to do an activity or might choos
 ## See also
 
 * [Plan your app with Teams features](../app-fundamentals-overview.md)
-* [Build tabs for Teams](../../tabs/what-are-tabs.md)
-* [Build bots for Teams](../../bots/what-are-bots.md)
-* [Message extensions](../../messaging-extensions/what-are-messaging-extensions.md)
+* [Tabs](../../tabs/what-are-tabs.md)
+* [Bots](../../bots/what-are-bots.md)
+* [Meeting extentions](../../apps-in-teams-meetings/design/designing-apps-in-meetings.md)
+* [Apps for Teams meetings and calls](../../apps-in-teams-meetings/teams-apps-in-meetings.md)
 * [Webhooks and connectors](../../webhooks-and-connectors/what-are-webhooks-and-connectors.md)
+* [Apps for Teams meetings and calls](../../apps-in-teams-meetings/teams-apps-in-meetings.md)
+* [Adaptive Card](../../task-modules-and-cards/cards/cards-reference.md#adaptive-card)

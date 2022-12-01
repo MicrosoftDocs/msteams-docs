@@ -101,7 +101,9 @@ The following list helps to identify the availability of GCC, GCC-High, and DOD 
 
 ## See also
 
+* [Get started](../get-started/get-started-overview.md)
 * [Planning checklist](../concepts/design/planning-checklist.md)
 * [Considerations for Teams integration](../samples/integrating-web-apps.md)
-* [Build your first Microsoft Teams app](../build-your-first-app/build-first-app-overview.md)
-* [Get started](../get-started/get-started-overview.md)
+* [Tabs on mobile](../tabs/design/tabs-mobile.md)
+* [Device capabilities](device-capabilities/device-capabilities-overview.md)
+* [Authenticate users in Microsoft Teams](authentication/authentication.md)
