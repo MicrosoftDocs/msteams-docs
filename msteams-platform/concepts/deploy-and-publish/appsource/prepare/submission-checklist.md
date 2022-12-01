@@ -44,11 +44,11 @@ Depending on your app functionality, you're required to provide Teams tenant con
     - Admin account (required)
     - Non-admin accounts (required)
 
-        - Ensure that test accounts are safe listed or configured with licenses keys (if applicable).
+        - Ensure that test accounts are safe-listed or configured with licenses keys, if applicable.
         - If your app requires users to log in or connect to external services, provide the required credentials to complete the login or connection with external service.
         - Ensure that phone-based 2-way authentication is disabled for the test accounts.
         - If the app provides a collaborative experience, provide a non-admin account for each user persona. For example, if your app is used by teachers and students, provide credentials for both user personas.
-        - Ensure that at least one account has access to premium or upgraded features (if applicable).
+        - Ensure that at least one account has access to premium or upgraded features, if applicable.
         - All accounts you provide must include pre-populated data to help in testing. For example, if your app helps to provide market insights based on the user profile, ensure that market data is pre-populated along with a few user profiles.
         - Provide at least one account that isn't pre-configured to test the first-run sign-in experience properly.
 
@@ -84,7 +84,7 @@ Here are sample test instructions for your reference:
 
 ### About the EDU app
 
-Contoso offers a web-based productivity tool that teachers use to grade students’ work. It supports teachers during the entire process of setting, correcting, marking, grading, and giving feedback on assignments. It can be done for any subject and have any form, such as essays, papers, and letters. Additionally, the app offers various options, such as plagiarism checking to promote original writing, Team hand-ins to stimulate collaborating in groups and peer assessment and feedback to help students learn from each other.
+Contoso offers a web-based productivity tool that teachers use to grade students’ work. It supports teachers during the entire process of setting, correcting, marking, grading, and giving feedback on assignments. It can be done for any subject and have any form, such as essays, papers, and letters. Additionally, the app offers various options, such as checking plagiarism  to promote original writing, team hand-ins to stimulate collaborating in groups and peer assessment, and feedback to help students learn from each other.
 
 ### Pre-requisites for EDU app
 
@@ -138,11 +138,11 @@ Within Microsoft Teams, you can see the **Assignments** icon in the left menu. H
 - The **Drafts** tab shows assignments that are created as a concept and that they aren't sent to your students yet.
 - Next to **Drafts**, it's possible to filter assignments by class.
 
-When clicking on an assignment that’s in the list, you can see the status of the assignment per student:
+When clicking on an assignment that’s in the list, you can see the status of the assignment per student. The types of status notifications mean:
 
-- **Not handed in**: It means that the student didn't hand in the assignment, and that they didn't have a look at the assignment descriptions either.
-- **Viewed**: It mean that the assignment isn't handed in yet, but the student has seen the assignment description.
-- **Handed in**: It means that the student has submitted the assignment and you can start checking it.
+- **Not handed in**: The student didn't hand in the assignment, and that they didn't have a look at the assignment descriptions either.
+- **Viewed**: The assignment isn't handed in yet, but the student has seen the assignment description.
+- **Handed in**: The student has submitted the assignment and you can start checking it.
 
 :::image type="content" source="../../../../assets/images/store-detail-page/edu-assignment.png" alt-text="Education sample showing class assignment":::
 
@@ -197,7 +197,7 @@ After one or more words or parts of the text are selected, it's possible to plac
 
 ### About the ERP data transfer app
 
-Contoso is an PaaS or SaaS in cloud platform who transfers data between e-commerce, ERP, CRM, marketplace, mail automation platforms and shipping platforms. Contoso allows automatic transfer between connected platforms, through its workflows. Users can activate and deactivate workflows in just one step after they connect to platforms, they're interested in.
+Contoso is a PaaS or SaaS in cloud platform who transfers data between e-commerce, ERP, CRM, marketplace, mail automation platforms and shipping platforms. Contoso allows automatic transfer between connected platforms, through its workflows. Users can activate and deactivate workflows in just one step after they connect to platforms, they're interested in.
 
 ### Feature list for ERP data transfer app
 
@@ -258,7 +258,7 @@ Workflow is an automation that allows several tasks to be repeated automatically
 
 This workflow requires platform A and platform B to work. It copies all items and products from platform A to platform B.
 
-Steps for workflow #1: (Provide screen shots)
+Steps for workflow #1: (Provide screenshots)
 
 1. Activate the workflow using the toggle.
 1. Look at products already uploaded on platform A, by selecting **products** tab.
@@ -269,7 +269,7 @@ Wait for automatic sync. After 15 minutes, check your platform B to find the pro
 
 This workflow requires platform A and platform B to work. It copies new orders from platform A to platform B connected. Note that you must activate Workflow 1 to activate this Workflow.
 
-Steps for workflow #2: (Provide screen shots)
+Steps for workflow #2: (Provide screenshots)
 
 1. Activate the workflow using the toggle.
 1. Make an order on platform A (You must buy one of the products copied with Workflow #1, to complete this workflow).
