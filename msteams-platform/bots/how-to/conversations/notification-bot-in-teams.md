@@ -145,7 +145,7 @@ You can also add new cards if needed. For more information on how to build diffe
 
 # [TypeScript](#tab/ts3)
 
-    ```TypeScript
+  ```TypeScript
        // list all installation targets
        for (const target of await bot.notification.installations()) {
            // "Person" means this bot is installed as Personal app
