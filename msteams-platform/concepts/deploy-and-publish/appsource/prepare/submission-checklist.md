@@ -37,7 +37,7 @@ The Microsoft Teams app validation tool helps you identify and fix issues before
 
 Depending on your app functionality, you're required to provide Teams tenant configurations, a set of test accounts and test notes. Ensure you meet all requirements listed below to avoid app testability failures and delay in the app publishing process.
 
-1. **Tenant configurations**: You must configure a Teams tenant to test your app and provide test accounts (details below). To create a demo tenant refer to (link). Ensure your app is configured for this demo tenant. If applicable, safe listing or connection to external services for this tenant should be done before submission of the app.
+1. **Tenant configurations**: You must configure a Teams tenant to test your app and provide test accounts (details below). To create a demo tenant, refer to (link). Ensure your app is configured for this demo tenant. If applicable, safe listing or connection to external services for this tenant should be done before submission of the app.
 
 2. **Test Accounts**: Depending on your app's features, you need to provide all the following accounts:
 
@@ -56,10 +56,10 @@ Depending on your app functionality, you're required to provide Teams tenant con
     > These accounts must be utilized only for validation requirements. The validation team will fully test your app, including first-run user experience.
     > If your application is free for all users and anyone who intends to use your application can sign up to use the app, indicate the same in the test notes. The validation team will use the sign up process as described.
 
-3. **Test Notes**: They provide details about your app's capabilities in Teams and the steps for testing each one. This helps the validation team to better understand your app and complete the testing for all functionalities in your app. If your app functionality includes event-based notifications, list the instructions to trigger these events. For time-based notifications, indicate the expected time for receiving these notifications.
+3. **Test Notes**: The notes provide details about your app's capabilities in Teams and the steps for testing each one. It helps the validation team to better understand your app and complete the testing for all functionalities in your app. If your app functionality includes event-based notifications, list the instructions to trigger these events. For time-based notifications, indicate the expected time for receiving these notifications.
 
     > [!NOTE]
-    > The functional testing of the app is initiated based on the test notes provided. However, the validation team will not restrict the testing only to the test instructions provided.
+    > The functional testing of the app is initiated based on the test notes provided. However, the validation team won't restrict the testing only to the test instructions provided.
 
 4. **Demo Video**: Provide a recording of your app so that Microsoft can fully understand its functionality.
 
@@ -119,12 +119,12 @@ Through the integration of Contoso within MS Teams, it's possible to make a grou
 
 :::image type="content" source="../../../../assets/images/store-detail-page/edu-sample-class.png" alt-text="Education sample shows trial class":::
 
-In the next image, you can see that this is also automatically visible within Contoso when you go to ‘My Classes/groups’ in the menu on the left.
+In the next image, you can see that it's automatically visible within Contoso when you go to **My Classes/groups** in the menu on the left.
 
 :::image type="content" source="../../../../assets/images/store-detail-page/edu-sample-class-group.png" alt-text="Education sample showing Contoso class group":::
 
 > [!NOTE]
-> The other way around it's unfortunately not possible yet. We would like to realize this in cooperation with Microsoft Teams. This would entail being possible to create a Class or Group in the app of Contoso in Microsoft Teams and that this would also be linked to the ‘Teams’ page within Microsoft Teams.
+> The other way around it isn't possible yet. We would like to realize this in cooperation with Microsoft Teams. This would entail being possible to create a Class or Group in the app of Contoso in Microsoft Teams and that this would also be linked to the **Teams** page within Microsoft Teams.
 
 #### Assignments
 
@@ -145,13 +145,15 @@ When clicking on an assignment that’s in the list, you can see the status of t
 
 ##### Creating a new assignment
 
-To create an assignment in Teams, go to Assignments and click then on Create (down left corner).
+To create an assignment in Teams, go to **Assignments** and select **Create** (bottom-left corner).
 
 :::image type="content" source="../../../../assets/images/store-detail-page/edu-sample-new-assignment.png" alt-text="Education sample showing new assignment":::
 
-As the template options are disabled for the use of Contoso within Microsoft Teams, click on the button to ‘create a new assignment (without an already existing template). You get to see the following screen. Choose a title that says something about the assignment so that you can later find the correct assignment based on the title.
+As the template options are disabled for the use of Contoso within Microsoft Teams, select the  **Create a new assignment** button (without an already existing template). You get to see the following screen. Select a title that says something about the assignment so that you can later find the correct assignment based on the title.
 
-The status of the assignment can be ‘draft’, ‘published’, ‘closed’ or ‘hidden’. Automatically, this is on draft meaning that when saving this new assignment, it will be saved as a concept whereafter you would still need to send it to your students. By changing this to published, it will immediately send the assignment once you save it. It's always possible to change this later. For example, it's possible to prepare various assignments before you publish them. The ‘language of the text’ determines which database of observations will be used to check and give feedback on the text. Under the option ‘Allowed ways to hand in texts’ you can choose whether your students type their texts in Contoso (or copy and paste them from word/pages file), or that they upload a document in Contoso
+The status of the assignment can be **draft**, **published**, **closed** or **hidden**.
+
+Automatically, this is on draft meaning that when saving this new assignment, it'll be saved as a concept whereafter you would still need to send it to your students. By changing this to published, it'll immediately send the assignment once you save it. It's always possible to change this later. For example, it's possible to prepare various assignments before you publish them. The ‘language of the text’ determines which database of observations will be used to check and give feedback on the text. Under the option ‘Allowed ways to hand in texts’ you can choose whether your students type their texts in Contoso (or copy and paste them from word/pages file), or that they upload a document in Contoso.
 
 :::image type="content" source="../../../../assets/images/store-detail-page/edu-sample-app.png" alt-text="Education sample app":::
 
