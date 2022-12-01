@@ -70,6 +70,12 @@
         href: concepts/design/strategize-measure.md
       - name: Plan code instrumentation using analytics service
         href: concepts/design/plan-code-instrumentation.md
+  - name: Plan growth for your Teams app
+    items:
+      - name: Overview
+        href: concepts/design/overview-app-growth.md
+      - name: App growth lifecycle
+        href: concepts/design/app-growth-lifecycle.md  
   - name: Plan to monetize your app
     href: concepts/design/plan-to-monetize.md
     displayName: Subscription, In-app purchases, Free trials, Test preview
