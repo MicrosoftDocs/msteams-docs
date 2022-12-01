@@ -156,7 +156,9 @@ As the template options are disabled for the use of Contoso within Microsoft Tea
 
 The status of the assignment can be **draft**, **published**, **closed**, or **hidden**.
 
-Automatically, this status is visible on draft. It means that when you save this new assignment, it'll be saved as a concept after which, you'd still need to send it to your students. By changing the status to **Published**, it'll immediately send the assignment after you save it. It's always possible to change the status later. For example, it's possible to prepare various assignments before you publish them. The **language of the text** determines which database of observations will be used to check and give feedback on the text. Under the option **Allowed ways to hand in texts**, you can choose whether your students type their texts in Contoso (or copy and paste them from word/pages file), or that they upload a document in Contoso.
+Automatically, this status is visible on draft. It means that when you save this new assignment, it'll be saved as a concept after which, you'd still need to send it to your students. By changing the status to **Published**, it'll immediately send the assignment after you save it. It's always possible to change the status later. For example, it's possible to prepare various assignments before you publish them.
+
+The **language of the text** determines which database of observations will be used to check and give feedback on the text. Under the option **Allowed ways to hand in texts**, you can choose whether your students type their texts in Contoso (or copy and paste them from word/pages file), or that they upload a document in Contoso.
 
 :::image type="content" source="../../../../assets/images/store-detail-page/edu-sample-app.png" alt-text="Education sample app":::
 
@@ -195,7 +197,7 @@ After one or more words or parts of the text are selected, it's possible to plac
 
 ### About the ERP data transfer app
 
-Contoso is an PaaS or SaaS in cloud platform who transfers data between E-commerce, ERP, CRM, marketplace, mail automation platforms and shipping platforms. Contoso allows automatic transfer  between connected platforms, through its workflows. Users can activate and deactivate workflows in just one step after they connect to platforms, they're interested in.
+Contoso is an PaaS or SaaS in cloud platform who transfers data between e-commerce, ERP, CRM, marketplace, mail automation platforms and shipping platforms. Contoso allows automatic transfer between connected platforms, through its workflows. Users can activate and deactivate workflows in just one step after they connect to platforms, they're interested in.
 
 ### Feature list for ERP data transfer app
 
@@ -208,13 +210,13 @@ Contoso E-commerce Manager:
 
 ### Installation
 
-Search the app “Contoso” between apps built for your organization and install it. (Specify if there are any steps to follow for installing the app).
+Search the app “Contoso” between apps built for your organization and install it. (If there are any steps to follow for installing the app, ensure that you specify them.)
 
 #### Login credentials
 
-Users need a Contoso subscription to use the app “Contoso”. Users can buy a subscription through the link in the info section.
+Users need a Contoso subscription to use the app “Contoso”. Users can buy a subscription through the link in the **Info** section.
 
-Your credentials to test Contoso app:
+Your credentials to test Contoso app can be:
 
 User #1
 
@@ -228,56 +230,54 @@ User #2
 
 #### Steps
 
-To use Contoso, users must connect to at least 2 platforms. Contoso needs platform A and platform B to transfer data. They can find instructions to complete the form visiting our guides online here: https://www.xxxxxxxxxx.com/guide/.
+To use Contoso, users must connect to at least 2 platforms. Contoso needs platform A and platform B to transfer data. They can find instructions to complete the form by visiting our guides online from https://www.xxxxxxxxxx.com/guide/.
 
-On the first login, users will have to authorize the App Contoso Manager to access the information shown on the pop-up. After that, users will find Microsoft 365 already connected.
+On the first login, users will have to authorize the App Contoso Manager to access the information shown on the pop-up. After that on every login, users will find Microsoft 365 already connected.
 
 1. **Step 1:  Connect to platform A**: To connect to a platform, users must choose platform A from the list. Steps to test this feature:
 
-    1. In Apps, click on Connect a new app.
-    1. Choose the app you want to connect with (choose: “Platform A”).
-    1. Complete the form with the info required.
-    1. Users can find info (that is, API key, token, URL, secret key, and client ID) required by different apps in our online guide.
-    1. Click on Verify and save.
+    1. In Apps, select **Connect a new app**.
+    1. Choose the app you want to connect with (choose: *Platform A*).
+    1. Complete the form with the required information.
+    1. Users can find information (that is, API key, token, URL, secret key, and client ID) required by different apps in our online guide.
+    1. Select **Verify and save**.
 
 1. **Step 2: Connect to platform B**: To connect to a platform, users must choose platform A from the list. Steps to test this feature:
 
-    1. In Apps, click on Connect a new app.
-    1. Choose the app you want to connect with (choose: “Platform A”).
-    1. Complete the form with the info required.
-    1. Users can find info (that is,, API key, token, URL, secret key, client ID) required by different apps in our online guide.
-    1. Click on Verify and save.
+    1. In Apps, select **Connect a new app**.
+    1. Choose the app you want to connect with (choose: *Platform A*).
+    1. Complete the form with the required information.
+    1. Users can find info (that is, API key, token, URL, secret key, client ID) required by different apps in our online guide.
+    1. Select **Verify and save**.
 
 ### ERP data transfer app functionality
 
-Workflow is an automation that allow several tasks to be repeated automatically, every time a trigger starts (that is, get an order by platform A).
-2 workflows are available in Contoso
+Workflow is an automation that allows several tasks to be repeated automatically every time a trigger starts (that is, get an order by platform A). Two workflows are available in Contoso:
 
-#### Workflow 1: Copy items from platform A to platform B
+#### Workflow #1: Copy items from platform A to platform B
 
-This workflow requires platform A and platform B to work.
-This workflow copies all items and products from platform A to platform B.
+This workflow requires platform A and platform B to work. It copies all items and products from platform A to platform B.
 
-Steps for workflow 1: (Provide screen shots)
+Steps for workflow #1: (Provide screen shots)
 
-- Activate the workflow using the toggle.
-- Look at products already uploaded on platform A, by clicking on “products” Tab.
+1. Activate the workflow using the toggle.
+1. Look at products already uploaded on platform A, by selecting **products** tab.
 
 Wait for automatic sync. After 15 minutes check your platform B to find the products.
 
-#### Workflow 2: Copy orders from platform B to platform A
+#### Workflow #2: Copy orders from platform B to platform A
 
-This workflow requires platform A and platform B to work.
-The workflow copies new orders from platform A to platform B connected. Please note you must activate Workflow 1 to activate this Workflow.
+This workflow requires platform A and platform B to work. It copies new orders from platform A to platform B connected. Please note you must activate Workflow 1 to activate this Workflow.
 
-Steps for workflow 2: (Provide screen shots)
+Steps for workflow #2: (Provide screen shots)
 
-- Activate the workflow using the toggle
-- Make an order on platform A (You must buy one of the products copied with Workflow #1, to complete this Workflow). Go to Link: https://xxxxxx.com and select the product to add to the cart
-- Choose a product and add it to the cart (You must buy one of the products copied from platform A with Workflow #1, to complete this Workflow)
-- Complete your order
+1. Activate the workflow using the toggle.
+1. Make an order on platform A (You must buy one of the products copied with Workflow #1, to complete this workflow).
+1. Go to Link: https://xxxxxx.com and select the product to add to the cart.
+1. Choose a product and add it to the cart. (You must buy one of the products copied from platform A with Workflow #1, to complete this Workflow.)
+1. Complete your order.
 
-Wait for automatic sync: Contoso will automatically copy this order to your platform B. After 15 minutes check platform A to find the order
+Wait for automatic sync. Contoso will automatically copy this order to your platform B. After 15 minutes check platform A to find the order
 
 > [!NOTE]
 > You must activate workflow 1 to activate workflow 2.
