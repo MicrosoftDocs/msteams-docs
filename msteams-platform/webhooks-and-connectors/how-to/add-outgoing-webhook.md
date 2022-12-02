@@ -48,17 +48,18 @@ To create an Outgoing Webhook, follow these steps:
 
     :::image type="content" source="../../assets/images/teamschannel_1.png" alt-text="Teams channel":::
 
-1. In the **Teams** page, select the required team to create an Outgoing Webhook and select the &#8226;&#8226;&#8226;. In the dropdown menu, select **Manage team**.
+1. In the **Teams** page, select the required team to create an Outgoing Webhook and select &#8226;&#8226;&#8226;.
+1. Select **Manage team** from the dropdown menu.
 
     :::image type="content" source="../../assets/images/outgoingwebhook1_1.png" alt-text="Select manage":::
 
-1. Select the **Apps** tab on the channel page.
+1. Select **Apps** on the channel page.
 
     :::image type="content" source="../../assets/images/outgoingwebhook2_1.png" alt-text="Select app":::
 
 1. Select **Create an Outgoing Webhook**.
 
-    :::image type="content" source="../../assets/images/outgoingwebhook3_1.png" alt-text="Select create outgoing webhook":::
+    :::image type="content" source="../../assets/images/outgoingwebhook3_1.png" alt-text="Select create outgoing webhook"lightbox="../../assets/images/outgoingwebhook3_1.png":::
 
 1. Type the following details in the **Create an Outgoing Webhook** page:
 
