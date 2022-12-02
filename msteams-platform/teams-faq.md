@@ -612,8 +612,6 @@ You can follow [provision SharePoint-based app](/microsoftteams/platform/sbs-gs-
 <details>
 <summary>How can I deploy the code in Azure using teams toolkit, and use graph API get user profile photo?</summary>
 
-Question: Customer was looking for support to deploy the code in Azure using teams toolkit, also asked few queries related to graph api get user profile photo.
-
 <br>
 Shared references to deploy the code using toolkit: Create a new Teams app using Teams Toolkit - Teams | Microsoft Docs
 TeamsFx Command Line Interface - Teams | Microsoft Docs
