@@ -16,11 +16,17 @@ This section contains the frequently asked questions and the answers.
 
 <!--Question: Publisher Attestation issue - the app needed to be published first (I attached the screenshot when I tried to submit the attestation). Before doing the Publisher Attestation. I think this is most likely to connect the Azure AD to an MPN account.-->
 
-Solution: Publisher verification overview - Microsoft Entra | Microsoft LearnMark an app as publisher verified - Microsoft Entra | Microsoft Learn
-Resolution-to connect the Azure to MPN settings below developer tab.
+Solution: Follow the steps in the pages given here:
 
-Links found:
-1. [Update preferred email](/partner-center/partner-center-account-setup.md#update-preferred-email)
+1. [Publisher verification overview - Microsoft Entra](/azure/active-directory/develop/publisher-verification-overview)
+
+1. [Microsoft LearnMark an app as publisher verified - Microsoft Entra](/azure/active-directory/develop/mark-app-as-publisher-verified)
+
+1. [Microsoft Learn
+Resolution-to connect the Azure to MPN settings below developer tab](https://learn.microsoft.com/en-us/partner-center/mpn-benefits-azure-cloud)
+
+<!--Links found:
+1. [Update preferred email](/partner-center/partner-center-account-setup.md#update-preferred-email)-->
 
 1. [Merge your partner account with another partner account](/partner-center/merge-accounts.md)
 
@@ -40,13 +46,13 @@ Solution: Platform Bug
 
 <!--Question: The bot isn't supposed to crash when the card is invalid. It can fail to display it, but it shouldn't crash. Also the behavior should be consistent between web and mobile.-->
 
-Solution: [Work with Universal Actions for Adaptive Cards](task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-Universal-Actions-for-Adaptive-Cards.md)
+Solution: For more information about using Adaptive Cards with a bot, see [Work with Universal Actions for Adaptive Cards](task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-Universal-Actions-for-Adaptive-Cards.md).
 </details>
 <br>
 <details>
-<summary>How can I remove specific messages from bot history? The only way I've found requires an activity ID (UpdateActivityAsync). Is there a way to get the chat history and find an activity ID of a specific message?</summary>
+<summary>How can I remove specific messages from bot history? Is there a way to get the chat history and find an activity ID of a specific message?</summary>
 
-Use Delete messages-Bot framework's DeleteActivity method: [Update and delete messages sent from bot](bots/how-to/update-and-delete-bot-messages.md#delete-messages)
+Solution: Use Delete messages-Bot framework's DeleteActivity method: [Update and delete messages sent from bot](bots/how-to/update-and-delete-bot-messages.md#delete-messages).
 </details>
 <br>
 <details>
