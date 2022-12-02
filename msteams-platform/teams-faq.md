@@ -23,7 +23,7 @@ Follow the steps in the pages given here:
 1. [Microsoft LearnMark an app as publisher verified - Microsoft Entra](/azure/active-directory/develop/mark-app-as-publisher-verified)
 
 1. [Microsoft Learn
-Resolution-to connect the Azure to MPN settings below developer tab](https://learn.microsoft.com/en-us/partner-center/mpn-benefits-azure-cloud)
+Resolution-to connect the Azure to MPN settings below developer tab](/partner-center/mpn-benefits-azure-cloud)
 
 <!--Links found:
 1. [Update preferred email](/partner-center/partner-center-account-setup.md#update-preferred-email)
@@ -375,10 +375,11 @@ You can create a Partner Center account one of the following ways:
 Open a [Partner Center support ticket](https://partner.microsoft.com/support/v2/?stage=1) and select the following:
 
 | Menu | Option |
-| -------   | -------  |
+| ---   | --- |
 | Category | Commercial Marketplace|
 | Topic | General Marketplace Help and How-to questions |
 | Subtopic | Office add-in |
+
 <br>
 </details>
 <details>
