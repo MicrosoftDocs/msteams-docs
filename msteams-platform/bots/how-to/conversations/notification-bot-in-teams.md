@@ -9,7 +9,7 @@ ms.localizationpriority: high
 
 # Notification bot in Teams
 
-Microsoft Teams Toolkit enables you to build applications that capture events and send them as notifications to a personal, groupchat, or a channel in Teams. You can send notifications as plain text or Adaptive Cards. The notification bot template creates an app that sends a message to Teams with Adaptive Cards triggered by HTTP post request.
+Microsoft Teams Toolkit enables you to build applications that capture events and send them as notifications to a personal, group chat, or a channel in Teams. You can send notifications as plain text or Adaptive Cards. The notification bot template creates an app that sends a message to Teams with Adaptive Cards triggered by HTTP post request.
 
 The app template is built using the TeamsFx SDK, which provides a simple set of functions over Microsoft Bot Framework to implement your requirement. For example, in a scenario where a travel agency builds an app in Teams for their customers to keep them up-to-date with the weather forecast. In the following diagram you can see a Teams app that sends notification to the travelers about the destination weather forecast:
 
@@ -19,7 +19,7 @@ You can create notification bot in other scenarios, such as a notification can b
 
 **Advantages**
 
-* Facilitates notifications to a personal, groupchat, and in a channel, using APIs from TeamsFx SDK.
+* Facilitates notifications to a personal, group chat, and in a channel, using APIs from TeamsFx SDK.
 * Enhances user experience by customizing notification with an Adaptive Card.
 * Provides multiple mechanisms to trigger notifications such as HTTP and schedule timer trigger with Azure Functions.
 
@@ -77,7 +77,7 @@ foreach (var target in await _conversation.Notification.GetInstallationsAsync())
 
 ## Notification bot installation
 
-A notification bot needs to be installed into a team, or a groupchat, or as personal app, depending on the required scope. You need to select the installation target before adding the bot to your app.
+A notification bot needs to be installed into a team, or a group chat, or as personal app, depending on the required scope. You need to select the installation target before adding the bot to your app.
 
 :::image type="content" source="../../../assets/images/notification-bot/notification-installation-scope.png" alt-text="add installation scope":::
 
@@ -167,7 +167,7 @@ You can also add new cards if needed. For more information on how to build diffe
      }
   ```
 
-* Notifications to a groupchat:
+* Notifications to a group chat:
 
   ```TypeScript
             // list all installation targets
@@ -445,7 +445,7 @@ In the following table, you can see the comparison of the two different ways:
 |&nbsp;   |Teams bot app  |Teams Incoming Webhook  |
 |---------|---------|---------|
 |Message individual person    | ✔️ | ❌ |
-|Message groupchat     | ✔️ | ❌ |
+|Message group chat     | ✔️ | ❌ |
 |Message public channel     | ✔️ | ✔️ |
 |Message private channel     | ❌ | ✔️ |
 |Send card message     | ✔️ | ✔️ |
@@ -474,7 +474,7 @@ Teams sends an event only at the first installation. If the bot app is already i
 
 You can resolve this in the following ways:
 
-* Send a message to your personal bot or mention your bot in groupchat, or channel, which helps you to reach the bot service again with correct installation information.
+* Send a message to your personal bot or mention your bot in group chat, or channel, which helps you to reach the bot service again with correct installation information.
 * Uninstall the bot app from Teams then redebug or relaunch it. You can resend the installation event to bot service.
 
 Notification target connections are stored in the persistence storage. If you're using the default local file storage, all installations are stored under `bot/.notification.localstore.json`.
