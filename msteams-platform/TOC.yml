@@ -249,8 +249,6 @@
         href: resources/messaging-extension-v3/search-extensions.md
       - name: Action extensions
         href: resources/messaging-extension-v3/create-extensions.md
-- name: Teams developer documentation FAQs
-  href: teams-faq.md
 - name: Build tabs
   items:
   - name: Overview
@@ -604,6 +602,8 @@
     displayName: Microsoft 365, Office 365
   - name: Publish Teams apps for Microsoft 365
     href: m365-apps/publish.md
+- name: Teams developer documentation FAQs
+  href: teams-faq.md
 - name: Test your app
   items:
   - name: Overview
