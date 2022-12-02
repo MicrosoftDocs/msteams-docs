@@ -155,7 +155,7 @@ While Live Share is in Preview, any limit to events emitted through Live Share i
 <details>
 <summary>How can a user set their timezone to get notifications at a preferred time?</summary>
 
-Question: We're wondering when the user sets the preferred time to get a notification, can we also get their timezone automatically? Any function may be in graph API where we can get the user's location?
+<!--Question: We're wondering when the user sets the preferred time to get a notification, can we also get their timezone automatically? Any function may be in graph API where we can get the user's location?-->
 
 <br>
 Solution:
@@ -169,7 +169,8 @@ Microsoft Docs to get the user’s time zone as follows:
 <details>
 <summary>How can I deploy the code in Azure using teams toolkit, and use graph API get user profile photo?</summary>
 
-Question: Customer was looking for support to deploy the code in Azure using teams toolkit, also asked few queries related to graph api get user profile photo.
+<!--Question: Customer was looking for support to deploy the code in Azure using teams toolkit, also asked few queries related to graph api get user profile photo.-->
+
 <br>
 Solution: Shared references to deploy the code using toolkit: Create a new Teams app using Teams 
 
