@@ -155,46 +155,43 @@ While Live Share is in Preview, any limit to events emitted through Live Share i
 <details>
 <summary>How can a user set their timezone to get notifications at a preferred time?</summary>
 
-<br>
-Solution:
-You can use the following Graph API [Get user mailbox settings](/graph/api/user-get-mailboxsettings#permissions).
-
-You can get the user’s time zone as follows:
+You can use the following Graph API [Get user mailbox settings](/graph/api/user-get-mailboxsettings#permissions). You can get the user’s time zone as follows:
 
 - GET /me/mailboxSettings/timeZone
 - GET /users/{id|userPrincipalName}/mailboxSettings/timeZone
 
 <br>
-<br>
 </details>
 <details>
 <summary>How can I deploy the code in Azure using teams toolkit, and use graph API get user profile photo?</summary>
 
-<br>
 Shared references to deploy the code using toolkit: Create a new Teams app using Teams 
 
 Toolkit - Teams | Microsoft Docs
 TeamsFx Command Line Interface - Teams | Microsoft Docs
 
-Also, provided guidance how they can call Graph API get user profile photo.
-<br><br>
+You can also call the Graph API get user profile photo.
+
+<br>
 </details>
 
 <details>
 <summary>Does Graph API work in Postman?</summary>
-<br>
+
 You can use the Microsoft Graph Postman collection with Microsoft Graph APIs.
 
 For more information, see [Use Postman with the Microsoft Graph API](/graph/use-postman).
-<br><br>
+
+<br>
 </details>
 <details>
 <summary>Does Graph API work in Microsoft Graph explorer?</summary>
-<br>
+
 Yes, Graph API works in Microsoft Graph explorer.
 
 For more information, see [Graph explorer](https://developer.microsoft.com/graph/graph-explorer).
 <br>
+
 </details>
 
 ## Moodle FAQs
