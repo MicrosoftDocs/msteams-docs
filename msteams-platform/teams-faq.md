@@ -50,9 +50,9 @@ Use Delete messages-Bot framework's DeleteActivity method: [Update and delete m
 </details>
 <br>
 <details>
-<summary>How can I test the validity of the card schema via code, to avoid it in the future?</summary>
+<summary>How can I test the validity of the card schema via code?</summary>
 
-Provided steps to test/validate adaptive card schema:“Adaptive cards editor(preview)” option from the Teams apps >>Developer portal >> Tools" and asked to refer Schema Explorer | Adaptive Cards.
+You can test or validate the Adaptive Card schema using the **Adaptive cards editor(preview)** option in Developer Portal > Tools.
 </details>
 
 ## Live share
@@ -82,7 +82,7 @@ Any data sent or stored through Fluid containers created by Live Share's hosted 
 <details>
 <summary>What meeting types does Live Share support?</summary>
 
-Scheduled meetings, one-on-one calls, group calls, and meet now are supported. Channel meetings aren't yet supported.
+Live Share supports the scheduled meetings, one-on-one calls, group calls, and meet now. Channel meetings aren't yet supported.
 <br>
 </details>
 
@@ -90,7 +90,9 @@ Scheduled meetings, one-on-one calls, group calls, and meet now are supported. C
 
 <summary>Will Live Share's media package work with DRM content?</summary>
 
-No. Teams currently doesn't support encrypted media for tab applications on desktop. Chrome, Edge, and mobile clients are supported. For more information, you can [track the issue here](https://github.com/microsoft/live-share-sdk/issues/14).
+Live Share's media package work doesn't with DRM content. Teams currently doesn't support encrypted media for tab applications on desktop. Chrome, Edge, and mobile clients are supported.
+
+For more information, you can [track the issue here](https://github.com/microsoft/live-share-sdk/issues/14).
 <br>
 </details>
 
