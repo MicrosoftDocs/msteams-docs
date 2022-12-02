@@ -8,32 +8,35 @@ ms.localizationpriority: medium
 
 # Authentication flow in Adaptive Cards universal actions
 
-Universal Actions for Adaptive Cards were introduced in the Adaptive Cards schema version v1.4. It introduces a new action type, Action.Execute and enables bot as the common backend for handling actions, which work across apps, such as Teams and Outlook.
+Universal Actions for Adaptive Cards bring the bot as the common backend for handling actions and introduces a new action type, `Action.Execute`, which works across apps, such as Teams and Outlook.
 
-With Action.Execute, following are the major benefits to bot developers and users:
+> [!NOTE]
+> Support for Universal Actions for Adaptive Cards schema version v1.4 is only available for cards sent by bot.
 
-* Bot developers can use Action.Execute for action handling across different platforms. Action.Execute works across hubs including Teams and Outlook. In addition, an Adaptive Card can be returned as response for an Action.Execute triggered invoke request.
-* User specific views: With refresh property in Adaptive Cards, which triggers auto refresh (internally an Action.Execute call) on the Adaptive Card and it can fetch different cards for different users in the chat based on their role. For example, the following screenshot shows the incident creator, incident assignee and a participant all see different cards in the conversation.
+Universal Actions for Adaptive Cards
+You can enable the following scenarios with `Action.Execute` on your Adaptive card for Universal action:
 
-:::image type="content" source="../../../assets/images/authentication/adaptive-card-universal-action/incident.png" alt-text="Screenshot shows the incident creator, incident assignee and a participant all see different cards in the conversation.":::
+* [Universal Actions](Overview.md#universal-actions)
+* [User Specific Views](Overview.md#user-specific-views)
+* [Sequential Workflows](Overview.md#sequential-workflow-support)
+* [Up to Date View](Overview.md#up-to-date-views)
 
-* Sequential View: Since Action.Execute buttons can return new Adaptive card in response, which is shown to user, it can enable sequential flows, like a menu card scenario.
-* Up to Date View: Cards with auto refresh will fetch the latest data from bot service and it displays up to date information to user.
+To learn more about Universal Actions for Adaptive Cards, see [Universal Actions for Adaptive Cards](Overview.md).
 
-To learn more about universal actions, see [Universal Actions for Adaptive Cards](Overview.md).
+If you want to add User Specific Views in instances where an Adaptive Card with Universal Action is shared in the context of a group chat or a channel, the user may need to be authenticated.
 
-If you want to add user specific views in instances where an Adaptive Card with universal action is shared in the context of a group chat or a channel, the user may need to be authenticated. In the past, users who were chatting one-on-one with the bot had to wait while the you sent them a separate auth card to authenticate. In order to communicate with the bot, user needs to switch from the group chat or channel as a result it disturbs the flow.
+In the past, users who were chatting one-on-one with the bot had to wait while you sent them a separate auth card to authenticate. In order to communicate with the bot, user needs to switch from the group chat or channel as a result it disturbs the flow.
 
 ## Authentication flow in Action.Execute protocol
 
-Both OAuth and SSO, within the Action.Execute protocol, which will enable authentication within the context of the group chat or channel conversation where the Adaptive Card is shared.
+Authentication flow for OAuth and SSO, within the `Action.Execute` protocol enables authentication within the context of the group chat or channel conversation where the Adaptive Card is shared.
 
-Bots can respond with login request in response to Action.Execute for:
+Bots can respond with login request in response to `Action.Execute` for:
 
 1. Adaptive Cards sent by bot in a one on one chat, group chat or a channel.
 1. Adaptive Cards sent by user via message extension app (backed by bot) in one on one chat, group chat or channel.
 1. Adaptive cards present in compose or preview area while user is composing the message.
-   * In compose area, refresh in Adaptive Card works and bot may want to use token to provide user specific view to user before they send the card to the chat.
+   * In compose area, refresh in Adaptive Card works and bot may want to use token to provide User Specific View to user before they send the card to the chat.
 
 ## Getting started with OAuth or nominal sign-on flow
 
@@ -62,7 +65,7 @@ For a OAuth or nominal sign-on experience in which the user is presented with a 
 
    If the value in the state field is incorrect, the bot can return an error to the client as follows:
 
-   Clients can reprompt the user for the correct authorization code or can send a different Action.Execute.
+   Clients can reprompt the user for the correct authorization code or can send a different `Action.Execute`.
 
 1. If the authorization code in state is correct, the bot uses the access token on behalf of the user to perform its actions.
 1. The bot returns a non-error response to the client (either a card or message).
@@ -75,11 +78,11 @@ Authentication steps for SSO are similar to that of a bot or tab in Teams. It in
 1. [Update your Teams application manifest for your bot](../../../bots/how-to/authentication/bot-sso-manifest.md)
 
 > [!NOTE]
-> To implement SSO flow, you must have personal scope declared for your bot in the app manifest. When a user invokes the SSO flow via the Adaptive Card Action.Execute protocol, the user is prompted to install the app in personal scope if it isn't already installed.
+> To implement SSO flow, you must have personal scope declared for your bot in the app manifest. When a user invokes the SSO flow via the Adaptive Card `Action.Execute` protocol, the user is prompted to install the app in personal scope if it isn't already installed.
 
 For a single sign-on experience in which the user is already signed into a client experience and the bot wants to perform token exchange for a different registered application or resource on the same identity provider, the protocol is as follows:
 
-1. The channel sends an Invoke Action.Execute request to the bot.
+1. The channel sends an Invoke `Action.Execute` request to the bot.
 1. The bot uses the Token Service protocol to check if there's already a cached token for the user specified in the activity.from.id field on the channel specified in the activity.channelId field for the bot and connection that is configured.
 1. If there's a cached token, the bot can use this token. If there's not a token, the bot creates an OAuthCard and places it in an Invoke Response with the values below, which include a tokenExchangeResource:
 
