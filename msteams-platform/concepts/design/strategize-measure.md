@@ -129,11 +129,3 @@ Happiness intends to measure your user’s attitude towards your product and can
 
 > [!div class="nextstepaction"]
 > [Plan code instrumentation using analytics service](plan-code-instrumentation.md)
-
-## See also
-
-- [Plan your app with Teams features](../app-fundamentals-overview.md)
-- [Adaptive Cards](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
-- [Tabs](../../tabs/what-are-tabs.md)
-- [Bots](../../bots/what-are-bots.md)
-- [Receive all conversation messages with RSC](../../bots/how-to/conversations/channel-messages-with-rsc.md)

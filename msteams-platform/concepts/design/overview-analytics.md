@@ -172,15 +172,3 @@ Next, see how you should methodically craft your data instrumentation strategy a
 
 > [!div class="nextstepaction"]
 > [Strategize and decide what to measure](strategize-measure.md)
-
-## See also
-
-- [Plan your app with Teams features](../app-fundamentals-overview.md)
-- [Link unfurling](../../messaging-extensions/how-to/link-unfurling.md)
-- [Microsoft graph](/graph/teams-concept-overview)
-- [Bots](../../bots/what-are-bots.md)
-- [Tabs](../../tabs/what-are-tabs.md)
-- [Cards and task modules](../../task-modules-and-cards/cards-and-task-modules.md)
-- [Adaptive Cards](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
-- [Apps for Teams meetings and calls](../../apps-in-teams-meetings/teams-apps-in-meetings.md)
-- [Extend Teams apps across Microsoft 365](../../m365-apps/overview.md)
