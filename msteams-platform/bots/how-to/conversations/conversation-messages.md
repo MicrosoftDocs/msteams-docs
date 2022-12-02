@@ -56,6 +56,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 
 ```
+
 # [Python](#tab/python)
 * [SDK reference](/python/api/botbuilder-core/botbuilder.core.activityhandler?view=botbuilder-py-latest#botbuilder-core-activityhandler-on-message-activity&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L103)

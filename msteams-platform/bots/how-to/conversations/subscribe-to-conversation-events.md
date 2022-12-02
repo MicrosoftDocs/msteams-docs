@@ -332,6 +332,7 @@ export class MyBot extends TeamsActivityHandler {
 # [Python](#tab/python)
 * [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?view=botbuilder-py-latest#botbuilder-core-teams-teamsactivityhandler-on-teams-channel-deleted&preserve-view=true)
 
+
 ```python
 async def on_teams_channel_deleted(
  self, channel_info: ChannelInfo, team_info: TeamInfo, turn_context: TurnContext
