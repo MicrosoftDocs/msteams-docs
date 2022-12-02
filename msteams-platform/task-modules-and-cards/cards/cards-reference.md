@@ -7,7 +7,7 @@ ms.topic: reference
 
 # Types of cards
 
-Adaptive, hero, list, Office 365 Connector, receipt, signin, and thumbnail cards and card collections are supported in bots for Microsoft Teams. They're based on cards defined by the Bot Framework, but Teams doesn't support all Bot Framework cards and has added some of its own.
+Adaptive, hero, list, Office 365 Connector, receipt, sign in, and thumbnail cards and card collections are supported in bots for Microsoft Teams. They're based on cards defined by the Bot Framework, but Teams doesn't support all Bot Framework cards and has added some of its own.
 
 Before you identify the different card types, understand how to create a hero card, thumbnail card, or Adaptive Card.
 
@@ -16,12 +16,12 @@ Before you identify the different card types, understand how to create a hero ca
 To create a hero card, thumbnail card, or Adaptive Card from Developer Portal for Teams:
 
 1. Go to [Developer Portal for Teams](https://dev.teams.microsoft.com/home).
-1. Select **Design and build Adaptive cards**.
+1. Select **Design and build Adaptive Cards**.
 1. Select **New card**.
 1. Enter card name and select **Save**.
 1. Select one of the cards from **Hero Card**, **Thumbnail Card**, or **Adaptive Card**.
 
-   :::image type="content" source="../../assets/images/Cards/Herocarddetailsteams.PNG" alt-text="herocard":::
+   :::image type="content" source="../../assets/images/Cards/Herocarddetailsteams.PNG" alt-text="Screenshot shows an example of the configuration options for a hero card in the Adaptive Card editor in the Developer Portal.":::
 
 1. Select **Save**.
 1. Select **Send me this card**. The card is sent to you as a chat message.
@@ -130,7 +130,7 @@ The following table provides the features that support Adaptive Cards:
 
 ### Example of Adaptive Card
 
-:::image type="content" source="~/assets/images/cards/adaptivecard.png" alt-text="Example of an Adaptive Card":::
+:::image type="content" source="~/assets/images/cards/adaptivecard.png" alt-text="Screenshot shows an example of an Adaptive Card.":::
 
 The following code shows an example of an Adaptive Card:
 
@@ -319,7 +319,7 @@ The following table provides the properties of a hero card:
 
 ### Example of a hero card
 
-:::image type="content" source="../../assets/images/Cards/hero.png" alt-text="Hero card":::
+:::image type="content" source="../../assets/images/Cards/hero.png" alt-text="Screenshot shows an example of a hero card.":::
 
 The following code shows an example of a hero card:
 
@@ -377,7 +377,7 @@ The following table provides the properties of a list card:
 
 | Property | Type  | Description |
 | --- | --- | --- |
-| title | Rich text | Title of the card. Maximum 2 lines.|
+| title | Rich text | Title of the card. Maximum two lines.|
 | items | Array of list items | Set of items applicable to the card.|
 | buttons | Array of action objects | Set of actions applicable to the current card. Maximum 6. |
 
@@ -470,7 +470,7 @@ The important difference between using connector cards from a connector and usin
 | --- | --- |
 | The endpoint receives the card payload through HTTP POST. | The `HttpPOST` action triggers an `invoke` activity that sends only the action ID and body to the bot.|
 
-Each connector card can display a maximum of ten sections, and each section can contain a maximum of five images and five actions.
+Each connector card can display a maximum of 10 sections, and each section can contain a maximum of five images and five actions.
 
 > [!NOTE]
 > Any additional sections, images, or actions in a message do not appear.
@@ -573,7 +573,7 @@ The following table provides the features that support receipt cards:
 
 ### Example of a receipt card
 
-:::image type="content" source="../../assets/images/Cards/receipt.png" alt-text="receipt card":::
+:::image type="content" source="../../assets/images/Cards/receipt.png" alt-text="Screenshot shows an example of a receipt card.":::
 
 The following code shows an example of a receipt card:
 
@@ -633,19 +633,19 @@ Bot Framework reference:
 
 ## Signin card
 
-The signin card in Teams is similar to the signin card in the Bot Framework except that the signin card in Teams only supports two actions `signin` and `openUrl`.
+The sign in card in Teams is similar to the signin card in the Bot Framework except that the signin card in Teams only supports two actions `signin` and `openUrl`.
 
-The log in action can be used from any card in Teams, not just the log in card. For more information, see [Teams authentication flow for bots](~/bots/how-to/authentication/auth-flow-bot.md).
+The signin action can be used from any card in Teams, not just the sign in card. For more information, see [Teams authentication flow for bots](~/bots/how-to/authentication/auth-flow-bot.md).
 
-### Support for log in cards
+### Support for login cards
 
-The following table provides the features that support sign in cards:
+The following table provides the features that support sign-in cards:
 
 | Bots in Teams | Message extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✔️ | ❌ | ❌ | ✔️ |
 
-### Additional information on signin cards
+### Additional information on sign in cards
 
 Bot Framework reference:
 
@@ -664,7 +664,7 @@ The following table provides the features that support thumbnail cards:
 | --- | --- | --- | --- |
 | ✔️ | ✔️ | ❌ | ✔️ |
 
-:::image type="content" source="../../assets/images/Cards/thumbnail.png" alt-text="thumbnail card":::
+:::image type="content" source="../../assets/images/Cards/thumbnail.png" alt-text="Screenshot shows an example of a thumbnail card.":::
 
 ### Properties of a thumbnail card
 
@@ -672,8 +672,8 @@ The following table provides the properties of a thumbnail card:
 
 | Property | Type  | Description |
 | --- | --- | --- |
-| title | Rich text | Title of the card. Maximum 2 lines.|
-| subtitle | Rich text | Subtitle of the card. Maximum 2 lines.|
+| title | Rich text | Title of the card. Maximum two lines.|
+| subtitle | Rich text | Subtitle of the card. Maximum two lines.|
 | text | Rich text | Text appears under the subtitle. For formatting options, see [card formatting](~/task-modules-and-cards/cards/cards-format.md). |
 | images | Array of images | Image displayed at the top of the card. Aspect ratio 1:1 square. |
 | buttons | Array of action objects | Set of actions applicable to the current card. Maximum 6. |
@@ -756,7 +756,7 @@ Properties of a carousel card are same as the hero and thumbnail cards.
 
 #### Example of a carousel collection
 
-:::image type="content" source="../../assets/images/Cards/carousel.png" alt-text="Carousel collection":::
+:::image type="content" source="../../assets/images/Cards/carousel.png" alt-text="Screenshot shows an example of a carousel collection.":::
 
 The following code shows an example of a carousel collection:
 
@@ -943,14 +943,14 @@ The following table provides the features that support list collections:
 
 #### Example of a list collection
 
-:::image type="content" source="../../assets/images/Cards/list.png" alt-text="list collection":::
+:::image type="content" source="../../assets/images/Cards/list.png" alt-text="Screenshot shows an example of a list collection.":::
 
 Properties of list collections are same as the hero or thumbnail cards.
 
-A list can display a maximum of ten cards per message.
+A list can display a maximum of 10 cards per message.
 
 > [!NOTE]
-> Some combinations of list cards are not yet supported on iOS and Android.
+> Some combinations of list cards aren't yet supported on iOS and Android.
 
 #### Syntax for list collections
 
@@ -970,4 +970,6 @@ The following cards are implemented by the Bot Framework, but aren't supported b
 * [Format cards](~/task-modules-and-cards/cards/cards-format.md)
 * [Up to date cards](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/up-to-date-views.md)
 * [Work with Universal Actions for Adaptive Cards](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/work-with-universal-actions-for-adaptive-cards.md)
+* [Adaptive Cards overflow menu](~/task-modules-and-cards/cards/cards-format.md#adaptive-cards-overflow-menu)
+* [Form completion feedback](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)
 * [Form completion feedback](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)

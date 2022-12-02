@@ -221,4 +221,4 @@ var connector = new ConnectorClient(new Uri(context.Activity.ServiceUrl));
 
 ## See also
 
-[Bot Framework samples](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).
+[Bot Framework samples](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/README.md).

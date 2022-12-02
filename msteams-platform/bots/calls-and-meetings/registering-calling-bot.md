@@ -94,7 +94,7 @@ You can rely on an administrator to grant the permissions your app needs at the 
 
 ## Step-by-step guide
 
-Follow the [step-by-step guide](../../sbs-calling-and-meeting.yml) to set up calling and meeting in a bot.
+Follow the [step-by-step guide](../../sbs-calling-and-meeting.yml) to set up Teams calling and meeting bot.
 
 ## Next step
 
@@ -103,7 +103,9 @@ Follow the [step-by-step guide](../../sbs-calling-and-meeting.yml) to set up cal
 
 ## See also
 
-* [Incoming call notifications](~/bots/calls-and-meetings/call-notifications.md)
+* [Build bots for Teams](../what-are-bots.md)
+* [Calls and online meetings bots](calls-meetings-bots-overview.md)
 * [Develop calling and online meeting bots on your local PC](~/bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md)
 * [View app permission and grant admin consent](/MicrosoftTeams/app-permissions-admin-center)
-* [Working with the cloud communications API in Microsoft Graph](/graph/api/resources/communications-api-overview)
+* [Work with the cloud communications API in Microsoft Graph](/graph/api/resources/communications-api-overview)
+* [Webhooks and connectors](../../webhooks-and-connectors/what-are-webhooks-and-connectors.md)
