@@ -58,7 +58,7 @@ Solution: Use Delete messages-Bot framework's DeleteActivity method: [Update an
 <details>
 <summary>How can I test the validity of the card schema via code?</summary>
 
-You can test or validate the Adaptive Card schema using the **Adaptive cards editor(preview)** option in Developer Portal > Tools.
+You can test or validate the Adaptive Card schema using the **Adaptive cards editor(preview)** option in [Developer Portal > Tools](https://dev.teams.microsoft.com/tools).
 </details>
 
 ## Live share
@@ -159,12 +159,12 @@ While Live Share is in Preview, any limit to events emitted through Live Share i
 
 <br>
 Solution:
-You can use the following Graph API [Get user mailbox settings](/graph/api/user-get-mailboxsettings.md#permissions).
+You can use the following Graph API [Get user mailbox settings](/graph/api/user-get-mailboxsettings#permissions).
 
 Microsoft Docs to get the user’s time zone as follows:
 • GET /me/mailboxSettings/timeZone
 • GET /users/{id|userPrincipalName}/mailboxSettings/timeZone
-
+<br>
 </details>
 <details>
 <summary>How can I deploy the code in Azure using teams toolkit, and use graph API get user profile photo?</summary>
@@ -178,7 +178,7 @@ Toolkit - Teams | Microsoft Docs
 TeamsFx Command Line Interface - Teams | Microsoft Docs
 
 Also, provided guidance how they can call Graph API get user profile photo.
-
+<br>
 </details>
 
 <details>
@@ -187,6 +187,7 @@ Also, provided guidance how they can call Graph API get user profile photo.
 You can use the Microsoft Graph Postman collection with Microsoft Graph APIs.
 
 For more information, see [Use Postman with the Microsoft Graph API](/graph/use-postman).
+<br>
 </details>
 <details>
 <summary>Does Graph API work in Microsoft Graph explorer?</summary>
