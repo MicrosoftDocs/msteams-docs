@@ -191,7 +191,7 @@ The following table includes the query parameter:
 
 ### Examples
 
-The `Bot ID` is declared in the manifest and the bot receives a result object.
+`Bot ID` is declared in the manifest and the bot receives a result object.
 
 > [!NOTE]
 >
