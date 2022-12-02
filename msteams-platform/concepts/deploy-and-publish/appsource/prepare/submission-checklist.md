@@ -37,7 +37,7 @@ The Microsoft Teams app validation tool helps you identify and fix issues before
 
 Depending on your app functionality, you're required to provide Teams tenant configurations, a set of test accounts, and test notes. Ensure that you meet all requirements listed in this section to avoid app testability failures and delay in the app publishing process.
 
-1. **Tenant configurations**: You must configure a Teams tenant to test your app and provide test accounts (details below). To create a demo tenant, refer to (link). Ensure your app is configured for this demo tenant. If applicable, safe-listing or connection to external services for this tenant should be done before submission of the app.
+1. **Tenant configurations**: You must configure a Teams tenant to test your app and provide test accounts. This section shares the details for configuring a tenant for your app's testing. For more information about creating a demo tenant, see [Prepare your Microsoft 365 tenant](../../../build-and-test/prepare-your-o365-tenant.md). Ensure your app is configured for this demo tenant. If applicable, safe-listing or connection to external services for this tenant should be done before submission of the app.
 
 2. **Test Accounts**: Depending on your app's features, you need to provide the following accounts:
 
