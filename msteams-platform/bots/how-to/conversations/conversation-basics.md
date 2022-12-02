@@ -31,9 +31,24 @@ For the bot to work in a particular conversation or scope, add support to that s
 
 Each message in a bot conversation is an `Activity` object of type `messageType: message`. When a user sends a message, Teams posts the message to your bot and the bot handles the message. In addition, to define core commands that your bot responds to, you can add a command menu with a drop-down list of commands for your bot. Bots in a group or channel only receive messages when they're mentioned @botname. Teams sends notifications to your bot for conversation events that happen in scopes where your bot is active. You can capture these events in your code and take action on them.
 
-A bot can also send proactive messages to users. A proactive message is any message sent by a bot that isn't in response to a request from a user. You can format your bot messages to include rich cards that include interactive elements, such as buttons, text, images, audio, video, and so on. Bot can dynamically update messages after sending them, instead of having your messages as static snapshots of data. Messages can also be deleted using the Bot Framework's `DeleteActivity` method.
+A bot can also send proactive messages to users. A proactive message is any message sent by a bot that isn't in response to a request from a user. You can format your bot messages to include rich cards that include interactive elements, such as buttons, text, images, audio, video, and so on. Bot can dynamically update messages after sending them, instead of having your messages as static snapshots of data. Messages can also be deleted using the Bot Framework's `DeleteActivity` method. The outgoing request to the bot shows conversation ID and tenant ID in the headers. The workflow bot is a type of conversational bot, which interacts with the users in the Adaptive Card. You can customize how the bot sends the Adaptive Card to the users.
+
+## Add SSO authentication to your conversation bots
+
+You can add single sign-on authentication to your conversation bot using the following steps:
+
+* [Create Teams conversation bot](../../../sbs-teams-conversation-bot.yml)
+* [Configure your bot app in Azure AD](/bots/how-to/authentication/bot-sso-register-aad)
 
 ## Next step
 
 > [!div class="nextstepaction"]
 > [Messages in bot conversations](~/bots/how-to/conversations/conversation-messages.md)
+
+## See also
+
+* [Build bots for Teams](../../what-are-bots.md)
+* [Bot activity handlers](../../bot-basics.md)
+* [Update and delete messages sent from bot](../update-and-delete-bot-messages.md)
+* [Adaptive Cards](../../../task-modules-and-cards/cards/people-picker.md)
+* [API reference for the Bot Framework Connector service](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference)
