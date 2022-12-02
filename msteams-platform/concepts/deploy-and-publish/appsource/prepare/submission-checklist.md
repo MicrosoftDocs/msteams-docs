@@ -114,11 +114,11 @@ Student #2
 
 When you go to the Contoso app within Microsoft Teams, you first arrive at the dashboard page. This page provides at a glance information about texts that haven’t been handed-in yet, that still need to be corrected and the ones that are corrected already and of which the feedback can be sent to the student.
 
-In the **Assignments** section, it shows the assignments that are currently active and by clicking on the green button underneath that it's possible to create a new assignment in Contoso (that is through the needless integration also immediately visible in Microsoft Teams when created). You can also select a period and group or class here.
+The **Assignments** section shows the assignments that are currently active. You can create a new assignment in Contoso by selecting the green button under an assignment (that is, through the needless integration, also immediately visible in Microsoft Teams when created). You can also select a period and group or class here.
 
 #### Classes
 
-Through the integration of Contoso within Microsoft Teams, it's possible to make a group or class within Teams, which is afterwards also created within Contoso (within Teams) automatically. See in the image below, the creation of ‘Lizzy’s trial class’.
+Through the integration of Contoso within Microsoft Teams, it's possible to make a group or class within Teams. It's afterwards also created within Contoso (within Teams) automatically. See in the image below, the creation of ‘Lizzy’s trial class’.
 
 :::image type="content" source="../../../../assets/images/store-detail-page/edu-sample-class.png" alt-text="Education sample shows trial class":::
 
@@ -127,18 +127,19 @@ In the next image, you can see that it's automatically visible within Contoso wh
 :::image type="content" source="../../../../assets/images/store-detail-page/edu-sample-class-group.png" alt-text="Education sample showing Contoso class group":::
 
 > [!NOTE]
-> The other way around it isn't possible yet. We'd like to realize this in cooperation with Microsoft Teams. This would entail being possible to create a Class or Group in the app of Contoso in Microsoft Teams and that this would also be linked to the **Teams** page within Microsoft Teams.
+> The other way around it isn't possible yet. We'd like to realize this in cooperation with Microsoft Teams. This would entail being possible to create a Class or Group in the app of Contoso in Microsoft Teams, and that this would also be linked to the **Teams** page within Microsoft Teams.
 
 #### Assignments
 
-Within Microsoft Teams, you can see the **Assignments** icon in the left menu. Here you can see a list of assignments. It also shows the due date of the assignments and to what class these assignments are assigned to. Above the list of assignments there are three tabs visible: **Assigned**, **Returned**, and **Drafts**.
+Within Microsoft Teams, you can see the **Assignments** icon in the left menu. Here you can see a list of assignments. It also shows the due date of the assignments and to what class these assignments are assigned to.
+
+Above the list of assignments there are three tabs visible: **Assigned**, **Returned**, and **Drafts**.
 
 - The **Assigned** tab shows assignments that are sent to your classes.
 - The **Returned** tab shows the assignments that the students returned, which are ready for checking.
 - The **Drafts** tab shows assignments that are created as a concept and that they aren't sent to your students yet.
-- Next to **Drafts**, it's possible to filter assignments by class.
 
-When clicking on an assignment that’s in the list, you can see the status of the assignment per student. The types of status notifications mean:
+Next to **Drafts**, it's possible to filter assignments by class. When clicking on an assignment that’s in the list, you can see the status of the assignment per student. The types of status notifications mean:
 
 - **Not handed in**: The student didn't hand in the assignment, and that they didn't have a look at the assignment descriptions either.
 - **Viewed**: The assignment isn't handed in yet, but the student has seen the assignment description.
@@ -148,25 +149,35 @@ When clicking on an assignment that’s in the list, you can see the status of t
 
 ##### Creating a new assignment
 
-To create an assignment in Teams, go to **Assignments** and select **Create** (bottom-left corner).
+To create an assignment in Teams:
+
+1. Go to **Assignments** and select **Create** from the bottom-left corner.
 
 :::image type="content" source="../../../../assets/images/store-detail-page/edu-sample-new-assignment.png" alt-text="Education sample showing new assignment":::
 
-As the template options are disabled for the use of Contoso within Microsoft Teams, select the  **Create a new assignment** button (without an already existing template). You get to see the following screen. Select a title that says something about the assignment so that you can later find the correct assignment based on the title.
+1. As the template options are disabled for the use of Contoso within Microsoft Teams, select the  **Create a new assignment** button (without an already existing template).
 
-The status of the assignment can be **draft**, **published**, **closed**, or **hidden**.
+    You can see the following screen.
 
-Automatically, this status is visible on draft. It means that when you save this new assignment, it'll be saved as a concept after which, you'd still need to send it to your students. By changing the status to **Published**, it'll immediately send the assignment after you save it. It's always possible to change the status later. For example, it's possible to prepare various assignments before you publish them.
+    :::image type="content" source="../../../../assets/images/store-detail-page/edu-sample-app.png" alt-text="Education sample app":::
+
+1. Select a title that says something about the assignment so that you can later find the correct assignment based on the title.
+
+    The status of the assignment can be **draft**, **published**, **closed**, or **hidden**.
+
+    Automatically, this status is visible on draft. It means that when you save this new assignment, it'll be saved as a concept after which, you'd still need to send it to your students.
+
+1. By changing the status to **Published**, it'll immediately send the assignment after you save it.
+
+    You can change the status later. For example, it's possible to prepare various assignments before you publish them.
 
 The **language of the text** determines which database of observations will be used to check and give feedback on the text. Under the option **Allowed ways to hand in texts**, you can choose whether your students type their texts in Contoso (or copy and paste them from word/pages file), or that they upload a document in Contoso.
-
-:::image type="content" source="../../../../assets/images/store-detail-page/edu-sample-app.png" alt-text="Education sample app":::
 
 :::image type="content" source="../../../../assets/images/store-detail-page/edu-sample-app-b.png" alt-text="Education sample showing sample app":::
 
 ##### Modify assignments
 
-It's possible to modify the assignments that were created. You can go to **Assignments** in Teams and select the assignment you'd like to modify. Then, select Contoso SV PRO.
+You can modify the assignments that were created. You can go to **Assignments** in Teams and select the assignment you'd like to modify. Then, select Contoso SV PRO.
 
 ##### Correcting documents and giving feedback
 
@@ -197,7 +208,7 @@ After one or more words or parts of the text are selected, it's possible to plac
 
 ### About the ERP data transfer app
 
-Contoso is a PaaS or SaaS in cloud platform who transfers data between e-commerce, ERP, CRM, marketplace, mail automation platforms and shipping platforms. Contoso allows automatic transfer between connected platforms, through its workflows. Users can activate and deactivate workflows in just one step after they connect to platforms, they're interested in.
+Contoso is a PaaS or SaaS in cloud platform that transfers data between e-commerce, ERP, CRM, marketplace, mail automation platforms, and shipping platforms. Contoso allows automatic transfer between connected platforms through its workflows. Users can activate and deactivate workflows in just one step after they connect to platforms they're interested in.
 
 ### Feature list for ERP data transfer app
 
@@ -206,11 +217,12 @@ Contoso E-commerce Manager:
 1. Connects e-commerce, ERP, marketplace, and shipping platforms.
 1. Allows automatic data transfer between platforms.
 1. Sends notices to Teams channels.
-1. The copy of orders by platform A to platform B can be approved or disapproved by cards on the Teams channel.
+
+The copy of orders by platform A to platform B can be approved or disapproved by cards on the Teams channel.
 
 ### Installation
 
-Search the app “Contoso” between apps built for your organization and install it. (If there are any steps to follow for installing the app, ensure that you specify them.)
+Search the app “Contoso” from apps built for your organization and install it. (If there are any steps to follow for installing the app, ensure that you specify them.)
 
 #### Login credentials
 
@@ -230,7 +242,7 @@ User #2
 
 #### Steps
 
-To use Contoso, users must connect to at least 2 platforms. Contoso needs platform A and platform B to transfer data. They can find instructions to complete the form by visiting our guides online from https://www.xxxxxxxxxx.com/guide/.
+To use Contoso, users must connect to at least two platforms. Contoso needs platform A and platform B to transfer data. They can find instructions to complete the form by visiting our guides online from https://www.xxxxxxxxxx.com/guide/.
 
 On the first login, users will have to authorize the App Contoso Manager to access the information shown on the pop-up. After that on every login, users will find Microsoft 365 already connected.
 
@@ -242,17 +254,20 @@ On the first login, users will have to authorize the App Contoso Manager to acce
     1. Users can find information (that is, API key, token, URL, secret key, and client ID) required by different apps in our online guide.
     1. Select **Verify and save**.
 
-1. **Step 2: Connect to platform B**: To connect to a platform, users must choose platform A from the list. Steps to test this feature:
+1. **Step 2: Connect to platform B**: To connect to a platform, users must choose platform B from the list. Steps to test this feature:
 
     1. In Apps, select **Connect a new app**.
-    1. Choose the app you want to connect with (choose: *Platform A*).
+    1. Choose the app you want to connect with (choose: *Platform B*).
     1. Complete the form with the required information.
     1. Users can find info (that is, API key, token, URL, secret key, client ID) required by different apps in our online guide.
     1. Select **Verify and save**.
 
 ### ERP data transfer app functionality
 
-Workflow is an automation that allows several tasks to be repeated automatically every time a trigger starts (that is, get an order by platform A). Two workflows are available in Contoso:
+A workflow is an automation that allows several tasks to be repeated automatically every time a trigger starts (that is, get an order by platform A). Two workflows are available in Contoso:
+
+- Workflow #1: Copy items from platform A to platform B
+- Workflow #2: Copy orders from platform B to platform A
 
 #### Workflow #1: Copy items from platform A to platform B
 
@@ -261,9 +276,8 @@ This workflow requires platform A and platform B to work. It copies all items an
 Steps for workflow #1: (Provide screenshots)
 
 1. Activate the workflow using the toggle.
-1. Look at products already uploaded on platform A, by selecting **products** tab.
-
-Wait for automatic sync. After 15 minutes, check your platform B to find the products.
+1. Look at products already uploaded on platform A, by selecting the **Products** tab.
+1. Wait for automatic sync. After 15 minutes, check your platform B to find the products.
 
 #### Workflow #2: Copy orders from platform B to platform A
 
@@ -276,8 +290,7 @@ Steps for workflow #2: (Provide screenshots)
 1. Go to Link: https://xxxxxx.com and select the product to add to the cart.
 1. Choose a product and add it to the cart. (You must buy one of the products copied from platform A with Workflow #1, to complete this Workflow.)
 1. Complete your order.
-
-Wait for automatic sync. Contoso will automatically copy this order to your platform B. After 15 minutes, check platform A to find the order
+1. Wait for automatic sync. Contoso will automatically copy this order to your platform B. After 15 minutes, check platform A to find the order
 
 > [!NOTE]
 > You must activate workflow 1 to activate workflow 2.
@@ -306,7 +319,7 @@ Users can access data from their connected business apps using the chat-based co
 
 ### Test credentials for Contoso DigiAssist app
 
-The following Tenant is already set up with a Contoso DigiAssist Subscription for testing purposes.
+The following tenant is already set up with a Contoso DigiAssist Subscription for testing purposes.
 
 Tenant Details: Contoso DigiAssist Org
 
@@ -319,9 +332,9 @@ Tenant Details: Contoso DigiAssist Org
 
 #### Pre-requisites for Contoso DigiAssist app
 
-- Admin needs to configure the Contoso DigiAssist for the organization
-- Must provide tenant admin consent
-- Tenant must have active subscription with Contoso DigiAssist
+- Admin needs to configure the Contoso DigiAssist for the organization.
+- You must provide tenant admin consent.
+- Tenant must have active subscription with Contoso DigiAssist.
 
 #### Installation and Setup
 
@@ -340,7 +353,7 @@ The Contoso DigiAssist bot's purpose is to assist users with queries within the 
 - Show me my documents pending for review today.
 - Get recent HR updates.
 
-The Contoso DigiAssist will provide text-based responses or interactive Adaptive Card responses. Additional actions can be performed by using the buttons on Adaptive Cards.
+The Contoso DigiAssist will provide text-based responses or interactive Adaptive Card responses. You can perform additional actions by using the buttons on Adaptive Cards.
 
 #### Help Static Tab
 
@@ -355,8 +368,8 @@ The Contoso DigiAssist app for Microsoft Teams also includes a **Help** tab. It 
 ### Resources and Videos
 
 - Document Links included to help validation team.
-- End to End Teams App Integration Demo video links is included.
-- Detailed Steps for configuration in form of PDF or a Video Link attached.
+- Link for the end-to-end Teams app integration demo video is included.
+- Detailed steps for configuration in the form of PDF or a video link attached.
 
 </details>
 
