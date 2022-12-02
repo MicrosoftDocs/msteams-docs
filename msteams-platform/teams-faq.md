@@ -508,7 +508,6 @@ The following resources can also assist:
 <details>
 <summary>How can I validate an app user when they invoke an Adaptive Card? </summary>
 
-<!--Question: Partner asked few queries on SSO login flow and a way to redirect the user to auth from invoking an adaptive card. Also Partner needs a way to access the PROD app package and resources from Azure since they lost access to prod subscription.-->
 <br>
 You can open the authentication page in the task module when user selects the button.
 
@@ -520,7 +519,9 @@ You can use the [code sample](https://github.com/microsoft/BotBuilder-Samples/bl
 <summary>How can I change Application ID URI of SSO scope to use bot ID also so that the consent window won't be required for bot?</summary>
 
 <br>
-For more information, see [Register your app on Azure AD](/bots/how-to/authentication/auth-aad-sso-bots#register-your-app-through-the-azure-ad-portal).
+
+For more information, see [Configure your app in Azure AD](bots/how-to/authentication/bot-sso-register-aad.md).
+
 <br>
 </details>
 <details>
@@ -540,12 +541,11 @@ Open sign in simple start page instead of login page directly. Issue resolved by
 <summary>How can I generate the access token using the endpoint oauth2/v2.0/token with grant type as "authorization_code"?</summary>
 
 <br>
-Question: As we discussed with Azure AD team for the issue generating MS access token using (v2.0 endpoint), based on the event shared (Correlation ID 73454783-f0c5-4d48-9f8a-3ea6b5bd06f3 | 2022-09-19 06:48:00Z), the issue seems to reside on the scopes encoding, that is, the scopes were encoded twice. </summary>
+<summary><b>How can I generate the access token using the endpoint oauth2/v2.0/token with grant type as "authorization_code"?</b></summary>
 
 <br>
 Configure the application you're using to only execute HTML encoding of the scopes once, so the scopes can be correctly sent and evaluated by Azure AD.
 
-Links found: none for encoding scope for only HTML
 <br>
 </details>
 <details>
@@ -560,7 +560,6 @@ Code sample has been shared is in .NET or Node js.
 <details>
 <summary>How can I use deeplink to get the subEntityId or subPageId on mobile client while navigating from one tab to another tab?</summary>
 
-Question: Customer was facing issue with deeplink to get the subEntityId or subPageId on mobile client while navigating from one tab to another tab.
 <br>
 Upgrade the Teams JavaScript client SDK to (@microsoft/teams-js": "^2.0.0").
 <br>
