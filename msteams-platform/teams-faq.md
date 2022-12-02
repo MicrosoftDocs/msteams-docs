@@ -26,9 +26,9 @@ Solution: Follow the steps in the pages given here:
 Resolution-to connect the Azure to MPN settings below developer tab](https://learn.microsoft.com/en-us/partner-center/mpn-benefits-azure-cloud)
 
 <!--Links found:
-1. [Update preferred email](/partner-center/partner-center-account-setup.md#update-preferred-email)-->
+1. [Update preferred email](/partner-center/partner-center-account-setup.md#update-preferred-email)
 
-1. [Merge your partner account with another partner account](/partner-center/merge-accounts.md)
+1. [Merge your partner account with another partner account](/partner-center/merge-accounts.md)-->
 
 </details>
 <details>
