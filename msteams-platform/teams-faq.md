@@ -48,14 +48,14 @@ Platform Bug
 
 For more information about using Adaptive Cards with a bot, see [Work with Universal Actions for Adaptive Cards](task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-Universal-Actions-for-Adaptive-Cards.md).
 <br>
-
+<br>
 </details>
 <details>
 <summary>How can I remove specific messages from bot history? Is there a way to get the chat history and find an activity ID of a specific message?</summary>
 
 Use Delete messages-Bot framework's DeleteActivity method: [Update and delete messages sent from bot](bots/how-to/update-and-delete-bot-messages.md#delete-messages).
 <br>
-
+<br>
 </details>
 <details>
 <summary>How can I test the validity of the card schema via code?</summary>
