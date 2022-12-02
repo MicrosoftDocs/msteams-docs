@@ -48,12 +48,14 @@ Platform Bug
 
 For more information about using Adaptive Cards with a bot, see [Work with Universal Actions for Adaptive Cards](task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-Universal-Actions-for-Adaptive-Cards.md).
 <br>
+
 </details>
 <details>
 <summary>How can I remove specific messages from bot history? Is there a way to get the chat history and find an activity ID of a specific message?</summary>
 
 Use Delete messages-Bot framework's DeleteActivity method: [Update and delete messages sent from bot](bots/how-to/update-and-delete-bot-messages.md#delete-messages).
 <br>
+
 </details>
 <details>
 <summary>How can I test the validity of the card schema via code?</summary>
@@ -74,17 +76,17 @@ While most of you find it beneficial to use our free hosted service, there may s
 * Transmit sensitive data through the service that requires a custom security policy.
 * Develop features through Fluid Framework, for example, `SharedMap`, for your application outside of Teams.
 
-For more information, see [how to guide] // ./teams-live-share-how-to/how-to-custom-azure-fluid-relay.md // or visit the [Azure Fluid Relay documentation // /azure/azure-fluid-relay/ //.
+For more information, see [how to guide](/apps-in-teams-meetings/teams-live-share-how-to/how-to-custom-azure-fluid-relay) or visit the [Azure Fluid Relay documentation](/azure/azure-fluid-relay/).
 <br>
-</details>
 
+</details>
 <details>
 <summary>How long is data stored in Live Share's hosted service accessible?</summary>
 
 Any data sent or stored through Fluid containers created by Live Share's hosted Azure Fluid Relay service is accessible for 24 hours. If you want to persist data beyond 24 hours, you can replace our hosted Azure Fluid Relay service with your own. Alternatively, you can use your own storage provider in parallel to Live Share's hosted service.
 <br>
-</details>
 
+</details>
 <details>
 <summary>What meeting types does Live Share support?</summary>
 
