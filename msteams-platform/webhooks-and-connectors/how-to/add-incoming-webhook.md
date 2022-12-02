@@ -78,7 +78,7 @@ You can create and send actionable messages through Incoming Webhook or Office 3
 
 To remove an Incoming Webhook from a Teams channel, follow these steps:
 
-1. Open the channel and select &#8226;&#8226;&#8226; **More options** from the top navigation bar.
+1. Open the channel and select &#8226;&#8226;&#8226; from the top navigation bar.
 1. Select **Connectors** from the dropdown menu.
 1. Select **Configured** under **MANAGE**.
 1. Select the **1 Configured** to see a list of your current connectors.
