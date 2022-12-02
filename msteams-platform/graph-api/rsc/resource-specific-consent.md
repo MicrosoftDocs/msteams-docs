@@ -12,14 +12,16 @@ ms.topic: reference
 > [!NOTE]
 > Resource-specific consent for chat scope is available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md) only.
 
-Resource-specific consent (RSC) is an authorization framework built by Microsoft Teams and Microsoft Identity that allows for granting scoped access to an application. Through RSC, an authorized user can give an application access to the data of only a specific instance of a resource type instead of giving broad access to every instance of a resource type in the entire tenant. For example, a person who owns both team A and team B can decide to give the data for the Contoso app for only team A and not team B. The same concept of scoped data access applies to chats and meetings.
+Resource-specific consent (RSC) is an authorization framework built by Microsoft Teams and Microsoft identity that allows for granting scoped access to an application.
+
+Through RSC, an authorized user can give an application access to the data of only a specific instance of a resource type instead of giving broad access to every instance of a resource type in the entire tenant. For example, a person who owns both team A and team B can decide to give the data for the Contoso app for only team A and not team B. The same concept of scoped data access applies to chats and meetings.
 
 > [!NOTE]
 > If a chat has a meeting or a call associated with it, then the relevant RSC permissions apply to those resources as well.
 
 ## Types of RSC permissions
 
-RSC permission determines which data access methods are allowed by the application. There are two types of RSC permissions:
+RSC permission determines which data access methods are allowed by an application. There are two types of RSC permissions:
 
 * **Application**: Allows an app to access data without a signed-in user. For information on application permissions, see [Resource Specific Consent for MS Graph and MS BotSDK](../../graph-api/rsc/resource-specific-consent.md).
 * **Delegated**: Allows an app to access data only on behalf of a signed-in user. No access is allowed in the absence of a signed-in user.
@@ -52,8 +54,8 @@ The RSC permissions are declared in your app's manifest.json file.
 
 To request RSC permissions for an app, list the permissions that the app requires in the authorization section of the Teams app's manifest. The instructions can differ based on the manifest version of the app.
 
-> [!TIP]
-> It is recommended to use app manifest version 1.12 or later.
+> [!NOTE]
+> For delegated permissions, use app manifest version 1.12 or later.
 
 <br>
 
@@ -74,7 +76,7 @@ Specify permissions needed by the app.
 |---|---|---|
 |`authorization`|Object|List of permissions that the app needs to function. For more information, see [authorization in manifest](../../resources/schema/manifest-schema.md#authorization).
 
-Example for RSC in a team:
+Example for RSC permissions in a team:
 
 ```json
 "webApplicationInfo": {
@@ -139,13 +141,25 @@ Example for RSC in a team:
             {
                 "name": "TeamsActivity.Send.Group",
                 "type": "Application"
+            },
+            {
+              "name": "ChannelMeeting.ReadBasic.Group",
+              "type": "Delegated"
+            },
+            {
+              "name": "ChannelMeetingParticipant.Read.Group",
+              "type": "Delegated"
+            },
+            {
+              "name": "ChannelMeetingStage.Write.Group",
+              "type": "Delegated"
             }
-        ]    
+        ]
     }
 }
 ```
 
-Example for RSC in a chat:
+Example for RSC permissions in a chat:
 
 ```json
 "webApplicationInfo": {
@@ -210,8 +224,12 @@ Example for RSC in a chat:
             {
                 "name": "TeamsActivity.Send.Chat",
                 "type": "Application"
+            },
+            {
+                "name": "MeetingStage.Write.Chat",
+                "type": "Delegated"
             }
-        ]    
+        ]
     }
 }
 ```
@@ -229,6 +247,9 @@ Example for RSC in a chat:
 
 <summary><b>RSC permissions for app manifest version 1.11 or earlier</b></summary>
 
+> [!NOTE]
+> It is recommended to use app manifest version 1.12 or later.
+
 Add a [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) key to your app manifest with the following values:
 
 |Name| Type | Description|
@@ -237,7 +258,7 @@ Add a [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicat
 |`resource`|String| This field has no operation in RSC but must be added and have a value to avoid an error response; any string will do.|
 |`applicationPermissions`|Array of strings|RSC permissions for  your app. For more information, see [Supported RSC permissions](#supported-rsc-permissions).|
 
-Example for RSC in a team:
+Example for RSC permissions in a team:
 
 ```json
 "webApplicationInfo": {
@@ -262,7 +283,7 @@ Example for RSC in a team:
   }
 ```
 
-Example for RSC in a chat:
+Example for RSC permissions in a chat:
 
 ```json
 "webApplicationInfo": {
@@ -301,9 +322,8 @@ Whenever an app is installed by an authorized user within Teams, the RSC permiss
 Users' ability to grant RSC permissions varies based on resource types and access modes. The following are the types of RSC permissions for an app:
 
 * **Delegated context RSC permissions**: Any user authorized to install an app in a specific scope has the right to grant any RSC permissions requested by the app in that specific scope. For example, if regular members are allowed to install an app inside a team, then they also have the authority to grant delegated RSC permission to the app in that specific team.
-The following are additional constraints apply for the user to be able to grant RSC permission
-  * In the case of a team, based on the policy, anyone who is authorized to install an app
-  * In the case of a chat, anyone can access.
+  * In the case of a team, any user of the team who is authorized to install an app.
+  * In the case of a chat, the user must be a member of the chat.
 * **Application context RSC permissions**: In addition to the user being authorized to install apps in that scope, the following additional constraints apply for the user to be able to grant RSC permission to access data in app-only mode:
   * In the case of a team, the user must be an owner of that team.
   * In the case of a chat, the user must be a member of the chat.
@@ -327,9 +347,9 @@ If you're a global admin, you can review, and grant consent to apps that request
 
 ## Configure consent settings
 
-In the case of delegated RSC permissions, as long as the given app hasn't been blocked by the tenant admin, authorized users can consent to permissions requested by the app.
+For delegated permissions, any authorized user can consent to the permissions requested by the app.
 
-In the case of application permissions, the tenant admin must not block the app and must not turned off app-only RSC permissions for all apps for the entire tenant. The tenant-level controls of app-only RSC permissions differ based on resource type.
+For application permissions, admins have a toggle to enable or disable RSC permissions for all apps for the entire tenant. The tenant-level controls of app-only RSC permissions differ based on resource type.
 
 <br>
 
@@ -374,7 +394,7 @@ The default value of the property `isChatResourceSpecificConsentEnabled` is base
 > [!IMPORTANT]
 > The RSC permissions are not attributed to a user. Calls are made with app permissions, not user delegated permissions. The app can be allowed to perform actions that the user cannot, such as deleting a tab. You must review the team owner's or chat owner's intent for your use before making RSC API calls. For more information, see [Microsoft Teams API overview](/graph/teams-concept-overview).
 
-For delegated RSC permissions, list all the apps that are installed in that chat or team. Delegated permissions granted on that specific chat or team are listed in the app definitions for each app installation.
+For delegated RSC permissions, call the API `TeamsAppInstallation.ReadForChat.All` to list all the apps that are installed in a chat or team. For more information, see [list apps in chat](/graph/api/chat-list-installedapps?view=graph-rest-1.0&tabs=http&preserve-view=true). However, you cannot know the permissions that are granted because they are granted when an app is running without user interaction.
 
 For application RSC permissions, list the permissions granted on that chat or team. These are all the application RSC permissions granted on this specific resource. Each entry in the list can be correlated to a TeamsApp by matching the `clientAppId` in the permission grants list with the `webApplicationInfo.Id` property in the TeamsApp’s manifest.
 
@@ -436,44 +456,44 @@ The following list provides all the RSC permissions categorized based on resourc
 
 ### RSC permissions for a team
 
-* The following table provides RSC delegated permissions for a team:
+The following table provides RSC delegated permissions for a team:
 
-    | Permission name | Action |
-    | ----- | ----- |
-    |`ChannelMeetingActiveSpeaker.Read.Group`|Get the list of participants who are currently sending audio into the channel meetings associated with this team.|
-    |`ChannelMeetingAudioVideo.Stream.Group`|Stream audio-video content from channel meetings associated with this team.|
-    |`ChannelMeetingIncomingAudio.Detect.Group`|Detect incoming audio in channel meetings associated with this team.|
-    |`ChannelMeetingStage.Write.Group`|Get content on the meeting stage of channel meetings associated with this team.|
-    |`InAppPurchase.Allow.Group`|Show and complete in-app purchases for team members.|
-    |`LiveShareSession.ReadWrite.Group`| Create and synchronize Live Share sessions for meetings associated with this team. |
-    |`MeetingParticipantReaction.Read.Group`| Get reactions from participants in channel meetings associated with this team.|
+| Permission name | Action |
+| ----- | ----- |
+|`ChannelMeetingActiveSpeaker.Read.Group`|Get the list of participants who are currently sending audio into the channel meetings associated with the team.|
+|`ChannelMeetingAudioVideo.Stream.Group`|Stream audio-video content from channel meetings associated with the team.|
+`ChannelMeetingIncomingAudio.Detect.Group`|Detect incoming audio in channel meetings associated with the team.|
+|`ChannelMeetingStage.Write.Group`|Get content on the meeting stage of channel meetings associated with the team.|
+|`InAppPurchase.Allow.Group`|Show and complete in-app purchases for team members.|
+|`LiveShareSession.ReadWrite.Group`| Create and synchronize Live Share sessions for meetings associated with the team. |
+|`MeetingParticipantReaction.Read.Group`| Get reactions from participants in channel meetings associated with the team.|
 
-* The following table provides RSC application permissions for a team:
+The following table provides RSC application permissions for a team:
 
-    | Permission name | Action |
-    | ----- | ----- |
-    |`Channel.Create.Group`|Create channels in this team. |
-    |`Channel.Delete.Group`|Delete channels in this team. |
-    |`ChannelMeeting.ReadBasic.Group`|Get the basic properties of this team's channel meetings.|
-    |`ChannelMeetingParticipant.Read.Group`|Get participant information for channel meetings associated with this team, such as name, role, ID, joined time, and left time.|
-    |`ChannelMeetingRecording.Read.Group`|Get the recordings of all channel meetings associated with this team.|
-    |`ChannelMeetingTranscript.Read.Group`|Get the transcripts of all channel meetings associated with this team.|
-    |`ChannelMeetingNotification.Send.Group`|Send notifications for all the channel meetings associated with this team.|
-    |`ChannelMessage.Read.Group`|Get this team's channel messages. |
-    |`ChannelMessage.Send.Group`|Send messages to this team's channels.|
-    |`ChannelSettings.Read.Group`| Get this team's channel names, descriptions, and settings​.|
-    |`ChannelSettings.ReadWrite.Group`|Update this team's channel names, descriptions, and settings.​|
-    |`Member.Read.Group`|Get this group's members.|
-    |`Owner.Read.Group`|Get this group's owners.|
-    |`TeamsActivity.Send.Group`|Create new notifications in the activity feeds of the users in this team. |
-    |`TeamsAppInstallation.Read.Group`|Get a list of this team's installed apps.|
-    |`TeamMember.Read.Group`|Get this team's members. |
-    |`TeamSettings.Read.Group` | Get this team's settings.|
-    |`TeamSettings.ReadWrite.Group`|Update this team's settings.|
-    |`TeamsTab.Create.Group`|Create tabs in this team. |
-    |`TeamsTab.Delete.Group`|Delete this team's tabs. |
-    |`TeamsTab.Read.Group`|Get a list of this team's tabs.|
-    |`TeamsTab.ReadWrite.Group`|Manage this team's tabs. |
+| Permission name | Action |
+| ----- | ----- |
+|`Channel.Create.Group`|Create channels in the team. |
+|`Channel.Delete.Group`|Delete channels in the team. |
+|`ChannelMeeting.ReadBasic.Group`|Get the basic properties of the team's channel meetings.|
+|`ChannelMeetingParticipant.Read.Group`|Get participant information for channel meetings associated with the team, such as name, role, ID, joined time, and left time.|
+|`ChannelMeetingRecording.Read.Group`|Get the recordings of all channel meetings associated with the team.|
+|`ChannelMeetingTranscript.Read.Group`|Get the transcripts of all channel meetings associated with the team.|
+|`ChannelMeetingNotification.Send.Group`|Send notifications for all the channel meetings associated with the team.|
+|`ChannelMessage.Read.Group`|Get the team's channel messages. |
+|`ChannelMessage.Send.Group`|Send messages to the team's channels.|
+|`ChannelSettings.Read.Group`| Get the team's channel names, descriptions, and settings​.|
+|`ChannelSettings.ReadWrite.Group`|Update the team's channel names, descriptions, and settings.​|
+|`Member.Read.Group`|Get the group's members.|
+|`Owner.Read.Group`|Get the group's owners.|
+|`TeamsActivity.Send.Group`|Create new notifications in the activity feeds of the users in the team. |
+|`TeamsAppInstallation.Read.Group`|Get a list of the team's installed apps.|
+|`TeamMember.Read.Group`|Get the team's members. |
+|`TeamSettings.Read.Group` | Get the team's settings.|
+|`TeamSettings.ReadWrite.Group`|Update the team's settings.|
+|`TeamsTab.Create.Group`|Create tabs in the team. |
+|`TeamsTab.Delete.Group`|Delete the team's tabs. |
+|`TeamsTab.Read.Group`|Get a list of the team's tabs.|
+|`TeamsTab.ReadWrite.Group`|Manage the team's tabs. |
 
 For more information, see [team resource-specific consent permissions](/graph/permissions-reference#team-resource-specific-consent-permissions).
 
@@ -483,39 +503,39 @@ The following table provides RSC delegated permissions for a chat or meeting:
 
 | Permission name | Action |
 | ----- | ----- |
-| `InAppPurchase.Allow.Chat` | Show and complete in-app purchases for users in this chat and any associated meetings. |
-| `LiveShareSession.ReadWrite.Chat` | Create and synchronize Live Share sessions for meetings associated with this chat. |
-| `MeetingStage.Write.Chat` | Show content on the meeting stage of meetings associated with this chat. |
-| `MeetingParticipantReaction.Read.Chat` | Get the reactions of participants in meetings associated with this chat. |
-| `OnlineMeetingIncomingAudio.Detect.Chat` | Detect incoming audio in meetings associated with this chat. |
-| `OnlineMeetingActiveSpeaker.Read.Chat` | Get the participants who are currently sending audio into the meetings associated with this chat. |
-| `OnlineMeetingAudioVideo.Stream.Chat` | Stream audio-video content from meetings associated with this chat. |
-| `OnlineMeetingParticipant.ToggleIncomingAudio.Chat` | Toggle incoming audio for participants in meetings associated with this chat. |
+| `InAppPurchase.Allow.Chat` | Show and complete in-app purchases for users in the chat and any associated meetings. |
+| `LiveShareSession.ReadWrite.Chat` | Create and synchronize Live Share sessions for meetings associated with the chat. |
+| `MeetingStage.Write.Chat` | Show content on the meeting stage of meetings associated with the chat. |
+| `MeetingParticipantReaction.Read.Chat` | Get the reactions of participants in meetings associated with the chat. |
+| `OnlineMeetingIncomingAudio.Detect.Chat` | Detect incoming audio in meetings associated with the chat. |
+| `OnlineMeetingActiveSpeaker.Read.Chat` | Get the participants who are currently sending audio into the meetings associated with the chat. |
+| `OnlineMeetingAudioVideo.Stream.Chat` | Stream audio-video content from meetings associated with the chat. |
+| `OnlineMeetingParticipant.ToggleIncomingAudio.Chat` | Toggle incoming audio for participants in meetings associated with the chat. |
 
 The following table provides RSC application permissions for a chat or meeting:
 
 | Permission name | Action |
 | ----- | ----- |
-| `Calls.AccessMedia.Chat` | Access media streams in calls associated with this chat or meeting. |
-| `Calls.JoinGroupCalls.Chat` | Join calls associated with this chat or meeting. |
-| `ChatSettings.Read.Chat`| Get this chat's settings.|
-| `ChatSettings.ReadWrite.Chat`| Update this chat's settings. |
-| `ChatMessage.Read.Chat` | Get this chat's messages.|
-| `ChatMessage.Send.Chat` | Send messages to this chat. |
-| `ChatMessageReadReceipt.Read.Chat` | Get the ID of the last seen message in this chat. |
-| `ChatMember.Read.Chat` | Get this chat's members. |
-| `Chat.Manage.Chat` | Manage this chat. |
-| `TeamsTab.Read.Chat`| Get this chat's tabs. |
-| `TeamsTab.Create.Chat` | Create tabs in this chat. |
-| `TeamsTab.Delete.Chat` | Delete this chat's tabs. |
-| `TeamsTab.ReadWrite.Chat` | Manage this chat's tabs. |
-| `TeamsAppInstallation.Read.Chat` | Get which apps are installed in this chat. |
-| `TeamsActivity.Send.Chat` | Create new notifications in the activity feeds of the users in this chat. |
-| `OnlineMeetingTranscript.Read.Chat` | Get the transcripts of the meeting associated with this chat. |
-| `OnlineMeetingParticipant.Read.Chat` | Get the participants of the meetings associated with this chat.|
-| `OnlineMeeting.ReadBasic.Chat` | Get basic properties, such as name, schedule, organizer, join link, and start or end notifications of a meeting associated with this chat. |
-| `OnlineMeetingRecording.Read.Chat` | Get the recordings of the meetings associated with this chat. |
-| `OnlineMeetingNotification.Send.Chat` | Send notifications for the meetings associated with this chat. |
+| `Calls.AccessMedia.Chat` | Access media streams in calls associated with the chat or meeting. |
+| `Calls.JoinGroupCalls.Chat` | Join calls associated with the chat or meeting. |
+| `ChatSettings.Read.Chat`| Get the chat's settings.|
+| `ChatSettings.ReadWrite.Chat`| Update the chat's settings. |
+| `ChatMessage.Read.Chat` | Get the chat's messages.|
+| `ChatMessage.Send.Chat` | Send messages to the chat. |
+| `ChatMessageReadReceipt.Read.Chat` | Get the ID of the last seen message in the chat. |
+| `ChatMember.Read.Chat` | Get the chat's members. |
+| `Chat.Manage.Chat` | Manage the chat. |
+| `TeamsTab.Read.Chat`| Get the chat's tabs. |
+| `TeamsTab.Create.Chat` | Create tabs in the chat. |
+| `TeamsTab.Delete.Chat` | Delete the chat's tabs. |
+| `TeamsTab.ReadWrite.Chat` | Manage the chat's tabs. |
+| `TeamsAppInstallation.Read.Chat` | Get which apps are installed in the chat. |
+| `TeamsActivity.Send.Chat` | Create new notifications in the activity feeds of the users in the chat. |
+| `OnlineMeetingTranscript.Read.Chat` | Get the transcripts of the meeting associated with the chat. |
+| `OnlineMeetingParticipant.Read.Chat` | Get the participants of the meetings associated with the chat.|
+| `OnlineMeeting.ReadBasic.Chat` | Get basic properties, such as name, schedule, organizer, join link, and start or end notifications of a meeting associated with the chat. |
+| `OnlineMeetingRecording.Read.Chat` | Get the recordings of the meetings associated with the chat. |
+| `OnlineMeetingNotification.Send.Chat` | Send notifications for the meetings associated with the chat. |
 
 For more information, see [chat resource-specific consent permissions](/graph/permissions-reference#chat-resource-specific-consent-permissions).
 
