@@ -16,7 +16,7 @@ This section contains the frequently asked questions and the answers.
 
 <!--Question: Publisher Attestation issue - the app needed to be published first (I attached the screenshot when I tried to submit the attestation). Before doing the Publisher Attestation. I think this is most likely to connect the Azure AD to an MPN account.-->
 
-Solution: Follow the steps in the pages given here:
+Follow the steps in the pages given here:
 
 1. [Publisher verification overview - Microsoft Entra](/azure/active-directory/develop/publisher-verification-overview)
 
@@ -36,7 +36,7 @@ Resolution-to connect the Azure to MPN settings below developer tab](https://lea
 
 <!--Question: Partner reported that the tab menu was showing a white screen under the "more" section on the Teams mobile iOS client and for Teams dark mode. We've reproduced the issue with the provided details and observed that it's a common issue for Teams mobile iOS clients and only for dark mode. So, we've raised a bug request for the same.-->
 
-Solution: Platform Bug
+Platform Bug
 </details>
 
 ## Bots
@@ -46,13 +46,13 @@ Solution: Platform Bug
 
 <!--Question: The bot isn't supposed to crash when the card is invalid. It can fail to display it, but it shouldn't crash. Also the behavior should be consistent between web and mobile.-->
 
-Solution: For more information about using Adaptive Cards with a bot, see [Work with Universal Actions for Adaptive Cards](task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-Universal-Actions-for-Adaptive-Cards.md).
+For more information about using Adaptive Cards with a bot, see [Work with Universal Actions for Adaptive Cards](task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-Universal-Actions-for-Adaptive-Cards.md).
 <br>
 </details>
 <details>
 <summary>How can I remove specific messages from bot history? Is there a way to get the chat history and find an activity ID of a specific message?</summary>
 
-Solution: Use Delete messages-Bot framework's DeleteActivity method: [Update and delete messages sent from bot](bots/how-to/update-and-delete-bot-messages.md#delete-messages).
+Use Delete messages-Bot framework's DeleteActivity method: [Update and delete messages sent from bot](bots/how-to/update-and-delete-bot-messages.md#delete-messages).
 <br>
 </details>
 <details>
@@ -155,25 +155,23 @@ While Live Share is in Preview, any limit to events emitted through Live Share i
 <details>
 <summary>How can a user set their timezone to get notifications at a preferred time?</summary>
 
-<!--Question: We're wondering when the user sets the preferred time to get a notification, can we also get their timezone automatically? Any function may be in graph API where we can get the user's location?-->
-
 <br>
 Solution:
 You can use the following Graph API [Get user mailbox settings](/graph/api/user-get-mailboxsettings#permissions).
 
-Microsoft Docs to get the user’s time zone as follows:
-• GET /me/mailboxSettings/timeZone
-• GET /users/{id|userPrincipalName}/mailboxSettings/timeZone
+You can get the user’s time zone as follows:
+
+- GET /me/mailboxSettings/timeZone
+- GET /users/{id|userPrincipalName}/mailboxSettings/timeZone
+
 <br>
 <br>
 </details>
 <details>
 <summary>How can I deploy the code in Azure using teams toolkit, and use graph API get user profile photo?</summary>
 
-<!--Question: Customer was looking for support to deploy the code in Azure using teams toolkit, also asked few queries related to graph api get user profile photo.-->
-
 <br>
-Solution: Shared references to deploy the code using toolkit: Create a new Teams app using Teams 
+Shared references to deploy the code using toolkit: Create a new Teams app using Teams 
 
 Toolkit - Teams | Microsoft Docs
 TeamsFx Command Line Interface - Teams | Microsoft Docs
@@ -349,11 +347,9 @@ For support and help on the product and services issues or developer community h
 
 <br>
 <details>
-<summary>How can I proactive bot and save conservation reference?</summary>
+<summary>How can I save conservation reference in a proactive bot?</summary>
 
-Question: Notification Instability
-<br>
-Solution: It's recommended that you save conversation references to database and use the same for building conversation object to send proactive message.
+It's recommended that you save conversation references to database and use the same for building conversation object to send proactive message.
 
 </details>
 
@@ -364,25 +360,17 @@ Solution: It's recommended that you save conversation references to database and
 <details>
 <summary>Where do you find MPN ID?</summary>
 
-<br>
-You need to fetch PC ID.
+You can find your MPN ID by fetching the PC ID.
 
 </details>
-
-<details>
-<summary>Not able to see Developer Tab in Partner Center.</summary>
-
 <br>
-
-// Raise a PC Ticket //
-
-</details>
-
--- From [Create a Partner Center developer account](concepts/deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md). --
-
-
 <details>
+<summary>I can't see the Developer Tab in Partner Center. How can I fix it?</summary>
 
+If you can't see the Developer tab, you can raise a PC ticket.
+</details>
+<br>
+<details>
 <summary>How do I create a Partner Center account?</summary>
 
 You can create a Partner Center account one of the following ways:
@@ -391,21 +379,20 @@ You can create a Partner Center account one of the following ways:
 * If you're already enrolled in the Microsoft Partner Network, [create an account directly from Partner Center using existing Microsoft Partner Center enrollments](/office/dev/store/open-a-developer-account#create-an-account-using-an-existing-partner-center-enrollment).
 
 </details>
-
+<br>
 <details>
-
-<summary>What if I can't find my account in Partner Center?</summary>
+<summary>How can I find my account in Partner Center?</summary>
 
 Open a [Partner Center support ticket](https://partner.microsoft.com/support/v2/?stage=1) and select the following:
 
 | Menu | Option |
 | -------   | -------  |
-|Category| Commercial Marketplace|
+| Category | Commercial Marketplace|
 | Topic | General Marketplace Help and How-to questions |
-| Subtopic| Office add-in |
+| Subtopic | Office add-in |
 
 </details>
-
+<br>
 <details>
 
 <summary>Where can I get support for my Partner Center account issues?</summary>
@@ -542,9 +529,9 @@ The following resources can also assist:
 <details>
 <summary>How can I validate an app user when they invoke an Adaptive Card? </summary>
 
-Question: Partner asked few queries on SSO login flow and a way to redirect the user to auth from invoking an adaptive card. Also Partner needs a way to access the PROD app package and resources from Azure since they lost access to prod subscription.
+<!--Question: Partner asked few queries on SSO login flow and a way to redirect the user to auth from invoking an adaptive card. Also Partner needs a way to access the PROD app package and resources from Azure since they lost access to prod subscription.-->
 <br>
-Solution: You can open the authentication page in the task module when user selects the button.
+You can open the authentication page in the task module when user selects the button.
 
 You can use the [code sample](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/54.teams-task-module/bots/teams_task_module_bot.py#L70) for opening the task module on button click. You can replace the taskInfo.url with your auth page.
 
@@ -587,7 +574,7 @@ Open sign in simple start page instead of login page directly. Issue resolved by
 Question: As we discussed with Azure AD team for the issue generating MS access token using (v2.0 endpoint), based on the event shared (Correlation ID 73454783-f0c5-4d48-9f8a-3ea6b5bd06f3 | 2022-09-19 06:48:00Z), the issue seems to reside on the scopes encoding, that is, the scopes were encoded twice. </summary>
 
 <br>
-Solution: Configure the application you're using to only execute HTML encoding of the scopes once, so the scopes can be correctly sent and evaluated by Azure AD.
+Configure the application you're using to only execute HTML encoding of the scopes once, so the scopes can be correctly sent and evaluated by Azure AD.
 
 Links found: none for encoding scope for only HTML
 
@@ -607,7 +594,7 @@ Code sample has been shared is in .NET or Node js.
 
 Question: Customer was facing issue with deeplink to get the subEntityId or subPageId on mobile client while navigating from one tab to another tab.
 <br>
-Solution: Upgrade the Teams JavaScript client SDK to (@microsoft/teams-js": "^2.0.0").
+Upgrade the Teams JavaScript client SDK to (@microsoft/teams-js": "^2.0.0").
 
 </details>
 
@@ -671,7 +658,7 @@ You can follow [provision SharePoint-based app](/microsoftteams/platform/sbs-gs-
 Question: Customer was looking for support to deploy the code in Azure using teams toolkit, also asked few queries related to graph api get user profile photo.
 
 <br>
-Solution: Shared references to deploy the code using toolkit: Create a new Teams app using Teams Toolkit - Teams | Microsoft Docs
+Shared references to deploy the code using toolkit: Create a new Teams app using Teams Toolkit - Teams | Microsoft Docs
 TeamsFx Command Line Interface - Teams | Microsoft Docs
 Also, provided guidance how they can call Graph API get user profile photo.
 
