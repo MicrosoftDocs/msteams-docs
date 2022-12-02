@@ -35,31 +35,31 @@ The Microsoft Teams app validation tool helps you identify and fix issues before
 
 ## Compile testing instructions
 
-Depending on your app functionality, you're required to provide Teams tenant configurations, a set of test accounts and test notes. Ensure you meet all requirements listed below to avoid app testability failures and delay in the app publishing process.
+Depending on your app functionality, you're required to provide Teams tenant configurations, a set of test accounts, and test notes. Ensure that you meet all requirements listed in this section to avoid app testability failures and delay in the app publishing process.
 
-1. **Tenant configurations**: You must configure a Teams tenant to test your app and provide test accounts (details below). To create a demo tenant, refer to (link). Ensure your app is configured for this demo tenant. If applicable, safe listing or connection to external services for this tenant should be done before submission of the app.
+1. **Tenant configurations**: You must configure a Teams tenant to test your app and provide test accounts (details below). To create a demo tenant, refer to (link). Ensure your app is configured for this demo tenant. If applicable, safe-listing or connection to external services for this tenant should be done before submission of the app.
 
-2. **Test Accounts**: Depending on your app's features, you need to provide all the following accounts:
+2. **Test Accounts**: Depending on your app's features, you need to provide the following accounts:
 
     - Admin account (required)
     - Non-admin accounts (required)
 
-        - Ensure that test accounts are safe-listed or configured with licenses keys, if applicable.
-        - If your app requires users to log in or connect to external services, provide the required credentials to complete the login or connection with external service.
-        - Ensure that phone-based 2-way authentication is disabled for the test accounts.
+        - Ensure that test accounts are safe-listed or configured with license keys, if applicable.
+        - If your app requires users to log in or connect to external services, provide the required credentials to complete the login or connection with the external service.
+        - Ensure that phone-based 2-way authentication is disabled for test accounts.
         - If the app provides a collaborative experience, provide a non-admin account for each user persona. For example, if your app is used by teachers and students, provide credentials for both user personas.
         - Ensure that at least one account has access to premium or upgraded features, if applicable.
         - All accounts you provide must include pre-populated data to help in testing. For example, if your app helps to provide market insights based on the user profile, ensure that market data is pre-populated along with a few user profiles.
         - Provide at least one account that isn't pre-configured to test the first-run sign-in experience properly.
 
     > [!NOTE]
-    > These accounts must be utilized only for validation requirements. The validation team will fully test your app, including first-run user experience.
-    > If your application is free for all users and anyone who intends to use your application can sign up to use the app, indicate the same in the test notes. The validation team will use the sign up process as described.
+    > These accounts must be utilized only for validation requirements. The validation team will test your app fully, including first-run user experience.
+    > If your app is free for all users and anyone who intends to use your app can sign up to use it, indicate the same in the test notes. The validation team will use the sign up process as described.
 
-3. **Test Notes**: The notes provide details about your app's capabilities in Teams and the steps for testing each one. It helps the validation team to better understand your app and complete the testing for all functionalities in your app. If your app functionality includes event-based notifications, list the instructions to trigger these events. For time-based notifications, indicate the expected time for receiving these notifications.
+3. **Test Notes**: The notes provide details about your app's capabilities in Teams and the steps for testing each one. It helps the validation team to understand your app better and complete the testing for all functionalities in your app. If your app functionality includes event-based notifications, list the instructions to trigger these events. For time-based notifications, indicate the expected time for receiving these notifications.
 
     > [!NOTE]
-    > The functional testing of the app is initiated based on the test notes provided. However, the validation team won't restrict the testing only to the test instructions provided.
+    > The functional testing of the app is initiated based on the test notes you provide. However, the validation team won't restrict the testing only to the test instructions.
 
 4. **Demo Video**: Provide a recording of your app so that Microsoft can fully understand its functionality.
 
