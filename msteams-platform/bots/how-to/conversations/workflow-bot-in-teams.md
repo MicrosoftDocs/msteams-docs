@@ -15,10 +15,10 @@ A workflow bot can be installed into a team, group chat, or as personal app, dep
 
 **Advantages**:
 
-1. Automates business processes and repetitive workflows without leaving the context of conversations.
-1. Supports users with sequential workflow through various cards progressively, without sending additional cards.
-1. Provides up-to-date user-specific views.
-1. Simplifies programming model with TeamsFx SDK.
+* Automates business processes and repetitive workflows without leaving the context of conversations.
+* Supports users with sequential workflow through various cards progressively, without sending additional cards.
+* Provides up-to-date user-specific views.
+* Simplifies programming model with TeamsFx SDK.
 
    > [!NOTE]
    > You can select the capability that you want to install, when adding the app. For more information, see [configure default install options](../../../concepts/deploy-and-publish/apps-publish-overview.md#configure-default-install-options).
