@@ -89,7 +89,7 @@ See the following video to learn how to send proactive message from bots:
 
 <br>
 
-> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4NHyk>]
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4NHyk]
 <br>
 
 ### Understand who blocked, muted, or uninstalled a bot
@@ -205,20 +205,21 @@ public class NotifyController : ControllerBase
         foreach (var conversationReference in _conversationReferences.Values)
         {
             var newReference = new ConversationReference()
-        {
-            Bot = new ChannelAccount()
             {
-                Id = conversationReference.Bot.Id
-            },
-            Conversation = new ConversationAccount()
-            {
-                Id = conversationReference.Conversation.Id
-            },
-            ServiceUrl = conversationReference.ServiceUrl,
-        };
+                Bot = new ChannelAccount()
+                {
+                    Id = conversationReference.Bot.Id
+                },
+                Conversation = new ConversationAccount()
+                {
+                    Id = conversationReference.Conversation.Id
+                },
+                ServiceUrl = conversationReference.ServiceUrl,
+            };
+
             // Sends a proactive message from the bot to a conversation.
             await ((BotAdapter)_adapter).ContinueConversationAsync(_appId, newReference, BotCallback, default(CancellationToken));
-=        }
+        }
         
         // Let the caller know proactive messages have been sent.
         return new ContentResult()
@@ -254,9 +255,10 @@ Example of a code snippet to demonstrate creating conversation reference.
             },
             ServiceUrl = conversationReference.ServiceUrl,
         };
+```
 
 # [TypeScript](#tab/typescript)
-* [SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#botbuilder-core-turncontext-getconversationreference)
+* [SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#botbuilder-core-turncontext-getconversationreference&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/graph-proactive-installation/nodejs/bots/proactiveBot.js#L59)
 
 ```javascript
@@ -285,7 +287,7 @@ async messageAllMembersAsync(context) {
 ```
 
 # [Python](#tab/python)
-* [SDK reference](/python/api/botbuilder-core/botbuilder.core.botadapter?view=botbuilder-py-latest#botbuilder-core-botadapter-continue-conversation&preserve-view=true)
+* [SDK reference](/python/api/botbuilder-core/botbuilder.core.botframeworkadapter?view=botbuilder-py-latest#botbuilder-core-botframeworkadapter-create-conversation&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L200)
 
 ```python
