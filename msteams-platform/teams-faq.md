@@ -14,10 +14,9 @@ This section contains the frequently asked questions and the answers.
 <details>
 <summary>How can I connect Azure AD to an MPN account?</summary>
 
-Question: Publisher Attestation issue - the app needed to be published first (I attached the screenshot when I tried to submit the attestation). Before doing the Publisher Attestation. I think this is most likely to connect the Azure AD to an MPN account.
+<!--Question: Publisher Attestation issue - the app needed to be published first (I attached the screenshot when I tried to submit the attestation). Before doing the Publisher Attestation. I think this is most likely to connect the Azure AD to an MPN account.-->
 
 Solution: Publisher verification overview - Microsoft Entra | Microsoft LearnMark an app as publisher verified - Microsoft Entra | Microsoft Learn
-Docs didn't help - had to raise  PC ticket
 Resolution-to connect the Azure to MPN settings below developer tab.
 
 Links found:
@@ -29,7 +28,7 @@ Links found:
 <details>
 <summary>How can I remove the 'white screen' showing under the 'more' section on Teams mobile iOS client for Teams dark mode?</summary>
 
-Question: Partner reported that the tab menu was showing a white screen under the "more" section on the Teams mobile iOS client and for Teams dark mode. We've reproduced the issue with the provided details and observed that it's a common issue for Teams mobile iOS clients and only for dark mode. So, we've raised a bug request for the same.
+<!--Question: Partner reported that the tab menu was showing a white screen under the "more" section on the Teams mobile iOS client and for Teams dark mode. We've reproduced the issue with the provided details and observed that it's a common issue for Teams mobile iOS clients and only for dark mode. So, we've raised a bug request for the same.-->
 
 Solution: Platform Bug
 </details>
@@ -39,7 +38,7 @@ Solution: Platform Bug
 <details>
 <summary>How can I use Adaptive Cards with a bot so that the desktop app behavior is consistent between web and mobile apps?</summary>
 
-Question: The bot isn't supposed to crash when the card is invalid. It can fail to display it, but it shouldn't crash. Also the behavior should be consistent between web and mobile.
+<!--Question: The bot isn't supposed to crash when the card is invalid. It can fail to display it, but it shouldn't crash. Also the behavior should be consistent between web and mobile.-->
 
 Solution: [Work with Universal Actions for Adaptive Cards](task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-Universal-Actions-for-Adaptive-Cards.md)
 </details>
