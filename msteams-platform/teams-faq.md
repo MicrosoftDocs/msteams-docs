@@ -18,12 +18,10 @@ This section contains the frequently asked questions and the answers.
 
 Follow the steps in the pages given here:
 
-1. [Publisher verification overview - Microsoft Entra](/azure/active-directory/develop/publisher-verification-overview)
-
-1. [Microsoft LearnMark an app as publisher verified - Microsoft Entra](/azure/active-directory/develop/mark-app-as-publisher-verified)
-
+1. [Publisher verification overview - Microsoft Entra](/azure/active-directory/develop/publisher-verification-overview).
+1. [Microsoft LearnMark an app as publisher verified - Microsoft Entra](/azure/active-directory/develop/mark-app-as-publisher-verified).
 1. [Microsoft Learn
-Resolution-to connect the Azure to MPN settings below developer tab](/partner-center/mpn-benefits-azure-cloud)
+Resolution-to connect the Azure to MPN settings below developer tab](/partner-center/mpn-benefits-azure-cloud).
 
 <!--Links found:
 1. [Update preferred email](/partner-center/partner-center-account-setup.md#update-preferred-email)
@@ -53,7 +51,7 @@ For more information about using Adaptive Cards with a bot, see [Work with Unive
 <details>
 <summary>How can I remove specific messages from bot history? Is there a way to get the chat history and find an activity ID of a specific message?</summary>
 
-Use Delete messages-Bot framework's DeleteActivity method: [Update and delete messages sent from bot](bots/how-to/update-and-delete-bot-messages.md#delete-messages).
+Use Delete messages-Bot framework's `DeleteActivity` method: [Update and delete messages sent from bot](bots/how-to/update-and-delete-bot-messages.md#delete-messages).
 <br>
 <br>
 </details>
@@ -159,19 +157,16 @@ While Live Share is in Preview, any limit to events emitted through Live Share i
 
 You can use the following Graph API [Get user mailbox settings](/graph/api/user-get-mailboxsettings#permissions). You can get the user’s time zone as follows:
 
-- GET /me/mailboxSettings/timeZone
-- GET /users/{id|userPrincipalName}/mailboxSettings/timeZone
+* GET /me/mailboxSettings/timeZone
+* GET /users/{id|userPrincipalName}/mailboxSettings/timeZone
+
 <br>
 </details>
 <details>
-<summary>How can I deploy the code in Azure using teams toolkit, and use graph API get user profile photo?</summary>
+<summary>How can I deploy the code in Azure using Teams Toolkit, and use Graph API get user profile photo?</summary>
 
-Shared references to deploy the code using toolkit: Create a new Teams app using Teams 
+For more information on Teams Toolkit, see [Create a new Teams project](toolkit/create-new-project.md) and [TeamsFx Library](toolkit/TeamsFx-CLI.md).
 
-Toolkit - Teams | Microsoft Docs
-TeamsFx Command Line Interface - Teams | Microsoft Docs
-
-You can also call the Graph API get user profile photo.
 <br>
 </details>
 
@@ -525,23 +520,23 @@ For more information, see [Configure your app in Azure AD](bots/how-to/authentic
 <br>
 </details>
 <details>
-<summary>Customer's requirement is to open an iframe, it contains a react app (that displays sensitive information) from a bot task module securely. Can you suggest what is the best/easiest/standard approach to perform this operation?</summary>
+<summary>I want to open an iframe that contains a React app (that displays confidential information) from a bot task module securely. Can you suggest what is the best, easiest, standard approach to perform this operation?</summary>
 
 <br>
 Implement react page with tab SSO and render the content as required. You can open the same tab URL as task module from bot.
+
+For more information, see [Enable SSO for tab app](tabs/how-to/authentication/tab-sso-overview.md).
+
 <br>
 </details>
 <details>
 <summary>How can I avoid SDK timeout error while the app user signs in?</summary>
 
-Open sign in simple start page instead of login page directly. Issue resolved by doing the same.
+Open sign in simple start page instead of opening login page directly to resolve the issue.
 <br>
 </details>
 <details>
 <summary>How can I generate the access token using the endpoint oauth2/v2.0/token with grant type as "authorization_code"?</summary>
-
-<br>
-<summary><b>How can I generate the access token using the endpoint oauth2/v2.0/token with grant type as "authorization_code"?</b></summary>
 
 <br>
 Configure the application you're using to only execute HTML encoding of the scopes once, so the scopes can be correctly sent and evaluated by Azure AD.
@@ -549,9 +544,13 @@ Configure the application you're using to only execute HTML encoding of the scop
 <br>
 </details>
 <details>
-<summary>Implementation of Bot SSO in React. Partner is looking for guidance for the same.</summary>
+<summary>How can I implementation Bot SSO using React?</summary>
 <br>
-Code sample has been shared is in .NET or Node js.
+
+If you use Teams Toolkit to build your app: for more information, see [Add single sign-on to Teams app](toolkit/add-single-sign-on.md).
+
+For more information about Node js code sample, see [Bot SSO quick-start](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/js).
+
 <br>
 </details>
 
@@ -561,7 +560,7 @@ Code sample has been shared is in .NET or Node js.
 <summary>How can I use deeplink to get the subEntityId or subPageId on mobile client while navigating from one tab to another tab?</summary>
 
 <br>
-Upgrade the Teams JavaScript client SDK to (@microsoft/teams-js": "^2.0.0").
+Upgrade the Teams JavaScript client SDK to (@microsoft/teams-js": "^2.0.0") to resolve the issue.
 <br>
 </details>
 
@@ -613,9 +612,12 @@ You can follow [provision SharePoint-based app](/microsoftteams/platform/sbs-gs-
 <summary>How can I deploy the code in Azure using teams toolkit, and use graph API get user profile photo?</summary>
 
 <br>
-Shared references to deploy the code using toolkit: Create a new Teams app using Teams Toolkit - Teams | Microsoft Docs
-TeamsFx Command Line Interface - Teams | Microsoft Docs
-Also, provided guidance how they can call Graph API get user profile photo.
+Shared references to deploy the code using toolkit: 
+
+* [Create a new Teams app using Teams Toolkit](toolkit/create-new-project.md)
+* [TeamsFx Command Line Interface](toolkit/TeamsFx-CLI.md)
+
+You can call Graph API get user profile photo.
 
 </details>
 
