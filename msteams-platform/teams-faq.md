@@ -47,14 +47,14 @@ Solution: Platform Bug
 <!--Question: The bot isn't supposed to crash when the card is invalid. It can fail to display it, but it shouldn't crash. Also the behavior should be consistent between web and mobile.-->
 
 Solution: For more information about using Adaptive Cards with a bot, see [Work with Universal Actions for Adaptive Cards](task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-Universal-Actions-for-Adaptive-Cards.md).
-</details>
 <br>
+</details>
 <details>
 <summary>How can I remove specific messages from bot history? Is there a way to get the chat history and find an activity ID of a specific message?</summary>
 
 Solution: Use Delete messages-Bot framework's DeleteActivity method: [Update and delete messages sent from bot](bots/how-to/update-and-delete-bot-messages.md#delete-messages).
-</details>
 <br>
+</details>
 <details>
 <summary>How can I test the validity of the card schema via code?</summary>
 
@@ -165,6 +165,7 @@ Microsoft Docs to get the user’s time zone as follows:
 • GET /me/mailboxSettings/timeZone
 • GET /users/{id|userPrincipalName}/mailboxSettings/timeZone
 <br>
+<br>
 </details>
 <details>
 <summary>How can I deploy the code in Azure using teams toolkit, and use graph API get user profile photo?</summary>
@@ -178,7 +179,7 @@ Toolkit - Teams | Microsoft Docs
 TeamsFx Command Line Interface - Teams | Microsoft Docs
 
 Also, provided guidance how they can call Graph API get user profile photo.
-<br>
+<br><br>
 </details>
 
 <details>
@@ -187,7 +188,7 @@ Also, provided guidance how they can call Graph API get user profile photo.
 You can use the Microsoft Graph Postman collection with Microsoft Graph APIs.
 
 For more information, see [Use Postman with the Microsoft Graph API](/graph/use-postman).
-<br>
+<br><br>
 </details>
 <details>
 <summary>Does Graph API work in Microsoft Graph explorer?</summary>
@@ -195,7 +196,7 @@ For more information, see [Use Postman with the Microsoft Graph API](/graph/use-
 Yes, Graph API works in Microsoft Graph explorer.
 
 For more information, see [Graph explorer](https://developer.microsoft.com/graph/graph-explorer).
-
+<br>
 </details>
 
 ## Moodle FAQs
