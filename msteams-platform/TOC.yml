@@ -600,6 +600,9 @@
   - name: Enable a Teams message extension for Outlook
     href: m365-apps/extend-m365-teams-message-extension.md
     displayName: Microsoft 365, Office 365
+  - name: Decide between creating a message extension or an Outlook Add-in
+    href: m365-apps/me-or-outlook-add-in.md
+    displayName: Microsoft 365, Office 365
   - name: Publish Teams apps for Microsoft 365
     href: m365-apps/publish.md
 - name: Test your app
