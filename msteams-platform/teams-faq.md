@@ -354,14 +354,12 @@ It's recommended that you save conversation references to database and use the s
 You can find your MPN ID by fetching the PC ID.
 <br>
 </details>
-<br>
 <details>
 <summary>I can't see the Developer Tab in Partner Center. How can I fix it?</summary>
 
 If you can't see the Developer tab, you can raise a PC ticket.
 <br>
 </details>
-<br>
 <details>
 <summary>How do I create a Partner Center account?</summary>
 
@@ -371,7 +369,6 @@ You can create a Partner Center account one of the following ways:
 * If you're already enrolled in the Microsoft Partner Network, [create an account directly from Partner Center using existing Microsoft Partner Center enrollments](/office/dev/store/open-a-developer-account#create-an-account-using-an-existing-partner-center-enrollment).
 <br>
 </details>
-<br>
 <details>
 <summary>How can I find my account in Partner Center?</summary>
 
@@ -384,7 +381,6 @@ Open a [Partner Center support ticket](https://partner.microsoft.com/support/v2/
 | Subtopic | Office add-in |
 <br>
 </details>
-<br>
 <details>
 
 <summary>Where can I get support for my Partner Center account issues?</summary>
@@ -392,7 +388,6 @@ Open a [Partner Center support ticket](https://partner.microsoft.com/support/v2/
 Visit the [publishers support page](https://aka.ms/marketplacepublishersupport) to search for your issue. If the guidance isn't helpful, create a [Partner Center support ticket](/azure/marketplace/partner-center-portal/support#how-to-open-a-support-ticket).
 <br>
 </details>
-
 <details>
 
 <summary>How do I manage my Office Store account in Partner Center?</summary>
@@ -400,7 +395,6 @@ Visit the [publishers support page](https://aka.ms/marketplacepublishersupport) 
 See [manage your account through Partner Center](/office/dev/store/manage-account-settings-and-profile) for information.
 <br>
 </details>
-
 <details>
 
 <summary>My phone number doesn't have an area code, so how do I add it to my profile?</summary>
@@ -408,7 +402,6 @@ See [manage your account through Partner Center](/office/dev/store/manage-accoun
 The phone number has three parts: country code, area code, and telephone number. If your phone number doesn't include an area code, leave the second box empty and complete the third box.
 <br>
 </details>
-
 <details>
 
 <summary>How do I manage my account settings and partner profile in Partner Center?</summary>
@@ -416,7 +409,6 @@ The phone number has three parts: country code, area code, and telephone number.
 See [manage account settings and profile info](/windows/uwp/publish/manage-account-settings-and-profile#additional-settings-and-info) for information.
 <br>
 </details>
-
 <details>
 
 <summary>Why do I see a, "This account is not publish eligible," message when I try to submit my app?</summary>
@@ -426,7 +418,6 @@ You received this error message because your [account verification status](/part
 ![Partner Center verification status](~/assets/images/partner-center-verification-status.png)
 <br>
 </details>
-
 <details>
 
 <summary>What is verified in the Partner Center account verification process?</summary>
@@ -438,7 +429,6 @@ If you're the primary contact, global admin, or account admin, you can monitor v
 Once verification process is complete, the status of your enrollment on the profile page changes from *pending* to *authorized*. The primary contact then receives an email from Microsoft within a few business days.
 <br>
 </details>
-
 <details>
 
 <summary>My account verification status hasn't advanced beyond Email Ownership. How should I proceed?</summary>
@@ -452,7 +442,6 @@ Remember the following about the email verification process:
 * To ensure you receive the email, safe-list **microsoft.com** as a secure domain and check your junk email folders.
 <br>
 </details>
-
 <details>
 
 <summary>I've checked my mail folders and haven't received the verification email. What must I do next?</summary>
@@ -466,7 +455,6 @@ Try the following:
 * Adjust your server's spam filter to allow or safe-list all emails from **maccount@microsoft.com**.
 <br>
 </details>
-
 <details>
 
 <summary>How long does the employment verification process usually take?</summary>
@@ -474,7 +462,6 @@ Try the following:
 If all the submitted details are correct, the employment verification process takes about two hours to complete.
 <br>
 </details>
-
 <details>
 
 <summary>How long does the business verification process usually take?</summary>
@@ -482,7 +469,6 @@ If all the submitted details are correct, the employment verification process ta
 If all the required documents are submitted, business verification takes one to two business days to complete.
 <br>
 </details>
-
 <details>
 
 <summary>If I reach out to the support team, will my ticket be expedited?</summary>
@@ -490,7 +476,6 @@ If all the required documents are submitted, business verification takes one to 
 Support tickets get resolved in a week. Check for updates sent to the email you provided when creating the support ticket.
 <br>
 </details>
-
 <details>
 
 <summary>I created a support ticket but haven't received an update in seven business days. Where can I get help?</summary>
@@ -504,7 +489,6 @@ Send an email to <a href="mailto:teamsubm@microsoft.com">teamsubm@microsoft.com<
   * A screenshot of the issue (if possible).
 <br>
 </details>
-
 <details>
 
 <summary>Where else can I go for Partner Center help?</summary>
@@ -528,14 +512,7 @@ You can open the authentication page in the task module when user selects the b
 You can use the [code sample](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/54.teams-task-module/bots/teams_task_module_bot.py#L70) for opening the task module on button click. You can replace the taskInfo.url with your auth page.
 <br>
 </details>
-
-<details>
-<summary>Can I access the product app package from Azure AD?</summary>
-
-// Solution needed //
-<br>
 </details>
-
 <details>
 <summary>How can I change Application ID URI of SSO scope to use bot ID also so that the consent window won't be required for bot?</summary>
 
@@ -543,23 +520,19 @@ You can use the [code sample](https://github.com/microsoft/BotBuilder-Samples/bl
 For more information, see [Register your app on Azure AD](/bots/how-to/authentication/auth-aad-sso-bots#register-your-app-through-the-azure-ad-portal).
 <br>
 </details>
-
 <details>
 <summary>Customer's requirement is to open an iframe, it contains a react app (that displays sensitive information) from a bot task module securely. Can you suggest what is the best/easiest/standard approach to perform this operation?</summary>
 
 <br>
-
 Implement react page with tab SSO and render the content as required. You can open the same tab URL as task module from bot.
 <br>
 </details>
-
 <details>
 <summary>How can I avoid SDK timeout error while the app user signs in?</summary>
 
 Open sign in simple start page instead of login page directly. Issue resolved by doing the same.
 <br>
 </details>
-
 <details>
 <summary>How can I generate the access token using the endpoint oauth2/v2.0/token with grant type as "authorization_code"?</summary>
 
@@ -572,7 +545,6 @@ Configure the application you're using to only execute HTML encoding of the scop
 Links found: none for encoding scope for only HTML
 <br>
 </details>
-
 <details>
 <summary>Implementation of Bot SSO in React. Partner is looking for guidance for the same.</summary>
 <br>
