@@ -1,7 +1,7 @@
 ---
 title: Install Teams Toolkit 
 author: zyxiaoyuer
-description: Learn about installation of Teams Toolkit of different versions in Visual Studio code, Visual Studio, and markectplace.
+description: Learn about installation of Teams Toolkit of different versions in Visual Studio code, Visual Studio, and marketplace.
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
