@@ -218,6 +218,8 @@ private async Task BotCallback(ITurnContext turnContext, CancellationToken cance
 
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-initiate-thread-in-channel/nodejs/bots/teamsStartNewThreadInChannel.js#L20)
 
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-initiate-thread-in-channel/nodejs/bots/teamsStartNewThreadInChannel.js#L20)
+
 ```javascript
 server.get('/api/notify', async (req, res) => {
     for (const conversationReference of Object.values(conversationReferences)) {
