@@ -1,7 +1,7 @@
 ---
 title: Teams Toolkit Overview
 author: zyxiaoyuer
-description: Learn about Teams Toolkit, it's Installation, and User journey. Teams Toolkit is available for Visual Studio code and Visual Studio.
+description: Learn about Teams Toolkit, it's installation, navigation, and user journey. Teams Toolkit is available for Visual Studio code and Visual Studio.
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
