@@ -169,7 +169,7 @@ If your app is production ready, you can begin the process of getting it listed 
 * [Publish Teams apps in Microsoft Teams store](/training/modules/microsoft-teams-publish-app-to-store/)
 * [Publishing to Microsoft 365 App Stores](/office/dev/store/)
 * [Upload your Teams app](~/concepts/deploy-and-publish/apps-upload.md)
-* [Publish your Teams app to your org](/MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/MicrosoftTeams/breadcrumb/toc.json)
+* [Publish your Teams app to your org](/microsoftteams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/breadcrumb/toc.json)
 * [Plan onboarding experience for users](../../design/planning-checklist.md#plan-beyond-app-building)
 * [Distributing tab apps on mobile](../../../tabs/design/tabs-mobile.md#distribution)
 * [Test preview for monetized apps](prepare/Test-preview-for-monetized-apps.md)

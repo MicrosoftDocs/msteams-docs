@@ -15,7 +15,7 @@ You can test your Microsoft Teams app with sample data with a Microsoft 365 deve
 1. [Join the Microsoft 365 Developer Program](/office/developer-program/office-365-developer-program), if you don't have a test tenant.
 2. [Set up a Microsoft 365 Developer Subscription](/office/developer-program/office-365-developer-program-get-started).
 3. [Use sample data packs with your Microsoft 365 developer subscription to install the Users content pack](/office/developer-program/install-sample-packs).
-4. [Install the Teams PowerShell module](https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2).
+4. [Install the Teams PowerShell module](https://www.powershellgallery.com/packages/microsoftteams/1.0.2).
 5. [Install the Azure AD PowerShell module](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0#installing-the-azure-ad-module&preserve-view=true).
 
 > [!NOTE]

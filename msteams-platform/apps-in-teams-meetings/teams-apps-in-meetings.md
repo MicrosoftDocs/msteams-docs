@@ -27,7 +27,7 @@ Teams supports access to apps during meeting for the following meeting types:
 * [**Instant meetings**](https://support.microsoft.com/office/start-an-instant-meeting-in-teams-ff95e53f-8231-4739-87fa-00b9723f4ef5): Meetings initiated through **Meet now** button in Teams calendar.
 * [**Webinar**](https://support.microsoft.com/office/get-started-with-teams-webinars-42f3f874-22dc-4289-b53f-bbc1a69013e3): Webinar initiated through **Webinar** button under **New Meeting** dropdown.
 
-Learn more about [Teams meetings, expiration and policies](/MicrosoftTeams/meeting-expiration) and [meetings, webinars, and live events](/microsoftteams/quick-start-meetings-live-events).
+Learn more about [Teams meetings, expiration and policies](/microsoftteams/meeting-expiration) and [meetings, webinars, and live events](/microsoftteams/quick-start-meetings-live-events).
 > [!NOTE]
 >
 > * Apps for scheduled public channel meetings are currently available only in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
