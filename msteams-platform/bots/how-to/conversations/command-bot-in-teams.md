@@ -260,7 +260,7 @@ If you don't have the required SDK, and need to invoke external APIs in your cod
 
 <summary><b>How to extend my command and response bot to support notifications?</b></summary>
 
-If you need to extend your command and response to supporting notifications, you can add Adaptive cards to respond to external events. Follow the steps to customize notifications [Placeholder for customize notification steps in the notification bot in Teams doc].
+If you need to extend your command and response to support notifications, you can add Adaptive Cards to respond to external events. Follow the steps to customize notifications [Placeholder for customize notification steps in the notification bot in Teams doc].
 
 <br>
 
