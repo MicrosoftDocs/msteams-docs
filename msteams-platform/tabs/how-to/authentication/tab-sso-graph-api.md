@@ -129,9 +129,7 @@ After you've configured Graph permissions in Azure AD:
 The following code provides an example of OBO flow to fetch access token from the Teams client using MSAL.
 
 ### [C#](#tab/dotnet)
-
-- SDK reference
-- [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/graph-app-installation-lifecycle/csharp/AppInstallation/Controllers/BaseController.cs&preserve-view=true)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/graph-app-installation-lifecycle/csharp/AppInstallation/Controllers/BaseController.cs#L43)
 
 ```csharp
 IConfidentialClientApplication app = ConfidentialClientApplicationBuilder.Create(<"Client id">)
