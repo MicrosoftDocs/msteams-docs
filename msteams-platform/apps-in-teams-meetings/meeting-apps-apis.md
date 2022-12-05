@@ -69,9 +69,6 @@ The following table includes the query parameters:
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetingparticipantasync?view=botbuilder-dotnet-stable&preserve-view=true)  
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-context-app/csharp/MeetingContextApp/Bots/MeetingContextBot.cs#L33)
 
-* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetingparticipantasync?view=botbuilder-dotnet-stable&preserve-view=true)  
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-context-app/csharp/MeetingContextApp/Bots/MeetingContextBot.cs#L19)
-
 ```csharp
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
 {
@@ -209,9 +206,6 @@ The following table includes the query parameter:
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityextensions.teamsnotifyuser?view=botbuilder-dotnet-stable#microsoft-bot-builder-teams-teamsactivityextensions-teamsnotifyuser(microsoft-bot-schema-iactivity)&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-proactive-messaging/csharp/proactive-cmd/Program.cs#L178)
 
-* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityextensions.teamsnotifyuser?view=botbuilder-dotnet-stable#microsoft-bot-builder-teams-teamsactivityextensions-teamsnotifyuser(microsoft-bot-schema-iactivity)&preserve-view=true)
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-proactive-messaging/csharp/proactive-cmd/Program.cs)
-
 ```csharp
 // Specifies the type of text data in a message attachment.
 Activity activity = MessageFactory.Text("This is a meeting signal test");
@@ -290,12 +284,12 @@ The following table includes the response codes:
 
 ## Targeted Meeting Notification
 
-You can send in-meeting notifications to specific participants. The notifications are private to the designated participants and not visible to others in the meeting.
+ You can send in-meeting notifications to specific participants. The notifications are private to the designated participants and not visible to others in the meeting.
 
 > [!NOTE]
 > Adaptive Cards are not supported.
 
-The following example shows how to send in-meeting notification to specific participants:
+ The following example shows how to send in-meeting notification to specific participants:
 
  Meeting in progress
 
@@ -307,17 +301,17 @@ The following example shows how to send in-meeting notification to specific part
 
 ### Prerequisite
 
-To use the API, the bot needs to obtain following RSC permission from manifest:
+ To use the API, the bot needs to obtain following RSC permission from manifest:
 
 * `OnlineMeetingNotification.Send.Chat`
-* You can find examples of how to configure RSC permission on the app manifest from [Prerequisite](#prerequisite)
+* You can find examples of how to configure RSC permission on the app manifest from [Get meeting details API](#get-meeting-details-api)
 * You can support anonymous users with `isAnonymousAccessAllowed` flag. (need to check)
 
 ### Example
 
-Url:  POST /v1/meetings/{meetingId}/notification
+ Url:  POST /v1/meetings/{meetingId}/notification
 
-Request Payload
+ Request Payload
 
 ```json
 {
@@ -820,8 +814,6 @@ Meeting Start Event
 
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L34)
 
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L34)
-
 ```csharp
 // Invoked when a Teams Meeting Start event activity is received from the connector.
 protected override async Task OnTeamsMeetingStartAsync(MeetingStartEventDetails meeting, ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken)
@@ -834,8 +826,6 @@ protected override async Task OnTeamsMeetingStartAsync(MeetingStartEventDetails 
 Meeting End Event
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingendasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-teams-teamsactivityhandler-onteamsmeetingendasync(microsoft-bot-schema-teams-meetingendeventdetails-microsoft-bot-builder-iturncontext((microsoft-bot-schema-ieventactivity))-system-threading-cancellationtoken)&preserve-view=true)
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L51)
-
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L51)
 
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L51)
