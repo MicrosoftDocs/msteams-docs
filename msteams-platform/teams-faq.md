@@ -338,13 +338,11 @@ However, you can access the invite and manually add participant names to the **R
 <summary>Is there any support site where we can get more help on products and other issues?</summary>
 
 For support and help on the product and services issues or developer community help see, [Support and Feedback](/microsoftteams/platform/feedback.md).
-<br>
-&nbsp;
+
 </details>
 
 ## Notifications
 
-<br>
 <details>
 <summary>How can I save conservation reference in a proactive bot?</summary>
 
@@ -359,12 +357,14 @@ It's recommended that you save conversation references to database and use the s
 
 You can find your MPN ID by fetching the PC ID.
 <br>
+&nbsp;
 </details>
 <details>
 <summary>I can't see the Developer Tab in Partner Center. How can I fix it?</summary>
 
 If you can't see the Developer tab, you can raise a PC ticket.
 <br>
+&nbsp;
 </details>
 <details>
 <summary>How do I create a Partner Center account?</summary>
@@ -374,6 +374,7 @@ You can create a Partner Center account one of the following ways:
 * If you're new to Partner Center and don't have a Microsoft Network Account, [create an account using the Partner Center enrollment page](/office/dev/store/open-a-developer-account#create-an-account-using-the-partner-center-enrollment-page).
 * If you're already enrolled in the Microsoft Partner Network, [create an account directly from Partner Center using existing Microsoft Partner Center enrollments](/office/dev/store/open-a-developer-account#create-an-account-using-an-existing-partner-center-enrollment).
 <br>
+&nbsp;
 </details>
 <details>
 <summary>How can I find my account in Partner Center?</summary>
@@ -387,27 +388,28 @@ Open a [Partner Center support ticket](https://partner.microsoft.com/support/v2/
 | Subtopic | Office add-in |
 
 <br>
+
 </details>
 <details>
-
 <summary>Where can I get support for my Partner Center account issues?</summary>
 
 Visit the [publishers support page](https://aka.ms/marketplacepublishersupport) to search for your issue. If the guidance isn't helpful, create a [Partner Center support ticket](/azure/marketplace/partner-center-portal/support#how-to-open-a-support-ticket).
 <br>
+&nbsp;
 </details>
 <details>
-
 <summary>How do I manage my Office Store account in Partner Center?</summary>
 
 See [manage your account through Partner Center](/office/dev/store/manage-account-settings-and-profile) for information.
 <br>
+&nbsp;
 </details>
 <details>
-
 <summary>My phone number doesn't have an area code, so how do I add it to my profile?</summary>
 
 The phone number has three parts: country code, area code, and telephone number. If your phone number doesn't include an area code, leave the second box empty and complete the third box.
 <br>
+&nbsp;
 </details>
 <details>
 
@@ -415,18 +417,18 @@ The phone number has three parts: country code, area code, and telephone number.
 
 See [manage account settings and profile info](/windows/uwp/publish/manage-account-settings-and-profile#additional-settings-and-info) for information.
 <br>
+&nbsp;
 </details>
 <details>
-
 <summary>Why do I see a, "This account is not publish eligible," message when I try to submit my app?</summary>
 
 You received this error message because your [account verification status](/partner-center/verification-responses) is pending. Check your status in the Partner Center [dashboard](https://partner.microsoft.com/dashboard). Select the **Settings** gear icon and choose **Developer settings > Account > Account settings**.
 
 ![Partner Center verification status](~/assets/images/partner-center-verification-status.png)
 <br>
+&nbsp;
 </details>
 <details>
-
 <summary>What is verified in the Partner Center account verification process?</summary>
 
 There are three verification areas, **Email Ownership**, **Employment**, and **Business**. For more information, see [what is verified and how to respond](/partner-center/verification-responses#what-is-verified-and-how-to-respond).
@@ -435,9 +437,9 @@ If you're the primary contact, global admin, or account admin, you can monitor v
 
 Once verification process is complete, the status of your enrollment on the profile page changes from *pending* to *authorized*. The primary contact then receives an email from Microsoft within a few business days.
 <br>
+&nbsp;
 </details>
 <details>
-
 <summary>My account verification status hasn't advanced beyond Email Ownership. How should I proceed?</summary>
 
 During the **Email Ownership** verification process, a verification email is sent to the primary contact. Check your primary contact inbox for an email from **maccount@microsoft.com** with the subject line **Action needed: Verify your email account with Microsoft** and complete the email verification process. The verification email is sent to the address listed on your Partner Center account settings.
@@ -448,9 +450,9 @@ Remember the following about the email verification process:
 * You can request to resend the email by visiting your partner profile page and selecting the **Resend verification email** link.
 * To ensure you receive the email, safe-list **microsoft.com** as a secure domain and check your junk email folders.
 <br>
+&nbsp;
 </details>
 <details>
-
 <summary>I've checked my mail folders and haven't received the verification email. What must I do next?</summary>
 
 Try the following:
@@ -461,30 +463,30 @@ Try the following:
 * Work with your IT department to ensure that the verification emails are not blocked by your email server.
 * Adjust your server's spam filter to allow or safe-list all emails from **maccount@microsoft.com**.
 <br>
+&nbsp;
 </details>
 <details>
-
 <summary>How long does the employment verification process usually take?</summary>
 
 If all the submitted details are correct, the employment verification process takes about two hours to complete.
 <br>
+&nbsp;
 </details>
 <details>
-
 <summary>How long does the business verification process usually take?</summary>
 
 If all the required documents are submitted, business verification takes one to two business days to complete.
 <br>
+&nbsp;
 </details>
 <details>
-
 <summary>If I reach out to the support team, will my ticket be expedited?</summary>
 
 Support tickets get resolved in a week. Check for updates sent to the email you provided when creating the support ticket.
 <br>
+&nbsp;
 </details>
 <details>
-
 <summary>I created a support ticket but haven't received an update in seven business days. Where can I get help?</summary>
 
 Send an email to <a href="mailto:teamsubm@microsoft.com">teamsubm@microsoft.com</a> with the following details:
@@ -493,11 +495,11 @@ Send an email to <a href="mailto:teamsubm@microsoft.com">teamsubm@microsoft.com<
 * **Email body**:
   * Support ticket number.
   * Your seller ID.
-  * A screenshot of the issue (if possible).
+  * A screenshot of the issue, if possible.
 <br>
+&nbsp;
 </details>
 <details>
-
 <summary>Where else can I go for Partner Center help?</summary>
 
 The following resources can also assist:
