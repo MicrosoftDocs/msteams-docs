@@ -47,14 +47,14 @@ Platform Bug
 
 For more information about using Adaptive Cards with a bot, see [Work with Universal Actions for Adaptive Cards](task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-Universal-Actions-for-Adaptive-Cards.md).
 <br>
-<br>
+&nbsp;
 </details>
 <details>
 <summary>How can I remove specific messages from bot history? Is there a way to get the chat history and find an activity ID of a specific message?</summary>
 
 Use Delete messages-Bot framework's `DeleteActivity` method: [Update and delete messages sent from bot](bots/how-to/update-and-delete-bot-messages.md#delete-messages).
 <br>
-<br>
+&nbsp;
 </details>
 <details>
 <summary>How can I test the validity of the card schema via code?</summary>
@@ -161,17 +161,16 @@ You can use the following Graph API [Get user mailbox settings](/graph/api/user-
 
 * GET /me/mailboxSettings/timeZone
 * GET /users/{id|userPrincipalName}/mailboxSettings/timeZone
-
 <br>
+&nbsp;
 </details>
 <details>
 <summary>How can I deploy the code in Azure using Teams Toolkit, and use Graph API get user profile photo?</summary>
 
 For more information on Teams Toolkit, see [Create a new Teams project](toolkit/create-new-project.md) and [TeamsFx Library](toolkit/TeamsFx-CLI.md).
-
 <br>
+&nbsp;
 </details>
-
 <details>
 <summary>Does Graph API work in Postman?</summary>
 
@@ -179,6 +178,7 @@ You can use the Microsoft Graph Postman collection with Microsoft Graph APIs.
 
 For more information, see [Use Postman with the Microsoft Graph API](/graph/use-postman).
 <br>
+&nbsp;
 </details>
 <details>
 <summary>Does Graph API work in Microsoft Graph explorer?</summary>
@@ -187,6 +187,7 @@ Yes, Graph API works in Microsoft Graph explorer.
 
 For more information, see [Graph explorer](https://developer.microsoft.com/graph/graph-explorer).
 <br>
+&nbsp;
 </details>
 
 ## Moodle FAQs
@@ -199,6 +200,7 @@ Each Moodle course must have at least one faculty and one student matched to a M
 
 Each team course instance must have an owner, and the synchronization sets the faculty as the owner, with assumption that the faculty has Teams license.
 <br>
+&nbsp;
 </details>
 <details>
 <summary>What should we do to remove Moodle login page when working from Teams? Can we force single sign-on (SSO)?</summary>
@@ -208,6 +210,7 @@ The users have multiple sign in options from the Moodle login page.
 * To sign in exclusively using Microsoft 365 credentials, enable the **Force redirect** configuration settings for the **auth_oidc plugin**. If the service is enabled, user can see the Microsoft sign in page.
 * To sign in manually to the Moodle portal see [Moodle](https://moodle.org/login/index.php).
 <br>
+&nbsp;
 </details>
 <details>
 <summary>How can I specify which users to sync? I don’t want all Azure AD users synchronized with the Moodle website. </summary>
@@ -222,8 +225,8 @@ The following image shows user creation restrictions options:
 :::image type="content" source="assets/images/MoodleInstructions/faq-2.png" alt-text="sync":::
 
 :::image type="content" source="assets/images/MoodleInstructions/faq-3.png" alt-text="Azure ad":::
-
 <br>
+&nbsp;
 </details>
 <details>
 <summary>We would like our faculty to be able to synchronize courses to Teams? Are Moodle administrators the only ones who can control synchronization of courses?</summary>
@@ -239,8 +242,8 @@ The following image shows the option **Allow configure course sync in course**:
 The following image shows synchronization of courses:
 
 :::image type="content" source="assets/images/MoodleInstructions/faq-5.png" alt-text="synchronization":::
-
 <br>
+&nbsp;
 </details>
 <details>
 <summary>We have followed the documentation, but the user accounts fail to sync AAD and Moodle. What should we do?</summary>
@@ -258,6 +261,7 @@ The following table provides the actions and dependencies to be performed and ch
 
 <!-- |Token refresh|Clean the **User sync delta token** in the local_o365 plugin| {moodle_url}\local_o365\acp.php?Mode=maintenance_cleandeltatoken| -->
 <br>
+&nbsp;
 </details>
 <details>
 <summary>One or more users are unable to sign in using their Microsoft 365 credentials, although most users can sign in without an issue. What would be the cause of this inconsistency?</summary>
@@ -270,6 +274,7 @@ The reason for inconsistencies with users being able unable to sign using their 
 * Check if the users have **Permissions** to access the Azure application.
 
 <br>
+&nbsp;
 </details>
 <details>
 <summary>All users are unable to sign in using their Microsoft 365 credentials. What can we do to resolve this?</summary>
@@ -285,8 +290,8 @@ The following image shows the error in Azure portal:
 :::image type="content" source="assets/images/MoodleInstructions/faq-7.png" alt-text="Azure portal":::
 
 If the **Client secret** has expired, then user needs to generate a new **Client secret**, and update the configuration found on page. Users can sign in again after the **Client secret** has been updated, which can take up to 24 hours to re-provision.
-
 <br>
+&nbsp;
 </details>
 <details>
 <summary>How to change the teams instance that is linked to a course?</summary>
@@ -296,8 +301,8 @@ Administrators can change the teams instance associated with a course through th
 The following image shows the teams instance:
 
 :::image type="content" source="assets/images/MoodleInstructions/faq-8.png" alt-text="teams instance":::
-
 <br>
+&nbsp;
 </details>
 <details>
 <summary>Why isn’t the Atto Teams meeting integration showing up within the Atto editor?</summary>
@@ -318,6 +323,7 @@ For more information on editing Atto toolbar, see:
 * [Atto editor-ModdleDocs] // https://docs.moodle.org/311/en/Atto_editor //
 * [Atto editor-Icon mapping] // https://docs.moodle.org/311/en/Atto_editor#:~:text=in%20the%20editor.-,Atto%20editor%20toolbar,-Atto%20Row%201 //
 <br>
+&nbsp;
 </details>
 <details>
 <summary>Do the meetings scheduled through Microsoft integration appear in Outlook or in Teams calendars? What is the standard timeline for the meetings to be displayed?</summary>
@@ -325,14 +331,15 @@ For more information on editing Atto toolbar, see:
 The meetings scheduled through the app don't appear in the scheduler’s Outlook or Teams calendar as they're similar to Channel Meetings. All the members in the course channel can attend the meeting directly from the embedded channel link. For more information, see [Channel meetings](https://www.knowledgewave.com/blog/benefits-of-channel-meetings-in-microsoft-teams).
 
 However, you can access the invite and manually add participant names to the **Required** or **Optional** fields of the meeting invitation to display the remote meeting on their calendars. The standard timelines are based on the date the user specifies when the meeting is created. For more information, see [Limits and specifications for Teams](/microsoftteams/limits-specifications-teams).
-
 <br>
+&nbsp;
 </details>
 <details>
 <summary>Is there any support site where we can get more help on products and other issues?</summary>
 
 For support and help on the product and services issues or developer community help see, [Support and Feedback](/microsoftteams/platform/feedback.md).
-
+<br>
+&nbsp;
 </details>
 
 ## Notifications
