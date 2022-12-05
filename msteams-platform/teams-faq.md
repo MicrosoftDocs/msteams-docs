@@ -525,7 +525,6 @@ You can use the [code sample](https://github.com/microsoft/BotBuilder-Samples/bl
 <summary>How can I change Application ID URI of SSO scope to use bot ID also so that the consent window won't be required for bot?</summary>
 
 For more information, see [Configure your app in Azure AD](bots/how-to/authentication/bot-sso-register-aad.md).
-
 <br>
 &nbsp;
 </details>
@@ -535,7 +534,6 @@ For more information, see [Configure your app in Azure AD](bots/how-to/authentic
 Implement react page with tab SSO and render the content as required. You can open the same tab URL as task module from bot.
 
 For more information, see [Enable SSO for tab app](tabs/how-to/authentication/tab-sso-overview.md).
-
 <br>
 &nbsp;
 </details>
@@ -550,7 +548,6 @@ Open sign in simple start page instead of opening login page directly to resolve
 <summary>How can I generate the access token using the endpoint oauth2/v2.0/token with grant type as "authorization_code"?</summary>
 
 Configure the application you're using to only execute HTML encoding of the scopes once, so the scopes can be correctly sent and evaluated by Azure AD.
-
 <br>
 &nbsp;
 </details>
@@ -560,7 +557,6 @@ Configure the application you're using to only execute HTML encoding of the scop
 If you use Teams Toolkit to build your app: for more information, see [Add single sign-on to Teams app](toolkit/add-single-sign-on.md).
 
 For more information about Node js code sample, see [Bot SSO quick-start](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/js).
-
 <br>
 &nbsp;
 </details>
