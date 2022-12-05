@@ -21,11 +21,10 @@ Follow the steps in the pages given here:
 1. [Publisher verification overview - Microsoft Entra](/azure/active-directory/develop/publisher-verification-overview).
 1. [Microsoft LearnMark an app as publisher verified - Microsoft Entra](/azure/active-directory/develop/mark-app-as-publisher-verified).
 1. [Microsoft Learn
-Resolution-to connect the Azure to MPN settings below developer tab](/partner-center/mpn-benefits-azure-cloud).
+Resolution - Connect Azure AD to MPN settings](/partner-center/mpn-benefits-azure-cloud).
 
 <!--Links found:
 1. [Update preferred email](/partner-center/partner-center-account-setup.md#update-preferred-email)
-
 1. [Merge your partner account with another partner account](/partner-center/merge-accounts.md)-->
 
 </details>
