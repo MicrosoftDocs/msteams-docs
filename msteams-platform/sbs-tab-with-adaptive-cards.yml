@@ -129,7 +129,7 @@ items:
 
     Perform the following steps if you've created a new **Microsoft App ID**:
 
-    1. 1. In left pane, select **Configuration**.
+    1. In left pane, select **Configuration**.
 
        :::image type="content" source="~/assets/images/adaptive-cards/config-microsoft-app-id.png" alt-text="Screenshot of Configuration with Microsoft App ID highlighted in red.":::
 
@@ -137,6 +137,12 @@ items:
 
        > [!TIP]
        > Save the **Microsoft App ID** or **Client ID** for future reference.
+
+       :::image type="content" source="~/assets/images/manage-bot-label.png" alt-text="Screenshot of Microsoft App ID option under Configuration page with the Manage option highlighted.":::
+
+    1. In the **Client secrets** section, select **New client secret**.  
+
+        :::image type="content" source="~/assets/images/meetings-side-panel/newclientsecret.png" alt-text="Screenshot of Client secret section with New client secret option highlighted in red.":::
 
        :::image type="content" source="~/assets/images/manage-bot-label.png" alt-text="Screenshot of Microsoft App ID option under Configuration page with the Manage option highlighted.":::
 
@@ -162,11 +168,13 @@ items:
 
     1. Select your bot from **Resources** > **Recent**.
 
-       :::image type="content" source="~/assets/images/adaptive-cards/bot-home-page_2.png" alt-text="Bot home page.":::
+        :::image type="content" source="~/assets/images/adaptive-cards/channel-teams.png" alt-text="Screenshot of Azure bot Home page. The Channels option in the left pane and Microsoft Teams under Channel are highlighted in red.":::
 
     1. Select **Channels** in the left pane.
 
     1. Select **Microsoft Teams**.
+
+        :::image type="content" source="~/assets/images/adaptive-cards/select-terms-of-service.png" alt-text="Screenshot of Terms of Service page with the Agree option highlighted in red.":::
 
        :::image type="content" source="~/assets/images/adaptive-cards/channel-teams.png" alt-text="Screenshot of Azure bot Home page. The Channels option in the left pane and Microsoft Teams under Channel are highlighted in red."::: 
     
@@ -332,11 +340,10 @@ items:
     1. Ensure the config item is set to **"accessTokenAcceptedVersion": 2**. If not, change its value to **2** and select **Save**.
         
         > [!NOTE]
-        > If you're already testing your bot in Teams, you must sign out from this app and sign out from Teams. Then sign in again to see this change.
-       
-       :::image type="content" source="~/assets/images/adaptive-cards/manifest_1.png" alt-text="manifest.":::
 
-        :::image type="content" source="~/assets/images/adaptive-cards/manifest.png" alt-text="Screenshot of Manifest with accessTokenAcceptedVersion 2, highlighted in red.":::
+        > If you're already testing your bot in Teams, you must sign out this app and sign out Teams. Then sign in again to see this change.
+
+          :::image type="content" source="~/assets/images/adaptive-cards/manifest.png" alt-text="Screenshot of Manifest with accessTokenAcceptedVersion 2, highlighted in red.":::
 
     1. Go to **Home** > **Configuration**.
     1. Select **Add OAuth Connection Settings**.
@@ -457,23 +464,38 @@ items:
 
         :::image type="content" source="~/assets/images/adaptive-cards/sign-in-page.png" alt-text="Screenshot of TabAdaptiveCard displaying sign in option to access the tab.":::
 
-    1. In the **Home** tab, select **Show Task Module**.
+    1. Select **Sign In** and choose an account to access the tab.
+
+        :::image type="content" source="~/assets/images/adaptive-cards/sign-in-page.png" alt-text="Screenshot of TabAdaptiveCard displaying sign in option to access the tab.":::
+
+    1. Select **Show Task Module** on the home page.
 
         :::image type="content" source="~/assets/images/adaptive-cards/tab-home-page.png" alt-text="Screenshot of Microsoft Teams with Home and Show Task Module highlighted in red.":::
+
+    1. In the **Home** tab, select **Show Task Module**.
+
+
+        :::image type="content" source="~/assets/images/adaptive-cards/tab-home-page.png" alt-text="Screenshot of Microsoft Teams with Home and Show Task Module highlighted in red.":::
+       
+        :::image type="content" source="~/assets/images/adaptive-cards/sample-task-module.png" alt-text="Screenshot of a tab auth response appearing in Microsoft Teams.":::
+
 
     1. Select **Close**.
   
        :::image type="content" source="../msteams-platform/assets/images/adaptive-cards/sample-task-module.png" alt-text="sample task module":::
 
+
     1. Select **Sign out**.
 
-       :::image type="content" source="../msteams-platform/assets/images/adaptive-cards/sign-out.png" alt-text="Sign out":::
-
         :::image type="content" source="~/assets/images/adaptive-cards/task-submit.png" alt-text="Screenshot of Microsoft Teams displaying the AdaptiveCard task/submit request triggered.":::
+
+        :::image type="content" source="~/assets/images/adaptive-cards/sign-out.png" alt-text="Screenshot of TabAdaptiveCard with Sign out option highlighted in red.":::
+
 
     1. Refresh to **Sign In** again.
 
         :::image type="content" source="~/assets/images/adaptive-cards/success-sign-out.png" alt-text="Screenshot of TabAdaptiveCard displaying successful Sign out message."
+
 
 - title: Complete challenge
   durationInMinutes: 1
