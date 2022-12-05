@@ -205,20 +205,21 @@ public class NotifyController : ControllerBase
         foreach (var conversationReference in _conversationReferences.Values)
         {
             var newReference = new ConversationReference()
-        {
-            Bot = new ChannelAccount()
             {
-                Id = conversationReference.Bot.Id
-            },
-            Conversation = new ConversationAccount()
-            {
-                Id = conversationReference.Conversation.Id
-            },
-            ServiceUrl = conversationReference.ServiceUrl,
-        };
+                Bot = new ChannelAccount()
+                {
+                    Id = conversationReference.Bot.Id
+                },
+                Conversation = new ConversationAccount()
+                {
+                    Id = conversationReference.Conversation.Id
+                },
+                ServiceUrl = conversationReference.ServiceUrl,
+            };
+
             // Sends a proactive message from the bot to a conversation.
             await ((BotAdapter)_adapter).ContinueConversationAsync(_appId, newReference, BotCallback, default(CancellationToken));
-=        }
+        }
         
         // Let the caller know proactive messages have been sent.
         return new ContentResult()
@@ -254,9 +255,10 @@ Example of a code snippet to demonstrate creating conversation reference.
             },
             ServiceUrl = conversationReference.ServiceUrl,
         };
+```
 
 # [TypeScript](#tab/typescript)
-* [SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#botbuilder-core-turncontext-getconversationreference)
+* [SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#botbuilder-core-turncontext-getconversationreference&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/graph-proactive-installation/nodejs/bots/proactiveBot.js#L59)
 
 ```javascript
