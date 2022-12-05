@@ -1,19 +1,18 @@
 ---
 title: Authentication flow in Adaptive Cards Universal Actions
-description: In this module, learn about the authentication flow in Adaptive Cards universal actions.
+description: In this module, learn about the authentication flow in Adaptive Cards Universal Actions.
 author: v-sdhakshina
 ms.topic: conceptual
 ms.localizationpriority: medium
 ---
 
-# Authentication flow in Adaptive Cards universal actions
+# Authentication flow in Adaptive Cards Universal Actions
 
 Universal Actions for Adaptive Cards bring the bot as the common backend for handling actions and introduces a new action type, `Action.Execute`, which works across apps, such as Teams and Outlook.
 
 > [!NOTE]
 > Support for Universal Actions for Adaptive Cards schema version v1.4 is only available for cards sent by bot.
 
-Universal Actions for Adaptive Cards
 You can enable the following scenarios with `Action.Execute` on your Adaptive card for Universal action:
 
 * [Universal Actions](Overview.md#universal-actions)
