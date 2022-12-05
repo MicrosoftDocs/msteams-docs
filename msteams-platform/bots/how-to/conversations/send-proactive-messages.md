@@ -182,6 +182,7 @@ The following code shows how to send proactive messages:
 # [C#](#tab/dotnet)
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.cloudadapterbase.continueconversationasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-cloudadapterbase-continueconversationasync(system-string-microsoft-bot-schema-activity-microsoft-bot-builder-botcallbackhandler-system-threading-cancellationtoken)&preserve-view=true)
+
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/graph-meeting-notification/csharp/MeetingNotification/Controllers/NotificationController.cs#L112)
 
 ```csharp
@@ -258,7 +259,9 @@ Example of a code snippet to demonstrate creating conversation reference.
 ```
 
 # [TypeScript](#tab/typescript)
+
 * [SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#botbuilder-core-turncontext-getconversationreference&preserve-view=true)
+
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/graph-proactive-installation/nodejs/bots/proactiveBot.js#L59)
 
 ```javascript
@@ -287,7 +290,9 @@ async messageAllMembersAsync(context) {
 ```
 
 # [Python](#tab/python)
+
 * [SDK reference](/python/api/botbuilder-core/botbuilder.core.botadapter?view=botbuilder-py-latest#botbuilder-core-botadapter-continue-conversation&preserve-view=true)
+
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L200)
 
 ```python
