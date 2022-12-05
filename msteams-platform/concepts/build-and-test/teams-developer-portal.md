@@ -26,7 +26,7 @@ The Developer Portal provides the following ways to register a Teams app:
 
 ### Create and register a brand new app
 
-The Developer portal allows you to create a brand new app:
+The Developer Portal allows you to create a brand new app:
 
 1. Sign in to [Developer Portal](https://dev.teams.microsoft.com) and select **Apps** from the left pane.
 
@@ -74,8 +74,8 @@ To view the Changelog, sign in to [Developer Portal](https://dev.teams.microsoft
 
 The updates for Changelog in the Developer Portal are categorized based on the following:
 
-* Added - Service or feature that are new feature or capability.
-* Changed - Service or API that modified.
+* Added - Service or feature that is a new feature or capability.
+* Changed - Service or API is modified.
 * Removed - Service or API removed and may be replaced with a new and updated service.
 * Fixed - Service or API that was previously identified as a high-priority or breaking change issue that has been fixed or mitigated.
 * Deprecated - Service or API at the end of its life and deprecated.
