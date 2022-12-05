@@ -28,13 +28,15 @@ Resolution - Connect Azure AD to MPN settings](/partner-center/mpn-benefits-azur
 1. [Merge your partner account with another partner account](/partner-center/merge-accounts.md)-->
 
 </details>
+<!--
 <details>
 <summary>How can I remove the 'white screen' showing under the 'more' section on Teams mobile iOS client for Teams dark mode?</summary>
 
-<!--Question: Partner reported that the tab menu was showing a white screen under the "more" section on the Teams mobile iOS client and for Teams dark mode. We've reproduced the issue with the provided details and observed that it's a common issue for Teams mobile iOS clients and only for dark mode. So, we've raised a bug request for the same.-->
+<!--Question: Partner reported that the tab menu was showing a white screen under the "more" section on the Teams mobile iOS client and for Teams dark mode. We've reproduced the issue with the provided details and observed that it's a common issue for Teams mobile iOS clients and only for dark mode. So, we've raised a bug request for the same
 
 Platform Bug
 </details>
+-->
 
 ## Bots
 
