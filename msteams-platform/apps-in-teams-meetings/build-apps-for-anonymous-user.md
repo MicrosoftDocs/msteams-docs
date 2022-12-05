@@ -9,13 +9,34 @@ ms.localizationpriority: medium
 
 # Build apps for anonymous users
 
-You can build bots, messaging extensions, cards and task modules in your app to engage with anonymous meeting participants.
+You can build tabs and task modules in your app to engage with anonymous meeting participants.
+
+To build apps for anonymous users ensure the following:
+
+* Manifest enabled with `supportsAnonymousGuestUsers` to true.
+* Admin setting for anonymous user app interaction
+
+## Manifest update for `supportsAnonymousGuestUsers`
+
+To allow anonymous users to interact with the tab app, ensure to update your app manifest `meetingExtensionDefinition` property with `supportsAnonymousGuestUsers` to `true`. Following is an example of the manifest:
+
+```json
+
+ "meetingExtensionDefinition": {
+  "supportsAnonymousGuestUsers": true
+ }
+
+```
 
 To test your app's experience for anonymous users, select the URL in the meeting invite and join the meeting from a private browser window.
 
+## Anonymous user authentication flow
+
+As anonymous users aren't AAD accounts, skype token isn't available for anonymous users in third-party apps. This means that if `getAuthToken` is called in client SDK it would fail. Ensure that your app identifies the anonymous users and provides the correct experience in the meetings. You can use [Get user context](~/tabs/how-to/access-teams-context.md#get-context-by-using-the-microsoft-teams-javascript-library) API to determine whether user is anonymous or not and redirect to the SSO page of the app.
+
 ## Admin setting for anonymous user app interaction
 
-Teams admins can use the admin portal to enable or disable anonymous user app interaction for the entire tenant. This setting is enabled by default. For more information, see [allow anonymous users to interact with apps in meetings](/microsoftteams/meeting-settings-in-teams).
+Teams admins can use the admin portal to enable or disable anonymous user app interaction for the entire tenant. This setting is enabled by default. If your app needs to be accesed by anonymous users ensure that tenant admins enable the anonymous user app interaction. For more information, see [allow anonymous users to interact with apps in meetings](/microsoftteams/meeting-settings-in-teams).
 
 ## In-Meeting getContext from Teams client SDK
 
