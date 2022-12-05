@@ -79,70 +79,7 @@ For more information, see [how to guide](/apps-in-teams-meetings/teams-live-shar
 <br>
 
 </details>
-<details>
-<summary>How long is data stored in Live Share's hosted service accessible?</summary>
 
-Any data sent or stored through Fluid containers created by Live Share's hosted Azure Fluid Relay service is accessible for 24 hours. If you want to persist data beyond 24 hours, you can replace our hosted Azure Fluid Relay service with your own. Alternatively, you can use your own storage provider in parallel to Live Share's hosted service.
-<br>
-</details>
-<details>
-<summary>What meeting types does Live Share support?</summary>
-
-Live Share supports the scheduled meetings, one-on-one calls, group calls, and meet now. Channel meetings aren't yet supported.
-<br>
-</details>
-<details>
-
-<summary>Will Live Share's media package work with DRM content?</summary>
-
-Live Share's media package work doesn't with DRM content. Teams currently doesn't support encrypted media for tab applications on desktop. Chrome, Edge, and mobile clients are supported.
-
-For more information, you can [track the issue here](https://github.com/microsoft/live-share-sdk/issues/14).
-<br>
-</details>
-<details>
-<summary>How many people can attend a Live Share session?</summary>
-
-Currently, Live Share supports a maximum of 100 attendees per session. If this is something you're interested in, you can [start a discussion here](https://github.com/microsoft/live-share-sdk/discussions).
-<br>
-</details>
-<details>
-<summary>Can I use Live Share's data structures outside of Teams?</summary>
-
-Currently, Live Share packages require the Teams Client SDK to function properly. Features in `@microsoft/live-share` or `@microsoft/live-share-media` won't work outside Microsoft Teams. If this is something you're interested in, you can [start a discussion here](https://github.com/microsoft/live-share-sdk/discussions).
-<br>
-</details>
-<details>
-<summary>Can I use multiple Fluid containers?</summary>
-
-Currently, Live Share only supports having one container using our provided Azure Fluid Relay service. However, it's possible to use both a Live Share container and a container created by your own Azure Fluid Relay instance.
-<br>
-</details>
-<details>
-<summary>Can I change my Fluid container schema after creating the container?</summary>
-
-Currently, Live Share doesn't support adding new `initialObjects` to the Fluid `ContainerSchema` after creating or joining a container. Because Live Share sessions are short-lived, this is most commonly an issue during development after adding new features to your app.
-
-> [!NOTE]
-> If you are using the `dynamicObjectTypes` property in the `ContainerSchema`, you can add new types at any point. If you later remove types from the schema, existing DDS instances of those types will gracefully fail.
-
-To fix errors resulting from changes to `initialObjects` when testing locally in your browser, remove the hashed container ID from your URL and reload the page. If you're testing in a Teams meeting, start a new meeting and try again.
-
-If you plan to update your app with new `SharedObject` or `LiveObject` instances frequently, you should consider how you deploy new schema changes to production. While the actual risk is relatively low and short lasting, there may be active sessions at the time you roll out the change. Existing users in the session shouldn't be impacted, but users joining that session after you deployed a breaking change may have issues connecting to the session. To mitigate this, you may consider some of the following solutions:
-
-* Deploy schema changes for your web application outside of normal business hours.
-* Use `dynamicObjectTypes` for any changes made to your schema, rather than changing `initialObjects`.
-
-> [!NOTE]
-> Live Share does not currently support versioning your `ContainerSchema`, nor does it have any APIs dedicated to migrations.
-<br>
-</details>
-<details>
-<summary>Are there limits to how many change events I can emit through Live Share?</summary>
-
-While Live Share is in Preview, any limit to events emitted through Live Share isn't enforced. For optimal performance, you must debounce changes emitted through `SharedObject` or `LiveObject` instances to one message per 50 milliseconds or more. This is especially important when sending changes based on mouse or touch coordinates, such as when synchronizing cursor positions, inking, and dragging objects around a page.
-<br>
-</details>
 
 ## Microsoft Graph
 
