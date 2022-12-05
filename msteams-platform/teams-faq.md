@@ -76,7 +76,7 @@ While most of you find it beneficial to use our free hosted service, there may s
 * Develop features through Fluid Framework, for example, `SharedMap`, for your application outside of Teams.
 
 For more information, see [how to guide](/apps-in-teams-meetings/teams-live-share-how-to/how-to-custom-azure-fluid-relay) or visit the [Azure Fluid Relay documentation](/azure/azure-fluid-relay/).
-<br>t
+<br>
 
 </details>
 <details>
@@ -84,14 +84,14 @@ For more information, see [how to guide](/apps-in-teams-meetings/teams-live-shar
 
 Any data sent or stored through Fluid containers created by Live Share's hosted Azure Fluid Relay service is accessible for 24 hours. If you want to persist data beyond 24 hours, you can replace our hosted Azure Fluid Relay service with your own. Alternatively, you can use your own storage provider in parallel to Live Share's hosted service.
 <br>
-
+&nbsp;
 </details>
 <details>
 <summary>What meeting types does Live Share support?</summary>
 
 Live Share supports the scheduled meetings, one-on-one calls, group calls, and meet now. Channel meetings aren't yet supported.
 <br>
-
+&nbsp;
 </details>
 
 ## Microsoft Graph
