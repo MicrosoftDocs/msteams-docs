@@ -23,7 +23,7 @@ The command bot template is built using the TeamsFx SDK, which provides a simple
 
 ## Command bot installation
 
-A command bot needs to be installed into a team, or a groupchat, or as personal app, depending on the required scope. You need to select the installation target before adding the bot to your app.
+A command bot needs to be installed into a team, or a group chat, or as personal app, depending on the required scope. You need to select the installation target before adding the bot to your app.
 
 :::image type="content" source="../../../assets/images/command-bot-teams/commandbot-installation.png" alt-text="installation option selection":::
 
@@ -274,7 +274,7 @@ Perform the following steps to extend your notification bot to support command a
 
    :::image type="content" source="../../../assets/images/command-bot-teams/commandbot-support-command-response.png" alt-text="extend command and response to support notification":::
 
-1. Follow the [instructions](https://github.com/OfficeDev/TeamsFx/wiki/Send-notification-to-Teams#notify) to send notification to the bot installation target such as personal, or a groupchat or channel. You can add the following sample code in `bot\src\index.ts(js)` to include a sample notification triggered by HTTP request:
+1. Follow the [instructions](../../../sbs-gs-notificationbot.yml) to send notification to the bot installation target such as personal, or a group chat or channel. You can add the following sample code in `bot\src\index.ts(js)` to include a sample notification triggered by HTTP request:
 
    ```ts(js)
       server.post("/api/notification", async (req, res) => {
@@ -289,7 +289,7 @@ Perform the following steps to extend your notification bot to support command a
 
 1. You need to uninstall your previous bot from Teams, and select F5 to start your application.
 
-1. You can now send a notification to the bot installation targets such as personal, or  groupchat, or channel to send HTTP POST request to the target URL `https://localhost:3978/api/notification`.
+1. You can now send a notification to the bot installation targets such as personal, or  group chat, or channel to send HTTP POST request to the target URL `https://localhost:3978/api/notification`.
 
 <br>
 
