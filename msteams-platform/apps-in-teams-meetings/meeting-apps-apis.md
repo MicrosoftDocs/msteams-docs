@@ -385,7 +385,7 @@ The following table includes the response codes:
 
 ### Limitations
 
-* It supports private scheduled, private recurring, meet now, one-on-one calls, and group call.
+* Targeted meeting notification supports private scheduled, private recurring, meet now, one-on-one calls, and group call.
 * The API payload only permits task module with URL.
 * The notification can only be sent to 10 users.
 
