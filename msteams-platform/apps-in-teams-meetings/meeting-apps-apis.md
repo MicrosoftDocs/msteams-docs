@@ -65,6 +65,7 @@ The following table includes the query parameters:
 ### Example
 
 # [C#](#tab/dotnet)
+
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetingparticipantasync?view=botbuilder-dotnet-stable&preserve-view=true)  
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-context-app/csharp/MeetingContextApp/Bots/MeetingContextBot.cs#L33)
 
@@ -84,6 +85,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 ```
 
 # [JavaScript](#tab/javascript)
+
 * [SDK reference](/javascript/api/botbuilder/teamsinfo?view=botbuilder-ts-latest#botbuilder-teamsinfo-getmeetingparticipant&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-token-app/nodejs/server/bot/botActivityHandler.js#L30)
 
@@ -181,6 +183,45 @@ All users in a meeting receive the notifications sent through in-meeting notific
 > * You must invoke the [submitTask()](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-task-module) function to dismiss automatically after a user takes an action in the web view. This is a requirement for app submission. For more information, see [Teams SDK task module](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true).
 > * If you want your app to support anonymous users, initial invoke request payload must rely on `from.id` request metadata in `from` object, not `from.aadObjectId` request metadata. `from.id` is the user ID and `from.aadObjectId` is the Microsoft Azure Active Directory (Azure AD) ID of the user. For more information, see [using task modules in tabs](../task-modules-and-cards/task-modules/task-modules-tabs.md) and [create and send the task module](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
 
+## Targeted Meeting Notification
+
+You can send in-meeting notifications to specific participants. The notifications are private to the designated participants and not visible to others in the meeting.
+
+> [!NOTE]
+> Adaptive Cards are not supported.
+
+The following example shows how to send in-meeting notification to specific participants:
+
+ 1. Select **New Charge**.
+
+    :::image type="content" source="../assets/images/apps-in-meetings/send-a-charge.png" alt-text="Screenshot of Teams meeting with new charge highlighted in red.":::
+
+ 1. Enter the required details and select **Send charge**.
+
+    :::image type="content" source="../assets/images/apps-in-meetings/sends-charge-to-participants.png" alt-text="Screenshot of Teams meeting with send charge highlighted in red.":::
+
+ You receive notification from the participants.
+
+ :::image type="content" source="../assets/images/apps-in-meetings/confirmation-who-has-been-charged.png" alt-text="Screenshot of Teams meeting displaying the details of who has been charged.":::
+
+ The participant receives notification from the host.
+
+ :::image type="content" source="../assets/images/apps-in-meetings/student-receives-notification.png" alt-text="Screenshot of Teams meeting displaying the details of notification sent to students.":::
+
+ The payment is done via the link sent by the host.
+
+ :::image type="content" source="../assets/images/apps-in-meetings/student-pays.png" alt-text="Screenshot of Teams meeting displaying the details of student making the payment.":::
+
+ Confirmation of the payment.
+
+ :::image type="content" source="../assets/images/apps-in-meetings/payment-done.png" alt-text="Screenshot of Teams meeting displaying the details of payment done from student's end.":::
+
+### Limitations
+
+* It supports private scheduled, private recurring, meet now, one-on-one calls, and group call.
+* The API payload only permits task modules with URLs. Adaptive Card is currently not supported.
+* The notification can only be sent to 10 users.
+
 ### Query parameter
 
 The following table includes the query parameter:
@@ -200,6 +241,7 @@ The following table includes the query parameter:
 > * The URL is the page, which loads as `<iframe>` in the in-meeting notification. The domain must be in the apps' `validDomains` array in your app manifest.
 
 # [C#](#tab/dotnet)
+
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityextensions.teamsnotifyuser?view=botbuilder-dotnet-stable#microsoft-bot-builder-teams-teamsactivityextensions-teamsnotifyuser(microsoft-bot-schema-iactivity)&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-proactive-messaging/csharp/proactive-cmd/Program.cs#L178)
 
@@ -215,6 +257,7 @@ await turnContext.SendActivityAsync(activity).ConfigureAwait(false);
 ```
 
 # [JavaScript](#tab/javascript)
+
 * [SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#botbuilder-core-turncontext-sendactivity&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L74)
 
@@ -697,6 +740,7 @@ The bot receives event through the `OnEventActivityAsync` handler. To deserializ
 The following code shows how to capture the metadata of a meeting that is `MeetingType`, `Title`, `Id`, `JoinUrl`, `StartTime`, and `EndTime` from a meeting start/end event:
 
 Meeting Start Event
+
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingstartasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-teams-teamsactivityhandler-onteamsmeetingstartasync(microsoft-bot-schema-teams-meetingstarteventdetails-microsoft-bot-builder-iturncontext((microsoft-bot-schema-ieventactivity))-system-threading-cancellationtoken)&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L34)
 
@@ -712,6 +756,7 @@ protected override async Task OnTeamsMeetingStartAsync(MeetingStartEventDetails 
 ```
 
 Meeting End Event
+
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingendasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-teams-teamsactivityhandler-onteamsmeetingendasync(microsoft-bot-schema-teams-meetingendeventdetails-microsoft-bot-builder-iturncontext((microsoft-bot-schema-ieventactivity))-system-threading-cancellationtoken)&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L51)
 
