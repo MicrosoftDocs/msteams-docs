@@ -189,27 +189,37 @@ The following steps guide you to sideload and validate bot that receives all cha
 The following code provides an example of the RSC permissions:
 
 # [C#](#tab/dotnet)
+* [SDK reference](/dotnet/api/microsoft.bot.builder.activityhandler.onmessageactivityasync?view=botbuilder-dotnet-stable&preserve-view=true)
 
 ```csharp
 
-// Handle when a message is addressed to the bot. 
-// When rsc is enabled the method will be called even when bot is addressed without being @mentioned
+// Handle when a message is addressed to the bot.
+// When rsc is enabled the method will be called even when bot is addressed without being @mentioned.
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
 {
+        // Sends an activity to the sender of the incoming activity.
          await turnContext.SendActivityAsync(MessageFactory.Text("Using RSC the bot can receive messages across channels or chats in team without being @mentioned."));
 }
+
 ```
 
 # [Node.js](#tab/nodejs)
+* [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onmessage&preserve-view=true)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-localization/nodejs/server/bot/botActivityHandler.js#L25)
+
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-localization/nodejs/server/bot/botActivityHandler.js#L25)
 
 ```javascript
 
-// Handle when a message is addressed to the bot. 
-// When rsc is enabled the method will be called even when bot is addressed without being @mentioned
+// Handle when a message is addressed to the bot.
+// When rsc is enabled the method will be called even when bot is addressed without being @mentioned.
+
 this.onMessage(async (context, next) => {
+    // Sends a message activity to the sender of the incoming activity.
    await context.sendActivity(MessageFactory.text("Using RSC the bot can receive messages across channels or chats in team without being @mentioned."))
    await next();
 });
+
 ```
 
 ---
@@ -222,9 +232,8 @@ this.onMessage(async (context, next) => {
 
 ## See also
 
-* [Build bots for Teams](../../what-are-bots.md)
+* [Bot conversations](/microsoftteams/platform/bots/how-to/conversations/conversation-basics)
 * [Resource-specific consent](/microsoftteams/resource-specific-consent)
-* [Test resource-specific consent](../../../graph-api/rsc/test-resource-specific-consent.md#prerequisites)
+* [Test resource-specific consent](/microsoftteams/platform/graph-api/rsc/test-resource-specific-consent)
 * [Upload custom app in Teams](~/concepts/deploy-and-publish/apps-upload.md)
-* [Authorization permissions](../../../resources/schema/manifest-schema.md#authorization)
 * [List replies to messages in a channel](/graph/api/chatmessage-list-replies?view=graph-rest-1.0&tabs=http&preserve-view=true)
