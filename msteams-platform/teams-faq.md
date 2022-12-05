@@ -79,7 +79,12 @@ For more information, see [how to guide](/apps-in-teams-meetings/teams-live-shar
 <br>
 
 </details>
+<details>
+<summary>How long is data stored in Live Share's hosted service accessible?</summary>
 
+Any data sent or stored through Fluid containers created by Live Share's hosted Azure Fluid Relay service is accessible for 24 hours. If you want to persist data beyond 24 hours, you can replace our hosted Azure Fluid Relay service with your own. Alternatively, you can use your own storage provider in parallel to Live Share's hosted service.
+
+</details>
 
 ## Microsoft Graph
 
