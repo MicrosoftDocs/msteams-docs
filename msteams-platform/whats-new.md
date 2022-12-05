@@ -40,7 +40,7 @@ Teams platform features that are available to all app developers.
 | 11/29/2022| Plan analytics for your Teams app.| Plan your app > Plan analytics for your Teams app > [Overview](concepts/design/overview-analytics.md) |
 | 11/23/2022| Integrate location capabilities.| Integrate device capabilities > [Integrate location capabilities](concepts/device-capabilities/location-capability.md) |
 | 11/22/2022 | Enable SSO for your bot and message extension app. | Add authentication > Enable SSO for your Teams app > Enable SSO for your bot and message extension app > [Overview](bots/how-to/authentication/bot-sso-overview.md) |
-| 11/18/2022 | Zero install for link unfurling.7 | Build message extensions > [Add link unfurling](messaging-extensions/how-to/link-unfurling.md#zero-install-for-link-unfurling) |
+| 11/18/2022 | Zero install for link unfurling. | Build message extensions > [Add link unfurling](messaging-extensions/how-to/link-unfurling.md#zero-install-for-link-unfurling) |
 | 11/17/2022 | Manifest schema v1.15 | App manifest > [App manifest schema for Teams](resources/schema/manifest-schema.md) |
 | 11/16/2022 | Adaptive Cards overflow menu. | Build cards and task modules > Build cards > [Format cards in Microsoft Teams](task-modules-and-cards/cards/cards-format.md#adaptive-cards-overflow-menu) |
 | 11/14/2022 | Introducing single sign-on for Visual Studio. | Tools and SDKs > Teams Toolkit > Use Teams Toolkit to create your app > Develop your Teams app > [Add single sign-on to Teams app](toolkit/add-single-sign-on.md) |
