@@ -172,45 +172,46 @@ For a single sign-on experience in which the user is already signed into a clien
 
 1. The client resend the original `adaptiveCard/action` to the bot along with the token as follows:
 
-   ```json
+    ```javascript
     {
-        "type": "invoke",
-        "name": "adaptiveCard/action"
-        "value": {
-            "action": {
-                "id": "abc123",
-                "type": "Action.Execute",
-                "verb": "saveCommand",
-                "data": {
-                    "firstName": "Jeff",
-                    "lastName": "Derstadt"
-                }
-            },
-            "authentication": {
-                "id": "8769-xyz",
-                "connectionName": "oauthConnection",
-                "token": "...single sign-on token..."
+      "type": "invoke",
+      "name": "adaptiveCard/action"
+      "value": {
+         "action": {
+            "id": "abc123",
+            "type": "Action.Execute",
+            "verb": "saveCommand",
+            "data": {
+               "firstName": "Jeff",
+               "lastName": "Derstadt"
             }
-        },
-   ```
+         },
+      "authentication": {
+         "id": "8769-xyz",
+         "connectionName": "oauthConnection",
+         "token": "...single sign-on token..."
+      }
+      }
+    }
+    ```
 
-* Senders must include the authentication field with a token exchange resource.
+    * Senders must include the authentication field with a token exchange resource.
 
 1. The channel delivers this Invoke to the bot, which uses the token to finalize the token exchange process with the Token Service and identity provider. The Token Service delivers the user"s access token to the bot.
    * Receivers MAY ignore the authentication if the value is malformed.
    * Receivers that experience an error performing token exchange SHOULD respond with an error or a second loginRequest that doesn't include single sign-on information. If responding with an error, the error response must be:
    * If the value in the state field is incorrect, the bot can return an error to the client as follows:
 
-   ```json
-   {
-    "statusCode": 412,
-    "type": "application/vnd.microsoft.error.preconditionFailed",
-    "value": { ... error ... }
-    }
-   ```
+    ```javascript
+       {
+        "statusCode": 412,
+        "type": "application/vnd.microsoft.error.preconditionFailed",
+        "value": { ... error ... }
+        }
+    ```
 
 1. The bot uses the access token on behalf of the user to perform its actions.
-1. The bot returns a non-error response to the client (either a card or message).
+1. The bot returns a non-error response to the client, either a card or message.
 
 ## See also
 
