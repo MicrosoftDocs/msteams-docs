@@ -70,11 +70,11 @@ Changelog for Developer Portal let's you stay engaged with the latest updates in
 
 To view the Changelog, sign in to [Developer Portal](https://dev.teams.microsoft.com) and select **Changelog** from the left pane.
 
-:::image type="content" source="../../assets/images/tdp/changelog.png" alt-text="Screenshot shows the Changelog in the Developer Portal.":::
+:::image type="content" source="../../assets/images/tdp/changelog.png" alt-text="Screenshot shows the Changelog in the Developer Portal highlighted in red.":::
 
 The updates for Changelog in the Developer Portal are categorized based on the following:
 
-* Added - Service or feature that are net new feature or capability.
+* Added - Service or feature that are new feature or capability.
 * Changed - Service or API that modified.
 * Removed - Service or API removed and may be replaced with a new and updated service.
 * Fixed - Service or API that was previously identified as a high-priority or breaking change issue that has been fixed or mitigated.
