@@ -8,12 +8,12 @@ ms.localizationpriority: medium
 
 # Authentication flow in Adaptive Cards Universal Actions
 
-Universal Actions for Adaptive Cards bring the bot as the common backend for handling actions and introduces a new action type, `Action.Execute`, which works across apps, such as Teams and Outlook.
+Universal Actions for Adaptive Cards bring the bot as the common backend for handling actions and introduces a new action type `Action.Execute`, which works across apps, such as Teams and Outlook.
 
 > [!NOTE]
 > Support for Universal Actions for Adaptive Cards schema version v1.4 is only available for cards sent by bot.
 
-You can enable the following scenarios with `Action.Execute` on your Adaptive card for Universal action:
+You can enable the following scenarios with `Action.Execute` on your Adaptive Cards Universal action:
 
 * [Universal Actions](Overview.md#universal-actions)
 * [User Specific Views](Overview.md#user-specific-views)
@@ -48,16 +48,16 @@ For a OAuth or nominal sign-on experience in which the user is presented with a 
 1. An adaptiveCard/action Invoke request is sent to the bot.
 1. The bot uses the Token Service protocol to check if there's already a cached token for the user specified in the activity.from.id field on the channel specified in the activity.channelId field for the bot and connection that is configured.
 1. If there's a cached token, the bot can use this token. If there's not a token, the bot creates an OAuthCard and places it in the Response with the values:
-   * Senders MUST include a value that adheres to the OAuthCard format.
-   * Senders MUST include a connectionName. Receivers MAY ignore login requests with an empty or missing connectionName.
-   * Senders MUST include either a button that has a non-empty buttons array.
+   * Senders must include a value that adheres to the OAuthCard format.
+   * Senders must include a connectionName. Receivers MAY ignore login requests with an empty or missing connectionName.
+   * Senders must include either a button that has a non-empty buttons array.
 1. Upon receiving this response, Teams client will show a **Sign-In** button in the card footer where user can select.
 
    :::image type="content" source="../../../assets/images/authentication/adaptive-card-universal-action/sign-in-button.png" alt-text="Screenshot shows the Sign-In button on the Adaptive card.":::
 
 1. The user will select on the sign-in link, which will open a browser window to the configured connection"s identity provider"s sign-on page. The final redirect will land on a Token Service page offering an authorization code value.
 1. Teams client will create and send the adaptiveCard/action Invoke Activity with name. The value will include the state field containing the authorization code:
-   * Senders MUST include a state field.
+   * Senders must include a state field.
 1. The channel delivers this Invoke to the bot, which uses the authentication code to finalize retrieving the token with the Token Service. The Token Service delivers the user"s access token to the bot.
 
    * Receivers MAY ignore the adaptiveCard/action invoke or reply with an error if there's a missing or empty state field.
@@ -110,7 +110,7 @@ For a single sign-on experience in which the user is already signed into a clien
 
 ```
 
-* Senders MUST include a `tokenExchangeResource` to designate a single sign-on operation.
+* Senders must include a `tokenExchangeResource` to designate a single sign-on operation.
 
    > [!NOTE]
    > Teams client will trigger the nominal sing-on or OAuth flow when SSO fails. It is highly recommended that you provide sign in URL in the above response so that OAuth flow works.
@@ -143,11 +143,11 @@ For a single sign-on experience in which the user is already signed into a clien
         },
    ```
 
-* Senders MUST include the authentication field with a token exchange resource.
+* Senders must include the authentication field with a token exchange resource.
 
 1. The channel delivers this Invoke to the bot, which uses the token to finalize the token exchange process with the Token Service and identity provider. The Token Service delivers the user"s access token to the bot.
    * Receivers MAY ignore the authentication if the value is malformed.
-   * Receivers that experience an error performing token exchange SHOULD respond with an error or a second loginRequest that doesn't include single sign-on information. If responding with an error, the error response MUST be:
+   * Receivers that experience an error performing token exchange SHOULD respond with an error or a second loginRequest that doesn't include single sign-on information. If responding with an error, the error response must be:
    * If the value in the state field is incorrect, the bot can return an error to the client as follows:
 
    ```json
