@@ -68,12 +68,24 @@ You can perform the following steps to add command and responses:
 
 <summary><b>1. Add a command definition in manifest</b></summary>
 
-You can edit the manifest template file `templates\appPackage\manifest.template.json` to include:
+You can edit the manifest template file `templates\appPackage\manifest.template.json` to include the `doSomething` command with its title and description in the `commands` array:
 
-* The command title that user types in the message compose area to trigger the command.
-* The description for the command.
-
-  :::image type="content" source="../../../assets/images/command-bot-teams/commandbot-add-command-definition.png" alt-text="add a command definition in manifest code sample" lightbox="../../../assets/images/command-bot-teams/commandbot-add-command-definition.png":::
+```JSON
+    "commandLists": [
+      {
+        "commands": [
+            {
+                "title": "helloWorld",
+                "description": "A helloworld command to send a welcome message"
+            },
+            {
+                "title": "doSomething",
+                "description": "A sample do something command"
+            }
+        ]
+      }
+    ]
+```
 
 <br>
 </details>
@@ -105,10 +117,7 @@ You can define your card in its JSON format to respond with an Adaptive Card. Fo
       }
   ```
 
-You can use the [Adaptive Card Designer](https://adaptivecards.io/designer/) to help visually design your Adaptive Card UI.
-
-* You can respond with plain text, or with an Adaptive Card.
-* To send an Adaptive card with dynamic data, see this [section](#how-to-build-command-and-response-using-adaptive-card-with-dynamic-content).
+Respond with plain text, or with an Adaptive Card. You can use the [Adaptive Card Designer](https://adaptivecards.io/designer/) to help visually design your Adaptive Card UI. How to send an Adaptive card with dynamic data, see this [section](#how-to-build-command-and-response-using-adaptive-card-with-dynamic-content).
 
 <br>
 
@@ -121,31 +130,31 @@ You can use the [Adaptive Card Designer](https://adaptivecards.io/designer/) to 
 TeamsFx SDK provides a convenient class `TeamsFxBotCommandHandler`, to handle when a command is triggered from Teams conversation message. Create a new file, `bot/src/doSomethingCommandHandler.ts`:
 
    ```TypeScript
-                import { Activity, CardFactory, MessageFactory, TurnContext } from "botbuilder";
-                import { CommandMessage, TeamsFxBotCommandHandler, TriggerPatterns, MessageBuilder, } from "@microsoft/teamsfx";
-                import doSomethingCard  from "./adaptiveCards/doSomethingCommandResponse.json";
-                import { AdaptiveCards } from "@microsoft/adaptivecards-tools";
-                import { CardData } from "./cardModels";
+         import { Activity, CardFactory, MessageFactory, TurnContext } from "botbuilder";
+         import { CommandMessage, TeamsFxBotCommandHandler, TriggerPatterns, MessageBuilder, } from "@microsoft/teamsfx";
+         import doSomethingCard  from "./adaptiveCards/doSomethingCommandResponse.json";
+         import { AdaptiveCards } from "@microsoft/adaptivecards-tools";
+         import { CardData } from "./cardModels";
 
-                export class DoSomethingCommandHandler implements TeamsFxBotCommandHandler {
-                    triggerPatterns: TriggerPatterns = "doSomething";
+         export class DoSomethingCommandHandler implements TeamsFxBotCommandHandler {
+            triggerPatterns: TriggerPatterns = "doSomething";
 
-                    async handleCommandReceived(
-                        context: TurnContext,
-                        message: CommandMessage
-                    ): Promise<string | Partial<Activity>> {
-                        // verify the command arguments which are received from the client if needed.
-                        console.log(`Bot received message: ${message.text}`);
+            async handleCommandReceived(
+               context: TurnContext,
+               message: CommandMessage
+            ): Promise<string | Partial<Activity>> {
+               // verify the command arguments which are received from the client if needed.
+               console.log(`Bot received message: ${message.text}`);
 
-                        const cardData: CardData = {
-                          title: "doSomething command is added",
-                          body: "Congratulations! You have responded to doSomething command",
-                       };
+               const cardData: CardData = {
+                  title: "doSomething command is added",
+                  body: "Congratulations! You have responded to doSomething command",
+               };
 
-                       const cardJson = AdaptiveCards.declare(doSomethingCard).render(cardData);
-                       return MessageFactory.attachment(CardFactory.adaptiveCard(cardJson));
-                 }    
-              }
+               const cardJson = AdaptiveCards.declare(doSomethingCard).render(cardData);
+               return MessageFactory.attachment(CardFactory.adaptiveCard(cardJson));
+         }    
+      }
 
    ```
 
@@ -158,23 +167,6 @@ You can customize the command, including calling an API, processing data, or any
 <details>
 
 <summary><b>4. Register the new command</b></summary>
-
-Open `bot\src\internal\initialize.ts` and update the call to `ConversationBot` constructor to include your newly added command handlers.
-
- ```TypeScript
-       export const commandBot = new ConversationBot({
-           // The bot id and password to create BotFrameworkAdapter.
-           // See https://aka.ms/about-bot-adapter to learn more about adapters.
-           adapterConfig: {
-              appId: process.env.BOT_ID,
-              appPassword: process.env.BOT_PASSWORD,
-           },
-           command: {
-               enabled: true,
-               commands: [ new HelloWorldCommandHandler(), new xxxCommandHandler() ],
-           },
-      });
- ```
 
 Each new command needs to be configured in the `ConversationBot`, which initiates the conversational flow of the command bot template. In the `bot/src/internal/initialize.ts` file, update the commands array of the command property:
 
@@ -266,30 +258,9 @@ If you don't have the required SDK, and need to invoke external APIs in your cod
 
 <details>
 
-<summary><b>How to extend my command and response bot to support notification?</b></summary>
+<summary><b>How to extend my command and response bot to support notifications?</b></summary>
 
-Perform the following steps to extend your notification bot to support command and response:
-
-1. Open file `bot\src\internal\initialize.ts(js)`, update your `conversationBot` initialization to enable command and response:
-
-   :::image type="content" source="../../../assets/images/command-bot-teams/commandbot-support-command-response.png" alt-text="extend command and response to support notification":::
-
-1. Follow the [instructions](../../../sbs-gs-notificationbot.yml) to send notification to the bot installation target such as personal, or a group chat or channel. You can add the following sample code in `bot\src\index.ts(js)` to include a sample notification triggered by HTTP request:
-
-   ```ts(js)
-      server.post("/api/notification", async (req, res) => {
-        for (const target of await commandBot.notification.installations()) {
-          await target.sendMessage("This is a sample notification message");
-        }
-
-        res.json({});
-      });
-    
-   ```
-
-1. You need to uninstall your previous bot from Teams, and select F5 to start your application.
-
-1. You can now send a notification to the bot installation targets such as personal, or  group chat, or channel to send HTTP POST request to the target URL `https://localhost:3978/api/notification`.
+If you need to extend your command and response to supporting notifications, you can add Adaptive cards to respond to external events. Follow the steps to customize notifications [Placeholder for customize notification steps in the notification bot in Teams doc].
 
 <br>
 
