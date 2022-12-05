@@ -140,6 +140,7 @@ If you plan to update your app with new `SharedObject` or `LiveObject` instances
 
 > [!NOTE]
 > Live Share does not currently support versioning your `ContainerSchema`, nor does it have any APIs dedicated to migrations.
+
 <br>
 &nbsp;
 </details>
