@@ -514,55 +514,55 @@ The following resources can also assist:
 <details>
 <summary>How can I validate an app user when they invoke an Adaptive Card? </summary>
 
-<br>
 You can open the authentication page in the task module when user selects the button.
 
 You can use the [code sample](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/54.teams-task-module/bots/teams_task_module_bot.py#L70) for opening the task module on button click. You can replace the taskInfo.url with your auth page.
 <br>
+&nbsp;
 </details>
 </details>
 <details>
 <summary>How can I change Application ID URI of SSO scope to use bot ID also so that the consent window won't be required for bot?</summary>
 
-<br>
-
 For more information, see [Configure your app in Azure AD](bots/how-to/authentication/bot-sso-register-aad.md).
 
 <br>
+&nbsp;
 </details>
 <details>
 <summary>I want to open an iframe that contains a React app (that displays confidential information) from a bot task module securely. Can you suggest what is the best, easiest, standard approach to perform this operation?</summary>
 
-<br>
 Implement react page with tab SSO and render the content as required. You can open the same tab URL as task module from bot.
 
 For more information, see [Enable SSO for tab app](tabs/how-to/authentication/tab-sso-overview.md).
 
 <br>
+&nbsp;
 </details>
 <details>
 <summary>How can I avoid SDK timeout error while the app user signs in?</summary>
 
 Open sign in simple start page instead of opening login page directly to resolve the issue.
 <br>
+&nbsp;
 </details>
 <details>
 <summary>How can I generate the access token using the endpoint oauth2/v2.0/token with grant type as "authorization_code"?</summary>
 
-<br>
 Configure the application you're using to only execute HTML encoding of the scopes once, so the scopes can be correctly sent and evaluated by Azure AD.
 
 <br>
+&nbsp;
 </details>
 <details>
 <summary>How can I implementation Bot SSO using React?</summary>
-<br>
 
 If you use Teams Toolkit to build your app: for more information, see [Add single sign-on to Teams app](toolkit/add-single-sign-on.md).
 
 For more information about Node js code sample, see [Bot SSO quick-start](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/js).
 
 <br>
+&nbsp;
 </details>
 
 ## Tabs
@@ -581,33 +581,29 @@ FAQ for [Provision cloud resources](toolkit/provision.md)) using Teams Toolkit.
 <br>
 
 <details>
-
 <summary>How to troubleshoot?</summary>
 
 If you get errors with Teams Toolkit in Visual Studio Code, you can select **Get Help** on the error notification to go to the related document. If you're using TeamsFx CLI, there will be a hyperlink at the end of error message that points to the help doc. You can also view [provision help doc](https://aka.ms/teamsfx-arm-help) directly.
-
+<br>
+&nbsp;
 </details>
-
 <details>
-
 <summary>How can I switch to another Azure subscription while provisioning?</summary>
 
 1. Switch subscription in current account or log out and select a new subscription.
 2. If you have already provisioned current environment, you need to create a new environment and perform provision because ARM doesn't support moving resources.
 3. If you didn't provision current environment, you can trigger provision directly.
-
+<br>
+&nbsp;
 </details>
-
 <details>
-
 <summary>How can I change resource group while provisioning?</summary>
 
 Before provision, the tool asks you if you want to create a new resource group or use an existing one. You can provide a new resource group name or choose an existing one in this step.
-
+<br>
+&nbsp;
 </details>
-
 <details>
-
 <summary>How can I provision sharepoint-based app?</summary>
 
 You can follow [provision SharePoint-based app](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4).
@@ -616,13 +612,11 @@ You can follow [provision SharePoint-based app](/microsoftteams/platform/sbs-gs-
 > Currently, the building Teams app with sharepoint framework with Teams Toolkit doesn't have direct integration with Azure, the contents in the doc doesn't apply to SPFx based apps.
 
 <br>
-
+&nbsp;
 </details>
-
 <details>
 <summary>How can I deploy the code in Azure using teams toolkit, and use graph API get user profile photo?</summary>
 
-<br>
 Shared references to deploy the code using toolkit: 
 
 * [Create a new Teams app using Teams Toolkit](toolkit/create-new-project.md)
@@ -631,4 +625,3 @@ Shared references to deploy the code using toolkit:
 You can call Graph API get user profile photo.
 
 </details>
-
