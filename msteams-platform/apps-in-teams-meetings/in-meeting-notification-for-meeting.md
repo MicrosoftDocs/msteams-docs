@@ -42,6 +42,57 @@ You can also add the Teams display picture and people card of the user to in-mee
 
 :::image type="content" source="../assets/images/apps-in-meetings/in-meeting-people-card.png" alt-text="This screenshot shows how Teams display picture and people card is used with in-meeting dialog." border="true":::
 
+## Targeted meeting notification API
+
+ You can send targeted meeting notifications to specific participants. The notifications are private to the designated participants and not visible to others in the meeting. Targeted meeting notification API enables you to increase user involvement in various activities.
+
+ The following example shows how to send targeted meeting notification to specific participants:
+
+ Meeting in progress
+
+  :::image type="content" source="../assets/images/apps-in-meetings/design-principles-2019.png" alt-text="Screenshot displaying the banner of VA Design Principles 2019.":::
+
+ Targeted meeting notification sent to a specific participant.
+
+  :::image type="content" source="../assets/images/apps-in-meetings/reminder-sent.png" alt-text="Screenshot displaying the reminder sent to a participant in the meeting.":::
+
+ To use the API, the bot needs to obtain following RSC permission from manifest `OnlineMeetingNotification.Send.Chat` Following is an example of request payload:
+
+```json
+{
+
+  "type": "targetedMeetingNotification",
+  "value": {
+    "recipients": [ 
+"29:1I12M_iy2wTa97T6LbjTh4rJCWrtw2PZ3lxpD3yFv8j2YPnweY2lpCPPAn3RI0PP7rghfHauUz48I1t7ANhj4CA"
+     ], 
+    "surfaces": [ 
+      { 
+        "surface": "meetingStage", 
+        "contentType": "task", 
+        "content": { 
+          "value": { 
+            "height": "300", 
+            "width": "400", 
+            "title": "Targeted meeting Notification", 
+            "url": "https://somevalidurl.com"           
+}
+        } 
+      } 
+    ] 
+  },
+  "channelData": { // optional if a developer wants to support user attributes
+    "onBehalfOf": [ 
+      { 
+        "itemid": 0, 
+        "mentionType": "person", 
+        "mri": "29:1mDOCfGM9825lMHlwP8NjIVMJeQAbN-ojYBT5VzQfPpnst1IFQeYB1QXC8Zupn2RhgfLIW27HmynQk-4bdx_YhA", 
+        "displayName": "yunny chung"      } 
+    ] 
+  }
+}
+```
+
 ## Code sample
 
 Sample name | Description | C# | Node.js |

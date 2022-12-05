@@ -282,36 +282,30 @@ The following table includes the response codes:
 | **403** | The app is unable to send the signal. 403 response code can occur because of various reasons, such as the tenant admin disables and blocks the app during live site migration. In this case, the payload contains a detailed error message. |
 | **404** | The meeting chat doesn't exist. |
 
-## Targeted Meeting Notification
+## Targeted meeting notification API
 
- You can send in-meeting notifications to specific participants. The notifications are private to the designated participants and not visible to others in the meeting.
-
-> [!NOTE]
-> Adaptive Cards are not supported.
-
- The following example shows how to send in-meeting notification to specific participants:
-
- Meeting in progress
-
- :::image type="content" source="../assets/images/apps-in-meetings/design-principles-2019.png" alt-text="Screenshot displaying the banner of VA Design Principles 2019.":::
-
- An in-meeting notification sent to a specific participant.
-
- :::image type="content" source="../assets/images/apps-in-meetings/reminder-sent.png" alt-text="Screenshot displaying the reminder sent to a participant in the meeting.":::
-
-### Prerequisite
+ You can send targeted meeting notifications to specific participants. The notifications are private to the designated participants and not visible to others in the meeting.
 
  To use the API, the bot needs to obtain following RSC permission from manifest:
 
 * `OnlineMeetingNotification.Send.Chat`
 * You can find examples of how to configure RSC permission on the app manifest from [Get meeting details API](#get-meeting-details-api)
-* You can support anonymous users with `isAnonymousAccessAllowed` flag. (need to check)
+
+ > [!NOTE]
+ >
+ >* Adaptive Cards are not supported.
+ >
+ >* Targeted meeting notification supports private scheduled, private recurring, meet now, one-on-one calls, and group call.
+ >
+ >* The API payload only permits task module with URL.
+ >
+ >* The notification can only be sent to 10 users.
 
 ### Example
 
- URL:  POST /v1/meetings/{meetingId}/notification
+ `URL:  POST /v1/meetings/{meetingId}/notification`
 
- The following is an example for request payload:
+ Following is an example for request payload:
 
 ```json
 {
@@ -382,12 +376,6 @@ The following table includes the response codes:
 | **401** | Bot token is invalid. |
 | **403** | Bot is not allowed to send the notification. |
 | **404** | Meeting chat is not found or None of the participants were found in the roster. |
-
-### Limitations
-
-* Targeted meeting notification supports private scheduled, private recurring, meet now, one-on-one calls, and group call.
-* The API payload only permits task module with URL.
-* The notification can only be sent to 10 users.
 
 ## Get meeting details API
 
