@@ -183,45 +183,6 @@ All users in a meeting receive the notifications sent through in-meeting notific
 > * You must invoke the [submitTask()](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-task-module) function to dismiss automatically after a user takes an action in the web view. This is a requirement for app submission. For more information, see [Teams SDK task module](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true).
 > * If you want your app to support anonymous users, initial invoke request payload must rely on `from.id` request metadata in `from` object, not `from.aadObjectId` request metadata. `from.id` is the user ID and `from.aadObjectId` is the Microsoft Azure Active Directory (Azure AD) ID of the user. For more information, see [using task modules in tabs](../task-modules-and-cards/task-modules/task-modules-tabs.md) and [create and send the task module](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
 
-## Targeted Meeting Notification
-
-You can send in-meeting notifications to specific participants. The notifications are private to the designated participants and not visible to others in the meeting.
-
-> [!NOTE]
-> Adaptive Cards are not supported.
-
-The following example shows how to send in-meeting notification to specific participants:
-
- 1. Select **New Charge**.
-
-    :::image type="content" source="../assets/images/apps-in-meetings/send-a-charge.png" alt-text="Screenshot of Teams meeting with new charge highlighted in red.":::
-
- 1. Enter the required details and select **Send charge**.
-
-    :::image type="content" source="../assets/images/apps-in-meetings/sends-charge-to-participants.png" alt-text="Screenshot of Teams meeting with send charge highlighted in red.":::
-
- You receive notification from the participants.
-
- :::image type="content" source="../assets/images/apps-in-meetings/confirmation-who-has-been-charged.png" alt-text="Screenshot of Teams meeting displaying the details of who has been charged.":::
-
- The participant receives notification from the host.
-
- :::image type="content" source="../assets/images/apps-in-meetings/student-receives-notification.png" alt-text="Screenshot of Teams meeting displaying the details of notification sent to students.":::
-
- The payment is done via the link sent by the host.
-
- :::image type="content" source="../assets/images/apps-in-meetings/student-pays.png" alt-text="Screenshot of Teams meeting displaying the details of student making the payment.":::
-
- Confirmation of the payment.
-
- :::image type="content" source="../assets/images/apps-in-meetings/payment-done.png" alt-text="Screenshot of Teams meeting displaying the details of payment done from student's end.":::
-
-### Limitations
-
-* It supports private scheduled, private recurring, meet now, one-on-one calls, and group call.
-* The API payload only permits task modules with URLs. Adaptive Card is currently not supported.
-* The notification can only be sent to 10 users.
-
 ### Query parameter
 
 The following table includes the query parameter:
@@ -320,6 +281,113 @@ The following table includes the response codes:
 | **401** | The app responds with an invalid token. |
 | **403** | The app is unable to send the signal. 403 response code can occur because of various reasons, such as the tenant admin disables and blocks the app during live site migration. In this case, the payload contains a detailed error message. |
 | **404** | The meeting chat doesn't exist. |
+
+## Targeted Meeting Notification
+
+You can send in-meeting notifications to specific participants. The notifications are private to the designated participants and not visible to others in the meeting.
+
+> [!NOTE]
+> Adaptive Cards are not supported.
+
+The following example shows how to send in-meeting notification to specific participants:
+
+ Meeting in progress
+
+ :::image type="content" source="../assets/images/apps-in-meetings/design-principles-2019.png" alt-text="Screenshot displaying the banner of VA Design Principles 2019.":::
+
+ An in-meeting notification sent to a specific participant.
+
+ :::image type="content" source="../assets/images/apps-in-meetings/reminder-sent.png" alt-text="Screenshot displaying the reminder sent to a participant in the meeting.":::
+
+### Prerequisite
+
+To use the API, the bot needs to obtain following RSC permission from manifest:
+
+* `OnlineMeetingNotification.Send.Chat`
+* You can find examples of how to configure RSC permission on the app manifest from [Prerequisite](#prerequisite)
+* You can support anonymous users with `isAnonymousAccessAllowed` flag. (need to check)
+
+### Example
+
+Url:  POST /v1/meetings/{meetingId}/notification
+
+Request Payload
+
+```json
+{
+
+  "type": "targetedMeetingNotification",
+  "value": {
+    "recipients": [ 
+"29:1I12M_iy2wTa97T6LbjTh4rJCWrtw2PZ3lxpD3yFv8j2YPnweY2lpCPPAn3RI0PP7rghfHauUz48I1t7ANhj4CA"
+     ], 
+    "surfaces": [ 
+      { 
+        "surface": "meetingStage", 
+        "contentType": "task", 
+        "content": { 
+          "value": { 
+            "height": "300", 
+            "width": "400", 
+            "title": "Targeted meeting Notification", 
+            "url": "https://somevalidurl.com"           
+}
+        } 
+      } 
+    ] 
+  },
+  "channelData": { // optional if a developer wants to support user attributes
+    "onBehalfOf": [ 
+      { 
+        "itemid": 0, 
+        "mentionType": "person", 
+        "mri": "29:1mDOCfGM9825lMHlwP8NjIVMJeQAbN-ojYBT5VzQfPpnst1IFQeYB1QXC8Zupn2RhgfLIW27HmynQk-4bdx_YhA", 
+        "displayName": "yunny chung"      } 
+    ] 
+  }
+}
+```
+
+| Property name | Description |
+|---|---|
+| **meetingId** | The meeting identifier is available through Bot Invoke and Teams Client SDK. |
+| **type** |**targetedMeetingNotification** keyword. |
+| **recipients** | List of user ids. One way to retrieve user ids for meeting participants is through [Get participant API](#get-participant-api). You can retrieve the list of entire chat roster using [Fetch the roster or user profile](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile). Empty or null recipients list will return 400.|
+| **surface** | **meetingStage** keyword. |
+| **contentType** | **task** keyword. |
+| **onBehalfOf.itemid** | Describes identification of the item. Its value must be 0. |
+| **onBehalfOf.mentionType** | **person** keyword, Describes the mention of a **person**. |
+| **onBehalfOf.mri** | User MRI shown as sender. |
+
+Following are the optional properties:
+
+| Property name | Description |
+|---|---|
+| **content.value.height** | Title of the notification. |
+| **content.value.width** | Requested width of the notification. |
+| **content.value.title** | Requested height of the notification. |
+| **content.value.url** | Url to be rendered in the notification, make sure the url is part of **validDomains** in app manifest. If empty string or no url is provided, nothing will be rendered on a meeting notification. |
+| **ChannelData.OnBehalfOf** | This is to support [User attributes](../messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md#respond-to-the-task-module-submit-action). Needed, if a bot wants to support user attributes. |
+| **onBehalfOf.displayName** | Name of the person. Used as fallback in case name resolution is unavailable. |
+
+### Response code
+
+The following table includes the response codes:
+
+|Response code|Description|
+|---|---|
+| **202** | Notification is successfully sent. |
+| **207** | Notifications are sent only to partial number of participants. |
+| **400** | Meeting Notification request payload validation fails. |
+| **401** | Bot token is invalid. |
+| **403** | Bot is not allowed to send the notification. |
+| **404** | Meeting chat is not found or None of the participants were found in the roster. |
+
+### Limitations
+
+* It supports private scheduled, private recurring, meet now, one-on-one calls, and group call.
+* The API payload only permits task module with url.
+* The notification can only be sent to 10 users.
 
 ## Get meeting details API
 
