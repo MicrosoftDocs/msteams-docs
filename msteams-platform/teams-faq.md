@@ -362,7 +362,9 @@ You can find your MPN ID by fetching the PC ID.
 <details>
 <summary>I can't see the Developer Tab in Partner Center. How can I fix it?</summary>
 
-If you can't see the Developer tab, you can raise a PC ticket.
+If you can't see the Developer tab, you can raise a ticket in Partner Center.
+
+For more information about raising a ticket, see [Get help or open a support ticket](/azure/marketplace/support#get-help-or-open-a-support-ticket).
 <br>
 &nbsp;
 </details>
