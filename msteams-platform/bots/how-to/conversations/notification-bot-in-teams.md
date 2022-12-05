@@ -32,11 +32,11 @@ Bot Framework SDK provides the functionality to proactively message in Teams. Te
 
 |**Event**  |**Behavior**  |
 |---------|---------|
-|The first time you install a bot to a person, group, or Team.     |You need to add the target conversation reference to the storage.         |
-|When the bot is uninstalled from a person, group, or Team.     |You need to remove the target conversation reference from the storage.         |
-|When the team installed by bot is deleted.     |You need to remove the target conversation reference from the storage.         |
-|When the team installed by bot is restored.     |You need to add the target conversation reference to the storage.         |
-|When the bot sends messages.     |When the target conversation reference doesn't exist, you need to add it to the storage.         |
+|The first time you install a bot to a person, group, or Team.     |Add the target conversation reference to the storage.         |
+|When the bot is uninstalled from a person, group, or Team.     |Remove the target conversation reference from the storage.         |
+|When the team installed by bot is deleted.     |Remove the target conversation reference from the storage.         |
+|When the team installed by bot is restored.     |Add the target conversation reference to the storage.         |
+|When the bot sends messages.     |When the target conversation reference doesn't exist, add it to the storage.         |
 
 :::image type="content" source="../../../assets/images/notification-bot/notification-new-event.png" alt-text="new notification event sample":::
 
@@ -44,7 +44,7 @@ When you send notifications, TeamsFx SDK creates a new conversation from the sel
 
 # [TypeScript](#tab/ts)
 
-```TypeScript
+```
    // list all installation targets
 for (const target of await bot.notification.installations()) {
     // call Bot Framework's adapter.continueConversation()
@@ -55,9 +55,9 @@ for (const target of await bot.notification.installations()) {
 }
 ```
 
-# [C#](#tab/dotnet)
+# [C#](#tab/csharp)
 
-```C#/.NET
+```C#
    // list all installation targets
 foreach (var target in await _conversation.Notification.GetInstallationsAsync()) {
     // call Bot Framework's adapter.ContinueConversationAsync()
@@ -312,9 +312,9 @@ const bot = new ConversationBot({
 });
 ```
 
-# [C#](#tab/dotnet4)
+# [C#](#tab/csharp1)
 
-```C#/.NET
+```C#
 /** .NET: Program.cs or Startup.cs **/
 // list all installation targets
 foreach (var target in await _conversation.Notification.GetInstallationsAsync()) {
@@ -381,9 +381,9 @@ const bot = new ConversationBot({
 
 ```
 
-# [C#](#tab/dotnet5)
+# [C#](#tab/csharp2)
 
-```C#/.NET
+```C#
 
 // implement your own storage
 public class MyStorage : INotificationTargetStorage {...}
