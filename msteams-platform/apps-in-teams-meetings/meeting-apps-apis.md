@@ -309,9 +309,9 @@ The following table includes the response codes:
 
 ### Example
 
- Url:  POST /v1/meetings/{meetingId}/notification
+ URL:  POST /v1/meetings/{meetingId}/notification
 
- Request Payload
+ The following is an example for request payload:
 
 ```json
 {
@@ -366,7 +366,7 @@ Following are the optional properties:
 | **content.value.height** | Title of the notification. |
 | **content.value.width** | Requested width of the notification. |
 | **content.value.title** | Requested height of the notification. |
-| **content.value.url** | Url to be rendered in the notification, make sure the url is part of **validDomains** in app manifest. If empty string or no url is provided, nothing will be rendered on a meeting notification. |
+| **content.value.url** | URL to be rendered in the notification, make sure the URL is part of **validDomains** in app manifest. If empty string or no URL is provided, nothing will be rendered on a meeting notification. |
 | **ChannelData.OnBehalfOf** | This is to support [User attributes](../messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md#respond-to-the-task-module-submit-action). Needed, if a bot wants to support user attributes. |
 | **onBehalfOf.displayName** | Name of the person. Used as fallback in case name resolution is unavailable. |
 
@@ -386,7 +386,7 @@ The following table includes the response codes:
 ### Limitations
 
 * It supports private scheduled, private recurring, meet now, one-on-one calls, and group call.
-* The API payload only permits task module with url.
+* The API payload only permits task module with URL.
 * The notification can only be sent to 10 users.
 
 ## Get meeting details API
@@ -826,8 +826,6 @@ protected override async Task OnTeamsMeetingStartAsync(MeetingStartEventDetails 
 Meeting End Event
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingendasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-teams-teamsactivityhandler-onteamsmeetingendasync(microsoft-bot-schema-teams-meetingendeventdetails-microsoft-bot-builder-iturncontext((microsoft-bot-schema-ieventactivity))-system-threading-cancellationtoken)&preserve-view=true)
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L51)
-
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L51)
 
 ```csharp
