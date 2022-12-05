@@ -108,7 +108,7 @@ The following table lists the error codes and their descriptions:
 | **100** | NOT_SUPPORTED_ON_PLATFORM | API isn't supported on the current platform.|
 | **500** | INTERNAL_ERROR | Internal error encountered while launching People Picker.|
 | **4000** | INVALID_ARGUMENTS | API is invoked with wrong or insufficient mandatory arguments.|
-| **8000** | USER_ABORT |User cancelled the operation.|
+| **8000** | USER_ABORT |User canceled the operation.|
 | **9000** | OLD_PLATFORM | User is on an old platform build where implementation of the API is unavailable. Upgrade to the latest version of the build to resolve the issue.|
 
 ## See also

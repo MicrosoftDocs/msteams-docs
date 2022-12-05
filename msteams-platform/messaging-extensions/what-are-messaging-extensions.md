@@ -78,11 +78,13 @@ The following code provides an example of action based for message extensions:
 
 # [C#](#tab/dotnet)
 
-```csharp
+* [SDK reference](/microsoftteams/platform/messaging-extensions/how-to/action-commands/create-task-module?tabs=dotnet#respond-to-the-fetchtask-with-an-adaptive-card)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msgext-action-preview/csharp/Bots/TeamsMessagingExtensionsActionPreviewBot.cs#L35-L56)
 
- protected override Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionFetchTaskAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
+```csharp
+     protected override Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionFetchTaskAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
         {
-            // Handle different actions using switch
+            // Handle different actions using switch.
             switch (action.CommandId)
             {
                 case "HTML":
@@ -122,8 +124,11 @@ The following code provides an example of action based for message extensions:
 
 # [Node.js](#tab/nodejs)
 
-```javascript
+* [SDK reference](/microsoftteams/platform/messaging-extensions/how-to/action-commands/create-task-module?tabs=javascript#respond-to-the-fetchtask-with-an-adaptive-card)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msgext-action/nodejs/bots/teamsMessagingExtensionsActionBot.js#L24-L61)
 
+```javascript
+// Invoked when a Messaging Extension Fetch activity is received from the connector.
     async handleTeamsMessagingExtensionFetchTask(context, action) {
         switch (action.commandId) {
             case 'Static HTML':
@@ -144,7 +149,6 @@ The following code provides an example of action based for message extensions:
             }
         };
     }
-
 ```
 
 ---
@@ -153,8 +157,10 @@ The following code provides an example of search based for message extensions:
 
 # [C#](#tab/dotnet)
 
-```csharp
+* [SDK reference](/dotnet/api/microsoft.identity.client.confidentialclientapplication.acquiretokenonbehalfof?source=recommendations&view=azure-dotnet&preserve-view=true)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-hello-world/csharp/Microsoft.Teams.Samples.HelloWorld.Web/Bots/MessageExtension.cs#L26-L59)
 
+```csharp
 protected override async Task<MessagingExtensionResponse> OnTeamsMessagingExtensionQueryAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionQuery query, CancellationToken cancellationToken)
         {
             var text = query?.Parameters?[0]?.Value as string ?? string.Empty;
@@ -198,8 +204,10 @@ protected override async Task<MessagingExtensionResponse> OnTeamsMessagingExtens
 
 # [Node.js](#tab/nodejs)
 
-```javascript
+* [SDK reference](/dotnet/api/microsoft.identity.client.confidentialclientapplication.acquiretokenonbehalfof?source=recommendations&view=azure-dotnet&preserve-view=true)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msgext-search-quickstart/js/botActivityHandler.js#L30-L53)
 
+```javascript
 async handleTeamsMessagingExtensionQuery(context, query) {
         const searchQuery = query.parameters[0].value;     
         const attachments = [];
@@ -230,8 +238,8 @@ async handleTeamsMessagingExtensionQuery(context, query) {
 
 | **Sample name** | **Description** | **.NET** | **Node.js** | **Python** |
 |------------|-------------|----------------|------------|------------|
-| Message extension with action-based commands | This sample illustrates how to build an action-based message extension. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/51.teams-messaging-extensions-action) |
-| Message extension with search-based commands | This sample illustrates how to build a Search-based Message Extension. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/50.teams-messaging-extension-search) |
+| Message extension with action-based commands | This sample illustrates how to build an action-based message extension. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/python) |
+| Message extension with search-based commands | This sample illustrates how to build a Search-based Message Extension. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/python) |
 |Message extension action for task scheduling|This sample illustrates how to schedule a task from message extension action command and get a reminder card at a scheduled date and time.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-message-reminder/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-message-reminder/nodejs)| NA |
 
 ## Next step
@@ -249,3 +257,4 @@ async handleTeamsMessagingExtensionQuery(context, query) {
 * [Add link unfurling](how-to/link-unfurling.md)
 * [App manifest schema for Teams](../resources/schema/manifest-schema.md)
 * [Developer Portal for Teams](../concepts/build-and-test/teams-developer-portal.md)
+* [Instrumenting for Teams app specific analytics](../concepts/design/overview-analytics.md#instrumenting-for-teams-app-specific-analytics)

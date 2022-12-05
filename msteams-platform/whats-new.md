@@ -24,9 +24,10 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 Teams platform features that are available to all app developers.
 
-**2022 November**
+**2022 December**
 
-* ***November 24, 2022***: [Introduced share in meeting to share any document or third-party app to the meeting stage](concepts/build-and-test/share-in-meeting.md).
+* ***December 05, 2022***: [Introduced share in meeting to share any document or third-party app to the meeting stage](concepts/build-and-test/share-in-meeting.md).
+* ***November 29, 2022***: [Plan analytics for your Teams app](concepts/design/overview-analytics.md)
 
 * ***November 23, 2022***: [Integrate location capabilities](concepts/device-capabilities/location-capability.md).
 

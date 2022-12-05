@@ -120,6 +120,9 @@ The following code provides an example of bot activity for a channel team scope:
 
 # [C#](#tab/dotnet)
 
+* [SDK reference](/dotnet/api/microsoft.bot.builder.activityhandler.onmessageactivityasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-activityhandler-onmessageactivityasync(microsoft-bot-builder-iturncontext((microsoft-bot-schema-imessageactivity))-system-threading-cancellationtoken)&preserve-view=true)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-localization/csharp/Localization/Bots/LocalizerBot.cs#L20)
+
 ```csharp
 
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
@@ -127,12 +130,15 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
     var mention = new Mention
     {
         Mentioned = turnContext.Activity.From,
+        // EncodeName: Converts the name to a valid XML name.
         Text = $"<at>{XmlConvert.EncodeName(turnContext.Activity.From.Name)}</at>",
     };
-
+    
+    // MessageFactory.Text(): Specifies the type of text data in a message attachment.
     var replyActivity = MessageFactory.Text($"Hello {mention.Text}.");
     replyActivity.Entities = new List<Entity> { mention };
 
+    // Sends a message activity to the sender of the incoming activity.
     await turnContext.SendActivityAsync(replyActivity, cancellationToken);
 }
 
@@ -140,14 +146,20 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 
 # [Node.js](#tab/nodejs)
 
+* [SDK reference](/javascript/api/botbuilder-core/activityhandler?view=botbuilder-ts-latest#botbuilder-core-activityhandler-onmessage&preserve-view=true)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-localization/nodejs/server/bot/botActivityHandler.js#L25)
+
 ```javascript
 
 this.onMessage(async (turnContext, next) => {
     const mention = {
         mentioned: turnContext.activity.from,
+
+        // TextEncoder().encode(): Encodes the supplied characters.
         text: `<at>${ new TextEncoder().encode(turnContext.activity.from.name) }</at>`,
     } as Mention;
 
+    // MessageFactory.text(): Specifies the type of text data in a message attachment.
     const replyActivity = MessageFactory.text(`Hello ${mention.text}`);
     replyActivity.entities = [mention];
 
@@ -165,21 +177,33 @@ The following code provides an example of bot activity for a one-to-one chat:
 
 # [C#](#tab/dotnet)
 
+* [SDK reference](/dotnet/api/microsoft.bot.schema.activityextensions.removerecipientmention?view=botbuilder-dotnet-stable#microsoft-bot-schema-activityextensions-removerecipientmention(microsoft-bot-schema-imessageactivity)&preserve-view=true)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-hello-world/csharp/Microsoft.Teams.Samples.HelloWorld.Web/Bots/MessageExtension.cs#L19)
+
 ```csharp
 
 // Handle message activity
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
 {
+    // Remove recipient mention text from Text property.
+    // Use with caution because this function is altering the text on the Activity.
     turnContext.Activity.RemoveRecipientMention();
     var text = turnContext.Activity.Text.Trim().ToLower();
-  await turnContext.SendActivityAsync(MessageFactory.Text($"Your message is {text}."), cancellationToken);
+
+    // Sends a message activity to the sender of the incoming activity.
+    await turnContext.SendActivityAsync(MessageFactory.Text($"Your message is {text}."), cancellationToken);
 }
 ```
 
 # [Node.js](#tab/nodejs)
+* [SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#botbuilder-core-turncontext-sendactivity&preserve-view=true)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-receive-channel-messages-withRSC/nodejs/server/bot/botActivityHandler.js#L20)
+
+[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-receive-channel-messages-withRSC/nodejs/server/bot/botActivityHandler.js#L20)
 
 ```javascript
 this.onMessage(async (context, next) => {
+    // MessageFactory.text(): Specifies the type of text data in a message attachment.
     await context.sendActivity(MessageFactory.text("Your message is:" + context.activity.text));
     await next();
 });
@@ -191,8 +215,8 @@ this.onMessage(async (context, next) => {
 
 |Sample name | Description | .NETCore | Node.js | Python|
 |----------------|-----------------|--------------|----------------|-------|
-| Teams conversation bot | Messaging and conversation event handling. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot)|
-| Bot samples | Set of bot samples | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore) |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python)|
+| Teams conversation bot | Messaging and conversation event handling. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/python)|
+| Bot samples | Set of bot samples | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk)|
 
 ## Next step
 
