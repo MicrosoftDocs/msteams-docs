@@ -82,18 +82,13 @@ For more information, see [how to guide](/apps-in-teams-meetings/teams-live-shar
 
 Any data sent or stored through Fluid containers created by Live Share's hosted Azure Fluid Relay service is accessible for 24 hours. If you want to persist data beyond 24 hours, you can replace our hosted Azure Fluid Relay service with your own. Alternatively, you can use your own storage provider in parallel to Live Share's hosted service.
 <br>
-
- 
 </details>
 <details>
 <summary>What meeting types does Live Share support?</summary>
 
 Live Share supports the scheduled meetings, one-on-one calls, group calls, and meet now. Channel meetings aren't yet supported.
 <br>
- 
-
 </details>
-
 <details>
 
 <summary>Will Live Share's media package work with DRM content?</summary>
@@ -103,28 +98,24 @@ Live Share's media package work doesn't with DRM content. Teams currently doesn'
 For more information, you can [track the issue here](https://github.com/microsoft/live-share-sdk/issues/14).
 <br>
 </details>
-
 <details>
 <summary>How many people can attend a Live Share session?</summary>
 
 Currently, Live Share supports a maximum of 100 attendees per session. If this is something you're interested in, you can [start a discussion here](https://github.com/microsoft/live-share-sdk/discussions).
 <br>
 </details>
-
 <details>
 <summary>Can I use Live Share's data structures outside of Teams?</summary>
 
 Currently, Live Share packages require the Teams Client SDK to function properly. Features in `@microsoft/live-share` or `@microsoft/live-share-media` won't work outside Microsoft Teams. If this is something you're interested in, you can [start a discussion here](https://github.com/microsoft/live-share-sdk/discussions).
 <br>
 </details>
-
 <details>
 <summary>Can I use multiple Fluid containers?</summary>
 
 Currently, Live Share only supports having one container using our provided Azure Fluid Relay service. However, it's possible to use both a Live Share container and a container created by your own Azure Fluid Relay instance.
 <br>
 </details>
-
 <details>
 <summary>Can I change my Fluid container schema after creating the container?</summary>
 
@@ -144,7 +135,6 @@ If you plan to update your app with new `SharedObject` or `LiveObject` instances
 > Live Share does not currently support versioning your `ContainerSchema`, nor does it have any APIs dedicated to migrations.
 <br>
 </details>
-
 <details>
 <summary>Are there limits to how many change events I can emit through Live Share?</summary>
 
@@ -623,11 +613,3 @@ You can call Graph API get user profile photo.
 
 </details>
 
-## Tenants
-
-<details>
-<summary>How can I migrate of Team store app from one tenant to another tenant?</summary>
-<br>
-Teams doesn't support that capability as yet.
-<br>
-</details>
