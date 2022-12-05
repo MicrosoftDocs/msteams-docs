@@ -77,7 +77,7 @@ While most of you find it beneficial to use our free hosted service, there may s
 
 For more information, see [how to guide](/apps-in-teams-meetings/teams-live-share-how-to/how-to-custom-azure-fluid-relay) or visit the [Azure Fluid Relay documentation](/azure/azure-fluid-relay/).
 <br>
-
+&nbsp;
 </details>
 <details>
 <summary>How long is data stored in Live Share's hosted service accessible?</summary>
