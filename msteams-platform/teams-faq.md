@@ -272,7 +272,6 @@ The reason for inconsistencies with users being able unable to sign using their 
 * Check if the Moodle **User Name** matches the AAD username.
 * Clean up the **Token Issue** and retry.
 * Check if the users have **Permissions** to access the Azure application.
-
 <br>
 &nbsp;
 </details>
