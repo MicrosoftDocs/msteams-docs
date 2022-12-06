@@ -44,7 +44,8 @@ When you send notifications, TeamsFx SDK creates a new conversation from the sel
 
 # [TypeScript](#tab/ts)
 
-```
+```TypScript
+
    // list all installation targets
 for (const target of await bot.notification.installations()) {
     // call Bot Framework's adapter.continueConversation()
@@ -545,13 +546,7 @@ If Azurite exits due to port in use, you can specify another listening port and 
 
 <summary><b>How to extend my notification bot to support command and response?</b></summary>
 
-Perform the following steps to extend your notification bot to support command and response:
-
-1. Open file `bot\src\internal\initialize.ts(js)`, update your `conversationBot` initialization to enable command and response:
-
-   :::image type="content" source="../../../assets/images/notification-bot/notification-support-command-response.png" alt-text="add support command and response" lightbox="../../../assets/images/notification-bot/notification-support-command-response.png":::
-
-1. How to add command and response to your bot, see the [instructions](https://github.com/OfficeDev/TeamsFx/wiki/Respond-to-chat-commands-in-Teams#How-to-add-more-command-and-response).
+If you need to extend your notification bot to support command and response, you can add Adaptive Cards to respond to external events. Follow the steps to add command and response [placeholder for add command and response in command bot in Teams].
 
 <br>
 
