@@ -208,7 +208,6 @@ protected override async Task<MessagingExtensionResponse> OnTeamsMessagingExtens
 # [Node.js](#tab/nodejs)
 
 * [SDK reference](/dotnet/api/microsoft.identity.client.confidentialclientapplication.acquiretokenonbehalfof?source=recommendations&view=azure-dotnet&preserve-view=true)
-
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msgext-search-quickstart/js/botActivityHandler.js#L30-L53)
 
 ```javascript
