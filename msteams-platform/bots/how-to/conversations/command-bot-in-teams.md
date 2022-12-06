@@ -246,7 +246,7 @@ If you don't have the required SDK, and need to invoke external APIs in your cod
 
 <details>
 
-<summary><b>How to extend my command and response bot to support notifications?</b></summary>
+<summary><b>How to extend my command and response to support notifications?</b></summary>
 
 If you need to extend your command and response to support notifications, you can add Adaptive Cards to respond to external events. Follow the steps to customize notifications [Placeholder for customize notification steps in the notification bot in Teams doc].
 
@@ -256,20 +256,23 @@ If you need to extend your command and response to support notifications, you ca
 
 <details>
 
-<summary><b>How to extend my command bot to support Adaptive Card actions?</b></summary>
+<summary><b>How to extend my command bot to support workflow Adaptive Card actions?</b></summary>
 
-For more information on how to add Adaptive Card actions to command bot, see [add card actions](workflow-bot-in-teams.md#add-card-actions).
+For more information on how to add Adaptive Card actions to command bot, see [add card actions in workflow bot](workflow-bot-in-teams.md#add-card-actions).
 
 <br>
 
 </details>
+
+## Step-by-step guide
+
+Follow the [step-by-step](../../../sbs-gs-commandbot.yml) guide to build Teams Command bot.
 
 ## See Also
 
 * [Conversation basics](conversation-basics.md)
 * [Build bots for Teams](../../what-are-bots.md)
 * [Build your first bot app using JavaScript](../../../sbs-gs-bot.yml)
-* [Build command bot with JavaScript](../../../sbs-gs-commandbot.yml)
 * [Proactive messages](send-proactive-messages.md)
 * [Adaptive Cards](../../../task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 * [TeamsFx SDK](../../../toolkit/TeamsFx-SDK.md)
