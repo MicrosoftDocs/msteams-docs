@@ -293,6 +293,51 @@ You can send targeted meeting notifications to specific participants. The notifi
 > * The API payload only permits task module with URL.
 > * The notification can only be sent to 10 users.
 
+Example
+
+Following is an example of request payload:
+
+```http
+GET POST /v1/meetings/{meetingId}/notiifcation
+```
+
+```json
+{
+
+  "type": "targetedMeetingNotification",
+  "value": {
+    "recipients": [ 
+"29:1I12M_iy2wTa97T6LbjTh4rJCWrtw2PZ3lxpD3yFv8j2YPnweY2lpCPPAn3RI0PP7rghfHauUz48I1t7ANhj4CA"
+     ], 
+    "surfaces": [ 
+      { 
+        "surface": "meetingStage", 
+        "contentType": "task", 
+        "content": { 
+          "value": { 
+            "height": "300", 
+            "width": "400", 
+            "title": "Targeted meeting Notification", 
+            "url": "https://somevalidurl.com"           
+}
+        } 
+      } 
+    ] 
+  },
+  "channelData": { // optional if a developer wants to support user attributes
+    "onBehalfOf": [ 
+      { 
+        "itemid": 0, 
+        "mentionType": "person", 
+        "mri": "29:1mDOCfGM9825lMHlwP8NjIVMJeQAbN-ojYBT5VzQfPpnst1IFQeYB1QXC8Zupn2RhgfLIW27HmynQk-4bdx_YhA", 
+        "displayName": "yunny chung"      } 
+    ] 
+  }
+}
+```
+
+You can find examples of how to configure RSC permission on the app manifest from [Get meeting details API](meeting-apps-apis.md#get-meeting-details-api)
+
 | Property name | Description |
 |---|---|
 | **meetingId** | The meeting identifier is available through bot invoke and Teams Client SDK. |
