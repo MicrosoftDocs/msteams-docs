@@ -293,7 +293,7 @@ You can send targeted meeting notifications to specific participants. The notifi
 > * The API payload only permits task module with URL.
 > * The notification can only be sent to 10 users.
 
-Example
+### Example
 
 Following is an example of request payload:
 
