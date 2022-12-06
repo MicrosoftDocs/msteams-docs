@@ -77,7 +77,9 @@ The following images display link unfurling feature when a link is pasted in mes
 The following code provides an example of action based for message extensions:
 
 # [C#](#tab/dotnet)
-* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmessagingextensionfetchtaskasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-teams-teamsactivityhandler-onteamsmessagingextensionfetchtaskasync(microsoft-bot-builder-iturncontext((microsoft-bot-schema-iinvokeactivity))-microsoft-bot-schema-teams-messagingextensionaction-system-threading-cancellationtoken)&preserve-view=true)
+
+* [SDK reference](/microsoftteams/platform/messaging-extensions/how-to/action-commands/create-task-module?tabs=dotnet#respond-to-the-fetchtask-with-an-adaptive-card)
+
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msgext-action-preview/csharp/Bots/TeamsMessagingExtensionsActionPreviewBot.cs#L35-L56)
 
 ```csharp
@@ -122,6 +124,9 @@ The following code provides an example of action based for message extensions:
 ```
 
 # [Node.js](#tab/nodejs)
+
+* [SDK reference](/microsoftteams/platform/messaging-extensions/how-to/action-commands/create-task-module?tabs=javascript#respond-to-the-fetchtask-with-an-adaptive-card)
+
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msgext-action/nodejs/bots/teamsMessagingExtensionsActionBot.js#L24-L61)
 
 ```javascript
@@ -153,7 +158,9 @@ The following code provides an example of action based for message extensions:
 The following code provides an example of search based for message extensions:
 
 # [C#](#tab/dotnet)
-* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmessagingextensionqueryasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-teams-teamsactivityhandler-onteamsmessagingextensionqueryasync(microsoft-bot-builder-iturncontext((microsoft-bot-schema-iinvokeactivity))-microsoft-bot-schema-teams-messagingextensionquery-system-threading-cancellationtoken)&preserve-view=true)
+
+* [SDK reference](/dotnet/api/microsoft.identity.client.confidentialclientapplication.acquiretokenonbehalfof?source=recommendations&view=azure-dotnet&preserve-view=true)
+
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-hello-world/csharp/Microsoft.Teams.Samples.HelloWorld.Web/Bots/MessageExtension.cs#L26-L59)
 
 ```csharp
@@ -199,6 +206,8 @@ protected override async Task<MessagingExtensionResponse> OnTeamsMessagingExtens
 ```
 
 # [Node.js](#tab/nodejs)
+
+* [SDK reference](/dotnet/api/microsoft.identity.client.confidentialclientapplication.acquiretokenonbehalfof?source=recommendations&view=azure-dotnet&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msgext-search-quickstart/js/botActivityHandler.js#L30-L53)
 
 ```javascript
