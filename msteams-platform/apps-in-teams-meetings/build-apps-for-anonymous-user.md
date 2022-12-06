@@ -14,7 +14,7 @@ You can build tabs and task modules in your app to engage with anonymous meeting
 To build apps for anonymous users ensure the following:
 
 * [Enable `supportsAnonymousGuestUsers` to true in your app manifest](#manifest-update-for-supportsanonymousguestusers).
-* [Admin setting for anonymous user app interaction](#admin-setting-for-anonymous-user-app-interaction)
+* [Admin setting for anonymous user app interaction](#admin-setting-for-anonymous-user-app-interaction).
 
 ## Manifest update for `supportsAnonymousGuestUsers`
 
