@@ -554,9 +554,9 @@ If Azurite exits due to port in use, you can specify another listening port and 
 
 <details>
 
-<summary><b>How to extend my notification bot to support workflow bot Adaptive Card actions?</b></summary>
+<summary><b>How to extend my notification bot by adding workflow bot Adaptive Card actions?</b></summary>
 
-You can extend your notification bot to support workflow bot Adaptive card by defining actions and use a bot to return an Adaptive Card in response to the action. To add an Adaptive Card in notification bot, see the steps to [add card action in workflow bot](workflow-bot-in-teams.md#add-card-actions).
+You can extend your notification bot by defining actions and use a workflow bot to return an Adaptive Card in response to the action. To add an Adaptive Card in notification bot, see the steps to [add card action](workflow-bot-in-teams.md#add-card-actions).
 
 <br>
 
