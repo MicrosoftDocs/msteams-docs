@@ -207,7 +207,7 @@ As you test your message extension, you can identify the source (originating fro
 
 ## Next step
 
-Publish your app to be discoverable in Teams, Outlook, and Microsoft 365:
+Publish your app to be discoverable in Teams, Outlook, and Microsoft 365 app:
 
 > [!div class="nextstepaction"]
 > [Publish Teams apps for Outlook and Microsoft 365 app](publish.md)
