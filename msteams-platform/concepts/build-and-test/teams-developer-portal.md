@@ -74,11 +74,11 @@ To view the Changelog, sign in to [Developer Portal](https://dev.teams.microsoft
 
 The updates for Changelog in the Developer Portal are categorized based on the following:
 
-* Added - Service or feature that is a new feature or capability.
-* Changed - Service or API is modified.
-* Removed - Service or API removed and may be replaced with a new and updated service.
-* Fixed - Service or API that was previously identified as a high-priority or breaking change issue that has been fixed or mitigated.
-* Deprecated - Service or API at the end of its life and deprecated.
+* Added - Updates on a service or feature that is a new feature or capability.
+* Changed - Updates on a service or API that is modified.
+* Removed - Updates on a service or API removed and may be replaced with a new and updated service.
+* Fixed - Updates on a service or API that was previously identified as a high-priority or breaking change issue that is fixed or mitigated.
+* Deprecated - Updates on a service or API at the end of its life and deprecated.
 * Security - Important and critical security patch updates.
 
 ## See also
