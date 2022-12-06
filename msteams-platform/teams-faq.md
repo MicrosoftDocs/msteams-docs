@@ -598,7 +598,7 @@ Before provision, the toolkit asks you if you want to create a new resource grou
 &nbsp;
 </details>
 <details>
-<summary>How can I provision SharePoint-based app?</summary>
+<summary>How can I provision a SharePoint-based app?</summary>
 
 You can follow [provision SharePoint-based app](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4).
 
@@ -609,7 +609,7 @@ You can follow [provision SharePoint-based app](/microsoftteams/platform/sbs-gs-
 &nbsp;
 </details>
 <details>
-<summary>How can I deploy the code in Azure AD using Teams Toolkit, and use graph API get the app user's profile photo?</summary>
+<summary>How can I deploy the code in Azure AD using Teams Toolkit, and use Graph API to get the app user's profile photo?</summary>
 
 Shared references to deploy the code using toolkit:
 
