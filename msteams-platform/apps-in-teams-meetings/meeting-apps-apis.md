@@ -284,7 +284,7 @@ The following table includes the response codes:
 
 ## Targeted meeting notification API
 
-Targeted meeting notification provides API to enhance meeting experience and develop user engagement activities, the targeted notification can be sent to any participants who can view meeting notification.
+You can send targeted meeting notifications to specific participants. The notifications are private to the designated participants and not visible to others in the meeting. Targeted meeting notification helps to enhance meeting experience and develop user engagement activities.
 
 > [!NOTE]
 >
@@ -292,49 +292,6 @@ Targeted meeting notification provides API to enhance meeting experience and dev
 > * Targeted meeting notification supports private scheduled, private recurring, Meet now, one-on-one calls, and group call.
 > * The API payload only permits task module with URL.
 > * The notification can only be sent to 10 users.
-
-### Example
-
-```http
-GET POST /v1/meetings/{meetingId}/notification
-```
-
-Following is an example for request payload:
-
-```json
-  {
-    "channelData": { // optional if a developer wants to support user attributes
-      "onBehalfOf": [
-        {
-          "itemid": 0,
-          "mentionType": "person",
-          "mri": "29:1mDOCfGM9825lMHlwP8NjIVMJeQAbN-ojYBT5VzQfPpnst1IFQeYB1QXC8Zupn2RhgfLIW27HmynQk-4bdx_YhA",
-          "displayName": "yunny chung"
-        }
-      ]
-    },
-    "type": "targetedMeetingNotification",
-    "value": {
-      "recipients": [
-        "29:1I12M_iy2wTa97T6LbjTh4rJCWrtw2PZ3lxpD3yFv8j2YPnweY2lpCPPAn3RI0PP7rghfHauUz48I1t7ANhj4CA"
-      ],
-      "surfaces": [
-        {
-          "surface": "meetingStage",
-          "contentType": "task",
-          "content": {
-            "value": {
-              "height": "300",
-              "width": "400",
-              "title": "Targeted meeting Notification",
-              "url": "https://somevalidurl.com"
-            }
-          }
-        }
-      ]
-    }
-  }
-```
 
 | Property name | Description |
 |---|---|

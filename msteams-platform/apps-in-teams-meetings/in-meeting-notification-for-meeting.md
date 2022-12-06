@@ -42,11 +42,11 @@ You can also add the Teams display picture and people card of the user to in-mee
 
 :::image type="content" source="../assets/images/apps-in-meetings/in-meeting-people-card.png" alt-text="This screenshot shows how Teams display picture and people card is used with in-meeting dialog." border="true":::
 
-## Targeted meeting notification API
+## Targeted meeting notification
 
-You can send targeted meeting notifications to specific participants. The notifications are private to the designated participants and not visible to others in the meeting. Targeted meeting notification API enables you to increase user involvement in various activities.
+You can send targeted meeting notifications to specific participants. The notifications are private to the designated participants and not visible to others in the meeting. Targeted meeting notification helps to enhance meeting experience and develop user engagement activities.
 
-The following image is an example of targeted meeting notification to specific participant in the meeting:
+The following image is an example of targeted meeting notification sent to a specific participant in the meeting:
 
 Meeting in progress
 
