@@ -102,7 +102,7 @@ activity.Id = turnContext.Activity.ReplyToId;
 await turnContext.UpdateActivityAsync(activity, cancellationToken);
 ```
 
-# [TypeScript](#tab/typescript)<
+# [TypeScript](#tab/typescript)
 * [SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#botbuilder-core-turncontext-updateactivity&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L133)
 

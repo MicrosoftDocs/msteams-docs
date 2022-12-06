@@ -131,7 +131,6 @@ items:
 
     1. In left pane, select **Configuration**.
 
-
        :::image type="content" source="~/assets/images/adaptive-cards/config-microsoft-app-id.png" alt-text="Screenshot of Configuration with Microsoft App ID highlighted in red.":::
 
     1. Next to **Microsoft App ID**, select **Manage**.
@@ -346,7 +345,6 @@ items:
 
           :::image type="content" source="~/assets/images/adaptive-cards/manifest.png" alt-text="Screenshot of Manifest with accessTokenAcceptedVersion 2, highlighted in red.":::
 
-
     1. Go to **Home** > **Configuration**.
     1. Select **Add OAuth Connection Settings**.
 
@@ -464,7 +462,6 @@ items:
     
     1. Choose an account to access the tab.
 
-
         :::image type="content" source="~/assets/images/adaptive-cards/sign-in-page.png" alt-text="Screenshot of TabAdaptiveCard displaying sign in option to access the tab.":::
 
     1. Select **Sign In** and choose an account to access the tab.
@@ -488,7 +485,6 @@ items:
        :::image type="content" source="../msteams-platform/assets/images/adaptive-cards/sample-task-module.png" alt-text="sample task module":::
 
 
-
     1. Select **Sign out**.
 
         :::image type="content" source="~/assets/images/adaptive-cards/task-submit.png" alt-text="Screenshot of Microsoft Teams displaying the AdaptiveCard task/submit request triggered.":::
@@ -499,6 +495,7 @@ items:
     1. Refresh to **Sign In** again.
 
         :::image type="content" source="~/assets/images/adaptive-cards/success-sign-out.png" alt-text="Screenshot of TabAdaptiveCard displaying successful Sign out message."
+
 
 - title: Complete challenge
   durationInMinutes: 1
