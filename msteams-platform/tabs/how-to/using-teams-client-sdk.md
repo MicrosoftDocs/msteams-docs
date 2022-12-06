@@ -12,7 +12,7 @@ The Microsoft Teams JavaScript client SDK can help you create hosted experiences
 * [Tabs](../../tabs/what-are-tabs.md)
 * [Dialogs (Task modules)](../../task-modules-and-cards/what-are-task-modules.md)
 
-Starting with version `2.0.0`, the existing Teams client SDK (`@microsoft/teams-js`, or simply `TeamsJS`) has been refactored to enable [Teams apps to run in Outlook and Microsoft 365](/microsoftteams/platform/m365-apps/overview), in addition to Microsoft Teams. From a functional perspective, the latest version of TeamsJS supports all existing (v.1.x.x) Teams app functionality while adding the optional ability to host Teams apps in Outlook and Microsoft 365.
+Starting with version `2.0.0`, the existing Teams client SDK (`@microsoft/teams-js`, or simply `TeamsJS`) has been refactored to enable [Teams apps to run in Outlook and Microsoft 365](/microsoftteams/platform/m365-apps/overview), in addition to Microsoft Teams. From a functional perspective, the latest version of TeamsJS supports all existing (v.1.x.x) Teams app functionality while adding the optional ability to host Teams apps in Outlook and Microsoft 365 app.
 
 Here's the current versioning guidance for various app scenarios:
 
@@ -22,7 +22,7 @@ The remainder of this article will walk you through the structure and latest upd
 
 ### Microsoft 365 support (running Teams apps in Microsoft 365 and Outlook)
 
-TeamsJS v.2.0 introduces the ability for certain types of Teams apps to run across the Microsoft 365 ecosystem. Currently, other Microsoft 365 application hosts (including Microsoft 365 and Outlook) for Teams apps support a subset of the application types and capabilities you can build for the Teams platform. This support will expand over time. For a summary of host support for Teams apps, see [Extend Teams apps across Microsoft 365](../../m365-apps/overview.md).
+TeamsJS v.2.0 introduces the ability for certain types of Teams apps to run across the Microsoft 365 ecosystem. Currently, other Microsoft 365 application hosts (including Microsoft 365 app and Outlook) for Teams apps support a subset of the application types and capabilities you can build for the Teams platform. This support will expand over time. For a summary of host support for Teams apps, see [Extend Teams apps across Microsoft 365](../../m365-apps/overview.md).
 
 The following table lists Teams tabs and dialogs (task modules) capabilities (public namespaces) with expanded support to run in other Microsoft 365 hosts.
 
@@ -59,7 +59,7 @@ The following table lists Teams tabs and dialogs (task modules) capabilities (pu
 
 #### App permissions
 
-App capabilities that require the user to grant [device permissions](../../concepts/device-capabilities/device-capabilities-overview.md) (such as *location*) aren't yet supported for apps running outside of Teams. There is currently no way to check app permissions in Settings or your app header when running in Outlook or Microsoft 365. If a Teams app running in Microsoft 365 or Outlook calls a TeamsJS (or HTML5) API that triggers device permissions, that API will generates an error and fail to display a system dialog asking for user consent.
+App capabilities that require the user to grant [device permissions](../../concepts/device-capabilities/device-capabilities-overview.md) (such as *location*) aren't yet supported for apps running outside of Teams. There is currently no way to check app permissions in Settings or your app header when running in Outlook or Microsoft 365 app. If a Teams app running in Microsoft 365 app or Outlook calls a TeamsJS (or HTML5) API that triggers device permissions, that API will generates an error and fail to display a system dialog asking for user consent.
 
 Current guidance for now is to modify your code to catch the failure:
 
@@ -76,7 +76,7 @@ Additionally, best practice is to ensure your app manifest only specifies the de
 
 #### Deep linking
 
-Prior to TeamsJS version 2.0, all deep linking scenarios were handled using `shareDeepLink` (to generate a link *to* a specific part of your app) and `executeDeepLink` (to navigate to a deeplink *from* or *within* your app). TeamsJS v.2.0 introduces a new API, `navigateToApp`, for navigating to pages (and subpages) within an app in a consistent way across app hosts (Microsoft 365 and Outlook, in addition to Teams). Here's the updated guidance for deep linking scenarios:
+Prior to TeamsJS version 2.0, all deep linking scenarios were handled using `shareDeepLink` (to generate a link *to* a specific part of your app) and `executeDeepLink` (to navigate to a deeplink *from* or *within* your app). TeamsJS v.2.0 introduces a new API, `navigateToApp`, for navigating to pages (and subpages) within an app in a consistent way across app hosts (Microsoft 365 app and Outlook, in addition to Teams). Here's the updated guidance for deep linking scenarios:
 
 ##### Deep links into your app
 
@@ -221,7 +221,7 @@ async function example() {
 
 ### APIs organized into capabilities
 
-A *capability* is a logical grouping (via namespace) of APIs that provide similar functionality. You can think of Microsoft Teams, Outlook, and Microsoft 365, as hosts to your tab app. A host supports a given capability if it supports all the APIs defined within that capability. A host can't partially implement a capability. Capabilities can be feature- or content-based, such as *authentication*, or *dialog*. There are also capabilities for application types such as *pages*, and other groupings.
+A *capability* is a logical grouping (via namespace) of APIs that provide similar functionality. You can think of Microsoft Teams, Outlook, and Microsoft 365 app, as hosts to your tab app. A host supports a given capability if it supports all the APIs defined within that capability. A host can't partially implement a capability. Capabilities can be feature- or content-based, such as *authentication*, or *dialog*. There are also capabilities for application types such as *pages*, and other groupings.
 
 Starting with TeamsJS v.2.0, APIs are defined as functions in a JavaScript namespace whose name matches their required capability. For example, if an app is running in a host that supports the *dialog* capability, then the app can safely call APIs such as `dialog.open` (in addition to other dialog-related APIs defined in the namespace). If an app attempts to call an API that's not supported in that host, the API generates an exception. To verify if the current host running your app supports a given capability, call the [isSupported()](#differentiate-your-app-experience) function of its namespace.
 
@@ -264,7 +264,7 @@ The `app` namespace contains top-level APIs required for overall app usage, acro
 
 ##### *pages* namespace
 
-The `pages` namespace includes functionality for running and navigating webpages within various Microsoft 365 hosts, including Teams, Microsoft 365, and Outlook. It also includes several subcapabilities, implemented as subnamespaces.
+The `pages` namespace includes functionality for running and navigating webpages within various Microsoft 365 hosts, including Teams, Microsoft 365 app, and Outlook. It also includes several subcapabilities, implemented as subnamespaces.
 
 | Original namespace `global (window)` | New namespace `pages` |
 | - | - |
