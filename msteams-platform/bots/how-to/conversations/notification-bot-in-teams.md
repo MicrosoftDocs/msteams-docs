@@ -44,7 +44,7 @@ When you send notifications, TeamsFx SDK creates a new conversation from the sel
 
 # [TypeScript](#tab/ts)
 
-```TypScript
+```TypeScript
 
    // list all installation targets
 for (const target of await bot.notification.installations()) {
