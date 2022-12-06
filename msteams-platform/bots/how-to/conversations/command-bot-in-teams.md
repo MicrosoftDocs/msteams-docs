@@ -256,9 +256,9 @@ If you need to extend your command and response to support notifications, you ca
 
 <details>
 
-<summary><b>How to extend my command bot to support workflow Adaptive Card actions?</b></summary>
+<summary><b>How to extend my command bot by adding workflow Adaptive Card actions?</b></summary>
 
-For more information on how to add Adaptive Card actions to command bot, see [add card actions in workflow bot](workflow-bot-in-teams.md#add-card-actions).
+For more information on how to add workflow bot Adaptive Card actions to command bot, see the steps to[add card actions](workflow-bot-in-teams.md#add-card-actions).
 
 <br>
 
