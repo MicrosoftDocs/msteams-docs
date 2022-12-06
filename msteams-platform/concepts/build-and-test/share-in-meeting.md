@@ -12,13 +12,13 @@ Share in meeting allows users to share documents or third-party web apps to the 
 > [!NOTE]
 > Share in meeting is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
 
-The following image shows the Share in meeting button on the web app:
+The following image shows the **Share in meeting** button on the web app:
 
 :::image type="content" source="../../assets/images/share-in-teams-meeting/web-app.png" alt-text="Screenshot shows share in meeting button on the web app.":::
 
 During the meeting, when a user selects the **Share in meeting** button from the third-party web app or document, it launches a deep link to the meeting stage and opens the app as a web view in the meeting stage. For the meeting participants to interact with third-party web app or document, they must have meeting extension of the app or document installed in their Teams client. If they don't have meeting extension, Teams prompts participants to install the meeting extension.
 
-When you select the Share in meeting button, it launches a deep link to the meeting stage. The following is the deep link format:
+When you select the **Share in meeting** button, it launches a deep link to the meeting stage. The following is the deep link format:
 
 `msteams:/l/meeting-share?deeplinkId={GUID}&fqdn={string}&lm=deeplink&appContext={json encoded app context}`
 
@@ -26,13 +26,13 @@ For more information, see [generate a deep link to share content to stage in mee
 
 ## Enable share in meeting
 
-The following are three different methods to enable Share in meeting. You can use one of the methods depending on how much control you want on the share in meeting buttons displayed on your web page:
+The following are three different methods to enable share in meeting. You can use one of the methods depending on how much control you want on the **Share in meeting** buttons displayed on your web page:
 
 # [Method 1](#tab/method-1)
 
 This method is the simplest way to display the share in meeting buttons with minimal customizations. You can customize the button styles, size, and languages.
 
-You can scan your web page to locate any HTML elements with the class name of type `teams-share-in-meeting-button` and dynamically generate share in meeting buttons in your page.
+You can scan your web page to locate any HTML elements with the class name of type `teams-share-in-meeting-button` and dynamically generate **Share in meeting** buttons in your page.
 
 1. Add the `launcher.js` script on your webpage.
 
@@ -63,7 +63,7 @@ You can scan your web page to locate any HTML elements with the class name of ty
 
 You can use this method to have some control over which button to render dynamically or when the script is executed. The script only executes when `window.shareToMicrosoftTeams.renderButtons()` is called. You can pass specific HTML elements through the `renderButtons({elements: [], shareInMeetingElements: [shareInMeetingButton])` API. You can customize the button styles, size, and languages.
 
-The `async shareToMicrosoftTeams.renderButtons(options)` API renders all share button that have the class name **teams-share-button** or **teams-share-in-meeting-button** on the page. If an `options (optional)` object is supplied with a list of elements as shown in the following code, those elements are rendered into the share buttons or share in meeting buttons.
+The `async shareToMicrosoftTeams.renderButtons(options)` API renders all share button that have the class name **teams-share-button** or **teams-share-in-meeting-button** on the page. If an `options (optional)` object is supplied with a list of elements as shown in the following code, those elements are rendered into the **Share** buttons or **Share in meeting** buttons.
 
 ```javascript
 options (optional): { elements?: HTMLElement[], shareInMeetingElements?: HTMLElement[] }
@@ -198,7 +198,7 @@ The query parameters for the app context are:
 
   * **False**: The default value of `UseMeetNow` is false, which means that when a deep link is shared to stage and there's no ongoing meeting, a calendar pop-up will appear. However, you can share directly during a meeting.
 
-Ensure that all the query parameters are properly URI encoded and the app context has to be encoded twice in the final URL. Following is an example.
+Ensure that all the query parameters are properly URI encoded and the app context has to be encoded twice in the final URL. Following is an example:
 
 ```json
 var appContext= JSON.stringify({ 
@@ -209,7 +209,7 @@ var appContext= JSON.stringify({
 
 A deep link can be launched either from the Teams web or from the Teams desktop client.
 
-* **Teams web**: Use the following format to launch a deep link from the Teams web to share content on stage.
+* **Teams web**: Use the following format to launch a deep link from the Teams web to share content on stage:
 
     `msteams:/l/meeting-share?deeplinkId={GUID}&fqdn={string}&lm=deeplink&appContext={json encoded app context}`
 
@@ -220,7 +220,7 @@ A deep link can be launched either from the Teams web or from the Teams desktop 
     |To share the app and open Teams calendar, when `UseMeeetNow` is **false**, default.|`https://teams.microsoft.com/l/meeting-share?deeplinkId={deeplinkid}&fqdn={fqdn}}&lm=deeplink%22&appContext={encoded app context}`|`https://teams.microsoft.com/l/meeting-share?deeplinkId={sampleid}&fqdn=teams.microsoft.com&lm=deeplink%22&appContext=%257B%2522appSharingUrl%2522%253A%2522https%253A%252F%252Fteams.microsoft.com%252Fextensibility-apps%252Fmeetingapis%252Fview%2522%252C%2522appId%2522%253A%25229cc80a93-1d41-4bcb-8170-4b9ec9e29fbb%2522%252C%2522useMeetNow%2522%253Afalse%257D`|
     |To share the app and initiate instant meeting, when `UseMeeetNow` is **true**.|`https://teams.microsoft.com/l/meeting-share?deeplinkId={deeplinkid}&fqdn={fqdn}}&lm=deeplink%22&appContext={encoded app context}`|`https://teams.microsoft.com/l/meeting-share?deeplinkId={sampleid}&fqdn=teams.microsoft.com&lm=deeplink%22&appContext=%257B%2522appSharingUrl%2522%253A%2522https%253A%252F%252Fteams.microsoft.com%252Fextensibility-apps%252Fmeetingapis%252Fview%2522%252C%2522appId%2522%253A%25229cc80a93-1d41-4bcb-8170-4b9ec9e29fbb%2522%252C%2522useMeetNow%2522%253Atrue%257D`|
 
-* **Team desktop client**: Use the following format to launch a deep link from the Teams desktop client to share content on stage.
+* **Team desktop client**: Use the following format to launch a deep link from the Teams desktop client to share content on stage:
 
     `msteams:/l/meeting-share?deeplinkId={deeplinkid}&fqdn={fqdn}&lm=deeplink&appContext={encoded app context}`
 
