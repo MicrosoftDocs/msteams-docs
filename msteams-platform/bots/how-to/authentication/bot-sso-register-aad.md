@@ -230,7 +230,7 @@ The scope and permissions are now configured. Next, you must configure the autho
 
     > [!NOTE]
     >
-    > - The Microsoft 365 client IDs for mobile, desktop, and web applications for Teams, Microsoft 365, and Outlook are the actual IDs that you must add.
+    > - The Microsoft 365 client IDs for mobile, desktop, and web applications for Teams, Microsoft 365 app, and Outlook are the actual IDs that you must add.
     > - If your app has a tab app, you'll need either web or SPA, as you can't have a mobile or desktop client application in Teams.
 
 1. Choose one of the following client IDs:
@@ -591,7 +591,7 @@ The scope and permissions are now configured. Next, you must configure the autho
 
     > [!NOTE]
     >
-    > - The Microsoft 365 client IDs for mobile, desktop, and web applications for Teams, Microsoft 365, and Outlook are the actual IDs that you must add.
+    > - The Microsoft 365 client IDs for mobile, desktop, and web applications for Teams, Microsoft 365 app, and Outlook are the actual IDs that you must add.
     > - If your app has a tab app, you'll need either web or SPA, as you can't have a mobile or desktop client application in Teams.
 
 1. Choose one of the following client IDs:

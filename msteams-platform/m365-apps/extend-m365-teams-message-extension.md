@@ -210,4 +210,4 @@ As you test your message extension, you can identify the source (originating fro
 Publish your app to be discoverable in Teams, Outlook, and Microsoft 365:
 
 > [!div class="nextstepaction"]
-> [Publish Teams apps for Outlook and Microsoft 365](publish.md)
+> [Publish Teams apps for Outlook and Microsoft 365 app](publish.md)

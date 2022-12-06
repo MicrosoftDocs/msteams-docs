@@ -214,7 +214,7 @@ To configure scope and authorize trusted client applications, you'll need:
 
     > [!NOTE]
     >
-    > - The Microsoft 365 client IDs for mobile, desktop, and web applications for Teams, Microsoft 365, and Outlook are the actual IDs that you must add.
+    > - The Microsoft 365 client IDs for mobile, desktop, and web applications for Teams, Microsoft 365 app, and Outlook are the actual IDs that you must add.
     > - For a Teams tab app, you'll need either Web or SPA, as you can't have a mobile or desktop client application in Teams.
 
     1. Choose one of the following client IDs:

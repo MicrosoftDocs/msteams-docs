@@ -39,7 +39,7 @@ Open a [Partner Center support ticket](https://partner.microsoft.com/support/v2/
 | -------   | -------  |
 |Category| Commercial Marketplace|
 | Topic | General Marketplace Help and How-to questions |
-| Subtopic| Microsoft 365 add-in |
+| Subtopic| Office add-in |
 
 <br>
 

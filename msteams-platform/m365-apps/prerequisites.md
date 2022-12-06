@@ -8,7 +8,7 @@ ms.localizationpriority: high
 ---
 # Set up your dev environment for extending Teams apps across Microsoft 365
 
-The development environment for extending Teams apps across Microsoft 365 is similar to Microsoft Teams development. This article discusses specific configurations required to run preview builds of Microsoft Teams and Microsoft 365 applications in order to preview Teams apps running in Outlook and Microsoft 365.
+The development environment for extending Teams apps across Microsoft 365 is similar to Microsoft Teams development. This article discusses specific configurations required to run preview builds of Microsoft Teams and Microsoft 365 applications in order to preview Teams apps running in Outlook and Microsoft 365 app.
 
 To set up your development environment:
 
@@ -45,20 +45,20 @@ You also need to enable sideloading for your tenant:
 ## Enroll your developer tenant for Microsoft 365 Targeted releases
 
 > [!IMPORTANT]
-> It can take up to five days after creating a [Microsoft 365 developer sandbox tenant](/office/developer-program/microsoft-365-developer-program-get-started) and enrolling in [Microsoft 365 Targeted releases](#enroll-your-developer-tenant-for-office-365-targeted-releases) for sideloaded Teams apps to appear in Outlook and Microsoft 365.
+> It can take up to five days after creating a [Microsoft 365 developer sandbox tenant](/office/developer-program/microsoft-365-developer-program-get-started) and enrolling in [Microsoft 365 Targeted releases](#enroll-your-developer-tenant-for-office-365-targeted-releases) for sideloaded Teams apps to appear in Outlook and Microsoft 365 app.
 
-To enroll your test tenant for Microsoft 365 targeted releases:
+To enroll your test tenant for Microsoft 365 app targeted releases:
 
 1. Sign in to [Microsoft 365 admin center](https://admin.microsoft.com) with your test tenant credentials.
-2. Go to **Settings** > **Org Settings** > **Organization profile**.
-3. Select **Release preferences**.
-4. Select any *Targeted release* preference:
+1. Go to **Settings** > **Org Settings** > **Organization profile**.
+1. Select **Release preferences**.
+1. Select any *Targeted release* preference:
     1. **Target release for everyone**
-    2. **Target release for select users**
+    1. **Target release for select users**
 
     :::image type="content" source="images/m365-admin-center-targeted-releases.png" alt-text="The screenshot is an example that shows the Microsoft 365 admin center 'Release preferences' menu with Targeted release option selected.":::
 
-5. Select **Save**.
+1. Select **Save**.
 
 For more information on Microsoft 365 release options, see [set up the Standard or Targeted release options](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide&preserve-view=true#targeted-release) in *Microsoft 365 admin center help*.
 
@@ -71,12 +71,12 @@ You can preview Teams apps running in Outlook on Windows desktop by using a rece
 To install Microsoft 365 Beta Channel applications in your test environment:
 
 1. Sign in to your test environment with your test tenant credentials.
-2. Download the [Microsoft 365 Deployment Tool](https://www.microsoft.com/download/details.aspx?id=49117) and extract to a local folder.
+2. Download the [Office Deployment Tool](https://www.microsoft.com/download/details.aspx?id=49117) and extract to a local folder.
 3. Go to the local folder and open *configuration-Office365-x86.xml* (or **x64.xml*, depending on your environment) in a text editor and update the *Channel* value to `BetaChannel`.
 4. Open Command Prompt and go to the local folder path.
 5. Run `setup.exe /configure configuration-Office365-x86.xml` (or use the **x64.xml* file, depending on your setup).
 6. Open Outlook (desktop client) and set up the mail account using your test tenant credentials.
-7. Open **File** > **Microsoft 365 Account** > **About Outlook** to confirm you're running a Microsoft 365 *Beta Channel* build of Outlook.
+7. Open **File** > **Office Account** > **About Outlook** to confirm you're running a Microsoft 365 *Beta Channel* build of Outlook.
 
     :::image type="content" source="images/outlook-about-beta-channel.png" alt-text="The screenshot is an example that shows about Outlook to verify that you're running a Beta Channel build.":::
 

@@ -214,7 +214,7 @@ Preview the current application from local or remote.
 |`--browser`| No | The browser to open Teams web client. The options are `chrome`, `edge` and `default` such as system default browser and the value is `default`. |
 |`--browser-arg`| No | Argument to pass to the browser, requires --browser, can be used multiple times, for example, --browser-args="--guest" |
 |`--sharepoint-site`| No | SharePoint site URL, such as `{your-tenant-name}.sharepoint.com` for SPFx project remote preview. |
-|`--m365-host`| Preview the application in Teams, Outlook or Microsoft (Office) 365. Options are `teams`, `outlook` and `office`. The default value is `teams`. |
+|`--m365-host`| Preview the application in Teams, Outlook or Microsoft 365 (formally known as Office app). Options are `teams`, `outlook` and `office`. The default value is `teams`. |
 
 ### Scenarios for `teamsfx preview`
 
