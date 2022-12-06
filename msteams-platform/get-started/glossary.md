@@ -146,6 +146,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | Term | Definition |
 | --- | --- |
 | [People Picker](../task-modules-and-cards/cards/people-picker.md) | A native control in Teams platform to search and select people, which can be integrated in web apps, Adaptive Cards, and more. |
+| Permission | While authentication and providing access token for app user, a client application gains access to a resource server by declaring permission requests. Two types are available, Delegated permissions and Application permissions. <br> **See also**: [Scope](#s), [SSO](#s), [Authentication flow](#a) |
 | [Personal app](../concepts/design/personal-apps.md) | A personal app is a Teams application with a personal scope. It focuses on interactions with a single user. It can be a conversational bot to engage in one-to-one conversations with a user or a personal tab providing an embedded web experience, or both. <br>**See also**: [Shared app](#s) |
 | [Power Virtual Agents](../bots/how-to/add-power-virtual-agents-bot-to-teams.md) | A no-code, guided graphical interface solution that empowers every member of your team to create rich, conversational chat bots that easily integrate with the Teams platform. |
 | [Proactive messages](../bots/how-to/conversations/send-proactive-messages.md) | A message sent by a bot that isn't in response to a request from a user, such as welcome messages, notifications, scheduled messages. |
@@ -164,6 +165,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 
 | Term | Definition |
 | --- | --- |
+| Scope | Scopes are used to implement scope-based access control, for a client application that has been given delegated access to the resource by its owner. They are resource-defined strings (for example "Mail.Read", "Directory.ReadWrite.All"), managed in the Azure portal. <br> **See also**: [SSO](#s); [Authentication](#a) |
 | [Search commands](../messaging-extensions/how-to/search-commands/define-search-command.md) | A type of message extension app that lets users search external systems and include the search result into a message using a card. <br>**See also**: [Message extensions](#m); [Action commands](#a) |
 | [Sequential workflow](../task-modules-and-cards/cards/universal-actions-for-adaptive-cards/sequential-workflows.md) | A workflow that lets a bot carry out a conversation with a user based on the user response. |
 | [Shared app](../concepts/extensibility-points.md#shared-app-experiences) | An app that exists in a team, channel, or chat where users can collaborate and interact. <br>**See also:** Personal app |
@@ -172,7 +174,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | [SidePanel](../sbs-meetings-sidepanel.yml) | A feature of Teams meeting app that enables you to customize experiences in a meeting that allow organizers and presenters to have different set of views and actions. |
 | [Single-tenant app](/tabs/how-to/authentication/tab-sso-register-aad) | Single-tenant apps are only available in the tenant they were registered in, also known as their home tenant. **See also**: [Multi-tenant apps](#m) |
 | [SPFx](../sbs-gs-spfx.yml) | SharePoint Framework (SPFx) is a development model to build client-side solutions for Microsoft Teams and SharePoint. |
-| [SSO](../concepts/authentication/authentication.md) | Acronym for Single sign-on, an authentication method in which a user needs to sign in to an independent service of a software platform (such as Microsoft 365) only once. The user is then able to access all services without having to go through authentication again. <br>**See also**: [Authentication](#a) | 
+| [SSO](../concepts/authentication/authentication.md) | Acronym for Single sign-on, an authentication method in which a user needs to sign in to an independent service of a software platform (such as Microsoft 365) only once. The user is then able to access all services without having to go through authentication again. <br>**See also**: [Authentication](#a), [Scope](#s) |
 | [Stage view](../sbs-meetings-stage-view.yml) | A user interface component that lets you render the content that is opened in full screen in Teams and pinned as a tab. It's invoked to surface web content within Teams. Note that it is *not* the same as meeting stage. <br>**See also**: [Meeting stage](#m) |
 | [Standalone app](../samples/integrating-web-apps.md) | A single-page or large, and complex app. The user can use some aspects of it in Teams. <br>**See also**: [Collaboration aap](#c) |
 | [Static search](../task-modules-and-cards/cards/dynamic-search.md) | A method of typeahead search that lets users search from pre-specified values in the Adaptive Cards payload. <br>**See also**: [Dynamic search](#d) |
