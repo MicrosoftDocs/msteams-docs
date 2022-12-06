@@ -554,20 +554,23 @@ If you need to extend your notification bot to support command and response, you
 
 <details>
 
-<summary><b>How to extend my notification bot to support Adaptive Card actions?</b></summary>
+<summary><b>How to extend my notification bot to support workflow bot Adaptive Card actions?</b></summary>
 
-To add Adaptive Card actions in notification bot, see the steps to [add card action](workflow-bot-in-teams.md#add-card-actions).
+To add Adaptive Card actions in notification bot, see the steps to [add card action in workflow bot](workflow-bot-in-teams.md#add-card-actions).
 
 <br>
 
 </details>
+
+## Step-by-step guide
+
+Follow the [step-by-step](../../../sbs-gs-notificationbot.yml) guide to build Teams notification bot.
 
 ## See also
 
 * [Conversation basics](conversation-basics.md)
 * [Build bots for Teams](../../what-are-bots.md)
 * [Build your first bot app using JavaScript](../../../sbs-gs-bot.yml)
-* [Build notification bot with JavaScript](../../../sbs-gs-notificationbot.yml)
 * [Proactive messages](send-proactive-messages.md)
 * [Adaptive Cards](../../../task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 * [TeamsFx SDK](../../../toolkit/TeamsFx-SDK.md)
