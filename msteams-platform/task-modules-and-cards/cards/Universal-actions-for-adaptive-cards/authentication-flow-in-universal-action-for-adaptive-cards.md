@@ -122,4 +122,5 @@ For a OAuth or nominal sign-on experience in which the user is presented with a 
 
 ## See also
 
-[Work with Universal Actions for Adaptive Cards](Work-with-Universal-Actions-for-Adaptive-Cards.md)
+* [Work with Universal Actions for Adaptive Cards](Work-with-Universal-Actions-for-Adaptive-Cards.md)
+* [Enable SSO for your Adaptive Cards Universal Actions](enable-sso-for-your-adaptive-cards-universal-action.md)

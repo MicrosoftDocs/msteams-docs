@@ -20,15 +20,13 @@ You can enable the following scenarios with `Action.Execute` on your Adaptive Ca
 * [Sequential Workflows](Overview.md#sequential-workflow-support)
 * [Up to Date View](Overview.md#up-to-date-views)
 
+With Single sign-on (SSO) in Teams, app users have the advantage of using Teams to access Adaptive Cards Universal Actions in bot. After logging into Teams using Microsoft or Microsoft 365 account, app users can use your app without needing to sign in again. Your app is available to app users on any device with access granted through Azure Active Directory (AD).
+
 To learn more about Universal Actions for Adaptive Cards, see [Universal Actions for Adaptive Cards](Overview.md).
 
 If you want to add User Specific Views in instances where an Adaptive Card with Universal Action is shared in the context of a group chat or a channel, the user may need to be authenticated.
 
 In the past, users who were chatting one-on-one with the bot had to wait while you sent them a separate auth card to authenticate. In order to communicate with the bot, user needs to switch from the group chat or channel as a result it disturbs the flow.
-
-## SSO for your Adaptive Cards Universal Actions
-
-With Single sign-on (SSO) in Teams, app users have the advantage of using Teams to access Adaptive Cards Universal Actions in bot. After logging into Teams using Microsoft or Microsoft 365 account, app users can use your app without needing to sign in again. Your app is available to app users on any device with access granted through Azure Active Directory (AD).
 
 ## Authentication flow in Action.Execute protocol
 
@@ -136,4 +134,5 @@ For a single sign-on experience in which the user is already signed into a clien
 
 ## See also
 
-[Work with Universal Actions for Adaptive Cards](Work-with-Universal-Actions-for-Adaptive-Cards.md)
+* [Work with Universal Actions for Adaptive Cards](Work-with-Universal-Actions-for-Adaptive-Cards.md)
+* [Authentication flow in Adaptive Cards Universal Actions](authentication-flow-in-universal-action-for-adaptive-cards.md)
