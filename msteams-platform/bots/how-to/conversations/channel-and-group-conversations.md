@@ -56,6 +56,7 @@ The following code shows an example of retrieving mentions:
 # [C#](#tab/dotnet)
 
 * [SDK reference](/dotnet/api/microsoft.bot.schema.activity.getmentions?view=botbuilder-dotnet-stable#microsoft-bot-schema-activity-getmentions&preserve-view=true)
+
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-archive-groupchat-messages/csharp/FetchGroupChatMessages/Bots/ActivityBot.cs#L182)
 
 ```csharp
@@ -79,7 +80,8 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 ```
 
 # [TypeScript](#tab/typescript)
-* [SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#botbuilder-core-turncontext-getmentions&preserve-view=true)
+
+[SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#botbuilder-core-turncontext-getmentions&preserve-view=true)
 
 ```typescript
 this.onMessage(async (turnContext, next) => {
@@ -103,7 +105,7 @@ this.onMessage(async (turnContext, next) => {
 
 # [JSON](#tab/json)
 
-* [SDK reference](/microsoftteams/platform/resources/bot-v3/bot-conversations/bots-conv-channel#example-outgoing-message-with-user-mentioned)
+[SDK reference](/microsoftteams/platform/resources/bot-v3/bot-conversations/bots-conv-channel#example-outgoing-message-with-user-mentioned)
 
 ```json
 {
@@ -146,7 +148,8 @@ this.onMessage(async (turnContext, next) => {
 ```
 
 # [Python](#tab/python)
-* [SDK reference](/python/api/botbuilder-schema/botbuilder.schema.activity?view=botbuilder-py-latest#botbuilder-schema-activity-get-mentions&preserve-view=true)
+
+[SDK reference](/python/api/botbuilder-schema/botbuilder.schema.activity?view=botbuilder-py-latest#botbuilder-schema-activity-get-mentions&preserve-view=true)
 
 ```python
 @staticmethod
