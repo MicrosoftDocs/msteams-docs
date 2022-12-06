@@ -284,19 +284,19 @@ The following table includes the response codes:
 
 ## Targeted meeting notification API
 
-You can send targeted meeting notifications to specific participants. The notifications are private to the designated participants and not visible to others in the meeting. Targeted meeting notification API enables you to increase user involvement in various activities.
+Targeted meeting notification provides API to enhance meeting experience and develop user engagement activities, the targeted notification can be sent to any participants who can view meeting notification.
 
 > [!NOTE]
 >
 > * Adaptive Cards are not supported.
-> * Targeted meeting notification supports private scheduled, private recurring, meet now, one-on-one calls, and group call.
+> * Targeted meeting notification supports private scheduled, private recurring, Meet now, one-on-one calls, and group call.
 > * The API payload only permits task module with URL.
 > * The notification can only be sent to 10 users.
 
 ### Example
 
 ```http
-GET POST /v1/meetings/{meetingId}/notiifcation
+GET POST /v1/meetings/{meetingId}/notification
 ```
 
 Following is an example for request payload:
@@ -344,7 +344,7 @@ Following is an example for request payload:
 | **surface** | **MeetingStage** keyword. |
 | **contentType** | **Task** keyword. |
 | **onBehalfOf.itemid** | Describes identification of the item. Its value must be 0. |
-| **onBehalfOf.mentionType** | **Person** keyword. Describes the mention of a **person**. |
+| **onBehalfOf.mentionType** | **Person** keyword. Describes the mention of a person. |
 | **onBehalfOf.mri** | User MRI shown as sender. |
 
 Following are the optional properties:
@@ -356,7 +356,7 @@ Following are the optional properties:
 | **content.value.title** | Requested height of the notification. |
 | **content.value.url** | URL to be rendered in the notification, make sure the URL is part of **validDomains** in app manifest. If empty string or no URL is provided, nothing will be rendered on a meeting notification. |
 | **ChannelData.OnBehalfOf** | This is to support [User attributes](../messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md#respond-to-the-task-module-submit-action). |
-| **onBehalfOf.displayName** | Name of the person. Used as fallback in case name resolution is unavailable. |
+| **onBehalfOf.displayName** | Name of the person. Used as fallback in case the name resolution is unavailable. |
 
 ### Response code
 

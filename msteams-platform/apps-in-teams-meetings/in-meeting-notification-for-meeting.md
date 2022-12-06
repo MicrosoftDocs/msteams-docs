@@ -46,7 +46,7 @@ You can also add the Teams display picture and people card of the user to in-mee
 
 You can send targeted meeting notifications to specific participants. The notifications are private to the designated participants and not visible to others in the meeting. Targeted meeting notification API enables you to increase user involvement in various activities.
 
-The following image shows how to send targeted meeting notification to specific participants:
+The following image is an example of targeted meeting notification to specific participant in the meeting:
 
 Meeting in progress
 
@@ -56,9 +56,7 @@ Targeted meeting notification sent to a specific participant.
 
   :::image type="content" source="../assets/images/apps-in-meetings/reminder-sent.png" alt-text="Screenshot displaying the reminder sent to a participant in the meeting.":::
 
-To use the API, the bot needs to obtain `OnlineMeetingNotification.Send.Chat` RSC permission in the manifest. You can find examples of how to configure RSC permission on the app manifest from [Get meeting details API](meeting-apps-apis.md#get-meeting-details-api)
-
-Obtain the RSC permissions by configuring the `OnlineMeetingNotification.Send.Chat`, and the `name` and `type` in the resourceSpecific field as follows:
+Obtain the RSC permissions by configuring the `OnlineMeetingNotification.Send.Chat` and `type` in the resourceSpecific field as follows:
 
  Following is an example of request payload:
 
@@ -100,6 +98,8 @@ GET POST /v1/meetings/{meetingId}/notiifcation
   }
 }
 ```
+
+You can find examples of how to configure RSC permission on the app manifest from [Get meeting details API](meeting-apps-apis.md#get-meeting-details-api)
 
 ## Code sample
 
