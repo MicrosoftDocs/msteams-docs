@@ -56,7 +56,7 @@ Targeted meeting notification sent to a specific participant.
 
   :::image type="content" source="../assets/images/apps-in-meetings/reminder-sent.png" alt-text="Screenshot displaying the reminder sent to a participant in the meeting.":::
 
-To use the API, the bot needs to obtain `OnlineMeetingNotification.Send.Chat` RSC permission in the manifest. You can find examples of how to configure RSC permission on the app manifest from [Get meeting details API](#get-meeting-details-api)
+To use the API, the bot needs to obtain `OnlineMeetingNotification.Send.Chat` RSC permission in the manifest. You can find examples of how to configure RSC permission on the app manifest from [Get meeting details API](meeting-apps-apis.md#get-meeting-details-api)
 
 Obtain the RSC permissions by configuring the `OnlineMeetingNotification.Send.Chat`, and the `name` and `type` in the resourceSpecific field as follows:
 
