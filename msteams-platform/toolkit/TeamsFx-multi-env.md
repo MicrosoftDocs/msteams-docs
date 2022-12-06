@@ -10,55 +10,55 @@ ms.date: 11/29/2021
 
 # Manage multiple environments
 
- Teams Toolkit provides a simple way for you to create and manage multiple environments, provision, and deploy artifacts to the target environment for your Microsoft Teams App.
+ Teams Toolkit provides a simple way for you to create and manage multiple environments, provision resources, and deploy artifacts to the target environment for your Microsoft Teams app.
 
- You can perform the following with multiple environments:
+ You can perform the following activities with multiple environments:
 
-1. **Test before production**: You can set up multiple environments such as dev, test, and staging before publishing a Teams App to production environment in modern app development lifecycle.
+1. **Test before production**: You can set up multiple environments, such as dev, test, and staging before publishing a Teams app to production environment in modern app development lifecycle.
 
-2. **Manage app behaviors in different environments**: You can set up different app behaviors for multiple environments such as enable telemetry in production environment.
+2. **Manage app behaviors in different environments**: You can set up different app behaviors for multiple environments, such as enabling telemetry in the production environment.
 
    > [!NOTE]
-   > Ensure that telemetry is disabled in development environment.
+   > Ensure that telemetry is disabled in the development environment.
 
    > [!TIP]
-   > Ensure you have Teams app project opened in Visual Studio code.
+   > Ensure that you have Teams app project opened in Visual Studio code.
 
 ## Create new environment
 
 After you create a project, Teams Toolkit by default configures:
 
-* One `local` environment to represent the local machine environment configuration.
-* One `dev` environment to represent the remote or cloud environment configuration.
+* **local** environment to represent the local machine environment configuration.
+* **dev** environment to represent the remote or cloud environment configuration.
 
 > [!NOTE]
-> Each project can have only one `local` environment but multiple remote environments.
+> Each project can have one **local** environment but multiple remote environments.
 
-**Add remote environment**:
+Perform the following steps to create a new environment:
 
-1. Select the **Teams Toolkit** :::image type="content" source="~/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png" alt-text="From the activity bar"::: from the activity bar.
-2. Select **+Teams: Create new environment** under the **ENVIRONMENT** section as shown in the following image:
+1. Select the **Teams Toolkit** from the activity bar.
+2. Select **+ Teams: Create new environment** under the **ENVIRONMENT** section.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/create new env.png" alt-text="create new environment":::
 
 > [!Note]
-> If you have more than one environments, then you need to select an existing environment to create the same. The command copies the file contents of `config.<newEnv>.json` and `azure.parameters.<newEnv>.json` from the existing environment you've selected to the new environment created.
+> If you have more than one environment, you must select an existing environment to create the new environment. The command copies the file contents of `config.<newEnv>.json` and `azure.parameters.<newEnv>.json` from the existing environment you've selected to the new environment created.
 
 ## Target environment
 
-You can select the target environment, Teams Toolkit prompts you to select a target environment when you have multiple remote environments:
+Teams Toolkit prompts you to select a target environment when you have multiple remote environments.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview-1.png" alt-text="add env":::
 
 ## Project folder structure
 
-After creating the project, you can view the project folders and files under **Explorer** in Visual Studio Code. Besides the custom codes, Teams Toolkit uses some files to maintain the `configs`, `states`, and `templates` of the app. The following list provides files and outlines their relationship with multiple environments.
+After creating the project, you can view the project folders and files under **EXPLORER** in Visual Studio Code. Besides the custom codes, Teams Toolkit uses some files to maintain the `configs`, `states`, and `templates` of the app. The following list provides files and outlines their relationship with multiple environments:
 
-* `.fx/configs`: Configures the files that user can customize for Teams app.
-  * `config.<envName>.json`: Configuration file per-environment.
-  * `azure.parameters.<envName>.json`: Parameters file for Azure bicep provision per-environment.
+* `.fx\configs`: Configuration files that user can customize for the Teams app.
+  * `config.<envName>.json`: Configuration file for every environment.
+  * `azure.parameters.<envName>.json`: Parameters file for Azure bicep provision for every environment.
   * `projectSettings.json`: Global project settings that apply to all environments.
-* `.fx/states`: Provision result that is generated by the Teams Toolkit.
+* `.fx\states`: Provision result that is generated by the Teams Toolkit.
   * `state.<envName>.json`: Provision output file per-environment.
   * `<env>.userdata`: User data for the provision output per-environment.
 * `templates`
