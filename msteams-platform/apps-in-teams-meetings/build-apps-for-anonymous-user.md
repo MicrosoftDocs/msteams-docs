@@ -13,8 +13,8 @@ You can build tabs and task modules in your app to engage with anonymous meeting
 
 To build apps for anonymous users ensure the following:
 
-* Manifest enabled with `supportsAnonymousGuestUsers` to true.
-* Admin setting for anonymous user app interaction
+* [Enable `supportsAnonymousGuestUsers` to true in your app manifest](#manifest-update-for-supportsanonymousguestusers).
+* [Admin setting for anonymous user app interaction](#admin-setting-for-anonymous-user-app-interaction)
 
 ## Manifest update for `supportsAnonymousGuestUsers`
 
@@ -36,7 +36,7 @@ As anonymous users aren't AAD accounts, skype token isn't available for anonymou
 
 ## Admin setting for anonymous user app interaction
 
-Teams admins can use the admin portal to enable or disable anonymous user app interaction for the entire tenant. This setting is enabled by default. If your app needs to be accesed by anonymous users ensure that tenant admins enable the anonymous user app interaction. For more information, see [allow anonymous users to interact with apps in meetings](/microsoftteams/meeting-settings-in-teams).
+Teams admins can use the Teams admin center to enable or disable anonymous user app interaction for the entire tenant. This anonymous users can interact with apps in meetings setting is enabled by default. If your app needs to be accesed by anonymous users ensure that tenant admins enable the anonymous user app interaction. For more information, see [allow anonymous users to interact with apps in meetings](/microsoftteams/meeting-settings-in-teams).
 
 ## In-Meeting getContext from Teams client SDK
 
