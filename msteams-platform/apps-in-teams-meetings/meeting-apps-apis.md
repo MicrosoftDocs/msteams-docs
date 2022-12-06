@@ -1008,11 +1008,11 @@ The following table provides the response codes:
 
 ## Raise Hand API
 
-The onRaisehandChangeHandler API allows an app to show that the user has raised his hand during the meeting. The API is available through the Teams client SDK.
+The `onRaisehandChangeHandler` API allows an app to show that the user has raised his hand during the meeting. The API is available through the Teams client SDK.
 
-## Manifest
+### Manifest
 
-Use the following example to configure your app manifest's  `authorization` properties for any private meeting:
+Use the following example to configure your app manifest's `authorization` properties for any private meeting:
 
 ```JSON
 "authorization": {
@@ -1025,8 +1025,9 @@ Use the following example to configure your app manifest's  `authorization` prop
   ]
  }
 }
+```
 
-Use the following example to configure your app manifest's authorization properties for any group meeting:
+Use the following example to configure your app manifest's `authorization` properties for any group meeting:
 
 ```JSON
 "authorization": {
@@ -1039,9 +1040,11 @@ Use the following example to configure your app manifest's authorization propert
   ]
  }
 }
+```
 
-## Example
+### Example
 
+```javascript
 export interface IRaiseHandState { 
     /** Indicates whether the selfParticipant's hand is raised or not*/ 
     isHandRaised: boolean; 
@@ -1068,19 +1071,20 @@ export interface IRaiseHandState {
 //Displays error message
   error: undefined 
      } 
+```
 
-## Response code
+### Response code
 
 | Response code | Description |
 | 500 | Internal code error, permission failure, reaction not enabled |
 
 ## Reaction API
 
-The onReactionHandler API allows an app to get the reaction of the user reacted during the meeting. The API is available through the Teams client SDK.
+The `onReactionHandler` API allows an app to get the reaction of the user reacted during the meeting. The API is available through the Teams client SDK.
 
-## Manifest
+### Manifest
 
-Use the following example to configure your app manifest's  `authorization` properties for any private meeting:
+Use the following example to configure your app manifest's `authorization` properties for any private meeting:
 
 ```JSON
 "authorization": {
@@ -1093,8 +1097,9 @@ Use the following example to configure your app manifest's  `authorization` prop
   ]
  }
 }
+```
 
-Use the following example to configure your app manifest's authorization properties for any group meeting:
+Use the following example to configure your app manifest's `authorization` properties for any group meeting:
 
 ```JSON
 "authorization": {
@@ -1107,9 +1112,11 @@ Use the following example to configure your app manifest's authorization propert
   ]
  }
 }
+```
 
-## Example
+### Example
 
+```javascript
 export enum MeetingReactionType { 
     like = 'like', 
     heart = 'heart', 
@@ -1132,12 +1139,12 @@ export enum MeetingReactionType {
   meetingReactionType: MeetingReactionType.laugh, 
   error: undefined 
  } 
+```
 
-## Response code
+### Response code
 
 | Response code | Description |
 | 500 | Internal code error, permission failure, reaction not enabled |
-
 
 ## See also
 
