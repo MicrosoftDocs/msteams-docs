@@ -44,19 +44,27 @@ You can also add the Teams display picture and people card of the user to in-mee
 
 ## Targeted meeting notification API
 
- You can send targeted meeting notifications to specific participants. The notifications are private to the designated participants and not visible to others in the meeting. Targeted meeting notification API enables you to increase user involvement in various activities.
+You can send targeted meeting notifications to specific participants. The notifications are private to the designated participants and not visible to others in the meeting. Targeted meeting notification API enables you to increase user involvement in various activities.
 
- The following example shows how to send targeted meeting notification to specific participants:
+The following image shows how to send targeted meeting notification to specific participants:
 
- Meeting in progress
+Meeting in progress
 
   :::image type="content" source="../assets/images/apps-in-meetings/design-principles-2019.png" alt-text="Screenshot displaying the banner of VA Design Principles 2019.":::
 
- Targeted meeting notification sent to a specific participant.
+Targeted meeting notification sent to a specific participant.
 
   :::image type="content" source="../assets/images/apps-in-meetings/reminder-sent.png" alt-text="Screenshot displaying the reminder sent to a participant in the meeting.":::
 
- To use the API, the bot needs to obtain following RSC permission from manifest `OnlineMeetingNotification.Send.Chat` Following is an example of request payload:
+To use the API, the bot needs to obtain `OnlineMeetingNotification.Send.Chat` RSC permission in the manifest. You can find examples of how to configure RSC permission on the app manifest from [Get meeting details API](#get-meeting-details-api)
+
+Obtain the RSC permissions by configuring the `OnlineMeetingNotification.Send.Chat`, and the `name` and `type` in the resourceSpecific field as follows:
+
+ Following is an example of request payload:
+
+```http
+GET POST /v1/meetings/{meetingId}/notiifcation
+```
 
 ```json
 {

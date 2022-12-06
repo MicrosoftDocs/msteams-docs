@@ -284,73 +284,67 @@ The following table includes the response codes:
 
 ## Targeted meeting notification API
 
- You can send targeted meeting notifications to specific participants. The notifications are private to the designated participants and not visible to others in the meeting.
+You can send targeted meeting notifications to specific participants. The notifications are private to the designated participants and not visible to others in the meeting. Targeted meeting notification API enables you to increase user involvement in various activities.
 
- To use the API, the bot needs to obtain following RSC permission from manifest:
-
-* `OnlineMeetingNotification.Send.Chat`
-* You can find examples of how to configure RSC permission on the app manifest from [Get meeting details API](#get-meeting-details-api)
-
- > [!NOTE]
- >
- >* Adaptive Cards are not supported.
- >
- >* Targeted meeting notification supports private scheduled, private recurring, meet now, one-on-one calls, and group call.
- >
- >* The API payload only permits task module with URL.
- >
- >* The notification can only be sent to 10 users.
+> [!NOTE]
+>
+> * Adaptive Cards are not supported.
+> * Targeted meeting notification supports private scheduled, private recurring, meet now, one-on-one calls, and group call.
+> * The API payload only permits task module with URL.
+> * The notification can only be sent to 10 users.
 
 ### Example
 
- `URL:  POST /v1/meetings/{meetingId}/notification`
+```http
+GET POST /v1/meetings/{meetingId}/notiifcation
+```
 
- Following is an example for request payload:
+Following is an example for request payload:
 
 ```json
-{
-
-  "type": "targetedMeetingNotification",
-  "value": {
-    "recipients": [ 
-"29:1I12M_iy2wTa97T6LbjTh4rJCWrtw2PZ3lxpD3yFv8j2YPnweY2lpCPPAn3RI0PP7rghfHauUz48I1t7ANhj4CA"
-     ], 
-    "surfaces": [ 
-      { 
-        "surface": "meetingStage", 
-        "contentType": "task", 
-        "content": { 
-          "value": { 
-            "height": "300", 
-            "width": "400", 
-            "title": "Targeted meeting Notification", 
-            "url": "https://somevalidurl.com"           
-}
-        } 
-      } 
-    ] 
-  },
-  "channelData": { // optional if a developer wants to support user attributes
-    "onBehalfOf": [ 
-      { 
-        "itemid": 0, 
-        "mentionType": "person", 
-        "mri": "29:1mDOCfGM9825lMHlwP8NjIVMJeQAbN-ojYBT5VzQfPpnst1IFQeYB1QXC8Zupn2RhgfLIW27HmynQk-4bdx_YhA", 
-        "displayName": "yunny chung"      } 
-    ] 
+  {
+    "channelData": { // optional if a developer wants to support user attributes
+      "onBehalfOf": [
+        {
+          "itemid": 0,
+          "mentionType": "person",
+          "mri": "29:1mDOCfGM9825lMHlwP8NjIVMJeQAbN-ojYBT5VzQfPpnst1IFQeYB1QXC8Zupn2RhgfLIW27HmynQk-4bdx_YhA",
+          "displayName": "yunny chung"
+        }
+      ]
+    },
+    "type": "targetedMeetingNotification",
+    "value": {
+      "recipients": [
+        "29:1I12M_iy2wTa97T6LbjTh4rJCWrtw2PZ3lxpD3yFv8j2YPnweY2lpCPPAn3RI0PP7rghfHauUz48I1t7ANhj4CA"
+      ],
+      "surfaces": [
+        {
+          "surface": "meetingStage",
+          "contentType": "task",
+          "content": {
+            "value": {
+              "height": "300",
+              "width": "400",
+              "title": "Targeted meeting Notification",
+              "url": "https://somevalidurl.com"
+            }
+          }
+        }
+      ]
+    }
   }
-}
 ```
 
 | Property name | Description |
 |---|---|
-| **meetingId** | The meeting identifier is available through Bot Invoke and Teams Client SDK. |
-| **type** |**targetedMeetingNotification** keyword. |
-| **recipients** | List of user ids. One way to retrieve user ids for meeting participants is through [Get participant API](#get-participant-api). You can retrieve the list of entire chat roster using [Fetch the roster or user profile](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile). Empty or null recipients list will return 400.|
-| **surface** | **meetingStage** keyword. |
-| **contentType** | **task** keyword. |
+| **meetingId** | The meeting identifier is available through bot invoke and Teams Client SDK. |
+| **type** |**TargetedMeetingNotification** keyword. |
+| **recipients** | List of user IDs. One way to retrieve user IDs for meeting participants is through [Get participant API](#get-participant-api). You can retrieve the entire list of chat roster using [Fetch the roster or user profile](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile). Empty or null recipients list will return 400.|
+| **surface** | **MeetingStage** keyword. |
+| **contentType** | **Task** keyword. |
 | **onBehalfOf.itemid** | Describes identification of the item. Its value must be 0. |
-| **onBehalfOf.mentionType** | **person** keyword, Describes the mention of a **person**. |
+| **onBehalfOf.mentionType** | **Person** keyword. Describes the mention of a **person**. |
 | **onBehalfOf.mri** | User MRI shown as sender. |
 
 Following are the optional properties:
@@ -361,7 +355,7 @@ Following are the optional properties:
 | **content.value.width** | Requested width of the notification. |
 | **content.value.title** | Requested height of the notification. |
 | **content.value.url** | URL to be rendered in the notification, make sure the URL is part of **validDomains** in app manifest. If empty string or no URL is provided, nothing will be rendered on a meeting notification. |
-| **ChannelData.OnBehalfOf** | This is to support [User attributes](../messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md#respond-to-the-task-module-submit-action). Needed, if a bot wants to support user attributes. |
+| **ChannelData.OnBehalfOf** | This is to support [User attributes](../messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md#respond-to-the-task-module-submit-action). |
 | **onBehalfOf.displayName** | Name of the person. Used as fallback in case name resolution is unavailable. |
 
 ### Response code
@@ -372,7 +366,7 @@ The following table includes the response codes:
 |---|---|
 | **202** | Notification is successfully sent. |
 | **207** | Notifications are sent only to partial number of participants. |
-| **400** | Meeting Notification request payload validation fails. |
+| **400** | Meeting notification request payload validation fails. |
 | **401** | Bot token is invalid. |
 | **403** | Bot is not allowed to send the notification. |
 | **404** | Meeting chat is not found or None of the participants were found in the roster. |
