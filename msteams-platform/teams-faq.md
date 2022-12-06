@@ -155,7 +155,7 @@ While Live Share is in Preview, any limit to events emitted through Live Share i
 ## Microsoft Graph
 
 <details>
-<summary>How can a user set their timezone to get notifications at a preferred time?</summary>
+<summary>How can an app user set their timezone to get notifications at a preferred time?</summary>
 
 You can use the following Graph API [Get user mailbox settings](/graph/api/user-get-mailboxsettings#permissions). You can get the user’s time zone as follows:
 
@@ -165,7 +165,7 @@ You can use the following Graph API [Get user mailbox settings](/graph/api/user-
 &nbsp;
 </details>
 <details>
-<summary>How can I deploy the code in Azure using Teams Toolkit, and use Graph API get user profile photo?</summary>
+<summary>How can I deploy the code in Azure using Teams Toolkit, and use Graph API get an app user profile photo?</summary>
 
 For more information on Teams Toolkit, see [Create a new Teams project](toolkit/create-new-project.md) and [TeamsFx Library](toolkit/TeamsFx-CLI.md).
 <br>
@@ -207,7 +207,7 @@ Each team course instance must have an owner, and the synchronization sets the f
 
 The users have multiple sign in options from the Moodle login page.
 
-* To sign in exclusively using Microsoft 365 credentials, enable the **Force redirect** configuration settings for the **auth_oidc plugin**. If the service is enabled, user can see the Microsoft sign in page.
+* To sign in exclusively using Microsoft 365 credentials, enable the **Force redirect** configuration settings for the **auth_oidc plugin**. If the service is enabled, an app user can see the Microsoft sign in page.
 * To sign in manually to the Moodle portal see [Moodle](https://moodle.org/login/index.php).
 <br>
 &nbsp;
@@ -280,7 +280,7 @@ The reason for inconsistencies with users being able unable to sign using their 
 
 Users who were unable to sign in at the start need to report the issue and verify that the application **Client secret** hasn't expired.
 
-The following image shows the error message received when user sign using their Microsoft 365 credentials:
+The following image shows the error message received when an app user signs in using their Microsoft 365 credentials:
 
 :::image type="content" source="assets/images/MoodleInstructions/faq-6.png" alt-text="report issue":::
 
@@ -288,7 +288,7 @@ The following image shows the error in Azure portal:
 
 :::image type="content" source="assets/images/MoodleInstructions/faq-7.png" alt-text="Azure portal":::
 
-If the **Client secret** has expired, then user needs to generate a new **Client secret**, and update the configuration found on page. Users can sign in again after the **Client secret** has been updated, which can take up to 24 hours to re-provision.
+If the **Client secret** has expired, then the app user needs to generate a new **Client secret**, and update the configuration found on page. Users can sign in again after the **Client secret** has been updated, which can take up to 24 hours to re-provision.
 <br>
 &nbsp;
 </details>
@@ -329,7 +329,7 @@ For more information on editing Atto toolbar, see:
 
 The meetings scheduled through the app don't appear in the scheduler’s Outlook or Teams calendar as they're similar to Channel Meetings. All the members in the course channel can attend the meeting directly from the embedded channel link. For more information, see [Channel meetings](https://www.knowledgewave.com/blog/benefits-of-channel-meetings-in-microsoft-teams).
 
-However, you can access the invite and manually add participant names to the **Required** or **Optional** fields of the meeting invitation to display the remote meeting on their calendars. The standard timelines are based on the date the user specifies when the meeting is created. For more information, see [Limits and specifications for Teams](/microsoftteams/limits-specifications-teams).
+However, you can access the invite and manually add participant names to the **Required** or **Optional** fields of the meeting invitation to display the remote meeting on their calendars. The standard timelines are based on the date the app user specifies when the meeting is created. For more information, see [Limits and specifications for Teams](/microsoftteams/limits-specifications-teams).
 <br>
 &nbsp;
 </details>
@@ -515,7 +515,7 @@ The following resources can also assist:
 <details>
 <summary>How can I validate an app user when they invoke an Adaptive Card? </summary>
 
-You can open the authentication page in the task module when user selects the button.
+You can open the authentication page in the task module when an app user selects the button.
 
 You can use the [code sample](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/54.teams-task-module/bots/teams_task_module_bot.py#L70) for opening the task module on button click. You can replace the taskInfo.url with your auth page.
 <br>
@@ -523,7 +523,7 @@ You can use the [code sample](https://github.com/microsoft/BotBuilder-Samples/bl
 </details>
 </details>
 <details>
-<summary>How can I change Application ID URI of SSO scope to use bot ID also so that the consent window won't be required for bot?</summary>
+<summary>How can I change application ID URI of SSO scope to use bot ID also so that the consent window won't be required for a bot app?</summary>
 
 For more information, see [Configure your app in Azure AD](bots/how-to/authentication/bot-sso-register-aad.md).
 <br>
@@ -553,7 +553,7 @@ Configure the application you're using to only execute HTML encoding of the scop
 &nbsp;
 </details>
 <details>
-<summary>How can I implementation Bot SSO using React?</summary>
+<summary>How can I implement Bot SSO using React?</summary>
 
 If you use Teams Toolkit to build your app: for more information, see [Add single sign-on to Teams app](toolkit/add-single-sign-on.md).
 
@@ -601,24 +601,24 @@ Before provision, the tool asks you if you want to create a new resource group o
 &nbsp;
 </details>
 <details>
-<summary>How can I provision sharepoint-based app?</summary>
+<summary>How can I provision SharePoint-based app?</summary>
 
 You can follow [provision SharePoint-based app](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4).
 
 > [!NOTE]
-> Currently, the building Teams app with sharepoint framework with Teams Toolkit doesn't have direct integration with Azure, the contents in the doc doesn't apply to SPFx based apps.
+> Currently, building a Teams app using SharePoint Framework with Teams Toolkit doesn't have direct integration with Azure AD portal. The content in the document doesn't apply to SPFx-based apps.
 
 <br>
 &nbsp;
 </details>
 <details>
-<summary>How can I deploy the code in Azure using teams toolkit, and use graph API get user profile photo?</summary>
+<summary>How can I deploy the code in Azure AD using Teams Toolkit, and use graph API get the app user's profile photo?</summary>
 
-Shared references to deploy the code using toolkit: 
+Shared references to deploy the code using toolkit:
 
 * [Create a new Teams app using Teams Toolkit](toolkit/create-new-project.md)
 * [TeamsFx Command Line Interface](toolkit/TeamsFx-CLI.md)
 
-You can call Graph API get user profile photo.
+You can call Graph API to get the app user's profile photo.
 
 </details>
