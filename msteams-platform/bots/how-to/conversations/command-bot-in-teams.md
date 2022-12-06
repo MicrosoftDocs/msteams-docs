@@ -9,7 +9,7 @@ ms.localizationpriority: high
 
 # Command bot in Teams
 
-Microsoft Teams allows you to automate simple and repetitive tasks in a conversation. You can build a command bot that can respond to simple commands sent in chats with Adaptive Cards. You can create a command bot template in Teams that responds to chat commands by displaying UI using an Adaptive Card. This enables users to send messages in Teams and your app can provide a response as required.
+Microsoft Teams allows you to automate simple and repetitive tasks in a conversation. You can build a command bot that can respond to simple commands sent in chats with Adaptive Cards. You can create a command bot template in Teams Toolkit that responds to chat commands by displaying UI using an Adaptive Card. This enables users to send messages in Teams and your app can provide a response as required.
 
 The command bot template is built using the TeamsFx SDK, which provides a simple set of functions over the Microsoft Bot Framework to implement the scenario. Command bot can be used in different scenarios such as checking ticket status, and retrieve help information.
 
@@ -190,18 +190,6 @@ By completing the steps of adding a new command and response into your bot app, 
 <br>
 
 </details>
-
-## Extend command bot with other bot scenarios
-
-Command bot is compatible with other bot scenarios such as notification bot and workflow bot.
-
-### Add notifications to your command bot
-
-Notifications add the ability for your app to send Adaptive Cards in response to external events. You can follow the [Placeholder for notification bot steps] to add the notifications to your command bot. For more information on notification bot, see [Placeholder for notification bot in teams].
-
-### Add workflow to your command bot
-
-Adaptive Cards can be updated by user action to allow the user to progress through a series of cards that require their input. You can define the actions and use a bot to return an Adaptive Card in response to the user action. The actions can be linked into sequential workflows. You can follow the [steps to add the workflow card actions](workflow-bot-in-teams.md#add-card-actions) to your command bot. For more information on workflow bot, see [workflow bot in teams](workflow-bot-in-teams.md).
 
 ## Customize trigger pattern
 
