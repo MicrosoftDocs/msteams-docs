@@ -570,7 +570,7 @@ Each command item is an object with the following structure:
 |`parameters.description`|string|128 characters||User-friendly string that describes this parameter’s purpose.|
 |`parameters.value`|string|512 characters||Initial value for the parameter. Currently the value isn't supported|
 |`parameters.inputType`|string|128 characters||Defines the type of control displayed on a task module for`fetchTask: false` . One of `text, textarea, number, date, time, toggle, choiceset` .|
-|`parameters.choices`|array of objects|10 items||The choice options for the`choiceset`. Use only when`parameter.inputType` is `choiceset`.|
+|`parameters.choices`|array of objects|10 items||The choice options for the `choiceset`. Use only when`parameter.inputType` is `choiceset`.|
 |`parameters.choices.title`|string|128 characters|✔️|Title of the choice.|
 |`parameters.choices.value`|string|512 characters|✔️|Value of the choice.|
 
@@ -896,7 +896,7 @@ To create a Teams app manifest file:
 
 <br>
 <details>
-<summary>Here's an example of a example of manifest schema for a tab app with SSO enabled:</summary>
+<summary>Here's an example of an example of manifest schema for a tab app with SSO enabled:</summary>
 <br>
 
 > [!NOTE]
