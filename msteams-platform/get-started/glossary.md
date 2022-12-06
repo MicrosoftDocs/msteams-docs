@@ -46,12 +46,14 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | [Capability](../toolkit/add-capability.md) | A Teams feature you can build into your app for interacting with app users. An app capability is used to extend Teams to fit your app needs. An app may have one or more core capabilities, such as tab, bot, and message extension. <br>**See also**: [Device capability](#d); [Media capability](#m) |
 | [Chat bot](../bots/how-to/conversations/conversation-basics.md) | A bot is also referred to as a chatbot or conversational bot. It's an app that runs simple and repetitive tasks for users such as customer service or support staff. <br> **See also**: [Conversational bot](#c) |
 | Channel | A single place for a team to share messages, tools, and files. You can use a channel for teamwork and communication. <br>**See also**: [Conversation](#c) |
+| Client application | A client application requests authorization from a resource owner to participate in an OAuth 2.0 authorization grant flow, and may access APIs/data on the resource owner's behalf. <br> **See also**: [Authentication flow](#a), [SSO](#s) |
 | [Client secret](../bots/how-to/authentication/bot-sso-register-aad.md) | A secret string that the application uses to prove its identity when requesting a token. Also, it can be referred to as application password. |
 | [Cloud resources](../toolkit/add-resource.md) | A service that is available on cloud through internet that your Teams app can use. It could be storage accounts, web apps, databases, and more. |
 | [Collaboration app](../concepts/extensibility-points.md) | An app with capabilities for a user to work in a collaborative workspace with other users. <br> **See also**: [Standalone app](#s) |
 | [Compose Extension](../resources/schema/manifest-schema.md#composeextensions) | A property in app manifest (`composeExtensions`) that refers to message extension capability. It's used when your extension needs to either authenticate or configure to continue. <br>**See also**: [App manifest](#a); [Message extension](#m) |
 | [CommandBox](../resources/schema/manifest-schema.md) | A type of context in app manifest (`commandBox`) that you can configure to invoke a message extension from Teams command box. |
 | [Connector](../webhooks-and-connectors/what-are-webhooks-and-connectors.md) | It lets users subscribe to receive notifications and messages from the web services. Connectors expose the HTTPS endpoint for the service to post messages to Teams channels, typically in the form of cards. <br> **See also**: [Webhook](#w) |
+| Consent | Consent is the process of a user granting authorization to an application to access protected resources on their behalf. An admin or user can be asked for consent to allow access to their organization/individual data. <br> **See also**: [SSO](#s), [Authentication flow](#a) |
 | Conversation | A series of messages sent between your Microsoft Teams app (tab or bot) and one or more users. A conversation can have three scopes: channel, personal, and group chat. <br>**See also**: [One-on-one chat](#o); [Group chat](#g); [Channel](#c) |
 | [Conversational bot](../bots/how-to/conversations/conversation-messages.md) |  It lets a user interact with your web service using text, interactive cards, and task modules. <br>**See also** [Chat bot](#c) |
 
@@ -130,12 +132,13 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | [Microsoft Teams Platform](../concepts/app-fundamentals-overview.md) | The Microsoft Teams developer platform makes it easy for developers to integrate their own apps and services with Teams. |
 | [Microsoft Teams UI Library](../concepts/design/design-teams-app-ui-templates.md#microsoft-teams-ui-library) | Microsoft Teams UI Library helps you view and test individual Teams UI templates and related components in your browser. |
 | [Microsoft Teams UI Toolkit](../concepts/design/design-teams-app-ui-templates.md#microsoft-teams-ui-library) | Microsoft Teams UI Kit includes components and patterns that are designed specifically for building Teams apps. |
-| [Multi-tenant apps](/tabs/how-to/authentication/tab-sso-register-aad) | Multi-tenant apps are available to users in both their home tenant and other tenants. <br> **See also**: [Single-tenant apps](#s) |
+| [Multi-tenant apps](/tabs/how-to/authentication/tab-sso-register-aad) | A class of application that enables sign in and consent by users provisioned in any Azure AD tenant, including tenants other than the one where the client is registered. <br> **See also**: [Single-tenant apps](#s) |
 
 ## O
 
 | Term | Definition |
 | --- | --- |
+| Object ID | The unique identifier created by Azure AD portal when you register or update your app. It identifies the application object, which defines the application's identity configuration globally (across all tenants where it has access). <br> **See also**: [Application ID](#a), [Tenant ID](#t), [SSO](#s) |
 | [Office 365 Connector](../webhooks-and-connectors/how-to/connectors-creating.md) | It lets you create a custom configuration page for your Incoming Webhook and package them as part of a Teams app. You can send messages primarily using Office 365 Connector cards and have the ability to add a limited set of card actions to them. |
 | [Outgoing Webhook](../webhooks-and-connectors/how-to/add-outgoing-webhook.md) | It acts as a bot and search for messages in channels using @mention. It sends notifications to external web services and responds with rich messages, which include cards and images. <br>**See also**: [Webhook](#w); [Incoming Webhook](#i) |
 | [Outlook channel](../m365-apps/extend-m365-teams-message-extension.md#add-an-outlook-channel-for-your-bot) | A feature of Teams message extension app that lets the users interact with it from Microsoft Outlook. |
@@ -165,7 +168,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 
 | Term | Definition |
 | --- | --- |
-| Scope | Scopes are used to implement scope-based access control, for a client application that has been given delegated access to the resource by its owner. They are resource-defined strings (for example "Mail.Read", "Directory.ReadWrite.All"), managed in the Azure portal. <br> **See also**: [SSO](#s); [Authentication](#a) |
+| Scope | Scopes are used to implement scope-based access control, for a client application that has been given delegated access to the resource by its owner. They are resource-defined strings (for example "Mail.Read", "Directory.ReadWrite.All"), managed in the Azure portal. <br> **See also**: [SSO](#s); [Authentication flow](#a) |
 | [Search commands](../messaging-extensions/how-to/search-commands/define-search-command.md) | A type of message extension app that lets users search external systems and include the search result into a message using a card. <br>**See also**: [Message extensions](#m); [Action commands](#a) |
 | [Sequential workflow](../task-modules-and-cards/cards/universal-actions-for-adaptive-cards/sequential-workflows.md) | A workflow that lets a bot carry out a conversation with a user based on the user response. |
 | [Shared app](../concepts/extensibility-points.md#shared-app-experiences) | An app that exists in a team, channel, or chat where users can collaborate and interact. <br>**See also:** Personal app |
@@ -197,6 +200,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | [Teams Mobile](../concepts/design/plan-responsive-tabs-for-teams-mobile.md) | Microsoft Teams available as a mobile app. |
 | [Teams store](../concepts/deploy-and-publish/appsource/publish.md) | A store landing page that brings apps to users in a single place. The apps are categorized by usage, industry, and more. An app must follow Store validation guidelines and obtain an approval before it's available to users via the Teams store.  <br>**See also**: [Store validation guidelines](#s) |
 | [Teams workbench](../sbs-gs-spfx.yml) | A workbench in Visual Studio Code used at build for Teams apps created using SPFx and Teams Toolkit. <br>**See also**: [Workbench](#w); [Local workbench](#l) |
+| Tenant ID | The unique identifier of a tenant where you app is registered in Azure AD portal. Your app may be classified as a single-tenant or a multi-tenant app. <br> **See also**: [Single-tenant app](#s), [Multi-tenant apps](#m) |
 
 ## U
 
