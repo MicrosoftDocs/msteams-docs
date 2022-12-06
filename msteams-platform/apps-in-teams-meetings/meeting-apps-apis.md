@@ -32,6 +32,8 @@ The following table provides a list of APIs available across the Microsoft Teams
 |[**Get real-time Teams meeting events**](#get-real-time-teams-meeting-events-api)|Fetch real-time meeting events, such as actual start and end time.| [Microsoft Bot Framework SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingstartasync?view=botbuilder-dotnet-stable&preserve-view=true) |
 | [**Get incoming audio state**](#get-incoming-audio-state) | Allows an app to get the incoming audio state setting for the meeting user.| [Microsoft Teams JavaScript library SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
 | [**Toggle incoming audio**](#toggle-incoming-audio) | Allows an app to toggle the incoming audio state setting for the meeting user from mute to unmute or vice-versa.| [Microsoft Teams JavaScript library SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
+| [**Raise Hand API**](#raise-hand-API) | Allows an app to notify hand raised by the user during the meeting.| [Microsoft Teams library SDK](/javascript/api/@microsoft/teams-js/meeting.iraisehandstate?view=msteams-client-js-latest) |
+| [**Reaction API**](#reaction-API) | Allows an app to notify the reaction given by the user during the meeting.| [Microsoft Teams JavaScript library SDK](/javascript/api/@microsoft/teams-js/meeting.meetingreactiontype?view=msteams-client-js-latest) |
 
 ## Get user context API
 
@@ -1003,6 +1005,139 @@ The following table provides the response codes:
 | Meeting Events Sample | Sample app to show real-time Teams meeting events|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/nodejs)|
 | Meeting Recruitment Sample |Sample app to show meeting experience for recruitment scenario.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/nodejs)|
 | App installation using QR code |Sample app that generates the QR code and installs the app using the QR code|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-installation-using-qr-code/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-installation-using-qr-code/nodejs)|
+
+## Raise Hand API
+
+The onRaisehandChangeHandler API allows an app to show that the user has raised his hand during the meeting. The API is available through the Teams client SDK.
+
+## Manifest
+
+Use the following example to configure your app manifest's  `authorization` properties for any private meeting:
+
+```JSON
+"authorization": {
+ "permissions": {
+  "resourceSpecific": [
+   {
+    "name": "MeetingParticipantReaction.Read.Chat",
+    "type": "Delegated"
+   }
+  ]
+ }
+}
+
+Use the following example to configure your app manifest's authorization properties for any group meeting:
+
+```JSON
+"authorization": {
+ "permissions": {
+  "resourceSpecific": [
+   {
+    "name": "MeetingParticipantReaction.Read.Group",
+    "type": "Delegated"
+   }
+  ]
+ }
+}
+
+## Example
+
+export interface IRaiseHandState { 
+    /** Indicates whether the selfParticipant's hand is raised or not*/ 
+    isHandRaised: boolean; 
+  } 
+ 
+ 
+  export interface IRaiseHandStateChangedEventData { 
+    /** 
+     * entire raiseHandState object for the selfParticipant 
+     */ 
+    raiseHandState: IRaiseHandState; 
+ 
+ 
+    /** 
+     * error object in case there is a failure 
+     */ 
+    error?: SdkError; 
+  } 
+    { 
+{
+// Shows the hand raised by user when returned true.
+  raiseHandState: { isHandRaised: true }}, 
+
+//Displays error message
+  error: undefined 
+     } 
+
+## Response code
+
+| Response code | Description |
+| 500 | Internal code error, permission failure, reaction not enabled |
+
+## Reaction API
+
+The onReactionHandler API allows an app to get the reaction of the user reacted during the meeting. The API is available through the Teams client SDK.
+
+## Manifest
+
+Use the following example to configure your app manifest's  `authorization` properties for any private meeting:
+
+```JSON
+"authorization": {
+ "permissions": {
+  "resourceSpecific": [
+   {
+    "name": "MeetingParticipantReaction.Read.Chat",
+    "type": "Delegated"
+   }
+  ]
+ }
+}
+
+Use the following example to configure your app manifest's authorization properties for any group meeting:
+
+```JSON
+"authorization": {
+ "permissions": {
+  "resourceSpecific": [
+   {
+    "name": "MeetingParticipantReaction.Read.Group",
+    "type": "Delegated"
+   }
+  ]
+ }
+}
+
+## Example
+
+export enum MeetingReactionType { 
+    like = 'like', 
+    heart = 'heart', 
+    laugh = 'laugh', 
+    surprised = 'surprised', 
+    applause = 'applause', 
+  } 
+ 
+  export interface IMeetingReactionReceivedEventData { 
+    /** 
+     * Indicates the type of MeetingReaction received 
+     */ 
+    meetingReactionType?: MeetingReactionType; 
+    /** 
+     * error object in case there is a failure 
+     */ 
+    error?: SdkError; 
+  } 
+{ 
+  meetingReactionType: MeetingReactionType.laugh, 
+  error: undefined 
+ } 
+
+## Response code
+
+| Response code | Description |
+| 500 | Internal code error, permission failure, reaction not enabled |
+
 
 ## See also
 
