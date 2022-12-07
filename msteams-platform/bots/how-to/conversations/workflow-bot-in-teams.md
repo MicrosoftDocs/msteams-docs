@@ -485,49 +485,7 @@ You need to often connect to existing APIs for retrieving data to send to Teams.
 
 <summary><b>How to extend workflow bot with notifications?</b></summary>
 
-Notifications add the ability in your application to send Adaptive Cards in response to external events. For example, when a message is posted to an Event Hub, your application can respond and send an appropriate Adaptive Card to Teams.
-
-The following steps help you to add the notification:
-
-1. You can navigate to file `bot\src\internal\initialize.js(ts)`.
-
-1. You need to update your `conversationBot` initialization, to enable the notifications:
-
-   ```initialize.js(ts)
-
-   const conversationBot = new ConversationBot({
-     ...
-     cardAction: {
-       enabled: true,
-       actions: [
-         new Handler1()
-       ],
-     },
-     notification: {
-       enabled: true
-     }
-   });
-
-   ```
-
-1. You can add the following sample code in your sample notification triggered by HTTP request to your file `bot\src\index.js(ts)`:
-
-   ```index.js(ts)
-
-      server.post("/api/notification", async (req, res) => {
-
-      for (const target of await conversationBot.notification.installations()) {
-       await target.sendMessage("This is a sample notification message");
-     }
-
-      res.json({});
-     });
-
-   ```
-
-1. You need to uninstall your previous bot from Teams, and select `F5` to start your application.
-
-1. You can now send a notification to the bot installation targets (channel, group chat, or personal chat) by using your favorite tool to send HTTP POST request to `https://localhost:3978/api/notification`.
+Notifications add the ability in your app to send Adaptive Cards in response to external events. For example, when a message is posted to an Event Hub, your application can respond and send an appropriate Adaptive Card to Teams. How to extend workflow bot with notifications, see [customize notifications](notification-bot-in-teams.md#customize-notification).
 
 <br>
 
@@ -537,7 +495,7 @@ The following steps help you to add the notification:
 
 <summary><b>How to extend workflow bot with command and response?</b></summary>
 
-The default workflow bot comes with command and response. See, [how to add more command and response](https://github.com/OfficeDev/TeamsFx/wiki/Respond-to-chat-commands-in-Teams#How-to-add-more-command-and-response).
+The default workflow bot comes with command and response. For more information to extend workflow bot with command and response, see [add command and response](command-bot-in-teams.md#add-command-and-response).
 
 <br>
 
