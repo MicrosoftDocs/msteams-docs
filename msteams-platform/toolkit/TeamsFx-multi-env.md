@@ -152,7 +152,7 @@ Follow these steps for customization:
 4. Open config file `.fx\configs\config.staging.json`.
 5. Add the same property to **my app description for staging**.
 6. Open Teams app manifest template `templates\appPackage\manifest.template.json`.
-7. Update the property `description` > `short` to use the **variable** defined in configure files with braces syntax `{{config.manifest.description.short}}`.
+7. Update the property `description` > `short` to use the variable defined in configure files with braces syntax `{{config.manifest.description.short}}`.
   
   The updates to `manifest.template.json` are:
 
