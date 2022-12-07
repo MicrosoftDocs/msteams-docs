@@ -32,6 +32,7 @@ The following table provides a list of APIs available across the Microsoft Teams
 |[**Get real-time Teams meeting events**](#get-real-time-teams-meeting-events-api)|Fetch real-time meeting events, such as actual start and end time.| [Microsoft Bot Framework SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingstartasync?view=botbuilder-dotnet-stable&preserve-view=true) |
 | [**Get incoming audio state**](#get-incoming-audio-state) | Allows an app to get the incoming audio state setting for the meeting user.| [Microsoft Teams JavaScript library SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
 | [**Toggle incoming audio**](#toggle-incoming-audio) | Allows an app to toggle the incoming audio state setting for the meeting user from mute to unmute or vice-versa.| [Microsoft Teams JavaScript library SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
+|[Targeted meeting notification API](#targeted-meeting-notification-api) | Targeted meeting notification allows you to send notification to specific participants in a meeting stage during a meeting. | [Microsoft Teams JavaScript library SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
 
 ## Get user context API
 
@@ -288,14 +289,12 @@ Targeted meeting notifications enhance meeting experience and develop user engag
 > [!NOTE]
 >
 > * The API payload only permits task module with URL.
-> * The targeted notification can be sent to any participants who can view the meeting notification.
 >
-> The supported format for user ID (the `id` value available from GetMeetingParticipant/GetMembers API):
+> * Supported format for user ID is (the `id` value available from GetMeetingParticipant/GetMembers API):
+>   * Pairwise MRI for Azure Active Directory user (29:< encrypted id>).
+>   * Example of pairwise ID:
 >
-> * Pairwise MRI for Azure Active Directory user (29:< encrypted id>).
-> * Example of the pairwise ID:
->
-> :::image type="content" source="../assets/images/apps-in-meetings/pairwise-id.png" alt-text="Screenshot displaying the example of pairwise ID.":::
+>     :::image type="content" source="../assets/images/apps-in-meetings/pairwise-id.png" alt-text="Screenshot displaying the example of pairwise ID.":::
 >
 > * AAD Object ID and UPN are not supported.
 
@@ -346,13 +345,13 @@ You can find examples of how to configure RSC permission on the app manifest fro
 
 | Property name | Description |
 |---|---|
-| **meetingId** | The meeting identifier is available through bot invoke and Teams Client SDK. |
-| **type** |**TargetedMeetingNotification** keyword. |
-| **recipients** | List of user IDs. One way to retrieve user IDs for meeting participants is through [Get participant API](#get-participant-api). You can retrieve the entire list of chat roster using [Fetch the roster or user profile](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile). Empty or null recipients list will return 400.|
-| **surface** | **MeetingStage** keyword. |
-| **contentType** | **Task** keyword. |
+| **meetingId** | The meeting ID is available through bot invoke and Teams Client SDK. |
+| **type** |`targetedMeetingNotification` keyword. |
+| **recipients** | List of user IDs. Get user IDs for meeting participants through [Get participant API](#get-participant-api). Get the entire list of chat roster using [Fetch the roster or user profile](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile). Empty or null recipients list will return 400.|
+| **surface** | `meetingStage` keyword. |
+| **contentType** | `task` keyword. |
 | **onBehalfOf.itemid** | Describes identification of the item. Its value must be 0. |
-| **onBehalfOf.mentionType** | **Person** keyword. Describes the mention of a person. |
+| **onBehalfOf.mentionType** | `person` keyword. Describes the mention of a person. |
 | **onBehalfOf.mri** | User MRI shown as sender. |
 
 Following are the optional properties:
@@ -364,7 +363,7 @@ Following are the optional properties:
 | **content.value.title** | Requested height of the notification. |
 | **content.value.url** | URL to be rendered in the notification, make sure the URL is part of **validDomains** in app manifest. If empty string or no URL is provided, nothing will be rendered on a meeting notification. |
 | **ChannelData.OnBehalfOf** | This is to support [User attributes](../messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md#respond-to-the-task-module-submit-action). |
-| **onBehalfOf.displayName** | Name of the person. Used as fallback in case the name resolution is unavailable. |
+| **onBehalfOf.displayName** | Name of the `person`. Used as fallback in case the name resolution is unavailable. |
 
 ### Response code
 
@@ -377,7 +376,7 @@ The following table includes the response codes:
 | **400** | Meeting notification request payload validation fails. |
 | **401** | Bot token is invalid. |
 | **403** | Bot is not allowed to send the notification. |
-| **404** | Meeting chat is not found or None of the participants were found in the roster. |
+| **404** | Meeting chat is not found or none of the participants were found in the roster. |
 
 ## Get meeting details API
 

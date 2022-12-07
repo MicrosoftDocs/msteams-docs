@@ -114,7 +114,7 @@ GET POST /v1/meetings/{meetingId}/notification
 }
 ```
 
-You can find examples of how to configure RSC permission on the app manifest from [Get meeting details API](meeting-apps-apis.md#get-meeting-details-api)
+You can find examples of how to configure RSC permission on the app manifest from [Get meeting details API](meeting-apps-apis.md#get-meeting-details-api).
 
 ## Code sample
 
