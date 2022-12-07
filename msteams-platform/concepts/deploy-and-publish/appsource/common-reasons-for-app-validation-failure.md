@@ -178,13 +178,13 @@ You must avoid the following issues that occur in 20% of apps that are rejected 
 
 * No Test instructions or credentials to test the app.
 
+ :::image type="content" source="../../../assets/images/submission/validation-common-reason-fail-no-test-instructions.png" alt-text="Screenshot of the image for no test instructions or credentials are sufficient.":::
+
 * Only one test account provided when there's a dependency with two test accounts to test collaboration scenarios.
 
    :::image type="content" source="../../../assets/images/submission/validation-common-reason-failed-test-collaboration-scenarios.png" alt-text="Screenshot of the image for the failed scenario of test collaboration.":::
 
 * The provided test instructions and credentials aren't sufficient to complete app functional testing.
-
-   :::image type="content" source="../../../assets/images/submission/validation-common-reason-fail-no-test-instructions.png" alt-text="Screenshot of the image for no test instructions or credentials are sufficient.":::
 
    :::image type="content" source="../../../assets/images/submission/validation-common-reason-pass-provided-test-instructions.png" alt-text="Screenshot of pass image for provided test instructions or credentials aren't sufficient.":::
 
@@ -202,7 +202,13 @@ Icons are one of the main elements people see when browsing the Microsoft Teams 
 
 * App submissions that contain app packages with different color and outline icons or non-white and non-transparent outline icons.
 
+   :::image type="content" source="../../../assets/images/submission/validation-common-reason-pass-color-icon-outline.png" alt-text="Screenshot of image to show the passed scenario of color icon and outline icon.":::
+
+   :::image type="content" source="../../../assets/images/submission/validation-common-reason-fail-color-icon-outline.png" alt-text="Screenshot of image to show the failed scenario of color icon and outline icon.":::
+
 * App submissions with different logos in Partner Center and the app package submitted for review.
+
+   :::image type="content" source="../../../assets/images/submission/validation-common-reason-fail-partner-center-manifest-different.png" alt-text="Screenshot to show the failed scenario of partner center and manifest which are different.":::
 
 ## App name
 
@@ -215,8 +221,6 @@ Your app name plays a critical role for users to discover your app on the Micros
    :::image type="content" source="../../../assets/images/submission/validation-common-reason-fail-inconsistent-app-functionality.png" alt-text="Screenshot of image to show fail inconsistent usage of app name in app's functionality.":::
 
 * Mismatch between the app name mentioned in the app manifest submitted as part of the app package and Partner Center.
-
-   :::image type="content" source="../../../assets/images/submission/validation-common-reason-fail-partner-center-manifest-different.png" alt-text="Screenshot to show the failed scenario of partner center and manifest which are different.":::
 
 * App names appended with *Beta*, *Dev*, and *Prod* to indicate app isn't production ready.
 
@@ -257,10 +261,6 @@ You must update the app version declared in the manifest if you're submitting an
    :::image type="content" source="../../../assets/images/submission/validation-common-reason-pass-app-version-number.png" alt-text="Screenshot to show the app version number incremented.":::
 
 Your app package must only contain your app’s manifest, color icon, and outline icon. App packages that contain any other additional files or folders fail app review.
-
-   :::image type="content" source="../../../assets/images/submission/validation-common-reason-pass-color-icon-outline.png" alt-text="Screenshot of image to show the passed scenario of color icon and outline icon.":::
-
-   :::image type="content" source="../../../assets/images/submission/validation-common-reason-fail-color-icon-outline.png" alt-text="Screenshot of image to show the failed scenario of color icon and outline icon.":::
 
 ## App UI
 
