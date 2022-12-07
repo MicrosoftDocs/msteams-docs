@@ -44,15 +44,15 @@ You can also add the Teams display picture and people card of the user to in-mee
 
 ## Targeted meeting notification
 
-Targeted meeting notifications enhance meeting experience and develop user engagement activities in Teams meetings. You can send notifications to specific participants in a meeting stage during a meeting. The notifications are private and are only sent to the specific or targeted participants in a meeting.
+Targeted meeting notifications help to enhance meeting experience and develop user engagement activities in Teams meetings. You can send notifications to specific participants from a meeting stage. The notifications are private and are only sent to the specific or targeted participants in a meeting.
 
 > [!NOTE]
 >
-> * Adaptive Cards are not supported.
-> * Targeted meeting notification supports private scheduled, recurring meeting, Meet now, one-on-one calls, and group calls.
-> * The notification can only be sent to 10 users.
+> * Targeted meeting notification isn't supported for Adaptive Cards.
+> * Targeted meeting notification is supported for private and recurring scheduled meetings, Meet now, one-on-one calls, and group calls.
+> * You can only send targeted meeting notifications to 10 participants.
 
-The following image is an example of targeted meeting notification sent to a specific participant in the meeting:
+The following image is an example of a targeted meeting notification sent to a specific participant during the meeting:
 
   :::image type="content" source="../assets/images/apps-in-meetings/reminder-sent.png" alt-text="Screenshot displaying the reminder sent to a participant in the meeting.":::
 
@@ -67,13 +67,14 @@ Get the RSC permissions by configuring the `authorization` property, `name`, and
       "resourceSpecific": [
         {
           "name": "OnlineMeetingNotification.Send.Chat",
-          "type": "Application"        }
+          "type": "Application"
+        }
       ]
     }
   }
 ```
 
-Following is an example of request payload:
+Following is an example of a request payload:
 
 ```http
 GET POST /v1/meetings/{meetingId}/notification
@@ -114,7 +115,7 @@ GET POST /v1/meetings/{meetingId}/notification
 }
 ```
 
-You can find examples of how to configure RSC permission on the app manifest from [Get meeting details API](meeting-apps-apis.md#get-meeting-details-api).
+For more information on `targetedMeetingNotification`, see [Meeting apps APIs](meeting-apps-apis.md#targeted-meeting-notification-api).
 
 ## Code sample
 

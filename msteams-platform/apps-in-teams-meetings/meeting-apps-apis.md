@@ -32,7 +32,7 @@ The following table provides a list of APIs available across the Microsoft Teams
 |[**Get real-time Teams meeting events**](#get-real-time-teams-meeting-events-api)|Fetch real-time meeting events, such as actual start and end time.| [Microsoft Bot Framework SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingstartasync?view=botbuilder-dotnet-stable&preserve-view=true) |
 | [**Get incoming audio state**](#get-incoming-audio-state) | Allows an app to get the incoming audio state setting for the meeting user.| [Microsoft Teams JavaScript library SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
 | [**Toggle incoming audio**](#toggle-incoming-audio) | Allows an app to toggle the incoming audio state setting for the meeting user from mute to unmute or vice-versa.| [Microsoft Teams JavaScript library SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
-|[**Targeted meeting notification API**](#targeted-meeting-notification-api) | Targeted meeting notification allows you to send notification to specific participants in a meeting stage during a meeting. | [Microsoft Teams JavaScript library SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
+|[**Targeted meeting notification API**](#targeted-meeting-notification-api) | Targeted meeting notification allows you to send notification to specific participants in a meeting stage during a meeting. | [Microsoft Teams JavaScript library SDK](Need to confirm with Kartik) |
 
 ## Get user context API
 
@@ -66,6 +66,7 @@ The following table includes the query parameters:
 ### Example
 
 # [C#](#tab/dotnet)
+
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetingparticipantasync?view=botbuilder-dotnet-stable&preserve-view=true)  
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-context-app/csharp/MeetingContextApp/Bots/MeetingContextBot.cs#L33)
 
@@ -204,6 +205,7 @@ The following table includes the query parameter:
 > * The URL is the page, which loads as `<iframe>` in the in-meeting notification. The domain must be in the apps' `validDomains` array in your app manifest.
 
 # [C#](#tab/dotnet)
+
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityextensions.teamsnotifyuser?view=botbuilder-dotnet-stable#microsoft-bot-builder-teams-teamsactivityextensions-teamsnotifyuser(microsoft-bot-schema-iactivity)&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-proactive-messaging/csharp/proactive-cmd/Program.cs#L178)
 
@@ -288,19 +290,19 @@ The following table includes the response codes:
 
 ## Targeted meeting notification API
 
-Targeted meeting notifications enhance meeting experience and develop user engagement activities in Teams meetings. You can send notifications to specific participants in a meeting stage during a meeting. The notifications are private and are only sent to the specific or targeted participants in a meeting.
+The `targetedMeetingNotification` API allows you to send notifications to specific participants in a meeting stage. You can send a targeted meeting notification based on user action. The API is available through Teams Client SDK.
 
 > [!NOTE]
 >
-> * The API payload only permits task module with URL.
+> * The API payload only permits a task module with a URL.
 >
-> * Supported format for user ID is (the `id` value available from GetMeetingParticipant/GetMembers API):
->   * Pairwise MRI for Azure Active Directory user (29:< encrypted id>).
->   * Example of pairwise ID:
+> * The supported user ID format for Azure Active Directory is pairwise MRI (29:< encrypted id >).
+> * You can get the encrypted ID from [GetMeetingParticipant API](#get-participant-api) or [GetMembers API](/rest/api/azure/devops/memberentitlementmanagement/members/get?view=azure-devops-rest-7.0).
+>   * Following is an example of pairwise ID:
 >
 >     :::image type="content" source="../assets/images/apps-in-meetings/pairwise-id.png" alt-text="Screenshot displaying the example of pairwise ID.":::
 >
-> * AAD Object ID and UPN are not supported.
+> * The user ID formats **aadObjectid** and **UPN** aren't supported.
 
 ### Example
 
@@ -345,12 +347,10 @@ GET POST /v1/meetings/{meetingId}/notification
 }
 ```
 
-You can find examples of how to configure RSC permission on the app manifest from [Get meeting details API](meeting-apps-apis.md#get-meeting-details-api).
-
 | Property name | Description |
 |---|---|
 | **meetingId** | The meeting ID is available through bot invoke and Teams Client SDK. |
-| **type** |`targetedMeetingNotification` keyword. |
+| **type** |`targetedMeetingNotification` |
 | **recipients** | List of user IDs. Get user IDs for meeting participants through [Get participant API](#get-participant-api). Get the entire list of chat roster using [Fetch the roster or user profile](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile). Empty or null recipients list will return 400.|
 | **surface** | `meetingStage` keyword. |
 | **contentType** | `task` keyword. |
@@ -801,6 +801,7 @@ The bot receives event through the `OnEventActivityAsync` handler. To deserializ
 The following code shows how to capture the metadata of a meeting that is `MeetingType`, `Title`, `Id`, `JoinUrl`, `StartTime`, and `EndTime` from a meeting start/end event:
 
 Meeting Start Event
+
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingstartasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-teams-teamsactivityhandler-onteamsmeetingstartasync(microsoft-bot-schema-teams-meetingstarteventdetails-microsoft-bot-builder-iturncontext((microsoft-bot-schema-ieventactivity))-system-threading-cancellationtoken)&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L34)
 
@@ -821,6 +822,7 @@ protected override async Task OnTeamsMeetingStartAsync(MeetingStartEventDetails 
 ```
 
 Meeting End Event
+
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingendasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-teams-teamsactivityhandler-onteamsmeetingendasync(microsoft-bot-schema-teams-meetingendeventdetails-microsoft-bot-builder-iturncontext((microsoft-bot-schema-ieventactivity))-system-threading-cancellationtoken)&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L51)
 
