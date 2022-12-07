@@ -1008,10 +1008,10 @@ The following table provides the response codes:
 
 ## Raise Hand API
 
-The `onRaisehandChangeHandler` API allows an app to show that the user has raised his hand during the meeting. The API is available through the Teams client SDK.
+The `onRaisehandChangeHandler` API allows an app to show that the user has raised hand during the meeting. The API is available through the Teams client SDK.
 
 > [!NOTE]
-> RaiseHand API is not applicable for pre-meeting and post-meeting scenarios. 
+> RaiseHand API is not applicable for pre-meeting and post-meeting scenarios.
 
 ### Manifest
 
