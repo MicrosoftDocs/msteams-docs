@@ -97,7 +97,7 @@ start().catch((error) => console.error(error));
 
 Not all of your app's views need to be collaborative. The `stage` view _always_ needs collaborative features, the `content` view _may_ need collaborative features, and the `config` view should _never_ need collaborative features. For the views that do need collaborative features you'll need to join a Fluid container associated with the current meeting.
 
-Joining the container for the meeting is as simple as initializing the [LiveShareClient](/javascript/api/@microsoft/live-share/liveshareclient) with a `LiveShareHost` instance from the TeamsClient SDK, and then calling its [joinContainer()](/javascript/api/@microsoft/live-share/liveshareclient#@microsoft-live-share-liveshareclient-joincontainer) method.
+Joining the container for the meeting is as simple as initializing the [LiveShareClient](/javascript/api/@microsoft/live-share/liveshareclient) with a `LiveShareHost` instance from the Teams Client SDK, and then calling its [joinContainer()](/javascript/api/@microsoft/live-share/liveshareclient#@microsoft-live-share-liveshareclient-joincontainer) method.
 
 When running locally, you can initialize `LiveShareClient` with a `TestLiveShareHost` instance instead.
 
