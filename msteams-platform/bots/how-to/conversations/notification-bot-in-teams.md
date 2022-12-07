@@ -82,8 +82,7 @@ A notification bot needs to be installed into a team, or a group chat, or as per
 
 :::image type="content" source="../../../assets/images/notification-bot/notification-installation-scope.png" alt-text="add installation scope":::
 
-> [!NOTE]
-> For more install options, see [configure default install options](../../../concepts/deploy-and-publish/apps-publish-overview.md#configure-default-install-options).
+For more install options, see [configure default install options](../../../concepts/deploy-and-publish/apps-publish-overview.md#configure-default-install-options).
 
 ## Customize notification
 
