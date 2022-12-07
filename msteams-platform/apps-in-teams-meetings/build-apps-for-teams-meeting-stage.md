@@ -220,6 +220,10 @@ The following participant roles may be involved during the meeting:
 | In-meeting notification | Demonstrates how to implement in-meeting notification using bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs) |
 | In-meeting document signing | Demonstrates how to implement a document signing Teams app. Includes sharing specific app content to stage, Teams SSO, and user specific stage view. | [View](https://github.com/officedev/microsoft-teams-samples/tree/main/samples/meetings-share-to-stage-signing/csharp) | NA |
 
+## Raise hand and Reaction APIs
+
+The third party user subscribes to the APIs and get the data by passing the handler. On subscription, the handler provides feedback to the API. Teams will use the error object `callback` provided by the handler when it fails and checks if the `callback` is true or false. Based on the event handling, results are displayed and the information changes according the response in the API. For more information, see also [Meetings app APIs](/microsoftteams/platform/apps-in-teams-meetings/meeting-apps-apis)
+
 ## Step-by-step guide
 
 Follow the [step-by-step guide](../sbs-inmeeting-document-signing.yml) to build an in-meeting document signing app.
