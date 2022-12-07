@@ -164,7 +164,7 @@ items:
     9. Press **F5** to run the project.
        A web page opens. 
 
-       :::image type="content" source="../../../assets/images/sbs-connector/local-host.png" alt-text="Screenshot of Teams ToDo App displaying the details of tasks.":::   
+       :::image type="content" source="~/assets/images/sbs-connector/local-host.png" alt-text="Screenshot of Teams ToDo App displaying the details of tasks.":::   
 
 - title: Test connector in Microsoft Teams
   durationInMinutes: 5
@@ -212,7 +212,7 @@ items:
 
        After configuration, you can see notification in channel with link to **Task Manager Portal**.
 
-       :::image type="content" source="../../../assets/images/sbs-connector/notification.png" alt-text="Screenshot of Teams ToDo Notification Inline Config displaying the confirmation of Teams ToDo Notification In-line Config set up details. ":::
+       :::image type="content" source="~/assets/images/sbs-connector/notification.png" alt-text="Screenshot of Teams ToDo Notification Inline Config displaying the confirmation of Teams ToDo Notification In-line Config set up details. ":::
 
     12. Go to **Task Manager Portal**.
 
@@ -234,7 +234,7 @@ items:
       
         The message card appears in registered Teams channel.
        
-        :::image type="content" source="../../../assets/images/sbs-connector/messagecard.png" alt-text="Screenshot of Teams ToDo Notification-Inline Config displaying the details of task created.":::
+        :::image type="content" source="~/assets/images/sbs-connector/messagecard.png" alt-text="Screenshot of Teams ToDo Notification-Inline Config displaying the details of task created.":::
 
         > [!TIP]
         > You can try the actionable buttons available on the message card.
