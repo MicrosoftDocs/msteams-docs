@@ -33,7 +33,7 @@ Implement a message extension if your scenario requires any of the following:
 
 ## Workload-specific guidance
 
-The following sections show some example scenarios and, for each, whether a message extension or Outlook Add-in is best suited to the task.
+The following sections illustrate how the guidance above is applied to some example scenarios and, for each, whether a message extension or Outlook Add-in is best suited to the task.
 
 ### Customer Relation Management (CRM) 
 
