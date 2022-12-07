@@ -56,6 +56,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | Consent | Consent is the process of a user granting authorization to an application to access protected resources on their behalf. An admin or user can be asked for consent to allow access to their organization/individual data. <br> **See also**: [SSO](#s), [Authentication flow](#a) |
 | Conversation | A series of messages sent between your Microsoft Teams app (tab or bot) and one or more users. A conversation can have three scopes: channel, personal, and group chat. <br>**See also**: [One-on-one chat](#o); [Group chat](#g); [Channel](#c) |
 | [Conversational bot](../bots/how-to/conversations/conversation-messages.md) |  It lets a user interact with your web service using text, interactive cards, and task modules. <br>**See also** [Chat bot](#c) |
+| Customer-owned apps | An app that is created by you or your organization meant for use by other Teams app users outside the organization. It can be made available on Teams store. <br> [Store validation guidelines](#s), [Microsoft store](#s), [LOB apps](#l), [Personal apps](#p), [Shared apps](#s) |
 
 ## D
 
@@ -110,6 +111,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | Term | Definition |
 | --- | --- |
 | [Link unfurling](../messaging-extensions/how-to/link-unfurling.md) | A feature used with message extension and meeting to unfold links pasted into a compose message area. The links expand to show additional information about the link in Adaptive Cards or in the meeting stage view. |
+| LOB apps | Line of business (LOB) applications are internal or specific within an organization or business. It's custom to that organization. Your organization can make LOB applications available through Microsoft Store. <br> **See also**: [Store validation guidelines](#s), [Teams store](#t), [Personal app](#p), [Shared app](#s),  <br> For more information, see [Configure your tab app in Azure AD](../tabs/how-to/authentication/tab-sso-register-aad.md). |
 | [Local environment](../toolkit/TeamsFx-multi-env.md#create-new-environment) | A default development environment created by Teams Toolkit.  <br>**See also**: [Environment](#e); [Dev environment](#d) |
 | [Local workbench](../sbs-gs-spfx.yml) | The default option to run and debug a Teams app in Visual Studio Code that is created using SPFx. <br>**See also**: [Workbench](#w); [Teams workbench](#t) |
 | [Location capability](../concepts/device-capabilities/location-capability.md) | A device capability that you can integrate with your app to know the geographical location of the app user for an enhanced collaborative experience. This feature is currently available only for Teams mobile clients only. <br>**See also**: [Capability](#c); [Media capability](#m); [Device Capability](#d); [Teams Mobile](#t) |
@@ -132,6 +134,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | [Microsoft Teams Platform](../concepts/app-fundamentals-overview.md) | The Microsoft Teams developer platform makes it easy for developers to integrate their own apps and services with Teams. |
 | [Microsoft Teams UI Library](../concepts/design/design-teams-app-ui-templates.md#microsoft-teams-ui-library) | Microsoft Teams UI Library helps you view and test individual Teams UI templates and related components in your browser. |
 | [Microsoft Teams UI Toolkit](../concepts/design/design-teams-app-ui-templates.md#microsoft-teams-ui-library) | Microsoft Teams UI Kit includes components and patterns that are designed specifically for building Teams apps. |
+| Microsoft store | It's a digital distribution platform operated by Microsoft. it's also known as Windows store. <br> [Teams store](#t) |
 | [Multi-tenant apps](/tabs/how-to/authentication/tab-sso-register-aad) | A class of application that enables sign in and consent by users provisioned in any Azure AD tenant, including tenants other than the one where the client is registered. <br> **See also**: [Single-tenant apps](#s) |
 
 ## O
@@ -198,7 +201,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | [TeamsFx SDK](../toolkit/teamsfx-sdk.md) | TeamsFx SDK is pre-configured in scaffolded project using TeamsFx toolkit or CLI. |
 | [TeamsJS SDK](../tabs/how-to/using-teams-client-sdk.md) | TeamsJS SDK enables you to create hosted experiences in Teams. Starting with TeamsJS v.2.0.0, you can extend Teams apps to run in Outlook and Office. |
 | [Teams Mobile](../concepts/design/plan-responsive-tabs-for-teams-mobile.md) | Microsoft Teams available as a mobile app. |
-| [Teams store](../concepts/deploy-and-publish/appsource/publish.md) | A store landing page that brings apps to users in a single place. The apps are categorized by usage, industry, and more. An app must follow Store validation guidelines and obtain an approval before it's available to users via the Teams store.  <br>**See also**: [Store validation guidelines](#s) |
+| [Teams store](../concepts/deploy-and-publish/appsource/publish.md) | A store landing page that brings apps to users in a single place. The apps are categorized by usage, industry, and more. An app must follow Store validation guidelines and obtain an approval before it's available to users via the Teams store.  <br>**See also**: [Store validation guidelines](#s), [Microsoft store](#m) |
 | [Teams workbench](../sbs-gs-spfx.yml) | A workbench in Visual Studio Code used at build for Teams apps created using SPFx and Teams Toolkit. <br>**See also**: [Workbench](#w); [Local workbench](#l) |
 | Tenant ID | The unique identifier of a tenant where you app is registered in Azure AD portal. Your app may be classified as a single-tenant or a multi-tenant app. <br> **See also**: [Single-tenant app](#s), [Multi-tenant apps](#m) |
 
