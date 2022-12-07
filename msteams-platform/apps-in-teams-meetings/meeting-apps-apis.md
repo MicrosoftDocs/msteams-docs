@@ -290,7 +290,7 @@ Targeted meeting notifications enhance meeting experience and develop user engag
 > * The API payload only permits task module with URL.
 > * The targeted notification can be sent to any participants who can view the meeting notification.
 >
-> The supported format for user IDs (the `id` value available from GetMeetingParticipant/ GetMembers API):
+> The supported format for user ID (the `id` value available from GetMeetingParticipant/GetMembers API):
 >
 > * Pairwise MRI for Azure Active Directory user (29:< encrypted id>).
 > * Example of the pairwise ID:
