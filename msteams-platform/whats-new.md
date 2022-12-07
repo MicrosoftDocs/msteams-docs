@@ -24,6 +24,12 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 Teams platform features that are available to all app developers.
 
+**2022 December**
+
+* ***December 07, 2022***: [Notification bot in Teams](bots/how-to/conversations/notification-bot-in-teams.md)
+
+* ***December 07, 2022***: [Command bot in Teams](bots/how-to/conversations/command-bot-in-teams.md)
+
 **2022 November**
 
 * ***November 29, 2022***: [Plan analytics for your Teams app](concepts/design/overview-analytics.md)
@@ -300,15 +306,17 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 
 Developer preview is a public program that provides early access to unreleased Teams platform features.
 
-**2022 November**
+**2022 December**
 
-***November 11, 2022***: [Enable bots to receive all chat messages without being @mentioned](bots/how-to/conversations/channel-messages-with-rsc.md).
+***December 05, 2022***: [Introduced share in meeting to share any document or third-party app to the meeting stage](concepts/build-and-test/share-in-meeting.md).
+
 :::column-end:::
 :::row-end:::
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ------------------ |
-|10/11/2022|Generate a deep link to share content to stage in meetings.|Build apps for Teams meetings and calls > Enable and configure apps for meetings > [Generate a deep link to share content to stage in meetings.](apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#generate-a-deep-link-to-share-content-to-stage-in-meetings)|
+|10/11/2022| Enable bots to receive all chat messages without being @mentioned.|Build bots > Bot conversations > Message in bot conversations > [Receive all conversation messages with RSC](bots/how-to/conversations/channel-messages-with-rsc.md) |
+|10/11/2022|Generate a deep link to share content to stage in meetings.|Build apps for Teams meetings and calls > Enable and configure apps for meetings > Share in meeting > [Generate a deep link to share content to stage in meetings.](concepts/build-and-test/share-in-meeting.md) |
 | 09/23/2022 | Introduced meeting app support for Scheduled Channel Meetings. | Build apps for Teams meetings and calls > [Apps for Teams meetings and calls](apps-in-teams-meetings/teams-apps-in-meetings.md) |
 | 08/23/2022 | Share apps to the Teams meeting stage in mobile | Build apps for Teams meetings and calls > [Enable and configure apps for meetings](/microsoftteams/platform/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings) |
 | 08/10/2022 | Apps for scheduled public channel meetings | Build apps for Teams meetings and calls > [Overview](apps-in-teams-meetings/teams-apps-in-meetings.md) |
