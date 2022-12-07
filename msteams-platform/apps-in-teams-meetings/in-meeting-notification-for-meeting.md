@@ -44,7 +44,7 @@ You can also add the Teams display picture and people card of the user to in-mee
 
 ## Targeted meeting notification
 
-Targeted meeting notifications help to enhance meeting experience and develop user engagement activities in Teams meetings. You can send notifications to specific participants from a meeting stage. The notifications are private and are only sent to the specific or targeted participants in a meeting.
+Targeted meeting notifications help to enhance meeting experience and develop user engagement activities in Teams meetings. Apps sends notifications to specific participants from a meeting stage. The notifications are private and are only sent to the specific or targeted participants in a meeting.
 
 > [!NOTE]
 >

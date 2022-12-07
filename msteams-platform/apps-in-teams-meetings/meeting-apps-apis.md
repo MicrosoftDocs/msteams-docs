@@ -300,7 +300,7 @@ The `targetedMeetingNotification` API allows you to send notifications to specif
 > * You can get the encrypted ID from [GetMeetingParticipant API](#get-participant-api) or [GetMembers API](/rest/api/azure/devops/memberentitlementmanagement/members/get?view=azure-devops-rest-7.0).
 >   * Following is an example of pairwise ID:
 >
->     :::image type="content" source="../assets/images/apps-in-meetings/pairwise-id.png" alt-text="Screenshot displaying the example of pairwise ID.":::
+>    (Need an example of image showing the pairwise ID)
 >
 > * The user ID formats **aadObjectid** and **UPN** aren't supported.
 
