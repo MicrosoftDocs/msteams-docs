@@ -86,8 +86,6 @@ Test your app to verify your app’s correctness, functionality, and usage. Ensu
 
 * Unexpected error messages during the app usage, sign in, and sign-up experience and for scenarios where the app feature doesn't work as expected.
 
-   :::image type="content" source="../../../assets/images/submission/validation-common-reasons-unexpected-error-scenarios.png" alt-text="Screenshot to show the unexpected error for scenarios where app feature doesn't work.":::
-
    :::image type="content" source="../../../assets/images/submission/validation-common-reasons-unexpected-error-app-usage.png" alt-text="Screenshot to show the unexpected error message during app usage.":::
 
 * Ensure that your app is complete and ready to publish before you submit for review.
@@ -95,6 +93,12 @@ Test your app to verify your app’s correctness, functionality, and usage. Ensu
 ## App description
 
 A great description can make your app stand out in the Microsoft Teams store and help encourage customers to download it. You must avoid the following mistakes in your app description:
+
+  :::image type="content" source="../../../assets/images/submission/validation-common-reason-pass-grammatical-error.png" alt-text="Screenshot of passed image for long description, grammatical errors and capitalization":::
+
+ :::image type="content" source="../../../assets/images/submission/validation-common-reason-fail-grammatical-error.png" alt-text="Screenshot of failed image for long description, grammatical errors and capitalization":::
+
+ :::image type="content" source="../../../assets/images/submission/validation-common-reason-fail-app-description-truncation.png" alt-text="Screenshot of failed scenario of app description guidelines which has incomplete truncation":::
 
 * Way forward information for new users such as, Sign Up or Get Started, or Help and Contact Us links aren't included in the manifest and AppSource full description.
 
@@ -134,10 +138,6 @@ A great description can make your app stand out in the Microsoft Teams store and
 
 * Grammatical errors.
 
-   :::image type="content" source="../../../assets/images/submission/validation-common-reason-pass-grammatical-error.png" alt-text="Screenshot of passed image for long description, grammatical errors and capitalization":::
-
-   :::image type="content" source="../../../assets/images/submission/validation-common-reason-fail-grammatical-error.png" alt-text="Screenshot of failed image for long description, grammatical errors and capitalization":::
-
    :::image type="content" source="../../../assets/images/submission/validation-common-reason-pass-MS-app-description.png" alt-text="Screenshot of passed image of Microsoft or MS in app description.":::
 
    :::image type="content" source="../../../assets/images/submission/validation-common-reason-failed-MS-app-description.png" alt-text="Screenshot of failed image of Microsoft or MS in app description.":::
@@ -147,8 +147,6 @@ A great description can make your app stand out in the Microsoft Teams store and
    :::image type="content" source="../../../assets/images/submission/validation-common-reasons-pass-inadequate-app-description.png" alt-text="Screenshot to show the pass scenarios with inadequate app description.":::
 
    :::image type="content" source="../../../assets/images/submission/validation-common-reasons-fail-inadequate-app-description.png" alt-text="Screenshot to show the failed scenarios with inadequate app description.":::
-
-   :::image type="content" source="../../../assets/images/submission/validation-common-reason-fail-app-description-truncation.png" alt-text="Screenshot of failed scenario of app description guidelines which has incomplete truncation":::
 
    :::image type="content" source="../../../assets/images/submission/validation-common-reason-fail-app-display-ads.png" alt-text="Screenshot to show that apps failed to display ads.":::
 
