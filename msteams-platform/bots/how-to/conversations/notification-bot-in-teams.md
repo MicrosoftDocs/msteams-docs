@@ -546,7 +546,7 @@ If Azurite exits due to port in use, you can specify another listening port and 
 
 <summary><b>How to extend my notification bot to support command and response?</b></summary>
 
-  The command and response adds the ability for your bot to capture the commands sent in a Teams message and respond with Adaptive Cards. Follow the steps to add command and response [placeholder for adding command and response to command bot in Teams].
+  The command and response adds the ability for your bot to capture the commands sent in a Teams message and respond with Adaptive Cards. Follow the steps to [add command and response](command-bot-in-teams.md#add-command-and-response).
 
 <br>
 
