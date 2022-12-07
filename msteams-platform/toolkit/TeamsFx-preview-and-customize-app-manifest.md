@@ -241,7 +241,7 @@ During operations such as, **Zip Teams metadata package**, Teams Toolkit validat
 
 In `manifest.template.json`, you can go to codelens to preview the values for `local` and `dev` environment.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/codelens.png" alt-text="Screenshot is an example of showing preview values for local and dev environment." lightbox"../assets/images/teams-toolkit-v2/teams toolkit fundamentals/codelens.png":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/codelens.png" alt-text="Screenshot is an example of showing preview values for local and dev environment." lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/codelens.png":::
 
 > [!NOTE]
 > Provision the environment or execute local debug to generate values for placeholders.
