@@ -44,24 +44,39 @@ You can also add the Teams display picture and people card of the user to in-mee
 
 ## Targeted meeting notification
 
-You can send targeted meeting notifications to specific participants. The notifications are private to the designated participants and not visible to others in the meeting. Targeted meeting notification helps to enhance meeting experience and develop user engagement activities.
+Targeted meeting notifications enhance meeting experience and develop user engagement activities in Teams meetings. You can send notifications to specific participants in a meeting stage during a meeting. The notifications are private and are only sent to the specific or targeted participants in a meeting.
+
+> [!NOTE]
+>
+> * Adaptive Cards are not supported.
+> * Targeted meeting notification supports private scheduled, recurring meeting, Meet now, one-on-one calls, and group calls.
+> * The notification can only be sent to 10 users.
 
 The following image is an example of targeted meeting notification sent to a specific participant in the meeting:
 
-Meeting in progress
-
-  :::image type="content" source="../assets/images/apps-in-meetings/design-principles-2019.png" alt-text="Screenshot displaying the banner of VA Design Principles 2019.":::
-
-Targeted meeting notification sent to a specific participant.
-
   :::image type="content" source="../assets/images/apps-in-meetings/reminder-sent.png" alt-text="Screenshot displaying the reminder sent to a participant in the meeting.":::
 
-Obtain the RSC permissions by configuring the `OnlineMeetingNotification.Send.Chat` and `type` in the resourceSpecific field as follows:
+### App manifest settings for targeted meeting notification
 
- Following is an example of request payload:
+Get the RSC permissions by configuring the `authorization` property, `name`, and `type` in the `resourceSpecific` field as follows:
+
+```json
+"authorization": {
+    "permissions": {
+      "orgWide": [],
+      "resourceSpecific": [
+        {
+          "name": "OnlineMeetingNotification.Send.Chat",
+          "type": "Application"        }
+      ]
+    }
+  }
+```
+
+Following is an example of request payload:
 
 ```http
-GET POST /v1/meetings/{meetingId}/notiifcation
+GET POST /v1/meetings/{meetingId}/notification
 ```
 
 ```json

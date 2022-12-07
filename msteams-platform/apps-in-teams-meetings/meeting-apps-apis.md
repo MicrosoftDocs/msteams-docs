@@ -179,7 +179,6 @@ All users in a meeting receive the notifications sent through in-meeting notific
 > [!NOTE]
 >
 > * When an in-meeting notification is invoked, the content is presented as a chat message.
-> * Currently, sending targeted notifications and support for webapp are not supported.
 > * You must invoke the [submitTask()](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-task-module) function to dismiss automatically after a user takes an action in the web view. This is a requirement for app submission. For more information, see [Teams SDK task module](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true).
 > * If you want your app to support anonymous users, initial invoke request payload must rely on `from.id` request metadata in `from` object, not `from.aadObjectId` request metadata. `from.id` is the user ID and `from.aadObjectId` is the Microsoft Azure Active Directory (Azure AD) ID of the user. For more information, see [using task modules in tabs](../task-modules-and-cards/task-modules/task-modules-tabs.md) and [create and send the task module](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
 
@@ -284,21 +283,28 @@ The following table includes the response codes:
 
 ## Targeted meeting notification API
 
-You can send targeted meeting notifications to specific participants. The notifications are private to the designated participants and not visible to others in the meeting. Targeted meeting notification helps to enhance meeting experience and develop user engagement activities.
+Targeted meeting notifications enhance meeting experience and develop user engagement activities in Teams meetings. You can send notifications to specific participants in a meeting stage during a meeting. The notifications are private and are only sent to the specific or targeted participants in a meeting.
 
 > [!NOTE]
 >
-> * Adaptive Cards are not supported.
-> * Targeted meeting notification supports private scheduled, private recurring, Meet now, one-on-one calls, and group call.
 > * The API payload only permits task module with URL.
-> * The notification can only be sent to 10 users.
+> * The targeted notification can be sent to any participants who can view the meeting notification.
+>
+> The supported format for user IDs (the `id` value available from GetMeetingParticipant/ GetMembers API):
+>
+> * Pairwise MRI for Azure Active Directory user (29:< encrypted id>).
+> * Example of the pairwise ID:
+>
+> :::image type="content" source="../assets/images/apps-in-meetings/pairwise-id.png" alt-text="Screenshot displaying the example of pairwise ID.":::
+>
+> * AAD Object ID and UPN are not supported.
 
 ### Example
 
 Following is an example of request payload:
 
 ```http
-GET POST /v1/meetings/{meetingId}/notiifcation
+GET POST /v1/meetings/{meetingId}/notification
 ```
 
 ```json
@@ -336,7 +342,7 @@ GET POST /v1/meetings/{meetingId}/notiifcation
 }
 ```
 
-You can find examples of how to configure RSC permission on the app manifest from [Get meeting details API](meeting-apps-apis.md#get-meeting-details-api)
+You can find examples of how to configure RSC permission on the app manifest from [Get meeting details API](meeting-apps-apis.md#get-meeting-details-api).
 
 | Property name | Description |
 |---|---|
