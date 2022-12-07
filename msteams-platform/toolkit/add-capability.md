@@ -33,8 +33,8 @@ Adding capabilities with Teams Toolkit allows you to extend the functionality of
 You can add capabilities by the following methods:
 
 * [Use Teams Toolkit in Microsoft Visual Studio Code](#use-teams-toolkit-in-microsoft-visual-studio-code)
-* [Using the Command Palette](#using-the-command-palette)
-* [Using TeamsFx CLI](#using-teamsfx-cli)
+* [Use the Command Palette](#use-the-command-palette)
+* [Use TeamsFx CLI](#use-teamsfx-cli)
 
 ### Use Teams Toolkit in Microsoft Visual Studio Code
 
