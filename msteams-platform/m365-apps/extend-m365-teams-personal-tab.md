@@ -251,7 +251,7 @@ To view your app running in Microsoft 365 app for Android:
 Currently, a subset of Teams application types and capabilities is supported in Outlook and Microsoft 365 clients. This support expands over time.
 
 > [!TIP]
-> Refer to [Microsoft 365 app support](../tabs/how-to/using-teams-client-sdk.md#microsoft-365-support-running-teams-apps-in-office-and-outlook) to check host support for various TeamsJS capabilities.
+> Refer to [Microsoft 365 app support](../tabs/how-to/using-teams-client-sdk.md#microsoft-365-support-running-teams-apps-in-microsoft-365-and-outlook) to check host support for various TeamsJS capabilities.
 
 - For an overall summary of Microsoft 365 app host and platform support for Teams apps, see [Extend Teams apps across Microsoft 365](overview.md).
 
