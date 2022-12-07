@@ -39,6 +39,30 @@ Bots can respond with login request in response to `Action.Execute` for:
 1. Adaptive cards present in compose or preview area while user is composing the message.
    * In compose area, refresh in Adaptive Card works and bot may want to use token to provide User Specific View to user before they send the card to the chat.
 
+## SSO in Teams at runtime
+
+Achieve SSO in Adaptive Cards Universal Actions in bot by obtaining access token for the Teams app user who's currently signed in. This process involves the bot app client and server, Teams client, Bot Framework, and Azure AD. During this interaction, the app user must give consent to obtain the access token in a multi-tenant environment.
+
+The following image shows how SSO works when a Teams app user attempts to access the Adaptive Cards Universal Actions in bot:
+
+:::image type="content" source="../../../assets/images/authentication/sso-runtime-seqd-adaptivecard.png" alt-text="Screenshot shows SSO flow for Adaptive Card Universal Action in bot." lightbox="../../../assets/images/authentication/sso-runtime-seqd-adaptivecard.png":::
+
+| # | Interaction | What's going on |
+| --- | --- | --- |
+| 1 | Teams client → Bot service | Teams sends an Invoke Action.Execute request to the bot. <br> If the app user has previously signed in, a token is saved in the Bot Framework Token Store. The bot calls the Bot Framework Token Service which checks for an existing token for the app user in the Bot Framework Token Store. <br> • If the token exists, the app user is given access. <br> • If no token is available, the bot triggers the auth flow. |
+| 2 | Bot service → Bot Framework Token Service | The bot calls the Bot Framework Token Service to obtain a sign in link for the user. |
+| 3 | Bot Framework Token Service → Teams client | Bot Framework Token Service sends the request for sign-in link to the bot service, which forwards it to the Teams client with an OAuth card and tokenExchangeResource. |
+| 4 | Teams client → Bot service → Bot Framework Token Service → Azure AD | After the Teams client receives the OAuth card and tokenExchangeResource for the app user, if SSO is enabled, it sends a token exchange request for the app user back to the bot. The bot calls the Bot Framework Token Service, attempting to exchange the received token from Azure AD. |
+| 5 | Azure AD → Teams client | For the app user who's using the bot service for the first time, the token exchange can occur only after app user gives their consent. Teams client displays a message to the app user for giving consent. <br> In case the consent fails: <br> 1. The authentication falls back to the sign-in prompt and the app user must sign in to use the bot app. The sign-in button pops up in Teams client, and when app user selects it, the Azure AD sign-in page is rendered. <br> 2. The app user signs in and grants access to the bot service. |
+| 6 | Teams Client → Bot service | Teams client re-sends the invoke Action.Execute request to the bot along with the token. <br> • Senders must include the authentication field with a token exchange resource. |
+| 7 | Bot service → Bot Framework Token Service | The token for the app user is stored in the Bot Framework Token Store. |
+| 8 | Bot service → Bot Framework Token Service | The token for the app user is stored in the Bot Framework Token Store. |
+
+For a bot or a message extension app, the bot app sends an OAuth Card to Teams client. This card is used to get access token from Azure AD using `tokenExchangeResource`. Following app user's consent, Teams client sends the token received from Azure AD to the bot app using `tokenExchange`. The bot app can then parse the token to retrieve the app user's information, such as email address.
+
+> [!IMPORTANT]
+> A bot or message extension app can have more than one active endpoint. The first time app user would receive consent request for all active endpoints.
+
 ## Getting started with SSO Flow
 
 Authentication steps for SSO are similar to that of a bot or tab in Teams. It involves two steps:
