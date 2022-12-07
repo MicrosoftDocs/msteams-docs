@@ -100,6 +100,10 @@ A great description can make your app stand out in the Microsoft Teams store and
 
  :::image type="content" source="../../../assets/images/submission/validation-common-reason-fail-app-description-truncation.png" alt-text="Screenshot of failed scenario of app description guidelines which has incomplete truncation":::
 
+   :::image type="content" source="../../../assets/images/submission/validation-common-reasons-pass-inadequate-app-description.png" alt-text="Screenshot to show the pass scenarios with inadequate app description.":::
+
+   :::image type="content" source="../../../assets/images/submission/validation-common-reasons-fail-inadequate-app-description.png" alt-text="Screenshot to show the failed scenarios with inadequate app description.":::
+
 * Way forward information for new users such as, Sign Up or Get Started, or Help and Contact Us links aren't included in the manifest and AppSource full description.
 
    :::image type="content" source="../../../assets/images/submission/validation-common-reason-pass-sign-up-app-description.png" alt-text="Screenshot of passed scenario of sign-up, contact details in app description must be hyperlinked.":::
@@ -135,12 +139,6 @@ A great description can make your app stand out in the Microsoft Teams store and
 * Grammatical errors.
 
 * App short and full description are same.
-
-   :::image type="content" source="../../../assets/images/submission/validation-common-reasons-pass-inadequate-app-description.png" alt-text="Screenshot to show the pass scenarios with inadequate app description.":::
-
-   :::image type="content" source="../../../assets/images/submission/validation-common-reasons-fail-inadequate-app-description.png" alt-text="Screenshot to show the failed scenarios with inadequate app description.":::
-
-   :::image type="content" source="../../../assets/images/submission/validation-common-reason-fail-app-display-ads.png" alt-text="Screenshot to show that apps failed to display ads.":::
 
 ## Violation of Microsoft trademark and brand guidelines
 
@@ -228,8 +226,6 @@ Your app name plays a critical role for users to discover your app on the Micros
 
    :::image type="content" source="../../../assets/images/submission/validation-common-reason-fail-app-name-beta-app-production.png" alt-text="Screenshot of image to show failed scenario of app names with beta, dev and prod.":::
 
-   :::image type="content" source="../../../assets/images/submission/validation-common-reason-fail-domains-with-beta.png" alt-text="Screenshot to show the valid domains aren't appended with beta, dev and prod.":::
-
 * App submissions where the developer has changed the app name, but the old app name is still used within the app.
 
    :::image type="content" source="../../../assets/images/submission/validation-common-reason-fail-old-app-name.png" alt-text="Screenshot of image to show failed app submission for old app name which is still used.":::
@@ -274,9 +270,13 @@ Your app’s UI must not look incomplete and should be intuitive. Ensure that us
 
    :::image type="content" source="../../../assets/images/submission/validation-common-reason-fail-undo-app-UI.png" alt-text="Screenshot to show the fail scenario of undo button in app UI.":::
 
+   :::image type="content" source="../../../assets/images/submission/validation-common-reason-fail-app-display-ads.png" alt-text="Screenshot to show that apps failed to display ads.":::
+
 ## Valid domains
 
 Your app submission must adhere to the [external domains](/legal/marketplace/certification-policies) guidelines under Microsoft’s Commercial Marketplace Certification Policy. For your app to pass review, ensure that the valid domains listed in the app manifest are under your organization's direct control.
+
+   :::image type="content" source="../../../assets/images/submission/validation-common-reason-fail-domains-with-beta.png" alt-text="Screenshot to show the valid domains aren't appended with beta, dev and prod.":::
 
 ## Localization information
 
