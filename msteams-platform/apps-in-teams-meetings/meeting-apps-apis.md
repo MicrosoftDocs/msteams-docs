@@ -32,8 +32,8 @@ The following table provides a list of APIs available across the Microsoft Teams
 |[**Get real-time Teams meeting events**](#get-real-time-teams-meeting-events-api)|Fetch real-time meeting events, such as actual start and end time.| [Microsoft Bot Framework SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingstartasync?view=botbuilder-dotnet-stable&preserve-view=true) |
 | [**Get incoming audio state**](#get-incoming-audio-state) | Allows an app to get the incoming audio state setting for the meeting user.| [Microsoft Teams JavaScript library SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
 | [**Toggle incoming audio**](#toggle-incoming-audio) | Allows an app to toggle the incoming audio state setting for the meeting user from mute to unmute or vice-versa.| [Microsoft Teams JavaScript library SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
-| [**Raise Hand API**](#raise-hand-API) | Allows an app to notify hand raised by the user during the meeting.| [Microsoft Teams library SDK](/javascript/api/@microsoft/teams-js/meeting.iraisehandstate?view=msteams-client-js-latest) |
-| [**Reaction API**](#reaction-API) | Allows an app to notify the reaction given by the user during the meeting.| [Microsoft Teams JavaScript library SDK](/javascript/api/@microsoft/teams-js/meeting.meetingreactiontype?view=msteams-client-js-latest) |
+| [**Raise Hand API**](#raise-hand-api)| Allows an app to notify hand raised by the user during the meeting.| [Microsoft Teams library SDK](/javascript/api/@microsoft/teams-js/meeting.iraisehandstate?view=msteams-client-js-latest) |
+| [**Reaction API**](#reaction-api) | Allows an app to notify the reaction given by the user during the meeting.| [Microsoft Teams JavaScript library SDK](/javascript/api/@microsoft/teams-js/meeting.meetingreactiontype?view=msteams-client-js-latest) |
 
 ## Get user context API
 
