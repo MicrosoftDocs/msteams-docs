@@ -11,13 +11,13 @@ zone_pivot_groups: teams-app-platform
 
 # Customize Teams app manifest
 
-The Teams app manifest describes how your app integrates into the Microsoft Teams product.
+The Teams app manifest describes how your app integrates into the Microsoft Teams.
 
 ::: zone pivot="visual-studio-code"
 
 ## Customize Teams app manifest for Visual Studio Code
 
-The Teams app manifest describes how your app integrates into the Microsoft Teams product. For more information on Manifest, see [App manifest schema for Teams](../resources/schema/manifest-schema.md). This section covers:
+The Teams app manifest describes how your app integrates into the Microsoft Teams. For more information on manifest, see [app manifest schema for Teams](../resources/schema/manifest-schema.md). This section covers:
 
 * [Preview manifest file in local environment](#preview-manifest-file-in-local-environment)
 * [Preview manifest file in remote environment](#preview-manifest-file-in-remote-environment)
@@ -45,12 +45,12 @@ You can preview manifest file in local and remote environments.
 
 ## Preview manifest file in local environment
 
-To preview manifest file in local environment, you can press **F5** to run local debug. It generates default local settings for you, then the app package and preview manifest builds under `build/appPackage` folder.
+To preview manifest file in local environment, you can press **F5** to run local debug. After generating default local settings, the app package and preview manifest builds under `build/appPackage` folder.
 
-You can also preview local manifest file by two methods
+You can preview local manifest file by two methods:
 
-* By using preview option in codelens
-* By using **Zip Teams metadata package** option
+* Use preview option in codelens.
+* Use **Zip Teams metadata package** option.
 
 The following steps help to preview local manifest file by using preview option in codelens:
 
@@ -86,7 +86,7 @@ Following image is a preview local:
 
 To preview manifest file using Visual Studio Code:
 
-* Select **Provision in the cloud** under **DEVELOPMENT** in Teams Toolkit extension
+* Select **Provision in the cloud** under **DEVELOPMENT** in Teams Toolkit extension.
   
   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/provision.png" alt-text="Screenshot is an example of showing the selection of provision in the cloud resource.":::
 
@@ -96,10 +96,10 @@ To preview manifest file using command palette. You can trigger **Teams: Provisi
 
 It generates configuration for remote Teams app, and builds package and preview manifest under `build/appPackage` folder.
 
-You can also preview manifest file by two methods in remote environment
+You can preview manifest file in remote environment by two methods:
 
-* By using preview option in codelens
-* By using **Zip Teams metadata package** option
+* Use preview option in codelens.
+* Use **Zip Teams metadata package** option.
 
 The following steps help to preview manifest file by using preview option in codelens:
 
