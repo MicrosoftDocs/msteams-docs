@@ -118,10 +118,6 @@ A great description can make your app stand out in the Microsoft Teams store and
 
    :::image type="content" source="../../../assets/images/submission/validation-common-reason-failed-limitation-called-out.png" alt-text="Screenshot of failed image to show the called out limitations.":::
 
-   :::image type="content" source="../../../assets/images/submission/validation-common-reason-pass-long-description.png" alt-text="Screenshot of image to show passed scenario of long description of Microsoft.":::
-
-   :::image type="content" source="../../../assets/images/submission/validation-common-reason-fail-long-description.png" alt-text="Screenshot of image to show failed scenario of long description of Microsoft.":::
-
 * Short and full description in the app manifest doesn't highlight the app’s value proposition.
 
 * Supported app features aren't updated.
@@ -138,10 +134,6 @@ A great description can make your app stand out in the Microsoft Teams store and
 
 * Grammatical errors.
 
-   :::image type="content" source="../../../assets/images/submission/validation-common-reason-pass-MS-app-description.png" alt-text="Screenshot of passed image of Microsoft or MS in app description.":::
-
-   :::image type="content" source="../../../assets/images/submission/validation-common-reason-failed-MS-app-description.png" alt-text="Screenshot of failed image of Microsoft or MS in app description.":::
-
 * App short and full description are same.
 
    :::image type="content" source="../../../assets/images/submission/validation-common-reasons-pass-inadequate-app-description.png" alt-text="Screenshot to show the pass scenarios with inadequate app description.":::
@@ -154,9 +146,15 @@ A great description can make your app stand out in the Microsoft Teams store and
 
 Microsoft’s brand assets including logos, icons, designs, trade dress, fonts, product names, services, sounds, emojis, and any other brand features and elements, whether registered or unregistered are proprietary assets owned by Microsoft and its group of companies.
 
+ :::image type="content" source="../../../assets/images/submission/validation-common-reason-fail-violation-microsoft-trademark-brand.png" alt-text="Screenshot of failed scenario of violation of Microsoft trademark and brand guidelines.":::
+
 When referring to Microsoft trademarks, products names, and services, you must follow [Microsoft Trademark and Brand Guidelines](https://www.microsoft.com/legal/intellectualproperty/trademarks). You must avoid the following common violations that lead to app rejection:
 
 * Abbreviating Microsoft as MS or MSFT in the offer listing, referencing the first instance of Microsoft Teams in the offer listing as **Teams** instead of **Microsoft Teams**.
+
+   :::image type="content" source="../../../assets/images/submission/validation-common-reason-pass-MS-app-description.png" alt-text="Screenshot of passed image of Microsoft or MS in app description.":::
+
+   :::image type="content" source="../../../assets/images/submission/validation-common-reason-failed-MS-app-description.png" alt-text="Screenshot of failed image of Microsoft or MS in app description.":::
 
    :::image type="content" source="../../../assets/images/submission/validation-common-reason-paased-first-reference-teams.png" alt-text="Screenshot of image to show the passed reference instance of Microsoft Teams.":::
 
@@ -166,7 +164,9 @@ When referring to Microsoft trademarks, products names, and services, you must f
 
 * Creating an offer listing (including the offer description, title, icon, screenshots, and videos) that impersonates or provides an impression that it's an official Microsoft app for the Microsoft Teams store.
 
-   :::image type="content" source="../../../assets/images/submission/validation-common-reason-fail-violation-microsoft-trademark-brand.png" alt-text="Screenshot of failed scenario of violation of Microsoft trademark and brand guidelines.":::
+   :::image type="content" source="../../../assets/images/submission/validation-common-reason-pass-long-description.png" alt-text="Screenshot of image to show passed scenario of long description of Microsoft.":::
+
+   :::image type="content" source="../../../assets/images/submission/validation-common-reason-fail-long-description.png" alt-text="Screenshot of image to show failed scenario of long description of Microsoft.":::
 
 ## Testability  
 
