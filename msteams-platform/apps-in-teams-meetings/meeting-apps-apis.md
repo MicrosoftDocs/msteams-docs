@@ -1010,6 +1010,9 @@ The following table provides the response codes:
 
 The `onRaisehandChangeHandler` API allows an app to show that the user has raised his hand during the meeting. The API is available through the Teams client SDK.
 
+> [!NOTE]
+> RaiseHand API is not applicable for pre-meeting and post-meeting scenarios. 
+
 ### Manifest
 
 Use the following example to configure your app manifest's `authorization` properties for any private meeting:
@@ -1082,6 +1085,10 @@ export interface IRaiseHandState {
 ## Reaction API
 
 The `onReactionHandler` API allows an app to get the reaction of the user reacted during the meeting. The API is available through the Teams client SDK.
+
+> [!NOTE]
+> •The `onReactionHandler` API will be supported in in-meeting (private and channel) and group calling.
+> •API will be supported in modern calling screens only.
 
 ### Manifest
 
