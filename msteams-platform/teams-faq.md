@@ -571,7 +571,7 @@ Upgrade the Teams JavaScript client SDK to (@microsoft/teams-js": "^2.0.0") to r
 
 ## Teams toolkit
 
-FAQ for [Provision cloud resources](toolkit/provision.md)) using Teams Toolkit.
+FAQ for [Provision cloud resources](toolkit/provision.md) using Teams Toolkit.
 <br>
 
 <details>
