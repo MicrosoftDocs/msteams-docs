@@ -41,7 +41,7 @@ items:
      | &nbsp; | Install | For using... |
      | --- | --- | --- |
      | **Required** | &nbsp; | &nbsp; |
-     | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call and all in one place.|
+     | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call, and all in one place.|
      | &nbsp; | [Visual Studio 2022 version 17.3](https://visualstudio.microsoft.com)<br> Install one of the following two workloads:<br> • **ASP.NET and web development** <br> • **.NET Core cross-platform development** | You can install the enterprise version in Visual Studio 2022, and install the workloads. |
      | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots, message extensions, and incoming webhooks) require inbound connections. A tunnel connects your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
    
@@ -79,11 +79,11 @@ items:
    
     1.  Select **Global (Org-wide default)**.
 
-          :::image type="content" source="~/assets/images/sbs-connector/Global_1.png" alt-text="Screenshot of App setup policies with Global Org-wide-default highlighted in red.":::
+          :::image type="content" source="~/assets/images/sbs-connector/Global_1.png" alt-text="Screenshot of App setup policies with Global Org-wide default highlighted in red.":::
 
     1.   Toggle **Upload custom apps** to **On** position.
 
-          :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-toggleOn_1.png" alt-text="Screenshot of Global Org-wide-default with Upload custom apps showing the toggle button on and highlighted in red. ":::
+          :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-toggleOn_1.png" alt-text="Screenshot of Global Org-wide default with Upload custom apps showing the toggle button on and highlighted in red. ":::
    
     1.   Select **Save**.
        
@@ -94,7 +94,7 @@ items:
 
     1.   Go to **Microsoft Teams**.
     
-    1.   From the upper right corner of your Teams interface, select `...`.
+    1.   From the upper-right corner of your Teams interface, select `...`.
     
     1.   Select **About**.
     
@@ -119,7 +119,7 @@ items:
         ngrok http --host-header=localhost 3978
         ``` 
        > [!TIP]
-       > If you encounter **ERR_NGROK_4018**, follow the steps, as displayed in the command prompt to sign-up and authenticate ngrok. Then run the `ngrok http --host-header=localhost 3978` command.
+       > If you encounter **ERR_NGROK_4018**, follow the steps, as displayed in the command prompt to sign in and authenticate ngrok. Then run the `ngrok http --host-header=localhost 3978` command.
 
        :::image type="content" source="~/assets/images/sbs-connector/ngrok1_1.png" alt-text="Screenshot of ngrok with URL highlighted in red.":::
 
@@ -130,17 +130,17 @@ items:
       
     5. Enter the following details to register a new connector:
 
-       * Connector name
+       * Connector name.
        * Logo
-       * Short description of your app (10 words or less)
-       * Detailed description of what your Connector does (3-5 sentences)
-       * Company website
-       * Configuration page for your Connector as `https://[BASE_URI]/connector/setup`
-       * Valid domain as `https Base URL`
-       * Select **Yes** to enable the action on connector card
-       * Actions URL as `https://[BASE_URI]/Task/Update`
-       * Select **I accept the terms and conditions of the App Developer Agreement**
-       * Select **Save**
+       * Short description of your app (10 words or less).
+       * Detailed description of what your Connector does (3-5 sentences).
+       * Company website.
+       * Configuration page for your Connector as `https://[BASE_URI]/connector/setup`.
+       * Valid domain as `https Base URL`.
+       * Select **Yes** to enable the action on connector card.
+       * Actions URL as `https://[BASE_URI]/Task/Update`.
+       * Select **I accept the terms and conditions of the App Developer Agreement**.
+       * Select **Save**.
 
        :::image type="content" source="~/assets/images/sbs-connector/basicdetails_1.png" alt-text="Screenshot of Connectors Developer Dashboard with Save option highlighted in red.":::
 
@@ -164,13 +164,13 @@ items:
     9. Press **F5** to run the project.
        A web page opens. 
 
-       ![Local-host](~\assets\images/sbs-connector/local-host.png)    
+       :::image type="content" source="../../../assets/images/sbs-connector/local-host.png" alt-text="Screenshot of Teams ToDo App displaying the details of tasks.":::   
 
 - title: Test connector in Microsoft Teams
   durationInMinutes: 5
   content: |
 
-    1. In your cloned repository, go to **csharp > TeamsToDoAppConnector > TeamsAppPackages**.
+    1. In your cloned repository, go to **csharp > TeamsToDoAppConnector > TeamsAppPackages.
 
     1. Create a .zip with the following files that are present in the **Manifest** folder: 
        * manifest.json
@@ -180,9 +180,9 @@ items:
        :::image type="content" source="~/assets/images/sbs-connector/zip_1.png" alt-text="Screenshot of Manifest folder with Teams connector highlighted in red.":::
 
     1. Go to **Microsoft Teams**.
-    1. In the left panel, select **Apps** > **Manage your apps**.
+    1. In the left pane, select **Apps** > **Manage your apps**.
 
-       :::image type="content" source="~/assets/images/sbs-connector/manageapp_1.png" alt-text="Screenshot of Microsoft Teams with Apps and Manage your apps highlighted in red.":::
+       :::image type="content" source="~/assets/images/sbs-connector/manageapp_1.png" alt-text="Screenshot of Microsoft Teams with App icons and Manage your apps highlighted in red.":::
 
     1. Select **Upload a custom app**.
  
@@ -190,33 +190,33 @@ items:
       
     1. Select **Open** to upload the .zip file that you created in the **Manifest** folder.
 
-       :::image type="content" source="~/assets/images/sbs-connector/open_1.png" alt-text="Screenshot of TeamsAppPackages with Teams connector highlighted in red.":::
+       :::image type="content" source="~/assets/images/sbs-connector/open_1.png" alt-text="Screenshot of TeamsAppPackages folder with Teams connector zip file highlighted in red.":::
 
     1. Select **Add to a team**.
 
-       :::image type="content" source="~/assets/images/sbs-connector/addtoteam_1.png" alt-text="Screenshot of TeamsTodo Connector in.NET/C# with Add to a team highlighted in red. ":::
+       :::image type="content" source="~/assets/images/sbs-connector/addtoteam_1.png" alt-text="Screenshot of TeamsTodo Connector in .NET/C# with Add to a team highlighted in red. ":::
 
     1. Select the team or channel name from the list.
 
-       :::image type="content" source="~/assets/images/sbs-connector/channel_1.png" alt-text="Screenshot of TeamsTodo Connector in.NET/C# to a team with Type a team or channel name highlighted in red.":::
+       :::image type="content" source="~/assets/images/sbs-connector/channel_1.png" alt-text="Screenshot of TeamsTodo Connector in .NET/C# to a team with Type a team or channel name highlighted in red.":::
 
     1. Select **Set up a connector**.
 
     1. In the left panel, search **Teams ToDo Notification** connector in search bar and select **Configure**.
 
-       :::image type="content" source="~/assets/images/sbs-connector/configure_1.png" alt-text="Screenshot of Connectors for General channels in Demo team with TeamsToDo and Configure highlighted in red.":::
+       :::image type="content" source="~/assets/images/sbs-connector/configure_1.png" alt-text="Screenshot of Connectors for General channel in Demo team with TeamsToDo and Configure highlighted in red.":::
 
     1. Select either **Created** or **Updated** on the registration page and select **Save**.
 
-       :::image type="content" source="~/assets/images/sbs-connector/create_1.png" alt-text="Screenshot of TeamsTodo Connector in.NET/C# with Save option highlighted in red.":::
+       :::image type="content" source="~/assets/images/sbs-connector/create_1.png" alt-text="Screenshot of TeamsTodo Connector in .NET/C# with Save option highlighted in red.":::
 
        After configuration, you can see notification in channel with link to **Task Manager Portal**.
 
-       ![notification message](~/assets/images/sbs-connector/notification.png)
+       :::image type="content" source="../../../assets/images/sbs-connector/notification.png" alt-text="Screenshot of Teams ToDo Notification Inline Config displaying the confirmation of Teams ToDo Notification In-line Config set up details. ":::
 
     12. Go to **Task Manager Portal**.
 
-        :::image type="content" source="~/assets/images/sbs-connector/taskportal_1.png" alt-text="Screenshot of Teams ToDo Notification In-Line Config with Task Manager Portal highlighted in red.":::
+        :::image type="content" source="~/assets/images/sbs-connector/taskportal_1.png" alt-text="Screenshot of Teams ToDo Notification-Inline Config with Task Manager Portal highlighted in red.":::
 
     13. Select **Create New**.
        
@@ -228,13 +228,13 @@ items:
         * Description
         * Assign To
 
-        :::image type="content" source="~/assets/images/sbs-connector/details_1.png" alt-text="Screenshot displaying the new task details.":::
+        :::image type="content" source="~/assets/images/sbs-connector/details_1.png" alt-text="Screenshot of Teams ToDo App displaying the new task details.":::
 
     15. Select **Save**. 
       
         The message card appears in registered Teams channel.
        
-        ![Message](~/assets/images/sbs-connector/messagecard.png)
+        :::image type="content" source="../../../assets/images/sbs-connector/messagecard.png" alt-text="Screenshot of Teams ToDo Notification-Inline Config displaying the details of task created.":::
 
         > [!TIP]
         > You can try the actionable buttons available on the message card.
