@@ -57,6 +57,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | Term | Definition |
 | --- | --- |
 | [Deep linking](../concepts/build-and-test/deep-links.md) | In a Teams app, you can create deep links to information and features within Teams or to help the user navigate to content in your app. |
+| Delegated permission | Delegated permissions are used by apps that have a signed-in user present. For these apps, either the user or an administrator consents to the permissions that the app requests and the app can act as the signed-in user when making calls to Microsoft Graph.  <br> **See also**: [SSO](#s) |
 |[Department of Defense (DoD)](../concepts/app-fundamentals-overview.md#government-community-cloud)| DoD environments deliver compliance with Department of Defense Security Requirements Guidelines, Defense Federal Acquisition Regulations Supplement (DFARS), and International Traffic in Arms Regulations (ITAR).|
 | [Developer Portal for Teams](../concepts/build-and-test/teams-developer-portal.md) | The primary tool for configuring, distributing, and managing your Microsoft Teams apps. With Developer Portal, you can collaborate with colleagues on your app, set up runtime environments, and much more. |
 | [Developer Preview](../resources/dev-preview/developer-preview-intro.md) | A public program for developers that provides early access to unreleased features in Microsoft Teams. It lets you explore and test upcoming features for potential inclusion in your Microsoft Teams app. |
