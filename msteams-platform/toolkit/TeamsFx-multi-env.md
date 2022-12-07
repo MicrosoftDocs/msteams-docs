@@ -39,7 +39,7 @@ Perform the following steps to create a new environment:
 1. Select the **Teams Toolkit** from the activity bar.
 2. Select **+ Create new environment** under the **ENVIRONMENT** section.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/create_new_env_1.png" alt-text="create new environment":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/create_new _env_1.PNG" alt-text="Create new environment":::
 
 > [!Note]
 > If you have more than one environment, you must select an existing environment to create the new environment. The command copies the file contents of `config.<newEnv>.json` and `azure.parameters.<newEnv>.json` from the existing environment you've selected to the new environment created.
