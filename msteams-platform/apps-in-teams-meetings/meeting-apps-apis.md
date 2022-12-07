@@ -290,7 +290,7 @@ The following table includes the response codes:
 
 ## Targeted meeting notification API
 
-The `targetedMeetingNotification` API allows you to send notifications to specific participants in a meeting stage. You can send a targeted meeting notification based on user action. The API is available through Teams Client SDK.
+The `targetedMeetingNotification` API allows apps to send notifications to specific participants in a meeting stage. Apps sends a targeted meeting notification based on user action. The API is available through Teams Client SDK.
 
 > [!NOTE]
 >
