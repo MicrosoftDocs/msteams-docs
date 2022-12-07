@@ -187,12 +187,16 @@ The following code provides an example of sending proactive messages:
 
 # [C#](#tab/dotnet)
 
+* [SDK reference](/dotnet/api/microsoft.bot.builder.cloudadapterbase.continueconversationasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-cloudadapterbase-continueconversationasync(system-string-microsoft-bot-schema-activity-microsoft-bot-builder-botcallbackhandler-system-threading-cancellationtoken)&preserve-view=true)
+
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/graph-meeting-notification/csharp/MeetingNotification/Controllers/NotificationController.cs#L112)
+
 ```csharp
 public async Task<int> SendNotificationToAllUsersAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
 {
    int msgSentCount = 0;
 
-   // Send notification to all the members
+   // Send notification to all the members.
    foreach (var conversationReference in _conversationReferences.Values)
    {
        await turnContext.Adapter.ContinueConversationAsync(_configuration["MicrosoftAppId"], conversationReference, BotCallback, cancellationToken);
@@ -204,20 +208,28 @@ public async Task<int> SendNotificationToAllUsersAsync(ITurnContext<IMessageActi
 
 private async Task BotCallback(ITurnContext turnContext, CancellationToken cancellationToken)
 {
+    // Sends an activity to the sender of the incoming activity.
    await turnContext.SendActivityAsync("Proactive hello.");
 }
 ```
 
 # [Node.js](#tab/nodejs)
+* [SDK reference](/javascript/api/botbuilder/cloudadapter?view=botbuilder-ts-latest#botbuilder-cloudadapter-continueconversationasync&preserve-view=true)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-initiate-thread-in-channel/nodejs/bots/teamsStartNewThreadInChannel.js#L20)
+
+* [SDK reference](/javascript/api/botbuilder/cloudadapter?view=botbuilder-ts-latest#botbuilder-cloudadapter-continueconversationasync&preserve-view=true)
+
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-initiate-thread-in-channel/nodejs/bots/teamsStartNewThreadInChannel.js#L20)
 
 ```javascript
 server.get('/api/notify', async (req, res) => {
     for (const conversationReference of Object.values(conversationReferences)) {
+
+        // Sends a proactive message to a conversation.
         await adapter.continueConversationAsync(process.env.MicrosoftAppId, conversationReference, async context => {
             await context.sendActivity('proactive hello');
         });
     }
-
     res.setHeader('Content-Type', 'text/html');
     res.writeHead(200);
     res.write('<html><body><h1>Proactive messages have been sent.</h1></body></html>');
