@@ -10,7 +10,7 @@ ms.date: 05/20/2022
 
 # Edit Azure AD manifest
 
-The [Azure Active Directory (Azure AD) manifest](/azure/active-directory/develop/reference-app-manifest) contain definitions of all the attributes of an Azure AD application object in the Microsoft identity platform.
+The [Microsoft Azure Active Directory (Azure AD) manifest](/azure/active-directory/develop/reference-app-manifest) contain definitions of all the attributes of an Azure AD application object in the Microsoft identity platform.
 
 Teams Toolkit now manages Azure AD application with the manifest file as the source of truth during your Teams application development lifecycle.
 
@@ -45,7 +45,7 @@ You can customize Azure AD manifest template to update Azure AD application.
 
 ### Add an application permission
 
-If the Teams application requires more permissions to call API with additional permissions, you need to update `requiredResourceAccess` property in the Azure AD manifest template. You can see the following example for this property:
+If the Teams application requires more permissions to call an API with additional permissions, you need to update `requiredResourceAccess` property in the Azure AD manifest template. You can see the following example for this property:
 
 ```JSON
 
@@ -75,9 +75,9 @@ If the Teams application requires more permissions to call API with additional p
 ]
 ```
 
-* `resourceAppId` property is used for different APIs. For `Microsoft Graph` and `Office 365` `SharePoint Online`, enter the name directly instead of UUID, and for other APIs, use UUID.
+* `resourceAppId` property is used for different APIs. For `Microsoft Graph`, and `Office 365 SharePoint Online` enter the name directly instead of UUID, and for other APIs use UUID.
 
-* `resourceAccess.id` property is used for different permissions. For `Microsoft Graph` and `Office 365 SharePoint Online`, enter the permission name directly instead of UUID, and for other APIs, use UUID.
+* `resourceAccess.id` property is used for different permissions. For `Microsoft Graph`, and `Office 365 SharePoint Online` enter the permission name directly instead of UUID, and for other APIs use UUID.
 
 * `resourceAccess.type` property is used for delegated permission or application permission. `Scope` means delegated permission and `Role` means application permission.
 
@@ -122,11 +122,14 @@ You can use `preAuthorizedApplications` property to authorize a client applicati
 
 ## Azure AD manifest template placeholders
 
-The Azure AD manifest file contains placeholder arguments with {{...}} statements it's replaced during build for different environments. You can build references to config file, state file and environment variables with the placeholder arguments.
+The Azure AD manifest file contains placeholder arguments with {{...}} statements it's replaced during build for different environments. You can build references to config file, state file, and environment variables with the placeholder arguments.
 
 ### Reference state file values in Azure AD manifest template
 
-The state file is located in `.fx\states\state.xxx.json` (xxx represents different environment). The following example shows typical state file:
+The state file is located in `.fx\states\state.xxx.json`. The following example shows typical state file:
+
+> [!NOTE]
+> xxx represents different environment.
 
 ``` JSON
 {
@@ -146,7 +149,7 @@ You can use this placeholder argument in the Azure AD manifest: `{{state.fx-reso
 
 ### Reference config file values in Azure AD manifest template
 
-The config file is located in `.fx\configs\config.xxx.json` (xxx represents different environment). The following example shows config file:
+The config file is located in `.fx\configs\config.xxx.json`. The following example shows config file:
 
 ``` JSON
 {
@@ -165,39 +168,39 @@ You can use the placeholder argument in the Azure AD manifest: `{{config.manifes
 
 ### Reference environment variable in Azure AD manifest template
 
-Sometimes you don't want to hardcode the values in Azure AD manifest template. For example, when the value is a secret. Azure AD manifest template file supports reference environment variables values. You can use syntax `{{env.YOUR_ENV_VARIABLE_NAME}}` in parameter values to tell the tooling to resolve the value current environment variable.
+If you don't need to enter permanent values in Azure AD manifest template. For example, when the value is a secret. Azure AD manifest template file supports reference environment variables values. You can use the syntax `{{env.YOUR_ENV_VARIABLE_NAME}}` in the tool as parameter values to resolve the current environment variable values.
 
-## Author and preview Azure AD manifest with code lens
+## Author and preview Azure AD manifest with CodeLens
 
-Azure AD manifest template file has code lens to review and edit.
+Azure AD manifest template file has CodeLens to review and edit.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/manual/preview view.png" alt-text="previewview":::
 
 ### Azure AD manifest template file
 
-There's a preview code lens at the beginning of the Azure AD manifest template file. Select the code lens  to generate an Azure AD manifest based on your selected environment.
+There's a preview CodeLens at the beginning of the Azure AD manifest template file. Select the CodeLens to generate an Azure AD manifest based as per your environment.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add codelens.png" alt-text="addcodelens":::
 
-### Placeholder argument code lens
+### Placeholder argument CodeLens
 
-Placeholder argument code lens helps you to take quick look of the values for local debug and develop environment. If your mouse hover on the placeholder argument, it shows tooltip box for the values of all the environment.
+Placeholder argument CodeLens helps you to see the values for local debug and develop your environment. If you hover the mouse on the placeholder argument, it shows tooltip box for the values of all the environments.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add arguments.png" alt-text="addarguments":::
 
-### Required resource access code lens
+### Required resource access CodeLens
 
 It's different from official [Azure AD manifest schema](/azure/active-directory/develop/reference-app-manifest) that `resourceAppId` and `resourceAccess` ID in `requiredResourceAccess` property only supports UUID. Azure AD manifest template in Teams Toolkit also supports user readable strings for `Microsoft Graph` and `Office 365 SharePoint Online` permissions. If you enter UUID, code lens shows user readable strings, otherwise, it shows UUID.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add resource.png" alt-text="addresource":::
 
-### Pre-authorized applications code lens
+### Pre-authorized applications CodeLens
 
-Code lens shows the application name for the pre-authorized application ID for the `preAuthorizedApplications` property.
+CodeLens shows the application name for the pre-authorized application ID for the `preAuthorizedApplications` property.
 
 ## Deploy Azure AD application changes for local environment
 
-1. Select `Preview` code lens in `aad.template.json`.
+1. Select `Preview` CodeLens in `aad.template.json`.
   
      :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add deploy1.png" alt-text="deploy1":::
 
@@ -205,7 +208,7 @@ Code lens shows the application name for the pre-authorized application ID for t
   
      :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add deploy2.png" alt-text="deploy2":::
 
-3. Select `Deploy Azure AD Manifest` code lens in `aad.local.json`.
+3. Select `Deploy Azure AD Manifest` CodeLens in `aad.local.json`.
 
      :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add deploy3.png" alt-text="deploy3":::
 
@@ -217,7 +220,7 @@ Code lens shows the application name for the pre-authorized application ID for t
   
      :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add deploy4.png" alt-text="deploy4":::
 
-2. You can also right click on the `aad.template.json` and select `Deploy Azure Active Directory application manifest` from the context menu.
+2. Additionally you can right click on the `aad.template.json` and select `Deploy Azure Active Directory application manifest` from the context menu.
   
      :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add deploy5.png" alt-text="deploy5":::
 
@@ -233,7 +236,7 @@ Code lens shows the application name for the pre-authorized application ID for t
 2. Go to [Azure portal](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps) and sign in to Microsoft 365 account.
   
    > [!NOTE]
-   > Ensure that login credentials of Teams application and M365 account are same.
+   > Ensure that login credentials of Teams application and M365 account are the same.
 
 3. Open [App Registrations page](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps), search the Azure AD application using client ID that you copied before.
   
@@ -245,11 +248,11 @@ Code lens shows the application name for the pre-authorized application ID for t
   
      :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add view3.png" alt-text="view3":::
 
-6. You can select **Other Menu** to view or configure Azure AD application through portal.
+6. You can select **Other Menu** to view or configure Azure AD application through its portal.
   
 ## Use an existing Azure AD application
 
-You can use the existing Azure AD application for the Teams project, for more information, see [Use an existing Azure AD application for your Teams application](https://github.com/OfficeDev/TeamsFx/wiki/Customize-provision-behaviors#use-an-existing-aad-app-for-your-teams-app).
+You can use the existing Azure AD application for the Teams project. For more information, see [use an existing Azure AD application for your Teams application](https://github.com/OfficeDev/TeamsFx/wiki/Customize-provision-behaviors#use-an-existing-aad-app-for-your-teams-app).
 
 ## Azure AD application in Teams application development lifecycle
 
@@ -257,41 +260,41 @@ You need to interact with Azure AD application during various stages of your Tea
 
 1. **To create Project**
 
-      You can create a project with Teams Toolkit that comes with SSO support by default such as `SSO-enabled tab`. For more information on create a new app, see [create new Teams application using Teams Toolkit](create-new-project.md). An Azure AD manifest file is automatically created for you in `templates\appPackage\aad.template.json`. Teams Toolkit creates or updates the Azure AD application during local development or while you move the application to the cloud.
+      You can create a project with Teams Toolkit that comes with single-sign-on (SSO) support by default such as `SSO-enabled tab`. For more information on how to create a new app, see [create new Teams application using Teams Toolkit](create-new-project.md). An Azure AD manifest file is automatically created for you in `templates\appPackage\aad.template.json`. Teams Toolkit creates or updates the Azure AD application during local development or while you move the application to the cloud.
 
 2. **To add SSO to your Bot or Tab**
 
-      After you create a Teams application without SSO built-in, Teams Toolkit incrementally helps you to add SSO for the project. As a result, an Azure AD manifest file is automatically created for you in `templates\appPackage\aad.template.json`.
+      After you create a Teams application without built-in SSO, Teams Toolkit progressively helps you to add SSO for the project. As a result, an Azure AD manifest file is automatically created for you in `templates\appPackage\aad.template.json`.
 
       Teams Toolkit creates or updates the Azure AD application during next local debug session or while you move the application to the cloud.
 
 3. **To build Locally**
 
-    Teams Toolkit performs the following functions during local development or it's known as F5:
+    Teams Toolkit performs the following functions during local debug:
 
     * Read the `state.local.json` file to find an existing Azure AD application. If an Azure AD application already exists, Teams Toolkit reuses the existing Azure AD application. Otherwise you need to create a new application using the `aad.template.json` file.
 
-    * Initially ignores some properties in the manifest file that requires more context, (such as replyUrls property that requires a local debug endpoint) during the creation of a new Azure AD application with the manifest file.
+    * Initially ignores some properties in the manifest file that requires more context, such as `replyUrls` property that requires a local debug endpoint during the creation of a new Azure AD application with the manifest file.
 
-    * After the local dev environment starts successfully, the Azure AD application's identifierUris, replyUrls, and other properties that aren't available during creation stage are updated accordingly.
+    * After the local dev environment starts successfully, the Azure AD application's `identifierUris`, `replyUrls`, and other properties that aren't available during creation stage are updated accordingly.
 
-    * The changes you've done to your Azure AD application are loaded during next local debug session. You can see [Azure AD application changes](https://github.com/OfficeDev/TeamsFx/wiki/) to apply changes manually Azure AD application changes.
+    * The changes you've done to your Azure AD application are loaded during next local debug session. You can see [Azure AD application changes](https://github.com/OfficeDev/TeamsFx/wiki/) applying manually.
 
 4. **To provision for cloud resources**
 
-      You need to provision cloud resources and deploy your application while moving your application to the cloud. At the stages, like local development, Teams Toolkit will:
+      You need to provision cloud resources and deploy your application while moving your application to the cloud. At the stages, like local debug, Teams Toolkit will:
 
       * Read the `state.{env}.json` file to find an existing Azure AD application. If an Azure AD application already exists, Teams Toolkit re-uses the existing Azure AD application. Otherwise you need to create a new application using the `aad.template.json` file.
 
-      * Initially ignores some properties in the manifest file that requires more context (such as replyUrls property requires frontend or bot endpoint) during the creation of a new Azure AD application with the manifest file.
+      * Initially ignore some properties in the manifest file that requires more context such as `replyUrls` property requires frontend or bot endpoint during the creation of a new Azure AD application with the manifest file.
 
-      * After other resources provision completes, the Azure AD application's identifierUris and replyUrls are updated accordingly to the correct endpoints.
+      * After other resources provision completes, the Azure AD application's `identifierUris`, and replyUrls are updated according to the correct endpoints.
 
 5. **To build application**
 
     * Deploy to the cloud command deploys your application to the provisioned resources. It doesn't include deploying Azure AD application changes you made.
 
-    * You can see, [Deploy Azure AD application changes for remote environment](#deploy-azure-ad-application-changes-for-remote-environment) to deploy Azure AD application changes for remote environment.
+    * For more information on how to deploy Azure AD application changes for remote environment, see [Deploy Azure AD application changes for remote environment](#deploy-azure-ad-application-changes-for-remote-environment).
 
     * Teams Toolkit updates the Azure AD application according to the Azure AD manifest template file.
 
@@ -303,22 +306,22 @@ You need to interact with Azure AD application during various stages of your Tea
 
       |**Not supported properties**|**Reason**|
       |-----------|----------|
-      |passwordCredentials|Not allowed in manifest|
-      |createdDateTime|Read-only and can't change|
-      |logoUrl|Read-only and can't change|
-      |publisherDomain|Read-only and can't change|
-      |oauth2RequirePostResponse|Doesn't exist in Graph API|
-      |oauth2AllowUrlPathMatching|Doesn't exist in Graph API|
-      |samlMetadataUrl|Doesn't exist in Graph API|
-      |orgRestrictions|Doesn't exist in Graph API|
-      |certification|Doesn't exist in Graph API|
+      |`passwordCredentials`|Not allowed in manifest|
+      |`createdDateTime`|Read-only and can't change|
+      |`logoUrl`|Read-only and can't change|
+      |`publisherDomain`|Read-only and can't change|
+      |`oauth2RequirePostResponse`|Doesn't exist in Graph API|
+      |`oauth2AllowUrlPathMatching`|Doesn't exist in Graph API|
+      |`samlMetadataUrl`|Doesn't exist in Graph API|
+      |`orgRestrictions`|Doesn't exist in Graph API|
+      |`certification`|Doesn't exist in Graph API|
 
-2. Currently `requiredResourceAccess` property can use user readable resource application name or permission name strings only for `Microsoft Graph` and `Office 365 SharePoint Online` APIs. For other APIs, you need to use UUID instead. You can follow these steps to retrieve IDs from Azure portal:
+2. Currently `requiredResourceAccess` property is used for user readable resource application name or permission name strings only for `Microsoft Graph` and `Office 365 SharePoint Online` APIs. For other APIs, you need to use UUID instead. Perform the following steps to retrieve IDs from Azure portal:
 
     * Register a new Azure AD application on [Azure portal](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps).
     * Select `API permissions` from the Azure AD application page.
-    * Select `add a permission` to add the permission you want.
-    * Select `Manifest`, from the `requiredResourceAccess` property, you can find the IDs of API and permissions.
+    * Select `add a permission` to add the permission you need.
+    * Select `Manifest`, from the `requiredResourceAccess` property, where you can find the IDs of API, and the permissions.
 
 ## See also
 
