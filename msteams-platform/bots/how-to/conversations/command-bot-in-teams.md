@@ -238,7 +238,7 @@ If you're responding to a command that needs to access Microsoft Graph data of a
 
 ### Connect to existing APIs
 
-If you don't have the required SDK, and need to invoke external APIs in your code. The `Teams: Connect to an API` command in Microsoft Visual Studio Code Teams Toolkit extension, or `teamsfx add api-connection` command in TeamsFx CLI can be used to bootstrap code to call target APIs. For more information, see [connect to existing API](../../../toolkit/add-API-connection.md).
+If you don't have the required SDK, and need to invoke external APIs in your code. The `Teams: Connect to an API` command in Microsoft Visual Studio Code Teams Toolkit extension, or `teamsfx add api-connection` command in TeamsFx CLI can be used to bootstrap code to call target APIs. For more information, see [connect to existing API](../../../toolkit/add-API-connection.md#steps-to-connect-to-api).
 
 ## FAQ
 
@@ -248,7 +248,7 @@ If you don't have the required SDK, and need to invoke external APIs in your cod
 
 <summary><b>How to extend my command and response to support notifications?</b></summary>
 
-If you need to extend your command and response to support notifications, you can add Adaptive Cards to respond to external events. Follow the steps to customize notifications [Placeholder for customize notification steps in the notification bot in Teams doc].
+Add Adaptive Cards in response to external events to extend your command and response to support notifications. See the steps to [customize notifications](notification-bot-in-teams.md#customize-notification).
 
 <br>
 
