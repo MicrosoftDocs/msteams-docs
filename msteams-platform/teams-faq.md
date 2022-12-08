@@ -514,7 +514,7 @@ The following resources can also assist:
 
 You can open the authentication page in the task module when the user selects the button.
 
-You can use the [code sample](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/54.teams-task-module/bots/teams_task_module_bot.py#L70) for opening the task module on button click. You can replace the taskInfo.url with your auth page.
+You can use the [code sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/python) for opening the task module on button click. You can replace the taskInfo.url with your auth page.
 <br>
 &nbsp;
 </details>
