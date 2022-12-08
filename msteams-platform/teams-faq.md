@@ -316,8 +316,8 @@ The following images show Toolbar icon after Toolbar configuration adjustment:
 
 For more information on editing Atto toolbar, see:
 
-* [Atto editor-ModdleDocs] // https://docs.moodle.org/311/en/Atto_editor //
-* [Atto editor-Icon mapping] // https://docs.moodle.org/311/en/Atto_editor#:~:text=in%20the%20editor.-,Atto%20editor%20toolbar,-Atto%20Row%201 //
+* [Atto editor-ModdleDocs](https://docs.moodle.org/311/en/Atto_editor)
+* [Atto editor-Icon mapping](https://docs.moodle.org/311/en/Atto_editor#:~:text=in%20the%20editor.-,Atto%20editor%20toolbar,-Atto%20Row%201)
 <br>
 &nbsp;
 </details>
@@ -333,7 +333,7 @@ However, you can access the invite and manually add participant names to the **R
 <details>
 <summary>Is there any support site where we can get more help on products and other issues?</summary>
 
-For support and help on the product and services issues or developer community help see, [Support and Feedback](/microsoftteams/platform/feedback.md).
+For support and help on the product and services issues or developer community help see, [Support and feedback](feedback.md).
 
 </details>
 
