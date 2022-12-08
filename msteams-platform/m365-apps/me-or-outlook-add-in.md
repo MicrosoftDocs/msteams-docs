@@ -31,7 +31,7 @@ Implement a message extension if your scenario requires any of the following:
 > [!NOTE]
 > If your scenario has requirements from both of the lists above, then you need to create both a message extension and an add-in (which can be hosted at the same domain and share files). We are working hard on a system that enables you to combine these into a single app. We'll update this article when that system is available.
 
-## Workload-specific guidance
+## Example applications of the guidance
 
 The following sections illustrate how the guidance above is applied to some example scenarios and, for each, whether a message extension or Outlook Add-in is best suited to the task.
 
