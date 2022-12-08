@@ -79,6 +79,23 @@ Authentication steps for SSO are similar to that of a bot or tab in Teams. Follo
     }
     ```
 
-    * Senders must include the authentication field with a token exchange resource.
+    * Senders must include the `authentication` field with a token exchange resource.
 
-1. [Update your Teams application manifest for your bot](../../../bots/how-to/authentication/bot-sso-manifest.md)
+1. The response with the token is sent through an invoke activity with the same schema as other invoke activities that the bots receive. For more information, see [Add code to receive the token](../../../bots/how-to/authentication/bot-sso-code.md#add-code-to-receive-the-token).
+1. The channel delivers this Invoke to the bot, which uses the token to finalize the token exchange process with the Token Service and identity provider. The Token Service delivers the user"s access token to the bot.
+   * Receivers may ignore the authentication if the value is malformed.
+   * Receivers that experience an error performing token exchange should respond with an error or a second loginRequest that doesn't include single sign-on information. If responding with an error, the error response must be:
+   * If the value in the state field is incorrect, the bot can return an error to the client as follows:
+
+    ```javascript
+       {
+        "statusCode": 412,
+        "type": "application/vnd.microsoft.error.preconditionFailed",
+        "value": { ... error ... }
+        }
+    ```
+
+1. The bot uses the access token on behalf of the user to perform its actions.
+1. The bot returns a non-error response to the client, either a card or message.
+1. To handle the access token in case the app user logs out, see [Handle app user log out](../../../bots/how-to/authentication/bot-sso-code.md#handle-app-user-log-out).
+1. [Update your Teams application manifest for your bot](../../../bots/how-to/authentication/bot-sso-manifest.md).

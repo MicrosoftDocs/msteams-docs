@@ -13,16 +13,16 @@ Universal Actions for Adaptive Cards bring the bot as the common backend for han
 > [!NOTE]
 > Support for Universal Actions for Adaptive Cards schema version v1.4 is only available for cards sent by bot.
 
-You can enable the following scenarios with `Action.Execute` on your Adaptive Cards Universal action:
+You can enable the following scenarios with `Action.Execute` on your Adaptive Cards Universal Actions:
 
 * [Universal Actions](Overview.md#universal-actions)
 * [User Specific Views](Overview.md#user-specific-views)
 * [Sequential Workflows](Overview.md#sequential-workflow-support)
 * [Up to Date View](Overview.md#up-to-date-views)
 
-With Single sign-on (SSO) in Teams, app users have the advantage of using Teams to access Adaptive Cards Universal Actions in bot. After logging into Teams using Microsoft or Microsoft 365 account, app users can use your app without needing to sign in again. Your app is available to app users on any device with access granted through Azure Active Directory (AD).
-
 To learn more about Universal Actions for Adaptive Cards, see [Universal Actions for Adaptive Cards](Overview.md).
+
+With Single sign-on (SSO) in Teams, app users have the advantage of using Teams to access Adaptive Cards Universal Actions in bot. After logging into Teams using Microsoft or Microsoft 365 account, app users can use your app without needing to sign in again. Your app is available to app users on any device with access granted through Azure Active Directory (AD).
 
 If you want to add User Specific Views in instances where an Adaptive Card with Universal Action is shared in the context of a group chat or a channel, the user may need to be authenticated.
 
@@ -58,92 +58,12 @@ The following image shows how SSO works when a Teams app user attempts to access
 | 7 | Bot service → Bot Framework Token Service | The token for the app user is stored in the Bot Framework Token Store. |
 | 8 | Azure AD → Teams client | Azure AD sends a Invoke response with Adaptive Card to Teams client. Bot returns a non-error response to the client, either a card or message. |
 
-For a Adaptive Cards Universal Action in bot, the bot app sends an OAuth Card to Teams client. This card is used to get access token from Azure AD using `tokenExchangeResource`. Following app user's consent, Teams client sends the token received from Azure AD to the bot app using `tokenExchange`. The bot app can then parse the token to retrieve the app user's information, such as email address.
+For a Adaptive Cards Universal Actions in bot, the bot app sends an OAuth Card to Teams client. This card is used to get access token from Azure AD using `tokenExchangeResource`. Following app user's consent, Teams client sends the token received from Azure AD to the bot app using `tokenExchange`. The bot app can then parse the token to retrieve the app user's information, such as email address.
 
-## Getting started with SSO Flow
+## Next step
 
-For a single sign-on experience in which the user is already signed into a client experience and the bot wants to perform token exchange for a different registered application or resource on the same identity provider, the protocol is as follows:
-
-1. The channel sends an Invoke `Action.Execute` request to the bot.
-1. The bot uses the Token Service protocol to check if there's already a cached token for the user specified in the activity.from.id field on the channel specified in the activity.channelId field for the bot and connection that is configured.
-1. If there's a cached token, the bot can use this token. If there's not a token, the bot creates an OAuthCard and places it in an Invoke Response with the values below, which include a tokenExchangeResource:
-
-```JSON
-   {
-  "statusCode": 401,
-  "type": "application/vnd.microsoft.activity.loginRequest",
-  "value": {
-    "text": "Please sign-in",
-    "connectionName": "<configured-connection-name>",
-    "tokenExchangeResource": {
-      "id": "<unique-indentifier>",
-      "uri": "<application-or-resource-identifier>",
-      "providerId": "<optional-provider-identifier>"
-    },
-    "buttons": [
-      {
-        "title": "Sign-In",
-        "text": "Sign-In",
-        "type": "signin",
-        "value": "<sign-in-URL>"
-      }
-    ]
-  }
-}
-
-```
-
-* Senders must include a `tokenExchangeResource` to designate a single sign-on operation.
-
-   > [!NOTE]
-   > Teams client will trigger the nominal sing-on or OAuth flow when SSO fails. It is highly recommended that you provide sign in URL in the above response so that OAuth flow works.
-
-1. This response is delivered through the channel to the client, which uses the tokenExchangeResource information and the client token to obtain an on-behalf-of token or exchangeable token from the identity provider:
-   * Clients may ignore the tokenExchangeResource for any reason, including invalid values, errors retrieving exchangeable tokens, or not supporting the identity provider.
-   * Clients that ignore the tokenExchangeResource should use the nominal sign-on flow.
-
-1. The client resend the original `adaptiveCard/action` to the bot along with the token as follows:
-
-    ```javascript
-    {
-      "type": "invoke",
-      "name": "adaptiveCard/action"
-      "value": {
-         "action": {
-            "id": "abc123",
-            "type": "Action.Execute",
-            "verb": "saveCommand",
-            "data": {
-               "firstName": "Jeff",
-               "lastName": "Derstadt"
-            }
-         },
-      "authentication": {
-         "id": "8769-xyz",
-         "connectionName": "oauthConnection",
-         "token": "...single sign-on token..."
-      }
-      }
-    }
-    ```
-
-    * Senders must include the authentication field with a token exchange resource.
-
-1. The channel delivers this Invoke to the bot, which uses the token to finalize the token exchange process with the Token Service and identity provider. The Token Service delivers the user"s access token to the bot.
-   * Receivers may ignore the authentication if the value is malformed.
-   * Receivers that experience an error performing token exchange should respond with an error or a second loginRequest that doesn't include single sign-on information. If responding with an error, the error response must be:
-   * If the value in the state field is incorrect, the bot can return an error to the client as follows:
-
-    ```javascript
-       {
-        "statusCode": 412,
-        "type": "application/vnd.microsoft.error.preconditionFailed",
-        "value": { ... error ... }
-        }
-    ```
-
-1. The bot uses the access token on behalf of the user to perform its actions.
-1. The bot returns a non-error response to the client, either a card or message.
+> [!div class="nextstepaction"]
+> [Enable SSO for your Adaptive Cards Universal Actions](sso-adaptive-cards-universal-action.md)
 
 ## See also
 

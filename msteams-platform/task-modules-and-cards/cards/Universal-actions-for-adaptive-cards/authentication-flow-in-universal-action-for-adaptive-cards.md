@@ -39,13 +39,15 @@ Bots can respond with login request in response to `Action.Execute` for:
 
 ## Getting started with OAuth or nominal sign-on flow
 
-Authentication steps for OAuth are similar to a bot or a tab in Teams.
+Authentication steps for OAuth are similar to bot in Teams.
+
+Ensure that you add authentication to your teams bot before your enable it for Adaptive Cards Universal Actions.
 
 To learn more about how to create an authentication-enabled bot, how to deploy the bot to Azure and associate it with an identity provider, and how to integrate the bot within Microsoft Teams, see [Add authentication to your Teams bot](../../../bots/how-to/authentication/add-authentication.md)
 
 For a OAuth or nominal sign-on experience in which the user is presented with a sign-in button or link and the following is the authentication flow:
 
-1. Teams user sends an adaptiveCard/actionInvokeActivity request to the bot.
+1. Teams client sends an adaptiveCard/actionInvokeActivity request to the bot.
 1. The bot uses the Token Service protocol to check if there's already a cached token for the user specified in the activity.from.id field on the channel specified in the activity.channelId field for the bot and connection that is configured.
 1. If there's a cached token, the bot can use this token. If there's no token, the bot creates an OAuthCard and places it in the Response with the values:
 
@@ -69,7 +71,7 @@ For a OAuth or nominal sign-on experience in which the user is presented with a 
     ```
 
     * Senders must include a value that adheres to the OAuthCard format.
-    * Senders must include a connectionName. Receivers MAY ignore login requests with an empty or missing connectionName.
+    * Senders must include a connectionName. Receivers may ignore login requests with an empty or missing connectionName.
     * Senders must include either a button that has a non-empty buttons array.
 
 1. Upon receiving this response, Teams client will show a **Sign-In** button in the card footer where user can select.
@@ -104,9 +106,9 @@ For a OAuth or nominal sign-on experience in which the user is presented with a 
 
 1. The channel delivers this Invoke to the bot, which uses the authentication code to finalize retrieving the token with the Token Service. The Token Service delivers the user's access token to the bot.
 
-   * Receivers MAY ignore the adaptiveCard/action invoke or reply with an error if there's a missing or empty state field.
+   * Receivers may ignore the adaptiveCard/action invoke or reply with an error if there's a missing or empty state field.
 
-   If the value in the state field is incorrect, the bot can return an error to the client as follows:
+   If the value in the state field is incorrect, the bot can return an error to the Teams client as follows:
 
    ```javascript
      {
