@@ -190,7 +190,7 @@ Placeholder argument CodeLens helps you to see the values for local debug and de
 
 ### Required resource access CodeLens
 
-It's different from official [Azure AD manifest schema](/azure/active-directory/develop/reference-app-manifest) that `resourceAppId` and `resourceAccess` ID in `requiredResourceAccess` property only supports UUID. Azure AD manifest template in Teams Toolkit also supports user readable strings for `Microsoft Graph` and `Office 365 SharePoint Online` permissions. If you enter UUID, code lens shows user readable strings, otherwise, it shows UUID.
+It's different from official [Azure AD manifest schema](/azure/active-directory/develop/reference-app-manifest) that `resourceAppId` and `resourceAccess` ID in `requiredResourceAccess` property only supports UUID. Azure AD manifest template in Teams Toolkit also supports user readable strings for `Microsoft Graph` and `Office 365 SharePoint Online` permissions. If you enter UUID, CodeLens shows user readable strings, otherwise it shows UUID.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add resource.png" alt-text="addresource":::
 
@@ -282,17 +282,17 @@ You need to interact with Azure AD application during various stages of your Tea
 
 4. **To provision for cloud resources**
 
-      You need to provision cloud resources and deploy your application while moving your application to the cloud. At the stages, like local debug, Teams Toolkit will:
+      You need to provision cloud resources and deploy your application while moving your application to the cloud. At stages, such as local debug, Teams Toolkit:
 
-      * Read the `state.{env}.json` file to find an existing Azure AD application. If an Azure AD application already exists, Teams Toolkit re-uses the existing Azure AD application. Otherwise you need to create a new application using the `aad.template.json` file.
+      * Reads the `state.{env}.json` file to find an existing Azure AD application. If an Azure AD application already exists, Teams Toolkit re-uses the existing Azure AD application. Otherwise you need to create a new application using the `aad.template.json` file.
 
-      * Initially ignore some properties in the manifest file that requires more context such as `replyUrls` property requires frontend or bot endpoint during the creation of a new Azure AD application with the manifest file.
+      * Ignores some properties in the manifest file initially that requires more context such as `replyUrls` property. This property requires frontend or bot endpoint during the creation of a new Azure AD application with the manifest file.
 
-      * After other resources provision completes, the Azure AD application's `identifierUris`, and replyUrls are updated according to the correct endpoints.
+      * Completes other resources provision, then Azure AD application's `identifierUris`, and `replyUrls` are updated according to the correct endpoints.
 
 5. **To build application**
 
-    * Deploy to the cloud command deploys your application to the provisioned resources. It doesn't include deploying Azure AD application changes you made.
+    * The cloud command deploys your application to the provisioned resources. It doesn't include deploying Azure AD application changes you've made.
 
     * For more information on how to deploy Azure AD application changes for remote environment, see [Deploy Azure AD application changes for remote environment](#deploy-azure-ad-application-changes-for-remote-environment).
 
@@ -300,7 +300,7 @@ You need to interact with Azure AD application during various stages of your Tea
 
 ## Limitations
 
-1. Teams Toolkit extension doesn't supports all the properties listed in Azure AD manifest schema.
+1. Teams Toolkit extension doesn't support all the properties listed in Azure AD manifest schema.
   
       The following table lists the properties that aren't supported in Teams Toolkit extension:
 
@@ -316,7 +316,7 @@ You need to interact with Azure AD application during various stages of your Tea
       |`orgRestrictions`|Doesn't exist in Graph API|
       |`certification`|Doesn't exist in Graph API|
 
-2. Currently `requiredResourceAccess` property is used for user readable resource application name or permission name strings only for `Microsoft Graph` and `Office 365 SharePoint Online` APIs. For other APIs, you need to use UUID instead. Perform the following steps to retrieve IDs from Azure portal:
+2. Currently `requiredResourceAccess` property is used for user readable resource application name or permission name strings only for `Microsoft Graph` and `Office 365 SharePoint Online` APIs. You need to use UUID for other APIs. Perform the following steps to retrieve IDs from Azure portal:
 
     * Register a new Azure AD application on [Azure portal](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps).
     * Select `API permissions` from the Azure AD application page.
