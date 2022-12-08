@@ -35,9 +35,10 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | [Blazor](../get-started/get-started-overview.md) | A free and open-source web framework that enables developers to create web apps using C# and HTML. It's being developed by Microsoft. |
 | [Bicep](../toolkit/provision.md) | A declarative language, which means the elements can appear in any order. Unlike imperative languages, the order of elements doesn't affect how deployment is processed. |
 | [Bot](../bots/what-are-bots.md) | A bot is an app or service that executes programmed repetitive tasks. <br> **See also**: [Conversational bot](#c); [Chat bot](#c) |
+| Bot Builder SDK | It is an open source SDK hosted on GitHub to help build dialogs within your Node.js- or C#-based bot. |
 | [Bot Emulator](../bots/how-to/debug/locally-with-an-ide.md#use-the-bot-emulator) | A desktop application that lets you test and debug bots, either locally or remotely. |
 | [Bot Framework](../bots/bot-features.md) | A rich SDK used to create bots using C#, Java, Python, and JavaScript. If you have a bot that is based on the Bot Framework, you can modify it to work in Teams. |
-| Bot Framework Token Service | It is responsible for facilitating the use of the OAuth protocol with a wide variety of external services, storing tokens for a bot, channel, conversation, and user, and acquiring user tokens. <br> **See also**: [SSO](#s), [Access token](#a), [Identity token](#i) <br> For more information, see [Enable SSO for your app](../bots/how-to/authentication/bot-sso-overview.md) and [Bot Framework Token Service](/azure/bot-service/bot-builder-concept-authentication?view=azure-bot-service-4.0#about-the-bot-framework-token-service) |
+| Bot Framework Token Service | It is responsible for facilitating the use of the OAuth protocol with a wide variety of external services, storing tokens for a bot, channel, conversation, and user, and acquiring user tokens. <br> **See also**: [SSO](#s), [Access token](#a), [Identity token](#i) <br> For more information, see [Enable SSO for your app](../bots/how-to/authentication/bot-sso-overview.md) and [Bot Framework Token Service](/azure/bot-service/bot-builder-concept-authentication#about-the-bot-framework-token-service) |
 
 ## C
 
@@ -144,6 +145,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 
 | Term | Definition |
 | --- | --- |
+| OAuth card | A card representing a request to perform a sign in via OAuth. <br> [SSO](#s) <br> For more information, see [Add code to enable SSO in a tab app](../tabs/how-to/authentication/tab-sso-code.md), [Add code to enable SSO in your bot app](../bots/how-to/authentication/bot-sso-code.md) |
 | Object ID | The unique identifier created by Azure AD portal when you register or update your app. It identifies the application object, which defines the application's identity configuration globally (across all tenants where it has access). <br> **See also**: [Application ID](#a), [Tenant ID](#t), [SSO](#s) |
 | [Office 365 Connector](../webhooks-and-connectors/how-to/connectors-creating.md) | It lets you create a custom configuration page for your Incoming Webhook and package them as part of a Teams app. You can send messages primarily using Office 365 Connector cards and have the ability to add a limited set of card actions to them. |
 | [Outgoing Webhook](../webhooks-and-connectors/how-to/add-outgoing-webhook.md) | It acts as a bot and search for messages in channels using @mention. It sends notifications to external web services and responds with rich messages, which include cards and images. <br>**See also**: [Webhook](#w); [Incoming Webhook](#i) |
