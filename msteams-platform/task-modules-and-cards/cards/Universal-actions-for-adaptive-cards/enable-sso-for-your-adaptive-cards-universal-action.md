@@ -1,6 +1,6 @@
 ---
-title: Enable SSO for your Adaptive Cards Universal Actions
-description: In this module, learn about how to enable SSO for your Adaptive Cards Universal Actions.
+title: Overview of SSO for your Adaptive Cards Universal Actions
+description: Learn about Single sign-on (SSO) authentication in Teams and how to enable it in Adaptive Cards Universal Action in bots.
 author: v-sdhakshina
 ms.topic: conceptual
 ms.localizationpriority: medium
