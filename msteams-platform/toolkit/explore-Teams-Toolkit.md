@@ -18,7 +18,7 @@ In this document, you can understand different UI elements along with descriptio
 
 After Teams Toolkit installation, the following Teams Toolkit UI appears:
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/overview1_1.png" alt-text="Overview of Teams Toolkit":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/overview1_1.png" alt-text="Overview of Teams Toolkit" lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/overview1_1.png":::
 
 | Serial No | UI Elements | Definition |
 | --- | --- |
@@ -40,7 +40,7 @@ You can explore UI elements from task pane in the Teams Toolkit. Task pane appea
 
 After creating a new Teams app, the directory structure of the app appears in the left panel and the readme file in the right panel.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/first-page_1.png" alt-text="First page of Teams Toolkit":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/first-page_1.png" alt-text="First page of Teams Toolkit" lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/first-page_1.png":::
 
 Let's take a tour of the Teams Toolkit UI.
 
