@@ -18,7 +18,7 @@ This section covers:
 
 * [Customize Azure AD manifest template](#customize-azure-ad-manifest-template)
 * [Azure AD manifest template placeholders](#azure-ad-manifest-template-placeholders)
-* [Author and preview Azure AD manifest with code lens](#author-and-preview-azure-ad-manifest-with-code-lens)
+* [Author and preview Azure AD manifest with CodeLens](#author-and-preview-azure-ad-manifest-with-codelens)
 * [Deploy Azure AD application changes for local environment](#deploy-azure-ad-application-changes-for-local-environment)
 * [Deploy Azure AD application changes for remote environment](#deploy-azure-ad-application-changes-for-remote-environment)
 * [View Azure AD application on the Azure portal](#view-azure-ad-application-on-the-azure-portal)
