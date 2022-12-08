@@ -32,8 +32,8 @@ The following table provides a list of APIs available across the Microsoft Teams
 |[**Get real-time Teams meeting events**](#get-real-time-teams-meeting-events-api)|Fetch real-time meeting events, such as actual start and end time.| [Microsoft Bot Framework SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingstartasync?view=botbuilder-dotnet-stable&preserve-view=true) |
 | [**Get incoming audio state**](#get-incoming-audio-state) | Allows an app to get the incoming audio state setting for the meeting user.| [Microsoft Teams JavaScript library SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
 | [**Toggle incoming audio**](#toggle-incoming-audio) | Allows an app to toggle the incoming audio state setting for the meeting user from mute to unmute or vice-versa.| [Microsoft Teams JavaScript library SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
-| [**Raise Hand API**](#raise-hand-api)| Allows an app to notify hand raised by the user during the meeting.| [Microsoft Teams library SDK](/javascript/api/@microsoft/teams-js/meeting.iraisehandstate?view=msteams-client-js-latest) |
-| [**Reaction API**](#reaction-api) | Allows an app to notify the reaction given by the user during the meeting.| [Microsoft Teams JavaScript library SDK](/javascript/api/@microsoft/teams-js/meeting.meetingreactiontype?view=msteams-client-js-latest) |
+| [**Raise Hand API**](#raise-hand-api)| Allows an app to notify hand raised by the user during the meeting.| [Microsoft Teams library SDK](/javascript/api/@microsoft/teams-js/meeting.iraisehandstate?view=msteams-client-js-latest&preserve-view=true) |
+| [**Reaction API**](#reaction-api) | Allows an app to notify the reaction given by the user during the meeting.| [Microsoft Teams JavaScript library SDK](/javascript/api/@microsoft/teams-js/meeting.meetingreactiontype?view=msteams-client-js-latest&preserve-view=true) |
 
 ## Get user context API
 
@@ -67,6 +67,7 @@ The following table includes the query parameters:
 ### Example
 
 # [C#](#tab/dotnet)
+
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetingparticipantasync?view=botbuilder-dotnet-stable&preserve-view=true)  
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-context-app/csharp/MeetingContextApp/Bots/MeetingContextBot.cs#L33)
 
@@ -207,6 +208,7 @@ The following table includes the query parameter:
 > * The URL is the page, which loads as `<iframe>` in the in-meeting notification. The domain must be in the apps' `validDomains` array in your app manifest.
 
 # [C#](#tab/dotnet)
+
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityextensions.teamsnotifyuser?view=botbuilder-dotnet-stable#microsoft-bot-builder-teams-teamsactivityextensions-teamsnotifyuser(microsoft-bot-schema-iactivity)&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-proactive-messaging/csharp/proactive-cmd/Program.cs#L178)
 
@@ -708,6 +710,7 @@ The bot receives event through the `OnEventActivityAsync` handler. To deserializ
 The following code shows how to capture the metadata of a meeting that is `MeetingType`, `Title`, `Id`, `JoinUrl`, `StartTime`, and `EndTime` from a meeting start/end event:
 
 Meeting Start Event
+
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingstartasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-teams-teamsactivityhandler-onteamsmeetingstartasync(microsoft-bot-schema-teams-meetingstarteventdetails-microsoft-bot-builder-iturncontext((microsoft-bot-schema-ieventactivity))-system-threading-cancellationtoken)&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L34)
 
@@ -727,6 +730,7 @@ protected override async Task OnTeamsMeetingStartAsync(MeetingStartEventDetails 
 ```
 
 Meeting End Event
+
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingendasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-teams-teamsactivityhandler-onteamsmeetingendasync(microsoft-bot-schema-teams-meetingendeventdetails-microsoft-bot-builder-iturncontext((microsoft-bot-schema-ieventactivity))-system-threading-cancellationtoken)&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L51)
 
@@ -1008,14 +1012,14 @@ The following table provides the response codes:
 
 ## Raise Hand API
 
-The `onRaisehandChangeHandler` API allows an app to show that the user has raised hand during the meeting. The API is available through the Teams client SDK.
+The `onRaisehandChangeHandler` API allows an app to show if the user has raised hand during the meeting. The API is available through the Teams client SDK.
 
 > [!NOTE]
-> RaiseHand API is not applicable for pre-meeting and post-meeting scenarios.
+> RaiseHand API isn't applicable for pre-meeting and post-meeting scenarios.
 
 ### Manifest
 
-Use the following example to configure your app manifest's `authorization` properties for any private meeting:
+Use the following example to configure the `authorization` property in your app manifest for any meeting:
 
 ```JSON
 "authorization": {
@@ -1024,18 +1028,7 @@ Use the following example to configure your app manifest's `authorization` prope
    {
     "name": "MeetingParticipantReaction.Read.Chat",
     "type": "Delegated"
-   }
-  ]
- }
-}
-```
-
-Use the following example to configure your app manifest's `authorization` properties for any group meeting:
-
-```JSON
-"authorization": {
- "permissions": {
-  "resourceSpecific": [
+   },
    {
     "name": "MeetingParticipantReaction.Read.Group",
     "type": "Delegated"
@@ -1045,9 +1038,12 @@ Use the following example to configure your app manifest's `authorization` prope
 }
 ```
 
+The following is an example of the payload request:
+
 ### Example
 
 ```javascript
+
 export interface IRaiseHandState { 
     /** Indicates whether the selfParticipant's hand is raised or not*/ 
     isHandRaised: boolean; 
@@ -1074,7 +1070,15 @@ export interface IRaiseHandState {
 //Displays error message
   error: undefined 
      } 
+
 ```
+
+### Query parameters
+
+|**Property name** | **Description**|
+|--------------|---------------|
+|IRaiseHandState| Boolean Indicating whether the participant's hand is raised or not.|
+|IRaiseHandStateChangedEventData||
 
 ### Response code
 
@@ -1084,15 +1088,16 @@ export interface IRaiseHandState {
 
 ## Reaction API
 
-The `onReactionHandler` API allows an app to get the reaction of the user reacted during the meeting. The API is available through the Teams client SDK.
+The `onReactionHandler` API allows an app to get the status of the users reaction during the meeting. The API is available through the Teams client SDK.
 
 > [!NOTE]
-> •The `onReactionHandler` API will be supported in in-meeting (private and channel) and group calling.
-> •API will be supported in modern calling screens only.
+>
+> * The `onReactionHandler`API is supported in in-meeting (private and channel) and group calling.
+> * API is supported in modern calling screens only.
 
 ### Manifest
 
-Use the following example to configure your app manifest's `authorization` properties for any private meeting:
+Use the following example to configure the `authorization` property in your app manifest for any meeting:
 
 ```JSON
 "authorization": {
@@ -1101,18 +1106,7 @@ Use the following example to configure your app manifest's `authorization` prope
    {
     "name": "MeetingParticipantReaction.Read.Chat",
     "type": "Delegated"
-   }
-  ]
- }
-}
-```
-
-Use the following example to configure your app manifest's `authorization` properties for any group meeting:
-
-```JSON
-"authorization": {
- "permissions": {
-  "resourceSpecific": [
+   },
    {
     "name": "MeetingParticipantReaction.Read.Group",
     "type": "Delegated"
@@ -1121,6 +1115,8 @@ Use the following example to configure your app manifest's `authorization` prope
  }
 }
 ```
+
+The following is an example of the payload request:
 
 ### Example
 

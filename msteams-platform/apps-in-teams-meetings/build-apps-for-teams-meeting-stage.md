@@ -220,9 +220,152 @@ The following participant roles may be involved during the meeting:
 | In-meeting notification | Demonstrates how to implement in-meeting notification using bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs) |
 | In-meeting document signing | Demonstrates how to implement a document signing Teams app. Includes sharing specific app content to stage, Teams SSO, and user specific stage view. | [View](https://github.com/officedev/microsoft-teams-samples/tree/main/samples/meetings-share-to-stage-signing/csharp) | NA |
 
-## Raise hand and Reaction APIs
+## Reaction API
 
-The third-party user subscribes to the APIs and gets the data by passing the handler. Upon subscription, the handler provides feedback to the API. Teams will use the error object `callback` provided by the handler when it fails and checks if the `callback` is true or false. Based on the event handling, results are displayed and the information changes according the response in the API. For more information, see also [Meetings app APIs](/microsoftteams/platform/apps-in-teams-meetings/meeting-apps-apis)
+The Reaction API allows you to show reactions in your app. The types of reactions include like, heart, laugh, applause, and surprised.
+
+### User scenarios
+
+| Scenario  | Example  |
+|---------|---------|
+|Avatar   | You can show an animation of the Avatar displaying the reaction.|
+|Mesh     | Participants in a Teams meeting can send reaction form the U-bar and an animation of the reaction is shown in the mesh app .|
+
+### App manifest settings for Reaction API
+
+To use the raise a hand, you must configure RSC permissions in the app manifest. Configure the `authorization` property, and the `name` and `type` in the `resourceSpecific` field as follows:
+
+```JSON
+"authorization": {
+ "permissions": {
+  "resourceSpecific": [
+   {
+    "name": "MeetingParticipantReaction.Read.Chat",
+    "type": "Delegated"
+   },
+   {
+    "name": "MeetingParticipantReaction.Read.Group",
+    "type": "Delegated"
+   }
+  ]
+ }
+}
+```
+
+### Enable the reaction API in your app
+
+* Call the `registerMeetingReactionReceivedHandler` function.
+
+* Provide a callback that accepts a meetingReactionType and an error object. Ensure to check for errors before you call raiseHandState.
+
+The following is an example of `registerMeetingReactionReceivedHandler`:
+
+```typescript
+microsoftTeams.meeting.registerMeetingReactionReceivedHandler ( 
+
+          meetingReactionReceivedEvent => { 
+
+            if (meetingReactionReceivedEvent.error) { 
+
+              // handle error 
+
+              setApiResult( 
+
+                `error: ${JSON.stringify(meetingReactionReceivedEvent.error)}` 
+
+              ); 
+
+            } 
+
+            setApiResult( 
+
+              `received reaction type: ${JSON.stringify( 
+
+                meetingReactionReceivedEvent.meetingReactionType 
+
+              )}` 
+
+            ); 
+
+            setShowOutput(true); 
+
+          } 
+
+      ); 
+```
+
+## Raise hand API
+
+The Reaction API allows yan app to show if the user has raised hand during the meeting.
+
+### User scenarios
+
+| Scenario  | Example  |
+|---------|---------|
+|Avatar   | You can show an animation of the Avatar displaying the reaction.|
+|Mesh     | Participants in a Teams meeting can send reaction form the U-bar and an animation of the reaction is shown in the mesh app .|
+|Games    | You can use the raise hand as a form of submission in games such as Trivia or Kahoot.|
+
+### App manifest settings for Raise hand API
+
+To use the raise a hand, you must configure RSC permissions in the app manifest. Configure the `authorization` property, and the `name` and `type` in the `resourceSpecific` field as follows:
+
+```JSON
+"authorization": {
+ "permissions": {
+  "resourceSpecific": [
+   {
+    "name": "MeetingParticipantReaction.Read.Chat",
+    "type": "Delegated"
+   },
+   {
+    "name": "MeetingParticipantReaction.Read.Group",
+    "type": "Delegated"
+   }
+  ]
+ }
+}
+```
+
+### Enable the raise hand API in your app
+
+* Call the `registerRaiseHandStateChangeHandler` function.
+
+* Provide a callback that accepts a raiseHandState and an error object. Ensure to check for errors before you call raiseHandState.
+
+Following is an example of the `registerRaiseHandStateChangeHandler`:
+
+```typescript
+microsoftTeams.meeting.registerRaiseHandStateChangedHandler( 
+
+          eventData => { 
+
+            if (eventData.error) { 
+
+              // handle error 
+
+              setApiResult( 
+
+                `error: ${JSON.stringify(eventData.error)}` 
+
+              ); 
+
+            } 
+
+            setApiResult( 
+
+              `raiseHandState: ${JSON.stringify( 
+
+                eventData.raiseHandState 
+
+              )}` 
+
+            ); 
+
+          } 
+
+      ); 
+```
 
 ## Step-by-step guide
 
