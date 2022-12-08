@@ -8,7 +8,7 @@ ms.localizationpriority: medium
 
 # Enable SSO for your Adaptive Cards Universal Actions
 
-Authentication steps for SSO are similar to that of a bot or tab in Teams. Following are the steps to achieve SSO in Adaptive Cards Universal Action:
+Authentication steps for SSO are similar to that of a bot in Teams. Following are the steps to achieve SSO in Adaptive Cards Universal Action:
 
 > [!NOTE]
 > To implement SSO flow, you must have personal scope declared for your bot in the app manifest. When a user invokes the SSO flow via the Adaptive Card `Action.Execute` protocol, the user is prompted to install the app in personal scope if it isn't already installed.
@@ -99,3 +99,9 @@ Authentication steps for SSO are similar to that of a bot or tab in Teams. Follo
 1. The bot returns a non-error response to the client, either a card or message.
 1. To handle the access token in case the app user logs out, see [Handle app user log out](../../../bots/how-to/authentication/bot-sso-code.md#handle-app-user-log-out).
 1. [Update your Teams application manifest for your bot](../../../bots/how-to/authentication/bot-sso-manifest.md).
+
+## See also
+
+* [Work with Universal Actions for Adaptive Cards](Work-with-Universal-Actions-for-Adaptive-Cards.md)
+* [SSO for your Adaptive Cards Universal Actions](enable-sso-for-your-adaptive-cards-universal-action.md)
+* [Enable SSO for your Adaptive Cards Universal Actions](sso-adaptive-cards-universal-action.md)
