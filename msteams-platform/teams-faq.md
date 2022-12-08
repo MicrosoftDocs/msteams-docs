@@ -59,7 +59,7 @@ Use Delete messages-Bot framework's `DeleteActivity` method: [Update and delete
 <details>
 <summary>How can I test the validity of the card schema via code?</summary>
 
-You can test or validate the Adaptive Card schema using the **Adaptive cards editor(preview)** option in [Developer Portal > Tools](https://dev.teams.microsoft.com/tools).
+You can test or validate the Adaptive Card schema using the **Adaptive cards editor (preview)** option in [Developer Portal > Tools](https://dev.teams.microsoft.com/tools).
 </details>
 
 ## Live share
@@ -166,7 +166,7 @@ You can use the following Graph API [Get user mailbox settings](/graph/api/user-
 &nbsp;
 </details>
 <details>
-<summary>How can I deploy the code in Azure using Teams Toolkit, and use Graph API get a user profile photo?</summary>
+<summary>How can I deploy the code in Azure using Teams Toolkit, and use Graph API to get a user profile photo?</summary>
 
 For more information on Teams Toolkit, see [Create a new Teams project](toolkit/create-new-project.md) and [TeamsFx Library](toolkit/TeamsFx-CLI.md).
 <br>
@@ -206,7 +206,7 @@ Each team course instance must have an owner, and the synchronization sets the f
 <details>
 <summary>What should we do to remove Moodle login page when working from Teams? Can we force single sign-on (SSO)?</summary>
 
-The app users have multiple sign in options from the Moodle login page.
+The app users have multiple sign-in options from the Moodle login page.
 
 * To sign in exclusively using Microsoft 365 credentials, enable the **Force redirect** configuration settings for the **auth_oidc plugin**. If the service is enabled, the app user can see the Microsoft sign in page.
 * To sign in manually to the Moodle portal, see [Moodle](https://moodle.org/login/index.php).
@@ -291,11 +291,11 @@ If the **Client secret** has expired, then the app user needs to generate a new 
 &nbsp;
 </details>
 <details>
-<summary>How to change the teams instance that is linked to a course?</summary>
+<summary>How to change the Teams instance that is linked to a course?</summary>
 
-Administrators can change the teams instance associated with a course through the **Manage Teams Connections** page. Select **Connect** next to the course to be changed and select a teams instance. If you use course reset to archive a team, you can link it back to the previous team.
+Administrators can change the Teams instance associated with a course through the **Manage Teams Connections** page. Select **Connect** next to the course to be changed and select a Teams instance. If you use course reset to archive a team, you can link it back to the previous team.
 
-The following image shows the teams instance:
+The following image shows the Teams instance:
 
 :::image type="content" source="assets/images/MoodleInstructions/faq-8.png" alt-text="teams instance":::
 <br>
