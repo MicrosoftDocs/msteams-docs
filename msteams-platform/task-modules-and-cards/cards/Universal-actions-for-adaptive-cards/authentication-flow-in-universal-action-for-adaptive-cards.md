@@ -1,5 +1,5 @@
 ---
-title: Authentication flow in Adaptive Cards Universal Actions
+title: Authentication flow in Adaptive Cards with Universal Actions
 description: In this module, learn about the authentication flow in Adaptive Cards Universal Actions.
 author: v-sdhakshina
 ms.topic: conceptual
@@ -28,7 +28,7 @@ In the past, users who were chatting one-on-one with the bot had to wait while y
 
 ## Authentication flow in Action.Execute protocol
 
-Authentication flow for OAuth and SSO, within the `Action.Execute` protocol enables authentication within the context of the group chat or channel conversation where the Adaptive Card is shared.
+Authentication flow for OAuth, within the `Action.Execute` protocol enables authentication within the context of the group chat or channel conversation where the Adaptive Card is shared.
 
 Bots can respond with login request in response to `Action.Execute` for:
 

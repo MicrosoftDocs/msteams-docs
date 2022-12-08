@@ -26,7 +26,7 @@ With Single sign-on (SSO) in Teams, app users have the advantage of using Teams 
 
 ## Authentication flow in Action.Execute protocol
 
-Authentication flow for OAuth and SSO, within the `Action.Execute` protocol enables authentication within the context of the group chat or channel conversation where the Adaptive Card is shared.
+Authentication flow for SSO, within the `Action.Execute` protocol enables authentication within the context of the group chat or channel conversation where the Adaptive Card is shared.
 
 Bots can respond with login request in response to `Action.Execute` for:
 
