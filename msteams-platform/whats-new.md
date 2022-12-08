@@ -26,25 +26,11 @@ Teams platform features that are available to all app developers.
 
 **2022 December**
 
-* ***December 7, 2022***: [Teams developer documentation FAQs](teams-faq.md)
+* ***December 8, 2022***: [Teams developer documentation FAQs](teams-faq.md)
 
-<!--**2022 November**
+* ***December 07, 2022***: [Notification bot in Teams](bots/how-to/conversations/notification-bot-in-teams.md)
 
-* ***November 29, 2022***: [Plan analytics for your Teams app](concepts/design/overview-analytics.md)
-
-* ***November 23, 2022***: [Integrate location capabilities](concepts/device-capabilities/location-capability.md).
-
-* ***November 22, 2022***: [Enable SSO for your bot and message extension app](bots/how-to/authentication/bot-sso-overview.md).
-
-* ***November 18, 2022***: [Zero install for link unfurling](messaging-extensions/how-to/link-unfurling.md#zero-install-for-link-unfurling).
-
-* ***November 17, 2022***: [Manifest schema v1.15](resources/schema/manifest-schema.md).
-
-* ***November 16, 2022***: [Adaptive Cards overflow menu](task-modules-and-cards/cards/cards-format.md#adaptive-cards-overflow-menu).
-
-* ***November 14, 2022***: [Introducing single sign-on for Visual Studio](toolkit/add-single-sign-on.md).
-
-* ***November 02, 2022***: [Support global routing for bot APIs](bots/how-to/conversations/send-proactive-messages.md#create-the-conversation).-->
+* ***December 07, 2022***: [Command bot in Teams](bots/how-to/conversations/command-bot-in-teams.md)
 
 :::column-end:::
 :::row-end:::
