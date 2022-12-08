@@ -47,7 +47,7 @@ For a OAuth or nominal sign-on experience in which the user is presented with a 
 
 :::image type="content" source="../../../assets/images/authentication/oauth-flow-ac.png" alt-text="Screenshot shows you the authentication flow for the Adaptive Cards with Universal Actions.":::
 
-1. Teams client sends an adaptiveCard/actionInvokeActivity request to the bot.
+1. Teams client sends an Adaptive Card or `actionInvokeActivity` request to the bot.
 1. The bot uses the Token Service protocol to check if there's already a cached token for the user specified in the activity.from.id field on the channel specified in the activity.channelId field for the bot and connection that is configured.
 1. If there's a cached token, the bot can use this token. If there's no token, the bot creates an OAuthCard and places it in the Response with the values:
 
@@ -71,15 +71,15 @@ For a OAuth or nominal sign-on experience in which the user is presented with a 
     ```
 
     * Senders must include a value that adheres to the OAuthCard format.
-    * Senders must include a connectionName. Receivers may ignore login requests with an empty or missing connectionName.
-    * Senders must include either a button that has a non-empty buttons array.
+    * Senders must include a `connectionName`. Receivers may ignore login requests with an empty or missing `connectionName`.
+    * Senders must include either a `button` that has a non-empty buttons array.
 
-1. Upon receiving this response, Teams client will show a **Sign-In** button in the card footer where user can select.
+1. Upon receiving this response, Teams client shows a **Sign-In** button in the card footer where user can select.
 
    :::image type="content" source="../../../assets/images/authentication/adaptive-card-universal-action/sign-in-button.png" alt-text="Screenshot shows the Sign-In button on the Adaptive card.":::
 
-1. The user will select on the sign-in link, which will open a browser window to the configured connection"s identity provider"s sign-on page. The final redirect will land on a Token Service page offering an authorization code value.
-1. Teams client will create and send the adaptiveCard/action Invoke Activity with name. The value will include the state field containing the authorization code:
+1. The user selects on the sign-in link, which opens a browser window to the configured connection"s identity provider"s sign-on page. The final redirect lands on a Token Service page offering an authorization code value.
+1. Teams client creates and send the `adaptiveCard/action` Invoke Activity with `name`. The value includes the `state` field containing the authorization code:
 
     ```javascript
     {
@@ -102,7 +102,7 @@ For a OAuth or nominal sign-on experience in which the user is presented with a 
     
     ```
 
-   * Senders must include a state field.
+   * Senders must include a `state` field.
 
 1. The channel delivers this Invoke to the bot, which uses the authentication code to finalize retrieving the token with the Token Service. The Token Service delivers the user's access token to the bot.
 
@@ -117,10 +117,10 @@ For a OAuth or nominal sign-on experience in which the user is presented with a 
      }
    ```
 
-   Clients can again prompt the user for the correct authorization code or can send a different `Action.Execute`.
+   Teams clients can again prompt the user for the correct authorization code or can send a different `Action.Execute`.
 
 1. If the authorization code in state is correct, the bot uses the access token on behalf of the user to perform its actions.
-1. The bot returns a non-error response to the client (either a card or message).
+1. The bot returns a non-error response to the Teams client (either a card or message).
 
 ## See also
 
