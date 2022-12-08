@@ -1080,7 +1080,7 @@ export interface IRaiseHandState {
 
 | Response code | Description |
 |----------------|--------------|
-| 500 | Internal code error, permission failure, reaction not enabled |
+| 500 | Internal code error, permission failure, reaction not enabled. |
 
 ## Reaction API
 
@@ -1153,7 +1153,7 @@ export enum MeetingReactionType {
 
 | Response code | Description |
 |---------------|-------------|
-| 500 | Internal code error, permission failure, reaction not enabled |
+| 500 | Internal code error, permission failure, reaction not enabled. |
 
 ## See also
 
