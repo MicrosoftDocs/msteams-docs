@@ -33,7 +33,7 @@ Bots can respond with login request in response to `Action.Execute` for:
 1. Adaptive Cards sent by bot in a one on one chat, group chat or a channel.
 1. Adaptive Cards sent by user via message extension app (backed by bot) in one on one chat, group chat or channel.
 1. Adaptive cards present in compose or preview area while user is composing the message.
-   * In compose area, refresh in Adaptive Card works and bot may want to use token to provide User Specific View to user before they send the card to the chat.
+   * In compose area, refresh in Adaptive Card works and bot may want to use token to provide user specific view to user before they send the card to the chat.
 
 ## SSO in Teams at runtime
 

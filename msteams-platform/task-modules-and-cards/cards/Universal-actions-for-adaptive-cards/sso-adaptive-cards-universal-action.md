@@ -98,7 +98,7 @@ Authentication steps for SSO are similar to that of a bot in Teams. Following ar
 1. The bot uses the access token on behalf of the user to perform its actions.
 1. The bot returns a non-error response to the client, either a card or message.
 1. To handle the access token in case the app user logs out, see [Handle app user log out](../../../bots/how-to/authentication/bot-sso-code.md#handle-app-user-log-out).
-1. [Update your Teams application manifest for your bot](../../../bots/how-to/authentication/bot-sso-manifest.md).
+1. You've registered your app and bot resource in Azure AD. You've also configured code to handle tokens. Now, you must update the Teams app manifest to enable SSO for your app. For more information, see [Update your Teams application manifest for your bot](../../../bots/how-to/authentication/bot-sso-manifest.md).
 
 ## See also
 
