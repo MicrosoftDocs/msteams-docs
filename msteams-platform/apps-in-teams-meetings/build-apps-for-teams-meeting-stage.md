@@ -222,7 +222,7 @@ The following participant roles may be involved during the meeting:
 
 ## Raise hand and Reaction APIs
 
-The third party user subscribes to the APIs and get the data by passing the handler. On subscription, the handler provides feedback to the API. Teams will use the error object `callback` provided by the handler when it fails and checks if the `callback` is true or false. Based on the event handling, results are displayed and the information changes according the response in the API. For more information, see also [Meetings app APIs](/microsoftteams/platform/apps-in-teams-meetings/meeting-apps-apis)
+The third-party user subscribes to the APIs and gets the data by passing the handler. Upon subscription, the handler provides feedback to the API. Teams will use the error object `callback` provided by the handler when it fails and checks if the `callback` is true or false. Based on the event handling, results are displayed and the information changes according the response in the API. For more information, see also [Meetings app APIs](/microsoftteams/platform/apps-in-teams-meetings/meeting-apps-apis)
 
 ## Step-by-step guide
 
