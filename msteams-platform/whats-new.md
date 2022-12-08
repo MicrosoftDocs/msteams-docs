@@ -26,27 +26,11 @@ Teams platform features that are available to all app developers.
 
 **2022 December**
 
+* ***December 8, 2022***: [Teams developer documentation FAQs](teams-faq.md)
+
 * ***December 07, 2022***: [Notification bot in Teams](bots/how-to/conversations/notification-bot-in-teams.md)
 
 * ***December 07, 2022***: [Command bot in Teams](bots/how-to/conversations/command-bot-in-teams.md)
-
-**2022 November**
-
-* ***November 29, 2022***: [Plan analytics for your Teams app](concepts/design/overview-analytics.md)
-
-* ***November 23, 2022***: [Integrate location capabilities](concepts/device-capabilities/location-capability.md).
-
-* ***November 22, 2022***: [Enable SSO for your bot and message extension app](bots/how-to/authentication/bot-sso-overview.md).
-
-* ***November 18, 2022***: [Zero install for link unfurling](messaging-extensions/how-to/link-unfurling.md#zero-install-for-link-unfurling).
-
-* ***November 17, 2022***: [Manifest schema v1.15](resources/schema/manifest-schema.md).
-
-* ***November 16, 2022***: [Adaptive Cards overflow menu](task-modules-and-cards/cards/cards-format.md#adaptive-cards-overflow-menu).
-
-* ***November 14, 2022***: [Introducing single sign-on for Visual Studio](toolkit/add-single-sign-on.md).
-
-* ***November 02, 2022***: [Support global routing for bot APIs](bots/how-to/conversations/send-proactive-messages.md#create-the-conversation).
 
 :::column-end:::
 :::row-end:::
@@ -57,6 +41,14 @@ Teams platform features that are available to all app developers.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
+| 29/11/2022 | Introducing plan analytics for your Teams app. | Plan your app > Plan analytics for your Teams app > [Overview](concepts/design/overview-analytics.md) |
+| 23/11/2022 | Updated integrate location capabilities. | Integrate device capabilities > [Integrate location capabilities](concepts/device-capabilities/location-capability.md) |
+| 22/11/2022 | Revamped enable SSO for your bot and message extension app. | Add authentication > Enable SSO for your Teams app > Enable SSO for your bot and message extension app > [Overview](bots/how-to/authentication/bot-sso-overview.md) |
+| 18/11/2022 | Introducing zero install for link unfurling. | Build message extensions > Add link unfurling > [Zero install for link unfurling](messaging-extensions/how-to/link-unfurling.md#zero-install-for-link-unfurling) |
+| 17/11/2022 | Updated Manifest schema v1.15. | App manifest > [Manifest schema v1.15](resources/schema/manifest-schema.md) |
+| 16/11/2022 | Introducing Adaptive Cards overflow menu. | Build cards and task modules > Build cards > Format cards in Microsoft Teams > [Adaptive Cards overflow menu](task-modules-and-cards/cards/cards-format.md#adaptive-cards-overflow-menu) |
+| 14/11/2022 | Introducing single sign-on for Visual Studio. | Tools and SDKs > Teams Toolkit > Use Teams Toolkit to create your app > Develop your Teams app > [Add single sign-on to your Teams app](toolkit/add-single-sign-on.md) |
+| 02/11/2022 | Support global routing for bot APIs. | Build bots > Bot conversations > Proactive messages > [Create the conversation](bots/how-to/conversations/send-proactive-messages.md#create-the-conversation) |
 | 10/27/2022 | Introducing Workflow bot for Teams. | Tools and SDKs > Teams Toolkit > Use Teams Toolkit to create your app > Develop your Teams app  > Create multi capability app > [Create Teams workflow bot](sbs-gs-workflow-bot.yml) |
 | 10/26/2022 | Build an in-meeting app for enabling meeting participants to sign documents in real time. | Build apps for Teams meetings and calls > Enable and configure apps for Teams meetings > [Build apps for Teams meeting stage](apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#build-an-in-meeting-document-signing-app) |
 | 10/19/2022| Developer Portal for Teams is now available for GCC tenants. | Tools and SDKs > Developer Portal for Teams > [Overview](concepts/build-and-test/teams-developer-portal.md)|
