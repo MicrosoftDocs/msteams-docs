@@ -14,17 +14,17 @@ In this document, you can understand different UI elements along with descriptio
 
 ::: zone pivot="visual-studio-code"
 
-## Teams Toolkit for Visual Studio Code basic UI elements
+## Basic UI elements of Teams Toolkit
 
 After Teams Toolkit installation, the following Teams Toolkit UI appears:
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/overview1_1.png" alt-text="Overview of Teams Toolkit" lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/overview1_1.png":::
 
-| Serial No | UI Elements | Definition |
+| Serial No. | UI Elements | Definition |
 | --- | --- |
 | 1 | **Get Started** | Explore Teams Toolkit and get an overview of the fundamentals. |
 | 2 | **Create a new Teams App** | Create a new Teams app based on your requirement. |
-| 3 | **View Samples** | Build different types of apps based on the existing samples. |
+| 3 | **View Samples** | Access existing samples to build apps based on your requirement. |
 | 4 | **Documentation** | Access the Microsoft Teams Developer documentation. |
 | 5 | **Tutorials** | Access different tutorials. |
 | 6 | **New File** | Create a new file. |
@@ -36,9 +36,9 @@ After Teams Toolkit installation, the following Teams Toolkit UI appears:
 
 You can explore UI elements from task pane in the Teams Toolkit. Task pane appears after creating an app using Teams Toolkit. The following video helps you to learn about the process of creating a new Teams app:
 
-   :::image type="content" source="../assets/videos/javascript-bot-app1_1.gif" alt-text="Create a Teams app":::!
+   :::image type="content" source="../assets/videos/javascript-bot-app1_1.gif" alt-text="Create a Teams app":::
 
-After creating a new Teams app, the directory structure of the app appears in the left panel and the readme file in the right panel.
+After creating a new Teams app, the directory structure of the app appears in the left panel and the **`README`** file in the right panel.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/first-page_1.png" alt-text="First page of Teams Toolkit" lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/first-page_1.png":::
 
@@ -92,7 +92,7 @@ From the task pane, you can see the following sections:
         
        * **Create a new Teams app**: Use the Teams Toolkit wizard to prepare project scaffolding for app development.
 
-        * **View samples**: Select any of the Teams Toolkit's sample apps. The toolkit downloads the app code from GitHub, and you can build the sample app.
+        * **View samples**: Select any of the Teams Toolkit's sample apps. The toolkit downloads the app code from GitHub and you can build the sample app.
         
         * **Add features**: Add other required Teams capabilities to the Teams app during the development process and add optional cloud resources suitable for your app.
        
@@ -146,7 +146,7 @@ From the task pane, you can see the following sections:
 
 ## Explore Teams Toolkit for Visual Studio
 
-After Teams Toolkit installation, you can see Teams Toolkit options in two different methods:
+After Teams Toolkit installation, you can see Teams Toolkit options in the following ways:
 
 # [Project](#tab/prj)
 
