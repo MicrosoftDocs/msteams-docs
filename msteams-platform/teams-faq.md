@@ -166,7 +166,7 @@ You can use the following Graph API [Get user mailbox settings](/graph/api/user-
 &nbsp;
 </details>
 <details>
-<summary>How can I deploy the code in Azure using Teams Toolkit, and use Graph API get a user profile photo?</summary>
+<summary>How can I deploy the code in Azure using Teams Toolkit, and use Graph API to get a user profile photo?</summary>
 
 For more information on Teams Toolkit, see [Create a new Teams project](toolkit/create-new-project.md) and [TeamsFx Library](toolkit/TeamsFx-CLI.md).
 <br>
@@ -291,11 +291,11 @@ If the **Client secret** has expired, then the app user needs to generate a new 
 &nbsp;
 </details>
 <details>
-<summary>How to change the teams instance that is linked to a course?</summary>
+<summary>How to change the Teams instance that is linked to a course?</summary>
 
-Administrators can change the teams instance associated with a course through the **Manage Teams Connections** page. Select **Connect** next to the course to be changed and select a teams instance. If you use course reset to archive a team, you can link it back to the previous team.
+Administrators can change the Teams instance associated with a course through the **Manage Teams Connections** page. Select **Connect** next to the course to be changed and select a Teams instance. If you use course reset to archive a team, you can link it back to the previous team.
 
-The following image shows the teams instance:
+The following image shows the Teams instance:
 
 :::image type="content" source="assets/images/MoodleInstructions/faq-8.png" alt-text="teams instance":::
 <br>
