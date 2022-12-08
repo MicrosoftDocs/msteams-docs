@@ -20,9 +20,9 @@ Authentication steps for SSO are similar to that of a bot in Teams. Following ar
 
    :::image type="content" source="../../../assets/images/authentication/consent-sso-ac.png" alt-text="Screenshot shows you the consent dialog box.":::
 
-   * Once the user clicks on **View and accept**, the existing Azure AD permission consent view launched to show all the permissions and continue with the authentication flow.
+   * Once the user selects on **View and accept**, the existing Azure AD permission consent view launched to show all the permissions and continue with the authentication flow.
 
-1. If there's a cached token, the bot can use the same token. If there's no token available, the bot creates an OAuthCard and places it in an Invoke Response with the values below, which include a `tokenExchangeResource`:
+1. If there's a cached token, the bot can use the same token. If there's no token available, the bot creates an OAuthCard and places it in an invoke response with the values below, which include a `tokenExchangeResource`:
 
     ```JSON
        {
@@ -82,10 +82,10 @@ Authentication steps for SSO are similar to that of a bot in Teams. Following ar
     * Senders must include the `authentication` field with a token exchange resource.
 
 1. The response with the token is sent through an invoke activity with the same schema as other invoke activities that the bots receive. For more information, see [Add code to receive the token](../../../bots/how-to/authentication/bot-sso-code.md#add-code-to-receive-the-token).
-1. The channel delivers this Invoke to the bot, which uses the token to finalize the token exchange process with the Token Service and identity provider. The Token Service delivers the user"s access token to the bot.
-   * Receivers may ignore the authentication if the value is malformed.
-   * Receivers that experience an error performing token exchange should respond with an error or a second loginRequest that doesn't include single sign-on information. If responding with an error, the error response must be:
-   * If the value in the state field is incorrect, the bot can return an error to the client as follows:
+1. The channel delivers this invoke to the bot, which uses the token to finalize the token exchange process with the Token Service and identity provider. The Token Service delivers the user's access token to the bot.
+   * Receivers may ignore the authentication if the value is incorrect.
+   * Receivers that experience an error performing token exchange must respond with an error or a second loginRequest that doesn't include single sign-on information. If responding with an error, the error response must be:
+   * If the value in the `state` field is incorrect, the bot can return an error to the client as follows:
 
     ```javascript
        {

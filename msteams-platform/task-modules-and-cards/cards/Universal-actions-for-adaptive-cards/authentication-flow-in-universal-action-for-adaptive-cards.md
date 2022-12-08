@@ -39,9 +39,9 @@ Bots can respond with login request in response to `Action.Execute` for:
 
 ## Getting started with OAuth or nominal sign-on flow
 
-Authentication steps for OAuth are similar to bot in Teams.
+The OAuth or nominal Authentication steps for Adaptive Cards with Universal Actions are similar to bot in Teams.
 
-Ensure that you add authentication to your teams bot. To learn more about how to create an authentication-enabled bot, how to deploy the bot to Azure and associate it with an identity provider, and how to integrate the bot within Microsoft Teams, see [Add authentication to your Teams bot](../../../bots/how-to/authentication/add-authentication.md)
+Ensure that you added authentication to your teams bot. To learn more about how to create an authentication-enabled bot, how to deploy the bot to Azure and associate it with an identity provider, and how to integrate the bot within Microsoft Teams, see [Add authentication to your Teams bot](../../../bots/how-to/authentication/add-authentication.md)
 
 For a OAuth or nominal sign-on experience in which the user is presented with a sign-in button or link and the following is the authentication flow:
 
@@ -49,7 +49,7 @@ For a OAuth or nominal sign-on experience in which the user is presented with a 
 
 1. Teams client sends an Adaptive Card or `actionInvokeActivity` request to the bot.
 1. The bot uses the Token Service protocol to check if there's already a cached token for the user specified in the activity.from.id field on the channel specified in the activity.channelId field for the bot and connection that is configured.
-1. If there's a cached token, the bot can use this token. If there's no token, the bot creates an OAuthCard and places it in the Response with the values:
+1. If there's a cached token, the bot can use this token. If there's no token, the bot creates an OAuthCard and places it in the response with the following values:
 
     ```javascript
    {
@@ -78,7 +78,7 @@ For a OAuth or nominal sign-on experience in which the user is presented with a 
 
    :::image type="content" source="../../../assets/images/authentication/adaptive-card-universal-action/sign-in-button.png" alt-text="Screenshot shows the Sign-In button on the Adaptive card.":::
 
-1. The user selects on the sign-in link, which opens a browser window to the configured connection"s identity provider"s sign-on page. The final redirect lands on a Token Service page offering an authorization code value.
+1. The user selects on the sign-in link, which opens a browser window to the configured connection's identity provider's sign-on page. The final redirect lands on a Token Service page offering an authorization code value.
 1. Teams client creates and send the `adaptiveCard/action` Invoke Activity with `name`. The value includes the `state` field containing the authorization code:
 
     ```javascript
@@ -104,11 +104,11 @@ For a OAuth or nominal sign-on experience in which the user is presented with a 
 
    * Senders must include a `state` field.
 
-1. The channel delivers this Invoke to the bot, which uses the authentication code to finalize retrieving the token with the Token Service. The Token Service delivers the user's access token to the bot.
+1. The channel delivers this invoke to the bot, which uses the authentication code to finalize retrieving the token with the Token Service. The Token Service delivers the user's access token to the bot.
 
    * Receivers may ignore the adaptiveCard/action invoke or reply with an error if there's a missing or empty state field.
 
-   If the value in the state field is incorrect, the bot can return an error to the Teams client as follows:
+   If the value in the state field is incorrect, the bot returns an error to the Teams client as follows:
 
    ```javascript
      {
@@ -120,7 +120,7 @@ For a OAuth or nominal sign-on experience in which the user is presented with a 
    Teams clients can again prompt the user for the correct authorization code or can send a different `Action.Execute`.
 
 1. If the authorization code in state is correct, the bot uses the access token on behalf of the user to perform its actions.
-1. The bot returns a non-error response to the Teams client (either a card or message).
+1. The bot responds with a card or message to the Teams client without an error.
 
 ## See also
 

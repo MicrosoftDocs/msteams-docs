@@ -52,7 +52,7 @@ The following image shows how SSO works when a Teams app user attempts to access
 | 5 | Azure AD → Teams client | For the app user who's using the bot service for the first time, the token exchange can occur only after app user gives their consent. Teams client displays a message to the app user for giving consent. <br> In case the consent fails: <br> 1. The authentication falls back to the sign-in prompt and the app user must sign in to use the bot app. The sign-in button pops up in Teams client, and when app user selects it, the Azure AD sign-in page is rendered. <br> 2. The app user signs in and grants access to the bot service. |
 | 6 | Teams Client → Bot service | Teams client re-sends the invoke Action.Execute request to the bot along with the token. <br> • Senders must include the authentication field with a token exchange resource. |
 | 7 | Bot service → Bot Framework Token Service | The token for the app user is stored in the Bot Framework Token Store. |
-| 8 | Azure AD → Teams client | Azure AD sends a Invoke response with Adaptive Card to Teams client. Bot returns a non-error response to the client, either a card or message. |
+| 8 | Azure AD → Teams client | Azure AD sends a invoke response with Adaptive Card to Teams client. Bot returns a non-error response to the client, either a card or message. |
 
 For a Adaptive Cards Universal Actions in bot, the bot app sends an OAuth Card to Teams client. This card is used to get access token from Azure AD using `tokenExchangeResource`. Following app user's consent, Teams client sends the token received from Azure AD to the bot app using `tokenExchange`. The bot app can then parse the token to retrieve the app user's information, such as email address.
 
