@@ -38,12 +38,12 @@ Cards provide users with various visual, audio, and selectable messages and help
 
 The following table provides the user types and lists the features that each user can access in meetings:
 
-| User type | Bots | Message extensions | Adaptive Cards | Task modules |
-| :-- | :-- | :-- | :-- | :-- |
-| In-tenant user | Available | Available | Available | Available |
-| Guest, part of the tenant Azure AD | Not available | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. |
-| Federated users, for more information, see [non-standard users](/microsoftteams/non-standard-users). | Interaction is allowed. Acquire, update, and delete aren't allowed. | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. |
-| Anonymous user | Not available | Not available | Interactions in the meeting chat are allowed. | Not available |
+| User type | Tabs |Bots | Message extensions | Adaptive Cards | Task modules | In-meeting dialog | Meeting stage |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| In-tenant user |  | Available | Available | Available | Available |  |  |
+| Guest, part of the tenant Azure AD | Interaction is allowed. Create, update and delete aren't allowed. | Not available | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. |Available| Can view, start and interact with the app on the meeting stage.|
+| Federated users, for more information, see [non-standard users](/microsoftteams/non-standard-users). |  Interaction is allowed. Create, update and delete aren't allowed. | Interaction is allowed. Acquire, update, and delete aren't allowed. | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. | Not available | Can view, start and interact with the app on the meeting stage. |
+| Anonymous user | Not available | Not available | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. | Not available |Can view, start and interact with the app on the meeting stage. |
 
 ## See also
 
