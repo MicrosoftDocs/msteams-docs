@@ -39,13 +39,13 @@ To complete this tutorial, you need:
 
 If you have an existing personal tab app, make a copy or a branch of your production project for testing and update your App ID in the app manifest to use a new identifier (distinct from the production App ID, for testing).
 
-If you'd like to use sample code to complete this tutorial, follow the setup steps in the [Todo List Sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend) to build a personal tab app using the Teams Toolkit extension for Visual Studio Code, then return to this article to update it for Microsoft 365. You can also use the Teams Toolkit extension to create a new Teams app and select *Start from a sample*. One of the options available is the *Todo List with backend on Azure* sample.
+If you'd like to use sample code instead of your own production code, you can use the Todo List sample. Either follow the setup steps in the [Todo List Sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend) GitHub repository or use the Teams Toolkit extension to create a new Teams app and select *Start from a sample > Todo List with backend on Azure*. After you've created a personal tab, return to this article to extend it across Microsoft 365.
 
 Alternately, you can use a basic single sign-on *hello world* app already enabled for Microsoft 365 in the following [Quickstart](#quickstart) section and then skip to [sideload your app in Teams](#sideload-your-app-in-teams).
 
 ### Quickstart
 
-To start with a [personal tab](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend-M365) that's already enabled to run in Outlook and Office, you can use the Teams Toolkit extension for Visual Studio Code.
+To start with a personal tab that's already enabled to run in Outlook and Office, you can use the Teams Toolkit extension for Visual Studio Code.
 
 1. From Visual Studio Code, open the command palette (`Ctrl+Shift+P`), type `Teams: Create a new Teams app`.
 1. Select **Create a new Teams app** option.
