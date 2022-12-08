@@ -41,7 +41,7 @@ Bots can respond with login request in response to `Action.Execute` for:
 
 The OAuth or nominal Authentication steps for Adaptive Cards with Universal Actions are similar to bot in Teams.
 
-Ensure that you added authentication to your teams bot. To learn more about how to create an authentication-enabled bot, how to deploy the bot to Azure and associate it with an identity provider, and how to integrate the bot within Microsoft Teams, see [Add authentication to your Teams bot](../../../bots/how-to/authentication/add-authentication.md)
+Ensure that you added authentication to your teams bot. To learn more about how to create an authentication-enabled bot, how to deploy the bot to Azure and associate it with an identity provider, and how to integrate the bot within Microsoft Teams, see [add authentication to your Teams bot](../../../bots/how-to/authentication/add-authentication.md)
 
 For a OAuth or nominal sign-on experience in which the user is presented with a sign-in button or link and the following is the authentication flow:
 
