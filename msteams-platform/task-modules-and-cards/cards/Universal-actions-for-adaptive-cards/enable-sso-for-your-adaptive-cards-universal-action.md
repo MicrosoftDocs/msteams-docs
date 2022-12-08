@@ -67,7 +67,9 @@ Authentication steps for SSO are similar to that of a bot or tab in Teams. Follo
 > [!NOTE]
 > To implement SSO flow, you must have personal scope declared for your bot in the app manifest. When a user invokes the SSO flow via the Adaptive Card `Action.Execute` protocol, the user is prompted to install the app in personal scope if it isn't already installed.
 
-1. Ensure that you register your bot through Azure AD portal, if not see [Register your app through the Azure AD portal](../../../bots/how-to/authentication/bot-sso-register-aad.md).
+1. Before you add code to enable SSO, ensure that you've configured your app and bot resource in Azure AD portal. For more information, see [configured your app and bot resource in Azure AD portal](../../../bots/how-to/authentication/bot-sso-register-aad.md).
+1. After you configured the client secret and OAuth connection setting for the app in Azure AD. You must configure the code with development environment variables. For more information, see [Update development environment variables](../../../bots/how-to/authentication/bot-sso-code.md#update-development-environment-variables).
+1. Add code to handle an access token. For more information, see [Add code to handle an access token](../../../bots/how-to/authentication/bot-sso-code.md#add-code-to-handle-an-access-token).
 1. If there's a cached token, the bot can use this token. If there's not a token, the bot creates an OAuthCard and places it in an Invoke Response with the values below, which include a tokenExchangeResource:
 
 ```JSON
@@ -95,6 +97,12 @@ Authentication steps for SSO are similar to that of a bot or tab in Teams. Follo
 
 ```
 
+* Senders must include a `tokenExchangeResource` to designate a single sign-on operation.
+
+   > [!NOTE]
+   > Teams client will trigger the nominal sing-on or OAuth flow when SSO fails. It is highly recommended that you provide sign in URL in the above response so that OAuth flow works.
+
+1.
 1. [Update your Teams application manifest for your bot](../../../bots/how-to/authentication/bot-sso-manifest.md)
 
 For a single sign-on experience in which the user is already signed into a client experience and the bot wants to perform token exchange for a different registered application or resource on the same identity provider, the protocol is as follows:
@@ -134,8 +142,8 @@ For a single sign-on experience in which the user is already signed into a clien
    > Teams client will trigger the nominal sing-on or OAuth flow when SSO fails. It is highly recommended that you provide sign in URL in the above response so that OAuth flow works.
 
 1. This response is delivered through the channel to the client, which uses the tokenExchangeResource information and the client token to obtain an on-behalf-of token or exchangeable token from the identity provider:
-   * Clients MAY ignore the tokenExchangeResource for any reason, including invalid values, errors retrieving exchangeable tokens, or not supporting the identity provider.
-   * Clients that ignore the tokenExchangeResource SHOULD use the nominal sign-on flow.
+   * Clients may ignore the tokenExchangeResource for any reason, including invalid values, errors retrieving exchangeable tokens, or not supporting the identity provider.
+   * Clients that ignore the tokenExchangeResource should use the nominal sign-on flow.
 
 1. The client resend the original `adaptiveCard/action` to the bot along with the token as follows:
 
@@ -165,8 +173,8 @@ For a single sign-on experience in which the user is already signed into a clien
     * Senders must include the authentication field with a token exchange resource.
 
 1. The channel delivers this Invoke to the bot, which uses the token to finalize the token exchange process with the Token Service and identity provider. The Token Service delivers the user"s access token to the bot.
-   * Receivers MAY ignore the authentication if the value is malformed.
-   * Receivers that experience an error performing token exchange SHOULD respond with an error or a second loginRequest that doesn't include single sign-on information. If responding with an error, the error response must be:
+   * Receivers may ignore the authentication if the value is malformed.
+   * Receivers that experience an error performing token exchange should respond with an error or a second loginRequest that doesn't include single sign-on information. If responding with an error, the error response must be:
    * If the value in the state field is incorrect, the bot can return an error to the client as follows:
 
     ```javascript
