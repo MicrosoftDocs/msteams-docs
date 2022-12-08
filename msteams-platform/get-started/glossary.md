@@ -222,7 +222,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | [UI components](../concepts/design/design-teams-app-basic-ui-components.md) | For Teams app development, you can use Fluent UI components to build your app from scratch. |
 | [UI templates](../concepts/design/design-teams-app-ui-templates.md) | For Teams app development, you can use Teams UI templates to design your apps quickly. |
 | [Universal Actions for Adaptive Cards](../task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) | A way to implement Adaptive Cards across platforms and applications. It uses a bot as a common backend for handling actions. |
-| User consent | A user can authorize an application to access some data at the protected resource, while acting as that user. <br> [Consent dialog](#c), [Administrator consent](#a), [User consent](u), [Delegated permission](#d) <br> For more information, see [Configure your tab app in Azure AD](../tabs/how-to/authentication/tab-sso-register-aad.md) and [Configure your app in Azure AD](../bots/how-to/authentication/bot-sso-register-aad.md). |
+| User consent | A user can authorize an application to access some data at the protected resource, while acting as that user. <br> [Consent dialog](#c), [Administrator consent](#a), [User consent](#u), [Delegated permission](#d) <br> For more information, see [Configure your tab app in Azure AD](../tabs/how-to/authentication/tab-sso-register-aad.md) and [Configure your app in Azure AD](../bots/how-to/authentication/bot-sso-register-aad.md). |
 
 ## V
 
