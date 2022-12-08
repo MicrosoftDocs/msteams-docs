@@ -28,16 +28,19 @@ items:
     
     This step-by-step guide helps you to create Outgoing Webhooks in Teams. You'll see the following output:
 
-    ![ready](~/assets/images/sbs-outgoing-webhooks/output-result1.png)
+    :::image type="content" source="./assets/images/sbs-outgoing-webhooks/output-result1.png" alt-text="Screenshot shows Outgoing Webhooks in Teams channel.":::
 
 - title: Prerequisites
   durationInMinutes: 1
   content: |
     Ensure you install the following tools and set up your development environment:  
 
-    * [Microsoft Teams](https://teams.microsoft.com/) with valid account
-    * [Latest version of Visual Studio](https://visualstudio.microsoft.com/downloads/)
-    * [ngrok](https://ngrok.com/download) latest version (only for devbox testing) or any equivalent tunneling solution
+     | &nbsp; | Install | For using... |
+     | --- | --- | --- |
+     | **Required** | &nbsp; | &nbsp; |
+     | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call, and all in one place.|
+     | &nbsp; | [Visual Studio 2022 version 17.3](https://visualstudio.microsoft.com)<br> Install one of the following two workloads:<br> • **ASP.NET and web development** <br> • **.NET Core cross-platform development** | You can install the enterprise version in Visual Studio 2022 and install the workloads. |
+     | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots, message extensions, and incoming webhooks) require inbound connections. A tunnel connects your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
     
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
@@ -51,20 +54,22 @@ items:
     1. Select **Code**.
     1. From the dropdown menu, select **Open with GitHub Desktop**.
  
-       ![Clone](~/assets/images/sbs-outgoing-webhooks/clone-repository.png)
+       :::image type="content" source="./assets/images/sbs-outgoing-webhooks/clone-repository.png" alt-text="Screenshot of GitHub web page.  The menu entry titled Open with GitHub Desktop under Code dropdown menu is highlighted in red.":::
 
     1. Select **Clone**. 
 
 - title: Create Outgoing Webhooks
   durationInMinutes: 5
   content: |
-    1. Select the required team, and then select **Manage team** from the (•••) dropdown menu.
+    1. Go to **Microsoft Teams** and select **Teams** from the left pane.
 
-       ![Manage](~/assets/images/sbs-outgoing-webhooks/manage-team.png)
+    1. Go to a team that you want, select **More options** (•••), and then select **Manage team**.
 
-    1. Choose the **Apps** tab from the navigation bar.
+       :::image type="content" source="./assets/images/sbs-outgoing-webhooks/manage-team.png" alt-text="Screenshot of Teams app with Manage team option under Contoso dropdown menu highlighted in red.":::
 
-       ![Choose](~/assets/images/sbs-outgoing-webhooks/app-selection.png)
+    1. Select the **Apps** tab from the navigation bar.
+
+       :::image type="content" source="./assets/images/sbs-outgoing-webhooks/app-selection.png" alt-text="Screenshot shows the selection of Apps tab under Contoso.":::
 
     1. Use ngrok to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
 
@@ -72,9 +77,9 @@ items:
         ngrok http --host-header=localhost 3978
         ```
 
-    1. From the window's lower-right corner, select **Create an Outgoing Webhook**.
+    1. Select **Create an outgoing webhook** from the lower-right corner of the window.
 
-       ![Outgoing](~/assets/images/sbs-outgoing-webhooks/create-outgoing-webhook.png).
+       :::image type="content" source="./assets/images/sbs-outgoing-webhooks/create-outgoing-webhook.png" alt-text="Screenshot shows the option Create an outgoing webhook highlighted in red.":::
 
     1. Enter the following details:
      
@@ -86,74 +91,72 @@ items:
 
             * For authenticated sample, copy-and-paste ngrok URL and append it with /authenticatedSample?id=contoso.
 
-        * **Description**: A detailed string that will appear in the profile card and the team-level App dashboard.
+        * **Description**: A detailed string that will appear in the profile card and the team-level app dashboard.
 
         * **Profile picture (optional)**: App icon for your webhook.
 
     1. Select **Create**. The Outgoing Webhook is added to the current team's channel.
 
-        ![Create Outgoing Webhook](~/assets/images/sbs-outgoing-webhooks/select.png)
+        :::image type="content" source="~/assets/images/sbs-outgoing-webhooks/select.png" alt-text="Screenshot of Create an outgoing webhook page with Create option highlighted in red.":::
 
-    1. A `Hash-based Message Authentication Code (HMAC)` dialogue box appears. You can use the security token in **AuthProvider.cs** file to authenticate calls between Teams and any designated outside services. 
+    1. A `Hash-based Message Authentication Code (HMAC)` dialog appears. You can use the security token in **AuthProvider.cs** file to authenticate calls between Teams and any designated outside services. 
 
         > [!NOTE]
-        > The Outgoing Webhook is available to the team's users, only if the URL is valid and the server, and client authentication tokens are equal. For example, an HMAC handshake.
+        > The Outgoing Webhook is available to the team's users, only if the URL is valid, and the server and client authentication tokens are equal. For example, an HMAC handshake.
                     
-         ![Code](~/assets/images/sbs-outgoing-webhooks/security-token.png)   
+         :::image type="content" source="~/assets/images/sbs-outgoing-webhooks/security-token.png" alt-text="Screenshot of Outgoing Webhook being ready with the Security token highlighted in red.":::   
 
 - title: Build and run the service
   durationInMinutes: 1
   content: |
-       1. Launch the latest version of Visual Studio.
+       1. Open **Visual Studio**.
 
-       1. Navigate to **File** > **Open** > **Project/Solution**.
+       1. Go to **File** > **Open** > **Project/Solution**.
     
-           ![Open file](~/assets/images/sbs-messagingextension-action/VSopenfile.png)
+           :::image type="content" source="./assets/images/sbs-messagingextension-action/vsopenfile.png" alt-text="Screenshot of Visual Studio showing the Project/Solution option.":::
 
        1. Select **WebhookSampleBot.sln** file from **csharp** folder.
 
-           ![Solution File](~/assets/images//sbs-outgoing-webhooks/open-project.png)
+           :::image type="content" source="./assets/images//sbs-outgoing-webhooks/open-project.png" alt-text="Screenshot shows to select WebhookSampleBot.sln from csharp folder.":::
 
-       1. Update the **"contoso"** to "M365x712764" and HMAC in **AuthProvider.cs** file.  
+       1. Go to **AuthProvider.cs** file. Update `contoso` to `M365x712764` and add HMAC.  
 
-           ![update](~/assets/images//sbs-outgoing-webhooks/update-hmac2.png)
+           :::image type="content" source="./assets/images//sbs-outgoing-webhooks/update-hmac2.png" alt-text="Screenshot shows to update Contoso to M365x712764 and HMAC in AuthProvider.cs file highlighted in red.":::
       
        1. Press **F5** to run the project.
 
        1. Select **Yes** if the following dialog appears:
 
-           ![Trust Certificate](~/assets/images//sbs-outgoing-webhooks/outgoing-webhook-certificate.png)
+           :::image type="content" source="./assets/images//sbs-outgoing-webhooks/outgoing-webhook-certificate.png" alt-text="Screenshot of Security Warning dialog with the Yes option highlighted in red.":::
 
           A webpage displays local host information.
-
-           ![App ready](~/assets/images//sbs-outgoing-webhooks/outgoing-webhooks-ready.png)                  
+  
+           :::image type="content" source="./assets/images//sbs-outgoing-webhooks/outgoing-webhooks-ready.png" alt-text="Screenshot shows the localhost:3978 running in browser.":::                
 
 - title: Interact with the app in Teams
   durationInMinutes: 1
   content: |
-    1. Select **General** to start a new conversation.
+    1. Go to **Teams** and select **Teams** from the left pane.    
+    
+    1. Go to **General** > **New conversation**.
 
-    1. Select **New conversation** to begin a conversation.
+    1. To invoke an Outgoing Webhook in the channel, **@mention** the Outgoing Webhook name and select the **Send** icon.
 
-    1. Enter **\@mention** the name of the Outgoing Webhook to invoke it in the channel. 
-
-       ![message](~/assets/images/sbs-outgoing-webhooks/type-mention.png)
-
-    1. Select **send**.
+       :::image type="content" source="./assets/images/sbs-outgoing-webhooks/type-mention.png" alt-text="Screenshot shows @mention the name of Outgoing Webhook.":::
 
        > [!NOTE]
        >  You can send Adaptive Card, Hero card, and text messages as attachment with Outgoing Webhook.
 
-    1. The meeting chat displays new message.
+    1. The meeting chat displays a new message.
 
-       ![ready](~/assets/images/sbs-outgoing-webhooks/output-result.png)
+       :::image type="content" source="./assets/images/sbs-outgoing-webhooks/output-result.png" alt-text="Screenshot displays new message in Teams with the name of the Outgoing Webhook.":::
        
 - title: Complete challenge
   durationInMinutes: 1
   content: |
     Did you come up with something like this?
 
-       ![ready](~/assets/images/sbs-outgoing-webhooks/output-result1.png)
+       :::image type="content" source="./assets/images/sbs-outgoing-webhooks/output-result1.png" alt-text="Screenshot shows the meeting chat that displays new message on desktop and mobile.":::
 
 - content: |
     You've completed the tutorial to get started with an Outgoing Webhook app!

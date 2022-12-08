@@ -1,6 +1,6 @@
 ---
 title: Get started - Overview
-description: In this module, learn how to get started with Microsoft Teams developer documentation that introduces you to common tools, fundamental concepts, and advanced features.
+description: Get started. Build your first Microsoft Teams app based on language (Node.js,C#,Java,Python) and developement environment, understand app capabilities, SDKs.
 ms.localizationpriority: high
 ms.topic: reference
 ---

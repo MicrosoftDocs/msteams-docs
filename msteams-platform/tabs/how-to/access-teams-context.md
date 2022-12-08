@@ -1,7 +1,7 @@
 ---
 title: Get context for your tab
-description: In this module, learn how to get user context to your tabs, user context and Access context information
-ms.localizationpriority: medium
+description: Learn to context for your tab, context of user, team, or company, access information, retrieve context in private or shared channels, and handle theme change.
+ms.localizationpriority: high
 ms.topic: how-to
 ---
 
@@ -236,46 +236,23 @@ The following fields are changed when your content page is in a private channel:
 
 If your page makes use of any of these values, the value of `channel.membershipType` field must be `Private` to determine if your page is loaded in a private channel and can respond appropriately.
 
-## Retrieve context in Microsoft Teams Connect shared channels
-
 > [!NOTE]
-> Currently, Microsoft Teams Connect shared channels are in developer preview only.
-
-When your content page is loaded in a Microsoft Teams Connect shared channel, the data you receive from the `getContext` call is altered due to the unique roster of users in shared channels.
-The following fields are changed when your content page is in a shared channel:
-
-* `team.groupId`: Undefined for shared channels.
-* `team.internalId`: Set to the `threadId` of the team, the channel is shared for the current user. If the user has access to multiple teams, this is set to the team that hosts (creates) the shared channel.
-* `team.displayName`: Set to the name of the team, the channel is shared for the current user. If the user has access to multiple teams, this is set to the team that hosts (creates) the shared channel.
-* `sharepointSite.url`: Set to the URL of a distinct, unique SharePoint site for the shared channel.
-* `sharepointSite.path`: Set to the path of a distinct, unique SharePoint site for the shared channel.
-* `sharepointSite.domain`: Set to the domain of a distinct, unique SharePoint site domain for the shared channel.
-
-In addition to these field changes, there are two new fields available for shared channels:
-
-* `hostTeamGroupId`: Set to the `team.groupId` associated with the hosting team, or the team that created the shared channel. The property can make Microsoft Graph API calls retrieve membership of the shared channel.
-* `hostTeamTenantId`: Set to the `channel.ownerTenantId` associated with the hosting team, or the team that created the shared channel. The property can be cross-referenced with the current user's tenant ID found in the `user.tenant.id` field of the *context* object to determine if the user is internal or external to the hosting team's tenant.
-
-If your page makes use of any of these values, the value of `channel.membershipType` field must be `Shared` to determine if your page is loaded in a shared channel and can respond appropriately.
-
-> [!NOTE]
-> `teamSiteUrl` also works well for standard channels.
-> If your page makes use of any of these values, the value of `channelType` field must be `Shared` to determine if your page is loaded in a shared channel and can respond appropriately.
+>`teamSiteUrl` also works well for standard channels. If your page makes use of any of these values, the value of `channelType` field must be `Shared` to determine if your page is loaded in a shared channel and can respond appropriately.
 
 ## Get context in shared channels
 
 When the content UX is loaded in a shared channel, use the data received from `getContext` call for  shared channel changes. If tab makes use of any of the following values, you must populate the `channelType` field to determine if the tab is loaded in a shared channel, and respond appropriately.
 For shared channels, the `groupId` value is `null`, since the host team's groupId doesn't accurately reflect the true membership of the shared channel. To address this, the `hostTeamGroupID` and `hostTenantID` properties are newly added and useful for making Microsoft Graph API calls to retrieve membership. `hostTeam` refers to the Team that created the shared channel. `currentTeam` refers to Team that the current user is accessing the shared channel from.
 
-For more information about these concepts, see [Shared channels](~/concepts/build-and-test/shared-channels.md).
+For more information about these concepts, see [shared channels](~/concepts/build-and-test/shared-channels.md).
 
 Use the following `getContext` properties in shared channels:
 
 | Property | Description |
 |----------|--------------|
-|`channelId`| The property is set to the SC channel thread ID.|
+|`channelId`| The property is set to the shared channels thread ID.|
 |`channelType`| The property is set to `sharedChannel` for shared channels.|
-|`groupId`|The property is `null` for shared Channels.|
+|`groupId`|The property is `null` for shared channels.|
 |`hostTenantId`| The property is newly added and describes the host's tenant ID, useful for comparing against the current user's `tid` tenant ID property. |
 |`hostTeamGroupId`| The property is newly added and describes the host team’s Azure AD group ID, useful for making Microsoft Graph API calls to retrieve shared channel membership. |
 |`teamId`|The property is newly added and set to the thread ID of the current shared team. |
@@ -289,7 +266,7 @@ Use the following `getContext` properties in shared channels:
 |`userObjectId`|  The property describes current user’s ID.|
 |`userPrincipalName`| The property describes the current user’s UPN.|
 
-For more information on shared channels, see [Shared channels](~/concepts/build-and-test/shared-channels.md).
+For more information on shared channels, see [shared channels](~/concepts/build-and-test/shared-channels.md).
 
 ## Handle theme change
 
@@ -304,8 +281,9 @@ The `theme` argument in the function is a string with a value of `default`, `dar
 
 ## See also
 
-* [Tab design guidelines](../../tabs/design/tabs.md)
-* [Teams tabs](~/tabs/what-are-tabs.md)
-* [Create a personal tab](~/tabs/how-to/create-personal-tab.md)
-* [Create a channel or group tab](~/tabs/how-to/create-channel-group-tab.md)
-* [Use task modules in tabs](~/task-modules-and-cards/task-modules/task-modules-tabs.md)
+* [Build tabs for Teams](../what-are-tabs.md)
+* [Design your tab for Microsoft Teams](../design/tabs.md)
+* [Enable SSO for tab app](authentication/tab-sso-overview.md)
+* [Microsoft Teams Connect shared channels](../../concepts/build-and-test/shared-channels.md)
+* [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
+* [Use task modules in tabs](../../task-modules-and-cards/task-modules/task-modules-tabs.md)

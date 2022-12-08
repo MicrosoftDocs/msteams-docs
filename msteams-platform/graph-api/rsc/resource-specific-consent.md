@@ -1,6 +1,6 @@
 ---
 title: Enable resource-specific consent in Teams
-description: In this article, you'll learn resource-specific consent in Microsoft Teams and how to make advantage of it.
+description: Learn about supported granular Resource-specific consent (RSC) permissions which allows team owners and chat owners to grant consent for an application.
 ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
@@ -102,7 +102,7 @@ You can enable or disable RSC for chats using Graph API. The property `isChatRes
 
    ![Graph RSC team configuration](../../assets/images/rsc/graph-rsc-chat-configuration.png)
 
->  The default value of the property **isChatResourceSpecificConsentEnabled** is based on whether [user consent settings](/azure/active-directory/manage-apps/configure-user-consent?tabs=azure-portal) is turned on or off in the tenant when RSC for chats is first used. This can be the first time a) retrieving [**teamsAppSettings**](/graph/api/teamsappsettings-get) or b) installing a Teams app with resource-specific permissions in a chat/meeting.
+> The default value of the property **isChatResourceSpecificConsentEnabled** is based on whether [user consent settings](/azure/active-directory/manage-apps/configure-user-consent?tabs=azure-portal) is turned on or off in the tenant when RSC for chats is first used. This can be the first time a) retrieving [**teamsAppSettings**](/graph/api/teamsappsettings-get) or b) installing a Teams app with resource-specific permissions in a chat/meeting.
 
 ## Register your app with Microsoft identity platform using the Azure AD portal
 

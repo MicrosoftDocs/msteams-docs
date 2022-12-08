@@ -1,13 +1,13 @@
 ---
 title: Manifest schema reference
-description: In this article, you'll have the manifest schema for Microsoft Teams reference, schema and sample full manifest.
+description: In this article, you'll have the latest version of the public manifest schema for Microsoft Teams reference, schema and sample full manifest.
 ms.topic: reference
 ms.localizationpriority: high
 ---
 
 # App manifest schema for Teams
 
-The Microsoft Teams app manifest describes how your app integrates into the Microsoft Teams product. Your app manifest must conform to the schema hosted at [`https://developer.microsoft.com/json-schemas/teams/v1.14/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.14/MicrosoftTeams.schema.json). Previous versions 1.0, 1.1,...,1.13, and the current version is 1.14 are each  supported (using "v1.x" in the URL).
+The Microsoft Teams app manifest describes how your app integrates into the Microsoft Teams product. Your app manifest must conform to the schema hosted at [`https://developer.microsoft.com/json-schemas/teams/v1.15/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.15/MicrosoftTeams.schema.json). Previous versions 1.0, 1.1,...,1.14, and the current version is 1.15 are each supported (using "v1.x" in the URL).
 For more information on the changes made in each version, see [manifest change log](https://github.com/OfficeDev/microsoft-teams-app-schema/releases).
 
 The following table lists TeamsJS version and app manifest versions as per different app scenarios:
@@ -20,11 +20,10 @@ The following schema sample shows all extensibility options:
 
 ```json
 {
-    "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.14/MicrosoftTeams.schema.json",
-    "manifestVersion": "1.14",
+    "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.15/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.15",
     "version": "1.0.0",
     "id": "%MICROSOFT-APP-ID%",
-    "packageName": "com.example.myapp",
     "localizationInfo": {
         "defaultLanguageTag": "en-us",
         "additionalLanguages": [
@@ -228,7 +227,8 @@ The following schema sample shows all extensibility options:
                         "domains": [
                             "mysite.someplace.com",
                             "othersite.someplace.com"
-                        ]
+                        ],
+                        "supportsAnonymizedPayloads": false
                     }
                 }
             ]
@@ -402,12 +402,6 @@ Ensure that your description describes your experience and helps potential custo
 |`short`|80 characters|✔️|A short description of your app experience, used when space is limited.|
 |`full`|4000 characters|✔️|The full description of your app.|
 
-## packageName
-
-**Optional**—string
-
-A unique identifier for the app in reverse domain notation; for example, com.example.myapp. Maximum length: 64 characters.
-
 ## localizationInfo
 
 **Optional**—object
@@ -442,7 +436,7 @@ Icons used within the Teams app. The icon files must be included as part of the 
 
 **Required**—HTML Hex color code
 
-A color to use and as a background for your outline icons.
+A color to use and as a background for your color icons.
 
 The value must be a valid HTML color code starting with '#', for example `#4464ee`.
 
@@ -503,7 +497,7 @@ The item is an array (maximum of only one element&mdash;currently only one bot i
 
 ### bots.commandLists
 
-A list of commands that your bot can recommend to users. The object is an array (maximum of two elements) with all elements of type `object`; you must define a separate command list for each scope that your bot supports. For more information,see [Bot menus](~/bots/how-to/create-a-bot-commands-menu.md).
+A list of commands that your bot can recommend to users. The object is an array (maximum of two elements) with all elements of type `object`; you must define a separate command list for each scope that your bot supports. For more information, see [Bot menus](~/bots/how-to/create-a-bot-commands-menu.md).
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
@@ -550,6 +544,7 @@ The item is an array (maximum of one element) with all elements of type `object`
 |`messageHandlers`|array of Objects|5||A list of handlers that allow apps to be invoked when certain conditions are met.|
 |`messageHandlers.type`|string|||The type of message handler. Must be `"link"`.|
 |`messageHandlers.value.domains`|array of Strings|||Array of domains that the link message handler can register for.|
+|`messageHandlers.value.supportsAnonymizedPayloads`|Boolean||| A boolean value that indicates whether the app's link message handler supports anonymous invoke flow. Default is false.|
 
 ### composeExtensions.commands
 
@@ -631,7 +626,7 @@ Provide your Azure Active Directory App ID and Microsoft Graph information to he
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`id`|string|36 characters|✔️|Azure AD application ID of the app. This ID must be a GUID.|
-|`resource`|string|2048 characters|✔️|Resource URL of app for acquiring auth token for SSO. </br> **NOTE:** If you aren't using SSO, ensure that you enter a dummy string value in this field to your app manifest, for example, <https://notapplicable> to avoid an error response. |
+|`resource`|string|2048 characters|✔️|Resource URL of app for acquiring auth token for SSO. </br> **NOTE:** If you aren't using SSO, ensure that you enter a dummy string value in this field to your app manifest, for example, `https://notapplicable` to avoid an error response. |
 
 ## graphConnector
 
@@ -649,7 +644,7 @@ Specify the app's Graph connector configuration. If this is present, then [webAp
 
 Indicates if or not to show the loading indicator when an app or tab is loading. Default is **false**.
 >[!NOTE]
->If you select`showLoadingIndicator` as true in your app manifest, to load the page correctly, modify the content pages of your tabs and task modules as described in [Show a native loading indicator](../../tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator) document.
+>If you select `showLoadingIndicator` as true in your app manifest, to load the page correctly, modify the content pages of your tabs and task modules as described in [Show a native loading indicator](../../tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator) document.
 
 ## isFullScreen
 
@@ -784,13 +779,13 @@ Enables your app in non-standard channels. If your app supports a team scope and
 > [!NOTE]
 >
 > * If your app supports a team scope, it functions in the standard channels regardless of the values that are defined in this property.
-> * Your app can account for the unique properties of each of the channel types to function properly. To enable your tab for private and shared channels, see [retrieve context in private channels](~/tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels) and [retrieve context in shared channels](~/tabs/how-to/access-teams-context.md#retrieve-context-in-microsoft-teams-connect-shared-channels).
+> * Your app can account for the unique properties of each of the channel types to function properly. To enable your tab for private and shared channels, see [retrieve context in private channels](~/tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels) and [get context in shared channels](../../tabs/how-to/access-teams-context.md#get-context-in-shared-channels)
 
 ## defaultBlockUntilAdminAction
 
 **Optional** - Boolean
 
-When `defaultBlockUntilAdminAction` property is set to **true**, the app is hidden from users by default until admin allows it. If set to **true**, the app is hidden for all tenants and end users. The tenant admins can see the app in the Teams admin center and take action to allow or block the app. The default value is **false**. For more information on default app block, see [Hide Teams app until admin approves](~/concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves).
+When `defaultBlockUntilAdminAction` property is set to **true**, the app is hidden from users by default until admin allows it. If set to **true**, the app is hidden for all tenants and end users. The tenant admins can see the app in the Teams admin center and take action to allow or block the app. The default value is **false**. For more information on default app block, see [Block apps by default for users until an admin approves](../../concepts/design/enable-app-customization.md#block-apps-by-default-for-users-until-an-admin-approves)
 
 ## publisherDocsUrl
 
@@ -873,6 +868,7 @@ Delegated permissions allow the app to access data on behalf of the signed-in us
     |`ChannelMeetingParticipant.Read.Group`| Allows the app to read participant information, including name, role, id, joined, and left times, of channel meetings associated with this team, on behalf of the signed-in user.|
     |`InAppPurchase.Allow.Group`| Allows the app to show marketplace offers to users in this team and complete their purchases within the app, on behalf of the signed-in user.|
     |`ChannelMeetingStage.Write.Group`| Allows the app to show content on the meeting stage in channel meetings associated with this team, on behalf of the signed-in user.|
+    |`LiveShareSession.ReadWrite.Group`|Allows the app to create and synchronize Live Share sessions for meetings associated with this team, and access related information about the meeting's roster, such as member's meeting role, on behalf of the signed-in user.|
 
 * **Resource-specific delegated permissions for chats or meetings**
 
@@ -882,6 +878,8 @@ Delegated permissions allow the app to access data on behalf of the signed-in us
     |`MeetingStage.Write.Chat`|Allows the app to show content on the meeting stage in meetings associated with this chat, on behalf of the signed-in user.|
     |`OnlineMeetingParticipant.Read.Chat`|Allows the app to read participant information, including name, role, id, joined, and left times, of meeting associated with this chat, on behalf of the signed-in user.|
     |`OnlineMeetingParticipant.ToggleIncomingAudio.Chat`|Allows the app to toggle incoming audio for participants in meetings associated with this chat, on behalf of the signed-in user.|
+    |`LiveShareSession.ReadWrite.Chat`|Allows the app to create and synchronize Live Share sessions for meetings associated with this chat, and access related information about the meeting's roster, such as member's meeting role, on behalf of the signed-in user.|
+   |`OnlineMeetingIncomingAudio.Detect.Chat`|Allows the app to detect changes in the status of incoming audio in meetings associated with this chat, on behalf of the signed-in user.|
 
 * **Resource-specific delegated permissions for users**
 
@@ -904,7 +902,7 @@ To create a Teams app manifest file:
 <br>
 
 > [!NOTE]
-> The manifest example content shown here is only for a tab app. It uses example values for subdomain URI and package name. For more information, see [sample manifest schema](#sample-full-manifest).
+> The manifest example content shown here is only for a tab app. It uses example values for subdomain URI. For more information, see [sample manifest schema](#sample-full-manifest).
 
   ```json
 { 
@@ -912,7 +910,6 @@ To create a Teams app manifest file:
  "manifestVersion": "1.12", 
  "version": "1.0.0", 
  "id": "{new GUID for this Teams app - not the Azure AD App ID}", 
- "packageName": "com.contoso.teamsauthsso", 
  "developer": { 
  "name": "Microsoft", 
  "websiteUrl": "https://www.microsoft.com", 

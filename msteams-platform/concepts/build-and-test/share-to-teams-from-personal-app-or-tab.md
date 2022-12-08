@@ -93,9 +93,6 @@ After you enable share to teams button on personal app or tab, you can share the
 
     :::image type="content" source="../../assets/images/share-to-teams/add-recepient.PNG" alt-text="add-recipient":::
 
-    > [!NOTE]
-    > You can add a note in **say something about this**.
-
 3. Select **Share**.
 
    :::image type="content" source="../../assets/images/share-to-teams/add-notes.PNG" alt-text="add-note":::

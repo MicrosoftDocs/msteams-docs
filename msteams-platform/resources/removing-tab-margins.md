@@ -1,7 +1,7 @@
 ---
 title: Tab margin changes
 author: surbhigupta
-description: In this module, learn how the removal of tab margins enhances app building experience.
+description: Learn how to remove margins around tabs in Microsoft Teams with UI kit. Know extra padding effect, margin size for left, right, top, and bottom.
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur
@@ -45,7 +45,6 @@ No, you must provide your own padding or margins to the left and right of all ap
 
 ## See also
 
-* [Teams tabs](~/tabs/what-are-tabs.md)
-* [Create a personal tab](~/tabs/how-to/create-personal-tab.md)
-* [Create a channel or group tab](~/tabs/how-to/create-channel-group-tab.md)
-* [Tabs on mobile](~/tabs/design/tabs-mobile.md)
+* [Build tabs for Teams](../tabs/what-are-tabs.md)
+* [Create a personal tab](../tabs/how-to/create-personal-tab.md)
+* [Create a channel tab or group tab](../tabs/how-to/create-channel-group-tab.md)

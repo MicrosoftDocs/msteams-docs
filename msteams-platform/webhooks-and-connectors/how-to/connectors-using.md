@@ -1,7 +1,7 @@
 ---
 title: Create and send messages
 author: laujan
-description: In this module, learn how to use Office 365 Connectors and create and send actionable message in Microsoft Teams
+description: Create actionable messages, send message through Incoming Webhook, Office 365 Connector, cURL, or PowerShell. Send Adaptive Cards. Time based transaction. 
 ms.topic: how-to
 ms.localizationpriority: high
 ---
@@ -86,7 +86,7 @@ An example of connector message is as follows:
         "actions": [{
             "@type": "HttpPOST",
             "name": "Add comment",
-            "target": "https://docs.microsoft.com/outlook/actionable-messages"
+            "target": "https://learn.microsoft.com/outlook/actionable-messages"
         }]
     }, {
         "@type": "ActionCard",
@@ -99,14 +99,14 @@ An example of connector message is as follows:
         "actions": [{
             "@type": "HttpPOST",
             "name": "Save",
-            "target": "https://docs.microsoft.com/outlook/actionable-messages"
+            "target": "https://learn.microsoft.com/outlook/actionable-messages"
         }]
     }, {
         "@type": "OpenUri",
         "name": "Learn More",
         "targets": [{
             "os": "default",
-            "uri": "https://docs.microsoft.com/outlook/actionable-messages"
+            "uri": "https://learn.microsoft.com/outlook/actionable-messages"
         }]
     }, {
         "@type": "ActionCard",
@@ -130,7 +130,7 @@ An example of connector message is as follows:
         "actions": [{
             "@type": "HttpPOST",
             "name": "Save",
-            "target": "https://docs.microsoft.com/outlook/actionable-messages"
+            "target": "https://learn.microsoft.com/outlook/actionable-messages"
         }]
     }]
 }
@@ -180,7 +180,7 @@ To post a message to the webhook with PowerShell, follow these steps:
     > [!NOTE]
     > If the POST succeeds, you must see a simple **1** output by `Invoke-RestMethod`.
 
-1. Check the Teams channel associated with the webhook URL. You can see the new card posted to the channel. Before you use the connector to test or publish your app, you must do the following:
+1. Check the Teams channels associated with the webhook URL. You can see the new card posted to the channel. Before you use the connector to test or publish your app, you must do the following:
 
     * [Include two icons](../../concepts/build-and-test/apps-package.md#app-icons).
     * Modify the `icons` portion of the manifest to the file names of the icons instead of URLs.
@@ -278,11 +278,11 @@ These limits are in place to reduce spamming a channel by a connector and ensure
 
 ## See also
 
-* [Office 365 Connectors for Microsoft Teams](~/webhooks-and-connectors/how-to/connectors-creating.md)
-* [Create an Incoming Webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
-* [Create an Outgoing Webhook](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)
+* [Webhooks and connectors](../what-are-webhooks-and-connectors.md)
+* [Create Incoming Webhooks](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
+* [Create Outgoing Webhooks](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)
 * [Rate limiting for Teams bots messages](~/bots/how-to/rate-limit.md)
-* [Build tabs with Adaptive Cards](~/tabs/how-to/build-adaptive-card-tabs.md)
-* [Format cards in Microsoft Teams](~/task-modules-and-cards/cards/cards-format.md)
-* [Build notification bot with JavaScript](../../sbs-gs-notificationbot.yml)
-* [Build your first bot app using JavaScript](../../sbs-gs-bot.yml)
+* [Build tabs with Adaptive Cards](../../tabs/how-to/build-adaptive-card-tabs.md)
+* [Format cards in Microsoft Teams](../../task-modules-and-cards/cards/cards-format.md)
+* [Adaptive Cards](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
+* [App manifest schema for Teams](../../resources/schema/manifest-schema.md)

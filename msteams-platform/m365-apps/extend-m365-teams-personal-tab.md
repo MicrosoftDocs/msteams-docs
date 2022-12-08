@@ -1,34 +1,35 @@
 ---
 title: Extend a Teams personal tab app across Microsoft 365
-description: In this article you'll learn how to extend a Teams personal tab app across Microsoft 365 by updating personal tab to run in both outlook and office.
-ms.date: 05/24/2022
+description: Learn how to update your personal tab app to run in Outlook and Office, in addition to Microsoft Teams.
+ms.date: 10/10/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: medium
 ---
 # Extend a Teams personal tab across Microsoft 365
 
-Personal tabs provide a great way to enhance the Microsoft Teams experience. Using personal tabs, you can provide a user access to their application right within Teams, without the user having to leave the experience or sign in again. With this preview, personal tabs can light up within other Microsoft 365 applications. This tutorial demonstrates the process of taking an existing Teams personal tab and updating it to run in both Outlook desktop and web experiences, and also Office on the web (office.com).
+Personal tabs provide a great way to enhance the Microsoft Teams experience. Using personal tabs, you can provide a user access to their application right within Teams, without the user having to leave the experience or sign in again. With this preview, personal tabs can light up within other Microsoft 365 applications. This tutorial demonstrates the process of taking an existing Teams personal tab and updating it to run in both Outlook and Office desktop and web experiences, as well as Office app for Android.
 
 Updating your personal app to run in Outlook and Office involves these steps:
 
 > [!div class="checklist"]
 >
-> * Update your app manifest.
-> * Update your TeamsJS SDK references.
-> * Amend your Content Security Policy headers.
-> * Update your Microsoft Azure Active Directory (Azure AD) App Registration for Single Sign On (SSO).
-> * Sideload your updated app in Teams.
+> * [Update your app manifest](#update-the-app-manifest).
+> * [Update your TeamsJS SDK references](#update-sdk-references).
+> * [Amend your Content Security Policy headers](#configure-content-security-policy-headers).
+> * [Update your Microsoft Azure Active Directory (Azure AD) App Registration for Single Sign-On (SSO)](#update-azure-ad-app-registration-for-sso).
+> * [Sideload your updated app in Teams](#sideload-your-app-in-teams).
 
 The rest of this guide walks you through these steps and show you how to preview your personal tab in other Microsoft 365 applications.
 
 ## Prerequisites
 
-To complete this tutorial, you'll need:
+To complete this tutorial, you need:
 
 * A Microsoft 365 Developer Program sandbox tenant
 * Your sandbox tenant enrolled in *Office 365 Targeted Releases*
 * A machine with Office apps installed from the Microsoft 365 Apps *beta channel*
+* (Optional) An Android device or emulator with Office app for Android installed and enrolled in the *beta program*
 * (Optional) [Teams Toolkit](https://aka.ms/teams-toolkit) extension for Microsoft Visual Studio Code to help update your code
 
 > [!div class="nextstepaction"]
@@ -40,26 +41,45 @@ If you have an existing personal tab app, make a copy or a branch of your produc
 
 If you'd like to use sample code to complete this tutorial, follow the setup steps in the [Todo List Sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend) to build a personal tab app using the Teams Toolkit extension for Visual Studio Code, then return to this article to update it for Microsoft 365.
 
-Alternately, you can use a basic Single Sign-On *hello world* app already enabled Microsoft 365 in the following quickstart section and then skip to [Sideload your app in Teams](#sideload-your-app-in-teams) .
+Alternately, you can use a basic single sign-on *hello world* app already enabled Microsoft 365 in the following [Quickstart](#quickstart) section and then skip to [sideload your app in Teams](#sideload-your-app-in-teams).
 
 ### Quickstart
 
 To start with a [personal tab](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend-M365) that's already enabled to run in Outlook and Office, use Teams Toolkit extension for Visual Studio Code.
 
 1. From Visual Studio Code, open the command palette (`Ctrl+Shift+P`), type `Teams: Create a new Teams app`.
+1. Select **Create a new Teams app** option.
 1. Select **SSO enabled personal tab**.
 
-    :::image type="content" source="images/toolkit-tab-sample.png" alt-text="Todo List sample (Works in Teams, Outlook and Office) in Teams Toolkit":::
-
-1. Select a location on your local machine for the workspace folder.
+    :::image type="content" source="images/toolkit-tab-sample.png" alt-text="The Screenshot is an example that shows the Todo List sample (Works in Teams, Outlook and Office) in Teams Toolkit.":::
+1. Select preferred programming language.
+1. Select a location on your local machine for the workspace folder and enter your application name.
 1. Open the command palette (`Ctrl+Shift+P`) and type `Teams: Provision in the cloud` to create the required app resources (App Service plan, Storage account, Function App, Managed Identity) in your Azure account.
+1. Select a subscription and a resource group.
+1. Select **Provision**.
 1. Open the command palette (`Ctrl+Shift+P`) and type `Teams: Deploy to the cloud` to deploy the sample code to the provisioned resources in Azure and start the app.
+1. Select **Deploy**.
 
-From here, you can skip ahead to [Sideload your app in Teams](#sideload-your-app-in-teams) and preview your app in Outlook and Office. (The app manifest and TeamsJS API calls have already been updated for Microsoft 365.)
+From here, you can skip ahead to [sideload your app in Teams](#sideload-your-app-in-teams) and preview your app in Outlook and Office. (The app manifest and TeamsJS API calls have already been updated for Microsoft 365.)
+
+### SharePoint Framework (SPFx) apps
+
+Starting with version 1.16 of [SharePoint Framework](/sharepoint/dev/spfx/integrate-with-teams-introduction) (SPFx), Teams personal tabs built and hosted with SPFx are also supported in Outlook and Office. To update a SPFx Teams personal tab app, follow these steps:
+
+1. Ensure you have the latest version of SPFx.
+
+    ```
+    npm install @microsoft/generator-sharepoint@latest --global
+    ```
+
+1. [Update the app manifest](#update-the-app-manifest).
+1. [Update the SDK references](#update-sdk-references).
+
+After you update the SDK references, [sideload your app in Teams](#sideload-your-app-in-teams) to preview your SPFx personal tab app running in Outlook and Office. For more information, see [Extend Outlook and Office with the SharePoint Framework](/sharepoint/dev/spfx/office/overview).
 
 ## Update the app manifest
 
-You'll need to use the [Teams developer manifest](../resources/schema/manifest-schema.md) schema version `1.13` to enable your Teams personal tab to run in Outlook and Office.
+You need to use the [Teams developer manifest](../resources/schema/manifest-schema.md) schema version `1.13` to enable your Teams personal tab to run in Outlook and Office.
 
 You have two options for updating your app manifest:
 
@@ -85,9 +105,9 @@ If you used Teams Toolkit to create your personal app, you can also use it to va
 
 ## Update SDK references
 
-To run in Outlook and Office, your app will need to reference the npm package `@microsoft/teams-js@2.0.0` (or higher). While code with downlevel versions is supported in Outlook and Office, deprecation warnings are logged, and support for downlevel versions of TeamsJS in Outlook and Office will eventually cease.
+To run in Outlook and Office, your app needs to refer the npm package `@microsoft/teams-js@2.5.0` (or higher). While code with downlevel versions is supported in Outlook and Office, deprecation warnings are logged, and support for downlevel versions of TeamsJS in Outlook and Office will eventually cease.
 
-You can use Teams Toolkit to help identify and automate the required code changes to upgrade from 1.x TeamsJS versions to TeamsJS version 2.0.0. Alternately, you can perform the same steps manually; refer to [Microsoft Teams JavaScript client SDK](../tabs/how-to/using-teams-client-sdk.md#whats-new-in-teamsjs-version-20) for details.
+You can use Teams Toolkit to help identify and automate the required code changes to upgrade from 1.x TeamsJS versions to TeamsJS 2.x.x versions. Alternately, you can perform the same steps manually; refer to [Microsoft Teams JavaScript client SDK](../tabs/how-to/using-teams-client-sdk.md#whats-new-in-teamsjs-version-2xx) for details.
 
 1. Open the *Command palette*: `Ctrl+Shift+P`.
 1. Run the command `Teams: Upgrade Teams JS SDK and code references`.
@@ -96,8 +116,8 @@ Upon completion, your *package.json* file will reference `@microsoft/teams-js@2.
 
 > [!div class="checklist"]
 >
-> * Import statements for teams-js@2.0.0
-> * [Function, Enum, and Interface calls](../tabs/how-to/using-teams-client-sdk.md#whats-new-in-teamsjs-version-20) for teams-js@2.0.0
+> * Import statements for teams-js@2.x.x
+> * [Function, Enum, and Interface calls](../tabs/how-to/using-teams-client-sdk.md#whats-new-in-teamsjs-version-2xx) for teams-js@2.x.x
 > * `TODO` comment reminders flagging areas that might be impacted by [Context](../tabs/how-to/using-teams-client-sdk.md#updates-to-the-context-interface) interface changes
 > * `TODO` comment reminders to [convert callback functions to promises](../tabs/how-to/using-teams-client-sdk.md#callbacks-converted-to-promises)
 
@@ -113,19 +133,19 @@ If your app makes use of [Content Security Policy](https://developer.mozilla.org
 |Microsoft 365 host| frame-ancestor permission|
 |--|--|
 | Teams | `teams.microsoft.com` |
-| Office | `*.office.com` |
-| Outlook | `outlook.office.com`, `outlook.office365.com`, `outlook-sdf.office.com`, `outlook-sdf.office365.com` |
+| Office | `*.microsoft365.com`, `*.office.com` |
+| Outlook | `outlook.live.com`, `outlook.office.com`, `outlook.office365.com`, `outlook-sdf.office.com`, `outlook-sdf.office365.com` |
 
 ## Update Azure AD app registration for SSO
 
-[Azure Active Directory (AD) Single-sign on (SSO)](../tabs/how-to/authentication/tab-sso-overview.md) for personal tabs works the same way in Office and Outlook as it does in Teams. However you'll need to add several client application identifiers to the Azure AD app registration of your tab app in your tenant's *App registrations* portal.
+[Azure Active Directory (AD) Single-sign on (SSO)](../tabs/how-to/authentication/tab-sso-overview.md) for personal tabs works the same way in Office and Outlook as it does in Teams. However, you need to add several client application identifiers to the Azure AD app registration of your tab app in your tenant's *App registrations* portal.
 
 1. Sign in to [Microsoft Azure portal](https://portal.azure.com) with your sandbox tenant account.
 1. Open the **App registrations** blade.
 1. Select the name of your personal tab application to open its app registration.
 1. Select  **Expose an API** (under *Manage*).
 
-    :::image type="content" source="images/azure-app-registration-clients.png" alt-text="Authorize client Ids from the *App registrations* blade on Azure portal":::
+    :::image type="content" source="images/azure-app-registration-clients.png" alt-text="The screenshot is an example that shows the authorize client Ids from the *App registrations* blade on Azure portal.":::
 
 1. In the **Authorized client applications** section, ensure all of the following `Client Id` values are added:
 
@@ -135,8 +155,12 @@ If your app makes use of [Content Security Policy](https://developer.mozilla.org
     |Teams web |5e3ce6c0-2b1f-4285-8d4b-75ee78787346 |
     |Office web  |4765445b-32c6-49b0-83e6-1d93765276ca|
     |Office desktop  | 0ec893e0-5785-4de6-99da-4ed124e5296c |
+    |Office mobile  | d3590ed6-52b3-4102-aeff-aad2292ab01c |
     |Outlook desktop, mobile | d3590ed6-52b3-4102-aeff-aad2292ab01c |
     |Outlook web | bc59ab01-8403-45c6-8796-ac3ef710b3e3|
+
+    > [!NOTE]
+    > Some Microsoft 365 client applications share Client IDs.
 
 ## Sideload your app in Teams
 
@@ -144,30 +168,30 @@ The final step to running your app in Office and Outlook is to sideload your upd
 
 1. Package your Teams application ([manifest](../resources/schema/manifest-schema.md) and [app icons](/microsoftteams/platform/resources/schema/manifest-schema#icons)) in a zip file. If you used Teams Toolkit to create your app, you can easily do this using the **Zip Teams metadata package** option in the **Deployment** menu of Teams Toolkit.
 
-    :::image type="content" source="images/toolkit-zip-teams-metadata-package.png" alt-text="'Zip Teams metadata package' option in Teams Toolkit extension for Visual Studio Code":::
+    :::image type="content" source="images/toolkit-zip-teams-metadata-package.png" alt-text="'The screenshot is an example that shows the Zip Teams metadata package' option in Teams Toolkit extension for Visual Studio Code.":::
 
 1. Sign in to Teams with your sandbox tenant account, and toggle into  *Developer Preview* mode. Select the ellipsis (**...**) menu by your user profile, then select: **About** > **Developer preview**.
 
-    :::image type="content" source="images/teams-dev-preview.png" alt-text="From Teams ellipses menu, open 'About', and select 'Developer Preview' option":::
+    :::image type="content" source="images/teams-dev-preview.png" alt-text="The screenshot describes how to select 'Developer Preview' option.":::
 
-1. Select **Apps** to open the **Manage your apps** pane. Then select **Publish an app**.
+1. Select **Apps** to open the **Manage your apps** pane. Then select **Upload an app**.
 
-    :::image type="content" source="images/teams-manage-your-apps.png" alt-text="Open the 'Manage your apps' pane and select 'Publish an app'":::
+    :::image type="content" source="images/teams-manage-your-apps.png" alt-text="The screenshot is an example that shows the Manage your apps pane and Publish an app options.":::
 
-1. Choose **Upload a custom app** option and select your app package.
+1. Choose **Upload a customized app** option and select your app package.
 
-    :::image type="content" source="images/teams-upload-custom-app.png" alt-text="'Upload a custom app' option in Teams":::
+    :::image type="content" source="images/teams-upload-custom-app.png" alt-text="The screenshot is an example that shows the option to upload am app in Teams.":::
 
-After it's sideloaded to Teams, your personal tab is available in Outlook and Office. Be sure to sign in with the same credentials you used to sign in to Teams to sideload your app.
+After it's sideloaded to Teams, your personal tab is available in Outlook and Office. You must sign in with the same credentials that you used to sideload your app into Teams. When running the Office app for Android, you need to restart the app to use your personal tab app from the Office app.
 
-You can pin the app for quick access, or you can find your app in the ellipses (**...**) flyout among recent applications in the sidebar on the left. Pinning an app in Teams don't pin it as an app in Office or Outlook.
+You can pin the app for quick access, or you can find your app in the ellipses (**...**) flyout among recent applications in the sidebar on the left. Pinning an app in Teams doesn't pin it as an app in Office or Outlook.
 
 ## Preview your personal tab in other Microsoft 365 experiences
 
 Here's how to preview your app running in Office and Outlook, web and Windows desktop clients.
 
 > [!NOTE]
-> Uninstalling your app from Teams also removes it from the **More Apps** catalogs in Outlook and Office. If you're using the Teams Toolkit sample app provided above.
+> If you use the Teams Toolkit sample app and uninstall it from Teams, it is removed from the **More Apps** catalogs in Outlook and Office.
 
 ### Outlook on Windows
 
@@ -177,27 +201,27 @@ To view your app running in Outlook on Windows desktop:
 1. On the side bar, select  **More Apps**. Your sideloaded app title appears among your installed apps.
 1. Select your app icon to launch your app in Outlook.
 
-    :::image type="content" source="images/outlook-desktop-more-apps.png" alt-text="Click on the ellipses ('More apps') option on the side bar of Outlook desktop client to see your installed personal tabs":::
+    :::image type="content" source="images/outlook-desktop-more-apps.png" alt-text="The screenshot is an example that shows the ellipses (More apps) option on the side bar of Outlook desktop client to see your installed personal tabs.":::
 
 ### Outlook on the web
 
 To view your app in Outlook on the web:
 
-1. Navigate to [Outlook on the web](https://outlook.office.com) and sign in using your dev tenant account.
-1. Select the ellipses (**...**) on the side bar. Your sideloaded app title appears among your installed apps.
+1. Go to [Outlook on the web](https://outlook.office.com) and sign in using your dev tenant account.
+1. On the side bar, select  **More Apps**. Your sideloaded app title appears among your installed apps.
 1. Select your app icon to launch and preview your app running in Outlook on the web.
 
-    :::image type="content" source="images/outlook-web-more-apps.png" alt-text="Click on the ellipses ('More apps') option on the side bar of outlook.com to see your installed personal tabs":::
+    :::image type="content" source="images/outlook-web-more-apps.png" alt-text="The screenshot is an example that shows the ellipses (More apps) option on the side bar of outlook.com to see your installed personal tabs.":::
 
 ### Office on Windows
 
 To view your app running in Office on Windows desktop:
 
 1. Launch Office and sign in using your dev tenant account.
-1. Select the ellipses (**...**) on the side bar. Your sideloaded app title appears among your installed apps.
+1. Select the **Apps** icon on the side bar. Your sideloaded app title appears among your installed apps.
 1. Select your app icon to launch your app in Office.
 
-    :::image type="content" source="images/office-desktop-more-apps.png" alt-text="Click on the ellipses ('More apps') option on the side bar of Office desktop client to see your installed personal tabs":::
+    :::image type="content" source="images/office-desktop-more-apps.png" alt-text="The screenshot is an example that shows the ellipses (More apps) option on the side bar of Office desktop client to see your installed personal tabs.":::
 
 ### Office on the web
 
@@ -207,31 +231,65 @@ To preview your app running in Office on the web:
 1. Select the **Apps** icon on the side bar. Your sideloaded app title appears among your installed apps.
 1. Select your app icon to launch your app in Office on the web.
 
-    :::image type="content" source="images/office-web-more-apps.png" alt-text="Click on the 'More apps' option on the side bar of office.com to see your installed personal tabs":::
+    :::image type="content" source="images/office-web-more-apps.png" alt-text="The screenshot is an example that shows the (More apps) option on the side bar of office.com to see your installed personal tabs.":::
+
+### Office app for Android
+
+> [!NOTE]
+> Before installing the app, perform [the steps to install the latest Office app beta build](prerequisites.md#mobile) and be a part of the beta program.
+
+To view your app running in Office app for Android:
+
+1. Launch the Office app and sign in using your dev tenant account. If the Office app for Android was already running prior to sideloading your app in Teams, you need to restart it in order to see in your installed apps.
+1. Select the **Apps** icon. Your sideloaded app appears among installed apps.
+1. Select your app icon to launch your app in Office app for Android.
+
+    :::image type="content" source="images/office-mobile-apps.png" alt-text="The screenshot is an example that shows the 'Apps' option on the side bar of the Office app to see your installed personal tabs.":::
 
 ## Troubleshooting
 
-Currently, a subset of Teams application types and capabilities are supported in Outlook and Office clients. This support expands over time.
+Currently, a subset of Teams application types and capabilities is supported in Outlook and Office clients. This support expands over time.
 
-Refer to [Microsoft 365 support](../tabs/how-to/using-teams-client-sdk.md#microsoft-365-support-running-teams-apps-in-office-and-outlook) to check host support for various TeamsJS capabilities.
+> [!TIP]
+> Refer to [Microsoft 365 support](../tabs/how-to/using-teams-client-sdk.md#microsoft-365-support-running-teams-apps-in-office-and-outlook) to check host support for various TeamsJS capabilities.
 
-For an overall summary of Microsoft 365 host and platform support for Teams apps, see [Extend Teams apps across Microsoft 365](overview.md).
+- For an overall summary of Microsoft 365 host and platform support for Teams apps, see [Extend Teams apps across Microsoft 365](overview.md).
 
-You can check for host support of a given capability at runtime by calling the `isSupported()` function on that capability (namespace), and adjusting app behavior as appropriate. This allows your app to light up UI and functionality in hosts that support it, and provide a graceful fallback experience in hosts that don't. For more information, see [Differentiate your app experience](../tabs/how-to/using-teams-client-sdk.md#differentiate-your-app-experience).
+- You can check for host support of a given capability at runtime by calling the `isSupported()` function on that capability (namespace), and adjusting app behavior as appropriate. This allows your app to light up UI and functionality in hosts that support it and provide a graceful fallback experience in hosts that don't. For more information, see [Differentiate your app experience](../tabs/how-to/using-teams-client-sdk.md#differentiate-your-app-experience).
 
-Use the [Microsoft Teams developer community channels](/microsoftteams/platform/feedback) to report issues and provide feedback.
+- Use the [Microsoft Teams developer community channels](/microsoftteams/platform/feedback) to report issues and provide feedback.
 
 ### Debugging
 
 From Teams Toolkit, you can Debug (`F5`) your tab application running in Office and Outlook, in addition to Teams.
 
-:::image type="content" source="images/toolkit-debug-targets.png" alt-text="Choose from Teams, Outlook, and Office debug targets in Teams Toolkit":::
+:::image type="content" source="images/toolkit-debug-targets.png" alt-text="The screenshot is an example that shows the dropdown menu of debug in Teams in the Teams Toolkit.":::
 
-Upon first run of local debug to Office or Outlook, you'll be prompted to sign in to your Microsoft 365 tenant account and install a self-signed test certificate. You'll also be prompted to manually install Teams. Select **Install in Teams** to open a browser window and manually install your app. Then click on **Continue** to proceed to debug your app in Office/Outlook.
+Upon first run of local debug in Office or Outlook, you'll be prompted to sign in to your Microsoft 365 tenant account and install a self-signed test certificate. You'll also be prompted to manually install Teams. Select **Install in Teams** to open a browser window and manually install your app. Then select **Continue** to proceed to debug your app in Office/Outlook.
 
-:::image type="content" source="images/toolkit-dialog-teams-install.png" alt-text="Toolkit dialog Teams install":::
+:::image type="content" source="images/toolkit-dialog-teams-install.png" alt-text="The screenshot is an example that shows the Toolkit dialog box to install in Teams.":::
 
 Provide feedback and report any issues with the Teams Toolkit debugging experience at [Microsoft Teams Framework (TeamsFx)](https://github.com/OfficeDev/TeamsFx/issues).
+
+#### Mobile debugging
+
+Teams Toolkit (`F5`) debugging isn't yet supported with Office app for Android. Here's how to remotely debug your app running in Office app for Android:
+
+1. If you debug using a physical Android device, connect it to your dev machine and enable the option for [USB debugging](https://developer.android.com/studio/debug/dev-options). This is enabled by default with the Android emulator.
+1. Launch the Office app From your Android device.
+1. Open your profile **Me > Settings > Allow debugging**, and toggle on the option for **Enable remote debugging**.
+
+    :::image type="content" source="images/office-android-enable-remote-debugging.png" alt-text="The screenshot is an example that shows the Enable remote debugging toggle option.":::
+
+1. Leave **Settings**.
+1. Leave your profile screen.
+1. Select **Apps** and launch your sideloaded app to run within the Office app.
+1. Ensure your Android device is connected to your dev machine. From your dev machine, open your browser to its DevTools inspection page. For example, go to `edge://inspect/#devices` in Microsoft Edge to display a list of debug-enabled Android WebViews.
+1. Find the `Microsoft Teams Tab` with your tab URL and select **inspect** to start debugging your app with DevTools.
+
+    :::image type="content" source="images/office-android-debug.png" alt-text="The screenshot is an example that shows the list of webviews in devtool.":::
+
+1. Debug your tab app within the Android WebView. In the same way you [remotely debug](/microsoft-edge/devtools-guide-chromium/remote-debugging) a regular website on an Android device.
 
 ## Code sample
 
@@ -240,7 +298,8 @@ Provide feedback and report any issues with the Teams Toolkit debugging experien
 | Todo List | Editable todo list with SSO built with React and Azure Functions. Works only in Teams (use this sample app to try the upgrade process described in this tutorial). | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend)  |
 | Todo List (Microsoft 365) | Editable todo list with SSO built with React and Azure Functions. Works in Teams, Outlook, Office. | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend-M365)|
 | Image Editor (Microsoft 365) | Create, edit, open, and save images using Microsoft Graph API. Works in Teams, Outlook, Office. | [View](https://github.com/OfficeDev/m365-extensibility-image-editor) |
-| Sample Launch Page (Microsoft 365) | Showcasing SSO authentication and leveraging TeamsJS SDK capabilities as available in different hosts. Works in Teams, Outlook, Office. | [View](https://github.com/OfficeDev/microsoft-teams-library-js/tree/main/apps/sample-app) |
+| Sample Launch Page (Microsoft 365) | Demonstrates SSO authentication and TeamsJS SDK capabilities as available in different hosts. Works in Teams, Outlook, Office. | [View](https://github.com/OfficeDev/microsoft-teams-library-js/tree/main/apps/sample-app) |
+| Northwind Orders app | Demonstrates how to use Microsoft TeamsJS SDK V2 to extend teams application to other Microsoft 365 host apps. Works in Teams, Outlook, Office. Optimized for mobile.| [View](https://github.com/microsoft/app-camp/tree/main/experimental/ExtendTeamsforM365) |
 
 ## Next step
 

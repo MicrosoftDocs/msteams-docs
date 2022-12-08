@@ -1,10 +1,10 @@
 ---
 title: Tabs link unfurling and Stage View
 author: Rajeshwari-v
-description: Learn how to unfurl a link, open the Stage View and pin a tab with Microsoft Teams app. Learn about stage view and invoking it using Adaptive card using code example and sample. 
+description: Learn about stage view, a full screen UI component invoked to surface your web content. Link unfurling is used to turn URLs into a tab using Adaptive Cards.
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ---
 
 # Tabs link unfurling and Stage View
@@ -40,9 +40,9 @@ When the user enters a URL on the Teams desktop client, the bot is invoked and r
 
 The following images display a stage opened from an Adaptive Card:
 
-[![Open a stage from Adaptive Card](~/assets/images/tab-images/open-stage-from-adaptive-card1.png)](~/assets/images/tab-images/open-stage-from-adaptive-card1.png#lightbox)
+:::image type="content" source="../assets/images/tab-images/open-stage-from-adaptive-card1.png" alt-text="Screenshot shows the open stage from Adaptive card."lightbox="~/assets/images/tab-images/open-stage-from-adaptive-card1.png":::
 
-[![Open a stage](~/assets/images/tab-images/open-stage-from-adaptive-card2.png)](~/assets/images/tab-images/open-stage-from-adaptive-card2.png#lightbox)
+:::image type="content" source="../assets/images/tab-images/open-stage-from-adaptive-card2.png" alt-text="Screenshot shows the open stage from card."lightbox="~/assets/images/tab-images/open-stage-from-adaptive-card2.png":::
 
 ### Example
 
@@ -84,8 +84,8 @@ Following is the process to invoke Stage View:
 * The bot responds with a `200` code.
 
 > [!NOTE]
-
-> On Teams mobile clients, invoking Stage View for apps distributed through the [Teams store](/platform/concepts/deploy-and-publish/apps-publish-overview.md) and not having a moblie-optimized experience opens the default web browser of the device. The browser opens the URL specified in the `websiteUrl` parameter of the `TabInfo` object.
+>
+> On Teams mobile clients, invoking Stage View for apps distributed through the [Teams store](~/concepts/deploy-and-publish/apps-publish-overview.md) and not having a mobile-optimized experience opens the default web browser of the device. The browser opens the URL specified in the `websiteUrl` parameter of the `TabInfo` object.
 
 ## Invoke Stage View through deep link
 
@@ -153,7 +153,8 @@ Encoded
 
 ## See also
 
-* [Message extensions link unfurling](~/messaging-extensions/how-to/link-unfurling.md)
-* [Teams tabs](~/tabs/what-are-tabs.md)
-* [Create a personal tab](~/tabs/how-to/create-personal-tab.md)
-* [Create a channel or group tab](~/tabs/how-to/create-channel-group-tab.md)
+* [Build tabs for Teams](what-are-tabs.md)
+* [Add link unfurling](../messaging-extensions/how-to/link-unfurling.md)
+* [composeExtensions](../resources/schema/manifest-schema.md#composeextensions)
+* [Build tabs with Adaptive Cards](how-to/build-adaptive-card-tabs.md)
+* [Create deep links](../concepts/build-and-test/deep-links.md)

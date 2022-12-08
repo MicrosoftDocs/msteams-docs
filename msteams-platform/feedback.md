@@ -1,6 +1,6 @@
 ---
 title: Microsoft Teams developer community support and feedback
-description: Learn Microsoft Teams product team responds to the developer community across various feedback and support channels.
+description: Learn about Developer community and help required to raise issues, limitations, and general questions. Ask questions related to SDK and samples, documentation feedback, feature requests.
 ms.localizationpriority: medium
 ms.topic: reference
 ---
@@ -60,6 +60,7 @@ Suggest a feature or vote up existing feature requests.
 |:----------------------|:------------|
 | **Features suggestions** | Post feature suggestions on :::image type="icon" source="assets/icons/Teams-icon.png"::: [Microsoft Teams feedback portal](https://feedbackportal.microsoft.com/feedback/forum/ad198462-1c1c-ec11-b6e7-0022481f8472). |
 | **General questions** | Send general questions about the Microsoft Teams developer platform to [Microsoft Teams Community Help](mailto:microsoftteamsdev@microsoft.com). We encourage posting questions on the channels mentioned here and using email only if no other mode of communication is applicable. |
+| **Feedback interview** | Your feedback is important to us. If you're interested in talking to us about your experience of leveraging our platform documentation, community forum responses, and Teams store publishing process, please feel free to [book a slot](https://aka.ms/bookdevfeedback).|
 
 ## See also
 

@@ -32,7 +32,9 @@ Cards used by bots and message extensions in Teams support the following activit
 `openUrl` action type specifies a URL to launch in the default browser.
 
 > [!NOTE]
-> Your bot does not receive any notice on which button was selected.
+>
+> * Your bot doesn't receive any notice on which button was selected.
+> * Machine names with numbers aren't supported in URL.
 
 With `openUrl`, you can create an action with the following properties:
 
@@ -62,7 +64,7 @@ var button = new CardAction()
 {
     Type = ActionTypes.OpenUrl,
     Title = "Tabs in Teams",
-    Value = "https://docs.microsoft.com/en-us/microsoftteams/platform/"
+    Value = "https://learn.microsoft.com/microsoftteams/platform/"
 };
 ```
 
@@ -75,7 +77,7 @@ CardFactory.actions([
 {
     type: 'openUrl',
     title: 'Tabs in Teams',
-    value: 'https://docs.microsoft.com/en-us/microsoftteams/platform/'
+    value: 'https://learn.microsoft.com/microsoftteams/platform/'
 }])
 ```
 
@@ -556,10 +558,10 @@ The following code shows an example of Adaptive Cards with `invoke` action with 
 
 ## Code samples
 
-|S.no|Card| description|.NET|Javascript|Python|Java|
+|S.no|Card| description|.NET|JavaScript|Python|Java|
 |:--|:--|:--------------------------------------------------------|-----|------------|-----|----------------------------|
-|1|Using cards|Introduces all card types including thumbnail, audio, media etc. Builds on Welcoming user + multi-prompt bot by presenting a card with buttons in welcome message that route to appropriate dialog.|[.Net Core](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/06.using-cards)|[JavaScript](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/06.using-cards)|[Python](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/06.using-cards)|[Java](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/java_springboot/06.using-cards)|
-|2|Adaptive cards|Demonstrates how the multi-turn dialog can use a card to get user input for name and age.|[.NET Core](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/07.using-adaptive-cards)|[JavaScript](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/07.using-adaptive-cards)|[Python](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/07.using-adaptive-cards)|[Java](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/java_springboot/07.using-adaptive-cards)|
+|1|Using cards|Introduces all card types including thumbnail, audio, media etc. Builds on Welcoming user + multi-prompt bot by presenting a card with buttons in welcome message that route to appropriate dialog.|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/06.using-cards)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/06.using-cards)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/06.using-cards)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/java_springboot/06.using-cards)|
+|2|Adaptive cards|Demonstrates how the multi-turn dialog can use a card to get user input for name and age.|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/07.using-adaptive-cards)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/07.using-adaptive-cards)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/07.using-adaptive-cards)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/java_springboot/07.using-adaptive-cards)|
 
 > [!NOTE]
 > Media elements are not supported for adaptive card in Teams

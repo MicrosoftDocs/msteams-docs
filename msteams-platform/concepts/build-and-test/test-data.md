@@ -174,7 +174,7 @@ By default, only global admins or Teams service admins can upload (sideload) app
 
             foreach ($team in $XmlDocument.Teams.Team ) {
                 try {
-                    $group = New-Team -DisplayName $team.Name -Description $teams.description -visibility public 
+                    $group = New-Team -DisplayName $team.Name -Description $team.description -visibility public 
                     Write-Host "Successfully created team: " $group.DisplayName
                 }
                 catch {
