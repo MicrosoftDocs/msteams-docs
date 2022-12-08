@@ -75,7 +75,7 @@ While most of you find it beneficial to use our free hosted service, there may s
 * Transmit sensitive data through the service that requires a custom security policy.
 * Develop features through Fluid Framework, for example, `SharedMap`, for your application outside of Teams.
 
-For more information, see [how to guide](/apps-in-teams-meetings/teams-live-share-how-to/how-to-custom-azure-fluid-relay) or visit the [Azure Fluid Relay documentation](/azure/azure-fluid-relay/).
+For more information, see [how to guide](apps-in-teams-meetings/teams-live-share-how-to/how-to-custom-azure-fluid-relay.md) or visit the [Azure Fluid Relay documentation](/azure/azure-fluid-relay/).
 <br>
 &nbsp;
 </details>
