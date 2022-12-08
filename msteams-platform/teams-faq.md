@@ -105,7 +105,7 @@ For more information, you can [track the issue here](https://github.com/microsof
 <details>
 <summary>How many people can attend a Live Share session?</summary>
 
-Currently, Live Share supports a maximum of 100 attendees per session. If this is something you're interested in, you can [start a discussion here](https://github.com/microsoft/live-share-sdk/discussions).
+Currently, Live Share supports a maximum of 100 attendees per session. If it's something you're interested in, you can [start a discussion here](https://github.com/microsoft/live-share-sdk/discussions).
 <br>
 &nbsp;
 </details>
@@ -208,7 +208,7 @@ Each team course instance must have an owner, and the synchronization sets the f
 The app users have multiple sign in options from the Moodle login page.
 
 * To sign in exclusively using Microsoft 365 credentials, enable the **Force redirect** configuration settings for the **auth_oidc plugin**. If the service is enabled, the app user can see the Microsoft sign in page.
-* To sign in manually to the Moodle portal see [Moodle](https://moodle.org/login/index.php).
+* To sign in manually to the Moodle portal, see [Moodle](https://moodle.org/login/index.php).
 <br>
 &nbsp;
 </details>
@@ -442,7 +442,7 @@ After the verification process is complete, the status of your enrollment on the
 
 During the **Email Ownership** verification process, a verification email is sent to the primary contact. Check your primary contact inbox for an email from **maccount@microsoft.com** with the subject line **Action needed: Verify your email account with Microsoft** and complete the email verification process. The verification email is sent to the address listed on your Partner Center account settings.
 
-Remember the following about the email verification process:
+Remember the following points about the email verification process:
 
 * The email verification link is valid only for seven days.
 * You can request to resend the email by visiting your partner profile page and selecting the **Resend verification email** link.
@@ -453,7 +453,7 @@ Remember the following about the email verification process:
 <details>
 <summary>I've checked my mail folders and haven't received the verification email. What must I do next?</summary>
 
-Try the following:
+Try the following steps:
 
 * Check your junk or spam folder.
 * Clear the browser cache, go to your Partner Center account dashboard, and select **Resend verification email**.
