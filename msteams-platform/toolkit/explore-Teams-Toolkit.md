@@ -36,7 +36,7 @@ After Teams Toolkit installation, the following Teams Toolkit UI appears:
 
 You can explore UI elements from task pane in the Teams Toolkit. Task pane appears after creating an app using Teams Toolkit. The following video helps you to learn about the process of creating a new Teams app:
 
-   ![Create a Teams app](~/assets/videos/javascript-tab-app1.gif)
+   :::image type="content" source="../assets/videos/javascript-bot-app1_1.gif" alt-text="Create a Teams app":::!
 
 After creating a new Teams app, the directory structure of the app appears in the left panel and the readme file in the right panel.
 
