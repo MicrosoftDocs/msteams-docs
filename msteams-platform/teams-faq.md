@@ -75,6 +75,7 @@ While most of you find it beneficial to use our free hosted service, there may s
 * Transmit sensitive data through the service that requires a custom security policy.
 * Develop features through Fluid Framework, for example, `SharedMap`, for your application outside of Teams.
 
+
 For more information, see [how to guide](apps-in-teams-meetings/teams-live-share-how-to/how-to-custom-azure-fluid-relay.md) or visit the [Azure Fluid Relay documentation](/azure/azure-fluid-relay/).
 <br>
 &nbsp;
@@ -318,6 +319,7 @@ For more information on editing Atto toolbar, see:
 
 * [Atto editor-ModdleDocs](https://docs.moodle.org/311/en/Atto_editor)
 * [Atto editor-Icon mapping](https://docs.moodle.org/311/en/Atto_editor#:~:text=in%20the%20editor.-,Atto%20editor%20toolbar,-Atto%20Row%201)
+
 <br>
 &nbsp;
 </details>
@@ -515,6 +517,7 @@ The following resources can also assist:
 You can open the authentication page in the task module when the user selects the button.
 
 You can use the [code sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/python) for opening the task module on button click. You can replace the taskInfo.url with your auth page.
+
 <br>
 &nbsp;
 </details>
