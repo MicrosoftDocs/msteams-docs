@@ -6,7 +6,7 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ---
 
-# Enable SSO for your Adaptive Cards Universal Actions
+# SSO for your Adaptive Cards Universal Actions
 
 Universal Actions for Adaptive Cards bring the bot as the common backend for handling actions and introduces a new action type `Action.Execute`, which works across apps, such as Teams and Outlook.
 
@@ -61,49 +61,6 @@ The following image shows how SSO works when a Teams app user attempts to access
 For a Adaptive Cards Universal Action in bot, the bot app sends an OAuth Card to Teams client. This card is used to get access token from Azure AD using `tokenExchangeResource`. Following app user's consent, Teams client sends the token received from Azure AD to the bot app using `tokenExchange`. The bot app can then parse the token to retrieve the app user's information, such as email address.
 
 ## Getting started with SSO Flow
-
-Authentication steps for SSO are similar to that of a bot or tab in Teams. Following are the steps to achieve SSO in Adaptive Cards Universal Action:
-
-> [!NOTE]
-> To implement SSO flow, you must have personal scope declared for your bot in the app manifest. When a user invokes the SSO flow via the Adaptive Card `Action.Execute` protocol, the user is prompted to install the app in personal scope if it isn't already installed.
-
-1. Before you add code to enable SSO, ensure that you've configured your app and bot resource in Azure AD portal. For more information, see [configured your app and bot resource in Azure AD portal](../../../bots/how-to/authentication/bot-sso-register-aad.md).
-1. After you configured the client secret and OAuth connection setting for the app in Azure AD. You must configure the code with development environment variables. For more information, see [Update development environment variables](../../../bots/how-to/authentication/bot-sso-code.md#update-development-environment-variables).
-1. Add code to handle an access token. For more information, see [Add code to handle an access token](../../../bots/how-to/authentication/bot-sso-code.md#add-code-to-handle-an-access-token).
-1. If there's a cached token, the bot can use this token. If there's not a token, the bot creates an OAuthCard and places it in an Invoke Response with the values below, which include a tokenExchangeResource:
-
-```JSON
-   {
-  "statusCode": 401,
-  "type": "application/vnd.microsoft.activity.loginRequest",
-  "value": {
-    "text": "Please sign-in",
-    "connectionName": "<configured-connection-name>",
-    "tokenExchangeResource": {
-      "id": "<unique-indentifier>",
-      "uri": "<application-or-resource-identifier>",
-      "providerId": "<optional-provider-identifier>"
-    },
-    "buttons": [
-      {
-        "title": "Sign-In",
-        "text": "Sign-In",
-        "type": "signin",
-        "value": "<sign-in-URL>"
-      }
-    ]
-  }
-}
-
-```
-
-* Senders must include a `tokenExchangeResource` to designate a single sign-on operation.
-
-   > [!NOTE]
-   > Teams client will trigger the nominal sing-on or OAuth flow when SSO fails. It is highly recommended that you provide sign in URL in the above response so that OAuth flow works.
-
-1.
-1. [Update your Teams application manifest for your bot](../../../bots/how-to/authentication/bot-sso-manifest.md)
 
 For a single sign-on experience in which the user is already signed into a client experience and the bot wants to perform token exchange for a different registered application or resource on the same identity provider, the protocol is as follows:
 

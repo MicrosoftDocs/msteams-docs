@@ -543,7 +543,11 @@
       - name: Grant Microsoft Graph permissions and scopes
         href: bots/how-to/authentication/bot-sso-graph-api.md
     - name: Enable SSO for your Adaptive Cards Universal Actions
-      href: task-modules-and-cards\cards\Universal-actions-for-adaptive-cards\enable-sso-for-your-adaptive-cards-universal-action.md
+      items:
+      - name: Overview
+        href: task-modules-and-cards\cards\Universal-actions-for-adaptive-cards\enable-sso-for-your-adaptive-cards-universal-action.md
+      - name: Enable SSO for your Adaptive Cards Universal Actions
+        href: task-modules-and-cards\cards\Universal-actions-for-adaptive-cards\sso-adaptive-cards-universal-action.md
     - name: Troubleshoot SSO authentication
       href: tabs/how-to/authentication/tab-sso-troubleshooting.md
   - name: Use third party IdP authentication
