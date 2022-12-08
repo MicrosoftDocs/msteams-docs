@@ -233,7 +233,7 @@ The Reaction API allows you to show reactions in your app. The types of reaction
 
 ### App manifest settings for Reaction API
 
-To use the raise a hand, you must configure RSC permissions in the app manifest. Configure the `authorization` property, and the `name` and `type` in the `resourceSpecific` field as follows:
+To use the reaction API, you must configure RSC permissions in the app manifest. Configure the `authorization` property, and the `name` and `type` in the `resourceSpecific` field as follows:
 
 ```JSON
 "authorization": {
@@ -296,7 +296,7 @@ microsoftTeams.meeting.registerMeetingReactionReceivedHandler (
 
 ## Raise hand API
 
-The Reaction API allows yan app to show if the user has raised hand during the meeting.
+The Raise hand API allows yan app to show if the user has raised hand during the meeting.
 
 ### User scenarios
 
@@ -308,7 +308,7 @@ The Reaction API allows yan app to show if the user has raised hand during the m
 
 ### App manifest settings for Raise hand API
 
-To use the raise a hand, you must configure RSC permissions in the app manifest. Configure the `authorization` property, and the `name` and `type` in the `resourceSpecific` field as follows:
+To use the raise hand API, you must configure RSC permissions in the app manifest. Configure the `authorization` property, and the `name` and `type` in the `resourceSpecific` field as follows:
 
 ```JSON
 "authorization": {
