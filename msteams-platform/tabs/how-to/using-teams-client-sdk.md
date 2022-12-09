@@ -78,9 +78,9 @@ Use `pages.shareDeepLink` (known as *shareDeepLink* prior to TeamsJS v.2.0) to g
 
 ##### Navigation within your app
 
-Use the new `pages.navigateToApp` API to navigate within your app within the hosting application.
+Use the new [`pages.currentApp`](/javascript/api/@microsoft/teams-js/pages.currentapp) namespace to navigate within your app within the hosting application. Specifically, the function `navigateTo(NavigateWithinAppParams)` to allow navigation to a specific tab within the current app and the function `navigateToDefaultPage()` to navigate to the first tab defined in the app's manifest. For additional details, see [Navigate within a tab app](tab-navigation.md).
 
-This API provides the equivalent of navigating to a deep link (as the now deprecated *executeDeepLink* was once used for) without requiring your app to construct a URL or manage different deep link formats for different application hosts.
+These API provide the equivalent of navigating to a deep link (as the now deprecated *executeDeepLink* was once used for) without requiring your app to construct a URL or manage different deep link formats for different application hosts.
 
 ##### Deep links out of your app
 
