@@ -217,7 +217,7 @@ async function example() {
 ---
 
 > [!TIP]
-> When you use [Teams Toolkit to update to TeamsJS v.2.x.x](#updating-to-the-latest-teams-client-version), the required updates are flagged for you with `TODO` comments in your client code.
+> When you use [Teams Toolkit to update to TeamsJS v.2.x.x](#updating-to-teamsjs-version-2xx), the required updates are flagged for you with `TODO` comments in your client code.
 
 ### APIs organized into capabilities
 
