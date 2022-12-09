@@ -47,7 +47,7 @@ You can reuse your existing web configuration experience or create a separate ve
 To integrate the configuration experience:
 
 > [!NOTE]
-> Starting with Teams JavaScript client SDK (TeamsJS) v.2.0.0, APIs in the *settings* namespace have been deprecated in favor of equivalent APIs in the *pages* namespace, including `pages.getConfig()` and other APIs in the `pages.config` sub-namespace. For more information, see [What's new in TeamsJS version 2.0](../../tabs/how-to/using-teams-client-sdk.md#whats-new-in-teamsjs-version-20)
+> Starting with Teams JavaScript client SDK (TeamsJS) v.2.0.0, APIs in the *settings* namespace have been deprecated in favor of equivalent APIs in the *pages* namespace, including `pages.getConfig()` and other APIs in the `pages.config` sub-namespace. For more information, see [What's new in TeamsJS version 2.0](../../tabs/how-to/using-teams-client-sdk.md#whats-new-in-teamsjs-version-2xx)
 
 1. Initialize the SDK by calling `app.initialize()`.
 1. Call `pages.config.setValidityState(true)` to enable **Save**.
@@ -212,9 +212,9 @@ The following *manifest.json* file contains the elements needed to test and subm
 
 To test your connector, upload it to a team with any other app. You can create a .zip package using the manifest file from the two icon files and connectors Developer Dashboard, modified as directed in [Include the connector in your Manifest](#include-the-connector-in-your-manifest).
 
-After you upload the app, open the connectors list from any channel. Scroll to the bottom to see your app in the **Uploaded** section:
+After you upload the app, open the connectors list from any channel. Scroll to the bottom to see your app in the **Uploaded** section.
 
-![Screenshot of an uploaded section in connector dialog box](~/assets/images/connectors/connector_dialog_uploaded.png)
+:::image type="content" source="../../assets/images/Connectors/connector_dialog_uploaded_1.png" alt-text="Screenshot of an upload section in connector dialog box.":::
 
 > [!NOTE]
 > The flow occurs entirely within Teams as a hosted experience.
