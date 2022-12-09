@@ -28,38 +28,34 @@ The following steps help you to add API connection using Visual Studio Code:
 2. Select **Teams Toolkit** from the Visual Studio Code activity bar.
 3. Select **Add features** under **DEVELOPMENT**.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-add-features.png" alt-text="api add features":::
-
-    * You can also open the **Command Palette** and enter **Teams: Add cloud resources**.
+    :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-add-features_1.png" alt-text="api add features":::
 
 4. In the pop-up window that appears, select the **API Connection** you want to add to your Teams app project.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-select-features.png" alt-text="api select features":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-select-features_1.png" alt-text="api select features":::
 
-5. Select **OK**.
+5. Enter endpoint for the API. It's added to the project's local app settings, and it's the base URL for API requests.
 
-6. Enter endpoint for the API. It's added to the project's local app settings, and it's the base URL for API requests.
+6. Press **Enter**.
 
-7. Press **Enter**.
-
-    :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-endpoint.png" alt-text="api endpoint":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-endpoint_1.png" alt-text="api endpoint":::
 
      > [!NOTE]
      > Ensure that the endpoint is a valid http(s) URL.
 
-8. Select the component that accesses the API.
+7. Select the component that accesses the API.
 
-9. Select **OK**.
+8. Select **OK**.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-invoke.png" alt-text="api invoke":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-invoke_1.png" alt-text="api invoke":::
 
-10. Enter an alias for the API. The alias generates an app setting name for the API that is added to the project's local app setting.
+9. Enter an alias for the API. The alias generates an app setting name for the API that is added to the project's local app setting.
 
-11. Press **Enter**.
+10. Press **Enter**.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-alias.png" alt-text="api alias":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-alias_1.png" alt-text="api alias":::
 
-12. Select the required authentication for the API request from the **API authentication type**. It generates appropriate sample code and adds corresponding local application settings based on your selection.
+11. Select the required authentication for the API request from the **API authentication type**. It generates appropriate sample code and adds corresponding local application settings based on your selection.
 
      :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/myAPI connection.png" alt-text="api auth":::
 
@@ -75,7 +71,7 @@ The following steps help you to add API connection using Visual Studio Code:
 
    The sample code has been generated to call your API at bot\myAPI.js.
 
-# [Azure Active Directory](#tab/AAD)
+# [Azure Active Directory (Azure AD)](#tab/AAD)
 
   The sample code has been generated to call your API at bot\myAPI.js.
 
