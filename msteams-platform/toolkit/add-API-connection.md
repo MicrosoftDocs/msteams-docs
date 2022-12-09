@@ -10,7 +10,7 @@ ms.date: 05/20/2022
 
 # Integrate existing third party APIs
 
-Teams Toolkit helps you to access existing APIs for building Teams applications. These APIs are developed by your organization or third-party. When you use Teams Toolkit to connect to an existing API, Teams Toolkit performs the following function:
+Teams Toolkit helps you to access existing APIs for building Teams apps. These APIs are developed by your organization or third-party. When you use Teams Toolkit to connect to an existing API, Teams Toolkit performs the following function:
 
 * Generate sample code under `./bot` or `./api` folder.
 * Add a reference to the `@microsoft/teamsfx` package to `package.json`.
