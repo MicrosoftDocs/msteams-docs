@@ -460,6 +460,8 @@ The following table provides the properties of the Office 365 connector card:
 | text | Rich text | Text appears under the subtitle. For formatting options, see [card formatting](~/task-modules-and-cards/cards/cards-format.md). |
 | themeColor | HEX string | Color that overrides the `accentColor` provided from the application manifest. |
 
+For more information on the properties of the Office 365 connector card, see [card fields](/outlook/actionable-messages/message-card-reference).
+
 ### Additional information on the Office 365 Connector card
 
 Office 365 Connector cards function properly in Microsoft Teams, including [`ActionCard` actions](/outlook/actionable-messages/card-reference#actioncard-action).
