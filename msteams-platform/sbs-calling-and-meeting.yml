@@ -70,7 +70,7 @@ items:
     1. Go to [Azure portal](https://portal.azure.com/) using your personal Microsoft account.
     1. Select **Screenshot of Microsoft Preview with Azure Active Directory highlighted in red.**.
 
-        :::image type="content" source="./assets/images/calls-and-meetings/azure-active-directory.png" alt-text="Screenshot of Microsoft Azure Preview with Azure Active Directory highlighted in red.:::
+        :::image type="content" source="./assets/images/calls-and-meetings/azure-active-directory.png" alt-text="Screenshot of Microsoft Azure Preview with Azure Active Directory highlighted in red.":::
 
     1. In the left pane, select **App registrations**.
     1. Select **New registration**.
