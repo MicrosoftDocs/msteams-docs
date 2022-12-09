@@ -1,7 +1,7 @@
 ---
 title: Create a new Teams app
 author: zyxiaoyuer
-description: In this module, learn how to create a new Teams app using Teams Toolkit
+description: In this module, learn how to create a new Teams app using Teams Toolkit.
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
@@ -10,7 +10,7 @@ zone_pivot_groups: teams-app-platform
 ---
 # Create a new Teams project
 
-In this section, you can learn how to create a new Teams project using Visual Studio Code and Visual Studio.
+In this section, you can learn how to create a new Teams project using Microsoft Visual Studio Code and Visual Studio.
 
 ::: zone pivot="visual-studio-code"
 
@@ -18,7 +18,7 @@ In this section, you can learn how to create a new Teams project using Visual St
 
 You can build a new Teams project by selecting **Create a new Teams app** in the Teams Toolkit. You can create the following types of apps in the Teams Toolkit:
 
-| App Type | Definition |
+| App Types | Definition |
 | --- | --- |
 | **Basic Teams apps** | Basic Teams apps are tab, bot, or message extension that you can create and customize based on your needs. |
 | **Scenario-based Teams apps** | Scenario-based Teams apps are notification bot, command bot, workflow bot, SSO-enabled tab, or SPFx tab app and these are suitable for one particular scenario. For example, a notification bot is suitable to send notifications and not used for chat. |
@@ -29,7 +29,7 @@ The steps to create a new Teams app is similar for all types of apps except SPFx
 
 **To create an app**
 
-1. Open Visual Studio Code.
+1. Open **Visual Studio Code**.
 
 1. Select the **Teams Toolkit** > **Create a new Teams app**.
 
@@ -84,7 +84,7 @@ You have three different types of basic Teams apps and the directory structure l
 | Folder name | Contents |
 | --- | --- |
 | `.fx\configs` | Configuration files that you can customize for the Teams app. |
-| - `.fx\configs\azure.parameters.<envName>.json` | Parameters file for Azure BICEP provision for every environment. |
+| - `.fx\configs\azure.parameters.<envName>.json` | Parameters file for Azure bicep provision for every environment. |
 | - `.fx\configs\config.<envName>.json` | Configuration file for every environment. |
 | - `.fx\configs\projectSettings.json` | Global project settings that apply to all environments. |
 | `tabs` | Code for the Tab capability needed at runtime, such as the privacy notice, terms of use, and configuration tabs. |
@@ -94,7 +94,7 @@ You have three different types of basic Teams apps and the directory structure l
 | - `tabs\src\components\TabConfig.jsx` | Code to implement the UI that configures your app. |
 | `templates\appPackage` | App manifest template files, and the app icons: **color.png** and **outline.png**. |
 | - `templates\appPackage\manifest.template.json` | App manifest for running the app in local or remote environment.  |
-| `templates\azure` | BICEP template files |
+| `templates\azure` | `bicep` template files |
 
 > [!NOTE]
 > If you have a bot or message extension app, relevant folders are added to the directory structure.
@@ -251,7 +251,7 @@ Teams Toolkit provides all components for building an app. After creating the pr
 
 You can see Teams app templates already populated in Teams Toolkit for various Teams app types. The following table lists all the templates available:
 
-|Teams app template  |Description  |
+|Teams app templates  |Description  |
 |---------|---------|
 |**Notification Bot**     |Notification bot app can send notifications to your Teams client. There are multiple ways to trigger the notification. For example, trigger the notification by HTTP request, or by time. You can select triggered notification based on your business scenario.         |
 |**Command Bot**     |You can type a command to interact with the bot using the command bot app.         |
