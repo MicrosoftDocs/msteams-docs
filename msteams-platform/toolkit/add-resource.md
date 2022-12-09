@@ -39,7 +39,7 @@ You can add cloud resources by the following ways:
 
    1. In the pop-up window that appears, select the **Cloud resources** to add in your project.
 
-      :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/updated-final-cloud.png" alt-text="final":::
+      :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/updated-final-cloud_1.png" alt-text="final":::
 
   > [!NOTE]
   > You need to provision for each environment after you have successfully added the resource in your Teams app.
