@@ -7,7 +7,7 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ---
 
-## Deep link to a workflow in Teams
+# Deep link to a workflow in Teams
 
 Deep Link to a perform an operation in Teams
 

@@ -1,13 +1,13 @@
 ---
-title: Test preview for monetized apps 
+title: Deep link to a chat
 author: v-npaladugu
-description:  In this article, learn how to create deep links to an application and navigate them in your Microsoft Teams.
+description:  In this article, learn how to create deep links to a chat and navigate them in your Microsoft Teams.
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
 ---
 
-## Deep link to Teams
+# Deep link to Teams
 
 ### Navigate to a chat
 

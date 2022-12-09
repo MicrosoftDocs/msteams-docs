@@ -23,7 +23,7 @@ Task modules can be invoked in three ways:
 
 * Channel or personal tabs: Using the Microsoft Teams Tabs SDK, you can invoke task modules from buttons, links, or menus on your tab. For more information, see [using task modules in tabs](~/task-modules-and-cards/task-modules/task-modules-tabs.md).
 * Bots: Using buttons on [cards](~/task-modules-and-cards/cards/cards-reference.md) sent from your bot. This is useful when you don't require everyone in a channel to see what you are doing with a bot. For example, when having users respond to a poll in a channel it isn't useful to see a record of that poll being created. For more information, see [using task modules from Teams bots](~/task-modules-and-cards/task-modules/task-modules-bots.md).
-* Outside of Teams from a deep link: You can also create URLs to invoke a task module from anywhere. For more information, see [task module deep link syntax](~/task-modules-and-cards/task-modules/invoking-task-modules.md#task-module-deep-link-syntax).
+* Outside of Teams from a deep link: You can also create URLs to invoke a task module from anywhere. For more information, see [task module deep link syntax](~/concepts/build-and-test/deep-link-application.md#task-module-deep-link-syntax).
 
 ## Components of a task module
 

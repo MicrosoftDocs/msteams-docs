@@ -101,7 +101,7 @@ microsoftTeams.executeDeepLink(/*deepLink*/);
 Personal chat
 Applications can navigate a user to a personal chat with the application. Refer to the following format to prepare the link manually:
 
-<https://teams.microsoft.com/l/entity/><appId>/    conversations
+<https://teams.microsoft.com/l/entity/appId>/  conversations
 appId – is application id*
 
 * we should specify what app is to user for side loaded apps (manifest id), apps submitted to org catalog (org catalog id) and apps submitted to teams app store (store id).
@@ -122,7 +122,7 @@ A task module deep link is a serialization of the TaskInfo object with the follo
 
 `https://teams.microsoft.com/l/task/APP_ID?card=<TaskInfo.card>&height=<TaskInfo.height>&width=<TaskInfo.width>&title=<TaskInfo.title>&completionBotId=BOT_APP_ID`
 
-For the data types and allowable values for `<TaskInfo.url>`, `<TaskInfo.card>`, `<TaskInfo.height>`, `<TaskInfo.width>`, and `<TaskInfo.title>`, see [TaskInfo object](#the-taskinfo-object).
+For the data types and allowable values for `<TaskInfo.url>`, `<TaskInfo.card>`, `<TaskInfo.height>`, `<TaskInfo.width>`, and `<TaskInfo.title>`, see [TaskInfo object](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object).
 
 > [!TIP]
 > URL encode the deep link when using the `card` parameter, for example, JavaScript's [`encodeURI()` function](https://www.w3schools.com/jsref/jsref_encodeURI.asp).
