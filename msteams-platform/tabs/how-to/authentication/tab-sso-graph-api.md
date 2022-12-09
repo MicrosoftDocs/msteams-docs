@@ -130,8 +130,6 @@ The following code provides an example of OBO flow to fetch access token from th
 
 ### [C#](#tab/dotnet)
 
-[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/graph-app-installation-lifecycle/csharp/AppInstallation/Controllers/BaseController.cs&preserve-view=true)
-
 ```csharp
 IConfidentialClientApplication app = ConfidentialClientApplicationBuilder.Create(<"Client id">)
                                                 .WithClientSecret(<"Client secret">)
