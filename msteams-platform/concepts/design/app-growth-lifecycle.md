@@ -171,6 +171,7 @@ As a reminder, you’ll now want to gain mindshare for your collaborative app am
 - **Upskill Customer Support staff on new Teams app**:
 
     Similar to Customer Success teams, it's imperative to train your customer support team on the Teams app, frequent user scenarios, common queries, guidance w.r.t. troubleshooting, any pre-configuration required, app rollout and governance of the Teams app in customer organizations. Your support team may get fairly nuanced queries about your app in Teams and to continue delivering a delightful experience for your customers, you must ensure the team has basic understanding of Microsoft Teams, Teams apps in general, nuances about your Teams collaborative app, security, compliance and permissions for your Teams app, app management and governance features in Teams among other things. It will be a good idea to have a support team that’s conversant in day-to-day usage of Microsoft Teams and is up to speed with all topics in the Teams admin-facing public documentation sections “Third-party apps in Microsoft Teams” and “Admin controls to govern apps” as your customers will need this expertise.
+
 - **Showcase Teams app in your annual customer conference**:
 
     Your own flagship annual customer or partner conference is the perfect opportunity to announce and showcase your new or updated Teams collaborative app to the world and get immediate traction going. Get in touch with your Microsoft field, account, or engineering representatives to request their participation in to-customer webinars you’re planning to announce and evangelize your Teams collaborative app.
@@ -196,11 +197,30 @@ As a reminder, you’ll now want to gain mindshare for your collaborative app am
 
 - **Drive traffic from web SaaS app: “Use in Teams” CTA and “Share to Teams”**:
 
-    While during the launch stage, you leveraged transient banners, notifications bar, what’s new notifications inside the SaaS product’s UI for all users to announce your Teams app, it’s time now to nudge users who may be using Microsoft Teams to start using your collaborative app for scenarios that are better together in Teams vs your core web SaaS experience. Surface deeplinks within your browser-based web SaaS experience to transport users to specific views inside your Teams app (for example, personal app, tabs, conversational bot or meeting extensions with shared meeting stage or in-meeting tab) and implement the highly recommended Share to Teams control within your browser-based web SaaS experience to enable users to share and start collaborating around a content or object from your SaaS product inside Teams with their colleagues. To get maximum ROI, surface these nudges contextually for scenarios which are inherently collaborative over chat or in meetings as those are best delivered inside Microsoft Teams through your app.
+    While during the launch stage, you leveraged transient banners, notifications bar, what’s new notifications inside the SaaS product’s UI for all users to announce your Teams app. It’s time now to nudge users who may be using Microsoft Teams to start using your collaborative app for scenarios that are better together in Teams vs your core web SaaS experience.
+
+    :::row:::
+        :::column span="3":::
+            Surface deeplinks within your browser-based web SaaS experience to transport users to specific views inside your Teams app (for example, personal app, tabs, conversational bot or meeting extensions with shared meeting stage or in-meeting tab) and implement the highly recommended Share to Teams control within your browser-based web SaaS experience to enable users to share and start collaborating around a content or object from your SaaS product inside Teams with their colleagues. To get maximum ROI, surface these nudges contextually for scenarios which are inherently collaborative over chat or in meetings as those are best delivered inside Microsoft Teams through your app.
+        :::column-end:::
+        :::column span="":::
+            :::image type="content" source="../../assets/images/app-fundamentals/drive-traffic-saas-app.png" alt-text="Drive traffic from your SaaS app.":::
+        :::column-end:::
+    :::row-end:::
 
 #### Where can Microsoft help?
 
-- **Teams App Store merchandising: Editorial Articles**: The Microsoft Teams store editorial team curates editorial sections on the in-product app store based on various ranking parameters. Editorial articles provide a list of app suggestions to users within the store that meet specific scenario objectives with a clear call-to-action to install the app while reading the article. Get in touch with your Microsoft field, account or engineering representatives or connect with the Microsoft 365 ISV Benefits Service Desk to feature your app in these Editorial Articles.
+- **Teams App Store merchandising: Editorial Articles**: The Microsoft Teams store editorial team curates editorial sections on the in-product app store based on various ranking parameters.
+
+    :::row:::
+        :::column span="3":::
+            Editorial articles provide a list of app suggestions to users within the store that meet specific scenario objectives with a clear call-to-action to install the app while reading the article. Get in touch with your Microsoft field, account or engineering representatives or connect with the Microsoft 365 ISV Benefits Service Desk to feature your app in these Editorial Articles.
+        :::column-end:::
+        :::column span="":::
+            :::image type="content" source="../../assets/images/app-fundamentals/editorial-articles.png" alt-text="Editorial articles.":::
+        :::column-end:::
+    :::row-end:::
+
 - **On-demand access to digital marketing content**: Digital Marketing Content OnDemand service provides go-to-market content in fresh weekly campaigns at no cost to Microsoft partners. Unlock expertise that can drive customer engagement and elevate your business. Connect your social media accounts and email lists to select, customize, and share content with automatic updates that push to your company’s social media accounts or send direct email communication to customers.
 - **Joint webinar to existing and new target customers**: Participate in a joint webinar with Microsoft and other partners to showcase the value of your Teams collaborative app to customers. You can connect with the Microsoft 365 ISV Benefits Service Desk to find opportunities and execute.
 - **Include app in Microsoft-run digital campaigns**: Highlight your Microsoft Teams app in a Microsoft-led digital campaign based on specific industries or contemporary themes for example, hybrid work. You can connect with the Microsoft 365 ISV Benefits Service Desk to find opportunities and execute.
