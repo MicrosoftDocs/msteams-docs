@@ -804,7 +804,7 @@
     href: tabs/how-to/tabs-in-sharepoint.md
   - name: Create deep links
     href: concepts/build-and-test/deep-links.md
-    displayName: Navigate within your app
+    displayName: Navigate within your app, executeDeepLink
   - name: Integrate People Picker  
     href: concepts/device-capabilities/people-picker-capability.md
 - name: Resources
