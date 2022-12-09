@@ -192,7 +192,7 @@ Placeholder argument CodeLens helps you to see the values for local debug and de
 
 It's different from official [Azure AD manifest schema](/azure/active-directory/develop/reference-app-manifest) that `resourceAppId` and `resourceAccess` ID in `requiredResourceAccess` property only supports UUID. Azure AD manifest template in Teams Toolkit also supports user readable strings for `Microsoft Graph` and `Office 365 SharePoint Online` permissions. If you enter UUID, CodeLens shows user readable strings, otherwise it shows UUID.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/manual/add resource.png" alt-text="add resource":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/manual/add resource.png" alt-text="add resource to required resource access":::
 
 ### Pre-authorized applications CodeLens
 

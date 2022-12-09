@@ -49,14 +49,14 @@ To preview manifest file in local environment, you can press **F5** to run local
 
 You can preview local manifest file by two methods:
 
-* Use preview option in codelens.
+* Use preview option in CodeLens.
 * Use **Zip Teams metadata package** option.
 
-The following steps help to preview local manifest file by using preview option in codelens:
+The following steps help to preview local manifest file by using preview option in CodeLens:
 
-1. Select **Preview** in the codelens of `manifest.template.json` file.
+1. Select **Preview** in the CodeLens of `manifest.template.json` file.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/preview-23.png" alt-text="Screenshot is an example showing the preview in the codelens of manifest file." lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/preview-23.png":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/preview-23.png" alt-text="Screenshot is an example showing the preview in the CodeLens of manifest file." lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/preview-23.png":::
 
 1. Select **local**.
 
@@ -98,14 +98,14 @@ It generates configuration for remote Teams app, builds package, and preview man
 
 You can preview manifest file in remote environment by two methods:
 
-* Use preview option in codelens.
+* Use preview option in CodeLens.
 * Use **Zip Teams metadata package** option.
 
-The following steps help to preview manifest file by using preview option in codelens:
+The following steps help to preview manifest file by using preview option in CodeLens:
 
-1. Select **Preview** in the codelens of `manifest.template.json` file.
+1. Select **Preview** in the CodeLens of `manifest.template.json` file.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/preview-23.png" alt-text="Screenshot is an example of showing preview in the codelens of manifest file." lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/preview-23.png":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/preview-23.png" alt-text="Screenshot is an example of showing preview in the CodeLens of manifest file." lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/preview-23.png":::
 
 1. Select your environment.
 
@@ -167,7 +167,7 @@ You can also trigger **Teams: Update manifest to Teams platform** from the comma
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/pre.png" alt-text="Screenshot is an example of showing the selection of Teams: update manifest to Teams platform from the command palette.":::
 
 > [!NOTE]
-> Trigger from editor codelens or menu bar updates current manifest file to Teams platform. Trigger from command palette requires selecting target environment.
+> Trigger from editor CodeLens or menu bar updates current manifest file to Teams platform. Trigger from command palette requires selecting target environment.
 
  CLI command:
 
@@ -239,14 +239,14 @@ During operations such as, **Zip Teams metadata package**, Teams Toolkit validat
 
 ## To preview values for local and dev environment
 
-In `manifest.template.json`, you can go to codelens to preview the values for `local` and `dev` environment.
+In `manifest.template.json`, you can go to CodeLens to preview the values for `local` and `dev` environment.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/codelens.png" alt-text="Screenshot is an example of showing preview values for local and dev environment." lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/codelens.png":::
 
 > [!NOTE]
 > Provision the environment or execute local debug to generate values for placeholders.
 
-You can go to state file or configuration file by selecting the codelens, which provides a drop-down list with all the environment names. After selecting one environment, the corresponding state file or configuration file opens.
+You can go to state file or configuration file by selecting the CodeLens, which provides a drop-down list with all the environment names. After selecting one environment, the corresponding state file or configuration file opens.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-environment.png" alt-text="Screenshot is an example of showing the selection of an environment.":::
 
