@@ -111,7 +111,7 @@ After the remove handler is executed, `removeEvent.notifySuccess()` or `removeEv
 >[!NOTE]
 >
 > * To ensure that an authorized user's control over a tab is not inhibited, Teams removes the tab in both success and failure cases.
-> * After you invoke the `registerOnRemoveHandler` event handler, you'll have 15 seconds to respond to the method. By default, Teams enables the **Remove** button after five seconds even if you don't call `setValidityState(true)`.
+> * After you invoke the `registerOnRemoveHandler` event handler, you'll have 15 seconds to respond to the method. By default, Teams enables the **Remove** button after five seconds even if you don't call `setValidityState(true)`. After the **Remove** button is enabled, to ensure that users aren't blocked from deleting a tab, the app isn't allowed to disable the **Remove** button by calling `setValidityState(false)`.
 > * When the user selects **Remove**, Teams removes the tab after 30 seconds regardless of whether the actions have been completed or not.
 
 ## Next step
@@ -121,7 +121,9 @@ After the remove handler is executed, `removeEvent.notifySuccess()` or `removeEv
 
 ## See also
 
-* [Teams tabs](~/tabs/what-are-tabs.md)
-* [Create a personal tab](~/tabs/how-to/create-personal-tab.md)
-* [Create a channel or group tab](~/tabs/how-to/create-channel-group-tab.md)
-* [Create a configuration page](~/tabs/how-to/create-tab-pages/configuration-page.md)
+* [Build tabs for Teams](../../what-are-tabs.md)
+* [App manifest schema for Teams](../../../resources/schema/manifest-schema.md)
+* [RemoveEvent interface](/javascript/api/@microsoft/teams-js/pages.config.removeevent)
+* [Get context for your tab](../access-teams-context.md)
+* [Create a personal tab](../create-personal-tab.md)
+* [Create a channel tab or group tab](../create-channel-group-tab.md)

@@ -1,7 +1,7 @@
 ---
 title: Understanding your app's use cases and Teams features
 author: heath-hamilton
-description: Learn about Microsoft Teaams app cabilities- tabs, bots, meeting extensions, message extensions, webhook connectors, personal app experience, shared app experience.
+description: Learn about Microsoft Teams app capabilities such as, tabs, bots, meeting extensions, message extensions, webhook connectors, personal app experience, and shared app experience.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: anclear
@@ -15,21 +15,22 @@ The app user and their app's requirements are the basic guidelines that determin
 
 If you're going to meet user requirements with your app, you first need to understand them.
 
-- **Understand your user**:
-  - Recognize user issues and identify the solutions to some common problems the users face.
-  - Build your Teams app by finding the right combination of Teams features to meet your user's needs.
-  - Understand use cases to know how an end-user interacts with your app.
+* **Understand your user**:
+  * Recognize user issues and identify the solutions to some common problems the users face.
+  * Build your Teams app by finding the right combination of Teams features to meet your user's needs.
+  * Understand use cases to know how an end-user interacts with your app.
+  * It's recommended to go through the lean module [how to publish your app to Teams app store](/training/modules/microsoft-teams-publish-app-to-store/) to help with your app to pass the Microsoft Teams store submission process.
 
-- **Understand the problem**: Work out the core problem your app must solve.
+* **Understand the problem**: Work out the core problem your app must solve.
 
-- **Consider integration**: Identify the apps and services your app requires, such as authentication, Microsoft Graph, or web apps.
+* **Consider integration**: Identify the apps and services your app requires, such as authentication, Microsoft Graph, or web apps.
 
 ## Microsoft Teams app features
 
 There are multiple ways to extend Teams so every app is unique. Teams app features offer:
 
-- [App capabilities](#app-capabilities)
-- [App scope](#app-scope)
+* [App capabilities](#app-capabilities)
+* [App scope](#app-scope)
 
 ### App capabilities
 
@@ -128,7 +129,7 @@ There are a few options for [incorporating your app into the Teams calling exper
 
 #### Webhooks and connectors
 
-[Incoming webhooks](../../webhooks-and-connectors/what-are-webhooks-and-connectors.md#incoming-webhooks) are a simple way to automatically send notifications from another app to a Teams channel. With [outgoing webhooks](../../webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks), you can message your web service with an @mention.
+[Incoming Webhooks](../../webhooks-and-connectors/what-are-webhooks-and-connectors.md#incoming-webhooks) are a simple way to automatically send notifications from another app to a Teams channel. With [Outgoing Webhooks](../../webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks), you can message your web service with an @mention.
 
    :::column-end:::
 
@@ -145,7 +146,7 @@ There are a few options for [incorporating your app into the Teams calling exper
 
 #### Microsoft Graph for Teams
 
-The [Microsoft Graph API for Teams](/graph/teams-concept-overview) provides access to information about teams, channels, users, and messages that helps you to create or enhance features for your app.
+The [Microsoft Graph API for Teams](/graph/teams-concept-overview) provides access to information about teams, channels, users, and messages that help you to create or enhance features for your app.
 
    :::column-end:::
 
@@ -165,13 +166,13 @@ The [Microsoft Graph API for Teams](/graph/teams-concept-overview) provides acce
 
 Your app can have one of the following scopes:
 
-- **Personal app experience**: A personal app is a dedicated space or bot to help users focus on their own tasks or view activities important to them.
-- **Shared app experience**: Team, channel, and chat are collaboration spaces. Apps in these contexts are available to everyone in that space. Collaboration spaces typically focus on workflows for your app's interactions or unlocking new social interactions.
+* **Personal app experience**: A personal app is a dedicated space or bot to help users focus on their own tasks or view activities important to them.
+* **Shared app experience**: Team, channel, and chat are collaboration spaces. Apps in these contexts are available to everyone in that space. Collaboration spaces typically focus on workflows for your app's interactions or unlocking new social interactions.
 
 An app can exist across different scopes. For example:
 
-- Your app can display data in a central shared location, that is, a tab.
-- It can also present that same information through a personal conversational interface, that is, a bot.
+* Your app can display data in a central shared location, that is, a tab.
+* It can also present that same information through a personal conversational interface, that is, a bot.
 
 A user can interact with an app on a canvas tab to do an activity or might choose to do the same using a conversational bot.
 
@@ -182,4 +183,11 @@ A user can interact with an app on a canvas tab to do an activity or might choos
 
 ## See also
 
-[Integrate device capabilities](~/concepts/device-capabilities/device-capabilities-overview.md)
+* [Plan your app with Teams features](../app-fundamentals-overview.md)
+* [Build bots for Teams](../../bots/what-are-bots.md)
+* [Build tabs for Teams](../../tabs/what-are-tabs.md)
+* [Build meeting extensions for Teams](../../apps-in-teams-meetings/design/designing-apps-in-meetings.md)
+* [Webhooks and connectors](../../webhooks-and-connectors/what-are-webhooks-and-connectors.md)
+* [Apps for Teams meetings and calls](../../apps-in-teams-meetings/teams-apps-in-meetings.md)
+* [Build Adaptive Cards](../../task-modules-and-cards/cards/cards-reference.md#adaptive-card)
+* [Teams app planning checklist](planning-checklist.md)

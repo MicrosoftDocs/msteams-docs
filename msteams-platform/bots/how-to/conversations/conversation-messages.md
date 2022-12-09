@@ -13,7 +13,7 @@ Each message in a conversation is an `Activity` object of type `messageType: mes
 Basic conversations are handled through the Bot Framework connector, a single REST API. This API enables your bot to communicate with Teams and other channels. The Bot Builder SDK provides the following features:
 
 * Easy access to the Bot Framework connector.
-* Additional functionality to manage conversation flow and state.
+* Functionality to manage conversation flow and state.
 * Simple ways to incorporate cognitive services, such as natural language processing (NLP).
 
 Your bot receives messages from Teams using the `Text` property and it sends single or multiple message responses to the users.
@@ -28,22 +28,29 @@ The following code shows an example of receiving a message:
 
 # [C#](#tab/dotnet)
 
+* [SDK reference](/dotnet/api/microsoft.bot.builder.activityhandler.onmessageactivityasync?view=botbuilder-dotnet-stable&preserve-view=true)
+
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-token-app/csharp/Bots/TokenBot.cs#L52)
+
 ```csharp
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
 {
+  // Sends an activity to the sender of the incoming activity.
   await turnContext.SendActivityAsync(MessageFactory.Text($"Echo: {turnContext.Activity.Text}"), cancellationToken);
 }
-
 ```
 
 # [TypeScript](#tab/typescript)
 
-```typescript
+* [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onmessage&preserve-view=true)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-localization/nodejs/server/bot/botActivityHandler.js#L25)
 
+```typescript
 export class MyBot extends TeamsActivityHandler {
     constructor() {
         super();
         this.onMessage(async (context, next) => {
+            // Sends a message activity to the sender of the incoming activity.
             await context.sendActivity(`Echo: '${context.activity.text}'`);
             await next();
         });
@@ -54,10 +61,14 @@ export class MyBot extends TeamsActivityHandler {
 
 # [Python](#tab/python)
 
+* [SDK reference](/python/api/botbuilder-core/botbuilder.core.turncontext?view=botbuilder-py-latest#botbuilder-core-turncontext-send-activity&preserve-view=true)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L103)
+
 <!-- Verify -->
 ```python
 
 async def on_message_activity(self, turn_context: TurnContext):
+    // Sends a message activity to the sender of the incoming activity.
     return await turn_context.send_activity(MessageFactory.text(f"Echo: {turn_context.activity.text}"))
 
 ```
@@ -121,9 +132,14 @@ The following code shows an example of sending a message when a user is added to
 
 # [C#](#tab/dotnet)
 
+* [SDK reference](/dotnet/api/microsoft.bot.builder.turncontext.sendactivityasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-turncontext-sendactivityasync(microsoft-bot-schema-iactivity-system-threading-cancellationtoken)&preserve-view=true)
+
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-teams-authentication/csharp/Bots/TeamsBot.cs#L29)
+
 ```csharp
 protected override async Task OnMembersAddedAsync(IList<ChannelAccount> membersAdded, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
 {
+  // Sends an activity to the sender of the incoming activity.
   await turnContext.SendActivityAsync(MessageFactory.Text($"Hello and welcome!"), cancellationToken);
 }
 
@@ -131,11 +147,15 @@ protected override async Task OnMembersAddedAsync(IList<ChannelAccount> membersA
 
 # [TypeScript](#tab/typescript)
 
-```typescript
+* [SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#botbuilder-core-turncontext-sendactivity&preserve-view=true)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L46)
 
+```typescript
     this.onMembersAddedActivity(async (context, next) => {
         await Promise.all((context.activity.membersAdded || []).map(async (member) => {
             if (member.id !== context.activity.recipient.id) {
+              
+                // Sends an activity to the sender of the incoming activity.
                 await context.sendActivity(
                     `Welcome to the team ${member.givenName} ${member.surname}`
                 );
@@ -144,18 +164,22 @@ protected override async Task OnMembersAddedAsync(IList<ChannelAccount> membersA
 
         await next();
     });
+
 ```
 
 # [Python](#tab/python)
 
+* [SDK reference](/python/api/botbuilder-core/botbuilder.core.activityhandler?view=botbuilder-py-latest#botbuilder-core-activityhandler-on-members-added-activity&preserve-view=true)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-teams-authentication/python/bots/auth_bot.py#L26)
+
 <!-- Verify -->
 
 ```python
-
 async def on_members_added_activity(
     self, members_added: [ChannelAccount], turn_context: TurnContext
 ):
     for member in teams_members_added:
+        // Sends a message activity to the sender of the incoming activity.
         await turn_context.send_activity(f"Welcome your new team member {member.id}")
     return
 
@@ -377,38 +401,52 @@ The following code shows an example of adding notifications to your message:
 
 # [C#](#tab/dotnet)
 
+* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityextensions.teamsnotifyuser?view=botbuilder-dotnet-stable#microsoft-bot-builder-teams-teamsactivityextensions-teamsnotifyuser(microsoft-bot-schema-iactivity)&preserve-view=true)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-proactive-messaging/csharp/proactive-cmd/Program.cs#L178)
+
 ```csharp
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
 {
+  // Returns a simple text message.
   var message = MessageFactory.Text("You'll get a notification, if you've turned them on.");
   message.TeamsNotifyUser();
 
+  // Sends an activity to the sender of the incoming activity.
   await turnContext.SendActivityAsync(message);
 }
+
 ```
 
 # [TypeScript](#tab/typescript)
 
+* [SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#botbuilder-core-turncontext-sendactivity&preserve-view=true)
+
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-localization/nodejs/server/bot/botActivityHandler.js#L36)
+
 ```typescript
+
 this.onMessage(async (turnContext, next) => {
     let message = MessageFactory.text("You'll get a notification, if you've turned them on.");
     teamsNotifyUser(message);
-
+    // Sends an activity to the sender of the incoming activity.
     await turnContext.sendActivity(message);
 
     // By calling next() you ensure that the next BotHandler is run.
     await next();
 });
+
 ```
 
 # [Python](#tab/python)
+
+* [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams?view=botbuilder-py-latest#botbuilder-core-teams-teams-notify-user&preserve-view=true)
 
 ```python
 
 async def on_message_activity(self, turn_context: TurnContext):
     message = MessageFactory.text("You'll get a notification, if you've turned them on.")
     teams_notify_user(message)
-
+    // Sends an activity to the sender of the incoming activity.
     await turn_context.send_activity(message)
 
 ```
@@ -455,8 +493,9 @@ Ensure to handle these errors appropriately in your Teams app. The following tab
 | 400 | **Code**: `Bad Argument` <br/> **Message**: *scenario specific | Invalid request payload provided by the bot. See error message for specific details. | No | Re-evaluate request payload for errors. Check returned error message for details. |
 | 401 | **Code**: `BotNotRegistered` <br/> **Message**: No registration found for this bot. | The registration for this bot wasn't found. | No | Verify the bot ID and password. Ensure that the bot ID (AAD ID) is registered in the Teams Developer Portal or via Azure bot channel registration in Azure with 'Teams' channel enabled.|
 | 403 | **Code**: `BotDisabledByAdmin` <br/> **Message**: The tenant admin disabled this bot | Tenant admin has blocked interactions between user and the bot app. Tenant admin needs to allow the app for the user inside of app policies. For more information, see [app policies](/microsoftteams/app-policies). | No | Stop posting to conversation until interaction with bot is explicitly initiated by a user in the conversation indicating that the bot is no longer blocked. |
-| 403 | **Code**: `BotNotInConversationRoster` <br/> **Message**: The bot isn't part of the conversation roster. | The bot isn't part of the conversation. App needs to be reinstalled in conversation. | No | Before attempting to send additional conversation requests, wait for an [`installationUpdate`](~/bots/how-to/conversations/subscribe-to-conversation-events.md#install-update-event) event, which indicates that the bot has been re-added.|
+| 403 | **Code**: `BotNotInConversationRoster` <br/> **Message**: The bot isn't part of the conversation roster. | The bot isn't part of the conversation. App needs to be reinstalled in conversation. | No | Before attempting to send another conversation request, wait for an [`installationUpdate`](~/bots/how-to/conversations/subscribe-to-conversation-events.md#install-update-event) event, which indicates that the bot has been re-added.|
 | 403 | **Code**: `ConversationBlockedByUser` <br/> **Message**: User blocked the conversation with the bot. | User has blocked the bot in personal chat or a channel through moderation settings. | No | Delete the conversation from cache. Stop attempting to post to conversations until interaction with bot is explicitly initiated by a user in the conversation, indicating that the bot is no longer blocked. |
+| 403 |**Code**: `InvalidBotApiHost` <br/> **Message**: Invalid bot api host. For GCC tenants please call `https://smba.infra.gcc.teams.microsoft.com`.|The bot called the public API endpoint for a conversation that belongs to a GCC tenant.| No | Update the service URL for the conversation to `https://smba.infra.gcc.teams.microsoft.com` and retry the request.|
 | 403 | **Code**: `NotEnoughPermissions` <br/> **Message**: *scenario specific | Bot doesn't have required permissions to perform the requested action. | No | Determine the required action from the error message. |
 | 404 | **Code**: `ActivityNotFoundInConversation` <br/> **Message**: Conversation not found. | The message ID provided couldn't be found in the conversation. Message doesn't exist or it has been deleted. | No | Check if message ID sent is an expected value. Remove the ID if it was cached. |
 | 404 | **Code**: `ConversationNotFound` <br/> **Message**: Conversation not found. | Conversation wasn't found as it doesn't exist or has been deleted. | No | Check if conversation ID sent is an expected value. Remove the ID if it was cached. |
@@ -474,6 +513,7 @@ The general retry guidance for each status code is listed in the following table
 
 |Status code | Retry strategy |
 |----------------|-----------------|
+| 403 | Retry by calling the GCC API `https://smba.infra.gcc.teams.microsoft.com` for `InvalidBotApiHost`.|
 | 412 | Retry using exponential backoff. |
 | 429 | Retry using `Retry-After` header to determine wait time in seconds and in between requests, if available. Otherwise, retry using exponential backoff with thread ID, if possible. |
 | 502 | Retry using exponential backoff. |
@@ -484,7 +524,7 @@ The general retry guidance for each status code is listed in the following table
 
 | Sample name | Description | Node.js | .NETCore | Python | .NET |
 |----------------|-----------------|--------------|----------------|-----------|-----|
-| Teams conversation bot | Messaging and conversation event handling. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) | NA |
+| Teams conversation bot | Messaging and conversation event handling. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/python) | NA |
 | Teams app localization | Teams app localization using bot and tab. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/nodejs) | NA | NA | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) |
 
 ## Next step

@@ -26,20 +26,28 @@ The request parameters are found in the `value` object in the request, which inc
 | `queryOptions` | Pagination parameters: <br>`skip`: Skip count for this query <br>`count`: Number of elements to return. |
 
 # [C#/.NET](#tab/dotnet)
+* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmessagingextensionqueryasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-teams-teamsactivityhandler-onteamsmessagingextensionqueryasync(microsoft-bot-builder-iturncontext((microsoft-bot-schema-iinvokeactivity))-microsoft-bot-schema-teams-messagingextensionquery-system-threading-cancellationtoken)&preserve-view=true)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msgext-link-unfurling/csharp/Bots/LinkUnfurlingBot.cs#L32)
+
+* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmessagingextensionqueryasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-teams-teamsactivityhandler-onteamsmessagingextensionqueryasync(microsoft-bot-builder-iturncontext((microsoft-bot-schema-iinvokeactivity))-microsoft-bot-schema-teams-messagingextensionquery-system-threading-cancellationtoken)&preserve-view=true)
+
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msgext-link-unfurling/csharp/Bots/LinkUnfurlingBot.cs#L32)
 
 ```csharp
 protected override async Task<MessagingExtensionResponse> OnTeamsMessagingExtensionQueryAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionQuery query, CancellationToken cancellationToken)
 {
-  //code to handle the query
+  // Code to handle the query.
 }
 ```
 
 # [TypeScript/Node.js](#tab/typescript)
 
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msgext-search/nodejs/bots/teamsMessagingExtensionsSearchBot.js#L16)
+
 ```typescript
 class TeamsMessagingExtensionsSearch extends TeamsActivityHandler {
     async handleTeamsMessagingExtensionQuery(context, query) {
-  //code to handle the query
+  // Code to handle the query.
     }
 }
 ```
@@ -121,7 +129,7 @@ protected override async Task<MessagingExtensionResponse> OnTeamsMessagingExtens
 {
   var text = query?.Parameters?[0]?.Value as string ?? string.Empty;
 
-  //searches NuGet for a package
+  // Searches NuGet for a package.
   var obj = JObject.Parse(await (new HttpClient()).GetStringAsync($"https://azuresearch-usnc.nuget.org/query?q=id:{text}&prerelease=true"));
   var packages = obj["data"].Select(item => (item["id"].ToString(), item["version"].ToString(), item["description"].ToString()));
 
@@ -149,6 +157,8 @@ protected override async Task<MessagingExtensionResponse> OnTeamsMessagingExtens
 ```
 
 # [TypeScript/Node.js](#tab/typescript)
+
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msgext-search-quickstart/js/botActivityHandler.js#L35)
 
 ```typescript
 class TeamsMessagingExtensionsSearchBot extends TeamsActivityHandler {
@@ -312,11 +322,14 @@ class TeamsMessagingExtensionsSearchBot extends TeamsActivityHandler {
 ### Enable and handle tap actions
 
 # [C#/.NET](#tab/dotnet)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msgext-search/csharp/Bots/TeamsMessagingExtensionsSearchBot.cs#L80)
+
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msgext-search/csharp/Bots/TeamsMessagingExtensionsSearchBot.cs#L80)
 
 ```csharp
 protected override Task<MessagingExtensionResponse> OnTeamsMessagingExtensionSelectItemAsync(ITurnContext<IInvokeActivity> turnContext, JObject query, CancellationToken cancellationToken)
 {
-    // The Preview card's Tap should have a Value property assigned, this will be returned to the bot in this event. 
+    // The Preview card's Tap should have a Value property assigned, this will be returned to the bot in this event.
     var (packageId, version, description, projectUrl, iconUrl) = query.ToObject<(string, string, string, string, string)>();
 
     var card = new ThumbnailCard
@@ -344,6 +357,8 @@ protected override Task<MessagingExtensionResponse> OnTeamsMessagingExtensionSel
 ```
 
 # [TypeScript/Node.js](#tab/typescript)
+
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msgext-search/nodejs/bots/teamsMessagingExtensionsSearchBot.js#L115)
 
 ```typescript
 async handleTeamsMessagingExtensionSelectItem(context, obj) {
@@ -377,7 +392,7 @@ async handleTeamsMessagingExtensionSelectItem(context, obj) {
 * * *
 
 > [!NOTE]
-> `OnTeamsMessagingExtensionSelectItemAsync` is not triggered in mobile teams application.
+> `OnTeamsMessagingExtensionSelectItemAsync` is not triggered in mobile Teams application.
 
 ## Default query
 
@@ -410,8 +425,8 @@ The default query has the same structure as any regular user query, with the `na
 
 | Sample Name           | Description | .NET    | Node.js   |
 |:---------------------|:--------------|:---------|:--------|
-|Teams message extension action| Describes how to define action commands, create task module, and  respond to task module submit action. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) |
-|Teams message extension search   |  Describes how to define search commands and respond to searches.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
+|Teams message extension action| Describes how to define action commands, create task module, and  respond to task module submit action. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/nodejs) |
+|Teams message extension search   |  Describes how to define search commands and respond to searches.        |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/nodejs)|
 
 ## Next step
 
@@ -420,4 +435,6 @@ The default query has the same structure as any regular user query, with the `na
 
 ## See also
 
-[Add configuration to a message extension](~/get-started/first-message-extension.md)
+* [Message extensions](../../what-are-messaging-extensions.md)
+* [Build your first tab app using JavaScript](../../../sbs-gs-javascript.yml)
+* [composeExtensions](../../../resources/schema/manifest-schema.md#composeextensions)

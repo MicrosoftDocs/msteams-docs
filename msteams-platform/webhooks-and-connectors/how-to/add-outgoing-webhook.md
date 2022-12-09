@@ -21,13 +21,13 @@ The Outgoing Webhook acts as a bot and search for messages in channels using **@
 * Table with just a row is not really needed. Provide the content without tabulating it.
 --->
 
-See the following video to learn how to create an Outgoing Webhooks:
+See the following video to learn how to create Outgoing Webhooks:
 <br>
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OIzu]
 <br>
 
-## Key features of Outgoing Webhook
+## Key features of Outgoing Webhooks
 
 The following table provides the features and description of Outgoing Webhooks:
 
@@ -44,21 +44,22 @@ Create Outgoing Webhooks and add custom bots to Teams.
 
 To create an Outgoing Webhook, follow these steps:
 
-1. Select **Teams** from the left pane. The **Teams** page appears:
+1. Select **Teams** from the left pane.
 
-    ![Teams channel](~/assets/images/teamschannel.png)
+    :::image type="content" source="../../assets/images/teamschannel_1.png" alt-text="Teams channel":::
 
-1. In the **Teams** page, select the required team to create an Outgoing Webhook and select the &#8226;&#8226;&#8226;. In the dropdown menu, select **Manage team**:
+1. In the **Teams** page, select the required team to create an Outgoing Webhook and select &#8226;&#8226;&#8226;.
+1. Select **Manage team** from the dropdown menu.
 
-    ![Create Outgoing Webhook](~/assets/images/outgoingwebhook1.png)
+    :::image type="content" source="../../assets/images/outgoingwebhook1_1.png" alt-text="Select manage":::
 
-1. Select the **Apps** tab on the channel page:
+1. Select **Apps** on the channel page.
 
-    ![Create an Outgoing Webhook](~/assets/images/outgoingwebhook2.png)
+    :::image type="content" source="../../assets/images/outgoingwebhook2_1.png" alt-text="Select app":::
 
-1. Select **Create an Outgoing Webhook**:
+1. Select **Create an Outgoing Webhook**.
 
-    ![Create Outgoing Webhooks](~/assets/images/outgoingwebhook3.png)
+    :::image type="content" source="../../assets/images/outgoingwebhook3_1.png" alt-text="Select create outgoing webhook"lightbox="../../assets/images/outgoingwebhook3_1.png":::
 
 1. Type the following details in the **Create an Outgoing Webhook** page:
 
@@ -67,9 +68,9 @@ To create an Outgoing Webhook, follow these steps:
     * **Description**: A detailed string that appears in the profile card and the team-level App dashboard.
     * **Profile Picture**: An app icon for your webhook, which is optional.
 
-1. Select **Create**. The Outgoing Webhook is added to the current team's channel:
+1. Select **Create**. The Outgoing Webhook is added to the current team's channel.
 
-    ![create Outgoing Webhook](~/assets/images/outgoingwebhook.png)
+    :::image type="content" source="../../assets/images/outgoingwebhook_1.png" alt-text="Create outgoing webhook":::
 
 A [Hash-based Message Authentication Code (HMAC)](https://security.stackexchange.com/questions/20129/how-and-when-do-i-use-hmac/20301) dialogue box appears. It's a security token used to authenticate calls between Teams and the designated outside service. The HMAC security token doesn't expire and is unique for each configuration.
 
@@ -241,8 +242,8 @@ Follow the [step-by-step guide](../../sbs-outgoing-webhooks.yml) to create Outgo
 
 ## See also
 
-* [Create an Incoming Webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
-* [Create an Office 365 Connector](~/webhooks-and-connectors/how-to/connectors-creating.md)
-* [Create and send messages](~/webhooks-and-connectors/how-to/connectors-using.md)
-* [Build notification bot with JavaScript](../../sbs-gs-notificationbot.yml)
-* [Build your first bot app using JavaScript](../../sbs-gs-bot.yml)
+* [Webhooks and connectors](../what-are-webhooks-and-connectors.md)
+* [Create and send messages](connectors-using.md)
+* [Create Incoming Webhooks](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
+* [Create Office 365 Connectors](~/webhooks-and-connectors/how-to/connectors-creating.md)
+* [Adaptive Cards](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
