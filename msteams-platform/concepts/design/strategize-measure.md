@@ -40,7 +40,7 @@ For the purposes of this article, let’s use the HEART framework to indicate a 
 - Admin installs the app for users and the app sends a welcome message.
 
 Instrumentation designed to improve adoption should aim at improving discoverability of the app and its features as well. The likelihood of discovering an app among new users increases when existing users start using the app in collaborative scope. For example, adding a channel or meeting tab, adding a bot to channel, or sharing messaging extension card in a group chat.
- 
+
 > [!TIP]
 >
 > - Measure usage of app in collaborative scope and the time taken to discover your app features in collaborative or meeting scope. If the usage is low or time taken is high, socialize said features better in app or via marketing efforts.
