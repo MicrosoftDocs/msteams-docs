@@ -201,12 +201,14 @@ As a reminder, you’ll now want to gain mindshare for your collaborative app am
 
     :::row:::
         :::column span="3":::
-            Surface deeplinks within your browser-based web SaaS experience to transport users to specific views inside your Teams app (for example, personal app, tabs, conversational bot or meeting extensions with shared meeting stage or in-meeting tab) and implement the highly recommended Share to Teams control within your browser-based web SaaS experience to enable users to share and start collaborating around a content or object from your SaaS product inside Teams with their colleagues. To get maximum ROI, surface these nudges contextually for scenarios which are inherently collaborative over chat or in meetings as those are best delivered inside Microsoft Teams through your app.
+            Surface deeplinks within your browser-based web SaaS experience to transport users to specific views inside your Teams app (for example, personal app, tabs, conversational bot or meeting extensions with shared meeting stage or in-meeting tab) and implement the highly recommended Share to Teams control within your browser-based web SaaS experience to enable users to share and start collaborating around a content or object from your SaaS product inside Teams with their colleagues.
         :::column-end:::
         :::column span="":::
             :::image type="content" source="../../assets/images/app-fundamentals/drive-traffic-saas-app.png" alt-text="Drive traffic from your SaaS app.":::
         :::column-end:::
     :::row-end:::
+
+    To get maximum ROI, surface these nudges contextually for scenarios which are inherently collaborative over chat or in meetings as those are best delivered inside Microsoft Teams through your app.
 
 #### Where can Microsoft help?
 
