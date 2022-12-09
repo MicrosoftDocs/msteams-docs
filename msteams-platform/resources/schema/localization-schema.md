@@ -39,7 +39,7 @@ The schema defines the following properties:
 |---------------|--------|---------|------------------|
 |`$schema`|URI|NA|The https:// URL referencing the JSON Schema for the manifest.|
 |`name.short`|String|30|Replaces the corresponding string from the app manifest with the value provided here. The property is required in the localization JSON.|
-|`name.full`|String|100|Replaces the corresponding string from the app manifest with the value provided here.The property is required in the localization JSON.|
+|`name.full`|String|100|Replaces the corresponding string from the app manifest with the value provided here. The property is required in the localization JSON.|
 |`description.short`|String|80|Replaces the corresponding string from the app manifest with the value provided here. The property is required in the localization JSON.|
 |`description.full`|String|4000|Replaces the corresponding string from the app manifest with the value provided here. The property is required in the localization JSON.|
 |`staticTabs\\[([0-9]|1[0-5])\\]\\.name`|String|128|Replaces the corresponding strings from the app manifest with the value provided here.|
