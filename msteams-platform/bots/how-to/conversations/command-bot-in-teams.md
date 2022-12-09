@@ -256,7 +256,7 @@ Add Adaptive Cards in response to external events to extend your command and res
 
 <details>
 
-<summary><b>How to extend my command bot by adding workflow Adaptive Card actions?</b></summary>
+<summary><b>How to extend my command bot by adding workflow bot Adaptive Card actions?</b></summary>
 
 For more information on how to add workflow bot Adaptive Card actions to command bot, see the steps to [add card actions](workflow-bot-in-teams.md#add-card-actions).
 
