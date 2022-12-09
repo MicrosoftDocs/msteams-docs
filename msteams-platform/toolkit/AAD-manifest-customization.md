@@ -122,7 +122,7 @@ You can use `preAuthorizedApplications` property to authorize a client applicati
 
 ## Azure AD manifest template placeholders
 
-The Azure AD manifest file contains placeholder arguments with {{...}} statements it's replaced during build for different environments. You can build references to config file, state file, and environment variables with the placeholder arguments.
+The Azure AD manifest file contains placeholder arguments with {{...}} statements, it's replaced during build for different environments. You can build references to config file, state file, and environment variables with the placeholder arguments.
 
 ### Reference state file values in Azure AD manifest template
 
@@ -192,7 +192,7 @@ Placeholder argument CodeLens helps you to see the values for local debug and de
 
 It's different from official [Azure AD manifest schema](/azure/active-directory/develop/reference-app-manifest) that `resourceAppId` and `resourceAccess` ID in `requiredResourceAccess` property only supports UUID. Azure AD manifest template in Teams Toolkit also supports user readable strings for `Microsoft Graph` and `Office 365 SharePoint Online` permissions. If you enter UUID, CodeLens shows user readable strings, otherwise it shows UUID.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/manual/add resource.png" alt-text="addresource":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/manual/add resource.png" alt-text="add resource":::
 
 ### Pre-authorized applications CodeLens
 
@@ -266,19 +266,19 @@ You need to interact with Azure AD application during various stages of your Tea
 
       After you create a Teams application without built-in SSO, Teams Toolkit progressively helps you to add SSO for the project. As a result, an Azure AD manifest file is automatically created for you in `templates\appPackage\aad.template.json`.
 
-      Teams Toolkit creates or updates the Azure AD application during next local debug session or while you move the application to the cloud.
+      Teams Toolkit creates or updates the Azure AD application during next local development session or while you move the application to the cloud.
 
 3. **To build Locally**
 
-    Teams Toolkit performs the following functions during local debug:
+    Teams Toolkit performs the following functions during local development:
 
     * Read the `state.local.json` file to find an existing Azure AD application. If an Azure AD application already exists, Teams Toolkit reuses the existing Azure AD application. Otherwise you need to create a new application using the `aad.template.json` file.
 
-    * Initially ignores some properties in the manifest file that requires more context, such as `replyUrls` property that requires a local debug endpoint during the creation of a new Azure AD application with the manifest file.
+    * Initially ignores some properties in the manifest file that requires more context, such as `replyUrls` property that requires a local development endpoint during the creation of a new Azure AD application with the manifest file.
 
     * After the local dev environment starts successfully, the Azure AD application's `identifierUris`, `replyUrls`, and other properties that aren't available during creation stage are updated accordingly.
 
-    * The changes you've done to your Azure AD application are loaded during next local debug session. You can see [Azure AD application changes](https://github.com/OfficeDev/TeamsFx/wiki/) applying manually.
+    * The changes you've done to your Azure AD application are loaded during next local development session. You can see [Azure AD application changes](https://github.com/OfficeDev/TeamsFx/wiki/) applied manually.
 
 4. **To provision for cloud resources**
 
@@ -326,3 +326,5 @@ You need to interact with Azure AD application during various stages of your Tea
 ## See also
 
 * [Preview and Customize app manifest in Toolkit](TeamsFx-preview-and-customize-app-manifest.md)
+* [Debug your Teams app](debug-overview.md)
+* [Debug your Teams app locally](debug-local.md)
