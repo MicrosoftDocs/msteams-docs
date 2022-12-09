@@ -127,6 +127,7 @@ The following code provides an example of action based for message extensions:
 * [SDK reference](/microsoftteams/platform/messaging-extensions/how-to/action-commands/create-task-module?tabs=javascript#respond-to-the-fetchtask-with-an-adaptive-card)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msgext-action/nodejs/bots/teamsMessagingExtensionsActionBot.js#L24-L61)
 
+
 ```javascript
 // Invoked when a Messaging Extension Fetch activity is received from the connector.
     async handleTeamsMessagingExtensionFetchTask(context, action) {
@@ -203,9 +204,7 @@ protected override async Task<MessagingExtensionResponse> OnTeamsMessagingExtens
 ```
 
 # [Node.js](#tab/nodejs)
-
 * [SDK reference](/dotnet/api/microsoft.identity.client.confidentialclientapplication.acquiretokenonbehalfof?source=recommendations&view=azure-dotnet&preserve-view=true)
-
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msgext-search-quickstart/js/botActivityHandler.js#L30-L53)
 
 ```javascript
