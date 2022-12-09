@@ -10,70 +10,74 @@ ms.date: 05/20/2022
 
 # Integrate existing third party APIs
 
-Teams Toolkit helps you to access existing APIs for building Teams apps. These APIs are developed by your organization or third-party. When you use Teams Toolkit to connect to an existing API, Teams Toolkit performs the following function:
+Teams Toolkit helps you to access existing APIs for building Teams apps. These APIs are developed by your organization or a third-party. When you use Teams Toolkit to connect to an existing API, Teams Toolkit performs the following function:
 
 * Generate sample code under `./bot` or `./api` folder.
 * Add a reference to the `@microsoft/teamsfx` package to `package.json`.
-* Add application settings for your API in  `.env.teamsfx.local` that configures local debugging.
+* Add app settings for your API in  `.env.teamsfx.local` that configures local debugging.
 
 ## Steps to connect to API
 
-You can add API connection using Visual Studio Code and CLI command.
+You can add API connection using Microsoft Visual Studio Code and CLI command.
 
 ### Add API connection using Visual Studio Code
 
 The following steps help you to add API connection using Visual Studio Code:
 
-1. Open Microsoft Visual Studio Code.
-2. Select Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/add-API/api-add-icon.png" alt-text="api icon"::: from the Visual Studio Code toolbar.
-3. Select **Add features** under **DEVELOPMENT**:
+1. Open **Visual Studio Code**.
+2. Select **Teams Toolkit** from the Visual Studio Code activity bar.
+3. Select **Add features** under **DEVELOPMENT**.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-add-features.png" alt-text="api add features":::
 
-    * You can also open the command palette and enter **Teams: Add cloud resources**.
+    * You can also open the **Command Palette** and enter **Teams: Add cloud resources**.
 
-4. From the pop-up, select the **API Connection** you want to add to your Teams app project:
+4. In the pop-up window that appears, select the **API Connection** you want to add to your Teams app project.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-select-features.png" alt-text="api select features":::
 
 5. Select **OK**.
 
-6. Enter endpoint for the API. It's added to the project's local application settings and it's the base URL for API requests.
+6. Enter endpoint for the API. It's added to the project's local app settings, and it's the base URL for API requests.
+
+7. Press **Enter**.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-endpoint.png" alt-text="api endpoint":::
 
      > [!NOTE]
-     > Ensure the endpoint is a valid http(s) URL.
+     > Ensure that the endpoint is a valid http(s) URL.
 
-7. Select the component that accesses the API.
+8. Select the component that accesses the API.
 
-8. Select **OK**.
+9. Select **OK**.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-invoke.png" alt-text="api invoke":::
 
-9. Enter an alias for the API. The alias generates an application setting name for the API that is added to the project's local application setting.
+10. Enter an alias for the API. The alias generates an app setting name for the API that is added to the project's local app setting.
+
+11. Press **Enter**.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-alias.png" alt-text="api alias":::
 
-10. Select required authentication for the API request from the **API authentication type**. It generates appropriate sample code and adds corresponding local application settings based on your selection.
+12. Select the required authentication for the API request from the **API authentication type**. It generates appropriate sample code and adds corresponding local application settings based on your selection.
 
      :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/myAPI connection.png" alt-text="api auth":::
 
-     Based on the authentication type selected, following steps is required to completed extra configuration
+     Based on the authentication type selected, the following steps are required to complete extra configuration:
 
 # [Basic](#tab/basic)
 
 * Enter the username for basic Auth.
 
-  Now the sample code got generated to call your API at bot\myAPI.js.
+  The sample code has been generated to call your API at bot\myAPI.js.
 
 # [Certification](#tab/certification)
 
-   Now the sample code got generated to call your API at bot\myAPI.js.
+   The sample code has been generated to call your API at bot\myAPI.js.
 
 # [Azure Active Directory](#tab/AAD)
 
-  Now the sample code got generated to call your API at bot\myAPI.js.
+  The sample code has been generated to call your API at bot\myAPI.js.
 
 # [API Key](#tab/apikey)
 
@@ -81,11 +85,11 @@ The following steps help you to add API connection using Visual Studio Code:
 
 * Enter an API key name.
 
-  Now the sample code got generated to call your API at bot\myAPI.js.
+  The sample code has been generated to call your API at bot\myAPI.js.
 
 # [Custom Auth Implementation](#tab/CustomAuthImplementation)
 
-  Now the sample code got generated to call your API at bot\myAPI.js.
+  The sample code has been generated to call your API at bot\myAPI.js.
 
 ---
 
