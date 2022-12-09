@@ -21,7 +21,16 @@ You’ll probably not be surprised to hear that not all apps are equal on any ma
 1. **Build a complementary, companion experience to your core web SaaS**: Build your Teams app serving as a point solution usually called “add-in”, “plug-in” or an “integration” for select, frequent, isolated, and lightweight use cases which the user can get done inside Teams; or
 1. **Build a “collaborative app” product line**: Provide Teams users a unique, differentiated, rich, familiar, end to end and deeply immersive experience – all contained in Teams and centered around collaboration versus individual productivity. [Collaborative apps](https://www.microsoft.com/en-us/microsoft-365/blog/2021/11/02/stay-in-the-flow-of-work-with-new-collaborative-apps-for-microsoft-teams/), a new app pattern designed to bring people, processes, and data together to help users thrive in the hybrid workplace are positioned to completely transform how people in every organization do more together with the help of ubiquitous software in the flow of work.
 
-Needless to say, from the options above, the strategy you'll take will determine the resulting user value, the economic opportunity for you and how you can maximize the ROI from your investments. This document will assume you’ve taken a strategic view of your Teams investment by developing a “collaborative app” – one where the user is able to get designated “jobs” seamlessly done in the flow of their work with full context, without ever leaving Microsoft Teams. Since collaborative apps are best positioned to win new customer deals for you and upsell or cross-sell to your existing customers, that investment has the potential to deliver the highest net new economic opportunity for your business. Using the guidance in this document, you can grow your collaborative app on Teams, expand differentiated scenarios further, incorporate Teams-first/only use cases & devise a Teams app-led go-to-market model to build a growth flywheel for your business.
+:::row:::
+    :::column span="":::
+        Needless to say, from the options above, the strategy you'll take will determine the resulting user value, the economic opportunity for you and how you can maximize the ROI from your investments. This document will assume you’ve taken a strategic view of your Teams investment by developing a “collaborative app” – one where the user is able to get designated “jobs” seamlessly done in the flow of their work with full context, without ever leaving Microsoft Teams. Since collaborative apps are best positioned to win new customer deals for you and upsell or cross-sell to your existing customers, that investment has the potential to deliver the highest net new economic opportunity for your business. Using the guidance in this document, you can grow your collaborative app on Teams, expand differentiated scenarios further, incorporate Teams-first/only use cases & devise a Teams app-led go-to-market model to build a growth flywheel for your business.
+    :::column-end:::
+    :::column span="":::
+
+        :::image type="content" source="../../assets/images/app-fundamentals/app-growth-flyheel.png" alt-text="Teams centric app growth flywheel for the developer":::
+
+    :::column-end:::
+:::row-end:::
 
 ## Options for growing your app: Understanding growth models
 
