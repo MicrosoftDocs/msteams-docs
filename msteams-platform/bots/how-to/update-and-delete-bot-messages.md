@@ -38,6 +38,7 @@ await turnContext.UpdateActivityAsync(newActivity, cancellationToken);
 # [TypeScript](#tab/typescript)
 
 * [SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#botbuilder-core-turncontext-updateactivity&preserve-view=true)
+* [SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#botbuilder-core-turncontext-updateactivity&preserve-view=true)
 
 To update an existing message, pass a new `Activity` object with the existing activity ID to the `updateActivity` method of the `TurnContext` object. For more information, see [updateActivity](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#updateactivity-partial-activity--&preserve-view=true).
 
