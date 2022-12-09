@@ -126,7 +126,7 @@ By now you're aware that the core focus at this stage is to announce the availab
         :::column span="":::
         :::image type="content" source="../../assets/images/app-fundamentals/app-bill-a.png" alt-text="App bill material":::
         :::column-end:::
-        :::column span="":::
+        :::column span="2":::
         To help Microsoft’s customer-facing teams talk about your app, we encourage you to develop Go-to-  Market Bill of Materials (GTM BOM) that enable thousands of Microsoft customer-facing personnel to successfully discuss and demonstrate the benefits of your app when meeting with customers.
         :::column-end:::
         :::column span="":::
