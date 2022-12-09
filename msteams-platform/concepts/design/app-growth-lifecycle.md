@@ -66,16 +66,16 @@ By now you're aware that the core focus at this stage is to announce the availab
 
     You can generate interest from both existing and new customers as well as drive traffic to your app‘s landing page or directly to the app’s listing in Teams Marketplace through social media posts and paid campaigns executed on your social channels. Don’t forget to include media such as a video or an animated gif in your post to make it rich and interactive. Tag @M365 and @MicrosoftTeamsi in your posts as well as use the hashtags #Teamsapps, #MicrosoftTeams, #TeamsISV throughout the year in social media posts for your collaborative app to extend exposure and flag Microsoft’s social team for a potential retweet.
 
-    :::row::
+    :::row:::
         :::column span="":::
             Connect with the Microsoft 365 ISV Benefits Service Desk to seek guidance for your social media campaign, possible collaboration with Microsoft for execution and the success metrics you should measure for example, # of views or clicks on your social posts, # of visitors on your landing page, no. of MQLs generated on the landing page, # of visitors to the app’s listing in marketplace, # of Teams app installs post launch and so on
         :::column-end:::
-        :::column span=":::
+        :::column span="":::
 
             :::image type="content" source="../../assets/images/app-fundamentals/social-media-posts.png" alt-text="Social media posts":::
 
         :::column-end:::
-:::row-end:::
+    :::row-end:::
 
 - **Public blog post announcing the new Teams app**
 
