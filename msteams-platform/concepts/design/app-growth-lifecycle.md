@@ -257,7 +257,16 @@ To reiterate, this stage is all about putting learnings from previous ad-hoc, pi
 
 - **Publish customer demand and app’s impact story**:
 
-    Share real customer stories of increased employee productivity by using your collaborative app inside Teams with a 4–5-minute video that can be used for demand generation, digital marketing campaigns or showcased on public pages. Nominate a customer and gain their commitment to participate in the story. Work with the customer on the narrative and be sure to include the benefits derived from your collaborative app, as well as the added productivity gains seen by the customer (quantifiable gains are preferred). Once developed, you must host one or more of these customer stories prominently on the landing page of the Teams app on your website and promote it via paid, earned media or social media posts to highlight the success of the app.
+    :::row:::
+        :::column span="3":::
+            Share real customer stories of increased employee productivity by using your collaborative app inside Teams with a 4–5-minute video that can be used for demand generation, digital marketing campaigns or showcased on public pages. Nominate a customer and gain their commitment to participate in the story. Work with the customer on the narrative and be sure to include the benefits derived from your collaborative app, as well as the added productivity gains seen by the customer (quantifiable gains are preferred).
+        :::column-end:::
+        :::column span="":::
+            :::image type="content" source="../../assets/images/app-fundamentals/customer-story-isv.png" alt-text="Customer story on the landing story of ISV website.":::
+        :::column-end:::
+    :::row-end:::
+
+    Once developed, you must host one or more of these customer stories prominently on the landing page of the Teams app on your website and promote it via paid, earned media or social media posts to highlight the success of the app.
 
 - **Showcase Teams app in leading industry events**:
 
@@ -265,7 +274,16 @@ To reiterate, this stage is all about putting learnings from previous ad-hoc, pi
 
 - **User re-targeting and re-engagement basis app analytics**:
 
-    A core product-led growth initiative, use signals from your app analytics to re-target users who’ve recently engaged with your app in Teams but haven't reached a value realization milestone defined by you. Users who’s not visited your app or churned recently can be re-engaged to bring back to your app. Remember, your goal is to get users to frequently experience value by using your collaborative app, so that they can convert to sticky, habitual users and eventually convert into paying customers.
+    :::row:::
+        :::column span="3":::
+            A core product-led growth initiative, use signals from your app analytics to re-target users who’ve recently engaged with your app in Teams but haven't reached a value realization milestone defined by you. Users who’s not visited your app or churned recently can be re-engaged to bring back to your app.
+        :::column-end:::
+        :::column span="":::
+            :::image type="content" source="../../assets/images/app-fundamentals/remarket-retarget.png" alt-text="Re-market via emails and re-target using Teams notifications.":::
+        :::column-end:::
+    :::row-end:::
+
+    Remember, your goal is to get users to frequently experience value by using your collaborative app, so that they can convert to sticky, habitual users and eventually convert into paying customers.
 
 - **Co-activation in mutually identified existing customers**:
 
@@ -273,12 +291,23 @@ To reiterate, this stage is all about putting learnings from previous ad-hoc, pi
 
 - **Growth hacking via in-product scenario experimentation**:
 
-    Continuously monitor what’s happening inside your collaborative app through analytics and measure the value end-users are obtaining. To positively impact product and business metrics such as # of app installs, activation rate, task completing, new user retention and churn, referrals and so on, a rapid, always-on experimentation workstream allows byte-sized tweaks to your app experience, resulting in more control and lesser risk compared to monolithic, big changes spaced far apart. Make sure to instrument code and track analytics for your app right from the very first version and have your dedicated Teams app crew or your existing SaaS product growth team of PM, Dev, Design upskilled on Teams platform to take ownership of this workstream to derive maximum ROI.
+    Continuously monitor what’s happening inside your collaborative app through analytics and measure the value end-users are obtaining. To positively impact product and business metrics such as # of app installs, activation rate, task completing, new user retention and churn, referrals and so on, a rapid, always-on experimentation work-stream allows byte-sized tweaks to your app experience, resulting in more control and lesser risk compared to monolithic, big changes spaced far apart. Make sure to instrument code and track analytics for your app right from the very first version and have your dedicated Teams app crew or your existing SaaS product growth team of PM, Dev, Design upskilled on Teams platform to take ownership of this work-stream to derive maximum ROI.
 
 #### Where can Microsoft help?
 
 - **Co-activation in mutually identified existing customers**: Note that Microsoft will evaluate co-activation opportunities in large customer accounts based on customer interest, adoption opportunity (sold seat size in customer account) and so on among other criteria.
-- **Support joint customer success story development** Connect with the Microsoft 365 ISV Benefits Service Desk to seek guidance and execute. You will be able to leverage Microsoft slide templates, customer story intake form, customer interview template, and vendor video production or copy writing services. Introduce the creative team to the customer and facilitate the interviews and review processes until the story is approved by all parties. The Microsoft 365 ISV Benefits team will make sure your customer story is published to the internal Microsoft Teams Platform Resource Library and the Transformed by Teams portal.
+
+:::row:::
+    :::column span="3":::
+        - **Support joint customer success story development** Connect with the Microsoft 365 ISV Benefits Service Desk to seek guidance and execute. You will be able to leverage Microsoft slide templates, customer story intake form, customer interview template, and vendor video production or copy writing services. Introduce the creative team to the customer and facilitate the interviews and review processes until the story is approved by all parties.
+    :::column-end:::
+    :::column span="":::
+        :::image type="content" source="../../assets/images/app-fundamentals/customer-success-story-1.png" alt-text="Teams customer success story.":::
+    :::column-end:::
+:::row-end:::
+
+    The Microsoft 365 ISV Benefits team will make sure your customer story is published to the internal Microsoft Teams Platform Resource Library and the Transformed by Teams portal.
+
 - **Select, area-specific marketing to local Teams customers** Your Microsoft field, account or engineering representatives will reach out to include your collaborative app in specific, local subsidiary-drive GTM opportunities focused on Teams customers located in the subsidiary’s market.
 - Best practices for analytics-driven app engagement - Strategic developers who are part of the invite-only Teams engineering’s build-with partner program get access to best practices based on data signals for your app to improve acquisition, activation, engagement, retention and virality of your app on Teams. Teams engineering will bring in PM, UX design and developer support resources to work alongside your crew on the next set of app enhancements.
 - **High-touch support for select, joint new customer pitches**: Get in touch with your Microsoft field, account or engineering representatives to discuss potential joint customer pitches. Note that Microsoft will use discretion to partner on such opportunities based on customer interest, adoption opportunity (seat size in prospect customer account) and so on among other criteria.
