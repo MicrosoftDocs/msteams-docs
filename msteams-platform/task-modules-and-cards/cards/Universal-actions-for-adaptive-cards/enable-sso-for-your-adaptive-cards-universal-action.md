@@ -13,14 +13,14 @@ Universal Actions for Adaptive Cards bring the bot as the common backend for han
 > [!NOTE]
 > Support for Universal Actions for Adaptive Cards schema version v1.4 is only available for cards sent by bot.
 
-You can enable the following scenarios with `Action.Execute` on your Adaptive Cards Universal Actions:
+With `Action.Execute`, following are the major benefits to bot developers and users:
 
-* [Universal Actions](Overview.md#universal-actions)
-* [User Specific Views](Overview.md#user-specific-views)
-* [Sequential Workflows](Overview.md#sequential-workflow-support)
-* [Up to Date View](Overview.md#up-to-date-views)
+1. Bot developers can use `Action.Execute` for action handling across different platforms. `Action.Execute` works across hubs including Teams and Outlook. In addition, an Adaptive Card can be returned as response for an `Action.Execute` triggered invoke request.
+2. **User specific views**: With refresh property in adaptive cards, which triggers automatic refresh (internally an `Action.Execute` call) on the card, can fetch different cards for different users in the chat based on their role. For eg, in the below picture, Incident creator, incident assignee and a participant all see different cards in the conversation.
+3. **Sequential View**: Since `Action.Execute` buttons can return new Adaptive card in response which is shown to user, it can enable sequential flows, like a menu card scenario.
+4. **Up to Date View**: Cards with automatic refresh will fetch the latest data from bot service and it can display up to date information to user.
 
-To learn more about Universal Actions for Adaptive Cards, see [Universal Actions for Adaptive Cards](Overview.md).
+For more information about Universal Actions for Adaptive Cards, see [Universal Actions for Adaptive Cards](Overview.md).
 
 With Single sign-on (SSO) in Teams, app users have the advantage of using Teams to access Adaptive Cards Universal Actions in bot. After logging into Teams using Microsoft or Microsoft 365 account, app users can use your app without needing to sign in again. Your app is available to app users on any device with access granted through Azure Active Directory (AD).
 
