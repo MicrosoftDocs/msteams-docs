@@ -82,6 +82,61 @@ Pass your result as the first parameter. Teams invokes `submitHandler` where `er
 
 When you invoke the task module with a `submitHandler` and the user selects an `Action.Submit` button, the values in the card are returned as the value of `result`. If the user selects the Esc key or X at the top right, `err` is returned instead. If your app contains a bot in addition to a tab, you can include the `appId` of the bot as the value of `completionBotId` in the `TaskInfo` object. The Adaptive Card body as filled in by the user is sent to the bot using a `task/submit invoke` message when the user selects an `Action.Submit` button. The schema for the object you receive is similar to [the schema you receive for task/fetch and task/submit messages](~/task-modules-and-cards/task-modules/task-modules-bots.md#payload-of-taskfetch-and-tasksubmit-messages). The only difference is that the schema of the JSON object is an Adaptive Card object as opposed to an object containing an Adaptive Card object as [when Adaptive cards are used with bots](~/task-modules-and-cards/task-modules/task-modules-bots.md#payload-of-taskfetch-and-tasksubmit-messages).
 
+The following is the example of payload:
+
+```json
+{
+  "task": {
+    "type": "continue",
+    "value": {
+      "title": "Title",
+      "height": "height",
+      "width": "width",
+      "url": null,
+      "card": "Adaptive Card or Adaptive Card bot card attachment",
+      "fallbackUrl": null,
+      "completionBotID": "bot App ID"
+    }
+  }
+}
+```
+
+The following is the example of Invoke request:
+
+```javascript
+let taskInfo = {
+    title: "Task Module Demo",
+    height: "medium",
+    width: "medium",
+    card: null,
+    fallbackUrl: null,
+    completionBotId: null,
+};
+
+taskInfo.card = {
+    "type": "AdaptiveCard",
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.4",
+    "body": [
+        {
+            "type": "TextBlock",
+            "text": "This is sample adaptive card.",
+            "wrap": true
+        }
+    ]
+}
+
+submitHandler = (err, result) => {
+    console.log(`Submit handler - err: ${err}`);
+    alert(
+        "Result = " + JSON.stringify(result) + "\nError = " + JSON.stringify(err)
+    );
+};
+
+microsoftTeams.tasks.startTask(taskInfo, submitHandler);
+
+```
+
 The next section gives an example of submitting the result of a task module.
 
 ## Example of submitting the result of a task module

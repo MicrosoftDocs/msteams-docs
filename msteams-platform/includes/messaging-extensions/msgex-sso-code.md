@@ -232,8 +232,7 @@ The consent dialog that appears is for open-id scopes defined in Azure AD. The a
 > [!IMPORTANT]
 > Scenarios where consent dialogs are not needed:
 >
-> - If the tenant administrator has granted consent on behalf of the tenant, app users don't need to be prompted for consent at all. This means that the app users don't see the consent dialogs, and can access the app seamlessly.
-> - If your Azure AD app is registered in the same tenant from which you're requesting an authentication in Teams, the app user can't be asked to consent, and is granted an access token right away. App users consent to these permissions only if the Azure AD app is registered in a different tenant.
+> - If the tenant administrator has granted consent on behalf of the tenant, app users don't need to be prompted for consent at all. This means that the app users don't see the consent dialogs and can access the app seamlessly.
 
 If you encounter any errors, see [Troubleshoot SSO authentication in Teams](~/tabs/how-to/authentication/tab-sso-troubleshooting.md).
 
@@ -365,7 +364,7 @@ Web APIs on your server must decode the access token and verify if it's sent fro
 > [!NOTE]
 > If you use Bot Framework, it handles the access token validation. If you don't use Bot Framework, follow the guidelines in this section.
 
-For more information about validating access token, see [Validate tokens](/azure/active-directory/develop/access-tokens.md#validate-tokens).
+For more information about validating access token, see [Validate tokens](/azure/active-directory/develop/access-tokens#validate-tokens).
 
 There are a number of libraries available that can handle JWT validation. Basic validation includes:
 
@@ -529,10 +528,11 @@ Use the following code snippet to handle the access token in case the app user l
 
 ## Code sample
 
-This section provides Bot authentication v3 SDK sample.
+This section provides bot authentication v3 SDK sample.
+
 
 | **Sample name** | **Description** | **C#** | **Node.js** | **Python** |
 |---------------|------------|------------|-------------|---------------|
-| Bot authentication | This sample shows how to get started with authentication in a bot for Teams. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth) |
+| Bot authentication | This sample shows how to get started with authentication in a bot for Teams. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-authentication/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/js) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-authentication/python) |
 | Tab, bot, and Message extension (ME) SSO | This sample shows SSO for tab, bot, and message extension - search, action, link unfurl. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | NA |
 |Tab, bot, and Message extension | This sample shows how to check authentication in bot, tab, and message extension with SSO | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-auth/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-auth/nodejs) | NA |

@@ -138,7 +138,7 @@ An example of connector message is as follows:
 
 This message provides the following card in the channel:
 
-![Screenshot of a connector card](~/assets/images/connectorcard.png)
+:::image type="content" source="../../assets/images/connectorcard_1.png" alt-text="Screenshot of a coonector card.":::
 
 ## Send messages using cURL and PowerShell
 
@@ -180,7 +180,7 @@ To post a message to the webhook with PowerShell, follow these steps:
     > [!NOTE]
     > If the POST succeeds, you must see a simple **1** output by `Invoke-RestMethod`.
 
-1. Check the Teams channel associated with the webhook URL. You can see the new card posted to the channel. Before you use the connector to test or publish your app, you must do the following:
+1. Check the Teams channels associated with the webhook URL. You can see the new card posted to the channel. Before you use the connector to test or publish your app, you must do the following:
 
     * [Include two icons](../../concepts/build-and-test/apps-package.md#app-icons).
     * Modify the `icons` portion of the manifest to the file names of the icons instead of URLs.
@@ -278,10 +278,11 @@ These limits are in place to reduce spamming a channel by a connector and ensure
 
 ## See also
 
-* [Office 365 Connectors for Microsoft Teams](~/webhooks-and-connectors/how-to/connectors-creating.md)
+* [Webhooks and connectors](../what-are-webhooks-and-connectors.md)
 * [Create Incoming Webhooks](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
 * [Create Outgoing Webhooks](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)
 * [Rate limiting for Teams bots messages](~/bots/how-to/rate-limit.md)
-* [Build tabs with Adaptive Cards](~/tabs/how-to/build-adaptive-card-tabs.md)
-* [Format cards in Microsoft Teams](~/task-modules-and-cards/cards/cards-format.md)
+* [Build tabs with Adaptive Cards](../../tabs/how-to/build-adaptive-card-tabs.md)
+* [Format cards in Microsoft Teams](../../task-modules-and-cards/cards/cards-format.md)
+* [Adaptive Cards](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
 * [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
