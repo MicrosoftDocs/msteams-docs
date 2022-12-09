@@ -88,7 +88,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | Term | Definition |
 | --- | --- |
 | [E5 developer account](../toolkit/tools-prerequisites.md#accounts-to-build-your-teams-app) | E5 developer subscription for building apps to extend Microsoft 365. It includes 25 user licenses, including the administrator, for development purposes only.  <br>**See also**: [Microsoft 365 account](#m) |
-| Endpoint address | It is the field in Developer Portal SSO configuration for a bot app. It's the endpoint where messages are sent to your bot . <br> **See also**: [Bot handle](#b), [Messaging endpoint](#m) [OAuth connection](#o), [SSO](#s) <br> For more information, see [Update app manifest for SSO and preview your app](../bots/how-to/authentication/bot-sso-manifest.md) |
+| [Endpoint address](../bots/how-to/authentication/bot-sso-manifest.md) | It is the field in Developer Portal SSO configuration for a bot app. It's the endpoint where messages are sent to your bot . <br> **See also**: [Bot handle](#b), [Messaging endpoint](#m) [OAuth connection](#o), [SSO](#s) |
 | [Entry point](../concepts/app-fundamentals-overview.md) | An access point, such as team, channel, and chat, for a Teams app where users can use your app. |
 | [Environment](../toolkit/teamsfx-multi-env.md) | A feature in Teams Toolkit that lets you create and use multiple development environments for your app project. There are two dev environments that Teams Toolkit creates by default, local environment and dev environment. <br>**See also**: [Local environment](#l); [Dev environment](#d) |
 
@@ -97,7 +97,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | Term | Definition |
 | --- | --- |
 | [First-run Experience](../concepts/design/design-teams-app-ui-templates.md)|A First-run Experience (FRE) is a user's introduction to your product.The FRE helps users to get started with the functions, features, and benefits of the product and influences users' to come back and continue using your product.|
-| Fully qualified domain name (FQDN) | A fully qualified domain name (FQDN) represents a domain name of a host or IP address(es). |
+| [Fully qualified domain name (FQDN)](../tabs/how-to/authentication/tab-sso-register-aad.md) | A fully qualified domain name (FQDN) represents a domain name of a host or IP address(es). |
 
 ## G
 
@@ -114,7 +114,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | Term | Definition |
 | --- | --- |
 | [Identity provider](../concepts/authentication/authentication.md) | An entity which stores and provides credentials to the user. It also allows users to register themselves. <br>**See also**: [Authentication](#a) |
-| Identity token | An identity token is used for authenticating app users. It is used by an applications to verify if the app user is who as per the declared identity. <br> **See also**: [Access token](#a) <br> For more information, see [ID tokens](/azure/active-directory/develop/id-tokens).
+| [Identity token](../tabs/how-to/authentication/tab-sso-overview.md) | An identity token is used for authenticating app users. It is used by an applications to verify if the app user is who as per the declared identity. <br> **See also**: [Access token](#a) <br> For more information, see [ID tokens](/azure/active-directory/develop/id-tokens).
 | [Incoming Webhook](../webhooks-and-connectors/how-to/add-incoming-webhook.md) | It lets an external app share content in Teams channels. These webhooks are used as tracking and notifying tools. <br>**See also**: [Webhook](#w); [Outgoing Webhook](#o) |
 | [In-meeting app experience](../apps-in-teams-meetings/teams-apps-in-meetings.md) | A stage of Teams meeting lifecycle. With the in-meeting app experience, you can engage participants during the meeting by using apps and the in-meeting dialog box. <br>**See also**: [Meeting lifecycle](#m) |
 
