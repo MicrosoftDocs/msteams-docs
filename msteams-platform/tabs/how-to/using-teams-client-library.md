@@ -115,7 +115,7 @@ There are two significant changes between TeamsJS 1.x.x versions and v.2.0.0 and
 * [**APIs are now organized into *capabilities*.**](#apis-organized-into-capabilities) You can think of capabilities as logical groupings of APIs that provide similar functionality, such as `authentication`, `dialog`, `chat`, and `calendar`. Each namespace represents a separate capability.
 
 > [!TIP]
-> You can use the [Teams Toolkit extension](https://aka.ms/teams-toolkit) for Microsoft Visual Studio Code to simplify the [TeamsJS version 2.x.x update process](#updating-to-the-latest-teams-client-version) for an existing Teams app.
+> You can use the [Teams Toolkit extension](https://aka.ms/teams-toolkit) for Microsoft Visual Studio Code to simplify the [TeamsJS version 2.x.x update process](#updating-to-teamsjs-version-2xx) for an existing Teams app.
 
 ### Backwards compatibility
 
@@ -409,7 +409,7 @@ You can also visualize the changes by reviewing the `transformLegacyContextToApp
 | `userTeamRole` | `app.Context.team.userRole`|
 | NA | `app.Context.app.host.name`|
 
-## Updating to TeamsJS version 2.0
+## Updating to TeamsJS version 2.x.x
 
 The easiest way to update your Teams app to use TeamsJS v.2.x.x is to use the [Teams Toolkit extension](https://aka.ms/teams-toolkit) for Visual Studio Code. This section will walk you through the steps to do that. If you prefer to manually update your code, see the [Callbacks converted to promises](#callbacks-converted-to-promises) and [APIs organized into capabilities](#apis-organized-into-capabilities) sections for more details on required API changes.
 
