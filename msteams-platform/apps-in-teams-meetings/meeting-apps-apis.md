@@ -1017,27 +1017,6 @@ The `onRaisehandChangeHandler` API allows an app to show if the user has raised 
 > [!NOTE]
 > RaiseHand API isn't applicable for pre-meeting and post-meeting scenarios.
 
-### Manifest
-
-Use the following example to configure the `authorization` property in your app manifest for any meeting:
-
-```JSON
-"authorization": {
- "permissions": {
-  "resourceSpecific": [
-   {
-    "name": "MeetingParticipantReaction.Read.Chat",
-    "type": "Delegated"
-   },
-   {
-    "name": "MeetingParticipantReaction.Read.Group",
-    "type": "Delegated"
-   }
-  ]
- }
-}
-```
-
 The following is an example of the payload request:
 
 ### Example
@@ -1094,27 +1073,6 @@ The `onReactionHandler` API allows an app to get the status of the users reactio
 >
 > * The `onReactionHandler`API is supported in in-meeting (private and channel) and group calling.
 > * API is supported in modern calling screens only.
-
-### Manifest
-
-Use the following example to configure the `authorization` property in your app manifest for any meeting:
-
-```JSON
-"authorization": {
- "permissions": {
-  "resourceSpecific": [
-   {
-    "name": "MeetingParticipantReaction.Read.Chat",
-    "type": "Delegated"
-   },
-   {
-    "name": "MeetingParticipantReaction.Read.Group",
-    "type": "Delegated"
-   }
-  ]
- }
-}
-```
 
 The following is an example of the payload request:
 
