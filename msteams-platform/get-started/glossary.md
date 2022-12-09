@@ -54,7 +54,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | [Chat bot](../bots/how-to/conversations/conversation-basics.md) | A bot is also referred to as a chatbot or conversational bot. It's an app that runs simple and repetitive tasks for users such as customer service or support staff. <br> **See also**: [Conversational bot](#c) |
 | Channel | A single place for a team to share messages, tools, and files. You can use a channel for teamwork and communication. <br>**See also**: [Conversation](#c) |
 | Client application | A client application requests authorization from a resource owner to participate in an OAuth 2.0 authorization grant flow, and may access APIs/data on the resource owner's behalf. <br> **See also**: [Authentication flow](#a), [SSO](#s) |
-| [Client secret](../bots/how-to/authentication/bot-sso-register-aad.md) | A secret string that the application uses to prove its identity when requesting a token. Also, it can be referred to as application password. |
+| [Client secret](../bots/how-to/authentication/bot-sso-register-aad.md) | A secret string that the application uses to prove its identity when requesting a token. Also, it can be referred to as application password.  **See also**: [Microsoft app password](#m) |
 | [Cloud resources](../toolkit/add-resource.md) | A service that is available on cloud through internet that your Teams app can use. It could be storage accounts, web apps, databases, and more. |
 | [Collaboration app](../concepts/extensibility-points.md) | An app with capabilities for a user to work in a collaborative workspace with other users. <br> **See also**: [Standalone app](#s) |
 | [Compose Extension](../resources/schema/manifest-schema.md#composeextensions) | A property in app manifest (`composeExtensions`) that refers to message extension capability. It's used when your extension needs to either authenticate or configure to continue. <br>**See also**: [App manifest](#a); [Message extension](#m) |
@@ -94,6 +94,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | Term | Definition |
 | --- | --- |
 | [First-run Experience](../concepts/design/design-teams-app-ui-templates.md)|A First-run Experience (FRE) is a user's introduction to your product.The FRE helps users to get started with the functions, features, and benefits of the product and influences users' to come back and continue using your product.|
+| Fully qualified domain name (FQDN) | A fully qualified domain name (FQDN) represents a domain name of a host or IP address(es). |
 
 ## G
 
@@ -139,6 +140,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | [Microsoft 365 account](../toolkit/accounts.md#microsoft-365-developer-account-types) | Microsoft 365 account includes 25 user licenses, including the administrator, for development purposes only. |
 | Microsoft 365 client ID | See [Client ID](#c) |
 | [Microsoft 365 developer program](../toolkit/tools-prerequisites.md)| The Microsoft 365 Developer Program helps you build apps that extend Microsoft 365. |
+| Microsoft App Password | A secret string that the application uses to prove its identity when requesting a token. Also, it can be referred to as application password. <br> **See also**: [Client secret](#c) |
 | [Microsoft Graph Explorer](../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md) | The gateway to data and intelligence in Microsoft 365. It provides a unified programmability model that you can use to access data in Microsoft 365, Windows 10, and Enterprise Mobility + Security. |
 | [Microsoft Teams](../overview.md) | Microsoft Teams is a group collaboration software that can be used to help teams work together remotely. |
 | [Microsoft Teams Platform](../concepts/app-fundamentals-overview.md) | The Microsoft Teams developer platform makes it easy for developers to integrate their own apps and services with Teams. |
@@ -194,6 +196,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | [SSO](../concepts/authentication/authentication.md) | Acronym for Single sign-on, an authentication method in which a user needs to sign in to an independent service of a software platform (such as Microsoft 365) only once. The user is then able to access all services without having to go through authentication again. <br>**See also**: [Authentication](#a), [Scope](#s) |
 | [Stage view](../sbs-meetings-stage-view.yml) | A user interface component that lets you render the content that is opened in full screen in Teams and pinned as a tab. It's invoked to surface web content within Teams. Note that it is *not* the same as meeting stage. <br>**See also**: [Meeting stage](#m) |
 | [Standalone app](../samples/integrating-web-apps.md) | A single-page or large, and complex app. The user can use some aspects of it in Teams. <br>**See also**: [Collaboration aap](#c) |
+| Standalone bot | Bots can be a standalone bot or be a part of a larger application. <br> **See also**: [Chat bot](#c), [Conversational bot](#c) |
 | [Static search](../task-modules-and-cards/cards/dynamic-search.md) | A method of typeahead search that lets users search from pre-specified values in the Adaptive Cards payload. <br>**See also**: [Dynamic search](#d) |
 | [Store validation guidelines](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) | A set of Teams-specific guidelines for validating an app before it can be submitted to Teams store. <br>**See also**: [Teams store](#t) |
 | Subdomain ID | It is the application ID URI that you registered when creating scope in Azure AD. <br> **See also**: [SSO](#s), [Application ID URI](#a), [Application ID](#a) <br> For more information, see [Configure your tab app in Azure AD](../tabs/how-to/authentication/tab-sso-register-aad.md). |
