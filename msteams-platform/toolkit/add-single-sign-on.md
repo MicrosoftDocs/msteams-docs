@@ -15,9 +15,9 @@ Microsoft Teams provides single sign-on (SSO) function for app to obtain signed 
 
 ::: zone pivot="visual-studio-code"
 
-## Add SSO to Teams app for Visual Studio Code
+## Add SSO to Teams app for Microsoft Visual Studio Code
 
-For applications that interact with the user in a chat, Team, or channel, SSO manifests as an Adaptive Card, which the user can interact with to invoke the Azure AD consent flow.
+For apps that interact with the user in a chat, Team, or channel, SSO manifests as an Adaptive Card, which the user can interact with to invoke the Azure AD consent flow.
 
 ## Enable SSO support
 
@@ -27,19 +27,20 @@ Teams Toolkit helps you to add SSO to the following Teams capabilities in Visual
 * Bot
 * Notification bot: restify server
 * Command bot
+* Workflow bot
 * Message extension
 
 ### Add SSO using Visual Studio Code
 
 You can perform the following steps to add SSO using Teams Toolkit in Visual Studio Code:
 
-1. Open **Microsoft Visual Studio Code**.
-2. Select Teams Toolkit :::image type="content" source="~/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png" alt-text="Screenshot is an example of the Teams Toolkit option in Visual Studio Code."::: from left navigation bar.
+1. Open **Visual Studio Code**.
+2. Select **Teams Toolkit** from the Visual Studio Code activity bar.
 3. Select **Add features** under **DEVELOPMENT**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso/sso-add features.png" alt-text="Screenshot shows the Add features option under the Development option in the Visual Studio Code.":::
 
-   * You can also open command palette and select **Teams: Add features**.
+   * You can select **View** > **Command Palette...** to view **Add features** window.
 
 4. Select **Single Sign-On**.
 
@@ -58,10 +59,10 @@ The following table lists the changes Teams Toolkit makes to your project:
 
 | **Type** | **File**                                             | **Purpose**                                                                                                                                                                               |
 | -------- | ---------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Create   | `aad.template.json` under `template/appPackage`      | Azure AD application manifest represents your Azure AD app. `template/appPackage` helps to register an Azure AD app during local debug or provision stage.                                |
-| Modify   | `manifest.template.json` under `template/appPackage` | A `webApplicationInfo` object is added into your Teams app manifest template. Teams requires this field to enable SSO. The change is in effect when you trigger local debug or provision. |
-| Create   | `auth/tab`                                           | Reference code, auth redirect pages, and `README.md` files are generated in this path for a tab project.                                                                                  |
-| Create   | `auth/bot`                                           | Reference code, auth redirect pages, and `README.md` files are generated in this path for a bot project.                                                                                  |
+| Create   | `aad.template.json` under `template\appPackage`      | Azure AD application manifest represents your Azure AD app. `template\appPackage` helps to register an Azure AD app during local debug or provision stage.                                |
+| Modify   | `manifest.template.json` under `template\appPackage` | A `webApplicationInfo` object is added into your Teams app manifest template. Teams requires this field to enable SSO. The change is in effect when you trigger local debugging or provisioning. |
+| Create   | `auth\tab`                                           | Reference code, auth redirect pages, and `README.md` files are generated in this path for a tab project.                                                                                  |
+| Create   | `auth\bot`                                           | Reference code, auth redirect pages, and `README.md` files are generated in this path for a bot project.                                                                                  |
 
 > [!NOTE]
 > By adding SSO, Teams Toolkit doesn't change anything in the cloud until you trigger local debug. Update your code to ensure that SSO is working in the project.
@@ -80,15 +81,15 @@ To enable SSO in your application, follow these steps:
 <summary><b>Tab project
 </b></summary>
 
-1. Copy `auth-start.html` and `auth-end.htm`\*\* in `auth/public` folder to `tabs/public/`. Teams Toolkit registers these two endpoints in Azure AD for Azure AD's redirect flow.
+1. Copy `auth-start.html` and `auth-end.htm`\*\* in `auth\public` folder to `tabs\public\`. Teams Toolkit registers these two endpoints in Azure AD for Azure AD's redirect flow.
 
-2. Copy `sso` folder under `auth/tab` to `tabs/src/sso/`.
+2. Copy `sso` folder under `auth\tab` to `tabs\src\sso\`.
 
    * `InitTeamsFx`: The file implements a function that initializes TeamsFx SDK and opens `GetUserProfile` component after SDK is initialized.
 
    * `GetUserProfile`: The file implements a function that calls Microsoft Graph API to get user info.
 
-3. Execute `npm install @microsoft/teamsfx-react` under `tabs/`.
+3. Execute `npm install @microsoft/teamsfx-react` under `tabs\`.
 
 4. Add the following lines to `tabs/src/components/sample/Welcome.tsx` to import `InitTeamsFx`:
 
@@ -109,8 +110,8 @@ To enable SSO in your application, follow these steps:
 
 #### Set up the Azure AD redirects
 
-1. Move the `auth/bot/public` folder to `bot/src`. This folder contains HTML pages that the bot application hosts. When SSO flow is initiated with Azure AD, it redirects the user to the HTML pages.
-1. Modify your `bot/src/index` to add the appropriate `restify` routes to HTML pages.
+1. Move the `auth\bot\public` folder to `bot\src`. This folder contains HTML pages that the bot app hosts. When SSO flow is initiated with Azure AD, it redirects you to the HTML pages.
+1. Modify your `bot\src\index` to add the appropriate `restify` routes to HTML pages.
 
    ```ts
    const path = require("path");
@@ -125,9 +126,9 @@ To enable SSO in your application, follow these steps:
 
 #### Update your app
 
-SSO command handler `ProfileSsoCommandHandler` uses an Azure AD token to call Microsoft Graph. This token is obtained by using the logged-in Teams user token. The flow is brought together in a dialog that displays a consent dialog if necessary.
+SSO command handler `ProfileSsoCommandHandler` uses an Azure AD token to call Microsoft Graph. This token is obtained by using the signed in Teams user token. The flow is brought together in a dialog that displays a consent dialog if necessary.
 
-1. Move `profileSsoCommandHandler` file under `auth/bot/sso` folder to `bot/src`. `ProfileSsoCommandHandler` class is an SSO command handler to get user info with SSO token, follow this method and create your own SSO command handler.
+1. Move `profileSsoCommandHandler` file under `auth\bot\sso` folder to `bot\src`. `ProfileSsoCommandHandler` class is an SSO command handler to get user info with SSO token, follow this method and create your own SSO command handler.
 1. Open `package.json` file and ensure that teamsfx SDK version >= 1.2.0.
 1. Execute the `npm install isomorphic-fetch --save` command in the `bot` folder.
 1. For ts script, execute the `npm install copyfiles --save-dev` command in the `bot` folder and replace following lines in `package.json`:
@@ -144,7 +145,7 @@ SSO command handler `ProfileSsoCommandHandler` uses an Azure AD token to call Mi
 
    This copies the HTML pages used for auth redirect when building the bot project.
 
-1. To make SSO consent flow work, replace the following code in `bot/src/index` file:
+1. To make SSO consent flow work, replace the following code in `bot\src\index` file:
 
    ```ts
    server.post("/api/messages", async (req, res) => {
@@ -165,7 +166,7 @@ SSO command handler `ProfileSsoCommandHandler` uses an Azure AD token to call Mi
    });
    ```
 
-1. Replace the options for `ConversationBot` instance in `bot/src/internal/initialize` to add the SSO config and SSO command handler:
+1. Replace the options for `ConversationBot` instance in `bot\src\internal\initialize` to add the SSO config and SSO command handler:
 
    ```ts
    export const commandBot = new ConversationBot({
@@ -198,7 +199,7 @@ SSO command handler `ProfileSsoCommandHandler` uses an Azure AD token to call Mi
    });
    ```
 
-1. Register your command in the Teams app manifest. Open `templates/appPackage/manifest.template.json`, and add following lines under `commands` in `commandLists` of your bot:
+1. Register your command in the Teams app manifest. Open `templates\appPackage\manifest.template.json`, and add the following lines under `commands` in `commandLists` of your bot:
 
    ```json
    {
