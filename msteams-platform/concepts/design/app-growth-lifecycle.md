@@ -299,14 +299,12 @@ To reiterate, this stage is all about putting learnings from previous ad-hoc, pi
 
 :::row:::
     :::column span="3":::
-        - **Support joint customer success story development** Connect with the Microsoft 365 ISV Benefits Service Desk to seek guidance and execute. You will be able to leverage Microsoft slide templates, customer story intake form, customer interview template, and vendor video production or copy writing services. Introduce the creative team to the customer and facilitate the interviews and review processes until the story is approved by all parties.
+        - **Support joint customer success story development** Connect with the Microsoft 365 ISV Benefits Service Desk to seek guidance and execute. You will be able to leverage Microsoft slide templates, customer story intake form, customer interview template, and vendor video production or copy writing services. Introduce the creative team to the customer and facilitate the interviews and review processes until the story is approved by all parties. The Microsoft 365 ISV Benefits team will make sure your customer story is published to the internal Microsoft Teams Platform Resource Library and the Transformed by Teams portal.
     :::column-end:::
     :::column span="":::
         :::image type="content" source="../../assets/images/app-fundamentals/customer-success-story-1.png" alt-text="Teams customer success story.":::
     :::column-end:::
 :::row-end:::
-
-    The Microsoft 365 ISV Benefits team will make sure your customer story is published to the internal Microsoft Teams Platform Resource Library and the Transformed by Teams portal.
 
 - **Select, area-specific marketing to local Teams customers** Your Microsoft field, account or engineering representatives will reach out to include your collaborative app in specific, local subsidiary-drive GTM opportunities focused on Teams customers located in the subsidiary’s market.
 - Best practices for analytics-driven app engagement - Strategic developers who are part of the invite-only Teams engineering’s build-with partner program get access to best practices based on data signals for your app to improve acquisition, activation, engagement, retention and virality of your app on Teams. Teams engineering will bring in PM, UX design and developer support resources to work alongside your crew on the next set of app enhancements.
@@ -342,7 +340,24 @@ To wrap up, your collaborative app is now becoming a full-fledged strategic prod
 
 - **Invest in richer and more impactful user scenarios**:
 
-    Innovation, grounded in customer needs, is the key to sustainably grow and succeed with your app on Teams. Make sure to keep monitoring reviews for your app on the marketplace, user feedback coming from in-product surveys, user behavior insights and app engagement analytics you’ve implemented in your app and customer inputs relayed by your Microsoft field, account, or engineering representatives to continue investing in new scenarios and enhanced user experience for your app. You must also keep an eye on your competitors and other leading SaaS apps in your segment to continuously learn from the market and evolve your app’s strategy and roadmap. Since Teams marketplace is public, you can leverage your product team can at the minimum leverage the M365 developer tenant to experience other apps. Strategic developers who are part of the invite-only Teams engineering’s build-with partner program can get early access to new and latest cutting-edge collaborative features on Teams app platform - an opportunity for you to deliver unparalleled value to customers as well as leverage global GTM and marketing moments, being an early adopter to showcase new innovation on Teams.
+    Innovation, grounded in customer needs, is the key to sustainably grow and succeed with your app on Teams.
+
+    :::row:::
+        :::column span="":::
+            Make sure to keep monitoring reviews for your app on the marketplace, user feedback coming from in-product surveys, user behavior insights and app engagement analytics you’ve implemented in your app and customer inputs relayed by your Microsoft field, account, or engineering representatives to continue investing in new scenarios and enhanced user experience for your app. You must also keep an eye on your competitors and other leading SaaS apps in your segment to continuously learn from the market and evolve your app’s strategy and roadmap.
+        :::column-end:::
+        :::column span="":::
+            :::image type="content" source="../../assets/images/app-fundamentals/feedback-teams-app.png" alt-text="Collect user feedback within the developer’s Teams app through contextual, micro-surveys.":::
+        :::column-end:::
+    :::row-end:::
+    :::row:::
+        :::column span="":::
+            :::image type="content" source="../../assets/images/app-fundamentals/app-capability-1.png" alt-text="Teams app capability 1.":::
+        :::column-end:::
+        :::column span="":::
+            Since Teams marketplace is public, you can leverage your product team can at the minimum leverage the M365 developer tenant to experience other apps. Strategic developers who are part of the invite-only Teams engineering’s build-with partner program can get early access to new and latest cutting-edge collaborative features on Teams app platform - an opportunity for you to deliver unparalleled value to customers as well as leverage global GTM and marketing moments, being an early adopter to showcase new innovation on Teams.
+        :::column-end:::
+    :::row-end:::
 
 - **Share feedback to enrich the Teams platform**:
 
@@ -354,7 +369,15 @@ To wrap up, your collaborative app is now becoming a full-fledged strategic prod
 
 #### Where can Microsoft help?
 
-- **Case Study on Microsoft’s public customers portal**: Impactful case studies of how investing a Teams app resulted in growth for your SaaS business and how customers using your app got impacted can be published on the following customer-facing sites: M365 ISV Benefits Program Success Stories and Customer Stories on Microsoft.com. Connect with your Teams engineering representatives or Microsoft 365 ISV Benefits Service Desk to check eligibility, seek guidance and execute this motion.
+:::row:::
+    :::column span="":::
+        - **Case Study on Microsoft’s public customers portal**: Impactful case studies of how investing a Teams app resulted in growth for your SaaS business and how customers using your app got impacted can be published on the following customer-facing sites: M365 ISV Benefits Program Success Stories and Customer Stories on Microsoft.com. Connect with your Teams engineering representatives or Microsoft 365 ISV Benefits Service Desk to check eligibility, seek guidance and execute this motion.
+    :::column-end:::
+    :::column span="":::
+        :::image type="content" source="../../assets/images/app-fundamentals/isv-site-success-story.png" alt-text="Modern work ISV site showing customer success stories.":::
+    :::column-end:::
+:::row-end:::
+
 - **Expand customer co-activation and joint new pitches**: Microsoft will evaluate co-activation opportunities in large customer accounts based on customer interest, adoption opportunity (sold seat size in customer account) and so on among other criteria. Get in touch with your Microsoft field, account, or engineering representatives to discuss potential joint customer pitches in large customer accounts.
 - **Include in Microsoft exec blog or flagship event endorsement**: Get the power of the Microsoft executive team behind your next leadership blog or big event. Review your plans for blogs or events in which you'll be participating. Develop ideas on how a Microsoft executive can help to promote your commercial marketplace offer in a blog or at an event. Reach out to Microsoft 365 ISV Marketing Benefits to request Microsoft executive endorsement, where your eligibility will be checked and subsequently, the team will work with you to find a Microsoft executive (Director level or above) to help endorse your Teams collaborative app available on the marketplace.
 - **Share top customer feedback to shape app updates**: Strategic developers who are part of the invite-only Teams engineering’s build-with partner program can learn from Microsoft PM and UX design team about incoming feedback from customers specifically about their collaborative apps or feedback at large about the segment – all of which are great inputs to plan customer-grounded future roadmap of product enhancements.
