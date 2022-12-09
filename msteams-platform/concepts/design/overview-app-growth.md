@@ -23,7 +23,7 @@ You’ll probably not be surprised to hear that not all apps are equal on any ma
 
 :::row:::
     :::column span="2":::
-        Needless to say, from the options above, the strategy you'll take will determine the resulting user value, the economic opportunity for you and how you can maximize the ROI from your investments. This document will assume you’ve taken a strategic view of your Teams investment by developing a “collaborative app” – one where the user is able to get designated “jobs” seamlessly done in the flow of their work with full context, without ever leaving Microsoft Teams. Since collaborative apps are best positioned to win new customer deals for you and upsell or cross-sell to your existing customers, that investment has the potential to deliver the highest net new economic opportunity for your business. Using the guidance in this document, you can grow your collaborative app on Teams, expand differentiated scenarios further, incorporate Teams-first/only use cases & devise a Teams app-led go-to-market model to build a growth flywheel for your business.
+        Needless to say, from the options above, the strategy you'll take will determine the resulting user value, the economic opportunity for you and how you can maximize the ROI from your investments. This document will assume you’ve taken a strategic view of your Teams investment by developing a “collaborative app” – one where the user is able to get designated “jobs” seamlessly done in the flow of their work with full context, without ever leaving Microsoft Teams. Since collaborative apps are best positioned to win new customer deals for you and upsell or cross-sell to your existing customers, that investment has the potential to deliver the highest net new economic opportunity for your business.
     :::column-end:::
     :::column span="":::
 
@@ -31,6 +31,8 @@ You’ll probably not be surprised to hear that not all apps are equal on any ma
 
     :::column-end:::
 :::row-end:::
+
+Using the guidance in this document, you can grow your collaborative app on Teams, expand differentiated scenarios further, incorporate Teams-first/only use cases & devise a Teams app-led go-to-market model to build a growth flywheel for your business.
 
 ## Options for growing your app: Understanding growth models
 
