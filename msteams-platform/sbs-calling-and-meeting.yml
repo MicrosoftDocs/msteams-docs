@@ -70,14 +70,12 @@ items:
     1. Go to [Azure portal](https://portal.azure.com/) using your personal Microsoft account.
     1. Select **Screenshot of Microsoft Preview with Azure Active Directory highlighted in red.**.
 
-    
         :::image type="content" source="./assets/images/calls-and-meetings/azure-active-directory.png" alt-text="Screenshot of Microsoft Azure Preview with Azure Active Directory highlighted in red.:::
 
     1. In the left pane, select **App registrations**.
     1. Select **New registration**.
 
-       :::image type="content" source="./assets/images/calls-and-meetings/azure-active-directory_1.png" alt-text="Screenshot of Microsoft App registrations with App registrations and + New registration highlighted in red.":::
-
+       :::image type="content" source="./assets/images/calls-and-meetings/azure-active-directory_1.png" alt-text="Screenshot of Microsoft App registrations with App registrations and New registration highlighted in red.":::
 
     **Register an application** window appears. Enter your application's registration information.
 
