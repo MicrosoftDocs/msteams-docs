@@ -89,7 +89,7 @@ See the following video to learn how to send proactive message from bots:
 
 <br>
 
-> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4NHyk>]
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4NHyk]
 <br>
 
 ### Understand who blocked, muted, or uninstalled a bot
@@ -182,7 +182,6 @@ The following code shows how to send proactive messages:
 # [C#](#tab/dotnet)
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.cloudadapterbase.continueconversationasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-cloudadapterbase-continueconversationasync(system-string-microsoft-bot-schema-activity-microsoft-bot-builder-botcallbackhandler-system-threading-cancellationtoken)&preserve-view=true)
-
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/graph-meeting-notification/csharp/MeetingNotification/Controllers/NotificationController.cs#L112)
 
 ```csharp
@@ -290,8 +289,7 @@ async messageAllMembersAsync(context) {
 
 # [Python](#tab/python)
 
-* [SDK reference](/python/api/botbuilder-core/botbuilder.core.botadapter?view=botbuilder-py-latest#botbuilder-core-botadapter-continue-conversation&preserve-view=true)
-
+* [SDK reference](/python/api/botbuilder-core/botbuilder.core.botframeworkadapter?view=botbuilder-py-latest#botbuilder-core-botframeworkadapter-create-conversation&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L200)
 
 ```python
