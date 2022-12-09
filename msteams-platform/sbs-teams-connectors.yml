@@ -81,7 +81,7 @@ items:
 
           :::image type="content" source="~/assets/images/sbs-connector/Global_1.png" alt-text="Screenshot of App setup policies with Global Org-wide default highlighted in red.":::
 
-    1.   Toggle **Upload custom apps** to **On** position.
+    1.   Turn on the **Upload custom apps** toggle .
 
           :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-toggleOn_1.png" alt-text="Screenshot of Global Org-wide default with Upload custom apps showing the toggle button on and highlighted in red. ":::
    
@@ -170,7 +170,7 @@ items:
   durationInMinutes: 5
   content: |
 
-    1. In your cloned repository, go to **csharp > TeamsToDoAppConnector > TeamsAppPackages.
+    1. In your cloned repository, go to **csharp** > **TeamsToDoAppConnector** > **TeamsAppPackages**.
 
     1. Create a .zip with the following files that are present in the **Manifest** folder: 
        * manifest.json
@@ -202,7 +202,7 @@ items:
 
     1. Select **Set up a connector**.
 
-    1. In the left panel, search **Teams ToDo Notification** connector in search bar and select **Configure**.
+    1. In the left panel, search **Teams ToDo** connector in search bar and select **Configure**.
 
        :::image type="content" source="~/assets/images/sbs-connector/configure_1.png" alt-text="Screenshot of Connectors for General channel in Demo team with TeamsToDo and Configure highlighted in red.":::
 
