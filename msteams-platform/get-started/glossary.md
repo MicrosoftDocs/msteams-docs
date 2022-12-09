@@ -39,9 +39,11 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | Bot Builder SDK | It is an open source SDK hosted on GitHub to help build dialogs within your Node.js- or C#-based bot. |
 | [Bot Emulator](../bots/how-to/debug/locally-with-an-ide.md#use-the-bot-emulator) | A desktop application that lets you test and debug bots, either locally or remotely. |
 | [Bot Framework](../bots/bot-features.md) | A rich SDK used to create bots using C#, Java, Python, and JavaScript. If you have a bot that is based on the Bot Framework, you can modify it to work in Teams. |
-| Bot handle | The Bot Handle is a unique identifier for your bot. You can choose a different Display Name for your bot in the Settings blade after bot creation. <br> **See also**: [SSO](#s), [Bot resource](#b), [Azure AD](#a) <br> For more information, see [Configure your app in Azure AD](../bots/how-to/authentication/bot-sso-register-aad.md). |
+| Bot handle | The Bot Handle is a unique identifier for your bot. A bot handle represents a bot's registration with the online Azure Bot Service. This registration is associated with an HTTP webhook endpoint and registrations with channels. <br> **See also**: [SSO](#s), [Bot resource](#b), [Azure AD](#a) <br> For more information, see [Configure your app in Azure AD](../bots/how-to/authentication/bot-sso-register-aad.md). |
 | Bot Framework Token Service | It is responsible for facilitating the use of the OAuth protocol with a wide variety of external services, storing tokens for a bot, channel, conversation, and user, and acquiring user tokens. <br> **See also**: [SSO](#s), [Access token](#a), [Identity token](#i) <br> For more information, see [Enable SSO for your app](../bots/how-to/authentication/bot-sso-overview.md) and [Bot Framework Token Service](/azure/bot-service/bot-builder-concept-authentication#about-the-bot-framework-token-service) |
+| Bot ID | A unique identifier of your bot app that is generated at the time you register your app in Azure AD. <br> **See also**:[Bot handle](#b) | 
 | Bot resource | The Azure Bot resource (bot resource) allows you to register your bot with Azure Bot Services and to connect your bot to channels. <br> [SSO](#s), [Azure AD](#a) <br> For more information, see [Configure your app in Azure AD](../bots/how-to/authentication/bot-sso-register-aad.md). |
+
 
 ## C
 
