@@ -11,7 +11,7 @@ Consider the following factors to localize your Microsoft Teams app:
 
 1. [Localize your AppSource listing](#localize-your-appsource-listing).
 1. [Localize strings in your app manifest](#localize-strings-in-your-app-manifest).
-1. [Handle localized text submissions from your users](#handle-localized-text-submissions-from-your-users) .
+1. [Handle localized text submissions from your users](#handle-localized-text-submissions-from-your-users).
 
 ## Localize your AppSource listing
 
@@ -158,3 +158,4 @@ If you provide localized versions of your application, the users respond with th
 ## See also
 
 * [Localize JSON schema reference](~/resources/schema/localization-schema.md)
+* [App manifest](../../resources/schema/manifest-schema.md)
