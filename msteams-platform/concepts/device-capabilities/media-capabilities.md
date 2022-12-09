@@ -399,7 +399,10 @@ To enable, follow the steps:
 
 ## See also
 
+* [Device capabilities](device-capabilities-overview.md)
 * [Integrate QR or barcode scanner capability in Teams](qr-barcode-scanner-capability.md)
 * [Integrate location capabilities in Teams](location-capability.md)
 * [Integrate People Picker](people-picker-capability.md)
 * [Requirements and considerations for application-hosted media bots](~/bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md)
+* [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
+* [Plan responsive tabs for Teams mobile](../design/plan-responsive-tabs-for-teams-mobile.md)

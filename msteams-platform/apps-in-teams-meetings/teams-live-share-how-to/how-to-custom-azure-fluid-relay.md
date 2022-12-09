@@ -28,6 +28,7 @@ When calling initializing `LiveShareClient`, you can define your own `AzureConne
 
 ```javascript
 import { LiveShareClient, LivePresence } from "@microsoft/live-share";
+import { LiveShareHost } from "@microsoft/teams-js";
 import { SharedMap } from "fluid-framework";
 import { AzureFunctionTokenProvider } from "@fluidframework/azure-client";
 
@@ -44,7 +45,8 @@ const options = {
   },
 };
 // Join the Fluid container
-const liveShare = new LiveShareClient(options);
+const host = LiveShareHost.create();
+const liveShare = new LiveShareClient(host, options);
 const schema = {
   initialObjects: {
     presence: LivePresence,
@@ -64,6 +66,7 @@ import {
   ILiveShareClientOptions,
   LivePresence,
 } from "@microsoft/live-share";
+import { LiveShareHost } from "@microsoft/teams-js";
 import { SharedMap } from "fluid-framework";
 import { AzureFunctionTokenProvider } from "@fluidframework/azure-client";
 
@@ -80,7 +83,8 @@ const options: ILiveShareClientOptions = {
   },
 };
 // Join the Fluid container
-const liveShare = new LiveShareClient(options);
+const host = LiveShareHost.create();
+const liveShare = new LiveShareClient(host, options);
 const schema = {
   initialObjects: {
     presence: LivePresence,

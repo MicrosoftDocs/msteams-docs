@@ -1,12 +1,12 @@
 ---
 title: Enable authentication using third-party OAuth provider
-description: Learn about Teams authentication flow in tabs using third party OAuth provider with Azure AD configuration and code samples.
+description: Learn about Teams authentication flow in tabs using third-party OAuth provider with Azure AD configuration and code samples.
 ms.topic: conceptual
 ms.localizationpriority: high
 ---
 # Enable authentication using third-party OAuth provider
 
-You can enable authentication in your tab app using third party OAuth Identity Providers (IdP). In this method, the app user identity is validated and granted access by an OAuth IdP, such as Azure AD, Google, Facebook, GitHub, or any other provider. You'll need to configure a trust relationship with the IdP, and your app users should also be registered with it.
+You can enable authentication in your tab app using third-party OAuth Identity Providers (IdP). In this method, the app user identity is validated and granted access by an OAuth IdP, such as Azure AD, Google, Facebook, GitHub, or any other provider. You'll need to configure a trust relationship with the IdP, and your app users should also be registered with it.
 
 > [!NOTE]
 > For authentication to work for your tab on mobile clients, you need to ensure that you're using at least 1.4.1 version of the Microsoft Teams JavaScript library.  
@@ -20,7 +20,7 @@ OAuth 2.0 is an open standard for authentication and authorization used by Micro
 
 For example, the authentication flow for tabs and bots using Node and the [OAuth 2.0 implicit grant type](https://oauth.net/2/grant-types/implicit/), see [initiate authentication flow for tabs](~/tabs/how-to/authentication/auth-tab-aad.md#initiate-authentication-flow).
 
-This section uses Azure AD as an example of a third party OAuth provider for enabling authentication in a tab app.
+This section uses Azure AD as an example of a third-party OAuth provider for enabling authentication in a tab app.
 
 > [!NOTE]
 > Before showing a **Login** button to the user and calling the `authentication.authenticate` API in response to selecting the button, you must wait for the TeamsJS initialization to complete. You can chain a `.then()` handler or `await` for the `app.initialize()` function to complete.
@@ -34,6 +34,7 @@ This section uses Azure AD as an example of a third party OAuth provider for ena
 Similar to other application auth flows in Teams, the start page must be on a domain that is in its `validDomains` list, and on the same domain as the post sign in redirect page.
 
     > [!NOTE]
+    >
     > The OAuth 2.0 implicit grant flow calls for a `state` parameter in the authentication request, which contains unique session data to prevent a [cross-site request forgery attack](https://en.wikipedia.org/wiki/Cross-site_request_forgery). The examples use a randomly-generated GUID for the `state` data.
 
 5. On the provider's site, the user sign in and grants access to the tab.
@@ -43,6 +44,7 @@ Similar to other application auth flows in Teams, the start page must be on a do
 9. The tab either displays configuration UI, refreshes, or reloads the tabs content, depending on where the user started from.
 
 > [!NOTE]
+>
 > If the application supports SAML SSO, then tab SSO generated JWT token cannot be used as it isn't supported.
 
 ## Treat tab context as hints
@@ -55,7 +57,7 @@ Sample code showing the tab authentication process:
 
 | **Sample name** | **Description** | **C#** | **Node.js** |
 |-----------------|-----------------|-------------|------------|
-| Teams tab authentication | Authentication process for tabs using Azure AD. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-sample/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-sample/nodejs) |
+| App complete authentication | The sample demos authentication in a bot, tab, and messaging extension with Single sign-on (SSO) and in Facebook using a username and password | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-auth/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-auth/nodejs) |
 
 ## See also
 
