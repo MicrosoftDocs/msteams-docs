@@ -253,7 +253,7 @@
   items:
   - name: Overview
     href: tabs/what-are-tabs.md
-    displayName: Webpages embedded in Microsoft Teams, declare custom tab in app manifest
+    displayName: Webpages embedded in Teams, declare custom tab in app manifest
   - name: Prerequisites
     href: tabs/how-to/tab-requirements.md
     displayName: clickjacking
