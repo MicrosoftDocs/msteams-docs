@@ -68,3 +68,10 @@ To configure details in app manifest:
 
 > [!div class="nextstepaction"]
 > [Create your app package](~/concepts/build-and-test/apps-package.md)
+
+## See also
+
+* [Distribute your Microsoft Teams app](apps-publish-overview.md)
+* [Bots](../../bots/what-are-bots.md)
+* [Tabs](../../tabs/what-are-tabs.md)
+* [Connectors](../../webhooks-and-connectors/what-are-webhooks-and-connectors.md#connectors)

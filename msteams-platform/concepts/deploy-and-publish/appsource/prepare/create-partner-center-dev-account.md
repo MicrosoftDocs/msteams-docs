@@ -209,3 +209,7 @@ The following resources can also assist:
 
 > [!div class="nextstepaction"]
 > [Prepare your store submission](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)
+
+## See also
+
+* [Publish your app to the Microsoft Teams store](https://learn.microsoft.com/microsoftteams/platform/concepts/deploy-and-publish/appsource/publish)
