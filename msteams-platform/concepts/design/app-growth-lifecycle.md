@@ -64,7 +64,18 @@ By now you're aware that the core focus at this stage is to announce the availab
 
 - **New social media posts announcing the Teams collaborative app**
 
-    You can generate interest from both existing and new customers as well as drive traffic to your app‘s landing page or directly to the app’s listing in Teams Marketplace through social media posts and paid campaigns executed on your social channels. Don’t forget to include media such as a video or an animated gif in your post to make it rich and interactive. Tag @M365 and @MicrosoftTeamsi in your posts as well as use the hashtags #Teamsapps, #MicrosoftTeams, #TeamsISV throughout the year in social media posts for your collaborative app to extend exposure and flag Microsoft’s social team for a potential retweet. Connect with the Microsoft 365 ISV Benefits Service Desk to seek guidance for your social media campaign, possible collaboration with Microsoft for execution and the success metrics you should measure for example, # of views or clicks on your social posts, # of visitors on your landing page, no. of MQLs generated on the landing page, # of visitors to the app’s listing in marketplace, # of Teams app installs post launch and so on
+    You can generate interest from both existing and new customers as well as drive traffic to your app‘s landing page or directly to the app’s listing in Teams Marketplace through social media posts and paid campaigns executed on your social channels. Don’t forget to include media such as a video or an animated gif in your post to make it rich and interactive. Tag @M365 and @MicrosoftTeamsi in your posts as well as use the hashtags #Teamsapps, #MicrosoftTeams, #TeamsISV throughout the year in social media posts for your collaborative app to extend exposure and flag Microsoft’s social team for a potential retweet.
+
+    :::row::
+        :::column span="":::
+            Connect with the Microsoft 365 ISV Benefits Service Desk to seek guidance for your social media campaign, possible collaboration with Microsoft for execution and the success metrics you should measure for example, # of views or clicks on your social posts, # of visitors on your landing page, no. of MQLs generated on the landing page, # of visitors to the app’s listing in marketplace, # of Teams app installs post launch and so on
+        :::column-end:::
+        :::column span=":::
+
+            :::image type="content" source="../../assets/images/app-fundamentals/social-media-posts.png" alt-text="Social media posts":::
+
+        :::column-end:::
+:::row-end:::
 
 - **Public blog post announcing the new Teams app**
 
@@ -79,7 +90,14 @@ By now you're aware that the core focus at this stage is to announce the availab
 
 - **Banners in web SaaS app to announce the new Teams app**
 
-    Include in-product CTAs prominently in your web SaaS product to let users know about your new or updated Teams collaborative app. You can leverage transient banners, notifications bar, what’s new notifications inside the SaaS product’s UI for all users or push notifications to relevant users such as those belonging to your customer organizations who use Microsoft 365. The banner or notification CTA can direct users to your app‘s landing page or directly to the app’s listing in Teams Marketplace.
+    :::row:::
+        :::column span="":::
+            Include in-product CTAs prominently in your web SaaS product to let users know about your new or updated Teams collaborative app. You can leverage transient banners, notifications bar, what’s new notifications inside the SaaS product’s UI for all users or push notifications to relevant users such as those belonging to your customer organizations who use Microsoft 365. The banner or notification CTA can direct users to your app‘s landing page or directly to the app’s listing in Teams Marketplace.
+        :::column-end:::
+        :::column span="":::
+            :::image type="content" source="../../assets/images/app-fundamentals/in-product-banner.png" alt-text="In-product banner":::
+        :::column-end:::
+    :::row-end:::
 
 - **Free and extended trials for new Teams users**
 
