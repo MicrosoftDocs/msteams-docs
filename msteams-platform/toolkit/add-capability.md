@@ -42,7 +42,7 @@ You can add capabilities by the following ways:
    1. Select **Teams Toolkit** from the activity bar.
    1. Select **Add features** under **DEVELOPMENT**.
 
-       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/select-feature123.png" alt-text="Add capabilities from Teams Toolkit":::
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/select-feature123_1.png" alt-text="Add capabilities from Teams Toolkit":::
 
       > [!NOTE]
       > After successfully adding the capabilities to your Teams app, you need to provision for each environment.
@@ -51,7 +51,7 @@ You can add capabilities by the following ways:
 
    1. Select **View** > **Command Palette...** or **Ctrl+Shift+P**.
 
-      :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add-capabilities-command-palette.png" alt-text="Add capabilities from command palatte":::
+      :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add-capabilities-command-palette_1.png" alt-text="Add capabilities from command palatte":::
 
    1. Enter **Teams: Add features**.
    1. Press **Enter**.
@@ -60,7 +60,7 @@ You can add capabilities by the following ways:
 
    1. In the pop-up window that appears, select the capability you need to add in your project.
 
-       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/notification-add-capabilities.png" alt-text="notification":::
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/notification-add-capabilities_1.png" alt-text="notification":::
 
 ### Use TeamsFx CLI
 
