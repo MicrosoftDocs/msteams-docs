@@ -329,7 +329,7 @@ To use the raise hand API, you must configure RSC permissions in the app manifes
 
 ### Enable the raise hand API in your app
 
-* Call the `registerRaiseHandStateChangeHandler` function.
+* Register the `registerRaiseHandStateChangeHandler` function.
 
 * Provide a callback that accepts a raiseHandState and an error object. Ensure to check for errors before you call raiseHandState.
 
