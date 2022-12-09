@@ -59,7 +59,7 @@ Use Delete messages-Bot framework's `DeleteActivity` method: [Update and delete
 <details>
 <summary>How can I test the validity of the card schema via code?</summary>
 
-You can test or validate the Adaptive Card schema using the **Adaptive cards editor(preview)** option in [Developer Portal > Tools](https://dev.teams.microsoft.com/tools).
+You can test or validate the Adaptive Card schema using the **Adaptive cards editor (preview)** option in [Developer Portal > Tools](https://dev.teams.microsoft.com/tools).
 </details>
 
 ## Live share
@@ -75,7 +75,8 @@ While most of you find it beneficial to use our free hosted service, there may s
 * Transmit sensitive data through the service that requires a custom security policy.
 * Develop features through Fluid Framework, for example, `SharedMap`, for your application outside of Teams.
 
-For more information, see [how to guide](/apps-in-teams-meetings/teams-live-share-how-to/how-to-custom-azure-fluid-relay) or visit the [Azure Fluid Relay documentation](/azure/azure-fluid-relay/).
+
+For more information, see [how to guide](apps-in-teams-meetings/teams-live-share-how-to/how-to-custom-azure-fluid-relay.md) or visit the [Azure Fluid Relay documentation](/azure/azure-fluid-relay/).
 <br>
 &nbsp;
 </details>
@@ -165,7 +166,7 @@ You can use the following Graph API [Get user mailbox settings](/graph/api/user-
 &nbsp;
 </details>
 <details>
-<summary>How can I deploy the code in Azure using Teams Toolkit, and use Graph API get a user profile photo?</summary>
+<summary>How can I deploy the code in Azure using Teams Toolkit, and use Graph API to get a user profile photo?</summary>
 
 For more information on Teams Toolkit, see [Create a new Teams project](toolkit/create-new-project.md) and [TeamsFx Library](toolkit/TeamsFx-CLI.md).
 <br>
@@ -205,7 +206,7 @@ Each team course instance must have an owner, and the synchronization sets the f
 <details>
 <summary>What should we do to remove Moodle login page when working from Teams? Can we force single sign-on (SSO)?</summary>
 
-The app users have multiple sign in options from the Moodle login page.
+The app users have multiple sign-in options from the Moodle login page.
 
 * To sign in exclusively using Microsoft 365 credentials, enable the **Force redirect** configuration settings for the **auth_oidc plugin**. If the service is enabled, the app user can see the Microsoft sign in page.
 * To sign in manually to the Moodle portal, see [Moodle](https://moodle.org/login/index.php).
@@ -290,11 +291,11 @@ If the **Client secret** has expired, then the app user needs to generate a new 
 &nbsp;
 </details>
 <details>
-<summary>How to change the teams instance that is linked to a course?</summary>
+<summary>How to change the Teams instance that is linked to a course?</summary>
 
-Administrators can change the teams instance associated with a course through the **Manage Teams Connections** page. Select **Connect** next to the course to be changed and select a teams instance. If you use course reset to archive a team, you can link it back to the previous team.
+Administrators can change the Teams instance associated with a course through the **Manage Teams Connections** page. Select **Connect** next to the course to be changed and select a Teams instance. If you use course reset to archive a team, you can link it back to the previous team.
 
-The following image shows the teams instance:
+The following image shows the Teams instance:
 
 :::image type="content" source="assets/images/MoodleInstructions/faq-8.png" alt-text="teams instance":::
 <br>
@@ -316,8 +317,9 @@ The following images show Toolbar icon after Toolbar configuration adjustment:
 
 For more information on editing Atto toolbar, see:
 
-* [Atto editor-ModdleDocs] // https://docs.moodle.org/311/en/Atto_editor //
-* [Atto editor-Icon mapping] // https://docs.moodle.org/311/en/Atto_editor#:~:text=in%20the%20editor.-,Atto%20editor%20toolbar,-Atto%20Row%201 //
+* [Atto editor-ModdleDocs](https://docs.moodle.org/311/en/Atto_editor)
+* [Atto editor-Icon mapping](https://docs.moodle.org/311/en/Atto_editor#:~:text=in%20the%20editor.-,Atto%20editor%20toolbar,-Atto%20Row%201)
+
 <br>
 &nbsp;
 </details>
@@ -333,7 +335,7 @@ However, you can access the invite and manually add participant names to the **R
 <details>
 <summary>Is there any support site where we can get more help on products and other issues?</summary>
 
-For support and help on the product and services issues or developer community help see, [Support and Feedback](/microsoftteams/platform/feedback.md).
+For support and help on the product and services issues or developer community help see, [Support and feedback](feedback.md).
 
 </details>
 
@@ -514,7 +516,8 @@ The following resources can also assist:
 
 You can open the authentication page in the task module when the user selects the button.
 
-You can use the [code sample](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/54.teams-task-module/bots/teams_task_module_bot.py#L70) for opening the task module on button click. You can replace the taskInfo.url with your auth page.
+You can use the [code sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/python) for opening the task module on button click. You can replace the taskInfo.url with your auth page.
+
 <br>
 &nbsp;
 </details>
