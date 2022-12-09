@@ -1,19 +1,19 @@
 ---
-title: Authentication flow in Adaptive Cards with Universal Actions
-description: In this module, learn about the authentication flow in Adaptive Cards Universal Actions.
+title: Add third party authentication to your Adaptive Cards Universal Actions
+description: In this module, learn how to add third party authentication to your Adaptive Cards Universal Actions.
 author: v-sdhakshina
 ms.topic: conceptual
 ms.localizationpriority: medium
 ---
 
-# Authentication flow in Adaptive Cards Universal Actions
+# Add third party authentication to your Adaptive Cards Universal Actions
 
-Universal Actions for Adaptive Cards bring the bot as the common backend for handling actions and introduces a new action type `Action.Execute`, which works across apps, such as Teams and Outlook.
+Universal Actions for Adaptive Cards bring the bot as the common backend for handling actions and introduce a new action type `Action.Execute`, which works across apps such as Teams and Outlook.
 
 > [!NOTE]
 > Support for Universal Actions for Adaptive Cards schema version v1.4 is only available for cards sent by bot.
 
-You can enable the following scenarios with `Action.Execute` on your Adaptive Cards Universal action:
+You can enable the following scenarios with `Action.Execute` on your Adaptive Cards Universal Action:
 
 * [Universal Actions](Overview.md#universal-actions)
 * [User Specific Views](Overview.md#user-specific-views)
@@ -22,18 +22,18 @@ You can enable the following scenarios with `Action.Execute` on your Adaptive Ca
 
 To learn more about Universal Actions for Adaptive Cards, see [Universal Actions for Adaptive Cards](Overview.md).
 
-If you want to add User Specific Views in instances where an Adaptive Card with Universal Action is shared in the context of a group chat or a channel, the user may need to be authenticated.
+If you want to add user specific views in instances where an Adaptive Card with Universal Action is shared, in the context of a group chat or a channel, the user may need to be authenticated.
 
-In the past, users who were chatting one-on-one with the bot had to wait while you sent them a separate auth card to authenticate. In order to communicate with the bot, user needs to switch from the group chat or channel as a result it disturbs the flow.
+In the past, users who were chatting one-on-one with the bot had to wait while you sent them a separate auth card to authenticate. In order to communicate with the bot, user needs to switch from the group chat or channel that disturbs the flow.
 
 ## Authentication flow in Action.Execute protocol
 
-Authentication flow for OAuth, within the `Action.Execute` protocol enables authentication within the context of the group chat or channel conversation where the Adaptive Card is shared.
+Authentication flow for OAuth, within the `Action.Execute` protocol, enables authentication within the context of the group chat or channel conversation where the Adaptive Card is shared.
 
 Bots can respond with login request in response to `Action.Execute` for:
 
-1. Adaptive Cards sent by bot in a one on one chat, group chat or a channel.
-1. Adaptive Cards sent by user via message extension app (backed by bot) in one on one chat, group chat or channel.
+1. Adaptive Cards sent by bot in a one-on-one chat, group chat or a channel.
+1. Adaptive Cards sent by user via message extension app (backed by bot) in one-on-one chat, group chat or channel.
 1. Adaptive cards present in compose or preview area while user is composing the message.
    * In compose area, refresh in Adaptive Card works and bot may want to use token to provide User Specific View to user before they send the card to the chat.
 
@@ -41,9 +41,9 @@ Bots can respond with login request in response to `Action.Execute` for:
 
 The OAuth or nominal Authentication steps for Adaptive Cards with Universal Actions are similar to bot in Teams.
 
-Ensure that you added authentication to your teams bot. To learn more about how to create an authentication-enabled bot, how to deploy the bot to Azure and associate it with an identity provider, and how to integrate the bot within Microsoft Teams, see [add authentication to your Teams bot](../../../bots/how-to/authentication/add-authentication.md)
+Ensure that you added authentication to your teams bot. To learn more about how to create an authentication-enabled bot, how to deploy the bot to Azure and associate it with an identity provider, and how to integrate the bot within Microsoft Teams, see [add authentication to your Teams bot](../../../bots/how-to/authentication/add-authentication.md).
 
-For a OAuth or nominal sign-on experience in which the user is presented with a sign-in button or link and the following is the authentication flow:
+For an OAuth or nominal sign-on experience in which the user is presented with a sign-in button or link, the following is the OAuth or nominal sign-on flow:
 
 :::image type="content" source="../../../assets/images/authentication/oauth-flow-ac.png" alt-text="Screenshot shows you the authentication flow for the Adaptive Cards with Universal Actions.":::
 
@@ -71,15 +71,15 @@ For a OAuth or nominal sign-on experience in which the user is presented with a 
     ```
 
     * Senders must include a value that adheres to the OAuthCard format.
-    * Senders must include a `connectionName`. Receivers may ignore login requests with an empty or missing `connectionName`.
-    * Senders must include either a `button` that has a non-empty buttons array.
+    * Senders must include a `connectionName`. Receivers may ignore sign in requests with an empty or missing `connectionName`.
+    * Senders must include a `button` that has a non-empty buttons array.
 
 1. Upon receiving this response, Teams client shows a **Sign-In** button in the card footer where user can select.
 
    :::image type="content" source="../../../assets/images/authentication/adaptive-card-universal-action/sign-in-button.png" alt-text="Screenshot shows the Sign-In button on the Adaptive card.":::
 
-1. The user selects on the sign-in link, which opens a browser window to the configured connection's identity provider's sign-on page. The final redirect lands on a Token Service page offering an authorization code value.
-1. Teams client creates and send the `adaptiveCard/action` Invoke Activity with `name`. The value includes the `state` field containing the authorization code:
+1. The user selects **Sign-In** button that opens a browser window to the configured connection's identity provider's sign-in page. The final redirect lands on a Token Service page offering an authorization code value.
+1. Teams client creates and sends the `adaptiveCard/action` Invoke Activity with `name`. The value includes the `state` field containing the authorization code:
 
     ```javascript
     {
@@ -106,7 +106,7 @@ For a OAuth or nominal sign-on experience in which the user is presented with a 
 
 1. The channel delivers this invoke to the bot, which uses the authentication code to finalize retrieving the token with the Token Service. The Token Service delivers the user's access token to the bot.
 
-   * Receivers may ignore the adaptiveCard/action invoke or reply with an error if there's a missing or empty state field.
+   * Receivers may ignore the `adaptiveCard/action` invoke or reply with an error if there's a missing or empty state field.
 
    If the value in the state field is incorrect, the bot returns an error to the Teams client as follows:
 
