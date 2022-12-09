@@ -88,6 +88,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | Term | Definition |
 | --- | --- |
 | [E5 developer account](../toolkit/tools-prerequisites.md#accounts-to-build-your-teams-app) | E5 developer subscription for building apps to extend Microsoft 365. It includes 25 user licenses, including the administrator, for development purposes only.  <br>**See also**: [Microsoft 365 account](#m) |
+| Endpoint address | It is the field in Developer Portal SSO configuration for a bot app. It's the endpoint where messages are sent to your bot . <br> **See also**: [Bot handle](#b), [Messaging endpoint](#m) [OAuth connection](#o), [SSO](#s) <br> For more information, see [Update app manifest for SSO and preview your app](../bots/how-to/authentication/bot-sso-manifest.md) |
 | [Entry point](../concepts/app-fundamentals-overview.md) | An access point, such as team, channel, and chat, for a Teams app where users can use your app. |
 | [Environment](../toolkit/teamsfx-multi-env.md) | A feature in Teams Toolkit that lets you create and use multiple development environments for your app project. There are two dev environments that Teams Toolkit creates by default, local environment and dev environment. <br>**See also**: [Local environment](#l); [Dev environment](#d) |
 
@@ -223,7 +224,8 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | [Teams workbench](../sbs-gs-spfx.yml) | A workbench in Visual Studio Code used at build for Teams apps created using SPFx and Teams Toolkit. <br>**See also**: [Workbench](#w); [Local workbench](#l) |
 | Tenant ID | The unique identifier of a tenant where you app is registered in Azure AD portal. Your app may be classified as a single-tenant or a multi-tenant app. <br> **See also**: [Single-tenant app](#s), [Multi-tenant apps](#m) |
 | Token exchange URL | It's the application ID URI that is used for exchanging token, and is configured while configuring the OAuth connection for bot resource. <br> **See also**: [Application ID URI](#u), [SSO](#s) <br> For more information, see [Configure your app in Azure AD](../bots/how-to/authentication/bot-sso-register-aad.md). |
-| TokenExchangeResource property | It's a property of OAuthCard Class that gets or sets the resource to try to perform token exchange with. Teams refreshes the token if the TokenExchangeResource property is populated on the card. <br> **See also**: [OAuth card](#o), [SSO](#s) <br> For more information, see [Add code to enable SSO in your bot app](../bots/how-to/authentication/bot-sso-code.md) and [Microsoft Bot Schema 4.0](/dotnet/api/microsoft.bot.schema.oauthcard) |
+| TokenExchangeResource property | It's a property of `OAuthCard` class that gets or sets the resource to try to perform token exchange with. Teams refreshes the token if the TokenExchangeResource property is populated on the card. <br> **See also**: [OAuth card](#o), [SSO](#s) <br> For more information, see [Add code to enable SSO in your bot app](../bots/how-to/authentication/bot-sso-code.md) and [Microsoft Bot Schema 4.0](/dotnet/api/microsoft.bot.schema.oauthcard) |
+| TeamsSSOTokenExchangeMiddleware | This middleware will attempt to exchange the token if the activity name is signin/tokenExchange, and it ensures only one exchange request is processed. <br> **See also**: [SSO](#s) <br> For more information, see [Add code to enable SSO in your bot app](../bots/how-to/authentication/bot-sso-code.md). |
 
 ## U
 
