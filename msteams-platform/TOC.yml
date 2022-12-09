@@ -805,7 +805,7 @@
   - name: Create deep links
     items:
     - name: Overview
-      href: concepts/build-and-test/share-to-teams-overview.md
+      href: concepts/build-and-test/deep-links.md
       displayName: Navigate within your app
     - name: Deep link to an application
       href: concepts/build-and-test/deep-link-application.md
