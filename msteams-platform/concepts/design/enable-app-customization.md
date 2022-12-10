@@ -24,7 +24,7 @@ Some possible uses of this feature are:
 * Changing the description to include language and guidance that is better understood by your organization's end-users.
 * Changing logo and logo outline to inspire confidence to the end-users to use the app since it seems provided by their organization.
 
-You can enable this feature by defining the app properties in the [`configurableProperties` section in the app manifest file](/microsoftteams/platform/resources/schema/manifest-schema#configurableproperties). You can define the property using [Developer Portal for Teams](https://dev.teams.microsoft.com/home) or do it manually. You can choose to  use the Developer Portal to edit the manifest of your app or you can edit it manually.
+You can enable this feature by defining the app properties in the [`configurableProperties` section in the app manifest file](/microsoftteams/platform/resources/schema/manifest-schema#configurableproperties). You can define the property using [Developer Portal for Teams](https://dev.teams.microsoft.com/home) or do it manually. You can choose to use the Developer Portal to edit the manifest of your app or you can edit it manually.
 
 :::image type="content" source="../../assets/images/dev-portal-app-customization-settings.png" alt-text="Screenshot shows the option in Teams Developer Portal to enable app customization feature and select specific metadata fields that developers allow admins to customize.":::
 
