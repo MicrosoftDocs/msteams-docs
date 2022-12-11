@@ -55,5 +55,4 @@ A task module includes the following as shown in the previous image:
 * [Cards and task modules](cards-and-task-modules.md)
 * [Cards](~/task-modules-and-cards/what-are-cards.md)
 * [Adaptive Cards overflow menu](~/task-modules-and-cards/cards/cards-format.md#adaptive-cards-overflow-menu)
-* [Cards](what-are-cards.md)
 * [Instrumenting for Teams app specific analytics](../concepts/design/overview-analytics.md#instrumenting-for-teams-app-specific-analytics)

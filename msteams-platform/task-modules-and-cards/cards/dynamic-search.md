@@ -94,7 +94,6 @@ The following properties are the new additions to the [`Input.ChoiceSet`](https:
 
 The example payload which contains static and dynamic typeahead search with single and multi select options as follows:
 
-
 ```json
 {
   "type": "AdaptiveCard",
@@ -415,5 +414,6 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
 
 ## See also
 
+* [Cards and task modules](cards-and-task-modules.md)
 * [Cards and task modules](../cards-and-task-modules.md)
 * [Universal Actions for Adaptive Cards](Universal-actions-for-adaptive-cards/Overview.md)
