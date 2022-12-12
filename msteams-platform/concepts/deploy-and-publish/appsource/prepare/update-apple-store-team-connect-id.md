@@ -33,5 +33,5 @@ To get Apple App Store Connect Team ID from Apple Developer portal, follow these
 
 ## See also
 
-* [Publish your app to the Microsoft Teams store](https://learn.microsoft.com/microsoftteams/platform/concepts/deploy-and-publish/appsource/publish)
+* [Publish your app to the Microsoft Teams store](../publish.md)
 * [Resolve issues if your Microsoft Teams store submission fails](~/concepts/deploy-and-publish/appsource/resolve-submission-issues.md)

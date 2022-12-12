@@ -1557,7 +1557,7 @@ After an internal Microsoft review, if the compliance demonstration is satisfact
 
 ## See also
 
-* [Publish your app to the Microsoft Teams store](https://learn.microsoft.com/microsoftteams/platform/concepts/deploy-and-publish/appsource/publish)
+* [Publish your app to the Microsoft Teams store](../publish.md)
 * [Distribute your app](~/concepts/deploy-and-publish/apps-publish-overview.md)
 * [Prepare your store submission](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)
 * [Test and debug your app](~/concepts/build-and-test/debug.md)

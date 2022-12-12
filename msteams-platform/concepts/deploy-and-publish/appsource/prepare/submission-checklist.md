@@ -236,6 +236,6 @@ Partner Center supports [localized store listings](/office/dev/store/prepare-loc
 
 ## See also
 
-* [Publish your app to the Microsoft Teams store](https://learn.microsoft.com/microsoftteams/platform/concepts/deploy-and-publish/appsource/publish)
+* [Publish your app to the Microsoft Teams store](../publish.md)
 * [Prepare your Microsoft 365 tenant](../../../build-and-test/prepare-your-o365-tenant.md)
 * [Resolve issues if your Microsoft Teams store submission fails](~/concepts/deploy-and-publish/appsource/resolve-submission-issues.md)
