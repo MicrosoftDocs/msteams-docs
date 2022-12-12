@@ -114,3 +114,4 @@ For more information, see [roles in a Teams meeting](https://support.microsoft.c
 * [Enhanced collaboration with Live Share SDK](teams-live-share-overview.md)
 * [Video filters for meeting apps](video-filters-for-meeting-apps.md)
 * [Custom Together Mode scenes](~/apps-in-teams-meetings/teams-together-mode.md)
+* [Instrumenting for Teams app specific analytics](../concepts/design/overview-analytics.md#instrumenting-for-teams-app-specific-analytics)
