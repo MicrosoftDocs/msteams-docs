@@ -643,7 +643,7 @@ Listen to your customers to understand their scenarios before implementing role 
 
 ## See also
 
-- [Teams apps in meetings](teams-apps-in-meetings.md)
+- [Apps for Teams meetings](teams-apps-in-meetings.md)
 - [GitHub repository](https://github.com/microsoft/live-share-sdk)
 - [Resource-specific consent](../graph-api/rsc/resource-specific-consent.md)
 - [Live Share SDK reference docs](/javascript/api/@microsoft/live-share/)

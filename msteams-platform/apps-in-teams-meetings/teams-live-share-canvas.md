@@ -457,7 +457,7 @@ Both the scenarios work well because the content can be viewed the same on all d
 
 ## See also
 
-- [Teams apps in meetings](teams-apps-in-meetings.md)
+- [Apps for Teams meetings](teams-apps-in-meetings.md)
 - [Live Share SDK FAQ](teams-live-share-faq.md)
 - [Live Share SDK reference docs](/javascript/api/@microsoft/live-share/)
 - [Live Share Canvas SDK reference docs](/javascript/api/@microsoft/live-share-canvas/)

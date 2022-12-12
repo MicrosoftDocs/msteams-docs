@@ -128,7 +128,7 @@ Submit issues and feature requests to the SDK repository for [Live Share SDK](ht
 
 ## See also
 
-* [Teams apps in meetings](teams-apps-in-meetings.md)
+* [Apps for Teams meetings](teams-apps-in-meetings.md)
 * [GitHub repository](https://github.com/microsoft/live-share-sdk)
 * [Live Share SDK reference docs](/javascript/api/@microsoft/live-share/)
 * [Live Share Media SDK reference docs](/javascript/api/@microsoft/live-share-media/)

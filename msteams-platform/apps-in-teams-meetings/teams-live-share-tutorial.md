@@ -354,7 +354,7 @@ After you're ready to deploy your code, you can use [Teams Toolkit](../toolkit/p
 
 ## See also
 
-- [Teams apps in meetings](teams-apps-in-meetings.md)
+- [Apps for Teams meetings](teams-apps-in-meetings.md)d)
 - [GitHub repository](https://github.com/microsoft/live-share-sdk)
 - [Live Share SDK reference docs](/javascript/api/@microsoft/live-share/)
 - [Live Share Media SDK reference docs](/javascript/api/@microsoft/live-share-media/)

@@ -246,5 +246,6 @@ To share the entire app to stage, in the app manifest, you must configure `meeti
 
 ## See also
 
+* [Apps for Teams meetings](teams-apps-in-meetings.md)
 * [Share to Teams from web apps](share-to-teams-from-web-apps.md)
 * [Share to Teams from personal app or tab](share-to-teams-from-personal-app-or-tab.md)

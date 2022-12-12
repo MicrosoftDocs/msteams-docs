@@ -27,7 +27,6 @@ To get started, install:
 
 ## Build and run the Dice Roller app
 
-
 1. Go to the [Dice Roller](https://github.com/microsoft/live-share-sdk/tree/main/samples/javascript/01.dice-roller) sample app.
 
 1. Clone the [Live Share SDK](https://github.com/microsoft/live-share-sdk) repository to test the sample app:
@@ -73,7 +72,7 @@ To get started, install:
 
 ## See also
 
-* [Teams apps in meetings](teams-apps-in-meetings.md)
+* [Apps for Teams meetings](teams-apps-in-meetings.md)
 * [GitHub repository](https://github.com/microsoft/live-share-sdk)
 * [Live Share SDK reference docs](/javascript/api/@microsoft/live-share/)
 * [Live Share Media SDK reference docs](/javascript/api/@microsoft/live-share-media/)

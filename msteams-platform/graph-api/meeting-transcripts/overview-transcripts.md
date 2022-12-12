@@ -56,4 +56,3 @@ For more information about how your app can know when the meetings ends, see [su
 
 - [Apps for Teams meetings and calls](../../apps-in-teams-meetings/teams-apps-in-meetings.md)
 - [Meeting app APIs](../../apps-in-teams-meetings/meeting-apps-apis.md)
--
