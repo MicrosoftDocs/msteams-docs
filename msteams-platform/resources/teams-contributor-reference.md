@@ -67,7 +67,7 @@ Code samples play an important role to use APIs and SDKs effectively. Well prese
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Get Microsoft Learn updates and the latest announcements](/teamblog)
+> [Troubleshoot your Microsoft Teams app](troubleshoot.md)
 
 ## See also
 
@@ -77,3 +77,4 @@ Code samples play an important role to use APIs and SDKs effectively. Well prese
 * [Cutting edge: source code readability tips](/archive/msdn-magazine/2014/october/cutting-edge-source-code-readability-tips)
 * [Teams documentation](/microsoftteams/platform/overview)
 * [GitHub](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform)
+* [Get Microsoft Learn updates and the latest announcements](/teamblog)

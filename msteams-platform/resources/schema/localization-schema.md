@@ -57,5 +57,5 @@ The schema defines the following properties:
 
 ## See also
 
-[Localize your app](~/concepts/build-and-test/apps-localization.md)
-[App manifest](manifest-schema.md)
+* [Localize your app](~/concepts/build-and-test/apps-localization.md)
+* [App manifest](manifest-schema.md)
