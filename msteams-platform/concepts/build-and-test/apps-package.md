@@ -107,5 +107,5 @@ Choose how you plan to distribute your app:
 ## See also
 
 * [Distribute your Microsoft Teams app](../deploy-and-publish/apps-publish-overview.md)
-* [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
 * [Manage your apps with the Developer Portal for Microsoft Teams](~/concepts/build-and-test/teams-developer-portal.md)
+* [Understand the Microsoft Teams app structure](../design/app-structure.md)

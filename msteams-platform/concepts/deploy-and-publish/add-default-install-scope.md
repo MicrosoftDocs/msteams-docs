@@ -23,7 +23,7 @@ If your app's primary capability is a bot, you can also make the bot the default
 
 ## Configure your app's default install scope
 
-Configure the default install scope for your app. You can set only one scope at a time.
+Configure the default install scope for your app. You can set only one scope at a time. For more information, see the [app manifest schema](~/resources/schema/manifest-schema.md).
 
 To configure the default install scope in your app manifest:
 
@@ -33,9 +33,6 @@ To configure the default install scope in your app manifest:
     ```json
     "defaultInstallScope": "meetings",
     ```
-
-> [!NOTE]
-> For more information, see the [app manifest schema](~/resources/schema/manifest-schema.md).
 
 ## Configure the default capability for shared scopes
 
@@ -61,9 +58,6 @@ To configure details in app manifest:
     }
     ```
 
-> [!NOTE]
-> For more information, see the [app manifest schema](~/resources/schema/manifest-schema.md).
-
 ## Next step
 
 > [!div class="nextstepaction"]
@@ -72,6 +66,6 @@ To configure details in app manifest:
 ## See also
 
 * [Distribute your Microsoft Teams app](apps-publish-overview.md)
-* [Bots](../../bots/what-are-bots.md)
-* [Tabs](../../tabs/what-are-tabs.md)
-* [Connectors](../../webhooks-and-connectors/what-are-webhooks-and-connectors.md#connectors)
+* [Build bots for Teams](../../bots/what-are-bots.md)
+* [Build tabs for Teams](../../tabs/what-are-tabs.md)
+* [Build connectors for Teams](../../webhooks-and-connectors/what-are-webhooks-and-connectors.md#connectors)

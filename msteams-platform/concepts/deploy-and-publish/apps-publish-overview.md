@@ -15,7 +15,7 @@ You can provide your Microsoft Teams app to an individual, team, organization, o
 
 You can configure default install options. For example, if your app's primary capability is a bot, you can make the bot the default capability when a user installs your app to a team.
 
-## Create your app package
+## Create Teams app package
 
 To distribute your Teams app, you must have a valid app package.  An app package is a zip file that contains an **app manifest** and **app icons**.
 
@@ -54,4 +54,5 @@ For more information, see [publish to the Teams store](~/concepts/deploy-and-pub
 
 ## See also
 
-[Microsoft 365 App Compliance Program](/microsoft-365-app-certification/overview)
+* [Microsoft 365 App Compliance Program](/microsoft-365-app-certification/overview)
+* [Create Teams app package](../build-and-test/apps-package.md)
