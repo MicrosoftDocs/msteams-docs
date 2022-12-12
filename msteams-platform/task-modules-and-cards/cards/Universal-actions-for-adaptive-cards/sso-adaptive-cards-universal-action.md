@@ -1,12 +1,12 @@
 ---
-title: Enable SSO for your Adaptive Cards Universal Actions
+title: Add code to enable SSO
 description: In this module, learn about how to enable SSO for your Adaptive Cards Universal Actions.
 author: v-sdhakshina
 ms.topic: conceptual
 ms.localizationpriority: medium
 ---
 
-# Enable SSO for your Adaptive Cards Universal Actions
+# Add code to enable SSO
 
 Authentication steps for SSO are similar to that of a bot in Teams. Following are the steps to achieve SSO in Adaptive Cards Universal Action:
 
@@ -15,13 +15,15 @@ Authentication steps for SSO are similar to that of a bot in Teams. Following ar
 
 ## Prerequisites
 
-1. Before you add code to enable SSO, ensure that you've configured your app and bot resource in Azure AD portal. For more information, see [configured your app and bot resource in Azure AD portal](../../../bots/how-to/authentication/bot-sso-register-aad.md).
-1. After you configure the client secret and OAuth connection setting for the app in Azure AD, you must configure the code with development environment variables. For more information, see [Update development environment variables](../../../bots/how-to/authentication/bot-sso-code.md#update-development-environment-variables).
+> [!NOTE]
+> Before you add code to enable SSO, ensure that you've configured your app and bot resource in Azure AD portal. For more information, see [configured your app and bot resource in Azure AD portal](../../../bots/how-to/authentication/bot-sso-register-aad.md).
+
+After you configure the client secret and OAuth connection setting for the app in Azure AD, you must configure the code with development environment variables. For more information, see [update development environment variables](../../../bots/how-to/authentication/bot-sso-code.md#update-development-environment-variables).
 
 ## Add code to handle an access token
 
 > [!NOTE]
-> Ensure that you added the code to handle access token. For more information, see [Add code to handle an access token](../../../bots/how-to/authentication/bot-sso-code.md#add-code-to-handle-an-access-token).
+> Ensure that you added the code to handle access token for your bot. For more information, see [add code to handle an access token](../../../bots/how-to/authentication/bot-sso-code.md#add-code-to-handle-an-access-token).
 
 If there's a cached token, the bot can use the same token. If there's no token available, the bot creates an OAuthCard and places it in an invoke response with the values below, which includes a `tokenExchangeResource`:
 
@@ -52,7 +54,7 @@ If there's a cached token, the bot can use the same token. If there's no token a
 Senders must include a `tokenExchangeResource` to designate a SSO operation.
 
 > [!NOTE]
-> Teams client will trigger the nominal sign-in or OAuth flow when SSO fails. It is highly recommended that you provide sign in URL in the above response so that OAuth flow works.
+> Teams client triggers the nominal sign-in or OAuth flow when SSO fails. It is highly recommended that you provide sign in URL in the above response so that OAuth flow works.
 
 ## Consent dialog for getting access token
 
