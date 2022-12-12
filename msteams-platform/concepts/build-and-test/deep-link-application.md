@@ -9,52 +9,20 @@ ms.localizationpriority: high
 
 # Deep link to an application
 
-Create a deep link for the app after the app is listed in the Teams store. To create a link to launch Teams, append the app ID to the following URL: `https://teams.microsoft.com/l/app/<your-app-id>`. A dialog box appears to install or open the app.
+Create a deep link for the app after the app is listed in the Teams store. To create a link to launch Teams, append the app ID to the URL, `https://teams.microsoft.com/l/app/<your-app-id>`. A dialog box appears to install or open the app.
 
 > [!NOTE]
 > If your app has been approved for mobile platform, you can deep link to an app on mobile. Apple App Store Connect Team ID is required additionally for the deep link to work on Teams-iOS. For more information, see [how to update Apple App Store Connect Team ID](../deploy-and-publish/appsource/prepare/update-apple-store-team-connect-id.md).
 
 ## Open the application profile dialog
 
-You can open an app install dialog from your Teams app. You can also install that app in other contexts.
+You can open an app install dialog from your Teams app and also install the app in other contexts. Use the following deep link format to open an app install dialog from your Teams:
 
-Use this deep link format open an app install dialog from your Teams app:
+`https://teams.microsoft.com/l/app/<your-app-id>`
 
-`https://teams.microsoft.com/l/app/f46ad259-0fe5-4f12-872d-c737b174bcb4`
+Where `<your-app-id>` is the application ID, such as `f46ad259-0fe5-4f12-872d-c737b174bcb4`.
 
-Query parameters:
-
-* `application id`: For eaxmple, `f46ad259-0fe5-4f12-872d-c737b174bcb4`.
-
-Applications can use the Teams Java Script SDK 2.0 to open the dialog without manually generating the deep link.
-
-# [TeamsJS v2](#tab/teamsjs-v2)
-
-```javascript
-// Open an app install dialog from your tab
-if(appInstallDialog.isSupported()) {
-    const dialogPromise = appInstallDialog.openAppInstallDialog({ appId: <appId>});
-    dialogPromise.
-      then((result) => {/*Successful operation*/}).
-      catch((error) => {/*Unsuccessful operation*/});
-}
-else { /* handle case where capability isn't supported */ }
-```
-
-For more information about the install dialog, see the [appInstallDialog.openAppInstallDialog()](/javascript/api/@microsoft/teams-js/appinstalldialog?view=msteams-client-js-latest#@microsoft-teams-js-appinstalldialog-openappinstalldialog&preserve-view=true) function in the API reference documentation.
-
-# [TeamsJS v1](#tab/teamsjs-v1)
-
-```javascript
-// Open an app install dialog from your tab
-microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/app/f46ad259-0fe5-4f12-872d-c737b174bcb4");
-```
-
----
-
-### Open an app install dialog
-
-You can open an app install dialog from your Teams app, as shown in the following code.
+Applications can use the Teams Java Script SDK to open the dialog without manually generating the deep link. Following is an example to open the app install dialog using Teams Java Script SDK:
 
 # [TeamsJS v2](#tab/teamsjs-v2)
 
