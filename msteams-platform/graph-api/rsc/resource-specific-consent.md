@@ -339,7 +339,7 @@ If you're a global admin, you can review, and grant consent to apps that request
 1. [Obtain an access token from the identity platform](#obtain-an-access-token-from-the-microsoft-identity-platform).
 1. [Update your Teams app manifest](#update-your-teams-app-manifest).
 1. [Install your app directly in Teams](#sideload-your-app-in-teams).
-1. [Check your app for added RSC permissions](#check-your-app-for-added-rsc-permissions).
+1. [Check the RSC permissions granted to a specific resource](#check-the-rsc-permissions-granted-to-a-specific-resource).
     1. Check your app for added RSC permissions in a team.
     1. Check your app for added RSC permissions in a chat.
 
@@ -387,7 +387,7 @@ The default value of the property `isChatResourceSpecificConsentEnabled` is base
 
 </details>
 
-## List of RSC permissions granted to a specific resource
+## Check the RSC permissions granted to a specific resource
 
 > [!IMPORTANT]
 > The RSC permissions are not attributed to a user. Calls are made with app permissions, not user delegated permissions. The app can be allowed to perform actions that the user cannot, such as deleting a tab. You must review the team owner's or chat owner's intent for your use before making RSC API calls. For more information, see [Microsoft Teams API overview](/graph/teams-concept-overview).
