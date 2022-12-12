@@ -1,7 +1,7 @@
 ---
 title: Debug background processes
 author: surbhigupta
-description: In this module how Visual studio code and Teams Toolkit work during local debug process, also how to register and configure your Teams app
+description: In this module, learn how Visual studio code and Teams Toolkit work during local debug process, and how to register and configure your Teams app.
 ms.author: v-amprasad
 ms.localizationpriority: high
 ms.topic: overview
@@ -50,7 +50,7 @@ Teams Toolkit checks the following prerequisites during the debug process:
 
 * Development certificate, if the development certificate for localhost isn't installed for tab in **Windows** or **MacOS**, then Teams Toolkit prompts you to install it.
 * Azure Functions binding extensions defined in `api/extensions.csproj`, if Azure Functions binding extensions isn't installed, then Teams Toolkit installs Azure Functions binding extensions.
-* NPM packages, applicable for tab app, bot app, message extension app, and Azure Functions. If NPM packages aren't installed, then Teams Toolkit installs all NPM packages.
+* NPM packages, applicable for tab app, bot app, message extension, and Azure Functions. If NPM packages aren't installed, then Teams Toolkit installs all NPM packages.
 * Bot and message extension, Teams Toolkit starts Ngrok to create an HTTP tunnel for bot and message extension.
 * Ports available, if tab, bot, message extension, and Azure Functions ports are unavailable, the local debug terminates.
 
@@ -93,7 +93,7 @@ Use the following .NET Core versions:
 > [!NOTE]
 > If the development certificate for localhost isn't installed for tab in Windows or MacOS, the Teams Toolkit prompts you to install it.</br> -->
 
-When you select **Start Debugging (F5)**, the Teams Toolkit output channel displays the progress and result after checking the prerequisites.
+When you select **Start Debugging (F5)**, Teams Toolkit output channel displays the progress and result after checking the prerequisites.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/prerequisites-debugcheck1.png" alt-text="Prerequisites check summary" lightbox="../assets/images/teams-toolkit-v2/debug/prerequisites-debugcheck1.png":::
 
@@ -143,7 +143,7 @@ In the set-up process, Teams Toolkit prepares the following registrations and co
 
 ### Registers and configures bot
 
-For tab app or message extension app:
+For tab app or message extension:
 
 1. Registers an Azure AD application.
 
