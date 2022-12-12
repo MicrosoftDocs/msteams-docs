@@ -832,7 +832,7 @@ Specify meeting extension definition. For more information, see [custom Together
 **Optional** — object
 
 > [!NOTE]
-> If you set the `manifestVersion` property to 1.12, the authorization property is incompatible with the older versions (version 1.11 or earlier) of the manifest. Authorization is supported for manifest version 1.12.
+> Authorization is only supported for manifest version 1.12 or later.
 
 Specify and consolidate authorization related information for the app.
 
@@ -855,7 +855,7 @@ Specify and consolidate authorization related information for the app.
 
 #### Resource-specific application permissions
 
-Application permissions allow the app to access data without a signed-in user. For information on application permissions, see [Resource Specific Consent for MS Graph and MS BotSDK](../../graph-api/rsc/resource-specific-consent.md).
+Application permissions allow the app to access data without a signed-in user. For information on application permissions, see [Resource Specific Consent for Microsoft Graph and Microsoft BotSDK](../../graph-api/rsc/resource-specific-consent.md).
 
 #### Resource-specific delegated permissions
 
