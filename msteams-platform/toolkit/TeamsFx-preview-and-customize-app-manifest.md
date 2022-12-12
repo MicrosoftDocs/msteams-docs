@@ -78,7 +78,7 @@ The following steps help to preview local manifest file by using **Zip Teams met
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-env1.png" alt-text="Screenshot is an example of showing the selection of local in the environment.":::
 
-Following image is a preview local:
+Following is a preview local image:
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/preview-23.png" alt-text="Screenshot is an example of showing the preview of local." lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/preview-23.png":::
 
@@ -86,7 +86,7 @@ Following image is a preview local:
 
 To preview manifest file using Visual Studio Code:
 
-* Select **Provision in the cloud** under **DEVELOPMENT** in Teams Toolkit extension.
+* Select **Provision in the cloud** under **DEPLOYMENT** in Teams Toolkit extension.
   
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/provision.png" alt-text="Screenshot is an example of showing the selection of provision in the cloud resource.":::
 
@@ -195,13 +195,13 @@ Teams Toolkit consists of the following manifest template files under `manifest.
 * `manifest.template.json`
 * `templates/appPackage`
 
-During the local debug or provision, Teams Toolkit loads manifest from `manifest.template.json`, with the configurations from `state.{env}.json`, `config.{env}.json`, and creates Teams app in [Developer Portal](https://dev.teams.microsoft.com/apps).
+During the local debug or provision, Teams Toolkit loads manifest from `manifest.template.json` with the configurations from `state.{env}.json`, `config.{env}.json`, and creates Teams app in [Developer Portal](https://dev.teams.microsoft.com/apps).
 
 ### Supported placeholders in manifest.template.json
 
 The following list provides supported placeholders in `manifest.template.json`:
 
-* `{{state.xx}}` is pre-defined placeholder and it's value is resolved by Teams Toolkit, defined in `state.{env}.json`. Ensure not to modify the values in `state.{env}.json`
+* `{{state.xx}}` is pre-defined placeholder, and it's value is resolved by Teams Toolkit defined in `state.{env}.json`. Ensure not to modify the values in `state.{env}.json`
 * `{{config.manifest.xx}}` is a customized placeholder and it's value is resolved from `config.{env}.json`
 
 **To add customized parameter**
@@ -222,7 +222,7 @@ The following list provides supported placeholders in `manifest.template.json`:
 
 ### Validate manifest
 
-During operations such as, **Zip Teams metadata package**, Teams Toolkit validates the manifest against its schema. The following list provides different ways to validate manifest:
+During operations such as **Zip Teams metadata package**, Teams Toolkit validates the manifest against its schema. The following list provides different ways to validate manifest:
 
 * In Visual Studio Code, trigger `Teams: Validate manifest file` from command palette:
 
@@ -273,7 +273,7 @@ In the manifest template, select **Project** > **Teams Toolkit** > **Open Manife
 
 There are two types of placeholders in `manifest.template.json`:
 
-* `{{state.xx}}` is pre-defined placeholder, whose value is resolved by Teams Toolkit, defined in `state.{env}.json`. It's recommended not to modify the values in `state.{env}.json`.
+* `{{state.xx}}` is pre-defined placeholder, whose value is resolved by Teams Toolkit defined in `state.{env}.json`. Its recommended not to modify the values in `state.{env}.json`.
 * `{{config.manifest.xx}}` is customized placeholder, whose value is resolved from `config.{env}.json`.
 
 You can add a customized parameter by:
@@ -281,7 +281,7 @@ You can add a customized parameter by:
 * Adding a placeholder in `manifest.template.json` with pattern: `{{config.manifest.xx}}`.
 * Adding a config value in `config.{env}.json`.
 
-    ```
+    ```JSON
         {
             "manifest": {
             "KEY": "VALUE"
@@ -293,11 +293,11 @@ You can add a customized parameter by:
 
 You can preview values in app manifest in two ways:
 
-* When you hover over the placeholder in `manifest.template.json`, then you can see the values for **dev** and **local** environment.
+* When you hover over the placeholder in `manifest.template.json`, you can see the values for **dev** and **local** environment.
 
    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-hover-placeholder1.png" alt-text="Screenshot is an example showing when you hover over placeholder, can view the values for dev and local environment." lightbox="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-hover-placeholder1.png":::
 
-* You can also hover over the key besides each placeholder in `manifest.template.json`, and you can see the same values for **dev** and **local** environment.
+* You can also hover over the key besides each placeholder in `manifest.template.json`, where you can see the same values for **dev** and **local** environment.
 
    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-hover-key-placeholder.png" alt-text="Screenshot is an example showing when you hover over key beside placeholder can view the same values for dev and local environment." lightbox="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-hover-key-placeholder.png":::
 
