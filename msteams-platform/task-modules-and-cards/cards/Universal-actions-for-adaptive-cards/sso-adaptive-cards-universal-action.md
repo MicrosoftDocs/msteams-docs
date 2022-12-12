@@ -25,7 +25,7 @@ After you configure the client secret and OAuth connection setting for the app i
 > [!NOTE]
 > Ensure that you added the code to handle access token for your bot. For more information, see [add code to handle an access token](../../../bots/how-to/authentication/bot-sso-code.md#add-code-to-handle-an-access-token).
 
-If there's a cached token, the bot can use the same token. If there's no token available, the bot creates an OAuthCard and places it in an invoke response with the values below, which includes a `tokenExchangeResource`:
+If there's a cached token, the bot uses the same token. If there's no token available, the bot creates an OAuthCard and places it in an invoke response with the values below, which includes a `tokenExchangeResource`:
 
 ```JSON
 {
@@ -55,6 +55,12 @@ Senders must include a `tokenExchangeResource` to designate a SSO operation.
 
 > [!NOTE]
 > Teams client triggers the nominal sign-in or OAuth flow when SSO fails. It is highly recommended that you provide sign in URL in the above response so that OAuth flow works.
+
+This response is delivered through the channel to the client, which uses the `tokenExchangeResource` value and the client token to obtain an on-behalf-of token or exchangeable token from the Azure AD.
+
+* Teams clients ignore the `tokenExchangeResource` value for any reason, including invalid values, errors retrieving exchangeable tokens, or not supporting the Azure AD.
+
+* Clients that ignore the `tokenExchangeResource` should use the nominal sign-in flow.
 
 ## Consent dialog for getting access token
 
@@ -98,18 +104,18 @@ The following are the steps to receive token:
 
     * Senders must include the `authentication` field with a token exchange resource.
 
-1. The channel delivers this invoke to the bot, which uses the token to finalize the token exchange process with the Token Service and identity provider. The Token Service delivers the user's access token to the bot.
-   * Receivers may ignore the authentication if the value is incorrect.
+1. The channel delivers this invoke to the bot, which uses the token to finalize the token exchange process with the Token Service and Azure AD. The Token Service delivers the user's access token to the bot.
+   * Receivers ignore the authentication if the value is incorrect.
    * Receivers that experience an error performing token exchange must respond with an error or a second login request that doesn't include SSO information.
-   * If the value in the `state` field is incorrect, the bot can return an error to the client as follows:
+   * If the value in the `state` field is incorrect, the bot returns an error to the client as follows:
 
-    ```javascript
-       {
-        "statusCode": 412,
-        "type": "application/vnd.microsoft.error.preconditionFailed",
-        "value": { ... error ... }
-        }
-    ```
+        ```javascript
+           {
+            "statusCode": 412,
+            "type": "application/vnd.microsoft.error.preconditionFailed",
+            "value": { ... error ... }
+            }
+        ```
 
 1. The bot uses the access token on behalf of the user to perform its actions.
 1. The bot returns a non-error response to the client, either a card or a message.
