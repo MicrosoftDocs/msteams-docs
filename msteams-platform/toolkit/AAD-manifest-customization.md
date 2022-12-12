@@ -14,17 +14,6 @@ The [Microsoft Azure Active Directory (Azure AD) manifest](/azure/active-directo
 
 Teams Toolkit now manages Azure AD application with the manifest file as the source of truth during your Teams application development lifecycle.
 
-This section covers:
-
-* [Customize Azure AD manifest template](#customize-azure-ad-manifest-template)
-* [Azure AD manifest template placeholders](#azure-ad-manifest-template-placeholders)
-* [Author and preview Azure AD manifest with CodeLens](#author-and-preview-azure-ad-manifest-with-codelens)
-* [Deploy Azure AD application changes for local environment](#deploy-azure-ad-application-changes-for-local-environment)
-* [Deploy Azure AD application changes for remote environment](#deploy-azure-ad-application-changes-for-remote-environment)
-* [View Azure AD application on the Azure portal](#view-azure-ad-application-on-the-azure-portal)
-* [Use an existing Azure AD application](#use-an-existing-azure-ad-application)
-* [Azure AD application in Teams application development lifecycle](#azure-ad-application-in-teams-application-development-lifecycle)
-
 ## Customize Azure AD manifest template
 
 You can customize Azure AD manifest template to update Azure AD application.
@@ -128,9 +117,6 @@ The Azure AD manifest file contains placeholder arguments with {{...}} statement
 
 The state file is located in `.fx\states\state.xxx.json`. The following example shows typical state file:
 
-> [!NOTE]
-> xxx represents different environment.
-
 ``` JSON
 {
     "solution": {
@@ -145,7 +131,10 @@ The state file is located in `.fx\states\state.xxx.json`. The following example 
 }
 ```
 
-You can use this placeholder argument in the Azure AD manifest: `{{state.fx-resource-aad-app-for-teams.applicationIdUris}}` to point out `applicationIdUris` value in `fx-resource-aad-app-for-teams` property.
+> [!NOTE]
+> xxx represents different environment.
+
+You can use this placeholder argument in the Azure AD manifest. `{{state.fx-resource-aad-app-for-teams.applicationIdUris}}` to point out `applicationIdUris` value in `fx-resource-aad-app-for-teams` property.
 
 ### Reference config file values in Azure AD manifest template
 
@@ -168,7 +157,7 @@ You can use the placeholder argument in the Azure AD manifest: `{{config.manifes
 
 ### Reference environment variable in Azure AD manifest template
 
-If you don't need to enter permanent values in Azure AD manifest template. For example, when the value is a secret. Azure AD manifest template file supports reference environment variables values. You can use the syntax `{{env.YOUR_ENV_VARIABLE_NAME}}` in the tool as parameter values to resolve the current environment variable values.
+When the value is a secret, you don't need to enter permanent values in Azure AD manifest template. Azure AD manifest template file supports reference environment variables values. You can use the syntax `{{env.YOUR_ENV_VARIABLE_NAME}}` in the tool as parameter values to resolve the current environment variable values.
 
 ## Author and preview Azure AD manifest with CodeLens
 
@@ -190,7 +179,7 @@ Placeholder argument CodeLens helps you to see the values for local debug and de
 
 ### Required resource access CodeLens
 
-It's different from official [Azure AD manifest schema](/azure/active-directory/develop/reference-app-manifest) that `resourceAppId` and `resourceAccess` ID in `requiredResourceAccess` property only supports UUID. Azure AD manifest template in Teams Toolkit also supports user readable strings for `Microsoft Graph` and `Office 365 SharePoint Online` permissions. If you enter UUID, CodeLens shows user readable strings, otherwise it shows UUID.
+Its different from official [Azure AD manifest schema](/azure/active-directory/develop/reference-app-manifest) that `resourceAppId` and `resourceAccess` ID in `requiredResourceAccess` property only supports UUID. Azure AD manifest template in Teams Toolkit also supports user readable strings for `Microsoft Graph` and `Office 365 SharePoint Online` permissions. If you enter UUID, CodeLens shows user readable strings, otherwise it shows UUID.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add resource.png" alt-text="add resource to required resource access":::
 
