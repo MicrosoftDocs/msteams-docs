@@ -17,13 +17,7 @@ The Teams app manifest describes how your app integrates into Microsoft Teams.
 
 ## Customize Teams app manifest for Visual Studio Code
 
-The Teams app manifest describes how your app integrates into Teams. For more information on manifest, see [app manifest schema for Teams](../resources/schema/manifest-schema.md). This section covers:
-
-* [Preview manifest file in local environment](#preview-manifest-file-in-local-environment)
-* [Preview manifest file in remote environment](#preview-manifest-file-in-remote-environment)
-* [Sync local changes to Developer Portal](#sync-local-changes-to-developer-portal)
-* [Customize your Teams app manifest](#customize-your-teams-app-manifest)
-* [Validate manifest](#validate-manifest)
+The Teams app manifest describes how your app integrates into Teams. For more information on manifest, see [app manifest schema for Teams](../resources/schema/manifest-schema.md).
 
 The manifest template file `manifest.template.json` is available under `templates/appPackage` folder after scaffolding. The template file with placeholders, and the actual values are resolved by Teams Toolkit using files under `.fx/configs` and `.fx/states` for different environments.
 
