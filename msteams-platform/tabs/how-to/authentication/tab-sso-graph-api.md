@@ -5,7 +5,7 @@ ms.topic: how-to
 ms.localizationpriority: high
 keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) Graph API Delegated permission access token scope
 ---
-# Extend tab app with Microsoft Graph permissions and scope
+# Extend tab app with Microsoft Graph permissions and scopes
 
 You can extend your tab app by using Microsoft Graph to allow users additional permissions, such as to view app user profile, to read mail, and more. Your app must ask for specific permission scopes to obtain the access tokens on app user's consent.
 
@@ -25,13 +25,13 @@ You can configure additional Graph scopes in Azure AD for your app. These are de
 
 1. Open the app you registered in the [Azure portal](https://ms.portal.azure.com/).
 
-2. Select **Manage** > **API permission** from the left pane.
+2. Select **Manage** > **API permissions** from the left pane.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/api-permission-menu.png" alt-text="App permissions menu option.":::
 
     The **API permissions** page appears.
 
-3. Select **+ Add permissions** to add Microsoft Graph API permissions.
+3. Select **+ Add a permission** to add Microsoft Graph API permissions.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-permission.png" alt-text="App permissions page.":::
 
@@ -131,18 +131,17 @@ The following code provides an example of OBO flow to fetch access token from th
 ### [C#](#tab/dotnet)
 
 ```csharp
-
 IConfidentialClientApplication app = ConfidentialClientApplicationBuilder.Create(<"Client id">)
                                                 .WithClientSecret(<"Client secret">)
                                                 .WithAuthority($"https://login.microsoftonline.com/<"Tenant id">")
                                                 .Build();
- 
             try
             {
                 var idToken = <"Client side token">;
                 UserAssertion assert = new UserAssertion(idToken);
                 List<string> scopes = new List<string>();
                 scopes.Add("https://graph.microsoft.com/User.Read");
+                // Acquires an access token for this application (usually a Web API) from the authority configured in the application.
                 var responseToken = await app.AcquireTokenOnBehalfOf(scopes, assert).ExecuteAsync();
                 return responseToken.AccessToken.ToString();
             }
@@ -155,8 +154,11 @@ IConfidentialClientApplication app = ConfidentialClientApplicationBuilder.Create
 
 ### [Node.js](#tab/nodejs)
 
-```Node.js
+- [SDK reference](/javascript/api/@azure/msal-node/confidentialclientapplication?view=azure-node-latest#@azure-msal-node-confidentialclientapplication-acquiretokenonbehalfof&preserve-view=true)
 
+- [sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs/src/server/tabs.js#L51-L94)
+
+```Node.js
 // Exchange client Id side token with server token
   app.post('/getProfileOnBehalfOf', function(req, res) {
         var tid = < "Tenant id" >

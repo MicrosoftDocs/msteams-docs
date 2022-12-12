@@ -189,27 +189,36 @@ The following steps guide you to sideload and validate bot that receives all cha
 The following code provides an example of the RSC permissions:
 
 # [C#](#tab/dotnet)
+* [SDK reference](/dotnet/api/microsoft.bot.builder.activityhandler.onmessageactivityasync?view=botbuilder-dotnet-stable&preserve-view=true)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-token-app/csharp/Bots/TokenBot.cs#L52)
 
 ```csharp
 
-// Handle when a message is addressed to the bot. 
-// When rsc is enabled the method will be called even when bot is addressed without being @mentioned
+// Handle when a message is addressed to the bot.
+// When rsc is enabled the method will be called even when bot is addressed without being @mentioned.
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
 {
+        // Sends an activity to the sender of the incoming activity.
          await turnContext.SendActivityAsync(MessageFactory.Text("Using RSC the bot can receive messages across channels or chats in team without being @mentioned."));
 }
+
 ```
 
 # [Node.js](#tab/nodejs)
+* [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onmessage&preserve-view=true)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-localization/nodejs/server/bot/botActivityHandler.js#L25)
 
 ```javascript
 
-// Handle when a message is addressed to the bot. 
-// When rsc is enabled the method will be called even when bot is addressed without being @mentioned
+// Handle when a message is addressed to the bot.
+// When rsc is enabled the method will be called even when bot is addressed without being @mentioned.
+
 this.onMessage(async (context, next) => {
+    // Sends a message activity to the sender of the incoming activity.
    await context.sendActivity(MessageFactory.text("Using RSC the bot can receive messages across channels or chats in team without being @mentioned."))
    await next();
 });
+
 ```
 
 ---

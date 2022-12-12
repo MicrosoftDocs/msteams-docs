@@ -70,3 +70,9 @@ Following are the upcoming API changes:
 
     > [!NOTE]
     > We recommend you to use the [Graph API](/graph/api/user-get?view=graph-rest-1.0&tabs=http&preserve-view=true#examples) with an access token to retrieve information.
+
+## See also
+
+* [Build bots for Teams](../bots/what-are-bots.md)
+* [Overview for using Teams](/graph/teams-concept-overview)
+* [API reference for the Bot Framework Connector service](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference)
