@@ -13,75 +13,89 @@ Authentication steps for SSO are similar to that of a bot in Teams. Following ar
 > [!NOTE]
 > To implement SSO flow, you must have personal scope declared for your bot in the app manifest. When a user invokes the SSO flow via the Adaptive Card `Action.Execute` protocol, the user is prompted to install the app in personal scope if it isn't installed already.
 
+## Prerequisites
+
 1. Before you add code to enable SSO, ensure that you've configured your app and bot resource in Azure AD portal. For more information, see [configured your app and bot resource in Azure AD portal](../../../bots/how-to/authentication/bot-sso-register-aad.md).
 1. After you configure the client secret and OAuth connection setting for the app in Azure AD, you must configure the code with development environment variables. For more information, see [Update development environment variables](../../../bots/how-to/authentication/bot-sso-code.md#update-development-environment-variables).
-1. Add the code to handle access token, to send this token to your app's server code in the Authorization header, and to validate the access token when it's received. For more information, see [Add code to handle an access token](../../../bots/how-to/authentication/bot-sso-code.md#add-code-to-handle-an-access-token).
-1. If the app user is using the application for the first time and user consent is required, the following dialog appears:
+
+## Add code to handle an access token
+
+> [!NOTE]
+> Ensure that you added the code to handle access token. For more information, see [Add code to handle an access token](../../../bots/how-to/authentication/bot-sso-code.md#add-code-to-handle-an-access-token).
+
+If there's a cached token, the bot can use the same token. If there's no token available, the bot creates an OAuthCard and places it in an invoke response with the values below, which includes a `tokenExchangeResource`:
+
+```JSON
+{
+"statusCode": 401,
+"type": "application/vnd.microsoft.activity.loginRequest",
+"value": {
+   "text": "Please sign-in",
+   "connectionName": "<configured-connection-name>",
+   "tokenExchangeResource": {
+      "id": "<unique-indentifier>",
+      "uri": "<application-or-resource-identifier>",
+      "providerId": "<optional-provider-identifier>"
+   },
+   "buttons": [
+      {
+      "title": "Sign-In",
+         "text": "Sign-In",
+         "type": "signin",
+         "value": "<sign-in-URL>"
+      }
+   ]
+}
+}
+```
+
+Senders must include a `tokenExchangeResource` to designate a SSO operation.
+
+> [!NOTE]
+> Teams client will trigger the nominal sign-in or OAuth flow when SSO fails. It is highly recommended that you provide sign in URL in the above response so that OAuth flow works.
+
+## Consent dialog for getting access token
+
+If the app user is using the Adaptive Card for the first time and user consent is required, the following dialog appears:
 
    :::image type="content" source="../../../assets/images/authentication/consent-sso-ac.png" alt-text="Screenshot shows you the consent dialog box.":::
 
-   * Once the user selects **View and accept**, the existing Azure AD permission consent view is launched to show all the permissions and continue with the authentication flow.
+Once the user selects **View and accept**, the existing Azure AD permission consent view is launched to show all the permissions and continue with the authentication flow.
 
-1. If there's a cached token, the bot can use the same token. If there's no token available, the bot creates an OAuthCard and places it in an invoke response with the values below, which includes a `tokenExchangeResource`:
+## Add code to receive the token
 
-    ```JSON
-       {
-      "statusCode": 401,
-      "type": "application/vnd.microsoft.activity.loginRequest",
-      "value": {
-        "text": "Please sign-in",
-        "connectionName": "<configured-connection-name>",
-        "tokenExchangeResource": {
-          "id": "<unique-indentifier>",
-          "uri": "<application-or-resource-identifier>",
-          "providerId": "<optional-provider-identifier>"
-        },
-        "buttons": [
-          {
-            "title": "Sign-In",
-            "text": "Sign-In",
-            "type": "signin",
-            "value": "<sign-in-URL>"
-          }
-        ]
-      }
-    }
-    
-    ```
+The following are the steps to receive token:
 
-   * Senders must include a `tokenExchangeResource` to designate a single sign-on (SSO) operation.
-
-   > [!NOTE]
-   > Teams client will trigger the nominal sing-in or OAuth flow when SSO fails. It is highly recommended that you provide sign in URL in the above response so that OAuth flow works.
+> [!NOTE]
+> Ensure that your bot receives the invoke activity or token. For more information, see [Add code to receive the token](../../../bots/how-to/authentication/bot-sso-code.md#add-code-to-receive-the-token).
 
 1. The client resend the original `adaptiveCard/action` to the bot along with the token as follows:
 
     ```javascript
     {
-      "type": "invoke",
-      "name": "adaptiveCard/action"
-      "value": {
-         "action": {
-            "id": "abc123",
-            "type": "Action.Execute",
-            "verb": "saveCommand",
-            "data": {
-               "firstName": "Jeff",
-               "lastName": "Derstadt"
-            }
-         },
-      "authentication": {
-         "id": "8769-xyz",
-         "connectionName": "oauthConnection",
-         "token": "...single sign-on token..."
-      }
-      }
+    "type": "invoke",
+    "name": "adaptiveCard/action"
+    "value": {
+    "action": {
+       "id": "abc123",
+       "type": "Action.Execute",
+       "verb": "saveCommand",
+       "data": {
+          "firstName": "Jeff",
+          "lastName": "Derstadt"
+       }
+    },
+    "authentication": {
+       "id": "8769-xyz",
+       "connectionName": "oauthConnection",
+       "token": "...single sign-on token..."
+    }
+    }
     }
     ```
 
     * Senders must include the `authentication` field with a token exchange resource.
 
-1. The response with the token is sent through an invoke activity with the same schema as other invoke activities that the bots receive. For more information, see [Add code to receive the token](../../../bots/how-to/authentication/bot-sso-code.md#add-code-to-receive-the-token).
 1. The channel delivers this invoke to the bot, which uses the token to finalize the token exchange process with the Token Service and identity provider. The Token Service delivers the user's access token to the bot.
    * Receivers may ignore the authentication if the value is incorrect.
    * Receivers that experience an error performing token exchange must respond with an error or a second login request that doesn't include SSO information.
@@ -97,8 +111,14 @@ Authentication steps for SSO are similar to that of a bot in Teams. Following ar
 
 1. The bot uses the access token on behalf of the user to perform its actions.
 1. The bot returns a non-error response to the client, either a card or a message.
-1. To handle the access token in case the app user logs out, see [Handle app user log out](../../../bots/how-to/authentication/bot-sso-code.md#handle-app-user-log-out).
-1. You've registered your app and bot resource in Azure AD. You've also configured code to handle tokens. Now, you must update the Teams app manifest to enable SSO for your app. For more information, see [Update your Teams application manifest for your bot](../../../bots/how-to/authentication/bot-sso-manifest.md).
+
+> [!NOTE]
+> To handle the access token in case the app user logs out, see [Handle app user log out](../../../bots/how-to/authentication/bot-sso-code.md#handle-app-user-log-out).
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Update your Teams application manifest for your bot](../../../bots/how-to/authentication/bot-sso-manifest.md)
 
 ## See also
 

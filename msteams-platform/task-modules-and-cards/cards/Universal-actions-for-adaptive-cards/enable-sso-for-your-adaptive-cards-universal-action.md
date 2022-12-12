@@ -8,32 +8,9 @@ ms.localizationpriority: medium
 
 # SSO for your Adaptive Cards Universal Actions
 
-Universal Actions for Adaptive Cards bring the bot as the common backend for handling actions and introduce a new action type `Action.Execute`, which works across apps such as Teams and Outlook.
-
-> [!NOTE]
-> Support for Universal Actions for Adaptive Cards schema version v1.4 is only available for cards sent by bot.
-
-With `Action.Execute`, following are the major benefits to bot developers and users:
-
-1. Bot developers can use `Action.Execute` for action handling across different platforms. `Action.Execute` works across hubs including Teams and Outlook. In addition, an Adaptive Card can be returned as response for an `Action.Execute` triggered invoke request.
-2. **User Specific Views**: With refresh property in adaptive cards, which triggers automatic refresh that is internally an `Action.Execute` call on the Adaptive Card and it fetches different cards for different users in the chat based on their role.
-3. **Sequential View**: Since `Action.Execute` buttons can return new Adaptive card in response, which is shown to user, it can enable sequential flows like a menu card scenario.
-4. **Up to Date View**: Cards with automatic refresh will fetch the latest data from bot service and it can display up to date information to user.
-
-For more information about Universal Actions for Adaptive Cards, see [Universal Actions for Adaptive Cards](Overview.md).
-
 With Single sign-on (SSO) in Teams, app users have the advantage of using Teams to access Adaptive Cards Universal Actions in bot. After logging in to Teams using Microsoft or Microsoft 365 account, app users can use your app without the need to sign in again. Your app is available to app users on any device with access granted through Azure Active Directory (AD).
 
-## Authentication flow in Action.Execute protocol
-
-Authentication flow for SSO, within the `Action.Execute` protocol, enables authentication within the context of the group chat or channel conversation where the Adaptive Card is shared.
-
-Bots can respond with sign in request in response to `Action.Execute` for:
-
-1. Adaptive Cards sent by bot in a one-on-one chat, group chat, or a channel.
-1. Adaptive Cards sent by user via message extension app (backed by bot) in one-on-one chat, group chat, or channel.
-1. Adaptive cards present in compose or preview area while user is composing the message.
-   * In compose area, refresh in Adaptive Card works and bot may want to use token to provide user specific view to user before they send the card to the chat.
+For more information about Universal Actions for Adaptive Cards, see [Universal Actions for Adaptive Cards](Overview.md).
 
 ## SSO in Teams at runtime
 
@@ -55,6 +32,29 @@ The following image shows how SSO works when a Teams app user attempts to access
 | 8 | Azure AD → Teams client | Azure AD sends invoke response with Adaptive Card to Teams client. Bot returns a non-error response to the client, either a card or message. |
 
 For an Adaptive Cards Universal Actions in bot, the bot app sends an OAuth Card to Teams client. This card is used to get access token from Azure AD using `tokenExchangeResource`. Following app user's consent, Teams client sends the token received from Azure AD to the bot app using `tokenExchange`. The bot app can then parse the token to retrieve the app user's information, such as email address.
+
+## Use cases for enabling SSO
+
+Authentication for SSO, within the `Action.Execute`, enables authentication within the context of the group chat or channel conversation where the Adaptive Card is shared.
+
+Bots can respond with sign in request in response to `Action.Execute` for:
+
+* Adaptive Cards sent by bot in a one-on-one chat, group chat, or a channel.
+* Adaptive Cards sent by user via message extension app (backed by bot) in one-on-one chat, group chat, or channel.
+* Adaptive cards present in compose or preview area while user is composing the message.
+  * In compose area, refresh in Adaptive Card works and bot may want to use token to provide user specific view to user before they send the card to the chat.
+
+## Enable SSO for a Teams app
+
+This section describes the tasks involved in implementing SSO for Adaptive Cards Universal Actions in bot. To enable SSO for Adaptive Cards Universal Actions in bot:
+
+**Configure app with Azure AD**: Create an Azure AD app to generate an app ID and application ID URI. For generating an access token, you configure scopes and authorize trusted client applications. The configuration required in Azure AD for enabling SSO in a bot is the same. Create a bot resource and configure it's client secret, messaging endpoint, and OAuth connection to enable SSO.
+
+**Add code**: Add the code to handle access token to send this token to your app's server code in the Authorization header, and to validate the access token when it's received.
+> [!NOTE]
+> This section allows you to select the app for which you want to add code for enabling SSO.
+
+**Update Teams app manifest**: Update your Teams client app manifest with the app ID and application ID URI generated in Azure AD to allow Teams to request access tokens on behalf of your app. The update required in the manifest file is the same for bot.
 
 ## Next step
 
