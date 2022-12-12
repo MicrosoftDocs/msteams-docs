@@ -406,7 +406,7 @@ The requirements in this section are also valid for video effect thumbnails.
 
 Microsoft Teams will request additional permission and consent (over and above usual permissions) from the user of your filter app, at the time of app installation. The language of the consent is as follows:
 
-* You consent to have < App Developer Name >, the provider of < App Name >, process and analyze data about your facial features to provide overlays, filters, and similar technologies based on your image. < App Name > will keep this data, which may include biometric data, in accordance with its privacy policy. Unless Microsoft is the provider, Microsoft does not process, collect, or retain the data about your image processed by Custom Filters.
+* You consent to have < App Developer Name >, the provider of < App Name >, process and analyze data about your facial features to provide overlays, filters, and similar technologies based on your image. < App Name > will keep this data, which may include biometric data, in accordance with its privacy policy. Unless Microsoft is the provider, Microsoft does not process, collect, or retain the data about your image processed by < App Name >.
 
 You are responsible, as the app owner and publisher, to determine whether additional notices or consents are required in your app experience to meet your obligations under the Publisher Agreement---including but not limited to those obligations triggered by collection or processing of data that is or could be characterized as biometric data under applicable Data Protection Law.
 
