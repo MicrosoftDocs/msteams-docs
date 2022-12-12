@@ -14,7 +14,7 @@ ms.topic: reference
 
 Resource-specific consent (RSC) is an authorization framework built by Microsoft Teams and Microsoft identity that allows for granting scoped access to an application.
 
-Through RSC, an authorized user can give an application access to the data of only a specific instance of a resource type instead of giving broad access to every instance of a resource type in the entire tenant. For example, a person who owns both team A and team B can decide to give the data for the Contoso app for only team A and not team B. The same concept of scoped data access applies to chats and meetings.
+Through RSC, an authorized user can give an application access to the data of only a specific instance of a resource type instead of giving broad access to every instance of a resource type in the entire tenant. For example, a person who owns both team A and team B can decide to give the data for the Contoso app to only team A and not team B. The same concept of scoped data access applies to chats and meetings.
 
 > [!NOTE]
 > If a chat has a meeting or a call associated with it, then the relevant RSC permissions apply to those resources as well.
@@ -23,7 +23,7 @@ Through RSC, an authorized user can give an application access to the data of on
 
 RSC permission determines which data access methods are allowed by an application. There are two types of RSC permissions:
 
-* **Application**: Allows an app to access data without a signed-in user. For information on application permissions, see [Resource Specific Consent for MS Graph and MS BotSDK](../../graph-api/rsc/resource-specific-consent.md).
+* **Application**: Allows an app to access data without a signed-in user. For more information on application permissions, see [Resource Specific Consent for MS Graph and MS BotSDK](../../graph-api/rsc/resource-specific-consent.md).
 * **Delegated**: Allows an app to access data only on behalf of a signed-in user. No access is allowed in the absence of a signed-in user.
 
 ### RSC permissions for different resources
@@ -319,15 +319,13 @@ Whenever an app is installed by an authorized user within Teams, the RSC permiss
 
 ## Grant RSC permissions to an app
 
-Users' ability to grant RSC permissions varies based on resource types and access modes. The following are the types of RSC permissions for an app:
+Apart from the tenant admin, who can grant any type of permission to any app, users' ability to grant RSC permissions varies based on resource types and access modes. The following are the types of RSC permissions for an app:
 
-* **Delegated context RSC permissions**: Any user authorized to install an app in a specific scope has the right to grant any RSC permissions requested by the app in that specific scope. For example, if regular members are allowed to install an app inside a team, then they also have the authority to grant delegated RSC permission to the app in that specific team.
-  * In the case of a team, any user of the team who is authorized to install an app.
-  * In the case of a chat, the user must be a member of the chat.
-* **Application context RSC permissions**: In addition to the user being authorized to install apps in that scope, the following additional constraints apply for the user to be able to grant RSC permission to access data in app-only mode:
+* **Application context RSC permissions**: Users authorized to install an app in a specific scope have the right to grant any RSC permissions requested by the app in that specific scope. In addition to installing apps in a specific scope, the following constraints apply for the user to grant RSC permission to access data in app-only mode:
   * In the case of a team, the user must be an owner of that team.
   * In the case of a chat, the user must be a member of the chat.
   * In the case of meetings, the user must be an organizer or presenter in the meeting.
+* **Delegated context RSC permissions**: Any user authorized to install an app in a specific scope has the right to grant any RSC permissions requested by the app in that specific scope. For example, if regular members are allowed to install an app inside a team, then they also have the authority to grant delegated RSC permission to the app in that specific team.
 
 If you're a global admin, you can review, and grant consent to apps that request permissions on behalf of all users in your organization. You do this so that users don't have to review and accept the permissions requested by the app when they start the app. For more information, see [view app permissions and grant admin consent in Teams admin center](/microsoftteams/app-permissions-admin-center).
 
@@ -347,9 +345,9 @@ If you're a global admin, you can review, and grant consent to apps that request
 
 ## Configure consent settings
 
-For delegated permissions, any authorized user can consent to the permissions requested by the app.
-
 For application permissions, admins have a toggle to enable or disable RSC permissions for all apps for the entire tenant. The tenant-level controls of app-only RSC permissions differ based on resource type.
+
+For delegated permissions, any authorized user can consent to the permissions requested by the app.
 
 <br>
 
@@ -389,14 +387,19 @@ The default value of the property `isChatResourceSpecificConsentEnabled` is base
 
 </details>
 
-## Check your app for added RSC permissions
+## List of RSC permissions granted to a specific resource
 
 > [!IMPORTANT]
 > The RSC permissions are not attributed to a user. Calls are made with app permissions, not user delegated permissions. The app can be allowed to perform actions that the user cannot, such as deleting a tab. You must review the team owner's or chat owner's intent for your use before making RSC API calls. For more information, see [Microsoft Teams API overview](/graph/teams-concept-overview).
 
-For delegated RSC permissions, call the API `TeamsAppInstallation.ReadForChat.All` to list all the apps that are installed in a chat or team. For more information, see [list apps in chat](/graph/api/chat-list-installedapps?view=graph-rest-1.0&tabs=http&preserve-view=true). However, you cannot know the permissions that are granted because they are granted when an app is running without user interaction.
+Call the following APIs to retrieve the list of apps installed in a team or chat:
 
-For application RSC permissions, list the permissions granted on that chat or team. These are all the application RSC permissions granted on this specific resource. Each entry in the list can be correlated to a TeamsApp by matching the `clientAppId` in the permission grants list with the `webApplicationInfo.Id` property in the TeamsApp’s manifest.
+* [List apps in chat](/graph/api/chat-list-installedapps?view=graph-rest-1.0&tabs=http&preserve-view=true)
+* [List apps in team](/graph/api/team-list-installedapps?view=graph-rest-1.0&tabs=http&preserve-view=true)
+
+For delegated RSC permissions, call the APIs to list all the apps that are installed in a chat or team. However, you can't know the permissions that are granted because they are granted when an app is running without user interaction.
+
+For application RSC permissions, call the APIs to list the permissions granted in a chat or team. These are all the application RSC permissions granted on this specific resource. Each entry in the list can be correlated to a TeamsApp by matching the `clientAppId` in the permission grants list with the `webApplicationInfo.Id` property in the TeamsApp’s manifest.
 
 After the app has been installed to a resource, you can use [Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) to view the permissions that have been granted to the app in the resource.
 
@@ -452,7 +455,7 @@ For more information on how to get details of apps installed in a specific chat,
 The following list provides all the RSC permissions categorized based on resource type and access mode.
 
 > [!NOTE]
-> The features associated with some of the permissions listed here might not have Generally available.
+> The features associated with some of the permissions listed here might not have generally available.
 
 ### RSC permissions for a team
 
