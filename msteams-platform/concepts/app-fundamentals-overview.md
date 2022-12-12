@@ -38,6 +38,8 @@ Understanding the user and their concern are the first indicators of how a Teams
 
 * **Map your use cases**: Map common use cases to Teams features based on requirements, such as sharing, collaborating, workflows, relevant social platforms, and more.
 
+* **Plan analytics for your Teams app**: Plan to analyze the analysis and instrumentation data against your business goals, take corrective action by fixing issues, and intervening in the user journey or plan further enhancements to your app.
+
 * **Plan responsive tabs for Teams mobile**: It covers common scenarios and helps with planning apps for Teams mobile.
 
 ### During build
@@ -55,6 +57,8 @@ Understanding the user and their concern are the first indicators of how a Teams
     Together, these capabilities bring your app solution to life.
 
 * **Integrate device capabilities**: You can integrate the native device capabilities in your app, such as camera, QR or barcode scanner, photo gallery, microphone, and location.
+
+* **Instrument code for analytics**: Instrument your Teams app code with analytics markers (also known as instrumentation markers) to measure both aggregate and user-specific metrics for your app when app users use it.
 
 ### Post-build
 
@@ -97,6 +101,9 @@ The following list helps to identify the availability of GCC, GCC-High, and DOD 
 
 ## See also
 
+* [Get started](../get-started/get-started-overview.md)
 * [Planning checklist](../concepts/design/planning-checklist.md)
 * [Considerations for Teams integration](../samples/integrating-web-apps.md)
-* [Build your first Microsoft Teams app](../build-your-first-app/build-first-app-overview.md)
+* [Plan responsive tabs for Teams mobile](design/plan-responsive-tabs-for-teams-mobile.md)
+* [Device capabilities](device-capabilities/device-capabilities-overview.md)
+* [Authenticate users in Microsoft Teams](authentication/authentication.md)
