@@ -158,7 +158,7 @@ SSO command handler `ProfileSsoCommandHandler` uses an Azure AD token to call Mi
    ```ts
    server.post("/api/messages", async (req, res) => {
      await commandBot.requestHandler(req, res).catch((err) => {
-       // Error message including "412" means it is waiting for user's consent, which is a normal process of SSO, must not throw this error.
+       // Error message including "412" means it is waiting for user's consent, which is a normal process of SSO, shouldn't throw this error.
        if (!err.message.includes("412")) {
          throw err;
        }
@@ -505,25 +505,33 @@ You can perform the following steps to add SSO using Teams Toolkit in Visual Stu
 1. Enter **Teams** in the search box and from the list, select **Microsoft Teams app**.
 1. Select **Next**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso-vs/vs-2022-preview-select-teams.png" alt-text="Select a Microsoft Teams project by searching for teams." lightbox="../assets/images/teams-toolkit-v2/add-sso-vs/vs-2022-preview-select-teams.png":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso-vs/vs-2022-preview-select-teams_1.png" alt-text="Select a Microsoft Teams project by searching for teams." lightbox="../assets/images/teams-toolkit-v2/add-sso-vs/vs-2022-preview-select-teams.png":::
 
-1. Select the required **application type** under **Create a new Teams application**, clear the **Configure with single sign-on** check box.
+  The **Configure your new project** window appears.
 
-1. Select **create**.
+1. Enter your **Project name**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso-vs/vs-2022-preview-create-teamsapp-sso-uncheck.png" alt-text="select the teams app to be created and uncheck sso check box" lightbox="../assets/images/teams-toolkit-v2/add-sso-vs/vs-2022-preview-create-teamsapp-sso-uncheck.png":::
+  > [!NOTE]
+  > The project name you are entering is automatically filled in the Solution name also. If you want, you can change the solution name with no affect on project name.
 
-1. Enter your **Project name** and **Solution name**.
 1. Select **Create**.
 
    > [!NOTE]
    > You can change the default location of your project by selecting &#x25CF;&#x25CF;&#x25CF;.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso-vs/vs-2022-preview-create-teamsapp.png" alt-text="enter project and solution name" lightbox="../assets/images/teams-toolkit-v2/add-sso-vs/vs-2022-preview-create-teamsapp.png":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso-vs/vs-2022-preview-create-teamsapp_1.png" alt-text="enter project and solution name" lightbox="../assets/images/teams-toolkit-v2/add-sso-vs/vs-2022-preview-create-teamsapp.png":::
+
+  The **Create a new Teams application** window appears.
+
+1. Select the required application type under **Create a new Teams application**, clear the **Configure with single sign-on** check box.
+
+1. Select **create**.
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso-vs/vs-2022-preview-create-teamsapp-sso-uncheck_1.png" alt-text="select the teams app to be created and uncheck sso check box" lightbox="../assets/images/teams-toolkit-v2/add-sso-vs/vs-2022-preview-create-teamsapp-sso-uncheck.png":::
 
 1. After the project is created, select **Project** > **Teams Toolkit** > **Add Authentication Code**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso-vs/vs-2022-preview-add-auth-code.png" alt-text="Add authentication code" lightbox="../assets/images/teams-toolkit-v2/add-sso-vs/vs-2022-preview-add-auth-code.png":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso-vs/vs-2022-preview-add-auth-code_1.png" alt-text="Add authentication code" lightbox="../assets/images/teams-toolkit-v2/add-sso-vs/vs-2022-preview-add-auth-code.png":::
 
 ## Customize your project using Teams Toolkit
 
@@ -579,7 +587,7 @@ The following steps help you to enable SSO in your app:
      > [!NOTE]
      > Ensure to replace `{Your_NameSpace}` with your project namespace in the three files (`SsoDialog.cs`, `SsoOperations.cs`, and `TeamsSsoBot.cs`).
 
-     :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso-vs/vs-2022-preview-replace-namespace.png" alt-text="Replace name space with the your name space":::
+     :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso-vs/vs-2022-preview-replace-namespace_1.png" alt-text="Replace name space with the your name space":::
 
 4. You can now update `Program.cs`.
 
