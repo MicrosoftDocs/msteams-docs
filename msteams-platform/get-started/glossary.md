@@ -199,10 +199,10 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | [SSO](../concepts/authentication/authentication.md) | Acronym for Single sign-on, an authentication method in which a user needs to sign in to an independent service of a software platform (such as Microsoft 365) only once. The user is then able to access all services without having to go through authentication again. <br>**See also**: [Authentication](#a), [Scope](#s) |
 | [Stage view](../sbs-meetings-stage-view.yml) | A user interface component that lets you render the content that is opened in full screen in Teams and pinned as a tab. It's invoked to surface web content within Teams. It *isn't* the same as meeting stage. <br>**See also**: [Meeting stage](#m) |
 | [Standalone app](../samples/integrating-web-apps.md) | A single-page or large, and complex app. The user can use some aspects of it in Teams. <br>**See also**: [Collaboration aap](#c) |
-| Standalone bot | Bots can be a standalone bot or be a part of a larger application. <br> **See also**: [Chat bot](#c), [Conversational bot](#c) |
+| Standalone bot | A type of bot app. It's a single bot app or not part of a larger application. <br> **See also**: [Chat bot](#c), [Conversational bot](#c) |
 | [Static search](../task-modules-and-cards/cards/dynamic-search.md) | A method of typeahead search that lets users search from pre-specified values in the Adaptive Cards payload. <br>**See also**: [Dynamic search](#d) |
 | [Store validation guidelines](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) | A set of Teams-specific guidelines for validating an app before it can be submitted to Teams store. <br>**See also**: [Teams store](#t) |
-| [Subdomain ID](../tabs/how-to/authentication/tab-sso-register-aad.md) | It's the application ID URI that you registered when creating scope in Azure AD. <br> **See also**: [SSO](#s), [Application ID URI](#a), [Application ID](#a) |
+| [Subdomain ID](../tabs/how-to/authentication/tab-sso-register-aad.md) | It's the application ID URI that you registered when configuring scope for your app in Azure AD. <br> **See also**: [SSO](#s), [Application ID URI](#a), [Application ID](#a) |
 
 ## T
 
@@ -223,8 +223,8 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | [Teams workbench](../sbs-gs-spfx.yml) | A workbench in Visual Studio Code used at build for Teams apps created using SPFx and Teams Toolkit. <br>**See also**: [Workbench](#w); [Local workbench](#l) |
 | [Tenant ID](../bots/how-to/authentication/bot-sso-register-aad.md) | The unique identifier of the tenant where your app is registered in Azure AD portal. Your app may be classified as a single-tenant or a multi-tenant app. <br> **See also**: [Single-tenant app](#s), [Multi-tenant apps](#m) |
 | [Token exchange URL](../bots/how-to/authentication/bot-sso-register-aad.md) | It's the application ID URI that is used for exchanging token. It's configured while configuring the OAuth connection for bot resource. <br> **See also**: [Application ID URI](#u), [SSO](#s) |
-| [TokenExchangeResource property](../bots/how-to/authentication/bot-sso-code.md) | It's a property of `OAuthCard` class that gets or sets the resource to try to perform token exchange with. Teams refreshes the token if the TokenExchangeResource property is populated on the card. <br> **See also**: [OAuth card](#o), [SSO](#s) <br> For more information, see [Microsoft Bot Schema 4.0](/dotnet/api/microsoft.bot.schema.oauthcard) |
-| [TeamsSSOTokenExchangeMiddleware](../bots/how-to/authentication/bot-sso-code.md) | This middleware exchanges the token if the activity name is signin or tokenExchange. It also ensures only one exchange request is processed. <br> **See also**: [SSO](#s) |
+| [TokenExchangeResource property](../bots/how-to/authentication/bot-sso-code.md) | It's a property of `OAuthCard` class that gets or sets the resource to try to perform token exchange with. Teams refreshes the token if the `TokenExchangeResource` property is populated on the card. <br> **See also**: [OAuth card](#o), [SSO](#s) <br> For more information, see [Microsoft Bot Schema 4.0](/dotnet/api/microsoft.bot.schema.oauthcard) |
+| [TeamsSSOTokenExchangeMiddleware](../bots/how-to/authentication/bot-sso-code.md) | This middleware exchanges the token if the activity name is `signin` or `tokenExchange`. It also ensures only one exchange request is processed. <br> **See also**: [SSO](#s) |
 
 ## U
 
@@ -233,7 +233,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | [UI components](../concepts/design/design-teams-app-basic-ui-components.md) | For Teams app development, you can use Fluent UI components to build your app from scratch. |
 | [UI templates](../concepts/design/design-teams-app-ui-templates.md) | For Teams app development, you can use Teams UI templates to design your apps quickly. |
 | [Universal Actions for Adaptive Cards](../task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) | A way to implement Adaptive Cards across platforms and applications. It uses a bot as a common backend for handling actions. |
-| [User consent](../tabs/how-to/authentication/tab-sso-register-aad.md) | A user can authorize an application to access some data at the protected resource, while acting as that user. <br> **See also**: <br> [Consent dialog](#c), [Administrator consent](#a), [User consent](#u), [Delegated permission](#d), [Configure your app in Azure AD](../bots/how-to/authentication/bot-sso-register-aad.md). |
+| [User consent](../tabs/how-to/authentication/tab-sso-register-aad.md) | A user can authorize an app to access some data at the protected resource, while acting as that user. <br> **See also**: [Consent dialog](#c), [Administrator consent](#a), [User consent](#u), [Delegated permission](#d), [Configure your app in Azure AD](../bots/how-to/authentication/bot-sso-register-aad.md). |
 
 ## V
 
