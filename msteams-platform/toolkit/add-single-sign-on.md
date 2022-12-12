@@ -507,12 +507,12 @@ You can perform the following steps to add SSO using Teams Toolkit in Visual Stu
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso-vs/vs-2022-preview-select-teams_1.png" alt-text="Select a Microsoft Teams project by searching for teams." lightbox="../assets/images/teams-toolkit-v2/add-sso-vs/vs-2022-preview-select-teams.png":::
 
-  The **Configure your new project** window appears.
+   The **Configure your new project** window appears.
 
 1. Enter your **Project name**.
 
-  > [!NOTE]
-  > The project name you are entering is automatically filled in the Solution name also. If you want, you can change the solution name with no affect on project name.
+   > [!NOTE]
+   > The project name you are entering is automatically filled in the Solution name also. If you want, you can change the solution name with no affect on project name.
 
 1. Select **Create**.
 
@@ -521,7 +521,7 @@ You can perform the following steps to add SSO using Teams Toolkit in Visual Stu
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso-vs/vs-2022-preview-create-teamsapp_1.png" alt-text="enter project and solution name" lightbox="../assets/images/teams-toolkit-v2/add-sso-vs/vs-2022-preview-create-teamsapp.png":::
 
-  The **Create a new Teams application** window appears.
+   The **Create a new Teams application** window appears.
 
 1. Select the required application type under **Create a new Teams application**, clear the **Configure with single sign-on** check box.
 
