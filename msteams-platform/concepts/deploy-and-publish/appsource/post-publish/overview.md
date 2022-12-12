@@ -68,7 +68,7 @@ After you stop the distribution of an app, you can still see it in Partner Cente
 
 ## See also
 
-* [Publish your app to the Microsoft Teams store](https://learn.microsoft.com/microsoftteams/platform/concepts/deploy-and-publish/appsource/publish)
+* [Publish your app to the Microsoft Teams store](../publish.md)
 * [Bots](../../../../bots/what-are-bots.md)
 * [Tabs](../../../../tabs/what-are-tabs.md)
 * [Connectors](../../../../webhooks-and-connectors/what-are-webhooks-and-connectors.md#connectors)
