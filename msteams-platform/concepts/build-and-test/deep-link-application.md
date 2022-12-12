@@ -48,28 +48,9 @@ microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/app/f46ad259-0fe5-
 
 ---
 
-## Navigate to a tab
+## Navigate within your app
 
-Applications can navigate the user to a personal tab, or a shared tab.
-
-Use this deep link format to navigate to a tab:
-
-`https://teams.microsoft.com/l/entity/<appId>/<entityId>?webUrl=<entityWebUrl>&label=<entityLabel>&context=<context>`
-
-The query parameters are:
-
-| Parameter name | Description | Example |
-|:------------|:--------------|:---------------------|
-| `appId`&emsp; | The ID from Teams Admin Center. |fe4a8eba-2a31-4737-8e33-e5fae6fee194|
-| `entityId`&emsp; | The ID for the item in the tab, which you provided when [configuring the tab](~/tabs/how-to/create-tab-pages/configuration-page.md). When generating a URL for deep linking continue to use entityID as a parameter name in the URL. When configuring the tab the context object refers to the entityID as {page.id}. |Tasklist123|
-| `entityWebUrl` or `subEntityWebUrl`&emsp; | An optional field with a fallback URL to use if the client doesn't support rendering the tab. | `https://tasklist.example.com/123` or `https://tasklist.example.com/list123/task456` |
-| `entityLabel` or `subEntityLabel`&emsp; | A label for the item in your tab, to use when displaying the deep link. | Task List 123 or "Task 456 |
-| `context.subEntityId`&emsp; | An ID for the item within the tab. When generating a URL for deep linking continue to use subEntityId as the parameter name in the URL. When configuring the tab the context object refers to the subEntityID as subPageID. |Task456 |
-| `context.channelId`&emsp; | Microsoft Teams channel ID that is available from the tab [context](~/tabs/how-to/access-teams-context.md). This property is only available in configurable tabs with a scope of **team**. It isn't available in static tabs, which have a scope of **personal**.| 19:cbe3683f25094106b826c9cada3afbe0@thread.skype |
-| `chatId`&emsp; | ChatId that is available from the tab [context](~/tabs/how-to/access-teams-context.md) for group and meeting chat | 17:b42de192376346a7906a7dd5cb84b673@thread.v2 |
-| `contextType`&emsp; |  Chat is the only supported contextType for meetings | chat |
-
-Applications can use the Teams Java Script SDK 2.0 to navigate to a tab without having to manually prepare the link. The following code demonstrates how to navigate to a specific entity within your Teams app:
+It's possible to navigate within an app using TeamsJS. The following code demonstrates how to navigate to a specific entity within your Teams app.
 
 # [TeamsJS v2](#tab/teamsjs-v2)
 
@@ -99,19 +80,15 @@ microsoftTeams.executeDeepLink(/*deepLink*/);
 
 ## Navigate to a chat with the application
 
-Personal chat
-Applications can navigate a user to a personal chat with the application. Refer to the following format to prepare the link manually:
+You can navigate a user to a personal chat with the application by preparing the link manually using the following format:
 
-<https://teams.microsoft.com/l/entity/appId>/  conversations
-appId – is application id*
+`https://teams.microsoft.com/l/entity/<appId>/conversations`
 
-* we should specify what app is to user for side loaded apps (manifest id), apps submitted to org catalog (org catalog id) and apps submitted to teams app store (store id).
+Where `appId` is your application ID and following lists `appId` for different apps:
 
-We’ve seen several incidents being reported from our customer due to lack of clarity here.
-
-Shared chat
-Not supported (ie at mention app isn’t possible)
-Refer to later section on how to navigate to a specific chat / channel.
+* Side loaded apps: Manifest ID
+* Apps submitted to org catalog: Org catalog ID
+* Apps submitted to teams app store: Store ID
 
 ## Deep link to your tab
 
@@ -155,15 +132,15 @@ Alternatively, you can also generate deep links programmatically, using the form
 > This deep link is different from the links provided by the **Copy link to tab** menu item, which just generates a deep link that points to this tab.
 
 >[!IMPORTANT]
-> Currently, shareDeepLink does not work on mobile platforms.
+> Currently, `shareDeepLink` does not work on mobile platforms.
 
 ### Consume a deep link from a tab
 
-When navigating to a deep link, Microsoft Teams simply navigates to the tab and provides a mechanism through the Teams JavaScript library to retrieve the subpage ID if it exists.
+When navigating to a deep link, Microsoft Teams navigates to the tab and provides a mechanism through the Teams JavaScript library to retrieve the subpage ID if it exists.
 
 The [`app.getContext()`](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-getcontext&preserve-view=true) call (`microsoftTeams.getContext()`) in TeamsJS v1) returns a promise that will resolve with the context that includes the `subPageId` property (subEntityId for TeamsJS v1) if the tab is navigated through a deep link. For more information, see [PageInfo interface](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-pageinfo&preserve-view=true).
 
-### Generate a deep link to your tab
+## Generate a deep link to your tab
 
 While it's recommended to use `shareDeepLink()` to generate a deep link to your tab, it's possible to manually create one too.
 
@@ -190,8 +167,8 @@ The query parameters are:
 | `entityLabel` or `subEntityLabel`&emsp; | A label for the item in your tab, to use when displaying the deep link. | Task List 123 or "Task 456 |
 | `context.subEntityId`&emsp; | An ID for the item within the tab. When generating a URL for deep linking, continue to use subEntityId as the parameter name in the URL. When configuring the tab, the context object refers to the subEntityID as subPageID. |Task456 |
 | `context.channelId`&emsp; | Microsoft Teams channel ID that is available from the tab [context](~/tabs/how-to/access-teams-context.md). This property is only available in configurable tabs with a scope of **team**. It isn't available in static tabs, which have a scope of **personal**.| 19:cbe3683f25094106b826c9cada3afbe0@thread.skype |
-| `chatId`&emsp; | ChatId that is available from the tab [context](~/tabs/how-to/access-teams-context.md) for group and meeting chat | 17:b42de192376346a7906a7dd5cb84b673@thread.v2 |
-| `contextType`&emsp; |  Chat is the only supported contextType for meetings | chat |
+| `context.chatId`&emsp; | ChatId that is available from the tab [context](~/tabs/how-to/access-teams-context.md) for group and meeting chat | 17:b42de192376346a7906a7dd5cb84b673@thread.v2 |
+| `context.contextType`&emsp; |  Chat is the only supported contextType for meetings | chat |
 
 **Examples**:
 
@@ -232,37 +209,7 @@ One of the benefits of using TeamsJS, particularly for Teams app that might run 
 
 For more information about capabilities and the APIs in TeamsJS, see [Building tabs and other hosted experiences with the Microsoft Teams JavaScript client SDK](~/tabs/how-to/using-teams-client-sdk.md#apis-organized-into-capabilities).
 
-### Navigate within your app
-
-It's possible to navigate within an app using TeamsJS. The following code demonstrates how to navigate to a specific entity within your Teams app.
-
-# [TeamsJS v2](#tab/teamsjs-v2)
-
-You can trigger navigation from your tab using the [pages.navigateToApp()](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest#@microsoft-teams-js-pages-navigatetoapp&preserve-view=true) function as shown in the following code:
-
-```javascript
-if (pages.isSupported()) {
-  const navPromise = pages.navigateToApp({ appId: <appId>, pageId: <pageId>, webUrl: <webUrl>, subPageId: <subPageId>, channelId:<channelId>});
-  navPromise.
-     then((result) => {/*Successful navigation*/}).
-     catch((error) => {/*Failed navigation*/});
-}
-else { /* handle case where capability isn't supported */ }
-```
-
-For more information about using the pages capability, see [pages.navigateToApp()](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest#@microsoft-teams-js-pages-navigatetoapp&preserve-view=true) and the [pages](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest&preserve-view=true) namespace for other navigation options. If needed, it's also possible to directly open a deep link using the [app.openLink()](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-openlink&preserve-view=true) function.
-
-# [TeamsJS v1](#tab/teamsjs-v1)
-
-To trigger a deep link from your tab, call:
-
-```javascript
-microsoftTeams.executeDeepLink(/*deepLink*/);
-```
-
----
-
-### Deep linking for SharePoint Framework tabs
+### Deep link for SharePoint Framework tabs
 
 The following deep link format can be used in a bot, connector or message extension card:
 `https://teams.microsoft.com/l/entity/<AppId>/<EntityId>?webUrl=<entityWebUrl>/<EntityName>`
@@ -281,20 +228,18 @@ The query parameters are:
 
 Example: `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&TaskList`
 
-## Open a task module
+## Deep link to open a task module
 
-## Task module deep link syntax
+A task module deep link is a serialization of the `TaskInfo` object with the two other details, `APP_ID` and optionally the `BOT_APP_ID`:
 
-A task module deep link is a serialization of the TaskInfo object with the following two other details, `APP_ID` and optionally the `BOT_APP_ID`:
+* `https://teams.microsoft.com/l/task/APP_ID?url=<TaskInfo.url>&height=<TaskInfo.height>&width=<TaskInfo.width>&title=<TaskInfo.title>&completionBotId=BOT_APP_ID`
 
-`https://teams.microsoft.com/l/task/APP_ID?url=<TaskInfo.url>&height=<TaskInfo.height>&width=<TaskInfo.width>&title=<TaskInfo.title>&completionBotId=BOT_APP_ID`
-
-`https://teams.microsoft.com/l/task/APP_ID?card=<TaskInfo.card>&height=<TaskInfo.height>&width=<TaskInfo.width>&title=<TaskInfo.title>&completionBotId=BOT_APP_ID`
+* `https://teams.microsoft.com/l/task/APP_ID?card=<TaskInfo.card>&height=<TaskInfo.height>&width=<TaskInfo.width>&title=<TaskInfo.title>&completionBotId=BOT_APP_ID`
 
 For the data types and allowable values for `<TaskInfo.url>`, `<TaskInfo.card>`, `<TaskInfo.height>`, `<TaskInfo.width>`, and `<TaskInfo.title>`, see [TaskInfo object](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object).
 
 > [!TIP]
-> URL encode the deep link when using the `card` parameter, for example, JavaScript's [`encodeURI()` function](https://www.w3schools.com/jsref/jsref_encodeURI.asp).
+> Encode the deep link URL when using the `card` parameter, for example, JavaScript [`encodeURI()` function](https://www.w3schools.com/jsref/jsref_encodeURI.asp).
 
 The following table provides information on `APP_ID` and `BOT_APP_ID`:
 
