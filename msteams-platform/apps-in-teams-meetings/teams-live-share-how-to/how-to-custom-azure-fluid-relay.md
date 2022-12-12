@@ -139,7 +139,7 @@ For more information, see [media capabilities](../teams-live-share-media-capabil
 
 ## See also
 
-* [Apps for Teams meetings](teams-apps-in-meetings.md)
+* [Apps for Teams meetings and calls](../teams-apps-in-meetings.md)
 * [GitHub repository](https://github.com/microsoft/live-share-sdk)
 * [Live Share SDK reference docs](/javascript/api/@microsoft/live-share/)
 * [Live Share Media SDK reference docs](/javascript/api/@microsoft/live-share-media/)
