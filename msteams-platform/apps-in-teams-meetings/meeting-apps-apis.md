@@ -290,19 +290,17 @@ The following table includes the response codes:
 
 ## Targeted meeting notification API
 
-The `targetedMeetingNotification` API allows apps to send notifications to specific participants in a meeting stage. Apps send a targeted meeting notification based on user action. The API is available through Teams Client SDK.
+The `targetedMeetingNotification` API allows apps to send notifications to specific participants in a meeting. Apps send a targeted meeting notification based on user action. The API is available through bot API.
 
 > [!NOTE]
 >
 > * The API payload only permits a task module with a URL.
->
-> * The supported user ID format for Azure Active Directory is pairwise MRI (29:< encrypted id >).
-> * You can get the encrypted ID from [GetMeetingParticipant API](#get-participant-api) or [GetMembers API](/rest/api/azure/devops/memberentitlementmanagement/members/get?view=azure-devops-rest-7.0).
->   * Following is an example of pairwise ID:
->
->    (Need an example of image showing the pairwise ID)
->
 > * The user ID formats **aadObjectid** and **UPN** aren't supported.
+
+Get supported user ID format for targeted meeting notification:
+
+* [GetMeetingParticipant API](#get-participant-api).
+* [GetMembers API](/rest/api/azure/devops/memberentitlementmanagement/members/get?view=azure-devops-rest-7.0).
 
 ### Example
 
