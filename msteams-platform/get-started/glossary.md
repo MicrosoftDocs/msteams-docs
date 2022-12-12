@@ -96,7 +96,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 
 | Term | Definition |
 | --- | --- |
-| [First-run Experience](../concepts/design/design-teams-app-ui-templates.md)|A First-run Experience (FRE) is a user's introduction to your product. The FRE helps users to get started with the functions, features, and benefits of the product and influences users' to come back and continue using your product.|
+| [First-run Experience](../concepts/design/design-teams-app-ui-templates.md)|A First-run Experience (FRE) is a user's introduction to your product. The FRE helps users to get started with the functions, features, and benefits of the product and influences users to come back and continue using your product.|
 | [Fully qualified domain name (FQDN)](../tabs/how-to/authentication/tab-sso-register-aad.md) | A fully qualified domain name (FQDN) represents a domain name of a host or IP address(es). |
 
 ## G
@@ -198,7 +198,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | [Single-tenant app](/tabs/how-to/authentication/tab-sso-register-aad) | Single-tenant apps are only available in the tenant they were registered in, also known as their home tenant. **See also**: [Multi-tenant apps](#m) |
 | [SPFx](../sbs-gs-spfx.yml) | SharePoint Framework (SPFx) is a development model to build client-side solutions for Microsoft Teams and SharePoint. |
 | [SSO](../concepts/authentication/authentication.md) | Acronym for Single sign-on, an authentication method in which a user needs to sign in to an independent service of a software platform (such as Microsoft 365) only once. The user is then able to access all services without having to go through authentication again. <br>**See also**: [Authentication](#a), [Scope](#s) |
-| [Stage view](../sbs-meetings-stage-view.yml) | A user interface component that lets you render the content that is opened in full screen in Teams and pinned as a tab. It's invoked to surface web content within Teams. Note that it *isn't* the same as meeting stage. <br>**See also**: [Meeting stage](#m) |
+| [Stage view](../sbs-meetings-stage-view.yml) | A user interface component that lets you render the content that is opened in full screen in Teams and pinned as a tab. It's invoked to surface web content within Teams. It *isn't* the same as meeting stage. <br>**See also**: [Meeting stage](#m) |
 | [Standalone app](../samples/integrating-web-apps.md) | A single-page or large, and complex app. The user can use some aspects of it in Teams. <br>**See also**: [Collaboration aap](#c) |
 | Standalone bot | Bots can be a standalone bot or be a part of a larger application. <br> **See also**: [Chat bot](#c), [Conversational bot](#c) |
 | [Static search](../task-modules-and-cards/cards/dynamic-search.md) | A method of typeahead search that lets users search from pre-specified values in the Adaptive Cards payload. <br>**See also**: [Dynamic search](#d) |
@@ -223,9 +223,9 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | [Teams store](../concepts/deploy-and-publish/appsource/publish.md) | A store landing page that brings apps to users in a single place. The apps are categorized by usage, industry, and more. An app must follow Store validation guidelines and obtain an approval before it's available to users via the Teams store.  <br>**See also**: [Store validation guidelines](#s), [Microsoft store](#m) |
 | [Teams workbench](../sbs-gs-spfx.yml) | A workbench in Visual Studio Code used at build for Teams apps created using SPFx and Teams Toolkit. <br>**See also**: [Workbench](#w); [Local workbench](#l) |
 | [Tenant ID](../bots/how-to/authentication/bot-sso-register-aad.md) | The unique identifier of the tenant where your app is registered in Azure AD portal. Your app may be classified as a single-tenant or a multi-tenant app. <br> **See also**: [Single-tenant app](#s), [Multi-tenant apps](#m) |
-| [Token exchange URL](../bots/how-to/authentication/bot-sso-register-aad.md) | It's the application ID URI that is used for exchanging token, and is configured while configuring the OAuth connection for bot resource. <br> **See also**: [Application ID URI](#u), [SSO](#s) |
+| [Token exchange URL](../bots/how-to/authentication/bot-sso-register-aad.md) | It's the application ID URI that is used for exchanging token. It's configured while configuring the OAuth connection for bot resource. <br> **See also**: [Application ID URI](#u), [SSO](#s) |
 | [TokenExchangeResource property](../bots/how-to/authentication/bot-sso-code.md) | It's a property of `OAuthCard` class that gets or sets the resource to try to perform token exchange with. Teams refreshes the token if the TokenExchangeResource property is populated on the card. <br> **See also**: [OAuth card](#o), [SSO](#s) <br> For more information, see [Microsoft Bot Schema 4.0](/dotnet/api/microsoft.bot.schema.oauthcard) |
-| [TeamsSSOTokenExchangeMiddleware](../bots/how-to/authentication/bot-sso-code.md) | This middleware will attempt to exchange the token if the activity name is signin/tokenExchange, and it ensures only one exchange request is processed. <br> **See also**: [SSO](#s) |
+| [TeamsSSOTokenExchangeMiddleware](../bots/how-to/authentication/bot-sso-code.md) | This middleware exchanges the token if the activity name is signin or tokenExchange. It also ensures only one exchange request is processed. <br> **See also**: [SSO](#s) |
 
 ## U
 
@@ -248,7 +248,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | --- | --- |
 | [Website url](../tabs/design/tabs-mobile.md) | A property in the app manifest file (`websiteUrl`) that links the app to the website of the organization or landing page of the relevant product. It's a mandatory configuration for Teams mobile client. <br>**See also**: [App manifest](#a); [Teams Mobile](#t) |
 | [Web app](../samples/integrate-web-apps-overview.md) | An app that runs on a web server. It can be integrated with Microsoft Teams Platform. |
-| [Webhook](../webhooks-and-connectors/what-are-webhooks-and-connectors.md) | It is a feature of a Teams app used to integrate it with external apps. <br>**See also**: Incoming webhook; outgoing webhook |
+| [Webhook](../webhooks-and-connectors/what-are-webhooks-and-connectors.md) | It's a feature of a Teams app used to integrate it with external apps. <br>**See also**: Incoming webhook; outgoing webhook |
 | [Web part](../sbs-gs-spfx.yml) | A UI component used to build a page or a site in a Teams app created using Visual Studio Code and SharePoint Framework. <br>**See also**: [SPFx](#s) |
 | [Workbench](../sbs-gs-spfx.yml) | Overall Visual Studio Code UI that encompasses UI components, such as title bar, panel, and more. <br>**See also**: [Local workbench](#l); [Teams workbench](#t) |
 
