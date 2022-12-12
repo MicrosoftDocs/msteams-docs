@@ -132,10 +132,6 @@ A great description can make your app stand out in the Microsoft Teams store and
 
 * References to the integrations, which aren't part of app functionality.
 
-   :::image type="content" source="../../../assets/images/submission/validation-common-reasons-pass-reference-app-funtionality.png" alt-text="Screenshot shows an example for pass reference integration of app functionality.":::
-
-   :::image type="content" source="../../../assets/images/submission/validation-common-reasons-failed-reference-app-funtionality.png" alt-text="Screenshot shows an example for failed reference integration of app functionality.":::
-
 * Grammatical errors.
 
 * App short and full description are same.
@@ -144,17 +140,11 @@ A great description can make your app stand out in the Microsoft Teams store and
 
 Microsoft’s brand assets including logos, icons, designs, trade dress, fonts, product names, services, sounds, emojis, and any other brand features and elements, whether registered or unregistered are proprietary assets owned by Microsoft and its group of companies.
 
- :::image type="content" source="../../../assets/images/submission/validation-common-reason-fail-violation-microsoft-trademark-brand.png" alt-text="Screenshot of failed scenario of violation of Microsoft trademark and brand guidelines.":::
-
 When referring to Microsoft trademarks, products names, and services, you must follow [Microsoft Trademark and Brand Guidelines](https://www.microsoft.com/legal/intellectualproperty/trademarks). You must avoid the following common violations that lead to app rejection:
 
 * Abbreviating Microsoft as MS or MSFT in the offer listing, referencing the first instance of Microsoft Teams in the offer listing as **Teams** instead of **Microsoft Teams**.
 
-   :::image type="content" source="../../../assets/images/submission/validation-common-reason-pass-MS-app-description.png" alt-text="Screenshot of passed image of Microsoft or MS in app description.":::
-
    :::image type="content" source="../../../assets/images/submission/validation-common-reason-failed-MS-app-description.png" alt-text="Screenshot of failed image of Microsoft or MS in app description.":::
-
-   :::image type="content" source="../../../assets/images/submission/validation-common-reason-paased-first-reference-teams.png" alt-text="Screenshot of image to show the passed reference instance of Microsoft Teams.":::
 
    :::image type="content" source="../../../assets/images/submission/validation-common-reason-failed-first-reference-teams.png" alt-text="Screenshot of image to show the failed reference instance of Microsoft Teams.":::
 
@@ -176,17 +166,9 @@ You must avoid the following issues that occur in 20% of apps that are rejected 
 
 * No Test instructions or credentials to test the app.
 
- :::image type="content" source="../../../assets/images/submission/validation-common-reason-fail-no-test-instructions.png" alt-text="Screenshot of the image for no test instructions or credentials are sufficient.":::
-
 * Only one test account provided when there's a dependency with two test accounts to test collaboration scenarios.
 
-   :::image type="content" source="../../../assets/images/submission/validation-common-reason-failed-test-collaboration-scenarios.png" alt-text="Screenshot of the image for the failed scenario of test collaboration.":::
-
 * The provided test instructions and credentials aren't sufficient to complete app functional testing.
-
-   :::image type="content" source="../../../assets/images/submission/validation-common-reason-pass-provided-test-instructions.png" alt-text="Screenshot of pass image for provided test instructions or credentials aren't sufficient.":::
-
-   :::image type="content" source="../../../assets/images/submission/validation-common-reason-fail-provided-test-instructions.png" alt-text="Screenshot of  fail image for provided test instructions or credentials aren't sufficient.":::
 
 ## Microsoft 365 App Compliance Program  
 
@@ -246,12 +228,6 @@ Your app name plays a critical role for users to discover your app on the Micros
 
 The Teams app manifest describes how the app integrates into the Microsoft Teams product. Your app manifest must conform to a publicly released [manifest schema](../../../resources/schema/manifest-schema.md). If your app supports localization, ensure that use a localization manifest schema version 1.5 or later. App packages that contain preview schemas (not publicly released) fail app review.
 
-   :::image type="content" source="../../../assets/images/submission/validation-common-reason-pass-webapplication-manifest.png" alt-text="Screenshot of the pass image for webApplicationInfo in manifest.":::
-
-   :::image type="content" source="../../../assets/images/submission/validation-common-reason-pass-resource-URL-manifest.png" alt-text="Screenshot of image passed for resource URL in manifest.":::
-
-   :::image type="content" source="../../../assets/images/submission/validation-common-reason-fail-resource-URL-manifest.png" alt-text="Screenshot of image failed  for resource URL in manifest.":::
-
 You must update the app version declared in the manifest if you're submitting an app update. We recommend you to always use the latest publicly released manifest schema when submitting a new app or an app update and ensure that the manifest schema version in Microsoft Teams store and Microsoft AppSource is the same.
 
    :::image type="content" source="../../../assets/images/submission/validation-common-reason-pass-app-version-number.png" alt-text="Screenshot to show the app version number incremented.":::
@@ -275,8 +251,6 @@ Your app’s UI must not look incomplete and should be intuitive. Ensure that us
 ## Valid domains
 
 Your app submission must adhere to the [external domains](/legal/marketplace/certification-policies) guidelines under Microsoft’s Commercial Marketplace Certification Policy. For your app to pass review, ensure that the valid domains listed in the app manifest are under your organization's direct control.
-
-   :::image type="content" source="../../../assets/images/submission/validation-common-reason-fail-domains-with-beta.png" alt-text="Screenshot to show the valid domains aren't appended with beta, dev and prod.":::
 
 ## Localization information
 
