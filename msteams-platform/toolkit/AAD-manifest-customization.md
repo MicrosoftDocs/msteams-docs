@@ -199,7 +199,7 @@ CodeLens shows the application name for the pre-authorized application ID for th
 
 3. Select `Deploy Azure AD Manifest` CodeLens in `aad.local.json`.
 
-     :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add deploy3.png" alt-text="deploy3":::
+     :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add deploy3.png" alt-text="deploy3" lightbox="../assets/images/teams-toolkit-v2/manual/add deploy3.png":::
 
 4. The changes for Azure AD application used in local environment are deployed.
   
@@ -217,7 +217,7 @@ CodeLens shows the application name for the pre-authorized application ID for th
 
 1. Copy the Azure AD application client ID from `state.xxx.json` () file in the `fx-resource-aad-app-for-teams` property.
   
-     :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add view1.png" alt-text="view1":::
+     :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add view1.png" alt-text="view1" lightbox="../assets/images/teams-toolkit-v2/manual/add view1.png":::
 
    > [!NOTE]
    > xxx in the client ID indicates the environment name where you have deployed the Azure AD application
