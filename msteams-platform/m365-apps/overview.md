@@ -16,8 +16,8 @@ The Teams app platform continues to evolve and expand holistically into the Micr
 
 | Teams app features| App manifest element | Teams support |Outlook* support | Office* support | Notes |
 |--|--|--|--|--|--|
-| [**Tabs**](../tabs/what-are-tabs.md) personal scope    |`staticTabs`  | Web, Desktop, Mobile | Web (Targeted Release), Desktop (Beta Channel) | Web (Targeted Release), Desktop (Beta Channel),  Mobile (Android)| Channel and group scope not yet supported for Microsoft 365. See [notes](../tabs/how-to/using-teams-client-sdk.md#microsoft-365-support-running-teams-apps-in-office-and-outlook).
-| [**Message extensions**](../messaging-extensions/what-are-messaging-extensions.md) search-based| `composeExtensions` | Web, Desktop, Mobile| Web (Targeted Release), Desktop (Beta Channel)| - |Action-based not yet supported for Microsoft 365. See [notes](extend-m365-teams-message-extension.md#troubleshooting). |
+| [**Tabs-personal scope**](../tabs/how-to/create-personal-tab.md)     |`staticTabs`  | Web, Desktop, Mobile | Web (Targeted Release), Desktop (Beta Channel) | Web (Targeted Release), Desktop (Beta Channel),  Mobile (Android)| Channel and group scope not yet supported for Microsoft 365. See [notes](../tabs/how-to/using-teams-client-sdk.md#microsoft-365-support-running-teams-apps-in-office-and-outlook).
+| [**Message extensions-search-based**](../messaging-extensions/how-to/search-commands/define-search-command.md)| `composeExtensions` | Web, Desktop, Mobile| Web (Targeted Release), Desktop (Beta Channel)| - |Action-based not yet supported for Microsoft 365. See [notes](extend-m365-teams-message-extension.md#troubleshooting). |
 | link unfurling | `composeExtensions.messageHandlers` | Web, Desktop | Web (Targeted Release), Desktop (Beta Channel) | - | See [notes](extend-m365-teams-message-extension.md#link-unfurling) |
 | [**Office Add-ins**](/office/dev/add-ins/develop/json-manifest-overview) (preview) | `extensions` | - | Web, Desktop | - | Only available in [devPreview](../resources/schema/manifest-schema-dev-preview.md) manifest version. See [notes](#office-add-ins-preview).|
 
@@ -42,7 +42,7 @@ You can also extend your search-based [Teams message extensions](extend-m365-tea
 
 :::image type="content" source="images/outlook-teams-messaging-ext.png" alt-text="The screenshot is an example that shows Message extension running in Outlook and Teams.":::
 
-[Link unfurling](extend-m365-teams-message-extension.md#link-unfurling)  works in Outlook web and Windows environments the same way it does in Microsoft Teams without any further work than using Teams app manifest version 1.13 or later.
+Link unfurling works in Outlook web and Windows environments the same way it does in Microsoft Teams without any further work than using Teams app manifest version 1.13 or later.
 
 :::image type="content" source="images/outlook-teams-link-unfurling.png" alt-text="The screenshot is an example that shows Link unfurling running in Outlook and Teams.":::
 
@@ -75,4 +75,4 @@ Set up your dev environment to build Teams apps for Microsoft 365:
 
 ## See also
 
-* [Link unfurling](../messaging-extensions/how-to/link-unfurling.md)
+* [Add link unfurling](../messaging-extensions/how-to/link-unfurling.md)

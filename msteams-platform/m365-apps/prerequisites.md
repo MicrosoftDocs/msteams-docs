@@ -138,4 +138,4 @@ Create or update a Teams app to run across Microsoft 365:
 
 ## See also
 
-* [Extend Teams apps across Microsoft 365](overview.md)
+[Extend Teams apps across Microsoft 365](overview.md)

@@ -45,4 +45,4 @@ To get started, see [distribute your Microsoft Teams app](../concepts/deploy-and
 
 ## See also
 
-* [Extend Teams apps across Microsoft 365](overview.md)
+[Extend Teams apps across Microsoft 365](overview.md)
