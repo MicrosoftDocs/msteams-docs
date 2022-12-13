@@ -97,13 +97,13 @@ An app's name plays a critical role in how users discover it in the store. Use t
 * Must not contain profane or derogatory terms. The name also must not include racially or culturally insensitive language. [*Mandatory Fix*]
 * Must be unique. If your app (Contoso) is listed in the Microsoft Teams store and Microsoft AppSource and you want to list another app specific to a geography such as Contoso Mexico, your submission must meet the following criteria:
   * Call out the app's region-specific functionality in the title, metadata, first response app experience, and help sections. For example, title must be Contoso Mexico. App title must clearly differentiate an existing app from the same developer to avoid end-user confusion. [*Mandatory Fix*]
-  * When uploading the app package in Partner Center, select the right **Markets** where the app will be available in the **Availability** section.
+  * When uploading the app package in Partner Center, select the right **Markets** where the app will be available in the **Availability** section. [*Mandatory Fix*]
 
-* App name must not lead with a core Teams feature such as Chat, Contacts, Calendar, Calls, Files, Activity, Teams, and Help. The app name does not shortens to either Chat, Contacts, Calendar, Calls, Files, Activity, Teams, and Help on install in the left navigation. [*Mandatory Fix*]
+* App name must not lead with a core Teams feature such as Chat, Contacts, Calendar, Calls, Files, Activity, Teams, and Help. The app name doesn't shortens to either Chat, Contacts, Calendar, Calls, Files, Activity, Teams, and Help on install in the left navigation. [*Mandatory Fix*]
 
 * If your app is part of an official partnership with Microsoft, the name of your app must come first. For example, **Contoso connector for Microsoft Teams**.
 
-* The app name must not have any reference to Microsoft or Microsoft products. Don’t use **Teams**, **Microsoft**, in the app name unless your app is in official partnership with Microsoft. In such an instance, the app name must come first before any reference to Microsoft. For example, **Contoso connector for Microsoft Teams**. [*Mandatory Fix*]
+* The app name must not have any reference to Microsoft or Microsoft products. Don’t use **Teams** or **Microsoft**, in the app name unless your app is in official partnership with Microsoft. In such an instance, the app name must come first before any reference to Microsoft. For example, **Contoso connector for Microsoft Teams**. [*Mandatory Fix*]
 
 * Don’t use parenthesis in naming to include Microsoft products. [*Mandatory Fix*]
 
@@ -128,7 +128,7 @@ App content must be suitable for general workplace consumption and follow all re
 
 Your app must enable group collaboration, improve an individual's productivity, or both. Apps intended for team bonding and socializing must be collaborative and designed for multiple participants. The apps must not require a substantial time investment of over 60 mins per session or affect productivity. [Mandatory Fix]
 
-Content Aggregator Apps must have a mechanism for users to report an issue or inappropriate content to the app publisher. [Mandatory Fix]
+Content aggregator Apps must have a mechanism for users to report an issue or inappropriate content to the app publisher. [Mandatory Fix]
 
 </details>
 
