@@ -28,7 +28,7 @@ Sideload an app for personal use, collaborating with your team, or testing and d
 
 For more information, see [upload your app in Teams](apps-upload.md).
 
-## Publish your app to your org
+## Publish to your org
 
 Make your app available to people in your org. This kind of distribution requires your Teams admin's approval.
 
@@ -56,3 +56,4 @@ For more information, see [publish to the Teams store](~/concepts/deploy-and-pub
 
 * [Microsoft 365 App Compliance Program](/microsoft-365-app-certification/overview)
 * [Create Teams app package](../build-and-test/apps-package.md)
+* [Publish to org](/microsoftteams/upload-custom-apps)

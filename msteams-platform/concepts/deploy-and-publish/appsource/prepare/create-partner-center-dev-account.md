@@ -212,4 +212,4 @@ The following resources can also assist:
 
 ## See also
 
-* [Publish your app to the Microsoft Teams store](../publish.md)
+[Publish your app to the Microsoft Teams store](../publish.md)
