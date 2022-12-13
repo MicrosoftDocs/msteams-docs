@@ -239,7 +239,7 @@ Don't include domains outside of your organization's control (including wildcard
 When using wildcards (`*`), the following rules apply:
 
 * If a subdomain segment includes a wildcard, it must be the only character in the segment.
-* Any segments preceding a segment with a wildcard must also contain wildcards.
+* Any segment preceding a wildcard segment must also be a wildcard segment.
 
 For example, *\*.\*.domain.com* is valid, but *foo.\*.myteam.domain.com* is not valid.
 
