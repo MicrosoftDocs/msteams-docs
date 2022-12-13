@@ -1,6 +1,6 @@
 ---
 title: Developer Portal for Teams
-description: In this article, learn more about Developer Portal and how to create a brand new app and import an existing app in the Teams Developer Portal.
+description: Learn how to create a brand new app and import an existing app in the Teams Developer Portal. Also, learn about the Changelog for Developer Portal.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
