@@ -152,5 +152,4 @@ For more information on role privileges, see [configure user security in an envi
 
 ## See also
 
-* [Integrate web apps](integrate-web-apps-overview.md)
-* [App manifest](../resources/schema/manifest-schema.md)
+[Integrate web apps](integrate-web-apps-overview.md)

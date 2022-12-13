@@ -325,3 +325,4 @@ For more information on Approvals, See [create an approval](https://support.micr
 ## See also
 
 * [Integrate web apps](integrate-web-apps-overview.md)
+* [Understand the Microsoft Teams app structure](../concepts/design/app-structure.md)

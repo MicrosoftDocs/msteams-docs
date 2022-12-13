@@ -88,4 +88,4 @@ After successful installation of all the Collaboration solutions into your envir
 
 ## See also
 
-* [Integrate web apps](integrate-web-apps-overview.md)
+[Integrate web apps](integrate-web-apps-overview.md)

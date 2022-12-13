@@ -32,8 +32,8 @@ Your Teams app must include required and expected collaborative features. To wor
 |Share shortcuts and extensions  |[Message extensions](../messaging-extensions/what-are-messaging-extensions.md)  |
 |Action shortcuts and extensions  |[Message extensions](../messaging-extensions/what-are-messaging-extensions.md)  |
 |Chatbots |[Bots](../bots/what-are-bots.md) |
-|Channel notifications  |[Bots](../bots/what-are-bots.md)<br/>[Incoming webhooks](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)<br/>[Office 365 Connectors](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)  |
-|Message external services  |[Bots](../bots/what-are-bots.md)<br/>[Outgoing webhooks](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)  |
+|Channel notifications  |[Bots](../bots/what-are-bots.md)<br/>[Incoming Webhooks](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)<br/>[Office 365 Connectors](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)  |
+|Message external services  |[Bots](../bots/what-are-bots.md)<br/>[Outgoing Webhooks](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)  |
 |Modals  |[Task modules](../task-modules-and-cards/what-are-task-modules.md)  |
 |Content-rich cards  |[Adaptive Cards](../task-modules-and-cards/what-are-cards.md)  |
 
@@ -122,6 +122,14 @@ When a team is created, a [SharePoint site collection](/microsoftteams/sharepoin
 
 ## See also
 
+* [Build tabs for Teams](../tabs/what-are-tabs.md)
+* [Build bots for Teams](../bots/what-are-bots.md)*
+* [Build message extensions for Teams](../messaging-extensions/what-are-messaging-extensions.md)
+* [Build cards and task modules for Teams](../task-modules-and-cards/cards-and-task-modules.md)
+* [Adaptive Cards](../task-modules-and-cards/cards/cards-reference.md#adaptive-card)
+* [Create Outgoing Webhooks](../webhooks-and-connectors/how-to/add-outgoing-webhook.md)
+* [Create Incoming Webhooks](../webhooks-and-connectors/how-to/add-incoming-webhook.md)
+* [Create Office 365 Connectors](../webhooks-and-connectors/how-to/connectors-creating.md)
 * [Integrate web apps](~/samples/integrate-web-apps-overview.md)
 * [Low-code and no-code solutions for Microsoft Teams](~/samples/teams-low-code-solutions.md)
 * [Share to Teams from web apps](~/concepts/build-and-test/share-to-teams-from-web-apps.md)

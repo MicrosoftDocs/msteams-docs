@@ -52,3 +52,4 @@ The controls run within a Power Apps Model Driven Application (MDA) that can be 
 ## See also
 
 * [Integrate web apps](integrate-web-apps-overview.md)
+* [Microsoft Graph overview](/graph/teams-concept-overview)
