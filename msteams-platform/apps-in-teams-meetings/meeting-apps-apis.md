@@ -1003,7 +1003,7 @@ The following table provides the response codes:
 * [Live Share SDK](teams-live-share-overview.md)
 * [Teams cloud meeting recording](/microsoftteams/cloud-recording)
 * [Build in-meeting notification for Teams meeting](in-meeting-notification-for-meeting.md)
-* [API reference for the Bot Framework Connector service](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0)
+* [API reference for the Bot Framework Connector service](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference)
 * [Integrate QR or barcode scanner capability](../concepts/device-capabilities/qr-barcode-scanner-capability.md)
 * [Generate meeting side panel](../sbs-meetings-sidepanel.yml)
 * [Generate in-meeting notifications](../sbs-meeting-content-bubble.yml)

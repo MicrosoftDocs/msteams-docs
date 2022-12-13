@@ -114,7 +114,7 @@ async function joinContainer() {
 }
 ```
 
-When testing locally, `TestLiveShareHost` updates the browser URL to contain the ID of the test container that was created. Copying that link to other browser tabs causes the `LiveShareClient` to join the test container that was created. If the modification of the applications URL interferers with the operation of the application, the strategy used to store the test containers ID can be customized using the [setLocalTestContainerId](/javascript/api/@microsoft/live-share/iteamsfluidclientoptions?view=msteams-client-js-latest) and [getLocalTestContainerId](/javascript/api/@microsoft/live-share/iteamsfluidclientoptions?view=msteams-client-js-latest) options passed to `LiveShareClient`.
+When testing locally, `TestLiveShareHost` updates the browser URL to contain the ID of the test container that was created. Copying that link to other browser tabs causes the `LiveShareClient` to join the test container that was created. If the modification of the applications URL interferers with the operation of the application, the strategy used to store the test containers ID can be customized using the [setLocalTestContainerId](/javascript/api/@microsoft/live-share/iteamsfluidclientoptions) and [getLocalTestContainerId](/javascript/api/@microsoft/live-share/iteamsfluidclientoptions) options passed to `LiveShareClient`.
 
 ## Write the stage view
 
