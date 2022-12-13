@@ -295,3 +295,4 @@ Collaboration controls virtual entities and their attributes have a one-to-one m
 ## See also
 
 * [Integrate web apps](integrate-web-apps-overview.md)
+* [Microsoft Graph overview](/graph/teams-concept-overview)

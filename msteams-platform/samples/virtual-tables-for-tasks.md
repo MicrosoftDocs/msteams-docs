@@ -708,3 +708,4 @@ The virtual tables honor the access control specified for Microsoft Graph. The v
 * [Integrate web apps](integrate-web-apps-overview.md)
 * [Build tabs for Teams](../tabs/what-are-tabs.md)
 * [App manifest schema for Teams](../resources/schema/manifest-schema.md)
+* [Microsoft Graph overview](/graph/teams-concept-overview)
