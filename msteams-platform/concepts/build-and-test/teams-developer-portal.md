@@ -10,7 +10,7 @@ ms.author: surbhigupta
 
 The <a href="https://dev.teams.microsoft.com" target="_blank">Developer Portal for Teams</a> is the primary tool for configuring, distributing, and managing your Microsoft Teams apps. With the Developer Portal, you can collaborate with colleagues on your app, set up runtime environments, and much more.
 
-:::image type="content" source="../../assets/images/tdp/tdp_home_1.png" alt-text="The screenshot is an example that shows the home page of the Developer Portal for Teams.":::
+:::image type="content" source="../../assets/images/tdp/tdp-home.png" alt-text="The screenshot is an example that shows the home page of the Developer Portal for Teams.":::
 
 > [!NOTE]
 >
