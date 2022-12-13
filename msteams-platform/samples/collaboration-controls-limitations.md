@@ -173,3 +173,8 @@ Go to Form Designer and drag the controls from the Component pane onto a form.
 <br>
 
 </details>
+
+## See also
+
+* [Integrate web apps](integrate-web-apps-overview.md)
+* [Live Share canvas overview](../apps-in-teams-meetings/teams-live-share-canvas.md)
