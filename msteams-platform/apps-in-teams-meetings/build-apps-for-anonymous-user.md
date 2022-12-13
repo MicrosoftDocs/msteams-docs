@@ -151,13 +151,18 @@ Anonymous users can view and interact with Adaptive Cards in the meeting chat. A
 
     :::image type="content" source="../assets/images/apps-in-meetings/app-icon.png" alt-text="This screenshot shows you how the app icon displays for anonymous user.":::
 
+## Next step
+
+> [!div class="nextstepaction"]
+> [Meeting apps APIs](meeting-apps-apis.md)
+
 ## See also
 
 * [Apps for Teams meetings and calls](teams-apps-in-meetings.md)
 * [Build apps for Teams meeting stage](build-apps-for-teams-meeting-stage.md)
-* [Meeting apps APIs](meeting-apps-apis.md)
+* [Get context for your tab](../tabs/how-to/access-teams-context.md)
 * [Bots and SDKs](../bots/bot-features.md)
 * [Build bots for Teams](../bots/what-are-bots.md)
-* [Message extensions](../messaging-extensions/what-are-messaging-extensions.md)
+* [Build message extensions](../messaging-extensions/what-are-messaging-extensions.md)
 * [Adaptive Card](../task-modules-and-cards/cards/cards-reference.md#adaptive-card)
-* [Cards and task modules](../task-modules-and-cards/cards-and-task-modules.md)
+* [Build cards and task modules](../task-modules-and-cards/cards-and-task-modules.md)

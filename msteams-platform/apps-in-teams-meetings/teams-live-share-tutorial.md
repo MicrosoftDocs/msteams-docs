@@ -114,7 +114,7 @@ async function joinContainer() {
 }
 ```
 
-When testing locally, `TestLiveShareHost` updates the browser URL to contain the ID of the test container that was created. Copying that link to other browser tabs causes the `LiveShareClient` to join the test container that was created. If the modification of the applications URL interferers with the operation of the application, the strategy used to store the test containers ID can be customized using the [setLocalTestContainerId](/javascript/api/@microsoft/live-share.iliveshareclientoptions#@microsoft-live-share-iliveshareclientoptions-setlocaltestcontainerid) and [getLocalTestContainerId](/javascript/api/@microsoft/live-share.iliveshareclientoptions#@microsoft-live-share-iliveshareclientoptions-getlocaltestcontainerid) options passed to `LiveShareClient`.
+When testing locally, `TestLiveShareHost` updates the browser URL to contain the ID of the test container that was created. Copying that link to other browser tabs causes the `LiveShareClient` to join the test container that was created. If the modification of the applications URL interferers with the operation of the application, the strategy used to store the test containers ID can be customized using the [setLocalTestContainerId](/javascript/api/@microsoft/live-share/iteamsfluidclientoptions?view=msteams-client-js-latest) and [getLocalTestContainerId](/javascript/api/@microsoft/live-share/iteamsfluidclientoptions?view=msteams-client-js-latest) options passed to `LiveShareClient`.
 
 ## Write the stage view
 
@@ -362,3 +362,4 @@ After you're ready to deploy your code, you can use [Teams Toolkit](../toolkit/p
 - [Use Fluid with Teams](../tabs/how-to/using-fluid-msteam.md)
 - [Build tabs for meeting](build-tabs-for-meeting.md)
 - [Tabs link unfurling and Stage View](../tabs/tabs-link-unfurling.md)
+-
