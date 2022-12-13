@@ -641,7 +641,8 @@ This section provides Bot authentication v3 SDK sample.
 
 ## See also
 
-[Add authentication through Azure Bot Service](https://aka.ms/azure-bot-add-authentication)
+- [Add authentication through Azure Bot Service](https://aka.ms/azure-bot-add-authentication)
+- [Get access on behalf of a user](/graph/auth-v2-user)
 
 <!-- Footnote-style links -->
 
