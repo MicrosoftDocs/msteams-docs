@@ -48,7 +48,7 @@ Perform the following steps to create a new environment:
 
 Teams Toolkit prompts you to select a target environment when you have multiple remote environments.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview-1.png" alt-text="add env":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview-1_1.png" alt-text="add env":::
 
 ## Project folder structure
 
