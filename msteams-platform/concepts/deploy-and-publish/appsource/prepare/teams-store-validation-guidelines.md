@@ -546,9 +546,14 @@ Remember the following:
 * Use high-resolution screenshots that are sharp and contain legible and clearly readable text. [*Mandatory Fix*]
 * Use mockups that accurately depict the app’s actual UI for the benefit of end-users. [*Mandatory Fix*]
 * Provide at least three screenshots in your app’s marketplace listing.
-* If your Teams app is extensible to other Microsoft 365 hubs, the screenshots provided must depict the app functionality in other Microsoft 365 hubs.
-* At least one screenshot must depict your app’s functionality on mobile devices.
-* We recommend that you provide captions in your screenshots to let the user clearly understand the app capability.
+* At least one screenshot must depict your app’s functionality on mobile devices. [*Mandatory Fix*]
+* We recommend that you provide captions in your screenshots to let the user clearly understand the app capability. [*Mandatory Fix*]
+* You can have up to 5 screenshots per listing. You must have a minimum of 3 and maximum 5 screenshots in your app listing. [*Mandatory Fix*]
+* Use mockups that accurately depict the app’s actual UI for the benefit of end-users. Screenshots must accurately depict the app’s actual UI or scenarios relevant to and related to the app. [*Mandatory Fix*]
+* Must depict app functionality/integration with Teams. [*Mandatory Fix*]
+* Provided screenshots must not incorrectly reference Microsoft Teams as MS, MSFT or MS Teams. [*Mandatory Fix*]
+* If your Teams app is extensible across Microsoft 365 clients (Office, Outlook and Microsoft Teams), the screenshots provided must depict the app functionality in other Microsoft 365 clients. [*Mandatory Fix*]
+* If your Teams app is extensible across Microsoft 365 clients (Office, Outlook and Microsoft Teams), the screenshots provided must depict the app functionality in other Microsoft 365 clients. [*Mandatory Fix*]
 
 **Don'ts:**
 
@@ -557,7 +562,7 @@ Remember the following:
 > [!TIP]
 >
 > * A video can be the most effective way to communicate why people must use your app. A video also is the first thing users see in your listing.
-> * If you choose to provide a video in your app listing, you must turn off ads in YouTube or Vimeo settings before submitting the video link in the Partner Center. Videos provided in the app listing must not be more than 90 seconds in duration and must only depict the app functionality and integration with Microsoft Teams. For more information, see [create a video for your store listing](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#create-a-video).
+> * If you choose to provide a video in your app listing, you must turn off ads in YouTube or Vimeo settings before submitting the video link in the Partner Center. Videos provided in the app listing must not be more than 90 seconds in duration and must only depict the app functionality and integration with Microsoft Teams. For more information, see [create a video for your store listing](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#create-a-video). [*Mandatory Fix*]
 
 </details>
 
@@ -604,7 +609,7 @@ Support URLs must include your contact details or a way forward for users to rai
 
 [*Mandatory Fix*]
 
-* If your app supports localization, your app package must include a file with language translations that display based on the Teams language setting. The file must conform to the Teams localization schema. For more information, see [Teams localization schema](~/concepts/build-and-test/apps-localization.md).
+* If your app supports localization, your app package must include a file with language translations that display based on the Teams language setting. The file must conform to the Teams localization schema. For more information, see [Teams localization schema](~/concepts/build-and-test/apps-localization.md). [*Mandatory Fix*]
 
 * App metadata content must be the same in `en-us` and other localization languages. [*Mandatory Fix*]
 
@@ -798,15 +803,15 @@ Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-compone
 
     :::image type="content" source="../../../../assets/images/submission/validation-usability-website-i-framed.png" alt-text="Graphic shows an example of an app with entire website in an I-frame without any back option.":::
 
-* Content must not truncate or overlap within the tab.
+* Content must not truncate or overlap within the tab. [*Mandatory Fix*]
 
     :::image type="content" source="../../../../assets/images/submission/validation-usability-content-truncation.png" alt-text="validation-usability-content-truncations":::
 
-* Users must be able to undo their last action in the tab.
+* Users must be able to undo their last action in the tab. [*Mandatory Fix*]
 
 * Tabs in a personal context may aggregate content from shared instances of the app. For example, a project management app with a configurable tab that lets channel members comment on the project on Kanban cards, must aggregate this content and display in the personal app. [*Suggested Fix*]
 
-* Tabs must be responsive to Teams themes. When a user changes the theme, the app's theme must reflect the selection.
+* Tabs must be responsive to Teams themes. When a user changes the theme, the app's theme must reflect the selection. [*Suggested Fix*]
 
     :::image type="content" source="../../../../assets/images/submission/validation-usability-responsive-tabs.png" alt-text="Graphic shows an example of a tab responsive to a theme in Teams.":::
 
@@ -817,22 +822,22 @@ Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-compone
     :::image type="content" source="../../../../assets/images/submission/validation-usability-app-uses-diff-font.png" alt-text="Screenshot shows an example of a tab with calibri font instead of native Teams font.":::
 
 * If your app functionality requires changes in settings, include a **Settings** tab. [*Suggested Fix*]
-* Tabs must follow Teams interaction design such as, in-page navigation, position and use of dialogs, information hierarchies. For more information, see [Microsoft Teams Fluent UI kit](~/concepts/design/design-teams-app-basic-ui-components.md).
+* Tabs must follow Teams interaction design such as, in-page navigation, position and use of dialogs, information hierarchies. For more information, see [Microsoft Teams Fluent UI kit](~/concepts/design/design-teams-app-basic-ui-components.md). [*Suggested Fix*]
 
-* Tab experiences must be fully responsive on mobile (Android and iOS).
+* Tab experiences must be fully responsive on mobile (Android and iOS). [*Mandatory Fix*]
 
    > [!TIP]
    >
    > * Include a personal bot alongside a personal tab.
    > * Allow users to share content from their personal tab.
 
-* Tab must not contain elements that completely obstruct or impede workflows within the tab. For example, bot inside a tab that can't be minimized.
+* Tab must not contain elements that completely obstruct or impede workflows within the tab. For example, bot inside a tab that can't be minimized. [*Mandatory Fix*]
 
    :::image type="content" source="../../../../assets/images/submission/validation-tab-elements-impede-workflow.png" alt-text="Graphic shows an example of tab with elements that impede workflows within the tab.":::
 
 * Tab must not have a broken functionality. Your offer must be a usable software solution and must provide the functionality, features, and deliverables as described in your listing and other related materials. [*Mandatory Fix*]
 
-* If your tabs contain a footer, ensure that you remove all links unrelated to app functionality from the footer.
+* If your tabs contain a footer, ensure that you remove all links unrelated to app functionality from the footer. [*Mandatory Fix*]
 
 </details>
 </br>
