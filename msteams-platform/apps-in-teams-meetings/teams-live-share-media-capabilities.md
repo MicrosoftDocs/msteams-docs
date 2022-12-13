@@ -58,9 +58,11 @@ Example:
 ```javascript
 import { LiveShareClient, UserMeetingRole } from "@microsoft/live-share";
 import { LiveMediaSession } from "@microsoft/live-share-media";
+import { LiveShareHost } from "@microsoft/teams-js";
 
 // Setup the Fluid container
-const liveShare = new LiveShareClient();
+const host = LiveShareHost.create();
+const liveShare = new LiveShareClient(host);
 const schema = {
   initialObjects: { mediaSession: LiveMediaSession },
 };
@@ -81,10 +83,12 @@ await mediaSession.initialize(allowedRoles);
 ```TypeScript
 import { LiveShareClient, UserMeetingRole } from "@microsoft/live-share";
 import { LiveMediaSession, IMediaPlayer, MediaPlayerSynchronizer } from "@microsoft/live-share-media";
+import { LiveShareHost } from "@microsoft/teams-js";
 import { ContainerSchema } from "fluid-framework";
 
 // Join the Fluid container
-const liveShare = new LiveShareClient();
+const host = LiveShareHost.create();
+const liveShare = new LiveShareClient(host);
 const schema: ContainerSchema = {
   initialObjects: { mediaSession: LiveMediaSession },
 };
