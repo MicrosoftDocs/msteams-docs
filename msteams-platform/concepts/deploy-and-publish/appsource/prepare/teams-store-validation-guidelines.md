@@ -277,13 +277,13 @@ Apps must not take users out of Teams for core user scenarios. App content and i
 
 <details><summary>Expand to know more</summary>
 
-* Link users within Teams app and not to an external site or app. For scenarios that require external functionality, your app must take explicit user permission to launch the functionality.
+* Link users within Teams app and not to an external site or app. For scenarios that require external functionality, your app must take explicit user permission to launch the functionality. [*Mandatory Fix*]
 
-* Button UI text that launches external functionality must include content to indicate the user is taken out of the Teams instance. For example, include text such as **This way to Contoso.com** or **View in Contoso.com**.
+* Button UI text that launches external functionality must include content to indicate the user is taken out of the Teams instance. For example, include text such as **This way to Contoso.com** or **View in Contoso.com**. [*Mandatory Fix*]
 
-* Add **Pop-out** icon to let the users know that they're being navigated outside Teams. You can use the pop-out icon :::image type="icon" source="../../../../assets/icons/pop-out-icon.png" ::: to the right of the link.
+* Add **Pop-out** icon to let the users know that they're being navigated outside Teams. You can use the pop-out icon :::image type="icon" source="../../../../assets/icons/pop-out-icon.png" ::: to the right of the link. [*Mandatory Fix*]
 
-* If you're unable to add a **Pop-out** icon, you can implement any of the following options to let the user know that they're being navigated outside Teams:
+* If you're unable to add a **Pop-out** icon, you can implement any of the following options to let the user know that they're being navigated outside Teams: [*Mandatory Fix*]
   * Add a note in Adaptive Card that states that when users select **Get Help using this app**, it takes the user outside Teams.
   * Add interstitials dialogs.
 
@@ -310,10 +310,10 @@ Your app must show a graceful failure message on unsupported browsers and operat
 
 Teams apps must respond within a reasonable timeframe or show a loading or typing indicator or message or warning.
 
-* Tabs must respond within two seconds or display a loading message or warning.
-* Bots must respond to user commands within two seconds or display a typing indicator.
-* Message extensions must respond to user commands within two seconds.
-* Notifications must display within two seconds of the user action.
+* Tabs must respond within two seconds or display a loading message or warning. [*Mandatory Fix*]
+* Bots must respond to user commands within two seconds or display a typing indicator. [*Mandatory Fix*]
+* Message extensions must respond to user commands within two seconds. [*Mandatory Fix*]
+* Notifications must display within two seconds of the user action. [*Mandatory Fix*]
 
 ## App package and store listing
 
@@ -357,7 +357,7 @@ The Teams app manifest defines your app's configuration.
 
 * You must use the Teams manifest schema version 1.5 or later to localize your app. To use the app schema version 1.5 or later in your manifest.json file, update the `$schema` attribute to 1.5 or later. Update the `manifestVersion` property to `$schema` version (1.5 in this case). [*Mandatory Fix*]
 
-* When you add, update, or remove an existing capability, add or remove manifest or Partner Center metadata, you must increase the app version number and submit the new app manifest in your Partner Center account for validation.
+* When you add, update, or remove an existing capability, add or remove manifest or Partner Center metadata, you must increase the app version number and submit the new app manifest in your Partner Center account for validation. [*Mandatory Fix*]
 
 * The version string must follow the Semantic Versioning Specification (SemVer) standard (MAJOR.MINOR.PATCH). [*Mandatory Fix*]
 
@@ -377,15 +377,15 @@ Icons are one of the main elements people see when browsing the Teams store.
 
 Your icons must communicate your app's brand and purpose while adhering to the following requirements:
 
-* Your app package must include two .png versions of your app icon: A color icon and an outline icon.
-* The color version of your icon must be 192x192 pixels. Your icon symbol can be any color or colors, but it must sit on a solid or fully transparent square background.
+* Your app package must include two .png versions of your app icon: A color icon and an outline icon. [*Mandatory Fix*]
+* The color version of your icon must be 192x192 pixels. Your icon symbol can be any color or colors, but it must sit on a solid or fully transparent square background. [*Mandatory Fix*]
 * The outline version of your icon is displayed in the following scenarios:
   * When your app is in use and **hosted** on the app bar on the left side of Teams.
   * When a user pins your app's message extension.
 
-* The outline must be 32x32 pixels and can be white with a transparent background or transparent with a white background. The icon must not have any extra padding around the symbol.
+* The outline must be 32x32 pixels and can be white with a transparent background or transparent with a white background. The icon must not have any extra padding around the symbol. [*Mandatory Fix*]
 
-* Your app package must include correctly sized and formatted icons. The icons must match the information in store listing metadata.
+* Your app package must include correctly sized and formatted icons. The icons must match the information in store listing metadata. [*Mandatory Fix*]
 
 For more information, see [icon guidelines](~/concepts/build-and-test/apps-package.md#app-icons).
 
@@ -408,7 +408,7 @@ Descriptions must not directly or through insinuation disparage another brand (M
 
    :::image type="content" source="../../../../assets/images/submission/validation-app-description-comparitive-marketing-fail.png" alt-text="Graphic shows an example of comparative marketing information in app description.":::
 
-* Hyperlink contact details, get started, help, or sign up in app description.
+* Hyperlink contact details, get started, help, or sign up in app description. [*Mandatory Fix*]
 
    :::image type="content" source="../../../../assets/images/submission/validation-app-description-contact-deatils-hyperlinked.png" alt-text="Graphic shows an example of contact details hyperlinked in the app descriptions.":::
 
@@ -435,7 +435,7 @@ Descriptions must not directly or through insinuation disparage another brand (M
 
 * If your app is supported for specific regions or geographical locations, you must call out that specific region dependency in the app description in manifest, Partner Center, and AppSource for that offer.
 
-* If you need to reference Teams, write the first reference in the app listing as Microsoft Teams. Later references can be shortened to Teams.
+* If you need to reference Teams, write the first reference in the app listing as Microsoft Teams. Later references can be shortened to Teams. [*Mandatory Fix*]
 
    :::image type="content" source="../../../../assets/images/submission/validation-app-description-teams-reference-pass.png" alt-text="Graphic shows an example of correct reference to Teams in app description.":::
 
