@@ -1,16 +1,16 @@
 ---
-title: Microsoft Teams store ranking parameters
+title: Microsoft Teams stores ranking parameters
 description: Understand Microsoft Teams store ranking parameters such as historical usage and user engagement data, app quality and values, audience relevance, app update.
 ms.topic: reference
 ms.localizationpriority: high
 author: v-ypalikila
 ms.author: v-ypalikila
 ---
-# Microsoft Teams store ranking parameters
+# Microsoft Teams stores ranking parameters
 
 The information in this disclosure statement applies to the Microsoft Teams store in which Microsoft makes third-party apps available to users. The Microsoft Teams store ranks app search results in the store using a set of ranking parameters to deliver relevant search results to users. The ranking parameters listed aren't exhaustive and they're intended to provide our publisher community with a high-level understanding of the main parameters that the storefront use in ranking determinations. All defined terms used but not otherwise defined herein will have the meaning ascribed thereto in the Microsoft Publisher Agreement.
 
-The Microsoft Teams store editorial team determines the prominence and location of an app within the Editorial sections such as promo banner on the Microsoft Teams store based on ranking parameters, and are used as objective criteria applied equally to all apps in the Microsoft Teams store that includes Microsoft’s own apps and all third-party developer apps. Following are the main parameters used to determine app placements:
+The Microsoft Teams stores editorial team determines the prominence and location of an app within the Editorial sections such as promo banner on the Microsoft Teams store based on ranking parameters, and are used as objective criteria applied equally to all apps in the Microsoft Teams store that includes Microsoft’s own apps and all third-party developer apps. Following are the main parameters used to determine app placements:
 
 * Historical usage data: Apps with higher volumes of usage in the Teams store tend to rank higher than apps with lower usage.
 
