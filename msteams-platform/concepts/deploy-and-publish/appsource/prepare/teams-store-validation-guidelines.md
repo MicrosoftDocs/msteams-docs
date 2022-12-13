@@ -124,9 +124,11 @@ An app's name plays a critical role in how users discover it in the store. Use t
 <br></br>
 <details><summary>Expand to know more</summary>
 
-App content must be suitable for general workplace consumption and follow all restrictions listed in the commercial marketplace certification policies. Content related to religion, politics, gambling, and prolonged entertainment is prohibited.
+App content must be suitable for general workplace consumption and follow all restrictions listed in the commercial marketplace certification policies. Content related to religion, politics, gambling, and prolonged entertainment is prohibited. [Mandatory Fix]
 
-Your app must enable group collaboration, improve an individual's productivity, or both. Apps intended for team bonding and socializing must be collaborative and designed for multiple participants. The apps must not require a substantial time investment of over 60 mins per session or affect productivity.
+Your app must enable group collaboration, improve an individual's productivity, or both. Apps intended for team bonding and socializing must be collaborative and designed for multiple participants. The apps must not require a substantial time investment of over 60 mins per session or affect productivity. [Mandatory Fix]
+
+Content Aggregator Apps must have a mechanism for users to report an issue or inappropriate content to the app publisher. [Mandatory Fix]
 
 </details>
 
@@ -157,12 +159,12 @@ For more information on how to implement app authentication, see [authentication
 If your app authenticates users with an external service, follow these guidelines:
 
 * **Sign in, sign out, and sign up experiences**:
-  * Apps that depend on external accounts or services must provide clear and simple sign in, sign out, and sign up experience.
-  * When users sign out, they must sign out only from the app and remain signed in to Teams.
+  * Apps that depend on external accounts or services must provide clear and simple sign in, sign out, and sign up experience. [*Mandatory Fix*]
+  * When users sign out, they must sign out only from the app and remain signed in to Teams. [*Mandatory Fix*]
   * Apps that depend on external accounts or services must provide a way forward for new users to sign up or contact the app publisher to learn more about the services and get access to the services.
-  Way forward must be available in the app’s manifest, AppSource long description, and app first run experience (bot welcome message, tab setup, or config page).
+  Way forward must be available in the app’s manifest, AppSource long description, and app first run experience (bot welcome message, tab setup, or config page). [*Mandatory Fix*]
   * Apps that require tenant admin to complete one-time setup must call out dependency on tenant admin to configure the app (before any other tenant user can install and use the app).
-  Dependency must be called out in the app’s manifest, AppSource long description, all first run experience touchpoints (bot welcome message, tab setup, or config page), help text as considered necessary as part of bot response, compose extension, or static tab content.
+  Dependency must be called out in the app’s manifest, AppSource long description, all first run experience touchpoints (bot welcome message, tab setup, or config page), help text as considered necessary as part of bot response, compose extension, or static tab content. [*Mandatory Fix*]
   
 * **Content sharing experiences**: Apps that require authentication with an external service to share content in Teams channels must clearly state in the help documentation (or similar resources) on how to disconnect or unshare content if that feature is supported on the external service. This doesn't mean the ability to unshare content must be present in your Teams app.
 
@@ -180,25 +182,25 @@ If your app authenticates users with an external service, follow these guideline
 <br></br>
 <details><summary>Expand to know more</summary>
 
-Apps must not ask users to make payments within the Teams interface and transmit financial information to users through a bot interface.
+Apps must not ask users to make payments within the Teams interface and transmit financial information to users through a bot interface. [*Mandatory Fix*]
 
 :::image type="content" source="../../../../assets/images/submission/validation-financial-information-1.png" alt-text="validation-financial-info":::
 
-You may provide link to secure external payment services only if you disclose it in your terms of use, privacy policy, profile page, or website before the user agrees to use the app.
+You may provide link to secure external payment services only if you disclose it in your terms of use, privacy policy, profile page, or website before the user agrees to use the app. [*Mandatory Fix*]
 
-Don't facilitate payments through an app for goods or services prohibited by [General policy number 100.10 Inappropriate content](/legal/marketplace/certification-policies#10010-inappropriate-content).
+Don't facilitate payments through an app for goods or services prohibited by [General policy number 100.10 Inappropriate content](/legal/marketplace/certification-policies#10010-inappropriate-content). [*Mandatory Fix*]
 
 Apps running on the iOS or Android version of Teams must adhere to the following guidelines:
 
-* Apps must not include in-app purchases, trial offers, or UI that aims to upsell users to paid versions or online stores to purchase other content, apps, or add-ins.
+* Apps must not include in-app purchases, trial offers, or UI that aims to upsell users to paid versions or online stores to purchase other content, apps, or add-ins. [*Mandatory Fix*]
 
     :::image type="content" source="../../../../assets/images/submission/validation-financial-information-in-app-purchase.png" alt-text="validation-financial-info-in-app-purchase":::
 
     :::image type="content" source="../../../../assets/images/submission/validation-financial-information-online-stores.png" alt-text="validation-online-store":::
 
-* If your app requires an account, users can sign up for an account at no charge. The use of the term **free** or **free account** is prohibited.
-* You can determine whether an account is active indefinitely or for a limited time. When the account expires the app must not show UI, text, or links indicating the need to pay.
-* Your app's privacy policy and terms of use must be free of any commerce-related UI or links.
+* If your app requires an account, users can sign up for an account at no charge. The use of the term **free** or **free account** is prohibited. [*Mandatory Fix*]
+* You can determine whether an account is active indefinitely or for a limited time. When the account expires the app must not show UI, text, or links indicating the need to pay. [*Mandatory Fix*]
+* Your app's privacy policy and terms of use must be free of any commerce-related UI or links. [*Mandatory Fix*]
 
 </details>
 
@@ -228,13 +230,24 @@ Bots must always ask permission to upload a file and display a confirmation mess
 
 Don't include domains outside of your organization's control (including wildcards) and tunneling services in your app's domain configurations. The following exceptions include:
 
-* If your app uses the Azure Bot Service's OAuthCard, you must include `token.botframework.com` as a valid domain or the **Sign in** button won't work.
-* If your app relies on SharePoint, you can include the associated root SharePoint site as a valid domain using the `{teamSiteDomain}` context property.
+* If your app uses the Azure Bot Service's OAuthCard, you must include `token.botframework.com` as a valid domain or the **Sign in** button won't work. [*Mandatory Fix*]
+* If your app relies on SharePoint, you can include the associated root SharePoint site as a valid domain using the `{teamSiteDomain}` context property. [*Mandatory Fix*]
 * Don't use top level domains such as **.com**, **.in**, and **.org** as a valid domain. [*Mandatory Fix*]
 
 * Don't use **.onmicrosoft.com or** as a valid domain where **onmicrosoft** isn't under your control. However, you can use **yoursite.com** as a valid domain where **yoursite** is under your control even though the domain includes a wildcard. [*Mandatory Fix*]
 
 * If your app is a PowerApp built on the Microsoft Power Platform, you must include *apps.powerapps.com* as a valid domain to enable your app to be accessible and functional within Teams.
+
+* If your app uses the Azure Bot Service's OAuthCard, you must include *token.botframework.com* as a valid domain or else the Sign-in button won't work. You must not declare *.botframework.com* as wildcards are not allowed with this domain name. [*Mandatory Fix*]
+
+* Following External Domains are not allowed [*Mandatory Fix*]
+  * *.azurewebsites.net
+  * *.azurewebsites.net
+  * *.microsoft.com
+  * *.microsoft.com
+  * *.onmicrosoft.com
+  * go.microsoft.com
+  * teams.microsoft.com
 
 </details>
 
