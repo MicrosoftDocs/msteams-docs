@@ -209,6 +209,11 @@ Perform the following steps using the Teams Toolkit to debug your app after you 
 
 ## See also
 
+* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
+* [Build bots for Teams](../bots/what-are-bots.md)
+* [Build tabs for Teams](../tabs/what-are-tabs.md)
+* [Build Message extensions](../messaging-extensions/what-are-messaging-extensions.md)
+* [Introduction to Azure Functions](/azure/azure-functions/functions-overview)
 * [Use Teams Toolkit to provision cloud resources](provision.md)
 * [Add capabilities to your Teams apps](add-capability.md)
 * [Deploy to the cloud](deploy.md)

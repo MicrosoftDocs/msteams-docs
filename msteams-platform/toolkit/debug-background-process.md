@@ -175,6 +175,10 @@ You can view the project folders and files under **Explorer** in Visual Studio C
 
 ## See also
 
+* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
+* [Build bots for Teams](../bots/what-are-bots.md)
+* [Build tabs for Teams](../tabs/what-are-tabs.md)
+* [Build Message extensions](../messaging-extensions/what-are-messaging-extensions.md)
 * [Debug your Teams app using Teams Toolkit](debug-local.md)
 * [Use Teams Toolkit to provision cloud resources](provision.md)
 * [Deploy to the cloud](deploy.md)
