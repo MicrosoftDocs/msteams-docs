@@ -190,7 +190,7 @@ Teams Toolkit provides Microsoft Teams app templates in Visual Studio to create 
 The steps to create a new Teams app are similar for all types of apps except notification bot. The following steps help you to create a new tab app:
 
 1. Open Visual Studio.
-1. Create new project by using one of the following two options.
+1. Create new project by using one of the following two options:
 
      :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-create-new-project1_1_2.png" alt-text="Create new project with code from get started":::
 
