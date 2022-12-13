@@ -170,7 +170,7 @@ For in-meeting side panel experience only: 
 
 ### Advanced tab APIs
 
-TeamsJS is a rich library used to create Tabs using JavaScript. Use the latest TeamsJS (V.2.0 or later) to work in Teams, Office, and Outlook. For more information, see [Teams JavaScript client SDK](/microsoftteams/platform/tabs/how-to/using-teams-client-sdk).
+TeamsJS is a rich library used to create Tabs using JavaScript. Use the latest TeamsJS (V.2.0 or later) to work in Teams, Office, and Outlook. For more information, see [Teams JavaScript client library](/microsoftteams/platform/tabs/how-to/using-teams-client-library).
 
 ### Frame context
 

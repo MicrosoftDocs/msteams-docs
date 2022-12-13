@@ -7,7 +7,7 @@ ms.localizationpriority: medium
 # Configure third party OAuth IdP authentication
 
 > [!Note]
-> For authentication to work for your tab on mobile clients, ensure that you're using version 1.4.1 or later of the Teams JavaScript SDK.
+> For authentication to work for your tab on mobile clients, ensure that you're using version 1.4.1 or later of the Teams JavaScript library.
 
 There are many services that you may want to consume inside your Teams app, and most of those services require authentication and authorization to get access to the service. Services includes Facebook, Twitter, and Teams.
 Teams user profile information is stored in Azure AD using Microsoft Graph and this article will focus on authentication using Azure AD to get access to this information.
