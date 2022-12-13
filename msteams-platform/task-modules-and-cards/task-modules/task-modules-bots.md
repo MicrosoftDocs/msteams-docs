@@ -214,3 +214,5 @@ Follow the [step-by-step guide](../../sbs-botbuilder-taskmodule.yml) to create a
 * [Cards and task modules](../cards-and-task-modules.md)
 * [Microsoft Teams task module sample code in Node.js](https://github.com/OfficeDev/microsoft-teams-sample-task-module-nodejs/blob/master/src/TeamsBot.ts)
 * [Bot Framework samples](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/README.md)
+* [Adaptive Cards](../cards/cards-reference.md#adaptive-card)
+* [Create Office 365 Connectors](../../webhooks-and-connectors/how-to/connectors-creating.md)
