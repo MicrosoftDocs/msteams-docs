@@ -844,19 +844,19 @@ Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-compone
 
 <details><summary>Scope selection</summary>
 
-* Content in the landing page of configurable tabs must not be scoped for individual use and not include personal content such as **My Tasks** or **My Dashboard**.
+* Content in the landing page of configurable tabs must not be scoped for individual use and not include personal content such as **My Tasks** or **My Dashboard**. [*Mandatory Fix*]
 
    :::image type="content" source="../../../../assets/images/submission/validation-configurable-tab-content-personal-scope.png" alt-text="Graphic shows an example of content in a configurable tab with personal scope such as My tasks or My dashboard.":::
 
-* After the configuration experience, the landing page must show a collaborative view for the entire team.
+* After the configuration experience, the landing page must show a collaborative view for the entire team. [*Mandatory Fix*]
 
-* If your app requires provision of a personal scope view for the user to enhance efficiency or workplace productivity, use filtered views, deep links to personal apps, or navigate to L2 or L3 views within the configurable tab and keep the landing page contextually the same for all the users.
+* If your app requires provision of a personal scope view for the user to enhance efficiency or workplace productivity, use filtered views, deep links to personal apps, or navigate to L2 or L3 views within the configurable tab and keep the landing page contextually the same for all the users. [*Mandatory Fix*]
 
-* Content in the landing page of the configurable tabs must be contextually same for all members of the channel.
+* Content in the landing page of the configurable tabs must be contextually same for all members of the channel. [*Mandatory Fix*]
 
     :::image type="content" source="../../../../assets/images/submission/validation-usability-configurable-tab-personal-info.png" alt-text="Graphic shows an example of content in the landing page of the configurable tabs contextually different for all members.":::
 
-* Configurable tabs must have focused functionality.
+* Configurable tabs must have focused functionality. [*Mandatory Fix*]
 
     :::image type="content" source="../../../../assets/images/submission/validation-usability-configurable-nested-tabs.png" alt-text="validation-usability-configurable-nested-tab":::
 
@@ -888,19 +888,19 @@ If your app includes a bot, ensure that it adheres to these guidelines.
 
 Analyzing user input and predicting user intent is difficult. Bot commands provide users a set of words or phrases for your bot to understand.
 
-* You must list at least one supported bot command in the `{commandList}` section of your app manifest. These commands display in the compose box when a user tries to message your bot.
+* You must list at least one supported bot command in the `{commandList}` section of your app manifest. These commands display in the compose box when a user tries to message your bot. [*Mandatory Fix*]
 
    :::image type="content" source="../../../../assets/images/submission/validation-bot-commands-listed.png" alt-text="Graphic shows an example of bot commands listed in the app manifest.":::
 
    :::image type="content" source="../../../../assets/images/submission/validation-bot-commands-not-listed.png" alt-text="Graphic shows an example of bot commands not listed in the app manifest.":::
 
-* All commands that your bot supports must work correctly, including generic commands such as **Hi**, **Hello**, and **Help**.
+* All commands that your bot supports must work correctly, including generic commands such as **Hi**, **Hello**, and **Help**. [*Mandatory Fix*]
   
   :::image type="content" source="../../../../assets/images/submission/validation-bot-commands-generic-response-pass.png" alt-text="Graphic shows an example of bot responding to generic commands.":::
 
   :::image type="content" source="../../../../assets/images/submission/validation-bot-commands-generic-no-response.png" alt-text="Graphic shows an example of bot with no response to generic commands.":::
 
-* Bot commands must not lead a user to a dead end, the commands must always provide a way forward.
+* Bot commands must not lead a user to a dead end, the commands must always provide a way forward. [*Mandatory Fix*]
 
    :::image type="content" source="../../../../assets/images/submission/validation-bot-commands-deadend.png" alt-text="validation-bot-commands-dead-end":::
 
@@ -1052,27 +1052,27 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
 Bots must not spam users by sending multiple messages in short duration.
 
-* **Bot messages in channels and chats**: Don't spam users by creating separate posts. Create a single post with replies in the same thread.
+* **Bot messages in channels and chats**: Don't spam users by creating separate posts. Create a single post with replies in the same thread. [*Mandatory Fix*]
 
     :::image type="content" source="../../../../assets/images/submission/validation-bot-message-spamming-one-message.png" alt-text="validation-bot-message-spam-one-message":::
 
     :::image type="content" source="../../../../assets/images/submission/validation-bot-message-spamming-multiple-messages.png" alt-text="validation-bot-message-spam-multiple-message":::
 
 * **Bot messages in personal apps**:
-  * Don't send multiple messages in quick succession.
+  * Don't send multiple messages in quick succession. [*Mandatory Fix*]
 
     :::image type="content" source="../../../../assets/images/submission/validation-bot-messages-multiple-message-quick-succession.png" alt-text="Graphic shows an example of a bot sending multiple messages in quick succession.":::
 
-  * Send one message with complete information.
-  * Avoid multi-turn conversations to complete a single repetitive workflow.
-  * Use a form (or task module) to collect all inputs from a user at one-time.
+  * Send one message with complete information. [*Mandatory Fix*]
+  * Avoid multi-turn conversations to complete a single repetitive workflow. [*Mandatory Fix*]
+  * Use a form (or task module) to collect all inputs from a user at one-time. [*Mandatory Fix*]
   * NLP based conversational chatbots can use multi turn conversation to make the discussion more engaging and complete a workflow.
 
     :::image type="content" source="../../../../assets/images/submission/validation-bot-messages-using-task-module.png" alt-text="validation-bot-message-using-task-module":::
 
     :::image type="content" source="../../../../assets/images/submission/validation-bot-messages-using-mutliple-conversation.png" alt-text="Graphic shows an example bot using multi-turn messages to complete a single conversation.":::
 
-* **Welcome messages**: Don't repeat the same welcome message over regular intervals. For example, when a new member is added to a team, don't spam the other members with a welcome message. Message the new member personally.
+* **Welcome messages**: Don't repeat the same welcome message over regular intervals. For example, when a new member is added to a team, don't spam the other members with a welcome message. Message the new member personally. [*Mandatory Fix*]
 
    :::image type="icon" source="../../../../assets/images/submission/validation-bot-send-proactive-message-to-all-members.png" alt-text="Graphic shows an example bot spamming users with same welcome message.":::
 
@@ -1081,7 +1081,7 @@ Bots must not spam users by sending multiple messages in short duration.
 
 <details><summary>Bot notifications</summary>
 
-Bot notifications must include content relevant for the scope you define for the bot (team, chat, or personal).
+Bot notifications must include content relevant for the scope you define for the bot (team, chat, or personal). [*Mandatory Fix*]
 
 :::image type="content" source="../../../../assets/images/submission/validation-bot-notifications-relevant.png" alt-text="validation-bot-notification-relevant":::
 
