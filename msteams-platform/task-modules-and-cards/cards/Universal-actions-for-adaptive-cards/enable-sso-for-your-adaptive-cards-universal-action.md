@@ -6,7 +6,7 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ---
 
-# SSO for your Adaptive Cards Universal Actions
+# Enable SSO for your Adaptive Cards Universal Actions
 
 With Single sign-on (SSO) in Teams, app users have the advantage of using Teams to access Adaptive Cards Universal Actions in bot. After logging in to Teams using Microsoft or Microsoft 365 account, app users can use your app without the need to sign in again. Your app is available to app users on any device with access granted through Azure Active Directory (AD).
 

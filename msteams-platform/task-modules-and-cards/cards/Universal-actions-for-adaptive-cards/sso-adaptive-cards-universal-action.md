@@ -6,7 +6,7 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ---
 
-# Add code to enable SSO
+# Add code to enable SSO for your Adaptive Cards Universal Actions
 
 Authentication steps for SSO are similar to that of a bot in Teams. Following are the steps to achieve SSO in Adaptive Cards Universal Action:
 
