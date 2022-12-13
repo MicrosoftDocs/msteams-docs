@@ -616,8 +616,8 @@ Teams apps that require their own SharePoint URLs to function well, includes "{t
 > Do not add domains that are outside your control, either directly or through wildcards. For example, `*.yoursite.com` is valid, whereas `*.onmicrosoft.com` is not valid (as it isn't under your control).
 >
 > When using wildcards (`*`), the following rules apply:
-> 
-> * A wildcard must be the only character in a subdomain segment.
+>
+> * If a subdomain segment includes a wildcard, it must be the only character in the segment.
 > * Any segments preceding a segment with a wildcard must also contain wildcards.
 >
 > For example, *\*.\*.domain.com* is valid, but *foo.\*.myteam.domain.com* is not valid.
