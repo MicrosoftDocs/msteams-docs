@@ -166,7 +166,7 @@ Besides the obvious metrics in the SaaS world such as daily, weekly, monthly act
   - Which users have churned from your app in the past three months?
   - Has a specific user used your app in a Teams meeting?
 
-Next, see how you should methodically craft your data instrumentation strategy and decide what to measure based on which specific insights you want to derive from your Teams app usage.
+Next, see how you should methodically craft your data instrumentation strategy and decide what to measure based on which specific insights you want to derive from your Teams app usage. 
 
 ## Next step
 

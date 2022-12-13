@@ -24,6 +24,9 @@ To set up your development environment:
 
 You need a Microsoft 365 developer subscription sandbox tenant to set up your dev environment. If you don't already have one, create a [sandbox tenant](/office/developer-program/microsoft-365-developer-program-get-started) or get a test tenant through your organization.
 
+> [!NOTE]
+> As you set up for testing, ensure that you sign out of all other accounts and sign in with the account you intend to use for testing.
+
 You also need to enable sideloading for your tenant:
 
  1. Sign in to [Teams admin center](https://admin.teams.microsoft.com/dashboard) with your test tenant credentials.
@@ -71,7 +74,8 @@ You can preview Teams apps running in Outlook on Windows desktop by using a rece
 To install Office 365 Beta Channel applications in your test environment:
 
 1. Sign in to your test environment with your test tenant credentials.
-1. Download the [Office Deployment Tool](https://www.microsoft.com/download/details.aspx?id=49117) and extract to a local folder.
+1. Download and run the [Office Deployment Tool](https://www.microsoft.com/download/details.aspx?id=49117).
+1. Select a local folder to store the extracted files.
 1. Go to the local folder and open *configuration-Office365-x86.xml* (or **x64.xml*, depending on your environment) in a text editor and update the *Channel* value to `BetaChannel`.
 1. Open Command Prompt and go to the local folder path.
 1. Run `setup.exe /configure configuration-Office365-x86.xml` (or use the **x64.xml* file, depending on your setup).
