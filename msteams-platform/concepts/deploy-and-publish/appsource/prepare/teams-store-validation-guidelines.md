@@ -94,22 +94,22 @@ An app's name plays a critical role in how users discover it in the store. Use t
 * Prefix or suffix common nouns with the developer's name. For example, **Contoso Tasks** instead of **Tasks**. [*Mandatory Fix*]
 * Must not use **Teams** or other Microsoft product names such as Excel, PowerPoint, Word, OneDrive, SharePoint, OneNote, Azure, Surface, and Xbox that could falsely indicate co-branding or co-selling. For more information about referencing Microsoft software products and services, see [Microsoft Trademark and Brand Guidelines](https://www.microsoft.com/legal/intellectualproperty/trademarks/usage/general). [*Mandatory Fix*]
 * Must not copy the name of an app listed in the store or other offer in the commercial marketplace. [*Mandatory Fix*]
-* Must not contain profane or derogatory terms. The name also must not include racially or culturally insensitive language.
+* Must not contain profane or derogatory terms. The name also must not include racially or culturally insensitive language. [*Mandatory Fix*]
 * Must be unique. If your app (Contoso) is listed in the Microsoft Teams store and Microsoft AppSource and you want to list another app specific to a geography such as Contoso Mexico, your submission must meet the following criteria:
-  * Call out the app's region-specific functionality in the title, metadata, first response app experience, and help sections. For example, title must be Contoso Mexico. App title must clearly differentiate an existing app from the same developer to avoid end-user confusion.
+  * Call out the app's region-specific functionality in the title, metadata, first response app experience, and help sections. For example, title must be Contoso Mexico. App title must clearly differentiate an existing app from the same developer to avoid end-user confusion. [*Mandatory Fix*]
   * When uploading the app package in Partner Center, select the right **Markets** where the app will be available in the **Availability** section.
 
-* App name must not lead with a core Teams feature such as Chat, Contacts, Calendar, Calls, Files, Activity, Teams, Apps, and Help. The app name can shorten to either Chat, Contacts, Calendar, Calls, Files, Activity, Teams, Apps, and Help on install in the left navigation.
+* App name must not lead with a core Teams feature such as Chat, Contacts, Calendar, Calls, Files, Activity, Teams, and Help. The app name does not shortens to either Chat, Contacts, Calendar, Calls, Files, Activity, Teams, and Help on install in the left navigation. [*Mandatory Fix*]
 
 * If your app is part of an official partnership with Microsoft, the name of your app must come first. For example, **Contoso connector for Microsoft Teams**.
 
-* The app name must not have any reference to Microsoft or Microsoft products. Don’t use **Teams**, **Microsoft**, or **App** in the app name unless your app is in official partnership with Microsoft. In such an instance, the app name must come first before any reference to Microsoft. For example, **Contoso connector for Microsoft Teams**.
+* The app name must not have any reference to Microsoft or Microsoft products. Don’t use **Teams**, **Microsoft**, in the app name unless your app is in official partnership with Microsoft. In such an instance, the app name must come first before any reference to Microsoft. For example, **Contoso connector for Microsoft Teams**. [*Mandatory Fix*]
 
-* Don’t use parenthesis in naming to include Microsoft products.
+* Don’t use parenthesis in naming to include Microsoft products. [*Mandatory Fix*]
 
-* Developer name must be the same in the manifest and AppSource.
+* Developer name must be the same in the manifest and AppSource. [*Mandatory Fix*]
 
-* App manifests submitted must be production manifests. Accordingly, app name must not indicate that the app is a preproduction app. For example, app name must not contain words such as Beta, Dev, Preview, and UAT.
+* App manifests submitted must be production manifests. Accordingly, app name must not indicate that the app is a preproduction app. For example, app name must not contain words such as Beta, Dev, Preview, and UAT. [*Mandatory Fix*]
 
  > [!TIP]
  > Your app’s branding on the Microsoft Teams store and AppSource including your app name, developer name, app icon, AppSource screenshots, video, short description, and website either separately or taken together must not impersonate an official Microsoft offering unless your app is an official Microsoft 1P offering.
