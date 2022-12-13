@@ -236,6 +236,13 @@ Don't include domains outside of your organization's control (including wildcard
 
 * If your app is a PowerApp built on the Microsoft Power Platform, you must include *apps.powerapps.com* as a valid domain to enable your app to be accessible and functional within Teams.
 
+When using wildcards (`*`), the following rules apply:
+
+* A wildcard must be the only character in a subdomain segment.
+* Any segments preceding a segment with a wildcard must also contain wildcards.
+
+For example, *\*.\*.domain.com* is valid, but *foo.\*.myteam.domain.com* is not valid.
+
 </details>
 
 ### Sensitive content
