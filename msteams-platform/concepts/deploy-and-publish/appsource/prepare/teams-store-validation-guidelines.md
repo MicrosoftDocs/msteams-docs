@@ -1358,7 +1358,7 @@ Use the following guidelines for meeting extensions:
 * Apps must only use a dark theme during meetings. For more information, see [Teams design guidelines](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md#theming).
 * A tooltip must display the app name when hovering over the app icon during meetings.
 
-    :::image type="content" source="../../../../assets/images/submission/validation-in-meeting-exp-display-app-name.png" alt-text="validabartion-in-meeting-exp-display-app-names":::
+    :::image type="content" source="../../../../assets/images/submission/validation-in-meeting-exp-display-app-name.png" alt-text="validation-in-meeting-exp-display-app-names":::
 
 * Message extensions must function the same during meetings as they do outside meetings.
 
