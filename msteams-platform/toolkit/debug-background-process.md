@@ -101,22 +101,19 @@ When you select **Start Debugging (F5)**, the Teams Toolkit output channel displ
 
 In the set-up process, Teams Toolkit prepares the following registrations and configurations for your Teams app:
 
-- [Debug background process](#debug-background-process)
-  - [Verification of prerequisites](#verification-of-prerequisites)
-  - [Register and configure Teams app](#register-and-configure-teams-app)
-    - [Registers and configures Microsoft Azure Active Directory(Azure AD) app](#registers-and-configures-microsoft-azure-active-directoryazure-ad-app)
-    - [Registers and configures bot](#registers-and-configures-bot)
-    - [Registers and configures Teams app](#registers-and-configures-teams-app)
-  - [Take a tour of your app source code](#take-a-tour-of-your-app-source-code)
-  - [See also](#see-also)
+1. [Registers and configures Microsoft Azure Active Directory(Azure AD) app](#registers-and-configures-microsoft-azure-active-directoryazure-ad-app)
+
+1. [Registers and configures bot](#registers-and-configures-bot)
+
+1. [Registers and configures Teams app](#registers-and-configures-teams-app)
 
 ### Registers and configures Microsoft Azure Active Directory(Azure AD) app
 
 1. Registers an Azure AD app.
 
-1. Creates a Client Secret.
+2. Creates a Client Secret.
 
-1. Exposes an API.
+3. Exposes an API.
 
     a. Configures Application ID URI. For tab, `api://localhost/{appId}`. For bot or message extension,  `api://botid-{botid}`.
 
