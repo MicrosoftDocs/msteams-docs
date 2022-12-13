@@ -546,7 +546,7 @@
       items:
       - name: Overview
         href: task-modules-and-cards\cards\Universal-actions-for-adaptive-cards\enable-sso-for-your-adaptive-cards-universal-action.md
-      - name: Add code to enable SSO
+      - name: Add code to enable SSO for your Adaptive Cards Universal Actions in bot
         href: task-modules-and-cards\cards\Universal-actions-for-adaptive-cards\sso-adaptive-cards-universal-action.md
     - name: Troubleshoot SSO authentication
       href: tabs/how-to/authentication/tab-sso-troubleshooting.md

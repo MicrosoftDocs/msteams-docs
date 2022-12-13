@@ -75,7 +75,7 @@ Once the user selects **View and accept**, the existing Azure AD permission cons
 The following are the steps to receive token:
 
 > [!IMPORTANT]
-> Ensure that your bot receives the invoke activity or token. For more information, see [Add code to receive the token](../../../bots/how-to/authentication/bot-sso-code.md#add-code-to-receive-the-token).
+> Ensure that your bot receives the invoke activity or token. For more information, see [add code to receive the token](../../../bots/how-to/authentication/bot-sso-code.md#add-code-to-receive-the-token).
 
 1. The client resend the original `adaptiveCard/action` to the bot along with the token as follows:
 
@@ -121,7 +121,7 @@ The following are the steps to receive token:
 1. The bot returns a non-error response to the client, either a card or a message.
 
 > [!NOTE]
-> To handle the access token in case the app user logs out, see [Handle app user log out](../../../bots/how-to/authentication/bot-sso-code.md#handle-app-user-log-out).
+> To handle the access token in case the app user logs out, see [handle app user log out](../../../bots/how-to/authentication/bot-sso-code.md#handle-app-user-log-out).
 
 ## Next step
 
