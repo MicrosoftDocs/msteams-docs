@@ -104,6 +104,9 @@ conceptualContent:
    # Card
     - title: Explore
       links:
+        - url: concepts/design/overview-analytics.md
+          itemType: reference
+          text: Plan analytics for Teams apps
         - url: /microsoftteams/platform/apps-in-teams-meetings/teams-live-share-overview
           itemType: concept
           text: Enhanced collaboration with Live Share SDK
@@ -128,6 +131,9 @@ conceptualContent:
         - url:  https://developer.microsoft.com/microsoft-teams/app-development-resources
           itemType: reference
           text: Best practices for Teams app scenarios
+        - url: concepts/design/overview-analytics.md
+          itemType: reference
+          text: Plan analytics for Teams apps
       
 
     # Card
