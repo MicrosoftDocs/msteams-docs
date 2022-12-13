@@ -1,7 +1,7 @@
 ---
 title: Teams JavaScript client SDK
 ms.author: surbhigupta
-description: In this module, Learn Microsoft Teams JavaScript client SDK, which can help you build app experiences hosted in an <iframe> in Teams, Microsoft (formerly Office) 365, and Outlook.
+description: In this module, Learn Microsoft Teams JavaScript client SDK, which can help you build app experiences hosted in an <iframe> in Teams, Microsoft 365 (formerly Office), and Outlook.
 ms.localizationpriority: high
 ms.topic: conceptual
 ---
@@ -31,7 +31,7 @@ The following table lists Teams tabs and dialogs (task modules) capabilities (pu
 
 |Capability | Host support | Notes |
 |-----------|--------------|-------|
-| app | Teams, Outlook, Microsoft 365, Microsoft app for Android | Namespace representing app initialization and lifecycle. |
+| app | Teams, Outlook, Microsoft 365, Microsoft 365 app for Android | Namespace representing app initialization and lifecycle. |
 | appInitialization| | Deprecated. Replaced by `app` namespace. |
 | appInstallDialog | Teams, Microsoft 365 ||
 | authentication | Teams, Outlook, Microsoft 365, Microsoft 365 app for Android | |

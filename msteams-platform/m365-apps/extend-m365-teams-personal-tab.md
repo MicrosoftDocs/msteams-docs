@@ -45,7 +45,7 @@ Alternately, you can use a basic single sign-on *hello world* app already Micros
 
 ### Quickstart
 
-To start with a [personal tab](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend-M365) that's already enabled to run in Outlook and Microsoft 365 app, use Teams Toolkit extension for Visual Studio Code.
+To start with a personal tab that's already enabled to run in Outlook and Microsoft 365 app, you can use Teams Toolkit extension for Visual Studio Code.
 
 1. From Visual Studio Code, open the command palette (`Ctrl+Shift+P`), type `Teams: Create a new Teams app`.
 1. Select **Create a new Teams app** option.

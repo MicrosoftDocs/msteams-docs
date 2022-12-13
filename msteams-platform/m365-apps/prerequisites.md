@@ -94,10 +94,10 @@ To install the latest Microsoft 365 app beta, build to your physical Android dev
 
 1. Ensure you use a Google Play [supported Android device](https://support.google.com/googleplay/answer/1727131).
 1. Launch the **Play Store** on your Android device.
-1. Search for Microsoft 365 and select **Microsoft 365: Edit & Share**.
+1. Search for "Office" and select **Office (Microsoft 365)**.
 1. Select the **Install** button.
 
-    :::image type="content" source="images/office-android-install.png" alt-text="The screenshot is an example that shows the install button for the Microsoft 365: Edit & Share app in Google Play Store.":::
+    :::image type="content" source="images/office-android-install.png" alt-text="The screenshot is an example that shows the install button for the Office (Microsoft 365) app in Google Play Store.":::
 
 1. Select **Join** under **Join the beta section** after the installation completes.
 
@@ -105,7 +105,7 @@ To install the latest Microsoft 365 app beta, build to your physical Android dev
 
 1. Launch the Microsoft 365 app and sign in with your test tenant credentials.
 1. Open your profile **(Me) > Settings** and scroll to the bottom of the menu.
-2. Ensure you use Microsoft 365 app version 16.0.15726.20000 or higher for Android.
+1. Ensure you use Microsoft 365 app version 16.0.15726.20000 or higher for Android.
 
 ## Switch to the Developer Preview version of Teams
 
