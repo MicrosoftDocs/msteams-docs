@@ -26,14 +26,10 @@ Teams platform features that are available to all app developers.
 
 **2022 December**
 
-* ***December 15, 2022***: [Introduced SSO for your Adaptive Cards Universal Actions](task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/enable-sso-for-your-adaptive-cards-universal-action.md)
-
-* ***Decembers 15, 2022***: [Introduced authentication for Adaptive Cards Universal Actions](task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/authentication-flow-in-universal-action-for-adaptive-cards.md)
-
-* ***December 8, 2022***: [Teams developer documentation FAQs](teams-faq.md)
-
+* ***December 15, 2022***: [Introduced SSO authentication for your Adaptive Cards Universal Actions](task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/enable-sso-for-your-adaptive-cards-universal-action.md)
+* ***Decembers 15, 2022***: [Introduced third party authentication for Adaptive Cards Universal Actions](task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/authentication-flow-in-universal-action-for-adaptive-cards.md)
+* ***December 08, 2022***: [Teams developer documentation FAQs](teams-faq.md)
 * ***December 07, 2022***: [Notification bot in Teams](bots/how-to/conversations/notification-bot-in-teams.md)
-
 * ***December 07, 2022***: [Command bot in Teams](bots/how-to/conversations/command-bot-in-teams.md)
 
 :::column-end:::

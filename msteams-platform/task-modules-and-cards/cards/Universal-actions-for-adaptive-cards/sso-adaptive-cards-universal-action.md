@@ -15,14 +15,14 @@ Authentication steps for SSO are similar to that of a bot in Teams. Following ar
 
 ## Prerequisites
 
-> [!NOTE]
+> [!IMPORTANT]
 > Before you add code to enable SSO, ensure that you've configured your app and bot resource in Azure AD portal. For more information, see [configured your app and bot resource in Azure AD portal](../../../bots/how-to/authentication/bot-sso-register-aad.md).
 
 After you configure the client secret and OAuth connection setting for the app in Azure AD, you must configure the code with development environment variables. For more information, see [update development environment variables](../../../bots/how-to/authentication/bot-sso-code.md#update-development-environment-variables).
 
 ## Add code to handle an access token
 
-> [!NOTE]
+> [!IMPORTANT]
 > Ensure that you added the code to handle access token for your bot. For more information, see [add code to handle an access token](../../../bots/how-to/authentication/bot-sso-code.md#add-code-to-handle-an-access-token).
 
 If there's a cached token, the bot uses the same token. If there's no token available, the bot creates an OAuthCard and places it in an invoke response with the values below, which includes a `tokenExchangeResource`:
@@ -74,7 +74,7 @@ Once the user selects **View and accept**, the existing Azure AD permission cons
 
 The following are the steps to receive token:
 
-> [!NOTE]
+> [!IMPORTANT]
 > Ensure that your bot receives the invoke activity or token. For more information, see [Add code to receive the token](../../../bots/how-to/authentication/bot-sso-code.md#add-code-to-receive-the-token).
 
 1. The client resend the original `adaptiveCard/action` to the bot along with the token as follows:
