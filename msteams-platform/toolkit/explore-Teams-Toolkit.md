@@ -190,6 +190,7 @@ After you have created your Teams Project, you can perform the following functio
 ## See also
 
 * [Install Teams Toolkit](install-Teams-Toolkit.md)
+* [App manifest schema](../resources/schema/manifest-schema.md)
 * [Create a new Teams app using Teams Toolkit](create-new-project.md)
 * [Prepare to build apps using Microsoft Teams Toolkit](build-environments.md)
 * [Provision cloud resources using Teams Toolkit](provision.md)

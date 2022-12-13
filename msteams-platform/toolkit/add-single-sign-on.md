@@ -723,5 +723,10 @@ To use an existing Azure AD app in your TeamsFx project, you can perform the fol
 
 ## See also
 
+* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
+* [Authenticate users in Microsoft Teams](../concepts/authentication/authentication.md)
+* [Build bots for Teams](../bots/what-are-bots.md)
+* [Build tabs for Teams](../tabs/what-are-tabs.md)
+* [Build Message extensions](../messaging-extensions/what-are-messaging-extensions.md)
 * [Prerequisites for creating your Teams app](tools-prerequisites.md)
 * [Prepare Accounts to build your Teams app](tools-prerequisites.md#accounts-to-build-your-teams-app)

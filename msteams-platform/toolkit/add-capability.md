@@ -99,5 +99,10 @@ The following table shows the changes that can be seen in the files of your app 
 
 ## See also
 
+* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
+* [Build bots for Teams](../bots/what-are-bots.md)
+* [Build Message extensions](../messaging-extensions/what-are-messaging-extensions.md)
+* [App manifest schema](../resources/schema/manifest-schema.md)
+* [Enable SSO for tab app](../tabs/how-to/authentication/tab-sso-overview.md)
 * [Provision cloud resources](provision.md)
 * [Create new Teams project](create-new-project.md)
