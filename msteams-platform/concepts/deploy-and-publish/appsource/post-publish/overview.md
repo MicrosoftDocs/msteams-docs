@@ -69,7 +69,8 @@ After you stop the distribution of an app, you can still see it in Partner Cente
 ## See also
 
 * [Publish your app to the Microsoft Teams store](../publish.md)
-* [Bots](../../../../bots/what-are-bots.md)
-* [Tabs](../../../../tabs/what-are-tabs.md)
-* [Connectors](../../../../webhooks-and-connectors/what-are-webhooks-and-connectors.md#connectors)
+* [Build bots for Teams](../../../../bots/what-are-bots.md)
+* [Build tabs for Teams](../../../../tabs/what-are-tabs.md)
+* [Build connectors for Teams](../../../../webhooks-and-connectors/what-are-webhooks-and-connectors.md#connectors)
+* [App manifest schema for Teams](../../../../resources/schema/manifest-schema.md)
 * [Monetize your app through Microsoft Commercial Marketplace](/office/dev/store/monetize-addins-through-microsoft-commercial-marketplace)

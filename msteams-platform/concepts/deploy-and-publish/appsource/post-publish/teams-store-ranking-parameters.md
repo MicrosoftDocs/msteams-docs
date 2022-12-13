@@ -24,4 +24,4 @@ The Microsoft Teams store editorial team determines the prominence and location 
 
 ## See also
 
-* [Publish your app to the Microsoft Teams store](../publish.md)
+[Publish your app to the Microsoft Teams store](../publish.md)
