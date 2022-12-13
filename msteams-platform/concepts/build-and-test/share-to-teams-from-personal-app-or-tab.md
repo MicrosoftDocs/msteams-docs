@@ -103,5 +103,6 @@ After you enable share to teams button on personal app or tab, you can share the
 
 ## See also
 
+* [Integrate web apps](../../samples/integrate-web-apps-overview.md)
 * [Share to Teams from web apps](share-to-teams-from-web-apps.md)
 * [Create a personal tab](../../tabs/how-to/create-personal-tab.md)

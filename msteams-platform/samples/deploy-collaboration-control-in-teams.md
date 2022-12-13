@@ -149,3 +149,8 @@ Following are required to enable users to run the deployed Collaboration Manager
 1. Select **Save**.
 
 For more information on role privileges, see [configure user security in an environment](/power-platform/admin/database-security).
+
+## See also
+
+* [Integrate web apps](integrate-web-apps-overview.md)
+* [App manifest](../resources/schema/manifest-schema.md)

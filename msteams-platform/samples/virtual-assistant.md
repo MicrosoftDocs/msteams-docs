@@ -583,5 +583,9 @@ You can also leverage existing skills from [Bot Framework Solutions repository](
 ## See also
 
 * [Integrate web apps](~/samples/integrate-web-apps-overview.md)
+* [Task modules](../task-modules-and-cards/what-are-task-modules.md)
+* [Adaptive Cards](../task-modules-and-cards/what-are-cards.md#adaptive-cards)
+* [App manifest](../resources/schema/manifest-schema.md)
+* [Message extensions](../messaging-extensions/what-are-messaging-extensions.md)
 * [Book-a-room](app-templates.md#app-template-code-samples)
 * [Microsoft Teams bot](../bots/what-are-bots.md)

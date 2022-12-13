@@ -474,6 +474,7 @@ The response payload contains:
 - The meeting ID in the `msGraphResourceId` member of the `details` property.
 - The organizer ID in the `id` member of the `organizer` property.
 <br>
+
 <details>
 <summary><b>Example</b>: Response payload for getting meeting details</b></summary>
 
