@@ -103,3 +103,8 @@ Once your app is approved, publishing usually takes 1-2 business days depending 
 <br>
 
 </details>
+
+## See also
+
+* [Distribute your Microsoft Teams app](../apps-publish-overview.md)
+* [Publish your app to the Microsoft Teams store](publish.md)
