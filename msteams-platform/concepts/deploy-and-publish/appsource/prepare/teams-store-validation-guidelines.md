@@ -1342,7 +1342,7 @@ For more information, see [Teams task module design guidelines](~\task-modules-a
 
 Use the following guidelines for meeting extensions:
 
-* Meeting extensibility apps must offer a responsive in-meeting experience aligned to the Teams meeting experience. In-meeting experience is mandatory for a Teams app that supports meeting extensibility but, pre- and post-meeting experiences aren't mandatory.
+* Meeting extensibility apps must offer a responsive in-meeting experience aligned to the Teams meeting experience. In-meeting experience is mandatory for a Teams app that supports meeting extensibility but, pre- and post-meeting experiences aren't mandatory. [*Mandatory Fix*]
 
   * With the pre-meeting app experience, users can find and add meeting apps. Users can also perform pre-meeting tasks such as developing a poll to survey the meeting participants. If your app provides a pre-meeting experience, it must be relevant to the workflow of the meeting.
 
@@ -1350,9 +1350,9 @@ Use the following guidelines for meeting extensions:
 
   * With the in-meeting app experience, you can engage meeting participants during the meeting and enhance the meeting experience for all the attendees. Attendees must not be taken outside the Teams meeting for completing core user workflows of your app.
 
-* Your app must offer value beyond providing custom Together Mode scenes in Teams.
+* Your app must offer value beyond providing custom Together Mode scenes in Teams. [*Mandatory Fix*]
 
-* Shared meeting stage feature can only be launched through the Teams desktop app. However, the shared meeting stage consumption experience must be usable and not broken when viewed on mobile devices.
+* Shared meeting stage feature can only be launched through the Teams desktop app. However, the shared meeting stage consumption experience must be usable and not broken when viewed on mobile devices. [*Mandatory Fix*]
 
 > [!TIP]
 > You must declare `groupChat` as a scope under `configurableTabs` and `meetingDetailsTab`, `meetingChatTab`, and `meetingSidePanel` as a context property in the manifest to enable your app for meetings on Teams mobile.
@@ -1362,9 +1362,9 @@ Use the following guidelines for meeting extensions:
 
 <details><summary>Pre- and post-meeting experience</summary>
 
-* Pre and post meeting screens must adhere to general tab design guidelines. For more information, see [Teams design guidelines](~/tabs/design/tabs.md).
-* Tabs must have an organized layout when displaying multiple items. For example, more than 10 polls or surveys, see [example layout](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md#after-a-meeting).
-* Your app must notify users when the results of a survey or poll are exported by stating, **Results successfully downloaded**.
+* Pre and post meeting screens must adhere to general tab design guidelines. For more information, see [Teams design guidelines](~/tabs/design/tabs.md). [*Mandatory Fix*]
+* Tabs must have an organized layout when displaying multiple items. For example, more than 10 polls or surveys, see [example layout](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md#after-a-meeting). [*Mandatory Fix*]
+* Your app must notify users when the results of a survey or poll are exported by stating, **Results successfully downloaded**. [*Mandatory Fix*]
 
    :::image type="content" source="../../../../assets/images/submission/validation-meeting-experience-tab-design-guidelines-fail.png" alt-text="Graphic shows an example of tab not following tab design guidelines.":::
 
@@ -1373,28 +1373,28 @@ Use the following guidelines for meeting extensions:
 </br>
 <details><summary>In-meeting experience</summary>
 
-* Apps must only use a dark theme during meetings. For more information, see [Teams design guidelines](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md#theming).
-* A tooltip must display the app name when hovering over the app icon during meetings.
+* Apps must only use a dark theme during meetings. For more information, see [Teams design guidelines](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md#theming). [*Mandatory Fix*]
+* A tooltip must display the app name when hovering over the app icon during meetings. [*Mandatory Fix*]
 
     :::image type="content" source="../../../../assets/images/submission/validation-in-meeting-exp-display-app-name.png" alt-text="validation-in-meeting-exp-display-app-names":::
 
-* Message extensions must function the same during meetings as they do outside meetings.
+* Message extensions must function the same during meetings as they do outside meetings. [*Mandatory Fix*]
 
 </details>
 
 </br>
 <details><summary>In-meeting tabs</summary>
 
-* Must be responsive.
-* Must maintain padding and component sizes.
-* Must have a back button if there's more than one layer of navigation.
+* Must be responsive. [*Mandatory Fix*]
+* Must maintain padding and component sizes. [*Mandatory Fix*]
+* Must have a back button if there's more than one layer of navigation. [*Mandatory Fix*]
 
     :::image type="content" source="../../../../assets/images/submission/validation-in-meeting-exp-back-button.png" alt-text="Graphic shows an example of back button present.":::
 
     :::image type="content" source="../../../../assets/images/submission/validation-in-meeting-exp-back-button-absent.png" alt-text="Graphic shows an example of back button not present.":::
 
-* Must not include more than one close button. It may confuse users since there's already a built-in header button to dismiss the tab.
-* Must not have Horizontal scroll.
+* Must not include more than one close button. It may confuse users since there's already a built-in header button to dismiss the tab. [*Mandatory Fix*]
+* Must not have Horizontal scroll. [*Mandatory Fix*]
 
   :::image type="content" source="../../../../assets/images/submission/validation-in-meeting-tab-vertical-scroll.png" alt-text="Graphic shows an example of in-meeting tab with vertical scroll.":::
 
@@ -1405,21 +1405,21 @@ Use the following guidelines for meeting extensions:
 </br>
 <details><summary>In-meeting dialogs</summary>
 
-* Must be used sparingly and for scenarios that are light and task oriented.
-* Must display content in a single column and not have multiple navigation levels.
+* Must be used sparingly and for scenarios that are light and task oriented. [*Mandatory Fix*]
+* Must display content in a single column and not have multiple navigation levels. [*Mandatory Fix*]
 
   :::image type="content" source="../../../../assets/images/submission/validation-in-meeting-single-column-layout.png" alt-text="Graphic shows an example of single column layout for in-meeting dialog.":::
 
   :::image type="content" source="../../../../assets/images/submission/validation-in-meeting-multiple-column-layout.png" alt-text="Graphic shows an example of multiple column layouts for in-meeting dialog.":::
 
-* Must not use task modules.
-* Must align with the center of the meeting stage.
+* Must not use task modules. [*Mandatory Fix*]
+* Must align with the center of the meeting stage. [*Mandatory Fix*]
 
     :::image type="content" source="../../../../assets/images/submission/validation-in-meeting-dialog-not-aligned.png" alt-text="Graphic shows an example of in-meeting dialog not aligning with the center of meeting stage.":::
 
-* Must be dismissed after a user selects a button or performs an action.
+* Must be dismissed after a user selects a button or performs an action. [*Mandatory Fix*]
 
-* **Together mode**: Ensure that you consider the following best practices for a scene building experience:
+* **Together mode**: Ensure that you consider the following best practices for a scene building experience: [*Mandatory Fix*]
   * All images are in .png format.
   * The final package with all the images put together must not exceed 1920x1080 resolution. The resolution is an even number. This resolution is a requirement for scenes to be shown successfully.
   * The maximum scene size is 10 MB.
@@ -1458,9 +1458,9 @@ If your app uses the [activity feed APIs provided by Microsoft Graph](/graph/tea
 
 <details><summary>General</summary>
 
-* All the notification triggers specified in your app configuration must work.
-* Notifications must be localized per the supported languages configured for your app.
-* Notifications must display within five seconds of user action.
+* All the notification triggers specified in your app configuration must work. [*Mandatory Fix*]
+* Notifications must be localized per the supported languages configured for your app. [*Mandatory Fix*]
+* Notifications must display within five seconds of user action. [*Mandatory Fix*]
 * Notifications must be localized as per the supported languages for all the platforms where your app is compatible. [*Mandatory Fix*]
 
 </details>
@@ -1468,23 +1468,23 @@ If your app uses the [activity feed APIs provided by Microsoft Graph](/graph/tea
 
 <details><summary>Avatars</summary>
 
-* The notification avatar must match your app's color icon.
-* Notifications triggered by a user must include the user's avatar.
+* The notification avatar must match your app's color icon. [*Mandatory Fix*]
+* Notifications triggered by a user must include the user's avatar. [*Mandatory Fix*]
 
 </details>
 </br>
 <details><summary>Spamming</summary>
 
-* Apps must not send more than 10 notifications per minute to a user.
-* Bots and the activity feed must not trigger duplicate notifications.
-* Notifications must provide some value to users and not be used for trivial or irrelevant events.
+* Apps must not send more than 10 notifications per minute to a user. [*Mandatory Fix*]
+* Bots and the activity feed must not trigger duplicate notifications. [*Mandatory Fix*]
+* Notifications must provide some value to users and not be used for trivial or irrelevant events. [*Mandatory Fix*]
 
 </details>
 </br>
 <details><summary>Navigation and layout</summary>
 
-* Notifications must adhere to the Teams activity feed layout and experience.
-* When selecting a notification, the user must be directed to relevant content within Teams.
+* Notifications must adhere to the Teams activity feed layout and experience. [*Mandatory Fix*]
+* When selecting a notification, the user must be directed to relevant content within Teams. [*Mandatory Fix*]
 
 </details>
 
@@ -1496,11 +1496,11 @@ If your app uses the [activity feed APIs provided by Microsoft Graph](/graph/tea
 
 The Microsoft 365 App Compliance Program is intended to help organizations assess and manage risk by evaluating security and compliance information about your app. If you're publishing an app to the Teams store, you must complete the following tiers of the program:
 
-* **Publisher Verification**: Helps admins and end users understand the authenticity of app developers integrating with the Microsoft identity platform. When completed, a blue **verified** badge displays on the Azure Active Directory consent dialog and other screens. For more information, see [Mark your app as publisher verified](/azure/active-directory/develop/mark-app-as-publisher-verified).
+* **Publisher Verification**: Helps admins and end users understand the authenticity of app developers integrating with the Microsoft identity platform. When completed, a blue **verified** badge displays on the Azure Active Directory consent dialog and other screens. For more information, see [Mark your app as publisher verified](/azure/active-directory/develop/mark-app-as-publisher-verified). [*Mandatory Fix*]
 
     :::image type="content" source="../../../../assets/images/submission/validation-365-compliance-publisher-verification.png" alt-text="Graphic shows an example of a blue verified badge on the Azure Active Directory consent dialog.":::
 
-* **Publisher Attestation**: A process in which you share general, data handling, and security and compliance information to help potential customers make informed decisions about using your app.
+* **Publisher Attestation**: A process in which you share general, data handling, and security and compliance information to help potential customers make informed decisions about using your app. [*Suggested Fix*]
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: If you're submitting an app that hasn't been listed previously, you can't officially complete Publisher Attestation until your app is in the Teams store. If you're updating a listed app, complete Publisher Attestation before you submit the latest version of the app.
 
@@ -1510,13 +1510,13 @@ The Microsoft 365 App Compliance Program is intended to help organizations asses
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: This section is in line with [Microsoft commercial marketplace policy number 1140.7](/legal/marketplace/certification-policies#11407-advertising).
 
-Apps must not display advertising, including dynamic ads, banner ads, and ads in message.
+Apps must not display advertising, including dynamic ads, banner ads, and ads in message. [*Mandatory Fix*]
 
 :::image type="content" source="../../../../assets/images/submission/validation-advertising-banners.png" alt-text="Graphic shows an example of a failed scenario of advertising in Teams.":::
 
 ## Cryptocurrency based apps
 
-You must demonstrate compliance with all laws where your app is distributed, if your app:
+You must demonstrate compliance with all laws where your app is distributed, if your app: [*Mandatory Fix*]
 
 * Facilitates cryptocurrency transactions or transmissions within the app.
 
@@ -1542,7 +1542,7 @@ After an internal Microsoft review, if the compliance demonstration is satisfact
 
 ## Mobile experience
 
-* Mobile add-ins must be free. There must not be any in-app content or links that promote upselling, online stores, or other requests for payment. Any accounts required for apps must have no charge for use and if time-limited, must not include any content indicating a need to pay.
+* Mobile add-ins must be free. There must not be any in-app content or links that promote upselling, online stores, or other requests for payment. Any accounts required for apps must have no charge for use and if time-limited, must not include any content indicating a need to pay. [*Mandatory Fix*]
 
    :::image type="content" source="../../../../assets/images/submission/validation-mobile-add-in-charges.png" alt-text="Graphic shows an example of a mobile add-in asking for payment.":::
 
@@ -1552,11 +1552,11 @@ After an internal Microsoft review, if the compliance demonstration is satisfact
 
 * Use of the word **FREE** in the context of a trial or app upgrade with a link that leads to a landing page without payment or pricing information is allowed on mobile. Plain text to signal app is **PAID** is allowed on mobile.
 
-* Use of the word **FREE** as plain text in the context of a trial or app upgrade and associated with pricing details isn't allowed on mobile.
+* Use of the word **FREE** as plain text in the context of a trial or app upgrade and associated with pricing details isn't allowed on mobile. [*Mandatory Fix*]
 
-* Use of the word **FREE** in the context of a trial or app upgrade and associated with a link that leads to a landing page with pricing information or payment details on mobile isn't allowed.
+* Use of the word **FREE** in the context of a trial or app upgrade and associated with a link that leads to a landing page with pricing information or payment details on mobile isn't allowed. [*Mandatory Fix*]
 
-* Pricing details on mobile in any format, for example, image, text, or link isn't allowed. CTA such as **view plans** on mobile isn't allowed. Information about plans without pricing details but with a contact link or email on mobile isn't allowed. Any text with contact details linking or alluding to a paid upgrade isn't allowed on mobile. Payments for physical goods are allowed on mobile. For example, your app can allow payment to book a taxi.
+* Pricing details on mobile in any format, for example, image, text, or link isn't allowed. CTA such as **view plans** on mobile isn't allowed. Information about plans without pricing details but with a contact link or email on mobile isn't allowed. Any text with contact details linking or alluding to a paid upgrade isn't allowed on mobile. Payments for physical goods are allowed on mobile. For example, your app can allow payment to book a taxi. [*Mandatory Fix*]
 
    :::image type="content" source="../../../../assets/images/submission/validation-mobile-exp-pricing-details-on-mobile-fail.png" alt-text="Graphic shows an example of pricing details on mobile.":::
 
