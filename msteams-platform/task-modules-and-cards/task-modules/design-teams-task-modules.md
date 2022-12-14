@@ -8,7 +8,7 @@ ms.topic: reference
 ---
 # Designing task modules for your Microsoft Teams app
 
-You can create modal popup experiences in your Teams app with task modules. Use this capability to display rich media and information or complete a complex task.
+You can create modal pop-up experiences in your Teams app with task modules. Use this capability to display rich media and information or complete a complex task.
 
 :::image type="content" source="../../assets/images/task-module/task-module-overview.png" alt-text="Example shows a task module.":::
 

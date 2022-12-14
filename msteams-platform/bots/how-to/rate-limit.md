@@ -1,7 +1,6 @@
 ---
 title: Rate limiting for bots
-description: Learn about handling rate limit for bots with per bot per thread limit and per limit for all bots with code examples
-ms.topic: conceptual
+description: Learn how to optimize bot with rate limiting. Detect transient exceptions, per bot thread limit. You can also perform an exponential backoff.
 ms.localizationpriority: medium
 ---
 
@@ -170,8 +169,9 @@ The following table provides the per thread limit for all bots:
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Calls and meetings bots](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)
+> [Calls and online meetings bots](../calls-and-meetings/calls-meetings-bots-overview.md)
 
 ## See also
 
-[Manage a long-running operation](/azure/bot-service/bot-builder-howto-long-operations-guidance?view=azure-bot-service-4.0&preserve-view=true)
+* [Build bots for Teams](../what-are-bots.md)
+* [Manage a long-running operation](/azure/bot-service/bot-builder-howto-long-operations-guidance?view=azure-bot-service-4.0&preserve-view=true)

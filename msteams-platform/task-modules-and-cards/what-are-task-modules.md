@@ -1,7 +1,7 @@
 ---
 title: Task modules
 author: surbhigupta
-description: In this module, learn how to add modal popup experiences to collect or display information to your users from your Microsoft Teams apps
+description: In this module, learn how to add modal pop-up experiences to collect or display information to your users from your Microsoft Teams apps.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
@@ -17,11 +17,11 @@ Task modules permit you to create modal pop-up experiences in your Teams applica
 
 Task modules are useful for initiating and completing tasks or displaying rich information, such as videos or Power Business Intelligence (BI) dashboards. A pop-up experience is often more natural for users initiating and completing tasks compared to a tab or a conversation-based bot experience.
 
-Task modules build on the foundation of Microsoft Teams tabs. They're essentially a tab inside a pop-up window. They use the same SDK, so if you have built a tab you're already familiar with creating a task module.
+Task modules build on the foundation of Microsoft Teams tabs. They're essentially a tab inside a pop-up window. They use the same TeamsJS library, so if you have built a tab you're already familiar with creating a task module.
 
 Task modules can be invoked in three ways:
 
-* Channel or personal tabs: Using the Microsoft Teams Tabs SDK, you can invoke task modules from buttons, links, or menus on your tab. For more information, see [using task modules in tabs](~/task-modules-and-cards/task-modules/task-modules-tabs.md).
+* Channel or personal tabs: Using the Microsoft Teams JavaScript client library (TeamsJS), you can invoke task modules from buttons, links, or menus on your tab. For more information, see [using task modules in tabs](~/task-modules-and-cards/task-modules/task-modules-tabs.md).
 * Bots: Using buttons on [cards](~/task-modules-and-cards/cards/cards-reference.md) sent from your bot. This is useful when you don't require everyone in a channel to see what you are doing with a bot. For example, when having users respond to a poll in a channel it isn't useful to see a record of that poll being created. For more information, see [using task modules from Teams bots](~/task-modules-and-cards/task-modules/task-modules-bots.md).
 * Outside of Teams from a deep link: You can also create URLs to invoke a task module from anywhere. For more information, see [task module deep link syntax](~/task-modules-and-cards/task-modules/invoking-task-modules.md#task-module-deep-link-syntax).
 
@@ -52,4 +52,7 @@ A task module includes the following as shown in the previous image:
 
 ## See also
 
-[Cards](~/task-modules-and-cards/what-are-cards.md)
+* [Cards and task modules](cards-and-task-modules.md)
+* [Cards](~/task-modules-and-cards/what-are-cards.md)
+* [Adaptive Cards overflow menu](~/task-modules-and-cards/cards/cards-format.md#adaptive-cards-overflow-menu)
+* [Instrumenting for Teams app specific analytics](../concepts/design/overview-analytics.md#instrumenting-for-teams-app-specific-analytics)

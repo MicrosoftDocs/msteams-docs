@@ -30,7 +30,7 @@ In addition, this project requires that you have the following installed in your
 
 1. Open a command prompt and create a new directory for your tab project.
 
-1. To start the generator, navigate to your new directory and type the following command:
+1. To start the generator, go to your new directory and type the following command:
 
     ```bash
     yo teams

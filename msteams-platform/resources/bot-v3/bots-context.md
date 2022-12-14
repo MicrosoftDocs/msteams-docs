@@ -66,6 +66,7 @@ Response body
 ### .NET example
 
 Call `GetConversationMembersAsync` using `Team.Id` to return a list of user IDs.
+Call `GetConversationMembersAsync` to get `userRole` property return the value as user.
 
 ```csharp
 // Fetch the members in the current conversation
@@ -220,4 +221,4 @@ var connector = new ConnectorClient(new Uri(context.Activity.ServiceUrl));
 
 ## See also
 
-[Bot Framework samples](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).
+[Bot Framework samples](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/README.md).

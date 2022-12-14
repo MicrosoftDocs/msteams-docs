@@ -11,7 +11,7 @@ ms.date: 07/20/2019
 
 Search based message extensions allow you to query your service and post that information in the form of a card, right into your message.
 
-![Example of message extension card](~/assets/images/compose-extensions/ceexample.png)
+:::image type="content" source="../../assets/images/compose-extensions/ceexample.png" alt-text="Screenshot shows the example of message extension card.":::
 
 The following sections describe how to do this:
 
@@ -29,7 +29,6 @@ For search based message extension set the `type` parameter to `query`. Below is
   "manifestVersion": "1.5",
   "version": "1.0",
   "id": "57a3c29f-1fc5-4d97-a142-35bb662b7b23",
-  "packageName": "com.microsoft.teams.samples.bing",
   "developer": {
     "name": "John Developer",
     "websiteUrl": "http://bingbotservice.azurewebsites.net/",
@@ -82,7 +81,7 @@ For search based message extension set the `type` parameter to `query`. Below is
 
 You can test your message extension by uploading your app.
 
-To open your message extension, navigate to any of your chats or channels. Choose the **More options** (**&#8943;**) button in the compose box, and choose your message extension.
+To open your message extension, go to any of your chats or channels. Choose the **More options** (**&#8943;**) button in the compose box, and choose your message extension.
 
 ## Add event handlers
 
@@ -106,7 +105,7 @@ The remainder of your handler for `onQuery` prompts the user for information, di
 
 The `onQuerySettingsUrl` and `onSettingsUpdate` events work together to enable the **Settings** menu item.
 
-![Screenshots of locations of Settings menu item](~/assets/images/compose-extensions/compose-extension-settings-menu-item.png)
+:::image type="content" source="../../assets/images/compose-extensions/compose-extension-settings-menu-item.png" alt-text="Screenshot shows the locations of Settings menu item.":::
 
 Your handler for `onQuerySettingsUrl` returns the URL for the configuration page; after the configuration page closes, your handler for `onSettingsUpdate` accepts and saves the returned state. This is the one case in which `onQuery` *doesn't* receive the response from the configuration page.
 
@@ -126,11 +125,11 @@ In addition to the standard bot activity properties, the payload contains the fo
 |`name`| Type of command that is issued to your service. Currently the following types are supported: <br>`composeExtension/query` <br>`composeExtension/querySettingUrl` <br>`composeExtension/setting` <br>`composeExtension/selectItem` <br>`composeExtension/queryLink` |
 |`from.id`| ID of the user that sent the request. |
 |`from.name`| Name of the user that sent the request. |
-|`from.aadObjectId`| Microsoft Azure Active Directory (Azure AD) object id of the user that sent the request. |
+|`from.aadObjectId`| Microsoft Azure Active Directory (Azure AD) object ID of the user that sent the request. |
 |`channelData.tenant.id`| Microsoft Azure Active Directory (Azure AD) tenant ID. |
 |`channelData.channel.id`| Channel ID (if the request was made in a channel). |
 |`channelData.team.id`| Team ID (if the request was made in a channel). |
-|`clientInfo`|Optional metadata about the client software used to send a user's message. The entity can contain two properties:<br>The `country` field contains the user's detected location.<br>The `platform` field describes the messaging client platform. <br>For more information, *see* [Non-IRI entity types — clientInfo](https://github.com/microsoft/botframework-sdk/blob/master/specs/botframework-activity/botframework-activity.md#clientinfo).|
+|`clientInfo`|Optional metadata about the client software used to send a user's message. The entity can contain two properties:<br>The `country` field contains the user's detected location.<br>The `platform` field describes the messaging client platform. <br>For more information, *see* [Non-IRI entity types—clientInfo](https://github.com/microsoft/botframework-sdk/blob/master/specs/botframework-activity/botframework-activity.md#clientinfo).|
 
 The request parameters are found in the value object, which includes the following properties:
 
@@ -190,7 +189,7 @@ The request parameters are found in the value object, which includes the followi
 
 As an alternative (or in addition) to searching your external service, you can use a URL inserted into the compose message box to query your service and return a card. In the screenshot below a user has pasted in a URL for a work item in Azure DevOps, which the message extension has resolved into a card.
 
-![Example of link unfurling](~/assets/images/compose-extensions/messagingextensions_linkunfurling.png)
+:::image type="content" source="../../assets/images/compose-extensions/messagingExtensions_LinkUnfurling.png" alt-text="Screenshot shows the example of link unfurling.":::
 
 To enable your message extension to interact with links this way, you'll first need to add the `messageHandlers` array to your app manifest as in the example below:
 
@@ -224,7 +223,7 @@ Once you've added the domain to listen on to the app manifest, you'll need to ch
 }
 ```
 
-If your app returns multiple items only the first will be used.
+If your app returns multiple items, only the first will be used.
 
 ### Respond to user requests
 
@@ -261,7 +260,7 @@ The result list is displayed in the Microsoft Teams UI with a preview of each it
 * Using the `preview` property within the `attachment` object. The `preview` attachment can only be a Hero or Thumbnail card.
 * Extracted from the basic `title`, `text`, and `image` properties of the attachment. These are used only if the `preview` property isn't set and these properties are available.
 
-You can display a preview of an Adaptive or Office 365 Connector card in the result list simply by setting its preview property. This isn't necessary if the results are already hero or thumbnail cards. If you use the preview attachment, it must be either a Hero or Thumbnail card. If no preview property is specified, the preview of the card will fail and nothing will be displayed.
+You can display a preview of an Adaptive or Office 365 Connector card in the result list simply by setting its preview property. This isn't necessary if the results are already hero or thumbnail cards. If you use the preview attachment, it must be either a Hero or Thumbnail card. If no preview property is specified, the preview of the card will fail, and nothing will be displayed.
 
 #### Response example
 
@@ -483,7 +482,7 @@ To prompt an unauthenticated user to sign in, respond with a suggested action of
 
 ### Start the sign-in flow
 
-Your sign-in experience should be responsive and fit within a popup window. It should integrate with the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client), which uses message passing.
+Your sign-in experience should be responsive and fit within a pop-up window. It should integrate with the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client), which uses message passing.
 
 As with other embedded experiences running inside Teams, your code inside the window needs to first call `microsoftTeams.initialize()`. If your code performs an OAuth flow, you can pass the Teams user ID into your window, which then can pass it to the OAuth sign-in URL.
 
@@ -494,7 +493,7 @@ When the sign-in request completes and redirects back to your page, it should pe
 1. Generate a security code. (This can be a random number.) You need to cache this code on your service, along with the credentials obtained through the sign-in flow such as, OAuth 2.0 tokens.
 2. Call `microsoftTeams.authentication.notifySuccess` and pass the security code.
 
-At this point, the window closes and control is passed to the Teams client. The client now can reissue the original user query, along with the security code in the `state` property. Your code can use the security code to look up the credentials stored earlier to complete the authentication sequence and then complete the user request.
+At this point, the window closes and control is passed to the Teams client. The client can now reissue the original user query, along with the security code in the `state` property. Your code can use the security code to look up the credentials stored earlier to complete the authentication sequence and then complete the user request.
 
 #### Reissued request example
 
@@ -549,7 +548,7 @@ At this point, the window closes and control is passed to the Teams client. The 
 
 ### .NET
 
-To receive and handle queries with the Bot Builder SDK for .NET, you can check for the `invoke` action type on the incoming activity and then use the helper method in the NuGet package [Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) to determine whether it’s a message extension activity.
+To receive and handle queries with the Bot Builder SDK for .NET, you can check for the `invoke` action type on the incoming activity, and then use the helper method in the NuGet package [Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) to determine whether it’s a message extension activity.
 
 #### Example code in .NET
 
@@ -653,4 +652,4 @@ app.run();
 
 ## See also
 
-[Bot Framework samples](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).
+[Bot Framework samples](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/README.md).

@@ -1,6 +1,6 @@
 ---
 title: Authenticating app users
-description: In this module, learn authentication in Teams and how to use it in the apps, web based authentication flow and OAuthPrompt flow for conversational bots
+description: Learn about authentication methods that you can enable in Teams app, such as Single sign-on (SSO) and using third-party OAuth providers.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ---
@@ -47,7 +47,9 @@ Enable authentication with SSO or third party OAuth IdPs in your tab app, bot ap
 :::row-end:::
 :::row:::
     :::column span="1":::
-        :::image type="content" source="../../assets/images/authentication/bot-sso-icon.png" alt-text="SSO for bot app" link="../../bots/how-to/authentication/auth-aad-sso-bots.md":::
+        :::image type="content" source="../../assets/images/authentication/bot-sso-icon.png" alt-text="SSO for bot app" link="../../bots/how-to/authentication/bot-sso-overview.md":::
+
+
     :::column-end:::
     :::column span="1":::
         <br>
@@ -61,7 +63,7 @@ Enable authentication with SSO or third party OAuth IdPs in your tab app, bot ap
 :::row-end:::
 :::row:::
     :::column span="1":::
-        :::image type="content" source="../../assets/images/authentication/mex-sso-icon.png" alt-text="SSO for messaging extension app" link="../../messaging-extensions/how-to/enable-SSO-auth-me.md":::
+        :::image type="content" source="../../assets/images/authentication/mex-sso-icon.png" alt-text="SSO for messaging extension app" link="../../bots/how-to/authentication/bot-sso-overview.md":::
     :::column-end:::
     :::column span="1":::
         <br>
@@ -73,9 +75,6 @@ Enable authentication with SSO or third party OAuth IdPs in your tab app, bot ap
         :::image type="content" source="../../assets/images/authentication/mex-app-idp.png" alt-text="Authentication with third-party oAuth IdPs for messaging extension app." link="../../messaging-extensions/how-to/add-authentication.md":::
     :::column-end:::
 :::row-end:::
-
-> [!NOTE]
-> The Silent authentication page is moved to the Resources module. For more information, see [Silent authentication](../../tabs/how-to/authentication/auth-silent-aad.md).
 
 ## See also
 

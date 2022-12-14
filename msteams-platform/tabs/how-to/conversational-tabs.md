@@ -1,10 +1,10 @@
 ---
 title: Create conversational tabs
 author: surbhigupta
-description: In this module, learn to create conversational subentity chat for your channel tabs, to manage conversations using code samples
+description: Learn to create conversational tabs in Microsoft Teams to start, continue, enhance, and close a conversation.
 ms.topic: conceptual
 ms.author: lomeybur
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ---
 
 # Create conversational tabs
@@ -47,9 +47,12 @@ The following image shows the conversation panel:
 If the user starts a conversation, it's important to listen for the callback of that event to retrieve and save the **conversationId**:
 
 ```javascript
-microsoftTeams.conversations.onStartConversation = (conversationResponse) => {
-    // console.log(conversationReponse.conversationId)
-};
+⁠microsoftTeams.conversations.openConversation({
+    ...,
+    onStartConversation: (conversationResponse) => {
+        ⁠// console.log(conversationResponse)
+    },
+});
 ```
 
 The `conversationResponse` object contains information related to the conversation that was started. It's recommended that you save all the properties of this response object for later use.
@@ -76,12 +79,15 @@ You can manually close the conversation view by calling the `closeConversation()
 microsoftTeams.conversations.closeConversation();
 ```
 
-You can also listen for an event when the conversation view is closed by a user.
+You can also listen for an event when the users selects **Close (X)** in the conversation view.
 
 ```javascript
-microsoftTeams.conversations.onCloseConversation = (conversationResponse) => {
-    // console.log(conversationResponse)
-};
+⁠microsoftTeams.conversations.openConversation({
+    ...,
+    onCloseConversation: (conversationResponse) => {
+        ⁠// console.log(conversationResponse)
+    },
+});
 ```
 
 ## Code sample
@@ -97,8 +103,8 @@ microsoftTeams.conversations.onCloseConversation = (conversationResponse) => {
 
 ## See also
 
-* [Teams tabs](~/tabs/what-are-tabs.md)
-* [Create a personal tab](~/tabs/how-to/create-personal-tab.md)
-* [Create a channel or group tab](~/tabs/how-to/create-channel-group-tab.md)
+* [Build tabs for Teams](../what-are-tabs.md)
+* [Create a personal tab](create-personal-tab.md)
+* [Create a channel tab or group tab](create-channel-group-tab.md)
+* [Build tabs with Adaptive Cards](build-adaptive-card-tabs.md)
 * [Tabs on mobile](~/tabs/design/tabs-mobile.md)
-* [Build tabs with Adaptive Cards](~/tabs/how-to/build-adaptive-card-tabs.md)

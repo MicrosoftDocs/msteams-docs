@@ -1,6 +1,6 @@
 ---
 title: Overview - Distribute your app
-description: In this article, learn the options for publishing your Microsoft Teams app, uploading and deploying your app, and GCC.
+description: Learn to distribute, publish your app to Microsoft Teams store or to your org. Understand how app's endpoints must comply with your Government Community Cloud(GCC) organization's requirements.
 ms.topic: conceptual
 author: v-rpatkur
 ms.author: surbhigupta
@@ -13,7 +13,7 @@ You can provide your Microsoft Teams app to an individual, team, organization, o
 
 ## Configure default install options
 
-You configure default install options. For example, if your app's primary capability is a bot, you can also make the bot the default capability when a user installs your app to a team.
+You can configure default install options. For example, if your app's primary capability is a bot, you can make the bot the default capability when a user installs your app to a team.
 
 ## Create your app package
 
