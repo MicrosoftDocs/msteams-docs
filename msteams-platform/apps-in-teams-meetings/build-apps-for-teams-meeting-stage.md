@@ -227,6 +227,7 @@ Follow the [step-by-step guide](../sbs-inmeeting-document-signing.yml) to build 
 ## See also
 
 * [Apps for Teams meetings](teams-apps-in-meetings.md)
+* [Enable authentication using third-party OAuth provider](../tabs/how-to/authentication/auth-flow-tab.md)
 * [Resource-specific consent for delegated permissions](../resources/schema/manifest-schema.md#authorizationpermissions)
 * [Create deep links](../concepts/build-and-test/deep-links.md)
 * [Meeting app APIs](meeting-apps-apis.md)

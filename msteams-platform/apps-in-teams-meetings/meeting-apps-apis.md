@@ -991,14 +991,7 @@ The following table provides the response codes:
 
 ## See also
 
+* [Teams authentication flow for tabs](../tabs/how-to/authentication/auth-flow-tab.md)
 * [Apps for Teams meetings](teams-apps-in-meetings.md)
-* [App manifest schema for Teams](../resources/schema/manifest-schema.md)
-* [Resource-specific consent](../graph-api/rsc/resource-specific-consent.md)
-* [Meeting module](/javascript/api/@microsoft/teams-js/microsoftteams.meeting)
 * [Live Share SDK](teams-live-share-overview.md)
 * [Teams cloud meeting recording](/microsoftteams/cloud-recording)
-* [Build in-meeting notification for Teams meeting](in-meeting-notification-for-meeting.md)
-* [API reference for the Bot Framework Connector service](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference)
-* [Integrate QR or barcode scanner capability](../concepts/device-capabilities/qr-barcode-scanner-capability.md)
-* [Generate meeting side panel](../sbs-meetings-sidepanel.yml)
-* [Generate in-meeting notifications](../sbs-meeting-content-bubble.yml)
