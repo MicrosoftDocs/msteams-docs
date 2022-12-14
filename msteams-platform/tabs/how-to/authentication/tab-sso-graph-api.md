@@ -117,7 +117,7 @@ You can configure authentication for multiple platforms as long as the URL is un
 
 You'll need to acquire access token for Microsoft Graph. You can do so by using Azure AD OBO flow.
 
-The current implementation for SSO grants consent for only user-level permissions that are not usable for making Graph calls. To get the permissions (scopes) needed to make a Graph call, SSO apps must implement a custom web service to exchange the token received from the Teams JavaScript SDK for a token that includes the needed scopes. You can use Microsoft Authentication Library (MSAL) for fetching the token from the client side.
+The current implementation for SSO grants consent for only user-level permissions that are not usable for making Graph calls. To get the permissions (scopes) needed to make a Graph call, SSO apps must implement a custom web service to exchange the token received from the Teams JavaScript library for a token that includes the needed scopes. You can use Microsoft Authentication Library (MSAL) for fetching the token from the client side.
 
 After you've configured Graph permissions in Azure AD:
 
@@ -129,8 +129,6 @@ After you've configured Graph permissions in Azure AD:
 The following code provides an example of OBO flow to fetch access token from the Teams client using MSAL.
 
 ### [C#](#tab/dotnet)
-
-[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/graph-app-installation-lifecycle/csharp/AppInstallation/Controllers/BaseController.cs&preserve-view=true)
 
 ```csharp
 IConfidentialClientApplication app = ConfidentialClientApplicationBuilder.Create(<"Client id">)
@@ -157,6 +155,7 @@ IConfidentialClientApplication app = ConfidentialClientApplicationBuilder.Create
 ### [Node.js](#tab/nodejs)
 
 - [SDK reference](/javascript/api/@azure/msal-node/confidentialclientapplication?view=azure-node-latest#@azure-msal-node-confidentialclientapplication-acquiretokenonbehalfof&preserve-view=true)
+
 - [sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs/src/server/tabs.js#L51-L94)
 
 ```Node.js
