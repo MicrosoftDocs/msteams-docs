@@ -388,6 +388,9 @@ items:
 
         Teams web client opens in a browser window.
 
+        > [!NOTE]
+        > The certificate must be manually added if the automatic procedure fails to install it. Following is the link: [manual certificate](/skype-sdk/sdn/articles/installing-the-trusted-root-certificate)
+
     1. Sign in with your Microsoft 365 account, if prompted.
 
     1. Select **Add** when prompted to sideload the app onto Teams on your local machine.
