@@ -102,6 +102,7 @@
     items:
     - name: Basic UI components
       href: concepts/design/design-teams-app-basic-ui-components.md
+      displayName: dropdown
     - name: Advanced UI components
       href: concepts/design/design-teams-app-advanced-ui-components.md
     - name: Adaptive Cards
@@ -310,7 +311,7 @@
       displayName: Messages sent between your Microsoft Teams bot and one or more user
     - name: Messages in bot conversations
       href: bots/how-to/conversations/conversation-messages.md
-      displayName: Picture messages, attribution for bot message, status code responses, app localization using bot and tab.
+      displayName: Picture messages, attribution for bot message, status code responses, app localization using bot and tab, form
       items:
       - name: Receive all conversation messages with RSC
         href: bots/how-to/conversations/channel-messages-with-rsc.md
@@ -333,6 +334,7 @@
       href: bots/how-to/conversations/request-headers-of-the-bot.md
     - name: Notification bot in Teams
       href: bots/how-to/conversations/notification-bot-in-teams.md
+      displayName: Adapter
     - name: Command bot in Teams
       href: bots/how-to/conversations/command-bot-in-teams.md
     - name: Workflow bot in Teams
@@ -676,7 +678,7 @@
       displayName: Rapid app approval, approve, publisher verification, what to expect after you submit your app, SaaS offer, concierge service, mandatory fix, suggested fix, blocker, test instructions
     - name: Review store validation guidelines
       href: concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md
-      displayName: Value proposition, advertising, stacked text, whiteboarding apps, message spamming, Avatars, commercial marketplace certification policies, security, general functionality and performance, suitable for workplace consumption, financial information, external domains, sensitive content, privacy policy 
+      displayName: Suggested, mandatory, value proposition, advertising, stacked text, whiteboarding apps, message spamming, Avatars, commercial marketplace certification policies, security, general functionality and performance, suitable for workplace consumption, financial information, external domains, sensitive content, privacy policy 
     - name: Create a Partner Center developer account
       href: concepts/deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md
       displayName: Support issues, account verification status, employee verification process, business verification process, support ticket 
@@ -780,7 +782,7 @@
       href: samples/collaboration-controls-limitations.md
   - name: App templates for Microsoft Teams
     href: samples/app-templates.md
-    displayName: Champion Management Platform, Company Communicator, FAQ Plus, Icebreaker, Microsoft 365 Learning Pathways, Microsoft Teams Emergency Operations Center (TEOC), Tournaments of Teams
+    displayName: Adoption, Champion Management Platform, Company Communicator, FAQ Plus, Icebreaker, Microsoft 365 Learning Pathways, Microsoft Teams Emergency Operations Center (TEOC), Tournaments of Teams
   - name: Production-ready Shifts Connectors
     href: samples/shifts-wfm-connectors.md
     displayName: Teams Shifts Workforce management (WFM)
