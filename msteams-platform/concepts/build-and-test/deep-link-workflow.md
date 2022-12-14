@@ -37,11 +37,10 @@ if(chat.isSupported()) {
 else { /* handle case where capability isn't supported */ }
 ```
 
-## Open a meeting scheduling dialog
+## Deep link to open a meeting scheduling dialog
 
-Applications can open a meeting scheduling dialog and provide information – meeting title, participants and more. Refer to the following deep link format:
+Applications can open a meeting scheduling dialog and provide information such as meeting title, participants. While it's recommended to use the typed APIs of Teams JS, it's possible to manually create deep links to the Teams built-in scheduling dialog. Use the following format for a deep link that you can use in a bot, Connector, or message extension card:
 
-While it's recommended to use the typed APIs of TeamsJS, it's possible to manually create deep links to the Teams built-in scheduling dialog. Use the following format for a deep link that you can use in a bot, Connector, or message extension card:
 `https://teams.microsoft.com/l/meeting/new?subject=<meeting subject>&startTime=<date>&endTime=<date>&content=<content>&attendees=<user1>,<user2>,<user3>,...`
 
 Example: `https://teams.microsoft.com/l/meeting/new?subject=test%20subject&attendees=joe@contoso.com,bob@contoso.com&startTime=10%2F24%2F2018%2010%3A30%3A00&endTime=10%2F24%2F2018%2010%3A30%3A00&content=​​​​​​​test%3Acontent​​​​​​​​​​​​​​`
@@ -96,13 +95,16 @@ microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/meeting/new?subjec
 
 ---
 
-Alternatively, you can manually create deep links to the Teams built-in scheduling dialog.
+## Start an Audio/Video call with users
 
-### Start an Audio/Video call with users
+Applications can prepare a deep link for users to start one-on-one or a group audio or video call. You can invoke audio only or audio-video calls to a single user or a group of users, by specifying the call type and the participants. Before placing the call, Teams client prompts a confirmation to make the call. If there's group call, you can call a set of VoIP users and a set of PSTN users in the same deep link invocation.
 
-Applications can prepare a deep link for users to start 1:1 or a group audio/video call. Refer to the following formats:
+In a video call, the client will ask for confirmation and turn on the caller's video for the call. The receiver of the call has a choice to respond through audio only or audio and video, through the Teams call notification window.
 
-While use of the typed APIs of TeamsJS is recommended, you can also use a manually created deep link to start a call.
+> [!NOTE]
+> This method cannot be used for invoking a meeting. Refer to the following formats:
+
+While use of the typed APIs of TeamsJS is recommended, you can also use a manually created deep link to start a call. Refer to the following formats:
 
 | Deep link | Format | Example |
 |-----------|--------|---------|
@@ -119,13 +121,6 @@ Following are the query parameters:
 
 Applications can also use Teams JS SDK 2.0 to start calls without having to manually prepare these deep links. Refer to the code below:
 
-You can invoke audio only or audio-video calls to a single user or a group of users, by specifying the call type and the participants. Before placing the call, Teams client prompts a confirmation to make the call. If there's group call, you can call a set of VoIP users and a set of PSTN users in the same deep link invocation.
-
-In a video call, the client will ask for confirmation and turn on the caller's video for the call. The receiver of the call has a choice to respond through audio only or audio and video, through the Teams call notification window.
-
-> [!NOTE]
-> This method cannot be used for invoking a meeting.
-
 The following code demonstrates using the TeamsJS SDK to start a call:
 
 ```javascript
@@ -138,10 +133,6 @@ if(call.isSupported()) {
 else { /* handle case where capability isn't supported */ }
 
 ```
-
-### Share Content to Meeting stage view
-
-Applications can share content to an ongoing meeting stage view.
 
 ## Generate a deep link to share content to stage in meetings
 
@@ -216,9 +207,6 @@ The query parameters are:
 
 To share the entire app to stage, in the app manifest, you must configure `meetingStage` and `meetingSidePanel` as frame contexts, see [app manifest](../../resources/schema/manifest-schema.md). Otherwise, meeting attendees may not be able to see the content on stage.
 
-Optionally, applications can also choose to start a meetNow meeting when the user chooses to share the content.
-Feature not in R4 yet. Pending docs from dev team.
+## Deep link to join a meeting
 
-### Join a meeting
-
-Application can read “Join a meeting” urls through Graph APIs. This deep link brings up the UI for the user to join that meeting.
+Application can read "Join a meeting" URLs through Graph APIs. This deep link brings up the UI for the user to join that meeting.
