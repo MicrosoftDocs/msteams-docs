@@ -9,7 +9,7 @@ ms.author: lajanuar
 
 # Build tabs for Teams
 
-Tabs are Teams-aware webpages embedded in Microsoft Teams. They're simple HTML `<iframe\>` tags that point to domains declared in the app manifest and can be added as part of a channel inside a team, group chat, or personal app for an individual user. You can include custom tabs with your app to embed your own web content in Teams or add Teams-specific functionality to your web content. For more information, see [Teams JavaScript client SDK](/javascript/api/overview/msteams-client).
+Tabs are Teams-aware webpages embedded in Microsoft Teams. They're simple HTML `<iframe\>` tags that point to domains declared in the app manifest and can be added as part of a channel inside a team, group chat, or personal app for an individual user. You can include custom tabs with your app to embed your own web content in Teams or add Teams-specific functionality to your web content. For more information, see [Teams JavaScript client library](/javascript/api/overview/msteams-client).
 
 > [!IMPORTANT]
 > Currently, custom tabs are available in Government Community Cloud (GCC), GCC-High, and Department of Defense (DOD).
@@ -65,7 +65,7 @@ You can use one of the following methods to create tabs:
 
 ### Declare custom tab in app manifest
 
-A custom tab is declared in the app manifest of your app package. For each webpage you want included as a tab in your app, you define a URL and a scope. Additionally, you can add the [Teams JavaScript client SDK](/javascript/api/overview/msteams-client) to your page, and call `microsoftTeams.initialize()` after your page loads. Teams displays your page and provides access to Teams-specific information, for example, the Teams client is running the dark theme.
+A custom tab is declared in the app manifest of your app package. For each webpage you want included as a tab in your app, you define a URL and a scope. Additionally, you can add the [Teams JavaScript client library](/javascript/api/overview/msteams-client) to your page, and call `microsoftTeams.initialize()` after your page loads. Teams displays your page and provides access to Teams-specific information, for example, the Teams client is running the dark theme.
 
 Whether you choose to expose your tab within the channel or group, or personal scope, you must present an <iframe\> HTML [content page](~/tabs/how-to/create-tab-pages/content-page.md) in your tab. For personal tabs, the content URL is set directly in your Teams app manifest by the `contentUrl` property in the `staticTabs` array. Your tab's content is the same for all users.
 

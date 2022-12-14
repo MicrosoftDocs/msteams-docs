@@ -17,7 +17,7 @@ To test your app's experience for anonymous users, select the URL in the meeting
 
 Teams admins can use the admin portal to enable or disable anonymous user app interaction for the entire tenant. This setting is enabled by default. For more information, see [allow anonymous users to interact with apps in meetings](/microsoftteams/meeting-settings-in-teams).
 
-## In-Meeting getContext from Teams client SDK
+## In-Meeting getContext from Teams client library
 
 Apps receive the following info for an anonymous user when they call the `getContext` API from the shared app stage. You can recognize anonymous users by checking for a `userLicenseType` value of **Unknown**.
 
@@ -70,7 +70,7 @@ The [get members](/microsoftteams/platform/bots/how-to/get-teams-context#fetch-t
 | `userRole` | `anonymous`, represents anonymous user. |
 
 > [!NOTE]
-> The ID received from the bot APIs and the Teams client SDK API are not the same.
+> The ID received from the bot APIs and the Teams client library API are not the same.
 
 ### ConversationUpdate activity MembersAdded and MembersRemoved
 
