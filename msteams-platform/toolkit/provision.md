@@ -336,7 +336,7 @@ The following steps help you to provision cloud resources using Visual Studio:
 
    After sign in to your Azure account using your credentials, the browser closes automatically.
 
-### Provision cloud resources
+### To provision cloud resources
 
 After you open your project in Visual Studio:
 
