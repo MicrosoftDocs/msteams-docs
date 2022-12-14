@@ -138,8 +138,9 @@ Follow the [step-by-step guide](../sbs-meeting-content-bubble.yml) to generate i
 
 ## See also
 
+* [Apps for Teams meetings and calls](teams-apps-in-meetings.md)
 * [Build tabs for meeting](~/apps-in-teams-meetings/build-tabs-for-meeting.md)
 * [Build apps for Teams meeting stage](build-apps-for-teams-meeting-stage.md)
 * [Build extensible conversation for meeting chat](build-extensible-conversation-for-meeting-chat.md)
 * [Build apps for anonymous users](build-apps-for-anonymous-user.md)
-* [Advanced meeting APIs](meeting-apps-apis.md)
+* [Meeting app APIs](meeting-apps-apis.md)
