@@ -35,7 +35,7 @@ Use the right mix of cards, text, and task modules to create a useful bot. The f
 
 :::image type="content" source="~/assets/images/FAQPlusEndUser.gif" alt-text="The screenshot is an example that shows a sample FAQ bot.":::
 
-If your app has a bot or message extension, your icons will also be included in your [Microsoft Azure Bot Service registration.](/azure/bot-service/bot-service-manage-overview?view=azure-bot-service-4.0&tabs=userassigned)
+If your app has a bot or a message extension, your icons are included in your [Microsoft Azure Bot Service registration.](/azure/bot-service/bot-service-manage-overview?view=azure-bot-service-4.0&tabs=userassigned)
 
 Every interaction between the user and the bot is represented as an activity. When a bot receives an activity, it passes it on to its activity handlers. See [bot activity handlers](~/bots/bot-basics.md).
 
