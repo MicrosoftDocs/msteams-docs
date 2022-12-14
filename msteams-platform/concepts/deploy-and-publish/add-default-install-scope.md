@@ -23,7 +23,7 @@ If your app's primary capability is a bot, you can also make the bot the default
 
 ## Configure your app's default install scope
 
-Configure the default install scope for your app. You can set only one scope at a time. For more information, see the [app manifest schema](~/resources/schema/manifest-schema.md).
+Configure the default install scope for your app. You can set only one scope at a time. For more information, see [app manifest schema](~/resources/schema/manifest-schema.md).
 
 To configure the default install scope in your app manifest:
 
