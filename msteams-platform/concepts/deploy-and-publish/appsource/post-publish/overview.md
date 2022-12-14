@@ -68,4 +68,4 @@ After you stop the distribution of an app, you can still see it in Partner Cente
 
 ## See also
 
-* [Monetize your app through Microsoft Commercial Marketplace](/office/dev/store/monetize-addins-through-microsoft-commercial-marketplace)
+[Monetize your app through Microsoft Commercial Marketplace](/office/dev/store/monetize-addins-through-microsoft-commercial-marketplace)
