@@ -87,7 +87,7 @@ submitHandler = (err, result) => {
 microsoftTeams.tasks.startTask(taskInfo, submitHandler);
 ```
 
-# [TeamsJs v2](#tab/teamsjs)
+# [TeamsJs v2](#tab/teamsjs3)
 
 ```typescript
 let taskInfo = {
