@@ -222,6 +222,7 @@
           href: resources/bot-v3/bot-conversations/bots-conv-channel.md
         - name: Starting a conversation
           href: resources/bot-v3/bot-conversations/bots-conv-proactive.md
+          displayName: Caching
       - name: Cards and card actions
         href: resources/bot-v3/bots-cards.md
       - name: Message formatting
@@ -478,7 +479,7 @@
       displayName: People picker, type-ahead
     - name: Types of cards
       href: task-modules-and-cards/cards/cards-reference.md
-      displayName: Flexible layout, receipt card, carousel card, Hero card, List card, Card collections, Thumbnail card, Receipt card
+      displayName: Button, Flexible layout, receipt card, carousel card, Hero card, List card, Card collections, Thumbnail card, Receipt card
     - name: Format cards in Microsoft Teams
       href: task-modules-and-cards/cards/cards-format.md
       displayName: Information masking, background, extension, notification
@@ -547,6 +548,7 @@
         href: bots/how-to/authentication/bot-sso-graph-api.md
     - name: Troubleshoot SSO authentication
       href: tabs/how-to/authentication/tab-sso-troubleshooting.md
+      displayName: Caching
   - name: Use third party IdP authentication
     items:
     - name: Overview
@@ -741,6 +743,7 @@
     items:
     - name: Overview
       href: samples/collaboration-control.md
+      displayName: Dataverse
     - name: Install Collaboration controls
       href: samples/install-collaboration-control.md
     - name: Create an app with Collaboration controls
