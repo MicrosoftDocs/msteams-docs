@@ -14,7 +14,7 @@ Every team has a different way of communicating and collaborating tasks. To achi
 
 ## Tabs in Teams meetings
 
-Tabs allow the meeting participants to access services and content in a specific space within a meeting. If you're new to Microsoft Teams tab development, see [Build tabs for Teams](/microsoftteams/platform/tabs/what-are-tabs).
+Tabs allow the meeting participants to access services and content in a specific space within a meeting. If you're new to Microsoft Teams tab development, see [build tabs for Teams](/microsoftteams/platform/tabs/what-are-tabs).
 
 Before creating a meeting tab, it's important to learn about the surfaces that are available to target the meeting chat view, meeting details view, meeting side panel view and meeting stage view.
 
@@ -200,7 +200,7 @@ Microsoft Teams JavaScript library exposes the frameContext in which your meetin
 
 ## See also
 
-* [In-meeting notification design guidelines](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)
-* [Teams authentication flow for tabs](../tabs/how-to/authentication/auth-flow-tab.md)
-* [Shared meeting stage experience design guidelines](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md)
-* [Add apps to meetings via Microsoft Graph](/graph/api/chat-post-installedapps?view=graph-rest-1.0&tabs=http&preserve-view=true)
+* [Apps for Teams meetings and calls](teams-apps-in-meetings.md)
+* [Design your Microsoft Teams meeting extension](design/designing-apps-in-meetings.md)
+* [Enable SSO for tab app](../tabs/how-to/authentication/tab-sso-overview.md)
+* [Add apps to meetings using Microsoft Graph](/graph/api/chat-post-installedapps?view=graph-rest-1.0&tabs=http&preserve-view=true)
