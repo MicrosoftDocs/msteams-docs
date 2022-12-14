@@ -1,6 +1,6 @@
 ---
 title: Get started - Overview
-description: Get started. Build your first Microsoft Teams app based on language (Node.js,C#,Java,Python) and developement environment, understand app capabilities, SDKs.
+description: Get started. Build your first Microsoft Teams app based on language (Node.js, C#, Java, and Python) and developement environment, understand app capabilities, SDKs.
 ms.localizationpriority: high
 ms.topic: reference
 ---
