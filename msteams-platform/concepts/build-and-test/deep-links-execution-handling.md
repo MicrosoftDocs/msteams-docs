@@ -1,5 +1,5 @@
 ---
-title: Deep link execution and handling in Teams
+title: Execution and handling of deep links
 author: v-npaladugu
 description:  In this article, learn how to execute and handle deep links in your Microsoft Teams.
 ms.topic: conceptual
@@ -7,28 +7,18 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ---
 
-# Execution and handling of deep links
+# Execution of deep links
 
-## Executing a deep link
+Applications can execute deep links from the following different contexts:
 
-Applications can execute deep links from different contexts. The following is a list of contexts within Teams client and outside the Teams client.
+* Personal tab
+* Shared tab
+* Bot
+* Chat message
 
-With-in Teams client
+## Personal or Shared tab
 
-* From a tab (personal / shared)
-
-* From a chat message
-
-Outside Teams client
-
-* 3rd Party applications
-
-* Browser
-
-### From a tab (personal / shared)
-
-It's possible to navigate within an app using TeamsJS. The following code demonstrates how to navigate to a specific entity within your Teams app.
-Applications can execute a deep link using the JS SDK. To execute a deep link, call the following API:
+It's possible to navigate within an app using Teams JS. The following code demonstrates how to navigate to a specific entity within your Teams app. Apps can execute a deep link using the JS SDK. To execute a deep link, call the following API:
 
 # [TeamsJS v2](#tab/teamsjs-v2)
 
@@ -58,17 +48,17 @@ microsoftTeams.executeDeepLink(/*deepLink*/);
 
 Application can also use the SDK to execute certain scenarios without building a deep link themselves. Refer to each scenario for sample code.
 
-### From a chat message
+## Chat message
 
 Applications can post messages to a chat and add deep links to them. The following are different ways an application can include a deep link in a message
 
-#### Text message - Hyperlink
+### Hyperlink text message
 
 Applications can add a deep link as a hyper link markdown. The deep link will be executed within teams. Refer the code below:
 
 `add sample`
 
-#### Text message – Raw link
+### Raw link text message
 
 Applications can include the raw link in a message. The deep link will execute within teams. Refer the code below:
 
@@ -77,9 +67,10 @@ Applications can include the raw link in a message. The deep link will execute w
 ### Adaptive Card – Open URL Action  
 
 Applications can include an `open URL` action in an adaptive card and add a deep link to it. The deep link will execute with-in Teams. Refer to the sample adaptive card payload below:
+
 `add sample`
 
-#### Adaptive Card – Hyperlink Markdown (Not recommended)
+### Adaptive Card as hyperlink Markdown (Not recommended)
 
 Applications can include a hyperlink markdown in an adaptive card. This opens in browser first**. Refer to sample payload below:
 
@@ -87,26 +78,39 @@ Applications can include a hyperlink markdown in an adaptive card. This opens in
 
 **Have seen varying results depending on where the link is executed
 
-#### Adaptive Card – Raw link (Not recommended)
+### Adaptive Card as raw link (Not recommended)
 
-Raw link in adaptive card body are not clickable.
+Raw link in adaptive card body doesn't have any action associated.
 
-### From a bot
+## Bot
 
-#### Bot - Open URL Action
+### Open URL action in bot
 
 Applications can include an `open URL` action in a bot and add a deep link to it. The deep link will execute with-in Teams. Refer to the sample adaptive card payload below:
 
-#### Bot - Card body
+`add sample`
+
+### Card body of the bot
 
 Applications can include the raw link in a Card body. The deep link opens in a browser first. Refer the code below:
 
-#### Bot - Hyperlink
+`add sample`
+
+#### Hyperlink markdown in a Bot
 
 Applications can include a hyperlink markdown in a Bot. This opens in browser first**. Refer to sample payload below:
 
-The navigation behavior of a Teams app extended across Microsoft 365 (Outlook/Office) is dependent on two factors:
+`add sample`
 
-The target that the deep link points to.
-The host where the Teams app is running.
+The navigation behavior of a Teams app extended across Microsoft 365 Outlook and Office is dependent on two factors:
+
+1. The target that the deep link points to.
+1. The host where the Teams app is running.
+
 If the Teams app is running within the host where the deep link is targeted, your app will open directly within the host. However, if the Teams app is running in a different host from where the deep link is targeted, the app will first open in the browser.
+
+## Handling deep links
+
+When a deep link to an application tab is executed, applications should make sure they respect all the parameters set in that link on tab context. Applications should read the tab context to identify the page, sub page, or label referred to in the deep link and should navigate to the specific section.
+
+`example`
