@@ -34,22 +34,29 @@ The following table lists Teams tabs and dialogs (task modules) capabilities (pu
 |-----------|--------------|-------|
 | app | Teams, Outlook, Office, Office app for Android | Namespace representing app initialization and lifecycle. |
 | appInitialization| | Deprecated. Replaced by `app` namespace. |
-| appInstallDialog | Teams||
+| appInstallDialog | Teams, Office ||
 | authentication | Teams, Outlook, Office, Office app for Android | |
-| calendar | Outlook ||
+| calendar | Outlook (Windows desktop only) ||
 | call | Teams||
 | chat |Teams||
 | dialog | Teams, Outlook, Office | Namespace representing dialogs (formerly named *task modules*. See notes on [Dialogs](#dialogs). |
+| geoLocation | ||
 | location |Teams| See notes on [App permissions](#app-permissions).|
 | mail | Outlook (Windows desktop only)||
 | media |Teams| See notes on [App permissions](#app-permissions).|
+| menus | Teams ||
+| monetization | Teams ||
 | pages | Teams, Outlook, Office, Office app for Android | Namespace representing page navigation. See notes on [Deep linking](#deep-linking). |
 | people |Teams||
-| settings || Deprecated. Replaced by `pages.config`.|
+| profile | ||
+| search | ||
 | sharing | Teams||
+| settings || Deprecated. Replaced by `pages.config`.|
+| stageView | Teams ||
 | tasks | | Deprecated. Replaced by `dialog` capability. See notes on [Dialogs](#dialogs).|
 | teamsCore | Teams | Namespace containing Teams-specific functionality.|
 | video | Teams||
+| webStorage | Teams ||
 
 #### App permissions
 
@@ -100,7 +107,7 @@ The dialog capability doesn't yet support [Adaptive card dialogs](../../task-mod
 
 The `dialog.open` function currently only works for opening HTMl-based dialogs, and it returns a callback function (`PostMessageChannel`) you can use to pass messages (`ChildAppWindow.postMessage`) to the newly opened dialog.  `dialog.open` returns a callback (rather than a Promise) because it doesn't require app execution to pause waiting for the dialog to close (thus providing more flexibility for various user interaction patterns).
 
-## What's new in TeamsJS version 2.0
+## What's new in TeamsJS version 2.x.x
 
 There are two significant changes between TeamsJS 1.x.x versions and v.2.0.0 and later:
 
@@ -127,7 +134,7 @@ Once you're able, the next step is to [update existing application code](#2-upda
 
 Enabling an existing Teams app to run in Outlook and Office requires all of the following:
 
-1. Dependency on TeamsJS version 2.0 ( `@microsoft/teams-js@2.0`) or later,
+1. Dependency on TeamsJS version 2.x.x ( `@microsoft/teams-js@2.0.0`) or later,
 
 2. [Modifying existing application code](#2-update-teamsjs-references) according to the required changes described in this article, and
 
@@ -354,7 +361,7 @@ The `Context` interface has been moved to the `app` namespace and updated to gro
 
 A new property `app.Context.app.host.name` has been added to enable tabs to differentiate user experience depending on the host application.
 
-You can also visualize the changes by reviewing the `transformLegacyContextToAppContext` function in the [TeamsJS v.2.0 source](https://github.com/OfficeDev/microsoft-teams-library-js/blob/main/packages/teams-js/src/public/app.ts)  (*app.ts* file).
+You can also visualize the changes by reviewing the `transformLegacyContextToAppContext` function in the [TeamsJS version 2.x.x source](https://github.com/OfficeDev/microsoft-teams-library-js/blob/main/packages/teams-js/src/public/app.ts)  (*app.ts* file).
 
 | Original name in `Context` interface | New location in `app.Context` |
 | - | - |
@@ -419,13 +426,13 @@ To run in Outlook and Office, your app will need to depend on the [npm package](
 1. Open the *Command palette*: `Ctrl+Shift+P`
 1. Run the command `Teams: Upgrade Teams JS SDK references to support Outlook and Office apps`
 
-After completion, the utility will have updated your `package.json` file with the TeamsJS v.2.0 (`@microsoft/teams-js@2.0.0` or later) dependency, and your `*.js/.ts` and `*.jsx/.tsx` files will be updated with:
+After completion, the utility will have updated your `package.json` file with the TeamsJS version 2.x.x (`@microsoft/teams-js@2.0.0` or later) dependency, and your `*.js/.ts` and `*.jsx/.tsx` files will be updated with:
 
 > [!div class="checklist"]
 >
-> * `package.json` references to TeamsJS v.2.0
-> * Import statements for TeamsJS v.2.0
-> * [Function, Enum, and Interface calls](#apis-organized-into-capabilities) to TeamsJS v.2.0
+> * `package.json` references to TeamsJS version 2.x.x
+> * Import statements for TeamsJS version 2.x.x
+> * [Function, Enum, and Interface calls](#apis-organized-into-capabilities) to TeamsJS version 2.x.x
 > * `TODO` comment reminders to review areas that might be impacted by [Context](#updates-to-the-context-interface) interface changes
 > * `TODO` comment reminders to [convert callback functions to promises](#callbacks-converted-to-promises)
 

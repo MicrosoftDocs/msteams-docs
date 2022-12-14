@@ -10,7 +10,7 @@ ms.date: 04/07/2022
 
 # Dice Roller code tutorial
 
-In the Dice Roller sample app, users are shown a dice with a button to roll it. When the dice is rolled, the Live Share SDK uses the Fluid Framework to sync the data across clients, so everyone sees the same result. To sync data, perform the following steps in the [app.js](https://github.com/microsoft/live-share-sdk/blob/main/samples/01.dice-roller/src/app.js) file:
+In the Dice Roller sample app, users are shown a dice with a button to roll it. When the dice is rolled, the Live Share SDK uses the Fluid Framework to sync the data across clients, so everyone sees the same result. To sync data, perform the following steps in the [app.js](https://github.com/microsoft/live-share-sdk/blob/main/samples/javascript/01.dice-roller/src/app.js) file:
 
 1. [Set up the application](#set-up-the-application)
 2. [Join a Fluid container](#join-a-fluid-container)
@@ -36,8 +36,8 @@ In addition to the `inTeams=true` query parameter, you can use a `view=content|c
 
 ```js
 import { SharedMap } from "fluid-framework";
-import { app, pages } from "@microsoft/teams-js";
-import { LiveShareClient, testLiveShare } from "@microsoft/live-share";
+import { app, pages, LiveShareHost } from "@microsoft/teams-js";
+import { LiveShareClient, TestLiveShareHost } from "@microsoft/live-share";
 import { InsecureTokenProvider } from "@fluidframework/test-client-utils";
 
 const searchParams = new URL(window.location).searchParams;
@@ -97,26 +97,24 @@ start().catch((error) => console.error(error));
 
 Not all of your app's views need to be collaborative. The `stage` view _always_ needs collaborative features, the `content` view _may_ need collaborative features, and the `config` view should _never_ need collaborative features. For the views that do need collaborative features you'll need to join a Fluid container associated with the current meeting.
 
-Joining the container for the meeting is as simple as initializing the [LiveShareClient](/javascript/api/@microsoft/live-share/liveshareclient) and calling its [joinContainer()](/javascript/api/@microsoft/live-share/liveshareclient#@microsoft-live-share-liveshareclient-joincontainer) method.
+Joining the container for the meeting is as simple as initializing the [LiveShareClient](/javascript/api/@microsoft/live-share/liveshareclient) with a `LiveShareHost` instance from the Teams Client SDK, and then calling its [joinContainer()](/javascript/api/@microsoft/live-share/liveshareclient#@microsoft-live-share-liveshareclient-joincontainer) method.
 
-When running locally, you can import [testLiveShare](/javascript/api/@microsoft/live-share/testliveshare) and call its [initialize()](/javascript/api/@microsoft/live-share.testliveshare#@microsoft-live-share-testliveshare-initialize) method. Then, use the [joinContainer()](/javascript/api/@microsoft/live-share.testliveshare#@microsoft-live-share-testliveshare-joincontainer) method to connect to a session.
+When running locally, you can initialize `LiveShareClient` with a `TestLiveShareHost` instance instead.
 
 ```js
 async function joinContainer() {
-  // Are we running in teams?
-  if (!!searchParams.get("inTeams")) {
-    // Create client
-    const liveShare = new LiveShareClient();
-    // Join container
-    return await liveShare.joinContainer(containerSchema, onContainerFirstCreated);
-  }
-  // Create client and configure for testing
-  testLiveShare.initialize();
-  return await testLiveShare.joinContainer(containerSchema, onContainerFirstCreated);
+  // Are we running in teams? If so, use LiveShareHost, otherwise use TestLiveShareHost
+  const host = !!searchParams.get("inTeams")
+    ? LiveShareHost.create()
+    : TestLiveShareHost.create();
+  // Create client
+  const liveShare = new LiveShareClient(host);
+  // Join container
+  return await liveShare.joinContainer(containerSchema, onContainerFirstCreated);
 }
 ```
 
-When testing locally, `testLiveShare` updates the browser URL to contain the ID of the test container that was created. Copying that link to other browser tabs causes the `testLiveShare` to join the test container that was created. If the modification of the applications URL interferers with the operation of the application, the strategy used to store the test containers ID can be customized using the [setLocalTestContainerId](/javascript/api/@microsoft/live-share.iliveshareclientoptions#@microsoft-live-share-iliveshareclientoptions-setlocaltestcontainerid) and [getLocalTestContainerId](/javascript/api/@microsoft/live-share.iliveshareclientoptions#@microsoft-live-share-iliveshareclientoptions-getlocaltestcontainerid) options passed to `LiveShareClient`.
+When testing locally, `TestLiveShareHost` updates the browser URL to contain the ID of the test container that was created. Copying that link to other browser tabs causes the `LiveShareClient` to join the test container that was created. If the modification of the applications URL interferers with the operation of the application, the strategy used to store the test containers ID can be customized using the [setLocalTestContainerId](/javascript/api/@microsoft/live-share.iliveshareclientoptions#@microsoft-live-share-iliveshareclientoptions-setlocaltestcontainerid) and [getLocalTestContainerId](/javascript/api/@microsoft/live-share.iliveshareclientoptions#@microsoft-live-share-iliveshareclientoptions-getlocaltestcontainerid) options passed to `LiveShareClient`.
 
 ## Write the stage view
 
@@ -276,7 +274,7 @@ After you've started running your app locally with `npm run start`, you can then
 
 ### Create the app package to sideload into Teams
 
-1. Go to the Dice Roller sample folder `\live-share-sdk\samples\01.dice-roller` on your computer. You can also check the [`.\manifest\manifest.json`](https://github.com/microsoft/live-share-sdk/tree/main/samples/01.dice-roller/manifest) from the Dice Roller sample on GitHub.
+1. Go to the Dice Roller sample folder `live-share-sdk\samples\javascript\01.dice-roller` on your computer. You can also check the [manifest.json](https://github.com/microsoft/live-share-sdk/blob/main/samples/javascript/01.dice-roller/manifest/manifest.json) from the Dice Roller sample on GitHub.
 
 1. Open manifest.json and update the configuration URL.
 
@@ -345,9 +343,9 @@ After you're ready to deploy your code, you can use [Teams Toolkit](../toolkit/p
 
 ## Code samples
 
-| Sample name | Description                                                     | JavaScript                                                                           |
-| :---------- | --------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
-| Dice Roller | Enable all connected clients to roll a die and view the result. | [View](https://github.com/microsoft/live-share-sdk/tree/main/samples/01.dice-roller) |
+| Sample name | Description | JavaScript |
+| :----- | -------------- | ----------- |
+| Dice Roller | Enable all connected clients to roll a die and view the result. | [View](https://github.com/microsoft/live-share-sdk/tree/main/samples/javascript/01.dice-roller) |
 
 ## Next step
 

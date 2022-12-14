@@ -61,7 +61,7 @@ For more information, see, [pages.shareDeepLink()](/javascript/api/@microsoft/te
 
 # [TeamsJS v1](#tab/teamsjs-v1)
 
-To implement this, you add a **copy link** action to each item, in whatever way best suits your UI. When the user takes this action, you call `shareDeepLink()` to display a dialog box containing a link that the user can copy to the clipboard. When you make this call, you also pass an ID for your item, which you get back in the [context](~/tabs/how-to/access-teams-context.md) when the link is followed and your tab is reloaded.
+To implement this, you add a **copy link** action to each item, in whatever way best suits your UI. When the user takes this action, you call `shareDeepLink()` to display a dialog box containing a link that the user can copy to the clipboard. When you make this call, pass an ID for your item. You get it back in [context](~/tabs/how-to/access-teams-context.md) when the link is followed and your tab is reloaded.
 
 ```javascript
 microsoftTeams.shareDeepLink({ subEntityId: <subEntityId>, subEntityLabel: <subEntityLabel>, subEntityWebUrl: <subEntityWebUrl> })
@@ -122,10 +122,10 @@ The query parameters are:
 | Parameter name | Description | Example |
 |:------------|:--------------|:---------------------|
 | `appId`&emsp; | The ID from Teams Admin Center. |fe4a8eba-2a31-4737-8e33-e5fae6fee194|
-| `entityId`&emsp; | The ID for the item in the tab, which you provided when [configuring the tab](~/tabs/how-to/create-tab-pages/configuration-page.md). When generating a URL for deep linking continue to use entityID as a parameter name in the URL. When configuring the tab the context object refers to the entityID as {page.id}. |Tasklist123|
+| `entityId`&emsp; | The ID for the item in the tab, which you provided when [configuring the tab](~/tabs/how-to/create-tab-pages/configuration-page.md). When generating a URL for deep linking, continue to use entityID as a parameter name in the URL. When configuring the tab, the context object refers to the entityID as {page.id}. |Tasklist123|
 | `entityWebUrl` or `subEntityWebUrl`&emsp; | An optional field with a fallback URL to use if the client doesn't support rendering the tab. | `https://tasklist.example.com/123` or `https://tasklist.example.com/list123/task456` |
 | `entityLabel` or `subEntityLabel`&emsp; | A label for the item in your tab, to use when displaying the deep link. | Task List 123 or "Task 456 |
-| `context.subEntityId`&emsp; | An ID for the item within the tab. When generating a URL for deep linking continue to use subEntityId as the parameter name in the URL. When configuring the tab the context object refers to the subEntityID as subPageID. |Task456 |
+| `context.subEntityId`&emsp; | An ID for the item within the tab. When generating a URL for deep linking, continue to use subEntityId as the parameter name in the URL. When configuring the tab, the context object refers to the subEntityID as subPageID. |Task456 |
 | `context.channelId`&emsp; | Microsoft Teams channel ID that is available from the tab [context](~/tabs/how-to/access-teams-context.md). This property is only available in configurable tabs with a scope of **team**. It isn't available in static tabs, which have a scope of **personal**.| 19:cbe3683f25094106b826c9cada3afbe0@thread.skype |
 | `chatId`&emsp; | ChatId that is available from the tab [context](~/tabs/how-to/access-teams-context.md) for group and meeting chat | 17:b42de192376346a7906a7dd5cb84b673@thread.v2 |
 | `contextType`&emsp; |  Chat is the only supported contextType for meetings | chat |
@@ -153,11 +153,11 @@ The query parameters are:
     >`https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456?context={"chatId": "17:b42de192376346a7906a7dd5cb84b673@thread.v2","contextType":"chat"}`
 
 > [!IMPORTANT]
-> Ensure that all query parameters are properly URI encoded. You must follow the preceding examples using the last example:
+> Ensure that all the query parameters are properly URI encoded. You must follow the preceding examples using the last example:
 >
 > ```javascript
-> var encodedWebUrl = encodeURI('https://tasklist.example.com/123/456&label=Task 456');
-> var encodedContext = encodeURI('{"subEntityId": "task456"}');
+> var encodedWebUrl = encodeURIComponent(JSON.stringify('https://tasklist.example.com/123/456&label=Task 456'));
+> var encodedContext = encodeURIComponent(JSON.stringify({"subEntityId": "task456"}));
 > var taskItemUrl = 'https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=' + encodedWebUrl + '&context=' + encodedContext;
 > ```
 
@@ -336,6 +336,27 @@ The query parameters are:
 > [!NOTE]
 > You can see `channelId` and `groupId` in the URL from the channel.
 
+### Generate deep links to chat messages
+
+Use this deep link format to navigate a user to a message in a personal or group chat in Teams:
+
+`http://teams.microsoft.com/l/message/{chatId}/{messageId}?context={"contextType":"chat"}`
+
+Example: `http://teams.microsoft.com/l/message/19:253f5895-9a62-4362-8d38-43f0205c702c_f1b94dcf-0aa3-4989-bcdf-ef4a5ed00f86@unq.gbl.spaces/1563480968434?context=%7B%22contextType%22:%22chat%22%7D`
+
+The query parameters are:
+
+* `chatId`: ChatId of the conversation. The supported format for `chatId` is 19:xxx. For example, `19:253f5895-9a62-4362-8d38-43f0205c702c_f1b94dcf-0aa3-4989-bcdf-ef4a5ed00f86@unq.gbl.spaces`.
+
+Apps can read a chat ID through app context in Teams, incoming payload to bot, or through [Microsoft Graph APIs](/graph/api/chat-get?view=graph-rest-1.0&tabs=http&preserve-view=true).
+
+  > [!NOTE]
+  > For One-on-One chats with bot, the incoming payload to bot contains the conversation ID in a:xxx format.
+
+* `messageId`: Each message in a chat has a unique ID. When a bot posts a message in chat, the `messageId` is returned. You can also get the `messageId` through [Microsoft Graph APIs](/graph/api/message-get?view=graph-rest-1.0&tabs=http&preserve-view=true). For example, `1563480968434`.
+
+* `context`: Specify the contextType as chat.
+
 ### Generate deep links to file in channel
 
 The following deep link format can be used in a bot, connector, or message extension card:
@@ -407,7 +428,7 @@ Example: `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee
 
 ## Navigate to an audio or audio-video call
 
-You can invoke audio only or audio-video calls to a single user or a group of users, by specifying the call type and the participants. Before placing the call, Teams client prompts a confirmation to make the call. In the case of a group call, you can call a set of VoIP users and a set of PSTN users in the same deep link invocation.
+You can invoke audio only or audio-video calls to a single user or a group of users, by specifying the call type and the participants. Before placing the call, Teams client prompts a confirmation to make the call. For a group call, you can call a set of VoIP users and a set of PSTN users in the same deep link invocation.
 
 In a video call, the client will ask for confirmation and turn on the caller's video for the call. The receiver of the call has a choice to respond through audio only or audio and video, through the Teams call notification window.
 

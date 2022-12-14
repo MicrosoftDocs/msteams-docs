@@ -12,7 +12,7 @@ ms.author: anclear
 Webhooks and connectors help to connect the web services to channels and teams in Microsoft Teams. Webhooks are user defined HTTP callback that notifies users about any action that has taken place in the Teams channel. It's a way for an app to get real time data. Connectors allow users to subscribe to receive notifications and messages from your web services. They expose an HTTPS endpoint for your service to post messages in the form of cards.
 
 > [!IMPORTANT]
-> You can choose to build notification bot Teams app other than incoming webhooks. They perform similarly but notification bot has more functionalities. For more information, see [Build notification bot with JavaScript](../sbs-gs-notificationbot.yml) or [incoming webhook notification sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/incoming-webhook-notification). To get started, download [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) now and explore. For more information, see [Teams Toolkit documents](../toolkit/teams-toolkit-fundamentals.md).
+> You can choose to build notification bot Teams app other than Incoming Webhooks. They perform similarly but notification bot has more functionalities. For more information, see [Build notification bot with JavaScript](../sbs-gs-notificationbot.yml) or [Incoming Webhook notification sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/incoming-webhook-notification). To get started, download [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) now and explore. For more information, see [Teams Toolkit documents](../toolkit/teams-toolkit-fundamentals.md).
 
 ## Outgoing Webhooks
 
@@ -29,11 +29,11 @@ Connectors allow users to subscribe to receive notifications and messages from t
 
 Incoming Webhooks help in posting messages from apps to Teams. If Incoming Webhooks are enabled for a team in any channel, it exposes the HTTPS endpoint, which accepts correctly formatted JSON and inserts the messages into that channel. For example, you can create an Incoming Webhook in your DevOps channel, configure your build, and simultaneously deploy and monitor services to send alerts.
 
-#### Notification bot or incoming webhook - choose the right one
+#### Notification bot or Incoming Webhook - choose the right one
 
-Before you start to learn how to build Incoming webhooks, you may also want to know that you can build Notification Bot using Teams Toolkit. Notification Bots can enable more customizable experience to meet different business scenarios.
+Before you start to learn how to build Incoming Webhooks, you may also want to know that you can build Notification Bot using Teams Toolkit. Notification Bots can enable more customizable experience to meet different business scenarios.
 
-Learn more about the differences between Notification Bot and Incoming webhook so that you can choose correct solutions for your scenarios:
+Learn more about the differences between Notification Bot and Incoming Webhook so that you can choose correct solutions for your scenarios:
 
 | &nbsp; | Notification bot |  Incoming Webhook |
 | --- | --- | --- |
@@ -48,7 +48,7 @@ Learn more about the differences between Notification Bot and Incoming webhook s
 | Trigger Supported | All triggers supported. If you use Teams Toolkit, you can quickly get template projects with following triggers: <br> • Time trigger hosted on Azure functions. <br> • Restify HTTP trigger hosted on Azure app service <br> • HTTP trigger hosted on Azure Functions | All triggers supported |
 | Building Tools | • [Teams Toolkit Overview for Visual Studio Code](../toolkit/teams-toolkit-fundamentals.md) <br> • [Teams Toolkit overview for Visual Studio](../toolkit/teams-toolkit-fundamentals.md) <br> • [TeamsFx Library](../toolkit/TeamsFx-CLI.md) <br> • [TeamsFx SDK](../toolkit/TeamsFx-SDK.md) | No tools required |
 | Cloud resource required | Azure Bot Framework | No resources required |
-| Tutorial | [Build notification bot with JavaScript](../sbs-gs-notificationbot.yml) | [incoming webhook notification sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/incoming-webhook-notification) |
+| Tutorial | [Build notification bot with JavaScript](../sbs-gs-notificationbot.yml) | [Incoming Webhook notification sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/incoming-webhook-notification) |
 
 ### Office 365 Connectors
 
@@ -64,12 +64,11 @@ Actionable messages allow users to take action without leaving their email clien
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Create an Outgoing Webhook](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)
+> [Create Outgoing Webhooks](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)
 
 ## See also
 
-* [Create an Incoming Webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
-* [Create an Office 365 Connector](~/webhooks-and-connectors/how-to/connectors-creating.md)
+* [Create Incoming Webhooks](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
+* [App capabilities mapped to features](../concepts/design/map-use-cases.md#app-capabilities-mapped-to-features)
+* [Create Office 365 Connectors](~/webhooks-and-connectors/how-to/connectors-creating.md)
 * [Create and send messages](~/webhooks-and-connectors/how-to/connectors-using.md)
-* [Build notification bot with JavaScript](../sbs-gs-notificationbot.yml)
-* [Build your first bot app using JavaScript](../sbs-gs-bot.yml)

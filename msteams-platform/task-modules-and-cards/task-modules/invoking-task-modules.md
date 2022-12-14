@@ -221,7 +221,7 @@ Microsoft Teams ensures that keyboard navigation works properly from the task mo
 
 |Sample name | Description | .NET | Node.js|
 |----------------|-----------------|--------------|----------------|
-|Task module sample bots-V4 | Samples for creating task modules. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/54.teams-task-module)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/54.teams-task-module)|
+|Task module sample bots-V4 | Samples for creating task modules. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/nodejs)|
 |Task module sample tabs and bots-V3 | Samples for creating task modules. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/nodejs)|
 
 ## Next step

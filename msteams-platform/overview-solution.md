@@ -9,10 +9,11 @@ ms.date: 11/02/2021
 ---
 # The Teams solution
 
-
 The Microsoft Teams Platform is a powerful, flexible platform for creating apps for Teams. It provides a vast suite of development environments and tools to support app development.
 
 ## The user story
+
+:::image type="content" source="assets/images/meetings-side-panel/sidepanelondesktopmobile_1.png" alt-text="The screenshot demonstrating the final output":::
 
 You've had a view of Teams offerings. You can now map them to user needs. Let’s revisit the scenario.
 
