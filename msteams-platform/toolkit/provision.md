@@ -17,7 +17,7 @@ TeamsFx integrates with Azure and the Microsoft 365 cloud, which allows you to p
 
 ## Provision using Teams Toolkit in Visual Studio Code
 
-Provision is performed with a single command in Teams Toolkit for Visual Studio Code or TeamsFx CLI. For more information, see [provision Azure-based app](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=8)
+Provision is performed with a single command in Teams Toolkit for Visual Studio Code or TeamsFx CLI. For more information, see [provision Azure-based app](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=8).
 
 ## Create Resources
 
