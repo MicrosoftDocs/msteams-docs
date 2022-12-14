@@ -35,7 +35,7 @@ You also need to enable sideloading for your tenant:
 
  1. At the top right, select **Org-wide app settings**.
 
- 1. Under Custom apps, turn on the **Interaction with custom app** toggle and **Save**.
+ 1. Under Custom apps, turn on the **Interaction with custom apps** toggle and **Save**.
 
     :::image type="content" source="images/teams-admin-enable-sideloading.png" alt-text="The screenshot is an example that enables sideloading for custom apps from the Teams Admin Center":::
 
@@ -56,8 +56,8 @@ To enroll your test tenant for Microsoft 365 Targeted Releases:
 1. Go to **Settings** > **Org Settings** > **Organization profile**.
 1. Select **Release preferences**.
 1. Select any *Targeted Release* preference:
-    1. **Target Release for everyone**
-    1. **Target Release for select users**
+    1. **Targeted Release for everyone**
+    1. **Targeted Release for select users**
 
     :::image type="content" source="images/m365-admin-center-targeted-releases.png" alt-text="The screenshot is an example that shows the Microsoft 365 admin center 'Release preferences' menu with Targeted Release option selected.":::
 
@@ -103,7 +103,7 @@ To install the latest Microsoft 365 app beta, build to your physical Android dev
 
     :::image type="content" source="images/office-android-install.png" alt-text="The screenshot is an example that shows the install button for the Office (Microsoft 365) app in Google Play Store.":::
 
-1. Select **Join** under **Join the beta section** after the installation completes.
+1. Select **Join** under **Join the beta** section after the installation completes.
 
     :::image type="content" source="images/office-android-join-beta.png" alt-text="The screenshot is an example that shows the Join the beta screen.":::
 
@@ -135,3 +135,7 @@ Create or update a Teams app to run across Microsoft 365:
 > [Enable a Teams personal tab for Microsoft 365 and Outlook](extend-m365-teams-personal-tab.md)
 > [!div class="nextstepaction"]
 > [Enable a Teams message extension for Outlook](extend-m365-teams-message-extension.md)
+
+## See also
+
+[Extend Teams apps across Microsoft 365](overview.md)
