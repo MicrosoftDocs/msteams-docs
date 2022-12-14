@@ -88,7 +88,7 @@ Adaptive Card in Teams supports overflow menu. You can populate an overflow menu
 
 ## Support for Azure AD Object ID and UPN in user mention
 
-Bots with Adaptive Cards support user mention IDs, such as Microsoft Azure Active Directory (Azure AD) Object ID and User Principle Name (UPN) in addition to the existing IDs. Incoming webhooks start to support user mention in Adaptive Card with the Azure AD Object ID and UPN.
+Bots with Adaptive Cards support user mention IDs, such as Microsoft Azure Active Directory (Azure AD) Object ID and User Principle Name (UPN) in addition to the existing IDs. Incoming Webhooks start to support user mention in Adaptive Card with the Azure AD Object ID and UPN.
 
 ## Next step
 
@@ -97,7 +97,9 @@ Bots with Adaptive Cards support user mention IDs, such as Microsoft Azure Activ
 
 ## See also
 
-* [Format cards in Teams](~/task-modules-and-cards/cards/cards-format.md)
-* [Design Adaptive Cards](~/task-modules-and-cards/cards/design-effective-cards.md)
-* [Adaptive cards in bots](../bots/how-to/conversations/conversation-messages.md#adaptive-cards)
-* [Adaptive Cards overflow menu](~/task-modules-and-cards/cards/cards-format.md#adaptive-cards-overflow-menu)
+- [Cards and task modules](cards-and-task-modules.md)
+- [Format cards in Teams](~/task-modules-and-cards/cards/cards-format.md)
+- [Design Card](../concepts/design/design-teams-app-basic-ui-components.md#card)
+- [Design Adaptive Cards](~/task-modules-and-cards/cards/design-effective-cards.md)
+- [Adaptive Cards in bots](../bots/how-to/conversations/conversation-messages.md#adaptive-cards)
+- [Card actions](cards/cards-actions.md)
