@@ -94,7 +94,7 @@ The following code provides an example of the CSS:
 
 ### Example 2: PowerApp
 
-The user can use the same approach to embed a PowerApp as well. As the height or width of any individual PowerApp is customizable, the user can adjust the height and width to achieve the desired presentation.
+The user can use the same approach to embed a PowerApp as well. As the height or width of any individual PowerApp is customizable, the user can adjust the height, and width to achieve the desired presentation.
 
 :::image type="content" source="../../assets/images/task-module/powerapp-example.png" alt-text="powerapp":::
 
@@ -231,6 +231,7 @@ Microsoft Teams ensures that keyboard navigation works properly from the task mo
 
 ## See also
 
+* [Cards and task modules](../cards-and-task-modules.md)
 * [Request device permissions](~/concepts/device-capabilities/native-device-permissions.md)
 * [Integrate media capabilities](~/concepts/device-capabilities/media-capabilities.md)
 * [Integrate QR or barcode scanner capability in Teams](~/concepts/device-capabilities/qr-barcode-scanner-capability.md)
