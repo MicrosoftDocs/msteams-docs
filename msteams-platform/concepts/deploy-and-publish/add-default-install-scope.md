@@ -66,6 +66,3 @@ To configure details in app manifest:
 ## See also
 
 * [Distribute your Microsoft Teams app](apps-publish-overview.md)
-* [Build bots for Teams](../../bots/what-are-bots.md)
-* [Build tabs for Teams](../../tabs/what-are-tabs.md)
-* [Build connectors for Teams](../../webhooks-and-connectors/what-are-webhooks-and-connectors.md#connectors)
