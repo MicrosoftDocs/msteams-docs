@@ -9,11 +9,11 @@ ms.localizationpriority: high
 
 # Deep link to a workflow in Teams
 
-Deep Link to a perform an operation in Teams
+You can also create a deep link to perform an operation in Teams, such as to create a new chat, navigate to audio-video call, and opening a scheduling dialog.
 
-### Start a new chat
+## Create a new chat
 
-Applications can start a new chat with a list of users and provide additional information – chat name, draft message. Refer to the following format:
+Applications can start a new chat with a list of users and provide additional information such as chat name and draft message by using the following format:
 
 `https://teams.microsoft.com/l/chat/0/0?users=<user1>,<user2>,...&topicName=<chat name>&message=<precanned text>`
 
@@ -25,9 +25,7 @@ The query parameters are:
 * `topicName`: An optional field for chat's display name, if a chat has three or more users. If this field isn't specified, the chat's display name is based on the names of the participants.
 * `message`: An optional field for the message text that you want to insert into the current user's compose box while the chat is in a draft state.
 
-To use this deep link with your bot, specify this as the URL target in your card's button or tap action through the `openUrl` action type.
-
-Applications can also use Teams JS SDK 2.0 to create this without having to manually prepare the link. Refer to the following code sample:
+To use this deep link with your bot, specify this as the URL target in your card's button or tap action through the `openUrl` action type. Apps can also use Teams JS SDK 2.0 to create this without having to manually prepare the deep link. Following is an example using Teams JS SDK:
 
 ```javascript
 if(chat.isSupported()) {
@@ -39,7 +37,7 @@ if(chat.isSupported()) {
 else { /* handle case where capability isn't supported */ }
 ```
 
-### Open a meeting scheduling dialog
+## Open a meeting scheduling dialog
 
 Applications can open a meeting scheduling dialog and provide information – meeting title, participants and more. Refer to the following deep link format:
 
