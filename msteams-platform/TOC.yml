@@ -62,6 +62,14 @@
     displayName: HTTPs, localhost, host your Teams app
   - name: Plan responsive tabs for Teams mobile
     href: concepts/design/plan-responsive-tabs-for-teams-mobile.md
+  - name: Plan analytics for your Teams app
+    items:
+      - name: Overview
+        href: concepts/design/overview-analytics.md
+      - name: Strategize and decide what to measure
+        href: concepts/design/strategize-measure.md
+      - name: Plan code instrumentation using analytics service
+        href: concepts/design/plan-code-instrumentation.md
   - name: Plan to monetize your app
     href: concepts/design/plan-to-monetize.md
     displayName: Subscription, In-app purchases, Free trials, Test preview
@@ -187,8 +195,8 @@
       href: concepts/build-and-test/manage-your-apps-in-developer-portal.md
     - name: Analyze your apps usage in Developer Portal
       href: concepts/build-and-test/analyze-your-apps-usage-in-developer-portal.md  
-  - name: Teams JavaScript client SDK
-    href: tabs/how-to/using-teams-client-sdk.md
+  - name: Teams JavaScript client library
+    href: tabs/how-to/using-teams-client-library.md
   - name: Node.js Bot Framework for bots and message extensions (GitHub)
     href: https://github.com/Microsoft/botbuilder-js
   - name: .NET Bot Framework for bots and message extensions (GitHub)
@@ -322,6 +330,10 @@
       href: bots/how-to/update-and-delete-bot-messages.md      
     - name: Request headers of the bot
       href: bots/how-to/conversations/request-headers-of-the-bot.md
+    - name: Notification bot in Teams
+      href: bots/how-to/conversations/notification-bot-in-teams.md
+    - name: Command bot in Teams
+      href: bots/how-to/conversations/command-bot-in-teams.md
     - name: Workflow bot in Teams
       href: bots/how-to/conversations/workflow-bot-in-teams.md
   - name: Get Teams specific context for your bot
@@ -390,6 +402,8 @@
       href: apps-in-teams-meetings/build-tabs-for-meeting.md 
     - name: Build apps for meeting stage
       href: apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md
+    - name: Share in meeting
+      href: concepts/build-and-test/share-in-meeting.md
     - name: Build in-meeting notification for meeting
       href: apps-in-teams-meetings/in-meeting-notification-for-meeting.md
     - name: Build extensible conversations for meeting chat
@@ -504,14 +518,13 @@
   items:
   - name: Overview
     href: concepts/authentication/authentication.md
-    displayName: Authentication method
-  - name: Tabs
-    items:
-    - name: Enable SSO for tab app
+  - name: Enable SSO for your Teams app
+    items: 
+    - name: Enable SSO for your tab app
       items:
-      - name: Overview
+      - name: Overview for tab SSO
         href: tabs/how-to/authentication/tab-sso-overview.md
-      - name: Register your tab app in Azure AD
+      - name: Configure your tab app in Azure AD
         href: tabs/how-to/authentication/tab-sso-register-aad.md
       - name: Add code to enable SSO
         href: tabs/how-to/authentication/tab-sso-code.md
@@ -519,33 +532,32 @@
         href: tabs/how-to/authentication/tab-sso-manifest.md
       - name: Grant Microsoft Graph permissions and scopes
         href: tabs/how-to/authentication/tab-sso-graph-api.md
-        displayName: Configure authentication for different platforms
-      - name: Troubleshoot SSO authentication
-        href: tabs/how-to/authentication/tab-sso-troubleshooting.md
-    - name: Use third party OAuth IdP authentication
+    - name: Enable SSO for your bot and message extension app
       items:
       - name: Overview
-        href: tabs/how-to/authentication/auth-flow-tab.md
-      - name: Configure third party OAuth IdP authentication
-        href: tabs/how-to/authentication/auth-tab-aad.md
-      - name: Use external OAuth providers
-        href: tabs/how-to/authentication/auth-oauth-provider.md 
-  - name: Bots
+        href: bots/how-to/authentication/bot-sso-overview.md
+      - name: Configure your app in Azure AD
+        href: bots/how-to/authentication/bot-sso-register-aad.md
+      - name: Add code to enable SSO
+        href: bots/how-to/authentication/bot-sso-code.md
+      - name: Update manifest for SSO and preview app
+        href: bots/how-to/authentication/bot-sso-manifest.md
+      - name: Grant Microsoft Graph permissions and scopes
+        href: bots/how-to/authentication/bot-sso-graph-api.md
+    - name: Troubleshoot SSO authentication
+      href: tabs/how-to/authentication/tab-sso-troubleshooting.md
+  - name: Use third party IdP authentication
     items:
-    - name: Authentication flow in bots
-      href: bots/how-to/authentication/auth-flow-bot.md
-    - name: Add authentication to your bot
+    - name: Overview
+      href: tabs/how-to/authentication/auth-flow-tab.md
+    - name: Add third party IdP authentication to tab app
+      href: tabs/how-to/authentication/auth-tab-aad.md
+    - name: Add third party IdP authentication to bot app
       href: bots/how-to/authentication/add-authentication.md
-      displayName: Create an authentication-enabled bot, deploy the bot to Azure and associate it with an identity provider, integrate the bot within Microsoft Teams
-    - name: Use SSO authentication
-      href: bots/how-to/authentication/auth-aad-sso-bots.md
-  - name: Message extensions
-    items:
-    - name: Add authentication to your message extension
+    - name: Add third party IdP authentication to message extension app
       href: messaging-extensions/how-to/add-authentication.md
-      displayName: Configuration
-    - name: Enable SSO for message extensions
-      href: messaging-extensions/how-to/enable-SSO-auth-me.md 
+  - name: Use external OAuth providers
+    href: tabs/how-to/authentication/auth-oauth-provider.md
 - name: Integrate device capabilities
   items:
   - name: Overview
@@ -598,6 +610,8 @@
     displayName: Microsoft 365, Office 365
   - name: Publish Teams apps for Microsoft 365
     href: m365-apps/publish.md
+- name: Teams developer documentation FAQs
+  href: teams-faq.md
 - name: Test your app
   items:
   - name: Overview

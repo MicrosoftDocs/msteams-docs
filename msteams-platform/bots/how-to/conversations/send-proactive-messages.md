@@ -64,7 +64,7 @@ For `serviceUrl`, use the value from an incoming activity triggering the flow or
 * GCC: `https://smba.infra.gcc.teams.microsoft.com/gcc`
 * GCCH: `https://smba.infra.gov.teams.microsoft.us/gcch`
 
-For a code sample, see the call `CreateConversationAsync` in the [**sample**](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/57.teams-conversation-bot/Bots/TeamsConversationBot.cs).
+For a code sample, see the call `CreateConversationAsync` in the [**sample**](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs).
 
 You can get the conversation when the app is installed for the first time. After the conversation is created, [get the conversation ID](#get-the-conversation-id). The `conversationId` is available in the conversation update events.
 
@@ -181,6 +181,9 @@ The following code shows how to send proactive messages:
 
 # [C#](#tab/dotnet)
 
+* [SDK reference](/dotnet/api/microsoft.bot.builder.cloudadapterbase.continueconversationasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-cloudadapterbase-continueconversationasync(system-string-microsoft-bot-schema-activity-microsoft-bot-builder-botcallbackhandler-system-threading-cancellationtoken)&preserve-view=true)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/graph-meeting-notification/csharp/MeetingNotification/Controllers/NotificationController.cs#L112)
+
 ```csharp
 [Route("api/notify")]
 [ApiController]
@@ -199,24 +202,26 @@ public class NotifyController : ControllerBase
 
     public async Task<IActionResult> Get()
     {
-        foreach (var conversationReference in _conversationReferences.Values) // Loop of all conversation references must be updated to get it from backend system.
+        foreach (var conversationReference in _conversationReferences.Values)
         {
             var newReference = new ConversationReference()
-        {
-            Bot = new ChannelAccount()
             {
-                Id = conversationReference.Bot.Id
-            },
-            Conversation = new ConversationAccount()
-            {
-                Id = conversationReference.Conversation.Id
-            },
-            ServiceUrl = conversationReference.ServiceUrl,
-        };
+                Bot = new ChannelAccount()
+                {
+                    Id = conversationReference.Bot.Id
+                },
+                Conversation = new ConversationAccount()
+                {
+                    Id = conversationReference.Conversation.Id
+                },
+                ServiceUrl = conversationReference.ServiceUrl,
+            };
+
+            // Sends a proactive message from the bot to a conversation.
             await ((BotAdapter)_adapter).ContinueConversationAsync(_appId, newReference, BotCallback, default(CancellationToken));
         }
         
-        // Let the caller know proactive messages have been sent
+        // Let the caller know proactive messages have been sent.
         return new ContentResult()
         {
             Content = "<html><body><h1>Proactive messages have been sent.</h1></body></html>",
@@ -229,12 +234,33 @@ public class NotifyController : ControllerBase
     {
         // If you encounter permission-related errors when sending this message, see
         // https://aka.ms/BotTrustServiceUrl
+        // Sends an activity to the sender of the incoming activity.
         await turnContext.SendActivityAsync("proactive hello");
     }
 }
 ```
 
+Example of a code snippet to demonstrate creating conversation reference.
+
+```csharp
+ var newReference = new ConversationReference()
+        {
+            Bot = new ChannelAccount()
+            {
+                Id = conversationReference.Bot.Id
+            },
+            Conversation = new ConversationAccount()
+            {
+                Id = conversationReference.Conversation.Id
+            },
+            ServiceUrl = conversationReference.ServiceUrl,
+        };
+```
+
 # [TypeScript](#tab/typescript)
+
+* [SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#botbuilder-core-turncontext-getconversationreference&preserve-view=true)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/graph-proactive-installation/nodejs/bots/proactiveBot.js#L59)
 
 ```javascript
 
@@ -243,7 +269,7 @@ async messageAllMembersAsync(context) {
 
     members.forEach(async (teamMember) => {
         const message = MessageFactory.text('Hello ${ teamMember.givenName } ${ teamMember.surname }. I\'m a Teams conversation bot.');
-
+        // A conversation reference for the conversation that contains this activity.
         var ref = TurnContext.getConversationReference(context.activity);
         ref.user = teamMember;
 
@@ -255,18 +281,24 @@ async messageAllMembersAsync(context) {
                 });
             });
     });
-
+    // Sends an activity to the sender of the incoming activity.
     await context.sendActivity(MessageFactory.text('All messages have been sent.'));
 }
+
 ```
 
 # [Python](#tab/python)
 
+* [SDK reference](/python/api/botbuilder-core/botbuilder.core.botframeworkadapter?view=botbuilder-py-latest#botbuilder-core-botframeworkadapter-create-conversation&preserve-view=true)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L200)
+
 ```python
+# Send message to all members.
 async def _message_all_members(self, turn_context: TurnContext):
     team_members = await self._get_paged_members(turn_context)
 
     for member in team_members:
+        # A conversation reference for the conversation that contains this activity.
         conversation_reference = TurnContext.get_conversation_reference(
             turn_context.activity
         )
@@ -295,6 +327,7 @@ async def _message_all_members(self, turn_context: TurnContext):
             conversation_reference, get_ref, conversation_parameters
         )
 
+    # Sends an activity to the sender of the incoming activity.
     await turn_context.send_activity(
         MessageFactory.text("All messages have been sent")
     )
@@ -302,6 +335,8 @@ async def _message_all_members(self, turn_context: TurnContext):
 ```
 
 # [JSON](#tab/json)
+
+[SDK reference](/microsoftteams/platform/bots/how-to/conversations/send-proactive-messages?tabs=json)
 
 ```json
 POST /v3/conversations
@@ -339,8 +374,8 @@ The following table provides a simple code sample that incorporates basic conver
 
 | **Sample Name** | **Description** | **.NET** | **Node.js** | **Python** |
 |---------------|--------------|--------|-------------|--------|
-| Teams Conversation Basics  | Demonstrates basics of conversations in Teams, including sending one-to-one proactive messages.| [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/57.teams-conversation-bot) |
-| Start new thread in a channel | Demonstrates creating a new thread in a channel. | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/58.teams-start-new-thread-in-channel) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/javascript_nodejs/58.teams-start-new-thread-in-channel) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/58.teams-start-thread-in-channel) |
+| Teams Conversation Basics  | Demonstrates basics of conversations in Teams, including sending one-to-one proactive messages.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/python) |
+| Start new thread in a channel | Demonstrates creating a new thread in a channel. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-initiate-thread-in-channel/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-initiate-thread-in-channel/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-initiate-thread-in-channel/python) |
 | Proactive installation of app and sending proactive notifications | This sample shows how you can use proactive installation of app for users and send proactive notifications by calling Microsoft Graph APIs. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/nodejs) | NA |
 | Proactive Messaging | This is a sample that shows how to save user's conversation reference information to send proactive reminder message using Bots. | NA | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging-teamsfx) | NA |
 

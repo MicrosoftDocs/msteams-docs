@@ -24,13 +24,13 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 Teams platform features that are available to all app developers.
 
-**2022 November**
+**2022 December**
 
-* ***November 16, 2022***: [Adaptive Cards overflow menu](task-modules-and-cards/cards/cards-format.md#adaptive-cards-overflow-menu).
+* ***December 8, 2022***: [Teams developer documentation FAQs](teams-faq.md)
 
-* ***November 14, 2022***: [Introducing single sign-on for Visual Studio](toolkit/add-single-sign-on.md).
+* ***December 07, 2022***: [Notification bot in Teams](bots/how-to/conversations/notification-bot-in-teams.md)
 
-* ***November 02, 2022***: [Support global routing for bot APIs](bots/how-to/conversations/send-proactive-messages.md#create-the-conversation).
+* ***December 07, 2022***: [Command bot in Teams](bots/how-to/conversations/command-bot-in-teams.md)
 
 :::column-end:::
 :::row-end:::
@@ -41,6 +41,14 @@ Teams platform features that are available to all app developers.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
+| 29/11/2022 | Introducing plan analytics for your Teams app. | Plan your app > Plan analytics for your Teams app > [Overview](concepts/design/overview-analytics.md) |
+| 23/11/2022 | Updated integrate location capabilities. | Integrate device capabilities > [Integrate location capabilities](concepts/device-capabilities/location-capability.md) |
+| 22/11/2022 | Revamped enable SSO for your bot and message extension app. | Add authentication > Enable SSO for your Teams app > Enable SSO for your bot and message extension app > [Overview](bots/how-to/authentication/bot-sso-overview.md) |
+| 18/11/2022 | Introducing zero install for link unfurling. | Build message extensions > Add link unfurling > [Zero install for link unfurling](messaging-extensions/how-to/link-unfurling.md#zero-install-for-link-unfurling) |
+| 17/11/2022 | Updated Manifest schema v1.15. | App manifest > [Manifest schema v1.15](resources/schema/manifest-schema.md) |
+| 16/11/2022 | Introducing Adaptive Cards overflow menu. | Build cards and task modules > Build cards > Format cards in Microsoft Teams > [Adaptive Cards overflow menu](task-modules-and-cards/cards/cards-format.md#adaptive-cards-overflow-menu) |
+| 14/11/2022 | Introducing single sign-on for Visual Studio. | Tools and SDKs > Teams Toolkit > Use Teams Toolkit to create your app > Develop your Teams app > [Add single sign-on to your Teams app](toolkit/add-single-sign-on.md) |
+| 02/11/2022 | Support global routing for bot APIs. | Build bots > Bot conversations > Proactive messages > [Create the conversation](bots/how-to/conversations/send-proactive-messages.md#create-the-conversation) |
 | 10/27/2022 | Introducing Workflow bot for Teams. | Tools and SDKs > Teams Toolkit > Use Teams Toolkit to create your app > Develop your Teams app  > Create multi capability app > [Create Teams workflow bot](sbs-gs-workflow-bot.yml) |
 | 10/26/2022 | Build an in-meeting app for enabling meeting participants to sign documents in real time. | Build apps for Teams meetings and calls > Enable and configure apps for Teams meetings > [Build apps for Teams meeting stage](apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#build-an-in-meeting-document-signing-app) |
 | 10/19/2022| Developer Portal for Teams is now available for GCC tenants. | Tools and SDKs > Developer Portal for Teams > [Overview](concepts/build-and-test/teams-developer-portal.md)|
@@ -48,7 +56,6 @@ Teams platform features that are available to all app developers.
 | 10/13/2022| Configure back button of an app. | Design your app > App capabilities > [Personal apps](concepts/design/personal-apps.md#configure-back-button)|
 | 10/12/2022| Apps are supported in instant meetings, one-on-one, and group calls. | Build apps for Teams meetings and calls > [Overview](apps-in-teams-meetings/teams-apps-in-meetings.md)|
 | 10/12/2022| Live Share canvas | Build apps for Teams meetings and calls > Enhanced collaboration with Live Share > [Canvas](apps-in-teams-meetings/teams-live-share-canvas.md)|
-| 09/30/2022|Manage SaaS licenses for third party apps in Teams.|Monetize your app > Include a SaaS offer with your Teams app > [Manage license for third party apps in Teams](concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md#manage-license-for-third-party-apps-in-teams)|
 | 09/29/2022|Teams mobile app now supports file downloads to local devices.|Integrate device capabilities > Integrate media capabilities > [File download on Teams mobile](concepts/device-capabilities/media-capabilities.md#file-download-on-teams-mobile)|
 | 09/16/2022|Adaptive Cards in search based message extensions now support Universal Actions.|Build message extensions > Search commands > [Universal Actions for search based message extensions](messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md)|
 | 09/06/2022|Introduced code snippets for capturing videos using camera through `selectMedia` API.| Integrate device capabilities > Integrate media capabilities > [Code snippets](concepts/device-capabilities/media-capabilities.md#code-snippets)|
@@ -68,7 +75,7 @@ Teams platform features that are available to all app developers.
 | 06/03/2022 | Updated Add authentication module for enabling SSO for tab app with new structure and procedures | Add authentication > Tabs > [Enable single sign-on in a tab app](tabs/how-to/authentication/tab-sso-overview.md) |
 | 05/24/2022 | Additional tips for rapid approval to publish your app linked to a SaaS offer | Publish to the Teams store > Overview > [Additional tips for rapid approval to publish your app linked to a SaaS offer](~/concepts/deploy-and-publish/appsource/publish.md#additional-tips-for-rapid-approval-to-publish-your-app-linked-to-a-saas-offer) |
 | 05/24/2022 | Submit your Outlook- and Office-enabled apps to the Teams store | Extend your app across Microsoft 365 > [Overview](m365-apps/overview.md) |
-| 05/24/2022 | App guidance and what's new in TeamsJS version 2.0.0| Tools and SDKs > [Teams JavaScript client SDK](tabs/how-to/using-teams-client-sdk.md)  |
+| 05/24/2022 | App guidance and what's new in TeamsJS version 2.0.0| Tools and SDKs > [Teams JavaScript client SDK](tabs/how-to/using-teams-client-library.md)  |
 | 05/24/2022 | Teams Toolkit version 4.0.0 for Visual Studio Code is now GA | Tools and SDKs > Teams Toolkit for Visual Studio Code > <br> •  [Teams Toolkit Overview](toolkit/teams-toolkit-fundamentals.md) <br> • [Build command bot with JavaScript](toolkit/add-capability.md) <br> • [Build notification bot with JavaScript](toolkit/add-capability.md) <br> • [Preview and customize Teams app manifest](toolkit/TeamsFx-preview-and-customize-app-manifest.md) <br> • [Connect to existing APIs](toolkit/add-API-connection.md) <br> • [Add capabilities to your Teams apps](toolkit/add-capability.md) <br> • [Add single sign-on experience](toolkit/add-single-sign-on.md) <br> • [Add cloud resources to Teams app](toolkit/add-resource.md) |
 | 05/24/2022 | Introduced app manifest version 1.13 | App manifest > [Manifest schema for Microsoft Teams](resources/schema/manifest-schema.md) |
 | 5/24/2022|Bots and Message extensions in GCC and GCCH| • Plan your app > [Overview](concepts/app-fundamentals-overview.md#government-community-cloud) </br> • Build bots > [Overview](bots/what-are-bots.md) </br> • Build message extensions > [Overview](messaging-extensions/what-are-messaging-extensions.md) |
@@ -291,16 +298,17 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 
 Developer preview is a public program that provides early access to unreleased Teams platform features.
 
-**2022 November**
+**2022 December**
 
-***November 11, 2022***: [Enable bots to receive all chat messages without being @mentioned](bots/how-to/conversations/channel-messages-with-rsc.md).
+***December 05, 2022***: [Introduced share in meeting to share any document or third-party app to the meeting stage](concepts/build-and-test/share-in-meeting.md).
 
 :::column-end:::
 :::row-end:::
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ------------------ |
-| 10/11/2022 | Generate a deep link to share content to stage in meetings. | Build apps for Teams meetings and calls > Enable and configure apps for Teams meetings > [Generate a deep link to share content to stage in meetings.](apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#generate-a-deep-link-to-share-content-to-stage-in-meetings) |
+|10/11/2022| Enable bots to receive all chat messages without being @mentioned.|Build bots > Bot conversations > Message in bot conversations > [Receive all conversation messages with RSC](bots/how-to/conversations/channel-messages-with-rsc.md) |
+|10/11/2022|Generate a deep link to share content to stage in meetings.|Build apps for Teams meetings and calls > Enable and configure apps for meetings > Share in meeting > [Generate a deep link to share content to stage in meetings.](concepts/build-and-test/share-in-meeting.md) |
 | 09/23/2022 | Introduced meeting app support for Scheduled Channel Meetings. | Build apps for Teams meetings and calls > [Apps for Teams meetings and calls](apps-in-teams-meetings/teams-apps-in-meetings.md) |
 | 08/23/2022 | Share apps to the Teams meeting stage in mobile | Build apps for Teams meetings and calls > [Enable and configure apps for meetings](/microsoftteams/platform/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings) |
 | 08/10/2022 | Apps for scheduled public channel meetings | Build apps for Teams meetings and calls > [Overview](apps-in-teams-meetings/teams-apps-in-meetings.md) |
