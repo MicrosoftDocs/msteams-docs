@@ -44,13 +44,13 @@ You can also add the Teams display picture and people card of the user to in-mee
 
 ## Targeted meeting notification
 
-Targeted meeting notifications help to enhance meeting experience and develop user engagement activities in Teams meetings. The bot API allows apps to send notifications to specific participants in the meeting. The notifications are private and are only sent to the specific or targeted participants in a meeting.
+Targeted meeting notification allows apps to send notifications to specific participants in the meeting. The notifications are private and are sent only to the specific or targeted participants in a meeting.Targeted meeting notifications help to enhance meeting experience and develop user engagement activities in Teams meetings.
 
 > [!NOTE]
 >
 > * Adaptive Cards v1.4 aren't supported within targeted meeting notification.
-> * Targeted meeting notification is supported for private and recurring scheduled meetings, Meet now(instant meetings), one-on-one calls, and group calls.
-> * Targeted meeting notifications can be sent to 50 participants. For more than 50 participants, the API must be called again.
+> * Targeted meeting notification is supported for scheduled meetings, instant meeting (Meet now), one-on-one calls, and group calls.
+> * You can send targeted meeting notifications to 50 participants in a meeting. If you want to send targeted meeting notifications to more than 50 participants, you must call the `targetedMeetingNotification` API again.
 
 The following image is an example of a targeted meeting notification sent to a specific participant during the meeting:
 
@@ -58,7 +58,7 @@ The following image is an example of a targeted meeting notification sent to a s
 
 ### App manifest settings for targeted meeting notification
 
-Get the RSC permissions by configuring the `authorization` property, `name`, and `type` in the `resourceSpecific` field as follows:
+To send a targeted meeting notification you must configure the RSC permission `authorization` property, `name`, and `type` in the `resourceSpecific` field in the [app manifest](../resources/schema/manifest-schema.md#authorization) as follows:
 
 ```json
 "authorization": {
@@ -76,52 +76,53 @@ Get the RSC permissions by configuring the `authorization` property, `name`, and
 
 ### Enable targeted meeting notification
 
-1. Bot API sends a targeted meeting notification based on user action. The trigger for the request payload can come either from the bot, user action, or via code. Its up to the bot when to trigger the notification.
+1. The request payload can be triggered by a bot, user action or via code. It's up to the bot API when to trigger the notification.
 
-1. Following is an example of a request payload:
+    Following is an example of a request payload:
 
-```http
-GET POST /v1/meetings/{meetingId}/notification
-```
+    ```http
+    GET POST /v1/meetings/{meetingId}/notification
+    ```
 
-```json
-{
+    ```json
+    {
+      "type": "targetedMeetingNotification",
+      "value": {
+        "recipients": [ 
+    "29:1I12M_iy2wTa97T6LbjTh4rJCWrtw2PZ3lxpD3yFv8j2YPnweY2lpCPPAn3RI0PP7rghfHauUz48I1t7ANhj4CA"
+         ], 
+        "surfaces": [ 
+          { 
+            "surface": "meetingStage", 
+            "contentType": "task", 
+            "content": { 
+              "value": { 
+                "height": "300", 
+                "width": "400", 
+                "title": "Targeted meeting Notification", 
+                "url": "https://somevalidurl.com"           
+    }
+            } 
+          } 
+        ] 
+      },
+      "channelData": { // optional if a developer wants to support user attributes
+        "onBehalfOf": [ 
+          { 
+            "itemid": 0, 
+            "mentionType": "person", 
+            "mri": "29:1mDOCfGM9825lMHlwP8NjIVMJeQAbN-ojYBT5VzQfPpnst1IFQeYB1QXC8Zupn2RhgfLIW27HmynQk-4bdx_YhA", 
+            "displayName": "yunny chung"      } 
+        ] 
+      }
+    }
+    ```
 
-  "type": "targetedMeetingNotification",
-  "value": {
-    "recipients": [ 
-"29:1I12M_iy2wTa97T6LbjTh4rJCWrtw2PZ3lxpD3yFv8j2YPnweY2lpCPPAn3RI0PP7rghfHauUz48I1t7ANhj4CA"
-     ], 
-    "surfaces": [ 
-      { 
-        "surface": "meetingStage", 
-        "contentType": "task", 
-        "content": { 
-          "value": { 
-            "height": "300", 
-            "width": "400", 
-            "title": "Targeted meeting Notification", 
-            "url": "https://somevalidurl.com"           
-}
-        } 
-      } 
-    ] 
-  },
-  "channelData": { // optional if a developer wants to support user attributes
-    "onBehalfOf": [ 
-      { 
-        "itemid": 0, 
-        "mentionType": "person", 
-        "mri": "29:1mDOCfGM9825lMHlwP8NjIVMJeQAbN-ojYBT5VzQfPpnst1IFQeYB1QXC8Zupn2RhgfLIW27HmynQk-4bdx_YhA", 
-        "displayName": "yunny chung"      } 
-    ] 
-  }
-}
-```
+1. The bot can get the user ID of participants through [get participant API](meeting-apps-apis.md#get-participant-api) and [get Members API](/rest/api/azure/devops/memberentitlementmanagement/members/get?view=azure-devops-rest-7.0&preserve-view=true).
 
-1. To link to the bot API, you need to provide user IDs in the request parameter. The bot can get the user ID of participants through [get participant API](meeting-apps-apis.md#get-participant-api) and [get Members API](/rest/api/azure/devops/memberentitlementmanagement/members/get?view=azure-devops-rest-7.0).
+1. After fetching the user IDs, you need to send the parameters in the requested format.
 
-1. After the parameters are sent, the targeted meeting notification is successfully sent to the specified participant.
+1. The targeted meeting notification is successfully sent to the specified participant.
 
 For more information on `targetedMeetingNotification`, see [Meeting apps APIs](meeting-apps-apis.md#targeted-meeting-notification-api).
 

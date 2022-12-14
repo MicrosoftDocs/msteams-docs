@@ -32,7 +32,7 @@ The following table provides a list of APIs available across the Microsoft Teams
 |[**Get real-time Teams meeting events**](#get-real-time-teams-meeting-events-api)|Fetch real-time meeting events, such as actual start and end time.| [Microsoft Bot Framework SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingstartasync?view=botbuilder-dotnet-stable&preserve-view=true) |
 | [**Get incoming audio state**](#get-incoming-audio-state) | Allows an app to get the incoming audio state setting for the meeting user.| [Microsoft Teams JavaScript library SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
 | [**Toggle incoming audio**](#toggle-incoming-audio) | Allows an app to toggle the incoming audio state setting for the meeting user from mute to unmute or vice-versa.| [Microsoft Teams JavaScript library SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
-|[**Targeted meeting notification API**](#targeted-meeting-notification-api) | Targeted meeting notification allows you to send notification to specific participants in a meeting stage during a meeting. | [Microsoft Teams JavaScript library SDK](Need to confirm with Kartik) |
+|[**Targeted meeting notification API**](#targeted-meeting-notification-api) | Targeted meeting notification allows you to send notification to specific participants during the meeting. | [Microsoft Teams JavaScript library SDK](Need to confirm with Kartik) |
 
 ## Get user context API
 
@@ -66,9 +66,6 @@ The following table includes the query parameters:
 ### Example
 
 # [C#](#tab/dotnet)
-
-* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetingparticipantasync?view=botbuilder-dotnet-stable&preserve-view=true)  
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-context-app/csharp/MeetingContextApp/Bots/MeetingContextBot.cs#L33)
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetingparticipantasync?view=botbuilder-dotnet-stable&preserve-view=true)  
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-context-app/csharp/MeetingContextApp/Bots/MeetingContextBot.cs#L33)
@@ -209,9 +206,6 @@ The following table includes the query parameter:
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityextensions.teamsnotifyuser?view=botbuilder-dotnet-stable#microsoft-bot-builder-teams-teamsactivityextensions-teamsnotifyuser(microsoft-bot-schema-iactivity)&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-proactive-messaging/csharp/proactive-cmd/Program.cs#L178)
 
-* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityextensions.teamsnotifyuser?view=botbuilder-dotnet-stable#microsoft-bot-builder-teams-teamsactivityextensions-teamsnotifyuser(microsoft-bot-schema-iactivity)&preserve-view=true)
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-proactive-messaging/csharp/proactive-cmd/Program.cs#L178)
-
 ```csharp
 // Specifies the type of text data in a message attachment.
 Activity activity = MessageFactory.Text("This is a meeting signal test");
@@ -290,7 +284,7 @@ The following table includes the response codes:
 
 ## Targeted meeting notification API
 
-The `targetedMeetingNotification` API allows apps to send notifications to specific participants in a meeting. Apps send a targeted meeting notification based on user action. The API is available through bot API.
+The `targetedMeetingNotification` API allows apps to send notifications to specific participants in a meeting. Apps send a targeted meeting notification based on bot, user action or via code. The API is available through bot API.
 
 > [!NOTE]
 >
@@ -300,7 +294,9 @@ The `targetedMeetingNotification` API allows apps to send notifications to speci
 Get supported user ID format for targeted meeting notification:
 
 * [GetMeetingParticipant API](#get-participant-api).
-* [GetMembers API](/rest/api/azure/devops/memberentitlementmanagement/members/get?view=azure-devops-rest-7.0).
+* [GetMembers API](/rest/api/azure/devops/memberentitlementmanagement/members/get?view=azure-devops-rest-7.0&preserve-view=true).
+
+(Require code snippet for pairwise ID)
 
 ### Example
 
@@ -363,7 +359,7 @@ Following are the optional properties:
 | **content.value.height** | Title of the notification. |
 | **content.value.width** | Requested width of the notification. |
 | **content.value.title** | Requested height of the notification. |
-| **content.value.url** | URL to be rendered in the notification, make sure the URL is part of **validDomains** in app manifest. If empty string or no URL is provided, nothing will be rendered on a meeting notification. |
+| **content.value.url** | URL to be rendered in the notification. Make sure the URL is part of **validDomains** in app manifest. If empty string or no URL is provided, nothing will be rendered on a meeting notification. |
 | **ChannelData.OnBehalfOf** | This is to support [User attributes](../messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md#respond-to-the-task-module-submit-action). |
 | **onBehalfOf.displayName** | Name of the `person`. Used as fallback in case the name resolution is unavailable. |
 
@@ -375,7 +371,7 @@ The following table includes the response codes:
 |---|---|
 | **202** | Notification is successfully sent. |
 | **207** | Notifications are sent only to partial number of participants. |
-| **400** | Meeting notification request payload validation fails. |
+| **400** | Meeting notification request payload validation failed. |
 | **401** | Bot token is invalid. |
 | **403** | Bot is not allowed to send the notification. |
 | **404** | Meeting chat is not found or none of the participants were found in the roster. |
