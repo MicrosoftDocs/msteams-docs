@@ -389,7 +389,7 @@ items:
         Teams web client opens in a browser window.
 
         > [!NOTE]
-        > The certificate must be manually added if the automatic procedure fails to install it. Following is the link: [manual certificate](/skype-sdk/sdn/articles/installing-the-trusted-root-certificate)
+        > If the toolkit doesn't prompt you to install a certificate, you must install the certificate manually. For more information, see [Add manual certificate](/skype-sdk/sdn/articles/installing-the-trusted-root-certificate#adding-certificate-snap-ins).
 
     1. Sign in with your Microsoft 365 account, if prompted.
 
