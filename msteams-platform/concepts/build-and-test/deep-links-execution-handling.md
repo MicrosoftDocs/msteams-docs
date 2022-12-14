@@ -76,8 +76,6 @@ Applications can include a hyperlink markdown in an adaptive card. This opens in
 
 `add sample`
 
-**Have seen varying results depending on where the link is executed
-
 ### Adaptive Card as raw link (Not recommended)
 
 Raw link in adaptive card body doesn't have any action associated.
