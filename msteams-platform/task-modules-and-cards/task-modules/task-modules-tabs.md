@@ -63,7 +63,7 @@ The following image displays the task module:
 
 The following code is adapted from [the task module sample](~/task-modules-and-cards/task-modules/invoking-task-modules.md#code-sample):
 
-# [TeamsJs v1](#tab/TeamsJs v1)
+# [TeamsJs v1](#tab/Teams Jsv1)
 
 ```typescript
 let taskInfo = {
@@ -87,7 +87,7 @@ submitHandler = (err, result) => {
 microsoftTeams.tasks.startTask(taskInfo, submitHandler);
 ```
 
-# [TeamsJs v2](#tab/TeamsJs v2)
+# [TeamsJs v2](#tab/Teams Js v2)
 
 ```typescript
 let taskInfo = {
