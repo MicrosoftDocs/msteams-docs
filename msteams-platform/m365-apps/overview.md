@@ -16,8 +16,8 @@ The Teams app platform continues to evolve and expand holistically into the Micr
 
 | Teams app features| App manifest element | Teams support |Outlook* support | Office* support | Notes |
 |--|--|--|--|--|--|
-| [**Tabs**](../tabs/what-are-tabs.md) personal scope    |`staticTabs`  | Web, Desktop, Mobile | Web (Targeted Release), Desktop (Beta Channel) | Web (Targeted Release), Desktop (Beta Channel),  Mobile (Android)| Channel and group scope not yet supported for Microsoft 365. See [notes](../tabs/how-to/using-teams-client-library.md#microsoft-365-support-running-teams-apps-in-office-and-outlook).
-| [**Message extensions**](../messaging-extensions/what-are-messaging-extensions.md) search-based| `composeExtensions` | Web, Desktop, Mobile| Web (Targeted Release), Desktop (Beta Channel)| - |Action-based not yet supported for Microsoft 365. See [notes](extend-m365-teams-message-extension.md#troubleshooting). |
+| [**Tabs-personal scope**](../tabs/how-to/create-personal-tab.md)     |`staticTabs`  | Web, Desktop, Mobile | Web (Targeted Release), Desktop (Beta Channel) | Web (Targeted Release), Desktop (Beta Channel),  Mobile (Android)| Channel and group scope not yet supported for Microsoft 365. See [notes](../tabs/how-to/using-teams-client-sdk.md#microsoft-365-support-running-teams-apps-in-office-and-outlook).
+| [**Message extensions-search-based**](../messaging-extensions/how-to/search-commands/define-search-command.md)| `composeExtensions` | Web, Desktop, Mobile| Web (Targeted Release), Desktop (Beta Channel)| - |Action-based not yet supported for Microsoft 365. See [notes](extend-m365-teams-message-extension.md#troubleshooting). |
 | link unfurling | `composeExtensions.messageHandlers` | Web, Desktop | Web (Targeted Release), Desktop (Beta Channel) | - | See [notes](extend-m365-teams-message-extension.md#link-unfurling) |
 | [**Office Add-ins**](/office/dev/add-ins/develop/json-manifest-overview) (preview) | `extensions` | - | Web, Desktop | - | Only available in [devPreview](../resources/schema/manifest-schema-dev-preview.md) manifest version. See [notes](#office-add-ins-preview).|
 
@@ -42,7 +42,7 @@ You can also extend your search-based [Teams message extensions](extend-m365-tea
 
 :::image type="content" source="images/outlook-teams-messaging-ext.png" alt-text="The screenshot is an example that shows Message extension running in Outlook and Teams.":::
 
-[Link unfurling](extend-m365-teams-message-extension.md#link-unfurling)  works in Outlook web and Windows environments the same way it does in Microsoft Teams without any further work than using Teams app manifest version 1.13 or later.
+Link unfurling works in Outlook web and Windows environments the same way it does in Microsoft Teams without any further work than using Teams app manifest version 1.13 or later.
 
 :::image type="content" source="images/outlook-teams-link-unfurling.png" alt-text="The screenshot is an example that shows Link unfurling running in Outlook and Teams.":::
 
@@ -62,9 +62,9 @@ For more information, see [Teams manifest for Office Add-ins (preview)](/office/
 
 Join the growing number of production Teams apps in the [Microsoft commercial marketplace](https://appsource.microsoft.com/) (Microsoft AppSource) store with expanded support for Outlook and Office preview (Targeted Release) audiences. The app [submission process for Teams apps enabled for Outlook and Office](../concepts/deploy-and-publish/appsource/publish.md) is the same as for traditional Teams apps. The only difference is that you'll use Teams app manifest [version 1.13](../tabs/how-to/using-teams-client-sdk.md) in your app package, which introduces support for Teams apps that run across Microsoft 365.
 
-After your app is published as a Microsoft 365-enabled Teams app, your app will be discoverable as an installable app in the Outlook and Office app stores, in addition to the Teams store. When running in Outlook and Office, your app uses the same permissions granted in Teams. Teams admins can [Manage access to Teams apps across Microsoft 365](/MicrosoftTeams/manage-third-party-teams-apps) for users in their organization.
+After your app is published as a Microsoft 365-enabled Teams app, your app will be discoverable as an installable app in the Outlook and Office app stores, in addition to the Teams store. When running in Outlook and Office, your app uses the same permissions granted in Teams. Teams admins can [manage access to Teams apps across Microsoft 365](/MicrosoftTeams/manage-third-party-teams-apps) for users in their organization.
 
-For more information, see [Publish Teams apps for Microsoft 365](publish.md).
+For more information, see [publish Teams apps for Microsoft 365](publish.md).
 
 ## Next step
 
