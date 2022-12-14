@@ -28,7 +28,7 @@ Apps [distributed through the Teams store](~/concepts/deploy-and-publish/appsour
 
 ## Authentication
 
-For authentication to work on mobile clients, you must upgrade you Teams JavaScript SDK to at least version 1.4.1.
+For authentication to work on mobile clients, you must upgrade you Teams JavaScript library to at least version 1.4.1.
 
 ## Low bandwidth and intermittent connections
 
