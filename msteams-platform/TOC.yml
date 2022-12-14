@@ -24,7 +24,7 @@
   items:
   - name: Overview
     href: get-started/get-started-overview.md
-    displayName: First Teams app
+    displayName: First Teams app, Python, C#, Java, Node.js
   - name: Build your first tab app using JavaScript
     href: sbs-gs-javascript.yml
   - name: Build your first bot app using JavaScript
@@ -482,7 +482,7 @@
       displayName: Button, Flexible layout, receipt card, carousel card, Hero card, List card, Card collections, Thumbnail card, Receipt card
     - name: Format cards in Microsoft Teams
       href: task-modules-and-cards/cards/cards-format.md
-      displayName: Information masking, background, extension, notification
+      displayName: Information masking, background, extension, notification, HTML
     - name: Card actions
       href: task-modules-and-cards/cards/cards-actions.md
       displayName: openUrl, messageBack, imBack, invoke, signin
