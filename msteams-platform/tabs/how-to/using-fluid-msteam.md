@@ -216,7 +216,7 @@ This app is intended to be used in the context of Microsoft Teams, with all Flui
     microsoftTeams.initialize();
     ```
 
-    To display the content page in Teams, you must include the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client) and include a call to initialize it after your page loads.
+    To display the content page in Teams, you must include the [Microsoft Teams JavaScript client library](/javascript/api/overview/msteams-client) and include a call to initialize it after your page loads.
 
 1. Replace `TODO 2` with the following code:
 

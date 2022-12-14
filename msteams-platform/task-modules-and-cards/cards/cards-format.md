@@ -768,8 +768,9 @@ You can test formatting in your own cards by modifying this code.
 
 ## See also
 
-* [Card actions](./cards-actions.md)
-* [Use task modules from bots](~/task-modules-and-cards/task-modules/task-modules-bots.md)
-* [Task modules](~/task-modules-and-cards/cards/cards-format.md)
+* [Cards and task modules](../cards-and-task-modules.md)
 * [Format your bot messages](~/bots/how-to/format-your-bot-messages.md)
+* [Use task modules from bots](~/task-modules-and-cards/task-modules/task-modules-bots.md)
 * [Schema explorer for Adaptive Cards](https://adaptivecards.io/explorer/TextBlock.html)
+* [Create Office 365 Connectors](../../webhooks-and-connectors/how-to/connectors-creating.md)
+* [Create Incoming Webhooks](../../webhooks-and-connectors/how-to/add-incoming-webhook.md)

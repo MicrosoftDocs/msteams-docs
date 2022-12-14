@@ -139,10 +139,10 @@ For more information, see [media capabilities](../teams-live-share-media-capabil
 
 ## See also
 
+* [Apps for Teams meetings and calls](../teams-apps-in-meetings.md)
 * [GitHub repository](https://github.com/microsoft/live-share-sdk)
 * [Live Share SDK reference docs](/javascript/api/@microsoft/live-share/)
 * [Live Share Media SDK reference docs](/javascript/api/@microsoft/live-share-media/)
-* [Live Share capabilities](../teams-live-share-capabilities.md)
-* [Live Share media capabilities](../teams-live-share-media-capabilities.md)
 * [Live Share FAQ](../teams-live-share-faq.md)
-* [Teams apps in meetings](../teams-apps-in-meetings.md)
+* [Use Fluid with Teams](../../tabs/how-to/using-fluid-msteam.md)
+* [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
