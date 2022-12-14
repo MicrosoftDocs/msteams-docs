@@ -120,4 +120,3 @@ var mediaPlatform = new MediaPlatformSettings
 
 * [Test your app](../../concepts/build-and-test/test-app-overview.md)
 * [Test and debug your bot locally with IDE](../how-to/debug/locally-with-an-ide.md)
-* [Debug your Teams app locally](../../toolkit/debug-local.md)
