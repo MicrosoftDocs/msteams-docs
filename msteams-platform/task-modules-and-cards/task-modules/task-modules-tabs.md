@@ -11,7 +11,7 @@ Add a task module to your tab to simplify your user's experience for any workflo
 
 To support the task module feature, two new functions are added to the [Teams client SDK](/javascript/api/overview/msteams-client). The following code shows an example of these two functions:
 
-# [TeamsJs v1](#tab/teamsjs)
+# [TeamsJs v1](#tab/teamsjs1)
 
 ```typescript
 microsoftTeams.tasks.startTask(
@@ -63,7 +63,7 @@ The following image displays the task module:
 
 The following code is adapted from [the task module sample](~/task-modules-and-cards/task-modules/invoking-task-modules.md#code-sample):
 
-# [TeamsJs v1](#tab/teamsjs)
+# [TeamsJs v1](#tab/teamsjs2)
 
 ```typescript
 let taskInfo = {
