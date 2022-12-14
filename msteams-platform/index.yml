@@ -131,6 +131,9 @@ conceptualContent:
         - url:  https://developer.microsoft.com/microsoft-teams/app-development-resources
           itemType: reference
           text: Best practices for Teams app scenarios
+        - url: concepts/design/overview-analytics.md
+          itemType: reference
+          text: Plan analytics for Teams apps
       
 
     # Card
@@ -212,10 +215,10 @@ tools:
       imageSrc: ./assets/icons/graph-icon-1.png
       url: https://learn.microsoft.com/graph/sdks/sdks-overview
     # Card
-    - title: JavaScript client SDK for tabs and other hosted experiences
+    - title: TeamsJS client library for tabs and other hosted experiences
       # imageSrc should be square in ratio with no whitespace
       imageSrc: ./assets/icons/logo_js.png
-      url: /microsoftteams/platform/tabs/how-to/using-teams-client-sdk
+      url: /microsoftteams/platform/tabs/how-to/using-teams-client-library
     # Card
     - title: Node.js Bot Framework SDK for bots and message extensions
     # imageSrc should be square in ratio with no whitespace
