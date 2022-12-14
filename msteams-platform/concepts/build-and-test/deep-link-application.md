@@ -78,6 +78,13 @@ microsoftTeams.executeDeepLink(/*deepLink*/);
 
 ---
 
+The navigation behavior of a Teams app extended across Microsoft 365 Outlook and Office is dependent on two factors:
+
+1. The target that the deep link points to.
+1. The host where the Teams app is running.
+
+If the Teams app is running within the host where the deep link is targeted, your app will open directly within the host. However, if the Teams app is running in a different host from where the deep link is targeted, the app will first open in the browser.
+
 ## Navigate to a chat with the application
 
 You can navigate a user to a personal chat with the application by preparing the link manually using the following format:

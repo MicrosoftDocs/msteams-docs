@@ -102,13 +102,6 @@ Applications can include a hyperlink markdown in a Bot. This opens in browser fi
 
 `add sample`
 
-The navigation behavior of a Teams app extended across Microsoft 365 Outlook and Office is dependent on two factors:
-
-1. The target that the deep link points to.
-1. The host where the Teams app is running.
-
-If the Teams app is running within the host where the deep link is targeted, your app will open directly within the host. However, if the Teams app is running in a different host from where the deep link is targeted, the app will first open in the browser.
-
 ## Handling deep links
 
 When a deep link to an application tab is executed, applications should make sure they respect all the parameters set in that link on tab context. Applications should read the tab context to identify the page, sub page, or label referred to in the deep link and should navigate to the specific section.
