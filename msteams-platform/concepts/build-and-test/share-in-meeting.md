@@ -200,11 +200,14 @@ The query parameters for the app context are:
 
 Ensure that all the query parameters are properly URI encoded and the app context has to be encoded twice in the final URL. Following is an example:
 
-```json
-var appContext= JSON.stringify({ 
+```javascript
+const appContext= JSON.stringify({ 
   "appSharingUrl" : "https://teams.microsoft.com/extensibility-apps/meetingapis/view",
-  "appId": "9cc80a93-1d41-4bcb-8170-4b9ec9e29fbb", "useMeetNow":false
-}) var encodedContext = encodeURIComponent(appcontext).replace(/'/g,"%27").replace(/"/g,"%22") var encodedAppContext = encodeURIComponent(encodedContext).replace(/'/g,"%27").replace(/"/g,"%22")
+  "appId": "9cc80a93-1d41-4bcb-8170-4b9ec9e29fbb",
+  "useMeetNow": false
+});
+const encodedContext = encodeURIComponent(appContext).replace(/'/g,"%27").replace(/"/g,"%22");
+const encodedAppContext = encodeURIComponent(encodedContext).replace(/'/g,"%27").replace(/"/g,"%22");
 ```
 
 A deep link can be launched either from the Teams web or from the Teams desktop client.
