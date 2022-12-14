@@ -65,4 +65,4 @@ To configure details in app manifest:
 
 ## See also
 
-* [Distribute your Microsoft Teams app](apps-publish-overview.md)
+[Distribute your Microsoft Teams app](apps-publish-overview.md)
