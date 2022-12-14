@@ -283,6 +283,11 @@ Provide feedback and report any issues with the Teams Toolkit debugging experien
 
 #### Mobile debugging
 
+> [!IMPORTANT]
+> For Mobile dubugging on Outlook for Android
+> 1. Select **More** and launch your sideloaded app to run within the Outlook app. 
+> 1. Follow steps 7-9.
+
 Teams Toolkit (`F5`) debugging isn't yet supported with Office app for Android. Here's how to remotely debug your app running in Office app for Android:
 
 1. If you debug using a physical Android device, connect it to your dev machine and enable the option for [USB debugging](https://developer.android.com/studio/debug/dev-options). This is enabled by default with the Android emulator.
