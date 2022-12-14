@@ -11,6 +11,8 @@ Add a task module to your tab to simplify your user's experience for any workflo
 
 To support the task module feature, two new functions are added to the [Teams JavaScript client library](/javascript/api/overview/msteams-client). The following code shows an example of these two functions:
 
+# [TeamsJs v1](#tab/teamsjs1)
+
 ```typescript
 microsoftTeams.tasks.startTask(
     taskInfo: TaskInfo,
@@ -22,6 +24,25 @@ microsoftTeams.tasks.submitTask(
     appIds?: string | string[]
 ): void;
 ```
+
+# [TeamsJs v2](#tab/teamsjs)
+
+```typescript
+ microsoftTeams.dialog.open(
+   urlDialogInfo: UrlDialogInfo, 
+   submitHandler?: DialogSubmitHandler, 
+   messageFromChildHandler?: PostMessageChannel
+): void])
+
+
+   microsoftTeams.dialog.submit(
+    result?: string | any,
+    appIds?: string | string[]
+): void;
+
+```
+
+---
 
 You can see how invoking a task module from a tab and submitting the result of a task module works.
 
@@ -42,7 +63,9 @@ The following image displays the task module:
 
 The following code is adapted from [the task module sample](~/task-modules-and-cards/task-modules/invoking-task-modules.md#code-sample):
 
-```javascript
+# [TeamsJs v1](#tab/teamsjs2)
+
+```typescript
 let taskInfo = {
     title: null,
     height: null,
@@ -63,6 +86,33 @@ submitHandler = (err, result) => {
 };
 microsoftTeams.tasks.startTask(taskInfo, submitHandler);
 ```
+
+# [TeamsJs v2](#tab/teamsjs3)
+
+```typescript
+let taskInfo = {
+    title: null,
+    height: null,
+    width: null,
+    url: null,
+    card: null,
+    fallbackUrl: null,
+    completionBotId: null,
+};
+
+taskInfo.url = "https://contoso.com/teamsapp/customform";
+taskInfo.title = "Custom Form";
+taskInfo.height = 510;
+taskInfo.width = 430;
+dialogResponse = (dialogResponse) => {
+        console.log(`Submit handler - err: ${dialogResponse.err}`);
+        alert("Result = " + JSON.stringify(dialogResponse.result) + "\nError = " + JSON.stringify(dialogResponse.err));
+    };
+
+ microsoftTeams.dialog.open(taskInfo, dialogResponse);
+```
+
+---
 
 The `submitHandler` is simple and it echoes the value of `err` or `result` to the console.
 
