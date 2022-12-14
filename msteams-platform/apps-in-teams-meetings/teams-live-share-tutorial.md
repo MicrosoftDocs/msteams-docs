@@ -25,7 +25,7 @@ In the Dice Roller sample app, users are shown a dice with a button to roll it. 
 
 You can start by importing the required modules. The sample uses [SharedMap DDS](https://fluidframework.com/docs/data-structures/map/) from the Fluid Framework and [TeamsFluidClient](/javascript/api/@microsoft/live-share/teamsfluidclient) from the Live Share SDK. The sample supports Teams Meeting Extensibility so you must include the [TeamsJS library](https://github.com/OfficeDev/microsoft-teams-library-js). Finally, the sample is designed to run both locally and in a Teams meeting so you need to include more Fluid Framework pieces to [test the sample locally](https://fluidframework.com/docs/testing/testing/#azure-fluid-relay-as-an-abstraction-for-tinylicious).
 
-Applications create Fluid containers using a schema that defines a set of _initial objects_ that are available to the container. The sample uses a SharedMap to store the current dice value that was rolled. For more information, see [Data modeling](https://fluidframework.com/docs/build/data-modeling/).
+Applications create Fluid containers using a schema that defines a set of _initial objects_ that are available to the container. The sample uses a SharedMap to store the current dice value that was rolled. For more information, see [data modeling](https://fluidframework.com/docs/build/data-modeling/).
 
 Teams meeting apps require multiple views, such as content, configuration, and stage. You can create a `start()` function to help identify the view. This helps to render and perform any initialization that's required. The app supports running both locally in a web browser and from within a Teams meeting. The `start()` function looks for an `inTeams=true` query parameter to determine if it's running in Teams.
 
@@ -114,7 +114,7 @@ async function joinContainer() {
 }
 ```
 
-When testing locally, `TestLiveShareHost` updates the browser URL to contain the ID of the test container that was created. Copying that link to other browser tabs causes the `LiveShareClient` to join the test container that was created. If the modification of the applications URL interferers with the operation of the application, the strategy used to store the test containers ID can be customized using the [setLocalTestContainerId](/javascript/api/@microsoft/live-share.iliveshareclientoptions#@microsoft-live-share-iliveshareclientoptions-setlocaltestcontainerid) and [getLocalTestContainerId](/javascript/api/@microsoft/live-share.iliveshareclientoptions#@microsoft-live-share-iliveshareclientoptions-getlocaltestcontainerid) options passed to `LiveShareClient`.
+When testing locally, `TestLiveShareHost` updates the browser URL to contain the ID of the test container that was created. Copying that link to other browser tabs causes the `LiveShareClient` to join the test container that was created. If the modification of the applications URL interferers with the operation of the application, the strategy used to store the test containers ID can be customized using the [setLocalTestContainerId](/javascript/api/@microsoft/live-share/iteamsfluidclientoptions) and [getLocalTestContainerId](/javascript/api/@microsoft/live-share/iteamsfluidclientoptions) options passed to `LiveShareClient`.
 
 ## Write the stage view
 
@@ -185,7 +185,7 @@ diceMap.on("valueChanged", updateDice);
 
 ## Write the side panel view
 
-The side panel view, loaded through the tab `contentUrl` with the `sidePanel` frame context, is displayed to the user in a side panel when they open your app within a meeting. The goal of side panel view is to let a user select content for the app prior to sharing the app to the meeting stage. For the Live Share SDK apps, the side panel view can also be used as a companion experience for the app. Calling [joinContainer()](/javascript/api/@microsoft/live-share/liveshareclient#@microsoft-live-share-liveshareclient-joincontainer) from the side panel view connects to the same Fluid container the stage view is connected to. This container can then be used to communicate with the stage view. Ensure that you're communicating with everyone's stage view _and_ side panel view.
+The side panel view, loaded through the tab `contentUrl` with the `sidePanel` frame context, is displayed to the user in a side panel when they open your app within a meeting. The goal of side panel view is to let a user select content for the app prior to sharing the app to the meeting stage. For the Live Share SDK apps, the side panel view can also be used as a companion experience for the app. Calling [joinContainer()](/javascript/api/@microsoft/live-share/liveshareclient#@microsoft-live-share-liveshareclient-joincontainer) from the side panel view connects to the same Fluid container the stage view is connected to. This container can then be used to communicate with the stage view. Ensure that you're communicating with everyone's stage view and side panel view.
 
 The sample's side panel view prompts the user to select the share to stage button.
 
@@ -254,7 +254,7 @@ function renderSettings(elem) {
 
 ## Test locally
 
-You can test your app locally, using `npm run start`. For more information, see [Quick Start Guide](./teams-live-share-quick-start.md).
+You can test your app locally, using `npm run start`. For more information, see [quick start guide](./teams-live-share-quick-start.md).
 
 ## Test in Teams
 
@@ -354,8 +354,12 @@ After you're ready to deploy your code, you can use [Teams Toolkit](../toolkit/p
 
 ## See also
 
+- [Apps for Teams meetings](teams-apps-in-meetings.md)d)
 - [GitHub repository](https://github.com/microsoft/live-share-sdk)
 - [Live Share SDK reference docs](/javascript/api/@microsoft/live-share/)
 - [Live Share Media SDK reference docs](/javascript/api/@microsoft/live-share-media/)
 - [Live Share FAQ](teams-live-share-faq.md)
-- [Teams apps in meetings](teams-apps-in-meetings.md)
+- [Use Fluid with Teams](../tabs/how-to/using-fluid-msteam.md)
+- [Build tabs for meeting](build-tabs-for-meeting.md)
+- [Tabs link unfurling and Stage View](../tabs/tabs-link-unfurling.md)
+-
