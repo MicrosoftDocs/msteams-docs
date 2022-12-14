@@ -162,7 +162,7 @@ Explore updates from the previous GA releases listed here.
 |05/13/2021| Added information on mConnect and Skooler | Integrate with Teams > Moodle LMS > [Moodle learning management system](resources/moodle-overview.md)|
 |05/10/2021| App manifest v1.10 released | App manifest > [Manifest schema](resources/schema/manifest-schema.md) |
 |05/10/2021| New app customization feature | Design your app > [Enable orgs to customize your app](concepts/design/enable-app-customization.md) |
-|05/07/2021| Deep links for audio and video calls in chat | Integrate with Teams > [Deep links](concepts/build-and-test/deep-links.md#navigate-to-an-audio-or-audio-video-call) |
+|05/07/2021| Deep links for audio and video calls in chat | Integrate with Teams > [Deep links](concepts/build-and-test/deep-link-workflow.md#deep-link-to-start-an-audio-video-call-with-users) |
 |04/30/2021|New guidance on how to publish apps to the Teams store | • Publish to the Teams store > [Publish your app to the Teams store](concepts/deploy-and-publish/appsource/publish.md)</br> • Publish to the Teams store > [Teams store validation guidelines](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) |
 |04/29/2021 | Support for Universal Actions for Adaptive Cards v1.4 | Build cards and task module > Build cards > Universal actions for Adaptive Cards > [Universal Actions for Adaptive Cards](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
 |04/29/2021 | User Specific Views | Build cards and task module > Build cards > Universal actions for Adaptive Cards > [User Specific Views](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/User-Specific-Views.md) |
