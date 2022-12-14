@@ -2,7 +2,7 @@
 title: Teams JavaScript client library
 author: heath-hamilton
 ms.author: surbhigupta
-description: In this module, Learn Microsoft Teams JavaScript client library (TeamsJS), which can help you build app experiences hosted in an <iframe> in Teams, Office, and Outlook.
+description: In this module, learn Microsoft Teams JavaScript client library (TeamsJS), which can help you build app experiences hosted in an <iframe> in Teams, Office, and Outlook.
 ms.localizationpriority: high
 ms.topic: conceptual
 ---

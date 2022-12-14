@@ -73,9 +73,9 @@ Starting with version 1.16 of [SharePoint Framework](/sharepoint/dev/spfx/integr
     ```
 
 1. [Update the app manifest](#update-the-app-manifest).
-1. [Update the SDK references](#update-sdk-references).
+1. [Update the TeamsJS references](#update-teamsjs-references).
 
-After you update the SDK references, [sideload your app in Teams](#sideload-your-app-in-teams) to preview your SPFx personal tab app running in Outlook and Office. For more information, see [Extend Outlook and Office with the SharePoint Framework](/sharepoint/dev/spfx/office/overview).
+After you update TeamsJS references, [sideload your app in Teams](#sideload-your-app-in-teams) to preview your SPFx personal tab app running in Outlook and Office. For more information, see [Extend Outlook and Office with the SharePoint Framework](/sharepoint/dev/spfx/office/overview).
 
 ## Update the app manifest
 
@@ -252,11 +252,11 @@ Currently, a subset of Teams application types and capabilities is supported in 
 
 Refer to [Microsoft 365 support](../tabs/how-to/using-teams-client-library.md#microsoft-365-support-running-teams-apps-in-office-and-outlook) to check host support for various TeamsJS capabilities.
 
-* For an overall summary of Microsoft 365 host and platform support for Teams apps, see [Extend Teams apps across Microsoft 365](overview.md).
+For an overall summary of Microsoft 365 host and platform support for Teams apps, see [Extend Teams apps across Microsoft 365](overview.md).
 
 You can check for host support of a given capability at runtime by calling the `isSupported()` function on that capability (namespace), and adjusting app behavior as appropriate. This allows your app to light up UI and functionality in hosts that support it and provide a graceful fallback experience in hosts that don't. For more information, see [Differentiate your app experience](../tabs/how-to/using-teams-client-library.md#differentiate-your-app-experience).
 
-* Use the [Microsoft Teams developer community channels](/microsoftteams/platform/feedback) to report issues and provide feedback.
+Use the [Microsoft Teams developer community channels](/microsoftteams/platform/feedback) to report issues and provide feedback.
 
 ### Debugging
 
