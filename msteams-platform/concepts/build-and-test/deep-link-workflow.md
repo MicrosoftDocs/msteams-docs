@@ -11,7 +11,7 @@ ms.localizationpriority: high
 
 You can also create a deep link to perform an operation in Teams, such as to create a new chat, navigate to audio-video call, and opening a scheduling dialog.
 
-## Create a new chat
+## Deep link to start a new chat
 
 Applications can start a new chat with a list of users and provide additional information such as chat name and draft message by using the following format:
 
@@ -95,7 +95,7 @@ microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/meeting/new?subjec
 
 ---
 
-## Start an Audio/Video call with users
+## Deep link to start an audio-video call with users
 
 Applications can prepare a deep link for users to start one-on-one or a group audio or video call. You can invoke audio only or audio-video calls to a single user or a group of users, by specifying the call type and the participants. Before placing the call, Teams client prompts a confirmation to make the call. If there's group call, you can call a set of VoIP users and a set of PSTN users in the same deep link invocation.
 
