@@ -544,15 +544,12 @@ Remember the following:
 * Use text judiciously.
 * Frame screenshots with a color that reflects your brand and include marketing content.
 * Use high-resolution screenshots that are sharp and contain legible and clearly readable text. [*Mandatory Fix*]
-* Use mockups that accurately depict the app’s actual UI for the benefit of end-users. [*Mandatory Fix*]
-* Provide at least three screenshots in your app’s marketplace listing.
 * At least one screenshot must depict your app’s functionality on mobile devices. [*Mandatory Fix*]
 * We recommend that you provide captions in your screenshots to let the user clearly understand the app capability. [*Mandatory Fix*]
 * You can have up to five screenshots per listing. You must have a minimum of three and maximum five screenshots in your app listing. [*Mandatory Fix*]
 * Use mockups that accurately depict the app’s actual UI for the benefit of end-users. Screenshots must accurately depict the app’s actual UI or scenarios relevant to and related to the app. [*Mandatory Fix*]
 * Must depict app functionality or integration with Teams. [*Mandatory Fix*]
 * Provided screenshots mustn't incorrectly reference Microsoft Teams as MS, MSFT, or MS Teams. [*Mandatory Fix*]
-* If your Teams app is extensible across Microsoft 365 clients (Office, Outlook, and Microsoft Teams), the screenshots provided must depict the app functionality in other Microsoft 365 clients. [*Mandatory Fix*]
 * If your Teams app is extensible across Microsoft 365 clients (Office, Outlook, and Microsoft Teams), the screenshots provided must depict the app functionality in other Microsoft 365 clients. [*Mandatory Fix*]
 
 **Don'ts:**
