@@ -1,6 +1,6 @@
 ---
 title: Use Task Modules in Microsoft Teams tabs
-description: Learn how to invoke task modules from Teams tabs and submitting its result using the Microsoft Teams client SDK. It includes code samples.
+description: Learn how to invoke task modules from Teams tabs and submitting its result using the Microsoft Teams client library. It includes code samples.
 ms.localizationpriority: medium
 ms.topic: how-to
 ---
@@ -9,7 +9,7 @@ ms.topic: how-to
 
 Add a task module to your tab to simplify your user's experience for any workflows that require data input. Task modules allow you to gather their input in a Microsoft Teams-Aware pop-up. A good example of this is editing Planner cards. You can use task modules to create a similar experience.
 
-To support the task module feature, two new functions are added to the [Teams client SDK](/javascript/api/overview/msteams-client). The following code shows an example of these two functions:
+To support the task module feature, two new functions are added to the [Teams JavaScript client library](/javascript/api/overview/msteams-client). The following code shows an example of these two functions:
 
 ```typescript
 microsoftTeams.tasks.startTask(
@@ -74,7 +74,7 @@ If there's no invocation error and the user doesn't select X to dismiss it, the 
 
 ### HTML or JavaScript `TaskInfo.url`
 
-After validating the user's inputs, call the `microsoftTeams.tasks.submitTask()` SDK function referred to as `submitTask()`. Call `submitTask()` without any parameters if you just want Teams to close the task module. You can pass an object or a string to your `submitHandler`.
+After validating the user's inputs, call the `microsoftTeams.tasks.submitTask()` function referred to as `submitTask()`. Call `submitTask()` without any parameters if you just want Teams to close the task module. You can pass an object or a string to your `submitHandler`.
 
 Pass your result as the first parameter. Teams invokes `submitHandler` where `err` is `null` and `result` is the object or string you passed to `submitTask()`. If you call `submitTask()` with a `result` parameter, you must pass an `appId` or an array of `appId` strings. This permits Teams to validate that the app sending the result is same as the invoked task module.
 
