@@ -137,4 +137,5 @@ Here's a list of best practices:
 
 ## See also
 
-[Configure code to enable SSO in a tab app](tab-sso-code.md)
+- [Configure code to enable SSO in a tab app](tab-sso-code.md)
+- [Glossary](../../../get-started/glossary.md)
