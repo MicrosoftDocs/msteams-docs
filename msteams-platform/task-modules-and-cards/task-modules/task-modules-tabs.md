@@ -40,9 +40,9 @@ microsoftTeams.tasks.submitTask(
     appIds?: string | string[]
 ): void;
 
----
-
 ```
+
+---
 
 You can see how invoking a task module from a tab and submitting the result of a task module works.
 
