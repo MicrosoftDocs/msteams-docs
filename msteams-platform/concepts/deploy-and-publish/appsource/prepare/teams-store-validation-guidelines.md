@@ -128,7 +128,7 @@ App content must be suitable for general workplace consumption and follow all re
 
 Your app must enable group collaboration, improve an individual's productivity, or both. Apps intended for team bonding and socializing must be collaborative and designed for multiple participants. The apps mustn't require a substantial time investment of over 60 mins per session or affect productivity. [Mandatory Fix]
 
-Content aggregator Apps must have a mechanism for users to report an issue or inappropriate content to the app publisher. [Mandatory Fix]
+Content aggregator apps must have a mechanism for users to report an issue or inappropriate content to the app publisher. [Mandatory Fix]
 
 </details>
 
@@ -238,7 +238,7 @@ Don't include domains outside of your organization's control (including wildcard
 
 * If your app is a PowerApp built on the Microsoft Power Platform, you must include *apps.powerapps.com* as a valid domain to enable your app to be accessible and functional within Teams.
 
-* If your app uses the Azure Bot Service's OAuthCard, you must include *token.botframework.com* as a valid domain or else the Sign-in button won't work. You mustn't declare *.botframework.com* as wildcards are not allowed with this domain name. [*Mandatory Fix*]
+* If your app uses the Azure Bot Service's OAuthCard, you must include *token.botframework.com* as a valid domain or else the Sign in button won't work. You mustn't declare *.botframework.com* as wildcards are not allowed with this domain name. [*Mandatory Fix*]
 
 * Following External Domains are not allowed: [*Mandatory Fix*]
   * *.azurewebsites.net
@@ -408,7 +408,7 @@ Descriptions mustn't directly or through insinuation disparage another brand (Mi
 
    :::image type="content" source="../../../../assets/images/submission/validation-app-description-comparitive-marketing-fail.png" alt-text="Graphic shows an example of comparative marketing information in app description.":::
 
-* Hyperlink contact details, get started, help, or sign up in app description. [*Mandatory Fix*]
+* Hyperlink contact details, get started, help, or sign up in app description. [*Suggested Fix*]
 
    :::image type="content" source="../../../../assets/images/submission/validation-app-description-contact-deatils-hyperlinked.png" alt-text="Graphic shows an example of contact details hyperlinked in the app descriptions.":::
 
@@ -548,7 +548,7 @@ Remember the following:
 * Provide at least three screenshots in your app’s marketplace listing.
 * At least one screenshot must depict your app’s functionality on mobile devices. [*Mandatory Fix*]
 * We recommend that you provide captions in your screenshots to let the user clearly understand the app capability. [*Mandatory Fix*]
-* You can have up to 5 screenshots per listing. You must have a minimum of three and maximum five screenshots in your app listing. [*Mandatory Fix*]
+* You can have up to five screenshots per listing. You must have a minimum of three and maximum five screenshots in your app listing. [*Mandatory Fix*]
 * Use mockups that accurately depict the app’s actual UI for the benefit of end-users. Screenshots must accurately depict the app’s actual UI or scenarios relevant to and related to the app. [*Mandatory Fix*]
 * Must depict app functionality or integration with Teams. [*Mandatory Fix*]
 * Provided screenshots mustn't incorrectly reference Microsoft Teams as MS, MSFT, or MS Teams. [*Mandatory Fix*]
