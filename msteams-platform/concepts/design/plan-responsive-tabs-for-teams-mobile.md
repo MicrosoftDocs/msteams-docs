@@ -167,7 +167,7 @@ In the third stage, provide complete experience to your users. You can enable us
 * Navigate around content.
 * Add layers and filters.
 * Delete, undo, and redo operations.
-* Access camera and microphone using JS SDK APIs. For more information on device capabilities, see [device capabilities overview](../device-capabilities/device-capabilities-overview.md).
+* Access camera and microphone using TeamsJS APIs. For more information on device capabilities, see [device capabilities overview](../device-capabilities/device-capabilities-overview.md).
 
 :::image type="content" source="../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-enablement.png" alt-text="Enable user experience by adding text shapes and quick notes and other capabilities.":::
 
