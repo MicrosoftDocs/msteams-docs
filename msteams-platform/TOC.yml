@@ -2,7 +2,7 @@
   href: mstdd-landing.yml
 - name: What's new?
   href: whats-new.md
-  displayName: Teams platform features, latest updates, RSS feed, deprecated
+  displayName: Teams platform features, latest updates, RSS feed, deprecated, announcement
 - name: Glossary
   href: get-started/glossary.md
   displayName: App tray, terminologies, definitions
@@ -195,6 +195,7 @@
       href: concepts/build-and-test/manage-your-apps-in-developer-portal.md
     - name: Analyze your apps usage in Developer Portal
       href: concepts/build-and-test/analyze-your-apps-usage-in-developer-portal.md  
+      displayName: dashboard
   - name: Teams JavaScript client SDK
     href: tabs/how-to/using-teams-client-sdk.md
   - name: Node.js Bot Framework for bots and message extensions (GitHub)
@@ -267,6 +268,7 @@
     displayName: Loading indicator, personal-scoped custom tab, channel or group custom tab
   - name: Create a configuration page
     href: tabs/how-to/create-tab-pages/configuration-page.md
+    displayName: configurationUrl
   - name: Create a removal page
     href: tabs/how-to/create-tab-pages/removal-page.md
     displayName: Reconfigure tab, register remove handler
@@ -281,7 +283,7 @@
     displayName: Cross-tenant notifications, context for shared channel, apps and permissions in shared channels
   - name: Build tabs with Adaptive Cards
     href: tabs/how-to/build-adaptive-card-tabs.md
-    displayName: Slow load times, iFrame constartints, invoke activities, task module, task fetch, task submit, authentication, configurableTabs
+    displayName: AdaptiveCard, Slow load times, iFrame constartints, invoke activities, task module, task fetch, task submit, authentication, configurableTabs
   - name: Tabs link unfurling and Stage View
     href: tabs/tabs-link-unfurling.md
     displayName: Tab in stage view
@@ -367,6 +369,7 @@
   items:
   - name: Overview
     href: messaging-extensions/what-are-messaging-extensions.md
+    displayName: handleTeamsMessagingExtensionFetchTask
   - name: Action commands
     items:
     - name: Define action commands
@@ -374,7 +377,7 @@
       displayName: Command invoke locations, static list of parameters, action command manually
     - name: Create and send task module
       href: messaging-extensions/how-to/action-commands/create-task-module.md
-      displayName: Initial invoke request, respond to fetchTask, payload activity
+      displayName: Initial invoke request, respond to fetchTask, payload activity, handleTeamsMessagingExtensionFetchTask
     - name: Respond to the task module submit action
       href: messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md
       displayName: Respond to initial submit action, configure the poll, attribution for bot messages, submit action
@@ -567,6 +570,7 @@
     href: concepts/device-capabilities/browser-device-permissions.md
   - name: Integrate media capabilities
     href: concepts/device-capabilities/media-capabilities.md
+    displayName: camera
   - name: Integrate QR or barcode scanner capability
     href: concepts/device-capabilities/qr-barcode-scanner-capability.md
   - name: Integrate location capabilities
@@ -651,7 +655,7 @@
   items:
   - name: Overview
     href: concepts/deploy-and-publish/apps-publish-overview.md
-    displayName: configure default install options
+    displayName: configure default install options, GCC
   - name: Configure default install options for Teams app
     href: concepts/deploy-and-publish/add-default-install-scope.md
     displayName: default install scope, default capability for shared scopes
