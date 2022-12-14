@@ -72,7 +72,3 @@ Set up your dev environment to build Teams apps for Microsoft 365:
 
 > [!div class="nextstepaction"]
 > [Install prerequisites](prerequisites.md)
-
-## See also
-
-* [Add link unfurling](../messaging-extensions/how-to/link-unfurling.md)
