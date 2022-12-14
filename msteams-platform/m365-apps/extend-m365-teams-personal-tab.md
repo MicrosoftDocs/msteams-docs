@@ -306,3 +306,8 @@ Publish your app to be discoverable in Teams, Outlook, and Office:
 
 > [!div class="nextstepaction"]
 > [Publish Teams apps for Outlook and Office](publish.md)
+
+## See also
+
+* [Extend Teams apps across Microsoft 365](overview.md)
+* [Public developer preview for Teams](../resources/dev-preview/developer-preview-intro.md)

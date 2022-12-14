@@ -174,7 +174,7 @@ The following table provides the possible values of `err` that can be received b
 | Values for both `TaskInfo.url` and `TaskInfo.card` were specified. | Values for both card and URL were specified. One or the other, but not both, are allowed. |
 | Neither `TaskInfo.url` nor `TaskInfo.card` specified. | You must specify a value for either card or URL. |
 | Invalid `appId`. | Invalid app ID. |
-| User selected X button, closing it. | User cancelled or closed the task module. |
+| User selected X button, closing it. | User canceled or closed the task module. |
 
 ## Code sample
 
@@ -189,4 +189,5 @@ The following table provides the possible values of `err` that can be received b
 
 ## See also
 
-[Invoke and dismiss task modules](~/task-modules-and-cards/task-modules/invoking-task-modules.md)
+* [Cards and task modules](../cards-and-task-modules.md)
+* [Invoke and dismiss task modules](~/task-modules-and-cards/task-modules/invoking-task-modules.md)
