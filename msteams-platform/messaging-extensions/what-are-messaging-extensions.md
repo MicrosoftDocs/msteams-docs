@@ -78,11 +78,13 @@ The following code provides an example of action based for message extensions:
 
 # [C#](#tab/dotnet)
 
-```csharp
+* [SDK reference](/microsoftteams/platform/messaging-extensions/how-to/action-commands/create-task-module?tabs=dotnet#respond-to-the-fetchtask-with-an-adaptive-card)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msgext-action-preview/csharp/Bots/TeamsMessagingExtensionsActionPreviewBot.cs#L35-L56)
 
- protected override Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionFetchTaskAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
+```csharp
+     protected override Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionFetchTaskAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
         {
-            // Handle different actions using switch
+            // Handle different actions using switch.
             switch (action.CommandId)
             {
                 case "HTML":
@@ -122,8 +124,12 @@ The following code provides an example of action based for message extensions:
 
 # [Node.js](#tab/nodejs)
 
-```javascript
+* [SDK reference](/microsoftteams/platform/messaging-extensions/how-to/action-commands/create-task-module?tabs=javascript#respond-to-the-fetchtask-with-an-adaptive-card)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msgext-action/nodejs/bots/teamsMessagingExtensionsActionBot.js#L24-L61)
 
+
+```javascript
+// Invoked when a Messaging Extension Fetch activity is received from the connector.
     async handleTeamsMessagingExtensionFetchTask(context, action) {
         switch (action.commandId) {
             case 'Static HTML':
@@ -144,7 +150,6 @@ The following code provides an example of action based for message extensions:
             }
         };
     }
-
 ```
 
 ---
@@ -153,8 +158,10 @@ The following code provides an example of search based for message extensions:
 
 # [C#](#tab/dotnet)
 
-```csharp
+* [SDK reference](/dotnet/api/microsoft.identity.client.confidentialclientapplication.acquiretokenonbehalfof?source=recommendations&view=azure-dotnet&preserve-view=true)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-hello-world/csharp/Microsoft.Teams.Samples.HelloWorld.Web/Bots/MessageExtension.cs#L26-L59)
 
+```csharp
 protected override async Task<MessagingExtensionResponse> OnTeamsMessagingExtensionQueryAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionQuery query, CancellationToken cancellationToken)
         {
             var text = query?.Parameters?[0]?.Value as string ?? string.Empty;
@@ -197,9 +204,10 @@ protected override async Task<MessagingExtensionResponse> OnTeamsMessagingExtens
 ```
 
 # [Node.js](#tab/nodejs)
+* [SDK reference](/dotnet/api/microsoft.identity.client.confidentialclientapplication.acquiretokenonbehalfof?source=recommendations&view=azure-dotnet&preserve-view=true)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msgext-search-quickstart/js/botActivityHandler.js#L30-L53)
 
 ```javascript
-
 async handleTeamsMessagingExtensionQuery(context, query) {
         const searchQuery = query.parameters[0].value;     
         const attachments = [];
