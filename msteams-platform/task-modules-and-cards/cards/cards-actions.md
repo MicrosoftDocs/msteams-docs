@@ -574,7 +574,6 @@ The following code shows an example of Adaptive Cards with `invoke` action with 
 
 ## See also
 
-* [Cards and task modules](../cards-and-task-modules.md)
 * [Cards reference](./cards-reference.md)
 * [Types of cards](cards-reference.md)
 * [Use task modules from bots](~/task-modules-and-cards/task-modules/task-modules-bots.md)

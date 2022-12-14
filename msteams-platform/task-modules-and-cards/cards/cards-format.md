@@ -769,8 +769,6 @@ You can test formatting in your own cards by modifying this code.
 ## See also
 
 * [Cards and task modules](../cards-and-task-modules.md)
-* [Card actions](./cards-actions.md)
-* [Task modules](~/task-modules-and-cards/cards/cards-format.md)
 * [Format your bot messages](~/bots/how-to/format-your-bot-messages.md)
 * [Use task modules from bots](~/task-modules-and-cards/task-modules/task-modules-bots.md)
 * [Schema explorer for Adaptive Cards](https://adaptivecards.io/explorer/TextBlock.html)

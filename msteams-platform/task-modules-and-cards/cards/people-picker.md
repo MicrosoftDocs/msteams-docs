@@ -310,9 +310,7 @@ You can implement People Picker for efficient task management in different scena
 
 ## See also
 
-* [Cards and task modules](../cards-and-task-modules.md)
-* [Adaptive Card](cards-reference.md#adaptive-card)
-* [Build bots for Teams](../../bots/what-are-bots.md)
+* [Types of cards](cards-reference.md)
 * [Bots and SDKs](../../bots/bot-features.md)
 * [Build message extensions for Teams](../../messaging-extensions/what-are-messaging-extensions.md)
 * [Create Office 365 Connectors](../../webhooks-and-connectors/how-to/connectors-creating.md)

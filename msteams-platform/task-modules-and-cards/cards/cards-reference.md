@@ -969,7 +969,6 @@ The following cards are implemented by the Bot Framework, but aren't supported b
 ## See also
 
 * [Cards and task modules](../cards-and-task-modules.md)
-* [Task modules](~/task-modules-and-cards/what-are-task-modules.md)
 * [Up to date cards](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/up-to-date-views.md)
 * [Work with Universal Actions for Adaptive Cards](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/work-with-universal-actions-for-adaptive-cards.md)
 * [Adaptive Cards overflow menu](~/task-modules-and-cards/cards/cards-format.md#adaptive-cards-overflow-menu)

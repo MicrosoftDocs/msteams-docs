@@ -132,4 +132,3 @@ var adaptiveCardResponse = JObject.FromObject(new
 * [How bots work](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true)
 * [Work with Universal Actions for Adaptive Cards](Work-with-universal-actions-for-adaptive-cards.md)
 * [Form completion feedback](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)
-* [Types of cards](../cards-reference.md)
