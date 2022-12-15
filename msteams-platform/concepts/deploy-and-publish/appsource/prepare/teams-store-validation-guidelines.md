@@ -80,7 +80,13 @@ Following these guidelines increases the chances of your app to pass the Microso
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: This section is in line with [Microsoft commercial certification policy number 1140.1](/legal/marketplace/certification-policies#11401-value-proposition-and-offer-requirements) and provides additional guidance to developers of Microsoft Teams apps on their offer’s value proposition.
 
-### App name
+## Duplicate App
+
+* Apps from the same developer offering the same functionality must share an app listing unless privacy compliance requirements mandate separate app listings or separate app listing are required to support government cloud. You must build into your business logic and publish only one listing. [*Mandatory Fix*]
+  * To fulfill multiple regions support requirement, you must build into your business logic and publish only one listing.
+  *To fulfill multiple end-point requirements for on-premises and on-cloud deployment, you must build into your business logic and publish only one listing.  
+
+### App Name
 
 [*Mandatory Fix*]
 
@@ -169,6 +175,11 @@ If your app authenticates users with an external service, follow these guideline
 * **Content sharing experiences**: Apps that require authentication with an external service to share content in Teams channels must clearly state in the help documentation (or similar resources) on how to disconnect or unshare content if that feature is supported on the external service. This doesn't mean the ability to unshare content must be present in your Teams app.
 
 </details>
+
+## Music App
+
+* If the primary intent of the app is to listen to music, it must support at least 1 collaborative scope with End-to-End workflow specific to app (e.g., sharing of playlist, configuring/pinning playlist, synchronously listening to music). [*Mandatory Fix*]
+* Apps published with the primary intent of letting users listen to music in Teams, are recommended to include collaborative co-listening experience. [*Suggested Fix*]
 
 ## Security
 
@@ -373,6 +384,8 @@ The Teams app manifest defines your app's configuration.
 
 * We recommend that you declare the Microsoft Partner Network (MPN) ID in the manifest. The MPN ID helps identify the partner organization that builds the app. [*Suggested Fix*]
 
+* Scopes and/or context declared in app manifest must be visible within the app. [*Suggested Fix*]
+
 ### App icons
 
 [*Mandatory Fix*]
@@ -408,7 +421,7 @@ You must have a short and long description for your app. The descriptions in you
 <br></br>
 <details><summary>Expand to know more</summary>
 
-Descriptions mustn't directly or through insinuation disparage another brand (Microsoft owned or otherwise). Ensure that your description doesn't include claims that can't be substantiated. For example, **Guaranteed 200 percent increase in efficiency**.
+Descriptions mustn't directly or through insinuation disparage another brand (Microsoft owned or otherwise).
 
 * App description mustn't contain comparative marketing information. For example, don't use competitor logos or trademarks in the offer listing including tags or other metadata that references competing offers or marketplaces. [*Mandatory Fix*]
 
@@ -557,6 +570,8 @@ Remember the following:
 * Must depict app functionality or integration with Teams. [*Mandatory Fix*]
 * Provided screenshots mustn't incorrectly reference Microsoft Teams as MS, MSFT, or MS Teams. [*Mandatory Fix*]
 * If your Teams app is extensible across Microsoft 365 clients (Office, Outlook, and Microsoft Teams), the screenshots provided must depict the app functionality in other Microsoft 365 clients. [*Mandatory Fix*]
+* You must provide captions in your screenshots to let the user clearly understand the app capability. [*Mandatory Fix*]
+* If your app supports Tabs as a capability, the screenshots showcasing the app in the context of a Teams tab, in app listing, must contain Team’s chrome. [*Mandatory Fix*]
 
 **Don'ts:**
 
@@ -1431,6 +1446,12 @@ Use the following guidelines for meeting extensions:
 
 </details>
 
+<details<summary>Shared Meeting Stage</summary>
+
+To use the shareAppContentToStage API, you must declare the correct RSC permissions. In the app manifest, you must configure the authorization property, and declare the name: “MeetingStage.Write.Chat” and type = “Delegated” in the resourceSpecific field. [*Mandatory Fix*]
+
+</details>
+
 ## Notifications
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: This section is in line with [Microsoft commercial marketplace policy number 1140.4.7](/legal/marketplace/certification-policies#114047-notification-apis).
@@ -1542,6 +1563,7 @@ After an internal Microsoft review, if the compliance demonstration is satisfact
 * Workflows or content in the app must be related to the scope. [*Mandatory Fix*]
 * All app capabilities must be functional and must work properly as described in the AppSource or manifest long description. [*Mandatory Fix*]
 * Apps must always notify the user before downloading any file or executable on the user’s environment. Any call to action (CTA), either text based or otherwise, that makes it clear to the user that a file or executable is downloaded on user action is allowed in the app. [*Mandatory Fix*]
+* Apps having region dependency must notify the users with a graceful failure message in all applicable capabilities if they attempt to use it in an unsupported region.[*Mandatory Fix*]
 
 ## Mobile experience
 
