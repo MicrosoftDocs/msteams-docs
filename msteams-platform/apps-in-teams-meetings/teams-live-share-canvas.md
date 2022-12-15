@@ -457,7 +457,8 @@ Both the scenarios work well because the content can be viewed the same on all d
 
 ## See also
 
+- [Apps for Teams meetings](teams-apps-in-meetings.md)
 - [Live Share SDK FAQ](teams-live-share-faq.md)
 - [Live Share SDK reference docs](/javascript/api/@microsoft/live-share/)
 - [Live Share Canvas SDK reference docs](/javascript/api/@microsoft/live-share-canvas/)
-- [Teams apps in meetings](teams-apps-in-meetings.md)
+- [Use Fluid with Teams](../tabs/how-to/using-fluid-msteam.md)
