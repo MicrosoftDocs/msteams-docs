@@ -27,7 +27,7 @@ You’ll probably not be surprised to hear that not all apps are equal on any ma
     :::column-end:::
     :::column span="":::
 
-        :::image type="content" source="../../assets/images/app-fundamentals/app-growth-flyheel.png" alt-text="Teams centric app growth flywheel for the developer":::
+        :::image type="content" source="../../../assets/images/app-fundamentals/app-growth-flyheel.png" alt-text="Teams centric app growth flywheel for the developer":::
 
     :::column-end:::
 :::row-end:::
@@ -44,7 +44,7 @@ Without going too deep, summarizing the three predominant types of SaaS business
 
 As a developer who’s built a collaborative app, you'll benefit from devising a well-rounded strategy that employs all three - sales, marketing, and product-led tactics to help you grow your product that is, the Teams app among hundreds of millions of Teams users.
 
-:::image type="content" source="../../assets/images/app-fundamentals/growth-funnel.png" alt-text="Traditional funnel vs. Product-led funnel":::
+:::image type="content" source="../../../assets/images/app-fundamentals/growth-funnel.png" alt-text="Traditional funnel vs. Product-led funnel":::
 
 More than point solutions that is, “add-ins” and “integrations” Teams collaborative apps offer you an opportunity to apply a solid growth strategy to a product line, just as you would do for your core SaaS product for the web browser or native mobile apps.
 
