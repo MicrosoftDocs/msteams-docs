@@ -68,7 +68,7 @@ By now you're aware that the core focus at this stage is to announce the availab
 
     :::row:::
         :::column span="3":::
-            Connect with the Microsoft 365 ISV Benefits Service Desk to seek guidance for your social media campaign, possible collaboration with Microsoft for execution and the success metrics you should measure for example, # of views or clicks on your social posts, # of visitors on your landing page, no. of MQLs generated on the landing page, # of visitors to the app’s listing in marketplace, # of Teams app installs post launch and so on
+            Connect with the Microsoft 365 ISV Benefits Service Desk to seek guidance for your social media campaign, possible collaboration with Microsoft for execution and the success metrics you should measure for example, number of views or clicks on your social posts, number of visitors on your landing page, number of MQLs generated on the landing page, number of visitors to the app’s listing in marketplace, number of Teams app installs post launch and so on.
         :::column-end:::
         :::column span="":::
 
@@ -79,7 +79,7 @@ By now you're aware that the core focus at this stage is to announce the availab
 
 - **Public blog post announcing the new Teams app**
 
-    Blog posts help communicate the value of your app and its integration with Microsoft Teams to your audience. Use your blog to introduce your Teams app, how to use it and communicate the value prop for your users including use cases, scenarios, customer stories. Include logos, animated gifs, screenshots, quotes, URLs, and information pertinent to promoting your app. 
+    Blog posts help communicate the value of your app and its integration with Microsoft Teams to your audience. Use your blog to introduce your Teams app, how to use it and communicate the value prop for your users including use cases, scenarios, customer stories. Include logos, animated gifs, screenshots, quotes, URLs, and information pertinent to promoting your app.
 
     > [!NOTE]
     > When using your blog channel to drive press or media coverage or to request Microsoft quotes, please refer to Microsoft’s Press Release guidelines for reviews (see the press release section). Example blog posts: Wrike, Adobe Creative Cloud, MeisterTask, MindMeister, Workday.
@@ -141,7 +141,7 @@ By now you're aware that the core focus at this stage is to announce the availab
     | Demo video | A 60-second video that demonstrates the features of your app and how it adds value to your customer. |
     | Global contacts list | A list of contacts within your organization across regions that Microsoft customer success, sales and engineering teams can engage to facilitate app deployment and onboard new customers. |
     | Customer success story | A one-page PowerPoint slide that shares how a customer is successfully using your app in Microsoft Teams and the benefit they're receiving from it. |
-    | Customer support for end users and IT Admins | An overview of how customers can get support for any issues they encounter using your integrated Microsoft Teams app |
+    | Customer support for end users and IT Admins | An overview of how customers can get support for any issues they encounter using your integrated Microsoft Teams app. |
     | IT Admin - App Config and Rollout Guide | A guide for IT admins of customer organizations to configure and rollout the integrated Microsoft Teams app for their users. |
     | End User - Getting Started and Usage Guide | A guide for end users on how to get signed in and use the features of your integrated Microsoft Teams app. |
     | Technical solution datasheet | Provides an overview of the architecture, APIs, data handling and compliance aspects of your Teams app. This document is helpful for IT admins as well as  Microsoft sales and customer success engineers when rolling out an overall solution into a customer’s organization. |
