@@ -6,7 +6,7 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
 ---
-# Launching your collaborative app
+# Launch your collaborative app
 
 By now you're aware that the core focus at this stage is to announce the availability of the app for existing and new customers. Here’s a rundown of various initiatives and growth levers at your disposal:
 

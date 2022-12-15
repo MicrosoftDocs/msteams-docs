@@ -6,7 +6,7 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
 ---
-# Gaining traction for your collaborative app in the market
+# Gain traction for your collaborative app in the market
 
 As a reminder, you’ll now want to gain mindshare for your collaborative app among top customers and build readiness to scale adoption, growth and start realizing return on investment. Here are the various initiatives and growth levers at your disposal:
 

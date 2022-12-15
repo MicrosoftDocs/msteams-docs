@@ -6,7 +6,7 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
 ---
-# Scaling your collaborative app
+# Scale your collaborative app
 
 To reiterate, this stage is all about putting learnings from previous ad-hoc, pilot motions to use in programmatically activating existing customers and selling to new customers via all possible initiatives. The following growth levers are pertinent at this stage:
 

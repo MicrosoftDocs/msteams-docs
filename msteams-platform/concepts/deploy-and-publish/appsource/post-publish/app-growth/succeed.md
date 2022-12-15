@@ -6,7 +6,7 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
 ---
-# Succeeding with your collaborative app
+# Succeed with your collaborative app
 
 To wrap up, your collaborative app is now becoming a full-fledged strategic product line similar to your core SaaS product for the web browser or native apps for Windows or mobile phones. To maximize success for your customers and ROI for your business, here are the initiatives and growth levers you must leverage:
 

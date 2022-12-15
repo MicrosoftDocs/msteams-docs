@@ -7,7 +7,7 @@ ms.localizationpriority: high
 ms.author: surbhigupta
 ---
 
-# Building your collaborative app
+# Build your collaborative app
 
 Let’s briefly go over what initiatives are the most impactful during the build stage.
 

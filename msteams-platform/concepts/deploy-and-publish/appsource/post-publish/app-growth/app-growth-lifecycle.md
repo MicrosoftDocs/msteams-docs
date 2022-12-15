@@ -23,9 +23,17 @@ While there will always be examples of developers short circuiting the lifecycle
 
 ## Product and GTM growth initiatives for your app
 
-Below is a descriptive guide elaborating on the various growth initiatives developers can plan and execute as well as where Microsoft can help. While developers are strongly encouraged to follow the guidance here to grow their app and drive success for their investments on the Teams marketplace and ecosystem, please note that the guidance provided can't be considered totally comprehensive. Developers should always adapt these growth initiatives to their business, the app they’ve launched on Teams and their target customer personas basis the context best known to them.
+This is a descriptive guide elaborating on the various growth initiatives developers can plan and execute as well as where Microsoft can help. While developers are strongly encouraged to follow the guidance here to grow their app and drive success for their investments on the Teams marketplace and ecosystem, please note that the guidance provided can't be considered totally comprehensive. Developers should always adapt these growth initiatives to their business, the app they’ve launched on Teams and their target customer personas basis the context best known to them.
 
 Do note that Microsoft partners with app developers once they’ve launched their apps on Teams marketplace by offering select, programmatic GTM investments depending on the app’s maturity in the market. Developers must get in touch with their Microsoft field, account, or engineering representatives before spending cycles on their app growth planning and execution, so that they can get the most appropriate guidance they’re eligible for. Additionally, when the app you're developing reaches store validation stage or if it's already published, please sign up for the M365 ISV Benefits Program and review the Marketing Benefits Planning Guide for an overview of the marketing activities your app is eligible to participate in. The Microsoft 365 ISV Benefits Service Desk is available for any email correspondence regarding support for your marketing activity.
+
+You can plan your app's growth through the app lifecycle:
+
+- [Build your collaborative app](build-app.md)
+- [Launch your collaborative app](launch-app.md)
+- [Gain traction for your collaborative app in the market](gain-traction.md)
+- [Scale your collaborative app](scale-app.md)
+- [Succeed with your collaborative app](succeed.md)
 
 ## Next step
 
