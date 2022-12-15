@@ -832,4 +832,5 @@ For detailed examples on how to use TeamsFx SDK [Samples](https://github.com/Off
 
 ## See also
 
-[Microsoft TeamsFx sample gallery](https://github.com/OfficeDev/TeamsFx-Samples).
+* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
+* [Microsoft TeamsFx sample gallery](https://github.com/OfficeDev/TeamsFx-Samples).
