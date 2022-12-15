@@ -697,7 +697,7 @@
   - name: Plan growth for your Teams app
     items:
     - name: Overview
-      href: concepts/deploy-and-publish/appsource/post-publish/app-growth/app-growth-lifecycle.md
+      href: concepts/deploy-and-publish/appsource/post-publish/app-growth/overview-app-growth.md
     - name: Growth lifecycle for your app
       items:
       - name: App growth lifecycle
