@@ -49,21 +49,21 @@ Using the guidance in this document, you can grow your collaborative app on Team
 
 ## Options for growing your app: Understanding growth models
 
-Without going too deep, this is a summary of the three predominant types of SaaS business growth models:
+This is a summary of the three predominant types of SaaS business growth models:
 
-1. **Sales-led growth** – where potential customers or “sales-qualified leads (SQLs)” interact with a sales rep or a customer success rep right off the bat at every stage of the buying journey from understanding product your SaaS app’s features, seeing a demo, post-purchase setup and config, sales-led user onboarding and customer success reps training to use the app.
-1. **Marketing-led growth** – where prospective customers sign up for a product demo after building perceived value of your product by consuming marketing narratives such as ads, content resources such as blogs, videos, or downloadable e-books and as a result generating a “marketing-qualified lead (MQL)” for the sales team to convert. Customer retention and monetization are driven by marketing channels, content, and outreach as well.
-1. **Product-led growth** – where your SaaS product itself is the main driving force behind customer acquisition, activation, retention, revenue growth, virality, and expansion by offering self-serve freemium or free trial options and a straightforward frictionless onboarding process to users so that they can start using the product right away and experience direct product value first-hand with minimal sales, marketing, or customer success interactions on the way. “Product-qualified leads (PQLs)” who have experienced meaningful value using the product are the ones more likely to become paying customers either directly or through salesforce’s upsell or intervention.
+1. **Sales-led growth**: Potential customers or “sales-qualified leads (SQLs)” interact with a sales rep or a customer success rep at every stage of the buying journey from understanding product and your SaaS app’s features, seeing a demo, post-purchase setup and config, sales-led user onboarding, and customer success reps training to use the app.
+1. **Marketing-led growth**: Prospective customers sign up for a product demo after building perceived value of your product by consuming marketing narratives such as, advertisements, content resources such as, blogs, videos, or downloadable e-books, and as a result generating a “marketing-qualified lead (MQL)” for the sales team to convert. Customer retention and monetization are driven by marketing channels, content, and outreach as well.
+1. **Product-led growth**: Your SaaS product itself is the main driving force behind customer acquisition, activation, retention, revenue growth, virality, and expansion. It's possible by offering self-serve freemium or free trial options and a straightforward frictionless onboarding process to users. The users can start using the product right away and experience direct product value first-hand with minimal sales, marketing, or customer success interactions on the way. “Product-qualified leads (PQLs)” who have experienced meaningful value using the product are the ones more likely to become paying customers either directly or through salesforce’s upsell or intervention.
 
-As a developer who’s built a collaborative app, you'll benefit from devising a well-rounded strategy that employs all three - sales, marketing, and product-led tactics to help you grow your product that is, the Teams app among hundreds of millions of Teams users.
+As a developer of a collaborative app, you'll benefit from devising a well-rounded strategy that employs all three SaaS business growth models. It helps you grow your Teams app among hundreds of millions of Teams users.
 
 :::image type="content" source="../../../../../assets/images/app-fundamentals/growth-funnel.png" alt-text="Traditional funnel vs. Product-led funnel":::
 
-More than point solutions that is, “add-ins” and “integrations” Teams collaborative apps offer you an opportunity to apply a solid growth strategy to a product line, just as you would do for your core SaaS product for the web browser or native mobile apps.
+More than point solutions (that is, “add-ins” and “integrations”), Teams collaborative apps offer you an opportunity to apply a solid growth strategy to a product line. It's just as you would do for your core SaaS product for the web browser or native mobile apps.
 
 ## What’s needed to grow and succeed on Teams marketplace?
 
-As noted above, just like any other product in your product line, your collaborative app in Teams requires sustained, continuous investments on multiple fronts:
+As noted earlier, your Teams collaborative app requires sustained and continuous investments on multiple fronts:
 
 | Investment type | Why should you do this? What impact will this have? | How will you do this? What resources are required? |
 | --- | --- | --- |
