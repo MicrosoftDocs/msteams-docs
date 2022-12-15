@@ -58,7 +58,7 @@ The following image is an example of a targeted meeting notification sent to a s
 
 ### App manifest settings for targeted meeting notification
 
-To send a targeted meeting notification you must configure the RSC permission `authorization` property, `name`, and `type` in the `resourceSpecific` field in the [app manifest](../resources/schema/manifest-schema.md#authorization) as follows:
+To send a targeted meeting notification you must configure the RSC permission: `authorization` property, `name`, and `type` in the `resourceSpecific` field in the [app manifest](../resources/schema/manifest-schema.md#authorization) as follows:
 
 ```json
 "authorization": {
@@ -76,13 +76,19 @@ To send a targeted meeting notification you must configure the RSC permission `a
 
 ### Enable targeted meeting notification
 
-1. The request payload can be triggered by a bot, user action or via code. It's up to the bot API when to trigger the notification.
+1. Targeted meeting notification is triggered by a bot, user action or via code. It's up to the bot API when to trigger the notification.
 
-    Following is an example of a request payload:
+1. Retrieve the user IDs of participants through [get participant API](meeting-apps-apis.md#get-participant-api) and [get Members API](/rest/api/azure/devops/memberentitlementmanagement/members/get?view=azure-devops-rest-7.0&preserve-view=true).
+
+1. After retrieving the user IDs, include the user IDs in the request parameter.
+
+   Following is an example of a request:
 
     ```http
     GET POST /v1/meetings/{meetingId}/notification
     ```
+
+   Following is an example of a payload:
 
     ```json
     {
@@ -117,10 +123,6 @@ To send a targeted meeting notification you must configure the RSC permission `a
       }
     }
     ```
-
-1. The bot can get the user ID of participants through [get participant API](meeting-apps-apis.md#get-participant-api) and [get Members API](/rest/api/azure/devops/memberentitlementmanagement/members/get?view=azure-devops-rest-7.0&preserve-view=true).
-
-1. After fetching the user IDs, you need to send the parameters in the requested format.
 
 1. The targeted meeting notification is successfully sent to the specified participant.
 
