@@ -97,3 +97,4 @@ To create external tasks, follow the steps:
 ## See also
 
 * [Integrate web apps](integrate-web-apps-overview.md)
+* [Public developer preview manifest schema for Teams](../resources/schema/manifest-schema-dev-preview.md)

@@ -94,7 +94,7 @@ If [uploading custom apps is enabled](/microsoftteams/admin-settings) in your Te
 ## See also
 
 * [Integrate web apps](../../samples/integrate-web-apps-overview.md)
-* [Conversation basics](conversations/conversation-basics.md)
+* [Developer Portal for Teams](../../concepts/build-and-test/teams-developer-portal.md)
 * [Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents)  
 * [Create a chatbot for Teams with Microsoft Power Virtual Agents](../bot-features.md#bots-with-power-virtual-agents)
 * [Power Virtual Agents portal](https://powervirtualagents.microsoft.com)

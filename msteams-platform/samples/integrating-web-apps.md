@@ -122,14 +122,8 @@ When a team is created, a [SharePoint site collection](/microsoftteams/sharepoin
 
 ## See also
 
-* [Build tabs for Teams](../tabs/what-are-tabs.md)
-* [Build bots for Teams](../bots/what-are-bots.md)*
-* [Build message extensions for Teams](../messaging-extensions/what-are-messaging-extensions.md)
-* [Build cards and task modules for Teams](../task-modules-and-cards/cards-and-task-modules.md)
+* [Integrate web apps](integrate-web-apps-overview.md)
 * [Adaptive Cards](../task-modules-and-cards/cards/cards-reference.md#adaptive-card)
-* [Create Outgoing Webhooks](../webhooks-and-connectors/how-to/add-outgoing-webhook.md)
-* [Create Incoming Webhooks](../webhooks-and-connectors/how-to/add-incoming-webhook.md)
-* [Create Office 365 Connectors](../webhooks-and-connectors/how-to/connectors-creating.md)
 * [Integrate web apps](~/samples/integrate-web-apps-overview.md)
 * [Low-code and no-code solutions for Microsoft Teams](~/samples/teams-low-code-solutions.md)
 * [Share to Teams from web apps](~/concepts/build-and-test/share-to-teams-from-web-apps.md)
