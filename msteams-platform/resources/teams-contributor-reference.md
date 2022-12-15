@@ -71,6 +71,7 @@ Code samples play an important role to use APIs and SDKs effectively. Well prese
 
 ## See also
 
+* [Localize your app](../concepts/build-and-test/apps-localization.md)
 * [Microsoft Learn](/)
 * [Microsoft Learn documentation contributor guide](/contribute)
 * [Microsoft Learn style and voice quickstart](/contribute/style-quick-start)

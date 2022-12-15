@@ -81,14 +81,10 @@ Android WebView is a Chrome system component that allows Android apps to display
 
 ## See also
 
+* [Localize your app](../concepts/build-and-test/apps-localization.md)
 * [SameSite examples](https://github.com/GoogleChromeLabs/samesite-examples)
 * [SameSite cookie recipes](https://web.dev/samesite-cookie-recipes/)
 * [Known Incompatible Clients]( https://www.chromium.org/updates/same-site/incompatible-clients)
 * [Developers: Get Ready for New SameSite=None; Secure Cookie Settings](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html)
 * [Upcoming SameSite Cookie Changes in ASP.NET and ASP.NET Core](https://devblogs.microsoft.com/aspnet/upcoming-samesite-cookie-changes-in-asp-net-and-asp-net-core/)
 * [HTTP cookies](https://developer.mozilla.org/docs/Web/HTTP/Cookies)
-* [Build tabs for Teams](../tabs/what-are-tabs.md)
-* [Build bots for Teams](../bots/what-are-bots.md)
-* [Conversation basics](../bots/how-to/conversations/conversation-basics.md)
-* [Build message extensions](../messaging-extensions/what-are-messaging-extensions.md)
-* [Build task modules](../task-modules-and-cards/what-are-task-modules.md)
