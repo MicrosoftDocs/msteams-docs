@@ -8,10 +8,10 @@ ms.localizationpriority: medium
 
 # Add code to enable SSO for your Adaptive Cards Universal Actions
 
-Authentication steps for SSO are similar to that of a bot in Teams. Following are the steps to achieve SSO in Adaptive Cards Universal Action:
+Authentication steps for Single sign-on (SSO) are similar to that of a bot in Teams. Following are the steps to achieve SSO in Adaptive Cards Universal Action:
 
 > [!NOTE]
-> To implement SSO flow, you must have personal scope declared for your bot in the app manifest. When a user invokes the SSO flow via the Adaptive Card `Action.Execute` protocol, the user is prompted to install the app in personal scope if it isn't installed already.
+> To implement SSO flow, you must have a personal scope declared for your bot in the app manifest. When a user invokes the SSO flow via the Adaptive Card `Action.Execute` protocol, the user is prompted to install the app in a personal scope if it isn't installed already.
 
 ## Prerequisites
 
@@ -25,7 +25,7 @@ After you configure the client secret and OAuth connection setting for the app i
 > [!IMPORTANT]
 > Ensure that you added the code to handle access token for your bot. For more information, see [add code to handle an access token](../../../bots/how-to/authentication/bot-sso-code.md#add-code-to-handle-an-access-token).
 
-If there's a cached token, the bot uses the same token. If there's no token available, the bot creates an OAuthCard and places it in an invoke response with the values below, which includes a `tokenExchangeResource`:
+If there's a cached token, the bot uses the same token. If there's no token available, the bot creates an OAuthCard and places it in an invoke response with the following values which includes a `tokenExchangeResource`:
 
 ```JSON
 {
@@ -54,7 +54,7 @@ If there's a cached token, the bot uses the same token. If there's no token avai
 Senders must include a `tokenExchangeResource` to designate a SSO operation.
 
 > [!NOTE]
-> Teams client triggers the nominal sign-in or OAuth flow when SSO fails. It is highly recommended that you provide sign in URL in the above response so that OAuth flow works.
+> Teams client triggers the nominal sign-in or OAuth flow when SSO fails. It's highly recommended that you provide a sign in URL in the above response so that OAuth flow works.
 
 This response is delivered through the channel to the client, which uses the `tokenExchangeResource` value and the client token to obtain an on-behalf-of token or exchangeable token from the Azure AD.
 
@@ -64,7 +64,7 @@ This response is delivered through the channel to the client, which uses the `
 
 ## Consent dialog for getting access token
 
-If the app user is using the Adaptive Card for the first time and user consent is required, the following dialog appears:
+If the app user is using an Adaptive Card for the first time and user consent is required, the following dialog appears:
 
    :::image type="content" source="../../../assets/images/authentication/consent-sso-ac.png" alt-text="Screenshot shows you the consent dialog box.":::
 
@@ -77,7 +77,7 @@ The following are the steps to receive token:
 > [!IMPORTANT]
 > Ensure that your bot receives the invoke activity or token. For more information, see [add code to receive the token](../../../bots/how-to/authentication/bot-sso-code.md#add-code-to-receive-the-token).
 
-1. The client resend the original `adaptiveCard/action` to the bot along with the token as follows:
+1. The client resends the original `adaptiveCard/action` to the bot along with the token as follows:
 
     ```javascript
     {
