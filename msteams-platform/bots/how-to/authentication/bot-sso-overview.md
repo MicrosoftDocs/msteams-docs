@@ -71,3 +71,7 @@ This section describes the tasks involved in implementing SSO for a Teams bot or
 
 > [!div class="nextstepaction"]
 > [Configure your app in Azure AD](bot-sso-register-aad.md)
+
+## See also
+
+[Glossary](../../../get-started/glossary.md)
