@@ -35,7 +35,7 @@ You also need to enable sideloading for your tenant:
 
  1. At the top right, select **Org-wide app settings**.
 
- 1. Under Custom apps, turn on the **Interaction with custom app** toggle and **Save**.
+ 1. Under Custom apps, turn on the **Interaction with custom apps** toggle and **Save**.
 
     :::image type="content" source="images/teams-admin-enable-sideloading.png" alt-text="The screenshot is an example that enables sideloading for custom apps from the Teams Admin Center":::
 
@@ -56,14 +56,14 @@ To enroll your test tenant for Office 365 targeted releases:
 1. Go to **Settings** > **Org Settings** > **Organization profile**.
 1. Select **Release preferences**.
 1. Select any *Targeted release* preference:
-    1. **Target release for everyone**
-    1. **Target release for select users**
+    1. **Targeted release for everyone**
+    1. **Targeted release for select users**
 
     :::image type="content" source="images/m365-admin-center-targeted-releases.png" alt-text="The screenshot is an example that shows the Microsoft 365 admin center 'Release preferences' menu with Targeted release option selected.":::
 
 1. Select **Save**.
 
-For more information on Office 365 release options, see [set up the Standard or Targeted release options](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide&preserve-view=true#targeted-release) in *Microsoft 365 admin center help*.
+For more information on Office 365 release options, see [set up the standard or targeted release options](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide&preserve-view=true#targeted-release) in *Microsoft 365 admin center help*.
 
 ## Install Office apps in your test environment
 
@@ -103,7 +103,7 @@ To install the latest Office app beta, build to your physical Android device or 
 
     :::image type="content" source="images/office-android-install.png" alt-text="The screenshot is an example that shows the install button for the Microsoft Office: Edit & Share app in Google Play Store.":::
 
-1. Select **Join** under **Join the beta section** after the installation completes.
+1. Select **Join** under **Join the beta** section after the installation completes.
 
     :::image type="content" source="images/office-android-join-beta.png" alt-text="The screenshot is an example that shows the Join the beta screen.":::
 
@@ -135,3 +135,7 @@ Create or update a Teams app to run across Microsoft 365:
 > [Enable a Teams personal tab for Office and Outlook](extend-m365-teams-personal-tab.md)
 > [!div class="nextstepaction"]
 > [Enable a Teams message extension for Outlook](extend-m365-teams-message-extension.md)
+
+## See also
+
+[Extend Teams apps across Microsoft 365](overview.md)
