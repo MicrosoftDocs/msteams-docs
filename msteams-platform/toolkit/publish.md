@@ -142,6 +142,4 @@ For more information, see [Publish your app to the Microsoft Teams store](../con
 * [Distribute your Microsoft Teams app](../concepts/deploy-and-publish/apps-publish-overview.md)
 * [Create Teams app package](../concepts/build-and-test/apps-package.md)
 * [Prepare your Microsoft 365 tenant](../concepts/build-and-test/prepare-your-o365-tenant.md)
-* [Publish your app to the Microsoft Teams store](../concepts/deploy-and-publish/appsource/publish.md)
-* [Upload your app in Teams](../concepts/deploy-and-publish/apps-upload.md)
 * [Manage Teams app in the Microsoft Teams admin center](/MicrosoftTeams/manage-apps?toc=%2Fmicrosoftteams%2Fplatform%2Ftoc.json&bc=%2Fmicrosoftteams%2Fplatform%2Fbreadcrumb%2Ftoc.json)
