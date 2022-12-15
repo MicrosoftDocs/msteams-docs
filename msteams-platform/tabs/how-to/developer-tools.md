@@ -1,9 +1,8 @@
 ---
 title: DevTools for Microsoft Teams tabs
-description: Describes how to get to the DevTools when using the Microsoft Teams Desktop Client and debugging
+description: In this module, learn how to get to the DevTools when using the Microsoft Teams Desktop Client and debugging
 ms.localizationpriority: medium
 ms.topic: how-to
-keywords: devtools debug mobile chrome desktop client developer tools tab 
 ---
 
 # DevTools for Microsoft Teams tabs
@@ -46,3 +45,7 @@ You can also enable the DevTools from the Teams Android client. To enable DevToo
 1. Select **inspect** under the tab you wish to debug, as in the following image:
 
    ![Android DevTools](~/assets/images/android-devtools.png)
+
+## See also
+
+[Clear the Teams client cache](/microsoftteams/troubleshoot/teams-administration/clear-teams-cache)

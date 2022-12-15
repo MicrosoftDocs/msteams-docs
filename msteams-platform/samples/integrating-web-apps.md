@@ -1,6 +1,6 @@
 ---
 author: heath-hamilton
-description: Best practices or considerations for integrating existing web apps with Microsoft Teams
+description: Learn best practices or considerations for integrating existing web apps with Microsoft Teams. It gives information on API requirements, authentication, and deep-linking of your app with Teams.
 ms.author: surbhigupta
 ms.date: 08/26/2020
 ms.localizationpriority: medium
@@ -13,7 +13,7 @@ You can make web apps suitable with Teams' social and collaborative features, by
   
 The different types of apps, which you can integrate with Teams are as follows:
 
-* **Standalone apps**: A stand alone app is a single-page or large, and complex app. The user can use some aspects of it in Teams.
+* **Standalone apps**: A standalone app is a single-page or large, and complex app. The user can use some aspects of it in Teams.
 * **Collaboration apps**: An app already built for the social and collaborative features inherent to Teams.
 * **SharePoint**: A SharePoint page you want to surface in Teams.
 
@@ -69,7 +69,7 @@ If your app is used by multiple organizations, consider multitenant hosting. It 
 
 ***Integration scenarios**: Standalone apps, collaboration apps*
 
-Your app's APIs and data structures must support the app when integrating with Teams. To extend the support, you must augment the APIs and data structures with contextual information about Teams for [identity mapping](../concepts/authentication/configure-identity-provider.md), [deep-link support](../concepts/build-and-test/deep-links.md), and [incorporating Microsoft Graph](/graph/teams-concept-overview).
+Your app's APIs and data structures must support the app when integrating with Teams. To extend the support, you must augment the APIs and data structures with contextual information about Teams for [identity mapping](../concepts/authentication/authentication.md), [deep-link support](../concepts/build-and-test/deep-links.md), and [incorporating Microsoft Graph](/graph/teams-concept-overview).
 
 See how to get context for your Teams [tab](../tabs/how-to/access-teams-context.md) or [bot](../bots/how-to/get-teams-context.md).
 

@@ -1,7 +1,6 @@
 ---
 title: Channel and Group chat conversations with bots
-description: Describes the end-to-end scenario of having a conversation with a bot in a channel in Microsoft Teams
-keywords: teams scenarios channels conversation bot
+description: In this module, learn end-to-end scenario of having a conversation with a bot in a channel in Microsoft Teams
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/25/2019
@@ -12,21 +11,21 @@ ms.date: 06/25/2019
 
 Microsoft Teams allows users to bring bots into their channel or group chat conversations. By adding a bot to a team or chat, all users of the conversation can take advantage of the bot functionality right in the conversation. You can also access Teams-specific functionality within your bot like querying team information and @mentioning users.
 
-Chat in channels and group chats differ from personal chat in that the user needs to @mention the bot. If a bot is used in multiple scopes such as personal, groupchat, or channel, you need to detect what scope the bot messages came from, and process them accordingly.
+Chat in channels and group chats differs from personal chat in that the user needs to @mention the bot. If a bot is used in multiple scopes such as personal, group chat, or channel, you need to detect what scope the bot messages came from, and process them accordingly.
 
 ## Designing a great bot for channels or groups
 
-Bots added to a team become another team member and can be @mentioned as part of the conversation. In fact, bots only receive messages when they are @mentioned, so other conversations on the channel are not sent to the bot.
+Bots added to a team become another team member and can be @mentioned as part of the conversation. In fact, bots only receive messages when they're @mentioned, so other conversations on the channel aren't sent to the bot.
 
 A bot in a group or channel should provide information relevant and appropriate for all members. While your bot can certainly provide any information relevant to the experience, keep in mind conversations with it are visible to everyone. Therefore, a great bot in a group or channel should add value to all users, and certainly not inadvertently share information more appropriate to a one-to-one conversation.
 
-Your bot, just as it is, may be entirely relevant in all scopes without requiring additional work. In Microsoft Teams there is no expectation that your bot function in all scopes, but you should ensure that your bot provides user value in whichever scope(s) you choose to support. For more information on scopes, see [Apps in Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md).
+Your bot, just as it is, may be entirely relevant in all scopes without requiring more work. In Teams, there's no expectation that your bot function in all scopes, but you should ensure that your bot provides user value in whichever scope(s) you choose to support. For more information on scopes, see [Apps in Microsoft Teams](~/concepts/build-and-test/teams-developer-portal.md).
 
 Developing a bot that works in groups or channels uses much of the same functionality as personal conversations. Additional events and data in the payload provide Teams group and channel information. Those differences, as well as key differences in common functionality are described in the following sections.
 
 ### Creating messages
 
-For more information on bots creating messages in channels see [Proactive messaging for bots](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md), and specifically [Creating a channel conversation](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md#creating-a-channel-conversation).
+For more information on bots creating messages in channels, see [Proactive messaging for bots](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md), and specifically [Creating a channel conversation](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md#creating-a-channel-conversation).
 
 ### Receiving messages
 
@@ -48,20 +47,20 @@ In a channel, replying to a message shows as a reply to the initiating reply cha
 
 ### Best practice: Welcome messages in Teams
 
-When your bot is first added to the group or team, it is generally useful to send a welcome message introducing the bot to all users. The welcome message should provide a description of the bot’s functionality and user benefits. Ideally the message should also include commands for the user to interact with the app. To do this, ensure that your bot responds to the `conversationUpdate` message, with the `teamsAddMembers` eventType in the `channelData` object. Be sure that the `memberAdded` ID is the bot's App ID itself, because the same event is sent when a user is added to a team. See [Team member or bot addition](~/resources/bot-v3/bots-notifications.md#team-member-or-bot-addition) for more details.
+When your bot is first added to the group or team, it's useful to send a welcome message introducing the bot to all users. The welcome message should provide a description of the bot’s functionality and user benefits. Ideally the message should also include commands for the user to interact with the app. To do this, ensure that your bot responds to the `conversationUpdate` message, with the `teamsAddMembers` eventType in the `channelData` object. Be sure that the `memberAdded` ID is the bot's App ID itself, because the same event is sent when a user is added to a team. For more information, see [Team member or bot addition](~/resources/bot-v3/bots-notifications.md#team-member-or-bot-addition).
 
 You might also want to send a personal message to each member of the team when the bot is added. To do this, you could [fetch the team roster](~/resources/bot-v3/bots-context.md#fetch-the-team-roster) and send each user a [direct message](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md).
 
 We recommend that your bot *not* send a welcome message in the following situations:
 
-* The team is big (obviously subjective, for example, more than 100 members). Your bot may be seen as 'spammy' and the person who added it may get complaints unless you clearly communicate your bot's value proposition to everyone who sees the welcome message.
+* The team is large (obviously subjective, for example, more than 100 members). Your bot may be seen as 'spammy' and the person who added it may get complaints unless you clearly communicate your bot's value proposition to everyone who sees the welcome message.
 * Your bot is first mentioned in a group or channel, versus being first added to a team.
 * A group or channel is renamed.
 * A team member is added to a group or channel.
 
 ## @ Mentions
 
-Because bots in a group or channel respond only when they are mentioned ("@*botname*") in a message, every message received by a bot in a group channel contains its own name, and you must ensure your message parsing handles that. In addition, bots can parse out other users mentioned and mention users as part of their messages.
+Because bots in a group or channel respond only when they're mentioned ("@*botname*") in a message, every message received by a bot in a group channel contains its own name, and you must ensure your message parsing handles that. In addition, bots can parse out other users mentioned and mention users as part of their messages.
 
 ### Retrieving mentions
 
@@ -189,8 +188,8 @@ session.send(generalMessage);
 
 ## Accessing groupChat or channel scope
 
-Your bot can do more than send and receive messages in groups and teams. For instance, it can also fetch the list of members, including their profile information, as well as the list of channels. For more information, see [Get context for your Microsoft Teams bot](~/resources/bot-v3/bots-context.md).
+Your bot can do more than send and receive messages in groups and teams. For instance, it can also fetch the list of members, including their profile information, and the list of channels. For more information, see [Get context for your Microsoft Teams bot](~/resources/bot-v3/bots-context.md).
 
 ## See also
 
-[Bot Framework samples](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)
+[Bot Framework samples](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/README.md).

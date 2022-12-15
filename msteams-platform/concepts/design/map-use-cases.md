@@ -82,7 +82,7 @@ The Microsoft Teams platform offers a large variety of features. Each feature is
 
 Let's look at how Teams capabilities enable different features for your app.
 
-:::image type="content" source="../../assets/images/overview/teams-apps-capabilities.png" alt-text="Image showing Teams capabilities" border="true":::
+:::image type="content" source="../../assets/images/overview/teams-apps-capabilities.png" alt-text="Image showing Teams capabilities":::
 
 For example:
 
@@ -91,5 +91,11 @@ For example:
 
 ## See also
 
+* [Plan your app with Teams features](../app-fundamentals-overview.md)
 * [Planning checklist](../design/planning-checklist.md)
 * [Build your first Microsoft Teams app](../../get-started/get-started-overview.md)
+* [Webhooks and connectors](../../webhooks-and-connectors/what-are-webhooks-and-connectors.md)
+* [Build bots for Teams](../../bots/what-are-bots.md)
+* [Build tabs for Teams](../../tabs/what-are-tabs.md)
+* [Build message extensions for Teams](../../messaging-extensions/what-are-messaging-extensions.md)
+* [Teams app planning checklist](planning-checklist.md)

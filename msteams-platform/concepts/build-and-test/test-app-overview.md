@@ -1,9 +1,8 @@
 ---
 title: Test your app overview
-description: Describes the process to test and debug your Teams custom app in Microsoft 365
+description: In this module, learn the process to test and debug your Teams custom app in Microsoft 365 and add test data to your Microsoft 365 tenant
 ms.topic: how-to
 ms.localizationpriority: medium
-keywords: Configure Microsoft 365 tenant Teams uploading test app 
 ---
 
 # Test your app
@@ -16,7 +15,7 @@ After integrating your app with Microsoft Teams, you must test your app before p
 
 ## Prepare your Microsoft 365 tenant
 
-Before you start testing your app, prepare your Microsoft 365 test tenant and enable custom Teams app allow you to upload your app. You must sign-up for Microsoft 365 developer program and manage the Teams settings for your organization. Set up your developer subscription and configure it through [prepare your Microsoft 365 Tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md).
+Before you start testing your app, prepare your Microsoft 365 test tenant and enable custom Teams app to allow you to upload your app. You must sign-up for Microsoft 365 developer program and manage the Teams settings for your organization. Set up your developer subscription and configure it through [prepare your Microsoft 365 Tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md).
 
 ## Test and debug
 

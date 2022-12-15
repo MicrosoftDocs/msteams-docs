@@ -1,9 +1,8 @@
 ---
 title: Requirements and considerations for application-hosted media bots
-description: Understand important requirements and considerations, and scalability and performance considerations related to creating application-hosted media bots for Microsoft Teams using code example and samples. 
+description: Learn how to create application-hosted media bots for Microsoft Teams, scalability and performance. See samples for different remote and local media scenarios. 
 ms.topic: conceptual
 ms.localizationpriority: medium
-keywords: application-hosted media Windows server Azure VM
 ms.date: 11/16/2018
 ---
 
@@ -35,7 +34,7 @@ The next section provides details on where real-time media calls are located.
 
 ## Real-time media calls stay where they're created
 
-Real-time media calls stay on the computer where they were created. A real-time media call is pinned to the virtual machine (VM) instance that accepted or started the call. Media from a Microsoft Teams call or meeting flows to that VM instance, and media the bot sends back to Microsoft Teams must also originate from that VM. If there are any real-time media calls in progress when the VM is stopped, those calls are abruptly terminated. If the bot has prior knowledge of the pending VM shutdown, it can end the calls.
+Real-time media calls stay on the computer where they were created. A real-time media call is pinned to the virtual machine (VM) instance that accepted or started the call. Media from a Teams call or meeting flows to that VM instance, and media the bot sends back to Teams must also originate from that VM. If there are any real-time media calls in progress when the VM is stopped, those calls are abruptly terminated. If the bot has prior knowledge of the pending VM shutdown, it can end the calls.
 
 The next section provides details on accessibility of application-hosted media bots.
 
@@ -74,18 +73,12 @@ Application-hosted media bots samples are as follows:
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Supported media formats](~/resources/media-formats.md)
+> [Supported media formats for bots](../../resources/media-formats.md)
 
 ## See also
 
 * [Graph Calling SDK Documentation](https://microsoftgraph.github.io/microsoft-graph-comms-samples/docs/)
+* [Sample applications](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/LocalMediaSamples)
 * The bots require more compute and network bandwidth capacity than messaging bots and incur higher operational costs. A real-time media bot developer must carefully measure the bot's scalability, and ensure the bot doesn't accept more simultaneous calls than it can manage. A video-enabled bot can sustain only one or two concurrent media sessions per CPU core if using the raw RGB24 or NV12 video formats.
 * The Real-time Media Platform doesn't currently take advantage of any Graphics Processing Units (GPU) available on the VM to off-load H.264 video encoding or decoding. Instead, video encode and decode are done in software on the CPU. If a GPU is available, the bot takes advantage of it for its own graphics rendering, for example, if the bot is using a 3D graphics engine.
 * The VM instance hosting the real-time media bot must have at least 2 CPU cores. For Azure, a Dv2-series virtual machine is recommended. For other Azure VM types, a system with 4 virtual CPUs (vCPU) is the minimum size required. For more information about Azure VM types, see [Azure documentation](/azure/virtual-machines/windows/sizes-general).
-
-The next section provides samples that illustrate different local media scenarios.
-
-## Samples and additional resources
-
-* [Sample applications](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/LocalMediaSamples)
-* [Graph calling SDK documentation](https://microsoftgraph.github.io/microsoft-graph-comms-samples/docs/)

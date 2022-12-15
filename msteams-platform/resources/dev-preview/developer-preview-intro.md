@@ -1,22 +1,21 @@
 ---
-title: Developer Preview
-description: Describes the features in the Public Developer Preview of Microsoft Teams
+title: Public developer preview for Microsoft Teams
+description: A Developer Preview (Beta) is public program to explore and test upcoming features for potential inclusion in your Microsoft Teams app.
 ms.topic: conceptual
 ms.localizationpriority: high
-keywords: teams preview developer features
 ---
-# Public developer preview for Microsoft Teams
+# Public developer preview for Teams
 
 >[!NOTE]
 >Features included in preview may not be complete, and may undergo changes before becoming available in the public release. They are provided for testing and exploration purposes only. They should not be used in production applications.
 
-Developer Preview is a public program for developers, which provides early access to unreleased features in Microsoft Teams. This allows you to explore and test upcoming features for potential inclusion in your Microsoft Teams app. We also welcome [feedback](~/feedback.md) on any feature in developer preview. Developer preview is enabled per Microsoft Teams client, so you don't need to worry about affecting your entire organization.
+Developer Preview is a public program for developers, which provides early access to unreleased features in Microsoft Teams. This allows you to explore and test upcoming features for potential inclusion in your Teams app. We also welcome [feedback](~/feedback.md) on any feature in developer preview. Developer preview is enabled per Microsoft Teams client, so you don't need to worry about affecting your entire organization.
 
 ## Developer preview app manifest
 
-Many features enabled in developer preview will require alterations to your app manifest JSON file. To do so, you'll need to use the [developer preview manifest schema](~/resources/schema/manifest-schema-dev-preview.md). If you use this schema, you won't be able to use [App Studio](~/concepts/build-and-test/app-studio-overview.md) to make these changes, nor will you be able to use it to upload your app for testing. To upload your app you'll need to select the `More apps` icon on the app bar, then select the `Upload a custom app link`. Using this method you can only upload a zipped version of your app package.
+Many features enabled in developer preview will require alterations to your app manifest JSON file. To do so, you'll need to use the [developer preview manifest schema](~/resources/schema/manifest-schema-dev-preview.md). If you use this schema, you won't be able to use [Developer Portal for Teams](~/concepts/build-and-test/teams-developer-portal.md) to make these changes, nor will you be able to use it to upload your app for testing. To upload your app you'll need to select the `More apps` icon on the app bar, then select the `Upload a custom app link`. Using this method you can only upload a zipped version of your app package.
 
-You may find it useful to use App Studio to create the non-developer preview portions of your app package, then export that package and manually edit the `manifest.json` file to add the developer preview features you wish to use. Once you've added developer preview features to the `manifest.json` file, you won't be able to re-import the package into App Studio.
+You may find it useful to use Developer Portal for Teams to create the non-developer preview portions of your app package, then export that package and manually edit the `manifest.json` file to add the developer preview features you wish to use. Once you've added developer preview features to the `manifest.json` file, you won't be able to re-import the package into Developer Portal for Teams.
 
 ## Enable developer preview
 

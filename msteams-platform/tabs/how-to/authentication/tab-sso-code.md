@@ -1,8 +1,8 @@
 ---
 title: Code configuration for enabling SSO for tabs
-description: Describes code configuration for enabling SSO for tabs
+description: Update code in your tab app for requesting and receiving access token using app user's Teams identity for enabling Single sign-on (SSO).
 ms.topic: how-to
-ms.localizationpriority: medium
+ms.localizationpriority: high
 keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) Graph API
 ---
 # Add code to enable SSO
@@ -14,7 +14,7 @@ Before you add code to enable SSO, ensure that you've registered your app with A
 
 You need to configure your tab app's client-side code to obtain an access token from Azure AD. The access token is issued on behalf of the tab app. If your tab app requires additional Microsoft Graph permissions, you'll need to pass the access token to the server-side, and exchange it for Microsoft Graph token.
 
-:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-config-code.png" alt-text="configure code for handling access token" border="false":::
+:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-config-code.png" alt-text="configure code for handling access token":::
 
 This section covers:
 
@@ -30,7 +30,8 @@ To obtain app access for the current app user, your client-side code must make a
 <details>
 <summary>Learn more about getAuthToken()</summary>
 <br>
-`getAuthToken()` is a method in Microsoft Teams JavaScript SDK. It requests an Azure AD access token to be issued on behalf of app. The token is acquired from the cache, if it is not expired. If it's expired, a request is sent to Azure AD to obtain a new access token.
+
+`getAuthToken()` is a method in Microsoft Teams JavaScript library. It requests an Azure AD access token to be issued on behalf of app. The token is acquired from the cache, if it is not expired. If it's expired, a request is sent to Azure AD to obtain a new access token.
 
  For more information, see [getAuthToken](/javascript/api/@microsoft/teams-js/microsoftteams.authentication?view=msteams-client-js-latest#@microsoft-teams-js-microsoftteams-authentication-getauthtoken&preserve-view=true).
 </details>
@@ -41,7 +42,7 @@ Use `getAuthToken()` at the time when you need access token for the current app 
 
 | If access token is needed... | Call getAuthToken()... |
 | --- | --- |
-| When app user accesses the app | From inside `microsoftTeams.initialize()`. |
+| When app user accesses the app | After `microsoftTeams.initialize()`. |
 | To use a particular functionality of the app | When the app user takes an action that requires signing in. |
 
 ### Add code for getAuthToken
