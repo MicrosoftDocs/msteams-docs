@@ -52,6 +52,8 @@ landingContent:
         url: https://gitter.im/OfficeDev/home
     - linkListType: whats-new
       links:
+      - text: Targeted meeting notification
+        url: apps-in-teams-meetings/in-meeting-notification-for-meeting.md#targeted-meeting-notification
       - text: Teams developer documentation FAQs
         url: teams-faq.md
       - text: Share-in-meeting to share any document or third-party app to the meeting stage (Developer Preview)
