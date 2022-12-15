@@ -77,7 +77,7 @@ The following are the steps to receive token:
 > [!IMPORTANT]
 > Ensure that your bot receives the invoke activity or token. For more information, see [add code to receive the token](../../../bots/how-to/authentication/bot-sso-code.md#add-code-to-receive-the-token).
 
-1. The client resends the original `adaptiveCard/action` to the bot along with the token as follows:
+1. The client sends the original `adaptiveCard/action` again to the bot along with the token as follows:
 
     ```javascript
     {
