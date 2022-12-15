@@ -207,8 +207,15 @@ Perform the following steps using the Teams Toolkit to debug your app after you 
 
 ::: zone-end
 
+## Next step
+
+> [!div class="nextstepaction"]
+> [Debug background process](debug-background-process.md)
+
 ## See also
 
+* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
+* [Introduction to Azure Functions](/azure/azure-functions/functions-overview)
 * [Use Teams Toolkit to provision cloud resources](provision.md)
 * [Add capabilities to your Teams apps](add-capability.md)
 * [Deploy to the cloud](deploy.md)
