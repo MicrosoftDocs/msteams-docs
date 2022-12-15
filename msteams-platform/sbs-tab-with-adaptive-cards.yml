@@ -373,7 +373,7 @@ items:
         > [!NOTE]
         > The `manifest.zip` must not contain any additional folders in it. It must have **manifest** json source file, **color** icon, and **outline** icon inside the zip folder.
 
-    1. In the File Explorer, go to **Microsoft-Teams-Samples > samples > tab-adaptive-cards > csharp > **TabWithAdpativeCardFlow**.
+    1. In the File Explorer, go to **Microsoft-Teams-Samples > samples > tab-adaptive-cards > csharp > TabWithAdpativeCardFlow**.
 
     1. Open the **TabWithAdpativeCardFlow.csproj** file in Microsoft Visual Studio.
     
