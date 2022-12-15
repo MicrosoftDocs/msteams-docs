@@ -25,12 +25,18 @@ It also includes some proven best practices from those who have crafted the Team
 You’ll probably not be surprised to hear that not all apps are equal on any marketplace. Teams apps can greatly differ from each other in terms of use cases fulfilled, personas served, end-user user experience, and user value delivered. As a developer, you can:
 
 1. **Just test waters**: Take a “foot-in-the door” approach where your SaaS backend is leveraged to provide an elevated, ephemeral end-user experience. Use link unfurling feature to show rich URL previews as cards from your domain are shared inside Teams, even when the user doesn't have your app installed.
-1. **Build a complementary, companion experience to your core web SaaS**: Build your Teams app serving as a point solution usually called “add-in”, “plug-in” or an “integration” for select, frequent, isolated, and lightweight use cases, which the user can get done inside Teams.
+1. **Build a complementary, companion experience to your core web SaaS**: Build your Teams app serving as a point solution that could be called “add-in”, “plug-in”, or an “integration” for select, frequent, isolated, and lightweight use cases. The user can use such solutions inside Teams.
 1. **Build a “collaborative app” product line**: Provide Teams users a unique, differentiated, rich, familiar, end to end and deeply immersive experience – all contained in Teams and centered around collaboration versus individual productivity. [Collaborative apps](https://www.microsoft.com/en-us/microsoft-365/blog/2021/11/02/stay-in-the-flow-of-work-with-new-collaborative-apps-for-microsoft-teams/), a new app pattern designed to bring people, processes, and data together to help users thrive in the hybrid workplace are positioned to completely transform how people in every organization do more together with the help of ubiquitous software in the flow of work.
 
 :::row:::
     :::column span="2":::
-        Needless to say, from these options, the strategy you'll take will determine the resulting user value, the economic opportunity for you, and how you can maximize the ROI from your investments. This document will assume you’ve taken a strategic view of your Teams investment by developing a “collaborative app”. In such as app, the user is able to get designated “jobs” seamlessly done in the flow of their work with full context, without ever leaving Microsoft Teams. Since collaborative apps are best positioned to win new customer deals for you and upsell or cross-sell to your existing customers, that investment has the potential to deliver the highest net new economic opportunity for your business.
+        Needless to say, from these options, the strategy you'll take will determine:
+        
+        - The resulting user value.
+        - The economic opportunity for you.
+        - How you can maximize the ROI from your investments.
+
+        This document will assume you’ve taken a strategic view of your Teams investment by developing a “collaborative app”. In such an app, the user is able to get designated “jobs” seamlessly done, in the flow of their work with full context, without leaving Microsoft Teams. Collaborative apps are best positioned to win new customer deals for you and upsell or cross-sell to your existing customers. For this reason, this investment has the potential to deliver the highest net new economic opportunity for your business.
     :::column-end:::
     :::column span="":::
 
