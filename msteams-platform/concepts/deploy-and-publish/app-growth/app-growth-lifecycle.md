@@ -27,6 +27,12 @@ Below is a descriptive guide elaborating on the various growth initiatives devel
 
 Do note that Microsoft partners with app developers once they’ve launched their apps on Teams marketplace by offering select, programmatic GTM investments depending on the app’s maturity in the market. Developers must get in touch with their Microsoft field, account, or engineering representatives before spending cycles on their app growth planning and execution, so that they can get the most appropriate guidance they’re eligible for. Additionally, when the app you're developing reaches store validation stage or if it's already published, please sign up for the M365 ISV Benefits Program and review the Marketing Benefits Planning Guide for an overview of the marketing activities your app is eligible to participate in. The Microsoft 365 ISV Benefits Service Desk is available for any email correspondence regarding support for your marketing activity.
 
+## Next step
+
+> [!div class="nextstepaction"]
+> [Building your collaborative app](build-app.md)
+
+<!--
 ### Building your collaborative app
 
 Let’s briefly go over what initiatives are the most impactful during the build stage.
@@ -386,4 +392,4 @@ To wrap up, your collaborative app is now becoming a full-fledged strategic prod
 - **Early access to unreleased Teams Platform features**: Microsoft-offered Developer Preview for Teams is a public program for developers, which provides early access to unreleased features in Microsoft Teams. This allows you to explore and test upcoming features for potential inclusion in your Teams app as well as share feedback about the feature. Strategic developers who are part of the invite-only Teams engineering’s build-with partner program not only get early access to new and latest cutting-edge collaborative features of the Teams platform, but additionally have a direct line to work together with Microsoft engineering to use these features in their apps.
 - **Quarterly Business Reviews with ISV for app growth**: Strategic developers who are part of the invite-only Teams engineering’s build-with partner program enjoy the additional benefit of a quarterly rhythm of business with participation from product, engineering, business development and GTM leaderships from Microsoft as well as partner side to take a stock of the app’s growth, resulting business outcomes and jointly agree on next wave of business impact milestones and partnership investments.
 
-Each app in the Teams ecosystem undertakes this journey – in all likelihood, starting from a point solution to becoming a full-fledged collaborative app on Teams. Building, launching, gaining traction, achieving scale, and finally succeeding are phases that help you plan and execute your app’s go-to-market journey resulting in robust growth for your SaaS business on the Teams marketplace.
+Each app in the Teams ecosystem undertakes this journey – in all likelihood, starting from a point solution to becoming a full-fledged collaborative app on Teams. Building, launching, gaining traction, achieving scale, and finally succeeding are phases that help you plan and execute your app’s go-to-market journey resulting in robust growth for your SaaS business on the Teams marketplace.-->

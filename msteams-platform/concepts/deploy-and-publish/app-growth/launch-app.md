@@ -118,3 +118,7 @@ By now you're aware that the core focus at this stage is to announce the availab
 - **Features placements in AppSource and the Teams in-product app store**: Get in touch with your Microsoft field, account or engineering representatives or connect with the Microsoft 365 ISV Benefits Service Desk to feature your app in AppSource and or or the Teams in-client app store merchandising sections. Please note that the Microsoft Teams store editorial team determines the prominence and location of an app within the editorial sections such as promo banner on the Teams store based on ranking parameters described here.
 - **Co-present in Teams app-focused public webinars hosted by you**: Get in touch with your Microsoft field, account, or engineering representatives to request their participation in to-customer webinars you’re planning to announce and evangelize your Teams collaborative app.
 
+## Next step
+
+> [!div class="nextstepaction"]
+> [Gaining traction for your collaborative app in the market](gain-traction.md)

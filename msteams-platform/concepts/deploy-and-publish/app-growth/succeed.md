@@ -79,3 +79,8 @@ To wrap up, your collaborative app is now becoming a full-fledged strategic prod
 - **Quarterly Business Reviews with ISV for app growth**: Strategic developers who are part of the invite-only Teams engineering’s build-with partner program enjoy the additional benefit of a quarterly rhythm of business with participation from product, engineering, business development and GTM leaderships from Microsoft as well as partner side to take a stock of the app’s growth, resulting business outcomes and jointly agree on next wave of business impact milestones and partnership investments.
 
 Each app in the Teams ecosystem undertakes this journey – in all likelihood, starting from a point solution to becoming a full-fledged collaborative app on Teams. Building, launching, gaining traction, achieving scale, and finally succeeding are phases that help you plan and execute your app’s go-to-market journey resulting in robust growth for your SaaS business on the Teams marketplace.
+
+## See also
+
+- [Plan, strategize and execute growth for your app](overview-app-growth.md)
+- [Growth lifecycle for your app](app-growth-lifecycle.md)

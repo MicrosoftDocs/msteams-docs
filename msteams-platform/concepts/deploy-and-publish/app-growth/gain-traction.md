@@ -78,3 +78,8 @@ As a reminder, you’ll now want to gain mindshare for your collaborative app am
 - **Engineering support for app monetization in Teams marketplace**: Strategic developers who are part of the invite-only Teams engineering’s build-with partner program get access to robust technical guidance and best practices from engineering to build transact SaaS and new, pilot features to improve the purchase funnel for their apps. You can also unlock additional GTM benefits and CSP channel partnership programs for early-bird apps with live transact SaaS offers.
 - **Share best practices for customer app rollout and activation**: Strategic developers who are part of the invite-only Teams engineering’s build-with partner program get access to several time- and market-tested best practices to drive faster adoption of your collaborative app in customers. Do not forget to upskill using the Teams admin-facing public documentation sections “Third-party apps in Microsoft Teams” and “Admin controls to govern apps” to aid during app rollout, activation, and governance.
 - **Invite to present in internal platform growth forums**: Get in touch with your Microsoft field, account, or engineering representatives to feature in invite-only collaborative app growth forums where you can showcase your app to customer-facing teams within Microsoft, train them on value proposition and high value scenarios and so on to have impactful conversations with existing or new prospective customers for your app.
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Scaling your collaborative app](scale-app.md)
