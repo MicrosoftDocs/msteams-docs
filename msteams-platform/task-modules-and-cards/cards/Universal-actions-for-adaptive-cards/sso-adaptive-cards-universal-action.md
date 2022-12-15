@@ -106,7 +106,18 @@ The following are the steps to receive token:
 
 1. The channel delivers this invoke to the bot, which uses the token to finalize the token exchange process with the Token Service and Azure AD. The Token Service delivers the user's access token to the bot.
    * Receivers ignore the authentication if the value is incorrect.
-   * Receivers that experience an error performing token exchange must respond with an error or a second login request that doesn't include SSO information.
+   * Receivers that experience an error while performing token exchange must respond with an error or a second login request that doesn't include SSO information. If responding with an error, the error must be:
+
+        ```javascript
+         {
+          "statusCode" = 412,
+          "type" = "application/vnd.microsoft.error.preconditionFailed",
+          "value" = {
+            "code" = "412",
+            "message" = "authentication token expired"    }
+            }
+        ```
+
    * If the value in the `state` field is incorrect, the bot returns an error to the client as follows:
 
         ```javascript
