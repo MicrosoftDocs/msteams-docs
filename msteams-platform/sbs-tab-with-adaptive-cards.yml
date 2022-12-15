@@ -160,7 +160,7 @@ items:
 
        :::image type="content" source="~/assets/images/adaptive-cards/select-terms-of-service.png" alt-text="Screenshot of Terms of Service page with the Agree option highlighted in red.":::
     
-    1. By default, the messaging option **Microsoft Teams Commercial (most common) is selected. Select **Apply**.
+    1. By default, the messaging option **Microsoft Teams Commercial (most common)** is selected. Select **Apply**.
 
        :::image type="content" source="~/assets/images/adaptive-cards/select-teams.png" alt-text="Screenshot of Configure Microsoft Teams displaying the selection of Microsoft Teams Commercial (most common) and Apply options highlighted in red.":::
 
@@ -212,18 +212,19 @@ items:
     1. Select **Authentication** from the left pane of your bot resource.
     1. In **Platform configurations**, select **Add a platform**.
     1. Select **Web**.
-    1. Enter **Redirect URIs** as `https://token.botframework.com/.auth/web/redirect.
-
-        :::image type="content" source="~/assets/images/adaptive-cards/configure-web-redirect-url.png" alt-text="Screenshot of Authentication with Add a platform, Configure Web, Redirect URLs, and Configure options are highlighted in red.":::
+    1. Enter **Redirect URIs** as `https://token.botframework.com/.auth/web/redirect`.
     
     1. Select the following to enable **Implicit grant and hybrid flows**:</br>
        * **ID tokens (used for implicit flows)**
        * **Access tokens (used for implicit and hybrid flows)**
 
     1. Select **Configure**.
-        The Redirect URI is added to the Azure bot resource.
 
-        :::image type="content" source="~/assets/images/adaptive-cards/web-redirect-url-display.png" alt-text="Screenshot of Authentication page with the redirect URL highlighted in red.":::
+       :::image type="content" source="~/assets/images/adaptive-cards/configure-web-redirect-url.png" alt-text="Screenshot of Authentication with Add a platform, Configure Web, Redirect URLs, and Configure options are highlighted in red.":::
+        
+       The Redirect URI is added to the Azure bot resource.
+
+       :::image type="content" source="~/assets/images/adaptive-cards/web-redirect-url-display.png" alt-text="Screenshot of Authentication page with the redirect URL highlighted in red.":::
 
     **To expose API endpoint**
 
@@ -256,9 +257,11 @@ items:
 
     1. Select **Add a client application**.
 
-    Add the following IDs as **Authorized client applications**, select the check box for **Authorized scopes** and select **Add application**.      
-    * 1fec8e78-bce4-4aaf-ab1b-5451cc387264 (Teams mobile or desktop application)            
-    * 5e3ce6c0-2b1f-4285-8d4b-75ee78787346 (Teams web application)</br>
+       Add the following IDs as **Authorized client applications**:      
+       * 1fec8e78-bce4-4aaf-ab1b-5451cc387264 (Teams mobile or desktop application)            
+       * 5e3ce6c0-2b1f-4285-8d4b-75ee78787346 (Teams web application)</br>
+
+    1. Select the **Authorized scopes** check box and select **Add application**.
 
         :::image type="content" source="~/assets/images/adaptive-cards/add-client-application.png" alt-text="Screenshot of Expose an API with Add a client application, Client ID, and Add application are highlighted in red.":::
 
@@ -269,11 +272,7 @@ items:
        > [!NOTE]
        > Users need to consent to these permissions only if the Azure AD app is registered in a different tenant.
 
-        :::image type="content" source="~/assets/images/adaptive-cards/authentication-tokens.png" alt-text="Screenshot of Authorized client applications under expose an API with the client IDs highlighted in red.":::
-
     1. In the **Request API permissions** window that appears, select **Microsoft Graph** > **Delegated permissions**.
-    
-       :::image type="content" source="~/assets/images/adaptive-cards/api-permission_1.png" alt-text="api permission.":::
 
     1. Select the required user permissions, for example, `User.Read`.
     
@@ -376,7 +375,7 @@ items:
 
     1. In the File Explorer, go to **Microsoft-Teams-Samples > samples > tab-adaptive-cards > csharp > **TabWithAdpativeCardFlow**.
 
-    1. Open the `TabWithAdpativeCardFlow.csproj` file in Visual Studio code.
+    1. Open the **TabWithAdpativeCardFlow.csproj** file in Microsoft Visual Studio.
     
     1. Press **F5** to run the code.
 
@@ -402,11 +401,6 @@ items:
 
         You can interact with this tab by signing in.
    
-
-    1. Send a message to the tab.
-
-        :::image type="content" source="~/assets/images/adaptive-cards/desktop-mobile-screenshot.png" alt-text="Screenshot of Microsoft Teams chat window displaying a message.":::
-
 - title: Interacting with the Tab in Teams
 
   durationInMinutes: 1
