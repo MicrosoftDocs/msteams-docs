@@ -134,7 +134,7 @@ items:
 
         ```
 
-     1. Copy and Replace `azure-client-id` with your **Microsoft App ID** and `object-id` with the ID you generated using graph explorer.
+     1. Copy and Replace `Policy-identity/policy-name` with your preferred policy name, `azure-client-id` with your **Microsoft App ID** and `object-id` with the ID you generated using graph explorer.
 
         :::image type="content" source="~/assets/images/calls-and-meetings/graph-explorer-id.png" alt-text="Screenshot of graph explorer displaying the response preview.":::
        
@@ -147,7 +147,8 @@ items:
         ```PowerShell
         Get-CsApplicationAccessPolicy -Identity “<<policy-identity/policy-name>>”
         ```
-        
+        Following is an image displaying the details of policy created.
+
         :::image type="content" source="~/assets/images/calls-and-meetings/verify-policy.png" alt-text="Screenshot of Windows Powershell ISE displaying the policy details.":::
 
         > [!NOTE]
