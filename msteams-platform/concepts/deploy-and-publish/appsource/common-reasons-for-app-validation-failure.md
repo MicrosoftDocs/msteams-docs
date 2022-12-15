@@ -278,6 +278,8 @@ Your offer listing must include a valid Terms of use link. Offers with invalid, 
 
 ## See also
 
+* [Distribute your Microsoft Teams app](../apps-publish-overview.md)
+* [Publish your app to the Microsoft Teams store](publish.md)
 * [Microsoft Teams store validation guidelines](prepare/teams-store-validation-guidelines.md)
 * [Commercial Marketplace Certification policies](/legal/marketplace/certification-policies)
 * [Microsoft Trademark and Brand Guidelines](https://www.microsoft.com/legal/intellectualproperty/trademarks)
