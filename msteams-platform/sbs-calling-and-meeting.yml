@@ -119,7 +119,13 @@ items:
      1. Create a policy for a demo tenant user to create online meetings using the following PowerShell script:
 
         > [!NOTE]
-        > Run Windows PowerShell PSI as an administrator and execute the script.
+        > * Run Windows PowerShell PSI as an administrator and execute the script.
+
+     1. Run the following commands in Windows PowerShell PSI:
+
+        * Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser
+        * Install-Module -Name MicrosoftTeams -Force -AllowClobber
+        * Connect-MicrosoftTeams
 
         ```PowerShell
 
@@ -128,15 +134,9 @@ items:
 
         ```
 
-     1. Replace `azure-client-id` with your **Microsoft App ID** and `object-id` with the **Tenant ID** of your account used to sign in to the Teams. Copy the link as shown in the following image and you can find the tenant ID of your Teams account in the link obtained:
+     1. Replace `azure-client-id` with your **Microsoft App ID** and `object-id` with the ID you generated using graph-explorer.
 
-        1. Select **Teams**.
-
-        1. Select the ellipse ●●●.
-
-        1. Select **Get link to team**.
-       
-           :::image type="content" source="./assets/images/calls-and-meetings/teams-final.png" alt-text="Screenshot of Teams with Get link to team under overflow menu highlighted in red. ":::
+        :::image type="content" source="~/assets/images/calls-and-meetings/graph-explorer-id.png" alt-text="Screenshot of graph explorer displaying the response preview.":::
        
      1. Add `PolicyName`, `azure-client-id`, `policy-description`, and `object-id` in the PowerShell script.
      1. Sign in with your Teams account when PowerShell prompts.
