@@ -138,6 +138,7 @@ For more information, see [Publish your app to the Microsoft Teams store](../con
 
 ## See also
 
+* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
 * [Distribute your Microsoft Teams app](../concepts/deploy-and-publish/apps-publish-overview.md)
 * [Create Teams app package](../concepts/build-and-test/apps-package.md)
 * [Prepare your Microsoft 365 tenant](../concepts/build-and-test/prepare-your-o365-tenant.md)
