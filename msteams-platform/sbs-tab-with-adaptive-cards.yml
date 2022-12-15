@@ -374,6 +374,16 @@ items:
         > [!NOTE]
         > The `manifest.zip` must not contain any additional folders in it. It must have **manifest** json source file, **color** icon, and **outline** icon inside the zip folder.
 
+    1. In the File Explorer, go to **Microsoft-Teams-Samples > samples > tab-adaptive-cards > csharp > **TabWithAdpativeCardFlow**.
+
+    1. Open the `TabWithAdpativeCardFlow.csproj` file in Visual Studio code.
+    
+    1. Press **F5** to run the code.
+
+       The corresponding proactive message sample appears: 
+
+       :::image type="content" source="~/assets/images/adaptive-cards/build-tab-adaptive-card-bot-is-ready.png" alt-text="Screenshot of a page which shows that the bot is running in local host: 3978, with the display Your bot is ready!.":::
+    
     1. Go to **Microsoft Teams**.
 
     1. Select **Apps** > **Manage your apps**.
@@ -415,6 +425,10 @@ items:
 
         :::image type="content" source="~/assets/images/adaptive-cards/sign-in-page.png" alt-text="Screenshot of TabAdaptiveCard displaying sign in option to access the tab.":::
 
+    1. A **Permissions requested** appears. Select **Accept**. 
+
+         :::image type="content" source="~/assets/images/adaptive-cards/build-tab-adaptive-card-accept-permissions.png" alt-text="Screenshot of Permissions requested page to access the tab.":::
+    
     1. In the **Home** tab, select **Show Task Module**.
 
 
