@@ -39,7 +39,7 @@ To reiterate, this stage is all about putting learnings from previous ad-hoc, pi
             Share real customer stories of increased employee productivity by using your collaborative app inside Teams with a 4–5-minute video that can be used for demand generation, digital marketing campaigns or showcased on public pages. Nominate a customer and gain their commitment to participate in the story. Work with the customer on the narrative and be sure to include the benefits derived from your collaborative app, as well as the added productivity gains seen by the customer (quantifiable gains are preferred).
         :::column-end:::
         :::column span="":::
-            :::image type="content" source="../../../assets/images/app-fundamentals/customer-story-isv.png" alt-text="Customer story on the landing story of ISV website.":::
+            :::image type="content" source="../../../../../assets/images/app-fundamentals/customer-story-isv.png" alt-text="Customer story on the landing story of ISV website.":::
         :::column-end:::
     :::row-end:::
 
@@ -56,7 +56,7 @@ To reiterate, this stage is all about putting learnings from previous ad-hoc, pi
             A core product-led growth initiative, use signals from your app analytics to re-target users who’ve recently engaged with your app in Teams but haven't reached a value realization milestone defined by you. Users who’s not visited your app or churned recently can be re-engaged to bring back to your app.
         :::column-end:::
         :::column span="":::
-            :::image type="content" source="../../../assets/images/app-fundamentals/remarket-retarget.png" alt-text="Re-market via emails and re-target using Teams notifications.":::
+            :::image type="content" source="../../../../../assets/images/app-fundamentals/remarket-retarget.png" alt-text="Re-market via emails and re-target using Teams notifications.":::
         :::column-end:::
     :::row-end:::
 
@@ -79,7 +79,7 @@ To reiterate, this stage is all about putting learnings from previous ad-hoc, pi
         - **Support joint customer success story development** Connect with the Microsoft 365 ISV Benefits Service Desk to seek guidance and execute. You will be able to leverage Microsoft slide templates, customer story intake form, customer interview template, and vendor video production or copy writing services. Introduce the creative team to the customer and facilitate the interviews and review processes until the story is approved by all parties. The Microsoft 365 ISV Benefits team will make sure your customer story is published to the internal Microsoft Teams Platform Resource Library and the Transformed by Teams portal.
     :::column-end:::
     :::column span="":::
-        :::image type="content" source="../../../assets/images/app-fundamentals/customer-success-story-1.png" alt-text="Teams customer success story.":::
+        :::image type="content" source="../../../../../assets/images/app-fundamentals/customer-success-story-1.png" alt-text="Teams customer success story.":::
     :::column-end:::
 :::row-end:::
 
