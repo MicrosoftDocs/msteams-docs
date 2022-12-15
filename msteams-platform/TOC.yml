@@ -70,12 +70,6 @@
         href: concepts/design/strategize-measure.md
       - name: Plan code instrumentation using analytics service
         href: concepts/design/plan-code-instrumentation.md
-  - name: Plan growth for your Teams app
-    items:
-      - name: Overview
-        href: concepts/design/overview-app-growth.md
-      - name: App growth lifecycle
-        href: concepts/design/app-growth-lifecycle.md  
   - name: Plan to monetize your app
     href: concepts/design/plan-to-monetize.md
     displayName: Subscription, In-app purchases, Free trials, Test preview
@@ -700,6 +694,24 @@
     -  name: Common reasons for app validation failure
        href: concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md
        displayName: Broken links, functional bugs, app crashes, unexpected errors, app description, Microsoft trademark and brand guidelines, testability, app icon guidelines, app name mismatch, developer name mismatch      
+  - name: Plan growth for your Teams app
+    items:
+    - name: Overview
+      href: concepts/deploy-and-publish/appsource/post-publish/app-growth/app-growth-lifecycle.md
+    - name: Growth lifecycle for your app
+      items:
+      - name: App growth lifecycle
+        href: concepts/deploy-and-publish/appsource/post-publish/app-growth/app-growth-lifecycle.md
+      - name: Build your collaborative app
+        href: concepts/deploy-and-publish/appsource/post-publish/app-growth/build-app.md
+      - name: Launch your collaborative app
+        href: concepts/deploy-and-publish/appsource/post-publish/app-growth/launch-app.md
+      - name: Gain traction for your collaborative app in the market
+        href: concepts/deploy-and-publish/appsource/post-publish/app-growth/gain-traction.md
+      - name: Scale your collaborative app
+        href: concepts/deploy-and-publish/appsource/post-publish/app-growth/scale-app.md
+      - name: Succeed with your collaborative app
+        href: concepts/deploy-and-publish/appsource/post-publish/app-growth/succeed.md
 - name: Monetize your app
   items:
   - name: Overview
