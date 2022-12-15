@@ -340,7 +340,7 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
     ```
 
     > [!IMPORTANT]
-    > Do not copy and paste the `<script src="...">` URLs from this page, as they do not represent the latest version. To get the latest version of the SDK, always go to [Microsoft Teams JavaScript API](https://www.npmjs.com/package/@microsoft/teams-js).
+    > Do not copy and paste the `<script src="...">` URLs from this page, as they do not represent the latest version. To get the latest version of TeamsJS, always go to [Microsoft Teams JavaScript API](https://www.npmjs.com/package/@microsoft/teams-js).
 
 1. Insert a call to `microsoftTeams.app.initialize();` in the `script` tag.
 
