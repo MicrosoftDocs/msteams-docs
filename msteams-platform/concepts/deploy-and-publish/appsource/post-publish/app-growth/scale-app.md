@@ -16,7 +16,7 @@ The following growth levers are pertinent at this stage:
 
 - **Become CSP channel ready for the Teams app**:
 
-    Listing your SaaS subscriptions on the Teams marketplace gives you access to 90,000+ reseller partners (called [cloud solution providers](https://www.youtube.com/watch?v=X33C-RV9dZc) or CSPs) around the world. These CSPs manage a significant customer install base. You can scale your business through this channel without making a full investment in solutions, experts, salesforce, and events. However, you can instead get to market faster and at exponential scale compared to selling solely through your own sales motions.
+    Listing your SaaS subscriptions on the Teams marketplace gives you access to 90,000+ reseller partners (called [cloud solution providers](https://www.youtube.com/watch?v=X33C-RV9dZc) or CSPs) around the world. These CSPs manage a significant customer install base. You can scale your business through this channel without making a full investment in solutions, experts, salesforce, and events. However, you can instead get to market faster, and at exponential scale, compared to selling solely through your own sales motions.
 
 To scale your app, become CSP channel ready. After that, your app will get featured on this [landing page](https://cloudpartners.transform.microsoft.com/practices/modernworkisv?tab=monetize-your-app) to appear in [Teams apps that have become CSP Channel Ready](https://aka.ms/P2PeBook) public handbook.
 
@@ -28,45 +28,45 @@ For more information, see [CSP Channel Readiness Guide](https://aka.ms/TeamsMone
 
 - **Tailor SaaS offers for customers and CSP resellers**:
 
-    Teams marketplace allows you to create private offers, that is, time-bound pricing of your SaaS subscription for Teams app with customized, pre-negotiated terms for [CSPs](/azure/marketplace/isv-csp-reseller). You can also create [private plans](/azure/marketplace/private-plans) for targeted customers to offer negotiated pricing. Help your sales team secure large new customer deals leading with your Teams collaborative app and offering private pricing to your customers via the Teams marketplace – leaving tax remittance, payments, and subscription billing to Microsoft.
+    Teams marketplace allows you to create private offers, that is, time-bound pricing of your SaaS subscription for Teams app with customized, pre-negotiated terms for [CSPs](/azure/marketplace/isv-csp-reseller). You can also create [private plans](/azure/marketplace/private-plans) for targeted customers to offer negotiated pricing. Help your sales team secure large new customer deals leading with your Teams collaborative app. Offer private pricing to your customers via the Teams marketplace. You can leave tax remittance, payments, and subscription billing to Microsoft.
 
 - **Digital webinars for existing customers and new prospects**:
 
-    Host digital webinars at regular cadences to showcase the value of your Microsoft Teams app to customers. Your customer success team and pre-sales or sales team must funnel relevant existing customers and new prospects as leads to target these webinar invitations to. Make sure to include the links to sign-up for these webinars on your app’s landing page on your website and also in your app store listing to attract new, exploratory users who may be interested in learning more about the app. Get in touch with your Microsoft field, account or engineering representatives to request their participation in hero instances of these to-customer webinars.
+    Host digital webinars at regular cadences to showcase the value of your Teams app to customers. Your customer success team and pre-sales or sales team must funnel relevant existing customers and new prospects as leads to target these webinar invitations to. Ensure that you include the links to sign up for these webinars on your app’s landing page on your website and also in your app store listing. It attracts new, exploratory users who may be interested in learning more about the app. Get in touch with your Microsoft field, account, or engineering representatives to request their participation in hero instances of these to-customer webinars.
 
 - **Digital ad campaigns to target customers for app install and use**:
 
-    Generate interest from new customer accounts and drive traffic to your collaborative app listing in Teams marketplace with paid media campaigns executed on your social channels. Connect with the [Microsoft 365 ISV Benefits Service Desk](mailto:ModernWorkISVPartner@microsoft.com) to seek guidance for your digital campaign, identify target customer accounts and personas, collaboration on paid media plan, possible budget funding and agreeing on the success metrics you should measure for example, click-through rate, cost per click, number of clicks, number of MQLs generated on the landing page, number of visitors to the app’s listing in marketplace, resulting number of Teams app installs, and so on.
+    Generate interest from new customer accounts. Drive traffic to your collaborative app listing in Teams marketplace using paid media campaigns executed on your social channels. Connect with the [Microsoft 365 ISV Benefits Service Desk](mailto:ModernWorkISVPartner@microsoft.com) to seek guidance for your digital campaign, identify target customer accounts and personas, collaboration on paid media plan, possible budget funding and agreeing on the success metrics you should measure for example, click-through rate, cost per click, number of clicks, number of MQLs generated on the landing page, number of visitors to the app’s listing in marketplace, resulting number of Teams app installs, and so on.
 
 - **Publish customer demand and app’s impact story**:
 
     :::row:::
         :::column span="3":::
-            Share real customer stories of increased employee productivity by using your collaborative app inside Teams with a 4–5-minute video that can be used for demand generation, digital marketing campaigns or showcased on public pages. Nominate a customer and gain their commitment to participate in the story. Work with the customer on the narrative and be sure to include the benefits derived from your collaborative app, and the added productivity gains seen by the customer (quantifiable gains are preferred).
+            Share real customer stories using a 4–5-minute video. Showcase increased employee productivity caused by using your collaborative app inside Teams. Use this video for demand generation, digital marketing campaigns or showcased on public pages. Nominate a customer and gain their commitment to participate in the story. Work with the customer on the narrative. Ensure that you include the benefits derived from your collaborative app. You can also talk about the added productivity gains seen by the customer (quantifiable gains are preferred).
         :::column-end:::
         :::column span="":::
             :::image type="content" source="../../../../../assets/images/app-fundamentals/customer-story-isv.png" alt-text="Customer story on the landing story of ISV website.":::
         :::column-end:::
     :::row-end:::
 
-    After developing it, you must host one or more of these customer stories prominently on the landing page of the Teams app on your website and promote it via paid, earned media or social media posts to highlight the success of the app.
+    After developing it, host these customer stories on the landing page of the Teams app on your website. Promote it via paid, earned media, or social media posts to highlight the success of the app.
 
 - **Showcase Teams app in leading industry events**:
 
-    While building traction, you showcased the collaborative app in Teams during your annual customer conference. It’s time to expand the coverage to well-known public industry events where you've a prominent presence or conferences which you sponsor. Your executives can include the Teams app in their keynote or showcase your innovation centre-stage, which is bound to attract both existing and new prospective customers.
+    While building traction, you showcased the collaborative app in Teams during your annual customer conference. It’s time to expand the coverage to well-known public industry events where you've a prominent presence or conferences which you sponsor. Your executives can include the Teams app in their keynote or showcase your innovation centre-stage. It's bound to attract both existing and new prospective customers.
 
 - **User re-targeting and re-engagement basis app analytics**:
 
     :::row:::
         :::column span="3":::
-            A core product-led growth initiative, use signals from your app analytics to re-target users who’ve recently engaged with your app in Teams but haven't reached a value realization milestone defined by you. Users who’s not visited your app or churned recently can be re-engaged to bring back to your app.
+            Product-led growth initiative uses signals from your app analytics. It retargets users who have recently engaged with your app in Teams but haven't reached a value realization milestone defined by you. Users who’s not visited your app or churned recently can be re-engaged to bring back to your app.
         :::column-end:::
         :::column span="":::
-            :::image type="content" source="../../../../../assets/images/app-fundamentals/remarket-retarget.png" alt-text="Re-market via emails and re-target using Teams notifications.":::
+            :::image type="content" source="../../../../../assets/images/app-fundamentals/remarket-retarget.png" alt-text="Re-market via emails and retarget using Teams notifications.":::
         :::column-end:::
     :::row-end:::
 
-    Remember, your goal is to get users to frequently experience value by using your collaborative app, so that they can convert to sticky, habitual users and eventually convert into paying customers.
+    Remember, your goal is to get users to experience value by using your collaborative app. They can convert to sticky, habitual users and eventually convert into paying customers.
 
 - **Co-activation in mutually identified existing customers**:
 
