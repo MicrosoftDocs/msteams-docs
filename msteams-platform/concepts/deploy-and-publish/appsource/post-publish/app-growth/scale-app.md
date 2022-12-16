@@ -8,13 +8,13 @@ ms.author: surbhigupta
 ---
 # Scale your collaborative app
 
-To reiterate, this stage is all about putting learnings from previous ad-hoc, pilot motions to use in programmatically activating existing customers and selling to new customers via all possible initiatives. The following growth levers are pertinent at this stage:
+This stage is all about putting learnings from previous ad-hoc, pilot motions to use in programmatically activating existing customers and selling to new customers via all possible initiatives. The following growth levers are pertinent at this stage:
 
 ## What should you as a developer do during the Scale stage?
 
 - **Become CSP channel ready for the Teams app**:
 
-    Listing your SaaS subscriptions on the Teams marketplace gives you access to 90,000+ reseller partners (called cloud solution providers or CSPs) around the world who already manage a significant customer install base. You can scale your business through this channel without making a full investment in solutions, experts, salesforce, and events - but instead get to market faster and at exponential scale compared to selling solely through your own sales motions. To scale your app, become CSP channel ready (see here: CSP Channel Readiness Guide for Teams app ISVs). Once your app becomes CSP ready, it will get featured on this landing page to appear in Teams apps that have become CSP Channel Ready public handbook.
+    Listing your SaaS subscriptions on the Teams marketplace gives you access to 90,000+ reseller partners (called cloud solution providers or CSPs) around the world. These CSPs manage a significant customer install base. You can scale your business through this channel without making a full investment in solutions, experts, salesforce, and events - but instead get to market faster and at exponential scale compared to selling solely through your own sales motions. To scale your app, become CSP channel ready (see here: CSP Channel Readiness Guide for Teams app ISVs). Once your app becomes CSP ready, it will get featured on this landing page to appear in Teams apps that have become CSP Channel Ready public handbook.
 
 - **Onboard CSP resellers to extend app’s sales reach**:
 
@@ -22,7 +22,7 @@ To reiterate, this stage is all about putting learnings from previous ad-hoc, pi
 
 - **Tailor SaaS offers for customers and CSP resellers**:
 
-    Teams marketplace allows you to create private offers that is, time-bound pricing of your SaaS subscription for Teams app with customized, pre-negotiated terms for CSPs. You can also create private plans for targeted customers to offer negotiated pricing. Help your sales team secure large new customer deals leading with your Teams collaborative app and offering private pricing to your customers via the Teams marketplace – leaving tax remittance, payments, and subscription billing to Microsoft.
+    Teams marketplace allows you to create private offers, that is, time-bound pricing of your SaaS subscription for Teams app with customized, pre-negotiated terms for CSPs. You can also create private plans for targeted customers to offer negotiated pricing. Help your sales team secure large new customer deals leading with your Teams collaborative app and offering private pricing to your customers via the Teams marketplace – leaving tax remittance, payments, and subscription billing to Microsoft.
 
 - **Digital webinars for existing customers and new prospects**:
 
@@ -30,20 +30,20 @@ To reiterate, this stage is all about putting learnings from previous ad-hoc, pi
 
 - **Digital ad campaigns to target customers for app install and use**:
 
-    Generate interest from new customer accounts and drive traffic to your collaborative app listing in Teams marketplace with paid media campaigns executed on your social channels. Connect with the Microsoft 365 ISV Benefits Service Desk to seek guidance for your digital campaign, identify target customer accounts and personas, collaboration on paid media plan, possible budget funding and agreeing on the success metrics you should measure for example, click through rate, cost per click, # of clicks, no. of MQLs generated on the landing page, # of visitors to the app’s listing in marketplace, resulting # of Teams app installs, and so on.
+    Generate interest from new customer accounts and drive traffic to your collaborative app listing in Teams marketplace with paid media campaigns executed on your social channels. Connect with the Microsoft 365 ISV Benefits Service Desk to seek guidance for your digital campaign, identify target customer accounts and personas, collaboration on paid media plan, possible budget funding and agreeing on the success metrics you should measure for example, click through rate, cost per click, number of clicks, no. of MQLs generated on the landing page, number of visitors to the app’s listing in marketplace, resulting number of Teams app installs, and so on.
 
 - **Publish customer demand and app’s impact story**:
 
     :::row:::
         :::column span="3":::
-            Share real customer stories of increased employee productivity by using your collaborative app inside Teams with a 4–5-minute video that can be used for demand generation, digital marketing campaigns or showcased on public pages. Nominate a customer and gain their commitment to participate in the story. Work with the customer on the narrative and be sure to include the benefits derived from your collaborative app, as well as the added productivity gains seen by the customer (quantifiable gains are preferred).
+            Share real customer stories of increased employee productivity by using your collaborative app inside Teams with a 4–5-minute video that can be used for demand generation, digital marketing campaigns or showcased on public pages. Nominate a customer and gain their commitment to participate in the story. Work with the customer on the narrative and be sure to include the benefits derived from your collaborative app, and the added productivity gains seen by the customer (quantifiable gains are preferred).
         :::column-end:::
         :::column span="":::
             :::image type="content" source="../../../../../assets/images/app-fundamentals/customer-story-isv.png" alt-text="Customer story on the landing story of ISV website.":::
         :::column-end:::
     :::row-end:::
 
-    Once developed, you must host one or more of these customer stories prominently on the landing page of the Teams app on your website and promote it via paid, earned media or social media posts to highlight the success of the app.
+    After developing it, you must host one or more of these customer stories prominently on the landing page of the Teams app on your website and promote it via paid, earned media or social media posts to highlight the success of the app.
 
 - **Showcase Teams app in leading industry events**:
 
@@ -68,15 +68,15 @@ To reiterate, this stage is all about putting learnings from previous ad-hoc, pi
 
 - **Growth hacking via in-product scenario experimentation**:
 
-    Continuously monitor what’s happening inside your collaborative app through analytics and measure the value end-users are obtaining. To positively impact product and business metrics such as # of app installs, activation rate, task completing, new user retention and churn, referrals and so on, a rapid, always-on experimentation work-stream allows byte-sized tweaks to your app experience, resulting in more control and lesser risk compared to monolithic, big changes spaced far apart. Make sure to instrument code and track analytics for your app right from the very first version and have your dedicated Teams app crew or your existing SaaS product growth team of PM, Dev, Design upskilled on Teams platform to take ownership of this work-stream to derive maximum ROI.
+    Continuously monitor what’s happening inside your collaborative app through analytics and measure the value end-users are obtaining. To positively impact product and business metrics such as # of app installs, activation rate, task completing, new user retention and churn, referrals, and so on, a rapid, always-on experimentation work-stream allows byte-sized tweaks to your app experience, resulting in more control and lesser risk compared to monolithic, big changes spaced far apart. Make sure to instrument code and track analytics for your app right from the first version and have your dedicated Teams app crew or your existing SaaS product growth team of PM, Dev, Design upskilled on Teams platform to take ownership of this work-stream to derive maximum ROI.
 
 ## Where can Microsoft help?
 
-- **Co-activation in mutually identified existing customers**: Note that Microsoft will evaluate co-activation opportunities in large customer accounts based on customer interest, adoption opportunity (sold seat size in customer account) and so on among other criteria.
+- **Co-activation in mutually identified existing customers**: Microsoft will evaluate co-activation opportunities in large customer accounts based on customer interest, adoption opportunity (sold seat size in customer account) and so on among other criteria.
 
 :::row:::
     :::column span="3":::
-        - **Support joint customer success story development** Connect with the Microsoft 365 ISV Benefits Service Desk to seek guidance and execute. You will be able to leverage Microsoft slide templates, customer story intake form, customer interview template, and vendor video production or copy writing services. Introduce the creative team to the customer and facilitate the interviews and review processes until the story is approved by all parties. The Microsoft 365 ISV Benefits team will make sure your customer story is published to the internal Microsoft Teams Platform Resource Library and the Transformed by Teams portal.
+        - **Support joint customer success story development** Connect with the Microsoft 365 ISV Benefits Service Desk to seek guidance and execute. You'll be able to utilize Microsoft slide templates, customer story intake form, customer interview template, and vendor video production or copy writing services. Introduce the creative team to the customer and facilitate the interviews and review processes until the story is approved by all parties. The Microsoft 365 ISV Benefits team will make sure your customer story is published to the internal Microsoft Teams Platform Resource Library and the Transformed by Teams portal.
     :::column-end:::
     :::column span="":::
         :::image type="content" source="../../../../../assets/images/app-fundamentals/customer-success-story-1.png" alt-text="Teams customer success story.":::
@@ -85,9 +85,9 @@ To reiterate, this stage is all about putting learnings from previous ad-hoc, pi
 
 - **Select, area-specific marketing to local Teams customers** Your Microsoft field, account or engineering representatives will reach out to include your collaborative app in specific, local subsidiary-drive GTM opportunities focused on Teams customers located in the subsidiary’s market.
 - Best practices for analytics-driven app engagement - Strategic developers who are part of the invite-only Teams engineering’s build-with partner program get access to best practices based on data signals for your app to improve acquisition, activation, engagement, retention and virality of your app on Teams. Teams engineering will bring in PM, UX design and developer support resources to work alongside your crew on the next set of app enhancements.
-- **High-touch support for select, joint new customer pitches**: Get in touch with your Microsoft field, account or engineering representatives to discuss potential joint customer pitches. Note that Microsoft will use discretion to partner on such opportunities based on customer interest, adoption opportunity (seat size in prospect customer account) and so on among other criteria.
+- **High-touch support for select, joint new customer pitches**: Get in touch with your Microsoft field, account or engineering representatives to discuss potential joint customer pitches. Note that Microsoft will use discretion to partner on such opportunities based on customer interest, adoption opportunity (seat size in prospect customer account), and so on among other criteria.
 - **Include app in global outreach to Microsoft sellers**: Expose your solution to Microsoft field sellers and executives through an on-demand webinar featuring your speakers and content. Microsoft will post your on-demand webinar to an internal site and promote it to Microsoft sellers. Share the internal Microsoft on-demand webinar link with your Microsoft contacts as well. Connect with the Microsoft 365 ISV Benefits Service Desk to check eligibility, seek guidance and execute this motion.
-- **Host customer roundtables to promote the app**: Participate in a customer roundtable session with Microsoft to highlight the value of your Teams app to customers. Connect with the Microsoft 365 ISV Benefits Service Desk to check eligibility, seek guidance and execute this motion. Subsequently, a Microsoft Marketing Program Manager will reach out to you about participating in a customer roundtable session based on campaign alignment.
+- **Host customer roundtables to promote the app**: Participate in a customer roundtable session with Microsoft to highlight the value of your Teams app to customers. Connect with the Microsoft 365 ISV Benefits Service Desk to check eligibility, seek guidance and execute this motion. After that, a Microsoft Marketing Program Manager will reach out to you about participating in a customer roundtable session based on campaign alignment.
 
 ## Next step
 
