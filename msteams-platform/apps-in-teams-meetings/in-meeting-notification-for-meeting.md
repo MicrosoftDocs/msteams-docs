@@ -48,7 +48,7 @@ Targeted meeting notification allows apps to send notifications to specific part
 
 > [!NOTE]
 >
-> * Adaptive Cards v1.4 aren't supported within targeted meeting notification.
+> * Adaptive Cards v1.5 aren't supported within targeted meeting notification.
 > * Targeted meeting notification is supported for scheduled meetings, instant meeting (Meet now), one-on-one calls, and group calls.
 > * You can send targeted meeting notifications to 50 participants in a meeting. If you want to send targeted meeting notifications to more than 50 participants, you must call the `targetedMeetingNotification` API again.
 
@@ -58,7 +58,7 @@ The following image is an example of a targeted meeting notification sent to a s
 
 ### App manifest settings for targeted meeting notification
 
-To send a targeted meeting notification you must configure the RSC permission: `authorization` property, `name`, and `type` in the `resourceSpecific` field in the [app manifest](../resources/schema/manifest-schema.md#authorization) as follows:
+To send a targeted meeting notification, you must configure `authorization` property, `name`, and `type` in the `resourceSpecific` field in the [app manifest](../resources/schema/manifest-schema.md#authorization) as follows:
 
 ```json
 "authorization": {
@@ -124,7 +124,7 @@ To send a targeted meeting notification you must configure the RSC permission: `
     }
     ```
 
-1. The targeted meeting notification is successfully sent to the specified participant.
+The targeted meeting notification is successfully sent to the specified participant.
 
 For more information on `targetedMeetingNotification`, see [Meeting apps APIs](meeting-apps-apis.md#targeted-meeting-notification-api).
 

@@ -367,7 +367,7 @@ Following are the optional properties:
 
 The following table includes the response codes:
 
-|Response code|Description|
+| Response code | Description |
 |---|---|
 | **202** | Notification is successfully sent. |
 | **207** | Notifications are sent only to partial number of participants. |
