@@ -138,21 +138,21 @@ items:
      |Policy-description | Provide a valid description for the policy. |
      |object-id-of-the-user-to-whom-policy-need-to-be-granted |  ID of the user for whom you need to generate the policy using graph explorer. |
 
-     To generate object ID:
+    To generate object ID:
 
      1. Sign into [Microsoft Graph Explorer](https://developer.microsoft.com/graph) using the credentials to whom the policy has to be granted.
      1. Select **Graph Explorer** from the tool bar.
 
-     :::image type="content" source="~/assets/images/calls-and-meetings/graph-explorer.png" alt-text="Screenshot of Microsoft Graph with graph explorer highlighted in red.":::
+        :::image type="content" source="~/assets/images/calls-and-meetings/graph-explorer.png" alt-text="Screenshot of Microsoft Graph with graph explorer highlighted in red.":::
 
      1. Select **Run query** beside the URL.
      1. Copy the ID from the **Response preview** and replace the ID in the place of object ID.
 
-     :::image type="content" source="~/assets/images/calls-and-meetings/graph-explorer-id.png" alt-text="Screenshot of graph explorer displaying the response preview.":::
+        :::image type="content" source="~/assets/images/calls-and-meetings/graph-explorer-id.png" alt-text="Screenshot of graph explorer displaying the response preview.":::
        
      1. After the replacement of all the parameters in the PowerShell script, run `Connect-MicrosoftTeams` and sign-in with the credentials to whom the policy has to be granted when the PowerShell prompts.
 
-     :::image type="content" source="~/assets/images/calls-and-meetings/sign-in-powershell-prompts.png" alt-text="screenshot of Windows PowerShell PSI displaying the sign in prompt.":::
+        :::image type="content" source="~/assets/images/calls-and-meetings/sign-in-powershell-prompts.png" alt-text="screenshot of Windows PowerShell PSI displaying the sign in prompt.":::
 
      1. Run the following command in PowerShell to verify whether the policy is created successfully or not. Replace the policy name with your defined policy name.
 
@@ -160,7 +160,7 @@ items:
     Get-CsApplicationAccessPolicy -Identity “<<policy-identity/policy-name>>”
     ```
 
-     :::image type="content" source="./assets/images/calls-and-meetings/powershell_1.png" alt-text="Screenshot of Windows PowerShell ISE with Account details highlighted in red.":::
+        :::image type="content" source="./assets/images/calls-and-meetings/powershell_1.png" alt-text="Screenshot of Windows PowerShell ISE with Account details highlighted in red.":::
 
     > [!NOTE]
     > Ensure running scripts aren't disabled in your system. For more information, see [execution policies](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.2).
