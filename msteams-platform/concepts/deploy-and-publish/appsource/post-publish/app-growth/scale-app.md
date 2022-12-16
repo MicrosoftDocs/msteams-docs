@@ -32,7 +32,7 @@ For more information, see [CSP Channel Readiness Guide](https://aka.ms/TeamsMone
 
 - **Digital webinars for existing customers and new prospects**:
 
-    Host digital webinars at regular cadences to showcase the value of your Teams app to customers. Your customer success team and pre-sales or sales team must funnel relevant existing customers and new prospects as leads to target these webinar invitations to. Ensure that you include the links to sign up for these webinars on your app’s landing page on your website and also in your app store listing. It attracts new, exploratory users who may be interested in learning more about the app. Get in touch with your Microsoft field, account, or engineering representatives to request their participation in hero instances of these to-customer webinars.
+    Host digital webinars at regular cadences to showcase the value of your Teams app to customers. Your customer success team and pre-sales or sales team must funnel relevant existing customers and new prospects as leads to target these webinar invitations to. Ensure that you include links to sign up for the webinars on your app’s landing page on your website and your app store listing. It attracts new, exploratory users who may be interested in learning more about the app. Get in touch with your field, account, or engineering representatives from Microsoft to request their participation in hero instances of these to-customer webinars.
 
 - **Digital ad campaigns to target customers for app install and use**:
 
