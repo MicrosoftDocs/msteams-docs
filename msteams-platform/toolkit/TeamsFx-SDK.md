@@ -301,7 +301,7 @@ try {
 }
 ```
 
-If a credential instance is used in other library, such as Microsoft Graph, it's possible that an error is caught and transformed.
+If a credential instance is used in other library, such as Microsoft Graph, its possible that an error is caught and transformed.
 
 ## Microsoft Graph Scenarios
 
