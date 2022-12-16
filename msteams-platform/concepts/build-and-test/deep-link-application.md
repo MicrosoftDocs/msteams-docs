@@ -1,7 +1,7 @@
 ---
 title: Deep link to an application 
 author: v-npaladugu
-description:  In this article, learn how to create deep links to an application and navigate them in your Microsoft Teams.
+description: Learn how to create deep links to an application and navigate using them in your Microsoft Teams apps and tabs.
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
@@ -13,6 +13,8 @@ Create a deep link for the app after the app is listed in the Teams store. To cr
 
 > [!NOTE]
 > If your app has been approved for mobile platform, you can deep link to an app on mobile. Apple App Store Connect Team ID is required additionally for the deep link to work on Teams-iOS. For more information, see [how to update Apple App Store Connect Team ID](../deploy-and-publish/appsource/prepare/update-apple-store-team-connect-id.md).
+
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 ## Open the application profile dialog
 
