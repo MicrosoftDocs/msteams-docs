@@ -157,5 +157,6 @@ The following image shows inclusion of external HTML content within Moodle:
 
 ## See also
 
+* [Integrate web apps](../../samples/integrate-web-apps-overview.md)
 * [Partner apps for Moodle](../partner-apps-for-moodle.md)
 * [Moodle FAQ](../faqs.md)
