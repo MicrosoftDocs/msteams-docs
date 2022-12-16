@@ -78,15 +78,7 @@ Following these guidelines increases the chances of your app to pass the Microso
 
 ## Value proposition
 
-:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: This section is in line with [Microsoft commercial certification policy number 1140.1](/legal/marketplace/certification-policies#11401-value-proposition-and-offer-requirements) and provides additional guidance to developers of Microsoft Teams apps on their offer’s value proposition.
-
-### Duplicate App
-
-* Apps from the same developer offering the same functionality must share an app listing unless privacy compliance requirements mandate separate app listings or separate app listing are required to support government cloud. You must build into your business logic and publish only one listing. [*Mandatory Fix*]
-
-  * To fulfill multiple regions support requirement, you must build into your business logic and publish only one listing.
-
-  *To fulfill multiple end-point requirements for on-premises and on-cloud deployment, you must build into your business logic and publish only one listing.  
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: This section is in line with [Microsoft commercial certification policy number 1140.1](/legal/marketplace/certification-policies#11401-value-proposition-and-offer-requirements) and provides additional guidance to developers of Microsoft Teams apps on their offer’s value proposition.  
 
 ### App Name
 
@@ -123,6 +115,14 @@ An app's name plays a critical role in how users discover it in the store. Use t
  > Your app’s branding on the Microsoft Teams store and AppSource including your app name, developer name, app icon, AppSource screenshots, video, short description, and website either separately or taken together mustn't impersonate an official Microsoft offering unless your app is an official Microsoft 1P offering.
 
 </details>
+
+### Duplicate App
+
+* Apps from the same developer offering the same functionality must share an app listing unless privacy compliance requirements mandate separate app listings or separate app listing are required to support government cloud. You must build into your business logic and publish only one listing. [*Mandatory Fix*]
+
+  * To fulfill multiple regions support requirement, you must build into your business logic and publish only one listing.
+
+  * To fulfill multiple end-point requirements for on-premises and on-cloud deployment, you must build into your business logic and publish only one listing.
 
 ### Suitable for workplace consumption
 
@@ -180,7 +180,8 @@ If your app authenticates users with an external service, follow these guideline
 
 ### Music App
 
-* If the primary intent of the app is to listen to music, it must support at least one collaborative scope with end-to-end workflow specific to app. For example, sharing of playlist, configuring, or pinning playlist, synchronously listening to music. [*Mandatory Fix*]
+* If the primary intent of the app is to listen to music, it must support at least one collaborative scope with end-to-end workflow specific to app. For example, sharing of playlist, configuring or pinning playlist, and synchronously listening to music. [*Mandatory Fix*]
+
 * Apps published with the primary intent of letting users listen to music in Teams are recommended to include collaborative co-listening experience. [*Suggested Fix*]
 
 ## Security
@@ -1448,9 +1449,9 @@ Use the following guidelines for meeting extensions:
 
 </details>
 
-<details<summary>Shared Meeting Stage</summary>
+<details><summary>Shared Meeting Stage</summary>
 
-To use the **shareAppContentToStage API**, you must declare the correct RSC permissions. In the app manifest, you must configure the authorization property, and declare the name: **“MeetingStage.Write.Chat”** and type = **“Delegated”** in the **resourceSpecific** field. [*Mandatory Fix*]
+To use the **shareAppContentToStage** API, you must declare the correct RSC permissions. In the app manifest, you must configure the `authorization` property. Update the `name` property as `MeetingStage.Write.Chat` and `type` property as `Delegated` in the `resourceSpecific` field. [*Mandatory Fix*]
 
 </details>
 
@@ -1565,7 +1566,7 @@ After an internal Microsoft review, if the compliance demonstration is satisfact
 * Workflows or content in the app must be related to the scope. [*Mandatory Fix*]
 * All app capabilities must be functional and must work properly as described in the AppSource or manifest long description. [*Mandatory Fix*]
 * Apps must always notify the user before downloading any file or executable on the user’s environment. Any call to action (CTA), either text based or otherwise, that makes it clear to the user that a file or executable is downloaded on user action is allowed in the app. [*Mandatory Fix*]
-* Apps having region dependency must notify the users with a graceful failure message in all applicable capabilities if they attempt to use it in an unsupported region. [*Mandatory Fix*]
+* Apps with region dependency must notify the users with a graceful failure message in all applicable capabilities if they attempt to use it in an unsupported region. [*Mandatory Fix*]
 
 ## Mobile experience
 
