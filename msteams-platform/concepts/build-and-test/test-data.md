@@ -25,6 +25,12 @@ You can test your Microsoft Teams app with sample data with a Microsoft 365 deve
 
 By default, only global admins or Teams service admins can upload (sideload) apps in a tenant. You can also allow users to upload custom apps for their own use or to teams for testing. For more information, see [manage custom app policies and settings in Teams](/microsoftteams/teams-custom-app-policies-and-settings).
 
+```http-interactive
+https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2
+
+[manage custom app policies and settings in Teams](/microsoftteams/teams-custom-app-policies-and-settings)
+```
+
 ## Create teams and channels for testing
 
 1. Save the following snippet as a **.xml** file and note the file path. This XML defines the structure of the team and channel that is created along with its members:
