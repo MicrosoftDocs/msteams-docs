@@ -21,3 +21,7 @@ The Microsoft Teams store editorial team determines the prominence and location 
 * Audience relevance: Apps that are likely to be more relevant to a particular audience (for example, based on their language settings and license type such as, Education, Enterprise, or Small and Medium business) tend to rank higher than apps that are likely to be less relevant.
 
 * App update or new release: Newly released or updated high-quality apps tend to rank higher than apps that were released or updated on an earlier date.
+
+## See also
+
+[Publish your app to the Microsoft Teams store](../publish.md)

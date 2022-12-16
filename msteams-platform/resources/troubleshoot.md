@@ -98,3 +98,11 @@ Common reasons for manifest read errors:
 If you're attempting to upload an updated package with the same ID again, choose the **Replace** icon at the end of the tab's table row rather than the **Upload** button.
 
 If you're not re-uploading an updated package, ensure that the ID is unique.
+
+## See also
+
+* [Build tabs for meeting](../apps-in-teams-meetings/build-tabs-for-meeting.md)
+* [Build bots for Teams](../bots/what-are-bots.md)
+* [Enable SSO for tab app](../tabs/how-to/authentication/tab-sso-overview.md)
+* [Receive all conversation messages with RSC](../bots/how-to/conversations/channel-messages-with-rsc.md)
+* [App manifest schema for Teams](schema/manifest-schema.md)
