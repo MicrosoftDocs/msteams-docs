@@ -216,6 +216,8 @@ For more information on Bicep template and parameter files, see [provision cloud
 
 ## See also
 
+* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
+* [App manifest schema for Teams](../resources/schema/manifest-schema.md)
 * [Provision cloud resources](provision.md)
 * [Add more cloud resources](add-resource.md)
 * [Collaborate with other developers on Teams project](TeamsFx-collaboration.md)
