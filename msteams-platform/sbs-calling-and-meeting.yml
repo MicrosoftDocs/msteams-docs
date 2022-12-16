@@ -116,17 +116,15 @@ items:
 
     **Create a policy for a demo tenant user to create online meetings using the following PowerShell script:**
 
-        ```PowerShell
+    ```PowerShell
+    New-CsApplicationAccessPolicy -Identity "<<policy-identity/policy-name>>" -AppIds "<<azure-client-id>>" -Description "Policy-description"
+    Grant-CsApplicationAccessPolicy -PolicyName "<<policy-identity/policy-name>>" -Identity "<<object-id-of-the-user-to-whom-policy-need-to-be-granted>>"
+    ```
+     
+    > [!NOTE]
+    > * Run Windows PowerShell PSI as an administrator and execute the script.
 
-        New-CsApplicationAccessPolicy -Identity "<<policy-identity/policy-name>>" -AppIds "<<azure-client-id>>" -Description "Policy-description"
-        Grant-CsApplicationAccessPolicy -PolicyName "<<policy-identity/policy-name>>" -Identity "<<object-id-of-the-user-to-whom-policy-need-to-be-granted>>"
-
-        ```
-
-        > [!NOTE]
-        > * Run Windows PowerShell PSI as an administrator and execute the script.
-
-     1. If you are using the Windows PowerShell PSI for the first time, execute the following commands:
+     If you are using the Windows PowerShell PSI for the first time, execute the following commands:
 
         * Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser
         * Run Install-Module -Name MicrosoftTeams -Force -AllowClobber and wait for the script to run.
@@ -147,19 +145,20 @@ items:
      1. Select **Run query** beside the URL.
      1. Copy the ID from the **Response preview**
 
-        :::image type="content" source="~/assets/images/calls-and-meetings/graph-explorer-id.png" alt-text="Screenshot of graph explorer displaying the response preview.":::
+     :::image type="content" source="~/assets/images/calls-and-meetings/graph-explorer-id.png" alt-text="Screenshot of graph explorer displaying the response preview.":::
        
      1. After the replacement of all the parameters in the PowerShell script, run `Connect-MicrosoftTeams` and sign-in when the PowerShell prompts.
 
-     1. 1. Run the following command in PowerShell to verify whether the policy is created successfully or not. Replace the policy name with your defined policy name.
+     1. Run the following command in PowerShell to verify whether the policy is created successfully or not. Replace the policy name with your defined policy name.
 
-        ```PowerShell
-        Get-CsApplicationAccessPolicy -Identity “<<policy-identity/policy-name>>”
-        ```
-        :::image type="content" source="./assets/images/calls-and-meetings/powershell_1.png" alt-text="Screenshot of Windows PowerShell ISE with Account details highlighted in red.":::
+    ```PowerShell
+    Get-CsApplicationAccessPolicy -Identity “<<policy-identity/policy-name>>”
+    ```
+    
+     :::image type="content" source="./assets/images/calls-and-meetings/powershell_1.png" alt-text="Screenshot of Windows PowerShell ISE with Account details highlighted in red.":::
 
-        > [!NOTE]
-        > Ensure running scripts aren't disabled in your system. For more information, see [execution policies](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.2).
+    > [!NOTE]
+    > Ensure running scripts aren't disabled in your system. For more information, see [execution policies](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.2).
 
     **To add API permissions for downstream calls**
 
