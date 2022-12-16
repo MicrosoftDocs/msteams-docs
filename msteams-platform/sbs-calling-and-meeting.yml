@@ -135,8 +135,8 @@ items:
      |----------------|-----------------|
      |policy-identity/policy-name | Name of the policy. |
      |azure-client-id | Microsoft App ID which you generated while registering the app in Azure portal. |
-     |Policy-description | Provide a valid description for the policy. |
-     |object-id-of-the-user-to-whom-policy-need-to-be-granted |  ID of the user for whom you need to generate the policy using graph explorer. |
+     |Policy-description | Description of the policy. |
+     |object-id-of-the-user-to-whom-policy-need-to-be-granted |  ID of the user for whom you need to generate the policy using the graph explorer. |
 
     To generate object ID:
 
