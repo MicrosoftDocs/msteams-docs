@@ -176,6 +176,17 @@ The Microsoft Teams JavaScript client SDK is a rich SDK used to create Tabs usin
 
 Microsoft Teams JavaScript library exposes the frameContext in which your meeting tab URL is loaded in the getContext API. The possible values of frameContext are content, task, setting, remove, sidePanel, and meetingStage. This allows you to build customized experiences based on where the app renders. For example, showing a specific collaboration focused UI when in the `meetingStage` and a different meeting preparation UI in the chat tab (`content`). For more information, see [getContext API](/microsoftteams/platform/tabs/how-to/access-teams-context?tabs=teamsjs-v2).
 
+## Feature compatibility by user types
+
+The following table provides the user types and lists the features that each user can access the tabs in meetings:
+
+| User type | Private schedule meeting or Instant calendar meeting | One-on-One call | Group call | Scheduled Channel Meeting |
+| :-- | :-- | :-- | :-- | :-- |
+| In-tenant user | Interaction allowed for all roles and create or update or delete is allowed except for Attendees role | o Interaction and create or update or delete allowed. In-tenant users in call with federated users cannot interact and create or update or delete |  o Interaction and create or update or delete allowed. In-tenant users in call with federated users cannot interact and create or update or delete. | Interaction and create or update or delete allowed for all roles except for attendees role. |
+| Guest user | Can Interact only | Can Interact only | Can Interact only | Can Interact only |
+| Federated users or External user | Can Interact only | Not available | Not available | Can Interact only |
+| Anonymous user | Not available | Not applicable | Not applicable | Not available |
+
 ## Code sample
 
 |Sample name | Description | C# | Node.js |

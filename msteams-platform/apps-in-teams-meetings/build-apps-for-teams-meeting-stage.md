@@ -212,6 +212,17 @@ The following participant roles may be involved during the meeting:
 * **Signer**: This role can sign reviewed documents.
 * **Reader**: This role can view the documents added to the meeting.
 
+## Feature compatibility by user types
+
+The following table provides the user types and lists the features that each user can access in meetings:
+
+| User type | Private schedule meeting or Instant calendar meeting | One-on-One call | Group call | Scheduled Channel Meeting |
+| :-- | :-- | :-- | :-- | :-- |
+| In-tenant user | Can start, view, and interact with app on meeting stage for presenter and organizer. Attendee can only view and interact. | Can start, view, and interact with app on meeting stage for presenter and organizer. Attendee can only view and interact. |  Can start, view, and interact with app on meeting stage for presenter and organizer. Attendee can only view and interact. | Can start, view, and interact with app on meeting stage for presenter and organizer. Attendee can only view and interact. |
+| Guest user | Can start, view and interact with app on meeting stage for presenter and organizer. Attendee can only view and interact. | Can start, view, and interact with app on meeting stage for presenter and organizer. Attendee can only view and interact. |  Can start, view, and interact with app on meeting stage for presenter and organizer. Attendee can only view and interact. | Can start, view, and interact with app on meeting stage for presenter and organizer. Attendee can only view and interact. |
+| Federated users or External user | Can start, view, and interact with app on meeting stage for presenter. Attendee can only view and interact. | Not available | Not available | Can start, view, and interact with app on meeting stage for presenter. Attendee can only view and interact. |
+| Anonymous user | Can view and interact with app on meeting stage for presenter and attendee. | Not applicable | Not applicable | Can view and interact with app on meeting stage for presenter and attendee. |
+
 ## Code sample
 
 |Sample name | Description | C# | Node.js |
