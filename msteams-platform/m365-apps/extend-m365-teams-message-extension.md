@@ -106,11 +106,11 @@ For users to interact with your message extension from Outlook, you need to add 
 
 1. Under *Available channels*, select **Microsoft 365 Extensions (Preview)** channel.
 
-    :::image type="content" source="images/azure-bot-channel-message-extensions.png" alt-text="The screenshot is an example that shows the Microsoft 365 Extensions channel for your bot from the Azure Bot Channels pane.":::
+    :::image type="content" source="../assets/images/azure-bot-channel-message-extensions.png" alt-text="The screenshot is an example that shows the Microsoft 365 Extensions channel for your bot from the Azure Bot Channels pane.":::
 
 1. Select **Apply**.
 
-    :::image type="content" source="images/azure-bot-channel-message-extensions-apply.png" alt-text="The screenshot is an example that shows the Microsoft 365  'Message Extensions' channel for your bot from the Azure Bot Channels pane.":::
+    :::image type="content" source="../assets/images/azure-bot-channel-message-extensions-apply.png" alt-text="The screenshot is an example that shows the Microsoft 365  'Message Extensions' channel for your bot from the Azure Bot Channels pane.":::
 
 1. Confirm that your Microsoft 365 channel is listed along with Teams in your bot's **Channels** pane.
 
