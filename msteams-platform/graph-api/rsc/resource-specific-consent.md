@@ -386,14 +386,14 @@ The default value of the property `isChatResourceSpecificConsentEnabled` is base
 > [!IMPORTANT]
 > The RSC permissions are not attributed to a user. Calls are made with app permissions, not user delegated permissions. The app can be allowed to perform actions that the user cannot, such as deleting a tab. You must review the team owner's or chat owner's intent for your use before making RSC API calls. For more information, see [Microsoft Teams API overview](/graph/teams-concept-overview).
 
-Call the following APIs to retrieve the list of apps installed in a team or chat:
+For application RSC permissions, call the following APIs to retrieve the list of apps installed in a team or chat:
 
 * [List apps in chat](/graph/api/chat-list-installedapps?view=graph-rest-1.0&tabs=http&preserve-view=true)
 * [List apps in team](/graph/api/team-list-installedapps?view=graph-rest-1.0&tabs=http&preserve-view=true)
 
-For delegated RSC permissions, call the APIs to list all the apps that are installed in a chat or team. However, you can't know the permissions that are granted because they're granted when an app is running without user interaction.
+These are all the application RSC permissions granted on this specific resource. Each entry in the list can be correlated to a TeamsApp by matching the `clientAppId` in the permission grants list with the `webApplicationInfo.Id` property in the TeamsApp’s manifest.
 
-For application RSC permissions, call the APIs to list the permissions granted in a chat or team. These are all the application RSC permissions granted on this specific resource. Each entry in the list can be correlated to a TeamsApp by matching the `clientAppId` in the permission grants list with the `webApplicationInfo.Id` property in the TeamsApp’s manifest.
+Delegated RSC permissions are Teams client-only permissions, and you can't retrieve the list of apps installed in a team or chat as these permissions are granted when a user interacts with the app.
 
 After the app has been installed to a resource, you can use [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) to view the permissions that have been granted to the app in the resource.
 
