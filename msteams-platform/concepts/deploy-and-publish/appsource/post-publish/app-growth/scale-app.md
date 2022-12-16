@@ -24,11 +24,11 @@ For more information, see [CSP Channel Readiness Guide](https://aka.ms/TeamsMone
 
 - **Onboard CSP resellers to extend app’s sales reach**:
 
-    Once you become CSP channel ready by completing the pre-requisites detailed here, browse through the CSP list on the Partner Center to find resellers you can get in touch with to negotiate a partnership. You can find detailed partner profile information in the Partner Center or using the public partner finder on AppSource.
+    After you become CSP channel ready by completing the pre-requisites detailed here, browse through the CSP list on the Partner Center to find resellers you can get in touch with to negotiate a partnership. You can find detailed partner profile information in the Partner Center or using the public [partner finder](https://appsource.microsoft.com/marketplace/partner-dir) on AppSource.
 
 - **Tailor SaaS offers for customers and CSP resellers**:
 
-    Teams marketplace allows you to create private offers, that is, time-bound pricing of your SaaS subscription for Teams app with customized, pre-negotiated terms for CSPs. You can also create private plans for targeted customers to offer negotiated pricing. Help your sales team secure large new customer deals leading with your Teams collaborative app and offering private pricing to your customers via the Teams marketplace – leaving tax remittance, payments, and subscription billing to Microsoft.
+    Teams marketplace allows you to create private offers, that is, time-bound pricing of your SaaS subscription for Teams app with customized, pre-negotiated terms for [CSPs](/azure/marketplace/isv-csp-reseller). You can also create [private plans](/azure/marketplace/private-plans) for targeted customers to offer negotiated pricing. Help your sales team secure large new customer deals leading with your Teams collaborative app and offering private pricing to your customers via the Teams marketplace – leaving tax remittance, payments, and subscription billing to Microsoft.
 
 - **Digital webinars for existing customers and new prospects**:
 
@@ -36,7 +36,7 @@ For more information, see [CSP Channel Readiness Guide](https://aka.ms/TeamsMone
 
 - **Digital ad campaigns to target customers for app install and use**:
 
-    Generate interest from new customer accounts and drive traffic to your collaborative app listing in Teams marketplace with paid media campaigns executed on your social channels. Connect with the Microsoft 365 ISV Benefits Service Desk to seek guidance for your digital campaign, identify target customer accounts and personas, collaboration on paid media plan, possible budget funding and agreeing on the success metrics you should measure for example, click through rate, cost per click, number of clicks, no. of MQLs generated on the landing page, number of visitors to the app’s listing in marketplace, resulting number of Teams app installs, and so on.
+    Generate interest from new customer accounts and drive traffic to your collaborative app listing in Teams marketplace with paid media campaigns executed on your social channels. Connect with the [Microsoft 365 ISV Benefits Service Desk](mailto:ModernWorkISVPartner@microsoft.com) to seek guidance for your digital campaign, identify target customer accounts and personas, collaboration on paid media plan, possible budget funding and agreeing on the success metrics you should measure for example, click-through rate, cost per click, number of clicks, number of MQLs generated on the landing page, number of visitors to the app’s listing in marketplace, resulting number of Teams app installs, and so on.
 
 - **Publish customer demand and app’s impact story**:
 
