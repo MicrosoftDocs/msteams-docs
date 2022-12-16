@@ -834,3 +834,4 @@ For detailed examples on how to use TeamsFx SDK [Samples](https://github.com/Off
 
 * [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
 * [Microsoft TeamsFx sample gallery](https://github.com/OfficeDev/TeamsFx-Samples).
+* [Add single sign-on to Teams app](add-single-sign-on.md)
