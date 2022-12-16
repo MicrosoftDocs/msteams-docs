@@ -24,7 +24,7 @@ For more information, see [CSP Channel Readiness Guide](https://aka.ms/TeamsMone
 
 - **Onboard CSP resellers to extend app’s sales reach**:
 
-    After you become CSP channel ready by completing the pre-requisites detailed here, browse through the CSP list on the Partner Center to find resellers you can get in touch with to negotiate a partnership. You can find detailed partner profile information in the Partner Center or using the public [partner finder](https://appsource.microsoft.com/marketplace/partner-dir) on AppSource.
+    After you become CSP channel ready by completing the pre-requisites, browse through the CSP list on the Partner Center to find resellers to negotiate a partnership. You can find detailed partner profile information in the Partner Center or using the public [partner finder](https://appsource.microsoft.com/marketplace/partner-dir) on AppSource.
 
 - **Tailor SaaS offers for customers and CSP resellers**:
 
