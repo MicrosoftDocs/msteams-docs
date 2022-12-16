@@ -32,7 +32,39 @@ https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2
 
 ```
 
-```i
+```csharp-interactive
+https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2
+```
+
+```azurecli-interactive
+https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2
+```
+
+```powershell-interactive
+https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2
+```
+
+```msgraph-interactive
+https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2
+```;
+
+```csharp-interactive
+System.Diagnostics.Process.Start(new ProcessStartInfo
+    {
+        FileName = "https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2",
+        UseShellExecute = true
+    })
+```
+
+```csharp-interactive
+
+string target= "http://www.microsoft.com"
+
+```
+
+```powershell-interactive
+Start-Process "https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2"
+```
 
 ## Create teams and channels for testing
 
