@@ -44,7 +44,11 @@ You can also add the Teams display picture and people card of the user to in-mee
 
 ## Targeted meeting notification
 
-Targeted meeting notification allows apps to send notifications to specific participants in the meeting. The notifications are private and are sent only to the specific or targeted participants in a meeting.Targeted meeting notifications help to enhance meeting experience and develop user engagement activities in Teams meetings.
+Targeted meeting notification allows apps to send notifications to specific participants in the meeting. The notifications are private and are sent only to the specific or targeted participants in a meeting. Targeted meeting notifications help to enhance meeting experience and develop user engagement activities in Teams meetings.
+
+The following image is an example of a targeted meeting notification sent to a specific participant during the meeting:
+
+  :::image type="content" source="../assets/images/apps-in-meetings/reminder-sent.png" alt-text="Screenshot displaying the reminder sent to a participant in the meeting.":::
 
 > [!NOTE]
 >
@@ -52,11 +56,7 @@ Targeted meeting notification allows apps to send notifications to specific part
 > * Targeted meeting notification is supported for scheduled meetings, instant meeting (Meet now), one-on-one calls, and group calls.
 > * You can send targeted meeting notifications to 50 participants in a meeting. If you want to send targeted meeting notifications to more than 50 participants, you must call the `targetedMeetingNotification` API again.
 
-The following image is an example of a targeted meeting notification sent to a specific participant during the meeting:
-
-  :::image type="content" source="../assets/images/apps-in-meetings/reminder-sent.png" alt-text="Screenshot displaying the reminder sent to a participant in the meeting.":::
-
-### App manifest settings for targeted meeting notification
+### Enable app manifest settings for targeted meeting notification
 
 To send a targeted meeting notification, you must configure `authorization` property, `name`, and `type` in the `resourceSpecific` field in the [app manifest](../resources/schema/manifest-schema.md#authorization) as follows:
 
