@@ -114,42 +114,49 @@ items:
           > [!TIP]
           > Save the client secrets **Value** or app password for future reference.
 
-     Run **PowerShell** script to create a policy
+    **Create a policy for a demo tenant user to create online meetings using the following PowerShell script:**
 
-     1. Create a policy for a demo tenant user to create online meetings using the following PowerShell script:
-
-        > [!NOTE]
-        > * Run Windows PowerShell PSI as an administrator and execute the script.
-
-     1. Execute the following commands once in Windows PowerShell PSI:
-
-        * Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser
-        * Run Install-Module -Name MicrosoftTeams -Force -AllowClobber and wait for the script to run.
-        * Run Connect-MicrosoftTeams and sign in with your Teams account when PowerShell prompts.
-
-        ```PowerShell
+     ```PowerShell
 
         New-CsApplicationAccessPolicy -Identity "<<policy-identity/policy-name>>" -AppIds "<<azure-client-id>>" -Description "Policy-description"
         Grant-CsApplicationAccessPolicy -PolicyName "<<policy-identity/policy-name>>" -Identity "<<object-id-of-the-user-to-whom-policy-need-to-be-granted>>"
 
         ```
 
-     1. Copy and Replace `Policy-identity/policy-name` with your preferred policy name, `azure-client-id` with your **Microsoft App ID** and `object-id` with the ID you generated using graph explorer.
+        > [!NOTE]
+        > * Run Windows PowerShell PSI as an administrator and execute the script.
+
+     1. If you are using the Windows PowerShell PSI for the first time, execute the following commands:
+
+        * Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser
+        * Run Install-Module -Name MicrosoftTeams -Force -AllowClobber and wait for the script to run.
+
+     **Replace the following in the Windows PowerShell script:**
+
+     |Field | Description |
+     |----------------|-----------------|
+     |policy-identity/policy-name | Replace with your preferred policy name. |
+     |azure-client-id | Replace with the Microsoft App ID which you generated while registering the app in Azure portal. |
+     |Policy-description | Provide a valid description for the policy. |
+     |object-id-of-the-user-to-whom-policy-need-to-be-granted | Replace with the ID you generated using graph explorer. |
+
+     To generate object ID:
+
+     1. Sign into [Microsoft Graph Explorer](https://developer.microsoft.com/graph)
+     1. Select **Graph Explorer** from the tool bar.
+     1. Select **Run query** beside the URL.
+     1. Copy the ID from the **Response preview**
 
         :::image type="content" source="~/assets/images/calls-and-meetings/graph-explorer-id.png" alt-text="Screenshot of graph explorer displaying the response preview.":::
        
-     1. Add `PolicyName`, `azure-client-id`, `policy-description`, and `object-id` in the PowerShell script.
+     1. After the replacement of all the parameters in the PowerShell script, run `Connect-MicrosoftTeams` and sign-in when the PowerShell prompts.
 
-        :::image type="content" source="./assets/images/calls-and-meetings/powershell_1.png" alt-text="Screenshot of Windows PowerShell ISE with Account details highlighted in red.":::
-
-     1. Run the following command in PowerShell to verify whether the policy is created successfully or not. Replace the policy name with your defined policy name.
+     1. 1. Run the following command in PowerShell to verify whether the policy is created successfully or not. Replace the policy name with your defined policy name.
 
         ```PowerShell
         Get-CsApplicationAccessPolicy -Identity “<<policy-identity/policy-name>>”
         ```
-        Following is an image displaying the details of policy created.
-
-        :::image type="content" source="~/assets/images/calls-and-meetings/verify-policy.png" alt-text="Screenshot of Windows Powershell ISE displaying the policy details.":::
+        :::image type="content" source="./assets/images/calls-and-meetings/powershell_1.png" alt-text="Screenshot of Windows PowerShell ISE with Account details highlighted in red.":::
 
         > [!NOTE]
         > Ensure running scripts aren't disabled in your system. For more information, see [execution policies](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.2).
