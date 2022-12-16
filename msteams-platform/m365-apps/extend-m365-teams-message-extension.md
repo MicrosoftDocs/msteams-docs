@@ -1,6 +1,6 @@
 ---
 title: Extend a Teams message extension across Microsoft 365
-description: Learn how to update your search-based message extension to run in Outlook, in addition to Microsoft Teams.
+description: Learn how to update your search-based message extension to run in Outlook and add Microsoft 365 channel for your bot.
 ms.date: 10/10/2022
 ms.topic: tutorial
 ms.custom: m365apps
@@ -104,13 +104,15 @@ For users to interact with your message extension from Outlook, you need to add 
 
 1. From *Settings*, select **Channels**.
 
-1. Under *Available channels*, select **Microsoft 365** channel. Select the **Message extensions** tab, then **Apply**.
+1. Under *Available channels*, select **Microsoft 365 Extensions (Preview)** channel.
 
-    :::image type="content" source="images/azure-bot-channel-message-extensions.png" alt-text="The screenshot is an example that shows the Outlook 'Message Extensions' channel for your bot from the Azure Bot Channels pane.":::
+    :::image type="content" source="images/azure-bot-channel-message-extensions.png" alt-text="The screenshot is an example that shows the Microsoft 365 Extensions channel for your bot from the Azure Bot Channels pane.":::
+
+1. Select **Apply**.
+
+    :::image type="content" source="images/azure-bot-channel-message-extensions-apply.png" alt-text="The screenshot is an example that shows the Microsoft 365  'Message Extensions' channel for your bot from the Azure Bot Channels pane.":::
 
 1. Confirm that your Microsoft 365 channel is listed along with Teams in your bot's **Channels** pane.
-
-    :::image type="content" source="images/azure-bot-channels.png" alt-text="The screenshot is an example that shows the Azure Bot Channels pane listing both Teams and Microsoft 365 channels.":::
 
 ## Update Microsoft Azure Active Directory (Azure AD) app registration for SSO
 
