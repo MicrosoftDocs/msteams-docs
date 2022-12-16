@@ -33,27 +33,20 @@ https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2
 ```
 
 ```csharp-interactive
-https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/app-fundamentals-overview
-```
-
-```azurecli-interactive
-https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/app-fundamentals-overview
-```
-
-```powershell-interactive
-https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/app-fundamentals-overview
+myProcess.StartInfo.UseShellExecute = true; 
+    myProcess.StartInfo.FileName = "https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/app-fundamentals-overview";
+    myProcess.Start();
 ```
 
 ```msgraph-interactive
 https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/app-fundamentals-overview
-```;
+```
 
 ```csharp-interactive
-System.Diagnostics.Process.Start(new ProcessStartInfo
-    {
-        FileName = "https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/app-fundamentals-overview",
-        UseShellExecute = true
-    })
+
+System.Diagnostics.Process.Start("explorer.exe", "https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/app-fundamentals-overview");
+
+ 
 ```
 
 ```csharp-interactive
@@ -63,7 +56,19 @@ string target= "https://learn.microsoft.com/en-us/microsoftteams/platform/concep
 ```
 
 ```powershell-interactive
+$urls = @("https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/app-fundamentals-overview/")
+
+foreach($url in $urls){
+    Start-Process $url
+}
+```
+
+```powershell-interactive
 Start-Process "https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/app-fundamentals-overview"
+```
+
+```powershell
+https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/app-fundamentals-overview
 ```
 
 ## Create teams and channels for testing
