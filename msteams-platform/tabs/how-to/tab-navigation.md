@@ -13,7 +13,7 @@ The TeamsJS library provides support for navigation within a tab. This article d
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
-Tabs provide a great way to enhance the Microsoft Teams experience. You can provide users access to your web application right within Teams using tabs, without their having to sign in again. For more information about tabs, as well as how you can extend personal tabs across Microsoft 365 products, see [Build tabs for Teams](~/tabs/what-are-tabs.md) and [Extend a Teams personal tab across Microsoft 365](~/m365-apps/extend-m365-teams-personal-tab.md).
+Tabs provide a great way to enhance the Microsoft Teams experience. You can provide users access to your web application right within Teams using tabs, without having to sign in again. For more information about tabs, and how you can extend personal tabs across Microsoft 365 products, see [Build tabs for Teams](~/tabs/what-are-tabs.md) and [Extend a Teams personal tab across Microsoft 365](~/m365-apps/extend-m365-teams-personal-tab.md).
 
 ## Navigate between tabs
 
