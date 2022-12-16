@@ -91,7 +91,7 @@ You have three different types of basic Teams app and directory structure looks 
 | - `.fx/configs/projectSettings.json` | Global project settings that apply to all environments. |
 | `tabs` | Code for the Tab capability needed at runtime, such as the privacy notice, terms of use, and configuration tabs. |
 | - `tabs/src/index.jsx` | Entry point for the front-end app, where the main App component is rendered with `ReactDOM.render()` |
-| - `tabs/src/components/App.jsx` | Code for handling URL routing in the app. It calls the [Microsoft Teams JavaScript client SDK](../tabs/how-to/using-teams-client-sdk.md) to establish communication between your app and Teams. |
+| - `tabs/src/components/App.jsx` | Code for handling URL routing in the app. It calls the [Microsoft Teams JavaScript client library](../tabs/how-to/using-teams-client-library.md) to establish communication between your app and Teams. |
 | - `tabs/src/components/Tab.jsx` | Code to implement the UI of your app. |
 | - `tabs/src/components/TabConfig.jsx` | Code to implement the UI that configures your app. |
 | `templates/appPackage` | App manifest template files, and the app icons: color.png and outline.png. |
@@ -129,9 +129,9 @@ The core notification implementation in **bot** folder and it contains:
 
 | File name | Contents |
 | --- | --- |
-| `src/adaptiveCards/` | Templates for Adaptive card  |
+| `src/adaptiveCards/` | Templates for Adaptive Card  |
 | `src/internal/` | Generated initialize code for notification functionality |
-| `src/index.*s` | The entrypoint to handle bot messages and send notifications |
+| `src/index.*s` | The entry point to handle bot messages and send notifications |
 | `.gitignore` | File to exclude local files from bot project |
 | `package.json` | The npm package file for bot project |
 
@@ -254,7 +254,7 @@ You can see Teams app templates already populated in Teams Toolkit for various T
 |Notification Bot     |Notification Bot app can send notification to your Teams client, there are multiple ways to trigger the notification. For example, trigger the notification by HTTP request, or by time. You can also select triggered notification based on your business scenario.         |
 |Command Bot     |Users can type a command to interact with the bot using the Command Bot app.         |
 |Tab     |Tab app shows a webpage inside Teams, and it enables single sign-on using Teams account.         |
-|Message Extension     |Message Extension app implements simple features like create adaptive card, search Nugget packages, unfurling links for "dev.botframework.com" domain.         |
+|Message Extension     |Message Extension app implements simple features like create Adaptive Card, search Nugget packages, unfurling links for "dev.botframework.com" domain.         |
 
 > [!NOTE]
 > After the project is created, Teams Toolkit automatically opens **Get started** window. You can now see the instructions in **Get started** window and check out the different features in Teams Toolkit.
@@ -263,9 +263,10 @@ You can see Teams app templates already populated in Teams Toolkit for various T
 
 ## See also
 
+* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
 * [Build a Teams app with Blazor](../sbs-gs-blazorupdate.yml)
 * [Build a Teams app with C# or .NET](../sbs-gs-csharp.yml)
 * [Prerequisites for all types of environment and create your Teams app](tools-prerequisites.md)
 * [Prepare to build apps using Microsoft Teams Toolkit](build-environments.md)
 * [Provision cloud resources using Visual Studio](provision-cloud-resources.md)
-* [Deploy Teams app to the cloud using Visual Studio](deploy-teams-app.md)
+* [Deploy Teams app to the cloud using Visual Studio](deploy.md#deploy-teams-app-to-the-cloud-using-visual-studio)

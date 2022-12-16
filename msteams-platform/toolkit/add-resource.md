@@ -84,6 +84,7 @@ The following additional changes appear after adding resources in your project:
 
 ## See also
 
+* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
 * [Provision cloud resources](provision.md)
 * [Create a new Teams app](create-new-project.md)
 * [Add capabilities to Teams apps](add-capability.md)

@@ -22,7 +22,7 @@ items:
     :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/your-helloworld-app.png" alt-text="Diagram showing this app has three features.":::
     
     > [!NOTE]
-    > In this tutorial, you'll create a tab app with Javascript.
+    > In this tutorial, you'll create a tab app with JavaScript.
 
     In this tutorial, you'll learn:
 
@@ -43,7 +43,7 @@ items:
    | --- | --- | --- |
    | **Required** | &nbsp; | &nbsp; |
    | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use version 1.55 or later. |
-   | &nbsp; | [Teams Toolkit](#install-the-teams-toolkit) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use 4.0.0 version. |
+   | &nbsp; | [Teams Toolkit](#tabpanel_1_vscode) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use 4.0.0 version. |
    | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. Use the latest v16 LTS release.|
    | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call - all in one place.|
    | &nbsp; | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
@@ -229,7 +229,7 @@ items:
         
         <details>
         <summary>A quick recap of creating a Teams app.</summary>
-        Watch this short recap for creating a Teams app.
+         Watch this short recap for creating a Teams app.
 
         ![Create a Teams app](~/assets/videos/javascript-tab-app1.gif)
         </details>
@@ -278,7 +278,7 @@ items:
     | - `.fx/states/<env>.userdata` | Sensitive user data for the provision output for every environment. |
     | `tabs` | Code for the Tab capability needed at runtime, such as the privacy notice, terms of use, and configuration tabs. |
     | - `tabs/src/index.jsx` | Entry point for the front-end app, where the main App component is rendered with `ReactDOM.render()` |
-    | - `tabs/src/components/App.jsx` | Code for handling URL routing in the app. It calls the [Microsoft Teams JavaScript client SDK](../msteams-platform/tabs/how-to/using-teams-client-sdk.md) to establish communication between your app and Teams. |
+    | - `tabs/src/components/App.jsx` | Code for handling URL routing in the app. It calls the [Microsoft Teams JavaScript client library](../msteams-platform/tabs/how-to/using-teams-client-library.md) to establish communication between your app and Teams. |
     | - `tabs/src/components/Tab.jsx` | Code to implement the UI of your app. |
     | - `tabs/src/components/TabConfig.jsx` | Code to implement the UI that configures your app. |
     | `templates/appPackage` | App manifest template files, and the app icons: color.png and outline.png. |
@@ -357,17 +357,17 @@ items:
           * You're logged in with a Microsoft 365 account.
           * Sideloading is enabled for your Microsoft 365 account.
           * Supported Node.js version is installed.
-          * NPM packages for tab app are installed.
           * Development certificate for localhost is installed.           
           * Port is available for the tab app.
 
           > [!NOTE]
           > If Teams Toolkit is unable to check a particular prerequisite, it prompts you to check it.
 
-        2. Registers the app with Azure AD and configures the app.
-        3. Registers the app in Teams Developer Portal and configures the app.
-        4. Starts the tab app.
-        5. Starts Teams in a web browser and sideloads the tab app.
+        2. Install NPM packages.
+        3. Registers the app with Azure AD and configures the app.
+        4. Registers the app in Teams Developer Portal and configures the app.
+        5. Starts the tab app.
+        6. Starts Teams in a web browser and sideloads the tab app.
 
         </details>
 
@@ -387,6 +387,9 @@ items:
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/ssl-prompt-mac.png" alt-text="Screenshot showing the prompt to install an SSL certificate to enable Teams to load your application from localhost on Mac.":::
 
         Teams web client opens in a browser window.
+
+        > [!NOTE]
+        > If the toolkit doesn't prompt you to install a certificate, you must install the certificate manually. For more information, see [Add manual certificate](/skype-sdk/sdn/articles/installing-the-trusted-root-certificate#adding-certificate-snap-ins).
 
     1. Sign in with your Microsoft 365 account, if prompted.
 
@@ -430,7 +433,7 @@ items:
     1. Select **Sign in to Azure**.
 
         > [!TIP]
-        > If you have the Azure Account extension installed and are using the same account, you can skip this step. Use the same account as you are using in other extensions.
+        > If you have the Azure Account extension installed and are using the same account, you can skip this step. Use the same account as you're using in other extensions.
 
         Your default web browser opens to let you sign in to the account.
     1. Sign in to your Azure account using your credentials.
@@ -440,7 +443,7 @@ items:
 
         Now you're ready to deploy your app to Azure!
 
-        Congratulations, you have created a Teams app! 
+        Congratulations, you've created a Teams app! 
         Now let's go ahead and learn how to deploy one of the apps to Azure using the Teams Toolkit.
 
     # [Command line](#tab/cline)
@@ -463,7 +466,7 @@ items:
 
         The account logins are shared between Visual Studio Code and the TeamsFx CLI.
 
-        Congratulations, you have created a Teams app! 
+        Congratulations, you've created a Teams app! 
         Now let's go ahead and learn how to deploy one of the apps to Azure using the Teams Toolkit.
 
     ---

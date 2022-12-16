@@ -14,18 +14,18 @@ External tasks that can be assigned to users who aren't part of your organizatio
 To enable, you'll need an extra step of passing an XML string to each instance of Tasks PCF control attached to the sub grid component on desired MDA form. XML string is a parametrized query that allows the control to extract the required data from a table that contains customer information.
 
 > [!NOTE]
-> Currently Collaboration controls are available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
+> Currently, Collaboration controls are available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
 
-Following are the steps to create external tasks:
+To create external tasks, follow the steps:
 
 1. Create a new custom entity such as Customer or reuse an existing customer entity like Contacts.
 
-1. Create new fields that will hold the following information:
+1. Create new fields that hold the following information:
     1. Name
     1. Email
     1. Parent (Lookup to the parent table such as Inspections)
     > [!NOTE]
-    > The customer entity created above will be, where the task control pulls the customer information from when assigning an external task. The Parent field ensures that the customer entity is linked to an Inspection record.
+    > The customer entity created above is, where the task control pulls the customer information from when assigning an external task. The Parent field ensures that the customer entity is linked to an Inspection record.
 
 1. Generate a Fetch XML file to allow the PCF control to pull the right customer information.
 
@@ -76,20 +76,25 @@ Following are the steps to create external tasks:
 
 1. Move through in the classic form designer, until you find the **Tasks** tab. Double-click the subgrid to open its property dialog.
 
-    :::image type="content" source="~/assets/images/collaboration-control/subgrid-property.png" alt-text="Tasks property dialog":::
+    :::image type="content" source="~/assets/images/collaboration-control/subgrid-property.png" alt-text="Screenshot shows the tasks property dialog.":::
 
 1. In the property dialog, set the properties as shown in the following image:
 
-    :::image type="content" source="~/assets/images/collaboration-control/tasks-property.png" alt-text="Tasks property settings":::
+    :::image type="content" source="~/assets/images/collaboration-control/tasks-property.png" alt-text="Sceenshot shows to set the properties in the Tasks property settings.":::
 
-1. Go to the Controls tab and select :::image type="icon" source="~/assets/images/collaboration-control/edit-icon.png" alt-text="edit tasks"::: on Custom Tasks property to add the Fetch XML generated above.
+1. Go to the Controls tab and select :::image type="icon" source="~/assets/images/collaboration-control/edit-icon.png" alt-text="Screenshot shows how to edit the tasks."::: on Custom Tasks property to add the Fetch XML generated above.
 
 1. Paste the Fetch XML
 
-    :::image type="content" source="~/assets/images/collaboration-control/set-fetchproperties.png" alt-text="Fetch XML property settings":::
+    :::image type="content" source="~/assets/images/collaboration-control/set-fetchproperties.png" alt-text="Screenshot shows how to paste Fetch XML.":::
 
-    :::image type="content" source="~/assets/images/collaboration-control/custom-tasksproperty.png" alt-text="Fetch XML Custom property settings":::
+    :::image type="content" source="~/assets/images/collaboration-control/custom-tasksproperty.png" alt-text="Screenshot shows how to configure Custom property settings.":::
 
 1. Select **Ok** in Configure Property "Custom Tasks" and Set Properties windows.
 
 1. Save and Publish.
+
+## See also
+
+* [Integrate web apps](integrate-web-apps-overview.md)
+* [Public developer preview manifest schema for Teams](../resources/schema/manifest-schema-dev-preview.md)

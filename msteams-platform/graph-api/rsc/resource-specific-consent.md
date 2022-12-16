@@ -1,6 +1,6 @@
 ---
 title: Enable resource-specific consent in Teams
-description: In this article, you'll learn resource-specific consent in Microsoft Teams and how to make advantage of it.
+description: Learn about supported granular Resource-specific consent (RSC) permissions which allows team owners and chat owners to grant consent for an application.
 ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
@@ -431,3 +431,4 @@ For more information on how to get details of apps installed in a specific chat,
 
 * [Test resource-specific consent permissions in Teams](test-resource-specific-consent.md)
 * [Resource-specific consent in Microsoft Teams for admins](/MicrosoftTeams/resource-specific-consent)
+* [Resource-specific consent](resource-specific-consent.md)

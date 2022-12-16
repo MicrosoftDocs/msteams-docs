@@ -1,6 +1,6 @@
 ---
 title: Incoming call notifications
-description: In this module, learn about detailed technical information on handling notifications from incoming calls, redirecting and authenticating calls using code samples
+description: Learn about incoming notification protocol to convert the call from legacy to Graph format, redirects for region affinity and authenticate the callback.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 04/02/2019
@@ -92,5 +92,9 @@ For more information, see [validate inbound requests](https://github.com/microso
 
 ## See also
 
+* [Build bots for Teams](../what-are-bots.md)
+* [Calls and online meetings bots](calls-meetings-bots-overview.md)
+* [Work with the cloud communications API in Microsoft Graph](/graph/api/resources/communications-api-overview)
+* [Authentication flow for bots in Microsoft Teams](../how-to/authentication/auth-flow-bot.md)
 * [Set up an auto attendant](/microsoftteams/create-a-phone-system-auto-attendant)
 * [Set up auto answer for Microsoft Teams Rooms on Android and Teams video phone devices](/microsoftteams/set-up-auto-answer-on-teams-android)

@@ -122,4 +122,5 @@ Teams Toolkit helps you bootstrap sample code to access the APIs, if you don't h
 
 ## See also
 
+* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
 * [Publish Teams apps using Teams Toolkit](publish.md)

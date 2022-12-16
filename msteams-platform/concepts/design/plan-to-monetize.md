@@ -1,6 +1,6 @@
 ---
 title: Plan to monetize your app
-description: In this learning module, you'll learn how plan to monetize your Microsoft Teams app and also understand the best monetization option for global visibility.
+description: Plan to monetize your Microsoft Teams app and also understand the best monetization options for global visibility.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
@@ -36,4 +36,13 @@ Establishing a monetizing option beforehand helps guide the app design, build, a
 
 ## See also
 
-[Monetize your app](../deploy-and-publish/appsource/prepare/monetize-overview.md)
+* [Plan your app with Teams features](../app-fundamentals-overview.md)
+* [Monetize your app](../deploy-and-publish/appsource/prepare/monetize-overview.md)
+* [Microsoft Teams store validation guidelines](../deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)
+* [Build Message extensions](../../messaging-extensions/what-are-messaging-extensions.md)
+* [Build Task modules](../../task-modules-and-cards/what-are-task-modules.md)
+* [Build Adaptive Cards](../../task-modules-and-cards/what-are-cards.md)
+* [Webhooks and connectors](../../webhooks-and-connectors/what-are-webhooks-and-connectors.md)
+* [Build bots for Teams](../../bots/what-are-bots.md)
+* [Build tabs for Teams](../../tabs/what-are-tabs.md)
+* [Build apps for Teams meetings and calls](../../apps-in-teams-meetings/teams-apps-in-meetings.md)

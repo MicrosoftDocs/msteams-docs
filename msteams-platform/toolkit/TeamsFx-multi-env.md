@@ -152,7 +152,7 @@ Steps for customization:
 4. Open config file `.fx/configs/config.staging.json`.
 5. Add the same property to `my app description for staging`.
 6. Open Teams app manifest template `templates/appPackage/manifest.template.json`.
-7. Update the property **`description`** > **`short`** to use the **variable** defined in configure files with mustache syntax **`{{config.manifest.description.short}}`**.
+7. Update the property **`description`** > **`short`** to use the **variable** defined in configure files with braces syntax **`{{config.manifest.description.short}}`**.
   
   The updates to `manifest.template.json` are:
 
@@ -216,6 +216,8 @@ For more information on Bicep template and parameter files, see [provision cloud
 
 ## See also
 
+* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
+* [App manifest schema for Teams](../resources/schema/manifest-schema.md)
 * [Provision cloud resources](provision.md)
 * [Add more cloud resources](add-resource.md)
 * [Collaborate with other developers on Teams project](TeamsFx-collaboration.md)
