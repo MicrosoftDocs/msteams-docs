@@ -33,37 +33,37 @@ https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2
 ```
 
 ```csharp-interactive
-https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2
+https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/app-fundamentals-overview
 ```
 
 ```azurecli-interactive
-https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2
+https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/app-fundamentals-overview
 ```
 
 ```powershell-interactive
-https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2
+https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/app-fundamentals-overview
 ```
 
 ```msgraph-interactive
-https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2
+https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/app-fundamentals-overview
 ```;
 
 ```csharp-interactive
 System.Diagnostics.Process.Start(new ProcessStartInfo
     {
-        FileName = "https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2",
+        FileName = "https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/app-fundamentals-overview",
         UseShellExecute = true
     })
 ```
 
 ```csharp-interactive
 
-string target= "http://www.microsoft.com"
+string target= "https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/app-fundamentals-overview"
 
 ```
 
 ```powershell-interactive
-Start-Process "https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2"
+Start-Process "https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/app-fundamentals-overview"
 ```
 
 ## Create teams and channels for testing
