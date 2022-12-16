@@ -160,7 +160,7 @@ items:
     Get-CsApplicationAccessPolicy -Identity “<<policy-identity/policy-name>>”
     ```
 
-        :::image type="content" source="./assets/images/calls-and-meetings/powershell_1.png" alt-text="Screenshot of Windows PowerShell ISE with Account details highlighted in red.":::
+        :::image type="content" source="./assets/images/calls-and-meetings/powershell_id.png" alt-text="Screenshot of Windows PowerShell ISE with Account details highlighted in red.":::
 
     > [!NOTE]
     > Ensure running scripts aren't disabled in your system. For more information, see [execution policies](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.2).
