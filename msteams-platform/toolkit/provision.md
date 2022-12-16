@@ -348,24 +348,22 @@ After you open your project in Visual Studio:
 
 1. Enter the following details to provision your resources:
 
-   1. Select your **Subscription name** from the dropdown.
-   1. Select your **Resource group** from the dropdown.
-   1. Select your **Region** from the dropdown.
-
-      > [!NOTE]
-      > You can create new **Resource group** by selecting **New...**.
+   1. Select your **Subscription name** from the dropdown menu.
+   1. Select your **Resource group** from the dropdown menu.
+      You can create new **Resource group** by selecting **New...**.
+   1. Select your **Region** from the dropdown menu.
 
    1. Select **Provision**.
 
     :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-select-subscription1.png" alt-text="Select resource group":::
 
-1. The dialog appears mentioning that charges may be added as per Azure usage. Select **Provision**.
+1. In the pop-up window that appears, Select **Provision**.
 
    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-warning.png" alt-text="Provision warning":::
 
    The provisioning process creates resources in the Azure cloud. You can monitor the progress by observing the Teams Toolkit output window.
 
-1. You're prompted after provisioning is complete. Select **View Provisioned Resources** to view all the resources that were provisioned.
+1. In the pop-up window that appears, Select **View Provisioned Resources** to view all the resources that were provisioned.
 
    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-provision-success.png" alt-text="View provisioned resources":::
 
@@ -373,96 +371,96 @@ After you open your project in Visual Studio:
 
 When you trigger provision command in Teams Toolkit or TeamsFx CLI, you can create the following resources:
 
-* Microsoft Azure Active Directory (Azure AD) application under your Microsoft 365 tenant.
+* Microsoft Azure Active Directory (Azure AD) app under your Microsoft 365 tenant.
 * Teams app registration under your Microsoft 365 tenant's Teams platform.
 * Azure resources under your selected Azure subscription.
 
-When you create a new project, you also need to create Azure resources. The Azure Resource Manager (ARM) templates defines all the Azure resources and helps you to create required Azure resources during provision.
+When you create a new project, you also need to create Azure resources. The ARM templates define all the Azure resources and help you to create the required Azure resources during provisioning.
 
 The following list shows the resource creation for different types of app and Azure resources:
 <br>
 
 <details>
-<summary><b>Resource creation for Teams Tab application</b></summary>
+<summary><b>Resource creation for Teams Tab app</b></summary>
 
 | Resource | Purpose | Description |
 | --- | --- | --- |
-| App service plan | Hosts your web app of tab | Not applicable |
-| App service | Hosts your Blazor tab app | Not applicable |
-| Manage identity | Authenticate Azure service-to-service requests | Shares across different capabilities and resources |
+| App service plan | Hosts your web app of tab. | Not applicable |
+| App service | Hosts your Blazor tab app. | Not applicable |
+| Manage identity | Authenticates Azure service-to-service requests. | Shares across different capabilities and resources. |
 
 </details>
 <br>
 
 <details>
-<summary><b>Resource creation for Teams message extension application</b></summary>
+<summary><b>Resource creation for Teams message extension app</b></summary>
 
 | Resource | Purpose | Description |
 | --- | --- | --- |
-| Azure bot | Registers your app as a bot with the bot framework | Connects bot to Teams |
-| App Service plan | Hosts your web bot app | Not applicable |
-| App Service | Hosts your bot app | Adds user assigned identity to access other Azure resources |
-| Manage identity | Authenticate Azure service-to-service requests | Shares across different capabilities and resources |
+| Azure bot | Registers your app as a bot with the bot framework. | Connects bot to Teams. |
+| App Service plan | Hosts your web bot app. | Not applicable |
+| App Service | Hosts your bot app. | Adds user assigned identity to access other Azure resources. |
+| Manage identity | Authenticates Azure service-to-service requests. | Shares across different capabilities and resources. |
 
 </details>
 <br>
 
 <details>
-<summary><b>Resource creation for Teams command bot application</b></summary>
+<summary><b>Resource creation for Teams command bot app</b></summary>
 
 | Resource | Purpose | Description |
 | --- | --- | --- |
-| Azure bot | Registers your app as a bot with the bot framework | Connects bot to Teams |
-| App service plan | Hosts your web bot app | Not applicable |
-| App service | Hosts your bot app | Adds user assigned identity to access other Azure resources |
-| Manage identity | Authenticate Azure service-to-service requests | Shares across different capabilities and resources |
+| Azure bot | Registers your app as a bot with the bot framework. | Connects bot to Teams. |
+| App service plan | Hosts your web bot app. | Not applicable |
+| App service | Hosts your bot app. | Adds user assigned identity to access other Azure resources. |
+| Manage identity | Authenticates Azure service-to-service requests. | Shares across different capabilities and resources. |
 
 </details>
 <br>
 
 <details>
-<summary><b>Resource creation for Teams notification bot with HTTP trigger (Web API server) application</b></summary>
+<summary><b>Resource creation for Teams notification bot with HTTP trigger (Web API server) app</b></summary>
 
 | Resource | Purpose | Description |
 | --- | --- | --- |
-| Azure bot | Registers your app as a bot with the bot framework | Connects bot to Teams |
-| App service plan | Hosts your web bot app | Not applicable |
-| App service | Host your bot app | Adds user assigned identity to access other Azure resources |
-| Managed Identity | Authenticate Azure service-to-service requests | Shares across different capabilities and resources |
+| Azure bot | Registers your app as a bot with the bot framework. | Connects bot to Teams. |
+| App service plan | Hosts your web bot app. | Not applicable |
+| App service | Host your bot app. | Adds user assigned identity to access other Azure resources. |
+| Managed Identity | Authenticates Azure service-to-service requests. | Shares across different capabilities and resources. |
 
 </details>
 <br>
 
 <details>
-<summary><b>Resource creation for Teams notification bot with HTTP trigger (Azure function) application</b></summary>
+<summary><b>Resource creation for Teams notification bot with HTTP trigger (Azure Functions) app</b></summary>
 
 | Resource | Purpose | Description |
 | --- | --- | --- |
-| Azure bot | Registers your app as a bot with the bot framework | Connects bot to Teams |
-| Manage identity | Authenticates Azure service-to-service requests | Shared across different capabilities and resources |
-| Storage account | Helps to create function app | Not applicable |
-| App service plan | Hosts the function bot App | Not applicable |
-| Function app | Hosts your bot app | - Adds user assigned identity to access other Azure resources<br>- Adds Cross-origin resource sharing (CORS) rule to allow requests from your tab app<br>- Adds authentication setting that only allows requests from your Teams app<br>- Adds app settings required by TeamsFx SDK |
+| Azure bot | Registers your app as a bot with the bot framework. | Connects bot to Teams |
+| Manage identity | Authenticates Azure service-to-service requests. | Shares across different capabilities and resources. |
+| Storage account | Helps to create function app. | Not applicable |
+| App service plan | Hosts the function bot App. | Not applicable |
+| Function app | Hosts your bot app. | - Adds user assigned identity to access other Azure resources.<br>- Adds Cross-origin resource sharing (CORS) rule to allow requests from your tab app.<br>- Adds an authentication setting that only allows requests from your Teams app.<br>- Adds app settings required by TeamsFx SDK. |
 
 </details>
 <br>
 
 <details>
-<summary><b>Resource creation for Teams notification bot with timer trigger (Azure function) application</b></summary>
+<summary><b>Resource creation for Teams notification bot with timer trigger (Azure Functions) app</b></summary>
 
 | Resource | Purpose | Description |
 | --- | --- | --- |
-| Azure bot | Registers your app as a bot with the bot framework | Connects bot to Teams |
-| Manage identity | Authenticate Azure service-to-service requests | Shares across different capabilities and resources |
-| Storage account | Helps to create function app | Not applicable |
-| App service plan | Hosts the function bot app | Not applicable |
-| Function app | Hosts your bot app | - Adds user assigned identity to access other Azure resources<br>-Adds Cross-origin resource sharing (CORS) rule to allow requests from your tab app<br>- Adds authentication setting that only allows requests from your Teams app<br>- Adds app settings required by TeamsFx SDK |
+| Azure bot | Registers your app as a bot with the bot framework. | Connects bot to Teams. |
+| Manage identity | Authenticates Azure service-to-service requests. | Shares across different capabilities and resources. |
+| Storage account | Helps to create function app. | Not applicable |
+| App service plan | Hosts the function bot app. | Not applicable |
+| Function app | Hosts your bot app. | - Adds user assigned identity to access other Azure resources.<br>-Adds Cross-origin resource sharing (CORS) rule to allow requests from your tab app.<br>- Adds an authentication setting that only allows requests from your Teams app.<br>- Adds app settings required by TeamsFx SDK. |
 
 </details>
 <br>
 
 <details>
-<summary><b>Resource creation for Teams notification bot with HTTP trigger + timer trigger (Azure function) application</b></summary>
+<summary><b>Resource creation for Teams notification bot with HTTP trigger + timer trigger (Azure Functions) app</b></summary>
 
 | Resource | Purpose | Description |
 | --- | --- | --- |
@@ -470,7 +468,7 @@ The following list shows the resource creation for different types of app and Az
 | Manage identity | Authenticate Azure service-to-service requests. | Shares across different capabilities and resources. |
 | Storage account | Helps to create function app. | Not applicable |
 | App service plan | Hosts the function bot app. | Not applicable |
-| Function App | Hosts your bot app. | -Adds user assigned identity to access other Azure resources.<br>-Adds Cross-origin resource sharing (CORS) rule to allow requests from your tab app.<br>-Adds authentication setting that only allows requests from your Teams app.<br>-Adds app settings required by TeamsFx SDK. |
+| Function App | Hosts your bot app. | -Adds user assigned identity to access other Azure resources.<br>-Adds Cross-origin resource sharing (CORS) rule to allow requests from your tab app.<br>-Adds an authentication setting that only allows requests from your Teams app.<br>-Adds app settings required by TeamsFx SDK. |
 
 </details>
 <br>
@@ -479,43 +477,43 @@ The following list shows the resource creation for different types of app and Az
 
 You can sign in to [Azure portal](https://portal.azure.com/) and manage all resources created by Teams Toolkit.
 
-* You can select resource group from the existing list or the new resource group that you've created.
-* You can see the details of the resource group you've selected in the overview section of the table of content.
+* You can select a resource group from the existing list or the new resource group that you've created.
+* You can see the details of the resource group you've selected in the overview section of the table of contents.
 
 ## Customize resource provision
 
-Teams Toolkit enables you to use an infrastructure for the code approach to define the Azure resources that you want to provision. You can change the configuration in Teams Toolkit as per your requirement.
+Teams Toolkit enables you to use an infrastructure-as-code approach to define the Azure resources that you want to provision. You can change the configuration in Teams Toolkit as per your requirement.
 
-Teams Toolkit uses ARM template to define Azure resources. The ARM template is a set of bicep files that defines the infrastructure and configuration for your project. You can customize Azure resources by modifying the ARM template. For more information, see [bicep document](/azure/azure-resource-manager/bicep).
+Teams Toolkit uses ARM template to define Azure resources. The ARM template is a set of `bicep` files that defines the infrastructure and configuration for your project. You can customize Azure resources by modifying the ARM template. For more information, see [bicep document](/azure/azure-resource-manager/bicep).
 
 Provision with ARM involves changing the following sets of files, parameters, and templates:
 
-* ARM parameter files (`azure.parameters.{your_env_name}.json`) located in `.fx/configs` folder, for passing parameters to templates.
-* ARM template files located in `templates/azure` folder contains following files:
+* ARM parameter files (`azure.parameters.{your_env_name}.json`) located in `.fx\configs` folder, for passing parameters to templates.
+* ARM template files located in `templates\azure` folder contains following files:
 
   | File | Function | Allow customization |
   | --- | --- | --- |
-  | main.bicep | Provide entry point for Azure resource. provision | Yes |
-  | provision.bicep | Create and configure Azure resources. | Yes |
-  | config.bicep | Add TeamsFx required configurations to Azure resources. | Yes |
-  | provision/xxx.bicep | Create and configure each Azure resource consumed by `provision.bicep`. | Yes |
-  | teamsfx/xxx.bicep | Add TeamsFx required configurations to each Azure resource consumed by `config.bicep`.| No |
+  | main.bicep | Provides an entry point for Azure resource provision. | Yes |
+  | provision.bicep | Creates and configures Azure resources. | Yes |
+  | config.bicep | Adds TeamsFx required configurations to Azure resources. | Yes |
+  | provision/xxx.bicep | Creates and configures each Azure resource consumed by `provision.bicep`. | Yes |
+  | teamsfx/xxx.bicep | Adds TeamsFx required configurations to each Azure resource consumed by `config.bicep`.| No |
 
 > [!NOTE]
-> After you add resources or capabilities to your project, `teamsfx/xxx.bicep` is regenerated. To modify the bicep files, you can use Git to track your changes to `teamsfx/xxx.bicep` files. This doesn't make you lose any changes while adding resources or capabilities to your project.
+> When you add resources or capabilities to your project, `teamsfx\xxx.bicep` is regenerated, you can't customize the same. To modify the bicep files, you can use Git to track your changes to `teamsfx\xxx.bicep` files. This doesn't make you lose any changes while adding resources or capabilities to your project.
 
-The ARM template files use placeholders for parameters. The purpose of the placeholders is to ensure that new resources can be created in the new environment. The actual values are resolved from `.fx/states/state.{env}.json` file.
+The ARM template files use placeholders for parameters. The purpose of the placeholders is to ensure that new resources can be created in a new environment. The actual values are resolved from `.fx\states\state.{env}.json` file.
 
 ### Azure AD application related parameters
 
-| Parameter name | Default value place holder | Meaning of the place holder | How to customize |
+| Parameter name | Default value placeholder | Meaning of the placeholder | How to customize |
 | --- | --- | --- | --- |
-| Microsoft 365 ClientId | {{state.fx-resource-aad-app-for-teams.clientId}} | Your app's Azure AD app client ID created during provision. | [Use an existing Azure AD app for your Teams app](#use-an-existing-azure-ad-app-for-your-teams-app) |
-| Microsoft 365 ClientSecret | {{state.fx-resource-aad-app-for-teams.clientSecret}} | Your app's Azure AD app client secret created during provision. | [Use an existing Azure AD app for your Teams app](#use-an-existing-azure-ad-app-for-your-teams-app)  |
-| Microsoft 365 TenantId | {{state.fx-resource-aad-app-for-teams.tenantId}} | Tenant ID of your app's Azure AD app. | [Use an existing Azure AD app for your Teams app](#use-an-existing-azure-ad-app-for-your-teams-app)  |
-| Microsoft 365 OAuthAuthorityHost | {{state.fx-resource-aad-app-for-teams.oauthHost}} | OAuth authority host of your app's Azure AD app. | [Use an existing Azure AD app for your Teams app](#use-an-existing-azure-ad-app-for-your-teams-app) |
-| botAadAppClientId | {{state.fx-resource-bot.botId}} | Bot's Azure AD app client ID created during provision. | [Use an existing Azure AD app for your bot](#use-an-existing-azure-ad-app-for-your-bot) |
-| botAadAppClientSecret | {{state.fx-resource-bot.botPassword}} | Bot's Azure AD app client secret created during provision. | [Use an existing Azure AD app for your bot](#use-an-existing-azure-ad-app-for-your-bot) |
+| Microsoft 365 ClientId | {{state.fx-resource-aad-app-for-teams.clientId}} | Your app's Azure AD app client Id created during provision. | [Use an existing Azure AD app for your Teams app](#use-an-existing-azure-ad-app-for-your-teams-app). |
+| Microsoft 365 ClientSecret | {{state.fx-resource-aad-app-for-teams.clientSecret}} | Your app's Azure AD app client secret is created during provision. | [Use an existing Azure AD app for your Teams app](#use-an-existing-azure-ad-app-for-your-teams-app).  |
+| Microsoft 365 TenantId | {{state.fx-resource-aad-app-for-teams.tenantId}} | Tenant Id of your app's Azure AD app. | [Use an existing Azure AD app for your Teams app](#use-an-existing-azure-ad-app-for-your-teams-app).  |
+| Microsoft 365 OAuthAuthorityHost | {{state.fx-resource-aad-app-for-teams.oauthHost}} | OAuth authority host of your app's Azure AD app. | [Use an existing Azure AD app for your Teams app](#use-an-existing-azure-ad-app-for-your-teams-app). |
+| botAadAppClientId | {{state.fx-resource-bot.botId}} | Bot's Azure AD app client Id is created during provision. | [Use an existing Azure AD app for your bot](#use-an-existing-azure-ad-app-for-your-bot). |
+| botAadAppClientSecret | {{state.fx-resource-bot.botPassword}} | Bot's Azure AD app client secret is created during provision. | [Use an existing Azure AD app for your bot](#use-an-existing-azure-ad-app-for-your-bot). |
 
 ### Reference environment variables in parameter files
 
@@ -531,13 +529,13 @@ The following example reads the value of the `mySelfHostedDbConnectionString` pa
 
 ### Customize ARM template files
 
-If the predefined templates don't meet your application requirement, you can customize the ARM templates under `templates/azure` folder. For example, you can customize the ARM template to create some extra Azure resources for your app. You need to have basic knowledge of bicep language, which is used to author ARM template.
+If the predefined templates don't meet your app requirements, you can customize the ARM templates under `templates\azure` folder. For example, you can customize the ARM template to create some extra Azure resources for your app. You need to have basic knowledge of bicep language, which is used to author ARM template.
 
 To ensure the TeamsFx tool functions properly, customize ARM template that satisfies the following requirements:
 
 * Ensure that the folder structure and file name remain unchanged. The tool may append new content to the existing files when you add more resources or capabilities to your project.
 * Ensure that the name of auto-generated parameters and its property names remain unhanged. The auto-generated parameters may be used when you add more resources or capabilities to your project.
-* Ensure that the output of auto-generated ARM template is unchanged as well. You can add more outputs to ARM template. The output is `.fx/states/state.{env}.json` and can be used in other features such as deploy and validate manifest files.
+* Ensure that the output of auto-generated ARM template is unchanged. You can add more outputs to ARM template. The output is `.fx\states\state.{env}.json` and can be used in other features, such as deploy and validate manifest files.
 
 ### Customize Teams app
 
@@ -549,7 +547,7 @@ Perform in the following ways to customize the Teams app:
 
 #### Use an existing Azure AD app for your Teams app
 
-You can add the following configuration snippet `.fx/configs/config.{env}.json` to use an Azure AD app created by you for your Teams app. To create an Azure AD app, follow the link <https://aka.ms/teamsfx-existing-aad-doc>.
+You can add the following configuration snippet `.fx\configs\config.{env}.json` to use an Azure AD app created for your Teams app, to create an Azure AD app, see <https://aka.ms/teamsfx-existing-aad-doc>:
 
 ```json
 "auth": {
@@ -563,11 +561,11 @@ You can add the following configuration snippet `.fx/configs/config.{env}.json` 
 After adding the snippet, add your client secret to the related environment variable for Teams Toolkit to resolve the actual client secret during provision.
 
 > [!NOTE]
-> Ensure not to share the same Azure AD app in multiple environments. If you don't have permission to update the Azure AD app, you get a warning with instructions to manually update the Azure AD app. Follow these instructions to update your Azure AD app after provision.
+> Ensure that not to share the same Azure AD app in multiple environments. If you don't have permission to update the Azure AD app, you get a warning with instructions to manually update the Azure AD app. Follow these instructions to update your Azure AD app after provision.
 
 #### Use an existing Azure AD app for your bot
 
-You can add the following configuration snippet to `.fx/configs/config.{env}.json` to use the Azure AD app created for your bot:
+You can add the following configuration snippet to `.fx\configs\config.{env}.json` file to use the Azure AD app created for your bot:
 
 ```json
 "bot": {
@@ -580,7 +578,7 @@ After adding the snippet, add your client secret to the related environment vari
 
 #### Skip adding user for SQL database
 
-If you get an insufficient permission error when Teams Toolkit tries to add user to SQL database, add the following configuration snippet to `.fx/configs/config.{env}.json` to skip adding SQL database user:
+If you get an insufficient permission error when Teams Toolkit tries to add user to SQL database, add the following configuration snippet to `.fx\configs\config.{env}.json` file to skip adding SQL database user:
 
 ```json
 "skipAddingSqlUser": true
@@ -594,5 +592,4 @@ If you get an insufficient permission error when Teams Toolkit tries to add user
 * [Deploy Teams app to the cloud](deploy.md)
 * [Manage multiple environments](TeamsFx-multi-env.md)
 * [Collaborate with other developers on Teams project](TeamsFx-collaboration.md)
-* [Deploy Teams app to the cloud using Visual Studio](deploy.md#deploy-teams-app-to-the-cloud-using-visual-studio)
 * [Edit Teams app manifest using Visual Studio](VS-TeamsFx-preview-and-customize-app-manifest.md)
