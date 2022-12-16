@@ -116,7 +116,7 @@ items:
 
     **Create a policy for a demo tenant user to create online meetings using the following PowerShell script:**
 
-     ```PowerShell
+        ```PowerShell
 
         New-CsApplicationAccessPolicy -Identity "<<policy-identity/policy-name>>" -AppIds "<<azure-client-id>>" -Description "Policy-description"
         Grant-CsApplicationAccessPolicy -PolicyName "<<policy-identity/policy-name>>" -Identity "<<object-id-of-the-user-to-whom-policy-need-to-be-granted>>"
