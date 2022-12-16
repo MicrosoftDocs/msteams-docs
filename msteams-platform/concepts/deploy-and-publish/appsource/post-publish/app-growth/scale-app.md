@@ -8,13 +8,19 @@ ms.author: surbhigupta
 ---
 # Scale your collaborative app
 
-This stage is all about putting learnings from previous ad-hoc, pilot motions to use in programmatically activating existing customers and selling to new customers via all possible initiatives. The following growth levers are pertinent at this stage:
+In the Scaling stage in the app growth lifecycle, you put the learnings from previous ad-hoc, pilot motions to use. You use them to programmatically activate existing customers and sell to new customers via all possible initiatives.
+
+The following growth levers are pertinent at this stage:
 
 ## What should you as a developer do during the Scale stage?
 
 - **Become CSP channel ready for the Teams app**:
 
-    Listing your SaaS subscriptions on the Teams marketplace gives you access to 90,000+ reseller partners (called cloud solution providers or CSPs) around the world. These CSPs manage a significant customer install base. You can scale your business through this channel without making a full investment in solutions, experts, salesforce, and events - but instead get to market faster and at exponential scale compared to selling solely through your own sales motions. To scale your app, become CSP channel ready (see here: CSP Channel Readiness Guide for Teams app ISVs). Once your app becomes CSP ready, it will get featured on this landing page to appear in Teams apps that have become CSP Channel Ready public handbook.
+    Listing your SaaS subscriptions on the Teams marketplace gives you access to 90,000+ reseller partners (called [cloud solution providers](https://www.youtube.com/watch?v=X33C-RV9dZc) or CSPs) around the world. These CSPs manage a significant customer install base. You can scale your business through this channel without making a full investment in solutions, experts, salesforce, and events. However, you can instead get to market faster and at exponential scale compared to selling solely through your own sales motions.
+
+To scale your app, become CSP channel ready. After that, your app will get featured on this [landing page](https://cloudpartners.transform.microsoft.com/practices/modernworkisv?tab=monetize-your-app) to appear in [Teams apps that have become CSP Channel Ready](https://aka.ms/P2PeBook) public handbook.
+
+For more information, see [CSP Channel Readiness Guide](https://aka.ms/TeamsMonetization/CSPChannelReadyGuide) for Teams app ISVs.
 
 - **Onboard CSP resellers to extend app’s sales reach**:
 
