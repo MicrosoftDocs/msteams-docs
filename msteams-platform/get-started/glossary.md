@@ -248,7 +248,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | --- | --- |
 | [Website url](../tabs/design/tabs-mobile.md) | A property in the app manifest file (`websiteUrl`) that links the app to the website of the organization or landing page of the relevant product. It's a mandatory configuration for Teams mobile client. <br>**See also**: [App manifest](#a); [Teams Mobile](#t) |
 | [Web app](../samples/integrate-web-apps-overview.md) | An app that runs on a web server. It can be integrated with Microsoft Teams Platform. |
-| [Webhook](../webhooks-and-connectors/what-are-webhooks-and-connectors.md) | It's a feature of a Teams app used to integrate it with external apps. <br>**See also**: [Incoming webhook](#i) ; [Outgoing webhook](#o); [Connector](#c) |
+| [Webhook](../webhooks-and-connectors/what-are-webhooks-and-connectors.md) | It's a feature of a Teams app used to integrate it with external apps. <br>**See also**: [Incoming Webhook](#i) ; [Outgoing Webhook](#o); [Connector](#c) |
 | [Web part](../sbs-gs-spfx.yml) | A UI component used to build a page or a site in a Teams app created using Visual Studio Code and SharePoint Framework. <br>**See also**: [SPFx](#s) |
 | [Workbench](../sbs-gs-spfx.yml) | Overall Visual Studio Code UI that encompasses UI components, such as title bar, panel, and more. <br>**See also**: [Local workbench](#l); [Teams workbench](#t) |
 
