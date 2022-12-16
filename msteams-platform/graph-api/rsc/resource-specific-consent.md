@@ -35,7 +35,7 @@ RSC permissions are available on the following different resource types:
 
 ### API that supports RSC-based data access
 
-Microsoft Graph SDK, Microsoft Bot Framework SDK, and Microsoft Teams Client SDK support fine-grained data access through RSC. The supported modes and resource types differ across the API surfaces.
+Microsoft Graph SDK, Microsoft Bot Framework SDK, and Microsoft TeamsJS client library support fine-grained data access through RSC. The supported modes and resource types differ across the API surfaces.
 
 | RSC mode or type | Supported SDKs | App manifest version | Resource types | RSC-related controls for the entire tenant | Who can consent to RSC permissions? |
 |---------|---------|---------|---------|---------|---------|
