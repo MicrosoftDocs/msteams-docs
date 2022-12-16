@@ -143,7 +143,7 @@ items:
      1. Sign into [Microsoft Graph Explorer](https://developer.microsoft.com/graph) using the credentials to whom the policy has to be granted.
      1. Select **Graph Explorer** from the tool bar.
 
-     :::image type="content" source="../assets/images/calls-and-meetings/graph-explorer.png" alt-text="Screenshot of Microsoft Graph with graph explorer highlighted in red.":::
+     :::image type="content" source="~/assets/images/calls-and-meetings/graph-explorer.png" alt-text="Screenshot of Microsoft Graph with graph explorer highlighted in red.":::
 
      1. Select **Run query** beside the URL.
      1. Copy the ID from the **Response preview** and replace the ID in the place of object ID.
@@ -152,7 +152,7 @@ items:
        
      1. After the replacement of all the parameters in the PowerShell script, run `Connect-MicrosoftTeams` and sign-in with the credentials to whom the policy has to be granted when the PowerShell prompts.
 
-     :::image type="content" source="../assets/images/calls-and-meetings/sign-in-powershell-prompts.png" alt-text="screenshot of Windows PowerShell PSI displaying the sign in prompt.":::
+     :::image type="content" source="~/assets/images/calls-and-meetings/sign-in-powershell-prompts.png" alt-text="screenshot of Windows PowerShell PSI displaying the sign in prompt.":::
 
      1. Run the following command in PowerShell to verify whether the policy is created successfully or not. Replace the policy name with your defined policy name.
 
