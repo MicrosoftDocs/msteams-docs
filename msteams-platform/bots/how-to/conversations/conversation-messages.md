@@ -522,10 +522,10 @@ The general retry guidance for each status code is listed in the following table
 
 ## Code sample
 
-| Sample name | Description | Node.js | .NETCore | Python | .NET |
+| Sample name | Description | Node.js | .NET 6.0 | Python | Java |
 |----------------|-----------------|--------------|----------------|-----------|-----|
-| Teams conversation bot | Messaging and conversation event handling. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/python) | NA |
-| Teams app localization | Teams app localization using bot and tab. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/nodejs) | NA | NA | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) |
+| Teams conversation bot | Messaging and conversation event handling. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/python) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/java) |
+| Teams app localization | Teams app localization using bot and tab. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) | NA | NA |
 
 ## Next step
 
