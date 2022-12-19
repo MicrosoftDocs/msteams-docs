@@ -197,8 +197,8 @@ If you have admin rights, perform the following steps to upload the custom app u
 
 ## See also
 
+* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
 * [Manage custom app policies and settings in Teams](/microsoftteams/teams-custom-app-policies-and-settings)
 * [Manage app setup policies in Teams](/microsoftteams/teams-app-setup-policies)
-* [Upload custom apps](/microsoftteams/teams-app-setup-policies)
 * [Provision cloud resources using Teams Toolkit](provision.md)
 * [Deploy Teams app to the cloud](deploy.md)
