@@ -24,90 +24,124 @@ You can customize Azure AD manifest template to update Azure AD application.
 
 2. Update the template directly or [reference values from another file](https://github.com/OfficeDev/TeamsFx/wiki/Manage-AAD-application-in-Teams-Toolkit#Placeholders-in-AAD-manifest-template). You can see several customization scenarios here:
   
-   * [Add an application permission](#add-an-application-permission)
-   * [Preauthorize a client application](#preauthorize-a-client-application)
-   * [Update redirect URL for authentication response](#update-redirect-url-for-authentication-response)
+   * Add an application permission</b></summary>
 
-3. [Deploy Azure AD application changes for local environment](#deploy-azure-ad-application-changes-for-local-environment).
-  
-4. [Deploy Azure AD application changes for remote environment](#deploy-azure-ad-application-changes-for-remote-environment).
+     If the Teams application requires more permissions to call an API with additional permissions, you need to update `requiredResourceAccess` property in the Azure AD manifest template. You can see the following example for this property:
 
-### Add an application permission
-
-If the Teams application requires more permissions to call an API with additional permissions, you need to update `requiredResourceAccess` property in the Azure AD manifest template. You can see the following example for this property:
-
-```JSON
-
-   "requiredResourceAccess": [
+    ```JSON
+            "requiredResourceAccess": [
     {
-        "resourceAppId": "Microsoft Graph",
-        "resourceAccess": [
-            {
-                "id": "User.Read", // For Microsoft Graph API, you can also use uuid for permission id
-                "type": "Scope" // Scope is for delegated permission
-            },
-            {
-                "id": "User.Export.All",
-                "type": "Role" // Role is for application permission
-            }
-        ]
-    },
-    {
-        "resourceAppId": "Office 365 SharePoint Online",
-        "resourceAccess": [
-            {
-                "id": "AllSites.Read",
-                "type": "Scope"
-            }
-        ]
-    }
-]
-```
-
-* `resourceAppId` property is used for different APIs. For `Microsoft Graph`, and `Office 365 SharePoint Online` enter the name directly instead of UUID, and for other APIs use UUID.
-
-* `resourceAccess.id` property is used for different permissions. For `Microsoft Graph`, and `Office 365 SharePoint Online` enter the permission name directly instead of UUID, and for other APIs use UUID.
-
-* `resourceAccess.type` property is used for delegated permission or application permission. `Scope` means delegated permission and `Role` means application permission.
-
-### Preauthorize a client application
-
-You can use `preAuthorizedApplications` property to authorize a client application to indicate that the API trusts the application. Users don't consent when the client calls it exposed API. You can see the following example for this property:
-
-```JSON
-
-    "preAuthorizedApplications": [
+            "resourceAppId": "Microsoft Graph",
+            "resourceAccess": [
+                {
+                    "id": "User.Read", // For Microsoft Graph API, you can also use uuid for permission id
+                    "type": "Scope" // Scope is for delegated permission
+                },
+                {
+                    "id": "User.Export.All",
+                    "type": "Role" // Role is for application permission
+                }
+            ]
+        },
         {
-            "appId": "1fec8e78-bce4-4aaf-ab1b-5451cc387264",
-            "permissionIds": [
-                "{{state.fx-resource-aad-app-for-teams.oauth2PermissionScopeId}}"
+            "resourceAppId": "Office 365 SharePoint Online",
+            "resourceAccess": [
+                {
+                        "id": "AllSites.Read",
+                "type": "Scope"
+                }
             ]
         }
-        ...
     ]
-```
 
-`preAuthorizedApplications.appId` property is used for the application you want to authorize. If you don't know the application ID and know only the application name, use the following steps to search application ID:
+    ```
 
-1. Go to [Azure portal](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps) and open **Application Registrations**.
+        * `resourceAppId` property is used for different APIs. For `Microsoft Graph`, and `Office 365 SharePoint Online` enter the name directly instead of UUID, and for other APIs use UUID.
 
-1. Select **All applications** and search for the application name.
+        * `resourceAccess.id` property is used for different permissions. For `Microsoft Graph`, and `Office 365 SharePoint Online` enter the permission name directly instead of UUID, and for other APIs use UUID.
 
-1. Select the application name and get the application ID from the overview page.
+        * `resourceAccess.type` property is used for delegated permission or application permission. `Scope` means delegated permission and `Role` means application permission.
 
-### Update redirect URL for authentication response
+   * Preauthorize a client application</b></summary>
 
-  Redirect URLs are used while returning authentication responses such as tokens after successful authentication. You can customize redirect URLs using property `replyUrlsWithType`. For example, to add `https://www.examples.com/auth-end.html` as redirect URL, you can add it as the following example:
+     You can use `preAuthorizedApplications` property to authorize a client application to indicate that the API trusts the application. Users don't consent when the client calls it exposed API. You can see the following example for this property:
 
-``` JSON
-"replyUrlsWithType": [
-    ...
-    {
-        "url": "https://www.examples.com/auth-end.html",
-        "type": "Spa"
-    }
-]
-```
+     ```JSON
+
+           "preAuthorizedApplications": [
+           {
+               "appId": "1fec8e78-bce4-4aaf-ab1b-5451cc387264",
+               "permissionIds": [
+                    "{{state.fx-resource-aad-app-for-teams.oauth2PermissionScopeId}}"
+                ]
+           }
+           ...
+       ]
+     ```
+
+     `preAuthorizedApplications.appId` property is used for the application you want to authorize. If you don't know the application ID and know only the application name, use the following steps to search application ID:
+
+     1. Go to [Azure portal](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps) and open **Application Registrations**.
+
+     1. Select **All applications** and search for the application name.
+
+     1. Select the application name and get the application ID from the overview page.
+
+   * Update redirect URL for authentication response</b></summary>
+
+     Redirect URLs are used while returning authentication responses such as tokens after successful authentication. You can customize redirect URLs using property `replyUrlsWithType`. For example, to add `https://www.examples.com/auth-end.html` as redirect URL, you can add it as the following example:
+
+      ``` JSON
+          "replyUrlsWithType": [
+             ...
+           {
+               "url": "https://www.examples.com/auth-end.html",
+               "type": "Spa"
+           }
+      ]
+      ```
+
+<br>
+
+<details>
+
+<summary><b>3. Deploy Azure AD application changes for local environment</b></summary>
+
+1. Select `Preview` CodeLens in `aad.template.json`.
+  
+     :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add deploy1.png" alt-text="deploy1":::
+
+2. Select **local** environment.
+  
+     :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add deploy2.png" alt-text="deploy2":::
+
+3. Select `Deploy Azure AD Manifest` CodeLens in `aad.local.json`.
+
+     :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add deploy3.png" alt-text="deploy3" lightbox="../assets/images/teams-toolkit-v2/manual/add deploy3.png":::
+
+4. The changes for Azure AD application used in local environment are deployed.
+
+<br>
+
+</details>
+  
+<br>
+
+<details>
+
+<summary><b>4. Deploy Azure AD application changes for remote environment</b></summary>
+
+1. Open the command palette and select: `Teams: Deploy Azure Active Directory application manifest`.
+  
+     :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add deploy4.png" alt-text="deploy4":::
+
+2. Additionally you can right click on the `aad.template.json` and select **Deploy Azure Active Directory app manifest** from the context menu.
+  
+     :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add deploy5.png" alt-text="deploy5":::
+
+<br>
+
+</details>
 
 ## Azure AD manifest template placeholders
 
@@ -159,7 +193,7 @@ You can use the placeholder argument in the Azure AD manifest: `{{config.manifes
 
 When the value is a secret, you don't need to enter permanent values in Azure AD manifest template. Azure AD manifest template file supports reference environment variables values. You can use the syntax `{{env.YOUR_ENV_VARIABLE_NAME}}` in the tool as parameter values to resolve the current environment variable values.
 
-## Author and preview Azure AD manifest with CodeLens
+## Edit and preview Azure AD manifest with CodeLens
 
 Azure AD manifest template file has CodeLens to review and edit.
 
@@ -189,29 +223,7 @@ CodeLens shows the application name for the pre-authorized application ID for th
 
 ## Deploy Azure AD application changes for local environment
 
-1. Select `Preview` CodeLens in `aad.template.json`.
-  
-     :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add deploy1.png" alt-text="deploy1":::
-
-2. Select **local** environment.
-  
-     :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add deploy2.png" alt-text="deploy2":::
-
-3. Select `Deploy Azure AD Manifest` CodeLens in `aad.local.json`.
-
-     :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add deploy3.png" alt-text="deploy3" lightbox="../assets/images/teams-toolkit-v2/manual/add deploy3.png":::
-
-4. The changes for Azure AD application used in local environment are deployed.
-  
 ## Deploy Azure AD application changes for remote environment
-
-1. Open the command palette and select: `Teams: Deploy Azure Active Directory application manifest`.
-  
-     :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add deploy4.png" alt-text="deploy4":::
-
-2. Additionally you can right click on the `aad.template.json` and select `Deploy Azure Active Directory application manifest` from the context menu.
-  
-     :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add deploy5.png" alt-text="deploy5":::
 
 ## View Azure AD application on the Azure portal
 
@@ -220,7 +232,7 @@ CodeLens shows the application name for the pre-authorized application ID for th
      :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add view1.png" alt-text="view1" lightbox="../assets/images/teams-toolkit-v2/manual/add view1.png":::
 
    > [!NOTE]
-   > xxx in the client ID indicates the environment name where you have deployed the Azure AD application
+   > xxx in the client ID indicates the environment name where you have deployed the Azure AD application.
 
 2. Go to [Azure portal](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps) and sign in to Microsoft 365 account.
   
