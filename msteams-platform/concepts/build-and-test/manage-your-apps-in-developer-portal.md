@@ -27,7 +27,7 @@ In the **Overview** section, you can see the following components to manage your
     * **Active users (Preview)**: Shows you the active user count
     * **Basic information**: Shows you the App ID, Version, Manifest version, and so on.
 
-    :::image type="content" source="../../assets/images/tdp/dashboard-page.png" alt-text="The screenshot is an example that shows the Overview page of the app you created in Developer Portal for Teams.":::
+    :::image type="content" source="../../assets/images/tdp/dashboard-page.png" alt-text="Screenshot shows you the overview page of the app you created in the Developer Portal for Teams.":::
 
 * Analytics
 
@@ -57,7 +57,7 @@ In the **Configure** section, you can see the following components to manage and
 * **Languages**: You can set up or change the language of your app.
 * **Domain**: You can add the domains to load your apps in the Teams client (For example: *.example.com).
 
-:::image type="content" source="../../assets/images/tdp/configure.png" alt-text="The screenshot is an example that shows how to configure features to manage and access your app in Developer Portal.":::
+:::image type="content" source="../../assets/images/tdp/configure.png" alt-text="Screenshot shows how to configure features to manage and access your app in Developer Portal.":::
 
 ## Advanced
 
@@ -151,7 +151,7 @@ To add a bot:
 1. In the Bot management page, select **New Bot**.
 1. Enter the name and select **Add**.
 
-   :::image type="content" source="../../assets/images/tdp/tools-in-dev-portal.png" alt-text="The screenshot is an example that shows the tools in developer portal, which helps you to build key features.":::
+   :::image type="content" source="../../assets/images/tdp/tools-in-dev-portal.png" alt-text="Screenshot shows you the tools in developer portal, which helps you to build key features.":::
 
 From the Developer Portal, you can go to Bot Framework Portal and configure your bot to update icon and other properties.
 
