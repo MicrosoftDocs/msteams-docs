@@ -66,4 +66,5 @@ Follow the steps to import and manage your existing app in the Developer Portal.
 
 ## See also
 
-[Include a SaaS offer with your Microsoft Teams app](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)
+* [Teams Toolkit Overview](../../toolkit/teams-toolkit-fundamentals.md)
+* [Include a SaaS offer with your Microsoft Teams app](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)
