@@ -333,7 +333,7 @@ items:
     1. Extract the **Microsoft-Teams-Samples-main.zip** file.
 
        > [!NOTE]
-       > Ensure that you note the path of the repository where you've extracted.
+       > Ensure that you copy the path of the repository where you've extracted.
 
     1. In the File Explorer, go to **Microsoft-Teams-Samples** > **samples** > **tab-adaptive-cards** > **csharp** > **TabWithAdpativeCardFlow**.
     
