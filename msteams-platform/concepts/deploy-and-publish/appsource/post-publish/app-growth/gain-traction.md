@@ -1,14 +1,16 @@
 ---
 title: The traction stage for your collaborative app
 author: heath-hamilton
-description: Learn what you can do during the traction stage of your app to grow your app
+description: Learn what you can do during the traction stage of your app to grow your app.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
 ---
 # Gain traction for your collaborative app in the market
 
-As a reminder, you’ll now want to gain mindshare for your collaborative app among top customers and build readiness to scale adoption, growth and start realizing return on investment. Here are the various initiatives and growth levers at your disposal:
+In the Traction stage, you’ll want to gain mindshare for your collaborative app among top customers. You can build readiness to scale adoption and growth, and start realizing return on investment.
+
+Here are the various initiatives and growth levers at your disposal:
 
 ## What should you as a developer do during the Traction stage?
 
