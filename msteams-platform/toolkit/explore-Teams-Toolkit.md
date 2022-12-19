@@ -191,10 +191,10 @@ After you've created your Teams Project, you can perform the following functions
 
 ## See also
 
-* [Install Teams Toolkit](install-Teams-Toolkit.md)
-* [Create a new Teams app](create-new-project.md)
-* [Prepare to build apps](build-environments.md)
-* [Provision cloud resources](provision.md)
+* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
+* [Create a new Teams app using Teams Toolkit](create-new-project.md)
+* [App manifest schema](../resources/schema/manifest-schema.md)
+* [Prepare to build apps using Microsoft Teams Toolkit](build-environments.md)
 
 <!--  
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/ui-elements.png" alt-text="UI Elements":::
