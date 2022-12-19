@@ -88,13 +88,13 @@ You have three different types of basic Teams apps and the directory structure l
 | - `.fx\configs\config.<envName>.json` | Configuration file for every environment. |
 | - `.fx\configs\projectSettings.json` | Global project settings that apply to all environments. |
 | `tabs` | Code for the Tab capability needed at runtime, such as the privacy notice, terms of use, and configuration tabs. |
-| - `tabs\src\index.jsx` | Entry point for the front-end app, where the main app component is rendered with `ReactDOM.render()`. |
-| - `tabs\src\components\App.jsx` | Code for handling URL routing in the app. It calls the [Microsoft Teams JavaScript client SDK](../tabs/how-to/using-teams-client-sdk.md) to establish communication between your app and Teams. |
-| - `tabs\src\components\Tab.jsx` | Code to implement the UI of your app. |
-| - `tabs\src\components\TabConfig.jsx` | Code to implement the UI that configures your app. |
-| `templates\appPackage` | App manifest template files, and the app icons: **color.png** and **outline.png**. |
-| - `templates\appPackage\manifest.template.json` | App manifest for running the app in local or remote environment.  |
-| `templates\azure` | `bicep` template files |
+| - `tabs/src/index.jsx` | Entry point for the front-end app, where the main App component is rendered with `ReactDOM.render()` |
+| - `tabs/src/components/App.jsx` | Code for handling URL routing in the app. It calls the [Microsoft Teams JavaScript client library](../tabs/how-to/using-teams-client-library.md) to establish communication between your app and Teams. |
+| - `tabs/src/components/Tab.jsx` | Code to implement the UI of your app. |
+| - `tabs/src/components/TabConfig.jsx` | Code to implement the UI that configures your app. |
+| `templates/appPackage` | App manifest template files, and the app icons: color.png and outline.png. |
+| - `templates/appPackage/manifest.template.json` | App manifest for running the app in local or remote environment.  |
+| `templates/azure` | BICEP template files |
 
 > [!NOTE]
 > If you have a bot or message extension app, relevant folders are added to the directory structure.
@@ -265,6 +265,7 @@ You can see Teams app templates already populated in Teams Toolkit for various T
 
 ## See also
 
+* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
 * [Build a Teams app with Blazor](../sbs-gs-blazorupdate.yml)
 * [Build a Teams app with C# or .NET](../sbs-gs-csharp.yml)
 * [Prerequisites for all types of environment and create your Teams app](tools-prerequisites.md)

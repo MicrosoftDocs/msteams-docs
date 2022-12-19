@@ -322,4 +322,5 @@ You need to interact with Azure AD application during various stages of your Tea
 
 ## See also
 
+* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
 * [Preview and Customize app manifest in Toolkit](TeamsFx-preview-and-customize-app-manifest.md)
