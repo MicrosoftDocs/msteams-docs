@@ -29,7 +29,7 @@ Applications can use the Teams Java Script SDK (Teams JS) to open the dialog wit
 ```javascript
 // Open an app install dialog from your tab
 if(appInstallDialog.isSupported()) {
-    const dialogPromise = appInstallDialog.openAppInstallDialog({ appId: <appId>});
+    const dialogPromise = appInstallDialog.openAppInstallDialog({ appId: "f46ad259-0fe5-4f12-872d-c737b174bcb4" });
     dialogPromise.
       then((result) => {/*Successful operation*/}).
       catch((error) => {/*Unsuccessful operation*/});
