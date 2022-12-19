@@ -93,16 +93,16 @@ items:
 
     **To create client secret**
 
-     1. In **Overview** page of your bot, select **Essentials** and save the **Application (client) ID** (Microsoft App ID) for future reference.
+     1. In **Overview** page, save the **Application (client) ID** (Microsoft App ID) for future reference.
     
        :::image type="content" source="./assets/images/calls-and-meetings/microsoft-app-id-new_2.png" alt-text="Screenshot of overview page of the bot with Application client ID highlighted in red.":::
     
-     1. In **Manage**, select **Certificates & secrets**.
-     1. Select **Client secrets** > **New client secret**.
+     1. Under the **Manage** heading, select **Certificates & secrets**.
+     1. In the **Client secrets** section, select **New client secret**.
 
     **Add a client secret** window appears.
 
-      1. Enter **Description** to the client secret.
+      1. Enter the **Description** of the client secret.
       1. Select **Add**.
  
          :::image type="content" source="./assets/images/calls-and-meetings/add-client_2.png" alt-text="Screenshot of Certificates and secrets with client and secrets, client secrets, and +New client secret highlighted in red."lightbox="./assets/images/calls-and-meetings/add-client_2.png":::
@@ -116,41 +116,44 @@ items:
 
     **Create a policy for a demo tenant user to create online meetings using the following PowerShell script:**
 
+    > [!NOTE]
+    >
+    > * Run Windows PowerShell PSI as an administrator and execute the script.
+    > * If you are using the Windows PowerShell PSI for the first time, run the following commands before executing the script:
+    >   * Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser
+    >   * Run Install-Module -Name MicrosoftTeams -Force -AllowClobber 
+
     ```PowerShell
     New-CsApplicationAccessPolicy -Identity "<<policy-identity/policy-name>>" -AppIds "<<azure-client-id>>" -Description "Policy-description"
     Grant-CsApplicationAccessPolicy -PolicyName "<<policy-identity/policy-name>>" -Identity "<<object-id-of-the-user-to-whom-policy-need-to-be-granted>>"
+    Connect-MicrosoftTeams
+    Get-CsApplicationAccessPolicy -Identity “<<policy-identity/policy-name>>”
     ```
-     
-    > [!NOTE]
-    > * Run Windows PowerShell PSI as an administrator and execute the script.
-
-     If you are using the Windows PowerShell PSI for the first time, execute the following commands:
-
-        Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser
-        Run Install-Module -Name MicrosoftTeams -Force -AllowClobber 
 
      **Replace the following in the Windows PowerShell script:**
 
      |Field | Description |
      |----------------|-----------------|
-     |policy-identity/policy-name | Name of the policy. |
-     |azure-client-id | Microsoft App ID which you generated while registering the app in Azure portal. |
-     |Policy-description | Description of the policy. |
-     |object-id-of-the-user-to-whom-policy-need-to-be-granted |  ID of the user for whom you need to generate the policy using the graph explorer. |
+     |**policy-identity/policy-name** | Name of the policy. |
+     |**azure-client-id** | Microsoft App ID which you generated while registering the app in Azure portal. |
+     |**Policy-description** | Description of the policy. |
+     |**object-id-of-the-user-to-whom-policy-need-to-be-granted** |  ID of the user for whom you need to generate the policy using the graph explorer. |
 
-    To generate object ID:
+    **To generate object ID:**
 
      1. Sign into [Microsoft Graph Explorer](https://developer.microsoft.com/graph) using the credentials to whom the policy has to be granted.
      1. Select **Graph Explorer** from the tool bar.
 
         :::image type="content" source="~/assets/images/calls-and-meetings/graph-explorer.png" alt-text="Screenshot of Microsoft Graph with graph explorer highlighted in red.":::
 
-     1. Select **Run query** beside the URL.
-     1. Copy the ID from the **Response preview** and replace the ID in the place of object ID.
+     1. Select **Run query**. A response is generated under **Response preview**.
+     1. Copy the value of the `id` property from the **Response preview** and replace with the object ID in the PowerShell script.
 
         :::image type="content" source="~/assets/images/calls-and-meetings/graph-explorer-id.png" alt-text="Screenshot of graph explorer displaying the response preview.":::
        
-     1. After the replacement of all the parameters in the PowerShell script, run `Connect-MicrosoftTeams` and sign-in with the credentials to whom the policy has to be granted when the PowerShell prompts.
+     1. Execute the PowerShell script. 
+     
+     1. Run `Connect-MicrosoftTeams` and sign-in with the credentials to whom the policy has to be granted when the PowerShell prompts.
 
         :::image type="content" source="~/assets/images/calls-and-meetings/sign-in-powershell-prompts.png" alt-text="screenshot of Windows PowerShell PSI displaying the sign in prompt.":::
 
