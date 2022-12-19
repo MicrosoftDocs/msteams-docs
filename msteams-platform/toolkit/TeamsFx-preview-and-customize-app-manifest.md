@@ -350,16 +350,16 @@ You can also sync the local changes to developer portal from the context menu of
 The changes are updated to Developer Portal.
 
 > [!TIP]
-
+>
 > * Select **Overwrite and update** or **Cancel** from the **Warning** dialog box to make any manual updates that can be overwritten in Developer Portal.
 
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-overwrite.png" alt-text="Screenshot is an example of showing the update warning." lightbox="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-overwrite.png":::
 
 When you create a Teams command bot using Visual Studio, two app IDs are registered in Microsoft Azure Active Directory (Azure AD). You can identify the app IDs in the Developer Portal as **Application (client) ID** under **Basic information** and existing **bot ID** under **App features**.
 
-:::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-dev-portal-basic-info.png" alt-text="Developer portal showing basic info app id":::
+:::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-dev-portal-basic-info.png" alt-text="Developer portal showing basic info app id" lightbox="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-dev-portal-basic-info.png":::
 
-:::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-dev-portal-app-features.png" alt-text="Developer portal showing app feature bot id selection":::
+:::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-dev-portal-app-features.png" alt-text="Developer portal showing app feature bot id selection" lightbox="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-dev-portal-app-features.png":::
 
 ::: zone-end
 
