@@ -1450,6 +1450,7 @@ Use the following guidelines for meeting extensions:
 
 </details>
 
+</br>
 <details><summary>Shared Meeting Stage</summary>
 
 To use the **shareAppContentToStage** API, you must declare the correct RSC permissions. In the app manifest, you must configure the `authorization` property. Update the `name` property as `MeetingStage.Write.Chat` and `type` property as `Delegated` in the `resourceSpecific` field. [*Mandatory Fix*]
