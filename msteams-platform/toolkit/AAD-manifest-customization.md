@@ -24,8 +24,6 @@ You can customize Azure AD manifest template to update Azure AD application.
 
 2. Update the template directly or [reference values from another file](https://github.com/OfficeDev/TeamsFx/wiki/Manage-AAD-application-in-Teams-Toolkit#Placeholders-in-AAD-manifest-template). You can see several customization scenarios here:
   
-<br>
-
     <details>
 
     <summary><b>Add an application permission</b></summary>
@@ -72,8 +70,6 @@ You can customize Azure AD manifest template to update Azure AD application.
 
     </details>
 
-<br>
-
     <details>
 
     <summary><b>Preauthorize a client application</b></summary>
@@ -101,10 +97,9 @@ You can customize Azure AD manifest template to update Azure AD application.
 
      1. Select the application name and get the application ID from the overview page.
 
-<br>
+    <br>
 
     </details>
-
 
     <details>
 
