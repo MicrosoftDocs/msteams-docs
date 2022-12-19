@@ -6,11 +6,16 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ---
 
-# Enable SSO for your Adaptive Cards Universal Actions
+# Enable SSO for your Adaptive Cards Universal Actions in bot
 
 With Single sign-on (SSO) in Teams, app users have the advantage of using Teams to access Adaptive Cards Universal Actions in a bot. After logging in to Teams using Microsoft or Microsoft 365 account, app users can use your app without the need to sign in again. Your app is available to app users on any device with access granted through Azure Active Directory (Azure AD).
 
 For more information about Universal Actions for Adaptive Cards, see [Universal Actions for Adaptive Cards](Overview.md).
+
+Before you enable SSO for your Adaptive Cards Universal Actions, ensure that you've enabled the SSO for your bot.
+
+> [!div class="nextstepaction"]
+> [Enable SSO for your app](../../../bots/how-to/authentication/bot-sso-overview.md)
 
 ## SSO in Teams at runtime
 
@@ -43,18 +48,6 @@ Bots can respond with sign in request in response to `Action.Execute` for:
 * Adaptive Cards sent by a user via message extension app (backed by bot) in one-on-one chat, group chat, or channel.
 * Adaptive Cards present in compose or preview area while the user is composing the message.
   * In the compose area, refresh in Adaptive Card works and the bot may want to use a token to provide a user specific view to the user before they send the card to the chat.
-
-## Enable SSO for a Teams app
-
-This section describes the tasks involved in implementing SSO for Adaptive Cards Universal Actions in a bot. To enable SSO for Adaptive Cards Universal Actions in a bot:
-
-**Configure app with Azure AD**: Create an Azure AD app to generate an app ID and application ID URI. For generating an access token, you configure scopes and authorize trusted client applications. The configuration required in Azure AD for enabling SSO in a bot is the same. Create a bot resource and configure it's client secret, messaging endpoint, and OAuth connection to enable SSO.
-
-**Add code**: Add the code to handle access token to send this token to your app's server code in the Authorization header, and to validate the access token when it's received.
-> [!NOTE]
-> This section allows you to select the app for which you want to add code to enable SSO.
-
-**Update Teams app manifest**: Update your Teams client app manifest with the app ID and application ID URI generated in Azure AD to allow Teams to request access tokens on behalf of your app. The update required in the manifest file is the same for a bot.
 
 ## Next step
 

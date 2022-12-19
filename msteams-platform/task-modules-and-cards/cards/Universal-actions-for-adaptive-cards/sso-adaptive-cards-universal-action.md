@@ -22,9 +22,6 @@ After you configure the client secret and OAuth connection setting for the app i
 
 ## Add code to handle an access token
 
-> [!IMPORTANT]
-> Ensure that you added the code to handle access token for your bot. For more information, see [add code to handle an access token](../../../bots/how-to/authentication/bot-sso-code.md#add-code-to-handle-an-access-token).
-
 If there's a cached token, the bot uses the same token. If there's no token available, the bot creates an OAuthCard and places it in an invoke response with the following values which includes a `tokenExchangeResource`:
 
 ```JSON
@@ -73,9 +70,6 @@ Once the user selects **View and accept**, the existing Azure AD permission cons
 ## Add code to receive the token
 
 The following are the steps to receive token:
-
-> [!IMPORTANT]
-> Ensure that your bot receives the invoke activity or token. For more information, see [add code to receive the token](../../../bots/how-to/authentication/bot-sso-code.md#add-code-to-receive-the-token).
 
 1. The client sends the original `adaptiveCard/action` again to the bot along with the token as follows:
 
@@ -134,10 +128,11 @@ The following are the steps to receive token:
 > [!NOTE]
 > To handle the access token in case the app user logs out, see [handle app user log out](../../../bots/how-to/authentication/bot-sso-code.md#handle-app-user-log-out).
 
-## Next step
+## Code sample
 
-> [!div class="nextstepaction"]
-> [Update your Teams application manifest for your bot](../../../bots/how-to/authentication/bot-sso-manifest.md)
+| **Sample name** | **Description** | **C#** | **JavaScript** | **Node.js** |
+| --- | --- | --- | --- | --- |
+| SSO for your Adaptive Cards Universal Actions | This sample code demonstrates how to get enable SSO authentication for your Adaptive Cards Universal Actions in bot. | [Link to br added] | [Link to br added] | [Link to br added] |
 
 ## See also
 
