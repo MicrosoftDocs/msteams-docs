@@ -24,7 +24,7 @@ You can customize Azure AD manifest template to update Azure AD application.
 
 2. Update the template directly or [reference values from another file](https://github.com/OfficeDev/TeamsFx/wiki/Manage-AAD-application-in-Teams-Toolkit#Placeholders-in-AAD-manifest-template). You can see several customization scenarios here:
   
-   <br>
+<br>
 
     <details>
 
@@ -60,15 +60,23 @@ You can customize Azure AD manifest template to update Azure AD application.
 
     ```
 
-The following permissions are used property IDs:
+    The following permissions are used property IDs:
 
-- The `resourceAppId` property is used for different APIs. For `Microsoft Graph`, and `Office 365 SharePoint Online` enter the name directly instead of UUID, and for other APIs use UUID.
+    - The `resourceAppId` property is used for different APIs. For `Microsoft Graph`, and `Office 365 SharePoint Online` enter the name directly instead of UUID, and for other APIs use UUID.
 
-- The `resourceAccess.id` property is used for different permissions. For `Microsoft Graph`, and `Office 365 SharePoint Online` enter the permission name directly instead of UUID, and for other APIs use UUID.
+    - The `resourceAccess.id` property is used for different permissions. For `Microsoft Graph`, and `Office 365 SharePoint Online` enter the permission name directly instead of UUID, and for other APIs use UUID.
 
-- The `resourceAccess.type` property is used for delegated permission or application permission. `Scope` means delegated permission and `Role` means application permission.
+    - The `resourceAccess.type` property is used for delegated permission or application permission. `Scope` means delegated permission and `Role` means application permission.
 
-- Preauthorize a client application</b></summary>
+    <br>
+
+    </details>
+
+<br>
+
+    <details>
+
+    <summary><b>Preauthorize a client application</b></summary>
 
      You can use `preAuthorizedApplications` property to authorize a client application to indicate that the API trusts the application. Users don't consent when the client calls it exposed API. You can see the following example for this property:
 
@@ -85,10 +93,6 @@ The following permissions are used property IDs:
        ]
      ```
 
-<br>
-
-</details>
-
      `preAuthorizedApplications.appId` property is used for the application you want to authorize. If you don't know the application ID and know only the application name, use the following steps to search application ID:
 
      1. Go to [Azure portal](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps) and open **Application Registrations**.
@@ -97,7 +101,14 @@ The following permissions are used property IDs:
 
      1. Select the application name and get the application ID from the overview page.
 
-- Update redirect URL for authentication response</b></summary>
+<br>
+
+    </details>
+
+
+    <details>
+
+    <summary><b>Update redirect URL for authentication response</b></summary>
 
      Redirect URLs are used while returning authentication responses such as tokens after successful authentication. You can customize redirect URLs using property `replyUrlsWithType`. For example, to add `https://www.examples.com/auth-end.html` as redirect URL, you can add it as the following example:
 
@@ -111,11 +122,14 @@ The following permissions are used property IDs:
       ]
       ```
 
+    <br>
+
+    </details>
+
 <br>
 
 <details>
-
-<summary><b>3. Deploy Azure AD application changes for local environment</b></summary>
+<summary>3. Deploy Azure AD application changes for local environment</summary>
 
 1. Select `Preview` CodeLens in `aad.template.json`.
   
@@ -139,7 +153,7 @@ The following permissions are used property IDs:
 
 <details>
 
-<summary><b>4. Deploy Azure AD application changes for remote environment</b></summary>
+<summary>4. Deploy Azure AD application changes for remote environment</summary>
 
 1. Open the command palette and select: `Teams: Deploy Azure Active Directory application manifest`.
   
