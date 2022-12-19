@@ -73,6 +73,8 @@ const inkingManager = new InkingManager(canvasHostElement);
 
 // Begin synchronization for LiveCanvas
 await liveCanvas.initialize(inkingManager);
+
+inkingManager.activate();
 ```
 
 # [TypeScript](#tab/typescript)
@@ -98,6 +100,8 @@ const inkingManager = new InkingManager(canvasHostElement);
 
 // Begin synchronization for LiveCanvas
 await liveCanvas.initialize(inkingManager);
+
+inkingManager.activate();
 ```
 
 ---
