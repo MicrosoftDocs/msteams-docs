@@ -343,7 +343,7 @@ Select **Project** > **Teams Toolkit** > **Update Manifest in Teams Developer Po
 
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-update-manifest1.png" alt-text="Screenshot is an example of showing the navigation to update manifest in Teams developer portal." lightbox="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-update-manifest1.png":::
 
-You can also sync the local changes to developer portal from the context menu of **Solution Explorer** section. After the local changes are synced, you can preview the manifest file in Developer Portal.
+You can also sync the local changes to Developer Portal from the context menu of **Solution Explorer** section. After the local changes are synced, you can preview the manifest file in Developer Portal.
 
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-update-manifest2.png" alt-text="Update manifest in Teams developer portal from solution explorer section":::
 
