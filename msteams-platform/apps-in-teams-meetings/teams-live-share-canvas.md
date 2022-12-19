@@ -269,7 +269,7 @@ import {
 
 // Change the selected tool to laser pointer
 document.getElementById("laser").onclick = () => {
-  inkingManager.tool = InkingTool.highlighter;
+  inkingManager.tool = InkingTool.laserPointer;
 };
 // Change the selected color for laser pointer
 document.getElementById("laser-color").onchange = () => {
