@@ -11,7 +11,7 @@ zone_pivot_groups: teams-app-platform
 
 # Deploy Teams app to the cloud
 
-Teams Toolkit helps you to deploy or upload the front-end and back-end code in your application to your provisioned cloud resources in Azure.
+Teams Toolkit helps to deploy or upload the front-end and back-end code in your app to your provisioned cloud resources in Azure.
 
 ::: zone pivot="visual-studio-code"
 
