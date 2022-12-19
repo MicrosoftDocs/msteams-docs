@@ -1,7 +1,7 @@
 ---
 title: Deep link to a workflow in Teams
 author: v-npaladugu
-description:  In this article, learn how to create deep links to a workflow and navigate them in your Microsoft Teams.
+description: Learn how to create deep links to a specific task in Microsoft Teams and navigate using them in your Teams.
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
@@ -9,7 +9,7 @@ ms.localizationpriority: high
 
 # Deep link to a workflow in Teams
 
-You can also create a deep link to perform an operation in Teams, such as to create a new chat, navigate to audio-video call, and opening a scheduling dialog.
+You can create a deep link to perform a specific task in Teams, such as to create a new chat, open a scheduling dialog, and navigate to audio-video call.
 
 ## Deep link to start a new chat
 
@@ -22,10 +22,10 @@ Example: `https://teams.microsoft.com/l/chat/0/0?users=joe@contoso.com,bob@conto
 The query parameters are:
 
 * `users`: The comma-separated list of user IDs representing the participants of the chat. The user that performs the action is always included as a participant. Currently, the User ID field supports the Microsoft Azure Active Directory (Azure AD) UserPrincipalName, such as an email address only.
-* `topicName`: An optional field for chat's display name, if a chat has three or more users. If this field isn't specified, the chat's display name is based on the names of the participants.
+* `topicName`: An optional field for chat's display name if a chat has three or more users. If this field isn't specified, the chat's display name is based on the names of the participants.
 * `message`: An optional field for the message text that you want to insert into the current user's compose box while the chat is in a draft state.
 
-To use this deep link with your bot, specify this as the URL target in your card's button or tap action through the `openUrl` action type. Apps can also use Teams JS SDK 2.0 to create this without having to manually prepare the deep link. Following is an example using Teams JS SDK:
+To use this deep link with your bot, specify this as the URL target in your card's button or tap action through the `openUrl` action type. Apps can also use Teams Java Script SDK 2.0 to create this without having to manually prepare the deep link. Following is an example using Teams JS SDK:
 
 ```javascript
 if(chat.isSupported()) {
@@ -39,34 +39,29 @@ else { /* handle case where capability isn't supported */ }
 
 ## Deep link to open a meeting scheduling dialog
 
-Applications can open a meeting scheduling dialog and provide information such as meeting title, participants. While it's recommended to use the typed APIs of Teams JS, it's possible to manually create deep links to the Teams built-in scheduling dialog. Use the following format for a deep link that you can use in a bot, Connector, or message extension card:
+Applications can open a meeting scheduling dialog and provide information such as meeting title and participants. While it's recommended to use the typed APIs of TeamsJS, it's possible to manually create deep links to the Teams built-in scheduling dialog. Use the following format for a deep link that you can use in a bot, connector, or message extension card:
 
 `https://teams.microsoft.com/l/meeting/new?subject=<meeting subject>&startTime=<date>&endTime=<date>&content=<content>&attendees=<user1>,<user2>,<user3>,...`
 
 Example: `https://teams.microsoft.com/l/meeting/new?subject=test%20subject&attendees=joe@contoso.com,bob@contoso.com&startTime=10%2F24%2F2018%2010%3A30%3A00&endTime=10%2F24%2F2018%2010%3A30%3A00&content=​​​​​​​test%3Acontent​​​​​​​​​​​​​​`
 
 > [!NOTE]
-> The search parameters don't support `+` signal in place of whitespace (``). Ensure your uri encoding code returns `%20` for spaces for example, `?subject=test%20subject` is good, but `?subject=test+subject` is bad.
+> The search parameters don't support `+` signal in place of whitespace (``). Ensure your URI encoding code returns `%20` for spaces. For example, `?subject=test%20subject` is good, but `?subject=test+subject` is bad.
 
 The query parameters are:
 
-* `attendees`: The optional comma-separated list of user IDs representing the attendees of the meeting. The user performing the action is the meeting organizer. Currently, the User ID field supports only the Azure AD UserPrincipalName, typically an email address.
+* `attendees`: The optional comma-separated list of user IDs representing the attendees of the meeting. The user performing the action is the meeting organizer. Currently, the user ID field supports only the Azure AD UserPrincipalName, typically an email address.
 * `startTime`: The optional start time of the event. This should be in [long ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601), for example *2018-03-12T23:55:25+02:00*.
 * `endTime`: The optional end time of the event, also in ISO 8601 format.
 * `subject`: An optional field for the meeting subject.
 * `content`: An optional field for the meeting details field.
 
 > [!NOTE]
-> Currently, specifying the location isn't supported. You must specify the UTC offset, it means time zones when generating your start and end times.
+> Currently, specifying the location isn't supported. You must specify the UTC offset, it means time zones, when generating your start and end times.
 
-To use this deep link with your bot, you can specify this as the URL target in your card's button or tap action through the `openUrl` action type.
+To use this deep link with your bot, you can specify this as the URL target in your card's button or as a tap action through the `openUrl` action type.
 
-Applications can also use Teams JS SDK 2.0 to open the meeting scheduling dialog without having to manually prepare the link. Refer to the code below:
-
-> [!NOTE]
-> In order to open the scheduling dialog in Teams, developers need to continue using the original deep-link URL based method, since Teams does not yet support the calendar capability.
-
-For more information about working with the calendar, see [calendar](/javascript/api/@microsoft/teams-js/calendar?view=msteams-client-js-latest&preserve-view=true) namespace in the API reference documentation.
+Applications can also use TeamsJS SDK 2.0 to open the meeting scheduling dialog without having to manually prepare the link. Refer to the following code sample, provided a note:
 
 # [TeamsJS v2](#tab/teamsjs-v2)
 
@@ -95,16 +90,21 @@ microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/meeting/new?subjec
 
 ---
 
+> [!NOTE]
+> In order to open the scheduling dialog in Teams, the developers need to continue using the original deep-link URL based method, since Teams doesn't support the calendar capability yet.
+
+For more information about working with the calendar, see [calendar](/javascript/api/@microsoft/teams-js/calendar?view=msteams-client-js-latest&preserve-view=true) namespace in the API reference documentation.
+
 ## Deep link to start an audio-video call with users
 
-Applications can prepare a deep link for users to start one-on-one or a group audio or video call. You can invoke audio only or audio-video calls to a single user or a group of users, by specifying the call type and the participants. Before placing the call, Teams client prompts a confirmation to make the call. If there's group call, you can call a set of VoIP users and a set of PSTN users in the same deep link invocation.
+Applications can prepare a deep link for users to start one-on-one or a group audio or video call. You can invoke audio only or audio-video calls to a single user or a group of users by specifying the call type and the participants. Before placing the call, Teams client prompts a confirmation to make the call. If there's a group call, you can call a set of VoIP users and a set of PSTN users in the same deep link invocation.
 
 In a video call, the client will ask for confirmation and turn on the caller's video for the call. The receiver of the call has a choice to respond through audio only or audio and video, through the Teams call notification window.
 
 > [!NOTE]
-> This method cannot be used for invoking a meeting. Refer to the following formats:
+> This method cannot be used for invoking a meeting.
 
-While use of the typed APIs of TeamsJS is recommended, you can also use a manually created deep link to start a call. Refer to the following formats:
+While the use of the typed APIs of TeamsJS is recommended, you can also use a manually created deep link to start a call. Refer to the following formats:
 
 | Deep link | Format | Example |
 |-----------|--------|---------|
@@ -115,12 +115,11 @@ While use of the typed APIs of TeamsJS is recommended, you can also use a manual
   
 Following are the query parameters:
 
-* `users`: The comma-separated list of user IDs representing the participants of the call. Currently, the User ID field supports the Azure AD UserPrincipalName, typically an email address, or in a PSTN call, it supports a pstn mri 4:&lt;phonenumber&gt;.
-* `withVideo`: This is an optional parameter, which you can use to make a video call. Setting this parameter will only turn on the caller's camera. The receiver of the call has a choice to answer through audio or audio and video call through the Teams call notification window.
+* `users`: The comma-separated list of user IDs representing the participants of the call. Currently, the user ID field supports the Azure AD UserPrincipalName, typically an email address, or in a PSTN call, it supports a pstn mri 4:&lt;phonenumber&gt;.
+* `withVideo`: This is an optional parameter, which you can use to make a video call. Setting this parameter will only turn on the caller's camera. The receiver of the call has a choice to answer through an audio or an audio and video call through the Teams call notification window.
 * `Source`: This is an optional parameter, which informs about the source of the deep link.
 
-Applications can also use Teams JS SDK 2.0 to start calls without having to manually prepare these deep links. Refer to the code below:
-
+Applications can also use TeamsJS SDK 2.0 to start calls without having to manually prepare these deep links.
 The following code demonstrates using the TeamsJS SDK to start a call:
 
 ```javascript
@@ -140,11 +139,11 @@ You can also generate a deep link to [share the app to stage](~/apps-in-teams-me
 
 > [!NOTE]
 >
-> * Currently, generate a deep link to share content to stage in meetings is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
+> * Currently, generating a deep link to share content to stage in meetings is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
 > * Deep link to share content to stage in meeting is supported in Teams desktop client only.
 
-For deep links to share content to stage, see [deep link to share content to stage in meetings](~/concepts/build-and-test/share-in-meeting.md#generate-a-deep-link-to-share-content-to-stage-in-meetings)
+For deep links to share content to stage, see [deep link to share content to stage in meetings](~/concepts/build-and-test/share-in-meeting.md#generate-a-deep-link-to-share-content-to-stage-in-meetings).
 
 ## Deep link to join a meeting
 
-Application can read "Join a meeting" URLs through Graph APIs. This deep link brings up the UI for the user to join that meeting.
+Application can read Join a meeting URLs through Graph APIs. This deep link brings up the UI for the user to join that meeting.

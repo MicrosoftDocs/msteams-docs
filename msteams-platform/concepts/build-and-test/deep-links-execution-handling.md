@@ -1,7 +1,7 @@
 ---
 title: Execution and handling of deep links
 author: v-npaladugu
-description:  In this article, learn how to execute and handle deep links in your Microsoft Teams.
+description: Learn how to execute and handle deep links in your Microsoft Teams.
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
@@ -13,16 +13,16 @@ Applications can execute deep links from the following different contexts:
 
 * Personal tab
 * Shared tab
-* Bot
 * Chat message
+* Bot
 
 ## Personal or Shared tab
 
-It's possible to navigate within an app using Teams JS. The following code demonstrates how to navigate to a specific entity within your Teams app. Apps can execute a deep link using the JS SDK. To execute a deep link, call the following API:
+It's possible to navigate within an app using TeamsJS. The following code demonstrates how to navigate to a specific entity within your Teams app. Apps can execute a deep link using the JS SDK. To execute a deep link, call the following API:
 
 # [TeamsJS v2](#tab/teamsjs-v2)
 
-You can trigger navigation from your tab using the [pages.navigateToApp()](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest#@microsoft-teams-js-pages-navigatetoapp&preserve-view=true) function as shown in the following code:
+You can trigger the navigation from your tab using the [pages.navigateToApp()](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest#@microsoft-teams-js-pages-navigatetoapp&preserve-view=true) function as shown in the following code:
 
 ```javascript
 if (pages.isSupported()) {
@@ -46,62 +46,62 @@ microsoftTeams.executeDeepLink(/*deepLink*/);
 
 ---
 
-Application can also use the SDK to execute certain scenarios without building a deep link themselves. Refer to each scenario for sample code.
+Applications can also use the SDK to execute certain scenarios without building a deep link themselves. Refer to each scenario for sample code.
 
 ## Chat message
 
-Applications can post messages to a chat and add deep links to them. The following are different ways an application can include a deep link in a message
+Applications can post messages to a chat and add deep links to them. The following are different ways an application can include a deep link in a message.
 
 ### Hyperlink text message
 
-Applications can add a deep link as a hyper link markdown. The deep link will be executed within teams. Refer the code below:
+Applications can add a deep link as a hyperlink markdown. The deep link will be executed within teams. Refer the following code sample::
 
 `add sample`
 
 ### Raw link text message
 
-Applications can include the raw link in a message. The deep link will execute within teams. Refer the code below:
+Applications can include the raw link in a message. The deep link will be executed within teams. Refer the code below:
 
 `add sample`
 
-### Adaptive Card – Open URL Action  
+### Adaptive Card – Open URL action  
 
-Applications can include an `open URL` action in an adaptive card and add a deep link to it. The deep link will execute with-in Teams. Refer to the sample adaptive card payload below:
+Applications can include an `open URL` action in an Adaptive Card and add a deep link to it. The deep link will be executed within Teams. Refer to the following sample Adaptive Card payload:
 
 `add sample`
 
 ### Adaptive Card as hyperlink Markdown (Not recommended)
 
-Applications can include a hyperlink markdown in an adaptive card. This opens in browser first**. Refer to sample payload below:
+Applications can include a hyperlink Markdown in an Adaptive Card. This opens in browser first. Refer to the following sample payload:
 
 `add sample`
 
 ### Adaptive Card as raw link (Not recommended)
 
-Raw link in adaptive card body doesn't have any action associated.
+Raw link in Adaptive Card body doesn't have any action associated.
 
 ## Bot
 
 ### Open URL action in bot
 
-Applications can include an `open URL` action in a bot and add a deep link to it. The deep link will execute with-in Teams. Refer to the sample adaptive card payload below:
+Applications can include an `open URL` action in a bot and can add a deep link to it. The deep link will be executed within Teams. Refer to the following sample Adaptive Card payload:
 
 `add sample`
 
 ### Card body of the bot
 
-Applications can include the raw link in a Card body. The deep link opens in a browser first. Refer the code below:
+Applications can include the raw link in a Card body. The deep link opens in a browser first. Refer the following code sample:
 
 `add sample`
 
-#### Hyperlink markdown in a Bot
+#### Hyperlink Markdown in a Bot
 
-Applications can include a hyperlink markdown in a Bot. This opens in browser first**. Refer to sample payload below:
+Applications can include a hyperlink Markdown in a Bot. This opens in browser first. Refer to sample payload below:
 
 `add sample`
 
 ## Handling deep links
 
-When a deep link to an application tab is executed, applications should make sure they respect all the parameters set in that link on tab context. Applications should read the tab context to identify the page, sub page, or label referred to in the deep link and should navigate to the specific section.
+When a deep link to an application tab is executed, applications should make sure they respect all the parameters set in that link on the tab context. Applications should read the tab context to identify the page, subpage, or label referred to in the deep link and should navigate to the specific section.
 
 `example`
