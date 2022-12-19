@@ -8,17 +8,17 @@ ms.author: surbhigupta
 ---
 # Succeed with your collaborative app
 
-To wrap up, your collaborative app is now becoming a full-fledged strategic product line similar to your core SaaS product for the web browser or native apps for Windows or mobile phones. To maximize success for your customers and ROI for your business, this section covers the initiatives and growth levers you must use.
+To wrap up, your collaborative app is now becoming a full-fledged strategic product line. It's similar to your core SaaS product for the web browser or native apps for Windows or mobile phones. To maximize success for your customers and ROI for your business, this section covers the initiatives and growth levers you must use.
 
 ## What should you as a developer do during this final stage?
 
 - **Wider TAM coverage across existing and prospect user base**:
 
-    Continue to increase the usage of your collaborative app on Teams through existing customer activation and new customer acquisition via the Teams marketplace or through sales-led customer deal wins leading with your app.
+    Continue to increase the usage of your collaborative app on Teams through existing customer activation. You can continue new customer acquisition via the Teams marketplace or through sales-led customer deal wins leading with your app.
 
 - **Report and celebrate customer activation, deal wins and revenue**:
 
-    Share notable customer wins, customer success stories and resulting revenue from user acquisition or deal wins attributed to your Teams app with your Microsoft field, account, or engineering representatives so that Microsoft can selectively drive executive visibility for your app and explore any possible GTM or marketing-drive acceleration for your app.
+    Share notable customer wins, customer success stories, and resulting revenue from user acquisition or deal wins attributed to your Teams app with the Microsoft field, account, or engineering representatives. Microsoft can selectively drive executive visibility for your app and explore any possible GTM or marketing-drive acceleration for your app.
 
 - **Convert PQLs from Teams app into active sales pipeline**:
 
