@@ -24,14 +24,14 @@ This information helps you analyze the data against your business goals, take co
 
 **But Teams app usage report must suffice, isn’t it?**
 
-As the app’s developer, you can track your app’s usage in the [Teams app usage report](../deploy-and-publish/appsource/post-publish/overview.md#analyze-app-usage) in Partner Center within a week after publishing your app on the Teams public app store. The usage report provides standard metrics that enable you to track user demand, user churn, and frequency of usage for your app. These reports are available at an aggregate level, such as:
+As the app’s developer, you can track your app’s usage in the [Teams app usage report](../deploy-and-publish/appsource/post-publish/overview.md#analyze-app-usage) in Partner Center within a week after publishing your app on the Teams public app store. Custom app developers can find [usage analytics for their custom apps](../build-and-test/manage-your-apps-in-developer-portal.md) in the Developer Portal for Teams. Partner Centers's usage report provides standard metrics that enable you to track user demand, user churn, and frequency of usage for your app. These reports are available at an aggregate level, such as:
 
 - Monthly, daily, and weekly active users.
 - Retention and intensity charts.
 - Users who have used your app more than five days in the last month.
 - Platform, operating system, and geographic split of users for your app, and so on.
 
-Teams usage reports can't provide you with in-depth analytics of what goes on inside your app and specific user-level analytics. Such analytics include a user’s journey within your app or a user’s engagement with specific features and measuring scenario completions.
+The out-of-box avaialble usage reports in Partner Center or the Developer Portal for Teams can't provide you with in-depth analytics of what goes on inside your app and specific user-level analytics. Such analytics include a user’s journey within your app or a user’s engagement with specific features and measuring scenario completions.
 
 Your app on Teams is essentially a web-based service hosted elsewhere, for example, Azure cloud. It's embedded and surfaced inside Microsoft Teams shell where users can use your app. This applies to your app irrespective of the [platform capabilities](../../overview-explore.md) used, such as tabs, bots, message extensions, meeting extensions, cards, task modules, and so on. All these capabilities are a means to surface web-based experiences inside Teams.
 
