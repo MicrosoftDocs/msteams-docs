@@ -387,7 +387,7 @@ The Teams app manifest defines your app's configuration.
 
 * We recommend that you declare the Microsoft Partner Network (MPN) ID in the manifest. The MPN ID helps identify the partner organization that builds the app. [*Suggested Fix*]
 
-* Scopes and/or context declared in app manifest must be visible within the app. [*Suggested Fix*]
+* Scopes and/or context declared in app manifest must be visible within the app. [*Mandatory Fix*]
 
 ### App icons
 
@@ -567,7 +567,6 @@ Remember the following:
 * Frame screenshots with a color that reflects your brand and include marketing content.
 * Use high-resolution screenshots that are sharp and contain legible and clearly readable text. [*Mandatory Fix*]
 * At least one screenshot must depict your app’s functionality on mobile devices. [*Mandatory Fix*]
-* We recommend that you provide captions in your screenshots to let the user clearly understand the app capability. [*Mandatory Fix*]
 * You can have up to five screenshots per listing. You must have a minimum of three and maximum five screenshots in your app listing. [*Mandatory Fix*]
 * Use mockups that accurately depict the app’s actual UI for the benefit of end-users. Screenshots must accurately depict the app’s actual UI or scenarios relevant to and related to the app. [*Mandatory Fix*]
 * Must depict app functionality or integration with Teams. [*Mandatory Fix*]
@@ -1247,7 +1246,9 @@ Action-based message extensions must do the following:
 
 [*Mandatory Fix*]
 
-Message extensions must preview recognized links in the Teams compose box. Don't add domains that are outside your control (either absolute URLs or wildcards). For example, `yourapp.onmicrosoft.com` is valid but `*.onmicrosoft.com` isn't valid. Top-level domains also are prohibited. For example, `*.com` or `*.org`. [*Mandatory Fix*]
+* Message extensions must preview recognized links in the Teams compose box. Don't add domains that are outside your control (either absolute URLs or wildcards). For example, `yourapp.onmicrosoft.com` is valid but `*.onmicrosoft.com` isn't valid. Top-level domains also are prohibited. For example, `*.com` or `*.org`. [*Mandatory Fix*]
+
+* Apps must only declare that are under the app publisher’s direct ownership in the `messageHandler` link unfurling section of the manifest. It mustn’t contain `*.botframework.com.` [*Mandatory Fix*]
 
 </details>
 </br>
