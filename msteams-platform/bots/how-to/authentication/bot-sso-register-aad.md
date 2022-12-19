@@ -19,6 +19,7 @@ To configure SSO for your bot or message extension app, you'll need to:
 
 > [!NOTE]
 > Ensure that you've created an app and a bot resource in Azure AD.
+>
 > - For more information about creating an app in Azure AD, see [Register a new app in Azure AD](../../../tabs/how-to/authentication/tab-sso-register-aad.md#to-register-a-new-app-in-azure-ad).
 > - For more information about creating and configuring your bot resource in Azure AD, see [Create Teams conversation bot](../../../sbs-teams-conversation-bot.yml).
 
@@ -164,8 +165,8 @@ You need:
     >
     >   | If base resource name used is | URL will be... | Format is supported on... |
     >   | --- | --- | --- |
-    >   | *demoapplication* | **<https://demoapplication.example.net>** | All platforms.|
-    >   | *DemoApplication* | **<https://DemoApplication.example.net>** | Desktop, web, and iOS only. It isn't supported in Android. |
+    >   | *demoapplication* | **`https://demoapplication.example.net`** | All platforms.|
+    >   | *DemoApplication* | **`https://DemoApplication.example.net`** | Desktop, web, and iOS only. It isn't supported in Android. |
     >
     >    Use the lowercase option *demoapplication* as base resource name.
 
@@ -368,7 +369,7 @@ You can configure authentication for multiple platforms as long as the URL is un
 
         > [!NOTE]
         > The URL mentioned in **Redirect URIs** is an example.
-    
+
     1. Enter the front-channel log-out URL.
     1. Select the tokens you want Azure AD to send for your app.
 
@@ -525,8 +526,8 @@ To configure scope and authorize trusted client applications, you'll need:
     >
     >   | If base resource name used is | URL will be... | Format is supported on... |
     >   | --- | --- | --- |
-    >   | *demoapplication* | **<https://demoapplication.example.net>** | All platforms.|
-    >   | *DemoApplication* | **<https://DemoApplication.example.net>** | Desktop, web, and iOS only. It isn't supported in Android. |
+    >   | *demoapplication* | **`https://demoapplication.example.net`** | All platforms.|
+    >   | *DemoApplication* | **`https://DemoApplication.example.net`** | Desktop, web, and iOS only. It isn't supported in Android. |
     >
     >    Use the lowercase option *demoapplication* as base resource name.
 
