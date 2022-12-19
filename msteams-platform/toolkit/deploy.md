@@ -15,11 +15,11 @@ Teams Toolkit helps to deploy or upload the front-end and back-end code in your 
 
 ::: zone pivot="visual-studio-code"
 
-## Deploy Teams app to the cloud using Visual Studio Code
+## Deploy Teams app to the cloud using Microsoft Visual Studio Code
 
 You can deploy the following to the cloud:
 
-* The tab, such as front-end applications are deployed to Azure Storage and configured for static web hosting or a sharepoint site.
+* The tab, such as front-end apps are deployed to Azure Storage and configured for static web hosting or a sharepoint site.
 * The back-end APIs are deployed to Azure Functions.
 * The bot or message extension is deployed to Azure App Service.
 
@@ -28,7 +28,7 @@ You can deploy the following to the cloud:
 
 ## Deploy Teams apps using Teams Toolkit
 
-The Get started guides help you to deploy using Teams Toolkit. You can use the following to deploy your Teams app:
+The Get started guides help to deploy using Teams Toolkit. You can use the following to deploy your Teams app:
 
 * [Deploy your app to Azure](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=4)
 * [Deploy your app to SharePoint](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4)
@@ -37,10 +37,10 @@ The Get started guides help you to deploy using Teams Toolkit. You can use the f
 
 | Teams app workload | Source code | Build artifact| Target resource |
 |-------------|----------|---------------|---------------|
-|Tabs with React </br> The frontend workload| `yourProjectFolder/tabs`| `tabs/build` |Azure Storage |
-|Tabs with SharePoint </br> The frontend workload | `yourProjectFolder/SPFx`| `SPFx/sharepoint/solution` |SharePoint app catalog |
-|APIs on Azure Functions </br> The backend workload | `yourProjectFolder/api`| Not applicable |Azure Functions |
-|Bots and message extensions </br> The backend workload | `yourProjectFolder/bot` | Not applicable | Azure App Service |
+|Tabs with React </br> The front-end workload| `yourProjectFolder/tabs`| `tabs/build` |Azure Storage |
+|Tabs with SharePoint </br> The front-end workload | `yourProjectFolder/SPFx`| `SPFx/sharepoint/solution` |SharePoint app catalog |
+|APIs on Azure Functions </br> The back-end workload | `yourProjectFolder/api`| Not applicable |Azure Functions |
+|Bots and message extensions </br> The back-end workload | `yourProjectFolder/bot` | Not applicable | Azure App Service |
 
 > [!NOTE]
 > When you include Azure API management resource in your project and trigger deploy, you can publish your APIs in Azure Functions to Azure API management service.
@@ -51,26 +51,26 @@ The Get started guides help you to deploy using Teams Toolkit. You can use the f
 
 ## Deploy Teams app to the cloud using Visual Studio
 
-The following apps can be deployed in Visual Studio:
+You can deploy the following to the cloud:
 
-* The tab app, such as frontend applications are deployed to Azure Storage, configured for static web hosting.
+* The tab app, such as front-end apps are deployed to Azure Storage, configured for static web hosting.
 * The notification bot app with Azure Functions triggers can be deployed to Azure Functions.
 * The bot app or message extension can be deployed to Azure App Services.
 
-After deploying, you can preview the app in Teams client or the web browser before you can start using.
+After deploying, you can preview the app in Teams client or the web browser before you start using.
 
 ## Deploy Teams app using Teams Toolkit
 
-1. Open Visual Studio.
+1. Open **Visual Studio**.
 1. Select **Create a new project** or open an existing project from the list.
-1. Right-click on your project **MyTeamsApp1** > **Teams Toolkit** > **Deploy to the cloud**.
+1. Right-click on your project **MyTeamsApp1** > **Teams Toolkit** > **Deploy to the cloud...**.
 
-   :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/vs-deploy-cloud.png" alt-text="deploy to cloud":::
+   :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/vs-deploy-cloud_1.png" alt-text="deploy to cloud":::
 
    > [!NOTE]
-   > In this scenario the project name is MyTeamsApp1.
+   > In this scenario the project name is MyTeamsApp4.
 
-1. Select **Deploy** in the confirmation dialog.
+1. In the pop-up window that appears, select **Deploy**.
 
    :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/vs-deploy-confirmation.png" alt-text="Deploy to cloud confirmation dialog":::
 
@@ -80,10 +80,10 @@ After deploying, you can preview the app in Teams client or the web browser befo
 
 ### Preview your app
 
-To preview your app, you first need to create a Zip app package and sideload into the Teams client.
+To preview your app, you first need to create a **Zip App Package** and sideload into the Teams client.
 
 1. Select **Project** > **Teams Toolkit** > **Zip App Package**.
-1. Select option **For Local** or **For Azure** to generate Teams app package.
+1. Select **For Local** or **For Azure** to generate Teams app package.
 
    :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/vs-deploy-ZipApp-package1.png" alt-text="Generate teams app package":::
 
