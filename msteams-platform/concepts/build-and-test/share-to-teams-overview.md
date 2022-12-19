@@ -32,4 +32,5 @@ For more information, see [Share to Teams from personal app or tab](share-to-tea
 
 ## See also
 
-[Share to Teams developer page](https://developer.microsoft.com/microsoft-teams/share-to-teams#/)
+* [Integrate web apps](../../samples/integrate-web-apps-overview.md)
+* [Share to Teams developer page](https://developer.microsoft.com/microsoft-teams/share-to-teams#/)

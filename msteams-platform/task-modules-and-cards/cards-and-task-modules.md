@@ -39,3 +39,5 @@ You can provide [dynamic search](~/task-modules-and-cards/cards/dynamic-search.m
 
 * [Cards](~/task-modules-and-cards/what-are-cards.md)
 * [Task modules](~/task-modules-and-cards/what-are-task-modules.md)
+* [Authenticate users in Microsoft Teams](../concepts/authentication/authentication.md)
+* [Create Office 365 Connectors](../webhooks-and-connectors/how-to/connectors-creating.md)
