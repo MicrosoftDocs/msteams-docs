@@ -1,7 +1,7 @@
 ---
 title: Use Teams Toolkit to provision cloud resources
 author: MuyangAmigo
-description: In this module, learn how to do provision cloud resources using Teams Toolkit, resource creation and customize resource provision
+description: Learn how to do provision cloud resources using Teams Toolkit in Visual Studio Code and Visual Studio, resource creation and customize resource provision
 ms.author: shenwe
 ms.localizationpriority: medium
 ms.topic: overview
@@ -11,7 +11,7 @@ zone_pivot_groups: teams-app-platform
 
 # Provision cloud resources
 
-TeamsFx integrates with Azure and the Microsoft 365 cloud, which allows you to deploy your app in Azure with a single command. TeamsFx integrates with Azure Resource Manager (ARM), which enables you to provision Azure resources that your application needs for code approach.
+TeamsFx integrates with Azure and the Microsoft 365 cloud, which allows to deploy your app in Azure with a single command. TeamsFx integrates with Azure Resource Manager (ARM), which enables to provision Azure resources that your application needs for code approach.
 
 ::: zone pivot="visual-studio-code"
 
@@ -27,7 +27,7 @@ When you trigger the provision command in Teams Toolkit or TeamsFx CLI, you can 
 * Teams app registration under your Microsoft 365 tenant's Teams platform.
 * Azure resources under your selected Azure subscription.
 
-When you create a new project, you can use all the Azure resources. The ARM template defines all the Azure resources and helps to create required Azure resources during provision. When you [add a new capability resource](./add-resource.md) to an existing project, the updated ARM template reflects the latest change.
+When you create a new project, you also need to create Azure resources. The ARM template defines all the Azure resources and helps to create required Azure resources during provision. When you [add a new capability resource](./add-resource.md) to an existing project, the updated ARM template reflects the latest change.
 
 > [!NOTE]
 > Azure services incur costs in your subscription. For more information on cost estimation, see [pricing calculator](https://azure.microsoft.com/pricing/calculator/).
@@ -40,8 +40,8 @@ The following list shows the resource creation for different types of app and Az
 
 |Resource|Purpose|Description |
 |----------|--------------------------------|-----|
-| Azure storage | Host your tab app. | Enables static web app feature to host your tab app. |
-| User assigned identity | Authenticate Azure service-to-service requests. | Shares across different capabilities and resources. |
+| Azure storage | Hosts your tab app. | Enables static web app feature to host your tab app. |
+| User assigned identity | Authenticates Azure service-to-service requests. | Shares across different capabilities and resources. |
 
 </details>
 <br>
@@ -52,9 +52,9 @@ The following list shows the resource creation for different types of app and Az
 |Resource|Purpose| Description |
 |----------|--------------------------------|-----|
 | Azure bot service | Registers your app as a bot with the bot framework. | Connects bot to Teams. |
-| App service plan for bot | Host the web app of bot. |Not applicable |
-| Web app for bot | Host your bot app. | Adds user assigned identity to access other Azure resources. <br /> Adds app settings required by [TeamsFx SDK](https://www.npmjs.com/package/@microsoft/teamsfx). |
-| User assigned identity | Authenticate Azure service-to-service requests. | Shares across different capabilities and resources. |
+| App service plan for bot | Hosts the web app of bot. |Not applicable |
+| Web app for bot | Hosts your bot app. | - Adds user assigned identity to access other Azure resources. <br />- Adds app settings required by [TeamsFx SDK](https://www.npmjs.com/package/@microsoft/teamsfx). |
+| User assigned identity | Authenticates Azure service-to-service requests. | Shares across different capabilities and resources. |
 
 </details>
 <br>
@@ -64,10 +64,10 @@ The following list shows the resource creation for different types of app and Az
 
 |Resource|Purpose| Description|
 |----------|--------------------------------|-----|
-| App service plan for function app | Host the function app. |Not applicable |
-| Function app | Host your Azure Functions APIs. | Adds a user assigned identity to access other Azure resources. <br /> Adds cross-origin resource sharing (CORS) rule to allow requests from your tab app. <br /> Adds an authentication setting that allows requests from your Teams app. <br /> Adds app settings required by [TeamsFx SDK](https://www.npmjs.com/package/@microsoft/teamsfx). |
+| App service plan for function app | Hosts the function app. |Not applicable |
+| Function app | Hosts your Azure Functions APIs. | - Adds user assigned identity to access other Azure resources. <br />- Adds cross-origin resource sharing (CORS) rule to allow requests from your tab app. <br />- Adds an authentication setting that allows requests from your Teams app. <br />- Adds app settings required by [TeamsFx SDK](https://www.npmjs.com/package/@microsoft/teamsfx). |
 | Azure storage for function app | Requires to create function app. |Not applicable|
-| User assigned identity | Authenticate Azure service-to-service requests. | Shares across different capabilities and resources. |
+| User assigned identity | Authenticates Azure service-to-service requests. | Shares across different capabilities and resources. |
 
 </details>
 <br>
@@ -77,9 +77,9 @@ The following list shows the resource creation for different types of app and Az
 
 |Resource|Purpose | Description |
 |----------|--------------------------------|-----|
-| Azure SQL server | Host the Azure SQL database instance. | Allows all Azure services to access the server. |
+| Azure SQL server | Hosts the Azure SQL database instance. | Allows all Azure services to access the server. |
 | Azure SQL database | Stores data for your app. | Grants user assigned identity, read or write permission to the database. |
-| User assigned identity | Authenticate Azure service-to-service requests. | Shares across different capabilities and resources |
+| User assigned identity | Authenticates Azure service-to-service requests. | Shares across different capabilities and resources |
 
 </details>
 <br>
@@ -90,10 +90,10 @@ The following list shows the resource creation for different types of app and Az
 |Resource|Purpose|
 |----------|--------------------------------|
 | Azure AD app for API management service | Allows Microsoft Power Platform access APIs managed by API management service. |
-| API management service | Manage your APIs hosted in function app. |
+| API management service | Manages your APIs hosted in function app. |
 | API management product | Group your APIs, define terms of use, and runtime policies. |
 | API management OAuth server | Enables Microsoft Power Platform to access your APIs hosted in function app. |
-| User assigned identity | Authenticate Azure service-to-service requests. |
+| User assigned identity | Authenticates Azure service-to-service requests. |
 
 </details>
 <br>
@@ -104,14 +104,14 @@ The following list shows the resource creation for different types of app and Az
 |Resource|Purpose of this resource|
 |----------|--------------------------------|
 | Azure Key Vault Service | Manage secrets (for example, Azure AD app client secret) used by other Azure services. |
-| User Assigned Identity | Authenticate Azure service-to-service requests. |
+| User Assigned Identity | Authenticates Azure service-to-service requests. |
 
 </details>
 <br>
 
 ## Customize resource provision
 
-Teams Toolkit enables you to use an infrastructure-as-code approach to define the Azure resources that you want to provision and how you want to configure. The tool uses the ARM template to define Azure resources. The ARM template is a set of `bicep` files that defines the infrastructure and configuration for your project. You can customize Azure resources by modifying the ARM template. For more information, see [bicep document](/azure/azure-resource-manager/bicep).
+Teams Toolkit enables you to use an infrastructure-as-code approach to define the Azure resources that you want to provision and how you want to configure. Teams toolkit uses the ARM template to define Azure resources. The ARM template is a set of `bicep` files that defines the infrastructure and configuration for your project. You can customize Azure resources by modifying the ARM template. For more information, see [bicep document](/azure/azure-resource-manager/bicep).
 
 Provision with ARM involves changing the following sets of files, parameters, and templates:
 
@@ -123,15 +123,15 @@ Provision with ARM involves changing the following sets of files, parameters, an
    | main.bicep | Provides an entry point for Azure resource provision. | Yes |
    | provision.bicep | Creates and configures Azure resources. | Yes |
    | config.bicep | Adds TeamsFx required configurations to Azure resources. | Yes |
-   | provision/xxx.bicep | Creates and configures each Azure resource consumed by `provision.bicep`. | Yes |
-   | teamsfx/xxx.bicep | Adds TeamsFx required configurations to each Azure resource consumed by `config.bicep`.| No |
+   | provision\xxx.bicep | Creates and configures each Azure resource consumed by `provision.bicep`. | Yes |
+   | teamsfx\xxx.bicep | Adds TeamsFx required configurations to each Azure resource consumed by `config.bicep`.| No |
 
 > [!NOTE]
 > When you add resources or capabilities to your project, `teamsfx\xxx.bicep` is regenerated, you can't customize the same. To modify the `bicep` files, you can use Git to track your changes to `teamsfx\xxx.bicep` files, which helps you not lose changes while adding resources or capabilities.
 
 ### Azure AD parameters
 
-The ARM template files use placeholders for parameters. The purpose of the placeholders is to ensure the creation of new resources for you in a new environment. The actual values are resolved from `.fx\states\state.{env}.json`.
+The ARM template files use placeholders for parameters. The purpose of the placeholders is to ensure that the creation of new resources for you in a new environment. The actual values are resolved from `.fx\states\state.{env}.json` file.
 
 There are two types of parameters, such as:
 
@@ -144,7 +144,7 @@ There are two types of parameters, such as:
 | --- | --- | --- | --- |
 | Microsoft 365 ClientId | `{{state.fx-resource-aad-app-for-teams.clientId}}` | Your app's Azure AD app client Id is created during provision. | [Use an existing Azure AD app for your bot](#use-an-existing-azure-ad-app-for-your-bot). |
 | Microsoft 365 ClientSecret | `{{state.fx-resource-aad-app-for-teams.clientSecret}}` | Your app's Azure AD app client secret is created during provision. | [Use an existing Azure AD app for your Teams app](#use-an-existing-azure-ad-app-for-your-teams-app). |
-| Microsoft 365 TenantId | `{{state.fx-resource-aad-app-for-teams.tenantId}}` | Tenant Id of your app's Azure AD app | [Use an existing Azure AD app for your Teams app](#use-an-existing-azure-ad-app-for-your-teams-app)  |
+| Microsoft 365 TenantId | `{{state.fx-resource-aad-app-for-teams.tenantId}}` | Tenant Id of your app's Azure AD app | [Use an existing Azure AD app for your Teams app](#use-an-existing-azure-ad-app-for-your-teams-app).  |
 | Microsoft 365 OAuthAuthorityHost | `{{state.fx-resource-aad-app-for-teams.oauthHost}}` | OAuth authority host of your app's Azure AD app. | [Use an existing Azure AD app for your Teams app](#use-an-existing-azure-ad-app-for-your-teams-app). |
 | botAadAppClientId | `{{state.fx-resource-bot.botId}}` | Bot's Azure AD app client Id created during provision. | [Use an existing Azure AD app for your bot](#use-an-existing-azure-ad-app-for-your-bot). |
 | botAadAppClientSecret | `{{state.fx-resource-bot.botPassword}}` | Bot's Azure AD app client secret is created during provision. | [Use an existing Azure AD app for your bot](#use-an-existing-azure-ad-app-for-your-bot). |
@@ -158,7 +158,7 @@ There are two types of parameters, such as:
 
 #### Reference environment variables in parameter files
 
-If you don't want to hardcode the values in parameter files, for example, when the value is a secret. The parameter files support referencing the values from environment variables. You can use the syntax `{{$env.YOUR_ENV_VARIABLE_NAME}}` in parameter values for the tool to resolve the current environment variable.
+When the value is secret, then you don't need to hardcode them in parameter file. The parameter files support referencing the values from environment variables. You can use the syntax `{{$env.YOUR_ENV_VARIABLE_NAME}}` in parameter values for the tool to resolve the current environment variable.
 
 The following example reads the value of the `mySelfHostedDbConnectionString` parameter from the environment variable `DB_CONNECTION_STRING`:
 
@@ -170,23 +170,23 @@ The following example reads the value of the `mySelfHostedDbConnectionString` pa
 
 #### Customize ARM template files
 
-If the predefined templates don't meet your app requirements, you can customize the ARM templates under `templates\azure` folder. For example, you can customize the ARM template to create some additional Azure resources for your app. You need to have basic knowledge of the bicep language, which is used to author an ARM template. You can get started with bicep at [bicep documentation](/azure/azure-resource-manager/bicep/).
+If the predefined templates don't meet your app requirements, you can customize the ARM templates under `templates\azure` folder. For example, you can customize the ARM template to create some extra Azure resources for your app. You need to have basic knowledge of the bicep language, which is used to author an ARM template. You can get started with bicep at [bicep documentation](/azure/azure-resource-manager/bicep/).
 
 > [!NOTE]
-> The ARM template is shared by all environments. You can use [conditional deployment](/azure/azure-resource-manager/bicep/conditional-resource-deployment) if the provision behavior varies between environments.
+> The ARM template is shared by all environments. You can use [conditional deployment](/azure/azure-resource-manager/bicep/conditional-resource-deployment) if the provision behavior varies between the environments.
 
-To ensure the TeamsFx tool functions properly, ensure you customize ARM template, which satisfies the following requirement:
+To ensure the TeamsFx tool functions properly, customize ARM template that satisfies the following requirements:
 
 > [!NOTE]
 > If you use other tool for further development, you can ignore these requirements.
 
-* Keep the folder structure and file name unchanged. The tool may append new content to existing files when you add more resources or capabilities to your project.
-* Keep the names of the auto-generated parameters and its property names unchanged. The auto-generated parameters may be used when you add more resources or capabilities to your project.
-* Keep the output of the auto-generated ARM template unchanged. You can add additional outputs to the ARM template. The output is `.fx\states\state.{env}.json` and can be used in other features, such as deploy and validate manifest file.
+* Ensure that the folder structure and file name remain unchanged. The tool may append new content to the existing files when you add more resources or capabilities to your project.
+* Ensure that the names of the auto-generated parameters and its property names remain unchanged. The auto-generated parameters may be used when you add more resources or capabilities to your project.
+* Ensure that the output of the auto-generated ARM template remain unchanged. You can add more outputs to the ARM template. The output is `.fx\states\state.{env}.json` and can be used in other features, such as deploy and validate manifest file.
 
-### Customize scenarios
+### Customize Teams apps
 
-You can customize the following scenarios:
+You can customize your bot or the Teams app by adding configuration snippets to use an Azure AD app created by you. Perform the following ways to customize the Teams app:
 
 * [Use an existing Azure AD app for your Teams app](#use-an-existing-azure-ad-app-for-your-teams-app)
 * [Use an existing Azure AD app for your bot](#use-an-existing-azure-ad-app-for-your-bot-1)
@@ -204,10 +204,10 @@ You can add the following configuration snippet to `.fx\configs\config.{env}.jso
 }
 ```
 
-After adding the snippet, add your secret to the related environment variable so the tool can resolve the actual secret during provision.
+After adding the snippet, add your client secret to the related environment variable for Teams toolkit to resolve the actual client secret during provision.
 
 > [!NOTE]
-> Ensure that not to share the same Azure AD app in multiple environments. If you don't have permission to update the Azure AD app, you can get a warning with instructions about how to manually update the Azure AD app. Follow the instructions to update your Azure AD app after provision.
+> Ensure that not to share the same Azure AD app in multiple environments. If you don't have permission to update the Azure AD app, you get a warning with instructions about how to manually update the Azure AD app. Follow the instructions to update your Azure AD app after provision.
 
 #### Use an existing Azure AD app for your bot
 
@@ -220,11 +220,11 @@ You can add following configuration snippet to `.fx\configs\config.{env}.json` f
 }
 ```
 
-After adding the snippet, add your secret to related environment variable for the tool to resolve the actual secret during provision.
+After adding the snippet, add your client secret to related environment variable for Teams toolkit to resolve the actual client secret during provision.
 
 #### Skip adding user for SQL database
 
-If you have an insufficient permission error when the tool tries to add a user to the SQL database, you can add the following configuration snippet to `.fx\configs\config.{env}.json` file to skip adding the SQL database user:
+If you have an insufficient permission error when Teams toolkit tries to add a user to the SQL database, you can add the following configuration snippet to `.fx\configs\config.{env}.json` file to skip adding the SQL database user:
 
 ```json
 "skipAddingSqlUser": true
@@ -279,7 +279,7 @@ Add Azure storage to your Azure function back-end to store blob data. There's no
     }
     `````````
 
-4. Update the Azure function app settings with Azure storage connection string in `templates\azure\provision\function.bicep`. Add the following snippet to `functionApp` resource's `appSettings` array:
+4. Update the Azure Functions app settings with Azure storage connection string in `templates\azure\provision\function.bicep`. Add the following snippet to `functionApp` resource's `appSettings` array:
 
     ``````````````````bicep
     {
@@ -325,7 +325,7 @@ The following steps help you to provision cloud resources using Visual Studio:
 1. Open the Teams App project.
 1. Select **Project** > **Teams Toolkit** > **Provision in the cloud**.
 
-   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-in-cloud2_1.png" alt-text="Sign in to Azure account":::
+   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Provision-cloud-resources-in-TTK-VS/teams-toolkit-vs-provision-in-cloud2.png" alt-text="Sign in to Azure account":::
 
 1. Select **Sign in...** to sign in to your Azure account.
 
@@ -375,7 +375,7 @@ When you trigger provision command in Teams Toolkit or TeamsFx CLI, you can crea
 * Teams app registration under your Microsoft 365 tenant's Teams platform.
 * Azure resources under your selected Azure subscription.
 
-When you create a new project, you also need to create Azure resources. The ARM templates define all the Azure resources and help you to create the required Azure resources during provisioning.
+When you create a new project, you also need to create Azure resources. The ARM templates define all the Azure resources and help you to create the required Azure resources during provision.
 
 The following list shows the resource creation for different types of app and Azure resources:
 <br>
@@ -425,7 +425,7 @@ The following list shows the resource creation for different types of app and Az
 | --- | --- | --- |
 | Azure bot | Registers your app as a bot with the bot framework. | Connects bot to Teams. |
 | App service plan | Hosts your web bot app. | Not applicable |
-| App service | Host your bot app. | Adds user assigned identity to access other Azure resources. |
+| App service | Hosts your bot app. | Adds user assigned identity to access other Azure resources. |
 | Managed Identity | Authenticates Azure service-to-service requests. | Shares across different capabilities and resources. |
 
 </details>
@@ -496,15 +496,15 @@ Provision with ARM involves changing the following sets of files, parameters, an
   | main.bicep | Provides an entry point for Azure resource provision. | Yes |
   | provision.bicep | Creates and configures Azure resources. | Yes |
   | config.bicep | Adds TeamsFx required configurations to Azure resources. | Yes |
-  | provision/xxx.bicep | Creates and configures each Azure resource consumed by `provision.bicep`. | Yes |
-  | teamsfx/xxx.bicep | Adds TeamsFx required configurations to each Azure resource consumed by `config.bicep`.| No |
+  | provision\xxx.bicep | Creates and configures each Azure resource consumed by `provision.bicep`. | Yes |
+  | teamsfx\xxx.bicep | Adds TeamsFx required configurations to each Azure resource consumed by `config.bicep`.| No |
 
 > [!NOTE]
 > When you add resources or capabilities to your project, `teamsfx\xxx.bicep` is regenerated, you can't customize the same. To modify the bicep files, you can use Git to track your changes to `teamsfx\xxx.bicep` files. This doesn't make you lose any changes while adding resources or capabilities to your project.
 
 The ARM template files use placeholders for parameters. The purpose of the placeholders is to ensure that new resources can be created in a new environment. The actual values are resolved from `.fx\states\state.{env}.json` file.
 
-### Azure AD application related parameters
+### Azure AD app related parameters
 
 | Parameter name | Default value placeholder | Meaning of the placeholder | How to customize |
 | --- | --- | --- | --- |
@@ -517,7 +517,7 @@ The ARM template files use placeholders for parameters. The purpose of the place
 
 ### Reference environment variables in parameter files
 
-When the value is secret, then you don't need to hardcode them in parameter file. The parameter files support referencing the values from the environment variables. You can use this syntax `{{$env.YOUR_ENV_VARIABLE_NAME}}` in the parameter values for Teams Toolkit to resolve from current environment variable.
+When the value is secret, then you don't need to hardcode them in parameter file. The parameter files support referencing the values from the environment variables. You can use this syntax `{{$env.YOUR_ENV_VARIABLE_NAME}}` in the parameter values for Teams Toolkit to resolve from the current environment variable.
 
 The following example reads the value of the `mySelfHostedDbConnectionString` parameter from the environment variable `DB_CONNECTION_STRING`:
 
@@ -539,7 +539,7 @@ To ensure the TeamsFx tool functions properly, customize ARM template that satis
 
 ### Customize Teams app
 
-You can customize your bot or the Teams app by adding configuration snippets to use an Azure AD app created by you.
+You can customize your bot or the Teams app by adding configuration snippets to use an Azure AD app created for your Teams app.
 Perform in the following ways to customize the Teams app:
 
 * [Use an existing Azure AD app for your Teams app](#use-an-existing-azure-ad-app-for-your-teams-app)
@@ -547,7 +547,7 @@ Perform in the following ways to customize the Teams app:
 
 #### Use an existing Azure AD app for your Teams app
 
-You can add the following configuration snippet `.fx\configs\config.{env}.json` to use an Azure AD app created for your Teams app, to create an Azure AD app, see <https://aka.ms/teamsfx-existing-aad-doc>:
+You can add the following configuration snippet to `.fx\configs\config.{env}.json` file to use an Azure AD app created for your Teams app, to create an Azure AD app, see <https://aka.ms/teamsfx-existing-aad-doc>:
 
 ```json
 "auth": {
