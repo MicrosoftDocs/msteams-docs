@@ -26,7 +26,7 @@ You can customize Azure AD manifest template to update Azure AD application.
   
     <details>
 
-    <summary><b>Add an application permission</b></summary>
+    <summary>Add an application permission</summary>
 
      If the Teams application requires more permissions to call an API with additional permissions, you need to update `requiredResourceAccess` property in the Azure AD manifest template. You can see the following example for this property:
 
@@ -72,7 +72,7 @@ You can customize Azure AD manifest template to update Azure AD application.
 
     <details>
 
-    <summary><b>Preauthorize a client application</b></summary>
+    <summary>Pre-authorize a client application</summary>
 
      You can use `preAuthorizedApplications` property to authorize a client application to indicate that the API trusts the application. Users don't consent when the client calls it exposed API. You can see the following example for this property:
 
@@ -103,7 +103,7 @@ You can customize Azure AD manifest template to update Azure AD application.
 
     <details>
 
-    <summary><b>Update redirect URL for authentication response</b></summary>
+    <summary>Update redirect URL for authentication response</summary>
 
      Redirect URLs are used while returning authentication responses such as tokens after successful authentication. You can customize redirect URLs using property `replyUrlsWithType`. For example, to add `https://www.examples.com/auth-end.html` as redirect URL, you can add it as the following example:
 
@@ -126,19 +126,19 @@ You can customize Azure AD manifest template to update Azure AD application.
 <details>
 <summary>3. Deploy Azure AD application changes for local environment</summary>
 
-1. Select `Preview` CodeLens in `aad.template.json`.
+   1. Select `Preview` CodeLens in `aad.template.json`.
   
-     :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add deploy1.png" alt-text="deploy1":::
+      :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add deploy1.png" alt-text="deploy1":::
 
-2. Select **local** environment.
+   2. Select **local** environment.
   
-     :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add deploy2.png" alt-text="deploy2":::
+      :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add deploy2.png" alt-text="deploy2":::
 
-3. Select `Deploy Azure AD Manifest` CodeLens in `aad.local.json`.
+   3. Select `Deploy Azure AD Manifest` CodeLens in `aad.local.json`.
 
-     :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add deploy3.png" alt-text="deploy3" lightbox="../assets/images/teams-toolkit-v2/manual/add deploy3.png":::
+      :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add deploy3.png" alt-text="deploy3" lightbox="../assets/images/teams-toolkit-v2/manual/add deploy3.png":::
 
-4. The changes for Azure AD application used in local environment are deployed.
+   4. The changes for Azure AD application used in local environment are deployed.
 
 <br>
 
@@ -150,13 +150,13 @@ You can customize Azure AD manifest template to update Azure AD application.
 
 <summary>4. Deploy Azure AD application changes for remote environment</summary>
 
-1. Open the command palette and select: `Teams: Deploy Azure Active Directory application manifest`.
+- Open the command palette and select: **Teams: Deploy Azure Active Directory app manifest**.
   
      :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add deploy4.png" alt-text="deploy4":::
 
-2. Additionally you can right click on the `aad.template.json` and select **Deploy Azure Active Directory app manifest** from the context menu.
+- Additionally you can right click on the `aad.template.json` and select **Deploy Azure Active Directory app manifest** from the context menu.
   
-     :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add deploy5.png" alt-text="deploy5":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add deploy5.png" alt-text="deploy5":::
 
 <br>
 
@@ -168,7 +168,7 @@ The Azure AD manifest file contains placeholder arguments with {{...}} statement
 
 ### Reference state file values in Azure AD manifest template
 
-The state file is located in `.fx\states\state.xxx.json`. The following example shows typical state file:
+The state file is located in `.fx\states\state.xxx.json`. The following example shows state file:
 
 ``` JSON
 {
@@ -191,7 +191,7 @@ You can use this placeholder argument in the Azure AD manifest. `{{state.fx-reso
 
 ### Reference config file values in Azure AD manifest template
 
-The config file is located in `.fx\configs\config.xxx.json`. The following example shows config file:
+The following config file is located in `.fx\configs\config.xxx.json`:
 
 ``` JSON
 {
@@ -206,7 +206,7 @@ The config file is located in `.fx\configs\config.xxx.json`. The following examp
 }
 ```
 
-You can use the placeholder argument in the Azure AD manifest: `{{config.manifest.appName.short}}` to refer `short` value.
+You can use the placeholder argument in the Azure AD manifest `{{config.manifest.appName.short}}` to refer `short` value.
 
 ### Reference environment variable in Azure AD manifest template
 
@@ -214,7 +214,7 @@ When the value is a secret, you don't need to enter permanent values in Azure AD
 
 ## Edit and preview Azure AD manifest with CodeLens
 
-Azure AD manifest template file has CodeLens to review and edit.
+Azure AD manifest template file has CodeLens to review and edit the code.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/manual/preview view.png" alt-text="previewview":::
 
@@ -232,17 +232,13 @@ Placeholder argument CodeLens helps you to see the values for local debug and de
 
 ### Required resource access CodeLens
 
-Its different from official [Azure AD manifest schema](/azure/active-directory/develop/reference-app-manifest) that `resourceAppId` and `resourceAccess` ID in `requiredResourceAccess` property only supports UUID. Azure AD manifest template in Teams Toolkit also supports user readable strings for `Microsoft Graph` and `Office 365 SharePoint Online` permissions. If you enter UUID, CodeLens shows user readable strings, otherwise it shows UUID.
+Azure AD manifest template in Teams Toolkit also supports user readable strings for `Microsoft Graph` and `Office 365 SharePoint Online` permissions. The official [Azure AD manifest schema](/azure/active-directory/develop/reference-app-manifest), which is the `resourceAppId` and `resourceAccess` in `requiredResourceAccess` property supports only the UUID. If you enter UUID, the CodeLens shows user readable strings, otherwise it shows the UUID.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add resource.png" alt-text="add resource to required resource access":::
 
 ### Pre-authorized applications CodeLens
 
 CodeLens shows the application name for the pre-authorized application ID for the `preAuthorizedApplications` property.
-
-## Deploy Azure AD application changes for local environment
-
-## Deploy Azure AD application changes for remote environment
 
 ## View Azure AD application on the Azure portal
 
@@ -258,13 +254,13 @@ CodeLens shows the application name for the pre-authorized application ID for th
    > [!NOTE]
    > Ensure that login credentials of Teams application and M365 account are the same.
 
-3. Open [App Registrations page](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps), search the Azure AD application using client ID that you copied before.
+3. Open [App Registrations page](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps), and search the Azure AD application using client ID that you copied before.
   
      :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add view2.png" alt-text="view2":::
 
 4. Select Azure AD application from search result to view the detail information.
   
-5. In Azure AD app information page, select the `Manifest` menu to view manifest of this application. The schema of the manifest is same as the one in `aad.template.json` file. For more information about manifest, see [Azure Active Directory application manifest](/azure/active-directory/develop/reference-app-manifest).
+5. In Azure AD app information page, select the `Manifest` menu to view manifest of this application. The schema of the manifest is same as the one in `aad.template.json` file. For more information about manifest, see [Azure AD app manifest](/azure/active-directory/develop/reference-app-manifest).
   
      :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add view3.png" alt-text="view3":::
 
