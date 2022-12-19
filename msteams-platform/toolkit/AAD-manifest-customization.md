@@ -22,7 +22,7 @@ You can customize Azure AD manifest template to update Azure AD application.
   
      :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add template.png" alt-text="template":::
 
-2. Update the template directly or [reference values from another file](https://github.com/OfficeDev/TeamsFx/wiki/Manage-AAD-application-in-Teams-Toolkit#Placeholders-in-AAD-manifest-template). You can see several customization scenarios here:
+2. Update the template directly or [reference values from another file](https://github.com/OfficeDev/TeamsFx/wiki/Manage-AAD-application-in-Teams-Toolkit#Placeholders-in-AAD-manifest-template). Following are the customization scenarios:
   
     <details>
 
@@ -309,8 +309,6 @@ You need to interact with Azure AD application during various stages of your Tea
 5. **To build application**
 
     - The cloud command deploys your application to the provisioned resources. It doesn't include deploying Azure AD application changes you've made.
-
-    - For more information on how to deploy Azure AD application changes for remote environment, see [Deploy Azure AD application changes for remote environment](#deploy-azure-ad-application-changes-for-remote-environment).
 
     - Teams Toolkit updates the Azure AD application according to the Azure AD manifest template file.
 
