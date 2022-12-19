@@ -262,6 +262,7 @@ Don't include domains outside of your organization's control (including wildcard
   * *.onmicrosoft.com
   * go.microsoft.com
   * teams.microsoft.com
+
 When using wildcards (`*`), the following rules apply:
 
 * If a subdomain segment includes a wildcard, it must be the only character in the segment.
@@ -1321,11 +1322,13 @@ For more information, see [Teams task module design guidelines](~\task-modules-a
 
 * With the in-meeting app experience, you can engage participants during the meeting by using in-meeting tabs, dialog box, and the in-meeting share to stage feature. If your app supports Teams meeting extension, you must provide a responsive in-meeting experience aligned with the Teams meeting experience. [*Mandatory Fix*]
 
-* With the pre-meeting app experience, users can find and add meeting apps. Users can also do pre-meeting tasks such as developing a poll to survey the meeting participants. An app that provides a pre-meeting experience must be relevant to the meeting workflow and offer value to the user. [*Mandatory Fix*]
+* Meeting extensibility apps must offer a responsive in-meeting experience aligned to the Teams meeting experience. In-meeting experience is mandatory for a Teams app that supports meeting extensibility but, pre- and post-meeting experiences aren't mandatory. [*Mandatory Fix*]
 
-* With post-meeting app experience, users can view the results of the meeting such as, poll survey results or feedback and other app content. An app that provides a post-meeting experience must be relevant to the workflow of the meeting and offer value to the user. [*Mandatory Fix*]
+  * With the pre-meeting app experience, users can find and add meeting apps. Users can also perform pre-meeting tasks such as developing a poll to survey the meeting participants. If your app provides a pre-meeting experience, it must be relevant to the workflow of the meeting.
 
-* With the in-meeting app experience, you can engage meeting participants during the meeting and enhance the meeting experience for all the attendees. Attendees mustn't be taken outside the Teams meeting to complete core user workflows of the app. [*Mandatory Fix*]
+  * With the post-meeting app experience, users can view the results of the meeting such as, poll survey results or feedback and other app content. If your app provides a post-meeting experience, it must be relevant to the workflow of the meeting.
+
+  * With the in-meeting app experience, you can engage meeting participants during the meeting and enhance the meeting experience for all the attendees. Attendees mustn't be taken outside the Teams meeting for completing core user workflows of your app.
 
    :::image type="content" source="../../../../assets/images/submission/validation-in-meeting-outside-teams-core-workflows.png" alt-text="Graphic shows an example of an in-meeting experience redirecting user outside Teams for completing core app functionality.":::
 
@@ -1359,28 +1362,6 @@ For more information, see [Teams task module design guidelines](~\task-modules-a
 
 </details>
 <br/>
-
-<details><summary>General</summary>
-
-Use the following guidelines for meeting extensions:
-
-* Meeting extensibility apps must offer a responsive in-meeting experience aligned to the Teams meeting experience. In-meeting experience is mandatory for a Teams app that supports meeting extensibility but, pre- and post-meeting experiences aren't mandatory. [*Mandatory Fix*]
-
-  * With the pre-meeting app experience, users can find and add meeting apps. Users can also perform pre-meeting tasks such as developing a poll to survey the meeting participants. If your app provides a pre-meeting experience, it must be relevant to the workflow of the meeting.
-
-  * With the post-meeting app experience, users can view the results of the meeting such as, poll survey results or feedback and other app content. If your app provides a post-meeting experience, it must be relevant to the workflow of the meeting.
-
-  * With the in-meeting app experience, you can engage meeting participants during the meeting and enhance the meeting experience for all the attendees. Attendees mustn't be taken outside the Teams meeting for completing core user workflows of your app.
-
-* Your app must offer value beyond providing custom Together Mode scenes in Teams. [*Mandatory Fix*]
-
-* Shared meeting stage feature can only be launched through the Teams desktop app. However, the shared meeting stage consumption experience must be usable and not broken when viewed on mobile devices. [*Mandatory Fix*]
-
-> [!TIP]
-> You must declare `groupChat` as a scope under `configurableTabs` and `meetingDetailsTab`, `meetingChatTab`, and `meetingSidePanel` as a context property in the manifest to enable your app for meetings on Teams mobile.
-
-</details>
-</br>
 
 <details><summary>Pre- and post-meeting experience</summary>
 
@@ -1454,6 +1435,8 @@ Use the following guidelines for meeting extensions:
 <details><summary>Shared Meeting Stage</summary>
 
 To use the **shareAppContentToStage** API, you must declare the correct RSC permissions. In the app manifest, you must configure the `authorization` property. Update the `name` property as `MeetingStage.Write.Chat` and `type` property as `Delegated` in the `resourceSpecific` field. [*Mandatory Fix*]
+
+Shared meeting stage feature can only be launched through the Teams desktop app. However, the shared meeting stage consumption experience must be usable and not broken when viewed on mobile devices. [*Mandatory Fix*]
 
 </details>
 
