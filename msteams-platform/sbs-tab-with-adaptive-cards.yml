@@ -377,9 +377,9 @@ items:
 
     1. Open the **TabWithAdpativeCardFlow.csproj** file in Microsoft Visual Studio.
     
-    1. Press **F5** to run the code.
+    1. Press **F5** to run the sample.
 
-       The corresponding proactive message sample appears: 
+       The corresponding proactive message appears: 
 
        :::image type="content" source="~/assets/images/adaptive-cards/build-tab-adaptive-card-bot-is-ready.png" alt-text="Screenshot of a page which shows that the bot is running in local host: 3978, with the display Your bot is ready!.":::
     
@@ -419,7 +419,7 @@ items:
 
         :::image type="content" source="~/assets/images/adaptive-cards/sign-in-page.png" alt-text="Screenshot of TabAdaptiveCard displaying sign in option to access the tab.":::
 
-    1. A **Permissions requested** appears. Select **Accept**. 
+    1. A **Permissions requested** pop-up appears. Select **Accept**. 
 
          :::image type="content" source="~/assets/images/adaptive-cards/build-tab-adaptive-card-accept-permissions.png" alt-text="Screenshot of Permissions requested page to access the tab.":::
     
