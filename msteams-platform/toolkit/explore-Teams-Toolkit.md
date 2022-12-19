@@ -172,7 +172,7 @@ You can access Teams Toolkit under **Project**.
 
 ---
 
-After you've created your Teams Project, you can perform the following functions on Teams Toolkit for Visual Studio:
+After you've created your Teams Project, you can perform the following functions in Teams Toolkit for Visual Studio:
 
 :::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-menu-options_2.png"alt-text="Teams toolkit operations from Project menu":::
 
@@ -194,7 +194,7 @@ After you've created your Teams Project, you can perform the following functions
 * [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
 * [Create a new Teams app using Teams Toolkit](create-new-project.md)
 * [App manifest schema](../resources/schema/manifest-schema.md)
-* [Prepare to build apps using Microsoft Teams Toolkit](build-environments.md)
+* [Prepare to build apps using Teams Toolkit](build-environments.md)
 
 <!--  
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/ui-elements.png" alt-text="UI Elements":::
