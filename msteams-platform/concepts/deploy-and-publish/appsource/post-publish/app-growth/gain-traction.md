@@ -67,11 +67,11 @@ Here are the various initiatives and growth levers at your disposal:
 
 - **Drive traffic from web SaaS app: “Use in Teams” CTA and “Share to Teams”**:
 
-    While during the launch stage, you used transient banners, notifications bar, what’s new notifications inside the SaaS product’s UI for all users to announce your Teams app. It’s time now to nudge users who may be using Microsoft Teams to start using your collaborative app for scenarios that are better together in Teams vs your core web SaaS experience.
+    While during the launch stage, you used transient banners, notifications bar, what’s new notifications inside the SaaS product’s UI for all users to announce your Teams app. It’s time now to nudge users who may be using Microsoft Teams to start using your collaborative app for scenarios that are better together in Teams vs. your core web SaaS experience.
 
     :::row:::
         :::column span="3":::
-            Surface deeplinks within your browser-based web SaaS experience to transport users to specific views inside your Teams app (for example, personal app, tabs, conversational bot or meeting extensions with shared meeting stage or in-meeting tab) and implement the highly recommended Share to Teams control within your browser-based web SaaS experience to enable users to share and start collaborating around a content or object from your SaaS product inside Teams with their colleagues.
+            Surface [deeplinks](/concepts/build-and-test/deep-links?tabs=teamsjs-v2) within your browser-based web SaaS experience to transport users to specific views inside your Teams app (for example, personal app, tabs, conversational bot or meeting extensions with shared meeting stage or in-meeting tab). You can implement the highly recommended [Share to Teams](/concepts/build-and-test/share-to-teams-from-web-apps) control within your browser-based web SaaS experience to enable users to share and start collaborating around a content or object from your SaaS product inside Teams with their colleagues.
         :::column-end:::
         :::column span="":::
             :::image type="content" source="../../../../../assets/images/app-fundamentals/drive-traffic-saas-app.png" alt-text="Drive traffic from your SaaS app.":::
@@ -86,7 +86,7 @@ Here are the various initiatives and growth levers at your disposal:
 
     :::row:::
         :::column span="3":::
-            Editorial articles provide a list of app suggestions to users within the store that meet specific scenario objectives with a clear call-to-action to install the app while reading the article. Get in touch with your Microsoft field, account or engineering representatives or connect with the Microsoft 365 ISV Benefits Service Desk to feature your app in these Editorial Articles.
+            Editorial articles provide a list of app suggestions to users within the store that meet specific scenario objectives. It includes a clear call-to-action to install the app while reading the article. Get in touch with the Microsoft field, account, or engineering representatives or connect with the Microsoft 365 ISV Benefits Service Desk to feature your app in these Editorial Articles.
         :::column-end:::
         :::column span="":::
             :::image type="content" source="../../../../../assets/images/app-fundamentals/editorial-articles.png" alt-text="Editorial articles.":::
