@@ -59,15 +59,15 @@ Here are the various initiatives and growth levers at your disposal:
 
 - **Commerce transact integration to make your Teams app monetization-ready**:
 
-    One of the goals of the Traction stage is to build readiness for future adoption and ROI realization from your collaborative Teams app. Once you start seeing sticky adoption and positive feedback for your collaborative app among the pilot and significant customers, you can begin planning monetization for your app on the Teams marketplace. Get started [here](/concepts/deploy-and-publish/appsource/prepare/monetize-overview).
+    One of the goals of the Traction stage is to build readiness for future adoption and ROI realization from your collaborative Teams app. Look for sticky adoption and positive feedback for your collaborative app among the pilot and significant customers. After that, you can begin planning monetization for your app on the Teams marketplace. Get started [here](/concepts/deploy-and-publish/appsource/prepare/monetize-overview).
 
-- **M365 Certification to make Teams app enterprise-ready**:
+- **Microsoft 365 Certification to make Teams app enterprise-ready**:
 
-    The Microsoft 365 Certification is designed to show customers that your collaborative app has been vetted against controls derived from leading industry-standard frameworks and that strong security, privacy and compliance practices are in place to protect customer data when the app is in use. Since most Teams customers are large enterprises, having your app M365 certified aids in building trust with the IT admins (see how here) as well as result in smoother, faster adoption in customer organizations. Find more here.
+    The Microsoft 365 Certification is designed to show customers that your collaborative app has been vetted against controls derived from leading industry-standard frameworks. It also showcases that strong security, privacy, and compliance practices are in place to protect customer data when the app is in use. Since most Teams customers are large enterprises, having your app Microsoft 365 certified aids in building trust with the IT admins (see how [here](/microsoftteams/overview-of-app-certification#microsoft-365-certification)). It results in smoother, faster adoption in customer organizations. Find more [here](https://cloudpartners.transform.microsoft.com/practices/modernworkisv?tab=certification).
 
 - **Drive traffic from web SaaS app: “Use in Teams” CTA and “Share to Teams”**:
 
-    While during the launch stage, you leveraged transient banners, notifications bar, what’s new notifications inside the SaaS product’s UI for all users to announce your Teams app. It’s time now to nudge users who may be using Microsoft Teams to start using your collaborative app for scenarios that are better together in Teams vs your core web SaaS experience.
+    While during the launch stage, you used transient banners, notifications bar, what’s new notifications inside the SaaS product’s UI for all users to announce your Teams app. It’s time now to nudge users who may be using Microsoft Teams to start using your collaborative app for scenarios that are better together in Teams vs your core web SaaS experience.
 
     :::row:::
         :::column span="3":::
