@@ -49,7 +49,7 @@ To wrap up, your collaborative app is now becoming a full-fledged strategic prod
             :::image type="content" source="../../../../../assets/images/app-fundamentals/app-capability-1.png" alt-text="Teams app capability 1.":::
         :::column-end:::
         :::column span="3":::
-            Since Teams marketplace is public, you can use your product team can at the minimum use the Microsoft 365 developer tenant to experience other apps. Strategic developers who are part of the invite-only Teams engineering’s build-with partner program can get early access to new and latest cutting-edge collaborative features on Teams app platform - an opportunity for you to deliver unparalleled value to customers and use global GTM and marketing moments, being an early adopter to showcase new innovation on Teams.
+            Since Teams marketplace is public, you can use your product team can at the minimum use the Microsoft 365 developer tenant to experience other apps. Strategic developers, who are part of the invite-only Teams engineering’s build-with partner program, can get early access to new and latest cutting-edge collaborative features on Teams app platform. It's an opportunity for you to deliver unparalleled value to customers and use global GTM and marketing moments, being an early adopter to showcase new innovation on Teams.
         :::column-end:::
     :::row-end:::
 
@@ -59,7 +59,7 @@ To wrap up, your collaborative app is now becoming a full-fledged strategic prod
 
 - **Share deeper app metrics and data-backed insights**:
 
-    Strategic developers who are part of the invite-only Teams engineering’s build-with partner program can share aggregate-level user engagement and behavioral insights with Microsoft PM and UX design team who, armed with a vast experience or working with app developers and best practices of designing, developing and growing apps on Teams, can collaborate with you on experience enhancements, hypotheses-driven growth experimentation and roadmap planning for your Teams collaborative app.
+    Strategic developers, who are part of the invite-only Teams engineering’s build-with partner program, can share aggregate-level user engagement and behavioral insights with Microsoft PM and UX design team. Armed with a vast experience or working with app developers and best practices of designing, developing and growing apps on Teams, they can collaborate with you on experience enhancements, hypotheses-driven growth experimentation and roadmap planning for your Teams collaborative app.
 
 ## Where can Microsoft help?
 
