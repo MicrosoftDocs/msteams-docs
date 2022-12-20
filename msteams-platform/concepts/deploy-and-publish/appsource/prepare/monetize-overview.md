@@ -68,4 +68,5 @@ With a transactable Software as a Service (SaaS) offer, you can test the end-to-
 
 ## Next step
 
-[Include a SaaS offer with your Microsoft Teams app](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)
+* [Include a SaaS offer with your Microsoft Teams app](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)
+* [Microsoft Teams store validation guidelines](teams-store-validation-guidelines.md)
