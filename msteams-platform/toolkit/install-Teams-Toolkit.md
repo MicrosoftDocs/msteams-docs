@@ -130,12 +130,11 @@ The Teams Toolkit for Visual Studio Code extension is available on GitHub. To do
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Create a new Teams project](create-new-project.md)
+> [Explore Teams Toolkit](explore-Teams-Toolkit.md)
 
 ## See also
 
 * [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
-* [Explore Teams Toolkit](explore-Teams-Toolkit.md)
 * [Prepare to build apps](build-environments.md)
 * [Provision cloud resources](provision.md)
 * [Deploy Teams app to the cloud](deploy.md)
