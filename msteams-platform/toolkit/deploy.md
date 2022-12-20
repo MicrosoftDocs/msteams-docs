@@ -30,8 +30,8 @@ You can deploy the following to the cloud:
 
 The Get started guides help you to deploy using Teams Toolkit. You can use the following to deploy your Teams app:
 
-* [Deploy your app to Azure](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=8&branch)
-* [Deploy your app to SharePoint](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4&branch)
+* [Deploy your app to Azure](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=4)
+* [Deploy your app to SharePoint](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4)
 
 ## Details on Teams app workload
 
@@ -115,6 +115,7 @@ The other way to preview your app:
 
 ## See also
 
+* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
 * [Create and deploy an Azure cloud service](/azure/cloud-services/cloud-services-how-to-create-deploy-portal)
 * [Create multi-capability Teams apps](add-capability.md)
 * [Add cloud resources to Microsoft Teams app](add-resource.md)
