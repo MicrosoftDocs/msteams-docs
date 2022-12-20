@@ -734,5 +734,8 @@ For more information about hoe to use an existing Azure AD app in your TeamsFx p
 
 ## See also
 
+* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
 * [Prerequisites for creating your Teams app](tools-prerequisites.md)
+* [Enable SSO for tab app](../tabs/how-to/authentication/tab-sso-overview.md)
+* [Enable SSO for your bot and message extension](../bots/how-to/authentication/bot-sso-overview.md)
 * [Prepare Accounts to build your Teams app](tools-prerequisites.md#accounts-to-build-your-teams-app)
