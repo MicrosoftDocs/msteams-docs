@@ -9,7 +9,9 @@ ms.localizationpriority: high
 # Extend a Teams message extension across Microsoft 365
 
 > [!NOTE]
-> Microsoft 365 Extensions channel is available only in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
+>
+> * Microsoft 365 Extensions channel is available only in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
+> * If you're using an **Outlook** channel for your bot to interact with your message extension from Outlook, request you to migrate to **Microsoft 365 Extensions** channel.
 
 Search-based [message extensions](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions) allow users to search an external system and share results through the compose message area of the Microsoft Teams client. You can now bring production search-based Teams message extensions to preview audiences in Outlook for Windows desktop and outlook.com by [extending your Teams apps across Microsoft 365](overview.md).
 
