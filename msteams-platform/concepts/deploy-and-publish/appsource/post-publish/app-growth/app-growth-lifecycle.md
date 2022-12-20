@@ -40,13 +40,13 @@ Growing your app is a journey. It's a process that’s not overnight and goes th
 
 This section is a descriptive guide elaborating on the various growth initiatives developers can plan and execute and where Microsoft can help.
 
-Developers are encouraged to follow the guidance here to grow their app and drive success for their investments on the Teams marketplace and ecosystem. However, note that the guidance provided can't be considered totally comprehensive. It's recommended that developers must always adapt these growth initiatives in the context best known to them based on:
+Developers are encouraged to follow the guidance here to grow their app and drive success for their investments on the Teams marketplace and ecosystem. However, the guidance provided can't be considered comprehensive. It's recommended that developers must always adapt these growth initiatives in the context best known to them based on:
 
 - The nature of business.
 - The app they’ve launched on Teams.
 - The target customer personas.
 
-Do note that Microsoft partners with app developers once they’ve launched their apps on Teams marketplace by offering select, programmatic GTM investments depending on the app’s maturity in the market. Developers must get in touch with their Microsoft field, account, or engineering representatives before spending cycles on their app growth planning and execution, so that they can get the most appropriate guidance they’re eligible for. Additionally, when the app you're developing reaches store validation stage or if it's already published, please sign up for the M365 ISV Benefits Program and review the Marketing Benefits Planning Guide for an overview of the marketing activities your app is eligible to participate in. The Microsoft 365 ISV Benefits Service Desk is available for any email correspondence regarding support for your marketing activity.
+Do note that Microsoft partners with app developers once they’ve launched their apps on Teams marketplace by offering select, programmatic GTM investments depending on the app’s maturity in the market. Developers must get in touch with their Microsoft field, account, or engineering representatives before spending cycles on their app growth planning and execution, so that they can get the most appropriate guidance they’re eligible for. Additionally, when the app you're developing reaches store validation stage or if it's already published, please sign up for the Microsoft 365 ISV Benefits Program. Review the Marketing Benefits Planning Guide for an overview of the marketing activities your app is eligible to participate in. The Microsoft 365 ISV Benefits Service Desk is available for any email correspondence regarding support for your marketing activity.
 
 You can plan your app's growth through the app lifecycle:
 
