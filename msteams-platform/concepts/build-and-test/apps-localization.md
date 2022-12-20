@@ -151,9 +151,9 @@ If you provide localized versions of your application, the users respond with th
 
 ## Code sample
 
-| Sample name | Description | .NET | Node.js |
-|-------------|-------------|------|------|
-| App Localization | Teams app localization using bot and tab. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/nodejs) |
+| Sample name | Description | .NET | Node.js | Try It Yourself |
+|-------------|-------------|------|---------|-----------------|
+| App Localization | Teams app localization using bot and tab. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/nodejs) |[Manifest](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp/demo-manifest/app-localization.zip)
 
 ## Next step
 
