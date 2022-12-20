@@ -73,7 +73,7 @@ The steps to create a new Teams app is similar for all types of apps except SPFx
 
 ### Directory structure for different app types
 
-Teams Toolkit provides all components for building an app. After creating the project, you can view the project folders and files under **Explorer**.
+Teams Toolkit provides all components for building an app. After creating the project, you can view the project folders and files under **EXPLORER**.
 
 <br>
 <details>
@@ -88,13 +88,13 @@ You have three different types of basic Teams apps and the directory structure l
 | - `.fx\configs\config.<envName>.json` | Configuration file for every environment. |
 | - `.fx\configs\projectSettings.json` | Global project settings that apply to all environments. |
 | `tabs` | Code for the Tab capability needed at runtime, such as the privacy notice, terms of use, and configuration tabs. |
-| - `tabs\src\index.jsx` | Entry point for the front-end app, where the main App component is rendered with `ReactDOM.render()` |
+| - `tabs\src\index.jsx` | Entry point for the front-end app, where the main app component is rendered with `ReactDOM.render()`. |
 | - `tabs\src\components\App.jsx` | Code for handling URL routing in the app. It calls the [Microsoft Teams JavaScript client library](../tabs/how-to/using-teams-client-library.md) to establish communication between your app and Teams. |
 | - `tabs\src\components\Tab.jsx` | Code to implement the UI of your app. |
 | - `tabs\src\components\TabConfig.jsx` | Code to implement the UI that configures your app. |
 | `templates\appPackage` | App manifest template files, and the app icons: color.png and outline.png. |
 | - `templates\appPackage\manifest.template.json` | App manifest for running the app in local or remote environment.  |
-| `templates\azure` | BICEP template files |
+| `templates\azure` | `bicep` template files. |
 
 > [!NOTE]
 > If you have a bot or message extension app, relevant folders are added to the directory structure.
@@ -118,20 +118,20 @@ The new project folder contains the following content:
 
 | Folder name | Contents |
 | --- | --- |
-| `.fx` | Project level settings, configuration, and environment information |
-| `.vscode` | VS code files for local debug |
-| `bot` | The bot source code |
-| `templates` | Templates for Teams app manifest and corresponding Azure resources |
+| `.fx` | Project level settings, configuration, and environment information. |
+| `.vscode` | VS code files for local debug. |
+| `bot` | The bot source code. |
+| `templates` | Templates for Teams app manifest and corresponding Azure resources. |
 
 The core notification implementation in **bot** folder and it contains:
 
 | File name | Contents |
 | --- | --- |
-| `src\adaptiveCards\` | Templates for Adaptive Card  |
-| `src\internal\` | Generated initialize code for notification functionality |
-| `src\index.ts` | The entry point to handle bot messages and send notifications |
-| `.gitignore` | File to exclude local files from the bot project |
-| `package.json` | The npm package file for the bot project |
+| `src\adaptiveCards\` | Templates for Adaptive Card.  |
+| `src\internal\` | Generated initialize code for notification functionality. |
+| `src\index.ts` | The entry point to handle bot messages and send notifications. |
+| `.gitignore` | File to exclude local files from the bot project. |
+| `package.json` | The npm package file for the bot project. |
 
 > [!NOTE]
 > If you have a command bot, workflow bot, SSO-enabled tab, or SPFx tab app, relevant folders are added to the directory structure.
@@ -150,7 +150,7 @@ To learn more about the directory structure of different types of scenario-based
 <details>
 <summary><b>Directory structure for multi-capability app</b></summary>
 
-You can add more features to your existing Teams app by using add features. For example, if you add bot app to the existing tab app, Teams Toolkit adds the bot folder with relevant files and code.
+You can add more features to your existing Teams app by using **Add features**. For example, if you add a bot app to the existing tab app, Teams Toolkit adds the bot folder with relevant files and code.
 
 The following image shows the directory structure of tab app:
 
@@ -182,7 +182,7 @@ Teams Toolkit provides Microsoft Teams app templates in Visual Studio to create 
 | &nbsp; | **Required** | &nbsp; |
 | &nbsp; | Visual Studio latest version | You can install the enterprise edition of Visual Studio, and install the **ASP.NET and web development** workload and **Microsoft Teams Development Tools**. |
 | &nbsp; | Teams Toolkit | A Visual Studio extension that creates a project scaffolding for your app. Use latest version. |
-| &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings,call - all in one place. |
+| &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call - all in one place. |
  | &nbsp; | [Prepare your Microsoft 365 tenant](../concepts/build-and-test/prepare-your-o365-tenant.md) | Access to Teams account with the appropriate permissions to install an app. |
 
 ## Create a new Teams app
@@ -198,7 +198,7 @@ The steps to create a new Teams app are similar for all types of apps except not
 
     * Select **Continue without Code** to create project without code scaffolding. Select **File** > **New** > **Project** in Visual Studio.
 
-     :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-create-new-project2_1_2.png" alt-text="Create new project from file menu":::
+       :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-create-new-project2_1_2.png" alt-text="Create new project from file menu":::
 
    The **Create a new project** window appears.  
 
@@ -231,13 +231,13 @@ The steps to create a new Teams app are similar for all types of apps except not
    > [!NOTE]
    > You can select the required type of Teams app for your project.
 
-   The **Getting Started** with **Welcome to Teams Toolkit** window appears.
+   The **GettingStarted** with **Welcome to Teams Toolkit** window appears.
 
    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-getting-started-page_1.png" alt-text="Select the Getting Started teams toolkit":::
 
 ### Directory Structure
 
-Teams Toolkit provides all components for building an app. After creating the project, you can view the project folders and files under Explorer.
+Teams Toolkit provides all components for building an app. After creating the project, you can view the project folders and files under **Solution Explorer**.
 
 * **Directory structure for basic Teams apps**
 
@@ -256,7 +256,7 @@ You can see Teams app templates already populated in Teams Toolkit for various T
 |**Notification Bot**     |Notification bot app can send notifications to your Teams client. There are multiple ways to trigger the notification. For example, trigger the notification by HTTP request, or by time. You can select triggered notification based on your business scenario.         |
 |**Command Bot**     |You can type a command to interact with the bot using the command bot app.         |
 |**Tab**     |Tab app shows a webpage inside Teams, and it enables single sign-on (SSO) using Teams account.         |
-|**Message Extension**     |Message Extension app implements simple features like creating an Adaptive Card, searching Nugget packages, unfurling links for the `dev.botframework.com` domain.         |
+|**Message Extension**     |Message extension app implements simple features like creating an Adaptive Card, searching Nugget packages, unfurling links for the `dev.botframework.com` domain.         |
 
 > [!NOTE]
 > After the project is created, Teams Toolkit automatically opens **GettingStarted** window. You can see the instructions in **GettingStarted** window and check out the different features in Teams Toolkit.
