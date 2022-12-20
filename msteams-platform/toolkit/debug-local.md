@@ -21,7 +21,7 @@ Teams Toolkit in Microsoft Visual Studio Code gives you the features to automate
 
 > [!NOTE]
 >
-> You can upgrade your old Teams Toolkit project to use new tasks, for more information see [debug settings doc](https://aka.ms/teamsfx-debug-upgrade-new-tasks)
+> You can upgrade your old Teams Toolkit project to use new tasks, for more information, see [debug settings doc](https://aka.ms/teamsfx-debug-upgrade-new-tasks)
 
 ## Set up your Teams Toolkit for debugging
 
@@ -55,7 +55,7 @@ The following steps help you set up your Teams Toolkit before you initiate the d
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/debug/development-certificate.png" alt-text="certification authority":::
 
-Toolkit launches a new Edge or Chrome browser instance based on your selection and opens a web page to load Teams client.  
+Toolkit launches a new Microsoft Edge or Chrome browser instance based on your selection and opens a web page to load Teams client.  
 
 # [macOS](#tab/macOS)
 
@@ -91,7 +91,7 @@ Teams Toolkit launches your browser instance and opens a web page to load Teams 
 
 ## Debug your app
 
-After the initial set up process, Teams Toolkit starts the following processes:
+After the initial setup process, Teams Toolkit starts the following processes:
 
 * [Starts app services](#starts-app-services)
 * [Launches debug configurations](#launches-debug-configurations)
@@ -135,7 +135,7 @@ The following table lists the debug configuration names and types for project wi
 
 ### Sideloads the Teams app
 
-The configuration **Attach to Frontend** or **Launch Bot** launches Edge or Chrome browser instance to load Teams client in web page. After the Teams client is loaded, Teams side-loads the Teams app that is controlled by the sideloading URL defined in the launch configurations [Microsoft Teams](https://teams.microsoft.com/l/app/>${localTeamsAppId}?installAppPackage=true&webjoin=true&${account-hint}). When Teams client loads in the web browser, select **Add** or select an option from the dropdown as per your requirement.
+The configuration **Attach to Frontend** or **Launch Bot** launches Microsoft Edge or Chrome browser instance to load Teams client in web page. After the Teams client is loaded, Teams side-loads the Teams app that is controlled by the sideloading URL defined in the launch configurations [Microsoft Teams](https://teams.microsoft.com/l/app/>${localTeamsAppId}?installAppPackage=true&webjoin=true&${account-hint}). When Teams client loads in the web browser, select **Add** or select an option from the dropdown as per your requirement.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/hello-local-debug.png" alt-text="Add local debug" lightbox="../assets/images/teams-toolkit-v2/debug/hello-local-debug.png":::
 
