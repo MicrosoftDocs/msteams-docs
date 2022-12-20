@@ -141,11 +141,6 @@ The configuration **Attach to Frontend** or **Launch Bot** launches Edge or Chro
 
    Your app is added to Teams!
 
-## Next
-
-> [!div class="nextstepaction"]
-> [Debug background processes](debug-background-process.md)
-
 ::: zone-end
 
 ::: zone pivot="visual-studio"
