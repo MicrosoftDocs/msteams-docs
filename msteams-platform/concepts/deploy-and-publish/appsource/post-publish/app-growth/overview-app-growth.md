@@ -51,7 +51,7 @@ Using the guidance in this document, you can grow your collaborative app on Team
 
 You can use one or all of the three predominant types of SaaS business growth models:
 
-1. **Sales-led growth**: Potential customers or “sales-qualified leads (SQLs)” interact with a sales representative or a customer success representative. The interaction can be at every stage of the buying journey from understanding product and your SaaS app’s features, seeing a demo to post-purchase setup and config, sales-led user onboarding, and customer success reps training to use the app.
+1. **Sales-led growth**: Potential customers or “sales-qualified leads (SQLs)” interact with a sales representative or a customer success representative. It can be through every stage of the buying journey. The interaction can start from understanding product and your SaaS app’s features, and seeing a demo. It can last through post-purchase setup and config, sales-led user onboarding, and customer success reps training to use the app.
 1. **Marketing-led growth**: Prospective customers sign up for a product demo after building perceived value of your product. They consume marketing narratives such as, advertisements, content resources such as, blogs, videos, or downloadable e-books. As a result, they generate a “marketing-qualified lead (MQL)” for the sales team to convert. Customer retention and monetization are driven by marketing channels, content, and outreach as well.
 1. **Product-led growth**: Your SaaS product itself is the main driving force behind customer acquisition, activation, retention, revenue growth, virality, and expansion. It's possible by offering self-serve freemium or free trial options and a straightforward frictionless onboarding process to users. The users can start using the product right away and experience direct product value first-hand with minimal sales, marketing, or customer success interactions on the way. “Product-qualified leads (PQLs)” who have experienced meaningful value using the product are the ones more likely to become paying customers either directly or through salesforce’s upsell or intervention.
 
@@ -86,7 +86,7 @@ Product investments encompass feature planning and enhancements to your collabor
     :::column span="":::
         **How will you do this? What resources are required?**
 
-        - Have dedicated PM, Dev, Design resources who are upskilled on Teams platform to take ownership of your collaborative app.
+        - Have dedicated PM, development, and design resources who are upskilled on Teams platform to take ownership of your collaborative app.
         - Ideally, have the same team or part of the same team that builds your core SaaS app for the browser take ownership of your collaborative app.
         - Continuously plan and groom your Teams collaborative app’s roadmap.
         - Tap into known best practices, scenario envisioning muscle, and product-led growth playbook from Teams engineering via developer docs, blogs, and videos.
@@ -105,7 +105,7 @@ Growth experiments encompass being agile and continuously making hypotheses-driv
         - Continuously monitor what’s happening inside your collaborative app through analytics and measure the value end-users are obtaining.
         - Impact product and business metrics positively. It can be number of app installs, activation rate, task completing, new user retention and churn, referrals, and so on. 
         - Use your collaborative app in Teams as a test bed to rapidly ideate, build, release experiences, measure feedback from users and impact on metrics. Then, graduate the app's functionality to your core SaaS app.
-        - Rapid, always-on experimentation workstream allows byte-sized tweaks to your app experience, resulting in more control and lesser risk compared to monolithic changes spaced far apart.
+        - Rapid, always-on experimentation work-stream allows byte-sized tweaks to your app experience, resulting in more control and lesser risk compared to monolithic changes spaced far apart.
 
     :::column-end:::
     :::column span="":::
@@ -143,7 +143,7 @@ Go-to-Market investments encompass strategic planning, marketing to build awaren
 
 ### Monetization Investments
 
-Monetization Investments encompass defining role of Teams app in your business and revenue strategy, building product and UX to sell on the Microsoft marketplace and channel investments to scale revenue growth.
+Monetization investments encompass defining role of Teams app in your business and revenue strategy, building product and UX to sell on the Microsoft marketplace and channel investments to scale revenue growth.
 
 :::row:::
     :::column span="":::

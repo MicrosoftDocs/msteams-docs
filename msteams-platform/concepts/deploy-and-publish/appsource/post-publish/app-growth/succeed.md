@@ -22,15 +22,15 @@ To wrap up, your collaborative app is now becoming a full-fledged strategic prod
 
 - **Convert PQLs from Teams app into active sales pipeline**:
 
-    A core product-led growth initiative, capture Teams marketplace trials, trials sign-ups coming from your Teams app or freemium users as potential leads to be converted into paying customers. Remember to monitor the usage patterns, user retention and product value experienced by the trial or freemium users to determine which customers ca be converted through sales, customer success or direct product interventions (for example, upsell, upgrade prompts).
+    A core product-led growth initiative, capture Teams marketplace trials, trials sign-ups coming from your Teams app or freemium users as potential leads to be converted into paying customers. Remember to monitor the usage patterns, user retention and product value experienced by the trial or freemium users. Use them to determine the customers that can be converted through sales, customer success, or direct product interventions (for example, upsell, upgrade prompts).
 
 - **Convert PQLs from Teams app into active sales pipeline**:
 
-    A core product-led growth initiative, capture Teams marketplace trials, trials sign-ups coming from your Teams app or freemium users as potential leads to be converted into paying customers. Remember to monitor the usage patterns, user retention and product value experienced by the trial or freemium users to determine which customers ca be converted through sales, customer success or direct product interventions (for example, upsell, upgrade prompts).
+    A core product-led growth initiative, capture Teams marketplace trials, trials sign-ups coming from your Teams app or freemium users as potential leads to be converted into paying customers. Remember to monitor the usage patterns, user retention and product value experienced by the trial or freemium users. Use them to determine the customers that can be converted through sales, customer success or direct product interventions (for example, upsell, upgrade prompts).
 
 - **Continuously reduce churn via product and analytics-led insights**:
 
-    Retaining users by providing them a sticky experience is key to growing your Teams app and realizing economic value from your product and GTM investments. Make sure you’ve implemented robust and granular analytics for your Teams app that serves your need to measure when and which users have churned or likely to churn from your app. You can them re-engage and retarget them via outreach channels within or outside your product.
+    Retaining users by providing them a sticky experience is key to growing your Teams app and realizing economic value from your product and GTM investments. Ensure that you’ve implemented robust and granular analytics for your Teams app that serves your need to measure when and which users have churned or likely to churn from your app. You can them re-engage and retarget them via outreach channels within or outside your product.
 
 - **Invest in richer and more impactful user scenarios**:
 
@@ -38,7 +38,7 @@ To wrap up, your collaborative app is now becoming a full-fledged strategic prod
 
     :::row:::
         :::column span="3":::
-            Make sure to keep monitoring reviews for your app on the marketplace, user feedback coming from in-product surveys, user behavior insights and app engagement analytics you’ve implemented in your app and customer inputs relayed by your Microsoft field, account, or engineering representatives to continue investing in new scenarios and enhanced user experience for your app. You must also keep an eye on your competitors and other leading SaaS apps in your segment to continuously learn from the market and evolve your app’s strategy and roadmap.
+            Ensure that you monitor reviews for your app on the marketplace, user feedback coming from in-product surveys, user behavior insights and app engagement analytics you’ve implemented in your app. Also, monitor customer inputs relayed by the Microsoft field, account, or engineering representatives. It helps you to continue investing in new scenarios and enhanced user experience for your app. You must keep an eye on your competitors and other leading SaaS apps in your segment to continuously learn from the market and evolve your app’s strategy and roadmap.
         :::column-end:::
         :::column span="":::
             :::image type="content" source="../../../../../assets/images/app-fundamentals/feedback-teams-app.png" alt-text="Collect user feedback within the developer’s Teams app through contextual, micro-surveys.":::
@@ -55,7 +55,7 @@ To wrap up, your collaborative app is now becoming a full-fledged strategic prod
 
 - **Share feedback to enrich the Teams platform**:
 
-    Microsoft Teams app platform is ever-evolving with newer features that provide even more opportunities for developers like you to deliver unique, differentiated and collaborative scenarios of value to customers. Leverage the  Microsoft field, account, engineering representatives to share feedback or product ask on Teams platform. You can as well post product feature suggestions here.
+    Microsoft Teams app platform is ever-evolving with newer features that provide even more opportunities for developers like you to deliver unique, differentiated and collaborative scenarios of value to customers. Use the Microsoft field, account, engineering representatives to share feedback or product ask on Teams platform. You can as well post product feature suggestions here.
 
 - **Share deeper app metrics and data-backed insights**:
 
