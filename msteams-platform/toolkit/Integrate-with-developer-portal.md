@@ -22,7 +22,7 @@ The following steps help you to publish your app in Developer Portal:
 
    Now Developer Portal opens in a browser.
 
-1. Sign-in to [Developer portal for Teams](https://dev.teams.microsoft.com) using the corresponding account.
+1. Sign in to [Developer portal for Teams](https://dev.teams.microsoft.com) using the corresponding account.
 1. Import your app package in zip, select **App** > **Import app**.
 1. Select **Publish** > **Publish to your org**.
 
