@@ -1,7 +1,7 @@
 ---
 title: Integrate existing third party APIs
 author: MuyangAmigo
-description: Learn about how toolkit helps you bootstrap sample access to existing APIs. It provides list of different authentication types.
+description: Learn how toolkit helps you bootstrap sample access to existing APIs. It provides list of different authentication types.
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: Overview
