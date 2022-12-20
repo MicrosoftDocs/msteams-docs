@@ -116,27 +116,27 @@ items:
 
     **Create a policy for a demo tenant user to create online meetings using the following PowerShell script:**
 
-    ```PowerShell
-    New-CsApplicationAccessPolicy -Identity "<<policy-identity/policy-name>>" -AppIds "<<azure-client-id>>" -Description "Policy-description"
-    Grant-CsApplicationAccessPolicy -PolicyName "<<policy-identity/policy-name>>" -Identity "<<object-id-of-the-user-to-whom-policy-need-to-be-granted>>"
-    ```
+    1. Run Windows PowerShell PSI as an administrator and execute the script.
+
+        ```PowerShell
+        New-CsApplicationAccessPolicy -Identity "<<policy-identity/policy-name>>" -AppIds "<<azure-client-id>>" -Description "Policy-description"
+        Grant-CsApplicationAccessPolicy -PolicyName "<<policy-identity/policy-name>>" -Identity "<<object-id-of-the-user-to-whom-policy-need-to-be-granted>>"
+        ```
      
-    > [!NOTE]
-    > * Run Windows PowerShell PSI as an administrator and execute the script.
+        > [!NOTE]
+        > If you are using the Windows PowerShell PSI for the first time, execute the following commands:
 
-     If you are using the Windows PowerShell PSI for the first time, execute the following commands:
+            Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser
+            Run Install-Module -Name MicrosoftTeams -Force -AllowClobber 
 
-        Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser
-        Run Install-Module -Name MicrosoftTeams -Force -AllowClobber 
+     1. Replace the following in the Windows PowerShell script:**
 
-     **Replace the following in the Windows PowerShell script:**
-
-     |Field | Description |
-     |----------------|-----------------|
-     |policy-identity/policy-name | Name of the policy. |
-     |azure-client-id | Microsoft App ID which you generated while registering the app in Azure portal. |
-     |Policy-description | Description of the policy. |
-     |object-id-of-the-user-to-whom-policy-need-to-be-granted |  ID of the user for whom you need to generate the policy using the graph explorer. |
+        |Field | Description |
+        |----------------|-----------------|
+        |policy-identity/policy-name | Name of the policy. |
+        |azure-client-id | Microsoft App ID which you generated while registering the app in Azure portal. |
+        |Policy-description | Description of the policy. |
+        |object-id-of-the-user-to-whom-policy-need-to-be-granted |  ID of the user for whom you need to generate the policy using the graph explorer. |
 
     To generate object ID:
 
@@ -156,11 +156,11 @@ items:
 
      1. Run the following command in PowerShell to verify whether the policy is created successfully or not. Replace the policy name with your defined policy name.
 
-    ```PowerShell
-    Get-CsApplicationAccessPolicy -Identity “<<policy-identity/policy-name>>”
-    ```
+        ```PowerShell
+        Get-CsApplicationAccessPolicy -Identity “<<policy-identity/policy-name>>”
+        ```
 
-        :::image type="content" source="./assets/images/calls-and-meetings/powershell_id.png" alt-text="Screenshot of Windows PowerShell ISE with Account details highlighted in red.":::
+        :::image type="content" source="~/assets/images/calls-and-meetings/powershell_id.png" alt-text="Screenshot of Windows PowerShell ISE with Account details highlighted in red.":::
 
     > [!NOTE]
     > Ensure running scripts aren't disabled in your system. For more information, see [execution policies](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.2).
