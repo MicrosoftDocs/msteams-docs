@@ -65,12 +65,113 @@ More than point solutions (that is, “add-ins” and “integrations”), Teams
 
 As noted earlier, your Teams collaborative app requires sustained and continuous investments on multiple fronts:
 
+- Product Investments
+- Growth Experiments
+- Go-to-Market Investments
+- Monetization Investments
+
+### Product Investments
+
+Product investments encompass feature planning and enhancements to your collaborative app in Teams at regular, committed, and predictable cadences.
+
+:::row:::
+    :::column span="":::
+        **Why should you do this? What impact will this have?**
+
+        - Teams users consistently get unique, differentiated value through newer, elevated experiences in your app.
+        - You’re able to deliver a high-quality, bug free experience to end-users and action on incoming user feedback faster.
+        - You’re able to deliver feature parity between your collaborative app in Teams and core SaaS app in the browser.
+        - You’re able to innovate and stay ahead of the competition. You can use the latest, cutting-edge platform features released to public or in developer preview by Microsoft. 
+    :::column-end:::
+    :::column span="":::
+        **How will you do this? What resources are required?**
+
+        - Have dedicated PM, Dev, Design resources who are upskilled on Teams platform to take ownership of your collaborative app.
+        - Ideally, have the same team or part of the same team that builds your core SaaS app for the browser take ownership of your collaborative app.
+        - Continuously plan and groom your Teams collaborative app’s roadmap.
+        - Tap into known best practices, scenario envisioning muscle, and product-led growth playbook from Teams engineering via developer docs, blogs, and videos.
+        - Be on the lookout for new Teams platform features that can impact your app’s end-user experience positively.
+    :::column-end:::
+:::row-end:::
+
+### Growth Experiments
+
+Growth experiments encompass being agile and continuously making hypotheses-driven tweaks in your collaborative Teams app and GTM execution to positively impact specific success metrics.
+
+:::row:::
+    :::column span="":::
+        **Why should you do this? What impact will this have?**
+
+        - Continuously monitor what’s happening inside your collaborative app through analytics and measure the value end-users are obtaining.
+        - Impact product and business metrics positively. It can be number of app installs, activation rate, task completing, new user retention and churn, referrals, and so on. 
+        - Use your collaborative app in Teams as a test bed to rapidly ideate, build, release experiences, measure feedback from users and impact on metrics. Then, graduate the app's functionality to your core SaaS app.
+        - Rapid, always-on experimentation workstream allows byte-sized tweaks to your app experience, resulting in more control and lesser risk compared to monolithic changes spaced far apart.
+
+    :::column-end:::
+    :::column span="":::
+        **How will you do this? What resources are required?**
+
+        - Make sure to instrument code and track analytics for your app right from the first version.
+        - Upskill your dedicated Teams app crew or your existing SaaS product growth team of PM, Dev, Design on Teams platform to take ownership of this.
+        - Continuously plan and groom your Teams collaborative app’s growth experiments backlog with product and growth marketing teams.
+        - Tap into comprehensive repository of growth experiment ideas and experiment best practices. You can also get access to product-led growth playbook from Teams engineering via developer docs, blogs, and videos.
+    :::column-end:::
+:::row-end:::
+
+### Go-to-Market Investments
+
+Go-to-Market investments encompass strategic planning, marketing to build awareness, existing customer activation, new prospects, sales through Teams app and converting marketing and product-qualified leads at scale.
+
+:::row:::
+    :::column span="":::
+        **Why should you do this? What impact will this have?**
+
+        - Make your collaborative app in Teams successful as a product with direct impact to your business metrics. It's just as you would do for your core SaaS product or app.
+        - Acquire new leads, establish footprint in enterprises, increase customer stickiness and renewals, monetize by selling your SaaS subscriptions, build competitiveness in market vs competitors, and launch new, cool, differentiated features through your collaborative app.
+    :::column-end:::
+    :::column span="":::
+        **How will you do this? What resources are required?**
+
+        - Strategically determine the role. Teams collaborative app in your product portfolio and lay down specific business metrics for the success of this product line.
+        - Go-to-market planning and execution across launch, traction, scale. Growing your collaborative app on Teams marketplace directly and in association with Microsoft’s go-to-market and field teams.
+        - Drive awareness of your collaborative app, generate marketing-qualified leads to convert into sales deal wins.
+        - Pilot a product-led growth business mode to grow your collaborative app in Teams and learn best practices. Use your collaborative app in Teams to generate product-qualified leads, onboard users through the marketplace and convert leads in paying customers.
+        - Plan and agree with Microsoft 365 marketing teams ahead in time for your GTM strategy.
+        - Utilize GTM playbook, detailed product-led growth and marketing guidance and programs from Microsoft.
+    :::column-end:::
+:::row-end:::
+
+### Monetization Investments
+
+Monetization Investments encompass defining role of Teams app in your business and revenue strategy, building product and UX to sell on the Microsoft marketplace and channel investments to scale revenue growth.
+
+:::row:::
+    :::column span="":::
+        **Why should you do this? What impact will this have?**
+
+        - Use your collaborative app in Teams for direct revenue through the Microsoft 365 marketplace. It connects you to consumers, enterprise buyers, and a global network of 90,000+ Microsoft cloud resellers, while transacting on Microsoft paper.
+        - Expand your sales by selling subscription plans directly from your Teams marketplace listing. Offer free trials or freemium experience to get more customer leads and use in-app purchases to upgrade customers. You can also provide an ongoing revenue stream via recurring renewals.
+    :::column-end:::
+    :::column span="":::
+        **How will you do this? What resources are required?**
+
+        - Clearly decide how Teams collaborative app fits your business strategy. Also decide if or when you'll monetize the Teams app product line.
+        - Understand how offers on Microsoft marketplace(s) can help deliver business goals through your app.
+        - Build transactable marketplace SaaS offer associated with your Teams app, offering free trial and in-app purchases to generate leads and optimize conversions.
+        - Become channel ready and negotiate reseller partnerships to tap into the global network of Microsoft CSPs for growth.
+        - Tap into the robust technical guidance and best practices from Teams engineering to build transact SaaS and new, pilot features to improve the purchase funnel via developer docs, blogs and videos.
+        - Unlock more GTM benefits and CSP channel partnership programs for early-bird apps with live transact SaaS offers.
+    :::column-end:::
+:::row-end:::
+
+<!--
 | Investment type | Why should you do this? What impact will this have? | How will you do this? What resources are required? |
 | --- | --- | --- |
 | **Product Investments** encompass feature planning and enhancements to your collaborative app in Teams at regular, committed, and predictable cadences. | • Teams users consistently get unique, differentiated value through newer, elevated experiences in your app. <br> • You’re able to deliver a high-quality, bug free experience to end-users and action on incoming user feedback faster. <br> • You’re able to deliver feature parity between your collaborative app in Teams and core SaaS app in the browser. <br> • You’re able to innovate and stay ahead of the competition. You can use the latest, cutting-edge platform features released to public or in developer preview by Microsoft. | • Have dedicated PM, Dev, Design resources who are upskilled on Teams platform to take ownership of your collaborative app. <br> • Ideally, have the same team or part of the same team that builds your core SaaS app for the browser take ownership of your collaborative app. <br> • Continuously plan and groom your Teams collaborative app’s roadmap. <br> • Tap into known best practices, scenario envisioning muscle, and product-led growth playbook from Teams engineering via developer docs, blogs, and videos. <br> • Be on the lookout for new Teams platform features that can impact your app’s end-user experience positively. |
 | **Growth Experiments** encompass being agile and continuously making hypotheses-driven tweaks in your collaborative Teams app and GTM execution to positively impact specific success metrics. | • Continuously monitor what’s happening inside your collaborative app through analytics and measure the value end-users are obtaining. <br> • Impact product and business metrics positively. It can be number of app installs, activation rate, task completing, new user retention and churn, referrals, and so on. <br> • Use your collaborative app in Teams as a test bed to rapidly ideate, build, release experiences, measure feedback from users and impact on metrics. Then, graduate the app's functionality to your core SaaS app. <br> • Rapid, always-on experimentation workstream allows byte-sized tweaks to your app experience, resulting in more control and lesser risk compared to monolithic changes spaced far apart. | • Make sure to instrument code and track analytics for your app right from the first version. <br> • Upskill your dedicated Teams app crew or your existing SaaS product growth team of PM, Dev, Design on Teams platform to take ownership of this. <br> • Continuously plan and groom your Teams collaborative app’s growth experiments backlog with product and growth marketing teams. <br> • Tap into comprehensive repository of growth experiment ideas and experiment best practices. You can also get access to product-led growth playbook from Teams engineering via developer docs, blogs, and videos. |
 | **Go-to-Market Investments** encompass strategic planning, marketing to build awareness, existing customer activation, new prospects, sales through Teams app and converting marketing and product-qualified leads at scale. | • Make your collaborative app in Teams successful as a product with direct impact to your business metrics. It's just as you would do for your core SaaS product or app. <br> • Acquire new leads, establish footprint in enterprises, increase customer stickiness and renewals, monetize by selling your SaaS subscriptions, build competitiveness in market vs competitors, and launch new, cool, differentiated features through your collaborative app. | • Strategically determine the role. Teams collaborative app in your product portfolio and lay down specific business metrics for the success of this product line. <br> • Go-to-market planning and execution across launch, traction, scale. Growing your collaborative app on Teams marketplace directly and in association with Microsoft’s go-to-market and field teams. <br> • Drive awareness of your collaborative app, generate marketing-qualified leads to convert into sales deal wins. <br> • Pilot a product-led growth business mode to grow your collaborative app in Teams and learn best practices. Use your collaborative app in Teams to generate product-qualified leads, onboard users through the marketplace and convert leads in paying customers. <br> • Plan and agree with Microsoft 365 marketing teams ahead in time for your GTM strategy. <br> • Utilize GTM playbook, detailed product-led growth and marketing guidance and programs from Microsoft. |
 | **Monetization Investments** encompass defining role of Teams app in your business and revenue strategy, building product and UX to sell on the Microsoft marketplace and channel investments to scale revenue growth. | • Use your collaborative app in Teams for direct revenue through the Microsoft 365 marketplace. It connects you to consumers, enterprise buyers, and a global network of 90,000+ Microsoft cloud resellers, while transacting on Microsoft paper. <br> • Expand your sales by selling subscription plans directly from your Teams marketplace listing. Offer free trials or freemium experience to get more customer leads and use in-app purchases to upgrade customers. You can also provide an ongoing revenue stream via recurring renewals. | • Clearly decide how Teams collaborative app fits your business strategy. Also decide if or when you'll monetize the Teams app product line. <br> • Understand how offers on Microsoft marketplace(s) can help deliver business goals through your app. <br> • Build transactable marketplace SaaS offer associated with your Teams app, offering free trial and in-app purchases to generate leads and optimize conversions. <br> • Become channel ready and negotiate reseller partnerships to tap into the global network of Microsoft CSPs for growth. <br> • Tap into the robust technical guidance and best practices from Teams engineering to build transact SaaS and new, pilot features to improve the purchase funnel via developer docs, blogs and videos. <br> • Unlock more GTM benefits and CSP channel partnership programs for early-bird apps with live transact SaaS offers. |
+-->
 
 ## Next step
 
