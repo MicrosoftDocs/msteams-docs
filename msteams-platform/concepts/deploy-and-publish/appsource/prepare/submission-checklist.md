@@ -64,6 +64,7 @@ Depending on your app functionality, you're required to provide Teams tenant con
 4. **Demo Video**: Provide a recording of your app so that Microsoft can fully understand its functionality.
 
 Here are sample test instructions for your reference:
+<!--
 <br>
 <br>
 <details>
@@ -372,6 +373,7 @@ The Contoso DigiAssist app for Microsoft Teams also includes a **Help** tab. It 
 - Detailed steps for configuration in the form of PDF or a video link attached.
 
 </details>
+-->
 
 ## Create your store listing details
 
