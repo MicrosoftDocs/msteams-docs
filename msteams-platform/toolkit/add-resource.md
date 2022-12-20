@@ -1,14 +1,14 @@
 ---
 title: Add Resources to Teams apps
 author: MuyangAmigo
-description:  In this module, learn how to add Resources of Teams Toolkit, advantages, limitations and capabilities
+description: learn about how to add Resources of Teams Toolkit, advantages, limitations and capabilities.
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
 ---
 
-# Add cloud resources to Microsoft Teams app
+# Add cloud resources to Teams app
 
 Teams Toolkit helps you to provision the cloud resources for your app hosting. You can add the cloud resources optionally, if they fit your development needs. The advantage of adding more cloud resources in TeamsFx is that you can autogenerate all configuration files and connect to Teams app by using Teams Toolkit.
 
@@ -17,12 +17,12 @@ Teams Toolkit helps you to provision the cloud resources for your app hosting. Y
 
 ## Add cloud resources
 
-You can add cloud resources by the following ways:
+You can add cloud resources in the following ways:
 
 ### To add cloud resources by using Teams Toolkit in Microsoft Visual Studio Code
 
    1. Open **Visual Studio Code**.
-   1. Select **Teams Toolkit** from the activity bar.
+   1. Select **Teams Toolkit** from the Visual Studio Code activity bar.
    1. Select **Add features** under **DEVELOPMENT**.
 
         :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/select-feature-updated_1.png" alt-text="Add feature from Teams Toolkit":::
@@ -51,10 +51,10 @@ You can add cloud resources by the following ways:
 
   |Cloud Resource|Command|
   |---------------|----------|
-  | Azure Function|`teamsfx add azure-function`|
-  | Azure SQL Database|`teamsfx add azure-sql`|
-  | Azure API Management|`teamsfx add azure-apim`|
-  | Azure Key Vault|`teamsfx add azure-keyvault`|
+  | **Azure Functions**|`teamsfx add azure-function`|
+  | **Azure SQL Database**|`teamsfx add azure-sql`|
+  | **Azure API Management**|`teamsfx add azure-apim`|
+  | **Azure Key Vault**|`teamsfx add azure-keyvault`|
 
 ## Types of cloud resources
 
@@ -69,7 +69,7 @@ In the following scenarios, TeamsFx integrates with Azure services:
 
 The following changes appear after adding resources in your project:
 
-* New parameters added to azure.parameter.{env}.json to provide the required information for provision.
+* New parameters added to `azure.parameter.{env}.json` to provide the required information for provision.
 * New content is included to ARM template under `templates\azure`, except the files are in `templates\azure\teamsfx` folder for the Azure resources.
 * The files under `templates\azure\teamsfx` folder are regenerated to ensure TeamsFx required configuration is up to date for added Azure resources.
 * `.fx\configs\projectSettings.json` is updated to track the available resources in your project.
@@ -78,8 +78,8 @@ The following additional changes appear after adding resources in your project:
 
 |Resources|Changes|Description|
 |---------------|---------------|-----------------------------|
-|Azure Functions|An Azure Functions template code is added into a subfolder with path `yourProjectFolder\api`</br></br>`launch.json` and `task.json` updated under `.vscode` folder.| Includes a hello world http trigger template into your project.</br></br> Includes necessary scripts for Visual Studio Code to be executed when you want to debug your app locally.|
-|Azure API management|An open API specification file added into a subfolder with path `yourProjectFolder\openapi`.|Defines your API after publishing, it's the API specification file.|
+|**Azure Functions**|An Azure Functions template code is added into a subfolder with path `yourProjectFolder\api`</br></br>`launch.json` and `task.json` updated under `.vscode` folder.| Includes a hello world http trigger template into your project.</br></br> Includes necessary scripts for Visual Studio Code to be executed when you want to debug your app locally.|
+|**Azure API Management**|An open API specification file added into a subfolder with path `yourProjectFolder\openapi`.|Defines your API after publishing, it's the API specification file.|
 
 ## See also
 

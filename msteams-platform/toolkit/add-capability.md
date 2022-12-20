@@ -53,7 +53,7 @@ You can add capabilities in the following ways:
 
       :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add-capabilities-command-palette_1.png" alt-text="Add capabilities from command palatte":::
 
-   1. Enter **Teams: Add features** and select it.
+   1. Select **Teams: Add features**.
 
       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/teams-add-features.png" alt-text="To add capabilities by using command palette.":::
 
