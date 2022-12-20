@@ -42,6 +42,17 @@ You can also add the Teams display picture and people card of the user to in-mee
 
 :::image type="content" source="../assets/images/apps-in-meetings/in-meeting-people-card.png" alt-text="This screenshot shows how Teams display picture and people card is used with in-meeting dialog." border="true":::
 
+## Feature compatibility by user types
+
+The following table provides the user types and lists the features that each user can access in meetings:
+
+| User type | Private schedule meeting or Instant calendar meeting | One-on-One call | Group call | Scheduled Channel Meeting |
+| :-- | :-- | :-- | :-- | :-- |
+| In-tenant user | Available | Available |  Available | Available |
+| Guest user | Available | Available |  Available | Available |
+| Federated users or External user | Available | Not available | Not available | Available |
+| Anonymous user | Not available | Not applicable | Not applicable | Not available |
+
 ## Code sample
 
 Sample name | Description | C# | Node.js |
