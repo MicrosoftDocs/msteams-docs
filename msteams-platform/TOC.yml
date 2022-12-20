@@ -240,6 +240,7 @@
         displayName: anonymous
       - name: Context for bots
         href: resources/bot-v3/bots-context.md
+        displayName: getContext
       - name: Send and receive files
         href: resources/bot-v3/bots-files.md
       - name: Notification-only bots
@@ -288,7 +289,7 @@
     displayName: Teams store apps approved by Microsoft for mobile 
   - name: Get context for your tab
     href: tabs/how-to/access-teams-context.md
-    displayName: groupId, User context, authentication flow from Microsoft Azure Active Directory, retrieve context, theme changes
+    displayName: getContext, groupId, User context, authentication flow from Microsoft Azure Active Directory, retrieve context, theme changes
   - name: Navigate within your tab
     href: tabs/how-to/tab-navigation.md  
   - name: Build apps for shared channels
@@ -302,6 +303,7 @@
     displayName: Tab in stage view
   - name: Create conversational tabs
     href: tabs/how-to/conversational-tabs.md
+    displayName: configurable
   - name: Tab margin changes
     href: resources/removing-tab-margins.md
     displayName: margins align, extra padding effect, size of the tab margins
@@ -433,7 +435,7 @@
       href: apps-in-teams-meetings/build-apps-for-anonymous-user.md
     - name: Meeting apps APIs
       href: apps-in-teams-meetings/meeting-apps-apis.md
-      displayName: payload
+      displayName: payload, getparticipant
   - name: Get meeting transcripts using Graph APIs
     items:
     - name: Overview
@@ -628,7 +630,7 @@
   items:
   - name: Overview
     href: m365-apps/overview.md
-    displayName: Application, Outlook, and Office as application hosts
+    displayName: Application, Outlook, and Office as application hosts, extend 
   - name: Prerequisites
     href: m365-apps/prerequisites.md
   - name: Enable a Teams personal tab for Microsoft 365
