@@ -248,7 +248,6 @@ Bots must always ask permission to upload a file and display a confirmation mess
 
 Don't include domains outside of your organization's control (including wildcards) and tunneling services in your app's domain configurations. The following exceptions include:
 
-* If your app uses the Azure Bot Service's OAuthCard, you must include `token.botframework.com` as a valid domain or the **Sign in** button won't work. [*Mandatory Fix*]
 * If your app relies on SharePoint, you can include the associated root SharePoint site as a valid domain using the `{teamSiteDomain}` context property. [*Mandatory Fix*]
 * Don't use top level domains such as **.com**, **.in**, and **.org** as a valid domain. [*Mandatory Fix*]
 
