@@ -30,7 +30,7 @@ Adding capabilities with Teams Toolkit allows you to extend the functionality of
 
 ## Add capabilities
 
-You can add capabilities by the following ways:
+You can add capabilities in the following ways:
 
 * [Use Teams Toolkit in Microsoft Visual Studio Code](#use-teams-toolkit-in-microsoft-visual-studio-code)
 * [Use the Command Palette](#use-the-command-palette)
@@ -53,8 +53,7 @@ You can add capabilities by the following ways:
 
       :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add-capabilities-command-palette_1.png" alt-text="Add capabilities from command palatte":::
 
-   1. Enter **Teams: Add features**.
-   1. Press **Enter**.
+   1. Enter **Teams: Add features** and select it.
 
       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/teams-add-features.png" alt-text="To add capabilities by using command palette.":::
 
@@ -84,14 +83,14 @@ The following table shows the changes that you can see in the files of your app 
 |------------|------------------------|---------|
 |Bot, message extension, and tab|Includes a **HelloWorld**&nbsp;bot or tab app template into your project.|A front-end bot or tab template code is added into a subfolder with path `yourProjectFolder\bot` or `yourProjectFolder\tab` respectively.|
 | Bot, message extension, and tab |Includes necessary scripts for Visual Studio Code and is executed when you want to debug your app locally. |Files `launch.json` and `task.json` under `.vscode` folder are updated.|
-| Bot and message extension|Includes bot or tab-related information in the manifest file that represents your app in the Teams Platform.|File`manifest.template.json` under `templates\appPackage` folder is updated, which includes tab-related information in the manifest file that represents your app in the Teams Platform. The changes are visible in the ID of your bot, the scopes of your bot, and the commands that **HelloWorld** bot or tab app can respond to.|
+| Bot and message extension|Includes bot or tab-related information in the manifest file that represents your app in the Teams Platform.|File `manifest.template.json` under `templates\appPackage` folder is updated, which includes tab-related information in the manifest file that represents your app in the Teams Platform. The changes are visible in the ID of your bot, the scopes of your bot, and the commands that **HelloWorld** bot or tab app can respond to.|
 |Tab|Includes bot or tab-related information in the manifest file that represents your app in the Teams Platform.|File `manifest.template.json` under `templates\appPackage` folder is updated, which includes tab-related information in the manifest file that represents your app in the Teams Platform. The changes are visible in the configurable and static tabs and scopes of the tabs.|
 |Bot, message extension, and tab|Includes bot or tab-related&nbsp;information in the teamsfx and provision files that are for integrating Azure Functions.|Files under `templates\azure\teamsfx` are updated and `templates\azure\provision\xxx.bicep` files are regenerated.|
 |Bot, message extension, and tab|Ensure that your project is set up with the right configurations for the newly added capability.|Files under `.fx\config` are regenerated.|
 
 ## Step-by-step guides
 
-* Follow the [step-by-step](../sbs-gs-commandbot.yml) guide to build command bot in Microsoft Teams.
+* Follow the [step-by-step](../sbs-gs-commandbot.yml) guide to build command bot in Teams.
 
 * Follow the [step-by-step](../sbs-gs-notificationbot.yml) guide to build notification bot in Teams.
 
