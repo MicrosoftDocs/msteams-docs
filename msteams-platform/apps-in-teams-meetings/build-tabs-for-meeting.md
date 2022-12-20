@@ -180,12 +180,12 @@ Microsoft Teams JavaScript library exposes the frameContext in which your meetin
 
 The following table provides the user types and lists the features that each user can access the tabs in meetings:
 
-| User type | Private schedule meeting or Instant calendar meeting | One-on-One call | Group call | Scheduled Channel Meeting |
+| User type | Private schedule meeting or Instant calendar meeting | One-on-one call | Group call | Scheduled channel meeting |
 | :-- | :-- | :-- | :-- | :-- |
-| In-tenant user | Interaction allowed for all roles and create, update, or delete is allowed except for Attendees role. | Interaction and create, update, or delete allowed. In-tenant users in call with federated users cannot interact and create, update, or delete | Interaction and create, update, or delete allowed. In-tenant users in call with federated users cannot interact and create or update or delete. | Interaction and create, update, or delete allowed for all roles except for attendees role. |
+| In-tenant user | Interaction allowed for all roles. Create, update, or delete is allowed for all except the Attendees. | Interaction and create, update, or delete allowed. In-tenant users in call with federated users can't interact and create, update, or delete. | Interaction and create, update, or delete allowed. In-tenant users in call with federated users can't interact and create, update, or delete. | Interaction and create, update, or delete allowed for all roles except for attendees. |
 | Guest user | Can interact only | Can interact only | Can interact only | Can interact only. |
-| Federated users or External user | Can interact only | Not available | Not available | Can interact only |
-| Anonymous user | Not available | Not applicable | Not applicable | Not available |
+| Federated user or External user | Can interact only | Not available | Not available | Can interact only |
+| Anonymous user | Not available | Not available | Not available | Not available |
 
 ## Code sample
 
