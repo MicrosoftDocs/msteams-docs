@@ -65,10 +65,10 @@ More than point solutions (that is, “add-ins” and “integrations”), Teams
 
 As noted earlier, your Teams collaborative app requires sustained and continuous investments on multiple fronts:
 
-- Product Investments
-- Growth Experiments
-- Go-to-Market Investments
-- Monetization Investments
+- [Product Investments](#product-investments)
+- [Growth Experiments](#growth-experiments)
+- [Go-to-Market Investments](#go-to-market-investments)
+- [Monetization Investments](#monetization-investments)
 
 ### Product Investments
 
