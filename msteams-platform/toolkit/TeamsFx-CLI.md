@@ -1,7 +1,7 @@
 ---
 title: TeamsFx Command Line Interface
 author: MuyangAmigo
-description: In this module, TeamsFx Command Line Interface, learn TeamsFx library, supported commands and its scenarios
+description: In this module, learn TeamsFx Command Line Interface, TeamsFx library, supported commands and its scenarios
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
