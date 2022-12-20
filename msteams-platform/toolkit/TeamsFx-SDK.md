@@ -97,14 +97,11 @@ You can learn more about user identity and application identity in the following
 > You need admin consent for resources.
 </details>
 
-> [!NOTE]
-> TeamsFx class has been deprecated, use `TeamsUserCredential`, `OnBehalfOfUserCredential`, and `AppCredential` instead.
-
 ### Credential
 
 Credential classes implement the `TokenCredential` interface that is broadly used in Azure library APIs designed to provide access tokens for specific scopes. For more information on credential and auth flow related classes, see [credential folder](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/credential).
 
-There are three credential classes to simplify authentication. Here's the corresponding scenarios for each credential class target.
+There are three credential classes to simplify authentication. Here's the corresponding scenarios for each credential class target:
 
 <details>
 <summary><b> User identity in browser environment </b></summary>
@@ -202,17 +199,17 @@ TeamsFx SDK provides several functions to ease the configuration for third-party
 * Microsoft Graph Service:`createMicrosoftGraphClient`, `createMicrosoftGraphClientWithCredential`, and `MsGraphAuthProvider` helps to create authenticated Graph instance.
 
   > [!NOTE]
-  > `createMicrosoftGraphClient` function has been deprecated. We recommend you to use `createMicrosoftGraphClientWithCredential` instead for better coding experience.
+  > `createMicrosoftGraphClient` function has been deprecated. Its recommended that you to use `createMicrosoftGraphClientWithCredential` instead for better coding experience.
 
 * SQL: The `getTediousConnectionConfig` returns a tedious connection config.
 
     Required configuration:
 
-  * If you want to use user identity, then `sqlServerEndpoint`, `sqlUsername`, and `sqlPassword` are required.
-  * If you want to use MSI identity, then `sqlServerEndpoint`and `sqlIdentityId` are required.
+  * If you want to use the user identity, then `sqlServerEndpoint`, `sqlUsername`, and `sqlPassword` are required.
+  * If you want to use the MSI identity, then `sqlServerEndpoint`and `sqlIdentityId` are required.
 
   > [!NOTE]
-  > The `getTediousConnectionConfig` function has been deprecated. We recommend you compose your own Tedious configuration for better flexibility.
+  > The `getTediousConnectionConfig` function has been deprecated. Its recommended that you compose your own Tedious configuration for better flexibility.
 
 ### Override configuration for TeamsFx class
 
@@ -256,8 +253,8 @@ If you've created Azure Function or bot project using Visual Studio Code Toolkit
 * sqlServerEndpoint (SQL_ENDPOINT) // only used when there's an sql instance
 * sqlUsername (SQL_USER_NAME) // only used when there's an sql instance
 * sqlPassword (SQL_PASSWORD) // only used when there's an sql instance
-* sqlDatabaseName (SQL_DATABASE_NAME) // only used when there's an sql instance
-* sqlIdentityId (IDENTITY_ID) // only used when there's an sql instance
+* sqlDatabaseName (SQL_DATABASE_NAME) // only used when there's an SQL instance
+* sqlIdentityId (IDENTITY_ID) // only used when there's an SQL instance
 
 </details>
 
@@ -280,7 +277,7 @@ try {
 ```
 
 > [!NOTE]
-> TeamsFx class has been deprecated, and `ErrorWithCode` code is not recommended. You can use `TeamsUserCredential` instead as follow:
+> TeamsFx class has been deprecated, and `ErrorWithCode` code is not recommended. You can use `TeamsUserCredential` instead.
 
 ```typescript
 try {
@@ -305,7 +302,7 @@ If a credential instance is used in other library, such as Microsoft Graph, its 
 
 ## Microsoft Graph Scenarios
 
-This section provides several code snippets for common scenarios that are related to the Microsoft Graph. In such scenarios, user can call APIs using different permissions in different ends, such as frontend or backend.
+This section provides several code snippets for common scenarios that are related to the Microsoft Graph. In such scenarios, user can call APIs using different permissions in frontend or backend.
 
 * User delegate permission in frontend (Use `TeamsUserCredential`)
     <details>
@@ -707,7 +704,7 @@ This section provides several code snippets for other scenarios that are related
   <details>
   <summary><b>Create API client to call existing API in Bot or Azure Function</b></summary>
 
-  This code snippet shows you how to call an existing API in Bot by `ApiKeyProvider`.
+  This code snippet shows you how to call an existing API in bot by `ApiKeyProvider`.
 
   ```typescript
   // Create an API Key auth provider. In addition to APiKeyProvider, following auth providers are also available:
@@ -762,8 +759,10 @@ This section provides several code snippets for other scenarios that are related
      });  
       ```
 
-  > [!NOTE]
-  > For more information on sample to access SQL database in Azure Function, see [share-now sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/share-now). The `getTediousConnectionConfig` function has been deprecated, we recommend you to compose your own tedious configuration for better flexibility.
+     > [!NOTE]
+     > The `getTediousConnectionConfig` function has been deprecated, Its recommended that you compose your own tedious configuration for better flexibility.
+
+For more information on sample to access SQL database in Azure Function, see [share-now sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/share-now).
 
 </details>
 
@@ -774,7 +773,7 @@ This section provides several code snippets for other scenarios that are related
 You can set customer log level and redirect outputs when using this library.
 
 > [!NOTE]
-> Logs is turned off by default, you can turn it on by setting log level.
+> Logs are turned off by default, you can turn them on by setting log level.
 
 #### Enable log by setting log level
 
@@ -820,18 +819,15 @@ setLogFunction((level: LogLevel, message: string) => {
 
 If you're using the version of SDK that has `loadConfiguration()`, you can follow these steps to upgrade to the latest SDK version:
 
-1. Remove `loadConfiguration()` and pass customized settings using `new TeamsFx(IdentityType.User, { ...customConfig })`
+1. Remove `loadConfiguration()` and pass customized settings using `new TeamsFx(IdentityType.User, { ...customConfig })`.
 2. Replace `new TeamsUserCredential()` with `new TeamsFx()`.
 3. Replace `new M365TenantCredential()` with `new TeamsFx(IdentityType.App)`.
 4. Replace `new OnBehalfOfUserCredential(ssoToken)` with `new TeamsFx().setSsoToken(ssoToken)`.
 5. Pass the instance of `TeamsFx` to helper functions to replace credential instance.
 
-## Next step
-
-For detailed examples on how to use TeamsFx SDK [Samples](https://github.com/OfficeDev/TeamsFx-Samples) project.
-
 ## See also
 
 * [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
+* [Teams Toolkit CLI](TeamsFx-CLI.md)
 * [Microsoft TeamsFx sample gallery](https://github.com/OfficeDev/TeamsFx-Samples).
 * [Add single sign-on to Teams app](add-single-sign-on.md)
