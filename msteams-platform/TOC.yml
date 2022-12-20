@@ -631,7 +631,7 @@
     displayName: Application, Outlook, and Office as application hosts
   - name: Prerequisites
     href: m365-apps/prerequisites.md
-  - name: Enable a Teams personal tab for Office and Outlook
+  - name: Enable a Teams personal tab for Microsoft 365
     href: m365-apps/extend-m365-teams-personal-tab.md
     displayName: Microsoft 365, Office 365
   - name: Enable a Teams message extension for Outlook
