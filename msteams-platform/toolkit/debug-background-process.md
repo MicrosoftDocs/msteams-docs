@@ -103,17 +103,17 @@ In the set-up process, Teams Toolkit prepares the following registrations and co
 
 1. [Registers and configures Microsoft Azure Active Directory(Azure AD) app](#registers-and-configures-microsoft-azure-active-directoryazure-ad-app)
 
-1. [Registers and configures bot](#registers-and-configures-bot).
+1. [Registers and configures bot](#registers-and-configures-bot)
 
-1. [Registers and configures Teams app](#registers-and-configures-teams-app).
+1. [Registers and configures Teams app](#registers-and-configures-teams-app)
 
 ### Registers and configures Microsoft Azure Active Directory(Azure AD) app
 
 1. Registers an Azure AD app.
 
-1. Creates a Client Secret.
+2. Creates a Client Secret.
 
-1. Exposes an API.
+3. Exposes an API.
 
     a. Configures Application ID URI. For tab, `api://localhost/{appId}`. For bot or message extension,  `api://botid-{botid}`.
 
@@ -134,9 +134,9 @@ In the set-up process, Teams Toolkit prepares the following registrations and co
       | --- | --- |
       | Teams desktop, mobile | 1fec8e78-bce4-4aaf-ab1b-5451cc387264 |
       | Teams web | 5e3ce6c0-2b1f-4285-8d4b-75ee78787346 |
-      | Office.com | 4345a7b9-9a63-4910-a426-35363201d503 |
-      | Office.com | 4765445b-32c6-49b0-83e6-1d93765276ca |
-      | Office desktop | 0ec893e0-5785-4de6-99da-4ed124e5296c |
+      | microsoft365.com (formerly office.com) | 4345a7b9-9a63-4910-a426-35363201d503 |
+      | microsoft365.com (formerly office.com) | 4765445b-32c6-49b0-83e6-1d93765276ca |
+      | Microsoft 365 desktop app | 0ec893e0-5785-4de6-99da-4ed124e5296c |
       | Outlook desktop | d3590ed6-52b3-4102-aeff-aad2292ab01c |
       | Outlook Web Access | 00000002-0000-0ff1-ce00-000000000000 |
       | Outlook Web Access | bc59ab01-8403-45c6-8796-ac3ef710b3e3 |
