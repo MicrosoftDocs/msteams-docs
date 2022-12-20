@@ -111,7 +111,7 @@ Make sure your short description adheres to the [store validation guidelines](~/
 
 #### Long description
 
-The long description can provide a narrative that highlights your apps':
+The long description can provide a narrative that highlights your apps:
 
 * Main features
 * The problems it solves
@@ -236,4 +236,6 @@ Partner Center supports [localized store listings](/office/dev/store/prepare-loc
 
 ## See also
 
-[Resolve issues if your Microsoft Teams store submission fails](~/concepts/deploy-and-publish/appsource/resolve-submission-issues.md)
+* [Publish your app to the Microsoft Teams store](../publish.md)
+* [Prepare your Microsoft 365 tenant](../../../build-and-test/prepare-your-o365-tenant.md)
+* [Resolve issues if your Microsoft Teams store submission fails](~/concepts/deploy-and-publish/appsource/resolve-submission-issues.md)

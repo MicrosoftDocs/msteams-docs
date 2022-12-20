@@ -158,7 +158,7 @@ By default, only global admins or Teams service admins can upload (sideload) app
 
         try {
 
-            # 1. Login with the global administrator account for your Office 365 Developer Program tenant. This script uses these credentials to connect to the PowerShell modules for Azure Active Directory and Microsoft Teams
+            # 1. Login with the global administrator account for your Microsoft 365 Developer Program tenant. This script uses these credentials to connect to the PowerShell modules for Azure Active Directory and Microsoft Teams
 
             $creds = Get-Credential
 
@@ -242,6 +242,7 @@ By default, only global admins or Teams service admins can upload (sideload) app
 
 ## See also
 
+* [Test your app](test-app-overview.md)
 * [Debug your tab](~/tabs/how-to/developer-tools.md)
 * [Debug your bots](~/bots/how-to/debug/locally-with-an-ide.md)
 * [Test RSC permissions](~/graph-api/rsc/test-resource-specific-consent.md)

@@ -19,17 +19,13 @@ Teams Toolkit helps you to debug and preview your Microsoft Teams app. Debug is 
 
 Teams Toolkit in Microsoft Visual Studio Code automates the debug process. You can detect errors and fix them as well as preview the teams app. You can also customize debug settings to create your tab or bot.
 
-## Debug your Microsoft Teams app for Visual Studio Code
-
-Teams Toolkit in Visual Studio Code automates the debug process. You can detect errors and fix them as well as preview the teams app. You can also customize debug settings to create your tab or bot.
-
 During the debug process:
 
 * Teams Toolkit automatically starts app services, launches debuggers, and sideloads the Teams app.
 * Teams Toolkit checks the prerequisites during the debug background process.
 * Your Teams app is available for preview in Teams web client locally after debugging.
 * You can also customize debug settings to use your bot endpoints, development certificate, or debug partial component to load your configured app.
-* Microsoft Visual Studio Code allows you to debug tab, bot, message extension, and Azure Functions.
+* Visual Studio Code allows you to debug tab, bot, message extension, and Azure Functions.
 
 ## Key debug features of Teams Toolkit
 
@@ -45,7 +41,7 @@ Teams Toolkit performs background functions during debug process, which include 
 
 ### Start debugging
 
-You can press **F5** as a single operation to start debugging. The Teams Toolkit starts to check prerequisites, registers Azure AD app, Teams app, and registers bot, starts services, and launches browser.
+You can press **F5** as a single operation to start debugging. Teams Toolkit starts to check prerequisites, registers Microsoft Azure Active Directory (Azure AD) app, Teams app, and registers bot, starts services, and launches browser.
 
 ### Multi-target debugging
 
@@ -59,7 +55,7 @@ You can toggle breakpoints on the source codes of tabs, bots, message extension
 
 ### Hot reload
 
-You can update and save the source codes of tab, bot, message extension, and Azure Functions at the same time when you're debugging the Teams app. The app reloads and the debugger reattaches to the programming languages.
+You can update and save the source codes of tab, bot, message extension, and Azure Functions at the same time when you're debugging the Teams app. The app reloads and the debugger reattach to the programming languages.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/hot-reload.png" alt-text="hot-reload for source codes" lightbox="../assets/images/teams-toolkit-v2/debug/hot-reload.png":::
 
@@ -240,7 +236,7 @@ Teams Toolkit automates app startup services, initiates debug, and side loads Te
 
 ## Key features of Teams Toolkit
 
-You can see the following key features of Teams Toolkit, that automate the local debugging process of your Teams app:
+You can see the following key features of Teams Toolkit, that automates the local debugging process of your Teams app:
 
 ### Prepare Teams app dependencies
 
@@ -248,11 +244,11 @@ Teams Toolkit prepares local debug dependencies and registers your Teams app in 
 
 ### Start debugging
 
-You can perform debugging with a single operation, press **F5** to start debugging. Teams Toolkit builds code, starts services, and the launches app in your browser.
+You can perform debugging with a single operation, press **F5** to start debugging. Teams Toolkit builds code, starts services, and launches the app in your browser.
 
 ### Toggle breakpoints
 
-You can toggle breakpoints in the source codes of tabs, bots, message extensions, and Azure functions. The breakpoints execute when you interact with the Teams app in your web browser.
+You can toggle breakpoints in the source codes of tabs, bots, message extensions, and Azure Functions. The breakpoints execute when you interact with the Teams app in your web browser.
 The following image shows the toggle breakpoints:
 
 :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-toggle-breakpoint.png" alt-text="Local debug toggle breakpoints" lightbox="../assets/images/debug-teams-app/vs-localdebug-toggle-breakpoint.png":::
@@ -272,7 +268,7 @@ Select the option **Hot Reload on File Save** from the drop-down to enable auto 
 
 ### Stop debugging
 
-Select **Stop Debugging** when the local debug is complete.
+Select **Stop Debugging (Shift+F5)** when the local debug is complete.
 
 :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-Stopdebug.png" alt-text="Select stop debug icon":::
 
@@ -282,9 +278,9 @@ You can customize debug setting for your Teams app to use your bot endpoints and
 
 ### Use your bot endpoint
 
-You can set siteEndpoint configuration in **.fx/configs/config.local.json** to your endpoint.
+You can set `siteEndpoint` configuration in the `.fx/configs/config.local.json` file to your endpoint.
 
-```
+```JSON
 "bot": {
     "siteEndpoint": "https://baidu.com"
 }
@@ -292,7 +288,7 @@ You can set siteEndpoint configuration in **.fx/configs/config.local.json** to y
 
 ### Add environment variables
 
-You can add **environmentVariables** to **launchSettings.json** file.
+You can add `environmentVariables` to `launchSettings.json` file.
 
 :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-environment-variables.png" alt-text="Add custom environment variables":::
 
@@ -301,7 +297,7 @@ You can add **environmentVariables** to **launchSettings.json** file.
 You can launch Teams app as a web app instead of running in Teams client.
 
 1. Select **Properties** > **launchSettings.json** in Solution Explorer panel under your project.
-1. Remove the **'launchUrl'** from the file.
+1. Remove the `launchUrl` from the file.
 
    :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-launch-teamsapp-webapp.png" alt-text="Launch teams as a web app by removing launchurl" lightbox="../assets/images/debug-teams-app/vs-localdebug-launch-teamsapp-webapp.png":::
 
@@ -319,6 +315,7 @@ You can launch Teams app as a web app instead of running in Teams client.
 
 ## See also
 
+* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
 * [Debug background process](debug-background-process.md)
 * [Use Teams Toolkit to provision cloud resources](provision.md)
 * [Deploy to the cloud](deploy.md)

@@ -368,7 +368,7 @@ The following code shows an example of incoming invoke message:
 }
 ```
 
-## Action type signin
+## Action type sign-in
 
 `signin` action type initiates an OAuth flow that permits bots to connect with secure services. For more information, see [authentication flow in bots](~/bots/how-to/authentication/auth-flow-bot.md).
 
@@ -426,9 +426,10 @@ Adaptive Cards support four action types:
 You can also modify the Adaptive Card `Action.Submit` payload to support existing Bot Framework actions using an `msteams` property in the `data` object of `Action.Submit`. The next section provides details on how to use existing Bot Framework actions with Adaptive Cards.
 
 > [!NOTE]
+>
 >* Adding `msteams` to data with a Bot Framework action does not work with an Adaptive Card task module.
-> 
->* Primary or desctuctive `ActionStyle` is not supported in Microsoft Teams. 
+>
+>* Primary or desctuctive `ActionStyle` is not supported in Microsoft Teams.
 
 ### Adaptive Cards with messageBack action
 
@@ -488,7 +489,7 @@ The following code shows an example of Adaptive Cards with `imBack` action:
 }
 ```
 
-### Adaptive Cards with signin action
+### Adaptive Cards with sign-in action
 
 To include a `signin` action with an Adaptive Card include the following details in the `msteams` object:
 
@@ -574,7 +575,7 @@ The following code shows an example of Adaptive Cards with `invoke` action with 
 ## See also
 
 * [Cards reference](./cards-reference.md)
+* [Types of cards](cards-reference.md)
 * [Use task modules from bots](~/task-modules-and-cards/task-modules/task-modules-bots.md)
-* [Adaptive cards in bots](../../bots/how-to/conversations/conversation-messages.md#adaptive-cards)
-* [Universal Actions for Adaptive Cards](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md)
+* [Adaptive Cards in bots](../../bots/how-to/conversations/conversation-messages.md#adaptive-cards)
 * [Form completion feedback](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)
