@@ -445,7 +445,7 @@ The following list provides required permissions for `TeamsFx` projects:
 
 3. Run `npm install` and `npm run build:teamsfx:dev` in `tabs` or `api folder` to install added packages.
 
-4. Create a windows app service in the same OS as your machine).
+4. Create a windows app service in the same OS as your machine.
 
 5. Run `$ az webapp up --name --html --subscription` in `tabs`, or `build`, or `folder`.
 
