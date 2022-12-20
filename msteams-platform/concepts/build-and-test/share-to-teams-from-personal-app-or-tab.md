@@ -103,5 +103,6 @@ After you enable share to teams button on personal app or tab, you can share the
 
 ## See also
 
-* [Share to Teams from web apps](share-to-teams-from-web-apps.md)
+* [Integrate web apps](../../samples/integrate-web-apps-overview.md)
 * [Create a personal tab](../../tabs/how-to/create-personal-tab.md)
+* [Microsoft Teams Connect shared channels](shared-channels.md)

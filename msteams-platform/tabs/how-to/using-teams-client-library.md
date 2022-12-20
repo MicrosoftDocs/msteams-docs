@@ -8,7 +8,7 @@ ms.topic: conceptual
 ---
 # Teams JavaScript client library
 
-The Microsoft Teams JavaScript client library can help you create hosted experiences in Teams, Microsoft 365 app, and Outlook, where your app content is hosted in an [iframe](https://developer.mozilla.org/docs/Web/HTML/Element/iframe). The library is helpful for developing apps with the following Teams capabilities:
+The Microsoft Teams JavaScript client library can help you create hosted experiences in Teams, Microsoft 365 app, and Outlook, where your app content is hosted in an [iFrame](https://developer.mozilla.org/docs/Web/HTML/Element/iframe). The library is helpful for developing apps with the following Teams capabilities:
 
 * [Tabs](../../tabs/what-are-tabs.md)
 * [Dialogs (Task modules)](../../task-modules-and-cards/what-are-task-modules.md)
@@ -64,7 +64,7 @@ App capabilities that require the user to grant [device permissions](../../conce
 
 Current guidance for now is to modify your code to catch the failure:
 
-* Check [isSupported()](#differentiate-your-app-experience) on a capability before using it. `media`, `meeting`, and `files` do not yet support *isSupported* calls and do not yet work outside of Teams.
+* Check [isSupported()](#differentiate-your-app-experience) on a capability before using it. `media`, `meeting`, and `files` don't yet support *isSupported* calls and don't yet work outside of Teams.
 * Catch and handle errors when calling TeamsJS and HTML5 APIs.
 
 When an API is unsupported or generates an error, add logic to fail gracefully or provide a workaround. For example:
@@ -85,9 +85,9 @@ Use `pages.shareDeepLink` (known as *shareDeepLink* prior to TeamsJS v.2.0) to g
 
 #### Navigation within your app
 
-Use the new `pages.navigateToApp` API to navigate within your app within the hosting application.
+Use the new [`pages.currentApp`](/javascript/api/@microsoft/teams-js/pages.currentapp) namespace to navigate within your app within the hosting application. Specifically, the function `navigateTo(NavigateWithinAppParams)` to allow navigation to a specific tab within the current app and the function `navigateToDefaultPage()` to navigate to the first tab defined in the app's manifest. For more information, see [Navigate within a tab app](tab-navigation.md).
 
-This API provides the equivalent of navigating to a deep link (as the now deprecated *executeDeepLink* was once used for) without requiring your app to construct a URL or manage different deep link formats for different application hosts.
+These APIs provide the equivalent of navigating to a deep link (as the now deprecated *executeDeepLink* was once used for) without requiring your app to construct a URL or manage different deep link formats for different application hosts.
 
 #### Deep links out of your app
 

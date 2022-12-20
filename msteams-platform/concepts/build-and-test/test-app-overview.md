@@ -23,7 +23,7 @@ To test and debug your app, you must create at least one workspace. You can sele
 
 Test your bot locally. For more information, see [debug your bot locally with an IDE](~/bots/how-to/debug/locally-with-an-ide.md). You can also debug your bot with [inspection middleware](/azure/bot-service/bot-service-debug-inspection-middleware?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true) and [adaptive tools](/azure/bot-service/bot-service-debug-adaptive-tools?view=azure-bot-service-4.0&preserve-view=true).
 
-To view the console logs, view or modify html, css, and network requests during runtime, add breakpoints to your JavaScript code, and perform interactive debugging access the DevTools. For more information, see [Access the DevTools for Teams tabs](~/tabs/how-to/developer-tools.md).
+To view the console logs, view or modify html, css, and network requests during runtime, add breakpoints to your JavaScript code, and perform interactive debugging access the DevTools. For more information, see [access the DevTools for Teams tabs](~/tabs/how-to/developer-tools.md).
 
 ## Add test data to your Microsoft 365 tenant
 
