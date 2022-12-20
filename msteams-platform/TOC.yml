@@ -5,7 +5,7 @@
   displayName: Teams platform features, latest updates, RSS feed, deprecated, announcement
 - name: Glossary
   href: get-started/glossary.md
-  displayName: App tray, terminologies, definitions
+  displayName: App tray, terminologies, definitions, welcome 
 - name: Overview
   expanded: false 
   items:
