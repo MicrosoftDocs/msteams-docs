@@ -52,7 +52,7 @@ There are many scenarios where sharing the entire app to the meeting stage isn't
 
 1. A user may want to share content from a single content provider at a time (for example, YouTube) versus sharing an entire video catalog onto stage.
 
-To help users in such scenarios, we released APIs within the Teams Client SDK that allows you to programmatically invoke share to stage for specific parts of the app from a button in the meeting side panel.
+To help users in such scenarios, we released APIs within the TeamsJS client library  that allow you to programmatically invoke share to stage for specific parts of the app from a button in the meeting side panel.
 
 :::image type="content" source="../assets/images/apps-in-meetings/shared-meeting-stage-edit-review-component.png" alt-text="The screenshot shows the share to meeting stage view.":::
 
@@ -60,13 +60,13 @@ Use the following APIs to share specific part of the app:
 
 |Method| Description| Source|
 |---|---|----|
-|[**Share app content to stage**](#share-app-content-to-stage-api)| Share specific parts of the app to meeting stage from the meeting side panel in a meeting. | [Microsoft Teams JavaScript library SDK](/javascript/api/@microsoft/teams-js/meeting) |
-|[**Get app content stage sharing state**](#get-app-content-stage-sharing-state-api)| Fetch information about app's sharing state on the meeting stage. | [Microsoft Teams JavaScript library SDK](/javascript/api/@microsoft/teams-js/meeting.iappcontentstagesharingstate) |
-|[**Get app content stage sharing capabilities**](#get-app-content-stage-sharing-capabilities-api)| Fetch the app's capabilities for sharing to the meeting stage. | [Microsoft Teams JavaScript library SDK](/javascript/api/@microsoft/teams-js/meeting.iappcontentstagesharingcapabilities) |
+|[**Share app content to stage**](#share-app-content-to-stage-api)| Share specific parts of the app to meeting stage from the meeting side panel in a meeting. | [Microsoft Teams JavaScript library](/javascript/api/@microsoft/teams-js/meeting) |
+|[**Get app content stage sharing state**](#get-app-content-stage-sharing-state-api)| Fetch information about app's sharing state on the meeting stage. | [Microsoft Teams JavaScript library](/javascript/api/@microsoft/teams-js/meeting.iappcontentstagesharingstate) |
+|[**Get app content stage sharing capabilities**](#get-app-content-stage-sharing-capabilities-api)| Fetch the app's capabilities for sharing to the meeting stage. | [Microsoft Teams JavaScript library](/javascript/api/@microsoft/teams-js/meeting.iappcontentstagesharingcapabilities) |
 
 ## Share app content to stage API
 
-The `shareAppContentToStage` API enables you to share specific parts of your app to the meeting stage. The API is available through the Teams client SDK.
+The `shareAppContentToStage` API enables you to share specific parts of your app to the meeting stage. The API is available through the Teams client library.
 
 ### Prerequisite
 
@@ -212,17 +212,6 @@ The following participant roles may be involved during the meeting:
 * **Signer**: This role can sign reviewed documents.
 * **Reader**: This role can view the documents added to the meeting.
 
-## Feature compatibility by user types
-
-The following table provides the user types and lists the features that each user can access in meetings:
-
-| User type | Private schedule meeting or Instant calendar meeting | One-on-One call | Group call | Scheduled Channel Meeting |
-| :-- | :-- | :-- | :-- | :-- |
-| In-tenant user | Can start, view, and interact with app on meeting stage for presenter and organizer. Attendee can only view and interact. | Can start, view, and interact with app on meeting stage for presenter and organizer. Attendee can only view and interact. |  Can start, view, and interact with app on meeting stage for presenter and organizer. Attendee can only view and interact. | Can start, view, and interact with app on meeting stage for presenter and organizer. Attendee can only view and interact. |
-| Guest user | Can start, view and interact with app on meeting stage for presenter and organizer. Attendee can only view and interact. | Can start, view, and interact with app on meeting stage for presenter and organizer. Attendee can only view and interact. |  Can start, view, and interact with app on meeting stage for presenter and organizer. Attendee can only view and interact. | Can start, view, and interact with app on meeting stage for presenter and organizer. Attendee can only view and interact. |
-| Federated users or External user | Can start, view, and interact with app on meeting stage for presenter. Attendee can only view and interact. | Not available | Not available | Can start, view, and interact with app on meeting stage for presenter. Attendee can only view and interact. |
-| Anonymous user | Can view and interact with app on meeting stage for presenter and attendee. | Not applicable | Not applicable | Can view and interact with app on meeting stage for presenter and attendee. |
-
 ## Code sample
 
 |Sample name | Description | C# | Node.js |
@@ -237,11 +226,10 @@ Follow the [step-by-step guide](../sbs-inmeeting-document-signing.yml) to build 
 
 ## See also
 
-* [Teams authentication flow for tabs](../tabs/how-to/authentication/auth-flow-tab.md)
 * [Apps for Teams meetings](teams-apps-in-meetings.md)
-* [Build tabs for meeting](build-tabs-for-meeting.md)
-* [Build extensible conversation for meeting chat](build-extensible-conversation-for-meeting-chat.md)
-* [Build apps for anonymous users](build-apps-for-anonymous-user.md)
-* [Advanced meeting APIs](meeting-apps-apis.md)
+* [Enable authentication using third-party OAuth provider](../tabs/how-to/authentication/auth-flow-tab.md)
+* [Resource-specific consent for delegated permissions](../resources/schema/manifest-schema.md#authorizationpermissions)
+* [Create deep links](../concepts/build-and-test/deep-links.md)
+* [Meeting app APIs](meeting-apps-apis.md)
 * [Custom Together Mode scenes](~/apps-in-teams-meetings/teams-together-mode.md)
 * [Live Share SDK](teams-live-share-overview.md)
