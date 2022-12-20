@@ -182,6 +182,7 @@
       items:
       - name: Publish Teams apps using Teams Toolkit 
         href: toolkit/publish.md
+        displayName: license
       - name: Integrate with Developer Portal
         href: toolkit/Integrate-with-developer-portal.md
     - name: FAQ
@@ -285,7 +286,7 @@
     displayName: Teams store apps approved by Microsoft for mobile 
   - name: Get context for your tab
     href: tabs/how-to/access-teams-context.md
-    displayName: User context, authentication flow from Microsoft Azure Active Directory, retrieve context, theme changes
+    displayName: groupId, User context, authentication flow from Microsoft Azure Active Directory, retrieve context, theme changes
   - name: Navigate within your tab
     href: tabs/how-to/tab-navigation.md  
   - name: Build apps for shared channels
@@ -325,12 +326,13 @@
         href: bots/how-to/conversations/channel-messages-with-rsc.md
     - name: Create a commands menu
       href: bots/how-to/create-a-bot-commands-menu.md
+      displayName: compose
     - name: Channel and group chat conversations with a bot
       href: bots/how-to/conversations/channel-and-group-conversations.md
       displayName: Teams conversational bots
     - name: Conversation events in your Teams bot
       href: bots/how-to/conversations/subscribe-to-conversation-events.md 
-      displayName: Message reaction events, event handling for install and uninstall events
+      displayName: activity, Message reaction events, event handling for install and uninstall events
     - name: Proactive messages
       href: bots/how-to/conversations/send-proactive-messages.md
     - name: Format your bot messages
@@ -352,7 +354,7 @@
     displayName: Fetch roster or user profile
   - name: Send and receive files using bot
     href: bots/how-to/bots-filesv4.md
-    displayName: File consent and upload files to Teams from a bot
+    displayName: send, File consent and upload files to Teams from a bot
   - name: Optimize your bot with rate limiting in Teams
     href: bots/how-to/rate-limit.md
     displayName: handle rate limit, detect transient exceptions, per thread limit, exponential backoff
@@ -391,7 +393,7 @@
       displayName: Initial invoke request, respond to fetchTask, payload activity, handleTeamsMessagingExtensionFetchTask
     - name: Respond to the task module submit action
       href: messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md
-      displayName: Respond to initial submit action, configure the poll, attribution for bot messages, submit action
+      displayName: Compose, Respond to initial submit action, configure the poll, attribution for bot messages, submit action
   - name: Search commands
     items:
     - name: Define search commands
@@ -511,7 +513,7 @@
         href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/overview.md
       - name: Work with Universal Actions for Adaptive Cards
         href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-universal-actions-for-adaptive-cards.md
-        displayName: Sequential Workflows
+        displayName: Activity, Sequential Workflows
       - name: User Specific Views
         href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/User-Specific-Views.md
         displayName: Poll creator controls, channel, extension
@@ -628,7 +630,7 @@
     displayName: Microsoft 365, Office 365
   - name: Enable a Teams message extension for Outlook
     href: m365-apps/extend-m365-teams-message-extension.md
-    displayName: Microsoft 365, Office 365
+    displayName: mail, Microsoft 365, Office 365
   - name: Publish Teams apps for Microsoft 365
     href: m365-apps/publish.md
 - name: Teams developer documentation FAQs
@@ -724,7 +726,7 @@
     displayName: Pricing model, SaaS offer, purchase experience
   - name: Include a SaaS offer with your Teams app
     href: concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
-    displayName: Transactable Software-as-a-Service, Recloud app
+    displayName: license, Transactable Software-as-a-Service, Recloud app
   - name: In-app purchases
     href: concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
   - name: Test preview for monetized apps
@@ -766,7 +768,7 @@
       href: samples/install-collaboration-control.md
     - name: Create an app with Collaboration controls
       href: samples/app-with-collaboration-controls.md
-      displayName: application
+      displayName: application, groupId
     - name: Deploy an app with Collaboration control to Teams
       href: samples/deploy-collaboration-control-in-teams.md
     - name: Optional configurations for Collaboration control app
