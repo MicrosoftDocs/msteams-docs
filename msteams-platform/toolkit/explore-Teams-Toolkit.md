@@ -23,8 +23,8 @@ After Teams Toolkit installation, the following Teams Toolkit UI appears:
 | Serial No. | UI Elements | Definition |
 | --- | --- |
 | 1 | **Get Started** | Explore Teams Toolkit and get an overview of the fundamentals. |
-| 2 | **Create a new Teams App** | Create a new Teams app based on your requirement. |
-| 3 | **View Samples** | Access existing samples to build apps based on your requirement. |
+| 2 | **Create a new Teams app** | Create a new Teams app based on your requirement. |
+| 3 | **View samples** | Access existing samples to build apps based on your requirement. |
 | 4 | **Documentation** | Access the Microsoft Teams Developer documentation. |
 | 5 | **Tutorials** | Access different tutorials. |
 | 6 | **New File** | Create a new file. |
