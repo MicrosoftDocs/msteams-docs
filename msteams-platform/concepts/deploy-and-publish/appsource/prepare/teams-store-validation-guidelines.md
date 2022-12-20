@@ -575,6 +575,9 @@ Remember the following:
 * Frame screenshots with a color that reflects your brand and include marketing content.
 * Use high-resolution screenshots that are sharp and contain legible and clearly readable text. [*Mandatory Fix*]
 * At least one screenshot must depict your app’s functionality on mobile devices. [*Mandatory Fix*]
+
+   :::image type="content" source="../../../../assets/images/submission/validation-guidelines-pass-app-functionality-mobile.png" alt-text="Screenshot shows the passed scenario of app functionality on mobile devices.":::
+
 * You can have up to five screenshots per listing. You must have a minimum of three and maximum five screenshots in your app listing. [*Mandatory Fix*]
 * Use mockups that accurately depict the app’s actual UI for the benefit of end-users. Screenshots must accurately depict the app’s actual UI or scenarios relevant to and related to the app. [*Mandatory Fix*]
 
@@ -586,8 +589,13 @@ Remember the following:
 
 * Provided screenshots mustn't incorrectly reference Microsoft Teams as MS, MSFT, or MS Teams. [*Mandatory Fix*]
 * If your Teams app is extensible across Microsoft 365 clients (Office, Outlook, and Microsoft Teams), the screenshots provided must depict the app functionality in other Microsoft 365 clients. [*Mandatory Fix*]
+
+   :::image type="content" source="../../../../assets/images/submission/validation-guidelines-pass-app-functionality-MS-365.png" alt-text="Screenshot shows the passed scenario of Teams app functionality in MS 365 clients.":::
+
 * You must provide captions in your screenshots to let the user clearly understand the app capability. [*Mandatory Fix*]
 * If your app supports Tabs as a capability, the screenshots showcasing the app in the context of a Teams tab, in app listing, must contain Team’s chrome. [*Mandatory Fix*]
+
+   :::image type="content" source="../../../../assets/images/submission/validation-guildelines-pass-tabs-capability.png" alt-text="Screenshot shows the passed scenario of screenshot of tab capability.":::
 
 **Don'ts:**
 
@@ -1565,6 +1573,10 @@ After an internal Microsoft review, if the compliance demonstration is satisfact
 * All app capabilities must be functional and must work properly as described in the AppSource or manifest long description. [*Mandatory Fix*]
 * Apps must always notify the user before downloading any file or executable on the user’s environment. Any call to action (CTA), either text based or otherwise, that makes it clear to the user that a file or executable is downloaded on user action is allowed in the app. [*Mandatory Fix*]
 * Apps with region dependency must notify the users with a graceful failure message in all applicable capabilities if they attempt to use it in an unsupported region. [*Mandatory Fix*]
+
+   :::image type="content" source="../../../../assets/images/submission/validation-guidelines-pass-app-functionality.png" alt-text="Screenshot shows the passed scenario of user attention for app functionality.":::
+
+   :::image type="content" source="../../../../assets/images/submission/validation-guidelines-fail-app-functionality-teams.png" alt-text="Screenshot shows the failed scenario of unrelated app functionality in Teams.":::
 
 ## Mobile experience
 
