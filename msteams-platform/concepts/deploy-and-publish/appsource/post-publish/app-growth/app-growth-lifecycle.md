@@ -46,7 +46,9 @@ Developers are encouraged to follow the guidance here to grow their app and driv
 - The app they’ve launched on Teams.
 - The target customer personas.
 
-Do note that Microsoft partners with app developers once they’ve launched their apps on Teams marketplace by offering select, programmatic GTM investments depending on the app’s maturity in the market. Developers must get in touch with their Microsoft field, account, or engineering representatives before spending cycles on their app growth planning and execution, so that they can get the most appropriate guidance they’re eligible for. Additionally, when the app you're developing reaches store validation stage or if it's already published, please sign up for the Microsoft 365 ISV Benefits Program. Review the Marketing Benefits Planning Guide for an overview of the marketing activities your app is eligible to participate in. The Microsoft 365 ISV Benefits Service Desk is available for any email correspondence regarding support for your marketing activity.
+Do note that Microsoft partners with app developers once they’ve launched their apps on Teams marketplace by offering select, programmatic GTM investments depending on the app’s maturity in the market. Developers must get in touch with their Microsoft field, account, or engineering representatives before spending cycles on their app growth planning and execution, so that they can get the most appropriate guidance they’re eligible for.
+
+Additionally, when the app you're developing reaches store validation stage or if it's already published, please sign up for the Microsoft 365 ISV Benefits Program. Review the Marketing Benefits Planning Guide for an overview of the marketing activities your app is eligible to participate in. The Microsoft 365 ISV Benefits Service Desk is available for any email correspondence regarding support for your marketing activity.
 
 You can plan your app's growth through the app lifecycle:
 
