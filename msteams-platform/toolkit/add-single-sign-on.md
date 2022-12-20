@@ -72,7 +72,7 @@ The following table lists the changes Teams Toolkit makes to your project:
 To enable SSO in your application, follow these steps:
 
 > [!NOTE]
-> These changes are based on the templates we scaffold.
+> These changes are based on the templates you scaffold.
 
 ---
 
@@ -210,7 +210,7 @@ SSO command handler `ProfileSsoCommandHandler` uses an Azure AD token to call Mi
 
 #### Add a new SSO command to the bot (Optional)
 
-After successfully adding SSO in your project, you can add a new SSO command.
+After successfully adding SSO in your project, you can add a new SSO command:
 
 1. Create a new file such as `photoSsoCommandHandler.ts` or `photoSsoCommandHandler.js` in `bot\src\` and add your own SSO command handler to call Graph API:
 
@@ -453,7 +453,7 @@ Teams tabs and bots have similar flow for SSO support. For more information, see
 
 TeamsFx helps to reduce the developer tasks by using SSO and accessing cloud resources down to single-line statements with zero configuration.
 
-With TeamsFx SDK, you can write user authentication code in a simplified way using credentials:
+With TeamsFx SDK, you can write user authentication code in a simplified way using following credentials:
 
 1. User identity in browser environment: `TeamsUserCredential` represents Teams current user's identity.
 1. User identity in Node.js environment: `OnBehalfOfUserCredential` uses On-Behalf-Of flow and SSO token.
@@ -728,7 +728,7 @@ For more information on TeamsFx SDK, see:
 
 ## How to use an existing Azure AD app
 
-For more information about hoe to use an existing Azure AD app in your TeamsFx project, see the [steps](https://github.com/OfficeDev/TeamsFx/wiki/Using-existing-Azure-AD-app-in-TeamsFx-project).
+For more information about how to use an existing Azure AD app in your TeamsFx project, see the [steps](https://github.com/OfficeDev/TeamsFx/wiki/Using-existing-Azure-AD-app-in-TeamsFx-project).
 
 ::: zone-end
 
