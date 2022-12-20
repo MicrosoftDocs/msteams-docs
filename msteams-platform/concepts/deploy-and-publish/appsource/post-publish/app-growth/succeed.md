@@ -30,7 +30,7 @@ To wrap up, your collaborative app is now becoming a full-fledged strategic prod
 
 - **Continuously reduce churn via product and analytics-led insights**:
 
-    Retaining users by providing them a sticky experience is key to growing your Teams app and realizing economic value from your product and GTM investments. Ensure that you’ve implemented robust and granular analytics for your Teams app that serves your need to measure when and which users have churned or likely to churn from your app. You can them re-engage and retarget them via outreach channels within or outside your product.
+    Retaining users by providing them a sticky experience is key to growing your Teams app and realizing economic value from your product and GTM investments. Ensure that you’ve implemented robust and granular analytics for your Teams app. It should serve your need to measure when and which users have churned or are likely to churn from your app. You can them re-engage and retarget them via outreach channels within or outside your product.
 
 - **Invest in richer and more impactful user scenarios**:
 
@@ -38,7 +38,7 @@ To wrap up, your collaborative app is now becoming a full-fledged strategic prod
 
     :::row:::
         :::column span="3":::
-            Ensure that you monitor reviews for your app on the marketplace, user feedback coming from in-product surveys, user behavior insights and app engagement analytics you’ve implemented in your app. Also, monitor customer inputs relayed by the Microsoft field, account, or engineering representatives. It helps you to continue investing in new scenarios and enhanced user experience for your app. You must keep an eye on your competitors and other leading SaaS apps in your segment to continuously learn from the market and evolve your app’s strategy and roadmap.
+            Ensure that you monitor reviews for your app on the marketplace, user feedback coming from in-product surveys, user behavior insights, and app engagement analytics you’ve implemented in your app. Also, monitor customer inputs relayed by the Microsoft field, account, or engineering representatives. It helps you to continue investing in new scenarios and enhanced user experience for your app. You must keep an eye on your competitors and other leading SaaS apps in your segment to continuously learn from the market and evolve your app’s strategy and roadmap.
         :::column-end:::
         :::column span="":::
             :::image type="content" source="../../../../../assets/images/app-fundamentals/feedback-teams-app.png" alt-text="Collect user feedback within the developer’s Teams app through contextual, micro-surveys.":::
@@ -59,7 +59,7 @@ To wrap up, your collaborative app is now becoming a full-fledged strategic prod
 
 - **Share deeper app metrics and data-backed insights**:
 
-    Strategic developers, who are part of the invite-only Teams engineering’s build-with partner program, can share aggregate-level user engagement and behavioral insights with Microsoft PM and UX design team. Armed with a vast experience or working with app developers and best practices of designing, developing and growing apps on Teams, they can collaborate with you on experience enhancements, hypotheses-driven growth experimentation and roadmap planning for your Teams collaborative app.
+    Strategic developers can be a part of the invite-only Teams engineering’s build-with partner program. The developers can share aggregate-level user engagement and behavioral insights with Microsoft PM and UX design team. The Microsoft team can collaborate with you using their vast experience of working with app developers. They can share best practices of designing, developing, and growing apps on Teams. You can get help on experience enhancements, hypotheses-driven growth experimentation, and roadmap planning for your Teams collaborative app.
 
 ## Where can Microsoft help?
 
