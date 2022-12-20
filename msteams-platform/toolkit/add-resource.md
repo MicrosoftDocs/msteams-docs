@@ -1,7 +1,7 @@
 ---
 title: Add Resources to Teams apps
 author: MuyangAmigo
-description: Learn about how to add Resources of Teams Toolkit, advantages, limitations and capabilities.
+description: Learn how to add resources of Teams Toolkit, advantages, limitations, and capabilities.
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
