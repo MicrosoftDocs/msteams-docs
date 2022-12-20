@@ -324,12 +324,13 @@
       items:
       - name: Receive all conversation messages with RSC
         href: bots/how-to/conversations/channel-messages-with-rsc.md
+        displayName: mention
     - name: Create a commands menu
       href: bots/how-to/create-a-bot-commands-menu.md
       displayName: compose
     - name: Channel and group chat conversations with a bot
       href: bots/how-to/conversations/channel-and-group-conversations.md
-      displayName: Teams conversational bots
+      displayName: Teams conversational bots, mention
     - name: Conversation events in your Teams bot
       href: bots/how-to/conversations/subscribe-to-conversation-events.md 
       displayName: activity, Message reaction events, event handling for install and uninstall events
