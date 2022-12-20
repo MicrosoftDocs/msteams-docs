@@ -199,7 +199,7 @@ TeamsFx SDK provides several functions to ease the configuration for third-party
 * Microsoft Graph Service:`createMicrosoftGraphClient`, `createMicrosoftGraphClientWithCredential`, and `MsGraphAuthProvider` helps to create authenticated Graph instance.
 
   > [!NOTE]
-  > `createMicrosoftGraphClient` function has been deprecated. Its recommended that you to use `createMicrosoftGraphClientWithCredential` instead for better coding experience.
+  > `createMicrosoftGraphClient` function has been deprecated. Its recommended that you to use `createMicrosoftGraphClientWithCredential` instead, for better coding experience.
 
 * SQL: The `getTediousConnectionConfig` returns a tedious connection config.
 
@@ -277,7 +277,7 @@ try {
 ```
 
 > [!NOTE]
-> TeamsFx class has been deprecated, and `ErrorWithCode` code is not recommended. You can use `TeamsUserCredential` instead.
+> TeamsFx class has been deprecated, and `ErrorWithCode` is not recommended. You can use `TeamsUserCredential` instead.
 
 ```typescript
 try {
@@ -661,7 +661,7 @@ This section provides several code snippets for common scenarios that are relate
 
        ```
 
-    2. You can use the `AppCredential` to get the token.
+    2. You can use `AppCredential` to get the token.
 
        ```typescript
        const appCredential = new AppCredential(appAuthConfig);
