@@ -20,7 +20,7 @@ Data for newly published apps takes about a week to appear in the report.
 
 You can submit changes to your app (such as new features or even metadata) in Partner Center. These changes require a new review process.
 
-Ensure the following when publishing updates:
+Ensure to check the following when you're publishing updates:
 
 * Don't change your app ID.
 * Increment your app's version number.
@@ -28,7 +28,7 @@ Ensure the following when publishing updates:
 
 ### App updates requiring user consent
 
-When a user installs your app, they must give the app permission to access the services and information the app requires to function. In most cases, users must do this once and new version of your app install automatically.
+When a user installs your app, they must give the app permission to access the services, and information the app requires to function. In most cases, users must do this once and new version of your app install automatically.
 If you make any of the following changes to your app, however, your existing users must accept another permission request to install the update:
 
 * Add or remove a bot.
