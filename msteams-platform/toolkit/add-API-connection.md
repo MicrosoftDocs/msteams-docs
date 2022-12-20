@@ -1,7 +1,7 @@
 ---
 title: Integrate existing third party APIs
 author: MuyangAmigo
-description:  In this article, learn how toolkit helps you bootstrap sample access to existing APIs. It provides list of different authentication types.
+description: Learn about how toolkit helps you bootstrap sample access to existing APIs. It provides list of different authentication types.
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: Overview
@@ -10,11 +10,15 @@ ms.date: 05/20/2022
 
 # Integrate existing third party APIs
 
-Teams Toolkit helps you to access existing APIs for building Teams apps. These APIs are developed by your organization or a third-party. When you use Teams Toolkit to connect to an existing API, Teams Toolkit performs the following function:
+Teams Toolkit helps you to access existing APIs for building Teams apps. These APIs are developed by your organization or a third-party. When you use Teams Toolkit to connect to an existing API, Teams Toolkit performs the following functions:
 
 * Generate sample code under `./bot` or `./api` folder.
 * Add a reference to the `@microsoft/teamsfx` package to `package.json`.
 * Add app settings for your API in  `.env.teamsfx.local` that configures local debugging.
+
+## Advantages
+
+Teams Toolkit helps you bootstrap sample code to access the APIs, if you don't have language appropriate SDKs to access these APIs.
 
 ## Steps to connect to API
 
@@ -98,11 +102,11 @@ The base command of this feature is `teamsfx add api-connection [authentication 
 
    |**Authentication type**|**Sample command**|
    |-----------------------|------------------|
-   |Basic|teamsfx add api-connection basic--endpoint <https://example.com> --component bot--alias example--user-name exampleuser--interactive false|
-   |API Key|teamsfx add api-connection apikey--endpoint <https://example.com> --component bot--alias example--key-location header--key-name example-key-name--interactive false|
-   |Azure AD|teamsfx add api-connection aad--endpoint <https://example.com> --component bot--alias example--app-type custom--tenant-id your_tenant_id--app-id your_app_id--interactive false|
-   |Certificate|teamsfx add api-connection cert--endpoint <https://example.com> --component bot--alias example--interactive false|
-   |Custom|teamsfx add api-connection custom--endpoint <https://example.com> --component bot--alias example--interactive false|
+   |**Basic**|teamsfx add api-connection basic--endpoint <https://example.com> --component bot--alias example--user-name exampleuser--interactive false|
+   |**API Key**|teamsfx add api-connection apikey--endpoint <https://example.com> --component bot--alias example--key-location header--key-name example-key-name--interactive false|
+   |**Azure AD**|teamsfx add api-connection aad--endpoint <https://example.com> --component bot--alias example--app-type custom--tenant-id your_tenant_id--app-id your_app_id--interactive false|
+   |**Certificate**|teamsfx add api-connection cert--endpoint <https://example.com> --component bot--alias example--interactive false|
+   |**Custom**|teamsfx add api-connection custom--endpoint <https://example.com> --component bot--alias example--interactive false|
 
 ---
 
@@ -110,15 +114,11 @@ The base command of this feature is `teamsfx add api-connection [authentication 
 
  Teams Toolkit modifies `bot` or `api` folder based on your selections:
 
-1. Generate `{your_api_alias}.js/ts` file. The file initializes an API client for your API and exports the API client.
+1. Generate `{your_api_alias}.js\ts` file. The file initializes an API client for your API and exports the API client.
 
-2. Add `@microsoft/teamsfx` package to `package.json`. The package provides support for the common API authentication methods.
+2. Add `@microsoft\teamsfx` package to `package.json`. The package provides support for the common API authentication methods.
 
 3. Add environment variables to `.env.teamsfx.local`. They're the configurations for the selected authentication type. The generated code reads values from the environment variables.
-
-## Advantages
-
-Teams Toolkit helps you bootstrap sample code to access the APIs, if you don't have language appropriate SDKs to access these APIs.
 
 ## See also
 
