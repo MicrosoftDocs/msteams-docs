@@ -177,7 +177,10 @@ You can design app sign-in flows for different Teams contexts and identity provi
 
 ## Settings
 
-Settings screens are where users can configure their preferences with your app. (Note: Settings are a container for [basic UI components](~/concepts/design/design-teams-app-basic-ui-components.md).)
+Settings screens are where users can configure their preferences with your app.
+
+> [!NOTE]
+> Settings is a container for [basic UI components](~/concepts/design/design-teams-app-basic-ui-components.md).
 
 ### Top use case
 
