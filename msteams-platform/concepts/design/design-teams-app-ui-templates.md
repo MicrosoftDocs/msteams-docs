@@ -91,7 +91,7 @@ You can use different card sizes (single, double, and full) to stack and organiz
 
 ## Empty state
 
-The empty state template can be used for many scenarios, including sign in, first-run experiences, error messages, and more. It’s highly flexible⁠—adapt it to use one, a few, or all of the components in the following design.
+The empty state template can be used for many scenarios, including sign in, first-run experiences, error messages, and more. It's highly flexible⁠—adapt it to use one, a few, or all of the components in the following design.
 
 ### Top use cases
 
@@ -177,7 +177,7 @@ You can design app sign-in flows for different Teams contexts and identity provi
 
 ## Settings
 
-Settings screens are where users can configure their preferences with your app. (Note: Settings is a container for [basic UI components](~/concepts/design/design-teams-app-basic-ui-components.md).)
+Settings screens are where users can configure their preferences with your app. (Note: Settings are a container for [basic UI components](~/concepts/design/design-teams-app-basic-ui-components.md).)
 
 ### Top use case
 
