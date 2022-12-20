@@ -16,7 +16,7 @@ In this section, you can learn how to create a new Teams project using Microsoft
 
 ## Create a new Teams project for Visual Studio Code
 
-You can build a new Teams project by selecting **Create a new Teams app** in the Teams Toolkit. You can create the following types of apps in the Teams Toolkit:
+You can build a new Teams project by selecting **Create a new Teams app** in Teams Toolkit. You can create the following types of apps in Teams Toolkit:
 
 | App Types | Definition |
 | --- | --- |
@@ -59,7 +59,7 @@ The steps to create a new Teams app is similar for all types of apps except SPFx
 
           :::image type="content" source="../assets/images/teams-toolkit-v2/select-folder_1.png" alt-text="select-folder for storage":::
 
-1. Enter a suitable name for your app, such as helloword as the application name. Ensure that you use only alphanumeric characters. Press **Enter**.
+1. Enter a suitable name for your app, such as helloworld as the application name. Ensure that you use only alphanumeric characters. Press **Enter**.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/enter-name-tab1.png" alt-text="Screenshot showing where to enter the app name.":::
 
@@ -88,13 +88,13 @@ You have three different types of basic Teams apps and the directory structure l
 | - `.fx\configs\config.<envName>.json` | Configuration file for every environment. |
 | - `.fx\configs\projectSettings.json` | Global project settings that apply to all environments. |
 | `tabs` | Code for the Tab capability needed at runtime, such as the privacy notice, terms of use, and configuration tabs. |
-| - `tabs/src/index.jsx` | Entry point for the front-end app, where the main App component is rendered with `ReactDOM.render()` |
-| - `tabs/src/components/App.jsx` | Code for handling URL routing in the app. It calls the [Microsoft Teams JavaScript client library](../tabs/how-to/using-teams-client-library.md) to establish communication between your app and Teams. |
-| - `tabs/src/components/Tab.jsx` | Code to implement the UI of your app. |
-| - `tabs/src/components/TabConfig.jsx` | Code to implement the UI that configures your app. |
-| `templates/appPackage` | App manifest template files, and the app icons: color.png and outline.png. |
-| - `templates/appPackage/manifest.template.json` | App manifest for running the app in local or remote environment.  |
-| `templates/azure` | BICEP template files |
+| - `tabs\src\index.jsx` | Entry point for the front-end app, where the main App component is rendered with `ReactDOM.render()` |
+| - `tabs\src\components\App.jsx` | Code for handling URL routing in the app. It calls the [Microsoft Teams JavaScript client library](../tabs/how-to/using-teams-client-library.md) to establish communication between your app and Teams. |
+| - `tabs\src\components\Tab.jsx` | Code to implement the UI of your app. |
+| - `tabs\src\components\TabConfig.jsx` | Code to implement the UI that configures your app. |
+| `templates\appPackage` | App manifest template files, and the app icons: color.png and outline.png. |
+| - `templates\appPackage\manifest.template.json` | App manifest for running the app in local or remote environment.  |
+| `templates\azure` | BICEP template files |
 
 > [!NOTE]
 > If you have a bot or message extension app, relevant folders are added to the directory structure.
@@ -190,15 +190,15 @@ Teams Toolkit provides Microsoft Teams app templates in Visual Studio to create 
 The steps to create a new Teams app are similar for all types of apps except notification bot. The following steps help you to create a new tab app:
 
 1. Open Visual Studio.
-1. Create new project by using one of the following two options:
+1. Create a new project by using one of the following two options:
 
-     :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-create-new-project1_1_2.png" alt-text="Create new project with code from get started":::
+    * Select **Create a new project** under **Get started** helps you to select a project template with code scaffolding.
 
-    * Select **Create a new project** under **Get started** helps you to choose a project template with code scaffolding.
-    * Select **Continue without Code** to create project without code scaffolding.
-      * Select **File** > **New** > **Project** in Visual Studio.
+      :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-create-new-project1_1_2.png" alt-text="Create new project with code from get started":::
 
-         :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-create-new-project2_1_2.png" alt-text="Create new project from file menu":::
+    * Select **Continue without Code** to create project without code scaffolding. Select **File** > **New** > **Project** in Visual Studio.
+
+     :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-create-new-project2_1_2.png" alt-text="Create new project from file menu":::
 
    The **Create a new project** window appears.  
 
@@ -219,12 +219,12 @@ The steps to create a new Teams app are similar for all types of apps except not
 
     1. Select the folder location where you want to create the project workspace.
     1. Enter a different solution name, if you want.
-    1. Check the checkbox to save the project and solution in the same folder, if you want. For this tutorial, you don't need this option.
+    1. If required, check the checkbox to save the project and solution in the same folder. For this tutorial, you don't need this option.
     1. Select **Create**.
 
    The **Create a new Teams application** window appears.
 
-1. In this tutorial, **Tab** is selected to create a new Teams application and select **Create**.
+1. Ensure **Tab** is selected, then select **Create**.
 
    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-ms-teams-app-type_3_1.png" alt-text="Select the teams app type":::
 
@@ -259,7 +259,7 @@ You can see Teams app templates already populated in Teams Toolkit for various T
 |**Message Extension**     |Message Extension app implements simple features like creating an Adaptive Card, searching Nugget packages, unfurling links for the `dev.botframework.com` domain.         |
 
 > [!NOTE]
-> After the project is created, Teams Toolkit automatically opens **Get started** window. You can see the instructions in **Get started** window and check out the different features in Teams Toolkit.
+> After the project is created, Teams Toolkit automatically opens **GettingStarted** window. You can see the instructions in **GettingStarted** window and check out the different features in Teams Toolkit.
 
 ::: zone-end
 
