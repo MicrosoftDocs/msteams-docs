@@ -1,7 +1,7 @@
 ---
 title: Debug background processes
 author: surbhigupta
-description: In this module, learn how Visual studio code and Teams Toolkit work during local debug process, and how to register and configure your Teams app.
+description: In this module, learn how Visual Studio Code and Teams Toolkit work during local debug process, and how to register and configure your Teams app.
 ms.author: v-amprasad
 ms.localizationpriority: high
 ms.topic: overview
