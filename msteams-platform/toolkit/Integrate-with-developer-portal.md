@@ -33,7 +33,7 @@ The following steps help to publish your app in Developer Portal:
 
 ## To update Manifest file and app package
 
-If there are any changes related to Teams app's manifest file, you can update the manifest and publish the Teams app again. To publish Teams app manually, you may leverage [Developer Portal for Teams](https://dev.teams.microsoft.com/home).
+If there are any changes related to Teams app's manifest file, you can update the manifest and publish the Teams app again. To publish Teams app manually, you may use [Developer Portal for Teams](https://dev.teams.microsoft.com/home).
 
 1. Sign-in to [Developer portal for Teams](https://dev.teams.microsoft.com) using the corresponding account.
 1. Select **Apps** > **Import app** to import your app package in zip format.<br>
@@ -42,9 +42,9 @@ If there are any changes related to Teams app's manifest file, you can update th
 
 You can do the following configuration for your app in the Developer Portal:
 
-* **Basic information**: This section shows and allows to edit the **App names**, **App ID**, **Descriptions**, **Version**, **Developer Information**, **App URLs**, **Application (client) ID**, and **Microsoft Partner Network ID**.
-* **Branding**: This section allows to add **Color icon** and **Outline icon** in `.png` format.
-* **App features**: This section allows to add the following features to your app:
+* **Basic information**: This section shows and allows you to edit the **App names**, **App ID**, **Descriptions**, **Version**, **Developer Information**, **App URLs**, **Application (client) ID**, and **Microsoft Partner Network ID**.
+* **Branding**: This section allows you to add **Color icon** and **Outline icon** in `.png` format.
+* **App features**: This section allows you to add the following features to your app:
   * Personal app
   * Bot
   * Connector
@@ -53,10 +53,10 @@ You can do the following configuration for your app in the Developer Portal:
   * Messaging extension
   * Meeting extension
   * Activity feed notification
-* **Permissions**: This section allows to give **Device permissions**, **Team Permissions**, **Chat/Meeting Permissions**, and **User Permissions** for your app.
-* **Single sign-on**: This section allows to configure your app to authenticate users with single sign-on (SSO) and specifies your app's resource for getting authorization tokens.
-* **Languages**: This section allows to set up or change the language of your app.
-* **Domain**: This section allows to add the domains to load your apps in the Teams client, such as *.*.example.com.
+* **Permissions**: This section allows you to give **Device permissions**, **Team Permissions**, **Chat/Meeting Permissions**, and **User Permissions** for your app.
+* **Single sign-on**: This section allows you to configure your app to authenticate users with single sign-on (SSO) and specifies your app's resource for getting authorization tokens.
+* **Languages**: This section allows you to set up or change the language of your app.
+* **Domain**: This section allows you to add the domains to load your apps in the Teams client, such as *.*.example.com.
 
 ## See also
 
