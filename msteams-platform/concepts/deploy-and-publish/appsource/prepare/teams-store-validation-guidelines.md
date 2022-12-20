@@ -122,6 +122,8 @@ An app's name plays a critical role in how users discover it in the store. Use t
 
   * To fulfill multiple regions support requirement, you must build into your business logic and publish only one listing.
 
+   :::image type="content" source="../../../../assets/images/submission/validation-guidelines-pass-region-app-manifest.png" alt-text="Screenshot shows the passed scenario of region requirement done with logic.":::
+
   * To fulfill multiple end-point requirements for on-premises and on-cloud deployment, you must build into your business logic and publish only one listing.
 
 ### Suitable for workplace consumption
@@ -137,6 +139,8 @@ App content must be suitable for general workplace consumption and follow all re
 Your app must enable group collaboration, improve an individual's productivity, or both. Apps intended for team bonding and socializing must be collaborative and designed for multiple participants. The apps mustn't require a substantial time investment of over 60 mins per session or affect productivity. [Mandatory Fix]
 
 Content aggregator apps must have a mechanism for users to report an issue or inappropriate content to the app publisher. [Mandatory Fix]
+
+   :::image type="content" source="../../../../assets/images/submission/validation-guidelines-content-aggregator-app.png" alt-text="Screenshot shows the passed scenario of content aggregator app to report issues.":::
 
 </details>
 
@@ -458,8 +462,6 @@ Descriptions mustn't directly or through insinuation disparage another brand (Mi
 
 * If your app is supported for specific regions or geographical locations, you must call out that specific region dependency in the app description in manifest, Partner Center, and AppSource for that offer.
 
-   :::image type="content" source="../../../../assets/images/submission/validation-guidelines-pass-region-app-manifest.png" alt-text="Screenshot shows the passed scenario of region requirement done with logic.":::
-
 * If you need to reference Teams, write the first reference in the app listing as Microsoft Teams. Later references can be shortened to Teams. [*Mandatory Fix*]
 
    :::image type="content" source="../../../../assets/images/submission/validation-app-description-teams-reference-pass.png" alt-text="Graphic shows an example of correct reference to Teams in app description.":::
@@ -552,6 +554,9 @@ The long description can provide an engaging narrative that highlights your app'
 ### Screenshots
 
 Screenshots provide a prominent visual preview of your app to complement your app name, icon, and descriptions.
+
+   :::image type="content" source="../../../../assets/images/submission/validation-guidelines-fail-suppliement-screenshot.png" alt-text="Screenshot shows the failed scenario of supplement content used in screenshot.":::
+
 <br></br>
 <details><summary>Expand to know more</summary>
 
@@ -572,7 +577,13 @@ Remember the following:
 * At least one screenshot must depict your app’s functionality on mobile devices. [*Mandatory Fix*]
 * You can have up to five screenshots per listing. You must have a minimum of three and maximum five screenshots in your app listing. [*Mandatory Fix*]
 * Use mockups that accurately depict the app’s actual UI for the benefit of end-users. Screenshots must accurately depict the app’s actual UI or scenarios relevant to and related to the app. [*Mandatory Fix*]
+
+   :::image type="content" source="../../../../assets/images/submission/validation-guidelines-fail-actual-UI.png" alt-text="Screenshot shows the failed scenario of screenshot of app's actual UI.":::
+
 * Must depict app functionality or integration with Teams. [*Mandatory Fix*]
+
+   :::image type="content" source="../../../../assets/images/submission/validation-guidelines-fail-app-functionality.png" alt-text="Screenshot shows the failed scenario of app functionality or integration.":::
+
 * Provided screenshots mustn't incorrectly reference Microsoft Teams as MS, MSFT, or MS Teams. [*Mandatory Fix*]
 * If your Teams app is extensible across Microsoft 365 clients (Office, Outlook, and Microsoft Teams), the screenshots provided must depict the app functionality in other Microsoft 365 clients. [*Mandatory Fix*]
 * You must provide captions in your screenshots to let the user clearly understand the app capability. [*Mandatory Fix*]
