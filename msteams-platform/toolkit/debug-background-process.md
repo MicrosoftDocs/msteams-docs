@@ -1,7 +1,7 @@
 ---
 title: Debug background processes
 author: surbhigupta
-description: In this module, learn how Visual Studio Code and Teams Toolkit work during local debug process, and how to register and configure your Teams app.
+description: In this module, learn how Visual Studio Code and Teams Toolkit work during local debug process. Also learn how to register and configure your Teams app.
 ms.author: v-amprasad
 ms.localizationpriority: high
 ms.topic: overview
@@ -37,8 +37,8 @@ Teams Toolkit checks the following prerequisites during the debug process:
 
 * Teams Toolkit prompts you to sign-in to Microsoft 365 account, if you haven't signed in with your valid credentials.
 * Custom app uploading or sideloading for your developer tenant is turned on, to prevent local debug termination.
-* Teams Toolkit installs Ngrok NPM package `ngrok@4.2.2` in `~/.fx/bin/ngrok`, if Ngrok isn't installed or the version doesn't match the requirement. Ngrok binary version 2.3 is applicable for bot and message extension. The Ngrok binary is managed by Ngrok NPM package in `/.fx/bin/ngrok/node modules/ngrok/bin`.
-* Teams Toolkit installs Azure Functions Core Tools NPM package, azure-functions-core-tools@3 for **Windows** and **MacOs** in  `~/.fx/bin/func`, if Azure Functions Core Tools version 4 isn't installed or the version doesn't match the requirement. The Azure Functions Core Tools NPM package in `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` manages Azure Functions Core Tools binary. For Linux, the local debug terminates.
+* Teams Toolkit installs Ngrok npm package `ngrok@4.2.2` in `~/.fx/bin/ngrok`, if Ngrok isn't installed or the version doesn't match the requirement. Ngrok binary version 2.3 is applicable for bot and message extension. The Ngrok binary is managed by Ngrok npm package in `/.fx/bin/ngrok/node modules/ngrok/bin`.
+* Teams Toolkit installs Azure Functions Core Tools npm package. `azure-functions-core-tools@3` for **Windows** and **MacOs** in  `~/.fx/bin/func`, if Azure Functions Core Tools version 4 isn't installed or the version doesn't match the requirement. The Azure Functions Core Tools npm package in `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` manages Azure Functions Core Tools binary. For Linux, the local debug terminates.
 * Teams Toolkit installs .NET Core SDK for **Windows** and **MacOS** in `~/.fx/bin/dotnet`.NET Core SDK version applicable for Azure Functions, if .NET Core SDK isn't installed or the version doesn't match the requirement. For Linux, the local debug terminates.
 
   The following table lists the .NET Core versions:
@@ -50,7 +50,7 @@ Teams Toolkit checks the following prerequisites during the debug process:
 
 * Development certificate, if the development certificate for localhost isn't installed for tab in **Windows** or **MacOS**, then Teams Toolkit prompts you to install it.
 * Azure Functions binding extensions defined in `api/extensions.csproj`, if Azure Functions binding extensions isn't installed, then Teams Toolkit installs Azure Functions binding extensions.
-* NPM packages, applicable for tab app, bot app, message extension, and Azure Functions. If NPM packages aren't installed, then Teams Toolkit installs all NPM packages.
+* npm packages, applicable for tab app, bot app, message extension, and Azure Functions. If npm packages aren't installed, then Teams Toolkit installs all npm packages.
 * Bot and message extension, Teams Toolkit starts Ngrok to create an HTTP tunnel for bot and message extension.
 * Ports available, if tab, bot, message extension, and Azure Functions ports are unavailable, the local debug terminates.
 

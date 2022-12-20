@@ -55,7 +55,7 @@ You can toggle breakpoints on the source codes of tabs, bots, message extension
 
 ### Hot reload
 
-You can update and save the source codes of tab, bot, message extension, and Azure Functions at the same time when you're debugging the Teams app. The app reloads and the debugger reattaches to the programming languages.
+You can update and save the source codes of tab, bot, message extension, and Azure Functions at the same time when you're debugging the Teams app. The app reloads and the debugger reattach to the programming languages.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/hot-reload.png" alt-text="hot-reload for source codes" lightbox="../assets/images/teams-toolkit-v2/debug/hot-reload.png":::
 
@@ -236,7 +236,7 @@ Teams Toolkit automates app startup services, initiates debug, and side loads Te
 
 ## Key features of Teams Toolkit
 
-You can see the following key features of Teams Toolkit, that automate the local debugging process of your Teams app:
+You can see the following key features of Teams Toolkit, that automates the local debugging process of your Teams app:
 
 ### Prepare Teams app dependencies
 
