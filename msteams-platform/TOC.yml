@@ -72,7 +72,7 @@
         href: concepts/design/plan-code-instrumentation.md
   - name: Plan to monetize your app
     href: concepts/design/plan-to-monetize.md
-    displayName: Subscription, In-app purchases, Free trials, Test preview
+    displayName: Subscription, In-app purchases, Free trials, Test preview, paid
 - name: Design your app
   items:
   - name: Overview
@@ -195,8 +195,8 @@
       href: concepts/build-and-test/manage-your-apps-in-developer-portal.md
     - name: Analyze your apps usage in Developer Portal
       href: concepts/build-and-test/analyze-your-apps-usage-in-developer-portal.md  
-  - name: Teams JavaScript client SDK
-    href: tabs/how-to/using-teams-client-sdk.md
+  - name: Teams JavaScript client library
+    href: tabs/how-to/using-teams-client-library.md
   - name: Node.js Bot Framework for bots and message extensions (GitHub)
     href: https://github.com/Microsoft/botbuilder-js
   - name: .NET Bot Framework for bots and message extensions (GitHub)
@@ -276,12 +276,14 @@
   - name: Get context for your tab
     href: tabs/how-to/access-teams-context.md
     displayName: User context, authentication flow from Microsoft Azure Active Directory, retrieve context, theme changes
+  - name: Navigate within your tab
+    href: tabs/how-to/tab-navigation.md  
   - name: Build apps for shared channels
     href: concepts/build-and-test/shared-channels.md
     displayName: Cross-tenant notifications, context for shared channel, apps and permissions in shared channels
   - name: Build tabs with Adaptive Cards
     href: tabs/how-to/build-adaptive-card-tabs.md
-    displayName: Slow load times, iFrame constartints, invoke activities, task module, task fetch, task submit, authentication
+    displayName: Slow load times, iFrame constraints, invoke activities, task module, task fetch, task submit, authentication
   - name: Tabs link unfurling and Stage View
     href: tabs/tabs-link-unfurling.md
     displayName: Tab in stage view
@@ -706,6 +708,7 @@
     href: concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
   - name: Test preview for monetized apps
     href: concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
+    displayName: paid
 - name: App manifest
   items:
     - name: App manifest schema for Teams
