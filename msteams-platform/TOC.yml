@@ -440,7 +440,7 @@
         href: apps-in-teams-meetings/teams-live-share-tutorial.md
     - name: Core capabilities
       href: apps-in-teams-meetings/teams-live-share-capabilities.md
-      displayName: Live Share data structures
+      displayName: Live Share data structures, broadcast
     - name: Media synchronization
       href: apps-in-teams-meetings/teams-live-share-media-capabilities.md
       displayName: Media synchronization, audio ducking
@@ -502,11 +502,13 @@
         href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/overview.md
       - name: Work with Universal Actions for Adaptive Cards
         href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-universal-actions-for-adaptive-cards.md
+        displayName: Sequential Workflows
       - name: User Specific Views
         href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/User-Specific-Views.md
         displayName: Poll creator controls, channel, extension
       - name: Sequential Workflows
         href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Sequential-Workflows.md
+        displayName: Sequential Workflows
       - name: Up to date cards
         href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Up-To-Date-Views.md
   - name: Build task modules
