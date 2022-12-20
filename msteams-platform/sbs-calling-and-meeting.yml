@@ -121,13 +121,11 @@ items:
     > * Run Windows PowerShell PSI as an administrator and execute the script.
     > * If you are using the Windows PowerShell PSI for the first time, run the following commands before executing the script:
     >   * Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser
-    >   * Run Install-Module -Name MicrosoftTeams -Force -AllowClobber 
+    >   * Install-Module -Name MicrosoftTeams -Force -AllowClobber 
 
     ```PowerShell
     New-CsApplicationAccessPolicy -Identity "<<policy-identity/policy-name>>" -AppIds "<<azure-client-id>>" -Description "Policy-description"
     Grant-CsApplicationAccessPolicy -PolicyName "<<policy-identity/policy-name>>" -Identity "<<object-id-of-the-user-to-whom-policy-need-to-be-granted>>"
-    Connect-MicrosoftTeams
-    Get-CsApplicationAccessPolicy -Identity “<<policy-identity/policy-name>>”
     ```
 
      **Replace the following in the Windows PowerShell script:**
@@ -139,7 +137,7 @@ items:
      |**Policy-description** | Description of the policy. |
      |**object-id-of-the-user-to-whom-policy-need-to-be-granted** |  ID of the user for whom you need to generate the policy using the graph explorer. |
 
-    **To generate object ID:**
+    **To generate object ID**
 
      1. Sign into [Microsoft Graph Explorer](https://developer.microsoft.com/graph) using the credentials to whom the policy has to be granted.
      1. Select **Graph Explorer** from the tool bar.
