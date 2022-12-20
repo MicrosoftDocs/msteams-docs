@@ -97,7 +97,7 @@ start().catch((error) => console.error(error));
 
 Not all of your app's views need to be collaborative. The `stage` view _always_ needs collaborative features, the `content` view _may_ need collaborative features, and the `config` view should _never_ need collaborative features. For the views that do need collaborative features you'll need to join a Fluid container associated with the current meeting.
 
-Joining the container for the meeting is as simple as initializing the [LiveShareClient](/javascript/api/@microsoft/live-share/liveshareclient) with a `LiveShareHost` instance from the Teams Client SDK, and then calling its [joinContainer()](/javascript/api/@microsoft/live-share/liveshareclient#@microsoft-live-share-liveshareclient-joincontainer) method.
+Joining the container for the meeting is as simple as initializing the `LiveShareClient` with a `LiveShareHost` instance from the Teams Client SDK, and then calling its `joinContainer()` method.
 
 When running locally, you can initialize `LiveShareClient` with a `TestLiveShareHost` instance instead.
 
@@ -185,7 +185,7 @@ diceMap.on("valueChanged", updateDice);
 
 ## Write the side panel view
 
-The side panel view, loaded through the tab `contentUrl` with the `sidePanel` frame context, is displayed to the user in a side panel when they open your app within a meeting. The goal of side panel view is to let a user select content for the app prior to sharing the app to the meeting stage. For the Live Share SDK apps, the side panel view can also be used as a companion experience for the app. Calling [joinContainer()](/javascript/api/@microsoft/live-share/liveshareclient#@microsoft-live-share-liveshareclient-joincontainer) from the side panel view connects to the same Fluid container the stage view is connected to. This container can then be used to communicate with the stage view. Ensure that you're communicating with everyone's stage view and side panel view.
+The side panel view, loaded through the tab `contentUrl` with the `sidePanel` frame context, is displayed to the user in a side panel when they open your app within a meeting. The goal of side panel view is to let a user select content for the app prior to sharing the app to the meeting stage. For the Live Share SDK apps, the side panel view can also be used as a companion experience for the app. Calling `joinContainer()` from the side panel view connects to the same Fluid container the stage view is connected to. This container can then be used to communicate with the stage view. Ensure that you're communicating with everyone's stage view and side panel view.
 
 The sample's side panel view prompts the user to select the share to stage button.
 
@@ -214,7 +214,7 @@ function renderSidePanel(elem) {
 The settings view, loaded through `configurationUrl` in your app manifest, is shown to a user when they first add your app to a Teams meeting. This view lets the developer configure the `contentUrl` for the tab that is pinned to the meeting based on user input. This page is currently required even if no user input is required to set the `contentUrl`.
 
 > [!NOTE]
-> The Live Share's' [joinContainer()](/javascript/api/@microsoft/live-share/liveshareclient#@microsoft-live-share-liveshareclient-joincontainer) is not supported in the tab `settings` context.
+> The Live Share's' `joinContainer()` is not supported in the tab `settings` context.
 
 The sample's settings view prompts the user to select the save button.
 
@@ -354,7 +354,7 @@ After you're ready to deploy your code, you can use [Teams Toolkit](../toolkit/p
 
 ## See also
 
-- [Apps for Teams meetings](teams-apps-in-meetings.md)d)
+- [Apps for Teams meetings](teams-apps-in-meetings.md)
 - [GitHub repository](https://github.com/microsoft/live-share-sdk)
 - [Live Share SDK reference docs](/javascript/api/@microsoft/live-share/)
 - [Live Share Media SDK reference docs](/javascript/api/@microsoft/live-share-media/)
@@ -362,4 +362,3 @@ After you're ready to deploy your code, you can use [Teams Toolkit](../toolkit/p
 - [Use Fluid with Teams](../tabs/how-to/using-fluid-msteam.md)
 - [Build tabs for meeting](build-tabs-for-meeting.md)
 - [Tabs link unfurling and Stage View](../tabs/tabs-link-unfurling.md)
--
