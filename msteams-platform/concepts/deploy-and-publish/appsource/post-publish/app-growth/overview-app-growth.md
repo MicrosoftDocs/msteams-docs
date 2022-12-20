@@ -7,7 +7,7 @@ ms.localizationpriority: high
 ms.author: surbhigupta
 ---
 
-# Plan, strategize and execute growth for your app
+# Strategize and execute growth for your app
 
 Shipping your app on the Teams marketplace is just the beginning. After shipping, you must meticulously plan how to grow your app and make it a successful product on the marketplace. It drives intended business metrics and helps you realize returns on your investment into planning, designing, and building the app.
 
