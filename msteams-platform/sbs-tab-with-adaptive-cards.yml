@@ -74,7 +74,7 @@ items:
 
     1. Select your **Subscription** and **Resource group** from the dropdown list.
             
-       :::image type="content" source="~/assets/images/adaptive-cards/resource-group_1.png" alt-text="Screenshot shows the Subscription and Resource group fileds in tge crate an Azure bot page.":::
+       :::image type="content" source="~/assets/images/adaptive-cards/resource-group_1.png" alt-text="Screenshot shows the Subscription and Resource group fields in the create an Azure bot page. ":::
 
        You can optionally create a new resource group. Select **Create new** > enter resource name > select **OK**. Select the required location from the **New resource group location** dropdown list.
 
@@ -310,7 +310,7 @@ items:
         | **Client secret** | Saved previously as **Value** of the client secret ID. |
         | **Token Exchange URL** | Use the **Application ID URL** obtained previously while exposing API endpoint. |
         | **Tenant ID** | Enter **common**. |
-        | **Scopes** | Enter **User.Read** and also add all the **Scopes** required while specifying permissions to downstream APIs. |
+        | **Scopes** | Enter **User.Read** and add all the **Scopes** required while specifying permissions to downstream APIs. |
 
     1. Select **Save**.
 
@@ -415,7 +415,7 @@ items:
 
         :::image type="content" source="~/assets/images/adaptive-cards/adaptive-cards-tab-action-controls.png" alt-text="Screenshot of Tab Adaptive card with action controls Tabadaptive on the left pane highlighted in red.":::
     
-    1. Choose an account to access the tab.
+    1. Select an account to access the tab.
 
         :::image type="content" source="~/assets/images/adaptive-cards/sign-in-page.png" alt-text="Screenshot of TabAdaptiveCard displaying sign in option to access the tab.":::
 
@@ -439,7 +439,7 @@ items:
         :::image type="content" source="~/assets/images/adaptive-cards/sign-out.png" alt-text="Screenshot of TabAdaptiveCard with Sign out option highlighted in red.":::
 
 
-    1. Refresh to **Sign In** again.
+    1. Select the Refresh icon to **Sign In** again.
 
         :::image type="content" source="~/assets/images/adaptive-cards/success-sign-out.png" alt-text="Screenshot of TabAdaptiveCard displaying successful Sign out message."
 
