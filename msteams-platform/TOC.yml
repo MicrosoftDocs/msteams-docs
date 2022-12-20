@@ -2,7 +2,7 @@
   href: mstdd-landing.yml
 - name: What's new?
   href: whats-new.md
-  displayName: Teams platform features, latest updates, RSS feed, deprecated, announcement
+  displayName: Teams platform features, latest updates, RSS feed, deprecated, announcement, preview 
 - name: Glossary
   href: get-started/glossary.md
   displayName: App tray, terminologies, definitions, welcome 
@@ -82,7 +82,7 @@
     href: concepts/design/design-teams-app-process.md
   - name: Design system
     href: concepts/design/design-teams-app-fundamentals.md
-    displayName: icons
+    displayName: icons, Font
   - name: App capabilities
     items:
     - name: Understand app structure
@@ -112,9 +112,10 @@
       href: task-modules-and-cards/task-modules/design-teams-task-modules.md
     - name: Activity feed notifications
       href: concepts/design/activity-feed-notifications.md
+      displayName: notify, notification 
   - name: App customization
     href: concepts/design/enable-app-customization.md
-    displayName: Customize your app, update app name, branding, hide and unhide app
+    displayName: Customize your app, update app name, branding, hide and unhide app, accent 
 - name: Tools and SDKs
   items:
   - name: Teams Toolkit 
@@ -196,6 +197,7 @@
     items:
     - name: Overview
       href: concepts/build-and-test/teams-developer-portal.md
+      displayName: app studio
     - name: Manage your apps in Developer Portal
       href: concepts/build-and-test/manage-your-apps-in-developer-portal.md
     - name: Analyze your apps usage in Developer Portal
@@ -263,7 +265,7 @@
   items:
   - name: Overview
     href: tabs/what-are-tabs.md
-    displayName: Webpages embedded in Teams, declare custom tab in app manifest
+    displayName: Webpages embedded in Teams, declare custom tab in app manifest, contentUrl 
   - name: Prerequisites
     href: tabs/how-to/tab-requirements.md
     displayName: clickjacking
@@ -338,7 +340,7 @@
       href: bots/how-to/conversations/send-proactive-messages.md
     - name: Format your bot messages
       href: bots/how-to/format-your-bot-messages.md
-      displayName: Interactive elements, UTF-16
+      displayName: Interactive elements, UTF-16, Base64
     - name: Update and delete messages sent from bot
       href: bots/how-to/update-and-delete-bot-messages.md      
     - name: Request headers of the bot
@@ -365,7 +367,7 @@
       href: bots/calls-and-meetings/calls-meetings-bots-overview.md
     - name: Real-time media calls and meetings
       href: bots/calls-and-meetings/real-time-media-concepts.md
-      displayName: Active and dominant speakers, SILK and G.722 for audio and H.264 for video, 
+      displayName: Active and dominant speakers, SILK and G.722 for audio and H.264 for video, codec 
     - name: Register calls and meetings bot
       href: bots/calls-and-meetings/registering-calling-bot.md
       displayName: How Bot can create call, join meeting and transfer call
@@ -377,6 +379,7 @@
       displayName: Service Fabric with Virtual Machine Scale Sets, instance-level public 
     - name: Supported media formats for bots
       href: resources/media-formats.md
+      displayName: codec 
   - name: Teams bot API changes to fetch team or chat members
     href: resources/team-chat-member-api-changes.md
 - name: Build message extensions
@@ -411,6 +414,7 @@
   items:
   - name: Overview
     href: apps-in-teams-meetings/teams-apps-in-meetings.md
+    displayName: guest 
   - name: Enable and configure apps for Teams meetings
     items:
     - name: Build tabs for meeting
@@ -422,6 +426,7 @@
       href: concepts/build-and-test/share-in-meeting.md
     - name: Build in-meeting notification for meeting
       href: apps-in-teams-meetings/in-meeting-notification-for-meeting.md
+      displayName: bubble
     - name: Build extensible conversations for meeting chat
       href: apps-in-teams-meetings/build-extensible-conversation-for-meeting-chat.md
     - name: Build apps for anonymous users
@@ -473,7 +478,7 @@
   items:
   - name: Overview
     href: webhooks-and-connectors/what-are-webhooks-and-connectors.md
-    displayName: webhooks, Connectors, Single virtual scene, scene studio
+    displayName: webhooks, Connectors, Single virtual scene
   - name: Create Outgoing Webhooks
     href: webhooks-and-connectors/how-to/add-outgoing-webhook.md
     displayName: HMAC security token
@@ -529,7 +534,7 @@
       href: task-modules-and-cards/what-are-task-modules.md
     - name: Invoke and dismiss task modules
       href: task-modules-and-cards/task-modules/invoking-task-modules.md
-      displayName: JavaScript task modules, keyboard and accessibility guidelines, module sizing
+      displayName: JavaScript task modules, keyboard and accessibility guidelines, module sizing, css
     - name: Use task modules in tabs
       href: task-modules-and-cards/task-modules/task-modules-tabs.md
       displayName: payload
@@ -719,7 +724,7 @@
       displayName: Microsoft Publisher Agreement, app update or new release, user engagement data 
     -  name: Common reasons for app validation failure
        href: concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md
-       displayName: Broken links, functional bugs, app crashes, unexpected errors, app description, Microsoft trademark and brand guidelines, testability, app icon guidelines, app name mismatch, developer name mismatch      
+       displayName: Font, Broken links, functional bugs, app crashes, unexpected errors, app description, Microsoft trademark and brand guidelines, testability, app icon guidelines, app name mismatch, developer name mismatch      
 - name: Monetize your app
   items:
   - name: Overview
