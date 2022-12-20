@@ -13,7 +13,7 @@ Growing your app is a journey. It's a process that’s not overnight and goes th
 
 :::image type="content" source="../../../../../assets/images/app-fundamentals/growth-lifecycle.png" alt-text="App growth lifecycle.":::
 
-- **Build stage**: In this stage, developers plan, envision, design, build and publish their collaborative app on the Microsoft Teams marketplace. The Teams developer platform documentation is the one-stop shop for platform features, best practices, and developer guidance. Strategic developers can join an invite-only Teams engineering’s build-with partner program on this journey.
+- **Build stage**: In this stage, developers plan, envision, design, build, and publish their collaborative app on the Microsoft Teams marketplace. The Teams developer platform documentation is the one-stop shop for platform features, best practices, and developer guidance. Strategic developers can join an invite-only Teams engineering’s build-with partner program on this journey.
 
 - **Launch stage**: After the collaborative app is published on the Teams marketplace, this is the stage where launch marketing initiatives are executed for the app to announce the availability of the app for existing and new or prospective customers.
 
@@ -22,13 +22,19 @@ Growing your app is a journey. It's a process that’s not overnight and goes th
   - Building awareness for the app through impactful customer and seller marketing channels.
   - Build product, sales, customer success and support functions’ readiness for the app’s upcoming adoption, growth, and ROI realization.
 
-  Most growth and GTM activities during this stage are pilots to discover effectiveness, learning and execution rhythms. When the app crosses the “traction barrier” (depicted above), one can say it has achieved product market fit in Teams marketplace and ecosystem.
+  Most growth and GTM activities during this stage are pilots to discover effectiveness, learning and execution rhythms. When the app crosses the *traction barrier*, one can say it has achieved product market fit in Teams marketplace and ecosystem.
 
-- **Scale stage**: This stage encompasses scaling in the market on the back of activation in existing customers who use the SaaS app outside Teams and selling to new customers through product-, sales- and channel- led initiatives. Growth and GTM activities become more programmatic at this stage. When the app crosses the scale barrier, often also referred to as the “growth barrier” (depicted above), one can conclude the apps is ready to deliver on the business goals and starts to deliver ROI on engineering and GTM investments.
+- **Scale stage**: This stage encompasses scaling in the market on the back of activation in existing customers who use the SaaS app outside Teams and selling to new customers through product-, sales- and channel- led initiatives. Growth and GTM activities become more programmatic at this stage. When the app crosses the scale barrier, often also referred to as the *growth barrier*, one can conclude the apps is ready to deliver on the business goals and starts to deliver ROI on engineering and GTM investments.
 
-- **Succeed stage**: The final stage of the Teams collaborative app lifecycle is where the app moves from being a product integration built on Teams into a full-fledged strategic product line just as the core SaaS product for the web browser or native apps for Windows or mobile phones. The activities at this stage include building public references for the impact of the collaborative app among customers, optimizing customer sales and conversion based on PQLs and investing further in more user-valuable scenarios or experiences inside the app.
+- **Succeed stage**: The final stage of the Teams collaborative app lifecycle is where the app moves from being a product integration built on Teams into a full-fledged strategic product line just as the core SaaS product for the web browser or native apps for Windows or mobile phones.
 
-While there will always be examples of developers short circuiting the lifecycle to jump across stages for example, directly starting to monetize their app after launch using their version 1 experience itself, we recommend a stage-by-stage approach as a best practice that most developers follow to derive the best ROI from their Teams app journey.
+  The activities at this stage include:
+
+  - Building public references for the impact of the collaborative app among customers.
+  - Optimizing customer sales and conversion based on PQLs.
+  - Investing further in more user-valuable scenarios or experiences inside the app.
+
+  While there will always be examples of developers short circuiting the lifecycle to jump across stages for example, directly starting to monetize their app after launch using their version 1 experience itself, we recommend a stage-by-stage approach as a best practice that most developers follow to derive the best ROI from their Teams app journey.
 
 ## Product and GTM growth initiatives for your app
 
