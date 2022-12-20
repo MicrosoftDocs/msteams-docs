@@ -83,4 +83,5 @@ The updates for Changelog in the Developer Portal are categorized based on the f
 
 ## See also
 
-[Include a SaaS offer with your Microsoft Teams app](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)
+* [Teams Toolkit Overview](../../toolkit/teams-toolkit-fundamentals.md)
+* [Include a SaaS offer with your Microsoft Teams app](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)
