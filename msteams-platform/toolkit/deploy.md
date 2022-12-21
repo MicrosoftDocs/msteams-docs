@@ -102,7 +102,7 @@ The other way to preview your app:
 1. Right-click on your project **MyTeamsApp4** under **Solution Explorer**.
 1. Select **Teams Toolkit** > **Preview in Teams** to launch the Teams app in web browser.
 
-   :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/vs-deploy-preview-teams_1.png" alt-text="Preview teams app in web browser":::
+   :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/vs-deploy-preview-teams_2.png" alt-text="Preview teams app in web browser":::
 
    > [!NOTE]
    > The same menu options are available in Project menu.
