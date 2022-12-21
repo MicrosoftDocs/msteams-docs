@@ -74,7 +74,7 @@ items:
      1. In the left pane, select **App registrations**.
      1. Select **New registration**.
 
-       :::image type="content" source="./assets/images/calls-and-meetings/azure-active-directory_1.png" alt-text="Screenshot of Microsoft App registrations with App registrations and New registration highlighted in red.":::
+        :::image type="content" source="./assets/images/calls-and-meetings/azure-active-directory_1.png" alt-text="Screenshot of Microsoft App registrations with App registrations and New registration highlighted in red.":::
 
     **Register an application** window appears. Enter your application's registration information.
 
@@ -95,7 +95,7 @@ items:
 
       1. In **Overview** page, save the **Application (client) ID** (Microsoft App ID) for future reference.
         
-        :::image type="content" source="./assets/images/calls-and-meetings/microsoft-app-id-new_2.png" alt-text="Screenshot of overview page of the bot with Application client ID highlighted in red.":::
+         :::image type="content" source="./assets/images/calls-and-meetings/microsoft-app-id-new_2.png" alt-text="Screenshot of overview page of the bot with Application client ID highlighted in red.":::
         
       1. Under the **Manage** heading, select **Certificates & secrets**.
         1. In the **Client secrets** section, select **New client secret**.
@@ -142,18 +142,18 @@ items:
      1. Sign into [Microsoft Graph Explorer](https://developer.microsoft.com/graph) using the credentials to whom the policy has to be granted.
      1. Select **Graph Explorer** from the tool bar.
 
-        :::image type="content" source="~/assets/images/calls-and-meetings/graph-explorer.png" alt-text="Screenshot of Microsoft Graph with graph explorer highlighted in red.":::
+         :::image type="content" source="~/assets/images/calls-and-meetings/graph-explorer.png" alt-text="Screenshot of Microsoft Graph with graph explorer highlighted in red.":::
 
      1. Select **Run query**. A response is generated under **Response preview**.
      1. Copy the value of the `id` property from the **Response preview** and replace with the object ID in the PowerShell script.
 
-        :::image type="content" source="~/assets/images/calls-and-meetings/graph-explorer-id.png" alt-text="Screenshot of graph explorer displaying the response preview.":::
+         :::image type="content" source="~/assets/images/calls-and-meetings/graph-explorer-id.png" alt-text="Screenshot of graph explorer displaying the response preview.":::
        
      1. Execute the PowerShell script. 
      
      1. Run `Connect-MicrosoftTeams` and sign-in with the credentials to whom the policy has to be granted when the PowerShell prompts.
 
-        :::image type="content" source="~/assets/images/calls-and-meetings/sign-in-powershell-prompts.png" alt-text="screenshot of Windows PowerShell PSI displaying the sign in prompt.":::
+         :::image type="content" source="~/assets/images/calls-and-meetings/sign-in-powershell-prompts.png" alt-text="screenshot of Windows PowerShell PSI displaying the sign in prompt.":::
 
      1. Run the following command in PowerShell to verify whether the policy is created successfully or not. Replace the policy name with your defined policy name.
 
@@ -161,7 +161,7 @@ items:
         Get-CsApplicationAccessPolicy -Identity “<<policy-identity/policy-name>>”
         ```
 
-        :::image type="content" source="~/assets/images/calls-and-meetings/powershell_id.png" alt-text="Screenshot of Windows PowerShell ISE with Account details highlighted in red.":::
+         :::image type="content" source="~/assets/images/calls-and-meetings/powershell_id.png" alt-text="Screenshot of Windows PowerShell ISE with Account details highlighted in red.":::
 
     > [!NOTE]
     > Ensure running scripts aren't disabled in your system. For more information, see [execution policies](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.2).
@@ -184,7 +184,7 @@ items:
         * `OnlineMeetings.ReadWrite.All`
     1. Select **Add permissions**.
 
-        :::image type="content" source="./assets/images/calls-and-meetings/api-permissions_1.png" alt-text="Screenshot of Calling-Meeting-Bot API permissions with Manage, API permissions, Add a permission, Microsoft Graph, Application permissions, and Add permissions highlighted in red." lightbox="./assets/images/calls-and-meetings/api-permissions_1.png":::
+         :::image type="content" source="./assets/images/calls-and-meetings/api-permissions_1.png" alt-text="Screenshot of Calling-Meeting-Bot API permissions with Manage, API permissions, Add a permission, Microsoft Graph, Application permissions, and Add permissions highlighted in red." lightbox="./assets/images/calls-and-meetings/api-permissions_1.png":::
 
     **Create bot channel registration in Azure account**
 
@@ -194,20 +194,20 @@ items:
     1. Select **Azure Bot**.
     1. Select **Create**.
 
-        :::image type="content" source="./assets/images/calls-and-meetings/azure-bot_1.png" alt-text="Screenshot of Azure Bot with Create option highlighted in red.":::
+         :::image type="content" source="./assets/images/calls-and-meetings/azure-bot_1.png" alt-text="Screenshot of Azure Bot with Create option highlighted in red.":::
       
        **Create an Azure Bot** window appears.
 
     1. Enter bot handle name in **Bot handle** field.
     1. Select your **Subscription** and **Resource group** from the dropdown list.
         
-        :::image type="content" source="./assets/images/calls-and-meetings/create-azure-bot.png" alt-text="Screenshot of Create an Azure bot with Subscription and Resource group highlighted in red.":::
+         :::image type="content" source="./assets/images/calls-and-meetings/create-azure-bot.png" alt-text="Screenshot of Create an Azure bot with Subscription and Resource group highlighted in red.":::
       
        You can also create a new resource group. Select **Create new** > enter resource name > **OK**.
     
     1. Select the required location from **New resource group location** dropdown list, if you've created a new resource group.
 
-        :::image type="content" source="~/assets/images/bots/newresource.png" alt-text="Screenshot of New resource group location with location highlighted in red.":::
+         :::image type="content" source="~/assets/images/bots/newresource.png" alt-text="Screenshot of New resource group location with location highlighted in red.":::
 
     1. Select **Type of App** as **Multi Tenant**.
 
@@ -217,19 +217,19 @@ items:
     1. Select **Use existing app registration** and enter **App ID** of your Azure app registered in demo tenant.
     1. Select **Review + create**.
 
-        :::image type="content" source="./assets/images/calls-and-meetings/review-create_1.png" alt-text="Screenshot of Create an Azure Bot with Multi Tenant and Review + create highlighted in red.":::
+         :::image type="content" source="./assets/images/calls-and-meetings/review-create_1.png" alt-text="Screenshot of Create an Azure Bot with Multi Tenant and Review + create highlighted in red.":::
 
     1. If the validation is passed, select **Create**.
 
        It takes a few moments for your bot service to be provisioned.
 
-        :::image type="content" source="./assets/images/calls-and-meetings/validation_1.png" alt-text="Screenshot of Create an Azure Bot that shows the Validation Passed status and the Create option highlighted in red.":::
+         :::image type="content" source="./assets/images/calls-and-meetings/validation_1.png" alt-text="Screenshot of Create an Azure Bot that shows the Validation Passed status and the Create option highlighted in red.":::
 
     1. Select **Go to resource**. The bot and the related resources are listed in the resource group.
 
         Now your Azure bot has been created.
 
-        :::image type="content" source="./assets/images/calls-and-meetings/go-to-resource_1.png" alt-text="Screenshot of Home page that shows the deployment complete status with Go to resource button highlighted in red.":::
+         :::image type="content" source="./assets/images/calls-and-meetings/go-to-resource_1.png" alt-text="Screenshot of Home page that shows the deployment complete status with Go to resource button highlighted in red.":::
 
     **To add the Microsoft Teams channel**
 
@@ -238,24 +238,24 @@ items:
     1. Select **Channels** in the left pane.
     1. Select **Microsoft Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.    
         
-        :::image type="content" source="./assets/images/calls-and-meetings/channels-teams_1.png" alt-text="Screenshot of Calling-meeting-bot with Channels in the left pane and Microsoft Teams…":::
+         :::image type="content" source="./assets/images/calls-and-meetings/channels-teams_1.png" alt-text="Screenshot of Calling-meeting-bot with Channels in the left pane and Microsoft Teams…":::
     
     1. Select the checkbox to accept the **Terms of Service**.
     1. Select **Agree**.
 
-        :::image type="content" source="~/assets/images/calls-and-meetings/terms.png" alt-text="Screenshot of Terms of Service with Agree button highlighted in red.":::
+         :::image type="content" source="~/assets/images/calls-and-meetings/terms.png" alt-text="Screenshot of Terms of Service with Agree button highlighted in red.":::
    
     1. Select **Apply**.
 
-       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/apply-teams_1.png" alt-text="Screenshot of Teams Messaging selection with Apply highlighted in red.":::
+         :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/apply-teams_1.png" alt-text="Screenshot of Teams Messaging selection with Apply highlighted in red.":::
 
     1. Select **Microsoft Teams** and select **Calling** tab on Teams channel page.
 
-        :::image type="content" source="./assets/images/calls-and-meetings/configure-teams.png" alt-text="Screenshot of Channels page of the bot with Channels in the left pane and Calling options highlighted in red.":::
+         :::image type="content" source="./assets/images/calls-and-meetings/configure-teams.png" alt-text="Screenshot of Channels page of the bot with Channels in the left pane and Calling options highlighted in red.":::
     
     1. Select **Enable calling**, and then update **Webhook** with your HTTPS ngrok URL (https://yourngrok/api/callback).
 
-        :::image type="content" source="./assets/images/calls-and-meetings/enable-calling_1.png" alt-text="Screenshot of Calling tab with Enable calling, the webhook added, and Apply highlighted in red.":::
+         :::image type="content" source="./assets/images/calls-and-meetings/enable-calling_1.png" alt-text="Screenshot of Calling tab with Enable calling, the webhook added, and Apply highlighted in red.":::
 
     1. Select **Apply**.
 
@@ -264,13 +264,13 @@ items:
     1. Go to ngrok.
     1. Copy the HTTPS URL (https to io) as shown in the following image:
         
-        :::image type="content" source="./assets/images/calls-and-meetings/ngrok_1.png" alt-text="Screenshot of ngrok displaying the URL details.":::
+         :::image type="content" source="./assets/images/calls-and-meetings/ngrok_1.png" alt-text="Screenshot of ngrok displaying the URL details.":::
 
     1. Go to **Home** page of your bot.
     1. Select **Configuration** under **Settings** from the left pane.
     1. In **Messaging endpoint**, add the HTTPS URL from ngrok and at the end of the URL add **/api/messages**.
         
-        :::image type="content" source="./assets/images/calls-and-meetings/messaging-endpoint_1.png" alt-text="Screenshot of Configuration page with Configuration in the left pane and Messaging endpoint highlighted in red.":::
+         :::image type="content" source="./assets/images/calls-and-meetings/messaging-endpoint_1.png" alt-text="Screenshot of Configuration page with Configuration in the left pane and Messaging endpoint highlighted in red.":::
 
     1. Select **Apply**.
 
@@ -290,7 +290,7 @@ items:
     1. Select **Code** and select the dropdown.
     1. Select **Download ZIP**.
 
-        :::image type="content" source="./assets/images/calls-and-meetings/git_1.png" alt-text="Screenshot of GitHub webpage. The menu entry titled Download ZIP under Code dropdown menu is highlighted in red..":::
+         :::image type="content" source="./assets/images/calls-and-meetings/git_1.png" alt-text="Screenshot of GitHub webpage. The menu entry titled Download ZIP under Code dropdown menu is highlighted in red..":::
 
         > [!NOTE]
         > Ensure to note the path of the downloaded repository.
@@ -307,7 +307,7 @@ items:
 
            1. Select **Get link to team**.
 
-         :::image type="content" source="./assets/images/calls-and-meetings/teams-final.png" alt-text="Screenshot of Teams with Get link to Team under overflow menu highlighted in red.":::
+             :::image type="content" source="./assets/images/calls-and-meetings/teams-final.png" alt-text="Screenshot of Teams with Get link to Team under overflow menu highlighted in red.":::
         
         * You can obtain the `displayName` and `id` from [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) site:
 
@@ -317,7 +317,7 @@ items:
 
             * Select **Run query**.
             
-              :::image type="content" source="./assets/images/calls-and-meetings/graph-explorer_1.png" alt-text="Screenshot of Microsoft Graph with users in the URI highlighted in red.":::
+             :::image type="content" source="./assets/images/calls-and-meetings/graph-explorer_1.png" alt-text="Screenshot of Microsoft Graph with users in the URI highlighted in red.":::
 
             * The display names and user IDs linked to your account are generated.
 
