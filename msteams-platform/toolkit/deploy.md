@@ -1,7 +1,7 @@
 ---
 title: Deploy to the cloud
 author: MuyangAmigo
-description:  In this module, learn how to deploy app to the cloud, Azure, or SharePoint and deploy Teams apps using Teams Toolkit
+description: Learn how to deploy app to the cloud, Azure, or SharePoint using Teams Toolkit in Visual Studio Code and Visual Studio.
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
@@ -19,7 +19,7 @@ Teams Toolkit helps to deploy or upload the front-end and back-end code in your 
 
 You can deploy the following to the cloud:
 
-* The tab, such as front-end apps are deployed to Azure Storage and configured for static web hosting or a sharepoint site.
+* The tab, such as front-end apps are deployed to Azure Storage and configured for static web hosting or a SharePoint site.
 * The back-end APIs are deployed to Azure Functions.
 * The bot or message extension is deployed to Azure App Service.
 
