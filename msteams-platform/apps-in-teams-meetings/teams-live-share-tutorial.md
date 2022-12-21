@@ -262,7 +262,7 @@ After you've started running your app locally with `npm run start`, you can then
 
 ### Create a ngrok tunnel to allow Teams to reach your app
 
-1. [Download ngrok](https://ngrok.com/download).
+1. Download [ngrok](https://ngrok.com/download).
 
 1. Use ngrok to create a tunnel with port 8080. Run the following command:
 
@@ -293,7 +293,7 @@ After you've started running your app locally with `npm run start`, you can then
 
    > [!NOTE]
    >
-   > - Do not zip the containing folder.
+   > - Don't zip the containing folder.
    > - Give your zip file a descriptive name. For example, `DiceRollerLiveShare`.
 
    For more information on manifest, visit the [Teams manifest documentation](../resources/schema/manifest-schema.md)

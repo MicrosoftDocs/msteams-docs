@@ -165,8 +165,8 @@ You need:
     >
     >   | If base resource name used is | URL will be... | Format is supported on... |
     >   | --- | --- | --- |
-    >   | *demoapplication* | **`https://demoapplication.example.net`** | All platforms.|
-    >   | *DemoApplication* | **`https://DemoApplication.example.net`** | Desktop, web, and iOS only. It isn't supported in Android. |
+    >   | *demoapplication* | `https://demoapplication.example.net` | All platforms.|
+    >   | *DemoApplication* | `https://DemoApplication.example.net` | Desktop, web, and iOS only. It isn't supported in Android. |
     >
     >    Use the lowercase option *demoapplication* as base resource name.
 
@@ -526,8 +526,8 @@ To configure scope and authorize trusted client applications, you'll need:
     >
     >   | If base resource name used is | URL will be... | Format is supported on... |
     >   | --- | --- | --- |
-    >   | *demoapplication* | **`https://demoapplication.example.net`** | All platforms.|
-    >   | *DemoApplication* | **`https://DemoApplication.example.net`** | Desktop, web, and iOS only. It isn't supported in Android. |
+    >   | *demoapplication* | `https://demoapplication.example.net` | All platforms.|
+    >   | *DemoApplication* | `https://DemoApplication.example.net` | Desktop, web, and iOS only. It isn't supported in Android. |
     >
     >    Use the lowercase option *demoapplication* as base resource name.
 
