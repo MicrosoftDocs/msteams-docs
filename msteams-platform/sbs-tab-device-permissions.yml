@@ -71,11 +71,11 @@ items:
 - title: Set up manifest file
   durationInMinutes: 1
   content: | 
-     1. Go to **manifest.json** in cloned repository.
+     1. Go to `manifest.json` in cloned repository.
   
         :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/manifestjson-tab-device_1.png" alt-text="manifest file":::
 
-     1. Open **manifest.json** in Visual Studio and make the following changes:
+     1. Open `manifest.json` in Visual Studio and make the following changes:
        
           - Replace `<<BASE_URI_DOMAIN>>` with your ngrok URL in `websiteUrl`, `privacyUrl`, `termsOfUseUrl`, and `contentUrl`.
        
@@ -86,13 +86,13 @@ items:
 - title: Build and run client app using npm
   durationInMinutes: 1
   content: |
-     1. In your cloned repository, go to **samples > tab-device-permissions > nodejs**.
+     1. In your cloned repository, go to **samples** > **tab-device-permissions** > **nodejs**.
 
-     1. Copy the **nodejs** folder path. 
+     1. Copy the `nodejs` folder path. 
 
         :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/nodejs-path-tab-device_1.png" alt-text="copy the path":::  
 
-     1. Open a new **Command Prompt** window, change the current directory to the copied **nodejs** path.
+     1. Open a new **Command Prompt** window, change the current directory to the copied `nodejs` path.
 
         :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/nodejs-new-folder-path-tab-device.png" alt-text="copy the path":::     
 
@@ -122,7 +122,7 @@ items:
 
     1. In your cloned repository, go to **samples** > **tab-device-permissions** > **nodejs** > **appPackage**.
 
-    1. Create a .zip with the following files that are present in the **appPackage** folder: 
+    1. Create a .zip with the following files that are present in the `appPackage` folder: 
        * manifest.json
        * icon-outline.png
        * icon-color.png
@@ -138,7 +138,7 @@ items:
 
        :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/uploadapp_2.png" alt-text="Upload custom app":::
 
-     1. Select **Open** to upload the .zip file that you created in the **appPackage** folder.
+     1. Select **Open** to upload the .zip file that you created in the `appPackage` folder.
 
          :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/manifest-folder-upload-tab-device1_2.png" alt-text="add the manifest zip":::             
   
@@ -156,7 +156,7 @@ items:
     
     1. In your cloned repository, go to **samples** > **tab-device-permissions** > **nodejs** > **appPackage**.
 
-    1. Create a .zip with the following files that are present in the **appPackage** folder: 
+    1. Create a .zip with the following files that are present in the `appPackage` folder: 
        * manifest.json
        * icon-outline.png
        * icon-color.png
@@ -172,7 +172,7 @@ items:
 
        :::image type="content" source="../msteams-platform/assets/images/conversation-bot/uploadapp_1.png" alt-text="Upload custom app":::
    
-    1. Select **Open** to upload the .zip file that you created in the **appPackage** folder.
+    1. Select **Open** to upload the .zip file that you created in the `appPackage` folder.
 
          :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/manifest-folder-upload-tab-device1_1.png" alt-text="add the manifest zip":::             
   
@@ -197,7 +197,7 @@ items:
 - title: Test your app
   durationInMinutes: 1
   content: |
-    To ensure that the tab device permission app enables user to give the permission, you must test the app after you successfully upload the app into Teams.
+     You must test the app after you successfully upload the app into Teams, to ensure the tab device permission app enables user to grant the permission.
 
      # [Desktop](#tab/Desktop)
 
