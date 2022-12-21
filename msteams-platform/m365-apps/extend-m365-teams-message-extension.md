@@ -25,8 +25,8 @@ The rest of this guide walks you through these steps and shows how to preview yo
 To complete this tutorial, you need:
 
 * A Microsoft 365 Developer Program sandbox tenant.
-* Enrollment in *Office 365 Targeted Releases* for your sandbox tenant.
-* A test environment with Office apps installed from the Microsoft 365 Apps *Beta Channel*.
+* Enrollment in *Microsoft 365 Targeted Releases* for your sandbox tenant.
+* A test environment with Microsoft 365 apps installed from the Microsoft 365 Apps *Beta Channel*.
 * (Optional) Microsoft Visual Studio Code with the Teams Toolkit extension.
 
 > [!div class="nextstepaction"]
@@ -189,7 +189,7 @@ Your message extension is listed, it opens an adjacent pane to display search re
 
 * Message extensions in Outlook are limited to the mail [*compose* context](/microsoftteams/platform/resources/schema/manifest-schema#composeextensions). Even if your Teams message extension includes `commandBox` as a *context* in its manifest, the current preview is limited to the mail composition (`compose`) option. Invoking a message extension from the global Outlook *Search* box isn't supported.
 * [Action-based message extension](/microsoftteams/platform/messaging-extensions/how-to/action-commands/define-action-command?tabs=AS) commands aren't supported in Outlook. If your app has both search- and action-based commands, it will surface in Outlook, but the action menu won't be available.
-* Insertion of more than five [Adaptive Cards](/microsoftteams/platform/task-modules-and-cards/cards/design-effective-cards?tabs=design) in an email isn't supported; Adaptive Cards v1.4 and later aren't supported.
+* Insertion of more than five [Adaptive Cards](/microsoftteams/platform/task-modules-and-cards/cards/design-effective-cards?tabs=design) in an email isn't supported; Adaptive Cards v1.5 and later aren't supported.
 * [Card actions](/microsoftteams/platform/task-modules-and-cards/cards/cards-actions?tabs=json) of type `messageBack`, `imBack`, `invoke`, and `signin` aren't supported for inserted cards. Support is limited to `openURL`: when selected, the user is redirected to the specified URL in a new tab.
 
 Use the [Microsoft Teams developer community channels](/microsoftteams/platform/feedback) to report issues and provide feedback.
@@ -207,7 +207,7 @@ As you test your message extension, you can identify the source (originating fro
 
 ## Next step
 
-Publish your app to be discoverable in Teams, Outlook, and Office:
+Publish your app to be discoverable in Teams, Outlook, and Microsoft 365 app:
 
 > [!div class="nextstepaction"]
-> [Publish Teams apps for Outlook and Office](publish.md)
+> [Publish Teams apps for Outlook and Microsoft 365 app](publish.md)
