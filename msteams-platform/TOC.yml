@@ -754,7 +754,7 @@
         href: concepts/deploy-and-publish/appsource/post-publish/app-growth/scale-app.md
       - name: Succeed with your collaborative app
         href: concepts/deploy-and-publish/appsource/post-publish/app-growth/succeed.md
-       displayName: Font, Broken links, functional bugs, app crashes, unexpected errors, app description, Microsoft trademark and brand guidelines, testability, app icon guidelines, app name mismatch, developer name mismatch      
+        displayName: Font, Broken links, functional bugs, app crashes, unexpected errors, app description, Microsoft trademark and brand guidelines, testability, app icon guidelines, app name mismatch, developer name mismatch
 - name: Monetize your app
   items:
   - name: Overview
