@@ -33,9 +33,9 @@ At a high level, the import process consists of the following:
 * Map the third-party chat structure to the Teams structure.  
 * Convert import data into format needed for migration.  
 
-### Set up your Office 365 tenant
+### Set up your Microsoft 365 tenant
 
-* Ensure that an Office 365 tenant exists for the import data. For more information on setting up an Office 365 tenancy for Teams, see [prepare your Office 365 tenant](../../concepts/build-and-test/prepare-your-o365-tenant.md).
+* Ensure that an Microsoft 365 tenant exists for the import data. For more information on setting up an Microsoft 365 tenancy for Teams, see [prepare your Microsoft 365 tenant](../../concepts/build-and-test/prepare-your-o365-tenant.md).
 * Make sure that team members are in Azure Active Directory. For more information, see [add a new user](/azure/active-directory/fundamentals/add-users-azure-active-directory) to Azure AD.
 
 ## Step 1: Create a team

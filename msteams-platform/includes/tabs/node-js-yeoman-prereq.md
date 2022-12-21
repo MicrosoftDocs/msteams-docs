@@ -2,9 +2,9 @@
 
 You must have an understanding of the following prerequisites:
 
-- You must have an Office 365 tenant and a team configured with **Allow uploading custom apps** enabled. For more information, see [prepare your Office 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md).
+- You must have an Microsoft 365 tenant and a team configured with **Allow uploading custom apps** enabled. For more information, see [prepare your Microsoft 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md).
 
-  - If you don't currently have an Office 365 account, you can sign up for a free subscription through the Office 365 Developer Program. The subscription remains active as long as you're using it for ongoing development. See [welcome to the Office 365 Developer Program](/office/developer-program/microsoft-365-developer-program).
+  - If you don't currently have an Microsoft 365 account, you can sign up for a free subscription through the Microsoft 365 Developer Program. The subscription remains active as long as you're using it for ongoing development. See [welcome to the Microsoft 365 Developer Program](/office/developer-program/microsoft-365-developer-program).
 
 In addition, this project requires that you have the following installed in your development environment:
 
@@ -95,4 +95,3 @@ In addition, this project requires that you have the following installed in your
     **Default Tab Name (max 16 characters)?**
 
     Name your tab. This tab name will be used throughout your project as a file or URL path component.
-
