@@ -20,7 +20,7 @@ The following steps help to publish your app in Developer Portal:
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/dev-portal-ttk_1.png" alt-text="Developer Portal for Teams":::
 
-   Now Developer Portal opens in a browser.
+   Developer Portal opens in a browser.
 
 1. Sign in to [Developer Portal for Teams](https://dev.teams.microsoft.com) using the corresponding account.
 1. Select **Apps** > **Import app** to import your app package in zip format.
