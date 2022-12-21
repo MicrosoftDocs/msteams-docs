@@ -25,6 +25,8 @@ The core focus at this stage is to announce the availability of the app for exis
         :::row:::
             :::column span="":::
 
+                **Recommendation**
+
                 Here’s some key guidance:
 
                 - Call out specifically what your app can do inside Teams vs focusing on your core SaaS product. Users are hiring your app to do a job in Teams, not in your web SaaS app for the browser or native mobile clients and want to certain it can deliver value inside Teams. It will be awesome if you can call out the degree of overlap in terms of supported scenarios between your core SaaS product and Teams app.
@@ -35,7 +37,7 @@ The core focus at this stage is to announce the availability of the app for exis
 
             :::column-end:::
             :::column span="":::
-              **Recommendation**: Your app store listing must meet the validation guidelines and Teams marketplace policies to be published.
+              **Resources and examples for inspiration**: Your app store listing must meet the validation guidelines and Teams marketplace policies to be published.
 
             For more information on optimizing your app store listing, see [Chapter 2 in Best Practices Guide](https://partner.microsoft.com/reach-customers/gtm).
 
