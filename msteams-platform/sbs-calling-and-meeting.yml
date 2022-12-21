@@ -93,12 +93,12 @@ items:
 
     **To create client secret**
 
-     1. In **Overview** page, save the **Application (client) ID** (Microsoft App ID) for future reference.
-    
-       :::image type="content" source="./assets/images/calls-and-meetings/microsoft-app-id-new_2.png" alt-text="Screenshot of overview page of the bot with Application client ID highlighted in red.":::
-    
-     1. Under the **Manage** heading, select **Certificates & secrets**.
-     1. In the **Client secrets** section, select **New client secret**.
+      1. In **Overview** page, save the **Application (client) ID** (Microsoft App ID) for future reference.
+        
+        :::image type="content" source="./assets/images/calls-and-meetings/microsoft-app-id-new_2.png" alt-text="Screenshot of overview page of the bot with Application client ID highlighted in red.":::
+        
+      1. Under the **Manage** heading, select **Certificates & secrets**.
+        1. In the **Client secrets** section, select **New client secret**.
 
     **Add a client secret** window appears.
 
