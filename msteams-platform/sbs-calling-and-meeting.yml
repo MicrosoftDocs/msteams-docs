@@ -26,7 +26,7 @@ items:
  
     This step-by-step guide helps you to set up Teams calling and meeting bot. By the end of this tutorial, you can achieve the following output:
 
-    :::image type="content" source="./assets/images/calls-and-meetings/final-output.png" alt-text="Screenshot of calling and meeting bot output after you have successfully completed the step-by-step guide.":::
+    :::image type="content" source="./assets/images/calls-and-meetings/final-output.png" alt-text="Screenshot of calling and meeting bot output after you've successfully completed the step-by-step guide.":::
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -133,7 +133,7 @@ items:
         |Field | Description |
         |----------------|-----------------|
         |policy-identity/policy-name | Name of the policy. |
-        |azure-client-id | Microsoft App ID which you generated while registering the app in Azure portal. |
+        |azure-client-id | Microsoft App ID, which you generated while registering the app in Azure portal. |
         |Policy-description | Description of the policy. |
         |object-id-of-the-user-to-whom-policy-need-to-be-granted |  ID of the user for whom you need to generate the policy using the graph explorer. |
 
@@ -151,7 +151,7 @@ items:
        
      1. Execute the PowerShell script. 
      
-     1. Run `Connect-MicrosoftTeams` and sign-in with the credentials to whom the policy has to be granted when the PowerShell prompts.
+     1. Run `Connect-MicrosoftTeams` and sign-in with the credentials to whom the policy has to be granted.
 
          :::image type="content" source="~/assets/images/calls-and-meetings/sign-in-powershell-prompts.png" alt-text="screenshot of Windows PowerShell PSI displaying the sign in prompt.":::
 
@@ -274,7 +274,7 @@ items:
 
     1. Select **Apply**.
 
-        You have successfully set up a bot in Azure bot service and you need to set up bot service connection.
+        You've successfully set up a bot in Azure bot service and you need to set up bot service connection.
 
 - title: Update and create Teams app package
   durationInMinutes: 1
@@ -393,7 +393,7 @@ items:
   content: |
     Did you come up with output like this?
 
-    :::image type="content" source="./assets/images/calls-and-meetings/final-output.png" alt-text="Screenshot of calling and meeting bot output after you have successfully completed the step-by-step guide.":::
+    :::image type="content" source="./assets/images/calls-and-meetings/final-output.png" alt-text="Screenshot of calling and meeting bot output after you've successfully completed the step-by-step guide.":::
     
 - content: |
     You've completed the tutorial to get started with bot calling and meeting app for Microsoft Teams.
