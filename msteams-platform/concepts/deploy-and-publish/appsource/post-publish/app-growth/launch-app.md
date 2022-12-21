@@ -14,7 +14,7 @@ The core focus at this stage is to announce the availability of the app for exis
 
 - **Invest strategically into your app store listing, landing page and documentation**
 
-    Make sure you’ve links to your Teams app handy for use in your landing page, documentation, marketing materials and so on Refer here: Promote your app on another site to fetch the link to your app inside the Teams in-product marketplace.
+    Ensure that you’ve links to your Teams app handy for use in your landing page, documentation, marketing materials and so on. Refer here: Promote your app on another site to fetch the link to your app inside the Teams in-product marketplace.
 
     For AppSource link, head over to Microsoft AppSource and search for your app in the search box. Pick the URL from the browser’s address bar.
 
