@@ -85,17 +85,17 @@ The following steps help you to publish the app from Teams Toolkit:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/confirm-publish_1.png" alt-text="Confirm Publish":::
 
-Now the app is available on the **Manage apps** of Microsoft Teams admin center, where you, and the admin can review and approve it.
+Now the app is available on the **Manage apps** of Microsoft Teams admin center, where you and the admin can review and approve it.
 
 > [!NOTE]
-> The app doesn't publish to your organization's app store yet. The step submits the app to the Microsoft Teams admin center where you can approve it for publishing to your organization's app store.
+> The app doesn't publish to your organization's app store yet. The step submits the app to the Teams admin center where you can approve it for publishing to your organization's app store.
 
 ### Approve on Admin Center
 
 Teams toolkit for Visual Studio Code built on top of the Teams App Submission API and it allows you to automate the submission-to-approval process for custom apps on Teams.
 
   > [!NOTE]
-  > Ensure you have Teams app project in VS code. As an admin, **Manage apps** in the [Microsoft Teams admin center](https://admin.teams.microsoft.com/policies/manage-apps) is where you can view and manage all Teams apps for your organization. You can do the following activities in the admin center:
+  > Ensure that you have Teams app project in VS code. As an admin, **Manage apps** in the [Microsoft Teams admin center](https://admin.teams.microsoft.com/policies/manage-apps) is where you can view and manage all Teams apps for your organization. You can do the following activities in the admin center:
   >
   > * See the org level status and properties of apps.
   > * Approve or upload new custom apps to your organization's app store.
@@ -116,7 +116,7 @@ The following steps help you to approve from Admin Center:
 
    You can view all Teams app for your organization.
 
-   In the Pending approval widget at the top of the page lets you know when a custom app is submitted for approval. In the table, a newly submitted app automatically publishes the status of submitted and blocked apps. You can sort the publishing status column in descending order to find the app.
+   In the **Pending approval** widget at the top of the page lets you know when a custom app is submitted for approval. In the table, a newly submitted app automatically publishes the status of submitted and blocked apps. You can sort the publishing status column in descending order to find the app.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/admin-approval-for-teams-app-1.png" alt-text="approval":::
 
@@ -127,14 +127,14 @@ The following steps help you to approve from Admin Center:
 1. Select the status dropdown and change from **Submitted** to **Publish**.
 
    After you publish the app, the publishing status changes to published and the status automatically changes to allowed.
-
+s
    For more information, see [Publish to your org](/MicrosoftTeams/manage-apps?toc=%2Fmicrosoftteams%2Fplatform%2Ftoc.json&bc=%2Fmicrosoftteams%2Fplatform%2Fbreadcrumb%2Ftoc.json)
 
 ## Publish to Microsoft Teams store
 
 You can distribute your app directly to the store inside Microsoft Teams and reach millions of users around the world. If your app is also featured in the store, you can instantly reach potential customers. The apps published to the Teams store also automatically list on Microsoft AppSource, which is the official marketplace for Microsoft 365 apps and solutions.
 
-For more information, see [Publish your app to the Microsoft Teams store](../concepts/deploy-and-publish/appsource/publish.md#publish-your-app-to-the-microsoft-teams-store).
+For more information, see [Publish your app to the sTeams store](../concepts/deploy-and-publish/appsource/publish.md#publish-your-app-to-the-microsoft-teams-store).
 
 ## See also
 
