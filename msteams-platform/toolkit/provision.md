@@ -11,7 +11,7 @@ zone_pivot_groups: teams-app-platform
 
 # Provision cloud resources
 
-TeamsFx integrates with Azure and the Microsoft 365 cloud, which allows to deploy your app in Azure with a single command. TeamsFx integrates with Azure Resource Manager (ARM), which enables to provision Azure resources that your application needs for code approach.
+TeamsFx integrates with Azure and the Microsoft 365 cloud, which allows to place your app in Azure with a single command. TeamsFx integrates with Azure Resource Manager (ARM), which enables to provision Azure resources that your application needs for code approach.
 
 ::: zone pivot="visual-studio-code"
 
@@ -79,7 +79,7 @@ The following list shows the resource creation for different types of app and Az
 |----------|--------------------------------|-----|
 | Azure SQL server | Hosts the Azure SQL database instance. | Allows all Azure services to access the server. |
 | Azure SQL database | Stores data for your app. | Grants user assigned identity, read or write permission to the database. |
-| User assigned identity | Authenticates Azure service-to-service requests. | Shares across different capabilities and resources |
+| User assigned identity | Authenticates Azure service-to-service requests. | Shares across different capabilities and resources. |
 
 </details>
 <br>
@@ -133,7 +133,7 @@ Provision with ARM involves changing the following sets of files, parameters, an
 
 The ARM template files use placeholders for parameters. The purpose of the placeholders is to ensure that the creation of new resources for you in a new environment. The actual values are resolved from `.fx\states\state.{env}.json` file.
 
-There are two types of parameters, such as:
+There are two types of parameters:
 
 * [Azure AD application-related parameters](#azure-ad-application-related-parameters)
 * [Azure resource-related parameters](#azure-resource-related-parameters)
@@ -144,7 +144,7 @@ There are two types of parameters, such as:
 | --- | --- | --- | --- |
 | Microsoft 365 ClientId | `{{state.fx-resource-aad-app-for-teams.clientId}}` | Your app's Azure AD app client Id is created during provision. | [Use an existing Azure AD app for your bot](#use-an-existing-azure-ad-app-for-your-bot). |
 | Microsoft 365 ClientSecret | `{{state.fx-resource-aad-app-for-teams.clientSecret}}` | Your app's Azure AD app client secret is created during provision. | [Use an existing Azure AD app for your Teams app](#use-an-existing-azure-ad-app-for-your-teams-app). |
-| Microsoft 365 TenantId | `{{state.fx-resource-aad-app-for-teams.tenantId}}` | Tenant Id of your app's Azure AD app | [Use an existing Azure AD app for your Teams app](#use-an-existing-azure-ad-app-for-your-teams-app).  |
+| Microsoft 365 TenantId | `{{state.fx-resource-aad-app-for-teams.tenantId}}` | Tenant Id of your app's Azure AD app. | [Use an existing Azure AD app for your Teams app](#use-an-existing-azure-ad-app-for-your-teams-app).  |
 | Microsoft 365 OAuthAuthorityHost | `{{state.fx-resource-aad-app-for-teams.oauthHost}}` | OAuth authority host of your app's Azure AD app. | [Use an existing Azure AD app for your Teams app](#use-an-existing-azure-ad-app-for-your-teams-app). |
 | botAadAppClientId | `{{state.fx-resource-bot.botId}}` | Bot's Azure AD app client Id created during provision. | [Use an existing Azure AD app for your bot](#use-an-existing-azure-ad-app-for-your-bot). |
 | botAadAppClientSecret | `{{state.fx-resource-bot.botPassword}}` | Bot's Azure AD app client secret is created during provision. | [Use an existing Azure AD app for your bot](#use-an-existing-azure-ad-app-for-your-bot). |
@@ -193,7 +193,7 @@ You can customize your bot or the Teams app by adding configuration snippets to 
 
 #### Use an existing Azure AD app for your Teams app
 
-You can add the following configuration snippet to `.fx\configs\config.{env}.json` file to use an Azure AD app created for your Teams app, to create an Azure AD app, see <https://aka.ms/teamsfx-existing-aad-doc>:
+You can add the following configuration snippet to `.fx\configs\config.{env}.json` file to use an Azure AD app created for your Teams app, to create an Azure AD app, see [how to use existing Azure AD app in TeamsFx project](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/fx-core/using-existing-aad.md).:
 
 ```json
 "auth": {
@@ -204,10 +204,10 @@ You can add the following configuration snippet to `.fx\configs\config.{env}.jso
 }
 ```
 
-After adding the snippet, add your client secret to the related environment variable for Teams toolkit to resolve the actual client secret during provision.
+After adding the snippet, add your client secret to the related environment variable for Teams Toolkit to resolve the actual client secret during provision.
 
 > [!NOTE]
-> Ensure that not to share the same Azure AD app in multiple environments. If you don't have permission to update the Azure AD app, you get a warning with instructions about how to manually update the Azure AD app. Follow the instructions to update your Azure AD app after provision.
+> Ensure not to share the same Azure AD app in multiple environments. If you don't have permission to update the Azure AD app, you get a warning with instructions about how to manually update the Azure AD app. Follow the instructions to update your Azure AD app after provision.
 
 #### Use an existing Azure AD app for your bot
 
@@ -220,11 +220,11 @@ You can add following configuration snippet to `.fx\configs\config.{env}.json` f
 }
 ```
 
-After adding the snippet, add your client secret to related environment variable for Teams toolkit to resolve the actual client secret during provision.
+After adding the snippet, add your client secret to related environment variable for Teams Toolkit to resolve the actual client secret during provision.
 
 #### Skip adding user for SQL database
 
-If you have an insufficient permission error when Teams toolkit tries to add a user to the SQL database, you can add the following configuration snippet to `.fx\configs\config.{env}.json` file to skip adding the SQL database user:
+If you have an insufficient permission error when Teams Toolkit tries to add a user to the SQL database, you can add the following configuration snippet to `.fx\configs\config.{env}.json` file to skip adding the SQL database user:
 
 ```json
 "skipAddingSqlUser": true
@@ -349,8 +349,7 @@ After you open your project in Visual Studio:
 1. Enter the following details to provision your resources:
 
    1. Select your **Subscription name** from the dropdown menu.
-   1. Select your **Resource group** from the dropdown menu.
-      You can create new **Resource group** by selecting **New...**.
+   1. Select your **Resource group** from the dropdown menu or you can create new **Resource group** by selecting **New...**.
    1. Select your **Region** from the dropdown menu.
 
    1. Select **Provision**.
