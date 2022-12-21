@@ -73,8 +73,9 @@ The following steps help you to publish the app from Teams Toolkit:
 
 1. You can publish your Teams app in one of the following ways:
      * Select **Publish to Teams** under **DEPLOYMENT**.
-    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-publish_1.png" alt-text="Select Publish":::
      * Enter trigger **Teams: Publish to Teams** from command palette.
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-publish_1.png" alt-text="Select Publish":::
 
 1. Select **Install for your organization**.
 
