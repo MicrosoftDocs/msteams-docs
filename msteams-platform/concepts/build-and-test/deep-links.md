@@ -37,7 +37,7 @@ The Microsoft Teams JavaScript client library (TeamsJS) simplifies the process o
 > * The target that the deep link points to.
 > * The host where the Teams app is running.
 >
-> If the Teams app is running within the host where the deep link is targeted, your app will open directly within the host. However, if the Teams app is running in a different host from where the deep link is targeted, the app will first open in the browser.
+> If the Teams app is running within the host where the deep link is targeted, your app opens directly within the host. However, if the Teams app is running in a different host from where the deep link is targeted, the app opens in a browser first.
 
 <!--- TBD: Edit this article.
 * Admonitions/alerts seem to be overused. 

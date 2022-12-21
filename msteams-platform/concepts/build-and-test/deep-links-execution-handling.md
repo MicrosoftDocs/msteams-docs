@@ -54,19 +54,19 @@ Applications can post messages to a chat and add deep links to them. The followi
 
 ### Hyperlink text message
 
-Applications can add a deep link as a hyperlink markdown. The deep link will be executed within teams. Refer the following code sample::
+Applications can add a deep link as a hyperlink markdown. The deep link is executed within teams. Refer the following code sample::
 
 `add sample`
 
 ### Raw link text message
 
-Applications can include the raw link in a message. The deep link will be executed within teams. Refer the code below:
+Applications can include the raw link in a message. The deep link is executed within teams. Refer the code below:
 
 `add sample`
 
 ### Adaptive Card – Open URL action  
 
-Applications can include an `open URL` action in an Adaptive Card and add a deep link to it. The deep link will be executed within Teams. Refer to the following sample Adaptive Card payload:
+Applications can include an `open URL` action in an Adaptive Card and add a deep link to it. The deep link is executed within Teams. Refer to the following sample Adaptive Card payload:
 
 `add sample`
 
@@ -84,7 +84,7 @@ Raw link in Adaptive Card body doesn't have any action associated.
 
 ### Open URL action in bot
 
-Applications can include an `open URL` action in a bot and can add a deep link to it. The deep link will be executed within Teams. Refer to the following sample Adaptive Card payload:
+Applications can include an `open URL` action in a bot and can add a deep link to it. The deep link is executed within Teams. Refer to the following sample Adaptive Card payload:
 
 `add sample`
 
@@ -96,7 +96,7 @@ Applications can include the raw link in a Card body. The deep link opens in a b
 
 #### Hyperlink Markdown in a Bot
 
-Applications can include a hyperlink Markdown in a Bot. This opens in browser first. Refer to sample payload below:
+Applications can include a hyperlink Markdown in a Bot. This opens in a browser first. Refer to sample payload below:
 
 `add sample`
 
