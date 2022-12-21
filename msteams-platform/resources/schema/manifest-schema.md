@@ -341,7 +341,7 @@ The https:// URL referencing the JSON Schema for the manifest.
 
 **Required**—string
 
-The version of the manifest schema that this manifest is using. Use `1.13` to enable Teams app support in Outlook and Office; use `1.12` (or earlier) for Teams-only apps.
+The version of the manifest schema that this manifest is using. Use `1.13` to enable Teams app support in Outlook and Microsoft 365 app; use `1.12` (or earlier) for Teams-only apps.
 
 ## version
 
@@ -358,6 +358,8 @@ This version string must follow the [semver](http://semver.org/) standard (MAJOR
 **Required**—Microsoft app ID
 
 The ID is a unique Microsoft-generated identifier for the app. You have an ID if your bot is registered through the Microsoft Bot Framework. You have an ID if your tab's web app already signs in with Microsoft. You must enter the ID here. Otherwise, you must generate a new ID at the [Microsoft Application Registration Portal](https://aka.ms/appregistrations). Use the same ID if you add a bot.
+
+The ID stored in Teams Admin Center is the **External App ID** and it is visible as **ExternalID** on the traces.
 
 > [!NOTE]
 > If you are submitting an update to your existing app in AppSource, the ID in your manifest must not be modified.
@@ -611,7 +613,14 @@ Do **not** include the domains of identity providers you want to support in your
 Teams apps that require their own SharePoint URLs to function well, includes "{teamsitedomain}" in their valid domain list.
 
 > [!IMPORTANT]
-> Do not add domains that are outside your control, either directly or through wildcards. For example, `yourapp.onmicrosoft.com` is valid, however, `*.onmicrosoft.com` is not valid.
+> Don't add domains that are outside your control, either directly or through wildcards (*). For example, ***.yoursite.com** is valid, but ***.onmicrosoft.com** isn't valid as it isn't under your control.
+>
+> When using wildcards, the following rules apply:
+>
+> * If a subdomain segment includes a wildcard, it must be the only character in the segment.
+> * Any segment preceding a wildcard segment must also be a wildcard segment.
+>
+> For example, *\*.\*.domain.com* is valid, but *foo.\*.myteam.domain.com* is not valid.
 
 The object is an array with all elements of the type `string`.
 

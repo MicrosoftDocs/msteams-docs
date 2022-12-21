@@ -12,7 +12,7 @@ Deep links are a navigation mechanism that you can use to connect users with inf
 * Navigating the user to the content within one of your app's tabs. For instance, your app can have a bot that sends messages notifying the user of an important activity. When the user taps on the notification, the deep link navigates to the tab so that the user can view more details about the activity.
 * Your app automates or simplifies certain user tasks. You can  create a chat or schedule a meeting, by pre-populating the deep links with required parameters. Avoids the need for users to manually enter information.
 
-The Microsoft Teams JavaScript client SDK (TeamsJS) simplifies the process of navigation. For many scenarios, such as navigating to content and information within your tab or launching a chat dialog. The typed APIs are recommended for Teams apps that run in other hosts, such as Outlook or Office, as they also provide a way to check if the host supports the capability in use. The following sections show information about deep linking, but also highlight how scenarios that used to require it have changed with the v2 release of TeamsJS.
+The Microsoft Teams JavaScript client library (TeamsJS) simplifies the process of navigation. For many scenarios, such as navigating to content and information within your tab or launching a chat dialog. TeamsJS provides typed APIs that provide improved experience and can replace the usage of deep links. These APIs are recommended for Teams apps that might be run in other hosts (Outlook, Microsoft 365 app), as they also provide a way to check that the capability being used is supported by that host. The following sections show information about deep linking, but also highlight how scenarios that used to require it have changed with the v2 release of TeamsJS.
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
@@ -32,7 +32,7 @@ The Microsoft Teams JavaScript client SDK (TeamsJS) simplifies the process of na
 > ✔ Link pasted in general chat conversation: Directly navigates to deep link url.
 >
 >
->The navigation behavior of a Teams app extended across Microsoft 365 (Outlook/Office) is dependent on two factors:
+>The navigation behavior of a Teams app extended across Microsoft 365 (Outlook/Microsoft 365 app) is dependent on two factors:
 >
 > * The target that the deep link points to.
 > * The host where the Teams app is running.
@@ -153,21 +153,21 @@ The query parameters are:
     >`https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456?context={"chatId": "17:b42de192376346a7906a7dd5cb84b673@thread.v2","contextType":"chat"}`
 
 > [!IMPORTANT]
-> Ensure that all query parameters are properly URI encoded. You must follow the preceding examples using the last example:
+> Ensure that all the query parameters are properly URI encoded. You must follow the preceding examples using the last example:
 >
 > ```javascript
-> var encodedWebUrl = encodeURI('https://tasklist.example.com/123/456&label=Task 456');
-> var encodedContext = encodeURI('{"subEntityId": "task456"}');
+> var encodedWebUrl = encodeURIComponent(JSON.stringify('https://tasklist.example.com/123/456&label=Task 456'));
+> var encodedContext = encodeURIComponent(JSON.stringify({"subEntityId": "task456"}));
 > var taskItemUrl = 'https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=' + encodedWebUrl + '&context=' + encodedContext;
 > ```
 
 ## Navigation from your tab
 
-You can navigate to content in Teams from your tab using TeamsJS or deep links. This is useful if your tab needs to connect users with other content in Teams, such as to a channel, message, another tab, or to open a scheduling dialog. Formerly, navigation might have required a deep link, but it can now in many instances be accomplished using the SDK. The following sections show both methods, but where possible use of the typed capabilities of the SDK is recommended.
+You can navigate to content in Teams from your tab using TeamsJS or deep links. This is useful if your tab needs to connect users with other content in Teams, such as to a channel, message, another tab or even to open a scheduling dialog. Formerly, navigation might have required a deep link, but it can now in many instances be accomplished using TeamsJS. The following sections show both methods, but where possible use of the typed capabilities of TeamsJS is recommended.
 
-One of the benefits of using TeamsJS, particularly for Teams app that might run in other hosts (Outlook and Office), is that it's possible to check that the host supports the capability you're attempting to use. To check a host's support of a capability, you can use the `isSupported()` function associated with the namespace of the API. The TeamsJS SDK organizes APIs into capabilities by way of namespaces. For example, prior to usage of an API in the `pages` namespace you can check the returned boolean value from `pages.isSupported()` and take the appropriate action within the context of your app and apps UI.  
+One of the benefits of using TeamsJS, particularly for Teams app that might run in other hosts (Outlook and Microsoft 365 app), is that it's possible to check that the host supports the capability you're attempting to use. To check a host's support of a capability, you can use the `isSupported()` function associated with the namespace of the API. The TeamsJS library organizes APIs into capabilities by way of namespaces. For example, prior to usage of an API in the `pages` namespace you can check the returned boolean value from `pages.isSupported()` and take the appropriate action within the context of your app and apps UI.  
 
-For more information about capabilities and the APIs in TeamsJS, see [Building tabs and other hosted experiences with the Microsoft Teams JavaScript client SDK](~/tabs/how-to/using-teams-client-sdk.md#apis-organized-into-capabilities).
+For more information about capabilities and the APIs in TeamsJS, see [Building tabs and other hosted experiences with the Microsoft Teams JavaScript client library](~/tabs/how-to/using-teams-client-library.md#apis-organized-into-capabilities).
 
 ### Navigate within your app
 
@@ -290,7 +290,7 @@ microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/app/f46ad259-0fe5-
 
 You can navigate to or create private chats between users with TeamsJS by specifying the set of participants. If a chat doesn’t exist with the specified participants, the user is navigated to an empty new chat. New chats are created in draft state until the user sends the first message. Otherwise, you can specify the name of the chat if it doesn’t already exist, along with text that should be inserted into the user's compose box. You can think of this feature as a shortcut for the user taking the manual action of navigating to or creating the chat, and then typing out the message.
 
-As an example use case, if you’re returning an Office 365 user profile from your bot as a card, this deep link can allow the user to easily chat with that person. The following example demonstrates how to open a chat message to a group of participants with an initial message.
+As an example use case, if you’re returning an Microsoft 365 user profile from your bot as a card, this deep link can allow the user to easily chat with that person. The following example demonstrates how to open a chat message to a group of participants with an initial message.
 
 ```javascript
 if(chat.isSupported()) {
@@ -435,7 +435,7 @@ In a video call, the client will ask for confirmation and turn on the caller's v
 > [!NOTE]
 > This method cannot be used for invoking a meeting.
 
-The following code demonstrates using the TeamsJS SDK to start a call:
+The following code demonstrates using TeamsJS to start a call:
 
 ```javascript
 if(call.isSupported()) {

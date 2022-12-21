@@ -49,7 +49,7 @@ You can identify and use different types of cards based on your application requ
 | [List card](#list-card) | This card contains a scrolling list of items. |
 | [Office 365 Connector card](#office-365-connector-card) | This card has a flexible layout with multiple sections, fields, images, and actions. |
 | [Receipt card](#receipt-card) | This card provides a receipt to the user. |
-| [Signin card](#signin-card) | This card enables a bot to request that a user signs in. |
+| [Signin card](#sign in-card) | This card enables a bot to request that a user signs in. |
 | [Thumbnail card](#thumbnail-card) | This card typically contains a single thumbnail image, some short text, and one or more buttons. |
 | [Card collections](#card-collections) | This card collection is used to return multiple items in a single response. |
 
@@ -63,7 +63,7 @@ You can identify and use different types of cards based on your application requ
 | Thumbnail card | ✔️ | ✔️ | ✔️ | ❌ | ✔️ | ✔️ | ❌ |
 | List card | ✔️ | ❌ | ❌ | ❌ | ✔️ | ✔️ | ❌ |
 | Receipt card | ✔️ | ❌ | ❌ | ❌ | ❌ | ✔️ | ❌ |
-| Signin card | ✔️ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| Sign in card | ✔️ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
 
 > [!NOTE]
 >
@@ -122,8 +122,8 @@ The following table provides the features that support Adaptive Cards:
 
 > [!NOTE]
 >
-> * Teams platform supports v1.4 or earlier of Adaptive Card features for bot sent cards and action based message extensions.
-> * Teams platform supports v1.3 or earlier of Adaptive Card features for other capabilities, such as cards sent by user (search based message extensions and link unfurling), tabs, and task modules.
+> * Teams platform supports v1.5 or earlier of Adaptive Card features for bot sent cards and action based message extensions.
+> * Teams platform supports v1.5 or earlier of Adaptive Card features for other capabilities, such as cards sent by user (search based message extensions and link unfurling), tabs, and task modules.
 > * Positive or destructive action styling is not supported in Adaptive Cards on the Teams platform.
 > * Media elements are currently not supported in Adaptive Card on the Teams platform.
 > * Test your full width Adaptive Card in narrow form factors such as mobile and meeting side panels to ensure that content is not truncated.
@@ -456,9 +456,11 @@ The following table provides the properties of the Office 365 connector card:
 | Property | Type  | Description |
 | --- | --- | --- |
 | title | Rich text | Title of the card. Maximum two lines. |
-| summary | Rich text | Summary of the card. Maximum two lines. |
+| summary | Rich text | Required if the card does not contain a text property, otherwise optional. The summary property is typically displayed in the notification pop-up in Teams, as a way to quickly determine what the card is all about.<br><br> **Do** always include a summary.<br> **Don't** include the details in the summary. For example, for a Twitter post, a summary might simply read **New tweet from @someuser** without mentioning the content of the tweet itself.|
 | text | Rich text | Text appears under the subtitle. For formatting options, see [card formatting](~/task-modules-and-cards/cards/cards-format.md). |
 | themeColor | HEX string | Color that overrides the `accentColor` provided from the application manifest. |
+
+For more information on the properties of the Office 365 connector card, see [card fields](/outlook/actionable-messages/message-card-reference).
 
 ### Additional information on the Office 365 Connector card
 
@@ -631,11 +633,11 @@ Bot Framework reference:
 * [Receipt card Node.js](/javascript/api/botframework-schema/receiptcard?view=botbuilder-ts-latest&preserve-view=true)
 * [Receipt card C#](/dotnet/api/microsoft.bot.schema.receiptcard?view=botbuilder-dotnet-stable&preserve-view=true)
 
-## Signin card
+## Sign in card
 
 The sign in card in Teams is similar to the signin card in the Bot Framework except that the signin card in Teams only supports two actions `signin` and `openUrl`.
 
-The signin action can be used from any card in Teams, not just the sign in card. For more information, see [Teams authentication flow for bots](~/bots/how-to/authentication/auth-flow-bot.md).
+The sign in action can be used from any card in Teams, not just the sign in card. For more information, see [Teams authentication flow for bots](~/bots/how-to/authentication/auth-flow-bot.md).
 
 ### Support for login cards
 
@@ -966,10 +968,9 @@ The following cards are implemented by the Bot Framework, but aren't supported b
 
 ## See also
 
-* [Task modules](~/task-modules-and-cards/what-are-task-modules.md)
-* [Format cards](~/task-modules-and-cards/cards/cards-format.md)
+* [Cards and task modules](../cards-and-task-modules.md)
 * [Up to date cards](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/up-to-date-views.md)
 * [Work with Universal Actions for Adaptive Cards](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/work-with-universal-actions-for-adaptive-cards.md)
 * [Adaptive Cards overflow menu](~/task-modules-and-cards/cards/cards-format.md#adaptive-cards-overflow-menu)
-* [Form completion feedback](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)
+* [Create Office 365 Connectors](../../webhooks-and-connectors/how-to/connectors-creating.md)
 * [Form completion feedback](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)

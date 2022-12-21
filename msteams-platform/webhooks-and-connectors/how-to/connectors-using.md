@@ -40,7 +40,7 @@ For more information on connector card actions, see [Actions](/outlook/actionabl
 > [!NOTE]
 >
 > * Specifying `compact` for the `style` property in Microsoft Teams is the same as specifying `normal` for the `style` property in Microsoft Outlook.
-> * For the HttpPOST action, the bearer token is included with the requests. This token includes the Microsoft Azure Active Directory (Azure AD) identity of the Office 365 user who took the action.
+> * For the HttpPOST action, the bearer token is included with the requests. This token includes the Microsoft Azure Active Directory (Azure AD) identity of the Microsoft 365 user who took the action.
 
 ## Send a message through Incoming Webhook or Office 365 Connector
 
@@ -138,7 +138,7 @@ An example of connector message is as follows:
 
 This message provides the following card in the channel:
 
-![Screenshot of a connector card](~/assets/images/connectorcard.png)
+:::image type="content" source="../../assets/images/connectorcard_1.png" alt-text="Screenshot of a coonector card.":::
 
 ## Send messages using cURL and PowerShell
 
