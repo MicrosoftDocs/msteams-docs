@@ -10,7 +10,7 @@ ms.date: 05/20/2022
 
 # Edit Azure AD manifest
 
-The [Microsoft Azure Active Directory (Azure AD) manifest](/azure/active-directory/develop/reference-app-manifest) contain definitions of all the attributes of an Azure AD application object in the Microsoft identity platform.
+The Microsoft Azure Active Directory (Azure AD) manifest contain definitions of all the attributes of an Azure AD application object in the Microsoft identity platform.
 
 Teams Toolkit now manages Azure AD application with the manifest file as the source of truth during your Teams application development lifecycle.
 
@@ -340,6 +340,7 @@ You need to interact with Azure AD application during various stages of your Tea
 ## See also
 
 - [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
+- [Microsoft Azure Active Directory (Azure AD) manifest](/azure/active-directory/develop/reference-app-manifest)
 - [Preview and Customize app manifest in Toolkit](TeamsFx-preview-and-customize-app-manifest.md)
 - [Debug your Teams app](debug-overview.md)
 - [Debug your Teams app locally](debug-local.md)
