@@ -181,7 +181,7 @@ landingContent:
           url: ~/sbs-calling-and-meeting.yml
         - text: Configure SSO for tabs and message extensions
           url: ~/sbs-tabs-and-messaging-extensions-with-SSO.yml  
-        - text: Build tabs with adaptive cards
+        - text: Build tabs with Adaptive Cards
           url: ~/sbs-tab-with-adaptive-cards.yml
         - text: Build a bot to send Proactive messages
           url: ~/sbs-send-proactive.yml
