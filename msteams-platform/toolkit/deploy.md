@@ -28,7 +28,7 @@ You can deploy the following to the cloud:
 
 ## Deploy Teams apps using Teams Toolkit
 
-The Get started guides help to deploy using Teams Toolkit. You can use the following to deploy your Teams app:
+The Get started guide helps to deploy using Teams Toolkit. You can use the following to deploy your Teams app:
 
 * [Deploy your app to Azure](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=4)
 * [Deploy your app to SharePoint](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4)
@@ -43,7 +43,7 @@ The Get started guides help to deploy using Teams Toolkit. You can use the follo
 |Bots and message extensions </br> The back-end workload | `yourProjectFolder/bot` | Not applicable | Azure App Service |
 
 > [!NOTE]
-> When you include Azure API management resource in your project and trigger deploy, you can publish your APIs in Azure Functions to Azure API management service.
+> When you include Azure API Management resource in your project and trigger deploy, you can publish your APIs in Azure Functions to Azure API Management service.
 
 ::: zone-end
 
@@ -55,15 +55,15 @@ You can deploy the following to the cloud:
 
 * The tab app, such as front-end apps are deployed to Azure Storage, configured for static web hosting.
 * The notification bot app with Azure Functions triggers can be deployed to Azure Functions.
-* The bot app or message extension can be deployed to Azure App Services.
+* The bot app or message extension is deployed to Azure App Services.
 
-After deploying, you can preview the app in Teams client or the web browser before you start using.
+After deploying, you can preview the app in Teams client or the web browser before you start using it.
 
 ## Deploy Teams app using Teams Toolkit
 
 1. Open **Visual Studio**.
 1. Select **Create a new project** or open an existing project from the list.
-1. Right-click on your project **MyTeamsApp1** > **Teams Toolkit** > **Deploy to the cloud...**.
+1. Right-click on your project **MyTeamsApp4** > **Teams Toolkit** > **Deploy to the cloud...**.
 
    :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/vs-deploy-cloud_1.png" alt-text="deploy to cloud":::
 
@@ -74,13 +74,13 @@ After deploying, you can preview the app in Teams client or the web browser befo
 
    :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/vs-deploy-confirmation.png" alt-text="Deploy to cloud confirmation dialog":::
 
-   After the deploy process is completed, you can see a pop-up with the confirmation that it's successfully deployed. You can also check the status in the output window.
+   After the deploy process completes, you can see a pop-up with the confirmation that it has been successfully deployed. You can also check the status in the output window.
 
    :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/VS-deploy-popup.png" alt-text="deploy to cloud popup":::
 
 ### Preview your app
 
-To preview your app, you first need to create a **Zip App Package** and sideload into the Teams client.
+To preview your app, you need to create a **Zip App Package** and sideload into the Teams client.
 
 1. Select **Project** > **Teams Toolkit** > **Zip App Package**.
 1. Select **For Local** or **For Azure** to generate Teams app package.
@@ -95,21 +95,21 @@ To preview your app, you first need to create a **Zip App Package** and sideload
 
    Now your app is sideloaded into Teams.
 
-   :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/sideload-teams.png" alt-text="Sideload Teams app in teams client":::
+   :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/sideload-teams_1.png" alt-text="Sideload Teams app in teams client":::
 
 The other way to preview your app:
 
-1. Right-click on your project **MyTeamsApp1** under **Solution Explorer**.
+1. Right-click on your project **MyTeamsApp4** under **Solution Explorer**.
 1. Select **Teams Toolkit** > **Preview in Teams** to launch the Teams app in web browser.
 
-   :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/vs-deploy-preview-teams.png" alt-text="Preview teams app in web browser":::
+   :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/vs-deploy-preview-teams_1.png" alt-text="Preview teams app in web browser":::
 
    > [!NOTE]
    > The same menu options are available in Project menu.
 
    Now your app is sideloaded into Teams.
 
-   :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/sideload-teams.png" alt-text="Sideload Teams app in teams client":::
+   :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/sideload-teams_1.png" alt-text="Sideload Teams app in teams client":::
 
 ::: zone-end
 
