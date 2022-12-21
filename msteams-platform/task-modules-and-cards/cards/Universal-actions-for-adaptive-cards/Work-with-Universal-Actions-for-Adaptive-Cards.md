@@ -30,12 +30,12 @@ Universal Actions for Adaptive Cards provide a way to implement Adaptive Card ba
 
 ## Schema for Universal Actions for Adaptive Cards
 
-Universal Actions for Adaptive Cards are introduced in the Adaptive Cards schema version 1.4. To use Adaptive Card effectively, the `version` property of your Adaptive Card must be set to 1.4.
+Universal Actions for Adaptive Cards are introduced in the Adaptive Cards schema version 1.5. To use Adaptive Card effectively, the `version` property of your Adaptive Card must be set to 1.5.
 
 > [!NOTE]
-> Setting the `version` property to 1.4 makes your Adaptive Card incompatible with older clients of the platforms or applications, such as Outlook and Teams, as they do not support the Universal Actions for Adaptive Cards.
+> Setting the `version` property to 1.5 makes your Adaptive Card incompatible with older clients of the platforms or applications, such as Outlook and Teams, as they do not support the Universal Actions for Adaptive Cards.
 
-If you set the card version to less than 1.4 and use either or both, `refresh` property and `Action.Execute`, the following happens:
+If you set the card version to less than 1.5 and use either or both, `refresh` property and `Action.Execute`, the following happens:
 
 | Client | Behavior |
 | :-- | :-- |
