@@ -59,7 +59,7 @@ To preview local manifest file by using **Zip Teams metadata package** option:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-manifest-json.png" alt-text="Screenshot is an example of showing the selection of manifest.template.json.":::
 
-1. Select the Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG"::: icon in the Visual Studio Code toolbar.
+1. Select the Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG"::: icon in the Visual Studio Code **Activity Bar**.
 
 1. Select **Zip Teams metadata package** under **DEPLOYMENT**.
 
