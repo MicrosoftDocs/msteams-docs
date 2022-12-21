@@ -49,25 +49,25 @@ The core focus at this stage is to announce the availability of the app for exis
 
 - **Landing page**: This growth lever is the landing page for your app hosted on your website. You can use this page to talk about your Teams app in full detail. it can include the value delivered inside Teams, personas targeted, key scenarios, details of subscription or pricing, customer testimonials and so on You can use this page to receive traffic from your core SaaS product or periodic digital or social campaigns.
 
-        :::row:::
-            :::column span="":::
+    :::row:::
+        :::column span="":::
 
-                **Recommendation**
+            **Recommendation**
 
-                Here’s some key guidance:
+            Here’s some key guidance:
 
-                - As you’ve built a collaborative app inside Teams, avoid labelling this as a “Teams integration” page and linking it under the “Integrations” section in your website header, navigation menu or footer.
-                - Your Teams collaborative app deserves a top-level link in your website header, navigation menu or footer. Make it easy to discover – more traffic is the first step to increased acquisition.
-                - Use the recommended app store CTA arts on multiple places on this page prominently to direct users to acquire your app.
-                - Include beautiful video, animated gifs and artful screenshots of your real Teams app on this page for an impactful storytelling. Your goal should be to get everyone who lands on this page to try out your Teams app immediately.
-                - Make sure to include links to public references and success stories to build trust that your Teams app has already benefited customers.
-                - It’s a good practice to include a FAQ section where users can quickly find answers to their most common queries related to your Teams app for example, scenarios, features, any additional cost or pricing, which SaaS subscription plans of yours support the Teams app and so on.
-                - Include download links to on-demand webinars or sign-up links to scheduled trainings or webinars or events for your Teams app on this page. Remember these are all valuable marketing qualified leads for your app.
-                - Include a section on this page to collect user feedback about the Teams app including new feature asks. You can also use the landing page to frequently showcase the planned roadmap for your Teams app and upcoming features that can be upvoted or downvoted against by users.
-                - This page must link to public pages as well as host downloadable copies of various bills of materials for your Teams app (see bill of materials section later on this page) that is, Technical solution datasheets, Teams app one-pager, IT admin guides, end-user facing app usage guides and so on.
-                - Your detailed public Support or documentation page for the Teams app (see Documentation section below) must also be prominently discoverable on this page as users typically stumble upon the app’s landing page via search results.
-                - Add a link to this page in your core SaaS product (for example, web app, native mobile apps) and from periodic digital or social campaigns targeted at users who may be using Teams.
-                - You have a support chatbot available on your website to help visitors find the right information or get human assistance sooner, make sure to deploy and tune the same for visitors coming to this page for your Teams app.
+              - As you’ve built a collaborative app inside Teams, avoid labelling this as a “Teams integration” page and linking it under the “Integrations” section in your website header, navigation menu or footer.
+              - Your Teams collaborative app deserves a top-level link in your website header, navigation menu or footer. Make it easy to discover – more traffic is the first step to increased acquisition.
+              - Use the recommended app store CTA arts on multiple places on this page prominently to direct users to acquire your app.
+              - Include beautiful video, animated gifs and artful screenshots of your real Teams app on this page for an impactful storytelling. Your goal should be to get everyone who lands on this page to try out your Teams app immediately.
+              - Make sure to include links to public references and success stories to build trust that your Teams app has already benefited customers.
+              - It’s a good practice to include a FAQ section where users can quickly find answers to their most common queries related to your Teams app for example, scenarios, features, any additional cost or pricing, which SaaS subscription plans of yours support the Teams app and so on.
+              - Include download links to on-demand webinars or sign-up links to scheduled trainings or webinars or events for your Teams app on this page. Remember these are all valuable marketing qualified leads for your app.
+              - Include a section on this page to collect user feedback about the Teams app including new feature asks. You can also use the landing page to frequently showcase the planned roadmap for your Teams app and upcoming features that can be upvoted or downvoted against by users.
+              - This page must link to public pages as well as host downloadable copies of various bills of materials for your Teams app (see bill of materials section later on this page) that is, Technical solution datasheets, Teams app one-pager, IT admin guides, end-user facing app usage guides and so on.
+              - Your detailed public Support or documentation page for the Teams app (see Documentation section below) must also be prominently discoverable on this page as users typically stumble upon the app’s landing page via search results.
+              - Add a link to this page in your core SaaS product (for example, web app, native mobile apps) and from periodic digital or social campaigns targeted at users who may be using Teams.
+              - You have a support chatbot available on your website to help visitors find the right information or get human assistance sooner, make sure to deploy and tune the same for visitors coming to this page for your Teams app.
 
             :::column-end:::
             :::column span="":::
