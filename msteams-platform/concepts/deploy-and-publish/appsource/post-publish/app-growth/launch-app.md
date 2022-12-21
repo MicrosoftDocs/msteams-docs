@@ -20,7 +20,28 @@ The core focus at this stage is to announce the availability of the app for exis
 
     Here are recommendation and resources for the growth levers:
 
+    - App store listing: This is the description and metadata that appears on the public Teams marketplace and is the most important piece of text that conveys what your app can do, and the value users can derive out of it. The app store listing appears within the App Store in Teams clients as well as on the AppSource public marketplace on the web.
 
+        :::row:::
+            :::column span="":::
+
+                Here’s some key guidance:
+
+                - Call out specifically what your app can do inside Teams vs focusing on your core SaaS product. Users are hiring your app to do a job in Teams, not in your web SaaS app for the browser or native mobile clients and want to certain it can deliver value inside Teams. It will be awesome if you can call out the degree of overlap in terms of supported scenarios between your core SaaS product and Teams app.
+                - Use bullet points and emojis to break the wall of text and achieve better readability.
+                - Include screenshots in your listing that show the app’s experience and underscore the user value inside Teams.
+                - Include a video in your listing that shows the app’s experience inside Teams. Generic, marketing videos that talk about the user problem your app is solving or one that simply gives an overview of your entire SaaS product aren't meaningful, don’t convince the user to install your app and often set inaccurate user expectations leading to dissatisfaction.
+                - Make sure to include links to public references and success stories to build trust that your Teams app has already benefited customers. This will instill confidence in new customers looking to acquire or try your app.
+
+            :::column-end:::
+            :::column span="":::
+              **Recommendation**: Your app store listing must meet the validation guidelines and Teams marketplace policies to be published.
+
+            For more information on optimizing your app store listing, see [Chapter 2 in Best Practices Guide](https://partner.microsoft.com/reach-customers/gtm).
+
+            See store listings of Polly, Zoho, Atlassian and so on.
+            :::column-end:::
+    :::row-end:::
 
     | Growth Lever | Recommendation | Resources and examples for inspiration |
     | --- | --- | --- |
