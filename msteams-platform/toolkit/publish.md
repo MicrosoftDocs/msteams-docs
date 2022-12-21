@@ -10,7 +10,7 @@ ms.date: 11/29/2021
 
 # Publish Teams apps using Teams Toolkit
 
-After creating the app, you can distribute your app to different scope, such as an individual, a team, or an organization. The distribution depends on multiple factors such as needs, business and technical requirements, and your goal for the app. Distribution to different scope may need different review process. In general, the bigger the scope, the more review the app needs to go through the security and compliance concerns.
+After creating the app, you can distribute your app to different scopes, such as an individual, a team, or an organization. The distribution depends on multiple factors such as needs, business and technical requirements, and your goal for the app. Distribution to different scope may need different review process. In general, the bigger the scope, the more review the app needs to go through for security and compliance concerns.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/publish-flow.png" alt-text="publish flow":::
 
@@ -29,34 +29,34 @@ Here's what you'll learn in this section:
 
 ## Publish to individual scope or sideload permission
 
-You can add custom app to Teams by uploading an [app package](../concepts/build-and-test/apps-package.md) in a `.zip` file directly to a team or in personal context. Adding a custom app by uploading an app package is known as sideloading. It allows you to test app while being uploaded in Teams. You can build and test app in the following scenarios:
+You can add a custom app to Teams by uploading an [app package](../concepts/build-and-test/apps-package.md) in `.zip` file directly to a team or in personal context. Adding a custom app by uploading an app package is known as sideloading. It allows you to test app while being uploaded in Teams. You can build and test app in the following scenarios:
 
 * Test and debug an app locally.
 * Build an app for yourself, such as to automate a workflow.
 * Build an app for small set of users, such as, your work group.
 
-You can build an app for internal use only and share it with your team without submitting it to the Microsoft Teams app catalog in the Teams app store. For more information, see [Upload your app in Teams](../concepts/deploy-and-publish/apps-upload.md).
+You can build an app for internal use and share it with your team without submitting it to Teams app catalog in the Teams app store. For more information, see [How to upload your app in Teams](../concepts/deploy-and-publish/apps-upload.md).
 
 ### To build your app to zip app package file
 
-You need to run `Provision in the cloud` first before you build the app package. The following steps help you to build the app package.
+You need to run **Provision in the cloud** first before you build the app package. The following step helps you to build the app package:
 
 * Select **Zip Teams metadata package** under **DEPLOYMENT**.<br>
-    The generated app package will be located in `{your project folder}/build/appPackage/appPackage.{env}.zip`.
+    The generated app package is located in `{your project folder}\build\appPackage\appPackage.{env}.zip`.
 
 ### To upload app package
 
 Perform the following steps to upload app package:
 
-1. In the Teams client, select **Apps** > **Manage your apps** > **upload an app**.
+1. In the Teams client, select **Apps** > **Manage your apps** > **Upload an app**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/publish1.png" alt-text="publish an app":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/publish1_1.png" alt-text="publish an app":::
 
    **Upload an app** window appears.
 
 2. Select **Upload a custom app**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/upload.png" alt-text="upload an app":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/upload_1.png" alt-text="upload an app":::
 
    Now the app is sideloaded into the Teams client and you can add and view it.
 
