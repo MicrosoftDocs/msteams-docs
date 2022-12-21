@@ -11,7 +11,7 @@ ms.author: surbhigupta
 The core focus at this stage is to announce the availability of the app for existing and new customers. Here’s a rundown of various initiatives and growth levers at your disposal:
 
 ## What should you as a developer do during the Launch stage?
-
+ 
 - **Invest strategically into your app store listing, landing page and documentation**
 
     Ensure that you’ve links to your Teams app handy for use in your landing page, documentation, marketing materials and so on. Refer here: Promote your app on another site to fetch the link to your app inside the Teams in-product marketplace.
