@@ -154,7 +154,7 @@ If you provide localized versions of your application, the users respond with th
 > [!NOTE]
 > The **Try It Yourself** `manifest` is deployed on Microsoft Azure and you can try it yourself by uploading the app package (.zip file link below) to your teams and/or as a personal app. (Sideloading must be enabled for your tenant; [see steps here](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading).).
 
-| Sample name | Description | .NET | Node.js | Try It Yourself |
+| Sample name | Description | .NET | Node.js | Demo Manifest |
 |-------------|-------------|------|---------|-----------------|
 | App Localization | Teams app localization using bot and tab. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/nodejs) |[Manifest](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp/demo-manifest/app-localization.zip)
 
