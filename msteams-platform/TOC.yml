@@ -87,8 +87,10 @@
     items:
     - name: Understand app structure
       href: concepts/design/app-structure.md
-    displayName: icons
       displayName: best practices
+    - name: Personal apps
+      href: concepts/design/personal-apps.md
+    - name: Tabs
       href: tabs/design/tabs.md
     - name: Bots
       href: bots/design/bots.md
