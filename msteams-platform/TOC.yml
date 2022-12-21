@@ -87,10 +87,8 @@
     items:
     - name: Understand app structure
       href: concepts/design/app-structure.md
+    displayName: icons
       displayName: best practices
-    - name: Personal apps
-      href: concepts/design/personal-apps.md
-    - name: Tabs
       href: tabs/design/tabs.md
     - name: Bots
       href: bots/design/bots.md
@@ -486,7 +484,7 @@
   items:
   - name: Overview
     href: webhooks-and-connectors/what-are-webhooks-and-connectors.md
-    displayName: webhooks, Connectors, Single virtual scene, endpoint
+    displayName: Webhooks, Connectors, endpoint
   - name: Create Outgoing Webhooks
     href: webhooks-and-connectors/how-to/add-outgoing-webhook.md
     displayName: HMAC security token
