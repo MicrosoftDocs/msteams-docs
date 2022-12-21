@@ -12,7 +12,7 @@ ms.date: 11/29/2021
 
 After creating the app, you can distribute your app to different scopes, such as an individual, a team, or an organization. The distribution depends on multiple factors such as needs, business and technical requirements, and your goal for the app. Distribution to different scope may need different review process. In general, the bigger the scope, the more review the app needs to go through for security and compliance concerns.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/publish-flow.png" alt-text="publish flow":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/publish-flow_1.png" alt-text="publish flow":::
 
 Here's what you'll learn in this section:
 
@@ -62,7 +62,7 @@ Perform the following steps to upload app package:
 
 ## Publish to your organization
 
-When the app is ready for use in production, you can submit the app using the Teams app submission API, called from Graph API. Teams app submission API is an integrated development environment (IDE) such as Microsoft Visual Studio Code installed with Teams toolkit. The following steps help you to publish the app to your organization:
+When the app is ready for use in production, you can submit the app using the Teams app submission API, called from Microsoft Graph API. Teams app submission API is an integrated development environment (IDE) such as Microsoft Visual Studio Code installed with Teams toolkit. The following steps help you to publish the app to your organization:
 
 * [Publish from Teams Toolkit](#publish-from-teams-toolkit)
 * [Approve on Admin Center](#approve-on-admin-center)
@@ -72,7 +72,8 @@ When the app is ready for use in production, you can submit the app using the Te
 The following steps help you to publish the app from Teams Toolkit:
 
 1. You can publish your Teams app in one of the following ways:
-     * Select **Publish to Teams** under **DEPLOYMENT** in treeview of Teams Toolkit.
+     * Select **Publish to Teams** under **DEPLOYMENT**.
+       :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-publish_1.png" alt-text="Select Publish":::
      * Enter trigger **Teams: Publish to Teams** from command palette.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-publish.png" alt-text="Select Publish":::
