@@ -27,7 +27,7 @@ To view the console logs, view or modify html, css, and network requests during 
 
 ## Add test data to your Microsoft 365 tenant
 
-Add the test data to Microsoft 365 test tenant. For more information, see [add test data to your Office 365 test tenant](~/concepts/build-and-test/test-data.md), and complete all the prerequisites before you start uploading your test data.
+Add the test data to Microsoft 365 test tenant. For more information, see [add test data to your Microsoft 365 test tenant](~/concepts/build-and-test/test-data.md), and complete all the prerequisites before you start uploading your test data.
 
 ## Next step
 

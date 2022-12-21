@@ -12,7 +12,9 @@ Deep links are a navigation mechanism that helps users to connect with features 
 * Navigating the user to the content within one of your app's tabs. For instance, your app can have a bot that sends messages notifying the user of an important activity. When the user taps on the notification, the deep link navigates to the tab so that the user can view more details about the activity.
 * Your app automates or simplifies certain user tasks. You can  create a chat or schedule a meeting by pre-populating the deep links with required parameters. Avoids the need for users to manually enter information.
 
-The Microsoft Teams JavaScript client library (TeamsJS) simplifies the process of navigation, in scenarios, such as navigating to content and information within your tab or launching a chat dialog. TeamsJS provides typed APIs that give improved experience and can replace the usage of deep links. These APIs are recommended for Teams apps that might run in other hosts (Outlook, Office).They also provide a way to check if the capability being used is supported by that host.
+The Microsoft Teams JavaScript client library (TeamsJS) simplifies the process of navigation. For many scenarios, such as navigating to content and information within your tab or launching a chat dialog. TeamsJS provides typed APIs that provide improved experience and can replace the usage of deep links. These APIs are recommended for Teams apps that might be run in other hosts (Outlook, Microsoft 365 app), as they also provide a way to check that the capability being used is supported by that host.
+
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 > [!NOTE]
 > The behavior of deep links is dependent on a number of factors. The following list outlines the behavior of deep links on Teams entities.
@@ -30,7 +32,7 @@ The Microsoft Teams JavaScript client library (TeamsJS) simplifies the process o
 > ✔ Link pasted in general chat conversation: Directly navigates to deep link url.
 >
 >
->The navigation behavior of a Teams app extended across Microsoft 365 (Outlook/Office) is dependent on two factors:
+>The navigation behavior of a Teams app extended across Microsoft 365 (Outlook/Microsoft 365 app) is dependent on two factors:
 >
 > * The target that the deep link points to.
 > * The host where the Teams app is running.
