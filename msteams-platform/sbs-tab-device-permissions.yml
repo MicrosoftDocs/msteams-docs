@@ -77,7 +77,9 @@ items:
 
      1. Open **manifest.json** in Visual Studio and make the following changes:
        
-        Replace `<<BASE_URI_DOMAIN>>` with your http endpoint from ngrok excluding the https:// part in `websiteUrl`, `privacyUrl`, `termsOfuseUrl`, `contentUrl`, and `validDomains`.
+       - Replace `<<BASE_URI_DOMAIN>>` with your ngrok URL in `websiteUrl`, `privacyUrl`, `termsOfuseUrl`, and `contentUrl`.
+       
+       - Replace `<<BASE_URI_DOMAIN>>` with your ngrok URL excluding `https://`` in `validDomains`.
 
         :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/tab-device-VS-update1_1.png" alt-text="update ngrok in visual studio":::
                
