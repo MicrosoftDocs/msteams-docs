@@ -6,7 +6,7 @@ ms.localizationpriority: high
 ---
 # Configure your app in Azure AD
 
-Azure AD provides app users access to your bot or message extension app. The app user who has signed into Teams can be given access to your app.
+Azure AD provides app users access to your bot or message extension app. The app user who has signed in to Teams can be given access to your app.
 
 ## SSO configuration in Azure AD portal
 
@@ -350,7 +350,7 @@ You can configure authentication for multiple platforms as long as the URL is un
 
     The **Configure platforms** page appears.
 
-1. Select the platform that you want to configure for your app. You can choose the platform type from web or SPA.
+1. Select the platform that you want to configure for your app. You can choose the platform type from Web or SPA.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/configure-platform.png" alt-text="Select web platform" border="true":::
 
@@ -727,7 +727,7 @@ You can configure authentication for multiple platforms as long as the URL is un
         > [!NOTE]
         > The URL mentioned in **Redirect URIs** is an example.
 
-    1. Enter the front-channel log-out URL.
+    1. Enter the front-channel logout URL.
     1. Select the tokens you want Azure AD to send for your app.
 
 1. Select **Configure**.
