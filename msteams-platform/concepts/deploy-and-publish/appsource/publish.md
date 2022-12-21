@@ -164,6 +164,12 @@ If your app is production ready, you can begin the process of getting it listed 
   
   1. You must ensure users who are assigned licenses have access to the accurate purchased plan features described in your plan’s listing.
 
+## Training module
+
+| **Training name** | **Description** |
+|--- | --- |
+| [Publish Teams apps in Microsoft Teams store](/training/modules/microsoft-teams-publish-app-to-store/) | This training module is about publishing your app to Teams app store. It focusing primarily on app validation process. |
+
 ## See also
 
 * [Publish Teams apps in Microsoft Teams store](/training/modules/microsoft-teams-publish-app-to-store/)
