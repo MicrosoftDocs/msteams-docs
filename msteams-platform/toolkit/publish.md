@@ -79,11 +79,11 @@ The following steps help you to publish the app from Teams Toolkit:
 
 1. Select **Install for your organization**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/installforyourorganization.png" alt-text="Install for your organization":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/installforyourorganization_1.png" alt-text="Install for your organization":::
 
    Now the app is successfully published to the admin portal and you see the following notice:
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/confirm-publish.png" alt-text="Confirm Publish":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/confirm-publish_1.png" alt-text="Confirm Publish":::
 
 Now the app is available on the **Manage apps** of Microsoft Teams admin center, where you, and the admin can review and approve it.
 
@@ -110,7 +110,7 @@ The following steps help you to approve from Admin Center:
 
 1. Select **Go to admin portal**.
 
-1. Select the :::image type="icon" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/Showall.PNG"::: icon > **Teams app** > **Manage apps**.
+1. Select the :::image type="icon" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/Showall.PNG"::: icon > **Teams apps** > **Manage apps**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-manage-apps.png" alt-text="Select Manage apps":::
 
