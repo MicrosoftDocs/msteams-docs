@@ -168,11 +168,10 @@ If your app is production ready, you can begin the process of getting it listed 
 
 | **Training name** | **Description** |
 |--- | --- |
-| [Publish Teams apps in Microsoft Teams store](/training/modules/microsoft-teams-publish-app-to-store/) | This training module is about publishing your app to Teams app store. It focusing primarily on app validation process. |
+| [Publish Teams apps in Microsoft Teams store](/training/modules/microsoft-teams-publish-app-to-store/) | This training module is about publishing your app to Teams app store. It focuses primarily on app validation process. |
 
 ## See also
 
-* [Publish Teams apps in Microsoft Teams store](/training/modules/microsoft-teams-publish-app-to-store/)
 * [Publish to Microsoft 365 App Stores](/office/dev/store/)
 * [Upload your Teams app](~/concepts/deploy-and-publish/apps-upload.md)
 * [Publish your Teams app to your org](/MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/MicrosoftTeams/breadcrumb/toc.json)
