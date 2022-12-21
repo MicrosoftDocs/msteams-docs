@@ -73,6 +73,8 @@ const inkingManager = new InkingManager(canvasHostElement);
 
 // Begin synchronization for LiveCanvas
 await liveCanvas.initialize(inkingManager);
+
+inkingManager.activate();
 ```
 
 # [TypeScript](#tab/typescript)
@@ -98,6 +100,8 @@ const inkingManager = new InkingManager(canvasHostElement);
 
 // Begin synchronization for LiveCanvas
 await liveCanvas.initialize(inkingManager);
+
+inkingManager.activate();
 ```
 
 ---
@@ -269,7 +273,7 @@ import {
 
 // Change the selected tool to laser pointer
 document.getElementById("laser").onclick = () => {
-  inkingManager.tool = InkingTool.highlighter;
+  inkingManager.tool = InkingTool.laserPointer;
 };
 // Change the selected color for laser pointer
 document.getElementById("laser-color").onchange = () => {
