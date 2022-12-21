@@ -118,7 +118,7 @@ items:
     # [Desktop](#tab/desktop) 
 
 
-    1. In your cloned repository, got to **samples** > **tab-device-permissions** > **nodejs** > **appPackage**.
+    1. In your cloned repository, go to **samples** > **tab-device-permissions** > **nodejs** > **appPackage**.
 
     1. Create a .zip with the following files that are present in the **appPackage** folder: 
        * manifest.json
