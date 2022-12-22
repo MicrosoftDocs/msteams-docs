@@ -84,11 +84,11 @@ Since your goal at this stage is to achieve product-market fit for your app, it�
 
 ### Launch offers and promotions to acquire users for Teams app
 
-To acquire new customers for your Teams collaborative app, consider offering a little extra incentive to Teams users over and above what’s available for your core SaaS product.
+To acquire new customers for your Teams collaborative app, consider offering a little extra incentive to Teams users other than what’s available for your core SaaS product.
 
 :::row:::
     :::column span="3":::
-        If your app requires paid subscriptions, consider offering launch period discounts. Even promotions such as 1:1 product demos, customer success consultations, invite-only webinars, trainings for the entire business unit or team using your Teams app can go a long way to differentiate your app and accelerate customer acquisition. If you've already listed your transactable SaaS subscriptions for the Teams app in the marketplace, make sure to price them at a discount to encourage users to purchase your offer directly from the Teams marketplace.
+        If your app requires paid subscriptions, consider offering launch period discounts. Even promotions, such as 1:1 product demos, customer success consultations, invite-only webinars, trainings for the entire business unit or team using your Teams app help to differentiate your app. Such promotions help accelerate customer acquisition. If you've already listed your transactable SaaS subscriptions for the Teams app in the marketplace, make sure to price them at a discount to encourage users to purchase your offer directly from the Teams marketplace.
     :::column-end:::
     :::column span="":::
         :::image type="content" source="../../../../../assets/images/app-fundamentals/trials-store-listing.png" alt-text="free or extended trials in app store listing and FRE flow.":::
