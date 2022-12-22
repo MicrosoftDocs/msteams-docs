@@ -19,7 +19,7 @@ After you create or upload your app, you can manage your apps in Developer Porta
 
 In the **Overview** section, you can see the following components to manage your app:
 
-* Dashboard
+* **Dashboard**
 
   * In the **Dashboard** under **Overview** section, you can see the following components for your app:
     * **Teams store validation**: App validation tool checks your app package against the test cases Microsoft uses when reviewing your app.
