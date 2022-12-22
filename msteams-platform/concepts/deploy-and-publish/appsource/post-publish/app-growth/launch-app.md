@@ -23,7 +23,6 @@ Here’s a rundown of various initiatives and growth levers at your disposal:
 - [Launch offers and promotions to acquire users for Teams app](#launch-offers-and-promotions-to-acquire-users-for-teams-app)
 - [Announce Teams app to your entire customer base](#announce-teams-app-to-your-entire-customer-base)
 - [App Bill of Materials: Pitch deck, value prop, demo, datasheets, and so on](#app-bill-of-materials-pitch-deck-value-prop-demo-datasheets-and-so-on)
-- 
 
 ### Invest strategically into your app store listing, landing page and documentation
 
