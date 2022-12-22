@@ -8,7 +8,7 @@ ms.author: surbhigupta
 
 # Analyze your app's usage in Developer Portal
 
-In the Developer Portal for Teams, on the **Overview** page, you can see the total number of active users for your app.
+In the Developer Portal for Teams, on the **Overview** page, you can see the total number of active users for your app
 
 > [!NOTE]
 > Usage analytics are currently available only for new custom apps published to your org through **Developer Portal** for Teams or imported into **Developer Portal** for Teams after April 2022. Usage analytics for all the apps published to the Teams store is available in **Partner Center**, for more information [Teams apps usage report](/office/dev/store/teams-apps-usage).
