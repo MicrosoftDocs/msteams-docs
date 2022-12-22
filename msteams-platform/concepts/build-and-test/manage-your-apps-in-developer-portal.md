@@ -23,15 +23,16 @@ In the **Overview** section, you can see the following components to manage your
 
   * In the **Dashboard** under **Overview** section, you can see the following components for your app:
     * **Teams store validation**: App validation tool checks your app package against the test cases Microsoft uses when reviewing your app.
-    * **Announcement**: Latest updates of your apps on Developer Portal for Teams
-    * **Active users (Preview)**: Shows you the active user count
-    * **Basic information**: Shows you the App ID, Version, Manifest version, and so on.
+    * **Announcement**: Latest updates of your apps on Developer Portal for Teams.
+    * **Active users (Preview)**: Shows you the active user count.
+    * **Basic information**: Shows you the **App ID**, **Version**, **Manifest version**, and other basic information.
+    * **Upgrade to 1.15**: Upgrade your aap to the latest version 1.15 which enables support for extending Teams apps to Outlook and Office.
 
     :::image type="content" source="../../assets/images/tdp/dashboard-page.png" alt-text="The screenshot is an example that shows the Overview page of the app you created in Developer Portal for Teams.":::
 
 * Analytics
 
-    In the **Analytics** page under **Overview** section, you can see the total number of active users for your app. For more information, see [Analyze your app's usage](analyze-your-apps-usage-in-developer-portal.md).
+    In the **Analytics** under **Overview** section, you can get an overview of your app's usage, engagement, and other insights. For more information, see [how to analyze your app's usage](analyze-your-apps-usage-in-developer-portal.md).
 
 ## Configure
 
@@ -39,9 +40,9 @@ To install and render your app in Teams, you must include a set of configuration
 
 In the **Configure** section, you can see the following components to manage and access your app:
 
-* **Basic information**: This section shows and allows you to edit the App name, App ID, Descriptions, Version, Developer Information, App URLs, Application (client) ID, and Microsoft Partner Network ID.
-* **Branding**: This page shows the app icon details.
-* **App features**: You can add the following features to your app:
+* **Basic information**: This section shows and allows you to edit the **App names**, **App ID**, **Descriptions**, **Version**, **Developer information**, **App URLs**, **Application (client) ID**, and **Microsoft Partner Network ID**.
+* **Branding**: This section allows you to add **Color icon** and **Outline icon** in `.png` format.
+* **App features**: This section allows you to add the following features to your app:
   * Personal app
   * Bot
   * Connector
@@ -52,10 +53,10 @@ In the **Configure** section, you can see the following components to manage and
   * Activity feed notification
   > [!NOTE]
   > Currently, Connector is not available for Government Community Cloud (GCC) tenants.
-* **Permissions**: This section allows you to give Device permissions, Team permissions, Chat or Meeting permissions, and User Permissions for your app.
-* **Single sign-on**: Bot registered on Azure AD supports Single Sign-On (SSO). If a bot is registered on Bot Framework Portal (or within the Developer Portal under Bot Management) then those bots don't support SSO and you have to register your bot on Azure AD to support SSO. For a bot registered on Azure AD, add the **Application ID URI**. To get Application ID URI from Azure AD, see [Use SSO authentication for bots](../../bots/how-to/authentication/auth-aad-sso-bots.md).
-* **Languages**: You can set up or change the language of your app.
-* **Domain**: You can add the domains to load your apps in the Teams client (For example: *.example.com).
+* **Permissions**: This section allows you to give **Device permissions**, **Team Permissions**, **Chat/Meeting permissions**, and **User Permissions** for your app.
+* **Single sign-on**: Bot registered on Microsoft Azure Active Directory (Azure AD) supports Single Sign-On (SSO). If a bot is registered on Bot Framework portal (or within the Developer Portal under Bot Management) then a bot doesn't support SSO and you have to register your bot on Azure AD to support SSO. For a bot registered on Azure AD, add the **Application ID URI**. To get **Application ID URI** from Azure AD, see [how to use SSO authentication for bots](../../bots/how-to/authentication/auth-aad-sso-bots.md).
+* **Languages**: This section allows you to set up or change the language of your app.
+* **Domain**: This section allows you to add the domains to load your apps in the Teams client, such as *.example.com.
 
 :::image type="content" source="../../assets/images/tdp/configure.png" alt-text="The screenshot is an example that shows how to configure features to manage and access your app in Developer Portal.":::
 
