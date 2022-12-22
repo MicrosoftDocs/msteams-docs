@@ -40,7 +40,7 @@ You’ll probably not be surprised to hear that not all apps are equal on any ma
     :::column-end:::
     :::column span="":::
 
-        :::image type="content" source="../../../../../assets/images/app-fundamentals/app-growth-flyheel.png" alt-text="Teams centric app growth flywheel for the developer":::
+        :::image type="content" source="../../../../../assets/images/app-fundamentals/app-growth-flyheel.png" alt-text="Teams centric app growth flywheel for the developer" border="false":::
 
     :::column-end:::
 :::row-end:::
