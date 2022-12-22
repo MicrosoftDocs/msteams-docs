@@ -10,81 +10,93 @@ ms.author: surbhigupta
 
 In the Traction stage, you’ll want to gain mindshare for your collaborative app among top customers. You can build readiness to scale adoption and growth, and start realizing return on investment.
 
-Here are the various initiatives and growth levers at your disposal:
-
 ## What should you as a developer do during the Traction stage?
 
-- **Upskill Customer Success team on your new Teams app**:
+Here are the various initiatives and growth levers at your disposal:
 
-  - Your collaborative app for Teams is just another product line or channel for your customers to use your SaaS service. For this reason, training your customer success personnel on the Teams app is of critical importance. It can include how to get customers started with the app, high value scenarios and use cases, how to get the most out of the app, and so on.
+- [Upskill customer success team on your new Teams app](#upskill-customer-success-team-on-your-new-teams-app)
+- [Upskill customer support staff on new Teams app](#upskill-customer-support-staff-on-new-teams-app)
+- [Showcase Teams app in your annual customer conference](#showcase-teams-app-in-your-annual-customer-conference)
+- [Drive awareness of the app in select customer organization](#drive-awareness-of-the-app-in-select-customer-organization)
+- [App activation in pre-identified pilot Teams customers](#app-activation-in-pre-identified-pilot-teams-customers)
+- [Share overlapping customer orgs to plan co-activation](#share-overlapping-customer-orgs-to-plan-co-activation)
+- [Commerce transact integration to make your Teams app monetization-ready](#commerce-transact-integration-to-make-your-teams-app-monetization-ready)
+- [Microsoft 365 Certification to make Teams app enterprise-ready](#microsoft-365-certification-to-make-teams-app-enterprise-ready)
+- [Drive traffic from web SaaS app: “Use in Teams” CTA and “Share to Teams”](#drive-traffic-from-web-saas-app-use-in-teams-cta-and-share-to-teams)
 
-  - For new customers who use Microsoft 365, your customer success team must lead the conversations with your Teams collaborative app. It will offer the users unique and differentiated value. This value comes through collaborative workflows beyond the high value scenarios powered by your core SaaS product.
+### Upskill customer success team on your new Teams app
 
-  - For existing customers who use Microsoft 365, your customer success team must immediately set up time to introduce your new Teams app to these customers and demo the experience. Then, you can work out a plan to activate these overlapping customers on Teams.
+Update the skill of your customer success team in the following ways:
 
-  - To achieve product-led growth, you must strategically upskill your customer success teams. The aim is to access and monitor product acquisition, engagement, and task completion. You must also monitor value realization metrics or milestone for customers. For this purpose, use your collaborative Teams app to perform outreach and intervention at the right time to assist users in their journey with your app.
+- Your collaborative app for Teams is just another product line or channel for your customers to use your SaaS service. For this reason, training your customer success personnel on the Teams app is of critical importance. It can include how to get customers started with the app, high value scenarios and use cases, how to get the most out of the app, and so on.
 
-  - In addition, establish a process to channel customer feedback from this team. Use this feedback to inform roadmap planning and growth experimentation for your Teams app. It will be a good idea to have your customer success team conversant in day-to-day usage of Microsoft Teams. It also helps if your team is up to speed with all articles in the Teams admin-facing public documentation sections [Third-party apps in Microsoft Teams](/microsoftteams/overview-third-party-apps) and [Admin controls to govern apps](/microsoftteams/customize-apps). Your customers will need your expertise in these areas.
+- For new customers who use Microsoft 365, your customer success team must lead the conversations with your Teams collaborative app. It will offer the users unique and differentiated value. This value comes through collaborative workflows beyond the high value scenarios powered by your core SaaS product.
 
-- **Upskill Customer Support staff on new Teams app**:
+- For existing customers who use Microsoft 365, your customer success team must immediately set up time to introduce your new Teams app to these customers and demo the experience. Then, you can work out a plan to activate these overlapping customers on Teams.
 
-    Similar to customer success teams, it's imperative to train your customer support team on the Teams app, frequent user scenarios, common queries, and guidance for troubleshooting. It's also useful to train the team for any pre-configuration required, app rollout and governance of the Teams app in customer organizations. Your support team may get fairly nuanced queries about your app in Teams.
+- To achieve product-led growth, you must strategically upskill your customer success teams. The aim is to access and monitor product acquisition, engagement, and task completion. You must also monitor value realization metrics or milestone for customers. For this purpose, use your collaborative Teams app to perform outreach and intervention at the right time to assist users in their journey with your app.
 
-    To continue delivering a delightful experience for your customers, ensure the team has basic understanding of:
+- In addition, establish a process to channel customer feedback from this team. Use this feedback to inform roadmap planning and growth experimentation for your Teams app. It will be a good idea to have your customer success team conversant in day-to-day usage of Microsoft Teams. It also helps if your team is up to speed with all articles in the Teams admin-facing public documentation sections [Third-party apps in Microsoft Teams](/microsoftteams/overview-third-party-apps) and [Admin controls to govern apps](/microsoftteams/customize-apps). Your customers will need your expertise in these areas.
 
-  - Microsoft Teams.
-  - Teams apps, in general.
-  - Nuances about your Teams collaborative app.
-  - Security, compliance, and permissions for your Teams app.
-  - App management.
-  - Governance features in Teams.
+### Upskill customer support staff on new Teams app
+
+Similar to customer success teams, it's imperative to train your customer support team on the Teams app, frequent user scenarios, common queries, and guidance for troubleshooting. It's also useful to train the team for any pre-configuration required, app rollout and governance of the Teams app in customer organizations. Your support team may get fairly nuanced queries about your app in Teams.
+
+To continue delivering a delightful experience for your customers, ensure the team has basic understanding of:
+
+- Microsoft Teams.
+- Teams apps, in general.
+- Nuances about your Teams collaborative app.
+- Security, compliance, and permissions for your Teams app.
+- App management.
+- Governance features in Teams.
   
-    It will be a good idea to have a support team that’s conversant in day-to-day usage of Microsoft Teams. it helps to be up to speed with all articles in the Teams admin-facing public documentation sections [Third-party apps in Microsoft Teams](/microsoftteams/overview-third-party-apps) and [Admin controls to govern apps](/microsoftteams/customize-apps). Your customers will need your expertise in these areas.
+It will be a good idea to have a support team that’s conversant in day-to-day usage of Microsoft Teams. it helps to be up to speed with all articles in the Teams admin-facing public documentation sections [Third-party apps in Microsoft Teams](/microsoftteams/overview-third-party-apps) and [Admin controls to govern apps](/microsoftteams/customize-apps). Your customers will need your expertise in these areas.
 
-- **Showcase Teams app in your annual customer conference**:
+### Showcase Teams app in your annual customer conference
 
-    Your own flagship annual customer or partner conference is the perfect opportunity to announce and showcase your new or updated Teams collaborative app to the world and get immediate traction going. Get in touch with the Microsoft field, account, or engineering representatives to request their participation in to-customer webinars you’re planning to announce and evangelize your Teams collaborative app.
+Your own flagship annual customer or partner conference is the perfect opportunity to announce and showcase your new or updated Teams collaborative app to the world and get immediate traction going. Get in touch with the Microsoft field, account, or engineering representatives to request their participation in to-customer webinars you’re planning to announce and evangelize your Teams collaborative app.
 
-- **Drive awareness of the app in select customer orgs**:
+### Drive awareness of the app in select customer organization
 
-    While at the launch stage you’d announced the availability of your new Teams app to the entire customer base, it’s time to build traction by going targeted. Identify a shorter list of existing customers of your SaaS product who use Microsoft 365. Drive awareness among these customers through your customer success team.
+While at the launch stage you’d announced the availability of your new Teams app to the entire customer base, it’s time to build traction by going targeted. Identify a shorter list of existing customers of your SaaS product who use Microsoft 365. Drive awareness among these customers through your customer success team.
 
-    Your customer success team must set up time to introduce your new Teams app to these customers, demo the experience and then work out a plan to activate these overlapping customers on Teams. These activation motions will allow your customer success and customer support teams to learn how to drive programmatic adoption, tackle common customer queries and build real-world expertise on the Teams app.
+Your customer success team must set up time to introduce your new Teams app to these customers, demo the experience and then work out a plan to activate these overlapping customers on Teams. These activation motions will allow your customer success and customer support teams to learn how to drive programmatic adoption, tackle common customer queries and build real-world expertise on the Teams app.
 
-- **App activation in pre-identified pilot Teams customers**:
+### App activation in pre-identified pilot Teams customers
 
-    Before shipping the Teams app on the marketplace, you would have identified 3-5 pilot customers with whom you reviewed the envisioned app scenarios and designed mocks to build confidence towards the product you’re building. It’s now time to use your customer success team to activate those select 3-5 customers. It won't only lead towards product-market fit but also serve as a source of rich customer feedback to improve the app in future versions.
+Before shipping the Teams app on the marketplace, you would have identified 3-5 pilot customers with whom you reviewed the envisioned app scenarios and designed mocks to build confidence towards the product you’re building. It’s now time to use your customer success team to activate those select 3-5 customers. It won't only lead towards product-market fit but also serve as a source of rich customer feedback to improve the app in future versions.
 
-- **Share overlapping customer orgs to plan co-activation**:
+### Share overlapping customer orgs to plan co-activation
 
-    For large, strategic enterprise customers that use your SaaS product and Microsoft Teams, Microsoft’s customer-facing resources can partner with your sales and customer success teams to drive co-activation of your app in the customer organization. Microsoft evaluates co-activation opportunities for apps based on customer interest, adoption opportunity (sold seat size in customer account), and so on, among other criteria. Get in touch with your Microsoft field, account, or engineering representatives to request potential, co-activation of your Teams collaborative app in strategic enterprise customer accounts.
+For large, strategic enterprise customers that use your SaaS product and Microsoft Teams, Microsoft’s customer-facing resources can partner with your sales and customer success teams to drive co-activation of your app in the customer organization. Microsoft evaluates co-activation opportunities for apps based on customer interest, adoption opportunity (sold seat size in customer account), and so on, among other criteria. Get in touch with your Microsoft field, account, or engineering representatives to request potential, co-activation of your Teams collaborative app in strategic enterprise customer accounts.
 
-- **Commerce transact integration to make your Teams app monetization-ready**:
+### Commerce transact integration to make your Teams app monetization-ready
 
-    One of the goals of the Traction stage is to build readiness for future adoption and ROI realization from your collaborative Teams app. Look for sticky adoption and positive feedback for your collaborative app among the pilot and significant customers. After that, you can begin planning monetization for your app on the Teams marketplace.
+One of the goals of the Traction stage is to build readiness for future adoption and ROI realization from your collaborative Teams app. Look for sticky adoption and positive feedback for your collaborative app among the pilot and significant customers. After that, you can begin planning monetization for your app on the Teams marketplace.
 
-    Get started [here](/concepts/deploy-and-publish/appsource/prepare/monetize-overview).
+Get started [here](/concepts/deploy-and-publish/appsource/prepare/monetize-overview).
 
-- **Microsoft 365 Certification to make Teams app enterprise-ready**:
+### Microsoft 365 Certification to make Teams app enterprise-ready
 
-    The Microsoft 365 Certification is designed to show customers that your collaborative app has been vetted against controls derived from leading industry-standard frameworks. It also showcases that strong security, privacy, and compliance practices are in place to protect customer data when the app is in use. Since most Teams customers are large enterprises, having your app Microsoft 365 certified aids in building trust with the IT admins (see how [here](/microsoftteams/overview-of-app-certification#microsoft-365-certification)). It results in smoother, faster adoption in customer organizations.
+The Microsoft 365 Certification is designed to show customers that your collaborative app has been vetted against controls derived from leading industry-standard frameworks. It also showcases that strong security, privacy, and compliance practices are in place to protect customer data when the app is in use. Since most Teams customers are large enterprises, having your app Microsoft 365 certified aids in building trust with the IT admins (see how [here](/microsoftteams/overview-of-app-certification#microsoft-365-certification)). It results in smoother, faster adoption in customer organizations.
 
-    Find more [here](https://cloudpartners.transform.microsoft.com/practices/modernworkisv?tab=certification).
+Find more [here](https://cloudpartners.transform.microsoft.com/practices/modernworkisv?tab=certification).
 
-- **Drive traffic from web SaaS app: “Use in Teams” CTA and “Share to Teams”**:
+### Drive traffic from web SaaS app: “Use in Teams” CTA and “Share to Teams”
 
-    While during the launch stage, you used transient banners, notifications bar, what’s new notifications inside the SaaS product’s UI for all users to announce your Teams app. It’s time now to nudge users who may be using Microsoft Teams to start using your collaborative app for scenarios that are better together in Teams vs. your core web SaaS experience.
+While during the launch stage, you used transient banners, notifications bar, what’s new notifications inside the SaaS product’s UI for all users to announce your Teams app. It’s time now to nudge users who may be using Microsoft Teams to start using your collaborative app for scenarios that are better together in Teams vs. your core web SaaS experience.
 
-    :::row:::
-        :::column span="3":::
-            Surface [deeplinks](/concepts/build-and-test/deep-links?tabs=teamsjs-v2) within your browser-based web SaaS experience to transport users to specific views inside your Teams app (for example, personal app, tabs, conversational bot or meeting extensions with shared meeting stage or in-meeting tab). You can implement the highly recommended [Share to Teams](/concepts/build-and-test/share-to-teams-from-web-apps) control within your browser-based web SaaS experience to enable users to share and start collaborating around a content or object from your SaaS product inside Teams with their colleagues.
-        :::column-end:::
-        :::column span="":::
-            :::image type="content" source="../../../../../assets/images/app-fundamentals/drive-traffic-saas-app.png" alt-text="Drive traffic from your SaaS app.":::
-        :::column-end:::
-    :::row-end:::
+:::row:::
+    :::column span="3":::
+        Surface [deeplinks](/concepts/build-and-test/deep-links?tabs=teamsjs-v2) within your browser-based web SaaS experience to transport users to specific views inside your Teams app (for example, personal app, tabs, conversational bot or meeting extensions with shared meeting stage or in-meeting tab). You can implement the highly recommended [Share to Teams](/concepts/build-and-test/share-to-teams-from-web-apps) control within your browser-based web SaaS experience to enable users to share and start collaborating around a content or object from your SaaS product inside Teams with their colleagues.
+    :::column-end:::
+    :::column span="":::
+        :::image type="content" source="../../../../../assets/images/app-fundamentals/drive-traffic-saas-app.png" alt-text="Drive traffic from your SaaS app.":::
+    :::column-end:::
+:::row-end:::
 
-    To get maximum ROI, surface the nudges contextually for scenarios that are inherently collaborative over chat or in meetings, as they're best delivered inside Microsoft Teams through your app.
+To get maximum ROI, surface the nudges contextually for scenarios that are inherently collaborative over chat or in meetings, as they're best delivered inside Microsoft Teams through your app.
 
 ## Where can Microsoft help?
 
