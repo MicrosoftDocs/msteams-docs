@@ -14,6 +14,8 @@ Meetings enable collaboration, partnership, informed communication, and shared f
 
 :::image type="content" source="../assets/images/apps-in-meetings/meetingappextensibility.png" alt-text="The screenshot shows you how meeting app extensibility works.":::
 
+
+
 You must be familiar with the following product concepts to create custom meeting experiences with apps in Microsoft Teams.
 
 ## Supported meeting types in Teams
