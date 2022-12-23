@@ -10,11 +10,20 @@ ms.author: surbhigupta
 
 In the Scaling stage in the app growth lifecycle, you put the learnings from previous ad-hoc, pilot motions to use. You use them to programmatically activate existing customers and sell to new customers via all possible initiatives.
 
-
 ## What should you as a developer do during the Scale stage?
 
 The following growth levers are pertinent at this stage:
 
+- [Become CSP channel ready for the Teams app](#become-csp-channel-ready-for-the-teams-app)
+- [Onboard CSP resellers to extend app’s sales reach](#onboard-csp-resellers-to-extend-apps-sales-reach)
+- [Tailor SaaS offers for customers and CSP resellers](#tailor-saas-offers-for-customers-and-csp-resellers)
+- [Digital webinars for existing customers and new prospects](#digital-webinars-for-existing-customers-and-new-prospects)
+- [Digital ad campaigns to target customers for app install and use](#digital-ad-campaigns-to-target-customers-for-app-install-and-use)
+- [Publish customer demand and app’s impact story](#publish-customer-demand-and-apps-impact-story)
+- [Showcase Teams app in leading industry events](#showcase-teams-app-in-leading-industry-events)
+- [User re-targeting and re-engagement basis app analytics](#user-re-targeting-and-re-engagement-basis-app-analytics)
+- [Co-activation in mutually identified existing customers](#co-activation-in-mutually-identified-existing-customers)
+- [Growth hacking via in-product scenario experimentation](#growth-hacking-via-in-product-scenario-experimentation)
 
 ### Become CSP channel ready for the Teams app
 
