@@ -61,8 +61,9 @@ You can generate interest from both existing and new customers. You can also dri
 Blog posts help communicate the value of your app and its integration with Microsoft Teams to your audience. Use your blog to introduce your Teams app, how to use it and communicate the value prop for your users including use cases, scenarios, customer stories. Include logos, animated gifs, screenshots, quotes, URLs, and information pertinent to promoting your app.
 
 > [!NOTE]
-> When using your blog channel to drive press or media coverage or to request Microsoft quotes, please refer to Microsoft’s Press Release guidelines for reviews (see the press release section).
-> Some example blog posts are: 
+> When using your blog channel to drive press or media coverage or to request Microsoft quotes, refer to Microsoft’s Press Release guidelines for reviews (see the press release section).
+> Some example blog posts are:
+>
 > - [Wrike](https://www.wrike.com/blog/announcing-wrike-integration-microsoft-teams/)
 > - [Adobe Creative Cloud](https://theblog.adobe.com/adobe-creative-cloud-and-microsoft-teams-creativity-meets-collaboration/)
 > - [MeisterTask](https://www.meistertask.com/blog/product-news/2018/01/25/meistertask-projects-microsoft-teams/)
@@ -145,7 +146,13 @@ The first time your Teams app goes live on the marketplace and for major subsequ
 - **Partner press release and blog content review**: Publicly announce your Teams app by leveraging this service to review of a press release you draft and get a quote from a Microsoft representative.
 - **Amplify partner press release and blog on social**: Microsoft can help Teams customers gain awareness of your new or updated collaborative app by including your app in the Commercial Marketplace “What’s New” blog as well as amplifying your blog or PR on social channels.
 - **Microsoft Teams TechCommunity Blog Post**: Get in touch with your Microsoft field, account, or engineering representatives to discuss the possibility of publishing a dedicated blog post on Teams blog such as [this](https://techcommunity.microsoft.com/t5/microsoft-teams-blog/salesforce-brings-sales-and-service-data-into-microsoft-teams-to/ba-p/2521221).
-- **Features placements in AppSource and the Teams in-product app store**: Get in touch with your Microsoft field, account or engineering representatives or connect with the [Microsoft 365 ISV Benefits Service Desk](mailto:ModernWorkISVPartner@microsoft.com) to feature your app in AppSource and or or the Teams in-client app store merchandising sections. Please note that the Microsoft Teams store editorial team determines the prominence and location of an app within the editorial sections such as promo banner on the Teams store based on ranking parameters described [here](/concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters).
+- **Features placements in AppSource and the Teams in-product app store**: Get in touch with your Microsoft field, account or engineering representatives or connect with the [Microsoft 365 ISV Benefits Service Desk](mailto:ModernWorkISVPartner@microsoft.com) to feature your app in AppSource and or or the Teams in-client app store merchandising sections.
+
+    > [!NOTE]
+    > The Microsoft Teams store editorial team determines the prominence and location of an app within the editorial sections such as promo banner on the Teams store based on ranking parameters.
+    >
+    > For more information, see [Microsoft Teams store ranking parameters](../teams-store-ranking-parameters.md).
+
 - **Co-present in Teams app-focused public webinars hosted by you**: Get in touch with your Microsoft field, account, or engineering representatives to request their participation in to-customer webinars you’re planning to announce and evangelize your Teams collaborative app.
 
 ## Next step
