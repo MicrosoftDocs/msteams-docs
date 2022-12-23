@@ -56,16 +56,19 @@ items:
     # [Visual Studio Code](#tab/vscode)
 
     1. Open Visual Studio Code and select the **Extensions** view (**Ctrl+Shift+X** / **⌘⇧-X** or **View > Extensions**).
-    1. In the search box, enter **Teams Toolkit**.
+    1. In the search box, enter **Teams toolkit**.
     1. Select **Install** next to the Teams Toolkit.
 
         :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-install-toolkit-vscode.png" alt-text="microsoft tool kit":::
 
-        The Teams Toolkit icon appears in the Visual Studio Code sidebar after it's installed.
+        The Teams Toolkit icon appears in the Visual Studio Code **Activity Bar** after it's installed.
 
         :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/hw-teams-toolkit-sidebar-icon.png" alt-text="Illustration shows the Teams Toolkit icon in Visual Studio Code sidebar.":::
 
     You can also find the Teams Toolkit on the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
+
+    > [!NOTE]
+    > The latest version of Teams Toolkit is v4.2.0.
 
     # [Command line](#tab/cli)
 
@@ -154,9 +157,9 @@ items:
     # [Visual Studio Code](#tab/vscode)
 
     1. Open Visual Studio code.
-    1. Select the Teams Toolkit :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
+    1. Select the Teams Toolkit :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code **Activity Bar**.
 
-    1. Select **Create a new Teams app**.
+    1. Select **Create a new app**.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/create-project.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar.":::
 
@@ -176,16 +179,11 @@ items:
         
         :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-helloworld.png" alt-text="bot home":::
 
-    1. Enter a suitable name for your app, such as `HelloWorld`. Ensure that the name of the app is alphanumeric. 
-       Select **Enter**.
-
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-another-helloworld.png" alt-text="bot home":::
-
     1. Select your **Workspace folder** by choosing your required folder.  
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/select-folder.png" alt-text="Screenshot showing how to select the folder.":::
 
-    1. Enter a suitable **Application name** for your app, such as `HelloWorld`. Press **Enter**.
+    1. Enter a suitable **Application name** for your app. Press **Enter**.
 
        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/application-name.png" alt-text="Screenshot showing how to select the folder.":::
     
