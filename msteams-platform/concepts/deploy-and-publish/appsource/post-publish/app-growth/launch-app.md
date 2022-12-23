@@ -83,16 +83,20 @@ Connect with the [Microsoft 365 ISV Benefits Service Desk](mailto:ModernWorkISVP
 
 :::row:::
         :::column span="3":::
-            Include in-product CTAs prominently in your web SaaS product to let users know about your new or updated Teams collaborative app. You can use transient banners, notifications bar, what’s new notifications inside the SaaS product’s UI for all users. You can also use push notifications to relevant users, such as those belonging to your customer organizations who use Microsoft 365. The banner or notification CTA can direct users to your app‘s landing page or directly to the app’s listing in Teams Marketplace.
+            Include in-product CTAs prominently in your web SaaS product to let users know about your new or updated Teams collaborative app. You can use transient banners, notifications bar, what’s new notifications inside the SaaS product’s UI for all users. You can also use push notifications to relevant users, such as those belonging to your customer organizations who use Microsoft 365.
         :::column-end:::
         :::column span="":::
             :::image type="content" source="../../../../../assets/images/app-fundamentals/in-product-banner.png" alt-text="In-product banner":::
         :::column-end:::
     :::row-end:::
 
+The banner or notification CTA can direct users to your app‘s landing page or directly to the app’s listing in Teams Marketplace.
+
 ### Free and extended trials for new Teams users
 
-Since your goal at this stage is to achieve product-market fit for your app, it’s critical to learn how users are perceiving your new app and if they’re getting the intended value by using the app. If not already done for your core SaaS product, offer free trials to users who sign up for your app (and SaaS service) through the Teams channel. If you already offer trials for your SaaS product and your standard free trial period is 15 days, consider extending the trial period for Teams users to 30-60 days. Given you’ve built your Teams app for collaborative use cases, you'll naturally want trial users to invite their colleagues as well to use your app in shared context inside Teams. An extended trial facilitates collaborative evaluation of your app and increases the likelihood of these users converting to paid and sticky customers.
+Since your goal at this stage is to achieve product-market fit for your app, it’s critical to learn how users are perceiving your new app and if they’re getting the intended value by using the app. If not already done for your core SaaS product, offer free trials to users who sign up for your app (and SaaS service) through the Teams channel. If you already offer trials for your SaaS product and your standard free trial period is 15 days, consider extending the trial period for Teams users to 30-60 days.
+
+Given you’ve built your Teams app for collaborative use cases, you'll naturally want trial users to invite their colleagues as well to use your app in shared context inside Teams. An extended trial facilitates collaborative evaluation of your app and increases the likelihood of these users converting to paid and sticky customers.
 
 ### Launch offers and promotions to acquire users for Teams app
 
@@ -100,16 +104,20 @@ To acquire new customers for your Teams collaborative app, consider offering a l
 
 :::row:::
     :::column span="3":::
-        If your app requires paid subscriptions, consider offering launch period discounts. Even promotions, such as 1:1 product demos, customer success consultations, invite-only webinars, trainings for the entire business unit or team using your Teams app help to differentiate your app. Such promotions help accelerate customer acquisition. If you've already listed your transactable SaaS subscriptions for the Teams app in the marketplace, ensure that you price them at a discount. It encourages users to purchase your offer directly from the Teams marketplace.
+        If your app requires paid subscriptions, consider offering launch period discounts. Even promotions, such as 1:1 product demos, customer success consultations, invite-only webinars, trainings for the entire business unit or team using your Teams app help to differentiate your app. Such promotions help accelerate customer acquisition.
     :::column-end:::
     :::column span="":::
         :::image type="content" source="../../../../../assets/images/app-fundamentals/trials-store-listing.png" alt-text="free or extended trials in app store listing and FRE flow.":::
     :::column-end:::
 :::row-end:::
 
+If you've already listed your transactable SaaS subscriptions for the Teams app in the marketplace, ensure that you price them at a discount. It encourages users to purchase your offer directly from the Teams marketplace.
+
 ### Announce Teams app to your entire customer base
 
-The first time your Teams app goes live on the marketplace and for major subsequent updates, consider outreach to your entire customer base announcing the availability of the app. While social media posts, public blog post and press releases are for the entire world audience, to-customer emails are the best channel to drive awareness about your app within existing customer organizations. Make sure to introduce your Teams app, how to use it and communicate the value prop for your users briefly including use cases, scenarios, customer stories via animated gifs, screenshots, quotes, and CTAs to your app’s public landing page, and install links to the Teams marketplace for those users who are willing to get started immediately.
+The first time your Teams app goes live on the marketplace and for major subsequent updates, consider outreach to your entire customer base announcing the availability of the app. While social media posts, public blog post and press releases are for the entire world audience, to-customer emails are the best channel to drive awareness about your app within existing customer organizations.
+
+Ensure that you introduce your Teams app, its usage, and its value proposition for your users. It must include use cases, scenarios, customer stories via animated gifs, screenshots, quotes, and CTAs to your app’s public landing page. Also, add install links to the Teams marketplace for those users who are willing to get started immediately.
 
 ### App Bill of Materials: Pitch deck, value prop, demo, datasheets, and so on
 
@@ -141,11 +149,19 @@ The first time your Teams app goes live on the marketplace and for major subsequ
 ## Where can Microsoft help?
 
 - **Support for launch content asset development**: Connect with the [Microsoft 365 ISV Benefits Service Desk](mailto:ModernWorkISVPartner@microsoft.com) and request access to co-branded marketing templates and branding guidance for use in your Microsoft Teams marketing activities. Review the template(s) or guidance provided and upload your drafted GTM BOM asset(s) and request form(s) to your custom SharePoint folder for Microsoft to distribute internally.
-- **Teams app store listing optimization**: Improve your solution listing in Teams marketplace
-- App store marketing toolkit - Apply best practices and leverage templated campaign collateral to customize marketing for your Teams app
+
+- **Teams app store listing optimization**: Improve your solution listing in Teams marketplace.
+
+- App store marketing toolkit - Apply best practices and leverage templated campaign collateral to customize marketing for your Teams app.
+
 - **Partner press release and blog content review**: Publicly announce your Teams app by leveraging this service to review of a press release you draft and get a quote from a Microsoft representative.
+
 - **Amplify partner press release and blog on social**: Microsoft can help Teams customers gain awareness of your new or updated collaborative app by including your app in the Commercial Marketplace “What’s New” blog as well as amplifying your blog or PR on social channels.
-- **Microsoft Teams TechCommunity Blog Post**: Get in touch with your Microsoft field, account, or engineering representatives to discuss the possibility of publishing a dedicated blog post on Teams blog such as [this](https://techcommunity.microsoft.com/t5/microsoft-teams-blog/salesforce-brings-sales-and-service-data-into-microsoft-teams-to/ba-p/2521221).
+
+- **Microsoft Teams TechCommunity Blog Post**: Get in touch with the field, account, or engineering representatives from Microsoft to discuss the possibility of publishing a dedicated blog post on Teams blog.
+
+    Here's an example of a [blog post](https://techcommunity.microsoft.com/t5/microsoft-teams-blog/salesforce-brings-sales-and-service-data-into-microsoft-teams-to/ba-p/2521221).
+
 - **Features placements in AppSource and the Teams in-product app store**: Get in touch with your Microsoft field, account or engineering representatives or connect with the [Microsoft 365 ISV Benefits Service Desk](mailto:ModernWorkISVPartner@microsoft.com) to feature your app in AppSource and or or the Teams in-client app store merchandising sections.
 
     > [!NOTE]
@@ -159,86 +175,3 @@ The first time your Teams app goes live on the marketplace and for major subsequ
 
 > [!div class="nextstepaction"]
 > [Gaining traction for your collaborative app in the market](gain-traction.md)
-
-<!--
-        :::row:::
-            :::column span="":::
-
-                **Recommendation**
-
-                Here’s some key guidance:
-
-                - Call out specifically what your app can do inside Teams vs focusing on your core SaaS product. Users are hiring your app to do a job in Teams, not in your web SaaS app for the browser or native mobile clients and want to certain it can deliver value inside Teams. It will be awesome if you can call out the degree of overlap in terms of supported scenarios between your core SaaS product and Teams app.
-                - Use bullet points and emojis to break the wall of text and achieve better readability.
-                - Include screenshots in your listing that show the app’s experience and underscore the user value inside Teams.
-                - Include a video in your listing that shows the app’s experience inside Teams. Generic, marketing videos that talk about the user problem your app is solving or one that simply gives an overview of your entire SaaS product aren't meaningful, don’t convince the user to install your app and often set inaccurate user expectations leading to dissatisfaction.
-                - Make sure to include links to public references and success stories to build trust that your Teams app has already benefited customers. This will instill confidence in new customers looking to acquire or try your app.
-
-            :::column-end:::
-            :::column span="":::
-              **Resources and examples for inspiration**
-
-              Your app store listing must meet the validation guidelines and Teams marketplace policies to be published.
-
-            For more information on optimizing your app store listing, see [Chapter 2 in Best Practices Guide](https://partner.microsoft.com/reach-customers/gtm).
-
-            See store listings of Polly, Zoho, Atlassian and so on.
-            :::column-end:::
-        :::row-end:::
-
-- **Landing page**: This growth lever is the landing page for your app hosted on your website. You can use this page to talk about your Teams app in full detail. it can include the value delivered inside Teams, personas targeted, key scenarios, details of subscription or pricing, customer testimonials and so on You can use this page to receive traffic from your core SaaS product or periodic digital or social campaigns.
-
-    :::row:::
-        :::column span="":::
-
-            **Recommendation**
-
-            Here’s some key guidance:
-
-              - As you’ve built a collaborative app inside Teams, avoid labelling this as a “Teams integration” page and linking it under the “Integrations” section in your website header, navigation menu or footer.
-              - Your Teams collaborative app deserves a top-level link in your website header, navigation menu or footer. Make it easy to discover – more traffic is the first step to increased acquisition.
-              - Use the recommended app store CTA arts on multiple places on this page prominently to direct users to acquire your app.
-              - Include beautiful video, animated gifs and artful screenshots of your real Teams app on this page for an impactful storytelling. Your goal should be to get everyone who lands on this page to try out your Teams app immediately.
-              - Make sure to include links to public references and success stories to build trust that your Teams app has already benefited customers.
-              - It’s a good practice to include a FAQ section where users can quickly find answers to their most common queries related to your Teams app for example, scenarios, features, any additional cost or pricing, which SaaS subscription plans of yours support the Teams app and so on.
-              - Include download links to on-demand webinars or sign-up links to scheduled trainings or webinars or events for your Teams app on this page. Remember these are all valuable marketing qualified leads for your app.
-              - Include a section on this page to collect user feedback about the Teams app including new feature asks. You can also use the landing page to frequently showcase the planned roadmap for your Teams app and upcoming features that can be upvoted or downvoted against by users.
-              - This page must link to public pages as well as host downloadable copies of various bills of materials for your Teams app (see bill of materials section later on this page) that is, Technical solution datasheets, Teams app one-pager, IT admin guides, end-user facing app usage guides and so on.
-              - Your detailed public Support or documentation page for the Teams app (see Documentation section below) must also be prominently discoverable on this page as users typically stumble upon the app’s landing page via search results.
-              - Add a link to this page in your core SaaS product (for example, web app, native mobile apps) and from periodic digital or social campaigns targeted at users who may be using Teams.
-              - You have a support chatbot available on your website to help visitors find the right information or get human assistance sooner, make sure to deploy and tune the same for visitors coming to this page for your Teams app.
-
-        :::column-end:::
-        :::column span="":::
-              **Resources and examples for inspiration**
-
-              For more information on guidelines for your website landing page, see [Chapter 3 in Best Practices Guide](https://partner.microsoft.com/reach-customers/gtm).
-
-              You must use the following badge on your landing page to direct users to acquire your app from AppSource or the Teams in-client marketplace:
-
-              :::image type="content" source="../../../../../assets/images/app-fundamentals/app-badge.png" alt-text="Badge to acquire app from AppSource or Teams in-client marketplace.":::
-
-              See good examples of landing pages from Polly, Zoho, Atlassian and so on.
-        :::column-end:::
-    :::row-end:::
-
-- **Documentation**: Coinciding with your Teams app going live, you must ensure the following public documentation hosted on your website:
-
-    :::row:::
-        :::column span="":::
-
-            **Recommendation**
-
-            - Support page for Teams collaborative app: This page must contain any setup and configuration instructions required for the Teams app in your SaaS backend, app rollout and governance guidelines for IT admins, troubleshooting steps and so on for both IT admins and users if or when they run into specific problems, support FAQs, how to raise support requests for your Teams app, SLAs promised and so on Include links to download your app’s technical solution datasheet and IT admin facing guides on this page as well.
-            - Usage guide for Teams collaborative app: This is a highly recommended page to handhold new users in getting started with your app. It’s an opportunity to show how users can immediately get value by using your app inside Teams. Include links to download the Teams app one-pager and tend-user facing app usage guides on this page as well. We highly recommend adding a Share to Teams button on this page so that users who found this resource helpful can easily share this with their colleagues.
-
-        :::column-end:::
-        :::column span="":::
-              **Resources and examples for inspiration**
-
-              See good examples of support pages from Polly, Zoho, Atlassian and so on.
-
-              See good examples of additional documentation pages from Wrike, Slido and so on.
-        :::column-end:::
-    :::row-end:::
--->
