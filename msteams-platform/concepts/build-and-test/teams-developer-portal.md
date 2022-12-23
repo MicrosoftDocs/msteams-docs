@@ -4,7 +4,7 @@ author: surbhigupta
 description: In this article, learn how to create a brand new app and import an existing app in Teams Developer Portal.
 ms.localizationpriority: medium
 ms.topic: overview
-ms.author: surbhigupta
+ms.author: v-amprasad
 ---
 
 # Developer Portal for Teams
@@ -33,7 +33,7 @@ Developer portal allows you to create a brand new app:
 
    :::image type="content" source="../../assets/images/tdp/home-page.png" alt-text="The screenshot is an example that shows the Developer Portal for Teams home page." lightbox="../../assets/images/tdp/home-page.png":::
 
-1. Select **New app**.
+1. Select **+ New app**.
 
    :::image type="content" source="../../assets/images/tdp/new-app.png" alt-text="Create new from developer portal":::
 
