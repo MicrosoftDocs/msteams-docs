@@ -38,7 +38,9 @@ For more information on AppSource, see [Microsoft AppSource](/marketplace/apps?p
 
 ### New social media posts announcing the Teams collaborative app
 
-You can generate interest from both existing and new customers. You can also drive traffic to your app‘s landing page or directly to the app’s listing in Teams Marketplace. It can be done through social media posts and paid campaigns executed on your social channels. Don’t forget to include media, such as a video or an animated gif in your post to make it rich and interactive. Tag @M365 and @MicrosoftTeamsi in your posts. Use the hashtags #Teamsapps, #MicrosoftTeams, #TeamsISV throughout the year in social media posts for your collaborative app. It aids in extending exposure and flagging Microsoft’s social team for a potential retweet.
+You can generate interest from both existing and new customers. You can also drive traffic to your app‘s landing page or directly to the app’s listing in Teams Marketplace. It can be done through social media posts and paid campaigns executed on your social channels.
+
+Remember to include media, such as a video or an animated gif in your post to make it rich and interactive. Tag @M365 and @MicrosoftTeamsi in your posts. Use the hashtags #Teamsapps, #MicrosoftTeams, #TeamsISV throughout the year in social media posts for your collaborative app. It aids in extending exposure and flagging Microsoft’s social team for a potential retweet.
 
 :::row:::
     :::column span="3":::
@@ -77,7 +79,7 @@ Use PRs to publicly announce the application you've built and your collaboration
 > [!NOTE]
 > Press releases and quotes must be reviewed by Microsoft representatives.
 
-Connect with the [Microsoft 365 ISV Benefits Service Desk](mailto:ModernWorkISVPartner@microsoft.com) to avail of the service to review your press release draft and get a quote from Microsoft. Once you publicly post your press release, evangelize through other channels. Microsoft doesn't post partner press releases. Example press releases.
+Connect with the [Microsoft 365 ISV Benefits Service Desk](mailto:ModernWorkISVPartner@microsoft.com) to avail of the service to review your press release draft and get a quote from Microsoft. Once you publicly post your press release, evangelize through other channels. Microsoft doesn't post partner press releases. // Example press releases. //
 
 ### Banners in web SaaS app to announce the new Teams app
 
@@ -152,7 +154,7 @@ Ensure that you introduce your Teams app, its usage, and its value proposition f
 
 - **Teams app store listing optimization**: Improve your solution listing in Teams marketplace.
 
-- App store marketing toolkit - Apply best practices and leverage templated campaign collateral to customize marketing for your Teams app.
+- **App store marketing toolkit**: Apply best practices and leverage templated campaign collateral to customize marketing for your Teams app.
 
 - **Partner press release and blog content review**: Publicly announce your Teams app by leveraging this service to review of a press release you draft and get a quote from a Microsoft representative.
 
