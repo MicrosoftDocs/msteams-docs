@@ -39,7 +39,7 @@ Developer portal allows you to create a brand new app:
 
 1. Enter app name and select **Add**.
 
-   :::image type="content" source="../../assets/images/tdp/enter-app-name-tdp.png" alt-text="The screenshot shows how to create a brand new app in Developer Portal for Teams." lightbox="../../assets/images/tdp/create-new-app-in-tdp.png":::
+   :::image type="content" source="../../assets/images/tdp/enter-app-name-tdp.png" alt-text="The screenshot shows how to create a brand new app in Developer Portal for Teams." lightbox="../../assets/images/tdp/enter-app-name-tdp.png":::
 
 Now you've successfully created a brand new app and you can see all the basic information of the new app.
 
