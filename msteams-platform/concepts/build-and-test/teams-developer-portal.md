@@ -20,24 +20,26 @@ The <a href="https://dev.teams.microsoft.com" target="_blank">Developer Portal f
 
 ## Register an app
 
-The Developer Portal provides the following ways to register a Teams app:
+Developer Portal provides the following ways to register a Teams app:
 
 * [Create and register a brand new app](#create-and-register-a-brand-new-app).
 * [Import an existing app package](#import-an-existing-app).
 
 ### Create and register a brand new app
 
-The Developer portal allows you to create a brand new app:
+Developer portal allows you to create a brand new app:
 
 1. Log into [Developer Portal](https://dev.teams.microsoft.com), select **Apps** from the left pane.
 
    :::image type="content" source="../../assets/images/tdp/home-page.png" alt-text="The screenshot is an example that shows the Developer Portal for Teams home page." lightbox="../../assets/images/tdp/home-page.png":::
 
-1. Select **New app** and enter app name.
+1. Select **New app**.
+
+   :::image type="content" source="../../assets/images/tdp/new-app.png" alt-text="Create new from developer portal":::
+
+1. Enter app name and select **Add**.
 
    :::image type="content" source="../../assets/images/tdp/enter-app-name-tdp.png" alt-text="The screenshot shows how to create a brand new app in Developer Portal for Teams." lightbox="../../assets/images/tdp/create-new-app-in-tdp.png":::
-
-1. Select **Add**.
 
 Now you've successfully created a brand new app and you can see all the basic information of the new app.
 
@@ -45,9 +47,9 @@ Now you've successfully created a brand new app and you can see all the basic in
 
 ### Import an existing app
 
-Follow the steps to import and manage your existing app in the Developer Portal.
+Follow the steps to import and manage your existing app in the Developer Portal:
 
-1. In the Developer Portal, select **Apps** from the left pane.
+1. Select **Apps** from the left pane of the Developer Portal.
 1. Select **Import App**.
 
    :::image type="content" source="../../assets/images/tdp/import-app.png" alt-text="The screenshot show how to import your existing app in Developer Portal for Teams to manage your apps." lightbox="../../assets/images/tdp/import-app.png":::
@@ -55,15 +57,21 @@ Follow the steps to import and manage your existing app in the Developer Portal.
 1. Select the app manifest file, and then select **Open**.
 
    > [!NOTE]
-   > If there are nested folders or missing required files in the app package folder, you can receive an error message as **Provided add-in package was not understood. Please, make sure that the file being submitted is a valid Office add-in package**.
+   > You can receive an error message such as **Provided add-in package was not understood. Ensure that the file being submitted is a valid Office add-in package**, if there are nested folders or missing required files in the app package folder.
 
 1. Select **Import**.
 
-* The Developer Portal creates a unique app ID and locks the ID for your registered Teams app. You can’t edit or provide an ID of your choice, which prevents to have duplicate app IDs for multiple apps.
-* If you create an app using the Microsoft Teams Toolkit for Visual Studio Code, you can manage your app in the Developer Portal. For more information, see [Build apps with teams toolkit and Visual studio code](~/toolkit/visual-studio-code-overview.md).
-* You can import an existing app which you created on App Studio to the Developer Portal. To import an already published app to Developer Portal, the [app owner](~/concepts/build-and-test/manage-your-apps-in-developer-portal.md#advanced) needs to raise a service request through [admin portal](https://admin.microsoft.com/Adminportal/Home?#/support) to transfer the ownership over the app ID.
+   * The Developer Portal creates a unique app ID and locks the ID for your registered Teams app. You can’t edit or provide an ID of your choice, which prevents to have duplicate app IDs for multiple apps.
+   * If you create an app using the Microsoft Teams Toolkit for Visual Studio Code, you can manage your app in the Developer Portal. For more information, see [Build apps with teams toolkit and Visual studio code](~/toolkit/visual-studio-code-overview.md).
+   * You can import an existing app which you created on App Studio to the Developer Portal. To import an already published app to Developer Portal, the [app owner](~/concepts/build-and-test/manage-your-apps-in-developer-portal.md#advanced) needs to raise a service request through [admin portal](https://admin.microsoft.com/Adminportal/Home?#/support) to transfer the ownership over the app ID.
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Manage your apps in Developer Portal](manage-your-apps-in-developer-portal.md)
 
 ## See also
 
 * [Teams Toolkit Overview](../../toolkit/teams-toolkit-fundamentals.md)
+* [Analyze your app's usage in Developer Portal](analyze-your-apps-usage-in-developer-portal.md)
 * [Include a SaaS offer with your Microsoft Teams app](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)
