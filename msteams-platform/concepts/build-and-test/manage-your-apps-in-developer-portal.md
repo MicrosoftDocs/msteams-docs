@@ -30,7 +30,7 @@ In the **Overview** section, you can see the following components to manage your
 
     :::image type="content" source="../../assets/images/tdp/dashboard-page.png" alt-text="The screenshot is an example that shows the Overview page of the app you created in Developer Portal for Teams.":::
 
-* Analytics
+* **Analytics**
 
     In the **Analytics** under **Overview** section, you can get an overview of your app's usage, engagement, and other insights. For more information, see [how to analyze your app's usage](analyze-your-apps-usage-in-developer-portal.md).
 
@@ -52,7 +52,7 @@ In the **Configure** section, you can see the following components to manage and
   * Meeting extension
   * Activity feed notification
   > [!NOTE]
-  > Currently, Connector is not available for Government Community Cloud (GCC) tenants.
+  > Currently, connector is not available for Government Community Cloud (GCC) tenants.
 * **Permissions**: This section allows you to give **Device permissions**, **Team Permissions**, **Chat/Meeting permissions**, and **User Permissions** for your app.
 * **Single sign-on**: Bot registered on Microsoft Azure Active Directory (Azure AD) supports Single Sign-On (SSO). If a bot is registered on Bot Framework portal (or within the Developer Portal under Bot Management) then a bot doesn't support SSO and you have to register your bot on Azure AD to support SSO. For a bot registered on Azure AD, add the **Application ID URI**. To get **Application ID URI** from Azure AD, see [how to use SSO authentication for bots](../../bots/how-to/authentication/auth-aad-sso-bots.md).
 * **Languages**: This section allows you to set up or change the language of your app.
@@ -66,30 +66,32 @@ In the **Advanced** section, you can see the following components to manage your
 
 * **Owners**
 
-    Each app includes an **Owners** page, where you can share your app registration with others in your org. You can add **Administrator** and **Operative** role to manage who can change the settings of your app. The **Operative** role has the same permissions as the **Administrator** role except to delete an app.
+    Each app includes an **Owners** page, where you can share your app registration with others in your org. You can add **Administrator** and **Operative** role to manage who can change the settings of your app. The **Operative** role has a permission, such as updating an app's configuration. The **Administrator** role has the permissions, such as updating an app's configuration, adding or removing owners, and deleting an app.
 
     To add an owner:
 
     1. In the **Advanced** section, select **Owners**.
-    1. Select **Add an owner**.
+    1. Select **Add owners**.
     1. Enter a name and select a user ID from the drop-down list.
     1. Under **Role**, select **Operative** or **Administrator**.
     1. Select **Add**.
 
-* **App content**: You can configure your app with the following additional features:
+* **App content**: You can configure your app with the following more features:
   
-  * Loading indicator: Displays an indicator to let users know your hosted app content (For example: Tabs and Task modules) is loading.
-  * Full-screen mode: Displays a personal app without an app header. It's only supported for the published apps to your org.
+  * **Loading indicator**: Displays an indicator to let users know your hosted app content (for example, Tabs and Task modules) is loading.
+  * **Full-screen mode**: Displays a personal app without an app header. It's supported for the published apps to your org.
+  * **Supported channel types**: Lists the non-standard channel types that the app supports.
+  * **Default group capability**: For apps that support multiple group capabilities, such as teams, group chat, or meetings, select the default capability to navigate users when you add your app from the store.
 
 * **Environments**
 
     You can configure environments and global variables to help transition your app from your local runtime to production. Global variables are used across all environments.
 
-    To set up an environment:
+    To set up an environment, follow these steps:
 
     1. In the Developer Portal, select the **Apps** that you're working.
-    1. Go to **Environments** under **Advanced** section and select **+ Add an environment**.
-    1. Select **Add**.
+    1. Go to **Environments** under **Advanced** section.
+    1. Select **+ Add an environment**>**Add**.
 
   * **Global variables**
 
@@ -102,31 +104,39 @@ In the **Advanced** section, you can see the following components to manage your
       1. Enter `{{` in any field in the Developer Portal. A dropdown with all the variables you've created for the chosen environment along with the global variables appears.  
       1. Before downloading your app package (for example, when getting ready to publish to the Teams store), select the environment you want to use. Your app configurations update automatically based on the environment.
 
-* **Plan and pricing**: You can link a SaaS offer that you've created in the Partner center for your app.
+* **Plan and pricing**: You can link a Software-as-a-Services (SaaS) offer that you've created in the Partner center for your app.
 * **Admin settings**:
-  * App Customization: You can customize your app
-  * Block app by default: You can block your app by default for users until a tenant admin chooses to enable it.
+  * **App Customization**: You can customize your app by selecting different properties, such as **Name**, **Short description**, **Small icon**, and other properties.  
+  * **Block app by default**: You can block your app by default for users until a tenant admin selects to enable it.
 
 ## Publish
 
-You can publish your app to your org or to the Teams store.
+In the **Publish** section, you can publish your app to your org or to the Teams store.
 
-* **Publish your app to org**:
+* **Publish to org**:
 
-   1. In the app **Overview** page, under **Publish**, select **Publish to Org**.
+   1. In the Developer Portal, select the **Apps** that you're working.
+   1. Go to **Publish to org** under **Publish**.
    1. Select **Publish your App**.
 
-* **Publish your app to store**:
+* **Publish to store**:
 
-   1. In the app **Overview** page, under **Publish**, select **Publish to Store**.
+   1. In the Developer Portal, select the **Apps** that you're working.
+   1. Go to **Publish to store** under **Publish**.
    1. Select **Publish**.
 
    > [!NOTE]
    > The app validation tool checks your app package against the test cases that Microsoft uses to review your app. Resolve errors or warnings and read the **App submission checklist** before submitting your app.
 
-   You can download the app package by selecting **Download app package** button from the Publish to store page.
+   You can download the app package by selecting **Download app package** button from the **Publish to store** page.
 
 * **App package**: The app package describes how your app is configured that includes app features, required resources, and other important attributes in manifest. The Icon tab shows the icon used for your app.
+
+## Manage rollouts
+
+In the **Manage rollouts** section, you can see the following components to manage your app in Developer Portal:
+
+* **
 
 ## Test your app directly in Teams
 
