@@ -69,7 +69,9 @@ Before shipping the Teams app on the marketplace, you would have identified 3-5 
 
 ### Share overlapping customer orgs to plan co-activation
 
-For large, strategic enterprise customers that use your SaaS product and Microsoft Teams, Microsoft’s customer-facing resources can partner with your sales and customer success teams to drive co-activation of your app in the customer organization. Microsoft evaluates co-activation opportunities for apps based on customer interest, adoption opportunity (sold seat size in customer account), and so on, among other criteria. Get in touch with your Microsoft field, account, or engineering representatives to request potential, co-activation of your Teams collaborative app in strategic enterprise customer accounts.
+For large, strategic enterprise customers that use your SaaS product and Microsoft Teams, Microsoft’s customer-facing resources can partner with your sales and customer success teams to drive co-activation of your app in the customer organization. Microsoft evaluates co-activation opportunities for apps based on customer interest, adoption opportunity (sold seat size in customer account), and so on, among other criteria.
+
+Get in touch with your field, account, or engineering representatives from Microsoft to request potential, co-activation of your Teams collaborative app in strategic enterprise customer accounts.
 
 ### Commerce transact integration to make your Teams app monetization-ready
 
