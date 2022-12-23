@@ -65,35 +65,50 @@ items:
     ngrok http --host-header=rewrite 3978
     ```
 
-    **Register an app in Azure**
+    **Create bot channel registration in Azure account**
 
-     1. Go to [Azure portal](https://portal.azure.com/) using your personal Microsoft account.
+    1. Go to the [Azure portal](https://portal.azure.com/).
+    1. Select **Create a resource**.
+    1. Search for **Azure Bot** in the search box.
+    1. Select **Azure Bot**.
+    1. Select **Create**.
 
-        :::image type="content" source="./assets/images/calls-and-meetings/azure-active-directory.png" alt-text="Screenshot of Microsoft Azure Preview with Azure Active Directory icon highlighted in red.":::
+         :::image type="content" source="./assets/images/calls-and-meetings/azure-bot_1.png" alt-text="Screenshot of Azure Bot with Create option highlighted in red.":::
+      
+       **Create an Azure Bot** window appears.
 
-     1. In the left pane, select **App registrations**.
-     1. Select **New registration**.
+    1. Enter bot handle name in **Bot handle** field.
+    1. Select your **Subscription** and **Resource group** from the dropdown list.
+        
+         :::image type="content" source="./assets/images/calls-and-meetings/create-azure-bot.png" alt-text="Screenshot of Create an Azure bot with Subscription and Resource group highlighted in red.":::
+      
+       You can also create a new resource group. Select **Create new** > enter resource name > **OK**.
+    
+    1. Select the required location from **New resource group location** dropdown list, if you've created a new resource group.
 
-        :::image type="content" source="./assets/images/calls-and-meetings/azure-active-directory_1.png" alt-text="Screenshot of Microsoft App registrations with App registrations and New registration highlighted in red.":::
+         :::image type="content" source="~/assets/images/bots/newresource.png" alt-text="Screenshot of New resource group location with location highlighted in red.":::
 
-    **Register an application** window appears. Enter your application's registration information.
+    1. Select **Type of App** as **Multi Tenant**.
 
-      1. In **Name**, enter the application name that is displayed to users.
+    1. Select **Review + create**.
 
-      1. In **Supported account types**, select the accounts you want your application to support.
+         :::image type="content" source="./assets/images/calls-and-meetings/review-create_1.png" alt-text="Screenshot of Create an Azure Bot with Multi Tenant and Review + create highlighted in red.":::
 
-      1. In **Redirect URI (optional), select the type of app **Web or Public client (mobile and desktop), and then enter the redirect URI for your application.
+    1. If the validation is passed, select **Create**.
 
-         > [!NOTE]
-         > For web applications, provide the base URI as `http://localhost:31544`. For public client applications, provide the URI used by Azure AD to return token responses as `myapp://auth`.
+       It takes a few moments for your bot service to be provisioned.
 
-      1. Select **Register**.
+         :::image type="content" source="./assets/images/calls-and-meetings/validation_1.png" alt-text="Screenshot of Create an Azure Bot that shows the Validation Passed status and the Create option highlighted in red.":::
 
-         :::image type="content" source="./assets/images/calls-and-meetings/reg-app_2.png" alt-text="Screenshot of Register an application with the Register button highlighted in red." lightbox="./assets/images/calls-and-meetings/reg-app_1.png":::
+    1. Select **Go to resource**. The bot and the related resources are listed in the resource group.
+
+        Now your Azure bot has been created.
+
+         :::image type="content" source="./assets/images/calls-and-meetings/go-to-resource_1.png" alt-text="Screenshot of Home page that shows the deployment complete status with Go to resource button highlighted in red.":::
 
     **To create client secret**
 
-      1. In **Overview** page, save the **Application (client) ID** (Microsoft App ID) for future reference.
+      1. In **Home** page, save the **Application (client) ID** (Microsoft App ID) for future reference.
         
          :::image type="content" source="./assets/images/calls-and-meetings/microsoft-app-id-new_2.png" alt-text="Screenshot of overview page of the bot with Application client ID highlighted in red.":::
         
@@ -185,51 +200,6 @@ items:
     1. Select **Add permissions**.
 
          :::image type="content" source="./assets/images/calls-and-meetings/api-permissions_1.png" alt-text="Screenshot of Calling-Meeting-Bot API permissions with Manage, API permissions, Add a permission, Microsoft Graph, Application permissions, and Add permissions highlighted in red." lightbox="./assets/images/calls-and-meetings/api-permissions_1.png":::
-
-    **Create bot channel registration in Azure account**
-
-    1. Go to the [Azure portal](https://portal.azure.com/).
-    1. Select **Create a resource**.
-    1. Search for **Azure Bot** in the search box.
-    1. Select **Azure Bot**.
-    1. Select **Create**.
-
-         :::image type="content" source="./assets/images/calls-and-meetings/azure-bot_1.png" alt-text="Screenshot of Azure Bot with Create option highlighted in red.":::
-      
-       **Create an Azure Bot** window appears.
-
-    1. Enter bot handle name in **Bot handle** field.
-    1. Select your **Subscription** and **Resource group** from the dropdown list.
-        
-         :::image type="content" source="./assets/images/calls-and-meetings/create-azure-bot.png" alt-text="Screenshot of Create an Azure bot with Subscription and Resource group highlighted in red.":::
-      
-       You can also create a new resource group. Select **Create new** > enter resource name > **OK**.
-    
-    1. Select the required location from **New resource group location** dropdown list, if you've created a new resource group.
-
-         :::image type="content" source="~/assets/images/bots/newresource.png" alt-text="Screenshot of New resource group location with location highlighted in red.":::
-
-    1. Select **Type of App** as **Multi Tenant**.
-
-        > [!NOTE]
-        > In `Creation type` of Microsoft App ID section, `Create new Microsoft App ID` is already selected to create a new bot. You can also select `Use existing app registration`, if you've already registered a bot. Enter Microsoft App ID in `Existing app ID` field, and enter value in `Existing app password` field.
-
-    1. Select **Use existing app registration** and enter **App ID** of your Azure app registered in demo tenant.
-    1. Select **Review + create**.
-
-         :::image type="content" source="./assets/images/calls-and-meetings/review-create_1.png" alt-text="Screenshot of Create an Azure Bot with Multi Tenant and Review + create highlighted in red.":::
-
-    1. If the validation is passed, select **Create**.
-
-       It takes a few moments for your bot service to be provisioned.
-
-         :::image type="content" source="./assets/images/calls-and-meetings/validation_1.png" alt-text="Screenshot of Create an Azure Bot that shows the Validation Passed status and the Create option highlighted in red.":::
-
-    1. Select **Go to resource**. The bot and the related resources are listed in the resource group.
-
-        Now your Azure bot has been created.
-
-         :::image type="content" source="./assets/images/calls-and-meetings/go-to-resource_1.png" alt-text="Screenshot of Home page that shows the deployment complete status with Go to resource button highlighted in red.":::
 
     **To add the Microsoft Teams channel**
 
@@ -350,7 +320,16 @@ items:
     
         > [!NOTE]
         > The `manifest.zip` must not contain any extra folders in it. It must have `manifest json` source file, `color` icon, and `outline` icon inside the zip folder.
-        > Upload your `manifest.json` source file in your demo tenant for organization or your Teams account, and run your solution in Visual Studio.
+        
+    1. Run the solution in Visual Studio.
+
+    1. In the File Explorer, go to Microsoft-Teams-Samples > samples > bot-calling-meeting > csharp  > Source > CallingBotSample.sln    
+
+    1. Press **F5** to run the project.
+
+       A webpage opens with a message **Your bot is ready!**.
+
+       :::image type="content" source="~/assets/images/calls-and-meetings/bot-is-ready.png" alt-text="Screenshot of localhost displaying your bot is ready.":::
     
     1. Go to Teams.
     1. To upload `manifest.zip`, select Apps > Manage your apps > Upload an app > Upload a custom app.
