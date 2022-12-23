@@ -2,7 +2,6 @@
 title: Developer Portal for Teams
 author: surbhigupta
 description: In this article, learn how to create a brand new app and import an existing app in Teams Developer Portal.
-ms.author: v-amprasad
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
@@ -10,9 +9,9 @@ ms.author: surbhigupta
 
 # Developer Portal for Teams
 
-The <a href="https://dev.teams.microsoft.com" target="_blank">Developer Portal for Teams</a> is the primary tool for configuring, distributing, and managing your Microsoft Teams apps. With the Developer Portal, you can collaborate with colleagues on your app, set up runtime environments, and much more.
+The <a href="https://dev.teams.microsoft.com" target="_blank">Developer Portal for Teams</a> is the primary tool for configuring, distributing, and managing your Microsoft Teams apps. With Developer Portal, you can collaborate with colleagues on your app, set up runtime environments, and much more.
 
-:::image type="content" source="../../assets/images/tdp/tdp_home_1.png" alt-text="The screenshot is an example that shows the home page of the Developer Portal for Teams.":::
+:::image type="content" source="../../assets/images/tdp/tdp_home_1.png" alt-text="The screenshot is an example that shows the home page of the Developer Portal for Teams." lightbox="../../assets/images/tdp/tdp_home_1.png":::
 
 > [!NOTE]
 >
@@ -32,7 +31,7 @@ The Developer portal allows you to create a brand new app:
 
 1. Log into [Developer Portal](https://dev.teams.microsoft.com), select **Apps** from the left pane.
 
-   :::image type="content" source="../../assets/images/tdp/home-page.png" alt-text="The screenshot is an example that shows the Developer Portal for Teams home page.":::
+   :::image type="content" source="../../assets/images/tdp/home-page.png" alt-text="The screenshot is an example that shows the Developer Portal for Teams home page." lightbox="../../assets/images/tdp/home-page.png":::
 
 1. Select **New app** and enter app name.
 
@@ -42,7 +41,7 @@ The Developer portal allows you to create a brand new app:
 
 Now you've successfully created a brand new app and you can see all the basic information of the new app.
 
-:::image type="content" source="../../assets/images/tdp/basic-information-app-tdp.png" alt-text="The screenshot is an example that shows the basic information of the app you created in the Developer Portal for Teams.":::
+:::image type="content" source="../../assets/images/tdp/basic-information-app-tdp.png" alt-text="The screenshot is an example that shows the basic information of the app you created in the Developer Portal for Teams." lightbox="../../assets/images/tdp/basic-information-app-tdp.png":::
 
 ### Import an existing app
 
@@ -51,7 +50,7 @@ Follow the steps to import and manage your existing app in the Developer Portal.
 1. In the Developer Portal, select **Apps** from the left pane.
 1. Select **Import App**.
 
-   :::image type="content" source="../../assets/images/tdp/import-app.png" alt-text="The screenshot show how to import your existing app in Developer Portal for Teams to manage your apps.":::
+   :::image type="content" source="../../assets/images/tdp/import-app.png" alt-text="The screenshot show how to import your existing app in Developer Portal for Teams to manage your apps." lightbox="../../assets/images/tdp/import-app.png":::
 
 1. Select the app manifest file, and then select **Open**.
 
