@@ -75,11 +75,11 @@ For large, strategic enterprise customers that use your SaaS product and Microso
 
 One of the goals of the Traction stage is to build readiness for future adoption and ROI realization from your collaborative Teams app. Look for sticky adoption and positive feedback for your collaborative app among the pilot and significant customers. After that, you can begin planning monetization for your app on the Teams marketplace.
 
-Get started [here](/concepts/deploy-and-publish/appsource/prepare/monetize-overview).
+For more information, see [Monetize your app](../../prepare/monetize-overview.md).
 
 ### Microsoft 365 Certification to make Teams app enterprise-ready
 
-The Microsoft 365 Certification is designed to show customers that your collaborative app has been vetted against controls derived from leading industry-standard frameworks. It also showcases that strong security, privacy, and compliance practices are in place to protect customer data when the app is in use. Since most Teams customers are large enterprises, having your app Microsoft 365 certified aids in building trust with the IT admins (see how [here](/microsoftteams/overview-of-app-certification#microsoft-365-certification)). It results in smoother, faster adoption in customer organizations.
+The Microsoft 365 Certification is designed to show customers that your collaborative app has been vetted against controls derived from leading industry-standard frameworks. It also showcases that strong security, privacy, and compliance practices are in place to protect customer data when the app is in use. Since most Teams customers are large enterprises, having your app Microsoft 365 certified aids in building trust with the IT admins. For more information, see [Microsoft 365 certification](/microsoftteams/overview-of-app-certification#microsoft-365-certification).
 
 Find more [here](https://cloudpartners.transform.microsoft.com/practices/modernworkisv?tab=certification).
 
@@ -89,7 +89,7 @@ While during the launch stage, you used transient banners, notifications bar, wh
 
 :::row:::
     :::column span="3":::
-        Surface [deeplinks](/concepts/build-and-test/deep-links?tabs=teamsjs-v2) within your browser-based web SaaS experience to transport users to specific views inside your Teams app (for example, personal app, tabs, conversational bot or meeting extensions with shared meeting stage or in-meeting tab). You can implement the highly recommended [Share to Teams](/concepts/build-and-test/share-to-teams-from-web-apps) control within your browser-based web SaaS experience to enable users to share and start collaborating around a content or object from your SaaS product inside Teams with their colleagues.
+        Surface [deeplinks](/concepts/build-and-test/deep-links?tabs=teamsjs-v2) within your browser-based web SaaS experience to transport users to specific views inside your Teams app (for example, personal app, tabs, conversational bot or meeting extensions with shared meeting stage or in-meeting tab). You can implement the highly recommended [Share to Teams](../../../../build-and-test/share-to-teams-from-web-apps.md) control within your browser-based web SaaS experience to enable users to share and start collaborating around a content or object from your SaaS product inside Teams with their colleagues.
     :::column-end:::
     :::column span="":::
         :::image type="content" source="../../../../../assets/images/app-fundamentals/drive-traffic-saas-app.png" alt-text="Drive traffic from your SaaS app.":::
@@ -112,11 +112,22 @@ To get maximum ROI, surface the nudges contextually for scenarios that are inher
     :::row-end:::
 
 - **On-demand access to digital marketing content**: [Digital Marketing Content OnDemand](/solutions/digital-marketing-content) service provides go-to-market content in fresh weekly campaigns at no cost to Microsoft partners. Unlock expertise that can drive customer engagement and elevate your business. Connect your social media accounts and email lists to select, customize, and share content with automatic updates that push to your company’s social media accounts or send direct email communication to customers.
+
 - **Joint webinar to existing and new target customers**: Participate in a joint webinar with Microsoft and other partners to showcase the value of your Teams collaborative app to customers. You can connect with the [Microsoft 365 ISV Benefits Service Desk](mailto:ModernWorkISVPartner@microsoft.com) to find opportunities and execute.
+
 - **Include app in Microsoft-run digital campaigns**: Highlight your Microsoft Teams app in a Microsoft-led digital campaign based on specific industries or contemporary themes, for example, hybrid work. You can connect with the [Microsoft 365 ISV Benefits Service Desk](mailto:ModernWorkISVPartner@microsoft.com) to find opportunities and execute.
-- **App availability shared internally with field and CPMs**: Drive awareness of your published Microsoft Teams app to the customer-facing roles within Microsoft, such as the field or Teams Engineering’s customer PMs. Get in touch with your Microsoft field, account, or engineering representatives or connect with the [Microsoft 365 ISV Benefits Service Desk](mailto:ModernWorkISVPartner@microsoft.com) to make use of this opportunity. Note that Go-to-Market Bill of Materials (GTM BOM) for your app is a pre-requisite for using it.
+
+- **App availability shared internally with field and CPMs**: Drive awareness of your published Microsoft Teams app to the customer-facing roles within Microsoft, such as the field or Teams Engineering’s customer PMs. Get in touch with your Microsoft field, account, or engineering representatives or connect with the [Microsoft 365 ISV Benefits Service Desk](mailto:ModernWorkISVPartner@microsoft.com) to make use of this opportunity.
+
+    > [!NOTE]
+    > Go-to-Market Bill of Materials (GTM BOM) for your app is a pre-requisite for using it.
+
 - **Engineering support for app monetization in Teams marketplace**: Strategic developers, who are part of the invite-only Teams engineering’s build-with partner program, get access to robust technical guidance and best practices from engineering to build transact SaaS and new, pilot features to improve the purchase funnel for their apps. You can also unlock other GTM benefits and CSP channel partnership programs for early-bird apps with live transact SaaS offers.
-- **Share best practices for customer app rollout and activation**: Strategic developers who are part of the invite-only Teams engineering’s build-with partner program get access to several time- and market-tested best practices to drive faster adoption of your collaborative app in customers. Don't forget to upskill using the Teams admin-facing public documentation sections [Third-party apps in Microsoft Teams](/microsoftteams/overview-third-party-apps) and [Admin controls to govern apps](/microsoftteams/customize-apps) to aid during app rollout, activation, and governance.
+
+- **Share best practices for customer app rollout and activation**: Strategic developers who are part of the invite-only Teams engineering’s build-with partner program get access to several time- and market-tested best practices to drive faster adoption of your collaborative app in customers.
+
+    Remember to upskill using the Teams admin-facing public documentation sections [Third-party apps in Microsoft Teams](/microsoftteams/overview-third-party-apps) and [Admin controls to govern apps](/microsoftteams/customize-apps) to aid during app rollout, activation, and governance.
+
 - **Invite to present in internal platform growth forums**: Get in touch with the Microsoft field, account, or engineering representatives to feature in invite-only collaborative app growth forums. You can showcase your app to customer-facing teams within Microsoft, train them on value proposition and high value scenarios, and, so on. It aids in having impactful conversations with existing or new prospective customers for your app.
 
 ## Next step
