@@ -57,3 +57,4 @@ For more information, see [publish to the Teams store](~/concepts/deploy-and-pub
 * [Microsoft 365 App Compliance Program](/microsoft-365-app-certification/overview)
 * [Create Teams app package](../build-and-test/apps-package.md)
 * [Publish to org](/microsoftteams/upload-custom-apps)
+* [Modify the accounts supported by an application](/azure/active-directory/develop/howto-modify-supported-accounts)
