@@ -115,7 +115,7 @@ items:
       1. In the left pane, select **Configuration** and select **Manage Password** next to Microsoft App ID.
         1. In the **Client secrets** section, select **New client secret**.
 
-    **Add a client secret** window appears.
+        **Add a client secret** window appears.
 
       1. Enter the **Description** of the client secret.
       1. Select **Add**.
@@ -143,7 +143,7 @@ items:
         >   * Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser
         >   * Run Install-Module -Name MicrosoftTeams -Force -AllowClobber 
 
-     1. Replace the following in the Windows PowerShell script:**
+     1. Replace the following in **Windows PowerShell script:**
 
         |Field | Description |
         |----------------|-----------------|
@@ -152,9 +152,7 @@ items:
         |Policy-description | Description of the policy. |
         |object-id-of-the-user-to-whom-policy-need-to-be-granted |  ID of the user for whom you need to generate the policy using the graph explorer. |
 
-    **To generate object ID**
-
-     1. Sign into [Microsoft Graph Explorer](https://developer.microsoft.com/graph) using the credentials to whom the policy has to be granted.
+     1. To generate object ID Sign into [Microsoft Graph Explorer](https://developer.microsoft.com/graph) using the credentials to whom the policy must be granted.
      1. Select **Graph Explorer** from the tool bar.
 
          :::image type="content" source="~/assets/images/calls-and-meetings/graph-explorer.png" alt-text="Screenshot of Microsoft Graph with graph explorer highlighted in red.":::
@@ -321,9 +319,11 @@ items:
         > [!NOTE]
         > The `manifest.zip` must not contain any extra folders in it. It must have `manifest json` source file, `color` icon, and `outline` icon inside the zip folder.
         
-    1. Run the solution in Visual Studio.
+    1. **Run the calling and meeting bot solution in Visual Studio**
 
-    1. In the File Explorer, go to **Microsoft-Teams-Samples** > **samples** > **bot-calling-meeting** > **csharp**  > **Source** > **CallingBotSample.sln**.    
+    1. In the File Explorer, go to **Microsoft-Teams-Samples** > **samples** > **bot-calling-meeting** > **csharp**  > **Source** > **CallingBotSample.sln**
+
+    1. Open the **CallingBotSample.sln** file in Visual Studio.    
 
     1. Press **F5** to run the project.
 
