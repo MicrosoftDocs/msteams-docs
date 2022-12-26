@@ -64,11 +64,14 @@ items:
 
        :::image type="content" source="~/assets/images/sbs-command-bot/teams-toolkit.png" alt-text="Illustration shows the Teams Toolkit extension installation.":::
 
-    The Teams Toolkit icon appears in the Visual Studio Code sidebar after it's installed.
+    The Teams Toolkit icon appears in the Visual Studio Code **Activity Bar** after it's installed.
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/hw-teams-toolkit-sidebar-icon.png" alt-text="Illustration shows the Teams Toolkit icon in Visual Studio Code sidebar.":::
 
    You can also find the Teams Toolkit on the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
+
+    > [!NOTE]
+    > The latest version of Teams Toolkit is v4.2.0.
 
    # [Command line](#tab/cli)
 
@@ -140,9 +143,9 @@ items:
 
     1. Open Visual Studio Code.
 
-    1. Select the Teams Toolkit :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
+    1. Select the Teams Toolkit :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code **Activity Bar**.
 
-    1. Select **Create a new Teams app**.
+    1. Select **Create a new app**.
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/create-new-teams-app.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar.":::
 
@@ -173,15 +176,12 @@ items:
 
               :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/select-folder.png" alt-text="Select Folder.":::
     
-    1. Enter a suitable name for your app, such as commandbot as the application name. 
+    1. Enter a suitable name for your app. 
     1. Select **Enter**.
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/app-name.png" alt-text="Application name.":::
 
-        > [!NOTE]
-        > Ensure that you use only alphanumeric characters in the application name.
-
-    1. By default, project opens in new window within 10 seconds. If you want to open in current window, select **Open in current window**.
+    1. After your app is created, the Teams Toolkit displays the following message:
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/new-window-notification.png" alt-text="New window Notification for scaffolding.":::
 
@@ -189,7 +189,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/command-bot.png" alt-text="Screenshot showing the app created.":::
 
-    1. Select **Run and Debug** :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/run-debug-icon.png"::: icon from the Visual Studio Code sidebar.
+    1. Select **Run and Debug** :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/run-debug-icon.png"::: icon from the Visual Studio Code **Activity Bar**.
 
     1. Select **Debug(Edge)** or **Debug(Chrome)** from the dropdown list.
 

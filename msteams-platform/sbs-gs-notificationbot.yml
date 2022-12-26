@@ -62,9 +62,9 @@ items:
 
     :::image type="content" source="~/assets/images/sbs-notification-bot/teams-toolkit.png" alt-text="Illustration shows the Teams Toolkit extension installation.":::
 
-    The Teams Toolkit icon appears in the Visual Studio Code sidebar after it's installed.
+    The Teams Toolkit icon appears in the Visual Studio Code **Activity Bar** after it's installed.
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/hw-teams-toolkit-sidebar-icon.png" alt-text="Illustration shows the Teams Toolkit icon in Visual Studio Code sidebar.":::
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/hw-teams-toolkit-sidebar-icon.png" alt-text="Illustration shows the Teams Toolkit icon in Visual Studio Code activity bar.":::
 
    You can also find the Teams Toolkit on the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
@@ -180,7 +180,7 @@ items:
 
            :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/select-folder.png" alt-text="Select Folder":::
     
-    1. Enter a suitable name for your app, such as mynotificationbot as the application name. 
+    1. Enter a suitable name for your app. 
     1. Select **Enter**.
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/type-notfication-name.png" alt-text="Screenshot showing where to enter the app name.":::
