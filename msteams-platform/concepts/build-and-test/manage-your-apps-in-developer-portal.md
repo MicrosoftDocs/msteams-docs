@@ -27,7 +27,7 @@ In the **Overview** section, you can see the following components to manage your
     * **Announcement**: Latest updates of your apps on Developer Portal for Teams.
     * **Active users (Preview)**: Shows you the active user count.
     * **Basic information**: Shows you the **App ID**, **Version**, **Manifest version**, and other basic information.
-    * **Upgrade to 1.15**: Upgrade your aap manifest to the latest version 1.15, which enables support for extending Teams apps to Outlook and Office.
+    * **Upgrade to 1.15**: Upgrade your app manifest to the latest version 1.15, which enables support for extending Teams apps to Outlook and Office.
 
     :::image type="content" source="../../assets/images/tdp/dashboard-page_1.png" alt-text="The screenshot is an example that shows the Overview page of the app you created in Developer Portal for Teams." lightbox="../../assets/images/tdp/dashboard-page_1.PNG":::
 
@@ -38,6 +38,8 @@ In the **Overview** section, you can see the following components to manage your
 ## Configure
 
 To install and render your app in Teams, you must include a set of configurations that Teams recognizes. To upload your apps in Teams, you need to have app manifest, which contains all the app details to display your app in Teams. This can be achieved with the help of components and tools that are available in Developer Portal.
+
+:::image type="content" source="../../assets/images/tdp/configure.png" alt-text="The screenshot is an example that shows how to configure features to manage and access your app in Developer Portal.":::
 
 In the **Configure** section, you can see the following components to manage and access your app:
 
@@ -59,8 +61,6 @@ In the **Configure** section, you can see the following components to manage and
 * **Languages**: This section allows you to set up or change the language of your app.
 * **Domain**: This section allows you to add the domains to load your apps in the Teams client, such as *.example.com.
 
- :::image type="content" source="../../assets/images/tdp/configure.png" alt-text="The screenshot is an example that shows how to configure features to manage and access your app in Developer Portal.":::
-
 ## Advanced
 
 In the **Advanced** section, you can see the following components to manage your app in Developer Portal:
@@ -77,7 +77,7 @@ In the **Advanced** section, you can see the following components to manage your
     1. Under **Role**, select **Operative** or **Administrator**.
     1. Select **Add**.
 
-* **App content**: You can configure your app with the following more features:
+* **App content**: You can configure your app with the following features:
   
   * **Loading indicator**: Displays an indicator to let users know your hosted app content (for example, Tabs and Task modules) is loading.
   * **Full-screen mode**: Displays a personal app without an app header. It's supported for the published apps to your org.
