@@ -8,7 +8,7 @@ ms.author: surbhigupta
 
 # Analyze your app's usage in Developer Portal
 
-In the Developer Portal for Teams, on the **Overview** page, you can see the total number of active users for your app
+In the Developer Portal for Teams, on the **Overview** page, you can see the total number of active users for your app.
 
 > [!NOTE]
 > Usage analytics are currently available only for new custom apps published to your org through **Developer Portal** for Teams or imported into **Developer Portal** for Teams after April 2022. Usage analytics for all the apps published to the Teams store is available in **Partner Center**, for more information [Teams apps usage report](/office/dev/store/teams-apps-usage).
@@ -18,7 +18,7 @@ In the Developer Portal for Teams, on the **Overview** page, you can see the tot
 | *Monthly R30* | The default usage metric. It shows the count of unique active users who used your app within that rolling 30 day window in UTC. |
 | *Daily* | It shows you the count of unique active users who used your app in a given day in UTC. |
 
-The app usage for a given day is reflected within 24 to 48 hours, and usage data for new apps can take up to three to five days to reflect in the charts.
+The app usage for a given day is reflected within 24 to 48 hours, and usage data for the new apps can take up to three to five days to reflect in the charts.
 
 You can view your app's usage and other insights from the **Analytics** page. To access the page:
 
