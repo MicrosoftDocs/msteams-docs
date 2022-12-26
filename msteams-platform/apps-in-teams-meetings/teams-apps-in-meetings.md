@@ -43,9 +43,9 @@ Meetings enable collaboration, partnership, informed communication, and shared f
     :::column-end:::
     :::column span="":::
         :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/4-meeting-lifecycle.png" border="false" link="#meeting-lifecycle":::
-        <br><br>
-        :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/6-integrate.png" border="false" link="../build-and-test/share-in-meeting.md":::
-        <br><br>
+        <br><br><br>
+        :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/6-integrate.png" border="false" link="../concepts/build-and-test/share-in-meeting.md":::
+        <br><br><br>
         :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/8-optimize-meeting.png" border="false":::
     :::column-end:::
 :::row-end:::
@@ -54,7 +54,7 @@ Meetings enable collaboration, partnership, informed communication, and shared f
         &nbsp; :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/space.png" border="false":::
     :::column-end:::
     :::column span="2":::
-        :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/9-in-meeting.png" border="false"::: :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/10-get-meeting.png" border="false" link="meeting-apps-apis#get-real-time-teams-meeting-events-api.md":::
+        :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/9-in-meeting.png" border="false"::: :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/10-get-meeting.png" border="false" link="meeting-apps-apis.md#get-real-time-teams-meeting-events-api":::
     :::column-end:::
         :::column span="":::
         &nbsp; :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/space.png" border="false":::
