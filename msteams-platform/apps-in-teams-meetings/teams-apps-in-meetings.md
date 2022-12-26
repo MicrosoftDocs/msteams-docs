@@ -16,7 +16,7 @@ Meetings enable collaboration, partnership, informed communication, and shared f
 :::image type="content" source="../assets/images/apps-in-meetings/meetingappextensibility.png" alt-text="The screenshot shows you how meeting app extensibility works.":::
 -->
 
-[Build in-meeting notification for Teams meeting](in-meeting-notification-for-meeting.md)
+[Get participant API](meeting-apps-apis.md#get-participant-api)
 
 :::row:::
     :::column span="":::
@@ -36,7 +36,7 @@ Meetings enable collaboration, partnership, informed communication, and shared f
         <br><br><br>
         :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/5-notification-user.png" border="false" link="in-meeting-notification-for-meeting.md":::
         <br><br><br>
-        :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/7-fetch-participant.png" border="false":::
+        :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/7-fetch-participant.png" border="false" link="meeting-apps-apis.md#get-participant-api":::
     :::column-end:::
     :::column span="2":::
         :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/0-app-extensibility.png" border="false":::
