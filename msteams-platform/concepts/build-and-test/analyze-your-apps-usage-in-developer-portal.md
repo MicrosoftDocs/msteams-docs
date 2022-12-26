@@ -15,8 +15,8 @@ In the Developer Portal for Teams, on the **Overview** page, you can see the tot
 
 | Metric | Definition |
 | :-----------------------| :------------------------------------------------------------------------------------------------------|
-| *Monthly R30* | The default usage metric. It shows the count of unique active users who used your app within that rolling 30 days window in UTC. |
-| *Daily* | It shows you the count of unique active users who used your app in a given day in UTC. |
+| **Monthly R30 active users (MAU)** | The default usage metric. It shows the count of unique active users who used your app within that rolling 30 days window in UTC. |
+| **Daily active users (DAU)** | It shows you the count of unique active users who used your app in a given day in UTC. |
 
 The app usage for a given day is reflected within 24 to 48 hours, and usage data for the new apps can take up to three to five days to reflect in the charts.
 
