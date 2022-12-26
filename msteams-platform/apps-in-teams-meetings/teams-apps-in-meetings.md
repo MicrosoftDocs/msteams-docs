@@ -16,13 +16,13 @@ Meetings enable collaboration, partnership, informed communication, and shared f
 
 :::row:::
     :::column span="":::
-           &nbsp;
+           &nbsp; :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/space.png" border="false":::
     :::column-end:::
     :::column span="2":::
         :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/1-cust-apps.png" border="false":::    :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/2-enable-app.png" border="false":::
     :::column-end:::
         :::column span="":::
-           &nbsp;
+           &nbsp; :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/space.png" border="false":::
         :::column-end:::
 :::row-end:::
 :::row:::
@@ -47,13 +47,13 @@ Meetings enable collaboration, partnership, informed communication, and shared f
 :::row-end:::
 :::row:::
     :::column span="":::
-        &nbsp;
+        &nbsp; :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/space.png" border="false":::
     :::column-end:::
     :::column span="2":::
-        :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/9-in-meeting.png" border="false":::                    :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/10-get-meeting.png" border="false":::
+        :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/9-in-meeting.png" border="false":::    :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/space-small.png" border="false":::    :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/10-get-meeting.png" border="false":::
     :::column-end:::
         :::column span="":::
-        &nbsp;
+        &nbsp; :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/space.png" border="false":::
     :::column-end:::
 :::row-end:::
 
