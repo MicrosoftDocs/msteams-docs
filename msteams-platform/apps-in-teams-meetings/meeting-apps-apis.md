@@ -296,7 +296,9 @@ Get supported user ID format for targeted meeting notification:
 * [GetMeetingParticipant API](#get-participant-api).
 * [GetMembers API](/rest/api/azure/devops/memberentitlementmanagement/members/get?view=azure-devops-rest-7.0&preserve-view=true).
 
-(Require code snippet for pairwise ID)
+Example of pairwise ID
+
+`id=29:1I12M_iy2wTa97T6LbjTh4rJCWrtw2PZ3lxpD3yFv8j2YPnweY2lpCPPAn3RIOPP7rghfHauUz48I1t7ANhj4CA`
 
 ### Example
 
