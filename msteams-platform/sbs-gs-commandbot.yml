@@ -2,7 +2,7 @@
 title: Build command bot with JavaScript
 metadata:
   title: Build command bot with JavaScript
-  description: In this tutorial, you'll learn to create command bot with JavaScript by building command bot with Teams Toolkit.
+  description: In this tutorial, you learn to create command bot with JavaScript by building command bot with Teams Toolkit.
   audience: Developer
   level: Beginner
   ms.date: 05/05/2022
@@ -16,12 +16,12 @@ items:
   content: |
     Microsoft Teams allows you to automate repetitive tasks using a command bot. It responds to simple commands sent in chats with adaptive cards. 
 
-    In this tutorial, you'll learn:
+    In this tutorial, you learn:
 
     - How to build command bot with Teams Toolkit.
     - About the directory structure of your app.
     
-    This step-by-step guide helps you to build command bot with Teams Toolkit. You'll see the following output:
+    This step-by-step guide helps you to build command bot with Teams Toolkit. You can see the following output:
 
       :::image type="content" source="~/assets/images/sbs-command-bot/final-output.png" alt-text="final-output":::
 
@@ -29,7 +29,7 @@ items:
   durationInMinutes: 1
   content: |
 
-   Here's a list of tools you'll need for building and deploying your apps.
+   Here's a list of tools you need for building and deploying your apps.
 
    | &nbsp; | Install | For using |
    | --- | --- | --- |
@@ -207,7 +207,7 @@ items:
 
          :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/hello-world-command.png" alt-text="Add an App dropdown":::  
 
-       You'll receive the following command response in adaptive card:
+       You receive the following command response in adaptive card:
 
         :::image type="content" source="~/assets/images/sbs-command-bot/final-output.png" alt-text="final-output":::      
 
@@ -314,7 +314,7 @@ items:
 
         :::image type="content" source="~/assets/images/sbs-command-bot/hello-world-cloud.png" alt-text="Hello World Command":::
 
-        You'll receive the following command response in adaptive card:
+        You receive the following command response in adaptive card:
 
          :::image type="content" source="~/assets/images/sbs-command-bot/cloud-final-output.png" alt-text="Cloud final output":::
 

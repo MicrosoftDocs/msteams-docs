@@ -2,7 +2,7 @@
 title: Build notification bot with JavaScript
 metadata:
   title: Build notification bot with JavaScript
-  description: In this tutorial, you'll learn to send notification with JavaScript by creating a new notification bot with Teams Toolkit.
+  description: In this tutorial, you learn to send notification by creating a new notification bot with Teams Toolkit.
   audience: Developer
   level: Beginner
   ms.date: 05/04/2021
@@ -16,13 +16,13 @@ items:
   content: |
     The notification bot proactively sends messages in Teams channel or group chat or personal chat. You can trigger the notification bot with an HTTP request, such as cards or texts.
     
-    In this tutorial, you'll learn:
+    In this tutorial, you learn:
 
     - How to create a new notification bot with Teams Toolkit.
     - About the directory structure of your app.
     - How to send multiple notifications.
 
-    This step-by-step guide helps you to build notification bot with Teams Toolkit. You'll see the following output:
+    This step-by-step guide helps you to build notification bot with Teams Toolkit. You can see the following output:
 
       :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/trigger-output.png" alt-text="Trigger Output"border="true":::
 
@@ -211,7 +211,7 @@ items:
 
          :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/windows-powershell.png" alt-text="Powershell Trigger"border="true":::   
 
-        You'll get the following output in Teams:
+        You get the following output in Teams:
 
           :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/trigger-output.png" alt-text="Trigger Output"border="true":::
 
@@ -251,7 +251,7 @@ items:
 
         :::image type="content" source="~/assets/images/sbs-notification-bot/file-path.png" alt-text="File path":::
 
-       You'll see the following page:
+       You can see the following page:
 
          :::image type="content" source="~/assets/images/sbs-notification-bot/default-program.png" alt-text="Default Program":::
 
@@ -276,7 +276,7 @@ items:
 
             :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/initialize-storage.png" alt-text="Storage Initialize":::
         
-           You'll see the following page:
+           You can see the following page:
 
             :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/storage-code.png" alt-text="Storage Code":::
 
@@ -313,7 +313,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/debug-app.png" alt-text="App Debugging":::
 
-        You'll get the following output in Teams.
+        You get the following output in Teams.
 
           :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/app-installation.png" alt-text="App Installation":::
 
@@ -336,11 +336,11 @@ items:
 
          :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/windows-powershell.png" alt-text="Powershell Trigger"border="true":::   
 
-       You'll get the notification in the Teams channel:
+       You get the notification in the Teams channel:
 
          :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/channel-output.png" alt-text="Channel Output":::
 
-       You'll get the notification in the personal chat:         
+       You get the notification in the personal chat:         
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/member-output.png" alt-text="member-output":::
     
@@ -440,7 +440,7 @@ items:
 
         :::image type="content" source="~/assets/images/sbs-notification-bot/windows-powershell1.png" alt-text="Windows Powershell":::
 
-        You'll get the notification in Teams:
+        You get the notification in Teams:
 
         :::image type="content" source="~/assets/images/sbs-notification-bot/cloud-final-output.png" alt-text="Cloud Final Output":::
 
