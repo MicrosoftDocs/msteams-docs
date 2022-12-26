@@ -1,6 +1,6 @@
 ---
 title: Manage your apps with the Developer Portal
-description: In this article, learn how to configure, distribute, and manage your apps using the Developer Portal for Microsoft Teams.
+description: Learn how to configure, distribute, and manage your apps using the Developer Portal for Microsoft Teams.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
@@ -14,6 +14,7 @@ After you create or upload your app, you can manage your apps in Developer Porta
 * [Configure](#configure)
 * [Advanced](#advanced)
 * [Publish](#publish)
+* [Manage rollouts](#manage-rollouts)
 
 ## Overview
 
@@ -28,7 +29,7 @@ In the **Overview** section, you can see the following components to manage your
     * **Basic information**: Shows you the **App ID**, **Version**, **Manifest version**, and other basic information.
     * **Upgrade to 1.15**: Upgrade your aap to the latest version 1.15 which enables support for extending Teams apps to Outlook and Office.
 
-    :::image type="content" source="../../assets/images/tdp/dashboard-page.png" alt-text="The screenshot is an example that shows the Overview page of the app you created in Developer Portal for Teams.":::
+    :::image type="content" source="../../assets/images/tdp/dashboard-page_1.png" alt-text="The screenshot is an example that shows the Overview page of the app you created in Developer Portal for Teams." lightbox="../../assets/images/tdp/dashboard-page_1.PNG":::
 
 * **Analytics**
 
@@ -58,7 +59,7 @@ In the **Configure** section, you can see the following components to manage and
 * **Languages**: This section allows you to set up or change the language of your app.
 * **Domain**: This section allows you to add the domains to load your apps in the Teams client, such as *.example.com.
 
-:::image type="content" source="../../assets/images/tdp/configure.png" alt-text="The screenshot is an example that shows how to configure features to manage and access your app in Developer Portal.":::
+ :::image type="content" source="../../assets/images/tdp/configure.png" alt-text="The screenshot is an example that shows how to configure features to manage and access your app in Developer Portal.":::
 
 ## Advanced
 
@@ -136,7 +137,14 @@ In the **Publish** section, you can publish your app to your org or to the Teams
 
 In the **Manage rollouts** section, you can see the following components to manage your app in Developer Portal:
 
-* **
+* **Pull request history**: This page allows you to create a new pull request and to control who gets app updates. For example, you can release an update to Microsoft employees to identify and fix bugs before releasing it to the public.
+
+* **Distribute your app**: This page allows you to create a request to distribute your app to specific audience. You can distribute your app to non-GA rings or GA rings. It is recommended to not distribute to several rings simultaneously. Instead, roll out gradually to higher order rings. For help, see [aka.ms/teamsAppIngestion](https://domoreexp.visualstudio.com/Teamspace/_wiki/wikis/Teamspace.wiki/26278/Publishing-apps).
+
+* **Withdraw your app**: This page allows you to create a request to withdraw your app from a specific audience.
+
+ > [!NOTE]
+ > DevX team is allowed to withdraw your app from **Ring 4**.
 
 ## Test your app directly in Teams
 
@@ -149,9 +157,9 @@ The Developer Portal provides options for testing and debugging your app:
 
 The Developer Portal also includes tools to help you build key features of Teams apps. The following are the tools:
 
-* **Scene studio**: Design [custom Together Mode scenes](~/apps-in-teams-meetings/teams-together-mode.md) for Teams meetings.
-* **Adaptive Cards editor**: Create and preview Adaptive Cards to include with your apps.
-* **Microsoft identity platform management**: Register your apps with Azure Active Directory to help users sign in and provide access to APIs.
+* **Scene studio**: Design [custom Together Mode scenes in Teams](../../apps-in-teams-meetings/teams-together-mode.md) for Teams meetings.
+* **Adaptive Cards editor (Preview)**: Create and preview Adaptive Cards to include with your apps.
+* **Identity platform management (Preview)**: Register your apps with Azure AD to help users sign in and provide access to APIs.
 * **Teams store app validation**: Check your app package against the test cases that Microsoft uses to review your app.
 * **Bot management**: Add conversational bots to your app that communicate with users, respond to their questions, and proactively notify them about changes and other events.
 
@@ -159,12 +167,15 @@ To add a bot:
 
 1. In the Developer Portal, select **Tools** in the left pane.
 1. Select the **Bot management**.
+
+    :::image type="content" source="../../assets/images/tdp/tools-in-dev-portal_1.png" alt-text="The screenshot is an example that shows the tools in developer portal, which helps you to build key features." lightbox="../../assets/images/tdp/tools-in-dev-portal_1.PNG":::
+
 1. In the Bot management page, select **New Bot**.
 1. Enter the name and select **Add**.
 
-   :::image type="content" source="../../assets/images/tdp/tools-in-dev-portal.png" alt-text="The screenshot is an example that shows the tools in developer portal, which helps you to build key features.":::
+    :::image type="content" source="../../assets/images/tdp/Add_new_bot.PNG" alt-text="Add a new bot by using bot management option." lightbox="../../assets/images/tdp/Add_new_bot.PNG":::
 
-From the Developer Portal, you can go to Bot Framework Portal and configure your bot to update icon and other properties.
+From the Developer Portal, you can go to Bot Framework portal and configure your bot to update icon and other properties.
 
 ## See also
 
