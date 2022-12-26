@@ -1,22 +1,21 @@
 ---
 title: Developer Portal for Teams
-author: surbhigupta
 description: In this article, learn how to create a brand new app and import an existing app in Teams Developer Portal.
 ms.localizationpriority: medium
 ms.topic: overview
-ms.author: v-amprasad
+ms.author: surbhigupta
 ---
 
 # Developer Portal for Teams
 
 The <a href="https://dev.teams.microsoft.com" target="_blank">Developer Portal for Teams</a> is the primary tool for configuring, distributing, and managing your Microsoft Teams apps. With Developer Portal, you can collaborate with colleagues on your app, set up runtime environments, and much more.
 
-:::image type="content" source="../../assets/images/tdp/tdp_home_1.png" alt-text="The screenshot is an example that shows the home page of the Developer Portal for Teams." lightbox="../../assets/images/tdp/tdp_home_1.png":::
+:::image type="content" source="../../assets/images/tdp/tdp_home_1.png" alt-text="The screenshot is an example that shows the home page of Developer Portal for Teams." lightbox="../../assets/images/tdp/tdp_home_1.png":::
 
 > [!NOTE]
 >
 > * Currently, Developer Portal is not available for Government Community Cloud (GCC)-High or Department of Defense (DOD) tenants.
-> * However, you can use a regular tenant to build an app in the Developer Portal, download the app, and upload the app using [Microsoft Graph](/graph/api/teamsapp-publish?view=graph-rest-1.0&tabs=http&preserve-view=true) to a national cloud. For more information, see [National cloud deployments](/graph/deployments).
+> * However, you can use a regular tenant to build an app in Developer Portal, download the app, and upload the app using [Microsoft Graph](/graph/api/teamsapp-publish?view=graph-rest-1.0&tabs=http&preserve-view=true) to a national cloud. For more information, see [National cloud deployments](/graph/deployments).
 
 ## Register an app
 
@@ -47,7 +46,7 @@ Now you've successfully created a brand new app and you can see all the basic in
 
 ### Import an existing app
 
-Follow the steps to import and manage your existing app in the Developer Portal:
+Follow the steps to import and manage your existing app in Developer Portal:
 
 1. Select **Apps** from the left pane of the Developer Portal.
 1. Select **Import App**.
