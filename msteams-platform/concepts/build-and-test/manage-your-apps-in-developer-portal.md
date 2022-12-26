@@ -143,8 +143,8 @@ In the **Manage rollouts** section, you can see the following components to mana
 
 * **Withdraw your app**: This page allows you to create a request to withdraw your app from a specific audience.
 
- > [!NOTE]
- > DevX team is allowed to withdraw your app from **Ring 4**.
+   > [!NOTE]
+   > DevX team is allowed to withdraw your app from **Ring 4**.
 
 ## Test your app directly in Teams
 
