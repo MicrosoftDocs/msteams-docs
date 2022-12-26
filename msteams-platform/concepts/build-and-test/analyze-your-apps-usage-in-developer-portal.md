@@ -29,7 +29,7 @@ You can view your app's usage and other insights from the **Analytics** page. To
 
    :::image type="content" source="../../assets/images/tdp/dev-app-portal.png" alt-text="The screenshots shows you the analytics page of your app in Developer Portal."lightbox="../../assets/images/tdp/dev-app-portal.png":::
 
-As you explore individual metrics on this page, you can use the **Filter** button to analyze your app's usage from the following filter options:
+As you explore individual metrics on this page, you can use **Filter** button to analyze your app's usage from the following filter options:
 
 * **Aggregation type**: This filter allows you to group the metrics by a count of distinct users or a count of distinct tenants or customers.
 * **Platform**
