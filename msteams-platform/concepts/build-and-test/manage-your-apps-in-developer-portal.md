@@ -27,7 +27,7 @@ In the **Overview** section, you can see the following components to manage your
     * **Announcement**: Latest updates of your apps on Developer Portal for Teams.
     * **Active users (Preview)**: Shows you the active user count.
     * **Basic information**: Shows you the **App ID**, **Version**, **Manifest version**, and other basic information.
-    * **Upgrade to 1.15**: Upgrade your aap to the latest version 1.15 which enables support for extending Teams apps to Outlook and Office.
+    * **Upgrade to 1.15**: Upgrade your aap to the latest version 1.15, which enables support for extending Teams apps to Outlook and Office.
 
     :::image type="content" source="../../assets/images/tdp/dashboard-page_1.png" alt-text="The screenshot is an example that shows the Overview page of the app you created in Developer Portal for Teams." lightbox="../../assets/images/tdp/dashboard-page_1.PNG":::
 
@@ -55,7 +55,7 @@ In the **Configure** section, you can see the following components to manage and
   > [!NOTE]
   > Currently, connector is not available for Government Community Cloud (GCC) tenants.
 * **Permissions**: This section allows you to give **Device permissions**, **Team Permissions**, **Chat/Meeting permissions**, and **User Permissions** for your app.
-* **Single sign-on**: Bot registered on Microsoft Azure Active Directory (Azure AD) supports Single Sign-On (SSO). If a bot is registered on Bot Framework portal (or within the Developer Portal under Bot Management) then a bot doesn't support SSO and you have to register your bot on Azure AD to support SSO. For a bot registered on Azure AD, add the **Application ID URI**. To get **Application ID URI** from Azure AD, see [how to use SSO authentication for bots](../../bots/how-to/authentication/auth-aad-sso-bots.md).
+* **Single sign-on**: Bot registered on Microsoft Azure Active Directory (Azure AD) supports single sign-on (SSO). If a bot is registered on Bot Framework portal (or within the Developer Portal under **Bot management**), then a bot doesn't support SSO, and you have to register your bot on Azure AD to support SSO. For a bot registered on Azure AD, add the **Application ID URI**. To get **Application ID URI** from Azure AD, see [how to use SSO authentication for bots](../../bots/how-to/authentication/auth-aad-sso-bots.md).
 * **Languages**: This section allows you to set up or change the language of your app.
 * **Domain**: This section allows you to add the domains to load your apps in the Teams client, such as *.example.com.
 
@@ -139,7 +139,7 @@ In the **Manage rollouts** section, you can see the following components to mana
 
 * **Pull request history**: This page allows you to create a new pull request and to control who gets app updates. For example, you can release an update to Microsoft employees to identify and fix bugs before releasing it to the public.
 
-* **Distribute your app**: This page allows you to create a request to distribute your app to specific audience. You can distribute your app to non-GA rings or GA rings. It is recommended to not distribute to several rings simultaneously. Instead, roll out gradually to higher order rings. For help, see [aka.ms/teamsAppIngestion](https://domoreexp.visualstudio.com/Teamspace/_wiki/wikis/Teamspace.wiki/26278/Publishing-apps).
+* **Distribute your app**: This page allows you to create a request to distribute your app to specific audience. You can distribute your app to non-GA rings or GA rings. It's recommended to not distribute to several rings simultaneously. Instead, roll out gradually to higher order rings. For help, see [aka.ms/teamsAppIngestion](https://domoreexp.visualstudio.com/Teamspace/_wiki/wikis/Teamspace.wiki/26278/Publishing-apps).
 
 * **Withdraw your app**: This page allows you to create a request to withdraw your app from a specific audience.
 
