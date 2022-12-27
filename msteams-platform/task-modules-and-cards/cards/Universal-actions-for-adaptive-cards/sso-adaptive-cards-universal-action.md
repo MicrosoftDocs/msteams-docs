@@ -13,13 +13,6 @@ Authentication steps for Single sign-on (SSO) are similar to that of a bot in Te
 > [!NOTE]
 > To implement SSO flow, you must have a personal scope declared for your bot in the app manifest. When a user invokes the SSO flow via the Adaptive Card `Action.Execute` protocol, the user is prompted to install the app in a personal scope if it isn't installed already.
 
-## Prerequisites
-
-> [!IMPORTANT]
-> Before you add code to enable SSO, ensure that you've configured your app and bot resource in Azure AD portal. For more information, see [configured your app and bot resource in Azure AD portal](../../../bots/how-to/authentication/bot-sso-register-aad.md).
-
-After you configure the client secret and OAuth connection setting for the app in Azure AD, you must configure the code with development environment variables. For more information, see [update development environment variables](../../../bots/how-to/authentication/bot-sso-code.md#update-development-environment-variables).
-
 ## Add code to handle an access token
 
 If there's a cached token, the bot uses the same token. If there's no token available, the bot creates an OAuthCard and places it in an invoke response with the following values which includes a `tokenExchangeResource`:
