@@ -57,7 +57,7 @@ The subscriptionOffer property is added to your app manifest.
 >[!NOTE]
 >
 > * Check for the label *Preview offer* next to **Apps subscription** to confirm if the offer is a Preview Offer.
-> * The `subscriptionOffer` property is supported only for manifest version 1.9 or later.
+> * The `subscriptionOffer` property is supported in manifest schema version 1.9 or later.
 
 ## Sideload the app to Teams
 
