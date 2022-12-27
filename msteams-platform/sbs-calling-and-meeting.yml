@@ -114,8 +114,8 @@ items:
         
       1. In the left pane, select **Configuration** and select **Manage Password** next to Microsoft App ID.
       1. In the **Client secrets** section, select **New client secret**.
-
-      **Add a client secret** window appears.
+      
+         **Add a client secret** window appears.
 
       1. Enter the **Description** of the client secret.
       1. Select **Add**.
@@ -129,7 +129,7 @@ items:
           > [!TIP]
           > Save the client secrets **Value** or app password for future reference.
 
-    **Create a policy for a demo tenant user to create online meetings using the following PowerShell script:**
+    **Create a policy for a demo tenant user to create online meetings using the following PowerShell script**:
 
     1. Run Windows PowerShell PSI as an administrator and execute the script.
 
@@ -143,7 +143,7 @@ items:
         >   * Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser
         >   * Run Install-Module -Name MicrosoftTeams -Force -AllowClobber 
 
-     1. Replace the following in **Windows PowerShell script:**
+     1. Replace the following in **Windows PowerShell** script:
 
         |Field | Description |
         |----------------|-----------------|
@@ -152,7 +152,7 @@ items:
         |Policy-description | Description of the policy. |
         |object-id-of-the-user-to-whom-policy-need-to-be-granted |  ID of the user for whom you need to generate the policy using the graph explorer. |
 
-     1. To generate object ID Sign into [Microsoft Graph Explorer](https://developer.microsoft.com/graph) using the credentials to whom the policy must be granted.
+     1. To generate object ID, sign in to [Microsoft Graph Explorer](https://developer.microsoft.com/graph) using the credentials to whom the policy must be granted.
      1. Select **Graph Explorer** from the tool bar.
 
          :::image type="content" source="~/assets/images/calls-and-meetings/graph-explorer.png" alt-text="Screenshot of Microsoft Graph with graph explorer highlighted in red.":::
@@ -271,7 +271,7 @@ items:
           
            1. Select **Teams**.
 
-           1. Select ellipses ●●●.
+           1. Select **More** (**...**).
 
            1. Select **Get link to team**.
 
@@ -319,9 +319,9 @@ items:
         > [!NOTE]
         > The `manifest.zip` must not contain any extra folders in it. It must have `manifest json` source file, `color` icon, and `outline` icon inside the zip folder.
         
-    1. **Run the calling and meeting bot solution in Visual Studio**
+    1. **Run the calling and meeting bot solution in Visual Studio**.
 
-    1. In the **File Explorer**, go to **Microsoft-Teams-Samples** > **samples** > **bot-calling-meeting** > **csharp**  > **Source** > **CallingBotSample.sln**
+    1. In the **File Explorer**, go to **Microsoft-Teams-Samples** > **samples** > **bot-calling-meeting** > **csharp** > **Source** > **CallingBotSample.sln**.
 
     1. Open the **CallingBotSample.sln** file in Visual Studio.    
 
@@ -332,12 +332,12 @@ items:
        :::image type="content" source="~/assets/images/calls-and-meetings/bot-is-ready.png" alt-text="Screenshot of localhost displaying your bot is ready.":::
     
     1. Go to Teams.
-    1. To upload the `manifest.zip` file, select **Apps** > **Manage your apps** > **Upload an app** > **Upload a custom app**.
+    1. Select **Apps** > **Manage your apps** > **Upload an app** > **Upload a custom app**.
 
        :::image type="content" source="./assets/images/calls-and-meetings/upload.png" alt-text="Screenshot of Teams with Apps icon, manage your apps, Upload an app highlighted in red. The Upload an app dialog appears over the Teams page with Upload a custom app highlighted in red.":::
 
     1. Open `manifest.zip` from the repository folder in File Explorer.
-    1. Select **Add** to install calling bot in Teams.
+    1. Select **Add** to install the **Calling bot** app in Teams.
 
         :::image type="content" source="./assets/images/calls-and-meetings/output_1.png" alt-text="Screenshot of Calling bot with Add option highlighted in red.":::
 
