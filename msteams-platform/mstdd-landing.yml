@@ -257,7 +257,7 @@ landingContent:
 
 - title: Activity feed notifications
   linkLists:
-  - linkListType: concept
+  - linkListType: reference
     links:
     - text: Send activity feed notifications
       url: /graph/teams-send-activityfeednotifications?tabs=http
@@ -265,4 +265,3 @@ landingContent:
       url: /graph/teams-activity-feed-notifications-best-practices
     - text: Send proactive messages
       url: bots/how-to/conversations/send-proactive-messages.md
-      
