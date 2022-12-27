@@ -82,7 +82,7 @@ items:
         
          :::image type="content" source="./assets/images/calls-and-meetings/create-azure-bot.png" alt-text="Screenshot of Create an Azure bot with Subscription and Resource group highlighted in red.":::
       
-       You can also create a new resource group. Select **Create new** and then enter the resource name enter resource name. Select **OK**.
+       You can also create a new resource group. Select **Create new** and then enter the resource name. Select **OK**.
     
     1. Select the required location from **New resource group location** dropdown list, if you've created a new resource group.
 
