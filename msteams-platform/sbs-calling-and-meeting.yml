@@ -82,7 +82,7 @@ items:
         
          :::image type="content" source="./assets/images/calls-and-meetings/create-azure-bot.png" alt-text="Screenshot of Create an Azure bot with Subscription and Resource group highlighted in red.":::
       
-       You can also create a new resource group. Select **Create new** > enter resource name > **OK**.
+       You can also create a new resource group. Select **Create new** and then enter the resource name enter resource name. Select **OK**.
     
     1. Select the required location from **New resource group location** dropdown list, if you've created a new resource group.
 
@@ -115,7 +115,7 @@ items:
       1. In the left pane, select **Configuration** and select **Manage Password** next to Microsoft App ID.
       1. In the **Client secrets** section, select **New client secret**.
 
-      Add a client secret** window appears.
+      **Add a client secret** window appears.
 
       1. Enter the **Description** of the client secret.
       1. Select **Add**.
@@ -182,7 +182,7 @@ items:
     **To add API permissions for downstream calls**
 
     > [!NOTE]
-    > Ensure your account can grant admin consent for Microsoft. After adding permissions, select `Grant admin consent for Microsoft` to know the status of the consent.
+    > Ensure that your account can grant admin consent for Microsoft. After adding permissions, select `Grant admin consent for Microsoft` to know the status of the consent.
 
     1. In **Manage** pane of your bot, select **API permissions**.
     1. Select **Add a permission**. **Request API permissions** window appears.
@@ -249,8 +249,8 @@ items:
   content: |
     Configure the bot sample to understand how to authenticate conversational bot in Microsoft Teams and create the Teams app package, and upload it to the organization.
     
-    1. Update appsettings.json in Visual Studio.
-    1. Update manifest.json in Visual Studio and compress it to the zip file in File Explorer.
+    1. Update the appsettings.json file in Visual Studio.
+    1. Update teh manifest.json file in Visual Studio and compress it to the zip file in File Explorer.
 
     **Update appsettings for calling bot**
 
@@ -321,7 +321,7 @@ items:
         
     1. **Run the calling and meeting bot solution in Visual Studio**
 
-    1. In the File Explorer, go to **Microsoft-Teams-Samples** > **samples** > **bot-calling-meeting** > **csharp**  > **Source** > **CallingBotSample.sln**
+    1. In the **File Explorer**, go to **Microsoft-Teams-Samples** > **samples** > **bot-calling-meeting** > **csharp**  > **Source** > **CallingBotSample.sln**
 
     1. Open the **CallingBotSample.sln** file in Visual Studio.    
 
@@ -332,7 +332,7 @@ items:
        :::image type="content" source="~/assets/images/calls-and-meetings/bot-is-ready.png" alt-text="Screenshot of localhost displaying your bot is ready.":::
     
     1. Go to Teams.
-    1. To upload `manifest.zip`, select Apps > Manage your apps > Upload an app > Upload a custom app.
+    1. To upload the `manifest.zip` file, select **Apps** > **Manage your apps** > **Upload an app** > **Upload a custom app**.
 
        :::image type="content" source="./assets/images/calls-and-meetings/upload.png" alt-text="Screenshot of Teams with Apps icon, manage your apps, Upload an app highlighted in red. The Upload an app dialog appears over the Teams page with Upload a custom app highlighted in red.":::
 
@@ -350,7 +350,7 @@ items:
 
     Perform the following steps to use the bot:
 
-    1. In the left pane of the Teams, select the ellipses ●●● and choose your app from the list.
+    1. In the left pane of the Teams, select **More added apps** (**...**) and select your app from the list.
     1. Bot sends welcome text with Adaptive Card.
 
         :::image type="content" source="./assets/images/calls-and-meetings/bot-with-adaptive-card.png" alt-text="Screenshot of Calling bot displaying welcome text.":::
