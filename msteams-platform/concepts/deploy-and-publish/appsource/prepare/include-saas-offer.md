@@ -144,7 +144,7 @@ You’ve published your SaaS offer, but you still must link it to your Teams app
    ```
 
 > [!NOTE]
-> The `subscriptionOffer` property is supported in manifest schema version 1.9 or later.
+> The `subscriptionOffer` property is supported in manifest schema version 1.10 or later.
 
 ## Publish your app
 
