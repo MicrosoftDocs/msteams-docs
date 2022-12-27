@@ -486,7 +486,7 @@
   items:
   - name: Overview
     href: webhooks-and-connectors/what-are-webhooks-and-connectors.md
-    displayName: webhooks, Connectors, Single virtual scene, endpoint
+    displayName: Webhooks, Connectors, endpoint
   - name: Create Outgoing Webhooks
     href: webhooks-and-connectors/how-to/add-outgoing-webhook.md
     displayName: HMAC security token

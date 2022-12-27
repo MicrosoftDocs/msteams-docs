@@ -24,7 +24,7 @@ You can create a [package](~/concepts/build-and-test/apps-package.md) and [publi
 
 To distribute your connector, register it in the [Connectors Developer Dashboard](https://aka.ms/connectorsdashboard).
 
-For a connector to work only in Teams, follow the instructions to submit connector in [publish your app to the Microsoft Teams store](~/concepts/deploy-and-publish/appsource/publish.md) article. Otherwise, a registered connector works in all Office 365 products that support applications, including Outlook and Teams.
+For a connector to work only in Teams, follow the instructions to submit connector in [publish your app to the Microsoft Teams store](~/concepts/deploy-and-publish/appsource/publish.md) article. Otherwise, a registered connector works in all Microsoft 365 products that support applications, including Outlook and Teams.
 
 > [!IMPORTANT]
 > Your connector is registered after you select **Save** in the Connectors Developer Dashboard. If you want to publish your connector in AppSource, follow the instructions in [publish your Microsoft Teams app to AppSource](~/concepts/deploy-and-publish/apps-publish.md). If you do not want to publish your app in AppSource, distribute it directly to the organization. After publishing connectors for your organization, no further action is required on the Connector Dashboard.
@@ -140,8 +140,8 @@ The following table provides the parameters and the details of `getConfig` respo
 | `configName`  | The configuration name, as set by your code when calling `setConfig()`. |
 | `contentUrl` | The URL of the configuration page, as set by your code when calling `setConfig()`. |
 | `webhookUrl` | The webhook URL created for the connector. Use the webhook URL to POST structured JSON to send cards to the channel. The `webhookUrl` is returned only when the application returns data successfully. |
-| `appType` | The values returned can be `mail`, `groups`, or `teams` corresponding to the Office 365 Mail, Office 365 Groups, or Teams respectively. |
-| `userObjectId` | The unique ID corresponding to the Office 365 user who initiated the setup of the connector. It must be secured. This value can be used to associate the user in Office 365, who has set up the configuration in your service. |
+| `appType` | The values returned can be `mail`, `groups`, or `teams` corresponding to the Microsoft 365 Mail, Office 365 Groups, or Teams respectively. |
+| `userObjectId` | The unique ID corresponding to the Microsoft 365 user who initiated the setup of the connector. It must be secured. This value can be used to associate the user in Microsoft 365, who has set up the configuration in your service. |
 
 #### Handle edits
 
