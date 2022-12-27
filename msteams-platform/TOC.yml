@@ -114,7 +114,10 @@
       href: task-modules-and-cards/task-modules/design-teams-task-modules.md
     - name: Activity feed notifications
       href: concepts/design/activity-feed-notifications.md
-      displayName: notify, notification 
+      displayName: notify, notification
+    - name: Send activity feed notifications
+      href: /graph/teams-send-activityfeednotifications?tabs=http
+      displayName: activity feed, notification
   - name: App customization
     href: concepts/design/enable-app-customization.md
     displayName: Customize your app, update app name, branding, hide and unhide app, accent 

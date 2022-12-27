@@ -254,3 +254,15 @@ landingContent:
       url: ~/concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md      
     - text: Maintain your published app
       url: ~/concepts/deploy-and-publish/appsource/post-publish/overview.md
+
+- title: Activity feed notifications
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Send activity feed notifications
+      url: /graph/teams-send-activityfeednotifications?tabs=http
+    - text: Best practices for activity feed notifications
+      url: /graph/teams-activity-feed-notifications-best-practices
+    - text: Send proactive messages
+      url: bots/how-to/conversations/send-proactive-messages.md
+      
