@@ -266,8 +266,8 @@ items:
     1. In the **File Explorer**, go to **Microsoft-Teams-Samples-main** > **samples** > **bot-calling-meeting** > **csharp** folder.
     1. Open the **appsettings.json** file in Visual Studio and update configuration for the bot.
 
-        * You can obtain the `MicrosoftAppId` from the bot's configuration page. The `MicrosoftAppPassword` is the value for client secret ID that you saved previously.
-        * You can obtain the `tenantId` or `UserId` from the link of the account used to sign in to the Teams. Follow the path in the image to get the link for `tenantId`:
+        * Get the `MicrosoftAppId` from the bot's configuration page. The `MicrosoftAppPassword` is the value for client secret ID that you saved previously.
+        * Get the `tenantId` or `UserId` from Teams. To get the `tenantId`, follow these steps:
           
            1. Select **Teams**.
 
@@ -277,19 +277,19 @@ items:
 
              :::image type="content" source="./assets/images/calls-and-meetings/teams-final.png" alt-text="Screenshot of Teams with Get link to Team under overflow menu highlighted in red.":::
         
-        * You can obtain the `displayName` and `id` from [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) site:
+           1. Sign in to You can obtain the `displayName` and `id` from  site:
 
-            * Sign in to the page using your Teams tenant account.
+           1. Sign in to [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) using your Teams tenant account.
 
-            * Add `Users` at the end of the URl in the search box.
+           1. Add `Users` at the end of the URl in the search box.
 
-            * Select **Run query**.
+           1. Select **Run query**.
             
              :::image type="content" source="./assets/images/calls-and-meetings/graph-explorer_1.png" alt-text="Screenshot of Microsoft Graph with users in the URI highlighted in red.":::
 
-            * The display names and user IDs linked to your account are generated.
-
-            * Choose any three accounts and add them to the `DisplayName` and `UserId` in appsettings.json.
+              The display names and user IDs linked to your account are generated. 
+              
+           1. Select any three accounts and add them to the `DisplayName` and `UserId` in the appsettings.json file.
        
               :::image type="content" source="./assets/images/calls-and-meetings/graph-explorer_2.png" alt-text="Screenshot of Tenant Contoso with `displayName` and `id` highlighted in red." lightbox="./assets/images/calls-and-meetings/graph-explorer_2.png":::
        
