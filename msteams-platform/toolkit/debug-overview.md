@@ -1,7 +1,7 @@
 ---
 title: Debug your Teams app
 author: surbhigupta 
-description: In this module, learn how to debug your Teams app in Teams Toolkit and key features of Teams Toolkit
+description: In this module, learn how to debug your Teams app, and key features of Teams Toolkit
 ms.author: v-amprasad
 ms.localizationpriority: high
 ms.topic: overview
@@ -201,11 +201,6 @@ Teams Toolkit utilizes Visual Studio Code multi-target debugging to debug tab, b
 
 </details>
 
-## Next
-
-> [!div class="nextstepaction"]
-> [Debug your app locally](debug-local.md)
-
 ::: zone-end
 
 ::: zone pivot="visual-studio"
@@ -312,6 +307,11 @@ You can launch Teams app as a web app instead of running in Teams client.
    :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-disable-deploy.png" alt-text="Uncheck deploy in configuration properties" lightbox="../assets/images/debug-teams-app/vs-localdebug-disable-deploy.png":::
 
 ::: zone-end
+
+## Next
+
+> [!div class="nextstepaction"]
+> [Debug your app locally](debug-local.md)
 
 ## See also
 
