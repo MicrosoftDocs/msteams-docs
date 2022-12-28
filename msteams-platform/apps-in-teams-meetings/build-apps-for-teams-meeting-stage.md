@@ -212,6 +212,17 @@ The following participant roles may be involved during the meeting:
 * **Signer**: This role can sign reviewed documents.
 * **Reader**: This role can view the documents added to the meeting.
 
+## Feature compatibility by user types
+
+The following table provides the user types and lists the features that each user can access in meetings:
+
+| User type | Private schedule meeting or Instant calendar meeting | One-on-one call | Group call | Scheduled channel meeting |
+| :-- | :-- | :-- | :-- | :-- |
+| In-tenant user | Presenter or  organizer can start, view, and interact with app on meeting stage. Attendee can only view and interact. | Presenter or  organizer can start, view, and interact with app on meeting stage. Attendee can only view and interact. | Presenter or  organizer can start, view, and interact with app on meeting stage. Attendee can only view and interact. | Presenter or  organizer can start, view, and interact with app on meeting stage. Attendee can only view and interact. |
+| Guest user | Presenter or  organizer can start, view and interact with app on meeting stage. Attendee can only view and interact. | Presenter or  organizer can start, view, and interact with app on meeting stage. Attendee can only view and interact. |  Presenter or  organizer can start, view, and interact with app on meeting stage. Attendee can only view and interact. | Presenter or  organizer can start, view, and interact with app on meeting stage. Attendee can only view and interact. |
+| Federated users or External user | Presenter can start, view, and interact with app on meeting stage. Attendee can only view and interact. | Not available | Not available | Presenter can start, view, and interact with app on meeting stage. Attendee can only view and interact. |
+| Anonymous user | Presenter or attendee can view and interact with app on meeting stage. | Not available | Not available | Presenter or  attendee can view and interact with app on meeting stage. |
+
 ## Code sample
 
 |Sample name | Description | C# | Node.js |
