@@ -60,6 +60,7 @@ export class MyBot extends TeamsActivityHandler {
 ```
 
 # [Python](#tab/python)
+
 * [SDK reference](/python/api/botbuilder-core/botbuilder.core.activityhandler?view=botbuilder-py-latest#botbuilder-core-activityhandler-on-message-activity&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L103)
 
@@ -167,6 +168,7 @@ protected override async Task OnMembersAddedAsync(IList<ChannelAccount> membersA
 ```
 
 # [Python](#tab/python)
+
 * [SDK reference](/python/api/botbuilder-core/botbuilder.core.turncontext?view=botbuilder-py-latest#botbuilder-core-turncontext-send-activity&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-teams-authentication/python/bots/auth_bot.py#L33)
 
@@ -214,6 +216,106 @@ async def on_members_added_activity(
 >* Messages sent can be localized to provide personalization. For more information, see [localize your app](../../../concepts/build-and-test/apps-localization.md).
 
 Messages sent between users and bots include internal channel data within the message. This data allows the bot to communicate properly on that channel. The Bot Builder SDK allows you to modify the message structure.
+
+## Update message
+
+​When user edit an existing message or undo delete the sent message in bot conversation, bot receives an event notification `OnTeamsMessageEditAsync` and `OnTeamsMessageUndeleteAsync` or `OnMessageUpdateActivityAsync` to handle message update.
+
+The following code shows an example when user edits the message:
+
+# [C#](#tab/csharp)
+
+```csharp
+protected override async Task OnTeamsMessageEditAsync(ITurnContext<IMessageUpdateActivity> turnContext, CancellationToken cancellationToken) 
+{ 
+var replyActivity = MessageFactory.Text("message is updated"); 
+await turnContext.SendActivityAsync(replyActivity, cancellationToken); 
+} 
+```
+
+# [Javascript](#tab/javascript)
+
+```javascript
+this.onTeamsMessageEditEvent(async (context, next) => {
+  let editedMessage = context.activity.text;
+  let messageId = context.activity.id;
+  let previousMessage = this.currentMessage[messageId];
+
+  await context.sendActivity(`The previous message was "${previousMessage}". It is now: "${editedMessage}"`);
+
+  this.updateCurrentMessage(messageId, editedMessage);
+
+  next();
+})
+```
+
+---
+
+The following code shows an example when user undo delete the message:
+
+# [C#](#tab/csharp)
+
+```csharp
+protected override async Task OnTeamsMessageUndeleteAsync(ITurnContext<IMessageUpdateActivity> turnContext, CancellationToken cancellationToken)
+{ 
+var replyActivity = MessageFactory.Text("message is undeleted"); 
+await turnContext.SendActivityAsync(replyActivity, cancellationToken); 
+} 
+```
+
+# [Javascript](#tab/javascript)
+
+```javascript
+this.onTeamsMessageUndeleteEvent(async (context, next) => {
+    let undeletedMessage = context.activity.text;
+    let messageId = context.activity.id;
+    let previousMessage = this.currentMessage[messageId]; // undefined
+
+        await context.sendActivity(`Previously the message was deleted. After undeleting, the message is now: "${undeletedMessage}"`);
+
+        this.updateCurrentMessage(messageId, undeletedMessage);
+
+    next();
+})
+
+```
+
+---
+
+## Delete message
+
+​When user soft delete a message in bot, bot receives an event notification `OnTeamsMessageEditAsync` and `OnTeamsMessageUndeleteAsync` or `OnMessageUpdateActivityAsync` to handle message delete.
+
+The following code shows an example when user deletes the message:
+
+# [C#](#tab/csharp)
+
+```csharp
+protected override async Task OnTeamsMessageSoftDeleteAsync(ITurnContext<IMessageDeleteActivity> turnContext, CancellationToken cancellationToken) 
+{ 
+var replyActivity = MessageFactory.Text("message is soft deleted"); 
+await turnContext.SendActivityAsync(replyActivity, cancellationToken); 
+} 
+```
+
+# [Javascript](#tab/javascript)
+
+```javascript
+this.onTeamsMessageSoftDeleteEvent(async (context, next) => {
+    let deletedMessage = context.activity.text; // undefined
+    let messageId = context.activity.id;
+    let previousMessage = this.currentMessage[messageId];
+
+      await context.sendActivity(`The deleted message was "${previousMessage}"`);
+
+      this.updateCurrentMessage(messageId, deletedMessage);
+
+    next();
+})
+
+```
+
+---
 
 ## Send suggested actions
 
@@ -436,6 +538,7 @@ this.onMessage(async (turnContext, next) => {
 ```
 
 # [Python](#tab/python)
+
 [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams?view=botbuilder-py-latest#botbuilder-core-teams-teams-notify-user&preserve-view=true)
 
 ```python
