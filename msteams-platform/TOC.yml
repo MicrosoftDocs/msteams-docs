@@ -632,7 +632,7 @@
   - name: Proactive installation of apps using Graph API to send messages
     href: graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md
   - name: Send activity feed notifications
-    href: /graph/teams-send-activityfeednotifications
+    href: /graph/teams-send-activityfeednotifications.md
     displayName: activity feed, notification
   - name: Import third-party messages
     href: graph-api/import-messages/import-external-messages-to-teams.md
