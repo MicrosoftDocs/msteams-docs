@@ -255,10 +255,12 @@ landingContent:
     - text: Maintain your published app
       url: ~/concepts/deploy-and-publish/appsource/post-publish/overview.md
 
-- title: Activity feed notifications
+- title: Notifications
   linkLists:
   - linkListType: reference
     links:
+    - text: Design activity feed notifications
+      url: concepts/design/activity-feed-notifications.md 
     - text: Send activity feed notifications
       url: /graph/teams-send-activityfeednotifications?tabs=http
     - text: Best practices for activity feed notifications
