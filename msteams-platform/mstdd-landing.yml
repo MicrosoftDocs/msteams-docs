@@ -262,7 +262,7 @@ landingContent:
     - text: Design activity feed notifications
       url: concepts/design/activity-feed-notifications.md 
     - text: Send activity feed notifications
-      url: /graph/teams-send-activityfeednotifications?tabs=http
+      url: /graph/teams-send-activityfeednotifications
     - text: Best practices for activity feed notifications
       url: /graph/teams-activity-feed-notifications-best-practices
     - text: Send proactive messages
