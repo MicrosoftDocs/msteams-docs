@@ -143,6 +143,9 @@ You’ve published your SaaS offer, but you still must link it to your Teams app
         }
    ```
 
+> [!NOTE]
+> The `subscriptionOffer` property is supported in manifest schema version 1.10 or later.
+
 ## Publish your app
 
 You’ve created your SaaS offer and linked it to your Teams app—now it's time to publish your app to the Teams store. For complete instructions, see [publish your app to the Teams store](~/concepts/deploy-and-publish/appsource/publish.md).
