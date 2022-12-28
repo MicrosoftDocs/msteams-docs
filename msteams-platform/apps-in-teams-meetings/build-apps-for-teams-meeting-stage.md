@@ -218,10 +218,10 @@ The following table provides the user types and lists the features that each use
 
 | User type | Scheduled meeting or Instant calendar meeting | One-on-one call | Group call | Scheduled channel meeting |
 | :-- | :-- | :-- | :-- | :-- |
-| In-tenant user | Presenter or  organizer can start, view, and interact with app on meeting stage.<br><br> Attendee can only view and interact. | Presenter or  organizer can start, view, and interact with app on meeting stage. <br><br> Attendee can only view and interact. | Presenter or  organizer can start, view, and interact with app on meeting stage. Attendee can only view and interact. | Presenter or  organizer can start, view, and interact with app on meeting stage.<br><br> Attendee can only view and interact. |
+| In-tenant user | Presenter or  organizer can start, view, and interact with app on meeting stage.<br><br> Attendee can only view and interact. | Presenter or  organizer can start, view, and interact with app on meeting stage. <br><br> Attendee can only view and interact. | Presenter or  organizer can start, view, and interact with app on meeting stage.<br><br> Attendee can only view and interact. | Presenter or  organizer can start, view, and interact with app on meeting stage.<br><br> Attendee can only view and interact. |
 | Guest user | Presenter or  organizer can start, view and interact with app on meeting stage.<br><br> Attendee can only view and interact. | Presenter or  organizer can start, view, and interact with app on meeting stage.<br><br> Attendee can only view and interact. |  Presenter or  organizer can start, view, and interact with app on meeting stage.<br><br> Attendee can only view and interact. | Presenter or  organizer can start, view, and interact with app on meeting stage.<br><br> Attendee can only view and interact. |
 | Federated users or External user | Presenter can start, view, and interact with app on meeting stage.<br><br> Attendee can only view and interact. | Not available | Not available | Presenter can start, view, and interact with app on meeting stage.<br><br> Attendee can only view and interact. |
-| Anonymous user | Presenter or attendee can view and interact with app on meeting stage. | Not available | Not available | Presenter or  attendee can view and interact with app on meeting stage. |
+| Anonymous user | Not available | Not available | Not available | Not available |
 
 ## Code sample
 
