@@ -61,13 +61,13 @@ The following list details the various user types along with their accessibility
 * **Anonymous**: Anonymous users don't have an Azure AD identity and aren't federated with a tenant. The anonymous participants are like external users, but their identity isn't shown in the meeting. Anonymous users can't access apps in a meeting window. An anonymous user can't view the bot logo in the meeting chat. An anonymous user can be a presenter or an attendee, but can't be an organizer.
 
     > [!NOTE]
-    > Anonymous users inherit the global default user-level app permission policy. For more information, see [manage Apps](/microsoftteams/non-standard-users#anonymous-user-in-meetings-access).
+    > Anonymous users inherit the global default user-level app permission policy. For more information, see [manage apps](/microsoftteams/non-standard-users#anonymous-user-in-meetings-access).
 
 ## User roles in Teams meeting
 
 The following are the user roles in a Teams meeting:
 
-* **Organizer**: The organizer schedules a meeting, sets the meeting options, assigns meeting roles, controls attendee permissions, and starts the meeting. Only users with a Microsoft 365 account and Teams license can be the organizer. A meeting organizer can change the settings for a specific meeting from the [**Meeting options** page](https://support.microsoft.com/en-us/office/change-participant-settings-for-a-teams-meeting-53261366-dbd5-45f9-aae9-a70e6354f88e).
+* **Organizer**: The organizer schedules a meeting, sets the meeting options, assigns meeting roles, controls attendee permissions, and starts the meeting. Only users with a Microsoft 365 account and Teams license can be the organizer. A meeting organizer can change the settings for a specific meeting from the [**meeting options**](https://support.microsoft.com/en-us/office/change-participant-settings-for-a-teams-meeting-53261366-dbd5-45f9-aae9-a70e6354f88e).
 
 * **Presenter**: Presenters in a meeting have similar capabilities as the organizer, with the exception of removing an organizer from the session and modifying meeting options for the session.
 
@@ -94,9 +94,12 @@ For more information, see [roles in a Teams meeting](https://support.microsoft.c
 * [Designing your Microsoft Teams meeting extension](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md)
 * [Build tabs for meeting](~/apps-in-teams-meetings/build-tabs-for-meeting.md)
 * [Build apps for Teams meeting stage](build-apps-for-teams-meeting-stage.md)
+* [Build in-meeting notification for Teams meeting](in-meeting-notification-for-meeting.md)
 * [Build extensible conversation for meeting chat](build-extensible-conversation-for-meeting-chat.md)
 * [Build apps for anonymous users](build-apps-for-anonymous-user.md)
 * [Meeting apps APIs](meeting-apps-apis.md)
 * [Enhanced collaboration with Live Share SDK](teams-live-share-overview.md)
 * [Custom Together Mode scenes](~/apps-in-teams-meetings/teams-together-mode.md)
+* [Get meeting transcripts using Graph APIs](../graph-api/meeting-transcripts/overview-transcripts.md)
 * [Instrumenting for Teams app specific analytics](../concepts/design/overview-analytics.md#instrumenting-for-teams-app-specific-analytics)
+
