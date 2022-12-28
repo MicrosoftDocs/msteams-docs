@@ -46,7 +46,7 @@ You can also add the Teams display picture and people card of the user to in-mee
 
 The following table provides the user types and lists the features that each user can access in meetings:
 
-| User type | Private schedule meeting or Instant calendar meeting | One-on-one call | Group call | Scheduled channel meeting |
+| User type | Scheduled meeting or Instant calendar meeting | One-on-one call | Group call | Scheduled channel meeting |
 | :-- | :-- | :-- | :-- | :-- |
 | In-tenant user | Available | Available |  Available | Available |
 | Guest user | Available | Available |  Available | Available |
