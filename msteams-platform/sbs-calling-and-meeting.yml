@@ -274,7 +274,7 @@ items:
 
              :::image type="content" source="./assets/images/calls-and-meetings/teams-final.png" alt-text="Screenshot of Teams with Get link to Team under overflow menu highlighted in red.":::
         
-           1. Sign in to You can obtain the `displayName` and `id` from  site:
+           1. You can obtain the `displayName` and `id` from  site:
 
            1. Sign in to [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) using your Teams tenant account.
 
@@ -316,7 +316,7 @@ items:
         > [!NOTE]
         > The `manifest.zip` must not contain any extra folders in it. It must have `manifest json` source file, `color` icon, and `outline` icon inside the zip folder.
         
-    1. **Run the calling and meeting bot solution in Visual Studio**.
+    1. Run the calling and meeting bot solution in Visual Studio.
 
     1. In the **File Explorer**, go to **Microsoft-Teams-Samples** > **samples** > **bot-calling-meeting** > **csharp** > **Source** > **CallingBotSample.sln**.
 
