@@ -55,7 +55,7 @@ Meetings enable collaboration, partnership, informed communication, and shared f
         :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/9-in-meeting.png" border="false" link="build-apps-for-teams-meeting-stage.md"::: :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/10-get-meeting.png" border="false" link="meeting-apps-apis.md#get-real-time-teams-meeting-events-api":::
     :::column-end:::
         :::column span="":::
-        &nbsp; <!--:::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/space.png" border="false":::->
+        &nbsp;
     :::column-end:::
 :::row-end:::
 
