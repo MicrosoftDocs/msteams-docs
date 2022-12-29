@@ -1,7 +1,7 @@
 ---
 title: Debug background processes
 author: surbhigupta
-description: In this module how Visual studio code and Teams Toolkit work during local debug process, also how to register and configure your Teams app
+description: In this module, learn how Visual Studio Code and Teams Toolkit work during local debug process. Also learn how to register and configure your Teams app.
 ms.author: v-amprasad
 ms.localizationpriority: high
 ms.topic: overview
@@ -16,13 +16,13 @@ The debug process workflow is as follows:
 
 1. `launch.json` file configures the debugger in Visual Studio Code.
 
-2. Visual Studio Code runs the compound **preLaunchTask**, **Pre Debug Check & Start All** in `.vscode/tasks.json` file.
+2. Visual Studio Code runs the compound **preLaunchTask**, **Start Teams App Locally** in `.vscode/tasks.json` file.
 
 3. Visual Studio Code then launches the debuggers specified in the compound configurations, such as **Attach to Bot**, **Attach to Backend**, **Attach to Frontend**, and **Launch Bot**.
 
 4. Microsoft Edge or Google Chrome launches a new browser instance and opens a web page to load Teams client.
 
-## Teams Toolkit verification of prerequisites
+## Verification of prerequisites
 
 Teams Toolkit checks the following prerequisites during the debug process:
 
@@ -37,11 +37,8 @@ Teams Toolkit checks the following prerequisites during the debug process:
 
 * Teams Toolkit prompts you to sign-in to Microsoft 365 account, if you haven't signed in with your valid credentials.
 * Custom app uploading or sideloading for your developer tenant is turned on, to prevent local debug termination.
-* Teams Toolkit installs Ngrok NPM package `ngrok@4.2.2` in `~/.fx/bin/ngrok`, if Ngrok isn't installed or the version doesn't match the requirement. Ngrok NPM package in `/.fx/bin/ngrok/node modules/ngrok/bin` manages the Ngrok binary version 2.3 that is applicable for bot and message extension.
-* Teams Toolkit installs Azure Functions Core Tools NPM package, azure-functions-core-tools@3 for **Windows** and **macOs** in  `~/.fx/bin/func`, if Azure Functions Core Tools version 3 isn't installed or the version doesn't match the requirement. The Azure Functions Core Tools NPM package in  `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` manages Azure Functions Core Tools binary. For Linux, the local debug terminates.
-* Teams Toolkit installs .NET Core SDK for **Windows** and **MacOS** in `~/.fx/bin/dotnet`, if .NET Core SDK version applicable for Azure Functions isn't installed or the version doesn't match the requirement. For Linux, the local debug terminates.
-* Teams Toolkit installs Ngrok NPM package `ngrok@4.2.2` in `~/.fx/bin/ngrok`, if Ngrok isn't installed or the version doesn't match the requirement. Ngrok binary version 2.3 is applicable for bot and message extension. The Ngrok binary is managed by Ngrok NPM package in `/.fx/bin/ngrok/node modules/ngrok/bin`.
-* Teams Toolkit installs Azure Functions Core Tools NPM package, azure-functions-core-tools@3 for **Windows** and **MacOs** in  `~/.fx/bin/func`, if Azure Functions Core Tools version 4 isn't installed or the version doesn't match the requirement. The Azure Functions Core Tools NPM package in `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` manages Azure Functions Core Tools binary. For Linux, the local debug terminates.
+* Teams Toolkit installs Ngrok npm package `ngrok@4.2.2` in `~/.fx/bin/ngrok`, if Ngrok isn't installed or the version doesn't match the requirement. Ngrok binary version 2.3 is applicable for bot and message extension. The Ngrok binary is managed by Ngrok npm package in `/.fx/bin/ngrok/node modules/ngrok/bin`.
+* Teams Toolkit installs Azure Functions Core Tools npm package. `azure-functions-core-tools@3` for **Windows** and **MacOs** in  `~/.fx/bin/func`, if Azure Functions Core Tools version 4 isn't installed or the version doesn't match the requirement. The Azure Functions Core Tools npm package in `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` manages Azure Functions Core Tools binary. For Linux, the local debug terminates.
 * Teams Toolkit installs .NET Core SDK for **Windows** and **MacOS** in `~/.fx/bin/dotnet`.NET Core SDK version applicable for Azure Functions, if .NET Core SDK isn't installed or the version doesn't match the requirement. For Linux, the local debug terminates.
 
   The following table lists the .NET Core versions:
@@ -53,7 +50,7 @@ Teams Toolkit checks the following prerequisites during the debug process:
 
 * Development certificate, if the development certificate for localhost isn't installed for tab in **Windows** or **MacOS**, then Teams Toolkit prompts you to install it.
 * Azure Functions binding extensions defined in `api/extensions.csproj`, if Azure Functions binding extensions isn't installed, then Teams Toolkit installs Azure Functions binding extensions.
-* NPM packages, applicable for tab app, bot app, message extension app, and Azure Functions. If NPM packages aren't installed, then Teams Toolkit installs all NPM packages.
+* npm packages, applicable for tab app, bot app, message extension, and Azure Functions. If npm packages aren't installed, then Teams Toolkit installs all npm packages.
 * Bot and message extension, Teams Toolkit starts Ngrok to create an HTTP tunnel for bot and message extension.
 * Ports available, if tab, bot, message extension, and Azure Functions ports are unavailable, the local debug terminates.
 
@@ -96,9 +93,9 @@ Use the following .NET Core versions:
 > [!NOTE]
 > If the development certificate for localhost isn't installed for tab in Windows or MacOS, the Teams Toolkit prompts you to install it.</br> -->
 
-When you select **Start Debugging (F5)**, the Teams Toolkit output channel displays the progress and result after checking the prerequisites.
+When you select **Start Debugging (F5)**, Teams Toolkit output channel displays the progress and result after checking the prerequisites.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/prerequisites-debugcheck.png" alt-text="Prerequisites check summary" lightbox="../assets/images/teams-toolkit-v2/debug/prerequisites-debugcheck.png":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/prerequisites-debugcheck1.png" alt-text="Prerequisites check summary" lightbox="../assets/images/teams-toolkit-v2/debug/prerequisites-debugcheck1.png":::
 
 ## Register and configure Teams app
 
@@ -106,17 +103,17 @@ In the set-up process, Teams Toolkit prepares the following registrations and co
 
 1. [Registers and configures Microsoft Azure Active Directory(Azure AD) app](#registers-and-configures-microsoft-azure-active-directoryazure-ad-app)
 
-1. [Registers and configures bot](#registers-and-configures-bot).
+1. [Registers and configures bot](#registers-and-configures-bot)
 
-1. [Registers and configures Teams app](#registers-and-configures-teams-app).
+1. [Registers and configures Teams app](#registers-and-configures-teams-app)
 
 ### Registers and configures Microsoft Azure Active Directory(Azure AD) app
 
 1. Registers an Azure AD app.
 
-1. Creates a Client Secret.
+2. Creates a Client Secret.
 
-1. Exposes an API.
+3. Exposes an API.
 
     a. Configures Application ID URI. For tab, `api://localhost/{appId}`. For bot or message extension,  `api://botid-{botid}`.
 
@@ -137,16 +134,16 @@ In the set-up process, Teams Toolkit prepares the following registrations and co
       | --- | --- |
       | Teams desktop, mobile | 1fec8e78-bce4-4aaf-ab1b-5451cc387264 |
       | Teams web | 5e3ce6c0-2b1f-4285-8d4b-75ee78787346 |
-      | Office.com | 4345a7b9-9a63-4910-a426-35363201d503 |
-      | Office.com | 4765445b-32c6-49b0-83e6-1d93765276ca |
-      | Office desktop | 0ec893e0-5785-4de6-99da-4ed124e5296c |
+      | microsoft365.com (formerly office.com) | 4345a7b9-9a63-4910-a426-35363201d503 |
+      | microsoft365.com (formerly office.com) | 4765445b-32c6-49b0-83e6-1d93765276ca |
+      | Microsoft 365 desktop app | 0ec893e0-5785-4de6-99da-4ed124e5296c |
       | Outlook desktop | d3590ed6-52b3-4102-aeff-aad2292ab01c |
       | Outlook Web Access | 00000002-0000-0ff1-ce00-000000000000 |
       | Outlook Web Access | bc59ab01-8403-45c6-8796-ac3ef710b3e3 |
 
 ### Registers and configures bot
 
-For tab app or message extension app:
+For tab app or message extension:
 
 1. Registers an Azure AD application.
 
@@ -178,6 +175,7 @@ You can view the project folders and files under **Explorer** in Visual Studio C
 
 ## See also
 
+* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
 * [Debug your Teams app using Teams Toolkit](debug-local.md)
 * [Use Teams Toolkit to provision cloud resources](provision.md)
 * [Deploy to the cloud](deploy.md)

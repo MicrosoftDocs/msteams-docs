@@ -58,7 +58,7 @@ items:
 
     ### Check for sideloading option
 
-    After creating the app, you must load your app in Teams without distributing it. The function is known as sideloading. Sign-in to your Microsoft 365 account to view this option.
+    After creating the app, you must load your app in Teams without distributing it. The function is known as sideloading. Sign in to your Microsoft 365 account to view this option.
 
     > [!NOTE]
     > Sideloading is necessary for previewing and testing apps in Teams local environment. Enable Sideloading to preview and test your app in Teams locally.
@@ -73,7 +73,7 @@ items:
 
        :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/upload-app.png" alt-text=" upload an app in Teams.":::
 
-    1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
+    1. Look for the option to **Upload a customised app**. If you see the option, sideloading apps is enabled.
 
         :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/upload-custom-app1.png" alt-text="Illustration shows the option to upload a custom app in Teams.":::
 
@@ -86,12 +86,12 @@ items:
 
     1. Go to the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
     1. Select **Join Now** and follow the onscreen instructions.
-    1. Select Set-up E5 subscription** from the welcome screen.
+    1. Select **Set-up E5 subscription** from the welcome screen.
     1. Set up administrator account. After you finish, the following screen displays.
 
        :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/microsoft-365.png" alt-text="Microsoft" border="true":::
 
-    1. Sign-in to Teams using the new administrator account. Now you can select **Upload a custom app**.
+    1. Sign in to Teams using the new administrator account. Now you can select **Upload a custom app**.
 
 - title: Set up local environment
   durationInMinutes: 1 
@@ -137,7 +137,8 @@ items:
        1.  Set **Name** to your app name
        1.  Set **Supported account types** to any account type
        1.  Leave the **Redirect URI** empty
-       1.  Select **Register**
+    
+    1. Select **Register**.
 
        App **Overview** page appears.
 

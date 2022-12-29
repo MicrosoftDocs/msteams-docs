@@ -30,7 +30,7 @@ For more information, see [authenticate a user in your Microsoft Teams](~/concep
 You can access context information in two ways:
 
 * Using [URL placeholder values](#get-context-by-inserting-url-placeholder-values).
-* From the Microsoft Teams JavaScript client SDK [context](/javascript/api/@microsoft/teams-js/app.context) object.
+* From the Microsoft Teams JavaScript client library [context](/javascript/api/@microsoft/teams-js/app.context) object.
 
 ### Get context by inserting URL placeholder values
 
@@ -62,7 +62,7 @@ For example, in your app manifest if you set your tab *configurationUrl* attribu
 
 ### Get context by using the Microsoft Teams JavaScript library
 
-You can also retrieve the information listed above using the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client) by calling `microsoftTeams.getContext(function(context) { /* ... */ })`.
+You can also retrieve the information listed above using the [Microsoft Teams JavaScript client library](/javascript/api/overview/msteams-client) by calling `microsoftTeams.getContext(function(context) { /* ... */ })`.
 
 The following code provides an example of context variable:
 
@@ -216,7 +216,7 @@ The following table lists commonly used context properties of the *context* obje
 | channel.defaultOneNoteSectionId | defaultOneNoteSectionId | The OneNote section ID that is linked to the channel. |
 | page.isMultiWindow | isMultiWindow | The indication whether the tab is in a pop out window. |
 
-For more information, see [Updates to the *Context* interface](using-teams-client-sdk.md#updates-to-the-context-interface) and the [Context interface](/javascript/api/@microsoft/teams-js/app.context) API reference.
+For more information, see [Updates to the *Context* interface](using-teams-client-library.md#updates-to-the-context-interface) and the [Context interface](/javascript/api/@microsoft/teams-js/app.context) API reference.
 
 ## Retrieve context in private channels
 
@@ -244,7 +244,7 @@ If your page makes use of any of these values, the value of `channel.membershipT
 When the content UX is loaded in a shared channel, use the data received from `getContext` call for  shared channel changes. If tab makes use of any of the following values, you must populate the `channelType` field to determine if the tab is loaded in a shared channel, and respond appropriately.
 For shared channels, the `groupId` value is `null`, since the host team's groupId doesn't accurately reflect the true membership of the shared channel. To address this, the `hostTeamGroupID` and `hostTenantID` properties are newly added and useful for making Microsoft Graph API calls to retrieve membership. `hostTeam` refers to the Team that created the shared channel. `currentTeam` refers to Team that the current user is accessing the shared channel from.
 
-For more information about these concepts, see [Shared channels](~/concepts/build-and-test/shared-channels.md).
+For more information about these concepts, see [shared channels](~/concepts/build-and-test/shared-channels.md).
 
 Use the following `getContext` properties in shared channels:
 
@@ -266,7 +266,7 @@ Use the following `getContext` properties in shared channels:
 |`userObjectId`|  The property describes current user’s ID.|
 |`userPrincipalName`| The property describes the current user’s UPN.|
 
-For more information on shared channels, see [Shared channels](~/concepts/build-and-test/shared-channels.md).
+For more information on shared channels, see [shared channels](~/concepts/build-and-test/shared-channels.md).
 
 ## Handle theme change
 
@@ -280,10 +280,10 @@ The `theme` argument in the function is a string with a value of `default`, `dar
 > [Build tabs with Adaptive Cards](~/tabs/how-to/build-adaptive-card-tabs.md)
 
 ## See also
-
-* [Tab design guidelines](../../tabs/design/tabs.md)
-* [Teams tabs](~/tabs/what-are-tabs.md)
-* [Create a personal tab](~/tabs/how-to/create-personal-tab.md)
-* [Create a channel or group tab](~/tabs/how-to/create-channel-group-tab.md)
-* [Use task modules in tabs](~/task-modules-and-cards/task-modules/task-modules-tabs.md)
+* [Build tabs for Teams](../what-are-tabs.md)
+* [Design your tab for Microsoft Teams](../design/tabs.md)
+* [Enable SSO for tab app](authentication/tab-sso-overview.md)
+* [Microsoft Teams Connect shared channels](../../concepts/build-and-test/shared-channels.md)
+* [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
+* [Use task modules in tabs](../../task-modules-and-cards/task-modules/task-modules-tabs.md)
 * [Tabs link unfurling and Stage View](../tabs-link-unfurling.md)

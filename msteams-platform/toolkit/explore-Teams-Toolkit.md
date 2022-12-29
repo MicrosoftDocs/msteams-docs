@@ -1,7 +1,7 @@
 ---
 title: Explore Teams Toolkit 
 author: zyxiaoyuer
-description: In this module, learn on exploring Teams Toolkit
+description: Learn about Teams Toolkit UI elements and task pane for Visual Studio Code, and different functions for Visual Studio.
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
@@ -10,62 +10,61 @@ zone_pivot_groups: teams-app-platform
 ---
 # Explore Teams Toolkit
 
-In this document you can understand different UI elements along with description and basic usage in Teams Toolkit for both Visual Studio Code and Visual Studio.
+In this document, you can understand different UI elements along with description and basic usage in Teams Toolkit.
 
 ::: zone pivot="visual-studio-code"
 
-## Teams Toolkit for Visual Studio Code basic UI elements
+## Basic UI elements of Teams Toolkit
 
-After Teams Toolkit installation, you'll see the Teams Toolkit UI as shown in the following image:
+After Teams Toolkit installation, the following Teams Toolkit UI appears:
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/overview1.png" alt-text="Overview of Teams Toolkit":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/overview1_1.png" alt-text="Overview of Teams Toolkit" lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/overview1_1.png":::
 
-| Serial No | UI Elements | Definition |
+| Serial No. | UI Elements | Definition |
 | --- | --- |
-| 1 | **Get Started** | Explore Teams Toolkit. |
-| &nbsp; | **Tutorials** | Access different tutorials. |
-| &nbsp; | **Documentation** | Access the Microsoft Teams Developer Documentation. |
-| 2 | **Create a new Teams App** | Create a new Teams app based on your requirement. |
-| 3 | **View Samples** | Build different types of app based on existing samples. |
-| 4 | **Open Folder** | Open the existing Teams app. |
-| 5 | **New File** | Create new file. |
+| 1 | **Get Started** | Explore Teams Toolkit and get an overview of the fundamentals. |
+| 2 | **Create a new Teams app** | Create a new Teams app based on your requirement. |
+| 3 | **View samples** | Access existing samples to build apps based on your requirement. |
+| 4 | **Documentation** | Access the Microsoft Teams Developer documentation. |
+| 5 | **Tutorials** | Access different tutorials. |
+| 6 | **New File** | Create a new file. |
 | &nbsp; | **Open File** | Open the existing file. |
 | &nbsp; | **Open Folder** | Open the existing folder. |
-| 6 | **Recent** | View the recent files. |
+| 7 | **Recent** | View the recent files. |
 
-### Exploring the Teams Toolkit task pane
+### Explore the Teams Toolkit task pane
 
-You can explore more UI elements from task pane in Teams Toolkit. Task pane is visible only after creating an app using Teams Toolkit. The following video helps you to know about the process of creating new Teams app and after this process you can view the task pane in Teams Toolkit.
+You can explore UI elements from task pane in the Teams Toolkit. Task pane appears after creating an app using Teams Toolkit. The following video helps you to learn about the process of creating a new Teams app:
 
-   ![Create a Teams app](~/assets/videos/javascript-tab-app1.gif)
+   :::image type="content" source="../assets/videos/javascript-bot-app1_1.gif" alt-text="Create a Teams app":::
 
-After creating a new Teams app, you can see the directory structure of the app in the left panel and the readme file in the right panel.
+After creating a new Teams app, the directory structure of the app appears in the left panel and the **`README`** file in the right panel.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/first-page.png" alt-text="First page of Teams Toolkit":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/first-page_1.png" alt-text="First page of Teams Toolkit" lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/first-page_1.png":::
 
 Let's take a tour of the Teams Toolkit UI.
 
- In Visual Studio Code toolbar, The following icons are relevant to the Teams Toolkit:
+ In Visual Studio Code activity bar, the following icons are relevant to the Teams Toolkit:
 
 | Icon | Description |
 | --- | --- |
 | **Explorer** :::image type="icon" source="../assets/images/teams-toolkit-v2/file-explorer-icon.PNG":::  | To view the directory structure of the app. |
 | **Run and Debug** :::image type="icon" source="../assets/images/teams-toolkit-v2/run-debug-icon.PNG":::  | To start the local or remote debug process. |
-| **Teams Toolkit** :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG"::: | To view the task pane  in Teams Toolkit. |
+| **Teams Toolkit** :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG"::: | To view the task pane  in the Teams Toolkit. |
 
-From the task pane you can see the following sections:
+From the task pane, you can see the following sections:
 
 :::row:::
    :::column span="":::
-      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/accounts1.png" alt-text="accounts section":::
+      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/accounts1_1.png" alt-text="accounts section":::
    :::column-end:::
    :::column span="":::
 
         To develop a Teams app, you need the following accounts:
         
-        * **Sign in to M365**: Use your Microsoft 365 account with a valid E5 subscription for building your app.
+        * **Sign in to Microsoft 365**: Use your Microsoft 365 account with a valid E5 subscription for building your app.
 
-        * **Sign in to Azure**: Use your Azure account for deploying app on Azure. You can [create a free Azure account](https://azure.microsoft.com/free/) before you start.
+        * **Sign in to Azure**: Use your Azure account for deploying an app on Azure. You can [create a free Azure account](https://azure.microsoft.com/free/) before you start.
    :::column-end:::
 :::row-end:::
 
@@ -85,19 +84,21 @@ From the task pane you can see the following sections:
 
 :::row:::
    :::column span="":::
-      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/development.png" alt-text="Development section":::
+      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/development_1.png" alt-text="Development section":::
    :::column-end:::
    :::column span="":::
 
-        To create and customize your Teams app, you need the following features:
+        To create, customize, and debug your Teams app, you need the following features:
         
-       * **Create a new Teams app**: Use the toolkit wizard to prepare project scaffolding for app development.
+       * **Create a new Teams app**: Use the Teams Toolkit wizard to prepare project scaffolding for app development.
 
-        * **View samples**: Select any of Teams Toolkit's sample apps. The toolkit downloads the app code from GitHub, and you can build the sample app.
+        * **View samples**: Select any of the Teams Toolkit's sample apps. The toolkit downloads the app code from GitHub and you can build the sample app.
         
-        * **Add features**: Add other required Teams capabilities to Teams app during development process and add optional cloud resources suitable for your app.
+        * **Add features**: Add other required Teams capabilities to the Teams app during the development process and add optional cloud resources suitable for your app.
        
-        * **Edit manifest file**: Edit the Teams app integration with Teams client.
+        * **Preview your Teams app (F5)**: Press **F5** to debug and preview your Teams app.
+
+        * **Edit manifest file**: Edit the Teams app integration with the Teams client.
    :::column-end:::
 :::row-end:::
 
@@ -107,7 +108,7 @@ From the task pane you can see the following sections:
    :::column-end:::
    :::column span="":::
 
-        To provision, deploy and publish your Teams app, you need the following features:
+        To provision, deploy, and publish your Teams app, you need the following features:
         
         * **Provision in the cloud**: Allocate Azure resources for your application. Teams Toolkit is integrated with Azure Resource Manager.
 
@@ -127,13 +128,13 @@ From the task pane you can see the following sections:
    :::column-end:::
    :::column span="":::
 
-        To access more information on Teams Toolkit. you need the following documentation and resources.
+        To access more information on Teams Toolkit, you need the following documentation and resources:
         
-        * **Get started**: View the Teams Toolkit Get started help within Visual Studio Code.
+        * **Get started**: View Teams Toolkit Get started help within Visual Studio Code.
 
         * **Tutorials**: Select to access different tutorials.
         
-        * **Documentation**: Select to access the Microsoft Teams Developer Documentation.
+        * **Documentation**: Select to access the Microsoft Teams Developer documentation.
        
         * **Report issues on GitHub**: Select to access GitHub page and raise any issues.
    :::column-end:::
@@ -145,57 +146,55 @@ From the task pane you can see the following sections:
 
 ## Explore Teams Toolkit for Visual Studio
 
-After you install Teams Toolkit, you can view Teams Toolkit options in two different methods:
+After Teams Toolkit installation, you can see Teams Toolkit options in the following ways:
 
 # [Project](#tab/prj)
 
 You can access Teams Toolkit under **Project**.
 
 1. Select **Project** > **Teams Toolkit**.
-1. You can now access different Teams Toolkit options.
+1. You can access different Teams Toolkit options.
 
-   :::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-operations-menu_1.png" alt-text="Teams toolkit operations menu":::
+   :::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-operations-menu_1_2.png" alt-text="Teams toolkit operations menu":::
 
 # [Solution Explorer](#tab/solutionexplorer)
 
    You can access Teams Toolkit under **Solution Explorer**.
 
-1. Select **View** > **Solution Explorer** to view Solution Explorer panel.
+1. Select **View** > **Solution Explorer** to view **Solution Explorer** panel.
 1. Right-click on your **Project**.
 1. Select **Teams Toolkit** to access different Teams Toolkit options.
 
-   :::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-operations-menu1_1.png" alt-text="Teams toolkit operations from Project":::
+   :::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-operations-menu1_1_2.png" alt-text="Teams toolkit operations from Project":::
 
    > [!NOTE]
-   > In this scenario the project name is **MyTeamsApp1**.
+   > In this scenario the project name is **MyTeamsApp**.
 
 ---
 
-After you have created your Teams Project, you can perform the following functions on Teams Toolkit for Visual Studio:
+After you've created your Teams Project, you can perform the following functions in Teams Toolkit for Visual Studio:
 
-:::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-menu-options.png"alt-text="Teams toolkit operations from Project menu":::
+:::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-menu-options_2.png"alt-text="Teams toolkit operations from Project menu":::
 
 |Function  |Description  |
 |---------|---------|
-|Prepare Teams App Dependencies     |Before you do a local debug perform this step, it helps you to set up the local debug dependencies and register Teams app in Teams platform. You need a Microsoft 365 account. For more information, see [Debug your Teams app locally using Visual Studio](debug-teams-app-visual-studio.md)         |
-|Open Manifest File     |To open Teams manifest file, you can hover over the parameters to preview the values. For more information, see [Edit Teams app manifest using Visual Studio](VS-TeamsFx-preview-and-customize-app-manifest.md)         |
-|Update Manifest in Teams Developer Portal     |When you update the manifest file, only then you can redeploy the manifest file to Azure without deploying the whole project again. Use this command to update your changes to remote. For more information, see [Edit Teams app manifest using Visual Studio](VS-TeamsFx-preview-and-customize-app-manifest.md)       |
-|Provision to the Cloud     |This option helps you to create Azure resources that host your Teams app. For more information, see [Provision cloud resources using Visual Studio](provision-cloud-resources.md)        |
-|Deploy to the Cloud     |This option helps you to copy your code to the Azure resources created when you did “Provision to the Cloud”. For more information, see [Deploy Teams app to the cloud using Visual Studio](deploy-teams-app.md)        |
-|Preview in Teams     |This option launches the Teams web client and lets you preview Teams app in their browser.         |
-|Zip App Package     |This option generates a Teams app package in the `Build` folder under the project. You can upload the package to Teams client and run the Teams app.         |
+|Prepare Teams App Dependencies     |Before you debug locally, perform this step. It helps you to set up the local debug dependencies and register Teams app in the Teams platform. You need a Microsoft 365 account. For more information, see [how to debug your Teams app locally using Visual Studio](debug-local.md).         |
+|Open Manifest File     |To open Teams app manifest file, you can hover over the parameters to preview the values. For more information, see [how to edit Teams app manifest using Visual Studio](VS-TeamsFx-preview-and-customize-app-manifest.md).         |
+|Update Manifest in Teams Developer Portal     |When you update the manifest file, only then you can redeploy the manifest file to Azure without deploying the whole project again. Use this command to update your changes to remote. For more information, see [how to edit Teams app manifest using Visual Studio](VS-TeamsFx-preview-and-customize-app-manifest.md).       |
+|Add Authentication Code     |This option helps you to obtain signed-in Teams user token to access Microsoft Graph and other APIs. Teams Toolkit facilitates the interaction by abstracting from the Microsoft Azure Active Directory (Azure AD) which flows and integrations with simple APIs. For more information, see [how to add single sign-on to Teams app](add-single-sign-on.md).        |
+|Provision to the Cloud     |This option helps you to create Azure resources that host your Teams app. For more information, see [how to provision cloud resources using Visual Studio](provision-cloud-resources.md).        |
+|Deploy to the Cloud     |This option helps you to copy your code to the Azure resources created when you provisioned to the cloud. For more information, see [how to deploy Teams app to the cloud using Visual Studio](deploy.md#deploy-teams-app-to-the-cloud-using-visual-studio).        |
+|Preview in Teams     |This option launches the Teams web client and lets you preview the Teams app in your browser.         |
+|Zip App Package     |This option generates a Teams app package in the `Build` folder under the project. You can upload the package to the Teams client and run the Teams app.         |
 
 ::: zone-end
 
 ## See also
 
-* [Install Teams Toolkit](install-Teams-Toolkit.md)
+* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
 * [Create a new Teams app using Teams Toolkit](create-new-project.md)
-* [Prepare to build apps using Microsoft Teams Toolkit](build-environments.md)
-* [Provision cloud resources using Teams Toolkit](provision.md)
-* [Create new Teams app in Visual Studio](create-new-teams-app-for-Visual-Studio.md)
-* [Provision cloud resources using Visual Studio](provision-cloud-resources.md)
-* [Deploy Teams app to the cloud using Visual Studio](deploy-teams-app.md)
+* [App manifest schema](../resources/schema/manifest-schema.md)
+* [Prepare to build apps using Teams Toolkit](build-environments.md)
 
 <!--  
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/ui-elements.png" alt-text="UI Elements":::
