@@ -72,3 +72,7 @@ Set up your dev environment to build Teams apps for Microsoft 365:
 
 > [!div class="nextstepaction"]
 > [Install prerequisites](prerequisites.md)
+
+## See also
+
+[Manage access to the enhanced apps](/microsoftteams/manage-third-party-teams-apps#manage-users-access-to-the-enhanced-apps)
