@@ -656,7 +656,9 @@ Specify the app's Graph connector configuration. If this is present, then [webAp
 
 Indicates if or not to show the loading indicator when an app or tab is loading. Default is **false**.
 >[!NOTE]
->If you select `showLoadingIndicator` as true in your app manifest, to load the page correctly, modify the content pages of your tabs and task modules as described in [Show a native loading indicator](../../tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator) document.
+>
+> * If you select `showLoadingIndicator` as true in your app manifest, to load the page correctly, modify the content pages of your tabs and task modules as described in [Show a native loading indicator](../../tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator) document.
+> * If you don't modify the content pages of your tab, the tab app doesn't load and shows the error `There was a problem reaching this app`.
 
 
 ## isFullScreen
