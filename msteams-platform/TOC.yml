@@ -114,7 +114,7 @@
       href: task-modules-and-cards/task-modules/design-teams-task-modules.md
     - name: Activity feed notifications
       href: concepts/design/activity-feed-notifications.md
-      displayName: notify, notification 
+      displayName: notify, notification
   - name: App customization
     href: concepts/design/enable-app-customization.md
     displayName: Customize your app, update app name, branding, hide and unhide app, accent 
@@ -639,6 +639,9 @@
     displayName: Permissions, delegated
   - name: Proactive installation of apps using Graph API to send messages
     href: graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md
+  - name: Send activity feed notifications
+    href: /graph/teams-send-activityfeednotifications
+    displayName: activity feed, notification
   - name: Import third-party messages
     href: graph-api/import-messages/import-external-messages-to-teams.md
   - name: Code samples

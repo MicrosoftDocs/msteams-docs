@@ -10,7 +10,7 @@ metadata:
   nextTutorialHref: ~/get-started/get-started-overview.md
   nextTutorialTitle: Back to Get started overview
   ms.custom: mvc
-  ms.localizationpriority: high
+  ms.localizationpriority: medium
 items:
 - durationInMinutes: 1
   content: |
