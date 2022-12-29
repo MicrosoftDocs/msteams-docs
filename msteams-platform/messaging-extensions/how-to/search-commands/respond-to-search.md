@@ -1,10 +1,10 @@
 ---
 title: Respond to search command
 author: surbhigupta
-description: Learn how to respond to the search command from a messaging extension in a Microsoft Teams app using code examples and samples
+description: Learn how to respond to the search command from a message extension in a Microsoft Teams app. Understand how to respond to the user request.
 ms.topic: conceptual
 ms.author: anclear
-ms.localizationpriority: none
+ms.localizationpriority: medium
 ---
 # Respond to search command
 
@@ -26,20 +26,24 @@ The request parameters are found in the `value` object in the request, which inc
 | `queryOptions` | Pagination parameters: <br>`skip`: Skip count for this query <br>`count`: Number of elements to return. |
 
 # [C#/.NET](#tab/dotnet)
+* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmessagingextensionqueryasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-teams-teamsactivityhandler-onteamsmessagingextensionqueryasync(microsoft-bot-builder-iturncontext((microsoft-bot-schema-iinvokeactivity))-microsoft-bot-schema-teams-messagingextensionquery-system-threading-cancellationtoken)&preserve-view=true)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msgext-link-unfurling/csharp/Bots/LinkUnfurlingBot.cs#L32)
 
 ```csharp
 protected override async Task<MessagingExtensionResponse> OnTeamsMessagingExtensionQueryAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionQuery query, CancellationToken cancellationToken)
 {
-  //code to handle the query
+  // Code to handle the query.
 }
 ```
 
 # [TypeScript/Node.js](#tab/typescript)
 
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msgext-search/nodejs/bots/teamsMessagingExtensionsSearchBot.js#L16)
+
 ```typescript
 class TeamsMessagingExtensionsSearch extends TeamsActivityHandler {
     async handleTeamsMessagingExtensionQuery(context, query) {
-  //code to handle the query
+  // Code to handle the query.
     }
 }
 ```
@@ -80,7 +84,7 @@ Your service must respond with the results matching the user query. The response
 |Property name|Purpose|
 |---|---|
 |`composeExtension`|Top-level response envelope.|
-|`composeExtension.type`|Type of response. The following types are supported: <br>`result`: Displays a list of search results <br>`auth`: Asks the user to authenticate <br>`config`: Asks the user to set up the messaging extension <br>`message`: Displays a plain text message |
+|`composeExtension.type`|Type of response. The following types are supported: <br>`result`: Displays a list of search results <br>`auth`: Prompts the user to authenticate <br>`config`: Prompts the user to set up the message extension <br>`message`: Displays a plain text message |
 |`composeExtension.attachmentLayout`|Specifies the layout of the attachments. Used for responses of type `result`. <br>Currently, the following types are supported: <br>`list`: A list of card objects containing thumbnail, title, and text fields <br>`grid`: A grid of thumbnail images |
 |`composeExtension.attachments`|Array of valid attachment objects. Used for responses of type `result`. <br>Currently, the following types are supported: <br>`application/vnd.microsoft.card.thumbnail` <br>`application/vnd.microsoft.card.hero` <br>`application/vnd.microsoft.teams.card.o365connector` <br>`application/vnd.microsoft.card.adaptive`|
 |`composeExtension.suggestedActions`|Suggested actions. Used for responses of type `auth` or `config`. |
@@ -121,7 +125,7 @@ protected override async Task<MessagingExtensionResponse> OnTeamsMessagingExtens
 {
   var text = query?.Parameters?[0]?.Value as string ?? string.Empty;
 
-  //searches NuGet for a package
+  // Searches NuGet for a package.
   var obj = JObject.Parse(await (new HttpClient()).GetStringAsync($"https://azuresearch-usnc.nuget.org/query?q=id:{text}&prerelease=true"));
   var packages = obj["data"].Select(item => (item["id"].ToString(), item["version"].ToString(), item["description"].ToString()));
 
@@ -149,6 +153,8 @@ protected override async Task<MessagingExtensionResponse> OnTeamsMessagingExtens
 ```
 
 # [TypeScript/Node.js](#tab/typescript)
+
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msgext-search-quickstart/js/botActivityHandler.js#L35)
 
 ```typescript
 class TeamsMessagingExtensionsSearchBot extends TeamsActivityHandler {
@@ -312,11 +318,12 @@ class TeamsMessagingExtensionsSearchBot extends TeamsActivityHandler {
 ### Enable and handle tap actions
 
 # [C#/.NET](#tab/dotnet)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msgext-search/csharp/Bots/TeamsMessagingExtensionsSearchBot.cs#L80)
 
 ```csharp
 protected override Task<MessagingExtensionResponse> OnTeamsMessagingExtensionSelectItemAsync(ITurnContext<IInvokeActivity> turnContext, JObject query, CancellationToken cancellationToken)
 {
-    // The Preview card's Tap should have a Value property assigned, this will be returned to the bot in this event. 
+    // The Preview card's Tap should have a Value property assigned, this will be returned to the bot in this event.
     var (packageId, version, description, projectUrl, iconUrl) = query.ToObject<(string, string, string, string, string)>();
 
     var card = new ThumbnailCard
@@ -344,6 +351,8 @@ protected override Task<MessagingExtensionResponse> OnTeamsMessagingExtensionSel
 ```
 
 # [TypeScript/Node.js](#tab/typescript)
+
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msgext-search/nodejs/bots/teamsMessagingExtensionsSearchBot.js#L115)
 
 ```typescript
 async handleTeamsMessagingExtensionSelectItem(context, obj) {
@@ -377,11 +386,11 @@ async handleTeamsMessagingExtensionSelectItem(context, obj) {
 * * *
 
 > [!NOTE]
-> `OnTeamsMessagingExtensionSelectItemAsync` is not triggered in mobile teams application.
+> `OnTeamsMessagingExtensionSelectItemAsync` is not triggered in mobile Teams application.
 
 ## Default query
 
-If you set `initialRun` to `true` in the manifest, Microsoft Teams issues a **default** query when the user first opens the messaging extension. Your service can respond to this query with a set of pre-populated results. This is useful when your search command requires authentication or configuration, displaying recently viewed items, favorites, or any other information that isn't dependent on user input.
+If you set `initialRun` to `true` in the manifest, Microsoft Teams issues a **default** query when the user first opens the message extension. Your service can respond to this query with a set of pre-populated results. This is useful when your search command requires authentication or configuration, displaying recently viewed items, favorites, or any other information that isn't dependent on user input.
 
 The default query has the same structure as any regular user query, with the `name` field set to `initialRun` and `value` set to `true` as shown in the following object:
 
@@ -410,14 +419,16 @@ The default query has the same structure as any regular user query, with the `na
 
 | Sample Name           | Description | .NET    | Node.js   |
 |:---------------------|:--------------|:---------|:--------|
-|Teams messaging extension action| Describes how to define action commands, create task module, and  respond to task module submit action. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) |
-|Teams messaging extension search   |  Describes how to define search commands and respond to searches.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
+|Teams message extension action| Describes how to define action commands, create task module, and  respond to task module submit action. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/nodejs) |
+|Teams message extension search   |  Describes how to define search commands and respond to searches.        |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/nodejs)|
 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Add authentication to a messaging extension](~/messaging-extensions/how-to/add-authentication.md)
+> [Add authentication to a message extension](~/messaging-extensions/how-to/add-authentication.md)
 
 ## See also
 
-[Add configuration to a messaging extension](~/get-started/first-message-extension.md)
+* [Message extensions](../../what-are-messaging-extensions.md)
+* [Build your first tab app using JavaScript](../../../sbs-gs-javascript.yml)
+* [composeExtensions](../../../resources/schema/manifest-schema.md#composeextensions)

@@ -23,7 +23,7 @@ Ensure that you verify the following app manifest changes for resource-specific 
 
 <details>
 
-<summary><b>RSC permissions for app manifest version 1.12</b></summary>
+<summary><b>RSC permissions for app manifest version 1.12 and later</b></summary>
 
 Add a [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) key to your app manifest with the following values:
 
@@ -189,7 +189,7 @@ Example for RSC in a chat
 
 <details>
 
-<summary><b>RSC permissions for app manifest version 1.11 or earlier</b></summary>
+<summary><b>RSC permissions for app manifest version 1.11 and earlier</b></summary>
 
 Add a [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) key to your app manifest with the following values:
 
@@ -268,7 +268,7 @@ To check whether the RSC permissions are being honored by the API request payloa
 
 * `azureADAppId`: Your app's Azure AD app ID.
 * `azureADAppSecret`: Your Azure AD app password.
-* `token_scope`: The scope is required to get a token. set the value to https://graph.microsoft.com/.default.
+* `token_scope`: The scope is required to get a token. Set the value to `https://graph.microsoft.com/.default`.
 * `teamGroupId`: You can get the team group id from the Teams client as follows:
 
     1. In the Teams client, select **Teams** from the far left navigation bar.
@@ -283,7 +283,7 @@ To check whether the RSC permissions are being honored by the API request payloa
 
 * `azureADAppId`: Your app's Azure AD app ID.
 * `azureADAppSecret`: Your Azure AD app password.
-* `token_scope`: The scope is required to get a token. set the value to https://graph.microsoft.com/.default.
+* `token_scope`: The scope is required to get a token. Set the value to `https://graph.microsoft.com/.default`.
 * `tenantId`: The name or the Azure AD Object ID of your tenant.
 * `chatId`: You can get the chat thread id from the Teams *web* client as follows:
 
@@ -299,7 +299,7 @@ To check whether the RSC permissions are being honored by the API request payloa
 3. Select the **Collections** tab.
 4. Select the chevron **>** next to the **Test RSC** to expand the details view and see the API requests.
 
-Execute the entire permissions collection for each API call. The permissions that you specified in your app manifest must succeed, while those not specified must fail with an HTTP 403 status code. Check all of the response status codes to confirm that the behavior of the RSC permissions in your app meet expectations.
+Execute the entire permissions collection for each API call. The permissions that you specified in your app manifest must succeed, while those not specified must fail with an HTTP 403 status code. Check all of the response status codes to confirm that the behavior of the RSC permissions in your app meets expectations.
 
 > [!NOTE]
 > To test specific DELETE and READ API calls, add those instance scenarios to the JSON file.
@@ -314,5 +314,5 @@ Execute the entire permissions collection for each API call. The permissions tha
 
 ## See also
 
+* [Test your app](../../concepts/build-and-test/test-app-overview.md)
 * [Microsoft Graph API and Teams](/graph/api/resources/teams-api-overview?view=graph-rest-1.0&preserve-view=true)
-* [Resource-specific consent](~/graph-api/rsc/resource-specific-consent.md)

@@ -3,7 +3,6 @@ title: Localize JSON schema reference
 description: Describes the localization schema supported by the localization file for Microsoft Teams using an example schema
 ms.topic: reference
 ms.localizationpriority: medium
-keywords: teams manifest schema localization
 ms.date: 05/20/2019
 ---
 
@@ -20,16 +19,17 @@ Example of localization JSON schema is as follows:
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",
-  "name.short": "Le App Studio",
-  "name.full": "App Studio pour Microsoft Teams",
-  "description.short": "Créez d'excellentes applications pour Microsoft Teams avec App Studio.",
-  "description.full": "Créez de nouvelles applications Microsoft Teams, concevez et prévisualisez des cartes bot, et explorez la documentation avec App Studio.",
-  "staticTabs[0].name": "Editeur de manifest",
-  "staticTabs[1].name": "Editeur de cartes",
-  "staticTabs[2].name": "Bibliothèque de contrôles",
-  "bots[0].commandLists[0].commands[0].title": "chercher",
-  "bots[0].commandLists[0].commands[0].description": "Rechercher la documentation Teams pertinente"
+    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.9/MicrosoftTeams.Localization.schema.json",
+    "name.short": "Portail de Développement",
+    "name.full": "Portail des développeurs",
+    "description.short": "Configurer, distribuer et gérer vos applications Microsoft Teams",
+    "description.full": "Anciennement App Studio, le portail des développeurs peut vous aider où que vous soyez dans votre parcours de développement d’applications Microsoft Teams.1. Configurez une nouvelle application ou importez une application existante.2. Configurez les fonctionnalités de votre application et d’autres métadonnées importantes.3. Obtenez des ressources pour vous aider à créer une application de haute qualité.3. Testez votre application directement dans Teams.4. Distribuez votre application dans votre organisation ou dans le Store Teams.5. Analysez l’utilisation, l’engagement et d’autres informations sur votre application. Le portail inclut également des outils pour concevoir des scènes virtuelles personnalisées, des cartes adaptatives et l’intégration à la Plateforme d’identités Microsoft.",
+    "staticTabs[0].name": "Accueil",
+    "staticTabs[1].name": "Applications",
+    "staticTabs[2].name": "Outils",
+    "staticTabs[3].name": "Developer Portal",
+    "bots[0].commandLists[0].commands[0].title": "Rechercher",
+    "bots[0].commandLists[0].commands[0].description": "Rechercher la documentation Teams appropriée"
 }
 ```
 
@@ -38,10 +38,10 @@ The schema defines the following properties:
 |Property|Type|Maximum length|Description|
 |---------------|--------|---------|------------------|
 |`$schema`|URI|NA|The https:// URL referencing the JSON Schema for the manifest.|
-|`name.short`|String|30|Replaces the corresponding string from the app manifest with the value provided here.|
-|`name.full`|String|100|Replaces the corresponding string from the app manifest with the value provided here.|
-|`description.short`|String|80|Replaces the corresponding string from the app manifest with the value provided here.|
-|`description.full`|String|4000|Replaces the corresponding string from the app manifest with the value provided here.|
+|`name.short`|String|30|Replaces the corresponding string from the app manifest with the value provided here. The property is required in the localization JSON.|
+|`name.full`|String|100|Replaces the corresponding string from the app manifest with the value provided here. The property is required in the localization JSON.|
+|`description.short`|String|80|Replaces the corresponding string from the app manifest with the value provided here. The property is required in the localization JSON.|
+|`description.full`|String|4000|Replaces the corresponding string from the app manifest with the value provided here. The property is required in the localization JSON.|
 |`staticTabs\\[([0-9]|1[0-5])\\]\\.name`|String|128|Replaces the corresponding strings from the app manifest with the value provided here.|
 |`bots\\[0\\]\\.commandLists\\[[0-2]\\]\\.commands\\[[0-9]\\]\\.title`|String|32|Replaces the corresponding strings from the app manifest with the value provided here.|
 |`bots\\[0\\]\\.commandLists\\[[0-2]\\]\\.commands\\[[0-9]\\]\\.description`|String|128|Replaces the corresponding strings from the app manifest with the value provided here.|
@@ -57,4 +57,5 @@ The schema defines the following properties:
 
 ## See also
 
-[Localize your app](~/concepts/build-and-test/apps-localization.md)
+* [Localize your app](~/concepts/build-and-test/apps-localization.md)
+* [App manifest](manifest-schema.md)

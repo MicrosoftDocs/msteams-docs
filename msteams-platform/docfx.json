@@ -37,16 +37,15 @@
       "globalMetadata": {
         "uhfHeaderId": "MSDocsHeader-MicrosoftTeams",
         "breadcrumb_path": "/microsoftteams/platform/breadcrumb/TOC.json",
-        "extendBreadcrumb": true,
         "manager": "billbl",
         "author": "surbhigupta",
         "ms.suite": "office365",
-        "ms.prod": "msteams",
+        "ms.service": "msteams",
         "ms.author": "lajanuar",
         "searchScope": [ "Teams" ],
         "feedback_system": "GitHub",
         "feedback_github_repo": "MicrosoftDocs/msteams-docs",
-        "feedback_product_url": "https://microsoftteams.uservoice.com/forums/555103-public",
+        "feedback_product_url": "https://feedbackportal.microsoft.com/feedback/forum/ad198462-1c1c-ec11-b6e7-0022481f8472",
         "titleSuffix": "Teams",
         "recommendations": false,
         "zone_pivot_group_filename": "platform/zone-pivot-groups.json"

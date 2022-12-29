@@ -1,95 +1,101 @@
 ---
-title: TeamsFX multiple environments in Teams Toolkit
-author: MuyangAmigo
-description:  About TeamsFX multi environment
-ms.author: nintan
+title: TeamsFX multiple environments in Teams Toolkit    
+author: surbhigupta
+description: In this module, learn about TeamsFX multi environment such as, create a new environment, select target environment and more
+ms.author: v-amprasad
 ms.localizationpriority: medium
-ms.topic: overview of multiple environment
+ms.topic: conceptual
 ms.date: 11/29/2021
 ---
 
-# Manage multiple environments in Teams Toolkit
+# Manage multiple environments
 
- Teams Toolkit provides a simple way for you to create and manage multiple environments, provision, and deploy artifacts to the target environment for Teams App.
+ Teams Toolkit provides a simple way for you to create and manage multiple environments, provision resources, and deploy artifacts to the target environment for your Microsoft Teams app.
 
- With multiple environments, you can perform the following:
+ You can perform the following activities with multiple environments:
 
-1. **Test before production**: It is a common practice to set up multiple environments such as dev, test, and staging before publishing a Teams App to production environment in modern app development lifecycle.
+1. **Test before production**: You can set up multiple environments, such as dev, test, and staging before publishing a Teams app to production environment in modern app development lifecycle.
 
-2. **Manage app behaviors in different environments**: You can set different behaviors for multiple environments such as enable telemetry in production environment but disable it in development environment.
+2. **Manage app behaviors in different environments**: You can set up different app behaviors for multiple environments, such as enabling telemetry in the production environment.
 
-## Prerequisite
+   > [!NOTE]
+   > Ensure that telemetry is disabled in the development environment.
 
-* [Install Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version v3.0.0+.
+   > [!TIP]
+   > Ensure that you have Teams app project opened in Microsoft Visual Studio code.
 
-> [!TIP]
-> Ensure you have Teams app project opened in Microsoft Visual Studio code.
+## Create new environment
 
-## Create a new environment
+After you create a project, Teams Toolkit by default configures:
 
-After creating new project, Teams Toolkit by default creates:
-
-* One `local` environment to represent the local machine environment configurations.
-* One `dev` environment to represent the remote or cloud environment configurations.
-
-> [!NOTE]
-> Each project can have only one `local` environment but multiple remote environments.
-
-To add another remote environment, select the Teams icon in the sidebar, select create new environment the under Environment section as shown in the following image:
-
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/create new env.png" alt-text="create":::
+* **local** environment to represent the local machine environment configuration.
+* **dev** environment to represent the remote or cloud environment configuration.
 
 > [!NOTE]
-> If you have more than one existing environments, you need to select an existing environment to create the same. The command will copy file contents of `config.<newEnv>.json` and `azure.parameters.<newEnv>.json` from the existing environment you selected to the new environment being created.
+> Each project can have one **local** environment but multiple remote environments.
 
-## Select target environment
+Perform the following steps to create a new environment:
 
-You can select the target environment for all environment-related operations. The toolkit prompts and ask for a target environment when you have multiple remote environments as shown in the following image:
+1. Select the **Teams Toolkit** from the Visual Studio Code activity bar.
+2. Select **+ Create new environment** under **ENVIRONMENT**.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview-1.png" alt-text="add env":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/create_new _env_1.PNG" alt-text="Create new environment":::
+
+> [!Note]
+> If you have more than one environment, you need to select an existing environment to create the new environment. The command copies the file contents of `config.<newEnv>.json` and `azure.parameters.<newEnv>.json` from the existing environment you've selected to the new environment created.
+
+## Target environment
+
+Teams Toolkit prompts you to select a target environment when you have multiple remote environments.
+
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview-1_1.png" alt-text="add env":::
 
 ## Project folder structure
 
-After creating the project, you can view the project folders and files in the explorer area of Visual Studio Code. Besides the custom codes, some files are used by Teams Toolkit to maintain the config, state, and template of the app. The following list provides files and outlines their relationship with multiple environments.
+After creating the project, you can view the project folders and files under **EXPLORER** in Visual Studio Code. Besides the custom codes, Teams Toolkit uses some files to maintain the `configs`, `states`, and `templates` of the app. The following list provides files and outlines their relationship with multiple environments:
 
-* `.fx/configs`: configure files that user can customize for the Teams app.
-  * `config.<envName>.json`: per-environment configuration file.
-  * `azure.parameters.<envName>.json`: per-environment parameters file for Azure bicep provision.
-  * `projectSettings.json`: global project settings , which apply to all environments.
-  * `localSettings.json`: local debug configuration file.
-* `.fx/states`: provision result that is generated by the Toolkit.
-  * `state.<envName>.json`: per-environment provision output file.
-  * `<env>.userdata`: per-environment sensitive user data for the provision output.
+* `.fx\configs`: Configuration files that user can customize for the Teams app.
+  * `config.<envName>.json`: Configuration file for every environment.
+  * `azure.parameters.<envName>.json`: Parameters file for Azure bicep provision for every environment.
+  * `projectSettings.json`: Global project settings that apply to all environments.
+* `.fx\states`: Provision output that is generated by Teams Toolkit. Teams Toolkit creates this folder after you provision resources for your app.
+  * `state.<envName>.json`: Provision output file for every environment.
+  * `<env>.userdata`: User data for the provision output for every environment.
 * `templates`
-  * `appPackage`: app manifest template files.
-  * `azure`: Bicep template files.
+  * `appPackage`: App manifest template files.
+  * `azure`: `bicep` template files.
 
-## Customize the provision
+## Customize resource provision
 
-Teams Toolkit allows you to change the configuration files and template files to customize the resource provision in each environment.
+Teams Toolkit allows you to customize the resource provision in each environment by changing the configuration and template files .
 
-The following table lists the common scenarios supported for customized provision and where to customize:
+The following table lists the common scenarios for customized resource provision:
 
 | Scenarios | Location| Description |
 | --- | --- | --- |
-| Customize Azure Resource | <ul> <li>Bicep files under `templates/azure`.</li> <li>`.fx/azure.parameters.<envName>.json`.</li></ul> | [Customize ARM parameters and templates](provision.md#customize-arm-parameters-and-templates). |
-| Reuse existing Azure AD app for Teams app | <ul> <li>`auth` section in`.fx/config.<envName>.json`.</li> </ul> |  [Use an existing Azure AD app for your Teams app](provision.md#use-an-existing-azure-ad-app-for-your-teams-app). |
-| Reuse existing Azure AD app for bot | <ul> <li>`bot` section in`.fx/config.<envName>.json`.</li> </ul> | [Use an existing Azure AD app for your bot](provision.md#use-an-existing-azure-ad-app-for-your-bot). |
-| Skip adding user while provisioning SQL | <ul> <li>`skipAddingSqlUser` property in`.fx/config.<envName>.json`.</li> </ul> | [Skip adding user for SQL database](provision.md#skip-adding-user-for-sql-database). |
-| Customize app manifest | <ul> <li>`templates/manifest.remote.template.json`.</li> <li>`manifest` section in`.fx/config.<envName>.json`.</li>  </ul> | [Customize Teams App Manifest in Teams Toolkit](TeamsFx-manifest-customization.md). |
+| Customize Azure Resource |`bicep` files under `templates\azure` `.fx\azure.parameters.<envName>.json` | [Customize ARM parameters and templates](provision.md#customize-arm-template-files) |
+| Reuse existing Microsoft Azure Active Directory (Azure AD) app for Teams app | `auth` section in`.fx\config.<envName>.json`|  [Use an existing Azure AD app for your Teams app](provision.md#use-an-existing-azure-ad-app-for-your-teams-app) |
+| Reuse existing Azure AD app for bot |`bot` section in`.fx\config.<envName>.json`| [Use an existing Azure AD app for your bot](provision.md#use-an-existing-azure-ad-app-for-your-bot) |
+| Skip adding user while provisioning SQL |`skipAddingSqlUser` property in`.fx\config.<envName>.json`| [Skip adding user for SQL database](provision.md#skip-adding-user-for-sql-database) |
+| Customize app manifest |`manifest.template.json` file is available under `templates\appPackage`| [Preview app manifest in Toolkit](TeamsFx-preview-and-customize-app-manifest.md)|
 
 ## Scenarios
 
-### Scenario 1: customize Teams app name for different environment
+You can see the following scenarios to customize the resource provision in different environments:
+<br>
 
-You can set the Teams app name to `myapp(dev)` for the default environment `dev`  and `myapp(staging)` for the staging environment `staging`.
+<br><details>
+<summary><b>Scenario 1: Customize the Teams app name for different environments
+</b></summary>
 
-Perform the following steps for customization:
+You can set the Teams app name to `myapp(dev)` for the default environment **dev** and `myapp(staging)` for the staging environment **staging**.
 
-* 1. Open config file `.fx/configs/config.dev.json`.
-* 2. Update the property of *manifest > appName > short* to `myapp(dev)`
+Steps for customization:
 
-  The updates to `.fx/configs/config.dev.json` are as follows:
+1. Open config file `.fx\configs\config.dev.json`.
+2. Update the property of `manifest` > `appName` > `short` to `myapp(dev)`.
+
+  The updates to `.fx\configs\config.dev.json` are:
 
   ```json
   {
@@ -105,24 +111,27 @@ Perform the following steps for customization:
   }
   ```
 
-* 3. Create new environment and name it `staging` if it doesn't exist.
-* 4. Open config file `.fx/configs/config.staging.json`.
-* 5. Update the same property `myapp(staging)`.
-* 6. Run provision command on `dev` and `staging` environment to update the app name in remote environments. To run provision command with Teams Toolkit, see [provision](provision.md#provision-using-teams-toolkit).
+3. Create a new environment and name it **staging** if it doesn't exist.
+4. Open config file `.fx\configs\config.staging.json`.
+5. Update the same property `myapp(staging)`.
+6. Run provision command on **dev** and **staging** environment to update the app name in remote environments. To run provision command with Teams Toolkit, see [how to provision using Teams Toolkit in Microsoft Visual Studio Code](provision.md#provision-using-teams-toolkit-in-microsoft-visual-studio-code).
 
-### Scenario 2: customize Teams App description for different environment
+</details>
 
-In this scenario, you will learn how to set different Teams app description for different environments:
+<details>
+<summary><b>Scenario 2: Customize the Teams app description for different environments</b></summary>
 
-* For the default environment `dev`, the description will be `my app description for dev`;
-* For the staging environment `staging`, the description will be `my app description for staging`;
+You can set different Teams app descriptions for the different environments:
 
-Perform the following steps for customization:
+* For the default environment **dev**, the description is **my app description for dev**.
+* For the staging environment **staging**, the description is **my app description for staging**.
 
-* 1. Open config file `.fx/configs/config.dev.json`.
-* 2. Add new property of *manifest > description > short* with value `my app description for dev`.
+Follow these steps for customization:
 
-  The updates to `.fx/configs/config.dev.json` are as follows:
+1. Open config file `.fx\configs\config.dev.json`.
+2. Add a new property of `manifest` > `description` > `short` with value **my app description for dev**.
+
+  The updates to `.fx\configs\config.dev.json` are:
 
   ```json
   {
@@ -139,13 +148,13 @@ Perform the following steps for customization:
   }
   ```
 
-* 3. Create a new environment and name it `staging` if it doesn't exist.
-* 4. Open config file `.fx/configs/config.staging.json`.
-* 5. Add the same property to `my app description for staging`.
-* 6. Open Teams app manifest template for remote `templates/appPackage/manifest.remote.template.json`.
-* 7. Update the property `description > short` to use the **variable** defined in configure files with mustache syntax `{{config.manifest.description.short}}`.
+3. Create a new environment and name it **staging** if it doesn't exist.
+4. Open config file `.fx\configs\config.staging.json`.
+5. Add the same property to **my app description for staging**.
+6. Open Teams app manifest template `templates\appPackage\manifest.template.json`.
+7. Update the property `description` > `short` to use the variable defined in configure files with braces syntax `{{config.manifest.description.short}}`.
   
-  The updates to `manifest.remote.template.json` are as follows:
+  The updates to `manifest.template.json` are:
 
   ```json
   {
@@ -161,18 +170,21 @@ Perform the following steps for customization:
   }
   ```
 
-* 8. Run provision command against `dev` and `staging` environment to update the app name in remote environments. To run provision command with Teams Toolkit, see [provision](provision.md#provision-using-teams-toolkit).
+8. Run provision command against **dev** and **staging** environment to update the app name in remote environments.
 
-### Scenario 3: customize Teams App description for all environments
+</details>
 
-In this scenario, you will learn how to set the description of Teams app to `my app description` for all environments.
+<details>
+<summary><b>Scenario 3: Customize Teams app description for all environments</b></summary>
 
-As the Teams app manifest template is shared across all environments, we can update the description value in it for our target:
+You can set the description of Teams app to **my app description** for all the environments.
 
-* 1. Open Teams app manifest template for remote `templates/appPackage/manifest.remote.template.json`.
-* 2. Update the property `description > short` with **hard-coded string** `my app description`.
+As the Teams app manifest template is shared across all environments, you can update the description value in it for your target:
+
+1. Open Teams app manifest template `templates\appPackage\manifest.template.json`.
+2. Update the property `description` > `short` with permanent string **my app description**.
   
-  The updates to `manifest.remote.template.json` are as follows:
+  The updates to `manifest.template.json` are:
 
   ```json
   {
@@ -187,16 +199,25 @@ As the Teams app manifest template is shared across all environments, we can upd
     ...
   }
 
-* 3. Run provision command against **all** environment to update the app name in remote environments. To run provision command with Teams Toolkit, see [provision](provision.md#provision-using-teams-toolkit).
+  ```
 
-### Scenario 4: customize Azure resources for different environment
+3. Run the provision command against all environment to update the app name in remote environments.
 
-You can customize Azure resources for each environment, for example specify Azure Function name, by editing the environment corresponding to `.fx/configs/azure.parameters.{env}.json` file.
+</details>
 
-For more information on Bicep template and parameter files, see [provision cloud resources](provision.md)
+<details>
+<br><summary><b>Scenario 4: Customize Azure resources for different environment</b></summary>
+
+You can customize Azure resources for each environment; for example edit the environment corresponding to `.fx\configs\azure.parameters.{env}.json` file to specify Azure Function name.
+
+For more information on Bicep template and parameter files, see [how to provision cloud resources](provision.md).
+</details>
+</br>
 
 ## See also
 
-* [Provision cloud resources](provision.md)
+* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
+* [App manifest schema for Teams](../resources/schema/manifest-schema.md)
 * [Add more cloud resources](add-resource.md)
 * [Collaborate with other developers on Teams project](TeamsFx-collaboration.md)
+* [Test app behavior in different environment](test-app-behavior.md)
