@@ -702,3 +702,9 @@ To fix this problem, change the request to this format:
 ### Creating virtual records and Graph access control
 
 The virtual tables honor the access control specified for Microsoft Graph. The virtual tables won't permit operations that the user couldn't perform using the Microsoft Graph API. For example, if the user you use to create the Plan is Task 3 and isn't a member of group you use then you'll get 403 Forbidden responses.
+
+## See also
+
+* [Integrate web apps](integrate-web-apps-overview.md)
+* [App manifest schema for Teams](../resources/schema/manifest-schema.md)
+* [Microsoft Graph overview](/graph/teams-concept-overview)
