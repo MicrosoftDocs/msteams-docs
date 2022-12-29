@@ -9,7 +9,7 @@ ms.author: lajanuar
 
 # Create a content page
 
-A content page is a webpage that is rendered within the Teams client, which is a part of:
+A content page is a webpage that is rendered within the Teams client. These are part of:
 
 * A personal-scoped custom tab: In this case, the content page is the first page the user encounters.
 * A channel or group custom tab: The content page is displayed after the user pins and configures the tab in the appropriate context.
@@ -23,7 +23,7 @@ This article is specific to using content pages as tabs; however, most of the gu
 
 Your tab's overall objective is to provide access to the meaningful and engaging content that has a practical value and an evident purpose.
 
-You need to focus on making your tab design clean, navigation intuitive, and content immersive.For more information, see [tab design guidelines](~/tabs/design/tabs.md) and [Microsoft Teams store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md).
+For more information, see [tab design guidelines](~/tabs/design/tabs.md) and [Microsoft Teams store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md).
 
 ## Integrate your code with Teams
 
@@ -87,7 +87,7 @@ The [Teams client JavaScript library](~/tabs/how-to/using-teams-client-library.m
 
 ### Deep links
 
-You can create deep links to entities in Teams. They're used to create links that navigate to content and information within your tab. For more information, see [create deep links to content and features in Teams](~/concepts/build-and-test/deep-links.md).
+You can create deep links to entities in Teams. These are used to create links that navigate to content and information within your tab. For more information, see [create deep links to content and features in Teams](~/concepts/build-and-test/deep-links.md).
 
 ### Task modules
 
@@ -108,7 +108,7 @@ Starting with [manifest schema v1.7](../../../resources/schema/manifest-schema.m
 >
 > The behavior on mobile clients isn't configurable through the native loading indicator property. Mobile clients show this indicator by default across content pages and iframe-based task modules. This indicator on mobile is shown when a request is made to fetch content and gets dismissed as soon as the request gets completed.
 
-If you indicate `showLoadingIndicator : true`  in your app manifest, then all tab configuration, content, removal pages, and all iframe-based task modules must follow these steps:
+When you indicate `showLoadingIndicator : true`  in your app manifest, then all tab configuration, content, removal pages, and all iframe-based task modules must follow these steps:
 
 To show the loading indicator:
 

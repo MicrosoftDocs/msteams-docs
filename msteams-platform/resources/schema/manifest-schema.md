@@ -268,7 +268,7 @@ The following schema sample shows all extensibility options:
             ]
         }
     },
-    "showLoadingIndicator": false,
+    "showLoadingIndicator": true,
     "isFullScreen": false,
     "activities": {
         "activityTypes": [
@@ -341,7 +341,7 @@ The https:// URL referencing the JSON Schema for the manifest.
 
 **Required**—string
 
-The version of the manifest schema that this manifest is using. Use `1.13` to enable Teams app support in Outlook and Microsoft 365 app; use `1.12` (or earlier) for Teams-only apps.
+The version of the manifest schema that this manifest is using.
 
 ## version
 
@@ -492,7 +492,7 @@ The item is an array (maximum of only one element&mdash;currently only one bot i
 |`needsChannelSelector`|Boolean|||Describes whether or not the bot uses a user hint to add the bot to a specific channel. Default: **`false`**|
 |`isNotificationOnly`|Boolean|||Indicates whether a bot is a one-way, notification-only bot, as opposed to a conversational bot. Default: **`false`**|
 |`supportsFiles`|Boolean|||Indicates whether the bot supports the ability to upload/download files in personal chat. Default: **`false`**|
-|`supportsCalling`|Boolean|||A value indicating where a bot supports audio calling. **IMPORTANT**: This property is currently experimental. Experimental properties may not be complete, and may undergo changes before becoming fully available.  The property is provided for testing and exploration purposes only and must not be used in production applications. Default: **`false`**|
+|`supportsCalling`|Boolean|||A value indicating whether a bot supports audio calling. **IMPORTANT**: This property is currently experimental. Experimental properties may not be complete, and may undergo changes before becoming fully available.  The property is provided for testing and exploration purposes only and must not be used in production applications. Default: **`false`**|
 |`supportsVideo`|Boolean|||A value indicating where a bot supports video calling. **IMPORTANT**: This property is currently experimental. Experimental properties may not be complete, and may undergo changes before becoming fully available.  The property is provided for testing and exploration purposes only and must not be used in production applications. Default: **`false`**|
 
 ### bots.commandLists
@@ -559,7 +559,7 @@ Each command item is an object with the following structure:
 |`type`|string|64 characters||Type of the command. One of `query` or `action`. Default: **query**.|
 |`description`|string|128 characters||The description that appears to users to indicate the purpose of this command.|
 |`initialRun`|Boolean|||A Boolean value indicates whether the command runs initially with no parameters. Default is **false**.|
-|`context`|array of Strings|3||Defines where the message extension can be invoked from. Any combination of`compose`,`commandBox`,`message`. Default is `["compose","commandBox"]`.|
+|`context`|array of Strings|3||Defines from where the message extension can be invoked. Any combination of `compose`,`commandBox`,`message`. Default is `["compose","commandBox"]`.|
 |`fetchTask`|Boolean|||A Boolean value that indicates if it must fetch the task module dynamically. Default is **false**.|
 |`taskInfo`|object|||Specify the task module to pre-load when using a message extension command.|
 |`taskInfo.title`|string|64 characters||Initial dialog title.|
@@ -580,7 +580,7 @@ Each command item is an object with the following structure:
 
 **Optional**—array of strings
 
-An array of `string`, which specifies which permissions the app requests, which let end users know how the extension does. The following options are non-exclusive:
+An `array of string`, which specifies what permissions the app requests and, which let end users know how the extension works. The following options are non-exclusive:
 
 * `identity` &emsp; Requires user identity information.
 * `messageTeamMembers` &emsp; Requires permission to send direct messages to team members.
@@ -659,7 +659,7 @@ Indicates if or not to show the loading indicator when an app or tab is loading.
 
  **Optional**—Boolean
 
-Indicates if a personal app is rendered without a tab header bar (signifying full screen mode). Default is **false**.
+Indicates where a personal app is rendered with or without a tab header bar (signifying full screen mode). Default is **false**.
 
 > [!NOTE]
 >
