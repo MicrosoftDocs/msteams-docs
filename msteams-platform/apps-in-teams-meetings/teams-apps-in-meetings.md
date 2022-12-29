@@ -24,7 +24,7 @@ Meetings enable collaboration, partnership, informed communication, and shared f
         :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/1-cust-apps.png" border="false" link="../concepts/build-and-test/share-in-meeting.md":::  :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/2-enable-app.png" border="false" link="build-tabs-for-meeting.md":::
     :::column-end:::
         :::column span="":::
-           &nbsp; :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/space.png" border="false":::
+           &nbsp;
         :::column-end:::
 :::row-end:::
 :::row:::
@@ -49,7 +49,7 @@ Meetings enable collaboration, partnership, informed communication, and shared f
 :::row-end:::
 :::row:::
     :::column span="":::
-        &nbsp; :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/space.png" border="false":::
+        &nbsp;
     :::column-end:::
     :::column span="2":::
         :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/9-in-meeting.png" border="false" link="build-apps-for-teams-meeting-stage.md":::      :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/10-get-meeting.png" border="false" link="meeting-apps-apis.md#get-real-time-teams-meeting-events-api":::
