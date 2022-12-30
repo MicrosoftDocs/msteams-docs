@@ -102,7 +102,7 @@ For more information about working with the calendar, see [calendar](/javascript
 
 Applications can prepare a deep link for users to start one-on-one or a group audio or video call. You can invoke audio only or audio-video calls to a single user or a group of users by specifying the call type and the participants. Before placing the call, Teams client prompts a confirmation to make the call. If there's a group call, you can call a set of VoIP users and a set of PSTN users in the same deep link invocation.
 
-In a video call, the client asks for confirmation and turn on the caller's video for the call. The receiver of the call has a choice to respond through audio only or audio and video, through the Teams call notification window.
+In a video call, the client asks for confirmation and turns on the caller's video for the call. The receiver of the call has a choice to respond through audio only or audio and video, through the Teams call notification window.
 
 > [!NOTE]
 > This method cannot be used for invoking a meeting.
@@ -149,4 +149,4 @@ For deep links to share content to stage, see [deep link to share content to sta
 
 ## Deep link to join a meeting
 
-Application can read Join a meeting URLs through Graph APIs. This deep link brings up the UI for the user to join that meeting.
+Application can read, join a meeting URL through Graph APIs. This deep link brings up the UI for the user to join that meeting.
