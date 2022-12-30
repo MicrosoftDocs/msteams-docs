@@ -25,7 +25,7 @@ The query parameters are:
 * `topicName`: An optional field for chat's display name if a chat has three or more users. If this field isn't specified, the chat's display name is based on the names of the participants.
 * `message`: An optional field for the message text that you want to insert into the current user's compose box while the chat is in a draft state.
 
-To use this deep link with your bot, specify this as the URL target in your card's button or tap action through the `openUrl` action type. Apps can also use Teams Java Script library 2.0 to create this without having to manually prepare the deep link. Following is an example using TeamsJS library:
+To use this deep link with your bot, specify the deep link as the URL target in your card's button or tap action through the `openUrl` action type. Apps can also use Teams Java Script library 2.0 to create this without having to manually prepare the deep link. Following is an example using TeamsJS library:
 
 ```javascript
 if(chat.isSupported()) {
@@ -54,7 +54,7 @@ Example: `https://teams.microsoft.com/l/meeting/new?subject=test%20subject&atten
 The query parameters are:
 
 * `attendees`: The optional comma-separated list of user IDs representing the attendees of the meeting. The user performing the action is the meeting organizer. Currently, the user ID field supports only the Azure AD UserPrincipalName, typically an email address.
-* `startTime`: The optional start time of the event. This should be in [long ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601), for example *2018-03-12T23:55:25+02:00*.
+* `startTime`: The optional start time of the event. Start time should be in [long ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601), for example *2018-03-12T23:55:25+02:00*.
 * `endTime`: The optional end time of the event, also in ISO 8601 format.
 * `subject`: An optional field for the meeting subject.
 * `content`: An optional field for the meeting details field.
@@ -62,7 +62,7 @@ The query parameters are:
 > [!NOTE]
 > Currently, specifying the location isn't supported. You must specify the UTC offset, it means time zones, when generating your start and end times.
 
-To use this deep link with your bot, you can specify this as the URL target in your card's button or as a tap action through the `openUrl` action type.
+To use this deep link with your bot, you can specify the deep link as the URL target in your card's button or as a tap action through the `openUrl` action type.
 
 Applications can also use TeamsJS library 2.0 to open the meeting scheduling dialog without having to manually prepare the link. Refer to the following code sample, provided a note:
 
