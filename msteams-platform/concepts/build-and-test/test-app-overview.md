@@ -26,7 +26,7 @@ Test your bot locally. For more information, see [debug your bot locally with an
 To view the console logs, view or modify html, css, and network requests during runtime, add breakpoints to your JavaScript code, and perform interactive debugging access the DevTools. For more information, see [access the DevTools for Teams tabs](~/tabs/how-to/developer-tools.md).
 
 > [!NOTE]
-> Debugging is supported in desktop, web, and android devices but not in iOS devices.
+> Debugging is supported on desktop, web, and Android devices but not on iOS devices.
 
 ## Add test data to your Microsoft 365 tenant
 
