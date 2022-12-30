@@ -4,7 +4,7 @@ metadata:
   title: Video filter app tutorial 
   description: With this learning module, learn how to create a video filter app for Teams meetings.
   audience: Developer
-  level: Beginner
+  level: Advance
   ms.date: 08/19/2022
   ms.topic: interactive-tutorial
   nextTutorialHref: \apps-in-teams-meetings\video-filters-for-meeting-apps.md
