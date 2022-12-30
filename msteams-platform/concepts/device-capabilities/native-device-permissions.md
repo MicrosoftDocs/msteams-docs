@@ -36,7 +36,8 @@ By accessing the device capabilities, you can build richer experiences on the Te
 
 ## Access device permissions
 
-The [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) provides the tools necessary for your Teams app to access the user’s [device permissions](#manage-permissions) and build a richer experience.
+The [Microsoft Teams JavaScript client library](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) provides the tools necessary for your Teams app to access the user’s [device permissions](#manage-permissions) and build a richer experience.
+
 While access to these features is standard in modern web browsers, you must inform Teams about the features you use by updating your app manifest. This update allows you to ask for permissions while your app runs on the Teams desktop.
 
 ## Manage permissions
@@ -153,7 +154,7 @@ For example:
         } 
     ```
 
-* Notifications prompts the user when you call `requestPermission()`:
+* Notifications prompt the user when you call `requestPermission()`:
 
     ```JavaScript
     Notification.requestPermission(function(result) { /* ... */ });
@@ -243,9 +244,9 @@ Here's how the device permissions prompts appear to users on mobile and desktop.
 
 ---
 
-## Permission behavior across login sessions
+## Permission behavior across sign in sessions
 
-Device permissions are stored for every login session. It means that if you sign in to another instance of Teams, for example, on another computer, your device permissions from your previous sessions are not available. Therefore, you must re-consent to device permissions for the new session. It also means, if you sign out of Teams or switch tenants in Teams, your device permissions are deleted from the previous login session.  
+Device permissions are stored for every sign in session. It means that if you sign in to another instance of Teams, for example, on another computer, your device permissions from your previous sessions aren't available. Therefore, you must reconsent to device permissions for the new session. It also means, if you sign out of Teams or switch tenants in Teams, your device permissions are deleted from the previous sign in session.  
 
 > [!NOTE]
 > When you consent to the native device permissions, it is valid only for your _current_ login session.
@@ -256,9 +257,16 @@ Device permissions are stored for every login session. It means that if you sign
 |---------------|--------------|--------|
 |Device permissions | Use Microsoft Teams tab sample app to demonstrate device permissions |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs) |
 
+## Next step
+
+> [!div class="nextstepaction"]
+> [Device permissions for the browser](browser-device-permissions.md)
+
 ## See also
 
-* [Device permissions for the browser](browser-device-permissions.md)
+* [Device capabilities](device-capabilities-overview.md)
 * [Integrate media capabilities](media-capabilities.md)
 * [Integrate QR or barcode scanner capability in Teams](qr-barcode-scanner-capability.md)
 * [Integrate location capabilities in Teams](location-capability.md)
+* [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
+* [Meeting apps APIs](../../apps-in-teams-meetings/meeting-apps-apis.md)

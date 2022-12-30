@@ -20,11 +20,11 @@ See the following video to learn how to create an Office 365 Connectors:
 
 ## Add a connector to Teams app
 
-You can create a [package](~/concepts/build-and-test/apps-package.md) and [publish](~/concepts/deploy-and-publish/apps-publish.md) your connector as part of your AppSource submission. You can distribute your registered connector as part of your Teams app package. For information on entry points for Teams app, see [capabilities](~/concepts/extensibility-points.md). You can also provide the package to users directly for uploading within Teams.
+You can create a [package](~/concepts/build-and-test/apps-package.md) and [publish](~/concepts/deploy-and-publish/apps-publish.md) your connector as part of your AppSource submission. You can distribute your registered connector as part of your Teams app package. For information on entry points for Teams app, see [capabilities](~/concepts/extensibility-points.md). You can also provide the package directly to the users for uploading within Teams.
 
 To distribute your connector, register it in the [Connectors Developer Dashboard](https://aka.ms/connectorsdashboard).
 
-For a connector to work only in Teams, follow the instructions to submit connector in [publish your app to the Microsoft Teams store](~/concepts/deploy-and-publish/appsource/publish.md) article. Otherwise, a registered connector works in all Office 365 products that support applications, including Outlook and Teams.
+For a connector to work only in Teams, follow the instructions to submit connector in [publish your app to the Microsoft Teams store](~/concepts/deploy-and-publish/appsource/publish.md) article. Otherwise, a registered connector works in all Microsoft 365 products that support applications, including Outlook and Teams.
 
 > [!IMPORTANT]
 > Your connector is registered after you select **Save** in the Connectors Developer Dashboard. If you want to publish your connector in AppSource, follow the instructions in [publish your Microsoft Teams app to AppSource](~/concepts/deploy-and-publish/apps-publish.md). If you do not want to publish your app in AppSource, distribute it directly to the organization. After publishing connectors for your organization, no further action is required on the Connector Dashboard.
@@ -42,14 +42,14 @@ Users can complete the entire connector configuration experience without having 
     > * The code can process the save event by retrieving the webhook settings. Your code stores the webhook to post events later.
     > * The configuration experience is loaded inline within Teams.
 
-You can reuse your existing web configuration experience or create a separate version to be hosted specifically in Teams. Your code must include the Teams JavaScript SDK. This gives your code access to APIs to perform common operations, such as getting the current user, channel, or team context, and initiate authentication flows.
+You can reuse your existing web configuration experience or create a separate version to be hosted specifically in Teams. Your code must include the TeamsJS library. This gives your code access to the APIs to perform common operations, such as getting the current user, channel, or team context, and initiate authentication flows.
 
 To integrate the configuration experience:
 
 > [!NOTE]
-> Starting with Teams JavaScript client SDK (TeamsJS) v.2.0.0, APIs in the *settings* namespace have been deprecated in favor of equivalent APIs in the *pages* namespace, including `pages.getConfig()` and other APIs in the `pages.config` sub-namespace. For more information, see [What's new in TeamsJS version 2.0](../../tabs/how-to/using-teams-client-sdk.md#whats-new-in-teamsjs-version-20)
+> Starting with TeamsJS client library (TeamsJS) v.2.0.0, APIs in the *settings* namespace have been deprecated in favor of equivalent APIs in the *pages* namespace, including `pages.getConfig()` and other APIs in the `pages.config` sub-namespace. For more information, see [What's new in TeamsJS version 2.x.x](../../tabs/how-to/using-teams-client-library.md#whats-new-in-teamsjs-version-2xx).
 
-1. Initialize the SDK by calling `app.initialize()`.
+1. Initialize TeamsJS by calling `app.initialize()`.
 1. Call `pages.config.setValidityState(true)` to enable **Save**.
 
     > [!NOTE]
@@ -140,8 +140,8 @@ The following table provides the parameters and the details of `getConfig` respo
 | `configName`  | The configuration name, as set by your code when calling `setConfig()`. |
 | `contentUrl` | The URL of the configuration page, as set by your code when calling `setConfig()`. |
 | `webhookUrl` | The webhook URL created for the connector. Use the webhook URL to POST structured JSON to send cards to the channel. The `webhookUrl` is returned only when the application returns data successfully. |
-| `appType` | The values returned can be `mail`, `groups`, or `teams` corresponding to the Office 365 Mail, Office 365 Groups, or Teams respectively. |
-| `userObjectId` | The unique ID corresponding to the Office 365 user who initiated the setup of the connector. It must be secured. This value can be used to associate the user in Office 365, who has set up the configuration in your service. |
+| `appType` | The values returned can be `mail`, `groups`, or `teams` corresponding to the Microsoft 365 Mail, Office 365 Groups, or Teams. respectively. |
+| `userObjectId` | The unique ID corresponding to the Microsoft 365 user who initiated the setup of the connector. It must be secured. This value can be used to associate the user in Microsoft 365, who has setup the configuration in your service. |
 
 #### Handle edits
 
@@ -151,20 +151,20 @@ Your code must handle users who return to edit an existing connector configurati
 * `configName` is a name that configuration code can retrieve.
 * `contentUrl` is a custom URL that gets loaded when a user edits an existing connector configuration.
 
-This call is made as part of your save event handler. Then, when the `contentUrl` is loaded, your code must call `getConfig()` to pre populate any settings or forms in your configuration user interface.
+This call is made as part of your save event handler. Then, when the `contentUrl` is loaded, your code must call `getConfig()` to prepopulate any settings or forms in your configuration user interface.
 
 #### Handle removals
 
-You can execute an event handler when the user removes an existing connector configuration. You register this handler by calling `microsoftTeams.pages.config.registerOnRemoveHandler()`. This handler is used to perform clean up operations, such as removing entries from a database.
+You can execute an event handler when the user removes an existing connector configuration. You register this handler by calling `microsoftTeams.pages.config.registerOnRemoveHandler()`. This handler is used to perform cleanup operations, such as removing entries from a database.
 
-### Include the connector in your Manifest
+### Include the connector in your manifest
 
 Download the auto-generated *Teams app manifest* from the Developer Portal (<https://dev.teams.microsoft.com>). Perform the following steps, before testing or publishing the app:
 
 1. [Include two icons](../../concepts/build-and-test/apps-package.md#app-icons).
 1. Modify the `icons` portion of the manifest to include the file names of the icons instead of URLs.
 
-The following *manifest.json* file contains the elements needed to test and submit the app:
+The following *manifest.json* example contains the elements needed to test and submit the app:
 
 > [!NOTE]
 > Replace `id` and `connectorId` in the following example with the GUID of the connector.
@@ -210,11 +210,11 @@ The following *manifest.json* file contains the elements needed to test and subm
 
 ## Test your connector
 
-To test your connector, upload it to a team with any other app. You can create a .zip package using the manifest file from the two icon files and connectors Developer Dashboard, modified as directed in [Include the connector in your Manifest](#include-the-connector-in-your-manifest).
+To test your connector, upload it to a team with any other app. You can create a .zip package using the manifest file from the two icon files and Connectors Developer Dashboard, modified as directed in [Include the connector in your Manifest](#include-the-connector-in-your-manifest).
 
-After you upload the app, open the connectors list from any channel. Scroll to the bottom to see your app in the **Uploaded** section:
+After you upload the app, open the connectors list from any channel. Scroll to the bottom to see your app in the **Uploaded** section.
 
-![Screenshot of an uploaded section in connector dialog box](~/assets/images/connectors/connector_dialog_uploaded.png)
+:::image type="content" source="../../assets/images/Connectors/connector_dialog_uploaded_1.png" alt-text="Screenshot of an upload section in connector dialog box.":::
 
 > [!NOTE]
 > The flow occurs entirely within Teams as a hosted experience.

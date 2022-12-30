@@ -1,7 +1,7 @@
 ---
 title: Plan code instrumentation using analytics service
 author: heath-hamilton
-description: Learn about planning code instrumentation using analytics service.
+description: Learn about planning code instrumentation using an analytics service.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
@@ -14,7 +14,7 @@ ms.author: surbhigupta
 Your application instrumentation can be captured and analyzed in any analytics service of your choice. It's recommended that you use a analytics service that allows tracking custom events and reporting it with custom context-based attributes.
 
 [Azure Application Insights](/azure/azure-monitor/app/app-insights-overview), a feature of [Azure Monitor](/azure/azure-monitor/), helps in tracking and monitoring app instrumentation. It allows developers to instrument the app, track relevant metrics, and custom business events. You can track events in your Teams app across desktop, web, or mobile clients.
- 
+
 Azure Applications Insights does auto-instrumentation to automatically collect performance, error data, and HTTP requests without code changes. Note that the instrumentation described in the [previous section](strategize-measure.md) requires capturing custom events. It requires adding Application Insights SDK to your application code.
 
 - Follow the guidance [here](/azure/azure-monitor/app/api-custom-events-metrics#prep) to add Application Insights SDK to your code.
