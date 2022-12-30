@@ -855,8 +855,16 @@
   - name: Add a Teams tab to SharePoint
     href: tabs/how-to/tabs-in-sharepoint.md
   - name: Create deep links
-    href: concepts/build-and-test/deep-links.md
-    displayName: Navigate within your app, executeDeepLink
+    items:
+    - name: Overview
+      href: concepts/build-and-test/deep-links.md
+      displayName: Navigate within your app, executeDeepLink
+    - name: Deep link to an application
+      href: concepts/build-and-test/deep-link-application.md
+    - name: Deep link to Teams chat
+      href: concepts/build-and-test/deep-link-teams.md   
+    - name: Deep link to a workflow in Teams
+      href: concepts/build-and-test/deep-link-workflow.md  
   - name: Integrate People Picker  
     href: concepts/device-capabilities/people-picker-capability.md
 - name: Resources
