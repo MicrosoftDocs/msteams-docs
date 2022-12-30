@@ -72,10 +72,16 @@ items:
   durationInMinutes: 5
   content: |
 
-    
-    **Create an index.html file**
+    Start by creating the following "videoFilters":
 
-    1. Create an index.html file as the entry point and quick start for your app.
+    * Index.html: The entry point and quick start for your app.
+    * Index.css: 
+    * Index.js: 
+
+    
+    ### Create an index.html file
+
+    1. Create an index.html file.
     1. Include the path to `index.css` and  `index.js` in the script tag.
 
     Following is an example of index.html file with the  path to `index.js` file inside the script tag.
@@ -102,7 +108,7 @@ items:
 
     ```
   
-     ** Create an index.js file**
+    ### Create an index.js file
     
     The index.js file handles the app startup, routing, and other functions of your application and does require other modules to add functionality.
     
@@ -126,7 +132,7 @@ items:
 
         1. registerForVideoEffect: Gets the get the selected effect in Teams client and notify the video extension that the new effect will be applied.
 
-        In the following example, the `registerForVideoEffect` function calls the `effectParameterChanged` parameter. The `effectParameterChanged' updates the local state with the current selected effectId.
+        In the following example, the `registerForVideoEffect` function calls the `effectParameterChanged` parameter. The `effectParameterChanged` updates the local state with the current selected effectId.
 
             ```js
               {
@@ -162,7 +168,7 @@ items:
 
         1. registerForVideoFrame: Call the `registerForVideoFrame` function to get the video frames from video pipeline, return the processed video frames from video pipeline and notify error.
  
-            In the following example, the  `videoFrameHandler` function is declared. At the end the registerForVideoFrame` function calls the `videoFrameHandler` functions:
+        In the following example, the  `videoFrameHandler` function is declared. At the end the `registerForVideoFrame` function calls the `videoFrameHandler` functions:
             
             ```js
 
@@ -200,13 +206,15 @@ items:
 
             ```
             
-            The `VideoFrame`` Callback function registers and processes the video frame.
-            The `notifyVideoProcessed()` sends notification that the effect processing is finished.
-            The `notifyError` send error to Teams if any error occurs.
+        The following are the properties used in the json example:
+
+        * `VideoFrame`: The Callback function registers and processes the video frame.
+        * `notifyVideoProcessed()`: Sends notification that the effect processing is finished.
+        * `notifyError`: Sends error to Teams if any error occurs.
 
         1. notifySelectedVideoEffectChanged: Call the `notifySelectedVideoEffectChanged` function to notify the teams client that a different effect is selected by the users in the video app. Teams client invokes the callback registered through registerForVideoEffect to tell the video app to apply the current selected effect.
 
-           In the following example, the `notifySelectedVideoEffectChanged` is passing the `EffectChanged`value which has two IDs, half and grey:
+        In the following example, the `notifySelectedVideoEffectChanged` is passing the `EffectChanged`value which has two IDs, half and grey:
 
            ```js
             {
@@ -248,7 +256,7 @@ items:
    
    To enable your app with video filters for Teams meetings, update your app manifest and use the videoFilters property to determine the filter name, category name, and filter thumbnail image and videoFiltersConfigurationUrl.
 
-   In the following example, the `videoFilters` object, RSC permissions, and videoFiltersConfigurationUrl  are defined.
+   In the following example, the `videoFilters` object, RSC permissions, and videoFiltersConfigurationUrl are defined.
 
     ```manifest.json
           {
@@ -284,14 +292,14 @@ items:
 
     The following table lists
 
-        |Property  |Description |Values |
-        |---------|---------|---------|
-        |`resourceSpecific` |permissions for getting teams client sdk video api | CameraStream.Read.User <br/> OutgoingVideoStream.Write.User       |
-        |`validDomains``     | The domain for videoFiltersConfigurationUrl      |   videoapp.microsoft.com      |
-        |videoFilters     |or showing video filters inside of video effects quick picker section|   id  (GUID) <br/> name (name of the filter) <br/> thumbnail (Relative path to the video filter thumbnail.png)      |
-        |videoFiltersConfigurationUrl     |  Link to the app package where you've hosted your app       |   https://github.com/microsoft/teams-videoapp-sample      |
+    |Property  |Description |Value|
+    |---------|---------|---------|
+    |`resourceSpecific` |permissions for getting teams client sdk video api | CameraStream.Read.User <br/> OutgoingVideoStream.Write.User       |
+    |`validDomains``     | The domain for videoFiltersConfigurationUrl      |   videoapp.microsoft.com      |
+    |videoFilters     |or showing video filters inside of video effects quick picker section|   id  (GUID) <br/> name (name of the filter) <br/> thumbnail (Relative path to the video filter thumbnail.png)      |
+    |videoFiltersConfigurationUrl     |  Link to the app package where you've hosted your app       |   https://github.com/microsoft/teams-videoapp-sample      |
         
-        After updating the manifest.json, create a Teams app package. For more information, see [Teams app package](concepts/build-and-test/apps-package.md)
+    After updating the manifest.json, create a Teams app package. For more information, see [Teams app package](concepts/build-and-test/apps-package.md)
 
     
     ## Upload your app to the Teams meeting
@@ -302,13 +310,13 @@ items:
       1. Select **Upload a custom app**.
       1. Upload the `manifest.zip` file.
       1. Select **Add** to add the app to Teams.
-         :::image type="content" source="assets/images/apps-in-meetings/video-filter-sbs-sideload-app-to-teams.png" alt-text="Screenshot that shows how to sideload load an app to Teams.":::
+         :::image type="content" source="/assets/images/apps-in-meetings/video-filter-sbs-sideload-app-to-teams.png" alt-text="Screenshot that shows how to sideload load an app to Teams.":::
       1. Schedule a meeting from the calendar in Teams.
          Ensure you invite at least one attendee to the meeting.
       1. Join the meeting.
       1. In the meeting window, select More > **Effects and avatars**.
       1. In the left pane, go to **Video effects** > **Filters** > **Others**.
-         :::image type="content" source="assets/images/apps-in-meetings/video-filter-sbs-select-the-filter.png" alt-text="Screenshot that shows a selected  filter during an in-meeting scenario."::: 
+         :::image type="content" source="/assets/images/apps-in-meetings/video-filter-sbs-select-the-filter.png" alt-text="Screenshot that shows a selected  filter during an in-meeting scenario."::: 
 
 - title: Test your app
   durationInMinutes: 1
@@ -316,13 +324,13 @@ items:
    Select a filter from **others** in the meeting side panel, and then select **Apply and turn on video**.
    
    Teams applies the filter to the video in the meeting.
-   :::image type="content" source="assets/images/apps-in-meetings/video-filter-sbs-select-apply-filter.png" alt-text="Screenshot that shows a sample filter and the Apply and turn on video option during an in-meeting scenario.":::
+   :::image type="content" source="/assets/images/apps-in-meetings/video-filter-sbs-select-apply-filter.png" alt-text="Screenshot that shows a sample filter and the Apply and turn on video option during an in-meeting scenario.":::
     
 - title: Complete challenge
   durationInMinutes: 1
   content: |
     Did you come up with something like this?
     
-    :::image type="content" source="assets/images/apps-in-meetings/video-filter-sbs-output.png" alt-text="Screenshot that shows the video experience for the user after the filter is applied.":::
+    :::image type="content" source="/assets/images/apps-in-meetings/video-filter-sbs-output.png" alt-text="Screenshot that shows the video experience for the user after the filter is applied.":::
 - content: |
     You've completed the tutorial to get started with video filters for Teams meetings.
