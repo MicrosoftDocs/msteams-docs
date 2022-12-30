@@ -102,9 +102,9 @@ items:
 
     ```
   
-  ** Create an index.js file**
+     ** Create an index.js file**
     
-   The index.js file handles the app startup, routing, and other functions of your application and does require other modules to add functionality.
+    The index.js file handles the app startup, routing, and other functions of your application and does require other modules to add functionality.
     
      1. Create an index.js file.
      1. Import the app and video modules from Teams JS library and initialize the app:
@@ -209,7 +209,7 @@ items:
            In the following example, the `notifySelectedVideoEffectChanged` is passing the `EffectChanged`value which has two IDs, half and grey:
 
            ```js
-
+            {
            const filterHalf = document.getElementById("filter-half");
             filterHalf.addEventListener("click", function () {
               if (selectedEffectId === effectIds.half) {
@@ -224,6 +224,7 @@ items:
               }
               video.notifySelectedVideoEffectChanged("EffectChanged", effectIds.gray);
             });
+            }
 
            ```
 
@@ -243,7 +244,6 @@ items:
 - title: Update the app manifest
   durationInMinutes: 1
   content: |
-   
    The meeting app capability for video filters is defined in your app manifest using the videoFilters object. You must configure your Teams app manifest with the resource specific consent (RSC) permissions for your app to access the video stream and video extensibility APIs.
    
    To enable your app with video filters for Teams meetings, update your app manifest and use the videoFilters property to determine the filter name, category name, and filter thumbnail image and videoFiltersConfigurationUrl.
