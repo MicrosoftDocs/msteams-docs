@@ -95,7 +95,7 @@ You can navigate a user to a personal chat with the application by preparing the
 * Apps submitted to org catalog: Org catalog ID
 * Apps submitted to Teams app store: Store ID
 
-## Deep link to your tab
+## Navigate to a tab
 
 You can create deep links to entities in Teams apps. This method is used to create links that navigate to content and information within your tab. For example, if your tab contains a task list, team members can create and share links to individual tasks. When you select the link, it navigates to your tab that focuses on the specific item.
 
