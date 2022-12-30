@@ -70,38 +70,17 @@ Applications can include an `open URL` action in an Adaptive Card and add a deep
 
 `add sample`
 
-### Adaptive Card as hyperlink Markdown (Not recommended)
-
-Applications can include a hyperlink Markdown in an Adaptive Card. This opens in browser first. Refer to the following sample payload:
-
-`add sample`
-
-### Adaptive Card as raw link (Not recommended)
-
-Raw link in Adaptive Card body doesn't have any action associated.
-
-## Bot
-
-### Open URL action in bot
-
-Applications can include an `open URL` action in a bot and can add a deep link to it. The deep link is executed within Teams. Refer to the following sample Adaptive Card payload:
-
-`add sample`
-
-### Card body of the bot
-
-Applications can include the raw link in a Card body. The deep link opens in a browser first. Refer the following code sample:
-
-`add sample`
-
-#### Hyperlink Markdown in a Bot
-
-Applications can include a hyperlink Markdown in a Bot. This opens in a browser first. Refer to sample payload below:
-
-`add sample`
+> [!NOTE]
+> Raw links or hyperlinks in an adaptive card body will navigate the user to the browser. We recommend using the `open URL` action.
 
 ## Handling deep links
 
 When a deep link to an application tab is executed, applications should make sure they respect all the parameters set in that link on the tab context. Applications should read the tab context to identify the page, subpage, or label referred to in the deep link and should navigate to the specific section.
 
 `example`
+
+## Consume a deep link from a tab
+
+When navigating to a deep link, Microsoft Teams navigates to the tab and provides a mechanism through the TeamsJS library to retrieve the subpage ID if it exists.
+
+If the tab is navigated through a deep link, the [`app.getContext()`](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-getcontext&preserve-view=true) call (`microsoftTeams.getContext()`) in TeamsJS v1 returns a promise that will resolve with the context that includes the `subPageId` property (subEntityId for TeamsJS v1). For more information, see [PageInfo interface](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-pageinfo&preserve-view=true).

@@ -37,6 +37,9 @@ if(chat.isSupported()) {
 else { /* handle case where capability isn't supported */ }
 ```
 
+> [!NOTE]
+> If a chat already exists deep link will open that chat.
+
 ## Deep link to open a meeting scheduling dialog
 
 Applications can open a meeting scheduling dialog and provide information such as meeting title and participants. While it's recommended to use the typed APIs of TeamsJS, it's possible to manually create deep links to the Teams built-in scheduling dialog. Use the following format for a deep link that you can use in a bot, connector, or message extension card:
@@ -137,12 +140,12 @@ else { /* handle case where capability isn't supported */ }
 
 You can also generate a deep link to [share the app to stage](~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#share-entire-app-to-stage) and start or join a meeting.
 
+For deep links to share content to stage, see [deep link to share content to stage in meetings](~/concepts/build-and-test/share-in-meeting.md#generate-a-deep-link-to-share-content-to-stage-in-meetings).
+
 > [!NOTE]
 >
 > * Currently, generating a deep link to share content to stage in meetings is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
 > * Deep link to share content to stage in meeting is supported in Teams desktop client only.
-
-For deep links to share content to stage, see [deep link to share content to stage in meetings](~/concepts/build-and-test/share-in-meeting.md#generate-a-deep-link-to-share-content-to-stage-in-meetings).
 
 ## Deep link to join a meeting
 

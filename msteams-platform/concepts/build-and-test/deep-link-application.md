@@ -139,12 +139,6 @@ Alternatively, you can also generate deep links programmatically using the forma
 >[!IMPORTANT]
 > Currently, `shareDeepLink` doesn't work on mobile platforms.
 
-### Consume a deep link from a tab
-
-When navigating to a deep link, Microsoft Teams navigates to the tab and provides a mechanism through the TeamsJS library to retrieve the subpage ID if it exists.
-
-If the tab is navigated through a deep link, the [`app.getContext()`](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-getcontext&preserve-view=true) call (`microsoftTeams.getContext()`) in TeamsJS v1 returns a promise that will resolve with the context that includes the `subPageId` property (subEntityId for TeamsJS v1). For more information, see [PageInfo interface](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-pageinfo&preserve-view=true).
-
 ## Generate a deep link to your tab
 
 While it's recommended to use `shareDeepLink()` to generate a deep link to your tab, it's also possible to create one manually.
