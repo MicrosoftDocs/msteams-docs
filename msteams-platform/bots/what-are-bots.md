@@ -49,7 +49,7 @@ With Microsoft Graph APIs for calls and online meetings, Teams apps can now inte
 
 You can use the Teams bot APIs to get information for members of a chat or team. See [changes to Teams bot APIs for fetching team or chat members](~/resources/team-chat-member-api-changes.md).
 
-Embedding an existing bot as a Teams bot is not possible. You can create a new Teams bot by using the back-end infrastructure and your business logic.
+Embedding an existing bot as a Teams bot isn't possible. You can create a new Teams bot by using the back-end infrastructure and your business logic.
 
 ## Add SSO authentication to your conversation bots
 
