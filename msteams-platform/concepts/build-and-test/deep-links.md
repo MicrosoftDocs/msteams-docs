@@ -18,7 +18,7 @@ The Microsoft Teams JavaScript client library (TeamsJS) simplifies the process o
 
 :::image type="content" source="~/assets/images/deep-links.png" alt-text="Diagram that shows different scenarios for deep links.":::
 
-[Deep link to an application](~/concepts/build-and-test/deep-link-application.md) can open the application profile dialog, navigate within your app, and generate a deep link and navigate through it to your tab.
+You can open the application profile dialog, navigate within your app, and generate a deep link and navigate to your tab through [deep link to an application](~/concepts/build-and-test/deep-link-application.md).
 
 You can navigate to a channel conversation, chat messages, and to file in a channel through [deep links to a chat](~/concepts/build-and-test/deep-link-teams.md).
 
