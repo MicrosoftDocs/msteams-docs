@@ -75,8 +75,8 @@ items:
     Start by creating the following "videoFilters":
 
     * Index.html: The entry point and quick start for your app.
-    * Index.css: 
-    * Index.js: 
+    * Index.css: The place to style your app page.
+    * Index.js: Handles the app startup, routing, and other functions of your application
 
     
     ### Create an index.html file
@@ -134,7 +134,7 @@ items:
 
         In the following example, the `registerForVideoEffect` function calls the `effectParameterChanged` parameter. The `effectParameterChanged` updates the local state with the current selected effectId.
 
-            ```js
+        ```js
               {
                 function effectParameterChanged(effectId) {
                   console.log(effectId);
@@ -164,13 +164,13 @@ items:
 
                 }
 
-            ```
+        ```
 
         1. registerForVideoFrame: Call the `registerForVideoFrame` function to get the video frames from video pipeline, return the processed video frames from video pipeline and notify error.
  
         In the following example, the  `videoFrameHandler` function is declared. At the end the `registerForVideoFrame` function calls the `videoFrameHandler` functions:
             
-            ```js
+        ```js
 
               //Sample video effect
               {
@@ -204,7 +204,7 @@ items:
               });
               }
 
-            ```
+        ```
             
         The following are the properties used in the json example:
 
@@ -216,7 +216,7 @@ items:
 
         In the following example, the `notifySelectedVideoEffectChanged` is passing the `EffectChanged`value which has two IDs, half and grey:
 
-           ```js
+        ```js
             {
            const filterHalf = document.getElementById("filter-half");
             filterHalf.addEventListener("click", function () {
@@ -234,20 +234,24 @@ items:
             });
             }
 
-           ```
+        ```
 
-           The `filterHalf`constant gets the filter-half id on click. If the selected effect id is equal to effectid.half, teams doesn't notify, else, teams notifies that the video effect is changed. The same applies for `filterGray` constant.
+        The `filterHalf`constant gets the filter-half id on click. If the selected effect id is equal to effectid.half, teams doesn't notify, else, teams notifies that the video effect is changed. The same applies for `filterGray` constant.
 
-           The effectids are defined at the top of the index.js page as:
+        The effectids are defined at the top of the index.js page as:
 
-           ```
+        ```
               {
               let effectIds = {
               half: "c2cf81fd-a1c0-4742-b41a-ef969b3ed490",
               gray: "b0c8896c-7be8-4645-ae02-a8bc9b0355e5",
             }
               }
-           ```
+        ```
+
+     After creating the requrired files, you can host the files for app on a cloud service. For example, to configure a publishing source for your GitHub Pages, see [Configuring a publishing source for your GitHub Pages site](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
+
+     The url for the host site is used as the value for the `videoFiltersConfigurationUrl` property in the manifest.json file.
 
 - title: Update the app manifest
   durationInMinutes: 1
@@ -258,7 +262,7 @@ items:
 
    In the following example, the `videoFilters` object, RSC permissions, and videoFiltersConfigurationUrl are defined.
 
-    ```manifest.json
+        ```json
           {
           "authorization": { // RSC permission section for getting teams client sdk video api.
               "permissions": {
@@ -288,16 +292,16 @@ items:
             }
           }
 
-      ``` 
+        ``` 
 
     The following table lists
 
     |Property  |Description |Value|
     |---------|---------|---------|
     |`resourceSpecific` |permissions for getting teams client sdk video api | CameraStream.Read.User <br/> OutgoingVideoStream.Write.User       |
-    |`validDomains``     | The domain for videoFiltersConfigurationUrl      |   videoapp.microsoft.com      |
-    |videoFilters     |or showing video filters inside of video effects quick picker section|   id  (GUID) <br/> name (name of the filter) <br/> thumbnail (Relative path to the video filter thumbnail.png)      |
-    |videoFiltersConfigurationUrl     |  Link to the app package where you've hosted your app       |   https://github.com/microsoft/teams-videoapp-sample      |
+    |`validDomains`     | The domain for videoFiltersConfigurationUrl      |   videoapp.microsoft.com      |
+    |`videoFilters`     |or showing video filters inside of video effects quick picker section|   `id`  (GUID) <br/> `name` (name of the filter) <br/> `thumbnail` (Relative path to the video filter thumbnail.png)      |
+    |`videoFiltersConfigurationUrl`     |  Link to the app package where you've hosted your app       |   https://github.com/microsoft/teams-videoapp-sample      |
         
     After updating the manifest.json, create a Teams app package. For more information, see [Teams app package](concepts/build-and-test/apps-package.md)
 
