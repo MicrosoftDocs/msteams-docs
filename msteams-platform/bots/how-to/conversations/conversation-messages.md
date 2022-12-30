@@ -284,7 +284,7 @@ this.onTeamsMessageUndeleteEvent(async (context, next) => {
 
 ## Delete message
 
-​When user soft delete a message in bot, bot receives an event notification `OnTeamsMessageEditAsync` and `OnTeamsMessageUndeleteAsync` or `OnMessageUpdateActivityAsync` to handle message delete.
+​When user soft delete a message in bot, bot receives an event notification `OnMessageDeleteActivityAsync` to handle message delete.
 
 The following code shows an example when user deletes the message:
 

@@ -193,6 +193,9 @@ The list of handlers defined in `ActivityHandler` includes the following events:
 | :-- | :-- | :-- |
 | Any activity type received | `OnTurnAsync` | This method calls one of the other handlers, based on the type of activity received. |
 | Message activity received | `OnMessageActivityAsync` | This method can be overridden to handle a `Message` activity. |
+| Message edit activity | `OnTeamsMessageEditAsync` | This method can be overridden to handle a `Message edit` activity. |
+| Message undo delete activity | `OnTeamsMessageUndeleteAsync` or `OnMessageUpdateActivityAsync` | This method can be overridden to handle a `Message undo delete` activity. |
+| Message delete activity | `OnMessageDeleteActivityAsync` | This method can be overridden to handle a `Message delete` activity. |
 | Conversation update activity received | `OnConversationUpdateActivityAsync` | This method calls a handler if members other than the bot joined or left the conversation, on a `ConversationUpdate` activity. |
 | Non-bot members joined the conversation | `OnMembersAddedAsync` | This method can be overridden to handle members joining a conversation. |
 | Non-bot members left the conversation | `OnMembersRemovedAsync` | This method can be overridden to handle members leaving a conversation. |
