@@ -40,7 +40,7 @@ The Live Share SDK has two primary classes related to media synchronization:
 
 | Classes                                                                                        | Description                                                                                                                                       |
 | ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [LiveMediaSession](/javascript/api/@microsoft/live-share-media/livemediasession)     | Custom live object designed to coordinate media transport controls and playback state in independent media streams.                          |
+| `LiveMediaSession` | Custom live object designed to coordinate media transport controls and playback state in independent media streams.                          |
 | [MediaPlayerSynchronizer](/javascript/api/@microsoft/live-share-media/mediaplayersynchronizer) | Synchronizes any object that implements the `IMediaPlayer` interface -- including HTML5 `<video>` and `<audio>` -- using `LiveMediaSession`. |
 
 Example:
@@ -153,7 +153,7 @@ document.getElementById("change-track-button").onclick = () => {
 
 :::image type="content" source="../assets/images/teams-live-share/live-share-media-out-of-sync.png" alt-text="Screenshot that shows a suspension sync to the presenter.":::
 
-If you want to temporarily suspend synchronization for the `LiveMediaSession` object, you can use suspensions. A [MediaSessionCoordinatorSuspension](/javascript/api/@microsoft/live-share-media/livemediasessioncoordinatorsuspension) object is local by default, which can be helpful in cases where a user might want to catch up on something they missed, take a break, and so on. If the user ends the suspension, synchronization resumes automatically.
+If you want to temporarily suspend synchronization for the `LiveMediaSession` object, you can use suspensions. A `MediaSessionCoordinatorSuspension` object is local by default, which can be helpful in cases where a user might want to catch up on something they missed, take a break, and so on. If the user ends the suspension, synchronization resumes automatically.
 
 # [JavaScript](#tab/javascript)
 
