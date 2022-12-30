@@ -257,3 +257,9 @@ The following table provides information on `APP_ID` and `BOT_APP_ID`:
 
 > [!NOTE]
 > `APP_ID` and `BOT_APP_ID` can be the same in many cases, if an app has a recommended bot to use as an app's ID and if there is one.
+
+## Code Sample
+
+| Sample name | Description | C# |Node.js|
+|-------------|-------------|------|----|
+|Deep link consuming Subentity ID | Teams sample app for demonstrating deep link from bot chat to tab consuming Subentity ID.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs)|

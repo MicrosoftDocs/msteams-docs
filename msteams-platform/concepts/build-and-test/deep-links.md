@@ -16,6 +16,14 @@ The Microsoft Teams JavaScript client library (TeamsJS) simplifies the process o
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
+:::image type="content" source="~/assets/images/deep-links.png" alt-text="Diagram that shows different scenarios for deep links.":::
+
+[Deep link to an application](~/concepts/build-and-test/deep-link-application.md) can open the application profile dialog, navigate within your app, and generate a deep link and navigate through it to your tab.
+
+You can navigate to a channel conversation, chat messages, and to file in a channel through [deep links to a chat](~/concepts/build-and-test/deep-link-teams.md).
+
+You can create a [deep link to perform a specific task](~/concepts/build-and-test/deep-link-workflow.md) in Teams, such as to create a new chat, open a scheduling dialog, and navigate to audio-video call.
+
 > [!NOTE]
 > The behavior of deep links is dependent on a number of factors. The following list outlines the behavior of deep links on Teams entities.
 >
@@ -49,12 +57,6 @@ The Microsoft Teams JavaScript client library (TeamsJS) simplifies the process o
 * Check for markdownlint errors.
 * Table with just a row isn't really needed. Provide the content without tabulating it.
 --->
-
-## Code Sample
-
-| Sample name | Description | C# |Node.js|
-|-------------|-------------|------|----|
-|Deep link consuming Subentity ID | Teams sample app for demonstrating deep link from bot chat to tab consuming Subentity ID.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs)|
 
 ## See also
 
