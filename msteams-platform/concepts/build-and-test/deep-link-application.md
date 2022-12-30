@@ -12,7 +12,7 @@ ms.localizationpriority: high
 Application can open the profile dialog through deep links and help users to learn more about the application, permissions, and more. You can create a deep link for the app after the app is listed in the Teams store. To create a link to launch Teams, append the app ID to the URL, `https://teams.microsoft.com/l/app/<your-app-id>`. A dialog appears to install or open the app.
 
 > [!NOTE]
-> If your app has been approved for mobile platform, you can deep link to an app on mobile. Apple App Store Connect Team ID is required additionally for the deep link to work on Teams-iOS. For more information, see [how to update Apple App Store Connect Team ID](../deploy-and-publish/appsource/prepare/update-apple-store-team-connect-id.md).
+> If your app is approved for mobile platform, you can deep link to an app on mobile. Apple App Store Connect Team ID is required additionally for the deep link to work on Teams-iOS. For more information, see [how to update Apple App Store Connect Team ID](../deploy-and-publish/appsource/prepare/update-apple-store-team-connect-id.md).
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
@@ -134,10 +134,9 @@ You'll need to replace the fields with the appropriate information:
 Alternatively, you can also generate deep links programmatically using the format specified later in this article. You can use deep links in [bot](~/bots/what-are-bots.md) and [connector](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) messages that inform users about changes to your tab, or to items within it.
 
 > [!NOTE]
-> This deep link is different from the links provided by the **Copy link to tab** menu item, which just generates a deep link that points to this tab.
-
->[!IMPORTANT]
-> Currently, `shareDeepLink` doesn't work on mobile platforms.
+>
+> * This deep link is different from the links provided by the **Copy link to tab** menu item, which just generates a deep link that points to this tab.
+> * Currently, `shareDeepLink` doesn't work on mobile platforms.
 
 ## Generate a deep link to your tab
 
@@ -155,7 +154,7 @@ Use the following format for a deep link that you can use in a bot, connector, o
 > [!NOTE]
 >
 > * If the bot sends a message containing a `TextBlock` with a deep link, then a new browser tab is opened when the user selects the link. This happens in Chrome and in the Teams desktop app, both running on Linux.
-> * If the bot sends the same deep link URL into an `Action.OpenUrl`, then the Teams tab is opened in the current browser tab when the user selects the link. A new browser tab isn't opened.
+> * If the bot sends the same deep link URL into an `Action.OpenUrl`, then the Teams tab opens in the current browser tab when the user selects the link.
 
 The query parameters are:
 
@@ -211,7 +210,7 @@ For more information about capabilities and the APIs in TeamsJS, see [Building t
 
 ### Deep link for SharePoint Framework tabs
 
-The following deep link format can be used in a bot, connector, or message extension card:
+You can use the following deep link format in a bot, connector, or message extension card:
 `https://teams.microsoft.com/l/entity/<AppId>/<EntityId>?webUrl=<entityWebUrl>/<EntityName>`.
 
 > [!NOTE]

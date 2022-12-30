@@ -38,7 +38,7 @@ else { /* handle case where capability isn't supported */ }
 ```
 
 > [!NOTE]
-> If a chat already exists deep link will open that chat.
+> If a chat already exists deep link opens in that chat.
 
 ## Deep link to open a meeting scheduling dialog
 
