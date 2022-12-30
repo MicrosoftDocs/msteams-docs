@@ -219,8 +219,7 @@ items:
     <summary>A quick recap of creating a Teams tab app.</summary>
     Watch this short recap for creating a Teams tab app.
 
-    ![Create a Teams app](~/assets/videos/blazorapp.gif)
-    </details>
+    :::image type="content" source="../../../assets/videos/blazorapp.gif" alt-text="Graphical representation shows the process of creating the Teams tab app.":::
 
     ## Take a tour of the source code for Teams tab app
 
@@ -233,8 +232,8 @@ items:
     | Folder name | Contents |
     | --- | --- |
     | App icons | The app icons are stored as PNG files in `color.png` and `outline.png`. |
-    | Properties/`manifest.json` | The app manifest for publishing through the Developer Portal for Teams is stored in `Properties/manifest.json`. |
-    | Controllers/`BackendController.cs` | A backend controller is provided in `Controllers/BackendController.cs` for assisting with authentication. |
+    | `manifest.json` | The app manifest for publishing through the Developer Portal for Teams is stored in `Properties/manifest.json`. |
+    | `BackendController.cs` | A backend controller is provided in `Controllers/BackendController.cs` for assisting with authentication. |
     | `Pages/Tab.razor` | The app manifest for publishing through the Developer Portal for Teams is stored in `Properties/manifest.json`. |
     | `TeamsFx.cs` and `JS/src/index.js` | The content is used for initializing communications with the Teams host. |
     
@@ -308,6 +307,8 @@ items:
 
     To run your app in Teams, you need a Microsoft 365 development account that allows app sideloading. You can learn more about it in the Prerequisites section.
     </details>
+
+    Stop debugging in Visual Studio.
 
 - title: Preview your first Teams tab app
   durationInMinutes: 1
@@ -488,8 +489,7 @@ items:
     <summary>A quick recap of creating a Teams bot app.</summary>
     Watch this short recap for creating a Teams bot app.
 
-    ![Create a Teams app](~/assets/videos/botapp.gif)
-    </details>
+    :::image type="content" source="../../../assets/videos/botapp.gif" alt-text="Graphical representation shows the process of creating Teams bot app.":::
 
     ## Take a tour of the source code for Teams bot app
 
@@ -502,8 +502,8 @@ items:
     | Folder name | Contents |
     | --- | --- |
     | App icons | The app icons are stored as PNG files in `color.png` and `outline.png`. |
-    | Properties/`manifest.json` | The app manifest for publishing through the Developer Portal for Teams is stored in `Properties/manifest.json`. |
-    | Controllers/`BackendController.cs` | A backend controller is provided in `Controllers/BackendController.cs` for assisting with authentication. |
+    | `manifest.json` | The app manifest for publishing through the Developer Portal for Teams is stored in `Properties/manifest.json`. |
+    | `BackendController.cs` | A backend controller is provided in `Controllers/BackendController.cs` for assisting with authentication. |
     | `TeamsFx.cs` and `JS/src/index.js` | The content is used for initializing communications with the Teams host. |
     
     You can add backend functionality by adding other ASP.NET Core controllers to your application.
@@ -513,6 +513,12 @@ items:
   content: |
 
     To build and run your app locally:
+
+    1.  Use ngrok or Command prompt to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
+
+        ```bash
+        ngrok http --host-header=localhost 5130
+        ```
     
     1. Select **Project** > **Teams Toolkit** > **Prepare Teams App Dependencies**.
 
@@ -521,12 +527,6 @@ items:
     1. Select your Microsoft 365 account or **Add an account** to sign in.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/M365-account_1.png" alt-text="Screenshot of Microsoft 365 Account with Add an account and Continue options highlighted in red.":::
-
-    1.  Use ngrok or Command prompt to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
-
-        ```bash
-        ngrok http --host-header=localhost 2544
-        ```
 
      1. Select **Debug** > **Start Debugging** or select **F5** to run your app in debug mode.
         <!-- markdownlint-disable MD033 -->
