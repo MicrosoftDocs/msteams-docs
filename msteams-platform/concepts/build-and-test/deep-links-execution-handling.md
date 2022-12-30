@@ -18,7 +18,7 @@ Applications can execute deep links from the following different contexts:
 
 ## Personal or Shared tab
 
-It's possible to navigate within an app using TeamsJS. The following code demonstrates how to navigate to a specific entity within your Teams app. Apps can execute a deep link using the JS SDK. To execute a deep link, call the following API:
+It's possible to navigate within an app using TeamsJS. The following code demonstrates how to navigate to a specific entity within your Teams app. Apps can execute a deep link using the TeamsJS library. To execute a deep link, call the following API:
 
 # [TeamsJS v2](#tab/teamsjs-v2)
 

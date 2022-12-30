@@ -25,7 +25,7 @@ The query parameters are:
 * `topicName`: An optional field for chat's display name if a chat has three or more users. If this field isn't specified, the chat's display name is based on the names of the participants.
 * `message`: An optional field for the message text that you want to insert into the current user's compose box while the chat is in a draft state.
 
-To use this deep link with your bot, specify this as the URL target in your card's button or tap action through the `openUrl` action type. Apps can also use Teams Java Script SDK 2.0 to create this without having to manually prepare the deep link. Following is an example using Teams JS SDK:
+To use this deep link with your bot, specify this as the URL target in your card's button or tap action through the `openUrl` action type. Apps can also use Teams Java Script library 2.0 to create this without having to manually prepare the deep link. Following is an example using TeamsJS library:
 
 ```javascript
 if(chat.isSupported()) {
@@ -64,7 +64,7 @@ The query parameters are:
 
 To use this deep link with your bot, you can specify this as the URL target in your card's button or as a tap action through the `openUrl` action type.
 
-Applications can also use TeamsJS SDK 2.0 to open the meeting scheduling dialog without having to manually prepare the link. Refer to the following code sample, provided a note:
+Applications can also use TeamsJS library 2.0 to open the meeting scheduling dialog without having to manually prepare the link. Refer to the following code sample, provided a note:
 
 # [TeamsJS v2](#tab/teamsjs-v2)
 
@@ -122,8 +122,8 @@ Following are the query parameters:
 * `withVideo`: This is an optional parameter, which you can use to make a video call. Setting this parameter only turns on the caller's camera. The receiver of the call has a choice to answer through an audio or an audio and video call through the Teams call notification window.
 * `Source`: This is an optional parameter, which informs about the source of the deep link.
 
-Applications can also use TeamsJS SDK 2.0 to start calls without having to manually prepare these deep links.
-The following code demonstrates using the TeamsJS SDK to start a call:
+Applications can also use TeamsJS library 2.0 to start calls without having to manually prepare these deep links.
+The following code demonstrates using the TeamsJS library to start a call:
 
 ```javascript
 if(call.isSupported()) {
