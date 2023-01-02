@@ -215,3 +215,4 @@ The following table provides the user types and lists the features that each use
 * [Design your Microsoft Teams meeting extension](design/designing-apps-in-meetings.md)
 * [Enable SSO for tab app](../tabs/how-to/authentication/tab-sso-overview.md)
 * [Add apps to meetings using Microsoft Graph](/graph/api/chat-post-installedapps?view=graph-rest-1.0&tabs=http&preserve-view=true)
+* [Get change notifications for Microsoft Teams meeting call updates](/graph/changenotifications-for-onlinemeeting)
