@@ -235,7 +235,9 @@ await turnContext.SendActivityAsync(replyActivity, cancellationToken);
 
 # [Javascript](#tab/javascript)
 
-Following are two ways to get event notifications to handle the message updates using the Bot SDK.
+Following are two methods to get event notifications to handle the message updates using the Bot SDK. You can use either one of the method:
+
+**​Event function registration**:
 
 ```javascript
 this.onTeamsMessageEditEvent(async (context, next) => {
@@ -252,7 +254,7 @@ this.onTeamsMessageEditEvent(async (context, next) => {
 
 ```
 
-​Method override:
+**​Method override**:
 
 ```javascript
     async onTeamsMessageEdit(context) {
@@ -283,9 +285,9 @@ await turnContext.SendActivityAsync(replyActivity, cancellationToken);
 
 # [Javascript](#tab/javascript)
 
-Following are two ways to get event notifications to handle the message updates using the Bot SDK.
+Following are two methods to get event notifications to handle the message updates using the Bot SDK. You can use either one of the method:
 
-​Event function registration:
+**​Event function registration**:
 
 ```javascript
 this.onTeamsMessageUndeleteEvent(async (context, next) => {
@@ -302,7 +304,7 @@ this.onTeamsMessageUndeleteEvent(async (context, next) => {
 
 ```
 
-​Method override:
+**​Method override**:
 
 ```javascript
     async onTeamsMessageUndelete(context) {
@@ -337,9 +339,9 @@ await turnContext.SendActivityAsync(replyActivity, cancellationToken);
 
 # [Javascript](#tab/javascript)
 
-Following are two ways to get event notifications to handle the message updates using the Bot SDK.
+Following are two methods to get event notifications to handle the message updates using the Bot SDK. You can use either one of the method:
 
-​Event function registration:
+**​Event function registration**:
 
 ```javascript
 this.onTeamsMessageSoftDeleteEvent(async (context, next) => {
@@ -356,7 +358,7 @@ this.onTeamsMessageSoftDeleteEvent(async (context, next) => {
 
 ```
 
-​Method override:
+**​Method override**:
 
 ```javascript
 async onTeamsMessageSoftDelete(context) {
