@@ -235,7 +235,7 @@ await turnContext.SendActivityAsync(replyActivity, cancellationToken);
 
 # [Javascript](#tab/javascript)
 
-Following are two methods to get event notifications to handle the message updates using the Bot SDK. You can use either one of the method:
+Following are two methods to get event notifications to handle the message updates using the Bot SDK. You can use either one of the following method:
 
 **​Event function registration**:
 
@@ -257,15 +257,15 @@ this.onTeamsMessageEditEvent(async (context, next) => {
 **​Method override**:
 
 ```javascript
-    async onTeamsMessageEdit(context) {
-        let editedMessage = context.activity.text;
-        let messageId = context.activity.id;
-        let previousMessage = this.currentMessage[messageId];
+async onTeamsMessageEdit(context) {
+    let editedMessage = context.activity.text;
+    let messageId = context.activity.id;
+    let previousMessage = this.currentMessage[messageId];
 
-        await context.sendActivity(`The previous message was "${previousMessage}". It is now: "${editedMessage}"`);
+    await context.sendActivity(`The previous message was "${previousMessage}". It is now: "${editedMessage}"`);
 
-        this.updateCurrentMessage(messageId, editedMessage);
-    }
+    this.updateCurrentMessage(messageId, editedMessage);
+}
 
 ```
 
@@ -285,7 +285,7 @@ await turnContext.SendActivityAsync(replyActivity, cancellationToken);
 
 # [Javascript](#tab/javascript)
 
-Following are two methods to get event notifications to handle the message updates using the Bot SDK. You can use either one of the method:
+Following are two methods to get event notifications to handle the message updates using the Bot SDK. You can use either one of the following method:
 
 **​Event function registration**:
 
@@ -307,15 +307,15 @@ this.onTeamsMessageUndeleteEvent(async (context, next) => {
 **​Method override**:
 
 ```javascript
-    async onTeamsMessageUndelete(context) {
-        let undeletedMessage = context.activity.text;
-        let messageId = context.activity.id;
-        let previousMessage = this.currentMessage[messageId]; // undefined
+async onTeamsMessageUndelete(context) {
+    let undeletedMessage = context.activity.text;
+    let messageId = context.activity.id;
+    let previousMessage = this.currentMessage[messageId]; // undefined
 
-        await context.sendActivity(`Previously the message was deleted. After undeleting, the message is now: "${undeletedMessage}"`);
+    await context.sendActivity(`Previously the message was deleted. After undeleting, the message is now: "${undeletedMessage}"`);
 
-        this.updateCurrentMessage(messageId, undeletedMessage);
-    }
+    this.updateCurrentMessage(messageId, undeletedMessage);
+}
 
 ```
 
@@ -339,7 +339,7 @@ await turnContext.SendActivityAsync(replyActivity, cancellationToken);
 
 # [Javascript](#tab/javascript)
 
-Following are two methods to get event notifications to handle the message updates using the Bot SDK. You can use either one of the method:
+Following are two methods to get event notifications to handle the message updates using the Bot SDK. You can use either one of the following method:
 
 **​Event function registration**:
 
@@ -362,14 +362,14 @@ this.onTeamsMessageSoftDeleteEvent(async (context, next) => {
 
 ```javascript
 async onTeamsMessageSoftDelete(context) {
-        let deletedMessage = context.activity.text; // undefined
-        let messageId = context.activity.id;
-        let previousMessage = this.currentMessage[messageId];
+    let deletedMessage = context.activity.text; // undefined
+    let messageId = context.activity.id;
+    let previousMessage = this.currentMessage[messageId];
 
-        await context.sendActivity(`The deleted message was "${previousMessage}"`);
+    await context.sendActivity(`The deleted message was "${previousMessage}"`);
 
-        this.updateCurrentMessage(messageId, deletedMessage);
-    }
+    this.updateCurrentMessage(messageId, deletedMessage);
+}
 
 ```
 
