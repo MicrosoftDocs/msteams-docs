@@ -219,7 +219,7 @@ Messages sent between users and bots include internal channel data within the me
 
 ## Update message
 
-​When user edit an existing message or undo delete the sent message in bot conversation, bot receives an event notification `OnTeamsMessageEditAsync` and `OnTeamsMessageUndeleteAsync` or `OnMessageUpdateActivityAsync` to handle message update.
+To get event notifications to handle the message updates in bot, you can either override `OnTeamsMessageEditAsync`, `OnTeamsMessageUndeleteAsync`, or `OnMessageUpdateActivityAsync` handlers when a sent message is edited or when a deleted message is restored.
 
 The following code shows an example when user edits the message:
 
@@ -284,7 +284,7 @@ this.onTeamsMessageUndeleteEvent(async (context, next) => {
 
 ## Delete message
 
-​When user soft delete a message in bot, bot receives an event notification `OnMessageDeleteActivityAsync` to handle message delete.
+To get event notifications to handle the message updates in bot, you can override `OnMessageDeleteActivityAsync` handler when a sent message is deleted.
 
 The following code shows an example when user deletes the message:
 
