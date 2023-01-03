@@ -101,11 +101,7 @@ For any other external deep linking scenarios, you can use `app.openLink`, which
 
 Starting with version 2.0 of TeamsJS, the Teams platform concept of [task module](../../task-modules-and-cards/what-are-task-modules.md) has been renamed to *dialog* for better consistency with existing concepts across the Microsoft 365 developer ecosystem. Accordingly, the `tasks` namespace has been deprecated in favor of the new `dialog` namespace.
 
-This new dialog capability is split into a main capability (`dialog`) for supporting HTML-based dialogs and a subcapability, `dialog.bot`, for bot-based dialog development.
-
-The dialog capability doesn't yet support [Adaptive card dialogs](../../task-modules-and-cards/task-modules/design-teams-task-modules.md). Adaptive card-based dialogs still need to be invoked using `tasks.startTask()`.
-
-The `dialog.open` function currently only works for opening HTMl-based dialogs, and it returns a callback function (`PostMessageChannel`) you can use to pass messages (`ChildAppWindow.postMessage`) to the newly opened dialog.  `dialog.open` returns a callback (rather than a Promise) because it doesn't require app execution to pause waiting for the dialog to close (thus providing more flexibility for various user interaction patterns).
+This new dialog capability is split into two subcapabilities: `dialog.url` corresponds to HTML-based dialogs, `dialog.adaptiveCard` is for Adaptive Card-based dialogs. For bot-based dialogs, further subspaces have been added: `dialog.url.bot` and `dialog.adaptiveCard.bot`. Be sure to call `isSupported` on these subcapabilities before you use them to ensure they are supported on the current host of your application (Teams, Microsoft 365 app, or Outlook).
 
 ## What's new in TeamsJS version 2.x.x
 
@@ -336,13 +332,13 @@ The TeamsJS *tasks* namespace has been renamed to *dialog*, and the following AP
 
 | Original namespace `tasks` | New namespace `dialog`  |
 | - | - |
-| `tasks.startTask` | `dialog.open` (renamed) |
-| `tasks.submitTasks` | `dialog.submit` (renamed) |
-| `tasks.updateTasks` | `dialog.update.resize` (renamed) |
+| `tasks.startTask` | `dialog.url.open`, `dialog.url.bot.open`, `dialog.adaptiveCard.open`, `dialog.adaptiveCard.bot.open` (renamed and differentiated by HTML / Adaptive Card and page / bot variants) |
+| `tasks.submitTask` | `dialog.url.submit` (renamed) |
+| `tasks.updateTask` | `dialog.update` (renamed) |
 | `tasks.TaskModuleDimension` enum | `dialog.DialogDimension` (renamed) |
 | `tasks.TaskInfo` interface | `dialog.DialogInfo` (renamed) |
 
-Additionally, this capability has been split into a main capability (`dialog`) for supporting HTML-based dialogs, and a subcapability for bot-based dialogs, `dialog.bot`.
+Additionally, this capability has been split into two main subcapabilities: `dialog.url` for HTML-based dialogs and `dialog.adaptiveCard` for Adaptive Card-based dialogs, with further sub-namespaces for bot-based dialogs.
 
 ##### *teamsCore* namespace
 
