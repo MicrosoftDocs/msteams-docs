@@ -235,7 +235,7 @@ await turnContext.SendActivityAsync(replyActivity, cancellationToken);
 
 # [Javascript](#tab/javascript)
 
-Following are two methods to get event notifications to handle the message updates using the Bot SDK. You can use either one of the following method:
+Following are two methods to get event notifications to handle the message updates using the Bot SDK. You can use either one of the following methods:
 
 **​Event function registration**:
 
@@ -269,6 +269,48 @@ async onTeamsMessageEdit(context) {
 
 ```
 
+# [JSON](#tab/json)
+
+```json
+{
+"type":"messageUpdate",
+"timestamp":"2022-10-28T17:19:39.4615413Z",
+"localTimestamp":"2022-10-28T10:19:39.4615413-07:00",
+"id":"1666977568748",
+"channelId":"msteams",
+"serviceUrl":"https://canary.botapi.skype.com/amer/",
+"from": {
+    "id":"29:1BLjP9j3_TM4mubmQZsYEo7jDyLeLf_YVA9sVPVO7KMAFMjJWB_EUGveb9EVDh9LgoNp9qjnzEBy4kgw83Jf1Kg",
+    "name":"Alex Wilber",
+    "aadObjectId":"976e4d1e-2108-43ee-a092-46a9507c5606"
+},
+"conversation":{
+    "conversationType":"personal",
+    "tenantId":"528dbe3f-15e0-4e37-84a1-00cc305847dd","id":"a:1tewuGJ44RkB90tiJNQ_I4q8vyuN5CYA_f-v6f0Vd-Bs3Ce85C73Ah1y8TvyjESsTHWjjgw-gnsuIuCUOWkfOCq6qaUYsk2_-fj93XXXHUMAUzhFFvTnaCU7V4WiMqXQL"
+},
+"recipient":{
+    "id":"28:0d469698-ab9d-479a-b0d8-758b6e6b1159",
+    "name":"Yingbot"
+},
+"entities":[
+    {
+        "locale":"en-US",
+        "country":"US",
+        "platform":"Web",
+        "timezone":"America/Los_Angeles",
+        "type":"clientInfo"
+    }
+],
+"channelData":{
+    "eventType":"editMessage",
+    "tenant":{"id":"528dbe3f-15e0-4e37-84a1-00cc305847dd"}
+},
+"locale":"en-US",
+"localTimezone":"America/Los_Angeles"
+}  
+
+```
+
 ---
 
 The following code shows an example when a deleted message is restored:
@@ -285,7 +327,7 @@ await turnContext.SendActivityAsync(replyActivity, cancellationToken);
 
 # [Javascript](#tab/javascript)
 
-Following are two methods to get event notifications to handle the message updates using the Bot SDK. You can use either one of the following method:
+Following are two methods to get event notifications to handle the message updates using the Bot SDK. You can use either one of the following methods:
 
 **​Event function registration**:
 
@@ -319,6 +361,48 @@ async onTeamsMessageUndelete(context) {
 
 ```
 
+# [JSON](#tab/json)
+
+```json
+{
+"type":"messageUpdate",
+"timestamp":"2022-10-28T17:19:39.4615413Z",
+"localTimestamp":"2022-10-28T10:19:39.4615413-07:00",
+"id":"1666977568748",
+"channelId":"msteams",
+"serviceUrl":"https://canary.botapi.skype.com/amer/",
+"from": {
+    "id":"29:1BLjP9j3_TM4mubmQZsYEo7jDyLeLf_YVA9sVPVO7KMAFMjJWB_EUGveb9EVDh9LgoNp9qjnzEBy4kgw83Jf1Kg",
+    "name":"Alex Wilber",
+    "aadObjectId":"976e4d1e-2108-43ee-a092-46a9507c5606"
+},
+"conversation":{
+    "conversationType":"personal",
+    "tenantId":"528dbe3f-15e0-4e37-84a1-00cc305847dd","id":"a:1tewuGJ44RkB90tiJNQ_I4q8vyuN5CYA_f-v6f0Vd-Bs3Ce85C73Ah1y8TvyjESsTHWjjgw-gnsuIuCUOWkfOCq6qaUYsk2_-fj93XXXHUMAUzhFFvTnaCU7V4WiMqXQL"
+},
+"recipient":{
+    "id":"28:0d469698-ab9d-479a-b0d8-758b6e6b1159",
+    "name":"Yingbot"
+},
+"entities":[
+    {
+        "locale":"en-US",
+        "country":"US",
+        "platform":"Web",
+        "timezone":"America/Los_Angeles",
+        "type":"clientInfo"
+    }
+],
+"channelData":{
+    "eventType":"undeleteMessage",
+    "tenant":{"id":"528dbe3f-15e0-4e37-84a1-00cc305847dd"}
+},
+"locale":"en-US",
+"localTimezone":"America/Los_Angeles"
+}  
+
+```
+
 ---
 
 ## Delete message
@@ -339,7 +423,7 @@ await turnContext.SendActivityAsync(replyActivity, cancellationToken);
 
 # [Javascript](#tab/javascript)
 
-Following are two methods to get event notifications to handle the message updates using the Bot SDK. You can use either one of the following method:
+Following are two methods to get event notifications to handle the message updates using the Bot SDK. You can use either one of the following methods:
 
 **​Event function registration**:
 
@@ -370,6 +454,48 @@ async onTeamsMessageSoftDelete(context) {
 
     this.updateCurrentMessage(messageId, deletedMessage);
 }
+
+```
+
+# [JSON](#tab/json)
+
+```json
+{
+"type":"messageDelete",
+"timestamp":"2022-10-28T17:19:43.1612052Z",
+"localTimestamp":"2022-10-28T10:19:43.1612052-07:00",
+"id":"1666977568748",
+"channelId":"msteams",
+"serviceUrl":"https://canary.botapi.skype.com/amer/",
+"from": {
+    "id":"29:1BLjP9j3_TM4mubmQZsYEo7jDyLeLf_YVA9sVPVO7KMAFMjJWB_EUGveb9EVDh9LgoNp9qjnzEBy4kgw83Jf1Kg",
+    "name":"Alex Wilber",
+    "aadObjectId":"976e4d1e-2108-43ee-a092-46a9507c5606"
+},
+"conversation":{
+    "conversationType":"personal",
+    "tenantId":"528dbe3f-15e0-4e37-84a1-00cc305847dd","id":"a:1tewuGJ44RkB90tiJNQ_I4q8vyuN5CYA_f-v6f0Vd-Bs3Ce85C73Ah1y8TvyjESsTHWjjgw-gnsuIuCUOWkfOCq6qaUYsk2_-fj93XXXHUMAUzhFFvTnaCU7V4WiMqXQL"
+},
+"recipient":{
+    "id":"28:0d469698-ab9d-479a-b0d8-758b6e6b1159",
+    "name":"Yingbot"
+},
+"entities":[
+    {
+        "locale":"en-US",
+        "country":"US",
+        "platform":"Web",
+        "timezone":"America/Los_Angeles",
+        "type":"clientInfo"
+    }
+],
+"channelData":{
+    "eventType":"softDeleteMessage",
+    "tenant":{"id":"528dbe3f-15e0-4e37-84a1-00cc305847dd"}
+},
+"locale":"en-US",
+"localTimezone":"America/Los_Angeles"
+}  
 
 ```
 
@@ -653,7 +779,7 @@ Ensure to handle these errors appropriately in your Teams app. The following tab
 | 403 | **Code**: `BotDisabledByAdmin` <br/> **Message**: The tenant admin disabled this bot | Tenant admin has blocked interactions between user and the bot app. Tenant admin needs to allow the app for the user inside of app policies. For more information, see [app policies](/microsoftteams/app-policies). | No | Stop posting to conversation until interaction with bot is explicitly initiated by a user in the conversation indicating that the bot is no longer blocked. |
 | 403 | **Code**: `BotNotInConversationRoster` <br/> **Message**: The bot isn't part of the conversation roster. | The bot isn't part of the conversation. App needs to be reinstalled in conversation. | No | Before attempting to send another conversation request, wait for an [`installationUpdate`](~/bots/how-to/conversations/subscribe-to-conversation-events.md#install-update-event) event, which indicates that the bot has been re-added.|
 | 403 | **Code**: `ConversationBlockedByUser` <br/> **Message**: User blocked the conversation with the bot. | User has blocked the bot in personal chat or a channel through moderation settings. | No | Delete the conversation from cache. Stop attempting to post to conversations until interaction with bot is explicitly initiated by a user in the conversation, indicating that the bot is no longer blocked. |
-| 403 |**Code**: `InvalidBotApiHost` <br/> **Message**: Invalid bot api host. For GCC tenants please call `https://smba.infra.gcc.teams.microsoft.com`.|The bot called the public API endpoint for a conversation that belongs to a GCC tenant.| No | Update the service URL for the conversation to `https://smba.infra.gcc.teams.microsoft.com` and retry the request.|
+| 403 |**Code**: `InvalidBotApiHost` <br/> **Message**: Invalid bot api host. For GCC tenants, please call `https://smba.infra.gcc.teams.microsoft.com`.|The bot called the public API endpoint for a conversation that belongs to a GCC tenant.| No | Update the service URL for the conversation to `https://smba.infra.gcc.teams.microsoft.com` and retry the request.|
 | 403 | **Code**: `NotEnoughPermissions` <br/> **Message**: *scenario specific | Bot doesn't have required permissions to perform the requested action. | No | Determine the required action from the error message. |
 | 404 | **Code**: `ActivityNotFoundInConversation` <br/> **Message**: Conversation not found. | The message ID provided couldn't be found in the conversation. Message doesn't exist or it has been deleted. | No | Check if message ID sent is an expected value. Remove the ID if it was cached. |
 | 404 | **Code**: `ConversationNotFound` <br/> **Message**: Conversation not found. | Conversation wasn't found as it doesn't exist or has been deleted. | No | Check if conversation ID sent is an expected value. Remove the ID if it was cached. |
