@@ -8,10 +8,10 @@ ms.localizationpriority: medium
 
 # Add third party authentication to your Adaptive Cards Universal Actions
 
-Universal Actions for Adaptive Cards bring the bot as the common backend for handling actions and introduce a new action type `Action.Execute`, which works across apps such as Teams and Outlook.
+Adaptive Cards Universal Actions bring the bot as the common backend for handling actions and introduce a new action type `Action.Execute`, which works across apps such as Teams and Outlook.
 
 > [!NOTE]
-> Support for Universal Actions for Adaptive Cards schema version v1.4 is only available for cards sent by bot.
+> Support for Adaptive Cards Universal Actions schema version v1.4 is only available for cards sent by bot.
 
 You can enable the following scenarios with `Action.Execute` on your Adaptive Cards Universal Action:
 
@@ -20,7 +20,7 @@ You can enable the following scenarios with `Action.Execute` on your Adaptive Ca
 * [Sequential Workflows](Overview.md#sequential-workflow-support)
 * [Up to Date View](Overview.md#up-to-date-views)
 
-To learn more about Universal Actions for Adaptive Cards, see [Universal Actions for Adaptive Cards](Overview.md).
+To learn more about Adaptive Cards Universal Actions, see [Adaptive Cards Universal Actions](Overview.md).
 
 If you want to add user specific views in instances where an Adaptive Card with Universal Action is shared, in the context of a group chat or a channel, the user may need to be authenticated.
 
@@ -124,5 +124,5 @@ For an OAuth or nominal sign-on experience in which the user is presented with a
 
 ## See also
 
-* [Work with Universal Actions for Adaptive Cards](Work-with-Universal-Actions-for-Adaptive-Cards.md)
+* [Work with Adaptive Cards Universal Actions](Work-with-Universal-Actions-for-Adaptive-Cards.md)
 * [Enable SSO for your Adaptive Cards Universal Actions](enable-sso-for-your-adaptive-cards-universal-action.md)
