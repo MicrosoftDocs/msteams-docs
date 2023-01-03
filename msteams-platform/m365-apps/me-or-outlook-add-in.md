@@ -40,8 +40,8 @@ The following sections illustrate how the guidance above is applied to some exam
 | Scenario | App type |
 |:--|:--|
 | Save a lead that came on email into CRM .| add-in |
-| Find and insert lead details into an email or meeting invitation | message extension .|
-| Insert boilerplate responses from CRM into message or invitation body | message extension. |
+| Find and insert lead details into an email or meeting invitation | message extension |
+| Insert boilerplate responses from CRM into message or invitation body | message extension |
 | Track email open rates (by inserting a tracking pixel). | add-in |
 | Log email/meeting/engagement in Outlook into CRM. | add-in |
 
