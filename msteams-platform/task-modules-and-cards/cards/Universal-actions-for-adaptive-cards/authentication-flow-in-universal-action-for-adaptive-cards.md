@@ -30,7 +30,7 @@ In the past, users who were chatting one-on-one with the bot had to wait while y
 
 Authentication flow for OAuth, within the `Action.Execute` protocol, enables authentication within the context of the group chat or channel conversation where the Adaptive Card is shared.
 
-Bots can respond with login request in response to `Action.Execute` for:
+Bots can respond with sign-in request in response to `Action.Execute` for:
 
 1. Adaptive Cards sent by bot in a one-on-one chat, group chat or a channel.
 1. Adaptive Cards sent by user via message extension app (backed by bot) in one-on-one chat, group chat or channel.

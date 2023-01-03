@@ -15,7 +15,7 @@ Authentication steps for Single sign-on (SSO) are similar to that of a bot in Te
 
 ## Add code to handle an access token
 
-If there's a cached token, the bot uses the same token. If there's no token available, the bot creates an OAuthCard and places it in an invoke response with the following values which includes a `tokenExchangeResource`:
+If there's a cached token, the bot uses the same token. If there's no token available, the bot creates an OAuthCard and places it in an invoke response with the following values that includes a `tokenExchangeResource`:
 
 ```JSON
 {
@@ -41,7 +41,7 @@ If there's a cached token, the bot uses the same token. If there's no token avai
 }
 ```
 
-Senders must include a `tokenExchangeResource` to designate a SSO operation.
+Senders must include a `tokenExchangeResource` to designate an SSO operation.
 
 > [!NOTE]
 > Teams client triggers the nominal sign-in or OAuth flow when SSO fails. It's highly recommended that you provide a sign in URL in the above response so that OAuth flow works.
@@ -93,7 +93,7 @@ The following are the steps to receive token:
 
 1. The channel delivers this invoke to the bot, which uses the token to finalize the token exchange process with the Token Service and Azure AD. The Token Service delivers the user's access token to the bot.
    * Receivers ignore the authentication if the value is incorrect.
-   * Receivers that experience an error while performing token exchange must respond with an error or a second login request that doesn't include SSO information. If responding with an error, the error must be:
+   * Receivers that experience an error while performing token exchange must respond with an error or a second sign-in request that doesn't include SSO information. If responding with an error, the error must be:
 
         ```javascript
          {
