@@ -31,7 +31,7 @@ You’ll probably not be surprised to hear that not all apps are equal on any ma
 :::row:::
     :::column span="2":::
         Needless to say, from these options, the strategy you'll take will determine:
-        
+
         - The resulting user value.
         - The economic opportunity for you.
         - How you can maximize the ROI from your investments.
