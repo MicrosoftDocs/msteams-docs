@@ -223,7 +223,7 @@ To get event notifications to handle the message updates in bot, you can either 
 
 The following code shows an example when a sent message is edited:
 
-# [C#](#tab/csharp)
+# [C#](#tab/dotnet)
 
 ```csharp
 protected override async Task OnTeamsMessageEditAsync(ITurnContext<IMessageUpdateActivity> turnContext, CancellationToken cancellationToken) 
@@ -315,7 +315,7 @@ async onTeamsMessageEdit(context) {
 
 The following code shows an example when a deleted message is restored:
 
-# [C#](#tab/csharp)
+# [C#](#tab/dotnet)
 
 ```csharp
 protected override async Task OnTeamsMessageUndeleteAsync(ITurnContext<IMessageUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -411,7 +411,7 @@ To get event notifications to handle the message updates in bot, you can overrid
 
 The following code shows an example when a sent message is deleted:
 
-# [C#](#tab/csharp)
+# [C#](#tab/dotnet)
 
 ```csharp
 protected override async Task OnTeamsMessageSoftDeleteAsync(ITurnContext<IMessageDeleteActivity> turnContext, CancellationToken cancellationToken) 
