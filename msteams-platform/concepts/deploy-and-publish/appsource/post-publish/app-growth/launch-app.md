@@ -167,7 +167,7 @@ The banner or notification CTA can direct users to your app‘s landing page or 
 
 Since your goal at this stage is to achieve product-market fit for your app, it’s critical to learn how users are perceiving your new app and if they’re getting the intended value by using the app. If not already done for your core SaaS product, offer free trials to users who sign up for your app (and SaaS service) through the Teams channel. If you already offer trials for your SaaS product and your standard free trial period is 15 days, consider extending the trial period for Teams users to 30-60 days.
 
-:::image type="content" source="../../../../../assets/images/app-fundamentals/trials-store-listing.png" alt-text="free or extended trials in app store listing and FRE flow.":::
+:::image type="content" source="../../../../../assets/images/app-fundamentals/trials-store-listing.png.png" alt-text="Free or extended trials in app store listing and FRE flow.":::
 
 Given you’ve built your Teams app for collaborative use cases, you'll naturally want trial users to invite their colleagues as well to use your app in shared context inside Teams. An extended trial facilitates collaborative evaluation of your app and increases the likelihood of these users converting to paid and sticky customers.
 
