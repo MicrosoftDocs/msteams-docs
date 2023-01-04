@@ -81,18 +81,13 @@ While building traction, you showcased the collaborative app in Teams during you
 
 ### User re-targeting and re-engagement basis app analytics
 
-:::row:::
-    :::column span="3":::
-        Product-led growth initiative uses signals from your app analytics. It retargets users who have recently engaged with your app in Teams but haven't reached a value realization milestone defined by you.
+Product-led growth initiative uses signals from your app analytics. It retargets users who have recently engaged with your app in Teams but haven't reached a value realization milestone defined by you.
 
 Users who have not visited your app or churned recently can be re-engaged to bring back to your app.
 
-        Remember, your goal is to get users to experience value by using your collaborative app. They can convert to sticky, habitual users and eventually convert into paying customers.
-    :::column-end:::
-    :::column span="":::
-        :::image type="content" source="../../../../../assets/images/app-fundamentals/remarket-retarget.png" alt-text="Re-market via emails and retarget using Teams notifications.":::
-    :::column-end:::
-:::row-end:::
+:::image type="content" source="../../../../../assets/images/app-fundamentals/remarket-retarget.png" alt-text="Re-market via emails and retarget using Teams notifications.":::
+
+Remember, your goal is to get users to experience value by using your collaborative app. They can convert to sticky, habitual users and eventually convert into paying customers.
 
 ### Co-activation in mutually identified existing customers
 
