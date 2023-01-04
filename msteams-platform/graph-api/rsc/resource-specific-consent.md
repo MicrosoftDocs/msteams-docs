@@ -22,7 +22,7 @@ Through RSC, an authorized user can give an application access to the data of a 
 
 RSC permission determines which data access methods are allowed by an application. There are two types of RSC permissions:
 
-* **Application**: Allows an app to access data without the user being singed in.
+* **Application**: Allows an app to access data without the user being signed in.
 * **Delegated**: Allows an app to access data only on behalf of a signed-in user. No access is allowed in the absence of a signed-in user.
 
 ### RSC permissions for different resources
