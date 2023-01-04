@@ -89,7 +89,7 @@ While building traction, you showcased the collaborative app in Teams during you
 
     Remember, your goal is to get users to experience value by using your collaborative app.
     :::column-end:::
-    :::column span="3":::
+    :::column span="2":::
         :::image type="content" source="../../../../../assets/images/app-fundamentals/remarket-retarget.png" alt-text="Re-market via emails and retarget using Teams notifications.":::
     :::column-end:::
 :::row-end:::
