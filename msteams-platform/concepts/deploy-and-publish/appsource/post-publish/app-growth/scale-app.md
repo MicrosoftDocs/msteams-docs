@@ -85,7 +85,14 @@ Product-led growth initiative uses signals from your app analytics. It retargets
 
 Users who have not visited your app or churned recently can be re-engaged to bring back to your app.
 
-:::image type="content" source="../../../../../assets/images/app-fundamentals/remarket-retarget.png" alt-text="Re-market via emails and retarget using Teams notifications.":::
+:::row:::
+    :::column span="":::
+        &nbsp;
+    :::column-end:::
+    :::column span="2":::
+        :::image type="content" source="../../../../../assets/images/app-fundamentals/remarket-retarget.png" alt-text="Re-market via emails and retarget using Teams notifications.":::
+    :::column-end:::
+:::row-end:::
 
 Remember, your goal is to get users to experience value by using your collaborative app. They can convert to sticky, habitual users and eventually convert into paying customers.
 
