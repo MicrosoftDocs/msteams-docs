@@ -110,7 +110,7 @@ You can generate interest from both existing and new customers. You can also dri
 Remember to include media, such as a video or an animated gif in your post to make it rich and interactive. Tag @M365 and @MicrosoftTeamsi in your posts. Use the hashtags #Teamsapps, #MicrosoftTeams, #TeamsISV throughout the year in social media posts for your collaborative app. It aids in extending exposure and flagging Microsoft’s social team for a potential retweet.
 
 :::row:::
-    :::column span="2":::
+    :::column span="":::
         Connect with the [Microsoft 365 ISV Benefits Service Desk](mailto:ModernWorkISVPartner@microsoft.com) to seek guidance for your social media campaign and possible collaboration with Microsoft for execution. You can also seek help for the success metrics you should measure, such as:
         - Number of views or clicks on your social posts.
         - Number of visitors on your landing page.
@@ -175,7 +175,8 @@ If your app requires paid subscriptions, consider offering launch period discoun
 
 :::row:::
     :::column span="":::
-        Even promotions, such as 1:1 product demos, customer success consultations, invite-only webinars, trainings for the entire business unit or team using your Teams app help to differentiate your app. Such promotions help accelerate customer acquisition.
+        Consider promotions, such as 1:1 product demos, customer success consultations, invite-only webinars, trainings for the entire business unit or team using your Teams app help to differentiate your app.
+    Such promotions help accelerate customer acquisition.
     :::column-end:::
     :::column span="2":::
         :::image type="content" source="../../../../../assets/images/app-fundamentals/trials-store-listing.png" alt-text="free or extended trials in app store listing and FRE flow.":::
