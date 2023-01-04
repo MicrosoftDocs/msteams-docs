@@ -167,23 +167,15 @@ The banner or notification CTA can direct users to your app‘s landing page or 
 
 Since your goal at this stage is to achieve product-market fit for your app, it’s critical to learn how users are perceiving your new app and if they’re getting the intended value by using the app. If not already done for your core SaaS product, offer free trials to users who sign up for your app (and SaaS service) through the Teams channel. If you already offer trials for your SaaS product and your standard free trial period is 15 days, consider extending the trial period for Teams users to 30-60 days.
 
+:::image type="content" source="../../../../../assets/images/app-fundamentals/trials-store-listing.png" alt-text="free or extended trials in app store listing and FRE flow.":::
+
 Given you’ve built your Teams app for collaborative use cases, you'll naturally want trial users to invite their colleagues as well to use your app in shared context inside Teams. An extended trial facilitates collaborative evaluation of your app and increases the likelihood of these users converting to paid and sticky customers.
 
 ### Launch offers and promotions to acquire users for Teams app
 
-To acquire new customers for your Teams collaborative app, consider offering a little extra incentive to Teams users other than what’s available for your core SaaS product.
+To acquire new customers for your Teams collaborative app, consider offering a little extra incentive to Teams users other than what’s available for your core SaaS product. If your app requires paid subscriptions, consider offering launch period discounts.
 
-If your app requires paid subscriptions, consider offering launch period discounts.
-
-:::row:::
-    :::column span="":::
-        Consider promotions, such as 1:1 product demos, customer success consultations, invite-only webinars, trainings for the entire business unit or team using your Teams app help to differentiate your app.
-    Such promotions help accelerate customer acquisition.
-    :::column-end:::
-    :::column span="2":::
-        :::image type="content" source="../../../../../assets/images/app-fundamentals/trials-store-listing.png" alt-text="free or extended trials in app store listing and FRE flow.":::
-    :::column-end:::
-:::row-end:::
+Consider promotions, such as 1:1 product demos, customer success consultations, invite-only webinars, trainings for the entire business unit or team using your Teams app help to differentiate your app. Such promotions help accelerate customer acquisition.
 
 If you've already listed your transactable SaaS subscriptions for the Teams app in the marketplace, ensure that you price them at a discount. It encourages users to purchase your offer directly from the Teams marketplace.
 
