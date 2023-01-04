@@ -35,7 +35,6 @@ The code snippets for Teams activity handlers:
 `OnTeamsChannelCreatedAsync`
 
 ```csharp
-
 protected override Task OnTeamsChannelCreatedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
         {
             // Code logic here
@@ -45,7 +44,6 @@ protected override Task OnTeamsChannelCreatedAsync(ChannelInfo channelInfo, Team
 `OnTeamsChannelDeletedAsync`
 
 ```csharp
-
 protected override Task OnTeamsChannelDeletedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
         {
             // Code logic here
@@ -55,7 +53,6 @@ protected override Task OnTeamsChannelDeletedAsync(ChannelInfo channelInfo, Team
 `OnTeamsChannelRenamedAsync`
 
 ```csharp
-
 protected override Task OnTeamsChannelRenamedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
   {
    // Code logic here
@@ -65,7 +62,6 @@ protected override Task OnTeamsChannelRenamedAsync(ChannelInfo channelInfo, Team
 `OnTeamsTeamRenamedAsync`
 
 ```csharp
-
 protected override Task OnTeamsTeamRenamedAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
   {
    // Code logic here
@@ -75,7 +71,6 @@ protected override Task OnTeamsTeamRenamedAsync(TeamInfo teamInfo, ITurnContext<
 `OnTeamsMembersAddedAsync`
 
 ```csharp
-
 protected override Task OnTeamsMembersAddedAsync(IList<TeamsChannelAccount> teamsMembersAdded, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
   {
    // Code logic here
@@ -85,11 +80,37 @@ protected override Task OnTeamsMembersAddedAsync(IList<TeamsChannelAccount> team
 `OnTeamsMembersRemovedAsync`
 
 ```csharp
-
 protected override Task OnTeamsMembersRemovedAsync(IList<TeamsChannelAccount> teamsMembersRemoved, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken);
   {
    // Code logic here
   }
+```
+
+`OnTeamsMessageEditAsync`
+
+```csharp
+protected override async Task OnTeamsMessageEditAsync(ITurnContext<IMessageUpdateActivity> turnContext, CancellationToken cancellationToken)
+  { 
+   // Code logic here 
+  } 
+```
+
+`OnTeamsMessageUndeleteAsync`
+
+```csharp
+protected override async Task OnTeamsMessageUndeleteAsync(ITurnContext<IMessageUpdateActivity> turnContext, CancellationToken cancellationToken)
+  { 
+   // Code logic here 
+  } 
+```
+
+`OnTeamsMessageSoftDeleteAsync`
+
+```csharp
+ protected override async Task OnTeamsMessageSoftDeleteAsync(ITurnContext<IMessageDeleteActivity> turnContext, CancellationToken cancellationToken)
+  { 
+   // Code logic here 
+  } 
 ```
 
 # [JavaScript](#tab/javascript)
@@ -251,6 +272,8 @@ The list of handlers defined in `ActivityHandler` includes the following events:
 | :-- | :-- | :-- |
 | Any activity type received | `onTurn` | This method calls one of the other handlers, based on the type of activity received. |
 | Message activity received | `onMessage` | This method helps to handle a `Message` activity. |
+| Message update activity received  | `onMessageUpdate` | This method calls a handler if a message is updated. |
+| Message delete activity received | `onMessageDelete` | This method calls a handler if a message is deleted. |
 | Conversation update activity received | `onConversationUpdate` | This method calls a handler if members other than the bot joined or left the conversation, on a `ConversationUpdate` activity. |
 | Non-bot members joined the conversation | `onMembersAdded` | This method helps to handle members joining a conversation. |
 | Non-bot members left the conversation | `onMembersRemoved` | This method helps to handle members leaving a conversation. |
@@ -270,6 +293,9 @@ The `TeamsActivityHandler` extends the list of handlers in the core Bot Framewor
 | teamRenamed | `OnTeamsTeamRenamedAsync` | `return Task.CompletedTask;` This method can be overridden to handle a Teams team being renamed. For more information, see [team renamed](https://aka.ms/azure-bot-subscribe-to-conversation-events#team-renamed) in [conversation update events](https://aka.ms/azure-bot-subscribe-to-conversation-events). |
 | MembersAdded | `OnTeamsMembersAddedAsync` | This method calls the `OnMembersAddedAsync` method in `ActivityHandler`. The method can be overridden to handle members joining a team. For more information, see [team members added](https://aka.ms/azure-bot-subscribe-to-conversation-events#team-members-added) in [conversation update events](https://aka.ms/azure-bot-subscribe-to-conversation-events). |
 | MembersRemoved | `OnTeamsMembersRemovedAsync` | This method calls the `OnMembersRemovedAsync` method in `ActivityHandler`. The method can be overridden to handle members leaving a team. For more information, see [team members removed](https://aka.ms/azure-bot-subscribe-to-conversation-events#team-members-removed) in [conversation update events](https://aka.ms/azure-bot-subscribe-to-conversation-events). |
+| message edit | `onTeamsMessageEditEvent` | This method can be overridden to handle for when a message in a conversation is edited. |
+| message undelete | `onTeamsMessageUndeleteEvent` | This method can be overridden to handle for when a deleted message in a conversation is undeleted. For example, when the user decides to undo a deleted message. |
+| message soft delete | `onTeamsMessageSoftDeleteEvent` | This method can be overridden to handle for when a message in a conversation is soft deleted. |
 
 #### Teams invoke activities
 
