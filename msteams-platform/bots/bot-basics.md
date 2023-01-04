@@ -193,9 +193,8 @@ The list of handlers defined in `ActivityHandler` includes the following events:
 | :-- | :-- | :-- |
 | Any activity type received | `OnTurnAsync` | This method calls one of the other handlers, based on the type of activity received. |
 | Message activity received | `OnMessageActivityAsync` | This method can be overridden to handle a `Message` activity. |
-| Message edit activity | `OnTeamsMessageEditAsync` | This method can be overridden to handle a `Message edit` activity. |
-| Message undo delete activity | `OnTeamsMessageUndeleteAsync` or `OnMessageUpdateActivityAsync` | This method can be overridden to handle a `Message undo delete` activity. |
-| Message delete activity | `OnMessageDeleteActivityAsync` | This method can be overridden to handle a `Message delete` activity. |
+| Message update activity received | `OnMessageUpdateActivityAsync` | This method can be overridden to handle a `Message update` activity. |
+| Message delete activity received | `OnMessageDeleteActivityAsync` | This method can be overridden to handle a `Message delete` activity. |
 | Conversation update activity received | `OnConversationUpdateActivityAsync` | This method calls a handler if members other than the bot joined or left the conversation, on a `ConversationUpdate` activity. |
 | Non-bot members joined the conversation | `OnMembersAddedAsync` | This method can be overridden to handle members joining a conversation. |
 | Non-bot members left the conversation | `OnMembersRemovedAsync` | This method can be overridden to handle members leaving a conversation. |
@@ -216,6 +215,9 @@ The `TeamsActivityHandler` extends the list of handlers in the core Bot Framewor
 | teamRenamed | `OnTeamsTeamRenamedAsync` | `return Task.CompletedTask;` This method can be overridden to handle a Teams team being renamed. For more information, see [team renamed](https://aka.ms/azure-bot-subscribe-to-conversation-events#team-renamed) in [conversation update events](https://aka.ms/azure-bot-subscribe-to-conversation-events).|
 | MembersAdded | `OnTeamsMembersAddedAsync` | This method calls the `OnMembersAddedAsync` method in `ActivityHandler`. The method can be overridden to handle members joining a team. For more information, see [team members added](https://aka.ms/azure-bot-subscribe-to-conversation-events#team-members-added) in [conversation update events](https://aka.ms/azure-bot-subscribe-to-conversation-events).|
 | MembersRemoved | `OnTeamsMembersRemovedAsync` | This method calls the `OnMembersRemovedAsync` method in `ActivityHandler`. The method can be overridden to handle members leaving a team. For more information, see [team members removed](https://aka.ms/azure-bot-subscribe-to-conversation-events#team-members-removed) in [conversation update events](https://aka.ms/azure-bot-subscribe-to-conversation-events).|
+| messageEdit | `OnTeamsMessageEditAsync` | This method can be overridden to handle a Teams message edit event. |
+| messageUndelete | `OnTeamsMessageUndeleteAsync` | This method can be overridden to handle a Teams message undelete event. |
+| messageSoftDelete | `OnTeamsMessageSoftDeleteAsync` | This method can be overridden to handle a Teams message soft delete event. |
 
 #### Teams invoke activities
 
