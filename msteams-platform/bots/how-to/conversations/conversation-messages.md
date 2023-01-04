@@ -231,6 +231,7 @@ protected override async Task OnTeamsMessageEditAsync(ITurnContext<IMessageUpdat
 var replyActivity = MessageFactory.Text("message is updated"); 
 await turnContext.SendActivityAsync(replyActivity, cancellationToken); 
 } 
+
 ```
 
 # [Javascript](#tab/javascript)
@@ -322,7 +323,8 @@ protected override async Task OnTeamsMessageUndeleteAsync(ITurnContext<IMessageU
 { 
 var replyActivity = MessageFactory.Text("message is undeleted"); 
 await turnContext.SendActivityAsync(replyActivity, cancellationToken); 
-} 
+} t
+
 ```
 
 # [Javascript](#tab/javascript)
@@ -419,6 +421,7 @@ protected override async Task OnTeamsMessageSoftDeleteAsync(ITurnContext<IMessag
 var replyActivity = MessageFactory.Text("message is soft deleted"); 
 await turnContext.SendActivityAsync(replyActivity, cancellationToken); 
 } 
+
 ```
 
 # [Javascript](#tab/javascript)
