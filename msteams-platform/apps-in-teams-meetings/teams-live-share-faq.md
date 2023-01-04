@@ -122,6 +122,15 @@ While Live Share is in Preview, any limit to events emitted through Live Share i
 
 </details>
 
+<details>
+<summary><b>Is Live Share supported for Government Community Cloud (GCC), Government Community Cloud High (GCC-High), and Department of Defense (DOD) tenants?</b></summary>
+
+Live Share isn't supported for GCC, GCC-High, and DOD tenants.
+
+<br>
+
+</details>
+
 ## Have more questions or feedback?
 
 Submit issues and feature requests to the SDK repository for [Live Share SDK](https://github.com/microsoft/live-share-sdk). Use the `live-share` and `microsoft-teams` tag to post how-to questions about the SDK at [Stack Overflow](https://stackoverflow.com/questions/tagged/live-share+microsoft-teams).
