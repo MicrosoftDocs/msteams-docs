@@ -152,12 +152,14 @@ Connect with the [Microsoft 365 ISV Benefits Service Desk](mailto:ModernWorkISVP
 
 :::row:::
         :::column span="":::
-            Include in-product CTAs prominently in your web SaaS product to let users know about your new or updated Teams collaborative app. You can use transient banners, notifications bar, what’s new notifications inside the SaaS product’s UI for all users. You can also use push notifications to relevant users, such as those belonging to your customer organizations who use Microsoft 365.
+            Include in-product CTAs prominently in your web SaaS product to let users know about your new or updated Teams collaborative app.
         :::column-end:::
-        :::column span="2":::
+        :::column span="3":::
             :::image type="content" source="../../../../../assets/images/app-fundamentals/in-product-banner.png" alt-text="In-product banner":::
         :::column-end:::
     :::row-end:::
+
+You can use transient banners, notifications bar, what’s new notifications inside the SaaS product’s UI for all users. You can also use push notifications to relevant users, such as those belonging to your customer organizations who use Microsoft 365.
 
 The banner or notification CTA can direct users to your app‘s landing page or directly to the app’s listing in Teams Marketplace.
 
