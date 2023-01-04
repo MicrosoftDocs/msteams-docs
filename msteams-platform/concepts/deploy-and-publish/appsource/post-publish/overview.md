@@ -20,7 +20,7 @@ Data for newly published apps takes about a week to appear in the report.
 
 You can submit changes to your app (such as new features or even metadata) in Partner Center. These changes require a new review process.
 
-Ensure the following when publishing updates:
+Ensure to check the following when you're publishing updates:
 
 * Don't change your app ID.
 * Increment your app's version number.
@@ -28,7 +28,7 @@ Ensure the following when publishing updates:
 
 ### App updates requiring user consent
 
-When a user installs your app, they must give the app permission to access the services and information the app requires to function. In most cases, users must do this once and new version of your app install automatically.
+When a user installs your app, they must give the app permission to access the services, and information the app requires to function. In most cases, users must do this once and new version of your app install automatically.
 If you make any of the following changes to your app, however, your existing users must accept another permission request to install the update:
 
 * Add or remove a bot.
@@ -53,7 +53,7 @@ Create the link using the following URL appended with your app ID: `https://team
 
 ## Complete Microsoft 365 Certification
 
-[Microsoft 365 Certification](/microsoft-365-app-certification/docs/certification) offers assurances that data and privacy are adequately secured and protected when a third-party Office app or an add-in is installed in your Microsoft 365 ecosystem. The certification confirms that your app is compatible with Microsoft technologies, is compliant with cloud app security best practices, and is supported by Microsoft.
+[Microsoft 365 Certification](/microsoft-365-app-certification/docs/certification) offers assurances that data and privacy are adequately secured and protected when a third-party Microsoft 365 app or an add-in is installed in your Microsoft 365 ecosystem. The certification confirms that your app is compatible with Microsoft technologies, is compliant with cloud app security best practices, and is supported by Microsoft.
 
 ## Stop app distribution
 

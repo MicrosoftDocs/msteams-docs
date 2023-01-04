@@ -14,7 +14,7 @@ Every team has a different way of communicating and collaborating tasks. To achi
 
 ## Tabs in Teams meetings
 
-Tabs allow the meeting participants to access services and content in a specific space within a meeting. If you're new to Microsoft Teams tab development, see [Build tabs for Teams](/microsoftteams/platform/tabs/what-are-tabs).
+Tabs allow the meeting participants to access services and content in a specific space within a meeting. If you're new to Microsoft Teams tab development, see [build tabs for Teams](/microsoftteams/platform/tabs/what-are-tabs).
 
 Before creating a meeting tab, it's important to learn about the surfaces that are available to target the meeting chat view, meeting details view, meeting side panel view and meeting stage view.
 
@@ -168,13 +168,24 @@ For in-meeting side panel experience only: 
      ] 
 ```
 
-### Advanced Tab SDK APIs
+### Advanced tab APIs
 
-The Microsoft Teams JavaScript client SDK is a rich SDK used to create Tabs using JavaScript. Use the latest TeamsJS (V.2.0 or later) to work in Teams, Office, and Outlook. For more information, see [Teams JavaScript client SDK](/microsoftteams/platform/tabs/how-to/using-teams-client-sdk?tabs=javascript%2Cmanifest-teams-toolkit).
+TeamsJS is a rich library used to create Tabs using JavaScript. Use the latest TeamsJS (V.2.0 or later) to work in Teams, Microsoft 365 app, and Outlook. For more information, see [Teams JavaScript client library](/microsoftteams/platform/tabs/how-to/using-teams-client-library).
 
 ### Frame context
 
 Microsoft Teams JavaScript library exposes the frameContext in which your meeting tab URL is loaded in the getContext API. The possible values of frameContext are content, task, setting, remove, sidePanel, and meetingStage. This allows you to build customized experiences based on where the app renders. For example, showing a specific collaboration focused UI when in the `meetingStage` and a different meeting preparation UI in the chat tab (`content`). For more information, see [getContext API](/microsoftteams/platform/tabs/how-to/access-teams-context?tabs=teamsjs-v2).
+
+## Feature compatibility by user types
+
+The following table provides the user types and lists the features that each user can access the tabs in meetings:
+
+| User type | Scheduled meeting or Instant calendar meeting | One-on-one call | Group call | Scheduled channel meeting |
+| :-- | :-- | :-- | :-- | :-- |
+| In-tenant user | Interaction allowed for all roles.<br><br> Create, update, or delete is allowed for all except the Attendees. | Interaction and create, update, or delete allowed. <br><br> In-tenant users in call with federated users can't interact and create, update, or delete. | Interaction and create, update, or delete allowed.<br><br> In-tenant users in call with federated users can't interact and create, update, or delete. | Interaction and create, update, or delete allowed for all roles except for attendees. |
+| Guest user | Can interact only | Can interact only | Can interact only | Can interact only. |
+| Federated user or External user | Can interact only | Not available | Not available | Can interact only |
+| Anonymous user | Not available | Not available | Not available | Not available |
 
 ## Code sample
 
@@ -200,7 +211,8 @@ Microsoft Teams JavaScript library exposes the frameContext in which your meetin
 
 ## See also
 
-* [In-meeting notification design guidelines](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)
-* [Teams authentication flow for tabs](../tabs/how-to/authentication/auth-flow-tab.md)
-* [Shared meeting stage experience design guidelines](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md)
-* [Add apps to meetings via Microsoft Graph](/graph/api/chat-post-installedapps?view=graph-rest-1.0&tabs=http&preserve-view=true)
+* [Apps for Teams meetings and calls](teams-apps-in-meetings.md)
+* [Design your Microsoft Teams meeting extension](design/designing-apps-in-meetings.md)
+* [Enable SSO for tab app](../tabs/how-to/authentication/tab-sso-overview.md)
+* [Add apps to meetings using Microsoft Graph](/graph/api/chat-post-installedapps?view=graph-rest-1.0&tabs=http&preserve-view=true)
+* [Get change notifications for Microsoft Teams meeting call updates](/graph/changenotifications-for-onlinemeeting)
