@@ -87,7 +87,7 @@ While building traction, you showcased the collaborative app in Teams during you
 
     Users who have not visited your app or churned recently can be re-engaged to bring back to your app.
 
-    Remember, your goal is to get users to experience value by using your collaborative app. They can convert to sticky, habitual users and eventually convert into paying customers.
+    Remember, your goal is to get users to experience value by using your collaborative app.
     :::column-end:::
     :::column span="2":::
         :::image type="content" source="../../../../../assets/images/app-fundamentals/remarket-retarget.png" alt-text="Re-market via emails and retarget using Teams notifications.":::
@@ -96,6 +96,8 @@ While building traction, you showcased the collaborative app in Teams during you
         &nbsp;
     :::column-end:::
 :::row-end:::
+
+You can convert user who try your app to sticky, habitual users and eventually convert into paying customers.
 
 ### Co-activation in mutually identified existing customers
 
