@@ -26,7 +26,7 @@ To receive a text message, use the `Text` property of an `Activity` object. In t
 
 The following code shows an example of receiving a message:
 
-# [C#](#tab/dotnet)
+# [C#](#tab/dotnet1)
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.activityhandler.onmessageactivityasync?view=botbuilder-dotnet-stable&preserve-view=true)
 
@@ -42,7 +42,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 
 ```
 
-# [TypeScript](#tab/typescript)
+# [TypeScript](#tab/typescript1)
 
 * [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onmessage&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-localization/nodejs/server/bot/botActivityHandler.js#L25)
@@ -62,7 +62,7 @@ export class MyBot extends TeamsActivityHandler {
 
 ```
 
-# [Python](#tab/python)
+# [Python](#tab/python1)
 
 * [SDK reference](/python/api/botbuilder-core/botbuilder.core.activityhandler?view=botbuilder-py-latest#botbuilder-core-activityhandler-on-message-activity&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L103)
@@ -75,7 +75,7 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 ```
 
-# [JSON](#tab/json)
+# [JSON](#tab/json1)
 
 ```json
 
@@ -126,7 +126,7 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 ```
 
-# [Javascript](#tab/javascript)
+# [Javascript](#tab/javascript1)
 
 ```javascript
 
@@ -142,7 +142,7 @@ To send a text message, specify the string you want to send as an activity. In t
 
 The following code shows an example of sending a message when a user is added to a conversation:
 
-# [C#](#tab/dotnet)
+# [C#](#tab/dotnet2)
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.turncontext.sendactivityasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-turncontext-sendactivityasync(microsoft-bot-schema-iactivity-system-threading-cancellationtoken)&preserve-view=true)
 
@@ -158,7 +158,7 @@ protected override async Task OnMembersAddedAsync(IList<ChannelAccount> membersA
 
 ```
 
-# [TypeScript](#tab/typescript)
+# [TypeScript](#tab/typescript2)
 
 * [SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#botbuilder-core-turncontext-sendactivity&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L46)
@@ -181,7 +181,7 @@ protected override async Task OnMembersAddedAsync(IList<ChannelAccount> membersA
 
 ```
 
-# [Python](#tab/python)
+# [Python](#tab/python2)
 
 * [SDK reference](/python/api/botbuilder-core/botbuilder.core.turncontext?view=botbuilder-py-latest#botbuilder-core-turncontext-send-activity&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-teams-authentication/python/bots/auth_bot.py#L33)
@@ -198,7 +198,7 @@ async def on_members_added_activity(
 
 ```
 
-# [JSON](#tab/json)
+# [JSON](#tab/json2)
 
 ```json
 
@@ -222,7 +222,7 @@ async def on_members_added_activity(
 
 ```
 
-# [Javascript](#tab/javascript)
+# [Javascript](#tab/javascript2)
 
 ```javascript
 
@@ -245,7 +245,7 @@ To get event notifications to handle the message updates in bot, you can either 
 
 The following code shows an example when a sent message is edited:
 
-# [C#](#tab/csharp)
+# [C#](#tab/csharp3)
 
 ```csharp
 
@@ -257,7 +257,7 @@ await turnContext.SendActivityAsync(replyActivity, cancellationToken);
 
 ```
 
-# [TypeScript](#tab/typescript)
+# [TypeScript](#tab/typescript3)
 
 ```typescript
 
@@ -265,7 +265,7 @@ NA
 
 ```
 
-# [Python](#tab/python)
+# [Python](#tab/python3)
 
 ```python
 
@@ -273,7 +273,7 @@ NA
 
 ```
 
-# [JSON](#tab/json)
+# [JSON](#tab/json3)
 
 ```json
 
@@ -316,7 +316,7 @@ NA
 
 ```
 
-# [Javascript](#tab/javascript)
+# [Javascript](#tab/javascript3)
 
 Following are two methods to get event notifications to handle the message updates using the Bot SDK. You can use either one of the following methods:
 
@@ -358,7 +358,7 @@ async onTeamsMessageEdit(context) {
 
 The following code shows an example when a deleted message is restored:
 
-# [C#](#tab/csharp)
+# [C#](#tab/csharp4)
 
 ```csharp
 
@@ -370,7 +370,7 @@ await turnContext.SendActivityAsync(replyActivity, cancellationToken);
 
 ```
 
-# [TypeScript](#tab/typescript)
+# [TypeScript](#tab/typescript4)
 
 ```typescript
 
@@ -378,7 +378,7 @@ NA
 
 ```
 
-# [Python](#tab/python)
+# [Python](#tab/python4)
 
 ```python
 
@@ -386,7 +386,7 @@ NA
 
 ```
 
-# [JSON](#tab/json)
+# [JSON](#tab/json4)
 
 ```json
 
@@ -429,7 +429,7 @@ NA
 
 ```
 
-# [Javascript](#tab/javascript)
+# [Javascript](#tab/javascript4)
 
 Following are two methods to get event notifications to handle the message updates using the Bot SDK. You can use either one of the following methods:
 
@@ -475,7 +475,7 @@ To get event notifications to handle the message updates in bot, you can overrid
 
 The following code shows an example when a sent message is deleted:
 
-# [C#](#tab/csharp)
+# [C#](#tab/csharp5)
 
 ```csharp
 
@@ -487,7 +487,7 @@ await turnContext.SendActivityAsync(replyActivity, cancellationToken);
 
 ```
 
-# [TypeScript](#tab/typescript)
+# [TypeScript](#tab/typescript5)
 
 ```typescript
 
@@ -495,7 +495,7 @@ NA
 
 ```
 
-# [Python](#tab/python)
+# [Python](#tab/python5)
 
 ```python
 
@@ -503,7 +503,7 @@ NA
 
 ```
 
-# [JSON](#tab/json)
+# [JSON](#tab/json5)
 
 ```json
 
@@ -546,7 +546,7 @@ NA
 
 ```
 
-# [Javascript](#tab/javascript)
+# [Javascript](#tab/javascript5)
 
 Following are two methods to get event notifications to handle the message updates using the Bot SDK. You can use either one of the following methods:
 
