@@ -28,6 +28,8 @@ Meetings enable collaboration, partnership, informed communication, and shared f
         :::column-end:::
 :::row-end:::
 :::row:::
+:::row-end:::
+:::row:::
     :::column span="":::
 
         :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/3-create-scene.png" border="false" link="teams-together-mode.md":::
@@ -52,6 +54,8 @@ Meetings enable collaboration, partnership, informed communication, and shared f
         <br><br><br><br><br>
         :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/8-optimize-meeting.png" border="false" link="teams-apps-in-meetings.md":::
     :::column-end:::
+:::row-end:::
+:::row:::
 :::row-end:::
 :::row:::
     :::column span="":::
