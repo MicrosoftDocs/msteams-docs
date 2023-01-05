@@ -240,37 +240,37 @@ Following are two methods to get event notifications to handle the message updat
 
 **​Event function registration**:
 
-```javascript
-this.onTeamsMessageEditEvent(async (context, next) => {
-  let editedMessage = context.activity.text;
-  let messageId = context.activity.id;
-  let previousMessage = this.currentMessage[messageId];
-
-  await context.sendActivity(`The previous message was "${previousMessage}". It is now: "${editedMessage}"`);
-
-  this.updateCurrentMessage(messageId, editedMessage);
-
-  next();
-})
-
-```
+    ```javascript
+    this.onTeamsMessageEditEvent(async (context, next) => {
+      let editedMessage = context.activity.text;
+      let messageId = context.activity.id;
+      let previousMessage = this.currentMessage[messageId];
+    
+      await context.sendActivity(`The previous message was "${previousMessage}". It is now: "${editedMessage}"`);
+    
+      this.updateCurrentMessage(messageId, editedMessage);
+    
+      next();
+    })
+    
+    ```
 
 **​Method override**:
 
-```javascript
-async onTeamsMessageEdit(context) {
-    let editedMessage = context.activity.text;
-    let messageId = context.activity.id;
-    let previousMessage = this.currentMessage[messageId];
+    ```javascript
+    async onTeamsMessageEdit(context) {
+        let editedMessage = context.activity.text;
+        let messageId = context.activity.id;
+        let previousMessage = this.currentMessage[messageId];
+    
+        await context.sendActivity(`The previous message was "${previousMessage}". It is now: "${editedMessage}"`);
+    
+        this.updateCurrentMessage(messageId, editedMessage);
+    }
+    
+    ```
 
-    await context.sendActivity(`The previous message was "${previousMessage}". It is now: "${editedMessage}"`);
-
-    this.updateCurrentMessage(messageId, editedMessage);
-}
-
-```
-
-# [JSON](#tab/json)
+# [JSON](#tab1/json)
 
 ```json
 {
@@ -363,7 +363,7 @@ async onTeamsMessageUndelete(context) {
 
 ```
 
-# [JSON](#tab/json)
+# [JSON](#tab2/json)
 
 ```json
 {
@@ -413,7 +413,7 @@ To get event notifications to handle the message updates in bot, you can overrid
 
 The following code shows an example when a sent message is deleted:
 
-# [C#](#tab/dotnet)
+# [C#](#tab3/dotnet)
 
 ```csharp
 protected override async Task OnTeamsMessageSoftDeleteAsync(ITurnContext<IMessageDeleteActivity> turnContext, CancellationToken cancellationToken) 
