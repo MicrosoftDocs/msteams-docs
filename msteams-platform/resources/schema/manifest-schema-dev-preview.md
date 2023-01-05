@@ -784,6 +784,7 @@ Delegated permissions allow the app to access data on behalf of the signed-in us
     |**Name**|**Description**|
     |---|---|
     |`InAppPurchase.Allow.User`|Allows the app to show the user marketplace offers and complete the user's purchases within the app, on behalf of the signed-in user.|
+    |`MeetingParticipantReaction.Read.User`| Allows the app to read user's reactions while participating in a meeting.|
 
 ## See also
 

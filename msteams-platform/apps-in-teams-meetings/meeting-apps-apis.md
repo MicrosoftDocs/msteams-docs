@@ -979,6 +979,9 @@ The following table provides the response codes:
 
 ## Raise Hand API
 
+> [!NOTE]
+> Raise hand API is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
+
 The `onRaisehandChangeHandler` API allows an app to show if the user has raised hand during the meeting. The API is available through the Teams client SDK.
 
 > [!NOTE]
@@ -1033,6 +1036,9 @@ export interface IRaiseHandState {
 | 500 | Internal code error, permission failure, reaction not enabled. |
 
 ## Reaction API
+
+> [!NOTE]
+> Reaction API is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
 
 The `onReactionHandler` API allows an app to get the status of the users reaction during the meeting. The API is available through the Teams client SDK.
 

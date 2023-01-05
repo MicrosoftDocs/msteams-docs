@@ -300,9 +300,9 @@ Developer preview is a public program that provides early access to unreleased T
 
 **2023 January**
 
-* ***January 05, 2023***: [Raise Hand API](apps-in-teams-meetings/meeting-apps-apis.md#raise-hand-api)
+* ***January 05, 2023***: [Introduced Reaction API](apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#reaction-api)
 
-* ***January 05, 2023***: [Reaction API](apps-in-teams-meetings/meeting-apps-apis.md#reaction-api)
+* ***January 05, 2023***: [Introduced Raise Hand API](apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#raise-hand-api)
 
 :::column-end:::
 :::row-end:::

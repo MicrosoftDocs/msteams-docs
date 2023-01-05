@@ -299,7 +299,6 @@ The Raise hand API allows your app to show if the user has raised hand during th
 |---------|---------|
 |Avatar   | You can show an animation of the Avatar displaying the reaction.|
 |Mesh     | Participants in a Teams meeting can send reaction form the U-bar and an animation of the reaction is shown in the Mesh app.|
-|Games    | You can use the raise hand as a form of submission in games such as Trivia or Kahoot.|
 
 ### App manifest settings for raise hand API
 
