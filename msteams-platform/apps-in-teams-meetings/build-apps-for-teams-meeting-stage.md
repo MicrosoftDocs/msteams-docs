@@ -297,7 +297,7 @@ The Raise hand API allows your app to show if the user has raised hand during th
 
 ### App manifest settings for raise hand API
 
-To use the raise hand API, you must configure RSC permissions in the app manifest. Configure the `authorization` property, and the `name` and the `type` in the `resourceSpecific` field as follows:
+To use the raise hand API, you must configure RSC permissions in the app manifest. Configure the `authorization`, `name`, and `type` properties in the `resourceSpecific` field as follows:
 
 ```JSON
 "authorization": {
