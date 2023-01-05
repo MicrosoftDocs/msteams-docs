@@ -221,7 +221,7 @@ The Reaction API allows you to react in the meeting stage. The types of reaction
 | Scenario  | Example  |
 |---------|---------|
 |Avatar   | You can react with an animation of the Avatar displaying the reaction.|
-|Mesh     | Participants in a Teams meeting can send reaction form the U-bar and an animation of the reaction is shown in the mesh app.|
+|Mesh     | Participants in a Teams meeting can send reaction form the U-bar and an animation of the reaction is shown in the Mesh app.|
 
 ### App manifest settings for reaction API
 
