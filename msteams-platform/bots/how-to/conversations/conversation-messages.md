@@ -312,6 +312,15 @@ async onTeamsMessageEdit(context) {
 
 ```
 
+# [JSON](#tab/json)
+
+```csharp
+protected override async Task OnTeamsMessageUndeleteAsync(ITurnContext<IMessageUpdateActivity> turnContext, CancellationToken cancellationToken)
+{ 
+var replyActivity = MessageFactory.Text("message is undeleted"); 
+await turnContext.SendActivityAsync(replyActivity, cancellationToken); 
+}
+
 ---
 
 The following code shows an example when a deleted message is restored:
@@ -323,7 +332,7 @@ protected override async Task OnTeamsMessageUndeleteAsync(ITurnContext<IMessageU
 { 
 var replyActivity = MessageFactory.Text("message is undeleted"); 
 await turnContext.SendActivityAsync(replyActivity, cancellationToken); 
-} t
+}
 
 ```
 
@@ -404,6 +413,15 @@ async onTeamsMessageUndelete(context) {
 }  
 
 ```
+
+# [JSON](#tab/json)
+
+```csharp
+protected override async Task OnTeamsMessageUndeleteAsync(ITurnContext<IMessageUpdateActivity> turnContext, CancellationToken cancellationToken)
+{ 
+var replyActivity = MessageFactory.Text("message is undeleted"); 
+await turnContext.SendActivityAsync(replyActivity, cancellationToken); 
+}
 
 ---
 
@@ -500,6 +518,15 @@ async onTeamsMessageSoftDelete(context) {
 }  
 
 ```
+
+# [JSON](#tab/json)
+
+```csharp
+protected override async Task OnTeamsMessageUndeleteAsync(ITurnContext<IMessageUpdateActivity> turnContext, CancellationToken cancellationToken)
+{ 
+var replyActivity = MessageFactory.Text("message is undeleted"); 
+await turnContext.SendActivityAsync(replyActivity, cancellationToken); 
+}
 
 ---
 
