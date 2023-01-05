@@ -111,17 +111,17 @@ Remember to include media, such as a video or an animated gif in your post to ma
 
 :::row:::
     :::column span="":::
+
+        :::image type="content" source="../../../../../assets/images/app-fundamentals/social-media-posts.png" alt-text="Social media posts":::
+
+    :::column-end:::
+    :::column span="":::
         Connect with the [Microsoft 365 ISV Benefits Service Desk](mailto:ModernWorkISVPartner@microsoft.com) to seek guidance for your social media campaign and possible collaboration with Microsoft for execution. You can also seek help for the success metrics you should measure, such as:
         - Number of views or clicks on your social posts.
         - Number of visitors on your landing page.
         - Number of MQLs generated on the landing page.
         - Number of visitors to the app’s listing in marketplace.
         - Mumber of Teams app installs post launch.
-    :::column-end:::
-    :::column span="":::
-
-        :::image type="content" source="../../../../../assets/images/app-fundamentals/social-media-posts.png" alt-text="Social media posts":::
-
     :::column-end:::
 :::row-end:::
 
