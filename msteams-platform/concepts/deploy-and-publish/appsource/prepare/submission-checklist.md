@@ -65,7 +65,9 @@ Depending on your app functionality, you're required to provide Teams tenant con
 
 Here are sample test instructions for your reference:
 
-Code sample: // Add code samples //
+Code sample:
+
+- 
 
 
 
