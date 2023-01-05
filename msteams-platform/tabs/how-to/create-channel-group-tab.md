@@ -668,6 +668,10 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
 ::: zone-end
 
+## Step-by-step guide
+
+Follow the [step-by-step guide](../../sbs-gs-blazorupdate.yml) to build your first app using Blazor
+
 ## Next step
 
 > [!div class="nextstepaction"]
