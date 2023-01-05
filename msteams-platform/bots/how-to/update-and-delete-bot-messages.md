@@ -20,6 +20,8 @@ You can use dynamic message updates for scenarios, such as poll updates, modifyi
 It is not necessary for the new message to match the original in type. For example, if the original message contains an attachment, the new message can be a simple text message.
 
 # [C#](#tab/dotnet)
+* [SDK reference](/dotnet/api/microsoft.bot.builder.turncontext.updateactivityasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-turncontext-updateactivityasync(microsoft-bot-schema-iactivity-system-threading-cancellationtoken)&preserve-view=true)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L257)
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.botadapter.updateactivityasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-botadapter-updateactivityasync(microsoft-bot-builder-iturncontext-microsoft-bot-schema-activity-system-threading-cancellationtoken)&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L257)
@@ -36,6 +38,7 @@ await turnContext.UpdateActivityAsync(newActivity, cancellationToken);
 ```
 
 # [TypeScript](#tab/typescript)
+* [SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#botbuilder-core-turncontext-updateactivity&preserve-view=true)
 
 To update an existing message, pass a new `Activity` object with the existing activity ID to the `updateActivity` method of the `TurnContext` object. For more information, see [updateActivity](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#updateactivity-partial-activity--&preserve-view=true).
 
@@ -100,7 +103,6 @@ await turnContext.UpdateActivityAsync(activity, cancellationToken);
 ```
 
 # [TypeScript](#tab/typescript)
-* [SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#botbuilder-core-turncontext-updateactivity&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L133)
 
 To update existing card on a button selection, pass a new `Activity` object with updated card and `replyToId` as activity ID to the `updateActivity` method of the `TurnContext` object. See [updateActivity](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#updateactivity-partial-activity--&preserve-view=true).
@@ -152,6 +154,10 @@ Now that you have updated cards, you can delete messages using the Bot Framework
 In the Bot Framework, every message has its unique activity identifier. Messages can be deleted using the Bot Framework's `DeleteActivity` method.
 
 # [C#](#tab/dotnet)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L156)
+
+* [SDK reference](/dotnet/api/microsoft.bot.builder.botadapter.deleteactivityasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-botadapter-deleteactivityasync(microsoft-bot-builder-iturncontext-microsoft-bot-schema-conversationreference-system-threading-cancellationtoken)&preserve-view=true)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L156)
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.botadapter.deleteactivityasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-botadapter-deleteactivityasync(microsoft-bot-builder-iturncontext-microsoft-bot-schema-conversationreference-system-threading-cancellationtoken)&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L156)
@@ -167,7 +173,6 @@ foreach (var activityId in _list)
 ```
 
 # [TypeScript](#tab/typescript)
-* [SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#botbuilder-core-turncontext-deleteactivity&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L218)
 
 To delete a message, pass that activity's ID to the `deleteActivity` method of the `TurnContext` object. For more information, see [deleteActivity](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#deleteactivity-string---partial-conversationreference--&preserve-view=true).

@@ -52,7 +52,7 @@ When adding a tab, if you select **Save** but receive an error message indicatin
 
 ### Can't authenticate the user or display your auth provider in your tab
 
-Unless you're doing silent authentication, you must follow the authentication process provided by the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client).
+Unless you're doing silent authentication, you must follow the authentication process provided by the [Microsoft Teams JavaScript client library](/javascript/api/overview/msteams-client).
 
 > [!NOTE]
 > We require all authentication flow to start and end on your domain, which must be listed in the `validDomains` object in your manifest.
@@ -67,7 +67,7 @@ There's a known issue where updating an existing bot app with a new or updated s
 
 ### Can't add my bot
 
-Apps must be enabled by the Office 365 tenant admin for them to be loaded by end users. In some cases, the Office 365 tenant might have multiple SKUs associated with it, and for bots to work in any, they must be enabled in all SKUs. For more information, see [prepare your Office 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md).
+Apps must be enabled by the Microsoft 365 tenant admin for them to be loaded by end users. In some cases, the Microsoft 365 tenant might have multiple SKUs associated with it, and for bots to work in any, they must be enabled in all SKUs. For more information, see [prepare your Microsoft 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md).
 
 ### Can't add bot as a member of a team
 
@@ -98,3 +98,11 @@ Common reasons for manifest read errors:
 If you're attempting to upload an updated package with the same ID again, choose the **Replace** icon at the end of the tab's table row rather than the **Upload** button.
 
 If you're not re-uploading an updated package, ensure that the ID is unique.
+
+## See also
+
+* [Build tabs for meeting](../apps-in-teams-meetings/build-tabs-for-meeting.md)
+* [Build bots for Teams](../bots/what-are-bots.md)
+* [Enable SSO for tab app](../tabs/how-to/authentication/tab-sso-overview.md)
+* [Receive all conversation messages with RSC](../bots/how-to/conversations/channel-messages-with-rsc.md)
+* [App manifest schema for Teams](schema/manifest-schema.md)

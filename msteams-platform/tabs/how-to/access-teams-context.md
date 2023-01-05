@@ -30,7 +30,7 @@ For more information, see [authenticate a user in your Microsoft Teams](~/concep
 You can access context information in two ways:
 
 * Using [URL placeholder values](#get-context-by-inserting-url-placeholder-values).
-* From the Microsoft Teams JavaScript client SDK [context](/javascript/api/@microsoft/teams-js/app.context) object.
+* From the Microsoft Teams JavaScript client library [context](/javascript/api/@microsoft/teams-js/app.context) object.
 
 ### Get context by inserting URL placeholder values
 
@@ -62,7 +62,7 @@ For example, in your app manifest if you set your tab *configurationUrl* attribu
 
 ### Get context by using the Microsoft Teams JavaScript library
 
-You can also retrieve the information listed above using the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client) by calling `microsoftTeams.getContext(function(context) { /* ... */ })`.
+You can also retrieve the information listed above using the [Microsoft Teams JavaScript client library](/javascript/api/overview/msteams-client) by calling `microsoftTeams.getContext(function(context) { /* ... */ })`.
 
 The following code provides an example of context variable:
 
@@ -216,7 +216,7 @@ The following table lists commonly used context properties of the *context* obje
 | channel.defaultOneNoteSectionId | defaultOneNoteSectionId | The OneNote section ID that is linked to the channel. |
 | page.isMultiWindow | isMultiWindow | The indication whether the tab is in a pop out window. |
 
-For more information, see [Updates to the *Context* interface](using-teams-client-sdk.md#updates-to-the-context-interface) and the [Context interface](/javascript/api/@microsoft/teams-js/app.context) API reference.
+For more information, see [Updates to the *Context* interface](using-teams-client-library.md#updates-to-the-context-interface) and the [Context interface](/javascript/api/@microsoft/teams-js/app.context) API reference.
 
 ## Retrieve context in private channels
 
