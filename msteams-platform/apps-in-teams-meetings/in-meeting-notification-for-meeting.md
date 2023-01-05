@@ -1,7 +1,7 @@
 ---
 title: Build in-meeting notification for Teams meeting
 author: v-sdhakshina
-description: In this article, learn how to build in-meeting notification for Microsoft Teams meeting and its code sample.
+description: Learn how to build in-meeting notification for Microsoft Teams meeting and add the Teams display picture and people card.
 ms.topic: conceptual
 ms.author: v-sdhakshina
 ms.localizationpriority: medium
@@ -40,7 +40,18 @@ You can also add the Teams display picture and people card of the user to in-mee
     }
 ```
 
-:::image type="content" source="../assets/images/apps-in-meetings/in-meeting-people-card.png" alt-text="This screenshot shows how Teams display picture and people card is used with in-meeting dialog." border="true":::
+:::image type="content" source="../assets/images/apps-in-meetings/in-meeting-people-card.png" alt-text="This screenshot shows how a Teams display picture and people card is used with in-meeting dialog." border="true":::
+
+## Feature compatibility by user types
+
+The following table provides the user types and lists the features that each user can access in meetings:
+
+| User type | Scheduled meeting or Instant calendar meeting | One-on-one call | Group call | Scheduled channel meeting |
+| :-- | :-- | :-- | :-- | :-- |
+| In-tenant user | Available | Available |  Available | Available |
+| Guest user | Available | Available |  Available | Available |
+| Federated user or External user | Available | Not available | Not available | Available |
+| Anonymous user | Not available | Not available | Not available | Not available |
 
 ## Code sample
 
@@ -54,8 +65,9 @@ Follow the [step-by-step guide](../sbs-meeting-content-bubble.yml) to generate i
 
 ## See also
 
+* [Apps for Teams meetings and calls](teams-apps-in-meetings.md)
 * [Build tabs for meeting](~/apps-in-teams-meetings/build-tabs-for-meeting.md)
 * [Build apps for Teams meeting stage](build-apps-for-teams-meeting-stage.md)
 * [Build extensible conversation for meeting chat](build-extensible-conversation-for-meeting-chat.md)
 * [Build apps for anonymous users](build-apps-for-anonymous-user.md)
-* [Advanced meeting APIs](meeting-apps-apis.md)
+* [Meeting app APIs](meeting-apps-apis.md)

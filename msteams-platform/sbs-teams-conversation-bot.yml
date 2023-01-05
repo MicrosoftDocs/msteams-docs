@@ -2,7 +2,7 @@
 title: Create Teams conversation bot
 metadata:
   title: Create Teams conversation bot
-  description: With this learning module, you'll learn to create basic conversation bot in Microsoft Teams application.
+  description: With this learning module, you can learn to create basic conversation bot in Microsoft Teams application.
   audience: Developer
   level: Beginner
   ms.date: 04/01/2022
@@ -24,7 +24,7 @@ items:
 
     When your bot is added to a group or a team, an introduction message is sent. The message provides a brief description of the bot's features and how to use them.
  
-    This step-by-step guide helps you to create a conversation bot in the Teams application. You'll see the following output:
+    This step-by-step guide helps you to create a conversation bot in the Teams application. You can see the following output:
 
     :::image type="content" source="./assets/images/conversation-bot/final-output.png" alt-text="Final output."lightbox="assets/images/conversation-bot/final-output.png":::
 
@@ -238,7 +238,7 @@ items:
 
              :::image type="content" source="./assets/images/conversation-bot/tenant-id.png" alt-text="Copy Teams link.":::
 
-          1. Copy the **tenant Id** from the URL.
+          1. Copy the **tenant ID** from the URL.
 
              :::image type="content" source="./assets/images/conversation-bot/url-tenantid_1.png" alt-text="TenantID.":::
 
@@ -261,7 +261,7 @@ items:
     1. Zip the contents of the **TeamsAppManifest** folder to create manifest.zip.
     
         > [!NOTE]
-        > The `manifest.zip` must not contain any additional folders in it. It must have `manifest json` source file, `color` icon, and `outline` icon inside the zip folder.
+        > The `manifest.zip` must not contain any other folders in it. It must have `manifest json` source file, `color` icon, and `outline` icon inside the zip folder.
         > Run your solution in Visual Studio and upload your manifest in your demo tenant for organization or your Teams account.
     
     **To run solution in Visual Studio**
@@ -323,7 +323,7 @@ items:
     | MentionMe    | Show Welcome   | MessageAllMembers |
     | --- | --- | --- |
     | :::image type="content" source="./assets/images/conversation-bot/mentionme-new.png" alt-text="Mentionme card"lightbox="assets/images/conversation-bot/mentionme-new.png"::: | :::image type="content" source="./assets/images/conversation-bot/show-welcome-new.png" alt-text="Show Welcome card"lightbox="assets/images/conversation-bot/show-welcome-new.png"::: | :::image type="content" source="./assets/images/conversation-bot/message-all-members-new.png" alt-text="MessageAllMembers card"lightbox="assets/images/conversation-bot/message-all-members-new.png"::: |
-    | **Result:** The bot responds to the message and mention the user. | **Result:** The bot sends the welcome card for you to interact with. |  **Result:** The bot sends an one-on-one message to each member in the current conversation. |
+    | **Result:** The bot responds to the message and mention the user. | **Result:** The bot sends the welcome card for you to interact with. |  **Result:** The bot sends a one-on-one message to each member in the current conversation. |
     | **Valid scopes:** personal, group chat, team chat. | **Valid scopes:** personal, group chat, team chat. |  **Valid scopes:** personal, group chat, team chat. |
 
     You can select an option from the command list by typing **@TeamsConversationBot** or **What can I do?** text in the compose area and send it.
