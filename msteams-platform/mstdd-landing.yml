@@ -44,6 +44,7 @@ landingContent:
 #      - text: Adaptive Cards overflow menu
 #        url: ~/task-modules-and-cards/cards/cards-format.md
 
+
 - title: Explore the latest
   linkLists:
     - linkListType: reference
@@ -53,9 +54,9 @@ landingContent:
     - linkListType: whats-new
       links:
       - text: Raise Hand API
-        url: apps-in-teams-meetings/meeting-apps-apis.md#raise-hand-api
+        url: apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#raise-hand-api
       - text: Reaction API
-        url: apps-in-teams-meetings/meeting-apps-apis.md#reaction-api
+        url: apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#reaction-api
       - text: Teams developer documentation FAQs
         url: teams-faq.md
       - text: Share-in-meeting to share any document or third-party app to the meeting stage (Developer Preview)
