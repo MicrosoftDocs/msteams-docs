@@ -980,12 +980,11 @@ The following table provides the response codes:
 ## Raise Hand API
 
 > [!NOTE]
-> The Raise Hand API is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
+>
+> * The Raise Hand API is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
+> * The Raise Hand API isn't applicable for pre-meeting and post-meeting scenarios.
 
 The `onRaisehandChangeHandler` API allows an app to show if the user has raised hand during the meeting. The API is available through the Teams client SDK.
-
-> [!NOTE]
-> The Raise Hand API isn't applicable for pre-meeting and post-meeting scenarios.
 
 The following is an example of the payload request:
 
@@ -1038,14 +1037,12 @@ export interface IRaiseHandState {
 ## Reaction API
 
 > [!NOTE]
-> The Reaction API is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
-
-The `onReactionHandler` API allows an app to get the status of the users reaction during the meeting. The API is available through the Teams client SDK.
-
-> [!NOTE]
 >
+> * The Reaction API is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
 > * The `onReactionHandler`API is supported in in-meeting (private and channel) and group calling.
 > * API is supported in modern calling screens only.
+
+The `onReactionHandler` API allows an app to get the status of the users reaction during the meeting. The API is available through the Teams client SDK.
 
 The following is an example of the payload request:
 
