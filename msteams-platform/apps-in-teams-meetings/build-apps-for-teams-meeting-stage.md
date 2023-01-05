@@ -214,18 +214,18 @@ The following participant roles may be involved during the meeting:
 
 ## Reaction API
 
-The Reaction API allows you to show reactions in your app. The types of reactions include like, heart, laugh, applause, and surprised.
+The Reaction API allows you allows you to react in the meeting stage. The types of reactions include like, heart, laugh, applause, and surprised.
 
 ### User scenarios
 
 | Scenario  | Example  |
 |---------|---------|
-|Avatar   | You can show an animation of the Avatar displaying the reaction.|
-|Mesh     | Participants in a Teams meeting can send reaction form the U-bar and an animation of the reaction is shown in the mesh app .|
+|Avatar   | You can react with an animation of the Avatar displaying the reaction.|
+|Mesh     | Participants in a Teams meeting can send reaction form the U-bar and an animation of the reaction is shown in the mesh app.|
 
 ### App manifest settings for reaction API
 
-To use the reaction API, you must configure RSC permissions in the app manifest. Configure the `authorization` property, and the `name` and `type` in the `resourceSpecific` field as follows:
+To use the reaction API, you must configure RSC permissions in the app manifest. Configure the `authorization` property, and the `name` and the `type` in the `resourceSpecific` field as follows:
 
 ```JSON
 "authorization": {
@@ -245,7 +245,7 @@ To use the reaction API, you must configure RSC permissions in the app manifest.
 
 * Call the `registerMeetingReactionReceivedHandler` function.
 
-* Provide a callback that accepts a meetingReactionType and an error object. Ensure to check for errors before you call raiseHandState.
+* Provide a callback that accepts a meetingReactionType and an error object. Ensure to check for errors before you call meetingReactionType.
 
 The following is an example of `registerMeetingReactionReceivedHandler`:
 
@@ -285,19 +285,19 @@ microsoftTeams.meeting.registerMeetingReactionReceivedHandler (
 
 ## Raise hand API
 
-The Raise hand API allows yan app to show if the user has raised hand during the meeting.
+The Raise hand API allows your app to show if the user has raised hand during the meeting.
 
 ### User scenarios
 
 | Scenario  | Example  |
 |---------|---------|
 |Avatar   | You can show an animation of the Avatar displaying the reaction.|
-|Mesh     | Participants in a Teams meeting can send reaction form the U-bar and an animation of the reaction is shown in the mesh app .|
+|Mesh     | Participants in a Teams meeting can send reaction form the U-bar and an animation of the reaction is shown in the mesh app.|
 |Games    | You can use the raise hand as a form of submission in games such as Trivia or Kahoot.|
 
 ### App manifest settings for raise hand API
 
-To use the raise hand API, you must configure RSC permissions in the app manifest. Configure the `authorization` property, and the `name` and `type` in the `resourceSpecific` field as follows:
+To use the raise hand API, you must configure RSC permissions in the app manifest. Configure the `authorization` property, and the `name` and the `type` in the `resourceSpecific` field as follows:
 
 ```JSON
 "authorization": {
