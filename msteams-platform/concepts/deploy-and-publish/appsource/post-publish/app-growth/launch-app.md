@@ -39,7 +39,7 @@ The following growth levers are pertinent at this stage:
   - Call out specifically what your app can do inside Teams vs focusing on your core SaaS product. Users are hiring your app to do a job in Teams, not in your web SaaS app for the browser or native mobile clients and want to certain it can deliver value inside Teams. It helps if you can call out the degree of overlap in terms of supported scenarios between your core SaaS product and Teams app.
   - Use bullet points and emojis to break the wall of text and achieve better readability.
   - Include screenshots in your listing that show the app’s experience and underscore the user value inside Teams.
-  - Include a video in your listing that shows the app’s experience inside Teams. Generic, marketing videos that talk about the user problem your app is solving or one that simply gives an overview of your entire SaaS product aren't meaningful. Don’t convince the user to install your app and set inaccurate user expectations leading to dissatisfaction.
+  - Include a video in your listing that shows the app’s experience inside Teams. Generic marketing videos that talk about the user problem your app is solving or one that simply gives an overview of your entire SaaS product aren't meaningful. It leads to higher customer satisfaction if you set accurate expectations for your app's user experience.
   - Make sure to include links to public references and success stories to build trust that your Teams app has already benefited customers. It will instill confidence in new customers looking to acquire or try your app.
 
     **Resources and examples for inspiration**
