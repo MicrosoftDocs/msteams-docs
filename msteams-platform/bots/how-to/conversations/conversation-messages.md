@@ -321,9 +321,9 @@ var replyActivity = MessageFactory.Text("message is undeleted");
 await turnContext.SendActivityAsync(replyActivity, cancellationToken); 
 }
 
----
-
 ```
+
+---
 
 # [Javascript](#tab/javascript)
 
@@ -403,7 +403,7 @@ async onTeamsMessageUndelete(context) {
 
 ```
 
-# [JSON](#tab/json)
+# [Python](#tab/python)
 
 ```csharp
 protected override async Task OnTeamsMessageUndeleteAsync(ITurnContext<IMessageUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -411,6 +411,8 @@ protected override async Task OnTeamsMessageUndeleteAsync(ITurnContext<IMessageU
 var replyActivity = MessageFactory.Text("message is undeleted"); 
 await turnContext.SendActivityAsync(replyActivity, cancellationToken); 
 }
+
+```
 
 ---
 
@@ -508,7 +510,7 @@ async onTeamsMessageSoftDelete(context) {
 
 ```
 
-# [JSON](#tab/json)
+# [Python](#tab/python)
 
 ```csharp
 protected override async Task OnTeamsMessageUndeleteAsync(ITurnContext<IMessageUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -516,6 +518,8 @@ protected override async Task OnTeamsMessageUndeleteAsync(ITurnContext<IMessageU
 var replyActivity = MessageFactory.Text("message is undeleted"); 
 await turnContext.SendActivityAsync(replyActivity, cancellationToken); 
 }
+
+```
 
 ---
 
