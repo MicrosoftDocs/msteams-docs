@@ -312,17 +312,6 @@ async onTeamsMessageEdit(context) {
 
 ```
 
-# [Python](#tab/python)
-
-```csharp
-protected override async Task OnTeamsMessageUndeleteAsync(ITurnContext<IMessageUpdateActivity> turnContext, CancellationToken cancellationToken)
-{ 
-var replyActivity = MessageFactory.Text("message is undeleted"); 
-await turnContext.SendActivityAsync(replyActivity, cancellationToken); 
-}
-
-```
-
 ---
 
 # [Javascript](#tab/javascript)
@@ -400,17 +389,6 @@ async onTeamsMessageUndelete(context) {
 "locale":"en-US",
 "localTimezone":"America/Los_Angeles"
 }  
-
-```
-
-# [Python](#tab/python)
-
-```csharp
-protected override async Task OnTeamsMessageUndeleteAsync(ITurnContext<IMessageUpdateActivity> turnContext, CancellationToken cancellationToken)
-{ 
-var replyActivity = MessageFactory.Text("message is undeleted"); 
-await turnContext.SendActivityAsync(replyActivity, cancellationToken); 
-}
 
 ```
 
@@ -507,17 +485,6 @@ async onTeamsMessageSoftDelete(context) {
 "locale":"en-US",
 "localTimezone":"America/Los_Angeles"
 }  
-
-```
-
-# [Python](#tab/python)
-
-```csharp
-protected override async Task OnTeamsMessageUndeleteAsync(ITurnContext<IMessageUpdateActivity> turnContext, CancellationToken cancellationToken)
-{ 
-var replyActivity = MessageFactory.Text("message is undeleted"); 
-await turnContext.SendActivityAsync(replyActivity, cancellationToken); 
-}
 
 ```
 
