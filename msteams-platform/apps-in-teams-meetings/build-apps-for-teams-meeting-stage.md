@@ -214,6 +214,9 @@ The following participant roles may be involved during the meeting:
 
 ## Reaction API
 
+> [!NOTE]
+> Reaction API is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
+
 The Reaction API allows you to react in the meeting stage. The types of reactions include like, heart, laugh, applause, and surprised.
 
 ### User scenarios
@@ -284,6 +287,9 @@ microsoftTeams.meeting.registerMeetingReactionReceivedHandler (
 ```
 
 ## Raise hand API
+
+> [!NOTE]
+> Raise hand API is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
 
 The Raise hand API allows your app to show if the user has raised hand during the meeting.
 

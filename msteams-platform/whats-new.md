@@ -24,12 +24,6 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 Teams platform features that are available to all app developers.
 
-**2023 January**
-
-* ***January 05, 2023***: [Raise Hand API](apps-in-teams-meetings/meeting-apps-apis.md#raise-hand-api)
-
-* ***January 05, 2023***: [Reaction API](apps-in-teams-meetings/meeting-apps-apis.md#reaction-api)
-
 **2022 December**
 
 * ***December 08, 2022***: [Teams developer documentation FAQs](teams-faq.md)
@@ -304,15 +298,18 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 
 Developer preview is a public program that provides early access to unreleased Teams platform features.
 
-**2022 December**
+**2023 January**
 
-***December 05, 2022***: [Introduced share in meeting to share any document or third-party app to the meeting stage](concepts/build-and-test/share-in-meeting.md).
+* ***January 05, 2023***: [Raise Hand API](apps-in-teams-meetings/meeting-apps-apis.md#raise-hand-api)
+
+* ***January 05, 2023***: [Reaction API](apps-in-teams-meetings/meeting-apps-apis.md#reaction-api)
 
 :::column-end:::
 :::row-end:::
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ------------------ |
+|05/12/2022| Introduced share in meeting to share any document or third-party app to the meeting stage.| Build apps for Teams meetings and calls > Enable and configure apps for meetings > [Share in meeting](concepts/build-and-test/share-in-meeting.md)|
 |10/11/2022| Enable bots to receive all chat messages without being @mentioned.|Build bots > Bot conversations > Message in bot conversations > [Receive all conversation messages with RSC](bots/how-to/conversations/channel-messages-with-rsc.md) |
 |10/11/2022|Generate a deep link to share content to stage in meetings.|Build apps for Teams meetings and calls > Enable and configure apps for meetings > Share in meeting > [Generate a deep link to share content to stage in meetings.](concepts/build-and-test/share-in-meeting.md) |
 | 09/23/2022 | Introduced meeting app support for Scheduled Channel Meetings. | Build apps for Teams meetings and calls > [Apps for Teams meetings and calls](apps-in-teams-meetings/teams-apps-in-meetings.md) |
