@@ -92,7 +92,7 @@ While building traction, you showcased the collaborative app in Teams during you
     You can convert user who try your app to sticky, habitual users and eventually convert into paying customers.
     :::column-end:::
     :::column span="":::
-        :::image type="content" source="../../../../../assets/images/app-fundamentals/remarket-retarget.png" alt-text="Re-market via emails and retarget using Teams notifications." lighbox="../../../../../assets/images/app-fundamentals/remarket-retarget.png":::
+        :::image type="content" source="../../../../../assets/images/app-fundamentals/remarket-retarget.png" alt-text="Re-market via emails and retarget using Teams notifications." lightbox="../../../../../assets/images/app-fundamentals/remarket-retarget.png":::
     :::column-end:::
 :::row-end:::
 
