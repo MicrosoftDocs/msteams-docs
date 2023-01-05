@@ -55,7 +55,7 @@ The following table provides the user types and lists the features that each use
 
 ## Code sample
 
-Sample name | Description | C# | Node.js |
+Sample name | Description | .NET | Node.js |
 |----------------|-----------------|--------------|----------------|
 | In-meeting notification | Demonstrates how to implement in-meeting notification using bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs) |
 

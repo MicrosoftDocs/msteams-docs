@@ -26,7 +26,7 @@ An Incoming Webhook lets external applications to share content in Microsoft Tea
 See the following video to learn how to create Incoming Webhooks:
 <br>
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4ODcY]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4ODcY>]
 
 ## Key features of Incoming Webhooks
 
@@ -104,7 +104,7 @@ To remove an Incoming Webhook from a Teams channel, follow these steps:
 
 ## Code sample
 
-| Sample Name           | Description | C#    |  Node.js |
+| Sample Name           | Description | .NET    |  Node.js |
 |:---------------------|:--------------|:---------|:--------|
 |Incoming Webhook|This sample code demonstrates how to send card using Incoming Webhook. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/incoming-webhook/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/incoming-webhook/nodejs) |
 

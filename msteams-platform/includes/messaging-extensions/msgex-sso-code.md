@@ -39,7 +39,7 @@ To update your app's code:
 
 1. Add code snippet for `TeamsSSOTokenExchangeMiddleware`.
 
-    # [csharp](#tab/cs1)
+# [csharp](#tab/cs1)
 
     Add the following code snippet to `AdapterWithErrorHandler.cs` (or the equivalent class in your app's code):
 
@@ -47,16 +47,16 @@ To update your app's code:
     base.Use(new TeamsSSOTokenExchangeMiddleware(storage, configuration["ConnectionName"]));
     ```
 
-    # [JavaScript](#tab/js1)
-    
+# [JavaScript](#tab/js1)
+
     Add the following code snippet to `index.js` (or the equivalent class in your app's code):
-    
+
     ```JavaScript
     const {TeamsSSOTokenExchangeMiddleware} = require('botbuilder');
     const tokenExchangeMiddleware = new TeamsSSOTokenExchangeMiddleware(memoryStorage, env.connectionName);
     adapter.use(tokenExchangeMiddleware);
     ```
-    
+
     ---
 
     >[!NOTE]
@@ -64,7 +64,7 @@ To update your app's code:
 
 1. Use the following code snippet for requesting a token.
 
-    # [csharp](#tab/cs2)
+# [csharp](#tab/cs2)
 
     After you add the `AdapterWithErrorHandler.cs`, your code should be as shown below:
 
@@ -119,8 +119,8 @@ To update your app's code:
     }
     ```
 
-    # [JavaScript](#tab/js2)
-    
+# [JavaScript](#tab/js2)
+
     After you add the code to `index.js`, your code should be as shown below:
 
     ```JavaScript
@@ -341,6 +341,7 @@ async loginStep(stepContext) {
         return await stepContext.endDialog();
     }
 ```
+
 ---
 
 > [!NOTE]
@@ -530,8 +531,7 @@ Use the following code snippet to handle the access token in case the app user l
 
 This section provides bot authentication v3 SDK sample.
 
-
-| **Sample name** | **Description** | **C#** | **Node.js** | **Python** |
+| **Sample name** | **Description** | **.NET** | **Node.js** | **Python** |
 |---------------|------------|------------|-------------|---------------|
 | Bot authentication | This sample shows how to get started with authentication in a bot for Teams. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-authentication/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/js) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-authentication/python) |
 | Tab, bot, and Message extension (ME) SSO | This sample shows SSO for tab, bot, and message extension - search, action, link unfurl. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | NA |
