@@ -67,13 +67,18 @@ The following growth levers are pertinent at this stage:
 
     **Resources and examples for inspiration**
 
-    For more information on guidelines for your website landing page, see [Chapter 3 in Best Practices Guide](https://partner.microsoft.com/reach-customers/gtm).
+    :::row:::
+        :::column span="":::
+            For more information on guidelines for your website landing page, see [Chapter 3 in Best Practices Guide](https://partner.microsoft.com/reach-customers/gtm).
 
-    You must use the following badge on your landing page to direct users to acquire your app from AppSource or the Teams in-client marketplace:
+            You must use the following badge on your landing page to direct users to acquire your app from AppSource or the Teams in-client marketplace:
 
-    :::image type="content" source="../../../../../assets/images/app-fundamentals/landing-page.png" alt-text="Badge to acquire app from AppSource or Teams in-client marketplace.":::
-
-    See good examples of landing pages from Polly, Zoho, Atlassian, and so on.
+            See good examples of landing pages from Polly, Zoho, Atlassian, and so on.
+        :::column-end:::
+        :::column span="":::
+            :::image type="content" source="../../../../../assets/images/app-fundamentals/landing-page.png" alt-text="Badge to acquire app from AppSource or Teams in-client marketplace.":::
+        :::column-end:::
+    :::row-end:::
 
 - **Documentation**: Coinciding with your Teams app going live, you must ensure the following public documentation hosted on your website:
 
