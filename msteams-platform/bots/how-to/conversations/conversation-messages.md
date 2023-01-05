@@ -314,6 +314,19 @@ async onTeamsMessageEdit(context) {
 
 ---
 
+The following code shows an example when a sent message is updated:
+
+# [C#](#tab/dotnet)
+
+```csharp
+protected override async Task OnTeamsMessageupdateAsync(ITurnContext<IMessageUpdateActivity> turnContext, CancellationToken cancellationToken) 
+{ 
+var replyActivity = MessageFactory.Text("message is updated"); 
+await turnContext.SendActivityAsync(replyActivity, cancellationToken); 
+} 
+
+```
+
 # [Javascript](#tab/javascript)
 
 Following are two methods to get event notifications to handle the message updates using the Bot SDK. You can use either one of the following methods:
