@@ -245,7 +245,7 @@ To use the reaction API, you must configure RSC permissions in the app manifest.
 
 * Call the `registerMeetingReactionReceivedHandler` function.
 
-* Provide a callback that accepts a meetingReactionType and an error object. Ensure to check for errors before you call meetingReactionType.
+* Provide a callback that accepts a `meetingReactionType` and an error object. Ensure to check for errors before you call `meetingReactionType`.
 
 The following is an example of `registerMeetingReactionReceivedHandler`:
 
