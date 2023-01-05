@@ -214,14 +214,6 @@ async def on_members_added_activity(
 
 ```
 
-# [Javascript](#tab/javascript2)
-
-```javascript
-
-NA
-
-```
-
 ---
 
 > [!NOTE]
@@ -246,22 +238,6 @@ protected override async Task OnTeamsMessageEditAsync(ITurnContext<IMessageUpdat
 var replyActivity = MessageFactory.Text("message is updated"); 
 await turnContext.SendActivityAsync(replyActivity, cancellationToken); 
 } 
-
-```
-
-# [TypeScript](#tab/typescript3)
-
-```typescript
-
-NA
-
-```
-
-# [Python](#tab/python3)
-
-```python
-
-NA
 
 ```
 
@@ -359,22 +335,6 @@ protected override async Task OnTeamsMessageUndeleteAsync(ITurnContext<IMessageU
 var replyActivity = MessageFactory.Text("message is undeleted"); 
 await turnContext.SendActivityAsync(replyActivity, cancellationToken); 
 } 
-
-```
-
-# [TypeScript](#tab/typescript4)
-
-```typescript
-
-NA
-
-```
-
-# [Python](#tab/python4)
-
-```python
-
-NA
 
 ```
 
@@ -476,22 +436,6 @@ protected override async Task OnTeamsMessageSoftDeleteAsync(ITurnContext<IMessag
 var replyActivity = MessageFactory.Text("message is soft deleted"); 
 await turnContext.SendActivityAsync(replyActivity, cancellationToken); 
 } 
-
-```
-
-# [TypeScript](#tab/typescript5)
-
-```typescript
-
-NA
-
-```
-
-# [Python](#tab/python5)
-
-```python
-
-NA
 
 ```
 
