@@ -212,14 +212,6 @@ The following participant roles may be involved during the meeting:
 * **Signer**: This role can sign reviewed documents.
 * **Reader**: This role can view the documents added to the meeting.
 
-## Code sample
-
-|Sample name | Description | C# | Node.js |
-|----------------|-----------------|--------------|----------------|
-|Meeting stage sample | Sample app to show a tab in meeting stage for collaboration. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) |
-| In-meeting notification | Demonstrates how to implement in-meeting notification using bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs) |
-| In-meeting document signing | Demonstrates how to implement a document signing Teams app. Includes sharing specific app content to stage, Teams SSO, and user specific stage view. | [View](https://github.com/officedev/microsoft-teams-samples/tree/main/samples/meetings-share-to-stage-signing/csharp) | NA |
-
 ## Reaction API
 
 The Reaction API allows you to show reactions in your app. The types of reactions include like, heart, laugh, applause, and surprised.
@@ -231,22 +223,19 @@ The Reaction API allows you to show reactions in your app. The types of reaction
 |Avatar   | You can show an animation of the Avatar displaying the reaction.|
 |Mesh     | Participants in a Teams meeting can send reaction form the U-bar and an animation of the reaction is shown in the mesh app .|
 
-### App manifest settings for Reaction API
+### App manifest settings for reaction API
 
 To use the reaction API, you must configure RSC permissions in the app manifest. Configure the `authorization` property, and the `name` and `type` in the `resourceSpecific` field as follows:
 
 ```JSON
 "authorization": {
  "permissions": {
+  "orgWide": [],
   "resourceSpecific": [
    {
-    "name": "MeetingParticipantReaction.Read.Chat",
+    "name": "MeetingParticipantReaction.Read.User",
     "type": "Delegated"
    },
-   {
-    "name": "MeetingParticipantReaction.Read.Group",
-    "type": "Delegated"
-   }
   ]
  }
 }
@@ -260,7 +249,7 @@ To use the reaction API, you must configure RSC permissions in the app manifest.
 
 The following is an example of `registerMeetingReactionReceivedHandler`:
 
-```typescript
+```JavaScript
 microsoftTeams.meeting.registerMeetingReactionReceivedHandler ( 
 
           meetingReactionReceivedEvent => { 
@@ -306,22 +295,19 @@ The Raise hand API allows yan app to show if the user has raised hand during the
 |Mesh     | Participants in a Teams meeting can send reaction form the U-bar and an animation of the reaction is shown in the mesh app .|
 |Games    | You can use the raise hand as a form of submission in games such as Trivia or Kahoot.|
 
-### App manifest settings for Raise hand API
+### App manifest settings for raise hand API
 
 To use the raise hand API, you must configure RSC permissions in the app manifest. Configure the `authorization` property, and the `name` and `type` in the `resourceSpecific` field as follows:
 
 ```JSON
 "authorization": {
  "permissions": {
+  "orgWide": [],
   "resourceSpecific": [
    {
-    "name": "MeetingParticipantReaction.Read.Chat",
+    "name": "MeetingParticipantReaction.Read.User",
     "type": "Delegated"
    },
-   {
-    "name": "MeetingParticipantReaction.Read.Group",
-    "type": "Delegated"
-   }
   ]
  }
 }
@@ -335,7 +321,7 @@ To use the raise hand API, you must configure RSC permissions in the app manifes
 
 Following is an example of the `registerRaiseHandStateChangeHandler`:
 
-```typescript
+```JavaScript
 microsoftTeams.meeting.registerRaiseHandStateChangedHandler( 
 
           eventData => { 
@@ -366,6 +352,14 @@ microsoftTeams.meeting.registerRaiseHandStateChangedHandler(
 
       ); 
 ```
+
+## Code sample
+
+|Sample name | Description | C# | Node.js |
+|----------------|-----------------|--------------|----------------|
+|Meeting stage sample | Sample app to show a tab in meeting stage for collaboration. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) |
+| In-meeting notification | Demonstrates how to implement in-meeting notification using bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs) |
+| In-meeting document signing | Demonstrates how to implement a document signing Teams app. Includes sharing specific app content to stage, Teams SSO, and user specific stage view. | [View](https://github.com/officedev/microsoft-teams-samples/tree/main/samples/meetings-share-to-stage-signing/csharp) | NA |
 
 ## Step-by-step guide
 
