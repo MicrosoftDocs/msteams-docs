@@ -24,11 +24,13 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 Teams platform features that are available to all app developers.
 
+**2023 January**
+
+* ***January 05, 2023***: [Raise Hand API](apps-in-teams-meetings/meeting-apps-apis.md#raise-hand-api)
+
+* ***January 05, 2023***: [Reaction API](apps-in-teams-meetings/meeting-apps-apis.md#reaction-api)
+
 **2022 December**
-
-* ***December 16, 2022***: [Raise Hand API](apps-in-teams-meetings/meeting-apps-apis.md#raise-hand-api)
-
-* ***December 16, 2022***: [Reaction API](apps-in-teams-meetings/meeting-apps-apis.md#reaction-api)
 
 * ***December 08, 2022***: [Teams developer documentation FAQs](teams-faq.md)
 
