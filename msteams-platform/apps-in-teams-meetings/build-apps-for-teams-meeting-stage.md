@@ -228,7 +228,7 @@ The Reaction API allows you to react in the meeting stage. The types of reaction
 
 ### App manifest settings for the Reaction API
 
-To use the reaction API, you must configure RSC permissions in the app manifest. Configure the `authorization`, `name` and `type` properties in the `resourceSpecific` field as follows:
+To use the Reaction API, you must configure RSC permissions in the app manifest. Configure the `authorization`, `name` and `type` properties in the `resourceSpecific` field as follows:
 
 ```JSON
 "authorization": {
