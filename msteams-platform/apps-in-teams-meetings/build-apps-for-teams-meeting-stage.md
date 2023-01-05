@@ -214,7 +214,7 @@ The following participant roles may be involved during the meeting:
 
 ## Reaction API
 
-The Reaction API allows you allows you to react in the meeting stage. The types of reactions include like, heart, laugh, applause, and surprised.
+The Reaction API allows you to react in the meeting stage. The types of reactions include like, heart, laugh, applause, and surprised.
 
 ### User scenarios
 
