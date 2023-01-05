@@ -187,7 +187,7 @@ onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
 
 Bots are created using the Bot Framework. If the bots receive a message activity, then the turn handler receives a notification of that incoming activity. The turn handler then sends the incoming activity to the `on_message_activity` activity handler. In Teams, this functionality remains the same. If the bot receives a conversation update activity, then the turn handler receives a notification of that incoming activity and sends the incoming activity to `on_conversation_update_activity`. The Teams activity handler first checks for any Teams specific events. If no events are found, it then passes them along to the Bot Framework's activity handler.
 
-In the Teams activity handler class, there are two primary Teams activity handlers, `on_conversation_update_activity` and `on_invoke_activity`. `on_conversation_update_activity` routes all conversation update activities and `on_invoke_activity` routes all Teams invoke activities.
+In the Teams activity handler class, there are two primary Teams activity handlers, `on_conversation_update_activity` and `on_invoke_activity`. `on_conversation_update_activity` routes all conversation update activities and `on_invoke_activity` routes all Teams invokes activities.
 
 To implement your logic for Teams specific activity handlers, you must override the methods in your bot as shown in the [bot logic](#bot-logic) section. There's no base implementation for these handlers. Therefore, add the logic that you want in your override.
 
@@ -293,9 +293,9 @@ The `TeamsActivityHandler` extends the list of handlers in the core Bot Framewor
 | teamRenamed | `OnTeamsTeamRenamedAsync` | `return Task.CompletedTask;` This method can be overridden to handle a Teams team being renamed. For more information, see [team renamed](https://aka.ms/azure-bot-subscribe-to-conversation-events#team-renamed) in [conversation update events](https://aka.ms/azure-bot-subscribe-to-conversation-events). |
 | MembersAdded | `OnTeamsMembersAddedAsync` | This method calls the `OnMembersAddedAsync` method in `ActivityHandler`. The method can be overridden to handle members joining a team. For more information, see [team members added](https://aka.ms/azure-bot-subscribe-to-conversation-events#team-members-added) in [conversation update events](https://aka.ms/azure-bot-subscribe-to-conversation-events). |
 | MembersRemoved | `OnTeamsMembersRemovedAsync` | This method calls the `OnMembersRemovedAsync` method in `ActivityHandler`. The method can be overridden to handle members leaving a team. For more information, see [team members removed](https://aka.ms/azure-bot-subscribe-to-conversation-events#team-members-removed) in [conversation update events](https://aka.ms/azure-bot-subscribe-to-conversation-events). |
-| message edit | `onTeamsMessageEditEvent` | This method can be overridden to handle for when a message in a conversation is edited. |
-| message undelete | `onTeamsMessageUndeleteEvent` | This method can be overridden to handle for when a deleted message in a conversation is undeleted. For example, when the user decides to undo a deleted message. |
-| message soft delete | `onTeamsMessageSoftDeleteEvent` | This method can be overridden to handle for when a message in a conversation is soft deleted. |
+| message edit | `onTeamsMessageEditEvent` | This method can be overridden to handle when a message in a conversation is edited. |
+| message undelete | `onTeamsMessageUndeleteEvent` | This method can be overridden to handle when a deleted message in a conversation is undeleted. For example, when the user decides to undo a deleted message. |
+| message soft delete | `onTeamsMessageSoftDeleteEvent` | This method can be overridden to handle when a message in a conversation is soft deleted. |
 
 #### Teams invoke activities
 

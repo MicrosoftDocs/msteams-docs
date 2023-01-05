@@ -225,7 +225,7 @@ Messages sent between users and bots include internal channel data within the me
 
 ## Update message
 
-To get event notifications to handle the message updates in bot, you can either override `OnTeamsMessageEditAsync`, `OnTeamsMessageUndeleteAsync`, or `OnMessageUpdateActivityAsync` handlers when a sent message is edited or when a deleted message is restored.
+To get event notifications to handle the message updates in bot, you can either override `OnTeamsMessageEditAsync`, `OnTeamsMessageUndeleteAsync`, or `OnMessageUpdateActivityAsync` handlers when a sent message is edited or a deleted message is restored.
 
 The following code shows an example when a sent message is edited:
 
@@ -286,7 +286,7 @@ await turnContext.SendActivityAsync(replyActivity, cancellationToken);
 
 # [Javascript](#tab/javascript3)
 
-Following are two methods to get event notifications to handle the message updates using the Bot SDK. You can use either one of the following methods:
+Following are the two methods to get event notifications to handle the message updates using the Bot SDK. You can use either one of the following methods:
 
 **​Event function registration**:
 
@@ -383,7 +383,7 @@ await turnContext.SendActivityAsync(replyActivity, cancellationToken);
 
 # [Javascript](#tab/javascript4)
 
-Following are two methods to get event notifications to handle the message updates using the Bot SDK. You can use either one of the following methods:
+Following are the two methods to get event notifications to handle the message updates using the Bot SDK. You can use either one of the following methods:
 
 **​Event function registration**:
 
@@ -484,7 +484,7 @@ await turnContext.SendActivityAsync(replyActivity, cancellationToken);
 
 # [Javascript](#tab/javascript5)
 
-Following are two methods to get event notifications to handle the message updates using the Bot SDK. You can use either one of the following methods:
+Following are the two methods to get event notifications to handle the message updates using the Bot SDK. You can use either one of the following methods:
 
 **​Event function registration**:
 
