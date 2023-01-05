@@ -898,7 +898,6 @@ callback = (errcode, result) => {
             // Handle success code
         }
     }
-
 // The getIncomingClientAudioState API shows the current audio state.
 microsoftTeams.meeting.getIncomingClientAudioState(this.callback)
 ```
@@ -956,7 +955,6 @@ callback = (error, result) => {
             // Handle success code
         }
     }
-
 // The toggleIncomingClientAudio API allows an app to toggle the incoming audio state.
 microsoftTeams.meeting.toggleIncomingClientAudio(this.callback)
 ```
