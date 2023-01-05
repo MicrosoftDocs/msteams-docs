@@ -126,14 +126,6 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 ```
 
-# [Javascript](#tab/javascript1)
-
-```javascript
-
-NA
-
-```
-
 ---
 
 ## Send a message
