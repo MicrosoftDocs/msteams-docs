@@ -33,11 +33,13 @@ The following code shows an example of receiving a message:
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-token-app/csharp/Bots/TokenBot.cs#L52)
 
 ```csharp
+
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
 {
   // Sends an activity to the sender of the incoming activity.
   await turnContext.SendActivityAsync(MessageFactory.Text($"Echo: {turnContext.Activity.Text}"), cancellationToken);
 }
+
 ```
 
 # [TypeScript](#tab/typescript)
@@ -46,6 +48,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-localization/nodejs/server/bot/botActivityHandler.js#L25)
 
 ```typescript
+
 export class MyBot extends TeamsActivityHandler {
     constructor() {
         super();
@@ -64,7 +67,6 @@ export class MyBot extends TeamsActivityHandler {
 * [SDK reference](/python/api/botbuilder-core/botbuilder.core.activityhandler?view=botbuilder-py-latest#botbuilder-core-activityhandler-on-message-activity&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L103)
 
-<!-- Verify -->
 ```python
 
 async def on_message_activity(self, turn_context: TurnContext):
@@ -76,6 +78,7 @@ async def on_message_activity(self, turn_context: TurnContext):
 # [JSON](#tab/json)
 
 ```json
+
 {
     "type": "message",
     "id": "1485983408511",
@@ -120,11 +123,16 @@ async def on_message_activity(self, turn_context: TurnContext):
     },
     "locale": "en-US"
 }
+
 ```
 
 # [Javascript](#tab/javascript)
 
+```javascript
+
 NA
+
+```
 
 ---
 
@@ -141,6 +149,7 @@ The following code shows an example of sending a message when a user is added to
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-teams-authentication/csharp/Bots/TeamsBot.cs#L29)
 
 ```csharp
+
 protected override async Task OnMembersAddedAsync(IList<ChannelAccount> membersAdded, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
 {
   // Sends an activity to the sender of the incoming activity.
@@ -155,6 +164,7 @@ protected override async Task OnMembersAddedAsync(IList<ChannelAccount> membersA
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L46)
 
 ```typescript
+
     this.onMembersAddedActivity(async (context, next) => {
         await Promise.all((context.activity.membersAdded || []).map(async (member) => {
             if (member.id !== context.activity.recipient.id) {
@@ -176,9 +186,8 @@ protected override async Task OnMembersAddedAsync(IList<ChannelAccount> membersA
 * [SDK reference](/python/api/botbuilder-core/botbuilder.core.turncontext?view=botbuilder-py-latest#botbuilder-core-turncontext-send-activity&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-teams-authentication/python/bots/auth_bot.py#L33)
 
-<!-- Verify -->
-
 ```python
+
 async def on_members_added_activity(
     self, members_added: [ChannelAccount], turn_context: TurnContext
 ):
@@ -192,6 +201,7 @@ async def on_members_added_activity(
 # [JSON](#tab/json)
 
 ```json
+
 {
     "type": "message",
     "from": {
@@ -214,7 +224,11 @@ async def on_members_added_activity(
 
 # [Javascript](#tab/javascript)
 
+```javascript
+
 NA
+
+```
 
 ---
 
@@ -234,24 +248,35 @@ The following code shows an example when a sent message is edited:
 # [C#](#tab/csharp)
 
 ```csharp
+
 protected override async Task OnTeamsMessageEditAsync(ITurnContext<IMessageUpdateActivity> turnContext, CancellationToken cancellationToken) 
 { 
 var replyActivity = MessageFactory.Text("message is updated"); 
 await turnContext.SendActivityAsync(replyActivity, cancellationToken); 
 } 
+
 ```
 
 # [TypeScript](#tab/typescript)
 
+```typescript
+
 NA
+
+```
 
 # [Python](#tab/python)
 
+```python
+
 NA
+
+```
 
 # [JSON](#tab/json)
 
 ```json
+
 {
 "type":"messageUpdate",
 "timestamp":"2022-10-28T17:19:39.4615413Z",
@@ -298,6 +323,7 @@ Following are two methods to get event notifications to handle the message updat
 **​Event function registration**:
 
 ```javascript
+
 this.onTeamsMessageEditEvent(async (context, next) => {
   let editedMessage = context.activity.text;
   let messageId = context.activity.id;
@@ -315,6 +341,7 @@ this.onTeamsMessageEditEvent(async (context, next) => {
 **​Method override**:
 
 ```javascript
+
 async onTeamsMessageEdit(context) {
     let editedMessage = context.activity.text;
     let messageId = context.activity.id;
@@ -334,24 +361,35 @@ The following code shows an example when a deleted message is restored:
 # [C#](#tab/csharp)
 
 ```csharp
+
 protected override async Task OnTeamsMessageUndeleteAsync(ITurnContext<IMessageUpdateActivity> turnContext, CancellationToken cancellationToken)
 { 
 var replyActivity = MessageFactory.Text("message is undeleted"); 
 await turnContext.SendActivityAsync(replyActivity, cancellationToken); 
 } 
+
 ```
 
 # [TypeScript](#tab/typescript)
 
+```typescript
+
 NA
+
+```
 
 # [Python](#tab/python)
 
+```python
+
 NA
+
+```
 
 # [JSON](#tab/json)
 
 ```json
+
 {
 "type":"messageUpdate",
 "timestamp":"2022-10-28T17:19:39.4615413Z",
@@ -398,6 +436,7 @@ Following are two methods to get event notifications to handle the message updat
 **​Event function registration**:
 
 ```javascript
+
 this.onTeamsMessageUndeleteEvent(async (context, next) => {
     let undeletedMessage = context.activity.text;
     let messageId = context.activity.id;
@@ -415,6 +454,7 @@ this.onTeamsMessageUndeleteEvent(async (context, next) => {
 **​Method override**:
 
 ```javascript
+
 async onTeamsMessageUndelete(context) {
     let undeletedMessage = context.activity.text;
     let messageId = context.activity.id;
@@ -438,24 +478,35 @@ The following code shows an example when a sent message is deleted:
 # [C#](#tab/csharp)
 
 ```csharp
+
 protected override async Task OnTeamsMessageSoftDeleteAsync(ITurnContext<IMessageDeleteActivity> turnContext, CancellationToken cancellationToken) 
 { 
 var replyActivity = MessageFactory.Text("message is soft deleted"); 
 await turnContext.SendActivityAsync(replyActivity, cancellationToken); 
 } 
+
 ```
 
 # [TypeScript](#tab/typescript)
 
+```typescript
+
 NA
+
+```
 
 # [Python](#tab/python)
 
+```python
+
 NA
+
+```
 
 # [JSON](#tab/json)
 
 ```json
+
 {
 "type":"messageDelete",
 "timestamp":"2022-10-28T17:19:43.1612052Z",
@@ -502,6 +553,7 @@ Following are two methods to get event notifications to handle the message updat
 **​Event function registration**:
 
 ```javascript
+
 this.onTeamsMessageSoftDeleteEvent(async (context, next) => {
     let deletedMessage = context.activity.text; // undefined
     let messageId = context.activity.id;
@@ -519,6 +571,7 @@ this.onTeamsMessageSoftDeleteEvent(async (context, next) => {
 **​Method override**:
 
 ```javascript
+
 async onTeamsMessageSoftDelete(context) {
     let deletedMessage = context.activity.text; // undefined
     let messageId = context.activity.id;
