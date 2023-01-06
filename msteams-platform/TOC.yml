@@ -24,7 +24,7 @@
   items:
   - name: Overview
     href: get-started/get-started-overview.md
-    displayName: First Teams app, Python, C#, Java, Node.js
+    displayName: First Teams app, Python, .NET, Java, Node.js
   - name: Build your first tab app using JavaScript
     href: sbs-gs-javascript.yml
   - name: Build your first bot app using JavaScript
