@@ -1,7 +1,7 @@
 ---
 title: Webhooks and connectors
 author: clearab
-description: Learn how webhooks and connectors help to connect the web services to channels and teams in Microsoft Teams. Learn Incoming, Outgoing Webhooks, and Office 365 Connectors.
+description: Learn how webhooks and connectors help to connect the web services to channels and teams in Microsoft Teams. Learn Incoming, Outgoing Webhooks, and Connectors for Microsoft 365 Groups.
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: anclear
@@ -50,12 +50,12 @@ Learn more about the differences between a notification bot and Incoming Webhook
 | Cloud resource required | Azure Bot Framework | No resources are required. |
 | Tutorial | [Build notification bot with JavaScript](../sbs-gs-notificationbot.yml) | [Incoming Webhook notification sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/incoming-webhook-notification) |
 
-### Office 365 Connectors
+### Connectors for Microsoft 365 Groups
 
-Office 365 Connectors allow you to create a custom configuration page for your Incoming Webhook and package them as part of a Teams app. You send messages primarily using Office 365 Connector cards and can add a limited set of card actions to them. For example, a weather connector that allows users to select a location and any time of the day, to receive updates about tomorrow's weather. They're configured at channel level but are installed at team level.
+Connectors for Microsoft 365 Groups allow you to create a custom configuration page for your Incoming Webhook and package them as part of a Teams app. You send messages primarily using Office 365 Connector cards and can add a limited set of card actions to them. For example, a weather connector that allows users to select a location and any time of the day, to receive updates about tomorrow's weather. They're configured at channel level but are installed at team level.
 
 > [!NOTE]
-> You can distribute the Office 365 Connector Teams app to our AppStore.
+> You can distribute the connector for Microsoft 365 Groups Teams app to our AppStore.
 
 ## Create and send messages
 
@@ -70,5 +70,5 @@ Actionable messages allow users to take action without leaving their email clien
 
 * [Create Incoming Webhooks](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
 * [App capabilities mapped to features](../concepts/design/map-use-cases.md#app-capabilities-mapped-to-features)
-* [Create Office 365 Connectors](~/webhooks-and-connectors/how-to/connectors-creating.md)
+* [Create Connectors for Microsoft 365 Groups](~/webhooks-and-connectors/how-to/connectors-creating.md)
 * [Create and send messages](~/webhooks-and-connectors/how-to/connectors-using.md)
