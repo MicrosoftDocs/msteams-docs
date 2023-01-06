@@ -228,7 +228,7 @@ The Reaction API allows you to react in the meeting stage. The types of reaction
 
 ### App manifest settings for the Reaction API
 
-To use the Reaction API, you must configure RSC permissions in the app manifest. Configure the `authorization`, `name` and `type` properties in the `resourceSpecific` field as follows:
+To use the Reaction API, you must configure RSC permissions in the app manifest. Configure the `authorization` property, the `name` and `type` properties in the `resourceSpecific` field as follows:
 
 ```JSON
 "authorization": {
@@ -302,7 +302,7 @@ The Raise Hand API allows your app to show if the user has raised hand during th
 
 ### App manifest settings for the Raise Hand API
 
-To use the Raise Hand API, you must configure RSC permissions in the app manifest. Configure the `authorization`, `name`, and `type` properties in the `resourceSpecific` field as follows:
+To use the Raise Hand API, you must configure RSC permissions in the app manifest. Configure the `authorization` property and the `name` and `type` properties in the `resourceSpecific` field as follows:
 
 ```JSON
 "authorization": {
