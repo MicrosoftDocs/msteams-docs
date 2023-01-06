@@ -50,6 +50,7 @@ Do note that Microsoft partners with app developers once they’ve launched thei
 
 Additionally, when the app you're developing reaches store validation stage or if it's already published, sign up for the [Microsoft 365 ISV Benefits Program](https://cloudpartners.transform.microsoft.com/practices/modernworkisv?tab=get-started). Review the [Marketing Benefits Planning Guide](https://cloudpartners.transform.microsoft.com/download?assetname=assets/Microsoft365-ISV-Benefits-Program-Guide.pdf&download=1) for an overview of the marketing activities your app is eligible to participate in. The [Microsoft 365 ISV Benefits Service Desk](mailto:ModernWorkISVPartner@microsoft.com) is available for any email correspondence regarding support for your marketing activity.
 
+<!--
 You can plan your app's growth through the app lifecycle:
 
 - [Build your collaborative app](build-app.md)
@@ -57,6 +58,7 @@ You can plan your app's growth through the app lifecycle:
 - [Gain traction for your collaborative app in the market](gain-traction.md)
 - [Scale your collaborative app](scale-app.md)
 - [Succeed with your collaborative app](succeed.md)
+-->
 
 ## Next step
 
