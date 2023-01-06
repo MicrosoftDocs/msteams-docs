@@ -13,7 +13,7 @@ The core focus at this stage is to announce the availability of the app for exis
 ## What should you do during the Launch stage?
 
 Here’s a rundown of various initiatives and growth levers at your disposal:
-
+<br>
 <details>
 <summary>Invest strategically into your app store listing, landing page and documentation</summary>
 
@@ -149,14 +149,9 @@ Connect with the [Microsoft 365 ISV Benefits Service Desk](mailto:ModernWorkISVP
 <details>
 <summary>Banners in web SaaS app to announce the new Teams app</summary>
 
-:::row:::
-        :::column span="":::
-            Include in-product CTAs prominently in your web SaaS product to let users know about your new or updated Teams collaborative app. You can use transient banners, notifications bar, what’s new notifications inside the SaaS product’s UI for all users.
-        :::column-end:::
-        :::column span="":::
-            :::image type="content" source="../../../../../assets/images/app-fundamentals/in-product-banner.png" alt-text="In-product banner":::
-        :::column-end:::
-    :::row-end:::
+Include in-product CTAs prominently in your web SaaS product to let users know about your new or updated Teams collaborative app. You can use transient banners, notifications bar, what’s new notifications inside the SaaS product’s UI for all users.
+
+:::image type="content" source="../../../../../assets/images/app-fundamentals/in-product-banner.png" alt-text="In-product banner":::
 
 You can also use push notifications to relevant users, such as those belonging to your customer organizations who use Microsoft 365.
 
@@ -170,14 +165,9 @@ The banner or notification CTA can direct users to your app‘s landing page or 
 
 Since your goal at this stage is to achieve product-market fit for your app, it’s critical to learn how users are perceiving your new app and if they’re getting the intended value by using the app. If not already done for your core SaaS product, offer free trials to users who sign up for your app (and SaaS service) through the Teams channel. If you already offer trials for your SaaS product and your standard free trial period is 15 days, consider extending the trial period for Teams users to 30-60 days.
 
-:::row:::
-    :::column span="":::
-        :::image type="content" source="../../../../../assets/images/app-fundamentals/trials-store-listing.png.png" alt-text="Free or extended trials in app store listing and FRE flow.":::
-    :::column-end:::
-    :::column span="":::
-        Given you’ve built your Teams app for collaborative use cases, you'll naturally want trial users to invite their colleagues as well to use your app in shared context inside Teams. An extended trial facilitates collaborative evaluation of your app and increases the likelihood of these users converting to paid and sticky customers.
-    :::column-end:::
-:::row-end:::
+:::image type="content" source="../../../../../assets/images/app-fundamentals/trials-store-listing.png.png" alt-text="Free or extended trials in app store listing and FRE flow.":::
+
+Given you’ve built your Teams app for collaborative use cases, you'll naturally want trial users to invite their colleagues as well to use your app in shared context inside Teams. An extended trial facilitates collaborative evaluation of your app and increases the likelihood of these users converting to paid and sticky customers.
 
 [Back to top](#what-should-you-do-during-the-launch-stage)
 </details>
