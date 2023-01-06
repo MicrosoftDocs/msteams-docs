@@ -12,7 +12,7 @@ ms.author: surbhigupta12
 
 For complete working samples demonstrating the functionality, see the following Teams samples for Bot Framework:
 
-| **Sample** | **Description** | **.NET** | **JavaScript** | **Python** |
+| **Sample** | **Description** | **.NET** | **Node.js* | **Python** |
 |--------|------------- |---|---|---|
 | Teams conversation bot | Messaging and conversation event handling. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp)| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/nodejs)| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/python) |
 | Authentication with OAuthPrompt| Authentication and basic messaging in Bot Framework v4. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-authentication/csharp)| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/js)| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-authentication/python) |
