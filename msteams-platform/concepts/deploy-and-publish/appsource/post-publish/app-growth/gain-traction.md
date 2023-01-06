@@ -128,7 +128,7 @@ To get maximum ROI, surface the nudges contextually for scenarios that are inher
 </details>
 
 ## Where can Microsoft help?
-<br>
+
 <details>
 <summary>Teams App Store merchandising</summary>
 

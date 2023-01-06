@@ -136,7 +136,7 @@ Ensure that you instrument code and track analytics for your app from the first 
 </details>
 
 ## Where can Microsoft help?
-<br>
+
 <details>
 <summary>Co-activation in mutually identified existing customers</summary>
 

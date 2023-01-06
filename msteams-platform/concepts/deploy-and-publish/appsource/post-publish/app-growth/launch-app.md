@@ -227,7 +227,7 @@ Ensure that you introduce your Teams app, its usage, and its value proposition f
 </details>
 
 ## Where can Microsoft help?
-<br>
+
 <details>
 <summary>Support for launch content asset development</summary>
 
