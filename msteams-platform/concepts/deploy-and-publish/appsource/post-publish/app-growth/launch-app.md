@@ -85,11 +85,12 @@ The following growth levers are pertinent at this stage:
     **Resources and examples for inspiration**
 
     See good examples of support pages from Polly, Zoho, Atlassian and so on. <br> See good examples of other documentation pages from Wrike, Slido, and so on.
-</details>
 
 [Back to top](#what-should-you-do-during-the-launch-stage)
-
-### New social media posts announcing the Teams collaborative app
+</details>
+<br>
+<details>
+<summary>New social media posts announcing the Teams collaborative app</summary>
 
 You can generate interest from both existing and new customers. You can also drive traffic to your app‘s landing page or directly to the app’s listing in Teams Marketplace. It can be done through social media posts and paid campaigns executed on your social channels.
 
@@ -107,11 +108,15 @@ Remember to include media, such as a video or an animated gif in your post to ma
         - Number of visitors on your landing page.
         - Number of MQLs generated on the landing page.
         - Number of visitors to the app’s listing in marketplace.
-        - Mumber of Teams app installs post launch.
+        - Number of Teams app installs post launch.
     :::column-end:::
 :::row-end:::
 
-### Public blog post announcing the new Teams app
+[Back to top](#what-should-you-do-during-the-launch-stage)
+</details>
+<br>
+<details>
+<summary>Public blog post announcing the new Teams app</summary>
 
 Blog posts help communicate the value of your app and its integration with Microsoft Teams to your audience. Use your blog to introduce your Teams app, how to use it and communicate the value prop for your users including use cases, scenarios, customer stories. Include logos, animated gifs, screenshots, quotes, URLs, and information pertinent to promoting your app.
 
@@ -125,7 +130,11 @@ Blog posts help communicate the value of your app and its integration with Micro
 > - [MindMeister](https://www.mindmeister.com/blog/product-news/2017/09/19/mind-map-microsoft-teams/)
 > - [Workday](https://blog.workday.com/en-us/2020/workday-for-microsoft-teams-helping-our-customers-work-more-efficiently.html)
 
-### Press Release announcing the new Teams app
+[Back to top](#what-should-you-do-during-the-launch-stage)
+</details>
+<br>
+<details>
+<summary>Press Release announcing the new Teams app</summary>
 
 Use PRs to publicly announce the application you've built and your collaboration with Microsoft.
 
@@ -134,7 +143,11 @@ Use PRs to publicly announce the application you've built and your collaboration
 
 Connect with the [Microsoft 365 ISV Benefits Service Desk](mailto:ModernWorkISVPartner@microsoft.com) to avail of the service to review your press release draft and get a quote from Microsoft. Once you publicly post your press release, evangelize through other channels. Microsoft doesn't post partner press releases. // Example press releases. //
 
-### Banners in web SaaS app to announce the new Teams app
+[Back to top](#what-should-you-do-during-the-launch-stage)
+</details>
+<br>
+<details>
+<summary>Banners in web SaaS app to announce the new Teams app</summary>
 
 :::row:::
         :::column span="":::
@@ -149,7 +162,11 @@ You can also use push notifications to relevant users, such as those belonging t
 
 The banner or notification CTA can direct users to your app‘s landing page or directly to the app’s listing in Teams Marketplace.
 
-### Free and extended trials for new Teams users
+[Back to top](#what-should-you-do-during-the-launch-stage)
+</details>
+<br>
+<details>
+<summary>Free and extended trials for new Teams users</summary>
 
 Since your goal at this stage is to achieve product-market fit for your app, it’s critical to learn how users are perceiving your new app and if they’re getting the intended value by using the app. If not already done for your core SaaS product, offer free trials to users who sign up for your app (and SaaS service) through the Teams channel. If you already offer trials for your SaaS product and your standard free trial period is 15 days, consider extending the trial period for Teams users to 30-60 days.
 
@@ -162,7 +179,11 @@ Since your goal at this stage is to achieve product-market fit for your app, it�
     :::column-end:::
 :::row-end:::
 
-### Launch offers and promotions to acquire users for Teams app
+[Back to top](#what-should-you-do-during-the-launch-stage)
+</details>
+<br>
+<details>
+<summary>Launch offers and promotions to acquire users for Teams app</summary>
 
 To acquire new customers for your Teams collaborative app, consider offering a little extra incentive to Teams users other than what’s available for your core SaaS product. If your app requires paid subscriptions, consider offering launch period discounts.
 
@@ -170,13 +191,21 @@ Consider promotions, such as 1:1 product demos, customer success consultations, 
 
 If you've already listed your transactable SaaS subscriptions for the Teams app in the marketplace, ensure that you price them at a discount. It encourages users to purchase your offer directly from the Teams marketplace.
 
-### Announce Teams app to your entire customer base
+[Back to top](#what-should-you-do-during-the-launch-stage)
+</details>
+<br>
+<details>
+<summary>Announce Teams app to your entire customer base</summary>
 
 The first time your Teams app goes live on the marketplace and for major subsequent updates, consider outreach to your entire customer base announcing the availability of the app. While social media posts, public blog post and press releases are for the entire world audience, to-customer emails are the best channel to drive awareness about your app within existing customer organizations.
 
 Ensure that you introduce your Teams app, its usage, and its value proposition for your users. It must include use cases, scenarios, customer stories via animated gifs, screenshots, quotes, and CTAs to your app’s public landing page. Also, add install links to the Teams marketplace for those users who are willing to get started immediately.
 
-### App Bill of Materials: Pitch deck, value prop, demo, datasheets, and so on
+[Back to top](#what-should-you-do-during-the-launch-stage)
+</details>
+<br>
+<details>
+<summary>App Bill of Materials: Pitch deck, value prop, demo, datasheets, and so on</summary>
 
 :::row:::
     :::column span="":::
@@ -203,30 +232,75 @@ Ensure that you introduce your Teams app, its usage, and its value proposition f
 | Technical solution datasheet | Provides an overview of the architecture, APIs, data handling and compliance aspects of your Teams app. This document is helpful for IT admins as well as  Microsoft sales and customer success engineers when rolling out an overall solution into a customer’s organization. |
 | Adoption templates (emails, flyers) | An email both your customers and Microsoft’s customer-facing employees can use to drive awareness of your app within the customer organization. |
 
+[Back to top](#what-should-you-do-during-the-launch-stage)
+</details>
+<br>
+<details>
+
 ## Where can Microsoft help?
 
-- **Support for launch content asset development**: Connect with the [Microsoft 365 ISV Benefits Service Desk](mailto:ModernWorkISVPartner@microsoft.com) and request access to co-branded marketing templates and branding guidance for use in your Microsoft Teams marketing activities. Review the template(s) or guidance provided and upload your drafted GTM BOM asset(s) and request form(s) to your custom SharePoint folder for Microsoft to distribute internally.
+<details>
+<summary>Support for launch content asset development</summary>
 
-- **Teams app store listing optimization**: Improve your solution listing in Teams marketplace.
+Connect with the [Microsoft 365 ISV Benefits Service Desk](mailto:ModernWorkISVPartner@microsoft.com) and request access to co-branded marketing templates and branding guidance for use in your Microsoft Teams marketing activities. Review the template(s) or guidance provided and upload your drafted GTM BOM asset(s) and request form(s) to your custom SharePoint folder for Microsoft to distribute internally.
 
-- **App store marketing toolkit**: Apply best practices and leverage templated campaign collateral to customize marketing for your Teams app.
+</details>
+<br>
+<details>
+<summary>Teams app store listing optimization</summary>
 
-- **Partner press release and blog content review**: Publicly announce your Teams app by leveraging this service to review of a press release you draft and get a quote from a Microsoft representative.
+Improve your solution listing in Teams marketplace.
 
-- **Amplify partner press release and blog on social**: Microsoft can help Teams customers gain awareness of your new or updated collaborative app by including your app in the Commercial Marketplace “What’s New” blog as well as amplifying your blog or PR on social channels.
+</details>
+<br>
+<details>
+<summary>App store marketing toolkit</summary>
 
-- **Microsoft Teams TechCommunity Blog Post**: Get in touch with the field, account, or engineering representatives from Microsoft to discuss the possibility of publishing a dedicated blog post on Teams blog.
+Apply best practices and leverage templated campaign collateral to customize marketing for your Teams app.
+
+</details>
+<br>
+<details>
+<summary>Partner press release and blog content review</summary>
+
+Publicly announce your Teams app by leveraging this service to review of a press release you draft and get a quote from a Microsoft representative.
+
+</details>
+<br>
+<details>
+<summary>Amplify partner press release and blog on social</summary>
+
+Microsoft can help Teams customers gain awareness of your new or updated collaborative app by including your app in the Commercial Marketplace “What’s New” blog as well as amplifying your blog or PR on social channels.
+
+</details>
+<br>
+<details>
+<summary>Microsoft Teams TechCommunity Blog Post</summary>
+
+Get in touch with the field, account, or engineering representatives from Microsoft to discuss the possibility of publishing a dedicated blog post on Teams blog.
 
     Here's an example of a [blog post](https://techcommunity.microsoft.com/t5/microsoft-teams-blog/salesforce-brings-sales-and-service-data-into-microsoft-teams-to/ba-p/2521221).
 
-- **Features placements in AppSource and the Teams in-product app store**: Get in touch with your Microsoft field, account or engineering representatives or connect with the [Microsoft 365 ISV Benefits Service Desk](mailto:ModernWorkISVPartner@microsoft.com) to feature your app in AppSource and or or the Teams in-client app store merchandising sections.
+</details>
+<br>
+<details>
+<summary>Features placements in AppSource and the Teams in-product app store</summary>
+
+Get in touch with your Microsoft field, account or engineering representatives or connect with the [Microsoft 365 ISV Benefits Service Desk](mailto:ModernWorkISVPartner@microsoft.com) to feature your app in AppSource and or or the Teams in-client app store merchandising sections.
 
     > [!NOTE]
     > The Microsoft Teams store editorial team determines the prominence and location of an app within the editorial sections such as promo banner on the Teams store based on ranking parameters.
     >
     > For more information, see [Microsoft Teams store ranking parameters](../teams-store-ranking-parameters.md).
 
-- **Co-present in Teams app-focused public webinars hosted by you**: Get in touch with your Microsoft field, account, or engineering representatives to request their participation in to-customer webinars you’re planning to announce and evangelize your Teams collaborative app.
+</details>
+<br>
+<details>
+<summary>Co-present in Teams app-focused public webinars hosted by you</summary>
+
+Get in touch with your Microsoft field, account, or engineering representatives to request their participation in to-customer webinars you’re planning to announce and evangelize your Teams collaborative app.
+
+</details>
 
 ## Next step
 
