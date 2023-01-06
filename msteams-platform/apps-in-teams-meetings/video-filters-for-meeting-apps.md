@@ -175,8 +175,7 @@ Ensure that you adhere to the following requirements to update the app manifest:
 
   * After applying a filter, the hover over text on the filter's more icon (**...**) must display the text **Open [App name]**. For example, Open Contoso.
 
-  * Add the filter categories as a prefix to the filter name. For example:
-    * [Brand name]_[Filter name]
+  * Add the filter categories as a prefix to the filter name. For example, **[Brand name]_[Filter name]**.
 
 ## Validate your app package
 
