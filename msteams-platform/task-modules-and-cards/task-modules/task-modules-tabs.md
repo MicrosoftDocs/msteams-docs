@@ -1,15 +1,15 @@
 ---
-title: Use Task Modules in Microsoft Teams tabs
-description: Learn how to invoke task modules from Teams tabs and submitting its result using the Microsoft Teams client library. It includes code samples.
+title: Use dialogs in Microsoft Teams tabs
+description: Learn how to invoke dialogs from Teams tabs and submit results using the Microsoft Teams client library.
 ms.localizationpriority: medium
 ms.topic: how-to
 ---
 
-# Use task modules in tabs
+# Use dialogs in tabs
 
-Add a task module to your tab to simplify your user's experience for any workflows that require data input. Task modules allow you to gather their input in a Microsoft Teams-Aware pop-up. A good example of this is editing Planner cards. You can use task modules to create a similar experience.
+You can add dialogs to your tabs to simplify the user experience for workflows that require data input. Dialogs allow you to gather user input in a Microsoft Teams-aware modal window. A good example of this is editing planner cards. You can use dialogs to create a similar experience.
 
-To support the task module feature, two new functions are added to the [Teams JavaScript client library](/javascript/api/overview/msteams-client). The following code shows an example of these two functions:
+The two main operations of dialogs involve opening and closing (submitting) them. The functions are slightly different for earlier versions (prior to v.2.x.x) of the TeamsJS library:
 
 # [TeamsJs v1](#tab/teamsjs1)
 
@@ -28,14 +28,14 @@ microsoftTeams.tasks.submitTask(
 # [TeamsJs v2](#tab/teamsjs)
 
 ```typescript
- microsoftTeams.dialog.open(
+ microsoftTeams.dialog.url.open(
    urlDialogInfo: UrlDialogInfo, 
    submitHandler?: DialogSubmitHandler, 
    messageFromChildHandler?: PostMessageChannel
 ): void])
 
 
-   microsoftTeams.dialog.submit(
+   microsoftTeams.dialog.url.submit(
     result?: string | any,
     appIds?: string | string[]
 ): void;
