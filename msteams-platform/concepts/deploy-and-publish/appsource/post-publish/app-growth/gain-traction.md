@@ -133,14 +133,14 @@ To get maximum ROI, surface the nudges contextually for scenarios that are inher
 
 Editorial Articles**: The Microsoft Teams store editorial team curates editorial sections on the in-product app store based on various ranking parameters.
 
-    :::row:::
-        :::column span="3":::
-            Editorial articles provide a list of app suggestions to users within the store that meet specific scenario objectives. It includes a clear call-to-action to install the app while reading the article. Get in touch with the Microsoft field, account, or engineering representatives or connect with the [Microsoft 365 ISV Benefits Service Desk](mailto:ModernWorkISVPartner@microsoft.com) to feature your app in these Editorial Articles.
-        :::column-end:::
-        :::column span="":::
-            :::image type="content" source="../../../../../assets/images/app-fundamentals/editorial-articles.png" alt-text="Editorial articles.":::
-        :::column-end:::
-    :::row-end:::
+:::row:::
+    :::column span="3":::
+        Editorial articles provide a list of app suggestions to users within the store that meet specific scenario objectives. It includes a clear call-to-action to install the app while reading the article. Get in touch with the Microsoft field, account, or engineering representatives or connect with the [Microsoft 365 ISV Benefits Service Desk](mailto:ModernWorkISVPartner@microsoft.com) to feature your app in these Editorial Articles.
+    :::column-end:::
+    :::column span="":::
+        :::image type="content" source="../../../../../assets/images/app-fundamentals/editorial-articles.png" alt-text="Editorial articles.":::
+    :::column-end:::
+:::row-end:::
 
 [Back to top](#where-can-microsoft-help)
 </details>
@@ -148,7 +148,7 @@ Editorial Articles**: The Microsoft Teams store editorial team curates editorial
 <details>
 <summary>On-demand access to digital marketing content</summary>
 
-    [Digital Marketing Content OnDemand](/solutions/digital-marketing-content) service provides go-to-market content in fresh weekly campaigns at no cost to Microsoft partners. Unlock expertise that can drive customer engagement and elevate your business. Connect your social media accounts and email lists to select, customize, and share content with automatic updates that push to your company’s social media accounts or send direct email communication to customers.
+[Digital Marketing Content OnDemand](/solutions/digital-marketing-content) service provides go-to-market content in fresh weekly campaigns at no cost to Microsoft partners. Unlock expertise that can drive customer engagement and elevate your business. Connect your social media accounts and email lists to select, customize, and share content with automatic updates that push to your company’s social media accounts or send direct email communication to customers.
 
 [Back to top](#where-can-microsoft-help)
 </details>
