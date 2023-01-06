@@ -1,33 +1,33 @@
 ---
-title: Use Task Modules in Microsoft Teams bots
-description: Learn how to use task modules with Microsoft Teams bots, including Bot Framework cards, Adaptive cards, and deep links.
+title: Use dialogs in Microsoft Teams bots
+description: Learn how to use dialogs with Microsoft Teams bots, including Bot Framework cards, Adaptive cards, and deep links.
 ms.localizationpriority: medium
 ms.topic: how-to
 ---
 
-# Use task modules from bots
+# Use dialogs with bots
 
-Task modules can be invoked from Microsoft Teams bots using buttons on Adaptive Cards and Bot Framework cards that are hero, thumbnail, and Office 365 Connector. Task modules are often a better user experience than multiple conversation steps. Keep track of bot state and allow the user to interrupt or cancel the sequence.
+Dialogs can be invoked from Microsoft Teams bots using buttons on Adaptive Cards and Bot Framework cards that are hero, thumbnail, and Office 365 Connector. Dialogs are often a better user experience than multiple conversation steps. You can keep track of bot state and allow the user to interrupt or cancel the sequence.
 
-There are two ways of invoking task modules:
+There are two ways of invoking dialogs:
 
-* A new invoke message `task/fetch`: Using the `invoke` [card action](~/task-modules-and-cards/cards/cards-actions.md#action-type-invoke) for Bot Framework cards, or the `Action.Submit` [card action](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions) for Adaptive Cards, with `task/fetch`, task module either a URL or an Adaptive Card, is fetched dynamically from your bot.
-* Deep link URLs: Using the [deep link syntax for task modules](~/task-modules-and-cards/task-modules/invoking-task-modules.md#task-module-deep-link-syntax), you can use the `openUrl` [card action](~/task-modules-and-cards/cards/cards-actions.md#action-type-openurl) for Bot Framework cards or the `Action.OpenUrl` [card action](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions) for Adaptive Cards, respectively. With deep link URLs, the task module URL or Adaptive Card body is already known to avoid a server round-trip relative to `task/fetch`.
+* A new invoke message `task/fetch`: The `invoke` [card action](./../cards/cards-actions.md#action-type-invoke) for Bot Framework cards, or the `Action.Submit` [card action](./../cards/cards-actions.md#adaptive-cards-actions) for Adaptive Cards, your bot can dynamically fetch either a URL or card to display the user.
+* Deep link URLs: Using the [deep link syntax for task modules](./invoking-task-modules.md#task-module-deep-link-syntax), you can use the `openUrl` [card action](~/task-modules-and-cards/cards/cards-actions.md#action-type-openurl) for Bot Framework cards or the `Action.OpenUrl` [card action](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions) for Adaptive Cards, respectively. With deep link URLs, the task module URL or Adaptive Card body is already known to avoid a server round-trip relative to `task/fetch`.
 
 > [!IMPORTANT]
 > Each `url` and `fallbackUrl` must implement the HTTPS encryption protocol.
 
-The next section provides details on invoking a task module using `task/fetch`.
+The next section provides details on invoking a dialog using `task/fetch`.
 
-## Invoke a task module using `task/fetch`
+## Invoke a dialog using `task/fetch`
 
-When the `value` object of the `invoke` card action or `Action.Submit` is initialized and when a user selects the button, an `invoke` message is sent to the bot. In the HTTP response to the `invoke` message, there's a [TaskInfo object](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object) embedded in a wrapper object, which Teams uses to display the task module.
+When the `value` object of the `invoke` card action or `Action.Submit` is initialized and when a user selects the button, an `invoke` message is sent to the bot. In the HTTP response to the `invoke` message, there's a [DialogInfo object](./invoking-task-modules.md#the-dialoginfo-object) embedded in a wrapper object, which Teams uses to display the dialog.
 
 :::image type="content" source="../../assets/images/task-module/task-module-invoke-request-response.png" alt-text="task/fetch request or response":::
 
-The following steps provide the invoke task module using `task/fetch`:
+Here's how a dialog is invoked using `task/fetch`:
 
-1. This image shows a Bot Framework hero card with a **Buy** `invoke` [card action](~/task-modules-and-cards/cards/cards-actions.md#action-type-invoke). The value of the `type` property is `task/fetch` and the rest of the `value` object can be of your choice.
+1. The image above shows a Bot Framework hero card with a **Buy** `invoke` [card action](~/task-modules-and-cards/cards/cards-actions.md#action-type-invoke). The value of the `type` property is `task/fetch` and the rest of the `value` object can be of your choice.
 1. The bot receives the `invoke` HTTP POST message.
 1. The bot creates a response object and returns it in the body of the POST response with an HTTP 200 response code. For more information on schema for responses, see the [discussion on task/submit](#responds-to-the-tasksubmit-messages). The following code provides an example of body of the HTTP response that contains a [TaskInfo object](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object) embedded in a wrapper object:
 
@@ -46,18 +46,18 @@ The following steps provide the invoke task module using `task/fetch`:
     }
     ```
 
-    The `task/fetch` event and its response for bots is similar to the `microsoftTeams.tasks.startTask()` function in the TeamsJS library.
+    The `task/fetch` event and its response for bots is similar to the `microsoftTeams.adaptiveCard.open()` function in the TeamsJS library.
 
-1. Microsoft Teams displays the task module.
+1. Microsoft Teams displays the dialog.
 
-The next section provides details on submitting the result of a task module.
+The next section provides details on submitting the result of a dialog.
 
-## Submit the result of a task module
+## Submit the result of a dialog
 
-When the user is finished with the task module, submitting the result back to the bot is similar to the way it works with tabs. For more information, see [example of submitting the result of a task module](~/task-modules-and-cards/task-modules/task-modules-tabs.md#example-of-submitting-the-result-of-a-task-module). There are a few differences as follows:
+When the user is finished with the dialog, submitting the result back to the bot is similar to the way it works with tabs. For more information, see [example of submitting the result of a task module](./task-modules-tabs.md#example-of-submitting-the-result-of-a-dialog). There are a few differences as follows:
 
-* HTML or JavaScript that is `TaskInfo.url`: Once you've validated what the user has entered, you call the `microsoftTeams.tasks.submitTask()` function referred to hereafter as `submitTask()` for readability purposes. You can call `submitTask()` without any parameters if you want Teams to close the task module, but you must pass an object or a string to your `submitHandler`. Pass it as the first parameter, `result`. Teams invokes `submitHandler`, `err` is `null`, and `result` is the object or string you passed to `submitTask()`. If you call `submitTask()` with a `result` parameter, you must pass an `appId` or an array of `appId` strings. This allows Teams to validate that the app sending the result is the same one, which invoked the task module. Your bot receives a `task/submit` message including `result`. For more information, see [payload of `task/fetch` and `task/submit` messages](#payload-of-taskfetch-and-tasksubmit-messages).
-* Adaptive Card that is `TaskInfo.card`: The Adaptive Card body as filled in by the user is sent to the bot through a `task/submit` message when the user selects any `Action.Submit` button.
+* HTML or JavaScript that is `UrlDialogInfo.url`: Once you've validated what the user has entered, call the `microsoftTeams.dialog.url.submit()`. You can call `submit()` without any parameters if you want Teams to simply close the dialog, but you must pass an object or a string to your `submitHandler` as the first parameter, `result`. Teams will then invoke your submitHandler with `err` as `null`, and `result` as the object or string you passed to `submit()`. If you call `submit()` with a `result` parameter, you must pass an `appId` or an array of `appId` strings. This allows Teams to validate that the app sending the result is the same one that invoked the dialog. Your bot then receives a `task/submit` message including `result`. For more information, see [payload of `task/fetch` and `task/submit` messages](#payload-of-taskfetch-and-tasksubmit-messages).
+* Adaptive Card that is `AdaptiveCardDialogInfo.card`: The Adaptive Card body as filled in by the user is sent to the bot through a `task/submit` message when the user selects any `Action.Submit` button.
 
 The next section provides details on how to respond to the `task/submit` messages.
 
@@ -207,10 +207,10 @@ The schema for Bot Framework card actions is different from Adaptive Card `Actio
 
 ## Step-by-step guide
 
-Follow the [step-by-step guide](../../sbs-botbuilder-taskmodule.yml) to create and fetch task module bot in Teams.
+Follow the [step-by-step guide](../../sbs-botbuilder-taskmodule.yml) to create and fetch bot-based dialogs in Teams.
 
 ## See also
 
-* [Cards and task modules](../cards-and-task-modules.md)
+* [Cards and dialogs](../cards-and-task-modules.md)
 * [Microsoft Teams task module sample code in Node.js](https://github.com/OfficeDev/microsoft-teams-sample-task-module-nodejs/blob/master/src/TeamsBot.ts)
 * [Bot Framework samples](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/README.md)
