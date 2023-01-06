@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Microsoft Teams provides an immersive and engaging meeting experience with video filters. Users can use the video filter app during the meeting lobby and in-meeting scenarios and easily apply video effects such as filters, frames, makeups, and so on, to make the meeting experience more presentable.
+    Microsoft Teams provides an immersive and engaging meeting experience with video filters. Users can use the video filter app during the meeting lobby and in-meeting scenarios and easily apply video effects such as filters, frames, and so on, to make the meeting experience more presentable.
   
     This step-by-step guide helps you to create a video filter app for Teams meetings. By the end of this tutorial you can achieve the following output:
 

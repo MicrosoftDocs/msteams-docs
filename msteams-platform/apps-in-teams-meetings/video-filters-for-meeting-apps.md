@@ -1,7 +1,7 @@
 ---
 title: Video filters for meeting apps
 author: v-ypalikila
-description: Learn how to add filters, frames, makeups, and so on, to videos and make your videos more presentable for meetings.
+description: Learn how to add filters, frames, and so on, to videos and make your videos more presentable for meetings.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: v-ypalikila
@@ -15,7 +15,7 @@ ms.date: 08/08/2022
 
 As online meetings have become more prominent, teams users spend significant amount of time reviewing work, watching videos, and collaborating with teammates on video calls. Considering this, Microsoft Teams provides an immersive and engaging meeting experience with video filters.
 
-Users can use the video filter app in the meeting lobby and in-meeting scenarios and easily apply video effects in all meetings and calls. Teams supports filters, frames, makeups, and so on, to make your meeting experience more presentable.
+Users can use the video filter app in the meeting lobby and in-meeting scenarios and easily apply video effects in all meetings and calls. Teams supports filters, frames, and so on, to make your meeting experience more presentable.
 
 # [Meeting lobby experience](#tab/meeting-lobby-experience)
 
