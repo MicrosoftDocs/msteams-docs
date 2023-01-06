@@ -136,7 +136,7 @@ The following is an example of a manifest for a video filter app:
     "videoFilters": [ // for showing video filters inside of video effects quick picker section.
       {
         "id": "310a65de-24ce-445e-9e1e-dd4ef0f0114b", // GUID
-        "name": "Category_FilterA", // Category can be: Styles, Frames, Makeup, and Others
+        "name": "Category_FilterA", // Category should be your brand name
         "thumbnail": "PreviewEffect.png" // A relative path to the video filter thumbnail.png
       }
     ],
@@ -164,11 +164,8 @@ Ensure that you adhere to the following requirements to update the app manifest:
 
 * Supported thumbnail image PixelFormat is PixelFormat24bppRGB or PixelFormat32bppARGB.
 
-* Video Filter categories:
-  * Styles: Filters that add visual effects to the video stream, including graphical styles such as color and texture changes.
-  * Frames: Filters with additional add-on designs, which don't have semantic information.
-  * Makeup: Virtual makeup based on facial area.
-  * Others: Filters that don’t fall into the categories above.
+* Video Filter categories for 3P apps:
+   * Category name should be your brand name.
 
 * Use descriptive terms as the filter name to best reflect the effect. Avoid using offensive words that don't conform with Microsoft’s value of inclusivity.
 
@@ -179,10 +176,7 @@ Ensure that you adhere to the following requirements to update the app manifest:
   * After applying a filter, the hover over text on the filter's more icon (**...**) must display the text **Open [App name]**. For example, Open Contoso.
 
   * Add the filter categories as a prefix to the filter name. For example:
-    * Styles_[Filter name]
-    * Frames_[Filter name]
-    * Makeup_[Filter name]
-    * Others_[Filter name]
+    * [Brand name]_[Filter name]
 
 ## Validate your app package
 
