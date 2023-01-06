@@ -279,7 +279,7 @@ Microsoft can help Teams customers gain awareness of your new or updated collabo
 
 Get in touch with the field, account, or engineering representatives from Microsoft to discuss the possibility of publishing a dedicated blog post on Teams blog.
 
-    Here's an example of a [blog post](https://techcommunity.microsoft.com/t5/microsoft-teams-blog/salesforce-brings-sales-and-service-data-into-microsoft-teams-to/ba-p/2521221).
+Here's an example of a [blog post](https://techcommunity.microsoft.com/t5/microsoft-teams-blog/salesforce-brings-sales-and-service-data-into-microsoft-teams-to/ba-p/2521221).
 
 </details>
 <br>
@@ -288,10 +288,10 @@ Get in touch with the field, account, or engineering representatives from Micros
 
 Get in touch with your Microsoft field, account or engineering representatives or connect with the [Microsoft 365 ISV Benefits Service Desk](mailto:ModernWorkISVPartner@microsoft.com) to feature your app in AppSource and or or the Teams in-client app store merchandising sections.
 
-    > [!NOTE]
-    > The Microsoft Teams store editorial team determines the prominence and location of an app within the editorial sections such as promo banner on the Teams store based on ranking parameters.
-    >
-    > For more information, see [Microsoft Teams store ranking parameters](../teams-store-ranking-parameters.md).
+> [!NOTE]
+> The Microsoft Teams store editorial team determines the prominence and location of an app within the editorial sections such as promo banner on the Teams store based on ranking parameters.
+>
+> For more information, see [Microsoft Teams store ranking parameters](../teams-store-ranking-parameters.md).
 
 </details>
 <br>
