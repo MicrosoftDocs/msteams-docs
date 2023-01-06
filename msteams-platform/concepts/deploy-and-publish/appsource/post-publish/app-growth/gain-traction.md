@@ -128,7 +128,7 @@ To get maximum ROI, surface the nudges contextually for scenarios that are inher
 </details>
 
 ## Where can Microsoft help?
-
+<br>
 <details>
 <summary>Teams App Store merchandising</summary>
 
@@ -143,7 +143,6 @@ Editorial Articles**: The Microsoft Teams store editorial team curates editorial
     :::column-end:::
 :::row-end:::
 
-[Back to top](#where-can-microsoft-help)
 </details>
 <br>
 <details>
@@ -151,7 +150,6 @@ Editorial Articles**: The Microsoft Teams store editorial team curates editorial
 
 [Digital Marketing Content OnDemand](/solutions/digital-marketing-content) service provides go-to-market content in fresh weekly campaigns at no cost to Microsoft partners. Unlock expertise that can drive customer engagement and elevate your business. Connect your social media accounts and email lists to select, customize, and share content with automatic updates that push to your company’s social media accounts or send direct email communication to customers.
 
-[Back to top](#where-can-microsoft-help)
 </details>
 <br>
 <details>
@@ -159,7 +157,6 @@ Editorial Articles**: The Microsoft Teams store editorial team curates editorial
 
 Participate in a joint webinar with Microsoft and other partners to showcase the value of your Teams collaborative app to customers. You can connect with the [Microsoft 365 ISV Benefits Service Desk](mailto:ModernWorkISVPartner@microsoft.com) to find opportunities and execute.
 
-[Back to top](#where-can-microsoft-help)
 </details>
 <br>
 <details>
@@ -167,7 +164,6 @@ Participate in a joint webinar with Microsoft and other partners to showcase the
 
 Highlight your Microsoft Teams app in a Microsoft-led digital campaign based on specific industries or contemporary themes, for example, hybrid work. You can connect with the [Microsoft 365 ISV Benefits Service Desk](mailto:ModernWorkISVPartner@microsoft.com) to find opportunities and execute.
 
-[Back to top](#where-can-microsoft-help)
 </details>
 <br>
 <details>
@@ -178,7 +174,6 @@ Drive awareness of your published Microsoft Teams app to the customer-facing rol
 > [!NOTE]
 > Go-to-Market Bill of Materials (GTM BOM) for your app is a pre-requisite for using it.
 
-[Back to top](#where-can-microsoft-help)
 </details>
 <br>
 <details>
@@ -186,7 +181,6 @@ Drive awareness of your published Microsoft Teams app to the customer-facing rol
 
 Strategic developers, who are part of the invite-only Teams engineering’s build-with partner program, get access to robust technical guidance and best practices from engineering to build transact SaaS and new, pilot features to improve the purchase funnel for their apps. You can also unlock other GTM benefits and CSP channel partnership programs for early-bird apps with live transact SaaS offers.
 
-[Back to top](#where-can-microsoft-help)
 </details>
 <br>
 <details>
@@ -196,7 +190,6 @@ Strategic developers who are part of the invite-only Teams engineering’s build
 
 Remember to upskill using the Teams admin-facing public documentation sections [Third-party apps in Microsoft Teams](/microsoftteams/overview-third-party-apps) and [Admin controls to govern apps](/microsoftteams/customize-apps) to aid during app rollout, activation, and governance.
 
-[Back to top](#where-can-microsoft-help)
 </details>
 <br>
 <details>
