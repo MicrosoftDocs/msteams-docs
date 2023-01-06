@@ -234,8 +234,6 @@ Ensure that you introduce your Teams app, its usage, and its value proposition f
 
 [Back to top](#what-should-you-do-during-the-launch-stage)
 </details>
-<br>
-<details>
 
 ## Where can Microsoft help?
 
