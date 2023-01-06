@@ -63,7 +63,7 @@ Depending on your app functionality, you're required to provide Teams tenant con
 
 4. **Demo Video**: Provide a recording of your app so that Microsoft can fully understand its functionality.
 
-Here are sample test instructions for your reference:
+Here are sample test instructions for your reference: 
 
 - [Sample 1: Educational app](https://github.com/MicrosoftDocs/msteams-docs/blob/test-instructions/msteams-platform/assets/sample-instructions/Sample%201_EDU%20App.docx?raw=true)
 - [Sample 2: ERP Data transfer](https://github.com/MicrosoftDocs/msteams-docs/blob/test-instructions/msteams-platform/assets/sample-instructions/Sample%202_ERP%20Data%20transfer.docx?raw=true)
