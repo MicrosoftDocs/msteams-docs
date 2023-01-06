@@ -14,6 +14,7 @@ In the Traction stage, you’ll want to gain mindshare for your collaborative ap
 
 Here are the various initiatives and growth levers at your disposal:
 <br>
+
 <details>
 <summary>Upskill customer success team on your new Teams app</summary>
 
