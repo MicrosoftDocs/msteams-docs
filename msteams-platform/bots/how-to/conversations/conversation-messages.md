@@ -18,7 +18,7 @@ Basic conversations are handled through the Bot Framework connector, a single RE
 
 Your bot receives messages from Teams using the `Text` property and it sends single or multiple message responses to the users.
 
-For more information, see [user attribution for bot messages](/microsoftteams/platform/messaging-extensions/how-to/action-commands/respond-to-task-module-submit?tabs=dotnet%2Cdotnet-1&branch=pr-en-us-5926#user-attribution-for-bots-messages).
+For more information, see [user attribution for bot messages](/microsoftteams/platform/messaging-extensions/how-to/action-commands/respond-to-task-module-submit?tabs=dotnet%2Cdotnet-1#user-attribution-for-bots-messages).
 
 ## Receive a message
 
@@ -60,8 +60,7 @@ export class MyBot extends TeamsActivityHandler {
 ```
 
 # [Python](#tab/python)
-
-* [SDK reference](/python/api/botbuilder-core/botbuilder.core.turncontext?view=botbuilder-py-latest#botbuilder-core-turncontext-send-activity&preserve-view=true)
+* [SDK reference](/python/api/botbuilder-core/botbuilder.core.activityhandler?view=botbuilder-py-latest#botbuilder-core-activityhandler-on-message-activity&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L103)
 
 <!-- Verify -->
@@ -168,9 +167,8 @@ protected override async Task OnMembersAddedAsync(IList<ChannelAccount> membersA
 ```
 
 # [Python](#tab/python)
-
-* [SDK reference](/python/api/botbuilder-core/botbuilder.core.activityhandler?view=botbuilder-py-latest#botbuilder-core-activityhandler-on-members-added-activity&preserve-view=true)
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-teams-authentication/python/bots/auth_bot.py#L26)
+* [SDK reference](/python/api/botbuilder-core/botbuilder.core.turncontext?view=botbuilder-py-latest#botbuilder-core-turncontext-send-activity&preserve-view=true)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-teams-authentication/python/bots/auth_bot.py#L33)
 
 <!-- Verify -->
 
@@ -438,8 +436,7 @@ this.onMessage(async (turnContext, next) => {
 ```
 
 # [Python](#tab/python)
-
-* [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams?view=botbuilder-py-latest#botbuilder-core-teams-teams-notify-user&preserve-view=true)
+[SDK reference](/python/api/botbuilder-core/botbuilder.core.teams?view=botbuilder-py-latest#botbuilder-core-teams-teams-notify-user&preserve-view=true)
 
 ```python
 

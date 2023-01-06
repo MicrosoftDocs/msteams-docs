@@ -75,7 +75,6 @@ While most of you find it beneficial to use our free hosted service, there may s
 * Transmit sensitive data through the service that requires a custom security policy.
 * Develop features through Fluid Framework, for example, `SharedMap`, for your application outside of Teams.
 
-
 For more information, see [how to guide](apps-in-teams-meetings/teams-live-share-how-to/how-to-custom-azure-fluid-relay.md) or visit the [Azure Fluid Relay documentation](/azure/azure-fluid-relay/).
 <br>
 &nbsp;
@@ -153,6 +152,15 @@ While Live Share is in Preview, any limit to events emitted through Live Share i
 &nbsp;
 </details>
 
+<details>
+<summary>Is Live Share supported for Government Community Cloud (GCC), Government Community Cloud High (GCC-High), and Department of Defense (DOD) tenants?</summary>
+
+Live Share isn't supported for GCC, GCC-High, and DOD tenants.
+
+<br>
+
+</details>
+
 ## Microsoft Graph
 
 <details>
@@ -164,6 +172,7 @@ You can use the following Graph API [Get user mailbox settings](/graph/api/user-
 * GET /users/{id|userPrincipalName}/mailboxSettings/timeZone
 <br>
 &nbsp;
+
 </details>
 <details>
 <summary>How can I deploy the code in Azure using Teams Toolkit, and use Graph API to get a user profile photo?</summary>
@@ -212,6 +221,7 @@ The app users have multiple sign-in options from the Moodle login page.
 * To sign in manually to the Moodle portal, see [Moodle](https://moodle.org/login/index.php).
 <br>
 &nbsp;
+
 </details>
 <details>
 <summary>How can I specify which users to sync? I don’t want all Azure AD users synchronized with the Moodle website. </summary>
@@ -272,6 +282,7 @@ The reason for inconsistencies with users being able unable to sign using their 
 * Check if the users have **Permissions** to access the Azure application.
 <br>
 &nbsp;
+
 </details>
 <details>
 <summary>All users are unable to sign in using their Microsoft 365 credentials. What can we do to resolve this?</summary>
@@ -375,6 +386,7 @@ You can create a Partner Center account one of the following ways:
 * If you're already enrolled in the Microsoft Partner Network, [create an account directly from Partner Center using existing Microsoft Partner Center enrollments](/office/dev/store/open-a-developer-account#create-an-account-using-an-existing-partner-center-enrollment).
 <br>
 &nbsp;
+
 </details>
 <details>
 <summary>How can I find my account in Partner Center?</summary>
@@ -398,7 +410,7 @@ Visit the [publishers support page](https://aka.ms/marketplacepublishersupport) 
 &nbsp;
 </details>
 <details>
-<summary>How do I manage my Office Store account in Partner Center?</summary>
+<summary>How do I manage my Microsoft 365 Store account in Partner Center?</summary>
 
 See [manage your account through Partner Center](/office/dev/store/manage-account-settings-and-profile) for information.
 <br>
@@ -451,6 +463,7 @@ Remember the following points about the email verification process:
 * To ensure you receive the email, safe-list **microsoft.com** as a secure domain and check your junk email folders.
 <br>
 &nbsp;
+
 </details>
 <details>
 <summary>I've checked my mail folders and haven't received the verification email. What must I do next?</summary>
@@ -464,6 +477,7 @@ Try the following steps:
 * Adjust your server's spam filter to allow or safe-list all emails from **maccount@microsoft.com**.
 <br>
 &nbsp;
+
 </details>
 <details>
 <summary>How long does the employment verification process usually take?</summary>
@@ -498,6 +512,7 @@ Send an email to <a href="mailto:teamsubm@microsoft.com">teamsubm@microsoft.com<
   * A screenshot of the issue, if possible.
 <br>
 &nbsp;
+
 </details>
 <details>
 <summary>Where else can I go for Partner Center help?</summary>
@@ -507,6 +522,7 @@ The following resources can also assist:
 * [Microsoft 365 app submission FAQ](/office/dev/store/appsource-submission-faq).
 * [Commercial marketplace documentation](/azure/marketplace/).
 <br>
+
 </details>
 
 ## Single sign-on
@@ -592,6 +608,7 @@ If you get errors with Teams Toolkit in Visual Studio Code, you can select **Get
 3. If you didn't provision current environment, you can trigger provision directly.
 <br>
 &nbsp;
+
 </details>
 <details>
 <summary>How can I change resource group while provisioning?</summary>

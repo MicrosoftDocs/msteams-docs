@@ -83,7 +83,7 @@ To enable the Live Share SDK for your meeting extension, you must first add the 
 
 Follow the steps to join a session that's associated with a user's meeting:
 
-1. Initialize [LiveShareClient](/javascript/api/@microsoft/live-share/liveshareclient).
+1. Initialize `LiveShareClient`.
 2. Define the data structures you want to synchronize. For example, `SharedMap`.
 3. Join the container.
 
@@ -217,10 +217,10 @@ The Live Share SDK includes a set of new Live Share `SharedObject` classes, whic
 
 | Live Object                                                        | Description                                                                                                                             |
 | ------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------- |
-| [LivePresence](/javascript/api/@microsoft/live-share/livepresence) | See which users are online, set custom properties for each user, and broadcast changes to their presence.                               |
-| [LiveEvent](/javascript/api/@microsoft/live-share/liveevent)       | Broadcast individual events with any custom data attributes in the payload.                                                             |
-| [LiveState](/javascript/api/@microsoft/live-share/livestate)       | Similar to SharedMap, a distributed key-value store that allows for restricted state changes based on role, for example, the presenter. |
-| [LiveTimer](/javascript/api/@microsoft/live-share/livetimer)       | Synchronize a countdown timer for a given interval.                                                                                     |
+| `LivePresence` | See which users are online, set custom properties for each user, and broadcast changes to their presence.                               |
+| `LiveEvent` | Broadcast individual events with any custom data attributes in the payload.                                                             |
+| `LiveState` | Similar to SharedMap, a distributed key-value store that allows for restricted state changes based on role, for example, the presenter. |
+| `LiveTimer` | Synchronize a countdown timer for a given interval.                                                                                     |
 
 ### LivePresence example
 
@@ -643,8 +643,12 @@ Listen to your customers to understand their scenarios before implementing role 
 
 ## See also
 
+- [Apps for Teams meetings](teams-apps-in-meetings.md)
 - [GitHub repository](https://github.com/microsoft/live-share-sdk)
+- [Resource-specific consent](../graph-api/rsc/resource-specific-consent.md)
 - [Live Share SDK reference docs](/javascript/api/@microsoft/live-share/)
 - [Live Share Media SDK reference docs](/javascript/api/@microsoft/live-share-media/)
 - [Live Share FAQ](teams-live-share-faq.md)
-- [Teams apps in meetings](teams-apps-in-meetings.md)
+- [Use Fluid with Teams](../tabs/how-to/using-fluid-msteam.md)
+- [Build Agile Poker using Live Share SDK](../sbs-teams-live-share.yml)
+- [Dice Roller code tutorial](teams-live-share-tutorial.md)

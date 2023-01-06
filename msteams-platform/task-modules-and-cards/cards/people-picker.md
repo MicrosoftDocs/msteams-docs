@@ -304,10 +304,13 @@ You can implement People Picker for efficient task management in different scena
 
 ## Code sample
 
-| Sample Name           | Description | C#    | Node.js   |
+| Sample Name           | Description | .NET    | Node.js   |
 |:---------------------|:--------------|:---------|:--------|
 |People picker control in Adaptive Cards| This sample demonstrates how to use the people picker control in Adaptive Cards.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-people-picker-adaptive-card/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-people-picker-adaptive-card/nodejs) |
 
 ## See also
 
-[Cards Reference](cards-reference.md)
+* [Types of cards](cards-reference.md)
+* [Bots and SDKs](../../bots/bot-features.md)
+* [Build message extensions for Teams](../../messaging-extensions/what-are-messaging-extensions.md)
+* [Create Office 365 Connectors](../../webhooks-and-connectors/how-to/connectors-creating.md)

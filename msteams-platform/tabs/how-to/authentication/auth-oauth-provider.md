@@ -36,7 +36,7 @@ For more information on parameters, see the [authenticate(AuthenticatePopUpParam
 > [!NOTE]
 >
 > * Currently, you can add authentication to external browsers for tabs in mobile only.
-> * Use the beta version of JS SDK to leverage the functionality. Beta versions are available through [NPM](https://www.npmjs.com/package/@microsoft/teams-js/v/1.12.0-beta.2).
+> * Use the beta version of TeamsJS to leverage the functionality. Beta versions are available through [NPM](https://www.npmjs.com/package/@microsoft/teams-js/v/1.12.0-beta.2).
 
 The following image provides the flow to add authentication to external browsers:
 
@@ -46,7 +46,7 @@ The following image provides the flow to add authentication to external browsers
 
 1. Initiate the external auth-login process.
 
-   The 3P app calls the SDK function `authentication.authenticate` with `isExternal` set as true to initiate the external auth-login process.
+   The 3P app calls the TeamsJS function `authentication.authenticate` with `isExternal` set as true to initiate the external auth-login process.
 
    The passed `url` contains placeholders for `{authId}`, and `{oauthRedirectMethod}`.  
 

@@ -17,7 +17,7 @@ The meeting extensibility provides APIs to enhance meeting experience. You can p
 * Select required APIs to improve the meeting experience.
 
 > [!NOTE]
-> Use Teams [JavaScript SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) (*Version*: 1.10 and later) for SSO to work in meeting side panel.
+> Use the [TeamsJS](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) library (*Version*: 1.10 and later) for SSO to work in meeting side panel.
 
 The following table provides a list of APIs available across the Microsoft Teams JavaScript library and Microsoft Bot Framework SDKs:
 
@@ -57,19 +57,20 @@ The `GetParticipant` API must have a bot registration and ID to generate auth to
 > [!TIP]
 > Get participant IDs and tenant IDs from the [tab SSO authentication](../tabs/how-to/authentication/tab-sso-overview.md).
 
-The `Meeting` API must have `meetingId`, `participantId`, and `tenantId` as URL parameters. The parameters are available as part of the Teams Client SDK and bot activity.
+The `Meeting` API must have `meetingId`, `participantId`, and `tenantId` as URL parameters. The parameters are available as part of the TeamsJS library and bot activity.
 
 The following table includes the query parameters:
 
 |Value|Type|Required|Description|
 |---|---|----|---|
-|**meetingId**| String | Yes | The meeting identifier is available through Bot Invoke and Teams Client SDK.|
-|**participantId**| String | Yes | The participant ID is the user ID. It's available in Tab SSO, Bot Invoke, and Teams Client SDK. It's recommended to get a participant ID from the Tab SSO. |
-|**tenantId**| String | Yes | The tenant ID is required for the tenant users. It's available in Tab SSO, Bot Invoke, and Teams Client SDK. It's recommended to get a tenant ID from the Tab SSO. |
+|**meetingId**| String | Yes | The meeting identifier is available through Bot Invoke and TeamsJS library.|
+|**participantId**| String | Yes | The participant ID is the user ID. It's available in Tab SSO, Bot Invoke, and TeamsJS library. It's recommended to get a participant ID from the Tab SSO. |
+|**tenantId**| String | Yes | The tenant ID is required for the tenant users. It's available in Tab SSO, Bot Invoke, and TeamsJS library. It's recommended to get a tenant ID from the Tab SSO. |
 
 ### Example
 
 # [C#](#tab/dotnet)
+
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetingparticipantasync?view=botbuilder-dotnet-stable&preserve-view=true)  
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-context-app/csharp/MeetingContextApp/Bots/MeetingContextBot.cs#L33)
 
@@ -184,7 +185,7 @@ All users in a meeting receive the notifications sent through in-meeting notific
 >
 > * When an in-meeting notification is invoked, the content is presented as a chat message.
 > * Currently, sending targeted notifications and support for webapp are not supported.
-> * You must invoke the [submitTask()](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-task-module) function to dismiss automatically after a user takes an action in the web view. This is a requirement for app submission. For more information, see [Teams SDK task module](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true).
+> * You must invoke the [submitTask()](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-task-module) function to dismiss automatically after a user takes an action in the web view. This is a requirement for app submission. For more information, see TeamsJS library [task module](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true).
 > * If you want your app to support anonymous users, initial invoke request payload must rely on `from.id` request metadata in `from` object, not `from.aadObjectId` request metadata. `from.id` is the user ID and `from.aadObjectId` is the Microsoft Azure Active Directory (Azure AD) ID of the user. For more information, see [using task modules in tabs](../task-modules-and-cards/task-modules/task-modules-tabs.md) and [create and send the task module](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
 
 ### Query parameter
@@ -206,6 +207,7 @@ The following table includes the query parameter:
 > * The URL is the page, which loads as `<iframe>` in the in-meeting notification. The domain must be in the apps' `validDomains` array in your app manifest.
 
 # [C#](#tab/dotnet)
+
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityextensions.teamsnotifyuser?view=botbuilder-dotnet-stable#microsoft-bot-builder-teams-teamsactivityextensions-teamsnotifyuser(microsoft-bot-schema-iactivity)&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-proactive-messaging/csharp/proactive-cmd/Program.cs#L178)
 
@@ -388,7 +390,7 @@ The following table lists the query parameter:
 
 |Value|Type|Required|Description|
 |---|---|----|---|
-|**meetingId**| String | Yes | The meeting identifier is available through Bot Invoke and Teams Client SDK. |
+|**meetingId**| String | Yes | The meeting identifier is available through Bot Invoke and TeamsJS client library. |
 
 ### Example
 
@@ -589,7 +591,7 @@ The CART URL includes the following query parameters:
 
 |Value|Type|Required|Description|
 |---|---|----|----|
-|**meetingId**| String | Yes |The meeting identifier is available through Bot Invoke and Teams Client SDK. <br/>For example, meetingid=%7b%22tId%22%3a%2272f234bf-86f1-41af-91ab-2d7cd0321b47%22%2c%22oId%22%3a%22e071f268-4241-47f8-8cf3-fc6b84437f23%22%2c%22thId%22%3a%2219%3ameeting_NzJiMjNkMGQtYzk3NS00ZDI1LWJjN2QtMDgyODVhZmI3NzJj%40thread.v2%22%2c%22mId%22%3a%220%22%7d|
+|**meetingId**| String | Yes |The meeting identifier is available through Bot Invoke and TeamsJS client library. <br/>For example, meetingid=%7b%22tId%22%3a%2272f234bf-86f1-41af-91ab-2d7cd0321b47%22%2c%22oId%22%3a%22e071f268-4241-47f8-8cf3-fc6b84437f23%22%2c%22thId%22%3a%2219%3ameeting_NzJiMjNkMGQtYzk3NS00ZDI1LWJjN2QtMDgyODVhZmI3NzJj%40thread.v2%22%2c%22mId%22%3a%220%22%7d|
 |**token**| String | Yes |Authorization token.<br/> For example, token=04751eac |
 
 #### Example
@@ -704,6 +706,7 @@ The bot receives event through the `OnEventActivityAsync` handler. To deserializ
 The following code shows how to capture the metadata of a meeting that is `MeetingType`, `Title`, `Id`, `JoinUrl`, `StartTime`, and `EndTime` from a meeting start/end event:
 
 Meeting Start Event
+
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingstartasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-teams-teamsactivityhandler-onteamsmeetingstartasync(microsoft-bot-schema-teams-meetingstarteventdetails-microsoft-bot-builder-iturncontext((microsoft-bot-schema-ieventactivity))-system-threading-cancellationtoken)&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L34)
 
@@ -717,6 +720,7 @@ protected override async Task OnTeamsMeetingStartAsync(MeetingStartEventDetails 
 ```
 
 Meeting End Event
+
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingendasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-teams-teamsactivityhandler-onteamsmeetingendasync(microsoft-bot-schema-teams-meetingendeventdetails-microsoft-bot-builder-iturncontext((microsoft-bot-schema-ieventactivity))-system-threading-cancellationtoken)&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L51)
 
@@ -864,7 +868,7 @@ The following code provides an example of meeting end event payload:
 
 ## Get incoming audio state
 
-The `getIncomingClientAudioState` API allows an app to get the incoming audio state setting for the meeting user. The API is available through the Teams client SDK.
+The `getIncomingClientAudioState` API allows an app to get the incoming audio state setting for the meeting user. The API is available through the TeamsJS client library.
 
 > [!NOTE]
 >
@@ -897,7 +901,6 @@ callback = (errcode, result) => {
             // Handle success code
         }
     }
-
 // The getIncomingClientAudioState API shows the current audio state.
 microsoftTeams.meeting.getIncomingClientAudioState(this.callback)
 ```
@@ -922,7 +925,7 @@ The following table provides the response codes:
 
 ## Toggle incoming audio
 
-The `toggleIncomingClientAudio` API allows an app to toggle the incoming audio state setting for the meeting user from mute to unmute or vice-versa. The API is available through the Teams client SDK.
+The `toggleIncomingClientAudio` API allows an app to toggle the incoming audio state setting for the meeting user from mute to unmute or vice-versa. The API is available through the TeamsJS client library.
 
 > [!NOTE]
 >
@@ -955,7 +958,6 @@ callback = (error, result) => {
             // Handle success code
         }
     }
-
 // The toggleIncomingClientAudio API allows an app to toggle the incoming audio state.
 microsoftTeams.meeting.toggleIncomingClientAudio(this.callback)
 ```
@@ -1059,7 +1061,7 @@ sampleEffect1Element.addEventListener("click", function () {
 
 ## Code sample
 
-|Sample name | Description | C# | Node.js |
+|Sample name | Description | .NET | Node.js |
 |----------------|-----------------|--------------|--------------|
 | Meetings extensibility | Teams meeting extensibility sample for passing tokens. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
 | Meeting content bubble bot | Teams meeting extensibility sample for interacting with content bubble bot in a meeting. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
@@ -1069,13 +1071,15 @@ sampleEffect1Element.addEventListener("click", function () {
 | Meeting Recruitment Sample |Sample app to show meeting experience for recruitment scenario.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/nodejs)|
 | App installation using QR code |Sample app that generates the QR code and installs the app using the QR code|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-installation-using-qr-code/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-installation-using-qr-code/nodejs)|
 
+## Next step
+
+> [!div class="nextstepaction"]
+> [Build tabs for meeting](build-tabs-for-meeting.md)
+
 ## See also
 
 * [Teams authentication flow for tabs](../tabs/how-to/authentication/auth-flow-tab.md)
 * [Apps for Teams meetings](teams-apps-in-meetings.md)
 * [Live Share SDK](teams-live-share-overview.md)
 * [Teams cloud meeting recording](/microsoftteams/cloud-recording)
-
-## Next steps
-
-[Build tabs for meeting](build-tabs-for-meeting.md)
+* [Get change notifications for Microsoft Teams meeting call updates](/graph/changenotifications-for-onlinemeeting)
