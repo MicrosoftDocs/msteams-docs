@@ -11,6 +11,8 @@ ms.author: surbhigupta
 To wrap up, your collaborative app is now becoming a full-fledged strategic product line. It's similar to your core SaaS product for the web browser or native apps for Windows or mobile phones. To maximize success for your customers and ROI for your business, this section covers the initiatives and growth levers you must use.
 
 ## What should you as a developer do during this final stage?
+
+The following growth levers are pertinent at this stage:
 <br>
 <br>
 <details>
