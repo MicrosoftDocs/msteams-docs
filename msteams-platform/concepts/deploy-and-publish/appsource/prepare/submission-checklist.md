@@ -63,11 +63,11 @@ Depending on your app functionality, you're required to provide Teams tenant con
 
 4. **Demo Video**: Provide a recording of your app so that Microsoft can fully understand its functionality.
 
-Here are sample test instructions for your reference:
+You can find the following [sample test instructions](https://github.com/MicrosoftDocs/msteams-docs/tree/19115f8bdd4be6a6c0c38a77651dd8d8c55c741b/msteams-platform/assets/sample-instructions) for your reference.
 
-- [Sample 1: Educational app](https://github.com/MicrosoftDocs/msteams-docs/blob/test-instructions/msteams-platform/assets/sample-instructions/Sample%201_EDU%20App.docx?raw=true)
-- [Sample 2: ERP Data transfer](https://github.com/MicrosoftDocs/msteams-docs/blob/test-instructions/msteams-platform/assets/sample-instructions/Sample%202_ERP%20Data%20transfer.docx?raw=true)
-- [Sample 3: Collaborative app](https://github.com/MicrosoftDocs/msteams-docs/blob/test-instructions/msteams-platform/assets/sample-instructions/Sample3_Collab%20app.docx?raw=true)
+- Sample 1: Educational app
+- Sample 2: ERP Data transfer
+- Sample 3: Collaborative app
 
 ## Create your store listing details
 
