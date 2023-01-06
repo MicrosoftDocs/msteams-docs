@@ -14,17 +14,6 @@ The core focus at this stage is to announce the availability of the app for exis
 
 Here’s a rundown of various initiatives and growth levers at your disposal:
 
-- [Invest strategically into your app store listing, landing page and documentation](#invest-strategically-into-your-app-store-listing-landing-page-and-documentation)
-- [New social media posts announcing the Teams collaborative app](#new-social-media-posts-announcing-the-teams-collaborative-app)
-- [Public blog post announcing the new Teams app](#public-blog-post-announcing-the-new-teams-app)
-- [Press Release announcing the new Teams app](#press-release-announcing-the-new-teams-app)
-- [Banners in web SaaS app to announce the new Teams app](#banners-in-web-saas-app-to-announce-the-new-teams-app)
-- [Free and extended trials for new Teams users](#free-and-extended-trials-for-new-teams-users)
-- [Launch offers and promotions to acquire users for Teams app](#launch-offers-and-promotions-to-acquire-users-for-teams-app)
-- [Announce Teams app to your entire customer base](#announce-teams-app-to-your-entire-customer-base)
-- [App Bill of Materials: Pitch deck, value prop, demo, datasheets, and so on](#app-bill-of-materials-pitch-deck-value-prop-demo-datasheets-and-so-on)
-
-
 <details>
 <summary>Invest strategically into your app store listing, landing page and documentation</summary>
 
@@ -68,7 +57,6 @@ The following growth levers are pertinent at this stage:
   - You have a support chatbot available on your website to help visitors find the right information or get human assistance. Ensure that you deploy and tune the same for visitors coming to this page for your Teams app.
 
     **Resources and examples for inspiration**
-
 
     For more information on guidelines for your website landing page, see [Chapter 3 in Best Practices Guide](https://partner.microsoft.com/reach-customers/gtm).
 
