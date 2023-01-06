@@ -14,7 +14,7 @@ The core focus at this stage is to announce the availability of the app for exis
 
 Here’s a rundown of various initiatives and growth levers at your disposal:
 <br>
-
+<br>
 <details>
 <summary>Invest strategically into your app store listing, landing page and documentation</summary>
 
