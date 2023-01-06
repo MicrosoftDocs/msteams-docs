@@ -12,10 +12,7 @@ Dialogs can be invoked from Microsoft Teams bots using buttons on Adaptive Cards
 There are two ways of invoking dialogs:
 
 * A new invoke message `task/fetch`: Using the `invoke` [card action](~/task-modules-and-cards/cards/cards-actions.md#action-type-invoke) for Bot Framework cards, or the `Action.Submit` [card action](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions) for Adaptive Cards, with `task/fetch`, task module either a URL or an Adaptive Card, is fetched dynamically from your bot.
-* Deep link URLs: Using the [deep link syntax for task modules](~/concepts/build-and-test/deep-link-application.md#deep-link-to-open-a-task-module), you can use the `openUrl` [card action](~/task-modules-and-cards/cards/cards-actions.md#action-type-openurl) for Bot Framework cards or the `Action.OpenUrl` [card action](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions) for Adaptive Cards, respectively. With deep link URLs, the task module URL or Adaptive Card body is already known to avoid a server round-trip relative to `task/fetch`.
-
-> [!IMPORTANT]
-> Each `url` and `fallbackUrl` must implement the HTTPS encryption protocol.
+* Deep link URLs: Using the [deep link syntax for dialogs](~/concepts/build-and-test/deep-link-application.md#deep-link-to-open-a-task-module), you can use the `openUrl` [card action](~/task-modules-and-cards/cards/cards-actions.md#action-type-openurl) for Bot Framework cards or the `Action.OpenUrl` [card action](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions) for Adaptive Cards, respectively. With deep link URLs, the task module URL or Adaptive Card body is already known to avoid a server round-trip relative to `task/fetch`.
 
 The next section provides details on invoking a dialog using `task/fetch`.
 
