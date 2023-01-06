@@ -12,13 +12,13 @@ ms.date: 04/07/2022
 
 Meetings enable collaboration, partnership, informed communication, and shared feedback. The meeting space can deliver a user experience for each stage of the meeting lifecycle. The following illustration gives you an idea of the meeting app extensibility features:
 
-<!--
-:::image type="content" source="../assets/images/apps-in-meetings/meetingappextensibility.png" alt-text="The screenshot shows you how meeting app extensibility works.":::
--->
 
+:::image type="content" source="../assets/images/apps-in-meetings/meetingappextensibility.png" alt-text="The screenshot shows you how meeting app extensibility works.":::
+
+<!--
 :::row:::
     :::column span="":::
-           &nbsp; <!--:::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/space.png" border="false":::-->
+           &nbsp; <!--:::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/space.png" border="false":::
     :::column-end:::
     :::column span="2":::
         :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/1-cust-apps.png" border="false" link="../concepts/build-and-test/share-in-meeting.md":::  :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/2-enable-app.png" border="false" link="build-tabs-for-meeting.md":::
@@ -69,7 +69,7 @@ Meetings enable collaboration, partnership, informed communication, and shared f
         &nbsp;
     :::column-end:::
 :::row-end:::
-
+-->
 
 
 You must be familiar with the following product concepts to create custom meeting experiences with apps in Microsoft Teams.
