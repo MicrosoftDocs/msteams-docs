@@ -189,7 +189,7 @@ microsoftTeams.tasks.startTask(taskInfo, submitHandler);
 
 The next section gives an example of submitting the result of a task module.
 
-## Example of submitting the result of a task module
+## Example of submitting the result of a dialog
 
 For more information, see the [HTML form in the task module](#example-of-invoking-a-task-module). The following code gives an example of where the form is defined:
 
