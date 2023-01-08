@@ -210,6 +210,7 @@
       displayName: dashboard
   - name: Teams JavaScript client library
     href: tabs/how-to/using-teams-client-library.md
+    displayName: execute URL
   - name: Node.js Bot Framework for bots and message extensions (GitHub)
     href: https://github.com/Microsoft/botbuilder-js
   - name: .NET Bot Framework for bots and message extensions (GitHub)
