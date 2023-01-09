@@ -203,6 +203,7 @@ Following is an example of the response:
      }
    }
 ```
+
 ---
 
 ## Zero install for link unfurling
@@ -362,7 +363,7 @@ To get your app ready for zero install link unfurling, follow these steps:
 
 1. Advantages and limitations.
 
-   # [Advantages](#tab/advantages)
+# [Advantages](#tab/advantages)
 
     Zero install link unfurling helps you provide enhanced experience to the users, such as:
 
@@ -370,7 +371,7 @@ To get your app ready for zero install link unfurling, follow these steps:
 
     * Create a welcome card for your app to show a preview with the placeholder fields.
 
-   # [Limitations](#tab/limitations)
+# [Limitations](#tab/limitations)
 
     The following are the limitations:
 
@@ -403,6 +404,12 @@ The following JSON payload example for `suggestedActions` property:
 ## Step-by-step guide
 
 Follow the [step-by-step guide](../../sbs-botbuilder-linkunfurling.yml) to unfurl links in Teams using bot.
+
+## Code sample
+
+|**Sample name** | **Description** | **C#** | **Python**|
+|----------------|-----------------|--------------|----------------|
+| Zero install link unfurling. | Demonstrate how to use Search-based Messaging Extension with a configuration page. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search-auth-config/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search-auth-config/python) |
 
 ## See also
 
