@@ -83,7 +83,7 @@ Before shipping the Teams app on the marketplace, you would have identified 3-5 
 
 For large, strategic enterprise customers that use your SaaS product and Microsoft Teams, Microsoft’s customer-facing resources can partner with your sales and customer success teams to drive co-activation of your app in the customer organization. Microsoft evaluates co-activation opportunities for apps based on customer interest, adoption opportunity (sold seat size in customer account), and so on, among other criteria.
 
-Get in touch with your field, account, or engineering representatives from Microsoft to request potential, co-activation of your Teams collaborative app in strategic enterprise customer accounts.
+Get in touch with your field, account, or engineering representatives from Microsoft to request potential co-activation of your Teams collaborative app in strategic enterprise customer accounts.
 
 [Back to top](#what-should-you-do-during-the-traction-stage)
 </details>
@@ -105,7 +105,7 @@ The Microsoft 365 Certification is designed to show customers that your collabor
 
 For more information, see [Microsoft 365 certification](/microsoftteams/overview-of-app-certification#microsoft-365-certification).
 
-Find more [here](https://cloudpartners.transform.microsoft.com/practices/modernworkisv?tab=certification).
+Find more about certification 4[here](https://cloudpartners.transform.microsoft.com/practices/modernworkisv?tab=certification).
 
 [Back to top](#what-should-you-do-during-the-traction-stage)
 </details>
@@ -188,7 +188,7 @@ Strategic developers, who are part of the invite-only Teams engineering’s buil
 <details>
 <summary>Share best practices for customer app rollout and activation</summary>
 
-Strategic developers who are part of the invite-only Teams engineering’s build-with partner program get access to several time- and market-tested best practices to drive faster adoption of your collaborative app in customers.
+Strategic developers, who are part of the invite-only Teams engineering’s build-with partner program, get access to several time- and market-tested best practices. It helps to drive faster adoption of your collaborative app in customers.
 
 Remember to upskill using the Teams admin-facing public documentation sections [Third-party apps in Microsoft Teams](/microsoftteams/overview-third-party-apps) and [Admin controls to govern apps](/microsoftteams/customize-apps) to aid during app rollout, activation, and governance.
 
