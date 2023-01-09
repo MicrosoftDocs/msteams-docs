@@ -36,7 +36,7 @@ Update the skill of your customer success team in the following ways:
 <details>
 <summary>Upskill customer support staff on new Teams app</summary>
 
-Similar to customer success teams, it's imperative to train your customer support team on the Teams app, frequent user scenarios, common queries, and guidance for troubleshooting. It's also useful to train the team for any pre-configuration required, app rollout and governance of the Teams app in customer organizations. Your support team may get fairly nuanced queries about your app in Teams.
+Similar to customer success teams, it's imperative to train your customer support team on the Teams app. Upskill them on frequent user scenarios, common queries, and guidance for troubleshooting. It's also useful to train the team for any pre-configuration required, app rollout and governance of the Teams app in customer organizations. Your support team may get fairly nuanced queries about your app in Teams.
 
 To continue delivering a delightful experience for your customers, ensure the team has basic understanding of:
 
@@ -65,7 +65,7 @@ Your own flagship annual customer or partner conference is the perfect opportuni
 
 While at the launch stage you’d announced the availability of your new Teams app to the entire customer base, it’s time to build traction by going targeted. Identify a shorter list of existing customers of your SaaS product who use Microsoft 365. Drive awareness among these customers through your customer success team.
 
-Your customer success team must set up time to introduce your new Teams app to these customers, demo the experience and then work out a plan to activate these overlapping customers on Teams. These activation motions will allow your customer success and customer support teams to learn how to drive programmatic adoption, tackle common customer queries and build real-world expertise on the Teams app.
+Your customer success team must set up time to introduce your new Teams app to these customers and demo the experience. Then, they must work out a plan to activate these overlapping customers on Teams. These activation motions will allow your customer success and customer support teams to learn how to drive programmatic adoption, tackle common customer queries and build real-world expertise on the Teams app.
 
 [Back to top](#what-should-you-do-during-the-traction-stage)
 </details>
