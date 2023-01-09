@@ -409,7 +409,7 @@ Follow the [step-by-step guide](../../sbs-botbuilder-linkunfurling.yml) to unfur
 
 |**Sample name** | **Description** | **C#** | **Python**|
 |----------------|-----------------|--------------|----------------|
-| Zero install link unfurling. | Demonstrate how to use Search-based Messaging Extension with a configuration page. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search-auth-config/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search-auth-config/python) |
+| Zero install link unfurling. | Demonstrates how to use Search-based Messaging Extension with a configuration page. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search-auth-config/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search-auth-config/python) |
 
 ## See also
 
