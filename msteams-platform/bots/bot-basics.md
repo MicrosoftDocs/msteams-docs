@@ -252,8 +252,8 @@ The list of Teams activity handlers called from the `OnInvokeActivityAsync` Team
 | fileConsent/invoke              | `OnTeamsFileConsentDeclineAsync`     | This method is invoked when a file consent card is declined by the user. |
 | actionableMessage/executeAction | `OnTeamsO365ConnectorCardActionAsync` | This method is invoked when an Office 365 connector card action activity is received from the connector. |
 | signin/verifyState              | `OnTeamsSigninVerifyStateAsync`      | This method is invoked when a signIn verify state activity is received from the connector. |
-| task/fetch                      | `OnTeamsTaskModuleFetchAsync`        | This method can be overridden in a derived class to provide logic when a task module is fetched. |
-| task/submit                     | `OnTeamsTaskModuleSubmitAsync`       | This method can be overridden in a derived class to provide logic when a task module is submitted. |
+| task/fetch                      | `OnTeamsTaskModuleFetchAsync`        | You can override this method in a derived class to provide logic when a task module is fetched. |
+| task/submit                     | `OnTeamsTaskModuleSubmitAsync`       | You can override this method in a derived class to provide logic when a task module is submitted. |
 
 The Invoke activities listed in this section are for conversational bots in Teams. The Bot Framework SDK also supports invoke activities specific to message extensions. For more information, see [what are message extensions](https://aka.ms/azure-bot-what-are-messaging-extensions).
 
@@ -309,8 +309,8 @@ The list of Teams activity handlers called from the `onInvokeActivity` Teams act
 | fileConsent/invoke              | `handleTeamsFileConsentDecline`     | This method is invoked when a file consent card is declined by the user. |
 | actionableMessage/executeAction | `handleTeamsO365ConnectorCardAction` | This method is invoked when an Office 365 connector card action activity is received from the connector. |
 | signin/verifyState              | `handleTeamsSigninVerifyState`      | This method is invoked when a signIn verify state activity is received from the connector. |
-| task/fetch                      | `handleTeamsTaskModuleFetch`        | This method can be overridden in a derived class to provide logic when a task module is fetched. |
-| task/submit                     | `handleTeamsTaskModuleSubmit`       | This method can be overridden in a derived class to provide logic when a task module is submitted. |
+| task/fetch                      | `handleTeamsTaskModuleFetch`        | You can override this method in a derived class to provide logic when a task module is fetched. |
+| task/submit                     | `handleTeamsTaskModuleSubmit`       | You can override this method in a derived class to provide logic when a task module is submitted. |
 
 The invoke activities listed in this section are for conversational bots in Teams. The Bot Framework SDK also supports invoke activities specific to message extensions. For more information, see [what are message extensions](https://aka.ms/azure-bot-what-are-messaging-extensions).
 
@@ -362,8 +362,8 @@ The list of Teams activity handlers called from the `on_invoke_activity` Teams a
 | fileConsent/invoke              | `on_teams_file_consent_decline`     | This method is invoked when a file consent card is declined by the user. |
 | actionableMessage/executeAction | `on_teams_o365_connector_card_action` | This method is invoked when an Office 365 connector card action activity is received from the connector. |
 | signin/verifyState              | `on_teams_signin_verify_state`      | This method is invoked when a signIn verify state activity is received from the connector. |
-| task/fetch                      | `on_teams_task_module_fetch`        | This method can be overridden in a derived class to provide logic when a task module is fetched. |
-| task/submit                     | `on_teams_task_module_submit`       | This method can be overridden in a derived class to provide logic when a task module is submitted. |
+| task/fetch                      | `on_teams_task_module_fetch`        | You can override this method in a derived class to provide logic when a task module is fetched. |
+| task/submit                     | `on_teams_task_module_submit`       | You can override this method in a derived class to provide logic when a task module is submitted. |
 
 The invoke activities listed in this section are for conversational bots in Teams. The Bot Framework SDK also supports invoke activities specific to message extensions. For more information, see [what are message extensions](https://aka.ms/azure-bot-what-are-messaging-extensions).
 

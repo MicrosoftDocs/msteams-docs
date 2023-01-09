@@ -1,6 +1,6 @@
 ---
 title: Messages in bot conversations
-description: Learn how to send receive a message, suggested actions, notification, attachments, images, Adaptive Card and status error code responses.
+description: Learn how to send, receive, edit, undo delete, and delete a message, suggested actions, notification, attachments, images, Adaptive Card and status error code responses.
 ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
@@ -288,7 +288,7 @@ await turnContext.SendActivityAsync(replyActivity, cancellationToken);
 
 # [Javascript](#tab/javascript3)
 
-You can use one of the following methods to get an event notifications to handle the message updates using the Bot SDK:
+You can use one of the following methods to get event notifications to handle the message updates using the Bot SDK:
 
 **​Event function registration**:
 
@@ -385,7 +385,7 @@ await turnContext.SendActivityAsync(replyActivity, cancellationToken);
 
 # [Javascript](#tab/javascript4)
 
-You can use one of the following methods to get an event notifications to handle the message updates using the Bot SDK:
+You can use one of the following methods to get event notifications to handle the message updates using the Bot SDK:
 
 **​Event function registration**:
 
@@ -429,7 +429,7 @@ When you delete a message sent to a bot, the bot gets a notification of the dele
 
 To get an edit or undo delete event notification for a sent message, you can override the `OnMessageDeleteActivityAsync` handler.
 
-The following is an example of an delete event notification for a deleted message:
+The following is an example of a delete event notification for a deleted message:
 
 # [C#](#tab/csharp5)
 
@@ -488,7 +488,7 @@ await turnContext.SendActivityAsync(replyActivity, cancellationToken);
 
 # [Javascript](#tab/javascript5)
 
-You can use one of the following methods to get an event notifications to handle the message updates using the Bot SDK:
+You can use one of the following methods to get event notifications to handle the message updates using the Bot SDK:
 
 **​Event function registration**:
 
@@ -799,10 +799,10 @@ Ensure to handle these errors appropriately in your Teams app. The following tab
 
 | Status code | Error code and message values | Description | Retry request | Developer action |
 |----------------|-----------------|-----------------|----------------|----------------|
-| 400 | **Code**: `Bad Argument` <br/> **Message**: *scenario specific | Invalid request payload provided by the bot. See error message for specific details. | No | Re-evaluate request payload for errors. Check returned error message for details. |
+| 400 | **Code**: `Bad Argument` <br/> **Message**: *scenario specific | Invalid request payload provided by the bot. See error message for specific details. | No | Reevaluate request payload for errors. Check returned error message for details. |
 | 401 | **Code**: `BotNotRegistered` <br/> **Message**: No registration found for this bot. | The registration for this bot wasn't found. | No | Verify the bot ID and password. Ensure that the bot ID (AAD ID) is registered in the Teams Developer Portal or via Azure bot channel registration in Azure with 'Teams' channel enabled.|
 | 403 | **Code**: `BotDisabledByAdmin` <br/> **Message**: The tenant admin disabled this bot | Tenant admin has blocked interactions between user and the bot app. Tenant admin needs to allow the app for the user inside of app policies. For more information, see [app policies](/microsoftteams/app-policies). | No | Stop posting to conversation until interaction with bot is explicitly initiated by a user in the conversation indicating that the bot is no longer blocked. |
-| 403 | **Code**: `BotNotInConversationRoster` <br/> **Message**: The bot isn't part of the conversation roster. | The bot isn't part of the conversation. App needs to be reinstalled in conversation. | No | Before attempting to send another conversation request, wait for an [`installationUpdate`](~/bots/how-to/conversations/subscribe-to-conversation-events.md#install-update-event) event, which indicates that the bot has been re-added.|
+| 403 | **Code**: `BotNotInConversationRoster` <br/> **Message**: The bot isn't part of the conversation roster. | The bot isn't part of the conversation. App needs to be reinstalled in conversation. | No | Before attempting to send another conversation request, wait for an [`installationUpdate`](~/bots/how-to/conversations/subscribe-to-conversation-events.md#install-update-event) event, which indicates that the bot has been added again.|
 | 403 | **Code**: `ConversationBlockedByUser` <br/> **Message**: User blocked the conversation with the bot. | User has blocked the bot in personal chat or a channel through moderation settings. | No | Delete the conversation from cache. Stop attempting to post to conversations until interaction with bot is explicitly initiated by a user in the conversation, indicating that the bot is no longer blocked. |
 | 403 |**Code**: `InvalidBotApiHost` <br/> **Message**: Invalid bot api host. For GCC tenants, please call `https://smba.infra.gcc.teams.microsoft.com`.|The bot called the public API endpoint for a conversation that belongs to a GCC tenant.| No | Update the service URL for the conversation to `https://smba.infra.gcc.teams.microsoft.com` and retry the request.|
 | 403 | **Code**: `NotEnoughPermissions` <br/> **Message**: *scenario specific | Bot doesn't have required permissions to perform the requested action. | No | Determine the required action from the error message. |
@@ -824,7 +824,7 @@ The general retry guidance for each status code is listed in the following table
 |----------------|-----------------|
 | 403 | Retry by calling the GCC API `https://smba.infra.gcc.teams.microsoft.com` for `InvalidBotApiHost`.|
 | 412 | Retry using exponential backoff. |
-| 429 | Retry using `Retry-After` header to determine wait time in seconds and in between requests, if available. Otherwise, retry using exponential backoff with thread ID, if possible. |
+| 429 | Retry using `Retry-After` header to determine the wait time in seconds and in between requests, if available. Otherwise, retry using exponential backoff with thread ID, if possible. |
 | 502 | Retry using exponential backoff. |
 | 503 | Retry using exponential backoff. |
 | 504 | Retry using exponential backoff. |
