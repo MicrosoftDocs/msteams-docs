@@ -142,7 +142,7 @@ Encoded
 
 ## Code sample
 
-| Sample name | Description | C# |Node.js|
+| Sample name | Description | .NET |Node.js|
 |-------------|-------------|------|----|
 |Tab in stage view |Microsoft Teams tab sample app for demonstrating tab in stage view.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/nodejs)|
 
