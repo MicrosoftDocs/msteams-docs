@@ -360,7 +360,7 @@ microsoftTeams.meeting.registerRaiseHandStateChangedHandler(
 
 ## Code sample
 
-|Sample name | Description | C# | Node.js |
+|Sample name | Description | .NET| Node.js |
 |----------------|-----------------|--------------|----------------|
 |Meeting stage sample | Sample app to show a tab in meeting stage for collaboration. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) |
 | In-meeting notification | Demonstrates how to implement in-meeting notification using bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs) |

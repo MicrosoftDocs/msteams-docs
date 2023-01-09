@@ -24,7 +24,7 @@
   items:
   - name: Overview
     href: get-started/get-started-overview.md
-    displayName: First Teams app, Python, C#, Java, Node.js
+    displayName: First Teams app, Python, .NET, Java, Node.js
   - name: Build your first tab app using JavaScript
     href: sbs-gs-javascript.yml
   - name: Build your first bot app using JavaScript
@@ -210,6 +210,7 @@
       displayName: dashboard
   - name: Teams JavaScript client library
     href: tabs/how-to/using-teams-client-library.md
+    displayName: execute URL
   - name: Node.js Bot Framework for bots and message extensions (GitHub)
     href: https://github.com/Microsoft/botbuilder-js
   - name: .NET Bot Framework for bots and message extensions (GitHub)
