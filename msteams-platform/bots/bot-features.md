@@ -31,7 +31,7 @@ Your Teams bot consists of the following:
 
 The [Bot Framework](https://dev.botframework.com/) is a rich SDK used to create bots using C#, Java, Python, and JavaScript. If you already have a bot that is based on the Bot Framework, you can easily modify it to work in Teams. Use either C# or Node.js to take advantage of our [SDKs](/microsoftteams/platform/#pivot=sdk-tools). These packages extend the basic Bot Builder SDK classes and methods as follows:
 
-* Use specialized card types like the Office 365 connector card.
+* Use specialized card types like the connector card for Microsoft 365 Groups.
 * Set Teams-specific channel data on activities.
 * Process message extension requests.
 

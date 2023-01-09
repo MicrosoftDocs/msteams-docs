@@ -424,7 +424,7 @@ In the stage view, users can zoom in and zoom out of the image. You can select t
 > * Zoom in and zoom out capability applies only to the image elements that is image type in an Adaptive Card.
 > * For Teams mobile apps, stage view functionality for images in Adaptive Cards is available by default. Users can view Adaptive Card images in stage view by simply tapping on the image, irrespective of whether the `allowExpand` attribute is present or not.
 
-# [Markdown format for Office 365 Connector cards](#tab/connector-md)
+# [Markdown format for connector cards for Microsoft 365 Groups](#tab/connector-md)
 
 Connector cards support limited Markdown and HTML formatting.
 
@@ -624,12 +624,12 @@ When a user selects the overflow menu on mobile, the Adaptive Card displays the 
 
 The following card types support HTML formatting in Teams:
 
-* Office 365 Connector cards: Limited Markdown and HTML formatting are supported in Office 365 Connector cards.
+* Connector cards for Microsoft 365 Groups: Limited Markdown and HTML formatting are supported in connector card for Microsoft 365 Groups.
 * Hero and thumbnail cards: HTML tags are supported for simple cards, such as the hero and thumbnail cards.
 
-Formatting is different between the desktop and the mobile versions of Teams for Office 365 Connector cards and simple cards. In this section, you can go through the HTML format example for connector cards and simple cards.
+Formatting is different between the desktop and the mobile versions of Teams for connector cards for Microsoft 365 Groups and simple cards. In this section, you can go through the HTML format example for connector cards and simple cards.
 
-# [HTML format for Office 365 Connector cards](#tab/connector-html)
+# [HTML format for connector cards for Microsoft 365 Groups](#tab/connector-html)
 
 Connector cards support limited Markdown and HTML formatting.
 

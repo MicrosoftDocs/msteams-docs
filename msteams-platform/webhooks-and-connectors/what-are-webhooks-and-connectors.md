@@ -52,14 +52,14 @@ Learn more about the differences between a notification bot and Incoming Webhook
 
 ### Connectors for Microsoft 365 Groups
 
-Connectors for Microsoft 365 Groups allow you to create a custom configuration page for your Incoming Webhook and package them as part of a Teams app. You send messages primarily using Office 365 Connector cards and can add a limited set of card actions to them. For example, a weather connector that allows users to select a location and any time of the day, to receive updates about tomorrow's weather. They're configured at channel level but are installed at team level.
+Connectors for Microsoft 365 Groups allow you to create a custom configuration page for your Incoming Webhook and package them as part of a Teams app. You send messages primarily using connector cards for Microsoft 365 Groups and can add a limited set of card actions to them. For example, a weather connector that allows users to select a location and any time of the day, to receive updates about tomorrow's weather. They're configured at channel level but are installed at team level.
 
 > [!NOTE]
 > You can distribute the connector for Microsoft 365 Groups Teams app to our AppStore.
 
 ## Create and send messages
 
-Actionable messages allow users to take action without leaving their email client, increasing user engagement. With Office 365 and Incoming Webhooks, you can send messages by posting a JSON payload to the webhook URL.
+Actionable messages allow users to take action without leaving their email client, increasing user engagement. With Microsoft 365 and Incoming Webhooks, you can send messages by posting a JSON payload to the webhook URL.
 
 ## Next step
 

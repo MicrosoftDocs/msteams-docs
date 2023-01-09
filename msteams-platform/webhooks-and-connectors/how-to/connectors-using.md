@@ -44,7 +44,7 @@ For more information on connector card actions, see [Actions](/outlook/actionabl
 
 ## Send a message through Incoming Webhook or connector for Microsoft 365 Groups
 
-To send a message through your Incoming Webhook or connector for Microsoft 365 Groups, post a JSON payload to the webhook URL. This payload must be in the form of an [Office 365 connector card](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card).
+To send a message through your Incoming Webhook or connector for Microsoft 365 Groups, post a JSON payload to the webhook URL. This payload must be in the form of an [connector card for Microsoft 365 Groups](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card).
 
 You can also use this JSON to create cards containing rich inputs, such as text entry, multiselect, or selecting date and time. The code that generates the card and posts it to the webhook URL can run on any hosted service. These cards are defined as part of actionable messages and are also supported in [cards](~/task-modules-and-cards/what-are-cards.md) used in Teams bots and message extensions.
 

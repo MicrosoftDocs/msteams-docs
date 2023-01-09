@@ -140,7 +140,7 @@ The following table provides the parameters and the details of `getConfig` respo
 | `configName`  | The configuration name, as set by your code when calling `setConfig()`. |
 | `contentUrl` | The URL of the configuration page, as set by your code when calling `setConfig()`. |
 | `webhookUrl` | The webhook URL created for the connector. Use the webhook URL to POST structured JSON to send cards to the channel. The `webhookUrl` is returned only when the application returns data successfully. |
-| `appType` | The values returned can be `mail`, `groups`, or `teams` corresponding to the Microsoft 365 Mail, Office 365 Groups, or Teams. respectively. |
+| `appType` | The values returned can be `mail`, `groups`, or `teams` corresponding to the Microsoft 365 Mail, Microsoft 365 Groups, or Teams. respectively. |
 | `userObjectId` | The unique ID corresponding to the Microsoft 365 user who initiated the setup of the connector. It must be secured. This value can be used to associate the user in Microsoft 365, who has setup the configuration in your service. |
 
 #### Handle edits
