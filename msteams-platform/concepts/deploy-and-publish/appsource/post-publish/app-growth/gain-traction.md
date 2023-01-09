@@ -101,7 +101,9 @@ For more information, see [Monetize your app](../../prepare/monetize-overview.md
 <details>
 <summary>Microsoft 365 Certification to make Teams app enterprise-ready</summary>
 
-The Microsoft 365 Certification is designed to show customers that your collaborative app has been vetted against controls derived from leading industry-standard frameworks. It also showcases that strong security, privacy, and compliance practices are in place to protect customer data when the app is in use. Since most Teams customers are large enterprises, having your app Microsoft 365 certified aids in building trust with the IT admins. For more information, see [Microsoft 365 certification](/microsoftteams/overview-of-app-certification#microsoft-365-certification).
+The Microsoft 365 Certification is designed to show customers that your collaborative app has been vetted against controls derived from leading industry-standard frameworks. It also showcases that strong security, privacy, and compliance practices are in place to protect customer data when the app is in use. Since most Teams customers are large enterprises, having your app Microsoft 365 certified helps in building trust with the IT admins.
+
+For more information, see [Microsoft 365 certification](/microsoftteams/overview-of-app-certification#microsoft-365-certification).
 
 Find more [here](https://cloudpartners.transform.microsoft.com/practices/modernworkisv?tab=certification).
 
@@ -122,7 +124,7 @@ While during the launch stage, you used transient banners, notifications bar, wh
     :::column-end:::
 :::row-end:::
 
-To get maximum ROI, surface the nudges contextually for scenarios that are inherently collaborative over chat or in meetings, as they're best delivered inside Microsoft Teams through your app.
+To get maximum ROI, surface the nudges contextually for scenarios that are inherently collaborative over chat or in meetings. They're best delivered inside Microsoft Teams through your app.
 
 [Back to top](#what-should-you-do-during-the-traction-stage)
 </details>
@@ -130,9 +132,9 @@ To get maximum ROI, surface the nudges contextually for scenarios that are inher
 ## Where can Microsoft help?
 
 <details>
-<summary>Teams App Store merchandising</summary>
+<summary>Teams App Store merchandising: editorial articles</summary>
 
-Editorial Articles**: The Microsoft Teams store editorial team curates editorial sections on the in-product app store based on various ranking parameters.
+The Microsoft Teams store editorial team curates editorial sections on the in-product app store based on various ranking parameters.
 
 :::row:::
     :::column span="3":::
@@ -179,7 +181,7 @@ Drive awareness of your published Microsoft Teams app to the customer-facing rol
 <details>
 <summary>Engineering support for app monetization in Teams marketplace</summary>
 
-Strategic developers, who are part of the invite-only Teams engineering’s build-with partner program, get access to robust technical guidance and best practices from engineering to build transact SaaS and new, pilot features to improve the purchase funnel for their apps. You can also unlock other GTM benefits and CSP channel partnership programs for early-bird apps with live transact SaaS offers.
+Strategic developers, who are part of the invite-only Teams engineering’s build-with partner program, get access to robust technical guidance and best practices from engineering. It helps in building transact SaaS and new, pilot features to improve the purchase funnel for their apps. You can also unlock other GTM benefits and CSP channel partnership programs for early-bird apps with live transact SaaS offers.
 
 </details>
 <br>
