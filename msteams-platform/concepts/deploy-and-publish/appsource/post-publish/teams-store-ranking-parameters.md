@@ -21,9 +21,9 @@ Following are the main parameters used to determine app placements:
 
 * User engagement data: Apps with higher user engagement in the Teams store tend to rank higher than apps with lower engagement.
 
-* App quality and value:  Apps that have distinct value and provide a high-quality user experience tend to rank higher.
+* App quality and value:  Apps with distinct value and that provide a high-quality user experience tend to rank higher.
 
-* Audience relevance: Apps that are likely to be more relevant to a particular audience tend to rank higher than apps that are likely to be less relevant. Such apps can be based on their language settings and license type such as, Education, Enterprise, or Small and Medium business.
+* Audience relevance: Apps more relevant to a particular audience tend to rank higher than apps that are less relevant. Such apps can be based on their language settings and license type such as, Education, Enterprise, or Small and Medium business.
 
 * App update or new release: Newly released or updated high-quality apps tend to rank higher than apps that were released or updated on an earlier date.
 
