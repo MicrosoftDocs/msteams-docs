@@ -408,7 +408,7 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
 
 ## Code sample
 
-|**Sample name** | **Description** | **C#** | **Node.js** |
+|**Sample name** | **Description** | **.NET** | **Node.js** |
 |----------------|-----------------|--------------|----------------|
 | Typeahead search control on Adaptive Cards | The sample shows the features of static and dynamic typeahead search control in Adaptive Cards. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards/nodejs) |
 
