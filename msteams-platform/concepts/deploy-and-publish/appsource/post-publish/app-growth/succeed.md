@@ -46,7 +46,7 @@ A core product-led growth initiative, capture Teams marketplace trials, trials s
 <details>
 <summary>Continuously reduce churn via product and analytics-led insights</summary>
 
-Retaining users by providing them a sticky experience is key to growing your Teams app and realizing economic value from your product and GTM investments. Ensure that you’ve implemented robust and granular analytics for your Teams app. It should serve your need to measure when and which users have churned or are likely to churn from your app. You can them re-engage and retarget them via outreach channels within or outside your product.
+Retaining users by providing them a sticky experience is key to growing your Teams app and realizing economic value from your product and GTM investments. Ensure that you’ve [implemented robust and granular analytics](../../../../design/overview-analytics.md) for your Teams app. It should serve your need to measure when and which users have churned or are likely to churn from your app. You can them re-engage and retarget them via outreach channels within or outside your product.
 
 </details>
 <br>
@@ -77,7 +77,7 @@ Innovation, grounded in customer needs, is the key to sustainably grow and succe
 <details>
 <summary>Share feedback to enrich the Teams platform</summary>
 
-Microsoft Teams app platform is ever-evolving with newer features that provide even more opportunities for developers like you to deliver unique, differentiated and collaborative scenarios of value to customers. Use the Microsoft field, account, engineering representatives to share feedback or product ask on Teams platform. You can as well post product feature suggestions here.
+Microsoft Teams app platform is ever-evolving with newer features that provide even more opportunities for developers like you to deliver unique, differentiated and collaborative scenarios of value to customers. Use the Microsoft field, account, engineering representatives to share feedback or product ask on Teams platform. You can also post product feature suggestions [here](../../../../../feedback.md#feature-request-and-general-help) as well.
 
 </details>
 <br>
@@ -95,7 +95,7 @@ Strategic developers can be a part of the invite-only Teams engineering’s buil
 
 :::row:::
     :::column span="3":::
-        Impactful case studies of how investing a Teams app resulted in growth for your SaaS business and how customers using your app got impacted can be published on the following customer-facing sites: Microsoft 365 ISV Benefits Program Success Stories and Customer Stories on Microsoft.com. Connect with your Teams engineering representatives or Microsoft 365 ISV Benefits Service Desk to check eligibility, seek guidance, and execute this motion.
+        Impactful case studies of how investing a Teams app resulted in growth for your SaaS business and how customers using your app got impacted can be published on the following customer-facing sites: [Microsoft 365 ISV Benefits Program Success Stories](https://cloudpartners.transform.microsoft.com/practices/modernworkisv?tab=success-stories) and [Customer Stories](https://customers.microsoft.com/en-us/search?sq=&ff=story_industry_friendlyname%26%3EPartner%20Professional%20Services%26%26story_product_categories%26%3EMicrosoft%20Teams&p=5&so=cam_rank%20desc) on Microsoft.com. Connect with your Teams engineering representatives or [Microsoft 365 ISV Benefits Service Desk](mailto:ModernWorkISVPartner@microsoft.com) to check eligibility, seek guidance, and execute this motion.
     :::column-end:::
     :::column span="":::
         :::image type="content" source="../../../../../assets/images/app-fundamentals/isv-site-success-story.png" alt-text="Modern work ISV site showing customer success stories.":::
@@ -114,7 +114,7 @@ Microsoft will evaluate co-activation opportunities in large customer accounts. 
 <details>
 <summary>Include in Microsoft exec blog or flagship event endorsement</summary>
 
-Get the power of the Microsoft executive team behind your next leadership blog or event. Review your plans for blogs or events in which you'll be participating. Develop ideas on how a Microsoft executive can help to promote your commercial marketplace offer in a blog or at an event. Reach out to Microsoft 365 ISV Marketing Benefits to request Microsoft executive endorsement, where your eligibility will be checked. After that, the team will work with you to find a Microsoft executive (Director level or higher) to help endorse your Teams collaborative app available on the marketplace.
+Get the power of the Microsoft executive team behind your next leadership blog or event. Review your plans for blogs or events in which you'll be participating. Develop ideas on how a Microsoft executive can help to promote your commercial marketplace offer in a blog or at an event. Reach out to [Microsoft 365 ISV Marketing Benefits](mailto:ModernWorkISVMktg@microsoft.com?subject=Microsoft%20Teams%20app%20marketing%20assets%20are%20uploaded) to request Microsoft executive endorsement, where your eligibility will be checked. After that, the team will work with you to find a Microsoft executive (Director level or higher) to help endorse your Teams collaborative app available on the marketplace.
 
 </details>
 <br>
@@ -128,7 +128,7 @@ Strategic developers, who are part of the invite-only Teams engineering’s buil
 <details>
 <summary>Early access to unreleased Teams Platform features</summary>
 
-Microsoft-offered Developer Preview for Teams is a public program for developers, which provides early access to unreleased features in Microsoft Teams. It allows you to explore and test upcoming features for potential inclusion in your Teams app and share feedback about the feature. Strategic developers, who are part of the invite-only Teams engineering’s build-with partner program, have a direct line to work together with Microsoft engineering to use these features in their apps.
+Microsoft-offered [Developer Preview for Teams](../../../../../resources/dev-preview/developer-preview-intro.md) is a public program for developers, which provides early access to unreleased features in Microsoft Teams. It allows you to explore and test upcoming features for potential inclusion in your Teams app and share feedback about the feature. Strategic developers, who are part of the invite-only Teams engineering’s build-with partner program, have a direct line to work together with Microsoft engineering to use these features in their apps.
 
 </details>
 <br>
