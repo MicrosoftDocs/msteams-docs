@@ -225,9 +225,11 @@ Messages sent between users and bots include internal channel data within the me
 
 ## Update message
 
-To get event notifications to handle the message updates in bot, you can either override `OnTeamsMessageEditAsync`, `OnTeamsMessageUndeleteAsync`, or `OnMessageUpdateActivityAsync` handlers when a sent message is edited or a deleted message is restored.
+When you edit or Undo delete a message sent to a bot in a chat, the bot gets a notification of the edit or undo delete an event.
 
-The following code shows an example when a sent message is edited:
+To get an edit or undo delete event notification for a sent message in a bot, you can override the `OnTeamsMessageEditAsync`, `OnTeamsMessageUndeleteAsync`, or `OnMessageUpdateActivityAsync` handlers.
+
+The following is an example of an edit event notification for an edited message:
 
 # [C#](#tab/csharp3)
 
@@ -286,7 +288,7 @@ await turnContext.SendActivityAsync(replyActivity, cancellationToken);
 
 # [Javascript](#tab/javascript3)
 
-Following are the two methods to get event notifications to handle the message updates using the Bot SDK. You can use either one of the following methods:
+You can use one of the following methods to get an event notifications to handle the message updates using the Bot SDK:
 
 **​Event function registration**:
 
@@ -324,7 +326,7 @@ async onTeamsMessageEdit(context) {
 
 ---
 
-The following code shows an example when a deleted message is restored:
+The following is an example of an undo delete event notification for a restored message:
 
 # [C#](#tab/csharp4)
 
@@ -383,7 +385,7 @@ await turnContext.SendActivityAsync(replyActivity, cancellationToken);
 
 # [Javascript](#tab/javascript4)
 
-Following are the two methods to get event notifications to handle the message updates using the Bot SDK. You can use either one of the following methods:
+You can use one of the following methods to get an event notifications to handle the message updates using the Bot SDK:
 
 **​Event function registration**:
 
@@ -423,9 +425,11 @@ async onTeamsMessageUndelete(context) {
 
 ## Delete message
 
-To get event notifications to handle the message updates in bot, you can override `OnMessageDeleteActivityAsync` handler when a sent message is deleted.
+When you delete a message sent to a bot, the bot gets a notification of the delete event.
 
-The following code shows an example when a sent message is deleted:
+To get an edit or undo delete event notification for a sent message, you can override the `OnMessageDeleteActivityAsync` handler.
+
+The following is an example of an delete event notification for a deleted message:
 
 # [C#](#tab/csharp5)
 
@@ -484,7 +488,7 @@ await turnContext.SendActivityAsync(replyActivity, cancellationToken);
 
 # [Javascript](#tab/javascript5)
 
-Following are the two methods to get event notifications to handle the message updates using the Bot SDK. You can use either one of the following methods:
+You can use one of the following methods to get an event notifications to handle the message updates using the Bot SDK:
 
 **​Event function registration**:
 
