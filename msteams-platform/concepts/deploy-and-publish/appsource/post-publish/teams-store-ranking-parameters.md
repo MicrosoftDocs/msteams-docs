@@ -10,7 +10,7 @@ ms.author: v-ypalikila
 
 The information in this disclosure statement applies to the Microsoft Teams store in which Microsoft makes third-party apps available to users. The Microsoft Teams store ranks app search results in the store using a set of ranking parameters to deliver relevant search results to users.
 
-The ranking parameters listed aren't exhaustive. They're intended to provide our publisher community with a high-level understanding of the main parameters that the storefront uses in ranking determinations.
+The ranking parameters listed in this section aren't exhaustive. They're intended to provide our publisher community with a high-level understanding of the main parameters that the storefront uses in ranking determinations.
 
 > [!NOTE]
 > All defined terms used but not otherwise defined herein will have the meaning ascribed thereto in the Microsoft Publisher Agreement.
