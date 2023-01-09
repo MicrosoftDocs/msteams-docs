@@ -21,15 +21,6 @@ The bots for Teams support the following types of cards:
 - Card collections
 - Overflow menu on Adaptive Cards
 
-- Adaptive Card
-- Hero card
-- List card
-- Office 365 Connector card
-- Receipt card
-- Sign in card
-- Thumbnail card
-- Card collections
-
 You can add rich text formatting to your cards using either Markdown or HTML, depending on the card type. Cards used by bots and message extensions in Microsoft Teams, add and respond to these card actions, `openUrl`, `messageBack`, `imBack`, `invoke`, and `signin`.
 
 Teams uses cards in three different places:
