@@ -49,7 +49,7 @@ You can identify and use different types of cards based on your application requ
 | [List card](#list-card) | This card contains a scrolling list of items. |
 | [Office 365 Connector card](#office-365-connector-card) | This card has a flexible layout with multiple sections, fields, images, and actions. |
 | [Receipt card](#receipt-card) | This card provides a receipt to the user. |
-| [Signin card](#sign in-card) | This card enables a bot to request that a user signs in. |
+| [Signin card](#sign-in-card) | This card enables a bot to request that a user signs in. |
 | [Thumbnail card](#thumbnail-card) | This card typically contains a single thumbnail image, some short text, and one or more buttons. |
 | [Card collections](#card-collections) | This card collection is used to return multiple items in a single response. |
 
@@ -122,8 +122,8 @@ The following table provides the features that support Adaptive Cards:
 
 > [!NOTE]
 >
-> * Teams platform supports v1.4 or earlier of Adaptive Card features for bot sent cards and action based message extensions.
-> * Teams platform supports v1.3 or earlier of Adaptive Card features for other capabilities, such as cards sent by user (search based message extensions and link unfurling), tabs, and task modules.
+> * Teams platform supports v1.5 or earlier of Adaptive Card features for bot sent cards and action based message extensions.
+> * Teams platform supports v1.5 or earlier of Adaptive Card features for other capabilities, such as cards sent by user (search based message extensions and link unfurling), tabs, and task modules.
 > * Positive or destructive action styling is not supported in Adaptive Cards on the Teams platform.
 > * Media elements are currently not supported in Adaptive Card on the Teams platform.
 > * Test your full width Adaptive Card in narrow form factors such as mobile and meeting side panels to ensure that content is not truncated.

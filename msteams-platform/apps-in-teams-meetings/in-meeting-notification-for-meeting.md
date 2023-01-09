@@ -40,7 +40,18 @@ You can also add the Teams display picture and people card of the user to in-mee
     }
 ```
 
-:::image type="content" source="../assets/images/apps-in-meetings/in-meeting-people-card.png" alt-text="This screenshot shows how Teams display picture and people card is used with in-meeting dialog." border="true":::
+:::image type="content" source="../assets/images/apps-in-meetings/in-meeting-people-card.png" alt-text="This screenshot shows how a display picture and people card in Teams is used with in-meeting dialog." border="true":::
+
+## Feature compatibility by user types
+
+The following table provides the user types and lists the features that each user can access in meetings:
+
+| User type | Scheduled meeting or Instant calendar meeting | One-on-one call | Group call | Scheduled channel meeting |
+| :-- | :-- | :-- | :-- | :-- |
+| In-tenant user | Available | Available |  Available | Available |
+| Guest | Available | Available |  Available | Available |
+| Federated or External | Available | Not available | Not available | Available |
+| Anonymous | Not available | Not available | Not available | Not available |
 
 ## Targeted meeting notification
 
@@ -130,7 +141,7 @@ For more information on `targetedMeetingNotification`, see [Meeting apps APIs](m
 
 ## Code sample
 
-Sample name | Description | C# | Node.js |
+Sample name | Description | .NET | Node.js |
 |----------------|-----------------|--------------|----------------|
 | In-meeting notification | Demonstrates how to implement in-meeting notification using bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs) |
 
