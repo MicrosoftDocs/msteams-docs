@@ -33,6 +33,7 @@ For more information, see [CSP Channel Readiness Guide](https://aka.ms/TeamsMone
 After you become CSP channel ready by completing the pre-requisites, browse through the CSP list on the Partner Center to find resellers to negotiate a partnership.
 
 You can find detailed partner profile information in the Partner Center or using the public [partner finder](https://appsource.microsoft.com/marketplace/partner-dir) on AppSource.
+
 [Back to top](#what-should-you-do-during-the-scale-stage)
 </details>
 <br>
@@ -113,6 +114,7 @@ While building traction, you showcased the collaborative app in Teams during you
         :::image type="content" source="../../../../../assets/images/app-fundamentals/remarket-retarget.png" alt-text="Re-market via emails and retarget using Teams notifications." lightbox="../../../../../assets/images/app-fundamentals/remarket-retarget.png":::
     :::column-end:::
 :::row-end:::
+
 [Back to top](#what-should-you-do-during-the-scale-stage)
 </details>
 <br>
@@ -122,6 +124,7 @@ While building traction, you showcased the collaborative app in Teams during you
 Based on the list you’ve shared with the Microsoft field, account, or engineering representatives while building traction, it’s time to execute co-activation and adoption of your collaborative app in customer accounts with significant seat sizes. Your customer success team will play a major driving role in this motion. They can work alongside business decision makers, IT decision makers, and end-users that is, employees of the customer organization who are going to use your app inside Teams.
 
 Just enabling the app inside Teams won't be enough. Instead, adoption and change management practices led by your customer success team through organization-wide emailers at regular cadences, flyers, retention campaigns, user trainings, identifying and scaling through app champions in each team and constantly keeping an eye on app usage metrics within the customer’s tenant is required to form a habit among users.
+
 [Back to top](#what-should-you-do-during-the-scale-stage)
 </details>
 <br>
