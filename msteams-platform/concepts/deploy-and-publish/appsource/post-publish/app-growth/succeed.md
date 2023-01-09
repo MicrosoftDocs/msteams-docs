@@ -137,9 +137,9 @@ Microsoft-offered [Developer Preview for Teams](../../../../../resources/dev-pre
 
 Strategic developers, who are part of the invite-only Teams engineering’s build-with partner program, can benefit from a quarterly rhythm of business with participation from product, engineering, business development, and GTM leadership from Microsoft, and partner side. It helps them take a stock of the app’s growth, resulting business outcomes and jointly agree on next wave of business impact milestones and partnership investments.
 
-Each app in the Teams ecosystem undertakes this journey, in all likelihood, starting from a point solution to becoming a full-fledged collaborative app on Teams. Building, launching, gaining traction, achieving scale, and finally succeeding are phases that help you plan and execute your app’s go-to-market journey resulting in robust growth for your SaaS business on the Teams marketplace.
-
 </details>
+
+Each app in the Teams ecosystem undertakes this journey, in all likelihood, starting from a point solution to becoming a full-fledged collaborative app on Teams. Building, launching, gaining traction, achieving scale, and finally succeeding are phases that help you plan and execute your app’s go-to-market journey resulting in robust growth for your SaaS business on the Teams marketplace.
 
 ## See also
 
