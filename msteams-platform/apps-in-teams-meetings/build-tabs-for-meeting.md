@@ -214,16 +214,13 @@ After you opt into app caching, the webview that is used to host the embedded ap
 
 Following are the parameters to control the conditions for the apps to be added or removed from the cache (based on the configuration updates, the parameters can be modified):
 
-* Only one app is supported in the cache for app caching. When there's more than one app with app caching in a meeting, then the least recently used app is removed from the cache.
-* When the app is cached, the memory (working set) usage must not exceed 225 MB.
+* App is removed from the cache if the system memory is full.
+* App is removed from the cache if the maximum cache size is exceeded.
 * If the user doesn't return to the app within 20 minutes, the app is removed from the cache.
-* The maximum time for Teams to receive the `readyToUnload` signal from the app is 30 seconds.
-* The app has one-minute grace period to get the memory usage down after the app is cached.
-* App caching is disabled if the system memory is less than 4 GB or the available free memory is less than 1 GB (512 MB on Mac).
+* The app is not cached if Teams doesn't receive the `readyToUnload` signal from the app within 30 seconds after sending the `beforeUnload` notification.
+* App caching is disabled if the system memory is less than 4 GB.
 * Side panel is the only supported FrameContext for app caching in meetings.
-* When the app is cached, CPU usage must not exceed 5%.
-* When the app is cached, the number of SDK requests shouldn't exceed five for every 12 seconds.
-* The cache state is monitored every 12 seconds and the apps that don’t meet the requirements are removed from the cache.
+* App caching isn't supported for meetings where the invited user count is more than 20.
 
 ### Code example
 
@@ -296,17 +293,15 @@ The following are the limitations for app caching:
 
 * For app caching to support only in meetings, register the `load` or `beforeUnload` handlers if the context is `meetingSidePanel`. Meetings is the first surface to support app caching. Even if app caching in other contexts such as `channels` and `chat` happens to work, it isn't officially supported at this point and is subject to change.
 
-* App caching isn't supported for meetings where the invited user count is more than 20.
-
 * App caching isn't supported for apps that require device permissions as per the manifest.
 
 ### Troubleshooting
 
 **Apps are not being cached? Why is load handler not invoked on subsequent navigation?**
 
-* If app exceeds 225 MB limit, try to keep your memory footprint under 225 MB when cached.
+* Check the amount of free memory on your system. App caching requires minimum of 4 GB system memory.
 
-* Check the amount of free memory on your system. App caching requires minimum of 4 GB system memory and a minimum of 1 GB free memory on Windows (500 MB free memory on Mac).
+* Reduce your memory footprint when cached. Use the load handlers to dispose resources that are not needed when cached.
 
 ## Feature compatibility by user types
 
