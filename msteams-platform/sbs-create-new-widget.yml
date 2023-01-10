@@ -16,7 +16,7 @@ items:
   content: |
     This step-by-step guide helps you to create a new widget. You'll see the following output:
 
-    :::image type="content" source="../assets/images/sbs-create-a-new-dashboard/dashboard.png" alt-text="Screenshot shows user profile information and recent Teams activity. ":::
+    :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/dashboard.png" alt-text="Screenshot shows user profile information and recent Teams activity. ":::
     
 - title: Prerequisites
   durationInMinutes: 1
@@ -24,7 +24,7 @@ items:
 
     * [NodeJS](https://nodejs.org/en/), fully tested on NodeJS 14, 16
     * A Microsoft 365 account. If you don't have Microsoft 365 account, apply one from [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program)
-    * [Teams Toolkit Visual Studio Code Extension](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) or [TeamsFx CLI](../../toolkit/TeamsFx-CLI.md)
+    * [Teams Toolkit Visual Studio Code Extension](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) or [TeamsFx CLI](~/toolkit/TeamsFx-CLI.md)
 
 - title: Create a dashboard
   durationInMinutes: 5
@@ -304,7 +304,7 @@ items:
 
       1. Choose `single sign-on` to add.
 
-        :::image type="content" source="../../assets/images/ci-cd-workflows.png" alt-text="Screenshot showing the selection of CI/CD workflows.":::
+        :::image type="content" source="~/assets/images/ci-cd-workflows.png" alt-text="Screenshot showing the selection of CI/CD workflows.":::
 
       Move `auth-start.html` and `auth-end.html` in `auth/tab/public folder` to `tabs/public/`. These two HTML files are used for auth redirects.
 
@@ -426,8 +426,7 @@ items:
       let teamsfx_app: TeamsFx;
       teamsfx_app = new TeamsFx(IdentityType.App);
       const graphClient: Client = createMicrosoftGraphClient(teamsfx_app, [
-      ".default",
-        ]);
+      ".default",]);
       await graphClient
       .api("users/" + userId + "/teamwork/sendActivityNotification")
       .post(postbody);
