@@ -32,23 +32,23 @@ items:
 
      1. From Teams Toolkit side bar select **Create a new Teams app**.
 
-        :::image type="content" source="../assets/images/sbs-create-a-new-dasboard/create-a-new teams-app.png" alt-text="Screenshot showing the selection of Create a new Teams app":::
+        :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/create-a-new teams-app.png" alt-text="Screenshot showing the selection of Create a new Teams app":::
 
      1. Select **Dashboard** tab from Scenario-based Teams app section.
 
-        :::image type="content" source="../assets/images/sbs-create-a-new-dasboard/dashboard-tab-preview.png" alt-text="Screenshot showing the selection of Dashboard tab preview.":::
+        :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/dashboard-tab-preview.png" alt-text="Screenshot showing the selection of Dashboard tab preview.":::
 
      1. Select programming language.
 
-        :::image type="content" source="../assets/images/sbs-create-a-new-dasboard/javascript.png" alt-text="Screenshot showing the selection of programming language.":::
+        :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/javascript.png" alt-text="Screenshot showing the selection of programming language.":::
 
      1. Select a workspace folder.
 
-        :::image type="content" source="../assets/images/sbs-create-a-new-dasboard/default-folder.png" alt-text="Screenshot showing the selection of workspace folder.":::
+        :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/default-folder.png" alt-text="Screenshot showing the selection of workspace folder.":::
 
      1. Enter an application name and then press enter.
 
-        :::image type="content" source="../assets/images/sbs-create-a-new-dasboard/enter-application-name.png" alt-text="Screenshot showing the selection of Application name.":::
+        :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/enter-application-name.png" alt-text="Screenshot showing the selection of Application name.":::
 
       In TeamsFX CLI
 
@@ -60,11 +60,11 @@ items:
 
       After you successfully created the project, quickly start local debugging via F5 in VSCode. Select Debug (Edge) or Debug (Chrome) debug option of your preferred browser, after running this template and you will see a tab app loaded as below:
 
-        :::image type="content" source="../assets/images/sbs-create-a-new-dasboard/dashboard.png" alt-text="Screenshot shows user profile information and recent Teams activity. ":::
+        :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/dashboard.png" alt-text="Screenshot shows user profile information and recent Teams activity. ":::
 
       This app also supported teams different themes, including dark theme and high contrast theme.
 
-        :::image type="content" source="../assets/images/sbs-create-a-new-dasboard/dark-light-theme.png" alt-text="Screenshot showing the contrast theme.":::
+        :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/dark-light-theme.png" alt-text="Screenshot showing the contrast theme.":::
        
    
      - title: Add a new widget
@@ -241,7 +241,7 @@ items:
     }
     }
 
-        :::image type="content" source="../../assets/images/sbs-create-a-new-dasboard/override-header-count.png" alt-text="Screenshot showing the overriding of header, body, and footer content.":::
+        :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/override-header-count.png" alt-text="Screenshot showing the overriding of header, body, and footer content.":::
 
       * Just override bodyContent()、footerContent() to customize the widget.
 
@@ -274,7 +274,7 @@ items:
       }
 
 
-        :::image type="content" source="../../assets/images/sbs-create-a-new-dasboard/override-body-content-footer-content.png" alt-text="Screenshot showing the overriding of body and footer content":::
+        :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/override-body-content-footer-content.png" alt-text="Screenshot showing the overriding of body and footer content":::
 
       Just override bodyContent() to customize the widget
 
@@ -292,7 +292,7 @@ items:
 
         }
 
-        :::image type="content" source="../../assets/images/sbs-create-a-new-dasboard/override-body-content.png" alt-text="Screenshot showing the overriding of body content.":::
+        :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/override-body-content.png" alt-text="Screenshot showing the overriding of body content.":::
 
 - title: Add a new Graph API call
   durationInMinutes: 5
@@ -304,7 +304,7 @@ items:
 
       1. Select `Teams Toolkit` in the side bar > Select `Add features` in `DEVELOPMENT`.
 
-        :::image type="content" source="../../assets/images/sbs-create-a-new-dasboard/add-features.png" alt-text="Screenshot showing the selection of add features.":::
+        :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/add-features.png" alt-text="Screenshot showing the selection of add features.":::
 
       1. Choose `Single Sign-On` to add.
 
@@ -379,7 +379,7 @@ items:
 
       In the response, you should find the information of your Dashboard app, and then record the `id` of it as `installationId`, which will be used in step 4.
 
-        :::image type="content" source="../../assets/images/sbs-create-a-new-dasboard/graph-explorer.png" alt-text="Screenshot showing the response preview.":::
+        :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/graph-explorer.png" alt-text="Screenshot showing the response preview.":::
 
       **Add your logic in Azure Function**
 
@@ -475,7 +475,7 @@ items:
 
       Did you come up with something like this?
 
-        :::image type="content" source="../assets/images/sbs-create-a-new-dasboard/dashboard.png" alt-text="Screenshot shows user profile information and recent Teams activity. ":::
+        :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/dashboard.png" alt-text="Screenshot shows user profile information and recent Teams activity. ":::
 
 
 - title: Congratulations!
