@@ -227,7 +227,10 @@ Messages sent between users and bots include internal channel data within the me
 
 When you edit or undelete a message in a chat, the bot gets a notification of the edit message or undelete message event.
 
-To get an edit or undelete message event notification in a bot, you can override the `OnTeamsMessageEditAsync`, `OnTeamsMessageUndeleteAsync`, or `OnMessageUpdateActivityAsync` handlers.
+To get an edit or undelete message event notification in a bot, you can override the following handlers:
+
+* For edit: `OnTeamsMessageEditAsync` or `OnMessageUpdateActivityAsync`
+* For undelete: `OnTeamsMessageUndeleteAsync`or `OnMessageUpdateActivityAsync`
 
 The following is an example of an edit message event notification when a sent message is edited:
 
@@ -255,17 +258,17 @@ await turnContext.SendActivityAsync(replyActivity, cancellationToken);
 "channelId":"msteams",
 "serviceUrl":"https://canary.botapi.skype.com/amer/",
 "from": {
-    "id":"29:1BLjP9j3_TM4mubmQZsYEo7jDyLeLf_YVA9sVPVO7KMAFMjJWB_EUGveb9EVDh9LgoNp9qjnzEBy4kgw83Jf1Kg",
-    "name":"Alex Wilber",
-    "aadObjectId":"976e4d1e-2108-43ee-a092-46a9507c5606"
+    "id":"29:1BLjP9j3_PM4mubmQZsYPx7jDyLeLf_YVA9sVPV08KMAFMjJWB_EUGveb9EVDh9TslNp9qjnzEBy3kgw01Jf1Kg",
+    "name":"Mike Wilber",
+    "aadObjectId":"520e4d1e-2108-43ee-a092-46a9507c6200"
 },
 "conversation":{
     "conversationType":"personal",
-    "tenantId":"528dbe3f-15e0-4e37-84a1-00cc305847dd","id":"a:1tewuGJ44RkB90tiJNQ_I4q8vyuN5CYA_f-v6f0Vd-Bs3Ce85C73Ah1y8TvyjESsTHWjjgw-gnsuIuCUOWkfOCq6qaUYsk2_-fj93XXXHUMAUzhFFvTnaCU7V4WiMqXQL"
+    "tenantId":"528dbe3f-15e0-4e37-84a1-00cc305847dd","id":"a:1pweuGJ44RkB90tiJNQ_I6g3vyuP4CYA_f-v6f0Vd-Bs3Ce85C73Ah1y8TvyjESsTHWjjgw-gnsuIuCUOWkfOCq6qaUYsk2_-fj93XXXHUMAUzhFFvTnaCU7V4WiMqRPB"
 },
 "recipient":{
-    "id":"28:0d469698-ab9d-479a-b0d8-758b6e6b1159",
-    "name":"Yingbot"
+    "id":"28:0d569679-gb4j-479a-b0d8-238b6e6b1149",
+    "name":"TestBot"
 },
 "entities":[
     {
@@ -361,8 +364,8 @@ await turnContext.SendActivityAsync(replyActivity, cancellationToken);
     "tenantId":"528dbe3f-15e0-4e37-84a1-00cc305847dd","id":"a:1tewuGJ44RkB90tiJNQ_I4q8vyuN5CYA_f-v6f0Vd-Bs3Ce85C73Ah1y8TvyjESsTHWjjgw-gnsuIuCUOWkfOCq6qaUYsk2_-fj93XXXHUMAUzhFFvTnaCU7V4WiMqXQL"
 },
 "recipient":{
-    "id":"28:0d469698-ab9d-479a-b0d8-758b6e6b1159",
-    "name":"Yingbot"
+    "id":"28:0d469698-ab9d-479a-b0d8-758b6e6b1234",
+    "name":"Testbot"
 },
 "entities":[
     {
@@ -464,8 +467,8 @@ await turnContext.SendActivityAsync(replyActivity, cancellationToken);
     "tenantId":"528dbe3f-15e0-4e37-84a1-00cc305847dd","id":"a:1tewuGJ44RkB90tiJNQ_I4q8vyuN5CYA_f-v6f0Vd-Bs3Ce85C73Ah1y8TvyjESsTHWjjgw-gnsuIuCUOWkfOCq6qaUYsk2_-fj93XXXHUMAUzhFFvTnaCU7V4WiMqXQL"
 },
 "recipient":{
-    "id":"28:0d469698-ab9d-479a-b0d8-758b6e6b1159",
-    "name":"Yingbot"
+    "id":"28:0d469698-ab9d-479a-b0d8-758b6e6b1235",
+    "name":"Testbot"
 },
 "entities":[
     {
