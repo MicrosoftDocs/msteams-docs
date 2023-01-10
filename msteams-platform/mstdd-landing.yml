@@ -52,7 +52,7 @@ landingContent:
         url: https://gitter.im/OfficeDev/home
     - linkListType: whats-new
       links:
-      - text: Update and delete event notifications in bot
+      - text: Update and soft delete event notifications in bot
         url: bots/how-to/conversations/conversation-messages.md#update-message
       - text: Teams developer documentation FAQs
         url: teams-faq.md
