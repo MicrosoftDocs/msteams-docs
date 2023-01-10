@@ -221,3 +221,8 @@ The following virtual tables support the page property as part of the fetchXml o
 
 * Graph Booking Appointment
 * Graph Calendar Event
+
+## See also
+
+* [Integrate web apps](integrate-web-apps-overview.md)
+* [Get meeting transcripts using Graph APIs](../graph-api/meeting-transcripts/overview-transcripts.md)

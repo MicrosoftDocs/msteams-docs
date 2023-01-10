@@ -38,7 +38,7 @@ As anonymous users aren't AAD accounts, skype token isn't available for anonymou
 
 Teams admins can use the Teams admin center to enable or disable anonymous user app interaction for the entire tenant. This anonymous users can interact with apps in meetings setting is enabled by default. If your app needs to be accesed by anonymous users ensure that tenant admins enable the anonymous user app interaction. For more information, see [allow anonymous users to interact with apps in meetings](/microsoftteams/meeting-settings-in-teams).
 
-## In-Meeting getContext from Teams client SDK
+## In-Meeting getContext from Teams client library
 
 Apps receive the following info for an anonymous user when they call the `getContext` API from the shared app stage. You can recognize anonymous users by checking for a `userLicenseType` value of **Unknown**.
 
@@ -91,7 +91,7 @@ The [get members](/microsoftteams/platform/bots/how-to/get-teams-context#fetch-t
 | `userRole` | `anonymous`, represents anonymous user. |
 
 > [!NOTE]
-> The ID received from the bot APIs and the Teams client SDK API are not the same.
+> The ID received from the bot APIs and the Teams client library API are not the same.
 
 ### ConversationUpdate activity MembersAdded and MembersRemoved
 
@@ -172,8 +172,15 @@ Anonymous users can view and interact with Adaptive Cards in the meeting chat. A
 
     :::image type="content" source="../assets/images/apps-in-meetings/app-icon.png" alt-text="This screenshot shows you how the app icon displays for anonymous user.":::
 
+## Next step
+
+> [!div class="nextstepaction"]
+> [Meeting apps APIs](meeting-apps-apis.md)
+
 ## See also
 
+* [Apps for Teams meetings and calls](teams-apps-in-meetings.md)
 * [Build apps for Teams meeting stage](build-apps-for-teams-meeting-stage.md)
 * [Meeting apps APIs](meeting-apps-apis.md)
 * [How Microsoft Teams bots work](/azure/bot-service/bot-builder-basics-teams)
+* [Get context for your tab](../tabs/how-to/access-teams-context.md)
