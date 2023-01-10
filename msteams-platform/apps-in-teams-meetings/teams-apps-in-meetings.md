@@ -18,40 +18,40 @@ Meetings enable collaboration, partnership, informed communication, and shared f
 
 :::row:::
     :::column span="":::
-        :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/icon-1.png" border="false" link="../concepts/build-and-test/share-in-meeting.md":::
+        :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/1-cust-apps.png" border="false" link="../concepts/build-and-test/share-in-meeting.md":::
     :::column-end:::
     :::column span="":::
-        :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/icon-1.png" border="false":::
+        :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/2-enable-app.png" border="false" link="build-tabs-for-meeting.md":::
     :::column-end:::
     :::column span="":::
-        :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/icon-1.png" border="false":::
+        :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/3-create-scene.png" border="false" link="teams-together-mode.md":::
     :::column-end:::
     :::column span="":::
-        :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/icon-1.png" border="false":::
+        :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/4-meeting-lifecycle.png" border="false" link="#meeting-lifecycle":::
     :::column-end:::
 :::row-end:::
 :::row:::
     :::column span="":::
-        :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/icon-1.png" border="false":::
+        :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/5-notification-user.png" border="false" link="in-meeting-notification-for-meeting.md":::
     :::column-end:::
     :::column span="2":::
-        :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/center-0.png" border="false":::
+        :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/0-app-extensibility.png" border="false":::
     :::column-end:::
     :::column span="":::
-        :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/icon-1.png" border="false":::
+        :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/6-integrate.png" border="false" link="build-extensible-conversation-for-meeting-chat.md":::
 :::row-end:::
 :::row:::
     :::column span="":::
-        :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/icon-1.png" border="false":::
+        :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/7-fetch-participant.png" border="false" link="meeting-apps-apis.md#get-participant-api":::
     :::column-end:::
     :::column span="":::
-        :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/icon-1.png" border="false":::
+        :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/8-optimize-meeting.png" border="false" link="teams-apps-in-meetings.md":::
     :::column-end:::
     :::column span="":::
-        :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/icon-1.png" border="false":::
+        :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/9-in-meeting.png" border="false" link="build-apps-for-teams-meeting-stage.md":::
     :::column-end:::
     :::column span="":::
-        :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/icon-1.png" border="false":::
+        :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/10-get-meeting.png" border="false" link="meeting-apps-apis.md#get-real-time-teams-meeting-events-api":::
     :::column-end:::
 :::row-end:::
 
