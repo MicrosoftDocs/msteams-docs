@@ -230,7 +230,7 @@ When you edit or undelete a message in a chat, the bot gets a notification of th
 To get an edit or undelete message event notification in a bot, you can override the following handlers:
 
 * For edit: `OnTeamsMessageEditAsync` or `OnMessageUpdateActivityAsync`
-* For undelete: `OnTeamsMessageUndeleteAsync`or `OnMessageUpdateActivityAsync`
+* For undelete: `OnTeamsMessageUndeleteAsync` or `OnMessageUpdateActivityAsync`
 
 The following is an example of an edit message event notification when a sent message is edited:
 
