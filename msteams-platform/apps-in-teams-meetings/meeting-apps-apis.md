@@ -289,14 +289,14 @@ The `targetedMeetingNotification` API allows apps to send notifications to speci
 > [!NOTE]
 >
 > * The API payload only permits a task module with a URL.
-> * The user ID formats **aadObjectid**, and **UPN** aren't supported.
+> * The user ID formats **aadObjectid** and **UPN** aren't supported.
 
 Get supported user ID format for targeted meeting notification:
 
-* [GetMeetingParticipant API](#get-participant-api)
-* [GetMembers API](/rest/api/azure/devops/memberentitlementmanagement/members/get?view=azure-devops-rest-7.0&preserve-view=true)
+* [Get participant API](#get-participant-api)
+* [Get members API](/rest/api/azure/devops/memberentitlementmanagement/members/get?view=azure-devops-rest-7.0&preserve-view=true)
 
-Example of pairwise ID
+Example of pairwise ID:
 
 `id=29:1I12M_iy2wTa97T6LbjTh4rJCWrtw2PZ3lxpD3yFv8j2YPnweY2lpCPPAn3RIOPP7rghfHauUz48I1t7ANhj4CA`
 
@@ -346,24 +346,24 @@ GET POST /v1/meetings/{meetingId}/notification
 | Property name | Description |
 |---|---|
 | **meetingId** | The meeting ID is available through bot invoke and TeamsJS library. |
-| **type** |`targetedMeetingNotification` |
-| **recipients** | List of user IDs. Get user IDs for meeting participants through [Get participant API](#get-participant-api). Get the entire list of chat roster using [Fetch the roster or user profile](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile). Empty or null recipients list will return 400.|
-| **surface** | `meetingStage` keyword. |
-| **contentType** | `task` keyword. |
-| **onBehalfOf.itemid** | Describes identification of the item. Its value must be 0. |
-| **onBehalfOf.mentionType** | `person` keyword. Describes the mention of a person. |
-| **onBehalfOf.mri** | User MRI shown as sender. |
+| `type` |`targetedMeetingNotification` |
+| `recipients` | List of user IDs. Get user IDs for meeting participants through [Get participant API](#get-participant-api). Get the entire list of chat roster using [Get members API](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile). Empty or null recipients list will return 400.|
+| `surface` | `meetingStage` keyword. |
+| `contentType` | `task` keyword. |
+| `onBehalfOf.itemid` | Describes identification of the item. Its value must be 0. |
+| `onBehalfOf.mentionType` | `person` keyword. Describes the mention of a person. |
+| `onBehalfOf.mri` | User MRI shown as sender. |
 
 Following are the optional properties:
 
 | Property name | Description |
 |---|---|
-| **content.value.height** | Title of the notification. |
-| **content.value.width** | Requested width of the notification. |
-| **content.value.title** | Requested height of the notification. |
-| **content.value.url** | URL to be rendered in the notification. Make sure the URL is part of `validDomains` in app manifest. If empty string or no URL is provided, nothing will be rendered on a meeting notification. |
-| **ChannelData.OnBehalfOf** | This is to support [User attributes](../messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md#respond-to-the-task-module-submit-action). |
-| **onBehalfOf.displayName** | Name of the `person`. Used as fallback in case the name resolution is unavailable. |
+| `content.value.height` | Title of the notification. |
+| `content.value.width` | Requested width of the notification. |
+| `content.value.title` | Requested height of the notification. |
+| `content.value.url` | URL to be rendered in the notification. Make sure the URL is part of `validDomains` in app manifest. If empty string or no URL is provided, nothing will be rendered on a meeting notification. |
+| `ChannelData.OnBehalfOf` | This is to support [User attributes](../messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md#respond-to-the-task-module-submit-action). |
+| `onBehalfOf.displayName` | Name of the `person`. Used as fallback in case the name resolution is unavailable. |
 
 ### Response code
 
@@ -1102,4 +1102,3 @@ The following table provides the response codes:
 [Build tabs for meeting](build-tabs-for-meeting.md)
 
 * [Get change notifications for Microsoft Teams meeting call updates](/graph/changenotifications-for-onlinemeeting)
-

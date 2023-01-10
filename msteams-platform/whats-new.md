@@ -26,7 +26,7 @@ Teams platform features that are available to all app developers.
 
 **2022 December**
 
-* ***December 16, 2022***: [Targeted meeting notification](apps-in-teams-meetings/in-meeting-notification-for-meeting.md#targeted-meeting-notification)
+* ***January 10, 2022***: [Targeted meeting notification](apps-in-teams-meetings/in-meeting-notification-for-meeting.md#targeted-meeting-notification)
 
 * ***December 08, 2022***: [Teams developer documentation FAQs](teams-faq.md)
 

@@ -63,13 +63,12 @@ The following image is an example of a targeted meeting notification sent to a s
 
 > [!NOTE]
 >
-> * Adaptive Cards v1.5 aren't supported within targeted meeting notification.
+> * Adaptive Cards aren't supported within targeted meeting notification.
 > * Targeted meeting notification is supported for scheduled meetings, instant meeting (Meet now), one-on-one calls, and group calls.
-> * You can send targeted meeting notification to 50 participants in a meeting. If you want to send targeted meeting notification to more than 50 participants, you must call the `targetedMeetingNotification` API again.
 
 ### Enable app manifest settings for targeted meeting notification
 
-To send a targeted meeting notification, you must configure `authorization` property, `name`, and `type` in the `resourceSpecific` field in the [app manifest](../resources/schema/manifest-schema.md#authorization) as follows:
+To send a targeted meeting notification, you must configure the `authorization` property, add `name`, and `type` in the `resourceSpecific` field in the [app manifest](../resources/schema/manifest-schema.md#authorization) as follows:
 
 ```json
 "authorization": {
@@ -87,7 +86,10 @@ To send a targeted meeting notification, you must configure `authorization` prop
 
 ### Enable targeted meeting notification
 
-1. Targeted meeting notification is triggered by a bot, user action or via code. It's up to the bot API when to trigger the notification.
+> [!NOTE]
+> You can send targeted meeting notification to 50 participants in a meeting. If you want to send targeted meeting notification to more than 50 participants, you must call the `targetedMeetingNotification` API again.
+
+1. Targeted meeting notification is triggered by a bot, user action, or via code. It's up to the bot API when to trigger the notification.
 
 1. Retrieve the user IDs of participants through [get participant API](meeting-apps-apis.md#get-participant-api) and [get Members API](/rest/api/azure/devops/memberentitlementmanagement/members/get?view=azure-devops-rest-7.0&preserve-view=true).
 
