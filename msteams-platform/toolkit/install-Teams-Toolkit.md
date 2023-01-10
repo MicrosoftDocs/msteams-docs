@@ -34,7 +34,7 @@ You can install Teams Toolkit using **Extensions** in Visual Studio Code, or ins
 # [Visual Studio Code](#tab/vscode)
 
 1. Launch **Visual Studio Code**.
-1. Open **Extensions** by selecting  **View > Extensions** or **Ctrl+Shift+X**.
+1. Select **View > Extensions** or **Ctrl+Shift+X**. The extensions marketplace pane appears.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/install toolkit-1_2.png" alt-text="Screenshot shows how to install.":::
 
@@ -82,15 +82,15 @@ You can install Teams Toolkit using **Extensions** in Visual Studio Code, or ins
 
 By default, Visual Studio Code automatically keeps Teams Toolkit up-to-date. If you want to install a different release version, follow these steps:
 
-1. Select the **Extensions** icon from the Visual Studio Code activity bar.
+1. Select **Extensions** :::image type="icon" source="../assets/images/teams-toolkit-v2/extension icon.png" border="false"::: from from the Visual Studio Code activity bar.
 
-1. Enter **Teams Toolkit**  in the search box.
+1. Enter **Teams Toolkit** in the search box.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/TeamsToolkit-search.png" alt-text="Search for Teams Toolkit.":::
 
 3. Select Teams Toolkit.
 
-4. On the Teams Toolkit page, select the dropdown next to the **Uninstall** button.
+4. On the Teams Toolkit page, select the dropdown next to **Uninstall**.
 
 5. Select **Install Another Version...** from the dropdown.
 
@@ -105,9 +105,9 @@ By default, Visual Studio Code automatically keeps Teams Toolkit up-to-date. If 
 The Teams Toolkit for Visual Studio Code extension is available in a pre-release version. To install a Teams Toolkit pre-release version, follow these steps:
 
 1. Open **Visual Studio Code**.
-1. Select the **Extensions** icon from the Visual Studio Code activity bar.
-1. Enter **Teams Toolkit**  in the search box.
-1. On the Teams Toolkit page, select the dropdown arrow next to the **Install** button.
+1. Select **Extensions** :::image type="icon" source="../assets/images/teams-toolkit-v2/extension icon.png" border="false"::: from the Visual Studio Code activity bar.
+1. Enter **Teams Toolkit** in the search box.
+1. On the Teams Toolkit page, select the dropdown arrow next to **Install**.
 1. Select **Install Pre-Release Version**.
 
 ::: zone-end
