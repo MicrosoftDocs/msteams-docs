@@ -1,6 +1,6 @@
 ---
 title: Messages in bot conversations
-description: Learn how to send, receive, edit, undo delete, and delete a message, suggested actions, notification, attachments, images, Adaptive Card and status error code responses.
+description: Learn how to send, receive, edit, undelete, and soft delete a message, suggested actions, notification, attachments, images, Adaptive Card and status error code responses.
 ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
@@ -851,3 +851,4 @@ The general retry guidance for each status code is listed in the following table
 * [Send and receive files through the bot](~/bots/how-to/bots-filesv4.md)
 * [Send tenant ID and conversation ID to the request headers of the bot](~/bots/how-to/conversations/request-headers-of-the-bot.md)
 * [Localize your app](../../../concepts/build-and-test/apps-localization.md)
+* [Bot activity handlers](../../bot-basics.md)
