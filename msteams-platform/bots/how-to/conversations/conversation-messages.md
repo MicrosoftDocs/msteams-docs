@@ -225,11 +225,11 @@ Messages sent between users and bots include internal channel data within the me
 
 ## Update message
 
-When you edit or Undo delete a message sent to a bot in a chat, the bot gets a notification of the edit or undo delete an event.
+When you edit or undelete a message in a chat, the bot gets a notification of the edit message or undelete message event.
 
-To get an edit or undo delete event notification for a sent message in a bot, you can override the `OnTeamsMessageEditAsync`, `OnTeamsMessageUndeleteAsync`, or `OnMessageUpdateActivityAsync` handlers.
+To get an edit or undelete message event notification in a bot, you can override the `OnTeamsMessageEditAsync`, `OnTeamsMessageUndeleteAsync`, or `OnMessageUpdateActivityAsync` handlers.
 
-The following is an example of an edit event notification for an edited message:
+The following is an example of an edit message event notification when a sent message is edited:
 
 # [C#](#tab/csharp3)
 
@@ -326,7 +326,7 @@ async onTeamsMessageEdit(context) {
 
 ---
 
-The following is an example of an undo delete event notification for a restored message:
+The following is an example of an undelete message event notification when a deleted message is restored:
 
 # [C#](#tab/csharp4)
 
@@ -423,13 +423,13 @@ async onTeamsMessageUndelete(context) {
 
 ---
 
-## Delete message
+## Soft delete message
 
-When you delete a message sent to a bot, the bot gets a notification of the delete event.
+When you soft delete a message in a chat, the bot gets a notification of the soft delete message event.
 
-To get an edit or undo delete event notification for a sent message, you can override the `OnMessageDeleteActivityAsync` handler.
+To get a soft delete message event notification in a bot, you can override the `OnMessageDeleteActivityAsync` handler.
 
-The following is an example of a delete event notification for a deleted message:
+The following is an example of a soft delete message event notification when a message is deleted:
 
 # [C#](#tab/csharp5)
 
