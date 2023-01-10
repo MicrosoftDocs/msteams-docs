@@ -110,8 +110,8 @@ items:
      export const getSampleData = (): SampleModel => SampleData;
      ```
 
-  > [!NOTE]
-  > You can also implement a service to retrieve data from the backend service or from the Microsoft Graph API.
+      > [!NOTE]
+      >You can also implement a service to retrieve data from the backend service or from the Microsoft Graph API.
 
       1. **Create a widget file**
 
@@ -165,45 +165,46 @@ items:
       1. Go to `tabs/src/views/dashboards/SampleDashboard.tsx`, if you want create a new dashboard, please refer to [How to add a new dashboard](https://github.com/OfficeDev/TeamsFx/wiki/Embed-a-dashboard-canvas-in-Teams).
       1. Update your dashboardLayout() method to add the widget to the dashboard:
 
-  ```
-    protected dashboardLayout(): void | JSX.Element {
-    return (
-    <>
+      ```
+      protected dashboardLayout(): void | JSX.Element {
+      return (
+      <>
       <ListWidget />
       <ChartWidget />
       <SampleWidget />
-    </>
-   );
-   } 
-````
+      </>
+      );
+      } 
+      ````
 
 
-   > [!NOTE]
-   > If you want put your widget in a column, you can use the `oneColumn()`` method to define the column layout. Here is an example:
+      > [!NOTE]
+      > If you want put your widget in a column, you can use the `oneColumn()`` method to define the column layout. Here is an example:
 
-  protected dashboardLayout(): void | JSX.Element {
-  return (
-    <>
+      ```
+      protected dashboardLayout(): void | JSX.Element {
+      return (
+      <>
       <ListWidget />
       <div style={oneColumn()}>
         <ChartWidget />
         <SampleWidget />
       </div>
-    </>
-  );
-   }
-```
+      </>
+      );
+      }
 
+      ```
 
 - title: Customize a widget
   durationInMinutes: 5
   content: |
 
-  Since the widget class provides some methods that can be overridden to customize the widget, you can customize the widget by overriding these methods.
+    Since the widget class provides some methods that can be overridden to customize the widget, you can customize the widget by overriding these methods.
 
-* Override `headerContent()`、`bodyContent()`、`footerContent()` to customize the widget.
+    * Override `headerContent()`、`bodyContent()`、`footerContent()` to customize the widget.
 
-export class NewsWidget extends Widget<void> {
+    export class NewsWidget extends Widget<void> {
 
     headerContent(): JSX.Element | undefined {
         return (
@@ -239,13 +240,13 @@ export class NewsWidget extends Widget<void> {
             </Button>
         );
     }
-   }
+    }
 
-  :::image type="content" source="../../assets/images/sbs-create-a-new-dasboard/override-header-count.png" alt-text="Screenshot showing the overriding of header, body, and footer content.":::
+        :::image type="content" source="../../assets/images/sbs-create-a-new-dasboard/override-header-count.png" alt-text="Screenshot showing the overriding of header, body, and footer content.":::
 
-  * Just override bodyContent()、footerContent() to customize the widget.
+      * Just override bodyContent()、footerContent() to customize the widget.
 
-  export class NewsWidget extends Widget<void> {
+    export class NewsWidget extends Widget<void> {
 
     bodyContent(): JSX.Element | undefined {
         return (
@@ -255,7 +256,7 @@ export class NewsWidget extends Widget<void> {
                 <Text style={descStyle()}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim, elementum sed</Text>
             </div>
         );
-    }
+      }
 
     footerContent(): JSX.Element | undefined {
         return (
@@ -270,17 +271,17 @@ export class NewsWidget extends Widget<void> {
                 View details
             </Button>
         );
-    }
-}
+      }
+      }
 
 
-:::image type="content" source="../../assets/images/sbs-create-a-new-dasboard/override-body-content-footer-content.png" alt-text="Screenshot showing the overriding of body and footer content":::
+        :::image type="content" source="../../assets/images/sbs-create-a-new-dasboard/override-body-content-footer-content.png" alt-text="Screenshot showing the overriding of body and footer content":::
 
-  Just override bodyContent() to customize the widget
+      Just override bodyContent() to customize the widget
 
-    export class NewsWidget extends Widget<void> {
+      export class NewsWidget extends Widget<void> {
 
-    bodyContent(): JSX.Element | undefined {
+      bodyContent(): JSX.Element | undefined {
         return (
             <div style={contentLayoutStyle()}>
                 <Image src="image.svg" style={imageStyle()} />
@@ -288,193 +289,194 @@ export class NewsWidget extends Widget<void> {
                 <Text style={descStyle()}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim, elementum sed</Text>
             </div>
         );
-    }
+        }
 
-    }
+        }
 
-:::image type="content" source="../../assets/images/sbs-create-a-new-dasboard/override-body-content.png" alt-text="Screenshot showing the overriding of body content.":::
+        :::image type="content" source="../../assets/images/sbs-create-a-new-dasboard/override-body-content.png" alt-text="Screenshot showing the overriding of body content.":::
 
 - title: Add a new Graph API call
   durationInMinutes: 5
   content: |
 
-Add SSO First
+      **Add SSO First**
 
-Before you add your logic of calling a Graph API, you should enable your dashboard project to use SSO. It is convenient to add SSO related files by using Teams Toolkit. Refer to the following steps to add SSO.
+      Before you add your logic of calling a Graph API, you should enable your dashboard project to use SSO. It is convenient to add SSO related files by using Teams Toolkit. Refer to the following steps to add SSO.
 
-1. Select `Teams Toolkit` in the side bar > Select `Add features` in `DEVELOPMENT`.
+      1. Select `Teams Toolkit` in the side bar > Select `Add features` in `DEVELOPMENT`.
 
-:::image type="content" source="../../assets/images/sbs-create-a-new-dasboard/add-features.png" alt-text="Screenshot showing the selection of add features.":::
+        :::image type="content" source="../../assets/images/sbs-create-a-new-dasboard/add-features.png" alt-text="Screenshot showing the selection of add features.":::
 
-1. Choose `Single Sign-On` to add.
+      1. Choose `Single Sign-On` to add.
 
-:::image type="content" source="../../assets/images/ci-cd-workflows.png" alt-text="Screenshot showing the selection of CI/CD workflows.":::
+        :::image type="content" source="../../assets/images/ci-cd-workflows.png" alt-text="Screenshot showing the selection of CI/CD workflows.":::
 
-Move `auth-start.html` and `auth-end.html` in `auth/tab/public folder` to `tabs/public/`. These two HTML files are used for auth redirects.
+      Move `auth-start.html` and `auth-end.html` in `auth/tab/public folder` to `tabs/public/`. These two HTML files are used for auth redirects.
 
-Now you have already added SSO files to your project, and you can call Graph APIs. There are two types of Graph APIs, one will be called from the front-end(most of APIs, use delegated permissions), the other will be called from the back-end(sendActivityNotification, e.g., use application permissions). You can refer to this [tutorial](/graph/api/overview?view=graph-rest-beta) to check permission types of the Graph APIs you want to call.
+      Now you have already added SSO files to your project, and you can call Graph APIs. There are two types of Graph APIs, one will be called from the front-end(most of APIs, use delegated permissions), the other will be called from the back-end(sendActivityNotification, e.g., use application permissions). You can refer to this [tutorial](/graph/api/overview?view=graph-rest-beta) to check permission types of the Graph APIs you want to call.
 
-**Call graph api from the front-end(use delegated permissions)**
+      1. **Call graph api from the front-end(use delegated permissions)**
 
-If you want to call a Graph API from the front-end tab, you can refer to the following steps:
+      If you want to call a Graph API from the front-end tab, you can refer to the following steps:
 
-1. [Consent delegated permissions first](https://github.com/huimiu/tab-dashboard#step-1-consent-delegated-permissions-first)
-1. [Create a graph client by adding the scope related to the Graph API you want to call](https://github.com/huimiu/tab-dashboard#step-2-create-a-graph-client-by-adding-the-scope-related-to-the-graph-api-you-want-to-call)
-1. [Call the Graph API, and parse the response into a certain model, which will be used by front-end](https://github.com/huimiu/tab-dashboard#step-3-call-the-graph-api-and-parse-the-response-into-a-certain-model-which-will-be-used-by-front-end)
+      1. [Consent delegated permissions first](https://github.com/huimiu/tab-dashboard#step-1-consent-delegated-permissions-first)
+      1. [Create a graph client by adding the scope related to the Graph API you want to call](https://github.com/huimiu/tab-dashboard#step-2-create-a-graph-client-by-adding-the-scope-related-to-the-graph-api-you-want-to-call)
+      1. [Call the Graph API, and parse the response into a certain model, which will be used by front-end](https://github.com/huimiu/tab-dashboard#step-3-call-the-graph-api-and-parse-the-response-into-a-certain-model-which-will-be-used-by-front-end)
 
-Consent delegated permissions first
+      1. **Consent delegated permissions first**
 
-You can call [addNewScope(scopes: string[])](https://github.com/huimiu/tab-dashboard/blob/main/tabs/src/internal/addNewScopes.ts) to consent the scopes of permissions you want to add. And the consented status will be preserved in a global context [FxContext](https://github.com/huimiu/tab-dashboard/blob/main/tabs/src/internal/singletonContext.ts).
+      You can call [addNewScope(scopes: string[])](https://github.com/huimiu/tab-dashboard/blob/main/tabs/src/internal/addNewScopes.ts) to consent the scopes of permissions you want to add. And the consented status will be preserved in a global context [FxContext](https://github.com/huimiu/tab-dashboard/blob/main/tabs/src/internal/singletonContext.ts).
 
-You can refer to the Graph API V1.0 to get the scope name of the permission related to the [the Graph API V1.0](/graph/api/overview?view=graph-rest-1.0) you want to call.
+      You can refer to the Graph API V1.0 to get the scope name of the permission related to the [the Graph API V1.0](/graph/api/overview?view=graph-rest-1.0) you want to call.
 
-Create a graph client by adding the scope related to the Graph API you want to call
+      Create a graph client by adding the scope related to the Graph API you want to call
 
-You can refer to the following code snippet:
+      You can refer to the following code snippet:
 
-```
+      ```
 
-let teamsfx: TeamsFx;
-teamsfx = FxContext.getInstance().getTeamsFx();
-const graphClient: Client = createMicrosoftGraphClient(teamsfx, scope);
+      let teamsfx: TeamsFx;
+      teamsfx = FxContext.getInstance().getTeamsFx();
+      const graphClient: Client = createMicrosoftGraphClient(teamsfx, scope);
 
-```
+      ```
 
-Call the Graph API, and parse the response into a certain model, which will be used by front-end
+      1. **Call the Graph API, and parse the response into a certain model, which will be used by front-end**
 
-You can refer to the following code snippet:
+      You can refer to the following code snippet:
 
-```
-try {
-  const graphApiResult = await graphClient.api("<GRAPH_API_PATH>").get();
-  // Parse the graphApiResult into a Model you defined, used by the front-end.
-} catch (e) {}
-```
+      ```
+      try {
+      const graphApiResult = await graphClient.api("<GRAPH_API_PATH>").get();
+      // Parse the graphApiResult into a Model you defined, used by the front-end.
+      } catch (e) {}
 
-From the back-end(use application permissions)
+      ```
 
-If you want to call a Graph API from the back-end, you can refer to the following steps. In this tutorial, we use `sendActivityNotification` API for example.
+      **From the back-end(use application permissions)**
 
-1. [Consent application permissions first](https://github.com/huimiu/tab-dashboard#step-1-consent-application-permissions-first)
-1. [Add an Azure Function](https://github.com/huimiu/tab-dashboard#step-2-add-an-azure-function)
-1. [Get the installation id of your Dashboard app](https://github.com/huimiu/tab-dashboard#step-3-get-the-installation-id-of-your-dashboard-app)
-1. [Add your logic in Azure Function](https://github.com/huimiu/tab-dashboard#step-4-add-your-logic-in-azure-function)
-1. [Edit manifest file](https://github.com/huimiu/tab-dashboard#step-5-edit-manifest-file)
-1. [Call the Azure Function from the front-end](https://github.com/huimiu/tab-dashboard#step-5-call-the-azure-function-from-the-front-end)
+      If you want to call a Graph API from the back-end, you can refer to the following steps. In this tutorial, we use `sendActivityNotification` API for example.
 
-**Consent application permissions first.**
+      1. [Consent application permissions first](https://github.com/huimiu/tab-dashboard#step-1-consent-application-permissions-first)
+      1. [Add an Azure Function](https://github.com/huimiu/tab-dashboard#step-2-add-an-azure-function)
+      1. [Get the installation id of your Dashboard app](https://github.com/huimiu/tab-dashboard#step-3-get-the-installation-id-of-your-dashboard-app)
+      1. [Add your logic in Azure Function](https://github.com/huimiu/tab-dashboard#step-4-add-your-logic-in-azure-function)
+      1. [Edit manifest file](https://github.com/huimiu/tab-dashboard#step-5-edit-manifest-file)
+      1. [Call the Azure Function from the front-end](https://github.com/huimiu/tab-dashboard#step-5-call-the-azure-function-from-the-front-end)
 
-Go to [Azure portal](https://ms.portal.azure.com/#home) > Select `Azure Active Directory` > select `App registrations` in the side bar > select your Dashboard app > select `API permissions` in the side bar > Select `+Add a permission` > Choose `Microsoft Graph` > Choose `Application permissions` > Find the permissions you need > Select `Add permissions` button in the bottom > Select `✔Grant admin consent for XXX` and then click `Yes` button to finish the admin consent.
+      **Consent application permissions first.**
 
-**Add an Azure Function**
+      Go to [Azure portal](https://ms.portal.azure.com/#home) > Select `Azure Active Directory` > select `App registrations` in the side bar > select your Dashboard app > select `API permissions` in the side bar > Select `+Add a permission` > Choose `Microsoft Graph` > Choose `Application permissions` > Find the permissions you need > Select `Add permissions` button in the bottom > Select `✔Grant admin consent for XXX` and then click `Yes` button to finish the admin consent.
 
-In the VS Code side bar, select `Add features` in `Teams Toolkit` > Choose `Azure functions` > Enter the function name.
+      **Add an Azure Function**
 
-**Get the `installation id` of your Dashboard app**.
+      In the VS Code side bar, select `Add features` in `Teams Toolkit` > Choose `Azure functions` > Enter the function name.
 
-Go [Graph Explorer](https://developer.microsoft.com/en-us/graph/graph-explorer), and use the following api path to get a response.
+      **Get the `installation id` of your Dashboard app**.
 
-`https://graph.microsoft.com/v1.0/users/{user-id | user-principal-name}/teamwork/installedApps?$expand=teamsAppDefinition`
+        Go [Graph Explorer](https://developer.microsoft.com/en-us/graph/graph-explorer), and use the following api path to get a response.
 
-In the response, you should find the information of your Dashboard app, and then record the `id` of it as `installationId`, which will be used in step 4.
+      `https://graph.microsoft.com/v1.0/users/{user-id | user-principal-name}/teamwork/installedApps?$expand=teamsAppDefinition`
 
-:::image type="content" source="../../assets/images/sbs-create-a-new-dasboard/graph-explorer.png" alt-text="Screenshot showing the response preview.":::
+      In the response, you should find the information of your Dashboard app, and then record the `id` of it as `installationId`, which will be used in step 4.
 
-**Add your logic in Azure Function**
+        :::image type="content" source="../../assets/images/sbs-create-a-new-dasboard/graph-explorer.png" alt-text="Screenshot showing the response preview.":::
 
-In the `index.ts` under the folder named in step 2, you can add the following code snippet to call `sendActivityNotification`
+      **Add your logic in Azure Function**
 
-try {
-  // do sth here, to call activity notification api
-  //
-  const graphClient_userId: Client = await createMicrosoftGraphClient(teamsfx, [
-    "User.Read",
-  ]);
-  const userIdRes = await graphClient_userId.api("/me").get();
-  const userId = userIdRes["id"];
-  // get installationId
-  const installationId =
-    "ZmYxMGY2MjgtYjJjMC00MzRmLTgzZmItNmY3MGZmZWEzNmFkIyMyM2NhNWVlMy1iYWVlLTRiMjItYTA0OC03YjkzZjk0MDRkMTE=";
-  let postbody = {
-    topic: {
+      In the `index.ts` under the folder named in step 2, you can add the following code snippet to call `sendActivityNotification`
+
+      try {
+      // do sth here, to call activity notification api
+      //
+      c onst graphClient_userId: Client = await createMicrosoftGraphClient(teamsfx, [
+      "User.Read",
+      ]);
+      const userIdRes = await graphClient_userId.api("/me").get();
+      const userId = userIdRes["id"];
+      // get installationId
+      const installationId =
+      "ZmYxMGY2MjgtYjJjMC00MzRmLTgzZmItNmY3MGZmZWEzNmFkIyMyM2NhNWVlMy1iYWVlLTRiMjItYTA0OC03YjkzZjk0MDRkMTE=";
+      let postbody = {
+      topic: {
       source: "entityUrl",
       value:
         "https://graph.microsoft.com/v1.0/users/" +
         userId +
         "/teamwork/installedApps/" +
         installationId,
-    },
-    activityType: "taskCreated",
-    previewText: {
+        },
+      activityType: "taskCreated",
+        previewText: {
       content: "New Task Created",
-    },
-    templateParameters: [
+      },
+      templateParameters: [
       {
         name: "taskId",
         value: "12322",
       },
-    ],
-  };
+      ],
+      };
 
-  let teamsfx_app: TeamsFx;
-  teamsfx_app = new TeamsFx(IdentityType.App);
-  const graphClient: Client = createMicrosoftGraphClient(teamsfx_app, [
-    ".default",
-  ]);
-  await graphClient
-    .api("users/" + userId + "/teamwork/sendActivityNotification")
-    .post(postbody);
-} catch (e) {
-  console.log(e);
-}
+      let teamsfx_app: TeamsFx;
+      teamsfx_app = new TeamsFx(IdentityType.App);
+      const graphClient: Client = createMicrosoftGraphClient(teamsfx_app, [
+      ".default",
+        ]);
+      await graphClient
+      .api("users/" + userId + "/teamwork/sendActivityNotification")
+      .post(postbody);
+      } catch (e) {
+        console.log(e);
+      }
 
-**Edit manifest file**
+        **Edit manifest file**
 
-In the templates\appPackage\manifest.template.json, you should add the following properties, which are align with properties in `postbody` in Step 4.
+        In the templates\appPackage\manifest.template.json, you should add the following properties, which are align with properties in `postbody` in Step 4.
 
-"activities": {
-  "activityTypes": [
-    {
+      "activities": {
+        "activityTypes": [
+      {
       "type": "taskCreated",
       "description": "Task Created",
       "templateText": "{actor} created task {taskId}"
-    }
-  ]
-}
+      }
+      ]
+      }
 
-**Call the Azure Function from the front-end**
+      **Call the Azure Function from the front-end**
 
-Call the Azure Function from the front-end. You can refer to the following code snippet to call the Azure Function.
+      Call the Azure Function from the front-end. You can refer to the following code snippet to call the Azure Function.
 
-const functionName = process.env.REACT_APP_FUNC_NAME || "myFunc";
-async function callFunction(teamsfx?: TeamsFx) {
-  if (!teamsfx) {
-    throw new Error("TeamsFx SDK is not initialized.");
-  }
-  try {
-    const credential = teamsfx.getCredential();
-    const apiBaseUrl = teamsfx.getConfig("apiEndpoint") + "/api/";
-    // createApiClient(...) creates an Axios instance which uses BearerTokenAuthProvider to inject token to request header
-    const apiClient = createApiClient(
+      const functionName = process.env.REACT_APP_FUNC_NAME || "myFunc";
+      async function callFunction(teamsfx?: TeamsFx) {
+      if (!teamsfx) {
+      throw new Error("TeamsFx SDK is not initialized.");
+      }
+      try {
+      const credential = teamsfx.getCredential();
+      const apiBaseUrl = teamsfx.getConfig("apiEndpoint") + "/api/";
+      // createApiClient(...) creates an Axios instance which uses BearerTokenAuthProvider to inject token to request header
+      const apiClient = createApiClient(
       apiBaseUrl,
       new BearerTokenAuthProvider(
         async () => (await credential.getToken(""))!.token
       )
-    );
-    const response = await apiClient.get(functionName);
-    return response.data;
-  } catch (e) {}
-  }
+      );
+      const response = await apiClient.get(functionName);
+      return response.data;
+      } catch (e) {}
+      }
 
-  Refer to [this sample](https://github.com/OfficeDev/TeamsFx-Samples/blob/dev/hello-world-tab-with-backend/tabs/src/components/sample/AzureFunctions.tsx) for some helps. And you can read [this doc](/azure/azure-functions/functions-reference?tabs=blob) for more details.
+      Refer to [this sample](https://github.com/OfficeDev/TeamsFx-Samples/blob/dev/hello-world-tab-with-backend/tabs/src/components/sample/AzureFunctions.tsx) for some helps. And you can read [this doc](/azure/azure-functions/functions-reference?tabs=blob) for more details.
 
-  - title: Complete challenge
-    durationInMinutes: 5
-    content: |
+- title: Complete challenge
+  durationInMinutes: 5
+  content: |
 
-    Did you come up with something like this?
+      Did you come up with something like this?
 
-    :::image type="content" source="../assets/images/sbs-create-a-new-dasboard/dashboard.png" alt-text="Screenshot shows user profile information and recent Teams activity. ":::
+        :::image type="content" source="../assets/images/sbs-create-a-new-dasboard/dashboard.png" alt-text="Screenshot shows user profile information and recent Teams activity. ":::
 
 
 - title: Congratulations!
