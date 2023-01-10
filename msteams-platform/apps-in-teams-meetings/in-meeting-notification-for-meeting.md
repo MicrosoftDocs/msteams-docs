@@ -91,7 +91,7 @@ To send a targeted meeting notification, you must configure the `authorization` 
 
 1. Targeted meeting notification is triggered by a bot, user action, or via code. It's up to the bot API when to trigger the notification.
 
-1. Retrieve the user IDs of participants through [get participant API](meeting-apps-apis.md#get-participant-api) and [get Members API](/rest/api/azure/devops/memberentitlementmanagement/members/get?view=azure-devops-rest-7.0&preserve-view=true).
+1. Retrieve the user IDs of participants through [Get participant API](meeting-apps-apis.md#get-participant-api) and [Get members API](/rest/api/azure/devops/memberentitlementmanagement/members/get?view=azure-devops-rest-7.0&preserve-view=true).
 
 1. After retrieving the user IDs, include the user IDs in the request parameter.
 

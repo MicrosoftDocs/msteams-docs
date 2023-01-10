@@ -358,9 +358,9 @@ Following are the optional properties:
 
 | Property name | Description |
 |---|---|
-| `content.value.height` | Title of the notification. |
+| `content.value.title` | Title of the notification. |
 | `content.value.width` | Requested width of the notification. |
-| `content.value.title` | Requested height of the notification. |
+| `content.value.height` | Requested height of the notification. |
 | `content.value.url` | URL to be rendered in the notification. Make sure the URL is part of `validDomains` in app manifest. If empty string or no URL is provided, nothing will be rendered on a meeting notification. |
 | `ChannelData.OnBehalfOf` | This is to support [User attributes](../messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md#respond-to-the-task-module-submit-action). |
 | `onBehalfOf.displayName` | Name of the `person`. Used as fallback in case the name resolution is unavailable. |
