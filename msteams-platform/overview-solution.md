@@ -13,8 +13,6 @@ The Microsoft Teams Platform is a powerful, flexible platform for creating apps 
 
 ## The user story
 
-:::image type="content" source="assets/images/meetings-side-panel/sidepanelondesktopmobile_1.png" alt-text="The screenshot demonstrating the final output":::
-
 You've had a view of Teams offerings. You can now map them to user needs. Let’s revisit the scenario.
 
 The developer from Tours and Travel agency wants to build an app for their users, the travelers. The app must:
