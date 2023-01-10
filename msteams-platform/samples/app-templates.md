@@ -96,6 +96,7 @@ App template code samples are a collection of sample apps for Microsoft Teams pl
 >
 > * Microsoft is not actively managing the source code. The complete source code is open source and you can explore, fork, and modify the source code to meet your specific requirements.
 > * You must not use Microsoft Power Platform to create apps that are to be published to the Teams app store. Microsoft Power Platform apps can be published to an organization’s app store only.
+> * Applications based on Poll, Survey, Checklist, Quiz and Training templates will be retired soon. The applications will stay active until February and users will be able to retrieve any data until early March. By the end of March the applications will be fully retired.
 
 The following table describes App template code samples:  
 
