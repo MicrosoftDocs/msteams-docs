@@ -23,8 +23,8 @@ items:
   content: |
 
     * [NodeJS](https://nodejs.org/en/), fully tested on NodeJS 14, 16
-    * A Microsoft 365 account. If you don't have Microsoft 365 account, apply one from Microsoft 365 developer program
-    * Teams Toolkit Visual Studio Code Extension or TeamsFx CLI
+    * A Microsoft 365 account. If you don't have Microsoft 365 account, apply one from [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program)
+    * [Teams Toolkit Visual Studio Code Extension](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) or [TeamsFx CLI](../../toolkit/TeamsFx-CLI.md)
 
 - title: Create a dashboard
   durationInMinutes: 5
@@ -197,8 +197,9 @@ items:
 
     Since the widget class provides some methods that can be overridden to customize the widget, you can customize the widget by overriding these methods.
 
-    * Override `headerContent()`、`bodyContent()`、`footerContent()` to customize the widget.
+    **Override `headerContent()`、`bodyContent()`、`footerContent()` to customize the widget.**
 
+    ```
     export class NewsWidget extends Widget<void> {
 
     headerContent(): JSX.Element | undefined {
@@ -233,11 +234,13 @@ items:
         );
     }
     }
+    ```
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/override-header-count.png" alt-text="Screenshot showing the overriding of header, body, and footer content.":::
 
-      * Just override bodyContent()、footerContent() to customize the widget.
+      **Just override bodyContent()、footerContent() to customize the widget.**
 
+    ```
     export class NewsWidget extends Widget<void> {
 
     bodyContent(): JSX.Element | undefined {
@@ -263,12 +266,13 @@ items:
         );
       }
       }
-
+    ```
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/override-body-content-footer-content.png" alt-text="Screenshot showing the overriding of body and footer content":::
 
-      Just override bodyContent() to customize the widget
+      **Just override bodyContent() to customize the widget**
 
+      ```
       export class NewsWidget extends Widget<void> {
 
       bodyContent(): JSX.Element | undefined {
@@ -281,6 +285,8 @@ items:
         }
 
         }
+
+        ```
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/override-body-content.png" alt-text="Screenshot showing the overriding of body content.":::
 
@@ -305,8 +311,6 @@ items:
       Now you have already added SSO files to your project, and you can call Graph APIs. There are two types of Graph APIs, one will be called from the front-end(most of APIs, use delegated permissions), the other will be called from the back-end(sendActivityNotification, for example, use application permissions). You can refer to this [tutorial](/graph/api/overview?view=graph-rest-beta) to check permission types of the Graph APIs you want to call.
 
       **Call graph api from the front-end(use delegated permissions)**
-
-      If you want to call a Graph API from the front-end tab, you can refer to the following steps:
 
       1. [Consent delegated permissions first](https://github.com/huimiu/tab-dashboard#step-1-consent-delegated-permissions-first)
       1. [Create a graph client by adding the scope related to the Graph API you want to call](https://github.com/huimiu/tab-dashboard#step-2-create-a-graph-client-by-adding-the-scope-related-to-the-graph-api-you-want-to-call)
