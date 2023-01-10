@@ -101,7 +101,7 @@ For any other external deep linking scenarios, you can use `app.openLink`, which
 
 Starting with version 2.0 of TeamsJS, the Teams platform concept of [task module](../../task-modules-and-cards/what-are-task-modules.md) has been renamed to *dialog* for better consistency with existing concepts across the Microsoft 365 developer ecosystem. Accordingly, the `tasks` namespace has been deprecated in favor of the new `dialog` namespace.
 
-This new dialog capability is split into two subcapabilities: `dialog.url` corresponds to HTML-based dialogs, `dialog.adaptiveCard` is for Adaptive Card-based dialogs. For bot-based dialogs, further subspaces have been added: `dialog.url.bot` and `dialog.adaptiveCard.bot`. Be sure to call `isSupported` on these subcapabilities before you use them to ensure they are supported on the current host of your application (Teams, Microsoft 365 app, or Outlook).
+The new `dialog` capability is split into two subcapabilities: `dialog.url` for HTML-based dialogs, and `dialog.adaptiveCard` for Adaptive Card-based dialogs. For interacting with bot-based dialogs, you can use the `dialog.url.bot` or `dialog.adaptiveCard.bot` subnamespaces, depending on the dialog type. Be sure to call `isSupported` on these subcapabilities before you use them to ensure they are supported on the current host of your application (Teams, Microsoft 365 app, or Outlook).
 
 ## What's new in TeamsJS version 2.x.x
 
