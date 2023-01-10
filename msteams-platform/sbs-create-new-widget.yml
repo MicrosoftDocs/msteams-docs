@@ -14,10 +14,9 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-   
-   This step-by-step guide helps you to create a new widget. You'll see the following output:
+    This step-by-step guide helps you to create a new widget. You'll see the following output:
 
-    :::image type="content" source="../assets/images/sbs-create-a-new-dasboard/dashboard.png" alt-text="Screenshot shows user profile information and recent Teams activity. ":::
+    :::image type="content" source="../assets/images/sbs-create-a-new-dashboard/dashboard.png" alt-text="Screenshot shows user profile information and recent Teams activity. ":::
     
 - title: Prerequisites
   durationInMinutes: 1
