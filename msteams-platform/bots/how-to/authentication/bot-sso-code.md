@@ -58,34 +58,34 @@ To update your app's code:
 
 # [csharp](#tab/cs1)
 
-    Add the following code snippet to `AdapterWithErrorHandler.cs` (or the equivalent class in your app's code):
+   Add the following code snippet to `AdapterWithErrorHandler.cs` (or the equivalent class in your app's code):
 
-    ```csharp
+  ```csharp
     base.Use(new TeamsSSOTokenExchangeMiddleware(storage, configuration["ConnectionName"]));
-    ```
+   ```
 
 # [JavaScript](#tab/js1)
 
    Add the following code snippet to `index.js` (or the equivalent class in your app's code):
 
-    ```JavaScript
+   ```JavaScript
     const {TeamsSSOTokenExchangeMiddleware} = require('botbuilder');
     const tokenExchangeMiddleware = new TeamsSSOTokenExchangeMiddleware(memoryStorage, env.connectionName);
     adapter.use(tokenExchangeMiddleware);
-    ```
+   ```
 
-    ---
+   ---
 
-    >[!NOTE]
+   >[!NOTE]
     > You might receive multiple responses for a given request if the user has multiple active endpoints. You must eliminate all duplicate or redundant responses with the token. For more information about signin/tokenExchange, see [TeamsSSOTokenExchangeMiddleware Class](/python/api/botbuilder-core/botbuilder.core.teams.teams_sso_token_exchange_middleware.teamsssotokenexchangemiddleware?view=botbuilder-py-latest#remarks&preserve-view=true).
 
 1. Use the following code snippet for requesting a token.
 
 # [csharp](#tab/cs2)
 
-    After you add the `AdapterWithErrorHandler.cs`, your code should be as shown below:
+   After you add the `AdapterWithErrorHandler.cs`, your code should be as shown below:
 
-    ```csharp
+   ```csharp
     public class AdapterWithErrorHandler : CloudAdapter
     {
         public AdapterWithErrorHandler(
