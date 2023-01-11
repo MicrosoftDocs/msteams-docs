@@ -5,7 +5,7 @@ description: Create custom channel, group tab with Node.js, ASP.NET Core, ASP.NE
 ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
-zone_pivot_groups: teams-app-environment
+zone_pivot_groups: teams-app-environment-blazor
 ---
 
 # Create a channel tab or group tab
@@ -665,6 +665,12 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
     :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="Channel tab ASPNET MVC uploaded":::
 
     Now you've successfully created and added your channel or group tab in Teams.
+
+::: zone-end
+
+::: zone pivot="blazor-app"
+
+[Blazor step-by-step guide](~/sbs-gs-blazorupdate.yml)
 
 ::: zone-end
 
