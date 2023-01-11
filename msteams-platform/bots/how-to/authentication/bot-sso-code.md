@@ -102,7 +102,7 @@ To update your app's code:
             {
                 // Log any leaked exception from the application.
                 // NOTE: In production environment, you should consider logging this to
-                // Azure Application Insights. Visit https://aka.ms/bottelemetry to see how
+                // Azure Application Insights. Visit https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-telemetry?view=azure-bot-service-4.0&tabs=csharp to see how
                 // to add telemetry capture to your bot.
                 logger.LogError(exception, $"[OnTurnError] unhandled error : {exception.Message}");
 
@@ -153,7 +153,7 @@ To update your app's code:
     const restify = require('restify');
     
     // Import required bot services.
-    // See https://aka.ms/bot-services to learn more about the different parts of a bot.
+    // See https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0 to learn more about the different parts of a bot.
     const {
         CloudAdapter,
         ConversationState,
@@ -174,7 +174,7 @@ To update your app's code:
     console.log(`\n${ conname } is the con name`);
     
     // Create adapter.
-    // See https://aka.ms/about-bot-adapter to learn more about how bots work.
+    // See https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0 to learn more about how bots work.
     const adapter = new CloudAdapter(botFrameworkAuthentication);
     const memoryStorage = new MemoryStorage();
     const tokenExchangeMiddleware = new TeamsSSOTokenExchangeMiddleware(memoryStorage, env.connectionName);
@@ -183,7 +183,7 @@ To update your app's code:
     adapter.onTurnError = async (context, error) => {
         // This check writes out errors to console log .vs. app insights.
         // NOTE: In production environment, you should consider logging this to Azure
-        //       application insights. See https://aka.ms/bottelemetry for telemetry
+        //       application insights. See https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-telemetry?view=azure-bot-service-4.0&tabs=csharp for telemetry
         //       configuration instructions.
         console.error(`\n [onTurnError] unhandled error: ${ error }`);
     
