@@ -244,6 +244,12 @@ To share the entire app to stage, in the app manifest, you must configure `meeti
 > [!NOTE]
 > For your app to pass validation, when you create a deep link from your website, web app, or Adaptive Card, use **Share in meeting** as the string or copy.
 
+### Code samples
+
+| Sample name | Description | .NET | Node.js | Python |
+|----------------|-----------------|--------------|----------------|
+| Share in meeting | Share in meeting allows users to share documents or third-party web apps to the meeting stage. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) | NA |
+
 ## See also
 
 * [Apps for Teams meetings and calls](../../apps-in-teams-meetings/teams-apps-in-meetings.md)

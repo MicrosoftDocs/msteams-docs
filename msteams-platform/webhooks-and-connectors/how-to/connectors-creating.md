@@ -235,7 +235,7 @@ Follow the [step-by-step guide](../../sbs-teams-connectors.yml) to create and te
 
 The following table provides the sample name and its description:
 
-|**Sample name** | **Description** | **.NET** | **Node.js** |
+| **Sample name** | **Description** | **.NET** | **Node.js** |
 |----------------|------------------|--------|----------------|
 | Connectors | Sample Office 365 Connector generating notifications to Teams channel.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-todo-notification/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-github-notification/nodejs)|
 | Generic connectors sample |Sample code for a generic connector that is easy to customize for any system that supports webhooks.| | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-generic/nodejs)|

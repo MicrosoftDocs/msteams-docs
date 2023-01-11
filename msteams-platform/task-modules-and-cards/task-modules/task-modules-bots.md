@@ -201,7 +201,7 @@ The schema for Bot Framework card actions is different from Adaptive Card `Actio
 
 ## Code sample
 
-|Sample name | Description | .NET | Node.js|
+| Sample name | Description | .NET | Node.js|
 |----------------|-----------------|--------------|----------------|
 |Task module sample bots-V4 | Samples for creating task modules. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/nodejs)|
 
