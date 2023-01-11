@@ -1,7 +1,7 @@
 ---
 title: Meeting apps APIs
 author: v-sdhakshina
-description: Learn meeting apps API references that are available for Teams client and Bot Framework SDK's with examples, code samples, and response codes.
+description: Learn meeting apps API references that are available for Teams client and Bot Framework SDKs with examples, code samples, and response codes.
 ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
@@ -294,7 +294,7 @@ The `targetedMeetingNotification` API allows apps to send notifications to speci
 Get supported user ID format for targeted meeting notification:
 
 * [Get participant API](#get-participant-api)
-* [Get members API](/rest/api/azure/devops/memberentitlementmanagement/members/get?view=azure-devops-rest-7.0&preserve-view=true)
+* [Get members API](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile)
 
 Example of pairwise ID:
 

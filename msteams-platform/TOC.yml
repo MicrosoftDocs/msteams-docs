@@ -435,7 +435,7 @@
       href: concepts/build-and-test/share-in-meeting.md
     - name: Build in-meeting notification for meeting
       href: apps-in-teams-meetings/in-meeting-notification-for-meeting.md
-      displayName: bubble
+      displayName: bubble, targeted meeting, in-meeting, notification
     - name: Build extensible conversations for meeting chat
       href: apps-in-teams-meetings/build-extensible-conversation-for-meeting-chat.md
     - name: Build apps for anonymous users
