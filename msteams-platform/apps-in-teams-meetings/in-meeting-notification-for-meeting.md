@@ -139,7 +139,7 @@ To send targeted meeting notifications, you must configure the `authorization` p
     }
     ```
 
-For more information on `targetedMeetingNotification`, see [Meeting apps APIs](meeting-apps-apis.md#targeted-meeting-notification-api).
+For more information on `targetedMeetingNotification` API, see [Meeting apps APIs](meeting-apps-apis.md#targeted-meeting-notification-api).
 
 ## Code sample
 
