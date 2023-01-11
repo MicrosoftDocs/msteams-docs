@@ -32,7 +32,7 @@ The following table provides a list of APIs available across the Microsoft Teams
 |[**Get real-time Teams meeting events**](#get-real-time-teams-meeting-events-api)|Fetch real-time meeting events, such as actual start and end time.| [Microsoft Bot Framework SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingstartasync?view=botbuilder-dotnet-stable&preserve-view=true) |
 | [**Get incoming audio state**](#get-incoming-audio-state) | Allows an app to get the incoming audio state setting for the meeting user.| [Microsoft Teams JavaScript library](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
 | [**Toggle incoming audio**](#toggle-incoming-audio) | Allows an app to toggle the incoming audio state setting for the meeting user from mute to unmute or vice-versa.| [Microsoft Teams JavaScript library](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
-|[**Targeted meeting notification API**](#targeted-meeting-notification-api) | Targeted meeting notification allows you to send notification to specific participants during the meeting. | [Microsoft Teams JavaScript library](Need to confirm with Kartik) |
+|[**Targeted meeting notification API**](#targeted-meeting-notification-api) | Targeted meeting notification allows you to send notification to specific participants during the meeting. | [Microsoft Bot Framework SDK ](Work in progress.) |
 
 ## Get user context API
 
@@ -284,7 +284,7 @@ The following table includes the response codes:
 
 ## Targeted meeting notification API
 
-The `targetedMeetingNotification` API allows apps to send notifications to specific participants in a meeting. Apps send a targeted meeting notification based on bot, user action, or via code. The API is available through bot API.
+The `targetedMeetingNotification` API allows apps to send notifications to specific participants in a meeting. Apps send targeted meeting notifications based on user action. The API is available through bot API.
 
 > [!NOTE]
 >
@@ -295,10 +295,6 @@ Get supported user ID format for targeted meeting notification:
 
 * [Get participant API](#get-participant-api)
 * [Get members API](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile)
-
-Example of pairwise ID:
-
-`id=29:1I12M_iy2wTa97T6LbjTh4rJCWrtw2PZ3lxpD3yFv8j2YPnweY2lpCPPAn3RIOPP7rghfHauUz48I1t7ANhj4CA`
 
 ### Example
 
@@ -372,7 +368,7 @@ The following table includes the response codes:
 | Response code | Description |
 |---|---|
 | **202** | Notification is successfully sent. |
-| **207** | Notifications are sent only to partial number of participants. |
+| **207** | Notifications are sent only to a few participants. |
 | **400** | Meeting notification request payload validation failed. |
 | **401** | Bot token is invalid. |
 | **403** | Bot is not allowed to send the notification. |
@@ -1096,6 +1092,7 @@ The following table provides the response codes:
 * [Apps for Teams meetings](teams-apps-in-meetings.md)
 * [Live Share SDK](teams-live-share-overview.md)
 * [Teams cloud meeting recording](/microsoftteams/cloud-recording)
+* [Build in-meeting notification for Teams meeting](in-meeting-notification-for-meeting.md)
 
 ## Next step
 
