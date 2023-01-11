@@ -3,7 +3,7 @@ title: Notification bot in Teams
 author: surbhigupta
 description: Learn how a notification bot works in Teams, and to customize notification behavior.
 ms.topic: conceptual
-ms.author: surbhi-MSFT
+ms.author: surbhigupta
 ms.localizationpriority: high
 ---
 
