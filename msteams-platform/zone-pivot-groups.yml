@@ -28,6 +28,8 @@ groups:
     title: Node.js
   - id: razor-csharp
     title: ASP.NET Core
+  - id: mvc-csharp
+    title: ASP.NET Core MVC
   - id: blazor-app
     title: Blazor
 - id: What-new-features
