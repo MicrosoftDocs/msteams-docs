@@ -89,7 +89,9 @@ To send targeted meeting notifications, you must configure the `authorization` p
 > [!NOTE]
 > You can send a targeted meeting notification to 50 participants in a meeting. If you want to send a targeted meeting notification to more than 50 participants, you must call the `targetedMeetingNotification` API again.
 
-1. Targeted meeting notification can be triggered by user action.
+Targeted meeting notification can be triggered by user action.
+
+To enable the targeted meeting notification:
 
 1. Retrieve the user IDs of the participants through [Get participant API](meeting-apps-apis.md#get-participant-api) and [Get members API](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile).
 
@@ -140,6 +142,8 @@ To send targeted meeting notifications, you must configure the `authorization` p
     }
     ```
 
+     Targeted meeting notification is enabled.
+
 For more information on `targetedMeetingNotification` API, see [Meeting apps APIs](meeting-apps-apis.md#targeted-meeting-notification-api).
 
 ## Code sample
@@ -159,4 +163,3 @@ Follow the [step-by-step guide](../sbs-meeting-content-bubble.yml) to generate i
 * [Build apps for Teams meeting stage](build-apps-for-teams-meeting-stage.md)
 * [Build extensible conversation for meeting chat](build-extensible-conversation-for-meeting-chat.md)
 * [Build apps for anonymous users](build-apps-for-anonymous-user.md)
-* [Meeting app APIs](meeting-apps-apis.md)
