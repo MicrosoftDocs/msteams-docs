@@ -93,7 +93,7 @@ To send targeted meeting notifications, you must configure the `authorization` p
 
 1. Retrieve the user IDs of the participants through [Get participant API](meeting-apps-apis.md#get-participant-api) and [Get members API](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile).
 
-  **The following is an example of a user ID**:`id=29:1I12M_iy2wTa97T6LbjTh4rJCWrtw2PZ3lxpD3yFv8j2YPnweY2lpCPPAn3RIOPP7rghfHauUz48I1t7ANhj4CA`
+   **The following is an example of a user ID**:`id=29:1I12M_iy2wTa97T6LbjTh4rJCWrtw2PZ3lxpD3yFv8j2YPnweY2lpCPPAn3RIOPP7rghfHauUz48I1t7ANhj4CA`
 
 1. Include the user IDs in the request parameter.
 
