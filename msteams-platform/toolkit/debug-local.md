@@ -185,7 +185,7 @@ Perform the following steps using the Teams Toolkit to debug your app after you 
    Visual Studio launches the Teams app inside Microsoft Teams client in your browser.
 
    > [!Note]
-   > Learn more by visiting <https://learn.microsoft.com/en-us/microsoftteams/platform/toolkit/teams-toolkit-fundamentals?pivots=visual-studio-code&preserve-view=true>.
+   > Learn more by visiting [Teams Toolkit Overview](teams-toolkit-fundamentals.md).
 
 1. After Microsoft Teams is loaded, select **Add** to install your app in Teams.
 

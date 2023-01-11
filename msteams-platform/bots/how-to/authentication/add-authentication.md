@@ -17,7 +17,7 @@ OAuth 2.0 is an open standard for authentication and authorization used by Micro
 
 See [OAuth 2 Simplified](https://aka.ms/oauth2-simplified) for a basic understanding, and [OAuth 2.0](https://oauth.net/2/) for the complete specification.
 
-For more information about how the Azure Bot Service handles authentication, see [User authentication within a conversation](/azure/bot-service/bot-builder-concept-authentication?view=azure-bot-service-4.0).
+For more information about how the Azure Bot Service handles authentication, see [User authentication within a conversation](/azure/bot-service/bot-builder-concept-authentication?view=azure-bot-service-4.0&preserve-view=true).
 
 In this article you'll learn:
 
@@ -315,7 +315,7 @@ With the preliminary settings done, let's focus on the creation of the bot to us
 
 ### Deploy the bot to Azure
 
-To deploy the bot, follow the steps in the How to [Deploy your bot to Azure](/azure/bot-service/provision-and-publish-a-bot?view=azure-bot-service-4.0&tabs=userassigned%2Ccsharp).
+To deploy the bot, follow the steps in the How to [Deploy your bot to Azure](/azure/bot-service/provision-and-publish-a-bot?view=azure-bot-service-4.0&tabs=userassigned%2Ccsharp&preserve-view=true).
 
 Alternatively, while in Visual Studio, you can follow these steps:
 
@@ -344,7 +344,7 @@ Alternatively, while in Visual Studio, you can follow these steps:
 
 ## Test the bot using the Emulator
 
-If you haven't done it already, install the [Microsoft Bot Framework Emulator](https://aka.ms/bot-framework-emulator-readme). See also [Debug with the Emulator](/azure/bot-service/bot-service-debug-emulator?view=azure-bot-service-4.0&tabs=csharp).
+If you haven't done it already, install the [Microsoft Bot Framework Emulator](https://aka.ms/bot-framework-emulator-readme). See also [Debug with the Emulator](/azure/bot-service/bot-service-debug-emulator?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true).
 
 In order for the bot sample login to work you must configure the Emulator.
 
@@ -641,7 +641,7 @@ This section provides Bot authentication v3 SDK sample.
 
 ## See also
 
-- [Add authentication through Azure Bot Service](/azure/bot-service/bot-builder-authentication?view=azure-bot-service-4.0&tabs=userassigned%2Caadv2%2Ccsharp)
+- [Add authentication through Azure Bot Service](/azure/bot-service/bot-builder-authentication?view=azure-bot-service-4.0&tabs=userassigned%2Caadv2%2Ccsharp&preserve-view=true)
 - [Get access on behalf of a user](/graph/auth-v2-user)
 
 <!-- Footnote-style links -->
