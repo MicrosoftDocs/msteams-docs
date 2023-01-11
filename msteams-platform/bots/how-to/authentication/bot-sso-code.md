@@ -60,9 +60,9 @@ To update your app's code:
 
 Add the following code snippet to `AdapterWithErrorHandler.cs` (or the equivalent class in your app's code):
 
-    ```csharp
+```csharp
     base.Use(new TeamsSSOTokenExchangeMiddleware(storage, configuration["ConnectionName"]));
-    ```
+```
 
 # [JavaScript](#tab/js1)
 
