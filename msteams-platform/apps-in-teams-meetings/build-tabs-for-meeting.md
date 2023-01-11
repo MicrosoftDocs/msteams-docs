@@ -210,12 +210,12 @@ The following is the flow diagram of a cached app when it's added to the meeting
 After you opt into app caching, the webview that is used to host the embedded app is reused as users navigate to different instances of the app within a window. The webview used to host the app is hidden when the users go out of the app and shown when the users return to the app. When the app is cached, any audio that is playing is muted.
 
 > [!NOTE]
-> If the app caching is not enabled, the webview is recreated every time the users go out and return to the app.
+> If the app caching isn't enabled, the webview is recreated every time the users go out and return to the app.
 
 Following are the parameters to control the conditions for the apps to be added or removed from the cache (based on the configuration updates, the parameters can be modified):
 
-* App is removed from the cache if the system memory is full.
-* App is removed from the cache if the maximum cache size is exceeded.
+* If the system memory load is high, the app is removed from the cache.
+* If the app exceeds maximum cache size, the app is removed from the cache.
 * If the user doesn't return to the app within 20 minutes, the app is removed from the cache.
 * The app is not cached if Teams doesn't receive the `readyToUnload` signal from the app within 30 seconds after sending the `beforeUnload` notification.
 * App caching is disabled if the system memory is less than 4 GB.
