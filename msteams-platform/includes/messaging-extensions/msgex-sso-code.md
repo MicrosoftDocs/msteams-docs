@@ -41,17 +41,17 @@ To update your app's code:
 
 # [csharp](#tab/cs1)
 
-    Add the following code snippet to `AdapterWithErrorHandler.cs` (or the equivalent class in your app's code):
+Add the following code snippet to `AdapterWithErrorHandler.cs` (or the equivalent class in your app's code):
 
-    ```csharp
+```csharp
     base.Use(new TeamsSSOTokenExchangeMiddleware(storage, configuration["ConnectionName"]));
     ```
 
 # [JavaScript](#tab/js1)
 
-    Add the following code snippet to `index.js` (or the equivalent class in your app's code):
+Add the following code snippet to `index.js` (or the equivalent class in your app's code):
 
-    ```JavaScript
+```JavaScript
     const {TeamsSSOTokenExchangeMiddleware} = require('botbuilder');
     const tokenExchangeMiddleware = new TeamsSSOTokenExchangeMiddleware(memoryStorage, env.connectionName);
     adapter.use(tokenExchangeMiddleware);
@@ -66,9 +66,9 @@ To update your app's code:
 
 # [csharp](#tab/cs2)
 
-    After you add the `AdapterWithErrorHandler.cs`, your code should be as shown below:
+After you add the `AdapterWithErrorHandler.cs`, your code should be as shown below:
 
-    ```csharp
+```csharp
     public class AdapterWithErrorHandler : CloudAdapter
     {
         public AdapterWithErrorHandler(
@@ -121,9 +121,9 @@ To update your app's code:
 
 # [JavaScript](#tab/js2)
 
-    After you add the code to `index.js`, your code should be as shown below:
+After you add the code to `index.js`, your code should be as shown below:
 
-    ```JavaScript
+```JavaScript
     // index.js is used to setup and configure your bot.
 
     // Import required packages.
