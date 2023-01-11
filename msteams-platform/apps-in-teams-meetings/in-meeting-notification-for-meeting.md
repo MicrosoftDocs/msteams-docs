@@ -59,7 +59,7 @@ Targeted meeting notification allows apps to send notifications to specific part
 
 > [!NOTE]
 >
-> * Adaptive Cards aren't supported within targeted meeting notification.
+> * Adaptive Cards aren't supported for targeted meeting notification.
 > * Targeted meeting notification is supported for scheduled meetings, instant meeting (Meet now), one-on-one calls, and group calls.
 
 In the following image, a meeting notification requesting payment is sent to one of the participants in the meeting. The meeting notification is only visible to the targeted participant:
