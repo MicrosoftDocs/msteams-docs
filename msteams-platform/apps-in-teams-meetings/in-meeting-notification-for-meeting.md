@@ -62,7 +62,7 @@ Targeted meeting notification allows apps to send notifications to specific part
 > * Adaptive Cards aren't supported within targeted meeting notification.
 > * Targeted meeting notification is supported for scheduled meetings, instant meeting (Meet now), one-on-one calls, and group calls.
 
-In the following image, the participants are attending a yoga session scheduled in a Teams meeting. A meeting notification is sent to one participant requesting for a payment. The meeting notification is only visible to the targeted participant:
+In the following image, a meeting notification requesting for a payment is sent to one participant. The meeting notification is only visible to the targeted participant:
 
  :::image type="content" source="../assets/images/apps-in-meetings/reminder-sent.png" alt-text="Screenshot showing the payment done by a participant in a meeting.":::
 
@@ -89,7 +89,7 @@ To send a targeted meeting notification, you must configure the `authorization` 
 > [!NOTE]
 > You can send targeted meeting notification to 50 participants in a meeting. If you want to send targeted meeting notification to more than 50 participants, you must call the `targetedMeetingNotification` API again.
 
-1. Targeted meeting notification can be triggered by user action or via code.
+1. Targeted meeting notification can be triggered by user action.
 
 1. Retrieve the user IDs of participants through [Get participant API](meeting-apps-apis.md#get-participant-api) and [Get members API](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile).
 
@@ -108,7 +108,7 @@ To send a targeted meeting notification, you must configure the `authorization` 
       "type": "targetedMeetingNotification",
       "value": {
         "recipients": [ 
-    "29:1I12M_iy2wTa97T6LbjTh4rJCWrtw2PZ3lxpD3yFv8j2YPnweY2lpCPPAn3RI0PP7rghfHauUz48I1t7ANhj4CA"
+        "29:1I12M_iy2wTa97T6LbjTh4rJCWrtw2PZ3lxpD3yFv8j2YPnweY2lpCPPAn3RI0PP7rghfHauUz48I1t7ANhj4CA"
          ], 
         "surfaces": [ 
           { 
@@ -120,7 +120,7 @@ To send a targeted meeting notification, you must configure the `authorization` 
                 "width": "400", 
                 "title": "Targeted meeting Notification", 
                 "url": "https://somevalidurl.com"           
-    }
+                }
             } 
           } 
         ] 
