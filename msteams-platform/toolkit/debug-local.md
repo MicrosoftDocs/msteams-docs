@@ -176,7 +176,7 @@ Perform the following steps using the Teams Toolkit to debug your app after you 
    :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-signin-m365.png" alt-text="Sign in to Microsoft 365 account":::
 
    > [!Note]
-   > Learn more about sideloading permission by visiting <https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading>.
+   > Learn more about sideloading permission by visiting <https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading&preserve-view=true>.
 
 1. Select **Debug** > **Start Debugging**, or directly select **F5**.
 
@@ -185,7 +185,7 @@ Perform the following steps using the Teams Toolkit to debug your app after you 
    Visual Studio launches the Teams app inside Microsoft Teams client in your browser.
 
    > [!Note]
-   > Learn more by visiting <https://learn.microsoft.com/en-us/microsoftteams/platform/toolkit/teams-toolkit-fundamentals?pivots=visual-studio-code>.
+   > Learn more by visiting <https://learn.microsoft.com/en-us/microsoftteams/platform/toolkit/teams-toolkit-fundamentals?pivots=visual-studio-code&preserve-view=true>.
 
 1. After Microsoft Teams is loaded, select **Add** to install your app in Teams.
 
