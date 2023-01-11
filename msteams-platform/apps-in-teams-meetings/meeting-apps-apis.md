@@ -341,7 +341,7 @@ GET POST /v1/meetings/{meetingId}/notification
 
 | Property name | Description |
 |---|---|
-| **meetingId** | The meeting ID is available through bot invoke and TeamsJS library. |
+| `meetingId` | The meeting ID is available through bot invoke and TeamsJS library. |
 | `type` |`targetedMeetingNotification` |
 | `recipients` | List of user IDs. Get user IDs for meeting participants through [Get participant API](#get-participant-api). Get the entire list of chat roster using [Get members API](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile). Empty or null recipients list will return 400.|
 | `surface` | `meetingStage` keyword. |
