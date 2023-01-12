@@ -333,8 +333,8 @@ items:
       Now you've added the SSO files to your project, you can call Graph APIs. 
       
       There are two types of Graph APIs:
-      * Front-end(most of APIs, use delegated permissions). 
-      * Back-end(sendActivityNotification, for example, use application permissions). 
+      * Front-end (most of APIs, use delegated permissions). 
+      * Back-end (sendActivityNotification, for example, use application permissions). 
       
       Refer [tutorial](/graph/api/overview?view=graph-rest-beta) to check permission types of the Graph APIs you want to call.
 
