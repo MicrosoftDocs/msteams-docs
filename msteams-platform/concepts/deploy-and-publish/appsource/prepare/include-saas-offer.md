@@ -187,7 +187,7 @@ The following example shows how users can purchase subscription plans for a fict
 
 ## Admin purchasing experience
 
-Admins can purchase app subscription plans in the [Teams admin center](/MicrosoftTeams/purchase-third-party-apps).
+Admins can purchase app subscription plans in the [Teams admin center](/microsoftteams/purchase-third-party-apps).
 
 ## Remove a SaaS offer from your app
 
