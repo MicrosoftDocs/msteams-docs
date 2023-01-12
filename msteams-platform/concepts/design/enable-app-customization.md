@@ -9,8 +9,7 @@ ms.topic: overview
 
 # Enable app customization and block apps till admin allows
 
-Microsoft Teams lets admins customize Teams app to enhance store experience and adhere to their organization's branding. An app developer can allow their app to be customized by a Teams admin. For more information, see
-[Customize apps in the Teams admin center](/MicrosoftTeams/customize-apps).
+Microsoft Teams lets admins customize apps to enhance the organization's store experience and to adhere to their organization's branding. This article describes how developers can allow their app to be customized by a Teams admin. For information about how admins customize an app, [Customize apps in the Teams admin center](/microsoftteams/customize-apps).
 
 ## Enable customization for your Microsoft Teams app
 
@@ -22,18 +21,18 @@ Some possible examples of this feature include:
 * Updating the app name from *Contoso* to *Contoso Agent*, which is the name users in the org will see.
 (Note: Users adding a connector to a chat or a channel will still see the original app name, *Contoso*.)
 
-You can enable this feature by defining the app properties that your customers can customize in the [`configurableProperties` section in the Teams app manifest](/microsoftteams/platform/resources/schema/manifest-schema#configurableproperties), starting with version 1.11. That can be done in the [Developer Portal for Teams](https://dev.teams.microsoft.com/home) if you've chosen to use the Developer Portal to edit the manifest of your app.
+You can enable the feature by defining the app properties that your customers can customize in the [`configurableProperties` section in the Teams app manifest](/microsoftteams/platform/resources/schema/manifest-schema#configurableproperties), starting with version 1.11. You can use [Developer Portal for Teams](https://dev.teams.microsoft.com/home) to edit the manifest of your app.
 
 > [!IMPORTANT]
 > You can't test this feature during development. App customization isn't supported when sideloading or publishing to an org's app catalog.
 
 ### User considerations
 
-Provide guidelines for customers (specifically Teams admins) who want to customize your app. For more information, see [customize apps in Teams](/MicrosoftTeams/customize-apps).
+Provide guidelines for customers (specifically Teams admins) who want to customize your app. For more information, see [customize apps in Teams](/microsoftteams/customize-apps).
 
 ## Block apps by default for users until an admin approves
 
-To enhance Teams app experience, you can hide an app from users by default until admin allows to unhide the app. For example, Contoso Electronics has created a help desk app for Teams. To enable appropriate functioning of the app, Contoso Electronics’ wants the customers to first set up specific properties of the app. The app is hidden by default and is available to users only after the admin allows it.
+To enhance Teams app experience, you can hide an app from users by default until admin allows to unhide the app. For example, Contoso Electronics has created a help desk app for Teams. To enable appropriate functioning of the app, Contoso Electronics’ wants the customers to first configure specific properties of the app. The app is hidden by default and is available to users only after the admin allows it.
 
 To hide the app, in the app manifest file, set the `defaultBlockUntilAdminAction` property to `true`. When the property is set to `true`, in Teams admin center > **Manage apps**, **Blocked by publisher** appears in app's **Status**:
 
@@ -51,4 +50,4 @@ If by default, you don't want the app to be hidden, you can update the `defaultB
 ## See also
 
 * [App manifest schema](/microsoftteams/platform/resources/schema/manifest-schema)
-* [Customize apps in the Teams admin center](/MicrosoftTeams/customize-apps)
+* [Customize apps in the Teams admin center](/microsoftteams/customize-apps)
