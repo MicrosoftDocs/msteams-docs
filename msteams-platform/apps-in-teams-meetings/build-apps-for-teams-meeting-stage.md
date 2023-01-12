@@ -68,6 +68,8 @@ The following image shows a tab added to the meeting details page in the Teams m
 
    :::image type="content" source="../assets/images/meeting-stage/meeting-share-to-stage-mobile.png" alt-text="This screenshot shows meeting stage view of the app you shared to meeting in Teams mobile.":::
 
+---
+
 Use the following APIs to share specific part of the app:
 
 |Method| Description| Source|
