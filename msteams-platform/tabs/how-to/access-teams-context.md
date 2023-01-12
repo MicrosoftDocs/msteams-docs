@@ -173,6 +173,8 @@ The information can be retrieve by calling `microsoftTeams.getContext(function(c
 }
 ```
 
+---
+
 # [TeamsJS v2](#tab/teamsjs-v2)
 
 ## TypeScript
