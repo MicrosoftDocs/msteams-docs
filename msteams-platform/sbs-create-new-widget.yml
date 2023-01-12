@@ -30,17 +30,17 @@ items:
   durationInMinutes: 5
   content: |
 
-    This is a Teams tab dashboard app that uses the Fluent UI and the Microsoft Graph API to display a user's profile information and recent Teams activity.
+    Teams tab dashboard app uses the Fluent UI and the Microsoft Graph API to display a user's profile information and recent Teams activity.
 
     To create a dashboard:
 
-     1. From Teams Toolkit side bar, select **Create a new Teams app**.
+     1. From Teams Toolkit side bar, select `Create a new Teams app`.
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/create-a-new teams-app.png" alt-text="Screenshot showing the selection of Create a new Teams app":::
 
      1. Select `Create a new Teams app`. 
 
-        :::image type="content" source="../../../assets/images/sbs-create-a-new-dashboard/create-a-new-teams-app-2.png" alt-text="Screenshot shows the selection of new Teams app.":::
+        :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/create-a-new-teams-app-2.png" alt-text="Screenshot shows the selection of new Teams app.":::
 
      1. Select `Dashboard tab` from Teams app section.
 
@@ -66,7 +66,9 @@ items:
 
       `teamsfx new--interactive false--capabilities "dashboard-tab"--programming-language "TypeScript"--folder "./"--app-name dashboard-cli-001`
 
-      After you successfully created the project, start local debugging via F5 in VSCode. Select Debug (Microsoft Edge) or Debug (Chrome) debug option of your preferred browser, after running this template and you'll see a tab app loaded as below:
+      After you successfully created the project, start local debugging via F5 in VSCode. 
+      
+      Select Debug (Microsoft Edge) or Debug (Chrome) debug option of your preferred browser, you'll see a tab app loaded:
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/dashboard.png" alt-text="Screenshot shows user profile information and recent Teams activity. ":::
 
@@ -171,7 +173,9 @@ items:
 
      **Add the widget to the **Dashboard**
 
-      1. Go to `tabs/src/views/dashboards/SampleDashboard.tsx`, if you want to create a new dashboard, please refer to [How to add a new dashboard](https://github.com/OfficeDev/TeamsFx/wiki/Embed-a-dashboard-canvas-in-Teams).
+      1. Go to `tabs/src/views/dashboards/SampleDashboard.tsx`.
+      If you want to create a new dashboard, refer to [How to add a new dashboard](https://github.com/OfficeDev/TeamsFx/wiki/Embed-a-dashboard-canvas-in-Teams).
+      
       1. Update your dashboardLayout() method to add the widget to the dashboard:
 
       ```
@@ -206,7 +210,7 @@ items:
   durationInMinutes: 5
   content: |
 
-    Since the widget class provides some methods that can be overridden to customize the widget, you can customize the widget by overriding these methods.
+    The widget class provides few methods that can be overridden to customize the widget:
 
     Override `headerContent()`、`bodyContent()`、`footerContent()` to customize the widget.
 
@@ -325,7 +329,13 @@ items:
 
       1. Move `sso` folder under `auth/tab` to `tabs/src/sso/`.
 
-      Now you have added the SSO files to your project, you can call Graph APIs. There are two types of Graph APIs, one will be called from the front-end(most of APIs, use delegated permissions), the other will be called from the back-end(sendActivityNotification, for example, use application permissions). You can refer to this [tutorial](/graph/api/overview?view=graph-rest-beta) to check permission types of the Graph APIs you want to call.
+      Now you've added the SSO files to your project, you can call Graph APIs. 
+      
+      There are two types of Graph APIs:
+      * Front-end(most of APIs, use delegated permissions), 
+      * Back-end(sendActivityNotification, for example, use application permissions). 
+      
+      Refer [tutorial](/graph/api/overview?view=graph-rest-beta) to check permission types of the Graph APIs you want to call.
 
       ### Call graph api from the front-end(use delegated permissions)**
 
@@ -393,11 +403,11 @@ items:
 
       In the Visual Studio Code side bar, select `Add features` in `Teams Toolkit` > select `Azure functions` and enter the function name.
 
-       :::image type="content" source="../../../assets/images/sbs-create-a-new-dashboard/azure-functions.png" alt-text="Screenshot showing the selection of azure functions.":::
+       :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/azure-functions.png" alt-text="Screenshot showing the selection of Azure functions.":::
 
       **Add your logic in Azure Function**
 
-      In the `index.ts`/`index.ts` under the folder named in step 2, you can add the your logic which contains back-end graph api calling with application permissions. Refer to the following code snippet:
+      In the `index.ts`/`index.ts` under the folder named in step 2, you can add your logic that contains back-end graph api calling with application permissions. Refer to the following code snippet:
       
       ```
       /**
@@ -405,7 +415,7 @@ items:
       * The HTTP request should contain an SSO token queried from Teams in the header.
       * Before trigger this function, teamsfx binding would process the SSO token and generate teamsfx configuration.
       *
-      * You should initializes the teamsfx SDK with the configuration and calls these APIs.
+      * You should initialize the teamsfx SDK with the configuration and calls these APIs.
       *
       * The response contains multiple message blocks constructed into a JSON object, including:
       * - An echo of the request body.
@@ -464,10 +474,10 @@ items:
       ```
       ---
 
-      For more information refer to the following:
+      For more information, see the following:
 
       * [sample](https://github.com/OfficeDev/TeamsFx-Samples/blob/dev/hello-world-tab-with-backend/tabs/src/components/sample/AzureFunctions.tsx)
-      * [azure functions](/azure/azure-functions/functions-reference?tabs=blob) for more details.
+      * [Azure functions](/azure/azure-functions/functions-reference?tabs=blob) for more details.
 
 - title: Complete challenge
   durationInMinutes: 5
