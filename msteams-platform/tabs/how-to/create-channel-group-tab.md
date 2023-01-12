@@ -726,7 +726,7 @@ To install the Microsoft Teams Toolkit extension:
 1. Open `vs_enterprise__3bed52501a604464b1eff2ce580fd4eb.exe` from your download folder.
 1. Select **Continue** in the **Visual Studio Installer** page to configure your installation.
 
-    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/visual-studio-installer.png" alt-text="Screenshot of Visual Studio Installer with Continue option highlighted in red.":::  
+    :::image type="content" source="~/msteams-platform/assets/images/teams-toolkit-v2/blazor/visual-studio-installer.png" alt-text="Screenshot of Visual Studio Installer with Continue option highlighted in red.":::  
 
     1. Select **ASP.NET and web development** under **Workloads**.
 
@@ -734,7 +734,7 @@ To install the Microsoft Teams Toolkit extension:
 
     1. Select **Install**.
 
-       :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/vs.install.png" alt-text="Screenshot of Visual Studio Enterprise Preview with the option Asp.NET and web development, Microsoft Teams development tools under installation details and install highlighted in red.":::  
+       :::image type="content" source="~/msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/vs.install.png" alt-text="Screenshot of Visual Studio Enterprise Preview with the option Asp.NET and web development, Microsoft Teams development tools under installation details and install highlighted in red.":::  
 
      Your Visual Studio is installed in a few minutes.
 
