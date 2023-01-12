@@ -67,7 +67,19 @@ The following image shows a tab added to the meeting details page in the Teams m
 
 1. This results in rendering tab on the stage for every participant in the meeting.
 
-   :::image type="content" source="../assets/images/meeting-stage-view.png" alt-text="This screenshot shows meeting stage view of the app you shared to meeting.":::
+   # [Desktop](#tab/desktop)
+
+The following image shows a tab added to the meeting details page in the Teams desktop client:
+
+   :::image type="content" source="../assets/images/meeting-stage-view.png" alt-text="This screenshot shows meeting stage view of the app you shared to meeting in Teams desktop.":::
+
+# [Mobile](#tab/mobile)
+
+The following image shows a tab added to the meeting details page in the Teams mobile client:
+
+   :::image type="content" source="../assets/images/meeting-stage-view-mobile.png" alt-text="This screenshot shows meeting stage view of the app you shared to meeting in Teams mobile.":::
+
+   
 
 ### Apps in channel meeting
 
