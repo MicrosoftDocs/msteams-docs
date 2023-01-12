@@ -14,6 +14,9 @@ Application can open the profile dialog through deep links and help users to lea
 > [!NOTE]
 > If your app is approved for mobile platform, you can deep link to an app on mobile. Apple App Store Connect Team ID is required additionally for the deep link to work on Teams-iOS. For more information, see [how to update Apple App Store Connect Team ID](../deploy-and-publish/appsource/prepare/update-apple-store-team-connect-id.md).
 
+> [!NOTE]
+> App deep linking is not supported for custom apps
+
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 ## Open the application profile dialog
