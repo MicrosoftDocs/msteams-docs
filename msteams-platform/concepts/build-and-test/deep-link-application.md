@@ -253,6 +253,6 @@ The following table provides information on `APP_ID` and `BOT_APP_ID`:
 
 ## Code Sample
 
-| Sample name | Description | C# |Node.js|
+| Sample name | Description | .NET |Node.js|
 |-------------|-------------|------|----|
 |Deep link consuming Subentity ID | Teams sample app for demonstrating deep link from bot chat to tab consuming Subentity ID.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs)|
