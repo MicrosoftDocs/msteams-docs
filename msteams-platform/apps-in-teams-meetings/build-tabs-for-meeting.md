@@ -203,7 +203,7 @@ The following is the flow diagram of the first launch of an app that wants to op
 
 :::image type="content" source="../assets/images/saas-offer/first-launch-app.png" alt-text="This screenshot shows the flow of the first launch of the app in meeting side panel.":::
 
-The following is the flow diagram of a cached app when it's added to the meeting side panel:
+The following is the flow diagram of the launch of cached app:
 
 :::image type="content" source="../assets/images/saas-offer/cached-launch-app.png" alt-text="This screenshot shows the flow of the cached launch of the app in meeting side panel.":::
 
@@ -269,13 +269,15 @@ The following are the limitations for app caching:
 
 * The Teams client invokes the `loadHandler` only after the `unload` sequence of the app is completed. For example, if a user launches tab A of your app and then launches tab B of the same app, tab B won't get the load signal until the tab A invokes the `readyToUnload` callback.
 
-* After an app moves to the cached state, it has a one-minute grace period to get the memory usage under the allowed threshold of 225 MB. If the app exceeds the threshold for more than a minute, the app is removed from the cache. The memory usage value of the app is the *workingSetSize* of the webview in the Electron [getappMetrics API](https://www.electronjs.org/docs/latest/api/app#appgetappmetrics).
-
 * Apps are cached on a per-window basis.
 
 * App caching isn't supported for the meeting stage or Task module contexts, because these can be opened on top of the tab and the same webview can't be used to render the content in the tab and the Task module.
 
 * App caching happens on a per app (not on a per tab) basis within the same window.
+
+* Register only the `beforeUnload` handler if your app doesn't require app caching but needs time to safely save state (if you want to ensure that going away from your app doesn't cause the app content to be abruptly removed from the Document Object Model (DOM)). If the app isn't registered for the `load` event, it's removed from the DOM after the unload flow completes.
+
+* For app caching to support only in meetings, register the `load` or `beforeUnload` handlers if the context is `meetingSidePanel`. Meetings is the first surface to support app caching. Even if app caching in other contexts such as `channels` and `chat` happens to work, it isn't officially supported at this point and is subject to change.
 
 * Apps are expected to sleep when cached (use minimal compute or network resources and minimizes SDK requests). All the register handlers and the following SDK requests are allowed when the app is cached:
 
@@ -288,12 +290,6 @@ The following are the limitations for app caching:
   * `getAuthToken`
   * `readyToUnload`
   * `getConfig/getSettings`
-
-* Register only the `beforeUnload` handler if your app doesn't require app caching but needs time to safely save state (if you want to ensure that going away from your app doesn't cause the app content to be abruptly removed from the Document Object Model (DOM)). If the app isn't registered for the `load` event, it's removed from the DOM after the unload flow completes.
-
-* For app caching to support only in meetings, register the `load` or `beforeUnload` handlers if the context is `meetingSidePanel`. Meetings is the first surface to support app caching. Even if app caching in other contexts such as `channels` and `chat` happens to work, it isn't officially supported at this point and is subject to change.
-
-* App caching isn't supported for apps that require device permissions as per the manifest.
 
 ### Troubleshooting
 
