@@ -7,8 +7,8 @@ metadata:
   level: Beginner
   ms.date: 01/06/2023
   ms.topic: interactive-tutorial
-  nextTutorialHref: teams-toolkit-fundamentals
-  nextTutorialTitle: teams-toolkit-fundamentals
+  nextTutorialHref: get-started\get-started-overview.md
+  nextTutorialTitle: get-started\get-started-overview.md
   ms.custom: mvc
   ms.localizationpriority: high
 items:
