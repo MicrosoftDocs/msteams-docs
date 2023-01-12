@@ -207,10 +207,10 @@ The following is the flow diagram of the launch of cached app:
 
 :::image type="content" source="../assets/images/saas-offer/cached-launch-app.png" alt-text="This screenshot shows the flow of the cached launch of the app in meeting side panel.":::
 
-When you opt into app caching, the webview that is used to host the embedded app is reused as users navigate to different instances of the app within a window. The webview used to host the app is hidden when the users go out of the app and shown when the users return to the app. When the app is cached, any audio that is playing is muted.
+When you opt into app caching, the webview that is used to host the embedded app is reused as users navigate to different instances of the app within a window. The webview used to host the app is hidden when the users leave the app and shown when the users return to the app. When the app is cached, any audio that is playing is muted.
 
 > [!NOTE]
-> If the app caching isn't enabled, the webview is recreated every time the users go out and return to the app.
+> If the app caching isn't enabled, the webview is recreated every time the users leave and return to the app.
 
 Following are the parameters to control the conditions for the apps to be added or removed from the cache (based on the configuration updates, the parameters can be modified):
 
@@ -265,7 +265,7 @@ The following are the limitations for app caching:
 
 * App caching is supported only in Teams desktop client. In Teams web client, even if the app registers load handlers, the app is removed from the cache after the unload sequence is completed.
 
-* Register the `load` and `beforeUnload` handlers early in your launch sequence. If the Teams client doesn’t identify these registrations before the user goes out of the app, the app isn't cached.
+* Register the `load` and `beforeUnload` handlers early in your launch sequence. If the Teams client doesn’t identify these registrations before the user leaves the app, the app isn't cached.
 
 * The Teams client invokes the `loadHandler` only after the `unload` sequence of the app is completed. For example, if a user launches tab A of your app and then launches tab B of the same app, tab B won't get the load signal until the tab A invokes the `readyToUnload` callback.
 
@@ -277,7 +277,7 @@ The following are the limitations for app caching:
 
 * Register only the `beforeUnload` handler if your app doesn't require app caching but needs time to safely save state (if you want to ensure that going away from your app doesn't cause the app content to be abruptly removed from the Document Object Model (DOM)). If the app isn't registered for the `load` event, it's removed from the DOM after the unload flow completes.
 
-* Follow the guidelines in this document to enable your app with app caching in Teams meeting. For app caching to support only in meetings, register the `load` or `beforeUnload` handlers if the context is `sidePanel`. Meetings is the first surface to support app caching.
+* Follow the guidelines in this section to enable your app with app caching in Teams meeting first. For app caching support only in meetings, register the `load` or `beforeUnload` handlers if the context is `sidePanel`. Even if app caching in other contexts such as `channels` and `chat` happens to work, it isn't officially supported at this point and is subject to change.
 
 * Apps are expected to sleep when cached (use minimal compute or network resources and minimizes SDK requests). All the register handlers and the following SDK requests are allowed when the app is cached:
 
