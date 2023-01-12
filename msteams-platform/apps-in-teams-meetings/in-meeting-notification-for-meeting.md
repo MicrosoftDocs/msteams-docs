@@ -51,7 +51,7 @@ The following table provides the user types and lists the features that each use
 | In-tenant user | Available | Available |  Available | Available |
 | Guest | Available | Available |  Available | Available |
 | Federated or External | Available | Not available | Not available | Available |
-| Anonymous | Not available | Not available | Not available | Not available |
+| Anonymous | Available | Available |  Available | Available |
 
 ## Code sample
 

@@ -30,13 +30,13 @@ To allow anonymous users to interact with the tab app, ensure to update your app
 
 To test your app's experience for anonymous users, select the URL in the meeting invite and join the meeting from a private browser window.
 
-## Anonymous user authentication flow
-
-As anonymous users aren't AAD accounts, skype token isn't available for anonymous users in third-party apps. This means that if `getAuthToken` is called in client SDK it would fail. Ensure that your app identifies the anonymous users and provides the correct experience in the meetings. You can use [Get user context](~/tabs/how-to/access-teams-context.md#get-context-by-using-the-microsoft-teams-javascript-library) API to determine whether user is anonymous or not and redirect to the SSO page of the app.
-
 ## Admin setting for anonymous user app interaction
 
 Teams admins can use the Teams admin center to enable or disable anonymous user app interaction for the entire tenant. This anonymous users can interact with apps in meetings setting is enabled by default. If your app needs to be accesed by anonymous users ensure that tenant admins enable the anonymous user app interaction. For more information, see [allow anonymous users to interact with apps in meetings](/microsoftteams/meeting-settings-in-teams).
+
+## Anonymous user authentication flow
+
+As anonymous users aren't AAD accounts, AAD authentication or `getAuthToken` from the client SDK fails while authenticating the anonymous users. If you need to authenticate anonymous users, your app must identify anonymous users and provide an alternative authentication experience in the meetings. You can determine if a user is anonymous by validating [user's context](#in-meeting-getcontext-from-teams-client-library).
 
 ## In-Meeting getContext from Teams client library
 
