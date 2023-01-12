@@ -361,9 +361,9 @@ To get your app ready for zero install link unfurling, follow these steps:
      > [!NOTE]
      > After the link is pasted in the message compose area, Teams unfurls the link into a card and prompts the user to sign in to the app. If the user doesn't sign in to the app, the link isn't posted as a card in the chat.
 
-1. Advantages and limitations.
+1. **Advantages and limitations**:
 
-# [Advantages](#tab/advantages)
+   # [Advantages](#tab/advantages)
 
     Zero install link unfurling helps you provide enhanced experience to the users, such as:
 
@@ -371,15 +371,15 @@ To get your app ready for zero install link unfurling, follow these steps:
 
     * Create a welcome card for your app to show a preview with the placeholder fields.
 
-# [Limitations](#tab/limitations)
+   # [Limitations](#tab/limitations)
 
     The following are the limitations:
 
      * The bot can only send back a response as `result` or `auth` as the value for the `type` property in response to the `composeExtension/anonymousQueryLink` invoke request. The user can log an error for all other response types, such as, *silentAuth* and *config*.
 
-    * The bot can't send back an acv2 card in response to the `composeExtension/anonymousQueryLink` invoke request, either as a result or as a pre-auth card in auth.
+     * The bot can't send back an acv2 card in response to the `composeExtension/anonymousQueryLink` invoke request, either as a result or as a pre-auth card in auth.
 
-    * If the bot selects to send back the `"type": "auth"` with a pre-auth card, the Teams client strips away any action buttons from the card, and adds a sign in action button to get users to authenticate into your app.
+     * If the bot selects to send back the `"type": "auth"` with a pre-auth card, the Teams client strips away any action buttons from the card, and adds a sign in action button to get users to authenticate into your app.
     ---
 
 ## Remove link unfurling cache
