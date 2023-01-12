@@ -92,7 +92,8 @@ items:
 
      Define a data model is based on business scenario, add it in `tabs/src/models folder`. The widget model must be defined according to the data you want to display in the widget. Here's a sample data model:
 
-     ```export interface SampleModel {
+     ```
+     export interface SampleModel {
       content: string;
       }
 
@@ -317,17 +318,17 @@ items:
 
       Before you add the logic of calling a Graph API, you should enable dashboard project to use SSO. It's convenient to add SSO related files by using Teams Toolkit. Refer to the following:
 
-      1. Select `Teams Toolkit` in the side bar and Select `Add features` in `DEVELOPMENT`.
+        1. Select `Teams Toolkit` in the side bar and Select `Add features` in `DEVELOPMENT`.
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/add-features.png" alt-text="Screenshot showing the selection of added features.":::
 
-      1. Select `Single Sign-On` to add.
+        1. Select `Single Sign-On` to add.
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/single-sign-on.png" alt-text="Screenshot showing the selection of Single Sign-On.":::
 
-      1. Move `auth-start.html` and `auth-end.html` in `auth/tab/public folder` to `tabs/public/`. These two HTML files are used for auth redirects.
+        1. Move `auth-start.html` and `auth-end.html` in `auth/tab/public folder` to `tabs/public/`. These two HTML files are used for auth redirects.
 
-      1. Move `sso` folder under `auth/tab` to `tabs/src/sso/`.
+        1. Move `sso` folder under `auth/tab` to `tabs/src/sso/`.
 
       Now you've added the SSO files to your project, you can call Graph APIs. 
       
@@ -401,7 +402,7 @@ items:
 
       **Add an Azure Function**
 
-      In the Visual Studio Code side bar, select `Add features` in `Teams Toolkit` > select `Azure functions` and enter the function name.
+      In the Visual Studio Code side bar, select `Add features` in `Teams Toolkit`, select `Azure functions` and enter the function name.
 
        :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/azure-functions.png" alt-text="Screenshot showing the selection of Azure functions.":::
 
