@@ -85,17 +85,17 @@ A public scheduled channel meeting has the same list of apps as its parent team.
 
 However, the tab instances in a channel meeting are separate from the tabs in the channel itself. For example, suppose a *Development* channel has a *Polly* tab. If you create a *Standup* meeting in that channel, that meeting would not have a *Polly* tab, until you explicitly [add the tab to the meeting](#meeting-details-view).
 
-# [Desktop](#tab/desktop)
+# [Channel meeting desktop](#tab/channel-meeting-desktop)
 
    The following image shows a tab added to a channel meeting in the Teams desktop client:
 
-    :::image type="content" source="../assets/images/apps-in-meetings/apps-in-channel-meeting-desktop.png" alt-text="This screenshot shows meeting stage view of the app you shared to meeting in Teams desktop.":::
+   :::image type="content" source="../assets/images/apps-in-meetings/apps-in-channel-meeting-desktop.png" alt-text="This screenshot shows a tab added to a channel meeting in Teams desktop.":::
 
-# [Mobile](#tab/mobile)
+# [Channel meeting mobile](#tab/channel-meeting-mobile)
 
    The following image shows a tab added to a channel meeting in the Teams mobile client:
 
-    :::image type="content" source="../assets/images/apps-in-meetings/apps-in-channel-meeting-mobile.png" alt-text="This screenshot shows meeting stage view of the app you shared to meeting in Teams desktop.":::
+   :::image type="content" source="../assets/images/apps-in-meetings/apps-in-channel-meeting-mobile.png" alt-text="This screenshot shows a tab added to a channel meeting in Teams mobile.":::
 
 In public scheduled channel meetings, after a meeting tab is added, you can select the meeting object in the meeting details page to access the tab.
 
