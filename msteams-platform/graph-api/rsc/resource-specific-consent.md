@@ -590,4 +590,3 @@ If your Teams admin allows custom app uploads, you can [sideload your app](~/con
 
 * [Test resource-specific consent permissions in Teams](test-resource-specific-consent.md)
 * [Resource-specific consent in Microsoft Teams for admins](/MicrosoftTeams/resource-specific-consent)
-* [Resource-specific consent](resource-specific-consent.md)
