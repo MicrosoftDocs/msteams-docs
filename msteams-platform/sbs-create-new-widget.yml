@@ -171,12 +171,12 @@ items:
 
       ```
 
-     **Add the widget to the **Dashboard**
+      **Add the widget to the **Dashboard**
 
       1. Go to `tabs/src/views/dashboards/SampleDashboard.tsx`.
       If you want to create a new dashboard, refer to [How to add a new dashboard](https://github.com/OfficeDev/TeamsFx/wiki/Embed-a-dashboard-canvas-in-Teams).
       
-      1. Update your dashboardLayout() method to add the widget to the dashboard:
+      1. Update your `dashboardLayout()` method to add the widget to the dashboard:
 
       ```
       protected dashboardLayout(): void | JSX. Element {
@@ -253,7 +253,7 @@ items:
     ```
     ---
 
-        :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/override-header-count.png" alt-text="Screenshot showing the overriding of header, body, and footer content.":::
+    :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/override-header-count.png" alt-text="Screenshot showing the overriding of header, body, and footer content.":::
 
     Override bodyContent()、footerContent() to customize the widget.
 
