@@ -40,26 +40,23 @@ As anonymous users aren't AAD accounts, AAD authentication or `getAuthToken` fro
 
 ## In-Meeting getContext from Teams client library
 
-Apps receive the following info for an anonymous user when they call the `getContext` API from the shared app stage. You can recognize anonymous users by checking for a `userLicenseType` value of **Unknown**.
+Apps receive the following info for an anonymous user when they call the `getContext` API from the shared app stage. You can recognize anonymous users by checking for a `userLicenseType` value of **Anonymous**.
 
 ```csharp
-"userObjectId": "8:anon:<GUID1>",
-"userLicenseType": "Unknown",
-"loginHint": "8:teamsvisitor:<ID>",
-"userPrincipalName": "8:teamsvisitor:<ID>",
-"tid": "<meeting organizer tenant ID>"
+"userObjectId": "",
+"userLicenseType": "Anonymous",
+"loginHint": "",
+"userPrincipalName": "",
 ```
 
 | **Property name** | **Description** |
 | --- | --- |
-| `userObjectId` | Unique generated value for the anonymous user. This value cannot be used in calls to Graph APIs. |
-| `userLicenseType` | `Unknown`, represents anonymous user. |
-| `loginHint` | Unique generated value. This value cannot be used as a hint in login flows. |
-| `userPrincipalName` | Unique generated value. This value cannot be used in calls to Graph APIs. |
-| `tid` | Tenant ID of the meeting organizer. |
+| `userLicenseType` | `Anonymous`, represents anonymous user. |
 
 > [!NOTE]
 > When an anonymous user joins a meeting, a new user ID is generated. Whenever the anonymous user re-joins a meeting, a different user ID is generated.
+
+For more information on `getContext`, see [get context by using the Microsoft Teams JavaScript library.](~/tabs/how-to/access-teams-context.md#get-context-by-using-the-microsoft-teams-javascript-library)
 
 ## Bot activities and APIs
 
