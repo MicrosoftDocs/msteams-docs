@@ -246,14 +246,14 @@ We support the following attachment types:
 
 * [Thumbnail card](~/task-modules-and-cards/cards/cards-reference.md#thumbnail-card)
 * [Hero card](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
-* [Connector card for Microsoft 365 Groups](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
+* [Connector card for Microsoft 365 Groups](~/task-modules-and-cards/cards/cards-reference.md#connector-card-for-microsoft-365-groups)
 * [Adaptive card](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 
 For more information, see [Cards](~/task-modules-and-cards/what-are-cards.md) for an overview.
 
 To learn how to use the thumbnail and hero card types, see [Add cards and card actions](~/task-modules-and-cards/cards/cards-actions.md).
 
-For additional documentation regarding the connector card for Microsoft 365 Groups, see [Using connector card for Microsoft 365 Groups](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card).
+For additional documentation regarding the connector card for Microsoft 365 Groups, see [Using connector card for Microsoft 365 Groups](~/task-modules-and-cards/cards/cards-reference.md#connector-card-for-microsoft-365-groups).
 
 The result list is displayed in the Microsoft Teams UI with a preview of each item. The preview is generated in one of two ways:
 
