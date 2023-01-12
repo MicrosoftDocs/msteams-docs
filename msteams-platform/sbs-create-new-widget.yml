@@ -286,7 +286,7 @@ items:
     ```
     ---
 
-        :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/override-body-content-footer-content.png" alt-text="Screenshot showing the overriding of body and footer content":::
+    :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/override-body-content-footer-content.png" alt-text="Screenshot showing the overriding of body and footer content":::
 
     Override bodyContent() to customize the widget
 
@@ -307,7 +307,7 @@ items:
     ```
     ---
 
-        :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/override-body-content.png" alt-text="Screenshot showing the overriding of body content.":::
+    :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/override-body-content.png" alt-text="Screenshot showing the overriding of body content.":::
 
 - title: Add a new Graph API call
   durationInMinutes: 5
@@ -477,7 +477,7 @@ items:
       For more information, see the following:
 
       * [sample](https://github.com/OfficeDev/TeamsFx-Samples/blob/dev/hello-world-tab-with-backend/tabs/src/components/sample/AzureFunctions.tsx)
-      * [Azure functions](/azure/azure-functions/functions-reference?tabs=blob) for more details.
+      * [Azure functions](/azure/azure-functions/functions-reference?tabs=blob)
 
 - title: Complete challenge
   durationInMinutes: 5
