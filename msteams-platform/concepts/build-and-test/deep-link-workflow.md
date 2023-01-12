@@ -50,6 +50,8 @@ Example: `https://teams.microsoft.com/l/meeting/new?subject=test%20subject&atten
 
 > [!NOTE]
 > The search parameters don't support `+` signal in place of whitespace (``). Ensure your URI encoding code returns `%20` for spaces. For example, `?subject=test%20subject` is good, but `?subject=test+subject` is bad.
+> [!NOTE]
+> External email addresses cannot be passed as valid recepients in the deeplink.
 
 The query parameters are:
 
