@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 
 # Build apps for anonymous users
 
-You can build tabs and task modules in your app to engage with anonymous meeting participants.
+An anonymous user is a user who joins a meeting via a link. You can build bots, messaging extensions, cards and task modules in your app to engage with anonymous meeting participants.
 
 To build apps for anonymous users ensure the following:
 
@@ -32,11 +32,11 @@ To test your app's experience for anonymous users, select the URL in the meeting
 
 ## Admin setting for anonymous user app interaction
 
-Teams admins can use the Teams admin center to enable or disable anonymous user app interaction for the entire tenant. This anonymous users can interact with apps in meetings setting is enabled by default. If your app needs to be accesed by anonymous users ensure that tenant admins enable the anonymous user app interaction. For more information, see [allow anonymous users to interact with apps in meetings](/microsoftteams/meeting-settings-in-teams).
+Teams admins can use the Teams admin center to enable or disable anonymous user app interaction for the entire tenant. This anonymous user can interact with the apps in meetings if the app interaction is enabled by default. If your app needs to be accessed by anonymous users ensure that tenant admins enable the anonymous user app interaction. For more information, see [allow anonymous users to interact with apps in meetings](/microsoftteams/meeting-settings-in-teams).
 
 ## Anonymous user authentication flow
 
-As anonymous users aren't AAD accounts, AAD authentication or `getAuthToken` from the client SDK fails while authenticating the anonymous users. If you need to authenticate anonymous users, your app must identify anonymous users and provide an alternative authentication experience in the meetings. You can determine if a user is anonymous by validating [user's context](#in-meeting-getcontext-from-teams-client-library).
+As anonymous users aren't Azure Active Directory (Azure AD) accounts, Azure AD authentication or `getAuthToken` from the client SDK fails while authenticating the anonymous users. If you need to authenticate anonymous users, your app must identify anonymous users and provide an alternative authentication experience in the meetings. You can determine if a user is anonymous by validating [user's context](#in-meeting-getcontext-from-teams-client-library).
 
 ## In-Meeting getContext from Teams client library
 
@@ -51,16 +51,16 @@ Apps receive the following info for an anonymous user when they call the `getCon
 
 | **Property name** | **Description** |
 | --- | --- |
-| `userLicenseType` | `Anonymous`, represents anonymous user. |
+| `userLicenseType` | `Anonymous` represents anonymous user. |
 
 > [!NOTE]
-> When an anonymous user joins a meeting, a new user ID is generated. Whenever the anonymous user re-joins a meeting, a different user ID is generated.
+> When an anonymous user joins a meeting, a new user ID is generated. Whenever the anonymous user rejoins a meeting, a different user ID is generated.
 
 For more information on `getContext`, see [get context by using the Microsoft Teams JavaScript library.](~/tabs/how-to/access-teams-context.md#get-context-by-using-the-microsoft-teams-javascript-library)
 
 ## Bot activities and APIs
 
-With a few differences, the activities sent to your bot, and the responses that it receives from bot APIs, are consistent between anonymous and non-anonymous meeting participants. In general:
+With a few differences, the activities sent to your bot and the responses that it receives from bot APIs are consistent between anonymous and non-anonymous meeting participants. In general:
 
 * The user ID is a generated value that is different each time the anonymous user joins the meeting.
 * The `aadObjectId` property is omitted.
@@ -85,7 +85,7 @@ The [get members](/microsoftteams/platform/bots/how-to/get-teams-context#fetch-t
 | `id` | Unique generated value for the anonymous user. |
 | `name` | Name provided by the anonymous user when joining the meeting. |
 | `tenantId` | Tenant ID of the meeting organizer. |
-| `userRole` | `anonymous`, represents anonymous user. |
+| `userRole` | `anonymous` represents anonymous user. |
 
 > [!NOTE]
 > The ID received from the bot APIs and the Teams client library API are not the same.
@@ -130,8 +130,8 @@ The [get members](/microsoftteams/platform/bots/how-to/get-teams-context#fetch-t
 
 | **Property name** | **Description** |
 | --- | --- |
-| `membersAdded.id` | Anonymous user ID. |
-| `from.id` | Meeting organizer ID. |
+| `membersAdded.id` | Anonymous user ID |
+| `from.id` | Meeting organizer ID |
 | `conversation.tenantId` | Tenant ID of the meeting organizer. |
 | `conversation.id` | Conversation ID of the meeting chat. |
 | `tenant.id` | Tenant ID of the meeting organizer. |
@@ -144,7 +144,7 @@ Similar changes apply to the `membersRemoved` activity payload.
 
 ### Create Conversation API
 
-Bots are not allowed to initiate a One-on-One conversation with an anonymous user. If a bot calls the Create Conversation API with the user ID of an anonymous user, it will receive a `400` Bad Request status code and the following error response:
+Bots are not allowed to initiate a one-on-one conversation with an anonymous user. If a bot calls the Create Conversation API with the user ID of an anonymous user, it will receive a `400` Bad Request status code and the following error response:
 
 ```csharp
 { 
@@ -165,7 +165,7 @@ Anonymous users can view and interact with Adaptive Cards in the meeting chat. A
 
 * For an anonymous user, the user ID from `getContext` and the user ID received by the bot are different. It's not possible to correlate the two directly. If you need to track the user's identity between your tab and bot, you must prompt the user to authenticate with an external identity provider.
 
-* Anonymous users will see a generic app icon on bot messages and cards, instead of the app's actual icon. For example:
+* Anonymous users will see a generic app icon on bot messages and cards, instead of the app's actual icon.
 
     :::image type="content" source="../assets/images/apps-in-meetings/app-icon.png" alt-text="This screenshot shows you how the app icon displays for anonymous user.":::
 
