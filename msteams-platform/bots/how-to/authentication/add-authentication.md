@@ -370,8 +370,8 @@ After you've configured the authentication mechanism, you can perform the actual
 1. Start the Emulator.
 1. Select the **Open bot** button.
 1. In the **Bot URL**, enter the bot's local URL. Usually, `http://localhost:3978/api/messages`.
-1. In the **Microsoft App ID** enter the bot's app ID from `appsettings.json`.
-1. In the **Microsoft App password** enter the bot's app password from the `appsettings.json`.
+1. In the **Microsoft App ID**, enter the bot's app ID from `appsettings.json`.
+1. In the **Microsoft App password**, enter the bot's app password from the `appsettings.json`.
 1. Select **Connect**.
 1. After the bot is up and running, enter any text to display the sign-in card.
 1. Select the **Sign in** button.

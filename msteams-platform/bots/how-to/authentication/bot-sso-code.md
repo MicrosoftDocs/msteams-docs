@@ -379,7 +379,7 @@ Web APIs on your server must decode the access token and verify if it's sent fro
 
 For more information about validating access token, see [Validate tokens](/azure/active-directory/develop/access-tokens#validate-tokens).
 
-There are a number of libraries available that can handle JWT validation. Basic validation includes:
+There are many libraries available that can handle JWT validation. Basic validation includes:
 
 - Checking that the token is well-formed.
 - Checking that the token was issued by the intended authority.
