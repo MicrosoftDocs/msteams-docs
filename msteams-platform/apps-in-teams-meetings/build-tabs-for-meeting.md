@@ -67,13 +67,13 @@ The following image shows a tab added to the meeting details page in the Teams m
 
 1. This results in rendering tab on the stage for every participant in the meeting.
 
-# [Desktop](#tab/desktop)
+# [Meeting stage view desktop](#tab/meeting-stage-view-desktop)
 
    The following image shows a tab added to the meeting details page in the Teams desktop client:
 
    :::image type="content" source="../assets/images/meeting-stage-view.png" alt-text="This screenshot shows meeting stage view of the app you shared to meeting in Teams desktop.":::
 
-# [Mobile](#tab/mobile)
+# [Meeting stage view mobile](#tab/meeting-stage-view-mobile)
 
    The following image shows a tab added to the meeting details page in the Teams mobile client:
 
