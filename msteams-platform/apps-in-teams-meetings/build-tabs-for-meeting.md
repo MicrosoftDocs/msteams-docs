@@ -67,25 +67,35 @@ The following image shows a tab added to the meeting details page in the Teams m
 
 1. This results in rendering tab on the stage for every participant in the meeting.
 
-   # [Desktop](#tab/desktop)
+# [Desktop](#tab/desktop)
 
-The following image shows a tab added to the meeting details page in the Teams desktop client:
+   The following image shows a tab added to the meeting details page in the Teams desktop client:
 
    :::image type="content" source="../assets/images/meeting-stage-view.png" alt-text="This screenshot shows meeting stage view of the app you shared to meeting in Teams desktop.":::
 
 # [Mobile](#tab/mobile)
 
-The following image shows a tab added to the meeting details page in the Teams mobile client:
+   The following image shows a tab added to the meeting details page in the Teams mobile client:
 
-   :::image type="content" source="../assets/images/meeting-stage-view-mobile.png" alt-text="This screenshot shows meeting stage view of the app you shared to meeting in Teams mobile.":::
-
-   
+   :::image type="content" source="../assets/images/meeting-stage/meeting-stage-view-mobile.png" alt-text="This screenshot shows meeting stage view of the app you shared to meeting in Teams mobile.":::
 
 ### Apps in channel meeting
 
 A public scheduled channel meeting has the same list of apps as its parent team. Installing an app to a channel meeting also makes it available in the parent team, and vice versa.
 
 However, the tab instances in a channel meeting are separate from the tabs in the channel itself. For example, suppose a *Development* channel has a *Polly* tab. If you create a *Standup* meeting in that channel, that meeting would not have a *Polly* tab, until you explicitly [add the tab to the meeting](#meeting-details-view).
+
+# [Desktop](#tab/desktop)
+
+   The following image shows a tab added to a channel meeting in the Teams desktop client:
+
+    :::image type="content" source="../assets/images/apps-in-meetings/apps-in-channel-meeting-desktop.png" alt-text="This screenshot shows meeting stage view of the app you shared to meeting in Teams desktop.":::
+
+# [Mobile](#tab/mobile)
+
+   The following image shows a tab added to a channel meeting in the Teams mobile client:
+
+    :::image type="content" source="../assets/images/apps-in-meetings/apps-in-channel-meeting-mobile.png" alt-text="This screenshot shows meeting stage view of the app you shared to meeting in Teams desktop.":::
 
 In public scheduled channel meetings, after a meeting tab is added, you can select the meeting object in the meeting details page to access the tab.
 

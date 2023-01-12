@@ -56,7 +56,7 @@ To help users in such scenarios, we released APIs within the TeamsJS client libr
 
 :::image type="content" source="../assets/images/apps-in-meetings/shared-meeting-stage-edit-review-component.png" alt-text="The screenshot shows the share to meeting stage view.":::
 
-   # [Desktop](#tab/desktop)
+# [Desktop](#tab/desktop)
 
 The following image shows a tab added to the meeting details page in the Teams desktop client:
 
@@ -66,7 +66,7 @@ The following image shows a tab added to the meeting details page in the Teams d
 
 The following image shows a tab added to the meeting details page in the Teams mobile client:
 
-   :::image type="content" source="../assets/images/meeting-share-to-stage-mobile.png" alt-text="This screenshot shows meeting stage view of the app you shared to meeting in Teams mobile.":::
+   :::image type="content" source="../assets/images/meeting-stage/meeting-share-to-stage-mobile.png" alt-text="This screenshot shows meeting stage view of the app you shared to meeting in Teams mobile.":::
 
 Use the following APIs to share specific part of the app:
 
