@@ -2,7 +2,7 @@
 title: Create a new widget
 metadata:
   title: Create a new widget
-  description: With this learning module, you'll learn how to create a new widget.
+  description: With this learning module, you'll learn how to create a dashboard tab, add a new widget and implement graph API.
   audience: Developer
   level: Beginner
   ms.date: 01/06/2023
@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    This step-by-step guide helps you to create a new widget. You'll see the following output:
+    This step-by-step guide helps you to create a dashboard tab, how to add a new widget and implement graph API. You'll see the following output:
 
     :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/dashboard.png" alt-text="Screenshot shows user profile information and recent Teams activity. ":::
     
@@ -30,11 +30,19 @@ items:
   durationInMinutes: 5
   content: |
 
+    This is a Teams tab dashboard app that uses the Fluent UI and the Microsoft Graph API to display a user's profile information and recent Teams activity.
+
+    To create a dashboard:
+
      1. From Teams Toolkit side bar, select **Create a new Teams app**.
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/create-a-new teams-app.png" alt-text="Screenshot showing the selection of Create a new Teams app":::
 
-     1. Select **Dashboard** tab from Scenario-based Teams app section.
+     1. Select `Create a new Teams app`. 
+
+        :::image type="content" source="../../../assets/images/sbs-create-a-new-dashboard/create-a-new-teams-app-2.png" alt-text="Screenshot shows the selection of new Teams app.":::
+
+     1. Select `Dashboard tab` from Teams app section.
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/dashboard-tab-preview.png" alt-text="Screenshot showing the selection of Dashboard tab preview.":::
 
@@ -46,7 +54,7 @@ items:
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/default-folder.png" alt-text="Screenshot showing the selection of workspace folder.":::
 
-     1. Enter an application name and then press enter.
+     1. Enter an application name and then select enter.
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/enter-application-name.png" alt-text="Screenshot showing the selection of Application name.":::
 
@@ -58,11 +66,11 @@ items:
 
       `teamsfx new--interactive false--capabilities "dashboard-tab"--programming-language "TypeScript"--folder "./"--app-name dashboard-cli-001`
 
-      After you successfully created the project, quickly start local debugging via F5 in VSCode. Select Debug (Microsoft Edge) or Debug (Chrome) debug option of your preferred browser, after running this template and you'll see a tab app loaded as below:
+      After you successfully created the project, start local debugging via F5 in VSCode. Select Debug (Microsoft Edge) or Debug (Chrome) debug option of your preferred browser, after running this template and you'll see a tab app loaded as below:
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/dashboard.png" alt-text="Screenshot shows user profile information and recent Teams activity. ":::
 
-      This app also supported teams different themes, including dark theme and high contrast theme.
+      This app also supports different themes, including dark and high contrast theme.
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/dark-light-theme.png" alt-text="Screenshot showing the contrast theme.":::
        
@@ -71,7 +79,7 @@ items:
   durationInMinutes: 5
   content: |
 
-     You can use the following steps to add a new widget to the dashboard:
+     Following are the steps to add a new widget to the dashboard:
 
      1. Define a data model
      2. Create a data retrieve service
@@ -80,7 +88,7 @@ items:
 
      **Define a data model**
 
-     Define a data model based on the business scenario, and put it in `tabs/src/models folder`. The widget model defined according to the data you want to display in the widget. Here's a sample data model:
+     Define a data model is based on the business scenario, and put it in `tabs/src/models folder`. The widget model must be defined according to the data you want to display in the widget. Here's a sample data model:
 
      ```export interface SampleModel {
       content: string;
@@ -90,9 +98,9 @@ items:
 
      **Create a data retrieve service**
 
-     Simply, you can create a service that returns dummy data. We recommend that you put data files in the tabs/src/data folder, and put data retrive services in the tabs/src/services folder.
+     Create a service that returns dummy data. We recommend that you put data files in the tabs/src/data folder, and put data retrieve services in the tabs/src/services folder.
 
-     Here's a sample json file that contains dummy data:
+     Here is an example of json file that contains dummy data:
 
      ```
      {
@@ -110,11 +118,11 @@ items:
      ```
 
       > [!NOTE]
-      >You can also implement a service to retrieve data from the backend service or from the Microsoft Graph API.
+      > You can also implement a service to retrieve data from the backend service or from the Microsoft Graph API.
 
       **Create a widget file**
 
-       Create a widget file in `tabs/src/views/widgets` folder. Extend the Widget class. The following table lists the methods that you can override to customize your widget.
+      1. Create a widget file in `tabs/src/views/widgets` folder. Extend the `Widget` class. The following table lists the methods that you can override to customize your widget:
 
       | **File** | **Content** |
       |-----------|-------------|
@@ -123,7 +131,8 @@ items:
       | `bodyContent()` | Customize the content of the widget body. |
       | `footerContent()` | Customize the content of the widget footer. |
 
-      All methods are optional. If you don't override any method, the default widget layout will be used.
+      > [!NOTE]
+      > All methods are optional. If you don't override any method, the default widget layout will be used.
 
       Here's a sample widget implementation:
 
@@ -160,7 +169,7 @@ items:
 
       ```
 
-      1. **Add the widget to the **Dashboard**
+     **Add the widget to the **Dashboard**
 
       1. Go to `tabs/src/views/dashboards/SampleDashboard.tsx`, if you want to create a new dashboard, please refer to [How to add a new dashboard](https://github.com/OfficeDev/TeamsFx/wiki/Embed-a-dashboard-canvas-in-Teams).
       1. Update your dashboardLayout() method to add the widget to the dashboard:
@@ -176,7 +185,9 @@ items:
       ````
 
       > [!NOTE]
-      > If you want put your widget in a column, you can use the `oneColumn()`` method to define the column layout. Here's an example:
+      > If you want the widget in a column, you can use the `oneColumn()`` method to define the column layout. 
+      
+      Here's an example:
 
       ```
       protected dashboardLayout(): void | JSX. Element {
@@ -191,13 +202,13 @@ items:
 
       ```
 
-- title: Customize a widget
+- title: Customize the widget
   durationInMinutes: 5
   content: |
 
     Since the widget class provides some methods that can be overridden to customize the widget, you can customize the widget by overriding these methods.
 
-    **Override `headerContent()`、`bodyContent()`、`footerContent()` to customize the widget.**
+    Override `headerContent()`、`bodyContent()`、`footerContent()` to customize the widget.
 
     ```
     export class NewsWidget extends Widget<void> {
@@ -234,11 +245,13 @@ items:
         );
     }
     }
+    
     ```
+    ---
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/override-header-count.png" alt-text="Screenshot showing the overriding of header, body, and footer content.":::
 
-      **Just override bodyContent()、footerContent() to customize the widget.**
+    Override bodyContent()、footerContent() to customize the widget.
 
     ```
     export class NewsWidget extends Widget<void> {
@@ -267,12 +280,13 @@ items:
       }
       }
     ```
+    ---
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/override-body-content-footer-content.png" alt-text="Screenshot showing the overriding of body and footer content":::
 
-      **Just override bodyContent() to customize the widget**
+    Override bodyContent() to customize the widget
 
-      ```
+    ```
       export class NewsWidget extends Widget<void> {
 
       bodyContent(): JSX.Element | undefined {
@@ -286,7 +300,8 @@ items:
 
         }
 
-        ```
+    ```
+    ---
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/override-body-content.png" alt-text="Screenshot showing the overriding of body content.":::
 
@@ -294,23 +309,27 @@ items:
   durationInMinutes: 5
   content: |
 
-      **Add SSO First**
+      ### Add SSO First
 
-      Before you add your logic of calling a Graph API, you should enable your dashboard project to use SSO. It's convenient to add SSO related files by using Teams Toolkit. Refer to the following steps to add SSO.
+      Before you add logic of calling a Graph API, you should enable dashboard project to use SSO. It's convenient to add SSO related files by using Teams Toolkit. Refer to the following steps:
 
-      1. Select `Teams Toolkit` in the side bar > Select `Add features` in `DEVELOPMENT`.
+      1. Select `Teams Toolkit` in the side bar and Select `Add features` in `DEVELOPMENT`.
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/add-features.png" alt-text="Screenshot showing the selection of add features.":::
 
-      1. Choose `single sign-on` to add.
+      1. Select `single sign-on` to add.
 
         :::image type="content" source="~/assets/images/ci-cd-workflows.png" alt-text="Screenshot showing the selection of CI/CD workflows.":::
 
-      Move `auth-start.html` and `auth-end.html` in `auth/tab/public folder` to `tabs/public/`. These two HTML files are used for auth redirects.
+      1. Move `auth-start.html` and `auth-end.html` in `auth/tab/public folder` to `tabs/public/`. These two HTML files are used for auth redirects.
 
-      Now you have already added SSO files to your project, and you can call Graph APIs. There are two types of Graph APIs, one will be called from the front-end(most of APIs, use delegated permissions), the other will be called from the back-end(sendActivityNotification, for example, use application permissions). You can refer to this [tutorial](/graph/api/overview?view=graph-rest-beta) to check permission types of the Graph APIs you want to call.
+      1. Move `sso` folder under `auth/tab` to `tabs/src/sso/`.
 
-      **Call graph api from the front-end(use delegated permissions)**
+      Now you have added the SSO files to your project, you can call Graph APIs. There are two types of Graph APIs, one will be called from the front-end(most of APIs, use delegated permissions), the other will be called from the back-end(sendActivityNotification, for example, use application permissions). You can refer to this [tutorial](/graph/api/overview?view=graph-rest-beta) to check permission types of the Graph APIs you want to call.
+
+      ### Call graph api from the front-end(use delegated permissions)**
+
+      If you want to call a Graph API from the front-end tab, refer to the following steps:
 
       1. [Consent delegated permissions first](https://github.com/huimiu/tab-dashboard#step-1-consent-delegated-permissions-first)
       1. [Create a graph client by adding the scope related to the Graph API you want to call](https://github.com/huimiu/tab-dashboard#step-2-create-a-graph-client-by-adding-the-scope-related-to-the-graph-api-you-want-to-call)
@@ -318,11 +337,11 @@ items:
 
       **Consent delegated permissions first**
 
-      You can call [addNewScope(scopes: string[])](https://github.com/huimiu/tab-dashboard/blob/main/tabs/src/internal/addNewScopes.ts) to consent the scopes of permissions you want to add. And the consented status will be preserved in a global context [FxContext](https://github.com/huimiu/tab-dashboard/blob/main/tabs/src/internal/singletonContext.ts).
+      You can call [`addNewPermissionScope(scopes: string[])`](https://github.com/huimiu/tab-dashboard/blob/main/tabs/src/internal/addNewScopes.ts) to consent the scopes of permissions you want to add. And the consented status will be preserved in a global context [`FxContext`](https://github.com/huimiu/tab-dashboard/blob/main/tabs/src/internal/singletonContext.ts).
 
-      You can refer to the Graph API V1.0 to get the scope name of the permission related to the [the Graph API V1.0](/graph/api/overview?view=graph-rest-1.0) you want to call.
+      You can refer to the [Graph API V1.0](/graph/api/overview?view=graph-rest-1.0) to get the `scope name of the permission` related to the Graph API you want to call.
 
-      Create a graph client by adding the scope related to the Graph API you want to call.
+      **Create a graph client by adding the scope related to the Graph API you want to call.**
 
       Refer to the following code snippet:
 
@@ -346,15 +365,13 @@ items:
 
       ```
 
-      **From the back-end(use application permissions)**
+      ### Call graph API from the back-end(use application permissions)
 
-      If you want to call a Graph API from the back-end, you can refer to the following steps. In this tutorial, we use `sendActivityNotification` API for example.
+      If you want to call a Graph API from the back-end, you can refer to the following steps:
 
       1. [Consent application permissions first](https://github.com/huimiu/tab-dashboard#step-1-consent-application-permissions-first)
       1. [Add an Azure Function](https://github.com/huimiu/tab-dashboard#step-2-add-an-azure-function)
-      1. [Get the installation ID of your Dashboard app](https://github.com/huimiu/tab-dashboard#step-3-get-the-installation-id-of-your-dashboard-app)
       1. [Add your logic in Azure Function](https://github.com/huimiu/tab-dashboard#step-4-add-your-logic-in-azure-function)
-      1. [Edit manifest file](https://github.com/huimiu/tab-dashboard#step-5-edit-manifest-file)
       1. [Call the Azure Function from the front-end](https://github.com/huimiu/tab-dashboard#step-5-call-the-azure-function-from-the-front-end)
 
       **Consent application permissions first.**
@@ -363,96 +380,66 @@ items:
       1. Select `Azure Active Directory`.
       1. Select `App registrations` in the side bar. 
       1. Select your Dashboard app.
-      1. Select `API permissions` in the side bar
-      1. Select `+Add a permission`
-      1. Select `Microsoft Graph` 
-      1. Select `Application permissions`
-      1. Find the permissions you need
-      1. Select `Add permissions` button in the bottom
-      1. Select `✔Grant admin consent for XXX`
+      1. Select `API permissions` in the side bar.
+      1. Select `+Add a permission`.
+      1. Select `Microsoft Graph`.
+      1. Select `Application permissions`.
+      1. Find the permissions you need.
+      1. Select `Add permissions` button in the bottom.
+      1. Select `✔Grant admin consent for XXX`.
       1. Select `Yes` button to finish the admin consent.
 
       **Add an Azure Function**
 
-      In the VS Code side bar, select `Add features` in `Teams Toolkit` > Choose `Azure functions` > Enter the function name.
+      In the Visual Studio Code side bar, select `Add features` in `Teams Toolkit` > select `Azure functions` and enter the function name.
 
-      **Get the `installation ID` of your Dashboard app**.
-
-        Go [Graph Explorer](https://developer.microsoft.com/en-us/graph/graph-explorer), and use the following api path to get a response.
-
-      `https://graph.microsoft.com/v1.0/users/{user-id | user-principal-name}/teamwork/installedApps?$expand=teamsAppDefinition`
-
-      In the response, you should find the information of your Dashboard app, and then record the `ID` of it as `installationId`, which will be used in step 4.
-
-        :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/graph-explorer.png" alt-text="Screenshot showing the response preview.":::
+       :::image type="content" source="../../../assets/images/sbs-create-a-new-dashboard/azure-functions.png" alt-text="Screenshot showing the selection of azure functions.":::
 
       **Add your logic in Azure Function**
 
-      In the `index.ts` under the folder named in step 2, you can add the following code snippet to call `sendActivityNotification`
+      In the `index.ts`/`index.ts` under the folder named in step 2, you can add the your logic which contains back-end graph api calling with application permissions. Refer to the following code snippet:
       
       ```
-      try {
-      // do sth here, to call activity notification api
-      //
-      c onst graphClient_userId: Client = await createMicrosoftGraphClient(teamsfx, [
-      "User. Read",
-      ]);
-      const userIdRes = await graphClient_userId.api("/me").get();
-      const userId = userIdRes["ID"];
-      // get installationId
-      const installationId =
-      "ZmYxMGY2MjgtYjJjMC00MzRmLTgzZmItNmY3MGZmZWEzNmFkIyMyM2NhNWVlMy1iYWVlLTRiMjItYTA0OC03YjkzZjk0MDRkMTE=";
-      let postbody = {
-      article: {
-      source: "entityUrl",
-      value:
-        "https://graph.microsoft.com/v1.0/users/" +
-        userId +
-        "/teamwork/installedApps/" +
-        installationId,
-        },
-      activityType: "taskCreated",
-        previewText: {
-      content: "New Task Created",
-      },
-      templateParameters: [
-      {
-        name: "taskId",
-        value: "12322",
-      },
-      ],
+      /**
+      * This function handles requests from teamsfx client.
+      * The HTTP request should contain an SSO token queried from Teams in the header.
+      * Before trigger this function, teamsfx binding would process the SSO token and generate teamsfx configuration.
+      *
+      * You should initializes the teamsfx SDK with the configuration and calls these APIs.
+      *
+      * The response contains multiple message blocks constructed into a JSON object, including:
+      * - An echo of the request body.
+      * - The display name encoded in the SSO token.
+      * - Current user's Microsoft 365 profile if the user has consented.
+      *
+      * @param {Context} context - The Azure Functions context object.
+      * @param {HttpRequest} req - The HTTP request.
+      * @param {teamsfxContext} TeamsfxContext - The context generated by teamsfx binding.
+      */
+      export default async function run(
+      context: Context,
+      req: HttpRequest,
+      teamsfxContext: TeamsfxContext
+      ): Promise<Response> {
+      context.log("HTTP trigger function processed a request.");
+
+      // Initialize response.
+      const res: Response = {
+      status: 200,
+        body: {},
       };
 
-      let teamsfx_app: TeamsFx;
-      teamsfx_app = new TeamsFx(IdentityType.App);
-      const graphClient: Client = createMicrosoftGraphClient(teamsfx_app, [
-      ".default",]);
-      await graphClient
-      .api("users/" + userId + "/teamwork/sendActivityNotification")
-      .post(postbody);
-      } catch (e) {
-        console.log(e);
-      }
+      // Your logic here.
 
-        **Edit manifest file**
-
-        In the templates\appPackage\manifest.template.json, you should add the following properties, which are aligned with properties in `postbody` in Step 4.
-
-      "activities": {
-        "activityTypes": [
-      {
-      "type": "taskCreated",
-      "description": "Task Created",
-      "templateText": "{actor} created task {taskId}"
-      }
-      ]
+      return res;
       }
 
       ```
+      ---
 
       **Call the Azure Function from the front-end**
 
-      Call the Azure Function from the front-end. You can refer to the following code snippet to call the Azure Function.
+      Call the Azure Function by function name. You can refer to the following code snippet to call the Azure Function:
 
       ```
       const functionName = process.env.REACT_APP_FUNC_NAME || "myFunc";
@@ -475,8 +462,12 @@ items:
       }
 
       ```
+      ---
 
-      Refer to [this sample](https://github.com/OfficeDev/TeamsFx-Samples/blob/dev/hello-world-tab-with-backend/tabs/src/components/sample/AzureFunctions.tsx) for some helps. And you can read [this doc](/azure/azure-functions/functions-reference?tabs=blob) for more details.
+      For more information refer to the following:
+
+      * [sample](https://github.com/OfficeDev/TeamsFx-Samples/blob/dev/hello-world-tab-with-backend/tabs/src/components/sample/AzureFunctions.tsx)
+      * [azure functions](/azure/azure-functions/functions-reference?tabs=blob) for more details.
 
 - title: Complete challenge
   durationInMinutes: 5
@@ -491,4 +482,4 @@ items:
   durationInMinutes: 5
   content: |
 
-    You've completed the tutorial to create a new widget!
+    You've completed the tutorial!
