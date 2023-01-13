@@ -41,7 +41,7 @@ If there's a cached token, the bot uses the same token. If there's no token avai
 }
 ```
 
-Senders must include a `tokenExchangeResource` to designate an SSO operation.
+Teams client must include a `tokenExchangeResource` to designate an SSO operation.
 
 > [!NOTE]
 > Teams client triggers the nominal sign-in or OAuth flow when SSO fails. It's highly recommended that you provide a sign in URL in the above response so that OAuth flow works.
@@ -50,7 +50,7 @@ This response is delivered through the channel to the client, which uses the `
 
 * Teams clients ignore the `tokenExchangeResource` value for any reason, including invalid values, errors retrieving exchangeable tokens, or not supporting the Azure AD.
 
-* Clients that ignore the `tokenExchangeResource` should use the nominal sign-in flow.
+* Teams clients that ignore the `tokenExchangeResource` should use the nominal sign-in flow.
 
 ## Consent dialog for getting access token
 
@@ -64,7 +64,7 @@ Once the user selects **View and accept**, the existing Azure AD permission cons
 
 The following are the steps to receive token:
 
-1. The client sends the original `adaptiveCard/action` again to the bot along with the token as follows:
+1. The Teams client sends the original `adaptiveCard/action` again to the bot along with the token as follows:
 
     ```javascript
     {
@@ -89,7 +89,7 @@ The following are the steps to receive token:
     }
     ```
 
-    * Senders must include the `authentication` field with a token exchange resource.
+    * Teams client must include the `authentication` field with a token exchange resource.
 
 1. The channel delivers this invoke to the bot, which uses the token to finalize the token exchange process with the Token Service and Azure AD. The Token Service delivers the user's access token to the bot.
    * Receivers ignore the authentication if the value is incorrect.
@@ -105,18 +105,10 @@ The following are the steps to receive token:
             }
         ```
 
-   * If the value in the `state` field is incorrect, the bot returns an error to the client as follows:
-
-        ```javascript
-           {
-            "statusCode": 412,
-            "type": "application/vnd.microsoft.error.preconditionFailed",
-            "value": { ... error ... }
-            }
-        ```
+   * When SSO fails, Teams client shows a sign in button in the card footer to initiate nominal sign in flow.
 
 1. The bot uses the access token on behalf of the user to perform its actions.
-1. The bot returns a non-error response to the client, either a card or a message.
+1. The bot returns a non-error response to the Teams client, either a card or a message.
 
 > [!NOTE]
 > To handle the access token in case the app user logs out, see [handle app user log out](../../../bots/how-to/authentication/bot-sso-code.md#handle-app-user-log-out).
