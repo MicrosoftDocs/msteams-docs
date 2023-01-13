@@ -99,6 +99,6 @@ If [uploading custom apps is enabled](/microsoftteams/admin-settings) in your Te
 * [Create a chatbot for Teams with Microsoft Power Virtual Agents](../bot-features.md#bots-with-power-virtual-agents)
 * [Power Virtual Agents portal](https://powervirtualagents.microsoft.com)
 * [Publish your Power Virtual Agents bot](/power-virtual-agents/publication-fundamentals-publish-channels)
-* [Security and compliance in Microsoft Teams](/MicrosoftTeams/security-compliance-overview)
+* [Security and compliance in Microsoft Teams](/microsoftteams/security-compliance-overview)
 * [Human resources Power Virtual Agents bot](/power-virtual-agents/teams/fundamentals-get-started-teams)
 * [Add a chatbot to Microsoft Teams from within the Teams app](/power-virtual-agents/teams/publication-add-bot-to-microsoft-teams-teams)
