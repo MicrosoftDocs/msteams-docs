@@ -320,11 +320,11 @@ items:
 
       1. Select **Teams Toolkit** in the left pane and select **Add features** under **DEVELOPMENT**.
 
-        :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/add-features.png" alt-text="Screenshot shows the selection of added features.":::
+          :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/add-features.png" alt-text="Screenshot shows the selection of added features.":::
 
       1. Select **Single Sign-On**.
 
-        :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/single-sign-on.png" alt-text="Screenshot shows the selection of single sign-on.":::
+          :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/single-sign-on.png" alt-text="Screenshot shows the selection of single sign-on.":::
 
       1. Move `auth-start.html` and `auth-end.html` in `auth/tab/public folder` to `tabs/public/`. These two HTML files are used for auth redirects.
 
