@@ -184,7 +184,6 @@ App caching helps you to improve subsequent launch time of the apps that are loa
 >
 > * Currently, app caching is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
 > * App caching is supported only for tabs loaded in the meeting side panel in Teams desktop client.
-> * Currently, app caching is not supported on chats, channels, and personal apps.
 
 ### Enable app caching
 
@@ -212,7 +211,7 @@ When you opt into app caching, the webview that is used to host the embedded app
 > [!NOTE]
 > If the app caching isn't enabled, the webview is recreated every time the users leave and return to the app.
 
-Following are the parameters to control the conditions for the apps to be added or removed from the cache (based on the configuration updates, the parameters can be modified):
+There are multiple reasons for an app to not get cached or to get removed from the cache, some of the reasons are (numbers here are subject to change):
 
 * If the system memory load is high, the app is removed from the cache.
 * If the app exceeds maximum cache size, the app is removed from the cache.
@@ -237,21 +236,17 @@ const beforeUnloadHandler = (readyToUnload: () => void) => {
 The following code snippet is an example of `teamsCore.registerBeforeUnloadHandler` and `teamsCore.registerOnLoadHandler` APIs:
 
 ```javascript
-microsoftTeams.app.initialize().then(() => {
+microsoftTeams.teamsCore.registerOnLoadHandler((data) => {
+    console.log("got load from TEAMS", data.contentUrl, data.entityId);
+    // use contentUrl to route to correct page 
+    // invoke notifySuccess when ready  
+    app.notifySuccess();
+});
 
-    microsoftTeams.teamsCore.registerBeforeUnloadHandler((readyToUnload) => {
-        const result = beforeUnloadHandler(readyToUnload);
-        // dispose resources and then invoke readyToUnload
-        console.log("got beforeunload from TEAMS");
-        return result;
-    });
-
-    microsoftTeams.teamsCore.registerOnLoadHandler((data) => {
-        console.log("got load from TEAMS", data.contentUrl, data.entityId);
-        // use contentUrl to route to correct page 
-        // invoke notifySuccess when ready  
-        app.notifySuccess();
-    });
+microsoftTeams.teamsCore.registerBeforeUnloadHandler((readyToUnload) => {
+    // dispose resources and then invoke readyToUnload
+    readyToUnload();
+    return true;
 });
 ```
 
@@ -259,7 +254,7 @@ microsoftTeams.app.initialize().then(() => {
 
 The following are the limitations for app caching:
 
-* Single-page apps that use client-side routing for page navigation can benefit from app caching. It's recommended that the same domain is used across all contexts of your app launch.
+* Single-page apps that use client-side routing for page navigation can benefit from app caching. It's recommended that the same domain be used across all contexts of your app launch.
 
 * Apps need to re-register for events such as `themeChange`, `focusEnter`, and so on, in the load handler. Teams client won't send any notifications to the app when cached. If your app requires notifications even when cached, caching might not be the right solution.
 
@@ -271,13 +266,11 @@ The following are the limitations for app caching:
 
 * Apps are cached on a per-window basis.
 
-* App caching isn't supported for the meeting stage or Task module contexts, because these can be opened on top of the tab and the same webview can't be used to render the content in the tab and the Task module.
+* App caching isn't supported for the meeting stage or Task module contexts, because these can be opened on top of the tab and the same webview can't be used to render the content in the tab and the Task module. App caching happens on a per app (not on a per tab) basis within the same window.
 
-* App caching happens on a per app (not on a per tab) basis within the same window.
+* Register only the `beforeUnload` handler if your app doesn't require app caching but needs time to safely save state (if you want to ensure that leaving your app could cause the app content to be abruptly removed from the Document Object Model (DOM)). If the app hasn't registered for the `load` event, it's removed from the DOM after the unload flow completes.
 
-* Register only the `beforeUnload` handler if your app doesn't require app caching but needs time to safely save state (if you want to ensure that going away from your app doesn't cause the app content to be abruptly removed from the Document Object Model (DOM)). If the app isn't registered for the `load` event, it's removed from the DOM after the unload flow completes.
-
-* Follow the guidelines in this section to enable your app with app caching in Teams meeting first. For app caching support only in meetings, register the `load` or `beforeUnload` handlers if the context is `sidePanel`. Even if app caching in other contexts such as `channels` and `chat` happens to work, it isn't officially supported at this point and is subject to change.
+* Follow the guidelines in this section to onboard your app to app caching in Teams meeting first. For app caching support only in meetings, register the `load` or `beforeUnload` handlers if the context is `sidePanel`.
 
 * Apps are expected to sleep when cached (use minimal compute or network resources and minimizes SDK requests). All the register handlers and the following SDK requests are allowed when the app is cached:
 
