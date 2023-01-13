@@ -64,9 +64,11 @@ For example, in your app manifest if you set your tab *configurationUrl* attribu
 
 You can also retrieve the information listed above using the [Microsoft Teams JavaScript client library](/javascript/api/overview/msteams-client).
 
-# [Json v2](#tab/Json-v2)
+# [TeamsJS v2](#tab/Json-v2)
 
  The information can be retrieved by calling `microsoftTeams.app.getContext().then((context) => {/*...*/});`.
+
+ The following code provides an example of context variable:
 
  ```Json
  {
@@ -128,9 +130,11 @@ You can also retrieve the information listed above using the [Microsoft Teams Ja
     "userPrincipalName": "The principal name of the current user, in the current tenant"  }
 }
 ```
-# [Json v1](#tab/Json-v1)
+# [TeamsJS v1](#tab/Json-v1)
 
 The information can be retrieved by calling `microsoftTeams.getContext(function(context) { /* ... */ })`.
+
+The following code provides an example of context variable:
 
 ```Json
 {
