@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 
 # Build apps for anonymous users
 
-An anonymous user is a user who joins a meeting via a link. You can build bots, messaging extensions, cards and task modules in your app to engage with anonymous meeting participants.
+An anonymous user is a user who joins a meeting via a meeting link. You can build bots, messaging extensions, cards and task modules in your app to engage with anonymous meeting participants.
 
 To build apps for anonymous users ensure the following:
 
