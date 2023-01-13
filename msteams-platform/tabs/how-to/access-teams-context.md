@@ -66,7 +66,7 @@ You can also retrieve the information listed above using the [Microsoft Teams Ja
 
 # [Json v2](#tab/Json-v2)
 
- The information can be retrieve by calling `microsoftTeams.app.getContext().then((context) => {/*...*/});`.
+ The information can be retrieved by calling `microsoftTeams.app.getContext().then((context) => {/*...*/});`.
 
  ```Json
  {
@@ -130,7 +130,7 @@ You can also retrieve the information listed above using the [Microsoft Teams Ja
 ```
 # [Json v1](#tab/Json-v1)
 
-The information can be retrieve by calling `microsoftTeams.getContext(function(context) { /* ... */ })`.
+The information can be retrieved by calling `microsoftTeams.getContext(function(context) { /* ... */ })`.
 
 ```Json
 {
