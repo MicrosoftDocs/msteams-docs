@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Microsoft Teams connector is Model-View-Controller (MVC) sample task management application and generated using the ASP.NET web application template. Most of the code is related to either basic MVC configuration or task management system. You can add your existing Office 365 Connector or build a new one within Teams.
+    Microsoft Teams connector is Model-View-Controller (MVC) sample task management application and generated using the ASP.NET web application template. Most of the code is related to either basic MVC configuration or task management system. You can add your existing connector for Microsoft 365 Groups or build a new one within Teams.
     
     **Types of connector codes**
 
