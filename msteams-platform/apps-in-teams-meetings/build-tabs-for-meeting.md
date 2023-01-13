@@ -1,7 +1,7 @@
 ---
 title: Build tabs for meeting
 author: surbhigupta
-description: Learn how to build a tabs for a meeting chat, meeting side panel, and meeting stage in Microsoft Teams meeting.
+description: Learn how to build a tab for a meeting chat, meeting side panel, and meeting stage in Microsoft Teams meeting.
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
@@ -211,19 +211,19 @@ When you opt into app caching, the webview that is used to host the embedded app
 > [!NOTE]
 > If the app caching isn't enabled, the webview is recreated every time the users leave and return to the app.
 
-There are multiple reasons for an app to not get cached or to get removed from the cache, some of the reasons are (numbers here are subject to change):
+There are multiple reasons for an app to not get cached or get removed from the cache, some of the reasons are (numbers here are subject to change):
 
 * If the system memory load is high, the app is removed from the cache.
 * If the app exceeds maximum cache size, the app is removed from the cache.
 * If the user doesn't return to the app within 20 minutes, the app is removed from the cache.
-* The app is not cached if Teams doesn't receive the `readyToUnload` signal from the app within 30 seconds after sending the `beforeUnload` notification.
+* The app isn't cached if Teams doesn't receive the `readyToUnload` signal from the app within 30 seconds after sending the `beforeUnload` notification.
 * App caching is disabled if the system memory is less than 4 GB.
 * Side panel is the only supported FrameContext for app caching in meetings.
 * App caching isn't supported for meetings where the invited user count is more than 20.
 
 ### Code example
 
-The following code snippet is an example of `teamsCore.registerBeforeUnloadHandler` and `teamsCore.registerOnLoadHandler` APIs:
+The following code snippet is an example of `teamsCore.registerOnLoadHandler` and `teamsCore.registerBeforeUnloadHandler` APIs:
 
 ```javascript
 microsoftTeams.teamsCore.registerOnLoadHandler((data) => {
@@ -244,13 +244,13 @@ microsoftTeams.teamsCore.registerBeforeUnloadHandler((readyToUnload) => {
 
 The following are the limitations for app caching:
 
-* Single-page apps that use client-side routing for page navigation can benefit from app caching. It's recommended that the same domain be used across all contexts of your app launch.
+* Single-page apps that use client-side routing for page navigation can benefit from app caching. It's recommended that the same domain is used across all contexts of your app launch.
 
 * Apps need to re-register for events such as `themeChange`, `focusEnter`, and so on, in the load handler. Teams client won't send any notifications to the app when cached. If your app requires notifications even when cached, caching might not be the right solution.
 
 * App caching is supported only in Teams desktop client. In Teams web client, even if the app registers load handlers, the app is removed from the cache after the unload sequence is completed.
 
-* Register the `load` and `beforeUnload` handlers early in your launch sequence. If the Teams client doesn’t identify these registrations before the user leaves the app, the app isn't cached.
+* Register the `load` and `beforeUnload` handlers early in your launch sequence. If the Teams client doesn’t see these registrations before the user leaves the app, the app isn't cached.
 
 * The Teams client invokes the `loadHandler` only after the `unload` sequence of the app is completed. For example, if a user launches tab A of your app and then launches tab B of the same app, tab B won't get the load signal until the tab A invokes the `readyToUnload` callback.
 
@@ -280,7 +280,7 @@ The following are the limitations for app caching:
 
 * Check the amount of free memory on your system. App caching requires minimum of 4 GB system memory.
 
-* Reduce your memory footprint when cached. Use the load handlers to dispose resources that are not needed when cached.
+* Reduce your memory footprint when cached. Use the load handlers to dispose resources that aren't needed when cached.
 
 ## Feature compatibility by user types
 
@@ -288,10 +288,10 @@ The following table provides the user types and lists the features that each use
 
 | User type | Scheduled meeting or Instant calendar meeting | One-on-one call | Group call | Scheduled channel meeting |
 | :-- | :-- | :-- | :-- | :-- |
-| In-tenant user | Interaction allowed for all roles.<br><br> Create, update, or delete is allowed for all except the Attendees. | Interaction and create, update, or delete allowed. <br><br> In-tenant users in call with federated users can't interact and create, update, or delete. | Interaction and create, update, or delete allowed.<br><br> In-tenant users in call with federated users can't interact and create, update, or delete. | Interaction and create, update, or delete allowed for all roles except for attendees. |
-| Guest user | Can interact only | Can interact only | Can interact only | Can interact only. |
-| Federated user or External user | Can interact only | Not available | Not available | Can interact only |
-| Anonymous user | Not available | Not available | Not available | Not available |
+| In-tenant | Interaction allowed for all roles.<br><br> Create, update, or delete is allowed for all except the Attendees. | Interaction and create, update, or delete allowed. <br><br> In-tenant users in call with federated users can't interact and create, update, or delete. | Interaction and create, update, or delete allowed.<br><br> In-tenant users in call with federated users can't interact and create, update, or delete. | Interaction and create, update, or delete allowed for all roles except for attendees. |
+| Guest | Can interact only | Can interact only | Can interact only | Can interact only. |
+| Federated or External | Can interact only | Not available | Not available | Can interact only |
+| Anonymous | Not available | Not available | Not available | Not available |
 
 ## Code sample
 
