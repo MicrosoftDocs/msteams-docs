@@ -62,7 +62,7 @@ items:
 
       * If you prefer interactive mode, execute `teamsfx` new command, then use the keyboard to go through the same flow as in Visual Studio Code.
 
-      * If you prefer non-interactive mode, enter all required parameters in one command.
+      * If you prefer non-interactive mode, enter all required parameters in one command:
 
       `teamsfx new--interactive false--capabilities "dashboard-tab"--programming-language "TypeScript"--folder "./"--app-name dashboard-cli-001`
 
@@ -90,7 +90,7 @@ items:
 
      **Define a data model**
 
-     Define a data model based on business scenario, add it in `tabs/src/models` folder. The widget model must be defined according to the data you want to display in the widget. Here's a sample data model:
+     Define a data model based on business scenario, add it in **tabs/src/model** folder. The widget model must be defined according to the data you want to display in the widget. Here's a sample data model:
 
      ```
      export interface SampleModel {
@@ -101,7 +101,7 @@ items:
 
      **Create a data retrieve service**
 
-     Create a service that returns dummy data. We recommend that you add data files in the tabs/src/data folder and add data retrieve services in the tabs/src/services folder.
+     Create a service that returns dummy data. We recommend that you add data files in the **tabs/src/data** folder and add data retrieve services in the **tabs/src/services** folder.
 
      Here is an example of json file that contains dummy data:
 
@@ -125,7 +125,7 @@ items:
 
       **Create a widget file**
 
-      1. Create a widget file in `tabs/src/views/widgets` folder. Extend the `Widget` class. The following table lists the methods that you can override to customize your widget:
+      1. Create a widget file in **tabs/src/views/widgets** folder. Extend the **Widget** class. The following table lists the methods that you can override to customize your widget:
 
       | **File** | **Content** |
       |-----------|-------------|
@@ -174,7 +174,7 @@ items:
 
       **Add the widget to the dashboard**
 
-      1. Go to `tabs/src/views/dashboards/SampleDashboard.tsx`.
+      1. Go to **tabs/src/views/dashboards/SampleDashboard.tsx**.
       If you want to create a new dashboard, refer to [How to add a new dashboard](https://github.com/OfficeDev/TeamsFx/wiki/Embed-a-dashboard-canvas-in-Teams).
       
       1. Update your `dashboardLayout()` method to add the widget to the dashboard:
@@ -326,9 +326,9 @@ items:
 
           :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/single-sign-on.png" alt-text="Screenshot shows the selection of single sign-on.":::
 
-      1. Move `auth-start.html` and `auth-end.html` in `auth/tab/public folder` to `tabs/public/`. These two HTML files are used for auth redirects.
+      1. Move `auth-start.html` and `auth-end.html` in **auth/tab/public** folder to **tabs/public/**. These two HTML files are used for auth redirects.
 
-      1. Move **SSO** folder under `auth/tab` to `tabs/src/sso/`.
+      1. Move **SSO** folder under **auth/tab** to **tabs/src/sso/**.
 
       Now you've added the SSO files to your project, you can call Graph APIs. 
       
@@ -348,7 +348,7 @@ items:
 
       [Consent delegated permissions first](https://github.com/OfficeDev/TeamsFx/wiki/Embed-a-dashboard-canvas-in-Teams#step-1-consent-delegated-permissions-first)
 
-      You can call [`addNewPermissionScope(scopes: string[])`](https://github.com/huimiu/tab-dashboard/blob/main/tabs/src/internal/addNewScopes.ts) to consent the scopes of permissions you want to add. The consented status will be preserved in a global context [`FxContext`](https://github.com/huimiu/tab-dashboard/blob/main/tabs/src/internal/singletonContext.ts).
+      You can call `[addNewPermissionScope(scopes: string[])](https://github.com/huimiu/tab-dashboard/blob/main/tabs/src/internal/addNewScopes.ts)` to consent the scopes of permissions you want to add. The consented status will be preserved in a global context `[FxContext](https://github.com/huimiu/tab-dashboard/blob/main/tabs/src/internal/singletonContext.ts)`.
 
       Refer [Graph API V1.0](/graph/api/overview?view=graph-rest-1.0) to get the `scope name of the permission` related to the Graph API you want to call.
 
