@@ -891,7 +891,7 @@ To build and run your app:
 
 1. Select **Project** > **Teams Toolkit** > **Prepare Teams App Dependencies**.
 
-:::image type="content" source="~/msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-msteamsapp_1.png" alt-text="Screenshot5 of Visual Studio with Project, Teams Toolkit, and Prepare Teams App Dependencies options are highlighted in red.":::
+:::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-msteamsapp_1.png" alt-text="Screenshot5 of Visual Studio with Project, Teams Toolkit, and Prepare Teams App Dependencies options are highlighted in red.":::
 
 1. Select your Microsoft 365 account or **Add an account** to sign in.
 
@@ -928,7 +928,7 @@ Congratulations, your first tab app is running in your local environment!
 
 1. Move through the page to view the user details.
 
-:::image type="content" source="~/msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/authorize-user-info.png" alt-text="Screenshot10 of Microsoft Teams with Authorize option highlighted in red.":::
+:::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/authorize-user-info.png" alt-text="Screenshot10 of Microsoft Teams with Authorize option highlighted in red.":::
 
 1. Select **Authorize** to let your app retrieve user details using Microsoft Graph.
 
