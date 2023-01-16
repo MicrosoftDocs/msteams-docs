@@ -48,4 +48,6 @@ You can also enable the DevTools from the Teams Android client. To enable DevToo
 
 ## See also
 
-[Clear the Teams client cache](/microsoftteams/troubleshoot/teams-administration/clear-teams-cache)
+* [Test your app](../../concepts/build-and-test/test-app-overview.md)
+* [Clear the Teams client cache](/microsoftteams/troubleshoot/teams-administration/clear-teams-cache)
+* [Build tabs for Teams](../what-are-tabs.md)

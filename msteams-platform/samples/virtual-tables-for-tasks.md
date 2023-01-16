@@ -579,7 +579,7 @@ The `plannerTaskId` property is associated with a planner task, which was create
 
 ---
 
-To resolve this issue, you must check the error message in the response and if it's set to the message shown above this means the virtual record isn't associated. To create an association for this record, you must call [Associate Collaboration Map - REST API](/rest/api/industry/collaboration-controls/collaboration-custom-ap-is/associate-collaboration-map).
+To resolve this issue, you must check the error message in the response and if it's set to the message shown above this means the virtual record isn't associated. To create an association for this record, you must call [Associate Collaboration Map - REST API](/rest/api/industry/collaboration-controls/collaboration-custom-apis/associate-collaboration-map).
 
 ### Attempt to read a virtual record and the Graph resource has been deleted
 
@@ -702,3 +702,9 @@ To fix this problem, change the request to this format:
 ### Creating virtual records and Graph access control
 
 The virtual tables honor the access control specified for Microsoft Graph. The virtual tables won't permit operations that the user couldn't perform using the Microsoft Graph API. For example, if the user you use to create the Plan is Task 3 and isn't a member of group you use then you'll get 403 Forbidden responses.
+
+## See also
+
+* [Integrate web apps](integrate-web-apps-overview.md)
+* [App manifest schema for Teams](../resources/schema/manifest-schema.md)
+* [Microsoft Graph overview](/graph/teams-concept-overview)

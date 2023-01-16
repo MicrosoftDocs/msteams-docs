@@ -2,7 +2,7 @@
 title: Create Teams conversation bot
 metadata:
   title: Create Teams conversation bot
-  description: With this learning module, you'll learn to create basic conversation bot in Microsoft Teams application.
+  description: With this learning module, you can learn to create basic conversation bot in Microsoft Teams application.
   audience: Developer
   level: Beginner
   ms.date: 04/01/2022
@@ -24,7 +24,7 @@ items:
 
     When your bot is added to a group or a team, an introduction message is sent. The message provides a brief description of the bot's features and how to use them.
  
-    This step-by-step guide helps you to create a conversation bot in the Teams application. You'll see the following output:
+    This step-by-step guide helps you to create a conversation bot in the Teams application. You can see the following output:
 
     :::image type="content" source="./assets/images/conversation-bot/final-output.png" alt-text="Final output."lightbox="assets/images/conversation-bot/final-output.png":::
 
@@ -207,16 +207,17 @@ items:
 
     **To update appsettings**
 
-    1. Go to the repo https://github.com/Microsoft/botbuilder-samples.git.
+    1. Open [Microsoft-Teams-Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples).
     1. Select **Code**.
-    1. Select **Download ZIP** from the dropdown menu.
+    1. Select **Open with GitHub Desktop** from the dropdown menu.
 
-        :::image type="content" source="./assets/images/calls-and-meetings/git_1.png" alt-text="Screenshot showing the repo download.":::
+        :::image type="content" source="./assets/images/conversation-bot/clone-repository.png" alt-text="Screenshot showing the repo clone.":::
+      > [!NOTE]
+      > Ensure that you note the path of the repository that you cloned.
 
-        > [!NOTE]
-        > Ensure that you note the path of the repository that you downloaded.
+    1. Select **Clone**. 
 
-    1. In the **File Explorer**, go to **botbuilder-samples** > **samples** > **csharp_dotnetcore** > **57.teams-conversation-bot**.
+    1. In the **File Explorer**, go to **Microsoft-Teams-Samples** > **samples** > **bot-conversation** > **csharp**.
     1. Open the **appsettings.json** file in Visual Studio and update the configuration for the bot.
    
         * Replace `"MicrosoftAppType"`to **Multitenant**.
@@ -237,7 +238,7 @@ items:
 
              :::image type="content" source="./assets/images/conversation-bot/tenant-id.png" alt-text="Copy Teams link.":::
 
-          1. Copy the **tenant Id** from the URL.
+          1. Copy the **tenant ID** from the URL.
 
              :::image type="content" source="./assets/images/conversation-bot/url-tenantid_1.png" alt-text="TenantID.":::
 
@@ -247,9 +248,9 @@ items:
 
     **To update manifest**
 
-    1. In the **File Explorer**, go to **botbuilder-samples** > **samples** > **csharp_dotnetcore** > **57.teams-conversation-bot** > **TeamsAppManifest**.
+    1. In the **File Explorer**, go to **Microsoft-Teams-Samples** > **samples** > **bot-conversation** > **csharp** > **TeamsAppManifest**.
     
-       :::image type="content" source="./assets/images/conversation-bot/manifest location.png" alt-text="Manifest.":::
+       :::image type="content" source="./assets/images/conversation-bot/manifest-file-location.png" alt-text="Manifest.":::
 
     1. Open the **manifest.json** file in Visual Studio and make the following changes:
        * Replace `"id"`and `"botId"` to your bot's **Microsoft App ID**.
@@ -260,7 +261,7 @@ items:
     1. Zip the contents of the **TeamsAppManifest** folder to create manifest.zip.
     
         > [!NOTE]
-        > The `manifest.zip` must not contain any additional folders in it. It must have `manifest json` source file, `color` icon, and `outline` icon inside the zip folder.
+        > The `manifest.zip` must not contain any other folders in it. It must have `manifest json` source file, `color` icon, and `outline` icon inside the zip folder.
         > Run your solution in Visual Studio and upload your manifest in your demo tenant for organization or your Teams account.
     
     **To run solution in Visual Studio**
@@ -270,10 +271,10 @@ items:
 
        ![Open file](~/assets/images/Tab-ME-SSO/open-project1.png)
 
-    1. Go to **botbuilder-samples** > **samples** > **csharp_dotnetcore** > **57.teams-conversation-bot**.
+    1. Go to **Microsoft-Teams-Samples** > **samples** > **bot-conversation** > **csharp**.
     1. Select `TeamsConversationBot.csproj` file.
 
-        :::image type="content" source="./assets/images/conversation-bot/visual-studio_2.png" alt-text="Visual Studio debug.":::
+        :::image type="content" source="./assets/images/conversation-bot/project-file-location.png" alt-text="Visual Studio debug.":::
 
     1. Select **F5** to run the project.
 
@@ -299,7 +300,7 @@ items:
 
     1. Select **Open** to upload the .zip file that you created in the TeamAppManifest folder.
     
-        :::image type="content" source="./assets/images/conversation-bot/upload-manifest_1.png" alt-text="Manifest upload in Teams.":::
+        :::image type="content" source="./assets/images/conversation-bot/upload-manifest-zip.png" alt-text="Manifest upload in Teams.":::
 
     1. Select **Add**.
 
@@ -322,7 +323,7 @@ items:
     | MentionMe    | Show Welcome   | MessageAllMembers |
     | --- | --- | --- |
     | :::image type="content" source="./assets/images/conversation-bot/mentionme-new.png" alt-text="Mentionme card"lightbox="assets/images/conversation-bot/mentionme-new.png"::: | :::image type="content" source="./assets/images/conversation-bot/show-welcome-new.png" alt-text="Show Welcome card"lightbox="assets/images/conversation-bot/show-welcome-new.png"::: | :::image type="content" source="./assets/images/conversation-bot/message-all-members-new.png" alt-text="MessageAllMembers card"lightbox="assets/images/conversation-bot/message-all-members-new.png"::: |
-    | **Result:** The bot responds to the message and mention the user. | **Result:** The bot sends the welcome card for you to interact with. |  **Result:** The bot sends an one-on-one message to each member in the current conversation. |
+    | **Result:** The bot responds to the message and mention the user. | **Result:** The bot sends the welcome card for you to interact with. |  **Result:** The bot sends a one-on-one message to each member in the current conversation. |
     | **Valid scopes:** personal, group chat, team chat. | **Valid scopes:** personal, group chat, team chat. |  **Valid scopes:** personal, group chat, team chat. |
 
     You can select an option from the command list by typing **@TeamsConversationBot** or **What can I do?** text in the compose area and send it.
