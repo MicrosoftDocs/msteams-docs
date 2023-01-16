@@ -73,6 +73,10 @@ You can edit the manifest template file `templates\appPackage\manifest.template.
 ```JSON
     "commandLists": [
       {
+        "scopes": [
+        "team",
+        "groupchat"
+        ],
         "commands": [
             {
                 "title": "helloWorld",
