@@ -3,7 +3,7 @@ title: Command bot in Teams
 author: surbhigupta
 description: Learn how a command bot works in Teams, and to add command and responses.
 ms.topic: conceptual
-ms.author: v-amprasad
+ms.author: surbhigupta
 ms.localizationpriority: high
 ---
 
