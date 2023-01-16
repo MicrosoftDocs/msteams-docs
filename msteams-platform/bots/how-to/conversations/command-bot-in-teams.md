@@ -163,7 +163,6 @@ TeamsFx SDK provides a convenient class `TeamsFxBotCommandHandler`, to handle wh
    ```
 
 You can customize the command, including calling an API, processing data, or any other command    .
-
 <br>
 
 </details>
@@ -245,7 +244,6 @@ If you're responding to a command that needs to access Microsoft Graph data of a
 If you don't have the required SDK, and need to invoke external APIs in your code. The `Teams: Connect to an API` command in Microsoft Visual Studio Code Teams Toolkit extension, or `teamsfx add api-connection` command in TeamsFx CLI can be used to bootstrap code to call target APIs. For more information, see [connect to existing API](../../../toolkit/add-API-connection.md#steps-to-connect-to-api).
 
 ## FAQ
-
 <br>
 
 <details>
@@ -272,7 +270,7 @@ For more information on how to add workflow bot Adaptive Card actions to command
 
 Follow the [step-by-step](../../../sbs-gs-commandbot.yml) guide to build Teams Command bot.
 
-## See Also
+## See also
 
 * [Conversation basics](conversation-basics.md)
 * [Build bots for Teams](../../what-are-bots.md)
