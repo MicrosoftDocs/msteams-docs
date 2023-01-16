@@ -1,7 +1,7 @@
 ---
 title: Apps for Teams meetings
 author: surbhigupta
-description: In this article, learn how apps works in Microsoft Teams meetings based on participant and user role and app extensibility.
+description: Learn how apps works in Microsoft Teams meetings based on participant and user role and app extensibility.
 ms.topic: overview
 ms.author: lajanuar
 ms.localizationpriority: medium
@@ -10,9 +10,11 @@ ms.date: 04/07/2022
 
 # Apps for Teams meetings and calls
 
-Meetings enable collaboration, partnership, informed communication, and shared feedback. The meeting space can deliver a user experience for each stage of the meeting lifecycle. The following illustration gives you an idea of the meeting app extensibility features:
+Meetings enable collaboration, partnership, informed communication, and shared feedback. The meeting space can deliver a user experience for each stage of the meeting lifecycle.
 
-:::image type="content" source="../assets/images/apps-in-meetings/meetingappextensibility.png" alt-text="The screenshot shows you how meeting app extensibility works.":::
+The following illustration gives you an idea of the meeting app extensibility features:
+
+:::image type="content" source="../assets/images/apps-in-meetings/meeting-app-extensibility.png" alt-text="Screenshot shows how the meeting app extensibility works.":::
 
 <!--
 :::row:::
@@ -99,11 +101,11 @@ A meeting lifecycle includes pre-meeting, in-meeting, and post-meeting app exper
 
 ## User types in Teams
 
-Teams supports user types, such as in-tenant, [guest](/microsoftteams/non-standard-users#guests), [federated or external](/microsoftteams/non-standard-users#federated-users), and [anonymous](/microsoftteams/non-standard-users#anonymous-users) user in a Teams meeting. Each user type can have one of the [user roles in Teams meeting](#user-roles-in-teams-meeting).
+Teams supports user types, such as in-tenant, [guest](/microsoftteams/non-standard-users#guests), [federated or external](/microsoftteams/non-standard-users#federated-users), and [anonymous](/microsoftteams/non-standard-users#anonymous-users) users in a Teams meeting. Each user type can have one of the [user roles in Teams meeting](#user-roles-in-teams-meeting).
 
 > [!NOTE]
 >
-> Currently, when a third person is added to a one-on-one call, the call is elevated to a group call that means a new session starts. Apps added to the one-on-one call are not available in the group call. However, they can be added again.
+> Currently, when a third person is added to a one-on-one call, the call is elevated to a group call that means a new session starts. Apps added to the one-on-one call aren't available in the group call. However, they can be added again.
 
 The following list details the various user types along with their accessibility:
 
@@ -125,7 +127,7 @@ The following are the user roles in a Teams meeting:
 
 * **Organizer**: The organizer schedules a meeting, sets the meeting options, assigns meeting roles, controls attendee permissions, and starts the meeting. Only users with a Microsoft 365 account and Teams license can be the organizer. A meeting organizer can change the settings for a specific meeting from the [**meeting options**](https://support.microsoft.com/en-us/office/change-participant-settings-for-a-teams-meeting-53261366-dbd5-45f9-aae9-a70e6354f88e).
 
-* **Presenter**: Presenters in a meeting have similar capabilities as the organizer, with the exception of removing an organizer from the session and modifying meeting options for the session.
+* **Presenter**: Presenters in a meeting have similar capabilities as the organizer, except for removing an organizer from the session and modifying meeting options for the session.
 
 * **Attendee**: An attendee is a user who is invited to attend the meeting. Attendees have limited capabilities during the meeting.
 
@@ -142,7 +144,7 @@ For more information, see [roles in a Teams meeting](https://support.microsoft.c
 
 > [!IMPORTANT]
 >
-> * Currently, third-party apps are available in Government Community Cloud (GCC) but are not available for GCC-High and Department of Defense (DOD) tenants.
+> * Currently, third-party apps are available in Government Community Cloud (GCC) but aren't available for GCC-High and Department of Defense (DOD) tenants.
 > * Third-party apps are turned off by default for GCC. To turn on third-party apps for GCC, see [manage app permission policies](/microsoftteams/teams-app-permission-policies) and [manage apps](/microsoftteams/manage-apps).
 
 ## See also
