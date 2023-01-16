@@ -11,7 +11,7 @@ ms.localizationpriority: medium
 
 An anonymous user is a user who joins a meeting via a meeting link. You can build bots, messaging extensions, cards and task modules in your app to engage with anonymous meeting participants.
 
-To build apps for anonymous users ensure the following:
+To build apps for anonymous users, ensure the following:
 
 * [Enable `supportsAnonymousGuestUsers` to true in your app manifest](#manifest-update-for-supportsanonymousguestusers).
 * [Admin setting for anonymous user app interaction](#admin-setting-for-anonymous-user-app-interaction).
@@ -32,7 +32,7 @@ To test your app's experience for anonymous users, select the URL in the meeting
 
 ## Admin setting for anonymous user app interaction
 
-Teams admins can use the Teams admin center to enable or disable anonymous user app interaction for the entire tenant. This anonymous user can interact with the apps in meetings if the app interaction is enabled by default. If your app needs to be accessed by anonymous users ensure that tenant admins enable the anonymous user app interaction. For more information, see [allow anonymous users to interact with apps in meetings](/microsoftteams/meeting-settings-in-teams).
+Teams admins can use the Teams admin center to enable or disable anonymous user app interaction for the entire tenant. This anonymous user can interact with the apps in meetings if the app interaction is enabled by default. If your app needs to be accessed by anonymous users, ensure that the tenant admins enable the anonymous user app interaction. For more information, see [allow anonymous users to interact with apps in meetings](/microsoftteams/meeting-settings-in-teams).
 
 ## Anonymous user authentication flow
 
@@ -40,7 +40,7 @@ As anonymous users aren't Azure Active Directory (Azure AD) accounts, Azure AD a
 
 ## In-Meeting getContext from Teams client library
 
-Apps receive the following info for an anonymous user when they call the `getContext` API from the shared app stage. You can recognize anonymous users by checking for a `userLicenseType` value of **Anonymous**.
+Apps receive the following info for an anonymous user when they call the `getContext` API from the shared app stage. You can recognize anonymous users by checking for a `userLicenseType` value of `Anonymous`.
 
 ```csharp
 "userObjectId": "",
@@ -64,7 +64,7 @@ With a few differences, the activities sent to your bot and the responses that i
 
 * The user ID is a generated value that is different each time the anonymous user joins the meeting.
 * The `aadObjectId` property is omitted.
-* The `userRole` property is set to **anonymous**.
+* The `userRole` property is set to `anonymous`.
 * The provided tenant ID is set to the tenant ID of the meeting organizer.
 
 ### Get members and get single member APIs
@@ -88,7 +88,7 @@ The [get members](/microsoftteams/platform/bots/how-to/get-teams-context#fetch-t
 | `userRole` | `anonymous` represents anonymous user. |
 
 > [!NOTE]
-> The ID received from the bot APIs and the Teams client library API are not the same.
+> The ID received from the bot APIs and the Teams client library API aren't the same.
 
 ### ConversationUpdate activity MembersAdded and MembersRemoved
 
@@ -140,11 +140,11 @@ Similar changes apply to the `membersRemoved` activity payload.
 
 > [!NOTE]
 >
-> When an anonymous user joins or leaves a meeting, the `from` object in the payload always has the id of the meeting organizer, even if the action was taken by someone else.
+> When an anonymous user joins or leaves a meeting, the `from` object in the payload always has the ID of the meeting organizer, even if the action was taken by someone else.
 
 ### Create Conversation API
 
-Bots are not allowed to initiate a one-on-one conversation with an anonymous user. If a bot calls the Create Conversation API with the user ID of an anonymous user, it will receive a `400` Bad Request status code and the following error response:
+Bots aren't allowed to initiate a one-on-one conversation with an anonymous user. If a bot calls the Create Conversation API with the user ID of an anonymous user, it will receive a `400` Bad Request status code and the following error response:
 
 ```csharp
 { 
@@ -155,7 +155,7 @@ Bots are not allowed to initiate a one-on-one conversation with an anonymous use
 } 
 ```
 
-### Adaptive cards
+### Adaptive Cards
 
 Anonymous users can view and interact with Adaptive Cards in the meeting chat. Adaptive card actions behave the same way for anonymous and non-anonymous users. For more information, see [Card actions](/microsoftteams/platform/task-modules-and-cards/cards/cards-actions?tabs=json).
 
@@ -167,7 +167,7 @@ Anonymous users can view and interact with Adaptive Cards in the meeting chat. A
 
 * Anonymous users will see a generic app icon on bot messages and cards, instead of the app's actual icon.
 
-    :::image type="content" source="../assets/images/apps-in-meetings/app-icon.png" alt-text="This screenshot shows you how the app icon displays for anonymous user.":::
+    :::image type="content" source="../assets/images/apps-in-meetings/app-icon.png" alt-text="Screenshot shows how the app icon displays for anonymous user.":::
 
 ## Next step
 
