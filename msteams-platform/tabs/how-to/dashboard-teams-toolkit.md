@@ -10,11 +10,13 @@ ms.date: 01/17/2023
 
 # Dashboard, widget and Graph API call in Teams toolkit
 
-Dashboards in the Teams toolkit allow you to monitor your business and see all important metrics briefly. Widget displays content from apps and services to stay engaged with the latest updates in Teams. Graph API can be used to visualize details about the implementation of the selected API.
+Dashboards in the Teams toolkit allow you to monitor your business and see important metrics briefly. Widget displays content from apps and services to stay engaged with the latest updates in Teams. Graph API can be used to visualize details about the implementation of the selected API.
 
 ## Dashboard
 
  A dashboard is a tool to track, analyze, and display data, to gain insight into the organization or specific process. The dashboard tab template from the Teams toolkit enables you to get started with integrating a canvas with multiple cards that provide an overview of content in Microsoft Teams.
+
+Following is an example of dashboard:
 
 :::image type="content" source="../../assets/images/dashboard/dashboard-demonstration.png" alt-text="Screenshot showing the dashboard.":::
 
