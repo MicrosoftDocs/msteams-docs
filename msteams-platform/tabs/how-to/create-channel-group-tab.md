@@ -903,7 +903,7 @@ When you select **F5**, Teams Toolkit:
 1. Starts your application front-end hosted locally.
 1. Starts Teams in a web browser with a command to instruct Teams to side load the application (the URL is registered inside the application manifest).
 
-    </details>
+</details>
 
 1. Install the self-signed SSL certificate for local debugging, if requested.
 
@@ -937,16 +937,17 @@ When you select **F5**, Teams Toolkit:
 
     You can do normal debugging activities, such as setting breakpoints, as if it were any other web application. The app supports hot reloading.  If you change any file within the project, the page will be reloaded.
 
-    <!-- markdownlint-disable MD033 -->
-    <details>
-    <summary>Learn how to troubleshoot if your app doesn't run locally.</summary>
+<!-- markdownlint-disable MD033 -->
+<details>
+<summary>Learn how to troubleshoot if your app doesn't run locally.</summary>
 
-    To run your app in Teams, you need a Microsoft 365 development account that allows app sideloading. You can learn more about it in the Prerequisites section.
-    </details>
+To run your app in Teams, you need a Microsoft 365 development account that allows app sideloading. You can learn more about it in the Prerequisites section.
 
-    Stop debugging in Visual Studio.
+</details>
 
-    You've learned to create, build, and run Teams app with tab capability. The following final steps are to deploy your app on Azure and Preview in Teams:
+Stop debugging in Visual Studio.
+
+You've learned to create, build, and run Teams app with tab capability. The following final steps are to deploy your app on Azure and Preview in Teams:
 
 1. [Provision your tab app in the cloud](#to-provision-your-tab-app-in-the-cloud): You can provision your tab app in the cloud.
 1. [Deploy your tab app to cloud](#to-deploy-your-tab-app-to-cloud): You can deploy your tab app to cloud.
