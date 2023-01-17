@@ -952,7 +952,7 @@ When you select **F5**, Teams Toolkit:
 1. [Deploy your tab app to cloud](#to-deploy-your-tab-app-to-cloud): You can deploy your tab app to cloud.
 1. [Preview your tab app in Teams](#to-preview-your-tab-app-in-teams): Your tab app opens in Teams.
 
-        Let's deploy the first app with tab capability on Azure using Teams Toolkit.
+    Let's deploy the first app with tab capability on Azure using Teams Toolkit.
 
 ### **To provision your tab app in the cloud**
 
