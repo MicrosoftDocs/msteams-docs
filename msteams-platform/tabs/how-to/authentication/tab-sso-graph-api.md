@@ -121,10 +121,21 @@ The current implementation for SSO grants consent for only user-level permission
 
 After you've configured Graph permissions in Azure AD:
 
-- [Configure your client-side code to fetch access token using MSAL](#configure-code-to-fetch-access-token-using-msal)
-- [Pass the access token to server-side code](#pass-the-access-token-to-server-side-code)
+- [Get id token from Teams client](#get-id-token-from-teams-client)
+- [Exchange the id token with server-side token](#exchange-the-id-token-with-server-side-token)
 
-### Configure code to fetch access token using MSAL
+### Get id token from Teams client
+
+The following code provides an example for calling token id from Teams client.
+
+```csharp
+microsoftTeams.authentication.getAuthToken().then((result) => {
+    //result contains the id token
+            console.log(result);
+        })
+```
+
+### Exchange the id token with server-side token
 
 The following code provides an example of OBO flow to fetch access token from the Teams client using MSAL.
 
@@ -189,8 +200,6 @@ IConfidentialClientApplication app = ConfidentialClientApplicationBuilder.Create
 
 ---
 
-### Pass the access token to server-side code
-
 If you need to access Microsoft Graph data, configure your server-side code to:
 
 1. Validate the access token. For more information, see [Validate the access token](tab-sso-code.md#validate-the-access-token).
@@ -200,6 +209,12 @@ If you need to access Microsoft Graph data, configure your server-side code to:
 
 > [!IMPORTANT]
 > As a best practice for security, always use the server-side code to make Microsoft Graph calls, or other calls that require passing an access token. Never return the OBO token to the client to enable the client to make direct calls to Microsoft Graph. This helps protect the token from being intercepted or leaked.
+
+## Code sample
+
+| **Sample name** | **Description** | **C#** | **Node.js** |
+| --- | --- | --- | --- |
+| Tabs Azure AD SSO | Microsoft Teams sample app for tabs Azure AD SSO which uses OBO flow to call Graph APIs. | [view](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/69c76fded29d7ae0fde49841d4ec9af7597ceedd/samples/tab-sso/csharp) | [view](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/69c76fded29d7ae0fde49841d4ec9af7597ceedd/samples/tab-sso/nodejs)|
 
 ## Known limitations
 
