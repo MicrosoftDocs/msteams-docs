@@ -704,7 +704,7 @@ To install the Microsoft Teams Toolkit extension:
 1. Open `vs_enterprise__3bed52501a604464b1eff2ce580fd4eb.exe` from your download folder.
 1. Select **Continue** in the **Visual Studio Installer** page to configure your installation.
 
-:::image type="content" source="../../assets/images/teams-toolkit-v2/blazor/visual-studio-installer.PNG" alt-text="Screenshot of Visual Studio Installer with continue options highlighted in red.":::
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor/visual-studio-installer.PNG" alt-text="Screenshot of Visual Studio Installer with continue options highlighted in red.":::
 
 1. Select **ASP.NET and web development** under **Workloads**.
 
@@ -824,11 +824,11 @@ Select the project type:
 
     :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor/vs-select-teams-app.png" alt-text="Screenshot of Create a new project with Next option highlighted in red for blazor app creation.":::
 
-The **Configure your new project** page appears.
+    The **Configure your new project** page appears.
 
 1. Configure the new project details.
 
-Select the following project configuration:
+    Select the following project configuration:
 
 1. Enter a suitable name for your project.
 
@@ -849,7 +849,7 @@ The **Create a new Teams application** page appears.
 
 1. Select Teams app feature.
 
-Select app feature:
+    Select app feature:
 
 1. Select the **Tab** as the capability for your app.
 
