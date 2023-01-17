@@ -9,14 +9,11 @@ ms.localizationpriority: medium
 
 # Build apps for anonymous users
 
-An anonymous user is a user who joins a meeting via a meeting link. You can build bots, messaging extensions, and cards and task modules in your app to engage with anonymous meeting participants.
+Anonymous users don't have an Azure AD identity and aren't federated with a tenant. The anonymous participants are like external users but their identity isn't shown in the meeting. An anonymous user can be a presenter or an attendee but can't be an organizer. You can build bots, messaging extensions, and cards and task modules in your app to engage with anonymous meeting participants.
 
-To test your app's experience for anonymous users, select the URL in the meeting invite and join the meeting from a private browser window.
+To build apps for anonymous users, update your [app manifest](#manifest-update-for-supportsanonymousguestusers) with `supportsAnonymousGuestUsers` property. To allow anonymous users to interact with the app, the tenant admins need to [enable the anonymous user app interaction](#admin-setting-for-anonymous-user-app-interaction) in Teams admin center. 
 
-To build apps for anonymous users, ensure the following:
-
-* [Enable the `supportsAnonymousGuestUsers` property](#manifest-update-for-supportsanonymousguestusers).
-* [Admin setting for anonymous user app interaction](#admin-setting-for-anonymous-user-app-interaction).
+To test your apps experience for anonymous users, select the URL in the meeting invite and join the meeting from a private browser window.
 
 ## Manifest update for `supportsAnonymousGuestUsers`
 
@@ -30,15 +27,15 @@ To allow anonymous users to interact with the tab app, ensure to update `support
 
 ```
 
-For more information, see [app manifest schema.](~/resources/schema/manifest-schema.md)
-
-## Admin setting for anonymous user app interaction
-
-Teams admins can use the Teams admin center to enable or disable anonymous user app interaction for the entire tenant. If your app needs to be accessed by anonymous users, ensure that the tenant admins enable the anonymous user app interaction. This setting is enabled by default. For more information, see [allow anonymous users to interact with apps in meetings](/microsoftteams/meeting-settings-in-teams).
+For more information, see [app manifest schema.](~/resources/schema/manifest-schema.md#meetingextensiondefinition)
 
 ## Anonymous user authentication flow
 
 Anonymous users can't be authenticated through Azure Active Directory (Azure AD) authentication or `getAuthToken` from the client SDK as they aren't Azure AD accounts. If you need to authenticate anonymous users, your app must identify anonymous users and provide an alternative authentication experience in the meetings. You can determine if a user is anonymous by validating [user's context](#in-meeting-getcontext-from-teams-client-library).
+
+## Admin setting for anonymous user app interaction
+
+Teams admins can use the Teams admin center to enable or disable anonymous user app interaction for the entire tenant. If your app needs to be accessed by anonymous users, ensure that the tenant admins enable the anonymous user app interaction. This setting is enabled by default. For more information, see [allow anonymous users to interact with apps in meetings](/microsoftteams/meeting-settings-in-teams).
 
 ## In-Meeting getContext from Teams client library
 

@@ -101,7 +101,7 @@ A meeting lifecycle includes pre-meeting, in-meeting, and post-meeting app exper
 
 ## User types in Teams
 
-Teams supports user types, such as in-tenant, [guest](/microsoftteams/non-standard-users#guests), [federated or external](/microsoftteams/non-standard-users#federated-users), and [anonymous](/microsoftteams/non-standard-users#anonymous-users) users in a Teams meeting. Each user type can have one of the [user roles in Teams meeting](#user-roles-in-teams-meeting).
+Teams supports user types, such as in-tenant, guest, federated or external, and anonymous users in a Teams meeting. Each user type can have one of the [user roles in Teams meeting](#user-roles-in-teams-meeting).
 
 > [!NOTE]
 >
