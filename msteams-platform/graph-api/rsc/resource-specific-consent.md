@@ -15,7 +15,7 @@ Through RSC, an authorized user can give an application access to the data of a 
 
 > [!NOTE]
 >
->* RSC for chat scope is available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md) only.
+>* Application RSC permissions for chat scope are available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md) only.
 >* If a chat has a meeting or a call associated with it, then the relevant RSC permissions apply to those resources as well.
 
 ## Types of RSC permissions
