@@ -1,7 +1,7 @@
 ### YamlMime:Tutorial
 title: Create dashboard, widget, and Graph API call in Teams toolkit
 metadata:
-  title: Get started with Teams Toolkit and app template
+  title: Create dashboard, widget, and Graph API call in Teams toolkit
   description: Learn how to create a dashboard tab, add a new widget, and implement graph API.
   audience: Developer
   level: Beginner
@@ -22,9 +22,11 @@ items:
   durationInMinutes: 1
   content: |
 
-    * [NodeJS](https://nodejs.org/en/), fully tested on NodeJS 14, 16.
-    * A Microsoft 365 account. If you don't have Microsoft 365 account, create one from [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
-    * [Teams Toolkit Visual Studio Code Extension](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) or [TeamsFx CLI](~/toolkit/TeamsFx-CLI.md).
+    | &nbsp; | Install | For using |
+    | --- | --- | --- |    
+    | &nbsp; | [NodeJS](https://nodejs.org/en/), fully tested on NodeJS 14, 16. | Back-end JavaScript runtime environment. Use version 14 or 16. |
+    | &nbsp; | [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program) | Access to Teams account with the appropriate permissions to install an app. |
+    | &nbsp; | [Teams Toolkit Visual Studio Code Extension](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) or [TeamsFx CLI](~/toolkit/TeamsFx-CLI.md) |  A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use 4.0.0 version. |
 
 - title: Create dashboard
   durationInMinutes: 5
