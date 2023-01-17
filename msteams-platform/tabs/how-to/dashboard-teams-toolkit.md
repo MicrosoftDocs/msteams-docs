@@ -10,7 +10,7 @@ ms.date: 01/17/2023
 
 # Dashboard, widget and Graph API call in Teams toolkit
 
-Dashboards in Teams toolkit allow you to monitor your business and see all your important metrics briefly. Widget displays content from apps and services to stay engaged with the latest updates in Teams. Graph API call can be used to visualize details about the implementation of the selected API.
+Dashboards in the Teams toolkit allow you to monitor your business and see all your important metrics briefly. Widget displays content from apps and services to stay engaged with the latest updates in Teams. Graph API call can be used to visualize details about the implementation of the selected API.
 
 ## Dashboard
 
@@ -81,7 +81,7 @@ Microsoft Graph API is a Restful web API that we can use to communicate with Mic
 
 * Add Single-Sign-On related files.
 * Call Graph API from the front-end(use delegated permissions).
-* Call graph api from the back-end(use application permissions).
+* Call Graph API from the back-end(use application permissions).
 
 ## Step-by-step guide
 
