@@ -13,12 +13,12 @@ Anonymous users don't have an Azure AD identity and aren't federated with a tena
 
 For anonymous users to interact with the apps in Teams meetings, ensure the following:
 
-1. Update your [app manifest](#manifest-update-for-supportsanonymousguestusers).
+1. Update your [app manifest](#app-manifest-update-for-anonymous-users).
 2. Enable the [anonymous user app interaction](#admin-setting-for-anonymous-user-app-interaction) in Teams admin center.
 
 ## App manifest update for anonymous users
 
-To allow anonymous users to interact with the tab app, ensure to update the `supportsAnonymousGuestUsers` property to `true` in your app manifest. Following is an example of the manifest:
+To allow anonymous users to interact with the tab app, update the `supportsAnonymousGuestUsers` property to `true` in your app manifest. Following is an example of the manifest:
 
 ```json
 
