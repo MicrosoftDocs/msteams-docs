@@ -802,7 +802,7 @@ Use Teams Toolkit to create your first tab project. The toolkit takes you throug
 1. **Configure your new project** page: You enter the project details.
 1. **Create a new Teams application** page: You select the Teams app capabilities.
 
-**To create your tab project workspace**
+    To create your tab project workspace
 
 1. Open the latest version of Visual Studio.
 
@@ -814,7 +814,7 @@ The **Create a new project** page appears.
 
 1. Select the project details.
 
-Select the project type:
+    Select the project type:
 
 1. Search for **Microsoft Teams** from templates dropdown list.  
 
@@ -845,7 +845,7 @@ Select the project type:
 
     :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-new-project.PNG" alt-text="Screenshot1 of Configure your new project with Create option highlighted in red.":::
 
-The **Create a new Teams application** page appears.  
+    The **Create a new Teams application** page appears.
 
 1. Select Teams app feature.
 
