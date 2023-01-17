@@ -10,7 +10,7 @@ ms.date: 01/17/2023
 
 # Dashboard, widget and Graph API call in Teams toolkit
 
-Dashboards in Teams toolkit allows you to monitor your business and see all your most important metrics briefly. Widget displays content from apps and services to stay engaged with the latest updates in Teams. Graph API call can be used to visualize details about the implementation of the selected API or service in a certain project
+Dashboards in Teams toolkit allows you to monitor your business and see all your most important metrics briefly. Widget displays content from apps and services to stay engaged with the latest updates in Teams. Graph API call can be used to visualize details about the implementation of the selected API or service in a certain project.
 
 ## Dashboard
 
