@@ -166,7 +166,7 @@ The following triggers and actions are supported within a flow:
 
   1. Retrieve Collaboration session
 
-      ::image type="content" source="../assets/images/collaboration-control/retrieve-collab-session.png" alt-text="Screenshot is an example that shows how to Retrieve collaboration session.":::
+      :::image type="content" source="../assets/images/collaboration-control/retrieve-collab-session.png" alt-text="Screenshot is an example that shows how to Retrieve collaboration session.":::
 
      This step action returns the collaboration session that matches the provided inputs:
 
