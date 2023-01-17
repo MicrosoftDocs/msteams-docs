@@ -131,6 +131,8 @@
       href: toolkit/explore-Teams-Toolkit.md
     - name: Prepare to build apps using Teams Toolkit
       href: toolkit/build-environments.md
+    - name: Dashboard, widget and Graph API call in Teams toolkit
+      href: toolkit/dashboard-teams-toolkit.md
     - name: Use Teams Toolkit to create your app 
       items:
       - name: Prerequisites for creating your Teams app
@@ -279,6 +281,9 @@
   - name: Create a personal tab
     href: tabs/how-to/create-personal-tab.md
     displayName: App generator, Reorder static personal tabs
+  - name: Dashboard, widget and Graph API call in Teams toolkit
+    href: tabs/how-to/dashboard-teams-toolkit
+    displayName: 
   - name: Create a channel tab
     href: tabs/how-to/create-channel-group-tab.md
   - name: Create a content page
