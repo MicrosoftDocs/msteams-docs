@@ -32,19 +32,19 @@ For guidance about the Teams app manifest and TeamsJS versioning guidance, and f
 
 Reach your users where they are, right in the context of their work by extending your web app as a [Teams personal tab](extend-m365-teams-personal-tab.md) application that also runs in both Outlook and Microsoft 365 app. Teams personal tabs built and hosted with [SharePoint Framework](extend-m365-teams-personal-tab.md#sharepoint-framework-spfx-apps) (SPFx) version 1.16 and later are also supported in Outlook and Microsoft 365 app.
 
-:::image type="content" source="images/outlook-office-teams-personal-tab.png" alt-text="The screenshot is an example that shows Personal tab running in Outlook, Microsoft 365, and Teams.":::
+:::image type="content" source="images/outlook-office-teams-personal-tab.png" alt-text="Screenshot shows the personal tab running in Outlook, Microsoft 365, and Teams.":::
 
 On mobile, you can test and debug your Teams personal tab running on [Microsoft 365 app for Android](extend-m365-teams-personal-tab.md#microsoft-365-app-for-android).
 
-:::image type="content" source="images/office-mobile-personal-tab.png" alt-text="The screenshot is an example that shows personal tab running in Microsoft 365.":::
+:::image type="content" source="images/office-mobile-personal-tab.png" alt-text="Screenshot shows the personal tab running in Microsoft 365.":::
 
 You can also extend your search-based [Teams message extensions](extend-m365-teams-message-extension.md) to Outlook on the web and Windows desktop, enabling your customers to search and share results through the compose message area of Outlook, in addition to Microsoft Teams clients.
 
-:::image type="content" source="images/outlook-teams-messaging-ext.png" alt-text="The screenshot is an example that shows Message extension running in Outlook and Teams.":::
+:::image type="content" source="images/outlook-teams-messaging-ext.png" alt-text="Screenshot shows the message extension running in Outlook and Teams.":::
 
 Link unfurling works in Outlook web and Windows environments the same way it does in Microsoft Teams without any further work than using Teams app manifest version 1.13 or later.
 
-:::image type="content" source="images/outlook-teams-link-unfurling.png" alt-text="The screenshot is an example that shows Link unfurling running in Outlook and Teams.":::
+:::image type="content" source="images/outlook-teams-link-unfurling.png" alt-text="Screenshot shows the link unfurling running in Outlook and Teams.":::
 
 Build your app with the latest [Teams app manifest](../resources/schema/manifest-schema.md) and [Teams JavaScript client library](../tabs/how-to/using-teams-client-library.md) to benefit the latest consolidated Microsoft 365 app development process. Then deliver a streamlined deployment, installation, and admin experience for your customers that expands the reach and usage of your app.
 

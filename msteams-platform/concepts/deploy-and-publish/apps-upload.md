@@ -34,7 +34,7 @@ You can sideload Microsoft Teams apps without having to publish to your organiza
 You can sideload your app to a team, chat, meeting, or for personal use depending on how you configured your app's scope.
 
 1. Log in to the Teams client with your [Microsoft 365 development account](https://developer.microsoft.com/en-us/microsoft-365/dev-program).
-1. Select **Apps** > **Manage your apps** and **Publish an app**.
+1. Select **Apps** > **Manage your apps** > **Upload an app**.
 
     :::image type="content" source="~/assets/images/publish-app/manage-apps.png" alt-text="Publish an app":::
 

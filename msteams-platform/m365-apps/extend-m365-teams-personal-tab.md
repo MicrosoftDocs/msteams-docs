@@ -51,7 +51,7 @@ To start with a personal tab that's already enabled to run in Outlook and Micros
 1. Select **Create a new Teams app** option.
 1. Select **SSO enabled personal tab**.
 
-    :::image type="content" source="images/toolkit-tab-sample.png" alt-text="The Screenshot is an example that shows the Todo List sample (Works in Teams, Outlook and Microsoft 365 app) in Teams Toolkit.":::
+    :::image type="content" source="images/toolkit-tab-sample.png" alt-text="Screenshot shows the capabilities screen with the SSO enabled personal tab option highlighted in red.":::
 1. Select preferred programming language.
 1. Select a location on your local machine for the workspace folder and enter your application name.
 1. Open the command palette (`Ctrl+Shift+P`) and type `Teams: Provision in the cloud` to create the required app resources (App Service plan, Storage account, Function App, Managed Identity) in your Azure account.
@@ -145,7 +145,7 @@ If your app makes use of [Content Security Policy](https://developer.mozilla.org
 1. Select the name of your personal tab application to open its app registration.
 1. Select  **Expose an API** (under *Manage*).
 
-    :::image type="content" source="images/azure-app-registration-clients.png" alt-text="The screenshot is an example that shows the authorize client Ids from the *App registrations* blade on Azure portal.":::
+    :::image type="content" source="images/azure-app-registration-clients.png" alt-text="Screenshot shows the authorized client Ids from the app registrations blade on Azure portal.":::
 
 1. In the **Authorized client applications** section, ensure all of the following `Client Id` values are added:
 
@@ -168,19 +168,19 @@ The final step to running your app in Microsoft 365 and Outlook is to sideload y
 
 1. Package your Teams application ([manifest](../resources/schema/manifest-schema.md) and [app icons](/microsoftteams/platform/resources/schema/manifest-schema#icons)) in a zip file. If you used Teams Toolkit to create your app, you can easily do this using the **Zip Teams metadata package** option in the **Deployment** menu of Teams Toolkit.
 
-    :::image type="content" source="images/toolkit-zip-teams-metadata-package.png" alt-text="'The screenshot is an example that shows the Zip Teams metadata package' option in Teams Toolkit extension for Visual Studio Code.":::
+    :::image type="content" source="images/toolkit-zip-teams-metadata-package.png" alt-text="Screenshot shows the zip Teams metadata package option in Teams toolkit extension for Visual Studio Code.":::
 
 1. Sign in to Teams with your sandbox tenant account, and toggle into  *Developer Preview* mode. Select the ellipsis (**...**) menu by your user profile, then select: **About** > **Developer preview**.
 
-    :::image type="content" source="images/teams-dev-preview.png" alt-text="The screenshot describes how to select 'Developer Preview' option.":::
+    :::image type="content" source="images/teams-dev-preview.png" alt-text="Screenshot shows how to select the developer preview option.":::
 
 1. Select **Apps** to open the **Manage your apps** pane. Then select **Upload an app**.
 
-    :::image type="content" source="images/teams-manage-your-apps.png" alt-text="The screenshot is an example that shows the Manage your apps pane and Publish an app options.":::
+    :::image type="content" source="images/teams-manage-your-apps.png" alt-text="Screenshot shows the manage your apps and upload an app options highlighted in red.":::
 
 1. Choose **Upload a customized app** option and select your app package.
 
-    :::image type="content" source="images/teams-upload-custom-app.png" alt-text="The screenshot is an example that shows the option to upload am app in Teams.":::
+    :::image type="content" source="images/teams-upload-custom-app.png" alt-text="Screenshot shows the option to upload an app in Teams.":::
 
 After it's sideloaded to Teams, your personal tab is available in Outlook and Microsoft 365 app. You must sign in with the same credentials that you used to sideload your app into Teams. When running the Microsoft 365 app for Android, you need to restart the app to use your personal tab app from the Microsoft 365 app.
 
@@ -201,7 +201,7 @@ To view your app running in Outlook on Windows desktop:
 1. On the side bar, select  **More Apps**. Your sideloaded app title appears among your installed apps.
 1. Select your app icon to launch your app in Outlook.
 
-    :::image type="content" source="images/outlook-desktop-more-apps.png" alt-text="The screenshot is an example that shows the ellipses (More apps) option on the side bar of Outlook desktop client to see your installed personal tabs.":::
+    :::image type="content" source="images/outlook-desktop-more-apps.png" alt-text="Screenshot shows the more apps option on the left pane of Outlook desktop client to see your installed personal tabs.":::
 
 ### Outlook on the web
 
@@ -211,7 +211,7 @@ To view your app in Outlook on the web:
 1. On the side bar, select  **More Apps**. Your sideloaded app title appears among your installed apps.
 1. Select your app icon to launch and preview your app running in Outlook on the web.
 
-    :::image type="content" source="images/outlook-web-more-apps.png" alt-text="The screenshot is an example that shows the ellipses (More apps) option on the side bar of outlook.com to see your installed personal tabs.":::
+    :::image type="content" source="images/outlook-web-more-apps.png" alt-text="Screenshot shows the more apps option on the left pane of outlook.com to see your installed personal tabs.":::
 
 ### Microsoft 365 on Windows
 
@@ -221,7 +221,7 @@ To view your app running in Microsoft 365 on Windows desktop:
 1. Select the **Apps** icon on the side bar. Your sideloaded app title appears among your installed apps.
 1. Select your app icon to launch your app in Microsoft 365.
 
-    :::image type="content" source="images/office-desktop-more-apps.png" alt-text="The screenshot is an example that shows the ellipses (More apps) option on the side bar of Microsoft 365 desktop client to see your installed personal tabs.":::
+    :::image type="content" source="images/office-desktop-more-apps.png" alt-text="Screenshot shows the more apps option on the left pane of Microsoft 365 desktop client to see your installed personal tabs.":::
 
 ### Microsoft 365 on the web
 
@@ -231,7 +231,7 @@ To preview your app running in Microsoft 365 on the web:
 1. Select the **Apps** icon on the side bar. Your sideloaded app title appears among your installed apps.
 1. Select your app icon to launch your app in Microsoft 365 on the web.
 
-    :::image type="content" source="images/office-web-more-apps.png" alt-text="The screenshot is an example that shows the (More apps) option on the side bar of microsoft365.com to see your installed personal tabs.":::
+    :::image type="content" source="images/office-web-more-apps.png" alt-text="Screenshot shows the more apps option on the left pane of microsoft365.com to see your installed personal tabs.":::
 
 ### Microsoft 365 app for Android
 
@@ -244,7 +244,7 @@ To view your app running in Microsoft 365 app for Android:
 1. Select the **Apps** icon. Your sideloaded app appears among installed apps.
 1. Select your app icon to launch your app in Microsoft 365 app for Android.
 
-    :::image type="content" source="images/office-mobile-apps.png" alt-text="The screenshot is an example that shows the 'Apps' option on the side bar of the Microsoft 365 app to see your installed personal tabs.":::
+    :::image type="content" source="images/office-mobile-apps.png" alt-text="Screenshot shows the apps option on the bottom ribbon of the Microsoft 365 app to see your installed personal tabs.":::
 
 ## Troubleshooting
 
@@ -262,11 +262,11 @@ Use the [Microsoft Teams developer community channels](/microsoftteams/platform/
 
 From Teams Toolkit, you can Debug (`F5`) your tab application running in Microsoft 365 and Outlook, in addition to Teams.
 
-:::image type="content" source="images/toolkit-debug-targets.png" alt-text="The screenshot is an example that shows the dropdown menu of debug in Teams in the Teams Toolkit.":::
+:::image type="content" source="images/toolkit-debug-targets.png" alt-text="Screenshot shows the dropdown menu of debug in Teams in the Teams Toolkit.":::
 
 Upon first run of local debug in Microsoft 365 app or Outlook, you'll be prompted to sign in to your Microsoft 365 tenant account and install a self-signed test certificate. You'll also be prompted to manually install Teams. Select **Install in Teams** to open a browser window and manually install your app. Then select **Continue** to proceed to debug your app in Microsoft 365 / Outlook.
 
-:::image type="content" source="images/toolkit-dialog-teams-install.png" alt-text="The screenshot is an example that shows the Toolkit dialog box to install in Teams.":::
+:::image type="content" source="images/toolkit-dialog-teams-install.png" alt-text="Screenshot shows the Toolkit dialog to install in Teams.":::
 
 Provide feedback and report any issues with the Teams Toolkit debugging experience at [Microsoft Teams Framework (TeamsFx)](https://github.com/OfficeDev/TeamsFx/issues).
 
@@ -278,7 +278,7 @@ Teams Toolkit (`F5`) debugging isn't yet supported with Microsoft 365 app for An
 1. Launch the Microsoft 365 app From your Android device.
 1. Open your profile **Me > Settings > Allow debugging**, and toggle on the option for **Enable remote debugging**.
 
-    :::image type="content" source="images/office-android-enable-remote-debugging.png" alt-text="The screenshot is an example that shows the Enable remote debugging toggle option.":::
+    :::image type="content" source="images/office-android-enable-remote-debugging.png" alt-text="Screenshot shows the enable remote debugging toggle option.":::
 
 1. Leave **Settings**.
 1. Leave your profile screen.
@@ -286,7 +286,7 @@ Teams Toolkit (`F5`) debugging isn't yet supported with Microsoft 365 app for An
 1. Ensure your Android device is connected to your dev machine. From your dev machine, open your browser to its DevTools inspection page. For example, go to `edge://inspect/#devices` in Microsoft Edge to display a list of debug-enabled Android WebViews.
 1. Find the `Microsoft Teams Tab` with your tab URL and select **inspect** to start debugging your app with DevTools.
 
-    :::image type="content" source="images/office-android-debug.png" alt-text="The screenshot is an example that shows the list of webviews in devtool.":::
+    :::image type="content" source="images/office-android-debug.png" alt-text="Screenshot shows the list of webviews in devtools.":::
 
 1. Debug your tab app within the Android WebView. In the same way you [remotely debug](/microsoft-edge/devtools-guide-chromium/remote-debugging) a regular website on an Android device.
 
