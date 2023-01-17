@@ -299,7 +299,7 @@ You can either use **​event function registration** or **​method override** 
 
 this.onTeamsMessageEditEvent(async (context, next) => {
   let editedMessage = context.activity.text;
-  await context.sendActivity(`The previous message was "${previousMessage}". The edited message is ${editedMessage}"`);
+  await context.sendActivity(`The edited message is ${editedMessage}"`);
   next();
 })
 
@@ -311,7 +311,7 @@ this.onTeamsMessageEditEvent(async (context, next) => {
 
 async onTeamsMessageEdit(context) {
     let editedMessage = context.activity.text;
-    await context.sendActivity(`The previous message was "${previousMessage}". The edited message is ${editedMessage}"`);
+    await context.sendActivity(`The edited message is ${editedMessage}"`);
 }
 
 ```
