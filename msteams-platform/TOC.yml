@@ -278,7 +278,7 @@
   - name: Create a personal tab
     href: tabs/how-to/create-personal-tab.md
     displayName: App generator, Reorder static personal tabs
-  - name: Dashboard, widget and Graph API call in Teams toolkit
+  - name: Dashboard, widget, and Graph API call in Teams toolkit
     href: tabs/how-to/dashboard-teams-toolkit.md
     displayName: Dashboard, widget, Graph API call, step-by-step-guide
   - name: Create a channel tab
