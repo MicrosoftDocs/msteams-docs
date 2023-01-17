@@ -1,5 +1,5 @@
 ### YamlMime:Tutorial
-title: Get started with Teams Toolkit and app template
+title: Create dashboard, widget, and Graph API call in Teams toolkit
 metadata:
   title: Get started with Teams Toolkit and app template
   description: Learn how to create a dashboard tab, add a new widget, and implement graph API.
@@ -7,8 +7,8 @@ metadata:
   level: Beginner
   ms.date: 01/06/2023
   ms.topic: interactive-tutorial
-  nextTutorialHref: how-to/dashboard-teams-toolkit.md
-  nextTutorialTitle: Dashboard, widget and Graph API call in Teams toolkit
+  nextTutorialHref: tabs/how-to/dashboard-teams-toolkit.md
+  nextTutorialTitle: Dashboard, widget, and Graph API call in Teams toolkit
   ms.custom: mvc
   ms.localizationpriority: high
 items:
