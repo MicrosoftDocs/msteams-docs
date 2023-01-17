@@ -12,7 +12,7 @@ Here's what you'll learn in this section:
 
 1. **SSO user experience**: Teams offers your app users a true SSO experience. The app users can use your app without signing in again.
 2. **SSO in Teams at runtime**: Your tab app interacts with Azure AD at runtime for one-time authentication and authorization for your app users.
-3. **Enable SSO for your tab app**: Fulfil the tasks involved to implement SSO in your tab app.
+3. **Enable SSO for your tab app**: Implement the tasks involved to enable SSO in your tab app.
 
 ## SSO user experience in Teams
 

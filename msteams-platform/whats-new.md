@@ -24,9 +24,9 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 Teams platform features that are available to all app developers.
 
-**2023 February**
+**2023 January**
 
-* ***February 22, 2023***: [Apps for anonymous users](apps-in-teams-meetings/build-apps-for-anonymous-user.md)
+* ***January 17, 2023***: [Introduced anonymous user support for apps in Teams meetings.](apps-in-teams-meetings/build-apps-for-anonymous-user.md)
 
 :::column-end:::
 :::row-end:::
