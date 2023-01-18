@@ -1,14 +1,14 @@
 ---
-title: Dashboard, widget, and Graph API call in Teams toolkit
+title: Build a dashboard in Teams
 author: v-silakshmi
 description:  Describes Dashboard, widget and Graph API call in Teams toolkit 
 ms.author: surbhigupta
 ms.localizationpriority: medium 
-ms.topic: Dasboard, widget, and Graph API call in Teams toolkit
+ms.topic: Dashboard, widget, and Graph API call in Teams toolkit
 ms.date: 01/17/2023
 ---
 
-# Dashboard, widget, and Graph API call in Teams toolkit
+# Build a dashboard in Teams
 
 Dashboards in the Teams toolkit allow you to monitor your business and view important metrics. A Widget displays content from apps and services to stay engaged with the latest updates in Teams. Graph API can be used to visualize details about the implementation of the selected API.
 
@@ -30,18 +30,18 @@ Example of a dashboard:
 
 Following are the steps to add a new dashboard layout:
 
-1. Create a dashboard class.
-1. Override methods to customize dashboard layout.
-1. Add a route for the new dashboard.
-1. Modify manifest to add a new dashboard tab.
+1. [Create a dashboard class](#create-a-dashboard-class).
+1. [Override methods to customize dashboard layout](#override-methods-to-customize-dashboard-layout).
+1. [Add a route for the new dashboard](#add-a-route-for-the-new-dashboard).
+1. [Modify manifest to add a new dashboard tab.](#modify-manifest-to-add-a-new-dashboard-tab).
 
-**Create a dashboard class**
+### Create a dashboard class
 
 Create a file with the extension `.tsx` for your dashboard in the tabs/src/views/dashboards directory. For example, YourDashboard.tsx. Then, create a class that extends the Dashboard class:
 
 `export default class YourDashboard extends Dashboard {}`
 
-**Override methods to customize dashboard layout**
+### Override methods to customize dashboard layout
 
 Dashboard class provides few methods that you can override to customize the dashboard layout. The following table lists the methods that you can override:
 
@@ -80,7 +80,7 @@ export default class YourDashboard extends Dashboard {
 >[!NOTE]
 > All methods are optional. If you do not override any method, the default dashboard layout will be used.
 
-**Add a route for the new dashboard**
+### Add a route for the new dashboard
 
 Open **tabs/src/App.tsx** file, and add a route for the new dashboard. Here is an example:
 
@@ -94,7 +94,7 @@ export default function App() {
 }
 ```
 
-**Modify manifest to add a new dashboard tab**
+### Modify manifest to add a new dashboard tab
 
 Open **templates/appPackage/manifest.template.json file**, and add a new dashboard tab under the staticTabs. Here is an example:
 
@@ -151,124 +151,124 @@ The `TeamsFx` provides convenient methods for defining and modifying the layout 
 
 1. Three widgets in a row with a height of 350px, occupying 20%, 60% and 20% of the width respectively.
 
-```typescript
-export default class SampleDashboard extends Dashboard {
-  protected rowHeights(): string | undefined {
-    return "350px";
-  }
+    ```typescript
+    export default class SampleDashboard extends Dashboard {
+      protected rowHeights(): string | undefined {
+        return "350px";
+      }
+    
+      protected columnWidths(): string | undefined {
+        return "2fr 6fr 2fr";
+      }
+    
+      protected dashboardLayout(): undefined | JSX.Element {
+        return (
+          <>
+            <ListWidget />
+            <ChartWidget />
+            <NewsWidget />
+          </>
+        );
+      }
+    }
+    ```
 
-  protected columnWidths(): string | undefined {
-    return "2fr 6fr 2fr";
-  }
+  Following is an example of customized dashboard layout.
 
-  protected dashboardLayout(): undefined | JSX.Element {
-    return (
-      <>
-        <ListWidget />
-        <ChartWidget />
-        <NewsWidget />
-      </>
-    );
-  }
-}
-```
-
-Following is an example of customized dashboard layout.
-
-:::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/customize-dashboard-layout.png" alt-text="Screenshot shows the customized dashboard layout.":::
+  :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/customize-dashboard-layout.png" alt-text="Screenshot shows the customized dashboard layout.":::
 
 1. There are two widgets in a row with width of 600px and 1100px, the height of the first line is the maximum height of its content, and the height of the second line is 400px.
 
-```typescript
-export default class SampleDashboard extends Dashboard {
-  protected rowHeights(): string | undefined {
-    return "max-content 400px";
-  }
+    ```typescript
+    export default class SampleDashboard extends Dashboard {
+      protected rowHeights(): string | undefined {
+        return "max-content 400px";
+      }
+    
+      protected columnWidths(): string | undefined {
+        return "600px 1100px";
+      }
+    
+      protected dashboardLayout(): undefined | JSX.Element {
+        return (
+          <>
+            <ListWidget />
+            <ChartWidget />
+            <NewsWidget />
+          </>
+        );
+      }
+    }
+    ```
 
-  protected columnWidths(): string | undefined {
-    return "600px 1100px";
-  }
+  Following is an example of height and width customization:
 
-  protected dashboardLayout(): undefined | JSX.Element {
-    return (
-      <>
-        <ListWidget />
-        <ChartWidget />
-        <NewsWidget />
-      </>
-    );
-  }
-}
-```
-
-Following is an example of height and width customization:
-
-:::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/customize-dashboard-layout2.png" alt-text="Screenshot shows the customization of height and width of the dashboard layout.":::
+  :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/customize-dashboard-layout2.png" alt-text="Screenshot shows the customization of height and width of the dashboard layout.":::
 
 1. Arrange two widgets in a column.
 
-```typescript
-import { oneColumn } from '../lib/Dashboard.styles';
-export default class SampleDashboard extends Dashboard {
-  protected rowHeights(): string | undefined {
-    return "max-content";
-  }
+    ```typescript
+    import { oneColumn } from '../lib/Dashboard.styles';
+    export default class SampleDashboard extends Dashboard {
+      protected rowHeights(): string | undefined {
+        return "max-content";
+      }
+    
+      protected columnWidths(): string | undefined {
+        return "4fr 6fr";
+      }
+    
+      protected dashboardLayout(): undefined | JSX.Element {
+        return (
+          <>
+            <NewsWidget />
+            <div style={oneColumn()}>
+              <ListWidget />
+              <ChartWidget />
+              
+            </div>
+          </>
+        );
+      }
+    }
+    ```
 
-  protected columnWidths(): string | undefined {
-    return "4fr 6fr";
-  }
+  Following is an example of two widgets in a column:
 
-  protected dashboardLayout(): undefined | JSX.Element {
-    return (
-      <>
-        <NewsWidget />
-        <div style={oneColumn()}>
-          <ListWidget />
-          <ChartWidget />
-          
-        </div>
-      </>
-    );
-  }
-}
-```
-
-Following is an example of two widgets in a column:
-
-:::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/widget-customize.png" alt-text="Screenshot shows the two widget customization":::
+  :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/widget-customize.png" alt-text="Screenshot shows the two widget customization.":::
 
 1. Customize the height of widgets in a row. The following code can achieve a height of 400px for the ListWidget and a height of 350px for the ChartWidget.
 
-```typescript
-import { oneColumn } from '../lib/Dashboard.styles';
-export default class SampleDashboard extends Dashboard {
-  protected rowHeights(): string | undefined {
-    return "max-content";
-  }
+    ```typescript
+    import { oneColumn } from '../lib/Dashboard.styles';
+    export default class SampleDashboard extends Dashboard {
+      protected rowHeights(): string | undefined {
+        return "max-content";
+      }
+    
+      protected columnWidths(): string | undefined {
+        return "4fr 6fr";
+      }
+    
+      protected dashboardLayout(): undefined | JSX.Element {
+        return (
+          <>
+            <NewsWidget />
+            <div style={oneColumn("400px 350px")}>
+              <ListWidget />
+              <ChartWidget />
+            </div>
+          </>
+        );
+      }
+    }
+    ```
 
-  protected columnWidths(): string | undefined {
-    return "4fr 6fr";
-  }
+  Following is an example of the customization of chart widget:
 
-  protected dashboardLayout(): undefined | JSX.Element {
-    return (
-      <>
-        <NewsWidget />
-        <div style={oneColumn("400px 350px")}>
-          <ListWidget />
-          <ChartWidget />
-        </div>
-      </>
-    );
-  }
-}
-```
+  :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/chart-widget.png" alt-text="Screenshot shows the customization of a chart widget.":::
 
-Following is an example of the customization of chart widget:
-
-:::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/chart-widget.png" alt-text="Screenshot shows the customization of a chart widget.":::
-
-### Dashboard Abstraction
+### Dashboard abstraction
 
 To adjust the layout of the dashboard, the `TeamsFx` provides a dashboard class for developers to implement a dashboard.
 
@@ -393,53 +393,6 @@ Following are the customizable methods to override:
 
 Widgets display configurable information and charts on dashboards. They appear on the widget board where you can pin, unpin, arrange, resize, and customize widgets to reflect your interests. Your widget board is optimized to show relevant widgets and personalized content based on your usage.
 
-**To add a new widget**:
-
-* Define a model.
-* Create a data retrieve service.
-* Create a widget file.
-* Add the widget to the dashboard.
-
-Following is an example of a calendar widget:
-
-:::image type="content" source="../../assets/images/dashboard/widget.png" alt-text="Screenshot shows the calender as a widget.":::
-
-Following is an example of widget implementation:
-
-```typescript
-import { Button, Text } from "@fluentui/react-components";
-import { Widget } from "../lib/Widget";
-import { SampleModel } from "../../models/sampleModel";
-import { getSampleData } from "../../services/sampleService";
-
-export class SampleWidget extends Widget<SampleModel> {
-  async getData(): Promise<SampleModel> {
-    return getSampleData();
-  }
-
-  headerContent(): JSX.Element | undefined {
-    return <Text>Sample Widget</Text>;
-  }
-
-  bodyContent(): JSX.Element | undefined {
-    return <div>{this.state.data?.content}</div>;
-  }
-
-  footerContent(): JSX.Element | undefined {
-    return (
-      <Button
-        appearance="primary"
-        size="medium"
-        style={{ width: "fit-content" }}
-        onClick={() => {}}
-      >
-        View Details
-      </Button>
-    );
-  }
-}
-```
-
 ## Customize the widget
 
 Widget class provides some methods that can be overridden to customize the widget, you can customize the widget by overriding these methods:
@@ -488,65 +441,65 @@ export class NewsWidget extends Widget<void> {
 
 Following is an example of headerContent()、bodyContent()、footerContent():
 
-:::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/override-header-count.png" alt-text="Screenshot shows the ":::
+:::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/override-header-count.png" alt-text="Screenshot shows the example of header, body, and footer content.":::
 
 1. Override **bodyContent()**、**footerContent()** to customize the widget.
 
-```typescript
-export class NewsWidget extends Widget<void> {
-
-    bodyContent(): JSX.Element | undefined {
-        return (
-            <div style={contentLayoutStyle()}>
-                <Image src="image.svg" style={imageStyle()} />
-                <Text style={titleStyle()}>Lorem Ipsum Dolor</Text>
-                <Text style={descStyle()}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim, elementum sed</Text>
-            </div>
-        );
+    ```typescript
+    export class NewsWidget extends Widget<void> {
+    
+        bodyContent(): JSX.Element | undefined {
+            return (
+                <div style={contentLayoutStyle()}>
+                    <Image src="image.svg" style={imageStyle()} />
+                    <Text style={titleStyle()}>Lorem Ipsum Dolor</Text>
+                    <Text style={descStyle()}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim, elementum sed</Text>
+                </div>
+            );
+        }
+    
+        footerContent(): JSX.Element | undefined {
+            return (
+                <Button
+                    appearance="transparent"
+                    icon={<ArrowRight16Filled />}
+                    iconPosition="after"
+                    size="small"
+                    style={footerButtonStyle()}
+                    onClick={() => { }} // navigate to detailed page
+                >
+                    View details
+                </Button>
+            );
+        }
     }
+    ```
 
-    footerContent(): JSX.Element | undefined {
-        return (
-            <Button
-                appearance="transparent"
-                icon={<ArrowRight16Filled />}
-                iconPosition="after"
-                size="small"
-                style={footerButtonStyle()}
-                onClick={() => { }} // navigate to detailed page
-            >
-                View details
-            </Button>
-        );
-    }
-}
-```
+  Following is an example of **bodyContent()** and **footerContent()**
 
-Following is an example of **bodyContent()** and **footerContent()**
-
-:::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/override-body-content-footer-content.png" alt-text="Screenshot shows the body and footer content.":::
+  :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/override-body-content-footer-content.png" alt-text="Screenshot shows the body and footer content.":::
 
 1. Override **bodyContent()** to customize the widget.
 
-```typescript
-export class NewsWidget extends Widget<void> {
-
-    bodyContent(): JSX.Element | undefined {
-        return (
-            <div style={contentLayoutStyle()}>
-                <Image src="image.svg" style={imageStyle()} />
-                <Text style={titleStyle()}>Lorem Ipsum Dolor</Text>
-                <Text style={descStyle()}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim, elementum sed</Text>
-            </div>
-        );
+    ```typescript
+    export class NewsWidget extends Widget<void> {
+    
+        bodyContent(): JSX.Element | undefined {
+            return (
+                <div style={contentLayoutStyle()}>
+                    <Image src="image.svg" style={imageStyle()} />
+                    <Text style={titleStyle()}>Lorem Ipsum Dolor</Text>
+                    <Text style={descStyle()}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim, elementum sed</Text>
+                </div>
+            );
+        }
+    
     }
+    ```
 
-}
-```
+  Following is an example of **body content**:
 
-Following is an example of **body content**:
-
-:::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/override-body-content.png" alt-text="Screenshot shows body content.":::
+  :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/override-body-content.png" alt-text="Screenshot shows body content.":::
 
 ### Widget Abstraction
 
@@ -640,82 +593,82 @@ You can follow the steps to use Microsoft Graph Toolkit as your widget content:
 
 1. Add SSO feature to your Teams app
 
-Microsoft Teams provides single sign-on (SSO) function for an app to obtain signed in Teams user token to access Microsoft Graph.
+  Microsoft Teams provides single sign-on (SSO) function for an app to obtain signed in Teams user token to access Microsoft Graph.
 
-For more information, refer [SSO feature to your Teams app](../../toolkit/add-single-sign-on.md).
+  For more information, refer [SSO feature to your Teams app](../../toolkit/add-single-sign-on.md).
 
 1. Install required npm packages
 
-Run the following command in your project `tabs` folder to install the required `npm` packages:
+   Run the following command in your project `tabs` folder to install the required `npm` packages:
 
-```typescript
-npm install @microsoft/mgt-react @microsoft/mgt-teamsfx-provider
-```
+  ```typescript
+  npm install @microsoft/mgt-react @microsoft/mgt-teamsfx-provider
+  ```
 
 1. Add a new Graph Toolkit widget
 
-Create a new widget file in your project **tabs/src/views/widgets** folder. For example, **GraphyWidget.tsx**. In this widget, we will guide users to consent our app to access Microsoft Graph and then show the user's todo list by using Microsoft Graph Toolkit.
+  Create a new widget file in your project **tabs/src/views/widgets** folder. For example, **GraphyWidget.tsx**. In this widget, we will guide users to consent our app to access Microsoft Graph and then show the user's todo list by using Microsoft Graph Toolkit.
 
-The following code is an example of using Todo component from Microsoft Graph Toolkit in widget:
+  The following code is an example of using Todo component from Microsoft Graph Toolkit in widget:
 
-```typescript
-import { Providers, ProviderState, Todo } from "@microsoft/mgt-react";
-import { TeamsFxProvider } from "@microsoft/mgt-teamsfx-provider";
-
-import { loginAction } from "../../internal/login";
-import { TeamsUserCredentialContext } from "../../internal/singletonContext";
-import { Widget } from "../lib/Widget";
-
-interface IGraphWidgetState {
-  needLogin: boolean;
-}
-
-export class GraphWidget extends Widget<IGraphWidgetState> {
-  protected bodyContent(): JSX.Element | undefined {
-    return <div>{this.state.needLogin === false && <Todo />}</div>;
-  }
-
-  async componentDidMount() {
-    super.componentDidMount();
-
-    // Initialize TeamsFx provider
-    const provider = new TeamsFxProvider(TeamsUserCredentialContext.getInstance().getCredential(), [
-      "Tasks.ReadWrite",
-    ]);
-    Providers.globalProvider = provider;
-
-    // Check if user is signed in
-    if (await this.checkIsConsentNeeded()) {
-      await loginAction(["Tasks.ReadWrite"]);
+    ```typescript
+    import { Providers, ProviderState, Todo } from "@microsoft/mgt-react";
+    import { TeamsFxProvider } from "@microsoft/mgt-teamsfx-provider";
+    
+    import { loginAction } from "../../internal/login";
+    import { TeamsUserCredentialContext } from "../../internal/singletonContext";
+    import { Widget } from "../lib/Widget";
+    
+    interface IGraphWidgetState {
+      needLogin: boolean;
     }
-
-    // Update signed in state
-    Providers.globalProvider.setState(ProviderState.SignedIn);
-    this.setState({ needLogin: false });
-  }
-
-  /**
-   * Check if user needs to consent
-   * @returns true if user needs to consent
-   */
-  async checkIsConsentNeeded() {
-    let needConsent = false;
-    try {
-      await TeamsUserCredentialContext.getInstance().getCredential().getToken(["Tasks.ReadWrite"]);
-    } catch (error) {
-      needConsent = true;
+    
+    export class GraphWidget extends Widget<IGraphWidgetState> {
+      protected bodyContent(): JSX.Element | undefined {
+        return <div>{this.state.needLogin === false && <Todo />}</div>;
+      }
+    
+      async componentDidMount() {
+        super.componentDidMount();
+    
+        // Initialize TeamsFx provider
+        const provider = new TeamsFxProvider(TeamsUserCredentialContext.getInstance().getCredential(), [
+          "Tasks.ReadWrite",
+        ]);
+        Providers.globalProvider = provider;
+    
+        // Check if user is signed in
+        if (await this.checkIsConsentNeeded()) {
+          await loginAction(["Tasks.ReadWrite"]);
+        }
+    
+        // Update signed in state
+        Providers.globalProvider.setState(ProviderState.SignedIn);
+        this.setState({ needLogin: false });
+      }
+    
+      /**
+       * Check if user needs to consent
+       * @returns true if user needs to consent
+       */
+      async checkIsConsentNeeded() {
+        let needConsent = false;
+        try {
+          await TeamsUserCredentialContext.getInstance().getCredential().getToken(["Tasks.ReadWrite"]);
+        } catch (error) {
+          needConsent = true;
+        }
+        return needConsent;
+      }
     }
-    return needConsent;
-  }
-}
+    
+    ```
 
-```
-
-For more information, refer [Microsoft Graph Toolkit](/graph/toolkit/overview)
+  For more information, refer [Microsoft Graph Toolkit](/graph/toolkit/overview)
 
 1. Add the widget to dashboard layout
 
-Include the new widget in your dashboard file:
+  Include the new widget in your dashboard file:
 
 ```typescript
 ...
@@ -740,14 +693,8 @@ Microsoft Graph API is a web API that you can use to communicate with Microsoft 
 
 **To add a Graph API call**:
 
-* Add single-sign-on related files.
-* Call Graph API from the front-end (use delegated permissions).
-* Call Graph API from the back-end (use application permissions).
-
-There are two types of Graph APIs:
-
-* Front-end (most of APIs, use delegated permissions).
-* Back-end (`sendActivityNotification`, for example, use application permissions).
+* [Call Graph API from the front-end (use delegated permissions)](#call-graph-api-from-the-front-end-use-delegated-permissions).
+* [Call Graph API from the back-end (use application permissions)](#call-graph-api-from-the-back-end-use-application-permissions).
 
 ### Call Graph API from the front-end (use delegated permissions)
 
@@ -782,7 +729,7 @@ try {
 } catch (e) {}
 ```
 
-**Call Graph API from the back-end (use application permissions)**
+### Call Graph API from the back-end (use application permissions)
 
 If you want to call a Graph API from the back-end, you can refer to the following steps:
 
@@ -885,4 +832,4 @@ For more information, see:
 
 ## Step-by-step guide
 
-Follow the step-by-step guide to build a dashboard, and also learn to add a widget and Graph API call to the dashboard.
+Follow the [step-by-step guide](/microsoftteams/platform/sbs-create-dashboard-widget-graph-api-call-in-teams-toolkit?branch=pr) to build a dashboard, and also learn to add a widget and Graph API call to the dashboard.

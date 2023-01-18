@@ -1,7 +1,7 @@
 ### YamlMime:Tutorial
-title: Create dashboard, widget, and Graph API call in Teams toolkit
+title: Build a dashboard in Teams
 metadata:
-  title: Create dashboard, widget, and Graph API call in Teams toolkit
+  title: Build a dashboard in Teams
   description: Learn how to create a dashboard tab, add a new widget, and implement graph API.
   audience: Developer
   level: Beginner
