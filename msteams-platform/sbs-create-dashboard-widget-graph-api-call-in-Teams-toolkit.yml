@@ -84,12 +84,12 @@ items:
 
      Following are the steps to add a new widget to the dashboard:
 
-     1. [Define a data model](#define-a-data-model)
+     1. [Define a data model](#Define-a-data-model)
      2. [Create a data retrieve service](#create-a-data-retrieve-service)
      3. [Create a widget file](#create-a-widget-file)
      4. [Add the widget to the dashboard](#add-the-widget-to-the-dashboard)
 
-     Define a data model
+     ## Define a data model
 
      Define a data model for the data the widget needs to display:
 
