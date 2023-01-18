@@ -69,13 +69,13 @@ The following image shows a tab added to the meeting details page in the Teams m
 
 # [Meeting stage view desktop](#tab/meeting-stage-view-desktop)
 
-   The following image shows a tab added to the meeting details page in the Teams desktop client:
+   The following image shows a tab added to the meeting stage in the Teams desktop client:
 
    :::image type="content" source="../assets/images/meeting-stage-view.png" alt-text="This screenshot shows meeting stage view of the app you shared to meeting in Teams desktop.":::
 
 # [Meeting stage view mobile](#tab/meeting-stage-view-mobile)
 
-   The following image shows a tab added to the meeting details page in the Teams mobile client:
+   The following image shows a tab added to the meeting stage in the Teams mobile client:
 
    :::image type="content" source="../assets/images/meeting-stage/meeting-stage-view-mobile.png" alt-text="This screenshot shows meeting stage view of the app you shared to meeting in Teams mobile.":::
 

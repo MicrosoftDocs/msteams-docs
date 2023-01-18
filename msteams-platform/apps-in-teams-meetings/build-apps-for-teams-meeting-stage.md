@@ -54,17 +54,15 @@ There are many scenarios where sharing the entire app to the meeting stage isn't
 
 To help users in such scenarios, we released APIs within the TeamsJS client library  that allow you to programmatically invoke share to stage for specific parts of the app from a button in the meeting side panel.
 
-:::image type="content" source="../assets/images/apps-in-meetings/shared-meeting-stage-edit-review-component.png" alt-text="The screenshot shows the share to meeting stage view.":::
-
 # [Desktop](#tab/desktop)
 
-The following image shows a tab added to the meeting details page in the Teams desktop client:
+The following image shows the share to stage option in the Teams desktop client:
 
    :::image type="content" source="../assets/images/apps-in-meetings/shared-meeting-stage-edit-review-component.png" alt-text="The screenshot shows the share to meeting stage view.":::
 
 # [Mobile](#tab/mobile)
 
-The following image shows a tab added to the meeting details page in the Teams mobile client:
+The following image shows the share to stage option in the Teams mobile client:
 
    :::image type="content" source="../assets/images/meeting-stage/meeting-share-to-stage-mobile.png" alt-text="This screenshot shows meeting stage view of the app you shared to meeting in Teams mobile.":::
 
