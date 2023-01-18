@@ -93,8 +93,8 @@ The following are the steps to receive token:
 
 1. Teams client send a invoke response with oauth card in response to `adaptiveCard/action` invoke call.
 
-        ```csharp
-        protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext<IInvokeActivity> turnContext, 
+    ```csharp
+            protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext<IInvokeActivity> turnContext, 
          CancellationToken cancellationToken)
             {
               JObject value = JsonConvert.DeserializeObject<JObject>
@@ -105,7 +105,7 @@ The following are the steps to receive token:
               authentication = JsonConvert.DeserializeObject<JObject>(value["authentication"].ToString());
               }
             }
-        ```
+    ```
 
 1. The channel delivers this invoke to the bot, which uses the token to finalize the token exchange process with the Token Service and Azure AD. The Token Service delivers the user's access token to the bot.
    * Receivers ignore the authentication if the value is incorrect.
