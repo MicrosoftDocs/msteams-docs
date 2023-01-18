@@ -62,7 +62,7 @@ For example, in your app manifest if you set your tab *configurationUrl* attribu
 
 ### Get context by using the Microsoft Teams JavaScript library
 
-You can also retrieve the information listed above using the [Microsoft Teams JavaScript client library](/javascript/api/overview/msteams-client).
+You can also retrieve the context information using the [Microsoft Teams JavaScript client library](/javascript/api/overview/msteams-client).
 
 # [TeamsJS v2](#tab/Json-v2)
 
@@ -130,6 +130,7 @@ You can also retrieve the information listed above using the [Microsoft Teams Ja
     "userPrincipalName": "The principal name of the current user, in the current tenant"  }
 }
 ```
+
 # [TeamsJS v1](#tab/Json-v1)
 
 The information can be retrieved by calling `microsoftTeams.getContext(function(context) { /* ... */ })`.
