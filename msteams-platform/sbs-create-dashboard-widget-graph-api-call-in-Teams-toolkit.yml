@@ -200,7 +200,7 @@ items:
       
       **Add the widget to the dashboard**
 
-      If you want to create a new dashboard, refer to add a new dashboard.(route it to article)
+      If you want to create a new dashboard, refer to [add a new dashboard](tabs/how-to/dashboard-teams-toolkit.md#add-a-new-dashboard).
 
       1. In Visual Studio Code, under **Explorer** go to **tabs> src> views> dashboards** folder.
       1. In **sampleDashboard.tsx** add `sampleWidget` to `dashboardLayout()` to add widget to the dashboard.
@@ -247,7 +247,7 @@ items:
 
       :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/widget-added-to-dashboard.png" alt-text="Screenshot shows the addition of widget to the dashboard with sample widget highlighted in red. ":::
 
-      You can change the look and style of the widget. For more information see customize the widget.(route it to article)
+      You can change the look and style of the widget. For more information see, customize the widget.
 
 - title: Add a new Graph API call
   durationInMinutes: 5
@@ -267,7 +267,7 @@ items:
 
       1. Move **SSO** folder under **auth> tab** folder to **tabs> src> sso** folder.
 
-      Now you've added the SSO files to your project, you can call Graph APIs. Refer to add a Graph API call (route to article)
+      Now you've added the SSO files to your project, you can call Graph APIs. Refer to [add a Graph API call](#graph-api-call).
 
       After adding the Graph API call, select **Join** to join the meeting:
 
