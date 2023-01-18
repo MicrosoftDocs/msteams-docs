@@ -231,7 +231,7 @@ Following are the steps to create a channel or group tab:
 * [Update your app package with Developer Portal](#update-your-app-package-with-developer-portal)
 * [Preview your app in Teams](#preview-your-app-in-teams)
 
-### Generate your application with a channel or group tab
+## Generate your application with a channel or group tab
 
 1. Open Visual Studio and select **Open a project or solution**.
 
@@ -246,7 +246,7 @@ Following are the steps to create a channel or group tab:
 <details>
 <summary><b>Review the source code</b></summary>
 
-#### Startup.cs
+### Startup.cs
 
 This project was created from an ASP.NET Core 3.1 web application empty template with the **Advanced * Configure for HTTPS** check box selected at setup. The MVC services are registered by the dependency injection framework's `ConfigureServices()` method. Additionally, the empty template doesn't enable serving static content by default, so the static files middleware is added to the `Configure()` method using the following code:
 
@@ -263,19 +263,19 @@ public void Configure(IApplicationBuilder app)
 }
 ```
 
-#### wwwroot folder
+### wwwroot folder
 
 In ASP.NET Core, the web root folder is where the application looks for static files.
 
-#### Index.cshtml
+### Index.cshtml
 
 ASP.NET Core treats files called **Index** as the default or home page for the site. When your browser URL points to the root of the site, **Index.cshtml** is displayed as the home page for your application.
 
-#### Tab.cs
+### Tab.cs
 
 This C# file contains a method that is called from **Tab.cshtml** during configuration.
 
-#### AppManifest folder
+### AppManifest folder
 
 This folder contains the following required app package files:
 
@@ -285,7 +285,7 @@ This folder contains the following required app package files:
 
 These files need to be zipped in an app package for use in uploading your tab to Teams. When a user chooses to add or update your tab, Teams loads the `configurationUrl` specified in your manifest, embeds it in an IFrame, and renders it in your tab.
 
-#### .csproj
+### .csproj
 
 In the Visual Studio Solution Explorer window, right-click on the project and select **Edit Project File**. At the end of the file, you see the following code that creates and updates your zip folder when the application builds:
 
@@ -309,7 +309,7 @@ In the Visual Studio Solution Explorer window, right-click on the project and se
 
 </details>
 
-### Establish a secure tunnel to your tab
+## Establish a secure tunnel to your tab
 
 At the command prompt in the root of your project directory, run the following command to establish a secure tunnel to your tab:
 
@@ -319,7 +319,7 @@ ngrok http 3978 --host-header=localhost
 
 Ensure that you keep the command prompt with ngrok running and make a note of the URL.
 
-### Update your application
+## Update your application
 
 1. Open Visual Studio Solution Explorer and go to the **Pages** > **Shared** folder and open **_Layout.cshtml**, and add the following to the <head> tags section:
 
@@ -375,7 +375,7 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
 1. Save the updated **Tab.cshtml**.
 
-### Build and run your application
+## Build and run your application
 
 1. In Visual Studio, select **F5** or choose **Start Debugging** from the **Debug** menu.
 
@@ -389,7 +389,7 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 > App Studio can be used to edit your `manifest.json` file and upload the completed package to Teams. You can also manually edit the `manifest.json` file. If you do, ensure that you build the solution again to create the `tab.zip` file to upload.
 --->
 
-### Update your app package with Developer Portal
+## Update your app package with Developer Portal
 
 1. Go to Teams. If you use the [web-based version](https://teams.microsoft.com), you can inspect your front-end code using your browser's [developer tools](~/tabs/how-to/developer-tools.md).
 
@@ -424,7 +424,7 @@ Select **Import an existing app** in the **Manifest editor** to begin updating t
 
 1. In the Domains section, domains from your tabs must contain your ngrok URL without the HTTPS prefix `<yourngrokurl>.ngrok.io`.
 
-### Preview your app in Teams
+## Preview your app in Teams
 
 1. Select **Preview in Teams** from the Developer Portal toolbar, Developer Portal informs you that your app is sideloaded successfully. The **Add** page appears for your app in Teams.
 
