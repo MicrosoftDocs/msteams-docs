@@ -749,8 +749,6 @@ There are two types of Graph APIs:
 * Front-end (most of APIs, use delegated permissions).
 * Back-end (`sendActivityNotification`, for example, use application permissions).
 
-Refer [tutorial](/graph/api/overview?view=graph-rest-beta) to check permission types of the Graph APIs you want to call.
-
 ### Call Graph API from the front-end (use delegated permissions)
 
 If you want to call a Graph API from the front-end tab, refer to the following steps:
@@ -762,8 +760,6 @@ If you want to call a Graph API from the front-end tab, refer to the following s
 **Consent delegated permissions first**
 
 You can call `addNewPermissionScope(scopes: string[])` to consent the scopes of permissions you want to add. The consented status will be preserved in a global context `FxContext`.
-
-Refer [Graph API V1.0](/graph/api/overview?view=graph-rest-1.0) to get the `scope name of the permission` related to the Graph API you want to call.
 
 **Create a graph client by adding the scope related to the Graph API you want to call**
 
@@ -889,4 +885,4 @@ For more information, see:
 
 ## Step-by-step guide
 
-Follow the [step-by-step guide](msteams-platform/sbs-create-dashboard-widget-graph-api-call-in-Teams-toolkit.yml) to build a dashboard, and also learn to add a widget and Graph API call to the dashboard.
+Follow the step-by-step guide to build a dashboard, and also learn to add a widget and Graph API call to the dashboard.
