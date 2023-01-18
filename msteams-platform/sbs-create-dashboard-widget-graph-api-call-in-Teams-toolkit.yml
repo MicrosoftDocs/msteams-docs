@@ -157,7 +157,7 @@ items:
 
       In Visual Studio Code, under **EXPLORER**, select **tabs> src> data>** folder.
 
-     1. Create a **sampleService.ts** file in **tabs/src/views/widgets** folder.
+     1. Create a **sampleWidget.ts** file in **tabs/src/views/widgets** folder.
      1. Use the following code in **sampleWidget.tsx** file to create a widget.
 
       Sample of widget implementation:
@@ -200,7 +200,7 @@ items:
       
       **Add the widget to the dashboard**
 
-      If you want to create a new dashboard, refer to [How to add a new dashboard](https://github.com/OfficeDev/TeamsFx/wiki/Embed-a-dashboard-canvas-in-Teams).
+      If you want to create a new dashboard, refer to add a new dashboard.(route it to article)
 
       1. In Visual Studio Code, under **Explorer** go to **tabs/src/views/dashboards** folder.
       1. In sampleDashboard.tsx add `sampleWidget` to `dashboardLayout()` to add widget to the dashboard.
@@ -241,7 +241,7 @@ items:
 
       :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/one-column.png" alt-text="Screenshot shows the addition of one column method in dashboard layout.":::
 
-      After adding all the details for creating a widget, **Save** the file.
+      After adding all the relevant details for creating a widget, **Save** the file.
 
       You can view the layout, successfully changed on the app and view the calendar widget on the dashboard.
 
@@ -277,7 +277,7 @@ items:
 
       :::image type="content" source="assets/images/sbs-create-a-new-dashboard/join-open.png" alt-text="Screenshot shows the open option highlighted in red.":::
 
-      Join the Teams meeting.
+      Select **Join now**.
 
       :::image type="content" source="assets/images/sbs-create-a-new-dashboard/join-now.png" alt-text="Screenshot shows join now highlighted in red.":::       
 
