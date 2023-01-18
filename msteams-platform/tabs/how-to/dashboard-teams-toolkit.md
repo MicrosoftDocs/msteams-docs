@@ -1,5 +1,5 @@
 ---
-title: Build a dashboard in Teams
+title: Create a dashboard in Teams
 author: v-silakshmi
 description:  Describes Dashboard, widget and Graph API call in Teams toolkit 
 ms.author: surbhigupta
@@ -8,7 +8,7 @@ ms.topic: Dashboard, widget, and Graph API call in Teams toolkit
 ms.date: 01/17/2023
 ---
 
-# Build a dashboard in Teams
+# Create a dashboard in Teams
 
 Dashboards in the Teams toolkit allow you to monitor your business and view important metrics. A Widget displays content from apps and services to stay engaged with the latest updates in Teams. Graph API can be used to visualize details about the implementation of the selected API.
 
