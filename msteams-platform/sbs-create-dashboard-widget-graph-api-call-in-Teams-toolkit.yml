@@ -91,7 +91,7 @@ items:
 
      **To define a data model**
 
-     In Visual Studio Code, under **EXPLORER**, select tabs> src> models> folder.
+     In Visual Studio Code, under **EXPLORER**, select **tabs> src> models>** folder.
 
      1. Create a **sampleModel.ts** file in **tabs> src> models>** folder.
      1. Use the following code in **sampleModel.ts** file for the widget to display the data.
@@ -130,7 +130,7 @@ items:
 
      :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/create-sample-data-json.png" alt-text="Screenshot shows the creation of sampleData.json file under data folder with tabs, src, data, sampleData.json, and code sample of sampleData.json are highlighted in red.":::
 
-     To retrieve data services:
+     **To retrieve services**:
 
      In Visual Studio Code, under **EXPLORER**, select **tabs> src> data>** folder.
 
