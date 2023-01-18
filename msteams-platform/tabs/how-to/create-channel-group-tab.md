@@ -32,15 +32,7 @@ npm install yo gulp-cli --global
 npm install generator-teams --global
 ```
 
-Following are the steps to create a channel or group tab:
-
-* [Generate your application with a channel or group tab](#generate-your-application-with-a-channel-or-group-tab)
-* [Create your app package](#create-your-app-package)
-* [Build and run your application](#build-and-run-your-application)
-* [Establish a secure tunnel to your tab](#establish-a-secure-tunnel-to-your-tab)
-* [Upload your application to Teams](#upload-your-application-to-teams)
-
-### Generate your application with a channel or group tab
+## Generate your application with a channel or group tab
 
 1. At the command prompt, create a new directory for your channel or group tab.
 
@@ -144,7 +136,7 @@ Enter **n**.
 * A `manifest.json` file that specifies the attributes of your app.
 --->
 
-### Create your app package
+## Create your app package
 
 You must have an app package to build and run your application in Teams. The app package is created through a gulp task that validates the `manifest.json` file and generates the zip folder in the `./package` directory. At the command prompt, enter the following command:
 
@@ -152,9 +144,9 @@ You must have an app package to build and run your application in Teams. The app
 gulp manifest
 ```
 
-### Build and run your application
+## Build and run your application
 
-#### Build your application
+### Build your application
 
 Enter the following command at the command prompt to transpile your solution into the `./dist` folder:
 
@@ -162,7 +154,7 @@ Enter the following command at the command prompt to transpile your solution int
 gulp build
 ```
 
-#### Run your application
+### Run your application
 
 1. At the command prompt, enter the following command to start a local web server:
 
@@ -178,7 +170,7 @@ gulp serve
 
 :::image type="content" source="~/assets/images/tab-images/configurationPage.png" alt-text="Tab configuration page":::
 
-### Establish a secure tunnel to your tab
+## Establish a secure tunnel to your tab
 
 To establish a secure tunnel to your tab, exit the localhost and enter the following command:
 
@@ -189,7 +181,7 @@ gulp ngrok-serve
 > [!IMPORTANT]
 > After your tab is uploaded to Microsoft Teams through **ngrok**, and successfully saved, you can view it in Teams until your tunnel session ends. If you restart your ngrok session, you must update your app with the new URL.
 
-### Upload your application to Teams
+## Upload your application to Teams
 
 1. Go to Teams and select **Apps**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teams Store":::.
 1. Select **Manage your apps** > **Upload an app** > **Upload a custom app**.
