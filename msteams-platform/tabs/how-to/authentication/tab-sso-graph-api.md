@@ -1,6 +1,6 @@
 ---
 title: Extend tab app with Microsoft Graph permissions
-description: Learn how to configure additional permissions and scopes with Microsoft Graph for enabling Single sign-on (SSO).
+description: Learn how to configure additional permissions and scopes with Microsoft Graph for enabling single sign-on (SSO).
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) Graph API Delegated permission access token scope
@@ -90,7 +90,7 @@ You can configure authentication for multiple platforms as long as the URL is un
 
     The **Configure platforms** page appears.
 
-1. Select the platform that you want to configure for your tab app. You can choose the platform type from web or SPA.
+1. Select the platform that you want to configure for your tab app. You can choose the platform type from web or Single platform application.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/configure-platform.png" alt-text="This is a screenshot for selecting web platform.":::
 
