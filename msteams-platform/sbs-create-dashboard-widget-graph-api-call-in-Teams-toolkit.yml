@@ -203,7 +203,7 @@ items:
       If you want to create a new dashboard, refer to add a new dashboard.(route it to article)
 
       1. In Visual Studio Code, under **Explorer** go to **tabs/src/views/dashboards** folder.
-      1. In sampleDashboard.tsx add `sampleWidget` to `dashboardLayout()` to add widget to the dashboard.
+      1. In **sampleDashboard.tsx** add `sampleWidget` to `dashboardLayout()` to add widget to the dashboard.
 
       Following is a sample of dashboard layout:
 
