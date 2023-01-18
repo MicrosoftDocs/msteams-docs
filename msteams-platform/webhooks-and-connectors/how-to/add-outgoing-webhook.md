@@ -133,8 +133,13 @@ The following codes are examples of an Adaptive Card response:
 # [C#/.NET](#tab/dotnet)
 
 ```csharp
-string content = await this.Request.Content.ReadAsStringAsync();
-Activity incomingActivity = JsonConvert.DeserializeObject<Activity>(content);
+
+  // This method is to read the request body content
+  string content;
+  using (var reader = new StreamReader(Request.Body))
+  {
+      content = await reader.ReadToEndAsync();
+  }
 
 var Card = new AdaptiveCard(new AdaptiveSchemaVersion("1.4"))
 {
