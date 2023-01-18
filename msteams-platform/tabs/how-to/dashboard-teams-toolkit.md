@@ -889,4 +889,4 @@ For more information, see:
 
 ## Step-by-step guide
 
-Follow the [step-by-step guide](sbs-create-dashboard-widget-graph-api-call-in-Teams-toolkit.yml) to build a dashboard, and also learn to add a widget and Graph API call to the dashboard.
+Follow the [step-by-step guide](msteams-platform/sbs-create-dashboard-widget-graph-api-call-in-Teams-toolkit.yml) to build a dashboard, and also learn to add a widget and Graph API call to the dashboard.
