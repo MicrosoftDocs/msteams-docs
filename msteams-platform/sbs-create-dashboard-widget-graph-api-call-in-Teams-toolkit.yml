@@ -263,9 +263,9 @@ items:
 
           :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/single-sign-on.png" alt-text="Screenshot shows the selection of single sign-on.":::
 
-      1. Move `auth-start.html` file and `auth-end.html` file in **auth/tab/public** folder to **tabs/public/** folder. These two HTML files are used for auth redirects.
+      1. Move `auth-start.html` file and `auth-end.html` file in **auth> tab> public** folder to **tabs> public>** folder. These two HTML files are used for auth redirects.
 
-      1. Move **SSO** folder under **auth/tab** folder to **tabs/src/sso/** folder.
+      1. Move **SSO** folder under **auth> tab** folder to **tabs> src> sso** folder.
 
       Now you've added the SSO files to your project, you can call Graph APIs. Refer to add a Graph API call (route to article)
 
