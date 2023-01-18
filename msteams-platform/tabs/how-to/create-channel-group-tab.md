@@ -222,15 +222,6 @@ Now you've successfully created and added your channel or group tab in Teams.
 git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
 ```
 
-Following are the steps to create a channel or group tab:
-
-* [Generate your application with a channel or group tab](#generate-your-application-with-a-channel-or-group-tab-1)
-* [Establish a secure tunnel to your tab](#establish-a-secure-tunnel-to-your-tab-1)
-* [Update your application](#update-your-application)
-* [Build and run your application](#build-and-run-your-application-1)
-* [Update your app package with Developer Portal](#update-your-app-package-with-developer-portal)
-* [Preview your app in Teams](#preview-your-app-in-teams)
-
 ## Generate your application with a channel or group tab
 
 1. Open Visual Studio and select **Open a project or solution**.
