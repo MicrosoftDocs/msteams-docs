@@ -134,12 +134,12 @@ The following codes are examples of an Adaptive Card response:
 
 ```csharp
 
-  // This method is to read the request body content
-  string content;
-  using (var reader = new StreamReader(Request.Body))
-  {
-      content = await reader.ReadToEndAsync();
-  }
+// This method is to read the request body content
+string content;
+using (var reader = new StreamReader(Request.Body))
+    {
+        content = await reader.ReadToEndAsync();
+    }
 
 var Card = new AdaptiveCard(new AdaptiveSchemaVersion("1.4"))
 {
