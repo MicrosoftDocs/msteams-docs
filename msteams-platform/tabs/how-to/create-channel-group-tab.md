@@ -22,15 +22,15 @@ Ensure that you have all the [prerequisites](~/tabs/how-to/tab-requirements.md) 
 
 1. At the command prompt, install the [Yeoman](https://yeoman.io/) and [gulp-cli](https://www.npmjs.com/package/gulp-cli) packages by entering the following command after installing the **Node.js**:
 
-```cmd
-npm install yo gulp-cli --global
-```
+    ```cmd
+    npm install yo gulp-cli --global
+    ```
 
 2. At the command prompt, install Microsoft Teams app generator by entering the following command:
 
-```cmd
-npm install generator-teams --global
-```
+    ```cmd
+    npm install generator-teams --global
+    ```
 
 ## Generate your application with a channel or group tab
 
@@ -38,92 +38,92 @@ npm install generator-teams --global
 
 1. Enter the following command in your new directory to start the Microsoft Teams app generator:
 
-```cmd
-yo teams
-```
+    ```cmd
+    yo teams
+    ```
 
 1. Provide your values to a series of questions prompted by Microsoft Teams app generator to update your `manifest.json` file:
 
-![generator opening screenshot](/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG)
+    :::image type="content" source="../../assets/images/tab-images/teamsTabScreenshot.PNG" alt-text="Screenshot that shows a generator to update manifest.json files.":::
 
 <details>
 <summary><b>Series of questions to update your manifest.json file</b></summary>
 
 * **What is your solution name?**
 
-The solution name is your project name. You can accept the suggested name by selecting **Enter**.
+    The solution name is your project name. You can accept the suggested name by selecting **Enter**.
 
 * **Where do you want to place the files?**
 
-You're currently in your project directory. Select **Enter**.
+    You're currently in your project directory. Select **Enter**.
 
 * **Title of your Microsoft Teams app project?**
 
-The title is your app package name and is used in the app manifest and description. Enter a title or select **Enter** to accept the default name.
+    The title is your app package name and is used in the app manifest and description. Enter a title or select **Enter** to accept the default name.
 
 * **Your (company) name? (max 32 characters)**
 
-Your company name can be used in the app manifest. Enter a company name or select **Enter** to accept the default name.
+    Your company name can be used in the app manifest. Enter a company name or select **Enter** to accept the default name.
 
 * **Which manifest version would you like to use?**
 
-Select the default schema.
+    Select the default schema.
 
 * **Quick scaffolding? (Y/n)**
 
-The default is yes; enter **n** to enter your Microsoft Partner ID.
+    The default is yes; enter **n** to enter your Microsoft Partner ID.
 
 * **Enter your Microsoft Partner Id, if you have one? (Leave blank to skip)**
 
-This field isn't required and must be used only if you're already part of the [Microsoft Partner Network](https://partner.microsoft.com).
+    This field isn't required and must be used only if you're already part of the [Microsoft Partner Network](https://partner.microsoft.com).
 
 * **What do you want to add to your project?**
 
-Select **( &ast; ) A Tab**.
+    Select **( &ast; ) A Tab**.
 
 * **The URL to host this solution?**
 
-By default, the generator suggests an Azure website URL. You're only testing your app locally, so a valid URL isn't necessary.
+    By default, the generator suggests an Azure website URL. You're only testing your app locally, so a valid URL isn't necessary.
 
 * **Would you like show a loading indicator when your app/tab loads?**
 
-Choose **not** to include a loading indicator when your app or tab loads. The default is no, enter **n**.
+    Choose **not** to include a loading indicator when your app or tab loads. The default is no, enter **n**.
 
 * **Would you like personal apps to be rendered without a tab header-bar?**
 
-Choose **not** to include personal apps to be rendered without a tab header-bar. Default is no, enter **n**.
+    Choose **not** to include personal apps to be rendered without a tab header-bar. Default is no, enter **n**.
 
 * **Would you like to include Test framework and initial tests? (y/N)**
 
-Choose **not** to include a test framework for this project. The default is no, enter **n**.
+    Choose **not** to include a test framework for this project. The default is no, enter **n**.
 
 * **Would you like to include ESLint support? (y/N)**
 
-Choose not to include ESLint support. The default is no, enter **n**.
+    Choose not to include ESLint support. The default is no, enter **n**.
 
 * **Would you like to use Azure Applications Insights for telemetry? (y/N)**
 
-Choose **not** to include [Azure Application Insights](/azure/azure-monitor/app/app-insights-overview). The default is no; enter **n**.
+    Choose **not** to include [Azure Application Insights](/azure/azure-monitor/app/app-insights-overview). The default is no; enter **n**.
 
 * **Default Tab Name (max 16 characters)?**
 
-Name your tab. This tab name is used throughout your project as a file or URL path component.
+    Name your tab. This tab name is used throughout your project as a file or URL path component.
 
 * **What kind of Tab would you like to create?**
 
-Use the arrow keys to select **Configurable** tab.
+    Use the arrow keys to select **Configurable** tab.
 
 * **What scopes do you intend to use for your Tab?**
 
-You can select a team or a group chat.
+    You can select a team or a group chat.
 
 * **Do you require Microsoft Azure Active Directory (Azure AD) Single-Sign-On support for the tab?**
 
-Choose **not** to include Microsoft Azure Active Directory (Azure AD) Single-Sign-On support for the tab. The default is yes, enter **n**.
+    Choose **not** to include Microsoft Azure Active Directory (Azure AD) Single-Sign-On support for the tab. The default is yes, enter **n**.
 
 * **Do you want this tab to be available in SharePoint Online? (Y/n)**
 
-Enter **n**.
+    Enter **n**.
 
 </details>
 
@@ -158,17 +158,17 @@ gulp build
 
 1. At the command prompt, enter the following command to start a local web server:
 
-```bash
-gulp serve
-```
+    ```bash
+    gulp serve
+    ```
 
 1. Enter `http://localhost:3007/<yourDefaultAppNameTab>/` in your browser to view your application's home page.
 
-:::image type="content" source="~/assets/images/tab-images/homePage.png" alt-text="Default Tab":::
+    :::image type="content" source="~/assets/images/tab-images/homePage.png" alt-text="Default Tab":::
 
 1. To view your tab configuration page, go to `http://localhost:3007/<yourDefaultAppNameTab>/config.html`.
 
-:::image type="content" source="~/assets/images/tab-images/configurationPage.png" alt-text="Tab configuration page":::
+    :::image type="content" source="~/assets/images/tab-images/configurationPage.png" alt-text="Tab configuration page":::
 
 ## Establish a secure tunnel to your tab
 
@@ -187,24 +187,24 @@ gulp ngrok-serve
 1. Select **Manage your apps** > **Upload an app** > **Upload a custom app**.
 1. Go to your project directory, browse to the **./package** folder, select the app package zip folder, and choose **Open**.
 
-:::image type="content" source="~/assets/images/tab-images/channeltabadded.png" alt-text="Uploaded channel tab":::
+    :::image type="content" source="~/assets/images/tab-images/channeltabadded.png" alt-text="Uploaded channel tab":::
 
 1. Select **Add** in the dialog. Your tab is uploaded to Teams.
 
-> [!NOTE]
-> If  **Add** doesn't display in the dialog box then remove the following code from the manifest of the uploaded app package zip folder. Again zip the folder and upload it to Teams.
->
->```Json
->"staticTabs": [],
->"bots": [],
->"connectors": [],
->"composeExtensions": [],
->```
+    > [!NOTE]
+    > If  **Add** doesn't display in the dialog box then remove the following code from the manifest of the uploaded app package zip folder. Again zip the folder and upload it to Teams.
+    >
+    >```Json
+    >"staticTabs": [],
+    >"bots": [],
+    >"connectors": [],
+    >"composeExtensions": [],
+    >```
 
 1. Follow the directions for adding a tab. There's a custom configuration dialog for your channel or group tab.
 1. Select **Save** and your tab is added to the channel's tab bar.
 
-:::image type="content" source="~/assets/images/tab-images/channeltabuploaded.png" alt-text="Channel tab uploaded":::
+    :::image type="content" source="~/assets/images/tab-images/channeltabuploaded.png" alt-text="Channel tab uploaded":::
 
 Now you've successfully created and added your channel or group tab in Teams.
 
@@ -218,9 +218,9 @@ Now you've successfully created and added your channel or group tab in Teams.
 
 1. Clone the sample repository into your new directory using the following command or you can download the [source code](https://github.com/OfficeDev/Microsoft-Teams-Samples) and extract the files:
 
-```cmd
-git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
-```
+    ```cmd
+    git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
+    ```
 
 ## Generate your application with a channel or group tab
 
@@ -230,9 +230,9 @@ git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
 
 1. In Visual Studio, select **F5** or choose **Start Debugging** from your application's **Debug** menu to verify if the application has loaded properly. In a browser, go to the following URLs:
 
-* `https://localhost:3978/`
-* `https://localhost:3978/privacy`
-* `https://localhost:3978/tou`
+    * `https://localhost:3978/`
+    * `https://localhost:3978/privacy`
+    * `https://localhost:3978/tou`
 
 <details>
 <summary><b>Review the source code</b></summary>
@@ -372,8 +372,8 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
 1. Verify that **ngrok** is running and working properly by opening your browser and going to your content page via the ngrok HTTPS URL that was provided in your command prompt window.
 
-> [!TIP]
-> You need to have both your application in Visual Studio and ngrok running to complete the steps provided in this article. If you need to stop running your application in Visual Studio to work on it, **keep ngrok running**. It listens and resumes routing your application's request when it restarts in Visual Studio. If you have to restart the ngrok service it returns a new URL and you have to update your application with the new URL.
+    > [!TIP]
+    > You need to have both your application in Visual Studio and ngrok running to complete the steps provided in this article. If you need to stop running your application in Visual Studio to work on it, **keep ngrok running**. It listens and resumes routing your application's request when it restarts in Visual Studio. If you have to restart the ngrok service it returns a new URL and you have to update your application with the new URL.
 
 <!--- TBD: This note seems to be removed from main. Commenting it for now.
 > [!NOTE]
@@ -388,16 +388,15 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
 1. Open **Apps** and select **Import app**.
 
-<!--- TBD: This steps seems to be removed from main now so commenting it for now.
-
-Select **Import an existing app** in the **Manifest editor** to begin updating the app package for your tab. The source code comes with its own partially complete manifest. The name of your app package is `tab.zip`. It is available from the following path:
---->
+    <!--- TBD: This steps seems to be removed from main now so commenting it for now.
+    Select **Import an existing app** in the **Manifest editor** to begin updating the app package for your tab. The source code comes with its own partially complete manifest. The name of your app package is `tab.zip`. It is available from the following path:
+    --->
 
 1. The name of your app package is `tab.zip`. It's available in the following path:
 
-```bash
-/bin/Debug/netcoreapp3.1/tab.zip
-```
+    ```bash
+    /bin/Debug/netcoreapp3.1/tab.zip
+    ```
 
 1. Select `tab.zip` and open it in the Developer Portal.
 
@@ -421,7 +420,7 @@ Select **Import an existing app** in the **Manifest editor** to begin updating t
 
 1. Select **Add to team** to Set up the tab in a team. Configure your tab and select **Save**. Your tab is now available in Teams.
 
-:::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="Channel tab ASPNET uploaded":::
+    :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="Channel tab ASPNET uploaded":::
 
 Now you've successfully created and added your channel or group tab in Teams.
 
@@ -435,20 +434,11 @@ Now you've successfully created and added your channel or group tab in Teams.
 
 1. Clone the sample repository into your new directory using the following command or you can download the [source code](https://github.com/OfficeDev/Microsoft-Teams-Samples) and extract the files:
 
-```cmd
-git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
-```
+    ```cmd
+    git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
+    ```
 
-Following are the steps to create a channel or group tab:
-
-* [Generate your application with a channel or group tab](#generate-your-application-with-a-channel-or-group-tab-2)
-* [Establish a secure tunnel to your tab](#establish-a-secure-tunnel-to-your-tab-2)
-* [Update your application](#update-your-application-1)
-* [Build and run your application](#build-and-run-your-application-2)
-* [Update your app package with Developer Portal](#update-your-app-package-with-developer-portal-1)
-* [Preview your app in Teams](#preview-your-app-in-teams-1)
-
-### Generate your application with a channel or group tab
+## Generate your application with a channel or group tab
 
 1. Open Visual Studio and select **Open a project or solution**.
 
@@ -456,14 +446,14 @@ Following are the steps to create a channel or group tab:
 
 1. In Visual Studio, select **F5** or choose **Start Debugging** from your application's **Debug** menu to verify if the application has loaded properly. In a browser, go to the following URLs:
 
-* `https://localhost:3978/`
-* `https://localhost:3978/privacy`
-* `https://localhost:3978/tou`
+    * `https://localhost:3978/`
+    * `https://localhost:3978/privacy`
+    * `https://localhost:3978/tou`
 
 <details>
 <summary><b>Review the source code</b></summary>
 
-#### Startup.cs
+### Startup.cs
 
 This project was created from an ASP.NET Core 3.1 web application empty template with the **Advanced - Configure for HTTPS** check box selected at setup. The MVC services are registered by the dependency injection framework's `ConfigureServices()` method. Additionally, the empty template doesn't enable serving static content by default, so the static files middleware is added to the `Configure()` method using the following code:
 
@@ -480,11 +470,11 @@ public void Configure(IApplicationBuilder app)
 }
 ```
 
-#### wwwroot folder
+### wwwroot folder
 
 In ASP.NET Core, the web root folder is where the application looks for static files.
 
-#### AppManifest folder
+### AppManifest folder
 
 This folder contains the following required app package files:
 
@@ -494,7 +484,7 @@ This folder contains the following required app package files:
 
 These files need to be zipped in an app package for use in uploading your tab to Teams.
 
-#### .csproj
+### .csproj
 
 In the Visual Studio Solution Explorer window, right-click on the project and select **Edit Project File**. At the end of the file you, see the following code that creates and updates your zip folder when the application builds:
 
@@ -516,11 +506,11 @@ In the Visual Studio Solution Explorer window, right-click on the project and se
   </ItemGroup>
 ```
 
-#### Models
+### Models
 
 **ChannelGroup.cs** presents a message object and methods that can be called from the controllers during configuration.
 
-#### Views
+### Views
 
 These are the different views in ASP.NET Core MVC:
 
@@ -528,13 +518,13 @@ These are the different views in ASP.NET Core MVC:
 
 * Shared: The partial view markup **_Layout.cshtml** contains the application's overall page structure and shared visual elements that also reference the Teams Library.
 
-#### Controllers
+### Controllers
 
 The controllers use the `ViewBag` property to transfer values dynamically to the views.
 
 </details>
 
-### Establish a secure tunnel to your tab
+## Establish a secure tunnel to your tab
 
 At the command prompt in the root of your project directory, run the following command to establish a secure tunnel to your tab:
 
@@ -544,7 +534,7 @@ ngrok http 3978 --host-header=localhost
 
 Ensure that you keep the command prompt with ngrok running and make a note of the URL.
 
-### Update your application
+## Update your application
 
 1. Open Visual Studio Solution Explorer and go to the **Views** > **Shared** folder and open **_Layout.cshtml**, and add the following to the <head> tags section:
 
@@ -600,16 +590,16 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
 1. Make sure to save the updated **Tab.cshtml**.
 
-### Build and run your application
+## Build and run your application
 
 1. In Visual Studio, select **F5** or choose **Start Debugging** from the **Debug** menu.
 
 1. Verify that **ngrok** is running and working properly by opening your browser and going to your content page via the ngrok HTTPS URL that was provided in your command prompt window.
 
-> [!TIP]
-> You need to have both your application in Visual Studio and ngrok running to complete the steps provided in this article. If you need to stop running your application in Visual Studio to work on it, **keep ngrok running**. It listens and resumes routing your application's request when it restarts in Visual Studio. If you have to restart the ngrok service it returns a new URL and you have to update your application with the new URL.
+    > [!TIP]
+    > You need to have both your application in Visual Studio and ngrok running to complete the steps provided in this article. If you need to stop running your application in Visual Studio to work on it, **keep ngrok running**. It listens and resumes routing your application's request when it restarts in Visual Studio. If you have to restart the ngrok service it returns a new URL and you have to update your application with the new URL.
 
-### Update your app package with Developer Portal
+## Update your app package with Developer Portal
 
 1. Go to Teams. If you use the [web-based version](https://teams.microsoft.com), you can inspect your front-end code using your browser's [developer tools](~/tabs/how-to/developer-tools.md).
 
@@ -619,9 +609,9 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
 1. The name of your app package is **tab.zip**. It's available in the following path:
 
-```bash
-/bin/Debug/netcoreapp3.1/tab.zip
-```
+    ```bash
+    /bin/Debug/netcoreapp3.1/tab.zip
+    ```
 
 1. Select **tab.zip** and open it in the Developer Portal.
 
@@ -639,7 +629,7 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
 1. In the Domains section, domains from your tabs must contain your ngrok URL without the HTTPS prefix `<yourngrokurl>.ngrok.io`.
 
-### Preview your app in Teams
+## Preview your app in Teams
 
 1. Select **Preview in Teams** from the Developer Portal toolbar, Developer Portal informs you that your app is sideloaded successfully. The **Add** page appears for your app in Teams.
 
