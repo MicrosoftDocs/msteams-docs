@@ -206,7 +206,7 @@ gulp ngrok-serve
 
     :::image type="content" source="~/assets/images/tab-images/channeltabuploaded.png" alt-text="Channel tab uploaded":::
 
-Now you've successfully created and added your channel or group tab in Teams.
+    Now you've successfully created and added your channel or group tab in Teams.
 
 ::: zone-end
 
@@ -422,7 +422,7 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
     :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="Channel tab ASPNET uploaded":::
 
-Now you've successfully created and added your channel or group tab in Teams.
+    Now you've successfully created and added your channel or group tab in Teams.
 
 ::: zone-end
 
@@ -635,9 +635,9 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
 1. Select **Add to team** to Set up the tab in a team. Configure your tab and select **Save**. Your tab is now available in Teams.
 
-:::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="Channel tab ASPNET MVC uploaded":::
+    :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="Channel tab ASPNET MVC uploaded":::
 
-Now you've successfully created and added your channel or group tab in Teams.
+    Now you've successfully created and added your channel or group tab in Teams.
 
 ::: zone-end
 
