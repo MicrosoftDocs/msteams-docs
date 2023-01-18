@@ -84,10 +84,11 @@ items:
 
      Following are the steps to add a new widget to the dashboard:
 
-     1. Define a data model.
-     2. Create a data retrieve service.
-     3. Create a widget file.
-     4. Add the widget to the dashboard.
+     1. [Define a data model](#define-a-data-model).
+     2. [Create a data retrieve service](#create-a-data-retrieve-service).
+     3. [Create a widget file](#create-a-widget-file).
+     4. [Add the widget to the dashboard](#add-the-widget-to-the-dashboard).
+    
 
     
      ## Define a data model
@@ -96,7 +97,7 @@ items:
 
      1. In Visual Studio Code, under **EXPLORER**, go to **tabs > src > models**.
      1. Create a **sampleModel.ts** file.
-     1. Use the following code and add it to the**sampleModel.ts** file:
+     1. Use the following code and add it to the **sampleModel.ts** file:
 
         ```
         export interface SampleModel {
@@ -127,22 +128,20 @@ items:
 
      **To retrieve services**:
 
-     1. In Visual Studio Code, under **EXPLORER**, select **tabs> src> data>** folder.
-     1. Create a **sampleService.ts** file in **tabs> src> services>** folder.
-     1. Use the following code in **sampleService.ts** file to retrieve services.
+     1. In Visual Studio Code, under **EXPLORER**, go to **tabs > src > data**.
+     1. Create a **sampleService.ts** file.
+     1. Use the following code in **sampleService.ts**:
 
-     Example of data retrieve service:
+        Example of data retrieve service:
 
-     ```
-     import { SampleModel } from "../models/sampleModel";
-     import SampleData from "../data/SampleData.json";
+        ```
+        import { SampleModel } from "../models/sampleModel";
+        import SampleData from "../data/SampleData.json";
 
-     export const getSampleData = (): SampleModel => SampleData;
-     ```
-    
-     Following is an example of adding sample data to retrieve data:
+        export const getSampleData = (): SampleModel => SampleData;
+        ```
 
-     :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/service-retrieve.png" alt-text="Screenshot shows the creation of sampleService.ts file under tabs, src, services folder highlighted in red.":::
+        :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/service-retrieve.png" alt-text="Screenshot shows the creation of sampleService.ts file under tabs, src, services folder highlighted in red.":::
 
       > [!NOTE]
       > You can implement a service to retrieve data from the backend service or from the Microsoft Graph API.
@@ -154,8 +153,6 @@ items:
      1. In Visual Studio Code, under **EXPLORER**, go to **tabs > src > views > widgets**.
      1. Create a **sampleWidget.ts** file.
      1. Use the following code in **sampleWidget.tsx** file:
-
-        Sample of widget implementation:
 
         ```
         import { Button, Text } from "@fluentui/react-components";
@@ -189,17 +186,15 @@ items:
         }
   
       ```
+       :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/create-sample-widget.png" alt-text="Screenshot shows the creation of sampleWidget with tabs, views, widgets, sampleWidget.tsx and sample widget are highlighted in red.":::
       
-      :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/create-sample-widget.png" alt-text="Screenshot shows the creation of sampleWidget with tabs, views, widgets, sampleWidget.tsx and sample widget are highlighted in red.":::
-      
+     
      ## Add the widget to the dashboard
 
-     **To add the widget to the dashboard**:
+      **To add the widget to the dashboard**:
 
       1. In Visual Studio Code, under **Explorer** go to **tabs > src > views > dashboards**.
       1. Use the following code in the **sampleDashboard.tsx** file:
-
-         Following is a sample of dashboard layout:
 
          ```
          protected dashboardLayout(): void | JSX. Element {
@@ -209,7 +204,7 @@ items:
          <SampleWidget />
          </>);
          } 
-         ````
+         ```
          :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/create-sample-dashboard.png" alt-text="Screenshot shows the existing sampleDashboard file with tabs, src, view, dashboard, sampleDashboard.jsx, and sampleWidget highlighted in red.":::
 
       > [!NOTE]
@@ -219,14 +214,16 @@ items:
 
        ```
        protected dashboardLayout(): void | JSX.Element {
-         return (
-           <>
-             <ListWidget />
-             <ChartWidget />
-             <SampleWidget />
-           </>
-         );
-       }
+          return (
+            <>
+              <ListWidget />
+              <div style={oneColumn()}>
+                <ChartWidget />
+                <SampleWidget />
+              </div>
+            </>
+          );
+        }
         ```
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/one-column.png" alt-text="Screenshot shows the addition of one column method in dashboard layout.":::
 
