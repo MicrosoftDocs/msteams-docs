@@ -16,7 +16,7 @@ items:
   content: |
     This step-by-step guide helps you to create a dashboard tab, how to add a new widget, and implement graph API. You'll see the following output:
 
-    :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/dashboard.png" alt-text="Screenshot shows user profile information and recent Teams activity.":::
+    :::image type="content" source="assets/images/sbs-create-a-new-dashboard/join-now.png" alt-text="Screenshot shows join now highlighted in red. ":::
     
 - title: Prerequisites
   durationInMinutes: 1
@@ -534,6 +534,14 @@ items:
       ```
       ---
 
+      After adding the Graph API call, select **Join** to join the meeting:
+
+      :::image type="content" source="assets/images/sbs-create-a-new-dashboard/join.png" alt-text="Screenshot shows the join button highlighted in red.":::
+
+      **Open** Microsoft teams:
+
+      :::image type="content" source="assets/images/sbs-create-a-new-dashboard/join-open.png" alt-text="Screenshot shows the open option highlighted in red.":::
+
       For more information, see:
 
       * [sample](https://github.com/OfficeDev/TeamsFx-Samples/blob/dev/hello-world-tab-with-backend/tabs/src/components/sample/AzureFunctions.tsx)
@@ -545,7 +553,7 @@ items:
 
       Did you come up with something like this?
 
-        :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/dashboard.png" alt-text="Screenshot shows user profile information and recent Teams activity. ":::
+        :::image type="content" source="assets/images/sbs-create-a-new-dashboard/join-now.png" alt-text="Screenshot shows join now highlighted in red. ":::
 
 
 - title: Congratulations!
