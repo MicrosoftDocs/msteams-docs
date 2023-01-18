@@ -280,7 +280,7 @@ The following are the limitations for app caching:
 
 * Check the amount of free memory on your system. App caching requires minimum of 4 GB system memory.
 
-* Reduce your memory footprint when cached. Use the `beforeUnload` handlers to dispose resources that aren't needed when cached. Release references, remove event listeners that may not be needed when cached.
+* Reduce your memory footprint when cached. Use the `beforeUnload` handlers to dispose resources that aren't needed when cached.
 
 ## Feature compatibility by user types
 
