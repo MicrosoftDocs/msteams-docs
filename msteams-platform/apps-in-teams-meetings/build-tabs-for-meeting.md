@@ -178,7 +178,7 @@ Microsoft Teams JavaScript library exposes the frameContext in which your meetin
 
 ## App caching
 
-App caching helps you to improve subsequent launch time of the apps that are loaded in the meeting side panel.
+App caching improves subsequent launch time of the apps that are loaded in the meeting side panel. The cached app stored in a temporary storage after you opened an app for the first time. Faster app launch gives a better experience for users to return to your app.
 
 > [!NOTE]
 >
@@ -214,7 +214,7 @@ When you opt into app caching, the webview that is used to host the embedded app
 There are multiple reasons for an app to not get cached or get removed from the cache, some of the reasons are (numbers here are subject to change):
 
 * If the system memory load is high, the app is removed from the cache.
-* If the app exceeds maximum cache size, the app is removed from the cache.
+* If the number of cached apps exceeds maximum cache size, the oldest app is removed from the cache.
 * If the user doesn't return to the app within 20 minutes, the app is removed from the cache.
 * The app isn't cached if Teams doesn't receive the `readyToUnload` signal from the app within 30 seconds after sending the `beforeUnload` notification.
 * App caching is disabled if the system memory is less than 4 GB or if the available memory is less than 1 GB on Windows or 512 MB on Mac.
@@ -260,7 +260,7 @@ The following are the limitations for app caching:
 
 * Register only the `beforeUnload` handler if your app doesn't require app caching but needs time to safely save state (as leaving the app can cause the app content to be abruptly removed from the Document Object Model (DOM)). If the app hasn't registered for the `load` event, it's removed from the DOM after the unload flow completes.
 
-* Follow the guidelines in this section to onboard your app to app caching in Teams meeting first. For app caching support only in meetings, register the `load` or `beforeUnload` handlers if the context is `sidePanel`.
+* Follow the guidelines in this section to onboard your app to app caching in Teams meeting. For app caching support only in meetings, register the `load` or `beforeUnload` handlers if the context is `sidePanel`.
 
 * Apps are expected to sleep when cached (use minimal compute or network resources and minimizes SDK requests). All the register handlers and the following SDK requests are allowed when the app is cached:
 
@@ -280,7 +280,7 @@ The following are the limitations for app caching:
 
 * Check the amount of free memory on your system. App caching requires minimum of 4 GB system memory.
 
-* Reduce your memory footprint when cached. Use the load handlers to dispose resources that aren't needed when cached.
+* Reduce your memory footprint when cached. Use the `beforeUnload` handlers to dispose resources that aren't needed when cached. Release references, remove event listeners that may not be needed when cached.
 
 ## Feature compatibility by user types
 
@@ -289,7 +289,7 @@ The following table provides the user types and lists the features that each use
 | User type | Scheduled meeting or Instant calendar meeting | One-on-one call | Group call | Scheduled channel meeting |
 | :-- | :-- | :-- | :-- | :-- |
 | In-tenant | Interaction allowed for all roles.<br><br> Create, update, or delete is allowed for all except the Attendees. | Interaction and create, update, or delete allowed. <br><br> In-tenant users in call with federated users can't interact and create, update, or delete. | Interaction and create, update, or delete allowed.<br><br> In-tenant users in call with federated users can't interact and create, update, or delete. | Interaction and create, update, or delete allowed for all roles except for attendees. |
-| Guest | Can interact only | Can interact only | Can interact only | Can interact only. |
+| Guest | Can interact only | Can interact only | Can interact only | Can interact only |
 | Federated or External | Can interact only | Not available | Not available | Can interact only |
 | Anonymous | Not available | Not available | Not available | Not available |
 
@@ -301,7 +301,7 @@ The following table provides the user types and lists the features that each use
 | Meeting stage sample | Sample app to show a tab in meeting stage for collaboration. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) |
 | Meeting side panel | Sample app to show how to add agenda in a meeting side panel. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | NA |
 | In-meeting notification | Demonstrates how to implement in-meeting notification using bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs) |
-| In-meeting document signing | Demonstrates how to implement a document signing Teams app. Includes sharing specific app content to stage, Teams SSO and user specific stage view. | [View](https://github.com/officedev/microsoft-teams-samples/tree/main/samples/meetings-share-to-stage-signing/csharp) | NA |
+| In-meeting document signing | Demonstrates how to implement a document signing Teams app. Includes sharing specific app content to stage, Teams SSO, and user specific stage view. | [View](https://github.com/officedev/microsoft-teams-samples/tree/main/samples/meetings-share-to-stage-signing/csharp) | NA |
 | App caching | Sample app to show how app caching works in the meeting side panel. | NA | [View (Work in Progress)](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/v-mfurquan/app-cache-meetings-nodejs/samples/app-cache-meetings/nodejs) |
 
 > [!NOTE]
