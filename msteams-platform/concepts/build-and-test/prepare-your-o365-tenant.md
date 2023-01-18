@@ -31,7 +31,7 @@ Enable Teams for your organization and for more information, see [enabling Teams
 ## Enable custom Teams apps and turn on custom app uploading
 
 > [!IMPORTANT]
-> This step is no longer required for newly created Microsoft 365 tenants using the Microsoft 365 Developer Program. The **Upload custom apps** setting is enabled by default.
+> You can skip the steps below if you chose the Instant Sandbox option with the Teams sample data pack which will automatically enable the **Upload custom apps** setting.
 
 To turn on the custom app uploading or sideloading for your developer tenant:
 
