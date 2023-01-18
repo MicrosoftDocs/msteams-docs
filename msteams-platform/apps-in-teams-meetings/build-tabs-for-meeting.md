@@ -214,7 +214,7 @@ When you opt into app caching, the webview that is used to host the embedded app
 There are multiple reasons for an app to not get cached or get removed from the cache, some of the reasons are (numbers here are subject to change):
 
 * If the system memory load is high, the app is removed from the cache.
-* If the number of cached apps exceed the maximum cache size, the older cached app is removed from the cache.
+* If the number of cached apps exceed the maximum cache size, the oldest cached app is removed from the cache.
 * If the user doesn't return to the app within 20 minutes, the app is removed from the cache.
 * The app isn't cached if Teams doesn't receive the `readyToUnload` signal from the app within 30 seconds after sending the `beforeUnload` notification.
 * App caching is disabled if the system memory is less than 4 GB or if the available memory is less than 1 GB on Windows or 512 MB on Mac.
