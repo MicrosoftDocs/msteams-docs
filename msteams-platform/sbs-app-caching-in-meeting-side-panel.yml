@@ -18,7 +18,7 @@ items:
   
    This step-by-step guide helps you to create a sample app with app caching. You'll see the following app cached in the meeting side panel:
 
-    :::image type="content" source="~/assets/videos/" alt-text="S":::
+    
     
 - title: Prerequisites
   durationInMinutes: 1
@@ -77,7 +77,7 @@ items:
         ```
         ngrok tunnel is created.
         
-          :::image type="content" source="~/assets/images/" alt-text="":::
+        :::image type="content" source="~/assets/images/" alt-text="":::
 
 - title: Set up manifest file and upload your app
   durationInMinutes: 1
