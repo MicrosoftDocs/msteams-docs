@@ -28,7 +28,7 @@ items:
     | &nbsp; | [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program) | Access to Teams account with the appropriate permissions to install an app. |
     | &nbsp; | [Teams Toolkit Visual Studio Code Extension](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) or [TeamsFx CLI](~/toolkit/TeamsFx-CLI.md) |  A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use 4.0.0 version. |
 
-- title: Create a new Teams app
+- title: Create a new dashboard
   content: |
 
     Teams toolkit supports scaffolding and dashboard project.
