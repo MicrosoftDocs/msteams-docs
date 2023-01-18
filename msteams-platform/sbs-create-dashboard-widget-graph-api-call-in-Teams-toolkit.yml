@@ -185,8 +185,8 @@ items:
         }
         }
   
-      ```
-       :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/create-sample-widget.png" alt-text="Screenshot shows the creation of sampleWidget with tabs, views, widgets, sampleWidget.tsx and sample widget are highlighted in red.":::
+        ```
+        :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/create-sample-widget.png" alt-text="Screenshot shows the creation of sampleWidget with tabs, views, widgets, sampleWidget.tsx and sample widget are highlighted in red.":::
       
      
      ## Add the widget to the dashboard
@@ -196,44 +196,47 @@ items:
       1. In Visual Studio Code, under **Explorer** go to **tabs > src > views > dashboards**.
       1. Use the following code in the **sampleDashboard.tsx** file:
 
-         ```
+        ```
          protected dashboardLayout(): void | JSX. Element {
-         return (<>
+         return (
+         <>
          <ListWidget />
          <ChartWidget />
          <SampleWidget />
          </>);
          } 
-         ```
-         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/create-sample-dashboard.png" alt-text="Screenshot shows the existing sampleDashboard file with tabs, src, view, dashboard, sampleDashboard.jsx, and sampleWidget highlighted in red.":::
-
-      > [!NOTE]
-      > If you want the widget in a column, you can use the `oneColumn()` method to define the column layout. 
-      
-       Following is a sample of `oneColumn()` layout:
-
-       ```
-       protected dashboardLayout(): void | JSX.Element {
-          return (
-            <>
-              <ListWidget />
-              <div style={oneColumn()}>
-                <ChartWidget />
-                <SampleWidget />
-              </div>
-            </>
-          );
-        }
         ```
-        :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/one-column.png" alt-text="Screenshot shows the addition of one column method in dashboard layout.":::
 
-     After adding all the relevant details for creating a widget, Save the respective files.
+        :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/create-sample-dashboard.png" alt-text="Screenshot shows the existing sampleDashboard file with tabs, src, view, dashboard, sampleDashboard.jsx, and sampleWidget highlighted in red."::: 
 
-     You can view the layout, successfully changed on the app and view the calendar widget on the dashboard.
+      If you want the widget in a column, you can use the `oneColumn()` method to define the column layout.
+      
+      Following is a sample of `oneColumn()` layout:
+
+        ```
+  
+        protected dashboardLayout(): void | JSX.Element {
+        return (
+        <>
+        <ListWidget />
+        <div style={oneColumn()}>
+                  <ChartWidget />
+                  <SampleWidget />
+                </div>
+              </>
+            );
+          }
+        ```
+
+      :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/one-column.png" alt-text="Screenshot shows the addition of one column method in dashboard layout.":::
+
+      After adding all the relevant details for creating a widget, Save the respective files.
+
+      You can view the layout, successfully changed on the app and view the calendar widget on the dashboard.
 
       :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/widget-added-to-dashboard.png" alt-text="Screenshot shows the addition of widget to the dashboard with sample widget highlighted in red. ":::
 
-     You can change the look and style of the widget. For more information see customize the widget.(route it to article)
+      You can change the look and style of the widget. For more information see customize the widget.(route it to article)
 
 - title: Add a new Graph API call
   durationInMinutes: 5
