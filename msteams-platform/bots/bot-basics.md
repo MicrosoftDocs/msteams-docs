@@ -11,7 +11,7 @@ ms.author: anclear
 
 This document builds on the article on [how bots work](https://aka.ms/how-bots-work) in the core [Bot Framework documentation](https://aka.ms/azure-bot-service-docs). The primary difference between bots developed for Microsoft Teams and the core Bot Framework is in the features provided in Teams.
 
-To organize the conversational logic for your bot, an activity handler is used. Activities are handled in two ways using Teams activity handlers and bot logic. The Teams activity handler adds support for Teams-specific events and interactions. The bot object contains the conversational reasoning or logic for a turn and exposes a turn handler, which is the method that can accept incoming activities from the bot adapter.
+An activity handler is used to organize the conversational logic for your bot. Activities are handled in two ways using Teams activity handlers and bot logic. The Teams activity handler adds support for Teams-specific events and interactions. The bot object contains the conversational reasoning or logic for a turn and exposes a turn handler, which is the method that can accept incoming activities from the bot adapter.
 
 ## Teams activity handlers
 
@@ -102,7 +102,7 @@ To implement your logic for Teams specific activity handlers, you must override 
 
 The code snippets for Teams activity handlers:
 
-`OnTeamsChannelCreatedAsync`
+`onTeamsChannelCreated`
 
 ```javascript
 
@@ -112,7 +112,7 @@ onTeamsChannelCreated(async (channelInfo, teamInfo, context, next) => {
     });
 ```
 
-`OnTeamsChannelDeletedAsync`
+`onTeamsChannelDeleted`
 
 ```javascript
 
@@ -122,7 +122,7 @@ onTeamsChannelDeleted(async (channelInfo, teamInfo, context, next) => {
     });
 ```
 
-`OnTeamsChannelRenamedAsync`
+`onTeamsChannelRenamed`
 
 ```javascript
 
@@ -132,7 +132,7 @@ onTeamsChannelRenamed(async (channelInfo, teamInfo, context, next) => {
     });
 ```
 
-`OnTeamsTeamRenamedAsync`
+`onTeamsTeamRenamed`
 
 ```javascript
 
@@ -142,7 +142,7 @@ onTeamsTeamRenamedAsync(async (teamInfo, context, next) => {
     });
 ```
 
-`OnTeamsMembersAddedAsync`
+`onTeamsMembersAdded`
 
 ```javascript
 
@@ -152,7 +152,7 @@ onTeamsMembersAdded(async (membersAdded, teamInfo, context, next) => {
     });
 ```
 
-`OnTeamsMembersRemovedAsync`
+`onTeamsMembersRemoved`
 
 ```javascript
 
@@ -187,7 +187,7 @@ The bot logic processes incoming activities from one or more of your bot channel
 
 Activity handlers are different in context of a team, where a new member is added to the team instead of a message thread.
 
-The list of handlers defined in `ActivityHandler` includes the following:
+The list of handlers defined in `ActivityHandler` includes the following events:
 
 | Event | Handler | Description |
 | :-- | :-- | :-- |
@@ -203,7 +203,7 @@ The list of handlers defined in `ActivityHandler` includes the following:
 
 #### Teams specific activity handlers
 
-The `TeamsActivityHandler` extends the list of handlers in the core Bot Framework handlers section to include the following:
+The `TeamsActivityHandler` extends the list of handlers in the core Bot Framework handlers section to include the following events:
 
 | Event | Handler | Description |
 | :-- | :-- | :-- |
@@ -216,7 +216,7 @@ The `TeamsActivityHandler` extends the list of handlers in the core Bot Framewor
 
 #### Teams invoke activities
 
-The list of Teams activity handlers called from the `OnInvokeActivityAsync` Teams activity handler includes the following:
+The list of Teams activity handlers called from the `OnInvokeActivityAsync` Teams activity handler includes the following invoke types:
 
 | Invoke types                    | Handler                              | Description                                                  |
 | :-----------------------------  | :----------------------------------- | :----------------------------------------------------------- |
@@ -224,7 +224,7 @@ The list of Teams activity handlers called from the `OnInvokeActivityAsync` Team
 | fileConsent/invoke              | `OnTeamsFileConsentAcceptAsync`      | This method is invoked when a file consent card is accepted by the user. |
 | fileConsent/invoke              | `OnTeamsFileConsentAsync`            | This method is invoked when a file consent card activity is received from the connector. |
 | fileConsent/invoke              | `OnTeamsFileConsentDeclineAsync`     | This method is invoked when a file consent card is declined by the user. |
-| actionableMessage/executeAction | `OnTeamsO365ConnectorCardActionAsync` | This method is invoked when an Office 365 connector card action activity is received from the connector. |
+| actionableMessage/executeAction | `OnTeamsO365ConnectorCardActionAsync` | This method is invoked when a connector card for Microsoft 365 Groups action activity is received from the connector. |
 | signin/verifyState              | `OnTeamsSigninVerifyStateAsync`      | This method is invoked when a signIn verify state activity is received from the connector. |
 | task/fetch                      | `OnTeamsTaskModuleFetchAsync`        | This method can be overridden in a derived class to provide logic when a task module is fetched. |
 | task/submit                     | `OnTeamsTaskModuleSubmitAsync`       | This method can be overridden in a derived class to provide logic when a task module is submitted. |
@@ -240,7 +240,7 @@ The Invoke activities listed in this section are for conversational bots in Team
 
 Activity handlers are different in context of a team, where the new member is added to the team instead of a message thread.
 
-The list of handlers defined in `ActivityHandler` includes the following:
+The list of handlers defined in `ActivityHandler` includes the following events:
 
 | Event | Handler | Description |
 | :-- | :-- | :-- |
@@ -255,16 +255,16 @@ The list of handlers defined in `ActivityHandler` includes the following:
 
 #### Teams specific activity handlers
 
-The `TeamsActivityHandler` extends the list of handlers in the core Bot Framework handlers section to include the following:
+The `TeamsActivityHandler` extends the list of handlers in the core Bot Framework handlers section to include the following events:
 
 | Event | Handler | Description |
 | :-- | :-- | :-- |
-| channelCreated | `OnTeamsChannelCreatedAsync` | This method can be overridden to handle a Teams channel being created. For more information, see [channel created](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-created) in [conversation update events](https://aka.ms/azure-bot-subscribe-to-conversation-events). |
-| channelDeleted | `OnTeamsChannelDeletedAsync` | This method can be overridden to handle a Teams channel being deleted. For more information, see [channel deleted](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-deleted) in [conversation update events](https://aka.ms/azure-bot-subscribe-to-conversation-events).|
-| channelRenamed | `OnTeamsChannelRenamedAsync` | This method can be overridden to handle a Teams channel being renamed. For more information, see [channel renamed](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-renamed) in [conversation update events](https://aka.ms/azure-bot-subscribe-to-conversation-events). |
-| teamRenamed | `OnTeamsTeamRenamedAsync` | `return Task.CompletedTask;` This method can be overridden to handle a Teams team being renamed. For more information, see [team renamed](https://aka.ms/azure-bot-subscribe-to-conversation-events#team-renamed) in [conversation update events](https://aka.ms/azure-bot-subscribe-to-conversation-events). |
-| MembersAdded | `OnTeamsMembersAddedAsync` | This method calls the `OnMembersAddedAsync` method in `ActivityHandler`. The method can be overridden to handle members joining a team. For more information, see [team members added](https://aka.ms/azure-bot-subscribe-to-conversation-events#team-members-added) in [conversation update events](https://aka.ms/azure-bot-subscribe-to-conversation-events). |
-| MembersRemoved | `OnTeamsMembersRemovedAsync` | This method calls the `OnMembersRemovedAsync` method in `ActivityHandler`. The method can be overridden to handle members leaving a team. For more information, see [team members removed](https://aka.ms/azure-bot-subscribe-to-conversation-events#team-members-removed) in [conversation update events](https://aka.ms/azure-bot-subscribe-to-conversation-events). |
+| channelCreated | `onTeamsChannelCreated` | This method can be overridden to handle a Teams channel being created. For more information, see [channel created](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-created) in [conversation update events](https://aka.ms/azure-bot-subscribe-to-conversation-events). |
+| channelDeleted | `onTeamsChannelDeleted` | This method can be overridden to handle a Teams channel being deleted. For more information, see [channel deleted](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-deleted) in [conversation update events](https://aka.ms/azure-bot-subscribe-to-conversation-events).|
+| channelRenamed | `onTeamsChannelRenamed` | This method can be overridden to handle a Teams channel being renamed. For more information, see [channel renamed](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-renamed) in [conversation update events](https://aka.ms/azure-bot-subscribe-to-conversation-events). |
+| teamRenamed | `onTeamsTeamRenamed` | `return Task.CompletedTask;` This method can be overridden to handle a Teams team being renamed. For more information, see [team renamed](https://aka.ms/azure-bot-subscribe-to-conversation-events#team-renamed) in [conversation update events](https://aka.ms/azure-bot-subscribe-to-conversation-events). |
+| MembersAdded | `onTeamsMembersAdded` | This method calls the `OnMembersAddedAsync` method in `ActivityHandler`. The method can be overridden to handle members joining a team. For more information, see [team members added](https://aka.ms/azure-bot-subscribe-to-conversation-events#team-members-added) in [conversation update events](https://aka.ms/azure-bot-subscribe-to-conversation-events). |
+| MembersRemoved | `onTeamsMembersRemoved` | This method calls the `OnMembersRemovedAsync` method in `ActivityHandler`. The method can be overridden to handle members leaving a team. For more information, see [team members removed](https://aka.ms/azure-bot-subscribe-to-conversation-events#team-members-removed) in [conversation update events](https://aka.ms/azure-bot-subscribe-to-conversation-events). |
 
 #### Teams invoke activities
 
@@ -276,7 +276,7 @@ The list of Teams activity handlers called from the `onInvokeActivity` Teams act
 | fileConsent/invoke              | `handleTeamsFileConsentAccept`      | This method is invoked when a file consent card is accepted by the user. |
 | fileConsent/invoke              | `handleTeamsFileConsent`            | This method is invoked when a file consent card activity is received from the connector. |
 | fileConsent/invoke              | `handleTeamsFileConsentDecline`     | This method is invoked when a file consent card is declined by the user. |
-| actionableMessage/executeAction | `handleTeamsO365ConnectorCardAction` | This method is invoked when an Office 365 connector card action activity is received from the connector. |
+| actionableMessage/executeAction | `handleTeamsO365ConnectorCardAction` | This method is invoked when a connector card for Microsoft 365 Groups action activity is received from the connector. |
 | signin/verifyState              | `handleTeamsSigninVerifyState`      | This method is invoked when a signIn verify state activity is received from the connector. |
 | task/fetch                      | `handleTeamsTaskModuleFetch`        | This method can be overridden in a derived class to provide logic when a task module is fetched. |
 | task/submit                     | `handleTeamsTaskModuleSubmit`       | This method can be overridden in a derived class to provide logic when a task module is submitted. |
@@ -292,7 +292,7 @@ The invoke activities listed in this section are for conversational bots in Team
 
 Activity handlers are different in context of a team, where the new member is added to the team instead of a message thread.
 
-The list of handlers defined in `ActivityHandler` includes the following:
+The list of handlers defined in `ActivityHandler` includes the following events:
 
 | Event | Handler | Description |
 | :-- | :-- | :-- |
@@ -308,7 +308,7 @@ The list of handlers defined in `ActivityHandler` includes the following:
 
 #### Teams specific activity handlers
 
-The `TeamsActivityHandler` extends the list of handlers from the core Bot Framework handlers section to include the following:
+The `TeamsActivityHandler` extends the list of handlers from the core Bot Framework handlers section to include the following events:
 
 | Event | Handler | Description |
 | :-- | :-- | :-- |
@@ -321,7 +321,7 @@ The `TeamsActivityHandler` extends the list of handlers from the core Bot Framew
 
 #### Teams invoke activities
 
-The list of Teams activity handlers called from the `on_invoke_activity` Teams activity handler includes the following:
+The list of Teams activity handlers called from the `on_invoke_activity` Teams activity handler includes the following invoke types:
 
 | Invoke types                    | Handler                              | Description                                                  |
 | :-----------------------------  | :----------------------------------- | :----------------------------------------------------------- |
@@ -329,7 +329,7 @@ The list of Teams activity handlers called from the `on_invoke_activity` Teams a
 | fileConsent/invoke              | `on_teams_file_consent_accept`      | This method is invoked when a file consent card is accepted by the user. |
 | fileConsent/invoke              | `on_teams_file_consent`            | This method is invoked when a file consent card activity is received from the connector. |
 | fileConsent/invoke              | `on_teams_file_consent_decline`     | This method is invoked when a file consent card is declined by the user. |
-| actionableMessage/executeAction | `on_teams_o365_connector_card_action` | This method is invoked when an Office 365 connector card action activity is received from the connector. |
+| actionableMessage/executeAction | `on_teams_o365_connector_card_action` | This method is invoked when a connector card for Microsoft 365 Groups action activity is received from the connector. |
 | signin/verifyState              | `on_teams_signin_verify_state`      | This method is invoked when a signIn verify state activity is received from the connector. |
 | task/fetch                      | `on_teams_task_module_fetch`        | This method can be overridden in a derived class to provide logic when a task module is fetched. |
 | task/submit                     | `on_teams_task_module_submit`       | This method can be overridden in a derived class to provide logic when a task module is submitted. |
@@ -346,3 +346,11 @@ Now that you've familiarized yourself with bot activity handlers, let us see how
 
 > [!div class="nextstepaction"]
 > [Conversation basics](~/bots/how-to/conversations/conversation-basics.md)
+
+## See also
+
+* [Build bots for Teams](what-are-bots.md)
+* [Teams JavaScript client SDK](../tabs/how-to/using-teams-client-sdk.md)
+* [App manifest schema for Teams](../resources/schema/manifest-schema.md)
+* [API reference for the Bot Framework Connector service](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference)
+* [Get Teams specific context for your bot](how-to/get-teams-context.md)

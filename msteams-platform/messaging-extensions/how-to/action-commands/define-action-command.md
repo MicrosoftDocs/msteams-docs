@@ -164,7 +164,7 @@ If you're using an embedded web view, you can optionally add the `taskInfo` obje
 #### App manifest example
 
 This section isn't an example of the complete manifest. For the complete app manifest schema, see [app manifest schema](~/resources/schema/manifest-schema.md). The following is an example of a `composeExtensions` object defining two action commands:
- 
+
 ```json
 ...
 "composeExtensions": [
@@ -224,7 +224,7 @@ This section isn't an example of the complete manifest. For the complete app man
 
 | Sample Name           | Description | .NET    | Node.js   |
 |:---------------------|:--------------|:---------|:--------|
-|Teams message extension action| Describes how to define action commands, create task module, and  respond to task module submit action. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) |
+|Teams message extension action| Describes how to define action commands, create task module, and  respond to task module submit action. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/nodejs) |
 
 ## Step-by-step guide
 
@@ -241,3 +241,11 @@ If you're using the parameters or an embedded web view with a `taskInfo` object,
 
 > [!div class="nextstepaction"]
 > [Respond to task module submit](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
+
+## See also
+
+* [Cards](../../../task-modules-and-cards/what-are-cards.md)
+* [Task modules](../../../task-modules-and-cards/what-are-task-modules.md)
+* [App manifest schema for Teams](../../../resources/schema/manifest-schema.md)
+* [Developer Portal for Teams](../../../concepts/build-and-test/teams-developer-portal.md)
+* [Message extensions](../../what-are-messaging-extensions.md)
