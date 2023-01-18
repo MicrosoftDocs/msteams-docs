@@ -239,7 +239,7 @@ The `TeamsFx` provides convenient methods for defining and modifying the layout 
 
 1. Customize the height of widgets in a row. The following code can achieve a height of 400px for the ListWidget and a height of 350px for the ChartWidget.
 
-    ```typescript
+```typescript
     import { oneColumn } from '../lib/Dashboard.styles';
     export default class SampleDashboard extends Dashboard {
       protected rowHeights(): string | undefined {
@@ -262,7 +262,7 @@ The `TeamsFx` provides convenient methods for defining and modifying the layout 
         );
       }
     }
-    ```
+```
 
   Following is an example of the customization of chart widget:
 
@@ -611,7 +611,7 @@ You can follow the steps to use Microsoft Graph Toolkit as your widget content:
 
   The following code is an example of using Todo component from Microsoft Graph Toolkit in widget:
 
-    ```typescript
+  ```typescript
     import { Providers, ProviderState, Todo } from "@microsoft/mgt-react";
     import { TeamsFxProvider } from "@microsoft/mgt-teamsfx-provider";
     
@@ -662,7 +662,7 @@ You can follow the steps to use Microsoft Graph Toolkit as your widget content:
       }
     }
     
-    ```
+  ```
 
   For more information, refer [Microsoft Graph Toolkit](/graph/toolkit/overview)
 
