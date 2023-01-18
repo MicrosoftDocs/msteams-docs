@@ -84,12 +84,10 @@ items:
 
      Following are the steps to add a new widget to the dashboard:
 
-     1. [Define a data model](#Define-a-data-model)
-     2. [Create a data retrieve service](#create-a-data-retrieve-service)
-     3. [Create a widget file](#create-a-widget-file)
-     4. [Add the widget to the dashboard](#add-the-widget-to-the-dashboard)
-
-     ## Define a data model
+     1. Define a data model
+     2. Create a data retrieve service
+     3. Create a widget file
+     4. Add the widget to the dashboard
 
      Define a data model for the data the widget needs to display:
 
@@ -267,9 +265,9 @@ items:
 
     1. Create `calendarWidget.style.ts` file under **src/views/styles** folder.
 
-      Extend the **Widget** class. You can choose to override several methods to customize your widget as stated in the [table](#The-following-table-lists-the-methods-that-you-can-override-to-customize-your-widget).
+      Extend the **Widget** class. You can choose to override several methods to customize your widget as stated in the table above.
     
-    1. Override `headerContent()`, `bodyContent()`, and `footerContent()` to customize the widget:
+    * Override `headerContent()`, `bodyContent()`, and `footerContent()` to customize the widget:
 
       ```
       export class NewsWidget extends Widget<void> {
@@ -310,7 +308,7 @@ items:
       ```
       ---
 
-    1. Override `bodyContent()` and `footerContent()` to customize the widget.
+    * Override `bodyContent()` and `footerContent()` to customize the widget.
 
         ```
         export class NewsWidget extends Widget<void> {
@@ -341,7 +339,7 @@ items:
       ```
       ---
 
-    1. Override `bodyContent()` to customize the widget.
+    * Override `bodyContent()` to customize the widget.
 
        ```
       export class NewsWidget extends Widget<void> {
