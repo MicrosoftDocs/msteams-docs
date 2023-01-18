@@ -241,31 +241,33 @@ items:
 
       Add **Single-Sign-On** related files in Teams toolkit:
 
-      1. In Visual Studio Code, select **Teams** in the left pane and select **Add features** under **DEVELOPMENT**.
+      1. In Visual Studio Code, select **Teams** in the left pane.
+      
+      1. Under **DEVELOPMENT**, select **Add features**.
 
           :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/add-features.png" alt-text="Screenshot shows the selection of added features.":::
 
-      1. Select **Single Sign-On** under **Add features**
+      1. Select **Single Sign-On**.
 
           :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/single-sign-on.png" alt-text="Screenshot shows the selection of single sign-on.":::
 
-      1. Move `auth-start.html` file and `auth-end.html` file in **auth> tab> public** folder to **tabs> public>** folder. These two HTML files are used for auth redirects.
+      1. Move `auth-start.html` file and `auth-end.html` file in teh **auth > tab > public** folder to the **tabs > public >** folder. These two HTML files are used for auth redirects.
 
-      1. Move **SSO** folder under **auth> tab** folder to **tabs> src> sso** folder.
+      1. Move **SSO** folder under **auth > tab** folder to **tabs > src > sso** folder.
 
-      Now you've added the SSO files to your project, you can call Graph APIs. Refer to add a Graph API call (route to article)
+         Now you've added the SSO files to your project, you can call Graph APIs. Refer to add a Graph API call (route to article).
 
-      After adding the Graph API call, select **Join** to join the meeting:
+      1. Select **Join** to join the meeting.
 
-      :::image type="content" source="assets/images/sbs-create-a-new-dashboard/join.png" alt-text="Screenshot shows the join button highlighted in red.":::
+         :::image type="content" source="assets/images/sbs-create-a-new-dashboard/join.png" alt-text="Screenshot shows the join button highlighted in red.":::
 
-      **Open** Microsoft teams:
+      1. Select **Open**.
 
-      :::image type="content" source="assets/images/sbs-create-a-new-dashboard/join-open.png" alt-text="Screenshot shows the open option highlighted in red.":::
+         :::image type="content" source="assets/images/sbs-create-a-new-dashboard/join-open.png" alt-text="Screenshot shows the open option highlighted in red.":::
 
-      Select **Join now**.
+      1. Select **Join now**.
 
-      :::image type="content" source="assets/images/sbs-create-a-new-dashboard/join-now.png" alt-text="Screenshot shows join now highlighted in red.":::       
+         :::image type="content" source="assets/images/sbs-create-a-new-dashboard/join-now.png" alt-text="Screenshot shows join now highlighted in red.":::       
 
 - title: Complete challenge
   durationInMinutes: 5
