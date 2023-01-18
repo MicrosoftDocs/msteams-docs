@@ -125,7 +125,7 @@ After you've configured Graph permissions in Azure AD:
 
 ### Get the token ID from Teams client
 
-The following code provides an example for calling token ID from Teams client.
+The following code provides an example for calling token ID from Teams client:
 
 ```csharp
 microsoftTeams.authentication.getAuthToken().then((result) => {
