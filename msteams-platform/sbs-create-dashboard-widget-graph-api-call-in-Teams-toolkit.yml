@@ -258,7 +258,7 @@ items:
 
       1. Move **SSO** folder under **auth > tab** folder to **tabs > src > sso** folder.
 
-      Now you've added the SSO files to your project, you can call Graph APIs. Refer to [add a Graph API call](#graph-api-call).
+      Now you've added the SSO files to your project, you can call Graph APIs. Refer to [Graph API call](tabs/how-to/dashboard-teams-toolkit.md#graph-api-call).
 
       1. Select **Join** to join the meeting.
 
