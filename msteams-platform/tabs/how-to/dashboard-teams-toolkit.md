@@ -173,9 +173,9 @@ The `TeamsFx` provides convenient methods for defining and modifying the layout 
     }
     ```
 
-  Following is an example of customized dashboard layout.
+    Following is an example of customized dashboard layout.
 
-  :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/customize-dashboard-layout.png" alt-text="Screenshot shows the customized dashboard layout.":::
+   :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/customize-dashboard-layout.png" alt-text="Screenshot shows the customized dashboard layout.":::
 
 1. There are two widgets in a row with width of 600px and 1100px, the height of the first line is the maximum height of its content, and the height of the second line is 400px.
 
@@ -184,7 +184,7 @@ The `TeamsFx` provides convenient methods for defining and modifying the layout 
       protected rowHeights(): string | undefined {
         return "max-content 400px";
       }
-    
+     
       protected columnWidths(): string | undefined {
         return "600px 1100px";
       }
@@ -201,9 +201,9 @@ The `TeamsFx` provides convenient methods for defining and modifying the layout 
     }
     ```
 
-  Following is an example of height and width customization:
+    Following is an example of height and width customization:
 
-  :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/customize-dashboard-layout2.png" alt-text="Screenshot shows the customization of height and width of the dashboard layout.":::
+    :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/customize-dashboard-layout2.png" alt-text="Screenshot shows the customization of height and width of the dashboard layout.":::
 
 1. Arrange two widgets in a column.
 
@@ -233,9 +233,9 @@ The `TeamsFx` provides convenient methods for defining and modifying the layout 
     }
     ```
 
-  Following is an example of two widgets in a column:
+    Following is an example of two widgets in a column:
 
-  :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/widget-customize.png" alt-text="Screenshot shows the two widget customization.":::
+    :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/widget-customize.png" alt-text="Screenshot shows the two widget customization.":::
 
 1. Customize the height of widgets in a row. The following code can achieve a height of 400px for the ListWidget and a height of 350px for the ChartWidget.
 
@@ -268,7 +268,7 @@ The `TeamsFx` provides convenient methods for defining and modifying the layout 
 
   :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/chart-widget.png" alt-text="Screenshot shows the customization of a chart widget.":::
 
-### Dashboard abstraction
+## Dashboard abstraction
 
 To adjust the layout of the dashboard, the `TeamsFx` provides a dashboard class for developers to implement a dashboard.
 
@@ -389,7 +389,7 @@ Following are the customizable methods to override:
 | **columnWidths()** | Customize how many columns the dashboard has at most and the width of each column. | YES |
 | **dashboardLayout()** | Define the widgets layout in dashboard. | YES |
 
-**Embed Power BI to Dashboard**
+## Embed Power BI to Dashboard
 
 For how to embed Power BI to the Dashboard, you can refer to [powerbi-client-react](/javascript/api/overview/powerbi/powerbi-client-react).
 
@@ -403,49 +403,49 @@ Widget class provides some methods that can be overridden to customize the widge
 
 1. Override **headerContent()**、**bodyContent()**、**footerContent()** to customize the widget.
 
-```typescript
-export class NewsWidget extends Widget<void> {
-
-    headerContent(): JSX.Element | undefined {
-        return (
-            <div style={headerContentStyle()}>
-                <News28Regular />
-                <Text style={headerTextStyle()}>Your News</Text>
-                <Button icon={<MoreHorizontal32Regular />} appearance="transparent" />
-            </div>
-        );
+    ```typescript
+    export class NewsWidget extends Widget<void> {
+    
+        headerContent(): JSX.Element | undefined {
+            return (
+                <div style={headerContentStyle()}>
+                    <News28Regular />
+                    <Text style={headerTextStyle()}>Your News</Text>
+                    <Button icon={<MoreHorizontal32Regular />} appearance="transparent" />
+                </div>
+            );
+        }
+    
+        bodyContent(): JSX.Element | undefined {
+            return (
+                <div style={contentLayoutStyle()}>
+                    <Image src="image.svg" style={imageStyle()} />
+                    <Text style={titleStyle()}>Lorem Ipsum Dolor</Text>
+                    <Text style={descStyle()}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim, elementum sed</Text>
+                </div>
+            );
+        }
+    
+        footerContent(): JSX.Element | undefined {
+            return (
+                <Button
+                    appearance="transparent"
+                    icon={<ArrowRight16Filled />}
+                    iconPosition="after"
+                    size="small"
+                    style={footerButtonStyle()}
+                    onClick={() => { }} // navigate to detailed page
+                >
+                    View details
+                </Button>
+            );
+        }
     }
+    ```
 
-    bodyContent(): JSX.Element | undefined {
-        return (
-            <div style={contentLayoutStyle()}>
-                <Image src="image.svg" style={imageStyle()} />
-                <Text style={titleStyle()}>Lorem Ipsum Dolor</Text>
-                <Text style={descStyle()}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim, elementum sed</Text>
-            </div>
-        );
-    }
+   Following is an example of headerContent(), bodyContent(), footerContent():
 
-    footerContent(): JSX.Element | undefined {
-        return (
-            <Button
-                appearance="transparent"
-                icon={<ArrowRight16Filled />}
-                iconPosition="after"
-                size="small"
-                style={footerButtonStyle()}
-                onClick={() => { }} // navigate to detailed page
-            >
-                View details
-            </Button>
-        );
-    }
-}
-```
-
-Following is an example of headerContent()、bodyContent()、footerContent():
-
-:::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/override-header-count.png" alt-text="Screenshot shows the example of header, body, and footer content.":::
+   :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/override-header-count.png" alt-text="Screenshot shows the example of header, body, and footer content.":::
 
 1. Override **bodyContent()**、**footerContent()** to customize the widget.
 
@@ -479,9 +479,9 @@ Following is an example of headerContent()、bodyContent()、footerContent():
     }
     ```
 
-  Following is an example of **bodyContent()** and **footerContent()**
+    Following is an example of **bodyContent()** and **footerContent()**
 
-  :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/override-body-content-footer-content.png" alt-text="Screenshot shows the body and footer content.":::
+    :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/override-body-content-footer-content.png" alt-text="Screenshot shows the body and footer content.":::
 
 1. Override **bodyContent()** to customize the widget.
 
@@ -501,11 +501,11 @@ Following is an example of headerContent()、bodyContent()、footerContent():
     }
     ```
 
-  Following is an example of **body content**:
+    Following is an example of **body content**:
 
-  :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/override-body-content.png" alt-text="Screenshot shows body content.":::
+    :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/override-body-content.png" alt-text="Screenshot shows body content.":::
 
-### Widget Abstraction
+## Widget Abstraction
 
 To simplify the development of a widget, the `TeamsFx` provides a Widget class for developers to inherit to implement a widget that meets their needs without much attention to implement the widget layout.
 
@@ -589,7 +589,7 @@ Following are the recommended methods to override:
 | **bodyContent()** | This method is used to define what the widget body will look like. You can choose to override this method to customize a widget or not, if not, the widget will not have a body. | YES |
 | **footerContent()** | This method is used to define what the widget footer will look like. You can choose to override this method to customize a widget or not, if not, the widget will not have a footer. | YES |
 
-### Microsoft Graph Toolkit as widget content
+## Microsoft Graph Toolkit as widget content
 
 Microsoft Graph Toolkit is a set of reusable, framework-agnostic web components and helpers for accessing and working with Microsoft Graph. You can use the Microsoft Graph Toolkit with any web framework or without a framework.
 
@@ -597,17 +597,17 @@ You can follow the steps to use Microsoft Graph Toolkit as your widget content:
 
 1. Add SSO feature to your Teams app
 
-  Microsoft Teams provides single sign-on (SSO) function for an app to obtain signed in Teams user token to access Microsoft Graph.
+   Microsoft Teams provides single sign-on (SSO) function for an app to obtain signed in Teams user token to access Microsoft Graph.
 
-  For more information, refer [SSO feature to your Teams app](../../toolkit/add-single-sign-on.md).
+   For more information, refer [SSO feature to your Teams app](../../toolkit/add-single-sign-on.md).
 
 1. Install required npm packages
 
    Run the following command in your project `tabs` folder to install the required `npm` packages:
 
-  ```typescript
-  npm install @microsoft/mgt-react @microsoft/mgt-teamsfx-provider
-  ```
+      ```typescript
+      npm install @microsoft/mgt-react @microsoft/mgt-teamsfx-provider
+      ```
 
 1. Add a new Graph Toolkit widget
 
@@ -842,14 +842,14 @@ The following steps show how to add a property to the state of the ListWidget an
 
 1. **Define a state type**
 
-Define a state type including a property named loading that indicates whether the data is loading.
+   Define a state type including a property named loading that indicates whether the data is loading.
 
-```typescript
-interface ListWidgetState {
-  data: ListModel[];
-  loading?: boolean;
-}
-```
+    ```typescript
+    interface ListWidgetState {
+      data: ListModel[];
+      loading?: boolean;
+    }
+    ```
 
 1. **Add a data loader**
 
@@ -875,19 +875,19 @@ bodyContent(): JSX.Element | undefined {
 
 1. **Hide the footer button if data is loading**
 
-```typescript
-footerContent(): JSX.Element | undefined {
-  if (this.state.loading === false) {
-    return (
-      <Button
-        ...
-      </Button>
-    );
-  }
-}
-```
+    ```typescript
+    footerContent(): JSX.Element | undefined {
+      if (this.state.loading === false) {
+        return (
+          <Button
+            ...
+          </Button>
+        );
+      }
+    }
+    ```
 
-1. Update the state reference
+1. **Update the state reference**
 
 Update the state reference in the widget file to use the new state type and update the state in the `getData` method to set the `loading` property to `false` after the data is loaded.
 
@@ -897,7 +897,7 @@ Now, the loading spinner is shown while the data is loading. When the data is lo
 
 ## How to handle empty state
 
-You can display a specific content in your widget when the data is empty. To do so, you need to modify the bodyContent method in your widget file to adopt different states of the data. The following example shows how to display an empty image when the data of ListWidget is empty.
+You can display a specific content in your widget when the data is empty. To do so, you need to modify the `bodyContent` method in your widget file to adopt different states of the data. The following example shows how to display an empty image when the data of ListWidget is empty.
 
 ```typescript
 bodyContent(): JSX.Element | undefined {
@@ -943,9 +943,9 @@ footerContent(): JSX.Element | undefined {
   }
 ```
 
-Your list widget will look like this when the data is empty:
+  Your list widget will look like this when the data is empty:
 
-:::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/no-data.png" alt-text="Screenshot showing no data in the list.":::
+  :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/no-data.png" alt-text="Screenshot showing no data in the list.":::
 
 ## How to refresh data as scheduled
 
@@ -976,3 +976,10 @@ You can modify `setInterval` method to call your own function to refresh data, l
 ## Step-by-step guide
 
 Follow the [step-by-step guide](/microsoftteams/platform/sbs-create-dashboard-widget-graph-api-call-in-teams-toolkit?branch=pr) to build a dashboard, and also learn to add a widget and Graph API call to the dashboard.
+
+## See also
+
+[What are Teams tabs](../what-are-tabs.md)
+[App design guidelines for Tab](../design/tabs.md)
+[Fluent UI Library](https://react.fluentui.dev/?path=/docs/concepts-introduction--page)
+[Fluent UI React Charting Examples](https://fluentuipr.z22.web.core.windows.net/heads/master/react-charting/demo/index.html#/)
