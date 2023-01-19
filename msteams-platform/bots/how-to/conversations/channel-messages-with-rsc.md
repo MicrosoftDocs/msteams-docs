@@ -14,7 +14,7 @@ The resource-specific consent (RSC) permissions model, originally developed for 
 
 > [!NOTE]
 >
-> The ability for bots to receive all messages in chats using `ChatMessage.Read.Chat` is available only in [public developer preview for Teams](../../../resources/dev-preview/developer-preview-intro.md) and will only be enabled after a new installation.
+> The ability for bots to receive all messages in chats using `ChatMessage.Read.Chat` is available only in [public developer preview for Teams](../../../resources/dev-preview/developer-preview-intro.md) and will only be enabled after a new installation into a chat.
 
 The `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permissions are being extended to bots. With user consent and app installation, these permissions:
 
