@@ -52,7 +52,7 @@ There are many scenarios where sharing the entire app to the meeting stage isn't
 
 1. A user may want to share content from a single content provider at a time (for example, YouTube) versus sharing an entire video catalog onto stage.
 
-To help users in such scenarios, we released APIs within the TeamsJS client library  that allow you to programmatically invoke share to stage for specific parts of the app from a button in the meeting side panel.
+To help users in such scenarios, we released APIs within the Microsoft Teams JavaScript client library that allow you to programmatically invoke share to stage for specific parts of the app from a button in the meeting side panel.
 
 :::image type="content" source="../assets/images/apps-in-meetings/shared-meeting-stage-edit-review-component.png" alt-text="The screenshot shows the share to meeting stage view.":::
 
