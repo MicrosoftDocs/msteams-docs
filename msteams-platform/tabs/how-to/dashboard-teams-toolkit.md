@@ -893,7 +893,7 @@ Update the state reference in the widget file to use the new state type and upda
 
 Now, the loading spinner is shown while the data is loading. When the data is loaded, the loading spinner is hidden, and the list data and footer button are shown.
 
-GIF to be added
+:::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/spinner.gif" alt-text="Gif showing the loading spinner while the data is loading.":::
 
 ## How to handle empty state
 
