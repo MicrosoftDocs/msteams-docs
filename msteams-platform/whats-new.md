@@ -26,7 +26,7 @@ Teams platform features that are available to all app developers.
 
 **2023 January**
 
-***January 11, 2023***: [Introducing targeted meeting notification](apps-in-teams-meetings/in-meeting-notification-for-meeting.md#targeted-meeting-notification).
+***January 11, 2023***: [Introducing Targeted in-meeting notification](apps-in-teams-meetings/in-meeting-notification-for-meeting.md#targeted-in-meeting-notification)
 
 :::column-end:::
 :::row-end:::

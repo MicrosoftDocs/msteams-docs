@@ -145,7 +145,7 @@ To enable the targeted in-meeting notification:
 
      Targeted in-meeting notification is enabled.
 
-For more information on `targetedMeetingNotification` API, see [Meeting apps APIs](meeting-apps-apis.md#targeted-meeting-notification-api).
+For more information on `targetedMeetingNotification` API, see [Targeted in-meeting notification API](meeting-apps-apis.md#targeted-in-meeting-notification-api)
 
 ## Code sample
 
