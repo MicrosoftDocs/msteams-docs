@@ -71,6 +71,8 @@ The following image shows the reassignment scenario:
 
 ![People Picker on Mobile](../../assets/images/cards/mobilepp.gif)
 
+:::image type="content" source="../../assets/images/Cards/mobilepp.gif" alt-text="s":::
+
 ---
 
 ## Implement People Picker

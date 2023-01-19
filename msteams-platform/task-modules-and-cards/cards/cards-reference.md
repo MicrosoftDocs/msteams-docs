@@ -21,7 +21,7 @@ To create a hero card, thumbnail card, or Adaptive Card from Developer Portal fo
 1. Enter card name and select **Save**.
 1. Select one of the cards from **Hero Card**, **Thumbnail Card**, or **Adaptive Card**.
 
-   :::image type="content" source="../../assets/images/Cards/Herocarddetailsteams.PNG" alt-text="Screenshot shows an example of the configuration options for a hero card in the Adaptive Card editor in the Developer Portal.":::
+   :::image type="content" source="../../assets/images/Cards/hero-card-details-teams.PNG" alt-text="Screenshot shows an example of the configuration options for a hero card in the Adaptive Card editor in the Developer Portal.":::
 
 1. Select **Save**.
 1. Select **Send me this card**. The card is sent to you as a chat message.
