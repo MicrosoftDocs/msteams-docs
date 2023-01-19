@@ -178,7 +178,7 @@ Microsoft Teams JavaScript library exposes the frameContext in which your meetin
 
 ## App caching
 
-App caching helps apps to launch faster, which gives a better experience for users to return to the app. App caching improves subsequent launch time of the apps that are loaded in the meeting side panel.
+App caching improves subsequent launch time of the apps that are loaded in the meeting side panel. App caching allows to retain some resources and assets in memory that you can use when you relaunch the app.
 
 > [!NOTE]
 >
