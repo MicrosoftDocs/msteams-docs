@@ -8,7 +8,7 @@
 	<category term="new"/>
 	<category term="updated"/>
 	<entry>
-		<title type="html"><![CDATA[Doc update: Create deep links]]></title>
+		<title type="html"><![CDATA[Doc update: Revamped create deep links document into specific sections]]></title>
 		<id>https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/deep-links</id>
 		<link href="https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/deep-links?referrer=whats.new.rssfeed"/>
 		<updated>2022-12-08T11:04:01+05:30</updated>
