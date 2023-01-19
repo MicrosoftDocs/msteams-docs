@@ -2,13 +2,13 @@
 title: Teams JavaScript client library
 author: heath-hamilton
 ms.author: surbhigupta
-description: In this module, learn Microsoft Teams JavaScript client library (TeamsJS), which can help you build app experiences hosted in an <iframe> in Teams, Microsoft 365 (formerly Office), and Outlook.
+description: In this module, learn Microsoft Teams JavaScript client library, which can help you build app experiences hosted in an <iframe> in Teams, Microsoft 365 (formerly Office), and Outlook.
 ms.localizationpriority: high
 ms.topic: conceptual
 ---
 # Teams JavaScript client library
 
-The Microsoft Teams JavaScript client library can help you create hosted experiences in Teams, Microsoft 365 app, and Outlook, where your app content is hosted in an [iFrame](https://developer.mozilla.org/docs/Web/HTML/Element/iframe). The library is helpful for developing apps with the following Teams capabilities:
+The Microsoft Teams JavaScript client library (TeamsJS) can help you create hosted experiences in Teams, Microsoft 365 app, and Outlook, where your app content is hosted in an [iFrame](https://developer.mozilla.org/docs/Web/HTML/Element/iframe). The library is helpful for developing apps with the following Teams capabilities:
 
 * [Tabs](../../tabs/what-are-tabs.md)
 * [Dialogs (Task modules)](../../task-modules-and-cards/what-are-task-modules.md)
@@ -91,7 +91,7 @@ These APIs provide the equivalent of navigating to a deep link (as the now depre
 
 #### Deep links out of your app
 
-For deep links from your app to various areas of its current host, use the strongly typed APIs provided by the TeamsJS library. For example, use the *Calendar* capability to open a scheduling dialog or calendar item from your app.
+For deep links from your app to various areas of its current host, use the strongly typed APIs provided by the Microsoft Teams JavaScript client library. For example, use the *Calendar* capability to open a scheduling dialog or calendar item from your app.
 
 For deep links from your app to other apps running in the same host, use `pages.navigateToApp`.
 
@@ -346,7 +346,7 @@ Additionally, this capability has been split into a main capability (`dialog`) f
 
 ##### *teamsCore* namespace
 
-To generalize the TeamsJS library to run other Microsoft 365 hosts such as Microsoft 365 app and Outlook, Teams-specific functionality (originally in the *global* namespace) has been moved to a *teamsCore* namespace:
+To generalize the Microsoft Teams JavaScript client library to run other Microsoft 365 hosts such as Microsoft 365 app and Outlook, Teams-specific functionality (originally in the *global* namespace) has been moved to a *teamsCore* namespace:
 
 | Original namespace `global (window)` | New namespace `teamsCore`  |
 | - | - |

@@ -15,7 +15,7 @@ Updating your personal app to run in Outlook and Microsoft 365 involves these st
 > [!div class="checklist"]
 >
 > * [Update your app manifest](#update-the-app-manifest).
-> * [Update your TeamsJS library references](#update-teamsjs-references).
+> * [Update your Microsoft Teams JavaScript client library (TeamsJS) references](#update-teamsjs-references).
 > * [Amend your Content Security Policy headers](#configure-content-security-policy-headers).
 > * [Update your Microsoft Azure Active Directory (Azure AD) App Registration for Single Sign-On (SSO)](#update-azure-ad-app-registration-for-sso).
 > * [Sideload your updated app in Teams](#sideload-your-app-in-teams).
@@ -297,8 +297,8 @@ Teams Toolkit (`F5`) debugging isn't yet supported with Microsoft 365 app for An
 | Todo List | Editable todo list with SSO built with React and Azure Functions. Works only in Teams (use this sample app to try the upgrade process described in this tutorial). | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend)  |
 | Todo List (Microsoft 365) | Editable todo list with SSO built with React and Azure Functions. Works in Teams, Outlook, Microsoft 365 app. | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend-M365)|
 | Image Editor (Microsoft 365 app) | Create, edit, open, and save images using Microsoft Graph API. Works in Teams, Outlook, Microsoft 365 app. | [View](https://github.com/OfficeDev/m365-extensibility-image-editor) |
-| Sample Launch Page (Microsoft 365 app) | Demonstrates SSO authentication and TeamsJS library capabilities as available in different hosts. Works in Teams, Outlook, Microsoft 365 app. | [View](https://github.com/OfficeDev/microsoft-teams-library-js/tree/main/apps/sample-app) |
-| Northwind Orders app | Demonstrates how to use Microsoft TeamsJS library v.2 to extend teams application to other Microsoft 365 host apps. Works in Teams, Outlook, Microsoft 365 app. Optimized for mobile.| [View](https://github.com/microsoft/app-camp/tree/main/experimental/ExtendTeamsforM365) |
+| Sample Launch Page (Microsoft 365 app) | Demonstrates SSO authentication and Microsoft Teams JavaScript client library capabilities as available in different hosts. Works in Teams, Outlook, Microsoft 365 app. | [View](https://github.com/OfficeDev/microsoft-teams-library-js/tree/main/apps/sample-app) |
+| Northwind Orders app | Demonstrates how to use Microsoft Teams JavaScript client library v.2 to extend teams application to other Microsoft 365 host apps. Works in Teams, Outlook, Microsoft 365 app. Optimized for mobile.| [View](https://github.com/microsoft/app-camp/tree/main/experimental/ExtendTeamsforM365) |
 
 ## Next step
 

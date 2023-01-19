@@ -17,7 +17,7 @@ Task modules permit you to create modal pop-up experiences in your Teams applica
 
 Task modules are useful for initiating and completing tasks or displaying rich information, such as videos or Power Business Intelligence (BI) dashboards. A pop-up experience is often more natural for users initiating and completing tasks compared to a tab or a conversation-based bot experience.
 
-Task modules build on the foundation of Microsoft Teams tabs. They're essentially a tab inside a pop-up window. They use the same TeamsJS library, so if you have built a tab you're already familiar with creating a task module.
+Task modules build on the foundation of Microsoft Teams tabs. They're essentially a tab inside a pop-up window. They use the same Microsoft Teams JavaScript client library (TeamsJS), so if you have built a tab you're already familiar with creating a task module.
 
 Task modules can be invoked in three ways:
 

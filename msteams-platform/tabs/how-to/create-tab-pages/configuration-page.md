@@ -18,7 +18,7 @@ A configuration page is a special type of [content page](content-page.md). The u
 
 ## Configure a channel or group chat tab
 
-The application must reference the [Microsoft Teams JavaScript client library](/javascript/api/overview/msteams-client) and call `app.initialize()`. The URLs used must be secured HTTPS endpoints and are available from the cloud.
+The application must reference the [Microsoft Teams JavaScript client library (TeamsJS)](/javascript/api/overview/msteams-client) and call `app.initialize()`. The URLs used must be secured HTTPS endpoints and are available from the cloud.
 
 ### Example
 
@@ -183,7 +183,7 @@ For more information on the properties used for tab configuration, see [context 
 
 * Insert URL query string placeholders in your manifest's `configurationURL`.
 
-* Use the [TeamsJS library](/javascript/api/overview/msteams-client) `app.getContext()` method.
+* Use the [Microsoft Teams JavaScript client library](/javascript/api/overview/msteams-client) `app.getContext()` method.
 
 #### Insert placeholders in the `configurationUrl`
 
