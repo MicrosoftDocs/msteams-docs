@@ -53,22 +53,20 @@ The following table provides the user types and lists the features that each use
 | Federated or External | Available | Not available | Not available | Available |
 | Anonymous | Not available | Not available | Not available | Not available |
 
-## Targeted meeting notification
+## Targeted in-meeting notification
 
-Targeted meeting notification allows apps to send notifications to specific participants in a meeting. The notifications are private and are sent only to specific or targeted participants. Targeted meeting notification helps to enhance meeting experience and develop user engagement activities in Teams meetings.
+Targeted in-meeting notification allows apps to send notifications to specific participants in a meeting. The notifications are private and are sent only to specific or targeted participants. Targeted in-meeting notification helps to enhance meeting experience and develop user engagement activities in Teams meetings.
 
 > [!NOTE]
->
-> * Adaptive Cards aren't supported for targeted meeting notification.
-> * Targeted meeting notification is supported for scheduled meetings, instant meeting (Meet now), one-on-one calls, and group calls.
+> Targeted in-meeting notification is supported for scheduled meetings, instant meeting (Meet now), one-on-one calls, and group calls.
 
 In the following image, a meeting notification requesting payment is sent to one of the participants in the meeting. The meeting notification is only visible to the targeted participant:
 
  :::image type="content" source="../assets/images/apps-in-meetings/reminder-sent.png" alt-text="Screenshot shows an example of a meeting notification sent to a targeted participant requesting for a payment. ":::
 
-### Enable app manifest settings for targeted meeting notification
+### Enable app manifest settings for targeted in-meeting notification
 
-To send targeted meeting notifications, you must configure the `authorization` property and the `name` and `type` properties under the `resourceSpecific` field in the [app manifest](../resources/schema/manifest-schema.md#authorization) as follows:
+To send targeted in-meeting notifications, you must configure the `authorization` property and the `name` and `type` properties under the `resourceSpecific` field in the [app manifest](../resources/schema/manifest-schema.md#authorization) as follows:
 
 ```json
 "authorization": {
@@ -84,16 +82,19 @@ To send targeted meeting notifications, you must configure the `authorization` p
   }
 ```
 
-### Enable targeted meeting notification
+### Enable targeted in-meeting notification
 
 > [!NOTE]
-> You can send a targeted meeting notification to 50 participants in a meeting. If you want to send a targeted meeting notification to more than 50 participants, you must call the `targetedMeetingNotification` API again.
+> You can send a targeted in-meeting notification to 50 participants in a meeting. If you want to send a targeted in-meeting notification to more than 50 participants, you must call the `targetedMeetingNotification` API again.
 
-Targeted meeting notification can be triggered by user action.
+Targeted in-meeting notification can be triggered by user action.
 
-To enable the targeted meeting notification:
+To enable the targeted in-meeting notification:
 
 1. Retrieve the user IDs of the participants through [Get participant API](meeting-apps-apis.md#get-participant-api) and [Get members API](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile).
+
+   > [!NOTE]
+   > Targeted in-meeting notification doesn't support Azure Active Directory (Azure AD) ID.
 
    **The following is an example of a user ID**:
     `id=29:1I12M_iy2wTa97T6LbjTh4rJCWrtw2PZ3lxpD3yFv8j2YPnweY2lpCPPAn3RIOPP7rghfHauUz48I1t7ANhj4CA`
@@ -130,7 +131,7 @@ To enable the targeted meeting notification:
           } 
         ] 
       },
-      "channelData": { // optional if a developer wants to support user attributes
+      "channelData": { // optional if a developer doesn't want to support user attributes.
         "onBehalfOf": [ 
           { 
             "itemid": 0, 
@@ -142,7 +143,7 @@ To enable the targeted meeting notification:
     }
     ```
 
-     Targeted meeting notification is enabled.
+     Targeted in-meeting notification is enabled.
 
 For more information on `targetedMeetingNotification` API, see [Meeting apps APIs](meeting-apps-apis.md#targeted-meeting-notification-api).
 
