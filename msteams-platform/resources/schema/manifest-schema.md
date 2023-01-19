@@ -387,7 +387,7 @@ The name of your app experience, displayed to users in the Teams experience. For
 |Name| Maximum size | Required | Description|
 |---|---|---|---|
 |`short`|30 characters|✔️|The short display name for the app.|
-|`full`|100 characters||The full name of the app, used if the full app name exceeds 30 characters.|
+|`full`|100 characters|✔️|The full name of the app, used if the full app name exceeds 30 characters.|
 
 ## description
 
