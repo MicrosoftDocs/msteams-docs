@@ -14,7 +14,7 @@ The resource-specific consent (RSC) permissions model, originally developed for 
 
 > [!NOTE]
 >
-> The ability for bots to receive all messages in chats using `ChatMessage.Read.Chat` is available only in [public developer preview for Teams](../../../resources/dev-preview/developer-preview-intro.md).
+> The ability for bots to receive all messages in chats using `ChatMessage.Read.Chat` is available only in [public developer preview for Teams](../../../resources/dev-preview/developer-preview-intro.md) and will only be enabled after a new installation.
 
 The `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permissions are being extended to bots. With user consent and app installation, these permissions:
 
@@ -153,7 +153,7 @@ The following steps guide you to sideload and validate bot that receives all cha
 
 # [Chat messages](#tab/chat)
 
-The following steps guide you to sideload and validate bot that receives all chat messages without being @mentioned in a chat:
+The following steps guide you to sideload and validate bot that receives all chat messages in [public developer preview]((../../../resources/dev-preview/developer-preview-intro.md)) without being @mentioned in a chat:
 
 1. Select or create a group chat.
 1. Select the ellipses &#x25CF;&#x25CF;&#x25CF; from the group chat. The dropdown menu appears.
