@@ -17,7 +17,6 @@ To set up your development environment:
 > * [Get Microsoft 365 Developer (Sandbox) Tenant and enable sideloading](#prepare-a-developer-tenant-for-testing)
 > * [Enroll your Microsoft 365 tenant in Microsoft 365 Targeted Releases*](#enroll-your-developer-tenant-for-microsoft-365-targeted-releases)
 > * [Install Beta Channel builds of Microsoft 365 Apps in your test environment](#install-microsoft-365-apps-in-your-test-environment)
-> * [Switch to the Developer Preview version of Teams](#switch-to-the-developer-preview-version-of-teams)
 > * [*Optional*] [Install Teams Toolkit extension for Microsoft Visual Studio Code](#install-visual-studio-code-and-teams-toolkit-extension)
 
 ## Prepare a Developer Tenant for testing
@@ -110,16 +109,6 @@ To install the latest Microsoft 365 app beta, build to your physical Android dev
 1. Launch the Microsoft 365 app and sign in with your test tenant credentials.
 1. Open your profile **(Me) > Settings** and scroll to the bottom of the menu.
 1. Ensure you use Microsoft 365 app version 16.0.15726.20000 or higher for Android.
-
-## Switch to the Developer Preview version of Teams
-
-Ensure that you switch to the [Public Developer Preview](../resources/dev-preview/developer-preview-intro.md) from your Microsoft Teams client.
-
-1. Sign in to Teams with your sandbox tenant credentials.
-1. From the ellipsis (**...**) menu next to your user profile, select **About** > **Developer preview**. A dialog appears, select **Switch to developer preview**.
-1. After the Teams app restarts, go to the ellipsis (**...**) menu next to your user profile and check if **Developer Preview** is selected.
-
-    :::image type="content" source="images/teams-dev-preview.png" alt-text="The screenshot is an example that shows the public developer preview option in Teams.":::
 
 ## Install Visual Studio Code and Teams Toolkit extension
 

@@ -25,6 +25,9 @@ Using an app that contains developer preview features may cause clients that hav
 
 ### On a desktop or web client
 
+> [!NOTE]
+> If your tenant is enrolled for *Microsoft 365 Targeted Releases*, then you will not see the option to switch to developer preview.
+
 To enable the public developer preview on a desktop or web client:
 
 1. Enable custom app uploading or sideloading for your developer tenant. For more information, see [Enable custom Teams apps](../../concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading).
