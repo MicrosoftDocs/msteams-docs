@@ -389,6 +389,10 @@ Following are the customizable methods to override:
 | **columnWidths()** | Customize how many columns the dashboard has at most and the width of each column. | YES |
 | **dashboardLayout()** | Define the widgets layout in dashboard. | YES |
 
+**Embed Power BI to Dashboard**
+
+For how to embed Power BI to the Dashboard, you can refer to [powerbi-client-react](/javascript/api/overview/powerbi/powerbi-client-react).
+
 ## Widget
 
 Widgets display configurable information and charts on dashboards. They appear on the widget board where you can pin, unpin, arrange, resize, and customize widgets to reflect your interests. Your widget board is optimized to show relevant widgets and personalized content based on your usage.
@@ -829,6 +833,145 @@ For more information, see:
 
 * [sample](https://github.com/OfficeDev/TeamsFx-Samples/blob/dev/hello-world-tab-with-backend/tabs/src/components/sample/AzureFunctions.tsx)
 * [Azure functions](/azure/azure-functions/functions-reference?tabs=blob)
+
+## How to include a data loader
+
+If you want to include a data loader to your widget before the widget is loaded, you can add a property to the state of the widget to indicate that the data loader is loading. This property can be used to show a loading indicator to the user.
+
+The following steps show how to add a property to the state of the ListWidget and how to use it to show a loading spinner while the data is loading.
+
+1. **Define a state type**
+
+Define a state type including a property named loading that indicates whether the data is loading.
+
+```typescript
+interface ListWidgetState {
+  data: ListModel[];
+  loading?: boolean;
+}
+```
+
+1. **Add a data loader**
+
+Modify the `bodyContent` method to show a loading spinner if data is loading.
+
+```typescript
+bodyContent(): JSX.Element | undefined {
+  return (
+    <>
+      {this.state.loading !== false ? (
+        <div style={{ display: "grid", justifyContent: "center", height: "100%" }}>
+          <Spinner label="Loading..." labelPosition="below" />
+        </div>
+      ) : (
+        <div style={bodyContentStyle()}>
+          ...
+        </div>
+      )}
+    </>
+  );
+}
+```
+
+1. **Hide the footer button if data is loading**
+
+```typescript
+footerContent(): JSX.Element | undefined {
+  if (this.state.loading === false) {
+    return (
+      <Button
+        ...
+      </Button>
+    );
+  }
+}
+```
+
+1. Update the state reference
+
+Update the state reference in the widget file to use the new state type and update the state in the `getData` method to set the `loading` property to `false` after the data is loaded.
+
+Now, the loading spinner is shown while the data is loading. When the data is loaded, the loading spinner is hidden, and the list data and footer button are shown.
+
+GIF to be added
+
+## How to handle empty state
+
+You can display a specific content in your widget when the data is empty. To do so, you need to modify the bodyContent method in your widget file to adopt different states of the data. The following example shows how to display an empty image when the data of ListWidget is empty.
+
+```typescript
+bodyContent(): JSX.Element | undefined {
+    let hasData = this.state.data && this.state.data.length > 0;
+    return (
+      <div style={bodyContentStyle()}>
+        {hasData ? (
+          <>
+            {this.state.data?.map((t: ListModel) => {
+              ...
+            })}
+          </>
+        ) : (
+          <div
+            style={{
+              display: "grid",
+              gap: "1rem",
+              justifyContent: "center",
+              alignContent: "center",
+            }}
+          >
+            <Image src="empty-default.svg" height="150px" />
+            <Text align="center">No data</Text>
+          </div>
+        )}
+      </div>
+    );
+  }
+```
+
+You can use a similar approach to remove the footer content of your widget when the data is empty.
+
+```typescript
+footerContent(): JSX.Element | undefined {
+    let hasData = this.state.data && this.state.data.length > 0;
+    if (hasData) {
+      return (
+        <Button
+          ...
+        </Button>
+      );
+    }
+  }
+```
+
+Your list widget will look like this when the data is empty:
+
+:::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/no-data.png" alt-text="Screenshot showing no data in the list.":::
+
+## How to refresh data as scheduled
+
+The following example shows how to display real-time data in a widget. The widget displays the current time and updates every second.
+
+```typescript
+import { Widget } from "../lib/Widget";
+
+interface IRefreshWidgetState {
+  data: string;
+}
+
+export class RefreshWidget extends Widget<IRefreshWidgetState> {
+  bodyContent(): JSX.Element | undefined {
+    return <>{this.state.data}</>;
+  }
+
+  async componentDidMount() {
+    setInterval(() => {
+      this.setState({ data: new Date().toLocaleTimeString() });
+    }, 1000);
+  }
+}
+```
+
+You can modify `setInterval` method to call your own function to refresh data, like this: `setInterval(() => yourGetDataFunction(), 1000)`.
 
 ## Step-by-step guide
 
