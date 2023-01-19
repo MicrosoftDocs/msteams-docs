@@ -838,7 +838,7 @@ For more information, see:
 
 If you want to include a data loader to your widget before the widget is loaded, you can add a property to the state of the widget to indicate that the data loader is loading. This property can be used to show a loading indicator to the user.
 
-The following steps show how to add a property to the state of the ListWidget and how to use it to show a loading spinner while the data is loading.
+The following steps show how to add a property to the state of `ListWidget` and how to use it to show a loading spinner while the data is loading.
 
 1. **Define a state type**
 
