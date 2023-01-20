@@ -60,7 +60,7 @@ The following table provides the user types and lists the features that each use
 
 | User type | Scheduled meeting or Instant calendar meeting | One-on-one call | Group call | Scheduled channel meeting |
 | :-- | :-- | :-- | :-- | :-- |
-| In-tenant user | Available | Available |  Available | Available |
+| In-tenant | Available | Available |  Available | Available |
 | Guest | Available | Available |  Available | Available |
 | Federated or External | Available | Not available | Not available | Available |
 | Anonymous | Not available | Not available | Not available | Not available |
