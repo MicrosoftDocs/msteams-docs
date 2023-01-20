@@ -30,9 +30,9 @@ The `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permissions are 
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
 {
         // Ignore the message if bot was not mentioned.
-        if (turnContext.Activity.GetMentions().Any(mention => mention.Mentioned.Id == turnContext.Activity.Recipient.Id))
+        if (!turnContext.Activity.GetMentions().Any(mention => mention.Mentioned.Id == turnContext.Activity.Recipient.Id))
         {
-        return;
+            return;
         }
 
         // Sends an activity to the sender of the incoming activity.
