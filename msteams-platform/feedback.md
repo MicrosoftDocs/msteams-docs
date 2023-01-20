@@ -64,4 +64,4 @@ Suggest a feature or vote up existing feature requests.
 
 ## See also
 
-[Microsoft Teams JavaScript client library reference](/javascript/api/overview/msteams-client)
+[TeamsJS reference](/javascript/api/overview/msteams-client)
