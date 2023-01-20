@@ -360,7 +360,7 @@ Following are the optional properties:
 | `content.value.width` | Requested width of the notification. |
 | `content.value.height` | Requested height of the notification. |
 | `content.value.url` | URL to be rendered in the notification. Make sure the URL is part of `validDomains` in app manifest. If empty string or no URL is provided, nothing will be rendered on a meeting notification. |
-| `ChannelData.OnBehalfOf` | This is to support [User attributes](../messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md#respond-to-the-task-module-submit-action). |
+| `ChannelData.OnBehalfOf` | This is to support [User attributes](../messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md#user-attribution-for-bots-messages). |
 | `onBehalfOf.displayName` | Name of the `person`. Used as fallback in case the name resolution is unavailable. |
 
 ### Response code
