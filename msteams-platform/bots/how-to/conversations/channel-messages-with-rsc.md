@@ -12,14 +12,34 @@ The resource-specific consent (RSC) permissions model, originally developed for 
 
 ## Enable bots to receive all channel or chat messages
 
-> [!NOTE]
->
-> The ability for bots to receive all messages in chats using `ChatMessage.Read.Chat` is available only in [public developer preview for Teams](../../../resources/dev-preview/developer-preview-intro.md) and will only be enabled after a new installation into a chat.
-
 The `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permissions are being extended to bots. With user consent and app installation, these permissions:
 
 * Allow a specified graph application to get all messages in channels and chats, respectively.
 * Enable a bot defined in the app manifest to receive all conversations messages without being @mentioned in relevant contexts where the permissions apply.
+
+> [!NOTE]
+>
+> * The ability for bots to receive all messages in chats using `ChatMessage.Read.Chat` is available only in [public developer preview for Teams](../../../resources/dev-preview/developer-preview-intro.md) and will only be enabled after a new installation into a chat. 
+> * Once enabled, the bot will continue to receive all messages even when the client switches out of public developer preview. 
+> * If you have an app that is currently using the `ChatMessage.Read.Chat` RSC permission for Graph scenarios, then you should test the app following the guide below and modify the app if needed.
+
+```csharp
+
+// When rsc is enabled the method will be called even when bot is addressed without being @mentioned.
+// This code snippet will allow the bot to ignore all messages that do not @mention the bot.
+protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
+{
+        // Ignore the message if bot was not mentioned.
+        if (turnContext.Activity.GetMentions().Any(mention => mention.Mentioned.Id ==       turnContext.Activity.Recipient.Id))
+        {
+        return;
+        }
+
+        // Sends an activity to the sender of the incoming activity.
+        await turnContext.SendActivityAsync(MessageFactory.Text("Using RSC the bot can receive messages across channels or chats in team without being @mentioned."));
+}
+
+```
 
 > [!IMPORTANT]
 >
@@ -155,6 +175,7 @@ The following steps guide you to sideload and validate bot that receives all cha
 
 The following steps guide you to sideload and validate bot that receives all chat messages in [public developer preview]((../../../resources/dev-preview/developer-preview-intro.md)) without being @mentioned in a chat:
 
+1. Switch the client to public developer preview (Select About > Developer preview).
 1. Select or create a group chat.
 1. Select the ellipses &#x25CF;&#x25CF;&#x25CF; from the group chat. The dropdown menu appears.
 1. Select **Manage apps** from the dropdown menu.
@@ -199,6 +220,7 @@ The following code provides an example of the RSC permissions:
 // When rsc is enabled the method will be called even when bot is addressed without being @mentioned.
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
 {
+
         // Sends an activity to the sender of the incoming activity.
          await turnContext.SendActivityAsync(MessageFactory.Text("Using RSC the bot can receive messages across channels or chats in team without being @mentioned."));
 }
