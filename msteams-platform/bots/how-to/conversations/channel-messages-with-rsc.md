@@ -30,7 +30,7 @@ The `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permissions are 
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
 {
         // Ignore the message if bot was not mentioned.
-        if (turnContext.Activity.GetMentions().Any(mention => mention.Mentioned.Id ==       turnContext.Activity.Recipient.Id))
+        if (turnContext.Activity.GetMentions().Any(mention => mention.Mentioned.Id == turnContext.Activity.Recipient.Id))
         {
         return;
         }
@@ -220,7 +220,6 @@ The following code provides an example of the RSC permissions:
 // When rsc is enabled the method will be called even when bot is addressed without being @mentioned.
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
 {
-
         // Sends an activity to the sender of the incoming activity.
          await turnContext.SendActivityAsync(MessageFactory.Text("Using RSC the bot can receive messages across channels or chats in team without being @mentioned."));
 }
