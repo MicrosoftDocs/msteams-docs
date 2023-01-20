@@ -1,6 +1,6 @@
 ---
 title: Tab app navigation
-description: Learn about the options for navigation within a tab app using the TeamsJS.
+description: Learn about the options for navigation within a tab app using the Microsoft Teams JavaScript client library (TeamsJS).
 ms.date: 10/26/2022
 ms.topic: conceptual
 ms.custom: m365apps
