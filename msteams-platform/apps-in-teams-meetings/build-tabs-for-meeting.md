@@ -49,7 +49,17 @@ The following image shows a tab added to the meeting details page in the Teams m
 
 1. In the app gallery, select the app that you want to add and follow the steps as required. The tab is added to the meeting chat.
 
-   :::image type="content" source="../assets/images/apps-in-meetings/meeting-chat-view.png" alt-text="The screenshot shows the meeting chat view in the Teams meeting.":::
+# [Meeting chat view desktop](#tab/meeting-chat-view-desktop)
+
+   The following image shows an app added to the meeting chat in the Teams desktop client:
+
+   :::image type="content" source="../assets/images/apps-in-meetings/meeting-chat-view.png" alt-text="The screenshot shows the meeting chat view in a meeting chat in Teams desktop.":::
+
+# [Meeting chat view mobile](#tab/meeting-chat-view-mobile)
+
+   The following image shows an app added to the meeting chat in the Teams mobile client:
+
+  :::image type="content" source="../assets/images/apps-in-meetings/meeting-chat-view-mobile.png" alt-text="The screenshot shows the meeting chat view in a meeting chat in Teams mobile.":::
 
 ### Meeting side panel view
 
@@ -89,13 +99,13 @@ However, the tab instances in a channel meeting are separate from the tabs in th
 
 # [Channel meeting desktop](#tab/channel-meeting-desktop)
 
-   The following image shows a tab added to a channel meeting in the Teams desktop client:
+   The following image shows apps in a channel in the Teams desktop client:
 
    :::image type="content" source="../assets/images/apps-in-meetings/apps-in-channel-meeting-desktop.png" alt-text="This screenshot shows a tab added to a channel meeting in Teams desktop.":::
 
 # [Channel meeting mobile](#tab/channel-meeting-mobile)
 
-   The following image shows a tab added to a channel meeting in the Teams mobile client:
+   The following image shows apps in a channel in the Teams mobile client:
 
    :::image type="content" source="../assets/images/apps-in-meetings/apps-in-channel-meeting-mobile.png" alt-text="This screenshot shows a tab added to a channel meeting in Teams mobile.":::
 

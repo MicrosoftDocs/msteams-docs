@@ -15,15 +15,15 @@ An external resource URL is used to display in-meeting notification. You can use
 
 # [Desktop](#tab/desktop)
 
-  The following image shows an in-meeting notification sent during a meeting in the Teams desktop client:
+  The following image shows an in-meeting notification in the Teams desktop client:
 
-   :::image type="content" source="../assets/images/apps-in-meetings/in-meeting-dialogbox.png" alt-text="The screenshot is an example that shows how you can use an in-meeting dialog on Teams desktop.":::
+   :::image type="content" source="../assets/images/apps-in-meetings/in-meeting-dialogbox.png" alt-text="Screenshot shows an in-meeting notification on Teams desktop.":::
 
 # [Mobile](#tab/mobile)
 
-  The following image shows an in-meeting notification sent during a meeting in the Teams mobile client:
+  The following image shows an in-meeting notification in the Teams mobile client:
 
-   :::image type="content" source="../assets/images/apps-in-meetings/in-meeting-notification-mobile.png" alt-text="The screenshot is an example that shows how you can use an in-meeting dialog on Teams mobile.":::
+   :::image type="content" source="../assets/images/apps-in-meetings/in-meeting-notification-mobile.png" alt-text="Screenshot shows an in-meeting notification in on Teams mobile.":::
 
 ---
 
