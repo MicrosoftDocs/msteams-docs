@@ -20,7 +20,7 @@ These controls give you the power to simplify your users workflow collaboration 
 * Tasks
 
 > [!NOTE]
-> Currently Collaboration controls are available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
+> Collaboration controls are available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
 
 Following are some of the key capabilities of Collaboration controls:
 
