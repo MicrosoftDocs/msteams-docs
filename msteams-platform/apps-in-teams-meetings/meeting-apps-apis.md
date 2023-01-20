@@ -303,7 +303,7 @@ Get supported user ID format for targeted in-meeting notification:
 Following is an example of request payload:
 
 ```http
-GET POST /v1/meetings/{meetingId}/notification
+POST /v1/meetings/{meetingId}/notification
 ```
 
 ```json
@@ -348,20 +348,15 @@ GET POST /v1/meetings/{meetingId}/notification
 | `recipients` | List of user IDs. Get user IDs for meeting participants through [Get participant API](#get-participant-api). Get the entire list of chat roster using [Get members API](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile). Empty or null recipients list will return 400.|
 | `surface` | `meetingStage` keyword. |
 | `contentType` | `task` keyword. |
-| `onBehalfOf.itemid` | Describes identification of the item. Its value must be 0. **Optional**. |
-| `onBehalfOf.mentionType` | `person` keyword. Describes the mention of a person. **Optional**.|
-| `onBehalfOf.mri` | User MRI shown as sender. **Optional**. |
-
-Following are the optional properties:
-
-| Property name | Description |
-|---|---|
-| `content.value.title` | Title of the notification. |
-| `content.value.width` | Requested width of the notification. |
-| `content.value.height` | Requested height of the notification. |
-| `content.value.url` | URL to be rendered in the notification. Make sure the URL is part of `validDomains` in app manifest. If empty string or no URL is provided, nothing will be rendered on a meeting notification. |
-| `ChannelData.OnBehalfOf` | This is to support [User attributes](../messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md#user-attribution-for-bots-messages). |
-| `onBehalfOf.displayName` | Name of the `person`. Used as fallback in case the name resolution is unavailable. |
+| `content.value.height` | **Optional**; requested height of the notification. |
+|`content.value.width` | **Optional**; requested width of the notification. |
+| `content.value.title` | **Optional**; title of the notification. |
+| `content.value.url` | **Optional**; URL to be rendered in the notification. Make sure the URL is part of `validDomains` in app manifest. If empty string or no URL is provided, nothing will be rendered on a meeting notification. |
+| `ChannelData.OnBehalfOf` | **Optional**; this is to support [User attributes](../messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md#user-attribution-for-bots-messages). |
+| `onBehalfOf.itemid` | Describes identification of the item. Its value must be 0. |
+| `onBehalfOf.mentionType` |`person` keyword. Describes the mention of a person. |
+| `onBehalfOf.mri` | User MRI shown as sender. |
+| `onBehalfOf.displayName` | **Optional**; name of the `person`. Used as fallback in case the name resolution is unavailable. |
 
 ### Response code
 
