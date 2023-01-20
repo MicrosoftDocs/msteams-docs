@@ -58,9 +58,9 @@ The following table includes the query parameters:
 
 |Value|Type|Required|Description|
 |---|---|----|---|
-|**meetingId**| String | Yes | The meeting identifier is available through Bot Invoke and Microsoft Teams JavaScript client library..|
-|**participantId**| String | Yes | The participant ID is the user ID. It's available in Tab SSO, Bot Invoke, and Microsoft Teams JavaScript client library. It's recommended to get a participant ID from the Tab SSO. |
-|**tenantId**| String | Yes | The tenant ID is required for the tenant users. It's available in Tab SSO, Bot Invoke, and Microsoft Teams JavaScript client library. It's recommended to get a tenant ID from the Tab SSO. |
+|**meetingId**| String | Yes | The meeting identifier is available through Bot Invoke and TeamsJS..|
+|**participantId**| String | Yes | The participant ID is the user ID. It's available in Tab SSO, Bot Invoke, and TeamsJS. It's recommended to get a participant ID from the Tab SSO. |
+|**tenantId**| String | Yes | The tenant ID is required for the tenant users. It's available in Tab SSO, Bot Invoke, and TeamsJS. It's recommended to get a tenant ID from the Tab SSO. |
 
 ### Example
 
@@ -180,7 +180,7 @@ All users in a meeting receive the notifications sent through in-meeting notific
 >
 > * When an in-meeting notification is invoked, the content is presented as a chat message.
 > * Currently, sending targeted notifications and support for webapp are not supported.
-> * You must invoke the [submitTask()](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-task-module) function to dismiss automatically after a user takes an action in the web view. This is a requirement for app submission. For more information, see Microsoft Teams JavaScript client library [task module](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true).
+> * You must invoke the [submitTask()](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-task-module) function to dismiss automatically after a user takes an action in the web view. This is a requirement for app submission. For more information, see TeamsJS [task module](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true).
 > * If you want your app to support anonymous users, initial invoke request payload must rely on `from.id` request metadata in `from` object, not `from.aadObjectId` request metadata. `from.id` is the user ID and `from.aadObjectId` is the Microsoft Azure Active Directory (Azure AD) ID of the user. For more information, see [using task modules in tabs](../task-modules-and-cards/task-modules/task-modules-tabs.md) and [create and send the task module](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
 
 ### Query parameter
@@ -385,7 +385,7 @@ The following table lists the query parameter:
 
 |Value|Type|Required|Description|
 |---|---|----|---|
-|**meetingId**| String | Yes | The meeting identifier is available through Bot Invoke and Microsoft Teams JavaScript client library.|
+|**meetingId**| String | Yes | The meeting identifier is available through Bot Invoke and TeamsJS.|
 
 ### Example
 
@@ -586,7 +586,7 @@ The CART URL includes the following query parameters:
 
 |Value|Type|Required|Description|
 |---|---|----|----|
-|**meetingId**| String | Yes |The meeting identifier is available through Bot Invoke and Microsoft Teams JavaScript client library. <br/>For example, meetingid=%7b%22tId%22%3a%2272f234bf-86f1-41af-91ab-2d7cd0321b47%22%2c%22oId%22%3a%22e071f268-4241-47f8-8cf3-fc6b84437f23%22%2c%22thId%22%3a%2219%3ameeting_NzJiMjNkMGQtYzk3NS00ZDI1LWJjN2QtMDgyODVhZmI3NzJj%40thread.v2%22%2c%22mId%22%3a%220%22%7d|
+|**meetingId**| String | Yes |The meeting identifier is available through Bot Invoke and TeamsJS. <br/>For example, meetingid=%7b%22tId%22%3a%2272f234bf-86f1-41af-91ab-2d7cd0321b47%22%2c%22oId%22%3a%22e071f268-4241-47f8-8cf3-fc6b84437f23%22%2c%22thId%22%3a%2219%3ameeting_NzJiMjNkMGQtYzk3NS00ZDI1LWJjN2QtMDgyODVhZmI3NzJj%40thread.v2%22%2c%22mId%22%3a%220%22%7d|
 |**token**| String | Yes |Authorization token.<br/> For example, token=04751eac |
 
 #### Example
@@ -863,7 +863,7 @@ The following code provides an example of meeting end event payload:
 
 ## Get incoming audio state
 
-The `getIncomingClientAudioState` API allows an app to get the incoming audio state setting for the meeting user. The API is available through the Microsoft Teams JavaScript client library.
+The `getIncomingClientAudioState` API allows an app to get the incoming audio state setting for the meeting user. The API is available through the TeamsJS.
 
 > [!NOTE]
 >
@@ -920,7 +920,7 @@ The following table provides the response codes:
 
 ## Toggle incoming audio
 
-The `toggleIncomingClientAudio` API allows an app to toggle the incoming audio state setting for the meeting user from mute to unmute or vice-versa. The API is available through the Microsoft Teams JavaScript client library.
+The `toggleIncomingClientAudio` API allows an app to toggle the incoming audio state setting for the meeting user from mute to unmute or vice-versa. The API is available through the TeamsJS.
 
 > [!NOTE]
 >
