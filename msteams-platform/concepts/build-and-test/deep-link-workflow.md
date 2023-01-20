@@ -64,7 +64,7 @@ The query parameters are:
 
 To use this deep link with your bot, you can specify the deep link as the URL target in your card's button or as a tap action through the `openUrl` action type.
 
-Applications can also use Microsoft Teams JavaScript client library 2.0 to open the meeting scheduling dialog without having to manually prepare the link. Refer to the following code sample, provided a note:
+Applications can also use TeamsJS 2.0 to open the meeting scheduling dialog without having to manually prepare the link. Refer to the following code sample, provided a note:
 
 # [TeamsJS v2](#tab/teamsjs-v2)
 
@@ -122,8 +122,8 @@ Following are the query parameters:
 * `withVideo`: This is an optional parameter, which you can use to make a video call. Setting this parameter only turns on the caller's camera. The receiver of the call has a choice to answer through an audio or an audio and video call through the Teams call notification window.
 * `Source`: This is an optional parameter, which informs about the source of the deep link.
 
-Applications can also use Microsoft Teams JavaScript client library 2.0 to start calls without having to manually prepare these deep links.
-The following code demonstrates using the Microsoft Teams JavaScript client library to start a call:
+Applications can also use TeamsJS 2.0 to start calls without having to manually prepare these deep links.
+The following code demonstrates using the TeamsJS to start a call:
 
 ```javascript
 if(call.isSupported()) {

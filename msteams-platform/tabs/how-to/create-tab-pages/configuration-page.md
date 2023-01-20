@@ -183,7 +183,7 @@ For more information on the properties used for tab configuration, see [context 
 
 * Insert URL query string placeholders in your manifest's `configurationURL`.
 
-* Use the [Microsoft Teams JavaScript client library](/javascript/api/overview/msteams-client) `app.getContext()` method.
+* Use the [TeamsJS](/javascript/api/overview/msteams-client) `app.getContext()` method.
 
 #### Insert placeholders in the `configurationUrl`
 
