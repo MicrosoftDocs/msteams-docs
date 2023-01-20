@@ -61,6 +61,8 @@ The following image shows a tab added to the meeting details page in the Teams m
 
   :::image type="content" source="../assets/images/apps-in-meetings/meeting-chat-view-mobile.png" alt-text="The screenshot shows the meeting chat view in a meeting chat in Teams mobile.":::
 
+---
+
 ### Meeting side panel view
 
 1. During a meeting, you can select :::image type="icon" source="../assets/icons/add-icon.png" Border = "false"::: **Apps** from Teams meeting window to add apps to the meeting.
