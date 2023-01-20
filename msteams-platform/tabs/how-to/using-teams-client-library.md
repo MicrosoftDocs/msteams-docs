@@ -2,7 +2,7 @@
 title: Teams JavaScript client library
 author: heath-hamilton
 ms.author: surbhigupta
-description: In this module, learn Microsoft Teams JavaScript client library, which can help you build app experiences hosted in an <iframe> in Teams, Microsoft 365 (formerly Office), and Outlook.
+description: In this module, learn TeamsJS, which can help you build app experiences hosted in an <iframe> in Teams, Microsoft 365 (formerly Office), and Outlook.
 ms.localizationpriority: high
 ms.topic: conceptual
 ---
@@ -91,7 +91,7 @@ These APIs provide the equivalent of navigating to a deep link (as the now depre
 
 #### Deep links out of your app
 
-For deep links from your app to various areas of its current host, use the strongly typed APIs provided by the Microsoft Teams JavaScript client library. For example, use the *Calendar* capability to open a scheduling dialog or calendar item from your app.
+For deep links from your app to various areas of its current host, use the strongly typed APIs provided by the TeamsJS. For example, use the *Calendar* capability to open a scheduling dialog or calendar item from your app.
 
 For deep links from your app to other apps running in the same host, use `pages.navigateToApp`.
 
@@ -346,7 +346,7 @@ Additionally, this capability has been split into a main capability (`dialog`) f
 
 ##### *teamsCore* namespace
 
-To generalize the Microsoft Teams JavaScript client library to run other Microsoft 365 hosts such as Microsoft 365 app and Outlook, Teams-specific functionality (originally in the *global* namespace) has been moved to a *teamsCore* namespace:
+To generalize the TeamsJS to run other Microsoft 365 hosts such as Microsoft 365 app and Outlook, Teams-specific functionality (originally in the *global* namespace) has been moved to a *teamsCore* namespace:
 
 | Original namespace `global (window)` | New namespace `teamsCore`  |
 | - | - |
@@ -467,5 +467,5 @@ If you used Teams Toolkit to create your personal app, you can also use it to va
 
 ## Next steps
 
-* Use the [TeamsJS reference](/javascript/api/overview/msteams-client) to get started with the Microsoft Teams JavaScript client library.
+* Use the [TeamsJS reference](/javascript/api/overview/msteams-client) to get started with the TeamsJS.
 * Review the [changelog](https://github.com/OfficeDev/microsoft-teams-library-js/blob/main/packages/teams-js/CHANGELOG.md) for  latest updates to TeamsJS.
