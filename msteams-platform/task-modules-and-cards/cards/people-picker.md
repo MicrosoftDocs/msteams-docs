@@ -45,7 +45,7 @@ To reassign any task:
 
 The following image shows the reassignment scenario:
 
-![People Picker on Desktop](../../assets/images/cards/desktoppp.gif)
+:::image type="content" source="../../assets/images/Cards/desktoppp.gif" alt-text="Graphical representation shows the People Picker in Adaptive Card on desktop.":::
 
 # [Mobile](#tab/mobile)
 
@@ -69,9 +69,7 @@ To reassign any task:
 
 The following image shows the reassignment scenario:
 
-![People Picker on Mobile](../../assets/images/cards/mobilepp.gif)
-
-:::image type="content" source="../../assets/images/Cards/mobilepp.gif" alt-text="s":::
+:::image type="content" source="../../assets/images/Cards/mobilepp.gif" alt-text="Graphical representation shows the People Picker in Adaptive Card on mobile.":::
 
 ---
 
@@ -149,7 +147,7 @@ The code example for creating People Picker with organization search is as follo
 
 The following image illustrates People Picker in Adaptive Cards with organization search:
 
-:::image type="content" source="../../assets/images/Cards/peoplepicker-org-search.png" alt-text="People picker org search":::
+:::image type="content" source="../../assets/images/Cards/peoplepicker-org-search.png" alt-text="Screenshot shows the People Picker Org search.":::
 
 To enable search within a list of conversation members, use the appropriate dataset defined in the [dataset](#dataset) table. `isMultiSelect` property is used to enable the selection of multiple users  in the control. It's set to false by default and this setting allows you to select single user only.
 
@@ -297,7 +295,7 @@ The following example describes static choices:
 
 The following image illustrates People Picker in Adaptive Cards with static choices in organization search:
 
-:::image type="content" source="../../assets/images/Cards/peoplepicker-static-choice.png" alt-text="people-picker-static-choice":::
+:::image type="content" source="../../assets/images/Cards/peoplepicker-static-choice.png" alt-text="Screenshot shows the People Picker static choice in Org search.":::
 
 You can implement People Picker for efficient task management in different scenarios.  
 
