@@ -17,7 +17,7 @@ The meeting extensibility provides APIs to enhance meeting experience. You can p
 * Select required APIs to improve the meeting experience.
 
 > [!NOTE]
-> Use the [TeamsJS](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) library (*Version*: 1.10 and later) for SSO to work in meeting side panel.
+> Use the [Microsoft Teams JavaScript client library (TeamsJS)](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) (*Version*: 1.10 and later) for SSO to work in meeting side panel.
 
 The following table provides a list of APIs available across the Microsoft Teams JavaScript library and Microsoft Bot Framework SDKs:
 
@@ -52,7 +52,7 @@ The `GetParticipant` API must have a bot registration and ID to generate auth to
 > [!TIP]
 > Get participant IDs and tenant IDs from the [tab SSO authentication](../tabs/how-to/authentication/tab-sso-overview.md).
 
-The `Meeting` API must have `meetingId`, `participantId`, and `tenantId` as URL parameters. The parameters are available as part of the Microsoft Teams JavaScript client library (TeamsJS) and bot activity.
+The `Meeting` API must have `meetingId`, `participantId`, and `tenantId` as URL parameters. The parameters are available as part of the TeamsJS and bot activity.
 
 The following table includes the query parameters:
 
