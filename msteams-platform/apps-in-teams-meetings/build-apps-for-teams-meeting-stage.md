@@ -66,7 +66,7 @@ Use the following APIs to share specific part of the app:
 
 ## Share app content to stage API
 
-The `shareAppContentToStage` API enables you to share specific parts of your app to the meeting stage. The API is available through the Teams client library.
+The `shareAppContentToStage` API enables you to share specific parts of your app to the meeting stage. The API is available through the TeamsJS.
 
 ### Prerequisite
 
