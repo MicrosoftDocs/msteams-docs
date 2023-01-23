@@ -648,9 +648,16 @@ Blazor lets you build interactive web UIs using C#, instead of JavaScript. You c
 :::image type="content" source="~/assets/images/teams-toolkit-v2/blazor/your-blazor-helloworld-app.png" alt-text="Screenshot of the blazor app displaying the tab, Bot, and Message Extension output after you've successfully completed the step-by-step blazor guide.":::
 
 > [!NOTE]
-> Currently, Teams Toolkit doesn't support the message extension capability.
+> Teams Toolkit doesn't support the message extension capability.
 
 Here's a list of tools you require for building and deploying your app.
+
+| &nbsp;    | Install   | For using... |
+| --- | --- | --- |
+| **Required** | &nbsp; | &nbsp; |
+| &nbsp; | [Visual Studio version 17.2.0 preview 2.1](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=enterprise&ch=pre&rel=17)|  Select Visual Studio Enterprise 2022 Preview (version 17.2.0 preview 2.1). |
+| &nbsp; | [Microsoft Teams](https://www.microsoft.com/en-us/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings and calls - all in one place. |
+| &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
 
 ## Prepare development environment
 
@@ -747,7 +754,7 @@ If you wish to host your app or access resources in Azure, you must have an Azur
 
 Now you've got all tools and set up your accounts. Next, let's set up your development environment and start building!
 
-Create project workspace for your tab app
+## Create project workspace for your tab app
 
 Start Teams app development by creating your first app. This app uses the tab capability.
 
@@ -768,7 +775,7 @@ Use Teams Toolkit to create your first tab project. The toolkit takes you throug
 1. **Configure your new project** page: You enter the project details.
 1. **Create a new Teams application** page: You select the Teams app capabilities.
 
-    To create your tab project workspace
+**To create your tab project workspace**
 
 1. Open the latest version of Visual Studio.
 
@@ -776,52 +783,52 @@ Use Teams Toolkit to create your first tab project. The toolkit takes you throug
 
    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor/vs-select-project.png" alt-text="Screenshot of Visual Studio with Create a new project option highlighted in red for blazor app.":::
 
-The **Create a new project** page appears.
+   The **Create a new project** page appears.
 
 1. Select the project details.
 
-    Select the project type:
+   Select the project type:
 
-1. Search for **Microsoft Teams** from templates dropdown list.  
+   1. Search for **Microsoft Teams** from templates dropdown list.  
 
-1. Select **Microsoft Teams App** as the template.
+   1. Select **Microsoft Teams App** as the template.
 
-1. Select **Next**.
+   1. Select **Next**.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor/vs-select-teams-app.png" alt-text="Screenshot of Create a new project with Next option highlighted in red for blazor app creation.":::
+      :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor/vs-select-teams-app.png" alt-text="Screenshot of Create a new project with Next option highlighted in red for blazor app creation.":::
 
-    The **Configure your new project** page appears.
+      The **Configure your new project** page appears.
 
 1. Configure the new project details.
 
     Select the following project configuration:
 
-1. Enter a suitable name for your project.
+   1. Enter a suitable name for your project.
 
-    > [!NOTE]
-    > You can note that the project name you enter is automatically filled in as the **Solution name** also. If you want, you can change the solution name with no affect on project name.
+      > [!NOTE]
+      > You can note that the project name you enter is automatically filled in as the **Solution name** also. If you want, you can change the solution name with no affect on project name.
 
-1. Select the folder path where you want to create the project workspace.
+   1. Select the folder path where you want to create the project workspace.
 
-1. Enter a different solution name, if you want.
+   1. Enter a different solution name, if you want.
 
-1. Check the option to save the project and solution in the same folder, if you want. For this tutorial, you don't need this option.
+   1. Check the option to save the project and solution in the same folder, if you want. For this tutorial, you don't need this option.
 
-1. Select **Create**.
+   1. Select **Create**.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-new-project.PNG" alt-text="Screenshot1 of Configure your new project with Create option highlighted in red.":::
+      :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-new-project.PNG" alt-text="Screenshot1 of Configure your new project with Create option highlighted in red.":::
 
-    The **Create a new Teams application** page appears.
+      The **Create a new Teams application** page appears.
 
 1. Select Teams app feature.
 
     Select app feature:
 
-1. Select the **Tab** as the capability for your app.
+   1. Select the **Tab** as the capability for your app.
 
-1. Select **Create**.
+   1. Select **Create**.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/first-tab/select-language-tab_1.png" alt-text="Screenshot2 of Create a new Teams application with Tab and Create options highlighted in red.":::
+:::image type="content" source="../../assets/images/teams-toolkit-v2/first-tab/select-language-tab_1.png" alt-text="Screenshot2 of Create a new Teams application with Tab and Create options highlighted in red.":::
 
 Your Teams tab app is created in a few seconds.
 
@@ -850,6 +857,9 @@ Teams Toolkit creates a scaffolding for your project based on the capabilities y
 | `TeamsFx.cs` and `JS/src/index.js` | The content is used for initializing communications with the Teams host. |
 
 You can add backend functionality by adding other ASP.NET Core controllers to your application.
+</details>
+
+## Build and run your first Teams tab app
 
 After you set up your project workspace with Teams Toolkit, build your tab project.
 
@@ -868,15 +878,15 @@ To build and run your app:
     <details>
     <summary>Learn what happens when you run your app locally in the debugger.</summary>
 
-When you select **F5**, Teams Toolkit:
+    When you select **F5**, Teams Toolkit:
 
-1. Registers your application with Azure Active Directory.
-1. Registers your application for sideloading in Teams.
-1. Starts your application backend running locally.
-1. Starts your application front-end hosted locally.
-1. Starts Teams in a web browser with a command to instruct Teams to side load the application (the URL is registered inside the application manifest).
+    1. Registers your application with Azure Active Directory.
+    1. Registers your application for sideloading in Teams.
+    1. Starts your application backend running locally.
+    1. Starts your application front-end hosted locally.
+    1. Starts Teams in a web browser with a command to instruct Teams to side load the application (the URL is registered inside the application manifest).
 
-</details>
+    </details>
 
 1. Install the self-signed SSL certificate for local debugging, if requested.
 
@@ -910,15 +920,17 @@ When you select **F5**, Teams Toolkit:
 
     You can do normal debugging activities, such as setting breakpoints, as if it were any other web application. The app supports hot reloading.  If you change any file within the project, the page will be reloaded.
 
-<!-- markdownlint-disable MD033 -->
-<details>
-<summary>Learn how to troubleshoot if your app doesn't run locally.</summary>
+    <!-- markdownlint-disable MD033 -->
+    <details>
+    <summary>Learn how to troubleshoot if your app doesn't run locally.</summary>
 
-To run your app in Teams, you need a Microsoft 365 development account that allows app sideloading. You can learn more about it in the Prerequisites section.
+    To run your app in Teams, you need a Microsoft 365 development account that allows app sideloading. You can learn more about it in the Prerequisites section.
 
-</details>
+    </details>
 
-Stop debugging in Visual Studio.
+1. Stop debugging in Visual Studio.
+
+## Preview your first Teams tab app
 
 You've learned to create, build, and run Teams app with tab capability. The following final steps are to deploy your app on Azure and Preview in Teams:
 
@@ -935,20 +947,20 @@ You've learned to create, build, and run Teams app with tab capability. The foll
     :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-provision_1.png" alt-text="Screenshot13 of Visual Studio with Project, Teams Toolkit, and Provision in the Cloud options are highlighted in red.":::
 
 1. Enter the subscription and resource group details in the **Provision** dialog:
-1. Select the subscription name from  **Subscription name** dropdown list.
-1. Select the resource group from **Resource group** dropdown list or select **New** to add the resource group generated for your app.
-1. Select your **Region**, if new resource group is created.
-1. Select **Provision**.
+   1. Select the subscription name from  **Subscription name** dropdown list.
+   1. Select the resource group from **Resource group** dropdown list or select **New** to add the resource group generated for your app.
+   1. Select your **Region**, if new resource group is created.
+   1. Select **Provision**.
 
     :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/select-subscription.PNG" alt-text="Screenshot14 of Provision with New and Provision highlighted in red.":::
 
-Provision warning displays.
+   Provision warning displays.
 
 1. Select **Provision**.
 
     :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/provision-warning.PNG" alt-text="Screenshot15 of Teams Toolkit with Provision highlighted in red.":::
 
-It takes a few minutes for your resource group to provision in the cloud.
+   It takes a few minutes for your resource group to provision in the cloud.
 
 1. After the provision is complete, select **OK**.
 
@@ -1008,9 +1020,13 @@ It takes a few minutes for your resource group to provision in the cloud.
 
     :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/azure-user-info.png" alt-text="Screenshot26 of your Personal Tab displaying basic information.":::
 
-    Start Teams app development by creating your first app. This app uses the bot capability.
+## Congratulations
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor/your-helloworld-app-bot.png" alt-text="Screenshot27 displaying workspace for your bot app.":::
+You've done it!
+
+You've created an app with a a tab app capability.
+
+You've completed the tutorial to build a tab app with Blazor.
 
 ::: zone-end
 
