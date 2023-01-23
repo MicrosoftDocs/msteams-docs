@@ -255,9 +255,9 @@ Encoded URL:
 |:-----------|:---------|:------------|:-----------------------|
 | `entityId` | String | 64 | This property is a  unique identifier for the entity that the tab displays and it's a required field.|
 | `name` | String | 128 | This property is the display name of the tab in the channel interface and it's an optional field.|
-| `contentUrl` | String | 2048 | This property is the <https://> URL that points to the entity UI to be displayed in the Teams canvas and it's a required field.|
-| `websiteUrl?` | String | 2048 | This property is the <https://> URL to point at, if a user selects to view in a browser and it's a required field.|
-| `removeUrl?` | String | 2048 | This property is the <https://> URL that points to the UI to be displayed when the user deletes the tab and it's an optional field.|
+| `contentUrl` | String | 2048 | This property is the `<https://>` URL that points to the entity UI to be displayed in the Teams canvas and it's a required field.|
+| `websiteUrl?` | String | 2048 | This property is the `<https://>` URL to point at, if a user selects to view in a browser and it's a required field.|
+| `removeUrl?` | String | 2048 | This property is the `<https://>` URL that points to the UI to be displayed when the user deletes the tab and it's an optional field.|
 
 ## Code sample
 
