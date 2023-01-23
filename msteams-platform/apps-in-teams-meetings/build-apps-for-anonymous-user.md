@@ -53,8 +53,6 @@ Apps receive the following info for an anonymous user when they call the `getCon
 
 | **Property name** | **Description** |
 | --- | --- |
-| **Property name** | **Description** |
-| --- | --- |
 | `userObjectId` | Empty string for anonymous user. |
 | `userLicenseType` | `Anonymous` represents anonymous user. |
 | `loginHint` | Empty string for anonymous user. |
