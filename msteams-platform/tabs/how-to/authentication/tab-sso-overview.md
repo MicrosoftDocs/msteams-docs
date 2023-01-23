@@ -6,7 +6,7 @@ ms.localizationpriority: high
 ---
 # Enable SSO for tab app
 
-With single sign-on (SSO) in Teams, the app users have the advantage of using Teams to access tab apps. After logging in to Teams using Microsoft or Microsoft 365 account, the app users can use your app without the need to sign in again. Your app is available to the app users on any device with the access granted through Azure Active Directory (Azure AD).
+With single sign-on (SSO) in Teams, app users have the advantage of using Teams to access tab apps. After logging in to Teams using Microsoft or Microsoft 365 account, app users can use your app without the need to sign in again. Your app is available to app users on any device with the access granted through Azure Active Directory (Azure AD).
 
 Here's what you'll learn in this section:
 

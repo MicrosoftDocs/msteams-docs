@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 
 # Build apps for anonymous users
 
-Anonymous users don't have an Azure AD identity and aren't federated with a tenant. The anonymous participants are like external users but their identity isn't shown in the meeting. An anonymous user can be a presenter or an attendee but can't be an organizer. You can build bots, messaging extensions, and cards and task modules in your app to engage with anonymous meeting participants.
+Anonymous users don't have an Azure Active Directory (Azure AD) identity and aren't federated with a tenant. The anonymous participants are like external users but their identity isn't shown in the meeting. An anonymous user can be a presenter or an attendee but can't be an organizer. You can build bots, messaging extensions, and cards and task modules in your app to engage with anonymous meeting participants.
 
 For anonymous users to interact with the apps in Teams meetings, ensure the following:
 
@@ -32,7 +32,7 @@ For more information, see [app manifest schema.](~/resources/schema/manifest-sch
 
 ## Anonymous user authentication flow
 
-Anonymous users can't be authenticated through Azure Active Directory (Azure AD) authentication or `getAuthToken` from the client SDK as they aren't Azure AD accounts. If you need to authenticate anonymous users, your app must identify anonymous users and provide an alternative authentication experience in the meetings. You can determine if a user is anonymous by validating [user's context](#in-meeting-getcontext-from-teams-client-library).
+Anonymous users can't be authenticated through Azure AD authentication or `getAuthToken` from the client SDK as they aren't Azure AD accounts. If you need to authenticate anonymous users, your app must identify anonymous users and provide an alternative authentication experience in the meetings. You can determine if a user is anonymous by validating [user's context](#in-meeting-getcontext-from-teams-client-library).
 
 ## Admin setting for anonymous user app interaction
 
@@ -48,15 +48,18 @@ Apps receive the following info for an anonymous user when they call the `getCon
 "userObjectId": "",
 "userLicenseType": "Anonymous",
 "loginHint": "",
-"userPrincipalName": "",
+"userPrincipalName": ""
 ```
 
 | **Property name** | **Description** |
 | --- | --- |
+| **Property name** | **Description** |
+| --- | --- |
+| `userObjectId` | Empty string for anonymous user. |
 | `userLicenseType` | `Anonymous` represents anonymous user. |
+| `loginHint` | Empty string for anonymous user. |
+| `userPrincipalName` | Empty string for anonymous user. |
 
-> [!NOTE]
-> When an anonymous user joins a meeting, a new user ID is generated. Whenever the anonymous user rejoins a meeting, a different user ID is generated.
 
 For more information on `getContext`, see [get context by using the Microsoft Teams JavaScript library.](~/tabs/how-to/access-teams-context.md#get-context-by-using-the-microsoft-teams-javascript-library)
 
