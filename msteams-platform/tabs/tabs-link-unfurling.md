@@ -47,6 +47,10 @@ Collaborative Stage View is an enhancement to Stage View, that allows for your a
 
 Collaborative Stage View helps provide a more seamless, multi-task experience when working with content in Teams. Users can open and view your app content inside a new Teams window and continue discussion from this window. The ability to engage with content while also having a conversation about that same content, leads to higher user engagement with your app.
 
+The following screenshot is an example of collaborative Stage View opens in a new Teams window with the originating chat in the side panel:
+
+:::image type="content" source="../assets/images/tab-images/collaborative-stage-view.png" alt-text="Screenshot shows the Collaborative stage view in Teams.":::
+
 ### Limitations of Stage View
 
 * If a Stage View is already open, and the user selects on another stage link in the same chat, it will replace the existing Stage View window
@@ -122,7 +126,11 @@ The `invoke` request type must be `composeExtension/queryLink`.
 
 When the user enters an app content URL in a chat, the bot is invoked and returns an Adaptive Card with the option to open the URL. Depending on the context and the users’ client (see table in the ‘Collaborative Stage View’ section), this URL is opened in the appropriate Stageview UI . When the Collaborative Stage View is invoked from an Adaptive Card in a chat/channel (and not from a deep link), a new window is opened.
 
-The following images display the Collaborative Stageview opened from an Adaptive Card:
+The following images display the Collaborative Stage View opened from an Adaptive Card:
+
+:::image type="content" source="../assets/images/tab-images/collaborative-stage-view-adaptive-card.png" alt-text="Screenshot shows the invoke collaborative Stage View from Adaptive Card.":::
+
+:::image type="content" source="../assets/images/tab-images/collaborative-stage-view.png" alt-text="Screenshot shows the Collaborative stage view in Adaptive Card.":::
 
 Following is the code to create a Collaborative Stage View button open a stage in an Adaptive Card:
 
@@ -152,7 +160,7 @@ The invoke request type must be composeExtension/queryLink.
 
 > [!NOTE]
 >
-> * invoke workflow is similar to the current appLinking workflow.
+> * Invoke workflow is similar to the current appLinking workflow.
 > * To maintain consistency, it is recommended to name Action.Submit as Open.
 > * websiteUrl is a required property to be passed in the TabInfo object.
 > * Passing a Stage View deeplink into an adaptive card will not open the Collaborative Stageview; Stage View deeplink will always open to the Stageview Modal.
@@ -178,12 +186,16 @@ The invoke request type must be composeExtension/queryLink.
 
 ### Invoke Stage View through deep link
 
-To invoke the Stage View through deep link from your tab, you must wrap the deep link URL in the `app.openLink(url)` API. The deep link can also be passed through an `OpenURL` action in the card.
+To invoke the Stage View through deep link from your tab, you must wrap the deep link URL in the `app.openLink(url)` API. To invoke Stage View from a deep link will always default to the modal experience (and not a Teams window). The deep link can also be passed through an `OpenURL` action in the card,  the Stage View deep link is intended for the tab canvas. For Adaptive Cards, we encourage developers to follow the JSON Adaptive Card example.
+
+The following is an example from deep link Stage View opens as a modal within the main Teams window:
+
+:::image type="content" source="../assets/images/tab-images/invoke-stage-view-deep-link.png" alt-text="Screenshot shows the invoke stage view through deep link.":::
 
 > [!NOTE]
 >
 > * All deep links must be encoded before pasting the URL. We don't support unencoded URLs.
-> * The `name` is optional in deep link. If not included, the app name replaces it
+> * The `name` is optional in deep link. If not included, the app name replaces it.
 > * When you launch a Stage from a certain context, ensure that your app works in that context. For example, if your Stage View is launched from a personal app, you must ensure your app has a personal scope.
 
 #### Syntax
