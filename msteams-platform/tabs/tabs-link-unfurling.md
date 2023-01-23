@@ -59,14 +59,14 @@ Collaborative Stage View helps provide a more seamless, multi-task experience wh
 
 |Stage View|Task module|
 |:-----------|:-----------|
-|Stage View is useful to display rich content to the users, such as a page, a dashboard, a file, and so on. It provides rich features that help to render your content in the new pop-up window.<br/>
-It provides rich features that help to render your content in the full-screen canvas. After your app content has been opened in Stage View, users can choose to pin the content as a tab.  For even more collaborative capabilities, opening your content in Collaborative Stage View (via an Adaptive Card) allows users to engage with content and conversation side-by-side, while also enabling multi-window scenarios.|[Task module](../task-modules-and-cards/task-modules/task-modules-tabs.md) is especially useful to display messages that require user attention, or collect information required to move to the next step.|
+| Stage View is useful to display rich content to the users, such as a page, a dashboard, a file, and so on. It provides rich features that help to render your content in the new pop-up window. It provides rich features that help to render your content in the full-screen canvas. After your app content has been opened in Stage View, users can choose to pin the content as a tab.  For even more collaborative capabilities, opening your content in Collaborative Stage View (via an Adaptive Card) allows users to engage with content and conversation side-by-side, while also enabling multi-window scenarios.| [Task module](../task-modules-and-cards/task-modules/task-modules-tabs.md) is especially useful to display messages that require user attention, or collect information required to move to the next step.|
 
 ### Invoke Stage View
 
 You can invoke Stage View in the following  ways:
 
 * [Invoke Stage View from Adaptive Card](#invoke-stage-view-from-adaptive-card)
+* [Invoke Collaborative Stage View from Adaptive Card](#invoke-collaborative-stage-view-from-adaptive-card)
 * [Invoke Stage View through deep link](#invoke-stage-view-through-deep-link)
 
 ### Invoke Stage View from Adaptive Card
@@ -166,12 +166,15 @@ The invoke request type must be composeExtension/queryLink.
    1. This sends an invoke request to the bot.(request type: composeExtension/queryLink)
    1. The bot returns the adaptive card JSON, with tab/tabInfoAction in it.
    1. Adaptive Card JSON is rendered.
+
 1. Opening Stage View
    1. A receiver clicks on an action button on the adaptive card.
    1. Stageview opens based on the content of the Adaptive Card.
 
 > [!NOTE]
-> The multi-window Collaborative Stageview is also not available in the Teams web client or mobile. In these scenarios, the Stageview experience will fall back to showing users the content in an interstitial modal.
+>
+> * On Teams mobile clients, invoking Stage View for apps distributed through the [Teams store](/platform/concepts/deploy-and-publish/apps-publish-overview.md) and not having a moblie-optimized experience opens the default web browser of the device. The browser opens the URL specified in the `websiteUrl` parameter of the `TabInfo` object.
+> * The multi-window Collaborative Stageview is also not available in the Teams web client or mobile. In these scenarios, the Stageview experience will fall back to showing users the content in an interstitial modal.
 
 ### Invoke Stage View through deep link
 
@@ -179,7 +182,7 @@ To invoke the Stage View through deep link from your tab, you must wrap the deep
 
 > [!NOTE]
 >
-> * All deeplinks must be encoded before pasting the URL. We don't support unencoded URLs.
+> * All deep links must be encoded before pasting the URL. We don't support unencoded URLs.
 > * The `name` is optional in deep link. If not included, the app name replaces it
 > * When you launch a Stage from a certain context, ensure that your app works in that context. For example, if your Stage View is launched from a personal app, you must ensure your app has a personal scope.
 
@@ -202,6 +205,7 @@ URL with threadId
 Unencoded URL:
 
 `<https://teams.microsoft.com/l/stage/be411542-2bd5-46fb-8deb-a3d5f85156f6/0?context>={"contentUrl":"https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191","websiteUrl":"https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191?standalone=true","title":"Quotes: Miscellaneous","threadId":"19:9UryYW9rjwnq-vwmBcexGjN1zQSNX0Y4oEAgtUC7WI81@thread.tacv2"}`
+
 Encoded URL:
 
 `<https://teams.microsoft.com/l/stage/be411542-2bd5-46fb-8deb-a3d5f85156f6/0?context=%7B%22contentUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%22%2C%22websiteUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%3Fstandalone%3Dtrue%22%2C%22title%22%3A%22Quotes%3A%20Miscellaneous%22%2C%22threadId%22%3A%2219:9UryYW9rjwnq-vwmBcexGjN1zQSNX0Y4oEAgtUC7WI81@thread.tacv2%22%7D>`
