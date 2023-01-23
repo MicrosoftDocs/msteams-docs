@@ -74,28 +74,6 @@ Following code snippet is an example of calling the API from the Teams app built
 </script>
 ```
 
-# [TeamsJS V2](#tab/jsonV2)
-
-```json
-<div>
-<div class="sectionTitle">openPurchaseExperience</div>
-<button onclick="openPurchaseExperience()">openPurchaseExperience</button>
-</div>
-</body>
-<script>
-    function openPurchaseExperience() {
-      micorosftTeams.app.initialize();
-      var planInfo = {
-          planId: "<Plan id>", // Plan Id of the published SAAS Offer
-          term: "<Plan Term>" // Term of the plan.
-      }
-      monetization.openPurchaseExperience(planInfo);
-    }
-</script>
-```
-
----
-
 ## End-user in-app purchasing experience
 
 The following example shows the users to purchase subscription plans for a fictional Teams app called *Contoso Tasks for Teams*:
