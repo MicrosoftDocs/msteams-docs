@@ -211,7 +211,7 @@ When you opt into app caching, the webview that is used to host the embedded app
 > [!NOTE]
 > If the app caching isn't enabled, the webview is recreated every time the user launches the app.
 
-There are multiple reasons for an app to not get cached or get removed from the cache, some of the reasons are (numbers here are subject to change):
+There are multiple reasons for an app to not get cached or for an app to get removed from the cache, some of the reasons are (numbers here are subject to change):
 
 * If the system memory load is high, the app is removed from the cache.
 * If the number of cached apps exceed the maximum cache size, the oldest cached app is removed from the cache.
@@ -280,7 +280,7 @@ The following are the limitations for app caching:
 
 * Check the amount of free memory on your system. App caching requires minimum of 4 GB system memory.
 
-* Reduce your memory footprint when cached. Use the `beforeUnload` handlers to dispose resources that aren't needed when cached.
+* Reduce your memory footprint when cached. Use the `beforeUnload` handler to dispose resources that aren't needed when cached.
 
 ## Feature compatibility by user types
 
