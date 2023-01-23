@@ -49,8 +49,6 @@ To trigger in-app purchase for the app, invoke the `openPurchaseExperience` API 
 
 Following code snippet is an example of calling the API from the Teams app built using Teams JavaScript client library:
 
-# [TeamsJS v1]
-
 ```json
 <div> 
 <div class="sectionTitle">openPurchaseExperience</div>
