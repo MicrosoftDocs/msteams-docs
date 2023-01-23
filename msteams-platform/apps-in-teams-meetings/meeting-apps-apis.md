@@ -358,6 +358,9 @@ POST /v1/meetings/{meetingId}/notification
 | `onBehalfOf.mri` | User MRI shown as sender. |
 | `onBehalfOf.displayName` | **Optional**; name of the `person`. Used as fallback in case the name resolution is unavailable. |
 
+> [!NOTE]
+> If you provide an invalid input, the API returns the status code 400.
+
 ### Response code
 
 The following table includes the response codes:
