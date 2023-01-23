@@ -56,22 +56,49 @@ Applications can post messages to a chat and add deep links to them. The followi
 
 Applications can add a deep link as a hyperlink markdown. The deep link is executed within teams. Refer the following code sample::
 
-`add sample`
+[App](URL)
+
+`[App](https://teams.microsoft.com/l/app/{appId})`
+
+For more information, see [use Markdown formatting in Teams](https://support.microsoft.com/en-us/office/use-markdown-formatting-in-teams-4d10bd65-55e2-4b2d-a1f3-2bebdcd2c772)
 
 ### Raw link text message
 
 Applications can include the raw link in a message. The deep link is executed within teams. Refer the code below:
 
-`add sample`
+`https://teams.microsoft.com/l/app/{appId}`
 
 ### Adaptive Card – Open URL action  
 
 Applications can include an `open URL` action in an Adaptive Card and add a deep link to it. The deep link is executed within Teams. Refer to the following sample Adaptive Card payload:
 
-`add sample`
+```json
+
+{
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.5",
+    "body": [
+        {
+            "type": "TextBlock",
+            "text": "This card's action will open a URL"
+        }
+    ],
+    "actions": [
+        {
+    "type": "Action.OpenUrl",
+    "title": "Action.OpenUrl",
+    "url": "https://teams.microsoft.com/l/app/{appId}"
+    }
+    ]
+}
+
+```
 
 > [!NOTE]
 > Raw links or hyperlinks in an adaptive card body will navigate the user to the browser. We recommend using the `open URL` action.
+
+For more information, see [Action.OpenUrl](https://adaptivecards.io/explorer/Action.OpenUrl.html).
 
 ## Handling deep links
 
