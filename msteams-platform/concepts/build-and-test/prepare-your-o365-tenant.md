@@ -31,7 +31,7 @@ Enable Teams for your organization and for more information, see [enabling Teams
 ## Enable custom Teams apps and turn on custom app uploading
 
 > [!IMPORTANT]
-> You can skip the steps below if you chose the Instant Sandbox option with the Teams sample data pack which will automatically enable the **Upload custom apps** setting.
+> If you have installed an instant sandbox or a configurable sandbox with the Teams sample data pack, you can skip the steps to enable sideloading. The **Upload custom apps** setting is enabled by default in the Teams sample data pack.
 
 To turn on the custom app uploading or sideloading for your developer tenant:
 
