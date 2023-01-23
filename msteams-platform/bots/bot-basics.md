@@ -9,7 +9,7 @@ ms.author: anclear
 
 # Bot activity handlers
 
-This document builds on the article on [how bots work](https://aka.ms/how-bots-work) in the core [Bot Framework documentation](https://aka.ms/azure-bot-service-docs). The primary difference between bots developed for Microsoft Teams and the core Bot Framework is in the features provided in Teams.
+This document builds on the article on [how bots work](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true) in the core [Bot Framework documentation](/azure/bot-service/?view=azure-bot-service-4.0&preserve-view=true). The primary difference between bots developed for Microsoft Teams and the core Bot Framework is in the features provided in Teams.
 
 An activity handler is used to organize the conversational logic for your bot. Activities are handled in two ways using Teams activity handlers and bot logic. The Teams activity handler adds support for Teams-specific events and interactions. The bot object contains the conversational reasoning or logic for a turn and exposes a turn handler, which is the method that can accept incoming activities from the bot adapter.
 
@@ -255,7 +255,7 @@ The list of Teams activity handlers called from the `OnInvokeActivityAsync` Team
 | task/fetch                      | `OnTeamsTaskModuleFetchAsync`        | You can override this method in a derived class to provide logic when a task module is fetched. |
 | task/submit                     | `OnTeamsTaskModuleSubmitAsync`       | You can override this method in a derived class to provide logic when a task module is submitted. |
 
-The Invoke activities listed in this section are for conversational bots in Teams. The Bot Framework SDK also supports invoke activities specific to message extensions. For more information, see [what are message extensions](https://aka.ms/azure-bot-what-are-messaging-extensions).
+The Invoke activities listed in this section are for conversational bots in Teams. The Bot Framework SDK also supports invoke activities specific to message extensions. For more information, see [what are message extensions](../messaging-extensions/what-are-messaging-extensions.md).
 
 # [JavaScript](#tab/javascript)
 
@@ -312,7 +312,7 @@ The list of Teams activity handlers called from the `onInvokeActivity` Teams act
 | task/fetch                      | `handleTeamsTaskModuleFetch`        | You can override this method in a derived class to provide logic when a task module is fetched. |
 | task/submit                     | `handleTeamsTaskModuleSubmit`       | You can override this method in a derived class to provide logic when a task module is submitted. |
 
-The invoke activities listed in this section are for conversational bots in Teams. The Bot Framework SDK also supports invoke activities specific to message extensions. For more information, see [what are message extensions](https://aka.ms/azure-bot-what-are-messaging-extensions).
+The invoke activities listed in this section are for conversational bots in Teams. The Bot Framework SDK also supports invoke activities specific to message extensions. For more information, see [what are message extensions](../messaging-extensions/what-are-messaging-extensions.md).
 
 # [Python](#tab/python)
 
@@ -365,7 +365,7 @@ The list of Teams activity handlers called from the `on_invoke_activity` Teams a
 | task/fetch                      | `on_teams_task_module_fetch`        | You can override this method in a derived class to provide logic when a task module is fetched. |
 | task/submit                     | `on_teams_task_module_submit`       | You can override this method in a derived class to provide logic when a task module is submitted. |
 
-The invoke activities listed in this section are for conversational bots in Teams. The Bot Framework SDK also supports invoke activities specific to message extensions. For more information, see [what are message extensions](https://aka.ms/azure-bot-what-are-messaging-extensions).
+The invoke activities listed in this section are for conversational bots in Teams. The Bot Framework SDK also supports invoke activities specific to message extensions. For more information, see w[hat are message extensions](../messaging-extensions/what-are-messaging-extensions.md).
 
 ---
 
