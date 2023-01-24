@@ -977,7 +977,7 @@ Follow the [step-by-step guide](/microsoftteams/platform/sbs-create-dashboard-wi
 
 ## See also
 
-[What are Teams tabs](../what-are-tabs.md)
-[App design guidelines for Tab](../design/tabs.md)
-[Fluent UI Library](https://react.fluentui.dev/?path=/docs/concepts-introduction--page)
-[Fluent UI React Charting Examples](https://fluentuipr.z22.web.core.windows.net/heads/master/react-charting/demo/index.html#/)
+* [What are Teams tabs](../what-are-tabs.md)
+* [App design guidelines for Tab](../design/tabs.md)
+* [Fluent UI Library](https://react.fluentui.dev/?path=/docs/concepts-introduction--page)
+* [Fluent UI React Charting Examples](https://fluentuipr.z22.web.core.windows.net/heads/master/react-charting/demo/index.html#/)
