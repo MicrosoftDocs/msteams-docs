@@ -33,13 +33,19 @@ Following are the steps to add a new dashboard layout:
 1. [Create a dashboard class](#create-a-dashboard-class)
 1. [Override methods to customize dashboard layout](#override-methods-to-customize-dashboard-layout)
 1. [Add a route for the new dashboard](#add-a-route-for-the-new-dashboard)
-1. [Modify manifest to add a new dashboard tab.](#modify-manifest-to-add-a-new-dashboard-tab)
+1. [Modify manifest to add a new dashboard tab](#modify-manifest-to-add-a-new-dashboard-tab)
 
 ### Create a dashboard class
 
 Create a file with the extension `.tsx` for your dashboard in the tabs/src/views/dashboards directory, for example, YourDashboard.tsx. Then, create a class that extends the Dashboard class:
 
-`export default class YourDashboard extends Dashboard {}`
+```typescript
+
+export default class YourDashboard extends Dashboard {}
+
+```
+
+export default class YourDashboard extends Dashboard {}
 
 ### Override methods to customize dashboard layout
 
@@ -47,8 +53,8 @@ Dashboard class provides few methods that you can override to customize the dash
 
 | **Methods** | **Function** |
 |---|---|
-| `rowHeights()` | Customize the height of each row of the dashboard. |
-| `columnWidths()` | Customize how many columns the dashboard has at most and the width of each column. |
+| `rowHeight()` | Customize the height of each row of the dashboard. |
+| `columnWidth()` | Customize how many columns the dashboard has at most and the width of each column. |
 | `dashboardLayout()` | Define widgets layout. |
 
 Following is an example to customize the dashboard layout.
@@ -381,13 +387,13 @@ Following are the customizable methods to override:
 
 | File | Content | Recommend to override |
 |---|---|---|
-| **constructor()** | Initializes the dashboard state and variables. | NO |
+| **constructor()** | This method will initialize the dashboard state and variables. | NO |
 | **componentDidMount()** | This method will be invoked after a component is mounted. | NO |
 | **componentWillUnmount()** | This method will be invoked when a component will be unmounted. | NO |
-| **render()** | This method will be called each time an update happens, we define the dashboard default layout in this method. | NO |
-| **rowHeights()** | Customize the height of each row of the dashboard. | YES |
-| **columnWidths()** | Customize how many columns the dashboard has at most and the width of each column. | YES |
-| **dashboardLayout()** | Define the widgets layout in dashboard. | YES |
+| **render()** | This method will be called each time an update happens and we define the dashboard default layout. | NO |
+| **rowHeights()** | This method will customize the height of each row of the dashboard. | YES |
+| **columnWidths()** | This method will customize how many columns the dashboard has at most and the width of each column. | YES |
+| **dashboardLayout()** | This method will define the widget layout in dashboard. | YES |
 
 ## Embed Power BI to Dashboard
 
@@ -501,7 +507,7 @@ Widget class provides some methods that can be overridden to customize the widge
     }
     ```
 
-    Following is an example of `body content`:
+    Following is an example of `bodycontent()`:
 
     :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/override-body-content.png" alt-text="Screenshot shows body content in a widget.":::
 
@@ -582,7 +588,7 @@ Following are the recommended methods to override:
 | Methods | Function | Recommend to override |
 |---|---|---|
 | **constructor()** | Invokes the initial `this.state` and call the constructor of the super class `React` Component. | NO |
-| **componentDidMount()** |  invokes after a component is mounted and assigns a value to the `data` property of the state by calling the `getData()` method. | NO |
+| **componentDidMount()** | Invokes after a component is mounted and assigns a value to the `data` property of the state by calling the `getData()` method. | NO |
 | **render()** | Invokes each time a update happens and the dashboard default layout is defined in this method. | NO |
 | **getData()** | Invokes the data needed by the widget, and the value returned by this method will be set to `this.state.data`. |
 | **headerContent()** | Invokes what the widget header will look like. You can choose to override this method to customize a widget or not, if not, the widget won't have a header. | YES |
@@ -613,7 +619,7 @@ You can follow the steps to use Microsoft Graph Toolkit as your widget content:
 
       Create a new widget file in your project tabs/src/views/widgets folder. For example, **GraphyWidget.tsx**. In this widget, we'll guide users to consent our app to access Microsoft Graph and then show the user's `Todo` list by using Microsoft Graph Toolkit.
 
-      The following code is an example of using `Todo`component from Microsoft Graph Toolkit in widget:
+      The following code is an example of using `Todo` component from Microsoft Graph Toolkit in widget:
 
       ```typescript
         import { Providers, ProviderState, Todo } from "@microsoft/mgt-react";
@@ -729,6 +735,8 @@ The following steps show how to add a property to the state of `ListWidget` and 
     ```
 
 1. **Hide the footer button if the data is loading**
+
+    Following is an example of footer button:
 
     ```typescript
     footerContent(): JSX.Element | undefined {
@@ -969,7 +977,7 @@ async function callFunction(teamsfx) {
 For more information, see:
 
 * [sample](https://github.com/OfficeDev/TeamsFx-Samples/blob/dev/hello-world-tab-with-backend/tabs/src/components/sample/AzureFunctions.tsx)
-* [Azure Functions](/azure/azure-functions/functions-reference?tabs=blob)
+* [Developer guide](/azure/azure-functions/functions-reference?tabs=blob)
 
 ## Step-by-step guide
 
