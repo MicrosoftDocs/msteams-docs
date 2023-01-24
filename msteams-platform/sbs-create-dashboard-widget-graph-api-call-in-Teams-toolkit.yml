@@ -228,7 +228,7 @@ items:
 
       :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/widget-added-to-dashboard.png" alt-text="Screenshot shows the addition of widget to the dashboard with the sample widget highlighted in red. ":::
 
-      You can change the look and style of the widget. For more information, see [customize the widget](dashboard-teams-toolkit.md#customize-the-widget).
+      You can change the look and style of the widget. For more information, see [customize the widget](tabs/how-to/dashboard-teams-toolkit.md#customize-the-widget).
 
 - title: Add a new Graph API call
   durationInMinutes: 5
