@@ -10,7 +10,7 @@ ms.date: 01/17/2023
 
 # Create a dashboard in Teams
 
-Dashboards in the Teams toolkit allow you to monitor your business and view important metrics. A Widget displays content from apps and services to stay engaged with the latest updates in Teams. Graph API can be used to visualize details about the implementation of the selected API.
+Dashboards in the Teams toolkit allow you to monitor your business and view important metrics. A widget displays content from apps and services to stay engaged with the latest updates in Teams. Graph API can be used to visualize details about the implementation of the selected API.
 
 ## Dashboard
 
@@ -30,14 +30,14 @@ Example of a dashboard:
 
 Following are the steps to add a new dashboard layout:
 
-1. [Create a dashboard class](#create-a-dashboard-class).
-1. [Override methods to customize dashboard layout](#override-methods-to-customize-dashboard-layout).
-1. [Add a route for the new dashboard](#add-a-route-for-the-new-dashboard).
-1. [Modify manifest to add a new dashboard tab.](#modify-manifest-to-add-a-new-dashboard-tab).
+1. [Create a dashboard class](#create-a-dashboard-class)
+1. [Override methods to customize dashboard layout](#override-methods-to-customize-dashboard-layout)
+1. [Add a route for the new dashboard](#add-a-route-for-the-new-dashboard)
+1. [Modify manifest to add a new dashboard tab.](#modify-manifest-to-add-a-new-dashboard-tab)
 
 ### Create a dashboard class
 
-Create a file with the extension `.tsx` for your dashboard in the tabs/src/views/dashboards directory. For example, YourDashboard.tsx. Then, create a class that extends the Dashboard class:
+Create a file with the extension `.tsx` for your dashboard in the tabs/src/views/dashboards directory, for example, YourDashboard.tsx. Then, create a class that extends the Dashboard class:
 
 `export default class YourDashboard extends Dashboard {}`
 
@@ -78,11 +78,11 @@ export default class YourDashboard extends Dashboard {
 ```
 
 >[!NOTE]
-> All methods are optional. If you do not override any method, the default dashboard layout will be used.
+> All methods are optional. If you don't override any method, the default dashboard layout will be used.
 
 ### Add a route for the new dashboard
 
-Open **tabs/src/App.tsx** file, and add a route for the new dashboard. Here is an example:
+Open tabs/src/App.tsx file and add a route for the new dashboard. Here's an example:
 
 ```typescript
 import YourDashboard from "./views/dashboards/YourDashboard";
@@ -96,7 +96,7 @@ export default function App() {
 
 ### Modify manifest to add a new dashboard tab
 
-Open **templates/appPackage/manifest.template.json file**, and add a new dashboard tab under the staticTabs. Here is an example:
+Open templates/appPackage/manifest.template.json file and add a new dashboard tab under the `staticTabs`. Here's an example:
 
 ```typescript
 {
@@ -110,16 +110,16 @@ Open **templates/appPackage/manifest.template.json file**, and add a new dashboa
 
 ### Take a tour of your app source code
 
-This section walks through the generated code. The core dashboard implementation is in tabs folder, the project folder contains the following:
+The core dashboard implementation is in tabs folder. This section walks you through the generated code:
 
 | **Folder** | **Content** |
 |---|---|
 | `.fx` | Project level settings, configurations, and environment information. |
 | `.vscode` | Visual Studio Code files for local debug. |
-| `tabs` | The source code for the dashboard tab Teams application |
+| `tabs` | The source code for the dashboard tab Teams application. |
 | `templates` | Templates for the Teams application manifest and for provisioning Azure resources. |
 
-The following files provide the business logic for the dashboard tab. These files can be updated to fit your business logic requirements. The default implementation provides a starting point to help you get started:
+The following files provide the business logic for the dashboard tab. These files can be updated to fit your business logic requirements. The default implementation provides a starting point to help you get started.
 
 | **File** | **Content** |
 |---|---|
@@ -127,29 +127,29 @@ The following files provide the business logic for the dashboard tab. These file
 | **src/services/listService.tsx** | A data retrieve implementation for the list widget. |
 | **src/views/dashboards/SampleDashboard.tsx** | A sample dashboard layout implementation. |
 | **src/views/lib/Dashboard.styles.ts** | The dashboard style file. |
-| **src/views/lib/Dashboard.tsx** | An base class that defines the dashboard. |
+| **src/views/lib/Dashboard.tsx** | A base class that defines the dashboard. |
 | **src/views/lib/Widget.styles.ts** | The widget style file. |
 | **src/views/lib/Widget.tsx** | An abstract class that defines the widget. |
 | **src/views/styles/ListWidget.styles.ts** | The list widget style file. |
 | **src/views/widgets/ChartWidget.tsx** | A widget implementation that can display a chart. |
 | **src/views/widgets/ListWidget.tsx** | A widget implementation that can display a list. |
 
-The following files are project-related files. You'll not need to customize these files:
+The following files are project-related files and you need not need to customize these files:
 
 | **File** | **Content**|
 |---|---|
 | **src/index.tsx** | Application entry point. |
 | **src/App.tsx** | Application route. |
-| **src/internal/addNewScopes.ts** | Implementation of new scopes add. |
+| **src/internal/addNewScopes.ts** | Implementation of new scopes added. |
 | **src/internal/context.ts** | `TeamsFx` Context.
-| **src/internal/login.ts** | Implementation of login |
-| **src/internal/singletonContext.ts** | Implementation of the TeamsFx instance singleton |
+| **src/internal/login.ts** | Implementation of login. |
+| **src/internal/singletonContext.ts** | Implementation of the TeamsFx instance singleton. |
 
 ## Customize the dashboard layout
 
 The `TeamsFx` provides convenient methods for defining and modifying the layout of the dashboard.
 
-1. Three widgets in a row with a height of 350px, occupying 20%, 60% and 20% of the width respectively.
+1. Three widgets in a row with the height of 350 px, occupying 20%, 60%, and 20% of the width, respectively.
 
     ```typescript
     export default class SampleDashboard extends Dashboard {
@@ -177,7 +177,7 @@ The `TeamsFx` provides convenient methods for defining and modifying the layout 
 
    :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/customize-dashboard-layout.png" alt-text="Screenshot shows the customized dashboard layout.":::
 
-1. There are two widgets in a row with width of 600px and 1100px, the height of the first line is the maximum height of its content, and the height of the second line is 400px.
+1. There are two widgets in a row with the width of 600 px and 1100 px. The height of the first line is the maximum height of its content and the height of the second line is 400 px.
 
     ```typescript
     export default class SampleDashboard extends Dashboard {
@@ -237,40 +237,40 @@ The `TeamsFx` provides convenient methods for defining and modifying the layout 
 
     :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/widget-customize.png" alt-text="Screenshot shows the two widget customization.":::
 
-1. Customize the height of widgets in a row. The following code can achieve a height of 400px for the ListWidget and a height of 350px for the ChartWidget.
+1. Customize the height of widgets in a row. The following code can achieve a height of 400px for the `ListWidget` and a height of 350 px for the `ChartWidget`.
 
-```typescript
-    import { oneColumn } from '../lib/Dashboard.styles';
-    export default class SampleDashboard extends Dashboard {
-      protected rowHeights(): string | undefined {
-        return "max-content";
-      }
-    
-      protected columnWidths(): string | undefined {
-        return "4fr 6fr";
-      }
-    
-      protected dashboardLayout(): undefined | JSX.Element {
-        return (
-          <>
-            <NewsWidget />
-            <div style={oneColumn("400px 350px")}>
-              <ListWidget />
-              <ChartWidget />
-            </div>
-          </>
-        );
-      }
-    }
-```
+    ```typescript
+        import { oneColumn } from '../lib/Dashboard.styles';
+        export default class SampleDashboard extends Dashboard {
+          protected rowHeights(): string | undefined {
+            return "max-content";
+          }
+        
+          protected columnWidths(): string | undefined {
+            return "4fr 6fr";
+          }
+        
+          protected dashboardLayout(): undefined | JSX.Element {
+            return (
+              <>
+                <NewsWidget />
+                <div style={oneColumn("400px 350px")}>
+                  <ListWidget />
+                  <ChartWidget />
+                </div>
+              </>
+            );
+          }
+        }
+    ```
 
-  Following is an example of the customization of chart widget:
+      Following is an example of the customized chart widget:
 
-  :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/chart-widget.png" alt-text="Screenshot shows the customization of a chart widget.":::
+      :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/chart-widget.png" alt-text="Screenshot shows the customization of a chart widget.":::
 
 ## Dashboard abstraction
 
-To adjust the layout of the dashboard, the `TeamsFx` provides a dashboard class for developers to implement a dashboard.
+To adjust the layout of the dashboard, the `TeamsFx` provides a dashboard class for the developers to implement a dashboard.
 
 Following is an example of dashboard class:
 
@@ -372,9 +372,9 @@ export class Dashboard extends Component<any, IDashboardState> {
 }
 ```
 
-In the Dashboard class, the `TeamsFx` provides basic layouts with customizable methods. The Dashboard is still a react component, and the `TeamsFx` provides basic implementations of functions based on the lifecycle of react components, such as:
+In the dashboard class, the `TeamsFx` provides basic layouts with customizable methods. The Dashboard is still a react component, and the `TeamsFx` provides basic implementations of functions based on the lifecycle of react components, such as:
 
-* Implementing a basic render logic based on the Grid layout.
+* Implementing a basic render logic based on the grid layout.
 * Adding an observer to automatically adapt to mobile devices.
 
 Following are the customizable methods to override:
@@ -382,26 +382,26 @@ Following are the customizable methods to override:
 | File | Content | Recommend to override |
 |---|---|---|
 | **constructor()** | Initializes the dashboard state and variables. | NO |
-| **componentDidMount()** | This method Will be invoked after a component is mounted. | NO |
-| **componentWillUnmount()** | This method Will be invoked when a component will be unmounted. | NO |
-| **render()** | This method Will be called each time an update happens, we defined the dashboard default layout in this method. | NO |
+| **componentDidMount()** | This method will be invoked after a component is mounted. | NO |
+| **componentWillUnmount()** | This method will be invoked when a component will be unmounted. | NO |
+| **render()** | This method will be called each time an update happens, we define the dashboard default layout in this method. | NO |
 | **rowHeights()** | Customize the height of each row of the dashboard. | YES |
 | **columnWidths()** | Customize how many columns the dashboard has at most and the width of each column. | YES |
 | **dashboardLayout()** | Define the widgets layout in dashboard. | YES |
 
 ## Embed Power BI to Dashboard
 
-For how to embed Power BI to the Dashboard, you can refer to [powerbi-client-react](/javascript/api/overview/powerbi/powerbi-client-react).
+To embed Power BI to the Dashboard, you can refer to [powerbi-client-react](/javascript/api/overview/powerbi/powerbi-client-react).
 
 ## Widget
 
 Widgets display configurable information and charts on dashboards. They appear on the widget board where you can pin, unpin, arrange, resize, and customize widgets to reflect your interests. Your widget board is optimized to show relevant widgets and personalized content based on your usage.
 
-## Customize the widget
+### Customize the widget
 
-Widget class provides some methods that can be overridden to customize the widget, you can customize the widget by overriding these methods:
+Widget class provides some methods that can be overridden to customize the widget. You can customize the widget by overriding these methods:
 
-1. Override **headerContent()**、**bodyContent()**、**footerContent()** to customize the widget.
+1. Override `headerContent()`, `bodyContent()`, and `footerContent()` to customize the widget.
 
     ```typescript
     export class NewsWidget extends Widget<void> {
@@ -443,11 +443,11 @@ Widget class provides some methods that can be overridden to customize the widge
     }
     ```
 
-   Following is an example of headerContent(), bodyContent(), footerContent():
+   Following is an example of `headerContent()`, `bodyContent()`, and `footerContent()`:
 
-   :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/override-header-count.png" alt-text="Screenshot shows the example of header, body, and footer content.":::
+   :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/override-header-count.png" alt-text="Screenshot shows the example of header, body, and footer content in a widget.":::
 
-1. Override **bodyContent()**、**footerContent()** to customize the widget.
+1. Override `bodyContent()`, and `footerContent()` to customize the widget.
 
     ```typescript
     export class NewsWidget extends Widget<void> {
@@ -479,11 +479,11 @@ Widget class provides some methods that can be overridden to customize the widge
     }
     ```
 
-    Following is an example of **bodyContent()** and **footerContent()**
+    Following is an example of `bodyContent()` and `footerContent()`
 
-    :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/override-body-content-footer-content.png" alt-text="Screenshot shows the body and footer content.":::
+    :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/override-body-content-footer-content.png" alt-text="Screenshot shows the body and footer content in a widget.":::
 
-1. Override **bodyContent()** to customize the widget.
+1. Override `bodyContent()` to customize the widget.
 
     ```typescript
     export class NewsWidget extends Widget<void> {
@@ -501,15 +501,15 @@ Widget class provides some methods that can be overridden to customize the widge
     }
     ```
 
-    Following is an example of **body content**:
+    Following is an example of `body content`:
 
-    :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/override-body-content.png" alt-text="Screenshot shows body content.":::
+    :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/override-body-content.png" alt-text="Screenshot shows body content in a widget.":::
 
-## Widget Abstraction
+### Widget Abstraction
 
-To simplify the development of a widget, the `TeamsFx` provides a Widget class for developers to inherit to implement a widget that meets their needs without much attention to implement the widget layout.
+To simplify the development of a widget, the `TeamsFx` provides a widget class for developers to inherit to implement a widget that meets their needs without much attention to implement the widget layout.
 
-Following is the definition of widget class:
+Following is an example of widget class:
 
 ```typescript
 export abstract class Widget<T> extends Component<any, { data?: T | void }> {
@@ -581,17 +581,17 @@ Following are the recommended methods to override:
 
 | Methods | Function | Recommend to override |
 |---|---|---|
-| **constructor()** | Assigns the initial `this.state`, and call the constructor of the super class `React`Component**. | NO |
-| **componentDidMount()** | This method Will be invoked after a component is mounted, and assigns a value to the `data` property of the state by calling the getData() method. | NO |
-| **render()** | This method Will be called each time an update happens, the dashboard default layout is defined in this method. | NO |
-| **getData()** | This method can be used to get the data needed by the widget, and the value returned by this method will be set to `this.state.data`. |
-| **headerContent()** | This method is used to define what the widget header will look like. You can choose to override this method to customize a widget or not, if not, the widget will not have a header. | YES |
-| **bodyContent()** | This method is used to define what the widget body will look like. You can choose to override this method to customize a widget or not, if not, the widget will not have a body. | YES |
-| **footerContent()** | This method is used to define what the widget footer will look like. You can choose to override this method to customize a widget or not, if not, the widget will not have a footer. | YES |
+| **constructor()** | Invokes the initial `this.state` and call the constructor of the super class `React` Component. | NO |
+| **componentDidMount()** |  invokes after a component is mounted and assigns a value to the `data` property of the state by calling the `getData()` method. | NO |
+| **render()** | Invokes each time a update happens and the dashboard default layout is defined in this method. | NO |
+| **getData()** | Invokes the data needed by the widget, and the value returned by this method will be set to `this.state.data`. |
+| **headerContent()** | Invokes what the widget header will look like. You can choose to override this method to customize a widget or not, if not, the widget won't have a header. | YES |
+| **bodyContent()** | Invokes what the widget body will look like. You can choose to override this method to customize a widget or not, if not, the widget won't have a body. | YES |
+| **footerContent()** | Invokes what the widget footer will look like. You can choose to override this method to customize a widget or not, if not, the widget won't have a footer. | YES |
 
-## Microsoft Graph Toolkit as widget content
+### Microsoft Graph Toolkit as widget content
 
-Microsoft Graph Toolkit is a set of reusable, framework-agnostic web components and helpers for accessing and working with Microsoft Graph. You can use the Microsoft Graph Toolkit with any web framework or without a framework.
+Microsoft Graph Toolkit is a set of renewable, framework-agnostic web component which helps accessing and working with Microsoft Graph. You can use the Microsoft Graph Toolkit with any web framework or without a framework.
 
 You can follow the steps to use Microsoft Graph Toolkit as your widget content:
 
@@ -601,7 +601,7 @@ You can follow the steps to use Microsoft Graph Toolkit as your widget content:
 
    For more information, refer [SSO feature to your Teams app](../../toolkit/add-single-sign-on.md).
 
-1. Install required npm packages
+1. Install required `npm` packages
 
    Run the following command in your project `tabs` folder to install the required `npm` packages:
 
@@ -611,9 +611,9 @@ You can follow the steps to use Microsoft Graph Toolkit as your widget content:
 
 1. Add a new Graph Toolkit widget
 
-  Create a new widget file in your project **tabs/src/views/widgets** folder. For example, **GraphyWidget.tsx**. In this widget, we will guide users to consent our app to access Microsoft Graph and then show the user's todo list by using Microsoft Graph Toolkit.
+  Create a new widget file in your project **tabs/src/views/widgets** folder. For example, **GraphyWidget.tsx**. In this widget, we'll guide users to consent our app to access Microsoft Graph and then show the user's `Todo` list by using Microsoft Graph Toolkit.
 
-  The following code is an example of using Todo component from Microsoft Graph Toolkit in widget:
+  The following code is an example of using `Todo`component from Microsoft Graph Toolkit in widget:
 
   ```typescript
     import { Providers, ProviderState, Todo } from "@microsoft/mgt-react";
@@ -668,11 +668,9 @@ You can follow the steps to use Microsoft Graph Toolkit as your widget content:
     
   ```
 
-  For more information, refer [Microsoft Graph Toolkit](/graph/toolkit/overview)
+  For more information, refer [Microsoft Graph Toolkit](/graph/toolkit/overview).
 
-1. Add the widget to dashboard layout
-
-  Include the new widget in your dashboard file:
+1. Add the widget to dashboard layout. Include the new widget in your dashboard file:
 
 ```typescript
 ...
@@ -689,7 +687,146 @@ export default class YourDashboard extends Dashboard {
 }
 ```
 
-Now, launching or refreshing your Teams app, you will see the new widget using Microsoft Graph Toolkit.
+Now, launch or refresh your Teams app, you'll see the new widget using Microsoft Graph Toolkit.
+
+### How to include a data loader
+
+If you want to include a data loader to your widget before the widget is loaded, you can add a property to the state of the widget to indicate that the data loader is loading. This property can be used to show a loading indicator to the user.
+
+The following steps show how to add a property to the state of `ListWidget` and how to use it to show a loading spinner while the data is loading.
+
+1. **Define a state type**
+
+   Define a state type including a property named `loading` that indicates whether the data is loading.
+
+    ```typescript
+    interface ListWidgetState {
+      data: ListModel[];
+      loading?: boolean;
+    }
+    ```
+
+1. **Add a data loader**
+
+    Modify the `bodyContent` method to show a loading spinner if data is loading.
+
+    ```typescript
+    bodyContent(): JSX.Element | undefined {
+      return (
+        <>
+          {this.state.loading !== false ? (
+            <div style={{ display: "grid", justifyContent: "center", height: "100%" }}>
+              <Spinner label="Loading..." labelPosition="below" />
+            </div>
+          ) : (
+            <div style={bodyContentStyle()}>
+              ...
+            </div>
+          )}
+        </>
+      );
+    }
+    ```
+
+1. **Hide the footer button if the data is loading**
+
+    ```typescript
+    footerContent(): JSX.Element | undefined {
+      if (this.state.loading === false) {
+        return (
+          <Button
+            ...
+          </Button>
+        );
+      }
+    }
+    ```
+
+1. **Update the state reference**
+
+    Update the state reference in the widget file to use the new state type and update the state in the `getData` method to set the `loading` property to `false` after the data is loaded.
+
+    Now, the loading spinner is shown while the data is loading. When the data is loaded, the loading spinner is hidden, and the list data and footer button are shown.
+
+    :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/spinner.gif" alt-text="Graphical representation shows the loading spinner while the data is loading.":::
+
+### How to handle empty state
+
+You can display a specific content in your widget when the data is empty. To do so, you need to modify the `bodyContent` method in your widget file to adopt different states of the data. The following example shows how to display an empty image when the data of `ListWidget` is empty.
+
+```typescript
+bodyContent(): JSX.Element | undefined {
+    let hasData = this.state.data && this.state.data.length > 0;
+    return (
+      <div style={bodyContentStyle()}>
+        {hasData ? (
+          <>
+            {this.state.data?.map((t: ListModel) => {
+              ...
+            })}
+          </>
+        ) : (
+          <div
+            style={{
+              display: "grid",
+              gap: "1rem",
+              justifyContent: "center",
+              alignContent: "center",
+            }}
+          >
+            <Image src="empty-default.svg" height="150px" />
+            <Text align="center">No data</Text>
+          </div>
+        )}
+      </div>
+    );
+  }
+```
+
+You can use a similar approach to remove the footer content of your widget when the data is empty.
+
+```typescript
+footerContent(): JSX.Element | undefined {
+    let hasData = this.state.data && this.state.data.length > 0;
+    if (hasData) {
+      return (
+        <Button
+          ...
+        </Button>
+      );
+    }
+  }
+```
+
+  Your list widget will look like this when the data is empty:
+
+  :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/no-data.png" alt-text="Screenshot showing no data in the list.":::
+
+### How to refresh data as scheduled
+
+The following example shows how to display real-time data in a widget. The widget displays the current time and updates.
+
+```typescript
+import { Widget } from "../lib/Widget";
+
+interface IRefreshWidgetState {
+  data: string;
+}
+
+export class RefreshWidget extends Widget<IRefreshWidgetState> {
+  bodyContent(): JSX.Element | undefined {
+    return <>{this.state.data}</>;
+  }
+
+  async componentDidMount() {
+    setInterval(() => {
+      this.setState({ data: new Date().toLocaleTimeString() });
+    }, 1000);
+  }
+}
+```
+
+You can modify `setInterval` method to call your own function to refresh data like this `setInterval(() => yourGetDataFunction(), 1000)`.
 
 ## Graph API call
 
@@ -697,22 +834,22 @@ Microsoft Graph API is a web API that you can use to communicate with Microsoft 
 
 **To add a Graph API call**:
 
-* [Call Graph API from the front-end (use delegated permissions)](#call-graph-api-from-the-front-end-use-delegated-permissions).
-* [Call Graph API from the back-end (use application permissions)](#call-graph-api-from-the-back-end-use-application-permissions).
+* [Call Graph API from the front-end (use delegated permissions)](#call-graph-api-from-the-front-end-use-delegated-permissions)
+* [Call Graph API from the back-end (use application permissions)](#call-graph-api-from-the-back-end-use-application-permissions)
 
 ### Call Graph API from the front-end (use delegated permissions)
 
 If you want to call a Graph API from the front-end tab, refer to the following steps:
 
 1. Consent delegated permissions first
-1. Create a graph client by adding the scope related to the Graph API you want to call
-1. Call the Graph API, and parse the response into a certain model, which will be used by front-end
+1. Create a Graph client by adding the scope related to the Graph API you want to call
+1. Call the Graph API and parse the response into a certain model, which will be used by front-end
 
 **Consent delegated permissions first**
 
 You can call `addNewPermissionScope(scopes: string[])` to consent the scopes of permissions you want to add. The consented status will be preserved in a global context `FxContext`.
 
-**Create a graph client by adding the scope related to the Graph API you want to call**
+**Create a Graph client by adding the scope related to the Graph API you want to call**
 
 Refer to the following code snippet:
 
@@ -722,7 +859,7 @@ teamsfx = FxContextInstance.getTeamsFx();
 const graphClient = createMicrosoftGraphClient(teamsfx, scope);
 ```
 
-**Call the Graph API, and parse the response into a certain model, which will be used by front-end**
+**Call the Graph API and parse the response into a certain model, which will be used by front-end**
 
 Refer to the following code snippet:
 
@@ -737,10 +874,10 @@ try {
 
 If you want to call a Graph API from the back-end, you can refer to the following steps:
 
-1. Consent application permissions.
-1. Add an Azure Function.
-1. Add your logic in Azure Function.
-1. Call the Azure Function from the front-end.
+1. Consent application permissions
+1. Add an Azure Function
+1. Add your logic in Azure Function
+1. Call the Azure Function from the front-end
 
 **Consent application permissions first**
 
@@ -759,13 +896,13 @@ If you want to call a Graph API from the back-end, you can refer to the followin
 
 **Add an Azure Function**
 
-In the left pane of the Visual Studio Code, select **Add features** in **Teams Toolkit**, select **Azure functions**, and enter the function name.
+In the left pane of the Visual Studio Code, select **Add features** in **Teams Toolkit**, select **Azure Functions**, and enter the function name.
 
-:::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/azure-functions.png" alt-text="Screenshot shows the selection of azure functions.":::
+:::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/azure-functions.png" alt-text="Screenshot shows the selection of Azure Functions.":::
 
 **Add your logic in Azure Function**
 
-In the `index.ts`/`index.ts` under the folder named in Azure function, you can add your logic that contains back-end Graph API calling with application permissions. Refer to the following code snippet:
+In the `index.ts`/`index.ts` under the folder named in Azure Function, you can add your logic that contains back-end Graph API calling with application permissions. Refer to the following code snippet:
 
 ```typescript
 /**
@@ -832,146 +969,7 @@ async function callFunction(teamsfx) {
 For more information, see:
 
 * [sample](https://github.com/OfficeDev/TeamsFx-Samples/blob/dev/hello-world-tab-with-backend/tabs/src/components/sample/AzureFunctions.tsx)
-* [Azure functions](/azure/azure-functions/functions-reference?tabs=blob)
-
-## How to include a data loader
-
-If you want to include a data loader to your widget before the widget is loaded, you can add a property to the state of the widget to indicate that the data loader is loading. This property can be used to show a loading indicator to the user.
-
-The following steps show how to add a property to the state of `ListWidget` and how to use it to show a loading spinner while the data is loading.
-
-1. **Define a state type**
-
-   Define a state type including a property named loading that indicates whether the data is loading.
-
-    ```typescript
-    interface ListWidgetState {
-      data: ListModel[];
-      loading?: boolean;
-    }
-    ```
-
-1. **Add a data loader**
-
-Modify the `bodyContent` method to show a loading spinner if data is loading.
-
-```typescript
-bodyContent(): JSX.Element | undefined {
-  return (
-    <>
-      {this.state.loading !== false ? (
-        <div style={{ display: "grid", justifyContent: "center", height: "100%" }}>
-          <Spinner label="Loading..." labelPosition="below" />
-        </div>
-      ) : (
-        <div style={bodyContentStyle()}>
-          ...
-        </div>
-      )}
-    </>
-  );
-}
-```
-
-1. **Hide the footer button if data is loading**
-
-    ```typescript
-    footerContent(): JSX.Element | undefined {
-      if (this.state.loading === false) {
-        return (
-          <Button
-            ...
-          </Button>
-        );
-      }
-    }
-    ```
-
-1. **Update the state reference**
-
-Update the state reference in the widget file to use the new state type and update the state in the `getData` method to set the `loading` property to `false` after the data is loaded.
-
-Now, the loading spinner is shown while the data is loading. When the data is loaded, the loading spinner is hidden, and the list data and footer button are shown.
-
-:::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/spinner.gif" alt-text="Gif showing the loading spinner while the data is loading.":::
-
-## How to handle empty state
-
-You can display a specific content in your widget when the data is empty. To do so, you need to modify the `bodyContent` method in your widget file to adopt different states of the data. The following example shows how to display an empty image when the data of ListWidget is empty.
-
-```typescript
-bodyContent(): JSX.Element | undefined {
-    let hasData = this.state.data && this.state.data.length > 0;
-    return (
-      <div style={bodyContentStyle()}>
-        {hasData ? (
-          <>
-            {this.state.data?.map((t: ListModel) => {
-              ...
-            })}
-          </>
-        ) : (
-          <div
-            style={{
-              display: "grid",
-              gap: "1rem",
-              justifyContent: "center",
-              alignContent: "center",
-            }}
-          >
-            <Image src="empty-default.svg" height="150px" />
-            <Text align="center">No data</Text>
-          </div>
-        )}
-      </div>
-    );
-  }
-```
-
-You can use a similar approach to remove the footer content of your widget when the data is empty.
-
-```typescript
-footerContent(): JSX.Element | undefined {
-    let hasData = this.state.data && this.state.data.length > 0;
-    if (hasData) {
-      return (
-        <Button
-          ...
-        </Button>
-      );
-    }
-  }
-```
-
-  Your list widget will look like this when the data is empty:
-
-  :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/no-data.png" alt-text="Screenshot showing no data in the list.":::
-
-## How to refresh data as scheduled
-
-The following example shows how to display real-time data in a widget. The widget displays the current time and updates every second.
-
-```typescript
-import { Widget } from "../lib/Widget";
-
-interface IRefreshWidgetState {
-  data: string;
-}
-
-export class RefreshWidget extends Widget<IRefreshWidgetState> {
-  bodyContent(): JSX.Element | undefined {
-    return <>{this.state.data}</>;
-  }
-
-  async componentDidMount() {
-    setInterval(() => {
-      this.setState({ data: new Date().toLocaleTimeString() });
-    }, 1000);
-  }
-}
-```
-
-You can modify `setInterval` method to call your own function to refresh data, like this: `setInterval(() => yourGetDataFunction(), 1000)`.
+* [Azure Functions](/azure/azure-functions/functions-reference?tabs=blob)
 
 ## Step-by-step guide
 
