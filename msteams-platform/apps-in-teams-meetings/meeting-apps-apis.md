@@ -349,7 +349,7 @@ POST /v1/meetings/{meetingId}/notification
 | `surface` | A type of surface. The supported surface type is `meetingStage`. |
 | `surfaces` | List of surfaces where notifications can be rendered. |
 | `contentType` | Type of content that the targeted in-meeting notification renders. The supported value is `task`. |
-| `content` | [TaskModuleContinueResponse](/dotnet/api/microsoft.bot.schema.teams.taskmodulecontinueresponse?view=botbuilder-dotnet-stable) |
+| `content` | [TaskModuleContinueResponse](/dotnet/api/microsoft.bot.schema.teams.taskmodulecontinueresponse?view=botbuilder-dotnet-stable&preserve-view=true) |
 | `content.value.height` | **Optional**; requested height of the notification. |
 |`content.value.width` | **Optional**; requested width of the notification. |
 | `content.value.title` | **Optional**; title of the notification. |
