@@ -123,27 +123,27 @@ The following files provide the business logic for the dashboard tab. These file
 
 | **File** | **Content** |
 |---|---|
-| **src/models/listModel.tsx** | Data model for the list widget. |
-| **src/services/listService.tsx** | A data retrieve implementation for the list widget. |
-| **src/views/dashboards/SampleDashboard.tsx** | A sample dashboard layout implementation. |
-| **src/views/lib/Dashboard.styles.ts** | The dashboard style file. |
-| **src/views/lib/Dashboard.tsx** | A base class that defines the dashboard. |
-| **src/views/lib/Widget.styles.ts** | The widget style file. |
-| **src/views/lib/Widget.tsx** | An abstract class that defines the widget. |
-| **src/views/styles/ListWidget.styles.ts** | The list widget style file. |
-| **src/views/widgets/ChartWidget.tsx** | A widget implementation that can display a chart. |
-| **src/views/widgets/ListWidget.tsx** | A widget implementation that can display a list. |
+| src/models/listModel.tsx | Data model for the list widget. |
+| src/services/listService.tsx | A data retrieve implementation for the list widget. |
+| src/views/dashboards/SampleDashboard.tsx** | A sample dashboard layout implementation. |
+| src/views/lib/Dashboard.styles.ts | The dashboard style file. |
+| src/views/lib/Dashboard.tsx | A base class that defines the dashboard. |
+| src/views/lib/Widget.styles.ts | The widget style file. |
+| src/views/lib/Widget.tsx | An abstract class that defines the widget. |
+| src/views/styles/ListWidget.styles.ts | The list widget style file. |
+| src/views/widgets/ChartWidget.tsx | A widget implementation that can display a chart. |
+| src/views/widgets/ListWidget.tsx | A widget implementation that can display a list. |
 
 The following files are project-related files and you need not need to customize these files:
 
 | **File** | **Content**|
 |---|---|
-| **src/index.tsx** | Application entry point. |
-| **src/App.tsx** | Application route. |
-| **src/internal/addNewScopes.ts** | Implementation of new scopes added. |
-| **src/internal/context.ts** | `TeamsFx` Context.
-| **src/internal/login.ts** | Implementation of login. |
-| **src/internal/singletonContext.ts** | Implementation of the TeamsFx instance singleton. |
+| src/index.tsx | Application entry point. |
+| src/App.tsx | Application route. |
+| src/internal/addNewScopes.ts | Implementation of new scopes added. |
+| src/internal/context.ts | `TeamsFx` Context.
+| src/internal/login.ts | Implementation of login. |
+| src/internal/singletonContext.ts | Implementation of the TeamsFx instance singleton. |
 
 ## Customize the dashboard layout
 
@@ -798,7 +798,7 @@ footerContent(): JSX.Element | undefined {
   }
 ```
 
-  Your list widget will look like this when the data is empty:
+  Following is an example of list widget when the data is empty:
 
   :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/no-data.png" alt-text="Screenshot showing no data in the list.":::
 
