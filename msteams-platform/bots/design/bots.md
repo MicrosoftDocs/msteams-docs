@@ -139,8 +139,9 @@ You can use bots in the following contexts:
 |1|**App name and icon**|
 |2|**Chat tab**: Opens the space to talk with your bot (applicable only to personal apps).|
 |3|**Custom tabs**: Opens other content related to your app.|
-|4|**Chat bubble**: Bot conversations use the Teams messaging framework.|
-|5|**Adaptive Card**: If your bot's responses include Adaptive Cards, the card takes up the full width of the chat bubble.|
+|4|**About tab**: Displays basic information about your app.|
+|5|**Chat bubble**: Bot conversations use the Teams messaging framework.|
+|6|**Adaptive Card**: If your bot's responses include Adaptive Cards, the card takes up the full width of the chat bubble.|
 
 #### Desktop
 
