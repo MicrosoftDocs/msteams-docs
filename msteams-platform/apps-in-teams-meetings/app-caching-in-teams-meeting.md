@@ -34,7 +34,7 @@ The following is the flow diagram of the launch of cached app:
 
 ## Enable app caching
 
-To enable app caching in your meeting side panel, follow the steps:
+To enable app caching in your apps in Teams meeting side panel, follow the steps:
 
 1. Use `contentUrl` and `entityId` passed into the load handler to route to the correct page within your app and invoke `notifySuccess` or `notifyFailure` to notify Teams client that the app initialization flow is complete.
 
