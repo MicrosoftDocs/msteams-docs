@@ -611,7 +611,7 @@ You can follow the steps to use Microsoft Graph Toolkit as your widget content:
 
 1. Add a new Graph Toolkit widget
 
-      Create a new widget file in your project **tabs/src/views/widgets** folder. For example, **GraphyWidget.tsx**. In this widget, we'll guide users to consent our app to access Microsoft Graph and then show the user's `Todo` list by using Microsoft Graph Toolkit.
+      Create a new widget file in your project tabs/src/views/widgets folder. For example, **GraphyWidget.tsx**. In this widget, we'll guide users to consent our app to access Microsoft Graph and then show the user's `Todo` list by using Microsoft Graph Toolkit.
 
       The following code is an example of using `Todo`component from Microsoft Graph Toolkit in widget:
 
