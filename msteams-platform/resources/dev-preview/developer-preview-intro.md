@@ -26,7 +26,7 @@ Using an app that contains developer preview features may cause clients that hav
 ### On a desktop or web client
 
 > [!NOTE]
-> If your tenant is enrolled for [Microsoft 365 Targeted Releases](https://learn.microsoft.com/microsoft-365/admin/manage/release-options-in-office-365) developer preview is automatically enabled and you will not see the option to switch to developer preview.
+> If your tenant is enrolled for [Microsoft 365 Targeted Releases](/microsoft-365/admin/manage/release-options-in-office-365) developer preview is automatically enabled and you will not see the option to switch to developer preview.
 
 To enable the public developer preview on a desktop or web client:
 
