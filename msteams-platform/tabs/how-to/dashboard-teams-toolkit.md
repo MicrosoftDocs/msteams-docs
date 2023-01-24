@@ -611,64 +611,64 @@ You can follow the steps to use Microsoft Graph Toolkit as your widget content:
 
 1. Add a new Graph Toolkit widget
 
-  Create a new widget file in your project **tabs/src/views/widgets** folder. For example, **GraphyWidget.tsx**. In this widget, we'll guide users to consent our app to access Microsoft Graph and then show the user's `Todo` list by using Microsoft Graph Toolkit.
+      Create a new widget file in your project **tabs/src/views/widgets** folder. For example, **GraphyWidget.tsx**. In this widget, we'll guide users to consent our app to access Microsoft Graph and then show the user's `Todo` list by using Microsoft Graph Toolkit.
 
-  The following code is an example of using `Todo`component from Microsoft Graph Toolkit in widget:
+      The following code is an example of using `Todo`component from Microsoft Graph Toolkit in widget:
 
-  ```typescript
-    import { Providers, ProviderState, Todo } from "@microsoft/mgt-react";
-    import { TeamsFxProvider } from "@microsoft/mgt-teamsfx-provider";
-    
-    import { loginAction } from "../../internal/login";
-    import { TeamsUserCredentialContext } from "../../internal/singletonContext";
-    import { Widget } from "../lib/Widget";
-    
-    interface IGraphWidgetState {
-      needLogin: boolean;
-    }
-    
-    export class GraphWidget extends Widget<IGraphWidgetState> {
-      protected bodyContent(): JSX.Element | undefined {
-        return <div>{this.state.needLogin === false && <Todo />}</div>;
-      }
-    
-      async componentDidMount() {
-        super.componentDidMount();
-    
-        // Initialize TeamsFx provider
-        const provider = new TeamsFxProvider(TeamsUserCredentialContext.getInstance().getCredential(), [
-          "Tasks.ReadWrite",
-        ]);
-        Providers.globalProvider = provider;
-    
-        // Check if user is signed in
-        if (await this.checkIsConsentNeeded()) {
-          await loginAction(["Tasks.ReadWrite"]);
+      ```typescript
+        import { Providers, ProviderState, Todo } from "@microsoft/mgt-react";
+        import { TeamsFxProvider } from "@microsoft/mgt-teamsfx-provider";
+        
+        import { loginAction } from "../../internal/login";
+        import { TeamsUserCredentialContext } from "../../internal/singletonContext";
+        import { Widget } from "../lib/Widget";
+        
+        interface IGraphWidgetState {
+          needLogin: boolean;
         }
-    
-        // Update signed in state
-        Providers.globalProvider.setState(ProviderState.SignedIn);
-        this.setState({ needLogin: false });
-      }
-    
-      /**
-       * Check if user needs to consent
-       * @returns true if user needs to consent
-       */
-      async checkIsConsentNeeded() {
-        let needConsent = false;
-        try {
-          await TeamsUserCredentialContext.getInstance().getCredential().getToken(["Tasks.ReadWrite"]);
-        } catch (error) {
-          needConsent = true;
+        
+        export class GraphWidget extends Widget<IGraphWidgetState> {
+          protected bodyContent(): JSX.Element | undefined {
+            return <div>{this.state.needLogin === false && <Todo />}</div>;
+          }
+        
+          async componentDidMount() {
+            super.componentDidMount();
+        
+            // Initialize TeamsFx provider
+            const provider = new TeamsFxProvider(TeamsUserCredentialContext.getInstance().getCredential(), [
+              "Tasks.ReadWrite",
+            ]);
+            Providers.globalProvider = provider;
+        
+            // Check if user is signed in
+            if (await this.checkIsConsentNeeded()) {
+              await loginAction(["Tasks.ReadWrite"]);
+            }
+        
+            // Update signed in state
+            Providers.globalProvider.setState(ProviderState.SignedIn);
+            this.setState({ needLogin: false });
+          }
+        
+          /**
+           * Check if user needs to consent
+           * @returns true if user needs to consent
+           */
+          async checkIsConsentNeeded() {
+            let needConsent = false;
+            try {
+              await TeamsUserCredentialContext.getInstance().getCredential().getToken(["Tasks.ReadWrite"]);
+            } catch (error) {
+              needConsent = true;
+            }
+            return needConsent;
+          }
         }
-        return needConsent;
-      }
-    }
-    
-  ```
+        
+      ```
 
-  For more information, refer [Microsoft Graph Toolkit](/graph/toolkit/overview).
+      For more information, refer [Microsoft Graph Toolkit](/graph/toolkit/overview).
 
 1. Add the widget to dashboard layout. Include the new widget in your dashboard file:
 
