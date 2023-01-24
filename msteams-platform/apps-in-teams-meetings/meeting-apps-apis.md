@@ -32,7 +32,7 @@ The following table provides a list of APIs available across the Microsoft Teams
 |[**Get real-time Teams meeting events**](#get-real-time-teams-meeting-events-api)|Fetch real-time meeting events, such as actual start and end time.| [Microsoft Bot Framework SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingstartasync?view=botbuilder-dotnet-stable&preserve-view=true) |
 | [**Get incoming audio state**](#get-incoming-audio-state) | Allows an app to get the incoming audio state setting for the meeting user.| [Microsoft Teams JavaScript client library](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
 | [**Toggle incoming audio**](#toggle-incoming-audio) | Allows an app to toggle the incoming audio state setting for the meeting user from mute to unmute or vice-versa.| [Microsoft Teams JavaScript client library](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
-|[Targeted in-meeting notification API](#targeted-in-meeting-notification-api) | Targeted in-meeting notification allows you to send notification to specific participants during the meeting. | [Microsoft Bot Framework SDK ](Work in progress.) |
+|[Targeted meeting notification API](#targeted-meeting-notification-api) | Allows you to send notification to specific participants during the meeting. | [Microsoft Bot Framework SDK ](Work in progress.) |
 
 ## Get user context API
 
@@ -284,9 +284,9 @@ The following table includes the response codes:
 | **403** | The app is unable to send the signal. 403 response code can occur because of various reasons, such as the tenant admin disables and blocks the app during live site migration. In this case, the payload contains a detailed error message. |
 | **404** | The meeting chat doesn't exist. |
 
-## Targeted in-meeting notification API
+## Targeted meeting notification API
 
-The `targetedMeetingNotification` API allows apps to send notifications to specific participants in a meeting. Apps send targeted in-meeting notifications based on user action. The API is available through bot API.
+The `targetedMeetingNotification` API allows apps to send targeted in-meeting notifications to specific participants in a meeting. Apps send targeted in-meeting notifications based on user action. The API is available through bot API.
 
 > [!NOTE]
 >
@@ -300,7 +300,7 @@ Get supported user ID format for targeted in-meeting notification:
 
 ### Example
 
-Following is an example of request payload:
+Following is an example of request payload for targeted in-meeting notification:
 
 ```http
 POST /v1/meetings/{meetingId}/notification
@@ -346,8 +346,10 @@ POST /v1/meetings/{meetingId}/notification
 | `meetingId` | The meeting ID is available through bot invoke and TeamsJS library. |
 | `type` |`targetedMeetingNotification` |
 | `recipients` | List of user IDs. Get user IDs for meeting participants through [Get participant API](#get-participant-api). Get the entire list of chat roster using [Get members API](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile). Empty or null recipients list will return 400.|
-| `surface` | `meetingStage` keyword. |
-| `contentType` | `task` keyword. |
+| `surface` | A type of surface. The supported surface type is `meetingStage`. |
+| `surfaces` | List of surfaces where notifications can be rendered. |
+| `contentType` | Type of content that the targeted in-meeting notification renders. The supported value is `task`. |
+| `content` | [TaskModuleContinueResponse](/dotnet/api/microsoft.bot.schema.teams.taskmodulecontinueresponse?view=botbuilder-dotnet-stable) |
 | `content.value.height` | **Optional**; requested height of the notification. |
 |`content.value.width` | **Optional**; requested width of the notification. |
 | `content.value.title` | **Optional**; title of the notification. |

@@ -1,7 +1,7 @@
 ---
 title: Build in-meeting notification for Teams meeting
 author: v-sdhakshina
-description: Learn how to build in-meeting and targeted meeting notifications for Microsoft Teams meeting with code samples.
+description: Learn how to build in-meeting and targeted in-meeting notifications for Microsoft Teams meeting with code samples.
 ms.topic: conceptual
 ms.author: v-sdhakshina
 ms.localizationpriority: medium
@@ -55,7 +55,7 @@ The following table provides the user types and lists the features that each use
 
 ## Targeted in-meeting notification
 
-Targeted in-meeting notification allows apps to send notifications to specific participants in a meeting. The notifications are private and are sent only to specific or targeted participants. Targeted in-meeting notification helps to enhance meeting experience and develop user engagement activities in Teams meetings.
+Targeted in-meeting notification allows apps to send notifications to specific participants on a meeting stage. The notifications are private and are sent only to specific or targeted participants. Targeted in-meeting notification helps to enhance meeting experience and develop user engagement activities in Teams meetings.
 
 > [!NOTE]
 > Targeted in-meeting notification is supported for scheduled meetings, instant meeting (Meet now), one-on-one calls, and group calls.
@@ -85,7 +85,7 @@ To send targeted in-meeting notifications, you must configure the `authorization
 ### Enable targeted in-meeting notification
 
 > [!NOTE]
-> You can send a targeted in-meeting notification to 50 participants in a meeting. If you want to send a targeted in-meeting notification to more than 50 participants, you must call the `targetedMeetingNotification` API again.
+> You can only send a targeted in-meeting notification to 50 meeting participants in a single API call. If you want to send a targeted in-meeting notification to more than 50 participants, you must call the `targetedMeetingNotification` API again.
 
 Targeted in-meeting notification can be triggered by user action.
 
@@ -145,7 +145,7 @@ To enable the targeted in-meeting notification:
 
      Targeted in-meeting notification is enabled.
 
-For more information on `targetedMeetingNotification` API, see [Targeted in-meeting notification API](meeting-apps-apis.md#targeted-in-meeting-notification-api).
+For more information on `targetedMeetingNotification`, see [Targeted meeting notification API](meeting-apps-apis.md#targeted-meeting-notification-api).
 
 ## Code sample
 
