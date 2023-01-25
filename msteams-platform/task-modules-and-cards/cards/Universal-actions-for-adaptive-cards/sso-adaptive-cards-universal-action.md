@@ -11,11 +11,13 @@ ms.localizationpriority: medium
 Authentication steps for single sign-on (SSO) are similar to that of a bot in Teams. Following are the steps to achieve SSO in Adaptive Cards Universal Action.
 
 > [!NOTE]
-> To implement SSO flow, you must have a personal scope declared for your bot in the app manifest. When a user invokes the SSO flow via the Adaptive Card `Action.Execute` protocol, the user is prompted to install the app in a personal scope if it isn't installed already.
+> To implement SSO flow, you must have an one-on-one chat declared for your bot in the app manifest. When a user invokes the SSO flow via the Adaptive Card `Action.Execute` protocol, the user is prompted to install the app in a personal scope if it isn't installed already.
 
 ## Add code to handle an access token
 
-If there's a cached token, the bot uses the same token. If there's no token available, the bot creates an OAuth card and places it in an invoke response with the following values that includes a `tokenExchangeResource`:
+Your bot is configured in Azure AD for access token and now you update the code to handle the access token for Adaptive Cards Universal Actions in bot.
+
+If there's a cached token, the bot uses the same token. If there's no token available, the Adaptive Cards send an Invoke response to the bot service and the bot service creates an OAuth card with the following values that includes a `tokenExchangeResource`:
 
 ```JSON
 {
@@ -108,8 +110,8 @@ The following are the steps to receive token:
     ```
 
 1. The channel delivers this invoke to the bot, which uses the token to finalize the token exchange process with the Token Service and Azure AD. The Token Service delivers the user's access token to the bot.
-   * Receivers ignore the authentication if the value is incorrect.
-   * Receivers that experience an error while performing token exchange must respond with an error or a second sign-in request that doesn't include SSO information. If responding with an error, the error must be:
+   * Teams client ignore the authentication if the value is incorrect.
+   * Teams client that experience an error while performing token exchange must respond with an error or a second sign-in request that doesn't include SSO information. If responding with an error, the error must be:
 
         ```javascript
          {
@@ -138,5 +140,4 @@ The following are the steps to receive token:
 ## See also
 
 * [Work with Universal Actions for Adaptive Cards](Work-with-Universal-Actions-for-Adaptive-Cards.md)
-* [SSO for your Adaptive Cards Universal Actions](enable-sso-for-your-adaptive-cards-universal-action.md)
-* [Enable SSO for your Adaptive Cards Universal Actions](sso-adaptive-cards-universal-action.md)
+* [Enable SSO for your app](../../../bots/how-to/authentication/bot-sso-overview.md)
