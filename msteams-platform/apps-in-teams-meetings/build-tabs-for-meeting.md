@@ -105,7 +105,7 @@ The `context` property determines if the app is available in specific view after
 | **meetingChatTab** | A tab in the header of a group chat between a set of users for a scheduled meeting. You can specify either **meetingChatTab** or **meetingDetailsTab** to ensure the apps work in mobile. |
 | **meetingDetailsTab** | A tab in the header of the meeting details view of the calendar. You can specify either **meetingChatTab** or **meetingDetailsTab** to ensure the apps work in mobile. |
 | **meetingSidePanel** | An in-meeting panel opened through the unified bar (U-bar). |
-| **meetingStage** | An app from the `meetingSidePanel` can be shared to the meeting stage. You can't use this app either on mobile or Teams room clients. |
+| **meetingStage** | An app from the `meetingSidePanel` can be shared to the meeting stage. You can't use this app in Teams room clients. |
 
 #### Configure tab app for a meeting
 
@@ -182,10 +182,10 @@ The following table provides the user types and lists the features that each use
 
 | User type | Scheduled meeting or Instant calendar meeting | One-on-one call | Group call | Scheduled channel meeting |
 | :-- | :-- | :-- | :-- | :-- |
-| In-tenant user | Interaction allowed for all roles.<br><br> Create, update, or delete is allowed for all except the Attendees. | Interaction and create, update, or delete allowed. <br><br> In-tenant users in call with federated users can't interact and create, update, or delete. | Interaction and create, update, or delete allowed.<br><br> In-tenant users in call with federated users can't interact and create, update, or delete. | Interaction and create, update, or delete allowed for all roles except for attendees. |
-| Guest user | Can interact only | Can interact only | Can interact only | Can interact only. |
-| Federated user or External user | Can interact only | Not available | Not available | Can interact only |
-| Anonymous user | Not available | Not available | Not available | Not available |
+| In-tenant | Interaction allowed for all roles.<br><br> Create, update, or delete is allowed for all except the Attendees. | Interaction and create, update, or delete allowed. <br><br> In-tenant users in call with federated users can't interact and create, update, or delete. | Interaction and create, update, or delete allowed.<br><br> In-tenant users in call with federated users can't interact and create, update, or delete. | Interaction and create, update, or delete allowed for all roles except for attendees. |
+| Guest | Can interact only | Can interact only | Can interact only | Can interact only. |
+| Federated or External | Can interact only | Not available | Not available | Can interact only |
+| Anonymous | Not available | Not available | Not available | Not available |
 
 ## Code sample
 
@@ -199,7 +199,7 @@ The following table provides the user types and lists the features that each use
 
 > [!NOTE]
 >
-> * Meeting apps (side panel and meeting stage) are supported in Teams desktop client.
+> * Meeting apps (side panel and meeting stage) are supported in Teams desktop and mobile clients.
 > * Meeting apps (side panel and meeting stage) in Teams web client is supported only when the [developer preview is enabled](/microsoftteams/platform/resources/dev-preview/developer-preview-intro#enable-developer-preview).
 
 ## Step-by-step guides
