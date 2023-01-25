@@ -24,7 +24,7 @@
   items:
   - name: Overview
     href: get-started/get-started-overview.md
-    displayName: First Teams app, Python, C#, Java, Node.js
+    displayName: First Teams app, Python, .NET, Java, Node.js
   - name: Build your first tab app using JavaScript
     href: sbs-gs-javascript.yml
   - name: Build your first bot app using JavaScript
@@ -210,6 +210,7 @@
       displayName: dashboard
   - name: Teams JavaScript client library
     href: tabs/how-to/using-teams-client-library.md
+    displayName: execute URL
   - name: Node.js Bot Framework for bots and message extensions (GitHub)
     href: https://github.com/Microsoft/botbuilder-js
   - name: .NET Bot Framework for bots and message extensions (GitHub)
@@ -492,7 +493,7 @@
     displayName: HMAC security token
   - name: Create Incoming Webhooks
     href: webhooks-and-connectors/how-to/add-incoming-webhook.md
-  - name: Create Office 365 Connectors
+  - name: Create connectors for Microsoft 365 Groups
     href: webhooks-and-connectors/how-to/connectors-creating.md
   - name: Create and send messages
     href: webhooks-and-connectors/how-to/connectors-using.md
@@ -820,15 +821,15 @@
     - name: Collaboration controls and Settings API
       items:
       - name: Overview
-        href: /rest/api/industry/collaboration-controls/
+        href: samples/collaboration-api-reference.md
       - name: Collaboration - Custom APIs
-        href: /rest/api/industry/collaboration-controls/collaboration-custom-ap-is
+        href: /rest/api/industry/collaboration-controls/collaboration-custom-apis
       - name: Collaboration - Standard OData APIs
-        href: /rest/api/industry/collaboration-controls/collaboration-standard-o-data-ap-is
+        href: /rest/api/industry/collaboration-controls/collaboration-standard-o-data-apis
       - name: Settings - Custom APIs
-        href: /rest/api/industry/collaboration-controls/settings-custom-ap-is
+        href: /rest/api/industry/collaboration-controls/settings-custom-apis
       - name: Settings - Standard OData APIs
-        href: /rest/api/industry/collaboration-controls/settings-standard-o-data-ap-is
+        href: /rest/api/industry/collaboration-controls/settings-standard-o-data-apis
     - name: Limitations for Collaboration control   
       href: samples/collaboration-controls-limitations.md
   - name: App templates for Microsoft Teams

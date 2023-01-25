@@ -13,9 +13,6 @@ Universal Actions for Adaptive Cards bring the bot as the common backend for han
 
 This document helps you to understand how you can use Universal Actions model to enhance user experience of interacting with Adaptive Cards across platforms and applications.
 
-> [!NOTE]
-> Support for Universal Actions for Adaptive Cards v1.5 is only available for cards sent by bot. Support for cards sent through compose box and link unfurling cards is coming soon.
-
 ## Enhance user experiences with Universal Actions for Adaptive Cards
 
 Universal Actions for Adaptive Cards enhance user experience by enabling the following scenarios:
