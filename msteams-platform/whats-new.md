@@ -1,6 +1,6 @@
 ---
 title: What is new and updated for developers in Teams
-description: Learn about new Microsoft Teams developer features and updates to existing features, deprecation notes, and changes. Subscribe to the RSS feed for latest updates.
+description: Learn about new Microsoft Teams developer features and updates to existing features, deprecation notes, and changes. Subscribe to the RSS feed for latest updates
 ms.topic: reference
 ms.localizationpriority: high
 zone_pivot_groups: What-new-features
@@ -26,11 +26,9 @@ Teams platform features that are available to all app developers.
 
 **2022 December**
 
-* ***December 8, 2022***: [Teams developer documentation FAQs](teams-faq.md)
-
-* ***December 07, 2022***: [Notification bot in Teams](bots/how-to/conversations/notification-bot-in-teams.md)
-
-* ***December 07, 2022***: [Command bot in Teams](bots/how-to/conversations/command-bot-in-teams.md)
+* ***December 8, 2022***: [Introducing Teams developer documentation FAQs](teams-faq.md)
+* ***December 7, 2022***: [Introducing notification bot in Teams](bots/how-to/conversations/notification-bot-in-teams.md)
+* ***December 7, 2022***: [Introducing command bot in Teams](bots/how-to/conversations/command-bot-in-teams.md)
 
 :::column-end:::
 :::row-end:::
@@ -298,9 +296,11 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 
 Developer preview is a public program that provides early access to unreleased Teams platform features.
 
-**2022 December**
+**2022 November**
 
-***December 05, 2022***: [Introduced share in meeting to share any document or third-party app to the meeting stage](concepts/build-and-test/share-in-meeting.md).
+ ***November 10, 2022***: [Enable bots to receive all chat messages without being @mentioned.](bots/how-to/conversations/channel-messages-with-rsc.md)
+
+ ***November 10, 2022***: [Generate a deep link to share content to stage in meetings.](concepts/build-and-test/share-in-meeting.md)
 
 :::column-end:::
 :::row-end:::
@@ -315,7 +315,6 @@ Developer preview is a public program that provides early access to unreleased T
 | 08/03/2022 | Mute and unmute APIs for apps in Teams meeting stage | Build apps for Teams meetings and calls > [Meeting apps API references](/microsoftteams/platform/apps-in-teams-meetings/api-references?tabs=dotnet) |
 | 08/02/2022| Collaboration controls for Teams| Integrate with Teams > [Collaboration controls](samples/collaboration-control.md) |
 |05/24/2022| Enhanced collaboration with Live Share SDK | Build apps for Teams meetings > Enhanced collaboration with Live Share > [Overview](apps-in-teams-meetings/teams-live-share-overview.md) |
-| 01/17/2022 | People Picker in Adaptive cards for mobile | Build cards and task modules > Build cards > [People Picker in Adaptive Cards](task-modules-and-cards/cards/people-picker.md)|
 | 10/28/2021 |Bots can be enabled to receive all channel messages using resource-specific consent (RSC) | • Build bots > Bot conversations > [bot conversation overview](~/bots/how-to/conversations/conversation-basics.md) </br> • Build bots > Bot conversations > [channel and group conversations](~/bots/how-to/conversations/channel-and-group-conversations.md) |
 | 06/16/2021 | Resource-specific consent for chats | • Utilize Teams data with Microsoft Graph > [Resource-specific consent](graph-api/rsc/resource-specific-consent.md) </br> • Test your app > Microsoft Graph > [Test resource-specific consent permissions in Teams](graph-api/rsc/test-resource-specific-consent.md)|
 
