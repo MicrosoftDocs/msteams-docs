@@ -17,7 +17,7 @@ Authentication steps for single sign-on (SSO) are similar to that of a bot in Te
 
 Your bot is configured in Azure Active Directory (Azure AD) for access token and now you update the code to handle the access token for Adaptive Cards Universal Actions in bot.
 
-If there's a cached token, the bot uses the same token. If there's no token available, the Adaptive Cards send an Invoke response to the bot service and the bot service creates an OAuth card with the following values that includes a `tokenExchangeResource` to designate an SSO operation:
+If there's a cached token, the bot uses the same token. If there's no token available, the Adaptive Card sends an invoke response to the bot service and the bot service creates an OAuth card with the following values that includes a `tokenExchangeResource` to designate an SSO operation:
 
 ```JSON
 {
@@ -131,4 +131,4 @@ The following are the steps to receive token:
 ## See also
 
 * [Work with Universal Actions for Adaptive Cards](Work-with-Universal-Actions-for-Adaptive-Cards.md)
-* [Enable SSO for your app](../../../bots/how-to/authentication/bot-sso-overview.md)
+* [Enable SSO for your bot app](../../../bots/how-to/authentication/bot-sso-overview.md)
