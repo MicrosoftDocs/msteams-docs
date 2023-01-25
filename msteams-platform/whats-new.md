@@ -24,7 +24,7 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 Teams platform features that are available to all app developers.
 
-**2023 January**
+**2022 December**
 
 ***December 8, 2022***: [Introducing Teams developer documentation FAQs](teams-faq.md).
 ***December 7, 2022***: [Introducing notification bot in Teams](bots/how-to/conversations/notification-bot-in-teams.md)
