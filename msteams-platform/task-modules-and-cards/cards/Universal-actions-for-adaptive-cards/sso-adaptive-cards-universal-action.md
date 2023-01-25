@@ -15,9 +15,9 @@ Authentication steps for single sign-on (SSO) are similar to that of a bot in Te
 
 ## Add code to handle an access token
 
-Your bot is configured in Azure AD for access token and now you update the code to handle the access token for Adaptive Cards Universal Actions in bot.
+Your bot is configured in Azure Active Directory (Azure AD) for access token and now you update the code to handle the access token for Adaptive Cards Universal Actions in bot.
 
-If there's a cached token, the bot uses the same token. If there's no token available, the Adaptive Cards send an Invoke response to the bot service and the bot service creates an OAuth card with the following values that includes a `tokenExchangeResource`:
+If there's a cached token, the bot uses the same token. If there's no token available, the Adaptive Cards send an Invoke response to the bot service and the bot service creates an OAuth card with the following values that includes a `tokenExchangeResource` to designate an SSO operation:
 
 ```JSON
 {
@@ -43,16 +43,9 @@ If there's a cached token, the bot uses the same token. If there's no token avai
 }
 ```
 
-Teams client must include a `tokenExchangeResource` to designate an SSO operation.
+Invoke response is delivered to the Teams client, which uses the `tokenExchangeResource` value and the client token to obtain an on-behalf-of token or exchangeable token from the Azure AD.
 
-> [!NOTE]
-> Teams client triggers the nominal sign-in or OAuth flow when SSO fails. It's highly recommended that you provide a sign-in URL in the above response so that the OAuth flow works.
-
-This response is delivered through the channel to the client, which uses the `tokenExchangeResource` value and the client token to obtain an on-behalf-of token or exchangeable token from the Azure Active Directory (Azure AD).
-
-* Teams clients ignore the `tokenExchangeResource` value for any reason, including invalid values, errors retrieving exchangeable tokens, or not supporting the Azure AD.
-
-* Teams clients that ignore the `tokenExchangeResource` must use the nominal sign-in flow.
+The SSO fails when the Teams clients ignore the `tokenExchangeResource` value for any reason, including invalid values, errors retrieving exchangeable tokens, or not supporting the Azure AD. Then the Teams client triggers the nominal sign-in or OAuth flow. It's highly recommended that you provide a sign-in URL in the above response so that the OAuth flow works.
 
 ## Consent dialog for getting access token
 
@@ -60,11 +53,27 @@ If the app user is using an Adaptive Card for the first time and user consent is
 
    :::image type="content" source="../../../assets/images/authentication/consent-sso-ac.png" alt-text="Screenshot shows you the consent dialog box.":::
 
-Once the user selects **View and accept**, the existing Azure AD permission consent view is launched to show all the permissions and continue with the authentication flow.
+When the user selects **View and accept**, the existing Azure AD permission consent view is launched to show all the permissions and continue with the authentication flow.
 
 ## Add code to receive the token
 
 The following are the steps to receive token:
+
+1. The bot service sends an invoke response with an OAuth card in response to the `adaptiveCard/action` as follows:.
+
+    ```csharp
+            protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext<IInvokeActivity> turnContext, 
+         CancellationToken cancellationToken)
+            {
+              JObject value = JsonConvert.DeserializeObject<JObject>
+              (turnContext.Activity.Value.ToString());
+              JObject authentication = null;
+              if (value["authentication"] != null)
+              {
+              authentication = JsonConvert.DeserializeObject<JObject>(value["authentication"].ToString());
+              }
+            }
+    ```
 
 1. Teams client sends the original `adaptiveCard/action` again to the bot along with the token as follows:
 
@@ -91,26 +100,8 @@ The following are the steps to receive token:
     }
     ```
 
-    * Teams client must include the `authentication` field with a token exchange resource.
-
-1. Teams client sends an invoke response with an OAuth card in response to `adaptiveCard/action` as follows:.
-
-    ```csharp
-            protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext<IInvokeActivity> turnContext, 
-         CancellationToken cancellationToken)
-            {
-              JObject value = JsonConvert.DeserializeObject<JObject>
-              (turnContext.Activity.Value.ToString());
-              JObject authentication = null;
-              if (value["authentication"] != null)
-              {
-              authentication = JsonConvert.DeserializeObject<JObject>(value["authentication"].ToString());
-              }
-            }
-    ```
-
-1. The channel delivers this invoke to the bot, which uses the token to finalize the token exchange process with the Token Service and Azure AD. The Token Service delivers the user's access token to the bot.
-   * Teams client ignore the authentication if the value is incorrect.
+1. Teams client sends an invoke request to the bot. The bot receives the app users consent and uses their identity to help the token exchange process with the bot framework token service and Azure AD. The Bot framework token service delivers the app users access token to the bot.
+   * Teams client ignore the access token if the value is incorrect.
    * Teams client that experience an error while performing token exchange must respond with an error or a second sign-in request that doesn't include SSO information. If responding with an error, the error must be:
 
         ```javascript
