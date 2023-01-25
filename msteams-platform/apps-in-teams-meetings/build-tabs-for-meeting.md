@@ -178,12 +178,12 @@ Microsoft Teams JavaScript library exposes the frameContext in which your meetin
 
 ## App caching
 
-App caching helps apps to launch faster, which gives a better experience for users to return to the app. App caching improves subsequent launch time of the apps that are loaded in the meeting side panel.
+App caching improves subsequent launch time of the apps that are loaded in the meeting side panel by allowing you to keep some resources and assets in memory that you can use when rehydrating app.
 
 > [!NOTE]
 >
 > * Currently, app caching is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
-> * App caching is supported only for tabs loaded in the meeting side panel in Teams desktop client.
+> * App caching is supported only for tabs loaded in the meeting side panel in Teams desktop client. Although app caching works in other contexts such as personal app, chat or channel tabs but officially not supported. It is recommended to  register `onLoad` or `beforeUnload` handlers only when in the sidePanel frameContext.
 
 ### Enable app caching
 
@@ -220,6 +220,7 @@ There are multiple reasons for an app to not get cached or for an app to get rem
 * App caching is disabled if the system memory is less than 4 GB or if the available memory is less than 1 GB on Windows or 512 MB on Mac.
 * Side panel is the only supported FrameContext for app caching in meetings.
 * App caching isn't supported for meetings where the invited user count is more than 20.
+* If an app fails to load, the app isn't cached.
 
 ### Code example
 
@@ -280,7 +281,7 @@ The following are the limitations for app caching:
 
 * Check the amount of free memory on your system. App caching requires minimum of 4 GB system memory.
 
-* Reduce your memory footprint when cached. Use the `beforeUnload` handler to dispose resources that aren't needed when cached.
+* Reduce your memory footprint when cached. Use the `beforeUnload` handler to dispose resources (For example, release references and remove event listeners) that might not be needed when cached.
 
 ## Feature compatibility by user types
 
