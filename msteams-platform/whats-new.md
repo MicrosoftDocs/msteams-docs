@@ -297,7 +297,10 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 
 Developer preview is a public program that provides early access to unreleased Teams platform features.
 
-**2022 December**
+**2022 November**
+
+* **November 10, 2022**: [Enable bots to receive all chat messages without being @mentioned.](bots/how-to/conversations/channel-messages-with-rsc.md)
+* **November 10, 2022**: [Generate a deep link to share content to stage in meetings.](concepts/build-and-test/share-in-meeting.md)
 
 :::column-end:::
 :::row-end:::
