@@ -13,13 +13,13 @@ The Microsoft Teams JavaScript client library (TeamsJS) can help you create host
 * [Tabs](../../tabs/what-are-tabs.md)
 * [Dialogs (Task modules)](../../task-modules-and-cards/what-are-task-modules.md)
 
-Starting with version `2.0.0`, the existing TeamsJS (`@microsoft/teams-js`, or simply `TeamsJS`) has been refactored to enable [Teams apps to run in Outlook and Microsoft 365 app](/microsoftteams/platform/m365-apps/overview), in addition to Microsoft Teams. From a functional perspective, the latest version of TeamsJS supports all existing (v.1.x.x) Teams app functionality while adding the optional ability to host Teams apps in Outlook and Microsoft 365 app.
+Starting with version `2.0.0`, the existing TeamsJS library (`@microsoft/teams-js`, or simply `TeamsJS`) has been refactored to enable [Teams apps to run in Outlook and Microsoft 365 app](/microsoftteams/platform/m365-apps/overview), in addition to Microsoft Teams. From a functional perspective, the latest version of TeamsJS supports all existing (v.1.x.x) Teams app functionality while adding the optional ability to host Teams apps in Outlook and Microsoft 365 app.
 
 Here's the current versioning guidance for various app scenarios:
 
 [!INCLUDE [pre-release-label](~/includes/teamjs-version-details.md)]
 
-The remainder of this article will walk you through the structure and latest updates to the TeamsJS.
+The remainder of this article will walk you through the structure and latest updates to the TeamsJS library.
 
 ## Microsoft 365 support (running Teams apps in Microsoft 365 and Outlook)
 
@@ -91,7 +91,7 @@ These APIs provide the equivalent of navigating to a deep link (as the now depre
 
 #### Deep links out of your app
 
-For deep links from your app to various areas of its current host, use the strongly typed APIs provided by the TeamsJS. For example, use the *Calendar* capability to open a scheduling dialog or calendar item from your app.
+For deep links from your app to various areas of its current host, use the strongly typed APIs provided by the TeamsJS library. For example, use the *Calendar* capability to open a scheduling dialog or calendar item from your app.
 
 For deep links from your app to other apps running in the same host, use `pages.navigateToApp`.
 
@@ -346,7 +346,7 @@ Additionally, this capability has been split into a main capability (`dialog`) f
 
 ##### *teamsCore* namespace
 
-To generalize the TeamsJS to run other Microsoft 365 hosts such as Microsoft 365 app and Outlook, Teams-specific functionality (originally in the *global* namespace) has been moved to a *teamsCore* namespace:
+To generalize the TeamsJS library to run other Microsoft 365 hosts such as Microsoft 365 app and Outlook, Teams-specific functionality (originally in the *global* namespace) has been moved to a *teamsCore* namespace:
 
 | Original namespace `global (window)` | New namespace `teamsCore`  |
 | - | - |
@@ -467,5 +467,5 @@ If you used Teams Toolkit to create your personal app, you can also use it to va
 
 ## Next steps
 
-* Use the [TeamsJS reference](/javascript/api/overview/msteams-client) to get started with the TeamsJS.
+* Use the [TeamsJS library reference](/javascript/api/overview/msteams-client) to get started with the TeamsJS.
 * Review the [changelog](https://github.com/OfficeDev/microsoft-teams-library-js/blob/main/packages/teams-js/CHANGELOG.md) for  latest updates to TeamsJS.
