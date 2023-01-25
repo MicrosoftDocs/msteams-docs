@@ -26,9 +26,9 @@ Teams platform features that are available to all app developers.
 
 **2022 December**
 
-***December 8, 2022***: [Introducing Teams developer documentation FAQs](teams-faq.md)
-***December 7, 2022***: [Introducing notification bot in Teams](bots/how-to/conversations/notification-bot-in-teams.md)
-***December 7, 2022***: [Introducing command bot in Teams](bots/how-to/conversations/command-bot-in-teams.md)
+* ***December 8, 2022***: [Introducing Teams developer documentation FAQs](teams-faq.md)
+* ***December 7, 2022***: [Introducing notification bot in Teams](bots/how-to/conversations/notification-bot-in-teams.md)
+* ***December 7, 2022***: [Introducing command bot in Teams](bots/how-to/conversations/command-bot-in-teams.md)
 
 :::column-end:::
 :::row-end:::
