@@ -183,7 +183,7 @@ App caching improves subsequent launch time of the apps that are loaded in the m
 > [!NOTE]
 >
 > * Currently, app caching is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
-> * App caching is supported only for tabs loaded in the meeting side panel in Teams desktop client. Although app caching works in other contexts such as personal app, chat or channel tabs but officially not supported. It is recommended to  register `onLoad` or `beforeUnload` handlers only when in the sidePanel frameContext.
+> * App caching is supported only for tabs loaded in the meeting side panel in Teams desktop client. It is recommended to register `onLoad` or `beforeUnload` handlers when in the sidePanel frameContext.
 
 ### Enable app caching
 
