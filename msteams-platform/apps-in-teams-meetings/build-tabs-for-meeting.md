@@ -176,9 +176,20 @@ TeamsJS is a rich library used to create Tabs using JavaScript. Use the latest T
 
 Microsoft Teams JavaScript library exposes the frameContext in which your meeting tab URL is loaded in the getContext API. The possible values of frameContext are content, task, setting, remove, sidePanel, and meetingStage. This allows you to build customized experiences based on where the app renders. For example, showing a specific collaboration focused UI when in the `meetingStage` and a different meeting preparation UI in the chat tab (`content`). For more information, see [getContext API](/microsoftteams/platform/tabs/how-to/access-teams-context?tabs=teamsjs-v2).
 
+## Feature compatibility by user types
+
+The following table provides the user types and lists the features that each user can access the tabs in meetings:
+
+| User type | Scheduled meeting or Instant calendar meeting | One-on-one call | Group call | Scheduled channel meeting |
+| :-- | :-- | :-- | :-- | :-- |
+| In-tenant user | Interaction allowed for all roles.<br><br> Create, update, or delete is allowed for all except the Attendees. | Interaction and create, update, or delete allowed. <br><br> In-tenant users in call with federated users can't interact and create, update, or delete. | Interaction and create, update, or delete allowed.<br><br> In-tenant users in call with federated users can't interact and create, update, or delete. | Interaction and create, update, or delete allowed for all roles except for attendees. |
+| Guest user | Can interact only | Can interact only | Can interact only | Can interact only. |
+| Federated user or External user | Can interact only | Not available | Not available | Can interact only |
+| Anonymous user | Not available | Not available | Not available | Not available |
+
 ## Code sample
 
-|Sample name | Description | C# | Node.js |
+|Sample name | Description | .NET | Node.js |
 |----------------|-----------------|--------------|----------------|
 | Meeting app | Demonstrates how to use the Meeting Token Generator app to request a token. The token is generated sequentially so that each participant has a fair opportunity to contribute in a meeting. The token is useful in situations like scrum meetings and Q&A sessions. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
 | Meeting stage sample | Sample app to show a tab in meeting stage for collaboration | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) |
@@ -204,3 +215,4 @@ Microsoft Teams JavaScript library exposes the frameContext in which your meetin
 * [Design your Microsoft Teams meeting extension](design/designing-apps-in-meetings.md)
 * [Enable SSO for tab app](../tabs/how-to/authentication/tab-sso-overview.md)
 * [Add apps to meetings using Microsoft Graph](/graph/api/chat-post-installedapps?view=graph-rest-1.0&tabs=http&preserve-view=true)
+* [Get change notifications for Microsoft Teams meeting call updates](/graph/changenotifications-for-onlinemeeting)

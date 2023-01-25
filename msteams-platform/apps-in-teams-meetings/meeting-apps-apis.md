@@ -867,7 +867,7 @@ The `getIncomingClientAudioState` API allows an app to get the incoming audio st
 
 > [!NOTE]
 >
-> * The `getIncomingClientAudioState` API for mobile is currently available in [Public Developer Preview](../resources/dev-preview/developer-preview-intro.md).
+> * The `getIncomingClientAudioState` API for mobile is available only in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
 > * Resource specific consent is available for manifest version 1.12 and later versions, hence this API doesn't work for manifest version 1.11 and earlier versions.
 
 ### Manifest
@@ -924,7 +924,7 @@ The `toggleIncomingClientAudio` API allows an app to toggle the incoming audio s
 
 > [!NOTE]
 >
-> * The `toggleIncomingClientAudio` API for mobile is currently available in [Public Developer Preview](../resources/dev-preview/developer-preview-intro.md).
+> * The `toggleIncomingClientAudio` API for mobile is available only in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
 > * Resource specific consent is available for manifest version 1.12 and later versions, hence this API doesn't work for manifest version 1.11 and earlier versions.
 
 ### Manifest
@@ -977,7 +977,7 @@ The following table provides the response codes:
 
 ## Code sample
 
-|Sample name | Description | C# | Node.js |
+|Sample name | Description | .NET | Node.js |
 |----------------|-----------------|--------------|--------------|
 | Meetings extensibility | Teams meeting extensibility sample for passing tokens. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
 | Meeting content bubble bot | Teams meeting extensibility sample for interacting with content bubble bot in a meeting. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
@@ -998,3 +998,4 @@ The following table provides the response codes:
 * [Apps for Teams meetings](teams-apps-in-meetings.md)
 * [Live Share SDK](teams-live-share-overview.md)
 * [Teams cloud meeting recording](/microsoftteams/cloud-recording)
+* [Get change notifications for Microsoft Teams meeting call updates](/graph/changenotifications-for-onlinemeeting)

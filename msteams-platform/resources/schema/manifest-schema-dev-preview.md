@@ -436,7 +436,7 @@ An optional list of commands that your bot can recommend to users. The object is
 
 Optional:
 
-The `connectors` block defines an Office 365 Connector for the app.
+The `connectors` block defines a connector for Microsoft 365 Groups for the app.
 
 The object is an array (maximum of 1 element) with all elements of type `object`. This block is required only for solutions that provide a Connector.
 
@@ -560,7 +560,9 @@ Specify the app's Graph connector configuration. If this is present, then [webAp
 
 Indicates whether or not to show the loading indicator when an app or tab is loading. Default is **false**.
 > [!NOTE]
-> If you select`showLoadingIndicator` as true in your app manifest, to load the page correctly, modify the content pages of your tabs and task modules as described in [Show a native loading indicator](../../tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator) document.
+>
+> * If you select`showLoadingIndicator` as true in your app manifest, to load the page correctly, modify the content pages of your tabs and task modules as described in [Show a native loading indicator](../../tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator) document.
+> * If you don't modify the content pages of your tab, the tab app doesn't load and shows the error `There was a problem reaching this app`.
 
 ## isFullScreen
 

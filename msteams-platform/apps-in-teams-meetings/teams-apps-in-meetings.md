@@ -12,7 +12,65 @@ ms.date: 04/07/2022
 
 Meetings enable collaboration, partnership, informed communication, and shared feedback. The meeting space can deliver a user experience for each stage of the meeting lifecycle. The following illustration gives you an idea of the meeting app extensibility features:
 
+
 :::image type="content" source="../assets/images/apps-in-meetings/meetingappextensibility.png" alt-text="The screenshot shows you how meeting app extensibility works.":::
+
+<!--
+:::row:::
+    :::column span="":::
+           &nbsp; <!--:::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/space.png" border="false":::
+    :::column-end:::
+    :::column span="2":::
+        :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/1-cust-apps.png" border="false" link="../concepts/build-and-test/share-in-meeting.md":::  :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/2-enable-app.png" border="false" link="build-tabs-for-meeting.md":::
+    :::column-end:::
+        :::column span="":::
+           &nbsp;
+        :::column-end:::
+:::row-end:::
+:::row:::
+
+        :::column span="":::
+        &nbsp; 
+    :::column-end:::
+
+    :::column span="":::
+
+        :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/3-create-scene.png" border="false" link="teams-together-mode.md":::
+        <br><br><br><br>
+        :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/5-notification-user.png" border="false" link="in-meeting-notification-for-meeting.md":::
+        <br><br><br><br>
+        :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/7-fetch-participant.png" border="false" link="meeting-apps-apis.md#get-participant-api":::
+    :::column-end:::
+
+    :::column span="2":::
+        :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/0-app-extensibility.png" border="false":::
+    :::column-end:::
+
+    :::column span="":::
+        :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/4-meeting-lifecycle.png" border="false" link="#meeting-lifecycle":::
+        <br><br><br><br>
+        :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/6-integrate.png" border="false" link="build-extensible-conversation-for-meeting-chat.md":::
+        <br><br><br><br><br>
+        :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/8-optimize-meeting.png" border="false" link="teams-apps-in-meetings.md":::
+    :::column-end:::
+
+    :::column span="":::
+        &nbsp; 
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column span="":::
+        &nbsp;
+    :::column-end:::
+    :::column span="2":::
+        :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/9-in-meeting.png" border="false" link="build-apps-for-teams-meeting-stage.md":::      :::image type="icon" source="../assets/images/apps-in-meetings/app-extensibility/10-get-meeting.png" border="false" link="meeting-apps-apis.md#get-real-time-teams-meeting-events-api":::
+    :::column-end:::
+        :::column span="":::
+        &nbsp;
+    :::column-end:::
+:::row-end:::
+-->
+
 
 You must be familiar with the following product concepts to create custom meeting experiences with apps in Microsoft Teams.
 
@@ -27,10 +85,10 @@ Teams supports access to apps during meeting for the following meeting types:
 * [**Instant meetings**](https://support.microsoft.com/office/start-an-instant-meeting-in-teams-ff95e53f-8231-4739-87fa-00b9723f4ef5): Meetings initiated through **Meet now** button in Teams calendar.
 * [**Webinar**](https://support.microsoft.com/office/get-started-with-teams-webinars-42f3f874-22dc-4289-b53f-bbc1a69013e3): Webinar initiated through **Webinar** button under **New Meeting** dropdown.
 
-Learn more about [Teams meetings, expiration and policies](/MicrosoftTeams/meeting-expiration) and [meetings, webinars, and live events](/microsoftteams/quick-start-meetings-live-events).
+Learn more about [Teams meetings, expiration and policies](/microsoftteams/meeting-expiration) and [meetings, webinars, and live events](/microsoftteams/quick-start-meetings-live-events).
 > [!NOTE]
 >
-> * Apps for scheduled public channel meetings are currently available only in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
+> * Apps for scheduled public channel meetings are available only in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
 > * Apps aren't supported in the following:
 >   * [Public Switched Telephone Network (PSTN) Teams calls](/microsoftteams/cloud-voice-landing-page#public-switched-telephone-network-connectivity-options)
 >   * [End-to-end encrypted Teams calls](https://support.microsoft.com/office/use-end-to-end-encryption-for-teams-calls-1274b4d2-b5c5-4b24-a376-606fa6728a90)

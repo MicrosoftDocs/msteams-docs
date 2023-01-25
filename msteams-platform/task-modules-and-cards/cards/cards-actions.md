@@ -10,7 +10,7 @@ ms.topic: conceptual
 Cards used by bots and message extensions in Teams support the following activity [`CardAction`](/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards) types:
 
 > [!NOTE]
-> The `CardAction` actions differ from `potentialActions` for Office 365 Connector cards when used from connectors.
+> The `CardAction` actions differ from `potentialActions` for connector cards for Microsoft 365 Groups when used from connectors.
 
 | Type | Action |
 | --- | --- |
@@ -559,7 +559,7 @@ The following code shows an example of Adaptive Cards with `invoke` action with 
 
 ## Code samples
 
-|S.no|Card| description|.NET|JavaScript|Python|Java|
+|S.no|Card| description|.NET|Node.js|Python|Java|
 |:--|:--|:--------------------------------------------------------|-----|------------|-----|----------------------------|
 |1|Using cards|Introduces all card types including thumbnail, audio, media etc. Builds on Welcoming user + multi-prompt bot by presenting a card with buttons in welcome message that route to appropriate dialog.|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/06.using-cards)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/06.using-cards)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/06.using-cards)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/java_springboot/06.using-cards)|
 |2|Adaptive cards|Demonstrates how the multi-turn dialog can use a card to get user input for name and age.|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/07.using-adaptive-cards)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/07.using-adaptive-cards)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/07.using-adaptive-cards)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/java_springboot/07.using-adaptive-cards)|

@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<title>Microsoft Teams Platform</title>
-	<updated>2022-12-15T04:15:01+05:30</updated>
+	<updated>2023-01-19T04:15:01+05:30</updated>
 	<generator>https://github.com/jpmonette/feed</generator>
 	<subtitle>Updated articles for Microsoft Teams Platform</subtitle>
 	<rights>https://learn.microsoft.com/legal/termsofuse</rights>
 	<category term="new"/>
 	<category term="updated"/>
+	<entry>
+		<title type="html"><![CDATA[Doc update: Revamped the content in the Create deep links article and moved it into pertinent sections]]></title>
+		<id>https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/deep-links</id>
+		<link href="https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/deep-links?referrer=whats.new.rssfeed"/>
+		<updated>2022-12-08T11:04:01+05:30</updated>
+		<summary type="html"><![CDATA[Deep links are a navigation mechanism that helps users to connect with features and information within Teams and Teams app. Understand how to deep link to an application, Teams chat, or to a workflow in Teams. </br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20learn.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%2045541337-ecd7-5cf6-cbe4-3f0d2f39aa79%0A*%20Version%20Independent%20ID%3A%206b4203f0-2844-06c9-eaa3-9cc03e6f76c0%0A*%20Content%3A%20%5BDeep%20links%20overview%20-%20Teams%5D(https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fconcepts%2Fbuild-and-test%2Fdeep-links)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Fconcepts%2Fbuild-and-test%2Fdeep-links.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fconcepts%2Fbuild-and-test%2Fdeep-links.md)%0A*%20Service%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40surbhigupta%0A*%20Microsoft%20Alias%3A%20**lajanuar**">feedback</a>? It is important to us. ]]></summary>
+		<category label="new" term="new"/>
+	</entry>
 	<entry>
 		<title type="html"><![CDATA[Doc update: Frequently asked questions]]></title>
 		<id>https://learn.microsoft.com/en-us/microsoftteams/platform/teams-faq</id>
@@ -117,14 +125,6 @@
 		<link href="https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/teams-developer-portal?referrer=whats.new.rssfeed"/>
 		<updated>2022-10-19T11:04:01+05:30</updated>
 		<summary type="html"><![CDATA[Developer Portal for Teams is now available for GCC tenants.</br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20learn.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%207da63b6f-15d7-a6dd-82fc-d183afaeb816%0A*%20Version%20Independent%20ID%3A%2082d1ca83-28dd-220e-ab0c-a4833f8f8143%0A*%20Content%3A%20%5BDeveloper%20Portal%20for%20Teams%20-%20Teams%5D(https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fconcepts%2Fbuild-and-test%2Fteams-developer-portal)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Fconcepts%2Fbuild-and-test%2Fteams-developer-portal.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fconcepts%2Fbuild-and-test%2Fteams-developer-portal.md)%0A*%20Service%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40surbhigupta%0A*%20Microsoft%20Alias%3A%20**surbhigupta**">feedback</a>? It is important to us. ]]></summary>
-		<category label="new" term="new"/>
-	</entry>
-	<entry>
-		<title type="html"><![CDATA[Feature update: Configure back button]]></title>
-		<id>https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/design/personal-apps#configure-back-button</id>
-		<link href="https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/design/personal-apps?referrer=whats.new.rssfeed#configure-back-button"/>
-		<updated>2022-10-13T11:04:01+05:30</updated>
-		<summary type="html"><![CDATA[When you select the back button in a Teams app, you will return to the Teams platform without navigating inside the app. To navigate within the app, configure the back button so that when you select the back button, you can go back to previous steps and navigate within the app</br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20learn.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%20ae27eac6-3289-3945-f3f1-fb9d811ff95c%0A*%20Version%20Independent%20ID%3A%20720ebdd4-77fa-f0d4-d566-c8fff9afb08d%0A*%20Content%3A%20%5BDesigning%20your%20personal%20app%20-%20Teams%5D(https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fconcepts%2Fdesign%2Fpersonal-apps%23configure-back-button)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Fconcepts%2Fdesign%2Fpersonal-apps.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fconcepts%2Fdesign%2Fpersonal-apps.md)%0A*%20Service%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40heath-hamilton%0A*%20Microsoft%20Alias%3A%20**lajanuar**">feedback</a>? It is important to us. ]]></summary>
 		<category label="new" term="new"/>
 	</entry>
 </feed>
