@@ -24,13 +24,9 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 Teams platform features that are available to all app developers.
 
-**2022 December**
+**2023 January**
 
-* ***December 8, 2022***: [Teams developer documentation FAQs](teams-faq.md)
-
-* ***December 07, 2022***: [Notification bot in Teams](bots/how-to/conversations/notification-bot-in-teams.md)
-
-* ***December 07, 2022***: [Command bot in Teams](bots/how-to/conversations/command-bot-in-teams.md)
+***January 25, 2023***: [Introduced share in meeting to share any document or third-party app to the meeting stage](concepts/build-and-test/share-in-meeting.md).
 
 :::column-end:::
 :::row-end:::
@@ -41,6 +37,9 @@ Teams platform features that are available to all app developers.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
+| 08/12/2022 | Introducing Teams developer documentation FAQs. | [Teams developer documentation FAQs](teams-faq.md) |
+| 07/12/2022 | Introducing notification bot in Teams. | Build bots > Bot conversations > [Notification bot in Teams](bots/how-to/conversations/notification-bot-in-teams.md) |
+| 07/12/2022 | Introducing command bot in Teams. | Build bots > Bot conversations > [Command bot in Teams](bots/how-to/conversations/command-bot-in-teams.md) |
 | 29/11/2022 | Introducing plan analytics for your Teams app. | Plan your app > Plan analytics for your Teams app > [Overview](concepts/design/overview-analytics.md) |
 | 23/11/2022 | Updated integrate location capabilities. | Integrate device capabilities > [Integrate location capabilities](concepts/device-capabilities/location-capability.md) |
 | 22/11/2022 | Revamped enable SSO for your bot and message extension app. | Add authentication > Enable SSO for your Teams app > Enable SSO for your bot and message extension app > [Overview](bots/how-to/authentication/bot-sso-overview.md) |
@@ -299,8 +298,6 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 Developer preview is a public program that provides early access to unreleased Teams platform features.
 
 **2022 December**
-
-***December 05, 2022***: [Introduced share in meeting to share any document or third-party app to the meeting stage](concepts/build-and-test/share-in-meeting.md).
 
 :::column-end:::
 :::row-end:::
