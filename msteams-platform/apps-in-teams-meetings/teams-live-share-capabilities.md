@@ -134,13 +134,15 @@ That's all it took to setup your container and join the meeting's session. Now, 
 
 ## Fluid distributed data structures
 
-The Live Share SDK supports any [distributed data structure](https://fluidframework.com/docs/data-structures/overview/) included in Fluid Framework. Here's a quick overview of a few of the different types of objects available:
+The Live Share SDK supports any [distributed data structure](https://fluidframework.com/docs/data-structures/overview/) included in Fluid Framework. These features serve as a set of primitives you can use to build robust collaborative scenarios, such as real-time updates of a task list or co-authoring text within an HTML `<textarea>`.
+
+Here's a quick overview of a few of the different types of objects available:
 
 | Shared Object                                                                       | Description                                                                                                                             |
 | ----------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
 | [SharedMap](https://fluidframework.com/docs/data-structures/map/)                   | A distributed key-value store. Set any JSON-serializable object for a given key to synchronize that object for everyone in the session. |
 | [SharedSegmentSequence](https://fluidframework.com/docs/data-structures/sequences/) | A list-like data structure for storing a set of items (called segments) at set positions.                                               |
-| [SharedString](https://fluidframework.com/docs/data-structures/string/)             | Distributed-string sequence optimized for editing document text editing.                                                                |
+| [SharedString](https://fluidframework.com/docs/data-structures/string/)             | Distributed-string sequence optimized for editing the text of documents or text areas.                                                  |
 
 Let's see how `SharedMap` works. In this example, we've used `SharedMap` to build a playlist feature.
 
@@ -213,25 +215,30 @@ function onClickAddToPlaylist(video: IVideo) {
 
 ## Live Share data structures
 
-The Live Share SDK includes a set of new Live Share `SharedObject` classes, which provide stateful and stateless objects that aren't stored in the Fluid container. For example, if you want to create a laser-pointer feature into your app, such as the popular PowerPoint Live integration, you can use our `LiveEvent` or `LiveState` objects.
+The Live Share SDK includes a set of new Live Share `SharedObject` classes, which provide stateful and stateless objects. Unlike Fluid data structures, these features do not write changes to the Fluid container, enabling low-latency synchronization. These objects were designed from the ground up for common meeting scenarios for Teams meetings. Common scenarios include synchronizing what content the presenter is viewing, displaying metadata for each user in the meeting, or displaying a countdown timer.
 
-| Live Object                                                        | Description                                                                                                                             |
-| ------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------- |
+| Live Object    | Description                                                                                                                             |
+| -------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
 | `LivePresence` | See which users are online, set custom properties for each user, and broadcast changes to their presence.                               |
-| `LiveEvent` | Broadcast individual events with any custom data attributes in the payload.                                                             |
-| `LiveState` | Similar to SharedMap, a distributed key-value store that allows for restricted state changes based on role, for example, the presenter. |
-| `LiveTimer` | Synchronize a countdown timer for a given interval.                                                                                     |
+| `LiveEvent`    | Broadcast individual events with any custom data attributes in the payload.                                                             |
+| `LiveState`    | Similar to SharedMap, a distributed key-value store that allows for restricted state changes based on role, for example, the presenter. |
+| `LiveTimer`    | Synchronize a countdown timer for a given interval.                                                                                     |
 
 ### LivePresence example
 
 :::image type="content" source="../assets/images/teams-live-share/live-share-presence.png" alt-text="Screenshot shows an example of showing people who available in a sessionTeams using Live Share presence.":::
 
-The `LivePresence` class makes tracking who is in the session easier than ever. When calling the `.initialize()` or `.updatePresence()` methods, you can assign custom metadata for that user, such as name or profile picture. By listening to `presenceChanged` events, each client receives the latest `LivePresenceUser` object, collapsing all presence updates into a single record for each unique `userId`.
+The `LivePresence` class makes tracking who is in the session easier than ever. When calling the `.initialize()` or `.updatePresence()` methods, you can assign custom metadata for that user, such as name, profile picture, or the identifier for content they are viewing. By listening to `presenceChanged` events, each client receives the latest `LivePresenceUser` object, collapsing all presence updates into a single record for each unique `userId`.
+
+Here are a few examples in which `LivePresence` can be used in your application:
+
+- Displaying profile pictures and names of each user connected to the session.
+- Synchronizing the coordinates in a 3D scene where each user's avatar is located.
+- Reporting each user's cursor position in a text document.
+- Posting each user's answer to an ice-breaker question during a group activity.
 
 > [!NOTE]
 > The default `userId` assigned to each `LivePresenceUser` is a random UUID and is not directly tied to an AAD identity. You can override this by setting a custom `userId` to be the primary key, as shown in the example below.
-
-Example:
 
 # [JavaScript](#tab/javascript)
 
@@ -326,7 +333,7 @@ function onUserDidLogIn(userName: string, profilePicture: string) {
 
 :::image type="content" source="../assets/images/teams-live-share/live-share-event.png" alt-text="Screenshot shows an example of Teams client displaying notification when there's a change in the event.":::
 
-`LiveEvent` is a great way to send simple events to other clients in a meeting. It's useful for scenarios like sending session notifications.
+`LiveEvent` is a great way to send simple events to other clients in a meeting that are only needed at the time of delivery. It's useful for scenarios like sending session notifications or implementing custom reactions.
 
 # [JavaScript](#tab/javascript)
 
@@ -412,7 +419,7 @@ notifications.sendEvent({
 
 :::image type="content" source="../assets/images/teams-live-share/live-share-timer.png" alt-text="Screenshot shows an example of a count down timer with 9 seconds remaining.":::
 
-`LiveTimer` enables scenarios that have a time limit, such as a group meditation timer or a round timer for a game.
+`LiveTimer` provides a simple countdown timer that is synchronized for everyone in a meeting. It is useful for scenarios that have a time limit, such as a group meditation timer or a round timer for a game.
 
 # [JavaScript](#tab/javascript)
 
@@ -529,19 +536,130 @@ timer.play();
 
 ---
 
-## Role verification for live data structures
+### LiveState example
 
-Meetings in Teams can range from one-on-one calls to all-hands meetings, and may include members across organizations. Live objects are designed to support role verification, allowing you to define the roles that are allowed to send messages for each individual live object. For example, you could choose that only meeting presenters and organizers can control video playback, but still allow guests and attendees to request videos to watch next.
+:::image type="content" source="../assets/images/teams-live-share/live-share-state.png" alt-text="Screenshot shows an example of Live Share state to synchronize what planet in the solar system is actively presented to the meeting.":::
+
+The `LiveState` class enables synchronizing simple application state for everyone in a meeting. `LiveState` synchronizes two values: a `state` string and and a corresponding `data` object. This allows you to build an ephemeral distributed-state machine.
+
+Here are a few examples in which `LiveState` can be used in your application:
+
+- Tracking the user identifier of the current presenter to build a "take control" feature.
+- Maintaining the content identifier that the current presenter is viewing (e.g., `taskId` on a task board).
+- Synchronizing the current step in a multi-round group activity (e.g., guessing phase in Agile Poker).
 
 > [!NOTE]
-> The `LivePresence` class doesn't support role verification. The `LivePresenceUser` object has a `getRoles` method, which returns the meeting roles for a given user.
+> Unlike `SharedMap`, once all users disconnect from a session the `state` and `data` values in `LiveState` will be reset.
 
-Example using `LiveState`:
+Example:
 
 # [JavaScript](#tab/javascript)
 
 ```javascript
-import { LiveShareClient, LiveState, UserMeetingRole } from "@microsoft/live-share";
+import { LiveShareClient, LiveState } from "@microsoft/live-share";
+import { LiveShareHost } from "@microsoft/teams-js";
+
+// Join the Fluid container
+const host = LiveShareHost.create();
+const liveShare = new LiveShareClient(host);
+const schema = {
+  initialObjects: { appState: LiveState },
+};
+const { container } = await liveShare.joinContainer(schema);
+const { appState } = container.initialObjects;
+
+// Register listener for changes to state and corresponding custom data
+appState.on("stateChanged", (state, data, local) => {
+  if (state === "planet-viewer") {
+    const planetName = data?.planetName;
+    // Update app to display an image of the selected planet for the selected solar system
+  } else {
+    // No planet is yet selected
+  }
+});
+
+// Set roles who can change state and start listening for changes
+appState.initialize();
+
+function onSelectPlanet(planetName) {
+  appState.changeState("planet-viewer", {
+    planetName,
+  });
+}
+```
+
+# [TypeScript](#tab/typescript)
+
+```TypeScript
+import { LiveShareClient, LiveState } from "@microsoft/live-share";
+import { LiveShareHost } from "@microsoft/teams-js";
+
+enum PlanetName {
+  MERCURY = "Mercury",
+  VENUS = "Venus",
+  EARTH = "Earth",
+  MARS = "Mars",
+  JUPITER = "Jupiter",
+  SATURN = "Saturn",
+  URANUS = "Uranus",
+  NEPTUNE = "Neptune",
+}
+
+// Declare interface for type of custom data for user
+interface ICustomState {
+  planetName: PlanetName;
+}
+
+// Join the Fluid container
+const host = LiveShareHost.create();
+const liveShare = new LiveShareClient(host);
+const schema = {
+  initialObjects: {
+    appState: LiveState<ICustomState>,
+  },
+};
+const { container } = await liveShare.joinContainer(schema);
+const appState = container.initialObjects.appState as LiveState<ICustomState>;
+
+// Register listener for changes to state and corresponding custom data
+appState.on("stateChanged", (state: string, data: ICustomState | undefined, local: boolean) => {
+  if (state === "planet-viewer") {
+    const planetName = data?.planetName;
+    // Update app to display an image of the selected planet for the selected solar system
+  } else {
+    // No planet is yet selected
+  }
+});
+
+// Set roles who can change state and start listening for changes
+appState.initialize();
+
+function onSelectPlanet(planetName: PlanetName) {
+  appState.changeState("planet-viewer", {
+    planetName,
+  });
+}
+```
+
+---
+
+## Role verification for live data structures
+
+Meetings in Teams include calls, all-hands meetings, and online classrooms. Meeting participants may span across organizations, have different privileges, or simply have different goals. Thus, it is important to respect the privileges of different user roles during meetings. Live objects are designed to support role verification, allowing you to define the roles that are allowed to send messages for each individual live object. For example, you could choose that only meeting presenters and organizers can control video playback, but still allow guests and attendees to request videos to watch next.
+
+> [!NOTE]
+> The `LivePresence` class doesn't support role verification. The `LivePresenceUser` object has a `getRoles` method, which returns the meeting roles for a given user.
+
+Here is a simple example using `LiveState` for to synchronize which user is the active presenter, where only presenters and organizers can take control:
+
+# [JavaScript](#tab/javascript)
+
+```javascript
+import {
+  LiveShareClient,
+  LiveState,
+  UserMeetingRole,
+} from "@microsoft/live-share";
 import { LiveShareHost } from "@microsoft/teams-js";
 
 // Join the Fluid container
@@ -638,8 +756,7 @@ Listen to your customers to understand their scenarios before implementing role 
 
 ## Next step
 
-> [!div class="nextstepaction"]
-> [Live Share media](teams-live-share-media-capabilities.md)
+> [!div class="nextstepaction"] > [Live Share media](teams-live-share-media-capabilities.md)
 
 ## See also
 
