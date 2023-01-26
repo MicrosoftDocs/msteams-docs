@@ -17,7 +17,7 @@ The `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permissions are 
 * Allow a specified graph application to get all messages in channels and chats, respectively.
 * Enable a bot defined in the app manifest to receive all conversations messages without being @mentioned in relevant contexts where the permissions apply.
 
-## [Filtering @mention messages](#tab/filteratmention)
+Filtering @mention messages:
 ```csharp
 
 // When ChannelMessage.Read.Group or ChatMessage.Read.Chat rsc is in the app manifest, this method will be called even when bot is not @mentioned.
