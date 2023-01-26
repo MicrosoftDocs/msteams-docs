@@ -9,7 +9,7 @@ ms.localizationpriority: high
 
 # Deep link to an application
 
-Application can open the profile dialog through deep links and help users to learn more about the application, permissions, and more. You can create a deep link for the app after the app is listed in the Teams store. To create a link to launch Teams, append the app ID to the URL, `https://teams.microsoft.com/l/app/<your-app-id>`. A dialog appears to install or open the app.
+You can create deep links to a tab, open the application profile dialog or navigation within the app and more. You can create a deep link for the app after the app is listed in the Teams store.
 
 If your app is approved for mobile platform, you can deep link to an app on mobile. Apple App Store Connect Team ID is required additionally for the deep link to work on Teams-iOS. For more information, see [how to update Apple App Store Connect Team ID](../deploy-and-publish/appsource/prepare/update-apple-store-team-connect-id.md).
 
@@ -21,7 +21,11 @@ Deep link to an app isn't supported for custom apps.
 
 You can open an app install dialog from your Teams app and also can install the app in other contexts. Use the following deep link format to open an app install dialog from your Teams:
 
-`https://teams.microsoft.com/l/app/<your-app-id>`, where `<your-app-id>` is the application ID(f46ad259-0fe5-4f12-872d-c737b174bcb4).
+`https://teams.microsoft.com/l/app/<your-app-id>`, where `<your-app-id>` is the application ID(f46ad259-0fe5-4f12-872d-c737b174bcb4) and following lists `appId` for different apps:
+
+* Side loaded apps: Manifest ID
+* Apps submitted to org catalog: Org catalog ID
+* Apps submitted to Teams app store: Store ID
 
 Applications can use the Teams Java Script library (TeamsJS) to open the dialog without manually generating the deep link. Following is an example to open the app install dialog using TeamsJS:
 
@@ -90,15 +94,11 @@ If the Teams app is running within the host where the deep link is targeted, you
 
 You can navigate a user to a personal chat with the application by preparing the link manually using the following format:
 
-`https://teams.microsoft.com/l/entity/<appId>/conversations`, where `appId` is your application ID and following lists `appId` for different apps:
+`https://teams.microsoft.com/l/entity/<appId>/conversations`, where `appId` is your application ID.
 
-* Side loaded apps: Manifest ID
-* Apps submitted to org catalog: Org catalog ID
-* Apps submitted to Teams app store: Store ID
+## Share deep link for a tab
 
-## Share deep link of a tab
-
-You can create deep links to entities in Teams apps. This method is used to create links that navigate to content and information within your tab. For example, if your tab contains a task list, team members can create and share links to individual tasks. When you select the link, it navigates to your tab that focuses on the specific item.
+You can share deep links to entities in Teams apps. This method is used to create and share links that navigates to the content and information within your tab. For example, if your tab contains a task list, team members can create and share links to individual tasks. When you select the link, it navigates to your tab that focuses on the specific item.
 
 # [TeamsJS v2](#tab/teamsjs-v2)
 
