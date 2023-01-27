@@ -221,7 +221,7 @@ App caching improves subsequent launch time of the apps that are loaded in the m
 > [!NOTE]
 >
 > * Currently, app caching is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
-> * App caching is supported only for tabs loaded in the meeting side panel in Teams desktop client. It's recommended to register `onLoad` or `beforeUnload` handlers when in the sidePanel frameContext.
+> * App caching is supported only for tabs loaded in the meeting side panel in Teams desktop client. While it can work in other contexts such as personal apps and chat or channel tabs, it isn't officially supported. It's recommended to register `onLoad` or `beforeUnload` handlers when in the sidePanel frame Context.
 
 ### Enable app caching
 
@@ -317,7 +317,7 @@ The following are the limitations for app caching:
 
 **Apps are not being cached? Why is load handler not invoked on subsequent navigation?**
 
-* Check the amount of free memory on your system. App caching requires minimum of 4 GB system memory.
+* Verify if the system and available memory constraints are met.
 
 * Reduce your memory footprint when cached. Use the `beforeUnload` handler to dispose resources, for example, release references and remove event listeners, that might not be needed when cached.
 
