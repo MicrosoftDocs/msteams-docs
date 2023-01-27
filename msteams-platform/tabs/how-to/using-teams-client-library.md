@@ -2,7 +2,7 @@
 title: Teams JavaScript client library
 author: heath-hamilton
 ms.author: surbhigupta
-description: In this module, learn TeamsJS, which can help you build app experiences hosted in an <iframe> in Teams, Microsoft 365 (formerly Office), and Outlook.
+description: In this module, learn TeamsJS, that can help you build app experiences hosted in an <iframe> in Teams, Microsoft 365 (formerly Office), and Outlook.
 ms.localizationpriority: high
 ms.topic: conceptual
 ---
@@ -467,5 +467,5 @@ If you used Teams Toolkit to create your personal app, you can also use it to va
 
 ## Next steps
 
-* Use the [TeamsJS library reference](/javascript/api/overview/msteams-client) to get started with the TeamsJS.
+* Use the [TeamsJS library reference](/javascript/api/overview/msteams-client) to get started with the TeamsJS library.
 * Review the [changelog](https://github.com/OfficeDev/microsoft-teams-library-js/blob/main/packages/teams-js/CHANGELOG.md) for  latest updates to TeamsJS.
