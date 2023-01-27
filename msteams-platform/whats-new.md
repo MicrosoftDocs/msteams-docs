@@ -24,6 +24,10 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 Teams platform features that are available to all app developers.
 
+**2023 January**
+
+***January 27, 2023***: [Introducing update and soft delete event notifications in bot](bots/how-to/conversations/conversation-messages.md#update-message)
+
 :::column-end:::
 :::row-end:::
 
