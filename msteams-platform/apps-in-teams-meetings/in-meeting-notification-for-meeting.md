@@ -13,7 +13,19 @@ The in-meeting notification is used to engage participants and collect informati
 
 An external resource URL is used to display in-meeting notification. You can use the `submitTask` method to submit data in a meeting chat.
 
-:::image type="content" source="../assets/images/apps-in-meetings/in-meeting-dialogbox.png" alt-text="The screenshot is an example that shows how you can use an in-meeting dialog.":::
+# [Desktop](#tab/desktop)
+
+  The following image shows an in-meeting notification in the Teams desktop client:
+
+   :::image type="content" source="../assets/images/apps-in-meetings/in-meeting-dialogbox.png" alt-text="Screenshot shows an in-meeting notification on Teams desktop.":::
+
+# [Mobile](#tab/mobile)
+
+  The following image shows an in-meeting notification in the Teams mobile client:
+
+   :::image type="content" source="../assets/images/apps-in-meetings/in-meeting-notification-mobile.png" alt-text="Screenshot shows an in-meeting notification in on Teams mobile.":::
+
+---
 
 You can also add the Teams display picture and people card of the user to in-meeting notification based on `onBehalfOf` token with user MRI and display name passed in payload. Following is an example payload:
 
@@ -48,7 +60,7 @@ The following table provides the user types and lists the features that each use
 
 | User type | Scheduled meeting or Instant calendar meeting | One-on-one call | Group call | Scheduled channel meeting |
 | :-- | :-- | :-- | :-- | :-- |
-| In-tenant user | Available | Available |  Available | Available |
+| In-tenant | Available | Available |  Available | Available |
 | Guest | Available | Available |  Available | Available |
 | Federated or External | Available | Not available | Not available | Available |
 | Anonymous | Not available | Not available | Not available | Not available |
