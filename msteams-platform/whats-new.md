@@ -1,6 +1,6 @@
 ---
 title: What is new and updated for developers in Teams
-description: Learn about new Microsoft Teams developer features and updates to existing features, deprecation notes, and changes. Subscribe to the RSS feed for latest updates.
+description: Learn about new Microsoft Teams developer features and updates to existing features, deprecation notes, and changes. Subscribe to the RSS feed for latest updates
 ms.topic: reference
 ms.localizationpriority: high
 zone_pivot_groups: What-new-features
@@ -26,11 +26,9 @@ Teams platform features that are available to all app developers.
 
 **2022 December**
 
-* ***December 8, 2022***: [Teams developer documentation FAQs](teams-faq.md)
-
-* ***December 07, 2022***: [Notification bot in Teams](bots/how-to/conversations/notification-bot-in-teams.md)
-
-* ***December 07, 2022***: [Command bot in Teams](bots/how-to/conversations/command-bot-in-teams.md)
+* ***December 8, 2022***: [Introducing Teams developer documentation FAQs](teams-faq.md)
+* ***December 7, 2022***: [Introducing notification bot in Teams](bots/how-to/conversations/notification-bot-in-teams.md)
+* ***December 7, 2022***: [Introducing command bot in Teams](bots/how-to/conversations/command-bot-in-teams.md)
 
 :::column-end:::
 :::row-end:::
@@ -298,9 +296,11 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 
 Developer preview is a public program that provides early access to unreleased Teams platform features.
 
-**2022 December**
+**2022 November**
 
-***December 05, 2022***: [Introduced share in meeting to share any document or third-party app to the meeting stage](concepts/build-and-test/share-in-meeting.md).
+ ***November 10, 2022***: [Enable bots to receive all chat messages without being @mentioned.](bots/how-to/conversations/channel-messages-with-rsc.md)
+
+ ***November 10, 2022***: [Generate a deep link to share content to stage in meetings.](concepts/build-and-test/share-in-meeting.md)
 
 :::column-end:::
 :::row-end:::
