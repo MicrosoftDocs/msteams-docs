@@ -17,7 +17,7 @@ The `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permissions are 
 * Allow a specified graph application to get all messages in channels and chats, respectively.
 * Enable a bot defined in the app manifest to receive all conversations messages without being @mentioned in relevant contexts where the permissions apply.
 
-Filtering @mention messages:
+### Filtering at mention messages
 ```csharp
 
 // When ChannelMessage.Read.Group or ChatMessage.Read.Chat rsc is in the app manifest, this method will be called even when bot is not @mentioned.
@@ -44,7 +44,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 > * The `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permission may not be used by bots to extract large amounts of customer data.
 > * The ability for bots to receive all messages in chats using `ChatMessage.Read.Chat` is available only in [public developer preview for Teams](../../../resources/dev-preview/developer-preview-intro.md) and will only be enabled after a re-installation or new installation into a chat. 
 > * Once enabled, the bot will continue to receive all messages even when the client switches out of public developer preview. 
-> * If you have an app that is currently using the `ChatMessage.Read.Chat` RSC permission for Graph scenarios, then you should test the app following the [guide](#chat-messages) below and modify the app before the feature is [generally available](https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=receive%2Call%2Cgroup%2Cchat%2Cmessages). If you don't want your bot to receive all chat messages then implement the following [code snippet](Filtering-@mention-messages). If no action is taken, your bot will receive all messages after new installations.
+> * If you have an app that is currently using the `ChatMessage.Read.Chat` RSC permission for Graph scenarios, then you should test the app following the [guide](channel-messages-with-rsc.md?tabs=chat%2Cdotnet#chat-messages) below and modify the app before the feature is [generally available](https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=receive%2Call%2Cgroup%2Cchat%2Cmessages). If you don't want your bot to receive all chat messages then implement the following [code snippet](#filtering-at-mention-messages). If no action is taken, your bot will receive all messages after new installations.
 
 ## Update app manifest
 
