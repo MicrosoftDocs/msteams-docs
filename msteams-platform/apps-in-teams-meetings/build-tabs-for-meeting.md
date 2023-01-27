@@ -221,7 +221,7 @@ App caching improves subsequent launch time of the apps that are loaded in the m
 > [!NOTE]
 >
 > * Currently, app caching is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
-> * App caching is supported only for tabs loaded in the meeting side panel in Teams desktop client. While it can work in other contexts such as personal apps and chat or channel tabs, it isn't officially supported. It's recommended to register `onLoad` or `beforeUnload` handlers when in the sidePanel frame Context.
+> * App caching is supported only for tabs loaded in the meeting side panel in Teams desktop client. While it can work in other contexts such as personal apps and chat or channel tabs, it isn't officially supported. We recommended to register `onLoad` or `beforeUnload` handlers when in the sidePanel frameContext.
 
 ### Enable app caching
 
@@ -256,7 +256,7 @@ There are multiple reasons for an app to not get cached or for an app to get rem
 * If the user doesn't return to the app within 20 minutes, the app is removed from the cache.
 * The app isn't cached if Teams doesn't receive the `readyToUnload` signal from the app within 30 seconds after sending the `beforeUnload` notification.
 * App caching is disabled if the system memory is less than 4 GB or if the available memory is less than 1 GB on Windows or 512 MB on Mac.
-* Side panel is the only supported FrameContext for app caching in meetings.
+* Side panel is the only supported frameContext for app caching in meetings.
 * App caching isn't supported for meetings where the invited user count is more than 20.
 * If an app fails to load, the app isn't cached.
 
