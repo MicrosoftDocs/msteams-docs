@@ -32,7 +32,7 @@ For more information, see [app manifest schema.](~/resources/schema/manifest-sch
 
 ## Anonymous user authentication flow
 
-Anonymous users can't be authenticated through Azure AD authentication or `getAuthToken` from the client SDK as they aren't Azure AD accounts. If you need to authenticate anonymous users, your app must identify anonymous users and provide an alternative authentication experience in the meetings. You can determine if a user is anonymous by validating [user's context](#in-meeting-getcontext-from-teams-client-library).
+Anonymous users can't be authenticated through Azure AD authentication or `getAuthToken` from the client SDK as they aren't Azure AD accounts. `getAuthToken` fails for anonymous users by returning the error `useGetAuthToken: Failed with error - User is not authenticated`. If you need to authenticate anonymous users, your app must identify anonymous users and provide an alternative authentication experience in the meetings. You can determine if a user is anonymous by validating [user's context](#in-meeting-getcontext-from-teams-client-library).
 
 ## Admin setting for anonymous user app interaction
 
@@ -58,17 +58,11 @@ Apps receive the following info for an anonymous user when they call the `getCon
 | `loginHint` | Empty string for anonymous user. |
 | `userPrincipalName` | Empty string for anonymous user. |
 
-
 For more information on `getContext`, see [get context by using the Microsoft Teams JavaScript library.](~/tabs/how-to/access-teams-context.md#get-context-by-using-the-microsoft-teams-javascript-library)
 
 ## Bot activities and APIs
 
-With a few differences, the activities sent to your bot and the responses that it receives from bot APIs are consistent between anonymous and non-anonymous meeting participants. In general:
-
-* The user ID is a generated value that is different each time the anonymous user joins the meeting.
-* The `aadObjectId` property is omitted.
-* The `userRole` property is set to `anonymous`.
-* The provided tenant ID is set to the tenant ID of the meeting organizer.
+With a few differences, the activities sent to your bot and the responses that it receives from bot APIs are consistent between anonymous and non-anonymous meeting participants.
 
 ### Get members and get single member APIs
 
@@ -76,22 +70,15 @@ The [get members](/microsoftteams/platform/bots/how-to/get-teams-context#fetch-t
 
 ```json
 { 
-  "id": "<GUID1>", 
   "name": "<AnonTest (Guest)>",  
-  "tenantId": "<GUID2>", 
-  "userRole": "anonymous" 
+  "userRole": "Anonymous" 
 } 
 ```
 
 | **Property name** | **Description** |
 | --- | --- |
-| `id` | Unique generated value for the anonymous user. |
 | `name` | Name provided by the anonymous user when joining the meeting. |
-| `tenantId` | Tenant ID of the meeting organizer. |
-| `userRole` | `anonymous` represents anonymous user. |
-
-> [!NOTE]
-> The ID received from the bot APIs and the Teams client library API aren't the same.
+| `userRole` | `Anonymous` represents anonymous user. |
 
 ### ConversationUpdate activity MembersAdded and MembersRemoved
 
