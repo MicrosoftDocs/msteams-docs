@@ -289,7 +289,7 @@ await turnContext.SendActivityAsync(replyActivity, cancellationToken);
 
 ```
 
-# [Javascript](#tab/javascript3)
+# [JavaScript](#tab/javascript3)
 
 You can either use **​event function registration** or **​method override** method to get event notifications to handle the message updates using the Bot SDK:
 
@@ -375,7 +375,7 @@ await turnContext.SendActivityAsync(replyActivity, cancellationToken);
 
 ```
 
-# [Javascript](#tab/javascript4)
+# [JavaScript](#tab/javascript4)
 
 You can either use **​event function registration** or **​method override** method to get event notifications to handle the message updates using the Bot SDK:
 
@@ -469,7 +469,7 @@ await turnContext.SendActivityAsync(replyActivity, cancellationToken);
 
 ```
 
-# [Javascript](#tab/javascript5)
+# [JavaScript](#tab/javascript5)
 
 You can either use **​event function registration** or **​method override** method to get event notifications to handle the message updates using the Bot SDK:
 
