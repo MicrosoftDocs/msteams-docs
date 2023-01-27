@@ -84,6 +84,11 @@ In the following image, a meeting notification requesting payment is sent to one
 To send targeted in-meeting notifications, you must configure the `authorization` property and the `name` and `type` properties under the `resourceSpecific` field in the [app manifest](../resources/schema/manifest-schema.md#authorization) as follows:
 
 ```json
+
+"webApplicationInfo": {
+  "id": "<<Microsoft-APP-ID>>",
+  "resource": "https://RscBasedStoreApp"
+},
 "authorization": {
     "permissions": {
       "orgWide": [],
