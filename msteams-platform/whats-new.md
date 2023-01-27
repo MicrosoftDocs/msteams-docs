@@ -295,7 +295,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 **2023 January**
 
- ***January 27, 2023***: Introducing [Introducing Targeted in-meeting notification](apps-in-teams-meetings/in-meeting-notification-for-meeting.md#targeted-in-meeting-notification-developer-preview).
+ ***January 27, 2023***: [[Introducing Targeted in-meeting notification](apps-in-teams-meetings/in-meeting-notification-for-meeting.md#targeted-in-meeting-notification)]
 
 :::column-end:::
 :::row-end:::
