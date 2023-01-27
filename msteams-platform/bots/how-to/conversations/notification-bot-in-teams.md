@@ -425,7 +425,7 @@ If you select HTTP trigger, the scaffolded notification API doesn't have authent
 
 * Use an API key. You can use [function access keys](/azure/azure-functions/security-concepts?tabs=v4#function-access-keys), if you select Azure Functions to host your notification bot.
 
-* Use an access token issued by Azure Active Directory (Azure AD). For more information, see [Enable SSO for a Teams app](../authentication/bot-sso-overview.md#enable-sso-for-a-teams-app).
+* Use an access token issued by Azure Active Directory (Azure AD). For more information, see [Configure SSO for your bot in Azure AD](../authentication/bot-sso-register-aad.md).
 
 There can be more authentication or authorization solutions for an API, you can select as required.
 
