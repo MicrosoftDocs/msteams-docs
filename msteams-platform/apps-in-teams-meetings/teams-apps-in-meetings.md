@@ -12,7 +12,7 @@ ms.date: 04/07/2022
 
 Meetings enable collaboration, partnership, informed communication, and shared feedback. The meeting space can deliver a user experience for each stage of the meeting lifecycle.
 
-:::image type="content" source="../assets/images/apps-in-meetings/meetingappextensibility.png" alt-text="The screenshot shows you how meeting app extensibility works.":::
+:::image type="content" source="../assets/images/apps-in-meetings/meeting-app-extensibility.png" alt-text="The screenshot shows you how meeting app extensibility works.":::
 
 <!--
 :::row:::
