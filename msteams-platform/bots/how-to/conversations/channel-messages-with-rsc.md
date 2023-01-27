@@ -175,7 +175,7 @@ The following steps guide you to sideload and validate bot that receives all cha
 
 The following steps guide you to sideload and validate bot that receives all chat messages in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md) without being @mentioned in a chat:
 
-1. Switch the client to public developer preview (Select About > Developer preview).
+1. Switch the client to public developer preview (select **About** > **Developer preview**).
 1. Select or create a group chat.
 1. Select the ellipses &#x25CF;&#x25CF;&#x25CF; from the group chat. The dropdown menu appears.
 1. Select **Manage apps** from the dropdown menu.
