@@ -14,9 +14,7 @@ Resource-specific consent (RSC) is an authorization framework built by Microsoft
 Through RSC, an authorized user can give an application access to the data of a specific instance of a resource type instead of every instance in the entire tenant. For example, a person who owns both team A and team B can decide to give the data for the Contoso app to only team A and not team B. The same concept of scoped data access applies to chats and meetings.
 
 > [!NOTE]
->
->* Application RSC permissions for chat scope are available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md) only.
->* If a chat has a meeting or a call associated with it, then the relevant RSC permissions apply to those resources as well.
+> If a chat has a meeting or a call associated with it, then the relevant RSC permissions apply to those resources as well.
 
 ## Types of RSC permissions
 
@@ -24,6 +22,9 @@ RSC permission determines which data access methods are allowed by an applicatio
 
 * **Application**: Allows an app to access data without the user being signed in.
 * **Delegated**: Allows an app to access data only on behalf of a signed-in user. No access is allowed in the absence of a signed-in user.
+
+> [!NOTE]
+> Application RSC permissions for chat scope are available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md) only.
 
 ### RSC permissions for different resources
 
@@ -315,26 +316,34 @@ Whenever an app is installed by an authorized user within Teams, the RSC permiss
 
 ## Grant RSC permissions to an app
 
-Apart from the tenant admin, who can grant any type of permission to any app, users' ability to grant RSC permissions varies based on resource types and access modes. The following are the types of RSC permissions for an app:
+Users' ability to grant RSC permissions varies based on resource types and access modes. The following are the types of RSC permissions for an app:
 
 * **Application context RSC permissions**: Users authorized to install an app in a specific scope have the right to grant any RSC permissions requested by the app in that specific scope. In addition to installing apps in a specific scope, the following constraints apply for the user to grant RSC permission to access data in app-only mode:
   * In the case of a team, the user must be an owner of that team.
   * In the case of a chat, the user must be a member of the chat.
   * In the case of meetings, the user must be an organizer or presenter in the meeting.
-* **Delegated context RSC permissions**: Any user authorized to install an app in a specific scope has the right to grant any RSC permissions requested by the app in that specific scope. For example, if regular members are allowed to install an app inside a team, then they also have the authority to grant delegated RSC permission to the app in that specific team.
+* **Delegated context RSC permissions**: Any user authorized to install an app in a specific scope has the right to grant any RSC permissions requested by the app in that specific scope at the time of installation. For example, if regular members are allowed to install an app inside a team, then they also have the authority to grant delegated RSC permission to the app in that specific team.
 
 If you're a global admin, you can review and grant consent to the apps that request permissions on behalf of all users in your organization. You do this so that users don't have to review and accept the permissions requested by the app when they open it. For more information, see [view app permissions and grant admin consent in Teams admin center](/microsoftteams/app-permissions-admin-center).
 
-## Enable RSC in your application
+## Add RSC permissions to your Teams application
+
+1. [Register your app with Microsoft identity platform using the Azure AD portal](#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).
+1. [Add application and delegated RSC permission to your app manifest](#update-your-teams-app-manifest).
+1. [Review your application permissions in the Azure AD portal](#review-your-application-permissions-in-the-azure-ad-portal).
+
+## Verify application RSC permission granted to your app
+
+### Prerequisite
 
 1. [Configure consent settings](#configure-consent-settings).
     * Configure group owner consent settings for RSC in a team using the Azure AD portal.
     * Configure chat owner consent settings for RSC in a chat using the Microsoft Graph APIs.
-1. [Register your app with Microsoft identity platform using the Azure AD portal](#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).
-1. [Review your application permissions in the Azure AD portal](#review-your-application-permissions-in-the-azure-ad-portal).
-1. [Obtain an access token from the identity platform](#obtain-an-access-token-from-the-microsoft-identity-platform).
-1. [Update your Teams app manifest](#update-your-teams-app-manifest).
+
+To verify the application RSC permissions, follow these steps:
+
 1. [Install your app in Teams](#sideload-your-app-in-teams).
+1. [Obtain an access token from the identity platform](#obtain-an-access-token-from-the-microsoft-identity-platform).
 1. [Check the RSC permissions granted to a specific resource](#check-the-rsc-permissions-granted-to-a-specific-resource).
     * Check your app for added RSC permissions in a team.
     * Check your app for added RSC permissions in a chat.

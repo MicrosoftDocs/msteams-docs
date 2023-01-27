@@ -14,9 +14,6 @@ Resource-specific consent (RSC) is an authorization framework built by Microsoft
 
 Through RSC, an authorized user can give an application access to the data of a specific instance of a resource type instead of every instance in the entire tenant. For example, a person who owns both team A and team B can decide to give the data for the Contoso app to only team A and not team B. The same concept of scoped data access applies to chats and meetings. For more information, see [Resource-specific consent (RSC)](resource-specific-consent.md).
 
-> [!NOTE]
-> Test application RSC permissions for chat scope is available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md) only.
-
 ## Prerequisites
 
 Ensure that you verify the following app manifest changes for resource-specific consent before testing:
