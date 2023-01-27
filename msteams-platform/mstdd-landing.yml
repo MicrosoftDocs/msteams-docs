@@ -52,7 +52,7 @@ landingContent:
         url: https://gitter.im/OfficeDev/home
     - linkListType: whats-new
       links:
-      - text: Targeted in-meeting notification
+      - text: Targeted in-meeting notification (Developer preview)
         url: apps-in-teams-meetings/in-meeting-notification-for-meeting.md#targeted-in-meeting-notification
       - text: Teams developer documentation FAQs
         url: teams-faq.md

@@ -24,11 +24,6 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 Teams platform features that are available to all app developers.
 
-
-**2023 January**
-
-***January 11, 2023***: [Introducing Targeted in-meeting notification](apps-in-teams-meetings/in-meeting-notification-for-meeting.md#targeted-in-meeting-notification)
-
 :::column-end:::
 :::row-end:::
 
@@ -298,11 +293,9 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 
 Developer preview is a public program that provides early access to unreleased Teams platform features.
 
-**2022 November**
+**2023 January**
 
- ***November 10, 2022***: [Enable bots to receive all chat messages without being @mentioned.](bots/how-to/conversations/channel-messages-with-rsc.md)
-
- ***November 10, 2022***: [Generate a deep link to share content to stage in meetings.](concepts/build-and-test/share-in-meeting.md)
+ ***January 27, 2023***: Introducing [Introducing Targeted in-meeting notification](apps-in-teams-meetings/in-meeting-notification-for-meeting.md#targeted-in-meeting-notification-developer-preview).
 
 :::column-end:::
 :::row-end:::
