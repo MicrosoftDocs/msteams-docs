@@ -10,7 +10,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 
 ## A
 
-| Term | Definition |
+| Term  | Definition |
 | --- | --- |
 | [Action command](../messaging-extensions/how-to/action-commands/define-action-command.md) | A type of message extension app that uses a pop-up to collect or display information. <br>**See also**: [Message extension](#m); [Search commands](#s) |
 | [Access token](../tabs/how-to/authentication/tab-sso-code.md) | An access token enables a client app to securely call protected web APIs. Access tokens are used by web APIs to perform authentication and authorization. <br> **See also**: [Identity token](#i). <br> For more information, see [Access token](/azure/active-directory/develop/access-tokens). |
