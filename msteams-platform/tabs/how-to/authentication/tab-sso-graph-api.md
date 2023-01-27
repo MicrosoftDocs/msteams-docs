@@ -125,7 +125,7 @@ After you've configured Graph permissions in Azure AD:
 
 ### Get the token ID from Teams client
 
-The following code provides an example for calling token ID from Teams client:
+The following is an example for calling token ID from Teams client:
 
 ```csharp
 microsoftTeams.authentication.getAuthToken().then((result) => {
@@ -136,7 +136,7 @@ microsoftTeams.authentication.getAuthToken().then((result) => {
 
 ### Exchange the token ID with the server-side token
 
-The following code provides an example of OBO flow to fetch access token from the Teams client using MSAL:
+The following is an example of OBO flow to fetch access token from the Teams client using MSAL:
 
 ### [C#](#tab/dotnet)
 
