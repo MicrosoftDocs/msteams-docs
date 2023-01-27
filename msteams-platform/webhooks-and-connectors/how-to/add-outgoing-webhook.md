@@ -132,9 +132,16 @@ The following codes are examples of an Adaptive Card response:
 
 # [C#/.NET](#tab/dotnet)
 
+[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/outgoing-webhook/csharp/Controllers/SampleController.cs#L20)
+
 ```csharp
-string content = await this.Request.Content.ReadAsStringAsync();
-Activity incomingActivity = JsonConvert.DeserializeObject<Activity>(content);
+
+// This method is to read the request body content
+string content;
+using (var reader = new StreamReader(Request.Body))
+    {
+        content = await reader.ReadToEndAsync();
+    }
 
 var Card = new AdaptiveCard(new AdaptiveSchemaVersion("1.4"))
 {
@@ -161,6 +168,8 @@ return sampleResponseActivity;
 ```
 
 # [JavaScript/Node.js](#tab/javascript)
+
+[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/outgoing-webhook/nodejs/app.js#L30)
 
 ```javascript
 var receivedMsg = JSON.parse(payload);
