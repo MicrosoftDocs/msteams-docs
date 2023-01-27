@@ -1,7 +1,7 @@
 ---
 title: Receive all conversation messages with RSC
 author: surbhigupta12
-description: Enable bots to receive all channel messages without being @mentioned using RSC permissions. Read on webApplicationInfo or authorization section in manifest.
+description: Enable bots to receive all conversation messages without being @mentioned using RSC permissions. Read on webApplicationInfo or authorization section in manifest.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ---
