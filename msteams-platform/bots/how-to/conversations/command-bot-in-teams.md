@@ -3,7 +3,7 @@ title: Command bot in Teams
 author: surbhigupta
 description: Learn how a command bot works in Teams, and to add command and responses.
 ms.topic: conceptual
-ms.author: v-amprasad
+ms.author: surbhigupta
 ms.localizationpriority: high
 ---
 
@@ -13,7 +13,7 @@ Microsoft Teams allows you to automate simple and repetitive tasks in a conversa
 
 The command bot template is built using the TeamsFx SDK, which provides a simple set of functions over the Microsoft Bot Framework to implement the scenario. Command bot can be used in different scenarios such as checking ticket status, and retrieve help information.
 
-:::image type="content" source="../../../assets/images/command-bot-teams/commandbot-flowchart1.png" alt-text="creating command bot app with adaptive card flow chart" lightbox="../../../assets/images/command-bot-teams/commandbot-flowchart1.png":::
+:::image type="content" source="../../../assets/images/command-bot-teams/commandbot-flowchart1.png" alt-text="Screenshot of creating command bot app with adaptive card flow chart." lightbox="../../../assets/images/command-bot-teams/commandbot-flowchart1.png":::
 
 **Advantages**
 
@@ -73,6 +73,10 @@ You can edit the manifest template file `templates\appPackage\manifest.template.
 ```JSON
     "commandLists": [
       {
+        "scopes": [
+        "team",
+        "groupchat"
+        ],
         "commands": [
             {
                 "title": "helloWorld",
@@ -159,7 +163,6 @@ TeamsFx SDK provides a convenient class `TeamsFxBotCommandHandler`, to handle wh
    ```
 
 You can customize the command, including calling an API, processing data, or any other command    .
-
 <br>
 
 </details>
@@ -241,7 +244,6 @@ If you're responding to a command that needs to access Microsoft Graph data of a
 If you don't have the required SDK, and need to invoke external APIs in your code. The `Teams: Connect to an API` command in Microsoft Visual Studio Code Teams Toolkit extension, or `teamsfx add api-connection` command in TeamsFx CLI can be used to bootstrap code to call target APIs. For more information, see [connect to existing API](../../../toolkit/add-API-connection.md#steps-to-connect-to-api).
 
 ## FAQ
-
 <br>
 
 <details>
@@ -268,7 +270,7 @@ For more information on how to add workflow bot Adaptive Card actions to command
 
 Follow the [step-by-step](../../../sbs-gs-commandbot.yml) guide to build Teams Command bot.
 
-## See Also
+## See also
 
 * [Conversation basics](conversation-basics.md)
 * [Build bots for Teams](../../what-are-bots.md)
