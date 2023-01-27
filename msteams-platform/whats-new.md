@@ -1,6 +1,6 @@
 ---
 title: What is new and updated for developers in Teams
-description: Learn about new Microsoft Teams developer features and updates to existing features, deprecation notes, and changes. Subscribe to the RSS feed for latest updates.
+description: Learn about new Microsoft Teams developer features and updates to existing features, deprecation notes, and changes. Subscribe to the RSS feed for latest updates
 ms.topic: reference
 ms.localizationpriority: high
 zone_pivot_groups: What-new-features
@@ -26,11 +26,9 @@ Teams platform features that are available to all app developers.
 
 **2022 December**
 
-* ***December 8, 2022***: [Teams developer documentation FAQs](teams-faq.md)
-
-* ***December 07, 2022***: [Notification bot in Teams](bots/how-to/conversations/notification-bot-in-teams.md)
-
-* ***December 07, 2022***: [Command bot in Teams](bots/how-to/conversations/command-bot-in-teams.md)
+* ***December 8, 2022***: [Introducing Teams developer documentation FAQs](teams-faq.md)
+* ***December 7, 2022***: [Introducing notification bot in Teams](bots/how-to/conversations/notification-bot-in-teams.md)
+* ***December 7, 2022***: [Introducing command bot in Teams](bots/how-to/conversations/command-bot-in-teams.md)
 
 :::column-end:::
 :::row-end:::
@@ -300,7 +298,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 **2023 January**
 
-***January 11, 2023***: [Enable app caching to improve subsequent launch time of the apps to the meeting side panel](apps-in-teams-meetings/build-tabs-for-meeting.md#app-caching).
+***January 27, 2023***: [Enable app caching to improve subsequent launch time of the apps to the meeting side panel](apps-in-teams-meetings/build-tabs-for-meeting.md#app-caching).
 
 :::column-end:::
 :::row-end:::
