@@ -483,3 +483,5 @@ items:
 
 - content: |
     You've completed the tutorial to build notification bot!    
+    
+    Refer to the README.md file for detailed next steps on how to extend your notification bot including adding commands
