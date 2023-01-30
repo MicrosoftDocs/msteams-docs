@@ -76,6 +76,35 @@ You can create and send actionable messages through Incoming Webhook or connecto
 > [!NOTE]
 > In Teams, select **Settings** > **Member permissions** > **Allow members to create, update, and remove connectors**, so that any team member can add, modify, or delete a connector.
 
+**Example**
+
+# [C#](#tab/dotnet)
+
+[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/incoming-webhook/csharp/IncomingWebhook/Controllers/CardController.cs#L28)
+
+```csharp
+url = {{Webhook_URL}};
+HttpClient client = new HttpClient();
+client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+var content = new StringContent({{formatted_Card_Payload}}(Adaptive_Card_Json), System.Text.Encoding.UTF8, "application/json");
+var response = await client.PostAsync({{WebhookUrl}}, content);
+```
+
+# [JavaScript](#tab/javascript)
+
+[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/incoming-webhook/nodejs/api/server/index.js#L16)
+
+```javascript
+ axios.post({{WebhookUrl}}, {{formatted_Card_Payload}})
+    .then(res => {
+        console.log(`statusCode: ${res.status}`)
+        console.log(res)
+    })
+    .catch(error => {
+        console.error(error)
+    })
+```
+
 ## Remove Incoming Webhooks
 
 To remove an Incoming Webhook from a Teams channel, follow these steps:
