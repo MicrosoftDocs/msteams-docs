@@ -66,7 +66,7 @@ items:
 
        A new browser tab opens a http://localhost:3978 window.
 
-       :::image type="content" source="~/assets/images/" alt-text="":::
+       :::image type="content" source="~/assets/images/app-caching/app-caching-local-host.png" alt-text="Screenshot shows you the local host 3978 running in the browser.":::
 
     1. Open a new ngrok terminal window to create a tunnel and deploy your app locally.
 
@@ -77,7 +77,7 @@ items:
         ```
         ngrok tunnel is created.
         
-        :::image type="content" source="~/assets/images/" alt-text="":::
+        :::image type="content" source="~/assets/images/app-caching/app-caching-ngrok.png" alt-text="Screenshot shows you the ngrok tunnel running.":::
 
 - title: Set up manifest file and upload your app
   durationInMinutes: 1
@@ -91,8 +91,6 @@ items:
      1. Replace `id` with GUID, use [app caching](https://guidgenerator.com/) to generate GUID.
        
      1. Replace `<<Valid_Domain>>` with your http endpoint from ngrok.
-
-        :::image type="content" source="~/assets/images/" alt-text="update configuration url":::
       
      1. Zip the contents of the **manifest** folder to create `manifest.zip`.
 
@@ -104,13 +102,13 @@ items:
       1. Open **Teams**.
 
       1. Schedule a meeting from the calendar in Teams.
-         Ensure you invite atleast one attendee to the meeting.
+         Ensure that you have invited atleast one attendee to the meeting.
 
       1. Join the meeting.
 
       1. In the meeting window, select **+ Apps** > **Manage apps**.
 
-         :::image type="content" source="~/assets/images/" alt-text="":::
+         :::image type="content" source="~/assets/images/app-caching/app-caching-manage-apps.png" alt-text="Screenshot shows you the manage apps button to add apps.":::
 
       1. Select **Upload a custom app**.
 
@@ -118,19 +116,19 @@ items:
 
       1. Select **Add** to add the app to the meeting.
 
-         :::image type="content" source="~/assets/images/" alt-text="Add manifest":::
+         :::image type="content" source="~/assets/images/app-caching/app-caching-add-app.png" alt-text="Screenshot shows you the add app to your meeting.":::
          
       1. Select **+ Apps**, and then select **App caching**.
 
-         :::image type="content" source="~/assets/images/" alt-text="":::
+         :::image type="content" source="~/assets/images/app-caching/app-caching-add-app-meeting.png" alt-text="Screenshot shows how to add apps to your meeting tab.":::
 
       1. Select **Save**.
       
-         :::image type="content" source="~/assets/images/" alt-text="":::
+         :::image type="content" source="~/assets/images/app-caching/" alt-text="":::
          
          The App caching app is added to the Teams meeting side panel.
 
-         :::image type="content" source="~/assets/images/" alt-text="Screenshot shows that the app added to meeting side panel":::
+         :::image type="content" source="~/assets/images/app-caching/" alt-text="Screenshot shows that the app added to meeting side panel":::
 
 - title: Test your app
   durationInMinutes: 1
