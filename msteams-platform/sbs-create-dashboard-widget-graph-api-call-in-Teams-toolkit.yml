@@ -130,14 +130,14 @@ items:
      1. Create a **sampleService.ts** file.
      1. Add the following code in the **sampleService.ts**:
 
-      ```json
-            import { SampleModel } from "../models/sampleModel";
-            import SampleData from "../data/SampleData.json";
+        ```json
+        import { SampleModel } from "../models/sampleModel";
+        import SampleData from "../data/SampleData.json";
 
-            export const getSampleData = (): SampleModel => SampleData;
-      ```
+              export const getSampleData = (): SampleModel => SampleData;
+        ```
 
-      :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/service-retrieve.png" alt-text="Screenshot shows the creation of sampleService.ts file under the service folder in Visual Studio Code.":::
+        :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/service-retrieve.png" alt-text="Screenshot shows the creation of sampleService.ts file under the service folder in Visual Studio Code.":::
 
       > [!NOTE]
       > You can implement a service to retrieve data from the backend service or from Microsoft Graph API.
@@ -148,41 +148,41 @@ items:
      1. Create a **sampleWidget.ts** file.
      1. Add the following code in the **sampleWidget.tsx** file:
 
-      ```
-        import { Button, Text } from "@fluentui/react-components";
-        import { Widget } from "../lib/Widget";
-        import { SampleModel } from "../../models/sampleModel";
-        import { getSampleData } from "../../services/sampleService";
+        ```
+          import { Button, Text } from "@fluentui/react-components";
+          import { Widget } from "../lib/Widget";
+          import { SampleModel } from "../../models/sampleModel";
+          import { getSampleData } from "../../services/sampleService";
 
-        export class SampleWidget extends Widget<SampleModel> {
-        async getData(): Promise<SampleModel> {
-        return getSampleData();
-        }
+          export class SampleWidget extends Widget<SampleModel> {
+          async getData(): Promise<SampleModel> {
+          return getSampleData();
+          }
 
-        headerContent(): JSX.Element | undefined {
-        return <Text>Sample Widget</Text>;
-        }
+          headerContent(): JSX.Element | undefined {
+          return <Text>Sample Widget</Text>;
+          }
 
-        bodyContent(): JSX.Element | undefined {
-        return <div>{this.state.data?content}</div>;
-        }
+          bodyContent(): JSX.Element | undefined {
+          return <div>{this.state.data?content}</div>;
+          }
 
-        footerContent(): JSX.Element | undefined {
-        return (<Button
-          appearance="primary"
-          size="medium"
-          style={{ width: "fit-content" }}
-          onClick={() => {}}
-        >
-          View Details
-        </Button>);
-        }
-        }
-      ```
+          footerContent(): JSX.Element | undefined {
+          return (<Button
+            appearance="primary"
+            size="medium"
+            style={{ width: "fit-content" }}
+            onClick={() => {}}
+          >
+            View Details
+          </Button>);
+          }
+          }
+        ```
 
-      ---
+        ---
 
-      :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/create-sample-widget.png" alt-text="Screenshot shows the creation of sampleWidget.tsx under the widgets in Visual Studio Code.":::
+        :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/create-sample-widget.png" alt-text="Screenshot shows the creation of sampleWidget.tsx under the widgets in Visual Studio Code.":::
       
      ## Add the widget to the dashboard
 
@@ -207,34 +207,36 @@ items:
 
           :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/create-sample-dashboard.png" alt-text="Screenshot shows the existing sampleDashboard file in Visual Studio Code."::: 
 
-      If you want the widget in a column, you can use the `oneColumn()` method to define the column layout.
+          If you want the widget in a column, you can use the `oneColumn()` method to define the column layout.
       
-      Following is the sample of `oneColumn()` layout:
+          Following is the sample of `oneColumn()` layout:
 
-            ```
-      
-            protected dashboardLayout(): JSX. Element | undefined {
-            return (
-            <>
-            <ListWidget />
-            <div style={oneColumn()}>
-                      <SampleWidget />
-                      <ChartWidget />
-                    </div>
-                  </>
-                );
-              }
-            ```
+              ```
+        
+              protected dashboardLayout(): JSX. Element | undefined {
+              return (
+              <>
+              <ListWidget />
+              <div style={oneColumn()}>
+                        <SampleWidget />
+                        <ChartWidget />
+                      </div>
+                    </>
+                  );
+                }
+              ```
 
-      :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/one-column.png" alt-text="Screenshot shows the addition of one column method in dashboard layout.":::
+              ---
 
-      After adding all the relevant details for creating a widget, save the respective files.
+            :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/one-column.png" alt-text="Screenshot shows the addition of one column method in dashboard layout.":::
 
-      You can view the layout successfully changed on the app and view the calendar widget on the dashboard.
+            After adding all the relevant details for creating a widget, save the respective files.
 
-      :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/widget-added-to-dashboard.png" alt-text="Screenshot shows the addition of widget to the dashboard with the sample widget highlighted in red. ":::
+            You can view the layout successfully changed on the app and view the calendar widget on the dashboard.
 
-      You can change the look and style of the widget. For more information, see [customize the widget](tabs/how-to/dashboard-teams-toolkit.md#customize-the-widget).
+            :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/widget-added-to-dashboard.png" alt-text="Screenshot shows the addition of widget to the dashboard with the sample widget highlighted in red. ":::
+
+            You can change the look and style of the widget. For more information, see [customize the widget](tabs/how-to/dashboard-teams-toolkit.md#customize-the-widget).
 
 - title: Add a new Graph API call
   durationInMinutes: 5
