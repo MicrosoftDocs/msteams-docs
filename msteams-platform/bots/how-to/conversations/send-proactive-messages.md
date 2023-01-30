@@ -233,7 +233,7 @@ public class NotifyController : ControllerBase
     private async Task BotCallback(ITurnContext turnContext, CancellationToken cancellationToken)
     {
         // If you encounter permission-related errors when sending this message, see
-        // https://aka.ms/BotTrustServiceUrl
+        // https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp#avoiding-401-unauthorized-errors
         // Sends an activity to the sender of the incoming activity.
         await turnContext.SendActivityAsync("proactive hello");
     }

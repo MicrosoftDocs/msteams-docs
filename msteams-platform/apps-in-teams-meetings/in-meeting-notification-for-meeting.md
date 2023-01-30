@@ -1,7 +1,7 @@
 ---
 title: Build in-meeting notification for Teams meeting
 author: v-sdhakshina
-description: In this article, learn how to build in-meeting notification for Microsoft Teams meeting and its code sample.
+description: Learn how to build in-meeting notification for Microsoft Teams meeting and add the Teams display picture and people card.
 ms.topic: conceptual
 ms.author: v-sdhakshina
 ms.localizationpriority: medium
@@ -13,7 +13,19 @@ The in-meeting notification is used to engage participants and collect informati
 
 An external resource URL is used to display in-meeting notification. You can use the `submitTask` method to submit data in a meeting chat.
 
-:::image type="content" source="../assets/images/apps-in-meetings/in-meeting-dialogbox.png" alt-text="The screenshot is an example that shows how you can use an in-meeting dialog.":::
+# [Desktop](#tab/desktop)
+
+  The following image shows an in-meeting notification in the Teams desktop client:
+
+   :::image type="content" source="../assets/images/apps-in-meetings/in-meeting-dialogbox.png" alt-text="Screenshot shows an in-meeting notification on Teams desktop.":::
+
+# [Mobile](#tab/mobile)
+
+  The following image shows an in-meeting notification in the Teams mobile client:
+
+   :::image type="content" source="../assets/images/apps-in-meetings/in-meeting-notification-mobile.png" alt-text="Screenshot shows an in-meeting notification in on Teams mobile.":::
+
+---
 
 You can also add the Teams display picture and people card of the user to in-meeting notification based on `onBehalfOf` token with user MRI and display name passed in payload. Following is an example payload:
 
@@ -40,11 +52,22 @@ You can also add the Teams display picture and people card of the user to in-mee
     }
 ```
 
-:::image type="content" source="../assets/images/apps-in-meetings/in-meeting-people-card.png" alt-text="This screenshot shows how Teams display picture and people card is used with in-meeting dialog." border="true":::
+:::image type="content" source="../assets/images/apps-in-meetings/in-meeting-people-card.png" alt-text="This screenshot shows how a display picture and people card in Teams is used with in-meeting dialog." border="true":::
+
+## Feature compatibility by user types
+
+The following table provides the user types and lists the features that each user can access in meetings:
+
+| User type | Scheduled meeting or Instant calendar meeting | One-on-one call | Group call | Scheduled channel meeting |
+| :-- | :-- | :-- | :-- | :-- |
+| In-tenant | Available | Available |  Available | Available |
+| Guest | Available | Available |  Available | Available |
+| Federated or External | Available | Not available | Not available | Available |
+| Anonymous | Not available | Not available | Not available | Not available |
 
 ## Code sample
 
-Sample name | Description | C# | Node.js |
+Sample name | Description | .NET | Node.js |
 |----------------|-----------------|--------------|----------------|
 | In-meeting notification | Demonstrates how to implement in-meeting notification using bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs) |
 
