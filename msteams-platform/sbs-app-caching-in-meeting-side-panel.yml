@@ -123,12 +123,8 @@ items:
          :::image type="content" source="~/assets/images/app-caching/app-caching-add-app-meeting.png" alt-text="Screenshot shows how to add apps to your meeting tab.":::
 
       1. Select **Save**.
-      
-         :::image type="content" source="~/assets/images/app-caching/" alt-text="":::
          
          The App caching app is added to the Teams meeting side panel.
-
-         :::image type="content" source="~/assets/images/app-caching/" alt-text="Screenshot shows that the app added to meeting side panel":::
 
 - title: Test your app
   durationInMinutes: 1
@@ -137,7 +133,6 @@ items:
 
    App started cached in the meeting side panel.
 
-    :::image type="content" source="~/assets/images/" alt-text="":::
 
     
 - title: Complete challenge
@@ -146,9 +141,7 @@ items:
 
     Did you come up with something like this?
     
-     :::image type="content" source="~/assets/images/" alt-text="":::
 
 - content: |
     You've completed the tutorial to build sample apps with app caching.
 
-    :::image type="content" source="~/assets/" alt-text="":::
