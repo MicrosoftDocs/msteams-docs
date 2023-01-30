@@ -22,11 +22,11 @@ items:
   durationInMinutes: 1
   content: |
 
-    | &nbsp; | Install | Access to |
-    | --- | --- | --- |    
-    | &nbsp; | [NodeJS](https://nodejs.org/en/), fully tested on NodeJS 14, 16. | Back-end JavaScript runtime environment. Use version 14 or 16. |
-    | &nbsp; | [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program) | Access to Teams account with the appropriate permissions to install an app. |
-    | &nbsp; | [Teams Toolkit Visual Studio Code Extension](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) or [TeamsFx CLI](~/toolkit/TeamsFx-CLI.md) |  A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use 4.0.0 version. |
+    | Install | For using |
+    | --- | --- |    
+    | [NodeJS](https://nodejs.org/en/), fully tested on NodeJS 14, 16. | Back-end JavaScript runtime environment. Use version 14 or 16. |
+    | [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program) | Teams account with the appropriate permissions to install an app. |
+    | [Teams Toolkit Visual Studio Code Extension](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) or [TeamsFx CLI](~/toolkit/TeamsFx-CLI.md) |  A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use 4.0.0 version. |
 
 - title: Create a new dashboard
   content: |
@@ -59,7 +59,7 @@ items:
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/enter-application-name.png" alt-text="Screenshot shows the selection of application name.":::
 
-        The Teams tab app is created in few seconds.
+        The Teams tab app is created.
 
       In TeamsFX CLI,
 
@@ -93,9 +93,9 @@ items:
     
      ## Define a data model
 
-     1. In Visual Studio Code, under **EXPLORER**, go to tabs > src > models.
+     1. In Visual Studio Code, under **EXPLORER**, go to **tabs** > **src** > **models**.
      1. Create a **sampleModel.ts** file.
-     1. Use the following code and add it to the **sampleModel.ts** file:
+     1. Add the following code and add it to the **sampleModel.ts** file:
 
         ```
         export interface SampleModel {
@@ -109,9 +109,9 @@ items:
 
      ## Create a data retrieve service
 
-     1. In Visual Studio Code, under **EXPLORER**, go to **tabs > src > data**.
+     1. In Visual Studio Code, go to **EXPLORER** > **tabs** > **src** > **data**.
      1. Create a **sampleData.json** file.
-     1. Use the following code in the **sampleData.json** file:
+     1. Add the following code in the **sampleData.json** file:
 
         ```
         {
@@ -123,9 +123,9 @@ items:
 
      **To retrieve services**:
 
-     1. In Visual Studio Code, under **EXPLORER**, go to EXPLORER> tabs > src > data> services.
+     1. In Visual Studio Code, go to **EXPLORER** > **tabs** > **src** > **data** > **services**.
      1. Create a **sampleService.ts** file.
-     1. Use the following code in the **sampleService.ts**:
+     1. Add the following code in the **sampleService.ts**:
 
         ```
         import { SampleModel } from "../models/sampleModel";
@@ -141,9 +141,9 @@ items:
     
      ## Create a widget file
 
-     1. In Visual Studio Code, go to EXPLORER> tabs> src> >views >widgets.
+     1. In Visual Studio Code, go to **EXPLORER** > **tabs** > **src** > **views** > **widgets**.
      1. Create a **sampleWidget.ts** file.
-     1. Use the following code in the **sampleWidget.tsx** file:
+     1. Add the following code in the **sampleWidget.tsx** file:
 
         ```
         import { Button, Text } from "@fluentui/react-components";
@@ -184,45 +184,45 @@ items:
 
       If you want to create a new dashboard, refer to [add a new dashboard](tabs/how-to/dashboard-teams-toolkit.md#add-a-new-dashboard).
 
-      1. In Visual Studio Code, under Explorer> tabs > src > views > dashboards.
+      1. In Visual Studio Code, go to **Explorer** > **tabs** > **src** > **views** > **dashboards**.
       1. Create a **sampleDashboard.tsx** file.
-      1. Use the following code in the **sampleDashboard.tsx** file:
+      1. Add the following code in the **sampleDashboard.tsx** file:
 
-        ```
-         protected dashboardLayout(): void | JSX. Element {
-         return (
-         <>
-         <ListWidget />
-         <ChartWidget />
-         <SampleWidget />
-         </>);
-         } 
-        ```
+          ```
+          protected dashboardLayout(): void | JSX. Element {
+          return (
+          <>
+          <ListWidget />
+          <ChartWidget />
+          <SampleWidget />
+          </>);
+          } 
+          ```
 
-        :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/create-sample-dashboard.png" alt-text="Screenshot shows the existing sampleDashboard file in Visual Studio Code."::: 
+          :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/create-sample-dashboard.png" alt-text="Screenshot shows the existing sampleDashboard file in Visual Studio Code."::: 
 
       If you want the widget in a column, you can use the `oneColumn()` method to define the column layout.
       
       Following is the sample of `oneColumn()` layout:
 
-        ```
-  
-        protected dashboardLayout(): void | JSX.Element {
-        return (
-        <>
-        <ListWidget />
-        <div style={oneColumn()}>
-                  <SampleWidget />
-                  <ChartWidget />
-                </div>
-              </>
-            );
-          }
-        ```
+          ```
+    
+          protected dashboardLayout(): void | JSX.Element {
+          return (
+          <>
+          <ListWidget />
+          <div style={oneColumn()}>
+                    <SampleWidget />
+                    <ChartWidget />
+                  </div>
+                </>
+              );
+            }
+          ```
 
       :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/one-column.png" alt-text="Screenshot shows the addition of one column method in dashboard layout.":::
 
-      After adding all the relevant details for creating a widget, Save the respective files.
+      After adding all the relevant details for creating a widget, save the respective files.
 
       You can view the layout successfully changed on the app and view the calendar widget on the dashboard.
 
@@ -234,7 +234,7 @@ items:
   durationInMinutes: 5
   content: |
 
-      1. Add **single-sign-On** related files by using Teams toolkit.
+      Add single sign-on (SSO) related files by using Teams toolkit.
 
       1. In Visual Studio Code, select **Teams** in the left pane.
       
@@ -242,15 +242,15 @@ items:
 
           :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/add-features.png" alt-text="Screenshot shows the selection of added features option.":::
 
-      1. Select **Single Sign-On**.
+      1. Select single sign-on.
 
           :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/single-sign-on.png" alt-text="Screenshot shows the selection of single sign-on option.":::
 
-      1. Move `auth-start.html` file and `auth-end.html` file in the auth> tab> public folder to the tabs> public> folder. These two HTML files are used for auth redirects.
+      1. Move `auth-start.html` file and `auth-end.html` file in the **auth** > **tab** > public folder to the **tabs** > public folder. These two HTML files are used for auth redirects.
 
-      1. Move **SSO** folder under **auth > tab** folder to tabs> src> sso folder.
+      1. Move **SSO** folder under **auth** > **tab** folder to **tabs** > **src** > SSO folder.
 
-      You've added the single-sign-on files to your project, you can call Graph APIs. Refer to [Graph API call](tabs/how-to/dashboard-teams-toolkit.md#graph-api-call).
+      You've added the SSO files to your project, you can call Graph APIs. Refer to [Graph API call](tabs/how-to/dashboard-teams-toolkit.md#graph-api-call).
 
       1. Select **Join** to join the meeting.
 

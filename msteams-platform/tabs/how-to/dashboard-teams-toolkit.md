@@ -45,8 +45,6 @@ export default class YourDashboard extends Dashboard {}
 
 ```
 
-export default class YourDashboard extends Dashboard {}
-
 ### Override methods to customize dashboard layout
 
 Dashboard class provides few methods that you can override to customize the dashboard layout. The following table lists the methods that you can override:
@@ -131,7 +129,7 @@ The following files provide the business logic for the dashboard tab. These file
 |---|---|
 | src/models/listModel.tsx | Data model for the list widget. |
 | src/services/listService.tsx | A data retrieve implementation for the list widget. |
-| src/views/dashboards/SampleDashboard.tsx** | A sample dashboard layout implementation. |
+| src/views/dashboards/SampleDashboard.tsx | A sample dashboard layout implementation. |
 | src/views/lib/Dashboard.styles.ts | The dashboard style file. |
 | src/views/lib/Dashboard.tsx | A base class that defines the dashboard. |
 | src/views/lib/Widget.styles.ts | The widget style file. |
@@ -140,7 +138,7 @@ The following files provide the business logic for the dashboard tab. These file
 | src/views/widgets/ChartWidget.tsx | A widget implementation that can display a chart. |
 | src/views/widgets/ListWidget.tsx | A widget implementation that can display a list. |
 
-The following files are project-related files and you need not need to customize these files:
+The following files are project-related files and you need not customize these files:
 
 | **File** | **Content**|
 |---|---|
@@ -453,7 +451,7 @@ Widget class provides some methods that can be overridden to customize the widge
 
    :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/override-header-count.png" alt-text="Screenshot shows the example of header, body, and footer content in a widget.":::
 
-1. Override `bodyContent()`, and `footerContent()` to customize the widget.
+1. Override `bodyContent()` and `footerContent()` to customize the widget.
 
     ```typescript
     export class NewsWidget extends Widget<void> {
@@ -485,7 +483,7 @@ Widget class provides some methods that can be overridden to customize the widge
     }
     ```
 
-    Following is an example of `bodyContent()` and `footerContent()`
+    Following is an example of `bodyContent()` and `footerContent()`:
 
     :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/override-body-content-footer-content.png" alt-text="Screenshot shows the body and footer content in a widget.":::
 
@@ -587,10 +585,10 @@ Following are the recommended methods to override:
 
 | Methods | Function | Recommend to override |
 |---|---|---|
-| **constructor()** | Invokes the initial `this.state` and call the constructor of the super class `React` Component. | NO |
+| **constructor()** | Invokes the initial `this.state` and call the constructor of the super class `React` component. | NO |
 | **componentDidMount()** | Invokes after a component is mounted and assigns a value to the `data` property of the state by calling the `getData()` method. | NO |
 | **render()** | Invokes each time a update happens and the dashboard default layout is defined in this method. | NO |
-| **getData()** | Invokes the data needed by the widget, and the value returned by this method will be set to `this.state.data`. |
+| **getData()** | Invokes the data needed by the widget and the value returned by this method will be set to `this.state.data`. |
 | **headerContent()** | Invokes what the widget header will look like. You can choose to override this method to customize a widget or not, if not, the widget won't have a header. | YES |
 | **bodyContent()** | Invokes what the widget body will look like. You can choose to override this method to customize a widget or not, if not, the widget won't have a body. | YES |
 | **footerContent()** | Invokes what the widget footer will look like. You can choose to override this method to customize a widget or not, if not, the widget won't have a footer. | YES |
@@ -617,7 +615,7 @@ You can follow the steps to use Microsoft Graph Toolkit as your widget content:
 
 1. Add a new Graph Toolkit widget
 
-      Create a new widget file in your project tabs/src/views/widgets folder. For example, **GraphyWidget.tsx**. In this widget, we'll guide users to consent our app to access Microsoft Graph and then show the user's `Todo` list by using Microsoft Graph Toolkit.
+      Create a new widget file in your project tabs/src/views/widgets folder, for example, GraphyWidget.tsx. In this widget, we'll guide users to consent our app to access Microsoft Graph and then show the user's `Todo` list by using Microsoft Graph Toolkit.
 
       The following code is an example of using `Todo` component from Microsoft Graph Toolkit in widget:
 
@@ -678,20 +676,20 @@ You can follow the steps to use Microsoft Graph Toolkit as your widget content:
 
 1. Add the widget to dashboard layout. Include the new widget in your dashboard file:
 
-```typescript
-...
-export default class YourDashboard extends Dashboard {
-  ...
-  protected dashboardLayout(): undefined | JSX.Element {
-    return (
-      <>
-        <GraphWiget />
-      </>
-    );
-  }
-  ...
-}
-```
+    ```typescript
+    ...
+    export default class YourDashboard extends Dashboard {
+      ...
+      protected dashboardLayout(): undefined | JSX.Element {
+        return (
+          <>
+            <GraphWiget />
+          </>
+        );
+      }
+      ...
+    }
+    ```
 
 Now, launch or refresh your Teams app, you'll see the new widget using Microsoft Graph Toolkit.
 
