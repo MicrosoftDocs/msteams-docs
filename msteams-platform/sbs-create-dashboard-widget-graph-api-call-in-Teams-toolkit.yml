@@ -127,12 +127,12 @@ items:
      1. Create a **sampleService.ts** file.
      1. Add the following code in the **sampleService.ts**:
 
-       ```json
-          import { SampleModel } from "../models/sampleModel";
-          import SampleData from "../data/SampleData.json";
+        ```json
+              import { SampleModel } from "../models/sampleModel";
+              import SampleData from "../data/SampleData.json";
 
-          export const getSampleData = (): SampleModel => SampleData;
-       ```
+              export const getSampleData = (): SampleModel => SampleData;
+        ```
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/service-retrieve.png" alt-text="Screenshot shows the creation of sampleService.ts file under the service folder in Visual Studio Code.":::
 
@@ -205,28 +205,28 @@ items:
       
       Following is the sample of `oneColumn()` layout:
 
-          ```
-    
-          protected dashboardLayout(): JSX. Element | undefined {
-          return (
-          <>
-          <ListWidget />
-          <div style={oneColumn()}>
-                    <SampleWidget />
-                    <ChartWidget />
-                  </div>
-                </>
-              );
-            }
-          ```
+            ```
+      
+            protected dashboardLayout(): JSX. Element | undefined {
+            return (
+            <>
+            <ListWidget />
+            <div style={oneColumn()}>
+                      <SampleWidget />
+                      <ChartWidget />
+                    </div>
+                  </>
+                );
+              }
+            ```
 
-      :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/one-column.png" alt-text="Screenshot shows the addition of one column method in dashboard layout.":::
+            :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/one-column.png" alt-text="Screenshot shows the addition of one column method in dashboard layout.":::
 
       After adding all the relevant details for creating a widget, save the respective files.
 
       You can view the layout successfully changed on the app and view the calendar widget on the dashboard.
 
-      :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/widget-added-to-dashboard.png" alt-text="Screenshot shows the addition of widget to the dashboard with the sample widget highlighted in red. ":::
+            :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/widget-added-to-dashboard.png" alt-text="Screenshot shows the addition of widget to the dashboard with the sample widget highlighted in red. ":::
 
       You can change the look and style of the widget. For more information, see [customize the widget](tabs/how-to/dashboard-teams-toolkit.md#customize-the-widget).
 
