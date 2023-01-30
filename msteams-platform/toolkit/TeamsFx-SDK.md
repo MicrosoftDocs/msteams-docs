@@ -323,8 +323,8 @@ This section provides several code snippets for common scenarios that are relate
 
        ```typescript
        const authConfig: TeamsUserCredentialAuthConfig = {
-       clientId: process.env.REACT_APP_CLIENT_ID,
-       initiateLoginEndpoint: process.env.REACT_APP_START_LOGIN_PAGE_URL,
+       clientId: process.env.REACT_APP_CLIENT_ID!,
+       initiateLoginEndpoint: process.env.REACT_APP_START_LOGIN_PAGE_URL!,
        };
 
        const teamsUserCredential = new TeamsUserCredential(authConfig);
@@ -341,7 +341,7 @@ This section provides several code snippets for common scenarios that are relate
 
        ```typescript
        try {
-        const graphClient = createMicrosoftGraphClientWithCredential(teamsUserCredential, ["User. Read"]); // Initializes MS Graph SDK using our MsGraphAuthProvider
+        const graphClient = createMicrosoftGraphClientWithCredential(teamsUserCredential, ["User.Read"]); // Initializes MS Graph SDK using our MsGraphAuthProvider
         const profile = await graphClient.api("/me").get();
        } catch (err: unknown) {
         // ErrorWithCode is handled by Graph client
