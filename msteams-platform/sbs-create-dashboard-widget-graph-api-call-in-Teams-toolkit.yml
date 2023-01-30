@@ -97,7 +97,7 @@ items:
      1. Create a **sampleModel.ts** file.
      1. Add the following code and add it to the **sampleModel.ts** file:
 
-        ```
+        ```json
         export interface SampleModel {
          content: string;
          }
@@ -113,7 +113,7 @@ items:
      1. Create a **sampleData.json** file.
      1. Add the following code in the **sampleData.json** file:
 
-        ```
+        ```json
         {
           "content": "Hello world!"
         }
@@ -127,12 +127,12 @@ items:
      1. Create a **sampleService.ts** file.
      1. Add the following code in the **sampleService.ts**:
 
-        ```
-        import { SampleModel } from "../models/sampleModel";
-        import SampleData from "../data/SampleData.json";
+       ```json
+          import { SampleModel } from "../models/sampleModel";
+          import SampleData from "../data/SampleData.json";
 
-        export const getSampleData = (): SampleModel => SampleData;
-        ```
+          export const getSampleData = (): SampleModel => SampleData;
+       ```
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/service-retrieve.png" alt-text="Screenshot shows the creation of sampleService.ts file under the service folder in Visual Studio Code.":::
 
@@ -175,8 +175,8 @@ items:
         </Button>);
         }
         }
-  
         ```
+
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/create-sample-widget.png" alt-text="Screenshot shows the creation of sampleWidget.tsx under the widgets in Visual Studio Code.":::
       
      
@@ -189,7 +189,7 @@ items:
       1. Add the following code in the **sampleDashboard.tsx** file:
 
           ```
-          protected dashboardLayout(): void | JSX. Element {
+          protected dashboardLayout(): JSX. Element | undefined { 
           return (
           <>
           <ListWidget />
@@ -207,7 +207,7 @@ items:
 
           ```
     
-          protected dashboardLayout(): void | JSX.Element {
+          protected dashboardLayout(): JSX. Element | undefined {
           return (
           <>
           <ListWidget />
@@ -250,7 +250,7 @@ items:
 
       1. Move **SSO** folder under **auth** > **tab** folder to **tabs** > **src** > SSO folder.
 
-      You've added the SSO files to your project, you can call Graph APIs. Refer to [Graph API call](tabs/how-to/dashboard-teams-toolkit.md#graph-api-call).
+      You've added the SSO files to your project and now you can call Graph APIs. Refer to [Graph API call](tabs/how-to/dashboard-teams-toolkit.md#graph-api-call).
 
       1. Select **Join** to join the meeting.
 

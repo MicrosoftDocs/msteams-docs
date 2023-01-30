@@ -51,8 +51,8 @@ Dashboard class provides few methods that you can override to customize the dash
 
 | **Methods** | **Function** |
 |---|---|
-| `rowHeight()` | Customize the height of each row of the dashboard. |
-| `columnWidth()` | Customize how many columns the dashboard has at most and the width of each column. |
+| `rowHeights()` | Customize the height of each row of the dashboard. |
+| `columnWidths()` | Customize how many columns the dashboard has at most and the width of each column. |
 | `dashboardLayout()` | Define widgets layout. |
 
 Following is an example to customize the dashboard layout.
@@ -102,7 +102,7 @@ export default function App() {
 
 Open templates/appPackage/manifest.template.json file and add a new dashboard tab under the `staticTabs`. Here's an example:
 
-```typescript
+```json
 {
   "name": "Your Dashboard",
   "entityId": "yourdashboard",
@@ -609,8 +609,9 @@ You can follow the steps to use Microsoft Graph Toolkit as your widget content:
 
    Run the following command in your project `tabs` folder to install the required `npm` packages:
 
-      ```typescript
+      ```bash
       npm install @microsoft/mgt-react @microsoft/mgt-teamsfx-provider
+
       ```
 
 1. Add a new Graph Toolkit widget
@@ -987,3 +988,35 @@ Follow the [step-by-step guide](/microsoftteams/platform/sbs-create-dashboard-wi
 * [App design guidelines for Tab](../design/tabs.md)
 * [Fluent UI Library](https://react.fluentui.dev/?path=/docs/concepts-introduction--page)
 * [Fluent UI React Charting Examples](https://fluentuipr.z22.web.core.windows.net/heads/master/react-charting/demo/index.html#/)
+
+```json
+import { Button, Text } from "@fluentui/react-components";
+        import { Widget } from "../lib/Widget";
+        import { SampleModel } from "../../models/sampleModel";
+        import { getSampleData } from "../../services/sampleService";
+
+        export class SampleWidget extends Widget<SampleModel> {
+        async getData(): Promise<SampleModel> {
+        return getSampleData();
+        }
+
+        headerContent(): JSX.Element | undefined {
+        return <Text>Sample Widget</Text>;
+        }
+
+        bodyContent(): JSX.Element | undefined {
+        return <div>{this.state.data?content}</div>;
+        }
+
+        footerContent(): JSX.Element | undefined {
+        return (<Button
+          appearance="primary"
+          size="medium"
+          style={{ width: "fit-content" }}
+          onClick={() => {}}
+        >
+          View Details
+        </Button>);
+        }
+        }
+```
