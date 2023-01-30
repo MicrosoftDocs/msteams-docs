@@ -133,6 +133,10 @@ The Teams Toolkit for Visual Studio Code extension is available on GitHub. To do
 
     :::image type="content" source="../assets/images/teams-toolkit-overview/visual-studio-launch_1_2.png" alt-text="Screenshot shows how to launch visual studio.":::
 
+Teams Toolkit menu options are available in Visual Studio only when an app project created using Teams Toolkit is open.
+
+:::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-installed.png" alt-text="A screenshot showing Teams Toolkit menu options.":::
+
 ::: zone-end
 
 ## Next steps
