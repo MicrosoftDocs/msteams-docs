@@ -90,9 +90,9 @@ By default, Visual Studio Code automatically keeps Teams Toolkit up-to-date. If 
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/TeamsToolkit-search.png" alt-text="Search for Teams Toolkit.":::
 
-3. Select Teams Toolkit.
+3. Select **Teams Toolkit**.
 
-4. On the Teams Toolkit page, select the dropdown next to the **Uninstall** button.
+4. On the **Teams Toolkit** page, select the dropdown next to the **Uninstall** button.
 
 5. Select **Install Another Version...** from the dropdown.
 
