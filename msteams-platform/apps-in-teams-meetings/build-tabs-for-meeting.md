@@ -49,7 +49,19 @@ The following image shows a tab added to the meeting details page in the Teams m
 
 1. In the app gallery, select the app that you want to add and follow the steps as required. The tab is added to the meeting chat.
 
-   :::image type="content" source="../assets/images/apps-in-meetings/meeting-chat-view.png" alt-text="The screenshot shows the meeting chat view in the Teams meeting.":::
+# [Meeting chat view desktop](#tab/meeting-chat-view-desktop)
+
+   The following image shows an app added to the meeting chat in the Teams desktop client:
+
+   :::image type="content" source="../assets/images/apps-in-meetings/meeting-chat-view.png" alt-text="The screenshot shows the meeting chat view in a meeting chat in Teams desktop.":::
+
+# [Meeting chat view mobile](#tab/meeting-chat-view-mobile)
+
+   The following image shows an app added to the meeting chat in the Teams mobile client:
+
+  :::image type="content" source="../assets/images/apps-in-meetings/meeting-chat-view-mobile.png" alt-text="The screenshot shows the meeting chat view in a meeting chat in Teams mobile.":::
+
+---
 
 ### Meeting side panel view
 
@@ -67,13 +79,39 @@ The following image shows a tab added to the meeting details page in the Teams m
 
 1. This results in rendering tab on the stage for every participant in the meeting.
 
-   :::image type="content" source="../assets/images/meeting-stage-view.png" alt-text="This screenshot shows meeting stage view of the app you shared to meeting.":::
+# [Meeting stage view desktop](#tab/meeting-stage-view-desktop)
+
+   The following image shows a tab added to the meeting stage in the Teams desktop client:
+
+   :::image type="content" source="../assets/images/meeting-stage-view.png" alt-text="This screenshot shows meeting stage view of the app you shared to meeting in Teams desktop.":::
+
+# [Meeting stage view mobile](#tab/meeting-stage-view-mobile)
+
+   The following image shows a tab added to the meeting stage in the Teams mobile client:
+
+   :::image type="content" source="../assets/images/meeting-stage/meeting-stage-view-mobile.png" alt-text="This screenshot shows meeting stage view of the app you shared to meeting in Teams mobile.":::
+
+---
 
 ### Apps in channel meeting
 
 A public scheduled channel meeting has the same list of apps as its parent team. Installing an app to a channel meeting also makes it available in the parent team, and vice versa.
 
 However, the tab instances in a channel meeting are separate from the tabs in the channel itself. For example, suppose a *Development* channel has a *Polly* tab. If you create a *Standup* meeting in that channel, that meeting would not have a *Polly* tab, until you explicitly [add the tab to the meeting](#meeting-details-view).
+
+# [Channel meeting desktop](#tab/channel-meeting-desktop)
+
+   The following image shows apps in a channel in the Teams desktop client:
+
+   :::image type="content" source="../assets/images/apps-in-meetings/apps-in-channel-meeting-desktop.png" alt-text="This screenshot shows a tab added to a channel meeting in Teams desktop.":::
+
+# [Channel meeting mobile](#tab/channel-meeting-mobile)
+
+   The following image shows apps in a channel in the Teams mobile client:
+
+   :::image type="content" source="../assets/images/apps-in-meetings/apps-in-channel-meeting-mobile.png" alt-text="This screenshot shows a tab added to a channel meeting in Teams mobile.":::
+
+---
 
 In public scheduled channel meetings, after a meeting tab is added, you can select the meeting object in the meeting details page to access the tab.
 
@@ -105,7 +143,7 @@ The `context` property determines if the app is available in specific view after
 | **meetingChatTab** | A tab in the header of a group chat between a set of users for a scheduled meeting. You can specify either **meetingChatTab** or **meetingDetailsTab** to ensure the apps work in mobile. |
 | **meetingDetailsTab** | A tab in the header of the meeting details view of the calendar. You can specify either **meetingChatTab** or **meetingDetailsTab** to ensure the apps work in mobile. |
 | **meetingSidePanel** | An in-meeting panel opened through the unified bar (U-bar). |
-| **meetingStage** | An app from the `meetingSidePanel` can be shared to the meeting stage. You can't use this app either on mobile or Teams room clients. |
+| **meetingStage** | An app from the `meetingSidePanel` can be shared to the meeting stage. You can't use this app in Teams room clients. |
 
 #### Configure tab app for a meeting
 
@@ -170,15 +208,26 @@ For in-meeting side panel experience only: 
 
 ### Advanced tab APIs
 
-TeamsJS is a rich library used to create Tabs using JavaScript. Use the latest TeamsJS (V.2.0 or later) to work in Teams, Office, and Outlook. For more information, see [Teams JavaScript client library](/microsoftteams/platform/tabs/how-to/using-teams-client-library).
+TeamsJS is a rich library used to create Tabs using JavaScript. Use the latest TeamsJS (V.2.0 or later) to work in Teams, Microsoft 365 app, and Outlook. For more information, see [Teams JavaScript client library](/microsoftteams/platform/tabs/how-to/using-teams-client-library).
 
 ### Frame context
 
 Microsoft Teams JavaScript library exposes the frameContext in which your meeting tab URL is loaded in the getContext API. The possible values of frameContext are content, task, setting, remove, sidePanel, and meetingStage. This allows you to build customized experiences based on where the app renders. For example, showing a specific collaboration focused UI when in the `meetingStage` and a different meeting preparation UI in the chat tab (`content`). For more information, see [getContext API](/microsoftteams/platform/tabs/how-to/access-teams-context?tabs=teamsjs-v2).
 
+## Feature compatibility by user types
+
+The following table provides the user types and lists the features that each user can access the tabs in meetings:
+
+| User type | Scheduled meeting or Instant calendar meeting | One-on-one call | Group call | Scheduled channel meeting |
+| :-- | :-- | :-- | :-- | :-- |
+| In-tenant | Interaction allowed for all roles.<br><br> Create, update, or delete is allowed for all except the Attendees. | Interaction and create, update, or delete allowed. <br><br> In-tenant users in call with federated users can't interact and create, update, or delete. | Interaction and create, update, or delete allowed.<br><br> In-tenant users in call with federated users can't interact and create, update, or delete. | Interaction and create, update, or delete allowed for all roles except for attendees. |
+| Guest | Can interact only | Can interact only | Can interact only | Can interact only. |
+| Federated or External | Can interact only | Not available | Not available | Can interact only |
+| Anonymous | Not available | Not available | Not available | Not available |
+
 ## Code sample
 
-| Sample name | Description | .NET | Node.js |
+|Sample name | Description | .NET | Node.js |
 |----------------|-----------------|--------------|----------------|
 | Meeting app | Demonstrates how to use the Meeting Token Generator app to request a token. The token is generated sequentially so that each participant has a fair opportunity to contribute in a meeting. The token is useful in situations like scrum meetings and Q&A sessions. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
 | Meeting stage sample | Sample app to show a tab in meeting stage for collaboration | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) |
@@ -188,7 +237,7 @@ Microsoft Teams JavaScript library exposes the frameContext in which your meetin
 
 > [!NOTE]
 >
-> * Meeting apps (side panel and meeting stage) are supported in Teams desktop client.
+> * Meeting apps (side panel and meeting stage) are supported in Teams desktop and mobile clients.
 > * Meeting apps (side panel and meeting stage) in Teams web client is supported only when the [developer preview is enabled](/microsoftteams/platform/resources/dev-preview/developer-preview-intro#enable-developer-preview).
 
 ## Step-by-step guides
@@ -204,3 +253,4 @@ Microsoft Teams JavaScript library exposes the frameContext in which your meetin
 * [Design your Microsoft Teams meeting extension](design/designing-apps-in-meetings.md)
 * [Enable SSO for tab app](../tabs/how-to/authentication/tab-sso-overview.md)
 * [Add apps to meetings using Microsoft Graph](/graph/api/chat-post-installedapps?view=graph-rest-1.0&tabs=http&preserve-view=true)
+* [Get change notifications for Microsoft Teams meeting call updates](/graph/changenotifications-for-onlinemeeting)
