@@ -419,7 +419,7 @@ notifications.sendEvent({
 
 :::image type="content" source="../assets/images/teams-live-share/live-share-timer.png" alt-text="Screenshot shows an example of a count down timer with 9 seconds remaining.":::
 
-`LiveTimer` provides a simple countdown timer that is synchronized for everyone in a meeting. It is useful for scenarios that have a time limit, such as a group meditation timer or a round timer for a game.
+`LiveTimer` provides a simple countdown timer that is synchronized for everyone in a meeting. It’s useful for scenarios that have a time limit, such as a group meditation timer or a round timer for a game.
 
 # [JavaScript](#tab/javascript)
 
