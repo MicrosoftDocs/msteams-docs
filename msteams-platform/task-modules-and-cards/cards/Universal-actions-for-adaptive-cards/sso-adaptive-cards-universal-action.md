@@ -100,7 +100,7 @@ The following are the steps to receive token:
     }
     ```
 
-1. Teams client sends an invoke request to the bot. The bot receives the app users consent and uses their identity to help the token exchange process with the bot framework token service and Azure AD. The Bot framework token service delivers the app users access token to the bot.
+1. Teams client sends an invoke request to the bot. The bot receives the app users consent and uses their identity to help the token exchange process with the bot framework token service and Azure AD. The bot framework token service delivers the app users access token to the bot.
    * Teams client ignore the access token if the value is incorrect.
    * Teams client that experience an error while performing token exchange must respond with an error or a second sign-in request that doesn't include SSO information. If responding with an error, the error must be:
 
