@@ -482,4 +482,5 @@ items:
      :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/trigger-output.png" alt-text="Trigger Output"border="true":::
 
 - content: |
-    You've completed the tutorial to build notification bot. You can also extend your notification bot to add the command response and workflow features.
+   You've completed the tutorial to build a notification bot. You can extend your notification bot to add the command response and workflow features.
+   
