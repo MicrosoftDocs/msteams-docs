@@ -34,7 +34,7 @@ After you install Teams Toolkit, it opens within the Visual Studio Code window.
 
 ### Explore the Teams Toolkit task pane
 
-You can explore the available functionalities from the Teams Toolkit task pane .The task pane appears only after you have created an app project using Teams Toolkit.
+You can explore the available functionalities from the Teams Toolkit task pane. The task pane appears only after you have created an app project using Teams Toolkit.
 
 The following video gives you a brief overview of creating a Teams app project using Teams Toolkit:
 
@@ -44,7 +44,7 @@ After creating a new Teams app project, the directory structure of the app appea
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/first-page_1.png" alt-text="First page of Teams Toolkit" lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/first-page_1.png":::
 
-Let's take a tour of the Teams Toolkit UI.
+Let's take a tour of the Teams Toolkit.
 
  In Visual Studio Code activity bar, the following icons are relevant to the Teams Toolkit:
 
@@ -64,9 +64,9 @@ From the task pane, you can see the following sections:
 
         To develop a Teams app, you need the following accounts:
         
-        * **Sign in to Microsoft 365**: Use your Microsoft 365 account with a valid E5 subscription for building your app.
+        * **Sign in to Microsoft 365**: Use your [Microsoft 365 account](https://developer.microsoft.com/microsoft-365/dev-program) with a valid E5 subscription for building your app.
 
-        * **Sign in to Azure**: Use your Azure account for deploying an app on Azure. You can [create a free Azure account](https://azure.microsoft.com/free/) before you start.
+        * **Sign in to Azure**: Use your Azure account for deploying your app on Azure. You can [create a free Azure account](https://azure.microsoft.com/free/) before you start.
    :::column-end:::
 :::row-end:::
 
@@ -78,9 +78,11 @@ From the task pane, you can see the following sections:
 
         To deploy your Teams app, you need the following environments:
         
-       * **local**: Deploy your app in the default local environment with local machine environment configurations.
+        * **local**: Deploy your app in the default local environment with local environment configurations.
 
-        * **dev**: Deploy your app in the default dev environment with remote or cloud environment configurations. You can create more environments, as you need.
+        * **dev**: Deploy your app in the default dev environment with remote or cloud environment configurations.
+
+        You can create more environments, such as, production or test,  as you need.
    :::column-end:::
 :::row-end:::
 
