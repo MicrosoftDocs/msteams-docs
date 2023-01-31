@@ -549,7 +549,8 @@ Here are a few examples in which `LiveState` can be used in your application:
 - Synchronizing the current step in a multi-round group activity (e.g., guessing phase in Agile Poker).
 
 > [!NOTE]
-> Unlike `SharedMap`, once all users disconnect from a session the `state` and `data` values in `LiveState` will be reset.
+> Unlike `SharedMap`, the `state` and `data` values in `LiveState` will be reset after all the users disconnect from a session.
+
 
 Example:
 
