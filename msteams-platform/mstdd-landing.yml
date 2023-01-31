@@ -56,6 +56,8 @@ landingContent:
         url: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/enable-sso-for-your-adaptive-cards-universal-action.md
       - text: Third party authentication for Adaptive Cards Universal Actions
         url: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/authentication-flow-in-universal-action-for-adaptive-cards.md
+      - text: Enable app caching to improve subsequent launch time of the apps to the meeting side panel (Developer preview)
+        url: apps-in-teams-meetings/build-tabs-for-meeting.md#app-caching
       - text: Update and soft delete event notifications in bot
         url: bots/how-to/conversations/conversation-messages.md#update-message
       - text: Teams developer documentation FAQs
