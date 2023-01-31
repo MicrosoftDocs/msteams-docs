@@ -668,6 +668,12 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
 ::: zone-end
 
+## Code sample
+
+| Sample name | Description | .NET |Node.js|Manifest
+|-------------|-------------|------|----|----|----|
+|Tab channel group|Sample app which showcases creating a custom channel/group tab with ASP.Net Core and MVC. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group/mvc-csharp) |  NA |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group/mvc-csharp/demo-manifest/tab-channel-group.zip)
+
 ## Next step
 
 > [!div class="nextstepaction"]

@@ -214,7 +214,7 @@ this.onMessage(async (context, next) => {
 
 ## Code sample
 
-| Sample name | Description | .NET | Node.js | Python|
+|Sample name | Description | .NETCore | Node.js | Python|
 |----------------|-----------------|--------------|----------------|-------|
 | Teams conversation bot | Messaging and conversation event handling. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/python)|
 | Bot samples | Set of bot samples | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk)|

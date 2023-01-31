@@ -60,7 +60,7 @@ export class MyBot extends TeamsActivityHandler {
     constructor() {
         super();
 
-        // See https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0 to learn more about the message and other activity types.
+        // See https://aka.ms/about-bot-activity-message to learn more about the message and other activity types.
         this.onMessage(async (turnContext, next) => {
             var continuationToken;
             var members = [];
@@ -172,7 +172,7 @@ export class MyBot extends TeamsActivityHandler {
     constructor() {
         super();
 
-        // See https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0 to learn more about the message and other activity types.
+        // See https://aka.ms/about-bot-activity-message to learn more about the message and other activity types.
         this.onMessage(async (turnContext, next) => {
             const member = await TeamsInfo.getMember(turnContext, encodeURI('someone@somecompany.com'));
 
@@ -279,7 +279,7 @@ export class MyBot extends TeamsActivityHandler {
     constructor() {
         super();
 
-        // See https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0 to learn more about the message and other activity types.
+        // See https://aka.ms/about-bot-activity-message to learn more about the message and other activity types.
         this.onMessage(async (turnContext, next) => {
 
             // Gets the details for the given team id.
@@ -376,7 +376,7 @@ export class MyBot extends TeamsActivityHandler {
     constructor() {
         super();
 
-        // See https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0 to learn more about the message and other activity types.
+        // See https://aka.ms/about-bot-activity-message to learn more about the message and other activity types.
         this.onMessage(async (turnContext, next) => {
 
             // Supports retrieving channels hosted by a team.

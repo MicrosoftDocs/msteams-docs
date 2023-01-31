@@ -239,7 +239,7 @@ var responseMsg = JSON.stringify({
 
 ## Code sample
 
-| **Sample name** | **Description** | **.NET** | **Node.js** |
+|**Sample name** | **Description** | **.NET** | **Node.js** |
 |----------------|------------------|--------|----------------|
 | Outgoing Webhooks | Samples to create custom bots to be used in Teams.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/nodejs)|
 
