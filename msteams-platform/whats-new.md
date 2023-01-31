@@ -26,7 +26,7 @@ Teams platform features that are available to all app developers.
 
 **2023 January**
 
-***January 31st, 2023***: [Introducing update and soft delete event notifications in bot](bots/how-to/conversations/conversation-messages.md#update-message).
+***January 31, 2023***: [Introducing update and soft delete event notifications in bot](bots/how-to/conversations/conversation-messages.md#update-message).
 
 :::column-end:::
 :::row-end:::
