@@ -544,9 +544,9 @@ The `LiveState` class enables synchronizing simple application state for everyon
 
 Here are a few examples in which `LiveState` can be used in your application:
 
-- Tracking the user identifier of the current presenter to build a "take control" feature.
-- Maintaining the content identifier that the current presenter is viewing (e.g., `taskId` on a task board).
-- Synchronizing the current step in a multi-round group activity (e.g., guessing phase in Agile Poker).
+- Tracking the user identifier of the current presenter to build a **take control** feature.
+- Maintaining the content identifier that the current presenter is viewing. For example, an `taskId` on a task board.
+- Synchronizing the current step in a multi-round group activity. For example, the guessing phase during the Agile Poker game.
 
 > [!NOTE]
 > Unlike `SharedMap`, the `state` and `data` values in `LiveState` will be reset after all the users disconnect from a session.
