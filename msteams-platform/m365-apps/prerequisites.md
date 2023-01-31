@@ -1,6 +1,6 @@
 ---
 title: Set up your dev environment for extending Teams apps across Microsoft 365
-description: Requirements to set up your dev environment for extending Teams apps across Microsoft 365. Know configurations required to run builds of Microsoft Teams and Microsoft Microsoft 365 applications.
+description: Requirements to set up your dev environment for extending Teams apps across Microsoft 365. Know configurations required to run builds of Microsoft Teams and Microsoft 365 applications.
 ms.date: 05/24/2022
 ms.custom: m365apps
 ms.topic: conceptual
@@ -68,7 +68,7 @@ For more information on Microsoft 365 release options, see [set up the Standard 
 
 ### Desktop
 
-You can preview Teams apps running in Outlook on Windows desktop by using a recent *Beta Channel build*. Check if you have to [change the Microsoft 365 Apps update channel](/deployoffice/change-update-channels?WT.mc_id=M365-MVP-5002016) for your test tenant to install an Microsoft 365 Beta Channel build.
+You can preview Teams apps running in Outlook on Windows desktop by using a recent *Beta Channel build*. Check if you have to [change the Microsoft 365 Apps update channel](/deployoffice/change-update-channels?WT.mc_id=M365-MVP-5002016) for your test tenant to install a Microsoft 365 Beta Channel build.
 
 To install Microsoft 365 Beta Channel applications in your test environment:
 
