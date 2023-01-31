@@ -136,7 +136,7 @@ That's all it took to setup your container and join the meeting's session. Now, 
 
 The Live Share SDK supports any [distributed data structure](https://fluidframework.com/docs/data-structures/overview/) included in Fluid Framework. These features serve as a set of primitives you can use to build robust collaborative scenarios, such as real-time updates of a task list or co-authoring text within an HTML `<textarea>`.
 
-Here's a quick overview of a few of the different types of objects available:
+Following are the different types of objects available:
 
 | Shared Object                                                                       | Description                                                                                                                             |
 | ----------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
