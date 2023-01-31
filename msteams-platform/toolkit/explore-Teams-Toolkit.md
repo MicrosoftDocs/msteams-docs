@@ -28,8 +28,6 @@ After you install Teams Toolkit, it opens within the Visual Studio Code window.
 | 4 | **Documentation** | Access the Microsoft Teams Developer documentation. |
 | 5 | **Tutorials** | Access different tutorials. |
 | 6 | **New File** <br> **Open File** <br> **Open Folder** | Create a new file. <br> Open an existing file. <br> Open the existing folder. |
-| &nbsp; | **Open File** | Open the existing file. |
-| &nbsp; | **Open Folder** | Open the existing folder. |
 | 7 | **Recent** | View the recent files. |
 
 ### Explore the Teams Toolkit task pane
