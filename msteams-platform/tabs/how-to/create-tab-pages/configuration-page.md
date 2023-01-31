@@ -305,7 +305,7 @@ const configPromise = pages.config.setConfig({
     removeUrl: "add removal page URL here"
 });
 configPromise.
-    then((result) => {/*Successful operation*/).
+    then((result) => {/*Successful operation*/}).
     catch((error) => {/*Unsuccessful operation*/});
 ```
 
