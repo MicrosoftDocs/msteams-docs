@@ -93,9 +93,9 @@ items:
     
      ## Define a data model
 
-     1. In Visual Studio Code, under **EXPLORER**, go to **tabs** > **src** > **models**.
+     1. In Visual Studio Code, go to **EXPLORER** > **tabs** > **src** > **models**.
      1. Create a **sampleModel.ts** file.
-     1. Add the following code and add it to the **sampleModel.ts** file:
+     1. Add the following code in the **sampleModel.ts** file:
 
         ```json
           export interface SampleModel {
@@ -124,7 +124,7 @@ items:
 
      1. In Visual Studio Code, go to **EXPLORER** > **tabs** > **src** > **data** > **services**.
      1. Create a **sampleService.ts** file.
-     1. Add the following code in the **sampleService.ts**:
+     1. Add the following code in the **sampleService.ts** file:
 
         ```json
         import { SampleModel } from "../models/sampleModel";
@@ -184,7 +184,7 @@ items:
 
       1. In Visual Studio Code, go to **Explorer** > **tabs** > **src** > **views** > **dashboards**.
       1. Create a **sampleDashboard.tsx** file.
-      1. Add the following code in the **sampleDashboard.tsx** file:
+      1. Add the following code in the **sampleDashboard.jsx** file:
 
           ```
           protected dashboardLayout(): JSX. Element | undefined { 
@@ -244,13 +244,13 @@ items:
 
           :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/add-features.png" alt-text="Screenshot shows the selection of added features option.":::
 
-      1. Select single sign-on.
+      1. Select Single Sign-On.
 
           :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/single-sign-on.png" alt-text="Screenshot shows the selection of single sign-on option.":::
 
       1. Move `auth-start.html` file and `auth-end.html` file in the **auth** > **tab** > public folder to the **tabs** > public folder. These two HTML files are used for auth redirects.
 
-      1. Move **SSO** folder under **auth** > **tab** folder to **tabs** > **src** > SSO folder.
+      1. Move SSO folder under **auth** > **tab** folder to **tabs** > **src** > SSO folder.
 
       You've added the SSO files to your project and now you can call Graph APIs. Refer to [Graph API call](tabs/how-to/dashboard-teams-toolkit.md#graph-api-call).
 
