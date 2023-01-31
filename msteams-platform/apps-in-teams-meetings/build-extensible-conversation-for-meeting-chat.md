@@ -21,10 +21,10 @@ The [Bot Framework](https://dev.botframework.com/) is a rich SDK used to create 
 
 ### Code samples - Bots
 
-| Sample name | Description | .NET | Node.js | Python | Java |
-|----------------|-----------------|--------------|----------------|----------------|
-| Teams conversation bot | Messaging and conversation event handling | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/python) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/java) |
-| Bot samples | Set of bot samples  | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk) |
+|Sample name | Description | .NETCore | Node.js | Python | Java| Manifest
+|----------------|-----------------|--------------|----------------|----------------|----------------|----------------|
+| Teams conversation bot | Messaging and conversation event handling | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/python) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/java) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp/demo-manifest/bot-conversation.zip)
+|Bot samples | Set of bot samples  | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk) |
 
 ## Message extensions
 
@@ -40,10 +40,10 @@ The following table provides the user types and lists the features that each use
 
 | User type | Bots | Message extensions | Adaptive Cards | Task modules |
 | :-- | :-- | :-- | :-- | :-- |
-| In-tenant | Can view messages, interact with the content, and invoke the bot. | Available | Available | Available |
+| In-tenant user | Can view messages, interact with the content, and invoke the bot. | Available | Available | Available |
 | Guest, part of the tenant Azure AD | Can view messages, interact with the content, and invoke the bot. | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. |
 | Federated users, for more information, see [non-standard users](/microsoftteams/non-standard-users). |Can view messages, interact with the content, and invoke the bot. | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. |
-| Anonymous |  Can view messages and interact with the bot. | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. |
+| Anonymous user |  Can view messages and interact with the bot. | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. |
 
 ## See also
 
