@@ -30,6 +30,9 @@ Enable Teams for your organization and for more information, see [enabling Teams
 
 ## Enable custom Teams apps and turn on custom app uploading
 
+> [!IMPORTANT]
+> If you've set up a Microsoft 365 Developer Program instant sandbox or a configurable sandbox with the Teams sample data pack, you can skip the steps to enable sideloading. The **Upload custom apps** setting is enabled by default in the Teams sample data pack.
+
 To turn on the custom app uploading or sideloading for your developer tenant:
 
 1. Sign in to [Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) with your admin credentials.

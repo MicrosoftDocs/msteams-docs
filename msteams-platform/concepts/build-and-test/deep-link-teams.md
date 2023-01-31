@@ -9,7 +9,7 @@ ms.localizationpriority: high
 
 # Deep link to Teams chat
 
-You can navigate to or create private chats between users with TeamsJS library by specifying the set of participants. If a chat doesn’t exist with the specified participants, the user is navigated to an empty new chat. New chats are created in draft state until the user sends the first message. Otherwise, you can specify the name of the chat if it doesn’t already exist, along with text that should be inserted into the user's compose box. You can think of this feature as a shortcut for the user taking the manual action of navigating to or creating the chat, and then typing out the message.
+You can navigate to or create private chats between users with the Microsoft Teams JavaScript client library (TeamsJS) by specifying the set of participants. If a chat doesn’t exist with the specified participants, the user is navigated to an empty new chat. New chats are created in draft state until the user sends the first message. Otherwise, you can specify the name of the chat if it doesn’t already exist, along with text that should be inserted into the user's compose box. You can think of this feature as a shortcut for the user taking the manual action of navigating to or creating the chat, and then typing out the message.
 
 As a use-case example, if you’re returning a Microsoft 365 user profile from your bot as a card, this deep link can allow the user to easily chat with that person. The following example demonstrates how to open a chat message to a group of participants with an initial message.
 
