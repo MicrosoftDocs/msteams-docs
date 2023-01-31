@@ -651,7 +651,7 @@ Meetings in Teams include calls, all-hands meetings, and online classrooms. Meet
 > [!NOTE]
 > The `LivePresence` class doesn't support role verification. The `LivePresenceUser` object has a `getRoles` method, which returns the meeting roles for a given user.
 
-Here is a simple example using `LiveState` for to synchronize which user is the active presenter, where only presenters and organizers can take control:
+In the following example where only presenters and organizers can take control, `LiveState` is used to synchronize which user is the active presenter. 
 
 # [JavaScript](#tab/javascript)
 
