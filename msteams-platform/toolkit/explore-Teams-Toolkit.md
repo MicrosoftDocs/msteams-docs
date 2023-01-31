@@ -27,7 +27,7 @@ After you install Teams Toolkit, it opens within the Visual Studio Code window.
 | 3 | **View samples** | Select and build existing app samples based on common use cases for a Teams app. |
 | 4 | **Documentation** | Access the Microsoft Teams Developer documentation. |
 | 5 | **Tutorials** | Access different tutorials. |
-| 6 | **New File** <br> **Open File** <br> **Open Folder** | Create a new file. <br> Open an existing file. <br> Open the existing folder. |
+| 6 | • **New File** <br> • **Open File** <br>  • **Open Folder** <br>  • **Clone Git Repository**  |  • Create a new file. <br>  • Open an existing file. <br> • Open the existing folder. <br> • Clone the Git repository of your app project. |
 | 7 | **Recent** | View the recent files. |
 
 ### Explore the Teams Toolkit task pane
@@ -92,9 +92,11 @@ From the task pane, you can see the following sections:
 
         To create, customize, and debug your Teams app, you need the following features:
         
-       * **Create a new Teams app**: Use the Teams Toolkit wizard to prepare project scaffolding for app development.
+       * **Create a new app**: Use the Teams Toolkit wizard to prepare project scaffolding for app development.
 
         * **View samples**: Select any of the Teams Toolkit's sample apps. The toolkit downloads the app code from GitHub and you can build the sample app.
+
+        * **View how-to guides**: Select to view Teams app scenario guides and development guides. 
         
         * **Add features**: Add other Teams capabilities to the Teams app during the development process and add optional cloud resources suitable for your app.
        
@@ -132,11 +134,9 @@ From the task pane, you can see the following sections:
 
         To access more information on Teams Toolkit, you need the following documentation and resources:
         
-        * **Get started**: View Teams Toolkit Get started help within Visual Studio Code.
-
-        * **Tutorials**: Select to access different tutorials.
-        
         * **Documentation**: Select to access the Microsoft Teams Developer documentation.
+
+        * **Get started**: View Teams Toolkit Get started help within Visual Studio Code.
        
         * **Report issues on GitHub**: Select to access GitHub page and raise any issues.
    :::column-end:::
