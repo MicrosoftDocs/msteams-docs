@@ -30,7 +30,7 @@ Identity providers that support OAuth 2.0 don't authenticate requests from unkno
 
 2. Select your app to view its properties, or select the "New Registration" button. Find the **Redirect URI** section for the app.
 
-3. Select **Web** from the drop down menu. Update the URL to your authentication endpoint. For the TypeScript/Node.js and C# sample apps on GitHub, the redirect URLs will be similar to the following:
+3. Select **Web** from the dropdown menu. Update the URL to your authentication endpoint. For the TypeScript/Node.js and C# sample apps on GitHub, the redirect URLs will be similar to the following:
 
     Redirect URLs: `https://<hostname>/bot-auth/simple-start`
 
@@ -223,7 +223,7 @@ Your app can set its own session cookie so that the user need not sign in again 
 > * Chrome 80, scheduled for release in early 2020, introduces new cookie values and imposes cookie policies by default. It's recommended that you set the intended use for your cookies rather than rely on default browser behavior. *See* [SameSite cookie attribute (2020 update)](../../../resources/samesite-cookie-update.md).
 > * To get the correct token for Microsoft Teams Free and guest users, it is important that the apps use tenant specific endpoint `https://login.microsoftonline.com/**{tenantId}**`. You can get tenantId from the bot message or tab context. If the apps use `https://login.microsoftonline.com/common`, the users will get incorrect tokens and will log on to the "home" tenant instead of the tenant that they are currently signed into.
 
-For more information on Single Sign-On (SSO), see the article [Silent authentication](~/tabs/how-to/authentication/auth-silent-AAD.md).
+For more information on single sign-on (SSO), see the article [Silent authentication](~/tabs/how-to/authentication/auth-silent-AAD.md).
 
 ## Code sample
 
