@@ -540,7 +540,7 @@ timer.play();
 
 :::image type="content" source="../assets/images/teams-live-share/live-share-state.png" alt-text="Screenshot shows an example of Live Share state to synchronize what planet in the solar system is actively presented to the meeting.":::
 
-The `LiveState` class enables synchronizing simple application state for everyone in a meeting. `LiveState` synchronizes two values: a `state` string and and a corresponding `data` object. This allows you to build an ephemeral distributed-state machine.
+The `LiveState` class enables synchronizing simple application state for everyone in a meeting. `LiveState` synchronizes two values: a `state` string and a corresponding `data` object, which allows you to build an ephemeral distributed-state machine.
 
 Here are a few examples in which `LiveState` can be used in your application:
 
