@@ -442,7 +442,7 @@
       href: apps-in-teams-meetings/build-apps-for-anonymous-user.md
     - name: Meeting apps APIs
       href: apps-in-teams-meetings/meeting-apps-apis.md
-      displayName: payload, getparticipant, captions 
+      displayName: payload, getparticipant, captions, targeted meeting notification
   - name: Get meeting transcripts using Graph APIs
     items:
     - name: Overview

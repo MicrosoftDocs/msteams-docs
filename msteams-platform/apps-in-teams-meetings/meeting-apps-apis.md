@@ -25,14 +25,13 @@ The following table provides a list of APIs available across the Microsoft Teams
 |---|---|----|
 |[**Get user context**](#get-user-context-api)| Get contextual information to display relevant content in a Microsoft Teams tab.| [TeamsJS library](/microsoftteams/platform/tabs/how-to/access-teams-context#get-context-by-using-the-microsoft-teams-javascript-library) |
 |[**Get participant**](#get-participant-api)| Fetch participant information by meeting ID and participant ID. | [Microsoft Bot Framework SDK](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetingparticipantasync?view=botbuilder-dotnet-stable&preserve-view=true)
-|[**Send in-meeting notification**](#send-an-in-meeting-notification)| Provide meeting signals using the existing conversation notification API for user-bot chat and allows to notify user action that shows an in-meeting notification. | [Microsoft Bot Framework SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityextensions.teamsnotifyuser?view=botbuilder-dotnet-stable&preserve-view=true) |
+|[**Send in-meeting notification**](#send-an-in-meeting-notification)| Provides meeting signals using the existing conversation notification API for user-bot chat and allows to notify user action that shows an in-meeting notification. | [Microsoft Bot Framework SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityextensions.teamsnotifyuser?view=botbuilder-dotnet-stable&preserve-view=true) |
 |[**Get meeting details**](#get-meeting-details-api)| Get a meeting's static metadata. | [Microsoft Bot Framework SDK](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetinginfoasync?view=botbuilder-dotnet-stable&preserve-view=true) |
 |[**Send real-time captions**](#send-real-time-captions-api)| Send real-time captions to an ongoing meeting. | [TeamsJS library](/azure/cognitive-services/speech-service/speech-sdk?tabs=nodejs%2Cubuntu%2Cios-xcode%2Cmac-xcode%2Candroid-studio#get-the-speech-sdk&preserve-view=true) |
 |[**Share app content to stage**](build-apps-for-teams-meeting-stage.md#share-app-content-to-stage-api)| Share specific parts of the app to meeting stage from the app side panel in a meeting. | [TeamsJS library](/javascript/api/@microsoft/teams-js/meeting) |
 |[**Get real-time Teams meeting events**](#get-real-time-teams-meeting-events-api)|Fetch real-time meeting events, such as actual start and end time.| [Microsoft Bot Framework SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingstartasync?view=botbuilder-dotnet-stable&preserve-view=true) |
 | [**Get incoming audio state**](#get-incoming-audio-state) | Allows an app to get the incoming audio state setting for the meeting user.| [TeamsJS library](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
 | [**Toggle incoming audio**](#toggle-incoming-audio) | Allows an app to toggle the incoming audio state setting for the meeting user from mute to unmute or vice-versa.| [TeamsJS library](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
-|[**Targeted meeting notification API**](#targeted-meeting-notification-api) | Allows you to send notification to specific participants during the meeting. | [Microsoft Bot Framework SDK ](Work in progress.) |
 
 ## Get user context API
 
@@ -44,7 +43,7 @@ The `GetParticipant` API must have a bot registration and ID to generate auth to
 
 > [!NOTE]
 >
-> * The user type is not included in the **getParticipantRole** API.
+> * The user type isn't included in the **getParticipantRole** API.
 > * Do not cache participant roles since the meeting organizer can change the roles any time.
 > * Currently, the `GetParticipant` API is only supported for distributions lists or rosters with less than 350 participants.
 
@@ -270,8 +269,8 @@ POST /v3/conversations/{conversationId}/activities
 | **channelData.notification.alertInMeeting** | Boolean indicating if a notification is to be shown to the user while in a meeting. |
 | **channelData.notification.externalResourceUrl** | The value of the notification's external resource URL.|
 | **replyToId** | The ID of the parent or root message of the thread. |
-| **APP_ID** | App Id declared in manifest. |
-| **completionBotId** | Bot app Id |
+| **APP_ID** | App ID declared in manifest. |
+| **completionBotId** | Bot app ID. |
 
 ### Response codes
 
@@ -376,8 +375,8 @@ The following table includes the response codes:
 | **207** | Notifications are sent only to a few participants. |
 | **400** | Meeting notification request payload validation failed. |
 | **401** | Bot token is invalid. |
-| **403** | Bot is not allowed to send the notification. |
-| **404** | Meeting chat is not found or none of the participants were found in the roster. |
+| **403** | Bot isn't allowed to send the notification. |
+| **404** | Meeting chat isn't found or none of the participants were found in the roster. |
 
 ## Get meeting details API
 
@@ -665,9 +664,9 @@ The JSON response body for Meeting Details API is as follows:
 
 In case of Recurring meeting type,
 
-**startDate**: Specifies the date to start applying the pattern. The value of startDate must correspond to the date value of the start property on the event resource. Note that the first occurrence of the meeting may not occur on this date if it doesn't fit the pattern.
+**startDate**: Specifies the date to start applying the pattern. The value of startDate must correspond to the date value of the start property on the event resource. The first occurrence of the meeting might not occur on this date if it doesn't fit the pattern.
 
-**endDate**: Specifies the date to stop applying the pattern. Note that the last occurrence of the meeting may not occur on this date if it doesn't fit the pattern.
+**endDate**: Specifies the date to stop applying the pattern. The last occurrence of the meeting might not occur on this date if it doesn't fit the pattern.
 
 ## Send real-time captions API
 
@@ -949,11 +948,11 @@ The following code provides an example of meeting end event payload:
 | **conversation.isGroup** | Boolean indicating whether conversation has more than two participants. |
 | **conversation.tenantId** | Azure Active Directory tenant ID of the conversation or meeting. |
 | **conversation.id** | The meeting chat ID. |
-| **recipient.id** | ID of the user that receive the request. |
-| **recipient.name** | Name of the user that receive the request. |
-| **entities.locale** | entity which contains metadata about locale. |
-| **entities.country** | entity which contains metadata about country. |
-| **entities.type** | entity which contains metadata about client. |
+| **recipient.id** | ID of the user that receives the request. |
+| **recipient.name** | Name of the user that receives the request. |
+| **entities.locale** | entity that contains metadata about locale. |
+| **entities.country** | entity that contains metadata about country. |
+| **entities.type** | entity that contains metadata about client. |
 | **channelData.tenant.id** | Azure Active Directory tenant ID. |
 | **channelData.source** | The source name from where event is fired or invoked. |
 | **channelData.meeting.id** | The default ID associated with the meeting. |
