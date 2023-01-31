@@ -980,7 +980,7 @@ For more information, see:
 
 ## Step-by-step guide
 
-Follow the [step-by-step](../sbs-create-dashboard-widget-graph-api-call-in-Teams-toolkit.yml) guide to build a dashboard, and also learn to add a widget and Graph API call to the dashboard.
+Follow the [step-by-step](~/sbs-create-dashboard-widget-graph-api-call-in-Teams-toolkit.yml) guide to build a dashboard, and also learn to add a widget and Graph API call to the dashboard.
 
 ## See also
 
