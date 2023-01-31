@@ -118,8 +118,6 @@ items:
         }
         ```
 
-        ---
-
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/create-sample-data-json.png" alt-text="Screenshot shows the creation of sampleData.json file under the data folder in Visual Studio Code.":::
 
      **To retrieve services**:
@@ -134,8 +132,6 @@ items:
 
         export const getSampleData = (): SampleModel => SampleData;
         ```
-
-        ---
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/service-retrieve.png" alt-text="Screenshot shows the creation of sampleService.ts file under the service folder in Visual Studio Code.":::
 
@@ -179,8 +175,6 @@ items:
           }
           }
         ```
-
-        ---
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/create-sample-widget.png" alt-text="Screenshot shows the creation of sampleWidget.tsx under the widgets in Visual Studio Code.":::
       
