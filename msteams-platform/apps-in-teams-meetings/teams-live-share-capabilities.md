@@ -215,7 +215,7 @@ function onClickAddToPlaylist(video: IVideo) {
 
 ## Live Share data structures
 
-The Live Share SDK includes a set of new Live Share `SharedObject` classes, which provide stateful and stateless objects. Unlike Fluid data structures, these features do not write changes to the Fluid container, enabling faster synchronization. These objects were designed from the ground up for common meeting scenarios for Teams meetings. Common scenarios include synchronizing what content the presenter is viewing, displaying metadata for each user in the meeting, or displaying a countdown timer.
+The Live Share SDK includes a set of new distributed-data structures that extend Fluid's `SharedObject` class, providing new types of stateful and stateless objects. Unlike Fluid data structures, Live Share's `SharedObject` classes don’t write changes to the Fluid container, enabling faster synchronization. Further, these classes were designed from the ground up for common meeting scenarios in Teams meetings. Common scenarios include synchronizing what content the presenter is viewing, displaying metadata for each user in the meeting, or displaying a countdown timer.
 
 | Live Object    | Description                                                                                                                             |
 | -------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
