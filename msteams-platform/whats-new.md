@@ -299,13 +299,15 @@ Developer preview is a public program that provides early access to unreleased T
 
 **2023 January**
 
- ***January 27, 2023***: [Introducing Targeted in-meeting notification for apps in Teams](apps-in-teams-meetings/in-meeting-notification-for-meeting.md#targeted-in-meeting-notification)]
+ ***January 31, 2023***: [Introducing Targeted in-meeting notification for apps in Teams](apps-in-teams-meetings/in-meeting-notification-for-meeting.md#targeted-in-meeting-notification)]
+***January 30, 2023***: [Enable app caching to improve subsequent launch time of the apps to the meeting side panel](apps-in-teams-meetings/build-tabs-for-meeting.md#app-caching).
 
 :::column-end:::
 :::row-end:::
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ------------------ |
+|05/12/2022| Introduced share in meeting to share any document or third-party app to the meeting stage.|Build apps for Teams meetings and calls > Enable and configure apps for meetings > [Share in meeting](concepts/build-and-test/share-in-meeting.md) |
 |10/11/2022| Enable bots to receive all chat messages without being @mentioned.|Build bots > Bot conversations > Message in bot conversations > [Receive all conversation messages with RSC](bots/how-to/conversations/channel-messages-with-rsc.md) |
 |10/11/2022|Generate a deep link to share content to stage in meetings.|Build apps for Teams meetings and calls > Enable and configure apps for meetings > Share in meeting > [Generate a deep link to share content to stage in meetings.](concepts/build-and-test/share-in-meeting.md) |
 | 09/23/2022 | Introduced meeting app support for Scheduled Channel Meetings. | Build apps for Teams meetings and calls > [Apps for Teams meetings and calls](apps-in-teams-meetings/teams-apps-in-meetings.md) |
