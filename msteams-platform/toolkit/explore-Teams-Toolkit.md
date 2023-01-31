@@ -10,21 +10,21 @@ zone_pivot_groups: teams-app-platform
 ---
 # Explore Teams Toolkit
 
-In this document, you can understand  different UI elements along with description and basic usage in Teams Toolkit.
+Teams Toolkit appears within Visual Studio Code as an extension. You can explore the Teams Toolkit look and feel within the Visual Studio Code. This section gives you a tour of Teams Toolkit and its features.
 
 ::: zone pivot="visual-studio-code"
 
-## Basic UI elements of Teams Toolkit
+## Take a tour of Teams Toolkit
 
-After Teams Toolkit installation, the following Teams Toolkit UI appears:
+After you install Teams Toolkit, it opens within the Visual Studio Code window.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/overview1_1.png" alt-text="Overview of Teams Toolkit" lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/overview1_1.png":::
 
 | Serial No. | UI Elements | Definition |
-| --- | --- |
+| --- | --- | --- |
 | 1 | **Get Started** | Explore Teams Toolkit and get an overview of the fundamentals. |
 | 2 | **Create a new Teams app** | Create a new Teams app based on your requirement. |
-| 3 | **View samples** | Access existing samples to build apps based on your requirement. |
+| 3 | **View samples** | Select and build existing app samples based on common use cases for a Teams app. |
 | 4 | **Documentation** | Access the Microsoft Teams Developer documentation. |
 | 5 | **Tutorials** | Access different tutorials. |
 | 6 | **New File** | Create a new file. |
@@ -34,11 +34,13 @@ After Teams Toolkit installation, the following Teams Toolkit UI appears:
 
 ### Explore the Teams Toolkit task pane
 
-You can explore UI elements from task pane in the Teams Toolkit. Task pane appears after creating an app using Teams Toolkit. The following video helps you to learn about the process of creating a new Teams app:
+You can explore the available functionalities from the Teams Toolkit task pane .The task pane appears only after you have created an app project using Teams Toolkit.
+
+The following video gives you a brief overview of creating a Teams app project using Teams Toolkit:
 
    :::image type="content" source="../assets/videos/javascript-bot-app1_1.gif" alt-text="Create a Teams app":::
 
-After creating a new Teams app, the directory structure of the app appears in the left panel and the **`README`** file in the right panel.
+After creating a new Teams app project, the directory structure of the app appears in the left panel and the **`README`** file in the right panel.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/first-page_1.png" alt-text="First page of Teams Toolkit" lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/first-page_1.png":::
 
