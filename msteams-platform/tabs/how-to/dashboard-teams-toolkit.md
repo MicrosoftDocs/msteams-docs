@@ -37,7 +37,7 @@ Following are the steps to add a new dashboard layout:
 
 ### Create a dashboard class
 
-Create a file with the extension `.tsx` for your dashboard in the tabs/src/views/dashboards directory, for example, YourDashboard.tsx. Then, create a class that extends the Dashboard class:
+Create a file with the extension .tsx for your dashboard in the tabs/src/views/dashboards directory, for example, YourDashboard.tsx. Then, create a class that extends the [Dashboard](https://github.com/OfficeDev/TeamsFx/wiki/) class:
 
 ```typescript
 
@@ -120,7 +120,7 @@ The core dashboard implementation is in tabs folder. This section walks you thro
 |---|---|
 | `.fx` | Project level settings, configurations, and environment information. |
 | `.vscode` | Visual Studio Code files for local debug. |
-| `tabs` | The source code for the dashboard tab Teams application. |
+| `tabs` | Source code for the dashboard tab Teams application. |
 | `templates` | Templates for the Teams application manifest and for provisioning Azure resources. |
 
 The following files provide the business logic for the dashboard tab. These files can be updated to fit your business logic requirements. The default implementation provides a starting point to help you get started.
@@ -142,18 +142,18 @@ The following files are project-related files and you need not customize these f
 
 | **File** | **Content**|
 |---|---|
-| src/index.tsx | Application entry point. |
-| src/App.tsx | Application route. |
-| src/internal/addNewScopes.ts | Implementation of new scopes added. |
-| src/internal/context.ts | `TeamsFx` Context.
-| src/internal/login.ts | Implementation of login. |
-| src/internal/singletonContext.ts | Implementation of the TeamsFx instance singleton. |
+| src/index.tsx | Application entry point |
+| src/App.tsx | Application route |
+| src/internal/addNewScopes.ts | Implementation of new scopes added |
+| src/internal/context.ts | `TeamsFx` context |
+| src/internal/login.ts | Implementation of login |
+| src/internal/singletonContext.ts | Implementation of the `TeamsFx` instance singleton |
 
 ## Customize the dashboard layout
 
 The `TeamsFx` provides convenient methods for defining and modifying the layout of the dashboard.
 
-1. Three widgets in a row with the height of 350 px, occupying 20%, 60%, and 20% of the width, respectively.
+1. Three widgets in a row with the height of 350 px occupying 20%, 60%, and 20% of the width, respectively.
 
     ```typescript
     export default class SampleDashboard extends Dashboard {
@@ -241,7 +241,7 @@ The `TeamsFx` provides convenient methods for defining and modifying the layout 
 
     :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/widget-customize.png" alt-text="Screenshot shows the two widget customization.":::
 
-1. Customize the height of widgets in a row. The following code can achieve a height of 400px for the `ListWidget` and a height of 350 px for the `ChartWidget`.
+1. Customize the height of widgets in a row. The following code can achieve a height of 400 px for the `ListWidget` and a height of 350 px for the `ChartWidget`.
 
     ```typescript
         import { oneColumn } from '../lib/Dashboard.styles';
@@ -376,7 +376,7 @@ export class Dashboard extends Component<any, IDashboardState> {
 }
 ```
 
-In the dashboard class, the `TeamsFx` provides basic layouts with customizable methods. The Dashboard is still a react component, and the `TeamsFx` provides basic implementations of functions based on the lifecycle of react components, such as:
+In the dashboard class, the `TeamsFx` provides basic layouts with customizable methods. The dashboard is still a react component, and the `TeamsFx` provides basic implementations of functions based on the lifecycle of react components, such as:
 
 * Implementing a basic render logic based on the grid layout.
 * Adding an observer to automatically adapt to mobile devices.
@@ -700,7 +700,7 @@ If you want to include a data loader to your widget before the widget is loaded,
 
 The following steps show how to add a property to the state of `ListWidget` and how to use it to show a loading spinner while the data is loading.
 
-1. **Define a state type**
+1. Define a state type
 
    Define a state type including a property named `loading` that indicates whether the data is loading.
 
@@ -711,7 +711,7 @@ The following steps show how to add a property to the state of `ListWidget` and 
     }
     ```
 
-1. **Add a data loader**
+1. Add a data loader
 
     Modify the `bodyContent` method to show a loading spinner if data is loading.
 
@@ -733,7 +733,7 @@ The following steps show how to add a property to the state of `ListWidget` and 
     }
     ```
 
-1. **Hide the footer button if the data is loading**
+1. Hide the footer button if the data is loading
 
     Following is an example of footer button:
 
@@ -749,11 +749,11 @@ The following steps show how to add a property to the state of `ListWidget` and 
     }
     ```
 
-1. **Update the state reference**
+1. Update the state reference
 
     Update the state reference in the widget file to use the new state type and update the state in the `getData` method to set the `loading` property to `false` after the data is loaded.
 
-    Now, the loading spinner is shown while the data is loading. When the data is loaded, the loading spinner is hidden, and the list data and footer button are shown.
+    Now, the loading spinner is shown while the data is loading. When the data is loaded, the loading spinner is hidden and the list data and footer button are shown.
 
     :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/spinner.gif" alt-text="Graphical representation shows the loading spinner while the data is loading.":::
 
@@ -839,7 +839,7 @@ You can modify `setInterval` method to call your own function to refresh data li
 
 Microsoft Graph API is a web API that you can use to communicate with Microsoft cloud and other services. Custom applications can use the Microsoft Graph API to connect to data and use it in custom applications to enhance organizational productivity.
 
-**To add a Graph API call**:
+To add a Graph API call:
 
 * [Call Graph API from the front-end (use delegated permissions)](#call-graph-api-from-the-front-end-use-delegated-permissions)
 * [Call Graph API from the back-end (use application permissions)](#call-graph-api-from-the-back-end-use-application-permissions)
@@ -903,7 +903,7 @@ If you want to call a Graph API from the back-end, you can refer to the followin
 
 **Add an Azure Function**
 
-In the left pane of the Visual Studio Code, select **Add features** in **Teams Toolkit**, select **Azure Functions**, and enter the function name.
+In the left pane of the Visual Studio Code, select **Teams Toolkit** > **Adding features** > **Azure Functions** > and Enter the function name.
 
 :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/azure-functions.png" alt-text="Screenshot shows the selection of Azure Functions.":::
 
@@ -980,7 +980,7 @@ For more information, see:
 
 ## Step-by-step guide
 
-Follow the [step-by-step guide](/microsoftteams/platform/sbs-create-dashboard-widget-graph-api-call-in-teams-toolkit?branch=pr) to build a dashboard, and also learn to add a widget and Graph API call to the dashboard.
+Follow the [step-by-step](msteams-platform\sbs-create-dashboard-widget-graph-api-call-in-Teams-toolkit.yml) guide to build a dashboard, and also learn to add a widget and Graph API call to the dashboard.
 
 ## See also
 
@@ -988,35 +988,3 @@ Follow the [step-by-step guide](/microsoftteams/platform/sbs-create-dashboard-wi
 * [App design guidelines for Tab](../design/tabs.md)
 * [Fluent UI Library](https://react.fluentui.dev/?path=/docs/concepts-introduction--page)
 * [Fluent UI React Charting Examples](https://fluentuipr.z22.web.core.windows.net/heads/master/react-charting/demo/index.html#/)
-
-```json
-import { Button, Text } from "@fluentui/react-components";
-        import { Widget } from "../lib/Widget";
-        import { SampleModel } from "../../models/sampleModel";
-        import { getSampleData } from "../../services/sampleService";
-
-        export class SampleWidget extends Widget<SampleModel> {
-        async getData(): Promise<SampleModel> {
-        return getSampleData();
-        }
-
-        headerContent(): JSX.Element | undefined {
-        return <Text>Sample Widget</Text>;
-        }
-
-        bodyContent(): JSX.Element | undefined {
-        return <div>{this.state.data?content}</div>;
-        }
-
-        footerContent(): JSX.Element | undefined {
-        return (<Button
-          appearance="primary"
-          size="medium"
-          style={{ width: "fit-content" }}
-          onClick={() => {}}
-        >
-          View Details
-        </Button>);
-        }
-        }
-```
