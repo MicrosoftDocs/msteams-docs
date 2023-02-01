@@ -15,7 +15,7 @@ Microsoft Teams provides APIs that you can use to implement the in-app purchases
 
 To offer an in-app purchase experience to the users of your app, ensure the following:
 
-* App is built with [TeamsJS client library](https://github.com/OfficeDev/microsoft-teams-library-js).
+* App is built with [Microsoft Teams JavaScript client library (TeamsJS)](https://github.com/OfficeDev/microsoft-teams-library-js).
 
 * App is enabled with a transactable [SaaS offer](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md).
 
