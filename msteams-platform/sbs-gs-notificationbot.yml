@@ -241,7 +241,7 @@ items:
     | `src/index.*s` | The entrypoint to handle bot messages and send notifications |
     | `.gitignore` | File to exclude local files from bot project |
     | `package.json` | The npm package file for bot project |
-    | `README.md` | Refer to the `README.md` file to know more about notification bot |
+    | `README.md` | Refer to the `README.md` file to know more about the notification bot |
 
 - title: Send notification to Teams channel
   durationInMinutes: 1
