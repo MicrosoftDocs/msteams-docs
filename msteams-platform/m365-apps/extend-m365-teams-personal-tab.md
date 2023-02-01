@@ -1,7 +1,7 @@
 ---
 title: Extend a Teams personal tab app for Microsoft 365
 description: Learn how to update your personal tab app to run in Outlook and Microsoft 365 app, in addition to Microsoft Teams.
-ms.date: 01/11/2023
+ms.date: 01/31/2023
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: medium
@@ -96,7 +96,7 @@ Open your Teams app manifest and update the `$schema` and `manifestVersion` manu
 ```json
 {
     "$schema" : "https://developer.microsoft.com/json-schemas/teams/v1.14/MicrosoftTeams.schema.json",
-    "manifestVersion" : "1.13"
+    "manifestVersion" : "1.14"
 }
 ```
 
@@ -171,9 +171,7 @@ The final step to running your app in Microsoft 365 and Outlook is to sideload y
 
     :::image type="content" source="images/toolkit-zip-teams-metadata-package.png" alt-text="'The screenshot is an example that shows the Zip Teams metadata package' option in Teams Toolkit extension for Visual Studio Code.":::
 
-1. Sign in to Teams with your sandbox tenant account, and toggle into  *Developer Preview* mode. Select the ellipsis (**...**) menu by your user profile, then select: **About** > **Developer preview**.
-
-    :::image type="content" source="images/teams-dev-preview.png" alt-text="The screenshot describes how to select 'Developer Preview' option.":::
+1. Sign in to Teams with your sandbox tenant account
 
 1. Select **Apps** to open the **Manage your apps** pane. Then select **Upload an app**.
 
@@ -249,9 +247,7 @@ To view your app running in Microsoft 365 app for Android:
 
 ## Troubleshooting
 
-Currently, a subset of Teams application types and capabilities is supported in Outlook and Microsoft 365 clients. This support expands over time.
-
-Refer to [Microsoft 365 app support](../tabs/how-to/using-teams-client-library.md#microsoft-365-support-running-teams-apps-in-microsoft-365-and-outlook) to check host support for various TeamsJS capabilities.
+At this time, only a subset of Teams application types and capabilities is supported in Outlook and Microsoft 365 clients. For details about what is currently supported, refer to [Microsoft 365 app support](../tabs/how-to/using-teams-client-library.md#microsoft-365-support-running-teams-apps-in-microsoft-365-and-outlook) to check host support for various TeamsJS capabilities.
 
 For an overall summary of Microsoft 365 host and platform support for Teams apps, see [Extend Teams apps across Microsoft 365](overview.md).
 
