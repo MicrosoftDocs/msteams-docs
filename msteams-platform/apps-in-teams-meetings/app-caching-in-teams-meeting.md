@@ -8,7 +8,7 @@ ms.localizationpriority: high
 ms.date: 04/07/2022
 ---
 
-# App caching in Teams meeting
+# Enable app caching for your tab app in meeting
 
 After you build a tab or app for Teams meeting, you can store your app data in the meeting by enabling app caching. App caching stores your app data in the temporary storage and it improves the subsequent launch time of the apps that are loaded in the meeting side panel when you relaunch the app.
 
@@ -19,8 +19,7 @@ After you build a tab or app for Teams meeting, you can store your app data in t
 
 After you enabled the app caching, the webview that is used to host the embedded app is reused as users navigate to different instances of the app within a window. The webview used to host the app is hidden when the users leave the app and shown when the users return to the app. When the app is cached, any audio that is playing is muted.
 
-> [!NOTE]
-> If the app caching isn't enabled, the webview is recreated every time the user launches the app.
+If the app caching isn't enabled, the webview is recreated every time the user launches the app.
 
 The following is the flow diagram of the first launch of an app that wants to opt into app caching (register the `load` or `beforeUnload` on the first launch of the app):
 
@@ -32,7 +31,7 @@ The following is the flow diagram of the launch of cached app:
 
 ## Enable app caching
 
-To enable app caching in your apps in Teams meeting side panel, follow the steps:
+To enable app caching for your app to be cached in the meeting side panel, follow the steps:
 
 1. Use `contentUrl` and `entityId` passed into the load handler to route to the correct page within your app and invoke `notifySuccess` or `notifyFailure` to notify Teams client that the app initialization flow is complete.
 
@@ -113,6 +112,12 @@ The following are the limitations for app caching:
 * Check the amount of free memory on your system. App caching requires minimum of 4 GB system memory.
 
 * Reduce your memory footprint when cached. Use the `beforeUnload` handlers to dispose resources that aren't needed when cached.
+
+## Code sample
+
+|Sample name | Description | .NET | Node.js |
+|----------------|-----------------|--------------|----------------|
+| App caching | Sample app to show how app caching works in the meeting side panel. | NA | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-cache-meetings/nodejs) |
 
 ## See also
 
