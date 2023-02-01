@@ -10,16 +10,17 @@ ms.date: 04/07/2022
 
 # Enable app caching for your tab app in meeting
 
-After you build a tab or app for Teams meeting, you can store your app data in the meeting by enabling app caching. App caching stores your app data in the temporary storage and it improves the subsequent launch time of the apps that are loaded in the meeting side panel when you relaunch the app.
+In your tab app for Teams meeting, you can store your app data in the meeting by enabling app caching. It allows you to store your app data in the temporary storage and improves the app relaunch time within the meeting.
+
+After you enable app caching, the webview that is used to host the embedded app is reused as participants navigate to different instances of the app within the meeting window. The webview used to host the app is hidden when the participants leave the app and shown when they return to the app.
+
+App caching improves subsequent launch time of the apps that are loaded in the meeting side panel by allowing you to keep some resources and assets in memory that you can use when rehydrating app. If the app caching isn't enabled, the webview is recreated every time the user launches the app.
 
 > [!NOTE]
 >
 > * Currently, app caching is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
 > * App caching is supported only for tabs loaded in the meeting side panel in Teams desktop client.
-
-After you enabled the app caching, the webview that is used to host the embedded app is reused as users navigate to different instances of the app within a window. The webview used to host the app is hidden when the users leave the app and shown when the users return to the app. When the app is cached, any audio that is playing is muted.
-
-If the app caching isn't enabled, the webview is recreated every time the user launches the app.
+> * When the app is cached, any audio that is playing is muted.
 
 The following is the flow diagram of the first launch of an app that wants to opt into app caching (register the `load` or `beforeUnload` on the first launch of the app):
 
