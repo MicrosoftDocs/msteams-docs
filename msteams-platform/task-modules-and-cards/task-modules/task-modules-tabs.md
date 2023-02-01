@@ -14,11 +14,13 @@ The two main operations of dialogs involve opening and closing (submitting) them
 # [TeamsJs v1](#tab/teamsjs1)
 
 ```typescript
+// Same function is used for both HTML and Adaptive Card dialogs
 microsoftTeams.tasks.startTask(
     taskInfo: TaskInfo,
     submitHandler?: (err: string, result: string | any) => void
 ): void;
 
+// Only works for HTML dialogs (AC dialogs send result from Action.Submit)
 microsoftTeams.tasks.submitTask(
     result?: string | any,
     appIds?: string | string[]
@@ -28,13 +30,20 @@ microsoftTeams.tasks.submitTask(
 # [TeamsJs v2](#tab/teamsjs)
 
 ```typescript
- microsoftTeams.dialog.url.open(
-   urlDialogInfo: UrlDialogInfo, 
-   submitHandler?: DialogSubmitHandler, 
-   messageFromChildHandler?: PostMessageChannel
-): void])
+// Open HTML dialog
+microsoftTeams.dialog.url.open(
+    urlDialogInfo: UrlDialogInfo, 
+       submitHandler?: DialogSubmitHandler, 
+       messageFromChildHandler?: PostMessageChannel
+): void;
 
+// Open Adaptive Card dialog
+microsoftTeams.dialog.adaptiveCard.open(
+    adaptiveCardDialogInfo: AdaptiveCardDialogInfo,
+    submitHandler?: DialogSubmitHandler
+): void;
 
+// Submit HTML dialog (AC dialogs send result from Action.Submit)
    microsoftTeams.dialog.url.submit(
     result?: string | any,
     appIds?: string | string[]
@@ -48,16 +57,32 @@ The following sections explain the process of invoking a dialog from a tab and s
 
 ## Invoke a dialog from a tab
 
-To invoke a dialog from a tab use `microsoftTeams.tasks.startTask()` passing a [DialogInfo object](~/task-modules-and-cards/task-modules/invoking-task-modules.md#dialoginfo-object) and an optional `submitHandler` callback function. There are two cases to consider:
+> [!NOTE]
+> Starting with TeamsJS v.2.8.x, Adaptive Card-based dialogs are supported by the [dialog](/javascript/api/@microsoft/teams-js/dialog) namespace and the `tasks` namespace is now fully deprecated. The `tasks` namespace is still supported for backward-compatibility, however best practice is to update `tasks.startTask()` calls to `dialog.url.open` or `dialog.adaptiveCard.open` for HTML- and Adaptive Card-based dialogs, respectively. For more info, see the [dialog namespace](../../tabs/how-to/using-teams-client-library.md#dialog-namespace).
 
-* The value of `TaskInfo.url` is set to a URL. The task module window appears and `TaskModule.url` is loaded as an `<iframe>` inside it. JavaScript on that page calls `microsoftTeams.initialize()`. If there's a `submitHandler` function on the page and there's an error when invoking `microsoftTeams.tasks.startTask()`, then `submitHandler` is invoked with `err` set to the error string indicating the same. For more information, see [task module invocation errors](#task-module-invocation-errors).
-* The value of `taskInfo.card` is the [JSON for an Adaptive Card](~/task-modules-and-cards/task-modules/invoking-task-modules.md#adaptive-card-or-adaptive-card-bot-card-attachment). There's no JavaScript `submitHandler` function to call when the user closes or presses a button on the Adaptive Card. The only way to receive what the user entered is by passing the result to a bot. To use an Adaptive Card task module from a tab, your app must include a bot to get any response from the user.
+You can invoke either an HTML or Adaptive Card dialog from a tab.
 
-The next section gives an example of invoking a task module.
+### HTML dialog
 
-## Example of invoking a task module
+```typescript
+ microsoftTeams.dialog.url.open(urlDialogInfo, submitHandler);
+```
 
-The following image displays the task module:
+The value of `UrlDialogInfo.url` is set to the location of the content of your dialog. The dialog window opens and `UrlDialogInfo.url` is loaded as an `<iframe>` inside it. JavaScript in the dialog page calls `microsoftTeams.app.initialize()`. If there's a `submitHandler` function on the page and there's an error when invoking `microsoftTeams.dialog.url.open()`, then `submitHandler` is invoked with `err` set to the error string indicating the same.
+
+### Adaptive Card dialog
+
+```typescript
+ microsoftTeams.dialog.adaptiveCard.open(adaptiveCardDialogInfo, submitHandler);
+```
+
+The value of `adaptiveCardDialogInfo.card` is the [JSON for an Adaptive Card](../../task-modules-and-cards/task-modules/invoking-task-modules.md#adaptive-card-or-adaptive-card-bot-card-attachment). You can specify a `submitHandler` to be called with an *err* string, if there was an error when invoking open() or if the user closes the dialog using the **X** (Exit) button.
+
+The next section gives an example of invoking a dialog.
+
+## Example of invoking a dialog
+
+The following image displays the dialog (task module):
 
 :::image type="content" source="../../assets/images/task-module/task-module-custom-form.png" alt-text="Task Module Custom Form":::
 
@@ -90,49 +115,50 @@ microsoftTeams.tasks.startTask(taskInfo, submitHandler);
 # [TeamsJs v2](#tab/teamsjs3)
 
 ```typescript
-let taskInfo = {
+let urlDialogInfo = {
     title: null,
     height: null,
     width: null,
     url: null,
-    card: null,
-    fallbackUrl: null,
-    completionBotId: null,
+    fallbackUrl: null
 };
 
-taskInfo.url = "https://contoso.com/teamsapp/customform";
-taskInfo.title = "Custom Form";
-taskInfo.height = 510;
-taskInfo.width = 430;
-dialogResponse = (dialogResponse) => {
-        console.log(`Submit handler - err: ${dialogResponse.err}`);
-        alert("Result = " + JSON.stringify(dialogResponse.result) + "\nError = " + JSON.stringify(dialogResponse.err));
-    };
+urlDialogInfo.url = "https://contoso.com/teamsapp/customform";
+urlDialogInfo.title = "Custom Form";
+urlDialogInfo.height = 510;
+urlDialogInfo.width = 430;
+submitHandler = (submitHandler) => {
+        console.log(`Submit handler - err: ${submitHandler.err}`);
+        alert("Result = " + JSON.stringify(submitHandler.result) + "\nError = " + JSON.stringify(submitHandler.err));
+};
 
- microsoftTeams.dialog.open(taskInfo, dialogResponse);
+microsoftTeams.dialog.url.open(urlDialogInfo, submitHandler);
 ```
 
 ---
 
-The `submitHandler` is simple and it echoes the value of `err` or `result` to the console.
+The `submitHandler` echoes the values of `err` or `result` to the console.
 
-## Submit the result of a task module
+## Submit the result of a dialog
 
-The `submitHandler` function resides in the `TaskInfo.url` web page and is used with `TaskInfo.url`. If there's an error when invoking the task module, your `submitHandler` function is immediately invoked with an `err` string indicating what [error occurred](#task-module-invocation-errors). The `submitHandler` function is also called with an `err` string when the user selects X at the upper right of the task module to close it.
+If there's an error when invoking the dialog, your `submitHandler` function is immediately invoked with an `err` string indicating what [error occurred](#task-module-invocation-errors). The `submitHandler` function is also called with an `err` string when the user selects **X** on the dialog to exit.
 
-If there's no invocation error and the user doesn't select X to dismiss it, the user chooses a button when finished. Depending on whether it's a URL or an Adaptive Card in the task module, the next sections provide details on what occurs.
+If there's no invocation error and the user doesn't select **X** to dismiss the dialog, the user selects a submit button when finished. The following sections explain what happens next for HTML and Adaptive Card dialog types.
 
-### HTML or JavaScript `TaskInfo.url`
+### HTML or JavaScript dialogs
 
-After validating the user's inputs, call the `microsoftTeams.tasks.submitTask()` function referred to as `submitTask()`. Call `submitTask()` without any parameters if you just want Teams to close the task module. You can pass an object or a string to your `submitHandler`.
+After validating user input, call `microsoftTeams.dialog.url.submit()`. You can call `submit()` without any parameters if you simply want Teams to close the dialog, or you can pass an object or string `result` back to your app as the first parameter, and an `appId` or array of `appId` strings as the second parameter. If you call `submit()` with a `result` parameter, you must pass an `appId` or an array of `appId` strings. This enables Teams to validate that the app sending the result is the same as the invoked dialog.
 
-Pass your result as the first parameter. Teams invokes `submitHandler` where `err` is `null` and `result` is the object or string you passed to `submitTask()`. If you call `submitTask()` with a `result` parameter, you must pass an `appId` or an array of `appId` strings. This permits Teams to validate that the app sending the result is same as the invoked task module.
+Teams will then invoke your `submitHandler` where `err` is *null* and `result` is the object or string you passed to `submit()`.
 
-### Adaptive Card `TaskInfo.card`
+### Adaptive Card dialogs
 
-When you invoke the task module with a `submitHandler` and the user selects an `Action.Submit` button, the values in the card are returned as the value of `result`. If the user selects the Esc key or X at the top right, `err` is returned instead. If your app contains a bot in addition to a tab, you can include the `appId` of the bot as the value of `completionBotId` in the `TaskInfo` object. The Adaptive Card body as filled in by the user is sent to the bot using a `task/submit invoke` message when the user selects an `Action.Submit` button. The schema for the object you receive is similar to [the schema you receive for task/fetch and task/submit messages](~/task-modules-and-cards/task-modules/task-modules-bots.md#payload-of-taskfetch-and-tasksubmit-messages). The only difference is that the schema of the JSON object is an Adaptive Card object as opposed to an object containing an Adaptive Card object as [when Adaptive cards are used with bots](~/task-modules-and-cards/task-modules/task-modules-bots.md#payload-of-taskfetch-and-tasksubmit-messages).
+When you invoke the dialog with a `submitHandler` and the user selects an `Action.Submit` button, the values in the card are returned as its `data` object. If the user presses the **Esc** key or selects **X** to exit the dialog, your `submitHandler` is called with the `err` string. If your app contains a bot in addition to a tab, you can include the `appId` of the bot as the value of `completionBotId` in the `TaskInfo` ([BotAdaptiveCardDialogInfo](/javascript/api/@microsoft/teams-js/botadaptivecarddialoginfo)) object.
 
-The following is the example of payload:
+The Adaptive Card body as filled in by the user is sent to the bot using a `task/submit invoke` message when the user selects an `Action.Submit` button. The schema for the object you receive is similar to [the schema you receive for task/fetch and task/submit messages](../../task-modules-and-cards/task-modules/task-modules-bots.md#payload-of-taskfetch-and-tasksubmit-messages).
+The only difference is that the schema of the JSON object is an Adaptive Card object as opposed to an object containing an Adaptive Card object as [when Adaptive cards are used with bots](../../task-modules-and-cards/task-modules/task-modules-bots.md#payload-of-taskfetch-and-tasksubmit-messages).
+
+The following is an example payload:
 
 ```json
 {
@@ -154,23 +180,21 @@ The following is the example of payload:
 The following is the example of Invoke request:
 
 ```javascript
-let taskInfo = {
-    title: "Task Module Demo",
+let adaptiveCardDialogInfo = {
+    title: "Dialog Demo",
     height: "medium",
     width: "medium",
-    card: null,
-    fallbackUrl: null,
-    completionBotId: null,
+    card: null
 };
 
-taskInfo.card = {
+adaptiveCardDialogInfo.card = {
     "type": "AdaptiveCard",
     "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-    "version": "1.4",
+    "version": "1.5",
     "body": [
         {
             "type": "TextBlock",
-            "text": "This is sample adaptive card.",
+            "text": "This is a sample adaptive card.",
             "wrap": true
         }
     ]
@@ -183,15 +207,15 @@ submitHandler = (err, result) => {
     );
 };
 
-microsoftTeams.tasks.startTask(taskInfo, submitHandler);
+microsoftTeams.dialog.adaptiveCard.open(adaptiveCardDialogInfo, submitHandler);
 
 ```
 
-The next section gives an example of submitting the result of a task module.
+The next section provides an example of submitting the result of a dialog.
 
 ## Example of submitting the result of a dialog
 
-For more information, see the [HTML form in the task module](#example-of-invoking-a-task-module). The following code gives an example of where the form is defined:
+Taking up the previous [example of invoking an HTML dialog](#example-of-invoking-a-dialog), here's an example of the HTML form embedded in the dialog:
 
 ```html
 <form method="POST" id="customerForm" action="/register" onSubmit="return validateForm()">
@@ -199,7 +223,7 @@ For more information, see the [HTML form in the task module](#example-of-invokin
 
 There are five fields on this form but for this example only three values are required, `name`, `email`, and `favoriteBook`.
 
-The following code gives an example of the `validateForm()` function that calls `submitTask()`:
+The following code gives an example of the `validateForm()` function that calls `submit()`:
 
 ```javascript
 function validateForm() {
@@ -208,14 +232,15 @@ function validateForm() {
         email: document.forms["customerForm"]["email"].value,
         favoriteBook: document.forms["customerForm"]["favoriteBook"].value
     }
-    microsoftTeams.tasks.submitTask(customerInfo, "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx");
+    microsoftTeams.dialog.url.submit(customerInfo, "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"); // Valid AppId that should receive the result of the submitted dialog
     return true;
 }
 ```
 
-The next section provides task module invocation problems and their error messages.
-
 ## Task module invocation errors
+
+> [!NOTE]
+> This section pertains to usage patterns for the `tasks` (task module) namespace, which is now deprecated in favor of the `dialog` namespace and its HTML (`url`), Adaptive Card (`adaptiveCard`), and bot (`dialog.url.bot` and `dialog.adaptiveCard.bot`) sub-namespaces.
 
 The following table provides the possible values of `err` that can be received by your `submitHandler`:
 
@@ -235,9 +260,9 @@ The following table provides the possible values of `err` that can be received b
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Using task modules from bots](~/task-modules-and-cards/task-modules/task-modules-bots.md)
+> [Using dialogs from bots](~/task-modules-and-cards/task-modules/task-modules-bots.md)
 
 ## See also
 
-* [Cards and task modules](../cards-and-task-modules.md)
-* [Invoke and dismiss task modules](~/task-modules-and-cards/task-modules/invoking-task-modules.md)
+* [Cards and dialogs](../cards-and-task-modules.md)
+* [Invoke and dismiss dialogs](~/task-modules-and-cards/task-modules/invoking-task-modules.md)
