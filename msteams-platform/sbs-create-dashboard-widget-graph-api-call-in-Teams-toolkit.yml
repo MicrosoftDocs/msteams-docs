@@ -118,6 +118,9 @@ items:
         }
         ```
 
+        ```tsx
+        "content"
+        ```
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/create-sample-data-json.png" alt-text="Screenshot shows the creation of sampleData.json file under the data folder in Visual Studio Code.":::
 
      **To retrieve services**:
@@ -126,7 +129,7 @@ items:
      1. Create a **sampleService.ts** file.
      1. Add the following code in the **sampleService.ts** file:
 
-        ```json
+        ```typescript
         import { SampleModel } from "../models/sampleModel";
         import SampleData from "../data/SampleData.json";
 
@@ -144,36 +147,37 @@ items:
      1. Create a **sampleWidget.ts** file.
      1. Add the following code in the **sampleWidget.tsx** file:
 
-        ```
+        ```typescript
           import { Button, Text } from "@fluentui/react-components";
           import { Widget } from "../lib/Widget";
           import { SampleModel } from "../../models/sampleModel";
           import { getSampleData } from "../../services/sampleService";
 
           export class SampleWidget extends Widget<SampleModel> {
-          async getData(): Promise<SampleModel> {
-          return getSampleData();
-          }
+              async getData(): Promise<SampleModel> {
+                  return getSampleData();
+              }
 
-          headerContent(): JSX.Element | undefined {
-          return <Text>Sample Widget</Text>;
-          }
+              headerContent(): JSX.Element | undefined {
+                  return <Text>Sample Widget < /Text>;
+              }
 
-          bodyContent(): JSX.Element | undefined {
-          return <div>{this.state.data?content}</div>;
-          }
+              bodyContent(): JSX.Element | undefined {
+                  return <div>{ this.state.data ? content} < /div>;
+              }
 
-          footerContent(): JSX.Element | undefined {
-          return (<Button
-            appearance="primary"
-            size="medium"
-            style={{ width: "fit-content" }}
-            onClick={() => {}}
-          >
-            View Details
-          </Button>);
-          }
-          }
+              footerContent(): JSX.Element | undefined {
+                  return (<Button
+                      appearance= "primary"
+                  size = "medium"
+                  style = {{ width: "fit-content" }
+              }
+              onClick = {() => { }}
+                    >
+              View Details
+                  < /Button>);
+                    }
+                    }
         ```
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/create-sample-widget.png" alt-text="Screenshot shows the creation of sampleWidget.tsx under the widgets in Visual Studio Code.":::
