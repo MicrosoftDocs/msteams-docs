@@ -72,6 +72,11 @@ Meetings enable collaboration, partnership, informed communication, and shared f
 
 You must be familiar with the following product concepts to create custom meeting experiences with apps in Microsoft Teams.
 
+> [!IMPORTANT]
+>
+> * Currently, third-party and meeting line-of-business apps are available in Government Community Cloud (GCC) but aren't available for GCC-High and Department of Defense (DOD) tenants.
+> * Third-party apps are turned off by default for GCC. To turn on third-party apps for GCC, see [manage app permission policies](/microsoftteams/teams-app-permission-policies) and [manage apps](/microsoftteams/manage-apps).
+
 ## Supported meeting types in Teams
 
 Teams supports access to apps during meeting for the following meeting types:
@@ -92,11 +97,6 @@ Learn more about [Teams meetings, expiration and policies](/microsoftteams/meeti
 >   * [End-to-end encrypted Teams calls](https://support.microsoft.com/office/use-end-to-end-encryption-for-teams-calls-1274b4d2-b5c5-4b24-a376-606fa6728a90)
 >   * [Instant channel meetings](https://support.microsoft.com/office/start-an-instant-meeting-in-teams-ff95e53f-8231-4739-87fa-00b9723f4ef5)
 >   * Meetings in [shared channel](https://support.microsoft.com/office/what-is-a-shared-channel-in-teams-e70a8c22-fee4-4d6e-986f-9e0781d7d11d)
-
-> [!IMPORTANT]
->
-> * Currently, third-party apps are available in Government Community Cloud (GCC) but are not available for GCC-High and Department of Defense (DOD) tenants.
-> * Third-party apps are turned off by default for GCC. To turn on third-party apps for GCC, see [manage app permission policies](/microsoftteams/teams-app-permission-policies) and [manage apps](/microsoftteams/manage-apps).
 
 ## Meeting lifecycle
 
