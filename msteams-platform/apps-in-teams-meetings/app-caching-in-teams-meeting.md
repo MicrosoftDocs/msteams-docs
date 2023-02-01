@@ -10,9 +10,7 @@ ms.date: 04/07/2022
 
 # App caching in Teams meeting
 
-After you build a tabs or app for Teams meeting, you can store the app data in the meeting by enabling app caching. App caching stores your app data in the temporary storage and it improves the launch time of the apps that are loaded in the meeting side panel when you relaunch the app.
-
-After you build an app or tab and loaded in Teams meeting side panel, you can enable app caching which improves the launch time of the app when you relaunch the app. App caching stores your app data in the temporary storage.
+After you build a tab or app for Teams meeting and loaded to Teams meeting side panel, you can store your app data in the meeting by enabling app caching. App caching stores your app data in the temporary storage and it improves the launch time of the apps that are loaded in the meeting side panel when you relaunch the app.
 
 > [!NOTE]
 >
