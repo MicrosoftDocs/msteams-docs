@@ -214,27 +214,19 @@ TeamsJS is a rich library used to create Tabs using JavaScript. Use the latest T
 
 Microsoft Teams JavaScript library exposes the frameContext in which your meeting tab URL is loaded in the getContext API. The possible values of frameContext are content, task, setting, remove, sidePanel, and meetingStage. This allows you to build customized experiences based on where the app renders. For example, showing a specific collaboration focused UI when in the `meetingStage` and a different meeting preparation UI in the chat tab (`content`). For more information, see [getContext API](/microsoftteams/platform/tabs/how-to/access-teams-context?tabs=teamsjs-v2).
 
-## App caching
+## Enable app caching in meeting
 
-App caching improves subsequent launch time of the apps that are loaded in the meeting side panel by allowing you to keep some resources and assets in memory that you can use when rehydrating app.
+After you build a tab or app for Teams meeting, you can store your app data in the meeting by enabling app caching. App caching stores your app data in the temporary storage and it improves the subsequent launch time of the apps that are loaded in the meeting side panel when you relaunch the app.
 
 > [!NOTE]
 >
-> * App caching is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
-> * App caching is supported only for tabs loaded in the meeting side panel in Teams desktop client. While it can work in other contexts such as personal apps and chat or channel tabs, it isn't officially supported. We recommend to register the `onLoad` or `beforeUnload` handlers when in the sidePanel frameContext.
+> * Currently, app caching is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
+> * App caching is supported only for tabs loaded in the meeting side panel in Teams desktop client.
 
-### Enable app caching
+After you enabled the app caching, the webview that is used to host the embedded app is reused as users navigate to different instances of the app within a window. The webview used to host the app is hidden when the users leave the app and shown when the users return to the app. When the app is cached, any audio that is playing is muted.
 
-To enable app caching in your meeting side panel, follow the steps:
-
-1. Call `teamsCore.registerBeforeUnloadHandler` and `teamsCore.registerOnLoadHandler` APIs.
-
-1. Use `contentUrl` and `entityId` passed into the load handler to route to the correct page within your app and invoke `notifySuccess` or `notifyFailure` to notify Teams client that the app initialization flow is complete.
-
-   * [contentUrl](../tabs/how-to/create-tab-pages/configuration-page.md#modify-or-remove-a-tab): Add content page URL.
-   * [entityId](../tabs/how-to/create-tab-pages/configuration-page.md#modify-or-remove-a-tab): Add a unique identifier.
-
-1. Dispose resources and perform any cleanup needed in the `beforeUnload` handler, then invoke the `readyToUnload` callback to notify Teams client that the app unload flow is complete.
+> [!NOTE]
+> If the app caching isn't enabled, the webview is recreated every time the user launches the app.
 
 The following is the flow diagram of the first launch of an app that wants to opt into app caching (register the `load` or `beforeUnload` on the first launch of the app):
 
@@ -244,23 +236,18 @@ The following is the flow diagram of the launch of cached app:
 
 :::image type="content" source="../assets/images/saas-offer/cached-launch-app.png" alt-text="This screenshot shows the flow of the cached launch of the app in meeting side panel.":::
 
-When you opt into app caching, the webview that is used to host the embedded app is reused as users navigate to different instances of the app within a window. The webview used to host the app is hidden when the users leave the app and shown when the users return to the app. When the app is cached, any audio that is playing is muted.
+### Enable app caching
 
-> [!NOTE]
-> If the app caching isn't enabled, the webview is recreated every time the user launches the app.
+To enable app caching in your apps in Teams meeting side panel, follow the steps:
 
-There are multiple reasons for an app to not get cached or for an app to get removed from the cache, some of the reasons are (numbers here are subject to change):
+1. Use `contentUrl` and `entityId` passed into the load handler to route to the correct page within your app and invoke `notifySuccess` or `notifyFailure` to notify Teams client that the app initialization flow is complete.
 
-* If the system memory load is high, the app is removed from the cache.
-* If the number of cached apps exceed the maximum cache size, the oldest cached app is removed from the cache.
-* If the user doesn't return to the app within 20 minutes, the app is removed from the cache.
-* The app isn't cached if Teams doesn't receive the `readyToUnload` signal from the app within 30 seconds after sending the `beforeUnload` notification.
-* App caching is disabled if the system memory is less than 4 GB or if the available memory is less than 1 GB on Windows or 512 MB on Mac.
-* Side panel is the only supported frameContext for app caching in meetings.
-* App caching isn't supported for meetings where the invited user count is more than 20.
-* If an app fails to load, the app isn't cached.
+   * [contentUrl](../tabs/how-to/create-tab-pages/configuration-page.md#modify-or-remove-a-tab): Add content page URL.
+   * [entityId](../tabs/how-to/create-tab-pages/configuration-page.md#modify-or-remove-a-tab): Add a unique identifier.
 
-### Code example
+1. Call `teamsCore.registerBeforeUnloadHandler` and `teamsCore.registerOnLoadHandler` APIs.
+
+1. Dispose resources and perform any cleanup needed in the `beforeUnload` handler, then invoke the `readyToUnload` callback to notify Teams client that the app unload flow is complete.
 
 The following code snippet is an example of `teamsCore.registerOnLoadHandler` and `teamsCore.registerBeforeUnloadHandler` APIs:
 
@@ -279,27 +266,39 @@ microsoftTeams.teamsCore.registerBeforeUnloadHandler((readyToUnload) => {
 });
 ```
 
+There are multiple reasons for an app to not get cached or get removed from the cache, some of the reasons are (numbers here are subject to change):
+
+* If the system memory load is high, the app is removed from the cache.
+* If the number of cached apps exceed the maximum cache size, the oldest cached app is removed from the cache.
+* If the user doesn't return to the app within 20 minutes, the app is removed from the cache.
+* The app isn't cached if Teams doesn't receive the `readyToUnload` signal from the app within 30 seconds after sending the `beforeUnload` notification.
+* App caching is disabled if the system memory is less than 4 GB or if the available memory is less than 1 GB on Windows or 512 MB on Mac.
+* Side panel is the only supported FrameContext for app caching in meetings.
+* App caching isn't supported for meetings where the invited user count is more than 20.
+
+### Best practices
+
+* Single-page apps that use client-side routing for page navigation can benefit from app caching. It's recommended that the same domain is used across all contexts of your app launch.
+
+* Register the `load` and `beforeUnload` handlers early in your launch sequence. If the Teams client doesn’t see these registrations before the user leaves the app, the app isn't cached.
+
+* Follow the guidelines in this section to onboard your app to app caching in Teams meeting. For app caching support only in meetings, register the `load` or `beforeUnload` handlers if the context is `sidePanel`.
+
+* Register only the `beforeUnload` handler if your app doesn't require app caching but needs time to safely save state (as leaving the app can cause the app content to be abruptly removed from the Document Object Model (DOM)). If the app hasn't registered for the `load` event, it's removed from the DOM after the unload flow completes.
+
 ### Limitations
 
 The following are the limitations for app caching:
 
-* Single-page apps that use client-side routing for page navigation can benefit from app caching. It's recommended that the same domain be used across all contexts of your app launch.
-
 * Apps need to re-register for events such as `themeChange`, `focusEnter`, and so on, in the load handler. Teams client won't send any notifications to the app when cached. If your app requires notifications even when cached, caching might not be the right solution.
 
 * App caching is supported only in Teams desktop client. In Teams web client, even if the app registers load handlers, the app is removed from the cache after the unload sequence is completed.
-
-* Register the `load` and `beforeUnload` handlers early in your launch sequence. If the Teams client doesn’t see these registrations before the user leaves the app, the app isn't cached.
 
 * The Teams client invokes the `loadHandler` only after the `unload` sequence of the app is completed. For example, if a user launches tab A of your app and then launches tab B of the same app, tab B won't get the load signal until the tab A invokes the `readyToUnload` callback.
 
 * Apps are cached on a per-window basis. App caching happens on a per app (not on a per tab) basis within the same window.
 
 * App caching isn't supported for the meeting stage or Task module contexts, because these can be opened on top of the tab and the same webview can't be used to render the content in the tab and the Task module.
-
-* Register only the `beforeUnload` handler if your app doesn't require app caching but needs time to safely save state (as leaving the app can cause the app content to be abruptly removed from the Document Object Model (DOM)). If the app hasn't registered for the `load` event, it's removed from the DOM after the unload flow completes.
-
-* Follow the guidelines in this section to onboard your app to app caching in Teams meeting. For app caching support only in meetings, register the `load` or `beforeUnload` handlers if the context is `sidePanel`.
 
 * Apps are expected to sleep when cached (use minimal compute or network resources and minimizes SDK requests). All the register handlers and the following SDK requests are allowed when the app is cached:
 
@@ -317,9 +316,9 @@ The following are the limitations for app caching:
 
 **Apps are not being cached? Why is load handler not invoked on subsequent navigation?**
 
-* Verify if the system and available memory constraints are met.
+* Check the amount of free memory on your system. App caching requires minimum of 4 GB system memory.
 
-* Reduce your memory footprint when cached. Use the `beforeUnload` handler to dispose resources, for example, release references and remove event listeners, that might not be needed when cached.
+* Reduce your memory footprint when cached. Use the `beforeUnload` handlers to dispose resources that aren't needed when cached.
 
 ## Feature compatibility by user types
 
