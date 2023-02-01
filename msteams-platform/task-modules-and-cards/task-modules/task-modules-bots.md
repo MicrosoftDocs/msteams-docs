@@ -7,12 +7,12 @@ ms.topic: how-to
 
 # Use dialogs with bots
 
-Dialogs can be invoked from Microsoft Teams bots using buttons on Adaptive Cards and Bot Framework cards that are hero, thumbnail, and Office 365 Connector. Dialogs are often a better user experience than multiple conversation steps. You can keep track of bot state and allow the user to interrupt or cancel the sequence.
+Dialogs (formerly known as *task modules*) can be invoked from Microsoft Teams bots using buttons on Adaptive Cards and Bot Framework cards that are hero, thumbnail, and Office 365 Connector. Dialogs are often a better user experience than multiple conversation steps. You can keep track of bot state and allow the user to interrupt or cancel the sequence.
 
 There are two ways of invoking dialogs:
 
-* A new invoke message `task/fetch`: Using the `invoke` [card action](~/task-modules-and-cards/cards/cards-actions.md#action-type-invoke) for Bot Framework cards, or the `Action.Submit` [card action](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions) for Adaptive Cards, with `task/fetch`, task module either a URL or an Adaptive Card, is fetched dynamically from your bot.
-* Deep link URLs: Using the [deep link syntax for dialogs](~/concepts/build-and-test/deep-link-application.md#deep-link-to-open-a-task-module), you can use the `openUrl` [card action](~/task-modules-and-cards/cards/cards-actions.md#action-type-openurl) for Bot Framework cards or the `Action.OpenUrl` [card action](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions) for Adaptive Cards, respectively. With deep link URLs, the task module URL or Adaptive Card body is already known to avoid a server round-trip relative to `task/fetch`.
+* A new invoke message `task/fetch`: Using the `invoke` [card action](~/task-modules-and-cards/cards/cards-actions.md#action-type-invoke) for Bot Framework cards, or the `Action.Submit` [card action](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions) for Adaptive Cards, with `task/fetch`, either an HTML- or Adaptive Card-based dialog is fetched dynamically from your bot.
+* Deep link URLs: Using the [deep link syntax for dialogs](~/concepts/build-and-test/deep-link-application.md#deep-link-to-open-a-task-module), you can use the `openUrl` [card action](~/task-modules-and-cards/cards/cards-actions.md#action-type-openurl) for Bot Framework cards or the `Action.OpenUrl` [card action](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions) for Adaptive Cards, respectively. With deep link URLs, the dialog URL or Adaptive Card body is already known to avoid a server round-trip relative to `task/fetch`.
 
 The next section provides details on invoking a dialog using `task/fetch`.
 
@@ -60,11 +60,11 @@ The next section provides details on how to respond to the `task/submit` message
 
 ## Responds to the `task/submit` messages
 
-When the user finishes with a task module invoked from a bot, the bot always receives a `task/submit invoke` message. You have several options when responding to the `task/submit` message as follows:
+When the user finishes with a dialog invoked from a bot, the bot always receives a `task/submit invoke` message. You have several options when responding to the `task/submit` message as follows:
 
 | HTTP body response                      | Scenario                                |
 | --------------------------------------- | --------------------------------------- |
-| None ignore the `task/submit` message | The simplest response is no response at all. Your bot isn't required to respond when the user is finished with the task module. |
+| None ignore the `task/submit` message | The simplest response is no response at all. Your bot isn't required to respond when the user is finished with the dialog. |
 | <pre>{<br/>  "task": {<br/>    "type": "message",<br/>    "value": "Message text"<br/>  }<br/>}</pre> | Teams displays the value of `value` in a pop-up message box. |
 | <pre>{<br/>  "task": {<br/>    "type": "continue",<br/>    "value": &lt;TaskInfo object&gt;<br/>  }<br/>}</pre> | Allows you to chain sequences of Adaptive Cards together in a wizard or multi-step experience. |
 
@@ -190,7 +190,7 @@ private static void SetTaskInfo(TaskModuleTaskInfo taskInfo, UISettings uIConsta
 
 ### Bot Framework card actions vs. Adaptive Card Action.Submit actions
 
-The schema for Bot Framework card actions is different from Adaptive Card `Action.Submit` actions and the way to invoke task modules is also different. The `data` object in `Action.Submit` contains an `msteams` object so it doesn't interfere with other properties in the card. The following table shows an example of each card action:
+The schema for Bot Framework card actions is different from Adaptive Card `Action.Submit` actions and the way to invoke dialogs is also different. The `data` object in `Action.Submit` contains an `msteams` object so it doesn't interfere with other properties in the card. The following table shows an example of each card action:
 
 | Bot Framework card action                              | Adaptive Card Action.Submit action                     |
 | ------------------------------------------------------ | ------------------------------------------------------ |
