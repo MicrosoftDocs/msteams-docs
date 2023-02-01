@@ -7,7 +7,7 @@ ms.topic: how-to
 
 # Use dialogs with bots
 
-Dialogs (formerly known as *task modules*) can be invoked from Microsoft Teams bots using buttons on Adaptive Cards and Bot Framework cards that are hero, thumbnail, and Office 365 Connector. Dialogs are often a better user experience than multiple conversation steps. You can keep track of bot state and allow the user to interrupt or cancel the sequence.
+Dialogs (formerly known as *task modules*) can be invoked from Microsoft Teams bots using buttons on Adaptive Cards and Bot Framework cards that are hero, thumbnail, and connector for Microsoft 365 Groups. Dialogs are often a better user experience than multiple conversation steps. You can keep track of bot state and allow the user to interrupt or cancel the sequence.
 
 There are two ways of invoking dialogs:
 
@@ -43,7 +43,7 @@ Here's how a dialog is invoked using `task/fetch`:
     }
     ```
 
-    The `task/fetch` event and its response for bots is similar to the `microsoftTeams.adaptiveCard.open()` function in the TeamsJS library.
+    The `task/fetch` event and its response for bots is similar to the `microsoftTeams.tasks.startTask()` function in the TeamsJS library.
 
 1. Microsoft Teams displays the dialog.
 

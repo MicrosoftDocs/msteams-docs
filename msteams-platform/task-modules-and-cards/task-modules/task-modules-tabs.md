@@ -1,6 +1,6 @@
 ---
 title: Use dialogs in Microsoft Teams tabs
-description: Learn how to invoke dialogs from Teams tabs and submit results using the Microsoft Teams client library.
+description: Learn how to invoke dialogs from Teams tabs and submit results using the Microsoft Teams client library (TeamsJS).
 ms.localizationpriority: medium
 ms.topic: how-to
 ---
