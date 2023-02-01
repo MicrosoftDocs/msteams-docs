@@ -620,7 +620,7 @@ You can follow the steps to use Microsoft Graph Toolkit as your widget content:
 
       The following code is an example of using `Todo` component from Microsoft Graph Toolkit in widget:
 
-      ```typescript
+      ```tsx
         import { Providers, ProviderState, Todo } from "@microsoft/mgt-react";
         import { TeamsFxProvider } from "@microsoft/mgt-teamsfx-provider";
         
@@ -677,7 +677,7 @@ You can follow the steps to use Microsoft Graph Toolkit as your widget content:
 
 1. Add the widget to dashboard layout. Include the new widget in your dashboard file:
 
-    ```typescript
+    ```tsx
     ...
     export default class YourDashboard extends Dashboard {
       ...
@@ -715,7 +715,7 @@ The following steps show how to add a property to the state of `ListWidget` and 
 
     Modify the `bodyContent` method to show a loading spinner if data is loading.
 
-    ```typescript
+    ```tsx
     bodyContent(): JSX.Element | undefined {
       return (
         <>
@@ -737,7 +737,7 @@ The following steps show how to add a property to the state of `ListWidget` and 
 
     Following is an example of footer button:
 
-    ```typescript
+    ```tsx
     footerContent(): JSX.Element | undefined {
       if (this.state.loading === false) {
         return (
@@ -761,7 +761,7 @@ The following steps show how to add a property to the state of `ListWidget` and 
 
 You can display a specific content in your widget when the data is empty. To do so, you need to modify the `bodyContent` method in your widget file to adopt different states of the data. The following example shows how to display an empty image when the data of `ListWidget` is empty.
 
-```typescript
+```tsx
 bodyContent(): JSX.Element | undefined {
     let hasData = this.state.data && this.state.data.length > 0;
     return (
@@ -792,7 +792,7 @@ bodyContent(): JSX.Element | undefined {
 
 You can use a similar approach to remove the footer content of your widget when the data is empty.
 
-```typescript
+```tsx
 footerContent(): JSX.Element | undefined {
     let hasData = this.state.data && this.state.data.length > 0;
     if (hasData) {
@@ -813,7 +813,7 @@ footerContent(): JSX.Element | undefined {
 
 The following example shows how to display real-time data in a widget. The widget displays the current time and updates.
 
-```typescript
+```tsx
 import { Widget } from "../lib/Widget";
 
 interface IRefreshWidgetState {

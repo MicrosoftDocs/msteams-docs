@@ -97,7 +97,7 @@ items:
      1. Create a **sampleModel.ts** file.
      1. Add the following code in the **sampleModel.ts** file:
 
-        ```json
+        ```typescript
           export interface SampleModel {
           content: string;
           }
@@ -118,9 +118,6 @@ items:
         }
         ```
 
-        ```tsx
-        "content"
-        ```
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/create-sample-data-json.png" alt-text="Screenshot shows the creation of sampleData.json file under the data folder in Visual Studio Code.":::
 
      **To retrieve services**:
@@ -186,11 +183,11 @@ items:
 
       If you want to create a new dashboard, refer to [add a new dashboard](tabs/how-to/dashboard-teams-toolkit.md#add-a-new-dashboard).
 
-      1. In Visual Studio Code, go to **Explorer** > **tabs** > **src** > **views** > **dashboards**.
-      1. Create a **sampleDashboard.tsx** file.
+      1. In Visual Studio Code, go to **Explorer** > **tabs** > **src** > **views** > **dashboards** > **sampleDashboard.tsx**
+      1. Create a **sampleDashboard.jsx** file.
       1. Add the following code in the **sampleDashboard.jsx** file:
 
-          ```
+          ```jsx
           protected dashboardLayout(): JSX. Element | undefined { 
           return (
           <>
@@ -209,7 +206,7 @@ items:
       
           Following is the sample of `oneColumn()` layout:
 
-              ```
+              ```jsx
         
               protected dashboardLayout(): JSX. Element | undefined {
               return (
