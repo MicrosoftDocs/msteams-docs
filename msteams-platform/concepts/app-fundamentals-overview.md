@@ -78,7 +78,7 @@ The following table includes Teams features and availability for GCC, GCC-High, 
 | 3P or third-party apps | ✔️ Third-party apps are available. Disabled by default and tenant admin use their own discretion to enable it. | ❌ | ❌ |
 | Bots | ✔️ | ✔️ | ❌ |
 | Custom or Lob tab apps |  ✔️ | ✔️ | ✔️ |
-| Sideloading apps | ✔️ | ✔️ | ❌ |
+| Sideloading apps | ✔️ | ❌ | ❌ |
 | Custom or Lob bots | ✔️ | ✔️ | ❌ |
 | Custom message extensions | ✔️ | ✔️ | ❌ |
 | Custom connectors | ✔️ | ❌ | ❌ |

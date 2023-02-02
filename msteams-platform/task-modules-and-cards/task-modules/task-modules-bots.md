@@ -46,7 +46,7 @@ The following steps provide the invoke task module using `task/fetch`:
     }
     ```
 
-    The `task/fetch` event and its response for bots is similar to the `microsoftTeams.tasks.startTask()` function in the TeamsJS library.
+    The `task/fetch` event and its response for bots is similar to the `microsoftTeams.tasks.startTask()` function in the Microsoft Teams JavaScript client library (TeamsJS).
 
 1. Microsoft Teams displays the task module.
 

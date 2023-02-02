@@ -156,7 +156,7 @@ The deep link syntax is as follows:
 
 #### Examples
 
-When a user enters a URL, it's unfurled into an Adaptive card.Following are the deep link examples to invoke Stage View:
+When a user enters a URL, it's unfurled into an Adaptive card. Following are the deep link examples to invoke Stage View:
 
 <br>
 
