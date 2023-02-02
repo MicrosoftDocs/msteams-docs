@@ -1,25 +1,26 @@
 ---
-title: Teams JavaScript client library
+title: Teams JavaScript client library SDK
 author: heath-hamilton
 ms.author: surbhigupta
-description: In this module, learn Microsoft Teams JavaScript client library (TeamsJS), which can help you build app experiences hosted in an <iframe> in Teams, Microsoft 365 (formerly Office), and Outlook.
+description: In this module, learn Microsoft Teams JavaScript client library (TeamsJS SDK), which can help you build app experiences hosted in an <iframe> in Teams, Microsoft 365 (formerly Office), and Outlook.
 ms.localizationpriority: high
 ms.topic: conceptual
+keywords: SDK TeamsJS Teams client JavaScript library
 ---
 # Teams JavaScript client library
 
-The Microsoft Teams JavaScript client library can help you create hosted experiences in Teams, Microsoft 365 app, and Outlook, where your app content is hosted in an [iFrame](https://developer.mozilla.org/docs/Web/HTML/Element/iframe). The library is helpful for developing apps with the following Teams capabilities:
+The Microsoft Teams JavaScript client library (TeamsJS) can help you create hosted experiences in Teams, Microsoft 365 app, and Outlook, where your app content is hosted in an [iFrame](https://developer.mozilla.org/docs/Web/HTML/Element/iframe). The library is helpful for developing apps with the following Teams capabilities:
 
 * [Tabs](../../tabs/what-are-tabs.md)
 * [Dialogs (Task modules)](../../task-modules-and-cards/what-are-task-modules.md)
 
-Starting with version `2.0.0`, the existing Teams client library (`@microsoft/teams-js`, or simply `TeamsJS`) has been refactored to enable [Teams apps to run in Outlook and Microsoft 365 app](/microsoftteams/platform/m365-apps/overview), in addition to Microsoft Teams. From a functional perspective, the latest version of TeamsJS supports all existing (v.1.x.x) Teams app functionality while adding the optional ability to host Teams apps in Outlook and Microsoft 365 app.
+Starting with version `2.0.0`, the existing TeamsJS library (`@microsoft/teams-js`, or simply `TeamsJS`) has been refactored to enable [Teams apps to run in Outlook and Microsoft 365 app](/microsoftteams/platform/m365-apps/overview), in addition to Microsoft Teams. From a functional perspective, the latest version of TeamsJS supports all existing (v.1.x.x) Teams app functionality while adding the optional ability to host Teams apps in Outlook and Microsoft 365 app.
 
 Here's the current versioning guidance for various app scenarios:
 
 [!INCLUDE [pre-release-label](~/includes/teamjs-version-details.md)]
 
-The remainder of this article will walk you through the structure and latest updates to the Teams JavaScript client library.
+The remainder of this article will walk you through the structure and latest updates to the TeamsJS library.
 
 ## Microsoft 365 support (running Teams apps in Microsoft 365 and Outlook)
 
@@ -467,5 +468,5 @@ If you used Teams Toolkit to create your personal app, you can also use it to va
 
 ## Next steps
 
-* Use the [TeamsJS reference](/javascript/api/overview/msteams-client) to get started with the Microsoft Teams JavaScript client library.
+* Use the [TeamsJS library reference](/javascript/api/overview/msteams-client) to get started with the TeamsJS library.
 * Review the [changelog](https://github.com/OfficeDev/microsoft-teams-library-js/blob/main/packages/teams-js/CHANGELOG.md) for  latest updates to TeamsJS.
