@@ -39,19 +39,19 @@ To update your app's code:
 
 1. Add code snippet for `TeamsSSOTokenExchangeMiddleware`.
 
-   # [csharp](#tab/cs1)
+# [csharp](#tab/cs1)
 
-    Add the following code snippet to `AdapterWithErrorHandler.cs` (or the equivalent class in your app's code):
+Add the following code snippet to `AdapterWithErrorHandler.cs` (or the equivalent class in your app's code):
 
-    ```csharp
+```csharp
     base.Use(new TeamsSSOTokenExchangeMiddleware(storage, configuration["ConnectionName"]));
     ```
 
-   # [JavaScript](#tab/js1)
+# [JavaScript](#tab/js1)
 
-    Add the following code snippet to `index.js` (or the equivalent class in your app's code):
+Add the following code snippet to `index.js` (or the equivalent class in your app's code):
 
-    ```JavaScript
+```JavaScript
     const {TeamsSSOTokenExchangeMiddleware} = require('botbuilder');
     const tokenExchangeMiddleware = new TeamsSSOTokenExchangeMiddleware(memoryStorage, env.connectionName);
     adapter.use(tokenExchangeMiddleware);
@@ -64,11 +64,11 @@ To update your app's code:
 
 1. Use the following code snippet for requesting a token.
 
-   # [csharp](#tab/cs2)
+# [csharp](#tab/cs2)
 
-    After you add the `AdapterWithErrorHandler.cs`, your code should be as shown below:
+After you add the `AdapterWithErrorHandler.cs`, your code should be as shown below:
 
-    ```csharp
+```csharp
     public class AdapterWithErrorHandler : CloudAdapter
     {
         public AdapterWithErrorHandler(
@@ -85,7 +85,7 @@ To update your app's code:
             {
                 // Log any leaked exception from the application.
                 // NOTE: In production environment, you should consider logging this to
-                // Azure Application Insights. Visit https://aka.ms/bottelemetry to see how
+                // Azure Application Insights. Visit https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-telemetry?view=azure-bot-service-4.0&tabs=csharp to see how
                 // to add telemetry capture to your bot.
                 logger.LogError(exception, $"[OnTurnError] unhandled error : {exception.Message}");
 
@@ -119,11 +119,11 @@ To update your app's code:
     }
     ```
 
-   # [JavaScript](#tab/js2)
+# [JavaScript](#tab/js2)
 
-    After you add the code to `index.js`, your code should be as shown below:
+After you add the code to `index.js`, your code should be as shown below:
 
-    ```JavaScript
+```JavaScript
     // index.js is used to setup and configure your bot.
 
     // Import required packages.
@@ -136,7 +136,7 @@ To update your app's code:
     const restify = require('restify');
     
     // Import required bot services.
-    // See https://aka.ms/bot-services to learn more about the different parts of a bot.
+    // See https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0 to learn more about the different parts of a bot.
     const {
         CloudAdapter,
         ConversationState,
@@ -157,7 +157,7 @@ To update your app's code:
     console.log(`\n${ conname } is the con name`);
     
     // Create adapter.
-    // See https://aka.ms/about-bot-adapter to learn more about how bots work.
+    // See https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0 to learn more about how bots work.
     const adapter = new CloudAdapter(botFrameworkAuthentication);
     const memoryStorage = new MemoryStorage();
     const tokenExchangeMiddleware = new TeamsSSOTokenExchangeMiddleware(memoryStorage, env.connectionName);
@@ -165,7 +165,7 @@ To update your app's code:
     adapter.use(tokenExchangeMiddleware);
     adapter.onTurnError = async (context, error) => {
         // This check writes out errors to console log .vs. app insights.
-        // NOTE: In production environment, you should consider logging this to Azure application insights. See https://aka.ms/bottelemetry for telemetry configuration instructions.
+        // NOTE: In production environment, you should consider logging this to Azure application insights. See https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-telemetry?view=azure-bot-service-4.0&tabs=csharp for telemetry configuration instructions.
         console.error(`\n [onTurnError] unhandled error: ${ error }`);
     
         // Send a trace activity, which will be displayed in Bot Framework Emulator.
@@ -184,7 +184,7 @@ To update your app's code:
     };
     
     // Define the state store for your bot.
-    // See https://aka.ms/about-bot-state to learn more about using MemoryStorage.
+    // See https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-howto-v4-state?view=azure-bot-service-4.0&branch=live&tabs=csharp to learn more about using MemoryStorage.
     // A bot requires a state storage system to persist the dialog and user state between messages.
     //const memoryStorage = new MemoryStorage();
     

@@ -4,8 +4,10 @@ author: surbhigupta
 description: Add link unfurling with messaging extension in a Microsoft Teams app with app manifest or manually. Add link unfurling using Developer Portal. How to update your web service code to handle the invoke request.
 ms.localizationpriority: medium
 ms.topic: conceptual
+
 ms.author: surbhigupta
----
+ms.author: v-ypalikila
+
 # Link unfurling
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
@@ -102,7 +104,7 @@ The following card types are supported:
 
 * [Thumbnail card](~/task-modules-and-cards/cards/cards-reference.md#thumbnail-card)
 * [Hero card](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
-* [Office 365 Connector card](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
+* [Connector card for Microsoft 365 Groups](../../task-modules-and-cards/cards/cards-reference.md#connector-card-for-microsoft-365-groups)
 * [Adaptive Card](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 
 For more information, see [Action type invoke](~/task-modules-and-cards/cards/cards-actions.md#action-type-invoke).
@@ -361,7 +363,7 @@ To get your app ready for zero install link unfurling, follow these steps:
      > [!NOTE]
      > After the link is pasted in the message compose area, Teams unfurls the link into a card and prompts the user to sign in to the app. If the user doesn't sign in to the app, the link isn't posted as a card in the chat.
 
-1. Advantages and limitations.
+1. **Advantages and limitations**:
 
 # [Advantages](#tab/advantages)
 
@@ -380,7 +382,9 @@ The following are the limitations:
 
 * If the bot selects to send back the `"type": "auth"` with a pre-auth card, the Teams client strips away any action buttons from the card, and adds a sign in action button to get users to authenticate into your app.
 
----
+     * The bot can't send back an acv2 card in response to the `composeExtension/anonymousQueryLink` invoke request, either as a result or as a pre-auth card in auth.
+
+     * If the bot selects to send back the `"type": "auth"` with a pre-auth card, the Teams client strips away any action buttons from the card, and adds a sign in action button to get users to authenticate into your app.
 
 ## Remove link unfurling cache
 
