@@ -127,14 +127,16 @@ items:
          
          The App caching app is added to the Teams meeting side panel.
 
+         :::image type="content" source="~/assets/images/app-caching/app-cached-in-meeting.png" alt-text="Screenshot shows app cached in Teams meeting side panel.":::
+
 - title: Test your app
   durationInMinutes: 1
   content: |
    Navigate to other tab and come back to the app caching tab.
 
+   :::image type="content" source="~/assets/images/app-caching/app-caching.gif" alt-text="Screenshot shows the app caching in meeting.":::
+
    App started cached in the meeting side panel.
-
-
     
 - title: Complete challenge
   durationInMinutes: 1
@@ -142,6 +144,7 @@ items:
 
     Did you come up with something like this?
     
+    :::image type="content" source="~/assets/images/app-caching/app-cached-in-meeting.png" alt-text="Screenshot shows app cached in meeting side panel.":::
 
 - content: |
     You've completed the tutorial to build sample apps with app caching.
