@@ -4,7 +4,7 @@ author: surbhigupta
 description: Create configuration page to collect information from user. Also, get context data for Microsoft Teams tabs, know about authentication, modify or remove tabs.
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.author: lajanuar
+ms.author: v-npaladugu
 ---
 # Create a configuration page
 
@@ -18,7 +18,7 @@ A configuration page is a special type of [content page](content-page.md). The u
 
 ## Configure a channel or group chat tab
 
-The application must reference the [Microsoft Teams JavaScript client library](/javascript/api/overview/msteams-client) and call `app.initialize()`. The URLs used must be secured HTTPS endpoints and are available from the cloud.
+The application must reference the [TeamsJS library](/javascript/api/overview/msteams-client) and call `app.initialize()`. The URLs used must be secured HTTPS endpoints and are available from the cloud.
 
 ### Example
 
@@ -305,7 +305,7 @@ const configPromise = pages.config.setConfig({
     removeUrl: "add removal page URL here"
 });
 configPromise.
-    then((result) => {/*Successful operation*/).
+    then((result) => {/*Successful operation*/}).
     catch((error) => {/*Unsuccessful operation*/});
 ```
 
