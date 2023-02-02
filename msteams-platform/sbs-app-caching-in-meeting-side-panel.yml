@@ -18,7 +18,7 @@ items:
   
    This step-by-step guide helps you to create a sample app with app caching. You'll see the following app cached in the meeting side panel:
 
-    
+   
     
 - title: Prerequisites
   durationInMinutes: 1
@@ -90,7 +90,7 @@ items:
      
      1. Replace `id` with GUID, use [app caching](https://guidgenerator.com/) to generate GUID.
        
-     1. Replace `<<Valid_Domain>>` with your http endpoint from ngrok.
+     1. Replace `<<Valid_Domain>>` without your http endpoint from ngrok.
       
      1. Zip the contents of the **manifest** folder to create `manifest.zip`.
 
@@ -99,10 +99,9 @@ items:
      
      ## Upload your app to the Teams meeting
 
-      1. Open **Teams**.
+      1. Open **Microsoft Teams**.
 
-      1. Schedule a meeting from the calendar in Teams.
-         Ensure that you have invited atleast one attendee to the meeting.
+      1. Schedule a meeting from the calendar in Teams. Ensure that you have invited atleast one attendee to the meeting.
 
       1. Join the meeting.
 
@@ -123,6 +122,8 @@ items:
          :::image type="content" source="~/assets/images/app-caching/app-caching-add-app-meeting.png" alt-text="Screenshot shows how to add apps to your meeting tab.":::
 
       1. Select **Save**.
+
+         :::image type="content" source="~/assets/images/app-caching/add-app-save.png" alt-text="Screenshot shows how to add apps to your meeting tab with Save button.":::
          
          The App caching app is added to the Teams meeting side panel.
 
