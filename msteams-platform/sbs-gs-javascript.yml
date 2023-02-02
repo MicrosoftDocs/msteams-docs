@@ -80,7 +80,7 @@ items:
 
     The Teams Toolkit icon appears in the Visual Studio Code **Activity Bar** after it's installed.
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/hw-teams-toolkit-sidebar-icon.png":::
+    :::image type="icon" source="~/assets/images/teams-toolkit-v2/prerequisites/hw-teams-toolkit-sidebar-icon.png" border="false":::
 
    You can also find the Teams Toolkit on the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
    
