@@ -27,8 +27,8 @@ After you install Teams Toolkit, it opens within the Visual Studio Code window.
 | 3 | **Create a new Teams app** | Create a new Teams app based on your requirement. |
 | 4 | **View samples** | Select and build existing app samples based on common use cases for a Teams app. |
 | 5 | • **New File** <br> • **Open File** <br>  • **Open Folder** <br>  • **Clone Git Repository**  |  • Create a new file. <br>  • Open an existing file. <br> • Open the existing folder. <br> • Clone the Git repository of your app project. |
-| 6 | **Get Started** | Explore Teams Toolkit and get an overview of the fundamentals. |
-| 7 | **Recent** | View the recent files. |
+| 6 | **Recent** | View the recent files. |
+| 7 | **Get Started** | Explore Teams Toolkit and get an overview of the fundamentals. |
 
 ### Explore the Teams Toolkit task pane
 
@@ -200,6 +200,8 @@ Teams Toolkit includes helps you link to how-to guides and samples that can aid 
 The how-to guides menu appears.
 
 2.Select the type of how-to guide that you want to view.
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/view-how-to-guides.png" alt-text="Screenshot showing the how-to guides menu options.":::
 
 * Select any one of the Teams app scenario guides to view the guide to develop an app for a common app scenario, such as sending notifications using a bot or embedding a dashboard tab in a Teams app.
 
