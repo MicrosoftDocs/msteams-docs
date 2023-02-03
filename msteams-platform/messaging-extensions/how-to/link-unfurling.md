@@ -384,6 +384,8 @@ The following are the limitations:
 
     * If the bot selects to send back the `"type": "auth"` with a pre-auth card, the Teams client strips away any action buttons from the card, and adds a sign in action button to get users to authenticate into your app.
 
+---
+
 ## Remove link unfurling cache
 
 When a user shares a link in a meeting, the Teams app unfurls the link to an Adaptive Card. The link unfurling result is cached in Teams for 30 minutes. You can update your app to set a cache policy and remove cache for the app, which helps you to show different content in an Adaptive Card when the app's link is shared in a different context in Teams.
