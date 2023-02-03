@@ -19,7 +19,7 @@ Before you create your Teams app project, ensure that the prerequisites are in p
 
 Ensure that following tools are installed on the device where you’ll create your app project before you start building your Teams app:
 
-| Tools | For using| For environment type|
+| Tools | For using | For environment type |
 | --- | --- | --- |
 | **Required** | &nbsp; | &nbsp; |
 | Microsoft Visual Studio Code| JavaScript, TypeScript, or SPFx build environments to build your Teams app. Use version 1.55 or later. | JavaScript, TypeScript, and SPFx. |
