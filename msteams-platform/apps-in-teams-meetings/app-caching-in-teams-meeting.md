@@ -14,6 +14,8 @@ In your tab app for Teams meeting, you can store your app data in the meeting by
 
 After you enable app caching, the webview that is used to host the embedded app is reused as participants navigate to different instances of the app within the meeting window. The webview used to host the app is hidden when the participants leave the app and shown when they return to the app.
 
+[Info graphics to be added]
+
 App caching improves subsequent launch time of the apps that are loaded in the meeting side panel by allowing you to keep some resources and assets in memory that you can use when rehydrating app. If the app caching isn't enabled, the webview is recreated every time the user launches the app.
 
 > [!NOTE]
@@ -90,7 +92,7 @@ The following are the limitations for app caching:
 
 * The Teams client invokes the `loadHandler` only after the `unload` sequence of the app is completed. For example, if a user launches tab A of your app and then launches tab B of the same app, tab B won't get the load signal until the tab A invokes the `readyToUnload` callback.
 
-* Apps are cached on a per-window basis. App caching happens on a per app (not on a per tab) basis within the same window.
+* Apps are cached on a per-window basis not on a per tab basis within the same window.
 
 * App caching isn't supported for the meeting stage or Task module contexts, because these can be opened on top of the tab and the same webview can't be used to render the content in the tab and the Task module.
 
@@ -108,17 +110,23 @@ The following are the limitations for app caching:
 
 ## Troubleshooting
 
-**Apps are not being cached? Why is load handler not invoked on subsequent navigation?**
+**Why apps aren't cached?**
 
-* Check the amount of free memory on your system. App caching requires minimum of 4 GB system memory.
+* App caching requires minimum of 4 GB system memory. Ensure there is required system memory for app caching.
+
+* The app isn't cached if Teams doesn't receive the `readyToUnload` signal from the app within 30 seconds after sending the `beforeUnload` notification. Ensure that the Teams has received the signal from the app.
+
+**Why is load handler not invoked on subsequent navigation?**
 
 * Reduce your memory footprint when cached. Use the `beforeUnload` handlers to dispose resources that aren't needed when cached.
 
-**Why apps are removed from cache?**
+**Why are apps removed from cache?**
 
 * If the system memory load is high, the app is removed from the cache. Ensure that your system memory load isn't high.
 
 * If the user doesn't return to the app within 20 minutes, the app is removed from the cache. Ensure that you return to the app within 20 minutes.
+
+* If the number of cached apps exceed the maximum cache size, the oldest cached app is removed from the cache. Ensure you don't exceed the maximum cache size.
 
 ## Code sample
 
