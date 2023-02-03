@@ -63,11 +63,6 @@ microsoftTeams.teamsCore.registerBeforeUnloadHandler((readyToUnload) => {
 });
 ```
 
-Reasons for an app to not get cached or get removed from the cache:
-
-* If the number of cached apps exceed the maximum cache size, the oldest cached app is removed from the cache.
-* The app isn't cached if Teams doesn't receive the `readyToUnload` signal from the app within 30 seconds after sending the `beforeUnload` notification.
-
 ## Best practices
 
 * Single-page apps that use client-side routing for page navigation can benefit from app caching. It's recommended that the same domain is used across all contexts of your app launch.
@@ -79,8 +74,6 @@ Reasons for an app to not get cached or get removed from the cache:
 * Register only the `beforeUnload` handler if your app doesn't require app caching but needs time to safely save state (as leaving the app can cause the app content to be abruptly removed from the Document Object Model (DOM)). If the app hasn't registered for the `load` event, it's removed from the DOM after the unload flow completes.
 
 ## Limitations
-
-The following are the limitations for app caching:
 
 * App caching is disabled if the system memory is less than 4 GB or if the available memory is less than 1 GB on Windows or 512 MB on Mac.
 
