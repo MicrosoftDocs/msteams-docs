@@ -7,8 +7,8 @@ metadata:
   level: Beginner
   ms.date: 05/04/2021
   ms.topic: interactive-tutorial
-  nextTutorialHref: toolkit/add-capability.md
-  nextTutorialTitle: Back to Add capability
+  nextTutorialHref: bots/how-to/conversations/command-bot-in-teams.md
+  nextTutorialTitle: Command bot in Teams
   ms.custom: mvc
   ms.localizationpriority: high
 items:
@@ -241,6 +241,7 @@ items:
     | `src/index.*s` | The entrypoint to handle bot messages and send notifications |
     | `.gitignore` | File to exclude local files from bot project |
     | `package.json` | The npm package file for bot project |
+    | `README.md` | `README.md` file is to know more about the notification bot |
 
 - title: Send notification to Teams channel
   durationInMinutes: 1
@@ -482,4 +483,5 @@ items:
      :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/trigger-output.png" alt-text="Trigger Output"border="true":::
 
 - content: |
-    You've completed the tutorial to build notification bot!    
+   You've completed the tutorial to build a notification bot. You can extend your notification bot to add the command response and workflow features.
+   
