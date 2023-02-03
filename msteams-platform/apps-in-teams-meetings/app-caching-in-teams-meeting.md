@@ -63,7 +63,7 @@ microsoftTeams.teamsCore.registerBeforeUnloadHandler((readyToUnload) => {
 });
 ```
 
-There are multiple reasons for an app to not get cached or get removed from the cache, some of the reasons are (numbers here are subject to change):
+Reasons for an app to not get cached or get removed from the cache:
 
 * If the number of cached apps exceed the maximum cache size, the oldest cached app is removed from the cache.
 * The app isn't cached if Teams doesn't receive the `readyToUnload` signal from the app within 30 seconds after sending the `beforeUnload` notification.
