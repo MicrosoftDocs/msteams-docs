@@ -13,8 +13,6 @@ The Microsoft Teams Platform is a powerful, flexible platform for creating apps 
 
 ## The user story
 
-:::image type="content" source="assets/images/meetings-side-panel/sidepanelondesktopmobile_1.png" alt-text="The screenshot demonstrating the final output":::
-
 You've had a view of Teams offerings. You can now map them to user needs. Let’s revisit the scenario.
 
 The developer from Tours and Travel agency wants to build an app for their users, the travelers. The app must:
@@ -129,7 +127,7 @@ From designing to building and distributing a Teams app, you can use various too
         **Extend your app across Microsoft 365**
     :::column-end:::
     :::column span="2":::
-You can preview your Teams apps running in other high usage Microsoft 365 experiences with Teams JavaScript client SDK v2 Preview.
+You can preview your Teams apps running in other high usage Microsoft 365 experiences with the latest Teams JavaScript client library.
 
         > [!div class="nextstepaction"]
         > [Extend your app](m365-apps/overview.md)
