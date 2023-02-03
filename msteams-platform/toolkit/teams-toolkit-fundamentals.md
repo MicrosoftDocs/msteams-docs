@@ -15,11 +15,11 @@ zone_pivot_groups: teams-app-platform
 
 Teams Toolkit makes it simple to get started with app development for Microsoft Teams using Visual Studio Code.
 
-* Start with a project templates for common line-of-business app scenarios or from a sample.
+* Start with a project template for common line-of-business app scenarios or using a sample.
 * Save setup time with automated app registration and configuration.
 * Run and debug to Teams directly from familiar tools.
 * Smart defaults for hosting in Azure using infrastructure-as-code and Bicep.
-* Create unique configurations like dev, test, and prod using the environments feature.
+* Create unique configurations like dev, test, and production using the environments feature.
 * Bring your app to your organization or the Teams App Store using built-in publishing tools.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey2.png" alt-text="User Journey of the Teams Toolkit" lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey2.png":::
@@ -58,7 +58,7 @@ Teams Toolkit is available for free for Visual Studio 2022 Community, Profession
 
 ::: zone-end
 
-## Features
+## Teams Toolkit features
 
 The following list provides the key features of Teams Toolkit:
 
@@ -92,7 +92,7 @@ You can start directly with the capability-focused templates such as tabs, bots,
 
 ### Automatic registration and configuration
 
-You can save time and let the toolkit automatically register the app in Teams Developer Portal. When you first run or debug the app, configure settings, such as Azure Active Directory (Azure AD) automatically. Sign in with your Microsoft 365 account to control where the app is configured and customized the included Azure AD manifest when you need flexibility.
+You can save time and let the toolkit automatically register the app in Teams Developer Portal. When you first run or debug the app, configure settings, such as Azure Active Directory (Azure AD) automatically. Sign in with your Microsoft 365 account to control where the app is configured and customize the included Azure AD manifest when you need flexibility.
 
 ::: zone pivot="visual-studio-code"
 
