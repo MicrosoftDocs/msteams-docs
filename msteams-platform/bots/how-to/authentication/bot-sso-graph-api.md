@@ -58,6 +58,6 @@ You can configure Graph scopes in Azure AD as required for your app. Delegated p
 
     You've configured your app with Microsoft Graph permissions.
 
-After you've completed the configuration in Azure AD, you must update the code to acquire access token for Microsoft Graph. For more information, see [Bot framework SDK](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/46.teams-auth/SimpleGraphClient.cs).
+After you've completed the configuration in Azure AD, you must update the code to acquire access token for Microsoft Graph. For more information, see [Bot framework SDK](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-teams-authentication/csharp/SimpleGraphClient.cs).
 
 The app user is prompted to consent for Graph permissions on the first time they use it. After the app user gives consent, the Graph permissions are granted.

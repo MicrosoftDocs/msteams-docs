@@ -28,6 +28,7 @@ When calling initializing `LiveShareClient`, you can define your own `AzureConne
 
 ```javascript
 import { LiveShareClient, LivePresence } from "@microsoft/live-share";
+import { LiveShareHost } from "@microsoft/teams-js";
 import { SharedMap } from "fluid-framework";
 import { AzureFunctionTokenProvider } from "@fluidframework/azure-client";
 
@@ -44,7 +45,8 @@ const options = {
   },
 };
 // Join the Fluid container
-const liveShare = new LiveShareClient(options);
+const host = LiveShareHost.create();
+const liveShare = new LiveShareClient(host, options);
 const schema = {
   initialObjects: {
     presence: LivePresence,
@@ -64,6 +66,7 @@ import {
   ILiveShareClientOptions,
   LivePresence,
 } from "@microsoft/live-share";
+import { LiveShareHost } from "@microsoft/teams-js";
 import { SharedMap } from "fluid-framework";
 import { AzureFunctionTokenProvider } from "@fluidframework/azure-client";
 
@@ -80,7 +83,8 @@ const options: ILiveShareClientOptions = {
   },
 };
 // Join the Fluid container
-const liveShare = new LiveShareClient(options);
+const host = LiveShareHost.create();
+const liveShare = new LiveShareClient(host, options);
 const schema = {
   initialObjects: {
     presence: LivePresence,
@@ -135,10 +139,10 @@ For more information, see [media capabilities](../teams-live-share-media-capabil
 
 ## See also
 
+* [Apps for Teams meetings and calls](../teams-apps-in-meetings.md)
 * [GitHub repository](https://github.com/microsoft/live-share-sdk)
 * [Live Share SDK reference docs](/javascript/api/@microsoft/live-share/)
 * [Live Share Media SDK reference docs](/javascript/api/@microsoft/live-share-media/)
-* [Live Share capabilities](../teams-live-share-capabilities.md)
-* [Live Share media capabilities](../teams-live-share-media-capabilities.md)
 * [Live Share FAQ](../teams-live-share-faq.md)
-* [Teams apps in meetings](../teams-apps-in-meetings.md)
+* [Use Fluid with Teams](../../tabs/how-to/using-fluid-msteam.md)
+* [App manifest schema for Teams](../../resources/schema/manifest-schema.md)

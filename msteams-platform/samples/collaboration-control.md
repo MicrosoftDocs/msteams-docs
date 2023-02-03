@@ -20,7 +20,7 @@ These controls give you the power to simplify your users workflow collaboration 
 * Tasks
 
 > [!NOTE]
-> Currently Collaboration controls are available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
+> Collaboration controls are available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
 
 Following are some of the key capabilities of Collaboration controls:
 
@@ -48,3 +48,8 @@ The controls run within a Power Apps Model Driven Application (MDA) that can be 
 * Data can be read from Dataverse via standard OData APIs and submitted to external sources such as a system of record or a portal.
 
 :::image type="content" source="~/assets/images/collaboration-control/consumption-mda.png" alt-text="Collaboration lifecycle":::
+
+## See also
+
+* [Integrate web apps](integrate-web-apps-overview.md)
+* [Microsoft Graph overview](/graph/teams-concept-overview)
