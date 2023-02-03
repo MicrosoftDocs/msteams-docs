@@ -128,7 +128,7 @@ TeamsJS is a rich library used to create Tabs using JavaScript. Use the latest T
 
 Microsoft Teams JavaScript library exposes the frameContext in which your meeting tab URL is loaded in the getContext API. The possible values of frameContext are content, task, setting, remove, sidePanel, and meetingStage. This allows you to build customized experiences based on where the app renders. For example, showing a specific collaboration focused UI when in the `meetingStage` and a different meeting preparation UI in the chat tab (`content`). For more information, see [getContext API](/microsoftteams/platform/tabs/how-to/access-teams-context?tabs=teamsjs-v2).
 
-## Enable your Tabs for meeting
+## Enable your tabs for Teams meeting
 
 Update your [app manifest](/microsoftteams/platform/resources/schema/manifest-schema) with relevant context property to configure the different tab views. The meetings app capabilities are declared in your app manifest using the scopes and context arrays under the configurableTabs section.
 

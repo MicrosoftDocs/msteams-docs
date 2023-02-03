@@ -21,6 +21,7 @@ App caching improves subsequent launch time of the apps that are loaded in the m
 > * Currently, app caching is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
 > * App caching is supported only for tabs loaded in the meeting side panel in Teams desktop client.
 > * When the app is cached, any audio that is playing is muted.
+> * Side panel is the only supported FrameContext for app caching in meetings.
 
 The following is the flow diagram of the first launch of an app that wants to opt into app caching (register the `load` or `beforeUnload` on the first launch of the app):
 
@@ -62,13 +63,8 @@ microsoftTeams.teamsCore.registerBeforeUnloadHandler((readyToUnload) => {
 
 There are multiple reasons for an app to not get cached or get removed from the cache, some of the reasons are (numbers here are subject to change):
 
-* If the system memory load is high, the app is removed from the cache.
 * If the number of cached apps exceed the maximum cache size, the oldest cached app is removed from the cache.
-* If the user doesn't return to the app within 20 minutes, the app is removed from the cache.
 * The app isn't cached if Teams doesn't receive the `readyToUnload` signal from the app within 30 seconds after sending the `beforeUnload` notification.
-* App caching is disabled if the system memory is less than 4 GB or if the available memory is less than 1 GB on Windows or 512 MB on Mac.
-* Side panel is the only supported FrameContext for app caching in meetings.
-* App caching isn't supported for meetings where the invited user count is more than 20.
 
 ## Best practices
 
@@ -83,6 +79,10 @@ There are multiple reasons for an app to not get cached or get removed from the 
 ## Limitations
 
 The following are the limitations for app caching:
+
+* App caching is disabled if the system memory is less than 4 GB or if the available memory is less than 1 GB on Windows or 512 MB on Mac.
+
+* App caching isn't supported for meetings where the invited user count is more than 20.
 
 * Apps need to re-register for events such as `themeChange`, `focusEnter`, and so on, in the load handler. Teams client won't send any notifications to the app when cached. If your app requires notifications even when cached, caching might not be the right solution.
 
@@ -113,6 +113,12 @@ The following are the limitations for app caching:
 * Check the amount of free memory on your system. App caching requires minimum of 4 GB system memory.
 
 * Reduce your memory footprint when cached. Use the `beforeUnload` handlers to dispose resources that aren't needed when cached.
+
+**Why apps are removed from cache?**
+
+* If the system memory load is high, the app is removed from the cache. Ensure that your system memory load isn't high.
+
+* If the user doesn't return to the app within 20 minutes, the app is removed from the cache. Ensure that you return to the app within 20 minutes.
 
 ## Code sample
 
