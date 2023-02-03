@@ -411,7 +411,7 @@ Follow the [step-by-step guide](../../sbs-botbuilder-linkunfurling.yml) to unfur
 
 ## Code sample
 
-|**Sample name** | **Description** | **C#** | **Node.js**|
+|**Sample name** | **Description** | **.NET** | **Node.js**|
 |----------------|-----------------|--------------|----------------|
 | Zero install link unfurling. | Demonstrates how to use Search-based Messaging Extension with a configuration page. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search-auth-config/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search-sso-config/nodejs) |
 
