@@ -11,7 +11,7 @@ ms.date: 03/14/2022
 
 Before you create your Teams app project, ensure that the prerequisites are in place. You must:
 
-* [Basic requirements to build your Teams app](#basic-requirements-to-build-your-teams-app)
+* [Install required tools to build your Teams app](#install-required-tools-to-build-your-teams-app)
 * [Prepare Accounts to build your Teams app](#accounts-to-build-your-teams-app)
 * [Sideload permission](#sideload-permission)
 
@@ -21,7 +21,7 @@ Ensure that following tools are installed on the device where you’ll create yo
 
 | Tools | For using| For environment type|
 | --- | --- | --- |
-| **Required** | &nbsp; | &nbsp; | &nbsp; |
+| **Required** | &nbsp; | &nbsp; |
 | Microsoft Visual Studio Code| JavaScript, TypeScript, or SPFx build environments to build your Teams app. Use version 1.55 or later. | JavaScript, TypeScript, and SPFx. |
 | Teams Toolkit| The Microsoft Visual Studio Code extension to create a Teams app project. Use the latest version. | JavaScript, TypeScript, and  (SPFx)|
 | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Sideloading feature to testing your app behavior within your local Teams environment.| JavaScript, TypeScript, and SPFx.|
