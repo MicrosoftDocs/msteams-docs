@@ -23,7 +23,7 @@ You can open an app install dialog from your Teams app and also can install the 
 
 `https://teams.microsoft.com/l/app/<your-app-id>`, where `<your-app-id>` is the application ID(f46ad259-0fe5-4f12-872d-c737b174bcb4).
 
-Applications can use the Teams Java Script library (TeamsJS) to open the dialog without manually generating the deep link. Following is an example to open the app install dialog using TeamsJS:
+Applications can use the TeamsJS library to open the dialog without manually generating the deep link. Following is an example to open the app install dialog using TeamsJS:
 
 # [TeamsJS v2](#tab/teamsjs-v2)
 
@@ -207,7 +207,7 @@ You can navigate to content in Teams from your tab using TeamsJS or deep links. 
 
 One of the benefits of using TeamsJS, particularly for Teams app that might run in other hosts (Outlook and Office), is that it's possible to check if the host supports the capability you're attempting to use. To check a host's support of a capability, you can use the `isSupported()` function associated with the namespace of the API. The TeamsJS library organizes APIs into capabilities by way of namespaces. For example, prior to usage of an API in the `pages` namespace you can check the returned Boolean value from `pages.isSupported()` and take the appropriate action within the context of your app and apps UI.  
 
-For more information about capabilities and the APIs in TeamsJS, see [Building tabs and other hosted experiences with the Microsoft Teams JavaScript client library](~/tabs/how-to/using-teams-client-sdk.md#apis-organized-into-capabilities).
+For more information about capabilities and the APIs in the TeamsJS library, see [Building tabs and other hosted experiences with the TeamsJS library](~/tabs/how-to/using-teams-client-sdk.md#apis-organized-into-capabilities).
 
 ### Deep link for SharePoint Framework tabs
 
