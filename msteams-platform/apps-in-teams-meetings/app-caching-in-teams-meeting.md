@@ -110,9 +110,9 @@ The following are the limitations for app caching:
 
 ## Troubleshooting
 
-**Why apps aren't cached?**
+**Why aren't apps cached?**
 
-* App caching requires minimum of 4 GB system memory. Ensure there is required system memory for app caching.
+* App caching requires minimum of 4 GB system memory. Ensure there's required system memory for app caching.
 
 * The app isn't cached if Teams doesn't receive the `readyToUnload` signal from the app within 30 seconds after sending the `beforeUnload` notification. Ensure that the Teams has received the signal from the app.
 
@@ -130,9 +130,9 @@ The following are the limitations for app caching:
 
 ## Code sample
 
-|Sample name | Description | .NET | Node.js |
-|----------------|-----------------|--------------|----------------|
-| App caching | Sample app to show how app caching works in the meeting side panel. | NA | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-cache-meetings/nodejs) |
+|Sample name | Description | Node.js |
+|----------------|-----------------|----------------|
+| App caching | Sample app to show how app caching works in the meeting side panel. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-cache-meetings/nodejs) |
 
 ## See also
 
