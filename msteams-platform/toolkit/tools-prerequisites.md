@@ -9,7 +9,7 @@ ms.date: 03/14/2022
 ---
 # Prerequisites for creating your Teams app
 
-The following are the prerequisites to create your Teams app:
+Before you create your Teams app project, ensure that the prerequisites are in place. You must:
 
 * [Basic requirements to build your Teams app](#basic-requirements-to-build-your-teams-app)
 * [Prepare Accounts to build your Teams app](#accounts-to-build-your-teams-app)
