@@ -37,7 +37,7 @@ Consider this use case for app caching. Your app is enabled to be installed in a
 :::row-end:::
 :::row:::
     :::column span="":::
-        :::image type="content" source="../assets/images/app-caching/with-app-caching.png" alt-text="The Screenshot shows you the app in meeting with app caching enabled.":::":::
+        :::image type="content" source="../assets/images/app-caching/with-app-caching.png" alt-text="The Screenshot shows you the app in meeting with app caching enabled.":::
     :::column-end:::
     :::column span="":::
         With **app caching**, you can now reduce this reload time significantly. An app cache is a data storage layer that stores your app data in the meeting side panel. When the participants move away from the app and come back to it, the app is loaded from the app cache rather than relaunching the app.   It enhances the meeting experience of the participants and saves time and resources.
