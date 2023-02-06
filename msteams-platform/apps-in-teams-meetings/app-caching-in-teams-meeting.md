@@ -10,13 +10,16 @@ ms.date: 04/07/2022
 
 # Enable app caching for your tab app in meeting
 
+> [!NOTE]
+> App caching is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
+
 You can now configure your app to enable app caching to reduce the reload time of your app during a meeting. For your tab app, you can store your app data in the meeting by enabling app caching. It allows you to improve the app relaunch time within the meeting.
 
 Here's what you'll learn in this section:
 
 ## App caching user experience
 
-App caching improves subsequent launch time of the apps that are loaded in the meeting Side Panel by allowing you to keep some resources and assets in memory that you can use when rehydrating app.
+App caching improves subsequent launch time of the apps that are loaded in the meeting side panel by allowing you to keep some resources and assets in memory that you can use when rehydrating app.
 
 Consider this use case for app caching.
 
@@ -24,21 +27,27 @@ Your app is enabled to be installed in a Teams meeting. The meeting organizer or
 
 :::image type="content" source="../assets/images/app-caching/without-app-caching.png" alt-text="The screenshot shows you the app in meeting without app caching enabled.":::
 
-During the meeting, the participants may change the view from your app to another view on the meeting stage. When they want to open your app again, the app must go through the launch process again before it can be opened in the meeting window.
-This takes up a lot of time in a meeting context as participants are kept waiting while the app reloads.
+During the meeting, the participants may change the view from your app to another view on the meeting stage. When they want to open your app again, the app must go through the launch process again before it can be opened in the meeting window. This takes up a lot of time in a meeting context as participants are kept waiting while the app reloads.
 
-With app caching, you can now reduce this reload time significantly.
+With **app caching**, you can now reduce this reload time significantly.
 
 :::image type="content" source="../assets/images/app-caching/with-app-caching.png" alt-text="The Screenshot shows you the app in meeting with app caching enabled.":::
 
-An app cache is a data storage layer that stores your app data in the meeting Side Panel. When the participants move away from the app and come back to it, the app is loaded from the app cache rather than relaunching the app.   It enhances the meeting experience of the participants and saves time and resources.
+An app cache is a data storage layer that stores your app data in the meeting side panel. When the participants move away from the app and come back to it, the app is loaded from the app cache rather than relaunching the app.   It enhances the meeting experience of the participants and saves time and resources.
 
 > [!NOTE]
 >
-> * Currently, app caching is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
 > * App caching is supported only for tabs loaded in the meeting side panel in Teams desktop client.
-> * When the app is cached, any audio that is playing is muted.
-> * Side panel is the only supported FrameContext for app caching in meetings.
+> * Meeting side panel is the only supported FrameContext for app caching in meetings.
+
+## App caching at runtime
+
+Implement app caching by storing your app data in the meeting side panel. This process flows in two stages:
+
+1. [First launch of the app](#first-launch-of-the-app)
+1. [Reload app from cache](#reload-app-from-cache)
+
+### First launch of the app
 
 The following is the flow diagram of the first launch of an app that wants to opt into app caching (register the `load` or `beforeUnload` on the first launch of the app):
 
@@ -52,6 +61,8 @@ The following is the flow diagram of the first launch of an app that wants to op
 | 4. | App → Teams client | App invokes SDK `notifysucess` to notify Teams that initialization flow is complete. |
 | 5. | Teams client → App | When user navigate to other tab app. Teams client disposes resources and performs any cleanup needed in the `beforeUnload` handler. |
 | 6. | App → Teams client | App invoke the `readyToUnload` callback to notify Teams client that the app unload flow is complete. |
+
+### Reload app from cache
 
 The following is the flow diagram of the launch of cached app:
 
@@ -109,6 +120,8 @@ microsoftTeams.teamsCore.registerBeforeUnloadHandler((readyToUnload) => {
 * App caching is disabled if the system memory is less than 4 GB or if the available memory is less than 1 GB on Windows or 512 MB on Mac.
 
 * App caching isn't supported for meetings where the invited user count is more than 20.
+
+* When the app is cached, any audio that is playing is muted.
 
 * Apps need to re-register for events such as `themeChange`, `focusEnter`, and so on, in the load handler. Teams client won't send any notifications to the app when cached. If your app requires notifications even when cached, caching might not be the right solution.
 
