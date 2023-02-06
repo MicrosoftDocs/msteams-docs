@@ -10,13 +10,13 @@ ms.date: 11/29/2021
 
 # Prepare to build apps using Teams Toolkit
 
-Teams Toolkit supports different environments for creating apps. Teams Toolkit helps to integrate Azure Functions capabilities and cloud services in the Teams app that you've built.
+Teams Toolkit supports different build environments for creating apps. It helps to integrate Azure Functions capabilities and cloud services in the Teams app that you've built.
 
 :::image type="content" source="../assets/images/buildapps-TTK_1.png" alt-text="Prepare to build apps using Teams Toolkit" lightbox="../assets/images/buildapps-TTK_1.png":::
 
 ## Build environments
 
-Teams Toolkit in Visual Studio Code offers set of environments to build your Teams app. You can choose any of the following environments:
+Teams Toolkit in Visual Studio Code offers a set of environments to build your Teams app. You can choose any of the following environments:
 
 * JavaScript or TypeScript
 * SharePoint Framework (SPFx)
@@ -49,6 +49,10 @@ Teams Toolkit in Visual Studio Code allows you to create tab apps using SPFx. Th
 * Creates powerful applications that can deliver a great UX.
 * Integrates with other Microsoft 365 workloads easily.
 * Delivers flexibility to host applications wherever needed.
+
+### Create your Teams app using C# using Blazor
+
+* Teams Toolkit in Visual Studio allows you to create a Teams app using C# using the Blazor framework. You can create tab app, bot app, and message extension app in a C# build environment.
 
 ## Support for Azure Functions
 
