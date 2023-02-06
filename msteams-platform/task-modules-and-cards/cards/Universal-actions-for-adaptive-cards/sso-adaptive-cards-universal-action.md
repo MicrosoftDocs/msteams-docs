@@ -84,7 +84,7 @@ The following are the steps to receive token:
     }
     ```
 
-    The bot service sends an invoke response with an OAuth card in response to the `adaptiveCard/action` as follows:.
+    The following is the code snippet to receive invoke activity in the bot service:
 
     ```csharp
             protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext<IInvokeActivity> turnContext, 
@@ -101,8 +101,8 @@ The following are the steps to receive token:
     ```
 
 1. Teams client sends an invoke request to the bot. The bot receives the app users consent and uses their identity to help the token exchange process with the bot framework token service and Azure AD. The bot framework token service delivers the app users access token to the bot.
-   * Teams client ignore the access token if the value is incorrect.
-   * Teams client that experience an error while performing token exchange must respond with an error or a second sign-in request that doesn't include SSO information. If responding with an error, the error must be:
+   * Bot service ignore the access token if the value is incorrect.
+   * Bot service that experience an error while performing token exchange must respond with an error or a second sign-in request that doesn't include SSO information. If responding with an error, the error must be:
 
         ```javascript
          {
