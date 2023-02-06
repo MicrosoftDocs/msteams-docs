@@ -292,7 +292,7 @@ The `targetedMeetingNotification` API allows apps to send targeted in-meeting no
 
 ### Prerequisite
 
-Your app manifest must have the `webApplicationInfo` property to send targeted in-meeting notifications to specific participants in a meeting. Use the following examples to configure your manifest:
+You must configure Your app manifest with [RSC permissions](../graph-api/rsc/resource-specific-consent.md#resource-specific-permissions-for-a-chat) under the `webApplicationInfo` property to send targeted in-meeting notifications to specific participants in a meeting. Use the following examples to configure your manifest:
 
 <br>
 
