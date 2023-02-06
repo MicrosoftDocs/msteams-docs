@@ -25,22 +25,29 @@ App caching improves subsequent launch time of the apps that are loaded in the m
 > * When the app is cached, any audio that is playing is muted.
 > * Side panel is the only supported FrameContext for app caching in meetings.
 
-:::row:::
-    :::column span="":::
-        :::image type="content" source="../assets/images/saas-offer/first-launch-app.png" alt-text="This screenshot shows the flow of the first launch of the app in meeting side panel.":::
-    :::column-end:::
-    :::column span="":::
-        :::image type="content" source="../assets/images/saas-offer/cached-launch-app.png" alt-text="This screenshot shows the flow of the cached launch of the app in meeting side panel.":::
-    :::column-end:::
-:::row-end:::
-
 The following is the flow diagram of the first launch of an app that wants to opt into app caching (register the `load` or `beforeUnload` on the first launch of the app):
 
 :::image type="content" source="../assets/images/saas-offer/first-launch-app.png" alt-text="This screenshot shows the flow of the first launch of the app in meeting side panel.":::
 
+| # | Interaction | What's going on |
+| --- | --- | --- |
+| 1. | Teams client → App | Teams client launches the app to the meeting side panel. |
+| 2. | App → Teams client | App initialize the flow. |
+| 3. | App → Teams client | App register `Load` or `beforeunload` handler with Teams clients and cache the app data in the meeting side panel. |
+| 4. | App → Teams client | App invokes SDK `notifysucess` to notify Teams that initialization flow is complete. |
+| 5. | Teams client → App | When user navigate to other tab app. Teams client disposes resources and performs any cleanup needed in the `beforeUnload` handler. |
+| 6. | App → Teams client | App invoke the `readyToUnload` callback to notify Teams client that the app unload flow is complete. |
+
 The following is the flow diagram of the launch of cached app:
 
 :::image type="content" source="../assets/images/saas-offer/cached-launch-app.png" alt-text="This screenshot shows the flow of the cached launch of the app in meeting side panel.":::
+
+| # | Interaction | What's going on |
+| --- | --- | --- |
+| 1. | Teams client → App | Teams client launches the app and invoke Load callback function. |
+| 2. | App → Teams client | App  uses `contentURL` and `entityID` to route to the desired page and then invokes SDK `notifysucess` to notify Teams that initialization flow is complete. |
+| 3. | Teams client → App | When user navigate to other tab app. Teams client disposes resources and performs any cleanup needed in the `beforeUnload` handler. |
+| 4. | App → Teams client | App invoke the `readyToUnload` callback to notify Teams client that the app unload flow is complete. |
 
 ## Enable app caching
 
