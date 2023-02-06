@@ -525,9 +525,9 @@
     - name: Universal Actions for Adaptive Cards
       items:
       - name: Overview
-        href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/overview.md
+        href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Overview.md
       - name: Work with Universal Actions for Adaptive Cards
-        href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-universal-actions-for-adaptive-cards.md
+        href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-Universal-Actions-for-Adaptive-Cards.md
         displayName: Activity, Sequential Workflows
       - name: User Specific Views
         href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/User-Specific-Views.md
