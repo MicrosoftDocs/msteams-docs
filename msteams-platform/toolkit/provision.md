@@ -185,7 +185,7 @@ To ensure the TeamsFx tool functions properly, customize ARM template that satis
 
 * Ensure that the folder structure and file name remain unchanged. The tool may append new content to the existing files when you add more resources or capabilities to your project.
 * Ensure that the names of the auto-generated parameters and its property names remain unchanged. The auto-generated parameters may be used when you add more resources or capabilities to your project.
-* Ensure that the output of the auto-generated ARM template remain unchanged. You can add more outputs to the ARM template. The output is `.fx\states\state.{env}.json` and can be used in other features, such as deploy and validate manifest file.
+* Ensure that the output of the auto-generated ARM template remains unchanged. You can add more outputs to the ARM template. The output is `.fx\states\state.{env}.json` and can be used in other features, such as deploy and validate manifest file.
 
 ### Customize Teams apps
 
