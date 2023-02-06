@@ -28,6 +28,12 @@ Stage View is a full screen UI component that can be used to render your app con
 
 :::image type="content" source="../assets/images/tab-images/invoke-stage-view-deep-link.png" alt-text=" The screenshot shows the invoke stage view.":::
 
+### Stage View vs. Task module
+
+| Stage View | Task module|
+|:-----------|:-----------|
+| Stage View is useful to display rich content to the users, such as a page, a dashboard, a file, and so on. It provides rich features that help to render your content in the new pop-up window. <br><br> It provides rich features that help to render your content in the full-screen canvas. <br><br> After your app content opens in Stage View, users can choose to pin the content as a tab. <br><br> For even more collaborative capabilities, opening your content in Collaborative Stage View (via an Adaptive Card) allows users to engage with content and conversation side-by-side, while also enabling multi-window scenarios.| [Task module](../task-modules-and-cards/task-modules/task-modules-tabs.md) is especially useful to display messages that require user attention, or collect information required to move to the next step.|
+
 ### Invoke Stage View through deep link
 
 To invoke the Stage View through deep link from your tab, you must wrap the deep link URL in the `app.openLink(url)` API. To invoke Stage View from a deep link will always default to the modal experience (and not a Teams window). The deep link can also be passed through an `OpenURL` action in the card,  the Stage View deep link is intended for the tab canvas. For Adaptive Cards, we encourage developers to follow the JSON Adaptive Card example.
@@ -35,12 +41,6 @@ To invoke the Stage View through deep link from your tab, you must wrap the deep
 The following is an example from deep link Stage View opens as a modal within the main Teams window:
 
 :::image type="content" source="../assets/images/tab-images/invoke-stage-view-deep-link.png" alt-text="Screenshot shows the invoke stage view through deep link.":::
-
-> [!NOTE]
->
-> * All deep links must be encoded before pasting the URL. We don't support unencoded URLs.
-> * The `name` is optional in deep link. If not included, the app name replaces it.
-> * When you launch a Stage from a certain context, ensure that your app works in that context. For example, if your Stage View is launched from a personal app, you must ensure your app has a personal scope.
 
 #### Syntax
 
@@ -93,12 +93,6 @@ Encoded URL:
 > * The deep link can also be passed through an `OpenURL` action.
 > * When you launch a Stage from a certain context, ensure that your app works in that context. For example, if your Stage View is launched from a personal app, you must ensure your app has a personal scope.
 
-### Stage View vs. Task module
-
-| Stage View | Task module|
-|:-----------|:-----------|
-| Stage View is useful to display rich content to the users, such as a page, a dashboard, a file, and so on. It provides rich features that help to render your content in the new pop-up window. <br><br> It provides rich features that help to render your content in the full-screen canvas. <br><br> After your app content opens in Stage View, users can choose to pin the content as a tab. <br><br> For even more collaborative capabilities, opening your content in Collaborative Stage View (via an Adaptive Card) allows users to engage with content and conversation side-by-side, while also enabling multi-window scenarios.| [Task module](../task-modules-and-cards/task-modules/task-modules-tabs.md) is especially useful to display messages that require user attention, or collect information required to move to the next step.|
-
 ## Collaborative Stage View
 
 Collaborative Stage View is an enhancement to Stage View, that allows your app content to exist in multiple Teams windows. When a user opens Stage View from an Adaptive Card in a group chat or channel, the app content opens in a new Teams window instead of a modal.
@@ -108,6 +102,10 @@ The Collaborative Stage View also opens a chat in the side panel from the group 
 >[!NOTE]
 > Collaborative Stage View isn't supported in Teams web and mobile clients.
 
+The following screenshot is an example of collaborative Stage View opens in a new Teams window with the originating chat in the side panel:
+
+:::image type="content" source="../assets/images/tab-images/collaborative-stage-view.png" alt-text="Screenshot shows the Collaborative stage view in Teams.":::
+
 |Feature |Notes |Desktop |Web |Mobile|
 |---      |:-----  |:--------   |:----  |:----- |
 |Collaborative Stage View| Invoke from Adaptive Card action. |Chat/Channel: Opens Teams pop-out window with chat pane| Opens Stage View modal. |Opens Stage View modal|
@@ -116,10 +114,6 @@ The Collaborative Stage View also opens a chat in the side panel from the group 
 ### Advantages of Collaborative Stage View
 
 Collaborative Stage View helps provide a more seamless, multi-task experience when working with content in Teams. Users can open and view your app content inside a new Teams window and continue discussion from this window. The ability to engage with content while also having a conversation about that same content, leads to higher user engagement with your app.
-
-The following screenshot is an example of collaborative Stage View opens in a new Teams window with the originating chat in the side panel:
-
-:::image type="content" source="../assets/images/tab-images/collaborative-stage-view.png" alt-text="Screenshot shows the Collaborative stage view in Teams.":::
 
 ### Limitations of Collaborative Stage View
 
