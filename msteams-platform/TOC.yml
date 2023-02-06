@@ -431,7 +431,7 @@
       - name: Enable your tabs for Teams meeting
         href: apps-in-teams-meetings/build-tabs-for-meeting.md
         displayName: anonymous
-      - name: Enable app caching for your tabs in Teams meeting
+      - name: Enable app caching in Teams meeting for your tab app
         href: apps-in-teams-meetings\app-caching-in-teams-meeting.md
         displayName: app caching, launch time
     - name: Build apps for meeting stage

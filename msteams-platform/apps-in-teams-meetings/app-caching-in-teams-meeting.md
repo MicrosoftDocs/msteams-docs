@@ -8,7 +8,7 @@ ms.localizationpriority: high
 ms.date: 04/07/2022
 ---
 
-# Enable app caching for your tab app in meeting
+# Enable app caching in Teams meeting for your tab app
 
 > [!NOTE]
 > App caching is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
@@ -105,7 +105,7 @@ To enable app caching for your app to be cached in the meeting side panel, follo
    * Dispose resources and perform any cleanup needed in the `beforeUnload` handler.
    * Invoke the `readyToUnload` callback to notify Teams client that the app unload flow is complete.
 
-The following code snippet is an example of `teamsCore.registerOnLoadHandler` and `teamsCore.registerBeforeUnloadHandler` APIs:
+After you configure you app code for app caching, your code should be as shown below:
 
 ```javascript
 /// </summary>
