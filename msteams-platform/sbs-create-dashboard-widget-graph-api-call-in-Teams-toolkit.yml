@@ -209,14 +209,14 @@ items:
               ```jsx
         
               protected dashboardLayout(): JSX. Element | undefined {
-              return (
-              <>
-              <ListWidget />
-              <div style={oneColumn()}>
-                        <SampleWidget />
-                        <ChartWidget />
-                      </div>
-                    </>
+                  return (
+                      <>
+                         <ListWidget />
+                         <div style={oneColumn()}>
+                             <SampleWidget />
+                             <ChartWidget />
+                         </div>
+                     </>
                   );
                 }
               ```
