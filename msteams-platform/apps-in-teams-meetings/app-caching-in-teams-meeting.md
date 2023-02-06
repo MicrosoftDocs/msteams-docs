@@ -10,13 +10,28 @@ ms.date: 04/07/2022
 
 # Enable app caching for your tab app in meeting
 
-In your tab app for Teams meeting, you can store your app data in the meeting by enabling app caching. It allows you to store your app data in the temporary storage and improves the app relaunch time within the meeting.
+You can now configure your app to enable app caching to reduce the reload time of your app during a meeting. For your tab app, you can store your app data in the meeting by enabling app caching. It allows you to improve the app relaunch time within the meeting.
 
-After you enable app caching, the webview that is used to host the embedded app is reused as participants navigate to different instances of the app within the meeting window. The webview used to host the app is hidden when the participants leave the app and shown when they return to the app.
+Here's what you'll learn in this section:
 
-[Info graphics to be added]
+## App caching user experience
 
-App caching improves subsequent launch time of the apps that are loaded in the meeting side panel by allowing you to keep some resources and assets in memory that you can use when rehydrating app. If the app caching isn't enabled, the webview is recreated every time the user launches the app.
+App caching improves subsequent launch time of the apps that are loaded in the meeting Side Panel by allowing you to keep some resources and assets in memory that you can use when rehydrating app.
+
+Consider this use case for app caching.
+
+Your app is enabled to be installed in a Teams meeting. The meeting organizer or participants can install and use your app.
+
+:::image type="content" source="../assets/images/app-caching/without-app-caching.png" alt-text="The screenshot shows you the app in meeting without app caching enabled.":::
+
+During the meeting, the participants may change the view from your app to another view on the meeting stage. When they want to open your app again, the app must go through the launch process again before it can be opened in the meeting window.
+This takes up a lot of time in a meeting context as participants are kept waiting while the app reloads.
+
+With app caching, you can now reduce this reload time significantly.
+
+:::image type="content" source="../assets/images/app-caching/with-app-caching.png" alt-text="The Screenshot shows you the app in meeting with app caching enabled.":::
+
+An app cache is a data storage layer that stores your app data in the meeting Side Panel. When the participants move away from the app and come back to it, the app is loaded from the app cache rather than relaunching the app.   It enhances the meeting experience of the participants and saves time and resources.
 
 > [!NOTE]
 >
