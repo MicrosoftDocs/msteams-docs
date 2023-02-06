@@ -194,7 +194,7 @@ The application ID URI is configured. You can now define scope and permissions f
 
 1. Enter the details for configuring scope.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-scope.png" alt-text="Add details for the scope" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-scope.png" alt-text="The screenshot shows how to add scope details in Azure.":::
 
     1. Enter the scope name.
     2. Select the user who can give consent for this scope. The default option is **Admins only**.
@@ -555,7 +555,7 @@ The application ID URI is configured. You can now define scope and permissions f
 
 1. Enter the details for configuring scope.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-scope.png" alt-text="Add details for the scope" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-scope.png" alt-text="The screenshot shows how to add scope details in Azure.":::
 
     1. Enter the scope name.
     2. Select the user who can give consent for this scope. The default option is **Admins only**.
