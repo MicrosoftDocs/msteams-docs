@@ -67,7 +67,7 @@ export default class YourDashboard extends Dashboard {
     return "4fr 6fr";
   }
 
-  protected dashboardLayout(): void | JSX.Element {
+  protected dashboardLayout(): JSX.Element | undefined {
     return (
       <>
         <SampleWidget />
@@ -587,7 +587,7 @@ Following are the recommended methods to override:
 |---|---|---|
 | **constructor()** | Invokes the initial `this.state` and call the constructor of the super class `React` component. | NO |
 | **componentDidMount()** | Invokes after a component is mounted and assigns a value to the `data` property of the state by calling the `getData()` method. | NO |
-| **render()** | Invokes each time a update happens and the dashboard default layout is defined in this method. | NO |
+| **render()** | Invokes each time an update happens and the dashboard default layout is defined in this method. | NO |
 | **getData()** | Invokes the data needed by the widget and the value returned by this method will be set to `this.state.data`. |
 | **headerContent()** | Invokes what the widget header will look like. You can choose to override this method to customize a widget or not, if not, the widget won't have a header. | YES |
 | **bodyContent()** | Invokes what the widget body will look like. You can choose to override this method to customize a widget or not, if not, the widget won't have a body. | YES |
@@ -595,7 +595,7 @@ Following are the recommended methods to override:
 
 ### Microsoft Graph Toolkit as widget content
 
-Microsoft Graph Toolkit is a set of renewable, framework-agnostic web component which helps accessing and working with Microsoft Graph. You can use the Microsoft Graph Toolkit with any web framework or without a framework.
+Microsoft Graph Toolkit is a set of renewable, framework-agnostic web component, which helps accessing and working with Microsoft Graph. You can use the Microsoft Graph Toolkit with any web framework or without a framework.
 
 You can follow the steps to use Microsoft Graph Toolkit as your widget content:
 
@@ -753,7 +753,7 @@ The following steps show how to add a property to the state of `ListWidget` and 
 
     Update the state reference in the widget file to use the new state type and update the state in the `getData` method to set the `loading` property to `false` after the data is loaded.
 
-    Now, the loading spinner is shown while the data is loading. When the data is loaded, the loading spinner is hidden and the list data and footer button are shown.
+    Now, the loading spinner is shown while the data is loading. When the data is loaded, the loading spinner is hidden and the list data, and footer button are shown.
 
     :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/spinner.gif" alt-text="Graphical representation shows the loading spinner while the data is loading.":::
 
