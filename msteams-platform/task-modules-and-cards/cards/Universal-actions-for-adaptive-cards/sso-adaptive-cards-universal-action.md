@@ -59,22 +59,6 @@ When the user selects **View and accept**, the existing Azure AD permission cons
 
 The following are the steps to receive token:
 
-1. The bot service sends an invoke response with an OAuth card in response to the `adaptiveCard/action` as follows:.
-
-    ```csharp
-            protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext<IInvokeActivity> turnContext, 
-         CancellationToken cancellationToken)
-            {
-              JObject value = JsonConvert.DeserializeObject<JObject>
-              (turnContext.Activity.Value.ToString());
-              JObject authentication = null;
-              if (value["authentication"] != null)
-              {
-              authentication = JsonConvert.DeserializeObject<JObject>(value["authentication"].ToString());
-              }
-            }
-    ```
-
 1. Teams client sends the original `adaptiveCard/action` again to the bot along with the token as follows:
 
     ```javascript
@@ -98,6 +82,22 @@ The following are the steps to receive token:
     }
     }
     }
+    ```
+
+    The bot service sends an invoke response with an OAuth card in response to the `adaptiveCard/action` as follows:.
+
+    ```csharp
+            protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext<IInvokeActivity> turnContext, 
+         CancellationToken cancellationToken)
+            {
+              JObject value = JsonConvert.DeserializeObject<JObject>
+              (turnContext.Activity.Value.ToString());
+              JObject authentication = null;
+              if (value["authentication"] != null)
+              {
+              authentication = JsonConvert.DeserializeObject<JObject>(value["authentication"].ToString());
+              }
+            }
     ```
 
 1. Teams client sends an invoke request to the bot. The bot receives the app users consent and uses their identity to help the token exchange process with the bot framework token service and Azure AD. The bot framework token service delivers the app users access token to the bot.
