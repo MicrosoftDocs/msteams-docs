@@ -25,6 +25,15 @@ App caching improves subsequent launch time of the apps that are loaded in the m
 > * When the app is cached, any audio that is playing is muted.
 > * Side panel is the only supported FrameContext for app caching in meetings.
 
+:::row:::
+    :::column span="":::
+        :::image type="content" source="../assets/images/saas-offer/first-launch-app.png" alt-text="This screenshot shows the flow of the first launch of the app in meeting side panel.":::
+    :::column-end:::
+    :::column span="":::
+        :::image type="content" source="../assets/images/saas-offer/cached-launch-app.png" alt-text="This screenshot shows the flow of the cached launch of the app in meeting side panel.":::
+    :::column-end:::
+:::row-end:::
+
 The following is the flow diagram of the first launch of an app that wants to opt into app caching (register the `load` or `beforeUnload` on the first launch of the app):
 
 :::image type="content" source="../assets/images/saas-offer/first-launch-app.png" alt-text="This screenshot shows the flow of the first launch of the app in meeting side panel.":::
