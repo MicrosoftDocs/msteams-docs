@@ -17,6 +17,10 @@ You can now configure your app to enable app caching to reduce the reload time o
 
 Here's what you'll learn in this section:
 
+1. **App caching user experience**
+1. **App caching at runtime**
+1. **Enable app caching**
+
 ## App caching user experience
 
 App caching improves subsequent launch time of the apps that are loaded in the meeting side panel by allowing you to keep some resources and assets in memory that you can use when rehydrating app.
@@ -77,16 +81,20 @@ The following is the flow diagram of the launch of cached app:
 
 ## Enable app caching
 
+Before you enable app caching for your tab app, you must [enable your Tab app for Teams meeting](build-tabs-for-meeting.md).
+
 To enable app caching for your app to be cached in the meeting side panel, follow the steps:
 
-1. Use `contentUrl` and `entityId` passed into the load handler to route to the correct page within your app and invoke `notifySuccess` or `notifyFailure` to notify Teams client that the app initialization flow is complete.
+1. Pass `contentUrl` and `entityId` in the `configure.jsx` (or equivalent file in your app) into the load handler. It routes to the correct page within your app and invoke `notifySuccess` or `notifyFailure` to notify Teams client when the app initialization flow is complete.
 
    * [contentUrl](../tabs/how-to/create-tab-pages/configuration-page.md#modify-or-remove-a-tab): Add content page URL.
    * [entityId](../tabs/how-to/create-tab-pages/configuration-page.md#modify-or-remove-a-tab): Add a unique identifier.
 
-1. Call `teamsCore.registerBeforeUnloadHandler` and `teamsCore.registerOnLoadHandler` APIs.
+1. In the `app-cache-tab.tsx` file (or equivalent file in your app), configure the following:
 
-1. Dispose resources and perform any cleanup needed in the `beforeUnload` handler, then invoke the `readyToUnload` callback to notify Teams client that the app unload flow is complete.
+   * Call `teamsCore.registerBeforeUnloadHandler` and `teamsCore.registerOnLoadHandler` APIs.
+   * Dispose resources and perform any cleanup needed in the `beforeUnload` handler.
+   * Invoke the `readyToUnload` callback to notify Teams client that the app unload flow is complete.
 
 The following code snippet is an example of `teamsCore.registerOnLoadHandler` and `teamsCore.registerBeforeUnloadHandler` APIs:
 
