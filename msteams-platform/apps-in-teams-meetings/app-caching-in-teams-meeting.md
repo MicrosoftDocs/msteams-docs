@@ -62,7 +62,7 @@ This process flows in two stages for the app that is enabled for app caching:
 
 ### First launch of the app
 
-The following flow diagram shows how the app loads of the first time it's launched in the meeting. The app register the `load` or `beforeUnload`:
+The following flow diagram shows how the app loads of the first time it's launched in the meeting. The app registers the `load` or `beforeUnload`:
 
 :::image type="content" source="../assets/images/saas-offer/first-launch-app.png" alt-text="This screenshot shows the flow of the first launch of the app in meeting side panel.":::
 
@@ -105,7 +105,7 @@ To enable app caching for your app to be cached in the meeting side panel, follo
    * Dispose resources and perform any cleanup needed in the `beforeUnload` handler.
    * Invoke the `readyToUnload` callback to notify Teams client that the app unload flow is complete.
 
-After you configure you app code for app caching, your code should be as shown below:
+After you configure your app code for app caching, your code should be as shown below:
 
 ```javascript
 /// </summary>
