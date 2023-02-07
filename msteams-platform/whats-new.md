@@ -24,17 +24,24 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 Teams platform features that are available to all app developers.
 
-**2023 January**
+**2023 February**
 
-* ***January 31, 2022***: [SSO authentication for your Adaptive Cards Universal Actions](task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/enable-sso-for-your-adaptive-cards-universal-action.md)
-* ***January 31, 2022***: [Third party authentication for Adaptive Cards Universal Actions](task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/authentication-flow-in-universal-action-for-adaptive-cards.md)
-***January 27, 2023***: [Introducing update and soft delete event notifications in bot](bots/how-to/conversations/conversation-messages.md#update-message)
-***January 31, 2023***: [Introducing update and soft delete event notifications in bot](bots/how-to/conversations/conversation-messages.md#update-message).
+* ***February 08, 2022***: [SSO authentication for your Adaptive Cards Universal Actions](task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/enable-sso-for-your-adaptive-cards-universal-action.md)
+* ***February 08, 2022***: [Third party authentication for Adaptive Cards Universal Actions](task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/authentication-flow-in-universal-action-for-adaptive-cards.md)
 
 :::column-end:::
 :::row-end:::
 
 <br>
+<details>
+<summary><b>2023</b></summary>
+
+| **Date** | **Update** | **Find here** |
+| -------- | --------- | ----------------|
+| 31/01/2023 | Introducing update and soft delete event notifications in bot. | Build bots > Bot conversations > Message in bot conversations > [Messages in bot conversations](bots/how-to/conversations/conversation-messages.md#update-message)|
+</details>
+</br>
+
 <details>
 <summary><b>2022</b></summary>
 
