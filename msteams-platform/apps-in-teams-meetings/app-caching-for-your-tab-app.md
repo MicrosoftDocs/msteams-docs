@@ -239,7 +239,7 @@ export default AppCacheTab;
 
 **Why isn't my app getting cached?**
 
-Apps don't cached if the load handler isn't invoked on subsequent navigation. To resolve this issue, ensure the following:
+Apps aren't cached if the load handler isn't invoked on subsequent navigation. To resolve this issue, ensure the following:
 
 * App caching requires minimum of 4 GB system memory. Ensure there's sufficient system memory for app caching.
 
@@ -249,7 +249,7 @@ Apps don't cached if the load handler isn't invoked on subsequent navigation. To
 
 * If the system memory load is high, the app is removed from the cache. Ensure that your system memory load isn't high.
 
-* If the participant doesn't comes back to the app within 20 minutes, the app is removed from the cache.
+* If the participant doesn't come back to the app within 20 minutes, the app is removed from the cache.
 
 * If the number of cached apps exceed the maximum cache size, the oldest cached app is removed from the cache. Ensure you don't exceed the maximum cache size.
 
