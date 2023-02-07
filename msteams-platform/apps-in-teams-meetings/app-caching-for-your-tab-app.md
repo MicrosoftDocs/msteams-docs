@@ -1,5 +1,5 @@
 ---
-title: App caching in Teams meeting
+title: Enable app caching for your tab app
 author: surbhigupta
 description: Learn how to enable app caching to your app in Teams meeting and it improves the launch time of the app in meeting side panel.
 ms.topic: conceptual
@@ -46,18 +46,16 @@ Your app is enabled to be installed in a Teams meeting. The meeting organizer or
 
 ## App caching at runtime
 
-Implement app caching by storing your app data in the meeting side panel.
+When you enable app caching in your app, you can add it to a meeting, and the app opens in a webview. The app data is stored in the meeting side panel. If the participants move away from the app within the meeting window, the webview that is used to host the embedded app is reused. The webview that hosts the app is hidden when the participants move away from the app and shown when they come back to the app. At this time, the app is reloaded from the cache.
 
-After you enable app caching in your app, you can add it to a meeting. The app opens in a webview. If the participants move away from the app within the meeting window, the webview that is used to host the embedded app is reused. The webview that hosts the app is hidden when the participants leave the app and shown when they return to the app. At this time, the app is reloaded from the cache.
-
-This process flows in two stages for the app that is enabled for app caching:
+This process consists of two stages for an app that is enabled for app caching:
 
 1. [First launch of the app](#first-launch-of-the-app)
 1. [Reload app from cache](#reload-app-from-cache)
 
 ### First launch of the app
 
-The following flow diagram shows how the app loads of the first time it's launched in the meeting. The app registers the `load` or `beforeUnload`:
+The following flow diagram shows how the app loads for the first time it's launched in the meeting. The app registers the `load` or `beforeUnload`:
 
 :::image type="content" source="../assets/images/saas-offer/first-launch-app.png" alt-text="This screenshot shows the flow of the first launch of the app in meeting side panel.":::
 
@@ -66,7 +64,7 @@ The following flow diagram shows how the app loads of the first time it's launch
 | 1. | Teams client → App | Teams client launches the app to the meeting side panel. |
 | 2. | App → Teams client | The app initializes the flow. |
 | 3. | App → Teams client | The app registers `Load` or `beforeUnload` handler with Teams clients and caches the app data in the meeting side panel. |
-| 4. | App → Teams client | The app invokes SDK `notifySuccess` to notify Teams that initialization flow is complete. |
+| 4. | App → Teams client | The app invokes SDK `notifySuccess` to notify Teams client that the initialization flow is complete. |
 | 5. | Teams client → App | When the participants move away from the app. Teams client disposes resources and performs any cleanup needed in the `beforeUnload` handler. |
 | 6. | App → Teams client | The app invokes the `readyToUnload` callback to notify Teams client that the app unload flow is complete. |
 
@@ -78,8 +76,8 @@ The following flow diagram shows how a cached app is reloaded:
 
 | # | Interaction | What's going on |
 | --- | --- | --- |
-| 1. | Teams client → App | Teams client loads the app and invokes Load callback function. |
-| 2. | App → Teams client | The app  uses `contentUrl` and `entityId` to route to the desired page, and then invokes SDK `notifySuccess` to notify Teams that initialization flow is complete. |
+| 1. | Teams client → App | Teams client loads the app and invokes `Load` callback. |
+| 2. | App → Teams client | The app  uses `contentUrl` and `entityId` to route to the desired page, and then invokes SDK `notifySuccess` to notify Teams client that the initialization flow is complete. |
 | 3. | Teams client → App | When the participants move away from the app. Teams client disposes resources and performs any cleanup needed in the `beforeUnload` handler. |
 | 4. | App → Teams client | The app invokes the `readyToUnload` callback to notify Teams client that the app unload flow is complete. |
 
@@ -239,7 +237,7 @@ export default AppCacheTab;
 
 * App caching requires minimum of 4 GB system memory. Ensure there's required system memory for app caching.
 
-* The app isn't cached if Teams doesn't receive the `readyToUnload` signal from the app within 30 seconds after sending the `beforeUnload` notification. Ensure that the Teams has received the signal from the app.
+* The app isn't cached if Teams client doesn't receive the `readyToUnload` signal from the app within 30 seconds after sending the `beforeUnload` notification. Ensure that the Teams client has received the signal from the app.
 
 **Why is the load handler not invoked on subsequent navigation?**
 
@@ -249,7 +247,7 @@ export default AppCacheTab;
 
 * If the system memory load is high, the app is removed from the cache. Ensure that your system memory load isn't high.
 
-* If the user doesn't return to the app within 20 minutes, the app is removed from the cache. Ensure that you return to the app within 20 minutes.
+* If the user doesn't comes back to the app within 20 minutes, the app is removed from the cache. Ensure that you come back to the app within 20 minutes.
 
 * If the number of cached apps exceed the maximum cache size, the oldest cached app is removed from the cache. Ensure you don't exceed the maximum cache size.
 
