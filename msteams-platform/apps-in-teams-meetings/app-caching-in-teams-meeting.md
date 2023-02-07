@@ -70,8 +70,8 @@ The following flow diagram shows how the app loads of the first time it's launch
 | --- | --- | --- |
 | 1. | Teams client → App | Teams client launches the app to the meeting side panel. |
 | 2. | App → Teams client | The app initializes the flow. |
-| 3. | App → Teams client | The app registers `Load` or `beforeunload` handler with Teams clients and caches the app data in the meeting side panel. |
-| 4. | App → Teams client | The app invokes SDK `notifysucess` to notify Teams that initialization flow is complete. |
+| 3. | App → Teams client | The app registers `Load` or `beforeUnload` handler with Teams clients and caches the app data in the meeting side panel. |
+| 4. | App → Teams client | The app invokes SDK `notifySuccess` to notify Teams that initialization flow is complete. |
 | 5. | Teams client → App | When the participants move away from the app. Teams client disposes resources and performs any cleanup needed in the `beforeUnload` handler. |
 | 6. | App → Teams client | The app invokes the `readyToUnload` callback to notify Teams client that the app unload flow is complete. |
 
@@ -84,7 +84,7 @@ The following flow diagram shows how a cached app is reloaded:
 | # | Interaction | What's going on |
 | --- | --- | --- |
 | 1. | Teams client → App | Teams client loads the app and invokes Load callback function. |
-| 2. | App → Teams client | The app  uses `contentURL` and `entityID` to route to the desired page, and then invokes SDK `notifysucess` to notify Teams that initialization flow is complete. |
+| 2. | App → Teams client | The app  uses `contentUrl` and `entityId` to route to the desired page, and then invokes SDK `notifySuccess` to notify Teams that initialization flow is complete. |
 | 3. | Teams client → App | When the participants move away from the app. Teams client disposes resources and performs any cleanup needed in the `beforeUnload` handler. |
 | 4. | App → Teams client | The app invokes the `readyToUnload` callback to notify Teams client that the app unload flow is complete. |
 
