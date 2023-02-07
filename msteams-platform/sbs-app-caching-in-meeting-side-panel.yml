@@ -18,7 +18,7 @@ items:
   
    This step-by-step guide helps you to create a sample app with app caching. You'll see the following app cached in the meeting side panel:
 
-   
+      :::image type="content" source="~/assets/images/app-caching/app-caching.gif" alt-text="The gif shows the app caching experience when you navigate into different instance in Teams meeting.":::
     
 - title: Prerequisites
   durationInMinutes: 1
@@ -134,7 +134,7 @@ items:
   content: |
    Navigate to other tab and come back to the app caching tab. You can see that your app cached.
 
-   :::image type="content" source="~/assets/images/app-caching/app-caching.gif" alt-text="Screenshot shows the app caching in meeting.":::
+   :::image type="content" source="~/assets/images/app-caching/app-caching.gif" alt-text="The gif shows the app caching experience when you navigate into different instance in meeting.":::
     
 - title: Complete challenge
   durationInMinutes: 1
