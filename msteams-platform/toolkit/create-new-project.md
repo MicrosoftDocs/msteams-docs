@@ -50,18 +50,17 @@ The process to create a new Teams app is similar for all types of apps except SP
     <details>
     <summary>Learn to change the default folder:</summary>
 
-1. Select **Browse**.
+    1. Select **Browse**.
 
-  :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/select-browse_1.png" alt-text="Select browse for storage":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/select-browse_1.png" alt-text="Select browse for storage":::
 
-  1. Select the location for project workspace.
+    1. Select the location for project workspace.
 
-  1. Select the **Select Folder**.
+    1. Select the **Select Folder**.
 
-  :::image type="content" source="../assets/images/teams-toolkit-v2/select-folder_1.png" alt-text="select-folder for storage":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/select-folder_1.png" alt-text="select-folder for storage":::
 
-  The folder you select is the location for your project workspace.
-
+    The folder you select is the location for your project workspace.
     </details>
 
 1. Enter a suitable name for your app, such as helloworld as the application name. Ensure that you use only alphanumeric characters. Press **Enter**.
