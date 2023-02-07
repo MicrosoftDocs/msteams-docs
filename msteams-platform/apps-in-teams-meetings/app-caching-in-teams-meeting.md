@@ -8,31 +8,31 @@ ms.localizationpriority: high
 ms.date: 04/07/2022
 ---
 
-# Enable app caching in Teams meeting for your tab app
+# Enable app caching for your tab app
 
 > [!NOTE]
 > App caching is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
 
-You can now configure your app to enable app caching to reduce the reload time of your app during a meeting. For your tab app, you can store your app data in the meeting by enabling app caching. The app reloads from the cache, which improves the app relaunch time within the meeting.
+You can configure your tab app (app) to enable app caching to reduce the reload time of your app during a meeting. You can store your app data in the meeting by enabling app caching. The app reloads from the cache, which improves the app relaunch time within the meeting. App caching is supported only for tabs loaded in the meeting side panel in Teams desktop client.
 
 Here's what you'll learn in this section:
 
-1. **App caching user experience**
-1. **App caching at runtime**
-1. **Enable app caching**
+1. App caching user experience
+1. App caching at runtime
+1. Enable app caching
 
 ## App caching user experience
 
-App caching improves subsequent launch time of the apps that are loaded in the meeting side panel.
+App caching improves subsequent launch time of the apps that are loaded in the meeting side panel. Consider the following use case for app caching:
 
-Consider this use case for app caching. Your app is enabled to be installed in a Teams meeting. The meeting organizer or participants can install and use your app.
+Your app is enabled to be installed in a Teams meeting. The meeting organizer or participants can install and use your app.
 
 :::row:::
     :::column span="":::
         :::image type="content" source="../assets/images/app-caching/without-app-caching.png" alt-text="The screenshot shows you the app in meeting without app caching enabled." lightbox="../assets/images/app-caching/without-app-caching.png":::
     :::column-end:::
     :::column span="":::
-        During the meeting, the participants may change the view from your app to another view on the meeting stage. When they want to open your app again, the app must go through the launch process again before it can be opened in the meeting window. This takes up time in a meeting as participants are kept waiting while the app reloads.
+        During the meeting, the participants may change the view from your app to another view on the meeting stage. When they want to open your app again, the app must go through the launch process again before it can be opened in the meeting window. This takes up time in the meeting as participants are kept waiting while the app reloads.
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -43,11 +43,6 @@ Consider this use case for app caching. Your app is enabled to be installed in a
         With **app caching**, you can now reduce the reload time significantly. An app cache is a data storage layer that stores your app data in the meeting side panel. When the participants move away from the app and come back to it, the app is loaded from the app cache rather than being relaunched. It enhances the meeting experience of the participants and saves time and resources.
     :::column-end:::
 :::row-end:::
-
-> [!NOTE]
->
-> * App caching is supported only for tabs loaded in the meeting side panel in Teams desktop client.
-> * Meeting side panel is the supported only for FrameContext for app caching in meetings.
 
 ## App caching at runtime
 
@@ -222,7 +217,9 @@ export default AppCacheTab;
 
 * Apps are cached on a per-window basis not on a per tab basis within the same window.
 
-* App caching isn't supported for the meeting stage or Task module contexts because these can be opened on top of the tab. The same webview can't be used to render the content in the tab and the Task module.
+* App caching isn't supported for the meeting stage or task module contexts because these can be opened on top of the tab. The same webview can't be used to render the content in the tab and the task module.
+
+* Meeting side panel is supported only for FrameContext for app caching in meetings.
 
 * Apps are expected to sleep when cached (use minimal compute or network resources and minimizes SDK requests). All the register handlers and the following SDK requests are allowed when the app is cached:
 
