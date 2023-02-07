@@ -63,36 +63,36 @@ microsoftTeams.app.getContext().then((context) => {
 
 {
    "app": {
-            "locale": "en-us",
-            "sessionId": "e0024c2a-067f-4f43-8423-6acac718b7a0",
-            "theme": "dark",
-            "parentMessageId": "",
-            "userClickTime": 1675776700117,
-            "host": {
-                "name": "Teams",
-                "clientType": "web",
-                "sessionId": "",
-                "ringId": "general"
-            }
-    },
-    "page": {
-            "frameContext": "meetingStage",
-            "subPageId": "",
-            "isMultiWindow": false,
-            "sourceOrigin": ""
-    },
-    "user": {
-            "id": "",
-            "licenseType": "Anonymous",
-            "loginHint": "",
-            "userPrincipalName": ""
-    },
-    "chat": {
-            "id": "19:meeting_ZmMyNWZjMzEtMWU0Mi00NDNmLWJhMmYtNjM4OTY0YmM0NWM2@thread.v2"
-    },
-    "meeting": {
-            "id": "MCMxOTptZWV0aW5nX1ptTXlOV1pqTXpFdE1XVTBNaTAwTkRObUxXSmhNbVl0TmpNNE9UWTBZbU0wTldNMkB0aHJlYWQudjIjMA=="
-    }
+    "locale": "en-us",
+    "sessionId": "e0024c2a-067f-4f43-8423-6acac718b7a0",
+    "theme": "dark",
+    "parentMessageId": "",
+    "userClickTime": 1675776700117,
+    "host": {
+        "name": "Teams",
+        "clientType": "web",
+        "sessionId": "",
+        "ringId": "general"
+    }
+  },
+  "page": {
+    "frameContext": "meetingStage",
+    "subPageId": "",
+    "isMultiWindow": false,
+    "sourceOrigin": ""
+  },
+  "user": {
+    "id": "",
+    "licenseType": "Anonymous",
+    "loginHint": "",
+    "userPrincipalName": ""
+ },
+ "chat": {
+      "id": "19:meeting_ZmMyNWZjMzEtMWU0Mi00NDNmLWJhMmYtNjM4OTY0YmM0NWM2@thread.v2"
+ },
+  "meeting": {
+      "id": "MCMxOTptZWV0aW5nX1ptTXlOV1pqTXpFdE1XVTBNaTAwTkRObUxXSmhNbVl0TmpNNE9UWTBZbU0wTldNMkB0aHJlYWQudjIjMA=="
+    }
 }
 
 ```
@@ -201,7 +201,7 @@ var conversationParameters = new ConversationParameters
 cancellationToken);
 ```
 
-```csharp
+```json
 { 
   "error": {
     "code": "BadArgument",
