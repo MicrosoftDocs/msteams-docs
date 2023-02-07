@@ -1,8 +1,8 @@
 ### YamlMime:Tutorial
-title: Build app with app caching
+title: App caching for your tab app in Teams meeting
 metadata:
-  title: Build app with app caching
-  description: With this learning module, you'll learn how to create an app with app caching experience.
+  title: App caching for your tab app in Teams meeting
+  description: With this learning module, you'll learn how to enable app caching for your tab app in Teams meeting.
   audience: Developer
   level: Beginner
   ms.date: 05/17/2022
