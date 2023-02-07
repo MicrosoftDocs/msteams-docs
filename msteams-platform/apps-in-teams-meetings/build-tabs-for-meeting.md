@@ -250,7 +250,7 @@ The following table provides the user types and lists the features that each use
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Enable app caching for your tab app in meeting](app-caching-in-teams-meeting.md)
+> [Enable app caching for your tab app](app-caching-for-your-tab-app.md)
 
 ## See also
 
