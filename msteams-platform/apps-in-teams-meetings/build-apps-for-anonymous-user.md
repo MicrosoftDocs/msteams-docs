@@ -44,12 +44,60 @@ To test your apps experience for anonymous users, select the URL in the meeting 
 
 Apps receive the following info for an anonymous user when they call the `getContext` API from the [shared app stage](~/apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md). You can recognize anonymous users by checking for a `userLicenseType` value of `Anonymous`.
 
-```csharp
-"userObjectId": "",
-"userLicenseType": "Anonymous",
-"loginHint": "",
-"userPrincipalName": ""
+# [JavaScript](#tab/javascript)
+
+```javascript
+
+microsoftTeams.app.getContext().then((context) => {
+    if (context.user.licenseType === "Anonymous")
+        {
+            // Your code
+        }
+});
+
 ```
+
+# [JSON](#tab/json)
+
+```json
+
+{
+   "app": {
+            "locale": "en-us",
+            "sessionId": "e0024c2a-067f-4f43-8423-6acac718b7a0",
+            "theme": "dark",
+            "parentMessageId": "",
+            "userClickTime": 1675776700117,
+            "host": {
+                "name": "Teams",
+                "clientType": "web",
+                "sessionId": "",
+                "ringId": "general"
+            }
+    },
+    "page": {
+            "frameContext": "meetingStage",
+            "subPageId": "",
+            "isMultiWindow": false,
+            "sourceOrigin": ""
+    },
+    "user": {
+            "id": "",
+            "licenseType": "Anonymous",
+            "loginHint": "",
+            "userPrincipalName": ""
+    },
+    "chat": {
+            "id": "19:meeting_ZmMyNWZjMzEtMWU0Mi00NDNmLWJhMmYtNjM4OTY0YmM0NWM2@thread.v2"
+    },
+    "meeting": {
+            "id": "MCMxOTptZWV0aW5nX1ptTXlOV1pqTXpFdE1XVTBNaTAwTkRObUxXSmhNbVl0TmpNNE9UWTBZbU0wTldNMkB0aHJlYWQudjIjMA=="
+    }
+}
+
+```
+
+---
 
 | **Property name** | **Description** |
 | --- | --- |
@@ -87,51 +135,37 @@ The [get members](/microsoftteams/platform/bots/how-to/get-teams-context#fetch-t
 
 ### ConversationUpdate activity MembersAdded and MembersRemoved
 
+`MembersAdded`
+
 ```csharp
-{ 
-  "membersAdded": [ 
-    { 
-      "id": "<GUID1>" 
-    } 
-  ], 
-  "type": "conversationUpdate", 
-  "timestamp": "<timestamp>", 
-  "id": "<event unique identifier>", 
-  "channelId": "msteams", 
-  "serviceUrl": "<serviceURL>", 
-  "from": { 
-    "id": "<GUID2>" 
-  }, 
-  "conversation": { 
-    "isGroup": true, 
-    "tenantId": "<tenant id>", 
-    "id": "<conversation id>" 
-  }, 
-  "recipient": { 
-    "id": "<bot id>", 
-    "name": "<bot name>" 
-  }, 
-  "channelData": { 
-    "tenant": { 
-      "id": "<tenant id>" 
-    }, 
-    "source": null, 
-    "meeting": { 
-      "id": "<meeting id>" 
-    } 
-  } 
-} 
+protected override async Task OnTeamsMembersAddedAsync(IList<TeamsChannelAccount> membersAdded, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+  {
+     foreach (var teamMember in membersAdded)
+     {
+         if (teamMember.UserRole == "anonymous" )
+          {
+             // Your  code
+          }
+     }
+  }
 ```
 
-| **Property name** | **Description** |
-| --- | --- |
-| `membersAdded.id` | Anonymous user ID |
-| `from.id` | Meeting organizer ID |
-| `conversation.tenantId` | Tenant ID of the meeting organizer. |
-| `conversation.id` | Conversation ID of the meeting chat. |
-| `tenant.id` | Tenant ID of the meeting organizer. |
+`MembersRemoved`
 
-Similar changes apply to the `membersRemoved` activity payload.
+```csharp
+protected override async Task OnTeamsMembersRemovedAsync(IList<TeamsChannelAccount> membersRemoved, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+   foreach (var member in membersRemoved)
+   {
+       if (member.AadObjectId == null)
+       {
+           // Anonymous  code
+       }
+       else
+       {
+           //User code
+       }
+   }
+```
 
 > [!NOTE]
 >
@@ -140,6 +174,32 @@ Similar changes apply to the `membersRemoved` activity payload.
 ### Create Conversation API
 
 Bots aren't allowed to initiate a one-on-one conversation with an anonymous user. If a bot calls the [Create Conversation API](/dotnet/api/microsoft.bot.builder.botframeworkadapter.createconversationasync) with the user ID of an anonymous user, it will receive a `400` Bad Request status code and the following error response:
+
+```csharp
+var conversationParameters = new ConversationParameters
+    {
+       IsGroup = false,
+       Bot = turnContext.Activity.Recipient,
+       Members = new ChannelAccount[] { teamMember },
+       TenantId = turnContext.Activity.Conversation.TenantId,
+    };
+    
+    await ((CloudAdapter)turnContext.Adapter).CreateConversationAsync(
+    conversationParameters,
+    async (t1, c1) =>
+    {
+       conversationReference = t1.Activity.GetConversationReference();
+       await ((CloudAdapter)turnContext.Adapter).ContinueConversationAsync(
+       _appId,
+       conversationReference,
+       async (t2, c2) =>
+       {
+         await t2.SendActivityAsync(proactiveMessage, c2);
+        },
+        cancellationToken);
+    },
+cancellationToken);
+```
 
 ```csharp
 { 
