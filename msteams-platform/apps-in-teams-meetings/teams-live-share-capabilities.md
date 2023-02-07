@@ -551,7 +551,6 @@ Here are a few examples in which `LiveState` can be used in your application:
 > [!NOTE]
 > Unlike `SharedMap`, the `state` and `data` values in `LiveState` will be reset after all the users disconnect from a session.
 
-
 Example:
 
 # [JavaScript](#tab/javascript)
@@ -651,7 +650,7 @@ Meetings in Teams include calls, all-hands meetings, and online classrooms. Meet
 > [!NOTE]
 > The `LivePresence` class doesn't support role verification. The `LivePresenceUser` object has a `getRoles` method, which returns the meeting roles for a given user.
 
-In the following example where only presenters and organizers can take control, `LiveState` is used to synchronize which user is the active presenter. 
+In the following example where only presenters and organizers can take control, `LiveState` is used to synchronize which user is the active presenter.
 
 # [JavaScript](#tab/javascript)
 
@@ -744,9 +743,6 @@ function onSelectPresentMode(documentId: string) {
 ---
 
 Listen to your customers to understand their scenarios before implementing role verification into your app, particularly for the **Organizer** role. There's no guarantee that a meeting organizer be present in the meeting. As a general rule of thumb, all users will be either **Organizer** or **Presenter** when collaborating within an organization. If a user is an **Attendee**, it's usually an intentional decision on behalf of a meeting organizer.
-
-> [!NOTE]
-> Currently, Live Share doesn't support channel meetings.
 
 ## Code samples
 
