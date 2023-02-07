@@ -201,7 +201,7 @@ The steps to create a new Teams app are similar for all types of apps except not
 
       :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-create-new-project1_1_2.png" alt-text="Create new project with code from get started":::
 
-    * If your open Visual Studio code without selecting a Teams Toolkit template, Select select **File > New > Project** in Visual Studio to create a Teams app.
+    * If your open Visual Studio code without selecting a Teams Toolkit template, select **File > New > Project** in Visual Studio to create a Teams app.
 
        :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-create-new-project2_1_2.png" alt-text="Create new project from file menu":::
 
@@ -232,7 +232,7 @@ The steps to create a new Teams app are similar for all types of apps except not
 1. Ensure **Tab** is selected, then select **Create**.
 
    > [!NOTE]
-   > If you want to add single sign-on capability to your Teams app, select the Configure with single sign-on checkbox. For more information on single sign-in in Teams app created using Teams Toolkit, see <add link: Add single sign-on to your Teams apps - Teams | Microsoft Learn >.
+   > If you want to add single sign-on capability to your Teams app, select the Configure with single sign-on checkbox. For more information on single sign-in in Teams app created using Teams Toolkit, see [Add single sign-on to your Teams apps](/microsoftteams/platform/toolkit/add-single-sign-on?pivots=visual-studio).
 
    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-ms-teams-app-type_3_1.png" alt-text="Select the teams app type":::
 
