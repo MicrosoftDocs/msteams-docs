@@ -42,7 +42,7 @@ To test your apps experience for anonymous users, select the URL in the meeting 
 
 ## In-Meeting getContext from Teams client library
 
-Apps receive the following info for an anonymous user when they call the `getContext` API from the shared app stage. You can recognize anonymous users by checking for a `userLicenseType` value of `Anonymous`.
+Apps receive the following info for an anonymous user when they call the `getContext` API from the [shared app stage](~/apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md). You can recognize anonymous users by checking for a `userLicenseType` value of `Anonymous`.
 
 ```csharp
 "userObjectId": "",
@@ -70,13 +70,16 @@ The [get members](/microsoftteams/platform/bots/how-to/get-teams-context#fetch-t
 
 ```json
 { 
+  "id": "<GUID1>", 
   "name": "<AnonTest (Guest)>",  
-  "userRole": "Anonymous" 
-} 
+  "tenantId": "<GUID2>", 
+  "userRole": "anonymous" 
+}
 ```
 
 | **Property name** | **Description** |
 | --- | --- |
+| `id` | Unique generated value for the anonymous user. |
 | `name` | Name provided by the anonymous user when joining the meeting. |
 | `userRole` | `Anonymous` represents anonymous user. |
 | `tenantId` | Tenant ID of the meeting organizer. |
@@ -136,7 +139,7 @@ Similar changes apply to the `membersRemoved` activity payload.
 
 ### Create Conversation API
 
-Bots aren't allowed to initiate a one-on-one conversation with an anonymous user. If a bot calls the Create Conversation API with the user ID of an anonymous user, it will receive a `400` Bad Request status code and the following error response:
+Bots aren't allowed to initiate a one-on-one conversation with an anonymous user. If a bot calls the [Create Conversation API](/dotnet/api/microsoft.bot.builder.botframeworkadapter.createconversationasync) with the user ID of an anonymous user, it will receive a `400` Bad Request status code and the following error response:
 
 ```csharp
 { 
