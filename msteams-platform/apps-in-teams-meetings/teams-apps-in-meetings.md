@@ -70,12 +70,7 @@ Meetings enable collaboration, partnership, informed communication, and shared f
 :::row-end:::
 -->
 
-You must be familiar with the following product concepts to create custom meeting experiences with apps in Microsoft Teams.
-
-> [!IMPORTANT]
->
-> * Currently, third-party and meeting line-of-business apps are available in Government Community Cloud (GCC) but aren't available for GCC-High and Department of Defense (DOD) tenants.
-> * Third-party apps are turned off by default for GCC. To turn on third-party apps for GCC, see [manage app permission policies](/microsoftteams/teams-app-permission-policies) and [manage apps](/microsoftteams/manage-apps).
+Currently, third-party and line-of-business apps built for meetings and calls are available in Government Community Cloud (GCC) but aren't available for GCC-High and Department of Defense (DOD) tenants. You must be familiar with the concepts in this article to create custom meeting experiences with apps in Microsoft Teams.
 
 ## Supported meeting types in Teams
 
