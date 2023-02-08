@@ -21,7 +21,7 @@ The document guides you on how to add link unfurling to your app manifest using 
 
 The following image is an example of link unfurling using the Azure DevOps message extension. When the Azure DevOps link is pasted into the Teams compose message area, the link unfurls into a card with the work item details:
 
-:::image type="content" source="../../assets/images/messaging-extension/messagingextensions_linkunfurl.png" alt-text="Screenshot of link urfurling example for Azure Dev Ops links pasted in teams compose message area.":::
+:::image type="content" source="../../assets/images/messaging-extension/messagingextensions_linkunfurl.png" alt-text="Screenshot of link unfurling example for Azure Dev Ops links pasted in teams compose message area.":::
 
 See the following video to learn more about link unfurling:
 <br>
