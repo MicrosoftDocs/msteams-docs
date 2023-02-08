@@ -38,7 +38,6 @@ To create a new environment:
 
 1. Select the **Teams Toolkit** from the Visual Studio Code activity bar.
 2. Select **+ Create new environment** under **ENVIRONMENT**.
-3. After selecting the + symbol. The toolkit must be prompting to enter the name for the environment, at least
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/create_new _env_1.PNG" alt-text="Create new environment":::
 
@@ -177,7 +176,7 @@ Follow these steps customizing the environment description:
 8. Run provision command against **dev** and **staging** environment to update the app name in remote environments.
 
    > [!NOTE]
-   > For more information on running provision command with Teams Toolkit, see
+   > For more information on running provision command with Teams Toolkit, see [how to provision using Teams Toolkit in Microsoft Visual Studio Code](provision.md#provision-using-teams-toolkit-in-microsoft-visual-studio-code).
 
 </details>
 
@@ -211,7 +210,7 @@ As the Teams app manifest template is shared across all environments, you can up
 3. Run the provision command against all environment to update the app name in remote environments.
 
    > [!NOTE]
-   > For more information on running provision command with Teams Toolkit, see
+   > For more information on running provision command with Teams Toolkit, see [how to provision using Teams Toolkit in Microsoft Visual Studio Code](provision.md#provision-using-teams-toolkit-in-microsoft-visual-studio-code).
 
 </details>
 
