@@ -70,7 +70,7 @@ items:
     1. Select **Manage your apps**.
     1. Select **Upload an app**.
 
-       :::image type="content" source="../../assets/images/sbs-graphactivity-feedbroadcast/upload-a-custom-app.png" alt-text="Screenshot shows the selection of Upload a custom app highlighted in red.":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/upload-a-custom-app.png" alt-text="Screenshot shows the selection of Upload a custom app highlighted in red.":::
 
     1. Look for the option to **Upload a customised app**. If you see the option, sideloading apps is enabled.
 
@@ -436,8 +436,8 @@ items:
     
     1. Select **Upload an app to your org's app catalog**. 
 
-       :::image type="content" source="../../assets/images/sbs-graphactivity-feedbroadcast/submit-an-app-to-your-org.PNG" alt-text="Screenshot shows the selection of Submit an app to your org highlighted in red.":::
-       
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/submit-an-app-to-your-org.PNG" alt-text="Screenshot shows the selection of Submit an app to your org highlighted in red.":::
+
     1. Select **Open** to upload the .zip file that you created in the **AppPackage** folder.
 
        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/open-a-custom-app.png" alt-text="Open a custom app" border="true":::
