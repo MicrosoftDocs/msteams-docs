@@ -26,7 +26,7 @@ Teams platform features that are available to all app developers.
 
 **2023 February**
 
-***February 08, 2022***: [Link unfurling for mobile](messaging-extensions/how-to/link-unfurling.md)
+***February 08, 2022***: [Link unfurling for mobile](messaging-extensions/how-to/link-unfurling.md).
 
 :::column-end:::
 :::row-end:::
@@ -41,7 +41,6 @@ Teams platform features that are available to all app developers.
 </details>
 </br>
 
-<br>
 <details>
 <summary><b>2022</b></summary>
 
