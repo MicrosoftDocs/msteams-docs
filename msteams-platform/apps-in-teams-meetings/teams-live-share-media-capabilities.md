@@ -40,7 +40,7 @@ The Live Share SDK has two primary classes related to media synchronization:
 
 | Classes                                                                                        | Description                                                                                                                                       |
 | ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [LiveMediaSession](/javascript/api/@microsoft/live-share-media/livemediasession)     | Custom live object designed to coordinate media transport controls and playback state in independent media streams.                          |
+| `LiveMediaSession` | Custom live object designed to coordinate media transport controls and playback state in independent media streams.                          |
 | [MediaPlayerSynchronizer](/javascript/api/@microsoft/live-share-media/mediaplayersynchronizer) | Synchronizes any object that implements the `IMediaPlayer` interface -- including HTML5 `<video>` and `<audio>` -- using `LiveMediaSession`. |
 
 Example:
@@ -58,9 +58,11 @@ Example:
 ```javascript
 import { LiveShareClient, UserMeetingRole } from "@microsoft/live-share";
 import { LiveMediaSession } from "@microsoft/live-share-media";
+import { LiveShareHost } from "@microsoft/teams-js";
 
 // Setup the Fluid container
-const liveShare = new LiveShareClient();
+const host = LiveShareHost.create();
+const liveShare = new LiveShareClient(host);
 const schema = {
   initialObjects: { mediaSession: LiveMediaSession },
 };
@@ -81,10 +83,12 @@ await mediaSession.initialize(allowedRoles);
 ```TypeScript
 import { LiveShareClient, UserMeetingRole } from "@microsoft/live-share";
 import { LiveMediaSession, IMediaPlayer, MediaPlayerSynchronizer } from "@microsoft/live-share-media";
+import { LiveShareHost } from "@microsoft/teams-js";
 import { ContainerSchema } from "fluid-framework";
 
 // Join the Fluid container
-const liveShare = new LiveShareClient();
+const host = LiveShareHost.create();
+const liveShare = new LiveShareClient(host);
 const schema: ContainerSchema = {
   initialObjects: { mediaSession: LiveMediaSession },
 };
@@ -149,7 +153,7 @@ document.getElementById("change-track-button").onclick = () => {
 
 :::image type="content" source="../assets/images/teams-live-share/live-share-media-out-of-sync.png" alt-text="Screenshot that shows a suspension sync to the presenter.":::
 
-If you want to temporarily suspend synchronization for the `LiveMediaSession` object, you can use suspensions. A [MediaSessionCoordinatorSuspension](/javascript/api/@microsoft/live-share-media/livemediasessioncoordinatorsuspension) object is local by default, which can be helpful in cases where a user might want to catch up on something they missed, take a break, and so on. If the user ends the suspension, synchronization resumes automatically.
+If you want to temporarily suspend synchronization for the `LiveMediaSession` object, you can use suspensions. A `MediaSessionCoordinatorSuspension` object is local by default, which can be helpful in cases where a user might want to catch up on something they missed, take a break, and so on. If the user ends the suspension, synchronization resumes automatically.
 
 # [JavaScript](#tab/javascript)
 
@@ -231,7 +235,7 @@ import { meeting } from "@microsoft/teams-js";
 
 // ... set up MediaPlayerSynchronizer
 
-// Register speaking state change handler through Teams Client SDK
+// Register speaking state change handler through Microsoft Teams JavaScript client library (TeamsJS)
 let volumeTimer;
 meeting.registerSpeakingStateChangeHandler((speakingState) => {
   if (speakingState.isSpeakingDetected && !volumeTimer) {
@@ -258,7 +262,7 @@ import { meeting } from "@microsoft/teams-js";
 
 // ... set up MediaPlayerSynchronizer
 
-// Register speaking state change handler through Teams Client SDK
+// Register speaking state change handler through TeamsJS library
 let volumeTimer: NodeJS.Timeout | undefined;
 meeting.registerSpeakingStateChangeHandler((speakingState: meeting.ISpeakingState) => {
   if (speakingState.isSpeakingDetected && !volumeTimer) {
@@ -320,7 +324,9 @@ Additionally, add the following [RSC](/microsoftteams/platform/graph-api/rsc/res
 
 ## See also
 
+- [Apps for Teams meetings](teams-apps-in-meetings.md)
 - [Live Share SDK FAQ](teams-live-share-faq.md)
 - [Live Share SDK reference docs](/javascript/api/@microsoft/live-share/)
 - [Live Share Media SDK reference docs](/javascript/api/@microsoft/live-share-media/)
-- [Teams apps in meetings](teams-apps-in-meetings.md)
+- [Use Fluid with Teams](../tabs/how-to/using-fluid-msteam.md)
+- [App manifest schema for Teams](../resources/schema/manifest-schema.md)

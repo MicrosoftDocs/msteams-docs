@@ -25,7 +25,7 @@ Before creating the action command, you must decide the following factors:
 See the following video to learn how to define message extension action commands:
 <br>
 
-> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OANG>]
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OANG]
 <br>
 
 ## Select action command invoke locations
@@ -224,7 +224,7 @@ This section isn't an example of the complete manifest. For the complete app man
 
 | Sample Name           | Description | .NET    | Node.js   |
 |:---------------------|:--------------|:---------|:--------|
-|Teams message extension action| Describes how to define action commands, create task module, and  respond to task module submit action. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) |
+|Teams message extension action| Describes how to define action commands, create task module, and  respond to task module submit action. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/nodejs) |
 
 ## Step-by-step guide
 

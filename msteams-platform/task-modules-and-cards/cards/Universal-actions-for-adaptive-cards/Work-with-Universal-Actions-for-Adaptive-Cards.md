@@ -30,12 +30,12 @@ Universal Actions for Adaptive Cards provide a way to implement Adaptive Card ba
 
 ## Schema for Universal Actions for Adaptive Cards
 
-Universal Actions for Adaptive Cards are introduced in the Adaptive Cards schema version 1.4. To use Adaptive Card effectively, the `version` property of your Adaptive Card must be set to 1.4.
+Universal Actions for Adaptive Cards are introduced in the Adaptive Cards schema version 1.5. To use Adaptive Card effectively, the `version` property of your Adaptive Card must be set to 1.5.
 
 > [!NOTE]
-> Setting the `version` property to 1.4 makes your Adaptive Card incompatible with older clients of the platforms or applications, such as Outlook and Teams, as they do not support the Universal Actions for Adaptive Cards.
+> Setting the `version` property to 1.5 makes your Adaptive Card incompatible with older clients of the platforms or applications, such as Outlook and Teams, as they do not support the Universal Actions for Adaptive Cards.
 
-If you set the card version to less than 1.4 and use either or both, `refresh` property and `Action.Execute`, the following happens:
+If you set the card version to less than 1.5 and use either or both, `refresh` property and `Action.Execute`, the following happens:
 
 | Client | Behavior |
 | :-- | :-- |
@@ -108,15 +108,16 @@ For more information, see [backward compatibility on Teams](/adaptive-cards/auth
 
 ## Code samples
 
-|Sample name | Description | .NETCore | Node.js |
+|Sample name | Description | .NET | Node.js |
 |----------------|-----------------|--------------|--------------|
 | Teams catering bot | Create a bot that accepts food order using Adaptive Cards. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-catering/csharp)| NA |
 | Sequential Workflows Adaptive Cards | Demonstrate how to implement Sequential Workflows, User Specific Views, and up to date Adaptive Cards in bots. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) |
 
 ## See also
 
+* [Cards and task modules](../../cards-and-task-modules.md)
 * [Adaptive Card actions in Teams](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)
-* [How bots work](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true)
+* [Basics of the Microsoft Bot Framework](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true)
 * [Sequential Workflows](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/sequential-workflows.md)
 * [Up to date cards](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/up-to-date-views.md)
 * [Form completion feedback](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)

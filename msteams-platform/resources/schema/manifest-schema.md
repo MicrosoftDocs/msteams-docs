@@ -7,7 +7,7 @@ ms.localizationpriority: high
 
 # App manifest schema for Teams
 
-The Microsoft Teams app manifest describes how your app integrates into the Microsoft Teams product. Your app manifest must conform to the schema hosted at [`https://developer.microsoft.com/json-schemas/teams/v1.14/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.14/MicrosoftTeams.schema.json). Previous versions 1.0, 1.1,...,1.13, and the current version is 1.14 are each  supported (using "v1.x" in the URL).
+The Microsoft Teams app manifest describes how your app integrates into the Microsoft Teams product. Your app manifest must conform to the schema hosted at [`https://developer.microsoft.com/json-schemas/teams/v1.15/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.15/MicrosoftTeams.schema.json). Previous versions 1.0, 1.1,...,1.14, and the current version is 1.15 are each supported (using "v1.x" in the URL).
 For more information on the changes made in each version, see [manifest change log](https://github.com/OfficeDev/microsoft-teams-app-schema/releases).
 
 The following table lists TeamsJS version and app manifest versions as per different app scenarios:
@@ -20,8 +20,8 @@ The following schema sample shows all extensibility options:
 
 ```json
 {
-    "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.14/MicrosoftTeams.schema.json",
-    "manifestVersion": "1.14",
+    "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.15/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.15",
     "version": "1.0.0",
     "id": "%MICROSOFT-APP-ID%",
     "localizationInfo": {
@@ -227,7 +227,8 @@ The following schema sample shows all extensibility options:
                         "domains": [
                             "mysite.someplace.com",
                             "othersite.someplace.com"
-                        ]
+                        ],
+                        "supportsAnonymizedPayloads": false
                     }
                 }
             ]
@@ -340,7 +341,7 @@ The https:// URL referencing the JSON Schema for the manifest.
 
 **Required**—string
 
-The version of the manifest schema that this manifest is using. Use `1.13` to enable Teams app support in Outlook and Office; use `1.12` (or earlier) for Teams-only apps.
+The version of the manifest schema that this manifest is using. Use `1.13` to enable Teams app support in Outlook and Microsoft 365 app; use `1.12` (or earlier) for Teams-only apps.
 
 ## version
 
@@ -357,6 +358,8 @@ This version string must follow the [semver](http://semver.org/) standard (MAJOR
 **Required**—Microsoft app ID
 
 The ID is a unique Microsoft-generated identifier for the app. You have an ID if your bot is registered through the Microsoft Bot Framework. You have an ID if your tab's web app already signs in with Microsoft. You must enter the ID here. Otherwise, you must generate a new ID at the [Microsoft Application Registration Portal](https://aka.ms/appregistrations). Use the same ID if you add a bot.
+
+The ID stored in Teams Admin Center is the **External App ID** and it is visible as **ExternalID** on the traces.
 
 > [!NOTE]
 > If you are submitting an update to your existing app in AppSource, the ID in your manifest must not be modified.
@@ -433,7 +436,7 @@ Icons used within the Teams app. The icon files must be included as part of the 
 
 **Required**—HTML Hex color code
 
-A color to use and as a background for your outline icons.
+A color to use and as a background for your color icons.
 
 The value must be a valid HTML color code starting with '#', for example `#4464ee`.
 
@@ -512,7 +515,7 @@ A list of commands that your bot can recommend to users. The object is an array 
 
 **Optional**—array
 
-The `connectors` block defines an Office 365 Connector for the app.
+The `connectors` block defines a connector card for Microsoft 365 Groups for the app.
 
 The object is an array (maximum of one element) with all elements of type `object`. This block is required only for solutions that provide a Connector.
 
@@ -541,6 +544,7 @@ The item is an array (maximum of one element) with all elements of type `object`
 |`messageHandlers`|array of Objects|5||A list of handlers that allow apps to be invoked when certain conditions are met.|
 |`messageHandlers.type`|string|||The type of message handler. Must be `"link"`.|
 |`messageHandlers.value.domains`|array of Strings|||Array of domains that the link message handler can register for.|
+|`messageHandlers.value.supportsAnonymizedPayloads`|Boolean||| A boolean value that indicates whether the app's link message handler supports anonymous invoke flow. Default is false.|
 
 ### composeExtensions.commands
 
@@ -609,7 +613,14 @@ Do **not** include the domains of identity providers you want to support in your
 Teams apps that require their own SharePoint URLs to function well, includes "{teamsitedomain}" in their valid domain list.
 
 > [!IMPORTANT]
-> Do not add domains that are outside your control, either directly or through wildcards. For example, `yourapp.onmicrosoft.com` is valid, however, `*.onmicrosoft.com` is not valid.
+> Don't add domains that are outside your control, either directly or through wildcards (*). For example, ***.yoursite.com** is valid, but ***.onmicrosoft.com** isn't valid as it isn't under your control.
+>
+> When using wildcards, the following rules apply:
+>
+> * If a subdomain segment includes a wildcard, it must be the only character in the segment.
+> * Any segment preceding a wildcard segment must also be a wildcard segment.
+>
+> For example, *\*.\*.domain.com* is valid, but *foo.\*.myteam.domain.com* is not valid.
 
 The object is an array with all elements of the type `string`.
 
@@ -640,7 +651,9 @@ Specify the app's Graph connector configuration. If this is present, then [webAp
 
 Indicates if or not to show the loading indicator when an app or tab is loading. Default is **false**.
 >[!NOTE]
->If you select `showLoadingIndicator` as true in your app manifest, to load the page correctly, modify the content pages of your tabs and task modules as described in [Show a native loading indicator](../../tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator) document.
+>
+> * If you select `showLoadingIndicator` as true in your app manifest, to load the page correctly, modify the content pages of your tabs and task modules as described in [Show a native loading indicator](../../tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator) document.
+> * If you don't modify the content pages of your tab, the tab app doesn't load and shows the error `There was a problem reaching this app`.
 
 ## isFullScreen
 
@@ -876,6 +889,7 @@ Delegated permissions allow the app to access data on behalf of the signed-in us
     |`OnlineMeetingParticipant.ToggleIncomingAudio.Chat`|Allows the app to toggle incoming audio for participants in meetings associated with this chat, on behalf of the signed-in user.|
     |`LiveShareSession.ReadWrite.Chat`|Allows the app to create and synchronize Live Share sessions for meetings associated with this chat, and access related information about the meeting's roster, such as member's meeting role, on behalf of the signed-in user.|
    |`OnlineMeetingIncomingAudio.Detect.Chat`|Allows the app to detect changes in the status of incoming audio in meetings associated with this chat, on behalf of the signed-in user.|
+   |`OnlineMeetingNotification.Send.Chat`|Allows the app to send notifications for the meetings associated with the chat.|
 
 * **Resource-specific delegated permissions for users**
 

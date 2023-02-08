@@ -83,7 +83,7 @@ To enable the Live Share SDK for your meeting extension, you must first add the 
 
 Follow the steps to join a session that's associated with a user's meeting:
 
-1. Initialize [LiveShareClient](/javascript/api/@microsoft/live-share/liveshareclient).
+1. Initialize `LiveShareClient`.
 2. Define the data structures you want to synchronize. For example, `SharedMap`.
 3. Join the container.
 
@@ -93,10 +93,12 @@ Example:
 
 ```javascript
 import { LiveShareClient } from "@microsoft/live-share";
+import { LiveShareHost } from "@microsoft/teams-js";
 import { SharedMap } from "fluid-framework";
 
 // Join the Fluid container
-const liveShare = new LiveShareClient();
+const host = LiveShareHost.create();
+const liveShare = new LiveShareClient(host);
 const schema = {
   initialObjects: { exampleMap: SharedMap },
 };
@@ -109,10 +111,12 @@ const { container } = await liveShare.joinContainer(schema);
 
 ```TypeScript
 import { LiveShareClient } from "@microsoft/live-share";
+import { LiveShareHost } from "@microsoft/teams-js";
 import { ContainerSchema, SharedMap } from "fluid-framework";
 
 // Join the Fluid container
-const liveShare = new LiveShareClient();
+const host = LiveShareHost.create();
+const liveShare = new LiveShareClient(host);
 const schema: ContainerSchema = {
   initialObjects: { exampleMap: SharedMap },
 };
@@ -144,10 +148,12 @@ Let's see how `SharedMap` works. In this example, we've used `SharedMap` to buil
 
 ```javascript
 import { LiveShareClient } from "@microsoft/live-share";
+import { LiveShareHost } from "@microsoft/teams-js";
 import { SharedMap } from "fluid-framework";
 
 // Join the Fluid container
-const liveShare = new LiveShareClient();
+const host = LiveShareHost.create();
+const liveShare = new LiveShareClient(host);
 const schema = {
   initialObjects: { playlistMap: SharedMap },
 };
@@ -170,10 +176,12 @@ function onClickAddToPlaylist(video) {
 
 ```TypeScript
 import { LiveShareClient } from "@microsoft/live-share";
+import { LiveShareHost } from "@microsoft/teams-js";
 import { ContainerSchema, SharedMap, IValueChanged } from "fluid-framework";
 
 // Join the Fluid container
-const liveShare = new LiveShareClient();
+const host = LiveShareHost.create();
+const liveShare = new LiveShareClient(host);
 const schema: ContainerSchema = {
   initialObjects: { exampleMap: SharedMap },
 };
@@ -209,10 +217,10 @@ The Live Share SDK includes a set of new Live Share `SharedObject` classes, whic
 
 | Live Object                                                        | Description                                                                                                                             |
 | ------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------- |
-| [LivePresence](/javascript/api/@microsoft/live-share/livepresence) | See which users are online, set custom properties for each user, and broadcast changes to their presence.                               |
-| [LiveEvent](/javascript/api/@microsoft/live-share/liveevent)       | Broadcast individual events with any custom data attributes in the payload.                                                             |
-| [LiveState](/javascript/api/@microsoft/live-share/livestate)       | Similar to SharedMap, a distributed key-value store that allows for restricted state changes based on role, for example, the presenter. |
-| [LiveTimer](/javascript/api/@microsoft/live-share/livetimer)       | Synchronize a countdown timer for a given interval.                                                                                     |
+| `LivePresence` | See which users are online, set custom properties for each user, and broadcast changes to their presence.                               |
+| `LiveEvent` | Broadcast individual events with any custom data attributes in the payload.                                                             |
+| `LiveState` | Similar to SharedMap, a distributed key-value store that allows for restricted state changes based on role, for example, the presenter. |
+| `LiveTimer` | Synchronize a countdown timer for a given interval.                                                                                     |
 
 ### LivePresence example
 
@@ -233,9 +241,11 @@ import {
   LivePresence,
   PresenceState,
 } from "@microsoft/live-share";
+import { LiveShareHost } from "@microsoft/teams-js";
 
 // Join the Fluid container
-const liveShare = new LiveShareClient();
+const host = LiveShareHost.create();
+const liveShare = new LiveShareClient(host);
 const schema = {
   initialObjects: {
     presence: LivePresence,
@@ -272,6 +282,7 @@ import {
   PresenceState,
   LivePresenceUser,
 } from "@microsoft/live-share";
+import { LiveShareHost } from "@microsoft/teams-js";
 
 // Declare interface for type of custom data for user
 interface ICustomUserData {
@@ -280,7 +291,8 @@ interface ICustomUserData {
 }
 
 // Join the Fluid container
-const liveShare = new LiveShareClient();
+const host = LiveShareHost.create();
+const liveShare = new LiveShareClient(host);
 const schema = {
   initialObjects: {
     presence: LivePresence<ICustomUserData>,
@@ -320,9 +332,11 @@ function onUserDidLogIn(userName: string, profilePicture: string) {
 
 ```javascript
 import { LiveEvent, LiveShareClient } from "@microsoft/live-share";
+import { LiveShareHost } from "@microsoft/teams-js";
 
 // Join the Fluid container
-const liveShare = new LiveShareClient();
+const host = LiveShareHost.create();
+const liveShare = new LiveShareClient(host);
 const schema = {
   initialObjects: { notifications: LiveEvent },
 };
@@ -353,6 +367,7 @@ notifications.sendEvent({
 
 ```TypeScript
 import { LiveShareClient, LiveEvent, ILiveEvent } from "@microsoft/live-share";
+import { LiveShareHost } from "@microsoft/teams-js";
 
 // Declare interface for type of custom data for user
 interface ICustomEvent extends ILiveEvent {
@@ -361,7 +376,8 @@ interface ICustomEvent extends ILiveEvent {
 }
 
 // Join the Fluid container
-const liveShare = new LiveShareClient();
+const host = LiveShareHost.create();
+const liveShare = new LiveShareClient(host);
 const schema = {
   initialObjects: {
     notifications: LiveEvent<ICustomEvent>,
@@ -402,9 +418,11 @@ notifications.sendEvent({
 
 ```javascript
 import { LiveShareClient, LiveTimer } from "@microsoft/live-share";
+import { LiveShareHost } from "@microsoft/teams-js";
 
 // Join the Fluid container
-const liveShare = new LiveShareClient();
+const host = LiveShareHost.create();
+const liveShare = new LiveShareClient(host);
 const schema = {
   initialObjects: { timer: LiveTimer },
 };
@@ -459,9 +477,11 @@ import {
   LiveTimerEvents,
   ITimerConfig,
 } from "@microsoft/live-share";
+import { LiveShareHost } from "@microsoft/teams-js";
 
 // Join the Fluid container
-const liveShare = new LiveShareClient();
+const host = LiveShareHost.create();
+const liveShare = new LiveShareClient(host);
 const schema = {
   initialObjects: { timer: LiveTimer },
 };
@@ -522,9 +542,11 @@ Example using `LiveState`:
 
 ```javascript
 import { LiveShareClient, LiveState, UserMeetingRole } from "@microsoft/live-share";
+import { LiveShareHost } from "@microsoft/teams-js";
 
 // Join the Fluid container
-const liveShare = new LiveShareClient();
+const host = LiveShareHost.create();
+const liveShare = new LiveShareClient(host);
 const schema = {
   initialObjects: { appState: LiveState },
 };
@@ -558,6 +580,7 @@ function onSelectPresentMode(documentId) {
 
 ```TypeScript
 import { LiveShareClient, LiveState, UserMeetingRole } from "@microsoft/live-share";
+import { LiveShareHost } from "@microsoft/teams-js";
 
 // Declare interface for type of custom data for user
 interface ICustomState {
@@ -566,7 +589,8 @@ interface ICustomState {
 }
 
 // Join the Fluid container
-const liveShare = new LiveShareClient();
+const host = LiveShareHost.create();
+const liveShare = new LiveShareClient(host);
 const schema = {
   initialObjects: {
     appState: LiveState<ICustomState>,
@@ -619,8 +643,12 @@ Listen to your customers to understand their scenarios before implementing role 
 
 ## See also
 
+- [Apps for Teams meetings](teams-apps-in-meetings.md)
 - [GitHub repository](https://github.com/microsoft/live-share-sdk)
+- [Resource-specific consent](../graph-api/rsc/resource-specific-consent.md)
 - [Live Share SDK reference docs](/javascript/api/@microsoft/live-share/)
 - [Live Share Media SDK reference docs](/javascript/api/@microsoft/live-share-media/)
 - [Live Share FAQ](teams-live-share-faq.md)
-- [Teams apps in meetings](teams-apps-in-meetings.md)
+- [Use Fluid with Teams](../tabs/how-to/using-fluid-msteam.md)
+- [Build Agile Poker using Live Share SDK](../sbs-teams-live-share.yml)
+- [Dice Roller code tutorial](teams-live-share-tutorial.md)

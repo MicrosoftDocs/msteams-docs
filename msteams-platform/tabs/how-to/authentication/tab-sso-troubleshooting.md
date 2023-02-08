@@ -37,7 +37,7 @@ For more information, see [Graph explorer](https://developer.microsoft.com/graph
 <details>
 <summary>1. Error: consent missing.</summary>
 <br>
-When Azure AD receives a request for accessing a Microsoft Graph resource, it checks if the user (or tenant administrator) have given consent for this resource. If there's no record of consent from the user or administrator, Azure AD sends an error message to your web service.
+When Azure AD receives a request for accessing a Microsoft Graph resource, it checks if the app user or tenant administrator has given consent for this resource. If there's no record of consent from the user or administrator, Azure AD sends an error message to your web service.
 
 Your code must tell the client (for example, in the body of a 403 Forbidden response) how to handle the error:
 
@@ -57,7 +57,7 @@ To handle this error, your server-side code should send a 403 Forbidden resp
 <details>
 <summary>3. Error: Invalid Audience in the access token for Microsoft Graph.</summary>
 <br>
-The server-side code should send a 403 Forbidden response to the client to show a message to the user. It is recommended that it should also log the error to the console, or record it in a log.
+The server-side code should send a 403 Forbidden response to the client to show a message to the user. It's recommended that it should also log the error to the console, or record it in a log.
 </details>
 <br>
 <details>
@@ -65,8 +65,8 @@ The server-side code should send a 403 Forbidden response to the client to s
 <br>
 You can get this error in one of the two scenarios:
 
-1. The custom domain is not added to Azure AD. To add custom domain to Azure AD and register it, follow the [add a custom domain name to Azure AD](/azure/active-directory/fundamentals/add-custom-domain) procedure, and then follow the steps to [Configure scope for access token](tab-sso-register-aad.md#configure-scope-for-access-token) again.
-1. You are not signed in with Administrator credentials in the Microsoft 365 tenancy. Sign-in to Microsoft 365 as an administrator.
+1. The custom domain isn't added to Azure AD. To add custom domain to Azure AD and register it, follow the [add a custom domain name to Azure AD](/azure/active-directory/fundamentals/add-custom-domain) procedure. Then follow the steps to [Configure scope for access token](tab-sso-register-aad.md#configure-scope-for-access-token) again.
+1. You aren't signed in with Administrator credentials in the Microsoft 365 tenancy. Sign-in to Microsoft 365 as an administrator.
 
 </details>
 <br>
@@ -106,7 +106,7 @@ Check that the following values match between Azure AD, client-side code, and Te
 
 - **Application ID URI**: The app ID URI in the code and in Teams app manifest file should match the **Application ID URI** in Azure AD.
 
-- **App permissions**: Check if the permissions you defined in the scope are as per your app requirement. If so, check if they were granted to the user in the access token.
+- **App permissions**: Check if the permissions you defined in the scope are as per your app requirement. If so, check if they had been granted to the user in the access token.
 
 - **Admin consent**: If any scope requires admin consent, check if the consent was granted for the particular scope to the user.
 
@@ -114,10 +114,80 @@ In addition, inspect the access token that was sent to the tab app to verify if 
 
 - **Audience (aud)**: Check if the app ID in the token is correct as given in Azure AD.
 - **Tenant Id(tid)**: Check if the tenant mentioned in the token is correct.
-- **User identity (preferred_username)**: Check if the user identity matches the username in the request for access token for the scope that the current user wants to access.
+- **User identity (preferred_username)**: Check if the user identity matches the username in the request for access token, for the scope that the current user wants to access.
 - **Scopes (scp)**: Check if the scope for which the access token is requested is correct, and as defined in Azure AD.
 - **Azure AD version 1.0 or 2.0 (ver)**: Check if Azure AD version is correct.
 
 You can use [JWT](https://jwt.ms) for inspecting the token.
 
 </details>
+
+## Bot SSO token error
+
+<br>
+<details>
+<summary>Token exchange failure.</summary>
+<br>
+If there's a token exchange failure, use the following code:
+
+```json
+{​​ 
+    "status": "<response code>", 
+    "body": 
+    {​​ 
+        "id":"<unique Id>", 
+        "connectionName": "<connection Name on the bot (from the OAuth card)>", 
+        "failureDetail": "<failure reason if status code is not 200, null otherwise>" 
+    }​​ 
+}​​
+```
+
+To understand the bot behavior when the token exchange fails to trigger a consent prompt, see the following steps:
+
+>[!NOTE]
+> No user action is required to be taken as the bot takes the actions when the token exchange fails.
+
+1. The client starts a conversation with the bot triggering an OAuth scenario.
+2. The bot sends back an OAuth card to the client.
+3. The client intercepts the OAuth card before displaying it to the app user. It checks if it contains a `TokenExchangeResource` property.
+4. If the property exists, the client sends a `TokenExchangeInvokeRequest` to the bot. The client must have an exchangeable token for the user. This token must be an Azure AD v2 token whose audience must be the same as `TokenExchangeResource.Uri` property.
+1. The client sends an invoke activity to the bot with the following code:
+
+    ```json
+    {
+        "type": "Invoke",
+        "name": "signin/tokenExchange",
+        "value": 
+        {
+            "id": "<any unique Id>",
+            "connectionName": "<connection Name on the skill bot (from the OAuth card)>",
+            "token": "<exchangeable token>"
+        }
+    }
+    ```
+
+5. The bot processes the `TokenExchangeInvokeRequest` and returns a `TokenExchangeInvokeResponse` back to the client. The client must wait until it receives the `TokenExchangeInvokeResponse`.
+
+    ```json
+    {
+        "status": "<response code>",
+        "body": 
+        {
+            "id":"<unique Id>",
+            "connectionName": "<connection Name on the skill bot (from the OAuth card)>",
+            "failureDetail": "<failure reason if status code is not 200, null otherwise>"
+        }
+    }
+    ```
+
+6. If the `TokenExchangeInvokeResponse` has a `status` of `200`, then the client doesn't show the OAuth card. See the [normal flow image](/azure/bot-service/bot-builder-concept-sso?view=azure-bot-service-4.0#sso-components-interaction&preserve-view=true). For any other `status` or if the `TokenExchangeInvokeResponse` isn't received, then the client shows the OAuth card to the user. See the [fallback flow image](/azure/bot-service/bot-builder-concept-sso?view=azure-bot-service-4.0#sso-components-interaction&preserve-view=true). If there are any errors or unmet dependencies like user consent, this activity ensures that the SSO flow falls back to normal OAuthCard flow.
+
+   > [!NOTE]
+   >
+   > In Teams web client, the password prompt doesn't appear as there is an active Azure AD session in the browser, which is used for authentication and to acquire a token. In Teams desktop client, the password prompt appears because the desktop client doesn't have any Azure AD session to be shared and is asked to login.
+
+</details>
+
+## See also
+
+[Security best practices for application properties in Azure Active Directory](/azure/active-directory/develop/security-best-practices-for-app-registration)

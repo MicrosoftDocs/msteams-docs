@@ -166,7 +166,7 @@ The following triggers and actions are supported within a flow:
 
   1. Retrieve Collaboration session
 
-      ::image type="content" source="../assets/images/collaboration-control/retrieve-collab-session.png" alt-text="Screenshot is an example that shows how to Retrieve collaboration session.":::
+      :::image type="content" source="../assets/images/collaboration-control/retrieve-collab-session.png" alt-text="Screenshot is an example that shows how to Retrieve collaboration session.":::
 
      This step action returns the collaboration session that matches the provided inputs:
 
@@ -353,3 +353,8 @@ The following are examples of flows:
 
 > [!NOTE]
 > Multiple flows could be triggered in this way to perform different actions, using data from the response of the Collaboration session creation.
+
+## See also
+
+* [Integrate web apps](integrate-web-apps-overview.md)
+* [Connectors](../webhooks-and-connectors/what-are-webhooks-and-connectors.md#connectors)
