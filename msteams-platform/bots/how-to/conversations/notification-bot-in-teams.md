@@ -574,3 +574,4 @@ Follow the [step-by-step](../../../sbs-gs-notificationbot.yml) guide to build Te
 * [Adaptive Cards](../../../task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 * [TeamsFx SDK](../../../toolkit/TeamsFx-SDK.md)
 * [Bot Framework SDK](/azure/bot-service/bot-builder-basics)
+* [Send proactive installation messages](../../../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md)
