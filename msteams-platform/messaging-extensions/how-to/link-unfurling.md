@@ -16,13 +16,28 @@ The document guides you on how to add link unfurling to your app manifest using 
 
 > [!NOTE]
 >
-> * Currently, link unfurling is not supported on Mobile clients.
 > * The link unfurling result is cached for 30 minutes.
 > * Messaging extension commands are not required for Link unfurling. However, there must be at least one command in manifest as it is a mandatory property in messaging extensions. For more information, see [compose extensions](/microsoftteams/platform/resources/schema/manifest-schema).
 
-The following image is an example of link unfurling using the Azure DevOps message extension. When the Azure DevOps link is pasted into the Teams compose message area, the link unfurls into a card with the work item details:
+# [Desktop](#tab/desktop)
+
+The following image is an example of link unfurling using the Azure DevOps message extension. When the Azure DevOps link is pasted into the Teams compose message area, the link unfurls into a card with the link details:
 
 :::image type="content" source="../../assets/images/messaging-extension/messagingextensions_linkunfurl.png" alt-text="Screenshot of link urfurling example for Azure Dev Ops links pasted in teams compose message area.":::
+
+# [Mobile](#tab/mobile)
+
+The following image is an example of link unfurling for android and iOS mobile. When the link is pasted into the Teams compose message area, the link unfurls into a card with the link details:
+
+**Android**:
+
+:::image type="content" source="../../assets/images/messaging-extension/android-linkunfurl.png" alt-text="Screenshot shows you the link unfurling in Android mobile client.":::
+
+**iOS**:
+
+:::image type="content" source="../../assets/images/messaging-extension/ios-linkunfurl.png" alt-text="Screenshot shows you the link unfurling in iOS mobile client.":::
+
+---
 
 See the following video to learn more about link unfurling:
 <br>
@@ -363,7 +378,7 @@ To get your app ready for zero install link unfurling, follow these steps:
 
 1. **Advantages and limitations**:
 
-   # [Advantages](#tab/advantages)
+# [Advantages](#tab/advantages)
 
     Zero install link unfurling helps you provide enhanced experience to the users, such as:
 
@@ -371,7 +386,7 @@ To get your app ready for zero install link unfurling, follow these steps:
 
     * Create a welcome card for your app to show a preview with the placeholder fields.
 
-   # [Limitations](#tab/limitations)
+# [Limitations](#tab/limitations)
 
     The following are the limitations:
 
