@@ -515,7 +515,7 @@ A list of commands that your bot can recommend to users. The object is an array 
 
 **Optional**—array
 
-The `connectors` block defines an Office 365 Connector for the app.
+The `connectors` block defines a connector card for Microsoft 365 Groups for the app.
 
 The object is an array (maximum of one element) with all elements of type `object`. This block is required only for solutions that provide a Connector.
 
@@ -889,6 +889,7 @@ Delegated permissions allow the app to access data on behalf of the signed-in us
     |`OnlineMeetingParticipant.ToggleIncomingAudio.Chat`|Allows the app to toggle incoming audio for participants in meetings associated with this chat, on behalf of the signed-in user.|
     |`LiveShareSession.ReadWrite.Chat`|Allows the app to create and synchronize Live Share sessions for meetings associated with this chat, and access related information about the meeting's roster, such as member's meeting role, on behalf of the signed-in user.|
    |`OnlineMeetingIncomingAudio.Detect.Chat`|Allows the app to detect changes in the status of incoming audio in meetings associated with this chat, on behalf of the signed-in user.|
+   |`OnlineMeetingNotification.Send.Chat`|Allows the app to send notifications for the meetings associated with the chat.|
 
 * **Resource-specific delegated permissions for users**
 

@@ -1,6 +1,6 @@
 ---
 title: Use Task Modules in Microsoft Teams tabs
-description: Learn how to invoke task modules from Teams tabs and submitting its result using the Microsoft Teams client library. It includes code samples.
+description: Learn how to invoke task modules from Teams tabs and submitting its result using the Microsoft Teams JavaScript client library (TeamsJS). It includes code samples.
 ms.localizationpriority: medium
 ms.topic: how-to
 ---
