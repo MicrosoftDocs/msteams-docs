@@ -26,8 +26,6 @@ Stage View is a full screen UI component that can be used to render your app con
 
 * The Collaborative Stage View surfaces the originating chat or thread from where it was invoked and helps the users to engage with content and conversation side-by-side.
 
-:::image type="content" source="../assets/images/tab-images/invoke-stage-view-deep-link.png" alt-text=" The screenshot shows the invoke stage view.":::
-
 ### Stage View vs. Task module
 
 | Stage View | Task module|
@@ -108,20 +106,12 @@ The following screenshot is an example of collaborative Stage View opens in a ne
 
 |Feature |Notes |Desktop |Web |Mobile|
 |---      |:-----  |:--------   |:----  |:----- |
-|Collaborative Stage View| Invoke from Adaptive Card action. |Chat/Channel: Opens Teams pop-out window with chat pane| Opens Stage View modal. |Opens Stage View modal|
-|Stage View |Invoke from Deeplink only. Only recommended when calling from your tab app, and not an Adaptive Card. |Opens Stage View modal| Opens Stage View modal| Opens Stage View modal|
+|Collaborative Stage View| Invoke from Adaptive Card action. |Chat/Channel: Opens Teams pop-out window with chat pane.| Opens Stage View modal. |Opens Stage View modal.|
+|Stage View |Invoke from Deeplink only. Only recommended when calling from your tab app, and not an Adaptive Card. |Opens Stage View modal.| Opens Stage View modal.| Opens Stage View modal.|
 
 ### Advantages of Collaborative Stage View
 
 Collaborative Stage View helps provide a more seamless, multi-task experience when working with content in Teams. Users can open and view your app content inside a new Teams window and continue discussion from this window. The ability to engage with content while also having a conversation about that same content, leads to higher user engagement with your app.
-
-### Limitations of Collaborative Stage View
-
-* If a Collaborative Stage View is already open, and the user selects on another stage link in the same chat, it will replace the existing Collaborative Stage View window.
-
-* If a Collaborative Stage View with chat is open and a meeting with the same chat gets started, Stage View window will get closed automatically. When the meeting ends, Collaborative Stage View window will be restored.
-
-* If a Collaborative Stage View link is opened from main window or chat window, it will replace with the Collaborative Stage View window with side chat pane.
 
 ### Invoke Collaborative Stage View from Adaptive Card
 
