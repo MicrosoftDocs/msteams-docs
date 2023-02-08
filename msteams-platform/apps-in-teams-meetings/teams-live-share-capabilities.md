@@ -230,7 +230,7 @@ The Live Share SDK includes a set of new distributed-data structures that extend
 
 The `LivePresence` class makes tracking who is in the session easier than ever. When calling the `.initialize()` or `.updatePresence()` methods, you can assign custom metadata for that user, such as name, profile picture, or the identifier for content they are viewing. By listening to `presenceChanged` events, each client receives the latest `LivePresenceUser` object, collapsing all presence updates into a single record for each unique `userId`.
 
-Here are a few examples in which `LivePresence` can be used in your application:
+Following are a few examples in which `LivePresence` can be used in your application:
 
 - Displaying profile pictures and names of each user connected to the session.
 - Synchronizing the coordinates in a 3D scene where each user's avatar is located.
@@ -542,7 +542,7 @@ timer.play();
 
 The `LiveState` class enables synchronizing simple application state for everyone in a meeting. `LiveState` synchronizes two values: a `state` string and a corresponding `data` object, which allows you to build an ephemeral distributed-state machine.
 
-Here are a few examples in which `LiveState` can be used in your application:
+Following are a few examples in which `LiveState` can be used in your application:
 
 - Tracking the user identifier of the current presenter to build a **take control** feature.
 - Maintaining the content identifier that the current presenter is viewing. For example, an `taskId` on a task board.
