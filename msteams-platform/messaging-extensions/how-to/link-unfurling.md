@@ -21,13 +21,13 @@ The document guides you on how to add link unfurling to your app manifest using 
 
 # [Desktop](#tab/desktop)
 
-The following image is an example of link unfurling using the Azure DevOps message extension. When the Azure DevOps link is pasted into the Teams compose message area, the link unfurls into a card with the link details:
+The following image is an example of link unfurling using the Azure DevOps message extension. When the Azure DevOps link is pasted into the Teams compose message area, the link unfurls into a card with the work item details:
 
 :::image type="content" source="../../assets/images/messaging-extension/messagingextensions_linkunfurl.png" alt-text="Screenshot of link urfurling example for Azure Dev Ops links pasted in teams compose message area.":::
 
 # [Mobile](#tab/mobile)
 
-The following image is an example of link unfurling for android and iOS mobile. When the link is pasted into the Teams compose message area, the link unfurls into a card with the link details:
+The following image is an example of link unfurling for android and iOS mobile. When the app link is pasted into the Teams compose message area, the link unfurls into a card with the link details:
 
 **Android**:
 
@@ -378,7 +378,7 @@ To get your app ready for zero install link unfurling, follow these steps:
 
 1. **Advantages and limitations**:
 
-# [Advantages](#tab/advantages)
+    # [Advantages](#tab/advantages)
 
     Zero install link unfurling helps you provide enhanced experience to the users, such as:
 
@@ -386,7 +386,7 @@ To get your app ready for zero install link unfurling, follow these steps:
 
     * Create a welcome card for your app to show a preview with the placeholder fields.
 
-# [Limitations](#tab/limitations)
+    # [Limitations](#tab/limitations)
 
     The following are the limitations:
 
