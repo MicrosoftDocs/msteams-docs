@@ -16,7 +16,6 @@ items:
   content: |
     The Microsoft Teams activity feed helps users to assess items that require attention by notifying changes. You can apply by using the activity feed notification APIs in Microsoft Graph to extend the functionality to your app.
     
-
     **Key features of activity feed broadcast**
 
     * Provides enhanced experience.
@@ -71,11 +70,11 @@ items:
     1. Select **Manage your apps**.
     1. Select **Upload an app**.
 
-       :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/upload-app.png" alt-text=" upload an app in Teams.":::
+       :::image type="content" source="../../assets/images/sbs-graphactivity-feedbroadcast/upload-a-custom-app.png" alt-text="Screenshot shows the selection of Upload a custom app highlighted in red.":::
 
     1. Look for the option to **Upload a customised app**. If you see the option, sideloading apps is enabled.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/upload-custom-app1.png" alt-text="Illustration shows the option to upload a custom app in Teams.":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/upload-custom-app1.png" alt-text="Screenshot shows the option to upload a custom app in Teams.":::
 
         > [!NOTE]
         > Contact Teams administrator, if you can't upload a custom app.
@@ -437,8 +436,8 @@ items:
     
     1. Select **Upload an app to your org's app catalog**. 
 
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/upload-app-org.png" alt-text="Upload a custom app" border="true":::
-
+       :::image type="content" source="../../assets/images/sbs-graphactivity-feedbroadcast/submit-an-app-to-your-org.PNG" alt-text="Screenshot shows the selection of Submit an app to your org highlighted in red.":::
+       
     1. Select **Open** to upload the .zip file that you created in the **AppPackage** folder.
 
        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/open-a-custom-app.png" alt-text="Open a custom app" border="true":::
