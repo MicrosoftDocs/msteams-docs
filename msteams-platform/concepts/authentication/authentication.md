@@ -47,7 +47,9 @@ Enable authentication with SSO or third party OAuth IdPs in your tab app, bot ap
 :::row-end:::
 :::row:::
     :::column span="1":::
-        :::image type="content" source="../../assets/images/authentication/bot-sso-icon.png" alt-text="SSO for bot app" link="../../bots/how-to/authentication/auth-aad-sso-bots.md":::
+        :::image type="content" source="../../assets/images/authentication/bot-sso-icon.png" alt-text="SSO for bot app" link="../../bots/how-to/authentication/bot-sso-overview.md":::
+
+
     :::column-end:::
     :::column span="1":::
         <br>
@@ -61,7 +63,7 @@ Enable authentication with SSO or third party OAuth IdPs in your tab app, bot ap
 :::row-end:::
 :::row:::
     :::column span="1":::
-        :::image type="content" source="../../assets/images/authentication/mex-sso-icon.png" alt-text="SSO for messaging extension app" link="../../messaging-extensions/how-to/enable-SSO-auth-me.md":::
+        :::image type="content" source="../../assets/images/authentication/mex-sso-icon.png" alt-text="SSO for messaging extension app" link="../../bots/how-to/authentication/bot-sso-overview.md":::
     :::column-end:::
     :::column span="1":::
         <br>
@@ -74,12 +76,10 @@ Enable authentication with SSO or third party OAuth IdPs in your tab app, bot ap
     :::column-end:::
 :::row-end:::
 
-> [!NOTE]
-> The Silent authentication page is moved to the Resources module. For more information, see [Silent authentication](../../tabs/how-to/authentication/auth-silent-aad.md).
-
 ## See also
 
 - [Enable single sign-on in a tab app](../../tabs/how-to/authentication/tab-sso-overview.md)
 - [Microsoft Teams authentication flow for tabs](~/tabs/how-to/authentication/auth-flow-tab.md)
 - [Single sign-on support for bots](~/bots/how-to/authentication/auth-aad-sso-bots.md)
 - [Add authentication to your message extension](~/messaging-extensions/how-to/add-authentication.md)
+- [Glossary](../../get-started/glossary.md)

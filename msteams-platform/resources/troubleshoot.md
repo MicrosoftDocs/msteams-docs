@@ -9,9 +9,9 @@ ms.date: 07/09/2018
 
 # Troubleshoot your Microsoft Teams app
 
-## Troubleshooting tabs
+## To troubleshoot tabs
 
-### Accessing the DevTools
+### Access DevTools
 
 You can open [DevTools in the Teams client](~/tabs/how-to/developer-tools.md) for a similar experience as pressing F12 (on Windows) or Command-Option-I (on MacOS) in a browser.
 
@@ -22,9 +22,16 @@ If you aren't seeing your content in the tab view, it could be:
 * your content can't be displayed in an `<iframe>`.
 * the content domain isn't in the [validDomains](~/resources/schema/manifest-schema.md#validdomains) list in the manifest.
 
+> [!NOTE]
+> A blank tab appears when the given tab URL redirects to login screen. Login pages don’t render in iFrames as a safeguard against clickjacking. Your authentication logic must use a method other than redirect.
+
+### Changes to my web app aren't reflected in its Teams tab
+
+If you experience consistent or intermittent caching issues where updates to your web app aren't appearing when it's hosted within a Teams tab, check your server cache settings and use [`Cache-Control`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control) headers to ensure your desired client caching behavior.
+
 ### The Save button isn't enabled on the settings dialog
 
-Be sure to call `microsoftTeams.settings.setValidityState(true)` once the user has input or selected all required data on your settings page to enable the save button.
+Ensure to call `microsoftTeams.settings.setValidityState(true)` after the user has input or selected all required data on your settings page to enable the save button.
 
 ### The tab settings can't be saved on selecting Save
 
@@ -45,26 +52,26 @@ When adding a tab, if you select **Save** but receive an error message indicatin
 
 ### Can't authenticate the user or display your auth provider in your tab
 
-Unless you're doing silent authentication, you must follow the authentication process provided by the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client).
+Unless you're doing silent authentication, you must follow the authentication process provided by the [Microsoft Teams JavaScript client library](/javascript/api/overview/msteams-client).
 
 > [!NOTE]
 > We require all authentication flow to start and end on your domain, which must be listed in the `validDomains` object in your manifest.
 
-For more information about authentication, see [Authenticate a user](~/concepts/authentication/authentication.md).
+For more information about authentication, see [how to authenticate a user](~/concepts/authentication/authentication.md).
 
 ### Static tabs not showing up
 
 There's a known issue where updating an existing bot app with a new or updated static tab won't show that tab change when accessing the app from a personal chat conversation.  To see the change, you should test on a new user or test instance, or access the bot from the Apps flyout.
 
-## Troubleshooting bots
+## To troubleshoot bots
 
 ### Can't add my bot
 
-Apps must be enabled by the Office 365 tenant admin for them to be loaded by end users. In some cases, the Office 365 tenant might have multiple SKUs associated with it, and for bots to work in any, they must be enabled in all SKUs. For more information, see [Prepare your Office 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md).
+Apps must be enabled by the Microsoft 365 tenant admin for them to be loaded by end users. In some cases, the Microsoft 365 tenant might have multiple SKUs associated with it, and for bots to work in any, they must be enabled in all SKUs. For more information, see [prepare your Microsoft 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md).
 
 ### Can't add bot as a member of a team
 
-Bots must first be uploaded in a team before it's accessible within any channel of that team. For more information on this process, see [Uploading your app in a team](~/concepts/deploy-and-publish/apps-upload.md).
+Bots must first be uploaded in a team before it's accessible within any channel of that team. For more information on this process, see [how to upload your app in a team](~/concepts/deploy-and-publish/apps-upload.md).
 
 ### My bot doesn't get my message in a channel
 
@@ -91,3 +98,11 @@ Common reasons for manifest read errors:
 If you're attempting to upload an updated package with the same ID again, choose the **Replace** icon at the end of the tab's table row rather than the **Upload** button.
 
 If you're not re-uploading an updated package, ensure that the ID is unique.
+
+## See also
+
+* [Build tabs for meeting](../apps-in-teams-meetings/build-tabs-for-meeting.md)
+* [Build bots for Teams](../bots/what-are-bots.md)
+* [Enable SSO for tab app](../tabs/how-to/authentication/tab-sso-overview.md)
+* [Receive all conversation messages with RSC](../bots/how-to/conversations/channel-messages-with-rsc.md)
+* [App manifest schema for Teams](schema/manifest-schema.md)

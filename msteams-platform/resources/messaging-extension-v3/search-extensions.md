@@ -11,7 +11,7 @@ ms.date: 07/20/2019
 
 Search based message extensions allow you to query your service and post that information in the form of a card, right into your message.
 
-![Example of message extension card](~/assets/images/compose-extensions/ceexample.png)
+:::image type="content" source="../../assets/images/compose-extensions/ceexample.png" alt-text="Screenshot shows the example of message extension card.":::
 
 The following sections describe how to do this:
 
@@ -29,7 +29,6 @@ For search based message extension set the `type` parameter to `query`. Below is
   "manifestVersion": "1.5",
   "version": "1.0",
   "id": "57a3c29f-1fc5-4d97-a142-35bb662b7b23",
-  "packageName": "com.microsoft.teams.samples.bing",
   "developer": {
     "name": "John Developer",
     "websiteUrl": "http://bingbotservice.azurewebsites.net/",
@@ -82,7 +81,7 @@ For search based message extension set the `type` parameter to `query`. Below is
 
 You can test your message extension by uploading your app.
 
-To open your message extension, navigate to any of your chats or channels. Choose the **More options** (**&#8943;**) button in the compose box, and choose your message extension.
+To open your message extension, go to any of your chats or channels. Choose the **More options** (**&#8943;**) button in the compose box, and choose your message extension.
 
 ## Add event handlers
 
@@ -106,7 +105,7 @@ The remainder of your handler for `onQuery` prompts the user for information, di
 
 The `onQuerySettingsUrl` and `onSettingsUpdate` events work together to enable the **Settings** menu item.
 
-![Screenshots of locations of Settings menu item](~/assets/images/compose-extensions/compose-extension-settings-menu-item.png)
+:::image type="content" source="../../assets/images/compose-extensions/compose-extension-settings-menu-item.png" alt-text="Screenshot shows the locations of Settings menu item.":::
 
 Your handler for `onQuerySettingsUrl` returns the URL for the configuration page; after the configuration page closes, your handler for `onSettingsUpdate` accepts and saves the returned state. This is the one case in which `onQuery` *doesn't* receive the response from the configuration page.
 
@@ -190,7 +189,7 @@ The request parameters are found in the value object, which includes the followi
 
 As an alternative (or in addition) to searching your external service, you can use a URL inserted into the compose message box to query your service and return a card. In the screenshot below a user has pasted in a URL for a work item in Azure DevOps, which the message extension has resolved into a card.
 
-![Example of link unfurling](~/assets/images/compose-extensions/messagingextensions_linkunfurling.png)
+:::image type="content" source="../../assets/images/compose-extensions/messagingExtensions_LinkUnfurling.png" alt-text="Screenshot shows the example of link unfurling.":::
 
 To enable your message extension to interact with links this way, you'll first need to add the `messageHandlers` array to your app manifest as in the example below:
 
@@ -247,25 +246,25 @@ We support the following attachment types:
 
 * [Thumbnail card](~/task-modules-and-cards/cards/cards-reference.md#thumbnail-card)
 * [Hero card](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
-* [Office 365 Connector card](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
+* [Connector card for Microsoft 365 Groups](~/task-modules-and-cards/cards/cards-reference.md#connector-card-for-microsoft-365-groups)
 * [Adaptive card](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 
 For more information, see [Cards](~/task-modules-and-cards/what-are-cards.md) for an overview.
 
 To learn how to use the thumbnail and hero card types, see [Add cards and card actions](~/task-modules-and-cards/cards/cards-actions.md).
 
-For additional documentation regarding the Office 365 Connector card, see [Using Office 365 Connector cards](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card).
+For additional documentation regarding the connector card for Microsoft 365 Groups, see [Using connector card for Microsoft 365 Groups](~/task-modules-and-cards/cards/cards-reference.md#connector-card-for-microsoft-365-groups).
 
 The result list is displayed in the Microsoft Teams UI with a preview of each item. The preview is generated in one of two ways:
 
 * Using the `preview` property within the `attachment` object. The `preview` attachment can only be a Hero or Thumbnail card.
 * Extracted from the basic `title`, `text`, and `image` properties of the attachment. These are used only if the `preview` property isn't set and these properties are available.
 
-You can display a preview of an Adaptive or Office 365 Connector card in the result list simply by setting its preview property. This isn't necessary if the results are already hero or thumbnail cards. If you use the preview attachment, it must be either a Hero or Thumbnail card. If no preview property is specified, the preview of the card will fail, and nothing will be displayed.
+You can display a preview of an Adaptive or connector card for Microsoft 365 Groups in the result list simply by setting its preview property. This isn't necessary if the results are already hero or thumbnail cards. If you use the preview attachment, it must be either a Hero or Thumbnail card. If no preview property is specified, the preview of the card will fail, and nothing will be displayed.
 
 #### Response example
 
-This example shows a response with two results, mixing different card formats: Office 365 Connector and Adaptive. While you'll likely want to stick with one card format in your response, it shows how the `preview` property of each element in the `attachments` collection must explicitly define a preview in hero or thumbnail format as described above.
+This example shows a response with two results, mixing different card formats: Connector for Microsoft 365 Groups and Adaptive. While you'll likely want to stick with one card format in your response, it shows how the `preview` property of each element in the `attachments` collection must explicitly define a preview in hero or thumbnail format as described above.
 
 ```json
 {
@@ -653,4 +652,4 @@ app.run();
 
 ## See also
 
-[Bot Framework samples](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).
+[Bot Framework samples](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/README.md).

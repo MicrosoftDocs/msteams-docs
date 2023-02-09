@@ -1,6 +1,6 @@
 ---
 title: Add test data to your Microsoft 365 test tenant
-description: Learn to set up your Office 365 developer program subscription for successful testing of Microsoft Teams Apps using code snippets
+description: Learn to set up your Microsoft 365 developer program subscription for successful testing of Microsoft Teams Apps using code snippets
 ms.topic: how-to
 ms.localizationpriority: medium    
 ms.date: 11/01/2019
@@ -15,7 +15,7 @@ You can test your Microsoft Teams app with sample data with a Microsoft 365 deve
 1. [Join the Microsoft 365 Developer Program](/office/developer-program/office-365-developer-program), if you don't have a test tenant.
 2. [Set up a Microsoft 365 Developer Subscription](/office/developer-program/office-365-developer-program-get-started).
 3. [Use sample data packs with your Microsoft 365 developer subscription to install the Users content pack](/office/developer-program/install-sample-packs).
-4. [Install the Teams PowerShell module](https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2).
+4. [Install the Teams PowerShell module](https://www.powershellgallery.com/packages/microsoftteams/1.0.2).
 5. [Install the Azure AD PowerShell module](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0#installing-the-azure-ad-module&preserve-view=true).
 
 > [!NOTE]
@@ -158,7 +158,7 @@ By default, only global admins or Teams service admins can upload (sideload) app
 
         try {
 
-            # 1. Login with the global administrator account for your Office 365 Developer Program tenant. This script uses these credentials to connect to the PowerShell modules for Azure Active Directory and Microsoft Teams
+            # 1. Login with the global administrator account for your Microsoft 365 Developer Program tenant. This script uses these credentials to connect to the PowerShell modules for Azure Active Directory and Microsoft Teams
 
             $creds = Get-Credential
 
@@ -174,7 +174,7 @@ By default, only global admins or Teams service admins can upload (sideload) app
 
             foreach ($team in $XmlDocument.Teams.Team ) {
                 try {
-                    $group = New-Team -DisplayName $team.Name -Description $teams.description -visibility public 
+                    $group = New-Team -DisplayName $team.Name -Description $team.description -visibility public 
                     Write-Host "Successfully created team: " $group.DisplayName
                 }
                 catch {
@@ -242,6 +242,7 @@ By default, only global admins or Teams service admins can upload (sideload) app
 
 ## See also
 
+* [Test your app](test-app-overview.md)
 * [Debug your tab](~/tabs/how-to/developer-tools.md)
 * [Debug your bots](~/bots/how-to/debug/locally-with-an-ide.md)
 * [Test RSC permissions](~/graph-api/rsc/test-resource-specific-consent.md)

@@ -24,16 +24,18 @@ Some possible uses of this feature are:
 * Changing the description to include language and guidance that is better understood by your organization's end-users.
 * Changing logo and logo outline to inspire confidence to the end-users to use the app since it seems provided by their organization.
 
-You can enable this feature by defining the app properties in the [`configurableProperties` section in the app manifest file](/microsoftteams/platform/resources/schema/manifest-schema#configurableproperties). You can define the property using [Developer Portal for Teams](https://dev.teams.microsoft.com/home) or do it manually. You can choose to use the Developer Portal to edit the manifest of your app or you can edit it manually.
-
-:::image type="content" source="../../assets/images/dev-portal-app-customization-settings.png" alt-text="Screenshot shows the option in Teams Developer Portal to enable app customization feature and select specific metadata fields that developers allow admins to customize.":::
+You can enable the feature by defining the app properties that your customers can customize in the [`configurableProperties` section in the Teams app manifest](/microsoftteams/platform/resources/schema/manifest-schema#configurableproperties), starting with version 1.11. You can use [Developer Portal for Teams](https://dev.teams.microsoft.com/home) to edit the manifest of your app.
 
 > [!IMPORTANT]
 > You can't test this feature during development. App customization isn't supported when sideloading or publishing to an org's app catalog.
 
+### User considerations
+
+Provide guidelines for customers (specifically Teams admins) who want to customize your app. For more information, see [customize apps in Teams](/microsoftteams/customize-apps).
+
 ## Block apps by default for users until an admin approves
 
-To enhance Teams app experience, you can block an app from users until an admin approves the app. For example, Contoso Electronics has created a help desk app for Teams. To enable appropriate functioning of the app, Contoso Electronics’ wants the customers to first set up specific properties of the app. The app is blocked by default and is available to users only after the admin allows it. The functionality is called blocked by publisher.
+To enhance Teams app experience, you can hide an app from users by default until admin allows to unhide the app. For example, Contoso Electronics has created a help desk app for Teams. To enable appropriate functioning of the app, Contoso Electronics’ wants the customers to first configure specific properties of the app. The app is hidden by default and is available to users only after the admin allows it.
 
 To block the app by default, in the app manifest file, set the `defaultBlockUntilAdminAction` property to `true`. When the property is set to `true`, the status of the app in Teams admin center is **Blocked by publisher** in the [Manage apps](https://admin.teams.microsoft.com/policies/manage-apps) page.
 
@@ -51,4 +53,4 @@ If by default, you don't want the app to be hidden, you can update the `defaultB
 ## See also
 
 * [App manifest schema](/microsoftteams/platform/resources/schema/manifest-schema)
-* [Customize apps in the Teams admin center](/MicrosoftTeams/customize-apps)
+* [Customize apps in the Teams admin center](/microsoftteams/customize-apps)

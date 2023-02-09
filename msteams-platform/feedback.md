@@ -1,6 +1,6 @@
 ---
 title: Microsoft Teams developer community support and feedback
-description: Learn Microsoft Teams product team responds to the developer community across various feedback and support channels.
+description: Learn about Developer community and help required to raise issues, limitations, and general questions. Ask questions related to SDK and samples, documentation feedback, feature requests.
 ms.localizationpriority: medium
 ms.topic: reference
 ---
@@ -40,7 +40,7 @@ Submit issues and ask general questions related to SDK and samples using the com
 | **Samples** | Submit issues with samples to respective  [Microsoft Teams Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples) repository.|
 |  **Teams Toolkit or TeamsFx SDK and CLI issues** | <ul><li> :::image type="icon" source="assets/icons/GitHub-icon.png":::  [GitHub Issues](https://github.com/OfficeDev/TeamsFx/issues): Create new issues on the [TeamsFx (Microsoft Teams Framework) GitHub repository](https://github.com/OfficeDev/TeamsFx) to report issues or raise feature request. We recommend using GitHub issues for queries and to receive community help. <li> :::image type="icon" source="assets/icons/stack-overflow-icon.png"::: [Stack Overflow](https://stackoverflow.com/questions/tagged/teams-toolkit): Use the `teams-toolkit` tag to post questions. Follow the Stack Overflow guidelines such as provide a descriptive title, a concise problem statement, and details to reproduce the issue. Feature requests or broad questions are off-topic. </li> </ul> |
 | **Bot and Message extension SDK issues or suggestions** | Submit issues and feature requests to the SDK repository for your bot's language ([C#](https://github.com/Microsoft/botbuilder-dotnet/), [JavaScript](https://github.com/Microsoft/botbuilder-js), or [Python](https://github.com/Microsoft/botbuilder-python)). Post How-to questions at [Stack Overflow](https://stackoverflow.com/questions/tagged/botframework%20microsoft-teams) using the `botframework` and `microsoft-teams` tag. |
-| **Tab SDK issues or suggestions** | Submit issues and feature requests to the SDK repository for [Microsoft Teams JavaScript Library](https://github.com/OfficeDev/microsoft-teams-library-js/issues). Use the `microsoft-teams` tag to post how-to questions about the SDK at [Stack Overflow](https://stackoverflow.com/questions/tagged/microsoft-teams). |
+| **Tabs (TeamsJS) issues or suggestions** | Submit issues and feature requests to the [Microsoft Teams JavaScript client library (TeamsJS)](https://github.com/OfficeDev/microsoft-teams-library-js/issues) for tabs. Use the `microsoft-teams` tag to post how-to questions about TeamsJS at [Stack Overflow](https://stackoverflow.com/questions/tagged/microsoft-teams). |
 | **Live Share SDK issues or suggestions** | Submit issues and feature requests to the SDK repository for [Live Share SDK](https://github.com/microsoft/live-share-sdk). Use the `live-share` and `microsoft-teams` tag to post how-to questions about the SDK at [Stack Overflow](https://stackoverflow.com/questions/tagged/live-share+microsoft-teams). |
 
 ### Documentation feedback
@@ -64,4 +64,4 @@ Suggest a feature or vote up existing feature requests.
 
 ## See also
 
-[SDK reference](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)
+[TeamsJS library reference](/javascript/api/overview/msteams-client)

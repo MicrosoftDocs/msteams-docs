@@ -1,6 +1,6 @@
 ---
 title: Use Microsoft Graph to authorize proactive bot installation and messaging in Teams
-description: This article describes proactive messaging in Teams and how to implement it. Learn about enabling proactive app installation and messaging using code sample. 
+description: Install app proactively using Graph APIs. Check if your bot is currently installed, retrieve the conversation chatId to send proactive message.
 ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
@@ -49,7 +49,7 @@ To use these permissions, you must add a [webApplicationInfo](../../resources/sc
 
 ### Create and publish your proactive messaging bot for Teams
 
-To get started, you need a [bot for Teams](../../bots/how-to/create-a-bot-for-teams.md) with [proactive messaging](../../concepts/bots/bot-conversations/bots-conv-proactive.md) capabilities that is in your [organization's app store](../../concepts/deploy-and-publish/apps-publish-overview.md#publish-your-app-to-your-org) or the [Teams store](../../concepts/deploy-and-publish/apps-publish-overview.md#publish-your-app-to-the-teams-store).
+To get started, you need a [bot for Teams](../../bots/how-to/create-a-bot-for-teams.md) with [proactive messaging](../../concepts/bots/bot-conversations/bots-conv-proactive.md) capabilities that is in your [organization's app store](../../concepts/deploy-and-publish/apps-publish-overview.md#publish-to-your-org) or the [Teams store](../../concepts/deploy-and-publish/apps-publish-overview.md#publish-your-app-to-the-teams-store).
 
 > [!TIP]
 > The production-ready [*Company Communicator*](../..//samples/app-templates.md#company-communicator) app template permits broadcast messaging and is a good start to build your proactive bot application.
@@ -187,12 +187,16 @@ The following code provides an example of sending proactive messages:
 
 # [C#](#tab/dotnet)
 
+* [SDK reference](/dotnet/api/microsoft.bot.builder.cloudadapterbase.continueconversationasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-cloudadapterbase-continueconversationasync(system-string-microsoft-bot-schema-activity-microsoft-bot-builder-botcallbackhandler-system-threading-cancellationtoken)&preserve-view=true)
+
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/graph-meeting-notification/csharp/MeetingNotification/Controllers/NotificationController.cs#L112)
+
 ```csharp
 public async Task<int> SendNotificationToAllUsersAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
 {
    int msgSentCount = 0;
 
-   // Send notification to all the members
+   // Send notification to all the members.
    foreach (var conversationReference in _conversationReferences.Values)
    {
        await turnContext.Adapter.ContinueConversationAsync(_configuration["MicrosoftAppId"], conversationReference, BotCallback, cancellationToken);
@@ -204,20 +208,25 @@ public async Task<int> SendNotificationToAllUsersAsync(ITurnContext<IMessageActi
 
 private async Task BotCallback(ITurnContext turnContext, CancellationToken cancellationToken)
 {
+    // Sends an activity to the sender of the incoming activity.
    await turnContext.SendActivityAsync("Proactive hello.");
 }
 ```
 
 # [Node.js](#tab/nodejs)
 
+* [SDK reference](/javascript/api/botbuilder/cloudadapter?view=botbuilder-ts-latest#botbuilder-cloudadapter-continueconversationasync&preserve-view=true)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-initiate-thread-in-channel/nodejs/bots/teamsStartNewThreadInChannel.js#L20)
+
 ```javascript
 server.get('/api/notify', async (req, res) => {
     for (const conversationReference of Object.values(conversationReferences)) {
+
+        // Sends a proactive message to a conversation.
         await adapter.continueConversationAsync(process.env.MicrosoftAppId, conversationReference, async context => {
             await context.sendActivity('proactive hello');
         });
     }
-
     res.setHeader('Content-Type', 'text/html');
     res.writeHead(200);
     res.write('<html><body><h1>Proactive messages have been sent.</h1></body></html>');
@@ -240,7 +249,7 @@ server.get('/api/notify', async (req, res) => {
 
 ## See also
 
-* [Manage app setup policies in Microsoft Teams](/MicrosoftTeams/teams-app-setup-policies#create-a-custom-app-setup-policy)
+* [Manage app setup policies in Microsoft Teams](/microsoftteams/teams-app-setup-policies#create-a-custom-app-setup-policy)
 * [Send proactive notifications to users SDK v4](/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true)
 * [Send activity feed notifications to users in Microsoft Teams](/graph/teams-send-activityfeednotifications)
 * [Add app to team - Microsoft Graph v1.0](/graph/api/team-post-installedapps?view=graph-rest-1.0&tabs=http&preserve-view=true)

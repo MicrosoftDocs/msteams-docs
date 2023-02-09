@@ -10,20 +10,20 @@ ms.topic: conceptual
 # Limitations and known issues
 
 > [!NOTE]
-> Currently Collaboration controls are available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
+> Currently, Collaboration controls are available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
 
 Following are the limitations for Collaboration controls:
 
 * Components can't be used in Canvas apps.
 * Components only support full tab views.
 
-     :::image type="content" source="../assets/images/collaboration-control/tasks-tab.png" alt-text="tasks" border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/tasks-tab.png" alt-text="The screenshot shows the tasks." border="true":::
 
-* The subgrid view selected isn't honored. All tasks, meetings, or notes for the collaborative record will be displayed.
+* The subgrid view selected isn't honored. All tasks, meetings, or notes for the collaborative record are displayed.
 
-     :::image type="content" source="../assets/images/collaboration-control/subgrid-view.png" alt-text="subgrid view" border= "true":::
+     :::image type="content" source="../assets/images/collaboration-control/subgrid-view.png" alt-text="The screenshot shows the subgrid view of the tasks." border= "true":::
 
-* Activities added to the timeline control don’t appear in the components, tasks, meetings and notes created in the components aren't included in the timeline control.
+* Activities added to the timeline control don’t appear in the components, tasks, meetings, and notes created in the components aren't included in the timeline control.
 * New records must be saved before accessing the components, otherwise you'll see an empty screen.
 * The components don't inherit theming from the form or app they're added to.
 * Localization is only available when running the app inside Microsoft Teams.
@@ -31,26 +31,26 @@ Following are the limitations for Collaboration controls:
 
 **Admin Center does not update when installation or upgrade is complete**
 
-When following the installation steps in [install Collaboration controls](~/samples/install-collaboration-control.md), you're redirected to the Power Platform admin center. A banner is displayed when installation starts, but it isn't updated when installation completes. The status is listed during installation and when installation is complete it may disappear from the list. You can view the solutions list at [https://make.powerapps.com/](https://make.preview.powerapps.com/) to confirm that installation is complete.
+When following the installation steps in [install Collaboration controls](~/samples/install-collaboration-control.md), you're redirected to the Power Platform admin center. A banner is displayed when installation starts, but it isn't updated when installation completes. The status is listed during installation and when it's completed it might not be available in the list. You can view the solutions list at [https://make.powerapps.com/](https://make.preview.powerapps.com/) to confirm that installation is complete.
 
 **View during installation:**
-     :::image type="content" source="../assets/images/collaboration-control/view-during-installation.png" alt-text="view during installation" border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/view-during-installation.png" alt-text="The screenshot shows the process during installation." border="true":::
 
 **View after installation:**
-     :::image type="content" source="../assets/images/collaboration-control/view-after-installation.png" alt-text="view after installation" border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/view-after-installation.png" alt-text="The screenshot shows the completion of the installation." border="true":::
 
-When upgrading the controls to a later version, the same installation started banner displays, but the control status remains installing even after the upgrade is complete. You can confirm that the upgrade is complete by checking the solutions list at [https://make.powerapps.com/](https://make.preview.powerapps.com/), it should take approximately 15 minutes.
+When upgrading the controls to a later version, the same installation started banner displays, but the control status remains installing even after the upgrade is complete. You can confirm the upgrade is complete by checking the solutions list at [https://make.powerapps.com/](https://make.preview.powerapps.com/), it must take approximately 15 minutes.
 
 You can also see in the history for specific solutions that the later version was installed and then the previous version was removed:
-     :::image type="content" source="../assets/images/collaboration-control/history.png" alt-text="History check" border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/history.png" alt-text="The screenshot shows the history for specific solutions of the versions that are installed and removed." border="true":::
 
 ## Bookings Meetings
 
-The Meetings control supports one on one meetings when using Bookings to engage with users outside of your organization. one to many meetings aren't supported at this time using Collaboration controls.
+The Meetings control supports one on one meetings when using Bookings to engage with users outside of your organization. One to many meetings aren't supported at this time using Collaboration controls.
 
 **Meeting attendee status is incorrect**
 
-When an attendee RSVPs to a meeting, their response status may not display correctly in both the agenda view and the meeting details. Selecting the decline button may also return an error message on screen.
+When an attendee RSVPs to a meeting, their response status might not display correctly in both the agenda view and the meeting details. Selecting the decline button might return an error message on screen.
 
 ## Tasks
 
@@ -60,7 +60,7 @@ The text on the “clear" button displayed on the Tasks filter isn't translated.
 
 **Tasks: Grid context menu appears cropped**
 
-When, the Tasks grid is populated by a low number of Tasks the grid context menu may appear cropped and require use of scrollbars.
+When the Tasks grid is populated by a low number of Tasks the grid context menu may appear cropped and require use of scrollbars.
 
 **Tasks: Keyword search filter use “BeginsWith” operator for “Guest” tasks**
 
@@ -68,7 +68,7 @@ When search Tasks using the keyword text filter, “Guest” tasks are returned 
 
 ## Files
 
-When navigating into the Archive folder after archiving files, users may experience duplicate archive folders.  Navigating from the archive folder(s) to the files main view will resolve the issue, and files that are archived won't be removed.
+When navigating into the Archive folder after archiving files, users might experience duplicate archive folders.  Navigating from the archive folder(s) to the files main view resolves the issue, and files that are archived won't be removed.
 
 ## Controls
 
@@ -76,25 +76,25 @@ When navigating into the Archive folder after archiving files, users may experie
 
 If a control fails to save a task or meeting, the likely cause is misconfigured Group ID or Channel ID.  
 
-Solution 1: Confirm the IDs are correct, and the settings have been applied as per the settings exercise.  
+Solution 1: Confirm the IDs are correct and the settings are applied as per the settings exercise.  
 
-Solution 2: Try to ensure that the Power Apps environment and Teams environment are on the same tenant.  
+Solution 2: Ensure that the Power Apps environment and Teams environment are on the same tenant.  
 
 **Controls fail to load or show an error**
 
-If the controls fail to load or show an error, it may be a transient issue.
+If the controls fail to load or show an error, it might be a transient issue.
 
 Example:
 
-:::image type="content" source="../assets/images/collaboration-control/sync-fail.png" alt-text="control sync fail":::
+:::image type="content" source="../assets/images/collaboration-control/sync-fail.png" alt-text="Screenshot shows the control sync fail.":::
 
 This would render in the console log as:
 
-:::image type="content" source="../assets/images/collaboration-control/control-fail.png" alt-text="control fail" border="true":::
+:::image type="content" source="../assets/images/collaboration-control/control-fail.png" alt-text="Screenshot is an example of control fail from consol log." border="true":::
 
 Solution: Refresh your browser or if in Teams app, reload the tab.
 
-If you want to change the app name, icon, or description after uploading it to Teams, see [customize appearance of apps](/MicrosoftTeams/customize-apps#customize-details-of-an-app)
+If you want to change the app name, icon, or description after uploading it to Teams, see [customize appearance of apps](/microsoftteams/customize-apps#customize-details-of-an-app)
 
 ## Error logging
 
@@ -144,7 +144,7 @@ With these new controls, you as a maker can drag-and-drop controls that bring Mi
 
 <summary><b>What is the benefit of the Collaboration controls (Preview) for users?</b></summary>
 
-Your users can experience productivity gains and stay in their flow by collaborating on approvals, files, meetings, notes and tasks without leaving the context of your app.
+Your users can experience productivity gains and stay in their flow by collaborating on approvals, files, meetings, notes, and tasks without leaving the context of your app.
 
 <br>
 
@@ -168,7 +168,7 @@ Request that your Power Platform administrator install the controls from AppSour
 
 <summary><b>How do I add the controls to a Model Driven App?</b></summary>
 
-Navigate to Form Designer and drag the controls from the Component pane onto a form.
+Go to Form Designer and drag the controls from the Component pane onto a form.
 
 <br>
 

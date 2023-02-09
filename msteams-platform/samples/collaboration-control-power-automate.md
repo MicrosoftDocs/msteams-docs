@@ -14,7 +14,7 @@ Power Automate can be used to automate workflows around your Collaboration Manag
 Collaboration control connector enables developers to access Collaboration control APIs by triggers or actions in automated workflows in Microsoft Power Automate, Microsoft Power Apps, and Azure Logic apps.
 
 > [!NOTE]
-> Currently Collaboration controls are available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
+> Currently, Collaboration controls are available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
 
 In this version, the connector enables makers to set up triggers:
 
@@ -29,33 +29,33 @@ In the [Azure portal](https://ms.portal.azure.com/#home) for Azure Active Direct
 
 1. In the home page of Azure portal, select **Azure Active Directory**. In Azure Active Directory, select dropdown list for **Add** and select **App registration**.
 
-   :::image type="content" source="../assets/images/collaboration-control/azure-active-directory-home-portal.png" alt-text="The screenshot is an example that shows how to add a new App Registration":::
+   :::image type="content" source="../assets/images/collaboration-control/azure-active-directory-home-portal.png" alt-text="Screenshot is an example that shows how to add a new App Registration.":::
 
-   :::image type="content" source="../assets/images/collaboration-control/new-app-registration.png" alt-text="The screenshot is an example that shows how to add new app registration":::
+   :::image type="content" source="../assets/images/collaboration-control/new-app-registration.png" alt-text="Screenshot is an example that shows how to add new app registration.":::
 
 1. In the app registration, set your application name and add the Web redirect URI to `https://global.consent.azure-apim.net/redirect`.
 
-   :::image type="content" source="../assets/images/collaboration-control/register-an-application.png" alt-text="The screenshot is an example that shows how to register an application":::
+   :::image type="content" source="../assets/images/collaboration-control/register-an-application.png" alt-text="Screenshot is an example that shows how to register an application.":::
 
 1. In the Implicit Grant and hybrid flows section, select both Access Tokens and ID tokens.
 
-   :::image type="content" source="../assets/images/collaboration-control/authorisation-endpoint-tokens.png" alt-text="The screenshot is an example that shows the tokens and ID tokens":::
+   :::image type="content" source="../assets/images/collaboration-control/authorisation-endpoint-tokens.png" alt-text="Screenshot is an example that shows the tokens and ID tokens.":::
 
 1. Select API Permission in the left pane and select **Add a permission**, and then search for **Dynamic CRM** permission.
 
-   :::image type="content" source="../assets/images/collaboration-control/dynamic-crm.png" alt-text="The screenshot is an example that shows how to add a permission":::
+   :::image type="content" source="../assets/images/collaboration-control/dynamic-crm.png" alt-text="Screenshot is an example that shows how to add a permission.":::
 
 1. Ensure to select **user_impersonation** in Permissions after selecting the Dynamics CRM.
 
-   :::image type="content" source="../assets/images/collaboration-control/admin-consent-required.png" alt-text="The screenshot is an example that shows how to enable the checkbox user_impersonation":::
+   :::image type="content" source="../assets/images/collaboration-control/admin-consent-required.png" alt-text="Screenshot is an example that shows how to enable the checkbox user_impersonation.":::
 
 1. In the Certificates & Secrets page, add a **New client secret** and save the value for later use while setting up the connector security.
 
-   :::image type="content" source="../assets/images/collaboration-control/copy-new-secret-value.png" alt-text="The screenshot is an example that shows how to copy new secret value":::
+   :::image type="content" source="../assets/images/collaboration-control/copy-new-secret-value.png" alt-text="Screenshot is an example that shows how to copy new secret value.":::
 
 1. In the application Overview page, copy the **Application (client) ID** and save it for later use while setting up the connector security.
 
-   :::image type="content" source="../assets/images/collaboration-control/application-client-ID.png" alt-text="The screenshot is an example that shows how to save client ID":::
+   :::image type="content" source="../assets/images/collaboration-control/application-client-ID.png" alt-text="Screenshot is an example that shows how to save client ID":::
 
 Now your Azure app is all set and you need to add it as a user application in your environment.
 
@@ -63,43 +63,42 @@ Now your Azure app is all set and you need to add it as a user application in yo
 
 1. Open Power Apps portal, in the upper right corner select **settings** and open **Admin center**.
 
-   :::image type="content" source="../assets/images/collaboration-control/power-apps-interface.png" alt-text="The screenshot is an example that shows the Power apps interface":::
+   :::image type="content" source="../assets/images/collaboration-control/power-apps-interface.png" alt-text="Screenshot is an example that shows the Power apps interface.":::
 
 1. In the admin center, select **Environment** from the left pane and select your environment in the list that you want to add the connector app.
 
-   :::image type="content" source="../assets/images/collaboration-control/power-platform-admin-center.png" alt-text="The screenshot is an example that shows how to add connector app":::
+   :::image type="content" source="../assets/images/collaboration-control/power-platform-admin-center.png" alt-text="Screenshot is an example that shows how to add connector app.":::
 
 1. In the environment details page, select **Settings**.
 
-   :::image type="content" source="../assets/images/collaboration-control/settings-environment.png" alt-text="The screenshot is an example that shows how to select settings":::
+   :::image type="content" source="../assets/images/collaboration-control/settings-environment.png" alt-text="Screenshot is an example that shows how to select settings.":::
 
 1. In the settings details page, select **Users + permissions** section and select **Application users**.
 
-   :::image type="content" source="../assets/images/collaboration-control/users-link.png" alt-text="The screenshot is an example that shows the application user link":::
+   :::image type="content" source="../assets/images/collaboration-control/users-link.png" alt-text="Screenshot is an example that shows the application user link.":::
 
 1. In the App users page, select the **+ New app user**. **Create a new app user** window appears.
 
-   :::image type="content" source="../assets/images/collaboration-control/new-app-user.png" alt-text="The screenshot is an example that shows the new app user":::
+   :::image type="content" source="../assets/images/collaboration-control/new-app-user.png" alt-text="Screenshot is an example that shows the new app user.":::
 
 1. Select **+ Add an app**.
 
-   :::image type="content" source="../assets/images/collaboration-control/create-new-app-user.png" alt-text="The screenshot is an example that shows how to create new app user":::
+   :::image type="content" source="../assets/images/collaboration-control/create-new-app-user.png" alt-text="Screenshot is an example that shows how to create new app user.":::
 
 1. Select your app from the search box and select add again.
 
-   :::image type="content" source="../assets/images/collaboration-control/add-app-aad.png" alt-text="The screenshot is an example that shows how to add app from Azure Active Directory":::
+   :::image type="content" source="../assets/images/collaboration-control/add-app-aad.png" alt-text="Screenshot is an example that shows how to add app from Azure Active Directory.":::
 
-After the app is added, set the **Business unit** and **Security Roles** to your connector application. Select **Create** and your app will be in the list. With the app user set in the environment, we can proceed to custom connector configuration.
+After the app is added, set the **Business unit** and **Security Roles** to your connector application. Select **Create** and your app is in the list. With the app user set in the environment, we can proceed to custom connector configuration.
 
 ## Custom connector configuration
 
 1. Open PowerApps or Power Automate and select the **Custom Connectors** menu. Select **edit** for the Collaboration connector.
 
-   :::image type="content" source="../assets/images/collaboration-control/collaboration-connector.png" alt-text="custom connector menu":::
-
+   :::image type="content" source="../assets/images/collaboration-control/collaboration-connector.png" alt-text="Screenshot shows how to select edit for custom connector menu.":::
 1. In the General Information tab, enter the host with the address of Dynamic 365 instance domain (without the https://).
 
-   :::image type="content" source="../assets/images/collaboration-control/general-information.png" alt-text="The screenshot is an example that shows the General information":::
+   :::image type="content" source="../assets/images/collaboration-control/general-information.png" alt-text="Screenshot is an example that shows the General information.":::
 
 1. In the Security tab, enter the following inputs:
 
@@ -108,17 +107,17 @@ After the app is added, set the **Business unit** and **Security Roles** to your
    * Resource URL:  The URL of your Dynamic 365 instance (`https://org.crm.dynamics.com/`).
    * Scope: Same as above with. Default suffix (`https://org.crm.dynamics.com/.default`).
 
-   :::image type="content" source="../assets/images/collaboration-control/dynamic-365-instance.png" alt-text="The screenshot is an example that shows the Dynamic 365 instance.":::
+   :::image type="content" source="../assets/images/collaboration-control/dynamic-365-instance.png" alt-text="Screenshot is an example that shows the Dynamic 365 instance.":::
 
 1. Select **Update connector** to save the changes and allow your flow to establish connections.
 
-   :::image type="content" source="../assets/images/collaboration-control/custom-connector.png" alt-text="he screenshot is an example that shows the custom connector.":::
+   :::image type="content" source="../assets/images/collaboration-control/custom-connector.png" alt-text="Screenshot is an example that shows the custom connector.":::
 
 ## How to invoke the connector  
 
 Triggers and actions are pre-defined with configurable input and output as a workflow step. Adding the workflow step to the proper workflow position with correct input and output configuration to define when the trigger or action is to be invoked.
 
-  :::image type="content" source="../assets/images/collaboration-control/invoke-the-connector.png" alt-text="The screenshot is an example that shows how to invoke the connector.":::
+  :::image type="content" source="../assets/images/collaboration-control/invoke-the-connector.png" alt-text="Screenshot is an example that shows how to invoke the connector.":::
 
 ### Triggers and actions supported with connector
 
@@ -128,7 +127,7 @@ The following triggers and actions are supported within a flow:
 
   1. When a Collaboration Session is Created.
 
-      :::image type="content" source="../assets/images/collaboration-control/colab-session-created-preview.png" alt-text="Collaboration session created":::
+      :::image type="content" source="../assets/images/collaboration-control/colab-session-created-preview.png" alt-text="Screenshot shows Collaboration session that is created.":::
 
       **Scope:** A scope to limit, which rows can trigger the flow.
 
@@ -136,20 +135,20 @@ The following triggers and actions are supported within a flow:
 
   1. When a Task is created or modified
 
-      :::image type="content" source="../assets/images/collaboration-control/task-created.png" alt-text="The screenshot is an example that shows the task is created or modified":::
+      :::image type="content" source="../assets/images/collaboration-control/task-created.png" alt-text="Screenshot is an example that shows the task is created or modified.":::
 
-      By default, the trigger Planner Task will be disabled and won't trigger. To enable it the following steps must be completed by the tenant admin:
+      By default, the trigger Planner Task is disabled and won't trigger. To enable it, the tenant admin must follow the steps:
 
-      * Create a support ticket under the path Power Apps/Collaboration controls/Settings.
-      * Request that your environment is enabled for the Collaboration connector and provides your Environment URL (preferred) or Organization ID.  
-      * You can add the following sample text to your support request: "Enable Environment URL: `url` for the Collaboration Connector".
-      * To open a support ticket, see [Get Help + Support](/power-platform/admin/get-help-support)
+      1. Create a support ticket under the path Power Apps/Collaboration controls/Settings.
+      1. Request that your environment is enabled for the Collaboration connector and provides your Environment URL (preferred) or Organization ID.  
+      1. You can add the following sample text to your support request: "Enable Environment URL: `url` for the Collaboration Connector".
+      1. To open a support ticket, see [Get Help + Support](/power-platform/admin/get-help-support)
 
 * **Actions**
 
   1. Begin Collaboration session
 
-      :::image type="content" source="../assets/images/collaboration-control/begin-collab-session.png" alt-text="The screenshot is an example that shows how to begin collaboration session":::
+      :::image type="content" source="../assets/images/collaboration-control/begin-collab-session.png" alt-text="Screenshot is an example that shows how to begin collaboration session.":::
 
      This step action creates a new collaboration session for your dataverse business entity:
 
@@ -161,13 +160,13 @@ The following triggers and actions are supported within a flow:
 
       **Metadata (Advanced):** Adds metadata for a collaboration session.
 
-        * **OData Type:** This field needs to be provided if the other key/value are set and need to match exactly #Microsoft.Dynamics.CRM.m365_collaborationmetadata.
+        * **OData Type:** This field needs to be provided if the other key/value is set and needs to match exactly #Microsoft.Dynamics.CRM.m365_collaborationmetadata.
         * **Key:** Key associated with the metadata attribute.
         * **Value:** Value associated with the metadata attribute.
 
   1. Retrieve Collaboration session
 
-      ::image type="content" source="../assets/images/collaboration-control/retrieve-collab-session.png" alt-text="The screenshot is an example that shows how to Retrieve collaboration session.":::
+      :::image type="content" source="../assets/images/collaboration-control/retrieve-collab-session.png" alt-text="Screenshot is an example that shows how to Retrieve collaboration session.":::
 
      This step action returns the collaboration session that matches the provided inputs:
 
@@ -177,7 +176,7 @@ The following triggers and actions are supported within a flow:
 
   1. Update Collaboration session
 
-      :::image type="content" source="../assets/images/collaboration-control/update-collab-session.png" alt-text="The screenshot is an example that shows how to update collaboration session.":::
+      :::image type="content" source="../assets/images/collaboration-control/update-collab-session.png" alt-text="Screenshot is an example that shows how to update collaboration session.":::
 
      This step action updates an existing collaboration session:
 
@@ -189,24 +188,24 @@ The following triggers and actions are supported within a flow:
 
       **Create Metadata (Advanced):** Adds more metadata to a collaboration session record.
 
-      * **OData Type:** This field needs to be provided if the other key/value are set and needs to match exactly #Microsoft.Dynamics.CRM.m365_collaborationmetadata.
+      * **OData Type:** This field needs to be provided if the other key/value is set and needs to match exactly #Microsoft.Dynamics.CRM.m365_collaborationmetadata.
       * **Key:** Key associated with the metadata attribute.
       * **Value:** Value associated with the metadata attribute.
 
       **Update Metadata (Advanced):** Updates existing metadata on a collaboration session record.
 
-      * **OData Type:** This field needs to be provided if the other key/value are set and needs to match exactly #Microsoft.Dynamics.CRM.m365_collaborationmetadata.
+      * **OData Type:** This field needs to be provided if the other key/value is set and needs to match exactly #Microsoft.Dynamics.CRM.m365_collaborationmetadata.
       * **Key:** Key associated with the metadata attribute to update.
       * **Value:** Value associated with the metadata attribute.
 
       **Delete Metadata (Advanced):** Removes any existing metadata on a collaboration session record.
 
-      * **OData Type:** This field needs to be provided if the other key/value are set and needs to match exactly #Microsoft.Dynamics.CRM.m365_collaborationmetadata.
+      * **OData Type:** This field needs to be provided if the other key/value is set and needs to match exactly #Microsoft.Dynamics.CRM.m365_collaborationmetadata.
       * **Key:** Key associated with the metadata attribute to remove.
 
   1. Associate Collaboration Map (external)
 
-      :::image type="content" source="../assets/images/collaboration-control/associate-collab-map.png" alt-text="The screenshot is an example that shows how to associate collaboration map.":::
+      :::image type="content" source="../assets/images/collaboration-control/associate-collab-map.png" alt-text="Screenshot is an example that shows how to associate collaboration map.":::
 
      This step action creates a mapping of an external collaboration entity (outside dataverse) with your collaboration session:
 
@@ -217,13 +216,13 @@ The following triggers and actions are supported within a flow:
      ***Advanced options:***
 
      **Metadata:** Add metadata for a collaboration map.
-     * **OData Type:** This field needs to be provided if the other key/value are set and needs to match exactly #Microsoft.Dynamics.CRM.m365_collaborationmetadata.
+     * **OData Type:** This field needs to be provided if the other key/value is set and needs to match exactly #Microsoft.Dynamics.CRM.m365_collaborationmetadata.
      * **Key:** Key associated with the metadata attribute.
      * **Value:** Value associated with the metadata attribute.
 
   1. Associate Collaboration Map (internal)
 
-      :::image type="content" source="../assets/images/collaboration-control/associate-collab-map-internal.png" alt-text="The screenshot is an example that shows how to associate collaboration map internal.":::
+      :::image type="content" source="../assets/images/collaboration-control/associate-collab-map-internal.png" alt-text="Screenshot is an example that shows how to associate collaboration map internal.":::
 
      This step action creates a mapping of a collaboration entity (dataverse table) with your collaboration session. Internal are intended to create mappings between internal Dataverse entities/tables only.
 
@@ -235,13 +234,13 @@ The following triggers and actions are supported within a flow:
 
      **Metadata (Advanced)** Add metadata for a collaboration map.
 
-     * **OData Type:** This field needs to be provided if the other key/value are set and needs to match exactly #Microsoft.Dynamics.CRM.m365_collaborationmetadata
+     * **OData Type:** This field needs to be provided if the other key/value is set and needs to match exactly #Microsoft.Dynamics.CRM.m365_collaborationmetadata
      * **Key:** Key associated with the metadata attribute
      * **Value:** Value associated with the metadata attribute
 
   1. Update Collaboration Map
 
-      :::image type="content" source="../assets/images/collaboration-control/update-collab-map.png" alt-text="The screenshot is an example that shows how to update collaboration map.":::
+      :::image type="content" source="../assets/images/collaboration-control/update-collab-map.png" alt-text="Screenshot is an example that shows how to update collaboration map.":::
 
      This step action updates an existing collaboration map:
 
@@ -254,24 +253,24 @@ The following triggers and actions are supported within a flow:
 
      **Create Metadata:** Adds more metadata to a collaboration map record.
 
-     * **OData Type:** This field needs to be provided if the other key/value are set and needs to match exactly #Microsoft.Dynamics.CRM.m365_collaborationmetadata.
+     * **OData Type:** This field needs to be provided if the other key/value is set and needs to match exactly #Microsoft.Dynamics.CRM.m365_collaborationmetadata.
      * **Key:** Key associated with the metadata attribute.
      * **Value:** Value associated with the metadata attribute.
 
      **Update Metadata:** Updates existing metadata on a collaboration map record.
 
-     * **OData Type:** This field needs to be provided if the other key/value are set and needs to match exactly #Microsoft.Dynamics.CRM.m365_collaborationmetadata
+     * **OData Type:** This field needs to be provided if the other key/value is set and needs to match exactly #Microsoft.Dynamics.CRM.m365_collaborationmetadata
      * **Key:** Key associated with the metadata attribute to update
      * **Value:** Value associated with the metadata attribute
 
      **Delete Metadata:** Removes any existing metadata on a collaboration map record.
 
-     * **OData Type:** This field needs to be provided if the other key/value are set and needs to match exactly #Microsoft.Dynamics.CRM.m365_collaborationmetadata.
+     * **OData Type:** This field needs to be provided if the other key/value is set and needs to match exactly #Microsoft.Dynamics.CRM.m365_collaborationmetadata.
      * **Key:** Key associated with the metadata attribute to remove.
 
   1. Get Collaboration Metadata
 
-      :::image type="content" source="../assets/images/collaboration-control/get-collab-metadata.png" alt-text="The screenshot is an example that shows how to get collaboration metadata.":::
+      :::image type="content" source="../assets/images/collaboration-control/get-collab-metadata.png" alt-text="Screenshot is an example that shows how to get collaboration metadata.":::
 
      This step action lists all metadata matching the specified filter.
 
@@ -281,7 +280,7 @@ The following triggers and actions are supported within a flow:
 
   1. Create Planner Task
 
-      :::image type="content" source="../assets/images/collaboration-control/create-planner-task.png" alt-text="The screenshot is an example that shows how to create planner task.":::
+      :::image type="content" source="../assets/images/collaboration-control/create-planner-task.png" alt-text="Screenshot is an example that shows how to create planner task.":::
 
      This step action creates a Graph Planner Task using Collaboration controls Planner task virtual table:
 
@@ -306,11 +305,11 @@ The following triggers and actions are supported within a flow:
      * **Percent Complete:** Percentage of task completion (0-100)
      * **Preview Type:** This sets the type of preview that shows up on the task. The possible values are: automatic, noPreview, checklist, description, reference.
      * **Reference Count:** Number of external references that exist on the task.
-     * **Start Date Time:** Date and time at which the task starts. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * **Start Date Time:** Date and time at which the task starts. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 01, 2014 is 2014-01-01T00:00:00Z.
 
   1. Get Planner Task
 
-      :::image type="content" source="../assets/images/collaboration-control/get-planner-task.png" alt-text="The screenshot is an example that shows the get planner task.":::
+      :::image type="content" source="../assets/images/collaboration-control/get-planner-task.png" alt-text="Screenshot is an example that shows the get planner task.":::
 
      This step action returns a Planner Task data using Collaboration controls Planner task virtual table:
 
@@ -318,18 +317,18 @@ The following triggers and actions are supported within a flow:
 
   1. Update Planner Task
 
-      :::image type="content" source="../assets/images/collaboration-control/update-planner-task-preview.png" alt-text="Update planner task":::
+      :::image type="content" source="../assets/images/collaboration-control/update-planner-task-preview.png" alt-text="Screenshot shows Update planner task.":::
 
-     This step action updates a planner task record using Collaboration controls Planner task virtual table
+     This step action updates a planner task record using Collaboration controls Planner task virtual table.
 
      * **Task ID (Required):** Task unique identifier.
-     * **Assignments:** A json formatted object that represents all the assignments of a Task. See. plannerAssignments resource type - Microsoft Graph v1.0 | Microsoft Docs  
+     * **Assignments:** A json formatted object that represents all the assignments of a Task. See plannerAssignments resource type - Microsoft Graph v1.0 | Microsoft Docs.  
      * **Bucket ID:** Bucket ID to where the task belongs.  
      * **Planner Task Details:** Represents the additional information about a task.
-     * **Due Date Time:** Date and time at which the task is due. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on January 1, 2014 is 2014-01-01T00:00:00Z.
+     * **Due Date Time:** Date and time at which the task is due. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on January 01, 2014 is 2014-01-01T00:00:00Z.
      * **Priority:** Priority of the task. 0 and 10 (inclusive) increasing value being lower priority.  
-     * **Percent Complete:** Percentage of task completion (0-100)
-     * **Title:** Title of the task
+     * **Percent Complete:** Percentage of task completion (0-100).
+     * **Title:** Title of the task.
 
      ***Advanced options:***
 
@@ -342,15 +341,20 @@ The following triggers and actions are supported within a flow:
 
 **Example Flow Scenario**
 
-The following are some example of flows:
+The following are examples of flows:
 
 1. Getting a response from Microsoft forms, creating a Collaboration session and a task associated.
 
-   :::image type="content" source="../assets/images/collaboration-control/response-submitted.png" alt-text="The screenshot is an example that shows how to submit new response.":::
+   :::image type="content" source="../assets/images/collaboration-control/response-submitted.png" alt-text="Screenshot is an example that shows how to submit new response.":::
 
 1. Every time a collaboration session is created, capture the details and send an e-mail notification.
 
-   :::image type="content" source="../assets/images/collaboration-control/colab-session-created-preview.png" alt-text="The screenshot is an example that shows the Collaboration session created":::
+   :::image type="content" source="../assets/images/collaboration-control/colab-session-created-preview.png" alt-text="Screenshot is an example that shows the Collaboration session created.":::
 
 > [!NOTE]
 > Multiple flows could be triggered in this way to perform different actions, using data from the response of the Collaboration session creation.
+
+## See also
+
+* [Integrate web apps](integrate-web-apps-overview.md)
+* [Connectors](../webhooks-and-connectors/what-are-webhooks-and-connectors.md#connectors)

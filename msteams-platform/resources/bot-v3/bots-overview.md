@@ -34,7 +34,7 @@ With Teams apps, you can make the bot the star of your experience, or just a hel
 
 Teams supports most of the [Microsoft Bot Framework](https://dev.botframework.com/). (If you already have a bot that's based on the Bot Framework, you can easily adapt it to work in Teams.) We recommend you use either C# or Node.js to take advantage of our [SDKs](/microsoftteams/platform/#pivot=sdk-tools). These packages extend the basic Bot Builder SDK classes and methods:
 
-* Using specialized card types like the Office 365 Connector card.
+* Using specialized card types like the connector card for Microsoft 365 Groups.
 * Consuming and setting Teams-specific channel data on activities.
 * Processing message extension requests.
 
@@ -68,4 +68,4 @@ The following articles will guide you through the process of creating a great bo
 
 ## See also
 
-[Bot Framework samples](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).
+[Bot Framework samples](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/README.md).

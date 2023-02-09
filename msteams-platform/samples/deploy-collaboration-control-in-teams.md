@@ -12,11 +12,11 @@ ms.topic: conceptual
 Collaboration controls currently work best within Microsoft Teams. You can create a new app that can be embedded inside Teams app as both, a personal app and a tab app.
 
 > [!NOTE]
-> Currently Collaboration controls are available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
+> Currently, Collaboration controls are available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
 
 ## Configure the app for Teams
 
-The app that you've created in [create a model-driven application](/samples/app-with-collaboration-controls.md#create-a-model-driven-application) only have a single left pane and there are no complex commands. So before adding your app into Teams, you can hide the left pane and make more comprehensible header view.
+The app that you've created in [create a model-driven application](~/samples/app-with-collaboration-controls.md#create-a-model-driven-application) only have a single left pane and there are no complex commands. So before adding your app into Teams, you can hide the left pane and make more comprehensible header view.
 
 > [!NOTE]
 > Don't enable the following steps if you want to display the left pane and high-density header to your users.
@@ -29,31 +29,31 @@ To do so, we'll use Power Apps **new app** settings.
 
 1. Search for and select **Setting definition**.
 
-     :::image type="content" source="../assets/images/collaboration-control/settings-defnition.png" alt-text="Setting definition":::
+     :::image type="content" source="../assets/images/collaboration-control/settings-defnition.png" alt-text="Screenshot shows searching and setting definition in Power apps.":::
 
 1. Search and select **Hide the navbar** from the list of settings definitions. This hides the left pane in your application.
 
-     :::image type="content" source="../assets/images/collaboration-control/hide-the-nav-bar.png" alt-text="Hide the nav bar":::
+     :::image type="content" source="../assets/images/collaboration-control/hide-the-nav-bar.png" alt-text="Screenshot shows how to select hide the nav bar.":::
 
 1. On the lower right  of your application in the edit pane, there's a section titled **Setting app values**. If you created your app using the modern app designer, your app appears on the list. Select **New app value** under your app.
 
 1. Change the value from **No** to **Yes.**
 
-     :::image type="content" source="../assets/images/collaboration-control/value-to-yes.png" alt-text="Change value to yes":::
+     :::image type="content" source="../assets/images/collaboration-control/value-to-yes.png" alt-text="Screenshot displays dropdown to select change value to yes.":::
 
 1. Select **Save.**
 
 1. Search and select **App high density page header** from the list of settings definitions and repeat the process.
 
-     :::image type="content" source="../assets/images/collaboration-control/density-page-header.png" alt-text="Density page header":::
+     :::image type="content" source="../assets/images/collaboration-control/density-page-header.png" alt-text="Screenshot shows how to select app high density page header.":::
 
 1. Select **Back to solutions**.
 
-     :::image type="content" source="../assets/images/collaboration-control/default-solution.png" alt-text="Default solution":::
+     :::image type="content" source="../assets/images/collaboration-control/default-solution.png" alt-text="The screenshot shows default solution.":::
 
 1. Select **Publish all customizations** to publish all the work you've completed.
 
-     :::image type="content" source="../assets/images/collaboration-control/publish-cusomization.png" alt-text="Publish all customizations":::
+     :::image type="content" source="../assets/images/collaboration-control/publish-cusomization.png" alt-text="Publish all customizations.":::
 
 ## Add the app to Microsoft Teams app catalog
 
@@ -61,11 +61,11 @@ As the settings are defined, you can now add the app to Microsoft Teams. To star
 
 To add the app to Teams, select **Add to Teams**.
 
-:::image type="content" source="../assets/images/collaboration-control/add-to-teams.png" alt-text="Add to Teams":::
+:::image type="content" source="../assets/images/collaboration-control/add-to-teams.png" alt-text="Add to Teams.":::
 
 Selecting **Add to Teams** opens a dialog where you can review the details and select **Download app**, which saves the Microsoft Teams app manifest to your device.
 
-:::image type="content" source="../assets/images/collaboration-control/colab-manager-inspection.png" alt-text="The screenshot is an example that shows the collaboration manager inspection":::
+:::image type="content" source="../assets/images/collaboration-control/colab-manager-inspection.png" alt-text="The screenshot is an example that shows the collaboration manager inspection.":::
 
 To upload your app to Teams, see [upload your app in Team](~/concepts/deploy-and-publish/apps-upload.md).
 
@@ -95,7 +95,7 @@ Following are required to enable users to run the deployed Collaboration Manager
      1. **Administrator:** Search for the user within your organization that you want to assign as the administrator by entering characters.
      1. **Team type:** Select the team type. The following steps assume that you've selected Owner from the dropdown list. The other team types (Microsoft 365 team and Microsoft Azure Active Directory team) auto populates team members from Azure Active Directory.
 
-         :::image type="content" source="../assets/images/collaboration-control/new-team.png" alt-text="New team":::
+         :::image type="content" source="../assets/images/collaboration-control/new-team.png" alt-text="Screenshot to select new team type.":::
 
      1. Ensure that you note the team name. You'll need this later to assign this team as the owner of a record.
 
@@ -110,7 +110,7 @@ Following are required to enable users to run the deployed Collaboration Manager
 
 1. To add new team members, select **+ Add team members** and choose users from your organization to add.
 
-     :::image type="content" source="../assets/images/collaboration-control/add-team-members.png" alt-text="The screenshot describes how to add Team members":::
+     :::image type="content" source="../assets/images/collaboration-control/add-team-members.png" alt-text="The screenshot describes how to add team members.":::
 
 1. To delete a team member, select the user and then choose **Remove**.
 
@@ -120,7 +120,7 @@ Following are required to enable users to run the deployed Collaboration Manager
 
 1. Select **Security roles**.
 
-     :::image type="content" source="../assets/images/collaboration-control/users-permission.png" alt-text="Users permission":::
+     :::image type="content" source="../assets/images/collaboration-control/users-permission.png" alt-text="Screenshot displays to add new team members for users permission.":::
 
 1. Select on **New role** at the upper left of the page, which now opens a new page.
 
@@ -130,7 +130,7 @@ Following are required to enable users to run the deployed Collaboration Manager
 
      1. Give organization permissions (full green circle) for each of the collaboration entities, **Collaboration Map**, **Collaboration Metadata**, and **Collaboration Root**.
 
-         :::image type="content" source="../assets/images/collaboration-control/collab-map.png" alt-text="Collaboration map":::
+         :::image type="content" source="../assets/images/collaboration-control/collab-map.png" alt-text="Screenshot shows how to create a security role on collaboration map.":::
 
 1. Select **Save** and **Close**.
 
@@ -142,10 +142,14 @@ Following are required to enable users to run the deployed Collaboration Manager
 
 1. Choose **Manage security roles** from the header.
 
-     :::image type="content" source="../assets/images/collaboration-control/edit-team.png" alt-text="Edit team":::
+     :::image type="content" source="../assets/images/collaboration-control/edit-team.png" alt-text="Screenshot displays collaboration map, collaboration metadata, and collaboration root. for edit team.":::
 
 1. Select the roles [created in a security role](#create-a-security-role).
 
 1. Select **Save**.
 
 For more information on role privileges, see [configure user security in an environment](/power-platform/admin/database-security).
+
+## See also
+
+[Integrate web apps](integrate-web-apps-overview.md)

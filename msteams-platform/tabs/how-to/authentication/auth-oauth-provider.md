@@ -26,7 +26,7 @@ The following table provides the list of `authenticate()` API parameters (`Authe
 | --- | --- |
 |`isExternal` | The type of parameter is Boolean, which indicates that the auth window opens in an external browser.|
 |`height` |The preferred height for the pop-up. The value can be ignored if outside the acceptable bounds.|
-|`url`  <br>|The URL of 3P app server for the authentication pop-up, with the following two parameter placeholders:</br> <br> - `oauthRedirectMethod`: Pass placeholder in `{}`. This placeholder is replaced by deeplink or web page by Teams platform, which informs app server if the call is coming from mobile platform.</br> <br> - `authId`: This placeholder is replaced by UUID. The app server uses it to maintain session.| 
+|`url`  <br>|The URL of 3P app server for the authentication pop-up, with the following two parameter placeholders:</br> <br> - `oauthRedirectMethod`: Pass placeholder in `{}`. This placeholder is replaced by deeplink or web page by Teams platform, which informs app server if the call is coming from mobile platform.</br> <br> - `authId`: This placeholder is replaced by UUID. The app server uses it to maintain session.|
 |`width`|The preferred width for the pop-up. The value can be ignored if outside the acceptable bounds.|
 
 For more information on parameters, see the [authenticate(AuthenticatePopUpParameters)](/javascript/api/@microsoft/teams-js/authentication#@microsoft-teams-js-authentication-authenticate) function.
@@ -34,8 +34,9 @@ For more information on parameters, see the [authenticate(AuthenticatePopUpParam
 ## Add authentication to external browsers
 
 > [!NOTE]
-> * Currently, you can add authentication to external browsers for tabs in mobile only. 
-> * Use the beta version of JS SDK to leverage the functionality. Beta versions are available through [NPM](https://www.npmjs.com/package/@microsoft/teams-js/v/1.12.0-beta.2).
+>
+> * Currently, you can add authentication to external browsers for tabs in mobile only.
+> * Use the beta version of TeamsJS to leverage the functionality. Beta versions are available through [NPM](https://www.npmjs.com/package/@microsoft/teams-js/v/1.12.0-beta.2).
 
 The following image provides the flow to add authentication to external browsers:
 
@@ -45,10 +46,9 @@ The following image provides the flow to add authentication to external browsers
 
 1. Initiate the external auth-login process.
 
-   The 3P app calls the SDK function `authentication.authenticate` with `isExternal` set as true to initiate the external auth-login process.
+   The 3P app calls the TeamsJS function `authentication.authenticate` with `isExternal` set as true to initiate the external auth-login process.
 
    The passed `url` contains placeholders for `{authId}`, and `{oauthRedirectMethod}`.  
-
 
     ```JavaScript
     import { authentication } from "@microsoft/teams-js";
@@ -121,7 +121,7 @@ The following image provides the flow to add authentication to external browsers
    return res.redirect(`msteams://teams.microsoft.com/l/auth-callback?authId=${state.authId}&result=${req.query.code}`)
    ```
 
- 8. Teams calls success callback and sends result.
+8. Teams calls success callback and sends result.
 
     Teams calls the success callback and sends the result (auth code) to the 3P app. The 3P app receives the code in the success callback and use the code to retrieve the token, then the user information and update the user interface.
 
@@ -133,5 +133,5 @@ The following image provides the flow to add authentication to external browsers
 
 ## See also
 
-* [Configure identity providers](../../../concepts/authentication/configure-identity-provider.md)
+* [Configure identity providers](~/concepts/authentication/authentication.md)
 * [Microsoft Teams authentication flow for tabs](auth-flow-tab.md)

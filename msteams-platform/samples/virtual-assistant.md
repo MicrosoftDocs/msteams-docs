@@ -10,7 +10,7 @@ ms.topic: how-to
 Virtual Assistant is a Microsoft open-source template that enables you to create a robust conversational solution while maintaining full control of user experience, organizational branding, and necessary data. The [Virtual Assistant core template](https://microsoft.github.io/botframework-solutions/overview/virtual-assistant-template) is the basic building block that brings together the Microsoft technologies required to build a Virtual Assistant, including the [Bot Framework SDK](https://github.com/microsoft/botframework-sdk), [Language Understanding (LUIS)](https://www.luis.ai/), and [QnA Maker](https://www.qnamaker.ai/). It also brings together the essential capabilities including  skills registration, linked accounts, basic conversational intent to offer a range of seamless interactions and experiences to users. In addition, the template capabilities include rich examples of reusable conversational [skills](https://microsoft.github.io/botframework-solutions/overview/skills).  Individual skills are integrated in a Virtual Assistant solution to enable multiple scenarios. Using the Bot Framework SDK, skills are presented in source code form, enabling you to customize and extend as required. For more information on skills of Bot Framework, see [What is a Bot Framework skill](https://microsoft.github.io/botframework-solutions/overview/skills/). This document guides you on Virtual Assistant implementation considerations for organizations, how to create a Teams focused Virtual Assistant, related example, code sample, and limitations of Virtual Assistant.
 The following image displays the overview of virtual assistant:
 
-![Virtual Assistant overview diagram](../assets/images/bots/virtual-assistant/overview.png)
+:::image type="content" source="../assets/images/bots/virtual-assistant/overview.png" alt-text="Diagram that shows Virtual Assistant overview.":::
 
 Text message activities are routed to associated skills by the Virtual Assistant core using a [dispatch](/azure/bot-service/bot-builder-tutorial-dispatch?view=azure-bot-service-4.0&tabs=cs&preserve-view=true) model.
 
@@ -25,14 +25,14 @@ The decision to add a Virtual Assistant includes many determinants and differs f
 
 The following image displays the business functions of Virtual Assistant:
 
-![Central team maintains the assistant, and business function teams contribute skills](../assets/images/bots/virtual-assistant/business-functions.png)
+:::image type="content" source="../assets/images/bots/virtual-assistant/business-functions.png" alt-text="Diagram that shows central team maintains the assistant, and business function teams contribute skills.":::
 
 ## Create a Teams-focused Virtual Assistant
 
-Microsoft has published a [Microsoft Visual Studio template](https://marketplace.visualstudio.com/items?itemName=BotBuilder.VirtualAssistantTemplate) for building Virtual Assistants and skills. With the Visual Studio template, you can create a Virtual Assistant, powered by a text based experience with support for limited rich cards with actions. We've enhanced the Visual Studio base template to include Microsoft Teams platform capabilities and power great Teams app experiences. A few of the capabilities include support for rich Adaptive Cards, task modules, teams or group chats, and message extensions. For more information on extending Virtual Assistant to Microsoft Teams, see [Tutorial: Extend Your Virtual Assistant to Microsoft Teams](https://microsoft.github.io/botframework-solutions/clients-and-channels/tutorials/enable-teams/1-intro/).
+Microsoft has published a [Microsoft template](https://botbuilder.myget.org/feed/aitemplates/package/nuget/Microsoft.Bot.Solutions.VirtualAssistantTemplate) for building Virtual Assistants and skills. With the template, you can create a Virtual Assistant, powered by a text based experience with support for limited rich cards with actions. We've enhanced template to include Microsoft Teams platform capabilities and power great Teams app experiences. A few of the capabilities include support for rich Adaptive Cards, task modules, teams or group chats, and message extensions. For more information on extending Virtual Assistant to Microsoft Teams, see [Tutorial: Extend Your Virtual Assistant to Microsoft Teams](https://microsoft.github.io/botframework-solutions/clients-and-channels/tutorials/enable-teams/1-intro/).
 The following image displays the high level diagram of a Virtual Assistant solution:
 
-![High-level diagram of a Virtual Assistant solution](../assets/images/bots/virtual-assistant/high-level-diagram.png)
+:::image type="content" source="../assets/images/bots/virtual-assistant/high-level-diagram.png" alt-text="Diagram that shows Virtual Assistant solution.":::
 
 ### Add Adaptive Cards to your Virtual Assistant
 
@@ -119,7 +119,7 @@ A code snippet to extract  `skillId` from card action data is shown in the follo
 
 Virtual Assistant can handle interruptions in cases where a user tries to invoke a skill while another skill is currently active. `TeamsSkillDialog`, and `TeamsSwitchSkillDialog`are introduced based on Bot Framework's [SkillDialog](https://github.com/microsoft/botframework-solutions/blob/5b46d73e220bbb4fba86c48be532e495535ca78a/sdk/csharp/libraries/microsoft.bot.solutions/Skills/SkillDialog.cs) and [SwitchSkillDialog](https://github.com/microsoft/botframework-solutions/blob/6d40fa8ae05f96b0c5e0464e01361a9e1deb696c/sdk/csharp/libraries/microsoft.bot.solutions/Skills/Dialogs/SwitchSkillDialog.cs). They enable users to switch a skill experience from card actions. To handle this request, the Virtual Assistant prompts the user with a confirmation message to switch skills:
 
-![Confirmation prompt when switching to a new skill](../assets/images/bots/virtual-assistant/switch-skills-prompt.png)
+:::image type="content" source="../assets/images/bots/virtual-assistant/switch-skills-prompt.png" alt-text="Screenshot of the confirmation prompt when switching to a new skill.":::
 
 ### Handle task module requests
 
@@ -341,7 +341,7 @@ The following example shows how to convert the Book-a-room app template to a Vir
 Book-a-room is a Teams that allows users quickly to find and reserve a meeting room for 30, 60, or 90 minutes starting from the current time. The default time is 30 minutes. The Book-a-room bot scopes to personal or 1:1 conversations.
 The following image displays a Virtual Assistant with a **book a room** skill:
 
-![Virtual Assistant with a "book a room" skill](../assets/images/bots/virtual-assistant/book-a-room-skill.png)
+:::image type="content" source="../assets/images/bots/virtual-assistant/book-a-room-skill.png" alt-text=" Diagram that shows a Virtual Assistant with book a room skill.":::
 
 Followings are the delta changes introduced to convert it to a skill, which is attached to a Virtual Assistant. Similar guidelines are followed to convert any existing v4 bot to a skill.
 
@@ -560,7 +560,7 @@ For more information,, refer [this](/microsoftteams/platform/samples/virtual-ass
     }
 ```
 
-You can also leverage existing skills from [Bot Framework Solutions repository](https://github.com/microsoft/botframework-components/tree/main/skills/csharp) or create a new skill altogether from scratch. For creating a new skill, see [tutorials to create a new skill](https://microsoft.github.io/botframework-solutions/overview/skills/). For Virtual Assistant and skills architecture documentation, see[Virtual Assistant and skills architecture](/azure/bot-service/skills-conceptual?view=azure-bot-service-4.0&preserve-view=true).  
+You can also leverage existing skills from [Bot Framework Solutions repository](https://github.com/microsoft/botframework-components/tree/main/skills/csharp) or create a new skill altogether from scratch. For creating a new skill, see [tutorials to create a new skill](https://microsoft.github.io/botframework-solutions/overview/skills/). For Virtual Assistant and skills architecture documentation, see [Virtual Assistant and skills architecture](/azure/bot-service/skills-conceptual?view=azure-bot-service-4.0&preserve-view=true).  
 
 ## Limitations of Virtual Assistant
 
@@ -575,7 +575,7 @@ You can also leverage existing skills from [Bot Framework Solutions repository](
 
 ## Code sample
 
-| **Sample name** | **Description** | **C#**  **.NET** |
+| **Sample name** | **Description** |**.NET** |
 |----------|-----------------|---------------------------|
 | Updated visual studio template | Customized template to support teams capabilities. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-virtual-assistant/csharp) |
 | Book-a-room bot skill code | Lets you quickly find and book a meeting room on the go. | [View](https://github.com/OfficeDev/microsoft-teams-apps-bookaroom/tree/nebhagat/microsoft-teams-apps-bookaroom-skill) |
@@ -583,5 +583,7 @@ You can also leverage existing skills from [Bot Framework Solutions repository](
 ## See also
 
 * [Integrate web apps](~/samples/integrate-web-apps-overview.md)
+* [Adaptive Cards](../task-modules-and-cards/what-are-cards.md#adaptive-cards)
+* [App manifest](../resources/schema/manifest-schema.md)
 * [Book-a-room](app-templates.md#app-template-code-samples)
 * [Microsoft Teams bot](../bots/what-are-bots.md)

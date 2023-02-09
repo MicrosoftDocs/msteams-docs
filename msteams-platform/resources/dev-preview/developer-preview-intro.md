@@ -1,6 +1,6 @@
 ---
 title: Public developer preview for Microsoft Teams
-description: In this article, know the features that are in the Public Developer Preview of Microsoft Teams and developer preview app manifest.
+description: A Developer Preview (Beta) is public program to explore and test upcoming features for potential inclusion in your Microsoft Teams app.
 ms.topic: conceptual
 ms.localizationpriority: high
 ---
@@ -15,7 +15,7 @@ Developer Preview is a public program for developers, which provides early acces
 
 Many features enabled in developer preview will require alterations to your app manifest JSON file. To do so, you'll need to use the [developer preview manifest schema](~/resources/schema/manifest-schema-dev-preview.md). If you use this schema, you won't be able to use [Developer Portal for Teams](~/concepts/build-and-test/teams-developer-portal.md) to make these changes, nor will you be able to use it to upload your app for testing. To upload your app you'll need to select the `More apps` icon on the app bar, then select the `Upload a custom app link`. Using this method you can only upload a zipped version of your app package.
 
-You may find it useful to use Developer Portal for Teams to create the non-developer preview portions of your app package, then export that package and manually edit the `manifest.json` file to add the developer preview features you wish to use. Once you've added developer preview features to the `manifest.json` file, you won't be able to re-import the package into Developer Portal for Teams.
+You may find it useful to use Developer Portal for Teams to create the non-developer preview portions of your app package, then export that package and manually edit the `manifest.json` file to add the developer preview features you wish to use. Once you've added developer preview features to the `manifest.json` file, you won't be able to reimport the package into Developer Portal for Teams.
 
 ## Enable developer preview
 
@@ -24,6 +24,9 @@ Developer preview is enabled on a per-client basis, but the option to turn on de
 Using an app that contains developer preview features may cause clients that haven't enabled developer preview to behave unexpectedly. If you don't see an entry for developer preview, the most likely reason is your organization isn't configured for app uploading.
 
 ### On a desktop or web client
+
+> [!NOTE]
+> If your tenant is enrolled for [Microsoft 365 Targeted Releases](/microsoft-365/admin/manage/release-options-in-office-365), developer preview is automatically enabled and the developer preview switch isn't available.
 
 To enable the public developer preview on a desktop or web client:
 
