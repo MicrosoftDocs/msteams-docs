@@ -21,9 +21,6 @@ items:
     
     :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/your-helloworld-app.png" alt-text="Diagram showing this app has three features.":::
     
-    > [!NOTE]
-    > In this tutorial, you can create a tab app with JavaScript.
-
     In this tutorial, you learn:
 
     - How to set up a new project with Teams Toolkit.
