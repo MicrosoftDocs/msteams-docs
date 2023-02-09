@@ -19,7 +19,7 @@ For anonymous users to interact with the apps in Teams meetings, ensure the foll
 ## App manifest update for anonymous users
 
 > [!NOTE]
-> The `supportsAnonymousGuestUsers` property is supported in manifest schema version 1.16 or later.
+> The `supportsAnonymousGuestUsers` property is supported in manifest schema v1.16 or later.
 
 To allow anonymous users to interact with the tab app, update the `supportsAnonymousGuestUsers` property to `true` in your app manifest. Following is an example of the manifest:
 
