@@ -28,11 +28,11 @@ Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-tool
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/select-resource.png" alt-text="Screenshot showing resources for provisioning":::
 
-    A dialog warns you that costs may be incurred when running resources in Azure.
-
 1. Select **Provision**.
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provision-warning.png" alt-text="The screenshot showing the provisioning of dialog.":::
+
+   A dialog warns you that costs may be incurred when running resources in Azure.
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/provision-confirm1.png" alt-text="Screenshot showing the selection of subscription.":::
 
