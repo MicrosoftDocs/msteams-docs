@@ -54,7 +54,7 @@ Apps receive the following information for an anonymous user when they call the 
 microsoftTeams.app.getContext().then((context) => {
     if (context.user.licenseType === "Anonymous")
         {
-            //Add your custom logic here
+            // Add your custom logic here
         }
 });
 
@@ -145,13 +145,14 @@ protected override async Task OnTeamsMembersAddedAsync(IList<TeamsChannelAccount
   {
      foreach (var teamMember in membersAdded)
      {
+         // If UserRole == "anonymous", it indicates an anonymous user
          if (teamMember.UserRole == "anonymous" )
           {
-             //Add your custom logic here
+             // Add your custom logic here
           }
           else
           {
-           //Add your custom logic here
+           // Add your custom logic here
           }
      }
   }
@@ -163,14 +164,14 @@ protected override async Task OnTeamsMembersAddedAsync(IList<TeamsChannelAccount
 protected override async Task OnTeamsMembersRemovedAsync(IList<TeamsChannelAccount> membersRemoved, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
    foreach (var member in membersRemoved)
    {
-      //If AadObjectId is null, it indicates an anonymous user
+      // If AadObjectId is null, it indicates an anonymous user
        if (member.AadObjectId == null)
        {
-           //Add your custom logic here
+           // Add your custom logic here
        }
        else
        {
-           //Add your custom logic here
+           // Add your custom logic here
        }
    }
 ```
