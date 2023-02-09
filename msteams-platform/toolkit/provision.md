@@ -13,6 +13,9 @@ zone_pivot_groups: teams-app-platform
 
 TeamsFx integrates with Azure and the Microsoft 365 cloud, which allows to place your app in Azure with a single command. TeamsFx integrates with Azure Resource Manager (ARM), which enables to provision Azure resources that your application needs for code approach.
 
+> [!NOTE]
+> Teams toolkit doesn't provide support to deploy resources to other cloud platforms except Azure, however, the user can deploy manually.
+
 ::: zone pivot="visual-studio-code"
 
 ## Provision using Teams Toolkit in Microsoft Visual Studio Code
@@ -182,7 +185,7 @@ To ensure the TeamsFx tool functions properly, customize ARM template that satis
 
 * Ensure that the folder structure and file name remain unchanged. The tool may append new content to the existing files when you add more resources or capabilities to your project.
 * Ensure that the names of the auto-generated parameters and its property names remain unchanged. The auto-generated parameters may be used when you add more resources or capabilities to your project.
-* Ensure that the output of the auto-generated ARM template remain unchanged. You can add more outputs to the ARM template. The output is `.fx\states\state.{env}.json` and can be used in other features, such as deploy and validate manifest file.
+* Ensure that the output of the auto-generated ARM template remains unchanged. You can add more outputs to the ARM template. The output is `.fx\states\state.{env}.json` and can be used in other features, such as deploy and validate manifest file.
 
 ### Customize Teams apps
 
