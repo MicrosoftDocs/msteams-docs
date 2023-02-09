@@ -20,7 +20,7 @@ Outlook-enabled message extensions can be distributed to test and production ten
 
 ### Teams client
 
-From the **Apps** menu, select **Manage your apps** > **Publish an app** > **Submit an app to your org**. To submit an app requires approval from your IT admin.
+From the **Apps** menu, select **Manage your apps** > **Upload an app** > **Submit an app to your org**. To submit an app requires approval from your IT admin.
 
 ### Teams Developer Portal
 
