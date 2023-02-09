@@ -57,12 +57,12 @@ Create the link using the following URL appended with your app ID: `https://team
 
 ## Stop app distribution
 
-You can remove an app from the [Microsoft commercial marketplace](/azure/marketplace/overview) to prevent its discovery and use.
+You can remove an app from the [Microsoft commercial marketplace](/azure/marketplace/overview) and the Microsoft Teams store to prevent its discovery and use.
 
 To stop distribution of an app after you've published, follow the steps:
 
-1. On the **Product overview** page, select **Stop selling**. It removes the app from the Microsoft AppSource.
-1. To initiate de-listing of the app, on **Partner Center**, select the **Overview** page, and then select **Stop selling**.
+1. In **Partner Center**, on the **Product overview** page, select **Stop selling**. It removes the app from the Microsoft AppSource.
+1. To initiate de-listing of the app from the Microsoft Teams store, write to [apphealthevaluation](mailto:apphealthevaluation@microsoft.com).
 
 After you stop the distribution of an app, you can still see it in Partner Center with a **Not available** status. If you decide to list the app again, follow the instructions to [Publish your app to the Microsoft Teams store](../publish.md).
 

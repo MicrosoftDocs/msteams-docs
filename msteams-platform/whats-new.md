@@ -1,6 +1,6 @@
 ---
 title: What is new and updated for developers in Teams
-description: Learn about new Microsoft Teams developer features and updates to existing features, deprecation notes, and changes. Subscribe to the RSS feed for latest updates.
+description: Learn about new Microsoft Teams developer features and updates to existing features, deprecation notes, and changes. Subscribe to the RSS feed for latest updates
 ms.topic: reference
 ms.localizationpriority: high
 zone_pivot_groups: What-new-features
@@ -24,13 +24,9 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 Teams platform features that are available to all app developers.
 
-**2022 December**
+**2023 January**
 
-* ***December 8, 2022***: [Teams developer documentation FAQs](teams-faq.md)
-
-* ***December 07, 2022***: [Notification bot in Teams](bots/how-to/conversations/notification-bot-in-teams.md)
-
-* ***December 07, 2022***: [Command bot in Teams](bots/how-to/conversations/command-bot-in-teams.md)
+***January 31, 2023***: [Introducing update and soft delete event notifications in bot](bots/how-to/conversations/conversation-messages.md#update-message).
 
 :::column-end:::
 :::row-end:::
@@ -41,6 +37,9 @@ Teams platform features that are available to all app developers.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
+| 08/12/2022 | Introducing Teams developer documentation FAQs. | [Teams developer documentation FAQs](teams-faq.md) |
+| 07/12/2022 | Introducing notification bot in Teams. | Build bots > Bot conversations > [Notification bot in Teams](bots/how-to/conversations/notification-bot-in-teams.md) |
+| 07/12/2022 | Introducing command bot in Teams. | Build bots > Bot conversations > [Command bot in Teams](bots/how-to/conversations/command-bot-in-teams.md) |
 | 29/11/2022 | Introducing plan analytics for your Teams app. | Plan your app > Plan analytics for your Teams app > [Overview](concepts/design/overview-analytics.md) |
 | 23/11/2022 | Updated integrate location capabilities. | Integrate device capabilities > [Integrate location capabilities](concepts/device-capabilities/location-capability.md) |
 | 22/11/2022 | Revamped enable SSO for your bot and message extension app. | Add authentication > Enable SSO for your Teams app > Enable SSO for your bot and message extension app > [Overview](bots/how-to/authentication/bot-sso-overview.md) |
@@ -298,15 +297,17 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 
 Developer preview is a public program that provides early access to unreleased Teams platform features.
 
-**2022 December**
+**2023 January**
 
-***December 05, 2022***: [Introduced share in meeting to share any document or third-party app to the meeting stage](concepts/build-and-test/share-in-meeting.md).
+* ***January 31, 2023***: [Introducing Targeted in-meeting notification for apps in Teams](apps-in-teams-meetings/in-meeting-notification-for-meeting.md#targeted-in-meeting-notification).
+* ***January 30, 2023***: [Enable app caching to improve subsequent launch time of the apps to the meeting side panel](apps-in-teams-meetings/build-tabs-for-meeting.md#app-caching).
 
 :::column-end:::
 :::row-end:::
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ------------------ |
+|05/12/2022| Introduced share in meeting to share any document or third-party app to the meeting stage.|Build apps for Teams meetings and calls > Enable and configure apps for meetings > [Share in meeting](concepts/build-and-test/share-in-meeting.md) |
 |10/11/2022| Enable bots to receive all chat messages without being @mentioned.|Build bots > Bot conversations > Message in bot conversations > [Receive all conversation messages with RSC](bots/how-to/conversations/channel-messages-with-rsc.md) |
 |10/11/2022|Generate a deep link to share content to stage in meetings.|Build apps for Teams meetings and calls > Enable and configure apps for meetings > Share in meeting > [Generate a deep link to share content to stage in meetings.](concepts/build-and-test/share-in-meeting.md) |
 | 09/23/2022 | Introduced meeting app support for Scheduled Channel Meetings. | Build apps for Teams meetings and calls > [Apps for Teams meetings and calls](apps-in-teams-meetings/teams-apps-in-meetings.md) |
@@ -315,8 +316,6 @@ Developer preview is a public program that provides early access to unreleased T
 | 08/03/2022 | Mute and unmute APIs for apps in Teams meeting stage | Build apps for Teams meetings and calls > [Meeting apps API references](/microsoftteams/platform/apps-in-teams-meetings/api-references?tabs=dotnet) |
 | 08/02/2022| Collaboration controls for Teams| Integrate with Teams > [Collaboration controls](samples/collaboration-control.md) |
 |05/24/2022| Enhanced collaboration with Live Share SDK | Build apps for Teams meetings > Enhanced collaboration with Live Share > [Overview](apps-in-teams-meetings/teams-live-share-overview.md) |
-| 02/03/2022 | Introduced app manifest version 1.13 | App manifest > Public developer preview > [Manifest schema](resources/schema/manifest-schema-dev-preview.md) |
-| 01/17/2022 | People Picker in Adaptive cards for mobile | Build cards and task modules > Build cards > [People Picker in Adaptive Cards](task-modules-and-cards/cards/people-picker.md)|
 | 10/28/2021 |Bots can be enabled to receive all channel messages using resource-specific consent (RSC) | • Build bots > Bot conversations > [bot conversation overview](~/bots/how-to/conversations/conversation-basics.md) </br> • Build bots > Bot conversations > [channel and group conversations](~/bots/how-to/conversations/channel-and-group-conversations.md) |
 | 06/16/2021 | Resource-specific consent for chats | • Utilize Teams data with Microsoft Graph > [Resource-specific consent](graph-api/rsc/resource-specific-consent.md) </br> • Test your app > Microsoft Graph > [Test resource-specific consent permissions in Teams](graph-api/rsc/test-resource-specific-consent.md)|
 
