@@ -13,7 +13,7 @@ You can also decide the placement of the Share to Teams button on the app. Users
 
 :::image type="content" source="../../assets/images/share-to-teams/overview.PNG" alt-text="Screenshot showing the Share button on the app.":::
 
-You can enable this feature following:
+You can enable this feature on the following:
 
 * Web apps
 * Personal app or tab
