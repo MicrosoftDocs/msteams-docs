@@ -18,6 +18,9 @@ For anonymous users to interact with the apps in Teams meetings, ensure the foll
 
 ## App manifest update for anonymous users
 
+> [!NOTE]
+> The `supportsAnonymousGuestUsers` property is supported in manifest schema version 1.16 or later.
+
 To allow anonymous users to interact with the tab app, update the `supportsAnonymousGuestUsers` property to `true` in your app manifest. Following is an example of the manifest:
 
 ```json
@@ -44,6 +47,9 @@ To test your apps experience for anonymous users, select the URL in the meeting 
 
 Apps receive the following info for an anonymous user when they call the `getContext` API from the [shared app stage](~/apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md). You can recognize anonymous users by checking for a `userLicenseType` value of `Anonymous`.
 
+> [!NOTE]
+> The Live Share SDK isn't supported for anonymous users.
+
 # [JavaScript](#tab/javascript)
 
 ```javascript
@@ -51,7 +57,7 @@ Apps receive the following info for an anonymous user when they call the `getCon
 microsoftTeams.app.getContext().then((context) => {
     if (context.user.licenseType === "Anonymous")
         {
-            // Your code
+            //Add your custom logic here
         }
 });
 
@@ -144,7 +150,11 @@ protected override async Task OnTeamsMembersAddedAsync(IList<TeamsChannelAccount
      {
          if (teamMember.UserRole == "anonymous" )
           {
-             // Your  code
+             //Add your custom logic here
+          }
+          else
+          {
+           //Add your custom logic here
           }
      }
   }
@@ -156,13 +166,14 @@ protected override async Task OnTeamsMembersAddedAsync(IList<TeamsChannelAccount
 protected override async Task OnTeamsMembersRemovedAsync(IList<TeamsChannelAccount> membersRemoved, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
    foreach (var member in membersRemoved)
    {
+      //If AadObjectId is null, it indicates an Anonymous user
        if (member.AadObjectId == null)
        {
-           // Anonymous  code
+           //Add your custom logic here
        }
        else
        {
-           //User code
+           //Add your custom logic here
        }
    }
 ```
@@ -223,6 +234,12 @@ Anonymous users can view and interact with Adaptive Cards in the meeting chat. A
 * Anonymous users will see a generic app icon on bot messages and cards, instead of the app's actual icon.
 
     :::image type="content" source="../assets/images/apps-in-meetings/app-icon.png" alt-text="Screenshot shows how the app icon displays for anonymous user.":::
+
+## Code sample
+
+|Sample name | Description | .NET|
+|----------------|-----------------|--------------|
+| Anonymous user support | Sample app to show an anonymous users support in meeting apps. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-anonymous-users/csharp) |
 
 ## Next step
 
