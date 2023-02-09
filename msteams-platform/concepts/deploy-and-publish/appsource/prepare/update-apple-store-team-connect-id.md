@@ -7,7 +7,7 @@ author: heath-hamilton
 ms.author: v-ypalikila
 ---
 
-# Update Apple App Store Connect Team ID on PC
+# Update Apple App Store Connect Team ID
 
 To enable end-users to install your app on the Teams iOS platform, update your Apple App Store Connect Team ID in the Microsoft Partner Center. The Apple App Store Connect Team ID is shared with Apple. To update your Apple App Store Connect Team ID, follow these steps:
 
