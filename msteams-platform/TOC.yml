@@ -724,9 +724,9 @@
     - name: Prepare your Teams store submission
       href: concepts/deploy-and-publish/appsource/prepare/submission-checklist.md
       displayName: Testing instructions, store listing, Microsoft Teams app validation tool, compile testing instructions, admin account and non admin account, preconfigured account, premium or upgraded features, tenant configuration
-    - name: Update Apple App Store Connect Team ID on Partner Center, app acquisition on mobile
+    - name: Update Apple App Store Connect Team ID
       href: concepts/deploy-and-publish/appsource/prepare/update-apple-store-team-connect-id.md
-      displayName: Enable users to install your app on Teams iOS platform.
+      displayName: Enable users to install your app on Teams iOS platform, app acquisition on mobile
     - name: Submit your app
       href: /office/dev/store/add-in-submission-guide?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
     - name: Resolve issues if your Teams store submission fails
