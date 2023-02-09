@@ -48,7 +48,7 @@ Any data sent or stored through Fluid containers created by Live Share's hosted 
 
 <summary><b>What meeting types does Live Share support?</b></summary>
 
-Scheduled meetings, one-on-one calls, group calls, and meet now are supported. Channel meetings aren't yet supported.
+Scheduled meetings, one-on-one calls, group calls, meet now, and channel meetings are supported.
 
 <br>
 
