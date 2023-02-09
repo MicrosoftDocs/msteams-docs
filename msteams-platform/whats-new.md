@@ -26,8 +26,7 @@ Teams platform features that are available to all app developers.
 
 **2023 February**
 
-* ***February 09, 2023***: [Apps for Teams meetings support anonymous users.](apps-in-teams-meetings/build-apps-for-anonymous-user.md)
-* ***February 09, 2023***: [Introducing app manifest schema v1.16.](resources/schema/manifest-schema.md)
+***February 09, 2023***: [Apps for Teams meetings support anonymous users.](apps-in-teams-meetings/build-apps-for-anonymous-user.md)
 
 :::column-end:::
 :::row-end:::
