@@ -26,12 +26,23 @@ Teams platform features that are available to all app developers.
 
 **2023 February**
 
-***February 07, 2023***: [Apps for Teams meetings support anonymous users.](apps-in-teams-meetings/build-apps-for-anonymous-user.md)
+* ***February 09, 2023***: [Apps for Teams meetings support anonymous users.](apps-in-teams-meetings/build-apps-for-anonymous-user.md)
+* ***February 09, 2023***:[Introducing app manifest v1.16.](resources/schema/manifest-schema.md)
 
 :::column-end:::
 :::row-end:::
 
 <br>
+<details>
+<summary><b>2023</b></summary>
+
+| **Date** | **Update** | **Find here** |
+| -------- | --------- | ----------------|
+|31/01/2023| Introducing update and soft delete event notifications in bot | Build bots > Bot conversations > [Messages in bot conversations](bots/how-to/conversations/conversation-messages.md#update-message) |
+
+</details>
+</br>
+
 <details>
 <summary><b>2022</b></summary>
 
