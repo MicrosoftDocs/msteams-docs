@@ -59,15 +59,18 @@ The following schema sample shows all extensibility options:
             "scopes": [
                 "team",
                 "groupChat"
+                
             ],
             "canUpdateConfiguration": true,
             "context": [
+                "personalTab",
                 "channelTab",
                 "privateChatTab",
                 "meetingChatTab",
                 "meetingDetailsTab",
                 "meetingSidePanel",
                 "meetingStage"
+                "callingSidePanel"
             ],
             "sharePointPreviewImage": "Relative path to a tab preview image for use in SharePoint — 1024px X 768",
             "supportedSharePointHosts": [
@@ -80,11 +83,19 @@ The following schema sample shows all extensibility options:
         {
             "entityId": "unique Id for the page entity",
             "scopes": [
-                "personal"
+                "team",
+                "personal",
+                "groupChat"
             ],
             "context": [
                 "personalTab",
-                "channelTab"
+                "channelTab",
+                "privateChatTab",
+                "meetingChatTab",
+                "meetingDetailsTab",
+                "meetingSidePanel",
+                "meetingStage",
+                "teamLevelApp"
             ],
             "name": "Display name of tab",
             "contentUrl": "https://contoso.com/content (displayed in Teams canvas)",
