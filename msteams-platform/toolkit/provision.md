@@ -14,7 +14,7 @@ zone_pivot_groups: teams-app-platform
 TeamsFx integrates with Azure and the Microsoft 365 cloud, which allows to place your app in Azure with a single command. TeamsFx integrates with Azure Resource Manager (ARM), which enables to provision Azure resources that your application needs for code approach.
 
 > [!NOTE]
-> Teams toolkit doesn't provide support to deploy resources to other could platforms except Azure, however, the user can deploy manually.
+> Teams toolkit doesn't provide support to deploy resources to other cloud platforms except Azure, however, the user can deploy manually.
 
 ::: zone pivot="visual-studio-code"
 
