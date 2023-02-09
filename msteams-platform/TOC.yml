@@ -90,6 +90,7 @@
       displayName: best practices
     - name: Personal apps
       href: concepts/design/personal-apps.md
+      displayName: logo
     - name: Tabs
       href: tabs/design/tabs.md
     - name: Bots
@@ -112,6 +113,7 @@
       displayName: column, ColumnSet 
     - name: Task modules
       href: task-modules-and-cards/task-modules/design-teams-task-modules.md
+      displayname: Forms
     - name: Activity feed notifications
       href: concepts/design/activity-feed-notifications.md
       displayName: notify, notification
@@ -210,7 +212,7 @@
       displayName: dashboard
   - name: Teams JavaScript client library
     href: tabs/how-to/using-teams-client-library.md
-    displayName: execute URL
+    displayName: execute URL, getTabInstances
   - name: Node.js Bot Framework for bots and message extensions (GitHub)
     href: https://github.com/Microsoft/botbuilder-js
   - name: .NET Bot Framework for bots and message extensions (GitHub)
@@ -283,7 +285,7 @@
     href: tabs/how-to/create-channel-group-tab.md
   - name: Create a content page
     href: tabs/how-to/create-tab-pages/content-page.md
-    displayName: Loading indicator, personal-scoped custom tab, channel or group custom tab
+    displayName: Loading indicator, showLoadingIndicator, personal-scoped custom tab, channel or group custom tab
   - name: Create a configuration page
     href: tabs/how-to/create-tab-pages/configuration-page.md
     displayName: configurationUrl
@@ -295,7 +297,7 @@
     displayName: Teams store apps approved by Microsoft for mobile 
   - name: Get context for your tab
     href: tabs/how-to/access-teams-context.md
-    displayName: getContext, groupId, User context, authentication flow from Microsoft Azure Active Directory, retrieve context, theme changes
+    displayName: getContext, entityId, groupId, User context, authentication flow from Microsoft Azure Active Directory, retrieve context, theme changes
   - name: Navigate within your tab
     href: tabs/how-to/tab-navigation.md  
   - name: Build apps for shared channels
@@ -330,7 +332,7 @@
       displayName: chat, Messages sent between your Microsoft Teams bot and one or more user
     - name: Messages in bot conversations
       href: bots/how-to/conversations/conversation-messages.md
-      displayName: Picture messages, attribution for bot message, status code responses, app localization using bot and tab, form, soft delete
+      displayName: Picture messages, emojis, attribution for bot message, status code responses, app localization using bot and tab, form, soft delete
       items:
       - name: Receive all conversation messages with RSC
         href: bots/how-to/conversations/channel-messages-with-rsc.md
@@ -361,6 +363,7 @@
       href: bots/how-to/conversations/command-bot-in-teams.md
     - name: Workflow bot in Teams
       href: bots/how-to/conversations/workflow-bot-in-teams.md
+      displayname: Jira
   - name: Get Teams specific context for your bot
     href: bots/how-to/get-teams-context.md
     displayName: Fetch roster or user profile
@@ -428,9 +431,10 @@
     items:
     - name: Build tabs for meeting
       href: apps-in-teams-meetings/build-tabs-for-meeting.md
-      displayName: anonymous, app caching
+      displayName: anonymous, app caching, cache
     - name: Build apps for meeting stage
       href: apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md
+      displayName: MicrosoftTeams.meeting.getAppContentStageSharingState
     - name: Share in meeting
       href: concepts/build-and-test/share-in-meeting.md
     - name: Build in-meeting notification for meeting
@@ -443,7 +447,7 @@
       displayName: supportsAnonymousGuestUsers, guest
     - name: Meeting apps APIs
       href: apps-in-teams-meetings/meeting-apps-apis.md
-      displayName: payload, getparticipant, captions, targeted meeting notification
+      displayName: payload, recurring, getparticipant, captions, targeted meeting notification
   - name: Get meeting transcripts using Graph APIs
     items:
     - name: Overview
@@ -498,7 +502,7 @@
     href: webhooks-and-connectors/how-to/connectors-creating.md
   - name: Create and send messages
     href: webhooks-and-connectors/how-to/connectors-using.md
-    displayName: Attachments, Send messages using cURL and PowerShell, Rate limiting for connectors, ActionCard
+    displayName: Attachments, potentialAction, Send messages using cURL and PowerShell, Rate limiting for connectors, ActionCard
 - name: Build cards and task modules
   items:
   - name: Overview
@@ -510,13 +514,13 @@
       displayName: People picker, type-ahead
     - name: Types of cards
       href: task-modules-and-cards/cards/cards-reference.md
-      displayName: correlationId,what-are-webhooks-and-connectors Button, Flexible layout, receipt card, carousel card, Hero card, List card, Card collections, Thumbnail card, Receipt card
+      displayName: correlationId, Markdown, what-are-webhooks-and-connectors Button, Flexible layout, receipt card, carousel card, Hero card, List card, Card collections, Thumbnail card, Receipt card
     - name: Format cards in Microsoft Teams
       href: task-modules-and-cards/cards/cards-format.md
       displayName: Information masking, background, extension, notification, HTML
     - name: Card actions
       href: task-modules-and-cards/cards/cards-actions.md
-      displayName: openUrl, messageBack, imBack, invoke, signin
+      displayName: openUrl, potentialAction, messageBack, imBack, invoke, signin
     - name: People Picker in Adaptive Cards
       href: task-modules-and-cards/cards/people-picker.md
       displayName: Setting, channel, static typeahead
@@ -776,6 +780,7 @@
     displayName: Multitenancy, Sharepoint
   - name: Create Virtual Assistant
     href: samples/virtual-assistant.md 
+    displayname: OnMessageActivityAsync
   - name: Power Platform apps
     items:
     - name: Overview
@@ -875,6 +880,7 @@
     items:
     - name: Localize your app
       href: concepts/build-and-test/apps-localization.md
+      displayname: localizationInfo 
     - name: Localize JSON schema reference
       href: resources/schema/localization-schema.md
   - name: SameSite cookie attribute 
