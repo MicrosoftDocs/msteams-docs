@@ -428,21 +428,21 @@
     items:
     - name: Build tabs for meeting
       href: apps-in-teams-meetings/build-tabs-for-meeting.md
-      displayName: anonymous
+      displayName: anonymous, app caching
     - name: Build apps for meeting stage
       href: apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md
     - name: Share in meeting
       href: concepts/build-and-test/share-in-meeting.md
     - name: Build in-meeting notification for meeting
       href: apps-in-teams-meetings/in-meeting-notification-for-meeting.md
-      displayName: bubble
+      displayName: bubble, targeted meeting, in-meeting, notification
     - name: Build extensible conversations for meeting chat
       href: apps-in-teams-meetings/build-extensible-conversation-for-meeting-chat.md
     - name: Build apps for anonymous users
       href: apps-in-teams-meetings/build-apps-for-anonymous-user.md
     - name: Meeting apps APIs
       href: apps-in-teams-meetings/meeting-apps-apis.md
-      displayName: payload, getparticipant, captions 
+      displayName: payload, getparticipant, captions, targeted meeting notification
   - name: Get meeting transcripts using Graph APIs
     items:
     - name: Overview
@@ -723,9 +723,9 @@
     - name: Prepare your Teams store submission
       href: concepts/deploy-and-publish/appsource/prepare/submission-checklist.md
       displayName: Testing instructions, store listing, Microsoft Teams app validation tool, compile testing instructions, admin account and non admin account, preconfigured account, premium or upgraded features, tenant configuration
-    - name: Update Apple App Store Connect Team ID on Partner Center, app acquisition on mobile
+    - name: Update Apple App Store Connect Team ID
       href: concepts/deploy-and-publish/appsource/prepare/update-apple-store-team-connect-id.md
-      displayName: Enable users to install your app on Teams iOS platform.
+      displayName: Enable users to install your app on Teams iOS platform, app acquisition on mobile
     - name: Submit your app
       href: /office/dev/store/add-in-submission-guide?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
     - name: Resolve issues if your Teams store submission fails
