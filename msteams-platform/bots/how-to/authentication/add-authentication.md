@@ -315,7 +315,7 @@ With the preliminary settings done, let's focus on the creation of the bot to us
 
 ### Deploy the bot to Azure
 
-To deploy the bot, follow the steps in the How to [Deploy your bot to Azure](https://aka.ms/azure-bot-deployment-cli).
+To deploy the bot, follow the steps in the [How to deploy your bot to Azure](https://aka.ms/azure-bot-deployment-cli).
 
 Alternatively, while in Visual Studio, you can follow these steps:
 

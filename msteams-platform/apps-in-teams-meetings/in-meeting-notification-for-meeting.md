@@ -13,7 +13,7 @@ The in-meeting notification is used to engage participants and collect informati
 
 An external resource URL is used to display in-meeting notification. You can use the `submitTask` method to submit data in a meeting chat.
 
-:::image type="content" source="../assets/images/apps-in-meetings/in-meeting-dialogbox.png" alt-text="The screenshot is an example that shows how you can use an in-meeting dialog.":::
+:::image type="content" source="../assets/images/apps-in-meetings/in-meeting-dialogbox.png" alt-text="The Screenshot is an example that shows how you can use an in-meeting dialog.":::
 
 You can also add the Teams display picture and people card of the user to in-meeting notification based on `onBehalfOf` token with user MRI and display name passed in payload. Following is an example payload:
 
@@ -157,7 +157,7 @@ For more information on `targetedMeetingNotification`, see [Targeted meeting not
 Sample name | Description | .NET | Node.js | Manifest
 |----------------|-----------------|--------------|----------------|----------------|
 | In-meeting notification | Demonstrates how to implement in-meeting notification using bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-notification/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-notification/nodejs) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-notification/csharp/demo-manifest/meetings-notification.zip) |
-| Targeted-in-meeting notification | Demonstrates how to send notifications to specific participants in a meeting stage. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-notification/csharp) |
+| Targeted in-meeting notification | Demonstrates how to send notifications to specific participants in a meeting stage. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-notification/csharp) |
 
 ## Step-by-step guide
 

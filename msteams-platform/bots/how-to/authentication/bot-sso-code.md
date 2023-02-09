@@ -174,7 +174,7 @@ To update your app's code:
     console.log(`\n${ conname } is the con name`);
     
     // Create adapter.
-    // See https://aka.ms/about-bot-adapter to learn more about how bots work.
+    // See https://learn.microsoft.com/javascript/api/botbuilder-core/botadapter?view=botbuilder-ts-latest to learn more about how bot adapter.
     const adapter = new CloudAdapter(botFrameworkAuthentication);
     const memoryStorage = new MemoryStorage();
     const tokenExchangeMiddleware = new TeamsSSOTokenExchangeMiddleware(memoryStorage, env.connectionName);

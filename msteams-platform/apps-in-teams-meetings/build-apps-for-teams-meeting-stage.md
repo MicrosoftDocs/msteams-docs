@@ -54,7 +54,7 @@ There are many scenarios where sharing the entire app to the meeting stage isn't
 
 To help users in such scenarios, we released APIs within the Microsoft Teams JavaScript client library (TeamsJS) that allow you to programmatically invoke share to stage for specific parts of the app from a button in the meeting side panel.
 
-:::image type="content" source="../assets/images/apps-in-meetings/shared-meeting-stage-edit-review-component.png" alt-text="The screenshot shows the share to meeting stage view.":::
+:::image type="content" source="../assets/images/apps-in-meetings/shared-meeting-stage-edit-review-component.png" alt-text="The Screenshot shows the share to meeting stage view.":::
 
 Use the following APIs to share specific part of the app:
 
@@ -218,7 +218,7 @@ The following table provides the user types and lists the features that each use
 
 | User type | Scheduled meeting or Instant calendar meeting | One-on-one call | Group call | Scheduled channel meeting |
 | :-- | :-- | :-- | :-- | :-- |
-| In-tenant user | Presenter or  organizer can start, view, and interact with app on meeting stage.<br><br> Attendee can only view and interact. | Presenter or  organizer can start, view, and interact with app on meeting stage. <br><br> Attendee can only view and interact. | Presenter or  organizer can start, view, and interact with app on meeting stage.<br><br> Attendee can only view and interact. | Presenter or  organizer can start, view, and interact with app on meeting stage.<br><br> Attendee can only view and interact. |
+| In-tenant user | Presenter or  organizer can start, view and interact with app on meeting stage.<br><br> Attendee can only view and interact. | Presenter or  organizer can start, view, and interact with app on meeting stage. <br><br> Attendee can only view and interact. | Presenter or  organizer can start, view, and interact with app on meeting stage.<br><br> Attendee can only view and interact. | Presenter or  organizer can start, view, and interact with app on meeting stage.<br><br> Attendee can only view and interact. |
 | Guest user | Presenter or  organizer can start, view and interact with app on meeting stage.<br><br> Attendee can only view and interact. | Presenter or  organizer can start, view, and interact with app on meeting stage.<br><br> Attendee can only view and interact. |  Presenter or  organizer can start, view, and interact with app on meeting stage.<br><br> Attendee can only view and interact. | Presenter or  organizer can start, view, and interact with app on meeting stage.<br><br> Attendee can only view and interact. |
 | Federated users or External user | Presenter can start, view, and interact with app on meeting stage.<br><br> Attendee can only view and interact. | Not available | Not available | Presenter can start, view, and interact with app on meeting stage.<br><br> Attendee can only view and interact. |
 | Anonymous user | Not available | Not available | Not available | Not available |

@@ -41,8 +41,8 @@ The following table provides the user types and lists the features that each use
 | User type | Bots | Message extensions | Adaptive Cards | Task modules |
 | :-- | :-- | :-- | :-- | :-- |
 | In-tenant user | Can view messages, interact with the content, and invoke the bot. | Available | Available | Available |
-| Guest, part of the tenant Azure AD | Can view messages, interact with the content, and invoke the bot. | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. |
-| Federated users, for more information, see [non-standard users](/microsoftteams/non-standard-users). |Can view messages, interact with the content, and invoke the bot. | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. |
+| Guest user, part of the tenant Azure AD | Can view messages, interact with the content, and invoke the bot. | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. |
+| Federated user, for more information, see [non-standard users](/microsoftteams/non-standard-users). |Can view messages, interact with the content, and invoke the bot. | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. |
 | Anonymous user |  Can view messages and interact with the bot. | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. |
 
 ## See also
@@ -52,4 +52,4 @@ The following table provides the user types and lists the features that each use
 * [Design task modules for your Microsoft Teams app](../task-modules-and-cards/task-modules/design-teams-task-modules.md)
 * [Receive all conversation messages with RSC](../bots/how-to/conversations/channel-messages-with-rsc.md)
 * [Conversation basics](../bots/how-to/conversations/conversation-basics.md)
-* [Adaptive Cards](../task-modules-and-cards/cards/cards-reference.md#adaptive-card)
+* [Adaptive Card](../task-modules-and-cards/cards/cards-reference.md#adaptive-card)

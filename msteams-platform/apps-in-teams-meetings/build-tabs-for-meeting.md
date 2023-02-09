@@ -49,7 +49,7 @@ The following image shows a tab added to the meeting details page in the Teams m
 
 1. In the app gallery, select the app that you want to add and follow the steps as required. The tab is added to the meeting chat.
 
-   :::image type="content" source="../assets/images/apps-in-meetings/meeting-chat-view.png" alt-text="The screenshot shows the meeting chat view in the Teams meeting.":::
+   :::image type="content" source="../assets/images/apps-in-meetings/meeting-chat-view.png" alt-text="The Screenshot shows the meeting chat view in the Teams meeting.":::
 
 ### Meeting side panel view
 
@@ -67,7 +67,7 @@ The following image shows a tab added to the meeting details page in the Teams m
 
 1. This results in rendering tab on the stage for every participant in the meeting.
 
-   :::image type="content" source="../assets/images/meeting-stage-view.png" alt-text="This screenshot shows meeting stage view of the app you shared to meeting.":::
+   :::image type="content" source="../assets/images/meeting-stage-view.png" alt-text="This Screenshot shows meeting stage view of the app you shared to meeting.":::
 
 ### Apps in channel meeting
 
@@ -105,7 +105,7 @@ The `context` property determines if the app is available in specific view after
 | **meetingChatTab** | A tab in the header of a group chat between a set of users for a scheduled meeting. You can specify either **meetingChatTab** or **meetingDetailsTab** to ensure the apps work in mobile. |
 | **meetingDetailsTab** | A tab in the header of the meeting details view of the calendar. You can specify either **meetingChatTab** or **meetingDetailsTab** to ensure the apps work in mobile. |
 | **meetingSidePanel** | An in-meeting panel opened through the unified bar (U-bar). |
-| **meetingStage** | An app from the `meetingSidePanel` can be shared to the meeting stage. You can't use this app either on mobile or Teams room clients. |
+| **meetingStage** | An app from the `meetingSidePanel` can be shared to the meeting stage. You can't use this app either on mobile and Teams room clients. |
 
 #### Configure tab app for a meeting
 
@@ -304,10 +304,11 @@ The following table provides the user types and lists the features that each use
 | In-meeting notification | Demonstrates how to implement in-meeting notification using bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp/demo-manifest/Meetings-Events.zip)
 | In-meeting document signing | Demonstrates how to implement a document signing Teams app. Includes sharing specific app content to stage, Teams SSO and user specific stage view. | [View](https://github.com/officedev/microsoft-teams-samples/tree/main/samples/meetings-share-to-stage-signing/csharp) | NA |
 | App caching | Sample app to show how app caching works in the meeting side panel. | NA | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-cache-meetings/nodejs) |
+| Meeting tabs | This sample shows app stage view, Mute/Unmute Teams meeting audio call in meeting Side panel tab. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-tabs/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-tabs/nodejs) |
 
 > [!NOTE]
 >
-> * Meeting apps (side panel and meeting stage) are supported in Teams desktop client.
+> * Meeting apps (side panel and meeting stage) is supported in Teams desktop client.
 > * Meeting apps (side panel and meeting stage) in Teams web client is supported only when the [developer preview is enabled](/microsoftteams/platform/resources/dev-preview/developer-preview-intro#enable-developer-preview).
 
 ## Step-by-step guides

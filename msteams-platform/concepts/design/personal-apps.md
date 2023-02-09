@@ -248,6 +248,12 @@ Unless you created your app specifically for Teams, you probably have features t
 
 :::image type="content" source="../../assets/images/personal-apps/personal-tab-feature-dont.png" alt-text="Example shows how not to handle complex app features with a personal app.":::
 
+## Code sample
+
+|Sample name | Description | Typescript
+|----------------|--------------------------------------------------------|--------------|
+| Meeting app | Sample to show navbar-menu in personal tab app. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-navbar-menu/ts) |
+
 ## See also
 
 These other design guidelines may help depending on the scope of your personal app:

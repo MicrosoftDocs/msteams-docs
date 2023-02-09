@@ -144,7 +144,7 @@ For the complete app manifest, see [App manifest schema](~/resources/schema/mani
 
 ## Code sample
 
-| Sample Name           | Description | .NET    | Node.js   | Manifest
+| Sample name           | Description | .NET    | Node.js   | Manifest
 |:---------------------|:--------------|:---------|:--------|:--------------|
 |Teams message extension search   |  Describes how to define search commands and respond to searches.        |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp/demo-manifest/msgext-search.zip)
 
