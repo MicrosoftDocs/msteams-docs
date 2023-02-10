@@ -437,7 +437,7 @@ items:
     
     1. Select **Submit an app to your org**. 
 
-       :::image type="content" source="../../assets/images/sbs-graphactivity-feedbroadcast/submit-an-app-to-your-org.png" alt-text="Screenshot showing the selection of submit an app to your org highlighted in red.":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/submit-an-app-to-your-org.png" alt-text="Screenshot showing the selection of submit an app to your org highlighted in red.":::
        
     1. Select **Open** to upload the .zip file that you created in the **AppPackage** folder.
 
