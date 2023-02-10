@@ -90,7 +90,7 @@ The following table includes the query parameters:
 
 |Value|Type|Required|Description|
 |---|---|----|---|
-|**callback**| String | Yes | Callback contains two parameters, error and result. The *error* can either contain an error of type *SdkError* or null when share is successful. The *result* can either contain a true value if there's a successful share or null when the share fails. |
+|**callback**| String | Yes | Callback contains two parameters, error and result. The *error* can contain either an error of type *SdkError* or null when share is successful. The *result* can contain either a true value if there's a successful share or null when the share fails. |
 |**appContentURL**| String | Yes | The URL that will be shared on to the stage. |
 
 ### Example
@@ -128,7 +128,7 @@ The following table includes the query parameter:
 
 |Value|Type|Required|Description|
 |---|---|----|---|
-|**callback**| String | Yes | Callback contains two parameters, error and result. The *error* can either contain an error of type *SdkError* in case of an error or null when share is successful. The *result* can either contain an `IAppContentStageSharingState` object when share is successful or null in case of an error.|
+|**callback**| String | Yes | Callback contains two parameters, error and result. The *error* can contain either an error of type *SdkError* in case of an error or null when share is successful. The *result* can contain either an `IAppContentStageSharingState` object when share is successful or null in case of an error.|
 
 ### Example
 
@@ -174,7 +174,7 @@ The following table includes the query parameter:
 
 |Value|Type|Required|Description|
 |---|---|----|---|
-|**callback**| String | Yes | Callback contains two parameters, error and result. The *error* can either contain an error of type *SdkError* or null when share is successful. The result can either contain an `IAppContentStageSharingCapabilities` object, when share is successful or null in case of an error.|
+|**callback**| String | Yes | Callback contains two parameters, error and result. The *error* can contain either an error of type *SdkError* or null when share is successful. The result can contain either an `IAppContentStageSharingCapabilities` object, when share is successful or null in case of an error.|
 
 ### Example
 
@@ -210,13 +210,13 @@ You can build an in-meeting app for enabling meeting participants to sign docume
 
 You can use an in-meeting signing app to:
 
-* Add documents to be reviewed during a meeting
-* Share documents to be reviewed to main stage
-* Sign documents using the signer’s identity
+* Add documents to be reviewed during a meeting.
+* Share documents to be reviewed to main stage.
+* Sign documents using the signer’s identity.
 
 The participants can review and sign documents, such as purchase agreements and purchase orders.
 
-:::image type="content" source="../assets/images/sbs-inmeeting-doc-signing/final-output.png" alt-text="In-meeting document signing app":::
+:::image type="content" source="../assets/images/sbs-inmeeting-doc-signing/final-output.png" alt-text="Screenshot shows an in-meeting document signing app":::
 
 The following participant roles may be involved during the meeting:
 
@@ -230,10 +230,10 @@ The following table provides the user types and lists the features that each use
 
 | User type | Scheduled meeting or Instant calendar meeting | One-on-one call | Group call | Scheduled channel meeting |
 | :-- | :-- | :-- | :-- | :-- |
-| In-tenant | Presenter or  organizer can start, view, and interact with app on meeting stage.<br><br> Attendee can only view and interact. | Presenter or  organizer can start, view, and interact with app on meeting stage. <br><br> Attendee can only view and interact. | Presenter or  organizer can start, view, and interact with app on meeting stage.<br><br> Attendee can only view and interact. | Presenter or  organizer can start, view, and interact with app on meeting stage.<br><br> Attendee can only view and interact. |
-| Guest | Presenter or  organizer can start, view and interact with app on meeting stage.<br><br> Attendee can only view and interact. | Presenter or  organizer can start, view, and interact with app on meeting stage.<br><br> Attendee can only view and interact. |  Presenter or  organizer can start, view, and interact with app on meeting stage.<br><br> Attendee can only view and interact. | Presenter or  organizer can start, view, and interact with app on meeting stage.<br><br> Attendee can only view and interact. |
-| Federated or External | Presenter can start, view, and interact with app on meeting stage.<br><br> Attendee can only view and interact. | Not available | Not available | Presenter can start, view, and interact with app on meeting stage.<br><br> Attendee can only view and interact. |
-| Anonymous | Not available | Not available | Not available | Not available |
+| In-tenant | Presenter or  organizer can start, view, and interact with the app in the meeting stage.<br><br> Attendee can only view and interact. | Presenter or organizer can start, view, and interact with the app on meeting stage. <br><br> Attendee can only view and interact. | Presenter or  organizer can start, view, and interact with the app on meeting stage.<br><br> Attendee can only view and interact. | Presenter or  organizer can start, view, and interact with the app on meeting stage.<br><br> Attendee can only view and interact. |
+| Guest | Presenter or  organizer can start, view and interact with the app in the meeting stage.<br><br> Attendee can only view and interact. | Presenter or organizer can start, view, and interact with the app on meeting stage.<br><br> Attendee can only view and interact. |  Presenter or  organizer can start, view, and interact with the app on meeting stage.<br><br> Attendee can only view and interact. | Presenter or  organizer can start, view, and interact with the app on meeting stage.<br><br> Attendee can only view and interact. |
+| Federated or External | Presenter can start, view, and interact with the app in the meeting stage.<br><br> Attendee can only view and interact. | Not available | Not available | Presenter can start, view, and interact with app on meeting stage.<br><br> Attendee can only view and interact. |
+| Anonymous |Presenter can start, view, and interact with the app on meeting stage.<br><br> Attendee can only view and interact. | Not available | Not available | Not available |
 
 ## Code sample
 
