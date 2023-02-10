@@ -197,11 +197,8 @@ gulp ngrok-serve
 
     :::image type="content" source="~/assets/images/tab-images/channeltabadded.png" alt-text="Uploaded channel tab":::
 
-1. Select **Add** in the dialog. Your tab is uploaded to Teams.
+1. Select **Add** in the dialog. Your tab is uploaded to Teams. If  **Add** doesn't display in the dialog box then remove the following code from the manifest of the uploaded app package zip folder. Again zip the folder and upload it to Teams.
 
-    > [!NOTE]
-    > If  **Add** doesn't display in the dialog box then remove the following code from the manifest of the uploaded app package zip folder. Again zip the folder and upload it to Teams.
-    >
     >```Json
     >"staticTabs": [],
     >"bots": [],

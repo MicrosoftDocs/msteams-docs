@@ -27,10 +27,7 @@ You need to focus on making your tab design clean, navigation intuitive, and con
 
 ## Integrate your code with Teams
 
-For your page to display in Teams, you must include the [Microsoft Teams JavaScript client library](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) and include a call to `app.initialize()` after your page loads.
-
-> [!NOTE]
-> It takes close to 24-48 hours for any content or UI changes to reflect in the tab app due to cache.
+For your page to display in Teams, you must include the [Microsoft Teams JavaScript client library](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) and include a call to `app.initialize()` after your page loads.  It takes close to 24-48 hours for any content or UI changes to reflect in the tab app due to cache.
 
 The following code provides an example of how your page and the Teams client communicate:
 
@@ -95,10 +92,7 @@ A task module is a modal pop-up experience that you can trigger from your tab. I
 
 ### Valid domains
 
-Ensure that all URL domains used in your tabs are included in the `validDomains` array in your [manifest](~/concepts/build-and-test/apps-package.md). For more information, see [validDomains](~/resources/schema/manifest-schema.md#validdomains) in the manifest schema reference.
-
-> [!NOTE]
-> The core functionality of your tab exists within Teams and not outside of Teams.
+Ensure that all URL domains used in your tabs are included in the `validDomains` array in your [manifest](~/concepts/build-and-test/apps-package.md). The core functionality of your tab exists within Teams and not outside of Teams. For more information, see [validDomains](~/resources/schema/manifest-schema.md#validdomains) in the manifest schema reference.
 
 ## Show a native loading indicator
 
