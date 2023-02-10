@@ -435,10 +435,10 @@ items:
 
        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/manage-your-app.png" alt-text="Manage your app" border="true":::
     
-    1. Select **Upload an app to your org's app catalog**. 
+    1. Select **Submit an app to your org**. 
 
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/upload-app-org.png" alt-text="Upload a custom app" border="true":::
-
+       :::image type="content" source="../../assets/images/sbs-graphactivity-feedbroadcast/submit-an-app-to-your-org.png" alt-text="Screenshot showing the selection of submit an app to your org highlighted in red.":::
+       
     1. Select **Open** to upload the .zip file that you created in the **AppPackage** folder.
 
        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/open-a-custom-app.png" alt-text="Open a custom app" border="true":::
