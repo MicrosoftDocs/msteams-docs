@@ -60,7 +60,7 @@ items:
     1. Select **Manage your apps** > **Upload an app**.
     1. Look for the option **Upload a custom app**. If you see the option, sideloading apps is enabled.
 
-        :::image type="content" source="~/assets/images/bots/upload-custom-app1_1.png" alt-text="Screenshot of Teams app with the Upload an app dialog. The menu entry titled Upload a custom app is highlighted in red.":::
+        :::image type="content" source="assets/images/store-upload-a-custom-app.png" alt-text="Screenshot showing the selection of upload a custom app highlighted in red.":::
 
         > [!NOTE]
         > If you don't have the option to upload a custom app, contact Teams administrator.
@@ -511,9 +511,9 @@ items:
 
         :::image type="content" source="~/assets/images/bots/manage-apps_3.png" alt-text="Screenshot of Teams app with the Apps icon and Manage your apps option highlighted in red.":::
 
-    1. Select **Upload a custom app**.
+    1. Select **Upload an app** and select **Upload a custom app**.
     
-        :::image type="content" source="~/assets/images/bots/upload-custom-app.png" alt-text="Screenshot of Upload an app screen with Upload a custom app highlighted in red.":::
+        :::image type="content" source="assets/images/store-upload-a-custom-app.png" alt-text="Screenshot showing the selection of upload a custom app highlighted in red.":::
 
     1. Select **Open** to upload the .zip file that you've created in the **Manifest** folder.
 
