@@ -45,9 +45,6 @@ items:
 
     You can download the latest Visual Studio installer from the [Visual Studio download page](https://visualstudio.microsoft.com).
 
-    > [!NOTE]
-    > You'll need to first install the Visual Studio installer before installing Visual Studio.
-
     After you open the Visual Studio installer, in the pop-up workloads window.
 
       1. Select the box **ASP.NET and web development** workload.
@@ -81,11 +78,8 @@ items:
 
     ### Check for sideloading option
 
-    After creating the app, you must load your app in Teams without distributing it. This process is known as sideloading. Sign in to your Microsoft 365 account to view this option.
+    After creating the app, you must load your app in Teams without distributing it. This process, known as sideloading, is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you will not be able to preview and test your app in Teams locally. Sign in to your Microsoft 365 account to view this option.
 
-    > [!NOTE]
-    > Sideloading is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you will not be able to preview and test your app in Teams locally.
-    
     Do you already have a tenant, and do you have the admin access? Let's check if you really do!
 
     Verify if you can sideload apps in Teams:

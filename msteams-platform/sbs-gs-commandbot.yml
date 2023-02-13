@@ -35,7 +35,7 @@ items:
    | --- | --- | --- |
    | **Required** | &nbsp; | &nbsp; |
    | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript or TypeScript, build environments. Use latest version. |
-   | &nbsp; | [Teams Toolkit](#install-the-teams-toolkit) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use version 4.0.0.|
+   | &nbsp; | [Teams Toolkit](#install-the-teams-toolkit) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use latest version.|
    | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. Use version 14 or 16.|
    | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call and all in one place.|
    | &nbsp; | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
@@ -70,9 +70,6 @@ items:
 
    You can also find the Teams Toolkit on the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
-    > [!NOTE]
-    > The latest version of Teams Toolkit is 4.2.0.
-
    # [Command line](#tab/cli)
 
    To install the TeamsFx CLI, use the `npm` package manager:
@@ -104,10 +101,7 @@ items:
 
    ### Check for sideloading option
 
-   After creating the app, you must load your app in Teams without distributing it. This is known as sideloading. Sign-in to your Microsoft 365 account to view this option.
-
-    > [!NOTE]
-    > Sideloading is necessary for previewing and testing apps in Teams local environment. Enable Sideloading to preview and test your app in Teams locally.
+   After creating the app, you must load your app in Teams without distributing it. This process, known as sideloading, is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you will not be able to preview and test your app in Teams locally. Sign in to your Microsoft 365 account to view this option.
 
    Do you already have a tenant, and do you have the admin access? Let's check if you really do!
 
