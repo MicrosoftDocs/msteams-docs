@@ -267,8 +267,7 @@ items:
     
         :::image type="content" source="~/assets/images/sbs-command-bot/subscription-cloud.png" alt-text="Screenshot showing resources for provisioning":::
 
-        > [!NOTE]
-        > A dialog appears mentioning that costs may be incurred when running resources in Azure.
+       A dialog appears mentioning that costs may be incurred when running resources in Azure.
 
     1. Select **Provision**.
 
