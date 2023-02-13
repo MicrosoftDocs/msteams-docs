@@ -83,9 +83,7 @@ Following is the process to invoke Stage View:
 * `invoke` response from bot contains an Adaptive Card with type `tab/tabInfoAction` in it.
 * The bot responds with a `200` code.
 
-> [!NOTE]
->
-> On Teams mobile clients, invoking Stage View for apps distributed through the [Teams store](~/concepts/deploy-and-publish/apps-publish-overview.md) and not having a mobile-optimized experience opens the default web browser of the device. The browser opens the URL specified in the `websiteUrl` parameter of the `TabInfo` object.
+On Teams mobile clients, invoking Stage View for apps distributed through the [Teams store](~/concepts/deploy-and-publish/apps-publish-overview.md) and not having a mobile-optimized experience opens the default web browser of the device. The browser opens the URL specified in the `websiteUrl` parameter of the `TabInfo` object.
 
 ## Invoke Stage View through deep link
 
@@ -136,9 +134,9 @@ Encoded
 |:-----------|:---------|:------------|:-----------------------|
 | `entityId` | String | 64 | This property is a  unique identifier for the entity that the tab displays. This is a required field.|
 | `name` | String | 128 | This property is the display name of the tab in the channel interface. This is an optional field.|
-| `contentUrl` | String | 2048 | This property is the https:// URL that points to the entity UI to be displayed in the Teams canvas. This is a required field.|
-| `websiteUrl?` | String | 2048 | This property is the https:// URL to point at, if a user selects to view in a browser. This is a required field.|
-| `removeUrl?` | String | 2048 | This property is the https:// URL that points to the UI to be displayed when the user deletes the tab. This is an optional field.|
+| `contentUrl` | String | 2048 | This property is the <https://> URL that points to the entity UI to be displayed in the Teams canvas. This is a required field.|
+| `websiteUrl?` | String | 2048 | This property is the <https://> URL to point at, if a user selects to view in a browser. This is a required field.|
+| `removeUrl?` | String | 2048 | This property is the <https://> URL that points to the UI to be displayed when the user deletes the tab. This is an optional field.|
 
 ## Code sample
 

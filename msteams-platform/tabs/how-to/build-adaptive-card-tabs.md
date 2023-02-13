@@ -9,11 +9,7 @@ ms.localizationpriority: high
 
 # Build tabs with Adaptive Cards
 
-> [!IMPORTANT]
->
-> Tabs with Adaptive Cards are only supported as personal apps.
-
-When developing a tab using the traditional method, you might run into these issues:
+Tabs with Adaptive Cards are only supported as personal apps. When developing a tab using the traditional method, you might run into these issues:
 
 * HTML and CSS considerations
 * Slow load times
@@ -37,10 +33,7 @@ Before you start using Adaptive Cards to build tabs, you must:
 
 ## Changes to app manifest
 
-Personal apps that render tabs must include a `staticTabs` array in their app manifest. Adaptive Card tabs are rendered when the `contentBotId` property is provided in the `staticTab` definition. Static tab definitions must contain either a `contentBotId`, specifying an Adaptive Card tab or a `contentUrl`, specifying a typical hosted web content tab experience.
-
-> [!NOTE]
-> The `contentBotId` property is available in manifest version 1.9 or later.
+Personal apps that render tabs must include a `staticTabs` array in their app manifest. Adaptive Card tabs are rendered when the `contentBotId` property is provided in the `staticTab` definition. Static tab definitions must contain either a `contentBotId`, specifying an Adaptive Card tab or a `contentUrl`, specifying a typical hosted web content tab experience. The `contentBotId` property is available in manifest version 1.9 or later.
 
 Provide the `contentBotId` property with the `botId` that the Adaptive Card tab must communicate with. The `entityId` configured for the Adaptive Card tab is sent in the `tabContext` parameter of each invoke request, and can be used to differentiate Adaptive Card Tabs that are powered by the same bot. For more information about other static tab definition fields, see [manifest schema](../../resources/schema/manifest-schema.md#statictabs).
 
@@ -98,20 +91,12 @@ Following is a sample Adaptive Card tab manifest:
 
 ## Invoke activities
 
-Communication between your Adaptive Card tab and your bot is done through `invoke` activities. Each `invoke` activity has a corresponding **name**. Use the name of each activity to differentiate each request. `tab/fetch` and `tab/submit` are the activities covered in this section.
-
-> [!NOTE]
->
-> * Bots need to send all the responses to [service URL](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#base-uri&preserve-view=true). Service URL is received as part of incoming `activity` payload.
-> * The invoke payload size has increased to 80kb.
+Communication between your Adaptive Card tab and your bot is done through `invoke` activities. Each `invoke` activity has a corresponding **name**. The invoke payload size has increased to 80kb. Use the name of each activity to differentiate each request. `tab/fetch` and `tab/submit` are the activities covered in this section. Bots need to send all the responses to [service URL](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#base-uri&preserve-view=true). Service URL is received as part of incoming `activity` payload.
 
 ### Fetch Adaptive Card to render to a tab
 
-`tab/fetch` is the first invoke request that your bot receives when a user opens an Adaptive Card tab. When your bot receives the request, it either sends a tab **continue** response or a tab **auth** response.
+`tab/fetch` is the first invoke request that your bot receives when a user opens an Adaptive Card tab. When your bot receives the request, it either sends a tab **continue** response or a tab **auth** response. For more information on **auth** response, see [authentication](#authentication).
 The **continue** response includes an array for **cards**, which is rendered vertically to the tab in the order of the array.
-
-> [!NOTE]
-> For more information on **auth** response, see [authentication](#authentication).
 
 The following code provides examples of `tab/fetch` request and response:
 

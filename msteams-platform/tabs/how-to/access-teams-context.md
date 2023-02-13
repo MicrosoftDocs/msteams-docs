@@ -293,10 +293,7 @@ For more information, see [Updates to the *Context* interface](using-teams-clien
 
 ## Retrieve context in private channels
 
-> [!NOTE]
-> Private channels are currently in private developer preview only.
-
-When your content page is loaded in a private channel, the data you receive from the `getContext` call is obfuscated to protect the privacy of the channel.
+When your content page is loaded in a private channel, the data you receive from the `getContext` call is obfuscated to protect the privacy of the channel. Private channels are currently in private developer preview only.
 
 The following fields are changed when your content page is in a private channel:
 
@@ -308,9 +305,7 @@ The following fields are changed when your content page is in a private channel:
 * `sharepointSite.domain`: Set to the domain of a distinct, unique SharePoint site domain for the private channel
 
 If your page makes use of any of these values, the value of `channel.membershipType` field must be `Private` to determine if your page is loaded in a private channel and can respond appropriately.
-
-> [!NOTE]
->`teamSiteUrl` also works well for standard channels. If your page makes use of any of these values, the value of `channelType` field must be `Shared` to determine if your page is loaded in a shared channel and can respond appropriately.
+`teamSiteUrl` also works well for standard channels. If your page makes use of any of these values, the value of `channelType` field must be `Shared` to determine if your page is loaded in a shared channel and can respond appropriately.
 
 ## Get context in shared channels
 
