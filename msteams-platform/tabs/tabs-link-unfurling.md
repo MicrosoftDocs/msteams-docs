@@ -69,13 +69,7 @@ Following is the code to open a stage from an Adaptive Card:
 } 
 ```
 
-The `invoke` request type must be `composeExtension/queryLink`.
-
-> [!NOTE]
->
-> * `invoke` workflow is similar to the current `appLinking` workflow.
-> * To maintain consistency, it is recommended to name `Action.Submit` as `View`.
-> * `websiteUrl` is a required property to be passed in the `TabInfo` object.
+The `invoke` request type must be `composeExtension/queryLink`. `invoke` workflow is similar to the current `appLinking` workflow. To maintain consistency, it is recommended to name `Action.Submit` as `View`. `websiteUrl` is a required property to be passed in the `TabInfo` object.
 
 Following is the process to invoke Stage View:
 
