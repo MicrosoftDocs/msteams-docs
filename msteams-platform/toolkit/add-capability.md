@@ -25,8 +25,7 @@ Adding capabilities with Teams Toolkit allows you to extend the functionality of
 | **SPFx tab** | SPFx tab apps are hosted in Microsoft 365 and it supports developing and hosting your client-side SharePoint Framework (SPFx) solution.|None|
 | **SSO-enabled tab** |You can build SSO-enabled tab app that allows the user with single sign-on (SSO) feature.|SSO-enabled tab, notification bot, command bot, bot, and message extension|
 
-> [!NOTE]
-> You can add tabs up to 16 instances. You can add one bot and one message extension to each instance at a time.
+You can add tabs up to 16 instances. You can add one bot and one message extension to each instance at a time.
 
 ## Add capabilities
 

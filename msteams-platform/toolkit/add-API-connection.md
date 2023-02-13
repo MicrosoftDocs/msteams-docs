@@ -39,13 +39,11 @@ The following steps help you to add API connection using Visual Studio Code:
     :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-select-features_1.png" alt-text="api select features":::
 
 5. Enter endpoint for the API. It's added to the project's local app settings, and it's the base URL for API requests.
+   Ensure that the endpoint is a valid http(s) URL.
 
 6. Press **Enter**.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-endpoint_1.png" alt-text="api endpoint":::
-
-     > [!NOTE]
-     > Ensure that the endpoint is a valid http(s) URL.
 
 7. Select the component that accesses the API.
 
