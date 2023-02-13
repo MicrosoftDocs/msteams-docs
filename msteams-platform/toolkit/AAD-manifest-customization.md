@@ -184,9 +184,6 @@ The state file is located in `.fx\states\state.xxx.json`. The following example 
 }
 ```
 
-> [!NOTE]
-> xxx represents different environment.
-
 You can use this placeholder argument in the Azure AD manifest. `{{state.fx-resource-aad-app-for-teams.applicationIdUris}}` to point out `applicationIdUris` value in `fx-resource-aad-app-for-teams` property.
 
 ### Reference config file values in Azure AD manifest template
@@ -249,10 +246,7 @@ CodeLens shows the application name for the pre-authorized application ID for th
    > [!NOTE]
    > xxx in the client ID indicates the environment name where you have deployed the Azure AD application.
 
-2. Go to [Azure portal](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps) and sign in to Microsoft 365 account.
-  
-   > [!NOTE]
-   > Ensure that login credentials of Teams application and M365 account are the same.
+2. Go to [Azure portal](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps) and sign in to Microsoft 365 account. Ensure that login credentials of Teams application and M365 account are the same.
 
 3. Open [App Registrations page](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps), and search the Azure AD application using client ID that you copied before.
   

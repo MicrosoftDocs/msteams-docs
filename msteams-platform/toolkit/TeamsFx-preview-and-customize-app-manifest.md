@@ -108,8 +108,7 @@ To preview manifest file by using preview option in CodeLens:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview-1.png" alt-text="Screenshot is an example of showing the adding of environment.":::
 
-   > [!NOTE]
-   > If there are more than one environment, you need to select the environment you want to preview.
+   If there are more than one environment, you need to select the environment you want to preview.
 
 To preview manifest file by selecting **Zip Teams metadata package** in remote environment:
 
@@ -127,8 +126,7 @@ To preview manifest file by selecting **Zip Teams metadata package** in remote e
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview-1.png" alt-text="Screenshot is an example of showing the adding of environment.":::
 
-   > [!NOTE]
-   > If there are more than one environment, you need to select the environment you want to preview.
+   If there are more than one environment, you need to select the environment you want to preview.
 
 </details>
 
@@ -162,10 +160,8 @@ You can also trigger **Teams: Update manifest to Teams platform** from the comma
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/pre.png" alt-text="Screenshot is an example of showing the selection of Teams: update manifest to Teams platform from the command palette.":::
 
-> [!NOTE]
->
-> * The Trigger from editor CodeLens or menu bar updates current manifest file to Teams platform.
-> * The Trigger from command palette requires selecting target environment.
+The Trigger from editor CodeLens or menu bar updates current manifest file to Teams platform.
+The Trigger from command palette requires selecting target environment.
 
  CLI command:
 
@@ -351,7 +347,7 @@ The changes are updated to Developer Portal.
 
 > [!TIP]
 >
-> * Select **Overwrite and update** or **Cancel** from the **Warning** dialog box to make any manual updates that can be overwritten in Developer Portal.
+> Select **Overwrite and update** or **Cancel** from the **Warning** dialog box to make any manual updates that can be overwritten in Developer Portal.
 
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-overwrite.png" alt-text="Screenshot is an example of showing the update warning." lightbox="../assets/images/Tools-and-SDK-revamp/edit-manifest-for-visual-studio/vs-overwrite.png":::
 
