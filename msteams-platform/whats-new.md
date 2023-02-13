@@ -24,8 +24,7 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 Teams platform features that are available to all app developers.
 
-**2023 January**
-
+**2023 February**
 
 * ***January 31, 2023***: [Create a dashboard in Teams](tabs/how-to/dashboard-teams-toolkit.md)
 
@@ -33,15 +32,28 @@ Teams platform features that are available to all app developers.
 
 ***January 31, 2023***: [Introducing update and soft delete event notifications in bot](bots/how-to/conversations/conversation-messages.md#update-message).
 
+***February 09, 2023***: [Apps for Teams meetings support anonymous users.](apps-in-teams-meetings/build-apps-for-anonymous-user.md)
+
 :::column-end:::
 :::row-end:::
 
 <br>
 <details>
+<summary><b>2023</b></summary>
+
+| **Date** | **Update** | **Find here** |
+| -------- | --------- | ----------------|
+|31/01/2023| Introducing update and soft delete event notifications in bot | Build bots > Bot conversations > [Messages in bot conversations](bots/how-to/conversations/conversation-messages.md#update-message) |
+
+</details>
+</br>
+
+<details>
 <summary><b>2022</b></summary>
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
+|31/01/2023| Introducing update and soft delete event notifications in bot | Build bots > Bot conversations > [Messages in bot conversations](bots/how-to/conversations/conversation-messages.md#update-message) |
 | 08/12/2022 | Introducing Teams developer documentation FAQs. | [Teams developer documentation FAQs](teams-faq.md) |
 | 07/12/2022 | Introducing notification bot in Teams. | Build bots > Bot conversations > [Notification bot in Teams](bots/how-to/conversations/notification-bot-in-teams.md) |
 | 07/12/2022 | Introducing command bot in Teams. | Build bots > Bot conversations > [Command bot in Teams](bots/how-to/conversations/command-bot-in-teams.md) |
