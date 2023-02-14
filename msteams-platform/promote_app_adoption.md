@@ -83,4 +83,13 @@ A campaign should be at the correct time in the adoption lifecycle and contextua
 
 Post-adoption, there is a need for continuous engagement to help existing users with their tasks and to gradually onboard late adopters. You can host interaction sessions with the community such as support webinars, office hours, and so on. You can build a community around your app, answer queries, recognize top users or MVPs in your community, and so on.
 
-For guidance to get help on creating these assets, please register for the [ISV success program overview.](https://www.microsoft.com/microsoft-365/business/compare-all-microsoft-365-business-products-b?ef_id=b7ff8842550c11df1d45ebe1bb56eaa1:G:s&OCID=AIDcmmwf9kwzdj_SEM_b7ff8842550c11df1d45ebe1bb56eaa1:G:s&lnkd=Bing_O365SMB_Brand&msclkid=b7ff8842550c11df1d45ebe1bb56eaa1)
+For guidance to get help on creating these assets, please register for the [ISV success program overview](https://www.microsoft.com/isv/program-benefits).
+
+## Step 2: Help admins to do app config and rollout for their end-users
+
+Admins create an app governance process that balances the wide-ranging requirements of end-users with their organization's IT policies, standards, and risk profiles. IT admins control the availability of and influence the adoption of apps within their organizations.
+
+Teams admin center provides admins enterprise-grade controls and configurations to govern the apps. IT admins have complete control over the availability of apps for each user in various contexts, such as meetings, chats, and channels. IT admins accomplish the following tasks:
+
+* Evaluate and allow apps.
+* 
