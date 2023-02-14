@@ -197,14 +197,16 @@ gulp ngrok-serve
 
     :::image type="content" source="~/assets/images/tab-images/channeltabadded.png" alt-text="Uploaded channel tab":::
 
-1. Select **Add** in the dialog. Your tab is uploaded to Teams. If  **Add** doesn't display in the dialog box then remove the following code from the manifest of the uploaded app package zip folder. Again zip the folder and upload it to Teams.
+1. Select **Add** in the dialog. Your tab is uploaded to Teams.
 
-    >```Json
-    >"staticTabs": [],
-    >"bots": [],
-    >"connectors": [],
-    >"composeExtensions": [],
-    >```
+    If  **Add** doesn't display in the dialog box then remove the following code from the manifest of the uploaded app package zip folder. Zip the folder again and upload it to Teams.
+
+    ```Json
+    "staticTabs": [],
+    "bots": [],
+    "connectors": [],
+    "composeExtensions": [],
+    ```
 
 1. Follow the directions for adding a tab. There's a custom configuration dialog for your channel or group tab.
 1. Select **Save** and your tab is added to the channel's tab bar.

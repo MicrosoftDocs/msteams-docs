@@ -27,10 +27,10 @@ microsoftTeams.conversations.openConversation(openConversationRequest);
 
 **openConversation** takes the following inputs to start a conversation in a channel:
 
-* **subEntityId**: The ID of your specific subentity. For example, task-123.
-* **entityId**: The ID of the tab instance when it was created. The ID is important to refer back to the same tab instance.
-* **channelId**: The channel in which the tab instance resides. The **channelId** is optional for channel tabs. However, it is recommended if you want to keep your implementation across channel and static tabs the same.
-* **title**: The title that is shown to the user in the chat panel.
+* `subEntityId`: The ID of your specific sub-entity. For example, task-123.
+* `entityId`: The ID of the tab instance when it was created. The ID is important to refer back to the same tab instance.
+* `channelId`: The channel in which the tab instance resides. The **channelId** is optional for channel tabs. However, it is recommended if you want to keep your implementation across channel and static tabs the same.
+* `title`: The title that is shown to the user in the chat panel.
 
 Most of these values can also be retrieved from the [`app.getContext()`](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-getcontext&preserve-view=true) API (`microsoftTeams.getContext()` in TeamsJS v1). For more information, see [PageInfo interface](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-pageinfo&preserve-view=true)
 

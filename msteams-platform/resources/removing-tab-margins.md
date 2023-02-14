@@ -14,9 +14,6 @@ You can build apps that look more native to Teams by removing the margins around
 
 :::image type="content" source="../assets/images/tabs/remove-margins-tabs.png" alt-text="Tab wit and without margins":::
 
-> [!NOTE]
-> This feature is not applicable to mobile clients, as the tabs viewed in the mobile clients don't have margins.
-
 ## Guidelines
 
 Tab margins removal affects your Teams apps that use tabs. In such cases, you can add margins around your tab designs where it's required. App designs in production have an extra padding effect, that is, margins provided by Teams and margins provided by the tab. However, the extra padding is only temporary and goes away in a few weeks, leaving only the app's provided padding.
@@ -37,9 +34,12 @@ No, you must provide your own padding or margins to the left and right of all ap
 * Top: 16 pixels
 * Bottom: 0 pixels
 
-* All tabs have their margins removed: personal tabs, chat (group) tabs, meeting tabs, and channel tabs.
-* The tab margin removal change applies to all tabs. There's no way to opt-in or opt-out of the change.
-* Tab margins' change can affect tabs that rely on Microsoft Teams to provide margins surrounding their UI.
+>[!Important]
+>
+> * All tabs have their margins removed: personal tabs, chat (group) tabs, meeting tabs, and channel tabs.
+> * The tab margin removal change applies to all tabs. There's no way to opt-in or opt-out of the change.
+> * Tab margins' change can affect tabs that rely on Microsoft Teams to provide margins surrounding their UI.
+> * This feature is not applicable to mobile clients, as the tabs viewed in the mobile clients don't have margins.
 
 ## See also
 
