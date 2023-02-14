@@ -52,7 +52,7 @@ You can also add the Teams display picture and people card of the user to in-mee
     }
 ```
 
-:::image type="content" source="../assets/images/apps-in-meetings/in-meeting-people-card.png" alt-text="This screenshot shows how a display picture and people card in Teams is used with in-meeting dialog." border="true":::
+:::image type="content" source="../assets/images/apps-in-meetings/in-meeting-people-card.png" alt-text="Screenshot shows how a display picture and people card in Teams is used with in-meeting dialog.":::
 
 ## Feature compatibility by user types
 
@@ -63,7 +63,7 @@ The following table provides the user types and lists the features that each use
 | In-tenant | Available | Available |  Available | Available |
 | Guest | Available | Available |  Available | Available |
 | Federated or External | Available | Not available | Not available | Available |
-| Anonymous | Not available | Not available | Not available | Not available |
+| Anonymous | Available | Not available | Not available | Not available |
 
 ## Targeted in-meeting notification
 
