@@ -83,8 +83,8 @@ Teams Toolkit allows you to customize the debug settings to create your tab or b
 
 ### Customize Scenarios
 
-<!-- For more information about debugging your existing bot app, see [How to use an existing bot](https://github.com/OfficeDev/TeamsFx/wiki/%7BDebug%7D-Teams-Toolkit-VS-Code-Tasks#how-to-use-the-existing-bot) and [Set up bot](https://github.com/OfficeDev/TeamsFx/wiki/%7BDebug%7D-Teams-Toolkit-VS-Code-Tasks#set-up-bot
-).  -->
+You can run debug scenarios for the bot app you're creating, and for existing bot projects also.
+
 <br>
 
 <details>
@@ -114,6 +114,7 @@ Use the following code snippet example to setup an existing bot for debugging:
 
 </details>
 <br>
+Here's a list of debug scenarios that you can use:
 
 <details>
 
