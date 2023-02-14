@@ -112,6 +112,9 @@ Use the following code snippet example to setup an existing bot for debugging:
 1. Update `botId` with the Azure AD app client id for your existing bot.
 1. Update `botPassword` with the Azure AD app client secret for your bot.
 
+</details>
+<br>
+
 <details>
 
 <summary><b>Skip prerequisite checks</b></summary>
