@@ -230,7 +230,7 @@ landingContent:
     - linkListType: tutorial
       links:
         - text: App caching for your tab app in Teams meeting
-          url: ~/sbs-app-caching-in-meeting-side-panel.yml
+          url: ~/sbs-app-caching-for-your-tab-app.yml
         - text: Build Teams connectors
           url: ~/sbs-teams-connectors.yml
         

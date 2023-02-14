@@ -355,6 +355,7 @@ The following table provides the user types and lists the features that each use
 * Follow the [step-by-step guide](../sbs-meetings-sidepanel.yml) to generate meeting side panel in your Teams meeting.
 * Follow the [step-by-step guide](../sbs-meetings-stage-view.yml) to share meeting stage view in your Teams meeting.
 * Follow the [step-by-step guide](../sbs-meeting-content-bubble.yml) to generate in-meeting notification in your Teams meeting.
+* Follow the [step-by-step guide](../sbs-app-caching-for-your-tab-app.yml) to generate in-meeting notification in your Teams meeting.
 
 ## See also
 
