@@ -18,8 +18,8 @@ This document provides resources and best practices for you to support the rollo
 
 Your customers must have the following access to roll out your Teams app:
 
- 1.Access to Teams
- 2.Access to your apps
+1.Access to Teams
+2.Access to your apps
 
 ### Access to Teams
 
@@ -118,9 +118,9 @@ Before IT admins approve the usage of your app and let the organization users us
 
 Consider providing the following information to help admins evaluate your app:
 
-    * Detailed documentation of your app that provides information about data security, compliance certification, privacy policies and GDPR, data flow, app architecture, and so on.
-    * Describe the [permissions that your app needs](/microsoftteams/app-permissions-admin-center) and to accomplish what use cases.
-    * Leverage the [Microsoft compliance program](/microsoftteams/overview-of-app-certification) that checks and audits an app against controls that are derived from leading industry-standard frameworks. The various tiers of the program are Publisher verification, Publisher attestation, and Microsoft 365 certification that instill increasing levels of trust for admins and users.
+* Detailed documentation of your app that provides information about data security, compliance certification, privacy policies and GDPR, data flow, app architecture, and so on.
+* Describe the [permissions that your app needs](/microsoftteams/app-permissions-admin-center) and to accomplish what use cases.
+* Leverage the [Microsoft compliance program](/microsoftteams/overview-of-app-certification) that checks and audits an app against controls that are derived from leading industry-standard frameworks. The various tiers of the program are Publisher verification, Publisher attestation, and Microsoft 365 certification that instill increasing levels of trust for admins and users.
 
 Once an admin evaluates the app to be relevant and safe for their organization’s users, they [allow the app](/microsoftteams/manage-apps) in their tenant or organization.
 
