@@ -4,7 +4,7 @@ author: ashishguptaiitb
 description: .
 ms.topic: reference
 ms.localizationpriority: medium
-ms.author: ashishguptaiitb
+ms.author: guptaashish
 ---
 
 # Promote app awareness and app adoption
@@ -18,8 +18,8 @@ This document provides resources and best practices for you to support the rollo
 
 Your customers must have the following access to roll out your Teams app:
 
-> 1.Access to Teams
-> 2.Access to your apps
+ 1.Access to Teams
+ 2.Access to your apps
 
 ### Access to Teams
 
