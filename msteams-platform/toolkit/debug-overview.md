@@ -83,10 +83,34 @@ Teams Toolkit allows you to customize the debug settings to create your tab or b
 
 ### Customize Scenarios
 
-For more information about debugging your existing bot app, see [How to use an existing bot](https://github.com/OfficeDev/TeamsFx/wiki/%7BDebug%7D-Teams-Toolkit-VS-Code-Tasks#how-to-use-the-existing-bot) and [Set up bot](https://github.com/OfficeDev/TeamsFx/wiki/%7BDebug%7D-Teams-Toolkit-VS-Code-Tasks#set-up-bot
-).
-
+<!-- For more information about debugging your existing bot app, see [How to use an existing bot](https://github.com/OfficeDev/TeamsFx/wiki/%7BDebug%7D-Teams-Toolkit-VS-Code-Tasks#how-to-use-the-existing-bot) and [Set up bot](https://github.com/OfficeDev/TeamsFx/wiki/%7BDebug%7D-Teams-Toolkit-VS-Code-Tasks#set-up-bot
+).  -->
 <br>
+
+<details>
+
+<summary><b>Learn how to use an existing bot for debugging</b></summary>
+
+To use an existing bot, you can set it up using its `botId` and `botPassword` arguments in Set up bot task. This task is to register resources and prepare local launch information for Bot.
+
+Use the following code snippet example to setup an existing bot for debugging:
+
+```json
+{
+    "label": "Set up Bot",
+    "type": "teamsfx",
+    "command": "debug-set-up-bot",
+    "args": {
+        //// Use your own AAD App for bot
+        // "botId": "",
+        // "botPassword": "", // use plain text or environment variable reference like ${env:BOT_PASSWORD}
+        "botMessagingEndpoint": "api/messages"
+    }
+}
+```
+
+1. Update `botId` with the Azure AD app client id for your existing bot.
+1. Update `botPassword` with the Azure AD app client secret for your bot.
 
 <details>
 
