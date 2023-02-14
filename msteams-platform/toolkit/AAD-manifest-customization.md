@@ -168,7 +168,8 @@ The Azure AD manifest file contains placeholder arguments with {{...}} statement
 
 ### Reference state file values in Azure AD manifest template
 
-The state file is located in `.fx\states\state.xxx.json`. The following example shows state file:
+The state file is located in `.fx\states\state.xxx.json`. xxx represents different environment.
+The following example shows state file:
 
 ``` JSON
 {
