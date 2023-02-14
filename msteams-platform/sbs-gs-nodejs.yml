@@ -273,13 +273,11 @@ items:
     1. Make a note of the forwarding address in ngrok console. You need this URL to deploy your app in Teams.
 
         > [!NOTE]
-        > If you used a different port during [build and run](#build-and-run-the-sample), make sure you use the same port number to setup the *ngrok* tunnel.
-        
-        > [!TIP]
-        > It's a good idea to run *ngrok* in a different terminal window to keep it running without interfering with the node app, which you might later have to stop, rebuild, and rerun. The *ngrok* session will return useful debugging information in this window. The paid version of *ngrok* allows persistent names.
-
-        >[!IMPORTANT] 
-        > If you use the free version of ngrok, your app will be available only during the current session on your development machine. It isn't available if the machine is shut down or goes to sleep. When you restart the service, it returns a new address. Then, you must update every location that uses the outdated address. Remember this step when sharing the app for testing.
+        > * If you used a different port during [build and run](#build-and-run-the-sample), make sure you use the same port number to setup the *ngrok* tunnel.
+        >
+        > * It's a good idea to run *ngrok* in a different terminal window to keep it running without interfering with the node app, which you might later have to stop, rebuild, and rerun. The *ngrok* session will return useful debugging information in this window. The paid version of *ngrok* allows persistent names.
+        >
+        > * If you use the free version of ngrok, your app will be available only during the current session on your development machine. It isn't available if the machine is shut down or goes to sleep. When you restart the service, it returns a new address. Then, you must update every location that uses the outdated address. Remember this step when sharing the app for testing.
 
     <a name="DeployToTeams"></a>
 
@@ -626,7 +624,7 @@ items:
     After you've imported your app and configured the capabilities in Developer Portal, you can preview and test the sample app.
     
     > [!NOTE]
-    > Currently, external developers can't use the **Preview in Teams** option in the Developer Portal app in Teams. It isn't available as an app on Teams, due to an API limitation. If you want to preview your app in Teams, use the [Developer Portal](https://dev.teams.microsoft.com/home) website.
+    > External developers can't use the **Preview in Teams** option in the Developer Portal app in Teams. It isn't available as an app on Teams, due to an API limitation. If you want to preview your app in Teams, use the [Developer Portal](https://dev.teams.microsoft.com/home) website.
 
     After configuring the capabilities of your app, you can preview and test your app in Teams in the local environment.
 

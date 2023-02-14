@@ -162,7 +162,7 @@ items:
     1. [How to set up a new bot project with Teams Toolkit.](#create-your-bot-project-workspace)
     1. [About the directory structure of your app project.](#take-a-tour-of-the-bot-app-source-code)
 
-    Currently, bots are available in Government Community Cloud (GCC) but not available in GCC-High and Department of Defense (DOD).
+    Bots are available in Government Community Cloud (GCC) but not available in GCC-High and Department of Defense (DOD).
 
     ## Create your bot project workspace
 
@@ -389,7 +389,7 @@ items:
       To successfully run your app in Teams, ensure that you've enabled sideloading in your Teams account. You can learn more about sideloading in the Prerequisites section.
 
       > [!IMPORTANT]
-      > Currently, sideloading apps are available in Government Community Cloud (GCC), GCC-High, and DOD.
+      > Sideloading apps are available in Government Community Cloud (GCC), GCC-High, and DOD.
 
       > [!TIP]
       > Check for issues before sideloading your app, using the [app validation tool](https://dev.teams.microsoft.com/appvalidation.html). This tool is included in the toolkit. Fix the errors to sideload the app.
