@@ -221,7 +221,7 @@ cancellationToken);
 
 ### Adaptive Cards
 
-Anonymous users can view and interact with Adaptive Cards in the meeting chat. Adaptive card actions behave the same way for anonymous and non-anonymous users. For more information, see [Card actions](/microsoftteams/platform/task-modules-and-cards/cards/cards-actions?tabs=json).
+Anonymous users can view and interact with Adaptive Cards in the meeting chat. Adaptive Card actions behave the same way for anonymous and non-anonymous users. For more information, see [Card actions](/microsoftteams/platform/task-modules-and-cards/cards/cards-actions?tabs=json).
 
 ## Known issues and limitations
 
