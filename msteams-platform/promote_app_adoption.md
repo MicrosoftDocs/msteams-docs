@@ -19,6 +19,7 @@ This document provides resources and best practices for you to support the rollo
 Your customers must have the following access to roll out your Teams app:
 
 1.Access to Teams
+
 2.Access to your apps
 
 ### Access to Teams
