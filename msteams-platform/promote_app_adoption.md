@@ -92,4 +92,47 @@ Admins create an app governance process that balances the wide-ranging requireme
 Teams admin center provides admins enterprise-grade controls and configurations to govern the apps. IT admins have complete control over the availability of apps for each user in various contexts, such as meetings, chats, and channels. IT admins accomplish the following tasks:
 
 * Evaluate and allow apps.
-* 
+* Define app availability for the required users using permissions policies for access.
+* Add apps for some or all end-users using setup policies for rollout.
+* Allow apps to access organization and user information by providing admin consent.
+* Buy and manage licenses and subscriptions for paid apps.
+* Upload and manage custom apps in their org-specific app catalog.
+* Update some metadata of app to suit their org-specific requirements if the app allows it.
+
+The IT admins in your customer’s organization have myriad of tasks to ensure daily operations. By sharing the below resources with the IT pros, you can remove friction in their app evaluation and rollout journey.
+
+Understand the tasks of an IT admin before, during, and after they rollout your app.
+
+## Deployment steps by admin
+
+Admins use the following high-level steps to deploy your app.
+
+* Evaluate and allow an app in their organization.
+* Create and apply app policies to make app available to all or specific users, including pinning apps.
+* Understand app permissions and grant consent.
+* Check and consider app approval requests for apps that are blocked.
+
+### Evaluate and allow apps
+
+Before IT admins approve the usage of your app and let the organization users use it, they understand the permissions sought by the app and various details about the security, compliance, privacy, and data handling of the app.
+
+Consider providing the following information to help admins evaluate your app:
+
+    * Detailed documentation of your app that provides information about data security, compliance certification, privacy policies and GDPR, data flow, app architecture, and so on.
+    * Describe the [permissions that your app needs](/microsoftteams/app-permissions-admin-center) and to accomplish what use cases.
+    * Leverage the [Microsoft compliance program](/microsoftteams/overview-of-app-certification) that checks and audits an app against controls that are derived from leading industry-standard frameworks. The various tiers of the program are Publisher verification, Publisher attestation, and Microsoft 365 certification that instill increasing levels of trust for admins and users.
+
+Once an admin evaluates the app to be relevant and safe for their organization’s users, they [allow the app](/microsoftteams/manage-apps) in their tenant or organization.
+
+### Create policies to give permission to use app and pin it
+
+Microsoft Teams uses app policies to govern access and installation behavior of apps. App policies help Teams admins control the following app behavior:
+
+* Allow individual users or a group of users to use an app.
+* Pin an app for end-users for ease of access.
+* Install apps for end-users without user intervention to help end-users easily get started with the relevant apps.
+
+With the help of the following app policies, admins can manage the above access:
+
+    * **App permission policies**: Admins can use app permission policies to control which apps are available to each user in their organization. They can allow a few apps for all users, a few apps for a specific group of users, or specific apps for specific users. See [app permission policies](/microsoftteams/teams-app-permission-policies).
+    * **App setup policies**: App setup policies allow admins to configure how and where apps are available for users in their Teams client. They can choose the apps that they want to pin to the app bar in the Teams client and define the order in which the apps are displayed. See [app setup policies](/microsoftteams/teams-app-setup-policies).
