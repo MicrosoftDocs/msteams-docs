@@ -8,32 +8,28 @@ ms.topic: Dashboard, widget, and Graph API call in Teams toolkit
 ms.date: 01/17/2023
 ---
 
-# Create a dashboard in Teams
+# Build a dashboard tab app
 
-Dashboards in the Teams toolkit allow you to monitor your business and view important metrics. A widget displays content from apps and services to stay engaged with the latest updates in Teams. Graph API can be used to visualize details about the implementation of the selected API.
+A dashboard is a tool to track, analyze, and display data to gain insight of an organization or a specific process. Dashboards in Teams allow you to monitor and view important metrics.
 
-## Dashboard
+The dashboard tab template from Teams Toolkit allows you to get started with integrating a canvas with multiple cards that provide an overview of content in Teams. You can:
 
- A dashboard is a tool to track, analyze, and display data to gain insight of an organization or a specific process. The dashboard tab template from the Teams toolkit enables you to get started with integrating a canvas with multiple cards that provide an overview of the content in Microsoft Teams.
-
-Example of a dashboard:
+* Use widgets to display content from apps and services within your dashboard tab.
+* Integrate your app with Graph API to visualize details about the implementation of the selected data.
+* Create customizable dashboards that allow your business to set specific goals that help you track the information you need to view in multiple areas and across departments.
 
 :::image type="content" source="../../assets/images/dashboard/dashboard-demonstration.png" alt-text="Screenshot shows the sample of a dashboard.":::
 
-**Advantages**
+The Teams dashboard app allows your team to be engaged with latest updates from different sources within Teams all within the same tab. Use dashboard tab apps to connect numerous metrics, data sources, APIs, and services to help your business extract relevant information from the sources and present it to the users.
 
-* Dashboards connect numerous metrics, data sources, APIs, and services to help business extract relevant information from the sources and present it to the users.
+## Add a new dashboard tab app
 
-* Customizable dashboards allow your business to set specific goals that help you track the information you need to view in multiple areas and across departments.
-
-## Add a new dashboard
-
-Following are the steps to add a new dashboard layout:
+After creating a dashboard tab app, additionally if you want to create an new dashboard tab app, following are the steps:
 
 1. [Create a dashboard class](#create-a-dashboard-class)
-1. [Override methods to customize dashboard layout](#override-methods-to-customize-dashboard-layout)
-1. [Add a route for the new dashboard](#add-a-route-for-the-new-dashboard)
-1. [Modify manifest to add a new dashboard tab](#modify-manifest-to-add-a-new-dashboard-tab)
+1. [Override methods to customize dashboard tab app](#override-methods-to-customize-dashboard-tab-app)
+1. [Add a route for the new dashboard tab app](#add-a-route-for-the-new-dashboard-tab-app)
+1. [Modify manifest to add a new dashboard tab app](#modify-manifest-to-add-a-new-dashboard-tab-app)
 
 ### Create a dashboard class
 
@@ -45,7 +41,10 @@ export default class YourDashboard extends Dashboard {}
 
 ```
 
-### Override methods to customize dashboard layout
+>[!NOTE]
+> All methods are optional. If you don't override any method, the default dashboard layout will be used.
+
+### Override methods to customize dashboard tab app
 
 Dashboard class provides few methods that you can override to customize the dashboard layout. The following table lists the methods that you can override:
 
@@ -55,7 +54,7 @@ Dashboard class provides few methods that you can override to customize the dash
 | `columnWidths()` | Customize how many columns the dashboard has at most and the width of each column. |
 | `dashboardLayout()` | Define widgets layout. |
 
-Following is an example to customize the dashboard layout.
+Following is an example to customize the dashboard layout:
 
 ```typescript
 export default class YourDashboard extends Dashboard {
@@ -81,12 +80,9 @@ export default class YourDashboard extends Dashboard {
 }
 ```
 
->[!NOTE]
-> All methods are optional. If you don't override any method, the default dashboard layout will be used.
+### Add a route for the new dashboard tab app
 
-### Add a route for the new dashboard
-
-Open tabs/src/App.tsx file and add a route for the new dashboard. Here's an example:
+The source file would be picked up from the path that you have created, which will be displayed on the widget. Open tabs/src/App.tsx file and add a route for the new dashboard. Here's an example:
 
 ```typescript
 import YourDashboard from "./views/dashboards/YourDashboard";
@@ -98,7 +94,7 @@ export default function App() {
 }
 ```
 
-### Modify manifest to add a new dashboard tab
+### Modify manifest to add a new dashboard tab app
 
 Open templates/appPackage/manifest.template.json file and add a new dashboard tab under the `staticTabs`. Here's an example:
 
@@ -112,48 +108,11 @@ Open templates/appPackage/manifest.template.json file and add a new dashboard ta
 }
 ```
 
-### Take a tour of your app source code
+## Customize the dashboard tab app
 
-The core dashboard implementation is in tabs folder. This section walks you through the generated code:
+The `TeamsFx` provides convenient methods for defining and modifying the layout of the dashboard. Following are the steps to customize the dashboard tab app.
 
-| **Folder** | **Content** |
-|---|---|
-| `.fx` | Project level settings, configurations, and environment information. |
-| `.vscode` | Visual Studio Code files for local debug. |
-| `tabs` | Source code for the dashboard tab Teams application. |
-| `templates` | Templates for the Teams application manifest and for provisioning Azure resources. |
-
-The following files provide the business logic for the dashboard tab. These files can be updated to fit your business logic requirements. The default implementation provides a starting point to help you get started.
-
-| **File** | **Content** |
-|---|---|
-| src/models/listModel.tsx | Data model for the list widget. |
-| src/services/listService.tsx | A data retrieve implementation for the list widget. |
-| src/views/dashboards/SampleDashboard.tsx | A sample dashboard layout implementation. |
-| src/views/lib/Dashboard.styles.ts | The dashboard style file. |
-| src/views/lib/Dashboard.tsx | A base class that defines the dashboard. |
-| src/views/lib/Widget.styles.ts | The widget style file. |
-| src/views/lib/Widget.tsx | An abstract class that defines the widget. |
-| src/views/styles/ListWidget.styles.ts | The list widget style file. |
-| src/views/widgets/ChartWidget.tsx | A widget implementation that can display a chart. |
-| src/views/widgets/ListWidget.tsx | A widget implementation that can display a list. |
-
-The following files are project-related files and you need not customize these files:
-
-| **File** | **Content**|
-|---|---|
-| src/index.tsx | Application entry point |
-| src/App.tsx | Application route |
-| src/internal/addNewScopes.ts | Implementation of new scopes added |
-| src/internal/context.ts | `TeamsFx` context |
-| src/internal/login.ts | Implementation of login |
-| src/internal/singletonContext.ts | Implementation of the `TeamsFx` instance singleton |
-
-## Customize the dashboard layout
-
-The `TeamsFx` provides convenient methods for defining and modifying the layout of the dashboard.
-
-1. Three widgets in a row with the height of 350 px occupying 20%, 60%, and 20% of the width, respectively.
+1. Three widgets in a row with the height of 350 px occupying 20%, 60%, and 20% of the width, respectively:
 
     ```typescript
     export default class SampleDashboard extends Dashboard {
@@ -177,7 +136,7 @@ The `TeamsFx` provides convenient methods for defining and modifying the layout 
     }
     ```
 
-    Following is an example of customized dashboard layout.
+    Following is an example of customized dashboard tab app:
 
    :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/customize-dashboard-layout.png" alt-text="Screenshot shows the customized dashboard layout.":::
 
@@ -205,11 +164,11 @@ The `TeamsFx` provides convenient methods for defining and modifying the layout 
     }
     ```
 
-    Following is an example of height and width customization:
+    Following is an example of height and width customization of a dashboard tab app:
 
     :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/customize-dashboard-layout2.png" alt-text="Screenshot shows the customization of height and width of the dashboard layout.":::
 
-1. Arrange two widgets in a column.
+1. Arrange two widgets in a column:
 
     ```typescript
     import { oneColumn } from '../lib/Dashboard.styles';
@@ -241,7 +200,9 @@ The `TeamsFx` provides convenient methods for defining and modifying the layout 
 
     :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/widget-customize.png" alt-text="Screenshot shows the two widget customization.":::
 
-1. Customize the height of widgets in a row. The following code can achieve a height of 400 px for the `ListWidget` and a height of 350 px for the `ChartWidget`.
+1. Customize the height of widgets in a row.
+
+    The following code can achieve a height of 400 px for the `ListWidget` and a height of 350 px for the `ChartWidget`:
 
     ```typescript
         import { oneColumn } from '../lib/Dashboard.styles';
@@ -272,7 +233,7 @@ The `TeamsFx` provides convenient methods for defining and modifying the layout 
 
       :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/chart-widget.png" alt-text="Screenshot shows the customization of a chart widget.":::
 
-## Dashboard abstraction
+## Dashboard tab app abstraction
 
 To adjust the layout of the dashboard, the `TeamsFx` provides a dashboard class for the developers to implement a dashboard.
 
@@ -395,9 +356,9 @@ Following are the customizable methods to override:
 
 ## Embed Power BI to Dashboard
 
-To embed Power BI to the Dashboard, you can refer to [powerbi-client-react](/javascript/api/overview/powerbi/powerbi-client-react).
+To embed Power BI to the Dashboard, you can refer to [power BI client react](/javascript/api/overview/powerbi/powerbi-client-react)
 
-## Widget
+## Use a widget in your dashboard
 
 Widgets display configurable information and charts on dashboards. They appear on the widget board where you can pin, unpin, arrange, resize, and customize widgets to reflect your interests. Your widget board is optimized to show relevant widgets and personalized content based on your usage.
 
@@ -509,7 +470,7 @@ Widget class provides some methods that can be overridden to customize the widge
 
     :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/override-body-content.png" alt-text="Screenshot shows body content in a widget.":::
 
-### Widget Abstraction
+### Widget abstraction
 
 To simplify the development of a widget, the `TeamsFx` provides a widget class for developers to inherit to implement a widget that meets their needs without much attention to implement the widget layout.
 
@@ -593,11 +554,152 @@ Following are the recommended methods to override:
 | **bodyContent()** | Invokes what the widget body will look like. You can choose to override this method to customize a widget or not, if not, the widget won't have a body. | YES |
 | **footerContent()** | Invokes what the widget footer will look like. You can choose to override this method to customize a widget or not, if not, the widget won't have a footer. | YES |
 
+### Include a data loader
+
+If you want to include a data loader to your widget before the widget is loaded, you can add a property to the state of the widget to indicate that the data loader is loading. This property can be used to show a loading indicator to the user.
+
+The following steps show how to add a property to the state of `ListWidget` and how to use it to show a loading spinner while the data is loading.
+
+1. Define a state type
+
+   Define a state type including a property named `loading` that indicates whether the data is loading.
+
+    ```typescript
+    interface ListWidgetState {
+      data: ListModel[];
+      loading?: boolean;
+    }
+    ```
+
+1. Add a data loader
+
+    Modify the `bodyContent` method to show a loading spinner if data is loading.
+
+    ```tsx
+    bodyContent(): JSX.Element | undefined {
+      return (
+        <>
+          {this.state.loading !== false ? (
+            <div style={{ display: "grid", justifyContent: "center", height: "100%" }}>
+              <Spinner label="Loading..." labelPosition="below" />
+            </div>
+          ) : (
+            <div style={bodyContentStyle()}>
+              ...
+            </div>
+          )}
+        </>
+      );
+    }
+    ```
+
+1. Hide the footer button if the data is loading
+
+    Following is an example of footer button:
+
+    ```tsx
+    footerContent(): JSX.Element | undefined {
+      if (this.state.loading === false) {
+        return (
+          <Button
+            ...
+          </Button>
+        );
+      }
+    }
+    ```
+
+1. Update the state reference
+
+    Update the state reference in the widget file to use the new state type and update the state in the `getData` method to set the `loading` property to `false` after the data is loaded.
+
+    Now, the loading spinner is shown while the data is loading. When the data is loaded, the loading spinner is hidden and the list data, and footer button are shown.
+
+    :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/spinner.gif" alt-text="Graphical representation shows the loading spinner while the data is loading.":::
+
+### Handle empty state
+
+You can display a specific content in your widget when the data is empty. To do so, you need to modify the `bodyContent` method in your widget file to adopt different states of the data. The following example shows how to display an empty image when the data of `ListWidget` is empty.
+
+```tsx
+bodyContent(): JSX.Element | undefined {
+    let hasData = this.state.data && this.state.data.length > 0;
+    return (
+      <div style={bodyContentStyle()}>
+        {hasData ? (
+          <>
+            {this.state.data?.map((t: ListModel) => {
+              ...
+            })}
+          </>
+        ) : (
+          <div
+            style={{
+              display: "grid",
+              gap: "1rem",
+              justifyContent: "center",
+              alignContent: "center",
+            }}
+          >
+            <Image src="empty-default.svg" height="150px" />
+            <Text align="center">No data</Text>
+          </div>
+        )}
+      </div>
+    );
+  }
+```
+
+You can use a similar approach to remove the footer content of your widget when the data is empty.
+
+```tsx
+footerContent(): JSX.Element | undefined {
+    let hasData = this.state.data && this.state.data.length > 0;
+    if (hasData) {
+      return (
+        <Button
+          ...
+        </Button>
+      );
+    }
+  }
+```
+
+  Following is an example of list widget when the data is empty:
+
+  :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/no-data.png" alt-text="Screenshot showing no data in the list.":::
+
+### Refresh data as scheduled
+
+The following example shows how to display real-time data in a widget. The widget displays the current time and updates.
+
+```tsx
+import { Widget } from "../lib/Widget";
+
+interface IRefreshWidgetState {
+  data: string;
+}
+
+export class RefreshWidget extends Widget<IRefreshWidgetState> {
+  bodyContent(): JSX.Element | undefined {
+    return <>{this.state.data}</>;
+  }
+
+  async componentDidMount() {
+    setInterval(() => {
+      this.setState({ data: new Date().toLocaleTimeString() });
+    }, 1000);
+  }
+}
+```
+
+You can modify `setInterval` method to call your own function to refresh data like this `setInterval(() => yourGetDataFunction(), 1000)`.
+
 ### Microsoft Graph Toolkit as widget content
 
 Microsoft Graph Toolkit is a set of renewable, framework-agnostic web component, which helps accessing and working with Microsoft Graph. You can use the Microsoft Graph Toolkit with any web framework or without a framework.
 
-You can follow the steps to use Microsoft Graph Toolkit as your widget content:
+Following are the steps to use Microsoft Graph Toolkit as your widget content:
 
 1. Add SSO feature to your Teams app
 
@@ -694,147 +796,6 @@ You can follow the steps to use Microsoft Graph Toolkit as your widget content:
 
 Now, launch or refresh your Teams app, you'll see the new widget using Microsoft Graph Toolkit.
 
-### How to include a data loader
-
-If you want to include a data loader to your widget before the widget is loaded, you can add a property to the state of the widget to indicate that the data loader is loading. This property can be used to show a loading indicator to the user.
-
-The following steps show how to add a property to the state of `ListWidget` and how to use it to show a loading spinner while the data is loading.
-
-1. Define a state type
-
-   Define a state type including a property named `loading` that indicates whether the data is loading.
-
-    ```typescript
-    interface ListWidgetState {
-      data: ListModel[];
-      loading?: boolean;
-    }
-    ```
-
-1. Add a data loader
-
-    Modify the `bodyContent` method to show a loading spinner if data is loading.
-
-    ```tsx
-    bodyContent(): JSX.Element | undefined {
-      return (
-        <>
-          {this.state.loading !== false ? (
-            <div style={{ display: "grid", justifyContent: "center", height: "100%" }}>
-              <Spinner label="Loading..." labelPosition="below" />
-            </div>
-          ) : (
-            <div style={bodyContentStyle()}>
-              ...
-            </div>
-          )}
-        </>
-      );
-    }
-    ```
-
-1. Hide the footer button if the data is loading
-
-    Following is an example of footer button:
-
-    ```tsx
-    footerContent(): JSX.Element | undefined {
-      if (this.state.loading === false) {
-        return (
-          <Button
-            ...
-          </Button>
-        );
-      }
-    }
-    ```
-
-1. Update the state reference
-
-    Update the state reference in the widget file to use the new state type and update the state in the `getData` method to set the `loading` property to `false` after the data is loaded.
-
-    Now, the loading spinner is shown while the data is loading. When the data is loaded, the loading spinner is hidden and the list data, and footer button are shown.
-
-    :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/spinner.gif" alt-text="Graphical representation shows the loading spinner while the data is loading.":::
-
-### How to handle empty state
-
-You can display a specific content in your widget when the data is empty. To do so, you need to modify the `bodyContent` method in your widget file to adopt different states of the data. The following example shows how to display an empty image when the data of `ListWidget` is empty.
-
-```tsx
-bodyContent(): JSX.Element | undefined {
-    let hasData = this.state.data && this.state.data.length > 0;
-    return (
-      <div style={bodyContentStyle()}>
-        {hasData ? (
-          <>
-            {this.state.data?.map((t: ListModel) => {
-              ...
-            })}
-          </>
-        ) : (
-          <div
-            style={{
-              display: "grid",
-              gap: "1rem",
-              justifyContent: "center",
-              alignContent: "center",
-            }}
-          >
-            <Image src="empty-default.svg" height="150px" />
-            <Text align="center">No data</Text>
-          </div>
-        )}
-      </div>
-    );
-  }
-```
-
-You can use a similar approach to remove the footer content of your widget when the data is empty.
-
-```tsx
-footerContent(): JSX.Element | undefined {
-    let hasData = this.state.data && this.state.data.length > 0;
-    if (hasData) {
-      return (
-        <Button
-          ...
-        </Button>
-      );
-    }
-  }
-```
-
-  Following is an example of list widget when the data is empty:
-
-  :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/no-data.png" alt-text="Screenshot showing no data in the list.":::
-
-### How to refresh data as scheduled
-
-The following example shows how to display real-time data in a widget. The widget displays the current time and updates.
-
-```tsx
-import { Widget } from "../lib/Widget";
-
-interface IRefreshWidgetState {
-  data: string;
-}
-
-export class RefreshWidget extends Widget<IRefreshWidgetState> {
-  bodyContent(): JSX.Element | undefined {
-    return <>{this.state.data}</>;
-  }
-
-  async componentDidMount() {
-    setInterval(() => {
-      this.setState({ data: new Date().toLocaleTimeString() });
-    }, 1000);
-  }
-}
-```
-
-You can modify `setInterval` method to call your own function to refresh data like this `setInterval(() => yourGetDataFunction(), 1000)`.
-
 ## Graph API call
 
 Microsoft Graph API is a web API that you can use to communicate with Microsoft cloud and other services. Custom applications can use the Microsoft Graph API to connect to data and use it in custom applications to enhance organizational productivity.
@@ -898,7 +859,7 @@ If you want to call a Graph API from the back-end, you can refer to the followin
 1. Select **Application permissions**.
 1. Find the permissions you need.
 1. Select the **Add permissions** button at the bottom.
-1. Select **✔Grant admin consent for XXX**.
+1. Select **✔Grant admin consent**.
 1. Select the **Yes** button to finish the admin consent.
 
 **Add an Azure Function**
