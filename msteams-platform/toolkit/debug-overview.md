@@ -81,10 +81,7 @@ Ensure that you can toggle breakpoints on the source codes of tabs, bots, messag
 
 Teams Toolkit allows you to customize the debug settings to create your tab or bot. For more information on the full list of customizable options, see [debug settings doc](https://aka.ms/teamsfx-debug-tasks).
 
-### Customize Scenarios
-
-You can run debug scenarios for the bot app you're creating, and for existing bot projects also.
-
+You can also customize debug settings for your existing bot app.
 <br>
 
 <details>
@@ -113,9 +110,11 @@ Use the following code snippet example to setup an existing bot for debugging:
 1. Update `botPassword` with the Azure AD app client secret for your bot.
 
 </details>
-<br>
-Here's a list of debug scenarios that you can use:
 
+### Customize Scenarios
+
+Here's a list of debug scenarios that you can use:
+<br>
 <details>
 
 <summary><b>Skip prerequisite checks</b></summary>
