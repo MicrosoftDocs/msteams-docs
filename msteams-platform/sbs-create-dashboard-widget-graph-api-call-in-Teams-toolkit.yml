@@ -80,7 +80,7 @@ items:
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/dark-light-theme.png" alt-text="Screenshot shows the contrast themes.":::
        
 - title: Take a tour of the app source code
-  durationInMinutes: 5
+  durationInMinutes: 2
   content: |       
 
       The core dashboard implementation is in tabs folder. This section walks you through the generated code:
@@ -219,7 +219,7 @@ items:
       
      ## Add the widget to the dashboard
 
-      If you want to create a new dashboard, refer to [add a new dashboard](tabs/how-to/dashboard-teams-toolkit.md#add-a-new-dashboard).
+      If you want to create a new dashboard, refer to [Add a new dashboard tab app](tabs/how-to/dashboard-teams-toolkit.md#Add a new dashboard tab app)
 
       1. In Visual Studio Code, go to **Explorer** > **tabs** > **src** > **views** > **dashboards** > **sampleDashboard.tsx**
       1. Create a **sampleDashboard.jsx** file.
