@@ -25,9 +25,7 @@ Your Teams bot consists of the following:
 * A publicly accessible web service hosted by you.
 * A Bot Framework registration for your web service.
 * Your Teams app package, which connects the Teams client to your web service.
-
-> [!TIP]
-> Use the Developer Portal to register your web service with the Bot Framework and specify your app configurations. For more information, see [manage your apps with the Developer Portal for Teams](~/concepts/build-and-test/teams-developer-portal.md).
+* Use the Developer Portal to register your web service with the Bot Framework and specify your app configurations. For more information, see [manage your apps with the Developer Portal for Teams](~/concepts/build-and-test/teams-developer-portal.md).
 
 The [Bot Framework](https://dev.botframework.com/) is a rich SDK used to create bots using C#, Java, Python, and JavaScript. If you already have a bot that is based on the Bot Framework, you can easily modify it to work in Teams. Use either C# or Node.js to take advantage of our [SDKs](/microsoftteams/platform/#pivot=sdk-tools). These packages extend the basic Bot Builder SDK classes and methods as follows:
 
@@ -35,8 +33,7 @@ The [Bot Framework](https://dev.botframework.com/) is a rich SDK used to create 
 * Set Teams-specific channel data on activities.
 * Process message extension requests.
 
-> [!IMPORTANT]
-> You can develop Teams apps in any web programming technology and call the [Bot Framework REST APIs](/bot-framework/rest-api/bot-framework-rest-overview) directly. But you must perform token handling in all cases.
+You can develop Teams apps in any web programming technology and call the [Bot Framework REST APIs](/bot-framework/rest-api/bot-framework-rest-overview) directly. But you must perform token handling in all cases.
 
 ## Bots with Power Virtual Agents
 

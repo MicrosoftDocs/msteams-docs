@@ -17,10 +17,7 @@ An activity handler is used to organize the conversational logic for your bot. A
 
 Teams activity handler is derived from Microsoft Bot Framework's activity handler. It routes all Teams activities before allowing any non-Teams specific activities to be handled.
 
-When a bot for Teams receives an activity, it's routed to the activity handlers. All activities are routed through one base handler called the turn handler. The turn handler calls the required activity handler to manage any activity received. The Teams bot is derived from `TeamsActivityHandler` class, which is derived from the Bot Framework's `ActivityHandler` class.
-
-> [!NOTE]
-> If the bot activity takes more than 15 seconds to process, Teams send a retry request to bot endpoint. Hence, you'll see duplicate requests in your bot.
+When a bot for Teams receives an activity, it's routed to the activity handlers. All activities are routed through one base handler called the turn handler. The turn handler calls the required activity handler to manage any activity received. The Teams bot is derived from `TeamsActivityHandler` class, which is derived from the Bot Framework's `ActivityHandler` class. If the bot activity takes more than 15 seconds to process, Teams send a retry request to bot endpoint. Hence, you'll see duplicate requests in your bot.
 
 # [C#](#tab/csharp)
 
@@ -201,10 +198,7 @@ The bot logic processes incoming activities from one or more of your bot channel
 
 #### Core Bot Framework handlers
 
->[!NOTE]
->
->* Except for the **added** and **removed** members' activities, all the activity handlers described in this section continue to work as they do with a non-Teams bot.
->* `onInstallationUpdateActivityAsync()` method is used to get Teams Locale while adding the bot to Teams.
+Except for the **added** and **removed** members' activities, all the activity handlers described in this section continue to work as they do with a non-Teams bot. `onInstallationUpdateActivityAsync()` method is used to get Teams Locale while adding the bot to Teams.
 
 Activity handlers are different in context of a team, where a new member is added to the team instead of a message thread.
 
