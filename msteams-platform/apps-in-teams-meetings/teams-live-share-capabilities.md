@@ -18,6 +18,9 @@ The Live Share SDK can be added to your meeting extension's `sidePanel` and `mee
 
 The [Live Share SDK](https://github.com/microsoft/live-share-sdk) is a JavaScript package published on [npm](https://www.npmjs.com/package/@microsoft/live-share), and you can download through npm or Yarn.
 
+> [!NOTE]
+> The Live Share SDK isn't supported for anonymous users.
+
 ### npm
 
 ```bash
