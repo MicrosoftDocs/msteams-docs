@@ -1,10 +1,10 @@
 ---
 title: Promote app awareness and app adoption
-author: ashishgupta
+author: ashishguptaiitb
 description: .
 ms.topic: reference
 ms.localizationpriority: medium
-ms.author: ashishgupta
+ms.author: ashishguptaiitb
 ---
 
 # Promote app awareness and app adoption
@@ -40,11 +40,11 @@ Ensure that  end-users have access to your apps on Teams store. Admins can set u
 
 You can help your customers drive adoption within their organizations by app adoption and usage related guidance. To do so, you can follow some or all the following steps.
 
-> * **Perform internal enablement to support app adoption**: Share important and relevant information to IT admins and help end-users understand and adopt your apps. Provide an adoption toolkit for your app to achieve this. Define a rollout process and enablement trainings for your customer facing teams.
-> * **Help admins to do app config and rollout**: Help the IT admins make the necessary configurations to enable your app for the end users in your customers' organizations. Provide a help guide for IT admins to understand the configuration steps.
-> * **Educate users and drive awareness about your app**: Provide user guide for end-users that describes their jobs to be done (JTBD) and your app’s features. Promote awareness about your app and its use cases. You can conduct email campaigns, webinars, or social media engagements depending on your target audience.
-> * **Provide support contact for IT admins and end-users**: As admins start to roll out the app and as users start to use it, they will reach out for support for the issues that they cannot resolve using your documentation. Timely help during this stage ensures quick onboarding and better retention.
-> * **Track app adoption and usage using analytics**: Track your app adoption progress after the rollout and promptly resolve issues for the early adopters.    Your CSM or account manager can engage with the customer's organization and its IT admins to track adoption and provide support, if required.
+* **Perform internal enablement to support app adoption**: Share important and relevant information to IT admins and help end-users understand and adopt your apps. Provide an adoption toolkit for your app to achieve this. Define a rollout process and enablement trainings for your customer facing teams.
+* **Help admins to do app config and rollout**: Help the IT admins make the necessary configurations to enable your app for the end users in your customers' organizations. Provide a help guide for IT admins to understand the configuration steps.
+* **Educate users and drive awareness about your app**: Provide user guide for end-users that describes their jobs to be done (JTBD) and your app’s features. Promote awareness about your app and its use cases. You can conduct email campaigns, webinars, or social media engagements depending on your target audience.
+* **Provide support contact for IT admins and end-users**: As admins start to roll out the app and as users start to use it, they will reach out for support for the issues that they cannot resolve using your documentation. Timely help during this stage ensures quick onboarding and better retention.
+* **Track app adoption and usage using analytics**: Track your app adoption progress after the rollout and promptly resolve issues for the early adopters.    Your CSM or account manager can engage with the customer's organization and its IT admins to track adoption and provide support, if required.
 
 ## Step 1: Perform internal enablement to support app adoption
 
@@ -134,5 +134,5 @@ Microsoft Teams uses app policies to govern access and installation behavior of 
 
 With the help of the following app policies, admins can manage the above access:
 
-    * **App permission policies**: Admins can use app permission policies to control which apps are available to each user in their organization. They can allow a few apps for all users, a few apps for a specific group of users, or specific apps for specific users. See [app permission policies](/microsoftteams/teams-app-permission-policies).
-    * **App setup policies**: App setup policies allow admins to configure how and where apps are available for users in their Teams client. They can choose the apps that they want to pin to the app bar in the Teams client and define the order in which the apps are displayed. See [app setup policies](/microsoftteams/teams-app-setup-policies).
+* **App permission policies**: Admins can use app permission policies to control which apps are available to each user in their organization. They can allow a few apps for all users, a few apps for a specific group of users, or specific apps for specific users. See [app permission policies](/microsoftteams/teams-app-permission-policies).
+* **App setup policies**: App setup policies allow admins to configure how and where apps are available for users in their Teams client. They can choose the apps that they want to pin to the app bar in the Teams client and define the order in which the apps are displayed. See [app setup policies](/microsoftteams/teams-app-setup-policies).
