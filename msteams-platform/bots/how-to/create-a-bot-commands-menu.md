@@ -9,12 +9,11 @@ ms.author: anclear
 
 # Create a commands menu
 
-> [!NOTE]
-> It's recommended that you'd create a command bot by following the step-by-step guide to [Build command bot with JavaScript](../../sbs-gs-commandbot.yml) using the new generation development tool for Teams. For more information about Teams Toolkit, see [Teams Toolkit Overview for Visual Studio Code](../../toolkit/teams-toolkit-fundamentals.md) and [Teams Toolkit overview for Visual Studio](../../toolkit/teams-toolkit-overview-visual-studio.md).
-
-[!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
+[ INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
 To define a set of core commands that your bot can respond to, you can add a command menu with a drop-down list of commands for your bot. The list of commands is presented to the users in the compose message area when they are in conversation with your bot. Select a command from the list to insert the command string into the compose message box and select **Send**.
+
+It's recommended that you'd create a command bot by following the step-by-step guide to [Build command bot with JavaScript](../../sbs-gs-commandbot.yml) using the new generation development tool for Teams. For more information about Teams Toolkit, see [Teams Toolkit Overview for Visual Studio Code](../../toolkit/teams-toolkit-fundamentals.md) and [Teams Toolkit overview for Visual Studio](../../toolkit/teams-toolkit-overview-visual-studio.md).
 
 # [Desktop](#tab/desktop)
 
@@ -161,8 +160,7 @@ You must handle menu commands in your bot code as you handle any message from us
 
 Bots in a group or channel respond only when they are mentioned `@botname` in a message. Every message received by a bot when in a group or channel scope contains its name in the message text. Before handling the command being returned, your message parsing must handle the message received by a bot with its name.
 
-> [!NOTE]
-> To handle the commands in code, they are sent to your bot as a regular message. You must handle them as you would handle any other message from your users. The commands in code insert pre-configured text into the text box. The user must then send that text as they do for any other message.
+To handle the commands in code, they are sent to your bot as a regular message. You must handle them as you would handle any other message from your users. The commands in code insert pre-configured text into the text box. The user must then send that text as they do for any other message.
 
 # [C#](#tab/dotnet)
 
@@ -221,9 +219,7 @@ Following are the command menu best practices:
 * Keep it simple: The bot menu is meant to present the key capabilities of your bot.
 * Keep it short: Menu options must not be long and must not be complex natural language statements. They must be simple commands.
 * Keep it invokable: Bot menu actions or commands must always be available, regardless of the state of the conversation or the dialog the bot is in.
-
-> [!NOTE]
-> If you remove any commands from your manifest, you must redeploy your app to implement the changes. In general, any changes to the manifest require you to redeploy your app.
+* If you remove any commands from your manifest, you must redeploy your app to implement the changes. In general, any changes to the manifest require you to redeploy your app.
 
 ## Next step
 
