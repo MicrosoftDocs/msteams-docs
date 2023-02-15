@@ -14,9 +14,6 @@ For more information about Universal Actions for Adaptive Cards, see [Universal 
 
 Adaptive Cards Universal Actions uses the bot as the common backend for handling actions and introduces a new action type. Bot uses Bot Framework to handle communication with the app users and to send and receive access token to the bot for SSO authentication. Similarly, Adaptive Cards Universal Actions also uses Bot Framework to enable SSO authentication.
 
-> [!NOTE]
-> SSO for Adaptive Cards Universal Actions in a bot is supported only in one-on-one chat.
-
 Before you enable SSO for your Adaptive Cards Universal Actions, ensure that you've enabled the SSO for your bot.
 
 > [!div class="nextstepaction"]
