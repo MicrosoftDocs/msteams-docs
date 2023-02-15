@@ -215,11 +215,8 @@ async def on_members_added_activity(
 ```
 
 ---
-
-> [!NOTE]
->
->* Message splitting occurs when a text message and an attachment are sent in the same activity payload. Teams splits this activity into two separate activities, one with a text message and the other with an attachment. As the activity is split, you do not receive the message ID in response, which is used to [update or delete](~/bots/how-to/update-and-delete-bot-messages.md) the message proactively. It is recommended to send separate activities instead of depending on message splitting.
->* Messages sent can be localized to provide personalization. For more information, see [localize your app](../../../concepts/build-and-test/apps-localization.md).
+Message splitting occurs when a text message and an attachment are sent in the same activity payload. Teams splits this activity into two separate activities, one with a text message and the other with an attachment. As the activity is split, you do not receive the message ID in response, which is used to [update or delete](~/bots/how-to/update-and-delete-bot-messages.md) the message proactively. It is recommended to send separate activities instead of depending on message splitting.
+Messages sent can be localized to provide personalization. For more information, see [localize your app](../../../concepts/build-and-test/apps-localization.md).
 
 Messages sent between users and bots include internal channel data within the message. This data allows the bot to communicate properly on that channel. The Bot Builder SDK allows you to modify the message structure.
 
@@ -503,6 +500,9 @@ async onTeamsMessageSoftDelete(context) {
 The suggested actions enable your bot to present buttons that the user can select to provide input. Suggested actions enhance user experience by enabling the user to answer a question or make a choice with selection of a button, rather than typing a response with a keyboard.
 When the user selects a button, it remains visible and accessible in the rich cards, but not for the suggested actions. This prevents the user from selection of stale buttons within a conversation.
 
+`SuggestedActions` are only supported for one-on-one chat bots and text based messages and not for Adaptive Cards or attachments.
+`imBack` is the only supported action type and Teams display up to three suggested actions.
+
 To add suggested actions to a message, set the `suggestedActions` property of an [activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) object to specify the list of [card action](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) objects that represent the buttons to be presented to the user. For more information, see [`sugestedActions`](/dotnet/api/microsoft.bot.builder.messagefactory.suggestedactions).
 
 The following is an example for implementation and experience of suggested actions:
@@ -528,11 +528,6 @@ The following is an example for implementation and experience of suggested actio
 The following illustrates an example of suggested actions:
 
 :::image type="content" source="~/assets/images/Cards/suggested-actions.png" alt-text="Bot suggested actions" border="true":::
-
-> [!NOTE]
->
-> * `SuggestedActions` are only supported for one-on-one chat bots and text based messages and not for Adaptive Cards or attachments.
-> * `imBack` is the only supported action type and Teams display up to three suggested actions.
 
 ## Teams channel data
 
@@ -675,8 +670,7 @@ You can add notifications to your message using the `Notification.Alert` propert
 
 If you want to generate an arbitrary notification without sending a message to the user, then you can use the Graph API. For more information, see [how to send activity feed notifications using Graph API](/graph/teams-send-activityfeednotifications) along with the [best practices](/graph/teams-activity-feed-notifications-best-practices).
 
-> [!NOTE]
-> The **Summary** field displays any text from the user as a notification message in the feed.
+The **Summary** field displays any text from the user as a notification message in the feed.
 
 The following code shows an example of adding notifications to your message:
 
