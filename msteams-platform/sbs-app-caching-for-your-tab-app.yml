@@ -57,6 +57,7 @@ items:
         ```
         cd samples\app-cache-meetings\nodejs
         ```
+        
     1. Run the following command to install the dependency package:
 
         ```
