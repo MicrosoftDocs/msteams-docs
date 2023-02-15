@@ -127,11 +127,16 @@ You can verify if the sideloading permission is enabled using either Visual Stud
 <details>
 <summary><b>Verify sideloading permission using Visual Studio Code</b></summary>
 
+You can use this method to verify sideloading permission only after you have created an app project using Teams Toolkit. If you haven't created an app project, you can verify sideloading permission using Teams client.
+
 1. Open **Visual Studio Code**.
 1. Select the **Teams Toolkit** from the Visual Studio Code activity bar.
 
    > [!NOTE]
    > If you're unable to see the option, see [install Teams Toolkit](install-Teams-Toolkit.md) to install Teams Toolkit extension in Visual Studio Code.
+
+1. Create a new Teams Toolkit app project or open an existing app project.
+
 1. Select **Sign in to Microsoft 365** under **ACCOUNTS** and sign in to your Microsoft 365 account.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/accounts1_1.png" alt-text="accounts details":::
