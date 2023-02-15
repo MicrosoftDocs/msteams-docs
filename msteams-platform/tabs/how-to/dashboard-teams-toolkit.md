@@ -142,7 +142,7 @@ Teamsfx provides convenient methods for defining and modifying the layout of the
 
    :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/customize-dashboard-layout.png" alt-text="Screenshot shows the customized dashboard layout.":::
 
-1. There are two widgets in a row with the width of 600 px and 1100 px. The height of the first line is the maximum height of its content and the height of the second line is 400 px.
+1. There are two widgets in a row with a width of 600 px and 1100 px. The height of the first line is the maximum height of its content and the height of the second line is 400 px.
 
     ```typescript
     export default class SampleDashboard extends Dashboard {
@@ -358,7 +358,7 @@ Following are the customizable methods to override:
 
 ## Embed Power BI to Dashboard
 
-To embed Power BI to the Dashboard, see [power BI client react](/javascript/api/overview/powerbi/powerbi-client-react).
+To embed Power BI to the Dashboard, see [Power BI client react](/javascript/api/overview/powerbi/powerbi-client-react).
 
 ## Use a widget in your dashboard
 
@@ -699,7 +699,7 @@ You can modify `setInterval` method to call your own function to refresh data li
 
 ### Microsoft Graph Toolkit as widget content
 
-Microsoft Graph Toolkit is a set of renewable, framework-agnostic web component, which helps accessing and working with Microsoft Graph. You can use the Microsoft Graph Toolkit with any web framework or without a framework.
+Microsoft Graph Toolkit is a set of renewable, framework-agnostic web components, which helps accessing and working with Microsoft Graph. You can use the Microsoft Graph Toolkit with any web framework or without a framework.
 
 Following are the steps to use Microsoft Graph Toolkit as your widget content:
 
@@ -872,7 +872,7 @@ In the left pane of the Visual Studio Code, select **Teams Toolkit** > **Adding 
 
 **Add your logic in Azure Function**
 
-In the `index.ts`/`index.ts` under the folder named in Azure Function, you can add your logic that contains back-end Graph API calling with application permissions. Refer to the following code snippet:
+In the `index.ts`/`index.ts` under the folder named Azure Function, you can add your logic that contains back-end Graph API calling with application permissions. Refer to the following code snippet:
 
 ```typescript
 /**
