@@ -55,7 +55,7 @@ items:
     1. Run the following command to go to the app cache sample app folder:
 
         ```
-        cd live-share-sdk\samples\app-cache-meetings\nodejs
+        cd samples\app-cache-meetings\nodejs
         ```
     1. Run the following command to install the dependency package:
 
