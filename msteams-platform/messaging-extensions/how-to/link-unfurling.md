@@ -116,45 +116,68 @@ The following is an example of the `invoke` request:
 # [C#/.NET](#tab/dotnet)
 
 ```csharp
-      protected override async Task<MessagingExtensionResponse> OnTeamsAppBasedLinkQueryAsync(ITurnContext<IInvokeActivity> turnContext, AppBasedLinkQuery query, CancellationToken cancellationToken)
-      {
-          //You'll use the query.link value to search your service and create a card response
-          var card = new HeroCard
+ protected override Task<MessagingExtensionResponse> OnTeamsAppBasedLinkQueryAsync(ITurnContext<IInvokeActivity> turnContext, AppBasedLinkQuery query, CancellationToken cancellationToken)
+  {
+     AdaptiveCard adaptiveCard = new AdaptiveCard(new AdaptiveSchemaVersion(1, 3));
+     adaptiveCard.Body.Add(new AdaptiveTextBlock()
+       {
+           Text = "Adaptive Card",
+           Size = AdaptiveTextSize.ExtraLarge
+       });
+         adaptiveCard.Body.Add(new AdaptiveImage()
+         {
+           Url = new Uri("https://raw.githubusercontent.com/microsoft/botframework-sdk/master/icon.png")
+         });
+         var attachments = new MessagingExtensionAttachment()
+         {
+            Content = adaptiveCard,
+            ContentType = AdaptiveCard.ContentType
+         };
+         return Task.FromResult(new MessagingExtensionResponse
+         {
+           ComposeExtension = new MessagingExtensionResult
              {
-              Title = "Hero Card",
-              Text = query.Url,
-              Images = new List<CardImage> { new CardImage("https://raw.githubusercontent.com/microsoft/botframework-sdk/master/icon.png") },
-          };
+               AttachmentLayout = "list",
+               Type = "result",
+               Attachments = new List<MessagingExtensionAttachment>
+                 {
+                    new MessagingExtensionAttachment
+                    {
+                      Content = adaptiveCard,
+                      ContentType = AdaptiveCard.ContentType,
+                      Preview = attachments,
+                    },       
+                  },
+              },
+         }); 
+   }
 
-          var attachments = new MessagingExtensionAttachment(HeroCard.ContentType, null, card);
-          var result = new MessagingExtensionResult(AttachmentLayoutTypes.List, "result", new[] { attachments }, null, "test unfurl");
-
-          return new MessagingExtensionResponse(result);
-      }
 ```
 
 # [JavaScript/Node.js](#tab/javascript)
 
 ```javascript
-   class TeamsLinkUnfurlingBot extends TeamsActivityHandler {
-     handleTeamsAppBasedLinkQuery(context, query) {
-       const attachment = CardFactory.thumbnailCard('Thumbnail Card',
-         query.url,
-         ['https://raw.githubusercontent.com/microsoft/botframework-sdk/master/icon.png']);
 
-    const result = {
-      attachmentLayout: 'list',
-      type: 'result',
-      attachments: [attachment]
-    };
+handleTeamsAppBasedLinkQuery(context, query) {
+   const card = CardFactory.adaptiveCard({
+   "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+   "type": "AdaptiveCard",
+   "version": "1.3"
+   });
+const attachment = CardFactory.adaptiveCard(card);
+attachment.preview = {
+   content: {
+     title: "Thumbnail Card",
+     text: query.url,
+     images: [
+       {
+          url: "https://raw.githubusercontent.com/microsoft/botframework-sdk/master/icon.png",
+       },
+     ],
+   },
+contentType: "application/vnd.microsoft.card.thumbnail",
+}
 
-    const response = {
-      composeExtension: result
-    };
-    return response;
-
-     }
-   }
 ```
 
 # [JSON](#tab/json)
@@ -174,38 +197,38 @@ The following is an example of the `invoke` request:
 Following is an example of the response:
 
 ```json
-   {
-     "composeExtension": {
-       "type": "result",
-       "attachmentLayout": "list",
-       "attachments": [
+{
+   "composeExtension": {
+   "type": "result",
+   "attachmentLayout": "list",
+   "attachments": [
+     {
+       "contentType": "application/vnd.microsoft.teams.card.o365connector",
+       "content": {
+       "sections": [
          {
-           "contentType": "application/vnd.microsoft.teams.card.o365connector",
-           "content": {
-             "sections": [
-               {
-                 "activityTitle": "[85069]: Create a cool app",
-                 "activityImage": "https://placekitten.com/200/200"
-               },
-               {
-                 "title": "Details",
-                 "facts": [
-                   {
-                     "name": "Assigned to:",
-                     "value": "[Larry Brown](mailto:larryb@example.com)"
-                   },
-                   {
-                     "name": "State:",
-                     "value": "Active"
-                   }
-                 ]
-               }
-             ]
+            "activityTitle": "[85069]: Create a cool app",
+            "activityImage": "https://placekitten.com/200/200"
+          },
+          {
+            "title": "Details",
+            "facts": [
+             {
+               "name": "Assigned to:",
+               "value": "[Larry Brown](mailto:larryb@example.com)"
+             },
+             {
+               "name": "State:",
+               "value": "Active"
+             }
+            ]
            }
-         }
        ]
-     }
+    }
    }
+ ]
+}
+}
 ```
 
 ---
