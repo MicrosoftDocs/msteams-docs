@@ -33,8 +33,7 @@ See the following video to learn more about link unfurling:
 
 To add link unfurling to your app manifest, add a new `messageHandlers` array to the `composeExtensions` section of your app manifest JSON. You can add the array with the help of Developer Portal or manually. Domain listings can include wildcards, for example `*.example.com`. This matches exactly one segment of the domain; if you need to match `a.b.example.com` then use `*.*.example.com`.
 
-> [!NOTE]
-> Ensure not to add domains that are not in your control, either directly or through wildcards. For example, `yourapp.onmicrosoft.com` is valid, but `*.onmicrosoft.com` is not valid. The top-level domains are prohibited, for example, `*.com`, `*.org`.
+Ensure not to add domains that are not in your control, either directly or through wildcards. For example, `yourapp.onmicrosoft.com` is valid, but `*.onmicrosoft.com` is not valid. The top-level domains are prohibited, for example, `*.com`, `*.org`.
 
 ### Add link unfurling using Developer Portal
 
@@ -42,8 +41,7 @@ To add link unfurling to your app manifest, add a new `messageHandlers` array to
 
    :::image type="content" source="../../assets/images/tdp/create-new-app.png" alt-text="create new app in developer portal" lightbox="../../assets/images/tdp/create-new-app.png":::
 
-   > [!NOTE]
-   > You need to add Developer Portal app, if you don't have it added in your Teams client.
+   You need to add Developer Portal app, if you don't have it added in your Teams client.
 
     :::image type="content" source="../../assets/images/tdp/dev-portal-app.png" alt-text="Add developer portal app" lightbox="../../assets/images/tdp/dev-portal-app.png":::
 
@@ -65,10 +63,7 @@ To add link unfurling to your app manifest, add a new `messageHandlers` array to
 
 ### Add link unfurling manually
 
-> [!NOTE]
-> If authentication is added through Azure AD, [unfurl links in Teams using bot](/microsoftteams/platform/sbs-botbuilder-linkunfurling?tabs=vs&tutorial-step=4).
-
-First, you need to add the `messageHandlers` array to your app manifest and enable your message extension to interact with links. The following example explains how to add link unfurling manually:
+First, you need to add the `messageHandlers` array to your app manifest and enable your message extension to interact with links. If authentication is added through Azure AD, [unfurl links in Teams using bot](/microsoftteams/platform/sbs-botbuilder-linkunfurling?tabs=vs&tutorial-step=4). The following example explains how to add link unfurling manually:
 
 ```json
 ...
@@ -358,12 +353,11 @@ To get your app ready for zero install link unfurling, follow these steps:
 
    :::image type="content" source="../../assets/images/tdp/default-preview-card.png" alt-text="Screenshot of the link unfurling code default preview card." lightbox="../../assets/images/tdp/default-preview-card.png":::
 
-     > [!NOTE]
-     > After the link is pasted in the message compose area, Teams unfurls the link into a card and prompts the user to sign in to the app. If the user doesn't sign in to the app, the link isn't posted as a card in the chat.
+  After the link is pasted in the message compose area, Teams unfurls the link into a card and prompts the user to sign in to the app. If the user doesn't sign in to the app, the link isn't posted as a card in the chat.
 
 1. **Advantages and limitations**:
 
-   # [Advantages](#tab/advantages)
+# [Advantages](#tab/advantages)
 
     Zero install link unfurling helps you provide enhanced experience to the users, such as:
 
@@ -371,7 +365,7 @@ To get your app ready for zero install link unfurling, follow these steps:
 
     * Create a welcome card for your app to show a preview with the placeholder fields.
 
-   # [Limitations](#tab/limitations)
+# [Limitations](#tab/limitations)
 
     The following are the limitations:
 

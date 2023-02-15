@@ -23,10 +23,7 @@ You have the following options to respond:
 * [Request the user to authenticate](~/messaging-extensions/how-to/add-authentication.md).
 * [Request the user to provide additional configuration](~/get-started/first-message-extension.md).
 
-If the app doesn't respond within five seconds, the Teams client will retry the request twice before it sends an error message **Unable to reach the app**. If the bot replies after the timeout, the response is ignored.
-
-> [!NOTE]
-> The app must defer any long-running actions after the bot replies to the invoke request. The long-running action results can be delivered as a message.
+If the app doesn't respond within five seconds, the Teams client will retry the request twice before it sends an error message **Unable to reach the app**. If the bot replies after the timeout, the response is ignored. The app must defer any long-running actions after the bot replies to the invoke request. The long-running action results can be delivered as a message.
 
 For authentication or configuration, after the user completes the process, the original invoke is resent to your web service. The following table shows which types of responses are available, based on the invoke location `commandContext` of the message extension:
 
@@ -37,10 +34,8 @@ For authentication or configuration, after the user completes the process, the o
 |Bot with Adaptive Card | ✔️ | ❌ | ✔️ |
 | No response | ✔️ | ✔️ | ✔️ |
 
-> [!NOTE]
->
-> * When you select **Action.Submit** through ME cards, it sends invoke activity with the name **composeExtension**, where the value is equal to the usual payload.
-> * When you select **Action.Submit** through conversation, you receive message activity with the name **onCardButtonClicked**, where the value is equal to the usual payload.
+* When you select **Action.Submit** through ME cards, it sends invoke activity with the name **composeExtension**, where the value is equal to the usual payload.
+* When you select **Action.Submit** through conversation, you receive message activity with the name **onCardButtonClicked**, where the value is equal to the usual payload.
 
 If the app contains a conversational bot, install the bot in the conversation, and then load the task module. The bot is useful to get additional context for the task module. To install conversational bot, see [Request to install your conversational bot](create-task-module.md#request-to-install-your-conversational-bot).
 
@@ -203,8 +198,7 @@ The method for response is the same as [responding to the initial `fetchTask` ev
 
 ## Bot response with Adaptive Card
 
-> [!NOTE]
-> The prerequisite to get the bot response with an Adaptive card is that you must add the `bot` object to your app manifest, and define the required scope for the bot. Use the same ID as your message extension for your bot.
+The prerequisite to get the bot response with an Adaptive card is that you must add the `bot` object to your app manifest, and define the required scope for the bot. Use the same ID as your message extension for your bot.
 
 You can also respond to the `submitAction` by inserting a message with an Adaptive Card into the channel with a bot. The user can preview the message before submitting it. This is useful in scenarios where you gather information from the users before creating an Adaptive Card response, or when you update the card after someone interacts with it.
 
@@ -216,13 +210,8 @@ To configure the poll:
 1. The user configures the poll with the task module.
 1. After submitting the task module, the app uses the information provided to build the poll as an Adaptive Card and sends it as a `botMessagePreview` response to the client.
 1. The user can then preview the Adaptive Card message before the bot inserts it into the channel. If the app isn't a member of the channel, select `Send` to add it.
-
-    > [!NOTE]
-    >
-    > * The users can also select to `Edit` the message, which returns them to the original task module.
-    > * Interaction with the Adaptive Card changes the message before sending it.
-    >
-1. After the user selects `Send`, the bot posts the message to the channel.
+1. The users can also select to `Edit` the message, which returns them to the original task module.
+1. After the user selects `Send`, the bot posts the message to the channel. Interaction with the Adaptive Card changes the message before sending it.
 
 ## Respond to initial submit action
 
@@ -310,9 +299,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 # [JSON](#tab/json)
 
-> [!NOTE]
->
-> * The `activityPreview` must contain a `message` activity with exactly one Adaptive Card attachment. The `<< Card Payload >>` value is a placeholder for the card you want to send.
+The `activityPreview` must contain a `message` activity with exactly one Adaptive Card attachment. The `<< Card Payload >>` value is a placeholder for the card you want to send.
 
 ```json
 {

@@ -40,15 +40,13 @@ First, you must decide the location from where your action command must be invok
 
     Commands context = commandBox
 
-   > [!NOTE]
-   > If message extension is invoked from the command box, you cannot respond with a bot message inserted directly into the conversation.
+    If message extension is invoked from the command box, you cannot respond with a bot message inserted directly into the conversation.
 
 * Message: Directly from an existing message through the `...` overflow menu on a message.
 
     Commands context = message
 
-    > [!NOTE]
-    > The initial invoke to your bot includes a JSON object containing the message from which it was invoked. You can process the message before presenting them with a task module.
+    The initial invoke to your bot includes a JSON object containing the message from which it was invoked. You can process the message before presenting them with a task module.
 
 The following image displays the locations from where action command is invoked:
 
@@ -81,8 +79,7 @@ To add the action command to the app manifest, you must add a new `composeExtens
 
 You can create an action command using **Developer Portal**.
 
-> [!NOTE]
-> The prerequisite to create an action command is that you have already created a message extension. For information on how to create a message extension, see [create a message extension](~/messaging-extensions/how-to/create-messaging-extension.md).
+The prerequisite to create an action command is that you have already created a message extension. For information on how to create a message extension, see [create a message extension](~/messaging-extensions/how-to/create-messaging-extension.md).
 
 To create an action command:
 

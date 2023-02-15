@@ -13,14 +13,11 @@ Message extensions allow the users to interact with your web service through but
 > [!IMPORTANT]
 > Message extensions are available in Government Community Cloud (GCC) and GCC-High environments but not in Department of Defense (DoD) environment.
 
-This document gives an overview of the message extension, tasks performed under different scenarios, working of message extension, action and search commands, and link unfurling.
+This document gives an overview of the message extension, tasks performed under different scenarios, working of message extension, action and search commands, and link unfurling. @mentioning message extensions is no longer supported in the compose box.
 
 The following image displays the locations from where message extensions are invoked:
 
 :::image type="content" source="~/assets/images/messaging-extension-invoke-locations.png" alt-text="message extension invoke locations":::
-
-> [!NOTE]
-> @mentioning message extensions is no longer supported in the compose box.
 
 ## Scenarios where message extensions are used
 
@@ -32,10 +29,7 @@ The following image displays the locations from where message extensions are inv
 
 ## Understand how message extensions work
 
-A message extension consists of a web service that you host and an app manifest, which defines where your web service is invoked from in the Teams client. The web service takes advantage of the Bot Framework's messaging schema and secure communication protocol, so you must register your web service as a bot in the Bot Framework.
-
-> [!NOTE]
-> Though you can create the web service manually, use [Bot Framework SDK](https://github.com/microsoft/botframework-sdk) to work with the protocol.
+A message extension consists of a web service that you host and an app manifest, which defines where your web service is invoked from in the Teams client. The web service takes advantage of the Bot Framework's messaging schema and secure communication protocol, so you must register your web service as a bot in the Bot Framework. Though you can create the web service manually, use [Bot Framework SDK](https://github.com/microsoft/botframework-sdk) to work with the protocol.
 
 In the app manifest for Teams app, a single message extension is defined with up to 10 different commands. Each command defines a type, such as action or search and the locations in the client from where it's invoked. The invoke locations are compose message area, command bar, and message. On invoke, the web service receives an HTTPS message with a JSON payload including all the relevant information. Respond with a JSON payload, allowing the Teams client to know the next interaction to enable.
 
@@ -55,13 +49,10 @@ The action commands are triggered from the compose message area, the command box
 
 Search commands allow the users to search an external system for information either manually through a search box, or by pasting a link to a monitored domain into the compose message area and insert the results of the search into a message. In the most basic search command flow, the initial invoke message includes the search string that the user submitted. You respond with a list of cards and card previews. The Teams client renders a list of card previews for the user. When the user selects a card from the list, the full-size card is inserted into the compose message area.
 
-The cards are triggered from the compose message area or the command box and not triggered from a message. They can't be triggered from a message.
+The cards are triggered from the compose message area or the command box and not triggered from a message. For more information on cards, see [what are cards](../task-modules-and-cards/what-are-cards.md). They can't be triggered from a message.
 The following image displays the message extension search command task module:
 
 :::image type="content" source="~/assets/images/search-extension.png" alt-text="Message extension search command":::
-
-> [!NOTE]
-> For more information on cards, see [what are cards](../task-modules-and-cards/what-are-cards.md).
 
 ## Link unfurling
 
@@ -77,6 +68,7 @@ The following images display link unfurling feature when a link is pasted in mes
 The following code provides an example of action based for message extensions:
 
 # [C#](#tab/dotnet)
+
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmessagingextensionfetchtaskasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-teams-teamsactivityhandler-onteamsmessagingextensionfetchtaskasync(microsoft-bot-builder-iturncontext((microsoft-bot-schema-iinvokeactivity))-microsoft-bot-schema-teams-messagingextensionaction-system-threading-cancellationtoken)&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msgext-action-preview/csharp/Bots/TeamsMessagingExtensionsActionPreviewBot.cs#L35-L56)
 
@@ -122,6 +114,7 @@ The following code provides an example of action based for message extensions:
 ```
 
 # [Node.js](#tab/nodejs)
+
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msgext-action/nodejs/bots/teamsMessagingExtensionsActionBot.js#L24-L61)
 
 ```javascript
@@ -153,6 +146,7 @@ The following code provides an example of action based for message extensions:
 The following code provides an example of search based for message extensions:
 
 # [C#](#tab/dotnet)
+
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmessagingextensionqueryasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-teams-teamsactivityhandler-onteamsmessagingextensionqueryasync(microsoft-bot-builder-iturncontext((microsoft-bot-schema-iinvokeactivity))-microsoft-bot-schema-teams-messagingextensionquery-system-threading-cancellationtoken)&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-hello-world/csharp/Microsoft.Teams.Samples.HelloWorld.Web/Bots/MessageExtension.cs#L26-L59)
 
@@ -199,6 +193,7 @@ protected override async Task<MessagingExtensionResponse> OnTeamsMessagingExtens
 ```
 
 # [Node.js](#tab/nodejs)
+
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msgext-search-quickstart/js/botActivityHandler.js#L30-L53)
 
 ```javascript
