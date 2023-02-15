@@ -35,7 +35,7 @@ Ensure that  end-users have the appropriate licenses to access your app  on Team
 * **Custom apps**: Custom apps can be added to Teams from the Teams panel and can  setup and managed from the Teams admin center. While users  can view apps on the Teams panel, only admins can manage them from the Manage apps page.
 * **Third-party apps**: Teams Store  provides many useful apps created by third-party software developers in addition to apps provided by Microsoft. While these apps are created by third-party providers,  Microsoft does rigorous validation of the functionality and security of these apps. For more information, see [Understand third-party apps in Microsoft Teams](/microsoftteams/overview-third-party-apps).
 
-Ensure that  end-users have access to your apps on Teams store. Admins can set up an app governance process that balances the wide-ranging requirements of users with your organization's IT policies, standards, and risk profiles. It may mean IT admins blocking access to some apps. For more information, see Create policies for app access.
+Ensure that  end-users have access to your apps on Teams store. Admins can set up an app governance process that balances the wide-ranging requirements of users with your organization's IT policies, standards, and risk profiles. It may mean IT admins blocking access to some apps. For more information, see [Create policies for app access](#create-policies-to-give-permission-to-use-app-and-pin-it).
 
 ## Understand how you can drive app adoption
 
@@ -137,3 +137,40 @@ With the help of the following app policies, admins can manage the above access:
 
 * **App permission policies**: Admins can use app permission policies to control which apps are available to each user in their organization. They can allow a few apps for all users, a few apps for a specific group of users, or specific apps for specific users. See [app permission policies](/microsoftteams/teams-app-permission-policies).
 * **App setup policies**: App setup policies allow admins to configure how and where apps are available for users in their Teams client. They can choose the apps that they want to pin to the app bar in the Teams client and define the order in which the apps are displayed. See [app setup policies](/microsoftteams/teams-app-setup-policies).
+
+### Understand app permissions and grant consent
+
+If your app accesses any data from outside Teams, it does that using Microsoft Graph API calls. Teams requires that an explicit consent be granted for such app permissions. Teams admins review and grant consent to the app on behalf of their organization users. It allows admins to review it and each user is not required to review and accept the app permissions when they use your app. See [view app permissions and grant admin consent](/microsoftteams/app-permissions-admin-center).
+
+### Buy and manage licenses and subscriptions for paid apps
+
+Your app may require purchasing a service subscription to experience the app's full functionality and scope. These service subscriptions are called Software as a Service (SaaS) offers. A license is available for purchase through [AppSource](https://appsource.microsoft.com/?exp=ubp8) and through the Teams admin center. As part of your app’s admin documentation, include instructions on buying and managing licenses. The governance controls for admins for paid and free apps remain the same. Admins can purchase apps using a credit card, debit card, or with invoice billing. See [how admins manage subscriptions for apps](/microsoftteams/purchase-third-party-apps).
+
+### Allow custom apps in an organization
+
+Three settings determine whether a user can upload a custom app to a team. It gives admins granular control over who can add custom apps to a team. These settings don't affect the ability to block third-party apps.
+
+1. User app setup policy settings for custom apps: As part of [app setup policies](/microsoftteams/teams-app-setup-policies), admins can control whether a user can upload custom apps to Teams.
+
+2. Team custom app setting: Admins and team owners can control whether a team allows for custom apps to be added to it. The setting Allow members to upload custom apps, along with a user's custom app setting, determines who can add custom apps to a particular team. To learn how to configure custom app, see [Configure the team custom app setting](/microsoftteams/teams-custom-app-policies-and-settings).
+
+3. Org-wide custom app setting: The Allow interaction with custom apps org-wide custom app setting on applies to everyone in your organization and governs whether they can use custom apps. This setting acts as a master on or off switch for the user and team for settings related to custom apps. To learn how to configure org-wide app setting, see [Configure the org-wide custom app setting](/microsoftteams/teams-custom-app-policies-and-settings).
+
+### Customize app’s and your org's store branding
+
+Microsoft Teams admins can modify the metadata and appearance of some Teams apps to provide a personalized branded experience within their organization. Such modifications help admins adhere to their organization's requirements and branding, which in turn enhances Teams store experience for end-users, improves trust, and app usage. See [how admins use app customization to update branding](/microsoftteams/customize-apps).
+
+To support this use case, you as an app developer can allow your app to be customized by admins. Your app in Teams app store contains the default information and metadata that you provide when you create and submit an app. Customizations in one organization do not impact other organizations. Teams provide an option for a few properties to be customized but you control exactly which properties are allowed to even be customized by any admin. See [how to allow app customization](concepts/design/enable-app-customization.md).
+
+### Recap of the documentation requirements for IT admins
+
+Provide admin-focused documentation in your app toolkit that is based on the above understanding of the admin tasks. Your target audience are decision makers who sponsor the app rollout and IT admins who do the app rollout. The following is a recap of the information to provide in your admin-focused docs:
+
+* A dedicated webpage of your Teams app on your official website that includes business benefits of using your app.
+* Compliance, security, privacy, and data handling information about your app. App architecture diagram and data flow diagram.
+* If your app is part of Microsoft Compliance program, highlight it and explain the benefits. Link to your app’s page in these [app security and compliance Microsoft docs](/microsoft-365-app-certification/teams/teams-apps).
+* Suggest whether you have allowed app customization or not.
+* Governance controls available to admins. Briefly describe how admins can use policies in admin center to control access to app.
+* Information to troubleshoot any rollout issues. If admins may face app-specific issues, provide troubleshooting tips.
+* Your contact information for app support. If admins cannot troubleshoot app rollout or issues faced by end-users then how do they contact you. Your contact information and method to raise a support ticket must not be behind a login.
+* List of supported languages.
