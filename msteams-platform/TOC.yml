@@ -714,9 +714,6 @@
   - name: Publish to your org
     href: /microsoftteams/upload-custom-apps
     displayName: upload custom apps to organization, Org-wide app settings, Remove a custom app from your organization's store
-  - name: Promote app awareness and adoption
-    href: /promote-app-adoption.md
-    displayName: promote app awareness, app adoption
   - name: Publish to the Teams store
     items:
     - name: Overview
@@ -749,7 +746,7 @@
        href: concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md
        displayName: Font, Broken links, functional bugs, app crashes, unexpected errors, app description, Microsoft trademark and brand guidelines, testability, app icon guidelines, app name mismatch, developer name mismatch      
   - name: Help your customers adopt your app
-    href: promote app adoption.md
+    href: promote-app-adoption.md
 - name: Monetize your app
   items:
   - name: Overview
