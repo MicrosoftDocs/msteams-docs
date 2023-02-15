@@ -73,11 +73,11 @@ items:
       
       1. Select **Debug (Microsoft Edge)** or **Debug (Chrome)** option of your preferred browser, you'll see a tab app loaded:
 
-        :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/dashboard.png" alt-text="Screenshot shows user profile information and recent Teams activity.":::
+      :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/dashboard.png" alt-text="Screenshot shows user profile information and recent Teams activity.":::
 
         Teams app also supports different themes, including dark and high contrast themes.
 
-        :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/dark-light-theme.png" alt-text="Screenshot shows the contrast themes.":::
+      :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/dark-light-theme.png" alt-text="Screenshot shows the contrast themes.":::
        
 - title: Take a tour of the app source code
   durationInMinutes: 2

@@ -22,9 +22,9 @@ The dashboard tab template from Teams Toolkit allows you to get started with int
 
 The Teams dashboard app allows your team to be engaged with latest updates from different sources within Teams all within the same tab. Use dashboard tab apps to connect numerous metrics, data sources, APIs, and services to help your business extract relevant information from the sources and present it to the users.
 
-## Add a new dashboard tab app
+## Create a new dashboard
 
-After creating a dashboard tab app, additionally if you want to create an new dashboard tab app, following are the steps:
+Before you create a dashboard, you must create a dashboard tab app. If you haven't created the dashboard tab app, see [step-by-step guide](#step-by-step-guide).
 
 1. [Create a dashboard class](#create-a-dashboard-class)
 1. [Override methods to customize dashboard tab app](#override-methods-to-customize-dashboard-tab-app)
@@ -82,7 +82,9 @@ export default class YourDashboard extends Dashboard {
 
 ### Add a route for the new dashboard tab app
 
-The source file would be picked up from the path that you have created, which will be displayed on the widget. Open tabs/src/App.tsx file and add a route for the new dashboard. Here's an example:
+You must link your widget to a data source file. From this file, the widget picks up the data that is presented in the dashboard.
+
+Open tabs/src/App.tsx file and add a route for the new dashboard. Here's an example:
 
 ```typescript
 import YourDashboard from "./views/dashboards/YourDashboard";
@@ -110,7 +112,7 @@ Open templates/appPackage/manifest.template.json file and add a new dashboard ta
 
 ## Customize the dashboard tab app
 
-The `TeamsFx` provides convenient methods for defining and modifying the layout of the dashboard. Following are the steps to customize the dashboard tab app.
+Teamsfx provides convenient methods for defining and modifying the layout of the dashboard. Following are the steps to customize the dashboard tab app.
 
 1. Three widgets in a row with the height of 350 px occupying 20%, 60%, and 20% of the width, respectively:
 
@@ -235,7 +237,7 @@ The `TeamsFx` provides convenient methods for defining and modifying the layout 
 
 ## Dashboard tab app abstraction
 
-To adjust the layout of the dashboard, the `TeamsFx` provides a dashboard class for the developers to implement a dashboard.
+To adjust the layout of the dashboard, Teamsfx provides a dashboard class for the developers to implement a dashboard.
 
 Following is an example of dashboard class:
 
@@ -337,7 +339,7 @@ export class Dashboard extends Component<any, IDashboardState> {
 }
 ```
 
-In the dashboard class, the `TeamsFx` provides basic layouts with customizable methods. The dashboard is still a react component, and the `TeamsFx` provides basic implementations of functions based on the lifecycle of react components, such as:
+In the dashboard class, Teamsfx provides basic layouts with customizable methods. The dashboard is still a react component, and Teamsfx provides basic implementations of functions based on the lifecycle of react components, such as:
 
 * Implementing a basic render logic based on the grid layout.
 * Adding an observer to automatically adapt to mobile devices.
@@ -356,7 +358,7 @@ Following are the customizable methods to override:
 
 ## Embed Power BI to Dashboard
 
-To embed Power BI to the Dashboard, you can refer to [power BI client react](/javascript/api/overview/powerbi/powerbi-client-react)
+To embed Power BI to the Dashboard, see [power BI client react](/javascript/api/overview/powerbi/powerbi-client-react).
 
 ## Use a widget in your dashboard
 
@@ -472,7 +474,7 @@ Widget class provides some methods that can be overridden to customize the widge
 
 ### Widget abstraction
 
-To simplify the development of a widget, the `TeamsFx` provides a widget class for developers to inherit to implement a widget that meets their needs without much attention to implement the widget layout.
+To simplify the development of a widget, Teamsfx provides a widget class for developers to inherit to implement a widget that meets their needs without much attention to implement the widget layout.
 
 Following is an example of widget class:
 
