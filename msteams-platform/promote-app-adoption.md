@@ -41,11 +41,11 @@ You can help your customers drive adoption within their organizations by app ado
 
 :::image type="content" source="assets/images/app-deployment-guidance/drive-app-adoption.png" alt-text="Diagram shows the steps to drive app adoption.":::
 
-* **Perform internal enablement to support app adoption**: Share important and relevant information to IT admins and help end-users understand and adopt your apps. Provide an adoption toolkit for your app to achieve this. Define a rollout process and enablement trainings for your customer facing teams.
-* **Help admins to do app config and rollout**: Help the IT admins make the necessary configurations to enable your app for the end-users in your customers' organizations. Provide a help guide for IT admins to understand the configuration steps.
-* **Educate users and drive awareness about your app**: Provide user guide for end-users that describes their jobs to be done (JTBD) and your app’s features. Promote awareness about your app and its use cases. You can conduct email campaigns, webinars, or social media engagements depending on your target audience.
-* **Provide support contact for IT admins and end-users**: As admins start to roll out the app and as users start to use it, they'll reach out for support for the issues that they can't resolve using your documentation. Timely help during this stage ensures quick onboarding and better retention.
-* **Track app adoption and usage using analytics**: Track your app adoption progress after the rollout and promptly resolve issues for the early adopters. Your CSM or account manager can engage with the customer's organization and its IT admins to track adoption and provide support, if necessary.
+* **[Perform internal enablement to support app adoption](#step-1-perform-internal-enablement-to-support-app-adoption)**: Share important and relevant information to IT admins and help end-users understand and adopt your apps. Provide an adoption toolkit for your app to achieve this. Define a rollout process and enablement trainings for your customer facing teams.
+* **[Help admins to do app config and rollout](#step-2-help-admins-to-do-app-config-and-rollout-for-their-end-users)**: Help the IT admins make the necessary configurations to enable your app for the end-users in your customers' organizations. Provide a help guide for IT admins to understand the configuration steps.
+* **[Educate users and drive awareness about your app](#step-3-educate-users-and-drive-awareness-about-your-app)**: Provide user guide for end-users that describes their jobs to be done (JTBD) and your app’s features. Promote awareness about your app and its use cases. You can conduct email campaigns, webinars, or social media engagements depending on your target audience.
+* **[Provide support contact for IT admins and end-users](#step-4-provide-support-information-for-it-admins-and-end-users)**: As admins start to roll out the app and as users start to use it, they'll reach out for support for the issues that they can't resolve using your documentation. Timely help during this stage ensures quick onboarding and better retention.
+* **[Track app adoption and usage using analytics](#step-5-track-app-adoption-and-usage-using-analytics)**: Track your app adoption progress after the rollout and promptly resolve issues for the early adopters. Your CSM or account manager can engage with the customer's organization and its IT admins to track adoption and provide support, if necessary.
 
 ## Step 1: Perform internal enablement to support app adoption
 
@@ -293,7 +293,7 @@ You can track your app’s overall usage in the [Teams app usage report](concept
 
 ### Track detailed app usage via your in-app telemetry/analytics
 
-You should build your own detailed adoption analytics and engagement methods to check tenant-wise adoption and engagement. This information helps you analyse the data against your business goals, take corrective action by fixing issues. It also helps you to intervene in the user journey or make informed decisions around feature investments, enhancements, and adoption for the app.
+You should build your own detailed adoption analytics and engagement methods to check tenant-wise adoption and engagement. This information helps you analyze the data against your business goals, take corrective action by fixing issues. It also helps you to intervene in the user journey or make informed decisions around feature investments, enhancements, and adoption for the app.
 
 You'll also be interested in monitoring many data points, such as:
 
