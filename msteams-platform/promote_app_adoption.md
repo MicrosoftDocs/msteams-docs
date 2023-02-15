@@ -42,7 +42,7 @@ You can help your customers drive adoption within their organizations by app ado
 :::image type="content" source="assets/images/app-deployment-guidance/drive-app-adoption.png" alt-text="Diagram shows the steps to drive app adoption.":::
 
 * **Perform internal enablement to support app adoption**: Share important and relevant information to IT admins and help end-users understand and adopt your apps. Provide an adoption toolkit for your app to achieve this. Define a rollout process and enablement trainings for your customer facing teams.
-* **Help admins to do app config and rollout**: Help the IT admins make the necessary configurations to enable your app for the end users in your customers' organizations. Provide a help guide for IT admins to understand the configuration steps.
+* **Help admins to do app config and rollout**: Help the IT admins make the necessary configurations to enable your app for the end-users in your customers' organizations. Provide a help guide for IT admins to understand the configuration steps.
 * **Educate users and drive awareness about your app**: Provide user guide for end-users that describes their jobs to be done (JTBD) and your app’s features. Promote awareness about your app and its use cases. You can conduct email campaigns, webinars, or social media engagements depending on your target audience.
 * **Provide support contact for IT admins and end-users**: As admins start to roll out the app and as users start to use it, they'll reach out for support for the issues that they can't resolve using your documentation. Timely help during this stage ensures quick onboarding and better retention.
 * **Track app adoption and usage using analytics**: Track your app adoption progress after the rollout and promptly resolve issues for the early adopters. Your CSM or account manager can engage with the customer's organization and its IT admins to track adoption and provide support, if necessary.
@@ -60,10 +60,10 @@ You must define a rollout process for your Teams app and make sure that:
 
 The target audience for this guide is the IT administrators in your customer's organization, and it should contain the following technical information to help them configure your apps on Teams:
 
-* Prerequisites to install your app.
-* How to configure security settings and permissions.
+* Prerequisites to install your app
+* How to configure security settings and permissions
 
-To understand how an IT admin can configure your app, see Help IT admins get your app adopted by their end-users. Also, see the Documentation for IT admins and decision makers, which contains a checklist of best practices and information required for an IT admin that needs to be included.
+To understand how an IT admin can configure your app, see [Help IT admins get your app adopted by their end-users](#step-2-help-admins-to-do-app-config-and-rollout-for-their-end-users). Also, see the [Documentation for IT admins and decision makers](#recap-of-the-documentation-requirements-for-it-admins), which contains a checklist of best practices and information required for an IT admin that needs to be included.
 
 ### User guide to describe features to end-users
 
@@ -74,7 +74,7 @@ Provide a user guide for your app and cover the following topics:
 * How can users reach out for support?
 * What are the end-user configuration settings, for example, profile setup?
 
-For more information, see drive awareness about features with end-users.
+For more information, see [drive awareness about features with end-users](#step-3-educate-users-and-drive-awareness-about-your-app).
 
 ### User awareness campaign guide and assets for organizations
 
@@ -82,7 +82,7 @@ Awareness and training are the marketing and enablement segments of your overall
 
 A campaign should be at the correct time in the adoption lifecycle and contextual reminders after a campaign can help drive the adoption. An example is a campaign that has communications spanning across pre-rollout days to build excitement, at the time of rollout to inform, and post-rollout to serve as a reminder.
 
-Post-adoption, there's a need for continuous engagement to help existing users with their tasks and to gradually onboard late adopters. You can host interaction sessions with the community such as support webinars, office hours, and so on. You can build a community around your app, answer queries, recognize top users or MVPs in your community, and so on.
+Post-adoption, there's a need for continuous engagement to help existing users with their tasks and to gradually onboard late adopters. You can host interaction sessions with the community such as support webinars and office hours. You can build a community around your app, answer queries, recognize top users or MVPs in your community, and do other similar activities.
 
 For guidance to get help on creating these assets, register for the [ISV success program overview](https://www.microsoft.com/isv/program-benefits).
 
@@ -121,7 +121,7 @@ Before IT admins approve the usage of your app and let the organization users us
 
 Consider providing the following information to help admins evaluate your app:
 
-* Detailed documentation of your app that provides information about data security, compliance certification, privacy policies and GDPR, data flow, app architecture, and so on.
+* Detailed documentation of your app that provides information about data security, compliance certification, privacy policies and GDPR, data flow, app architecture, and other information.
 * Describe the [permissions that your app needs](/microsoftteams/app-permissions-admin-center) and to accomplish what use cases.
 * Use the [Microsoft compliance program](/microsoftteams/overview-of-app-certification) that checks and audits an app against controls that are derived from leading industry-standard frameworks. The various tiers of the program are Publisher verification, Publisher attestation, and Microsoft 365 certification that instill increasing levels of trust for admins and users.
 
@@ -146,7 +146,7 @@ If your app accesses any data from outside Teams, it does that using Microsoft G
 
 ### Buy and manage licenses and subscriptions for paid apps
 
-Your app may require purchasing a service subscription to experience the app's full functionality and scope. These service subscriptions are called Software as a Service (SaaS) offers. A license is available for purchase through [AppSource](https://appsource.microsoft.com/?exp=ubp8) and through the Teams admin center. As part of your app’s admin documentation, include instructions on buying and managing licenses. The governance controls for admins for paid and free apps remain the same. Admins can purchase apps using a credit card, debit card, or with invoice billing. See [how admins manage subscriptions for apps](/microsoftteams/purchase-third-party-apps).
+Your app may require purchasing a service subscription to experience the app's full functionality and scope. These service subscriptions are called Software as a Service (SaaS) offers. A license is available for purchase through [AppSource](https://appsource.microsoft.com/?exp=ubp8) and through the [Teams admin center](https://admin.teams.microsoft.com/). As part of your app’s admin documentation, include instructions on buying and managing licenses. The governance controls for admins for paid and free apps remain the same. Admins can purchase apps using a credit card, debit card, or with invoice billing. See [how admins manage subscriptions for apps](/microsoftteams/purchase-third-party-apps).
 
 ### Allow custom apps in an organization
 
@@ -194,7 +194,7 @@ The app rollout journey for your customers requires assistance in the form of co
 
 Encourage and guide your customers to do a phased rollout with a few members. The business decision makers and IT team can identify a department or a group of volunteer employees as early adopters for a trial run. It’ll help you build a stronger presence in the customer’s organization and provide you with user feedback around both – the app adoption journey and the app features usage patterns.
 
-Share important and relevant information to help end-users to adopt your apps and admins to deploy it. To do so, provide the following assets in your app adoption toolkit:
+Share important and relevant information to help the end-users to adopt your apps and admins to deploy it. To do so, provide the following assets in your app adoption toolkit:
 
 * App installation and configuration guide for IT admins.
 * Feature and user guide for end-users.
@@ -208,10 +208,10 @@ Share important and relevant information to help end-users to adopt your apps an
 Provide the end-users of your app with guidance on how to use it. The guidance can be in the form of documentation, tips and best practices, videos or infographics, troubleshooting information, and support contact.
 
 * Provide use cases that your app helps accomplish in Teams. Consider desktop, mobile, and browser platforms. Explain how using a Teams app helps users reduce context-switching.
-* Explain how end-users can find support for your app. They can contact their organization’s IT admin or contact your support team. See [provide support contact](#step-4-provide-support-information-for-it-admins-and-end-users).
+* Explain how the end-users can find support for your app. They can contact their organization’s IT admin or contact your support team. See [provide support contact](#step-4-provide-support-information-for-it-admins-and-end-users).
 * Describe what languages are supported by your app.
-* Describe how users can add your app to their Teams client.
-* Describe how users can request their admin’s approval if your app is blocked in their organization. See [manage user requests](/microsoftteams/user-requests-approve-apps).
+* Describe how the users can add your app to their Teams client.
+* Describe how the users can request their admin’s approval if your app is blocked in their organization. See [manage user requests](/microsoftteams/user-requests-approve-apps).
 
 ### Promote awareness about your app and its use cases
 
@@ -222,7 +222,7 @@ For both your initial pilots and your eventual company-wide roll out, your inter
 * Internal awareness materials such as posters, email templates, digital signage, and webinar or events.
 * Campaigns: Educate end-users about the benefits of using the Teams app. Use the template provided by Microsoft to create campaigns to improve organization-level awareness for apps.
 * Training webinar: Conduct a webinar and place usage, training, and self-help information in a single location.
-* Events: You can also drive end user awareness via physical events, kiosk, etc. where you distribute assets to promote the awareness and usage of your app
+* Events: You can also drive end-user awareness via physical events, kiosk, etc. where you distribute assets to promote the awareness and usage of your app
 * Reminders: Remind the end-users about the campaign after it happens.
 
 Microsoft provides a few templates that you can use to speed up the adoption of your app by your customers. These templates help you quickly generate Toolkit to popularize your app. Register for [Microsoft ISV Success program](https://www.microsoft.com/isv/program-benefits) to receive guidance about and templates for some of the above digital assets.
@@ -256,7 +256,7 @@ You can use Microsoft [Champions Program Guide](https://adoption.microsoft.com/b
 
 ## Step 4: Provide support information for IT admins and end-users
 
-When your app is being rolled out or being used, your customers may have queries about configuration, admin settings, end-user flows, app features, supportability information, and so on. Provide support at each stage of app lifecycle to facilitate rollout, onboard app users, build a good brand reputation, and showcase commitment towards your app.
+When your app is being rolled out or being used, your customers may have queries about configuration, admin settings, end-user flows, app features, supportability information, and other queries. Provide support at each stage of app lifecycle to facilitate rollout, onboard app users, build a good brand reputation, and showcase commitment towards your app.
 
 Enable and train your customer-facing teams such as enablement, consulting, support, and GTM functions to answer the expected support queries. Proactively establishing a support process for your app may involve internal enablement, socializing documentation and training videos, internally or even externally published escalation matrix, and providing supportability information in your communications.
 
@@ -273,9 +273,9 @@ The following table provides the supportability information that you already sub
 |Input source|Parameter|Description and meaning|Usage in the product|
 |-----|-----|-----|-----|
 |[Manifest file](resources/schema/manifest-schema.md)|websiteUrl|The web page at this URL provides the support information for an app.|App details page in Teams admin center displays the website URL.|
-||privacyUrl|The URL to the page that provides privacy information for the app.|• Displayed in app details page in admin center. <br> • Displayed in Store listing.|
-||termsOfUseUrl|The URL to the page that provides the terms of use for the app.|• Displayed in app details page in admin center. <br> • Displayed in Store listing.|
-||publisherDocsUrl|The URL to the page that provides more app information for the admins.|Available in admin center for apps that are blocked by publisher.|
+|[Manifest file](resources/schema/manifest-schema.md)|privacyUrl|The URL to the page that provides privacy information for the app.|• Displayed in app details page in admin center. <br> • Displayed in Store listing.|
+|[Manifest file](resources/schema/manifest-schema.md)|termsOfUseUrl|The URL to the page that provides the terms of use for the app.|• Displayed in app details page in admin center. <br> • Displayed in Store listing.|
+|[Manifest file](resources/schema/manifest-schema.md)|publisherDocsUrl|The URL to the page that provides more app information for the admins.|Available in admin center for apps that are blocked by publisher.|
 |[Partner Center submission](/azure/marketplace/add-in-submission-guide)|NA|Support or help documentation URL. <br> <br> What about categories?|Displayed in [AppSource](https://appsource.microsoft.com/?exp=ubp8), in a tab named **Details + support**.|
 
 ## Track app adoption and usage using analytics
@@ -289,7 +289,7 @@ You can track your app’s overall usage in the [Teams app usage report](concept
 * Monthly, daily, and weekly active users.
 * Retention and intensity charts.
 * Users who have used your app more than five days in the last month.
-* Platform, operating system, and geographic split of users for your app, and so on.
+* Platform, operating system, and geographic split of users for your app.
 
 ### Track detailed app usage via your in-app telemetry/analytics
 
