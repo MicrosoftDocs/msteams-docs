@@ -26,8 +26,9 @@ Teams platform features that are available to all app developers.
 
 **2023 February**
 
-* ***February 08, 2022***: [SSO authentication for your Adaptive Cards Universal Actions](task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/enable-sso-for-your-adaptive-cards-universal-action.md)
-* ***February 08, 2022***: [Third party authentication for Adaptive Cards Universal Actions](task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/authentication-flow-in-universal-action-for-adaptive-cards.md)
+* ***February 16, 2022***: [SSO authentication for your Adaptive Cards Universal Actions](task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/enable-sso-for-your-adaptive-cards-universal-action.md)
+* ***February 16, 2022***: [Third party authentication for Adaptive Cards Universal Actions](task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/authentication-flow-in-universal-action-for-adaptive-cards.md)
+***February 09, 2023***: [Apps for Teams meetings support anonymous users.](apps-in-teams-meetings/build-apps-for-anonymous-user.md)
 
 :::column-end:::
 :::row-end:::
@@ -38,7 +39,8 @@ Teams platform features that are available to all app developers.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
-| 31/01/2023 | Introducing update and soft delete event notifications in bot. | Build bots > Bot conversations > Message in bot conversations > [Messages in bot conversations](bots/how-to/conversations/conversation-messages.md#update-message)|
+|31/01/2023| Introducing update and soft delete event notifications in bot | Build bots > Bot conversations > [Messages in bot conversations](bots/how-to/conversations/conversation-messages.md#update-message) |
+
 </details>
 </br>
 
@@ -47,6 +49,7 @@ Teams platform features that are available to all app developers.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
+|31/01/2023| Introducing update and soft delete event notifications in bot | Build bots > Bot conversations > [Messages in bot conversations](bots/how-to/conversations/conversation-messages.md#update-message) |
 | 08/12/2022 | Introducing Teams developer documentation FAQs. | [Teams developer documentation FAQs](teams-faq.md) |
 | 07/12/2022 | Introducing notification bot in Teams. | Build bots > Bot conversations > [Notification bot in Teams](bots/how-to/conversations/notification-bot-in-teams.md) |
 | 07/12/2022 | Introducing command bot in Teams. | Build bots > Bot conversations > [Command bot in Teams](bots/how-to/conversations/command-bot-in-teams.md) |
