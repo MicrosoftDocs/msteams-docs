@@ -41,8 +41,7 @@ Ensure not to add domains that are not in your control, either directly or throu
 
    :::image type="content" source="../../assets/images/tdp/create-new-app.png" alt-text="create new app in developer portal" lightbox="../../assets/images/tdp/create-new-app.png":::
 
-   > [!NOTE]
-   > You need to add Developer Portal app, if you don't have it added in your Teams client.
+    You need to add Developer Portal app, if you don't have it added in your Teams client.
 
     :::image type="content" source="../../assets/images/tdp/dev-portal-app.png" alt-text="Add developer portal app" lightbox="../../assets/images/tdp/dev-portal-app.png":::
 
