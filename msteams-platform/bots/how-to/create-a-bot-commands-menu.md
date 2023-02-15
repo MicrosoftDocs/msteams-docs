@@ -9,7 +9,7 @@ ms.author: anclear
 
 # Create a commands menu
 
-[ INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
+[!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
 To define a set of core commands that your bot can respond to, you can add a command menu with a drop-down list of commands for your bot. The list of commands is presented to the users in the compose message area when they are in conversation with your bot. Select a command from the list to insert the command string into the compose message box and select **Send**.
 
