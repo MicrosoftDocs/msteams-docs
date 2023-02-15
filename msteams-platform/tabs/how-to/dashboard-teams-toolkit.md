@@ -24,7 +24,7 @@ The Teams dashboard app allows your team to be engaged with latest updates from 
 
 ## Create a new dashboard
 
-Before you create a dashboard, you must create a dashboard tab app. If you haven't created the dashboard tab app, see [step-by-step guide](#step-by-step-guide).
+Before you create a dashboard, you must create a dashboard tab app. For more information about creating a dashboard tab app and the source code directory structure, see [step-by-step guide](#step-by-step-guide).
 
 1. [Create a dashboard class](#create-a-dashboard-class)
 1. [Override methods to customize dashboard tab app](#override-methods-to-customize-dashboard-tab-app)
