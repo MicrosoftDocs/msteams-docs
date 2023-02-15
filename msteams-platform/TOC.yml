@@ -714,6 +714,9 @@
   - name: Publish to your org
     href: /microsoftteams/upload-custom-apps
     displayName: upload custom apps to organization, Org-wide app settings, Remove a custom app from your organization's store
+  - name: Promote app awareness and adoption
+    href: /promote-app-adoption.md
+    displayName: promote app awareness, app adoption
   - name: Publish to the Teams store
     items:
     - name: Overview
