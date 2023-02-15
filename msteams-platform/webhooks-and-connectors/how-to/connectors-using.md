@@ -160,8 +160,7 @@ To post a message in the webhook with cURL, follow these steps:
    curl.exe -H "Content-Type:application/json" -d "{'text':'Hello World'}" <YOUR WEBHOOK URL>
    ```
 
-    > [!NOTE]
-    > If the POST succeeds, you must see a simple **1** output by `curl`.
+    If the POST succeeds, you must see a simple **1** output by `curl`.
 
 1. Check the Teams client for the new card posted.
 
@@ -177,8 +176,7 @@ To post a message to the webhook with PowerShell, follow these steps:
    Invoke-RestMethod -Method post -ContentType 'Application/Json' -Body '{"text":"Hello World!"}' -Uri <YOUR WEBHOOK URL>
    ```
 
-    > [!NOTE]
-    > If the POST succeeds, you must see a simple **1** output by `Invoke-RestMethod`.
+    If the POST succeeds, you must see a simple **1** output by `Invoke-RestMethod`.
 
 1. Check the Teams channels associated with the webhook URL. You can see the new card posted to the channel. Before you use the connector to test or publish your app, you must do the following:
 
@@ -189,10 +187,7 @@ To post a message to the webhook with PowerShell, follow these steps:
 
 ## Send Adaptive Cards using an Incoming Webhook
 
-> [!NOTE]
->
-> * All native Adaptive Card schema elements, except `Action.Submit`, are fully supported.
-> * The supported actions are [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html), and [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html).
+All native Adaptive Card schema elements, except `Action.Submit`, are fully supported. The supported actions are [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html), and [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html).
 
 To send Adaptive Cards through an Incoming Webhook, follow these steps:
 
@@ -253,8 +248,7 @@ The following table provides the time based transaction details:
 | 7200 | 150  |
 | 86400  | 1800  |
 
-> [!NOTE]
-> A [retry logic with exponential back-off](/azure/architecture/patterns/retry) can mitigate rate limiting for cases where requests are exceeding the limits within a second. Refer [HTTP 429 responses](../../bots/how-to/rate-limit.md#handle-http-429-responses) to avoid hitting the rate limits.
+A [retry logic with exponential back-off](/azure/architecture/patterns/retry) can mitigate rate limiting for cases where requests are exceeding the limits within a second. Refer [HTTP 429 responses](../../bots/how-to/rate-limit.md#handle-http-429-responses) to avoid hitting the rate limits.
 
 ```csharp
 // Please note that response body needs to be extracted and read 

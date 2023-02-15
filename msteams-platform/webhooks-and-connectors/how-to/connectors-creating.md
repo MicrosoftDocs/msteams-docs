@@ -26,8 +26,7 @@ To distribute your connector, register it in the [Connectors Developer Dashboard
 
 For a connector to work only in Teams, follow the instructions to submit connector in [publish your app to the Microsoft Teams store](~/concepts/deploy-and-publish/appsource/publish.md) article. Otherwise, a registered connector works in all Microsoft 365 products that support applications, including Outlook and Teams.
 
-> [!IMPORTANT]
-> Your connector is registered after you select **Save** in the Connectors Developer Dashboard. If you want to publish your connector in AppSource, follow the instructions in [publish your Microsoft Teams app to AppSource](~/concepts/deploy-and-publish/apps-publish.md). If you do not want to publish your app in AppSource, distribute it directly to the organization. After publishing connectors for your organization, no further action is required on the Connector Dashboard.
+Your connector is registered after you select **Save** in the Connectors Developer Dashboard. If you want to publish your connector in AppSource, follow the instructions in [publish your Microsoft Teams app to AppSource](~/concepts/deploy-and-publish/apps-publish.md). If you do not want to publish your app in AppSource, distribute it directly to the organization. After publishing connectors for your organization, no further action is required on the Connector Dashboard.
 
 ### Integrate the configuration experience
 
@@ -35,14 +34,9 @@ Users can complete the entire connector configuration experience without having 
 
 1. The user selects the connector to begin the configuration process.
 1. The user interacts with the web experience to complete the configuration.
-1. The user selects **Save**, which triggers a callback in code.
+1. The user selects **Save**, which triggers a callback in code. The code can process the save event by retrieving the webhook settings. Your code stores the webhook to post events later.
 
-    > [!NOTE]
-    >
-    > * The code can process the save event by retrieving the webhook settings. Your code stores the webhook to post events later.
-    > * The configuration experience is loaded inline within Teams.
-
-You can reuse your existing web configuration experience or create a separate version to be hosted specifically in Teams. Your code must include the TeamsJS library. This gives your code access to the APIs to perform common operations, such as getting the current user, channel, or team context, and initiate authentication flows.
+The configuration experience is loaded inline within Teams. You can reuse your existing web configuration experience or create a separate version to be hosted specifically in Teams. Your code must include the TeamsJS library. This gives your code access to the APIs to perform common operations, such as getting the current user, channel, or team context, and initiate authentication flows.
 
 To integrate the configuration experience:
 
@@ -51,16 +45,12 @@ To integrate the configuration experience:
 
 1. Initialize TeamsJS by calling `app.initialize()`.
 1. Call `pages.config.setValidityState(true)` to enable **Save**.
-
-    > [!NOTE]
-    > You must call `microsoftTeams.pages.config.setValidityState(true)` as a response to user selection or field update.
+   You must call `microsoftTeams.pages.config.setValidityState(true)` as a response to user selection or field update.
 
 1. Register  `microsoftTeams.pages.config.registerOnSaveHandler()` event handler, which is called when the user selects **Save**.
 1. Call `microsoftTeams.pages.config.setConfig()` to save the connector settings. The saved settings are also shown in the configuration dialog if the user tries to update an existing configuration for your connector.
 1. Call `microsoftTeams.pages.getConfig()` to fetch webhook properties, including the URL.
-
-    > [!NOTE]
-    > You must call `microsoftTeams.pages.getConfig()` when your page is first loaded in case of reconfiguration.
+   You must call `microsoftTeams.pages.getConfig()` when your page is first loaded in case of reconfiguration.
 
 1. Register `microsoftTeams.pages.config.registerOnRemoveHandler()` event handler, which is called when the user removes connector.
 
@@ -124,13 +114,11 @@ The following code provides a sample HTML to create a connector configuration pa
 
 To authenticate the user as part of loading your page, see [authentication flow for tabs](~/tabs/how-to/authentication/auth-flow-tab.md) to integrate sign in when your page is embedded.
 
-> [!NOTE]
-> Prior to TeamsJS v.2.0.0, your code must call `microsoftTeams.authentication.registerAuthenticationHandlers()` with the URL and success or failure callback methods before calling `authenticate()` due to cross-client compatibility reasons. Starting with TeamsJS v.2.0.0, *registerAuthenticationHandlers* has been deprecated in favor of directly calling [authenticate()](/javascript/api/@microsoft/teams-js/authentication#@microsoft-teams-js-authentication-authenticate) with the required authentication parameters.
+Prior to TeamsJS v.2.0.0, your code must call `microsoftTeams.authentication.registerAuthenticationHandlers()` with the URL and success or failure callback methods before calling `authenticate()` due to cross-client compatibility reasons. Starting with TeamsJS v.2.0.0, *registerAuthenticationHandlers* has been deprecated in favor of directly calling [authenticate()](/javascript/api/@microsoft/teams-js/authentication#@microsoft-teams-js-authentication-authenticate) with the required authentication parameters.
 
 #### `getConfig` response properties
 
->[!NOTE]
->The parameters returned by the `getConfig` call are different when you invoke this method from a tab and differ from those documented in the [reference](/javascript/api/@microsoft/teams-js/pages#@microsoft-teams-js-pages-getconfig).
+The parameters returned by the `getConfig` call are different when you invoke this method from a tab and differ from those documented in the [reference](/javascript/api/@microsoft/teams-js/pages#@microsoft-teams-js-pages-getconfig).
 
 The following table provides the parameters and the details of `getConfig` response properties:
 
@@ -166,8 +154,7 @@ Download the auto-generated *Teams app manifest* from the Developer Portal (<htt
 
 The following *manifest.json* example contains the elements needed to test and submit the app:
 
-> [!NOTE]
-> Replace `id` and `connectorId` in the following example with the GUID of the connector.
+Replace `id` and `connectorId` in the following example with the GUID of the connector.
 
 #### Example of manifest.json with connector
 
@@ -212,12 +199,9 @@ The following *manifest.json* example contains the elements needed to test and s
 
 To test your connector, upload it to a team with any other app. You can create a .zip package using the manifest file from the two icon files and Connectors Developer Dashboard, modified as directed in [Include the connector in your Manifest](#include-the-connector-in-your-manifest).
 
-After you upload the app, open the connectors list from any channel. Scroll to the bottom to see your app in the **Uploaded** section.
+After you upload the app, open the connectors list from any channel. Scroll to the bottom to see your app in the **Uploaded** section. The flow occurs entirely within Teams as a hosted experience.
 
 :::image type="content" source="../../assets/images/Connectors/connector_dialog_uploaded_1.png" alt-text="Screenshot of an upload section in connector dialog box.":::
-
-> [!NOTE]
-> The flow occurs entirely within Teams as a hosted experience.
 
 To verify that `HttpPOST` action is working correctly, [send messages to your connector](~/webhooks-and-connectors/how-to/connectors-using.md).
 
