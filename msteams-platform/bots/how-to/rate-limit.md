@@ -43,8 +43,7 @@ Using an exponential backoff with a random jitter is the recommended way to hand
 
 After you handle `HTTP 429` responses, you can go through the example for detecting transient exceptions.
 
-> [!NOTE]
-> In addition to retrying error code **429**, error codes **412**, **502**, and **504** must also be retried.
+In addition to retrying error code **429**, error codes **412**, **502**, and **504** must also be retried.
 
 ## Detect transient exceptions example
 
@@ -115,11 +114,9 @@ You can also handle rate limit using the per bot per thread limit.
 
 The per bot per thread limit controls the traffic that a bot is allowed to generate in a single conversation. A conversation is 1:1 between bot and user, a group chat, or a channel in a team. So, if the application sends one bot message to each user, the thread limit doesn't throttle.
 
->[!NOTE]
->
-> * The thread limit of 3600 seconds and 1800 operations applies only if multiple bot messages are sent to a single user.
-> * The global limit per app per tenant is 50 Requests Per Second (RPS). Hence, the total number of bot messages per second must not cross the thread limit.
-> * Message splitting at the service level results in higher than expected RPS. If you are concerned about approaching the limits, you must implement the [backoff strategy](#backoff-example). The values provided in this section are for estimation only.
+The thread limit of 3600 seconds and 1800 operations applies only if multiple bot messages are sent to a single user.
+The global limit per app per tenant is 50 Requests Per Second (RPS). Hence, the total number of bot messages per second must not cross the thread limit.
+Message splitting at the service level results in higher than expected RPS. If you are concerned about approaching the limits, you must implement the [backoff strategy](#backoff-example). The values provided in this section are for estimation only.
 
 The following table provides the per bot per thread limits:
 
