@@ -198,37 +198,26 @@ Following is an example of the response:
 
 ```json
 {
-   "composeExtension": {
-   "type": "result",
-   "attachmentLayout": "list",
-   "attachments": [
-     {
-       "contentType": "application/vnd.microsoft.teams.card.o365connector",
-       "content": {
-       "sections": [
-         {
-            "activityTitle": "[85069]: Create a cool app",
-            "activityImage": "https://placekitten.com/200/200"
-          },
+ "composeExtension":
+   {
+     "type": "result",
+     "attachmentLayout": "list",
+     "attachments": 
+     [
+       {
+         "contentType": "application/vnd.microsoft.card.adaptive",
+         "preview": 
           {
-            "title": "Details",
-            "facts": [
-             {
-               "name": "Assigned to:",
-               "value": "[Larry Brown](mailto:larryb@example.com)"
-             },
-             {
-               "name": "State:",
-               "value": "Active"
-             }
-            ]
-           }
-       ]
-    }
+            "contentType": "application/vnd.microsoft.card.adaptive",
+            "content": << Card Payload >>
+          },
+          "contentType": "application/vnd.microsoft.card.adaptive",
+          "content": << Card Payload >>
+       }
+      ]
    }
- ]
 }
-}
+      
 ```
 
 ---
