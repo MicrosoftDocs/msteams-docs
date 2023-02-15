@@ -106,7 +106,7 @@ The IT admins in your customer’s organization have myriad of tasks to ensure d
 
 *Understand the tasks of an IT admin before, during, and after they roll out your app.*
 
-## Deployment steps by admin
+### Deployment steps by admin
 
 Admins use the following high-level steps to deploy your app.
 
@@ -222,7 +222,7 @@ For both your initial pilots and your eventual company-wide roll out, your inter
 * Internal awareness materials such as posters, email templates, digital signage, and webinar or events.
 * Campaigns: Educate end-users about the benefits of using the Teams app. Use the template provided by Microsoft to create campaigns to improve organization-level awareness for apps.
 * Training webinar: Conduct a webinar and place usage, training, and self-help information in a single location.
-* Events: You can also drive end-user awareness via physical events, kiosk, etc. where you distribute assets to promote the awareness and usage of your app
+* Events: You can also drive end-user awareness via physical events, kiosk, etc. where you distribute assets to promote the awareness and usage of your app.
 * Reminders: Remind the end-users about the campaign after it happens.
 
 Microsoft provides a few templates that you can use to speed up the adoption of your app by your customers. These templates help you quickly generate Toolkit to popularize your app. Register for [Microsoft ISV Success program](https://www.microsoft.com/isv/program-benefits) to receive guidance about and templates for some of the above digital assets.
@@ -278,7 +278,7 @@ The following table provides the supportability information that you already sub
 |[Manifest file](resources/schema/manifest-schema.md)|publisherDocsUrl|The URL to the page that provides more app information for the admins.|Available in admin center for apps that are blocked by publisher.|
 |[Partner Center submission](/azure/marketplace/add-in-submission-guide)|NA|Support or help documentation URL. <br> <br> What about categories?|Displayed in [AppSource](https://appsource.microsoft.com/?exp=ubp8), in a tab named **Details + support**.|
 
-## Track app adoption and usage using analytics
+## Step 5: Track app adoption and usage using analytics
 
 You build an app for millions of Teams users to achieve specific business or customer goals. For this purpose, you distribute it using the distribution options available to you on the app store versus a custom app. After the app is published, you'll want to measure how your app is performing in the real-world. Also, you’d want to guide the organization admins to measure their org-specific app usage.
 
