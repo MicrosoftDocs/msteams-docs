@@ -113,8 +113,7 @@ You can add a new action (button) to an Adaptive Card by defining it in the JSON
 
 When the action is invoked in Teams, verb property is required, so that the TeamsFx conversation SDK can invoke the corresponding action handler.
 
-> [!NOTE]
-> Ensure to provide a global unique string for the verb property, when you're using a general string that might cause a collision with other bot. This can avoid unexpected behavior.
+Ensure to provide a global unique string for the verb property, when you're using a general string that might cause a collision with other bot. This can avoid unexpected behavior.
 
 <br>
 
@@ -142,8 +141,7 @@ You can return a new Adaptive Card for each action invoked to display the respon
 }
 ```
 
-> [!NOTE]
-> You can design your card layout according to your business need. See, [adaptive Card designer](https://adaptivecards.io/designer/).
+You can design your card layout according to your business need. See, [adaptive Card designer](https://adaptivecards.io/designer/).
 
 <br>
 
@@ -279,8 +277,7 @@ When you want to return an error response message to the client, you can apply `
 
 :::image type="content" source="../../../assets/images/sbs-workflow-bot/error-message-response.png" alt-text="error response message displayed":::
 
-> [!NOTE]
-> For more information about the invoke response format, see [response format](/adaptive-cards/authoring-cards/universal-action-model?branch=pr-en-us-7193).
+For more information about the invoke response format, see [response format](/adaptive-cards/authoring-cards/universal-action-model?branch=pr-en-us-7193).
 
 ### Customize Adaptive Card content
 
