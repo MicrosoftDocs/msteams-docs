@@ -37,7 +37,7 @@ The process to create a new Teams app is similar for all types of apps except SP
 
 1. Select **Start with a Teams capability**.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/select-app-type.png" alt-text="Screenshot shows the option to select app type.":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/select-app-type.png" alt-text="Screenshot shows the option to select app type." lightbox="../assets/images/teams-toolkit-v2/first-tab/select-app-type.png":::
 
 1. Ensure that **Tab** is selected as app capability.
 
@@ -77,7 +77,7 @@ The process to create a new Teams app is similar for all types of apps except SP
 
    The Teams tab app is created in a few seconds.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/tab-app-created.png" alt-text="Screenshot showing the app created.":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/tab-app-created.png" alt-text="Screenshot showing the app created." lightbox="../assets/images/teams-toolkit-v2/first-tab/tab-app-created.png":::
 
 ### Directory structure for different app types
 
