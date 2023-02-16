@@ -35,6 +35,10 @@ The process to create a new Teams app is similar for all types of apps except SP
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/create-project.png" alt-text="screenshot shows the Create New Project button in the Teams Toolkit sidebar.":::
 
+1. Select **Start with a Teams capability**.
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/select-app-type.png" alt-text="Screenshot shows the option to select app type.":::
+
 1. Ensure that **Tab** is selected as app capability.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/select-capabilities-tabapp_1.png" alt-text="Select App Capability":::
