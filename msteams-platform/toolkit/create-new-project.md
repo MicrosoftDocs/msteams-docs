@@ -33,7 +33,7 @@ The process to create a new Teams app is similar for all types of apps except SP
 
 1. Select the **Teams Toolkit** > **Create a new Teams app**.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/create-project_1.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar.":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/create-project.png" alt-text="screenshot shows the Create New Project button in the Teams Toolkit sidebar.":::
 
 1. Ensure that **Tab** is selected as app capability.
 
