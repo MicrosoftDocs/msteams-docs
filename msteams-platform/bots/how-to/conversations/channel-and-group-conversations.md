@@ -14,19 +14,18 @@ To install the Microsoft Teams bot in a team or group chat, add the `teams` or `
 
 Bots in a group or channel only receive messages when they're mentioned @botname. They don't receive any other messages sent to the conversation. The bot must be @mentioned directly. Your bot doesn't receive a message when the team or channel is mentioned, or when someone replies to a message from your bot without @mentioning it.
 
-> [!NOTE]
-> 
-> * RSC for all *chat* messages is available only in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md).
->
-> * Using resource-specific consent (RSC), bots can receive all channel messages in teams that it's installed in without being @mentioned. For more information, see [receive all channel messages with RSC](channel-messages-with-rsc.md).
->
-> * Posting a message or Adaptive Card to a private channel is currently not supported.
-
 See the following video to learn about channel and group chat conversations with a bot:
 <br>
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4NzEs]
 <br>
+
+> [!NOTE]
+>
+> * RSC for all *chat* messages is available only in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md).
+
+Using resource-specific consent (RSC), bots can receive all channel messages in teams that it's installed in without being @mentioned. For more information, see [receive all channel messages with RSC](channel-messages-with-rsc.md).
+Posting a message or Adaptive Card to a private channel is currently not supported.
 
 ## Design guidelines
 
@@ -180,6 +179,7 @@ The Bot Framework SDK provides helper methods and objects to create mentions.
 The following code shows an example of adding mentions to your messages:
 
 # [C#](#tab/dotnet)
+
 * [SDK reference](/dotnet/api/microsoft.bot.schema.mention?view=botbuilder-dotnet-stable&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L300)
 
@@ -271,6 +271,7 @@ The `text` field in the object in the `entities` array must match a portion of t
 ```
 
 # [Python](#tab/python)
+
 * [SDK reference](/python/api/botbuilder-schema/botbuilder.schema.mention?view=botbuilder-py-latest&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L94)
 
@@ -298,8 +299,7 @@ When your bot is first added to the group or team, an introduction message must 
 
 You can send a personal message to each member of the team when the bot is added. To do this, [fetch the team roster](../../../resources/bot-v3/bots-context.md#fetch-the-team-roster) and send each user a [direct message](../../../resources/bot-v3/bot-conversations/bots-conv-proactive.md).
 
->[!NOTE]
-> Ensure that the message sent by the bot is relevant and adds value to the initial message and doesn't spam the users.
+It's recommended that the message sent by the bot is relevant and adds value to the initial message and doesn't spam the users.
 
 Don't send a message in the following cases:
 

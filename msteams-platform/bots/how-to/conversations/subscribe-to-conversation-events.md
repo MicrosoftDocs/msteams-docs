@@ -22,13 +22,9 @@ When building your conversational bots for Microsoft Teams, you can work with co
 
 ## Conversation update events
 
-You can use conversation update events to provide better notifications and effective bot actions.
+You can use conversation update events to provide better notifications and effective bot actions. You can add new events any time and your bot begins to receive them.
 
-> [!IMPORTANT]
->
-> * You can add new events any time and your bot begins to receive them.
-> * You must design your bot to receive unexpected events.
-> * If you are using the Bot Framework SDK, your bot automatically responds with a `200 - OK` to any events you choose not to handle.
+It's recommended that you design your bot to receive unexpected events. If you are using the Bot Framework SDK, your bot automatically responds with a `200 - OK` to any events you choose not to handle.
 
 A bot receives a `conversationUpdate` event in either of the following cases:
 
@@ -330,8 +326,8 @@ export class MyBot extends TeamsActivityHandler {
 ```
 
 # [Python](#tab/python)
-* [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?view=botbuilder-py-latest#botbuilder-core-teams-teamsactivityhandler-on-teams-channel-deleted&preserve-view=true)
 
+* [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?view=botbuilder-py-latest#botbuilder-core-teams-teamsactivityhandler-on-teams-channel-deleted&preserve-view=true)
 
 * [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?&preserve-view=true)
 
@@ -460,8 +456,7 @@ A member added event is sent to your bot in the following scenarios:
 
 The member added activity `eventType` is set to `teamMemberAdded` when the event is sent from a team context. To determine if the new member added was the bot itself or a user, check the `Activity` object of the `turnContext`. If the `MembersAdded` list contains an object where `id` is the same as the `id` field of the `Recipient` object, then the member added is the bot, else it's a user. The bot's `id` is formatted as `28:<MicrosoftAppId>`.
 
-> [!TIP]
-> Use the [`InstallationUpdate` event](#installation-update-event) to determine when when your bot is added or removed from a conversation.
+You can use the [`InstallationUpdate` event](#installation-update-event) to determine when when your bot is added or removed from a conversation.
 
 The following code shows an example of team members added event:
 
@@ -636,10 +631,7 @@ A member removed event is sent to your bot in the following scenarios:
 1. When the bot, itself, is uninstalled and removed from a conversation.
 2. When a user is removed from a conversation where the bot is installed.
 
-The member removed activity `eventType` is set to `teamMemberRemoved` when the event is sent from a team context. To determine if the new member removed was the bot itself or a user, check the `Activity` object of the `turnContext`. If the `MembersRemoved` list contains an object where `id` is the same as the `id` field of the `Recipient` object, then the member added is the bot, else it's a user. The bot's id is formatted as `28:<MicrosoftAppId>`.
-
-> [!NOTE]
-> When a user is permanently deleted from a tenant, `membersRemoved conversationUpdate` event is triggered.
+The member removed activity `eventType` is set to `teamMemberRemoved` when the event is sent from a team context. To determine if the new member removed was the bot itself or a user, check the `Activity` object of the `turnContext`. If the `MembersRemoved` list contains an object where `id` is the same as the `id` field of the `Recipient` object, then the member added is the bot, else it's a user. The bot's id is formatted as `28:<MicrosoftAppId>`. When a user is permanently deleted from a tenant, `membersRemoved conversationUpdate` event is triggered.
 
 The following code shows an example of team members removed event:
 
@@ -670,6 +662,7 @@ protected override async Task OnTeamsMembersRemovedAsync(IList<ChannelAccount> m
 ```
 
 # [TypeScript](#tab/typescript)
+
 [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onteamsmembersremovedevent&preserve-view=true)
 
 ```typescript
@@ -763,6 +756,7 @@ Your bot is notified when the team is renamed. It receives a `conversationUpdate
 The following code shows an example of team renamed event:
 
 # [C#](#tab/dotnet)
+
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsteamrenamedasync?view=botbuilder-dotnet-stable#definition&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L349)
 
@@ -871,6 +865,7 @@ protected override async Task OnTeamsTeamDeletedAsync(TeamInfo teamInfo, ITurnCo
 ```
 
 # [TypeScript](#tab/typescript)
+
 * [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onteamsteamdeletedevent&preserve-view=true)
 
 ```typescript
@@ -924,6 +919,7 @@ export class MyBot extends TeamsActivityHandler {
 ```
 
 # [Python](#tab/python)
+
 * [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?view=botbuilder-py-latest#botbuilder-core-teams-teamsactivityhandler-on-teams-team-deleted&preserve-view=true)
 
 ```python
@@ -1200,6 +1196,7 @@ export class MyBot extends TeamsActivityHandler {
 ```
 
 # [Python](#tab/python)
+
 * [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?view=botbuilder-py-latest#botbuilder-core-teams-teamsactivityhandler-on-teams-team-unarchived&preserve-view=true)
 
 ```python
@@ -1249,6 +1246,7 @@ protected override async Task OnReactionsAddedAsync(IList<MessageReaction> messa
 ```
 
 # [TypeScript](#tab/typescript)
+
 * [SDK reference](/javascript/api/botbuilder-core/activityhandler?view=botbuilder-ts-latest#botbuilder-core-activityhandler-onreactionsadded&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L55)
 
@@ -1379,6 +1377,7 @@ protected override async Task OnReactionsRemovedAsync(IList<MessageReaction> mes
 ```
 
 # [TypeScript](#tab/typescript)
+
 * [SDK reference](/javascript/api/botbuilder-core/activityhandler?view=botbuilder-ts-latest#botbuilder-core-activityhandler-onreactionsremoved&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L63)
 
@@ -1457,6 +1456,7 @@ export class MyBot extends TeamsActivityHandler {
 ```
 
 # [Python](#tab/python)
+
 * [SDK reference](/python/api/botbuilder-core/botbuilder.core.activityhandler?view=botbuilder-py-latest#botbuilder-core-activityhandler-on-reactions-removed&preserve-view=true)
 
 ```python
@@ -1487,8 +1487,7 @@ async def on_reactions_removed(
 
 The bot receives an `installationUpdate` event when you install a bot to a conversation thread. Uninstallation of the bot from the thread also triggers the event. On installing a bot, the **action** field in the event is set to *add*, and when the bot is uninstalled the **action** field is set to *remove*.
 
-> [!NOTE]
-> When you upgrade an application, the bot receives the `installationUpdate` event only to add or remove a bot from the manifest. For all other cases, the `installationUpdate` event isn't triggered. The **action** field is set to *add-upgrade* if you add a bot or *remove-upgrade* if you remove a bot.
+When you upgrade an application, the bot receives the `installationUpdate` event only to add or remove a bot from the manifest. For all other cases, the `installationUpdate` event isn't triggered. The **action** field is set to *add-upgrade* if you add a bot or *remove-upgrade* if you remove a bot.
 
 ### Install update event
 
@@ -1496,14 +1495,14 @@ Use the `installationUpdate` event to send an introductory message from your bot
 
 Similar to the `conversationUpdate` event that's sent when bot is added to a team, the conversation.id of the `installationUpdate` event is set to the id of the channel selected by a user during app installation or the channel where the installation occurred. The id represents the channel where the user intends for the bot to operate and must be used by the bot when sending a welcome message. For scenarios where the ID of the General channel is explicitly required, you can get it from `team.id` in `channelData`.
 
+The selected channel id is only set on `installationUpdate` *add* events that are sent when an app is installed into a team.
+
 In this example, the `conversation.id` of the `conversationUpdate` and `installationUpdate` activities will be set to the ID of the Response channel in the Daves Demo team.
 
 ![Create a selected channel](~/assets/videos/addteam.gif)
 
-> [!NOTE]
-> The selected channel id is only set on `installationUpdate` *add* events that are sent when an app is installed into a team.
-
 # [C#](#tab/dotnet)
+
 * [SDK reference](/dotnet/api/microsoft.bot.builder.activityhandler.oninstallationupdateactivityasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-activityhandler-oninstallationupdateactivityasync(microsoft-bot-builder-iturncontext((microsoft-bot-schema-iinstallationupdateactivity))-system-threading-cancellationtoken)&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L70-L80)
 
