@@ -354,7 +354,7 @@ Discover Microsoft Teams platform features that are deprecated. You can now get 
 :::column-end:::
 :::column span="2":::
 
-Teams platform features that are not available.
+Teams platform features that aren't available.
 
 **2022 August**
 
