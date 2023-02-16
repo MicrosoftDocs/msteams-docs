@@ -235,9 +235,9 @@ Anonymous users can view and interact with Adaptive Cards in the meeting chat. A
 
 ## Code sample
 
-|Sample name | Description | .NET | Manifest |
+|Sample name | Description | .NET |
 |----------------|-----------------|--------------|--------------|
-| Anonymous user support | Sample app to show anonymous user support in meeting apps. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-anonymous-users/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-anonymous-users/csharp/demo-manifest) |
+| Anonymous user support | Sample app to show anonymous user support in meeting apps. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-anonymous-users/csharp) |
 
 ## Next step
 
