@@ -77,7 +77,7 @@ The process to create a new Teams app is similar for all types of apps except SP
 
    The Teams tab app is created in a few seconds.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/tap-app-created1.png" alt-text="Screenshot showing the app created.":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/tab-app-created.png" alt-text="Screenshot showing the app created.":::
 
 ### Directory structure for different app types
 
