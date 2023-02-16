@@ -20,13 +20,13 @@ The dashboard tab template from Teams Toolkit allows you to get started with int
 
 :::image type="content" source="../../assets/images/dashboard/dashboard-demonstration.png" alt-text="Screenshot shows the sample of a dashboard.":::
 
-The Teams dashboard app allows your team to be engaged with latest updates from different sources within Teams all within the same tab. Use dashboard tab apps to connect numerous metrics, data sources, APIs, and services to help your business extract relevant information from the sources and present it to the users. For more information about creating a dashboard tab app and the source code directory structure, see [step-by-step guide](#step-by-step-guide).
+Your team can get the latest updates from different sources in Teams using the Teams dashboard tab app. Use dashboard tab apps to connect numerous metrics, data sources, APIs, and services to help your business extract relevant information from the sources and present it to the users. For more information about creating a dashboard tab app and the source code directory structure, see [step-by-step guide](#step-by-step-guide).
 
 ## Add a new dashboard
 
 After you've created a dashboard tab app, you can add a new dashboard.
 
-To add a new dashboard follow these steps:
+To add a new dashboard, follow these steps:
 
 1. [Create a dashboard class](#create-a-dashboard-class)
 1. [Override methods to customize dashboard tab app](#override-methods-to-customize-dashboard-tab-app)
@@ -56,7 +56,7 @@ The `dashboard` class provides few methods that you can override to customize th
 | `columnWidths()` | Customize how many columns the dashboard has at most and the width of each column. |
 | `dashboardLayout()` | Define widgets layout. |
 
-The following is an example to customize the dashboard layout:
+The following code is an example to customize the dashboard layout:
 
 ```typescript
 export default class YourDashboard extends Dashboard {
@@ -112,11 +112,128 @@ Open templates/appPackage/manifest.template.json file and add a new dashboard ta
 }
 ```
 
-## Dashboard tab app abstraction
+## Customize the dashboard layout
+
+Teamsfx provides convenient methods to define and modify the layout of the dashboard. To customize the dashboard layout, follow these steps:
+
+1. Three widgets in a row with the height of 350 px occupying 20%, 60%, and 20% of the width, respectively.
+
+    ```typescript
+    export default class SampleDashboard extends Dashboard {
+      protected rowHeights(): string | undefined {
+        return "350px";
+      }
+    
+      protected columnWidths(): string | undefined {
+        return "2fr 6fr 2fr";
+      }
+    
+      protected dashboardLayout(): undefined | JSX.Element {
+        return (
+          <>
+            <ListWidget />
+            <ChartWidget />
+            <NewsWidget />
+          </>
+        );
+      }
+    }
+    ```
+
+   :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/customize-dashboard-layout.png" alt-text="Screenshot shows the customized dashboard layout.":::
+
+1. There are two widgets in a row with a width of 600 px and 1100 px. The height of the first line is the maximum height of its content, and the height of the second line is 400 px.
+
+    ```typescript
+    export default class SampleDashboard extends Dashboard {
+      protected rowHeights(): string | undefined {
+        return "max-content 400px";
+      }
+     
+      protected columnWidths(): string | undefined {
+        return "600px 1100px";
+      }
+    
+      protected dashboardLayout(): undefined | JSX.Element {
+        return (
+          <>
+            <ListWidget />
+            <ChartWidget />
+            <NewsWidget />
+          </>
+        );
+      }
+    }
+    ```
+
+    :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/customize-dashboard-layout2.png" alt-text="Screenshot shows the customization of height and width of the dashboard layout.":::
+
+1. Arrange two widgets in a column.
+
+    ```typescript
+    import { oneColumn } from '../lib/Dashboard.styles';
+    export default class SampleDashboard extends Dashboard {
+      protected rowHeights(): string | undefined {
+        return "max-content";
+      }
+    
+      protected columnWidths(): string | undefined {
+        return "4fr 6fr";
+      }
+    
+      protected dashboardLayout(): undefined | JSX.Element {
+        return (
+          <>
+            <NewsWidget />
+            <div style={oneColumn()}>
+              <ListWidget />
+              <ChartWidget />
+              
+            </div>
+          </>
+        );
+      }
+    }
+    ```
+
+    :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/widget-customize.png" alt-text="Screenshot shows the two-widget customization.":::
+
+1. Customize the height of widgets in a row.
+
+    The following code can achieve a height of 400 px for the `ListWidget` and a height of 350 px for the `ChartWidget`:
+
+    ```typescript
+        import { oneColumn } from '../lib/Dashboard.styles';
+        export default class SampleDashboard extends Dashboard {
+          protected rowHeights(): string | undefined {
+            return "max-content";
+          }
+        
+          protected columnWidths(): string | undefined {
+            return "4fr 6fr";
+          }
+        
+          protected dashboardLayout(): undefined | JSX.Element {
+            return (
+              <>
+                <NewsWidget />
+                <div style={oneColumn("400px 350px")}>
+                  <ListWidget />
+                  <ChartWidget />
+                </div>
+              </>
+            );
+          }
+        }
+    ```
+
+      :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/chart-widget.png" alt-text="Screenshot shows the customization of a chart widget.":::
+
+### Dashboard tab app abstraction
 
 To adjust the layout of the dashboard, Teamsfx provides a `dashboard` class for the developers to implement a dashboard.
 
-The following is an example of a dashboard class:
+The following code is an example of a dashboard class:
 
 ```typescript
 interface IDashboardState {
@@ -226,16 +343,12 @@ The following are the customizable methods to override:
 | File | Content | Recommend to override |
 |---|---|---|
 | **constructor()** | This method initializes the dashboard state and variables. | NO |
-| **componentDidMount()** | This method is invoked after a component is mounted. | NO |
-| **componentWillUnmount()** | This method is invoked when a component is unmounted. | NO |
-| **render()** | This method is called each time there is an update and we define the dashboard default layout. | NO |
+| **componentDidMount()** | After a component is mounted, `componentDidMount()` is invoked after a component is mounted. | NO |
+| **componentWillUnmount()** | When a component is unmounted, `componentWillUnmount()` is invoked. | NO |
+| **render()** | This method is called each time there's an update and we define the dashboard default layout. | NO |
 | **rowHeights()** | This method customizes the height of each row of the dashboard. | YES |
 | **columnWidths()** | This method customizes the number of columns the dashboard has at most and the width of each column. | YES |
 | **dashboardLayout()** | This method defines the widget layout in dashboard. | YES |
-
-## Embed Power BI to Dashboard
-
-To embed Power BI to the Dashboard, see [Power BI client react](/javascript/api/overview/powerbi/powerbi-client-react).
 
 ## Use a widget in your dashboard
 
@@ -384,7 +497,7 @@ The following steps show how to add a property to the state of `ListWidget` and 
 
 1. Hide the footer button if the data is loading
 
-    The following is an example of footer button:
+    The following code is an example of footer button:
 
     ```tsx
     footerContent(): JSX.Element | undefined {
@@ -482,128 +595,11 @@ export class RefreshWidget extends Widget<IRefreshWidgetState> {
 
 You can modify `setInterval` method to call your own function to refresh data like this `setInterval(() => yourGetDataFunction(), 1000)`.
 
-## Customize the dashboard layout
-
-Teamsfx provides convenient methods to define and modify the layout of the dashboard. To customize the dashboard layout, follow these steps:
-
-1. Three widgets in a row with the height of 350 px occupying 20%, 60%, and 20% of the width, respectively.
-
-    ```typescript
-    export default class SampleDashboard extends Dashboard {
-      protected rowHeights(): string | undefined {
-        return "350px";
-      }
-    
-      protected columnWidths(): string | undefined {
-        return "2fr 6fr 2fr";
-      }
-    
-      protected dashboardLayout(): undefined | JSX.Element {
-        return (
-          <>
-            <ListWidget />
-            <ChartWidget />
-            <NewsWidget />
-          </>
-        );
-      }
-    }
-    ```
-
-   :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/customize-dashboard-layout.png" alt-text="Screenshot shows the customized dashboard layout.":::
-
-1. There are two widgets in a row with a width of 600 px and 1100 px. The height of the first line is the maximum height of its content, and the height of the second line is 400 px.
-
-    ```typescript
-    export default class SampleDashboard extends Dashboard {
-      protected rowHeights(): string | undefined {
-        return "max-content 400px";
-      }
-     
-      protected columnWidths(): string | undefined {
-        return "600px 1100px";
-      }
-    
-      protected dashboardLayout(): undefined | JSX.Element {
-        return (
-          <>
-            <ListWidget />
-            <ChartWidget />
-            <NewsWidget />
-          </>
-        );
-      }
-    }
-    ```
-
-    :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/customize-dashboard-layout2.png" alt-text="Screenshot shows the customization of height and width of the dashboard layout.":::
-
-1. Arrange two widgets in a column.
-
-    ```typescript
-    import { oneColumn } from '../lib/Dashboard.styles';
-    export default class SampleDashboard extends Dashboard {
-      protected rowHeights(): string | undefined {
-        return "max-content";
-      }
-    
-      protected columnWidths(): string | undefined {
-        return "4fr 6fr";
-      }
-    
-      protected dashboardLayout(): undefined | JSX.Element {
-        return (
-          <>
-            <NewsWidget />
-            <div style={oneColumn()}>
-              <ListWidget />
-              <ChartWidget />
-              
-            </div>
-          </>
-        );
-      }
-    }
-    ```
-
-    :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/widget-customize.png" alt-text="Screenshot shows the two-widget customization.":::
-
-1. Customize the height of widgets in a row.
-
-    The following code can achieve a height of 400 px for the `ListWidget` and a height of 350 px for the `ChartWidget`:
-
-    ```typescript
-        import { oneColumn } from '../lib/Dashboard.styles';
-        export default class SampleDashboard extends Dashboard {
-          protected rowHeights(): string | undefined {
-            return "max-content";
-          }
-        
-          protected columnWidths(): string | undefined {
-            return "4fr 6fr";
-          }
-        
-          protected dashboardLayout(): undefined | JSX.Element {
-            return (
-              <>
-                <NewsWidget />
-                <div style={oneColumn("400px 350px")}>
-                  <ListWidget />
-                  <ChartWidget />
-                </div>
-              </>
-            );
-          }
-        }
-    ```
-
-      :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/chart-widget.png" alt-text="Screenshot shows the customization of a chart widget.":::
-
 ### Widget abstraction
 
 To simplify the development of a widget, Teamsfx provides a `widget` class for developers to inherit to implement a widget that meets their needs without paying much attention to implement the widget layout.
 
-The following is an example of widget class:
+The following code is an example of widget class:
 
 ```typescript
 export abstract class Widget<T> extends Component<any, { data?: T | void }> {
@@ -677,7 +673,7 @@ The following are the recommended methods to override:
 |---|---|---|
 | **constructor()** | Invokes the initial `this.state` and call the constructor of the super class `React` component. | NO |
 | **componentDidMount()** | Invokes after a component is mounted and assigns a value to the `data` property of the state by calling the `getData()` method. | NO |
-| **render()** | Invokes each time there is an update and the dashboard default layout is defined in this method. | NO |
+| **render()** | Invokes each time there's an update and the dashboard default layout is defined in this method. | NO |
 | **getData()** | Invokes the data needed by the widget and the value returned by this method is set to `this.state.data`. |
 | **headerContent()** | Invokes what the widget header looks like. You can choose to override this method to customize a widget or not, if not, the widget won't have a header. | YES |
 | **bodyContent()** | Invokes what the widget body looks like. You can choose to override this method to customize a widget or not, if not, the widget won't have a body. | YES |
@@ -926,6 +922,10 @@ For more information, see:
 
 * [sample](https://github.com/OfficeDev/TeamsFx-Samples/blob/dev/hello-world-tab-with-backend/tabs/src/components/sample/AzureFunctions.tsx)
 * [Developer guide](/azure/azure-functions/functions-reference?tabs=blob)
+
+## Embed Power BI to Dashboard
+
+To embed Power BI to the Dashboard, see [Power BI client react](/javascript/api/overview/powerbi/powerbi-client-react).
 
 ## Step-by-step guide
 
