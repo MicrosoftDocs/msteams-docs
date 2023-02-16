@@ -27,7 +27,7 @@ You can build a new Teams project by selecting **Create a new Teams app** in Tea
 
 The process to create a new Teams app is similar for all types of apps except SPFx tab app, workflow bot, and notification bot.
 
-**To create a basic Teams app**
+**To create a basic Teams app**:
 
 1. Open **Visual Studio Code**.
 
@@ -47,7 +47,7 @@ The process to create a new Teams app is similar for all types of apps except SP
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/select-language-tab_1.png" alt-text="Screenshot showing how to select the programming language.":::
 
-1. Select **Default folder** to store your project root folder in default location.
+1. Select **Default folder** to store your project root folder in the default location.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/select-default-location.png" alt-text="Select default location":::
 
@@ -60,18 +60,16 @@ The process to create a new Teams app is similar for all types of apps except SP
 
     1. Select the location for project workspace.
 
-    1. Select the **Select Folder**.
-
         :::image type="content" source="../assets/images/teams-toolkit-v2/select-folder_1.png" alt-text="select-folder for storage":::
 
     The folder you select is the location for your project workspace.
     </details>
 
-1. Enter a suitable name for your app, such as helloworld as the application name. Ensure that you use only alphanumeric characters. Press **Enter**.
+1. Enter a suitable name for your app, such as helloworld, as the application name. Ensure that you use only alphanumeric characters. Press **Enter**.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/enter-name-tab1.png" alt-text="Screenshot showing where to enter the app name.":::
 
-1. By default, your app project opens in a new window . If you want to open in the current window, select **Open in current window**.
+    By default, your app project opens in a new window . You can open your app project in the current window as well.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/new-window-notification.png" alt-text="New window notification":::
 
