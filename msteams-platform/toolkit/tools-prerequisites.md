@@ -13,18 +13,18 @@ Before you create your Teams app project, ensure that the prerequisites are in p
 
 * [Install required tools to build your Teams app](#install-required-tools-to-build-your-teams-app)
 * [Prepare Accounts to build your Teams app](#accounts-to-build-your-teams-app)
-* [Sideload permission](#sideload-permission)
+* [Verify sideload permission](#verify-sideload-permission)
 
 ## Install required tools to build your Teams app
 
-Ensure that following tools are installed on the device where you’ll create your app project before you start building your Teams app:
+Ensure that the following tools are installed on the device where you’ll create your app project before you start building your Teams app:
 
-| &nbsp; | Tools | For using | For environment type |
-| --- | --- | --- | --- |
-| **Required** | &nbsp; | &nbsp; | &nbsp; |
+| Tools | For using | For environment type |
+| --- | --- | --- |
+| **Required** | &nbsp; | &nbsp; |
 | Microsoft Visual Studio Code| JavaScript, TypeScript, or SPFx build environments to build your Teams app. Use version 1.55 or later. | JavaScript, TypeScript, and SPFx. |
 | Teams Toolkit| The Microsoft Visual Studio Code extension to create a Teams app project. Use the latest version. | JavaScript, TypeScript, and  (SPFx)|
-| [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Sideloading feature to testing your app behavior within your local Teams environment.| JavaScript, TypeScript, and SPFx.|
+| [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Sideloading feature to test your app behavior within your local Teams environment.| JavaScript, TypeScript, and SPFx.|
 | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. Use the latest v16 LTS release.| JavaScript, TypeScript, and SPFx.|
 |[Node Package Manager (NPM)](https://www.npmjs.com/package/@microsoft/teamsfx) | Installing and managing packages for use in both Node.js and ASP.NET core applications.| JavaScript, TypeScript, and SPFx. |
 | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. | JavaScript and SPFx|
@@ -37,7 +37,7 @@ Ensure that following tools are installed on the device where you’ll create yo
    > [!NOTE]
    >
    > * The document is tested with Teams Toolkit version 4.1.3 and Node.js version 16.
-   > * Bookmark the Microsoft Graph Explorer, to learn about Microsoft Graph services. This browser-based tool allows you to run a query and access the Microsoft Graph API.
+   > * Bookmark the Microsoft Graph Explorer to learn about Microsoft Graph services. This browser-based tool allows you to run a query and access the Microsoft Graph API.
 
 ## Accounts to build your Teams app
 
@@ -65,7 +65,7 @@ You can sign up for the developer program using one of the following account typ
 
        The Microsoft account provides access to the Microsoft products and cloud services, such as Outlook, Messenger, OneDrive, MSN, Xbox Live, or Microsoft 365. 
 
-       Sign up for an Outlook.com mailbox to create a Microsoft. Use it to access consumer-related Microsoft cloud services or Azure.
+       Sign up for an Outlook.com mailbox to create a Microsoft 365 account. Use it to access consumer-related Microsoft cloud services or Azure.
 
     :::column-end:::
     :::column span="1":::
@@ -117,7 +117,7 @@ An Azure account allows you to host a Teams app or the back-end resources for yo
 
 While creating Teams app using SPFx environment, you must have a SharePoint collection site administrator account. It’s required for deploying and hosting your app on SharePoint site. If you're using a Microsoft 365 developer program tenant, you can use the administrator account you created at the time.
 
-## Sideload permission
+## Verify sideload permission
 
 After creating the app, you must load your app in Teams without distributing it. This process is known as sideloading. Sign in to your Microsoft 365 account to view this option.
 
@@ -130,18 +130,18 @@ You can verify if the sideloading permission is enabled using either Visual Stud
 You can use this method to verify sideloading permission only after you have created an app project using Teams Toolkit. If you haven't created an app project, you can verify sideloading permission using Teams client.
 
 1. Open **Visual Studio Code**.
-1. Select the **Teams Toolkit** from the Visual Studio Code activity bar.
+1. Select **Teams Toolkit** from the Visual Studio Code activity bar.
 
    > [!NOTE]
    > If you're unable to see the option, see [install Teams Toolkit](install-Teams-Toolkit.md) to install Teams Toolkit extension in Visual Studio Code.
 
 1. Create a new Teams Toolkit app project or open an existing app project.
 
-1. Select **Sign in to Microsoft 365** under **ACCOUNTS** and sign in to your Microsoft 365 account.
+1. Select **Sign in to Microsoft 365** under **ACCOUNTS**.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/accounts1_1.png" alt-text="accounts details":::
 
-1. Check if you can see the option **Sideloading enabled** as you can see in the following image:
+1. Verify if you can see the option **Sideloading enabled** as shown in the following image:
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/sideloading_1.png" alt-text="Enable sideloading":::
 
