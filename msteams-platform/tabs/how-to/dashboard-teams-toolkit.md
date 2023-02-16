@@ -43,7 +43,7 @@ export default class YourDashboard extends Dashboard {}
 
 ```
 
->[!NOTE]
+>[! NoTE]
 > All methods are optional. If you don't override any method, the default dashboard layout is used.
 
 ### Override methods to customize dashboard tab app
@@ -114,9 +114,9 @@ Open templates/appPackage/manifest.template.json file and add a new dashboard ta
 
 ## Customize the dashboard layout
 
-Teamsfx provides convenient methods to define and modify the layout of the dashboard. To customize the dashboard layout, follow these steps:
+Teamsfx provides convenient methods to define and modify the layout of the dashboard. The following are the methods:
 
-1. Three widgets in a row with the height of 350 px occupying 20%, 60%, and 20% of the width, respectively.
+* Three widgets in a row with the height of 350 px occupying 20 percent, 60 percent, and 20 percent of the width, respectively.
 
     ```typescript
     export default class SampleDashboard extends Dashboard {
@@ -142,7 +142,7 @@ Teamsfx provides convenient methods to define and modify the layout of the dashb
 
    :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/customize-dashboard-layout.png" alt-text="Screenshot shows the customized dashboard layout.":::
 
-1. There are two widgets in a row with a width of 600 px and 1100 px. The height of the first line is the maximum height of its content, and the height of the second line is 400 px.
+* Two widgets in a row with a width of 600 px and 1100 px. The height of the first line is the maximum height of its content, and the height of the second line is 400 px.
 
     ```typescript
     export default class SampleDashboard extends Dashboard {
@@ -168,7 +168,7 @@ Teamsfx provides convenient methods to define and modify the layout of the dashb
 
     :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/customize-dashboard-layout2.png" alt-text="Screenshot shows the customization of height and width of the dashboard layout.":::
 
-1. Arrange two widgets in a column.
+* Arrange two widgets in a column.
 
     ```typescript
     import { oneColumn } from '../lib/Dashboard.styles';
@@ -198,7 +198,7 @@ Teamsfx provides convenient methods to define and modify the layout of the dashb
 
     :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/widget-customize.png" alt-text="Screenshot shows the two-widget customization.":::
 
-1. Customize the height of widgets in a row.
+* Customize the height of widgets in a row.
 
     The following code can achieve a height of 400 px for the `ListWidget` and a height of 350 px for the `ChartWidget`:
 
@@ -227,7 +227,7 @@ Teamsfx provides convenient methods to define and modify the layout of the dashb
         }
     ```
 
-      :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/chart-widget.png" alt-text="Screenshot shows the customization of a chart widget.":::
+    :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/chart-widget.png" alt-text="Screenshot shows the customization of a chart widget.":::
 
 ### Dashboard tab app abstraction
 
@@ -342,13 +342,13 @@ The following are the customizable methods to override:
 
 | File | Content | Recommend to override |
 |---|---|---|
-| **constructor()** | Initializes the dashboard state and variables. | NO |
-| **componentDidMount()** | Invokes after a component is mounted. | NO |
-| **componentWillUnmount()** | Invokes when a component is unmounted. | NO |
-| **render()** |  Invokes when there's an update. The dashboard default layout is defined in this method. | NO |
-| **rowHeights()** | Customizes the height of each row of the dashboard. | YES |
-| **columnWidths()** | Customizes the number of columns the dashboard has at most and the width of each column. | YES |
-| **dashboardLayout()** | Defines the widget layout in dashboard. | YES |
+| **constructor()** | Initializes the dashboard state and variables. | No |
+| **componentDidMount()** | Invokes after a component is mounted. |  No |
+| **componentWillUnmount()** | Invokes when a component is unmounted. |  No |
+| **render()** |  Invokes when there's an update. The dashboard default layout is defined in this method. |  No |
+| **rowHeights()** | Customizes the height of each row of the dashboard. |  Yes |
+| **columnWidths()** | Customizes the number of columns the dashboard has at most and the width of each column. |  Yes |
+| **dashboardLayout()** | Defines the widget layout in dashboard. |  Yes |
 
 ## Use a widget in your dashboard
 
@@ -358,7 +358,7 @@ Widgets display configurable information and charts on dashboards. They appear o
 
 You can customize the widget by overriding the following methods in the `widget` class:
 
-1. Override `headerContent()`, `bodyContent()`, and `footerContent()` to customize the widget.
+* Override `headerContent()`, `bodyContent()`, and `footerContent()` to customize the widget.
 
     ```typescript
     export class NewsWidget extends Widget<void> {
@@ -402,7 +402,7 @@ You can customize the widget by overriding the following methods in the `widget`
 
    :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/override-header-count.png" alt-text="Screenshot shows the example of header, body, and footer content in a widget.":::
 
-1. Override `bodyContent()` and `footerContent()` to customize the widget.
+* Override `bodyContent()` and `footerContent()` to customize the widget.
 
     ```typescript
     export class NewsWidget extends Widget<void> {
@@ -436,7 +436,7 @@ You can customize the widget by overriding the following methods in the `widget`
 
     :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/override-body-content-footer-content.png" alt-text="Screenshot shows the body and footer content in a widget.":::
 
-1. Override `bodyContent()` to customize the widget.
+* Override `bodyContent()` to customize the widget.
 
     ```typescript
     export class NewsWidget extends Widget<void> {
@@ -462,9 +462,7 @@ If you want to include a data loader to your widget before the widget is loaded,
 
 The following steps show how to add a property to the state of `ListWidget` and how to use it to show a loading spinner while the data is loading.
 
-1. Define a state type
-
-   Define a state type including a property named `loading` that indicates whether the data is loading.
+1. Define a state type: Define a state type including a property named `loading` that indicates whether the data is loading.
 
     ```typescript
     interface ListWidgetState {
@@ -473,9 +471,7 @@ The following steps show how to add a property to the state of `ListWidget` and 
     }
     ```
 
-1. Add a data loader
-
-    Modify the `bodyContent` method to show a loading spinner if data is loading.
+1. Add a data loader: Modify the `bodyContent` method to show a loading spinner if data is loading.
 
     ```tsx
     bodyContent(): JSX.Element | undefined {
@@ -495,7 +491,7 @@ The following steps show how to add a property to the state of `ListWidget` and 
     }
     ```
 
-1. Hide the footer button if the data is loading
+1. Hide the footer button if the data is loading.
 
     The following code is an example of footer button:
 
@@ -511,9 +507,7 @@ The following steps show how to add a property to the state of `ListWidget` and 
     }
     ```
 
-1. Update the state reference
-
-    Update the state reference in the widget file to use the new state type and update the state in the `getData` method to set the `loading` property to `false` after the data is loaded.
+1. Update the state reference: Update the state reference in the widget file to use the new state type and update the state in the `getData` method to set the `loading` property to `false` after the data is loaded.
 
     Now, the loading spinner is shown while the data is loading. When the data is loaded, the loading spinner is hidden and the list data, and footer button are shown.
 
@@ -521,7 +515,9 @@ The following steps show how to add a property to the state of `ListWidget` and 
 
 ### Handle empty state
 
-You can display a specific content in your widget when the data is empty. To do so, you need to modify the `bodyContent` method in your widget file to adopt different states of the data. The following example shows how to display an empty image when the data of `ListWidget` is empty.
+You can display a specific content in your widget when the data is empty. To do so, you need to modify the `bodyContent` method in your widget file to adopt different states of the data.
+
+The following example shows how to display an empty image when the data of `ListWidget` is empty.
 
 ```tsx
 bodyContent(): JSX.Element | undefined {
@@ -671,27 +667,23 @@ The following are the recommended methods to override:
 
 | Methods | Function | Recommend to override |
 |---|---|---|
-| **constructor()** | Invokes the initial `this.state` and calls the constructor of the super class `React` component. | NO |
-| **componentDidMount()** | Invokes after a component is mounted and assigns a value to the `data` property of the state by calling the `getData()` method. | NO |
-| **render()** | Invokes whenever there's an update. The dashboard default layout is defined in this method. | NO |
+| **constructor()** | Invokes the initial `this.state` and calls the constructor of the super class `React` component. |  No |
+| **componentDidMount()** | Invokes after a component is mounted and assigns a value to the `data` property of the state by calling the `getData()` method. |  No |
+| **render()** | Invokes whenever there's an update. The dashboard default layout is defined in this method. |  No |
 | **getData()** | Invokes the data needed by the widget. The value returned by this method is set to `this.state.data`. |
-| **headerContent()** | Invokes what the widget header looks like. You can choose to override this method to customize a widget or not, if not, the widget won't have a header. | YES |
-| **bodyContent()** | Invokes what the widget body looks like. You can choose to override this method to customize a widget or not, if not, the widget won't have a body. | YES |
-| **footerContent()** | Invokes what the widget footer looks like. You can choose to override this method to customize a widget or not, if not, the widget won't have a footer. | YES |
+| **headerContent()** | Invokes what the widget header looks like. You can choose to override this method to customize a widget or not, if not, the widget won't have a header. |  Yes |
+| **bodyContent()** | Invokes what the widget body looks like. You can choose to override this method to customize a widget or not, if not, the widget won't have a body. |  Yes |
+| **footerContent()** | Invokes what the widget footer looks like. You can choose to override this method to customize a widget or not, if not, the widget won't have a footer. |  Yes |
 
 ### Microsoft Graph Toolkit as widget content
 
 Microsoft Graph Toolkit is a set of renewable, framework-agnostic web components, which helps accessing and working with Microsoft Graph. You can use the Microsoft Graph Toolkit with any web framework or without a framework.
 
-The following are the steps to use Microsoft Graph Toolkit as your widget content:
+To use Microsoft Graph Toolkit as your widget content, follow these steps:
 
-1. Add SSO feature to your Teams app
+1. Add SSO feature to your Teams app: Microsoft Teams provides single sign-on (SSO) function for an app to obtain signed in Teams user token to access Microsoft Graph. For more information, refer [SSO feature to your Teams app](../../toolkit/add-single-sign-on.md).
 
-   Microsoft Teams provides single sign-on (SSO) function for an app to obtain signed in Teams user token to access Microsoft Graph.
-
-   For more information, refer [SSO feature to your Teams app](../../toolkit/add-single-sign-on.md).
-
-1. Install required `npm` packages
+1. Install required `npm` packages.
 
    Run the following command in your project `tabs` folder to install the required `npm` packages:
 
@@ -700,9 +692,7 @@ The following are the steps to use Microsoft Graph Toolkit as your widget conten
 
       ```
 
-1. Add a new Graph Toolkit widget
-
-      Create a new widget file in your project tabs/src/views/widgets folder, for example, GraphyWidget.tsx. In this widget, we'll guide users to consent our app to access Microsoft Graph and then show the user's `Todo` list by using Microsoft Graph Toolkit.
+1. Add a new Graph Toolkit widget: Create a new widget file in your project tabs/src/views/widgets folder, for example, GraphyWidget.tsx. In this widget, we'll guide users to consent our app to access Microsoft Graph and then show the user's `Todo` list by using Microsoft Graph Toolkit.
 
       The following code is an example of using `Todo` component from Microsoft Graph Toolkit in widget:
 
@@ -761,7 +751,7 @@ The following are the steps to use Microsoft Graph Toolkit as your widget conten
 
       For more information, refer [Microsoft Graph Toolkit](/graph/toolkit/overview).
 
-1. Add the widget to dashboard layout. Include the new widget in your dashboard file:
+1. Add the widget to dashboard layout. Include the new widget in your dashboard file.
 
     ```tsx
     ...
@@ -791,47 +781,39 @@ To add a Graph API call:
 
 ### Call Graph API from the front-end (use delegated permissions)
 
-If you want to call a Graph API from the front-end tab, refer to the following steps:
+If you want to call a Graph API from the front-end tab, follow these steps:
 
-1. [Consent delegated permissions first.](#consent-delegated-permissions-first)
-1. [Create a Graph client by adding the scope related to the Graph API you want to call.](#create-a-graph-client-by-adding-the-scope-related-to-the-graph-api-you-want-to-call)
-1. [Call the Graph API and parse the response into a certain model.](#create-a-graph-client-by-adding-the-scope-related-to-the-graph-api-you-want-to-call)
+1. Consent delegated permissions first: You can call `addNewPermissionScope(scopes: string[])` to consent the scopes of permissions you want to add. The consented status is preserved in a global context `FxContext`.
 
-#### Consent delegated permissions first
+1. Create a Graph client by adding the scope related to the Graph API you want to call.
 
-You can call `addNewPermissionScope(scopes: string[])` to consent the scopes of permissions you want to add. The consented status is preserved in a global context `FxContext`.
+    ```typescript
+    let teamsfx;
+    teamsfx = FxContextInstance.getTeamsFx();
+    const graphClient = createMicrosoftGraphClient(teamsfx, scope);
+    ```
 
-#### Create a Graph client by adding the scope related to the Graph API you want to call
+1. Call the Graph API and parse the response into a certain model.
 
-Refer to the following code snippet:
-
-```typescript
-let teamsfx;
-teamsfx = FxContextInstance.getTeamsFx();
-const graphClient = createMicrosoftGraphClient(teamsfx, scope);
-```
-
-#### Call the Graph API and parse the response into a certain model
-
-Refer to the following code snippet:
-
-```typescript
-try {
-  const graphApiResult = await graphClient.api("<GRAPH_API_PATH>").get();
-  // Parse the graphApiResult into a Model you defined, used by the front-end.
-} catch (e) {}
-```
+    ```typescript
+    try {
+      const graphApiResult = await graphClient.api("<GRAPH_API_PATH>").get();
+      // Parse the graphApiResult into a Model you defined, used by the front-end.
+    } catch (e) {}
+    ```
 
 ### Call Graph API from the back-end (use application permissions)
 
-If you want to call a Graph API from the back-end, you can refer to the following steps:
+If you want to call a Graph API from the back-end, follow these steps:
 
-1. [Consent application permissions](#consent-application-permissions-first)
-1. [Add an Azure Function](#add-an-azure-function)
-1. [Add your logic in Azure Function](#add-your-logic-in-azure-function)
-1. [Call the Azure Function from the front-end](#call-the-azure-function-from-the-front-end)
+1. [Consent application permissions](#consent-application-permissions)
+1. [Add an Azure function](#add-an-azure-function)
+1. [Add your logic in Azure function](#add-your-logic-in-azure-function)
+1. [Call the Azure function from the front-end](#call-the-azure-function-from-the-front-end)
 
-#### Consent application permissions first
+#### Consent application permissions
+
+To consent application permissions, follow these steps:
 
 1. Go to [Azure portal](https://ms.portal.azure.com/#home).
 1. Select **Azure Active Directory**.
@@ -846,13 +828,13 @@ If you want to call a Graph API from the back-end, you can refer to the followin
 1. Select **✔Grant admin consent**.
 1. Select the **Yes** button to finish the admin consent.
 
-#### Add an Azure Function
+#### Add an Azure function
 
 In the left pane of the Visual Studio Code, select **Teams Toolkit** > **Adding features** > **Azure Functions** > and Enter the function name.
 
 :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/azure-functions.png" alt-text="Screenshot shows the selection of Azure Functions.":::
 
-#### Add your logic in Azure Function
+#### Add your logic in Azure function
 
 In the `index.ts`/`index.ts` under the folder named Azure Function, you can add your logic that contains back-end Graph API calling with application permissions. Refer to the following code snippet:
 
@@ -892,9 +874,9 @@ export default async function run(
 }
 ```
 
-#### Call the Azure Function from the front-end
+#### Call the Azure function from the front-end
 
-Call the Azure Function by function name. Refer to the following code snippet to call the Azure Function:
+Call the Azure function by function name. Refer to the following code snippet to call the Azure function:
 
 ```typescript
 const functionName = process.env.REACT_APP_FUNC_NAME || "myFunc";
@@ -923,9 +905,9 @@ For more information, see:
 * [sample](https://github.com/OfficeDev/TeamsFx-Samples/blob/dev/hello-world-tab-with-backend/tabs/src/components/sample/AzureFunctions.tsx)
 * [Developer guide](/azure/azure-functions/functions-reference?tabs=blob)
 
-## Embed Power BI to Dashboard
+## Embed Power BI to dashboard
 
-To embed Power BI to the Dashboard, see [Power BI client react](/javascript/api/overview/powerbi/powerbi-client-react).
+To embed Power BI to the dashboard, see [Power BI client react](/javascript/api/overview/powerbi/powerbi-client-react).
 
 ## Step-by-step guide
 
@@ -934,6 +916,6 @@ Follow the [step-by-step](~/sbs-create-dashboard-widget-graph-api-call-in-Teams-
 ## See also
 
 * [What are Teams tabs](../what-are-tabs.md)
-* [App design guidelines for Tab](../design/tabs.md)
-* [Fluent UI Library](https://react.fluentui.dev/?path=/docs/concepts-introduction--page)
-* [Fluent UI React Charting Examples](https://fluentuipr.z22.web.core.windows.net/heads/master/react-charting/demo/index.html#/)
+* [App design guidelines for tab](../design/tabs.md)
+* [Fluent UI library](https://react.fluentui.dev/?path=/docs/concepts-introduction--page)
+* [Fluent UI React charting examples](https://fluentuipr.z22.web.core.windows.net/heads/master/react-charting/demo/index.html#/)

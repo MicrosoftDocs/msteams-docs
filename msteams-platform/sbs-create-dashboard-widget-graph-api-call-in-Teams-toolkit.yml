@@ -24,9 +24,9 @@ items:
 
     | Install | For using |
     | --- | --- |    
-    | [NodeJS](https://nodejs.org/en/), fully tested on NodeJS 14, 16. | Back-end JavaScript runtime environment. Use version 14 or 16. |
+    | [NodeJS](https://nodejs.org/en/)| Back-end JavaScript runtime environment. Use Node.js version 14 or 16. |
     | [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program) | Teams account with the appropriate permissions to install an app. |
-    | [Teams Toolkit Visual Studio Code Extension](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) or [TeamsFx CLI](~/toolkit/TeamsFx-CLI.md) |  A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use 4.0.0 version. |
+    | [Teams Toolkit Visual Studio Code Extension](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) or [TeamsFx CLI](~/toolkit/TeamsFx-CLI.md) |  A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use Teams Toolkit version 4.0.0. |
 
 - title: Create a new dashboard
   content: |
@@ -43,7 +43,7 @@ items:
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/create-a-new-teams-app-2.png" alt-text="Screenshot shows the selection of new Teams app.":::
 
-     1. Select **Dashboard tab** from the Teams app section.
+     1. Select **Dashboard tab**.
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/dashboard-tab-preview.png" alt-text="Screenshot shows the selection of dashboard tab preview.":::
 
@@ -69,13 +69,11 @@ items:
 
         `teamsfx new--interactive false--capabilities "dashboard-tab"--programming-language "TypeScript"--folder "./"--app-name dashboard-cli-001`
 
-      1. After you successfully created the Teams app, start local debugging via F5 in Visual Studio Code. 
-      
-      1. Select **Debug (Microsoft Edge)** or **Debug (Chrome)** option of your preferred browser, you'll see a tab app loaded:
+      1. After you've successfully created the Teams tab app, select the **F5** key to start local debugging in Visual Studio Code. You'll see a tab app loaded:
 
       :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/dashboard.png" alt-text="Screenshot shows user profile information and recent Teams activity.":::
 
-        Teams app also supports different themes, including dark and high contrast themes.
+      Teams app also supports different themes, including dark and high contrast themes.
 
       :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/dark-light-theme.png" alt-text="Screenshot shows the contrast themes.":::
        
@@ -83,7 +81,7 @@ items:
   durationInMinutes: 2
   content: |       
 
-      The core dashboard implementation is in tabs folder. This section walks you through the generated code:
+      The core dashboard implementation is in the tabs folder. This section walks you through the generated code:
 
       | **Folder** | **Content** |
       |---|---|
@@ -111,18 +109,18 @@ items:
 
       | **File** | **Content**|
       |---|---|
-      | src/index.tsx | Application entry point |
-      | src/App.tsx | Application route |
-      | src/internal/addNewScopes.ts | Implementation of new scopes added |
-      | src/internal/context.ts | `TeamsFx` context |
-      | src/internal/login.ts | Implementation of login |
-      | src/internal/singletonContext.ts | Implementation of the `TeamsFx` instance singleton |
+      | src/index.tsx | Application entry point. |
+      | src/App.tsx | Application route. |
+      | src/internal/addNewScopes.ts | Implementation of new scopes added. |
+      | src/internal/context.ts | `TeamsFx` context. |
+      | src/internal/login.ts | Implementation of login. |
+      | src/internal/singletonContext.ts | Implementation of the `TeamsFx` instance singleton.|
    
 - title: Add a widget to the dashboard
   durationInMinutes: 5
   content: |
 
-     Following are the steps to add a new widget to the dashboard:
+    To add a new widget to the dashboard, follow these steps:
 
      1. [Define a data model](#define-a-data-model)
      2. [Create a data retrieve service](#create-a-data-retrieve-service)
@@ -219,10 +217,12 @@ items:
       
      ## Add the widget to the dashboard
 
-      If you want to create a new dashboard, refer to [Add a new dashboard tab app](tabs/how-to/dashboard-teams-toolkit.md#Add a new dashboard tab app)
+      To add a widget to the dashboard, follow these steps:
 
-      1. In Visual Studio Code, go to **Explorer** > **tabs** > **src** > **views** > **dashboards** > **sampleDashboard.tsx**
+      1. In Visual Studio Code, go to **Explorer** > **tabs** > **src** > **views** > **dashboards** > **sampleDashboard.tsx**.
+
       1. Create a **sampleDashboard.jsx** file.
+
       1. Add the following code in the **sampleDashboard.jsx** file:
 
           ```jsx
@@ -240,7 +240,7 @@ items:
 
           :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/create-sample-dashboard.png" alt-text="Screenshot shows the existing sampleDashboard file in Visual Studio Code."::: 
 
-          If you want the widget in a column, you can use the `oneColumn()` method to define the column layout.
+          You can add the widget in a column. Use the `oneColumn()` method to define the column layout.
       
           Following is the sample of `oneColumn()` layout:
 
@@ -265,7 +265,7 @@ items:
 
             After adding all the relevant details for creating a widget, save the respective files.
 
-            You can view the layout successfully changed on the app and view the calendar widget on the dashboard.
+            You can view the changed layout and the calendar widget on the dashboard.
 
             :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/widget-added-to-dashboard.png" alt-text="Screenshot shows the addition of widget to the dashboard with the sample widget highlighted in red. ":::
 
@@ -283,17 +283,17 @@ items:
 
           :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/add-features.png" alt-text="Screenshot shows the selection of added features option.":::
 
-      1. Select Single Sign-On.
+      1. Select **Single Sign-On**.
 
           :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/single-sign-on.png" alt-text="Screenshot shows the selection of single sign-on option.":::
 
-      1. Move `auth-start.html` file and `auth-end.html` file in the **auth** > **tab** > public folder to the **tabs** > public folder. These two HTML files are used for auth redirects.
+      1. Move the `auth-start.html` file and the `auth-end.html` file in the **auth** > **tab** > public folder to the **tabs** > public folder. The two HTML files are used for auth redirects.
 
       1. Move SSO folder under **auth** > **tab** folder to **tabs** > **src** > SSO folder.
 
       You've added the SSO files to your project and now you can call Graph APIs. Refer to [Graph API call](tabs/how-to/dashboard-teams-toolkit.md#graph-api-call).
 
-      1. Select **Join** to join the meeting.
+      1. To join the meeting, select **Join**.
 
          :::image type="content" source="assets/images/sbs-create-a-new-dashboard/join.png" alt-text="Screenshot shows the Join button highlighted in red.":::
 
