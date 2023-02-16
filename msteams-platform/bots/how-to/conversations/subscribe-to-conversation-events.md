@@ -22,9 +22,9 @@ When building your conversational bots for Microsoft Teams, you can work with co
 
 ## Conversation update events
 
-You can use conversation update events to provide better notifications and effective bot actions. You can add new events any time and your bot begins to receive them.
+You can use conversation update events to provide better notifications and effective bot actions. You can add new events anytime and your bot begins to receive them.
 
-It's recommended that you design your bot to receive unexpected events. If you are using the Bot Framework SDK, your bot automatically responds with a `200 - OK` to any events you choose not to handle.
+You must design your bot to receive unexpected events. If you're using the Bot Framework SDK, your bot automatically responds with a `200 - OK` to any events you choose not to handle.
 
 A bot receives a `conversationUpdate` event in either of the following cases:
 
@@ -456,7 +456,7 @@ A member added event is sent to your bot in the following scenarios:
 
 The member added activity `eventType` is set to `teamMemberAdded` when the event is sent from a team context. To determine if the new member added was the bot itself or a user, check the `Activity` object of the `turnContext`. If the `MembersAdded` list contains an object where `id` is the same as the `id` field of the `Recipient` object, then the member added is the bot, else it's a user. The bot's `id` is formatted as `28:<MicrosoftAppId>`.
 
-You can use the [`InstallationUpdate` event](#installation-update-event) to determine when when your bot is added or removed from a conversation.
+You can use the [`InstallationUpdate` event](#installation-update-event) to determine when your bot is added or removed from a conversation.
 
 The following code shows an example of team members added event:
 
@@ -631,7 +631,7 @@ A member removed event is sent to your bot in the following scenarios:
 1. When the bot, itself, is uninstalled and removed from a conversation.
 2. When a user is removed from a conversation where the bot is installed.
 
-The member removed activity `eventType` is set to `teamMemberRemoved` when the event is sent from a team context. To determine if the new member removed was the bot itself or a user, check the `Activity` object of the `turnContext`. If the `MembersRemoved` list contains an object where `id` is the same as the `id` field of the `Recipient` object, then the member added is the bot, else it's a user. The bot's id is formatted as `28:<MicrosoftAppId>`. When a user is permanently deleted from a tenant, `membersRemoved conversationUpdate` event is triggered.
+The member removed activity `eventType` is set to `teamMemberRemoved` when the event is sent from a team context. To determine if the new member removed was the bot itself or a user, check the `Activity` object of the `turnContext`. If the `MembersRemoved` list contains an object where `id` is the same as the `id` field of the `Recipient` object, then the member added is the bot, else it's a user. The bot's ID is formatted as `28:<MicrosoftAppId>`. When a user is permanently deleted from a tenant, `membersRemoved conversationUpdate` event is triggered.
 
 The following code shows an example of team members removed event:
 
@@ -1493,7 +1493,7 @@ When you upgrade an application, the bot receives the `installationUpdate` event
 
 Use the `installationUpdate` event to send an introductory message from your bot on installation. This event helps you to meet your privacy and data retention requirements. You can also clean up and delete user or thread data when the bot is uninstalled.
 
-Similar to the `conversationUpdate` event that's sent when bot is added to a team, the conversation.id of the `installationUpdate` event is set to the id of the channel selected by a user during app installation or the channel where the installation occurred. The id represents the channel where the user intends for the bot to operate and must be used by the bot when sending a welcome message. For scenarios where the ID of the General channel is explicitly required, you can get it from `team.id` in `channelData`.
+Similar to the `conversationUpdate` event that the bot receives when bot is added to a team, the conversation.id of the `installationUpdate` event is set to the id of the channel selected by a user during app installation or the channel where the installation occurred. The id represents the channel where the user intends for the bot to operate. The bot must use the id when sending a welcome message. For scenarios where the ID of the General channel is explicitly required, you can get it from `team.id` in `channelData`.
 
 The selected channel id is only set on `installationUpdate` *add* events that are sent when an app is installed into a team.
 
@@ -1630,13 +1630,13 @@ async def on_installation_update(self, turn_context: TurnContext):
 
 ## Uninstall behavior for personal app with bot
 
-When you uninstall an app, the bot is also uninstalled. When a user sends a message to your app, they receive a 403 response code. Your bot receives a 403 response code for new messages posted by your bot. The post uninstall behavior for bots in the personal scope with the Teams and groupChat scopes are now aligned. You can't send or receive messages after an app has been uninstalled.
+When you uninstall an app, the bot is also uninstalled. When a user sends a message to your app, they receive a 403 response code. Your bot receives a 403 response code for new messages posted by your bot. The post-uninstall behavior for bots in the personal scope and groupChat scopes are aligned. You can't send or receive messages after an app has been uninstalled.
 
 :::image type="content" source="../../../assets/images/bots/uninstallbot.png" alt-text="Uninstall response code"lightbox="../../../assets/images/bots/uninstallbot.png"border="true":::
 
 ## Event handling for install and uninstall events
 
-When you use these install and uninstall events, there are some instances where bots give exceptions on receiving unexpected events from Teams, which occurs in the following cases:
+When you use these install and uninstall events, there are some instances where bots give exceptions on receiving unexpected events from Teams. Exceptions occur in the following cases:
 
 * You build your bot without the Microsoft Bot Framework SDK, and as a result the bot gives an exception on receiving an unexpected event.
 * You build your bot with the Microsoft Bot Framework SDK, and you select to alter the default event behavior by overriding the base event handle.
