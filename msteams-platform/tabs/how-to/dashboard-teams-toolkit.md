@@ -84,7 +84,7 @@ export default class YourDashboard extends Dashboard {
 
 ### Add a route for the new dashboard tab app
 
-You must link your widget to a data source file. From this file, the widget picks up the data that is presented in the dashboard.
+You must link your widget to a data source file. The widget picks up the data that's presented in the dashboard from the source file.
 
 Open tabs/src/App.tsx file and add a route for the new dashboard. Here's an example:
 
@@ -342,13 +342,13 @@ The following are the customizable methods to override:
 
 | File | Content | Recommend to override |
 |---|---|---|
-| **constructor()** | This method initializes the dashboard state and variables. | NO |
-| **componentDidMount()** | After a component is mounted, `componentDidMount()` is invoked after a component is mounted. | NO |
-| **componentWillUnmount()** | When a component is unmounted, `componentWillUnmount()` is invoked. | NO |
-| **render()** | This method is called each time there's an update and we define the dashboard default layout. | NO |
-| **rowHeights()** | This method customizes the height of each row of the dashboard. | YES |
-| **columnWidths()** | This method customizes the number of columns the dashboard has at most and the width of each column. | YES |
-| **dashboardLayout()** | This method defines the widget layout in dashboard. | YES |
+| **constructor()** | Initializes the dashboard state and variables. | NO |
+| **componentDidMount()** | Invokes after a component is mounted. | NO |
+| **componentWillUnmount()** | Invokes when a component is unmounted. | NO |
+| **render()** |  Invokes when there's an update. The dashboard default layout is defined in this method. | NO |
+| **rowHeights()** | Customizes the height of each row of the dashboard. | YES |
+| **columnWidths()** | Customizes the number of columns the dashboard has at most and the width of each column. | YES |
+| **dashboardLayout()** | Defines the widget layout in dashboard. | YES |
 
 ## Use a widget in your dashboard
 
@@ -458,7 +458,7 @@ You can customize the widget by overriding the following methods in the `widget`
 
 ### Include a data loader
 
-If you want to include a data loader to your widget before the widget is loaded, you can add a property to the state of the widget to indicate that the data loader is loading. This property can be used to show a loading indicator to the user.
+If you want to include a data loader to your widget before the widget is loaded, you can add a property to the state of the widget to indicate that the data loader is loading. You can use this property to show a loading indicator to the user.
 
 The following steps show how to add a property to the state of `ListWidget` and how to use it to show a loading spinner while the data is loading.
 
@@ -671,10 +671,10 @@ The following are the recommended methods to override:
 
 | Methods | Function | Recommend to override |
 |---|---|---|
-| **constructor()** | Invokes the initial `this.state` and call the constructor of the super class `React` component. | NO |
+| **constructor()** | Invokes the initial `this.state` and calls the constructor of the super class `React` component. | NO |
 | **componentDidMount()** | Invokes after a component is mounted and assigns a value to the `data` property of the state by calling the `getData()` method. | NO |
-| **render()** | Invokes each time there's an update and the dashboard default layout is defined in this method. | NO |
-| **getData()** | Invokes the data needed by the widget and the value returned by this method is set to `this.state.data`. |
+| **render()** | Invokes whenever there's an update. The dashboard default layout is defined in this method. | NO |
+| **getData()** | Invokes the data needed by the widget. The value returned by this method is set to `this.state.data`. |
 | **headerContent()** | Invokes what the widget header looks like. You can choose to override this method to customize a widget or not, if not, the widget won't have a header. | YES |
 | **bodyContent()** | Invokes what the widget body looks like. You can choose to override this method to customize a widget or not, if not, the widget won't have a body. | YES |
 | **footerContent()** | Invokes what the widget footer looks like. You can choose to override this method to customize a widget or not, if not, the widget won't have a footer. | YES |
@@ -793,15 +793,15 @@ To add a Graph API call:
 
 If you want to call a Graph API from the front-end tab, refer to the following steps:
 
-1. Consent delegated permissions first.
-1. Create a Graph client by adding the scope related to the Graph API you want to call.
-1. Call the Graph API and parse the response into a certain model, which is used by the front-end.
+1. [Consent delegated permissions first.](#consent-delegated-permissions-first)
+1. [Create a Graph client by adding the scope related to the Graph API you want to call.](#create-a-graph-client-by-adding-the-scope-related-to-the-graph-api-you-want-to-call)
+1. [Call the Graph API and parse the response into a certain model.](#create-a-graph-client-by-adding-the-scope-related-to-the-graph-api-you-want-to-call)
 
-**Consent delegated permissions first**
+#### Consent delegated permissions first
 
-You can call `addNewPermissionScope(scopes: string[])` to consent the scopes of permissions you want to add. The consented status will be preserved in a global context `FxContext`.
+You can call `addNewPermissionScope(scopes: string[])` to consent the scopes of permissions you want to add. The consented status is preserved in a global context `FxContext`.
 
-**Create a Graph client by adding the scope related to the Graph API you want to call**
+#### Create a Graph client by adding the scope related to the Graph API you want to call
 
 Refer to the following code snippet:
 
@@ -811,7 +811,7 @@ teamsfx = FxContextInstance.getTeamsFx();
 const graphClient = createMicrosoftGraphClient(teamsfx, scope);
 ```
 
-**Call the Graph API and parse the response into a certain model, which is used by the front-end**
+#### Call the Graph API and parse the response into a certain model
 
 Refer to the following code snippet:
 
@@ -826,12 +826,12 @@ try {
 
 If you want to call a Graph API from the back-end, you can refer to the following steps:
 
-1. Consent application permissions
-1. Add an Azure Function
-1. Add your logic in Azure Function
-1. Call the Azure Function from the front-end
+1. [Consent application permissions](#consent-application-permissions-first)
+1. [Add an Azure Function](#add-an-azure-function)
+1. [Add your logic in Azure Function](#add-your-logic-in-azure-function)
+1. [Call the Azure Function from the front-end](#call-the-azure-function-from-the-front-end)
 
-**Consent application permissions first**
+#### Consent application permissions first
 
 1. Go to [Azure portal](https://ms.portal.azure.com/#home).
 1. Select **Azure Active Directory**.
@@ -846,13 +846,13 @@ If you want to call a Graph API from the back-end, you can refer to the followin
 1. Select **✔Grant admin consent**.
 1. Select the **Yes** button to finish the admin consent.
 
-**Add an Azure Function**
+#### Add an Azure Function
 
 In the left pane of the Visual Studio Code, select **Teams Toolkit** > **Adding features** > **Azure Functions** > and Enter the function name.
 
 :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/azure-functions.png" alt-text="Screenshot shows the selection of Azure Functions.":::
 
-**Add your logic in Azure Function**
+#### Add your logic in Azure Function
 
 In the `index.ts`/`index.ts` under the folder named Azure Function, you can add your logic that contains back-end Graph API calling with application permissions. Refer to the following code snippet:
 
@@ -892,7 +892,7 @@ export default async function run(
 }
 ```
 
-**Call the Azure Function from the front-end**
+#### Call the Azure Function from the front-end
 
 Call the Azure Function by function name. Refer to the following code snippet to call the Azure Function:
 
