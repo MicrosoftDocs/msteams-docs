@@ -34,8 +34,10 @@ For authentication or configuration, after the user completes the process, the o
 |Bot with Adaptive Card | ✔️ | ❌ | ✔️ |
 | No response | ✔️ | ✔️ | ✔️ |
 
-* When you select **Action.Submit** through ME cards, it sends invoke activity with the name **composeExtension**, where the value is equal to the usual payload.
-* When you select **Action.Submit** through conversation, you receive message activity with the name **onCardButtonClicked**, where the value is equal to the usual payload.
+When you select **Action.Submit**:
+*  through ME cards, it sends invoke activity with the name **composeExtension**, where the value is equal to the usual payload.
+When you select **Action.Submit**:
+*  through conversation, you receive message activity with the name **onCardButtonClicked**, where the value is equal to the usual payload.
 
 If the app contains a conversational bot, install the bot in the conversation, and then load the task module. The bot is useful to get additional context for the task module. To install conversational bot, see [Request to install your conversational bot](create-task-module.md#request-to-install-your-conversational-bot).
 
@@ -210,8 +212,8 @@ To configure the poll:
 1. The user configures the poll with the task module.
 1. After submitting the task module, the app uses the information provided to build the poll as an Adaptive Card and sends it as a `botMessagePreview` response to the client.
 1. The user can then preview the Adaptive Card message before the bot inserts it into the channel. If the app isn't a member of the channel, select `Send` to add it.
-1. The users can also select to `Edit` the message, which returns them to the original task module.
-1. After the user selects `Send`, the bot posts the message to the channel. Interaction with the Adaptive Card changes the message before sending it.
+    * The users can also select to `Edit` the message, which returns them to the original task module.
+    * After the user selects `Send`, the bot posts the message to the channel. Interaction with the Adaptive Card changes the message before sending it.
 
 ## Respond to initial submit action
 

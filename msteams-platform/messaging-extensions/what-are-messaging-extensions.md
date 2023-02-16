@@ -13,11 +13,14 @@ Message extensions allow the users to interact with your web service through but
 > [!IMPORTANT]
 > Message extensions are available in Government Community Cloud (GCC) and GCC-High environments but not in Department of Defense (DoD) environment.
 
-This document gives an overview of the message extension, tasks performed under different scenarios, working of message extension, action and search commands, and link unfurling. @mentioning message extensions is no longer supported in the compose box.
+This document gives an overview of the message extension, tasks performed under different scenarios, working of message extension, action and search commands, and link unfurling.
 
 The following image displays the locations from where message extensions are invoked:
 
 :::image type="content" source="~/assets/images/messaging-extension-invoke-locations.png" alt-text="message extension invoke locations":::
+
+> [!NOTE]
+> @mentioning message extensions is no longer supported in the compose box.
 
 ## Scenarios where message extensions are used
 
@@ -49,7 +52,7 @@ The action commands are triggered from the compose message area, the command box
 
 Search commands allow the users to search an external system for information either manually through a search box, or by pasting a link to a monitored domain into the compose message area and insert the results of the search into a message. In the most basic search command flow, the initial invoke message includes the search string that the user submitted. You respond with a list of cards and card previews. The Teams client renders a list of card previews for the user. When the user selects a card from the list, the full-size card is inserted into the compose message area.
 
-The cards are triggered from the compose message area or the command box and not triggered from a message. For more information on cards, see [what are cards](../task-modules-and-cards/what-are-cards.md). They can't be triggered from a message.
+The cards are triggered from the compose message area or the command box and not triggered from a message. They can't be triggered from a message. For more information on cards, see [what are cards](../task-modules-and-cards/what-are-cards.md).
 The following image displays the message extension search command task module:
 
 :::image type="content" source="~/assets/images/search-extension.png" alt-text="Message extension search command":::

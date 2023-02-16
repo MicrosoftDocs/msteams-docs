@@ -16,9 +16,7 @@ The document guides you on how to add link unfurling to your app manifest using 
 
 > [!NOTE]
 >
-> * Currently, link unfurling is not supported on Mobile clients.
-> * The link unfurling result is cached for 30 minutes.
-> * Messaging extension commands are not required for Link unfurling. However, there must be at least one command in manifest as it is a mandatory property in messaging extensions. For more information, see [compose extensions](/microsoftteams/platform/resources/schema/manifest-schema).
+> * Link unfurling is not supported on Mobile clients.
 
 The following image is an example of link unfurling using the Azure DevOps message extension. When the Azure DevOps link is pasted into the Teams compose message area, the link unfurls into a card with the work item details:
 
@@ -33,15 +31,15 @@ See the following video to learn more about link unfurling:
 
 To add link unfurling to your app manifest, add a new `messageHandlers` array to the `composeExtensions` section of your app manifest JSON. You can add the array with the help of Developer Portal or manually. Domain listings can include wildcards, for example `*.example.com`. This matches exactly one segment of the domain; if you need to match `a.b.example.com` then use `*.*.example.com`.
 
-Ensure not to add domains that are not in your control, either directly or through wildcards. For example, `yourapp.onmicrosoft.com` is valid, but `*.onmicrosoft.com` is not valid. The top-level domains are prohibited, for example, `*.com`, `*.org`.
+Its recommended that you must not add domains that you don’t control, either directly or through wildcards. For example, `yourapp.onmicrosoft.com` is valid, but `*.onmicrosoft.com` is not valid. The top-level domains are prohibited, for example, `*.com`, `*.org`.
 
 ### Add link unfurling using Developer Portal
+
+Ensure that you've added Dev Portal to your Teams client. To add link unfurling using Dev Portal:
 
 1. Open **Developer Portal** from the Microsoft Teams client and then select the **Apps** tab.
 
    :::image type="content" source="../../assets/images/tdp/create-new-app.png" alt-text="create new app in developer portal" lightbox="../../assets/images/tdp/create-new-app.png":::
-
-    You need to add Developer Portal app, if you don't have it added in your Teams client.
 
     :::image type="content" source="../../assets/images/tdp/dev-portal-app.png" alt-text="Add developer portal app" lightbox="../../assets/images/tdp/dev-portal-app.png":::
 
@@ -63,9 +61,11 @@ Ensure not to add domains that are not in your control, either directly or throu
 
 ### Add link unfurling manually
 
-If authentication is added through Azure AD, [unfurl links in Teams using bot](/microsoftteams/platform/sbs-botbuilder-linkunfurling?tabs=vs&tutorial-step=4).
+For adding link unfurling manually, you must add the ... . However, if your app handles authentication using Azure AD, you can [unfurl links in Teams using bot](/microsoftteams/platform/sbs-botbuilder-linkunfurling?tabs=vs&tutorial-step=4).
+For a message extension app, messaging extension commands are not required for Link unfurling. However, there must be at least one command in manifest as it is a mandatory property in messaging extensions. For more information, see [compose extensions](../../resources/schema/manifest-schema.md).
 
-First, you need to add the `messageHandlers` array to your app manifest and enable your message extension to interact with links. The following example explains how to add link unfurling manually:
+
+ The following example explains how to add link unfurling manually:
 
 ```json
 ...
