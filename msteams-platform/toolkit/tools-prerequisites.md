@@ -13,7 +13,7 @@ Before you create your Teams app project, ensure that the prerequisites are in p
 
 * [Install required tools to build your Teams app](#install-required-tools-to-build-your-teams-app)
 * [Prepare Accounts to build your Teams app](#accounts-to-build-your-teams-app)
-* [Verify sideload permission](#verify-sideload-permission)
+* [Verify sideloading permission](#verify-sideloading-permission)
 
 ## Install required tools to build your Teams app
 
@@ -22,16 +22,16 @@ Ensure that the following tools are installed on the device where you’ll creat
 | Tools | For using | For environment type |
 | --- | --- | --- |
 | **Required** | &nbsp; | &nbsp; |
-| Microsoft Visual Studio Code| JavaScript, TypeScript, or SPFx build environments to build your Teams app. Use version 1.55 or later. | JavaScript, TypeScript, and SPFx. |
-| Teams Toolkit| The Microsoft Visual Studio Code extension to create a Teams app project. Use the latest version. | JavaScript, TypeScript, and  (SPFx)|
-| [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Sideloading feature to test your app behavior within your local Teams environment.| JavaScript, TypeScript, and SPFx.|
-| [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. Use the latest v16 LTS release.| JavaScript, TypeScript, and SPFx.|
-|[Node Package Manager (NPM)](https://www.npmjs.com/package/@microsoft/teamsfx) | Installing and managing packages for use in both Node.js and ASP.NET core applications.| JavaScript, TypeScript, and SPFx. |
-| [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. | JavaScript and SPFx|
-   | **Optional** | &nbsp; | &nbsp; | &nbsp; |
-| [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack) and [Azure CLI](/cli/azure/install-azure-cli) | Stored data or deploy a cloud-based back-end for your Teams app in Azure. | JavaScript|
-| [React Developer Tools for Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) or [React Developer Tools for Microsoft&nbsp;Edge](https://microsoftedge.microsoft.com/addons/detail/react-developer-tools/gpphkfbcpidddadnkolkpfckpihlkkil) | The browser based DevTools extension for the open-source React JavaScript library. | JavaScript|
-| [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) | The browser-based tool that lets you run a query from Microsoft Graph data. | JavaScript, TypeScript and SPFx|
+| Microsoft Visual Studio Code | JavaScript, TypeScript, or SPFx build environments to build your Teams app. Use version 1.55 or later. | JavaScript, TypeScript, and SPFx. |
+| Teams Toolkit | The Microsoft Visual Studio Code extension to create a Teams app project. Use the latest version. | JavaScript, TypeScript, and  (SPFx) |
+| [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Sideloading feature to test your app behavior within your local Teams environment.| JavaScript, TypeScript, and SPFx. |
+| [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. Use the latest v16 LTS release.| JavaScript, TypeScript, and SPFx. |
+| [Node Package Manager (NPM)](https://www.npmjs.com/package/@microsoft/teamsfx) | Installing and managing packages for use in both Node.js and ASP.NET core applications.| JavaScript, TypeScript, and SPFx. |
+| [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. | JavaScript and SPFx |
+| **Optional** | &nbsp; | &nbsp; |
+| [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack) and [Azure CLI](/cli/azure/install-azure-cli) | Stored data or deploy a cloud-based back-end for your Teams app in Azure. | JavaScript |
+| [React Developer Tools for Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) or [React Developer Tools for Microsoft&nbsp;Edge](https://microsoftedge.microsoft.com/addons/detail/react-developer-tools/gpphkfbcpidddadnkolkpfckpihlkkil) | The browser based DevTools extension for the open-source React JavaScript library. | JavaScript |
+| [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) | The browser-based tool that lets you run a query from Microsoft Graph data. | JavaScript, TypeScript and SPFx |
 | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | The web-based portal to configure, manage, and distribute your Teams app including to your organization or the Teams store.| JavaScript, TypeScript and SPFx. |
 
    > [!NOTE]
@@ -117,7 +117,7 @@ An Azure account allows you to host a Teams app or the back-end resources for yo
 
 While creating Teams app using SPFx environment, you must have a SharePoint collection site administrator account. It’s required for deploying and hosting your app on SharePoint site. If you're using a Microsoft 365 developer program tenant, you can use the administrator account you created at the time.
 
-## Verify sideload permission
+## Verify sideloading permission
 
 After creating the app, you must load your app in Teams without distributing it. This process is known as sideloading. Sign in to your Microsoft 365 account to view this option.
 
@@ -198,7 +198,7 @@ If you have admin rights, you can enable sideloading:
      > [!Note]
      > It can take up to 24 hours for sideloading to become active. In the meantime, you can use **upload for your tenant** to test your app. To upload the .zip package file of the app, see [upload custom apps](/microsoftteams/teams-app-setup-policies).
 
-     Ensure that you have the sideloading permission using the steps mentioned in [verify sideloading permission using Visual Studio Code or Teams client](#sideload-permission).
+     Ensure that you have the sideloading permission using the steps mentioned in [verify sideloading permission using Visual Studio Code or Teams client](#verify-sideloading-permission).
 
 </details>
 
