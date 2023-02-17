@@ -32,8 +32,8 @@ Alternately, you can send files to and receive files from a bot using the Teams 
 
 ## Use the Teams bot APIs
 
-Using Teams APIs, the bot can directly send and receive files with users in the `personal` context, also known as personal chats. Implement features, such as expense reporting, image recognition, file archival, and e-signatures involving the editing of file content. Files shared in Teams typically appear as cards and allow rich in-app viewing.
-Teams bot APIs work only in the `personal` context. They do not work in the `channel` or `groupchat` context.
+The bot can directly send and receive files with users in the `personal` context, also known as personal chats, using Teams APIs. Implement expense reporting, image recognition, file archival, and e-signatures involving the editing of file content. Files shared in Teams typically appear as cards and allow rich in-app viewing.
+Teams bot APIs work only in the `personal` context. They don't work in the `channel` or `groupchat` context.
 
 The next sections describe how to send file content as direct user interaction, like sending a message. This API is provided as part of the Teams bot platform.
 
@@ -41,7 +41,7 @@ The next sections describe how to send file content as direct user interaction, 
 
 To send and receive files in the bot, set the `supportsFiles` property in the manifest to `true`. This property is described in the [bots](~/resources/schema/manifest-schema.md#bots) section of the Manifest reference.
 
-The definition looks like this, `"supportsFiles": true`. If the bot does not enable `supportsFiles`, the features listed in this section do not work.
+The definition looks like this, `"supportsFiles": true`. If the bot doesn't enable `supportsFiles`, the features listed in this section don't work.
 
 ### Receive files in personal chat
 
@@ -84,7 +84,7 @@ To upload a file to a user:
 1. Send a message to the user requesting permission to write the file. This message must contain a `FileConsentCard` attachment with the name of the file to be uploaded.
 2. If the user accepts the file download, the bot receives an invoke activity with a location URL.
 3. To transfer the file, the bot performs an `HTTP POST` directly into the provided location URL.
-4. Optionally, remove the original consent card if you do not want the user to accept further uploads of the same file.
+4. Optionally, remove the original consent card if you don't want the user to accept further uploads of the same file.
 
 #### Message requesting permission to upload
 
@@ -119,8 +119,8 @@ The following table describes the content properties of the attachment:
 | --- | --- |
 | `description` | Describes the purpose of the file or summarizes its content. |
 | `sizeInBytes` | Provides the user an estimate of the file size and the amount of space it takes in OneDrive. |
-| `acceptContext` | Additional context that is silently transmitted to the bot when the user accepts the file. |
-| `declineContext` | Additional context that is silently transmitted to the bot when the user declines the file. |
+| `acceptContext` | Context that is silently transmitted to the bot when the user accepts the file. |
+| `declineContext` | Context that is silently transmitted to the bot when the user declines the file. |
 
 #### Invoke activity when the user accepts the file
 
