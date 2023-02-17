@@ -239,10 +239,10 @@ The list of Teams activity handlers called from the `OnInvokeActivityAsync` Team
 
 | Invoke types                    | Handler                              | Description                                                  |
 | :-----------------------------  | :----------------------------------- | :----------------------------------------------------------- |
-| CardAction.Invoke               | `OnTeamsCardActionInvokeAsync`       | The connector receives a card action during this method invoke.|
-| fileConsent/invoke              | `OnTeamsFileConsentAcceptAsync`      | The user accepts a file consent during this method invoke. |
-| fileConsent/invoke              | `OnTeamsFileConsentAsync`            | The connector receives the file consent activity during this method invoke. |
-| fileConsent/invoke              | `OnTeamsFileConsentDeclineAsync`     | User declines the file consent card during this method invoke. |
+| CardAction.Invoke               | `OnTeamsCardActionInvokeAsync`       | This method is invoked when a card action invoke activity is received from the connector. |
+| fileConsent/invoke              | `OnTeamsFileConsentAcceptAsync`      | This method is invoked when a file consent card is accepted by the user. |
+| fileConsent/invoke              | `OnTeamsFileConsentAsync`            | This method is invoked when a file consent card activity is received from the connector. |
+| fileConsent/invoke              | `OnTeamsFileConsentDeclineAsync`     | This method is invoked when a file consent card is declined by the user. |
 | actionableMessage/executeAction | `OnTeamsO365ConnectorCardActionAsync` | This method is invoked when a connector card for Microsoft 365 Groups action activity is received from the connector. |
 | signin/verifyState              | `OnTeamsSigninVerifyStateAsync`      | This method is invoked when a signIn verify state activity is received from the connector. |
 | task/fetch                      | `OnTeamsTaskModuleFetchAsync`        | You can override this method in a derived class to provide logic when a task module is fetched. |
