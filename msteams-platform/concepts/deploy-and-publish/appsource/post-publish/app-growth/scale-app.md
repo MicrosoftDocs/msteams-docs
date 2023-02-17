@@ -40,7 +40,7 @@ You can find detailed partner profile information in the Partner Center or using
 <details>
 <summary>Tailor SaaS offers for customers and CSP resellers</summary>
 
-Teams marketplace allows you to create private offers, that is, time-bound pricing of your SaaS subscription for Teams app with customized, pre-negotiated terms for [CSPs](/azure/marketplace/isv-csp-reseller). You can also create [private plans](/azure/marketplace/private-plans) for targeted customers to offer negotiated pricing.
+Teams marketplace allows you to create private offers, that is, time-bound pricing of your SaaS subscription for Teams app with customized, pre-negotiated terms for [CSPs](/azure/marketplace/isv-csp-reseller). You can also create [private plans](/marketplace/private-plans) for targeted customers to offer negotiated pricing.
 
 Help your sales team secure large new customer deals leading with your Teams collaborative app. Offer private pricing to your customers via the Teams marketplace. You can leave tax remittance, payments, and subscription billing to Microsoft.
 
@@ -75,7 +75,7 @@ Generate interest from new customer accounts. Drive traffic to your collaborativ
 <details>
 <summary>Publish customer demand and app’s impact story</summary>
 
-Share real customer stories using a 4–5-minute video. Showcase increased employee productivity caused by using your collaborative app inside Teams. Use this video for demand generation, digital marketing campaigns or showcased on public pages. Nominate a customer and gain their commitment to participate in the story. Work with the customer on the narrative. Ensure that you include the benefits derived from your collaborative app. You can also talk about the added productivity gains seen by the customer (quantifiable gains are preferred).
+Share real customer stories using a four to five minute video. Showcase increased employee productivity caused by using your collaborative app inside Teams. Use this video for demand generation, digital marketing campaigns or showcased on public pages. Nominate a customer and gain their commitment to participate in the story. Work with the customer on the narrative. Ensure that you include the benefits derived from your collaborative app. You can also talk about the added productivity gains seen by the customer (quantifiable gains are preferred).
 
 After developing it, host these customer stories on the landing page of the Teams app on your website. Promote it via paid, earned media, or social media posts to highlight the success of the app.
 

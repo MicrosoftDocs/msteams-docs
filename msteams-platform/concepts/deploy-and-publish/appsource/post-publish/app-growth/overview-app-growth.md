@@ -24,7 +24,7 @@ It also includes some proven best practices from the team that crafted the Teams
 
 You’ll probably not be surprised to hear that not all apps are equal on any marketplace. Teams apps are diverse in terms of use cases fulfilled, personas served, end-user user experience, and user value delivered. As a developer, you can:
 
-1. **Just test waters**: Take a *foot-in-the door* approach where your SaaS backend is used to provide an elevated, ephemeral end-user experience using [link unfurling](/messaging-extensions/how-to/link-unfurling) feature to show rich URL previews as actionable preview cards from your domain are shared inside Teams, even when the user doesn't have your app installed.
+1. **Just test waters**: Take a *foot-in-the door* approach where your SaaS backend is used to provide an elevated, ephemeral end-user experience using [link unfurling](../../../../../messaging-extensions/how-to/link-unfurling.md) feature to show rich URL previews as actionable preview cards from your domain are shared inside Teams, even when the user doesn't have your app installed.
 
 1. **Build a complementary, companion experience to your core web SaaS**: Build your Teams app serving as a point solution that can be called **add-in**, **plug-in**, or an **integration**. You can build them for select, frequent, isolated, and lightweight use cases. The user can use such solutions inside Teams.
 
@@ -50,7 +50,7 @@ You can use one or all the three predominant types of SaaS business growth model
 
 As a developer of a collaborative app, you'll benefit from devising a well-rounded strategy that employs all three SaaS business growth models. It helps you grow your Teams app among hundreds of millions of Teams users.
 
-:::image type="content" source="../../../../../assets/images/app-fundamentals/growth-funnel.png" alt-text="Traditional funnel vs. Product-led funnel.":::
+:::image type="content" source="../../../../../assets/images/app-fundamentals/growth-funnel.png" alt-text="Traditional funnel vs. Product-led funnel." lightbox="../../../../../assets/images/app-fundamentals/growth-funnel.png" :::
 
 More than point solutions (that is, **add-ins** and **integrations**), Teams collaborative apps offer you an opportunity to apply a solid growth strategy to a product line. It's just as you'd do for your core SaaS product for the web browser or native mobile apps.
 

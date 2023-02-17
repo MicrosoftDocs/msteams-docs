@@ -18,9 +18,9 @@ Here’s a rundown of various initiatives and growth levers at your disposal:
 <details>
 <summary>Invest strategically into your app store listing, landing page and documentation</summary>
 
-Ensure that you’ve included links to your Teams app on your landing page, documentation, marketing materials, and so on. For more information, see [Promote your app on another site](/concepts/deploy-and-publish/appsource/post-publish/overview#promote-your-app-on-another-site) to fetch the link to your app inside the Teams in-product marketplace.
+Ensure that you’ve included links to your Teams app on your landing page, documentation, marketing materials, and so on. For more information, see [Promote your app on another site](../overview.md#promote-your-app-on-another-site) to fetch the link to your app inside the Teams in-product marketplace.
 
-For more information on AppSource, see [Microsoft AppSource](/marketplace/apps?product=teams) and search for your app in the search box. Pick the URL from the browser’s address bar.
+For more information on AppSource, see [Microsoft AppSource](https://appsource.microsoft.com/marketplace/apps?exp=ubp8&page=1&product=teams) and search for your app in the search box. Pick the URL from the browser’s address bar.
 
 The following growth levers are pertinent at this stage:
 
@@ -97,7 +97,7 @@ You can generate interest from both existing and new customers. You can also dri
 
 Remember to include media, such as a video or an animated GIF in your post to make it rich and interactive. Use the tags **@M365** and **@MicrosoftTeams** in your posts. Use the hashtags #Teamsapps, #MicrosoftTeams, #TeamsISV throughout the year in social media posts for your collaborative app. It aids in extending exposure and flagging Microsoft’s social team for a potential retweet.
 
-  :::image type="content" source="../../../../../assets/images/app-fundamentals/social-media-posts.png" alt-text="Social media posts":::
+  :::image type="content" source="../../../../../assets/images/app-fundamentals/social-media-posts.png" alt-text="Social media posts." lightbox="../../../../../assets/images/app-fundamentals/social-media-posts.png" :::
 
 Connect with the [Microsoft 365 ISV Benefits Service Desk](mailto:ModernWorkISVPartner@microsoft.com) to seek guidance for your social media campaign and possible collaboration with Microsoft for execution. You can also seek help with the success metrics you should measure, such as:
 
@@ -136,7 +136,7 @@ Use PRs to publicly announce the application you've built and your collaboration
 > [!NOTE]
 > Press releases and quotes must be reviewed by Microsoft representatives.
 
-Connect with the ISV Marketplace Success Rewards Program team to avail of the service to review your press release draft and get a quote from Microsoft. Once you publicly post your press release, evangelize through other channels. Microsoft doesn't post partner press releases. <!--...// Example press releases. // --->
+Connect with the ISV Marketplace Success Rewards Program team to avail of the service to review your press release draft and get a quote from Microsoft. Once you publicly post your press release, evangelize through other channels. Microsoft doesn't post partner press releases. <!-- // Example press releases. // -->
 
 [Back to top](#what-should-you-do-during-the-launch-stage)
 </details>
@@ -146,7 +146,7 @@ Connect with the ISV Marketplace Success Rewards Program team to avail of the se
 
 Include in-product CTAs prominently in your web SaaS product to let users know about your new or updated Teams collaborative app. You can use transient banners, notifications bar, what’s new notifications inside the SaaS product’s UI for all users.
 
-:::image type="content" source="../../../../../assets/images/app-fundamentals/in-product-banner.png" alt-text="In-product banner":::
+:::image type="content" source="../../../../../assets/images/app-fundamentals/in-product-banner.png" alt-text="In-product banner." lightbox="../../../../../assets/images/app-fundamentals/in-product-banner.png" :::
 
 You can also use push notifications to relevant users, such as those belonging to your customer organizations who use Microsoft 365.
 
@@ -174,7 +174,7 @@ Consider promotions, such as 1:1 product demos, customer success consultations, 
 
 If you've already listed your transactable SaaS subscriptions for the Teams app in the marketplace, ensure that you price them at a discount. It encourages users to purchase your offer directly from the Teams marketplace.
 
-:::image type="content" source="../../../../../assets/images/app-fundamentals/launch-offers-promotions.png" alt-text="Screenshot shows the launch offers and promotions page in Teams.":::
+:::image type="content" source="../../../../../assets/images/app-fundamentals/launch-offers-promotions.png" alt-text="Screenshot shows the launch offers and promotions page in Teams." lightbox="../../../../../assets/images/app-fundamentals/launch-offers-promotions.png" :::
 
 [Back to top](#what-should-you-do-during-the-launch-stage)
 </details>
@@ -196,10 +196,10 @@ To help Microsoft’s customer-facing teams talk about your app, we encourage yo
 
 :::row:::
     :::column:::
-        :::image type="content" source="../../../../../assets/images/app-fundamentals/app-bill-a.png" alt-text="App bill material.":::
+        :::image type="content" source="../../../../../assets/images/app-fundamentals/app-bill-a.png" alt-text="App bill material." lightbox="../../../../../assets/images/app-fundamentals/app-bill-a.png" :::
     :::column-end:::
     :::column:::
-  :::image type="content" source="../../../../../assets/images/app-fundamentals/app-bill-b.png" alt-text="App bill of materials.":::
+  :::image type="content" source="../../../../../assets/images/app-fundamentals/app-bill-b.png" alt-text="App bill of materials." lightbox="../../../../../assets/images/app-fundamentals/app-bill-b.png" :::
     :::column-end:::
 :::row-end:::
 
@@ -257,7 +257,7 @@ Microsoft can help Teams customers gain awareness of your new or updated collabo
 </details>
 <br>
 <details>
-<summary>Microsoft Teams TechCommunity Blog Post</summary>
+<summary>Microsoft Teams TechCommunity blog post</summary>
 
 Contact the field, account, or engineering representatives from Microsoft to discuss the possibility of publishing a dedicated blog post on Teams blog.
 

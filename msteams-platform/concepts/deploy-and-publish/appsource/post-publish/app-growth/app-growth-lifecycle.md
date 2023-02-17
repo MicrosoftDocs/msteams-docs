@@ -11,7 +11,7 @@ ms.author: surbhigupta
 
 Growing your app is a journey. It's a process that’s not overnight and goes through various stages. A typical growth lifecycle of a collaborative app on Teams looks like depicting critical barriers that once crossed puts the app into the next orbit for even higher growth:
 
-:::image type="content" source="../../../../../assets/images/app-fundamentals/growth-lifecycle.png" alt-text="App growth lifecycle." border="false":::
+:::image type="content" source="../../../../../assets/images/app-fundamentals/growth-lifecycle.png" alt-text="App growth lifecycle." lightbox="../../../../../assets/images/app-fundamentals/growth-lifecycle.png":::
 
 - **Build stage**: In this stage, developers plan, envision, design, build, and publish their collaborative app on the Microsoft Teams marketplace. The Teams developer platform documentation is the one-stop shop for platform features, best practices, and developer guidance. Strategic developers can join an invite-only Teams engineering’s build-with partner program on this journey.
 

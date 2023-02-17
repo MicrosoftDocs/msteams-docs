@@ -103,7 +103,7 @@ The Microsoft 365 Certification is designed to show customers that your collabor
 
 For more information, see [Microsoft 365 certification](/microsoftteams/overview-of-app-certification#microsoft-365-certification).
 
-Find more about certification 4[here](https://cloudpartners.transform.microsoft.com/practices/modernworkisv?tab=certification).
+Find more about certification [here](https://cloudpartners.transform.microsoft.com/practices/modernworkisv?tab=certification).
 
 [Back to top](#what-should-you-do-during-the-traction-stage)
 </details>
@@ -113,9 +113,9 @@ Find more about certification 4[here](https://cloudpartners.transform.microsoft.
 
 While during the launch stage, you used transient banners, notifications bar, what’s new notifications inside the SaaS product’s UI for all users to announce your Teams app. It’s time now to nudge users who may be using Microsoft Teams to start using your collaborative app for scenarios that are better together in Teams vs. your core web SaaS experience.
 
-Surface [deep links](/concepts/build-and-test/deep-links?tabs=teamsjs-v2) within your browser-based web SaaS experience to transport users to specific views inside your Teams app (for example, personal app, tabs, conversational bot or meeting extensions with shared meeting stage or in-meeting tab). You can implement the highly recommended [Share to Teams](../../../../build-and-test/share-to-teams-from-web-apps.md) control within your browser-based web SaaS experience to enable users to share and start collaborating around a content or object from your SaaS product inside Teams with their colleagues.
+Surface [deep links](../../../../build-and-test/deep-links.md) within your browser-based web SaaS experience to transport users to specific views inside your Teams app (for example, personal app, tabs, conversational bot or meeting extensions with shared meeting stage or in-meeting tab). You can implement the highly recommended [Share to Teams](../../../../build-and-test/share-to-teams-from-web-apps.md) control within your browser-based web SaaS experience to enable users to share and start collaborating around a content or object from your SaaS product inside Teams with their colleagues.
 
-  :::image type="content" source="../../../../../assets/images/app-fundamentals/drive-traffic-saas-app.png" alt-text="Drive traffic from your SaaS app.":::
+  :::image type="content" source="../../../../../assets/images/app-fundamentals/drive-traffic-saas-app.png" alt-text="Drive traffic from your SaaS app." lightbox="../../../../../assets/images/app-fundamentals/drive-traffic-saas-app.png" :::
 
 To get maximum ROI, surface the nudges contextually for scenarios that are inherently collaborative over chat or in meetings. They're best delivered inside Microsoft Teams through your app.
 
@@ -129,14 +129,14 @@ To get maximum ROI, surface the nudges contextually for scenarios that are inher
 
 The Microsoft Teams store editorial team curates editorial sections on the in-product app store based on various ranking parameters.
 
-Editorial articles provide a list of app suggestions to users within the store that meet specific scenario objectives. It includes a clear call-to-action to install the app while reading the article. Contact the Microsoft field, account, or engineering representatives or connect with the ISV Marketplace Success Rewards Program team to feature your app in these Editorial Articles.
+Editorial articles provide a list of app suggestions to users within the store that meet specific scenario objectives. It includes a clear call-to-action to install the app while reading the article. Contact the Microsoft field, account, or engineering representatives or connect with the ISV Marketplace Success Rewards Program team to feature your app in the editorial articles.
 
 </details>
 <br>
 <details>
 <summary>On-demand access to digital marketing content</summary>
 
-[Digital Marketing Content OnDemand](/solutions/digital-marketing-content) service provides go-to-market content in fresh weekly campaigns at no cost to Microsoft partners. Unlock expertise that can drive customer engagement and elevate your business. Connect your social media accounts and email lists to select, customize, and share content with automatic updates that push to your company’s social media accounts or send direct email communication to customers.
+[Digital Marketing Content OnDemand](https://partner.microsoft.com/solutions/digital-marketing-content) service provides go-to-market content in fresh weekly campaigns at no cost to Microsoft partners. Unlock expertise that can drive customer engagement and elevate your business. Connect your social media accounts and email lists to select, customize, and share content with automatic updates that push to your company’s social media accounts or send direct email communication to customers.
 
 </details>
 <br>
@@ -176,7 +176,7 @@ Strategic developers, who are part of the invite-only Teams engineering’s buil
 
 Strategic developers, who are part of the invite-only Teams engineering’s build-with partner program, get access to several time-tested and market-tested best practices. It helps to drive faster adoption of your collaborative app in customers.
 
-Remember to upskill using the Teams admin-facing public documentation sections [Third-party apps in Microsoft Teams](/microsoftteams/overview-third-party-apps) and [Admin controls to govern apps](/microsoftteams/customize-apps) to aid during app rollout, activation, and governance.
+Remember to upskill using the Teams admin-facing public documentation sections [Third-party apps in Microsoft Teams](/microsoftteams/overview-third-party-apps) and [Admin controls to govern apps](/microsoftteams/manage-apps) to aid during app rollout, activation, and governance.
 
 </details>
 <br>

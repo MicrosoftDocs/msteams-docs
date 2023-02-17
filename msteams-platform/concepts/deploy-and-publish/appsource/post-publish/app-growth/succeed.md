@@ -64,7 +64,7 @@ Since Teams marketplace is public, you can use your product team can at the mini
 <details>
 <summary>Share feedback to enrich the Teams platform</summary>
 
-Microsoft Teams app platform is ever-evolving with newer features that provide even more opportunities for developers like you to deliver unique, differentiated, and collaborative scenarios of value to customers. Use the Microsoft field, account, engineering representatives to share feedback or product ask on Teams platform. You can also post product feature suggestions publicly [here](../../../../../feedback.md#feature-request-and-general-help) as well.
+Microsoft Teams app platform is ever-evolving with newer features that provide even more opportunities for developers like you to deliver unique, differentiated, and collaborative scenarios of value to customers. Use the Microsoft field, account, engineering representatives to share feedback or product ask on Teams platform. You can also post product feature suggestions publicly [here](../../../../../feedback.md#feature-request-and-general-help).
 
 </details>
 <br>
