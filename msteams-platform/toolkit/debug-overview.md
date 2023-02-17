@@ -2,7 +2,7 @@
 title: Debug your Teams app
 author: surbhigupta 
 description: In this module, learn how to debug your Teams app, and key features of Teams Toolkit
-ms.author: v-amprasad
+ms.author: surbhigupta 
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
@@ -81,10 +81,40 @@ Ensure that you can toggle breakpoints on the source codes of tabs, bots, messag
 
 Teams Toolkit allows you to customize the debug settings to create your tab or bot. For more information on the full list of customizable options, see [debug settings doc](https://aka.ms/teamsfx-debug-tasks).
 
-### Customize Scenarios
-
+You can also customize debug settings for your existing bot app.
 <br>
 
+<details>
+
+<summary><b>Learn how to use an existing bot for debugging</b></summary>
+
+To use an existing bot, you can set it up using its `botId` and `botPassword` arguments in Set up bot task. This task is to register resources and prepare local launch information for Bot.
+
+Use the following code snippet example to setup an existing bot for debugging:
+
+```json
+{
+    "label": "Set up Bot",
+    "type": "teamsfx",
+    "command": "debug-set-up-bot",
+    "args": {
+        //// Use your own AAD App for bot
+        // "botId": "",
+        // "botPassword": "", // use plain text or environment variable reference like ${env:BOT_PASSWORD}
+        "botMessagingEndpoint": "api/messages"
+    }
+}
+```
+
+1. Update `botId` with the Azure AD app client id for your existing bot.
+1. Update `botPassword` with the Azure AD app client secret for your bot.
+
+</details>
+
+### Customize Scenarios
+
+Here's a list of debug scenarios that you can use:
+<br>
 <details>
 
 <summary><b>Skip prerequisite checks</b></summary>

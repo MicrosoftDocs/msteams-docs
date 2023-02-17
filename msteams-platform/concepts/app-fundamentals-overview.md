@@ -78,7 +78,7 @@ The following table includes Teams features and availability for GCC, GCC-High, 
 | 3P or third-party apps | ✔️ Third-party apps are available. Disabled by default and tenant admin use their own discretion to enable it. | ❌ | ❌ |
 | Bots | ✔️ | ✔️ | ❌ |
 | Custom or Lob tab apps |  ✔️ | ✔️ | ✔️ |
-| Sideloading apps | ✔️ | ✔️ | ❌ |
+| Sideloading apps | ✔️ | ❌ | ❌ |
 | Custom or Lob bots | ✔️ | ✔️ | ❌ |
 | Custom message extensions | ✔️ | ✔️ | ❌ |
 | Custom connectors | ✔️ | ❌ | ❌ |
@@ -90,7 +90,7 @@ The following list helps to identify the availability of GCC, GCC-High, and DOD 
 * For third-party apps, see [web apps](../samples/integrating-web-apps.md) and [meeting app extensibility](../apps-in-teams-meetings/teams-apps-in-meetings.md).
 * For bots, see [build your first conversational bot for Teams](../get-started/first-app-bot.md), [designing your Teams bot](../bots/design/bots.md), [add bots to Microsoft Teams apps](../resources/bot-v3/bots-overview.md), and [bots in Teams](../bots/what-are-bots.md).
 * For sideloading apps, see [enable your Teams app to be customized](../concepts/design/enable-app-customization.md), [distribute your Microsoft Teams app](../concepts/deploy-and-publish/apps-publish-overview.md), and [Upload your app in Teams](../concepts/deploy-and-publish/apps-upload.md).
-* For custom connectors, see [create Office 365 connectors for Teams](../webhooks-and-connectors/how-to/connectors-creating.md).
+* For custom connectors, see [create connectors for Microsoft 365 Groups for Teams](../webhooks-and-connectors/how-to/connectors-creating.md).
 
 </details>
 
