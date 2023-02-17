@@ -11,13 +11,13 @@ ms.author: anclear
 
 This document builds on the article on [how bots work](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true) in the core [Bot Framework documentation](/azure/bot-service/?view=azure-bot-service-4.0&preserve-view=true). The primary difference between bots developed for Microsoft Teams and the core Bot Framework is in the features provided in Teams.
 
-An activity handler is used to organize the conversational logic for your bot. Activities are handled in two ways using Teams activity handlers and bot logic. The Teams activity handler adds support for Teams-specific events and interactions. The bot object contains the conversational reasoning or logic for a turn and exposes a turn handler, which is the method that can accept incoming activities from the bot adapter.
+An activity handler uses organizing the conversational logic for your bot. Activities are handled in two ways using Teams activity handlers and bot logic. The Teams activity handler adds support for Teams-specific events and interactions. The bot object contains the conversational reasoning or logic for a turn and exposes a turn handler. This method can accept incoming activities from the bot adapter.
 
 ## Teams activity handlers
 
 Teams activity handler is derived from Microsoft Bot Framework's activity handler. It routes all Teams activities before allowing any non-Teams specific activities to be handled.
 
-When a bot for Teams receives an activity, it's routed to the activity handlers. All activities are routed through one base handler called the turn handler. The turn handler calls the required activity handler to manage any activity received. The Teams bot is derived from `TeamsActivityHandler` class, which is derived from the Bot Framework's `ActivityHandler` class. If the bot activity takes more than 15 seconds to process, Teams send a retry request to bot endpoint. Hence, you'll see duplicate requests in your bot.
+When a bot for Teams receives an activity, it routes to the activity handlers. All activities routes through one base handler called the turn handler. The turn handler calls the required activity handler to manage any activity received. The Teams bot is derived from `TeamsActivityHandler` class, which is derived from the Bot Framework's `ActivityHandler` class. If the bot activity takes more than 15 seconds to process, Teams send a retry request to bot endpoint. Hence, you'll see duplicate requests in your bot.
 
 # [C#](#tab/csharp)
 
@@ -208,7 +208,7 @@ The list of handlers defined in `ActivityHandler` includes the following events:
 | Any activity type received | `OnTurnAsync` | This method calls one of the other handlers, based on the type of activity received. |
 | Message activity received | `OnMessageActivityAsync` | You can override this method to handle a `Message` activity. |
 | Message update activity received | `OnMessageUpdateActivityAsync` | You can override this method to handle a message update activity. |
-| Message delete activity received | `OnMessageDeleteActivityAsync` | You can override this method to handle a message delete activity. |
+| Message deletes activity received | `OnMessageDeleteActivityAsync` | You can override this method to handle a message delete activity. |
 | Conversation update activity received | `OnConversationUpdateActivityAsync` | This method calls a handler if members other than the bot joined or left the conversation, on a `ConversationUpdate` activity. |
 | Non-bot members joined the conversation | `OnMembersAddedAsync` | You can override this method to handle members joining a conversation. |
 | Non-bot members left the conversation | `OnMembersRemovedAsync` | You can override this method to handle members leaving a conversation. |
@@ -239,12 +239,12 @@ The list of Teams activity handlers called from the `OnInvokeActivityAsync` Team
 
 | Invoke types                    | Handler                              | Description                                                  |
 | :-----------------------------  | :----------------------------------- | :----------------------------------------------------------- |
-| CardAction.Invoke               | `OnTeamsCardActionInvokeAsync`       | This method is invoked when a card action invoke activity is received from the connector. |
-| fileConsent/invoke              | `OnTeamsFileConsentAcceptAsync`      | This method is invoked when a file consent card is accepted by the user. |
-| fileConsent/invoke              | `OnTeamsFileConsentAsync`            | This method is invoked when a file consent card activity is received from the connector. |
-| fileConsent/invoke              | `OnTeamsFileConsentDeclineAsync`     | This method is invoked when a file consent card is declined by the user. |
-| actionableMessage/executeAction | `OnTeamsO365ConnectorCardActionAsync` | This method is invoked when a connector card for Microsoft 365 Groups action activity is received from the connector. |
-| signin/verifyState              | `OnTeamsSigninVerifyStateAsync`      | This method is invoked when a signIn verify state activity is received from the connector. |
+| CardAction.Invoke               | `OnTeamsCardActionInvokeAsync`       | This method invokes when a card action invoke activity is received from the connector. |
+| fileConsent/invoke              | `OnTeamsFileConsentAcceptAsync`      | This method invokes when a file consent card is accepted by the user. |
+| fileConsent/invoke              | `OnTeamsFileConsentAsync`            | This method invokes when a file consent card activity is received from the connector. |
+| fileConsent/invoke              | `OnTeamsFileConsentDeclineAsync`     | This method invokes when a file consent card is declined by the user. |
+| actionableMessage/executeAction | `OnTeamsO365ConnectorCardActionAsync` | This method invokes when a connector card for Microsoft 365 Groups action activity is received from the connector. |
+| signin/verifyState              | `OnTeamsSigninVerifyStateAsync`      | This method invokes when a signIn verify state activity is received from the connector. |
 | task/fetch                      | `OnTeamsTaskModuleFetchAsync`        | You can override this method in a derived class to provide logic when a task module is fetched. |
 | task/submit                     | `OnTeamsTaskModuleSubmitAsync`       | You can override this method in a derived class to provide logic when a task module is submitted. |
 
@@ -296,12 +296,12 @@ The list of Teams activity handlers called from the `onInvokeActivity` Teams act
 
 | Invoke types                    | Handler                              | Description                                                  |
 | :-----------------------------  | :----------------------------------- | :----------------------------------------------------------- |
-| CardAction.Invoke               | `handleTeamsCardActionInvoke`       | This method is invoked when a card action invoke activity is received from the connector. |
-| fileConsent/invoke              | `handleTeamsFileConsentAccept`      | This method is invoked when a file consent card is accepted by the user. |
-| fileConsent/invoke              | `handleTeamsFileConsent`            | This method is invoked when a file consent card activity is received from the connector. |
-| fileConsent/invoke              | `handleTeamsFileConsentDecline`     | This method is invoked when a file consent card is declined by the user. |
-| actionableMessage/executeAction | `handleTeamsO365ConnectorCardAction` | This method is invoked when a connector card for Microsoft 365 Groups action activity is received from the connector. |
-| signin/verifyState              | `handleTeamsSigninVerifyState`      | This method is invoked when a signIn verify state activity is received from the connector. |
+| CardAction.Invoke               | `handleTeamsCardActionInvoke`       | This method invokes when a card action invoke activity is received from the connector. |
+| fileConsent/invoke              | `handleTeamsFileConsentAccept`      | This method invokes when a file consent card is accepted by the user. |
+| fileConsent/invoke              | `handleTeamsFileConsent`            | This method invokes when a file consent card activity is received from the connector. |
+| fileConsent/invoke              | `handleTeamsFileConsentDecline`     | This method invokes when a file consent card is declined by the user. |
+| actionableMessage/executeAction | `handleTeamsO365ConnectorCardAction` | This method invokes when a connector card for Microsoft 365 Groups action activity is received from the connector. |
+| signin/verifyState              | `handleTeamsSigninVerifyState`      | This method invokes when a signIn verify state activity is received from the connector. |
 | task/fetch                      | `handleTeamsTaskModuleFetch`        | You can override this method in a derived class to provide logic when a task module is fetched. |
 | task/submit                     | `handleTeamsTaskModuleSubmit`       | You can override this method in a derived class to provide logic when a task module is submitted. |
 
@@ -349,12 +349,12 @@ The list of Teams activity handlers called from the `on_invoke_activity` Teams a
 
 | Invoke types                    | Handler                              | Description                                                  |
 | :-----------------------------  | :----------------------------------- | :----------------------------------------------------------- |
-| CardAction.Invoke               | `on_teams_card_action_invoke`       | This method is invoked when a card action invoke activity is received from the connector. |
-| fileConsent/invoke              | `on_teams_file_consent_accept`      | This method is invoked when a file consent card is accepted by the user. |
-| fileConsent/invoke              | `on_teams_file_consent`            | This method is invoked when a file consent card activity is received from the connector. |
-| fileConsent/invoke              | `on_teams_file_consent_decline`     | This method is invoked when a file consent card is declined by the user. |
-| actionableMessage/executeAction | `on_teams_o365_connector_card_action` | This method is invoked when a connector card for Microsoft 365 Groups action activity is received from the connector. |
-| signin/verifyState              | `on_teams_signin_verify_state`      | This method is invoked when a signIn verify state activity is received from the connector. |
+| CardAction.Invoke               | `on_teams_card_action_invoke`       | This method invokes when a card action invoke activity is received from the connector. |
+| fileConsent/invoke              | `on_teams_file_consent_accept`      | This method invokes when a file consent card is accepted by the user. |
+| fileConsent/invoke              | `on_teams_file_consent`            | This method invokes when a file consent card activity is received from the connector. |
+| fileConsent/invoke              | `on_teams_file_consent_decline`     | This method invokes when a file consent card is declined by the user. |
+| actionableMessage/executeAction | `on_teams_o365_connector_card_action` | This method invokes when a connector card for Microsoft 365 Groups action activity is received from the connector. |
+| signin/verifyState              | `on_teams_signin_verify_state`      | This method invokes when a signIn verify state activity is received from the connector. |
 | task/fetch                      | `on_teams_task_module_fetch`        | You can override this method in a derived class to provide logic when a task module is fetched. |
 | task/submit                     | `on_teams_task_module_submit`       | You can override this method in a derived class to provide logic when a task module is submitted. |
 
@@ -364,7 +364,7 @@ The invoke activities listed in this section are for conversational bots in Team
 
 ---
 
-Now that you've familiarized yourself with bot activity handlers, let us see how bots behave differently depending on the conversation and the messages it receives or sends.
+Now that you've familiarized yourself with bot activity handlers, let's see how bots behave differently depending on the conversation and the messages it receives or sends.
 
 ## Next step
 
