@@ -34,7 +34,8 @@ Users can complete the entire connector configuration experience without having 
 
 1. The user selects the connector to begin the configuration process.
 1. The user interacts with the web experience to complete the configuration.
-1. The user selects **Save**, which triggers a callback in code. The code can process the save event by retrieving the webhook settings. Your code stores the webhook to post events later.
+1. The user selects **Save**, which triggers a callback in code.
+    The code can process the save event by retrieving the webhook settings. Your code stores the webhook to post events later.
 
 The configuration experience is loaded inline within Teams. You can reuse your existing web configuration experience or create a separate version to be hosted specifically in Teams. Your code must include the TeamsJS library. This gives your code access to the APIs to perform common operations, such as getting the current user, channel, or team context, and initiate authentication flows.
 
@@ -45,12 +46,12 @@ To integrate the configuration experience:
 
 1. Initialize TeamsJS by calling `app.initialize()`.
 1. Call `pages.config.setValidityState(true)` to enable **Save**.
-   You must call `microsoftTeams.pages.config.setValidityState(true)` as a response to user selection or field update.
+    You must call `microsoftTeams.pages.config.setValidityState(true)` as a response to user selection or field update.
 
 1. Register  `microsoftTeams.pages.config.registerOnSaveHandler()` event handler, which is called when the user selects **Save**.
 1. Call `microsoftTeams.pages.config.setConfig()` to save the connector settings. The saved settings are also shown in the configuration dialog if the user tries to update an existing configuration for your connector.
 1. Call `microsoftTeams.pages.getConfig()` to fetch webhook properties, including the URL.
-   You must call `microsoftTeams.pages.getConfig()` when your page is first loaded in case of reconfiguration.
+    You must call `microsoftTeams.pages.getConfig()` when your page is first loaded in case of reconfiguration.
 
 1. Register `microsoftTeams.pages.config.registerOnRemoveHandler()` event handler, which is called when the user removes connector.
 
@@ -114,7 +115,8 @@ The following code provides a sample HTML to create a connector configuration pa
 
 To authenticate the user as part of loading your page, see [authentication flow for tabs](~/tabs/how-to/authentication/auth-flow-tab.md) to integrate sign in when your page is embedded.
 
-Prior to TeamsJS v.2.0.0, your code must call `microsoftTeams.authentication.registerAuthenticationHandlers()` with the URL and success or failure callback methods before calling `authenticate()` due to cross-client compatibility reasons. Starting with TeamsJS v.2.0.0, *registerAuthenticationHandlers* has been deprecated in favor of directly calling [authenticate()](/javascript/api/@microsoft/teams-js/authentication#@microsoft-teams-js-authentication-authenticate) with the required authentication parameters.
+> [!NOTE]
+> Prior to TeamsJS v.2.0.0, your code must call `microsoftTeams.authentication.registerAuthenticationHandlers()` with the URL and success or failure callback methods before calling `authenticate()` due to cross-client compatibility reasons. Starting with TeamsJS v.2.0.0, *registerAuthenticationHandlers* has been deprecated in favor of directly calling [authenticate()](/javascript/api/@microsoft/teams-js/authentication#@microsoft-teams-js-authentication-authenticate) with the required authentication parameters.
 
 #### `getConfig` response properties
 
@@ -152,9 +154,9 @@ Download the auto-generated *Teams app manifest* from the Developer Portal (<htt
 1. [Include two icons](../../concepts/build-and-test/apps-package.md#app-icons).
 1. Modify the `icons` portion of the manifest to include the file names of the icons instead of URLs.
 
-The following *manifest.json* example contains the elements needed to test and submit the app:
+The following *manifest.json* example contains the elements needed to test and submit the app.
 
-Replace `id` and `connectorId` in the following example with the GUID of the connector.
+Replace `id` and `connectorId` in the following example with the GUID of the connector:
 
 #### Example of manifest.json with connector
 

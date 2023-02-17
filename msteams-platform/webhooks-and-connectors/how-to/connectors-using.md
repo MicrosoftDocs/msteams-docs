@@ -248,7 +248,7 @@ The following table provides the time based transaction details:
 | 7200 | 150  |
 | 86400  | 1800  |
 
-A [retry logic with exponential back-off](/azure/architecture/patterns/retry) can mitigate rate limiting for cases where requests are exceeding the limits within a second. Refer [HTTP 429 responses](../../bots/how-to/rate-limit.md#handle-http-429-responses) to avoid hitting the rate limits.
+A [retry logic with exponential back-off](/azure/architecture/patterns/retry) can mitigate rate limiting for cases where requests are exceeding the limits within a second. For more information to avoid hitting rate limit see [HTTP 429 responses](../../bots/how-to/rate-limit.md#handle-http-429-responses).
 
 ```csharp
 // Please note that response body needs to be extracted and read 

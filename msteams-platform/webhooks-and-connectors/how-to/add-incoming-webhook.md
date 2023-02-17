@@ -15,7 +15,8 @@ An Incoming Webhook lets external applications to share content in Microsoft Tea
 * Message extensions
 * Connectors
 
-You can choose to build notification bot Teams app other than Incoming Webhooks. They perform similarly but notification bot has more functionalities. For more information, see [Build notification bot with JavaScript](../../sbs-gs-notificationbot.yml) or [Incoming Webhook notification sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/incoming-webhook-notification). To get started, download and explore [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension). For more information, see [Teams Toolkit documents](../../toolkit/teams-toolkit-fundamentals.md).
+> [!IMPORTANT]
+> You can choose to build notification bot Teams app other than Incoming Webhooks. They perform similarly but notification bot has more functionalities. For more information, see [Build notification bot with JavaScript](../../sbs-gs-notificationbot.yml) or [Incoming Webhook notification sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/incoming-webhook-notification). To get started, download and explore [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension). For more information, see [Teams Toolkit documents](../../toolkit/teams-toolkit-fundamentals.md).
 
 If more than four requests are made in a second, the client connection is throttled until the window refreshes for the duration of the fixed rate. A [retry logic with exponential backoff](/azure/architecture/patterns/retry) can mitigate rate limiting for cases where requests exceed the limits within a second. To avoid hitting the rate limits, see [HTTP 429 responses](../../bots/how-to/rate-limit.md#handle-http-429-responses).
 
@@ -63,10 +64,7 @@ To add an Incoming Webhook to a Teams channel, follow these steps:
 
 The webhook is now available in the Teams channel.
 
-You can create and send actionable messages through Incoming Webhook or connector for Microsoft 365 Groups. For more information, see [Create and send messages](~/webhooks-and-connectors/how-to/connectors-using.md).
-
-> [!NOTE]
-> In Teams, select **Settings** > **Member permissions** > **Allow members to create, update, and remove connectors**, so that any team member can add, modify, or delete a connector.
+You can create and send actionable messages through Incoming Webhook or connector for Microsoft 365 Groups. In Teams, select **Settings** > **Member permissions** > **Allow members to create, update, and remove connectors**, so that any team member can add, modify, or delete a connector. For more information, see [Create and send messages](~/webhooks-and-connectors/how-to/connectors-using.md).
 
 **Example**
 
