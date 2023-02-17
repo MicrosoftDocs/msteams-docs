@@ -26,7 +26,7 @@ Teams platform features that are available to all app developers.
 
 **2023 February**
 
-* ***February 16, 2023***: [Create a dashboard in Teams.](tabs/how-to/dashboard-teams-toolkit.md)
+* ***February 17, 2023***: [Create a dashboard in Teams.](tabs/how-to/dashboard-teams-toolkit.md)
 
 * ***February 09, 2023***: [Apps for Teams meetings support anonymous users.](apps-in-teams-meetings/build-apps-for-anonymous-user.md)
 
