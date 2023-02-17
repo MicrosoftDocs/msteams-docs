@@ -10,9 +10,12 @@ ms.author: anclear
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-To install the Microsoft Teams bot in a team or group chat, add the `teams` or `groupchat` scope to your bot. This allows all members of the conversation to interact with your bot. After the bot is installed, it has access to metadata about the conversation, such as the list of conversation members. Also, when it's installed in a team, the bot has access to details about that team and the full list of channels.
+To install the Microsoft Teams bot in a team or group chat, add the `teams` or `groupchat` scope to your bot. Adding the scope to your bot allows all members of the conversation to interact with your bot. After the bot is installed, it has access to metadata about the conversation, such as the list of conversation members. When a bot is installed in a team, it can access its details and the full list of channels.
 
-Bots in a group or channel only receive messages when they're mentioned @botname. They don't receive any other messages sent to the conversation. The bot must be @mentioned directly. Your bot doesn't receive a message when the team or channel is mentioned, or when someone replies to a message from your bot without @mentioning it.
+Bots in a group or channel only receive messages when they're mentioned @botname. They don't receive any other messages sent to the conversation. The bot must be @mentioned directly. Your bot doesn't receive a message when:
+
+* Someone mentions the team or channel.
+* Someone replies to a message from your bot without @mentioning it.
 
 See the following video to learn about channel and group chat conversations with a bot:
 <br>
@@ -24,7 +27,7 @@ See the following video to learn about channel and group chat conversations with
 >
 > * RSC for all *chat* messages is available only in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md).
 
-Using resource-specific consent (RSC), bots can receive all channel messages in teams that it's installed in without being @mentioned. For more information, see [receive all channel messages with RSC](channel-messages-with-rsc.md).
+Bots can receive all channel messages in teams that it's installed in without being @mentioned by using resource-specific consent (RSC). For more information, see [receive all channel messages with RSC](channel-messages-with-rsc.md).
 Posting a message or Adaptive Card to a private channel is currently not supported.
 
 ## Design guidelines
@@ -35,7 +38,7 @@ Now, you can create new conversation threads and easily manage different convers
 
 ## Create new conversation threads
 
-When your bot is installed in a team, you must create a new conversation thread rather than reply to an existing one. At times, it's difficult to differentiate between two conversations. If the conversation is threaded, it's easier to organize and manage different conversations in channels. This is a form of [proactive messaging](~/bots/how-to/conversations/send-proactive-messages.md).
+When your bot is installed in a team, you must create a new conversation thread rather than reply to an existing one. At times, it's difficult to differentiate between two conversations. If the conversation is threaded, it's easier to organize and manage different conversations in channels. Threaded conversation is a form of [proactive messaging](~/bots/how-to/conversations/send-proactive-messages.md).
 
 Next, you can retrieve mentions using the `entities` object and add mentions to your messages using the `Mention` object.
 
@@ -169,7 +172,7 @@ def get_mentions(activity: Activity) -> List[Mention]:
 
 Your bot can mention other users in messages posted into channels.
 
-The `Mention` object has two properties that you must set using the following:
+The `Mention` object has two properties that you must set:
 
 * Include *@username* in the message text.
 * Include the mention object inside the entities collection.
@@ -297,14 +300,14 @@ Now you can send an introduction message when your bot is first installed or add
 
 When your bot is first added to the group or team, an introduction message must be sent. The message must provide a brief description of the bot's features and how to use them. You must subscribe to the `conversationUpdate` event with the `teamMemberAdded` eventType.  The event is sent when any new team member is added. Check if the new member added is the bot. For more information, see [sending a welcome message to a new team member](~/bots/how-to/conversations/send-proactive-messages.md).
 
-You can send a personal message to each member of the team when the bot is added. To do this, [fetch the team roster](../../../resources/bot-v3/bots-context.md#fetch-the-team-roster) and send each user a [direct message](../../../resources/bot-v3/bot-conversations/bots-conv-proactive.md).
+You can send a personal message to each member of the team when the bot is added. [Fetch the team roster](../../../resources/bot-v3/bots-context.md#fetch-the-team-roster) and send each user a [direct message](../../../resources/bot-v3/bot-conversations/bots-conv-proactive.md).
 
 It's recommended that the message sent by the bot is relevant and adds value to the initial message and doesn't spam the users.
 
 Don't send a message in the following cases:
 
 * When the team is large, for example, larger than 100 members. Your bot can be seen as spam and the person who added it can get complaints. You must clearly communicate your bot's value proposition to everyone who sees the welcome message.
-* Your bot is first mentioned in a group or channel instead of being first added to a team.
+* When someone mentions your bot in a group or channel, but the bot isn't added to the team.
 * A group or channel is renamed.
 * A team member is added to a group or channel.
 
