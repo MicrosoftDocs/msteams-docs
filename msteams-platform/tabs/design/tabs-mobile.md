@@ -15,20 +15,20 @@ Apps [distributed through the Teams store](~/concepts/deploy-and-publish/appsour
 
 | **App capability** | **Behavior if app is approved** | **Behavior if app is not approved** |
 | --- | --- | --- |
-| **Personal tabs** | App appears in the bottom bar of the mobile clients. Tabs open in the Teams client. | App does not appear in the bottom bar of the mobile clients. |
+| **Personal tabs** | App appears in the bottom bar of the mobile clients. Tabs open in the Teams client. | App doesn't appear in the bottom bar of the mobile clients. |
 | **Channel and group tabs** | The tab opens in the Teams client using `contentUrl`. | The tab opens in a browser outside the Teams client using `websiteUrl`. |
 
 ## Submit mobile tabs on appsource for publishing
 
 * Apps submitted to the [AppSource](https://appsource.microsoft.com) for publishing on Teams are evaluated automatically for mobile responsiveness. For any queries, reach out to teamsubm@microsoft.com.
-* For all apps that are not distributed through the AppSource, the tabs open in an in-app webview within the Teams clients by default and there is no separate approval process required.
+* For all apps that aren't distributed through the AppSource, the tabs open in an in-app webview within the Teams clients by default and there is no separate approval process required.
 * The default behavior of apps is only applicable if distributed through the Teams store. By default, all tabs open in the Teams client.
 * To initiate an evaluation of your app for mobile-friendliness, reach out to teamsubm@microsoft.com with your app details.
 * If a mobile app has multiple tabs, whenever the user switches a tab, the tab doesn't reload.
 
 ## Authentication
 
-For authentication to work on mobile clients, you must upgrade you Teams JavaScript library to at least version 1.4.1.
+For authentication to work on mobile clients, you must upgrade your Teams JavaScript library to at least version 1.4.1.
 
 ## Low bandwidth and intermittent connections
 
@@ -36,11 +36,11 @@ Mobile clients function with low bandwidth and intermittent connections. Your ap
 
 ## Testing on mobile clients
 
-You must validate that your tab functions properly on mobile devices of various sizes and qualities. For Android devices, you can use [DevTools](~/tabs/how-to/developer-tools.md) to debug your tab while it is running. It is recommended that you test on both high and low-performance devices, including a tablet.
+You must validate that your tab functions properly on mobile devices of various sizes and qualities. For Android devices, you can use [DevTools](~/tabs/how-to/developer-tools.md) to debug your tab while it's running. It's recommended that you test on both high and low-performance devices, including a tablet.
 
 ## Distribution
 
-Apps listed on the Teams store must be approved for mobile use to function properly in the Teams mobile client. Tab availability and behavior depends on whether your app is approved.
+Apps listed on the Teams store must be approved for mobile use to function properly in the Teams mobile client. Tab availability and behavior depend on whether your app is approved.
 
 ### Apps on Teams store approved for mobile
 
@@ -67,7 +67,7 @@ The following table describes tab availability and behavior when the app is list
 
 ### Apps not on Teams store
 
-If you are sideloading your app or publishing to an organization's app catalog, tab behavior is the same as Teams store apps approved by Microsoft for mobile.
+If you're sideloading your app or publishing to an organization's app catalog, tab behavior is the same as Teams store apps approved by Microsoft for mobile.
 
 ## Next step
 
