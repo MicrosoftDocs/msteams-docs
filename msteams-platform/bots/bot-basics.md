@@ -354,7 +354,7 @@ The list of Teams activity handlers called from the `on_invoke_activity` Teams a
 | fileConsent/invoke              | `on_teams_file_consent`            | This method invokes when a file consent card activity is received from the connector. |
 | fileConsent/invoke              | `on_teams_file_consent_decline`     | This method invokes when a file consent card is declined by the user. |
 | actionableMessage/executeAction | `on_teams_o365_connector_card_action` | This method invokes when a connector card for Microsoft 365 Groups action activity is received from the connector. |
-| signin/verifyState              | `on_teams_signin_verify_state`      | This method invokes when a signIn verify state activity is received from the connector. |
+| signin/verifyState              | `on_teams_signin_verify_state`      | This method invokes when a sign in verify state activity is received from the connector. |
 | task/fetch                      | `on_teams_task_module_fetch`        | You can override this method in a derived class to provide logic when a task module is fetched. |
 | task/submit                     | `on_teams_task_module_submit`       | You can override this method in a derived class to provide logic when a task module is submitted. |
 
