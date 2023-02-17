@@ -10,7 +10,7 @@ ms.author: anclear
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-To install the Microsoft Teams bot in a team or group chat, add the `teams` or `groupchat` scope to your bot. Adding the scope to your bot allows all members of the conversation to interact with your bot. After the bot is installed, it has access to metadata about the conversation, such as the list of conversation members. When a bot is installed in a team, it can access its details and the full list of channels.
+To install the Microsoft Teams bot in a team or group chat, add the `teams` or `groupchat` scope to your bot. Adding the scope to your bot allows all members of the conversation to interact with your bot. After the user installs the bot, it has access to metadata about the conversation, such as the list of conversation members. When a user installs bot in a team, it can access its details and the full list of channels.
 
 Bots in a group or channel only receive messages when they're mentioned @botname. They don't receive any other messages sent to the conversation. The bot must be @mentioned directly. Your bot doesn't receive a message when:
 
@@ -27,7 +27,7 @@ See the following video to learn about channel and group chat conversations with
 >
 > * RSC for all *chat* messages is available only in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md).
 
-Bots can receive all channel messages in teams that it's installed in without being @mentioned by using resource-specific consent (RSC). For more information, see [receive all channel messages with RSC](channel-messages-with-rsc.md).
+Bots can receive all channel messages in teams where the user has installed it without being @mentioned by using resource-specific consent (RSC). For more information, see [receive all channel messages with RSC](channel-messages-with-rsc.md).
 Posting a message or Adaptive Card to a private channel is currently not supported.
 
 ## Design guidelines
@@ -38,7 +38,7 @@ Now, you can create new conversation threads and easily manage different convers
 
 ## Create new conversation threads
 
-When your bot is installed in a team, you must create a new conversation thread rather than reply to an existing one. At times, it's difficult to differentiate between two conversations. If the conversation is threaded, it's easier to organize and manage different conversations in channels. Threaded conversation is a form of [proactive messaging](~/bots/how-to/conversations/send-proactive-messages.md).
+When the user installs your bot in a team, the user must create a new conversation thread rather than reply to an existing one. At times, it's difficult to differentiate between two conversations. If the conversation is threaded, it's easier to organize and manage different conversations in channels. Threaded conversation is a form of [proactive messaging](~/bots/how-to/conversations/send-proactive-messages.md).
 
 Next, you can retrieve mentions using the `entities` object and add mentions to your messages using the `Mention` object.
 
@@ -302,7 +302,7 @@ When your bot is first added to the group or team, an introduction message must 
 
 You can send a personal message to each member of the team when the bot is added. [Fetch the team roster](../../../resources/bot-v3/bots-context.md#fetch-the-team-roster) and send each user a [direct message](../../../resources/bot-v3/bot-conversations/bots-conv-proactive.md).
 
-It's recommended that the message sent by the bot is relevant and adds value to the initial message and doesn't spam the users.
+Ensure that the message that the bot sends is relevant and adds value to the initial message and doesn't spam the users.
 
 Don't send a message in the following cases:
 
