@@ -28,6 +28,8 @@ You need to install the following tools and set up your development environment:
    | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call and all in one place.|
    | &nbsp; | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
 
+For more information on Node.js version compatibility, see [Prerequisites for creating your Teams app](/microsoftteams/platform/toolkit/tools-prerequisites?branch=pr-en-us-8020) using Visual Studio Code.
+
 > [!NOTE]
 > If your project has installed `botbuilder`related [packages](https://github.com/Microsoft/botbuilder-js#packages) as dependencies, ensure they are of the same version.
 

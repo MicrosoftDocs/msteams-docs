@@ -38,6 +38,8 @@ items:
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
 
+      For more information on Node.js version compatibility, see [Prerequisites for creating your Teams app](/microsoftteams/platform/toolkit/tools-prerequisites?branch=pr-en-us-8020) using Visual Studio Code.
+
     
 - title: Set up local environment
   durationInMinutes: 1

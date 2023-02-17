@@ -35,6 +35,8 @@ Teams Toolkit checks the following prerequisites during the debug process:
   |Bot |  14, 16 (recommended)|
   |Message extension | 14, 16 (recommended) |
 
+For more information on Node.js version compatibility, see [Prerequisites for creating your Teams app](/microsoftteams/platform/toolkit/tools-prerequisites?branch=pr-en-us-8020) using Visual Studio Code.
+
 * Teams Toolkit prompts you to sign-in to Microsoft 365 account, if you haven't signed in with your valid credentials.
 * Custom app uploading or sideloading for your developer tenant is turned on, to prevent local debug termination.
 * Teams Toolkit installs Ngrok npm package `ngrok@4.2.2` in `~/.fx/bin/ngrok`, if Ngrok isn't installed or the version doesn't match the requirement. Ngrok binary version 2.3 is applicable for bot and message extension. The Ngrok binary is managed by Ngrok npm package in `/.fx/bin/ngrok/node modules/ngrok/bin`.
