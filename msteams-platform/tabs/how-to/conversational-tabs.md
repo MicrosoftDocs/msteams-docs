@@ -9,7 +9,7 @@ ms.localizationpriority: high
 
 # Create conversational tabs
 
-Conversational subentities provide a way to allow users to have conversations about subentities in your tab. Such as specific task, patient, and sales opportunity, instead of discussing the entire tab, also known as entity. A traditional channel or configurable tab allows the user to have a conversation about a tab, but the user requires a more focused conversation. The requirement for a more focused conversation can arise either, if there is too much content to have a centralized discussion or because the content changed over time, making the conversation irrelevant to the content shown. Conversational subentities provide a much more focused conversation experience for dynamic tabs.
+Conversational subentities provide a way to allow users to have conversations about subentities in your tab. Such as specific task, patient, and sales opportunity, instead of discussing the entire tab, also known as entity. A traditional channel or configurable tab allows the user to have a conversation about a tab, but the user requires a more focused conversation. The requirement for a more focused conversation can arise either, if there's too much content to have a centralized discussion or because the content changed over time, making the conversation irrelevant to the content shown. Conversational subentities provide a much more focused conversation experience for dynamic tabs.
 
 Conversational subentities are only supported in channels. They can be used from a personal or static tab to create or continue conversations in tabs that are already pinned to a channel. The static tab is useful if you want to provide one location for a user to view and access conversations happening across multiple channels.
 
@@ -29,7 +29,7 @@ microsoftTeams.conversations.openConversation(openConversationRequest);
 
 * `subEntityId`: The ID of your specific sub-entity. For example, task-123.
 * `entityId`: The ID of the tab instance when it was created. The ID is important to refer back to the same tab instance.
-* `channelId`: The channel in which the tab instance resides. The **channelId** is optional for channel tabs. However, it is recommended if you want to keep your implementation across channel and static tabs the same.
+* `channelId`: The channel in which the tab instance resides. The **channelId** is optional for channel tabs. However, it's recommended if you want to keep your implementation across channel and static tabs the same.
 * `title`: The title that is shown to the user in the chat panel.
 
 Most of these values can also be retrieved from the [`app.getContext()`](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-getcontext&preserve-view=true) API (`microsoftTeams.getContext()` in TeamsJS v1). For more information, see [PageInfo interface](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-pageinfo&preserve-view=true)
@@ -77,7 +77,7 @@ You can manually close the conversation view by calling the `closeConversation()
 microsoftTeams.conversations.closeConversation();
 ```
 
-You can also listen for an event when the users selects **Close (X)** in the conversation view.
+You can also listen for an event when the users select **Close (X)** in the conversation view.
 
 ```javascript
 ⁠microsoftTeams.conversations.openConversation({
