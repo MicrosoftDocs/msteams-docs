@@ -123,6 +123,7 @@ You can use [JWT](https://jwt.ms) for inspecting the token.
 </details>
 
 ## Bot SSO token error
+
 <br>
 <details>
 <summary>Token exchange failure.</summary>
@@ -149,7 +150,7 @@ To understand the bot behavior when the token exchange fails to trigger a consen
 1. The client starts a conversation with the bot triggering an OAuth scenario.
 2. The bot sends back an OAuth card to the client.
 3. The client intercepts the OAuth card before displaying it to the app user. It checks if it contains a `TokenExchangeResource` property.
-4. If the property exists, the client sends a `TokenExchangeInvokeRequest` to the bot. The client must have an exchangeable token for the user. This token must be an Azure AD v2 token whose audience must be the same as `TokenExchangeResource.Uri` property. 
+4. If the property exists, the client sends a `TokenExchangeInvokeRequest` to the bot. The client must have an exchangeable token for the user. This token must be an Azure AD v2 token whose audience must be the same as `TokenExchangeResource.Uri` property.
 1. The client sends an invoke activity to the bot with the following code:
 
     ```json
@@ -181,4 +182,12 @@ To understand the bot behavior when the token exchange fails to trigger a consen
 
 6. If the `TokenExchangeInvokeResponse` has a `status` of `200`, then the client doesn't show the OAuth card. See the [normal flow image](/azure/bot-service/bot-builder-concept-sso?view=azure-bot-service-4.0#sso-components-interaction&preserve-view=true). For any other `status` or if the `TokenExchangeInvokeResponse` isn't received, then the client shows the OAuth card to the user. See the [fallback flow image](/azure/bot-service/bot-builder-concept-sso?view=azure-bot-service-4.0#sso-components-interaction&preserve-view=true). If there are any errors or unmet dependencies like user consent, this activity ensures that the SSO flow falls back to normal OAuthCard flow.
 
+   > [!NOTE]
+   >
+   > In Teams web client, the password prompt doesn't appear as there is an active Azure AD session in the browser, which is used for authentication and to acquire a token. In Teams desktop client, the password prompt appears because the desktop client doesn't have any Azure AD session to be shared and is asked to login.
+
 </details>
+
+## See also
+
+[Security best practices for application properties in Azure Active Directory](/azure/active-directory/develop/security-best-practices-for-app-registration)

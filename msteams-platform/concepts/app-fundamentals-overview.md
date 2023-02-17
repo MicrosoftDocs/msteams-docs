@@ -11,7 +11,7 @@ ms.author: lajanuar
 
 Building an awesome Teams app is all about finding the right combination of features to meet your user's needs. The design, features, and capabilities of an app stem from this purpose.
 
-At its heart, Teams is a collaboration platform. It's also a social platform and is natively cross-platform that sits at the heart of Office 365 and offers personal canvas for you to create apps.
+At its heart, Teams is a collaboration platform. It's also a social platform and is natively cross-platform that sits at the heart of Microsoft 365 and offers a personal canvas for you to create apps.
 
 In this section, learn how to:
 
@@ -38,6 +38,8 @@ Understanding the user and their concern are the first indicators of how a Teams
 
 * **Map your use cases**: Map common use cases to Teams features based on requirements, such as sharing, collaborating, workflows, relevant social platforms, and more.
 
+* **Plan analytics for your Teams app**: Plan to analyze the analysis and instrumentation data against your business goals, take corrective action by fixing issues, and intervening in the user journey or plan further enhancements to your app.
+
 * **Plan responsive tabs for Teams mobile**: It covers common scenarios and helps with planning apps for Teams mobile.
 
 ### During build
@@ -55,6 +57,8 @@ Understanding the user and their concern are the first indicators of how a Teams
     Together, these capabilities bring your app solution to life.
 
 * **Integrate device capabilities**: You can integrate the native device capabilities in your app, such as camera, QR or barcode scanner, photo gallery, microphone, and location.
+
+* **Instrument code for analytics**: Instrument your Teams app code with analytics markers (also known as instrumentation markers) to measure both aggregate and user-specific metrics for your app when app users use it.
 
 ### Post-build
 
@@ -74,7 +78,7 @@ The following table includes Teams features and availability for GCC, GCC-High, 
 | 3P or third-party apps | ✔️ Third-party apps are available. Disabled by default and tenant admin use their own discretion to enable it. | ❌ | ❌ |
 | Bots | ✔️ | ✔️ | ❌ |
 | Custom or Lob tab apps |  ✔️ | ✔️ | ✔️ |
-| Sideloading apps | ✔️ | ✔️ | ❌ |
+| Sideloading apps | ✔️ | ❌ | ❌ |
 | Custom or Lob bots | ✔️ | ✔️ | ❌ |
 | Custom message extensions | ✔️ | ✔️ | ❌ |
 | Custom connectors | ✔️ | ❌ | ❌ |
@@ -86,7 +90,7 @@ The following list helps to identify the availability of GCC, GCC-High, and DOD 
 * For third-party apps, see [web apps](../samples/integrating-web-apps.md) and [meeting app extensibility](../apps-in-teams-meetings/teams-apps-in-meetings.md).
 * For bots, see [build your first conversational bot for Teams](../get-started/first-app-bot.md), [designing your Teams bot](../bots/design/bots.md), [add bots to Microsoft Teams apps](../resources/bot-v3/bots-overview.md), and [bots in Teams](../bots/what-are-bots.md).
 * For sideloading apps, see [enable your Teams app to be customized](../concepts/design/enable-app-customization.md), [distribute your Microsoft Teams app](../concepts/deploy-and-publish/apps-publish-overview.md), and [Upload your app in Teams](../concepts/deploy-and-publish/apps-upload.md).
-* For custom connectors, see [create Office 365 connectors for Teams](../webhooks-and-connectors/how-to/connectors-creating.md).
+* For custom connectors, see [create connectors for Microsoft 365 Groups for Teams](../webhooks-and-connectors/how-to/connectors-creating.md).
 
 </details>
 
@@ -97,6 +101,9 @@ The following list helps to identify the availability of GCC, GCC-High, and DOD 
 
 ## See also
 
+* [Get started](../get-started/get-started-overview.md)
 * [Planning checklist](../concepts/design/planning-checklist.md)
 * [Considerations for Teams integration](../samples/integrating-web-apps.md)
-* [Build your first Microsoft Teams app](../build-your-first-app/build-first-app-overview.md)
+* [Plan responsive tabs for Teams mobile](design/plan-responsive-tabs-for-teams-mobile.md)
+* [Device capabilities](device-capabilities/device-capabilities-overview.md)
+* [Authenticate users in Microsoft Teams](authentication/authentication.md)

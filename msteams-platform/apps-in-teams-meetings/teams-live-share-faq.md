@@ -48,7 +48,7 @@ Any data sent or stored through Fluid containers created by Live Share's hosted 
 
 <summary><b>What meeting types does Live Share support?</b></summary>
 
-Scheduled meetings, one-on-one calls, group calls, and meet now are supported. Channel meetings aren't yet supported.
+Scheduled meetings, one-on-one calls, group calls, meet now, and channel meetings are supported.
 
 <br>
 
@@ -122,13 +122,23 @@ While Live Share is in Preview, any limit to events emitted through Live Share i
 
 </details>
 
+<details>
+<summary><b>Is Live Share supported for Government Community Cloud (GCC), Government Community Cloud High (GCC-High), and Department of Defense (DOD) tenants?</b></summary>
+
+Live Share isn't supported for GCC, GCC-High, and DOD tenants.
+
+<br>
+
+</details>
+
 ## Have more questions or feedback?
 
 Submit issues and feature requests to the SDK repository for [Live Share SDK](https://github.com/microsoft/live-share-sdk). Use the `live-share` and `microsoft-teams` tag to post how-to questions about the SDK at [Stack Overflow](https://stackoverflow.com/questions/tagged/live-share+microsoft-teams).
 
 ## See also
 
+* [Apps for Teams meetings](teams-apps-in-meetings.md)
 * [GitHub repository](https://github.com/microsoft/live-share-sdk)
 * [Live Share SDK reference docs](/javascript/api/@microsoft/live-share/)
 * [Live Share Media SDK reference docs](/javascript/api/@microsoft/live-share-media/)
-* [Teams apps in meetings](teams-apps-in-meetings.md)
+* [Use Fluid with Teams](../tabs/how-to/using-fluid-msteam.md)
