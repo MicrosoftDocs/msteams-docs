@@ -46,7 +46,7 @@ A core product-led growth initiative, capture Teams marketplace trials, trials s
 <details>
 <summary>Continuously reduce churn via product and analytics-led insights</summary>
 
-Retaining users by providing them a sticky experience is key to growing your Teams app and realizing economic value from your product and GTM investments. Ensure that you’ve [implemented robust and granular analytics](../../../../design/overview-analytics.md) for your Teams app. It should serve your need to measure when and which users have churned or are likely to churn from your app. You can them re-engage and retarget them via outreach channels within or outside your product.
+Retaining users by providing them with a sticky experience is key to growing your Teams app and realizing economic value from your product and GTM investments. Ensure that you’ve [implemented robust and granular analytics](../../../../design/overview-analytics.md) for your Teams app. It should serve your need to measure when and which users have churned or are likely to churn from your app. You can them re-engage and retarget them via outreach channels within or outside your product.
 
 </details>
 <br>
@@ -94,7 +94,7 @@ Microsoft will evaluate co-activation opportunities in large customer accounts. 
 <details>
 <summary>Include in Microsoft exec blog or flagship event endorsement</summary>
 
-Get the power of the Microsoft executive team behind your next leadership blog or event. Review your plans for blogs or events in which you'll be participating. Develop ideas on how a Microsoft executive can help to promote your commercial marketplace offer in a blog or at an event. Reach out to the ISV Marketplace Success Rewards Program team to request Microsoft executive endorsement, where your eligibility will be checked. After that, the team will work with you to find a Microsoft executive (Director level or higher) to help endorse your Teams collaborative app available on the marketplace.
+Get the power of the Microsoft executive team behind your next leadership blog or event. Review your plans for blogs or events in which you'll be participating. Develop ideas on how a Microsoft executive can help to promote your commercial marketplace offer in a blog or at an event. Reach out to the ISV Marketplace Success Rewards Program team to request Microsoft executive endorsement, where your eligibility is checked. After that, the team will work with you to find a Microsoft executive (Director level or higher) to help endorse your Teams collaborative app available on the marketplace.
 
 </details>
 <br>

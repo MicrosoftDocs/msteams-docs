@@ -73,7 +73,7 @@ Your customer success team must set up time to introduce your new Teams app to t
 <details>
 <summary>App activation in pre-identified pilot Teams customers</summary>
 
-Before shipping the Teams app on the marketplace, you would have identified 3-5 pilot customers with whom you reviewed the envisioned app scenarios and designed mocks to build confidence towards the product you’re building. It’s now time to use your customer success team to activate those select 3-5 customers. It won't only lead towards product-market fit but also serve as a source of rich customer feedback to improve the app in future versions.
+Before shipping Teams app on the marketplace, you'd have identified three to five pilot customers with whom you reviewed the envisioned app scenarios and designed mocks to build confidence towards the product you’re building. It’s time to use your customer success team to activate those select three to five customers. It won't only lead towards product-market fit but also serve as a source of rich customer feedback to improve the app in future versions.
 
 [Back to top](#what-should-you-do-during-the-traction-stage)
 </details>
@@ -99,7 +99,7 @@ One of the goals of the Traction stage is to build readiness for future adoption
 <details>
 <summary>Microsoft 365 Certification to make Teams app enterprise-ready</summary>
 
-The Microsoft 365 Certification is designed to show customers that your collaborative app has been vetted against controls derived from leading industry-standard frameworks. It also showcases that strong security, privacy, and compliance practices are in place to protect customer data when the app is in use. Since most Teams customers are large enterprises, having your app Microsoft 365 certified helps in building trust with the IT admins.
+The Microsoft 365 Certification is designed to show customers that your collaborative app is vetted against controls derived from leading industry-standard frameworks. It also showcases that strong security, privacy, and compliance practices are in place to protect customer data when the app is in use. Since most Teams customers are large enterprises, having your app Microsoft 365 certified helps in building trust with the IT admins.
 
 For more information, see [Microsoft 365 certification](/microsoftteams/overview-of-app-certification#microsoft-365-certification).
 
@@ -113,7 +113,7 @@ Find more about certification 4[here](https://cloudpartners.transform.microsoft.
 
 While during the launch stage, you used transient banners, notifications bar, what’s new notifications inside the SaaS product’s UI for all users to announce your Teams app. It’s time now to nudge users who may be using Microsoft Teams to start using your collaborative app for scenarios that are better together in Teams vs. your core web SaaS experience.
 
-Surface [deeplinks](/concepts/build-and-test/deep-links?tabs=teamsjs-v2) within your browser-based web SaaS experience to transport users to specific views inside your Teams app (for example, personal app, tabs, conversational bot or meeting extensions with shared meeting stage or in-meeting tab). You can implement the highly recommended [Share to Teams](../../../../build-and-test/share-to-teams-from-web-apps.md) control within your browser-based web SaaS experience to enable users to share and start collaborating around a content or object from your SaaS product inside Teams with their colleagues.
+Surface [deep links](/concepts/build-and-test/deep-links?tabs=teamsjs-v2) within your browser-based web SaaS experience to transport users to specific views inside your Teams app (for example, personal app, tabs, conversational bot or meeting extensions with shared meeting stage or in-meeting tab). You can implement the highly recommended [Share to Teams](../../../../build-and-test/share-to-teams-from-web-apps.md) control within your browser-based web SaaS experience to enable users to share and start collaborating around a content or object from your SaaS product inside Teams with their colleagues.
 
   :::image type="content" source="../../../../../assets/images/app-fundamentals/drive-traffic-saas-app.png" alt-text="Drive traffic from your SaaS app.":::
 

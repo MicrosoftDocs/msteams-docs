@@ -91,15 +91,15 @@ While building traction, you showcased the collaborative app in Teams during you
 </details>
 <br>
 <details>
-<summary>User re-targeting and re-engagement basis app analytics</summary>
+<summary>User retargeting and re-engagement basis app analytics</summary>
 
 Product-led growth initiative uses signals from your app analytics. It retargets users who have recently engaged with your app in Teams but haven't reached a value realization milestone defined by you.
 
-Users who have not visited your app or churned recently can be re-engaged to bring back to your app.
+Users who haven't visited your app or churned recently can be re-engaged to bring back to your app.
 
 Remember, your goal is to get users to experience value by using your collaborative app.
 
-You can convert user who try your app to sticky, habitual users and eventually convert into paying customers.
+You can convert a user who tries your app to sticky, habitual users and eventually convert into paying customers.
 
 [Back to top](#what-should-you-do-during-the-scale-stage)
 </details>
@@ -107,9 +107,9 @@ You can convert user who try your app to sticky, habitual users and eventually c
 <details>
 <summary>Co-activation in mutually identified existing customers</summary>
 
-Based on the list you’ve shared with the Microsoft field, account, or engineering representatives while building traction, it’s time to execute co-activation and adoption of your collaborative app in customer accounts with significant seat sizes. Your customer success team will play a major driving role in this motion. They can work alongside business decision makers, IT decision makers, and end-users that is, employees of the customer organization who are going to use your app inside Teams.
+Based on the list you’ve shared with the Microsoft field, account, or engineering representatives while building traction, it’s time to execute co-activation and adoption of your collaborative app in customer accounts with significant seat sizes. Your customer success team will play a major driving role in this motion. They can work alongside business decision makers, IT decision makers, and end-users, that is, employees of the customer organization who are going to use your app inside Teams.
 
-Just enabling the app inside Teams won't be enough. Instead, adoption and change management practices led by your customer success team through organization-wide emailers at regular cadences, flyers, retention campaigns, user trainings, identifying and scaling through app champions in each team and constantly keeping an eye on app usage metrics within the customer’s tenant is required to form a habit among users.
+Just enabling the app inside Teams won't be enough. Instead, adoption and change management practices led by your customer success team through organization-wide emails at regular cadences, flyers, retention campaigns, user trainings, identifying and scaling through app champions in each team and constantly keeping an eye on app usage metrics within the customer’s tenant is required to form a habit among users.
 
 [Back to top](#what-should-you-do-during-the-scale-stage)
 </details>

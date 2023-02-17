@@ -15,7 +15,7 @@ Growing your app is a journey. It's a process that’s not overnight and goes th
 
 - **Build stage**: In this stage, developers plan, envision, design, build, and publish their collaborative app on the Microsoft Teams marketplace. The Teams developer platform documentation is the one-stop shop for platform features, best practices, and developer guidance. Strategic developers can join an invite-only Teams engineering’s build-with partner program on this journey.
 
-- **Launch stage**: After the collaborative app is published on the Teams marketplace, this is the stage where launch marketing initiatives are executed for the app to announce the availability of the app for existing and new or prospective customers.
+- **Launch stage**: After the collaborative app is published on the Teams marketplace, launch marketing initiatives are executed for the app to announce the availability of the app for existing and new or prospective customers.
 
 - **Traction stage**: This stage has dual purpose and focus:
 
@@ -24,7 +24,7 @@ Growing your app is a journey. It's a process that’s not overnight and goes th
 
   Most growth and GTM activities during this stage are pilots to discover effectiveness, learning and execution rhythms. When the app crosses the *traction barrier*, one can say it has achieved product market fit in Teams marketplace and ecosystem.
 
-- **Scale stage**: This stage encompasses scaling in the market on the back of activation in existing customers who use the SaaS app outside Teams and selling to new customers through product-, sales- and channel- led initiatives. Growth and GTM activities become more programmatic at this stage. When the app crosses the scale barrier, often also referred to as the *growth barrier*, one can conclude the apps is ready to deliver on the business goals and starts to deliver ROI on engineering and GTM investments.
+- **Scale stage**: This stage encompasses scaling in the market on the back of activation in existing customers who use the SaaS app outside Teams and selling to new customers through product-led, sales-led, and channel-led initiatives. Growth and GTM activities become more programmatic at this stage. When the app crosses the scale barrier, often also referred to as the *growth barrier*, one can conclude the apps is ready to deliver on the business goals and starts to deliver ROI on engineering and GTM investments.
 
 - **Succeed stage**: The final stage of the Teams collaborative app lifecycle is where the app moves from being a product integration built on Teams into a full-fledged strategic product line just as the core SaaS product for the web browser or native apps for Windows or mobile phones.
 
@@ -38,7 +38,7 @@ Growing your app is a journey. It's a process that’s not overnight and goes th
 
 ## Step-by-step guide to grow your app
 
-Get started first by reviewing (and sharing with your GTM leaders) this high-level visual Guide to ISV success with Microsoft for Teams Partners flipbook. This resource orients you about how to plan and strategize your Teams app offering, insights about key industry-wise personas and trends, how to define your app’s value proposition, create content to maximize your app’s reach among customers and sellers, access various partner benefits available to you, how to visualize a simplistic customer journey with your app, how to align your marketing activities with key opportunities from Microsoft and how to sell your app via Microsoft’s global marketplace. As you can see from the flipbook, Microsoft partners with app developers once they’ve launched their apps on the marketplace by offering select, programmatic GTM investments depending on the app’s maturity in the market. You are encouraged to get in touch with your Microsoft field, account or engineering representatives before spending cycles on your app growth planning and execution, so that you can get the most appropriate guidance you’re eligible for.
+Get started first by reviewing (and sharing with your GTM leaders) this high-level visual Guide to ISV success with Microsoft for Teams Partners flipbook. This resource orients you about how to plan and strategize your Teams app offering, insights about key industry-wise personas and trends, how to define your app’s value proposition, create content to maximize your app’s reach among customers and sellers, access various partner benefits available to you, how to visualize a simplistic customer journey with your app, how to align your marketing activities with key opportunities from Microsoft and how to sell your app via Microsoft’s global marketplace. As you can see from the flipbook, Microsoft partners with app developers once they’ve launched their apps on the marketplace by offering select, programmatic GTM investments depending on the app’s maturity in the market. You're encouraged to get in touch with your Microsoft field, account or engineering representatives before spending cycles on your app growth planning and execution, so that you can get the most appropriate guidance you’re eligible for.
 
 It's time now to expand on the preview provided by the flipbook above! The following sections offer a stage-by-stage  descriptive guide elaborating on the various growth initiatives developers can plan and execute and where Microsoft can help.
 
