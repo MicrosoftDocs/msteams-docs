@@ -95,23 +95,17 @@ The following growth levers are pertinent at this stage:
 
 You can generate interest from both existing and new customers. You can also drive traffic to your app‘s landing page or directly to the app’s listing in Teams Marketplace. It can be done through social media posts and paid campaigns executed on your social channels.
 
-Remember to include media, such as a video or an animated gif in your post to make it rich and interactive. Tag @M365 and @MicrosoftTeamsi in your posts. Use the hashtags #Teamsapps, #MicrosoftTeams, #TeamsISV throughout the year in social media posts for your collaborative app. It aids in extending exposure and flagging Microsoft’s social team for a potential retweet.
+Remember to include media, such as a video or an animated gif in your post to make it rich and interactive. Tag @M365 and @MicrosoftTeams in your posts. Use the hashtags #Teamsapps, #MicrosoftTeams, #TeamsISV throughout the year in social media posts for your collaborative app. It aids in extending exposure and flagging Microsoft’s social team for a potential retweet.
 
-:::row:::
-    :::column span="":::
+  :::image type="content" source="../../../../../assets/images/app-fundamentals/social-media-posts.png" alt-text="Social media posts":::
 
-        :::image type="content" source="../../../../../assets/images/app-fundamentals/social-media-posts.png" alt-text="Social media posts":::
+Connect with the [Microsoft 365 ISV Benefits Service Desk](mailto:ModernWorkISVPartner@microsoft.com) to seek guidance for your social media campaign and possible collaboration with Microsoft for execution. You can also seek help for the success metrics you should measure, such as:
 
-    :::column-end:::
-    :::column span="":::
-        Connect with the [Microsoft 365 ISV Benefits Service Desk](mailto:ModernWorkISVPartner@microsoft.com) to seek guidance for your social media campaign and possible collaboration with Microsoft for execution. You can also seek help for the success metrics you should measure, such as:
-        - Number of views or clicks on your social posts.
-        - Number of visitors on your landing page.
-        - Number of MQLs generated on the landing page.
-        - Number of visitors to the app’s listing in marketplace.
-        - Number of Teams app installs post launch.
-    :::column-end:::
-:::row-end:::
+- Number of views or clicks on your social posts.
+- Number of visitors on your landing page.
+- Number of MQLs generated on the landing page.
+- Number of visitors to the app’s listing in marketplace.
+- Number of Teams app installs post launch.
 
 [Back to top](#what-should-you-do-during-the-launch-stage)
 </details>
@@ -142,7 +136,7 @@ Use PRs to publicly announce the application you've built and your collaboration
 > [!NOTE]
 > Press releases and quotes must be reviewed by Microsoft representatives.
 
-Connect with the ISV Marketplace Success Rewards Program team to avail of the service to review your press release draft and get a quote from Microsoft. Once you publicly post your press release, evangelize through other channels. Microsoft doesn't post partner press releases. // Example press releases. //
+Connect with the ISV Marketplace Success Rewards Program team to avail of the service to review your press release draft and get a quote from Microsoft. Once you publicly post your press release, evangelize through other channels. Microsoft doesn't post partner press releases. <!--...// Example press releases. // --->
 
 [Back to top](#what-should-you-do-during-the-launch-stage)
 </details>
@@ -165,8 +159,6 @@ The banner or notification CTA can direct users to your app‘s landing page or 
 <summary>Freemium experience, free  and extended trials for new Teams users</summary>
 
 Since your goal at this stage is to achieve product-market fit for your app, it’s critical to learn how users are perceiving your new app and if they’re getting the intended value by using the app. If you have a freemium SaaS offering, offer a limited feature set in your Teams app for free. If not already done for your core SaaS product, offer free trials to users who sign up for your app (and SaaS service) through the Teams store. If you already offer trials for your SaaS product and your standard free trial period is 15 days, consider extending the trial period for Teams users to 30-60 days.
-
-:::image type="content" source="../../../../../assets/images/app-fundamentals/trials-store-listing.png.png" alt-text="Free or extended trials in app store listing and FRE flow.":::
 
 Given you’ve built your Teams app for collaborative use cases, you'll naturally want trial users to invite their colleagues as well to use your app in shared context inside Teams. An extended trial facilitates collaborative evaluation of your app and increases the likelihood of these users converting to paid and sticky customers.
 
@@ -200,15 +192,14 @@ Ensure that you introduce your Teams app, its usage, and its value proposition f
 <details>
 <summary>App Bill of Materials: Pitch deck, value prop, demo, datasheets, and so on</summary>
 
+To help Microsoft’s customer-facing teams talk about your app, we encourage you to develop Go-to-  Market Bill of Materials (GTM BOM). This bill of materials enables thousands of Microsoft customer-facing personnel to successfully discuss and demonstrate the benefits of your app when meeting with customers.
+
 :::row:::
-    :::column span="":::
-    :::image type="content" source="../../../../../assets/images/app-fundamentals/app-bill-a.png" alt-text="App bill material":::
+    :::column:::
+        :::image type="content" source="../../../../../assets/images/app-fundamentals/app-bill-a.png" alt-text="App bill material.":::
     :::column-end:::
-    :::column span="3":::
-    To help Microsoft’s customer-facing teams talk about your app, we encourage you to develop Go-to-  Market Bill of Materials (GTM BOM). This bill of materials enables thousands of Microsoft customer-facing personnel to successfully discuss and demonstrate the benefits of your app when meeting with customers.
-    :::column-end:::
-    :::column span="":::
-    :::image type="content" source="../../../../../assets/images/app-fundamentals/app-bill-b.png" alt-text="App bill of materials":::
+    :::column:::
+  :::image type="content" source="../../../../../assets/images/app-fundamentals/app-bill-b.png" alt-text="App bill of materials.":::
     :::column-end:::
 :::row-end:::
 

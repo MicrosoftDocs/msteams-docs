@@ -75,14 +75,7 @@ Generate interest from new customer accounts. Drive traffic to your collaborativ
 <details>
 <summary>Publish customer demand and app’s impact story</summary>
 
-:::row:::
-    :::column span="3":::
-        Share real customer stories using a 4–5-minute video. Showcase increased employee productivity caused by using your collaborative app inside Teams. Use this video for demand generation, digital marketing campaigns or showcased on public pages. Nominate a customer and gain their commitment to participate in the story. Work with the customer on the narrative. Ensure that you include the benefits derived from your collaborative app. You can also talk about the added productivity gains seen by the customer (quantifiable gains are preferred).
-    :::column-end:::
-    :::column span="":::
-        :::image type="content" source="../../../../../assets/images/app-fundamentals/customer-story-isv.png" alt-text="Customer story on the landing story of ISV website.":::
-    :::column-end:::
-:::row-end:::
+Share real customer stories using a 4–5-minute video. Showcase increased employee productivity caused by using your collaborative app inside Teams. Use this video for demand generation, digital marketing campaigns or showcased on public pages. Nominate a customer and gain their commitment to participate in the story. Work with the customer on the narrative. Ensure that you include the benefits derived from your collaborative app. You can also talk about the added productivity gains seen by the customer (quantifiable gains are preferred).
 
 After developing it, host these customer stories on the landing page of the Teams app on your website. Promote it via paid, earned media, or social media posts to highlight the success of the app.
 
@@ -100,20 +93,13 @@ While building traction, you showcased the collaborative app in Teams during you
 <details>
 <summary>User re-targeting and re-engagement basis app analytics</summary>
 
-:::row:::
-    :::column span="3":::
-        Product-led growth initiative uses signals from your app analytics. It retargets users who have recently engaged with your app in Teams but haven't reached a value realization milestone defined by you.
+Product-led growth initiative uses signals from your app analytics. It retargets users who have recently engaged with your app in Teams but haven't reached a value realization milestone defined by you.
 
-    Users who have not visited your app or churned recently can be re-engaged to bring back to your app.
+Users who have not visited your app or churned recently can be re-engaged to bring back to your app.
 
-    Remember, your goal is to get users to experience value by using your collaborative app.
+Remember, your goal is to get users to experience value by using your collaborative app.
 
-    You can convert user who try your app to sticky, habitual users and eventually convert into paying customers.
-    :::column-end:::
-    :::column span="":::
-        :::image type="content" source="../../../../../assets/images/app-fundamentals/remarket-retarget.png" alt-text="Re-market via emails and retarget using Teams notifications." lightbox="../../../../../assets/images/app-fundamentals/remarket-retarget.png":::
-    :::column-end:::
-:::row-end:::
+You can convert user who try your app to sticky, habitual users and eventually convert into paying customers.
 
 [Back to top](#what-should-you-do-during-the-scale-stage)
 </details>
@@ -145,14 +131,7 @@ Ensure that you instrument code and track analytics for your app from the first 
 
 Microsoft will evaluate co-activation opportunities in large customer accounts. Evaluation is based on customer interest, adoption opportunity (sold seat size in customer account), and so on, among other criteria.
 
-:::row:::
-    :::column span="3":::
-        - **Support joint customer success story development** Connect with the ISV Marketplace Success Rewards Program team to seek guidance and execute. You'll be able to utilize Microsoft slide templates, customer story intake form, customer interview template, and vendor video production, or copy writing services. Introduce the creative team to the customer. Help facilitate the interviews and review processes until the story is approved by all parties. The Microsoft 365 ISV Benefits team will make sure your customer story is published to the internal Microsoft Teams Platform Resource Library and the Transformed by Teams portal.
-    :::column-end:::
-    :::column span="":::
-        :::image type="content" source="../../../../../assets/images/app-fundamentals/customer-success-story-1.png" alt-text="Teams customer success story.":::
-    :::column-end:::
-:::row-end:::
+**Support joint customer success story development** Connect with the ISV Marketplace Success Rewards Program team to seek guidance and execute. You'll be able to utilize Microsoft slide templates, customer story intake form, customer interview template, and vendor video production, or copy writing services. Introduce the creative team to the customer. Help facilitate the interviews and review processes until the story is approved by all parties. The Microsoft 365 ISV Benefits team will make sure your customer story is published to the internal Microsoft Teams Platform Resource Library and the Transformed by Teams portal.
 
 </details>
 <br>

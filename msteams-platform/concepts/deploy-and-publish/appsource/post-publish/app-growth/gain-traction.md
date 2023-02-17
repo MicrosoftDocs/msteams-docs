@@ -129,14 +129,7 @@ To get maximum ROI, surface the nudges contextually for scenarios that are inher
 
 The Microsoft Teams store editorial team curates editorial sections on the in-product app store based on various ranking parameters.
 
-:::row:::
-    :::column span="3":::
-        Editorial articles provide a list of app suggestions to users within the store that meet specific scenario objectives. It includes a clear call-to-action to install the app while reading the article. Get in touch with the Microsoft field, account, or engineering representatives or connect with the ISV Marketplace Success Rewards Program team to feature your app in these Editorial Articles.
-    :::column-end:::
-    :::column span="":::
-        :::image type="content" source="../../../../../assets/images/app-fundamentals/editorial-articles.png" alt-text="Editorial articles.":::
-    :::column-end:::
-:::row-end:::
+Editorial articles provide a list of app suggestions to users within the store that meet specific scenario objectives. It includes a clear call-to-action to install the app while reading the article. Get in touch with the Microsoft field, account, or engineering representatives or connect with the ISV Marketplace Success Rewards Program team to feature your app in these Editorial Articles.
 
 </details>
 <br>

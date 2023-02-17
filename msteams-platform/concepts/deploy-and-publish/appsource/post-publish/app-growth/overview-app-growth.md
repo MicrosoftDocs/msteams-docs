@@ -30,22 +30,13 @@ You’ll probably not be surprised to hear that not all apps are equal on any ma
 
 1. **Build a *collaborative app* product line**: Provide Teams users a unique, differentiated, rich, familiar, end to end and deeply immersive experience – all contained in Teams and centered around collaboration versus individual productivity. [Collaborative apps](https://www.microsoft.com/en-us/microsoft-365/blog/2021/11/02/stay-in-the-flow-of-work-with-new-collaborative-apps-for-microsoft-teams/), a new app pattern designed to bring people, processes, and data together to help users thrive in the hybrid workplace are positioned to completely transform how people in every organization do more together with the help of ubiquitous software in the flow of work. Collaborative apps offer an experience that’s preferred by the user over other channels where the app exists and often make use of one of more Teams-only capabilities such as meeting extensions, Live Share, Graph APIs, message extensions, and so on to deliver this significant additional user value, on top of tablestake scenarios.
 
-:::row:::
-    :::column span="2":::
-        Needless to say, from these options, the strategy you'll take will determine:
+Needless to say, from these options, the strategy you'll take will determine:
 
-        - The resulting user value.
-        - The economic opportunity for you.
-        - How you can maximize the ROI from your investments.
+- The resulting user value.
+- The economic opportunity for you.
+- How you can maximize the ROI from your investments.
 
-        You are not necessarily constrained by picking only one out of the above approaches – your investment can start from (a) and move towards (b) and eventually culminate at (c). This document assumes you’ve taken a strategic view of your Teams investment by developing a *collaborative app*. In such an app, the user is able to get designated *jobs* seamlessly and preferably done, in the flow of their work with full context, without leaving Microsoft Teams. Collaborative apps are best positioned to win new customer deals for you and upsell or cross-sell to your existing customers. For this reason, this investment has the potential to deliver the highest net new economic opportunity for your business.
-    :::column-end:::
-    :::column span="":::
-
-        :::image type="content" source="../../../../../assets/images/app-fundamentals/app-growth-flyheel.png" alt-text="Teams centric app growth flywheel for the developer" border="false":::
-
-    :::column-end:::
-:::row-end:::
+You are not necessarily constrained by picking only one out of the above approaches – your investment can start from (a) and move towards (b) and eventually culminate at (c). This document assumes you’ve taken a strategic view of your Teams investment by developing a *collaborative app*. In such an app, the user is able to get designated *jobs* seamlessly and preferably done, in the flow of their work with full context, without leaving Microsoft Teams. Collaborative apps are best positioned to win new customer deals for you and upsell or cross-sell to your existing customers. For this reason, this investment has the potential to deliver the highest net new economic opportunity for your business.
 
 Using the guidance in this document, you can grow your collaborative app on Teams and expand differentiated scenarios further. You can also incorporate Teams-first or Teams-only use cases, and devise a Teams app-led go-to-market model to build a growth flywheel for your business.
 
@@ -80,9 +71,10 @@ Product investments encompass feature planning and enhancements to your collabor
     :::column span="":::
         **Why should you do this? What impact will this have?**
 
-        - Teams users consistently get unique, differentiated, and collaborative value through newer, elevated experiences in your app.
+        - Teams users consistently get unique, differentiated, and collaborative value through newer, elevated experiences in your app. The value and experience of your app is better inside Teams vs outside Teams.
         - You’re able to deliver a high-quality, bug free experience to end-users and action on incoming user feedback faster.
-        - You’re able to deliver feature parity between your collaborative app in Teams and core SaaS app in the browser.
+        - You’re able to go beyond parity and leverage the unique context and surface area inside Microsoft 365 to deliver an enhanced, better together productivity experience.
+        - You’re able to deliver feature parity between your collaborative app in Teams and core SaaS app experience you offer in the browser and native mobile clients (or use Teams app as your offering for mobile audience).
         - You’re able to innovate and stay ahead of the competition. You can use the latest, cutting-edge platform features released to public or in developer preview by Microsoft. 
     :::column-end:::
     :::column span="":::

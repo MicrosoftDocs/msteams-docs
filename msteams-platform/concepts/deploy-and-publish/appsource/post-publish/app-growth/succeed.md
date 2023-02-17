@@ -57,8 +57,6 @@ Innovation, grounded in customer needs, is the key to sustainably grow and succe
 
 Ensure that you monitor reviews for your app on the marketplace, user feedback coming from in-product surveys, and user behavior insights. You must also monitor app engagement analytics you’ve implemented in your app. Also, monitor customer inputs relayed by the Microsoft field, account, or engineering representatives. It helps you to continue investing in new scenarios and enhanced user experience for your app. Keep an eye on your competitors and other leading SaaS apps in your segment to continuously learn from the market and evolve your app’s strategy and roadmap.
 
-  :::image type="content" source="../../../../../assets/images/app-fundamentals/feedback-teams-app.png" alt-text="Collect user feedback within the developer’s Teams app through contextual, micro-surveys.":::
-
 Since Teams marketplace is public, you can use your product team can at the minimum use the Microsoft 365 developer tenant to experience other apps. Strategic developers, who are part of the invite-only Teams engineering’s build-with partner program, can get early access to new and latest cutting-edge collaborative features on Teams app platform. It's an opportunity for you to deliver unparalleled value to customers and use global GTM and marketing moments, being an early adopter to showcase new innovation on Teams.
 
 </details>
@@ -82,14 +80,7 @@ Strategic developers can be a part of the invite-only Teams engineering’s buil
 <details>
 <summary>Case Study on Microsoft’s public customers portal</summary>
 
-:::row:::
-    :::column span="3":::
-        Impactful case studies of how investing a Teams app resulted in growth for your SaaS business and how customers using your app got impacted can be published on the following customer-facing sites: [Microsoft 365 ISV Benefits Program Success Stories](https://cloudpartners.transform.microsoft.com/practices/modernworkisv?tab=success-stories) and [Customer Stories](https://customers.microsoft.com/en-us/search?sq=&ff=story_industry_friendlyname%26%3EPartner%20Professional%20Services%26%26story_product_categories%26%3EMicrosoft%20Teams&p=5&so=cam_rank%20desc) on Microsoft.com. Connect with your Teams engineering representatives or the ISV Marketplace Success Rewards Program team to check eligibility, seek guidance, and execute this motion.
-    :::column-end:::
-    :::column span="":::
-        :::image type="content" source="../../../../../assets/images/app-fundamentals/isv-site-success-story.png" alt-text="Modern work ISV site showing customer success stories.":::
-    :::column-end:::
-:::row-end:::
+Impactful case studies of how investing a Teams app resulted in growth for your SaaS business and how customers using your app got impacted can be published on the following customer-facing sites: [Microsoft 365 ISV Benefits Program Success Stories](https://cloudpartners.transform.microsoft.com/practices/modernworkisv?tab=success-stories) and [Customer Stories](https://customers.microsoft.com/en-us/search?sq=&ff=story_industry_friendlyname%26%3EPartner%20Professional%20Services%26%26story_product_categories%26%3EMicrosoft%20Teams&p=5&so=cam_rank%20desc) on Microsoft.com. Connect with your Teams engineering representatives or the ISV Marketplace Success Rewards Program team to check eligibility, seek guidance, and execute this motion.
 
 </details>
 <br>
