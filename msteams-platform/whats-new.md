@@ -40,7 +40,6 @@ Teams platform features that are available to all app developers.
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
 |31/01/2023| Introducing update and soft delete event notifications in bot | Build bots > Bot conversations > [Messages in bot conversations](bots/how-to/conversations/conversation-messages.md#update-message) |
-|27/01/2023| Introducing update and soft delete event notifications in bot | Build bots > Bot conversations > [Introducing update and soft delete event notifications in bot](bots/how-to/conversations/conversation-messages.md#update-message) |
 
 </details>
 </br>
