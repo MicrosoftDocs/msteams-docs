@@ -85,7 +85,7 @@ After developing it, host these customer stories on the landing page of the Team
 <details>
 <summary>Showcase Teams app in leading industry events</summary>
 
-While building traction, you showcased the collaborative app in Teams during your annual customer conference. It’s time to expand the coverage to well-known public industry events where you've a prominent presence or conferences which you sponsor. Your executives can include the Teams app in their keynote or showcase your innovation centre-stage. It's bound to attract both existing and new prospective customers.
+While building traction, you showcased the collaborative app in Teams during your annual customer conference. It’s time to expand the coverage to well-known public industry events where you've a prominent presence or conferences which you sponsor. Your executives can include the Teams app in their keynote or showcase your innovation centre stage. It's bound to attract both existing and new prospective customers.
 
 [Back to top](#what-should-you-do-during-the-scale-stage)
 </details>
@@ -117,9 +117,9 @@ Just enabling the app inside Teams won't be enough. Instead, adoption and change
 <details>
 <summary>Growth hacking via in-product scenario experimentation</summary>
 
-Continuously monitor what’s happening inside your collaborative app through analytics and measure the value end-users are obtaining. To positively impact product and business metrics, such as number of app installs, activation rate, task completing, new user retention and churn, referrals, and so on, a rapid, always-on experimentation work-stream allows byte-sized tweaks to your app experience. It results in more control and lesser risk compared to large changes spaced far apart.
+Continuously monitor what’s happening inside your collaborative app through analytics and measure the value end-users are obtaining. To positively impact product and business metrics, such as number of app installs, activation rate, task completing, new user retention and churn, referrals, and so on, a rapid, always-on experimentation work-stream allows byte-sized tweaks to your app experience. It results in more control and less risk compared to large changes spaced far apart.
 
-Ensure that you instrument code and track analytics for your app from the first version. Upskill your dedicated Teams app crew or your existing SaaS product growth team of PM, development, and design on Teams platform to take ownership of this work-stream to derive maximum ROI.
+Ensure that your instrument code and track analytics for your app from the first version. Upskill your dedicated Teams app crew or your existing SaaS product growth team of PM, development, and design on Teams platform to take ownership of this work-stream to derive maximum ROI.
 
 [Back to top](#what-should-you-do-during-the-scale-stage)
 </details>
@@ -131,7 +131,7 @@ Ensure that you instrument code and track analytics for your app from the first 
 
 Microsoft will evaluate co-activation opportunities in large customer accounts. Evaluation is based on customer interest, adoption opportunity (sold seat size in customer account), and so on, among other criteria.
 
-**Support joint customer success story development** Connect with the ISV Marketplace Success Rewards Program team to seek guidance and execute. You'll be able to utilize Microsoft slide templates, customer story intake form, customer interview template, and vendor video production, or copy writing services. Introduce the creative team to the customer. Help facilitate the interviews and review processes until the story is approved by all parties. The Microsoft 365 ISV Benefits team will make sure your customer story is published to the internal Microsoft Teams Platform Resource Library and the Transformed by Teams portal.
+**Support joint customer success story development** Connect with the ISV Marketplace Success Rewards Program team to seek guidance and execute. You'll be able to utilize Microsoft slide templates, customer story intake form, customer interview template, and vendor video production, or copy writing services. Introduce a creative team to the customer. Help facilitate the interviews and review processes until the story is approved by all parties. The Microsoft 365 ISV Benefits team will make sure your customer story is published to the internal Microsoft Teams Platform Resource Library and the Transformed by Teams portal.
 
 </details>
 <br>

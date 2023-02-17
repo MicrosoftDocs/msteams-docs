@@ -26,7 +26,7 @@ Update the skill of your customer success team in the following ways:
 
 - For existing customers who use Microsoft 365, your customer success team must immediately set up time to introduce your new Teams app to these customers and demo the experience. Then, you can work out a plan to activate these overlapping customers on Teams.
 
-- To achieve product-led growth, you must strategically upskill your customer success teams. The aim is to access and monitor product acquisition, engagement, and task completion. You must also monitor value realization metrics or milestone for customers. For this purpose, use your collaborative Teams app to perform outreach and intervention at the right time to assist users in their journey with your app.
+- To achieve product-led growth, you must strategically upskill your customer success teams. The aim is to access and monitor product acquisition, engagement, and task completion. You must also monitor value realization metrics or milestones for customers. For this purpose, use your collaborative Teams app to perform outreach and intervention at the right time to assist users in their journey with your app.
 
 - In addition, establish a process to channel customer feedback from this team. Use this feedback to inform roadmap planning and growth experimentation for your Teams app. It will be a good idea to have your customer success team conversant in day-to-day usage of Microsoft Teams. It also helps if your team is up to speed with all articles in the Teams admin-facing public documentation sections [Third-party apps in Microsoft Teams](/microsoftteams/overview-third-party-apps) and [Admin controls to govern apps](/microsoftteams/customize-apps). Your customers will need your expertise in these areas.
 
@@ -55,7 +55,7 @@ It will be a good idea to have a support team that’s conversant in day-to-day 
 <details>
 <summary>Showcase Teams app in your annual customer conference</summary>
 
-Your own flagship annual customer or partner conference is the perfect opportunity to announce and showcase your new or updated Teams collaborative app to the world and get immediate traction going. Get in touch with the Microsoft field, account, or engineering representatives to request their participation in to-customer webinars you’re planning to announce and evangelize your Teams collaborative app.
+Your own flagship annual customer or partner conference is the perfect opportunity to announce and showcase your new or updated Teams collaborative app to the world and get immediate traction going. Contact the Microsoft field, account, or engineering representatives to request their participation in to-customer webinars you’re planning to announce and evangelize your Teams collaborative app.
 
 [Back to top](#what-should-you-do-during-the-traction-stage)
 </details>
@@ -83,7 +83,7 @@ Before shipping Teams app on the marketplace, you'd have identified three to fiv
 
 For large, strategic enterprise customers that use your SaaS product and Microsoft Teams, Microsoft’s customer-facing resources can partner with your sales and customer success teams to drive co-activation of your app in the customer organization. Microsoft evaluates co-activation opportunities for apps based on customer interest, adoption opportunity (sold seat size in customer account), and so on, among other criteria.
 
-Get in touch with your field, account, or engineering representatives from Microsoft to request potential co-activation of your Teams collaborative app in strategic enterprise customer accounts.
+Contact your field, account, or engineering representatives from Microsoft to request potential co-activation of your Teams collaborative app in strategic enterprise customer accounts.
 
 [Back to top](#what-should-you-do-during-the-traction-stage)
 </details>
@@ -129,7 +129,7 @@ To get maximum ROI, surface the nudges contextually for scenarios that are inher
 
 The Microsoft Teams store editorial team curates editorial sections on the in-product app store based on various ranking parameters.
 
-Editorial articles provide a list of app suggestions to users within the store that meet specific scenario objectives. It includes a clear call-to-action to install the app while reading the article. Get in touch with the Microsoft field, account, or engineering representatives or connect with the ISV Marketplace Success Rewards Program team to feature your app in these Editorial Articles.
+Editorial articles provide a list of app suggestions to users within the store that meet specific scenario objectives. It includes a clear call-to-action to install the app while reading the article. Contact the Microsoft field, account, or engineering representatives or connect with the ISV Marketplace Success Rewards Program team to feature your app in these Editorial Articles.
 
 </details>
 <br>
@@ -157,7 +157,7 @@ Highlight your Microsoft Teams app in a Microsoft-led digital campaign based on 
 <details>
 <summary>App availability shared internally with field and CPMs</summary>
 
-Drive awareness of your published Microsoft Teams app to the customer-facing roles within Microsoft, such as the field or Teams Engineering’s customer PMs. Get in touch with your Microsoft field, account, or engineering representatives or connect with the [Microsoft 365 ISV Benefits Service Desk](mailto:ModernWorkISVPartner@microsoft.com) to make use of this opportunity.
+Drive awareness of your published Microsoft Teams app to the customer-facing roles within Microsoft, such as the field or Teams Engineering’s customer PMs. Contact your Microsoft field, account, or engineering representatives or connect with the [Microsoft 365 ISV Benefits Service Desk](mailto:ModernWorkISVPartner@microsoft.com) to make use of this opportunity.
 
 > [!NOTE]
 > Go-to-Market Bill of Materials (GTM BOM) for your app is a pre-requisite for using it.
@@ -174,7 +174,7 @@ Strategic developers, who are part of the invite-only Teams engineering’s buil
 <details>
 <summary>Share best practices for customer app rollout and activation</summary>
 
-Strategic developers, who are part of the invite-only Teams engineering’s build-with partner program, get access to several time- and market-tested best practices. It helps to drive faster adoption of your collaborative app in customers.
+Strategic developers, who are part of the invite-only Teams engineering’s build-with partner program, get access to several time-tested and market-tested best practices. It helps to drive faster adoption of your collaborative app in customers.
 
 Remember to upskill using the Teams admin-facing public documentation sections [Third-party apps in Microsoft Teams](/microsoftteams/overview-third-party-apps) and [Admin controls to govern apps](/microsoftteams/customize-apps) to aid during app rollout, activation, and governance.
 
@@ -183,7 +183,7 @@ Remember to upskill using the Teams admin-facing public documentation sections [
 <details>
 <summary>Invite to present in internal platform growth forums</summary>
 
-Get in touch with the Microsoft field, account, or engineering representatives to feature in invite-only collaborative app growth forums. You can showcase your app to customer-facing teams within Microsoft, train them on value proposition and high value scenarios, and, so on. It aids in having impactful conversations with existing or new prospective customers for your app.
+Contact the Microsoft field, account, or engineering representatives to feature in invite-only collaborative app growth forums. You can showcase your app to customer-facing teams within Microsoft, train them on value proposition and high value scenarios, and, so on. It aids in having impactful conversations with existing or new prospective customers for your app.
 
 </details>
 

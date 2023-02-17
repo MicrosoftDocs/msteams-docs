@@ -42,7 +42,7 @@ Using the guidance in this document, you can grow your collaborative app on Team
 
 ## Options for growing your app: Understanding growth models
 
-You can use one or all of the three predominant types of SaaS business growth models:
+You can use one or all the three predominant types of SaaS business growth models:
 
 1. **Sales-led growth**: Potential customers or *sales-qualified leads (SQLs)* interact with a sales representative or a customer success representative. It can be through every stage of the buying journey. The interaction can start from understanding product and your SaaS app’s features, and seeing a demo. It can last through post-purchase setup and config, sales-led user onboarding, and training by customer success reps to use the app.
 1. **Marketing-led growth**: Prospective customers sign up for a product demo after building perceived value of your product. They consume marketing narratives such as, advertisements, content resources such as, blogs, videos, or downloadable e-books. As a result, they generate a “marketing-qualified lead (MQL)” for the sales team to convert. Customer retention and monetization are driven by marketing channels, content, and outreach.
@@ -153,7 +153,7 @@ Monetization investments encompass defining role of Teams app in your business a
         - Understand how offers on Microsoft marketplace(s) can help deliver business goals through your app.
         - Build transactable marketplace SaaS offer associated with your Teams app, offering free trial and in-app purchases to generate leads and optimize conversions.
         - Become channel ready and negotiate reseller partnerships to tap into the global network of Microsoft CSPs for growth.
-        - Tap into the robust technical guidance and best practices from Teams engineering to build transact SaaS and new, pilot features to improve the purchase funnel via developer docs, blogs and videos.
+        - Tap into the robust technical guidance and best practices from Teams engineering to build transact SaaS and new, pilot features to improve the purchase funnel via developer docs, blogs, and videos.
         - Unlock more GTM benefits and CSP channel partnership programs for early-bird apps with live transact SaaS offers.
     :::column-end:::
 :::row-end:::
