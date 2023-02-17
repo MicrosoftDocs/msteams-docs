@@ -20,7 +20,7 @@ The following growth levers are pertinent at this stage:
 
 Listing your SaaS subscriptions on the Teams marketplace gives you access to 90,000+ reseller partners (called [cloud solution providers](https://www.youtube.com/watch?v=X33C-RV9dZc) or CSPs) around the world. These CSPs manage a significant customer install base. You can scale your business through this channel without making a full investment in solutions, experts, salesforce, and events. However, you can instead get to market faster, and at exponential scale, compared to selling solely through your own sales motions.
 
-To scale your app, become CSP channel ready. After that, your app will get featured on this [landing page](https://cloudpartners.transform.microsoft.com/practices/modernworkisv?tab=monetize-your-app) to appear in [Teams apps that have become CSP Channel Ready](https://aka.ms/P2PeBook) public handbook.
+To scale your app, become CSP channel ready. After that, your app appears on [Teams apps that have become CSP Channel Ready](https://aka.ms/P2PeBook) public handbook. Apps successful on the marketplace may have an opportunity to get featured on this landing page.
 
 For more information, see [CSP Channel Readiness Guide](https://aka.ms/TeamsMonetization/CSPChannelReadyGuide) for Teams app ISVs.
 
@@ -60,7 +60,7 @@ Get in touch with your field, account, or engineering representatives from Micro
 <details>
 <summary>Digital ad campaigns to target customers for app install and use</summary>
 
-Generate interest from new customer accounts. Drive traffic to your collaborative app listing in Teams marketplace using paid media campaigns executed on your social channels. Connect with the [Microsoft 365 ISV Benefits Service Desk](mailto:ModernWorkISVPartner@microsoft.com) to seek guidance for your digital campaign, identify target customer accounts and personas, collaboration on paid media plan, possible budget funding. Check with them for the success metrics you should measure, such as:
+Generate interest from new customer accounts. Drive traffic to your collaborative app listing in Teams marketplace using paid media campaigns executed on your social channels. Connect with the ISV Marketplace Success Rewards Program team to seek guidance for your digital campaign, identify target customer accounts and personas, collaboration on paid media plan, possible budget funding. Check with them for the success metrics you should measure, such as:
 
 - Click-through rate.
 - Cost per click.
@@ -147,7 +147,7 @@ Microsoft will evaluate co-activation opportunities in large customer accounts. 
 
 :::row:::
     :::column span="3":::
-        - **Support joint customer success story development** Connect with the Microsoft 365 ISV Benefits Service Desk to seek guidance and execute. You'll be able to utilize Microsoft slide templates, customer story intake form, customer interview template, and vendor video production, or copy writing services. Introduce the creative team to the customer. Help facilitate the interviews and review processes until the story is approved by all parties. The Microsoft 365 ISV Benefits team will make sure your customer story is published to the internal Microsoft Teams Platform Resource Library and the Transformed by Teams portal.
+        - **Support joint customer success story development** Connect with the ISV Marketplace Success Rewards Program team to seek guidance and execute. You'll be able to utilize Microsoft slide templates, customer story intake form, customer interview template, and vendor video production, or copy writing services. Introduce the creative team to the customer. Help facilitate the interviews and review processes until the story is approved by all parties. The Microsoft 365 ISV Benefits team will make sure your customer story is published to the internal Microsoft Teams Platform Resource Library and the Transformed by Teams portal.
     :::column-end:::
     :::column span="":::
         :::image type="content" source="../../../../../assets/images/app-fundamentals/customer-success-story-1.png" alt-text="Teams customer success story.":::
@@ -173,21 +173,21 @@ Strategic developers who are part of the invite-only Teams engineering’s build
 <details>
 <summary>High-touch support for select, joint new customer pitches</summary>
 
-Get in touch with the Microsoft field, account or engineering representatives to discuss potential joint customer pitches. Microsoft will use discretion to partner on such opportunities based on customer interest, adoption opportunity (seat size in prospect customer account), and so on, among other criteria.
+Get in touch with the Microsoft field, account or engineering representatives to discuss partnering during pitches you make to new customers. Microsoft will use discretion to partner on such opportunities based on customer interest, adoption opportunity (seat size in prospect customer account), and so on, among other criteria and primarily help land the value of the Teams app platform, letting you own your app or solution pitch.
 
 </details>
 <br>
 <details>
 <summary>Include app in global outreach to Microsoft sellers</summary>
 
-Expose your solution to Microsoft field sellers and executives through an on-demand webinar featuring your speakers and content. Microsoft will post your on-demand webinar to an internal site and promote it to Microsoft sellers. Share the internal Microsoft on-demand webinar link with your Microsoft contacts as well. Connect with the Microsoft 365 ISV Benefits Service Desk to check eligibility, seek guidance and execute this motion.
+Expose your solution to Microsoft field sellers and executives through an on-demand webinar featuring your speakers and content. Microsoft will post your on-demand webinar to an internal site and promote it to Microsoft sellers. Share the internal Microsoft on-demand webinar link with your Microsoft contacts as well. Connect with the ISV Marketplace Success Rewards Program team to check eligibility, seek guidance and execute this motion.
 
 </details>
 <br>
 <details>
 <summary>Host customer roundtables to promote the app</summary>
 
-Participate in a customer roundtable session with Microsoft to highlight the value of your Teams app to customers. Connect with the Microsoft 365 ISV Benefits Service Desk to check eligibility, seek guidance and execute this motion. After that, a Microsoft Marketing Program Manager will reach out to you about participating in a customer roundtable session based on campaign alignment.
+Participate in a customer roundtable session with Microsoft to highlight the value of your Teams app to customers. Connect with the ISV Marketplace Success Rewards Program team to check eligibility, seek guidance and execute this motion. After that, a Microsoft Marketing Program Manager will reach out to you about participating in a customer roundtable session based on campaign alignment.
 
 </details>
 

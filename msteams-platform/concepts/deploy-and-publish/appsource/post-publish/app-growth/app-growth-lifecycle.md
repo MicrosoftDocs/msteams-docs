@@ -36,19 +36,17 @@ Growing your app is a journey. It's a process that’s not overnight and goes th
 
   There may be examples of developers short circuiting the lifecycle to jump across stages, for example, directly starting to monetize their app after launch using their version 1 experience itself. It's recommended that you follow a stage-by-stage approach as a best practice that most developers follow to derive the best ROI from their Teams app journey.
 
-## Product and GTM growth initiatives for your app
+## Step-by-step guide to grow your app
 
-This section is a descriptive guide elaborating on the various growth initiatives developers can plan and execute and where Microsoft can help.
+Get started first by reviewing (and sharing with your GTM leaders) this high-level visual Guide to ISV success with Microsoft for Teams Partners flipbook. This resource orients you about how to plan and strategize your Teams app offering, insights about key industry-wise personas and trends, how to define your app’s value proposition, create content to maximize your app’s reach among customers and sellers, access various partner benefits available to you, how to visualize a simplistic customer journey with your app, how to align your marketing activities with key opportunities from Microsoft and how to sell your app via Microsoft’s global marketplace. As you can see from the flipbook, Microsoft partners with app developers once they’ve launched their apps on the marketplace by offering select, programmatic GTM investments depending on the app’s maturity in the market. You are encouraged to get in touch with your Microsoft field, account or engineering representatives before spending cycles on your app growth planning and execution, so that you can get the most appropriate guidance you’re eligible for.
+
+It's time now to expand on the preview provided by the flipbook above! The following sections offer a stage-by-stage  descriptive guide elaborating on the various growth initiatives developers can plan and execute and where Microsoft can help.
 
 Developers are encouraged to follow the guidance here to grow their app and drive success for their investments on the Teams marketplace and ecosystem. However, the guidance provided can't be considered comprehensive. It's recommended that developers must always adapt these growth initiatives in the context best known to them based on:
 
 - The nature of business.
 - The app they’ve launched on Teams.
 - The target customer personas.
-
-Do note that Microsoft partners with app developers once they’ve launched their apps on Teams marketplace by offering select, programmatic GTM investments depending on the app’s maturity in the market. Developers must get in touch with their Microsoft field, account, or engineering representatives before spending cycles on their app growth planning and execution, so that they can get the most appropriate guidance they’re eligible for.
-
-Additionally, when the app you're developing reaches store validation stage or if it's already published, sign up for the [Microsoft 365 ISV Benefits Program](https://cloudpartners.transform.microsoft.com/practices/modernworkisv?tab=get-started). Review the [Marketing Benefits Planning Guide](https://cloudpartners.transform.microsoft.com/download?assetname=assets/Microsoft365-ISV-Benefits-Program-Guide.pdf&download=1) for an overview of the marketing activities your app is eligible to participate in. The [Microsoft 365 ISV Benefits Service Desk](mailto:ModernWorkISVPartner@microsoft.com) is available for any email correspondence regarding support for your marketing activity.
 
 <!--
 You can plan your app's growth through the app lifecycle:

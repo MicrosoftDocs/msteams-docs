@@ -32,7 +32,7 @@ Share notable customer wins, customer success stories, and resulting revenue fro
 <details>
 <summary>Convert PQLs from Teams app into active sales pipeline</summary>
 
-A core product-led growth initiative, capture Teams marketplace trials, trials sign-ups coming from your Teams app or freemium users as potential leads to be converted into paying customers. Remember to monitor the usage patterns, user retention, and product value experienced by the trial or freemium users. Use them to determine the customers that can be converted through sales, customer success, or direct product interventions (for example, upsell, upgrade prompts).
+A core product-led growth initiative is capturing Teams marketplace trials, trials sign-ups coming from your Teams app or freemium users into potential leads to be converted into paying customers. Remember to monitor the usage patterns, user retention, and product value experienced by the trial or freemium users. Use them to determine the customers that can be converted through sales, customer success, or direct product interventions (for example, upsell, upgrade prompts).
 
 </details>
 <br>
@@ -77,7 +77,7 @@ Innovation, grounded in customer needs, is the key to sustainably grow and succe
 <details>
 <summary>Share feedback to enrich the Teams platform</summary>
 
-Microsoft Teams app platform is ever-evolving with newer features that provide even more opportunities for developers like you to deliver unique, differentiated and collaborative scenarios of value to customers. Use the Microsoft field, account, engineering representatives to share feedback or product ask on Teams platform. You can also post product feature suggestions [here](../../../../../feedback.md#feature-request-and-general-help) as well.
+Microsoft Teams app platform is ever-evolving with newer features that provide even more opportunities for developers like you to deliver unique, differentiated and collaborative scenarios of value to customers. Use the Microsoft field, account, engineering representatives to share feedback or product ask on Teams platform. You can also post product feature suggestions publicly [here](../../../../../feedback.md#feature-request-and-general-help) as well.
 
 </details>
 <br>
@@ -95,7 +95,7 @@ Strategic developers can be a part of the invite-only Teams engineering’s buil
 
 :::row:::
     :::column span="3":::
-        Impactful case studies of how investing a Teams app resulted in growth for your SaaS business and how customers using your app got impacted can be published on the following customer-facing sites: [Microsoft 365 ISV Benefits Program Success Stories](https://cloudpartners.transform.microsoft.com/practices/modernworkisv?tab=success-stories) and [Customer Stories](https://customers.microsoft.com/en-us/search?sq=&ff=story_industry_friendlyname%26%3EPartner%20Professional%20Services%26%26story_product_categories%26%3EMicrosoft%20Teams&p=5&so=cam_rank%20desc) on Microsoft.com. Connect with your Teams engineering representatives or [Microsoft 365 ISV Benefits Service Desk](mailto:ModernWorkISVPartner@microsoft.com) to check eligibility, seek guidance, and execute this motion.
+        Impactful case studies of how investing a Teams app resulted in growth for your SaaS business and how customers using your app got impacted can be published on the following customer-facing sites: [Microsoft 365 ISV Benefits Program Success Stories](https://cloudpartners.transform.microsoft.com/practices/modernworkisv?tab=success-stories) and [Customer Stories](https://customers.microsoft.com/en-us/search?sq=&ff=story_industry_friendlyname%26%3EPartner%20Professional%20Services%26%26story_product_categories%26%3EMicrosoft%20Teams&p=5&so=cam_rank%20desc) on Microsoft.com. Connect with your Teams engineering representatives or the ISV Marketplace Success Rewards Program team to check eligibility, seek guidance, and execute this motion.
     :::column-end:::
     :::column span="":::
         :::image type="content" source="../../../../../assets/images/app-fundamentals/isv-site-success-story.png" alt-text="Modern work ISV site showing customer success stories.":::
@@ -114,7 +114,7 @@ Microsoft will evaluate co-activation opportunities in large customer accounts. 
 <details>
 <summary>Include in Microsoft exec blog or flagship event endorsement</summary>
 
-Get the power of the Microsoft executive team behind your next leadership blog or event. Review your plans for blogs or events in which you'll be participating. Develop ideas on how a Microsoft executive can help to promote your commercial marketplace offer in a blog or at an event. Reach out to [Microsoft 365 ISV Marketing Benefits](mailto:ModernWorkISVMktg@microsoft.com?subject=Microsoft%20Teams%20app%20marketing%20assets%20are%20uploaded) to request Microsoft executive endorsement, where your eligibility will be checked. After that, the team will work with you to find a Microsoft executive (Director level or higher) to help endorse your Teams collaborative app available on the marketplace.
+Get the power of the Microsoft executive team behind your next leadership blog or event. Review your plans for blogs or events in which you'll be participating. Develop ideas on how a Microsoft executive can help to promote your commercial marketplace offer in a blog or at an event. Reach out to the ISV Marketplace Success Rewards Program team to request Microsoft executive endorsement, where your eligibility will be checked. After that, the team will work with you to find a Microsoft executive (Director level or higher) to help endorse your Teams collaborative app available on the marketplace.
 
 </details>
 <br>

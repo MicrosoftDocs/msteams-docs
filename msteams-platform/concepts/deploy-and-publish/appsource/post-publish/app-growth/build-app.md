@@ -17,7 +17,7 @@ Let’s briefly go over what initiatives are the most impactful during the build
 - Commitment to build a high-quality and sticky collaborative app on Teams and monetize the app via transactable SaaS subscriptions on the marketplace.
 - Adherence to platform fundamentals and collaboration apps design principles.
 - Executive commit for multi-quarter app roadmap and GTM investments.
-- Identification of and agreement with pilot customers to get feedback on the app and adopt once published.
+- Identification of pilot customers and  getting their agreement to provide feedback on the app and adopt once published.
 
 ## Where can Microsoft help?
 

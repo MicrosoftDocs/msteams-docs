@@ -89,11 +89,9 @@ Get in touch with your field, account, or engineering representatives from Micro
 </details>
 <br>
 <details>
-<summary>Commerce transact integration to make your Teams app monetization-ready</summary>
+<summary>Commercial marketplace transact SaaS offers integration to make your Teams app monetization-ready</summary>
 
-One of the goals of the Traction stage is to build readiness for future adoption and ROI realization from your collaborative Teams app. Look for sticky adoption and positive feedback for your collaborative app among the pilot and significant customers. After that, you can begin planning monetization for your app on the Teams marketplace.
-
-For more information, see [Monetize your app](../../prepare/monetize-overview.md).
+One of the goals of the Traction stage is to build readiness for future adoption and ROI realization from your collaborative Teams app. Look for sticky adoption and positive feedback for your collaborative app among the pilot and significant customers. After that, you can begin planning monetization for your app on the Teams marketplace. After you’re convinced why you should transact your Teams app on the Microsoft commercial marketplace, you can learn more about the product and commerce monetization capabilities for Teams apps. For more information, see [Monetize your app](../../prepare/monetize-overview.md).
 
 [Back to top](#what-should-you-do-during-the-traction-stage)
 </details>
@@ -138,7 +136,7 @@ The Microsoft Teams store editorial team curates editorial sections on the in-pr
 
 :::row:::
     :::column span="3":::
-        Editorial articles provide a list of app suggestions to users within the store that meet specific scenario objectives. It includes a clear call-to-action to install the app while reading the article. Get in touch with the Microsoft field, account, or engineering representatives or connect with the [Microsoft 365 ISV Benefits Service Desk](mailto:ModernWorkISVPartner@microsoft.com) to feature your app in these Editorial Articles.
+        Editorial articles provide a list of app suggestions to users within the store that meet specific scenario objectives. It includes a clear call-to-action to install the app while reading the article. Get in touch with the Microsoft field, account, or engineering representatives or connect with the ISV Marketplace Success Rewards Program team to feature your app in these Editorial Articles.
     :::column-end:::
     :::column span="":::
         :::image type="content" source="../../../../../assets/images/app-fundamentals/editorial-articles.png" alt-text="Editorial articles.":::
@@ -157,14 +155,14 @@ The Microsoft Teams store editorial team curates editorial sections on the in-pr
 <details>
 <summary>Joint webinar to existing and new target customers</summary>
 
-Participate in a joint webinar with Microsoft and other partners to showcase the value of your Teams collaborative app to customers. You can connect with the [Microsoft 365 ISV Benefits Service Desk](mailto:ModernWorkISVPartner@microsoft.com) to find opportunities and execute.
+Participate in a joint webinar with Microsoft and other partners to showcase the value of your Teams collaborative app to customers. You can connect with the ISV Marketplace Success Rewards Program team to find opportunities and execute.
 
 </details>
 <br>
 <details>
 <summary>Include app in Microsoft-run digital campaigns</summary>
 
-Highlight your Microsoft Teams app in a Microsoft-led digital campaign based on specific industries or contemporary themes, for example, hybrid work. You can connect with the [Microsoft 365 ISV Benefits Service Desk](mailto:ModernWorkISVPartner@microsoft.com) to find opportunities and execute.
+Highlight your Microsoft Teams app in a Microsoft-led digital campaign based on specific industries or contemporary themes, for example, hybrid work. You can connect with the ISV Marketplace Success Rewards Program team to find opportunities and execute.
 
 </details>
 <br>
