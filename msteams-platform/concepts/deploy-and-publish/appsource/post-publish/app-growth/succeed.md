@@ -55,22 +55,11 @@ Retaining users by providing them a sticky experience is key to growing your Tea
 
 Innovation, grounded in customer needs, is the key to sustainably grow and succeed with your app on Teams.
 
-:::row:::
-    :::column span="3":::
-        Ensure that you monitor reviews for your app on the marketplace, user feedback coming from in-product surveys, and user behavior insights. You must also monitor app engagement analytics you’ve implemented in your app. Also, monitor customer inputs relayed by the Microsoft field, account, or engineering representatives. It helps you to continue investing in new scenarios and enhanced user experience for your app. Keep an eye on your competitors and other leading SaaS apps in your segment to continuously learn from the market and evolve your app’s strategy and roadmap.
-    :::column-end:::
-    :::column span="":::
-        :::image type="content" source="../../../../../assets/images/app-fundamentals/feedback-teams-app.png" alt-text="Collect user feedback within the developer’s Teams app through contextual, micro-surveys.":::
-    :::column-end:::
-:::row-end:::
-:::row:::
-    :::column span="":::
-        :::image type="content" source="../../../../../assets/images/app-fundamentals/app-capability-1.png" alt-text="Teams app capability 1.":::
-    :::column-end:::
-    :::column span="3":::
-        Since Teams marketplace is public, you can use your product team can at the minimum use the Microsoft 365 developer tenant to experience other apps. Strategic developers, who are part of the invite-only Teams engineering’s build-with partner program, can get early access to new and latest cutting-edge collaborative features on Teams app platform. It's an opportunity for you to deliver unparalleled value to customers and use global GTM and marketing moments, being an early adopter to showcase new innovation on Teams.
-    :::column-end:::
-:::row-end:::
+Ensure that you monitor reviews for your app on the marketplace, user feedback coming from in-product surveys, and user behavior insights. You must also monitor app engagement analytics you’ve implemented in your app. Also, monitor customer inputs relayed by the Microsoft field, account, or engineering representatives. It helps you to continue investing in new scenarios and enhanced user experience for your app. Keep an eye on your competitors and other leading SaaS apps in your segment to continuously learn from the market and evolve your app’s strategy and roadmap.
+
+  :::image type="content" source="../../../../../assets/images/app-fundamentals/feedback-teams-app.png" alt-text="Collect user feedback within the developer’s Teams app through contextual, micro-surveys.":::
+
+Since Teams marketplace is public, you can use your product team can at the minimum use the Microsoft 365 developer tenant to experience other apps. Strategic developers, who are part of the invite-only Teams engineering’s build-with partner program, can get early access to new and latest cutting-edge collaborative features on Teams app platform. It's an opportunity for you to deliver unparalleled value to customers and use global GTM and marketing moments, being an early adopter to showcase new innovation on Teams.
 
 </details>
 <br>

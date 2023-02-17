@@ -109,18 +109,13 @@ Find more about certification 4[here](https://cloudpartners.transform.microsoft.
 </details>
 <br>
 <details>
-<summary>Drive traffic from web SaaS app: “Use in Teams” CTA and “Share to Teams”</summary>
+<summary>Drive traffic from web SaaS app: Use in Teams CTA and Share to Teams</summary>
 
 While during the launch stage, you used transient banners, notifications bar, what’s new notifications inside the SaaS product’s UI for all users to announce your Teams app. It’s time now to nudge users who may be using Microsoft Teams to start using your collaborative app for scenarios that are better together in Teams vs. your core web SaaS experience.
 
-:::row:::
-    :::column span="3":::
-        Surface [deeplinks](/concepts/build-and-test/deep-links?tabs=teamsjs-v2) within your browser-based web SaaS experience to transport users to specific views inside your Teams app (for example, personal app, tabs, conversational bot or meeting extensions with shared meeting stage or in-meeting tab). You can implement the highly recommended [Share to Teams](../../../../build-and-test/share-to-teams-from-web-apps.md) control within your browser-based web SaaS experience to enable users to share and start collaborating around a content or object from your SaaS product inside Teams with their colleagues.
-    :::column-end:::
-    :::column span="":::
-        :::image type="content" source="../../../../../assets/images/app-fundamentals/drive-traffic-saas-app.png" alt-text="Drive traffic from your SaaS app.":::
-    :::column-end:::
-:::row-end:::
+Surface [deeplinks](/concepts/build-and-test/deep-links?tabs=teamsjs-v2) within your browser-based web SaaS experience to transport users to specific views inside your Teams app (for example, personal app, tabs, conversational bot or meeting extensions with shared meeting stage or in-meeting tab). You can implement the highly recommended [Share to Teams](../../../../build-and-test/share-to-teams-from-web-apps.md) control within your browser-based web SaaS experience to enable users to share and start collaborating around a content or object from your SaaS product inside Teams with their colleagues.
+
+  :::image type="content" source="../../../../../assets/images/app-fundamentals/drive-traffic-saas-app.png" alt-text="Drive traffic from your SaaS app.":::
 
 To get maximum ROI, surface the nudges contextually for scenarios that are inherently collaborative over chat or in meetings. They're best delivered inside Microsoft Teams through your app.
 

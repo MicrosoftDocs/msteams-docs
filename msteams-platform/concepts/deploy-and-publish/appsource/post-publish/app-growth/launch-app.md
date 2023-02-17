@@ -182,6 +182,8 @@ Consider promotions, such as 1:1 product demos, customer success consultations, 
 
 If you've already listed your transactable SaaS subscriptions for the Teams app in the marketplace, ensure that you price them at a discount. It encourages users to purchase your offer directly from the Teams marketplace.
 
+:::image type="content" source="../../../../../assets/images/app-fundamentals/launch-offers-promotions.png" alt-text="Screenshot shows the launch offers and promotions page in Teams.":::
+
 [Back to top](#what-should-you-do-during-the-launch-stage)
 </details>
 <br>
