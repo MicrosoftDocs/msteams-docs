@@ -10,7 +10,8 @@ zone_pivot_groups: teams-app-platform
 ---
 # Explore Teams Toolkit
 
-In this document, you can understand different UI elements along with description and basic usage in Teams Toolkit.
+Teams Toolkit appears within Visual Studio Code as an extension. You can explore the Teams Toolkit look and feel within the Visual Studio Code.
+This section gives you a tour of Teams Toolkit and its features.
 
 ::: zone pivot="visual-studio-code"
 
