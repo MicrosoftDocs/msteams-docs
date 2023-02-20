@@ -16,7 +16,7 @@ In this stage in the app growth lifecycle, you use the learnings from previous a
 <details>
 <summary>Become CSP channel ready for the Teams app</summary>
 
-Once trasact SaaS enabled, listing the SaaS subscriptions for your app on the Teams marketplace gives you access to 90,000+ reseller partners (called [cloud solution providers](https://www.youtube.com/watch?v=X33C-RV9dZc) or CSPs) around the world. These CSPs manage a significant customer install base. You can scale your business through this channel without making a full investment in solutions, experts, salesforce, and events. You can instead get to market faster, and at exponential scale, compared to selling solely through your own sales motions.
+Once transact SaaS enabled, listing the SaaS subscriptions for your app on the Teams marketplace gives you access to 90,000+ reseller partners (called [cloud solution providers](https://www.youtube.com/watch?v=X33C-RV9dZc) or CSPs) around the world. These CSPs manage a significant customer install base. You can scale your business through this channel without making a full investment in solutions, experts, salesforce, and events. You can instead get to market faster, and at exponential scale, compared to selling solely through your own sales motions.
 
 To scale your app, become CSP channel ready (see [CSP Channel Readiness Guide for Teams app ISVs](https://aka.ms/TeamsMonetization/CSPChannelReadyGuide)). After that, your app appears on [Teams apps that have become CSP Channel Ready](https://aka.ms/P2PeBook) public handbook. Apps successful on the marketplace may have an opportunity to get featured on this frequently promoted public [landing page](https://cloudpartners.transform.microsoft.com/practices/modernworkisv?tab=monetize-your-app).
 
