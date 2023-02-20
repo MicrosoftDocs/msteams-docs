@@ -11,6 +11,7 @@ ms.author: surbhigupta
 The core focus at this stage is to announce the availability of the app for existing and new customers. Here’s a rundown of various initiatives and growth levers at your disposal:
 
 ## What should you do during the Launch stage?
+
 <br>
 
 <details>
@@ -49,7 +50,7 @@ Focus on the following with respect to your app store listing, landing page and 
   - Ensure to include credible customer testimonials (with their permissions of course) and links to public references and success stories to build trust that your Teams app has already benefited customers.
   - It’s a good practice to include a FAQ section where users can quickly find answers to their most common queries related to your Teams app. It can include scenarios, features, any other cost or pricing, which SaaS subscription plans of yours support the Teams app, and so on.
   - Include download links to on-demand webinars or sign-up links to scheduled trainings, webinars, or events for your Teams app on this page. Remember all of these will result in valuable marketing qualified leads for your app.
-  - Include a section on this page to collect user feedback about the Teams app including new feature asks. You can also use the landing page to prominently showcase the planned roadmap for your Teams app. Your users can use this page to upvote or downvote upcoming features. Users are more likely to pick your app over competition if they see continuous investments in the product. 
+  - Include a section on this page to collect user feedback about the Teams app including new feature asks. You can also use the landing page to prominently showcase the planned roadmap for your Teams app. Your users can use this page to upvote or downvote upcoming features. Users are more likely to pick your app over competition if they see continuous investments in the product.
   - This page must link to public pages and host downloadable copies of various bills of materials for your Teams app (see the bill of materials section). It can include technical solution datasheets, Teams app one-pager, IT admin guides, end-user facing app usage guides, and so on.
   - Your detailed public support or documentation page for the Teams app (see Documentation section) must also be prominently discoverable on this page. Users typically stumble upon the app’s landing page via search results.
   - Add a link to this page in your core SaaS product, for example, web app, native mobile apps, from periodic digital or social campaigns targeted at users who are likely to be using Teams.
@@ -78,7 +79,7 @@ Focus on the following with respect to your app store listing, landing page and 
   - **Usage guide for Teams collaborative app**: It's a highly recommended page to handhold new users in getting started with your app. It’s an opportunity to show how users can immediately get value by using your app inside Teams.
 
       Include links to download the Teams app one-pager and end-user facing app usage guides on this page. We highly recommend adding a [Share to Teams](../../../../build-and-test/share-to-teams-from-web-apps.md) button on this page so that users who found this page the resources contained here helpful can easily share it with their colleagues.
-      
+
   If you have a support chatbot available on your website to help visitors find the right information or get human assistance, ensure that you deploy and tune the same for visitors coming to this page for your Teams app to assist them at priority.
 
 [Back to top](#what-should-you-do-during-the-launch-stage)
@@ -209,6 +210,7 @@ Once built, you can host the same bill of materials on your app's public landing
 </details>
 
 ## Where can Microsoft help?
+
 <br>
 <details>
 <summary>Support for launch content asset development</summary>
@@ -220,14 +222,14 @@ Connect with the [ISV Marketplace Success Rewards Program team](mailto:rewards@m
 <details>
 <summary>Teams app store listing optimization</summary>
 
-Improve your solution listing in Teams marketplace by following the best practices [here](https://learn.microsoft.com/en-us/azure/marketplace/gtm-offer-listing-best-practices).
+Improve your solution listing in Teams marketplace by following the best practices [here](/azure/marketplace/gtm-offer-listing-best-practices).
 
 </details>
 <br>
 <details>
 <summary>App store marketing toolkit</summary>
 
-Get free, customizable marketing and sales resources, such as data sheets, presentations, and more collateral to customize marketing for your Teams app [here](https://partner.microsoft.com/en-us/asset#/?type=marketing-campaigns&area=mrkt).
+Get free, customizable marketing and sales resources, such as data sheets, presentations, and more collateral to customize marketing for your Teams app [here](https://partner.microsoft.com/asset#/?type=marketing-campaigns&area=mrkt).
 
 </details>
 <br>

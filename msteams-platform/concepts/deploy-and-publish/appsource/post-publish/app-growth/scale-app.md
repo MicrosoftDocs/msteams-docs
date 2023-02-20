@@ -71,7 +71,7 @@ Generate interest from new customer accounts and drive traffic to your collabora
 <details>
 <summary>Publish customer demand and app’s impact story</summary>
 
-Share real customer stories using a four to five minute video. Nominate a customer and gain their commitment to participate in the story. Work with the customer on the narrative. Ensure that you include the benefits derived from your collaborative app, showcase resulting increased employee productivity (preferably quantifiable gains) and how customers prefer to use your SaaS service inside Teams as a collaborative app. Use this video for demand generation, digital marketing campaigns or showcase on public pages. 
+Share real customer stories using a four to five minute video. Nominate a customer and gain their commitment to participate in the story. Work with the customer on the narrative. Ensure that you include the benefits derived from your collaborative app, showcase resulting increased employee productivity (preferably quantifiable gains) and how customers prefer to use your SaaS service inside Teams as a collaborative app. Use this video for demand generation, digital marketing campaigns or showcase on public pages.
 
 After developing it, host these customer stories on the landing page of the Teams app on your website. Link this video in the marketplace listing of your collaborative app.  Promote it via paid, earned media, or social media posts to highlight the success of the app.
 
@@ -111,7 +111,7 @@ Remember, just enabling the app inside Teams won't be enough. Instead, adoption 
 
 Continuously monitor what’s happening inside your collaborative app through analytics and measure the value end-users are obtaining. To positively impact product and business metrics, such as number of app installs, activation rate, task completion, new user retention and churn, referrals, and so on, a rapid, always-on experimentation work stream allows byte-sized tweaks to your app experience. It results in more control and less risk compared to large changes spaced far apart.
 
-Ensure that you [instrument code and track analytics](https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/design/overview-analytics) for your app from the first version. Upskill your dedicated Teams app crew or your existing SaaS product growth team of PM, development, and UX design on Teams platform to take ownership of this work stream to derive maximum ROI.
+Ensure that you [instrument code and track analytics](../../../../design/overview-analytics.md) for your app from the first version. Upskill your dedicated Teams app crew or your existing SaaS product growth team of PM, development, and UX design on Teams platform to take ownership of this work stream to derive maximum ROI.
 
 [Back to top](#what-should-you-do-during-the-scale-stage)
 </details>

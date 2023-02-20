@@ -11,6 +11,7 @@ ms.author: surbhigupta
 To wrap up, your collaborative app is now becoming a full-fledged strategic product line, just as your core SaaS product for the web browser or native apps for Windows or mobile phones. To maximize success for your customers and ROI for your business, this section covers the initiatives and growth levers you must use. The following growth levers are pertinent at this stage:
 
 ## What should you do during this final stage?
+
 <br>
 <details>
 <summary>Wider TAM coverage across existing and prospect user base</summary>
@@ -52,11 +53,11 @@ Retaining users by providing them with a sticky experience is key to growing you
 
 Innovation, grounded in customer needs, is the key to sustainably grow and succeed with your app on Teams.
 
-Ensure that you monitor reviews for your app on the marketplace, user feedback coming from in-product surveys, and user behavior insights. You must also monitor app engagement analytics you’ve implemented in your app. Also, monitor customer inputs relayed by your Microsoft field, account, or engineering representatives. It helps you to continue investing in new scenarios and enhanced user experience for your collaborative app. 
+Ensure that you monitor reviews for your app on the marketplace, user feedback coming from in-product surveys, and user behavior insights. You must also monitor app engagement analytics you’ve implemented in your app. Also, monitor customer inputs relayed by your Microsoft field, account, or engineering representatives. It helps you to continue investing in new scenarios and enhanced user experience for your collaborative app.
 
-Keep an eye on your competitors and other leading SaaS apps in your segment to continuously learn from the market and evolve your app’s strategy and roadmap. Since Teams marketplace is public, your product team can at the minimum use the [Microsoft 365 developer sandbox](https://developer.microsoft.com/en-us/microsoft-365/dev-program) to experience other apps. 
+Keep an eye on your competitors and other leading SaaS apps in your segment to continuously learn from the market and evolve your app’s strategy and roadmap. Since Teams marketplace is public, your product team can at the minimum use the [Microsoft 365 developer sandbox](https://developer.microsoft.com/microsoft-365/dev-program) to experience other apps.
 
-Strategic developers, who are part of the invite-only Teams engineering’s build-with partner program, can get early access to new and latest cutting-edge collaborative features on Teams app platform. It's an opportunity for you to deliver unparalleled value to customers and use global GTM and marketing moments, being an early adopter to showcase new innovation on Teams. However you can always discover and use Microsoft Teams platform features that are in [public developer preview](https://learn.microsoft.com/en-us/microsoftteams/platform/whats-new?pivots=dev-preview).
+Strategic developers, who are part of the invite-only Teams engineering’s build-with partner program, can get early access to new and latest cutting-edge collaborative features on Teams app platform. It's an opportunity for you to deliver unparalleled value to customers and use global GTM and marketing moments, being an early adopter to showcase new innovation on Teams. However you can always discover and use Microsoft Teams platform features that are in [public developer preview](../../../../../whats-new.md?pivots=dev-preview) ](https://learn.microsoft.com/microsoftteams/platform/whats-new?pivots=dev-preview).
 
 </details>
 <br>
@@ -79,7 +80,7 @@ Strategic developers, who are part of the invite-only Teams engineering’s buil
 <details>
 <summary>Case Study on Microsoft’s public customers portal</summary>
 
-Impactful case studies of how investing in a collaborative app resulted in growth for your SaaS business and how customers using your app got impacted can be published on the following customer-facing sites: [Microsoft 365 ISV Benefits Program Success Stories](https://cloudpartners.transform.microsoft.com/practices/modernworkisv?tab=success-stories) and [Customer Stories](https://customers.microsoft.com/en-us/search?sq=&ff=story_industry_friendlyname%26%3EPartner%20Professional%20Services%26%26story_product_categories%26%3EMicrosoft%20Teams&p=5&so=cam_rank%20desc) on Microsoft.com. Connect with your Teams engineering representatives or the [ISV Marketplace Success Rewards Program team](mailto:rewards@microsoft.com) to check eligibility, seek guidance, and execute this motion.
+Impactful case studies of how investing in a collaborative app resulted in growth for your SaaS business and how customers using your app got impacted can be published on the following customer-facing sites: [Microsoft 365 ISV Benefits Program Success Stories](https://cloudpartners.transform.microsoft.com/practices/modernworkisv?tab=success-stories) and [Customer Stories](https://customers.microsoft.com/search?sq=&ff=story_industry_friendlyname%26%3EPartner%20Professional%20Services%26%26story_product_categories%26%3EMicrosoft%20Teams&p=5&so=cam_rank%20desc) on Microsoft.com. Connect with your Teams engineering representatives or the [ISV Marketplace Success Rewards Program team](mailto:rewards@microsoft.com) to check eligibility, seek guidance, and execute this motion.
 
 </details>
 <br>
