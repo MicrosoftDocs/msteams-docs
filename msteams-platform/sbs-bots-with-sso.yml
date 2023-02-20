@@ -513,7 +513,7 @@ items:
 
     1. Select **Upload a custom app**.
     
-        :::image type="content" source="~/assets/images/bots/upload-custom-app.png" alt-text="Screenshot of Upload an app screen with Upload a custom app highlighted in red.":::
+        :::image type="content" source="~/assets/images/bots/upload-a-custom-app-3.png" alt-text="Screenshot showing the selection upload a custom app.":::
 
     1. Select **Open** to upload the .zip file that you've created in the **Manifest** folder.
 
