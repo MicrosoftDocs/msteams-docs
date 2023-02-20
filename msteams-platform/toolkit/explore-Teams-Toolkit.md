@@ -10,7 +10,7 @@ zone_pivot_groups: teams-app-platform
 ---
 # Explore Teams Toolkit
 
-Teams Toolkit appears within Visual Studio Code as an extension. You can explore the Teams Toolkit look and feel within the Visual Studio Code.
+You can explore the Teams Toolkit look and feel within the Visual Studio Code or Visual Studio.
 
 This section gives you a tour of Teams Toolkit and its features.
 
@@ -18,7 +18,7 @@ This section gives you a tour of Teams Toolkit and its features.
 
 ## Take a tour of Teams Toolkit
 
-After you install Teams Toolkit, it opens within the Visual Studio Code window.
+Teams Toolkit appears within Visual Studio Code as an extension. After you install Teams Toolkit, it opens within the Visual Studio Code window.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/overview1_1.png" alt-text="Overview of Teams Toolkit" lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/overview1_1.png":::
 
@@ -162,14 +162,14 @@ From the task pane, you can see the following sections:
 
 ## Explore Teams Toolkit for Visual Studio
 
-After Teams Toolkit installation, you can see Teams Toolkit options in the following ways:
+Teams Toolkit appears within Visual Studio as a workload. When you have created a Teams Toolkit app, you can see Teams Toolkit options in the following ways:
 
 # [Project](#tab/prj)
 
 You can access Teams Toolkit under **Project**.
 
 1. Select **Project** > **Teams Toolkit**.
-1. You can access different Teams Toolkit options.
+1. You can access different Teams Toolkit options:
 
    :::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-operations-menu_1_2.png" alt-text="Teams toolkit operations menu":::
 
@@ -178,8 +178,8 @@ You can access Teams Toolkit under **Project**.
    You can access Teams Toolkit under **Solution Explorer**.
 
 1. Select **View** > **Solution Explorer** to view **Solution Explorer** panel.
-1. Right-click on your **Project**.
-1. Select **Teams Toolkit** to access different Teams Toolkit options.
+1. Right-click on your app project name.
+1. Select **Teams Toolkit** to see the menu items.
 
    :::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-operations-menu1_1_2.png" alt-text="Teams toolkit operations from Project":::
 
