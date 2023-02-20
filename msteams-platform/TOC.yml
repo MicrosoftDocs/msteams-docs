@@ -747,7 +747,7 @@
       displayName: Microsoft Publisher Agreement, app update or new release, user engagement data 
     -  name: Common reasons for app validation failure
        href: concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md
-       displayName: Font, Broken links, functional bugs, app crashes, unexpected errors, app description, Microsoft trademark and brand guidelines, testability, app icon guidelines, app name mismatch, developer name mismatch      
+       displayName: Broken links, functional bugs, app crashes, unexpected errors, app description, Microsoft trademark and brand guidelines, testability, app icon guidelines, app name mismatch, developer name mismatch
 - name: Monetize your app
   items:
   - name: Overview
@@ -761,6 +761,25 @@
   - name: Test preview for monetized apps
     href: concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
     displayName: paid, AppSource, fee 
+- name: Grow your app
+  items:
+    - name: Strategize and execute growth for your app
+      href: concepts/deploy-and-publish/appsource/post-publish/app-growth/overview-app-growth.md
+    - name: Guide to grow your app
+      items: 
+      - name: Growth lifecycle for your app
+        href: concepts/deploy-and-publish/appsource/post-publish/app-growth/app-growth-lifecycle.md
+      - name: Build your collaborative app
+        href: concepts/deploy-and-publish/appsource/post-publish/app-growth/build-app.md
+      - name: Launch your collaborative app
+        href: concepts/deploy-and-publish/appsource/post-publish/app-growth/launch-app.md
+      - name: Gain traction for your collaborative app in the market
+        href: concepts/deploy-and-publish/appsource/post-publish/app-growth/gain-traction.md
+      - name: Scale your collaborative app
+        href: concepts/deploy-and-publish/appsource/post-publish/app-growth/scale-app.md
+      - name: Succeed with your collaborative app
+        href: concepts/deploy-and-publish/appsource/post-publish/app-growth/succeed.md
+        displayName: Font, Broken links, functional bugs, app crashes, unexpected errors, app description, Microsoft trademark and brand guidelines, testability, app icon guidelines, app name mismatch, developer name mismatch
 - name: App manifest
   items:
     - name: App manifest schema for Teams
