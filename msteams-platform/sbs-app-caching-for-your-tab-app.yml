@@ -16,7 +16,7 @@ items:
   content: |
    App caching helps you to improve subsequent launch time of the apps that are loaded in the meeting side panel. You can enable app caching for your tab app in Teams meeting.
   
-   This step-by-step guide helps you to create a sample app with app caching. You'll see the following app cached in the meeting side panel:
+   This step-by-step guide helps you to create a sample app with app caching. After you complete this guide, you'll see the app cached in the meeting side panel as shown in the following video:
 
       :::image type="content" source="~/assets/images/app-caching/app-caching.gif" alt-text="The gif shows the app caching experience when you navigate into different instance in Teams meeting.":::
     
@@ -34,17 +34,44 @@ items:
       > [!NOTE]
       > If you're downloading ngrok for the first time, sign up and install [authtoken](https://ngrok.com/download).
 
+    ## Set up your Teams development tenant
+
+       A **tenant** is like a space, or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where your sideload and test your app. Let's verify if you're ready to develop with the tenant.
+
+    ### Check for sideloading option
+
+        After creating the app, you must load your app in Teams without distributing it. This process is known as sideloading. Sign in to your Microsoft 365 account to view this option.
+
+        > [!NOTE]
+        > Sideloading is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you won't be able to preview and test your app in Teams locally.
+
+      Do you already have a tenant, and do you have the admin access? Let's check if you really do!
+
+      Verify if you can sideload apps in Teams:
+
+        1. In the Teams client, select the **Store** icon.
+        1. Select **Manage your apps**.
+        1. Select **Publish an app**.
+        1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
+
+            :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-custom-new1.png" alt-text="bot home":::
+
+            > [!NOTE]
+            > If you don't have the option to upload a custom app, talk to your Teams administrator.
+
 - title: Set up local environment
   durationInMinutes: 1
   content: |
 
     1. Open [Microsoft Teams Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples).
 
-    1. Select **Code** and from the dropdown menu, select **Open with GitHub Desktop**.
+    1. Select **Code**. From the dropdown menu, select **Open with GitHub Desktop**.
 
        :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/cloner-epository-tab-device_1.png" alt-text="cloning the repository":::
 
     1. Select **Clone**.
+
+       The sample app is cloned on your GitHub desktop. Ensure that you note the sample app location for later use.
 
 - title: Build and run the sample app with app caching
   durationInMinutes: 1
@@ -70,7 +97,7 @@ items:
         npm start
         ```
 
-       A new browser tab opens a http://localhost:3978 window.
+       A new browser tab opens the localhost window. The port 3978 is used for this code sample.
 
        :::image type="content" source="~/assets/images/app-caching/app-caching-local-host.png" alt-text="Screenshot shows you the local host 3978 running in the browser.":::
 
@@ -85,25 +112,26 @@ items:
         
         :::image type="content" source="~/assets/images/app-caching/app-caching-ngrok.png" alt-text="Screenshot shows you the ngrok tunnel running.":::
 
-- title: Set up manifest file and upload your app
+        You've successfully created the ngrok tunnel. Ensure that you note the https endpoint for later use.
+
+- title: Set up manifest file and sideload your app
   durationInMinutes: 1
   content: |
-   You need to setup the manifest file and upload the manifest.zip package to Teams.
+   You need to set up the manifest file and upload the manifest.zip package to Teams.
 
-     1. Go to the **manifest.json** file in your app package.
-  
-     1. Open **manifest.json** in Visual Studio Code.
+     1. Open your code sample in Visual Studio Code.
      
-     1. Replace `id` with GUID. You can use [app caching](https://guidgenerator.com/) to generate GUID.
+     1. Go to `appPackage` > `manifest.json`.
        
-     1. Replace `<<Valid_Domain>>` without your http endpoint from ngrok.
+     1. Replace `id` with GUID. You can use [GUID generator](https://guidgenerator.com/) to generate GUID.
+       
+     1. Replace `<<Valid_Domain>>` without your https endpoint from ngrok. Use the endpoint that you saved after creating the ngrok tunnel.
       
      1. Zip the contents of the **manifest** folder to create `manifest.zip`.
 
-        > [!NOTE]
-        > Ensure that the `manifest.zip` contains only the `manifest.json` source file, `color` icon, and  the `outline` icon.
+        The `manifest.zip` is your app package. Ensure the package contains only the `manifest.json` source file, `color` icon, and  the `outline` icon.
      
-        You've successfully created the app package for your app.
+        You've successfully created the app package for your app. You can use this app package to sideload your app into Teams.
 
      ## Sideload your app to the Teams meeting
 
@@ -119,13 +147,15 @@ items:
 
       1. Select **Upload a custom app**.
 
+         The **Open** dialog appears.
+
       1. Select the `manifest.zip` file and upload it.
 
       1. Select **Add** to add the app to the meeting.
 
          :::image type="content" source="~/assets/images/app-caching/app-caching-add-app.png" alt-text="Screenshot shows you the add app to your meeting.":::
          
-      1. Select **+ Apps**, and then select **App caching**.
+      1. Select **+ Apps**, and then select **App Caching In Meeting**.
 
          :::image type="content" source="~/assets/images/app-caching/app-caching-add-app-meeting.png" alt-text="Screenshot shows how to add apps to your meeting tab.":::
 
@@ -140,7 +170,7 @@ items:
 - title: Test your app
   durationInMinutes: 1
   content: |
-   Go to any other tab and come back to the app caching tab. You can see that your app cached.
+   Go to any other tab and come back to the app caching tab. You can see that your app is cached in the meeting side panel.
 
    :::image type="content" source="~/assets/images/app-caching/app-caching.gif" alt-text="The gif shows the app caching experience when you navigate into different instance in meeting.":::
     
