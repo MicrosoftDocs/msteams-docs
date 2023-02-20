@@ -326,7 +326,7 @@ The following are the limitations for app caching:
 
 * Verify if the system and available memory constraints are met.
 
-* Reduce your memory footprint when cached. Use the `beforeUnload` handler to dispose resources, for example, release references and remove event listeners, that might not be needed when cached.
+* Reduce your memory footprint when cached. Use the `beforeUnload` handler to dispose resources, for example, release references and remove event listeners that might not be needed when cached.
 
 ## Feature compatibility by user types
 
