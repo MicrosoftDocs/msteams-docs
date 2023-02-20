@@ -47,7 +47,7 @@ It also includes some proven best practices from the team that crafted the Teams
 
 You’ll probably not be surprised to hear that not all apps are equal on any marketplace. Teams apps are diverse in terms of use cases fulfilled, personas served, end-user user experience, and user value delivered. As a developer, you can:
 
-1. **Just test waters**: Take a *foot-in-the door* approach where your SaaS backend is used to provide an elevated, ephemeral end-user experience using [link unfurling](../../../../../messaging-extensions/how-to/link-unfurling.md) feature to show rich, informative and actionable preview cards whenever URLs from your domain are shared inside Teams, even when the user does not have your app installed.
+1. **Just test waters**: Take a *foot-in-the door* approach where your SaaS backend is used to provide an elevated, ephemeral end-user experience using [link unfurling](../../../../../messaging-extensions/how-to/link-unfurling.md) feature to show rich, informative and actionable preview cards whenever URLs from your domain are shared inside Teams, even when the user doesn't have your app installed.
 
 1. **Build a complementary, companion experience to your core web SaaS**: Build your Teams app serving as a point solution that can be called *add-in*, *plug-in*, or an *integration*. You can build them for select, frequent, isolated and lightweight use cases relevant to be achieved inside Teams.
 
@@ -59,7 +59,7 @@ Needless to say, the strategy you'll adopt among the options described above wil
 - The economic opportunity for your app
 - How you can maximize the ROI from your investments into the app
 
-You are not necessarily constrained by picking only one out of the above approaches – your investment can start from (a) and move towards (b) and eventually culminate at (c). This document assumes you’ve taken a strategic view of your Teams investment by developing a *collaborative app*. In such an app, the user is able to get designated *jobs* seamlessly and preferably done in the flow of their work with full context, without leaving Microsoft Teams. Collaborative apps are the best positioned to win new customer deals for you and upsell or cross-sell to your existing customers. For this reason, this investment has the potential to deliver the highest net new economic opportunity for your business.
+You aren't necessarily constrained by picking only one out of the above approaches – your investment can start from (a) and move towards (b) and eventually culminate at (c). This document assumes you’ve taken a strategic view of your Teams investment by developing a *collaborative app*. In such an app, the user is able to get designated *jobs* seamlessly and preferably done in the flow of their work with full context, without leaving Microsoft Teams. Collaborative apps are the best positioned to win new customer deals for you and upsell or cross-sell to your existing customers. For this reason, this investment has the potential to deliver the highest net new economic opportunity for your business.
 
 Using the guidance in this document, you can grow your collaborative app on Teams and expand differentiated scenarios further. You can also incorporate Teams-first or Teams-only use cases, and devise a go-to-market model that is led by your Teams collaborative app - consequently building a growth flywheel for your business.
 
@@ -69,7 +69,7 @@ You can use one or all the three predominant types of SaaS business growth model
 
 1. **Sales-led growth**: Potential customers or *sales-qualified leads (SQLs)* interact with a sales representative or a customer success representative. It can be through every stage of the buying journey. The interaction can start from understanding your SaaS app’s feature or seeing a demo, result in purchase of your product and last through post-purchase setup and config, sales-led user onboarding, and training by customer success reps regarding how to use the app.
 1. **Marketing-led growth**: Prospective customers sign up for a product demo after building perceived value of your product. They consume marketing narratives such as, advertisements, content resources such as, blogs, videos, or downloadable e-books. As a result, a *marketing-qualified lead (MQL)* is generated for your sales team to convert. Customer retention and monetization are driven by marketing channels, content, and outreach.
-1. **Product-led growth**: Your SaaS product itself is the main driving force behind customer acquisition, activation, retention, revenue growth, virality, and expansion. It's possible by offering self-serve freemium or free trial options and a straightforward frictionless onboarding process to users. Users can start using the product right away and experience direct product value first-hand with minimal sales, marketing, or customer success personnels from your side interacting with them on the way. *Product-qualified leads (PQLs)* that is users who have experienced meaningful value using the product are the ones more likely to become paying customers either directly or through upsell or intervention by your salesforce.
+1. **Product-led growth**: Your SaaS product itself is the main driving force behind customer acquisition, activation, retention, revenue growth, virality, and expansion. It's possible by offering self-serve freemium or free trial options and a straightforward frictionless onboarding process to users. Users can start using the product right away and experience direct product value first-hand with minimal sales, marketing, or customer success personnel from your side interacting with them on the way. *Product-qualified leads (PQLs)* that is users who have experienced meaningful value using the product are the ones more likely to become paying customers either directly or through upsell or intervention by your salesforce.
 
 As a developer of a collaborative app, you'll benefit from devising a well-rounded strategy that employs all three SaaS business growth models. It helps you grow your Teams app among hundreds of millions of Teams users.
 
@@ -84,7 +84,7 @@ As noted earlier, your Teams collaborative app requires sustained and continuous
 - [Go-to-Market Investments](#go-to-market-investments)
 - [Monetization Investments](#monetization-investments)
 
-Let's understand why each of these investments matter, what impact it will have on your customers and your business and how you will execute these at scale.
+Let's understand why each of these investments matter, what impact it will have on your customers and your business and how you'll execute these at scale.
 
 ### Product Investments
 
