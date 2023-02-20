@@ -57,7 +57,7 @@ Ensure that you monitor reviews for your app on the marketplace, user feedback c
 
 Keep an eye on your competitors and other leading SaaS apps in your segment to continuously learn from the market and evolve your app’s strategy and roadmap. Since Teams marketplace is public, your product team can at the minimum use the [Microsoft 365 developer sandbox](https://developer.microsoft.com/microsoft-365/dev-program) to experience other apps.
 
-Strategic developers, who are part of the invite-only Teams engineering’s build-with partner program, can get early access to new and latest cutting-edge collaborative features on Teams app platform. It's an opportunity for you to deliver unparalleled value to customers and use global GTM and marketing moments, being an early adopter to showcase new innovation on Teams. However you can always discover and use Microsoft Teams platform features that are in [public developer preview](../../../../../whats-new.md?pivots=dev-preview) ](https://learn.microsoft.com/microsoftteams/platform/whats-new?pivots=dev-preview).
+Strategic developers, who are part of the invite-only Teams engineering’s build-with partner program, can get early access to new and latest cutting-edge collaborative features on Teams app platform. It's an opportunity for you to deliver unparalleled value to customers and use global GTM and marketing moments, being an early adopter to showcase new innovation on Teams. However you can always discover and use Microsoft Teams platform features that are in [public developer preview](../../../../../whats-new.md?pivots=dev-preview).
 
 </details>
 <br>
