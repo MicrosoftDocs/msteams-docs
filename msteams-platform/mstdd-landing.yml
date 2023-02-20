@@ -52,6 +52,8 @@ landingContent:
         url: https://gitter.im/OfficeDev/home
     - linkListType: whats-new
       links:
+      - text: Grow your app
+        url:  concepts/deploy-and-publish/appsource/post-publish/app-growth/overview-app-growth.md
       - text: Create a dashboard in Teams
         url:  tabs/how-to/dashboard-teams-toolkit.md
       - text: Targeted in-meeting notification (Developer preview)
