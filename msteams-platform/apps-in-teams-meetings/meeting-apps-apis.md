@@ -290,6 +290,56 @@ The following table includes the response codes:
 
 The `targetedMeetingNotification` API allows apps to send targeted in-meeting notifications to specific participants in a meeting. Apps send targeted in-meeting notifications based on user action. The API is available through bot API.
 
+### Prerequisite
+
+You must configure your app manifest with [RSC permissions](../graph-api/rsc/resource-specific-consent.md) under the `webApplicationInfo` property to send targeted in-meeting notifications to specific participants in a meeting. Use the following examples to configure your manifest:
+
+<br>
+
+<details>
+
+<summary><b>For app manifest version 1.12 and later</b></summary>
+
+```json
+"webApplicationInfo": {
+    "id": "<<MICROSOFT-APP-ID>>",
+    "resource": "https://RscBasedStoreApp"  },
+  "authorization": {
+    "permissions": {
+      "resourceSpecific": [
+            {
+                "name": "OnlineMeetingNotification.Send.Chat",
+                "type": "Application"
+            }
+        ]    
+    }
+}
+ ```
+
+<br>
+
+</details>
+
+<br>
+
+<details>
+
+<summary><b>For app manifest version 1.11 and earlier</b></summary>
+
+```json
+"webApplicationInfo": {
+    "id": "<<MICROSOFT-APP-ID>>",
+    "resource": "https://RscBasedStoreApp",
+    "applicationPermissions": [
+      "OnlineMeetingNotification.Send.Chat"
+    ]
+}
+ ```
+
+<br>
+
+</details>
+
 > [!NOTE]
 >
 > * The API payload only permits a task module with a URL.
