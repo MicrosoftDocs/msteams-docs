@@ -20,7 +20,7 @@ Growing your app is a journey. It's a process that’s not overnight and goes th
 - **Traction stage**: This stage has dual purpose and focus:
 
   - Building awareness for the app through impactful customer and seller marketing channels.
-  - Build product, sales, customer success and support functions’ readiness for the app’s upcoming adoption, growth, and ROI realization.
+  - Building readiness of product, sales, customer success and support functions for the app’s upcoming adoption, growth, and ROI realization.
 
   Most growth and GTM activities during this stage are pilots to discover effectiveness, learning and execution rhythms. When the app crosses the *traction barrier*, one can say it has achieved product market fit in Teams marketplace and ecosystem.
 
@@ -30,15 +30,17 @@ Growing your app is a journey. It's a process that’s not overnight and goes th
 
   The activities at this stage include:
 
-  - Building public references for the impact of the collaborative app among customers.
-  - Optimizing customer sales and conversion based on PQLs.
-  - Investing further in more user-valuable scenarios or experiences inside the app.
+  - Building public references for the impact of the collaborative app among customers to directly drives SQLs and MQLs
+  - Optimizing customer sales and conversion based on PQLs
+  - Investing further in more user-valuable scenarios or experiences inside the app
 
-  There may be examples of developers short circuiting the lifecycle to jump across stages, for example, directly starting to monetize their app after launch using their version 1 experience itself. It's recommended that you follow a stage-by-stage approach as a best practice that most developers follow to derive the best ROI from their Teams app journey.
+There may be examples of developers short circuiting the lifecycle to jump across stages, for example, directly starting to monetize their app after launch using their version 1 experience itself. It's recommended that you follow a stage-by-stage approach as a best practice that most developers follow to derive the best ROI from their Teams app journey.
+
+## Review the Teams partners GTM guide
+
+Get started first by reviewing (and sharing with your GTM leaders) this high-level visual [Guide to ISV success with Microsoft for Teams Partners](http://aka.ms/teamsappsGTMguide) flipbook. This resource orients you about how to plan and strategize your Teams app offering, insights about key industry-wise personas and trends, how to define your app’s value proposition, create content to maximize your app’s reach among customers and sellers, access various partner benefits available to you, how to visualize a simplistic customer journey with your app, how to align your marketing activities with key opportunities from Microsoft and how to sell your app via Microsoft’s global marketplace. As you can see from the flipbook, Microsoft partners with app developers once they’ve launched their apps on the marketplace by offering select, programmatic GTM investments depending on the app’s maturity in the market. You're encouraged to get in touch with your Microsoft field, account or engineering representatives before spending cycles on your app growth planning and execution, so that you can get the most appropriate guidance you’re eligible for.
 
 ## Step-by-step guide to grow your app
-
-Get started first by reviewing (and sharing with your GTM leaders) this high-level visual Guide to ISV success with Microsoft for Teams Partners flipbook. This resource orients you about how to plan and strategize your Teams app offering, insights about key industry-wise personas and trends, how to define your app’s value proposition, create content to maximize your app’s reach among customers and sellers, access various partner benefits available to you, how to visualize a simplistic customer journey with your app, how to align your marketing activities with key opportunities from Microsoft and how to sell your app via Microsoft’s global marketplace. As you can see from the flipbook, Microsoft partners with app developers once they’ve launched their apps on the marketplace by offering select, programmatic GTM investments depending on the app’s maturity in the market. You're encouraged to get in touch with your Microsoft field, account or engineering representatives before spending cycles on your app growth planning and execution, so that you can get the most appropriate guidance you’re eligible for.
 
 It's time now to expand on the preview provided by the flipbook above! The following sections offer a stage-by-stage  descriptive guide elaborating on the various growth initiatives developers can plan and execute and where Microsoft can help.
 
