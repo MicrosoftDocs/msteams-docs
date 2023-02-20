@@ -34,11 +34,11 @@ Teams Toolkit appears within Visual Studio Code as an extension. After you insta
 
 ### Explore the Teams Toolkit task pane
 
-You can explore the available functionalities from the Teams Toolkit task pane. The task pane appears only after you have created an app project using Teams Toolkit. The following video helps you to learn about the process of creating a new Teams app:
+You can explore the available functionalities from the Teams Toolkit task pane. The task pane appears only after you've created an app project using Teams Toolkit. The following video helps you to learn about the process of creating a new Teams app:
 
    :::image type="content" source="../assets/videos/javascript-bot-app1_1.gif" alt-text="Create a Teams app":::
 
-After creating a new Teams app project, the directory structure of the app appears in the left panel and the **`README`** file in the right panel.
+After you create a new Teams app project, the directory structure of the app appears in the left panel and the **`README`** file in the right panel.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/first-page_1.png" alt-text="First page of Teams Toolkit" lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/first-page_1.png":::
 
@@ -162,7 +162,7 @@ From the task pane, you can see the following sections:
 
 ## Explore Teams Toolkit for Visual Studio
 
-Teams Toolkit appears within Visual Studio as a workload. When you have created a Teams Toolkit app, you can see Teams Toolkit options in the following ways:
+Teams Toolkit appears within Visual Studio as a workload. When you've created a Teams Toolkit app, you can see Teams Toolkit options in the following ways:
 
 # [Project](#tab/prj)
 
