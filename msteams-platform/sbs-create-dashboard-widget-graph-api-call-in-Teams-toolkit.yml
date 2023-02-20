@@ -24,7 +24,7 @@ items:
 
     | Install | For using |
     | --- | --- |    
-    | [NodeJS](https://nodejs.org/en/)| Back-end JavaScript runtime environment. Use Node.js version 14 or 16. |
+    | [NodeJS](https://nodejs.org/en/)| Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](toolkit/tools-prerequisites.md#nodejs-version-compatibility-table-for-project-type). |
     | [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program) | Teams account with the appropriate permissions to install an app. |
     | [Teams Toolkit Visual Studio Code Extension](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) or [TeamsFx CLI](~/toolkit/TeamsFx-CLI.md) |  A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use Teams Toolkit version 4.0.0. |
 
