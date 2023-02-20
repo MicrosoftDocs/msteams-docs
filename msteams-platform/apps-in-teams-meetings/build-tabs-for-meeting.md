@@ -261,9 +261,9 @@ There are multiple reasons for an app to not get cached or for an app to get rem
 * If the number of cached apps exceed the maximum cache size, the oldest cached app is removed from the cache.
 * If the user doesn't return to the app within 20 minutes, the app is removed from the cache.
 * The app isn't cached if Teams doesn't receive the `readyToUnload` signal from the app within 30 seconds after sending the `beforeUnload` notification.
-* App caching is disabled in the following scenarios: 
-  * System memory is less than 4 GB. 
-  * Available memory is less than 1 GB on Windows or 512 MB on Mac.
+* To avoid any issue with app caching, ensure the following:
+  * System memory is more than 4 GB. 
+  * Available memory is more than 1 GB on Windows or 512 MB on Mac.
 * Side panel is the only supported frameContext for app caching in meetings.
 * App caching isn't supported for meetings where the invited user count is more than 20.
 * If an app fails to load, the app isn't cached.
@@ -305,7 +305,7 @@ The following are the limitations for app caching:
 
 <!-- * App caching isn't supported for the meeting stage or Task module contexts, because these can be opened on top of the tab and the same webview can't be used to render the content in the tab and the Task module. -->
 
-* Meeting stage or Task module contexts doesn't support app caching, because they use the same webview to render the content. For this reason, meeting stage or Task module contexts can't be opened on top of the tab.
+* Meeting stage or Task module contexts doesn't support app caching, because they use the same webview to render the content. For this reason, meeting stage or Task module contexts can't open on top of the tab.
 
 * Register only the `beforeUnload` handler if your app doesn't require app caching but needs time to safely save state (as leaving the app can cause the app content to be abruptly removed from the Document Object Model (DOM)). If the app hasn't registered for the `load` event, it's removed from the DOM after the unload flow completes.
 
