@@ -59,7 +59,7 @@ landingContent:
       - text: Enable app caching to improve subsequent launch time of the apps to the meeting side panel (Developer preview)
         url: apps-in-teams-meetings/build-tabs-for-meeting.md#app-caching
       - text: Update and soft delete event notifications in bot
-        url: bots/how-to/conversations/conversation-messages.md#update-message
+        url: how-to/conversations/conversation-messages.md#update-message
       - text: Teams developer documentation FAQs
         url: teams-faq.md
       - text: Share-in-meeting to share any document or third-party app to the meeting stage
