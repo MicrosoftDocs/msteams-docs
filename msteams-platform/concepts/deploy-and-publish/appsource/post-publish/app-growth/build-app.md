@@ -15,15 +15,15 @@ Let’s briefly go over what initiatives are the most impactful during the build
 
 - Alignment on business drivers, success metrics and path to liquidity for your collaborative app.
 - Commitment to build a high-quality and sticky collaborative app on Teams and monetize the app via transactable SaaS subscriptions on the marketplace.
-- Adherence to platform fundamentals and collaboration apps design principles.
+- Understanding of and adherence to [platform fundamentals](https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/app-fundamentals-overview) and [Teams app design principles](https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/design/design-teams-app-overview).
 - Executive commit for multi-quarter app roadmap and GTM investments.
-- Identification of pilot customers and  getting their agreement to provide feedback on the app and adopt once published.
+- Identification of pilot customers and getting their agreement to provide feedback on the app and adopt once published.
 
 ## Where can Microsoft help?
 
 - Access to proven best practices to build a differentiated, collaborative Teams app.
 - In-depth developer documentation with elaborate platform features to build a high quality app.
-- White gloved PM, dev, design support from Teams Engineering for strategic developers through the invite-only build-with partner program.
+- White gloved support through PM, development and design experts from Teams Engineering for strategic developers through the invite-only build-with partner program.
 - Support for customer inclusive app design and development for strategic developers through the invite-only build-with partner program.
 
 ## Next step
