@@ -49,7 +49,7 @@ The following image shows a tab added to the meeting details page in the Teams m
 
 1. In the app gallery, select the app that you want to add and follow the steps as required. The tab is added to the meeting chat.
 
-   :::image type="content" source="../assets/images/apps-in-meetings/meeting-chat-view.png" alt-text="The Screenshot shows the meeting chat view in the Teams meeting.":::
+   :::image type="content" source="../assets/images/apps-in-meetings/meeting-chat-view.png" alt-text="Screenshot shows the meeting chat view in the Teams meeting.":::
 
 ### Meeting side panel view
 
@@ -67,7 +67,7 @@ The following image shows a tab added to the meeting details page in the Teams m
 
 1. This results in rendering tab on the stage for every participant in the meeting.
 
-   :::image type="content" source="../assets/images/meeting-stage-view.png" alt-text="This Screenshot shows meeting stage view of the app you shared to meeting.":::
+   :::image type="content" source="../assets/images/meeting-stage-view.png" alt-text="Screenshot shows meeting stage view of the app you shared to meeting.":::
 
 ### Apps in channel meeting
 
@@ -305,7 +305,6 @@ The following table provides the user types and lists the features that each use
 | In-meeting document signing | Demonstrates how to implement a document signing Teams app. Includes sharing specific app content to stage, Teams SSO and user specific stage view. | [View](https://github.com/officedev/microsoft-teams-samples/tree/main/samples/meetings-share-to-stage-signing/csharp) | NA |
 | App caching | Sample app to show how app caching works in the meeting side panel. | NA | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-cache-meetings/nodejs) |
 | Meeting tabs | This sample shows app stage view, Mute/Unmute Teams meeting audio call in meeting Side panel tab. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-tabs/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-tabs/nodejs) |
-
 
 > [!NOTE]
 >

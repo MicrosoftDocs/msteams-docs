@@ -1,6 +1,6 @@
 ---
 title: Messages in bot conversations
-description: Learn how to send and receive a message, suggested actions, notification, attachments, images, Adaptive Card and status error code responses.
+description: Learn how to send and receive a message, suggested actions, notification, attachments, images, Adaptive Card, and status error code responses.
 ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
@@ -60,6 +60,7 @@ export class MyBot extends TeamsActivityHandler {
 ```
 
 # [Python](#tab/python)
+
 * [SDK reference](/python/api/botbuilder-core/botbuilder.core.activityhandler?view=botbuilder-py-latest#botbuilder-core-activityhandler-on-message-activity&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L103)
 
@@ -167,6 +168,7 @@ protected override async Task OnMembersAddedAsync(IList<ChannelAccount> membersA
 ```
 
 # [Python](#tab/python)
+
 * [SDK reference](/python/api/botbuilder-core/botbuilder.core.turncontext?view=botbuilder-py-latest#botbuilder-core-turncontext-send-activity&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-teams-authentication/python/bots/auth_bot.py#L33)
 
@@ -436,6 +438,7 @@ this.onMessage(async (turnContext, next) => {
 ```
 
 # [Python](#tab/python)
+
 [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams?view=botbuilder-py-latest#botbuilder-core-teams-teams-notify-user&preserve-view=true)
 
 ```python
