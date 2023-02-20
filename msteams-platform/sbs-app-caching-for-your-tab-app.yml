@@ -49,15 +49,15 @@ items:
 
       Verify if you can sideload apps in Teams:
 
+      > [!NOTE]
+      > If you don't have the option to upload a custom app, talk to your Teams administrator.
+
        1. In the Teams client, select the **Store** icon.
        1. Select **Manage your apps**.
        1. Select **Publish an app**.
        1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
 
-          > [!NOTE]
-          > If you don't have the option to upload a custom app, talk to your Teams administrator.
-
-         :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-custom-new1.png" alt-text="bot home":::
+          :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-custom-new1.png" alt-text="Screenshot shows you how to upload your app to Teams.":::
 
 - title: Set up local environment
   durationInMinutes: 1
