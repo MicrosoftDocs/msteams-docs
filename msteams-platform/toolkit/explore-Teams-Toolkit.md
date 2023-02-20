@@ -171,7 +171,7 @@ You can access Teams Toolkit under **Project**.
 1. Select **Project** > **Teams Toolkit**.
 1. You can access different Teams Toolkit options:
 
-   :::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-project-menu.png" alt-text="Teams toolkit project menu":::
+   :::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-project-menu.png" alt-text="Teams toolkit project menu" lightbox="../assets/images/teams-toolkit-overview/teams-toolkit-project-menu.png":::
 
 # [Solution Explorer](#tab/solutionexplorer)
 
