@@ -56,8 +56,8 @@ items:
 
           :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-custom-new1.png" alt-text="bot home":::
 
-           >  [!NOTE]
-           > If you don't have the option to upload a custom app, talk to your Teams administrator.
+        >  [!NOTE]
+        > If you don't have the option to upload a custom app, talk to your Teams administrator.
 
 - title: Set up local environment
   durationInMinutes: 1
