@@ -291,7 +291,7 @@ microsoftTeams.teamsCore.registerBeforeUnloadHandler((readyToUnload) => {
 
 The following are the limitations for app caching:
 
-* Single-page apps that use client-side routing for page navigation can benefit from app caching. It's recommended that the same domain be used across all contexts of your app launch.
+* Single-page apps that use client-side routing for page navigation can benefit from app caching. Use same domain across all contexts of your app launch.
 
 * Apps need to re-register for events such as `themeChange`, `focusEnter`, and so on, in the load handler. Teams client won't send any notifications to the app when cached. If your app requires notifications even when cached, caching might not be the right solution.
 
