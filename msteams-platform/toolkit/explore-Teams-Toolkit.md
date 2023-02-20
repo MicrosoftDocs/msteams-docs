@@ -42,15 +42,15 @@ After creating a new Teams app project, the directory structure of the app appea
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/first-page_1.png" alt-text="First page of Teams Toolkit" lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/first-page_1.png":::
 
-Let's take a tour of the Teams Toolkit.
+Let's take a tour of Teams Toolkit.
 
- In Visual Studio Code activity bar, the following icons are relevant to the Teams Toolkit:
+ In Visual Studio Code activity bar, the following icons are relevant to Teams Toolkit:
 
-| Icon | Description |
+| Select | To... |
 | --- | --- |
-| **Explorer** :::image type="icon" source="../assets/images/teams-toolkit-v2/file-explorer-icon.PNG":::  | To view the directory structure of the app. |
-| **Run and Debug** :::image type="icon" source="../assets/images/teams-toolkit-v2/run-debug-icon.PNG":::  | To start the local or remote debug process. |
-| **Teams Toolkit** :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG"::: | To view the task pane  in the Teams Toolkit. |
+| **Explorer** :::image type="icon" source="../assets/images/teams-toolkit-v2/file-explorer-icon.PNG":::  | View the directory structure of the app. |
+| **Run and Debug** :::image type="icon" source="../assets/images/teams-toolkit-v2/run-debug-icon.PNG":::  | Start the local or remote debug process. |
+| **Teams Toolkit** :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG"::: | View the task pane  in the Teams Toolkit. |
 
 From the task pane, you can see the following sections:
 
@@ -78,7 +78,9 @@ From the task pane, you can see the following sections:
         
        * **local**: Deploy your app in the default local environment with local environment configurations.
 
-        * **dev**: Deploy your app in the default dev environment with remote or cloud environment configurations. You can create more environments, such as, production or test, as you need.
+        * **dev**: Deploy your app in the default dev environment with remote or cloud environment configurations.
+
+        You can create more environments, such as, production or test, as you need.
    :::column-end:::
 :::row-end:::
 
@@ -142,15 +144,17 @@ From the task pane, you can see the following sections:
 
 ### To view how-to guides
 
-1. Select View how-to guides from the Teams Toolkit task pane under Development section.The how-to guides menu appears.
+1. Select **View how-to guides** from the Teams Toolkit task pane under Development section.
+
+   The **View how-to guides** menu appears.
 
 2. Select the type of how-to guide that you want to view.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/view-how-to-guides.png" alt-text="Screenshot showing the how-to guides menu options.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/view-how-to-guides.png" alt-text="Screenshot showing the how-to guides menu options." lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/view-how-to-guides.png":::
 
-    * Select any one of the Teams app scenario guides to view the guide to develop an app for a common app scenario, such as sending notifications using a bot or embedding a dashboard tab in a Teams app.
+    * Select any one of the Teams app scenario guides to view the guide to develop an app for a common app scenario, such as sending notifications using a bot.
 
-    * Select any one of the Teams app development guides to view a guide that helps in app development. It includes guide for adding single sign-on experience to your app or connecting to an existing third-party APIs.
+    * Select any one of the Teams app development guides to view a guide that helps in app development, such as embedding a dashboard tab in a Teams app.
 
 ::: zone-end
 
