@@ -23,15 +23,13 @@ After you install Teams Toolkit, it opens within the Visual Studio Code window.
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/overview1_1.png" alt-text="Overview of Teams Toolkit" lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/overview1_1.png":::
 
 | Serial No. | UI Elements | Definition |
-| --- | --- |
+| --- | --- | --- |
 | 1 | **Get Started** | Explore Teams Toolkit and get an overview of the fundamentals. |
 | 2 | **Create a new Teams app** | Create a new Teams app based on your requirement. |
 | 3 | **View samples** | Select and build existing app samples based on common use cases for a Teams app. |
 | 4 | **Documentation** | Access the Microsoft Teams Developer documentation. |
 | 5 | **Tutorials** | Access different tutorials. |
-| 6 | **New File** | Create a new file. |
-| &nbsp; | **Open File** | Open the existing file. |
-| &nbsp; | **Open Folder** | Open the existing folder. |
+| 6 | • **New File** <br> • **Open File** <br> • **Open Folder** | • Create a new file. <br> • Open the existing file. <br> • Open the existing folder. |
 | 7 | **Recent** | View the recent files. |
 
 ### Explore the Teams Toolkit task pane
