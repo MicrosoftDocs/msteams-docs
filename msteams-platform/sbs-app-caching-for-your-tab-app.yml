@@ -34,30 +34,30 @@ items:
       > [!NOTE]
       > If you're downloading ngrok for the first time, sign up and install [authtoken](https://ngrok.com/download).
 
-    ## Set up your Teams development tenant
+    ### Set up your Teams development tenant
 
        A **tenant** is like a space, or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where your sideload and test your app. Let's verify if you're ready to develop with the tenant.
 
-    ### Check for sideloading option
+    #### Check for sideloading option
 
-        After creating the app, you must load your app in Teams without distributing it. This process is known as sideloading. Sign in to your Microsoft 365 account to view this option.
+       After creating the app, you must load your app in Teams without distributing it. This process is known as sideloading. Sign in to your Microsoft 365 account to view this option.
 
-        > [!NOTE]
-        > Sideloading is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you won't be able to preview and test your app in Teams locally.
+       > [!NOTE]
+       > Sideloading is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you won't be able to preview and test your app in Teams locally.
 
       Do you already have a tenant, and do you have the admin access? Let's check if you really do!
 
       Verify if you can sideload apps in Teams:
 
-        1. In the Teams client, select the **Store** icon.
-        1. Select **Manage your apps**.
-        1. Select **Publish an app**.
-        1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
+       1. In the Teams client, select the **Store** icon.
+       1. Select **Manage your apps**.
+       1. Select **Publish an app**.
+       1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
 
-            :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-custom-new1.png" alt-text="bot home":::
+          :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-custom-new1.png" alt-text="bot home":::
 
-            > [!NOTE]
-            > If you don't have the option to upload a custom app, talk to your Teams administrator.
+       >  [!NOTE]
+       > If you don't have the option to upload a custom app, talk to your Teams administrator.
 
 - title: Set up local environment
   durationInMinutes: 1

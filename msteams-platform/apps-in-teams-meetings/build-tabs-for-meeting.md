@@ -16,7 +16,12 @@ Every team has a different way of communicating and collaborating tasks. To achi
 
 Tabs allow the meeting participants to access services and content in a specific space within a meeting. If you're new to Microsoft Teams tab development, see [build tabs for Teams](/microsoftteams/platform/tabs/what-are-tabs).
 
-Before creating a meeting tab, it's important to learn about the surfaces that are available to target the meeting chat view, meeting details view, meeting side panel view, and meeting stage view.
+Before creating a meeting tab, learn about the surfaces that are available to target the following views:
+
+* Meeting chat view
+* Meeting details view
+* Meeting side panel view
+* Meeting stage view
 
 ### Meeting details view
 
@@ -236,15 +241,15 @@ To enable app caching in your meeting side panel, follow the steps:
 
 1. Dispose resources and perform any cleanup needed in the `beforeUnload` handler, then invoke the `readyToUnload` callback to notify Teams client that the app unload flow is complete.
 
-The following is the flow diagram of the first launch of an app that wants to opt into app caching (register the `load` or `beforeUnload` on the first launch of the app):
+The following flow diagram shows the first launch of an app that wants to opt into app caching (register the `load` or `beforeUnload` on the first launch of the app):
 
 :::image type="content" source="../assets/images/saas-offer/first-launch-app.png" alt-text="This screenshot shows the flow of the first launch of the app in meeting side panel.":::
 
-The following is the flow diagram of the launch of cached app:
+The following flow diagram shows the launch of cached app:
 
 :::image type="content" source="../assets/images/saas-offer/cached-launch-app.png" alt-text="This screenshot shows the flow of the cached launch of the app in meeting side panel.":::
 
-When you opt into app caching, the webview that is used to host the embedded app is reused as users navigate to different instances of the app within a window. The webview used to host the app is hidden when the users leave the app and shown when the users return to the app. When the app is cached, any audio that is playing is muted.
+When you opt into app caching, the webview that is used to host the embedded app is reused. The webview used to host the app is hidden when the users leave the app and shown when the users return to the app. When the app is cached, any audio that is playing is muted.
 
 > [!NOTE]
 > If the app caching isn't enabled, the webview is recreated every time the user launches the app.
@@ -255,7 +260,9 @@ There are multiple reasons for an app to not get cached or for an app to get rem
 * If the number of cached apps exceed the maximum cache size, the oldest cached app is removed from the cache.
 * If the user doesn't return to the app within 20 minutes, the app is removed from the cache.
 * The app isn't cached if Teams doesn't receive the `readyToUnload` signal from the app within 30 seconds after sending the `beforeUnload` notification.
-* App caching is disabled if the system memory is less than 4 GB or if the available memory is less than 1 GB on Windows or 512 MB on Mac.
+* App caching is disabled in the following scenarios: 
+  * System memory is less than 4 GB. 
+  * Available memory is less than 1 GB on Windows or 512 MB on Mac.
 * Side panel is the only supported frameContext for app caching in meetings.
 * App caching isn't supported for meetings where the invited user count is more than 20.
 * If an app fails to load, the app isn't cached.
