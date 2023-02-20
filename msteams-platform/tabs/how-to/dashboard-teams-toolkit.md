@@ -43,7 +43,7 @@ export default class YourDashboard extends Dashboard {}
 
 ```
 
->[! NoTE]
+> [!NOTE]
 > All methods are optional. If you don't override any method, the default dashboard layout is used.
 
 ### Override methods to customize dashboard tab app
