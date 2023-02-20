@@ -171,7 +171,7 @@ You can access Teams Toolkit under **Project**.
 1. Select **Project** > **Teams Toolkit**.
 1. You can access different Teams Toolkit options:
 
-   :::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-operations-menu_1_2.png" alt-text="Teams toolkit operations menu":::
+   :::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-project-menu.png" alt-text="Teams toolkit project menu":::
 
 # [Solution Explorer](#tab/solutionexplorer)
 
@@ -194,14 +194,14 @@ After you've created your Teams app project, you can use the following options t
 
 |Function  |Description  |
 |---------|---------|
-|Prepare Teams App Dependencies     |Before you debug locally, perform ensure that you set up the local debug dependencies and register Teams app in the Teams platform. You need a Microsoft 365 account. For more information, see [how to debug your Teams app locally using Visual Studio](debug-local.md).         |
-|Open Manifest File     |To open Teams app manifest file, hover over the parameters to preview the values. For more information, see [how to edit Teams app manifest using Visual Studio](VS-TeamsFx-preview-and-customize-app-manifest.md).         |
-|Update Manifest in Teams Developer Portal     |When you update the manifest file, only then you can redeploy the manifest file to Azure without deploying the whole project again. Use this command to update your changes to remote. For more information, see [how to edit Teams app manifest using Visual Studio](VS-TeamsFx-preview-and-customize-app-manifest.md).       |
-|Add Authentication Code     |This option helps you to obtain signed-in Teams user token to access Microsoft Graph and other APIs. Teams Toolkit facilitates the interaction by abstracting from the Microsoft Azure Active Directory (Azure AD) which flows and integrations with simple APIs. For more information, see [how to add single sign-on to Teams app](add-single-sign-on.md).        |
-|Provision to the Cloud     |This option helps you to create Azure resources that host your Teams app. For more information, see [how to provision cloud resources using Visual Studio](provision-cloud-resources.md).        |
-|Deploy to the Cloud     |This option helps you to copy your code to the cloud resources that you provisioned in Azure AD. For more information, see [how to deploy Teams app to the cloud using Visual Studio](deploy.md#deploy-teams-app-to-the-cloud-using-visual-studio).        |
-|Preview in Teams     |This option launches the Teams web client and lets you preview the Teams app in your browser.         |
-|Zip App Package     |This option generates a Teams app package in the `Build` folder under the project. You can upload the package to the Teams client and run the Teams app.         |
+|Prepare Teams App Dependencies     |Before you debug locally, ensure that you prepare your app for dependencies. It helps to set up the local debug dependencies and register Teams app in the Teams platform. You need a Microsoft 365 account. For more information, see [how to debug your Teams app locally using Visual Studio](debug-local.md).         |
+|Open Manifest File     | This option helps you to open Teams app manifest file. Hover over the parameters to preview the values. For more information, see [how to edit Teams app manifest using Visual Studio](VS-TeamsFx-preview-and-customize-app-manifest.md).         |
+|Update Manifest in Teams Developer Portal     | This option helps you to update the manifest file. When you update the manifest file, only then you can redeploy the manifest file to Azure without deploying the whole project again. Use this command to update your changes to remote. For more information, see [how to edit Teams app manifest using Visual Studio](VS-TeamsFx-preview-and-customize-app-manifest.md).       |
+|Add Authentication Code     | This option helps you to obtain signed-in Teams user token to access Microsoft Graph and other APIs. Teams Toolkit facilitates the interaction by abstracting from the Microsoft Azure Active Directory (Azure AD) which flows and integrates with simple APIs. For more information, see [how to add single sign-on to Teams app](add-single-sign-on.md).        |
+|Provision to the Cloud     | This option helps you to create Azure resources that host your Teams app. For more information, see [how to provision cloud resources using Visual Studio](provision-cloud-resources.md).        |
+|Deploy to the Cloud     | This option helps you to copy your code to the cloud resources that you provisioned in Azure AD. For more information, see [how to deploy Teams app to the cloud using Visual Studio](deploy.md#deploy-teams-app-to-the-cloud-using-visual-studio).        |
+|Preview in Teams     | This option launches the Teams web client and lets you preview the Teams app in your browser.         |
+|Zip App Package     | This option generates a Teams app package in the `Build` folder under the project. You can upload the app package to the Teams client and run the Teams app.         |
 
 ::: zone-end
 
