@@ -329,7 +329,7 @@ The following are the limitations for app caching:
 
 * Verify if the system and available memory constraints are met.
 
-* Reduce your memory footprint when cached. Use the `beforeUnload` handler to dispose resources, for example, release references and remove event listeners that might not be needed when cached.
+* Reduce your memory footprint when cached. Use the `beforeUnload` handler to dispose resources, for example, release references and remove event listeners that aren't needed when cached.
 
 ## Feature compatibility by user types
 
@@ -337,7 +337,7 @@ The following table provides the user types and lists the features that each use
 
 | User type | Scheduled meeting or Instant calendar meeting | One-on-one call | Group call | Scheduled channel meeting |
 | :-- | :-- | :-- | :-- | :-- |
-| In-tenant | Interaction allowed for all roles.<br><br> Create, update, or delete is allowed for all except the Attendees. | Interaction and create, update, or delete allowed. <br><br> In-tenant users in call with federated users can't interact and create, update, or delete. | Interaction and create, update, or delete allowed.<br><br> In-tenant users in call with federated users can't interact and create, update, or delete. | Interaction and create, update, or delete allowed for all roles except for attendees. |
+| In-tenant | Interaction allowed for all roles.<br><br> All user roles can create, update, or delete except the Attendees. | Interaction and create, update, or delete allowed. <br><br> In-tenant users in call with federated users can't interact and create, update, or delete. | Interaction and create, update, or delete allowed.<br><br> In-tenant users in call with federated users can't interact and create, update, or delete. | Interaction and create, update, or delete allowed for all roles except for attendees. |
 | Guest | Can interact only | Can interact only | Can interact only | Can interact only |
 | Federated or External | Can interact only | Not available | Not available | Can interact only |
 | Anonymous | Can interact only | Not available | Not available | Not available |
