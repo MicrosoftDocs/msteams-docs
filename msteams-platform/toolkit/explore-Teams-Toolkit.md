@@ -84,7 +84,7 @@ From the task pane, you can see the following sections:
 
 :::row:::
    :::column span="":::
-      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/development_1.png" alt-text="Development section":::
+      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/development-vsc.png" alt-text="Development section":::
    :::column-end:::
    :::column span="":::
 
@@ -93,7 +93,9 @@ From the task pane, you can see the following sections:
        * **Create a new Teams app**: Use the Teams Toolkit wizard to prepare project scaffolding for app development.
 
         * **View samples**: Select any of the Teams Toolkit's sample apps. The toolkit downloads the app code from GitHub and you can build the sample app.
-        
+
+        * **View how-to-guides**: Select to view Teams app scenario guides and development guides.
+
         * **Add features**: Add other Teams capabilities to the Teams app during the development process and add optional cloud resources suitable for your app.
        
         * **Preview your Teams app (F5)**: Press **F5** to debug and preview your Teams app.
@@ -130,16 +132,25 @@ From the task pane, you can see the following sections:
 
         To access more information on Teams Toolkit, you need the following documentation and resources:
         
+        * **Documentation**: Select to access the Microsoft Teams Developer documentation.
+
         * **Get started**: View Teams Toolkit Get started help within Visual Studio Code.
 
-        * **Tutorials**: Select to access different tutorials.
-        
-        * **Documentation**: Select to access the Microsoft Teams Developer documentation.
-       
         * **Report issues on GitHub**: Select to access GitHub page and raise any issues.
    :::column-end:::
 :::row-end:::
 
+### To view how-to guides
+
+1.Select View how-to guides from the Teams Toolkit task pane under Development section.The how-to guides menu appears.
+
+2.Select the type of how-to guide that you want to view.
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/view-how-to-guides.png" alt-text="Screenshot showing the how-to guides menu options.":::
+
+* Select any one of the Teams app scenario guides to view the guide to develop an app for a common app scenario, such as sending notifications using a bot or embedding a dashboard tab in a Teams app.
+
+* Select any one of the Teams app development guides to view a guide that helps in app development. It includes guide for adding single sign-on experience to your app or connecting to an existing third-party APIs.
 ::: zone-end
 
 ::: zone pivot="visual-studio"
