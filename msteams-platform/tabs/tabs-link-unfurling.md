@@ -40,9 +40,9 @@ When the user enters a URL on the Teams desktop client, the bot is invoked and r
 
 The following images display a stage opened from an Adaptive Card:
 
-[![Open a stage from Adaptive Card](~/assets/images/tab-images/open-stage-from-adaptive-card1.png)](~/assets/images/tab-images/open-stage-from-adaptive-card1.png#lightbox)
+:::image type="content" source="../assets/images/tab-images/open-stage-from-adaptive-card1.png" alt-text="Screenshot shows the open stage from Adaptive Card."lightbox="~/assets/images/tab-images/open-stage-from-adaptive-card1.png":::
 
-[![Open a stage](~/assets/images/tab-images/open-stage-from-adaptive-card2.png)](~/assets/images/tab-images/open-stage-from-adaptive-card2.png#lightbox)
+:::image type="content" source="../assets/images/tab-images/open-stage-from-adaptive-card2.png" alt-text="Screenshot shows the open stage from card."lightbox="~/assets/images/tab-images/open-stage-from-adaptive-card2.png":::
 
 ### Example
 
@@ -85,7 +85,7 @@ Following is the process to invoke Stage View:
 
 > [!NOTE]
 >
-> On Teams mobile clients, invoking Stage View for apps distributed through the [Teams store](~/concepts/deploy-and-publish/apps-publish-overview.md) and not having a moblie-optimized experience opens the default web browser of the device. The browser opens the URL specified in the `websiteUrl` parameter of the `TabInfo` object.
+> On Teams mobile clients, invoking Stage View for apps distributed through the [Teams store](~/concepts/deploy-and-publish/apps-publish-overview.md) and not having a mobile-optimized experience opens the default web browser of the device. The browser opens the URL specified in the `websiteUrl` parameter of the `TabInfo` object.
 
 ## Invoke Stage View through deep link
 
@@ -99,7 +99,7 @@ Following is the deep link syntax:
 
 ### Examples
 
-When a user enters a URL, it's unfurled into an Adaptive card.
+When a user enters a URL, it's unfurled into an Adaptive Card.
 
 Following are the deep link examples to invoke Stage View:
 
@@ -142,7 +142,7 @@ Encoded
 
 ## Code sample
 
-| Sample name | Description | C# |Node.js|
+| Sample name | Description | .NET |Node.js|
 |-------------|-------------|------|----|
 |Tab in stage view |Microsoft Teams tab sample app for demonstrating tab in stage view.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/nodejs)|
 
@@ -153,7 +153,8 @@ Encoded
 
 ## See also
 
-* [Message extensions link unfurling](~/messaging-extensions/how-to/link-unfurling.md)
-* [Teams tabs](~/tabs/what-are-tabs.md)
-* [Create a personal tab](~/tabs/how-to/create-personal-tab.md)
-* [Create a channel or group tab](~/tabs/how-to/create-channel-group-tab.md)
+* [Build tabs for Teams](what-are-tabs.md)
+* [Add link unfurling](../messaging-extensions/how-to/link-unfurling.md)
+* [composeExtensions](../resources/schema/manifest-schema.md#composeextensions)
+* [Build tabs with Adaptive Cards](how-to/build-adaptive-card-tabs.md)
+* [Create deep links](../concepts/build-and-test/deep-links.md)

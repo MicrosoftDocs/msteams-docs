@@ -7,7 +7,7 @@ ms.topic: conceptual
 
 # Create Teams app package
 
-You need an app package how ever you plan to distribute your Microsoft Teams app. A valid package is a ZIP file that contains the following:
+You need an app package, however, you plan to distribute your Microsoft Teams app. A valid package is a ZIP file that contains the following:
 
 * **App manifest**: Describes how your app is configured, including its capabilities, required resources, and other important attributes.
 * **App icons**: Each package requires a color and outline icon for your app.
@@ -29,7 +29,7 @@ When publishing to the Teams store, make sure your manifest references to the la
 Your app package must include two .png versions of your app icon: A color and outline version.
 
 > [!Note]
-> If your app has a bot or message extension, your icons also will be included in your Microsoft Azure Bot Service registration.
+> If your app has a bot or message extension, your icons are included in your Microsoft Azure Bot Service registration.
 
 For your app to pass Teams store review, these icons must meet the following size requirements.
 
@@ -100,10 +100,13 @@ Choose how you plan to distribute your app:
 > [!div class="nextstepaction"]
 > [Sideload your app in Teams](~/concepts/deploy-and-publish/apps-upload.md)
 > [!div class="nextstepaction"]
-> [Publish your app to your org](/MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/MicrosoftTeams/breadcrumb/toc.json)
+> [Publish your app to your org](/microsoftteams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/breadcrumb/toc.json)
 > [!div class="nextstepaction"]
 > [Publish your app to the store](~/concepts/deploy-and-publish/appsource/publish.md)
 
 ## See also
 
-[Manage your apps with the Developer Portal for Microsoft Teams](~/concepts/build-and-test/teams-developer-portal.md)
+* [Distribute your Microsoft Teams app](../deploy-and-publish/apps-publish-overview.md)
+* [Manage your apps with the Developer Portal for Microsoft Teams](~/concepts/build-and-test/teams-developer-portal.md)
+* [Understand the Microsoft Teams app structure](../design/app-structure.md)
+* [Icons](../design/design-teams-app-fundamentals.md#icons)

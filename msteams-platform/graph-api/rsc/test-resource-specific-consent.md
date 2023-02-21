@@ -268,7 +268,7 @@ To check whether the RSC permissions are being honored by the API request payloa
 
 * `azureADAppId`: Your app's Azure AD app ID.
 * `azureADAppSecret`: Your Azure AD app password.
-* `token_scope`: The scope is required to get a token. set the value to https://graph.microsoft.com/.default.
+* `token_scope`: The scope is required to get a token. Set the value to `https://graph.microsoft.com/.default`.
 * `teamGroupId`: You can get the team group id from the Teams client as follows:
 
     1. In the Teams client, select **Teams** from the far left navigation bar.
@@ -283,7 +283,7 @@ To check whether the RSC permissions are being honored by the API request payloa
 
 * `azureADAppId`: Your app's Azure AD app ID.
 * `azureADAppSecret`: Your Azure AD app password.
-* `token_scope`: The scope is required to get a token. set the value to https://graph.microsoft.com/.default.
+* `token_scope`: The scope is required to get a token. Set the value to `https://graph.microsoft.com/.default`.
 * `tenantId`: The name or the Azure AD Object ID of your tenant.
 * `chatId`: You can get the chat thread id from the Teams *web* client as follows:
 
@@ -314,5 +314,5 @@ Execute the entire permissions collection for each API call. The permissions tha
 
 ## See also
 
+* [Test your app](../../concepts/build-and-test/test-app-overview.md)
 * [Microsoft Graph API and Teams](/graph/api/resources/teams-api-overview?view=graph-rest-1.0&preserve-view=true)
-* [Resource-specific consent](~/graph-api/rsc/resource-specific-consent.md)

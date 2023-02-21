@@ -14,7 +14,7 @@ A new capability with this release is a set of Virtual tables. These enable deve
 The Collaboration controls core solution includes a set of [virtual tables](/power-apps/developer/data-platform/virtual-entities/get-started-ve), which can be used for programmatic access to the data created by the Collaboration controls.
 
 > [!NOTE]
-> Currently Collaboration controls are available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
+> Currently, Collaboration controls are available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
 
 > [!TIP]
 > [Virtual tables](/power-apps/developer/data-platform/virtual-entities/get-started-ve) also known as virtual entities, enable the integration of data residing in external systems by seamlessly representing that data as tables in Microsoft Dataverse, without replication of data and often without custom coding.
@@ -40,18 +40,18 @@ To follow along with this article, you'll need:
 
 1. A Dataverse environment where the Collaboration controls have been installed.
 1. A user account in the Dataverse environment, which has the **Collaboration controls User** role assigned to it.
-1. A third-party tool, for example: Post man or some custom C# code that allows you to authenticate to Microsoft Dataverse instances and to compose and send Web API requests and view responses.  
+1. A third-party tool, for example, Post man or some custom C# code that allows you to authenticate to Microsoft Dataverse instances and to compose and send Web API requests and view responses.  
 
 > [!TIP]
 > Microsoft provides information on how to configure a Postman environment that connects to your Dataverse instance and use Postman to perform operations with the Web API. See [Use Postman with Microsoft Dataverse Web API](/power-apps/developer/data-platform/webapi/use-postman-web-api).
 
 ## Virtual tables sample scenario
 
-The scenario described in this guide uses the Planner Plan and Task virtual tables. The scenario described is the same one that the Tasks Collaboration control uses. From a user perspective the scenario shows how a Planner Plan, and several Tasks are created and associated with a specific business record. The scenario goes on to show how to retrieve the tasks associated with the business record and how to read, update and delete a specific planner task.
+The scenario described in this guide uses the Planner Plan and Task virtual tables. The scenario described is the same one that the Tasks Collaboration control uses. From a user perspective the scenario shows how a Planner Plan, and several Tasks are created and associated with a specific business record. The scenario goes on to show how to retrieve the tasks associated with the business record and how to read, update, and delete a specific planner task.
 
 The following sequence diagram explains the interaction between the client, which could be the Tasks collaboration control, the [Collaboration API](/rest/api/industry/collaboration-controls/) and the Planner Plan and Task virtual tables.
 
-:::image type="content" source="~/assets/images/collaboration-control/vt-sequence.png" alt-text="Sequence diagram for virtual tables":::
+:::image type="content" source="~/assets/images/collaboration-control/vt-sequence.png" alt-text="The illustration shows the sequence diagram for virtual tables.":::
 
 ## Virtual tables basic operations
 
@@ -68,7 +68,7 @@ Retrieve the Group ID used in [settings for your Collaboration](~/samples/app-wi
 
 A collaboration session is a record in the collaboration root table, which allows you to associate multiple collaborations, for example, tasks, events, appointments with a business record.
 
-A collaboration session allows you to perform operations such as list of the calendar events associated with a business record, for example an inspections application.
+A collaboration session allows you to perform operations such as list of the calendar events associated with a business record, for example, an inspections application.
 
 # [Request](#tab/request)
 
@@ -103,7 +103,7 @@ A collaboration session allows you to perform operations such as list of the cal
 
 ---
 
-Keep track of the `collaborationRootId` as it will be needed in subsequent requests.
+Keep track of the `collaborationRootId` as it is needed in subsequent requests.
 
 **Task 3: Create a Planner Plan**
 
@@ -127,7 +127,7 @@ Create a Planner Plan and associate it with the collaboration session created ab
 
 * `collaborationRootId`: Identifies the collaboration session we want to associate this plan with, use the value from task 2
 
-* `groupId`: Identifies the group who will own this plan, use the value from step 1
+* `groupId`: Identifies the group who owns this plan, use the value from step 1
 
 * `planTitle`: Title for the plan
 
@@ -156,7 +156,7 @@ Create a Planner Plan and associate it with the collaboration session created ab
 
 ---
 
-Keep track of the`m365_id` as it will be needed in subsequent requests.
+Keep track of the`m365_id` as it is needed in subsequent requests.
 
 **Task 4: Create a Planner Task**
 
@@ -179,7 +179,7 @@ Create a Planner Task with `PlanId` and `collaborationRootId`. you can create se
 
 ```
 
-* `collaborationRootId`: Identifies the collaboration session we want to associate this plan with, us the value from task 2
+* `collaborationRootId`: Identifies the collaboration session we want to associate this plan with, use the value from task 2
 * `planId`: Identifies the plan this task will be assigned to, use the value from the previous step
 * `taskTitle`: Title for the task
 
@@ -225,7 +225,7 @@ Create a Planner Task with `PlanId` and `collaborationRootId`. you can create se
 
 ---
 
-Keep track of the `m365_graphplannertaskid` as it will be needed in subsequent requests.
+Keep track of the `m365_graphplannertaskid` as it is needed in subsequent requests.
 
 > [!NOTE]
 > The `m365_graphplannertaskid` is the primary key of the record in the Planner Task virtual table. All subsequent requests to the virtual table to interact with this record must use this primary key. This will be referred to as the `plannerTaskId` in subsequent steps in this document.
@@ -579,7 +579,7 @@ The `plannerTaskId` property is associated with a planner task, which was create
 
 ---
 
-To resolve this issue, you must check the error message in the response and if it's set to the message shown above this means the virtual record isn't associated. To create an association for this record, you must call [Associate Collaboration Map - REST API](/rest/api/industry/collaboration-controls/collaboration-custom-ap-is/associate-collaboration-map).
+To resolve this issue, you must check the error message in the response and if it's set to the message shown above this means the virtual record isn't associated. To create an association for this record, you must call [Associate Collaboration Map - REST API](/rest/api/industry/collaboration-controls/collaboration-custom-apis/associate-collaboration-map).
 
 ### Attempt to read a virtual record and the Graph resource has been deleted
 
@@ -702,3 +702,9 @@ To fix this problem, change the request to this format:
 ### Creating virtual records and Graph access control
 
 The virtual tables honor the access control specified for Microsoft Graph. The virtual tables won't permit operations that the user couldn't perform using the Microsoft Graph API. For example, if the user you use to create the Plan is Task 3 and isn't a member of group you use then you'll get 403 Forbidden responses.
+
+## See also
+
+* [Integrate web apps](integrate-web-apps-overview.md)
+* [App manifest schema for Teams](../resources/schema/manifest-schema.md)
+* [Microsoft Graph overview](/graph/teams-concept-overview)

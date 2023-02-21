@@ -1,6 +1,6 @@
 ---
 title: Integrate People Picker
-description: In this article, learn how to use Teams JavaScript client SDK to integrate People Picker control and advantages of using people picker.
+description: In this article, learn how to use Teams JavaScript client library to integrate People Picker control and advantages of using people picker.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
@@ -10,7 +10,7 @@ ms.author: surbhigupta
 
 People Picker is an input control in Teams that allows users to search and select people. You can integrate People Picker input control in a web app, which allows end users to perform different functions such as, search and select people in a chat, channel, or across the organization within Teams. The People Picker control is available across all Teams clients, such as web, desktop, and mobile.
 
-You can use [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), which provides the `selectPeople` API to integrate the People Picker input control in your web app.
+You can use [Microsoft Teams JavaScript client library](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), which provides the `selectPeople` API to integrate the People Picker input control in your web app.
 
 ## Advantages of using People Picker
 
@@ -108,11 +108,13 @@ The following table lists the error codes and their descriptions:
 | **100** | NOT_SUPPORTED_ON_PLATFORM | API isn't supported on the current platform.|
 | **500** | INTERNAL_ERROR | Internal error encountered while launching People Picker.|
 | **4000** | INVALID_ARGUMENTS | API is invoked with wrong or insufficient mandatory arguments.|
-| **8000** | USER_ABORT |User cancelled the operation.|
+| **8000** | USER_ABORT |User canceled the operation.|
 | **9000** | OLD_PLATFORM | User is on an old platform build where implementation of the API is unavailable. Upgrade to the latest version of the build to resolve the issue.|
 
 ## See also
 
+* [Integrate web apps](../../samples/integrate-web-apps-overview.md)
 * [Integrate media capabilities](~/concepts/device-capabilities/media-capabilities.md)
 * [Integrate QR code or barcode scanner capability in Teams](qr-barcode-scanner-capability.md)
 * [Integrate location capabilities in Teams](location-capability.md)
+* [People picker component in Microsoft Graph Toolkit](/graph/toolkit/components/people-picker)

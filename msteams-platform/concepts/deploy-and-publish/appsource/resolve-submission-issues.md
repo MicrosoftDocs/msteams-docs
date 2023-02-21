@@ -1,6 +1,6 @@
 ---
 title: Resolve issues with your store submission
-description: Learn how to troubleshoot and correct problems with your Microsoft Teams store submission. Get help directly from Microsoft, resolve issues and resubmit your app. 
+description: Troubleshoot and correct problems with your Microsoft Teams store submission. Get help directly from Microsoft, resolve issues and resubmit your app.
 ms.topic: how-to
 author: heath-hamilton
 ms.author: surbhigupta
@@ -36,7 +36,7 @@ The process for resolving issues and resubmitting an app typically goes like thi
       * Instructions to configure the app and test its functionality.
       * A video showing your app used in Teams.
 1. Microsoft concierge validation team fully tests your updated app.
-1. You do one of the following:
+1. You do one of the following steps:
    * If your app is free of issues, resubmit your app on Partner Center.
    * If issues aren't resolved or Microsoft finds new issues, you receive another report on what to fix. Resolve those issues and send an updated version of the app to <a href="mailto:teamsubm@microsoft.com">teamsubm@microsoft.com</a>.
 
@@ -53,7 +53,7 @@ Get answers to some common questions when resolving app submission issues.
 
 <summary><b>How long will it take to publish my app?</b></summary>
 
-If your store submission has no issues, your app will publish within 1-2 business days. If your app fails, a team from Microsoft provides you with recommendations to fix the issues. Once you make those fixes and resend an updated app to that team, you will be notified in 24 hours if your app is ready to publish or still needs more work.
+If your store submission has no issues, your app will publish within 1-2 business days. If your app fails, a team from Microsoft provides you with recommendations to fix the issues. Once you make those fixes and resend an updated app to that team, you'll be notified in 24 hours if your app is ready to publish, or still needs more work.
 
 <br>
 
@@ -103,3 +103,7 @@ Once your app is approved, publishing usually takes 1-2 business days depending 
 <br>
 
 </details>
+
+## See also
+
+[Distribute your Microsoft Teams app](../apps-publish-overview.md)

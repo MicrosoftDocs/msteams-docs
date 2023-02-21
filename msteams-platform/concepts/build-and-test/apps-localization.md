@@ -155,6 +155,15 @@ If you provide localized versions of your application, the users respond with th
 |-------------|-------------|------|------|
 | App Localization | Teams app localization using bot and tab. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/nodejs) |
 
+## Next step
+
+> [!div class="nextstepaction"]
+> [Localize JSON schema reference](../../resources/schema/localization-schema.md)
+
 ## See also
 
-[Localize JSON schema reference](~/resources/schema/localization-schema.md)
+* [Microsoft Teams store validation guidelines](../deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)
+* [Create a Partner Center developer account](../deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md)
+* [Prepare your Teams store submission](../deploy-and-publish/appsource/prepare/submission-checklist.md)
+* [Update Apple App Store Connect Team ID on Partner Center](../deploy-and-publish/appsource/prepare/update-apple-store-team-connect-id.md)
+* [App manifest](../../resources/schema/manifest-schema.md)

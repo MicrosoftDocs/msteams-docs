@@ -758,11 +758,11 @@
       },
       {
         "source_path": "msteams-platform/toolkit/visual-studio-code-overview.md",
-        "redirect_url": "/microsoftteams/toolkit/teams-toolkit-fundamentals"
+        "redirect_url": "/microsoftteams/platform/toolkit/teams-toolkit-fundamentals"
       },
       {
         "source_path": "msteams-platform/toolkit/visual-studio-code-tab-sso.md",
-        "redirect_url": "/microsoftteams/toolkit/teams-toolkit-fundamentals"
+        "redirect_url": "/microsoftteams/platform/toolkit/teams-toolkit-fundamentals"
       },
       {
         "source_path": "msteams-platform/get-started/deploy-csharp-app-studio.md",
@@ -793,12 +793,20 @@
         "redirect_url": "/microsoftteams/platform/toolkit/tools-prerequisites"
       },
       {
-        "source_path": "msteams-platform/toolkit/teams-toolkit-overview-visual-studio.md",
-        "redirect_url": "/microsoftteams/platform/toolkit/teams-toolkit-fundamentals"
-      },
-      {
         "source_path": "msteams-platform/toolkit/create-new-teams-app-for-Visual-Studio.md",
         "redirect_url": "/microsoftteams/platform/toolkit/create-new-project"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/debug-teams-app-visual-studio.md",
+        "redirect_url": "/microsoftteams/platform/toolkit/debug-overview"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/deploy-teams-app.md",
+        "redirect_url": "/microsoftteams/platform/toolkit/deploy"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/teams-toolkit-overview-visual-studio.md",
+        "redirect_url": "/microsoftteams/platform/toolkit/teams-toolkit-fundamentals"
       },
       {
         "source_path": "msteams-platform/toolkit/VS-TeamsFx-preview-and-customize-app-manifest.md",
@@ -809,16 +817,40 @@
         "redirect_url": "/microsoftteams/platform/toolkit/provision"
       },
       {
-        "source_path": "msteams-platform/toolkit/deploy-teams-app.md",
-        "redirect_url": "/microsoftteams/platform/toolkit/deploy"
-      },
-      {
         "source_path": "msteams-platform/toolkit/visual-studio-overview.md",
         "redirect_url": "/microsoftteams/platform/toolkit/teams-toolkit-fundamentals"
       },
       {
-        "source_path": "msteams-platform/toolkit/debug-teams-app-visual-studio.md",
-        "redirect_url": "/microsoftteams/platform/toolkit/debug-overview"
+        "source_path": "msteams-platform/apps-in-teams-meetings/API-references.md",
+        "redirect_url": "/microsoftteams/platform/apps-in-teams-meetings/meeting-apps-apis"
+      },
+      {
+        "source_path": "msteams-platform/apps-in-teams-meetings/meeting-app-extensibility.md",
+        "redirect_url": "/microsoftteams/platform/apps-in-teams-meetings/teams-apps-in-meetings"
+      },
+      {
+        "source_path": "msteams-platform/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md",
+        "redirect_url": "/microsoftteams/platform/apps-in-teams-meetings/build-tabs-for-meeting"
+      },
+      {
+        "source_path": "msteams-platform/tabs/how-to/using-teams-client-sdk.md",
+        "redirect_url": "/microsoftteams/platform/tabs/how-to/using-teams-client-library"
+      },
+      {
+        "source_path": "msteams-platform/tabs/how-to/authentication/auth-silent-aad.md",
+        "redirect_url": "/microsoftteams/platform/concepts/authentication/authentication"
+      },
+      {
+        "source_path": "msteams-platform/bots/how-to/authentication/auth-aad-sso-bots.md",
+        "redirect_url": "/microsoftteams/platform/bots/how-to/authentication/bot-sso-overview"
+      },
+      {
+        "source_path": "msteams-platform/messaging-extensions/how-to/enable-SSO-auth-me.md",
+        "redirect_url": "/microsoftteams/platform/bots/how-to/authentication/bot-sso-overview"
+      },
+      {
+        "source_path": "msteams-platform/bots/how-to/authentication/auth-flow-bot.md",
+        "redirect_url": "/microsoftteams/platform/bots/how-to/authentication/add-authentication"
       }
     ]
 }

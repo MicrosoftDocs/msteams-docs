@@ -10,7 +10,7 @@ ms.localizationpriority: high
 # Monetize your app
 
 Microsoft Teams app Store provides features that enable you to monetize your apps and gain customers by engaging with your users. The topics in this section show you how to build these features into your app.
- 
+
 ## Choose a pricing model
 
 :::row:::
@@ -68,4 +68,5 @@ With a transactable Software as a Service (SaaS) offer, you can test the end-to-
 
 ## Next step
 
-[Include a SaaS offer with your Microsoft Teams app](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)
+* [Include a SaaS offer with your Microsoft Teams app](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)
+* [Microsoft Teams store validation guidelines](teams-store-validation-guidelines.md)

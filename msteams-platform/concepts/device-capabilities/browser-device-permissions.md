@@ -47,3 +47,4 @@ Follow the [step-by-step guide](../../sbs-tab-device-permissions.yml) to grant t
 
 * [Device capabilities overview](device-capabilities-overview.md)
 * [Request device permissions](native-device-permissions.md)
+* [App manifest schema for Teams](../../resources/schema/manifest-schema.md)

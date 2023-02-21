@@ -9,10 +9,10 @@ ms.topic: conceptual
 
 # Virtual tables Web API
 
-When using the Dataverse Web API to retrieve multiple records from a virtual table additional query parameters can be included to support sorting, filtering, and pagination. These features aren't supported uniformly across the Collaboration controls virtual tables because they rely on the support provided by the Microsoft Graph API. See the Virtual Tables Entity Reference for details on what each virtual table supports.
+When using the Dataverse Web API to retrieve multiple records from a virtual table additional query parameters can be included to support sorting, filtering, and pagination. These features aren't supported uniformly across the Collaboration controls virtual tables because they rely on the support provided by the Microsoft Graph API. See Virtual Tables Entity Reference for details on what each virtual table supports.
 
 > [!NOTE]
-> Currently Collaboration controls are available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
+> Currently, Collaboration controls are available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
 
 ## Virtual table sorting
 
@@ -24,7 +24,7 @@ With the virtual tables, you can use the OData $orderby query parameter to set c
 * Graph Event
 
 > [!NOTE]
-> Sorting is not supported on all the attributes of the respective Graph resources. If a user tries to sort on a virtual table with an unsupported attribute, this result set will have its default order. This is the same behaviour as the Dataverse Web API on columns that do not support sorting.
+> Sorting is not supported on all the attributes of the respective Graph resources. If a user tries to sort on a virtual table with an unsupported attribute, this result set will have its default order. This is the same behaviour as the Dataverse Web API on columns that don't support sorting.
 
 Examples:
 
@@ -33,7 +33,7 @@ Examples:
 
 ## Virtual table filtering
 
-With the virtual tables, you can use the OData $filter query parameter to set criteria for which rows will be returned. The virtual tables are queried using the same OData operators that are supported by the Dataverse Web API.
+With the virtual tables, you can use the OData $filter query parameter to set criteria for which rows are returned. The virtual tables are queried using the same OData operators that are supported by the Dataverse Web API.
 
 * **Comparison operators**
 
@@ -75,7 +75,7 @@ With the virtual tables, you can use the OData $filter query parameter to set cr
 * Graph Event
 
 > [!Note]
-> Filtering is not supported on all the attributes of the respective Graph resources. If a user tries to filter on a virtual table with an unsupported attribute, this filter will be ignored. This is the same behaviour as the Dataverse Web API on columns that do not support filtering.
+> Filtering is not supported on all the attributes of the respective Graph resources. If a user tries to filter on a virtual table with an unsupported attribute, this filter is ignored. This is the same behaviour as the Dataverse Web API on columns that don't support filtering.
 
 Examples:
 
@@ -87,7 +87,7 @@ Examples:
 
 Pagination is a useful resource for fetching a large set of records. Virtual Table pagination can be achieved in three different ways.
 
-You can specify the page size by using the `odata.maxpagesize` preference value in the request header. If the result set spans multiple pages, the response will include the `@odata.nextLink` property. Sample request and response are as following:
+You can specify the page size by using the `odata.maxpagesize` preference value in the request header. If the result set spans multiple pages, the response includes the `@odata.nextLink` property. Sample request and response are as following:
 
 # [Request](#tab/request)
 
@@ -167,7 +167,7 @@ You can specify the number of records to return by passing the `$top` option in 
 ---
 
 > [!Note]
-> The response will not include the `@nextLink` property. If your use case requires the next page link to be returned, you can use the odata.maxpagesize preference header described in section 1 instead of passing the $top URI parameter.
+> The response won't include the `@nextLink` property. If your use case requires the next page link to be returned, you can use the odata.maxpagesize preference header described in section 1 instead of passing the $top URI parameter.
 
 Currently the following virtual tables support fetching a specific page:
 
@@ -221,3 +221,8 @@ The following virtual tables support the page property as part of the fetchXml o
 
 * Graph Booking Appointment
 * Graph Calendar Event
+
+## See also
+
+* [Integrate web apps](integrate-web-apps-overview.md)
+* [Get meeting transcripts using Graph APIs](../graph-api/meeting-transcripts/overview-transcripts.md)

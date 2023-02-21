@@ -87,13 +87,14 @@ You can rely on an administrator to grant the permissions your app needs at the 
 
 ## Code sample
 
-| **Sample name** | **Description** | **Graph** |
+| **Sample name** | **Description** | **.NET** |
 |---------------|----------|--------|
 | Calling and meeting bot | The sample app demonstrates how Bot can create call, join meeting and transfer call. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-calling-meeting/csharp) |
+| Realtime meeting events |The sample app demonstrates how Bot can receive real-time meeting events.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp)|
 
 ## Step-by-step guide
 
-Follow the [step-by-step guide](../../sbs-calling-and-meeting.yml) to set up calling and meeting in a bot.
+Follow the [step-by-step guide](../../sbs-calling-and-meeting.yml) to set up Teams calling and meeting bot.
 
 ## Next step
 
@@ -102,6 +103,9 @@ Follow the [step-by-step guide](../../sbs-calling-and-meeting.yml) to set up cal
 
 ## See also
 
-* [Incoming call notifications](~/bots/calls-and-meetings/call-notifications.md)
+* [Build bots for Teams](../what-are-bots.md)
+* [Calls and online meetings bots](calls-meetings-bots-overview.md)
 * [Develop calling and online meeting bots on your local PC](~/bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md)
-* [View app permission and grant admin consent](/MicrosoftTeams/app-permissions-admin-center)
+* [View app permission and grant admin consent](/microsoftteams/app-permissions-admin-center)
+* [Work with the cloud communications API in Microsoft Graph](/graph/api/resources/communications-api-overview)
+* [Webhooks and connectors](../../webhooks-and-connectors/what-are-webhooks-and-connectors.md)

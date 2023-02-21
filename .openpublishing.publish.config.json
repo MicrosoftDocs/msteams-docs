@@ -55,6 +55,12 @@
       "url": "https://github.com/Microsoft/BotBuilder-Samples",
       "branch": "main",
       "branch_mapping": {}
+    },
+    {
+      "path_to_root": "microsoft-teams-samples",
+      "url": "https://github.com/OfficeDev/Microsoft-Teams-Samples",
+      "branch": "main",
+      "branch_mapping": {}
     }
   ],
   "branch_target_mapping": {

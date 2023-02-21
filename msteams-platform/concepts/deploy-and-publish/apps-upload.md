@@ -92,7 +92,7 @@ doc-feature-contextless-apps-upgrade-once-upgrade-everywhere
     You can view updates available for apps.
 
 1. Select **View update**. A window with update option appears.
-1. Select **Update** button to update your app.
+1. Select **Update** to update your app.
 
      :::image type="content" source="../../assets/images/publish-app/updates-available1.png" alt-text="Screenshot is an example that shows users can view updates available."lightbox="../../assets/images/publish-app/updates-available.png":::
 
@@ -119,7 +119,7 @@ To remove app from Teams, follow the steps:
 > [!NOTE]
 >
 > * You can't remove personal bot activity entirely. If you remove the app and add it again, new communication with the bot appends to the previous conversation with it.
-> * Currently, you can't migrate your custom app to the Teams store. If you want to list your app to the Teams store, see [Publish your app to the Microsoft Teams store](appsource/publish.md).
+> * Currently, you can't migrate your custom app to the Teams store. If you want to list your app to the Teams store, see [how to publish your app to the Microsoft Teams store](appsource/publish.md).
 
 ## Next step
 
@@ -128,6 +128,7 @@ To remove app from Teams, follow the steps:
 
 ## See also
 
+* [Distribute your Microsoft Teams app](apps-publish-overview.md)
 * [Configure default install options](~/concepts/deploy-and-publish/add-default-install-scope.md)
 * [Maintain your published Microsoft Teams app](~/concepts/deploy-and-publish/appsource/post-publish/overview.md)
 * [Add app to chat](/graph/api/chat-post-installedapps)

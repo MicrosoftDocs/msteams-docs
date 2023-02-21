@@ -119,7 +119,7 @@ The following image displays the corresponding screen:
 1. Select the **Publish** button after you finish  editing.
 
 1. Select **Add page to navigation** to have a quick reference to your page in the left navigation bar.
-The following image displays the tab in Sharepoint:
+The following image displays the tab in SharePoint:
 
    ![Tab in Sharepoint image](~/assets/images/tabs/tabs-in-sharepoint/image073.png)
 
@@ -138,6 +138,6 @@ The following image displays the complete experience of Teams app in SharePoint:
 
 ## See also
 
-* [Building Microsoft Teams tab using SharePoint Framework - Tutorial](/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)
-* [Using single part app pages in SharePoint Online](/sharepoint/dev/spfx/web-parts/single-part-app-pages)
-* [Integrate web apps](~/samples/integrate-web-apps-overview.md)
+* [Integrate web apps](../../samples/integrate-web-apps-overview.md)
+* [Build Microsoft Teams tab using SharePoint Framework - Tutorial](/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)
+* [Use single part app pages in SharePoint Online](/sharepoint/dev/spfx/web-parts/single-part-app-pages)
