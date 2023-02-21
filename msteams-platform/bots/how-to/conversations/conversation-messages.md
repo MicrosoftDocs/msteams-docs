@@ -1,6 +1,6 @@
 ---
 title: Messages in bot conversations
-description: Learn how to send and receive a message, suggested actions, notification, attachments, images, Adaptive Card, and status error code responses.
+description: Learn how to send, receive, edit, undelete, and soft delete a message, suggested actions, notification, attachments, images, Adaptive Card and status error code responses.
 ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
@@ -8,7 +8,7 @@ ms.localizationpriority: medium
 
 # Messages in bot conversations
 
-Each message in a conversation is an `Activity` object of type `messageType: message`. When a user sends a message, Microsoft Teams posts the message to your bot. Teams sends a JSON object to your bot's messaging endpoint and Teams allows only one endpoint for messaging. Your bot examines the message to determine its type and responds accordingly.
+Each message in a conversation is an `Activity` object of type `messageType: message`. When a user sends a message, Microsoft Teams posts the message activity to your bot. Teams sends a JSON object to your bot's messaging endpoint and Teams allows only one endpoint for messaging. Your bot examines the message to determine its type and responds accordingly.
 
 Basic conversations are handled through the Bot Framework connector, a single REST API. This API enables your bot to communicate with Teams and other channels. The Bot Builder SDK provides the following features:
 
@@ -24,28 +24,31 @@ For more information, see [user attribution for bot messages](/microsoftteams/pl
 
 To receive a text message, use the `Text` property of an `Activity` object. In the bot's activity handler, use the turn context object's `Activity` to read a single message request.
 
-The following code shows an example of receiving a message:
+The following code shows an example of receiving a message activity:
 
-# [C#](#tab/dotnet)
+# [C#](#tab/dotnet1)
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.activityhandler.onmessageactivityasync?view=botbuilder-dotnet-stable&preserve-view=true)
 
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-token-app/csharp/Bots/TokenBot.cs#L52)
 
 ```csharp
+
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
 {
   // Sends an activity to the sender of the incoming activity.
   await turnContext.SendActivityAsync(MessageFactory.Text($"Echo: {turnContext.Activity.Text}"), cancellationToken);
 }
+
 ```
 
-# [TypeScript](#tab/typescript)
+# [TypeScript](#tab/typescript1)
 
 * [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onmessage&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-localization/nodejs/server/bot/botActivityHandler.js#L25)
 
 ```typescript
+
 export class MyBot extends TeamsActivityHandler {
     constructor() {
         super();
@@ -59,12 +62,11 @@ export class MyBot extends TeamsActivityHandler {
 
 ```
 
-# [Python](#tab/python)
+# [Python](#tab/python1)
 
 * [SDK reference](/python/api/botbuilder-core/botbuilder.core.activityhandler?view=botbuilder-py-latest#botbuilder-core-activityhandler-on-message-activity&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L103)
 
-<!-- Verify -->
 ```python
 
 async def on_message_activity(self, turn_context: TurnContext):
@@ -73,9 +75,10 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 ```
 
-# [JSON](#tab/json)
+# [JSON](#tab/json1)
 
 ```json
+
 {
     "type": "message",
     "id": "1485983408511",
@@ -120,6 +123,7 @@ async def on_message_activity(self, turn_context: TurnContext):
     },
     "locale": "en-US"
 }
+
 ```
 
 ---
@@ -130,13 +134,14 @@ To send a text message, specify the string you want to send as an activity. In t
 
 The following code shows an example of sending a message when a user is added to a conversation:
 
-# [C#](#tab/dotnet)
+# [C#](#tab/dotnet2)
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.turncontext.sendactivityasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-turncontext-sendactivityasync(microsoft-bot-schema-iactivity-system-threading-cancellationtoken)&preserve-view=true)
 
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-teams-authentication/csharp/Bots/TeamsBot.cs#L29)
 
 ```csharp
+
 protected override async Task OnMembersAddedAsync(IList<ChannelAccount> membersAdded, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
 {
   // Sends an activity to the sender of the incoming activity.
@@ -145,12 +150,13 @@ protected override async Task OnMembersAddedAsync(IList<ChannelAccount> membersA
 
 ```
 
-# [TypeScript](#tab/typescript)
+# [TypeScript](#tab/typescript2)
 
 * [SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#botbuilder-core-turncontext-sendactivity&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L46)
 
 ```typescript
+
     this.onMembersAddedActivity(async (context, next) => {
         await Promise.all((context.activity.membersAdded || []).map(async (member) => {
             if (member.id !== context.activity.recipient.id) {
@@ -167,14 +173,13 @@ protected override async Task OnMembersAddedAsync(IList<ChannelAccount> membersA
 
 ```
 
-# [Python](#tab/python)
+# [Python](#tab/python2)
 
 * [SDK reference](/python/api/botbuilder-core/botbuilder.core.turncontext?view=botbuilder-py-latest#botbuilder-core-turncontext-send-activity&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-teams-authentication/python/bots/auth_bot.py#L33)
 
-<!-- Verify -->
-
 ```python
+
 async def on_members_added_activity(
     self, members_added: [ChannelAccount], turn_context: TurnContext
 ):
@@ -185,9 +190,10 @@ async def on_members_added_activity(
 
 ```
 
-# [JSON](#tab/json)
+# [JSON](#tab/json2)
 
 ```json
+
 {
     "type": "message",
     "from": {
@@ -216,6 +222,281 @@ async def on_members_added_activity(
 >* Messages sent can be localized to provide personalization. For more information, see [localize your app](../../../concepts/build-and-test/apps-localization.md).
 
 Messages sent between users and bots include internal channel data within the message. This data allows the bot to communicate properly on that channel. The Bot Builder SDK allows you to modify the message structure.
+
+## Update message
+
+When you edit or undelete a message in a chat, the bot gets a notification of the edit message or undelete message event.
+
+To get an edit or undelete message event notification in a bot, you can override the following handlers:
+
+* For edit: `OnTeamsMessageEditAsync`
+* For undelete: `OnTeamsMessageUndeleteAsync`
+
+The following is an example of an edit message event notification when a sent message is edited:
+
+# [C#](#tab/csharp3)
+
+```csharp
+
+protected override async Task OnTeamsMessageEditAsync(ITurnContext<IMessageUpdateActivity> turnContext, CancellationToken cancellationToken) 
+{ 
+var replyActivity = MessageFactory.Text("message is updated"); 
+await turnContext.SendActivityAsync(replyActivity, cancellationToken); 
+} 
+
+```
+
+# [JSON](#tab/json3)
+
+```json
+
+{
+"type":"messageUpdate",
+"timestamp":"2022-10-28T17:19:39.4615413Z",
+"localTimestamp":"2022-10-28T10:19:39.4615413-07:00",
+"id":"1666977568748",
+"channelId":"msteams",
+"serviceUrl":"https://canary.botapi.skype.com/amer/",
+"from": {
+    "id":"29:1BLjP9j3_PM4mubmQZsYPx7jDyLeLf_YVA9sVPV08KMAFMjJWB_EUGveb9EVDh9TslNp9qjnzEBy3kgw01Jf1Kg",
+    "name":"Mike Wilber",
+    "aadObjectId":"520e4d1e-2108-43ee-a092-46a9507c6200"
+},
+"conversation":{
+    "conversationType":"personal",
+    "tenantId":"528dbe3f-15e0-4e37-84a1-00cc305847dd","id":"a:1pweuGJ44RkB90tiJNQ_I6g3vyuP4CYA_f-v6f0Vd-Bs3Ce85C73Ah1y8TvyjESsTHWjjgw-gnsuIuCUOWkfOCq6qaUYsk2_-fj93XXXHUMAUzhFFvTnaCU7V4WiMqRPB"
+},
+"recipient":{
+    "id":"28:0d569679-gb4j-479a-b0d8-238b6e6b1149",
+    "name":"TestBot"
+},
+"entities":[
+    {
+        "locale":"en-US",
+        "country":"US",
+        "platform":"Web",
+        "timezone":"America/Los_Angeles",
+        "type":"clientInfo"
+    }
+],
+"channelData":{
+    "eventType":"editMessage",
+    "tenant":{"id":"528dbe3f-15e0-4e37-84a1-00cc305847dd"}
+},
+"locale":"en-US",
+"localTimezone":"America/Los_Angeles"
+}  
+
+```
+
+# [JavaScript](#tab/javascript3)
+
+You can either use **​event function registration** or **​method override** method to get event notifications to handle the message updates using the Bot SDK:
+
+**​Event function registration**:
+
+```javascript
+
+this.onTeamsMessageEditEvent(async (context, next) => {
+  let editedMessage = context.activity.text;
+  await context.sendActivity(`The edited message is ${editedMessage}"`);
+  next();
+})
+
+```
+
+**​Method override**:
+
+```javascript
+
+async onTeamsMessageEdit(context) {
+    let editedMessage = context.activity.text;
+    await context.sendActivity(`The edited message is ${editedMessage}"`);
+}
+
+```
+
+---
+
+The following is an example of an undelete message event notification when a deleted message is restored:
+
+# [C#](#tab/csharp4)
+
+```csharp
+
+protected override async Task OnTeamsMessageUndeleteAsync(ITurnContext<IMessageUpdateActivity> turnContext, CancellationToken cancellationToken)
+{ 
+var replyActivity = MessageFactory.Text("message is undeleted"); 
+await turnContext.SendActivityAsync(replyActivity, cancellationToken); 
+} 
+
+```
+
+# [JSON](#tab/json4)
+
+```json
+
+{
+"type":"messageUpdate",
+"timestamp":"2022-10-28T17:19:39.4615413Z",
+"localTimestamp":"2022-10-28T10:19:39.4615413-07:00",
+"id":"1666977568748",
+"channelId":"msteams",
+"serviceUrl":"https://canary.botapi.skype.com/amer/",
+"from": {
+    "id":"29:1BLjP9j3_TM4mubmQZsYEo7jDyLeLf_YVA9sVPVO7KMAFMjJWB_EUGveb9EVDh9LgoNp9qjnzEBy4kgw83Jf1Kg",
+    "name":"Alex Wilber",
+    "aadObjectId":"976e4d1e-2108-43ee-a092-46a9507c5606"
+},
+"conversation":{
+    "conversationType":"personal",
+    "tenantId":"528dbe3f-15e0-4e37-84a1-00cc305847dd","id":"a:1tewuGJ44RkB90tiJNQ_I4q8vyuN5CYA_f-v6f0Vd-Bs3Ce85C73Ah1y8TvyjESsTHWjjgw-gnsuIuCUOWkfOCq6qaUYsk2_-fj93XXXHUMAUzhFFvTnaCU7V4WiMqXQL"
+},
+"recipient":{
+    "id":"28:0d469698-ab9d-479a-b0d8-758b6e6b1234",
+    "name":"Testbot"
+},
+"entities":[
+    {
+        "locale":"en-US",
+        "country":"US",
+        "platform":"Web",
+        "timezone":"America/Los_Angeles",
+        "type":"clientInfo"
+    }
+],
+"channelData":{
+    "eventType":"undeleteMessage",
+    "tenant":{"id":"528dbe3f-15e0-4e37-84a1-00cc305847dd"}
+},
+"locale":"en-US",
+"localTimezone":"America/Los_Angeles"
+}  
+
+```
+
+# [JavaScript](#tab/javascript4)
+
+You can either use **​event function registration** or **​method override** method to get event notifications to handle the message updates using the Bot SDK:
+
+**​Event function registration**:
+
+```javascript
+
+this.onTeamsMessageUndeleteEvent(async (context, next) => {
+    let undeletedMessage = context.activity.text;
+    let messageId = context.activity.id;
+        await context.sendActivity(`Previously the message was deleted. After undeleting, the message is now: "${undeletedMessage}"`);
+    next();
+})
+
+```
+
+**​Method override**:
+
+```javascript
+
+async onTeamsMessageUndelete(context) {
+    let undeletedMessage = context.activity.text;
+    let messageId = context.activity.id;
+    await context.sendActivity(`Previously the message was deleted. After undeleting, the message is now: "${undeletedMessage}"`);
+}
+
+```
+
+---
+
+## Soft delete message
+
+When you soft delete a message in a chat, the bot gets a notification of the soft delete message event.
+
+To get a soft delete message event notification in a bot, you can override the `OnTeamsMessageSoftDeleteAsync` handler.
+
+The following is an example of a soft delete message event notification when a message is soft deleted:
+
+# [C#](#tab/csharp5)
+
+```csharp
+
+protected override async Task OnTeamsMessageSoftDeleteAsync(ITurnContext<IMessageDeleteActivity> turnContext, CancellationToken cancellationToken) 
+{ 
+var replyActivity = MessageFactory.Text("message is soft deleted"); 
+await turnContext.SendActivityAsync(replyActivity, cancellationToken); 
+} 
+
+```
+
+# [JSON](#tab/json5)
+
+```json
+
+{
+"type":"messageDelete",
+"timestamp":"2022-10-28T17:19:43.1612052Z",
+"localTimestamp":"2022-10-28T10:19:43.1612052-07:00",
+"id":"1666977568748",
+"channelId":"msteams",
+"serviceUrl":"https://canary.botapi.skype.com/amer/",
+"from": {
+    "id":"29:1BLjP9j3_TM4mubmQZsYEo7jDyLeLf_YVA9sVPVO7KMAFMjJWB_EUGveb9EVDh9LgoNp9qjnzEBy4kgw83Jf1Kg",
+    "name":"Alex Wilber",
+    "aadObjectId":"976e4d1e-2108-43ee-a092-46a9507c5606"
+},
+"conversation":{
+    "conversationType":"personal",
+    "tenantId":"528dbe3f-15e0-4e37-84a1-00cc305847dd","id":"a:1tewuGJ44RkB90tiJNQ_I4q8vyuN5CYA_f-v6f0Vd-Bs3Ce85C73Ah1y8TvyjESsTHWjjgw-gnsuIuCUOWkfOCq6qaUYsk2_-fj93XXXHUMAUzhFFvTnaCU7V4WiMqXQL"
+},
+"recipient":{
+    "id":"28:0d469698-ab9d-479a-b0d8-758b6e6b1235",
+    "name":"Testbot"
+},
+"entities":[
+    {
+        "locale":"en-US",
+        "country":"US",
+        "platform":"Web",
+        "timezone":"America/Los_Angeles",
+        "type":"clientInfo"
+    }
+],
+"channelData":{
+    "eventType":"softDeleteMessage",
+    "tenant":{"id":"528dbe3f-15e0-4e37-84a1-00cc305847dd"}
+},
+"locale":"en-US",
+"localTimezone":"America/Los_Angeles"
+}  
+
+```
+
+# [JavaScript](#tab/javascript5)
+
+You can either use **​event function registration** or **​method override** method to get event notifications to handle the message updates using the Bot SDK:
+
+**​Event function registration**:
+
+```javascript
+
+this.onTeamsMessageSoftDeleteEvent(async (context, next) => {
+    let messageId = context.activity.id;
+      await context.sendActivity(`The deleted message id is ${messageId}`);
+    next();
+})
+
+```
+
+**​Method override**:
+
+```javascript
+
+async onTeamsMessageSoftDelete(context) {
+    let messageId = context.activity.id;
+    await context.sendActivity(`The deleted message id is ${messageId}`);
+}
+
+```
+
+---
 
 ## Send suggested actions
 
@@ -490,11 +771,11 @@ Ensure to handle these errors appropriately in your Teams app. The following tab
 
 | Status code | Error code and message values | Description | Retry request | Developer action |
 |----------------|-----------------|-----------------|----------------|----------------|
-| 400 | **Code**: `Bad Argument` <br/> **Message**: *scenario specific | Invalid request payload provided by the bot. See error message for specific details. | No | Re-evaluate request payload for errors. Check returned error message for details. |
+| 400 | **Code**: `Bad Argument` <br/> **Message**: *scenario specific | Invalid request payload provided by the bot. See error message for specific details. | No | Reevaluate request payload for errors. Check returned error message for details. |
 | 401 | **Code**: `BotNotRegistered` <br/> **Message**: No registration found for this bot. | The registration for this bot wasn't found. | No | Verify the bot ID and password. Ensure that the bot ID (AAD ID) is registered in the Teams Developer Portal or via Azure bot channel registration in Azure with 'Teams' channel enabled.|
 | 403 | **Code**: `BotDisabledByAdmin` <br/> **Message**: The tenant admin disabled this bot | Tenant admin has blocked interactions between user and the bot app. Tenant admin needs to allow the app for the user inside of app policies. For more information, see [app policies](/microsoftteams/app-policies). | No | Stop posting to conversation until interaction with bot is explicitly initiated by a user in the conversation indicating that the bot is no longer blocked. |
-| 403 | **Code**: `BotNotInConversationRoster` <br/> **Message**: The bot isn't part of the conversation roster. | The bot isn't part of the conversation. App needs to be reinstalled in conversation. | No | Before attempting to send another conversation request, wait for an [`installationUpdate`](~/bots/how-to/conversations/subscribe-to-conversation-events.md#install-update-event) event, which indicates that the bot has been re-added.|
-| 403 | **Code**: `ConversationBlockedByUser` <br/> **Message**: User blocked the conversation with the bot. | User has blocked the bot in personal chat, or a channel through moderation settings. | No | Delete the conversation from cache. Stop attempting to post to conversations until interaction with bot is explicitly initiated by a user in the conversation, indicating that the bot is no longer blocked. |
+| 403 | **Code**: `BotNotInConversationRoster` <br/> **Message**: The bot isn't part of the conversation roster. | The bot isn't part of the conversation. App needs to be reinstalled in conversation. | No | Before attempting to send another conversation request, wait for an [`installationUpdate`](~/bots/how-to/conversations/subscribe-to-conversation-events.md#install-update-event) event, which indicates that the bot has been added again.|
+| 403 | **Code**: `ConversationBlockedByUser` <br/> **Message**: User blocked the conversation with the bot. | User has blocked the bot in personal chat or a channel through moderation settings. | No | Delete the conversation from cache. Stop attempting to post to conversations until interaction with bot is explicitly initiated by a user in the conversation, indicating that the bot is no longer blocked. |
 | 403 |**Code**: `InvalidBotApiHost` <br/> **Message**: Invalid bot api host. For GCC tenants, please call `https://smba.infra.gcc.teams.microsoft.com`.|The bot called the public API endpoint for a conversation that belongs to a GCC tenant.| No | Update the service URL for the conversation to `https://smba.infra.gcc.teams.microsoft.com` and retry the request.|
 | 403 | **Code**: `NotEnoughPermissions` <br/> **Message**: *scenario specific | Bot doesn't have required permissions to perform the requested action. | No | Determine the required action from the error message. |
 | 404 | **Code**: `ActivityNotFoundInConversation` <br/> **Message**: Conversation not found. | The message ID provided couldn't be found in the conversation. Message doesn't exist or it has been deleted. | No | Check if message ID sent is an expected value. Remove the ID if it was cached. |
@@ -515,7 +796,7 @@ The general retry guidance for each status code is listed in the following table
 |----------------|-----------------|
 | 403 | Retry by calling the GCC API `https://smba.infra.gcc.teams.microsoft.com` for `InvalidBotApiHost`.|
 | 412 | Retry using exponential backoff. |
-| 429 | Retry using `Retry-After` header to determine wait time in seconds and in between requests, if available. Otherwise, retry using exponential backoff with thread ID, if possible. |
+| 429 | Retry using `Retry-After` header to determine the wait time in seconds and in between requests, if available. Otherwise, retry using exponential backoff with thread ID, if possible. |
 | 502 | Retry using exponential backoff. |
 | 503 | Retry using exponential backoff. |
 | 504 | Retry using exponential backoff. |
@@ -526,6 +807,7 @@ The general retry guidance for each status code is listed in the following table
 |----------------|-----------------|--------------|----------------|-----------|-----|
 | Teams conversation bot | Messaging and conversation event handling. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/python) | NA |
 | Teams app localization | Teams app localization using bot and tab. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/nodejs) | NA | NA | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) |
+| Update and delete message | Sample app shows how to get a update and delete event notification in your bot. | [View]() | NA | NA | [View]() |
 
 ## Next step
 
@@ -539,3 +821,4 @@ The general retry guidance for each status code is listed in the following table
 * [Send and receive files through the bot](~/bots/how-to/bots-filesv4.md)
 * [Send tenant ID and conversation ID to the request headers of the bot](~/bots/how-to/conversations/request-headers-of-the-bot.md)
 * [Localize your app](../../../concepts/build-and-test/apps-localization.md)
+* [Bot activity handlers](../../bot-basics.md)
