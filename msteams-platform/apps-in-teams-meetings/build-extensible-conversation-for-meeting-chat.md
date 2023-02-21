@@ -42,8 +42,8 @@ The following table provides the user types and lists the features that each use
 | :-- | :-- | :-- | :-- | :-- |
 | In-tenant | Can view messages, interact with the content, and invoke the bot. | Available | Available | Available |
 | Guest, part of the tenant Azure AD | Can view messages, interact with the content, and invoke the bot. | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. |
-| Federated users, for more information, see [non-standard users](/microsoftteams/non-standard-users). |Can view messages, interact with the content, and invoke the bot. | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. |
-| Anonymous |  Can view messages and interact with the bot. | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. |
+| Federated, for more information, see [non-standard users](/microsoftteams/non-standard-users). |Can view messages, interact with the content, and invoke the bot. | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. |
+| Anonymous |  Can view and interact with the messages sent by the bot. Can't invoke the bot. | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. |
 
 ## See also
 
