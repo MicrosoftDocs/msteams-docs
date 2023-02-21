@@ -1,7 +1,7 @@
 ---
 title: Overview for planning, strategizing, and executing growth for your app
 author: heath-hamilton
-description: Learn to plan, strategize and execute growth for your app
+description: Learn to plan, strategize and execute growth for your app.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
@@ -24,20 +24,17 @@ It also includes some proven best practices from the team that crafted the Teams
 
     :::column:::
 
-   > [!div class="nextstepaction"]
-   > [How much can your app grow?](#putting-your-apps-growth-potential-into-perspective-how-much-can-your-app-grow)
+:::image type="icon" source="../../../../../assets/icons/how-much-app-grow.png" link="#putting-your-apps-growth-potential-into-perspective-how-much-can-your-app-grow" border="false":::
 
     :::column-end:::
     :::column:::
 
-   > [!div class="nextstepaction"]
-   > [Understanding growth models](#options-for-growing-your-app-understanding-growth-models)
+ :::image type="icon" source="../../../../../assets/icons/understanding-growth-models.png" link="#options-for-growing-your-app-understanding-growth-models" :::
 
     :::column-end:::
     :::column:::
 
-   > [!div class="nextstepaction"]
-   > [What’s needed to grow and succeed on Teams marketplace?](#whats-needed-to-grow-and-succeed-on-teams-marketplace)
+  :::image type="icon" source="../../../../../assets/icons/grow-succeed-teams-marketplace.png" link="#whats-needed-to-grow-and-succeed-on-teams-marketplace" border="false":::
 
     :::column-end:::
 
@@ -194,3 +191,12 @@ Monetization investments encompass defining role of Teams app in your business a
 
 > [!div class="nextstepaction"]
 > [Growth lifecycle for your app](app-growth-lifecycle.md)
+
+## See also
+
+- [Build your collaborative app](build-app.md)
+- [Gain traction for your collaborative app in the market](gain-traction.md)
+- [Launch your collaborative app](launch-app.md)
+- [Scale your collaborative app](scale-app.md)
+- [Succeed with your collaborative app](succeed.md)
+- [Plan your app with Teams features](../../../../app-fundamentals-overview.md)

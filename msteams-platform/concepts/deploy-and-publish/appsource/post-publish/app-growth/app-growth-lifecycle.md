@@ -1,7 +1,7 @@
 ---
 title: Growth lifecycle for your app
 author: heath-hamilton
-description: Learn to plan growth lifecycle for your Teams app
+description: Learn to plan growth lifecycle for your Teams app.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
@@ -64,6 +64,10 @@ You can plan your app's growth through the app lifecycle:
 
 > [!div class="nextstepaction"]
 > [Building your collaborative app](build-app.md)
+
+## See also
+
+[Strategize and execute growth for your app](overview-app-growth.md)
 
 <!--
 ### Building your collaborative app

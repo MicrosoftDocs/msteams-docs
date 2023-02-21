@@ -185,3 +185,8 @@ Contact the Microsoft field, account, or engineering representatives to feature 
 
 > [!div class="nextstepaction"]
 > [Scaling your collaborative app](scale-app.md)
+
+## See also
+
+[Strategize and execute growth for your app](overview-app-growth.md)
+

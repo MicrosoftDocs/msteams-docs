@@ -1,7 +1,7 @@
 ---
 title: The succeed stage for your collaborative app
 author: heath-hamilton
-description: Learn what you can do during the final stage of your app to grow your app
+description: Learn what you can do during the final stage of your app to grow your app.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
@@ -80,7 +80,7 @@ Strategic developers, who are part of the invite-only Teams engineering’s buil
 <details>
 <summary>Case Study on Microsoft’s public customers portal</summary>
 
-Impactful case studies of how investing in a collaborative app resulted in growth for your SaaS business and how customers using your app got impacted can be published on the following customer-facing sites: [Microsoft 365 ISV Benefits Program Success Stories](https://cloudpartners.transform.microsoft.com/practices/modernworkisv?tab=success-stories) and [Customer Stories](https://customers.microsoft.com/search?sq=&ff=story_industry_friendlyname%26%3EPartner%20Professional%20Services%26%26story_product_categories%26%3EMicrosoft%20Teams&p=5&so=cam_rank%20desc) on Microsoft.com. Connect with your Teams engineering representatives or the [ISV Marketplace Success Rewards Program team](mailto:rewards@microsoft.com) to check eligibility, seek guidance, and execute this motion.
+Impactful case studies of how investing in a collaborative app resulted in growth for your SaaS business and how customers using your app got impacted can be published on the following customer-facing sites: [Microsoft 365 ISV Benefits Program Success Stories](https://cloudpartners.transform.microsoft.com/practices/modernworkisv?tab=success-stories) and [Customer Stories](https://customers.microsoft.com/home?sq=&ff=&p=0) on Microsoft.com. Connect with your Teams engineering representatives or the [ISV Marketplace Success Rewards Program team](mailto:rewards@microsoft.com) to check eligibility, seek guidance, and execute this motion.
 
 </details>
 <br>
