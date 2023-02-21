@@ -48,7 +48,7 @@ Any data sent or stored through Fluid containers created by Live Share's hosted 
 
 <summary><b>What meeting types does Live Share support?</b></summary>
 
-Scheduled meetings, one-on-one calls, group calls, and meet now are supported. Channel meetings aren't yet supported.
+Scheduled meetings, one-on-one calls, group calls, meet now, and channel meetings are supported.
 
 <br>
 
@@ -117,6 +117,15 @@ If you plan to update your app with new `SharedObject` or `LiveObject` instances
 <summary><b>Are there limits to how many change events I can emit through Live Share?</b></summary>
 
 While Live Share is in Preview, any limit to events emitted through Live Share isn't enforced. For optimal performance, you must debounce changes emitted through `SharedObject` or `LiveObject` instances to one message per 50 milliseconds or more. This is especially important when sending changes based on mouse or touch coordinates, such as when synchronizing cursor positions, inking, and dragging objects around a page.
+
+<br>
+
+</details>
+
+<details>
+<summary><b>Is Live Share supported for Government Community Cloud (GCC), Government Community Cloud High (GCC-High), and Department of Defense (DOD) tenants?</b></summary>
+
+Live Share isn't supported for GCC, GCC-High, and DOD tenants.
 
 <br>
 
