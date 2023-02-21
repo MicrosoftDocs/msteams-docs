@@ -92,7 +92,7 @@ You can also listen for an event when the users selects **Close (X)** in the con
 
 ## Code sample
 
-| Sample name | Description | C# |Node.js|
+| Sample name | Description | .NET |Node.js|
 |-------------|-------------|------|----|
 |Create Conversational tab| Microsoft Teams tab sample app for demonstrating create conversation tab. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/nodejs) |
 

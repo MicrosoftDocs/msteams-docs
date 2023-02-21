@@ -52,14 +52,26 @@ landingContent:
         url: https://gitter.im/OfficeDev/home
     - linkListType: whats-new
       links:
+      - text: Plan your app growth in Teams
+        url:  concepts/deploy-and-publish/appsource/post-publish/app-growth/overview-app-growth.md
+      - text: Create a dashboard in Teams
+        url:  tabs/how-to/dashboard-teams-toolkit.md
+      - text: Targeted in-meeting notification (Developer preview)
+        url: apps-in-teams-meetings/in-meeting-notification-for-meeting.md#targeted-in-meeting-notification
+      - text: Enable app caching to improve subsequent launch time of the apps to the meeting side panel (Developer preview)
+        url: apps-in-teams-meetings/build-tabs-for-meeting.md#app-caching
+      - text: Update and soft delete event notifications in bot
+        url: bots/how-to/conversations/conversation-messages.md#update-message
       - text: Teams developer documentation FAQs
         url: teams-faq.md
-      - text: Share-in-meeting to share any document or third-party app to the meeting stage (Developer Preview)
+      - text: Share-in-meeting to share any document or third-party app to the meeting stage
         url: ~/concepts/build-and-test/share-in-meeting.md
       - text: Plan analytics for your Teams app
         url: concepts/design/overview-analytics.md
     - linkListType: whats-new
       links:
+      - text: Apps for Teams meetings support anonymous users
+        url: apps-in-teams-meetings/build-apps-for-anonymous-user.md
       - text: Notification bot in Teams
         url: bots/how-to/conversations/notification-bot-in-teams.md
       - text: Command bot in Teams
@@ -78,8 +90,7 @@ landingContent:
         url: concepts/build-and-test/teams-developer-portal.md
       - text: Live Share canvas
         url: apps-in-teams-meetings/teams-live-share-canvas.md
-      - text: Generate a deep link to share content to stage in meetings
-        url: concepts/build-and-test/share-in-meeting.md#generate-a-deep-link-to-share-content-to-stage-in-meetings
+
 
 - title: Get started
   linkLists:
@@ -254,3 +265,16 @@ landingContent:
       url: ~/concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md      
     - text: Maintain your published app
       url: ~/concepts/deploy-and-publish/appsource/post-publish/overview.md
+
+- title: Notifications
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Design activity feed notifications
+      url: concepts/design/activity-feed-notifications.md 
+    - text: Send activity feed notifications
+      url: /graph/teams-send-activityfeednotifications
+    - text: Best practices for activity feed notifications
+      url: /graph/teams-activity-feed-notifications-best-practices
+    - text: Send proactive messages
+      url: bots/how-to/conversations/send-proactive-messages.md
