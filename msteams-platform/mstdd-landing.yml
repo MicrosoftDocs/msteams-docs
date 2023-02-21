@@ -54,8 +54,8 @@ landingContent:
       links:
       - text: Plan your app growth in Teams
         url:  concepts/deploy-and-publish/appsource/post-publish/app-growth/overview-app-growth.md
-      - text: Create a dashboard in Teams
-        url:  tabs/how-to/dashboard-teams-toolkit.md
+      - text: Build a dashboard tab app
+        url:  tabs/how-to/Build-a-dashboard-tab-app.md
       - text: Targeted in-meeting notification (Developer preview)
         url: apps-in-teams-meetings/in-meeting-notification-for-meeting.md#targeted-in-meeting-notification
       - text: Enable app caching to improve subsequent launch time of the apps to the meeting side panel (Developer preview)
