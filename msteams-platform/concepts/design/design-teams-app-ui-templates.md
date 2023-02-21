@@ -2,7 +2,7 @@
 title: Designing your app with UI templates
 author: heath-hamilton
 description: Learn to design your app faster with standardized UI components, layouts, and patterns commonly seen across Microsoft Teams.
-ms.author: lajanuar
+ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: reference
 ---

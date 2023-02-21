@@ -35,37 +35,39 @@ The Microsoft Teams app validation tool helps you identify and fix issues before
 
 ## Compile testing instructions
 
-Provide instructions and resources to help the reviewers test your app, including:
+Depending on your app functionality, you're required to provide Teams tenant configurations, a set of test accounts, and test notes. Ensure that you meet all requirements listed in this section to avoid app testability failures and delay in the app publishing process.
 
-* Test accounts
-* Credentials
-* License keys
+1. **Tenant configurations**: You must configure a Teams tenant to test your app and provide test accounts. This section shares the details for configuring a tenant for your app's testing. For more information about creating a demo tenant, see [Prepare your Microsoft 365 tenant](../../../build-and-test/prepare-your-o365-tenant.md). Ensure your app is configured for this demo tenant. If applicable, safe-listing or connection to external services for this tenant should be done before submission of the app.
 
-You can add instructions in Partner Center or upload them to a publicly available location on SharePoint.
+2. **Test Accounts**: Depending on your app's features, you need to provide the following accounts:
 
-### Feature list
+    - Admin account (required)
+    - Non-admin accounts (required)
 
-Provide details about your app's capabilities in Teams and steps for testing each one.
+        - Ensure that test accounts are safe-listed or configured with license keys, if applicable.
+        - If your app requires users to log in or connect to external services, provide the required credentials to complete the login or connection with the external service.
+        - Ensure that phone-based 2-way authentication is disabled for test accounts.
+        - If the app provides a collaborative experience, provide a non-admin account for each user persona. For example, if your app is used by teachers and students, provide credentials for both user personas.
+        - Ensure that at least one account has access to premium or upgraded features, if applicable.
+        - All accounts you provide must include pre-populated data to help in testing. For example, if your app helps to provide market insights based on the user profile, ensure that market data is pre-populated along with a few user profiles.
+        - Provide at least one account that isn't pre-configured to test the first-run sign-in experience properly.
 
-### Accounts
+    > [!NOTE]
+    > These accounts must be utilized only for validation requirements. The validation team will test your app fully, including first-run user experience.
+    > If your app is free for all users and anyone who intends to use your app can sign up to use it, indicate the same in the test notes. The validation team will use the sign up process as described.
 
-Provide test accounts if your app requires a license or backend safe listing. All accounts you provide must include pre-populated data to help in testing.
+3. **Test Notes**: The notes provide details about your app's capabilities in Teams and the steps for testing each one. It helps the validation team to understand your app better and complete the testing for all functionalities in your app. If your app functionality includes event-based notifications, list the instructions to trigger these events. For time-based notifications, indicate the expected time for receiving these notifications.
 
-Depending on your app's features, you may need to provide all the following accounts:
+    > [!NOTE]
+    > The functional testing of the app is initiated based on the test notes you provide. However, the validation team won't restrict the testing only to the test instructions.
 
-* Admin account (required)
-* Non-admin account (required)
-* An account that isn't pre-configured to properly test the first-run sign-in experience (required)
-* An account with access to premium or upgraded features (if applicable)
-* Two accounts in the same tenant to test the collaboration experience for apps that work in shared contexts (if applicable)
+4. **Demo Video**: Provide a recording of your app so that Microsoft can fully understand its functionality.
 
-### Tenant configurations
+You can find the following [sample test instructions](https://github.com/MicrosoftDocs/msteams-docs/tree/19115f8bdd4be6a6c0c38a77651dd8d8c55c741b/msteams-platform/assets/sample-instructions) for your reference.
 
-If you must configure a Teams tenant to use your app, include those instructions and admin and non-admin accounts for validation.
-
-### Video (optional)
-
-Provide a recording of your app so that Microsoft can fully understand its functionality.
+- Sample 1: Educational app
+- Sample 2: ERP Data transfer
+- Sample 3: Collaborative app
 
 ## Create your store listing details
 
@@ -190,28 +192,28 @@ During submission, you're asked to categorize your app. You can categorize your 
 | Microsoft |
 | Education |
 | Productivity |
-| Images & video galleries |
+| Images and video galleries |
 | Project management |
 | Utilities |
 | Social |
 | Communication |
 | Content management |
-| Files & documents |
-| Workflow & business management |
+| Files and documents |
+| Workflow and business management |
 | IT/Admin |
-| Human resources & recruiting|
+| Human resources and recruiting|
 | Developer tools |
-| Meetings & scheduling |
-| Data visualization & BI |
-| Training & tutorial |
-| News & weather |
+| Meetings and scheduling |
+| Data visualization and BI |
+| Training and tutorial |
+| News and weather |
 | Customer support |
 | Reference |
-| Sales & marketing |
-| Look & feel |
-| Customer & contact management (CRM) |
+| Sales and marketing |
+| Look and feel |
+| Customer and contact management (CRM) |
 | Financial management |
-| Maps & feeds |
+| Maps and feeds |
 | Other |
 
 ### Localize your store listing
