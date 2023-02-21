@@ -19,7 +19,7 @@ items:
     
     You can create a tab app and a bot app with Blazor and the latest version of Visual Studio.
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/blazor/your-blazor-helloworld-app.png" alt-text="Diagram showing this app has two features, tab and Bot.":::
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/blazor/your-blazor-helloworld-app.png" alt-text="Screenshot of the blazor app displaying the tab, Bot, and Message Extension output after you've successfully completed the step-by-step guide.":::
 
     > [!NOTE]
     > Currently, Teams Toolkit doesn't support the message extension capability.
@@ -34,10 +34,9 @@ items:
     | --- | --- | --- |
     | **Required** | &nbsp; | &nbsp; |
     | &nbsp; | [Visual Studio version 17.2.0 preview 2.1](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=enterprise&ch=pre&rel=17)|  Select Visual Studio Enterprise 2022 Preview (version 17.2.0 preview 2.1). |
-    | &nbsp; | [Microsoft Teams](https://www.microsoft.com/en-us/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call - all in one place. |
+    | &nbsp; | [Microsoft Teams](https://www.microsoft.com/en-us/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings and calls - all in one place. |
     | &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
     
-
     ## Prepare development environment
 
     After you've installed the required tools, set up the development environment.
@@ -45,7 +44,7 @@ items:
     ### Install Microsoft Teams Toolkit
 
     The Teams Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app, publish to the Teams store, and more. 
-    You can use the toolkit with Visual Studio, or as a CLI (called `teamsfx`). 
+    You can use the toolkit with Visual Studio, or as a Command Line Interface (called `teamsfx`). 
     
     # [Latest version of the Visual Studio](#tab/vs)
 
@@ -57,7 +56,7 @@ items:
     1. Open `vs_enterprise__3bed52501a604464b1eff2ce580fd4eb.exe` from your download folder.
     1. Select **Continue** in the **Visual Studio Installer** page to configure your installation.
 
-       :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/visual-studio-installer.png" alt-text="Select continue to configure your installation":::  
+       :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/visual-studio-installer.png" alt-text="Screenshot of Visual Studio Installer with Continue option highlighted in red.":::  
 
     1. Select **ASP.NET and web development** under **Workloads**.
 
@@ -65,7 +64,7 @@ items:
        
     1. Select **Install**.
 
-       :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/vs.install.png" alt-text="Illustration shows the option to install Microsoft development tool.":::  
+       :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/vs.install.png" alt-text="Screenshot of Visual Studio Enterprise Preview with the option Asp.NET and web development, Microsoft Teams development tools under installation details and install highlighted in red.":::  
        
      Your Visual Studio is installed in a few minutes.
     
@@ -90,13 +89,13 @@ items:
     You can use the CLI with the `teamsfx` command. Verify that the command is working by running `teamsfx -h`.
 
     > [!CAUTION]
-    > Before you can run TeamsFx in PowerShell terminals, you must enable the "remote signed" execution policy for PowerShell.
+    > Before you can run TeamsFx in PowerShell terminals, you must enable the remote signed execution policy for PowerShell.
 
     ---
 
     ## Set up your Teams development tenant
 
-    A **tenant** is like a space, or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where you sideload and test your app. Let's verify if you're ready to develop with the tenant.
+    A tenant is like a space or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where you sideload and test your app. Let's verify if you're ready to develop with the tenant.
 
     ### Enable sideloading option
 
@@ -108,9 +107,9 @@ items:
 
     1. In the Teams client, select **Store** icon.
     1. Select **Manage your apps**.
-    1. Select **Upload a custom app**. If you see the option, sideloading apps is enabled.
+    1. Select **Upload a custom app**. If you see Upload a customized app option, sideloading apps is enabled.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/prerequisites/upload-custom-app.png" alt-text="Illustration shows the option to upload a custom app in Teams.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/prerequisites/upload-custom-app.png" alt-text="Screenshot of Manage your apps in Teams with the Upload an app dialog open. Apps icon, Manage your apps, Upload an app, and Upload a customised app options are highlighted in red.":::
 
         > [!NOTE]
         > If Teams doesn't show the option to upload a custom app, connect to your Teams administrator.
@@ -122,9 +121,9 @@ items:
     1. Go to the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
     1. Select **Join Now** and follow the onscreen instructions.
     1. In the welcome screen, select **Set up E5 subscription**.
-    1. Setup your administrator account. After you finish, the following screen appears.
+    1. Set up your administrator account. After you finish, the following screen appears.
 
-        :::image type="content" source="../msteams-platform/assets/images/build-your-first-app/dev-program-subscription.png" alt-text="Example of what you see after signing up for the Microsoft 365 developer program.":::
+        :::image type="content" source="../msteams-platform/assets/images/build-your-first-app/dev-program-subscription.png" alt-text="Screenshot of Microsoft 365 Developer Program displaying your Microsoft 365 developer subscriptions.":::
 
     1. Sign in to Teams using the administrator account you just set up. Verify that you have the **Upload a custom app** option in Teams.
 
@@ -139,7 +138,7 @@ items:
   content: |
     Start Teams app development by creating your first app. This app uses the tab capability.
     
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/blazor/your-blazor-helloworld-app1.png" alt-text="Diagram showing this app has one feature. Tab is highlighted.":::    
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/blazor/your-blazor-helloworld-app1.png" alt-text="Screenshot of the Blazor app displaying the final output of tab app after you've successfully completed the step-by-step guide.":::    
 
     This tutorial walks you through the steps to create, run, and deploy your first Teams app using .NET/Blazor.
 
@@ -162,7 +161,7 @@ items:
 
     1. Select **Create a new project**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-select-project.png" alt-text="Illustration shows the option to create a new project.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-select-project.png" alt-text="Screenshot of Visual Studio with Create a new project option highlighted in red.":::
 
         The **Create a new project** page appears.
 
@@ -176,7 +175,7 @@ items:
 
           1. Select **Next**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-select-teams-app.png" alt-text="Illustration shows the option to select a template.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-select-teams-app.png" alt-text="Screenshot of Create a new project with Next option highlighted in red.":::
         
           The **Configure your new project** page appears.
 
@@ -197,7 +196,7 @@ items:
 
           1. Select **Create**.
 
-          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-new-project.png" alt-text="Illustration shows the options to configure new project.":::
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-new-project.png" alt-text="Screenshot of Configure your new project with Create option highlighted in red.":::
 
           The **Create a new Teams application** page appears.  
 
@@ -209,33 +208,32 @@ items:
 
         1. Select **Create**.      
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/select-tab_1.png" alt-text="Illustration shows the options to configure new project.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/select-tab_1.png" alt-text="Screenshot of Create a new Teams application with Tab and Create options highlighted in red.":::
         
         Your Teams tab app is created in a few seconds.
         
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-tab-app.png" alt-text="Illustration shows the app project created in the Visual Studio.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-tab-app.png" alt-text="Screenshot of Visual Studio displaying tips to get started while building your app.":::
         
 
     <details>
     <summary>A quick recap of creating a Teams tab app.</summary>
     Watch this short recap for creating a Teams tab app.
 
-    ![Create a Teams app](~/assets/videos/blazorapp.gif)
-    </details>
+    :::image type="content" source="~/assets/videos/blazorapp.gif" alt-text="Graphical representation shows the process of creating the Teams tab app.":::
 
     ## Take a tour of the source code for Teams tab app
 
     After project creation, you have the components to build a basic personal app. You can view the project directory structure in the **Solution Explorer** pane of the Visual Studio.
 
-    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/blazor-app-solution-explorer_1.png" alt-text="Screenshot showing app project files for a personal app in the latest Visual Studio.":::
+    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/blazor-app-solution-explorer_1.png" alt-text="Screenshot of Solution explorer displaying the components to build a basic personal app.":::
 
     Teams Toolkit creates a scaffolding for your project based on the capabilities you selected. Among other files, Teams Toolkit maintains:
 
     | Folder name | Contents |
     | --- | --- |
     | App icons | The app icons are stored as PNG files in `color.png` and `outline.png`. |
-    | Properties/`manifest.json` | The app manifest for publishing through the Developer Portal for Teams is stored in `Properties/manifest.json`. |
-    | Controllers/`BackendController.cs` | A backend controller is provided in `Controllers/BackendController.cs` for assisting with authentication. |
+    | `manifest.json` | The app manifest for publishing through the Developer Portal for Teams is stored in `Properties/manifest.json`. |
+    | `BackendController.cs` | A backend controller is provided in `Controllers/BackendController.cs` for assisting with authentication. |
     | `Pages/Tab.razor` | The app manifest for publishing through the Developer Portal for Teams is stored in `Properties/manifest.json`. |
     | `TeamsFx.cs` and `JS/src/index.js` | The content is used for initializing communications with the Teams host. |
     
@@ -250,11 +248,11 @@ items:
 
     1. Select **Project** > **Teams Toolkit** > **Prepare Teams App Dependencies**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-msteamsapp_1.png" alt-text="Select the provision operation for the project":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-msteamsapp_1.png" alt-text="Screenshot of Visual Studio with Project, Teams Toolkit, and Prepare Teams App Dependencies options are highlighted in red.":::
 
     1. Select your Microsoft 365 account or **Add an account** to sign in.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/M365-account_1.png" alt-text="Select the provision operation for the project":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/M365-account_1.png" alt-text="Screenshot of Microsoft 365 Account with Continue option highlighted in red.":::
 
     1. Select **Debug** > **Start Debugging** or select **F5** to run your app in debug mode.
         <!-- markdownlint-disable MD033 -->
@@ -264,7 +262,7 @@ items:
         When you select **F5**, Teams Toolkit:
 
         1. Registers your application with Azure Active Directory.
-        1. Registers your application for "sideloading" in Teams.
+        1. Registers your application for sideloading in Teams.
         1. Starts your application backend running locally.
         1. Starts your application front-end hosted locally.
         1. Starts Teams in a web browser with a command to instruct Teams to side load the application (the URL is registered inside the application manifest).
@@ -273,48 +271,50 @@ items:
 
     1. Install the self-signed SSL certificate for local debugging, if requested.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="Screenshot showing how the prompt to install an SSL certificate to enable Teams to load your application from localhost.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="Screenshot of Security Warning with Yes option highlighted in red.":::
 
         Teams is loaded in a web browser.
         
     1. Select **Add** when prompted to install the app to Teams.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/blazor-add-app_1.png" alt-text="Screenshot showing how to add app to Teams web client":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/blazor-add-app_1.png" alt-text="Screenshot of BlazorApp local debug with Add option highlighted in red.":::
 
        Congratulations, your first tab app is running in your local environment!
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/app-local.png" alt-text="Screenshot of the completed app":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/app-local.png" alt-text="Screenshot of Microsoft Teams with Your app is running in your local environment highlighted in red.":::
 
     1. Move through the page to view the user details.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/authorize-user-info.png" alt-text="Screenshot of the Authorize button to access user information":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/authorize-user-info.png" alt-text="Screenshot of Microsoft Teams with Authorize option highlighted in red.":::
 
     1. Select **Authorize** to let your app retrieve user details using Microsoft Graph.
 
         The app requests permission to grant access for displaying user details.    
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/ms-graph-permission_1.png" alt-text="Screenshot showing how to accept permission to access user information":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/ms-graph-permission_1.png" alt-text="Screenshot of Permissions requested displaying the App info.":::
 
     1. Select **Accept** to let your app access user details.
 
         Your photograph and details appear in your **Personal Tab**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/tab-user-info.png" alt-text="Screenshot showing user information in the tab":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/tab-user-info.png" alt-text="Screenshot of your Personal Tab displaying basic information.":::
 
         You can do normal debugging activities, such as setting breakpoints, as if it were any other web application. The app supports hot reloading.  If you change any file within the project, the page will be reloaded.
 
-    <!-- markdownlint-disable MD033 -->
-    <details>
-    <summary>Learn how to troubleshoot if your app doesn't run locally.</summary>
+        <!-- markdownlint-disable MD033 -->
+        <details>
+        <summary>Learn how to troubleshoot if your app doesn't run locally.</summary>
 
-    To run your app in Teams, you need a Microsoft 365 development account that allows app sideloading. You can learn more about it in the Prerequisites section.
-    </details>
+        To run your app in Teams, you need a Microsoft 365 development account that allows app sideloading. You can learn more about it in the Prerequisites section.
+        </details>
+
+    1. Stop debugging in Visual Studio.
 
 - title: Preview your first Teams tab app
   durationInMinutes: 1
   content: |
 
-    You've learned to create, build, and run Teams app with tab capability. The following final steps are to deploy your app on Azure and Preview on Teams:
+    You've learned to create, build, and run Teams app with tab capability. The following final steps are to deploy your app on Azure and Preview in Teams:
 
     1. [Provision your tab app in the cloud](#to-provision-your-tab-app-in-the-cloud): You can provision your tab app in the cloud.
     1. [Deploy your tab app to cloud](#to-deploy-your-tab-app-to-cloud): You can deploy your tab app to cloud. 
@@ -326,7 +326,7 @@ items:
     
     1. Select **Project** > **Teams Toolkit** > **Provision in the Cloud**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-provision_1.png" alt-text="Select the provision operation for the project":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-provision_1.png" alt-text="Screenshot of Visual Studio with Project, Teams Toolkit, and Provision in the Cloud options are highlighted in red.":::
 
     1. Enter the subscription and resource group details in the **Provision** dialog:
 
@@ -335,29 +335,29 @@ items:
        1. Select your **Region**, if new resource group is created.
        1. Select **Provision**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/select-subscription.png" alt-text="Select the subscription operation for the project":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/select-subscription.png" alt-text="Screenshot of Provision with New and Provision highlighted in red.":::
 
         Provision warning displays. 
 
     1. Select **Provision**.
     
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/provision-warning.png" alt-text="Select the provision":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/provision-warning.png" alt-text="Screenshot of Teams Toolkit with Provision highlighted in red.":::
 
         It takes a few minutes for your resource group to provision in the cloud. 
         
     1. After the provision is complete, select **OK**. 
 
-         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/provision-complete.png" alt-text="Resource group is generated":::
+         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/provision-complete.png" alt-text="Screenshot of Teams Toolkit with OK option highlighted in red.":::
 
     1. Select **View Provisioned Resources** to view on Azure portal. 
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/view-resource.png" alt-text="Resource group is generated":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/view-resource.png" alt-text="Screenshot of Teams Toolkit with View Provisioned Resources highlighted in red.":::
 
     1. Sign in to your Azure portal account on sign-in prompt. 
 
         Your app-dev-rg appears.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/app-dev-rg-azure.png" alt-text="View in Azure":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/app-dev-rg-azure.png" alt-text="Screenshot of Blazorapp-dev-rg displaying the Resources provisioned in the Azure portal.":::
 
         Your resources are provisioned in the Azure portal!
 
@@ -365,50 +365,50 @@ items:
 
     1. Select **Project** > **Teams Toolkit** > **Deploy to the Cloud**.
 
-         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-deploytocloud_1.png" alt-text="Select deploy to cloud":::
+         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-deploytocloud_1.png" alt-text="Screenshot of Visual Studio with Project, Teams Toolkit, and Deploy to the Cloud options highlighted in red.":::
 
     1. Select **OK**. 
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/deploy-success.png" alt-text="Select deploy to cloud":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/deploy-success.png" alt-text="Screenshot of Teams Toolkit with OK option highlighted in red.":::
 
         Your tab app is successfully deployed to the cloud!
 
     #### **To preview your tab app in Teams**    
 
-    1. Select **Project** > **Teams Toolkit** > **Preview Teams app**.
+    1. Select **Project** > **Teams Toolkit** > **Preview in Teams**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-preview_1.png" alt-text="Select preview":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-preview_1.png" alt-text="Screenshot of Visual Studio with Project, Teams Toolkit, and Preview in Teams options are highlighted in red.":::
 
     1. Select **Add** when prompted to install the app to Teams.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/blazor-add-app.png" alt-text="Screenshot showing how to add app to Teams web client.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/blazor-add-app.png" alt-text="Screenshot of Teams displaying the Add option for adding Blazor app. The Add option highlighted in red.":::
 
         Congratulations, your first tab app is running in your Azure environment!
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/blazor-tab-app-azure.png" alt-text="Screenshot of the completed app":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/blazor-tab-app-azure.png" alt-text="Screenshot of Microsoft Teams with Your app is running in your Azure environment highlighted in red.":::
 
     1. Move through the page to view the user details.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/authorize-user-info.png" alt-text="Screenshot of the Authorize button to access user information":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/authorize-user-info.png" alt-text="Screenshot of Microsoft Teams with Authorize option under Personal Tab highlighted in red.":::
 
     1. Select **Authorize** to let your app retrieve user details using Microsoft Graph.
 
         The app requests permission to grant access for displaying user details.    
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/ms-graph-permission_1.png" alt-text="Screenshot showing how to accept permission to access user information":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/ms-graph-permission_1.png" alt-text="Screenshot of Permissions requested displaying the App info.":::
 
     1. Select **Accept** to let your app access user details.
 
         Your photograph and details appear in your **Personal Tab**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/azure-user-info.png" alt-text="Screenshot showing user information in the tab":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/azure-user-info.png" alt-text="Screenshot of your Personal Tab displaying basic information.":::
 
 - title: Create project workspace for your bot app
   durationInMinutes: 1
   content: |
     Start Teams app development by creating your first app. This app uses the bot capability.
     
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/blazor/your-helloworld-app-bot.png" alt-text="Diagram showing this app has one feature. Tab is highlighted.":::    
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/blazor/your-helloworld-app-bot.png" alt-text="Screenshot displaying workspace for your bot app.":::    
 
     This tutorial walks you through the steps to create, run, and deploy your first Teams app using .NET/Blazor.
 
@@ -431,7 +431,7 @@ items:
 
     1. Select **Create a new project**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-select-project.png" alt-text="Illustration shows the option to create a new project.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-select-project.png" alt-text="Screenshot of Visual Studio 2022 with Create a new project option highlighted in red.":::
 
         The **Create a new project** window appears.
 
@@ -445,7 +445,7 @@ items:
 
           1. Select **Next**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-select-teams-app.png" alt-text="Illustration shows the option to select a template.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-select-teams-app.png" alt-text="Screenshot of Create a new project with Next option highlighted in red.":::
 
           The **Configure your new project** window appears.
 
@@ -466,7 +466,7 @@ items:
 
           1. Select **Create**.   
 
-          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-new-project-bot.png" alt-text="Illustration shows the options to configure new project.":::
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-new-project-bot.png" alt-text="Screenshot of Configure your new project with Create option highlighted in red.":::
 
           The **Create a new Teams application** window appears.  
 
@@ -474,37 +474,36 @@ items:
 
         Select app feature: 
 
-        1. Select the **Command Bot app** as the capability for your app.
+        1. Select the **Command Bot** app as the capability for your app.
 
         1. Select **Create**.     
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/select-bot_1.png" alt-text="Illustration shows the options to configure new project.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/select-bot_1.png" alt-text="Screenshot of Create a new Teams application with Command Bot and Create options highlighted in red.":::
 
         Your Teams bot app is created in a few seconds.
         
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-bot-app-team_1.png" alt-text="Illustration shows the app project created in the latest Visual Studio.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-bot-app-team_1.png" alt-text="Screenshot of Visual Studio displaying the information of getting started with Teams Toolkit.":::
         
 
     <details>
     <summary>A quick recap of creating a Teams bot app.</summary>
     Watch this short recap for creating a Teams bot app.
 
-    ![Create a Teams app](~/assets/videos/botapp.gif)
-    </details>
+    :::image type="content" source="~/assets/videos/botapp.gif" alt-text="Graphical representation shows the process of creating the  jTeams bot app.":::
 
     ## Take a tour of the source code for Teams bot app
 
     After project creation, you have the components to build a basic personal app. You can view the project directory structure in the **Solution Explorer** area of the latest Visual Studio.
 
-    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/blazor-appbot-solution-explorer_1.png" alt-text="Screenshot showing app project files for a personal app in the latest Visual Studio.":::
+    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/blazor-appbot-solution-explorer_1.png" alt-text="Screenshot of Solution Explorer with BlazorApp highlighted.":::
 
     Teams Toolkit creates a scaffolding for your project based on the capabilities you selected. Among other files, Teams Toolkit maintains:
 
     | Folder name | Contents |
     | --- | --- |
     | App icons | The app icons are stored as PNG files in `color.png` and `outline.png`. |
-    | Properties/`manifest.json` | The app manifest for publishing through the Developer Portal for Teams is stored in `Properties/manifest.json`. |
-    | Controllers/`BackendController.cs` | A backend controller is provided in `Controllers/BackendController.cs` for assisting with authentication. |
+    | `manifest.json` | The app manifest for publishing through the Developer Portal for Teams is stored in `Properties/manifest.json`. |
+    | `BackendController.cs` | A backend controller is provided in `Controllers/BackendController.cs` for assisting with authentication. |
     | `TeamsFx.cs` and `JS/src/index.js` | The content is used for initializing communications with the Teams host. |
     
     You can add backend functionality by adding other ASP.NET Core controllers to your application.
@@ -514,20 +513,20 @@ items:
   content: |
 
     To build and run your app locally:
-    
-    1. Select **Project** > **Teams Toolkit** > **Prepare Teams App Dependencies**.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-msteamsapp_1.png" alt-text="Select the provision operation for the project":::
-
-    1. Select your Microsoft 365 account or **Add an account** to sign in.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/M365-account_1.png" alt-text="Select the provision operation for the project":::
 
     1.  Use ngrok or Command prompt to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
 
         ```bash
-        ngrok http --host-header=localhost 2544
+        ngrok http --host-header=localhost 5130
         ```
+    
+    1. Select **Project** > **Teams Toolkit** > **Prepare Teams App Dependencies**.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-msteamsapp_1.png" alt-text="Screenshot of Visual Studio with project, Teams Toolkit, and Prepare Teams App Dependencies options highlighted in red.":::
+
+    1. Select your Microsoft 365 account or **Add an account** to sign in.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/M365-account_1.png" alt-text="Screenshot of Microsoft 365 Account with Add an account and Continue options highlighted in red.":::
 
      1. Select **Debug** > **Start Debugging** or select **F5** to run your app in debug mode.
         <!-- markdownlint-disable MD033 -->
@@ -537,7 +536,7 @@ items:
         When you select **F5**, Teams Toolkit:
 
         1. Registers your application with Azure Active Directory.
-        1. Registers your application for "sideloading" in Teams.
+        1. Registers your application for sideloading in Teams.
         1. Starts your application backend running locally.
         1. Starts your application front-end hosted locally.
         1. Starts Teams in a web browser with a command to instruct Teams to side load the application (the URL is registered inside the application manifest).
@@ -551,15 +550,15 @@ items:
 
     1. Select **Add** when prompted to sideload the app onto Teams on your local machine.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/add-bot.png" alt-text="Screenshot showing the bot is being added on Teams client.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/add-bot.png" alt-text="Screenshot of Teams displaying the Add option for adding Blazor app. The Add option is highlighted in red.":::
 
         Now the bot is successfully running on Teams! After the app is loaded, a chat session with the bot opens.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/bot-running.png" alt-text="Screenshot showing the bot is running on Teams client.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/bot-running.png" alt-text="Screenshot of Microsoft Teams with Welcome option highlighted under Suggestions.":::
 
         You can type `welcome` to show an introduction card, and type `learn` to go to adaptive card and bot command documentation.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/bot-welcome.png" alt-text="Screenshot showing the welcome card in the bot on Teams client.":::       
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/bot-welcome.png" alt-text="Screenshot of Microsoft Teams displaying an introduction card.":::       
 
          You can do normal debugging activities, such as setting breakpoints, as if it were any other web application. The app supports hot reloading.  If you change any file within the project, the page will be reloaded.
          
@@ -585,7 +584,7 @@ items:
     
     1. Select **Project** > **Teams Toolkit** > **Provision in the Cloud**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/azure-app_1.png" alt-text="provisioning in cloud":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/azure-app_1.png" alt-text="Screenshot of Visual Studio with project, Teams Toolkit, and Provision in the Cloud options highlighted in red.":::
 
     1. Enter the subscription and resource group details in the **Provision** dialog:
 
@@ -594,29 +593,29 @@ items:
         1. Select your **Region**, if new resource group is created.
         1. Select **Provision**.
 
-           :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/provision-azure_1.png" alt-text="edit provision window":::
+           :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/provision-azure_1.png" alt-text="Screenshot of Provision with provision option highlighted in red. ":::
 
            Provision warning displays. 
 
     1. Select **Provision**.
 
-       :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/permission-azure.png" alt-text="warning":::
+       :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/permission-azure.png" alt-text="Screenshot of Teams Toolkit with Provision highlighted in red.":::
 
        It takes a few minutes for your resource group to provision in the cloud.
         
     1. After the provision is complete, select **OK**. 
   
-          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/apppackage1-azure.png" alt-text="permission ok":::
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/apppackage1-azure.png" alt-text="Screenshot of Teams Toolkit with OK option highlighted in red.":::
 
     1. Select **View Provisioned Resources** to view on Azure portal. 
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/view-resource-azure.png" alt-text="provisioned resource":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/view-resource-azure.png" alt-text="Screenshot of Teams Toolkit with View Provisioned Resources highlighted in red.":::
 
     1. Sign in to your Azure portal account on sign-in prompt. 
 
         Your app-dev-rg appears.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/azure.png" alt-text="Azure app created":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/azure.png" alt-text="Screenshot of Blazorapp-dev-rg displaying the resources are provisioned in the Azure portal.":::
 
         Your resources are provisioned in the Azure portal!
 
@@ -624,33 +623,33 @@ items:
 
      1. Select **Project** > **Teams Toolkit** > **Deploy to the Cloud**.
 
-          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/deploy-to-cloud-azure_1.png" alt-text="deploy to cloud":::
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/deploy-to-cloud-azure_1.png" alt-text="Screenshot of Visual Studio with Project, Teams Toolkit, and Deploy to the Cloud options highlighted in red.":::
 
      1. Select **OK**. 
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/deploy-success.png" alt-text="deployment success":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/deploy-success.png" alt-text="Screenshot of Teams Toolkit with OK option highlighted in red.":::
 
         Your bot app is successfully deployed to the cloud!
 
     #### **To preview your bot app in Teams** 
 
-     1. Select **Project** > **Teams Toolkit** > **Preview Teams app**.
+     1. Select **Project** > **Teams Toolkit** > **Preview in Teams**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/preview-azure_1.png" alt-text="Select preview in Azure":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/preview-azure_1.png" alt-text="Screenshot of Visual Studio with Project, Teams Toolkit and Preview in Teams options highlighted in red.":::
 
      1. Select **Add** when prompted to install the app to Teams.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/add-app-azure.png" alt-text="Screenshot showing how to add app to Teams.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/add-app-azure.png" alt-text="Screenshot of Teams displaying the Add option for adding Blazor app. The Add option is highlighted in red.":::
 
         Now the bot is successfully running on Teams! After the app is loaded, a chat session with the bot opens.
  
      1. You can type `welcome` to show an introduction card.
 
-         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/welcome.png" alt-text="introduction card opens":::
+         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/welcome.png" alt-text="Screenshot of Microsoft Teams displaying an introduction card.":::
 
      1. You can type `learn` to go to adaptive card and bot command documentation.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/learn.png" alt-text="bot and adaptive card opens":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/learn.png" alt-text="Screenshot of Microsoft Teams displaying the Learn Adaptive Card and Commands.":::
 
 - title: Congratulations!
   durationInMinutes: 1

@@ -152,6 +152,15 @@ While Live Share is in Preview, any limit to events emitted through Live Share i
 &nbsp;
 </details>
 
+<details>
+<summary>Is Live Share supported for Government Community Cloud (GCC), Government Community Cloud High (GCC-High), and Department of Defense (DOD) tenants?</summary>
+
+Live Share isn't supported for GCC, GCC-High, and DOD tenants.
+
+<br>
+
+</details>
+
 ## Microsoft Graph
 
 <details>

@@ -17,7 +17,7 @@ OAuth 2.0 is an open standard for authentication and authorization used by Micro
 
 See [OAuth 2 Simplified](https://aka.ms/oauth2-simplified) for a basic understanding, and [OAuth 2.0](https://oauth.net/2/) for the complete specification.
 
-For more information about how the Azure Bot Service handles authentication, see [User authentication within a conversation](https://aka.ms/azure-bot-authentication).
+For more information about how the Azure Bot Service handles authentication, see [User authentication within a conversation](/azure/bot-service/bot-builder-concept-authentication?view=azure-bot-service-4.0&preserve-view=true).
 
 In this article you'll learn:
 
@@ -315,7 +315,7 @@ With the preliminary settings done, let's focus on the creation of the bot to us
 
 ### Deploy the bot to Azure
 
-To deploy the bot, follow the steps in the How to [Deploy your bot to Azure](https://aka.ms/azure-bot-deployment-cli).
+To deploy the bot, follow the steps in the How to [Deploy your bot to Azure](/azure/bot-service/provision-and-publish-a-bot?view=azure-bot-service-4.0&tabs=userassigned%2Ccsharp&preserve-view=true).
 
 Alternatively, while in Visual Studio, you can follow these steps:
 
@@ -329,7 +329,7 @@ Alternatively, while in Visual Studio, you can follow these steps:
    :::image type="content" source="../../../assets/images/authentication/auth-bot-app-service.png" alt-text="Screenshot shows how to enter required information for auth app service.":::
 
 1. Select **Create**.
-1. If the deployment completes successfully, you should see it reflected in Visual Studio. Moreover, a page is displayed in your default browser saying *Your bot is ready!*. The URL will be similar to this: `https://botteamsauth.azurewebsites.net/`. Save it to a file.
+1. If the deployment completes successfully, you should see it reflected in Visual Studio. A page is displayed in your default browser saying *Your bot is ready!*. The URL will be similar to this: `https://botteamsauth.azurewebsites.net/`. Save it to a file.
 1. In your browser, go to the [**Azure portal**][azure-portal].
 1. Check your resource group, the bot should be listed along with the other resources. The following image is an example:
 
@@ -344,7 +344,7 @@ Alternatively, while in Visual Studio, you can follow these steps:
 
 ## Test the bot using the Emulator
 
-If you haven't done it already, install the [Microsoft Bot Framework Emulator](https://aka.ms/bot-framework-emulator-readme). See also [Debug with the Emulator](https://aka.ms/bot-framework-emulator-debug-with-emulator).
+If you haven't done it already, install the [Microsoft Bot Framework Emulator](https://aka.ms/bot-framework-emulator-readme). See also [Debug with the Emulator](/azure/bot-service/bot-service-debug-emulator?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true).
 
 In order for the bot sample login to work you must configure the Emulator.
 
@@ -370,8 +370,8 @@ After you've configured the authentication mechanism, you can perform the actual
 1. Start the Emulator.
 1. Select the **Open bot** button.
 1. In the **Bot URL**, enter the bot's local URL. Usually, `http://localhost:3978/api/messages`.
-1. In the **Microsoft App ID** enter the bot's app ID from `appsettings.json`.
-1. In the **Microsoft App password** enter the bot's app password from the `appsettings.json`.
+1. In the **Microsoft App ID**, enter the bot's app ID from `appsettings.json`.
+1. In the **Microsoft App password**, enter the bot's app password from the `appsettings.json`.
 1. Select **Connect**.
 1. After the bot is up and running, enter any text to display the sign-in card.
 1. Select the **Sign in** button.
@@ -641,7 +641,7 @@ This section provides Bot authentication v3 SDK sample.
 
 ## See also
 
-- [Add authentication through Azure Bot Service](https://aka.ms/azure-bot-add-authentication)
+- [Add authentication through Azure Bot Service](/azure/bot-service/bot-builder-authentication?view=azure-bot-service-4.0&tabs=userassigned%2Caadv2%2Ccsharp&preserve-view=true)
 - [Get access on behalf of a user](/graph/auth-v2-user)
 
 <!-- Footnote-style links -->

@@ -235,7 +235,7 @@ import { meeting } from "@microsoft/teams-js";
 
 // ... set up MediaPlayerSynchronizer
 
-// Register speaking state change handler through TeamsJS library
+// Register speaking state change handler through Microsoft Teams JavaScript client library (TeamsJS)
 let volumeTimer;
 meeting.registerSpeakingStateChangeHandler((speakingState) => {
   if (speakingState.isSpeakingDetected && !volumeTimer) {

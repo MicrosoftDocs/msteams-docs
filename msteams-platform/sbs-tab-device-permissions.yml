@@ -197,7 +197,7 @@ items:
 - title: Test your app
   durationInMinutes: 1
   content: |
-     After You successfully upload the app into Teams, you must test the app to ensure the tab device permission app enables user to grant the permission.
+     After you successfully upload the app into Teams, you must test the app to ensure the tab device permission app enables user to grant the permission.
 
      # [Desktop](#tab/Desktop)
 
@@ -231,7 +231,8 @@ items:
       * Select **DENY** if you don't want to grant permission.
 
         :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/prompt-mobile-app1.png" alt-text="mobile output":::                   
---- 
+
+      --- 
     
 - title: Complete challenge
   durationInMinutes: 1
