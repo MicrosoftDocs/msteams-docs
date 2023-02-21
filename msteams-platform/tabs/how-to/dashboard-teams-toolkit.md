@@ -918,4 +918,4 @@ Follow the [step-by-step](~/sbs-create-dashboard-widget-graph-api-call-in-Teams-
 * [What are Teams tabs](../what-are-tabs.md)
 * [App design guidelines for tab](../design/tabs.md)
 * [Fluent UI library](https://react.fluentui.dev/?path=/docs/concepts-introduction--page)
-* [Fluent UI React charting examples](https://fluentuipr.z22.web.core.windows.net/heads/master/react-charting/demo/index.html#/)
+* [Fluent UI React charting examples.](https://fluentuipr.z22.web.core.windows.net/heads/master/react-charting/demo/index.html#/)
