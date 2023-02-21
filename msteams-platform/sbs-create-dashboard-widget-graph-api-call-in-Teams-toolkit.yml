@@ -7,7 +7,7 @@ metadata:
   level: Beginner
   ms.date: 01/06/2023
   ms.topic: interactive-tutorial
-  nextTutorialHref: tabs/how-to/dashboard-teams-toolkit.md
+  nextTutorialHref: tabs/how-to/Build-a-dashboard-tab-app.md
   nextTutorialTitle: Dashboard, widget, and Graph API call in Teams toolkit
   ms.custom: mvc
   ms.localizationpriority: high
@@ -269,7 +269,7 @@ items:
 
             :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/widget-added-to-dashboard.png" alt-text="Screenshot shows the addition of widget to the dashboard with the sample widget highlighted in red. ":::
 
-            You can change the look and style of the widget. For more information, see [customize the widget](tabs/how-to/dashboard-teams-toolkit.md#customize-the-widget).
+            You can change the look and style of the widget. For more information, see [customize the widget](tabs/how-to/Build-a-dashboard-tab-app.md#customize-the-widget).
 
 - title: Add a new Graph API call
   durationInMinutes: 5
@@ -291,7 +291,7 @@ items:
 
       1. Move SSO folder under **auth** > **tab** folder to **tabs** > **src** > SSO folder.
 
-      You've added the SSO files to your project and now you can call Graph APIs. Refer to [Graph API call](tabs/how-to/dashboard-teams-toolkit.md#graph-api-call).
+      You've added the SSO files to your project and now you can call Graph APIs. Refer to [Graph API call](tabs/how-to/Build-a-dashboard-tab-app.md#graph-api-call).
 
       1. To join the meeting, select **Join**.
 
