@@ -11,7 +11,7 @@ ms.localizationpriority: high
 
 Conversational subentities provide a way to allow users to have conversations about subentities in your tab. Such as specific task, patient, and sales opportunity, instead of discussing the entire tab, also known as entity. A traditional channel or configurable tab allows the user to have a conversation about a tab, but the user requires a more focused conversation. The requirement for a more focused conversation can arise either, if there's too much content to have a centralized discussion or because the content changed over time, making the conversation irrelevant to the content shown. Conversational subentities provide a much more focused conversation experience for dynamic tabs.
 
-Conversational subentities are only supported in channels. They can be used from a personal or static tab to create or continue conversations in tabs that are already pinned to a channel. The static tab is useful if you want to provide one location for a user to view and access conversations happening across multiple channels.
+Channels supports conversational subentities. They can be used from a personal or static tab to create or continue conversations in tabs that are already pinned to a channel. The static tab is useful if you want to provide one location for a user to view and access conversations happening across multiple channels.
 
 ## Prerequisites
 
