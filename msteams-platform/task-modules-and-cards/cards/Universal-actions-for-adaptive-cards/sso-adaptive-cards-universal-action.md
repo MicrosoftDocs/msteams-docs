@@ -43,17 +43,17 @@ If there's a cached token, the bot uses the same token. If there's no token avai
 }
 ```
 
-The bot services delivers the invoke response to the Teams client, which uses the `tokenExchangeResource` value and the Teams client token to obtain an on-behalf-of token or exchangeable token from Azure AD.
+The bot service delivers the invoke response to the Teams client, which uses the `tokenExchangeResource` value and the Teams client token to obtain an on-behalf-of token or exchangeable token from Azure AD.
 
 The SSO fails when the Teams client ignores the `tokenExchangeResource` value for any reason, including invalid values, errors retrieving exchangeable tokens, or if Azure AD doesn't support the value. Then the Teams client triggers the nominal sign-in or OAuth flow. It's recommended that you provide a sign-in URL in the above response so that the OAuth flow works.
 
 ## Consent dialog for getting access token
 
-If the app user is using an Adaptive Card for the first time, consent is required. The following dialog appears:
+If the app user is using an Adaptive Card for the first time, they must give consent for the app to use their identity. The following dialog appears:
 
    :::image type="content" source="../../../assets/images/authentication/consent-sso-ac.png" alt-text="Screenshot shows you the consent dialog box.":::
 
-When the app user selects **View and accept**, the existing Azure AD permission consent view is launched to show all the permissions. The app user can continue with the authentication flow.
+When the app user selects **View and accept**, the existing Azure AD permission consent view appears to show all the permissions. The app user can continue with the authentication flow.
 
 ## Add code to receive the token
 
@@ -82,7 +82,7 @@ When the app user selects **View and accept**, the existing Azure AD permission 
     }
     ```
 
-    The following is the code snippet to receive invoke activity in the bot service:
+    The following code snippet shows how to receive invoke activity in the bot service:
 
     ```csharp
             protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext<IInvokeActivity> turnContext, 
