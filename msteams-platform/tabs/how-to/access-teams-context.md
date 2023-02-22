@@ -273,7 +273,7 @@ The following table lists commonly used context properties of the *context* obje
 | sharepointSite.teamSitePath | teamSitePath | The relative path to the SharePoint site associated with the team. |
 | channel.relativeUrl | channelRelativeUrl | The relative path to the SharePoint folder associated with the channel. |
 | app.host.sessionId | sessionId | Unique ID for the current Host session for use in correlating telemetry data. |
-| team.userRole | userTeamRole | The user's role in the team. Because a malicious party can run your content in a browser, this value should be used only as a hint as to the user's role, and never as proof of her role. |
+| team.userRole | userTeamRole | The user's role in the team. Because a malicious party can run your content in a browser, this value should be used only as a hint as to the user's role, and never as proof of user's role. |
 | team.isArchived | isTeamArchived | Indicates whether team is archived. Apps should use this as a signal to prevent any changes to content associated with archived teams. |
 | app.host.clientType | hostClientType | The type of the host client. Possible values are: android, ios, web, desktop, rigel |
 | page.frameContext | frameContext | The context where page url is loaded (content, task, setting, remove, sidePanel) |
