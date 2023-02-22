@@ -72,8 +72,6 @@ You can use one or all the three predominant types of SaaS business growth model
 
 As a developer of a collaborative app, you'll benefit from devising a well-rounded strategy that employs all three SaaS business growth models. It helps you grow your Teams app among hundreds of millions of Teams users.
 
-:::image type="content" source="../../../../../assets/images/app-fundamentals/growth-funnel.png" alt-text="Traditional funnel versus Product-led funnel." lightbox="../../../../../assets/images/app-fundamentals/growth-funnel.png" :::
-
 More than point solutions (that is, *add-ins* and *integrations*), Teams collaborative apps offer you an opportunity to apply a solid growth strategy to a product line. It's just as you'd do for your core SaaS product for the web browser or native mobile apps.
 
 [Back to top](#strategize-and-execute-growth-for-your-app)
