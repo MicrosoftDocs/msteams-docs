@@ -38,7 +38,7 @@ Use placeholders in your configuration or content URLs. Microsoft Teams replaces
 
 * [{page.id}](/javascript/api/@microsoft/teams-js/app.pageinfo#@microsoft-teams-js-app-pageinfo-id): The developer-defined unique ID for the page defined when first [configuring the page](~/tabs/how-to/create-tab-pages/configuration-page.md). (Known as `{entityId}` prior to TeamsJS v.2.0.0).
 * [{page.subPageId}](/javascript/api/@microsoft/teams-js/app.pageinfo#@microsoft-teams-js-app-pageinfo-subpageid): The developer-defined unique ID for the subpage this content points defined when generating a [deep link](~/concepts/build-and-test/deep-links.md) for a specific item within the page. (Known as `{subEntityId}` prior to TeamsJS v.2.0.0).
-* [{user.loginHint}](/javascript/api/@microsoft/teams-js/app.userinfo#@microsoft-teams-js-app-userinfo-loginhint): A value suitable as a sign in hint for Azure AD. This is usually the login name of the current user in their home tenant. (Known as `{loginHint}` prior to TeamsJS v.2.0.0).
+* [{user.loginHint}](/javascript/api/@microsoft/teams-js/app.userinfo#@microsoft-teams-js-app-userinfo-loginhint): A value suitable as a sign in hint for Azure AD. It's usually the login name of the current user in their home tenant. (Known as `{loginHint}` prior to TeamsJS v.2.0.0).
 * [{user.userPrincipalName}](/javascript/api/@microsoft/teams-js/app.userinfo#@microsoft-teams-js-app-userinfo-userprincipalname): The User Principal Name of the current user in the current tenant. (Known as `{userPrincipalName}` prior to TeamsJS v.2.0.0).
 * [{user.id}](/javascript/api/@microsoft/teams-js/app.userinfo#@microsoft-teams-js-app-userinfo-id): The Azure AD object ID of the current user in the current tenant. (Known as `{userObjectId}` prior to TeamsJS v.2.0.0).
 * [{app.theme}](/javascript/api/@microsoft/teams-js/app.appinfo#@microsoft-teams-js-app-appinfo-theme): The current user interface (UI) theme such as `default`, `dark`, or `contrast`. (Known as `{theme}` prior to TeamsJS v.2.0.0).
@@ -123,7 +123,7 @@ You can also retrieve the context information using the [Microsoft Teams JavaScr
     "isCallingAllowed": "Indicates if calling is allowed for the current logged in user",
     "isPSTNCallingAllowed": "Indicates if PSTN calling is allowed for the current logged in user",
     "licenseType": "The license type for the current user. Possible values are E1, E3, and E5 enterprise plans",
-    "loginHint": "A value suitable as a login hint for Azure AD. This is usually the login name of the current user, in their home tenant",
+    "loginHint": "A value suitable as a login hint for Azure AD. It's usually the login name of the current user, in their home tenant",
     "tenant": {
       "id": "The Azure AD tenant ID of the current user",
       "teamsSku": "The license type for the current user tenant. Possible values are enterprise, free, edu, unknown"    },
@@ -147,7 +147,7 @@ The following code provides an example of context variable:
     "locale": "The current locale of the user formatted as languageId-countryId (for example, en-us)",
     "entityId": "The developer-defined unique ID for the entity this content points to",
     "subEntityId": "The developer-defined unique ID for the sub-entity this content points to",
-    "loginHint": "A value suitable as a login hint for Azure AD. This is usually the login name of the current user, in their home tenant",
+    "loginHint": "A value suitable as a login hint for Azure AD. It's usually the login name of the current user, in their home tenant",
     "userPrincipalName": "The principal name of the current user, in the current tenant",
     "userObjectId": "The Azure AD object id of the current user, in the current tenant",
     "tid": "The Azure AD tenant ID of the current user",
@@ -259,12 +259,12 @@ The following table lists commonly used context properties of the *context* obje
 | chat.id | chatId | The Microsoft Teams ID for the chat with which the content is associated. |
 | app.locale | locale | The current locale that the user has configured for the app formatted as languageId-countryId (for example, en-us). |
 | page.id | entityId | The developer-defined unique ID for the page this content points to. |
-| page.subPageId | subEntityId | The developer-defined unique ID for the subpage this content points to. This field should be used to restore to a specific state within a page, such as scrolling to or activating a specific piece of content. |
-| user.loginHint | loginHint | A value suitable for use as a login_hint when authenticating with Azure AD. Because a malicious party can run your content in a browser, this value should be used only as a hint as to who the user is and never as proof of identity. This field is available only when the identity permission is requested in the manifest. |
-| user.userPrincipalName | upn | The UPN of the current user. This may be an externally authenticated UPN (for example, guest users). Because a malicious party runs your content in a browser, this value should be used only as a hint as to who the user is and never as proof of identity. This field is available only when the identity permission is requested in the manifest. |
-| user.id | userObjectId | The Azure AD object ID of the current user. Because a malicious party runs your content in a browser, this value should be used only as a hint as to who the user is and never as proof of identity. This field is available only when the identity permission is requested in the manifest. |
-| user.tenant.id | tid | The Azure AD tenant ID of the current user. Because a malicious party can run your content in a browser, this value should be used only as a hint as to who the user is and never as proof of identity. This field is available only when the identity permission is requested in the manifest. |
-| team.groupId | groupId | The Office 365 group ID for the team with which the content is associated. This field is available only when the identity permission is requested in the manifest. |
+| page.subPageId | subEntityId | The developer-defined unique ID for the subpage this content points to. The field should be used to restore to a specific state within a page, such as scrolling to or activating a specific piece of content. |
+| user.loginHint | loginHint | A value suitable for use as a login_hint when authenticating with Azure AD. Because a malicious party can run your content in a browser, this value should be used only as a hint as to who the user is and never as proof of identity. The field is available only when the identity permission is requested in the manifest. |
+| user.userPrincipalName | upn | The UPN of the current user. It may be an externally authenticated UPN (for example, guest users). Because a malicious party runs your content in a browser, this value should be used only as a hint as to who the user is and never as proof of identity. The field is available only when the identity permission is requested in the manifest. |
+| user.id | userObjectId | The Azure AD object ID of the current user. Because a malicious party runs your content in a browser, this value should be used only as a hint as to who the user is and never as proof of identity. The field is available only when the identity permission is requested in the manifest. |
+| user.tenant.id | tid | The Azure AD tenant ID of the current user. Because a malicious party can run your content in a browser, this value should be used only as a hint as to who the user is and never as proof of identity. The field is available only when the identity permission is requested in the manifest. |
+| team.groupId | groupId | The Office 365 group ID for the team with which the content is associated. The field is available only when the identity permission is requested in the manifest. |
 | app.theme  | theme | The current UI theme: default, dark, contrast |
 | page.isFullScreen | isFullScreen | Indication whether the page is in full-screen mode. |
 | team.type | teamType | The type of the team. |
@@ -277,10 +277,10 @@ The following table lists commonly used context properties of the *context* obje
 | team.isArchived | isTeamArchived | Indicates whether team is archived. Apps should use this as a signal to prevent any changes to content associated with archived teams. |
 | app.host.clientType | hostClientType | The type of the host client. Possible values are: android, ios, web, desktop, rigel |
 | page.frameContext | frameContext | The context where page url is loaded (content, task, setting, remove, sidePanel) |
-| sharepoint | sharepoint | SharePoint context. This is only available when hosted in SharePoint. |
+| sharepoint | sharepoint | SharePoint context. It's only available when hosted in SharePoint. |
 | user.tenant.teamsSku | tenantSKU | The license type for the current user tenant. Possible values are enterprise, free, edu, unknown |
 | user.licenseType | userLicenseType | The license type for the current user. Possible values are: Unknown, Teacher, Student, Free, SmbBusinessVoice, SmbNonVoice, FrontlineWorker |
-| app.parentMessageId | parentMessageId | The ID of the parent message from which this task module was launched. This is only available in task modules launched from bot cards. |
+| app.parentMessageId | parentMessageId | The ID of the parent message from which this task module was launched. It's only available in task modules launched from bot cards. |
 | app.host.ringId | ringId | Current ring ID. |
 | app.sessionId | appSessionId | Unique ID for the current Host session for use in correlating telemetry data. |
 | user.isCallingAllowed | isCallingAllowed | Represents whether calling is allowed for the current logged-in user. |

@@ -18,7 +18,7 @@ Tabs with Adaptive Cards are only supported as personal apps. When developing a 
 
 Adaptive Card tabs are a new way to build tabs in Teams. Instead of embedding web content in an iFrame, you can render Adaptive Cards to a tab. While the front end is rendered with Adaptive Cards, the backend is powered by a bot. The bot is responsible for accepting requests and responding appropriately with the Adaptive Card that is rendered.
 
-You can build your tabs with ready-made user interface (UI) building blocks native on desktop, web, and mobile. This article helps you understand the changes required to be made to the app manifest. The article also identifies how the invoke activity requests and sends information in tab with Adaptive Cards, and its effect on the task module workflow.
+You can build your tabs with ready-made user interface (UI) building blocks native on desktop, web, and mobile. The article helps you understand the changes required to be made to the app manifest. The article also identifies how the invoke activity requests and sends information in tab with Adaptive Cards, and its effect on the task module workflow.
 
 The following image shows build tabs with Adaptive Cards in desktop and mobile:
 
@@ -148,7 +148,7 @@ The following code provides examples of `tab/fetch` request and response:
 
 ### Handle submits from Adaptive Card
 
-After an Adaptive Card is rendered in the tab, it can respond to user interactions. This response is handled by the `tab/submit` invoke request.
+After an Adaptive Card is rendered in the tab, it can respond to user interactions. The response is handled by the `tab/submit` invoke request.
 
 When a user selects a button on the Adaptive Card tab, the `tab/submit` request is triggered to your bot with the corresponding data through the `Action.Submit` function of Adaptive Card. The Adaptive Card data is available through the data property of the `tab/submit` request. You receive either of the following responses to your request:
 
