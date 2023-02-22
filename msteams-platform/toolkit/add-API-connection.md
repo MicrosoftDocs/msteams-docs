@@ -10,7 +10,7 @@ ms.date: 05/20/2022
 
 # Integrate existing third party APIs
 
-Teams Toolkit helps you to access existing APIs for building Teams apps. These APIs are developed by your organization or a third-party. When you use Teams Toolkit to connect to an existing API, Teams Toolkit performs the following functions:
+Your app may be using your organization's or third-party APIs. Teams Toolkit helps you to access the existing APIs for building Teams apps. When you use Teams Toolkit to connect to an existing API, Teams Toolkit performs the following functions:
 
 * Generate sample code under `./bot` or `./api` folder.
 * Add a reference to the `@microsoft/teamsfx` package to `package.json`.
@@ -38,7 +38,7 @@ The following steps help you to add API connection using Visual Studio Code:
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-select-features_1.png" alt-text="api select features":::
 
-5. Enter endpoint for the API. It's added to the project's local app settings, and it's the base URL for API requests.
+5. Enter endpoint for the API. Teams Toolkit adds the endpoint to the project's local app settings, and it's the base URL for API requests.
    Ensure that the endpoint is a valid http(s) URL.
 
 6. Press **Enter**.
@@ -51,7 +51,7 @@ The following steps help you to add API connection using Visual Studio Code:
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-invoke_1.png" alt-text="api invoke":::
 
-9. Enter an alias for the API. The alias generates an app setting name for the API that is added to the project's local app setting.
+9. Enter an alias for the API. The alias generates an app setting name for the API. Teams Toolkit adds the app setting name to the project's local app setting.
 
 10. Press **Enter**.
 
