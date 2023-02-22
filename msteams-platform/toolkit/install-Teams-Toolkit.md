@@ -98,7 +98,7 @@ By default, Visual Studio Code automatically keeps Teams Toolkit up-to-date. If 
 
 1. Select **Install Another Version...** from the dropdown.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/InstallAnotherVersion.png" alt-text="Select other version of VS Code.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/InstallAnotherVersion.png" alt-text="Select other version of Visual Studio Code.":::
 
 1. Select the required version to install.
 
