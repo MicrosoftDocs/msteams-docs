@@ -124,9 +124,9 @@ The following are the steps to receive token:
 
 ## Code sample
 
-| **Sample name** | **Description** | **C#** | **JavaScript** | **Node.js** |
+| **Sample name** | **Description** | **C#** | **Node.js** |
 | --- | --- | --- | --- | --- |
-| SSO for your Adaptive Cards Universal Actions | This sample code demonstrates how to enable SSO authentication for your Adaptive Cards Universal Actions in bot. | [Link to be added] | [Link to be added] | [Link to be added] |
+| SSO for your Adaptive Cards Universal Actions | This sample code demonstrates how to enable SSO authentication for your Adaptive Cards Universal Actions in bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sso-adaptivecard/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sso-adaptivecard/nodejs) |
 
 ## See also
 
