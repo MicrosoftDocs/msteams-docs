@@ -1,7 +1,7 @@
 ---
 title: Install Teams Toolkit 
 author: zyxiaoyuer
-description: Learn about installation of Teams Toolkit of different versions in Visual Studio code, Visual Studio, and marketplace.
+description: Learn about installation of Teams Toolkit of different versions in Visual Studio Code, Visual Studio, and marketplace.
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
@@ -33,12 +33,12 @@ You can install Teams Toolkit using **Extensions** in Visual Studio Code, or ins
 
 # [Visual Studio Code](#tab/vscode)
 
-1. Launch **Visual Studio Code**.
-1. Select **View > Extensions** or **Ctrl+Shift+X**. The extensions marketplace pane appears.
+1. Launch Visual Studio Code.
+1. Select **View > Extensions** or **Ctrl+Shift+X**. You can also open extensions by selecting the extensions :::image type="icon" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/vsc-ext-icon.png" border="false"::: icon from the Visual Studio Code activity bar.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/install toolkit-1_2.png" alt-text="Screenshot shows how to install.":::
 
-   You can also open extensions by selecting the extensions :::image type="icon" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/vsc-ext-icon.png" border="false"::: icon from the Visual Studio Code activity bar.
+   The extensions marketplace pane appears.
 
 1. Enter **Teams Toolkit** in the search box.
 
@@ -66,7 +66,7 @@ You can install Teams Toolkit using **Extensions** in Visual Studio Code, or ins
 
 1. In the pop-up window that appears, select **Open**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-open_1.png" alt-text="Screenshot shows to select the open.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-open_1.png" alt-text="Screenshot shows a pop-up window to open Visual Studio Code.":::
 
    Visual Studio Code opens with the Teams Toolkit extension page.
 
@@ -86,7 +86,7 @@ You can install Teams Toolkit using **Extensions** in Visual Studio Code, or ins
 
 By default, Visual Studio Code automatically keeps Teams Toolkit up-to-date. If you want to install a different release version, follow these steps:
 
-1. Select **Extensions** :::image type="icon" source="../assets/images/teams-toolkit-v2/extension icon.png" border="false"::: from from the Visual Studio Code activity bar.
+1. Select **Extensions** :::image type="icon" source="../assets/images/teams-toolkit-v2/extension icon.png" border="false"::: from the Visual Studio Code activity bar.
 
 1. Enter **Teams Toolkit** in the search box.
 
@@ -102,8 +102,7 @@ By default, Visual Studio Code automatically keeps Teams Toolkit up-to-date. If 
 
 1. Select the required version to install.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/Olderversions of VS Code.png" alt-text="Other then the latest version of VS code.":::
-   Teams Toolkit installs the version you’ve selected.
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/Olderversions of VS Code.png" alt-text="Screenshot shows versions other than the latest version of Visual Studio Code.":::
 
    Teams Toolkit installs the version you’ve selected.
 
@@ -124,10 +123,10 @@ The Teams Toolkit for Visual Studio Code extension is available in a pre-release
 ## Install Teams Toolkit for Visual Studio
 
    > [!IMPORTANT]
-   > We recommend you use Visual Studio 2022 version 17.4.1 or later for Teams Toolkit. It is the latest release to fix several known issues in previous versions of Visual Studio.
+   > It's recommend you use Visual Studio 2022 version 17.4.1 or later for Teams Toolkit. It is the latest release to fix several known issues in previous versions of Visual Studio.
 
 1. Download the [Visual Studio installer](https://aka.ms/VSDownload), or open it if already installed.
-1. Select **Install** or select **Modify** if Visual Studio is already installed.
+1. Select **Install** or select **Modify** if you've already installed Visual Studio.
 
    Visual Studio installer shows all workloads, whether installed or available for installation.
 
