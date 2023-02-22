@@ -12,7 +12,12 @@ ms.date: 04/07/2022
 
 :::image type="content" source="../assets/images/teams-live-share/Teams-live-share-core-capabilities-hero.png" alt-text="Screenshot shows an example of users playing agile poker game in a Teams meeting, which showcases the Live share capability.":::
 
-The Live Share SDK can be added to your meeting extension's `sidePanel` and `meetingStage` contexts with minimal effort. This article focuses on how to integrate the Live Share SDK into your app and key capabilities of the SDK.
+The Live Share SDK can be added to your meeting extension's `sidePanel` and `meetingStage` contexts with minimal effort. 
+
+> [!NOTE]
+> The Live Share SDK isn't supported for anonymous users.
+
+This article focuses on how to integrate the Live Share SDK into your app and key capabilities of the SDK.
 
 ## Install the JavaScript SDK
 
