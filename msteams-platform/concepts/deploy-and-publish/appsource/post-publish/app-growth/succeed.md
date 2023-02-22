@@ -121,6 +121,8 @@ Strategic developers, who are part of the invite-only Teams engineering’s buil
 
 Each app in the Teams ecosystem undertakes this journey, in all likelihood, starting from a point solution to becoming a full-fledged collaborative app on Teams. Building, launching, gaining traction, achieving scale, and finally succeeding are phases that help you plan and execute your app’s go-to-market journey resulting in robust growth for your SaaS business on the commercial marketplace.
 
+[Back to top](#succeed-with-your-collaborative-app)
+
 ## See also
 
 - [Plan, strategize and execute growth for your app](overview-app-growth.md)

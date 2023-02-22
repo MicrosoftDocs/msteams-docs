@@ -167,6 +167,8 @@ Participate in a customer roundtable session with Microsoft to highlight the val
 
 </details>
 
+[Back to top](#scale-your-collaborative-app)
+
 ## Next step
 
 > [!div class="nextstepaction"]

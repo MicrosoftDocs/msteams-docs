@@ -273,6 +273,8 @@ Contact your Microsoft field, account, or engineering representatives to request
 
 </details>
 
+[Back to top](#launch-your-collaborative-app)
+
 ## Next step
 
 > [!div class="nextstepaction"]

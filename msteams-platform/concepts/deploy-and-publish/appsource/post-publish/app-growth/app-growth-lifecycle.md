@@ -60,6 +60,8 @@ You can plan your app's growth through the app lifecycle:
 - [Succeed with your collaborative app](succeed.md)
 -->
 
+[Back to top](#growth-lifecycle-for-your-app)
+
 ## Next step
 
 > [!div class="nextstepaction"]

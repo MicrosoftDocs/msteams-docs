@@ -181,6 +181,8 @@ Contact the Microsoft field, account, or engineering representatives to feature 
 
 </details>
 
+[Back to top](#gain-traction-for-your-collaborative-app-in-the-market)
+
 ## Next step
 
 > [!div class="nextstepaction"]
