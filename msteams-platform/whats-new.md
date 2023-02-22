@@ -28,7 +28,7 @@ Teams platform features that are available to all app developers.
 
 * ***February 20, 2023***: [Plan your app growth in Teams.](concepts/deploy-and-publish/appsource/post-publish/app-growth/overview-app-growth.md)
 
-* ***February 17, 2023***: [Build a dashboard tab app](tabs/how-to/Build-a-dashboard-tab-app.md#build-a-dashboard-tab-app)
+* ***February 17, 2023***: [Build a dashboard tab app](tabs/how-to/build-a-dashboard-tab-app.md#build-a-dashboard-tab-app)
 * ***February 09, 2023***: [Apps for Teams meetings support anonymous users.](apps-in-teams-meetings/build-apps-for-anonymous-user.md)
 
 :::column-end:::
