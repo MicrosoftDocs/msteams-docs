@@ -52,6 +52,10 @@ landingContent:
         url: https://gitter.im/OfficeDev/home
     - linkListType: whats-new
       links:
+      - text: Plan your app growth in Teams
+        url:  concepts/deploy-and-publish/appsource/post-publish/app-growth/overview-app-growth.md
+      - text: Create a dashboard in Teams
+        url:  tabs/how-to/dashboard-teams-toolkit.md
       - text: Targeted in-meeting notification (Developer preview)
         url: apps-in-teams-meetings/in-meeting-notification-for-meeting.md#targeted-in-meeting-notification
       - text: Enable app caching to improve subsequent launch time of the apps to the meeting side panel (Developer preview)
@@ -66,6 +70,8 @@ landingContent:
         url: concepts/design/overview-analytics.md
     - linkListType: whats-new
       links:
+      - text: Apps for Teams meetings support anonymous users
+        url: apps-in-teams-meetings/build-apps-for-anonymous-user.md
       - text: Notification bot in Teams
         url: bots/how-to/conversations/notification-bot-in-teams.md
       - text: Command bot in Teams
@@ -84,8 +90,7 @@ landingContent:
         url: concepts/build-and-test/teams-developer-portal.md
       - text: Live Share canvas
         url: apps-in-teams-meetings/teams-live-share-canvas.md
-      - text: Generate a deep link to share content to stage in meetings
-        url: concepts/build-and-test/share-in-meeting.md#generate-a-deep-link-to-share-content-to-stage-in-meetings
+
 
 - title: Get started
   linkLists:
