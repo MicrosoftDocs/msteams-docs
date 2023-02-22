@@ -1,8 +1,14 @@
 ## Deploy your app to Azure
 
-Deployment consists of two steps.  First, necessary cloud resources are created (also known as provisioning). Then, your app's code is copied into the created cloud resources. For this tutorial, you'll deploy the tab app.
+Deployment consists of two steps.
+
+1. Provision the necessary cloud resources.
+2. Deploy your app's code into the cloud resources that you provisioned.
+
+For this tutorial, you'll deploy the tab app.
 <br>
 <br>
+
 <details>
 <summary>What's the difference between Provision and Deploy?</summary>
 <br>
@@ -22,7 +28,7 @@ Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-tool
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/select-resource.png" alt-text="Screenshot showing the subscription to use for the Azure resources.":::
 
-    A dialog warns you that costs may be incurred when running resources in Azure.
+    A dialog warns you that you may incur costs when running resources in Azure.
 
 1. Select **Provision**.
 
