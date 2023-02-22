@@ -468,7 +468,7 @@ items:
     
     1. Select **Allow**. A `teams-logo.png` file is uploaded to the file directory, which is ready for download.
          
-       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/sbs-2.png" alt-text="Screenshot of FileUpload showing the Teams logo after the selection of allow..":::
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/sbs-2.png" alt-text="Screenshot of FileUpload showing the Teams logo after the selection of allow.":::
     
     1. Send a file to the bot as an attachment in Teams. It responds with a message `Received and Saved`. You can view the attachment from the **Files** tab.
         
