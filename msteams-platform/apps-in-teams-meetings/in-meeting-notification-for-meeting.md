@@ -55,9 +55,6 @@ The following table provides the user types and lists the features that each use
 
 ## Targeted in-meeting notification
 
-> [!NOTE]
-> Targeted in-meeting notification is available only in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
-
 Targeted in-meeting notification allows apps to send notifications to specific participants on a meeting stage. The notifications are private and are sent only to specific or targeted participants. Targeted in-meeting notification helps to enhance meeting experience and develop user engagement activities in Teams meetings.
 
 > [!NOTE]
