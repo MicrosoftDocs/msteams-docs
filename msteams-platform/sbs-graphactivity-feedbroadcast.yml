@@ -72,7 +72,7 @@ items:
 
     1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
 
-        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/upload-a-custom-app.png" alt-text="Screenshot shows the selection of Upload a custom app highlighted in red.":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/upload-custom-app1.png" alt-text="Illustration shows the option to upload a custom app in Teams.":::
 
         > [!NOTE]
         > Contact Teams administrator, if you can't upload a custom app.
@@ -432,9 +432,9 @@ items:
 
        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/manage-your-app.png" alt-text="Manage your app" border="true":::
     
-    1. Select **Submit an app to your org**. 
+    1. 1. Select **Upload an app to your org's app catalog**. 
 
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/submit-an-app-to-your-org.PNG" alt-text="Screenshot shows the selection of Submit an app to your org highlighted in red.":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/upload-app-org.png" alt-text="Upload a custom app" border="true":::
 
     1. Select **Open** to upload the .zip file that you created in the **AppPackage** folder.
 
