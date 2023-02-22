@@ -46,7 +46,7 @@ For more information on connector card actions, see [Actions](/outlook/actionabl
 
 To send a message through your Incoming Webhook or connector for Microsoft 365 Groups, post a JSON payload to the webhook URL. This payload must be in the form of a [connector card for Microsoft 365 Groups](~/task-modules-and-cards/cards/cards-reference.md#connector-card-for-microsoft-365-groups).
 
-You can also use this JSON to create cards containing rich inputs, such as text entry, multiselect, or selecting date and time. The code that generates the card and posts it to the webhook URL can run on any hosted service. These cards are defined as part of actionable messages and are also supported in [cards](~/task-modules-and-cards/what-are-cards.md) used in Teams bots and message extensions.
+You can also use JSON to create cards containing rich inputs, such as text entry, multiselect, or selecting date and time. The code that generates the card and posts it to the webhook URL can run on any hosted service. These cards are defined as part of actionable messages and are also supported in [cards](~/task-modules-and-cards/what-are-cards.md) used in Teams bots and message extensions.
 
 ### Example of connector message
 
@@ -81,7 +81,7 @@ An example of connector message is as follows:
             "@type": "TextInput",
             "id": "comment",
             "isMultiline": false,
-            "title": "Add a comment here for this task"
+            "title": "Add a comment here for the task"
         }],
         "actions": [{
             "@type": "HttpPOST",
@@ -94,7 +94,7 @@ An example of connector message is as follows:
         "inputs": [{
             "@type": "DateInput",
             "id": "dueDate",
-            "title": "Enter a due date for this task"
+            "title": "Enter a due date for the task"
         }],
         "actions": [{
             "@type": "HttpPOST",
@@ -234,7 +234,7 @@ To send Adaptive Cards through an Incoming Webhook, follow these steps:
 
 ## Rate limiting for connectors
 
-Application rate limits control the traffic that a connector or an Incoming Webhook is permitted to generate on a channel. Teams track requests using a fixed rate window and incremental counter measured in seconds. If more than four requests are made in a second, the client connection is throttled until the window refreshes for the duration of the fixed rate.
+Application rate limits control the traffic that a connector or an Incoming Webhook is permitted to generate on a channel. Teams track requests using a fixed rate window and incremental counter measured in seconds. If more than four requests are made in a second, the client connection is throttled until the window refreshes during the fixed rate.
 
 ### Transactions per second thresholds
 
