@@ -65,15 +65,15 @@ To update your app's code:
     ```
 
     # [JavaScript](#tab/js1)
-
+    
     Add the following code snippet to `index.js` (or the equivalent class in your app's code):
-
+    
     ```JavaScript
     const {TeamsSSOTokenExchangeMiddleware} = require('botbuilder');
     const tokenExchangeMiddleware = new TeamsSSOTokenExchangeMiddleware(memoryStorage, env.connectionName);
     adapter.use(tokenExchangeMiddleware);
     ```
-
+    
     ---
 
     >[!NOTE]
@@ -82,9 +82,9 @@ To update your app's code:
 1. Use the following code snippet for requesting a token.
 
     # [csharp](#tab/cs2)
-
+    
     After you add the `AdapterWithErrorHandler.cs`, your code should be as shown below:
-
+    
     ```csharp
     public class AdapterWithErrorHandler : CloudAdapter
     {
@@ -102,7 +102,7 @@ To update your app's code:
             {
                 // Log any leaked exception from the application.
                 // NOTE: In production environment, you should consider logging this to
-                // Azure Application Insights. Visit https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-telemetry?view=azure-bot-service-4.0&tabs=csharp to see how
+                // Azure Application Insights. Visit https://aka.ms/bottelemetry to see how
                 // to add telemetry capture to your bot.
                 logger.LogError(exception, $"[OnTurnError] unhandled error : {exception.Message}");
 
@@ -135,11 +135,11 @@ To update your app's code:
         }
     }
     ```
-
+    
     # [JavaScript](#tab/js2)
-
+    
     After you add the code snippet for `TeamsSSOTokenExchangeMiddleware`, your code should be as shown below:
-
+    
     ```JavaScript
     // index.js is used to setup and configure your bot.
 
@@ -153,7 +153,7 @@ To update your app's code:
     const restify = require('restify');
     
     // Import required bot services.
-    // See https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0 to learn more about the different parts of a bot.
+    // See https://aka.ms/bot-services to learn more about the different parts of a bot.
     const {
         CloudAdapter,
         ConversationState,
@@ -174,7 +174,7 @@ To update your app's code:
     console.log(`\n${ conname } is the con name`);
     
     // Create adapter.
-    // See https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0 to learn more about how bots work.
+    // See https://learn.microsoft.com/javascript/api/botbuilder-core/botadapter?view=botbuilder-ts-latest to learn more about how bot adapter.
     const adapter = new CloudAdapter(botFrameworkAuthentication);
     const memoryStorage = new MemoryStorage();
     const tokenExchangeMiddleware = new TeamsSSOTokenExchangeMiddleware(memoryStorage, env.connectionName);
@@ -183,7 +183,7 @@ To update your app's code:
     adapter.onTurnError = async (context, error) => {
         // This check writes out errors to console log .vs. app insights.
         // NOTE: In production environment, you should consider logging this to Azure
-        //       application insights. See https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-telemetry?view=azure-bot-service-4.0&tabs=csharp for telemetry
+        //       application insights. See https://aka.ms/bottelemetry for telemetry
         //       configuration instructions.
         console.error(`\n [onTurnError] unhandled error: ${ error }`);
     
@@ -232,7 +232,7 @@ To update your app's code:
         await adapter.process(req, res, (context) => bot.run(context));
     });
     ```
-
+    
     ---
 
 ### Consent dialog for getting access token
@@ -364,7 +364,6 @@ async loginStep(stepContext) {
         return await stepContext.endDialog();
     }
 ```
-
 ---
 
 > [!NOTE]
