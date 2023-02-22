@@ -10,7 +10,7 @@ ms.date: 06/16/2021
 
 With Microsoft Teams apps, you can add your existing connector for Microsoft 365 Groups or build a new one within Teams. For more information, see [build your own connector](/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector).
 
-See the following video to learn how to create an connectors for Microsoft 365 Groups:
+See the following video to learn how to create an connector for Microsoft 365 Groups:
 <br>
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OIzv]
