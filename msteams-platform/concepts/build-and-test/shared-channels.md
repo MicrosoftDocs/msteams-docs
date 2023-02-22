@@ -21,7 +21,7 @@ Teams Connect shared channels facilitate secure collaboration seamlessly. Allow 
 
 ## Enable your app for shared channels
 
-SupportedChannelTypes is an optional property that enables your app in non-standard channels. If your app supports the team scope and the property is defined, Teams enables your app in each channel type accordingly. Private and shared channels are currently supported. For more information, see [supportedChannelTypes](../../resources/schema/manifest-schema.md#supportedchanneltypes).
+SupportedChannelTypes is an optional property that enables your app in non-standard channels. If your app supports the team scope and the property is defined, Teams enables your app in each channel type accordingly. Private and shared channels are supported. For more information, see [supportedChannelTypes](../../resources/schema/manifest-schema.md#supportedchanneltypes).
 
 ```JSON
 "supportedChannelTypes": {
@@ -41,7 +41,7 @@ If your app supports the team scope, it functions in standard channels, regardle
 
 ## Get context for shared channels
 
-When the content UX is loaded in a shared channel, use the data received from `getContext` call for  shared channel changes. `getContext` call publishes two new properties, `hostTeamGroupID` and `hostTenantID`, which are used to retrieve channel membership using Microsoft Graph APIs. `hostTeam` is the team that creates the shared channel.
+When the content UX loads in a shared channel, use the data received from `getContext` call for  shared channel changes. `getContext` call publishes two new properties, `hostTeamGroupID` and `hostTenantID`, which uses to retrieve channel membership using Microsoft Graph APIs. `hostTeam` is the team that creates the shared channel.
 
 For more information to enable your tab, see:
 
