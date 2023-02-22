@@ -26,6 +26,8 @@ Teams platform features that are available to all app developers.
 
 **2023 February**
 
+* ***February 21, 2023***: [Targeted in-meeting notification for apps in Teams.](apps-in-teams-meetings/in-meeting-notification-for-meeting.md#targeted-in-meeting-notification).
+
 * ***February 20, 2023***: [Plan your app growth in Teams.](concepts/deploy-and-publish/appsource/post-publish/app-growth/overview-app-growth.md)
 
 * ***February 17, 2023***: [Create a dashboard in Teams.](tabs/how-to/dashboard-teams-toolkit.md)
@@ -313,7 +315,6 @@ Developer preview is a public program that provides early access to unreleased T
 
 **2023 January**
 
-* ***January 31, 2023***: [Introducing Targeted in-meeting notification for apps in Teams](apps-in-teams-meetings/in-meeting-notification-for-meeting.md#targeted-in-meeting-notification).
 * ***January 30, 2023***: [Enable app caching to improve subsequent launch time of the apps to the meeting side panel](apps-in-teams-meetings/build-tabs-for-meeting.md#app-caching).
 
 :::column-end:::

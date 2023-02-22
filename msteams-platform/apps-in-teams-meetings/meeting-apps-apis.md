@@ -285,9 +285,6 @@ The following table includes the response codes:
 
 ## Targeted meeting notification API
 
-> [!NOTE]
-> Targeted meeting notification API is available only in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
-
 The `targetedMeetingNotification` API allows apps to send targeted in-meeting notifications to specific participants in a meeting. Apps send targeted in-meeting notifications based on user action. The API is available through bot API.
 
 ### Prerequisite
