@@ -298,11 +298,11 @@
   - name: Get context for your tab
     href: tabs/how-to/access-teams-context.md
     displayName: getContext, entityId, groupId, User context, authentication flow from Microsoft Azure Active Directory, retrieve context, theme changes
-  - name: Build a dashboard tab app
-    href: tabs/how-to/Build-a-dashboard-tab-app.md
-    displayName: Dashboard, widget, Graph API call
   - name: Navigate within your tab
-    href: tabs/how-to/tab-navigation.md  
+    href: tabs/how-to/tab-navigation.md
+  - name: Build a dashboard tab app
+    href: tabs/how-to/build-a-dashboard-tab-app.md
+    displayName: Dashboard, widget, Graph API call
   - name: Build apps for shared channels
     href: concepts/build-and-test/shared-channels.md
     displayName: Cross-tenant notifications, context for shared channel, apps and permissions in shared channels
