@@ -61,21 +61,21 @@ The following steps help you to add API connection using Visual Studio Code:
 
      :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/myAPI connection.png" alt-text="api auth":::
 
-     Based on the authentication type selected, the following steps are required to complete extra configuration:
+     Based on the authentication type selected, follow the required steps to complete the extra configuration:
 
 # [Basic](#tab/basic)
 
 * Enter the username for basic Auth.
 
-  The sample code has been generated to call your API at bot\myAPI.js.
+  Teams Toolkit has generated the sample code to call your API at bot\myAPI.js.
 
 # [Certification](#tab/certification)
 
-   The sample code has been generated to call your API at bot\myAPI.js.
+   Teams Toolkit has generated the sample code to call your API at bot\myAPI.js.
 
 # [Azure Active Directory (Azure AD)](#tab/AAD)
 
-  The sample code has been generated to call your API at bot\myAPI.js.
+  Teams Toolkit has generated the sample code to call your API at bot\myAPI.js.
 
 # [API Key](#tab/apikey)
 
