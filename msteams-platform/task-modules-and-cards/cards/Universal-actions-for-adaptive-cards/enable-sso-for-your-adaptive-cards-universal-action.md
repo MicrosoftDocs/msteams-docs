@@ -44,7 +44,7 @@ Bots can respond with sign-in request in response to `Action.Execute` for:
 
 * Adaptive Cards sent by bot in a one-on-one chat, group chat, or a channel.
 * Adaptive Cards sent by app user via message extension app (backed by bot) in one-on-one chat, group chat, or channel.
-* Adaptive Cards present in compose or preview area while the user is composing the message. In the compose area, refresh in Adaptive Card works and the bot may want to use a token to provide user-specific view to the app user before they send the card to the chat.
+* Adaptive Cards present in compose or preview area while the app user is composing the message. In the compose area, refresh in Adaptive Card works and the bot may want to use a token to provide user-specific view to the app user before they send the card to the chat.
 
 ## Next step
 

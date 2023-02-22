@@ -11,7 +11,7 @@ ms.localizationpriority: medium
 Authentication steps for single sign-on (SSO) are similar to that of a bot in Teams. Following are the steps to achieve SSO in Adaptive Cards Universal Action.
 
 > [!NOTE]
-> To implement SSO flow, you must have a one-on-one chat declared for your bot in the app manifest. When a user invokes the SSO flow via the Adaptive Card `Action.Execute` protocol, the user is prompted to install the app in a personal scope if it isn't installed already.
+> To implement SSO flow, you must have a one-on-one chat declared for your bot in the app manifest. When an app user invokes the SSO flow via the Adaptive Card `Action.Execute` protocol, a prompt appears to allow the app user to install the app in a personal scope if they haven't installed it.
 
 ## Add code to handle an access token
 
@@ -43,9 +43,9 @@ If there's a cached token, the bot uses the same token. If there's no token avai
 }
 ```
 
-Invoke response is delivered to the Teams client, which uses the `tokenExchangeResource` value and the client token to obtain an on-behalf-of token or exchangeable token from Azure AD.
+The bot services delivers the invoke response to the Teams client, which uses the `tokenExchangeResource` value and the Teams client token to obtain an on-behalf-of token or exchangeable token from Azure AD.
 
-The SSO fails when the Teams client ignores the `tokenExchangeResource` value for any reason, including invalid values, errors retrieving exchangeable tokens, or if Azure AD doesn't support the value. Then the Teams client triggers the nominal sign-in or OAuth flow. It's highly recommended that you provide a sign-in URL in the above response so that the OAuth flow works.
+The SSO fails when the Teams client ignores the `tokenExchangeResource` value for any reason, including invalid values, errors retrieving exchangeable tokens, or if Azure AD doesn't support the value. Then the Teams client triggers the nominal sign-in or OAuth flow. It's recommended that you provide a sign-in URL in the above response so that the OAuth flow works.
 
 ## Consent dialog for getting access token
 
