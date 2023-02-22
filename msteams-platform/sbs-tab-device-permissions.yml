@@ -129,7 +129,7 @@ items:
        :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/manifest-zip-tab-device1_1.png" alt-text="Screenshot showing the cloned repository of app manifest with tab manifest highlighted in red.":::        
      
     1. Go to **Teams**.
-    1. Select **Apps** > **Manage your apps**.
+    1. Select **Apps**  > **Manage your apps** > **Upload an app**.
 
        :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/manageapps_2.png" alt-text="Screenshot showing the Manage your apps under apps highlighted in red.":::
    
