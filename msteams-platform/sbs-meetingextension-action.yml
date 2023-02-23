@@ -400,14 +400,16 @@ items:
     1. Select **Apps**.
 
     1. Select **Manage your apps**.
+
+       :::image type="content" source="../assets/images/sbs-messagingextension-action/manage-your-apps-action.png" alt-text="Screenshot showing the apps and Manage your apps highlighted in red.":::
     
     1. Select **Upload an app** and select **Upload a custom app**
 
-       :::image type="content" source="./assets/images/upload-a-custom-app.png" alt-text="Screenshot showing the selection of Upload a custom app highlighted in red.":::
+       :::image type="content" source="../assets/images/sbs-messagingextension-action/upload-a-custom-app-1.png" alt-text="screenshot showing Upload an app and Upload a custom app highlighted in red.":::
 
     1. Select **Open** to upload the .zip file that you created in the **Manifest** folder.
 
-       :::image type="content" source="./assets/images/sbs-messagingextension-action/openzipfile.png" alt-text="Screenshot of the cloned repository displaying the messaging zip file.":::
+       :::image type="content" source="../assets/images/sbs-messagingextension-action/openzipfile.png" alt-text="Screenshot of the cloned repository displaying the messaging zip file.":::
                       
 - title: Interact with the app in Teams
   durationInMinutes: 1
