@@ -46,7 +46,7 @@ With a private workspace, users can view app content that's meaningful to them i
 
 #### **Configure and add multiple actions in NavBar**
 
-You can add multiple actions to the upper right NavBar and build an overflow menu for extra actions in an app.A maximum of five actions can be added in the NavBar, including the overflow menu.
+You can add multiple actions to the upper right NavBar and build an overflow menu for extra actions in an app. A maximum of five actions can be added in the NavBar, including the overflow menu.
 
 :::image type="content" source="../../assets/images/overflow-menu-and-multiple-actionsoptions.png" alt-text="The screenshot is an example thats describes the NavBar and Overflow menu.":::
 
