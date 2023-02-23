@@ -80,7 +80,7 @@ Strategic developers, who are part of the invite-only Teams engineering’s buil
 <details>
 <summary>Case Study on Microsoft’s public customers portal</summary>
 
-Impactful case studies of how investing in a collaborative app resulted in growth for your SaaS business and how customers using your app got impacted can be published on the following customer-facing sites: [Microsoft 365 ISV Benefits Program Success Stories](https://cloudpartners.transform.microsoft.com/practices/modernworkisv?tab=success-stories) and [Customer Stories](https://customers.microsoft.com/home?sq=&ff=&p=0) on Microsoft.com. Connect with your Teams engineering representatives or the [ISV Marketplace Success Rewards Program team](mailto:rewards@microsoft.com) to check eligibility, seek guidance, and execute this motion.
+Impactful case studies of how investing in a collaborative app resulted in growth for your SaaS business and how customers using your app got impacted can be published on the following customer-facing sites: [Microsoft 365 ISV Benefits Program Success Stories](https://cloudpartners.transform.microsoft.com/practices/modernworkisv?tab=success-stories) and [Customer Stories](https://customers.microsoft.com/en-us/home?sq=&ff=&p=0) on Microsoft.com. Connect with your Teams engineering representatives or the [ISV Marketplace Success Rewards Program team](mailto:rewards@microsoft.com) to check eligibility, seek guidance, and execute this motion.
 
 </details>
 <br>
