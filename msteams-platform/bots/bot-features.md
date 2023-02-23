@@ -35,8 +35,7 @@ The [Bot Framework](https://dev.botframework.com/) is a rich SDK used to create 
 * Set Teams-specific channel data on activities.
 * Process message extension requests.
 
-> [!IMPORTANT]
-> You can develop Teams apps in any web programming technology and call the [Bot Framework REST APIs](/bot-framework/rest-api/bot-framework-rest-overview) directly. But you must perform token handling in all cases.
+You can develop Teams apps in any web programming technology and call the [Bot Framework REST APIs](/bot-framework/rest-api/bot-framework-rest-overview) directly. But you must perform token handling in all cases.
 
 ## Bots with Power Virtual Agents
 
@@ -199,6 +198,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 ```
 
 # [Node.js](#tab/nodejs)
+
 * [SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#botbuilder-core-turncontext-sendactivity&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-receive-channel-messages-withRSC/nodejs/server/bot/botActivityHandler.js#L20)
 
