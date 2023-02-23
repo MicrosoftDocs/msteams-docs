@@ -776,20 +776,27 @@
   items:
     - name: Strategize and execute growth for your app
       href: concepts/deploy-and-publish/appsource/post-publish/app-growth/overview-app-growth.md
+      displayName: growth, investment, monetize, market
     - name: Guide to grow your app
       items: 
       - name: Growth lifecycle for your app
         href: concepts/deploy-and-publish/appsource/post-publish/app-growth/app-growth-lifecycle.md
+        displayName: lifecycle, traction, build, launch, scale, succeed, GTM
       - name: Build your collaborative app
         href: concepts/deploy-and-publish/appsource/post-publish/app-growth/build-app.md
+        displayName: Build, collaborative, stage, developer
       - name: Launch your collaborative app
         href: concepts/deploy-and-publish/appsource/post-publish/app-growth/launch-app.md
+        displayName: social media, blog post, press release, freemium, marketing, banners
       - name: Gain traction for your collaborative app in the market
         href: concepts/deploy-and-publish/appsource/post-publish/app-growth/gain-traction.md
+        displayName: upskill, awareness, marketplace, activation, rollout, monetization
       - name: Scale your collaborative app
         href: concepts/deploy-and-publish/appsource/post-publish/app-growth/scale-app.md
+        displayName: CSP, webinar, advertise, pitch, sell
       - name: Succeed with your collaborative app
         href: concepts/deploy-and-publish/appsource/post-publish/app-growth/succeed.md
+        displayName: TAM, PQL, metrics, success, ROI
 - name: App manifest
   items:
     - name: App manifest schema for Teams
