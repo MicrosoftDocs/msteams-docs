@@ -233,7 +233,7 @@ To deploy your app:
 
 1. Select the **Manage your apps** link in the navigation menu.
 
-1. Select **Upload an app** and select **Submit an app to your org**.
+1. Select **Upload an app** and select **Upload an app to your org's app catalog**.
 
    > [!NOTE]
    > If you are logged in as a global administrator, you must have the option of uploading the app to your organization's app catalog, otherwise you can only load the app for a team in which you are a member.
