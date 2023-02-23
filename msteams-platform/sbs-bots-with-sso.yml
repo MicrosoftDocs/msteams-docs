@@ -505,9 +505,9 @@ items:
 
         :::image type="content" source="~/assets/images/bots/manifest_1.png" alt-text="Screenshot of Manifest folder with the Teams Bot zip folder highlighted in red.":::
 
-    1. Go to Teams client.
-    1. Select **Store**.
-    1. Select **Manage your apps**.
+    1. Go to **Microsoft Teams**.
+    
+    1. Select **Apps** > **Manage your apps**.
 
         :::image type="content" source="~/assets/images/bots/manage-apps_3.png" alt-text="Screenshot of Teams app with the Apps icon and Manage your apps option highlighted in red.":::
 
