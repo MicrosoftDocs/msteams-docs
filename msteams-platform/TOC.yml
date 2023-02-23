@@ -589,6 +589,14 @@
         href: bots/how-to/authentication/bot-sso-manifest.md
       - name: Grant Microsoft Graph permissions and scopes
         href: bots/how-to/authentication/bot-sso-graph-api.md
+    - name: Enable SSO for your Adaptive Cards Universal Actions in bot
+      items:
+      - name: Overview
+        href: task-modules-and-cards\cards\Universal-actions-for-adaptive-cards\enable-sso-for-your-adaptive-cards-universal-action.md
+        displayName: Adaptive cards universal action SSO authentication, Action.Execute SSO
+      - name: Add code to enable SSO for your Adaptive Cards Universal Actions in bot
+        href: task-modules-and-cards\cards\Universal-actions-for-adaptive-cards\sso-adaptive-cards-universal-action.md
+        displayName: Adaptive cards universal action SSO authentication, Action.Execute SSO
     - name: Troubleshoot SSO authentication
       href: tabs/how-to/authentication/tab-sso-troubleshooting.md
       displayName: Caching
@@ -603,6 +611,9 @@
       displayName: Loop
     - name: Add third party IdP authentication to message extension app
       href: messaging-extensions/how-to/add-authentication.md
+    - name: Add third party IdP authentication to Adaptive Cards Universal Actions
+      href: task-modules-and-cards\cards\Universal-actions-for-adaptive-cards\authentication-flow-in-universal-action-for-adaptive-cards.md
+      displayName: Adaptive cards universal action third party Idp authentication, Action.Execute OAuth nominal authentication
   - name: Use external OAuth providers
     href: tabs/how-to/authentication/auth-oauth-provider.md
 - name: Integrate device capabilities

@@ -26,8 +26,9 @@ Teams platform features that are available to all app developers.
 
 **2023 February**
 
-* ***February 21, 2023***: [Targeted in-meeting notification for apps in Teams.](apps-in-teams-meetings/in-meeting-notification-for-meeting.md#targeted-in-meeting-notification).
-
+* ***February 23, 2022***: [SSO authentication for your Adaptive Cards Universal Actions.](task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/enable-sso-for-your-adaptive-cards-universal-action.md)
+* ***February 23, 2022***: [Third party authentication for Adaptive Cards Universal Actions.](task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/authentication-flow-in-universal-action-for-adaptive-cards.md)
+* ***February 21, 2023***: [Targeted in-meeting notification for apps in Teams](apps-in-teams-meetings/in-meeting-notification-for-meeting.md#targeted-in-meeting-notification).
 * ***February 20, 2023***: [Plan your app growth in Teams.](concepts/deploy-and-publish/appsource/post-publish/app-growth/overview-app-growth.md)
 
 * ***February 17, 2023***: [Build a dashboard tab app](tabs/how-to/build-a-dashboard-tab-app.md#build-a-dashboard-tab-app)
@@ -42,7 +43,7 @@ Teams platform features that are available to all app developers.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
-|31/01/2023| Introducing update and soft delete event notifications in bot | Build bots > Bot conversations > [Messages in bot conversations](bots/how-to/conversations/conversation-messages.md#update-message) |
+|31/01/2023| Introducing update and soft delete event notifications in bot | Build bots > Bot conversations > [Messages in bot conversations](bots/how-to/conversations/conversation-messages.md#update-message)
 
 </details>
 </br>
