@@ -70,6 +70,7 @@ Meetings enable collaboration, partnership, informed communication, and shared f
 :::row-end:::
 -->
 
+
 You must be familiar with the following product concepts to create custom meeting experiences with apps in Microsoft Teams.
 
 ## Supported meeting types in Teams
@@ -86,7 +87,7 @@ Teams supports access to apps during meeting for the following meeting types:
 Learn more about [Teams meetings, expiration, and policies](/microsoftteams/meeting-expiration) and [meetings, webinars, and live events](/microsoftteams/quick-start-meetings-live-events).
 > [!NOTE]
 >
-> * Apps for scheduled public channel meetings are available only in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
+> * Apps for scheduled public channel meetings are currently available in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
 > * Apps aren't supported in the following:
 >   * [Public Switched Telephone Network (PSTN) Teams calls](/microsoftteams/cloud-voice-landing-page#public-switched-telephone-network-connectivity-options)
 >   * [End-to-end encrypted Teams calls](https://support.microsoft.com/office/use-end-to-end-encryption-for-teams-calls-1274b4d2-b5c5-4b24-a376-606fa6728a90)
@@ -158,3 +159,4 @@ For more information, see [roles in a Teams meeting](https://support.microsoft.c
 * [Custom Together Mode scenes](~/apps-in-teams-meetings/teams-together-mode.md)
 * [Get meeting transcripts using Graph APIs](../graph-api/meeting-transcripts/overview-transcripts.md)
 * [Instrumenting for Teams app specific analytics](../concepts/design/overview-analytics.md#instrumenting-for-teams-app-specific-analytics)
+
