@@ -766,6 +766,12 @@ You can test formatting in your own cards by modifying this code.
 
 ---
 
+## Code samples
+
+|S.No.| Description|.NET|Node.js|
+|:--|:--|:--------------------------------------------------------|-----|
+|1|Sample which showcase different card formatting used.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-formatting-cards/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-formatting-cards/nodejs)
+
 ## See also
 
 * [Cards and task modules](../cards-and-task-modules.md)
