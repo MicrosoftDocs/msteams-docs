@@ -13,19 +13,7 @@ The in-meeting notification is used to engage participants and collect informati
 
 An external resource URL is used to display in-meeting notification. You can use the `submitTask` method to submit data in a meeting chat.
 
-# [Desktop](#tab/desktop)
-
-  The following image shows an in-meeting notification in the Teams desktop client:
-
-   :::image type="content" source="../assets/images/apps-in-meetings/in-meeting-dialogbox.png" alt-text="Screenshot shows an in-meeting notification on Teams desktop.":::
-
-# [Mobile](#tab/mobile)
-
-  The following image shows an in-meeting notification in the Teams mobile client:
-
-   :::image type="content" source="../assets/images/apps-in-meetings/in-meeting-notification-mobile.png" alt-text="Screenshot shows an in-meeting notification in on Teams mobile.":::
-
----
+:::image type="content" source="../assets/images/apps-in-meetings/in-meeting-dialogbox.png" alt-text="Screenshot shows how you can use an in-meeting dialog.":::
 
 You can also add the Teams display picture and people card of the user to in-meeting notification based on `onBehalfOf` token with user MRI and display name passed in payload. Following is an example payload:
 
@@ -52,7 +40,7 @@ You can also add the Teams display picture and people card of the user to in-mee
     }
 ```
 
-:::image type="content" source="../assets/images/apps-in-meetings/in-meeting-people-card.png" alt-text="This screenshot shows how a display picture and people card in Teams is used with in-meeting dialog." border="true":::
+:::image type="content" source="../assets/images/apps-in-meetings/in-meeting-people-card.png" alt-text="Screenshot shows how a display picture and people card in Teams is used with in-meeting dialog.":::
 
 ## Feature compatibility by user types
 
@@ -60,15 +48,12 @@ The following table provides the user types and lists the features that each use
 
 | User type | Scheduled meeting or Instant calendar meeting | One-on-one call | Group call | Scheduled channel meeting |
 | :-- | :-- | :-- | :-- | :-- |
-| In-tenant | Available | Available |  Available | Available |
+| In-tenant user | Available | Available |  Available | Available |
 | Guest | Available | Available |  Available | Available |
 | Federated or External | Available | Not available | Not available | Available |
-| Anonymous | Not available | Not available | Not available | Not available |
+| Anonymous | Available | Not available | Not available | Not available |
 
 ## Targeted in-meeting notification
-
-> [!NOTE]
-> Targeted in-meeting notification is available only in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
 
 Targeted in-meeting notification allows apps to send notifications to specific participants on a meeting stage. The notifications are private and are sent only to specific or targeted participants. Targeted in-meeting notification helps to enhance meeting experience and develop user engagement activities in Teams meetings.
 
@@ -169,7 +154,6 @@ For more information on `targetedMeetingNotification`, see [Targeted meeting not
 Sample name | Description | .NET | Node.js |
 |----------------|-----------------|--------------|----------------|
 | In-meeting notification | Demonstrates how to implement in-meeting notification using bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-notification/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-notification/nodejs) |
-| Targeted-in-meeting notification | Demonstrates how to send notifications to specific participants in a meeting stage. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-notification/csharp) |
 
 ## Step-by-step guide
 

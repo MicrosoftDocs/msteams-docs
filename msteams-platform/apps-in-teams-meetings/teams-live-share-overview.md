@@ -22,7 +22,6 @@ Sometimes screen sharing just isn't enough, which is why Microsoft built tools l
 > [Get started](teams-live-share-quick-start.md)
 
 > [!NOTE]
->
 > Live Share SDK is available only in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
 
 ## Feature overview
