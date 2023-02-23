@@ -1617,3 +1617,4 @@ After an internal Microsoft review, if the compliance demonstration is satisfact
 * [Distribute your app](~/concepts/deploy-and-publish/apps-publish-overview.md)
 * [Prepare your store submission](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)
 * [Include a SaaS offer with your Teams app](include-saas-offer.md)
+* [Strategize and execute growth for your app](../post-publish/app-growth/overview-app-growth.md)

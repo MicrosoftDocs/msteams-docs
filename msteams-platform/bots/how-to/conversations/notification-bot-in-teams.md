@@ -300,7 +300,7 @@ You need to create `ConversationBot` to send notification.
 /** Javascript/Typescript: bot/src/internal/initialize.*s **/
 const bot = new ConversationBot({
     // The bot id and password to create BotFrameworkAdapter.
-    // See https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0 to learn more about adapters.
+    // See https://aka.ms/about-bot-adapter to learn more about adapters.
     adapterConfig: {
         appId: process.env.BOT_ID,
         appPassword: process.env.BOT_PASSWORD,
@@ -366,7 +366,7 @@ const myStorage = new MyStorage(...);
 // initialize ConversationBot with notification enabled and customized storage
 const bot = new ConversationBot({
     // The bot id and password to create BotFrameworkAdapter.
-    // See https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0 to learn more about adapters.
+    // See https://aka.ms/about-bot-adapter to learn more about adapters.
     adapterConfig: {
         appId: process.env.BOT_ID,
         appPassword: process.env.BOT_PASSWORD,

@@ -1,7 +1,7 @@
 ---
 title: The launch stage for your collaborative app
 author: heath-hamilton
-description: Learn what you can do during the launch stage of your app to grow your app
+description: Learn what you can do during the launch stage of your app to grow your app.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
@@ -273,7 +273,13 @@ Contact your Microsoft field, account, or engineering representatives to request
 
 </details>
 
+[Back to top](#launch-your-collaborative-app)
+
 ## Next step
 
 > [!div class="nextstepaction"]
 > [Gaining traction for your collaborative app in the market](gain-traction.md)
+
+## See also
+
+[Strategize and execute growth for your app](overview-app-growth.md)

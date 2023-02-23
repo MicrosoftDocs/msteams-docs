@@ -419,10 +419,10 @@ The default query has the same structure as any regular user query, with the `na
 
 ## Code sample
 
-| Sample Name           | Description | .NET    | Node.js   |
-|:---------------------|:--------------|:---------|:--------|
-|Teams message extension action| Describes how to define action commands, create task module, and  respond to task module submit action. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/nodejs) |
-|Teams message extension search   |  Describes how to define search commands and respond to searches.        |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/nodejs)|
+| Sample name           | Description | .NET    | Node.js   | Manifest
+|:---------------------|:--------------|:---------|:--------|:--------|
+|Teams message extension search   |  Describes how to define search commands and respond to searches.        |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp/demo-manifest/msgext-search.zip)
+|Teams Message extension auth and config | A Message Extension that has a configuration page, accepts search requests, and returns results after the user has signed in. It also showcase zero app install link unfurling along with normal link unfurling |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search-auth-config/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search-sso-config/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search-auth-config/csharp/demo-manifest/msgext-search-auth-config.zip)
 
 ## Next step
 
