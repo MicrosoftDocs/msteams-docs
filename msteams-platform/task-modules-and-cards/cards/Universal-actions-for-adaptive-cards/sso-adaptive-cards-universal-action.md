@@ -122,7 +122,7 @@ When the app user selects **View and accept**, the existing Azure AD permission 
 
 ## Code sample
 
-| **Sample name** | **Description** | **C#** | **Node.js** |
+| **Sample name** | **Description** | **.NET** | **Node.js** |
 | --- | --- | --- | --- | --- |
 | SSO for your Adaptive Cards Universal Actions | This sample code demonstrates how to enable SSO authentication for your Adaptive Cards Universal Actions in bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sso-adaptivecard/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sso-adaptivecard/nodejs) |
 
