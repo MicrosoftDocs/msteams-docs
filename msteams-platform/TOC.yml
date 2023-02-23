@@ -280,9 +280,6 @@
   - name: Create a personal tab
     href: tabs/how-to/create-personal-tab.md
     displayName: App generator, Reorder static personal tabs
-  - name: Create a dashboard in Teams
-    href: tabs/how-to/dashboard-teams-toolkit.md
-    displayName: Dashboard, widget, Graph API call
   - name: Create a channel tab
     href: tabs/how-to/create-channel-group-tab.md
     displayName: Create a channel tab or group tab, Create a custom channel or group tab with ASP.NET Core, Build your first app using Blazor
@@ -302,7 +299,10 @@
     href: tabs/how-to/access-teams-context.md
     displayName: getContext, entityId, groupId, User context, authentication flow from Microsoft Azure Active Directory, retrieve context, theme changes
   - name: Navigate within your tab
-    href: tabs/how-to/tab-navigation.md  
+    href: tabs/how-to/tab-navigation.md
+  - name: Build a dashboard tab app
+    href: tabs/how-to/build-a-dashboard-tab-app.md
+    displayName: Dashboard, widget, Graph API call
   - name: Build apps for shared channels
     href: concepts/build-and-test/shared-channels.md
     displayName: Cross-tenant notifications, context for shared channel, apps and permissions in shared channels
