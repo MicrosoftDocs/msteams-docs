@@ -111,8 +111,8 @@ items:
 
    To verify sideload apps in Teams:
 
-    1. In the Teams client, select **Store**.
-    1. Select **Manage your apps**.
+    1. Go to **Microsoft Teams**.
+    1. Select **Apps** > **Manage your apps**.
     1. Select **Upload an app**.
     1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
 

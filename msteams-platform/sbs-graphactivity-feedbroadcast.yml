@@ -67,8 +67,8 @@ items:
 
     To verify sideload apps in Teams:
 
-    1. In the Teams client, select **Store**.
-    1. Select **Manage your apps**.
+    1. Go to **Microsoft Teams**.
+    1. Select **Apps** > **Manage your apps**.
     1. Select **Upload an app**.
 
        :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/upload-app.png" alt-text=" upload an app in Teams.":::
@@ -427,13 +427,11 @@ items:
 
        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/selectzip.png" alt-text="Select zip file" border="true":::
     
-    1. Go to **Teams** client.
+    1. Go to **Microsoft Teams**.
 
-    1. Select **Apps**.
+    1. Select **Apps** > **Manage your apps**.
 
-    1. Select **Manage your apps**.
-
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/manage-your-app.png" alt-text="Manage your app" border="true":::
+       :::image type="content" source="~/assets/images/Teams-task-module/manage-apps_3.png" alt-text="Manage apps":::
     
     1. Select **Submit an app to your org**. 
 
