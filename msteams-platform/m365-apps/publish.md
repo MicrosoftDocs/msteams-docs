@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 Microsoft Teams supports Microsoft 365-enabled Teams apps for production. You can distribute these apps to users who use the *Targeted Release* (dev preview) versions of Outlook.com and microsoft365.com (formerly office.com), the *Beta Channel* build of Outlook for Windows desktop, and Microsoft 365 Current Channel (dev preview) build of Microsoft 365 app for Android. Distribution options and processes for Microsoft 365-enabled Teams apps are the same as for traditional Teams apps.
 
-After it's published, your app will be discoverable as an installable app from the Outlook and Microsoft 365 app stores, in addition to the Teams store. Your app uses the permissions defined in Teams across Outlook and Microsoft 365. Teams admins can [manage access to Teams apps across Microsoft 365](/MicrosoftTeams/manage-third-party-teams-apps) for users in their organization.
+After it's published, your app will be discoverable as an installable app from the Outlook and Microsoft 365 app stores, in addition to the Teams store. Your app uses the permissions defined in Teams across Outlook and Microsoft 365. Teams admins can [manage access to Teams apps across Microsoft 365](/microsoftteams/manage-third-party-teams-apps) for users in their organization.
 
 :::image type="content" source="images/outlook-office-app-store.png" alt-text="The screenshot is an example that shows Outlook and microsoft365.com (formerly office.com) install screens for the SurveyMonkey and MURAL Teams apps.":::
 
@@ -28,7 +28,7 @@ Use the [Teams Developer Portal](https://dev.teams.microsoft.com/) to upload and
 
 ### Microsoft Teams Admin Center
 
-As a Teams admin, you can upload and pre-install the app package for your organization's tenant from [Teams admin center](https://admin.teams.microsoft.com/). For more information, see [upload your custom apps in the Microsoft Teams admin center](/MicrosoftTeams/upload-custom-apps).
+As a Teams admin, you can upload and pre-install the app package for your organization's tenant from [Teams admin center](https://admin.teams.microsoft.com/). For more information, see [upload your custom apps in the Microsoft Teams admin center](/microsoftteams/upload-custom-apps).
 
 ### Microsoft Admin Center
 
@@ -45,4 +45,6 @@ To get started, see [distribute your Microsoft Teams app](../concepts/deploy-and
 
 ## See also
 
-[Extend Teams apps across Microsoft 365](overview.md)
+* [Manage access to Teams app across Microsoft 365](/microsoftteams/manage-third-party-teams-apps)
+* [Extend Teams apps across Microsoft 365](overview.md)
+* [Tenancy in Azure Active Directory](/azure/active-directory/develop/single-and-multi-tenant-apps)

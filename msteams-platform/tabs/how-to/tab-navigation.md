@@ -1,6 +1,6 @@
 ---
 title: Tab app navigation
-description: Learn about the options for navigation within a tab app using the TeamsJS library.
+description: Learn about the options for navigation within a tab app using the Microsoft Teams JavaScript client library (TeamsJS).
 ms.date: 10/26/2022
 ms.topic: conceptual
 ms.custom: m365apps
@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 
 # Navigate within a tab app
 
-The TeamsJS library provides support for navigation within a tab. This article discusses the options available, which include types of navigation such as between tabs within the app or through use of Teams UI components and the back button.
+The Microsoft Teams JavaScript client library (TeamsJS) provides support for navigation within a tab. This article discusses the options available, which include types of navigation such as between tabs within the app or through use of Teams UI components and the back button.
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
@@ -43,7 +43,7 @@ if (pages.currentApp.isSupported()) {
 else {/*Handle situation where capability isn't supported*/}
 ```
 
-You can also use the `pages.navigateToApp()` function, `pages.tabs.navigateToTab()` function, or deep links for tab navigation, as shown in [Create deep links](~/concepts/build-and-test/deep-links.md#navigate-within-your-app).
+You can also use the `pages.navigateToApp()` function, `pages.tabs.navigateToTab()` function, or deep links for tab navigation, as shown in [Create deep links](~/concepts/build-and-test/deep-link-application.md#navigate-within-your-app).
 
 ## Configure back button navigation
 

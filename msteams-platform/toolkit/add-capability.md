@@ -2,7 +2,7 @@
 title: Add Capabilities to Your Teams apps
 author: surbhigupta
 description:  In this module, learn how to add Capabilities of Teams Toolkit
-ms.author: v-amprasad
+ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
@@ -10,13 +10,13 @@ ms.date: 11/29/2021
 
 # Add capabilities to Microsoft Teams app
 
-Adding capabilities with Teams Toolkit allows you to extend the functionality of your existing Microsoft Teams app. The advantage of adding more capabilities is that you can add more functions to your app by using Teams Toolkit to automatically add source codes. You can select different capabilities based on project you've created in your Teams app. The following table lists the Teams app capabilities:
+Adding capabilities with Teams Toolkit allows you to extend the functionality of your existing Microsoft Teams app. The advantage of adding more capabilities is that you can add more functions to your app by using Teams Toolkit to automatically add necessary code and project files. You can select different capabilities based on project you've created in your Teams app. The following table lists the Teams app capabilities:
 
 |Capability|Description|Other supported capabilities|
 |--------|-------------|-----------------|
 |**Basic Teams app**|              |
-| **Tab** |  Tabs are simple HTML tags that refer to domains declared in the app manifest. You can add tabs as a part of channel inside a team, group chat, or personal app for an individual user.|Tab, notification bot, command bot, bot, and message extension|
-| **Bot** |  Bots help to interact with your web service through text, interactive cards, and task modules.|Message extension, SSO-enabled tab, and tab|
+| **Tab** |  Basic Tabs are simple HTML tags that refer to domains declared in the app manifest. You can add tabs as a part of channel inside a team, group chat, or personal app for an individual user.|Basic tab, notification bot, command bot, basic bot, and basic message extension|
+| **Bot** |  Bots help to interact with your web service through text, interactive cards, and task modules.|Message extension, SSO-enabled tab, and basic tab|
 | **Message extension** | Message extensions help to interact with your web service through buttons and forms in the Microsoft Teams client.|Bot, SSO-enabled tab, and tab|
 |**Scenario-based Teams app**|             |
 | **Notification bot** | Notification bot proactively sends messages in Teams channel or group chat, or personal chat. You can trigger the notification bot with a HTTP request, such as cards or texts. |SSO-enabled tab and tab|

@@ -1,7 +1,7 @@
 ---
 title: Bots and SDKs
 author: surbhigupta
-description: In this article, learn about tools and Bot Framework SDKs(C#, Python, Java, JavaScript) for Microsoft Teams bots and it's advantages and disadvantages.
+description: In this article, learn about tools and Bot Framework SDKs(C#, Python, Java, JavaScript) for Microsoft Teams bots and its advantages and disadvantages.
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
@@ -31,7 +31,7 @@ Your Teams bot consists of the following:
 
 The [Bot Framework](https://dev.botframework.com/) is a rich SDK used to create bots using C#, Java, Python, and JavaScript. If you already have a bot that is based on the Bot Framework, you can easily modify it to work in Teams. Use either C# or Node.js to take advantage of our [SDKs](/microsoftteams/platform/#pivot=sdk-tools). These packages extend the basic Bot Builder SDK classes and methods as follows:
 
-* Use specialized card types like the Office 365 connector card.
+* Use specialized card types like the connector card for Microsoft 365 Groups.
 * Set Teams-specific channel data on activities.
 * Process message extension requests.
 
@@ -61,7 +61,7 @@ Bots in Microsoft Teams can be part of a one-to-one conversation, a group chat, 
 
 ### In a channel
 
-Channels contain threaded conversations between multiple people even up to two thousand. This potentially gives your bot massive reach, but individual interactions must be concise. Traditional multi-turn interactions don't work. Instead, you must look to use interactive cards or task modules, or move the conversation to a one-to-one conversation to collect lots of information. Your bot only has access to messages where it's `@mentioned`. You can retrieve additional messages from the conversation using Microsoft Graph and organization-level permissions.
+Channels contain threaded conversations between multiple people even up to 2000. This potentially gives your bot massive reach, but individual interactions must be concise. Traditional multi-turn interactions don't work. Instead, you must look to use interactive cards or task modules, or move the conversation to a one-to-one conversation to collect lots of information. Your bot only has access to messages where it's `@mentioned`. You can retrieve additional messages from the conversation using Microsoft Graph and organization-level permissions.
 
 Bots work better in a channel in the following cases:
 
@@ -92,11 +92,11 @@ An extensive dialog between your bot and the user is a slow and complex way to g
 
 ### Have multi-turn experiences in chat
 
-An extensive dialog requires the developer to maintain state. To exit this state, a user must either timeout or select **Cancel**. Also, the process is tedious. For example, see the following conversation scenario:
+An extensive dialog requires the developer to maintain state. To exit this state, a user must either time out or select **Cancel**. Also, the process is tedious. For example, see the following conversation scenario:
 
 USER: Schedule a meeting with Megan.
 
-BOT: I’ve found 200 results, please include a first and last name.
+BOT: I’ve found 200 results, include a first and last name.
 
 USER: Schedule a meeting with Megan Bowen.
 
