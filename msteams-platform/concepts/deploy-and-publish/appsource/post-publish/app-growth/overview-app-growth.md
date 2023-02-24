@@ -1,7 +1,7 @@
 ---
 title: Overview for planning, strategizing, and executing growth for your app
 author: heath-hamilton
-description: Learn to plan, strategize and execute growth for your app
+description: Learn to plan, strategize and execute growth for your app.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
@@ -24,20 +24,17 @@ It also includes some proven best practices from the team that crafted the Teams
 
     :::column:::
 
-   > [!div class="nextstepaction"]
-   > [How much can your app grow?](#putting-your-apps-growth-potential-into-perspective-how-much-can-your-app-grow)
+:::image type="icon" source="../../../../../assets/icons/how-much-app-grow.png" link="#putting-your-apps-growth-potential-into-perspective-how-much-can-your-app-grow" border="false":::
 
     :::column-end:::
     :::column:::
 
-   > [!div class="nextstepaction"]
-   > [Understanding growth models](#options-for-growing-your-app-understanding-growth-models)
+ :::image type="icon" source="../../../../../assets/icons/understanding-growth-models.png" link="#options-for-growing-your-app-understanding-growth-models" :::
 
     :::column-end:::
     :::column:::
 
-   > [!div class="nextstepaction"]
-   > [What’s needed to grow and succeed on Teams marketplace?](#whats-needed-to-grow-and-succeed-on-teams-marketplace)
+  :::image type="icon" source="../../../../../assets/icons/grow-succeed-teams-marketplace.png" link="#whats-needed-to-grow-and-succeed-on-teams-marketplace" border="false":::
 
     :::column-end:::
 
@@ -51,7 +48,7 @@ You’ll probably not be surprised to hear that not all apps are equal on any ma
 
 1. **Build a complementary, companion experience to your core web SaaS**: Build your Teams app serving as a point solution that can be called *add-in*, *plug-in*, or an *integration*. You can build them for select, frequent, isolated and lightweight use cases relevant to be achieved inside Teams.
 
-1. **Build a *collaborative app* product line**: Provide Teams users a unique, differentiated, rich, familiar, end to end and deeply immersive experience – all contained in Teams and centered around collaboration versus individual productivity. [Collaborative apps](https://www.microsoft.com/microsoft-365/blog/2021/11/02/stay-in-the-flow-of-work-with-new-collaborative-apps-for-microsoft-teams/), a new app pattern, which is designed to bring people, processes, and data together to help users thrive in the hybrid workplace are positioned to transform how people in every organization do more together with the help of ubiquitous software in the flow of work. Collaborative apps offer an experience that’s preferred by the user over other channels where the SaaS app exists and often use one or more of Teams-only platform capabilities such as meeting extensions, Live Share, Graph APIs, message extensions, and so on, to deliver significant user value, on top of table stake scenarios.
+1. **Build a *collaborative app* product line**: Provide Teams users a unique, differentiated, rich, familiar, end to end and deeply immersive experience – all contained in Teams and centered around collaboration versus individual productivity. [Collaborative apps](https://www.microsoft.com/en-us/microsoft-365/blog/2021/11/02/stay-in-the-flow-of-work-with-new-collaborative-apps-for-microsoft-teams/), a new app pattern, which is designed to bring people, processes, and data together to help users thrive in the hybrid workplace are positioned to transform how people in every organization do more together with the help of ubiquitous software in the flow of work. Collaborative apps offer an experience that’s preferred by the user over other channels where the SaaS app exists and often use one or more of Teams-only platform capabilities such as meeting extensions, Live Share, Graph APIs, message extensions, and so on, to deliver significant user value, on top of table stake scenarios.
 
 Needless to say, the strategy you'll adopt among the options described above will determine:
 
@@ -62,6 +59,8 @@ Needless to say, the strategy you'll adopt among the options described above wil
 You aren't necessarily constrained by picking only one out of the above approaches – your investment can start from (a) and move towards (b) and eventually culminate at (c). This document assumes you’ve taken a strategic view of your Teams investment by developing a *collaborative app*. In such an app, the user is able to get designated *jobs* seamlessly and preferably done in the flow of their work with full context, without leaving Microsoft Teams. Collaborative apps are the best positioned to win new customer deals for you and upsell or cross-sell to your existing customers. For this reason, this investment has the potential to deliver the highest net new economic opportunity for your business.
 
 Using the guidance in this document, you can grow your collaborative app on Teams and expand differentiated scenarios further. You can also incorporate Teams-first or Teams-only use cases, and devise a go-to-market model that is led by your Teams collaborative app - consequently building a growth flywheel for your business.
+
+[Back to top](#strategize-and-execute-growth-for-your-app)
 
 ## Options for growing your app: Understanding growth models
 
@@ -74,6 +73,8 @@ You can use one or all the three predominant types of SaaS business growth model
 As a developer of a collaborative app, you'll benefit from devising a well-rounded strategy that employs all three SaaS business growth models. It helps you grow your Teams app among hundreds of millions of Teams users.
 
 More than point solutions (that is, *add-ins* and *integrations*), Teams collaborative apps offer you an opportunity to apply a solid growth strategy to a product line. It's just as you'd do for your core SaaS product for the web browser or native mobile apps.
+
+[Back to top](#strategize-and-execute-growth-for-your-app)
 
 ## What’s needed to grow and succeed on Teams marketplace?
 
@@ -181,6 +182,8 @@ Monetization investments encompass defining role of Teams app in your business a
     :::column-end:::
 :::row-end:::
 
+[Back to top](#strategize-and-execute-growth-for-your-app)
+
 <!--
 | Investment type | Why should you do this? What impact will this have? | How will you do this? What resources are required? |
 | --- | --- | --- |
@@ -194,3 +197,13 @@ Monetization investments encompass defining role of Teams app in your business a
 
 > [!div class="nextstepaction"]
 > [Growth lifecycle for your app](app-growth-lifecycle.md)
+
+## See also
+
+- [Distribute your Microsoft Teams app](../../../apps-publish-overview.md)
+- [Monetize your app](../../prepare/monetize-overview.md)
+- [Build your collaborative app](build-app.md)
+- [Gain traction for your collaborative app in the market](gain-traction.md)
+- [Launch your collaborative app](launch-app.md)
+- [Scale your collaborative app](scale-app.md)
+- [Succeed with your collaborative app](succeed.md)
