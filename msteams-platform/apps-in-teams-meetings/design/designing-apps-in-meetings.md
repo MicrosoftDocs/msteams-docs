@@ -185,7 +185,6 @@ You can allow users to share and interact with some or all of your app content o
 * Whiteboarding
 * Reviewing a dashboard.
 * Watching a video.
-* Playing a game.
 
 Apps shared to the meeting stage occupy the same space as a shared screen. The stage reorients for all meeting participants the same way, too.
 
