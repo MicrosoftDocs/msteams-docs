@@ -56,7 +56,7 @@ Applications can post messages to a chat and add deep links to them. The followi
 
 Applications can add a deep link as a hyperlink markdown. The deep link is executed within teams. Refer the following code sample::
 
-[App](URL)
+`[App](URL)`
 
 `[App](https://teams.microsoft.com/l/app/{appId})`
 
