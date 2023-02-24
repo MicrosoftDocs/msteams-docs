@@ -279,7 +279,7 @@ The following table lists commonly used context properties of the *context* obje
 | page.frameContext | frameContext | The context where page url is loaded (content, task, setting, remove, sidePanel) |
 | sharepoint | sharepoint | SharePoint context. This is only available when hosted in SharePoint. |
 | user.tenant.teamsSku | tenantSKU | The license type for the current user tenant. Possible values are enterprise, free, edu, unknown |
-| user.licenseType | userLicenseType | The license type for the current user. Possible values are E1, E3, and E5 enterprise plans |
+| user.licenseType | userLicenseType | The license type for the current user. Possible values are: Unknown, Teacher, Student, Free, SmbBusinessVoice, SmbNonVoice, FrontlineWorker |
 | app.parentMessageId | parentMessageId | The ID of the parent message from which this task module was launched. This is only available in task modules launched from bot cards. |
 | app.host.ringId | ringId | Current ring ID. |
 | app.sessionId | appSessionId | Unique ID for the current Host session for use in correlating telemetry data. |
@@ -346,6 +346,12 @@ For more information on shared channels, see [shared channels](~/concepts/build-
 You can register your app to be informed if the theme changes by calling `microsoftTeams.app.registerOnThemeChangeHandler(function(theme) { /* ... */ })`.
 
 The `theme` argument in the function is a string with a value of `default`, `dark`, or `contrast`.
+
+## Code sample
+
+| Sample name           | Description | Javascript
+:---------------------|:--------------|:---------|
+|Tab channel context|This sample shows the contents of tab context object in a private and shared channel. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-context/nodejs)
 
 ## Next step
 

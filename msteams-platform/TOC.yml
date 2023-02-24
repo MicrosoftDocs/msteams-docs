@@ -90,6 +90,7 @@
       displayName: best practices
     - name: Personal apps
       href: concepts/design/personal-apps.md
+      displayName: logo
     - name: Tabs
       href: tabs/design/tabs.md
     - name: Bots
@@ -112,6 +113,7 @@
       displayName: column, ColumnSet 
     - name: Task modules
       href: task-modules-and-cards/task-modules/design-teams-task-modules.md
+      displayname: Forms
     - name: Activity feed notifications
       href: concepts/design/activity-feed-notifications.md
       displayName: notify, notification
@@ -131,7 +133,6 @@
       href: toolkit/explore-Teams-Toolkit.md
     - name: Prepare to build apps using Teams Toolkit
       href: toolkit/build-environments.md
-    - name: Use Teams Toolkit to create your app 
       items:
       - name: Prerequisites for creating your Teams app
         href: toolkit/tools-prerequisites.md
@@ -210,7 +211,7 @@
       displayName: dashboard
   - name: Teams JavaScript client library
     href: tabs/how-to/using-teams-client-library.md
-    displayName: execute URL
+    displayName: execute URL, getTabInstances
   - name: Node.js Bot Framework for bots and message extensions (GitHub)
     href: https://github.com/Microsoft/botbuilder-js
   - name: .NET Bot Framework for bots and message extensions (GitHub)
@@ -281,9 +282,10 @@
     displayName: App generator, Reorder static personal tabs
   - name: Create a channel tab
     href: tabs/how-to/create-channel-group-tab.md
+    displayName: Create a channel tab or group tab, Create a custom channel or group tab with ASP.NET Core, Build your first app using Blazor
   - name: Create a content page
     href: tabs/how-to/create-tab-pages/content-page.md
-    displayName: Loading indicator, personal-scoped custom tab, channel or group custom tab
+    displayName: Loading indicator, showLoadingIndicator, personal-scoped custom tab, channel or group custom tab
   - name: Create a configuration page
     href: tabs/how-to/create-tab-pages/configuration-page.md
     displayName: configurationUrl
@@ -295,9 +297,12 @@
     displayName: Teams store apps approved by Microsoft for mobile 
   - name: Get context for your tab
     href: tabs/how-to/access-teams-context.md
-    displayName: getContext, groupId, User context, authentication flow from Microsoft Azure Active Directory, retrieve context, theme changes
+    displayName: getContext, entityId, groupId, User context, authentication flow from Microsoft Azure Active Directory, retrieve context, theme changes
   - name: Navigate within your tab
-    href: tabs/how-to/tab-navigation.md  
+    href: tabs/how-to/tab-navigation.md
+  - name: Build a dashboard tab app
+    href: tabs/how-to/build-a-dashboard-tab-app.md
+    displayName: Dashboard, widget, Graph API call
   - name: Build apps for shared channels
     href: concepts/build-and-test/shared-channels.md
     displayName: Cross-tenant notifications, context for shared channel, apps and permissions in shared channels
@@ -330,7 +335,7 @@
       displayName: chat, Messages sent between your Microsoft Teams bot and one or more user
     - name: Messages in bot conversations
       href: bots/how-to/conversations/conversation-messages.md
-      displayName: Picture messages, attribution for bot message, status code responses, app localization using bot and tab, form
+      displayName: Picture messages, emojis, attribution for bot message, status code responses, app localization using bot and tab, form, soft delete
       items:
       - name: Receive all conversation messages with RSC
         href: bots/how-to/conversations/channel-messages-with-rsc.md
@@ -361,6 +366,7 @@
       href: bots/how-to/conversations/command-bot-in-teams.md
     - name: Workflow bot in Teams
       href: bots/how-to/conversations/workflow-bot-in-teams.md
+      displayname: Jira
   - name: Get Teams specific context for your bot
     href: bots/how-to/get-teams-context.md
     displayName: Fetch roster or user profile
@@ -428,21 +434,23 @@
     items:
     - name: Build tabs for meeting
       href: apps-in-teams-meetings/build-tabs-for-meeting.md
-      displayName: anonymous
+      displayName: anonymous, app caching, cache
     - name: Build apps for meeting stage
       href: apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md
+      displayName: MicrosoftTeams.meeting.getAppContentStageSharingState
     - name: Share in meeting
       href: concepts/build-and-test/share-in-meeting.md
     - name: Build in-meeting notification for meeting
       href: apps-in-teams-meetings/in-meeting-notification-for-meeting.md
-      displayName: bubble
+      displayName: bubble, targeted meeting, in-meeting, notification
     - name: Build extensible conversations for meeting chat
       href: apps-in-teams-meetings/build-extensible-conversation-for-meeting-chat.md
     - name: Build apps for anonymous users
       href: apps-in-teams-meetings/build-apps-for-anonymous-user.md
+      displayName: supportsAnonymousGuestUsers, guest
     - name: Meeting apps APIs
       href: apps-in-teams-meetings/meeting-apps-apis.md
-      displayName: payload, getparticipant, captions 
+      displayName: payload, recurring, getparticipant, captions, targeted meeting notification
   - name: Get meeting transcripts using Graph APIs
     items:
     - name: Overview
@@ -497,7 +505,7 @@
     href: webhooks-and-connectors/how-to/connectors-creating.md
   - name: Create and send messages
     href: webhooks-and-connectors/how-to/connectors-using.md
-    displayName: Attachments, Send messages using cURL and PowerShell, Rate limiting for connectors, ActionCard
+    displayName: Attachments, potentialAction, Send messages using cURL and PowerShell, Rate limiting for connectors, ActionCard
 - name: Build cards and task modules
   items:
   - name: Overview
@@ -509,13 +517,13 @@
       displayName: People picker, type-ahead
     - name: Types of cards
       href: task-modules-and-cards/cards/cards-reference.md
-      displayName: correlationId,what-are-webhooks-and-connectors Button, Flexible layout, receipt card, carousel card, Hero card, List card, Card collections, Thumbnail card, Receipt card
+      displayName: correlationId, Markdown, what-are-webhooks-and-connectors Button, Flexible layout, receipt card, carousel card, Hero card, List card, Card collections, Thumbnail card, Receipt card
     - name: Format cards in Microsoft Teams
       href: task-modules-and-cards/cards/cards-format.md
       displayName: Information masking, background, extension, notification, HTML
     - name: Card actions
       href: task-modules-and-cards/cards/cards-actions.md
-      displayName: openUrl, messageBack, imBack, invoke, signin
+      displayName: openUrl, potentialAction, messageBack, imBack, invoke, signin
     - name: People Picker in Adaptive Cards
       href: task-modules-and-cards/cards/people-picker.md
       displayName: Setting, channel, static typeahead
@@ -581,6 +589,14 @@
         href: bots/how-to/authentication/bot-sso-manifest.md
       - name: Grant Microsoft Graph permissions and scopes
         href: bots/how-to/authentication/bot-sso-graph-api.md
+    - name: Enable SSO for your Adaptive Cards Universal Actions in bot
+      items:
+      - name: Overview
+        href: task-modules-and-cards\cards\Universal-actions-for-adaptive-cards\enable-sso-for-your-adaptive-cards-universal-action.md
+        displayName: Adaptive cards universal action SSO authentication, Action.Execute SSO
+      - name: Add code to enable SSO for your Adaptive Cards Universal Actions in bot
+        href: task-modules-and-cards\cards\Universal-actions-for-adaptive-cards\sso-adaptive-cards-universal-action.md
+        displayName: Adaptive cards universal action SSO authentication, Action.Execute SSO
     - name: Troubleshoot SSO authentication
       href: tabs/how-to/authentication/tab-sso-troubleshooting.md
       displayName: Caching
@@ -595,6 +611,9 @@
       displayName: Loop
     - name: Add third party IdP authentication to message extension app
       href: messaging-extensions/how-to/add-authentication.md
+    - name: Add third party IdP authentication to Adaptive Cards Universal Actions
+      href: task-modules-and-cards\cards\Universal-actions-for-adaptive-cards\authentication-flow-in-universal-action-for-adaptive-cards.md
+      displayName: Adaptive cards universal action third party Idp authentication, Action.Execute OAuth nominal authentication
   - name: Use external OAuth providers
     href: tabs/how-to/authentication/auth-oauth-provider.md
 - name: Integrate device capabilities
@@ -723,9 +742,9 @@
     - name: Prepare your Teams store submission
       href: concepts/deploy-and-publish/appsource/prepare/submission-checklist.md
       displayName: Testing instructions, store listing, Microsoft Teams app validation tool, compile testing instructions, admin account and non admin account, preconfigured account, premium or upgraded features, tenant configuration
-    - name: Update Apple App Store Connect Team ID on Partner Center, app acquisition on mobile
+    - name: Update Apple Developer Program Team ID
       href: concepts/deploy-and-publish/appsource/prepare/update-apple-store-team-connect-id.md
-      displayName: Enable users to install your app on Teams iOS platform.
+      displayName: Enable users to install your app on Teams iOS platform, app acquisition on mobile
     - name: Submit your app
       href: /office/dev/store/add-in-submission-guide?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
     - name: Resolve issues if your Teams store submission fails
@@ -739,12 +758,12 @@
       displayName: Microsoft Publisher Agreement, app update or new release, user engagement data 
     -  name: Common reasons for app validation failure
        href: concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md
-       displayName: Font, Broken links, functional bugs, app crashes, unexpected errors, app description, Microsoft trademark and brand guidelines, testability, app icon guidelines, app name mismatch, developer name mismatch      
+       displayName: Font, Broken links, functional bugs, app crashes, unexpected errors, app description, Microsoft trademark and brand guidelines, testability, app icon guidelines, app name mismatch, developer name mismatch
 - name: Monetize your app
   items:
   - name: Overview
     href: concepts/deploy-and-publish/appsource/prepare/monetize-overview.md
-    displayName: Pricing model, SaaS offer, purchase experience
+    displayName: Pricing model, SaaS offer, purchase experience, Price
   - name: Include a SaaS offer with your Teams app
     href: concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
     displayName: license, Transactable Software-as-a-Service, Recloud app
@@ -753,6 +772,31 @@
   - name: Test preview for monetized apps
     href: concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
     displayName: paid, AppSource, fee 
+- name: Grow your app
+  items:
+    - name: Strategize and execute growth for your app
+      href: concepts/deploy-and-publish/appsource/post-publish/app-growth/overview-app-growth.md
+      displayName: growth, investment, monetize, market
+    - name: Guide to grow your app
+      items: 
+      - name: Growth lifecycle for your app
+        href: concepts/deploy-and-publish/appsource/post-publish/app-growth/app-growth-lifecycle.md
+        displayName: lifecycle, traction, build, launch, scale, succeed, GTM
+      - name: Build your collaborative app
+        href: concepts/deploy-and-publish/appsource/post-publish/app-growth/build-app.md
+        displayName: Build, collaborative, stage, developer
+      - name: Launch your collaborative app
+        href: concepts/deploy-and-publish/appsource/post-publish/app-growth/launch-app.md
+        displayName: social media, blog post, press release, freemium, marketing, banners
+      - name: Gain traction for your collaborative app in the market
+        href: concepts/deploy-and-publish/appsource/post-publish/app-growth/gain-traction.md
+        displayName: upskill, awareness, marketplace, activation, rollout, monetization
+      - name: Scale your collaborative app
+        href: concepts/deploy-and-publish/appsource/post-publish/app-growth/scale-app.md
+        displayName: CSP, webinar, advertise, pitch, sell
+      - name: Succeed with your collaborative app
+        href: concepts/deploy-and-publish/appsource/post-publish/app-growth/succeed.md
+        displayName: TAM, PQL, metrics, success, ROI
 - name: App manifest
   items:
     - name: App manifest schema for Teams
@@ -775,6 +819,7 @@
     displayName: Multitenancy, Sharepoint
   - name: Create Virtual Assistant
     href: samples/virtual-assistant.md 
+    displayname: OnMessageActivityAsync
   - name: Power Platform apps
     items:
     - name: Overview
@@ -876,6 +921,7 @@
     items:
     - name: Localize your app
       href: concepts/build-and-test/apps-localization.md
+      displayname: localizationInfo 
     - name: Localize JSON schema reference
       href: resources/schema/localization-schema.md
   - name: SameSite cookie attribute 

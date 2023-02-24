@@ -529,10 +529,10 @@ Use the following code snippet to handle the access token in case the app user l
 
 ## Code sample
 
-This section provides bot authentication v3 SDK sample.
+This section provides bot authentication v4 SDK sample.
 
-| **Sample name** | **Description** | **.NET** | **Node.js** | **Python** |
-|---------------|------------|------------|-------------|---------------|
-| Bot authentication | This sample shows how to get started with authentication in a bot for Teams. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-authentication/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/js) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-authentication/python) |
-| Tab, bot, and Message extension (ME) SSO | This sample shows SSO for tab, bot, and message extension - search, action, link unfurl. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | NA |
-|Tab, bot, and Message extension | This sample shows how to check authentication in bot, tab, and message extension with SSO | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-auth/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-auth/nodejs) | NA |
+| **Sample name** | **Description** | **.NET** | **Node.js** | **Python** | **Manifest** |
+|---------------|------------|------------|-------------|---------------|---------------|
+| Bot authentication | This sample shows how to get started with authentication in a bot for Teams. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-authentication/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/js) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-authentication/python) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-authentication/csharp/demo-manifest/bot-teams-authentication.zip)
+| Tab, bot, and Message extension (ME) SSO | This sample shows SSO for tab, bot, and message extension - search, action, link unfurl. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | NA |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp/demo-manifest/App-SSO.zip)
+|Tab, bot, and Message extension | This sample shows how to check authentication in bot, tab, and message extension with SSO | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-auth/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-auth/nodejs) | NA |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-auth/csharp/demo-manifest/App-Complete-Auth.zip)

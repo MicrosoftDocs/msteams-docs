@@ -104,6 +104,9 @@ conceptualContent:
    # Card
     - title: Explore
       links:
+        - url: concepts/deploy-and-publish/appsource/post-publish/app-growth/overview-app-growth.md
+          itemType: reference
+          text: Plan your app growth in Teams
         - url: concepts/design/overview-analytics.md
           itemType: reference
           text: Plan analytics for Teams apps
@@ -212,7 +215,7 @@ tools:
       imageSrc: ./assets/icons/graph-icon-1.png
       url: https://learn.microsoft.com/graph/sdks/sdks-overview
     # Card
-    - title: TeamsJS client library for tabs and other hosted experiences
+    - title: Microsoft Teams JavaScript client library (TeamsJS) for tabs and other hosted experiences
       # imageSrc should be square in ratio with no whitespace
       imageSrc: ./assets/icons/logo_js.png
       url: /microsoftteams/platform/tabs/how-to/using-teams-client-library

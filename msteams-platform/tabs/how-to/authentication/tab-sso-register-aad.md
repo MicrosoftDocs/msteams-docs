@@ -181,7 +181,7 @@ To configure scope and authorize trusted client applications, you'll need:
 
 1. Enter the details for configuring scope.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-scope.png" alt-text="Add scope details":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-scope.png" alt-text="The screenshot shows how to add scope details in Azure.":::
 
     1. Enter the scope name. This is a mandatory field.
     2. Select the user who can give consent for this scope. The default option is **Admins only**.

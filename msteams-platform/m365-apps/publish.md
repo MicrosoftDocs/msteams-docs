@@ -45,4 +45,6 @@ To get started, see [distribute your Microsoft Teams app](../concepts/deploy-and
 
 ## See also
 
-[Extend Teams apps across Microsoft 365](overview.md)
+* [Manage access to Teams app across Microsoft 365](/microsoftteams/manage-third-party-teams-apps)
+* [Extend Teams apps across Microsoft 365](overview.md)
+* [Tenancy in Azure Active Directory](/azure/active-directory/develop/single-and-multi-tenant-apps)
