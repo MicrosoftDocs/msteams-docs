@@ -247,7 +247,7 @@ Unless you created your app specifically for Teams, you probably have features t
 
 ## Code sample
 
-|Sample name | Description | Typescript
+|Sample name | Description | Typescript|
 |----------------|--------------------------------------------------------|--------------|
 | Meeting app | Sample to show navbar-menu in personal tab app. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-navbar-menu/ts) |
 
