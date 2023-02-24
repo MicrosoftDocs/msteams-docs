@@ -23,7 +23,7 @@ In the Dice Roller sample app, users are shown a dice with a button to roll it. 
 
 ## Set up the application
 
-You can start by importing the required modules. The sample uses [SharedMap DDS](https://fluidframework.com/docs/data-structures/map/) from the Fluid Framework and [TeamsFluidClient](/javascript/api/@microsoft/live-share/teamsfluidclient) from the Live Share SDK. The sample supports Teams Meeting Extensibility so you must include the [TeamsJS library](https://github.com/OfficeDev/microsoft-teams-library-js). Finally, the sample is designed to run both locally and in a Teams meeting so you need to include more Fluid Framework pieces to [test the sample locally](https://fluidframework.com/docs/testing/testing/#azure-fluid-relay-as-an-abstraction-for-tinylicious).
+You can start by importing the required modules. The sample uses [SharedMap DDS](https://fluidframework.com/docs/data-structures/map/) from the Fluid Framework and [TeamsFluidClient](/javascript/api/@microsoft/live-share/teamsfluidclient) from the Live Share SDK. The sample supports Teams Meeting Extensibility so you must include the [Microsoft Teams JavaScript client library (TeamsJS)](https://github.com/OfficeDev/microsoft-teams-library-js). Finally, the sample is designed to run both locally and in a Teams meeting so you need to include more Fluid Framework pieces to [test the sample locally](https://fluidframework.com/docs/testing/testing/#azure-fluid-relay-as-an-abstraction-for-tinylicious).
 
 Applications create Fluid containers using a schema that defines a set of _initial objects_ that are available to the container. The sample uses a SharedMap to store the current dice value that was rolled. For more information, see [data modeling](https://fluidframework.com/docs/build/data-modeling/).
 
@@ -97,7 +97,7 @@ start().catch((error) => console.error(error));
 
 Not all of your app's views need to be collaborative. The `stage` view _always_ needs collaborative features, the `content` view _may_ need collaborative features, and the `config` view should _never_ need collaborative features. For the views that do need collaborative features you'll need to join a Fluid container associated with the current meeting.
 
-Joining the container for the meeting is as simple as initializing the [LiveShareClient](/javascript/api/@microsoft/live-share/liveshareclient) with a `LiveShareHost` instance from the Teams Client SDK, and then calling its [joinContainer()](/javascript/api/@microsoft/live-share/liveshareclient#@microsoft-live-share-liveshareclient-joincontainer) method.
+Joining the container for the meeting is as simple as initializing the `LiveShareClient` with a `LiveShareHost` instance from the Teams Client SDK, and then calling its `joinContainer()` method.
 
 When running locally, you can initialize `LiveShareClient` with a `TestLiveShareHost` instance instead.
 
@@ -185,7 +185,7 @@ diceMap.on("valueChanged", updateDice);
 
 ## Write the side panel view
 
-The side panel view, loaded through the tab `contentUrl` with the `sidePanel` frame context, is displayed to the user in a side panel when they open your app within a meeting. The goal of side panel view is to let a user select content for the app prior to sharing the app to the meeting stage. For the Live Share SDK apps, the side panel view can also be used as a companion experience for the app. Calling [joinContainer()](/javascript/api/@microsoft/live-share/liveshareclient#@microsoft-live-share-liveshareclient-joincontainer) from the side panel view connects to the same Fluid container the stage view is connected to. This container can then be used to communicate with the stage view. Ensure that you're communicating with everyone's stage view and side panel view.
+The side panel view, loaded through the tab `contentUrl` with the `sidePanel` frame context, is displayed to the user in a side panel when they open your app within a meeting. The goal of side panel view is to let a user select content for the app prior to sharing the app to the meeting stage. For the Live Share SDK apps, the side panel view can also be used as a companion experience for the app. Calling `joinContainer()` from the side panel view connects to the same Fluid container the stage view is connected to. This container can then be used to communicate with the stage view. Ensure that you're communicating with everyone's stage view and side panel view.
 
 The sample's side panel view prompts the user to select the share to stage button.
 
@@ -214,7 +214,7 @@ function renderSidePanel(elem) {
 The settings view, loaded through `configurationUrl` in your app manifest, is shown to a user when they first add your app to a Teams meeting. This view lets the developer configure the `contentUrl` for the tab that is pinned to the meeting based on user input. This page is currently required even if no user input is required to set the `contentUrl`.
 
 > [!NOTE]
-> The Live Share's' [joinContainer()](/javascript/api/@microsoft/live-share/liveshareclient#@microsoft-live-share-liveshareclient-joincontainer) is not supported in the tab `settings` context.
+> The Live Share's' `joinContainer()` is not supported in the tab `settings` context.
 
 The sample's settings view prompts the user to select the save button.
 
@@ -262,7 +262,7 @@ After you've started running your app locally with `npm run start`, you can then
 
 ### Create a ngrok tunnel to allow Teams to reach your app
 
-1. [Download ngrok](https://ngrok.com/download).
+1. Download [ngrok](https://ngrok.com/download).
 
 1. Use ngrok to create a tunnel with port 8080. Run the following command:
 
@@ -293,7 +293,7 @@ After you've started running your app locally with `npm run start`, you can then
 
    > [!NOTE]
    >
-   > - Do not zip the containing folder.
+   > - Don't zip the containing folder.
    > - Give your zip file a descriptive name. For example, `DiceRollerLiveShare`.
 
    For more information on manifest, visit the [Teams manifest documentation](../resources/schema/manifest-schema.md)
@@ -336,7 +336,7 @@ Users invited to the meeting can see your app on stage when they join the meetin
 
 ## Deployment
 
-After you're ready to deploy your code, you can use [Teams Toolkit](../toolkit/provision.md#provision-using-teams-toolkit-in-visual-studio-code) or the [Teams Developer Portal](https://dev.teams.microsoft.com/apps) to provision and upload your app's zip file.
+After you're ready to deploy your code, you can use [Teams Toolkit](../toolkit/provision.md#provision-using-teams-toolkit-in-visual-studio) or the [Teams Developer Portal](https://dev.teams.microsoft.com/apps) to provision and upload your app's zip file.
 
 > [!NOTE]
 > You need to add your provisioned appId to the `manifest.json` before uploading or distributing the app.
@@ -354,7 +354,7 @@ After you're ready to deploy your code, you can use [Teams Toolkit](../toolkit/p
 
 ## See also
 
-- [Apps for Teams meetings](teams-apps-in-meetings.md)d)
+- [Apps for Teams meetings](teams-apps-in-meetings.md)
 - [GitHub repository](https://github.com/microsoft/live-share-sdk)
 - [Live Share SDK reference docs](/javascript/api/@microsoft/live-share/)
 - [Live Share Media SDK reference docs](/javascript/api/@microsoft/live-share-media/)
@@ -362,4 +362,3 @@ After you're ready to deploy your code, you can use [Teams Toolkit](../toolkit/p
 - [Use Fluid with Teams](../tabs/how-to/using-fluid-msteam.md)
 - [Build tabs for meeting](build-tabs-for-meeting.md)
 - [Tabs link unfurling and Stage View](../tabs/tabs-link-unfurling.md)
--

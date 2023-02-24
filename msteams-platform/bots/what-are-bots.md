@@ -54,14 +54,14 @@ You can use the Teams bot APIs to get information for members of a chat or team.
 You can add single sign-on authentication to your conversation bot using the following steps:
 
 * [Create Teams conversation bot](../sbs-teams-conversation-bot.yml)
-* [Configure your bot app in Azure AD](/bots/how-to/authentication/bot-sso-register-aad)
+* [Configure your bot app in Azure AD](~/bots/how-to/authentication/bot-sso-register-aad.md)
 
 <!--- TBD: For quick scanning, see if the above information can be itemized as a list.
 --->
 
 ## Code samples
 
-|Sample name | Description | C# | Node.js |
+|Sample name | Description |.NET | Node.js |
 |----------------|-----------------|--------------|--------------|
 | Bot daily task reminder| Demonstrate how to schedule a recurring task and get a reminder at a scheduled time. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-daily-task-reminder/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-daily-task-reminder/nodejs) |
 | Hello World Bot | This is a simple hello world application with both Bot and Message extension capabilities. | NA | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/v1.0.0/hello-world-bot) |

@@ -20,7 +20,7 @@ These APIs have the following shortcomings:
 * For large teams, performance is poor and timeouts are more likely: The maximum team size has grown considerably since Teams was released in early 2017. As `GetMembersAsync` or `getMembers` returns the entire member list, it takes a long time for the API call to return for large teams, and it's common for the call to time out and you have to try again.
 * Getting profile details for a single user is difficult: To get the profile information for a single user, you have to retrieve the entire member list, and then search for the one you want. There's a helper function in the Bot Framework SDK to make it simpler, but it isn't efficient.
 
-With the introduction of organization wide teams, there's a requirement to better align these APIs with Office 365 privacy controls. Bots used in large teams are able to retrieve basic profile information similar to the `User.ReadBasic.All` Microsoft Graph permission. Tenant administrators have a great deal of control over which apps and bots can be used in their tenant, but these settings are different from Microsoft Graph.
+With the introduction of organization wide teams, there's a requirement to better align these APIs with Microsoft 365 privacy controls. Bots used in large teams are able to retrieve basic profile information similar to the `User.ReadBasic.All` Microsoft Graph permission. Tenant administrators have a great deal of control over which apps and bots can be used in their tenant, but these settings are different from Microsoft Graph.
 
 The following code provides a sample JSON representation of what is returned by Teams bot APIs:
 

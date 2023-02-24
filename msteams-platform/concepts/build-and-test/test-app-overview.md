@@ -25,9 +25,12 @@ Test your bot locally. For more information, see [debug your bot locally with an
 
 To view the console logs, view or modify html, css, and network requests during runtime, add breakpoints to your JavaScript code, and perform interactive debugging access the DevTools. For more information, see [access the DevTools for Teams tabs](~/tabs/how-to/developer-tools.md).
 
+> [!NOTE]
+> Debugging is supported on desktop, web, and Android devices but not on iOS devices.
+
 ## Add test data to your Microsoft 365 tenant
 
-Add the test data to Microsoft 365 test tenant. For more information, see [add test data to your Office 365 test tenant](~/concepts/build-and-test/test-data.md), and complete all the prerequisites before you start uploading your test data.
+Add the test data to Microsoft 365 test tenant. For more information, see [add test data to your Microsoft 365 test tenant](~/concepts/build-and-test/test-data.md), and complete all the prerequisites before you start uploading your test data.
 
 ## Next step
 

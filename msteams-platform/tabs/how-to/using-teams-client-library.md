@@ -1,29 +1,30 @@
 ---
-title: Teams JavaScript client library
+title: Teams JavaScript client library SDK
 author: heath-hamilton
 ms.author: surbhigupta
-description: In this module, learn Microsoft Teams JavaScript client library (TeamsJS), which can help you build app experiences hosted in an <iframe> in Teams, Office, and Outlook.
+description: In this module, learn Microsoft Teams JavaScript client library (TeamsJS SDK), which can help you build app experiences hosted in an <iframe> in Teams, Microsoft 365 (formerly Office), and Outlook.
 ms.localizationpriority: high
 ms.topic: conceptual
+keywords: SDK TeamsJS Teams client JavaScript library
 ---
 # Teams JavaScript client library
 
-The Microsoft Teams JavaScript client library can help you create hosted experiences in Teams, Office, and Outlook, where your app content is hosted in an [iFrame](https://developer.mozilla.org/docs/Web/HTML/Element/iframe). The library is helpful for developing apps with the following Teams capabilities:
+The Microsoft Teams JavaScript client library (TeamsJS) can help you create hosted experiences in Teams, Microsoft 365 app, and Outlook, where your app content is hosted in an [iFrame](https://developer.mozilla.org/docs/Web/HTML/Element/iframe). The library is helpful for developing apps with the following Teams capabilities:
 
 * [Tabs](../../tabs/what-are-tabs.md)
 * [Dialogs (Task modules)](../../task-modules-and-cards/what-are-task-modules.md)
 
-Starting with version `2.0.0`, the existing Teams client library (`@microsoft/teams-js`, or simply `TeamsJS`) has been refactored to enable [Teams apps to run in Outlook and Office](/microsoftteams/platform/m365-apps/overview), in addition to Microsoft Teams. From a functional perspective, the latest version of TeamsJS supports all existing (v.1.x.x) Teams app functionality while adding the optional ability to host Teams apps in Outlook and Office.
+Starting with version `2.0.0`, the existing TeamsJS library (`@microsoft/teams-js`, or simply `TeamsJS`) has been refactored to enable [Teams apps to run in Outlook and Microsoft 365 app](/microsoftteams/platform/m365-apps/overview), in addition to Microsoft Teams. From a functional perspective, the latest version of TeamsJS supports all existing (v.1.x.x) Teams app functionality while adding the optional ability to host Teams apps in Outlook and Microsoft 365 app.
 
 Here's the current versioning guidance for various app scenarios:
 
 [!INCLUDE [pre-release-label](~/includes/teamjs-version-details.md)]
 
-The remainder of this article will walk you through the structure and latest updates to the Teams JavaScript client library.
+The remainder of this article will walk you through the structure and latest updates to the TeamsJS library.
 
-### Microsoft 365 support (running Teams apps in Office and Outlook)
+## Microsoft 365 support (running Teams apps in Microsoft 365 and Outlook)
 
-TeamsJS v.2.0 introduces the ability for certain types of Teams apps to run across the Microsoft 365 ecosystem. Currently, other Microsoft 365 application hosts (including Office and Outlook) for Teams apps support a subset of the application types and capabilities you can build for the Teams platform. This support will expand over time. For a summary of host support for Teams apps, see [Extend Teams apps across Microsoft 365](../../m365-apps/overview.md).
+TeamsJS v.2.0 introduces the ability for certain types of Teams apps to run across the Microsoft 365 ecosystem. Currently, other Microsoft 365 application hosts (including Microsoft 365 app and Outlook) for Teams apps support a subset of the application types and capabilities you can build for the Teams platform. This support will expand over time. For a summary of host support for Teams apps, see [Extend Teams apps across Microsoft 365](../../m365-apps/overview.md).
 
 The following table lists Teams tabs and dialogs (task modules) capabilities (public namespaces) with expanded support to run in other Microsoft 365 hosts.
 
@@ -32,21 +33,21 @@ The following table lists Teams tabs and dialogs (task modules) capabilities (pu
 
 |Capability | Host support | Notes |
 |-----------|--------------|-------|
-| app | Teams, Outlook, Office, Office app for Android | Namespace representing app initialization and lifecycle. |
+| app | Teams, Outlook, Microsoft 365, Microsoft 365 app for Android | Namespace representing app initialization and lifecycle. |
 | appInitialization| | Deprecated. Replaced by `app` namespace. |
-| appInstallDialog | Teams, Office ||
-| authentication | Teams, Outlook, Office, Office app for Android | |
+| appInstallDialog | Teams, Microsoft 365 ||
+| authentication | Teams, Outlook, Microsoft 365, Microsoft 365 app for Android | |
 | calendar | Outlook (Windows desktop only) ||
 | call | Teams||
 | chat |Teams||
-| dialog | Teams, Outlook, Office | Namespace representing dialogs (formerly named *task modules*. See notes on [Dialogs](#dialogs). |
+| dialog | Teams, Outlook, Microsoft 365 | Namespace representing dialogs (formerly named *task modules*. See notes on [Dialogs](#dialogs). |
 | geoLocation | ||
 | location |Teams| See notes on [App permissions](#app-permissions).|
 | mail | Outlook (Windows desktop only)||
 | media |Teams| See notes on [App permissions](#app-permissions).|
 | menus | Teams ||
 | monetization | Teams ||
-| pages | Teams, Outlook, Office, Office app for Android | Namespace representing page navigation. See notes on [Deep linking](#deep-linking). |
+| pages | Teams, Outlook, Microsoft 365, Microsoft 365 app for Android | Namespace representing page navigation. See notes on [Deep linking](#deep-linking). |
 | people |Teams||
 | profile | ||
 | search | ||
@@ -58,9 +59,9 @@ The following table lists Teams tabs and dialogs (task modules) capabilities (pu
 | video | Teams||
 | webStorage | Teams ||
 
-#### App permissions
+### App permissions
 
-App capabilities that require the user to grant [device permissions](../../concepts/device-capabilities/device-capabilities-overview.md) (such as *location*) aren't yet supported for apps running outside of Teams. There is currently no way to check app permissions in Settings or your app header when running in Outlook or Office. If a Teams app running in Office or Outlook calls a TeamsJS (or HTML5) API that triggers device permissions, that API generates an error and fail to display a system dialog asking for user consent.
+App capabilities that require the user to grant [device permissions](../../concepts/device-capabilities/device-capabilities-overview.md) (such as *location*) aren't yet supported for apps running outside of Teams. There is currently no way to check app permissions in Settings or your app header when running in Outlook or Microsoft 365 app. If a Teams app running in Microsoft 365 app or Outlook calls a TeamsJS (or HTML5) API that triggers device permissions, that API will generates an error and fail to display a system dialog asking for user consent.
 
 Current guidance for now is to modify your code to catch the failure:
 
@@ -75,21 +76,21 @@ When an API is unsupported or generates an error, add logic to fail gracefully o
 
 Additionally, best practice is to ensure your app manifest only specifies the device permissions it's using.
 
-#### Deep linking
+### Deep linking
 
-Prior to TeamsJS version 2.0, all deep linking scenarios were handled using `shareDeepLink` (to generate a link *to* a specific part of your app) and `executeDeepLink` (to navigate to a deeplink *from* or *within* your app). TeamsJS v.2.0 introduces a new API, `navigateToApp`, for navigating to pages (and subpages) within an app in a consistent way across app hosts (Office and Outlook, in addition to Teams). Here's the updated guidance for deep linking scenarios:
+Prior to TeamsJS version 2.0, all deep linking scenarios were handled using `shareDeepLink` (to generate a link *to* a specific part of your app) and `executeDeepLink` (to navigate to a deeplink *from* or *within* your app). TeamsJS v.2.0 introduces a new API, `navigateToApp`, for navigating to pages (and subpages) within an app in a consistent way across app hosts (Microsoft 365 app and Outlook, in addition to Teams). Here's the updated guidance for deep linking scenarios:
 
-##### Deep links into your app
+#### Deep links into your app
 
 Use `pages.shareDeepLink` (known as *shareDeepLink* prior to TeamsJS v.2.0) to generate and display a copyable link for the user to share. When clicked, a user will be prompted to install the app if it's not already installed for the application host (specified in the link path).
 
-##### Navigation within your app
+#### Navigation within your app
 
 Use the new [`pages.currentApp`](/javascript/api/@microsoft/teams-js/pages.currentapp) namespace to navigate within your app within the hosting application. Specifically, the function `navigateTo(NavigateWithinAppParams)` to allow navigation to a specific tab within the current app and the function `navigateToDefaultPage()` to navigate to the first tab defined in the app's manifest. For more information, see [Navigate within a tab app](tab-navigation.md).
 
 These APIs provide the equivalent of navigating to a deep link (as the now deprecated *executeDeepLink* was once used for) without requiring your app to construct a URL or manage different deep link formats for different application hosts.
 
-##### Deep links out of your app
+#### Deep links out of your app
 
 For deep links from your app to various areas of its current host, use the strongly typed APIs provided by the TeamsJS library. For example, use the *Calendar* capability to open a scheduling dialog or calendar item from your app.
 
@@ -97,7 +98,7 @@ For deep links from your app to other apps running in the same host, use `pages.
 
 For any other external deep linking scenarios, you can use `app.openLink`, which provides similar functionality to the now deprecated (starting in TeamsJS v.2.0) *executeDeepLink* API.
 
-#### Dialogs
+### Dialogs
 
 Starting with version 2.0 of TeamsJS, the Teams platform concept of [task module](../../task-modules-and-cards/what-are-task-modules.md) has been renamed to *dialog* for better consistency with existing concepts across the Microsoft 365 developer ecosystem. Accordingly, the `tasks` namespace has been deprecated in favor of the new `dialog` namespace.
 
@@ -126,13 +127,13 @@ An API translation layer (mapping v.1 to v.2 TeamsJS API calls) is provided to e
 
 #### Teams-only apps
 
-Even if you intend your app to only run in Teams (and not Office and Outlook), best practice is to start referencing the latest TeamsJS (*v.2.0* or later) as soon as convenient, in order to benefit from the latest improvements, new features, and support (even for Teams-only apps). TeamsJS v.1.12 will continue to be supported, but no new features or improvements will be added.
+Even if you intend your app to only run in Teams (and not Microsoft 365 app and Outlook), best practice is to start referencing the latest TeamsJS (*v.2.0* or later) as soon as convenient, in order to benefit from the latest improvements, new features, and support (even for Teams-only apps). TeamsJS v.1.12 will continue to be supported, but no new features or improvements will be added.
 
 Once you're able, the next step is to [update existing application code](#2-update-teamsjs-references) with the changes described in this article. In the meantime, the v.1 to v.2 API translation layer provides backwards compatibility, ensuring your existing Teams app continues to work in TeamsJS version 2.0.
 
 #### Teams apps running across Microsoft 365
 
-Enabling an existing Teams app to run in Outlook and Office requires all of the following:
+Enabling an existing Teams app to run in Outlook and Microsoft 365 requires all of the following:
 
 1. Dependency on TeamsJS version 2.x.x ( `@microsoft/teams-js@2.0.0`) or later,
 
@@ -222,7 +223,7 @@ async function example() {
 
 ### APIs organized into capabilities
 
-A *capability* is a logical grouping (via namespace) of APIs that provide similar functionality. You can think of Microsoft Teams, Outlook, and Office, as hosts to your tab app. A host supports a given capability if it supports all the APIs defined within that capability. A host can't partially implement a capability. Capabilities can be feature- or content-based, such as *authentication*, or *dialog*. There are also capabilities for application types such as *pages*, and other groupings.
+A *capability* is a logical grouping (via namespace) of APIs that provide similar functionality. You can think of Microsoft Teams, Outlook, and Microsoft 365 app, as hosts to your tab app. A host supports a given capability if it supports all the APIs defined within that capability. A host can't partially implement a capability. Capabilities can be feature- or content-based, such as *authentication*, or *dialog*. There are also capabilities for application types such as *pages*, and other groupings.
 
 Starting with TeamsJS v.2.0, APIs are defined as functions in a JavaScript namespace whose name matches their required capability. For example, if an app is running in a host that supports the *dialog* capability, then the app can safely call APIs such as `dialog.open` (in addition to other dialog-related APIs defined in the namespace). If an app attempts to call an API that's not supported in that host, the API generates an exception. To verify if the current host running your app supports a given capability, call the [isSupported()](#differentiate-your-app-experience) function of its namespace.
 
@@ -235,7 +236,7 @@ The name of the host your app is running in is exposed as a *hostName* property 
 * **Don't** assume certain functionality is or isn't available in a host based on the *hostName* property value. Instead, check for capability support (`isSupported`).
 * **Don't** use *hostName* to gate API calls. Instead, check for capability support (`isSupported`).
 * **Do** use *hostName* to differentiate the theme of your application based on the host it's running in. For example, you can use Microsoft Teams purple as the main accent color when running in Teams, and Outlook blue when running in Outlook.
-* **Do** use *hostName* to differentiate messages shown to the user based on which host it's running in. For example, show *Manage your tasks in Office* when running in Office on the web, and *Manage your tasks in Teams* when running in Teams.
+* **Do** use *hostName* to differentiate messages shown to the user based on which host it's running in. For example, show *Manage your tasks in Microsoft 365* when running in Microsoft 365 on the web, and *Manage your tasks in Teams* when running in Teams.
 
 #### Namespaces
 
@@ -243,7 +244,7 @@ Starting with TeamsJS v.2.0, APIs are organized into *capabilities* by way of na
 
 ##### *app* namespace
 
-The `app` namespace contains top-level APIs required for overall app usage, across Teams, Office, and Outlook. All the APIs from various other TeamsJS namespaces have been moved to the `app` namespace as of TeamsJS v.2.0:
+The `app` namespace contains top-level APIs required for overall app usage, across Teams, Microsoft 365 app, and Outlook. All the APIs from various other TeamsJS namespaces have been moved to the `app` namespace as of TeamsJS v.2.0:
 
 | Original namespace `global (window)` | New namespace `app` |
 | - | - |
@@ -265,7 +266,7 @@ The `app` namespace contains top-level APIs required for overall app usage, acro
 
 ##### *pages* namespace
 
-The `pages` namespace includes functionality for running and navigating webpages within various Microsoft 365 hosts, including Teams, Office, and Outlook. It also includes several subcapabilities, implemented as subnamespaces.
+The `pages` namespace includes functionality for running and navigating webpages within various Microsoft 365 hosts, including Teams, Microsoft 365 app, and Outlook. It also includes several subcapabilities, implemented as subnamespaces.
 
 | Original namespace `global (window)` | New namespace `pages` |
 | - | - |
@@ -346,7 +347,7 @@ Additionally, this capability has been split into a main capability (`dialog`) f
 
 ##### *teamsCore* namespace
 
-To generalize the TeamsJS library to run other Microsoft 365 hosts such as Office and Outlook, Teams-specific functionality (originally in the *global* namespace) has been moved to a *teamsCore* namespace:
+To generalize the TeamsJS library to run other Microsoft 365 hosts such as Microsoft 365 app and Outlook, Teams-specific functionality (originally in the *global* namespace) has been moved to a *teamsCore* namespace:
 
 | Original namespace `global (window)` | New namespace `teamsCore`  |
 | - | - |
@@ -357,7 +358,7 @@ To generalize the TeamsJS library to run other Microsoft 365 hosts such as Offic
 
 #### Updates to the *Context* interface
 
-The `Context` interface has been moved to the `app` namespace and updated to group similar properties for better scalability as it runs in Outlook and Office, in addition to Teams.
+The `Context` interface has been moved to the `app` namespace and updated to group similar properties for better scalability as it runs in Outlook and Microsoft 365 app, in addition to Teams.
 
 A new property `app.Context.app.host.name` has been added to enable tabs to differentiate user experience depending on the host application.
 
@@ -420,11 +421,11 @@ In the *Visual Studio Code Extensions Marketplace*, search for **Teams Toolkit**
 
 ### 2. Update TeamsJS references
 
-To run in Outlook and Office, your app will need to depend on the [npm package](https://www.npmjs.com/package/@microsoft/teams-js/v/2.0.0) `@microsoft/teams-js@2.0.0` (or later). To perform these steps manually, and for more information on the API changes, see the following sections on [Callbacks converted to promises](#callbacks-converted-to-promises) and [APIs organized into capabilities](#apis-organized-into-capabilities).
+To run in Outlook and Microsoft 365 app, your app will need to depend on the [npm package](https://www.npmjs.com/package/@microsoft/teams-js/v/2.0.0) `@microsoft/teams-js@2.0.0` (or later). To perform these steps manually, and for more information on the API changes, see the following sections on [Callbacks converted to promises](#callbacks-converted-to-promises) and [APIs organized into capabilities](#apis-organized-into-capabilities).
 
 1. Ensure you have the latest [Teams Toolkit](https://aka.ms/teams-toolkit) (version 2.10.0 or later)
 1. Open the *Command palette*: `Ctrl+Shift+P`
-1. Run the command `Teams: Upgrade Teams JS SDK references to support Outlook and Office apps`
+1. Run the command `Teams: Upgrade Teams JS SDK references to support Outlook and Microsoft 365 apps`
 
 After completion, the utility will have updated your `package.json` file with the TeamsJS version 2.x.x (`@microsoft/teams-js@2.0.0` or later) dependency, and your `*.js/.ts` and `*.jsx/.tsx` files will be updated with:
 
@@ -441,12 +442,12 @@ After completion, the utility will have updated your `package.json` file with th
 
 ### 3. Update the manifest (optional)
 
-If you're updating a Teams app to run in Office and Outlook, you'll also need to update the app manifest to version 1.13 or later. You can do this easily with Teams Toolkit, or manually.
+If you're updating a Teams app to run in Microsoft 365 app and Outlook, you'll also need to update the app manifest to version 1.13 or later. You can do this easily with Teams Toolkit, or manually.
 
 # [Teams Toolkit](#tab/manifest-teams-toolkit)
 
 1. Open the *Command palette*: `Ctrl+Shift+P`
-1. Run **Teams: Upgrade Teams manifest to support Outlook and Office apps** command and select your app manifest file. Changes will be made in place.
+1. Run **Teams: Upgrade Teams manifest to support Outlook and Microsoft 365 apps** command and select your app manifest file. Changes will be made in place.
 
 # [Manual steps](#tab/manifest-manual)
 
@@ -467,5 +468,5 @@ If you used Teams Toolkit to create your personal app, you can also use it to va
 
 ## Next steps
 
-* Use the [TeamsJS reference](/javascript/api/overview/msteams-client) to get started with the Microsoft Teams JavaScript client library.
+* Use the [TeamsJS library reference](/javascript/api/overview/msteams-client) to get started with the TeamsJS library.
 * Review the [changelog](https://github.com/OfficeDev/microsoft-teams-library-js/blob/main/packages/teams-js/CHANGELOG.md) for  latest updates to TeamsJS.

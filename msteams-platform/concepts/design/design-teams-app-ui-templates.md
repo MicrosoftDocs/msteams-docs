@@ -2,7 +2,7 @@
 title: Designing your app with UI templates
 author: heath-hamilton
 description: Learn to design your app faster with standardized UI components, layouts, and patterns commonly seen across Microsoft Teams.
-ms.author: lajanuar
+ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: reference
 ---
@@ -26,7 +26,7 @@ Grab UI templates for your app design from the Microsoft Teams UI Kit, which als
 View and test individual Teams UI templates and related components in your browser.
 
 > [!div class="nextstepaction"]
-> [Try the UI library (playground)](https://dev-int.teams.microsoft.com/storybook/main/index.html)
+> [Try the UI library (playground)](https://63587347138fdad13ed63ccd-omfbjvvebn.chromatic.com/)
 
 Import these templates and related components directly into your Teams app project.
 
@@ -91,7 +91,7 @@ You can use different card sizes (single, double, and full) to stack and organiz
 
 ## Empty state
 
-The empty state template can be used for many scenarios, including sign in, first-run experiences, error messages, and more. It’s highly flexible⁠—adapt it to use one, a few, or all of the components in the following design.
+The empty state template can be used for many scenarios, including sign in, first-run experiences, error messages, and more. It's highly flexible⁠—adapt it to use one, a few, or all of the components in the following design.
 
 ### Top use cases
 
@@ -177,7 +177,10 @@ You can design app sign-in flows for different Teams contexts and identity provi
 
 ## Settings
 
-Settings screens are where users can configure their preferences with your app. (Note: Settings is a container for [basic UI components](~/concepts/design/design-teams-app-basic-ui-components.md).)
+Settings screens are where users can configure their preferences with your app.
+
+> [!NOTE]
+> Settings is a container for [basic UI components](~/concepts/design/design-teams-app-basic-ui-components.md).
 
 ### Top use case
 
