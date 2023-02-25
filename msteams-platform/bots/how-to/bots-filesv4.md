@@ -314,7 +314,7 @@ private async Task SendFileCardAsync(ITurnContext turnContext, string filename, 
 
 The following code sample demonstrates how to obtain file consent and upload files to Teams from a bot:
 
-|**Sample name** | **Description** | **.NET** | **Node.js** | **Python**| **Manifest**
+|**Sample name** | **Description** | **.NET** | **Node.js** | **Python**| **Manifest**|
 |----------------|-----------------|--------------|----------------|-----------|-----------|
 | File upload | Demonstrates how to obtain file consent and upload files to Teams using bot. Also, how to receive a file sent to a bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-file-upload/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-file-upload/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-file-upload/python) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-file-upload/csharp/demo-manifest/bot-file-upload.zip)
 

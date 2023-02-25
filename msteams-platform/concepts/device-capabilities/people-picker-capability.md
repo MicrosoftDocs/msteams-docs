@@ -113,7 +113,7 @@ The following table lists the error codes and their descriptions:
 
 ## Code sample
 
-| Sample name           | Description | .NET |Node.js    | Manifest
+| Sample name           | Description | .NET |Node.js    | Manifest|
 |:---------------------|:--------------|:---------|:---------|:---------|
 |Tab people picker | Sample tab app which shows the feature of people picker using teams js client sdk. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-people-picker/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-people-picker/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-people-picker/csharp/demo-manifest/Tab-People-Picker.zip)
 

@@ -213,7 +213,7 @@ DELETE /v3/conversations/{conversationId}/activities/{activityId}
 
 The following code sample demonstrates basics of conversations:
 
-| **Sample name** | **Description** | **.NET** | **Node.js** | **Python** | **Manifest**
+| **Sample name** | **Description** | **.NET** | **Node.js** | **Python** | **Manifest**|
 |----------------------|-----------------|--------|-------------|--------|--------|
 | Teams Conversation Basics  | Sample app which demonstrates use of different bot conversation events available in bot framework v4 for personal and teams scope. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/python) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp/demo-manifest/bot-conversation.zip) |
 
