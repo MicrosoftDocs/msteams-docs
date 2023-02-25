@@ -803,11 +803,11 @@ The general retry guidance for each status code is listed in the following table
 
 ## Code sample
 
-| Sample name | Description | Node.js | .NETCore | Python | .NET |
-|----------------|-----------------|--------------|----------------|-----------|-----|
-| Teams conversation bot | Messaging and conversation event handling. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/python) | NA |
+| Sample name | Description | Node.js | .NETCore | Python | .NET | Manifest
+|----------------|-----------------|--------------|----------------|-----------|-----|-----|
+| Teams conversation bot | Sample app which demonstrates use of different bot conversation events available in bot framework v4 for personal and teams scope. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/python) | NA |
 | Teams app localization | Teams app localization using bot and tab. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/nodejs) | NA | NA | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) |
-| Update and delete message | Sample app shows how to get a update and delete event notification in your bot. | [View]() | NA | NA | [View]() |
+| Update and delete message | Sample app which shows how to capture events for updated and delete messages in chat using bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp) | NA | NA |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp/demo-manifest)
 
 ## Next step
 

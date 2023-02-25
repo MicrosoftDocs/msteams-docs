@@ -105,7 +105,7 @@ microsoftTeams.media.scanBarCode((error: microsoftTeams.SdkError, decodedText: s
 
 | Sample name           | Description | .NET |Node.js    | Manifest
 |:---------------------|:--------------|:---------|:---------|:---------|
-|Bot join team by QR | This sample demos a feature where user can join a team using QR code containing the team's id. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-join-team-using-qr-code/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-join-team-using-qr-code/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-join-team-using-qr-code/csharp/demo-manifest/Bot-Join-Team-By-QR.zip)
+|Bot join team by QR | This sample demos a feature where user can join a team using QR code containing the team's id through bot. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-join-team-using-qr-code/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-join-team-using-qr-code/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-join-team-using-qr-code/csharp/demo-manifest/Bot-Join-Team-By-QR.zip)
 |Tab product inspection | This sample app demonstrate a feature where user can scan a product, capture a image, and mark it as approved/rejected. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-product-inspection/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-product-inspection/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-product-inspection/csharp/demo-manifest/Tab-Product-Inspection.zip)
 
 ## See also
