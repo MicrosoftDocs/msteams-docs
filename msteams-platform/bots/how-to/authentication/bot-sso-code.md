@@ -477,7 +477,7 @@ Use the following code snippet to handle the access token in case the app user l
 
 | **Sample name** | **Description** | **C#** | **Node.js** |
 | --- | --- | --- | --- | 
-| Bot framework SDK | This sample code demonstrates how to get started with authentication in a bot for Microsoft Teams. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/csharp_dotnetcore/BotConversationSsoQuickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/js)  |
+| Bot framework SDK | This sample code shows how to get started with authentication in a bot for Microsoft Teams. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/csharp_dotnetcore/BotConversationSsoQuickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/js)  |
 
 ::: zone-end
 

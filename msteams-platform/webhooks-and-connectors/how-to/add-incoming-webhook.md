@@ -135,7 +135,7 @@ To remove an Incoming Webhook from a Teams channel, follow these steps:
 
 | Sample Name           | Description | .NET    |  Node.js |
 |:---------------------|:--------------|:---------|:--------|
-|Incoming Webhook|This sample demos teams tab to type in Incoming Webhook URL and message card payload, which sends the card in team and also demonstrates the HttpPOST action in the card. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/incoming-webhook/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/incoming-webhook/nodejs) |
+|Incoming Webhook|This sample demos Teams tab to type in Incoming Webhook URL and message card payload, which sends the card in team and also demonstrates the HttpPOST action in the card. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/incoming-webhook/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/incoming-webhook/nodejs) |
 
 ## See also
 
