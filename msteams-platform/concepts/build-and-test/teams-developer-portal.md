@@ -72,7 +72,7 @@ To view the Changelog, sign in to [Developer Portal](https://dev.teams.microsoft
 
 :::image type="content" source="../../assets/images/tdp/changelog.png" alt-text="Screenshot shows the Changelog in the Developer Portal highlighted in red.":::
 
-The updates for Changelog in the Developer Portal are categorized based on the following:
+The updates for Changelog in Developer Portal are categorized based on the following:
 
 * **Added**: Updates on a service or feature that's a new feature or capability.
 * **Changed**: Updates on a service or API that's modified.
