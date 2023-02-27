@@ -22,8 +22,7 @@ Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-tool
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/select-resource.png" alt-text="Screenshot showing the subscription to use for the Azure resources.":::
 
-   > [!NOTE]
-   > Your app is hosted using Azure resources.
+Your app is hosted using Azure resources.
 
     A dialog warns you that costs may be incurred when running resources in Azure.
 
@@ -61,8 +60,7 @@ In your terminal window:
 
    When prompted, select an Azure subscription to use Azure resources.
 
-   > [!NOTE]
-   > Your app is hosted using Azure resources.
+   Your app is hosted using Azure resources.
 
 1. Run `teamsfx deploy`.
 
