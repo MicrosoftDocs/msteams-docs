@@ -58,20 +58,20 @@ To update your app's code:
 
    # [csharp](#tab/cs1)
 
-    Add the following code snippet to `AdapterWithErrorHandler.cs` (or the equivalent class in your app's code):
-    ```csharp
+   Add the following code snippet to `AdapterWithErrorHandler.cs` (or the equivalent class in your app's code):
+   ```csharp
     base.Use(new TeamsSSOTokenExchangeMiddleware(storage, configuration["ConnectionName"]));
-    ```
+   ```
 
    # [JavaScript](#tab/js1)
 
-    Add the following code snippet to `index.js` (or the equivalent class in your app's code):
+   Add the following code snippet to `index.js` (or the equivalent class in your app's code):
 
-    ```JavaScript
+   ```JavaScript
     const {TeamsSSOTokenExchangeMiddleware} = require('botbuilder');
     const tokenExchangeMiddleware = new TeamsSSOTokenExchangeMiddleware(memoryStorage, env.connectionName);
     adapter.use(tokenExchangeMiddleware);
-    ```
+   ```
 
    ---
 
@@ -144,13 +144,13 @@ To update your app's code:
 
     // Import required packages
     const path = require('path');
-        
+    
     // Read botFilePath and botFileSecret from .env file.
     const ENV_FILE = path.join(__dirname, '.env');
     require('dotenv').config({ path: ENV_FILE });
-        
+    
     const restify = require('restify');
-        
+    
     // Import required bot services.
     // See https://learn.microsoft.com/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0 to learn more about the different parts of a bot.
     const {
@@ -161,17 +161,17 @@ To update your app's code:
         ConfigurationBotFrameworkAuthentication,
         TeamsSSOTokenExchangeMiddleware
     } = require('botbuilder');
-        
+    
     const { TeamsBot } = require('./bots/teamsBot');
     const { MainDialog } = require('./dialogs/mainDialog');
     const { env } = require('process');
-        
+    
     const botFrameworkAuthentication = new ConfigurationBotFrameworkAuthentication(process.env);
-        
+    
     var conname = env.connectionName;
-        
+    
     console.log(`\n${ conname } is the con name`);
-        
+    
     // Create adapter.
     // See https://learn.microsoft.com/javascript/api/botbuilder-core/botadapter?view=botbuilder-ts-latest to learn more about how bot adapter.
     const adapter = new CloudAdapter(botFrameworkAuthentication);
@@ -196,11 +196,11 @@ To update your app's code:
     
         // Send a message to the user.
         await context.sendActivity('The bot encountered an error or bug.');
-         await context.sendActivity('To continue to run this bot, please fix the bot source code.');
+        await context.sendActivity('To continue to run this bot, please fix the bot source code.');
         // Clear out state.
         await conversationState.delete(context);
     };
-        
+    
     // Define the state store for your bot.
     // See https://aka.ms/about-bot-state to learn more about using MemoryStorage.
     // A bot requires a state storage system to persist the dialog and user state between messages.
@@ -209,7 +209,7 @@ To update your app's code:
     // Create conversation and user state with in-memory storage provider.
     const conversationState = new ConversationState(memoryStorage);
     const userState = new UserState(memoryStorage);
-        
+    
     // Create the main dialog.
     const dialog = new MainDialog();
     // Create the bot that will handle incoming messages.
@@ -218,13 +218,13 @@ To update your app's code:
     // Create HTTP server.
     const server = restify.createServer();
     server.use(restify.plugins.bodyParser());
-        
+    
     server.listen(process.env.port || process.env.PORT || 3978, function() {
         console.log(`\n${ server.name } listening to ${ server.url }`);
         console.log('\nGet Bot Framework Emulator: https://aka.ms/botframework-emulator');
         console.log('\nTo talk to your bot, open the emulator select "Open Bot"');
     });
-        
+    
     // Listen for incoming requests.
     server.post('/api/messages', async (req, res) => {
         // Route received a request to adapter for processing.
@@ -232,7 +232,7 @@ To update your app's code:
     });
     ```
 
-   ---
+    ---
 
 ### Consent dialog for getting access token
 
@@ -269,54 +269,54 @@ Use the following code snippet to invoke response:
 
 ```csharp
 public MainDialog(IConfiguration configuration, ILogger<MainDialog> logger)
-        : base(nameof(MainDialog), configuration["ConnectionName"])
-    {
-        AddDialog(new OAuthPrompt(
-            nameof(OAuthPrompt),
-            new OAuthPromptSettings
+            : base(nameof(MainDialog), configuration["ConnectionName"])
+        {
+            AddDialog(new OAuthPrompt(
+                nameof(OAuthPrompt),
+                new OAuthPromptSettings
+                {
+                    ConnectionName = ConnectionName,
+                    Text = "Please Sign In",
+                    Title = "Sign In",
+                    Timeout = 300000, // User has 5 minutes to login (1000 * 60 * 5)
+                    EndOnInvalidMessage = true
+                }));
+
+            AddDialog(new ConfirmPrompt(nameof(ConfirmPrompt)));
+
+            AddDialog(new WaterfallDialog(nameof(WaterfallDialog), new WaterfallStep[]
             {
-                ConnectionName = ConnectionName,
-                Text = "Please Sign In",
-                Title = "Sign In",
-                Timeout = 300000, // User has 5 minutes to login (1000 * 60 * 5)
-                EndOnInvalidMessage = true
+                PromptStepAsync,
+                LoginStepAsync,
             }));
 
-        AddDialog(new ConfirmPrompt(nameof(ConfirmPrompt)));
-
-        AddDialog(new WaterfallDialog(nameof(WaterfallDialog), new WaterfallStep[]
-        {
-            PromptStepAsync,
-            LoginStepAsync,
-        }));
-
-        // The initial child Dialog to run.
-        InitialDialogId = nameof(WaterfallDialog);
-    }
+            // The initial child Dialog to run.
+            InitialDialogId = nameof(WaterfallDialog);
+        }
 
 
 private async Task<DialogTurnResult> PromptStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
-    {
-        return await stepContext.BeginDialogAsync(nameof(OAuthPrompt), null, cancellationToken);
-    }
+        {
+            return await stepContext.BeginDialogAsync(nameof(OAuthPrompt), null, cancellationToken);
+        }
 
 private async Task<DialogTurnResult> LoginStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
-    {
-                
-        var tokenResponse = (TokenResponse)stepContext.Result;
-        if (tokenResponse?.Token != null)
         {
-            var token = tokenResponse.Token;
+            
+            var tokenResponse = (TokenResponse)stepContext.Result;
+            if (tokenResponse?.Token != null)
+            {
+                var token = tokenResponse.Token;
 
-            // On successful login, the token contains sign in token.
-        }
-        else 
-        {
+                // On successful login, the token contains sign in token.
+            }
+            else 
+            {
                 await stepContext.Context.SendActivityAsync(MessageFactory.Text("Login was not successful please try again."), cancellationToken);
-        }            
+            }            
 
-        return await stepContext.EndDialogAsync(cancellationToken: cancellationToken);
-    }
+            return await stepContext.EndDialogAsync(cancellationToken: cancellationToken);
+        }
 ```
 
 # [JavaScript](#tab/js3)
@@ -324,44 +324,44 @@ private async Task<DialogTurnResult> LoginStepAsync(WaterfallStepContext stepCon
 ```JavaScript
 class MainDialog {
   
-    this.addDialog(new OAuthPrompt(OAUTH_PROMPT, {
-                connectionName: process.env.connectionName,
-                text: 'Please Sign In',
-                title: 'Sign In',
-                timeout: 300000
-            }));
+        this.addDialog(new OAuthPrompt(OAUTH_PROMPT, {
+                    connectionName: process.env.connectionName,
+                    text: 'Please Sign In',
+                    title: 'Sign In',
+                    timeout: 300000
+                }));
 
-    this.addDialog(new ConfirmPrompt(CONFIRM_PROMPT));
+        this.addDialog(new ConfirmPrompt(CONFIRM_PROMPT));
 
-    this.addDialog(new WaterfallDialog(MAIN_WATERFALL_DIALOG, [
-                this.promptStep.bind(this),
-                this.loginStep.bind(this),
-            ]));
+        this.addDialog(new WaterfallDialog(MAIN_WATERFALL_DIALOG, [
+                    this.promptStep.bind(this),
+                    this.loginStep.bind(this),
+                ]));
 
-    this.initialDialogId = MAIN_WATERFALL_DIALOG;
+        this.initialDialogId = MAIN_WATERFALL_DIALOG;
 
-}
+    }
 
 async promptStep(stepContext) {
-    try {
-        return await stepContext.beginDialog(OAUTH_PROMPT);
-    } catch (err) {
-        console.error(err);
+        try {
+            return await stepContext.beginDialog(OAUTH_PROMPT);
+        } catch (err) {
+            console.error(err);
+        }
     }
-}
 
 async loginStep(stepContext) {
-    // Get the token from the previous step. Note that we could also have gotten the
-    // token directly from the prompt itself. There is an example of this in the next method.
-    const tokenResponse = stepContext.result;
-    if (!tokenResponse || !tokenResponse.token) {
-        await stepContext.context.sendActivity('Login was not successful please try again.');
-    } else {
-        const token = tokenResponse.token;
-        // On successful login, the token contains sign in token.
+        // Get the token from the previous step. Note that we could also have gotten the
+        // token directly from the prompt itself. There is an example of this in the next method.
+        const tokenResponse = stepContext.result;
+        if (!tokenResponse || !tokenResponse.token) {
+            await stepContext.context.sendActivity('Login was not successful please try again.');
+        } else {
+            const token = tokenResponse.token;
+            // On successful login, the token contains sign in token.
+        }
+        return await stepContext.endDialog();
     }
-    return await stepContext.endDialog();
-}
 ```
 
 ---
@@ -423,51 +423,51 @@ Use the following code snippet to handle the access token in case the app user l
 # [csharp](#tab/cs4)
 
 ```csharp
-private async Task<DialogTurnResult> InterruptAsync(DialogContext innerDc, 
-CancellationToken cancellationToken = default(CancellationToken))
-    {
-        if (innerDc.Context.Activity.Type == ActivityTypes.Message)
+    private async Task<DialogTurnResult> InterruptAsync(DialogContext innerDc, 
+    CancellationToken cancellationToken = default(CancellationToken))
         {
-            var text = innerDc.Context.Activity.Text.ToLowerInvariant();
-
-            // Allow logout anywhere in the command.
-            if (text.IndexOf("logout") >= 0)
+            if (innerDc.Context.Activity.Type == ActivityTypes.Message)
             {
-                // The UserTokenClient encapsulates the authentication processes.
-                var userTokenClient = innerDc.Context.TurnState.Get<UserTokenClient>();
-                await userTokenClient.SignOutUserAsync(
-                innerDc.Context.Activity.From.Id, 
-                ConnectionName, 
-                innerDc.Context.Activity.ChannelId, 
-                cancellationToken
-                ).ConfigureAwait(false);
+                var text = innerDc.Context.Activity.Text.ToLowerInvariant();
 
-                await innerDc.Context.SendActivityAsync(MessageFactory.Text("You have been signed out."), cancellationToken);
-                return await innerDc.CancelAllDialogsAsync(cancellationToken);
+                // Allow logout anywhere in the command.
+                if (text.IndexOf("logout") >= 0)
+                {
+                    // The UserTokenClient encapsulates the authentication processes.
+                    var userTokenClient = innerDc.Context.TurnState.Get<UserTokenClient>();
+                    await userTokenClient.SignOutUserAsync(
+                    innerDc.Context.Activity.From.Id, 
+                    ConnectionName, 
+                    innerDc.Context.Activity.ChannelId, 
+                    cancellationToken
+                    ).ConfigureAwait(false);
+
+                    await innerDc.Context.SendActivityAsync(MessageFactory.Text("You have been signed out."), cancellationToken);
+                    return await innerDc.CancelAllDialogsAsync(cancellationToken);
+                }
             }
-        }
 
-        return null;
-    }
+            return null;
+        }
 ```
 
 # [JavaScript](#tab/js4)
 
 ```JavaScript
-async interrupt(innerDc) {
-    if (innerDc.context.activity.type === ActivityTypes.Message) {
-        const text = innerDc.context.activity.text.toLowerCase();
-        if (text === 'logout') {
-            const userTokenClient = innerDc.context.turnState.get(innerDc.context.adapter.UserTokenClientKey);
+    async interrupt(innerDc) {
+        if (innerDc.context.activity.type === ActivityTypes.Message) {
+            const text = innerDc.context.activity.text.toLowerCase();
+            if (text === 'logout') {
+                const userTokenClient = innerDc.context.turnState.get(innerDc.context.adapter.UserTokenClientKey);
 
-            const { activity } = innerDc.context;
-            await userTokenClient.signOutUser(activity.from.id, this.connectionName, activity.channelId);
+                const { activity } = innerDc.context;
+                await userTokenClient.signOutUser(activity.from.id, this.connectionName, activity.channelId);
 
-            await innerDc.context.sendActivity('You have been signed out.');
-            return await innerDc.cancelAllDialogs();
+                await innerDc.context.sendActivity('You have been signed out.');
+                return await innerDc.cancelAllDialogs();
+            }
         }
     }
-}
 ```
 
 ---
