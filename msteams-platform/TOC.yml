@@ -750,7 +750,7 @@
        displayName: Font, Broken links, functional bugs, app crashes, unexpected errors, app description, Microsoft trademark and brand guidelines, testability, app icon guidelines, app name mismatch, developer name mismatch      
   - name: Help your customers adopt your app
     href: promote-app-adoption.md
-    displayName: promote app awareness, app adoption 
+    displayName: promote app awareness, app adoption, rollout, admin approval
 - name: Monetize your app
   items:
   - name: Overview
