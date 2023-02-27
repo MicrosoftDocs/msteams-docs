@@ -47,7 +47,7 @@ To enable in-app purchase experience, update your Teams app `manifest.json` file
 
 To trigger in-app purchase for the app, invoke the `openPurchaseExperience` API from your web app.
 
-Following code snippet is an example of calling the API from the Teams app built using Teams JavaScript client library:
+Following code snippet is an example of calling the API from the Teams app built using Microsoft Teams JavaScript client library:
 
 # [TeamsJS v1](#tab/jsonV11)
 
