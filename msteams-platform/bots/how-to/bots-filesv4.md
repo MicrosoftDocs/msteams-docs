@@ -32,8 +32,7 @@ Alternately, you can send files to and receive files from a bot using the Teams 
 
 ## Use the Teams bot APIs
 
-> [!NOTE]
-> Teams bot APIs work only in the `personal` context. They do not work in the `channel` or `groupchat` context.
+Teams bot APIs work only in the `personal` context. They do not work in the `channel` or `groupchat` context.
 
 Using Teams APIs, the bot can directly send and receive files with users in the `personal` context, also known as personal chats. Implement features, such as expense reporting, image recognition, file archival, and e-signatures involving the editing of file content. Files shared in Teams typically appear as cards and allow rich in-app viewing.
 
