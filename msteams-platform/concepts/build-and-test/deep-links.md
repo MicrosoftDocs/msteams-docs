@@ -5,7 +5,7 @@ ms.topic: how-to
 ms.localizationpriority: high
 ---
 
-# Deep links
+# Configure deep links
 
 Deep links are a navigation mechanism that helps users to connect with features and information within Teams and Teams app. Some scenarios where creating deep links can be useful are as follows:
 
@@ -17,17 +17,11 @@ Deep links can be categorized as follows:
 
 :::image type="content" source="~/assets/images/deep-links.png" alt-text="Diagram that shows different scenarios for deep links.":::
 
-### Deep link to an application
+* Deep link to an app: You can open the app install dialog, navigate within your app, and generate a deep link and navigate to your tab through [deep link to an app](~/concepts/build-and-test/deep-link-application.md).
 
-You can open the app install dialog, navigate within your app, and generate a deep link and navigate to your tab through [deep link to an app](~/concepts/build-and-test/deep-link-application.md).
+* Deep link to a chat: You can navigate to a channel conversation, chat messages, and to file in a channel through [deep link to a chat](~/concepts/build-and-test/deep-link-teams.md).
 
-### Deep link to a chat
-
-You can navigate to a channel conversation, chat messages, and to file in a channel through [deep link to a chat](~/concepts/build-and-test/deep-link-teams.md).
-
-### Deep link to a workflow
-
-You can create a deep link to perform a specific task in Teams, such as to create a new chat, open a scheduling dialog, and navigate to audio-video call through [deep link to a workflow](~/concepts/build-and-test/deep-link-workflow.md).
+* Deep link to a workflow: You can create a deep link to perform a specific task in Teams, such as to create a new chat, open a scheduling dialog, and navigate to audio-video call through [deep link to a workflow](~/concepts/build-and-test/deep-link-workflow.md).
 
 The Microsoft Teams JavaScript client library (TeamsJS) can also be used for the process of navigation. For some scenarios, such as navigating to content and information within your tab or launching a chat dialog, TeamsJS provides typed APIs that provide improved experience. These APIs are recommended for Teams apps that might be run in other hosts (Outlook, Microsoft 365 app), as they also provide a way to check that the capability being used is supported by that host.
 

@@ -9,25 +9,27 @@ ms.localizationpriority: high
 
 # Deep link to an application
 
-You can create deep links to a tab, open the application profile dialog or navigation within the app and more. You can create a deep link for the app after the app is listed in the Teams store.
+You can configure deep links to a tab, app install dialog or browse within the app and more. You can create a deep link for the app after the app is listed in the Teams store and deep link to an app isn't supported for custom apps.
 
 If your app is approved for mobile platform, you can deep link to an app on mobile. Apple App Store Connect Team ID is required additionally for the deep link to work on Teams-iOS. For more information, see [how to update Apple App Store Connect Team ID](../deploy-and-publish/appsource/prepare/update-apple-store-team-connect-id.md).
 
-Deep link to an app isn't supported for custom apps.
-
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
-## Open the application profile dialog
+## Deep link to application install dialog
 
-You can open an app install dialog from your Teams app and also can install the app in other contexts. Use the following deep link format to open an app install dialog from your Teams:
+Use deep links to allow the user to open an app install dialog or install your app in other contexts. You can configure a deep link that opens the app install dialog for the user, who can then install your app. 
 
-`https://teams.microsoft.com/l/app/<your-app-id>`, where `<your-app-id>` is the application ID(f46ad259-0fe5-4f12-872d-c737b174bcb4) and following lists `appId` for different apps:
+Following is the deep link format to open an app install dialog from your Teams client:
+
+`https://teams.microsoft.com/l/app/<your-app-id>`
+
+Where `<your-app-id>` is your application ID (f46ad259-0fe5-4f12-872d-c737b174bcb4) and following lists `appId` for different apps:
 
 * Side loaded apps: Manifest ID
 * Apps submitted to org catalog: Org catalog ID
 * Apps submitted to Teams app store: Store ID
 
-Applications can use the TeamsJS library to open the dialog without manually generating the deep link. Following is an example to open the app install dialog using TeamsJS:
+You can also use the TeamsJS library to open an app install dialog other than manually configuring the deep link. Following is an example to open the app install dialog using TeamsJS at the trigger of your choice in the app:
 
 # [TeamsJS v2](#tab/teamsjs-v2)
 
