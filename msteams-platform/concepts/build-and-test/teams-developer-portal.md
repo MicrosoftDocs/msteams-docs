@@ -68,7 +68,7 @@ Follow the steps to import and manage your existing app in Developer Portal:
 
 Changelog for Developer Portal allows you to stay engaged with the latest updates in Teams. You can view the updates about features, recent changes in APIs, and important bug fixes.
 
-To view the Changelog, sign in to [Developer Portal](https://dev.teams.microsoft.com) and select **Changelog** from the left pane.
+To view **Changelog**, sign in to [Developer Portal](https://dev.teams.microsoft.com) and select **Changelog** from the left pane.
 
 :::image type="content" source="../../assets/images/tdp/changelog.png" alt-text="Screenshot shows the Changelog in the Developer Portal highlighted in red.":::
 
