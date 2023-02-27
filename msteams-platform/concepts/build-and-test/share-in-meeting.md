@@ -9,9 +9,6 @@ keywords: Share in Meeting
 
 Share in meeting allows users to share documents or third-party web apps to the meeting stage. The meeting participants can collaborate and interact with the third-party web apps or edit the documents together.
 
-> [!NOTE]
-> Share in meeting is currently available in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
-
 The following image shows the **Share in meeting** button on the web app:
 
 :::image type="content" source="../../assets/images/share-in-teams-meeting/web-app.png" alt-text="Screenshot shows share in meeting button on the web app.":::
