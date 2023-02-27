@@ -425,7 +425,7 @@ If you select HTTP trigger, the scaffolded notification API doesn't have authent
 
 * Use an API key. You can use [function access keys](/azure/azure-functions/security-concepts?tabs=v4#function-access-keys), if you select Azure Functions to host your notification bot.
 
-* Use an access token issued by Azure Active Directory (Azure AD).
+* Use an access token issued by Azure Active Directory (Azure AD). For more information, see [Configure SSO for your bot in Azure AD](../authentication/bot-sso-register-aad.md).
 
 There can be more authentication or authorization solutions for an API, you can select as required.
 
@@ -574,3 +574,4 @@ Follow the [step-by-step](../../../sbs-gs-notificationbot.yml) guide to build Te
 * [Adaptive Cards](../../../task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 * [TeamsFx SDK](../../../toolkit/TeamsFx-SDK.md)
 * [Bot Framework SDK](/azure/bot-service/bot-builder-basics)
+* [Send proactive installation messages](../../../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md)

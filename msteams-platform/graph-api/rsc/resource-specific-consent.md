@@ -591,9 +591,9 @@ If your Teams admin allows custom app uploads, you can [sideload your app](~/con
 
 ## Code sample
 
-| **Sample name** | **Description** | **.NET** |**Node.js** |
-|-----------------|-----------------|----------------|----------------|
-| Resource-Specific Consent (RSC) | Use RSC to call Graph APIs. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-rsc/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-rsc/nodeJs)|
+| **Sample name** | **Description** | **.NET** |**Node.js** | **Manifest**|
+|-----------------|-----------------|----------------|----------------|----------------|
+| Resource-Specific Consent (RSC) | Use RSC to call Graph APIs. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-rsc/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-rsc/nodeJs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-rsc/csharp/demo-manifest/graph-rsc.zip)|
 
 ## See also
 
