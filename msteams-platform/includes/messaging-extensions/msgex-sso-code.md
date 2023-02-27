@@ -297,7 +297,7 @@ private async Task<DialogTurnResult> LoginStepAsync(WaterfallStepContext stepCon
         }
 ```
 
-   # [JavaScript](#tab/js2)
+# [JavaScript](#tab/js3)
 
    ```JavaScript
     class MainDailog {
@@ -475,7 +475,7 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
 
 Use the following code snippet to handle the access token in case the app user logs out:
 
-# [csharp](#tab/cs2)
+# [csharp](#tab/cs4)
 
 ```csharp
     private async Task<DialogTurnResult> InterruptAsync(DialogContext innerDc, 
@@ -506,7 +506,7 @@ Use the following code snippet to handle the access token in case the app user l
         }
 ```
 
-# [JavaScript](#tab/js3)
+# [JavaScript](#tab/js4)
 
 ```JavaScript
     async interrupt(innerDc) {
