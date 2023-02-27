@@ -4,7 +4,7 @@ author: surbhigupta
 description: Create configuration page to collect information from user. Also, get context data for Microsoft Teams tabs, know about authentication, modify or remove tabs.
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.author: lajanuar
+ms.author: v-npaladugu
 ---
 # Create a configuration page
 
@@ -305,7 +305,7 @@ const configPromise = pages.config.setConfig({
     removeUrl: "add removal page URL here"
 });
 configPromise.
-    then((result) => {/*Successful operation*/).
+    then((result) => {/*Successful operation*/}).
     catch((error) => {/*Unsuccessful operation*/});
 ```
 

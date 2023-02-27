@@ -212,10 +212,9 @@ Microsoft Teams will ensure that keyboard navigation cycles from dialog header i
 
 ## Code sample
 
-|Sample name | Description | .NET | Node.js|
-|----------------|-----------------|--------------|----------------|
-|Task module sample bots-V4 | Samples for creating dialogs. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/nodejs)|
-|Task module sample tabs and bots-V3 | Samples for creating dialogs. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/nodejs)|
+|Sample name | Description | .NET | Node.js | Manifest|
+|----------------|-----------------|--------------|----------------|----------------|
+|Task module sample bots-V4 | Samples for creating dialogs. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/csharp/demo-manifest/bot-task-module.zip)|
 
 ## Next step
 
