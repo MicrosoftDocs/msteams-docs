@@ -12,11 +12,13 @@ A bot is also referred to as a chatbot or conversational bot. It's an app that r
 
 It's recommended to start with [build your first bot app using JavaScript](../sbs-gs-bot.yml) or [build notification bot with JavaScript](../sbs-gs-notificationbot.yml) by using the new generation development tool for Teams. For more information, see [Teams Toolkit overview](../toolkit/teams-toolkit-fundamentals.md).
 
-*Bots are available in Government Community Cloud (GCC) and GCC-High but not in Department of Defense (DOD).
-
-* Bot applications within Microsoft Teams are available in GCC-High through [Azure bot Service](/azure/bot-service/how-to-deploy-gov-cloud-high) and bot channel registration must be done in Azure Government portal.
-
-* Applications in GCCH only support up to manifest version v1.10. Image URLs in Adaptive Cards aren't supported in GCCH environment. You can replace an image URL with Base64 encoded DataUri.
+> [!IMPORTANT]
+>
+> * Bots are available in Government Community Cloud (GCC) and GCC-High but not in Department of Defense (DOD).
+>
+> * Bot applications within Microsoft Teams are available in GCC-High through [Azure bot Service](/azure/bot-service/how-to-deploy-gov-cloud-high) and bot channel registration must be done in Azure Government portal.
+>
+> * Applications in GCCH only support up to manifest version v1.10. Image URLs in Adaptive Cards aren't supported in GCCH environment. You can replace an image URL with Base64 encoded DataUri.
 
 Conversational bots allow users to interact with your web service using text, interactive cards, and task modules.
 

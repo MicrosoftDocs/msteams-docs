@@ -240,7 +240,7 @@ At the command prompt exit the localhost and enter the following command to esta
 gulp ngrok-serve
 ```
 
-After your tab is uploaded to Microsoft Teams through **ngrok**, and successfully saved, you can view it in Teams until your tunnel session ends.
+After your tab is uploaded to Microsoft Teams through ngrok and successfully saved, you can view it in Teams until your tunnel session ends.
 
 ### Upload your application to Teams
 

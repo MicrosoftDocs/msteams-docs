@@ -35,7 +35,7 @@ The [Bot Framework](https://dev.botframework.com/) is a rich SDK used to create 
 * Set Teams-specific channel data on activities.
 * Process message extension requests.
 
-You can develop Teams apps in any web programming technology and call the [Bot Framework REST APIs](/bot-framework/rest-api/bot-framework-rest-overview) directly. But you must perform token handling in all cases.
+You can develop Teams apps in any web programming technology and call the [Bot Framework REST APIs](/bot-framework/rest-api/bot-framework-rest-overview) directly. You must perform token handling in all cases.
 
 ## Bots with Power Virtual Agents
 

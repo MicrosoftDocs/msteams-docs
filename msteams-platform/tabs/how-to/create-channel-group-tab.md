@@ -191,7 +191,7 @@ gulp ngrok-serve
 
 1. Select **Add** in the dialog. Your tab is uploaded to Teams.
 
-   If **Add** doesn't display in the dialog box then remove the following code from the manifest of the uploaded app package zip folder. Again zip the folder and upload it to Teams.
+   If **Add** doesn't display in the dialog box then remove the following code from the manifest of the uploaded app package zip folder. Zip the folder again and upload it to Teams.
 
    ```Json
    "staticTabs": [],
