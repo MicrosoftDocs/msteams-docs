@@ -255,7 +255,7 @@ Contact the field, account, or engineering representatives from Microsoft to dis
 </details>
 <br>
 <details>
-<summary>Features placements in AppSource and the Teams in-product app store</summary>
+<summary>Featured placements in AppSource and the Teams in-product app store</summary>
 
 Contact your Microsoft field, account or engineering representatives or connect with the [ISV Marketplace Success Rewards Program team](mailto:rewards@microsoft.com) to feature your app in AppSource and the Teams in-client app store merchandising sections. Ensure your app experience is free of bugs to boost your chances of getting promoted on the store.
 
