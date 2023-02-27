@@ -58,7 +58,7 @@ To update your app's code:
 
    # [csharp](#tab/cs1)
 
-       Add the following code snippet to `AdapterWithErrorHandler.cs` (or the equivalent class in your app's code):
+    Add the following code snippet to `AdapterWithErrorHandler.cs` (or the equivalent class in your app's code):
 
        ```csharp
        base.Use(new TeamsSSOTokenExchangeMiddleware(storage, configuration["ConnectionName"]));
@@ -66,7 +66,7 @@ To update your app's code:
 
    # [JavaScript](#tab/js1)
 
-       Add the following code snippet to `index.js` (or the equivalent class in your app's code):
+    Add the following code snippet to `index.js` (or the equivalent class in your app's code):
 
        ```JavaScript
        const {TeamsSSOTokenExchangeMiddleware} = require('botbuilder');
@@ -83,7 +83,7 @@ To update your app's code:
 
    # [csharp](#tab/cs2)
 
-       After you add the `AdapterWithErrorHandler.cs`, your code should be as shown below:
+    After you add the `AdapterWithErrorHandler.cs`, your code should be as shown below:
 
         ```csharp
         public class AdapterWithErrorHandler : CloudAdapter
@@ -138,7 +138,7 @@ To update your app's code:
 
    # [JavaScript](#tab/js2)
 
-        After you add the code snippet for `TeamsSSOTokenExchangeMiddleware`, your code should be as shown below:
+    After you add the code snippet for `TeamsSSOTokenExchangeMiddleware`, your code should be as shown below:
 
         ```JavaScript
         // index.js is used to setup and configure your bot.
@@ -268,56 +268,56 @@ Use the following code snippet to invoke response:
 
 # [csharp](#tab/cs3)
 
-    ```csharp
-    public MainDialog(IConfiguration configuration, ILogger<MainDialog> logger)
-                : base(nameof(MainDialog), configuration["ConnectionName"])
-            {
-                AddDialog(new OAuthPrompt(
-                    nameof(OAuthPrompt),
-                    new OAuthPromptSettings
-                    {
-                        ConnectionName = ConnectionName,
-                        Text = "Please Sign In",
-                        Title = "Sign In",
-                        Timeout = 300000, // User has 5 minutes to login (1000 * 60 * 5)
-                        EndOnInvalidMessage = true
-                    }));
-
-                AddDialog(new ConfirmPrompt(nameof(ConfirmPrompt)));
-
-                AddDialog(new WaterfallDialog(nameof(WaterfallDialog), new WaterfallStep[]
+```csharp
+public MainDialog(IConfiguration configuration, ILogger<MainDialog> logger)
+            : base(nameof(MainDialog), configuration["ConnectionName"])
+        {
+            AddDialog(new OAuthPrompt(
+                nameof(OAuthPrompt),
+                new OAuthPromptSettings
                 {
-                    PromptStepAsync,
-                    LoginStepAsync,
+                    ConnectionName = ConnectionName,
+                    Text = "Please Sign In",
+                    Title = "Sign In",
+                    Timeout = 300000, // User has 5 minutes to login (1000 * 60 * 5)
+                    EndOnInvalidMessage = true
                 }));
 
-                // The initial child Dialog to run.
-                InitialDialogId = nameof(WaterfallDialog);
-            }
+            AddDialog(new ConfirmPrompt(nameof(ConfirmPrompt)));
 
-
-    private async Task<DialogTurnResult> PromptStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
+            AddDialog(new WaterfallDialog(nameof(WaterfallDialog), new WaterfallStep[]
             {
-                return await stepContext.BeginDialogAsync(nameof(OAuthPrompt), null, cancellationToken);
-            }
+                PromptStepAsync,
+                LoginStepAsync,
+            }));
 
-    private async Task<DialogTurnResult> LoginStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
-            {
+            // The initial child Dialog to run.
+            InitialDialogId = nameof(WaterfallDialog);
+        }
+
+
+private async Task<DialogTurnResult> PromptStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
+        {
+            return await stepContext.BeginDialogAsync(nameof(OAuthPrompt), null, cancellationToken);
+        }
+
+private async Task<DialogTurnResult> LoginStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
+        {
                 
-                var tokenResponse = (TokenResponse)stepContext.Result;
-                if (tokenResponse?.Token != null)
-                {
-                    var token = tokenResponse.Token;
+            var tokenResponse = (TokenResponse)stepContext.Result;
+            if (tokenResponse?.Token != null)
+            {
+                var token = tokenResponse.Token;
 
-                    // On successful login, the token contains sign in token.
-                }
-                else 
-                {
-                    await stepContext.Context.SendActivityAsync(MessageFactory.Text("Login was not successful please try again."), cancellationToken);
-                }            
-
-                return await stepContext.EndDialogAsync(cancellationToken: cancellationToken);
+                // On successful login, the token contains sign in token.
             }
+            else 
+            {
+                 await stepContext.Context.SendActivityAsync(MessageFactory.Text("Login was not successful please try again."), cancellationToken);
+            }            
+
+            return await stepContext.EndDialogAsync(cancellationToken: cancellationToken);
+        }
     ```
 
 # [JavaScript](#tab/js3)
