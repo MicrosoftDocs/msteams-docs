@@ -76,12 +76,12 @@ To update your app's code:
 
     ---
 
-    >[!NOTE]
+    > [!NOTE]
     > You might receive multiple responses for a given request if the user has multiple active endpoints. You must eliminate all duplicate or redundant responses with the token. For more information about signin/tokenExchange, see [TeamsSSOTokenExchangeMiddleware Class](/python/api/botbuilder-core/botbuilder.core.teams.teams_sso_token_exchange_middleware.teamsssotokenexchangemiddleware?view=botbuilder-py-latest#remarks&preserve-view=true).
 
 1. Use the following code snippet for requesting a token.
 
-    # [csharp](#tab/cs2)
+   # [csharp](#tab/cs2)
 
     After you add the `AdapterWithErrorHandler.cs`, your code should be as shown below:
 
@@ -136,7 +136,7 @@ To update your app's code:
     }
     ```
 
-    # [JavaScript](#tab/js2)
+   # [JavaScript](#tab/js2)
 
     After you add the code snippet for `TeamsSSOTokenExchangeMiddleware`, your code should be as shown below:
 
