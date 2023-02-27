@@ -73,7 +73,7 @@ To update your app's code:
     const tokenExchangeMiddleware = new TeamsSSOTokenExchangeMiddleware(memoryStorage, env.connectionName);
     adapter.use(tokenExchangeMiddleware);
     ```
-    ---
+   ---
 
     >[!NOTE]
     > You might receive multiple responses for a given request if the user has multiple active endpoints. You must eliminate all duplicate or redundant responses with the token. For more information about signin/tokenExchange, see [TeamsSSOTokenExchangeMiddleware Class](/python/api/botbuilder-core/botbuilder.core.teams.teams_sso_token_exchange_middleware.teamsssotokenexchangemiddleware?view=botbuilder-py-latest#remarks&preserve-view=true).
@@ -232,7 +232,7 @@ To update your app's code:
     });
     ```
 
-    ---
+---
 
 ### Consent dialog for getting access token
 
