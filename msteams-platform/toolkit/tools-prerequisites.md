@@ -34,10 +34,7 @@ Ensure that the following tools are installed on the device where you’ll creat
 | [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) | The browser-based tool that lets you run a query from Microsoft Graph data. | JavaScript, TypeScript and SPFx |
 | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | The web-based portal to configure, manage, and distribute your Teams app including to your organization or the Teams store.| JavaScript, TypeScript and SPFx. |
 
-   > [!NOTE]
-   >
-   > * The document is tested with Teams Toolkit version 4.1.3 and Node.js version 16.
-   > * Bookmark the Microsoft Graph Explorer to learn about Microsoft Graph services. This browser-based tool allows you to run a query and access the Microsoft Graph API.
+It's recommended that you bookmark the Microsoft Graph Explorer to learn about Microsoft Graph services. This browser-based tool allows you to run a query and access the Microsoft Graph API.
 
 ## Accounts to build your Teams app
 

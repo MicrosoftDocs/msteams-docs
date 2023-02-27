@@ -238,8 +238,7 @@ The steps to create a new Teams app are similar for all types of apps except not
 
    :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-ms-teams-app-type_3_1.png" alt-text="Select the teams app type":::
 
-   > [!NOTE]
-   > You can select any type of Teams app for your project.
+You can select any type of Teams app for your project.
 
    The **GettingStarted .txt** window appears.
 
@@ -270,8 +269,7 @@ You can see Teams app templates already populated in Teams Toolkit for various T
 |**Tab**     |Tab app shows a webpage inside Teams, and it enables single sign-on (SSO) using Teams account.         |
 |**Message Extension**     |Message extension app implements simple features like creating an Adaptive Card, searching Nugget packages, unfurling links for the `dev.botframework.com` domain.         |
 
-> [!NOTE]
-> After the project is created, Teams Toolkit automatically opens **GettingStarted** window. You can see the instructions in **GettingStarted** window and check out the different features in Teams Toolkit.
+After the project is created, Teams Toolkit automatically opens **GettingStarted** window. You can see the instructions in **GettingStarted** window and check out the different features in Teams Toolkit.
 
 ::: zone-end
 
