@@ -52,6 +52,8 @@ landingContent:
         url: https://gitter.im/OfficeDev/home
     - linkListType: whats-new
       links:
+      - text: Changelog for Developer Portal
+        url: concepts/build-and-test/teams-developer-portal.md#changelog-for-developer-portal
       - text: SSO authentication for your Adaptive Cards Universal Actions
         url: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/enable-sso-for-your-adaptive-cards-universal-action.md
       - text: Third party authentication for Adaptive Cards Universal Actions
@@ -70,8 +72,7 @@ landingContent:
         url: teams-faq.md
       - text: Share-in-meeting to share any document or third-party app to the meeting stage
         url: ~/concepts/build-and-test/share-in-meeting.md
-      - text: Plan analytics for your Teams app
-        url: concepts/design/overview-analytics.md
+
     - linkListType: whats-new
       links:
       - text: Apps for Teams meetings support anonymous users
