@@ -9,9 +9,9 @@ ms.author: guptaashish
 
 # Promote app awareness and app adoption
 
-As an app developer, once you’ve published your app, one of the key activities you should focus on is driving adoption for your app. You must ensure that users interact with your app and [learn from their usage behavior and feedback](/microsoftteams/teams-analytics-and-reports/app-usage-report), which you can incorporate back into your Teams app. A few examples of post-publish activities are deployment and adoption-related engagements, user base growth, support for existing app customers, app updates, and app monetization.
+As an app developer, one of the key activities after publishing your Microsoft Teams app is to drive adoption for your app with your customers. Ensure that the users interact with your app and you [learn from their usage behavior and feedback](/microsoftteams/teams-analytics-and-reports/app-usage-report). You incorporate the learning in your app revisions. Examples of post-publish activities are deployment and adoption-related engagements, user base growth, support for existing app customers, app updates, and app monetization.
 
-This document provides resources and best practices for you to support the rollout of your Teams app in your customers’ organizations. The personas relevant for you are business decision makers, IT admins, and end-users. The outcome of an app rollout is the successful adoption and engagement by the end-users of your customer’s organization.
+This document provides resources and best practices to support the rollout of your Teams app in your customers’ organizations. The relevant personas are the business decision makers, IT admins, and users. The outcome of an app rollout is the successful adoption and engagement by the end-users of your customer’s organization.
 
 ## Know the prerequisites before your customers roll out your app
 
