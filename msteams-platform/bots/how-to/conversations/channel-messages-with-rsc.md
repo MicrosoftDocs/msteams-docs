@@ -21,11 +21,7 @@ The `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permissions are 
 * Allow a specified graph application to get all messages in channels and chats, respectively.
 * Enable a bot defined in the app manifest to receive all conversations messages without being @mentioned in relevant contexts where the permissions apply.
 
-> [!IMPORTANT]
->
-> * Services that need access to all Teams message data must use the Graph APIs that provide access to archived data in channels and chats.
-> * Bots must use the `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permission appropriately to build and enhance engaging experience for users to pass the store approval. The app description must include how the bot uses the data it reads.
-> * The `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permission may not be used by bots to extract large amounts of customer data.
+Services that need access to all Teams message data must use the Graph APIs that provide access to archived data in channels and chats. Bots must use the `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permission appropriately to build and enhance engaging experience for users to pass the store approval. The app description must include how the bot uses the data it reads. The `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permission may not be used by bots to extract large amounts of customer data.
 
 ## Update app manifest
 
