@@ -58,3 +58,4 @@ For more information, see [publish to the Teams store](~/concepts/deploy-and-pub
 * [Create Teams app package](../build-and-test/apps-package.md)
 * [Publish to org](/microsoftteams/upload-custom-apps)
 * [Modify your app's registration in the Azure portal](/azure/active-directory/develop/howto-modify-supported-accounts)
+* [Growth lifecycle for your app](appsource/post-publish/app-growth/app-growth-lifecycle.md)

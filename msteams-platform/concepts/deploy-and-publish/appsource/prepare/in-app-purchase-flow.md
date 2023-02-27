@@ -49,6 +49,8 @@ To trigger in-app purchase for the app, invoke the `openPurchaseExperience` API 
 
 Following code snippet is an example of calling the API from the Teams app built using Microsoft Teams JavaScript client library:
 
+# [TeamsJS v1](#tab/jsonV11)
+
 ```json
 <div> 
 <div class="sectionTitle">openPurchaseExperience</div>
@@ -71,6 +73,28 @@ Following code snippet is an example of calling the API from the Teams app built
     }
 </script>
 ```
+
+# [TeamsJS V2](#tab/jsonV2)
+
+```json
+<div>
+<div class="sectionTitle">openPurchaseExperience</div>
+<button onclick="openPurchaseExperience()">openPurchaseExperience</button>
+</div>
+</body>
+<script>
+    function openPurchaseExperience() {
+      micorosftTeams.app.initialize();
+      var planInfo = {
+          planId: "<Plan id>", // Plan Id of the published SAAS Offer
+          term: "<Plan Term>" // Term of the plan.
+      }
+      monetization.openPurchaseExperience(planInfo);
+    }
+</script>
+```
+
+---
 
 ## End-user in-app purchasing experience
 
