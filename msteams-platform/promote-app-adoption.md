@@ -39,26 +39,6 @@ Admins can set up an app governance process that manages your organization's IT 
 
 Following the below five easy steps, you can encourage customers to adopt your apps through admin recommendations to their users, for maximum adoption in an organization. Consider the following elements for app adoption.
 
-:::row:::
-
-    :::column:::
-
-:::image type="content" source="assets/images/drive-app-adoption1.png" link="#perform-internal-enablement-to-support-app-adoption" border="false" alt-text="Screenshot showing first step of app adoption as internal enablement.":::
-
-    :::column-end:::
-    :::column:::
-
- :::image type="content" source="assets/images/drive-app-adoption2.png" link="#help-admins-to-do-app-configuration-and-rollout-for-their-users" border="false" alt-text="Screenshot showing second step of app adoption as helping admins do configuration and rollout.":::
-
-    :::column-end:::
-    :::column:::
-
-  :::image type="content" source="assets/images/drive-app-adoption3.png" link="#educate-users-and-drive-adoption-change-management-for-your-app" border="false" alt-text="Screenshot showing third step of app adoption as educating users about app features.":::
-
-    :::column-end:::
-
-:::row-end:::
-
 :::image type="content" source="assets/images/drive-app-adoption.png" alt-text="Diagram shows the steps to drive app adoption." lightbox="assets/images/drive-app-adoption.png":::
 
 1. **[Perform internal enablement to support app adoption](#perform-internal-enablement-to-support-app-adoption)**: Share your app information and its importance with your customer-facing teams, such as, CSM, support, marketing, and sales that help customers adopt your apps. To achieve this, provide an adoption toolkit, define a rollout process, and give enablement training for your customer-facing teams.
