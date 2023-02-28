@@ -16,13 +16,24 @@ The document guides you on how to add link unfurling to your app manifest using 
 
 > [!NOTE]
 >
-> * Link unfurling isn't supported on Mobile clients.
 > * The link unfurling result is cached for 30 minutes.
 > * Messaging extension commands are not required for Link unfurling. However, there must be at least one command in manifest as it is a mandatory property in messaging extensions. For more information, see [compose extensions](/microsoftteams/platform/resources/schema/manifest-schema).
 
-The following image is an example of link unfurling using the Azure DevOps message extension. When the Azure DevOps link is pasted into the Teams compose message area, the link unfurls into a card with the work item details:
+The following image is an example of link unfurling in Teams desktop and mobile clients:
 
-:::image type="content" source="../../assets/images/messaging-extension/messagingextensions_linkunfurl.png" alt-text="Screenshot of link unfurling example for Azure Dev Ops links pasted in teams compose message area.":::
+# [Desktop](#tab/desktop)
+
+When the Azure DevOps link is pasted into the Teams compose message area, the link unfurls into a card with the work item details:
+
+:::image type="content" source="../../assets/images/messaging-extension/messagingextensions_linkunfurl.png" alt-text="Screenshot of link urfurling example for Azure Dev Ops links pasted in teams compose message area.":::
+
+# [Mobile](#tab/mobile)
+
+When the app link is pasted into the Teams compose message area, the link unfurls into a card with the link details:
+
+:::image type="content" source="../../assets/images/messaging-extension/android-linkunfurl.png" alt-text="Screenshot shows you the link unfurling in Android mobile client.":::
+
+---
 
 See the following video to learn more about link unfurling:
 <br>
