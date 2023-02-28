@@ -231,9 +231,9 @@ The following table provides the possible values of `err` that can be received b
 
 ## Code sample
 
-|Sample name | Description | .NET | Node.js|Manifest
+|Sample name | Description | .NET | Node.js|Manifest|
 |----------------|-----------------|--------------|----------------|----------------|
-|Task module sample using bot and tab | Samples for creating task modules. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/csharp/demo-manifest/bot-task-module.zip)
+|Task module sample using bot and tab | Samples for creating task modules. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/csharp/demo-manifest/bot-task-module.zip)|
 
 ## Next step
 

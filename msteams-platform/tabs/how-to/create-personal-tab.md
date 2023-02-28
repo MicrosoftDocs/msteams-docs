@@ -240,8 +240,7 @@ At the command prompt exit the localhost and enter the following command to esta
 gulp ngrok-serve
 ```
 
-> [!IMPORTANT]
-> After your tab is uploaded to Microsoft Teams through **ngrok**, and successfully saved, you can view it in Teams until your tunnel session ends.
+After your tab is uploaded to Microsoft Teams through **ngrok** and successfully saved, you can view it in Teams until your tunnel session ends.
 
 ### Upload your application to Teams
 
@@ -615,9 +614,9 @@ If you create a bot with a **personal** scope, it appears in the first tab posit
 
 ## Code sample
 
-| Sample name | Description | .NET |Node.js|Manifest
+| Sample name | Description | .NET |Node.js|Manifest|
 |-------------|-------------|------|----|----|
-|Tab personal|Sample app which showcases creating a custom channel/group tab with ASP.Net Core and MVC. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-personal/mvc-csharp) |  NA |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-personal/mvc-csharp/demo-manifest/tab-personal.zip)
+|Tab personal|Sample app which showcases creating a custom channel/group tab with ASP.Net Core and MVC. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-personal/mvc-csharp) |  NA |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-personal/mvc-csharp/demo-manifest/tab-personal.zip)|
 
 ## Next step
 
