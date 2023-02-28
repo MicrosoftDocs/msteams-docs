@@ -39,7 +39,7 @@ Admins can set up an app governance process that manages your organization's IT 
 
 You can encourage admins to adopt your apps through recommendations to their users, for maximum adoption in an organization. Consider the following elements for app adoption.
 
-:::image type="content" source="assets/images/app-deployment-guidance/drive-app-adoption.png" alt-text="Diagram shows the steps to drive app adoption.":::
+:::image type="content" source="assets/images/drive-app-adoption.png" alt-text="Diagram shows the steps to drive app adoption." lightbox="assets/images/drive-app-adoption-large.png":::
 
 1. **[Perform internal enablement to support app adoption](#perform-internal-enablement-to-support-app-adoption)**: Share your app information and its importance with your customer-facing teams, such as, CSM, support, marketing, and sales that help customers adopt your apps. To achieve this, provide an adoption toolkit, define a rollout process, and give enablement training for your customer-facing teams.
 1. **[Help admins to do app config and rollout](#help-admins-to-do-app-configuration-and-rollout-for-their-users)**: Help the IT admins do the necessary configurations to enable your app for the users. Provide a help guide for IT admins to understand the configuration steps.
@@ -102,7 +102,7 @@ Teams admin center provides admins with enterprise-grade controls and configurat
 
 The IT admins attend to various tasks for smoother operations on a daily basis. Sharing the following resources with them helps in their app evaluation and rollout journey.
 
-:::image type="content" source="assets/images/app-deployment-guidance/app-config-roll-out-end-users.png" alt-text="Diagram shows the tasks of an IT admin before, during, and after they roll out your app.":::
+:::image type="content" source="assets/images/app-config-roll-out-end-users.png" alt-text="Diagram shows the tasks of an IT admin before, during, and after they roll out your app." lightbox="assets/images/app-config-roll-out-end-users.png":::
 
 ### Evaluate and allow apps
 
@@ -206,13 +206,11 @@ Provide the users with guides that help them understand how to use your app, tro
 * Describe how users can request their admin’s approval if your app is blocked in their organization. For more information, see [manage user requests](/microsoftteams/user-requests-approve-apps).
 * Explain how the users can find support for your app. Direct the users to contact their organization’s IT admin or contact your support team. For more information, see [provide support contact](#provide-support-information-for-it-admins-and-users).
 
-### Promote awareness about your app and its use cases
+### Promote awareness about your app and its use cases for smooth change management
 
-Your overall adoption change management is dependent on awareness and training targeted at your customers. These are the marketing and communications segments of your overall app adoption strategy.
+The adoption change management relies on awareness and training targeted at your customers. These are the marketing and communications segments of your overall app adoption strategy that make change management successful and smooth. It ensures that your users are aware of the new capabilities of the Teams app and it enables the users to derive value out of your app.
 
-It ensures that your users are aware of the new capabilities of the Teams app and enables them to use and derive value out of your app.
-
-For both initial pilots and eventual company-wide roll out, your internal communications must be a priority. They must include:
+For both initial pilots and eventual company-wide roll out, your internal communications must be a priority. These must include:
 
 * Internal awareness materials such as posters, email templates, digital signage, and webinar or events.
 * Campaigns: Educate users about the benefits of using the Teams app. Use the template provided by Microsoft to create campaigns to improve organization-level awareness for apps.
@@ -220,7 +218,9 @@ For both initial pilots and eventual company-wide roll out, your internal commun
 * Events: You can also drive user awareness via physical events, kiosk, and other modes, where you distribute assets to promote awareness and usage of your app.
 * Reminders: Remind the users about the campaign before and after it happens.
 
-Microsoft provides a few templates that you can use to speed up the adoption of your app. These templates help you quickly generate toolkit to popularize your app. Register for [Microsoft ISV Success program](https://www.microsoft.com/isv/program-benefits) to receive guidance and templates for some of the above digital assets.
+Microsoft provides few templates that you can use to speed up the adoption of your app. These templates help you quickly generate toolkit to popularize your app. See [Launch your collaborative apps](/microsoftteams/platform/concepts/deploy-and-publish/appsource/post-publish/app-growth/launch-app) for a list of resources and BOM assets that you should create for app launch. Register for [Microsoft ISV Success program](https://www.microsoft.com/isv/program-benefits) to receive guidance and templates for some of the above digital assets.
+
+Microsoft provides a few templates that you can use to speed up the adoption of your app. These templates help you quickly generate toolkit to popularize your app. Register for  to receive guidance and templates for some of the above digital assets.
 
 The following considerations might help you make the awareness documents more user-friendly:
 
@@ -228,7 +228,7 @@ The following considerations might help you make the awareness documents more us
 * Ensure that there’s a support path for users to contact the support team if they run into any problems.
 * Your feature and usage guide must cover the details of how users can install the app from the Teams app store from different entry points such as channels, chats, meetings, and message extensions, as well as the details of each feature's usage.
 
-### Provide training and build champions
+### Provide training and create champions who facilitate change management
 
 Champions are essential to drive awareness, adoption, and education in your organization. A champion is motivated to help others, interested in promoting apps, and aids in increasing employee productivity. Additionally, it helps users adopt apps and best practices of using these apps.
 
