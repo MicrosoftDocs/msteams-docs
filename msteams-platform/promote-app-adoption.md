@@ -37,12 +37,12 @@ Admins can set up an app governance process that manages your organization's IT 
 
 ## Understand how you can drive app adoption
 
-You can encourage admins to adopt your apps through recommendations to their users, for maximum adoption in an organization. Consider the following elements for app adoption.
+Following the below five easy steps, you can encourage customers to adopt your apps through admin recommendations to their users, for maximum adoption in an organization. Consider the following elements for app adoption.
 
 :::image type="content" source="assets/images/drive-app-adoption.png" alt-text="Diagram shows the steps to drive app adoption." lightbox="assets/images/drive-app-adoption-large.png":::
 
 1. **[Perform internal enablement to support app adoption](#perform-internal-enablement-to-support-app-adoption)**: Share your app information and its importance with your customer-facing teams, such as, CSM, support, marketing, and sales that help customers adopt your apps. To achieve this, provide an adoption toolkit, define a rollout process, and give enablement training for your customer-facing teams.
-1. **[Help admins to do app config and rollout](#help-admins-to-do-app-configuration-and-rollout-for-their-users)**: Help the IT admins do the necessary configurations to enable your app for the users. Provide a help guide for IT admins to understand the configuration steps.
+1. **[Help admins to do app configuration and rollout](#help-admins-to-do-app-configuration-and-rollout-for-their-users)**: Help the IT admins do the necessary configurations to enable your app for the users. Provide a help guide for IT admins to understand the configuration steps.
 1. **[Educate users and drive adoption change management about your app](#educate-users-and-drive-adoption-change-management-about-your-app)**: Provide user guide for the users that describes their jobs to be done (JTBD) and your app’s features. Promote awareness about your app and its use cases. You can conduct email campaigns, webinars, or social media engagements depending on your target audience.
 1. **[Provide support contact for IT admins and users](#provide-support-information-for-it-admins-and-users)**: When admins or users encounter unknown issues or issues that can't be resolved using the documentation, they might reach for support. Providing support in such scenarios is helpful for healthy retention of users.
 1. **[Track app adoption and usage using analytics](#track-app-adoption-and-usage-using-analytics)**: Track your app adoption progress after the rollout and promptly resolve issues for the early adopters. Your CSM or account manager can engage with the customer's organization and its IT admins to track adoption and provide support.
@@ -54,7 +54,7 @@ Within your organization, you must streamline the app support and guidance progr
 You must define a rollout process for your Teams app and ensure that:
 
 * Follow a standard rollout process for onboarding a new customer on the Teams app. For example, if you’re onboarding a customer on your SaaS application and that customer also uses Teams, consider Teams app onboarding as part of your standard onboarding.
-* Support professionals and CSMs are trained and familiar with the nuances of your app, its value proposition, features, configuration steps, and the rollout process. For more information, see [deployment guidance for admins](#perform-internal-enablement-to-support-app-adoption).
+* Support professionals and CSMs are trained and familiar with the nuances of your app, its value proposition, features, configuration steps, and the rollout process. For more information, see [deployment guidance for admins](#help-admins-to-do-app-configuration-and-rollout-for-their-users).
 
 ### App installation and configuration guide
 
@@ -289,7 +289,7 @@ You can track your app’s overall usage in [Teams app usage report](concepts/de
 
 Custom app developers can find [usage analytics for their custom apps](concepts/build-and-test/analyze-your-apps-usage-in-developer-portal.md) in the Developer Portal for Teams.
 
-### Track detailed app usage via your in-app telemetry/analytics
+### Track detailed app usage via your in-app telemetry
 
 You must build your own, detailed adoption analytics and engagement methods to check tenant-wise adoption and engagement. This information helps you analyze the data against your business goals and take corrective action by fixing issues. It also helps you to intervene in the user journey or make informed decisions about feature investments, enhancements, and adoption for the app.
 
