@@ -43,7 +43,7 @@ microsoftTeams.tasks.submitTask(
 ```
 
 > [!NOTE]
-> `dialog.submit` can only be called from inside of a dialog.
+> The `dialog.submit` property can only be called within of a dialog.
 
 ---
 
