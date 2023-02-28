@@ -10,7 +10,7 @@ ms.date: 11/29/2021
 
 # Add capabilities to Microsoft Teams app
 
-Adding capabilities with Teams Toolkit allows you to extend the functionality of your existing Microsoft Teams app. The advantage of adding more capabilities is that you can add more functions to your app by using Teams Toolkit to automatically add necessary code and project files. You can select different capabilities based on your app project you've created in your Teams app. The following table lists the Teams app capabilities:
+Adding capabilities with Teams Toolkit allows you to extend the functionality of your existing Microsoft Teams app. The advantage of adding more capabilities is that you can add more functions to your app by using Teams Toolkit to automatically add necessary code and project files. You can select different capabilities based on the app project you've created for your Teams app. The following table lists the Teams app capabilities:
 
 |Capability|Description|Other supported capabilities|
 |--------|-------------|-----------------|
@@ -19,11 +19,11 @@ Adding capabilities with Teams Toolkit allows you to extend the functionality of
 | **Bot** |  Bots help to interact with your web service through text, interactive cards, and task modules.|Basic message extension, SSO-enabled tab, and basic tab|
 | **Message extension** | Message extensions help to interact with your web service through buttons and forms in the Microsoft Teams client.|Basic bot, SSO-enabled tab, and basic tab|
 |**Scenario-based Teams app**|&nbsp;|&nbsp;|
-| **Notification bot** | Notification bot proactively sends messages in Teams channel or group chat, or personal chat. You can trigger the notification bot with a HTTP request, such as cards or texts. |SSO-enabled tab and basic tab|
+| **Notification bot** | Notification bot proactively sends messages in Teams channel or group chat, or personal chat. You can trigger the notification bot with an HTTP request, such as cards or texts. |SSO-enabled tab and basic tab|
 | **Command bot** | Command bot allows you to automate repetitive tasks using a command bot. It responds to simple commands sent in chats with the Adaptive Cards. |SSO-enabled tab and basic tab|
-| **Workflow bot** | Workflow bot allows users to interact with an Adaptive Card enabled by the Adaptive Card action handler feature in the workflow bot app.|SSO-enabled tab and basic tab|
+| **Workflow bot** | Workflow bot allows users to interact with an Adaptive Card enabled by the Adaptive Card action handler in the workflow bot app.|SSO-enabled tab and basic tab|
 | **SPFx tab** | SPFx tab apps are hosted in Microsoft 365. They support developing and hosting your client-side SharePoint Framework (SPFx) solution.|None|
-| **SSO-enabled tab** |You can build SSO-enabled tab app that allows the user with single sign-on (SSO) feature.|SSO-enabled tab, notification bot, command bot, basic bot, and basic message extension|
+| **SSO-enabled tab** |You can build SSO-enabled tab app that allows the user with single sign-on (SSO).|SSO-enabled tab, notification bot, command bot, basic bot, and basic message extension|
 
 > [!NOTE]
 > You can add tabs up to 16 instances. You can add one bot and one message extension to each instance at a time.
@@ -38,16 +38,17 @@ You can add capabilities in the following ways:
 
 ### Use Teams Toolkit in Microsoft Visual Studio Code
 
-   1. Open **Visual Studio Code**.
+   1. Open your app project in **Visual Studio Code**.
    1. Select **Teams Toolkit** from the Visual Studio Code activity bar.
    1. Select **Add features** in the **DEVELOPMENT** section.
 
        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/select-feature123_1.png" alt-text="Add capabilities from Teams Toolkit":::
 
-      > [!NOTE]
-      > After successfully adding the capabilities to your Teams app, you need to provision for each environment.
+      After successfully adding the capabilities to your Teams app, you need to provision for each environment.
 
 ### Use the Command Palette
+
+   1. Open your app project in **Visual Studio Code**.
 
    1. Select **View** > **Command Palette...** or **Ctrl+Shift+P**.
 
@@ -57,7 +58,7 @@ You can add capabilities in the following ways:
 
       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/teams-add-features_1.png" alt-text="To add capabilities by using command palette.":::
 
-   1. In the drop-down menu that appears, select the capability you want to add to your project.
+   1. From the drop-down menu that appears, select the capability you want to add to your project.
 
        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/notification-add-capabilities_1.png" alt-text="notification":::
 
@@ -79,15 +80,15 @@ The following table lists the capabilities and the TeamsFx CLI commands for addi
 
 ## Changes after adding capabilities
 
-The following table shows the changes that you can see in the files of your app when adding the capabilities:
+The following table shows the changes that you can see in the files of your app when adding capabilities:
 
 |Add capability|Description| Changes|
 |------------|------------------------|---------|
 |Basic bot, basic message extension, and basic tab|Includes a basic bot&nbsp;bot or basic tab app template into your project.|A front-end bot or tab template code is added into a subfolder with path `yourProjectFolder\bot` or `yourProjectFolder\tab` respectively.|
 |Basic bot, message extension, and basic tab |Includes necessary scripts for Visual Studio Code and is executed when you want to debug your app locally. |Files `launch.json` and `task.json` under `.vscode` folder are updated.|
-|Basic bot and basic message extension|information in the manifest file for a basic bot or basic tab app This information represents your app in the Teams Platform.|File `manifest.template.json` under `templates\appPackage` folder is updated, which includes tab-related information in the manifest file that represents your app in the Teams Platform. The changes are visible in the ID of your bot, the scopes of your bot, and the commands that **HelloWorld** bot or tab app can respond to.|
-|Basic tab|Includes information in the manifest file for a basic bot or basic tab. This information represents your app in the Teams Platform.|File `manifest.template.json` under `templates\appPackage` folder is updated, which includes tab-related information in the manifest file that represents your app in the Teams Platform. The changes are visible in the configurable and static tabs and scopes of the tabs.|
-|Basic bot, basic message extension, and basic tab|Includes information in the teamsfx for a basic bot or tab app. It also includes provision files that are for integrating Azure Functions.|Files under `templates\azure\teamsfx` are updated and `templates\azure\provision\xxx.bicep` files are regenerated.|
+|Basic bot and basic message extension|Information in the manifest file for a basic bot or basic tab app. This information represents your app in the Teams Platform.|The file `manifest.template.json` under `templates\appPackage` folder is updated, which includes tab-related information in the manifest file that represents your app in the Teams Platform. The changes are visible in the ID of your bot, the scopes of your bot, and the commands that your bot or tab app can respond to.|
+|Basic tab|Includes information in the manifest file for a basic bot or basic tab. This information represents your app in the Teams Platform.|The file `manifest.template.json` under `templates\appPackage` folder is updated, which includes tab-related information in the manifest file that represents your app in the Teams Platform. The changes are visible in the configurable and static tabs and scopes of the tabs.|
+|Basic bot, basic message extension, and basic tab|Includes information in TeamsFx for a basic bot or tab app. It also includes provision files that are for integrating Azure Functions.|Files under `templates\azure\teamsfx` are updated and `templates\azure\provision\xxx.bicep` files are regenerated.|
 |Basic bot, basic message extension, and basic tab|Ensure that your project is set up with the right configurations for the newly added capability.|Files under `.fx\config` are regenerated.|
 
 ## Step-by-step guides
