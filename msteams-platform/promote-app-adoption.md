@@ -178,8 +178,8 @@ Ensure that your app is available and IT admins have made the necessary changes 
 
 * [Provide app rollout guidance](#provide-app-rollout-guidance-to-your-customers)
 * [Provide a feature guide for the users of your app](#provide-a-feature-guide-for-the-users-of-your-app)
-* [Promote awareness about your app and its use cases](#promote-awareness-about-your-app-and-its-use-cases)
-* [Provide training and build champions](#provide-training-and-build-champions)
+* [Promote awareness about your app and its use cases](#promote-awareness-about-your-app-and-its-use-cases-for-smooth-change-management)
+* [Provide training and build champions](#provide-training-and-create-champions-who-facilitate-change-management)
 
 ### Provide app rollout guidance to your customers
 
