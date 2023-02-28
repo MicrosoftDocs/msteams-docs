@@ -29,7 +29,7 @@ To complete this tutorial, you need:
 * A Microsoft 365 Developer Program sandbox tenant
 * Your sandbox tenant enrolled in *Microsoft 365 Targeted Releases*
 * A machine with Microsoft 365 apps installed from the Microsoft 365 Apps *beta channel*
-* (Optional) An Android device or emulator with Microsoft 365 app for Android installed and enrolled in the *beta program*
+* (Optional) An Android device or emulator with Microsoft 365 app for Android installed
 * (Optional) [Teams Toolkit](https://aka.ms/teams-toolkit) extension for Microsoft Visual Studio Code to help update your code
 
 > [!div class="nextstepaction"]
@@ -234,9 +234,6 @@ To preview your app running in Microsoft 365 on the web:
     :::image type="content" source="images/office-web-more-apps.png" alt-text="The screenshot is an example that shows the (More apps) option on the side bar of microsoft365.com to see your installed personal tabs.":::
 
 ### Microsoft 365 app for Android
-
-> [!NOTE]
-> Before installing the app, perform [the steps to install the latest Microsoft 365 app beta build](prerequisites.md#mobile) and be a part of the beta program.
 
 To view your app running in Microsoft 365 app for Android:
 
