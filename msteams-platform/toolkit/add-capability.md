@@ -64,7 +64,8 @@ You can add capabilities in the following ways:
 
 ### Use TeamsFx CLI
 
-You can use TeamsFx CLI for adding features to your app project. This is an alternative way of adding features.
+You can use TeamsFx CLI an alternative way for adding features to your app project.
+
 This section lists the capabilities you can add to your Teams app using TeamsFx CLI commands. Before you add capabilities to your app, ensure that you’ve changed the directory to your project directory.
 
 The following table lists the capabilities and the TeamsFx CLI commands for adding them:
@@ -84,7 +85,7 @@ The following table shows the changes that you can see in the files of your app 
 
 |Add capability|Description| Changes|
 |------------|------------------------|---------|
-|Basic bot, basic message extension, and basic tab|Includes a basic bot&nbsp;bot or basic tab app template into your project.|A front-end bot or tab template code is added into a subfolder with path `yourProjectFolder\bot` or `yourProjectFolder\tab` respectively.|
+|Basic bot, basic message extension, and basic tab|Includes a basic bot or basic tab app template into your project.|A front-end bot or tab template code is added into a subfolder with path `yourProjectFolder\bot` or `yourProjectFolder\tab` respectively.|
 |Basic bot, message extension, and basic tab |Includes necessary scripts for Visual Studio Code and is executed when you want to debug your app locally. |Files `launch.json` and `task.json` under `.vscode` folder are updated.|
 |Basic bot and basic message extension|Information in the manifest file for a basic bot or basic tab app. This information represents your app in the Teams Platform.|The file `manifest.template.json` under `templates\appPackage` folder is updated, which includes tab-related information in the manifest file that represents your app in the Teams Platform. The changes are visible in the ID of your bot, the scopes of your bot, and the commands that your bot or tab app can respond to.|
 |Basic tab|Includes information in the manifest file for a basic bot or basic tab. This information represents your app in the Teams Platform.|The file `manifest.template.json` under `templates\appPackage` folder is updated, which includes tab-related information in the manifest file that represents your app in the Teams Platform. The changes are visible in the configurable and static tabs and scopes of the tabs.|
