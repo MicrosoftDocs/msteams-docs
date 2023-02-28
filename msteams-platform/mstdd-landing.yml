@@ -64,8 +64,8 @@ landingContent:
         url:  tabs/how-to/build-a-dashboard-tab-app.md
       - text: Targeted in-meeting notification (Developer preview)
         url: apps-in-teams-meetings/in-meeting-notification-for-meeting.md#targeted-in-meeting-notification
-      - text: Enable app caching to improve subsequent launch time of the apps to the meeting side panel (Developer preview)
-        url: apps-in-teams-meetings/build-tabs-for-meeting.md#app-caching
+      - text: Enable app caching for your tab app (Developer preview)
+        url: apps-in-teams-meetings/app-caching-for-your-tab-app.md
       - text: Update and soft delete event notifications in bot
         url: bots/how-to/conversations/conversation-messages.md#update-message
       - text: Teams developer documentation FAQs
