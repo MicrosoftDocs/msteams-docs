@@ -21,10 +21,10 @@ The [Bot Framework](https://dev.botframework.com/) is a rich SDK used to create 
 
 ### Code samples - Bots
 
-|Sample name | Description | .NETCore | Node.js | Python |
-|----------------|-----------------|--------------|----------------|
-| Teams conversation bot | Messaging and conversation event handling | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/python) |
-|Bot samples | Set of bot samples  | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk) |
+|Sample name | Description | .NETCore | Node.js | Python | Java| Manifest|
+|----------------|-----------------|--------------|----------------|----------------|----------------|----------------|
+| Teams conversation bot | Messaging and conversation event handling | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/python) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/java) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp/demo-manifest/bot-conversation.zip)|
+|Bot samples | Set of bot samples  | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk) ||
 
 ## Message extensions
 
@@ -42,8 +42,8 @@ The following table provides the user types and lists the features that each use
 | :-- | :-- | :-- | :-- | :-- |
 | In-tenant | Can view messages, interact with the content, and invoke the bot. | Available | Available | Available |
 | Guest, part of the tenant Azure AD | Can view messages, interact with the content, and invoke the bot. | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. |
-| Federated users, for more information, see [non-standard users](/microsoftteams/non-standard-users). |Can view messages, interact with the content, and invoke the bot. | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. |
-| Anonymous |  Can view messages and interact with the bot. | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. |
+| Federated, for more information, see [non-standard users](/microsoftteams/non-standard-users). |Can view messages, interact with the content, and invoke the bot. | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. |
+| Anonymous |  Can view and interact with the messages sent by the bot. Can't invoke the bot. | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. |
 
 ## See also
 
@@ -52,4 +52,4 @@ The following table provides the user types and lists the features that each use
 * [Design task modules for your Microsoft Teams app](../task-modules-and-cards/task-modules/design-teams-task-modules.md)
 * [Receive all conversation messages with RSC](../bots/how-to/conversations/channel-messages-with-rsc.md)
 * [Conversation basics](../bots/how-to/conversations/conversation-basics.md)
-* [Adaptive Cards](../task-modules-and-cards/cards/cards-reference.md#adaptive-card)
+* [Adaptive Card](../task-modules-and-cards/cards/cards-reference.md#adaptive-card)

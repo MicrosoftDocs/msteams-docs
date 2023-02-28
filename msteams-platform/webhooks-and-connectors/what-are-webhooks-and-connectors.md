@@ -41,7 +41,7 @@ Learn more about the differences between a notification bot and Incoming Webhook
 | Installation required | Yes | No |
 | Suitable scenarios | • Receive regular notifications and messages periodically, for example, receive daily notification of team tasks. <br>  • Receive notifications and messages based on real events. For example, once teammates upload files, you receive notifications. | Communicate with external apps and receive notifications and messages from other apps. |
 | Scope configuration | • Teams channel <br> • Group chat <br> • Personal chat | Teams channel |
-| Message process | A notification not works as a Teams application. You can define your business logic to process data and show data in a customized format. | Webhook is a Teams feature rather than a Teams application, so it only receives and shows data without processing. |
+| Message process | A notification bot works as a Teams application. You can define your business logic to process data and show data in a customized format. | Webhook is a Teams feature rather than a Teams application, so it only receives and shows data without processing. |
 | Retrieve Teams context | Notification bot can retrieve Teams context such as the channel or user information, messages, etc. | No |
 | Send Adaptive Card | Yes | Yes |
 | Send a welcome message | Yes | No |
