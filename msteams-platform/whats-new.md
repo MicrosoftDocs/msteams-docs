@@ -26,7 +26,7 @@ Teams platform features that are available to all app developers.
 
 **2023 February**
 
-* ***February 28, 2023***: [Promote app awareness and app adoption](promote-app-adoption.md)
+* ***February 28, 2023***: [Facilitate adoption of your app and create awareness](promote-app-adoption.md)
 * ***February 27, 2022***: [Changelog for Developer Portal.](concepts/build-and-test/teams-developer-portal.md#changelog-for-developer-portal)
 * ***February 23, 2022***: [SSO authentication for your Adaptive Cards Universal Actions.](task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/enable-sso-for-your-adaptive-cards-universal-action.md)
 * ***February 23, 2022***: [Third party authentication for Adaptive Cards Universal Actions.](task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/authentication-flow-in-universal-action-for-adaptive-cards.md)

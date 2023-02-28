@@ -52,7 +52,7 @@ landingContent:
         url: https://gitter.im/OfficeDev/home
     - linkListType: whats-new
       links:
-      - text: Promote app awareness and app adoption
+      - text: Facilitate adoption of your app and create awareness
         url: promote-app-adoption.md
       - text: Changelog for Developer Portal
         url: concepts/build-and-test/teams-developer-portal.md#changelog-for-developer-portal
