@@ -200,6 +200,12 @@ If you unlink a SaaS offer included in your Teams store listing, you must republ
    1. Select **Distribute > Publish to the Teams store**.
    1. Select **Open Partner Center** to begin the process of republishing your app without the offer.
 
+## Code sample
+
+| **Sample name** | **Description** | **Node.js** | **Manifest**|
+|-----------------|-----------------|----------------|----------------|----------------|
+| Meeting stage view | This app helps to enable and configure your apps for Teams meetings. It also demonstrates use of share in meeting feature.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-app-monetization/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-app-monetization/nodejs/demo-manifest/tab-app-monetization.zip)|
+
 ## See also
 
 * [Monetize your app](monetize-overview.md)
