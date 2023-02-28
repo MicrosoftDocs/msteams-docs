@@ -39,7 +39,7 @@ To complete this tutorial, you need:
 
 If you have an existing personal tab app, make a copy or a branch of your production project for testing and update your App ID in the app manifest to use a new identifier (distinct from the production App ID, for testing).
 
-If you'd like to use sample code instead of your own production code, you can use the Todo List sample. Either follow the setup steps in the [Todo List Sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend) GitHub repository or use the Teams Toolkit extension to create a new Teams app and select *Start from a sample > Todo List with backend on Azure*. After you've created a personal tab, return to this article to extend it across Microsoft 365.
+If you'd like to use sample code instead of your own production code, you can use the Todo List sample. You can either follow the setup steps in the [Todo List Sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend) GitHub repository or use the Teams Toolkit extension to create a new Teams app (select *Start from a sample > Todo List with backend on Azure*). After you've created a personal tab, return to this article to extend it across Microsoft 365.
 
 Alternately, you can use a basic single sign-on *hello world* app already Microsoft 365 app enabled in the following [Quickstart](#quickstart) section and then skip to [sideload your app in Teams](#sideload-your-app-in-teams).
 
@@ -86,7 +86,7 @@ You have two options for updating your app manifest:
 # [Teams Toolkit](#tab/manifest-teams-toolkit)
 
 1. Open the command palette: `Ctrl+Shift+P`.
-1. Run the `Teams: Upgrade Teams manifest` command and select your app manifest file. Changes will be made in place.
+1. Run the `Teams: Upgrade Teams manifest` command and select your app manifest file. Changes are made in place.
 
 # [Manual steps](#tab/manifest-manual)
 
@@ -112,7 +112,7 @@ You can use Teams Toolkit to help identify and automate the required code change
 1. Open the *Command palette*: `Ctrl+Shift+P`.
 1. Run the command `Teams: Upgrade Teams JS SDK and code references`.
 
-Upon completion, your *package.json* file will reference `@microsoft/teams-js@2.0.0` (or higher) and your `*.js/.ts` and `*.jsx/.tsx` files will be updated with:
+Upon completion, your *package.json* file references `@microsoft/teams-js@2.0.0` (or higher) and your `*.js/.ts` and `*.jsx/.tsx` files are updated with:
 
 > [!div class="checklist"]
 >
@@ -261,7 +261,7 @@ From Teams Toolkit, you can Debug (`F5`) your tab application running in Microso
 
 :::image type="content" source="images/toolkit-debug-targets.png" alt-text="The screenshot is an example that shows the dropdown menu of debug in Teams in the Teams Toolkit.":::
 
-Upon first run of local debug in Microsoft 365 app or Outlook, you'll be prompted to sign in to your Microsoft 365 tenant account and install a self-signed test certificate. You'll also be prompted to manually install Teams. Select **Install in Teams** to open a browser window and manually install your app. Then select **Continue** to proceed to debug your app in Microsoft 365 / Outlook.
+Upon first run of local debug in Microsoft 365 app or Outlook, you're prompted to sign in to your Microsoft 365 tenant account and install a self-signed test certificate. You'll also be prompted to manually install Teams. Select **Install in Teams** to open a browser window and manually install your app. Then select **Continue** to proceed to debug your app in Microsoft 365 / Outlook.
 
 :::image type="content" source="images/toolkit-dialog-teams-install.png" alt-text="The screenshot is an example that shows the Toolkit dialog box to install in Teams.":::
 
