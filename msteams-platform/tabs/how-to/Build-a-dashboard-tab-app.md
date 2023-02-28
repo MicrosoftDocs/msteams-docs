@@ -1,5 +1,5 @@
 ---
-title: Create a dashboard in Teams
+title: Build a dashboard tab app
 author: v-silakshmi
 description:  Describes Dashboard, widget and Graph API call in Teams toolkit 
 ms.author: surbhigupta
