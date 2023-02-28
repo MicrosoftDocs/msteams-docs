@@ -74,7 +74,7 @@ Provide a user guide for your app and cover the following topics:
 * How can users reach you for support?
 * What are the user configuration settings, for example, profile setup?
 
-For more information, see [drive awareness about features with users](#educate-users-and-drive-adoption-change-management-about-your-app).
+For more information, see [drive awareness about features with users](#educate-users-and-drive-adoption-change-management-for-your-app).
 
 ### User awareness campaign and assets for organizations to drive adoption change management
 
