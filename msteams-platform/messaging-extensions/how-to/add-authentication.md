@@ -135,9 +135,9 @@ At this point, the window closes and the control is passed to the Teams client. 
 
 ## Code sample
 
-|**Sample name** | **Description** |**.NET** | **Node.js**| **Manifest**
+|**Sample name** | **Description** |**.NET** | **Node.js**| **Manifest**|
 |----------------|-----------------|--------------|----------------|----------------|
-|Message extensions - auth and config | A message extension that has a configuration page, accepts search requests, and returns results after the user has signed in. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search-auth-config/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search-sso-config/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search-auth-config/csharp/demo-manifest/msgext-search-auth-config.zip)
+|Message extensions - auth and config | A message extension that has a configuration page, accepts search requests, and returns results after the user has signed in. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search-auth-config/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search-sso-config/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search-auth-config/csharp/demo-manifest/msgext-search-auth-config.zip)|
 
 ## See also
 
