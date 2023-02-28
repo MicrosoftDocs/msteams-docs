@@ -82,7 +82,7 @@ Awareness and training are the marketing and enablement segments of your overall
 
 A campaign must be at the correct time in the adoption life cycle. Contextual reminders after a campaign can help drive the adoption. For example, a campaign that has communications spanning across pre-rollout days to build excitement, at the time of rollout to inform, and post-rollout to serve as a reminder.
 
-Post-adoption, there is a need for continuous engagement to help existing users with their tasks and to gradually onboard late adopters. You can host interactive sessions with the community such as support webinars and office hours. You can build a community around your app, answer queries, recognize top users or MVPs in your community, and do other similar activities.
+Post-adoption, there's a need for continuous engagement to help existing users with their tasks and to gradually onboard late adopters. You can host interactive sessions with the community such as support webinars and office hours. You can build a community around your app, answer queries, recognize top users or MVPs in your community, and do other similar activities.
 
 For help on creating these assets, register for the [ISV success program overview](https://www.microsoft.com/isv/program-benefits).
 
@@ -159,7 +159,7 @@ To support app customization, you as an app developer can allow your app to be c
 
 ### Documentation requirements for IT admins
 
-Provide admin-focused documentation in your app toolkit that is based on the above information related to the admin tasks. Your target audience are decision makers who sponsor the app rollout and IT admins who execute the app rollout. The following information is required in your admin-focused docs:
+Provide admin-focused documentation in your app toolkit that is based on the above information related to the admin tasks. Your target audiences are decision makers who sponsor the app rollout and IT admins who execute the app rollout. The following information is required in your admin-focused docs:
 
 * A dedicated webpage of your Teams app on your official website that includes business benefits of using your app.
 * Compliance, security, privacy, and data handling information about your app. App architecture diagram and data flow diagram.
@@ -167,7 +167,7 @@ Provide admin-focused documentation in your app toolkit that is based on the abo
 * Mention whether you have allowed app customization or not.
 * Information on governance controls available to admins. Briefly describe how admins can use policies in admin center to control access to apps.
 * Information to troubleshoot any rollout issues. The admins might face app-specific issues, provide troubleshooting tips.
-* Your contact information for app support. If admins can’t troubleshoot app rollout or issues faced by the users, then how do they contact you. Your contact information and method to raise a support ticket mustn’t require the user to login.
+* Your contact information for app support. If admins can’t troubleshoot app rollout or issues faced by the users, then how do they contact you. Your contact information and method to raise a support ticket mustn’t require the user to log in.
 * List of supported languages.
 
 ## Educate users and drive adoption change management about your app
