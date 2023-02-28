@@ -7,7 +7,7 @@ ms.localizationpriority: medium
 ms.author: guptaashish
 ---
 
-# Facilitate adoption of your app and create awareness
+# Five steps to drive adoption of your app
 
 As an app developer, one of the key activities after publishing your Microsoft Teams app is to drive adoption for your app with your customers. Ensure that the users interact with your app and you [learn from their usage behavior and feedback](/microsoftteams/teams-analytics-and-reports/app-usage-report). You incorporate the learning in your app revisions. Examples of post-publish activities are deployment and adoption-related engagements, user base growth, support for existing app customers, app updates, and app monetization.
 
@@ -22,7 +22,7 @@ Your customers must have the following access to roll out your Teams app:
 
 ### Access to Teams
 
-Customers need to have appropriate licenses to access Teams and use the apps. To use apps on Teams, users must be signed in to Teams and have a license for [Microsoft 365 Business Basic](https://www.microsoft.com/microsoft-365/business/compare-all-microsoft-365-business-products-b?ef_id=b7ff8842550c11df1d45ebe1bb56eaa1:G:s&OCID=AIDcmmwf9kwzdj_SEM_b7ff8842550c11df1d45ebe1bb56eaa1:G:s&lnkd=Bing_O365SMB_Brand&msclkid=b7ff8842550c11df1d45ebe1bb56eaa1) or higher. If customers aren’t already using Teams, then recommend to adopt Microsoft Teams first. For Teams adoption guidance, see [Microsoft Teams Adoption](https://adoption.microsoft.com/microsoft-teams/).
+Customers need to have appropriate licenses to access Teams and use the apps. To use apps on Teams, users must be signed in to Teams and have a license for [Microsoft 365 Business Basic](https://www.microsoft.com/microsoft-365/business/compare-all-microsoft-365-business-products-b) or higher. If customers aren’t already using Teams, then recommend to adopt Microsoft Teams first. For Teams adoption guidance, see [Microsoft Teams Adoption](https://adoption.microsoft.com/microsoft-teams/).
 
 If you're a Microsoft Partner, you can work with your Microsoft counterpart to facilitate Teams adoption. If you want to become a Microsoft Partner, see [ISV success program overview](https://www.microsoft.com/isv/program-benefits).
 
@@ -39,11 +39,31 @@ Admins can set up an app governance process that manages your organization's IT 
 
 Following the below five easy steps, you can encourage customers to adopt your apps through admin recommendations to their users, for maximum adoption in an organization. Consider the following elements for app adoption.
 
-:::image type="content" source="assets/images/drive-app-adoption.png" alt-text="Diagram shows the steps to drive app adoption." lightbox="assets/images/drive-app-adoption-large.png":::
+:::row:::
+
+    :::column:::
+
+:::image type="content" source="assets/images/drive-app-adoption1.png" link="#perform-internal-enablement-to-support-app-adoption" border="false" alt-text="Screenshot showing first step of app adoption as internal enablement.":::
+
+    :::column-end:::
+    :::column:::
+
+ :::image type="content" source="assets/images/drive-app-adoption2.png" link="#help-admins-to-do-app-configuration-and-rollout-for-their-users" border="false" alt-text="Screenshot showing second step of app adoption as helping admins do configuration and rollout.":::
+
+    :::column-end:::
+    :::column:::
+
+  :::image type="content" source="assets/images/drive-app-adoption3.png" link="#educate-users-and-drive-adoption-change-management-for-your-app" border="false" alt-text="Screenshot showing third step of app adoption as educating users about app features.":::
+
+    :::column-end:::
+
+:::row-end:::
+
+:::image type="content" source="assets/images/drive-app-adoption.png" alt-text="Diagram shows the steps to drive app adoption." lightbox="assets/images/drive-app-adoption.png":::
 
 1. **[Perform internal enablement to support app adoption](#perform-internal-enablement-to-support-app-adoption)**: Share your app information and its importance with your customer-facing teams, such as, CSM, support, marketing, and sales that help customers adopt your apps. To achieve this, provide an adoption toolkit, define a rollout process, and give enablement training for your customer-facing teams.
 1. **[Help admins to do app configuration and rollout](#help-admins-to-do-app-configuration-and-rollout-for-their-users)**: Help the IT admins do the necessary configurations to enable your app for the users. Provide a help guide for IT admins to understand the configuration steps.
-1. **[Educate users and drive adoption change management about your app](#educate-users-and-drive-adoption-change-management-about-your-app)**: Provide user guide for the users that describes their jobs to be done (JTBD) and your app’s features. Promote awareness about your app and its use cases. You can conduct email campaigns, webinars, or social media engagements depending on your target audience.
+1. **[Educate users and drive adoption change management for your app](#educate-users-and-drive-adoption-change-management-for-your-app)**: Provide user guide for the users that describes their jobs to be done (JTBD) and your app’s features. Promote awareness about your app and its use cases. You can conduct email campaigns, webinars, or social media engagements depending on your target audience.
 1. **[Provide support contact for IT admins and users](#provide-support-information-for-it-admins-and-users)**: When admins or users encounter unknown issues or issues that can't be resolved using the documentation, they might reach for support. Providing support in such scenarios is helpful for healthy retention of users.
 1. **[Track app adoption and usage using analytics](#track-app-adoption-and-usage-using-analytics)**: Track your app adoption progress after the rollout and promptly resolve issues for the early adopters. Your CSM or account manager can engage with the customer's organization and its IT admins to track adoption and provide support.
 
@@ -85,6 +105,8 @@ A campaign must be at the correct time in the adoption life cycle. Contextual re
 Post-adoption, there's a need for continuous engagement to help existing users with their tasks and to gradually onboard late adopters. You can host interactive sessions with the community such as support webinars and office hours. You can build a community around your app, answer queries, recognize top users or MVPs in your community, and do other similar activities.
 
 For help on creating these assets, register for the [ISV success program overview](https://www.microsoft.com/isv/program-benefits).
+
+[Back to top](#five-steps-to-drive-adoption-of-your-app)
 
 ## Help admins to do app configuration and rollout for their users
 
@@ -170,7 +192,9 @@ Provide admin-focused documentation in your app toolkit that is based on the abo
 * Your contact information for app support. If admins can’t troubleshoot app rollout or issues faced by the users, then how do they contact you. Your contact information and method to raise a support ticket mustn’t require the user to log in.
 * List of supported languages.
 
-## Educate users and drive adoption change management about your app
+[Back to top](#five-steps-to-drive-adoption-of-your-app)
+
+## Educate users and drive adoption change management for your app
 
 Apps in Microsoft Teams are designed to enable collaboration between people in your organization. Enabling the right workflows and notifications for critical events in your apps in Teams enhances collaboration. The settings proactively notify the users on the tasks to be done and how to do those tasks.
 
@@ -249,6 +273,8 @@ Champions help:
 
 You can use Microsoft [Champions Program Guide](https://adoption.microsoft.com/become-a-champion/) as a reference and build this program in your organization for your app. For more information, see [Create your champions program for Microsoft Teams](/microsoftteams/teams-adoption-create-champions-program).
 
+[Back to top](#five-steps-to-drive-adoption-of-your-app)
+
 ## Provide support information for IT admins and users
 
 When your app is being rolled out or being used, your customers might have queries about configuration, admin settings, user flows, app features, support information, and other queries. Provide support at each stage of app lifecycle to facilitate rollout, onboard app users, build a good brand reputation, and exhibit commitment towards your app.
@@ -320,3 +346,5 @@ For more information, see [Teams app usage report](/microsoftteams/teams-analyti
 For better communication and adoption campaign, identify your metrics in advance and build into your app. It's important to plan for the kind of data, metrics, and events that you want to monitor before you start developing your Teams app. For more information, see [strategize and decide what to measure](concepts/design/strategize-measure.md).
 
 After successful app adoption and analysis, share your journey and your achievements in the form of a case study or an app success story. Work with [Microsoft ISV success program](https://www.microsoft.com/isv/program-benefits) to publish it with Microsoft. For information on how Microsoft can help, see [Succeed with your collaborative app](concepts/deploy-and-publish/appsource/post-publish/app-growth/succeed.md).
+
+[Back to top](#five-steps-to-drive-adoption-of-your-app)
