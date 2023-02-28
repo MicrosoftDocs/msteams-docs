@@ -86,7 +86,7 @@ Post-adoption, there's a need for continuous engagement to help existing users w
 
 For help on creating these assets, register for the [ISV success program overview](https://www.microsoft.com/isv/program-benefits).
 
-[Back to top](#five-steps-to-drive-adoption-of-your-app)
+[Back to top](#understand-how-you-can-drive-app-adoption)
 
 ## Help admins to do app configuration and rollout for their users
 
@@ -172,7 +172,7 @@ Provide admin-focused documentation in your app toolkit that is based on the abo
 * Your contact information for app support. If admins can’t troubleshoot app rollout or issues faced by the users, then how do they contact you. Your contact information and method to raise a support ticket mustn’t require the user to log in.
 * List of supported languages.
 
-[Back to top](#five-steps-to-drive-adoption-of-your-app)
+[Back to top](#understand-how-you-can-drive-app-adoption)
 
 ## Educate users and drive adoption change management for your app
 
@@ -253,7 +253,7 @@ Champions help:
 
 You can use Microsoft [Champions Program Guide](https://adoption.microsoft.com/become-a-champion/) as a reference and build this program in your organization for your app. For more information, see [Create your champions program for Microsoft Teams](/microsoftteams/teams-adoption-create-champions-program).
 
-[Back to top](#five-steps-to-drive-adoption-of-your-app)
+[Back to top](#understand-how-you-can-drive-app-adoption)
 
 ## Provide support information for IT admins and users
 
@@ -279,6 +279,8 @@ The following table provides the support information that you already submitted 
 |[Manifest file](resources/schema/manifest-schema.md)|termsOfUseUrl|The URL to the page that provides the terms of use for the app.|• Displayed in app details page in Teams admin center. <br> • Displayed in Store listing.|
 |[Manifest file](resources/schema/manifest-schema.md)|publisherDocsUrl|The URL to the page provides additional app information for the admins.|Available in Teams admin center for apps that are blocked by publisher.|
 |[Partner Center submission](/azure/marketplace/add-in-submission-guide)|NA|Support or help documentation URL.|Displayed in [AppSource](https://appsource.microsoft.com/?exp=ubp8), under **Details + support** tab.|
+
+[Back to top](#understand-how-you-can-drive-app-adoption)
 
 ## Track app adoption and usage using analytics
 
@@ -327,4 +329,4 @@ For better communication and adoption campaign, identify your metrics in advance
 
 After successful app adoption and analysis, share your journey and your achievements in the form of a case study or an app success story. Work with [Microsoft ISV success program](https://www.microsoft.com/isv/program-benefits) to publish it with Microsoft. For information on how Microsoft can help, see [Succeed with your collaborative app](concepts/deploy-and-publish/appsource/post-publish/app-growth/succeed.md).
 
-[Back to top](#five-steps-to-drive-adoption-of-your-app)
+[Back to top](#understand-how-you-can-drive-app-adoption)
