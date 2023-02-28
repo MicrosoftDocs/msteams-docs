@@ -202,7 +202,7 @@
     items:
     - name: Overview
       href: concepts/build-and-test/teams-developer-portal.md
-      displayName: App Studio
+      displayName: App Studio, Changelog for Developer Portal
     - name: Manage your apps in Developer Portal
       href: concepts/build-and-test/manage-your-apps-in-developer-portal.md
       displayName: AppID 
@@ -280,9 +280,6 @@
   - name: Create a personal tab
     href: tabs/how-to/create-personal-tab.md
     displayName: App generator, Reorder static personal tabs
-  - name: Create a dashboard in Teams
-    href: tabs/how-to/dashboard-teams-toolkit.md
-    displayName: Dashboard, widget, Graph API call
   - name: Create a channel tab
     href: tabs/how-to/create-channel-group-tab.md
     displayName: Create a channel tab or group tab, Create a custom channel or group tab with ASP.NET Core, Build your first app using Blazor
@@ -302,7 +299,10 @@
     href: tabs/how-to/access-teams-context.md
     displayName: getContext, entityId, groupId, User context, authentication flow from Microsoft Azure Active Directory, retrieve context, theme changes
   - name: Navigate within your tab
-    href: tabs/how-to/tab-navigation.md  
+    href: tabs/how-to/tab-navigation.md
+  - name: Build a dashboard tab app
+    href: tabs/how-to/build-a-dashboard-tab-app.md
+    displayName: Dashboard, widget, Graph API call
   - name: Build apps for shared channels
     href: concepts/build-and-test/shared-channels.md
     displayName: Cross-tenant notifications, context for shared channel, apps and permissions in shared channels
@@ -433,8 +433,13 @@
   - name: Enable and configure apps for Teams meetings
     items:
     - name: Build tabs for meeting
-      href: apps-in-teams-meetings/build-tabs-for-meeting.md
-      displayName: anonymous, app caching, cache
+      items:
+      - name: Enable your tabs for Teams meeting
+        href: apps-in-teams-meetings/build-tabs-for-meeting.md
+        displayName: anonymous
+      - name: Enable app caching for your tab app
+        href: apps-in-teams-meetings/app-caching-for-your-tab-app.md
+        displayName: app caching, launch time
     - name: Build apps for meeting stage
       href: apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md
       displayName: MicrosoftTeams.meeting.getAppContentStageSharingState
@@ -589,6 +594,14 @@
         href: bots/how-to/authentication/bot-sso-manifest.md
       - name: Grant Microsoft Graph permissions and scopes
         href: bots/how-to/authentication/bot-sso-graph-api.md
+    - name: Enable SSO for your Adaptive Cards Universal Actions in bot
+      items:
+      - name: Overview
+        href: task-modules-and-cards\cards\Universal-actions-for-adaptive-cards\enable-sso-for-your-adaptive-cards-universal-action.md
+        displayName: Adaptive cards universal action SSO authentication, Action.Execute SSO
+      - name: Add code to enable SSO for your Adaptive Cards Universal Actions in bot
+        href: task-modules-and-cards\cards\Universal-actions-for-adaptive-cards\sso-adaptive-cards-universal-action.md
+        displayName: Adaptive cards universal action SSO authentication, Action.Execute SSO
     - name: Troubleshoot SSO authentication
       href: tabs/how-to/authentication/tab-sso-troubleshooting.md
       displayName: Caching
@@ -603,6 +616,9 @@
       displayName: Loop
     - name: Add third party IdP authentication to message extension app
       href: messaging-extensions/how-to/add-authentication.md
+    - name: Add third party IdP authentication to Adaptive Cards Universal Actions
+      href: task-modules-and-cards\cards\Universal-actions-for-adaptive-cards\authentication-flow-in-universal-action-for-adaptive-cards.md
+      displayName: Adaptive cards universal action third party Idp authentication, Action.Execute OAuth nominal authentication
   - name: Use external OAuth providers
     href: tabs/how-to/authentication/auth-oauth-provider.md
 - name: Integrate device capabilities
@@ -764,6 +780,31 @@
   - name: Test preview for monetized apps
     href: concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
     displayName: paid, AppSource, fee 
+- name: Grow your app
+  items:
+    - name: Strategize and execute growth for your app
+      href: concepts/deploy-and-publish/appsource/post-publish/app-growth/overview-app-growth.md
+      displayName: growth, investment, monetize, market
+    - name: Guide to grow your app
+      items: 
+      - name: Growth lifecycle for your app
+        href: concepts/deploy-and-publish/appsource/post-publish/app-growth/app-growth-lifecycle.md
+        displayName: lifecycle, traction, build, launch, scale, succeed, GTM
+      - name: Build your collaborative app
+        href: concepts/deploy-and-publish/appsource/post-publish/app-growth/build-app.md
+        displayName: Build, collaborative, stage, developer
+      - name: Launch your collaborative app
+        href: concepts/deploy-and-publish/appsource/post-publish/app-growth/launch-app.md
+        displayName: social media, blog post, press release, freemium, marketing, banners
+      - name: Gain traction for your collaborative app in the market
+        href: concepts/deploy-and-publish/appsource/post-publish/app-growth/gain-traction.md
+        displayName: upskill, awareness, marketplace, activation, rollout, monetization
+      - name: Scale your collaborative app
+        href: concepts/deploy-and-publish/appsource/post-publish/app-growth/scale-app.md
+        displayName: CSP, webinar, advertise, pitch, sell
+      - name: Succeed with your collaborative app
+        href: concepts/deploy-and-publish/appsource/post-publish/app-growth/succeed.md
+        displayName: TAM, PQL, metrics, success, ROI
 - name: App manifest
   items:
     - name: App manifest schema for Teams
