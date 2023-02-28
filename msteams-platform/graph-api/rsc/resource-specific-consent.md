@@ -32,7 +32,7 @@ RSC permissions are available on the following different resource types:
 
 * [Team](#rsc-permissions-for-a-team) (includes the channels within a team)
 * [Chat or meeting](#rsc-permissions-for-a-chat-or-meeting) (includes the meetings associated with the chats)
-* [User](#rsc-permissions-for-a-user)
+* [User](#rsc-permissions-for-a-user-access)
 
 ### API that supports RSC-based data access
 
