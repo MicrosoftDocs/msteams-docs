@@ -52,6 +52,8 @@ landingContent:
         url: https://gitter.im/OfficeDev/home
     - linkListType: whats-new
       links:
+      - text: Facilitate adoption of your app and create awareness
+        url: promote-app-adoption.md
       - text: Changelog for Developer Portal
         url: concepts/build-and-test/teams-developer-portal.md#changelog-for-developer-portal
       - text: SSO authentication for your Adaptive Cards Universal Actions
@@ -70,8 +72,6 @@ landingContent:
         url: bots/how-to/conversations/conversation-messages.md#update-message
       - text: Teams developer documentation FAQs
         url: teams-faq.md
-      - text: Share-in-meeting to share any document or third-party app to the meeting stage
-        url: ~/concepts/build-and-test/share-in-meeting.md
 
     - linkListType: whats-new
       links:
