@@ -15,15 +15,15 @@ Adding capabilities with Teams Toolkit allows you to extend the functionality of
 |Capability|Description|Other supported capabilities|
 |--------|-------------|-----------------|
 |**Basic Teams app**|              |
-| **Tab** |  Basic Tabs are simple HTML tags that refer to domains declared in the app manifest. You can add tabs as a part of channel inside a team, group chat, or personal app for an individual user.|Basic tab, notification bot, command bot, basic bot, and basic message extension|
-| **Bot** |  Bots help to interact with your web service through text, interactive cards, and task modules.|Message extension, SSO-enabled tab, and basic tab|
-| **Message extension** | Message extensions help to interact with your web service through buttons and forms in the Microsoft Teams client.|Bot, SSO-enabled tab, and tab|
+| **Tab** |  Basic tabs are simple HTML tags that refer to domains declared in the app manifest. You can add tabs as a part of channel inside a team, group chat, or personal app for an individual user.|Basic tab, notification bot, command bot, basic bot, and basic message extension|
+| **Bot** |  Bots help to interact with your web service through text, interactive cards, and task modules.|Basic message extension, SSO-enabled tab, and basic tab|
+| **Message extension** | Message extensions help to interact with your web service through buttons and forms in the Microsoft Teams client.|Basic bot, SSO-enabled tab, and basic tab|
 |**Scenario-based Teams app**|             |
-| **Notification bot** | Notification bot proactively sends messages in Teams channel or group chat, or personal chat. You can trigger the notification bot with a HTTP request, such as cards or texts. |SSO-enabled tab and tab|
-| **Command bot** | Command bot allows you to automate repetitive tasks using a command bot. It responds to simple commands sent in chats with the Adaptive Cards. |SSO-enabled tab and tab|
-| **Workflow bot** | Workflow bot allows users to interact with an Adaptive Card enabled by the Adaptive Card action handler feature in the workflow bot app.|SSO-enabled tab and tab|
+| **Notification bot** | Notification bot proactively sends messages in Teams channel or group chat, or personal chat. You can trigger the notification bot with a HTTP request, such as cards or texts. |SSO-enabled tab and basic tab|
+| **Command bot** | Command bot allows you to automate repetitive tasks using a command bot. It responds to simple commands sent in chats with the Adaptive Cards. |SSO-enabled tab and basic tab|
+| **Workflow bot** | Workflow bot allows users to interact with an Adaptive Card enabled by the Adaptive Card action handler feature in the workflow bot app.|SSO-enabled tab and basic tab|
 | **SPFx tab** | SPFx tab apps are hosted in Microsoft 365 and it supports developing and hosting your client-side SharePoint Framework (SPFx) solution.|None|
-| **SSO-enabled tab** |You can build SSO-enabled tab app that allows the user with single sign-on (SSO) feature.|SSO-enabled tab, notification bot, command bot, bot, and message extension|
+| **SSO-enabled tab** |You can build SSO-enabled tab app that allows the user with single sign-on (SSO) feature.|SSO-enabled tab, notification bot, command bot, basic bot, and basic message extension|
 
 > [!NOTE]
 > You can add tabs up to 16 instances. You can add one bot and one message extension to each instance at a time.
