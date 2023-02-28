@@ -27,7 +27,7 @@ You can view your app's usage and other insights from the **Analytics** page. To
 1. Select the required app from the **Apps** page.
 1. Select **Analytics** under the **Overview** or select **View details** under the **Active Users (Preview)** card.
 
-   :::image type="content" source="../../assets/images/tdp/dev-app-portal.png" alt-text="The screenshots shows you the analytics page of your app in Developer Portal."lightbox="../../assets/images/tdp/dev-app-portal.png":::
+   :::image type="content" source="../../assets/images/tdp/dev-app-portal.png" alt-text="Screenshot shows you the analytics page of your app in Developer Portal."lightbox="../../assets/images/tdp/dev-app-portal.png":::
 
 As you explore individual metrics on this page, you can use **Filter** button to analyze your app's usage from the following filter options:
 
@@ -36,7 +36,7 @@ As you explore individual metrics on this page, you can use **Filter** button to
 * **Operating system**
 * **Area**
 
- :::image type="content" source="../../assets/images/tdp/dev-analytics-filter.png" alt-text="The screenshots shows you the analytics page filter in Developer Portal.":::
+ :::image type="content" source="../../assets/images/tdp/dev-analytics-filter.png" alt-text="Screenshot shows you the analytics page filter in Developer Portal.":::
 
 After you have selected your desired filters, you can explore the following individual widgets:
 
@@ -49,7 +49,7 @@ After you have selected your desired filters, you can explore the following indi
 
 The **Usage by time period** chart shows you the number of active users or tenants who opened and used your app across different time periods.
 
- :::image type="content" source="../../assets/images/tdp/usage-by-time-period.png" alt-text="The screenshots shows you the usage by time period chart for your published app.":::
+ :::image type="content" source="../../assets/images/tdp/usage-by-time-period.png" alt-text="Screenshot shows you the usage by time period chart for your published app.":::
 
 | Metric | Definition |
 | :-----------------------| :------------------------------------------------------------------------------------------------------|
@@ -62,13 +62,13 @@ The **Usage by time period** chart shows you the number of active users or tenan
 
 The **Usage by platform and OS** chart shows your app's active usage across various endpoints, such as **Windows**, **Mac**, **iOS**, **Android**, and **Web**. The same user or tenant can use an app on multiple endpoints. Each data point represents a given R30 (Rolling 30 days) period.
 
- :::image type="content" source="../../assets/images/tdp/usage-by-platform-OS.png" alt-text="The screenshots shows you the usage by platform and OS chart for your published app.":::
+ :::image type="content" source="../../assets/images/tdp/usage-by-platform-OS.png" alt-text="Screenshot shows you the usage by platform and OS chart for your published app.":::
 
 ## Usage by retention state
 
 The **Usage by retention state** chart lets you track four key retention or churn metrics for your app over time.
 
-:::image type="content" source="../../assets/images/tdp/usage-by-retention-state.png" alt-text="The screenshots shows you the usage by retention state chart for your published app.":::
+:::image type="content" source="../../assets/images/tdp/usage-by-retention-state.png" alt-text="Screenshot shows you the usage by retention state chart for your published app.":::
 
 | Metric | Definition |
 | :-----------------------| :------------------------------------------------------------------------------------------------------|
@@ -81,7 +81,7 @@ The **Usage by retention state** chart lets you track four key retention or chur
 
 The **Usage intensity** chart shows the key usage intensity metrics for your app.
 
- :::image type="content" source="../../assets/images/tdp/usage-intensity.png" alt-text="The screenshots shows you the usage intensity chart for your published app.":::
+ :::image type="content" source="../../assets/images/tdp/usage-intensity.png" alt-text="Screenshot shows you the usage intensity chart for your published app.":::
 
 | Metric | Definition |
 | :-----------------------| :------------------------------------------------------------------------------------------------------|
@@ -95,7 +95,7 @@ The **My App dashboard** table shows you the latest R30 (Rolling 30 days) data f
 
 You can select each of these **Metric name** to see trends over time.
 
- :::image type="content" source="../../assets/images/tdp/app-dashboard.png" alt-text="The screenshots shows you App dashboard chart for your published app.":::
+ :::image type="content" source="../../assets/images/tdp/app-dashboard.png" alt-text="Screenshots shows you app dashboard chart for your published app in Developer Portal.":::
 
 ## See also
 
