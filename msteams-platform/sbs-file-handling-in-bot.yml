@@ -439,13 +439,13 @@ items:
 
       1. Go to **Microsoft Teams**.
 
-      1. In the left panel, select **Apps** > **Manage your apps**.
+      1. Select **Apps** > **Manage your apps**.
 
          :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/AppStore1_1.png" alt-text="adding app":::
 
-      1. Select **Upload a custom app**.
+      1. Select **Upload an app** and select **Upload a custom app**.
 
-         :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/upload-custom-app_1.png" alt-text="custom apps":::
+         :::image type="content" source="assets/images/upload-custom-app.png" alt-text="Screenshot showing the selection of Upload a custom app highlighted in red.":::
 
       1. Select **Open** to upload the .zip file that you created in the **TeamsAppManifest** folder.
 

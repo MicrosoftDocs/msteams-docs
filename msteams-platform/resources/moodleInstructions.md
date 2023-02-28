@@ -53,7 +53,7 @@ Ensure to install and download the following before proceeding with the Microsof
 
 ### Microsoft 365 Moodle plugins
 
-1. Download the plugins, extract them, and upload to their corresponding folders. For example, extract the OpenID Connect plugin (auth_oidc) to a folder called **oidc**, and upload to the **auth** folder of your Moodle document root. 
+1. Download the plugins, extract them, and upload to their corresponding folders. For example, extract the OpenID Connect plugin (auth_oidc) to a folder called **oidc**, and upload to the **auth** folder of your Moodle document root.
 
 1. Sign in to your Moodle server as an administrator and select **Site administration**.
 
@@ -161,7 +161,7 @@ Use the generated `AppID` and `Key` in your Microsoft 365 Moodle Plugins setup p
 
 1. Return to the plugins administration page, **Site administration > Plugins > Microsoft 365 Integration**, and select the **Teams Settings** page.
 
-1. On the **Teams Settings** page, configure the required settings to enable the Teams app integration by clicking the **Check Moodle settings** link will update all required configurations for the Teams integration to work. 
+1. On the **Teams Settings** page, configure the required settings to enable the Teams app integration by clicking the **Check Moodle settings** link will update all required configurations for the Teams integration to work.
 
 ## 3. Deploy the Moodle Assistant Bot to Azure
 
@@ -233,7 +233,7 @@ To deploy your app:
 
 1. Select the **Manage your apps** link in the navigation menu.
 
-1. Click **Publish an app** and select **Upload an app to your org's app catalog**.
+1. Select **Upload an app** and select **Upload an app to your org's app catalog**.
 
    > [!NOTE]
    > If you are logged in as a global administrator, you must have the option of uploading the app to your organization's app catalog, otherwise you can only load the app for a team in which you are a member.
