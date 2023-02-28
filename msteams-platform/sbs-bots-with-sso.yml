@@ -499,7 +499,7 @@ items:
 
     1. Replace all occurrences of **{TODO: MicrosoftAppId}** with your bot's **Microsoft App ID**.
     
-    1. In your cloned repository, go to **app sso** > **csharp** > **App SSO Sample** > **TeamsAppManifest** folder.
+    1. In your cloned repository, go to **app-sso** > **csharp** > **App SSO Sample** > **TeamsAppManifest** folder.
     
     1. Create a .zip with the following files that are present in the **TeamsAppManifest** folder: 
        * manifest.json
