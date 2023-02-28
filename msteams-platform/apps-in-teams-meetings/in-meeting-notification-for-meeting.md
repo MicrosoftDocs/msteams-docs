@@ -67,9 +67,6 @@ The following table provides the user types and lists the features that each use
 
 ## Targeted in-meeting notification
 
-> [!NOTE]
-> Targeted in-meeting notification is available only in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
-
 Targeted in-meeting notification allows apps to send notifications to specific participants on a meeting stage. The notifications are private and are sent only to specific or targeted participants. Targeted in-meeting notification helps to enhance meeting experience and develop user engagement activities in Teams meetings.
 
 > [!NOTE]
@@ -166,10 +163,9 @@ For more information on `targetedMeetingNotification`, see [Targeted meeting not
 
 ## Code sample
 
-Sample name | Description | .NET | Node.js |
-|----------------|-----------------|--------------|----------------|
-| In-meeting notification | Demonstrates how to implement in-meeting notification using bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-notification/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-notification/nodejs) |
-| Targeted-in-meeting notification | Demonstrates how to send notifications to specific participants in a meeting stage. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-notification/csharp) |
+Sample name | Description | .NET | Node.js | Manifest|
+|----------------|-----------------|--------------|----------------|----------------|
+| In-meeting notification | Demonstrates how to implement in-meeting notification using bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-notification/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-notification/nodejs) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-notification/csharp/demo-manifest/meetings-notification.zip) |
 
 ## Step-by-step guide
 
