@@ -423,28 +423,6 @@ items:
         
         :::image type="content" source="~/assets/images/sbs-notification-bot/deploy-confirmation-cloud.png" alt-text="Deploy confirmation.":::
 
-    1. Select **Local Debug** under **ENVIRONMENT** from Visual Studio Code.
-
-         :::image type="content" source="~/assets/images/sbs-notification-bot/local-debug.png" alt-text="Local Debug.":::
-
-    1. Select **Debug Edge** from the dropdown list.
-
-        :::image type="content" source="~/assets/images/sbs-notification-bot/debug-cloud.png" alt-text="Local Debug.":::
-
-    1. Select **Add**.
-
-        :::image type="content" source="~/assets/images/sbs-notification-bot/app-cloud-output.png" alt-text="App cloud output.":::
-    
-    1. Open **Windows PowerShell**.
-
-    1. Run the `Invoke-Webrequest -Method POST -URI http://localhost:3978/api/notification` command.
-
-        :::image type="content" source="~/assets/images/sbs-notification-bot/windows-powershell1.png" alt-text="Windows Powershell":::
-
-        You get the notification in Teams:
-
-        :::image type="content" source="~/assets/images/sbs-notification-bot/cloud-final-output.png" alt-text="Cloud Final Output":::
-
     # [Command Line](#tab/cli)
 
     In your terminal window:
