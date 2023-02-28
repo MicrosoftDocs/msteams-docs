@@ -423,7 +423,7 @@ items:
         | Client id | Saved previously as your **Microsoft App ID**. |
         | Client secret | Saved previously as **Value** of the client secret ID. |
         | Token Exchange URL | Use the **Application ID URL** obtained previously while exposing API endpoint. |
-        | Tenant ID | Enter **common** as the **Tenant ID**. If you're using single tenant app registration, use the tenant ID of the tenant where the bot is registered. |
+        | Tenant ID | Enter **common**. If you're using single tenant app registration, use the tenant ID of the tenant where the bot is registered. |
         | Scopes | Enter **User.Read** and also add all the **Scopes** required while specifying permissions to downstream APIs. |
 
         :::image type="content" source="~/assets/images/bots/botserviceconnection.png" alt-text="Screenshot of New Connection Setting with the details entered and the Save option highlighted in red.":::
@@ -451,15 +451,15 @@ items:
 
     1. Open the **appsettings.json** file.
 
-        > [!NOTE]
-        > You can obtain the `MicrosoftAppId` from the bot's Configuration page. The `MicrosoftAppPassword` is the value for client secret ID that you saved previously in Azure portal.
+    1. Update the following in **appsettings.json** file:
 
-    1. Update the **appsettings.json** configuration for the bot to use the `MicrosoftAppId` and `MicrosoftAppPassword`.    
-    1. Update `MicrosoftAppType` as `MultiTenant` if your bot is supported on multiple tenants. If your bot is supported on single tenant, update `MicrosoftAppType` as `SingleTenant`.
-    1. Update `MicrosoftAppTenantId` as `common` if you're using multi-tenant. If you are using single tenant app registration, update `tenantId` as the value for `MicrosoftAppTenantId`.
-    1. Use the OAuth connection name as the **Connection Name**.
+       :::image type="content" source="~/assets/images/bots/appsettingsjson.png" alt-text="Screenshot of Visual Studio file explorer menu." lightbox="~/assets/images/bots/appsettingsjson.png":::
 
-         :::image type="content" source="~/assets/images/bots/appsettingsjson.png" alt-text="Screenshot of Visual Studio file explorer menu." lightbox="~/assets/images/bots/appsettingsjson.png":::
+       * Update the `MicrosoftAppId` and `MicrosoftAppPassword` for your bot.
+         You can obtain the `MicrosoftAppId` from the bot's Configuration page. The `MicrosoftAppPassword` is the value for client secret ID that you saved previously in Azure portal.
+       * Update `MicrosoftAppType` as `MultiTenant` if your bot is supported on multiple tenants. If your bot is supported on single tenant, update `MicrosoftAppType` as `SingleTenant`.
+       * Update `MicrosoftAppTenantId` as `common` if you're using multi-tenant. If you are using single tenant app registration, update `tenantId` as the value for `MicrosoftAppTenantId`.
+       * Use the OAuth connection name as the **Connection Name**.
 
     1. Select **F5**  to run the project.
 
@@ -522,7 +522,7 @@ items:
 
         :::image type="content" source="~/assets/images/bots/open-app.png" alt-text="Screenshot of Manifest folder with Open option to upload the Teams Bot zip file highlighted in red.":::
 
-    1. Select **Add** to add the conversation bot to your chat.
+    1. Select **Add** to add bot to your chat.
 
         :::image type="content" source="~/assets/images/bots/add-conversation-bot_1.png" alt-text="Screenshot of Conversation Bot with Add option highlighted in red.":::
 
