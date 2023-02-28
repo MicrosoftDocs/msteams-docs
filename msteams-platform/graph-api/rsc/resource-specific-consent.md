@@ -324,8 +324,6 @@ Users' ability to grant RSC permissions varies based on resource types and acces
   * In the case of meetings, the user must be an organizer or presenter in the meeting.
 * **Delegated context RSC permissions**: Any user authorized to install an app in a specific scope has the right to grant any RSC permissions requested by the app in that specific scope at the time of installation. For example, if regular members are allowed to install an app inside a team, then they also have the authority to grant delegated RSC permission to the app in that specific team.
 
-If you're a global admin, you can review and grant consent to the apps that request permissions on behalf of all users in your organization. You do this so that users don't have to review and accept the permissions requested by the app when they open it. For more information, see [view app permissions and grant admin consent in Teams admin center](/microsoftteams/app-permissions-admin-center).
-
 ## Add RSC permissions to your Teams application
 
 1. [Register your app with Microsoft identity platform using the Azure AD portal](#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).
@@ -336,21 +334,18 @@ If you're a global admin, you can review and grant consent to the apps that requ
 
 ### Prerequisite
 
+To verify the application RSC permissions, follow these steps:
+
 1. [Configure consent settings](#configure-consent-settings).
     * Configure group owner consent settings for RSC in a team using the Azure AD portal.
     * Configure chat owner consent settings for RSC in a chat using the Microsoft Graph APIs.
-
-To verify the application RSC permissions, follow these steps:
-
 1. [Install your app in Teams](#sideload-your-app-in-teams).
 1. [Obtain an access token from the identity platform](#obtain-an-access-token-from-the-microsoft-identity-platform).
 1. [Check the RSC permissions granted to a specific resource](#check-the-rsc-permissions-granted-to-a-specific-resource).
-    * Check your app for added RSC permissions in a team.
-    * Check your app for added RSC permissions in a chat.
 
 ## Configure consent settings
 
-For application permissions, admins can enable or disable RSC permissions for all apps for the entire tenant using a toggle in Teams admin center. The tenant-level controls of app-only RSC permissions differ based on resource type.
+The tenant-level controls of app-only RSC permissions differ based on resource type.
 
 For delegated permissions, any authorized user can consent to the permissions requested by the app.
 
@@ -361,7 +356,7 @@ For delegated permissions, any authorized user can consent to the permissions re
 
 You can enable or disable [group owner consent](/azure/active-directory/manage-apps/configure-user-consent-groups?tabs=azure-portal) directly within the Microsoft Azure portal:
 
-1. Sign in to the [Azure portal](https://portal.azure.com) as a [Global Administrator or Company Administrator](/azure/active-directory/roles/permissions-reference#global-administrator&preserve-view=true).
+1. Sign in to the [Azure portal](https://portal.azure.com) as a [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator&preserve-view=true).
 1. Select **Azure Active Directory** > **Enterprise applications** > **Consent and permissions** > [**User consent settings**](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConsentPoliciesMenuBlade/UserSettings).
 1. Enable, disable, or limit user consent with the control labeled **Group owner consent for apps accessing data**. The default is **Allow group owner consent for all group owners**. For a team owner to install an app using RSC, group owner consent must be enabled for that user.
 
@@ -453,7 +448,7 @@ The following list provides all the RSC permissions categorized based on resourc
 
 * [RSC permissions for a team](#rsc-permissions-for-a-team).
 * [RSC permissions for a chat or meeting](#rsc-permissions-for-a-chat-or-meeting).
-* [RSC permissions for a user](#rsc-permissions-for-a-user).
+* [RSC permissions for a user access](#rsc-permissions-for-a-user-access).
 
 > [!NOTE]
 > The features associated with some of the permissions listed here might not be generally available.
@@ -544,11 +539,11 @@ The following table provides RSC application permissions for a chat or meeting:
 For more information, see [chat resource-specific consent permissions](/graph/permissions-reference#chat-resource-specific-consent-permissions).
 
 > [!NOTE]
-> RSC permissions are only available to Teams apps installed on the Teams client and are currently not part of the Azure AD portal.
+> RSC permissions are only available to Teams apps installed on the Teams client and not part of the Azure AD portal.
 
-### RSC permissions for a user
+### RSC permissions for a user access
 
-The following table provides RSC delegated permissions for a user:
+The following RSC permission can be given to an app, which allows users to get access for using different resources.
 
 | Permission name | Action |
 | ----- | ----- |
