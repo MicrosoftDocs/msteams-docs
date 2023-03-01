@@ -7,8 +7,8 @@ metadata:
   level: Beginner
   ms.date: 05/17/2022
   ms.topic: interactive-tutorial
-  nextTutorialHref: apps-in-teams-meetings/build-tabs-for-meeting.md
-  nextTutorialTitle: Read more on Build tabs for meeting
+  nextTutorialHref: apps-in-teams-meetings/app-caching-for-your-tab-app.md
+  nextTutorialTitle: Read more on Enable app caching for your tab app
   ms.custom: mvc
   ms.localizationpriority: high
 items:

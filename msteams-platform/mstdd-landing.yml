@@ -235,7 +235,6 @@ landingContent:
           url: ~/sbs-botbuilder-linkunfurling.yml
 
 
-
     - linkListType: tutorial
       links:
         - text: App caching for your tab app in Teams meeting
