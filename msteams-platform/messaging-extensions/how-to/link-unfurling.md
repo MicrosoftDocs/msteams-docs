@@ -18,6 +18,7 @@ The document guides you on how to add link unfurling to your app manifest using 
 >
 > * The link unfurling result is cached for 30 minutes.
 > * Messaging extension commands are not required for Link unfurling. However, there must be at least one command in manifest as it is a mandatory property in messaging extensions. For more information, see [compose extensions](/microsoftteams/platform/resources/schema/manifest-schema).
+> * For mobile client, link unfurling is supported only for links that don't require authentication.
 
 The following image is an example of link unfurling in Teams desktop and mobile clients:
 
