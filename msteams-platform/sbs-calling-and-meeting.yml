@@ -328,12 +328,18 @@ items:
 
        :::image type="content" source="~/assets/images/calls-and-meetings/bot-is-ready.png" alt-text="Screenshot of localhost displaying your bot is ready.":::
     
-    1. Go to Teams.
-    1. Select **Apps** > **Manage your apps** > **Upload an app** > **Upload a custom app**.
+    1. Go to **Microsoft Teams**.
+    
+    1. Select **Apps** > **Manage your apps**.
 
-       :::image type="content" source="./assets/images/calls-and-meetings/upload.png" alt-text="Screenshot of Teams with Apps icon, manage your apps, Upload an app highlighted in red. The Upload an app dialog appears over the Teams page with Upload a custom app highlighted in red.":::
+       :::image type="content" source="~/assets/images/Teams-task-module/manage-apps_3.png" alt-text="Manage apps":::
+   
+    1. Select **Upload an app** and select **Upload a custom app**. 
+
+       :::image type="content" source="~/assets/images/upload-a-custom-app.png" alt-text="Screenshot showing the selection of Upload a custom app highlighted in red.":::
 
     1. Open `manifest.zip` from the repository folder in File Explorer.
+
     1. Select **Add** to install the **Calling bot** app in Teams.
 
         :::image type="content" source="./assets/images/calls-and-meetings/output_1.png" alt-text="Screenshot of Calling bot with Add option highlighted in red.":::

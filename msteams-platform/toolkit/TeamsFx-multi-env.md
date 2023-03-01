@@ -2,7 +2,7 @@
 title: TeamsFX multiple environments in Teams Toolkit    
 author: surbhigupta
 description: In this module, learn about TeamsFX multi environment such as, create a new environment, select target environment and more
-ms.author: v-amprasad
+ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 11/29/2021
@@ -26,13 +26,10 @@ ms.date: 11/29/2021
 
 ## Create new environment
 
-After you create a project, Teams Toolkit by default configures:
+Each project can have one **local** environment but multiple remote environments. After you create a project, Teams Toolkit by default configures:
 
 * **local** environment to represent the local machine environment configuration.
 * **dev** environment to represent the remote or cloud environment configuration.
-
-> [!NOTE]
-> Each project can have one **local** environment but multiple remote environments.
 
 Perform the following steps to create a new environment:
 
@@ -41,8 +38,7 @@ Perform the following steps to create a new environment:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/create_new _env_1.PNG" alt-text="Create new environment":::
 
-> [!Note]
-> If you have more than one environment, you need to select an existing environment to create the new environment. The command copies the file contents of `config.<newEnv>.json` and `azure.parameters.<newEnv>.json` from the existing environment you've selected to the new environment created.
+    If you have more than one environment, you need to select an existing environment to create the new environment. The command copies the file contents of `config.<newEnv>.json` and `azure.parameters.<newEnv>.json` from the existing environment you've selected to the new environment created.
 
 ## Target environment
 
