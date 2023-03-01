@@ -38,7 +38,7 @@ The following steps help you to add API connection using Visual Studio Code:
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-select-features_1.png" alt-text="api select features":::
 
-5. Enter endpoint for the API. It's added to the project's local app settings, and it's the base URL for API requests, and then press Enter .
+5. Enter endpoint for the API. It's added to the project's local app settings, and it's the base URL for API requests, and then press **Enter**.
 
 6. Ensure that the endpoint is a valid http(s) URL.
 
@@ -83,7 +83,7 @@ For implementing basic authentication using username and password:
 
 # [API Key](#tab/apikey)
 
-* Select API Key to implement authentication using an API key.
+* Select **API Key** to implement authentication using an API key.
 * Select the required API key position in request.
 * Enter an API key name.
 
@@ -95,7 +95,7 @@ For implementing basic authentication using username and password:
 
   Teams Toolkit generates the sample code to call your API at bot\myAPI.js.
 
-You have successfully added a connection in your Teams app to an existing API.
+You've successfully added a connection in your Teams app to an existing API.
 
 ---
 
