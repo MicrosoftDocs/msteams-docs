@@ -12,15 +12,15 @@ ms.date: 05/20/2022
 
 Teams Toolkit allows you to access and use existing APIs for building Teams apps. Your organization or a third-party may have developed these APIs. When you use Teams Toolkit to connect to an existing API, Teams Toolkit performs the following functions:
 
-* Generate sample code under `./bot` or `./api` folder.
+* Generate sample code in the `./bot` or `./api` folder.
 * Add a reference to the `@microsoft/teamsfx` package to `package.json`.
 * Add app settings for your API in  `.env.teamsfx.local` that configures local debugging.
 
 Teams Toolkit helps you bootstrap sample code to access the APIs, if you don't have language appropriate SDKs to access these APIs.
 
-## Steps to connect to API
+## Configure API connection
 
-You can add an existing third-party API connection using:
+You can add an existing third-party API to your Teams app using:
 
 * [Teams Toolkit](#add-api-connection-using-teams-toolkit)
 * [TeamsFx CLI commands](#add-api-connection-using-teamsfx-cli)
@@ -41,7 +41,7 @@ The following steps help you to add connection to an existing third-party API:
 
 5. Enter endpoint for the API, and then press **Enter**.
 
-    Ensure that the endpoint is a valid http(s) URL. It's added to the project's local app settings, and it's the base URL for API requests.
+    Ensure that the endpoint is a valid http(s) URL. Teams Toolkit adds the endpoint to the project's local app settings, and it's the base URL for API requests.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-endpoint_1.png" alt-text="api endpoint":::
 
@@ -51,7 +51,7 @@ The following steps help you to add connection to an existing third-party API:
 
 9. Enter an alias for the API, and then press **Enter**.
 
-    The alias generates an app setting name for the API that is added to the project's local app setting.
+    The alias generates an app setting name for the API. Teams Toolkit adds the alias to the project's local app setting.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-alias_1.png" alt-text="api alias":::
 
@@ -59,7 +59,7 @@ The following steps help you to add connection to an existing third-party API:
 
      :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/myAPI connection.png" alt-text="api auth":::
 
-     Teams Toolkit generates appropriate sample code and adds corresponding local application settings based on authentication. The following steps are required to configure authentication:
+     Teams Toolkit generates appropriate sample code and adds corresponding local application settings based on authentication that you select. To configure authentication:
 
 # [Basic](#tab/basic)
 
@@ -125,7 +125,7 @@ The base command of this feature is `teamsfx add api-connection [authentication 
 
 2. Add `@microsoft\teamsfx` package to `package.json`. The package provides support for the common API authentication methods.
 
-3. Add environment variables to `.env.teamsfx.local`. Environment variables are required to configure the selected authentication type. The generated code reads values from the environment variables.
+3. Add environment variables to `.env.teamsfx.local`. You must configure environment variables for the selected authentication type. The generated code reads values from the environment variables.
 
 ## See also
 
