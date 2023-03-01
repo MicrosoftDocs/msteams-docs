@@ -120,7 +120,7 @@ To get maximum ROI, surface the nudges contextually for scenarios that are inher
 <details>
 <summary>Localize your app to support demand in global markets </summary>
 
-Microsoft Teams is available for users in more than 180 markets and supports over 50 languages. If you already have a core SaaS product for the web browser or native apps for Windows or mobile phones localized for one or more markets, consider also localizing your Teams app. You can evaluate and prioritize the localization markets based on the geographical spread of users and tenants and the Teams app usage report in Partner Center. You can easily localize your Teams app by following the extensive developer guidance available here.
+Microsoft Teams is available for users in more than 180 markets and supports over 50 languages. If you already have a core SaaS product for the web browser or native apps for Windows or mobile phones localized for one or more markets, consider also localizing your Teams app. You can evaluate and prioritize the localization markets based on the [geographical spread of users and tenants](/azure/marketplace/teams-apps-usage) and the [Teams app usage report](../overview.md#analyze-app-usage) in Partner Center. You can easily localize your Teams app by following the extensive developer guidance available [here](../../../../build-and-test/apps-localization.md).
 
 [Back to top](#what-should-you-do-during-the-traction-stage)
 </details>
