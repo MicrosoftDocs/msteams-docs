@@ -1,5 +1,5 @@
 ---
-title: Enable resource-specific consent in Teams
+title: Grant RSC permissions to an app
 description: Learn about supported granular resource-specific consent (RSC) permissions, which allows team and chat owners and meeting organizers to grant consent for an application.
 ms.localizationpriority: medium
 author: akjo
@@ -7,50 +7,39 @@ ms.author: lajanuar
 ms.topic: reference
 ---
 
-# Resource-specific consent
+# Grant RSC permissions to an app
 
-Resource-specific consent (RSC) is an authorization framework built by Microsoft Teams and Microsoft identity that allows for granting scoped access to an application.
+Introduction to be added.
 
-Through RSC, an authorized user can give an application access to the data of a specific instance of a resource type instead of every instance in the entire tenant. For example, a person who owns both team A and team B can decide to give the data for the Contoso app to only team A and not team B. The same concept of scoped data access applies to chats and meetings.
+## Add RSC permissions to your Teams application
 
-> [!NOTE]
-> If a chat has a meeting or a call associated with it, then the relevant RSC permissions apply to those resources as well.
+1. [Register your app with Microsoft identity platform](#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).
+1. [Add application RSC permissions to your app registered with Microsoft identity platform](#review-your-application-permissions-in-the-azure-ad-portal).
+1. [Add application and delegated RSC permission to your app manifest](#update-your-teams-app-manifest).
 
-## Types of RSC permissions
+### Register your app with Microsoft identity platform using the Azure AD portal
 
-RSC permission determines which data access methods are allowed by an application. There are two types of RSC permissions:
+The Azure AD portal provides a central platform for you to register and configure your apps. Your app must be registered in the Azure AD portal to integrate with the identity platform and call Microsoft Graph APIs. For more information, see [register an application with the identity platform](/graph/auth-register-app-v2).
 
-* **Application**: Allows an app to access data without the user being signed in.
-* **Delegated**: Allows an app to access data only on behalf of a signed-in user. No access is allowed in the absence of a signed-in user.
+> [!WARNING]
+> An Azure AD app ID must not be shared across multiple Teams apps. There must be a 1:1 mapping between a Teams app and an Azure AD app. Attempts to install multiple Teams apps which are associated with the same Azure AD app ID will cause installation or runtime failures.
 
-> [!NOTE]
-> Application RSC permissions for chat scope are available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md) only.
+### Review your application permissions in the Azure AD portal
 
-### RSC permissions for different resources
+1. Go to the **Home** > **App registrations** page and select your RSC app.
+1. Choose **API permissions** from the left pane and go through the list of **Configured permissions** for your app. If your app only makes RSC Graph API calls, delete all the permissions on that page. If your app also makes non-RSC calls, keep those permissions as required.
 
-RSC permissions are available on the following different resource types:
+> [!IMPORTANT]
+> The Azure AD portal can't be used to request RSC permissions. RSC permissions are currently exclusive to Teams applications installed in the Teams client and are declared in the Teams app manifest (JSON) file.
 
-* [Team](#rsc-permissions-for-a-team) (includes the channels within a team)
-* [Chat or meeting](#rsc-permissions-for-a-chat-or-meeting) (includes the meetings associated with the chats)
-* [User](#rsc-permissions-for-a-user-access)
-
-### API that supports RSC-based data access
-
-Microsoft Graph SDK, Microsoft Bot Framework SDK, and Microsoft TeamsJS client library support fine-grained data access through RSC. The supported modes and resource types differ across the API surfaces.
-
-| RSC mode or type | Supported SDKs | App manifest version | Resource types | RSC-related controls for the entire tenant | Who can consent to RSC permissions? |
-|---------|---------|---------|---------|---------|---------|
-|Application| Microsoft Graph, Microsoft Bot Framework | >=1.6 | Teams, chats, and meetings | Microsoft Graph-based controls for chats and meetings, Azure Active Directory (Azure AD) portal-based controls for teams. |• In a team, any team owner. <br> • In a chat, any chat member. <br> • In a meeting, any meeting organizer or presenter. |
-| Delegated | Microsoft Teams Client | >=1.12 | Teams, chats, meetings, and users | Always on | Any user authorized to install an app in that specific scope. |
-
-## Update your Teams app manifest
+### Update your Teams app manifest
 
 The RSC permissions are declared in your app's manifest.json file.
 
 > [!IMPORTANT]
 > Non-RSC permissions are stored in the Azure portal. Don't add them to the app manifest.
 
-### Request RSC permissions for Teams app
+#### Request RSC permissions for Teams app
 
 To request RSC permissions for an app, list the permissions that the app requires in the authorization section of the Teams app's manifest. The instructions can differ based on the manifest version of the app.
 
@@ -314,22 +303,6 @@ Example for RSC permissions in a chat:
 
 Whenever an app is installed by an authorized user within Teams, the RSC permissions requested in the app’s manifest are shown to the user and consequently granted as part of the app installation process.
 
-## Grant RSC permissions to an app
-
-Users' ability to grant RSC permissions varies based on resource types and access modes. The following are the types of RSC permissions for an app:
-
-* **Application context RSC permissions**: Users authorized to install an app in a specific scope have the right to grant any RSC permissions requested by the app in that specific scope. In addition to installing apps in a specific scope, the following constraints apply for the user to grant RSC permission to access data in app-only mode:
-  * In the case of a team, the user must be an owner of that team.
-  * In the case of a chat, the user must be a member of the chat.
-  * In the case of meetings, the user must be an organizer or presenter in the meeting.
-* **Delegated context RSC permissions**: Any user authorized to install an app in a specific scope has the right to grant any RSC permissions requested by the app in that specific scope at the time of installation. For example, if regular members are allowed to install an app inside a team, then they also have the authority to grant delegated RSC permission to the app in that specific team.
-
-## Add RSC permissions to your Teams application
-
-1. [Register your app with Microsoft identity platform](#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).
-1. [Add application RSC permissions to your app registered with Microsoft identity platform](#review-your-application-permissions-in-the-azure-ad-portal).
-1. [Add application and delegated RSC permission to your app manifest](#update-your-teams-app-manifest).
-
 ## Verify application RSC permission granted to your app
 
 To verify the application RSC permissions, follow these steps:
@@ -339,7 +312,7 @@ To verify the application RSC permissions, follow these steps:
 1. [Obtain an access token from the identity platform](#obtain-an-access-token-from-the-microsoft-identity-platform).
 1. [Check the RSC permissions granted to a specific resource](#check-the-rsc-permissions-granted-to-a-specific-resource).
 
-## Configure consent settings
+### Configure consent settings
 
 The tenant-level controls of app-only RSC permissions differ based on resource type.
 
@@ -379,7 +352,23 @@ The default value of the property `isChatResourceSpecificConsentEnabled` is base
 <br>
 </details>
 
-## Check the RSC permissions granted to a specific resource
+### Obtain an access token from the Microsoft identity platform
+
+To make Graph API calls, you must obtain an access token for your app from the identity platform. Before your app can get a token from the identity platform, it must be registered in the Azure AD portal. The access token contains information about your app and the permissions it has for the resources and APIs available through Microsoft Graph.
+
+You must have the following values from the Azure AD registration process to retrieve an access token from the identity platform:
+
+* The **Application ID** assigned by the app registration portal. If your app supports single sign-on (SSO), you must use the same Application ID for your app and SSO.
+* The **Client secret/password** or a public or private key pair that is **Certificate**. This isn't required for native apps.
+* A **Redirect URI** or reply URL for your app to receive responses from Azure AD.
+
+For more information, see [get access on behalf of a user](/graph/auth-v2-user?view=graph-rest-1.0#3-get-a-token&preserve-view=true) and [get access without a user](/graph/auth-v2-service).
+
+### Sideload your app in Teams
+
+If your Teams admin allows custom app uploads, you can [sideload your app](~/concepts/deploy-and-publish/apps-upload.md) directly to a specific team or chat.
+
+### Check the RSC permissions granted to a specific resource
 
 > [!IMPORTANT]
 > The RSC permissions are not attributed to a user. Calls are made with app permissions, not user delegated permissions. The app can be allowed to perform actions that the user can't, such as deleting a tab. You must review the team owner's or chat owner's intent for your use before making RSC API calls. For more information, see [Microsoft Teams API overview](/graph/teams-concept-overview).
@@ -437,148 +426,6 @@ For more information on how to get details of apps installed in a specific chat,
 
 <br>
 </details>
-
-## Supported RSC permissions
-
-The following list provides all the RSC permissions categorized based on resource type and access mode:
-
-* [RSC permissions for a team](#rsc-permissions-for-a-team).
-* [RSC permissions for a chat or meeting](#rsc-permissions-for-a-chat-or-meeting).
-* [RSC permissions for a user access](#rsc-permissions-for-a-user-access).
-
-> [!NOTE]
-> The features associated with some of the permissions listed here might not be generally available.
-
-### RSC permissions for a team
-
-The following table provides RSC delegated permissions for a team:
-
-| Permission name | Action |
-| ----- | ----- |
-|`ChannelMeetingActiveSpeaker.Read.Group`|Get the list of participants who are currently sending audio into the channel meetings associated with the team.|
-|`ChannelMeetingAudioVideo.Stream.Group`|Stream audio-video content from channel meetings associated with the team.|
-`ChannelMeetingIncomingAudio.Detect.Group`|Detect incoming audio in channel meetings associated with the team.|
-|`ChannelMeetingStage.Write.Group`|Get content on the meeting stage of channel meetings associated with the team.|
-|`InAppPurchase.Allow.Group`|Show and complete in-app purchases for team members.|
-|`LiveShareSession.ReadWrite.Group`| Create and synchronize Live Share sessions for meetings associated with the team. |
-|`MeetingParticipantReaction.Read.Group`| Get reactions from participants in channel meetings associated with the team.|
-
-The following table provides RSC application permissions for a team:
-
-| Permission name | Action |
-| ----- | ----- |
-|`Channel.Create.Group`|Create channels in the team. |
-|`Channel.Delete.Group`|Delete channels in the team. |
-|`ChannelMeeting.ReadBasic.Group`|Get the basic properties of the team's channel meetings.|
-|`ChannelMeetingParticipant.Read.Group`|Get participant information for channel meetings associated with the team, such as name, role, ID, joined time, and left time.|
-|`ChannelMeetingRecording.Read.Group`|Get the recordings of all channel meetings associated with the team.|
-|`ChannelMeetingTranscript.Read.Group`|Get the transcripts of all channel meetings associated with the team.|
-|`ChannelMeetingNotification.Send.Group`|Send notifications for all the channel meetings associated with the team.|
-|`ChannelMessage.Read.Group`|Get the team's channel messages. |
-|`ChannelMessage.Send.Group`|Send messages to the team's channels.|
-|`ChannelSettings.Read.Group`| Get the team's channel names, descriptions, and settings​.|
-|`ChannelSettings.ReadWrite.Group`|Update the team's channel names, descriptions, and settings.​|
-|`Member.Read.Group`|Get the group's members.|
-|`Owner.Read.Group`|Get the group's owners.|
-|`TeamsActivity.Send.Group`|Create new notifications in the activity feeds of the users in the team. |
-|`TeamsAppInstallation.Read.Group`|Get a list of the team's installed apps.|
-|`TeamMember.Read.Group`|Get the team's members. |
-|`TeamSettings.Read.Group` | Get the team's settings.|
-|`TeamSettings.ReadWrite.Group`|Update the team's settings.|
-|`TeamsTab.Create.Group`|Create tabs in the team. |
-|`TeamsTab.Delete.Group`|Delete the team's tabs. |
-|`TeamsTab.Read.Group`|Get a list of the team's tabs.|
-|`TeamsTab.ReadWrite.Group`|Manage the team's tabs. |
-
-For more information, see [team resource-specific consent permissions](/graph/permissions-reference#team-resource-specific-consent-permissions).
-
-### RSC permissions for a chat or meeting
-
-The following table provides RSC delegated permissions for a chat or meeting:
-
-| Permission name | Action |
-| ----- | ----- |
-| `InAppPurchase.Allow.Chat` | Show and complete in-app purchases for users in the chat and any associated meetings. |
-| `LiveShareSession.ReadWrite.Chat` | Create and synchronize Live Share sessions for meetings associated with the chat. |
-| `MeetingStage.Write.Chat` | Show content on the meeting stage of meetings associated with the chat. |
-| `MeetingParticipantReaction.Read.Chat` | Get the reactions of participants in meetings associated with the chat. |
-| `OnlineMeetingIncomingAudio.Detect.Chat` | Detect incoming audio in meetings associated with the chat. |
-| `OnlineMeetingActiveSpeaker.Read.Chat` | Get the participants who are currently sending audio into the meetings associated with the chat. |
-| `OnlineMeetingAudioVideo.Stream.Chat` | Stream audio-video content from meetings associated with the chat. |
-| `OnlineMeetingParticipant.ToggleIncomingAudio.Chat` | Toggle incoming audio for participants in meetings associated with the chat. |
-
-The following table provides RSC application permissions for a chat or meeting:
-
-| Permission name | Action |
-| ----- | ----- |
-| `Calls.AccessMedia.Chat` | Access media streams in calls associated with the chat or meeting. |
-| `Calls.JoinGroupCalls.Chat` | Join calls associated with the chat or meeting. |
-| `ChatSettings.Read.Chat`| Get the chat's settings.|
-| `ChatSettings.ReadWrite.Chat`| Update the chat's settings. |
-| `ChatMessage.Read.Chat` | Get the chat's messages.|
-| `ChatMessage.Send.Chat` | Send messages to the chat. |
-| `ChatMessageReadReceipt.Read.Chat` | Get the ID of the last seen message in the chat. |
-| `ChatMember.Read.Chat` | Get the chat's members. |
-| `Chat.Manage.Chat` | Manage the chat. |
-| `TeamsTab.Read.Chat`| Get the chat's tabs. |
-| `TeamsTab.Create.Chat` | Create tabs in the chat. |
-| `TeamsTab.Delete.Chat` | Delete the chat's tabs. |
-| `TeamsTab.ReadWrite.Chat` | Manage the chat's tabs. |
-| `TeamsAppInstallation.Read.Chat` | Get which apps are installed in the chat. |
-| `TeamsActivity.Send.Chat` | Create new notifications in the activity feeds of the users in the chat. |
-| `OnlineMeetingTranscript.Read.Chat` | Get the transcripts of the meeting associated with the chat. |
-| `OnlineMeetingParticipant.Read.Chat` | Get the participants of the meetings associated with the chat.|
-| `OnlineMeeting.ReadBasic.Chat` | Get basic properties, such as name, schedule, organizer, join link, and start or end notifications of a meeting associated with the chat. |
-| `OnlineMeetingRecording.Read.Chat` | Get the recordings of the meetings associated with the chat. |
-| `OnlineMeetingNotification.Send.Chat` | Send notifications for the meetings associated with the chat. |
-
-For more information, see [chat resource-specific consent permissions](/graph/permissions-reference#chat-resource-specific-consent-permissions).
-
-> [!TIP]
-> RSC permissions are only available to Teams apps installed on the Teams client and not part of the Azure AD portal. If you want to know the RSC permissions associated with an app, see app installation or app information dialog within Teams client.
-
-### RSC permissions for a user access
-
-The following RSC permission can be given to an app, which allows users to get access for using different resources.
-
-| Permission name | Action |
-| ----- | ----- |
-| `CameraStream.Read.User`| Get the user's camera stream. |
-| `InAppPurchase.Allow.User` | Show and complete in-app purchases. |
-| `MicrophoneStream.Read.User` | Get the user's microphone stream. |
-| `MeetingParticipantReaction.Read.User` | Get the user's reactions while participating in a meeting. |
-| `OutgoingVideoStream.Write.User` | Modify the user's outgoing video. |
-
-## Register your app with Microsoft identity platform using the Azure AD portal
-
-The Azure AD portal provides a central platform for you to register and configure your apps. Your app must be registered in the Azure AD portal to integrate with the identity platform and call Microsoft Graph APIs. For more information, see [register an application with the identity platform](/graph/auth-register-app-v2).
-
-> [!WARNING]
-> An Azure AD app ID must not be shared across multiple Teams apps. There must be a 1:1 mapping between a Teams app and an Azure AD app. Attempts to install multiple Teams apps which are associated with the same Azure AD app ID will cause installation or runtime failures.
-
-## Review your application permissions in the Azure AD portal
-
-1. Go to the **Home** > **App registrations** page and select your RSC app.
-1. Choose **API permissions** from the left pane and go through the list of **Configured permissions** for your app. If your app only makes RSC Graph API calls, delete all the permissions on that page. If your app also makes non-RSC calls, keep those permissions as required.
-
-> [!IMPORTANT]
-> The Azure AD portal can't be used to request RSC permissions. RSC permissions are currently exclusive to Teams applications installed in the Teams client and are declared in the Teams app manifest (JSON) file.
-
-## Obtain an access token from the Microsoft identity platform
-
-To make Graph API calls, you must obtain an access token for your app from the identity platform. Before your app can get a token from the identity platform, it must be registered in the Azure AD portal. The access token contains information about your app and the permissions it has for the resources and APIs available through Microsoft Graph.
-
-You must have the following values from the Azure AD registration process to retrieve an access token from the identity platform:
-
-* The **Application ID** assigned by the app registration portal. If your app supports single sign-on (SSO), you must use the same Application ID for your app and SSO.
-* The **Client secret/password** or a public or private key pair that is **Certificate**. This isn't required for native apps.
-* A **Redirect URI** or reply URL for your app to receive responses from Azure AD.
-
-For more information, see [get access on behalf of a user](/graph/auth-v2-user?view=graph-rest-1.0#3-get-a-token&preserve-view=true) and [get access without a user](/graph/auth-v2-service).
-
-## Sideload your app in Teams
-
-If your Teams admin allows custom app uploads, you can [sideload your app](~/concepts/deploy-and-publish/apps-upload.md) directly to a specific team or chat.
 
 ## Code sample
 
