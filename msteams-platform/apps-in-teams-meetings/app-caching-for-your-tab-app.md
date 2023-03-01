@@ -259,6 +259,10 @@ Apps aren't cached if the load handler isn't invoked on subsequent navigation. T
 |----------------|-----------------|----------------|
 | App caching in meeting | Sample app to show how app caching works for tab app in Teams meeting. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-cache-meetings/nodejs) |
 
+## Step-by-step guides
+
+Follow the [step-by-step guide](../sbs-app-caching-for-your-tab-app.yml) to enable app caching for your tab app in Teams meeting.
+
 ## See also
 
 * [Build tabs for meeting](build-tabs-for-meeting.md)
