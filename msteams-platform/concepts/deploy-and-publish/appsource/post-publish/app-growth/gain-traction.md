@@ -14,6 +14,14 @@ In the Traction stage, you’ll want to gain mindshare for your collaborative ap
 
 <br>
 <details>
+<summary>Plan, build readiness and drive adoption among customers</summary>
+
+As soon as  your colalborative app is published and customers are made aware of its existence, the entire focus of your organization must shift towards driving adoption of your app among existing customers first. Follow the step-by-step guidance, resources and best practices available [here](https://learn.microsoft.com/en-us/microsoftteams/platform/promote-app-adoption) to plan and support the rollout of your Teams app in your customers’ organizations, navigate business decision makers, IT admins and educate end-users. The outcome of a successful app rollout among your existing customers is a pre-requisite to learn from user feedback, achieve product-market fit, acquire net new customers, monetize your app and  eventually derive RoI out of your build and go-to-market investments.
+
+[Back to top](#what-should-you-do-during-the-traction-stage)
+</details>
+<br>
+<details>
 <summary>Upskill customer success team on your new Teams app</summary>
 
 - Your collaborative app for Teams is a key product line or channel for your customers to use your SaaS service. For this reason, training your customer success personnel on the Teams app is of critical importance. It can include how to get customers started with the app, high value scenarios and use cases, how to get the most out of the app, and so on.
