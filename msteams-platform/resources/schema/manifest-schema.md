@@ -335,7 +335,7 @@ The schema defines the following properties:
 
 Optional, but recommended—string
 
-The <https://> URL referencing the JSON Schema for the manifest.
+The https:// URL referencing the JSON Schema for the manifest.
 
 ## manifestVersion
 
@@ -373,9 +373,9 @@ Specifies information about your company. For apps submitted to the Teams store,
 |Name| Maximum size | Required | Description|
 |---|---|---|---|
 |`name`|32 characters|✔️|The display name for the developer.|
-|`websiteUrl`|2048 characters|✔️|The <https://> URL to the developer's website. This link must take users to your company or product-specific landing page.|
-|`privacyUrl`|2048 characters|✔️|The <https://> URL to the developer's privacy policy.|
-|`termsOfUseUrl`|2048 characters|✔️|The <https://> URL to the developer's terms of use.|
+|`websiteUrl`|2048 characters|✔️|The https:// URL to the developer's website. This link must take users to your company or product-specific landing page.|
+|`privacyUrl`|2048 characters|✔️|The https:// URL to the developer's privacy policy.|
+|`termsOfUseUrl`|2048 characters|✔️|The https:// URL to the developer's terms of use.|
 |`mpnId`|10 characters| |**Optional** The Microsoft Partner Network ID that identifies the partner organization building the app.|
 
 ## name
@@ -448,7 +448,7 @@ Used when your app experience has a team channel tab experience that requires ex
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`configurationUrl`|string|2048 characters|✔️|The <https://> URL to use when configuring the tab.|
+|`configurationUrl`|string|2048 characters|✔️|The https:// URL to use when configuring the tab.|
 |`scopes`|array of enums|1|✔️|Currently, configurable tabs support only the `team` and `groupChat` scopes. |
 |`canUpdateConfiguration`|Boolean|||A value indicating whether an instance of the tab's configuration can be updated by the user after creation. Default: **true**.|
 |`context` |array of enums|6||The set of `contextItem` scopes where a [tab is supported](../../tabs/how-to/access-teams-context.md). Default: **[channelTab, privateChatTab, meetingChatTab, meetingDetailsTab]**.|
@@ -467,9 +467,9 @@ This item is an array (maximum of 16 elements) with all elements of the type `ob
 |---|---|---|---|---|
 |`entityId`|string|64 characters|✔️|A unique identifier for the entity that the tab displays.|
 |`name`|string|128 characters|✔️|The display name of the tab in the channel interface.|
-|`contentUrl`|string||✔️|The <https://> URL that points to the entity UI to be displayed in the Teams canvas.|
-|`websiteUrl`|string|||The <https://> URL to point to if a user opts to view in a browser.|
-|`searchUrl`|string|||The <https://> URL to point to for a user's search queries.|
+|`contentUrl`|string||✔️|The https:// URL that points to the entity UI to be displayed in the Teams canvas.|
+|`websiteUrl`|string|||The https:// URL to point to if a user opts to view in a browser.|
+|`searchUrl`|string|||The https:// URL to point to for a user's search queries.|
 |`scopes`|array of enums|1|✔️|Currently, static tabs support only the `personal` scope, which means it can be provisioned only as part of the personal experience.|
 |`context` | array of enums| 2|| The set of `contextItem` scopes where a tab is supported.|
 
@@ -521,7 +521,7 @@ The object is an array (maximum of one element) with all elements of type `objec
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`configurationUrl`|string|2048 characters|✔️|The <https://> URL to use when configuring the connector.|
+|`configurationUrl`|string|2048 characters|✔️|The https:// URL to use when configuring the connector.|
 |`scopes`|array of enums|1|✔️|Specifies whether the Connector offers an experience in the context of a channel in a `team`, or an experience scoped to an individual user alone (`personal`). Currently, only the `team` scope is supported.|
 |`connectorId`|string|64 characters|✔️|A unique identifier for the Connector that matches its ID in the [Connectors Developer Dashboard](https://aka.ms/connectorsdashboard).|
 
@@ -888,13 +888,15 @@ Delegated permissions allow the app to access data on behalf of the signed-in us
 
     |**Name**|**Description**|
     |---|---|
-    |`InAppPurchase.Allow.Chat`|Allows the app to show marketplace offers to the users in this chat, and any associated meeting, and complete their purchases within the app, on behalf of the signed-in user.|
-    |`MeetingStage.Write.Chat`|Allows the app to show content on the meeting stage in meetings associated with this chat, on behalf of the signed-in user.|
-    |`OnlineMeetingParticipant.Read.Chat`|Allows the app to read participant information, including name, role, id, joined, and left times, of meeting associated with this chat, on behalf of the signed-in user.|
-    |`OnlineMeetingParticipant.ToggleIncomingAudio.Chat`|Allows the app to toggle incoming audio for participants in meetings associated with this chat, on behalf of the signed-in user.|
-    |`LiveShareSession.ReadWrite.Chat`|Allows the app to create and synchronize Live Share sessions for meetings associated with this chat, and access related information about the meeting's roster, such as member's meeting role, on behalf of the signed-in user.|
-   |`OnlineMeetingIncomingAudio.Detect.Chat`|Allows the app to detect changes in the status of incoming audio in meetings associated with this chat, on behalf of the signed-in user.|
-   |`OnlineMeetingNotification.Send.Chat`|Allows the app to send notifications for the meetings associated with the chat.|
+    |`InAppPurchase.Allow.Chat`|Allows the app to show marketplace offers to the users in the chat, and any associated meeting, and complete their purchases within the app, on behalf of the signed-in user.|
+    |`MeetingStage.Write.Chat`|Allows the app to show content on the meeting stage in meetings associated with the chat, on behalf of the signed-in user.|
+    |`OnlineMeetingParticipant.Read.Chat`|Allows the app to read participant information, including name, role, id, joined, and left times, of meeting associated with the chat, on behalf of the signed-in user.|
+    |`OnlineMeetingParticipant.ToggleIncomingAudio.Chat`|Allows the app to toggle incoming audio for participants in meetings associated with the chat, on behalf of the signed-in user.|
+    |`LiveShareSession.ReadWrite.Chat`|Allows the app to create and synchronize Live Share sessions for meetings associated with the chat, and access related information about the meeting's roster, such as member's meeting role, on behalf of the signed-in user.|
+    |`MeetingParticipantReaction.Read.Chat`| Allows the app to read reactions of participants in meetings associated with the chat.|
+    |`OnlineMeetingIncomingAudio.Detect.Chat`|Allows the app to detect changes in the status of incoming audio in meetings associated with the chat, on behalf of the signed-in user.|
+    |`OnlineMeetingActiveSpeaker.Read.Chat`| Allows the app to read participants who are currently sending audio into the meetings associated with the chat.|
+    |`OnlineMeetingAudioVideo.Stream.Chat`| Allows the app to stream audio-video content of meetings associated with the chat.|
 
 * **RSC delegated permissions for users**
 

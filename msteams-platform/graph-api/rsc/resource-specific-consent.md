@@ -326,19 +326,15 @@ Users' ability to grant RSC permissions varies based on resource types and acces
 
 ## Add RSC permissions to your Teams application
 
-1. [Register your app with Microsoft identity platform using the Azure AD portal](#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).
+1. [Register your app with Microsoft identity platform](#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).
+1. [Add application RSC permissions to your app registered with Microsoft identity platform](#review-your-application-permissions-in-the-azure-ad-portal).
 1. [Add application and delegated RSC permission to your app manifest](#update-your-teams-app-manifest).
-1. [Review your application permissions in the Azure AD portal](#review-your-application-permissions-in-the-azure-ad-portal).
 
 ## Verify application RSC permission granted to your app
 
-### Prerequisite
-
 To verify the application RSC permissions, follow these steps:
 
-1. [Configure consent settings](#configure-consent-settings).
-    * Configure group owner consent settings for RSC in a team using the Azure AD portal.
-    * Configure chat owner consent settings for RSC in a chat using the Microsoft Graph APIs.
+1. Ensure that you've configured [consent settings](#configure-consent-settings) for team or chat.
 1. [Install your app in Teams](#sideload-your-app-in-teams).
 1. [Obtain an access token from the identity platform](#obtain-an-access-token-from-the-microsoft-identity-platform).
 1. [Check the RSC permissions granted to a specific resource](#check-the-rsc-permissions-granted-to-a-specific-resource).
@@ -386,7 +382,7 @@ The default value of the property `isChatResourceSpecificConsentEnabled` is base
 ## Check the RSC permissions granted to a specific resource
 
 > [!IMPORTANT]
-> The RSC permissions are not attributed to a user. Calls are made with app permissions, not user delegated permissions. The app can be allowed to perform actions that the user cannot, such as deleting a tab. You must review the team owner's or chat owner's intent for your use before making RSC API calls. For more information, see [Microsoft Teams API overview](/graph/teams-concept-overview).
+> The RSC permissions are not attributed to a user. Calls are made with app permissions, not user delegated permissions. The app can be allowed to perform actions that the user can't, such as deleting a tab. You must review the team owner's or chat owner's intent for your use before making RSC API calls. For more information, see [Microsoft Teams API overview](/graph/teams-concept-overview).
 
 For application RSC permissions, call the following APIs to retrieve the list of apps installed in a team or chat:
 
@@ -538,8 +534,8 @@ The following table provides RSC application permissions for a chat or meeting:
 
 For more information, see [chat resource-specific consent permissions](/graph/permissions-reference#chat-resource-specific-consent-permissions).
 
-> [!NOTE]
-> RSC permissions are only available to Teams apps installed on the Teams client and not part of the Azure AD portal.
+> [!TIP]
+> RSC permissions are only available to Teams apps installed on the Teams client and not part of the Azure AD portal. If you want to know the RSC permissions associated with an app, see app installation or app information dialog within Teams client.
 
 ### RSC permissions for a user access
 
@@ -566,7 +562,7 @@ The Azure AD portal provides a central platform for you to register and configur
 1. Choose **API permissions** from the left pane and go through the list of **Configured permissions** for your app. If your app only makes RSC Graph API calls, delete all the permissions on that page. If your app also makes non-RSC calls, keep those permissions as required.
 
 > [!IMPORTANT]
-> The Azure AD portal cannot be used to request RSC permissions. RSC permissions are currently exclusive to Teams applications installed in the Teams client and are declared in the Teams app manifest (JSON) file.
+> The Azure AD portal can't be used to request RSC permissions. RSC permissions are currently exclusive to Teams applications installed in the Teams client and are declared in the Teams app manifest (JSON) file.
 
 ## Obtain an access token from the Microsoft identity platform
 
@@ -574,7 +570,7 @@ To make Graph API calls, you must obtain an access token for your app from the i
 
 You must have the following values from the Azure AD registration process to retrieve an access token from the identity platform:
 
-* The **Application ID** assigned by the app registration portal. If your app supports single sign-on (SSO) you must use the same Application ID for your app and SSO.
+* The **Application ID** assigned by the app registration portal. If your app supports single sign-on (SSO), you must use the same Application ID for your app and SSO.
 * The **Client secret/password** or a public or private key pair that is **Certificate**. This isn't required for native apps.
 * A **Redirect URI** or reply URL for your app to receive responses from Azure AD.
 
