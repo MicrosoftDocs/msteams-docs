@@ -445,11 +445,11 @@ items:
 
         :::image type="content" source="~/assets/images/bots/project-solution_1.png" alt-text="Screenshot of Visual Studio file menu. The menu entries titled Open under File menu and Project/Solution under Open are highlighted in red.":::
 
-    1. Select **App SSO Sample.sln** file from **app-sso** > **csharp** folder.
+    1. Select **BotConversationSsoQuickstart.sln** file from **bot-conversation-sso-quickstart** > **csharp_dotnetcore** folder.
 
         :::image type="content" source="~/assets/images/bots/filepath_1.png" alt-text="Screenshot of Project file with the file path and BotSSOCSharp.csproj file highlighted in red.":::
 
-    1. Open the **appsettings.json** file.
+    1. Open the **appsettings.json** file from **BotConversationSsoQuickstart** folder.
 
     1. Update the following in **appsettings.json** file:
 
@@ -499,9 +499,9 @@ items:
 
     1. Replace all occurrences of **{TODO: MicrosoftAppId}** with your bot's **Microsoft App ID**.
     
-    1. In your cloned repository, go to **app-sso** > **csharp** > **App SSO Sample** > **TeamsAppManifest** folder.
+    1. In your cloned repository, go to **bot-conversation-sso-quickstart** > **csharp_dotnetcore** > **BotConversationSsoQuickstart** > **appPackage** folder.
     
-    1. Create a .zip with the following files that are present in the **TeamsAppManifest** folder: 
+    1. Create a .zip with the following files that are present in the **appPackage** folder: 
        * manifest.json
        * icon-outline.png
        * icon-color.png
