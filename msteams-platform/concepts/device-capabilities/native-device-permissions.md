@@ -31,7 +31,7 @@ By accessing the device capabilities, you can build richer experiences on the Te
 > [!NOTE]
 >
 > * Device permissions are different in the browser. For more information, see [browser device permissions](browser-device-permissions.md).
-> * Teams support for QR barcode scanner capability is only available for mobile clients.
+> * Teams supports for QR barcode scanner capability, that is only available for mobile clients.
 
 ## Access device permissions
 
