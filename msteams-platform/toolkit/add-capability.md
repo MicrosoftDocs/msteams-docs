@@ -58,13 +58,13 @@ You can add capabilities in the following ways:
 
       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/teams-add-features_1.png" alt-text="To add capabilities by using command palette.":::
 
-   1. From the drop-down menu that appears, select the capability you want to add to your project.
+   1. From the drop-down list that appears, select the capability you want to add to your app.
 
        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/notification-add-capabilities_1.png" alt-text="notification":::
 
 ### Use TeamsFx CLI
 
-You can use TeamsFx CLI an alternative way for adding features to your app project.
+You can use TeamsFx CLI as an alternative way for adding capabilities to your Teams app project.
 
 This section lists the capabilities you can add to your Teams app using TeamsFx CLI commands. Before you add capabilities to your app, ensure that you’ve changed the directory to your project directory.
 
@@ -81,7 +81,7 @@ The following table lists the capabilities and the TeamsFx CLI commands for addi
 
 ## Changes after adding capabilities
 
-The following table shows the changes that you can see in the files of your app when adding capabilities:
+The following table shows the changes that you can see in the files of your app after adding capabilities:
 
 |Add capability|Description| Changes|
 |------------|------------------------|---------|
