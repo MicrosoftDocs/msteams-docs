@@ -11,6 +11,7 @@ ms.author: surbhigupta
 In the Traction stage, you’ll want to gain mindshare for your collaborative app among top customers. You will build readiness to scale adoption and growth, and start realizing return on investment. Here are the various initiatives and growth levers at your disposal:
 
 ## What should you do during the Traction stage?
+
 <br>
 <details>
 <summary>Upskill customer success team on your new Teams app</summary>
@@ -115,6 +116,14 @@ To get maximum ROI, surface the nudges contextually for scenarios that are inher
 
 [Back to top](#what-should-you-do-during-the-traction-stage)
 </details>
+<br>
+<details>
+<summary>Localize your app to support demand in global markets </summary>
+
+Microsoft Teams is available for users in more than 180 markets and supports over 50 languages. If you already have a core SaaS product for the web browser or native apps for Windows or mobile phones localized for one or more markets, consider also localizing your Teams app. You can evaluate and prioritize the localization markets based on the geographical spread of users and tenants and the Teams app usage report in Partner Center. You can easily localize your Teams app by following the extensive developer guidance available here.
+
+[Back to top](#what-should-you-do-during-the-traction-stage)
+</details>
 
 ## Where can Microsoft help?
 
@@ -191,4 +200,3 @@ Contact the Microsoft field, account, or engineering representatives to feature 
 ## See also
 
 [Strategize and execute growth for your app](overview-app-growth.md)
-
