@@ -196,7 +196,7 @@ Add a [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicat
 |---|---|---|
 |`id` |String |Your Azure AD app ID. For more information, see [register your app in the Azure AD portal](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).|
 |`resource`|String| This field has no operation in RSC, but must be added and have a value to avoid an error response; any string will do.|
-|`applicationPermissions`|Array of strings|RSC permissions for  your app. For more information, see [Supported RSC permissions](resource-specific-consent.md#supported-rsc-permissions).|
+|`applicationPermissions`|Array of strings|RSC permissions for  your app. For more information, see [Supported RSC permissions](rsc-overview.md#supported-rsc-permissions).|
 
 Example for RSC in a team
 
