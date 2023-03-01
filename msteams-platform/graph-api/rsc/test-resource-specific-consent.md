@@ -10,10 +10,9 @@ keywords: teams authorization OAuth SSO Microsoft Azure Active Directory (Azure 
 
 # Test resource-specific consent permissions in Teams
 
-> [!NOTE]
-> Resource-specific consent for chat scope is available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md) only.
+Resource-specific consent (RSC) is an authorization framework built by Microsoft Teams and Microsoft identity that allows for granting scoped access to an application.
 
-Resource-specific consent (RSC) is a Microsoft Teams and Graph API integration that enables your app to use API endpoints to manage specific resources—either teams or chats—within an organization. For more information, see [Resource-specific consent (RSC) — Microsoft Teams Graph API](resource-specific-consent.md).
+Through RSC, an authorized user can give an application access to the data of a specific instance of a resource type instead of every instance in the entire tenant. For example, a person who owns both team A and team B can decide to give the data for the Contoso app to only team A and not team B. The same concept of scoped data access applies to chats and meetings. For more information, see [Resource-specific consent (RSC)](resource-specific-consent.md).
 
 ## Prerequisites
 
@@ -197,7 +196,7 @@ Add a [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicat
 |---|---|---|
 |`id` |String |Your Azure AD app ID. For more information, see [register your app in the Azure AD portal](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).|
 |`resource`|String| This field has no operation in RSC, but must be added and have a value to avoid an error response; any string will do.|
-|`applicationPermissions`|Array of strings|RSC permissions for  your app. For more information, see [resource-specific permissions](resource-specific-consent.md#resource-specific-permissions).|
+|`applicationPermissions`|Array of strings|RSC permissions for  your app. For more information, see [Supported RSC permissions](resource-specific-consent.md#supported-rsc-permissions).|
 
 Example for RSC in a team
 
