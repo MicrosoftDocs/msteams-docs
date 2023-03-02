@@ -21,8 +21,8 @@ In this section, you'll learn more about:
 To configure RSC permissions to your app, follow these steps:
 
 1. [Register your app with Microsoft identity platform](#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).
-1. [Add app RSC permissions to your app registered with Microsoft identity platform](#review-your-app-permissions-in-the-azure-ad-portal).
-1. [Add app and delegated RSC permission to your app manifest](#update-your-teams-app-manifest).
+1. [Add application RSC permissions to your app registered with Microsoft identity platform](#review-your-application-permissions-in-the-azure-ad-portal).
+1. [Add application and delegated RSC permission to your app manifest](#update-your-teams-app-manifest).
 
 ### Register your app with Microsoft identity platform using the Azure AD portal
 
@@ -68,7 +68,7 @@ Whenever an authorized user installs your app within Teams, the RSC permissions 
 
 To add RSC permission in app manifest:
 
-1. Add a [webApplicationInfo](../../resources/schema/manifest-schema.md#webappinfo) key to your app manifest with the following values:
+1. Add a [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) key to your app manifest with the following values:
 
     |Name| Type | Description|
     |---|---|---|
@@ -253,7 +253,7 @@ Example for RSC permissions in a chat:
 > [!NOTE]
 > It's recommended to use app manifest v1.12 or later.
 
-Add a [webApplicationInfo](../../resources/schema/manifest-schema.md#webappinfo) key to your app manifest with the following values:
+Add a [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) key to your app manifest with the following values:
 
 |Name| Type | Description|
 |---|---|---|
