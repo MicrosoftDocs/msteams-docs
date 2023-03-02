@@ -46,7 +46,7 @@ Help your sales team secure large new customer deals leading with your Teams col
 <details>
 <summary>Digital webinars for existing customers and new prospects</summary>
 
-Host digital webinars at regular cadences to showcase the value of your Teams app to customers. Your customer success team and pre-sales or sales team must funnel relevant existing customers and new prospects as preferred leads for targeting webinar invitations too. Ensure that you include links to sign up for the webinars on your app’s landing page on your website and your app store listing. It attracts new, exploratory users who may be interested in learning more about your app.
+Host digital webinars at regular cadences to showcase the value of your Teams app to customers. Your customer success team and pre-sales or sales team must funnel relevant existing customers and new prospects as preferred leads to invite for the webinars. Ensure that you include links to sign up for the webinars on your app’s landing page on your website and your app store listing. It attracts new, exploratory users who may be interested in learning more about your app.
 
 Get in touch with your field, account, or engineering representatives from Microsoft to request their participation in hero instances of these direct-to-customer webinars.
 
