@@ -24,13 +24,13 @@ The following image is an example of link unfurling in Teams desktop and mobile 
 
 # [Desktop](#tab/desktop)
 
-When the Azure DevOps link is pasted into the Teams compose message area, the link unfurls into a card with the work item details.
+When the Azure DevOps link is pasted into the Teams compose message area, the link unfurls into a card with the work item details as shown in the following example:
 
 :::image type="content" source="../../assets/images/messaging-extension/messagingextensions_linkunfurl.png" alt-text="Screenshot of link urfurling example for Azure Dev Ops links pasted in teams compose message area.":::
 
 # [Mobile](#tab/mobile)
 
-When the app link is pasted into the Teams compose message area, the link unfurls into a card with the link details.
+When the app link is pasted into the Teams compose message area, the link unfurls into a card with the link details as shown in the following example:
 
 :::image type="content" source="../../assets/images/messaging-extension/android-linkunfurl.png" alt-text="Screenshot shows you the link unfurling in Android mobile client.":::
 
