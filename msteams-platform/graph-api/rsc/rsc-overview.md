@@ -71,18 +71,6 @@ The following list provides all the RSC permissions categorized based on resourc
 
 ### RSC permissions for a team
 
-The following table provides RSC delegated permissions for a team:
-
-| Permission name | Action |
-| ----- | ----- |
-|`ChannelMeetingActiveSpeaker.Read.Group`|Reading the participants who are currently sending audio into the channel meetings associated with this team.|
-|`ChannelMeetingAudioVideo.Stream.Group`|Stream audio-video content of channel meetings associated with this team.|
-`ChannelMeetingIncomingAudio.Detect.Group`|Detect incoming audio in channel meetings associated with this team.|
-|`ChannelMeetingStage.Write.Group`|Show content on the meeting stage of channel meetings associated with this team.|
-|`InAppPurchase.Allow.Group`|Show and complete in-app purchases for users in this team.|
-|`LiveShareSession.ReadWrite.Group`| Create and synchronize Live Share sessions for meetings associated with this team. |
-|`MeetingParticipantReaction.Read.Group`| Read reactions of participants in channel meetings associated with this team.|
-
 The following table provides RSC application permissions for a team:
 
 | Permission name | Action |
@@ -110,25 +98,23 @@ The following table provides RSC application permissions for a team:
 |`TeamsTab.Read.Group`|Read this team's tabs.|
 |`TeamsTab.ReadWrite.Group`|Manage this team's tabs. |
 
+The following table provides RSC delegated permissions for a team:
+
+| Permission name | Action |
+| ----- | ----- |
+|`ChannelMeetingActiveSpeaker.Read.Group`|Reading the participants who are currently sending audio into the channel meetings associated with this team.|
+|`ChannelMeetingAudioVideo.Stream.Group`|Stream audio-video content of channel meetings associated with this team.|
+`ChannelMeetingIncomingAudio.Detect.Group`|Detect incoming audio in channel meetings associated with this team.|
+|`ChannelMeetingStage.Write.Group`|Show content on the meeting stage of channel meetings associated with this team.|
+|`InAppPurchase.Allow.Group`|Show and complete in-app purchases for users in this team.|
+|`LiveShareSession.ReadWrite.Group`| Create and synchronize Live Share sessions for meetings associated with this team. |
+|`MeetingParticipantReaction.Read.Group`| Read reactions of participants in channel meetings associated with this team.|
+
 For more information, see [team resource-specific consent permissions](/graph/permissions-reference#team-resource-specific-consent-permissions).
 
 ### RSC permissions for a chat or meeting
 
 If a chat has a meeting or a call associated with it, then the relevant RSC permissions apply to those resources as well.
-
-The following table provides RSC delegated permissions for a chat or meeting:
-
-| Permission name | Action |
-| ----- | ----- |
-| `InAppPurchase.Allow.Chat` | Show and complete in-app purchases for users in this chat and any associated meetings. |
-| `LiveShareSession.ReadWrite.Chat` | Create and synchronize Live Share sessions for meetings associated with this chat. |
-| `MeetingStage.Write.Chat` | Show content on the meeting stage of meetings associated with this chat. |
-| `MeetingParticipantReaction.Read.Chat` | Read the reactions of participants in meetings associated with this chat. |
-| `OnlineMeetingIncomingAudio.Detect.Chat` | Detect incoming audio in meetings associated with this chat. |
-| `OnlineMeetingActiveSpeaker.Read.Chat` | Read the participants who are currently sending audio into the meetings associated with this chat. |
-| `OnlineMeetingAudioVideo.Stream.Chat` | Stream audio-video content of meetings associated with this chat. |
-| `OnlineMeetingParticipant.Read.Chat` | Read participant information, including name, role, ID, joined and left times, of meetings associated with this chat.|
-| `OnlineMeetingParticipant.ToggleIncomingAudio.Chat` | Toggle incoming audio for participants in meetings associated with this chat. |
 
 The following table provides RSC application permissions for a chat or meeting:
 
@@ -154,6 +140,20 @@ The following table provides RSC application permissions for a chat or meeting:
 | `OnlineMeeting.ReadBasic.Chat` | Read basic properties of meetings associated with this chat, such as name, schedule, organizer, join link, and start or end notifications. |
 | `OnlineMeetingRecording.Read.Chat` | Read the recordings of the meetings associated with this chat. |
 | `OnlineMeetingNotification.Send.Chat` | Send notifications in the meetings associated with this chat. |
+
+The following table provides RSC delegated permissions for a chat or meeting:
+
+| Permission name | Action |
+| ----- | ----- |
+| `InAppPurchase.Allow.Chat` | Show and complete in-app purchases for users in this chat and any associated meetings. |
+| `LiveShareSession.ReadWrite.Chat` | Create and synchronize Live Share sessions for meetings associated with this chat. |
+| `MeetingStage.Write.Chat` | Show content on the meeting stage of meetings associated with this chat. |
+| `MeetingParticipantReaction.Read.Chat` | Read the reactions of participants in meetings associated with this chat. |
+| `OnlineMeetingIncomingAudio.Detect.Chat` | Detect incoming audio in meetings associated with this chat. |
+| `OnlineMeetingActiveSpeaker.Read.Chat` | Read the participants who are currently sending audio into the meetings associated with this chat. |
+| `OnlineMeetingAudioVideo.Stream.Chat` | Stream audio-video content of meetings associated with this chat. |
+| `OnlineMeetingParticipant.Read.Chat` | Read participant information, including name, role, ID, joined and left times, of meetings associated with this chat.|
+| `OnlineMeetingParticipant.ToggleIncomingAudio.Chat` | Toggle incoming audio for participants in meetings associated with this chat. |
 
 For more information, see [chat resource-specific consent permissions](/graph/permissions-reference#chat-resource-specific-consent-permissions).
 
