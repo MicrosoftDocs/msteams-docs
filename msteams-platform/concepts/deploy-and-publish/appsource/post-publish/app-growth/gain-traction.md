@@ -8,7 +8,7 @@ ms.author: surbhigupta
 ---
 # Gain traction for your collaborative app in the market
 
-In the Traction stage, you’ll want to gain mindshare for your collaborative app among top customers. You will build readiness to scale adoption and growth, and start realizing return on investment. Here are the various initiatives and growth levers at your disposal:
+In the Traction stage, you’ll want to gain mindshare for your collaborative app among top customers. You'll build readiness to scale adoption and growth, and start realizing return on investment. Here are the various initiatives and growth levers at your disposal:
 
 ## What should you do during the Traction stage?
 
@@ -16,7 +16,7 @@ In the Traction stage, you’ll want to gain mindshare for your collaborative ap
 <details>
 <summary>Plan, build readiness and drive adoption among customers</summary>
 
-As soon as  your colalborative app is published and customers are made aware of its existence, the entire focus of your organization must shift towards driving adoption of your app among existing customers first. Follow the step-by-step guidance, resources and best practices available [here](../../../../../promote-app-adoption.md) to plan and support the rollout of your Teams app in your customers’ organizations, navigate business decision makers, IT admins and educate end-users. The outcome of a successful app rollout among your existing customers is a pre-requisite to learn from user feedback, achieve product-market fit, acquire net new customers, monetize your app and  eventually derive RoI out of your build and go-to-market investments.
+As soon as  your collaborative app is published and customers are made aware of its existence, the entire focus of your organization must shift towards driving adoption of your app among existing customers first. Follow the step-by-step guidance, resources and best practices available [here](../../../../../promote-app-adoption.md) to plan and support the rollout of your Teams app in your customers’ organizations, navigate business decision makers, IT admins and educate end-users. The outcome of a successful app rollout among your existing customers is a pre-requisite to learn from user feedback, achieve product-market fit, acquire net new customers, monetize your app and  eventually derive RoI out of your build and go-to-market investments.
 
 [Back to top](#what-should-you-do-during-the-traction-stage)
 </details>

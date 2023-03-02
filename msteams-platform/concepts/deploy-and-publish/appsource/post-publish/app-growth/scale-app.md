@@ -46,7 +46,7 @@ Help your sales team secure large new customer deals leading with your Teams col
 <details>
 <summary>Digital webinars for existing customers and new prospects</summary>
 
-Host digital webinars at regular cadences to showcase the value of your Teams app to customers. Your customer success team and pre-sales or sales team must funnel relevant existing customers and new prospects as preferred leads for targeting webinar inviations to. Ensure that you include links to sign up for the webinars on your app’s landing page on your website and your app store listing. It attracts new, exploratory users who may be interested in learning more about your app.
+Host digital webinars at regular cadences to showcase the value of your Teams app to customers. Your customer success team and pre-sales or sales team must funnel relevant existing customers and new prospects as preferred leads for targeting webinar invitations too. Ensure that you include links to sign up for the webinars on your app’s landing page on your website and your app store listing. It attracts new, exploratory users who may be interested in learning more about your app.
 
 Get in touch with your field, account, or engineering representatives from Microsoft to request their participation in hero instances of these direct-to-customer webinars.
 
@@ -71,7 +71,7 @@ Generate interest from new customer accounts and drive traffic to your collabora
 <details>
 <summary>Publish customer demand and app’s impact story</summary>
 
-Share real customer stories using a four to five minute video. Nominate a customer and gain their commitment to participate in the story. Work with the customer on the narrative. Ensure that you include the benefits derived from your collaborative app, showcase resulting increased employee productivity (preferably quantifiable gains) and how customers prefer to use your SaaS service inside Teams as a collaborative app. Use this video for demand generation, digital marketing campaigns or showcase on public pages.
+Share real customer stories using a four to five-minute video. Nominate a customer and gain their commitment to participate in the story. Work with the customer on the narrative. Ensure that you include the benefits derived from your collaborative app, showcase resulting increased employee productivity (preferably quantifiable gains) and how customers prefer to use your SaaS service inside Teams as a collaborative app. Use this video for demand generation, digital marketing campaigns or showcase on public pages.
 
 After developing it, host these customer stories on the landing page of the Teams app on your website. Link this video in the marketplace listing of your collaborative app.  Promote it via paid, earned media, or social media posts to highlight the success of the app.
 
@@ -89,7 +89,7 @@ While building traction, you showcased the collaborative app in Teams during you
 <details>
 <summary>User retargeting and re-engagement basis app analytics</summary>
 
-A key product-led growth initiative, use signals from your app analytics to re-target users who have recently engaged with your app in Teams but haven't reached a value realization milestone defined by you. Users who haven't visited your app or churned recently must be re-engaged to bring back to your app.
+A key product-led growth initiative, use signals from your app analytics to retarget users who have recently engaged with your app in Teams but haven't reached a value realization milestone defined by you. Users who haven't visited your app or churned recently must be re-engaged to bring back to your app.
 
 Remember, your goal is to get users to experience value at the earliest by using your collaborative app. By converting your user who tries your app into a sticky, habitual user is eventually going to result in paying customers.
 
