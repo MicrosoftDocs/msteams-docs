@@ -7,7 +7,7 @@ ms.author: surbhigupta
 ms.topic: conceptual
 ---
 
-# Resource-specific consent
+# Resource-specific consent for your Teams app
 
 Resource-specific consent (RSC) is an authorization framework built by Microsoft Teams and Microsoft identity that allows for granting scoped access to an app.
 

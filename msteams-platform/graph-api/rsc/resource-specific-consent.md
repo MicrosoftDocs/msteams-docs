@@ -9,7 +9,7 @@ ms.topic: reference
 
 # Grant RSC permissions to an app
 
-RSC is a Microsoft Teams and Microsoft Graph API integration that enables your app to use API endpoints to manage specific resources, either teams or chats, within an organization. You can configure RSC permission for your app using Azure AD.
+Resource-specific consent (RSC) is a Microsoft Teams and Microsoft Graph API integration that enables your app to use API endpoints to manage specific resources, either teams or chats, within an organization. You can configure RSC permission for your app using Azure AD.
 
 In this section, you'll learn more about:
 
