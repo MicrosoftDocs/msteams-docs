@@ -453,7 +453,15 @@ items:
 
     1. Update the following in **appsettings.json** file:
 
-       :::image type="content" source="~/assets/images/bots/appsettingsjson.png" alt-text="Screenshot of Visual Studio file explorer menu." lightbox="~/assets/images/bots/appsettingsjson.png":::
+       ```json
+       {
+        "MicrosoftAppId": "{TODO: MicrosoftAppId}",
+        "MicrosoftAppPassword": "{TODO: ClientSecret}",
+        "ConnectionName": "{TODO: ConnectionName}",
+        "MicrosoftAppType": "MultiTenant", // Set this to SingleTenant if you are using a single tenant app registration
+        "MicrosoftAppTenantId": "common" // Set your tenantId here if you are using single tenant app registration.
+        }
+       ```
 
        * Update the `MicrosoftAppId` and `MicrosoftAppPassword` for your bot.
          You can obtain the `MicrosoftAppId` from the bot's Configuration page. The `MicrosoftAppPassword` is the value for client secret ID that you saved previously in Azure portal.
