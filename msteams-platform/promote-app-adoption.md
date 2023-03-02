@@ -80,12 +80,6 @@ Following the below five easy steps, you can encourage customers to adopt your a
    :::column-end:::
 :::row-end:::
 
-1. **[Perform internal enablement to support app adoption](#perform-internal-enablement-to-support-app-adoption)**: Share your app information and its importance with your customer-facing teams, such as CSM, support, marketing, and sales that help customers adopt your apps. To achieve this, provide an adoption toolkit, define a rollout process, and give enablement training for your customer-facing teams.
-1. **[Help admins to do app configuration and rollout](#help-admins-to-do-app-configuration-and-rollout-for-their-users)**: Help the IT admins do the necessary configurations to enable your app for the users. Provide a help guide for IT admins to understand the configuration steps.
-1. **[Educate users and drive adoption change management for your app](#educate-users-and-drive-adoption-change-management-for-your-app)**: Provide user guide for the users that describes their jobs to be done (JTBD) and your app’s features. Promote awareness about your app and its use cases. You can conduct email campaigns, webinars, or social media engagements depending on your target audience.
-1. **[Provide support contact for IT admins and users](#provide-support-information-for-it-admins-and-users)**: When admins or users encounter unknown issues or issues that can't be resolved using the documentation, they might reach for support. Providing support in such scenarios is helpful for healthy retention of users.
-1. **[Track app adoption and usage using analytics](#track-app-adoption-and-usage-using-analytics)**: Track your app adoption progress after the rollout and promptly resolve issues for the early adopters. Your CSM or account manager can engage with the customer's organization and its IT admins to track adoption and provide support.
-
 ## Perform internal enablement to support app adoption
 
 Within your organization, you must streamline the app support and guidance programs. Internal readiness and enablement training programs helps to create good content, do targeted marketing, create an informed support team, and streamline the sales. All these activities and assets in turn ensure smooth app adoption journey for your customers.
