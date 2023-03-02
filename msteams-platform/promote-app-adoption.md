@@ -57,6 +57,23 @@ Following the below five easy steps, you can encourage customers to adopt your a
    :::column-end:::
 :::row-end:::
 
+:::row:::
+   :::column:::
+      :::image type="icon" source="assets/images/app-adoption/internal-enablement-test.png" link="#perform-internal-enablement-to-support-app-adoption" border="false":::
+   :::column-end:::
+   :::column span="":::
+     Share your app information and its importance with your customer-facing teams, such as CSM, support, marketing, and sales that help customers adopt your apps. To achieve this, provide an adoption toolkit, define a rollout process, and give enablement training for your customer-facing teams.
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+     :::image type="icon" source="assets/images/app-adoption/config-rollout-test.png" link="#help-admins-to-do-app-configuration-and-rollout-for-their-users" border="false":::
+   :::column-end:::
+   :::column span="":::
+     Help the IT admins do the necessary configurations to enable your app for the users. Provide a help guide for IT admins to understand the configuration steps.
+   :::column-end:::
+:::row-end:::
+
 1. **[Perform internal enablement to support app adoption](#perform-internal-enablement-to-support-app-adoption)**: Share your app information and its importance with your customer-facing teams, such as CSM, support, marketing, and sales that help customers adopt your apps. To achieve this, provide an adoption toolkit, define a rollout process, and give enablement training for your customer-facing teams.
 1. **[Help admins to do app configuration and rollout](#help-admins-to-do-app-configuration-and-rollout-for-their-users)**: Help the IT admins do the necessary configurations to enable your app for the users. Provide a help guide for IT admins to understand the configuration steps.
 1. **[Educate users and drive adoption change management for your app](#educate-users-and-drive-adoption-change-management-for-your-app)**: Provide user guide for the users that describes their jobs to be done (JTBD) and your app’s features. Promote awareness about your app and its use cases. You can conduct email campaigns, webinars, or social media engagements depending on your target audience.
