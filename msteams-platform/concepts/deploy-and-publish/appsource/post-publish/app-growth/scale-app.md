@@ -123,6 +123,8 @@ Ensure that you [instrument code and track analytics](../../../../design/overvie
 
 Microsoft will evaluate co-activation opportunities in large customer accounts. Evaluation is based on customer interest, adoption opportunity (sold seat size in customer account), and so on, among other criteria.
 
+To plan and support the rollout of your Teams app in your customers’ organizations, follow the guidance, resources, and best practices available [here](../../../../../promote-app-adoption.md).
+
 </details>
 <br>
 <details>

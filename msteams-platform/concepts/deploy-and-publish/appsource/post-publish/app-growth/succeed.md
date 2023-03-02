@@ -18,6 +18,8 @@ To wrap up, your collaborative app is now becoming a full-fledged strategic prod
 
 Continue to increase the usage of your collaborative app on Teams through existing customer activation. You can continue new customer acquisition via the Teams marketplace or through sales-led customer deal wins leading with your collaborative app.
 
+To plan and support the rollout of your Teams app in your customers’ organizations, follow the guidance, resources, and best practices available [here](../../../../../promote-app-adoption.md).
+
 </details>
 <br>
 <details>
