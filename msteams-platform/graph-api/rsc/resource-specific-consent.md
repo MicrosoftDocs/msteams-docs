@@ -1,15 +1,20 @@
 ---
 title: Grant RSC permissions to an app
-description: Learn about supported granular resource-specific consent (RSC) permissions, which allows team and chat owners and meeting organizers to grant consent for an application.
+description: In this article, learn how to grant resource-specific consent (RSC) permissions, which allows team and chat owners and meeting organizers to grant consent for an application.
 ms.localizationpriority: medium
-author: akjo
-ms.author: lajanuar
+author: surbhigupta
+ms.author: surbhigupta
 ms.topic: reference
 ---
 
 # Grant RSC permissions to an app
 
 Introduction to be added.
+
+In this section, you'll learn more about:
+
+* [Add RSC permissions to your Teams application](#add-rsc-permissions-to-your-teams-application)
+* [Verify application RSC permission granted to your app](#verify-application-rsc-permission-granted-to-your-app)
 
 ## Add RSC permissions to your Teams application
 
