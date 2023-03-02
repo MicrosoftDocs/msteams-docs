@@ -42,6 +42,9 @@ microsoftTeams.tasks.submitTask(
 
 ```
 
+> [!NOTE]
+> The `dialog.submit` property can only be called within a dialog.
+
 ---
 
 You can see how invoking a task module from a tab and submitting the result of a task module works.
