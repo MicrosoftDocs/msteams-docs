@@ -13,12 +13,9 @@ Resource-specific consent (RSC) is an authorization framework built by Microsoft
 
 Through RSC, an authorized user can give an application access to the data of a specific instance of a resource type instead of every instance in the entire tenant. For example, a person who owns both team A and team B can decide to give the data for the Contoso app to only team A and not team B. The same concept of scoped data access applies to chats and meetings.
 
-> [!NOTE]
-> If a chat has a meeting or a call associated with it, then the relevant RSC permissions apply to those resources as well.
-
 ## Types of RSC permissions
 
-RSC permission determines which data access methods are allowed by an application. There are two types of RSC permissions:
+Use RSC permissions to determine the data access methods for your application. There are two types of RSC permissions:
 
 * **Application**: Allows an app to access data without the user being signed in.
 * **Delegated**: Allows an app to access data only on behalf of a signed-in user. No access is allowed in the absence of a signed-in user.
@@ -32,6 +29,7 @@ Users' ability to grant RSC permissions varies based on resource types and acces
   * In the case of a team, the user must be an owner of that team.
   * In the case of a chat, the user must be a member of the chat.
   * In the case of meetings, the user must be an organizer or presenter in the meeting.
+
 * **Delegated context RSC permissions**: Any user authorized to install an app in a specific scope has the right to grant any RSC permissions requested by the app in that specific scope at the time of installation. For example, if regular members are allowed to install an app inside a team, then they also have the authority to grant delegated RSC permission to the app in that specific team.
 
 ### API that supports RSC-based data access
@@ -47,18 +45,12 @@ Microsoft Graph SDK, Microsoft Bot Framework SDK, and Microsoft TeamsJS client l
 
 The following list provides all the RSC permissions categorized based on resource type and access mode:
 
-* [RSC permissions for a team](#rsc-permissions-for-a-team).
-* [RSC permissions for a chat or meeting](#rsc-permissions-for-a-chat-or-meeting).
-* [RSC permissions for a user access](#rsc-permissions-for-a-user-access).
-
-RSC permissions are available on the following different resource types:
-
-* [Team](#rsc-permissions-for-a-team) (includes the channels within a team)
-* [Chat or meeting](#rsc-permissions-for-a-chat-or-meeting) (includes the meetings associated with the chats)
-* [User](#rsc-permissions-for-a-user-access)
+* [RSC permissions for a team](#rsc-permissions-for-a-team): includes the channels within a team.
+* [RSC permissions for a chat or meeting](#rsc-permissions-for-a-chat-or-meeting): includes the meetings associated with the chats.
+* [RSC permissions for a user access](#rsc-permissions-for-a-user-access): includes permission for users to access different resources.
 
 > [!NOTE]
-> The features associated with some of the permissions listed here might not be generally available.
+> The features associated with some of the permissions listed here might not be generally available (GA).
 
 ### RSC permissions for a team
 
@@ -104,6 +96,8 @@ The following table provides RSC application permissions for a team:
 For more information, see [team resource-specific consent permissions](/graph/permissions-reference#team-resource-specific-consent-permissions).
 
 ### RSC permissions for a chat or meeting
+
+If a chat has a meeting or a call associated with it, then the relevant RSC permissions apply to those resources as well.
 
 The following table provides RSC delegated permissions for a chat or meeting:
 

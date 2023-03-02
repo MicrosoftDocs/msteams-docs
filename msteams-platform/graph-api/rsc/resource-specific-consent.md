@@ -34,7 +34,7 @@ The Azure AD portal provides a central platform for you to register and configur
 
 ### Update your Teams app manifest
 
-The RSC permissions are declared in your app's manifest.json file.
+You must declare RSC permissions in your app **manifest.json** file.
 
 > [!IMPORTANT]
 > Non-RSC permissions are stored in the Azure portal. Don't add them to the app manifest.
