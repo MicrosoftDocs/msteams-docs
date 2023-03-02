@@ -41,7 +41,7 @@ Following the below five easy steps, you can encourage customers to adopt your a
 
 :::row:::
    :::column span="1":::
-      :::image type="icon" source="assets/images/app-adoption/internal-enablement-test.png" link="#perform-internal-enablement-to-support-app-adoption" border="false":::
+      :::image type="icon" source="assets/images/app-adoption/internal-enablement.png" link="#perform-internal-enablement-to-support-app-adoption" border="false":::
    :::column-end:::
    :::column span="3":::
      Share your app information and its importance with your customer-facing teams, such as CSM, support, marketing, and sales that help customers adopt your apps. To achieve this, provide an adoption toolkit, define a rollout process, and give enablement training for your customer-facing teams.
@@ -49,7 +49,7 @@ Following the below five easy steps, you can encourage customers to adopt your a
 :::row-end:::
 :::row:::
    :::column span="1":::
-     :::image type="icon" source="assets/images/app-adoption/config-rollout-test.png" link="#help-admins-to-do-app-configuration-and-rollout-for-their-users" border="false":::
+     :::image type="icon" source="assets/images/app-adoption/config-rollout.png" link="#help-admins-to-do-app-configuration-and-rollout-for-their-users" border="false":::
    :::column-end:::
    :::column span="3":::
      Help the IT admins do the necessary configurations to enable your app for the users. Provide a help guide for IT admins to understand the configuration steps.
