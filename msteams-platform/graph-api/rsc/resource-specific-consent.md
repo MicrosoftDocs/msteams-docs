@@ -9,12 +9,12 @@ ms.topic: reference
 
 # Grant RSC permissions to an app
 
-Introduction to be added.
+RSC is a Microsoft Teams and Microsoft Graph API integration that enables your app to use API endpoints to manage specific resources, either teams or chats, within an organization. You can configure RSC permission for your app using Azure AD.
 
 In this section, you'll learn more about:
 
-* [Add RSC permissions to your Teams application](#add-rsc-permissions-to-your-teams-application)
-* [Verify application RSC permission granted to your app](#verify-application-rsc-permission-granted-to-your-app)
+1. [Add RSC permissions to your Teams application](#add-rsc-permissions-to-your-teams-application)
+1. [Verify application RSC permission granted to your app](#verify-application-rsc-permission-granted-to-your-app)
 
 ## Add RSC permissions to your Teams application
 
@@ -240,7 +240,7 @@ Example for RSC permissions in a chat:
 <summary><b>RSC permissions for app manifest version 1.11 or earlier</b></summary>
 
 > [!NOTE]
-> It is recommended to use app manifest version 1.12 or later.
+> It's recommended to use app manifest version 1.12 or later.
 
 Add a [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) key to your app manifest with the following values:
 
@@ -313,7 +313,7 @@ Whenever an app is installed by an authorized user within Teams, the RSC permiss
 To verify the application RSC permissions, follow these steps:
 
 1. Ensure that you've configured [consent settings](#configure-consent-settings) for team or chat.
-1. [Install your app in Teams](#sideload-your-app-in-teams).
+1. [Sideload your app in Teams](#sideload-your-app-in-teams).
 1. [Obtain an access token from the identity platform](#obtain-an-access-token-from-the-microsoft-identity-platform).
 1. [Check the RSC permissions granted to a specific resource](#check-the-rsc-permissions-granted-to-a-specific-resource).
 

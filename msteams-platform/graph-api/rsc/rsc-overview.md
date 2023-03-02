@@ -15,6 +15,18 @@ Through RSC, an authorized user can give an app access to the data of a specific
 
 For example, a person who owns both team A and team B can decide to give the data for the Contoso app to only team A and not team B. The same concept of scoped data access applies to chats and meetings.
 
+RSC permissions are categorized based on:
+
+1. The Resource type: Team, chat or meeting, and users.
+1. The RSC permission type: Application and Delegated.
+
+| &nbsp; | Application context RSC permissions | Delegated context RSC permissions |
+| ---- | ---- | ---- |
+| **Resource type** |  &nbsp; | &nbsp; |
+| Team | ✔️ | ✔️ |
+| Chat or meeting | ✔️ | ✔️ |
+| User | NA | ✔️ |
+
 In this section, you'll learn more about:
 
 * [Types of RSC permissions](#types-of-rsc-permissions)
@@ -160,6 +172,12 @@ You can give the following delegated RSC permissions to your app, which allows u
 | `MeetingParticipantReaction.Read.User` | Read the user's reactions while participating in a meeting. |
 | `OutgoingVideoStream.Write.User` | Modify the user's outgoing video. |
 
+## Next step
+
+> [!div class="nextstepaction"]
+> [Grant RSC permissions to an app](resource-specific-consent.md)
+
 ## See also
 
-[Grant RSC permissions to an app](resource-specific-consent.md)
+* [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
+* [Permissions in Teams app](../App-permissions/Teams-app-permissions.md)
