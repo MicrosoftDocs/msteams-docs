@@ -9,13 +9,19 @@ ms.topic: reference
 
 # Resource-specific consent
 
-Resource-specific consent (RSC) is an authorization framework built by Microsoft Teams and Microsoft identity that allows for granting scoped access to an application.
+Resource-specific consent (RSC) is an authorization framework built by Microsoft Teams and Microsoft identity that allows for granting scoped access to an app.
 
-Through RSC, an authorized user can give an application access to the data of a specific instance of a resource type instead of every instance in the entire tenant. For example, a person who owns both team A and team B can decide to give the data for the Contoso app to only team A and not team B. The same concept of scoped data access applies to chats and meetings.
+Through RSC, an authorized user can give an app access to the data of a specific instance of a resource type instead of every instance in the entire tenant. For example, a person who owns both team A and team B can decide to give the data for the Contoso app to only team A and not team B. The same concept of scoped data access applies to chats and meetings.
+
+In this section, you'll learn more about:
+
+* [Types of RSC permissions](#types-of-rsc-permissions)
+* [Supported RSC permissions](#supported-rsc-permissions)
+* [Grant RSC permissions to an app](resource-specific-consent.md)
 
 ## Types of RSC permissions
 
-Use RSC permissions to determine the data access methods for your application. There are two types of RSC permissions:
+Use RSC permissions to determine the data access methods for your app. There are two types of RSC permissions:
 
 * **Application**: Allows an app to access data without the user being signed in.
 * **Delegated**: Allows an app to access data only on behalf of a signed-in user. No access is allowed in the absence of a signed-in user.
@@ -30,11 +36,11 @@ Users' ability to grant RSC permissions varies based on resource types and acces
   * In the case of a chat, the user must be a member of the chat.
   * In the case of meetings, the user must be an organizer or presenter in the meeting.
 
-* **Delegated context RSC permissions**: Any user authorized to install an app in a specific scope has the right to grant any RSC permissions requested by the app in that specific scope at the time of installation. For example, if regular members are allowed to install an app inside a team, then they also have the authority to grant delegated RSC permission to the app in that specific team.
+* **Delegated context RSC permissions**: Any user authorized to install an app in a specific scope has the right to grant any RSC permissions requested by the app in that specific scope at the time of installation. For example, if regular members have permission to install an app inside a team, then they also have the authority to grant delegated RSC permission to the app in that specific team.
 
 ### API that supports RSC-based data access
 
-Microsoft Graph SDK, Microsoft Bot Framework SDK, and Microsoft TeamsJS client library support fine-grained data access through RSC. The supported modes and resource types differ across the API surfaces.
+Microsoft Graph SDK, Microsoft Bot Framework SDK, and Microsoft TeamsJS client library support fine-grained data access through RSC. The supported modes and resource types vary across the API surfaces.
 
 | RSC mode or type | Supported SDKs | App manifest version | Resource types | RSC-related controls for the entire tenant | Who can consent to RSC permissions? |
 |---------|---------|---------|---------|---------|---------|
@@ -50,7 +56,7 @@ The following list provides all the RSC permissions categorized based on resourc
 * [RSC permissions for a user access](#rsc-permissions-for-a-user-access): includes permission for users to access different resources.
 
 > [!NOTE]
-> The features associated with some of the permissions listed here might not be generally available (GA).
+> The features associated with some permissions listed here might not be generally available (GA).
 
 ### RSC permissions for a team
 
@@ -66,7 +72,7 @@ The following table provides RSC delegated permissions for a team:
 |`LiveShareSession.ReadWrite.Group`| Create and synchronize Live Share sessions for meetings associated with the team. |
 |`MeetingParticipantReaction.Read.Group`| Get reactions from participants in channel meetings associated with the team.|
 
-The following table provides RSC application permissions for a team:
+The following table provides RSC app permissions for a team:
 
 | Permission name | Action |
 | ----- | ----- |
@@ -112,7 +118,7 @@ The following table provides RSC delegated permissions for a chat or meeting:
 | `OnlineMeetingAudioVideo.Stream.Chat` | Stream audio-video content from meetings associated with the chat. |
 | `OnlineMeetingParticipant.ToggleIncomingAudio.Chat` | Toggle incoming audio for participants in meetings associated with the chat. |
 
-The following table provides RSC application permissions for a chat or meeting:
+The following table provides RSC app permissions for a chat or meeting:
 
 | Permission name | Action |
 | ----- | ----- |
@@ -129,7 +135,7 @@ The following table provides RSC application permissions for a chat or meeting:
 | `TeamsTab.Create.Chat` | Create tabs in the chat. |
 | `TeamsTab.Delete.Chat` | Delete the chat's tabs. |
 | `TeamsTab.ReadWrite.Chat` | Manage the chat's tabs. |
-| `TeamsAppInstallation.Read.Chat` | Get which apps are installed in the chat. |
+| `TeamsAppInstallation.Read.Chat` | Get the apps that are installed in the chat. |
 | `TeamsActivity.Send.Chat` | Create new notifications in the activity feeds of the users in the chat. |
 | `OnlineMeetingTranscript.Read.Chat` | Get the transcripts of the meeting associated with the chat. |
 | `OnlineMeetingParticipant.Read.Chat` | Get the participants of the meetings associated with the chat.|
@@ -144,7 +150,7 @@ For more information, see [chat resource-specific consent permissions](/graph/pe
 
 ### RSC permissions for a user access
 
-The following RSC permission can be given to an app, which allows users to get access for using different resources.
+You can give the following RSC permission to your app, which allows users to get access for using different resources:
 
 | Permission name | Action |
 | ----- | ----- |
