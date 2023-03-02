@@ -103,6 +103,8 @@ Based on the list you’ve shared with your Microsoft field, account, or enginee
 
 Remember, just enabling the app inside Teams won't be enough. Instead, adoption and change management practices led by your customer success team such as organization-wide emails at regular cadences, flyers, retention campaigns, user trainings, identifying and scaling through app champions in each team, gamification and constantly keeping an eye on app usage metrics within the customer’s tenant is required to form a habit among users.
 
+To plan and support the rollout of your Teams app in your customers’ organizations, follow the guidance, resources, and best practices available [here](../../../../../promote-app-adoption.md).
+
 [Back to top](#what-should-you-do-during-the-scale-stage)
 </details>
 <br>
@@ -122,8 +124,6 @@ Ensure that you [instrument code and track analytics](../../../../design/overvie
 <summary>Co-activation in mutually identified existing customers</summary>
 
 Microsoft will evaluate co-activation opportunities in large customer accounts. Evaluation is based on customer interest, adoption opportunity (sold seat size in customer account), and so on, among other criteria.
-
-To plan and support the rollout of your Teams app in your customers’ organizations, follow the guidance, resources, and best practices available [here](../../../../../promote-app-adoption.md).
 
 </details>
 <br>
