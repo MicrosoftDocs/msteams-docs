@@ -39,7 +39,23 @@ Admins can set up an app governance process that manages your organization's IT 
 
 Following the below five easy steps, you can encourage customers to adopt your apps through admin recommendations to their users, for maximum adoption in an organization. Consider the following elements for app adoption.
 
-:::image type="content" source="assets/images/drive-app-adoption.png" alt-text="Diagram shows the steps to drive app adoption." lightbox="assets/images/drive-app-adoption.png":::
+:::row:::
+   :::column:::
+      :::image type="icon" source="assets/images/app-adoption/internal-enablement.png" link="#perform-internal-enablement-to-support-app-adoption" border="false":::
+   :::column-end:::
+   :::column span="":::
+     :::image type="icon" source="assets/images/app-adoption/config-rollout.png" link="#help-admins-to-do-app-configuration-and-rollout-for-their-users" border="false":::
+   :::column-end:::
+   :::column span="":::
+      :::image type="icon" source="assets/images/app-adoption/educate-drive.png" link="#educate-users-and-drive-adoption-change-management-for-your-app" border="false":::
+   :::column-end:::
+   :::column span="":::
+      :::image type="icon" source="assets/images/app-adoption/provide-support.png" link="#provide-support-information-for-it-admins-and-users" border="false":::
+   :::column-end:::
+   :::column span="":::
+      :::image type="icon" source="assets/images/app-adoption/track-using-analytics.png" link="#track-app-adoption-and-usage-using-analytics" border="false":::
+   :::column-end:::
+:::row-end:::
 
 1. **[Perform internal enablement to support app adoption](#perform-internal-enablement-to-support-app-adoption)**: Share your app information and its importance with your customer-facing teams, such as CSM, support, marketing, and sales that help customers adopt your apps. To achieve this, provide an adoption toolkit, define a rollout process, and give enablement training for your customer-facing teams.
 1. **[Help admins to do app configuration and rollout](#help-admins-to-do-app-configuration-and-rollout-for-their-users)**: Help the IT admins do the necessary configurations to enable your app for the users. Provide a help guide for IT admins to understand the configuration steps.
@@ -104,7 +120,7 @@ Teams admin center provides admins with enterprise-grade controls and configurat
 
 The IT admins attend to various tasks for smoother operations on a daily basis. Sharing the following resources with them helps in their app evaluation and rollout journey.
 
-:::image type="content" source="assets/images/app-config-roll-out-end-users.png" alt-text="Diagram shows the tasks of an IT admin before, during, and after they roll out your app." lightbox="assets/images/app-config-roll-out-end-users.png":::
+:::image type="content" source="assets/images/app-adoption/resources-evaluation-rollout.png" alt-text="Diagram shows the tasks of an IT admin before, during, and after they roll out your app." lightbox="assets/images/app-adoption/resources-evaluation-rollout.png":::
 
 ### Evaluate and allow apps
 
