@@ -1,7 +1,7 @@
 ---
 title: Apps for Teams meetings
 author: surbhigupta
-description: Learn how apps works in Microsoft Teams meetings based on participant and user role and app extensibility.
+description: In this article, learn how apps works in Microsoft Teams meeting based on participant and user role and app extensibility.
 ms.topic: overview
 ms.author: lajanuar
 ms.localizationpriority: medium
@@ -86,7 +86,7 @@ Teams supports access to apps during meeting for the following meeting types:
 Learn more about [Teams meetings, expiration, and policies](/microsoftteams/meeting-expiration) and [meetings, webinars, and live events](/microsoftteams/quick-start-meetings-live-events).
 > [!NOTE]
 >
-> * Apps for scheduled public channel meetings are currently available in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
+> * Apps for scheduled public channel meetings are available in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
 > * Apps aren't supported in the following:
 >   * [Public Switched Telephone Network (PSTN) Teams calls](/microsoftteams/cloud-voice-landing-page#public-switched-telephone-network-connectivity-options)
 >   * [End-to-end encrypted Teams calls](https://support.microsoft.com/office/use-end-to-end-encryption-for-teams-calls-1274b4d2-b5c5-4b24-a376-606fa6728a90)
@@ -96,6 +96,10 @@ Learn more about [Teams meetings, expiration, and policies](/microsoftteams/meet
 ## Meeting lifecycle
 
 A meeting lifecycle includes pre-meeting, in-meeting, and post-meeting app experience, depending on the user type and user's role in a Teams meeting.
+
+### App caching for tab app in Teams meeting
+
+You can configure your tab app to enable app caching to reduce the reload time of your app during a meeting. The app reloads from the cache, which improves the app relaunch time within the meeting. For more information, see [enable app caching for your tab app](app-caching-for-your-tab-app.md).
 
 ## User types in Teams
 
@@ -143,14 +147,6 @@ For more information, see [roles in a Teams meeting](https://support.microsoft.c
 ## See also
 
 * [Designing your Microsoft Teams meeting extension](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md)
-* [Build tabs for meeting](~/apps-in-teams-meetings/build-tabs-for-meeting.md)
-* [Build apps for Teams meeting stage](build-apps-for-teams-meeting-stage.md)
-* [Build in-meeting notification for Teams meeting](in-meeting-notification-for-meeting.md)
-* [Build extensible conversation for meeting chat](build-extensible-conversation-for-meeting-chat.md)
-* [Build apps for anonymous users](build-apps-for-anonymous-user.md)
 * [Meeting apps APIs](meeting-apps-apis.md)
 * [Enhanced collaboration with Live Share SDK](teams-live-share-overview.md)
-* [Custom Together Mode scenes](~/apps-in-teams-meetings/teams-together-mode.md)
-* [Get meeting transcripts using Graph APIs](../graph-api/meeting-transcripts/overview-transcripts.md)
 * [Instrumenting for Teams app specific analytics](../concepts/design/overview-analytics.md#instrumenting-for-teams-app-specific-analytics)
-

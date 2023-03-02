@@ -397,13 +397,13 @@ items:
 
     1. Go to **Microsoft Teams**.
     
-    1. Select **Apps**.
+    1. Select **Apps** > **Manage your apps**.
 
-    1. Select **Manage your apps**.
+       :::image type="content" source="./assets/images/sbs-messagingextension-action/manage-your-apps-action.png" alt-text="Screenshot showing the apps and Manage your apps highlighted in red.":::
     
-    1. Select **Upload a custom app**.
+    1. Select **Upload an app** and select **Upload a custom app**
 
-       :::image type="content" source="./assets/images/sbs-messagingextension-action/uploadacustomapp1.png" alt-text="Screenshot of Upload a custom app under Manage your Apps in Microsoft Teams.":::
+       :::image type="content" source="./assets/images/sbs-messagingextension-action/upload-a-custom-app-1.png" alt-text="screenshot showing Upload an app and Upload a custom app highlighted in red.":::
 
     1. Select **Open** to upload the .zip file that you created in the **Manifest** folder.
 
