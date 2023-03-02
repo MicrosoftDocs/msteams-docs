@@ -21,7 +21,7 @@ RSC permissions are categorized based on:
 1. The RSC permission type: Application and Delegated.
 
 | &nbsp; | Application context RSC permissions | Delegated context RSC permissions |
-| ---- | ---- | ---- |
+| ---- | :----: | :----: |
 | **Resource type** |  &nbsp; | &nbsp; |
 | Team | ✔️ | ✔️ |
 | Chat or meeting | ✔️ | ✔️ |
