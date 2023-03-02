@@ -41,8 +41,7 @@ You can add cloud resources in the following ways:
 
       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/updated-final-cloud_1.png" alt-text="final":::
 
-  > [!NOTE]
-  > You need to provision for each environment after you have successfully added the resource in your Teams app.
+   You need to provision for each environment after you have successfully added the resource in your Teams app.
 
 ### Add cloud resources using TeamsFx CLI
 

@@ -39,22 +39,22 @@ To update your app's code:
 
 1. Add code snippet for `TeamsSSOTokenExchangeMiddleware`.
 
-# [csharp](#tab/cs1)
+    # [csharp](#tab/cs1)
 
-Add the following code snippet to `AdapterWithErrorHandler.cs` (or the equivalent class in your app's code):
+    Add the following code snippet to `AdapterWithErrorHandler.cs` (or the equivalent class in your app's code):
 
-```csharp
+    ```csharp
     base.Use(new TeamsSSOTokenExchangeMiddleware(storage, configuration["ConnectionName"]));
     ```
 
-# [JavaScript](#tab/js1)
+    # [JavaScript](#tab/js1)
 
-Add the following code snippet to `index.js` (or the equivalent class in your app's code):
+    Add the following code snippet to `index.js` (or the equivalent class in your app's code):
 
-```JavaScript
-    const {TeamsSSOTokenExchangeMiddleware} = require('botbuilder');
-    const tokenExchangeMiddleware = new TeamsSSOTokenExchangeMiddleware(memoryStorage, env.connectionName);
-    adapter.use(tokenExchangeMiddleware);
+    ```JavaScript
+       const {TeamsSSOTokenExchangeMiddleware} = require('botbuilder');
+       const tokenExchangeMiddleware = new TeamsSSOTokenExchangeMiddleware(memoryStorage, env.connectionName);
+       adapter.use(tokenExchangeMiddleware);
     ```
 
     ---
@@ -64,158 +64,158 @@ Add the following code snippet to `index.js` (or the equivalent class in your ap
 
 1. Use the following code snippet for requesting a token.
 
-# [csharp](#tab/cs2)
+   # [csharp](#tab/cs2)
 
-After you add the `AdapterWithErrorHandler.cs`, your code should be as shown below:
+   After you add the `AdapterWithErrorHandler.cs`, your code should be as shown below:
 
-```csharp
-    public class AdapterWithErrorHandler : CloudAdapter
-    {
-        public AdapterWithErrorHandler(
-            IConfiguration configuration,
-            IHttpClientFactory httpClientFactory,
-            ILogger<IBotFrameworkHttpAdapter> logger,
-            IStorage storage,
-            ConversationState conversationState)
-            : base(configuration, httpClientFactory, logger)
-        {
-            base.Use(new TeamsSSOTokenExchangeMiddleware(storage, configuration["ConnectionName"]));
+   ```csharp
+       public class AdapterWithErrorHandler : CloudAdapter
+       {
+           public AdapterWithErrorHandler(
+               IConfiguration configuration,
+               IHttpClientFactory httpClientFactory,
+               ILogger<IBotFrameworkHttpAdapter> logger,
+               IStorage storage,
+               ConversationState conversationState)
+               : base(configuration, httpClientFactory, logger)
+           {
+               base.Use(new TeamsSSOTokenExchangeMiddleware(storage, configuration["ConnectionName"]));
 
-            OnTurnError = async (turnContext, exception) =>
-            {
-                // Log any leaked exception from the application.
-                // NOTE: In production environment, you should consider logging this to
-                // Azure Application Insights. Visit https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-telemetry?view=azure-bot-service-4.0&tabs=csharp to see how
-                // to add telemetry capture to your bot.
-                logger.LogError(exception, $"[OnTurnError] unhandled error : {exception.Message}");
+               OnTurnError = async (turnContext, exception) =>
+               {
+                   // Log any leaked exception from the application.
+                   // NOTE: In production environment, you should consider logging this to
+                   // Azure Application Insights. Visit https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-telemetry?view=azure-bot-service-4.0&tabs=csharp to see how
+                   // to add telemetry capture to your bot.
+                   logger.LogError(exception, $"[OnTurnError] unhandled error : {exception.Message}");
 
-                // Send a message to the user.
-                await turnContext.SendActivityAsync("The bot encountered an error or bug.");
-                await turnContext.SendActivityAsync("To continue to run this bot, please fix the bot source code.");
+                   // Send a message to the user.
+                   await turnContext.SendActivityAsync("The bot encountered an error or bug.");
+                   await turnContext.SendActivityAsync("To continue to run this bot, please fix the bot source code.");
 
-                if (conversationState != null)
-                {
-                    try
-                    {
-                        // Delete the conversationState for the current conversation to prevent the
-                        // bot from getting stuck in an error-loop caused by being in a bad state.
-                        // ConversationState should be thought of as similar to "cookie-state" in a Web pages.
-                        await conversationState.DeleteAsync(turnContext);
-                    }
-                    catch (Exception e)
-                    {
-                        logger.LogError(e, $"Exception caught on attempting to Delete ConversationState : {e.Message}");
-                    }
-                }
+                   if (conversationState != null)
+                   {
+                       try
+                       {
+                           // Delete the conversationState for the current conversation to prevent the
+                           // bot from getting stuck in an error-loop caused by being in a bad state.
+                           // ConversationState should be thought of as similar to "cookie-state" in a Web pages.
+                           await conversationState.DeleteAsync(turnContext);
+                       }
+                       catch (Exception e)
+                       {
+                           logger.LogError(e, $"Exception caught on attempting to Delete ConversationState : {e.Message}");
+                       }
+                   }
 
-                // Send a trace activity, which will be displayed in the Bot Framework Emulator.
-                await turnContext.TraceActivityAsync(
-                    "OnTurnError Trace",
-                    exception.Message,
-                    "https://www.botframework.com/schemas/error",
-                    "TurnError");
-            };
-        }
-    }
-    ```
+                   // Send a trace activity, which will be displayed in the Bot Framework Emulator.
+                   await turnContext.TraceActivityAsync(
+                       "OnTurnError Trace",
+                       exception.Message,
+                       "https://www.botframework.com/schemas/error",
+                       "TurnError");
+               };
+           }
+       }
+   ```
 
-# [JavaScript](#tab/js2)
+   # [JavaScript](#tab/js2)
 
-After you add the code to `index.js`, your code should be as shown below:
+    After you add the code to `index.js`, your code should be as shown below:
 
-```JavaScript
-    // index.js is used to setup and configure your bot.
+   ```JavaScript
+       // index.js is used to setup and configure your bot.
 
-    // Import required packages.
-    const path = require('path');
+       // Import required packages.
+       const path = require('path');
     
-    // Read botFilePath and botFileSecret from .env file.
-    const ENV_FILE = path.join(__dirname, '.env');
-    require('dotenv').config({ path: ENV_FILE });
+       // Read botFilePath and botFileSecret from .env file.
+       const ENV_FILE = path.join(__dirname, '.env');
+       require('dotenv').config({ path: ENV_FILE });
     
-    const restify = require('restify');
+       const restify = require('restify');
     
-    // Import required bot services.
-    // See https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0 to learn more about the different parts of a bot.
-    const {
-        CloudAdapter,
-        ConversationState,
-        MemoryStorage,
-        UserState,
-        ConfigurationBotFrameworkAuthentication,
-        TeamsSSOTokenExchangeMiddleware
-    } = require('botbuilder');
+       // Import required bot services.
+       // See https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0 to learn more about the different parts of a bot.
+       const {
+           CloudAdapter,
+           ConversationState,
+           MemoryStorage,
+           UserState,
+           ConfigurationBotFrameworkAuthentication,
+           TeamsSSOTokenExchangeMiddleware
+       } = require('botbuilder');
     
-    const { TeamsBot } = require('./bots/teamsBot');
-    const { MainDialog } = require('./dialogs/mainDialog');
-    const { env } = require('process');
+       const { TeamsBot } = require('./bots/teamsBot');
+       const { MainDialog } = require('./dialogs/mainDialog');
+       const { env } = require('process');
     
-    const botFrameworkAuthentication = new ConfigurationBotFrameworkAuthentication(process.env);
+       const botFrameworkAuthentication = new ConfigurationBotFrameworkAuthentication(process.env);
     
-    var conname = env.connectionName;
+       var conname = env.connectionName;
     
-    console.log(`\n${ conname } is the con name`);
+       console.log(`\n${ conname } is the con name`);
     
-    // Create adapter.
-    // See https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0 to learn more about how bots work.
-    const adapter = new CloudAdapter(botFrameworkAuthentication);
-    const memoryStorage = new MemoryStorage();
-    const tokenExchangeMiddleware = new TeamsSSOTokenExchangeMiddleware(memoryStorage, env.connectionName);
+       // Create adapter.
+       // See https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0 to learn more about how bots work.
+       const adapter = new CloudAdapter(botFrameworkAuthentication);
+       const memoryStorage = new MemoryStorage();
+       const tokenExchangeMiddleware = new TeamsSSOTokenExchangeMiddleware(memoryStorage, env.connectionName);
     
-    adapter.use(tokenExchangeMiddleware);
-    adapter.onTurnError = async (context, error) => {
-        // This check writes out errors to console log .vs. app insights.
-        // NOTE: In production environment, you should consider logging this to Azure application insights. See https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-telemetry?view=azure-bot-service-4.0&tabs=csharp for telemetry configuration instructions.
-        console.error(`\n [onTurnError] unhandled error: ${ error }`);
+       adapter.use(tokenExchangeMiddleware);
+       adapter.onTurnError = async (context, error) => {
+           // This check writes out errors to console log .vs. app insights.
+           // NOTE: In production environment, you should consider logging this to Azure application insights. See https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-telemetry?view=azure-bot-service-4.0&tabs=csharp for telemetry configuration instructions.
+           console.error(`\n [onTurnError] unhandled error: ${ error }`);
     
-        // Send a trace activity, which will be displayed in Bot Framework Emulator.
-        await context.sendTraceActivity(
-            'OnTurnError Trace',
-            `${ error }`,
-            'https://www.botframework.com/schemas/error',
-            'TurnError'
-        );
+           // Send a trace activity, which will be displayed in Bot Framework Emulator.
+           await context.sendTraceActivity(
+               'OnTurnError Trace',
+               `${ error }`,
+               'https://www.botframework.com/schemas/error',
+               'TurnError'
+           );
     
-        // Send a message to the user.
-        await context.sendActivity('The bot encountered an error or bug.');
-        await context.sendActivity('To continue to run this bot, please fix the bot source code.');
-        // Clear out state.
-        await conversationState.delete(context);
-    };
+           // Send a message to the user.
+           await context.sendActivity('The bot encountered an error or bug.');
+           await context.sendActivity('To continue to run this bot, please fix the bot source code.');
+           // Clear out state.
+           await conversationState.delete(context);
+       };
     
-    // Define the state store for your bot.
-    // See https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-howto-v4-state?view=azure-bot-service-4.0&branch=live&tabs=csharp to learn more about using MemoryStorage.
-    // A bot requires a state storage system to persist the dialog and user state between messages.
+       // Define the state store for your bot.
+       // See https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-howto-v4-state?view=azure-bot-service-4.0&branch=live&tabs=csharp to learn more about using MemoryStorage.
+       // A bot requires a state storage system to persist the dialog and user state between messages.
     //const memoryStorage = new MemoryStorage();
     
-    // Create conversation and user state with in-memory storage provider.
-    const conversationState = new ConversationState(memoryStorage);
-    const userState = new UserState(memoryStorage);
+       // Create conversation and user state with in-memory storage provider.
+       const conversationState = new ConversationState(memoryStorage);
+       const userState = new UserState(memoryStorage);
     
-    // Create the main dialog.
-    const dialog = new MainDialog();
-    // Create the bot that will handle incoming messages.
-    const bot = new TeamsBot(conversationState, userState, dialog);
+       // Create the main dialog.
+       const dialog = new MainDialog();
+       // Create the bot that will handle incoming messages.
+       const bot = new TeamsBot(conversationState, userState, dialog);
     
-    // Create HTTP server.
-    const server = restify.createServer();
-    server.use(restify.plugins.bodyParser());
+       // Create HTTP server.
+       const server = restify.createServer();
+       server.use(restify.plugins.bodyParser());
     
-    server.listen(process.env.port || process.env.PORT || 3978, function() {
-        console.log(`\n${ server.name } listening to ${ server.url }`);
-        console.log('\nGet Bot Framework Emulator: https://aka.ms/botframework-emulator');
-        console.log('\nTo talk to your bot, open the emulator select "Open Bot"');
-    });
+       server.listen(process.env.port || process.env.PORT || 3978, function() {
+           console.log(`\n${ server.name } listening to ${ server.url }`);
+           console.log('\nGet Bot Framework Emulator: https://aka.ms/botframework-emulator');
+           console.log('\nTo talk to your bot, open the emulator select "Open Bot"');
+       });
     
-    // Listen for incoming requests.
-    server.post('/api/messages', async (req, res) => {
-        // Route received a request to adapter for processing.
-        await adapter.process(req, res, (context) => bot.run(context));
-    });
+       // Listen for incoming requests.
+       server.post('/api/messages', async (req, res) => {
+           // Route received a request to adapter for processing.
+           await adapter.process(req, res, (context) => bot.run(context));
+       });
 
-    ```
+   ```
 
----
+   ---
 
 ### Consent dialog for getting access token
 
@@ -299,50 +299,50 @@ private async Task<DialogTurnResult> LoginStepAsync(WaterfallStepContext stepCon
 
 # [JavaScript](#tab/js3)
 
-```JavaScript
-class MainDailog {
-  
-        this.addDialog(new OAuthPrompt(OAUTH_PROMPT, {
-                    connectionName: process.env.connectionName,
-                    text: 'Please Sign In',
-                    title: 'Sign In',
-                    timeout: 300000
-                }));
-
-        this.addDialog(new ConfirmPrompt(CONFIRM_PROMPT));
-
-        this.addDialog(new WaterfallDialog(MAIN_WATERFALL_DIALOG, [
-                    this.promptStep.bind(this),
-                    this.loginStep.bind(this),
-                ]));
-
-        this.initialDialogId = MAIN_WATERFALL_DIALOG;
-
-    }
-
-async promptStep(stepContext) {
-        try {
-            return await stepContext.beginDialog(OAUTH_PROMPT);
-        } catch (err) {
-            console.error(err);
+   ```JavaScript
+    class MainDailog {
+      
+            this.addDialog(new OAuthPrompt(OAUTH_PROMPT, {
+                        connectionName: process.env.connectionName,
+                        text: 'Please Sign In',
+                        title: 'Sign In',
+                        timeout: 300000
+                    }));
+    
+            this.addDialog(new ConfirmPrompt(CONFIRM_PROMPT));
+    
+            this.addDialog(new WaterfallDialog(MAIN_WATERFALL_DIALOG, [
+                        this.promptStep.bind(this),
+                        this.loginStep.bind(this),
+                    ]));
+    
+            this.initialDialogId = MAIN_WATERFALL_DIALOG;
+    
         }
-    }
-
-async loginStep(stepContext) {
-        // Get the token from the previous step. Note that we could also have gotten the
-        // token directly from the prompt itself. There is an example of this in the next method.
-        const tokenResponse = stepContext.result;
-        if (!tokenResponse || !tokenResponse.token) {
-            await stepContext.context.sendActivity('Login was not successful please try again.');
-        } else {
-            const token = tokenResponse.token;
-            // On successful login, the token contains sign in token.
+    
+    async promptStep(stepContext) {
+            try {
+                return await stepContext.beginDialog(OAUTH_PROMPT);
+            } catch (err) {
+                console.error(err);
+            }
         }
-        return await stepContext.endDialog();
-    }
-```
+    
+    async loginStep(stepContext) {
+            // Get the token from the previous step. Note that we could also have gotten the
+            // token directly from the prompt itself. There is an example of this in the next method.
+            const tokenResponse = stepContext.result;
+            if (!tokenResponse || !tokenResponse.token) {
+                await stepContext.context.sendActivity('Login was not successful please try again.');
+            } else {
+                const token = tokenResponse.token;
+                // On successful login, the token contains sign in token.
+            }
+            return await stepContext.endDialog();
+        }
+   ```
 
----
+   ---
 
 > [!NOTE]
 > The code snippets use the Waterfall Dialog bot. For more information about Waterfall Dialog, see [About component and waterfall dialogs](/azure/bot-service/bot-builder-concept-waterfall-dialogs?view=azure-bot-service-4.0&preserve-view=true).
@@ -531,8 +531,8 @@ Use the following code snippet to handle the access token in case the app user l
 
 This section provides bot authentication v3 SDK sample.
 
-| **Sample name** | **Description** | **.NET** | **Node.js** | **Python** |
-|---------------|------------|------------|-------------|---------------|
-| Bot authentication | This sample shows how to get started with authentication in a bot for Teams. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-authentication/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/js) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-authentication/python) |
-| Tab, bot, and Message extension (ME) SSO | This sample shows SSO for tab, bot, and message extension - search, action, link unfurl. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | NA |
-|Tab, bot, and Message extension | This sample shows how to check authentication in bot, tab, and message extension with SSO | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-auth/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-auth/nodejs) | NA |
+| **Sample name** | **Description** | **.NET** | **Node.js** | **Python** | **Manifest** |
+|---------------|------------|------------|-------------|---------------|---------------|
+| Bot authentication | This sample shows how to get started with authentication in a bot for Teams. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-authentication/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/js) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-authentication/python) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-authentication/csharp/demo-manifest/bot-teams-authentication.zip)|
+| Tab, bot, and Message extension (ME) SSO | This sample shows SSO for tab, bot, and message extension - search, action, link unfurl. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | NA |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp/demo-manifest/App-SSO.zip)|
+|Tab, bot, and Message extension | This sample shows how to check authentication in bot, tab, and message extension with SSO | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-auth/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-auth/nodejs) | NA |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-auth/csharp/demo-manifest/App-Complete-Auth.zip)|
