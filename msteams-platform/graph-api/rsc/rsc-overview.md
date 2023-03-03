@@ -44,8 +44,8 @@ Use RSC permissions to determine the data access methods for your app. A user's 
   * For a chat, the user must be a member of the chat.
   * For a meeting, the user must be an organizer or presenter in the meeting.
 
-    > [!NOTE]
-    > Application RSC permissions for chat scope are available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md) only.
+  > [!NOTE]
+  > Application RSC permissions for chat scope are available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md) only.
 
 * **Delegated context RSC permissions**: This type of RSC permission allows an app to access data only on behalf of a signed-in user. No access is allowed in the absence of a signed-in user. Only authorized users can install an app in a specific scope. They can also grant any RSC permissions that the app requests in that specific scope at app installation. For example, if regular members have the permission to install an app inside a team, then they can also grant delegated RSC permission to the app in that specific team.
 
@@ -55,7 +55,7 @@ Microsoft Graph SDK, Microsoft Bot Framework SDK, and Microsoft TeamsJS client l
 
 | RSC mode or type | Supported SDKs | App manifest version | Resource types | RSC-related controls for the entire tenant | Who can consent to RSC permissions? |
 |---------|---------|---------|---------|---------|---------|
-|Application| Microsoft Graph, Microsoft Bot Framework | >=v1.6 | Teams, chats, and meetings | Microsoft Graph-based controls for chats and meetings, Azure Active Directory (Azure AD) portal-based controls for teams |• Team: A team owner. <br> • Chat: A chat member. <br> • Meeting: A meeting organizer or presenter. |
+|Application| • Microsoft Graph  <br> • Microsoft Bot Framework | >=v1.6 | Teams, chats, and meetings | • Microsoft Graph-based controls for chats and meetings. <br> • Azure Active Directory (Azure AD) portal-based controls for teams. |• Team: A team owner. <br> • Chat: A chat member. <br> • Meeting: A meeting organizer or presenter. |
 | Delegated | Microsoft Teams Client | >=v1.12 | Teams, chats, meetings, and users | Always on | Any user authorized to install an app in the specific scope. |
 
 ## Supported RSC permissions

@@ -26,7 +26,7 @@ To configure RSC permissions to your app, follow these steps:
 
 ### Register your app with Microsoft identity platform using the Azure AD portal
 
-The Azure AD portal provides a central platform for you to register and configure your apps. You must register your app in the Azure AD portal to integrate with the identity platform and call Graph APIs. For more information, see [register an app with the identity platform](/graph/auth-register-app-v2).
+The Azure Active Directory (Azure AD) portal provides a central platform for you to register and configure your apps. You must register your app in the Azure AD portal to integrate with the identity platform and call Graph APIs. For more information, see [register an app with the identity platform](/graph/auth-register-app-v2).
 
 > [!WARNING]
 > You mustn't share your Azure AD app ID across multiple Teams apps. There must be a 1:1 mapping between a Teams app and an Azure AD app. Attempts to install multiple Teams apps which are associated with the same Azure AD app ID will cause installation or runtime failures.
@@ -369,6 +369,10 @@ The default value of the property `isChatResourceSpecificConsentEnabled` is base
 <br>
 </details>
 
+### Sideload your app in Teams
+
+If your Teams admin allows custom app uploads, you can [sideload your app](~/concepts/deploy-and-publish/apps-upload.md) directly to a specific team or chat.
+
 ### Obtain an access token from the Microsoft identity platform
 
 To make Graph API calls, you must obtain an access token for your app from the identity platform. Before your app can get a token from the identity platform, it must be registered in the Azure AD portal. The access token contains information about your app and the permissions it has for the resources and APIs available through Microsoft Graph.
@@ -381,10 +385,6 @@ You must have the following values from the Azure AD registration process to ret
 
 For more information, see [get access on behalf of a user](/graph/auth-v2-user?view=graph-rest-1.0#3-get-a-token&preserve-view=true) and [get access without a user](/graph/auth-v2-service).
 
-### Sideload your app in Teams
-
-If your Teams admin allows custom app uploads, you can [sideload your app](~/concepts/deploy-and-publish/apps-upload.md) directly to a specific team or chat.
-
 ### Check the RSC permissions granted to a specific resource
 
 You can check the type of RSC permission granted to a resource in the app:
@@ -394,7 +394,7 @@ You can check the type of RSC permission granted to a resource in the app:
   * [List apps in chat](/graph/api/chat-list-installedapps?view=graph-rest-1.0&tabs=http&preserve-view=true)
   * [List apps in team](/graph/api/team-list-installedapps?view=graph-rest-1.0&tabs=http&preserve-view=true)
 
-    These are all the app RSC permissions granted on this specific resource. Each entry in the list can be correlated to the Teams app by matching the `clientAppId` in the permission grants list with the `webApplicationInfo.Id` property in the app's manifest.
+  These are all the app RSC permissions granted on this specific resource. Each entry in the list can be correlated to the Teams app by matching the `clientAppId` in the permission grants list with the `webApplicationInfo.Id` property in the app's manifest.
 
 * Delegated RSC permissions are Teams client-only permissions. You can't retrieve the list of apps installed in a team or chat as these permissions are granted when a user interacts with the app.
 
