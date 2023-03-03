@@ -756,13 +756,13 @@ Specify and consolidate authorization related information for the app.
 
 #### RSC application permissions
 
-Application permissions allow the app to access data without a signed-in user. For information on application permissions, see [RSC permissions for Microsoft Graph and Microsoft BotSDK](../../graph-api/rsc/resource-specific-consent.md).
+Application permissions allow the app to access data without a signed-in user. For information on application permissions, see [RSC permissions for Microsoft Graph and Microsoft BotSDK](../../graph-api/rsc/rsc-overview.md).
 
 #### RSC delegated permissions
 
 Delegated permissions allow the app to access data on behalf of the signed-in user.
 
-* **RSC delegated permissions for teams**
+* **RSC delegated permissions for a team**
 
     |**Name**|**Description**|
     |---|---|
