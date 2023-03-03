@@ -202,6 +202,7 @@ Monetization investments encompass defining role of Teams app in your business a
 
 - [Distribute your Microsoft Teams app](../../../apps-publish-overview.md)
 - [Monetize your app](../../prepare/monetize-overview.md)
+- [Five steps to drive adoption of your app](../../../../../promote-app-adoption.md)
 - [Build your collaborative app](build-app.md)
 - [Gain traction for your collaborative app in the market](gain-traction.md)
 - [Launch your collaborative app](launch-app.md)
