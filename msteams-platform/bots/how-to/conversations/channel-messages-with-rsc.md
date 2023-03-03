@@ -1,7 +1,7 @@
 ---
 title: Receive all conversation messages with RSC
 author: surbhigupta12
-description: Enable bots to receive all channel messages without being @mentioned using RSC permissions. Read on webApplicationInfo or authorization section in manifest.
+description: Enable bots to receive all conversation messages without being @mentioned using RSC permissions. Read on webApplicationInfo or authorization section in manifest.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ---
@@ -12,20 +12,37 @@ The resource-specific consent (RSC) permissions model, originally developed for 
 
 ## Enable bots to receive all channel or chat messages
 
-> [!NOTE]
->
-> The ability for bots to receive all messages in chats using `ChatMessage.Read.Chat` is available only in [public developer preview for Teams](../../../resources/dev-preview/developer-preview-intro.md).
-
 The `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permissions are being extended to bots. With user consent and app installation, these permissions:
 
 * Allow a specified graph application to get all messages in channels and chats, respectively.
 * Enable a bot defined in the app manifest to receive all conversations messages without being @mentioned in relevant contexts where the permissions apply.
+
+### Filtering at mention messages
+
+```csharp
+// When ChannelMessage.Read.Group or ChatMessage.Read.Chat RSC is in the app manifest, this method is called even when bot is not @mentioned.
+// This code snippet allows the bot to ignore all messages that do not @mention the bot.
+protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
+{
+        // Ignore the message if bot was not mentioned. 
+        // Remove this if block to process all messages received by the bot.
+        if (!turnContext.Activity.GetMentions().Any(mention => mention.Mentioned.Id.Equals(turnContext.Activity.Recipient.Id, StringComparison.OrdinalIgnoreCase)))
+        {
+            return;
+        }
+        // Sends an activity to the sender of the incoming activity.
+        await turnContext.SendActivityAsync(MessageFactory.Text("Using RSC the bot can receive messages across channels or chats in team without being @mentioned."));
+}
+```
 
 > [!IMPORTANT]
 >
 > * Services that need access to all Teams message data must use the Graph APIs that provide access to archived data in channels and chats.
 > * Bots must use the `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permission appropriately to build and enhance engaging experience for users to pass the store approval. The app description must include how the bot uses the data it reads.
 > * The `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permission may not be used by bots to extract large amounts of customer data.
+> * The ability for bots to receive all messages in chats using `ChatMessage.Read.Chat` is available only in [public developer preview for Teams](../../../resources/dev-preview/developer-preview-intro.md) and is only enabled after a re-installation or new installation into a chat.
+> * After the RSC permissions are enabled, the bot continues to receive all messages even when the client switches out of public developer preview.
+> * If you have an app that's using the `ChatMessage.Read.Chat` RSC permission for Graph scenarios, then test the app following the steps in [sideload in a conversation](channel-messages-with-rsc.md?tabs=chat%2Cdotnet#sideload-in-a-conversation) and modify the app before the feature is [generally available](https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=receive%2Call%2Cgroup%2Cchat%2Cmessages). If you don't want your bot to receive all chat messages, implement the following [code snippet](#filtering-at-mention-messages). If no action is taken, your bot will receive all messages after new installations.
 
 ## Update app manifest
 
@@ -153,8 +170,9 @@ The following steps guide you to sideload and validate bot that receives all cha
 
 # [Chat messages](#tab/chat)
 
-The following steps guide you to sideload and validate bot that receives all chat messages without being @mentioned in a chat:
+The following steps guide you to sideload and validate bot that receives all chat messages in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md) without being @mentioned in a chat:
 
+1. Switch the client to public developer preview (select **About** > **Developer preview**).
 1. Select or create a group chat.
 1. Select the ellipses &#x25CF;&#x25CF;&#x25CF; from the group chat. The dropdown menu appears.
 1. Select **Manage apps** from the dropdown menu.
@@ -189,7 +207,6 @@ The following steps guide you to sideload and validate bot that receives all cha
 The following code provides an example of the RSC permissions:
 
 # [C#](#tab/dotnet)
-* [SDK reference](/dotnet/api/microsoft.bot.builder.activityhandler.onmessageactivityasync?view=botbuilder-dotnet-stable&preserve-view=true)
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.activityhandler.onmessageactivityasync?view=botbuilder-dotnet-stable&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-token-app/csharp/Bots/TokenBot.cs#L52)
@@ -207,9 +224,8 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 ```
 
 # [Node.js](#tab/nodejs)
-* [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onmessage&preserve-view=true)
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-localization/nodejs/server/bot/botActivityHandler.js#L25)
 
+* [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onmessage&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-localization/nodejs/server/bot/botActivityHandler.js#L25)
 
 ```javascript
@@ -229,7 +245,7 @@ this.onMessage(async (context, next) => {
 
 ## Code sample
 
-| Sample name | Description | C# |Node.js|
+| Sample name | Description | .NET |Node.js|
 |-------------|-------------|------|----|
 |Channel messages with RSC permissions| Microsoft Teams sample app demonstrating on how a bot can receive all channel messages with RSC without being @mentioned.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-receive-channel-messages-withRSC/csharp) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-receive-channel-messages-withRSC/nodejs) |
 

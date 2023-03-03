@@ -1,7 +1,7 @@
 ---
 title: Integrate QR or barcode scanner capability
 author: Rajeshwari-v
-description: Learn how to use Teams JavaScript client SDK to leverage QR or barcode scanner capability and know the benefits of integrating QR or barcode scanner capability.
+description: Learn how to use Teams JavaScript client library to leverage QR or barcode scanner capability and know the benefits of integrating QR or barcode scanner capability.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
@@ -11,13 +11,13 @@ ms.author: surbhigupta
 
 Barcode is a method of representing data in a visual and machine-readable form. The barcode contains information about a product, such as a type, size, manufacturer, and Country of origin in the form of bars and spaces. The code is read using the optical scanner on your native device camera. For a richer collaborative experience, you can integrate the QR or barcode scanner capability provided in the Teams platform with your Teams app.
 
-You can use [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), which provides the tools necessary for your app to access the user’s [native device capabilities](native-device-permissions.md). Use the [scanBarCode](/javascript/api/@microsoft/teams-js/microsoftteams.media?view=msteams-client-js-latest&preserve-view=true#scanBarCode__error__SdkError__decodedText__string_____void__BarCodeConfig_) API to integrate the scanner capability within your app.
+You can use [Microsoft Teams JavaScript client library](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), which provides the tools necessary for your app to access the user’s [native device capabilities](native-device-permissions.md). Use the [scanBarCode](/javascript/api/@microsoft/teams-js/microsoftteams.media?view=msteams-client-js-latest&preserve-view=true#scanBarCode__error__SdkError__decodedText__string_____void__BarCodeConfig_) API to integrate the scanner capability within your app.
 
 ## Advantage of integrating QR or barcode scanner capability
 
 Following are the advantages of integration of QR or barcode scanner capabilities:
 
-* The integration allows web app developers on Teams platform to leverage QR or barcode scanning functionality with Teams JavaScript client SDK.
+* The integration allows web app developers on Teams platform to leverage QR or barcode scanning functionality with Teams JavaScript client library.
 * With this feature, the user only needs to align a QR or barcode within a frame at the center of the scanner UI and the code gets scanned automatically. The stored data is shared back with the calling web app. This avoids the inconvenience and human errors of entering lengthy product codes or other relevant information manually.
 
 To integrate QR or barcode scanner capability, you must update the app manifest file and call the [scanBarCode](/javascript/api/@microsoft/teams-js/microsoftteams.media?view=msteams-client-js-latest&preserve-view=true#scanBarCode__error__SdkError__decodedText__string_____void__BarCodeConfig_) API. For effective integration, you must have a good understanding of [code snippet](#code-snippet) for calling the [scanBarCode](/javascript/api/@microsoft/teams-js/microsoftteams.media?view=msteams-client-js-latest&preserve-view=true#scanBarCode__error__SdkError__decodedText__string_____void__BarCodeConfig_) API, which allows you to use native QR or barcode scanner capability. The API gives an error for an unsupported barcode standard.
@@ -100,6 +100,13 @@ microsoftTeams.media.scanBarCode((error: microsoftTeams.SdkError, decodedText: s
   }
 }, config);
 ```
+
+## Code sample
+
+| Sample name           | Description | .NET |Node.js    | Manifest|
+|:---------------------|:--------------|:---------|:---------|:---------|
+|Bot join team by QR | This sample demos a feature where user can join a team using QR code containing the team's id. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-join-team-using-qr-code/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-join-team-using-qr-code/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-join-team-using-qr-code/csharp/demo-manifest/Bot-Join-Team-By-QR.zip)|
+|Tab product inspection | This sample app demonstrate a feature where user can scan a product, capture a image, and mark it as approved/rejected. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-product-inspection/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-product-inspection/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-product-inspection/csharp/demo-manifest/Tab-Product-Inspection.zip)|
 
 ## See also
 

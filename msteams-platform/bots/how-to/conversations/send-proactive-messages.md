@@ -89,7 +89,7 @@ See the following video to learn how to send proactive message from bots:
 
 <br>
 
-> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4NHyk>]
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4NHyk]
 <br>
 
 ### Understand who blocked, muted, or uninstalled a bot
@@ -233,7 +233,7 @@ public class NotifyController : ControllerBase
     private async Task BotCallback(ITurnContext turnContext, CancellationToken cancellationToken)
     {
         // If you encounter permission-related errors when sending this message, see
-        // https://aka.ms/BotTrustServiceUrl
+        // https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp#avoiding-401-unauthorized-errors
         // Sends an activity to the sender of the incoming activity.
         await turnContext.SendActivityAsync("proactive hello");
     }
@@ -287,7 +287,7 @@ async messageAllMembersAsync(context) {
 ```
 
 # [Python](#tab/python)
-* [SDK reference](/python/api/botbuilder-core/botbuilder.core.botadapter?view=botbuilder-py-latest#botbuilder-core-botadapter-continue-conversation&preserve-view=true)
+* [SDK reference](/python/api/botbuilder-core/botbuilder.core.botframeworkadapter?view=botbuilder-py-latest#botbuilder-core-botframeworkadapter-create-conversation&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L200)
 
 ```python

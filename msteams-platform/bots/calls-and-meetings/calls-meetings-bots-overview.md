@@ -102,6 +102,6 @@ Real-time media refers to scenarios where media must be processed in real-time, 
 * [Enable an event as online meeting in Outlook calendar](/graph/outlook-calendar-online-meetings?tabs=http)
 * [Requirements and considerations for application-hosted media bots](./requirements-considerations-application-hosted-media-bots.md)
 * [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
-* [Teams recording policy](/MicrosoftTeams/teams-recording-policy)
+* [Teams recording policy](/microsoftteams/teams-recording-policy)
 * [Set up an auto attendant](/microsoftteams/create-a-phone-system-auto-attendant)
 * [Set up auto answer for Microsoft Teams Rooms on Android and Teams video phone devices](/microsoftteams/set-up-auto-answer-on-teams-android)

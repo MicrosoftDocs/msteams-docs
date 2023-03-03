@@ -24,14 +24,14 @@ This information helps you analyze the data against your business goals, take co
 
 **But Teams app usage report must suffice, isn’t it?**
 
-As the app’s developer, you can track your app’s usage in the [Teams app usage report](../deploy-and-publish/appsource/post-publish/overview.md#analyze-app-usage) in Partner Center within a week after publishing your app on the Teams public app store. The usage report provides standard metrics that enable you to track user demand, user churn, and frequency of usage for your app. These reports are available at an aggregate level, such as:
+As the app’s developer, you can track your app’s usage in the [Teams app usage report](../deploy-and-publish/appsource/post-publish/overview.md#analyze-app-usage) in Partner Center within a week after publishing your app on the Teams public app store. Custom app developers can find [usage analytics for their custom apps](../build-and-test/analyze-your-apps-usage-in-developer-portal.md) in the Developer Portal for Teams. Partner Center's usage report provides standard metrics that enable you to track user demand, user churn, and frequency of usage for your app. These reports are available at an aggregate level, such as:
 
 - Monthly, daily, and weekly active users.
 - Retention and intensity charts.
 - Users who have used your app more than five days in the last month.
 - Platform, operating system, and geographic split of users for your app, and so on.
 
-Teams usage reports can't provide you with in-depth analytics of what goes on inside your app and specific user-level analytics. Such analytics include a user’s journey within your app or a user’s engagement with specific features and measuring scenario completions.
+The out-of-box usage reports available in Partner Center or the Developer Portal for Teams can't provide you with in-depth analytics of what goes on inside your app and specific user-level analytics. Such analytics include a user’s journey within your app or a user’s engagement with specific features and measuring scenario completions.
 
 Your app on Teams is essentially a web-based service hosted elsewhere, for example, Azure cloud. It's embedded and surfaced inside Microsoft Teams shell where users can use your app. This applies to your app irrespective of the [platform capabilities](../../overview-explore.md) used, such as tabs, bots, message extensions, meeting extensions, cards, task modules, and so on. All these capabilities are a means to surface web-based experiences inside Teams.
 
@@ -39,9 +39,9 @@ Plan analytics for the Teams app the same way as you do for a SaaS product that 
 
 ## Plan early for analytics
 
-Plan analytics for your Teams app at the development design and solution architecture stage. Examine which of the existing data instrumentation and practices for your core SaaS web app will accrue to hosted canvas constructs such as tabs, task modules, meeting apps and so on. in Teams that you’re optimizing or building from scratch to surface inside Teams. For Teams-specific capabilities, such as [conversational constructs](#conversational-constructs) like bots, message extensions, and so on., you'll need to plan and implement analytics instrumentation, capture relevant events, and context from the SDK methods from scratch.
+Plan analytics for your Teams app at the development design and solution architecture stage. Examine which of the existing data instrumentation and practices for your core SaaS web app will accrue to hosted canvas constructs such as tabs, task modules, meeting apps and so on. in Teams that you’re optimizing or building from scratch to surface inside Teams. For Teams-specific capabilities, such as [conversational constructs](#conversational-constructs) like bots, message extensions, and so on, you'll need to plan and implement analytics instrumentation, capture relevant events, and context from the SDK methods from scratch.
 
-At the time your production Teams app is live on the Teams public app store and customers start using it, your analytics and data infrastructure should be fully operational. It ensures that you don’t miss tracking:
+At the time, your production Teams app is live on the Teams public app store and customers start using it, your analytics and data infrastructure should be fully operational. It ensures that you don’t miss tracking:
 
 - Instrumentation markers getting fired.
 - Teams-specific events and the relevant contextual information contained in these events, some of which are triggered for you to capture in your SaaS backend for later use.
@@ -70,17 +70,17 @@ There are two types of data instrumentation relevant for your solution:
 
 ### Data instrumentation for your core SaaS product or app
 
-This is the instrumentation that you'll do for your browser-based SaaS app irrespective of whether you’re integrating with Teams or not. If you have a browser-based SaaS app, in all likelihood, you'll have this instrumentation already done in your code. This is how you can see click analytics and customer lifecycle analytics. You can also see conversion analytics metrics, such as bounce rate, page views, unique visitor count, session counts, engagement time, click through rate and so on. and many more for your web app.
+This is the instrumentation that you'll do for your browser-based SaaS app irrespective of whether you’re integrating with Teams or not. If you have a browser-based SaaS app, in all likelihood, you'll have this instrumentation already done in your code. This is how you can see click analytics and customer lifecycle analytics. You can also see conversion analytics metrics, such as bounce rate, page views, unique visitor count, session counts, engagement time, click through rate, and many more for your web app.
 
 ### Data instrumentation in your app specific to Teams
 
-This is the instrumentation that is required to be done additionally in your SaaS app because it's now surfacing inside of the Teams client. At a presentation level, your application is accessed by your end user across different modalities. Each modality has its own unique user interaction points, meta data that facilitates instrumentation capture unique to that modality. For example, viewing a product might be tracked via page view in a web app vs. screen tracking in mobile app. Similarly, your Teams app may have leveraged one or more of the platform capabilities only available inside Teams such as bots, message extensions and so on. or you have crafted experiences to address use cases unique to Teams such as meeting extensions, intelligent M365-aware scenarios using Microsoft Graph, link unfurling, and so on. Capturing instrumentation from these unique Teams app experiences is covered in more detail in the rest of this document.
+This instrumentation is required to be done additionally in your SaaS app because it's now surfacing inside of the Teams client. At a presentation level, your application is accessed by your end user across different modalities. Each modality has its own unique user interaction points, meta data that facilitates instrumentation capture unique to that modality. For example, viewing a product might be tracked via page view in a web app vs. screen tracking in mobile app. Similarly, your Teams app may have used one or more of the platform capabilities only available inside Teams such as bots, message extensions and so on. or you have crafted experiences to address use cases unique to Teams such as meeting extensions, intelligent M365-aware scenarios using Microsoft Graph, link unfurling, and so on. Capturing instrumentation from these unique Teams app experiences is covered in more detail in the rest of this document.
 
 ## Instrumenting for Teams app specific analytics
 
 <!--Tracking Teams app specific analytics-->
 
-Below are guidelines and pointers regarding what to look for, which events to capture, how to leverage instrumentation markers, and where to fetch Teams-relevant information that will help you plan and implement analytics for your app. Your Teams apps can be tabs, bots, message extensions, cards, stage views and so on. or any combination of these [capabilities and UI constructs](../../overview-explore.md#teams-app-features) across personal or shared scopes. It's best to understand, plan, and implement your instrumentation around each of these capabilities.
+This section includes guidelines and pointers regarding what to look for, which events to capture, how to use instrumentation markers, and where to fetch Teams-relevant information that will help you plan and implement analytics for your app. Your Teams apps can be tabs, bots, message extensions, cards, stage views and so on. or any combination of these [capabilities and UI constructs](../../overview-explore.md#teams-app-features) across personal or shared scopes. It's best to understand, plan, and implement your instrumentation around each of these capabilities.
 
 You can classify Teams platform features into broadly two constructs:
 
@@ -106,7 +106,7 @@ When you build a tab following [prerequisites defined here](../../tabs/how-to/ta
 - Meeting ID is used by a tab running in the meeting context and is added for the response payload (`meetingId`).
 - Microsoft Azure AD ID of the current user.
 
-After you extract the Teams-specific information from the tab context, below are possible ways you can use it as shown in the following examples:
+After you extract the Teams-specific information from the tab context, some possible ways you can use it are shown in the following examples:
 
 | Track Teams-specific information | Outcome |
 | --- | --- |
@@ -166,7 +166,7 @@ Besides the obvious metrics in the SaaS world such as daily, weekly, monthly act
   - Which users have churned from your app in the past three months?
   - Has a specific user used your app in a Teams meeting?
 
-Next, see how you should methodically craft your data instrumentation strategy and decide what to measure based on which specific insights you want to derive from your Teams app usage.
+Next, see how you should methodically craft your data instrumentation strategy and decide what to measure based on which specific insights you want to derive from your Teams app usage. 
 
 ## Next step
 

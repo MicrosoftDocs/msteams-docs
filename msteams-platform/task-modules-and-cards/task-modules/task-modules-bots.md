@@ -7,12 +7,12 @@ ms.topic: how-to
 
 # Use task modules from bots
 
-Task modules can be invoked from Microsoft Teams bots using buttons on Adaptive Cards and Bot Framework cards that are hero, thumbnail, and Office 365 Connector. Task modules are often a better user experience than multiple conversation steps. Keep track of bot state and allow the user to interrupt or cancel the sequence.
+Task modules can be invoked from Microsoft Teams bots using buttons on Adaptive Cards and Bot Framework cards that are hero, thumbnail, and connector for Microsoft 365 Groups. Task modules are often a better user experience than multiple conversation steps. Keep track of bot state and allow the user to interrupt or cancel the sequence.
 
 There are two ways of invoking task modules:
 
 * A new invoke message `task/fetch`: Using the `invoke` [card action](~/task-modules-and-cards/cards/cards-actions.md#action-type-invoke) for Bot Framework cards, or the `Action.Submit` [card action](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions) for Adaptive Cards, with `task/fetch`, task module either a URL or an Adaptive Card, is fetched dynamically from your bot.
-* Deep link URLs: Using the [deep link syntax for task modules](~/task-modules-and-cards/task-modules/invoking-task-modules.md#task-module-deep-link-syntax), you can use the `openUrl` [card action](~/task-modules-and-cards/cards/cards-actions.md#action-type-openurl) for Bot Framework cards or the `Action.OpenUrl` [card action](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions) for Adaptive Cards, respectively. With deep link URLs, the task module URL or Adaptive Card body is already known to avoid a server round-trip relative to `task/fetch`.
+* Deep link URLs: Using the [deep link syntax for task modules](~/concepts/build-and-test/deep-link-application.md#deep-link-to-open-a-task-module), you can use the `openUrl` [card action](~/task-modules-and-cards/cards/cards-actions.md#action-type-openurl) for Bot Framework cards or the `Action.OpenUrl` [card action](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions) for Adaptive Cards, respectively. With deep link URLs, the task module URL or Adaptive Card body is already known to avoid a server round-trip relative to `task/fetch`.
 
 > [!IMPORTANT]
 > Each `url` and `fallbackUrl` must implement the HTTPS encryption protocol.
@@ -46,7 +46,7 @@ The following steps provide the invoke task module using `task/fetch`:
     }
     ```
 
-    The `task/fetch` event and its response for bots is similar to the `microsoftTeams.tasks.startTask()` function in the client SDK.
+    The `task/fetch` event and its response for bots is similar to the `microsoftTeams.tasks.startTask()` function in the Microsoft Teams JavaScript client library (TeamsJS).
 
 1. Microsoft Teams displays the task module.
 
@@ -56,7 +56,7 @@ The next section provides details on submitting the result of a task module.
 
 When the user is finished with the task module, submitting the result back to the bot is similar to the way it works with tabs. For more information, see [example of submitting the result of a task module](~/task-modules-and-cards/task-modules/task-modules-tabs.md#example-of-submitting-the-result-of-a-task-module). There are a few differences as follows:
 
-* HTML or JavaScript that is `TaskInfo.url`: After you validate what the user has entered, you call the `microsoftTeams.tasks.submitTask()` SDK function referred to hereafter as `submitTask()` for readability purposes. You can call `submitTask()` without any parameters if you want Teams to close the task module, but you must pass an object or a string to your `submitHandler`. Pass it as the first parameter, `result`. Teams invokes `submitHandler`, `err` is `null`, and `result` is the object or string you passed to `submitTask()`. When you call `submitTask()` with the optional `appIds` parameter, Teams validates that the app sending the result is the same that invoked the task module, and helps prevent malicious apps from retrieving the result. Multiple app IDs can be specified because a web app from a single underlying domain can power multiple apps across different environments and branding schemes. Your bot receives a `task/submit` message including `result`. For more information, see [payload of `task/fetch` and `task/submit` messages](#payload-of-taskfetch-and-tasksubmit-messages).
+* HTML or JavaScript that is `TaskInfo.url`: Once you've validated what the user has entered, you call the `microsoftTeams.tasks.submitTask()` function referred to hereafter as `submitTask()` for readability purposes. You can call `submitTask()` without any parameters if you want Teams to close the task module, but you must pass an object or a string to your `submitHandler`. Pass it as the first parameter, `result`. Teams invokes `submitHandler`, `err` is `null`, and `result` is the object or string you passed to `submitTask()`. If you call `submitTask()` with a `result` parameter, you must pass an `appId` or an array of `appId` strings. This allows Teams to validate that the app sending the result is the same one, which invoked the task module. Your bot receives a `task/submit` message including `result`. For more information, see [payload of `task/fetch` and `task/submit` messages](#payload-of-taskfetch-and-tasksubmit-messages).
 * Adaptive Card that is `TaskInfo.card`: The Adaptive Card body as filled in by the user is sent to the bot through a `task/submit` message when the user selects any `Action.Submit` button.
 
 The next section provides details on how to respond to the `task/submit` messages.
@@ -87,8 +87,6 @@ This section defines the schema of what your bot receives when it receives a `ta
 | `value`  | Is the developer-defined payload. The structure of the `value` object is the same as what is sent from Teams. In this case, however, it's different. It requires support for dynamic fetch that is `task/fetch` from both Bot Framework, which is `value` and Adaptive Card `Action.Submit` actions, which is `data`. A way to communicate Teams `context` to the bot is required in addition to what is included in `value` or `data`.<br/><br/>Combine 'value' and 'data' into a parent object:<br/><br/><pre>{<br/>  "context": {<br/>    "theme": "default" &vert; "dark" &vert; "contrast",<br/>  },<br/>  "data": [value field from Bot Framework card] &vert; [data field from Adaptive Card] <br/>}</pre>  |
 
 The next section provides an example of receiving and responding to `task/fetch` and `task/submit` invoke messages in Node.js.
-
-## Example
 
  The following tabs provides `task/fetch` and `task/submit` invoke messages in Node.js and C#:
 
@@ -203,9 +201,9 @@ The schema for Bot Framework card actions is different from Adaptive Card `Actio
 
 ## Code sample
 
-|Sample name | Description | .NET | Node.js|
-|----------------|-----------------|--------------|----------------|
-|Task module sample bots-V4 | Samples for creating task modules. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/nodejs)|
+|Sample name | Description | .NET | Node.js | Manifest|
+|----------------|-----------------|--------------|----------------|----------------|
+|Task module sample bots-V4 | Samples for creating task modules. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/csharp/demo-manifest/bot-task-module.zip)|
 
 ## Step-by-step guide
 
@@ -213,5 +211,6 @@ Follow the [step-by-step guide](../../sbs-botbuilder-taskmodule.yml) to create a
 
 ## See also
 
+* [Cards and task modules](../cards-and-task-modules.md)
 * [Microsoft Teams task module sample code in Node.js](https://github.com/OfficeDev/microsoft-teams-sample-task-module-nodejs/blob/master/src/TeamsBot.ts)
 * [Bot Framework samples](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/README.md)

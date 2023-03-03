@@ -7,7 +7,7 @@ ms.localizationpriority: medium
 # Configure third party OAuth IdP authentication
 
 > [!Note]
-> For authentication to work for your tab on mobile clients, ensure that you're using version 1.4.1 or later of the Teams JavaScript SDK.
+> For authentication to work for your tab on mobile clients, ensure that you're using version 1.4.1 or later of the Microsoft Teams JavaScript client library (TeamsJS).
 
 There are many services that you may want to consume inside your Teams app, and most of those services require authentication and authorization to get access to the service. Services includes Facebook, Twitter, and Teams.
 Teams user profile information is stored in Azure AD using Microsoft Graph and this article will focus on authentication using Azure AD to get access to this information.
@@ -30,7 +30,7 @@ Identity providers that support OAuth 2.0 don't authenticate requests from unkno
 
 2. Select your app to view its properties, or select the "New Registration" button. Find the **Redirect URI** section for the app.
 
-3. Select **Web** from the drop down menu. Update the URL to your authentication endpoint. For the TypeScript/Node.js and C# sample apps on GitHub, the redirect URLs will be similar to the following:
+3. Select **Web** from the dropdown menu. Update the URL to your authentication endpoint. For the TypeScript/Node.js and C# sample apps on GitHub, the redirect URLs will be similar to the following:
 
     Redirect URLs: `https://<hostname>/bot-auth/simple-start`
 
@@ -45,7 +45,7 @@ Authentication flow should be triggered by a user action. You shouldn't open the
 
 Add a button to your configuration or content page to enable the user to sign in when needed. This can be done in the tab [configuration](~/tabs/how-to/create-tab-pages/configuration-page.md) page or any [content](~/tabs/how-to/create-tab-pages/content-page.md) page.
 
-Azure AD, like most identity providers, doesn't allow its content to be placed in an `iframe`. This means that you'll need to add a pop-up page to host the identity provider. In the following example, this page is `/tab-auth/simple-start`. Use the `authentication.authenticate()` function of the Microsoft Teams client SDK to launch this page when the button is selected.
+Azure AD, like most identity providers, doesn't allow its content to be placed in an `iframe`. This means that you'll need to add a pop-up page to host the identity provider. In the following example, this page is `/tab-auth/simple-start`. Use the `authentication.authenticate()` function of the TeamsJS library to launch this page when the button is selected.
 
 # [TeamsJS v2](#tab/teamsjs-v2)
 
@@ -84,6 +84,7 @@ microsoftTeams.authentication.authenticate({
     }
 });
 ```
+
 ---
 
 ### Notes
@@ -160,7 +161,7 @@ After the user completes authorization, the user is redirected to the callback p
 ### Notes
 
 * See [get user context information](~/tabs/how-to/access-teams-context.md) for help building authentication requests and URLs. For example, you can use the user's login name as the `login_hint` value for Azure AD sign in, which means the user might need to type less. Remember that you shouldn't use this context directly as proof of identity since an attacker could load your page in a malicious browser and provide it with any information they want.
-* Although the tab context provides useful information regarding the user, don't use this information to authenticate the user whether you get it as URL parameters to your tab content URL or by calling the `app.getContext()` function in the Microsoft Teams client SDK. A malicious actor could invoke your tab content URL with its own parameters, and a web page impersonating Microsoft Teams could load your tab content URL in an iframe and return its own data to the `getContext()` function. You should treat the identity-related information in the tab context simply as hints and validate them before use.
+* Although the tab context provides useful information regarding the user, don't use this information to authenticate the user whether you get it as URL parameters to your tab content URL or by calling the `app.getContext()` function in the Microsoft Teams JavaScript client library (TeamsJS). A malicious actor could invoke your tab content URL with its own parameters, and a web page impersonating Microsoft Teams could load your tab content URL in an iframe and return its own data to the `getContext()` function. You should treat the identity-related information in the tab context simply as hints and validate them before use.
 * The `state` parameter is used to confirm that the service calling the callback URI is the service you called. If the `state` parameter in the callback doesn't match the parameter you sent during the call, then the return call isn't verified and should be terminated.
 * It isn't necessary to include the identity provider's domain in the `validDomains` list in the app's manifest.json file.
 
@@ -222,7 +223,7 @@ Your app can set its own session cookie so that the user need not sign in again 
 > * Chrome 80, scheduled for release in early 2020, introduces new cookie values and imposes cookie policies by default. It's recommended that you set the intended use for your cookies rather than rely on default browser behavior. *See* [SameSite cookie attribute (2020 update)](../../../resources/samesite-cookie-update.md).
 > * To get the correct token for Microsoft Teams Free and guest users, it is important that the apps use tenant specific endpoint `https://login.microsoftonline.com/**{tenantId}**`. You can get tenantId from the bot message or tab context. If the apps use `https://login.microsoftonline.com/common`, the users will get incorrect tokens and will log on to the "home" tenant instead of the tenant that they are currently signed into.
 
-For more information on Single Sign-On (SSO), see the article [Silent authentication](~/tabs/how-to/authentication/auth-silent-AAD.md).
+For more information on single sign-on (SSO), see the article [Silent authentication](~/tabs/how-to/authentication/auth-silent-AAD.md).
 
 ## Code sample
 

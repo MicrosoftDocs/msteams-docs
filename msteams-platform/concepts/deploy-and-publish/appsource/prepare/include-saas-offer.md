@@ -143,6 +143,9 @@ You’ve published your SaaS offer, but you still must link it to your Teams app
         }
    ```
 
+> [!NOTE]
+> The `subscriptionOffer` property is supported in manifest schema version 1.10 or later.
+
 ## Publish your app
 
 You’ve created your SaaS offer and linked it to your Teams app—now it's time to publish your app to the Teams store. For complete instructions, see [publish your app to the Teams store](~/concepts/deploy-and-publish/appsource/publish.md).
@@ -184,7 +187,7 @@ The following example shows how users can purchase subscription plans for a fict
 
 ## Admin purchasing experience
 
-Admins can purchase app subscription plans in the [Teams admin center](/MicrosoftTeams/purchase-third-party-apps).
+Admins can purchase app subscription plans in the [Teams admin center](/microsoftteams/purchase-third-party-apps).
 
 ## Remove a SaaS offer from your app
 
@@ -197,7 +200,14 @@ If you unlink a SaaS offer included in your Teams store listing, you must republ
    1. Select **Distribute > Publish to the Teams store**.
    1. Select **Open Partner Center** to begin the process of republishing your app without the offer.
 
+## Code sample
+
+| **Sample name** | **Description** | **Node.js** | **Manifest**|
+|-----------------|-----------------|----------------|----------------|----------------|
+| Meeting stage view | This app helps to enable and configure your apps for Teams meetings. It also demonstrates use of share in meeting feature.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-app-monetization/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-app-monetization/nodejs/demo-manifest/tab-app-monetization.zip)|
+
 ## See also
 
+* [Monetize your app](monetize-overview.md)
 * [Maintaining and supporting your published app](../post-publish/overview.md)
 * [Validation guidelines for apps linked to SaaS offer](teams-store-validation-guidelines.md#apps-linked-to-saas-offer)

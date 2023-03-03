@@ -167,7 +167,7 @@ In the third stage, provide complete experience to your users. You can enable us
 * Navigate around content.
 * Add layers and filters.
 * Delete, undo, and redo operations.
-* Access camera and microphone using JS SDK APIs. For more information on device capabilities, see [device capabilities overview](../device-capabilities/device-capabilities-overview.md).
+* Access camera and microphone using TeamsJS APIs. For more information on device capabilities, see [device capabilities overview](../device-capabilities/device-capabilities-overview.md).
 
 :::image type="content" source="../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-enablement.png" alt-text="Enable user experience by adding text shapes and quick notes and other capabilities.":::
 
@@ -177,9 +177,9 @@ In the third stage, provide complete experience to your users. You can enable us
 
 ## See also
 
-The following design and validation guidelines help depending on the scope of your app:
-
+* [Plan your app with Teams features](../app-fundamentals-overview.md)
 * [Designing your tab](../../tabs/design/tabs.md)
 * [Designing your bot](../../bots/design/bots.md)
 * [Designing task modules](../..//task-modules-and-cards/task-modules/design-teams-task-modules.md)
 * [Store validation guidelines](../deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)
+* [Tabs on mobile](../../tabs/design/tabs-mobile.md)

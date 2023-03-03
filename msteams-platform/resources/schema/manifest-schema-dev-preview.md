@@ -10,7 +10,7 @@ ms.date: 11/15/2021
 For information on how to enable developer preview, see [public developer preview for Microsoft Teams](~/resources/dev-preview/developer-preview-intro.md).
 
 > [!NOTE]
-> If you aren't using developer preview features, including running [Teams personal tabs and message extensions in Outlook and Office](../../m365-apps/overview.md), use the [app manifest for GA features](~/resources/schema/manifest-schema.md) instead.
+> If you aren't using developer preview features, including running [Teams personal tabs and message extensions in Outlook and Microsoft 365 app](../../m365-apps/overview.md), use the [app manifest for GA features](~/resources/schema/manifest-schema.md) instead.
 
 The Microsoft Teams manifest describes how the app integrates into the Microsoft Teams platform. Your manifest must conform to the schema hosted at [`https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json`](https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json).
 
@@ -436,7 +436,7 @@ An optional list of commands that your bot can recommend to users. The object is
 
 Optional:
 
-The `connectors` block defines an Office 365 Connector for the app.
+The `connectors` block defines a connector for Microsoft 365 Groups for the app.
 
 The object is an array (maximum of 1 element) with all elements of type `object`. This block is required only for solutions that provide a Connector.
 
@@ -560,7 +560,9 @@ Specify the app's Graph connector configuration. If this is present, then [webAp
 
 Indicates whether or not to show the loading indicator when an app or tab is loading. Default is **false**.
 > [!NOTE]
-> If you select`showLoadingIndicator` as true in your app manifest, to load the page correctly, modify the content pages of your tabs and task modules as described in [Show a native loading indicator](../../tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator) document.
+>
+> * If you select`showLoadingIndicator` as true in your app manifest, to load the page correctly, modify the content pages of your tabs and task modules as described in [Show a native loading indicator](../../tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator) document.
+> * If you don't modify the content pages of your tab, the tab app doesn't load and shows the error `There was a problem reaching this app`.
 
 ## isFullScreen
 

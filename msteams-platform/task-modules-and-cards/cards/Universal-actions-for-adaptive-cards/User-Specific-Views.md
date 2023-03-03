@@ -219,11 +219,11 @@ The following list provides card design guidelines for User Specific Views:
 
 * Refresh behavior: You can create a maximum of 60 User Specific Views for a particular card sent to a conversation by specifying their `userIds` in the `Refresh` property.
 
-  * If the `userIds` field is not specified in the `Refresh` property, Teams client can automatically trigger refresh for all users when there are less than or equal to 60 members in the conversation.
+  * If the `userIds` field isn't specified in the `Refresh` property, Teams client can automatically trigger refresh for all users when there are less than or equal to 60 members in the conversation.
 
-  * For users to manually trigger card refresh, they can select **Refresh** from the message options menu. This happens to all users when there are less than 60 members in a conversation, or to the set of users not specified in the `userIds` list when there are all or less than 60 users in a conversation.
+  * For users to manually trigger card refresh, they can select **Refresh** from the message options menu. This happens to all users when there are fewer than 60 members in a conversation, or to the set of users not specified in the `userIds` list when there are all or fewer than 60 users in a conversation.
 
-* Base card: The bot sends the message, which embeds with the base version of the card. All members of the conversation can view the same. The bot subsequently fetches the User Specific Card through refresh for the users specified in the `userIds` section.
+* Base card: The bot sends the message, which embeds with the base version of the card. All members of the conversation can view the same. The bot later fetches the User Specific Card through refresh for the users specified in the `userIds` section.
 
 * Refresh timeout: Teams client triggers a refresh in two ways, either through **Refresh** or by selecting **Execute**. The refresh triggers only if the card from the last invoke is older than a minute. You can control the refresh behavior by adding a timestamp to the data bag and checking it before sending the refreshed card.
 
@@ -238,12 +238,14 @@ The following list provides card design guidelines for User Specific Views:
 
 ## Code sample
 
-|Sample name | Description | .NETCore | Node.js |
+|Sample name | Description | .NET | Node.js |
 |----------------|-----------------|--------------|--------------|
 | Sequential Workflows Adaptive Cards | Demonstrate how to implement Sequential Workflows, User Specific Views, and up to date Adaptive Cards in bots. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) |
 
 ## See also
 
-* [Work with Universal Actions for Adaptive Cards](Work-with-universal-actions-for-adaptive-cards.md)
-* [Up to date views](Up-To-Date-Views.md)
-* [Form completion feedback](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)
+* [Cards and task modules](../../cards-and-task-modules.md)
+* [Work with Universal Actions for Adaptive Cards](Work-with-Universal-Actions-for-Adaptive-Cards.md)
+* [Up to date cards](Up-To-Date-Views.md)
+* [Cards](../../what-are-cards.md)
+* [Form completion feedback](../../../bots/how-to/conversations/conversation-messages.md#form-completion-feedback)

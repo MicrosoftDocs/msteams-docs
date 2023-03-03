@@ -4,7 +4,7 @@ author: surbhigupta
 description: Create configuration page to collect information from user. Also, get context data for Microsoft Teams tabs, know about authentication, modify or remove tabs.
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.author: lajanuar
+ms.author: v-npaladugu
 ---
 # Create a configuration page
 
@@ -12,13 +12,13 @@ A configuration page is a special type of [content page](content-page.md). The u
 
 * A channel or group chat tab: Collect information from the users and set the `contentUrl` of the content page to be displayed.
 * A [message extension](~/messaging-extensions/what-are-messaging-extensions.md).
-* An [Office 365 Connector](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md).
+* A [connector for Microsoft 365 Groups](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md).
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 ## Configure a channel or group chat tab
 
-The application must reference the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client) and call `app.initialize()`. The URLs used must be secured HTTPS endpoints and are available from the cloud.
+The application must reference the [TeamsJS library](/javascript/api/overview/msteams-client) and call `app.initialize()`. The URLs used must be secured HTTPS endpoints and are available from the cloud.
 
 ### Example
 
@@ -183,7 +183,7 @@ For more information on the properties used for tab configuration, see [context 
 
 * Insert URL query string placeholders in your manifest's `configurationURL`.
 
-* Use the [Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) `app.getContext()` method.
+* Use the [TeamsJS library](/javascript/api/overview/msteams-client) `app.getContext()` method.
 
 #### Insert placeholders in the `configurationUrl`
 
@@ -305,7 +305,7 @@ const configPromise = pages.config.setConfig({
     removeUrl: "add removal page URL here"
 });
 configPromise.
-    then((result) => {/*Successful operation*/).
+    then((result) => {/*Successful operation*/}).
     catch((error) => {/*Unsuccessful operation*/});
 ```
 
@@ -337,6 +337,6 @@ If you choose to have your channel or group tab appear on the Teams mobile clien
 * [Build tabs for Teams](../../what-are-tabs.md)
 * [Update manifest for SSO and preview app](../authentication/tab-sso-manifest.md)
 * [Configure third party OAuth IdP authentication](../authentication/auth-tab-aad.md)
-* [Create Office 365 Connectors](../../../webhooks-and-connectors/how-to/connectors-creating.md)
+* [Create connectors for Microsoft 365 Groups](../../../webhooks-and-connectors/how-to/connectors-creating.md)
 * [Get context for your tab](../access-teams-context.md)
 * [Tabs on mobile](../../design/tabs-mobile.md)

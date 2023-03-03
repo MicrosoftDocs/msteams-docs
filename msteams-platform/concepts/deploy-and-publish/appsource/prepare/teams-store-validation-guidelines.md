@@ -78,9 +78,9 @@ Following these guidelines increases the chances of your app to pass the Microso
 
 ## Value proposition
 
-:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: This section is in line with [Microsoft commercial certification policy number 1140.1](/legal/marketplace/certification-policies#11401-value-proposition-and-offer-requirements) and provides additional guidance to developers of Microsoft Teams apps on their offer’s value proposition.
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: This section is in line with [Microsoft commercial certification policy number 1140.1](/legal/marketplace/certification-policies#11401-value-proposition-and-offer-requirements) and provides additional guidance to developers of Microsoft Teams apps on their offer’s value proposition.  
 
-### App name
+### App Name
 
 [*Mandatory Fix*]
 
@@ -90,31 +90,41 @@ Following these guidelines increases the chances of your app to pass the Microso
 
 An app's name plays a critical role in how users discover it in the store. Use the following guidelines to name an app:
 
-* The name must include terms relevant to your users.
-* Prefix or suffix common nouns with the developer's name. For example, **Contoso Tasks** instead of **Tasks**.
-* Must not use **Teams** or other Microsoft product names such as Excel, PowerPoint, Word, OneDrive, SharePoint, OneNote, Azure, Surface, and Xbox that could falsely indicate co-branding or co-selling. For more information about referencing Microsoft software products and services, see [Microsoft Trademark and Brand Guidelines](https://www.microsoft.com/legal/intellectualproperty/trademarks/usage/general).
-* Must not copy the name of an app listed in the store or other offer in the commercial marketplace.
-* Must not contain profane or derogatory terms. The name also must not include racially or culturally insensitive language.
+* The name must include terms relevant to your users. [*Mandatory Fix*]
+* Prefix or suffix common nouns with the developer's name. For example, **Contoso Tasks** instead of **Tasks**. [*Mandatory Fix*]
+* Must not use **Teams** or other Microsoft product names such as Excel, PowerPoint, Word, OneDrive, SharePoint, OneNote, Azure, Surface, and Xbox that could falsely indicate co-branding or co-selling. For more information about referencing Microsoft software products and services, see [Microsoft Trademark and Brand Guidelines](https://www.microsoft.com/legal/intellectualproperty/trademarks/usage/general). [*Mandatory Fix*]
+* Must not copy the name of an app listed in the store or other offer in the commercial marketplace. [*Mandatory Fix*]
+* Must not contain profane or derogatory terms. The name also mustn't include racially or culturally insensitive language. [*Mandatory Fix*]
 * Must be unique. If your app (Contoso) is listed in the Microsoft Teams store and Microsoft AppSource and you want to list another app specific to a geography such as Contoso Mexico, your submission must meet the following criteria:
-  * Call out the app's region-specific functionality in the title, metadata, first response app experience, and help sections. For example, title must be Contoso Mexico. App title must clearly differentiate an existing app from the same developer to avoid end-user confusion.
-  * When uploading the app package in Partner Center, select the right **Markets** where the app will be available in the **Availability** section.
+  * Call out the app's region-specific functionality in the title, metadata, first response app experience, and help sections. For example, title must be Contoso Mexico. App title must clearly differentiate an existing app from the same developer to avoid end-user confusion. [*Mandatory Fix*]
+  * When uploading the app package in Partner Center, select the right **Markets** where the app will be available in the **Availability** section. [*Mandatory Fix*]
 
-* App name must not lead with a core Teams feature such as Chat, Contacts, Calendar, Calls, Files, Activity, Teams, Apps, and Help. The app name can shorten to either Chat, Contacts, Calendar, Calls, Files, Activity, Teams, Apps, and Help on install in the left navigation.
+* App name mustn't lead with a core Teams feature such as Chat, Contacts, Calendar, Calls, Files, Activity, Teams, and Help. The app name doesn't shortens to either Chat, Contacts, Calendar, Calls, Files, Activity, Teams, and Help on install in the left navigation. [*Mandatory Fix*]
 
 * If your app is part of an official partnership with Microsoft, the name of your app must come first. For example, **Contoso connector for Microsoft Teams**.
 
-* The app name must not have any reference to Microsoft or Microsoft products. Don’t use **Teams**, **Microsoft**, or **App** in the app name unless your app is in official partnership with Microsoft. In such an instance, the app name must come first before any reference to Microsoft. For example, **Contoso connector for Microsoft Teams**.
+* The app name mustn't have any reference to Microsoft or Microsoft products. Don’t use **Teams** or **Microsoft**, in the app name unless your app is in official partnership with Microsoft. In such an instance, the app name must come first before any reference to Microsoft. For example, **Contoso connector for Microsoft Teams**. [*Mandatory Fix*]
 
-* Don’t use parenthesis in naming to include Microsoft products.
+* Don’t use parenthesis in naming to include Microsoft products. [*Mandatory Fix*]
 
-* Developer name must be the same in the manifest and AppSource.
+* Developer name must be the same in the manifest and AppSource. [*Mandatory Fix*]
 
-* App manifests submitted must be production manifests. Accordingly, app name must not indicate that the app is a preproduction app. For example, app name must not contain words such as Beta, Dev, Preview, and UAT.
+* App manifests submitted must be production manifests. Accordingly, app name mustn't indicate that the app is a preproduction app. For example, app name mustn't contain words such as Beta, Dev, Preview, and UAT. [*Mandatory Fix*]
 
  > [!TIP]
- > Your app’s branding on the Microsoft Teams store and AppSource including your app name, developer name, app icon, AppSource screenshots, video, short description, and website either separately or taken together must not impersonate an official Microsoft offering unless your app is an official Microsoft 1P offering.
+ > Your app’s branding on the Microsoft Teams store and AppSource including your app name, developer name, app icon, AppSource screenshots, video, short description, and website either separately or taken together mustn't impersonate an official Microsoft offering unless your app is an official Microsoft 1P offering.
 
 </details>
+
+### Duplicate App
+
+* Apps from the same developer offering the same functionality must share an app listing unless privacy compliance requirements mandate separate app listings or separate app listing are required to support government cloud. You must build into your business logic and publish only one listing. [*Mandatory Fix*]
+
+  * To fulfill multiple regions support requirement, you must build into your business logic and publish only one listing.
+
+   :::image type="content" source="../../../../assets/images/submission/validation-guidelines-pass-region-app-manifest.png" alt-text="Screenshot shows the passed scenario of region requirement done with logic.":::
+
+  * To fulfill multiple end-point requirements for on-premises and on-cloud deployment, you must build into your business logic and publish only one listing.
 
 ### Suitable for workplace consumption
 
@@ -124,9 +134,13 @@ An app's name plays a critical role in how users discover it in the store. Use t
 <br></br>
 <details><summary>Expand to know more</summary>
 
-App content must be suitable for general workplace consumption and follow all restrictions listed in the commercial marketplace certification policies. Content related to religion, politics, gambling, and prolonged entertainment is prohibited.
+App content must be suitable for general workplace consumption and follow all restrictions listed in the commercial marketplace certification policies. Content related to religion, politics, gambling, and prolonged entertainment is prohibited. [Mandatory Fix]
 
-Your app must enable group collaboration, improve an individual's productivity, or both. Apps intended for team bonding and socializing must be collaborative and designed for multiple participants. The apps must not require a substantial time investment of over 60 mins per session or affect productivity.
+Your app must enable group collaboration, improve an individual's productivity, or both. Apps intended for team bonding and socializing must be collaborative and designed for multiple participants. The apps mustn't require a substantial time investment of over 60 mins per session or affect productivity. [Mandatory Fix]
+
+Content aggregator apps must have a mechanism for users to report an issue or inappropriate content to the app publisher. [Mandatory Fix]
+
+   :::image type="content" source="../../../../assets/images/submission/validation-guidelines-content-aggregator-app.png" alt-text="Screenshot shows the passed scenario of content aggregator app to report issues.":::
 
 </details>
 
@@ -140,7 +154,7 @@ Apps must focus on the Teams experience and not include the names, icons, or ima
 
 ### Feature names
 
-App feature names in buttons and other UI text must not use terminology reserved for Teams and other Microsoft products. For example, **Start meeting**, **Make call**, or **Start chat** are feature names in use by Microsoft in Microsoft Teams. If necessary, include your app name to make the distinction clear, such as **Start Contoso meeting**.
+App feature names in buttons and other UI text mustn't use terminology reserved for Teams and other Microsoft products. For example, **Start meeting**, **Make call**, or **Start chat** are feature names in use by Microsoft in Microsoft Teams. If necessary, include your app name to make the distinction clear, such as **Start Contoso meeting**.
 
 ### Authentication
 
@@ -157,16 +171,22 @@ For more information on how to implement app authentication, see [authentication
 If your app authenticates users with an external service, follow these guidelines:
 
 * **Sign in, sign out, and sign up experiences**:
-  * Apps that depend on external accounts or services must provide clear and simple sign in, sign out, and sign up experience.
-  * When users sign out, they must sign out only from the app and remain signed in to Teams.
+  * Apps that depend on external accounts or services must provide clear and simple sign in, sign out, and sign up experience. [*Mandatory Fix*]
+  * When users sign out, they must sign out only from the app and remain signed in to Teams. [*Mandatory Fix*]
   * Apps that depend on external accounts or services must provide a way forward for new users to sign up or contact the app publisher to learn more about the services and get access to the services.
-  Way forward must be available in the app’s manifest, AppSource long description, and app first run experience (bot welcome message, tab setup, or config page).
+  Way forward must be available in the app’s manifest, AppSource long description, and app first run experience (bot welcome message, tab setup, or config page). [*Mandatory Fix*]
   * Apps that require tenant admin to complete one-time setup must call out dependency on tenant admin to configure the app (before any other tenant user can install and use the app).
-  Dependency must be called out in the app’s manifest, AppSource long description, all first run experience touchpoints (bot welcome message, tab setup, or config page), help text as considered necessary as part of bot response, compose extension, or static tab content.
+  Dependency must be called out in the app’s manifest, AppSource long description, all first run experience touchpoints (bot welcome message, tab setup, or config page), help text as considered necessary as part of bot response, compose extension, or static tab content. [*Mandatory Fix*]
   
 * **Content sharing experiences**: Apps that require authentication with an external service to share content in Teams channels must clearly state in the help documentation (or similar resources) on how to disconnect or unshare content if that feature is supported on the external service. This doesn't mean the ability to unshare content must be present in your Teams app.
 
 </details>
+
+### Music App
+
+* If the primary intent of the app is to listen to music, it must support at least one collaborative scope with end-to-end workflow specific to app. For example, sharing of playlist, configuring or pinning playlist, and synchronously listening to music. [*Mandatory Fix*]
+
+* Apps published with the primary intent of letting users listen to music in Teams are recommended to include collaborative co-listening experience. [*Suggested Fix*]
 
 ## Security
 
@@ -180,25 +200,25 @@ If your app authenticates users with an external service, follow these guideline
 <br></br>
 <details><summary>Expand to know more</summary>
 
-Apps must not ask users to make payments within the Teams interface and transmit financial information to users through a bot interface.
+Apps mustn't ask users to make payments within the Teams interface and transmit financial information to users through a bot interface. [*Mandatory Fix*]
 
 :::image type="content" source="../../../../assets/images/submission/validation-financial-information-1.png" alt-text="validation-financial-info":::
 
-You may provide link to secure external payment services only if you disclose it in your terms of use, privacy policy, profile page, or website before the user agrees to use the app.
+You may provide link to secure external payment services only if you disclose it in your terms of use, privacy policy, profile page, or website before the user agrees to use the app. [*Mandatory Fix*]
 
-Don't facilitate payments through an app for goods or services prohibited by [General policy number 100.10 Inappropriate content](/legal/marketplace/certification-policies#10010-inappropriate-content).
+Don't facilitate payments through an app for goods or services prohibited by [General policy number 100.10 Inappropriate content](/legal/marketplace/certification-policies#10010-inappropriate-content). [*Mandatory Fix*]
 
 Apps running on the iOS or Android version of Teams must adhere to the following guidelines:
 
-* Apps must not include in-app purchases, trial offers, or UI that aims to upsell users to paid versions or online stores to purchase other content, apps, or add-ins.
+* Apps mustn't include in-app purchases, trial offers, or UI that aims to upsell users to paid versions or online stores to purchase other content, apps, or add-ins. [*Mandatory Fix*]
 
     :::image type="content" source="../../../../assets/images/submission/validation-financial-information-in-app-purchase.png" alt-text="validation-financial-info-in-app-purchase":::
 
     :::image type="content" source="../../../../assets/images/submission/validation-financial-information-online-stores.png" alt-text="validation-online-store":::
 
-* If your app requires an account, users can sign up for an account at no charge. The use of the term **free** or **free account** is prohibited.
-* You can determine whether an account is active indefinitely or for a limited time. When the account expires the app must not show UI, text, or links indicating the need to pay.
-* Your app's privacy policy and terms of use must be free of any commerce-related UI or links.
+* If your app requires an account, users can sign up for an account at no charge. The use of the term **free** or **free account** is prohibited. [*Mandatory Fix*]
+* You can determine whether an account is active indefinitely or for a limited time. When the account expires the app mustn't show UI, text, or links indicating the need to pay. [*Mandatory Fix*]
+* Your app's privacy policy and terms of use must be free of any commerce-related UI or links. [*Mandatory Fix*]
 
 </details>
 
@@ -228,13 +248,30 @@ Bots must always ask permission to upload a file and display a confirmation mess
 
 Don't include domains outside of your organization's control (including wildcards) and tunneling services in your app's domain configurations. The following exceptions include:
 
-* If your app uses the Azure Bot Service's OAuthCard, you must include `token.botframework.com` as a valid domain or the **Sign in** button won't work.
-* If your app relies on SharePoint, you can include the associated root SharePoint site as a valid domain using the `{teamSiteDomain}` context property.
+* If your app relies on SharePoint, you can include the associated root SharePoint site as a valid domain using the `{teamSiteDomain}` context property. [*Mandatory Fix*]
 * Don't use top level domains such as **.com**, **.in**, and **.org** as a valid domain. [*Mandatory Fix*]
 
 * Don't use **.onmicrosoft.com or** as a valid domain where **onmicrosoft** isn't under your control. However, you can use **yoursite.com** as a valid domain where **yoursite** is under your control even though the domain includes a wildcard. [*Mandatory Fix*]
 
 * If your app is a PowerApp built on the Microsoft Power Platform, you must include *apps.powerapps.com* as a valid domain to enable your app to be accessible and functional within Teams.
+
+* If your app uses the Azure Bot Service's OAuthCard, you must include *token.botframework.com* as a valid domain or else the Sign in button won't work. You mustn't declare *.botframework.com* as wildcards are not allowed with this domain name. [*Mandatory Fix*]
+
+* Following External Domains are not allowed: [*Mandatory Fix*]
+  * *.azurewebsites.net
+  * *.azureedge.com
+  * *.microsoft.com
+  * *.microsoftonline.com
+  * *.onmicrosoft.com
+  * go.microsoft.com
+  * teams.microsoft.com
+
+When using wildcards (`*`), the following rules apply:
+
+* If a subdomain segment includes a wildcard, it must be the only character in the segment.
+* Any segment preceding a wildcard segment must also be a wildcard segment.
+
+For example, *\*.\*.domain.com* is valid, but *foo.\*.myteam.domain.com* is not valid.
 
 </details>
 
@@ -242,7 +279,7 @@ Don't include domains outside of your organization's control (including wildcard
 
 [*Mandatory Fix*]
 
-Your app must not post sensitive data, such as credit card, financial payment details, health, contact tracing, or other personally identifiable information (PII) to an audience not intended to view the content.
+Your app mustn't post sensitive data, such as credit card, financial payment details, health, contact tracing, or other personally identifiable information (PII) to an audience not intended to view the content.
 
 App must warn users before downloading any files or executables (.exe) into the user's machine or environment.
 
@@ -258,19 +295,19 @@ App must warn users before downloading any files or executables (.exe) into the 
 
 [*Mandatory Fix*]
 
-Apps must not take users out of Teams for core user scenarios. App content and interactions must occur within Teams capabilities, such as bots, Adaptive Cards, tabs, and task modules.
+Apps mustn't take users out of Teams for core user scenarios. App content and interactions must occur within Teams capabilities, such as bots, Adaptive Cards, tabs, and task modules.
 <br>
 </br>
 
 <details><summary>Expand to know more</summary>
 
-* Link users within Teams app and not to an external site or app. For scenarios that require external functionality, your app must take explicit user permission to launch the functionality.
+* Link users within Teams app and not to an external site or app. For scenarios that require external functionality, your app must take explicit user permission to launch the functionality. [*Mandatory Fix*]
 
-* Button UI text that launches external functionality must include content to indicate the user is taken out of the Teams instance. For example, include text such as **This way to Contoso.com** or **View in Contoso.com**.
+* Button UI text that launches external functionality must include content to indicate the user is taken out of the Teams instance. For example, include text such as **This way to Contoso.com** or **View in Contoso.com**. [*Mandatory Fix*]
 
-* Add **Pop-out** icon to let the users know that they're being navigated outside Teams. You can use the pop-out icon :::image type="icon" source="../../../../assets/icons/pop-out-icon.png" ::: to the right of the link.
+* Add **Pop-out** icon to let the users know that they're being navigated outside Teams. You can use the pop-out icon :::image type="icon" source="../../../../assets/icons/pop-out-icon.png" ::: to the right of the link. [*Mandatory Fix*]
 
-* If you're unable to add a **Pop-out** icon, you can implement any of the following options to let the user know that they're being navigated outside Teams:
+* If you're unable to add a **Pop-out** icon, you can implement any of the following options to let the user know that they're being navigated outside Teams: [*Mandatory Fix*]
   * Add a note in Adaptive Card that states that when users select **Get Help using this app**, it takes the user outside Teams.
   * Add interstitials dialogs.
 
@@ -297,10 +334,10 @@ Your app must show a graceful failure message on unsupported browsers and operat
 
 Teams apps must respond within a reasonable timeframe or show a loading or typing indicator or message or warning.
 
-* Tabs must respond within two seconds or display a loading message or warning.
-* Bots must respond to user commands within two seconds or display a typing indicator.
-* Message extensions must respond to user commands within two seconds.
-* Notifications must display within two seconds of the user action.
+* Tabs must respond within two seconds or display a loading message or warning. [*Mandatory Fix*]
+* Bots must respond to user commands within two seconds or display a typing indicator. [*Mandatory Fix*]
+* Message extensions must respond to user commands within two seconds. [*Mandatory Fix*]
+* Notifications must display within two seconds of the user action. [*Mandatory Fix*]
 
 ## App package and store listing
 
@@ -344,7 +381,7 @@ The Teams app manifest defines your app's configuration.
 
 * You must use the Teams manifest schema version 1.5 or later to localize your app. To use the app schema version 1.5 or later in your manifest.json file, update the `$schema` attribute to 1.5 or later. Update the `manifestVersion` property to `$schema` version (1.5 in this case). [*Mandatory Fix*]
 
-* When you add, update, or remove an existing capability, add or remove manifest or Partner Center metadata, you must increase the app version number and submit the new app manifest in your Partner Center account for validation.
+* When you add, update, or remove an existing capability, add or remove manifest or Partner Center metadata, you must increase the app version number and submit the new app manifest in your Partner Center account for validation. [*Mandatory Fix*]
 
 * The version string must follow the Semantic Versioning Specification (SemVer) standard (MAJOR.MINOR.PATCH). [*Mandatory Fix*]
 
@@ -353,6 +390,8 @@ The Teams app manifest defines your app's configuration.
 * As part of Teams app certification, you must submit a production version of the app manifest. [*Mandatory Fix*]
 
 * We recommend that you declare the Microsoft Partner Network (MPN) ID in the manifest. The MPN ID helps identify the partner organization that builds the app. [*Suggested Fix*]
+
+* Scopes and/or context declared in app manifest must be visible within the app. [*Mandatory Fix*]
 
 ### App icons
 
@@ -364,15 +403,15 @@ Icons are one of the main elements people see when browsing the Teams store.
 
 Your icons must communicate your app's brand and purpose while adhering to the following requirements:
 
-* Your app package must include two .png versions of your app icon: A color icon and an outline icon.
-* The color version of your icon must be 192x192 pixels. Your icon symbol can be any color or colors, but it must sit on a solid or fully transparent square background.
+* Your app package must include two .png versions of your app icon: A color icon and an outline icon. [*Mandatory Fix*]
+* The color version of your icon must be 192x192 pixels. Your icon symbol can be any color or colors, but it must sit on a solid or fully transparent square background. [*Mandatory Fix*]
 * The outline version of your icon is displayed in the following scenarios:
   * When your app is in use and **hosted** on the app bar on the left side of Teams.
   * When a user pins your app's message extension.
 
-* The outline must be 32x32 pixels and can be white with a transparent background or transparent with a white background. The icon must not have any extra padding around the symbol.
+* The outline must be 32x32 pixels and can be white with a transparent background or transparent with a white background. The icon mustn't have any extra padding around the symbol. [*Mandatory Fix*]
 
-* Your app package must include correctly sized and formatted icons. The icons must match the information in store listing metadata.
+* Your app package must include correctly sized and formatted icons. The icons must match the information in store listing metadata. [*Mandatory Fix*]
 
 For more information, see [icon guidelines](~/concepts/build-and-test/apps-package.md#app-icons).
 
@@ -389,13 +428,13 @@ You must have a short and long description for your app. The descriptions in you
 <br></br>
 <details><summary>Expand to know more</summary>
 
-Descriptions must not directly or through insinuation disparage another brand (Microsoft owned or otherwise). Ensure that your description doesn't include claims that can't be substantiated. For example, **Guaranteed 200 percent increase in efficiency**.
+Descriptions mustn't directly or through insinuation disparage another brand (Microsoft owned or otherwise). Ensure that your description doesn’t include claims that can’t be substantiated. For example, Guaranteed 200 percent increase in efficiency.
 
-* App description must not contain comparative marketing information. For example, don't use competitor logos or trademarks in the offer listing including tags or other metadata that references competing offers or marketplaces. [*Mandatory Fix*]
+* App description mustn't contain comparative marketing information. For example, don't use competitor logos or trademarks in the offer listing including tags or other metadata that references competing offers or marketplaces. [*Mandatory Fix*]
 
    :::image type="content" source="../../../../assets/images/submission/validation-app-description-comparitive-marketing-fail.png" alt-text="Graphic shows an example of comparative marketing information in app description.":::
 
-* Hyperlink contact details, get started, help, or sign up in app description.
+* Hyperlink contact details, get started, help, or sign up in app description. [*Suggested Fix*]
 
    :::image type="content" source="../../../../assets/images/submission/validation-app-description-contact-deatils-hyperlinked.png" alt-text="Graphic shows an example of contact details hyperlinked in the app descriptions.":::
 
@@ -422,7 +461,7 @@ Descriptions must not directly or through insinuation disparage another brand (M
 
 * If your app is supported for specific regions or geographical locations, you must call out that specific region dependency in the app description in manifest, Partner Center, and AppSource for that offer.
 
-* If you need to reference Teams, write the first reference in the app listing as Microsoft Teams. Later references can be shortened to Teams.
+* If you need to reference Teams, write the first reference in the app listing as Microsoft Teams. Later references can be shortened to Teams. [*Mandatory Fix*]
 
    :::image type="content" source="../../../../assets/images/submission/validation-app-description-teams-reference-pass.png" alt-text="Graphic shows an example of correct reference to Teams in app description.":::
 
@@ -514,6 +553,7 @@ The long description can provide an engaging narrative that highlights your app'
 ### Screenshots
 
 Screenshots provide a prominent visual preview of your app to complement your app name, icon, and descriptions.
+
 <br></br>
 <details><summary>Expand to know more</summary>
 
@@ -531,20 +571,44 @@ Remember the following:
 * Use text judiciously.
 * Frame screenshots with a color that reflects your brand and include marketing content.
 * Use high-resolution screenshots that are sharp and contain legible and clearly readable text. [*Mandatory Fix*]
-* Use mockups that accurately depict the app’s actual UI for the benefit of end-users. [*Mandatory Fix*]
-* Provide at least three screenshots in your app’s marketplace listing.
-* If your Teams app is extensible to other Microsoft 365 hubs, the screenshots provided must depict the app functionality in other Microsoft 365 hubs.
-* At least one screenshot must depict your app’s functionality on mobile devices.
-* We recommend that you provide captions in your screenshots to let the user clearly understand the app capability.
+* At least one screenshot must depict your app’s functionality on mobile devices. [*Mandatory Fix*]
+
+   :::image type="content" source="../../../../assets/images/submission/validation-guidelines-pass-app-functionality-mobile.png" alt-text="Screenshot shows the passed scenario of app functionality on mobile devices.":::
+
+* You can have up to five screenshots per listing. You must have a minimum of three and maximum five screenshots in your app listing. [*Mandatory Fix*]
+* Use mockups that accurately depict the app’s actual UI for the benefit of end-users. Screenshots must accurately depict the app’s actual UI or scenarios relevant to and related to the app. [*Mandatory Fix*]
+
+   :::image type="content" source="../../../../assets/images/submission/validation-guidelines-fail-suppliement-screenshot.png" alt-text="Screenshot shows the failed scenario of supplement content used in screenshot.":::
+
+   :::image type="content" source="../../../../assets/images/submission/validation-guidelines-fail-actual-UI.png" alt-text="Screenshot shows the failed scenario of screenshot of app's actual UI.":::
+
+* Must depict app functionality or integration with Teams. [*Mandatory Fix*]
+
+   :::image type="content" source="../../../../assets/images/submission/validation-guidelines-fail-app-functionality.png" alt-text="Screenshot shows the failed scenario of app functionality or integration.":::
+
+* Provided screenshots mustn't incorrectly reference Microsoft Teams as MS, MSFT, or MS Teams. [*Mandatory Fix*]
+* If your Teams app is extensible across Microsoft 365 clients (Office, Outlook, and Microsoft Teams), the screenshots provided must depict the app functionality in other Microsoft 365 clients. [*Mandatory Fix*]
+
+   :::image type="content" source="../../../../assets/images/submission/validation-guidelines-pass-app-functionality-MS-365.png" alt-text="Screenshot shows the passed scenario of Teams app functionality in MS 365 clients.":::
+
+* You must provide captions in your screenshots to let the user clearly understand the app capability. [*Mandatory Fix*]
+
+   :::image type="content" source="../../../../assets/images/submission/validation-guidelines-pass-app-functionality.png" alt-text="Screenshot shows the passed scenario of user attention for app functionality.":::
+
+* If your app supports Tabs as a capability, the screenshots showcasing the app in the context of a Teams tab, in app listing, must contain Team’s chrome. [*Mandatory Fix*]
+
+   :::image type="content" source="../../../../assets/images/submission/validation-guildelines-pass-tabs-capability.png" alt-text="Screenshot shows the passed scenario of screenshot of tab capability.":::
 
 **Don'ts:**
 
 * Include mockups that inaccurately reflect your app's actual UI, such as showing your app being used outside Teams.
 
+   :::image type="content" source="../../../../assets/images/submission/validation-guidelines-fail-app-functionality-teams.png" alt-text="Screenshot shows the failed scenario of unrelated app functionality in Teams.":::
+
 > [!TIP]
 >
 > * A video can be the most effective way to communicate why people must use your app. A video also is the first thing users see in your listing.
-> * If you choose to provide a video in your app listing, you must turn off ads in YouTube or Vimeo settings before submitting the video link in the Partner Center. Videos provided in the app listing must not be more than 90 seconds in duration and must only depict the app functionality and integration with Microsoft Teams. For more information, see [create a video for your store listing](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#create-a-video).
+> * If you choose to provide a video in your app listing, you must turn off ads in YouTube or Vimeo settings before submitting the video link in the Partner Center. Videos provided in the app listing mustn't be more than 90 seconds in duration and must only depict the app functionality and integration with Microsoft Teams. For more information, see [create a video for your store listing](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#create-a-video). [*Mandatory Fix*]
 
 </details>
 
@@ -571,13 +635,13 @@ Use the following guidelines to write the Terms of use:
 * Must be specific and applicable to your offering.
 * Must be hosted on your own domain.
 * Must have a secure (HTTPS) link.
-* Access to Terms of use must not require authentication.
+* Access to Terms of use mustn't require authentication.
 
 ### Support links
 
 [*Mandatory Fix*]
 
-Your app's support URLs must not require authentication. For example, users must be allowed to contact you without sign in.
+Your app's support URLs mustn't require authentication. For example, users must be allowed to contact you without sign in.
 <br></br>
 <details><summary>Expand to know more</summary>
 
@@ -591,7 +655,7 @@ Support URLs must include your contact details or a way forward for users to rai
 
 [*Mandatory Fix*]
 
-* If your app supports localization, your app package must include a file with language translations that display based on the Teams language setting. The file must conform to the Teams localization schema. For more information, see [Teams localization schema](~/concepts/build-and-test/apps-localization.md).
+* If your app supports localization, your app package must include a file with language translations that display based on the Teams language setting. The file must conform to the Teams localization schema. For more information, see [Teams localization schema](~/concepts/build-and-test/apps-localization.md). [*Mandatory Fix*]
 
 * App metadata content must be the same in `en-us` and other localization languages. [*Mandatory Fix*]
 
@@ -670,15 +734,15 @@ If your app includes a tab, ensure that it adheres to these guidelines.
 </br>
 <details><summary>Setup</summary>
 
-* Tab setup **must not dead-end** a new user. Provide a message on how to complete the action or workflow. [*Mandatory Fix*]
+* Tab setup **mustn't dead-end** a new user. Provide a message on how to complete the action or workflow. [*Mandatory Fix*]
 
     :::image type="content" source="../../../../assets/images/submission/validation-tabs-setup-new-user.png" alt-text="Graphic shows an example of Tab with a dead-end on setup.":::
 
-* The user must not leave the tab configuration experience inside Teams to create content outside Teams and then return to Teams to pin it. Tab configuration screen must explain the value of configuration and how to configure. [*Mandatory Fix*]
+* The user mustn't leave the tab configuration experience inside Teams to create content outside Teams and then return to Teams to pin it. Tab configuration screen must explain the value of configuration and how to configure. [*Mandatory Fix*]
 
     :::image type="content" source="../../../../assets/images/submission/validation-tabs-setup-profile-name.png" alt-text="validation-tabs-set-up-profile-name":::
 
-* Tab configuration screen must not embed an entire website. Keep your configuration experience focused. For example, if you're building a project management app that lets users configure a project in a channel, keep the tab configuration screen focused on allowing the user to select a project from your app to configure in the channel. [*Mandatory Fix*]
+* Tab configuration screen mustn't embed an entire website. Keep your configuration experience focused. For example, if you're building a project management app that lets users configure a project in a channel, keep the tab configuration screen focused on allowing the user to select a project from your app to configure in the channel. [*Mandatory Fix*]
 
     :::image type="content" source="../../../../assets/images/submission/validation-tabs-setup-configuration-experience.png" alt-text="validation-tabs-setup-configuration-exp":::
 
@@ -701,7 +765,7 @@ If your app includes a tab, ensure that it adheres to these guidelines.
 
 <details><summary>Views</summary>
 
-* The sign in screen area must not use large logos. [*Mandatory Fix*]
+* The sign in screen area mustn't use large logos. [*Mandatory Fix*]
 
     :::image type="content" source="../../../../assets/images/submission/validation-views-applogin.png" alt-text="validation-views-app-login":::
 
@@ -722,15 +786,15 @@ If your app includes a tab, ensure that it adheres to these guidelines.
 
 The following are the navigation guidelines:
 
-* Tabs must not provide navigation that conflicts with the primary Teams navigation. If you provide a left navigation in your tab, it must not include only icons or icons with stacked text. It must not be a collapsible rail with the option to see icons with stacked text (mimicking the Teams navigation bar). Include icons with in line text or only text or use hamburger menus instead of tab left rail. [*Mandatory Fix*]
+* Tabs mustn't provide navigation that conflicts with the primary Teams navigation. If you provide a left navigation in your tab, it mustn't include only icons or icons with stacked text. It mustn't be a collapsible rail with the option to see icons with stacked text (mimicking the Teams navigation bar). Include icons with in line text or only text or use hamburger menus instead of tab left rail. [*Mandatory Fix*]
 
-Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-components.md) and [advanced](~\concepts\design\design-teams-app-advanced-ui-components.md) Fluent UI components.
+   Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-components.md) and [advanced](~\concepts\design\design-teams-app-advanced-ui-components.md) Fluent UI components.
 
-:::image type="content" source="../../../../assets/images/submission/validation-navigation-static-tab.png" alt-text="Graphic shows an example of navigation in a tab that doesn't conflict with the primary Teams navigation.":::
+   :::image type="content" source="../../../../assets/images/submission/validation-navigation-static-tab.png" alt-text="Graphic shows an example of navigation in a tab that doesn't conflict with the primary Teams navigation.":::
 
-:::image type="content" source="../../../../assets/images/submission/validation-navigation-left-navigation.png" alt-text="Graphic shows an example of left navigation rail that conflicts with the primary Teams navigation.":::
+   :::image type="content" source="../../../../assets/images/submission/validation-navigation-left-navigation.png" alt-text="Graphic shows an example of left navigation rail that conflicts with the primary Teams navigation.":::
 
-* Tabs with toolbar in left rail must leave 20 pixels spacing from Teams left navigation. [*Mandatory Fix*]
+* If your tab has a toolbar on the left rail without any navigation component, the toolbar must leave 20 pixels spacing from Teams left navigation. [*Mandatory Fix*]
 
     :::image type="content" source="../../../../assets/images/submission/validation-navigation-spacing-between-toolbar.png" alt-text="validation-nav-spacing-between-toolbar":::
 
@@ -741,20 +805,20 @@ Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-compone
 
     :::image type="content" source="../../../../assets/images/submission/validation-in-meeting-improper-navigation-leveles.png" alt-text="Screenshot that shows an example of in-meeting dialog with multiple navigation levels.":::
 
-* Deep links in tabs must not link to an external webpage but within Teams. For example, task modules or other tabs. [*Mandatory Fix*]
+* Deep links in tabs mustn't link to an external webpage but within Teams. For example, task modules or other tabs. [*Mandatory Fix*]
 
     :::image type="content" source="../../../../assets/images/submission/validation-navigation-view-button-not-linked-static-tab.png" alt-text="validation-nav-view-button-not-linked-static-tab":::
 
-* Tabs must not allow users to navigate outside Teams for the core app experience. Tabs can redirect outside Teams for non-core workflows. For example, to raise a support ticket. [*Mandatory Fix*]
+* Tabs mustn't allow users to navigate outside Teams for the core app experience. Tabs can redirect outside Teams for non-core workflows. For example, to raise a support ticket. [*Mandatory Fix*]
 
     :::image type="content" source="../../../../assets/images/submission/validation-navigation-core-workflow-within-configuration.png" alt-text="validation-nav-core-workflow-within-configuration":::
 
     :::image type="content" source="../../../../assets/images/submission/validation-navigation-core-workflow-redirects-outside.png" alt-text="validation-nav-core-workflow-redirects-outside":::
 
-* Horizontal scroll must not be present in an in-meeting tab. [*Mandatory Fix*]
+* Horizontal scroll mustn't be present in an in-meeting tab. [*Mandatory Fix*]
 
-* In-meeting dialogs used in your app must not allow horizontal scrolling. Use in-meeting dialogs sparingly and for scenarios that are light and task oriented. You can specify the width of the in-meeting dialog’s I-frame within the supported size range to account for different scenarios. [*Mandatory Fix*]
-* Task modules used in your app must not allow horizontal scrolling. Task modules allow you to select different sizes to make the content responsive without the need of Horizontal scroll. If required, you can use a Stage View (a full screen UI component to surface your web content) to complete the workflow without Horizontal scroll. [*Mandatory Fix*]
+* In-meeting dialogs used in your app mustn't allow horizontal scrolling. Use in-meeting dialogs sparingly and for scenarios that are light and task oriented. You can specify the width of the in-meeting dialog’s I-frame within the supported size range to account for different scenarios. [*Mandatory Fix*]
+* Task modules used in your app mustn't allow horizontal scrolling. Task modules allow you to select different sizes to make the content responsive without the need of Horizontal scroll. If required, you can use a Stage View (a full screen UI component to surface your web content) to complete the workflow without Horizontal scroll. [*Mandatory Fix*]
 
 * Horizontal scroll present in the tab in a personal chat, channel, and in-meeting details tab in any scope isn't allowed if the entire tab canvas is scrollable, unless your tab uses an infinite canvas with fixed UI elements. [*Mandatory Fix*]
 
@@ -768,9 +832,9 @@ Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-compone
 
    :::image type="content" source="../../../../assets/images/submission/validation-horizontal-scroll-in-list-view.png" alt-text="Graphic shows an example of horizontal scroll in list view.":::
 
-* Horizontal scroll in Adaptive Cards must not be present in Teams. [*Mandatory Fix*]
+* Horizontal scroll in Adaptive Cards mustn't be present in Teams. [*Mandatory Fix*]
 
-* Bottom rail used for navigation in tabs must not conflict with Teams native mobile app navigation. [*Mandatory Fix*]
+* Bottom rail used for navigation in tabs mustn't conflict with Teams native mobile app navigation. [*Mandatory Fix*]
 
   :::image type="content" source="../../../../assets/images/submission/validation-tab-bottom-rail-conflicts-with-teams-mobile.png" alt-text="Graphic shows an example of a tab that conflicts with Teams native mobile app navigation.":::
 
@@ -785,15 +849,15 @@ Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-compone
 
     :::image type="content" source="../../../../assets/images/submission/validation-usability-website-i-framed.png" alt-text="Graphic shows an example of an app with entire website in an I-frame without any back option.":::
 
-* Content must not truncate or overlap within the tab.
+* Content mustn't truncate or overlap within the tab. [*Mandatory Fix*]
 
     :::image type="content" source="../../../../assets/images/submission/validation-usability-content-truncation.png" alt-text="validation-usability-content-truncations":::
 
-* Users must be able to undo their last action in the tab.
+* Users must be able to undo their last action in the tab. [*Mandatory Fix*]
 
 * Tabs in a personal context may aggregate content from shared instances of the app. For example, a project management app with a configurable tab that lets channel members comment on the project on Kanban cards, must aggregate this content and display in the personal app. [*Suggested Fix*]
 
-* Tabs must be responsive to Teams themes. When a user changes the theme, the app's theme must reflect the selection.
+* Tabs must be responsive to Teams themes. When a user changes the theme, the app's theme must reflect the selection. [*Suggested Fix*]
 
     :::image type="content" source="../../../../assets/images/submission/validation-usability-responsive-tabs.png" alt-text="Graphic shows an example of a tab responsive to a theme in Teams.":::
 
@@ -804,41 +868,41 @@ Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-compone
     :::image type="content" source="../../../../assets/images/submission/validation-usability-app-uses-diff-font.png" alt-text="Screenshot shows an example of a tab with calibri font instead of native Teams font.":::
 
 * If your app functionality requires changes in settings, include a **Settings** tab. [*Suggested Fix*]
-* Tabs must follow Teams interaction design such as, in-page navigation, position and use of dialogs, information hierarchies. For more information, see [Microsoft Teams Fluent UI kit](~/concepts/design/design-teams-app-basic-ui-components.md).
+* Tabs must follow Teams interaction design such as, in-page navigation, position and use of dialogs, information hierarchies. For more information, see [Microsoft Teams Fluent UI kit](~/concepts/design/design-teams-app-basic-ui-components.md). [*Suggested Fix*]
 
-* Tab experiences must be fully responsive on mobile (Android and iOS).
+* Tab experiences must be fully responsive on mobile (Android and iOS). [*Mandatory Fix*]
 
    > [!TIP]
    >
    > * Include a personal bot alongside a personal tab.
    > * Allow users to share content from their personal tab.
 
-* Tab must not contain elements that completely obstruct or impede workflows within the tab. For example, bot inside a tab that can't be minimized.
+* Tab mustn't contain elements that completely obstruct or impede workflows within the tab. For example, bot inside a tab that can't be minimized. [*Mandatory Fix*]
 
    :::image type="content" source="../../../../assets/images/submission/validation-tab-elements-impede-workflow.png" alt-text="Graphic shows an example of tab with elements that impede workflows within the tab.":::
 
-* Tab must not have a broken functionality. Your offer must be a usable software solution and must provide the functionality, features, and deliverables as described in your listing and other related materials. [*Mandatory Fix*]
+* Tab mustn't have a broken functionality. Your offer must be a usable software solution and must provide the functionality, features, and deliverables as described in your listing and other related materials. [*Mandatory Fix*]
 
-* If your tabs contain a footer, ensure that you remove all links unrelated to app functionality from the footer.
+* If your tabs contain a footer, ensure that you remove all links unrelated to app functionality from the footer. [*Mandatory Fix*]
 
 </details>
 </br>
 
 <details><summary>Scope selection</summary>
 
-* Content in the landing page of configurable tabs must not be scoped for individual use and not include personal content such as **My Tasks** or **My Dashboard**.
+* Content in the landing page of configurable tabs mustn't be scoped for individual use and not include personal content such as **My Tasks** or **My Dashboard**. [*Mandatory Fix*]
 
    :::image type="content" source="../../../../assets/images/submission/validation-configurable-tab-content-personal-scope.png" alt-text="Graphic shows an example of content in a configurable tab with personal scope such as My tasks or My dashboard.":::
 
-* After the configuration experience, the landing page must show a collaborative view for the entire team.
+* After the configuration experience, the landing page must show a collaborative view for the entire team. [*Mandatory Fix*]
 
-* If your app requires provision of a personal scope view for the user to enhance efficiency or workplace productivity, use filtered views, deep links to personal apps, or navigate to L2 or L3 views within the configurable tab and keep the landing page contextually the same for all the users.
+* If your app requires provision of a personal scope view for the user to enhance efficiency or workplace productivity, use filtered views, deep links to personal apps, or navigate to L2 or L3 views within the configurable tab and keep the landing page contextually the same for all the users. [*Mandatory Fix*]
 
-* Content in the landing page of the configurable tabs must be contextually same for all members of the channel.
+* Content in the landing page of the configurable tabs must be contextually same for all members of the channel. [*Mandatory Fix*]
 
     :::image type="content" source="../../../../assets/images/submission/validation-usability-configurable-tab-personal-info.png" alt-text="Graphic shows an example of content in the landing page of the configurable tabs contextually different for all members.":::
 
-* Configurable tabs must have focused functionality.
+* Configurable tabs must have focused functionality. [*Mandatory Fix*]
 
     :::image type="content" source="../../../../assets/images/submission/validation-usability-configurable-nested-tabs.png" alt-text="validation-usability-configurable-nested-tab":::
 
@@ -870,29 +934,29 @@ If your app includes a bot, ensure that it adheres to these guidelines.
 
 Analyzing user input and predicting user intent is difficult. Bot commands provide users a set of words or phrases for your bot to understand.
 
-* You must list at least one supported bot command in the `{commandList}` section of your app manifest. These commands display in the compose box when a user tries to message your bot.
+* You must list at least one supported bot command in the `{commandList}` section of your app manifest. These commands display in the compose box when a user tries to message your bot. [*Mandatory Fix*]
 
    :::image type="content" source="../../../../assets/images/submission/validation-bot-commands-listed.png" alt-text="Graphic shows an example of bot commands listed in the app manifest.":::
 
    :::image type="content" source="../../../../assets/images/submission/validation-bot-commands-not-listed.png" alt-text="Graphic shows an example of bot commands not listed in the app manifest.":::
 
-* All commands that your bot supports must work correctly, including generic commands such as **Hi**, **Hello**, and **Help**.
+* All commands that your bot supports must work correctly, including generic commands such as **Hi**, **Hello**, and **Help**. [*Mandatory Fix*]
   
   :::image type="content" source="../../../../assets/images/submission/validation-bot-commands-generic-response-pass.png" alt-text="Graphic shows an example of bot responding to generic commands.":::
 
   :::image type="content" source="../../../../assets/images/submission/validation-bot-commands-generic-no-response.png" alt-text="Graphic shows an example of bot with no response to generic commands.":::
 
-* Bot commands must not lead a user to a dead end, the commands must always provide a way forward.
+* Bot commands mustn't lead a user to a dead end, the commands must always provide a way forward. [*Mandatory Fix*]
 
    :::image type="content" source="../../../../assets/images/submission/validation-bot-commands-deadend.png" alt-text="validation-bot-commands-dead-end":::
 
 * You must list at least one valid bot command in the `items.commands.title` section of the manifest and add a suitable description that gives clarity to the user on the bot command and its usage. Bot commands listed in the `commandLists` section of the manifest surface as prepopulated commands in the bot command menu and provide a way forward for the new user to interact with the bot. [*Mandatory Fix*]
 
-* Bot response must not contain any official Microsoft product images or avatars. Use your own assets in your app. Use of Microsoft product images in your app isn't allowed. You may only copy, modify, distribute, display, license, or sell Microsoft copyrighted product images if you're granted explicit permission within the End-User License Agreement (EULA), license terms that accompany the content, or in the [Microsoft Trademark and Brand guidelines](https://www.microsoft.com/legal/intellectualproperty/trademarks). [*Mandatory Fix*]
+* Bot response mustn't contain any official Microsoft product images or avatars. Use your own assets in your app. Use of Microsoft product images in your app isn't allowed. You may only copy, modify, distribute, display, license, or sell Microsoft copyrighted product images if you're granted explicit permission within the End-User License Agreement (EULA), license terms that accompany the content, or in the [Microsoft Trademark and Brand guidelines](https://www.microsoft.com/legal/intellectualproperty/trademarks). [*Mandatory Fix*]
 
 * Bots must respond to user commands without displaying a continuous loading indicator. [*Mandatory Fix*]
 
-* Bot help command response must not redirect the user outside Teams. Bot help command response can redirect user to a canvas within the Teams app or provide a way forward response in an Adaptive Card. [*Mandatory Fix*]
+* Bot help command response mustn't redirect the user outside Teams. Bot help command response can redirect user to a canvas within the Teams app or provide a way forward response in an Adaptive Card. [*Mandatory Fix*]
 
   :::image type="content" source="../../../../assets/images/submission/validation-bot-redirects-user-outside-teams.png" alt-text="Graphic shows an example of bot response redirecting user outside of Teams.":::
 
@@ -902,11 +966,11 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
    :::image type="content" source="../../../../assets/images/submission/validation-bot-response-improper-response-invalid-command.png" alt-text="Graphic shows an example of an invalid response for improper bot command.":::
 
-* Special characters such as slash (**/**), must not be prefixed to bot commands. [*Mandatory Fix*]
+* Special characters such as slash (**/**), mustn't be prefixed to bot commands. [*Mandatory Fix*]
 
    :::image type="content" source="../../../../assets/images/submission/validation-bot-commands-special-characters.png" alt-text="Graphic shows an example of a failed scenario where special characters are prefixed to bot commands.":::
 
-* Bots must provide a valid response to invalid user commands. Bots must not dead-end the user or display an error if a user sends an invalid bot command. [*Mandatory Fix*]
+* Bots must provide a valid response to invalid user commands. Bots mustn't dead-end the user or display an error if a user sends an invalid bot command. [*Mandatory Fix*]
 
    :::image type="content" source="../../../../assets/images/submission/validation-bot-way-forward-for-invalid-command.png" alt-text="Graphic shows an example of bot providing a way forward for an invalid command.":::
 
@@ -914,9 +978,9 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
 * Bot functionality must be relevant to the scope in which the bot is installed and the bot must provide value in the installed scope. [*Mandatory Fix*]
 
-* Bots must not contain duplicate commands. [*Mandatory Fix*]
+* Bots mustn't contain duplicate commands. [*Mandatory Fix*]
 
-* Bots must not display a typing indicator after responding to the user command, but can display a typing indicator while responding to the user command. [*Mandatory Fix*]
+* Bots mustn't display a typing indicator after responding to the user command, but can display a typing indicator while responding to the user command. [*Mandatory Fix*]
 
 * Bots must provide a valid response to the **help** command typed in lowercase or uppercase that provides the user with a way forward or lets the user access the help content related to the bot usage. Bots must provide a valid response even when the user hasn't logged onto the app. [*Mandatory Fix*]
 
@@ -944,7 +1008,7 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
   :::image type="content" source="../../../../assets/images/submission/validation-bot-command-isnotification-only-not-true.png" alt-text="Graphic shows an example of notification only bot not responding for a user's message.":::
 
-* Bot user experience must not be broken on mobile platforms. Your bot must be fully responsive on mobile. [*Mandatory Fix*]
+* Bot user experience mustn't be broken on mobile platforms. Your bot must be fully responsive on mobile. [*Mandatory Fix*]
 
 > [!TIP]
 > For personal bots, include a **Help** tab that further describes what your bot can do.
@@ -962,7 +1026,7 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
    :::image type="content" source="../../../../assets/images/submission/validation-bot-no-welcome-message.png" alt-text="Graphic shows an example of bot not sending a welcome message when the bot has a complex configuration workflow.":::
 
-* Bot welcome messages in channels and chats are optional during first run, especially if the bot is available for personal use and performs similar actions. Your bot must not send welcome messages to users individually (it's considered [spamming](#botmessagespamming)). The message must also mention the person who added the bot.
+* Bot welcome messages in channels and chats are optional during first run, especially if the bot is available for personal use and performs similar actions. Your bot mustn't send welcome messages to users individually (it's considered [spamming](#botmessagespamming)). The message must also mention the person who added the bot.
 
    :::image type="content" source="../../../../assets/images/submission/validation-bot-welcome-message-not-triggered.png" alt-text="validation-bot-welcome-message-not-trigger":::
 
@@ -972,21 +1036,21 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
    :::image type="content" source="../../../../assets/images/submission/validation-notification-only-welcome-message-pass.png" alt-text="Graphic shows an example of bot sending a welcome message that it's a notification only bot.":::
 
-* Welcome message must not dead-end the user. Welcome message must include the value offered by the bot to the users who installed the bot in channel, how to configure the bot, and briefly describe all supported bot commands. You can display the welcome message using an Adaptive Card with buttons for better usability. [*Mandatory Fix*]
+* Welcome message mustn't dead-end the user. Welcome message must include the value offered by the bot to the users who installed the bot in channel, how to configure the bot, and briefly describe all supported bot commands. You can display the welcome message using an Adaptive Card with buttons for better usability. [*Mandatory Fix*]
 
    :::image type="content" source="../../../../assets/images/submission/validation-welcome-message-no-way-forward.png" alt-text="Graphic shows an example of a failed scenario where the bot has no way forward for the user in a welcome message.":::
 
    :::image type="content" source="../../../../assets/images/submission/validation-welcome-message-clear-way-forward.png" alt-text="Graphic shows an example of bot welcome message with a clear way forward for the user to complete the task.":::
 
-* Bot installed in a channel or group chat scope must not send proactive welcome message to all the team members in 1:1 chat. [*Mandatory Fix*]
+* Bot installed in a channel or group chat scope mustn't send proactive welcome message to all the team members in 1:1 chat. [*Mandatory Fix*]
 
    :::image type="content" source="../../../../assets/images/submission/validation-bot-send-proactive-message-to-all-members.png" alt-text="Graphic shows an example of bot sending proactive welcome message to all the team members.":::
 
 * Notification only bot can send a proactive welcome message in a channel only if the message contains important information for any user to complete the configuration for the bot or clarifies the scenarios when notifications are triggered. [*Mandatory Fix*]
 
-* Bot installed in a channel or group chat scope must not send proactive messages (not just welcome message) that are irrelevant to all users in channel or group chat, instead must send proactive messages to the user over 1:1 chat. [*Mandatory Fix*]
+* Bot installed in a channel or group chat scope mustn't send proactive messages (not just welcome message) that are irrelevant to all users in channel or group chat, instead must send proactive messages to the user over 1:1 chat. [*Mandatory Fix*]
 
-* Bot installed in a channel or group chat scope must not allow users to start individual workflows. Bots must complete individual workflows in 1:1 chat with the user. [*Mandatory Fix*]
+* Bot installed in a channel or group chat scope mustn't allow users to start individual workflows. Bots must complete individual workflows in 1:1 chat with the user. [*Mandatory Fix*]
 
 * Bot welcome message must clearly call out the limitations related to bot usage in the installed scope. [*Mandatory Fix*]
 
@@ -998,15 +1062,15 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
    :::image type="content" source="../../../../assets/images/submission/validation-bot-no-welcome-message-in-personal-scope.png" alt-text="Graphic shows an example of bot not sending a  welcome message automatically in personal scope.":::
 
-* Welcome messages must trigger only once on bot install. Welcome messages must not trigger every time the user invokes the help command. Help command response must be focused to include a way for the user to access help related to the bot. [*Mandatory Fix*]
+* Welcome messages must trigger only once on bot install. Welcome messages mustn't trigger every time the user invokes the help command. Help command response must be focused to include a way for the user to access help related to the bot. [*Mandatory Fix*]
 
-* Welcome messages must not trigger with every bot command. This is considered spam. [*Mandatory Fix*]
+* Welcome messages mustn't trigger with every bot command. This is considered spam. [*Mandatory Fix*]
 
   :::image type="content" source="../../../../assets/images/submission/validation-welcome-message-trigger-for-any-command.png" alt-text="Graphic shows an example for bot triggering a welcome message for any command.":::
 
 * Welcome message content must be related to the bot workflow mentioned in the app’s long description and the installation scope. Welcome message must include the value offered by the bot to users who installed the bot in channel, how to configure the bot, and briefly describe all supported bot commands. [*Mandatory Fix*]
 
-* Bot must not send multiple welcome messages when triggered on app install. [*Mandatory Fix*]
+* Bot mustn't send multiple welcome messages when triggered on app install. [*Mandatory Fix*]
 
   :::image type="content" source="../../../../assets/images/submission/validation-bot-multiple-message-trigger-install.png" alt-text="Graphic shows an example of bot triggering multiple welcome messaged on app install.":::
 
@@ -1014,15 +1078,15 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
   :::image type="content" source="../../../../assets/images/submission/validation-app-name-mismatch-manifeast-and-welcome-message.png" alt-text="Graphic shows an example of app name in welcome message not matching with the app name in the app manifest.":::
 
-* Welcome message must not display competitor chat based collaborative platform names unless the app provides specific interoperability.
+* Welcome message mustn't display competitor chat based collaborative platform names unless the app provides specific interoperability.
 
-* Welcome message must not redirect the user to another Teams app, instead the welcome message must nudge the user to complete their first task and briefly describe all supported bot commands in the app. [*Mandatory Fix*]
+* Welcome message mustn't redirect the user to another Teams app, instead the welcome message must nudge the user to complete their first task and briefly describe all supported bot commands in the app. [*Mandatory Fix*]
 
-* Welcome message must not contain links to any app marketplace including AppSource. [*Mandatory Fix*]
+* Welcome message mustn't contain links to any app marketplace including AppSource. [*Mandatory Fix*]
 
 * If your app has a complex configuration workflow that requires admin led installation, doesn't have an intuitive and readily available sign up flow, or requires users to complete configuration steps outside the Teams experience and return then the bot must send a proactive welcome message in a team or group chat scope after installation. [*Mandatory Fix*]
 
-* If your bot sends a welcome message in the channel, it must not send it to users individually (It's considered spamming). The welcome message must also mention the person who added the bot. [*Suggested Fix*]
+* If your bot sends a welcome message in the channel, it mustn't send it to users individually (It's considered spamming). The welcome message must also mention the person who added the bot. [*Suggested Fix*]
 
 > [!TIP]
 > In welcome messages to individual users, a carousel tour can provide an effective overview of your bot and any other app features to encourage users to try bot commands. For example, **Create a task**.
@@ -1032,29 +1096,29 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
 <details><summary><a id="botmessagespamming">Bot message spamming</a></summary>
 
-Bots must not spam users by sending multiple messages in short duration.
+Bots mustn't spam users by sending multiple messages in short duration.
 
-* **Bot messages in channels and chats**: Don't spam users by creating separate posts. Create a single post with replies in the same thread.
+* **Bot messages in channels and chats**: Don't spam users by creating separate posts. Create a single post with replies in the same thread. [*Mandatory Fix*]
 
     :::image type="content" source="../../../../assets/images/submission/validation-bot-message-spamming-one-message.png" alt-text="validation-bot-message-spam-one-message":::
 
     :::image type="content" source="../../../../assets/images/submission/validation-bot-message-spamming-multiple-messages.png" alt-text="validation-bot-message-spam-multiple-message":::
 
 * **Bot messages in personal apps**:
-  * Don't send multiple messages in quick succession.
+  * Don't send multiple messages in quick succession. [*Mandatory Fix*]
 
     :::image type="content" source="../../../../assets/images/submission/validation-bot-messages-multiple-message-quick-succession.png" alt-text="Graphic shows an example of a bot sending multiple messages in quick succession.":::
 
-  * Send one message with complete information.
-  * Avoid multi-turn conversations to complete a single repetitive workflow.
-  * Use a form (or task module) to collect all inputs from a user at one-time.
+  * Send one message with complete information. [*Mandatory Fix*]
+  * Avoid multi-turn conversations to complete a single repetitive workflow. [*Mandatory Fix*]
+  * Use a form (or task module) to collect all inputs from a user at one time. [*Mandatory Fix*]
   * NLP based conversational chatbots can use multi turn conversation to make the discussion more engaging and complete a workflow.
 
     :::image type="content" source="../../../../assets/images/submission/validation-bot-messages-using-task-module.png" alt-text="validation-bot-message-using-task-module":::
 
     :::image type="content" source="../../../../assets/images/submission/validation-bot-messages-using-mutliple-conversation.png" alt-text="Graphic shows an example bot using multi-turn messages to complete a single conversation.":::
 
-* **Welcome messages**: Don't repeat the same welcome message over regular intervals. For example, when a new member is added to a team, don't spam the other members with a welcome message. Message the new member personally.
+* **Welcome messages**: Don't repeat the same welcome message over regular intervals. For example, when a new member is added to a team, don't spam the other members with a welcome message. Message the new member personally. [*Mandatory Fix*]
 
    :::image type="icon" source="../../../../assets/images/submission/validation-bot-send-proactive-message-to-all-members.png" alt-text="Graphic shows an example bot spamming users with same welcome message.":::
 
@@ -1063,7 +1127,7 @@ Bots must not spam users by sending multiple messages in short duration.
 
 <details><summary>Bot notifications</summary>
 
-Bot notifications must include content relevant for the scope you define for the bot (team, chat, or personal).
+Bot notifications must include content relevant for the scope you define for the bot (team, chat, or personal). [*Mandatory Fix*]
 
 :::image type="content" source="../../../../assets/images/submission/validation-bot-notifications-relevant.png" alt-text="validation-bot-notification-relevant":::
 
@@ -1146,7 +1210,7 @@ If your app includes a message extension, ensure that it adheres to these guidel
 
    :::image type="content" source="../../../../assets/images/submission/validation-messaging-extension-design-guidelines-fail.png" alt-text="Graphic shows an example of an app not meeting extension guidelines.":::
 
-* Messaging extensions are shortcuts for inserting app content or acting on a message without navigating away from the conversation. Keep your messaging extension simple and display only the components required to effectively complete the action. Complete website must not be I-framed within the messaging extension. [*Mandatory Fix*]
+* Messaging extensions are shortcuts for inserting app content or acting on a message without navigating away from the conversation. Keep your messaging extension simple and display only the components required to effectively complete the action. Complete website mustn't be I-framed within the messaging extension. [*Mandatory Fix*]
 
 * Preview images in Adaptive Cards in messaging extensions must load properly. [*Mandatory Fix*]
 
@@ -1156,7 +1220,7 @@ If your app includes a message extension, ensure that it adheres to these guidel
 
 * Messaging extension response card must include the app icon to avoid end user confusion. [*Mandatory Fix*]
 
-* Your app must not have any broken functionality. App must not dead-end or block the user from completing a workflow in a messaging extension. [*Mandatory Fix*]
+* Your app mustn't have any broken functionality. App mustn't dead-end or block the user from completing a workflow in a messaging extension. [*Mandatory Fix*]
 
 * Messaging extensions must respond or work as intended in group chat and channel scopes. [*Mandatory Fix*]
 
@@ -1187,11 +1251,11 @@ Action-based message extensions must do the following:
 
     :::image type="content" source="../../../../assets/images/submission/validation-messaging-extension-action-command-verb.png" alt-text="Graphic shows an example of generic verb for an action command.":::
 
-* Invoking a message action must allow the user to complete the workflow. Errors, blank responses, or continuous loading indicators to make the message action functional as intended must not be present. [*Mandatory Fix*]
+* Invoking a message action must allow the user to complete the workflow. Errors, blank responses, or continuous loading indicators to make the message action functional as intended mustn't be present. [*Mandatory Fix*]
 
    :::image type="content" source="../../../../assets/images/submission/validation-continous-loading-indicator-action-command.png" alt-text="Graphic shows an example of continuous loading indicator when a bot invokes an action command.":::
 
-* Duplicate action commands must not be present. [*Mandatory Fix*]
+* Duplicate action commands mustn't be present. [*Mandatory Fix*]
 
 * Message actions must allow the user to complete the workflow as intended without an invalid response. [*Mandatory Fix*]
 
@@ -1208,7 +1272,9 @@ Action-based message extensions must do the following:
 
 [*Mandatory Fix*]
 
-Message extensions must preview recognized links in the Teams compose box. Don't add domains that are outside your control (either absolute URLs or wildcards). For example, `yourapp.onmicrosoft.com` is valid but `*.onmicrosoft.com` isn't valid. Top-level domains also are prohibited. For example, `*.com` or `*.org`. [*Mandatory Fix*]
+* Message extensions must preview recognized links in the Teams compose box. Don't add domains that are outside your control (either absolute URLs or wildcards). For example, `yourapp.onmicrosoft.com` is valid but `*.onmicrosoft.com` isn't valid. Top-level domains also are prohibited. For example, `*.com` or `*.org`. [*Mandatory Fix*]
+
+* Apps must only declare that are under the app publisher’s direct ownership in the `messageHandler` link unfurling section of the manifest. It mustn’t contain `*.botframework.com.` [*Mandatory Fix*]
 
 </details>
 </br>
@@ -1255,7 +1321,7 @@ Link unfurling only apps don't provide significant value within Teams. Consider 
 <br></br>
 <details><summary>Expand to know more</summary>
 
-A task module must include an icon and the short name of the app it's associated with. Task modules must not embed an entire app and only display the components required to complete a specific action.
+A task module must include an icon and the short name of the app it's associated with. Task modules mustn't embed an entire app and only display the components required to complete a specific action.
 
 For more information, see [Teams task module design guidelines](~\task-modules-and-cards\task-modules\design-teams-task-modules.md).
 
@@ -1281,11 +1347,13 @@ For more information, see [Teams task module design guidelines](~\task-modules-a
 
 * With the in-meeting app experience, you can engage participants during the meeting by using in-meeting tabs, dialog box, and the in-meeting share to stage feature. If your app supports Teams meeting extension, you must provide a responsive in-meeting experience aligned with the Teams meeting experience. [*Mandatory Fix*]
 
-* With the pre-meeting app experience, users can find and add meeting apps. Users can also do pre-meeting tasks such as developing a poll to survey the meeting participants. An app that provides a pre-meeting experience must be relevant to the meeting workflow and offer value to the user. [*Mandatory Fix*]
+* Meeting extensibility apps must offer a responsive in-meeting experience aligned to the Teams meeting experience. In-meeting experience is mandatory for a Teams app that supports meeting extensibility but, pre- and post-meeting experiences aren't mandatory. [*Mandatory Fix*]
 
-* With post-meeting app experience, users can view the results of the meeting such as, poll survey results or feedback and other app content. An app that provides a post-meeting experience must be relevant to the workflow of the meeting and offer value to the user. [*Mandatory Fix*]
+  * With the pre-meeting app experience, users can find and add meeting apps. Users can also perform pre-meeting tasks such as developing a poll to survey the meeting participants. If your app provides a pre-meeting experience, it must be relevant to the workflow of the meeting.
 
-* With the in-meeting app experience, you can engage meeting participants during the meeting and enhance the meeting experience for all the attendees. Attendees must not be taken outside the Teams meeting to complete core user workflows of the app. [*Mandatory Fix*]
+  * With the post-meeting app experience, users can view the results of the meeting such as, poll survey results or feedback and other app content. If your app provides a post-meeting experience, it must be relevant to the workflow of the meeting.
+
+  * With the in-meeting app experience, you can engage meeting participants during the meeting and enhance the meeting experience for all the attendees. Attendees mustn't be taken outside the Teams meeting for completing core user workflows of your app.
 
    :::image type="content" source="../../../../assets/images/submission/validation-in-meeting-outside-teams-core-workflows.png" alt-text="Graphic shows an example of an in-meeting experience redirecting user outside Teams for completing core app functionality.":::
 
@@ -1293,21 +1361,21 @@ For more information, see [Teams task module design guidelines](~\task-modules-a
 
 * You must declare `groupChat` as a scope under `configurableTabs` and `meetingDetailsTab`, `meetingChatTab`, and `meetingSidePanel` as a context property in the manifest to enable your app for meetings on Teams mobile. [*Mandatory Fix*]
 
-* Meeting canvases must not dead-end a meeting attendee. Meeting canvases must show a graceful failure message for app limitations such as, region specific dependency. [*Mandatory Fix*]
+* Meeting canvases mustn't dead-end a meeting attendee. Meeting canvases must show a graceful failure message for app limitations such as, region specific dependency. [*Mandatory Fix*]
 
 * The meeting canvas’ header must display the correct app name to avoid confusing the meeting attendee. [*Mandatory Fix*]
 
 * You must include an option for the user to sign out or log out from the meeting extension. [*Mandatory Fix*]
 
-* Meeting tabs on mobile platforms must include relevant workflows. Blank pages must not be present in a meeting tab. [*Mandatory Fix*]
+* Meeting tabs on mobile platforms must include relevant workflows. Blank pages mustn't be present in a meeting tab. [*Mandatory Fix*]
 
-* Meeting stage is a focused, intuitive, and collaborative participation canvas. Meeting stage must not embed the complete website experience. [*Mandatory Fix*]
+* Meeting stage is a focused, intuitive, and collaborative participation canvas. Meeting stage mustn't embed the complete website experience. [*Mandatory Fix*]
 
-* App must not show continuous loading screen, error, or broken functionality that dead-ends the user or blocks completion of a workflow in a meeting scenario. [*Mandatory Fix*]
+* App mustn't show continuous loading screen, error, or broken functionality that dead-ends the user or blocks completion of a workflow in a meeting scenario. [*Mandatory Fix*]
 
    :::image type="content" source="../../../../assets/images/submission/validation-app-shows-continous-loading-screen.png" alt-text="Graphic shows an example of continuous loading screen in an app.":::
 
-* App must not open a new Teams instance on starting a meeting. Meeting canvases are an extension of the Teams capabilities that promote real time collaboration and new meetings must always open within the currently active Teams instance. [*Mandatory Fix*]
+* App mustn't open a new Teams instance on starting a meeting. Meeting canvases are an extension of the Teams capabilities that promote real time collaboration and new meetings must always open within the currently active Teams instance. [*Mandatory Fix*]
 
 * Meeting apps must complete workflows within the Microsoft Teams platform without redirecting to competitor chat based platforms. [*Mandatory Fix*]
 
@@ -1320,33 +1388,11 @@ For more information, see [Teams task module design guidelines](~\task-modules-a
 </details>
 <br/>
 
-<details><summary>General</summary>
-
-Use the following guidelines for meeting extensions:
-
-* Meeting extensibility apps must offer a responsive in-meeting experience aligned to the Teams meeting experience. In-meeting experience is mandatory for a Teams app that supports meeting extensibility but, pre- and post-meeting experiences aren't mandatory.
-
-  * With the pre-meeting app experience, users can find and add meeting apps. Users can also perform pre-meeting tasks such as developing a poll to survey the meeting participants. If your app provides a pre-meeting experience, it must be relevant to the workflow of the meeting.
-
-  * With the post-meeting app experience, users can view the results of the meeting such as, poll survey results or feedback and other app content. If your app provides a post-meeting experience, it must be relevant to the workflow of the meeting.
-
-  * With the in-meeting app experience, you can engage meeting participants during the meeting and enhance the meeting experience for all the attendees. Attendees must not be taken outside the Teams meeting for completing core user workflows of your app.
-
-* Your app must offer value beyond providing custom Together Mode scenes in Teams.
-
-* Shared meeting stage feature can only be launched through the Teams desktop app. However, the shared meeting stage consumption experience must be usable and not broken when viewed on mobile devices.
-
-> [!TIP]
-> You must declare `groupChat` as a scope under `configurableTabs` and `meetingDetailsTab`, `meetingChatTab`, and `meetingSidePanel` as a context property in the manifest to enable your app for meetings on Teams mobile.
-
-</details>
-</br>
-
 <details><summary>Pre- and post-meeting experience</summary>
 
-* Pre and post meeting screens must adhere to general tab design guidelines. For more information, see [Teams design guidelines](~/tabs/design/tabs.md).
-* Tabs must have an organized layout when displaying multiple items. For example, more than 10 polls or surveys, see [example layout](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md#after-a-meeting).
-* Your app must notify users when the results of a survey or poll are exported by stating, **Results successfully downloaded**.
+* Pre and post meeting screens must adhere to general tab design guidelines. For more information, see [Teams design guidelines](~/tabs/design/tabs.md). [*Mandatory Fix*]
+* Tabs must have an organized layout when displaying multiple items. For example, more than 10 polls or surveys, see [example layout](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md#after-a-meeting). [*Mandatory Fix*]
+* Your app mustn'tify users when the results of a survey or poll are exported by stating, **Results successfully downloaded**. [*Mandatory Fix*]
 
    :::image type="content" source="../../../../assets/images/submission/validation-meeting-experience-tab-design-guidelines-fail.png" alt-text="Graphic shows an example of tab not following tab design guidelines.":::
 
@@ -1355,28 +1401,28 @@ Use the following guidelines for meeting extensions:
 </br>
 <details><summary>In-meeting experience</summary>
 
-* Apps must only use a dark theme during meetings. For more information, see [Teams design guidelines](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md#theming).
-* A tooltip must display the app name when hovering over the app icon during meetings.
+* Apps must only use a dark theme during meetings. For more information, see [Teams design guidelines](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md#theming). [*Mandatory Fix*]
+* A tooltip must display the app name when hovering over the app icon during meetings. [*Mandatory Fix*]
 
     :::image type="content" source="../../../../assets/images/submission/validation-in-meeting-exp-display-app-name.png" alt-text="validation-in-meeting-exp-display-app-names":::
 
-* Message extensions must function the same during meetings as they do outside meetings.
+* Message extensions must function the same during meetings as they do outside meetings. [*Mandatory Fix*]
 
 </details>
 
 </br>
 <details><summary>In-meeting tabs</summary>
 
-* Must be responsive.
-* Must maintain padding and component sizes.
-* Must have a back button if there's more than one layer of navigation.
+* Must be responsive. [*Mandatory Fix*]
+* Must maintain padding and component sizes. [*Mandatory Fix*]
+* Must have a back button if there's more than one layer of navigation. [*Mandatory Fix*]
 
     :::image type="content" source="../../../../assets/images/submission/validation-in-meeting-exp-back-button.png" alt-text="Graphic shows an example of back button present.":::
 
     :::image type="content" source="../../../../assets/images/submission/validation-in-meeting-exp-back-button-absent.png" alt-text="Graphic shows an example of back button not present.":::
 
-* Must not include more than one close button. It may confuse users since there's already a built-in header button to dismiss the tab.
-* Must not have Horizontal scroll.
+* Must not include more than one close button. It may confuse users since there's already a built-in header button to dismiss the tab. [*Mandatory Fix*]
+* Must not have Horizontal scroll. [*Mandatory Fix*]
 
   :::image type="content" source="../../../../assets/images/submission/validation-in-meeting-tab-vertical-scroll.png" alt-text="Graphic shows an example of in-meeting tab with vertical scroll.":::
 
@@ -1387,26 +1433,35 @@ Use the following guidelines for meeting extensions:
 </br>
 <details><summary>In-meeting dialogs</summary>
 
-* Must be used sparingly and for scenarios that are light and task oriented.
-* Must display content in a single column and not have multiple navigation levels.
+* Must be used sparingly and for scenarios that are light and task oriented. [*Mandatory Fix*]
+* Must display content in a single column and not have multiple navigation levels. [*Mandatory Fix*]
 
   :::image type="content" source="../../../../assets/images/submission/validation-in-meeting-single-column-layout.png" alt-text="Graphic shows an example of single column layout for in-meeting dialog.":::
 
   :::image type="content" source="../../../../assets/images/submission/validation-in-meeting-multiple-column-layout.png" alt-text="Graphic shows an example of multiple column layouts for in-meeting dialog.":::
 
-* Must not use task modules.
-* Must align with the center of the meeting stage.
+* Must not use task modules. [*Mandatory Fix*]
+* Must align with the center of the meeting stage. [*Mandatory Fix*]
 
     :::image type="content" source="../../../../assets/images/submission/validation-in-meeting-dialog-not-aligned.png" alt-text="Graphic shows an example of in-meeting dialog not aligning with the center of meeting stage.":::
 
-* Must be dismissed after a user selects a button or performs an action.
+* Must be dismissed after a user selects a button or performs an action. [*Mandatory Fix*]
 
-* **Together mode**: Ensure that you consider the following best practices for a scene building experience:
+* **Together mode**: Ensure that you consider the following best practices for a scene building experience: [*Mandatory Fix*]
   * All images are in .png format.
-  * The final package with all the images put together must not exceed 1920x1080 resolution. The resolution is an even number. This resolution is a requirement for scenes to be shown successfully.
+  * The final package with all the images put together mustn't exceed 1920x1080 resolution. The resolution is an even number. This resolution is a requirement for scenes to be shown successfully.
   * The maximum scene size is 10 MB.
   * The maximum size of each image is 5 MB. A scene is a collection of multiple images. The limit is for each individual image.
   * Select **Transparent** as required. This checkbox is available on the right panel when an image is selected. The overlapping images must be marked as Transparent to indicate that they're overlapping images in the scene.
+
+</details>
+
+</br>
+<details><summary>Shared Meeting Stage</summary>
+
+To use the **shareAppContentToStage** API, you must declare the correct RSC permissions. In the app manifest, you must configure the `authorization` property. Update the `name` property as `MeetingStage.Write.Chat` and `type` property as `Delegated` in the `resourceSpecific` field. [*Mandatory Fix*]
+
+Shared meeting stage feature can only be launched through the Teams desktop app. However, the shared meeting stage consumption experience must be usable and not broken when viewed on mobile devices. [*Mandatory Fix*]
 
 </details>
 
@@ -1425,7 +1480,7 @@ If your app uses the [activity feed APIs provided by Microsoft Graph](/graph/tea
 
 * Your Teams apps must follow [activity feed notifications design guidelines](/graph/teams-send-activityfeednotifications).
 
-* Irrelevant, improper, unresponsive, or broken workflow must not be present after user selects a notification in Teams activity feed. Users must not be blocked from completing a workflow after they select an activity feed notification. [*Mandatory Fix*]
+* Irrelevant, improper, unresponsive, or broken workflow mustn't be present after user selects a notification in Teams activity feed. Users mustn't be blocked from completing a workflow after they select an activity feed notification. [*Mandatory Fix*]
 
 * Include your app’s name in the activity feed notification for end-users to understand the source or trigger for the notification without confusion. [*Mandatory Fix*]
 
@@ -1440,9 +1495,9 @@ If your app uses the [activity feed APIs provided by Microsoft Graph](/graph/tea
 
 <details><summary>General</summary>
 
-* All the notification triggers specified in your app configuration must work.
-* Notifications must be localized per the supported languages configured for your app.
-* Notifications must display within five seconds of user action.
+* All the notification triggers specified in your app configuration must work. [*Mandatory Fix*]
+* Notifications must be localized per the supported languages configured for your app. [*Mandatory Fix*]
+* Notifications must display within five seconds of user action. [*Mandatory Fix*]
 * Notifications must be localized as per the supported languages for all the platforms where your app is compatible. [*Mandatory Fix*]
 
 </details>
@@ -1450,23 +1505,23 @@ If your app uses the [activity feed APIs provided by Microsoft Graph](/graph/tea
 
 <details><summary>Avatars</summary>
 
-* The notification avatar must match your app's color icon.
-* Notifications triggered by a user must include the user's avatar.
+* The notification avatar must match your app's color icon. [*Mandatory Fix*]
+* Notifications triggered by a user must include the user's avatar. [*Mandatory Fix*]
 
 </details>
 </br>
 <details><summary>Spamming</summary>
 
-* Apps must not send more than 10 notifications per minute to a user.
-* Bots and the activity feed must not trigger duplicate notifications.
-* Notifications must provide some value to users and not be used for trivial or irrelevant events.
+* Apps mustn't send more than 10 notifications per minute to a user. [*Mandatory Fix*]
+* Bots and the activity feed mustn't trigger duplicate notifications. [*Mandatory Fix*]
+* Notifications must provide some value to users and not be used for trivial or irrelevant events. [*Mandatory Fix*]
 
 </details>
 </br>
 <details><summary>Navigation and layout</summary>
 
-* Notifications must adhere to the Teams activity feed layout and experience.
-* When selecting a notification, the user must be directed to relevant content within Teams.
+* Notifications must adhere to the Teams activity feed layout and experience. [*Mandatory Fix*]
+* When selecting a notification, the user must be directed to relevant content within Teams. [*Mandatory Fix*]
 
 </details>
 
@@ -1478,11 +1533,11 @@ If your app uses the [activity feed APIs provided by Microsoft Graph](/graph/tea
 
 The Microsoft 365 App Compliance Program is intended to help organizations assess and manage risk by evaluating security and compliance information about your app. If you're publishing an app to the Teams store, you must complete the following tiers of the program:
 
-* **Publisher Verification**: Helps admins and end users understand the authenticity of app developers integrating with the Microsoft identity platform. When completed, a blue **verified** badge displays on the Azure Active Directory consent dialog and other screens. For more information, see [Mark your app as publisher verified](/azure/active-directory/develop/mark-app-as-publisher-verified).
+* **Publisher Verification**: Helps admins and end users understand the authenticity of app developers integrating with the Microsoft identity platform. When completed, a blue **verified** badge displays on the Azure Active Directory consent dialog and other screens. For more information, see [Mark your app as publisher verified](/azure/active-directory/develop/mark-app-as-publisher-verified). [*Mandatory Fix*]
 
     :::image type="content" source="../../../../assets/images/submission/validation-365-compliance-publisher-verification.png" alt-text="Graphic shows an example of a blue verified badge on the Azure Active Directory consent dialog.":::
 
-* **Publisher Attestation**: A process in which you share general, data handling, and security and compliance information to help potential customers make informed decisions about using your app.
+* **Publisher Attestation**: A process in which you share general, data handling, and security and compliance information to help potential customers make informed decisions about using your app. [*Suggested Fix*]
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: If you're submitting an app that hasn't been listed previously, you can't officially complete Publisher Attestation until your app is in the Teams store. If you're updating a listed app, complete Publisher Attestation before you submit the latest version of the app.
 
@@ -1492,13 +1547,13 @@ The Microsoft 365 App Compliance Program is intended to help organizations asses
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: This section is in line with [Microsoft commercial marketplace policy number 1140.7](/legal/marketplace/certification-policies#11407-advertising).
 
-Apps must not display advertising, including dynamic ads, banner ads, and ads in message.
+Apps mustn't display advertising, including dynamic ads, banner ads, and ads in message. [*Mandatory Fix*]
 
 :::image type="content" source="../../../../assets/images/submission/validation-advertising-banners.png" alt-text="Graphic shows an example of a failed scenario of advertising in Teams.":::
 
 ## Cryptocurrency based apps
 
-You must demonstrate compliance with all laws where your app is distributed, if your app:
+You must demonstrate compliance with all laws where your app is distributed, if your app: [*Mandatory Fix*]
 
 * Facilitates cryptocurrency transactions or transmissions within the app.
 
@@ -1521,10 +1576,11 @@ After an internal Microsoft review, if the compliance demonstration is satisfact
 * Workflows or content in the app must be related to the scope. [*Mandatory Fix*]
 * All app capabilities must be functional and must work properly as described in the AppSource or manifest long description. [*Mandatory Fix*]
 * Apps must always notify the user before downloading any file or executable on the user’s environment. Any call to action (CTA), either text based or otherwise, that makes it clear to the user that a file or executable is downloaded on user action is allowed in the app. [*Mandatory Fix*]
+* Apps with region dependency must notify the users with a graceful failure message in all applicable capabilities if they attempt to use it in an unsupported region. [*Mandatory Fix*]
 
 ## Mobile experience
 
-* Mobile add-ins must be free. There must not be any in-app content or links that promote upselling, online stores, or other requests for payment. Any accounts required for apps must have no charge for use and if time-limited, must not include any content indicating a need to pay.
+* Mobile add-ins must be free. There mustn't be any in-app content or links that promote upselling, online stores, or other requests for payment. Any accounts required for apps must have no charge for use and if time-limited, mustn't include any content indicating a need to pay. [*Mandatory Fix*]
 
    :::image type="content" source="../../../../assets/images/submission/validation-mobile-add-in-charges.png" alt-text="Graphic shows an example of a mobile add-in asking for payment.":::
 
@@ -1534,11 +1590,11 @@ After an internal Microsoft review, if the compliance demonstration is satisfact
 
 * Use of the word **FREE** in the context of a trial or app upgrade with a link that leads to a landing page without payment or pricing information is allowed on mobile. Plain text to signal app is **PAID** is allowed on mobile.
 
-* Use of the word **FREE** as plain text in the context of a trial or app upgrade and associated with pricing details isn't allowed on mobile.
+* Use of the word **FREE** as plain text in the context of a trial or app upgrade and associated with pricing details isn't allowed on mobile. [*Mandatory Fix*]
 
-* Use of the word **FREE** in the context of a trial or app upgrade and associated with a link that leads to a landing page with pricing information or payment details on mobile isn't allowed.
+* Use of the word **FREE** in the context of a trial or app upgrade and associated with a link that leads to a landing page with pricing information or payment details on mobile isn't allowed. [*Mandatory Fix*]
 
-* Pricing details on mobile in any format, for example, image, text, or link isn't allowed. CTA such as **view plans** on mobile isn't allowed. Information about plans without pricing details but with a contact link or email on mobile isn't allowed. Any text with contact details linking or alluding to a paid upgrade isn't allowed on mobile. Payments for physical goods are allowed on mobile. For example, your app can allow payment to book a taxi.
+* Pricing details on mobile in any format, for example, image, text, or link isn't allowed. CTA such as **view plans** on mobile isn't allowed. Information about plans without pricing details but with a contact link or email on mobile isn't allowed. Any text with contact details linking or alluding to a paid upgrade isn't allowed on mobile. Payments for physical goods are allowed on mobile. For example, your app can allow payment to book a taxi. [*Mandatory Fix*]
 
    :::image type="content" source="../../../../assets/images/submission/validation-mobile-exp-pricing-details-on-mobile-fail.png" alt-text="Graphic shows an example of pricing details on mobile.":::
 
@@ -1548,16 +1604,17 @@ After an internal Microsoft review, if the compliance demonstration is satisfact
 
 * Teams apps must offer an appropriate cross-device mobile experience. [*Mandatory Fix*]
 
-* Capabilities that aren't supported on mobile must not dead-end a user and must provide a graceful failure message where applicable. [*Mandatory Fix*]
+* Capabilities that aren't supported on mobile mustn't dead-end a user and must provide a graceful failure message where applicable. [*Mandatory Fix*]
 
 ## Next step
 
-> [!div class=*nextstepaction*]
+> [!div class="nextstepaction"]
 > [Create a Partner Center account](~/concepts/deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md)
 
 ## See also
 
+* [Test and debug your app](~/concepts/build-and-test/debug.md)
 * [Distribute your app](~/concepts/deploy-and-publish/apps-publish-overview.md)
 * [Prepare your store submission](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)
-* [Test and debug your app](~/concepts/build-and-test/debug.md)
-* [Create a Partner Center developer account](~/concepts/deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md)
+* [Include a SaaS offer with your Teams app](include-saas-offer.md)
+* [Strategize and execute growth for your app](../post-publish/app-growth/overview-app-growth.md)

@@ -1,9 +1,7 @@
 ---
 title: Integrate location capabilities
-
 author: surbhigupta
-description: Learn how to use Teams JavaScript client SDK to leverage location capabilities using Code snippets and samples
-keywords:  location map capabilities native device permissions 
+description: Learn how to use Teams JavaScript client library to leverage location capabilities using Code snippets and samples.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
@@ -13,17 +11,24 @@ ms.author: surbhigupta
 
 You can integrate the location capabilities within your Teams app using [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), which provides well-defined APIs and the necessary tools for your app to access the user’s [native device capabilities](native-device-permissions.md). The location capability is available for the Teams web client, desktop, and mobile.
 
+You can use [Microsoft Teams JavaScript client library](/javascript/api/overview/msteams-client) (TeamsJS), which provides the tools necessary for your app to access the user’s [native device capabilities](native-device-permissions.md). Use the location APIs, such as [getLocation](/javascript/api/@microsoft/teams-js/location.locationprops) and [showLocation](/javascript/api/@microsoft/teams-js/location.locationprops?) to integrate the capabilities within your app.
+
 ## Advantages
 
  You can use the location APIs, such as [getLocation](/javascript/api/@microsoft/teams-js/location.locationprops) and [showLocation](/javascript/api/@microsoft/teams-js/location.locationprops?) to integrate the capabilities within your app.
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
-The advantage of integrating location capabilities in your Teams apps is to apply location functionality in Teams web client, desktop, and mobile using [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true). The following scenarios showcase the advantages of location capabilities:
+The advantage of integrating location capabilities in your Teams apps is to apply location functionality in Teams web client, desktop, and mobile using [Microsoft Teams JavaScript client library](/javascript/api/overview/msteams-client). The following scenarios showcase the advantages of location capabilities:
+
+The main advantage of integrating location capabilities in your Teams apps is that it allows web app developers on Teams platform to leverage location functionality with Microsoft Teams JavaScript client library.
 
 * Share authentic health data of cellular towers with the management. The management can compare any mismatch between captured location information and the data submitted by maintenance staff.
+
 * Locate technical support staff in a specified area.  The app asks support staff to share their current location, which management can use to allocate IT ticket to the nearest support person after checking their profile.
+
 * Report the location after completing a job in the field. The job processing app asks for permission to find the location. After the user grants permission, the app detects the exact location. The user may also select a location by dragging a pin to the job completion location over the map.
+
 * Capture attendance through selfies inside the retail store. The store manager can track the attendance of the workers by asking them to share a selfie through an attendance app. The location data gets captured and is sent along with the image. This scenario is applicable mainly to the frontline workers.
 
 # [Mobile](#tab/mobile)
@@ -163,7 +168,7 @@ You must ensure to handle these errors appropriately in your Teams app. The foll
 
 ### Code sample
 
-|Sample name | Description | C# | Node.js |
+|Sample name | Description | .NET | Node.js |
 |----------------|-----------------|--------------|--------------|
 | App check-in current location | Users can check in the current location and view all the previous location check-ins.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-checkin-location/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-checkin-location/nodejs) |
 

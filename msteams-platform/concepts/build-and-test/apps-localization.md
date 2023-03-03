@@ -79,22 +79,21 @@ Following is an example for localization .json:
 }
 ```
 
-You can provide additional .json files with translations of all the user facing strings in your manifest. These files must adhere to the [Localization file JSON schema](../../resources/schema/localization-schema.md) and they must be added to the `localizationInfo` property of your manifest. Each file correlates to a language tag, which the Teams client uses to select the appropriate strings. The language tag takes the form of `<language>-<region>` but you can omit the `<region>` portion to target all regions that support the desired language.
+You can provide additional .json files with translations of all the user facing strings in your manifest. These files must adhere to the [Localization file JSON schema](../../resources/schema/localization-schema.md) and they must be added to the `localizationInfo` property of your manifest. Each file correlates to a language tag, which the Microsoft 365 host application, such as Teams or Outlook, uses to select the appropriate strings. The language tag takes the form of `<language>-<region>` but you can omit the `<region>` portion to target all regions that support the desired language.
 
-The Teams client applies the strings in the following order:
-default language strings -> user's language only strings -> user's language + user's region strings.
+The Microsoft 365 host application applies the strings in the following order: default language strings -> user's language only strings -> user's language + user's region strings.
 
 For example, you provide a default language of 'fr' (French, all regions), and additional language files for 'en' (English, all regions) and 'en-gb' (English, Great Britain), the user's language is set to 'en-gb'. The following changes take place based on the language selection:
 
-1. The Teams client takes the 'fr' strings and overwrites them with the 'en' strings.
+1. The Microsoft 365 host application takes the 'fr' strings and overwrites them with the 'en' strings.
 1. Overwrite the 'en' strings with the 'en-gb' strings.
 
 If the user's language is set to 'en-ca', the following changes take place based on the language selection:
 
-1. The Teams client takes the 'fr' strings and overwrites them with the 'en' strings.
+1. The Microsoft 365 host application takes the 'fr' strings and overwrites them with the 'en' strings.
 1. Since no 'en-ca' localization is supplied, the 'en` localizations are used.
 
-If the user's language is set to 'es-es', the Teams client takes the 'fr' strings. The Teams client doesn't override the strings with any of the language files as no 'es' or 'es-es' translation is provided.
+If the user's language is set to 'es-es', the Microsoft 365 host application takes the 'fr' strings. The Microsoft 365 host application doesn't override the strings with any of the language files as no 'es' or 'es-es' translation is provided.
 
 Therefore, you must provide top level, language only translations in your manifest. For example, `en` instead of `en-us`. You must provide region level overrides only for the few strings that need them.
 
@@ -155,6 +154,15 @@ If you provide localized versions of your application, the users respond with th
 |-------------|-------------|------|------|
 | App Localization | Teams app localization using bot and tab. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/nodejs) |
 
+## Next step
+
+> [!div class="nextstepaction"]
+> [Localize JSON schema reference](../../resources/schema/localization-schema.md)
+
 ## See also
 
-* [Localize JSON schema reference](~/resources/schema/localization-schema.md)
+* [Microsoft Teams store validation guidelines](../deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)
+* [Create a Partner Center developer account](../deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md)
+* [Prepare your Teams store submission](../deploy-and-publish/appsource/prepare/submission-checklist.md)
+* [Update Apple App Store Connect Team ID on Partner Center](../deploy-and-publish/appsource/prepare/update-apple-store-team-connect-id.md)
+* [App manifest](../../resources/schema/manifest-schema.md)
