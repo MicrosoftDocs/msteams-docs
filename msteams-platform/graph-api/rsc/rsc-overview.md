@@ -17,8 +17,8 @@ For example, a person who owns both team A and team B can decide to give the dat
 
 RSC permissions are categorized based on:
 
-1. The Resource type: Team, chat or meeting, and users.
-1. The RSC permission type: Application and Delegated.
+1. The resource type: Team, chat or meeting, and users.
+1. The data access mode: Application and Delegated.
 
 | &nbsp; | Application context RSC permissions | Delegated context RSC permissions |
 | ---- | :----: | :----: |
