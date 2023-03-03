@@ -238,8 +238,9 @@ Perform the following steps to publish your app:
 3. Select the target app in app list.
 4. Publish your app, select `Publish -> Publish to your org`.
 
-### See also
+## See also
 
+* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
 * [Quick Start for GitHub Actions](https://docs.github.com/en/actions/quickstart#creating-your-first-workflow)
 * [Create your first Azure DevOps Pipeline](/azure/devops/pipelines/create-first-pipeline)
 * [Create your first Jenkins Pipeline](https://www.jenkins.io/doc/pipeline/tour/hello-world/)

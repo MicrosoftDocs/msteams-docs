@@ -15,18 +15,18 @@ Following are the two ways to add rich text formatting to your cards:
 
 Cards support formatting in the text property only, not in the title or subtitle properties. Formatting can be specified using a subset of XML or HTML formatting or Markdown, depending on the card type. For current and future development of Adaptive Cards, Markdown formatting is recommended.
 
-Formatting support differs between card types. Rendering of the card can differ slightly between the desktop and the mobile Microsoft Teams clients, as well as Teams in the desktop browser.
+Formatting support differs between card types. Rendering of the card can differ slightly between the desktop and the mobile Microsoft Teams clients, and Teams in the desktop browser.
 
-You can include an inline image with any Teams card. Supported image formats are .png, .jpg, or .gif formats. Keep the dimensions within 1024 x 1024 pixels and file size less than 1 MB. Animated .gif images are not supported. For more information, see [types of cards](./cards-reference.md#inline-card-images).
+You can include an inline image with any Teams card. Supported image formats are .png, .jpg, or .gif formats. Keep the dimensions within 1024 x 1024 pixels and file size less than 1 MB. Animated .gif images aren't supported. For more information, see [types of cards](./cards-reference.md#inline-card-images).
 
-You can format Adaptive Cards and Office 365 Connector cards with Markdown that include certain supported styles.
+You can format Adaptive Cards and connector cards for Microsoft 365 Groups with Markdown that include certain supported styles.
 
 ## Format cards with Markdown
 
 The following card types support Markdown formatting in Teams:
 
-* Adaptive Cards: Markdown is supported in Adaptive Card `Textblock` field, as well as `Fact.Title` and `Fact.Value`. HTML is not supported in Adaptive Cards.
-* Office 365 Connector cards: Markdown and limited HTML is supported in Office 365 Connector cards in the text fields.
+* Adaptive Cards: Markdown is supported in Adaptive Card `Textblock` field, and `Fact.Title` and `Fact.Value`. HTML isn't supported in Adaptive Cards.
+* Connector cards for Microsoft 365 Groups: Markdown and limited HTML is supported in connector cards for Microsoft 365 Groups in the text fields.
 
 You can use newlines for Adaptive Cards using `\r` or `\n` escape sequences for newlines in lists. Formatting is different between the desktop and the mobile versions of Teams for Adaptive Cards. Card-based mentions are supported in web, desktop, and mobile clients. You can use the information masking property to mask specific information, such as password or sensitive information from users within the Adaptive Card `Input.Text` input element. You can expand the width of an Adaptive Card using the `width` object. You can enable typeahead support within Adaptive Cards and filter the set of input choices as the user types the input. You can use the `msteams` property to add the ability to display images in stage view selectively.
 
@@ -44,7 +44,7 @@ Formatting is different between the desktop and the mobile versions of Teams for
 | Ordered list | <ol><li>text</li><li>text</li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
 | Hyperlinks |[Bing](https://www.bing.com/)| ```[Title](url)``` |
 
-The following Markdown tags are not supported:
+The following Markdown tags aren't supported:
 
 * Headers
 * Tables
@@ -60,20 +60,20 @@ You can use the `\r` or `\n` escape sequences for newlines in lists. Using `\n\n
 
 On the desktop, Adaptive Card Markdown formatting appears as shown in the following image in both web browsers and in the Teams client application:
 
-:::image type="content" source="../../assets/images/Cards/Adaptive-markdown-desktop-client.png" alt-text="adaptive markdown desktop client":::
+:::image type="content" source="../../assets/images/Cards/Adaptive-markdown-desktop-client.png" alt-text="Screenshot shows an example of Adaptive Card Markdown formatting in Teams desktop client.":::
 
 On iOS, Adaptive Card Markdown formatting appears as shown in the following image:
 
-:::image type="content" source="../../assets/images/Cards/Adaptive-markdown-iOS-75.png" alt-text="Adaptive Card Markdown formatting in iOS":::
+:::image type="content" source="../../assets/images/Cards/Adaptive-markdown-iOS-75.png" alt-text="Screenshot shows an example of Adaptive Card Markdown formatting in Teams iOS Platform.":::
 
 On Android, Adaptive Card Markdown formatting appears as shown in the following image:
 
-:::image type="content" source="../../assets/images/Cards/Adaptive-markdown-Android.png" alt-text="Adaptive Card Markdown formatting in Android":::
+:::image type="content" source="../../assets/images/Cards/Adaptive-markdown-Android.png" alt-text="Screenshot shows an example of Adaptive Card Markdown formatting in Teams android Platform.":::
 
 For more information, see [text features in Adaptive Cards](/adaptive-cards/create/textfeatures).
 
 > [!NOTE]
-> The date and localization features mentioned in this section are not supported in Teams.
+> The date and localization features mentioned in this section aren't supported in Teams.
 
 ### Adaptive Cards format sample
 
@@ -131,7 +131,7 @@ Bots and message extensions can include mentions within the card content in [Tex
 > [!NOTE]
 >
 > * [Media elements](https://adaptivecards.io/explorer/Media.html) are currently not supported in Adaptive Cards on Teams platform.
-> * Channel and team mentions are not supported in bot messages.
+> * Channel and team mentions aren't supported in bot messages.
 
 To include a mention in an Adaptive Card, your app needs to include the following elements:
 
@@ -180,7 +180,7 @@ The following table describes the newly supported user mention IDs:
 
 |IDs  | Supporting capabilities | Description | Example |
 |----------|--------|---------------|---------|
-| Azure AD object ID | Bot, Connector |  Azure AD user’s object ID | 49c4641c-ab91-4248-aebb-6a7de286397b |
+| Azure AD Object ID | Bot, Connector |  Azure AD user’s Object ID | 49c4641c-ab91-4248-aebb-6a7de286397b |
 | UPN | Bot, Connector | Azure AD user’s UPN | john.smith@microsoft.com |
 
 #### User mention in bots with Adaptive Cards
@@ -188,7 +188,7 @@ The following table describes the newly supported user mention IDs:
 Bots support user mention with the Azure AD Object ID and UPN, in addition to the existing IDs. The support for two new IDs is available in bots for text messages, Adaptive Cards body, and message extension response. Bots support the mention IDs in conversation and `invoke` scenarios. The user gets activity feed notification when being @mentioned with the IDs.
 
 > [!NOTE]
-> Schema update and UI/UX changes are not required for user mentions with Adaptive Cards in Bot.
+> Schema update and UI/UX changes aren't required for user mentions with Adaptive Cards in Bot.
 
 ##### Example
 
@@ -239,7 +239,7 @@ Incoming webhooks start to support user mention in Adaptive Cards with the Azure
 > [!NOTE]
 >
 > * Enable user mention in the schema for Incoming webhooks to support Azure AD Object ID and UPN.
-> * UI/UX changes are not required for user mentions with Azure AD Object ID and UPN.
+> * UI/UX changes aren't required for user mentions with Azure AD Object ID and UPN.
 
 ##### Example
 
@@ -409,7 +409,7 @@ In an Adaptive Card, you can use the `msteams` property to add the ability to di
 }
 ```
 
-When users hover over the image, an expand icon appears at the top right corner as shown in the following image:
+When users hover over the image, an expand icon appears at the upper-right corner as shown in the following image:
 
 :::image type="content" source="../../assets/images/Cards/adaptivecard-hover-expand-icon.png" alt-text="Adaptive Card with expandable image":::
 
@@ -424,7 +424,7 @@ In the stage view, users can zoom in and zoom out of the image. You can select t
 > * Zoom in and zoom out capability applies only to the image elements that is image type in an Adaptive Card.
 > * For Teams mobile apps, stage view functionality for images in Adaptive Cards is available by default. Users can view Adaptive Card images in stage view by simply tapping on the image, irrespective of whether the `allowExpand` attribute is present or not.
 
-# [Markdown format for Office 365 Connector cards](#tab/connector-md)
+# [Markdown format for connector cards for Microsoft 365 Groups](#tab/connector-md)
 
 Connector cards support limited Markdown and HTML formatting.
 
@@ -455,7 +455,7 @@ On iOS, Markdown formatting for connector cards appears as shown in the followin
 
 Connector cards using Markdown for iOS include the following issues:
 
-* The iOS client for Teams does not render Markdown or HTML inline images in connector cards.
+* The iOS client for Teams doesn't render Markdown or HTML inline images in connector cards.
 * Blockquotes are rendered as indented but without a gray background.
 
 On Android, Markdown formatting for connector cards appears as shown in the following image:
@@ -513,16 +513,123 @@ The following code shows an example of formatting for Markdown connector cards:
 
 ---
 
+## Adaptive Cards overflow menu
+
+Adaptive Card in Teams supports overflow menu. You can populate an overflow menu for all the secondary actions in an Adaptive Card. An overflow menu in an Adaptive Card can be added to the following:
+
+* [Actions](https://adaptivecards.io/explorer/ActionSet.html): In actions, the primary buttons appear on the Adaptive Card and the secondary buttons are inside the overflow menu.
+
+* [ActionSet](https://adaptivecards.io/explorer/ActionSet.html): ActionSet is a combination of multiple actions in an Adaptive Card. Each action set can have an overflow menu.
+
+> [!NOTE]
+> An Adaptive Card supports up to six primary actions to be viewed on the card. Any additional primary action is viewed in the overflow menu.
+
+  :::image type="content" source="../../assets/images/Cards/overflow-menu-gif.gif" alt-text="GIF shows the overflow menu experience in an Adaptive Card.":::
+
+### Enable overflow menu
+
+To enable overflow menu, configure the `mode` property with the value as `primary` or `secondary` in the Adaptive Card schema. The following table describes the `mode` property:
+
+|Property|Type|Required|Description|
+|---|---|---|---|
+|`mode`| Enum (Primary, Secondary) |No |Whether or not the action is a primary or secondary action. Secondary actions will be collapsed into an overflow menu.|
+
+The following is an example of the `mode` property in the `actions` type and the `ActionSet` element:
+
+**Actions**
+
+In the following example, there are two primary actions and one secondary action. The secondary action creates an overflow menu.
+
+```json
+{
+   "type": "AdaptiveCard",
+   "actions": [
+        {
+            "type": "Action.Submit",
+            "title": "Set due date"
+        },
+        {
+            "type": "Action.OpenUrl",
+            "title": "View",
+            "url": "https://adaptivecards.io"
+        },
+        {
+            "type": "Action.Submit",
+            "title": "Delete",
+            "mode": "secondary"
+        }
+    ]
+}
+```
+
+> [!NOTE]
+>
+> * The overflow menu behaves differently on a bot sent card and a message extension card for the root level `actions` in an Adaptive Card. The overflow menu on a bot sent card appears as a pop-up context menu and on the message extension card it appears at the upper-right corner under the More options (**...**) icon. The behavior is not applicable to the `ActionSet` in an Adaptive Card.
+
+The following image is an example of overflow menu in a bot sent card and a message extension card:
+
+:::image type="content" source="../../assets/images/Cards/overflow-menu-card-beahvior.png" alt-text="Screenshot shows an example of the overflow menu behavior in a bot sent card and a messaging extension card.":::
+
+**Action set**
+
+In the following example, all the actions are marked as secondary, therefore, a single overflow menu appears on the card.
+
+``` json
+{
+    "type": "ActionSet",
+     "actions": [
+
+          {
+           
+            "type": "Action.Submit",
+            "title": "view",
+            "mode": "Secondary" 
+       {
+       },
+            "type": "Action.submit",
+            "title": "Delete",
+            "mode": "secondary"
+
+       },
+       {
+             "type": "Action.submit",
+            "title": "Delete",
+            "mode": "secondary"
+       }
+     ]
+}
+```
+
+The following is an example of the overflow menu experience in Teams desktop and mobile:
+
+# [Desktop](#tab/desktop)
+
+When a user selects the overflow menu on a desktop, the buttons that are set as secondary appear in the Adaptive Card.
+
+  :::image type="content" source="../../assets/images/Cards/desktop-overflow-image-1.png" alt-text="Screenshot shows an example of buttons in an Adaptive Card on Teams desktop.":::
+
+  :::image type="content" source="../../assets/images/Cards/desktop-overflow-image-2.png" alt-text="Screenshot shows an example of an Adaptive Card with the list of actions in an overflow menu on Teams desktop.":::
+  
+  :::image type="content" source="../../assets/images/Cards/desktop-overflow-menu-image-3.png" alt-text="Screenshot shows an example of an Adaptive Card with the buttons that are set as secondary as options in an overflow menu on Teams desktop.":::
+
+# [Mobile](#tab/mobile)
+
+When a user selects the overflow menu on mobile, the Adaptive Card displays the buttons that are defined. There's an integrated sheet that displays an overflow menu with card related tasks with a message option. A long press on any message displays a list of related messages. This option is available only for actions.
+
+  :::image type="content" source="../../assets/images/over-flow-menu-mob-1.png" alt-text="Screenshot shows an example of overflow menu on Teams mobile.":::
+
+---
+
 ## Format cards with HTML
 
 The following card types support HTML formatting in Teams:
 
-* Office 365 Connector cards: Limited Markdown and HTML formatting is supported in Office 365 Connector cards.
+* Connector cards for Microsoft 365 Groups: Limited Markdown and HTML formatting are supported in connector card for Microsoft 365 Groups.
 * Hero and thumbnail cards: HTML tags are supported for simple cards, such as the hero and thumbnail cards.
 
-Formatting is different between the desktop and the mobile versions of Teams for Office 365 Connector cards and simple cards. In this section, you can go through the HTML format example for connector cards and simple cards.
+Formatting is different between the desktop and the mobile versions of Teams for connector cards for Microsoft 365 Groups and simple cards. In this section, you can go through the HTML format example for connector cards and simple cards.
 
-# [HTML format for Office 365 Connector cards](#tab/connector-html)
+# [HTML format for connector cards for Microsoft 365 Groups](#tab/connector-html)
 
 Connector cards support limited Markdown and HTML formatting.
 
@@ -545,20 +652,20 @@ In connector cards, newlines are rendered in HTML using the `<p>` tag.
 
 On the desktop, HTML formatting for connector cards appears as shown in the following image:
 
-:::image type="content" source="../../assets/images/Cards/Connector-desktop-html-combined.png" alt-text="HTML formatting for connector cards in the desktop client":::
+:::image type="content" source="../../assets/images/Cards/Connector-desktop-html-combined.png" alt-text="Screenshot shows HTML formatting for connector cards in the desktop client.":::
 
 On iOS, HTML formatting appears as shown in the following image:
 
-:::image type="content" source="../../assets/images/Cards/connector-iphone-html-combined-80.png" alt-text="HTML formatting for connector cards in the iOS client":::
+:::image type="content" source="../../assets/images/Cards/connector-iphone-html-combined-80.png" alt-text="Screenshot shows HTML formatting for connector cards in the iOS client.":::
 
 Connector cards using HTML for iOS include the following issues:
 
-* Inline images are not rendered on iOS using either Markdown or HTML in connector cards.
-* Preformatted text is rendered but does not have a gray background.
+* Inline images aren't rendered on iOS using either Markdown or HTML in connector cards.
+* Preformatted text is rendered but doesn't have a gray background.
 
 On Android, HTML formatting appears as shown in the following image:
 
-:::image type="content" source="../../assets/images/Cards/connector-android-html-combined.png" alt-text="HTML formatting for connector cards in the Android client":::
+:::image type="content" source="../../assets/images/Cards/connector-android-html-combined.png" alt-text="Screenshot shows HTML formatting for connector cards in the Android client.":::
 
 ### Format sample for HTML connector cards
 
@@ -614,7 +721,7 @@ The following code shows an example of formatting for HTML connector cards:
 
 # [HTML format for hero and thumbnail cards](#tab/simple-html)
 
-HTML tags are supported for simple cards, such as the hero and thumbnail cards. Markdown is not supported.
+HTML tags are supported for simple cards, such as the hero and thumbnail cards. Markdown isn't supported.
 
 | Style | Example | HTML |
 | --- | --- | --- |
@@ -635,19 +742,19 @@ As there are resolution differences between the desktop and mobile platform, for
 
 On the desktop, HTML formatting appears as shown in the following image:
 
-:::image type="content" source="../../assets/images/Cards/card-formatting-xml-desktop-v2.png" alt-text="HTML formatting in the desktop client":::
+:::image type="content" source="../../assets/images/Cards/card-formatting-xml-desktop-v2.png" alt-text="Screenshot shows HTML formatting in the desktop client.":::
 
 On iOS, HTML formatting appears as shown in the following image:
 
-:::image type="content" source="../../assets/images/Cards/card-formatting-xml-mobile-v2.png" alt-text="HTML formatting in the iOS client":::
+:::image type="content" source="../../assets/images/Cards/card-formatting-xml-mobile-v2.png" alt-text="Screenshot shows HTML formatting in the iOS client.":::
 
-Character formatting, such as bold and italic are not rendered on iOS.
+Character formatting, such as bold and italic isn't rendered on iOS.
 
 On Android, HTML formatting appears as shown in the following image:
 
-:::image type="content" source="../../assets/images/Cards/card-formatting-xml-android-60.png" alt-text="HTML formatting in the Android client":::
+:::image type="content" source="../../assets/images/Cards/card-formatting-xml-android-60.png" alt-text="Screenshot shows HTML formatting in the Android client.":::
 
-Character formatting, such as bold and italic display correctly on Android.
+Character formatting, such as bold and italic displays correctly on Android.
 
 ### Format example for simple cards
 
@@ -659,10 +766,17 @@ You can test formatting in your own cards by modifying this code.
 
 ---
 
+## Code samples
+
+|S.No.| Description|.NET|Node.js|
+|:--|:--|:--------------------------------------------------------|-----|
+|1|Sample which showcase different card formatting used.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-formatting-cards/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-formatting-cards/nodejs)|
+
 ## See also
 
-* [Card actions](./cards-actions.md)
-* [Use task modules from bots](~/task-modules-and-cards/task-modules/task-modules-bots.md)
-* [Task modules](~/task-modules-and-cards/cards/cards-format.md)
+* [Cards and task modules](../cards-and-task-modules.md)
 * [Format your bot messages](~/bots/how-to/format-your-bot-messages.md)
+* [Use task modules from bots](~/task-modules-and-cards/task-modules/task-modules-bots.md)
 * [Schema explorer for Adaptive Cards](https://adaptivecards.io/explorer/TextBlock.html)
+* [Create connectors for Microsoft 365 Groups](../../webhooks-and-connectors/how-to/connectors-creating.md)
+* [Create Incoming Webhooks](../../webhooks-and-connectors/how-to/add-incoming-webhook.md)

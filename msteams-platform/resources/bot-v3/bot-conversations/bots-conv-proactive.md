@@ -13,7 +13,8 @@ A proactive message is a message that is sent by a bot to start a conversation. 
 * Welcome messages for personal bot conversations.
 * Poll responses.
 * External event notifications.
-Sending a message to start a new conversation thread is different than sending a message in response to an existing conversation: when your bot starts a new conversation, there's no pre-existing conversation to post the message to. To send a proactive message, you need to:
+
+Sending a message to start a new conversation thread is different than sending a message in response to an existing conversation. When your bot starts a new conversation, there's no pre-existing conversation to post the message to. To send a proactive message, you need to:
 
 1. [Decide what you're going to say](#best-practices-for-proactive-messaging)
 1. [Obtain the user's unique ID and tenant ID](#obtain-necessary-user-information)
@@ -67,13 +68,17 @@ See [Install apps for users](/graph/api/userteamwork-post-installedapps?view=gra
 
 ## Examples
 
-Be sure that you authenticate and have a bearer token before creating a new conversation using the REST API.
+Be sure that you authenticate and have a [bearer token](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication#bot-to-connector) before creating a new conversation using the REST API.
+
+```http
+POST {Service URL of your bot}/v3/conversations
+```
 
 ```json
-POST /v3/conversations
+
 {
   "bot": {
-    "id": "28:10j12ou0d812-2o1098-c1mjojzldxcj-1098028n ",
+    "id": "c38eda0f-e780-49ae-86f0-afb644203cf8",
     "name": "The Bot"
   },
   "members": [
@@ -87,7 +92,12 @@ POST /v3/conversations
     }
   }
 }
+
 ```
+
+You can get the `{Service URL of your bot}` from `TurnContext` object like `turnContext.Activity.ServiceURL` parameter.
+
+Provide `id` as your bot app ID and `name` as your bot name. You can get the `members` `id` from your bots `TurnContext` object such as `turnContext.Activity.From.Id`. Similarly, `id` of tenant, from your bots `TurnContext` object such as `turnContext.Activity.ChannelData.Tenant.Id`.
 
 You must supply the user ID and the tenant ID. If the call succeeds, the API returns with the following response object.
 
@@ -202,4 +212,4 @@ namespace Microsoft.Teams.TemplateBotCSharp.Dialogs
 
 ## See also
 
-[Bot Framework samples](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)
+[Bot Framework samples](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/README.md).

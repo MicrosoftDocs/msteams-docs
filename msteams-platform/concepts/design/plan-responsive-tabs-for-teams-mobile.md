@@ -34,8 +34,8 @@ After you've identified the app scope, it's time to understand the following thr
 
    Provide complete app experiences to engage on mobile. As your users engage with your app, provide full immersive experience on mobile, either at par or better than desktop experience. To provide good experience for your users, make all use cases responsive on mobile.
 
-> [!TIP]
-> To get information on the design guidelines, see [design process for Teams apps](design-teams-app-process.md).
+    > [!TIP]
+    > To get information on the design guidelines, see [design process for Teams apps](design-teams-app-process.md).
 
 ## Use cases
 
@@ -167,7 +167,7 @@ In the third stage, provide complete experience to your users. You can enable us
 * Navigate around content.
 * Add layers and filters.
 * Delete, undo, and redo operations.
-* Access camera and microphone using JS SDK APIs. For more information on device capabilities, see [device capabilities overview](../device-capabilities/device-capabilities-overview.md).
+* Access camera and microphone using TeamsJS APIs. For more information on device capabilities, see [device capabilities overview](../device-capabilities/device-capabilities-overview.md).
 
 :::image type="content" source="../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-enablement.png" alt-text="Enable user experience by adding text shapes and quick notes and other capabilities.":::
 
@@ -177,9 +177,9 @@ In the third stage, provide complete experience to your users. You can enable us
 
 ## See also
 
-The following design and validation guidelines help depending on the scope of your app:
-
+* [Plan your app with Teams features](../app-fundamentals-overview.md)
 * [Designing your tab](../../tabs/design/tabs.md)
 * [Designing your bot](../../bots/design/bots.md)
 * [Designing task modules](../..//task-modules-and-cards/task-modules/design-teams-task-modules.md)
 * [Store validation guidelines](../deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)
+* [Tabs on mobile](../../tabs/design/tabs-mobile.md)

@@ -1,7 +1,7 @@
 ---
 title: Define message extension search commands
 author: surbhigupta
-description: In this module, learn about message extension search commands for Teams apps, to create a search command through app manifest and manually.
+description: Learn about message extension search commands for Teams apps, to create a search command through app manifest and manually.
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: medium
@@ -28,11 +28,11 @@ The search command is invoked from any one or both of the following locations:
 * Compose message area: The buttons at the bottom of the compose message area.
 * Command box: By @mentioning in the command box.
 
-  When search command is invoked from the compose message area, the user sends the results to the conversation. When it's invoked from the command box, the user interacts with the resulting card, or copies it for use elsewhere.
+When a search command is invoked from the compose message area, the user sends the results to the conversation. When it's invoked from the command box, the user interacts with the resulting card, or copies it for use elsewhere.
 
 The following image displays the invoke locations of the search command:
 
-:::image type="content" source="~/assets/images/messaging-extension/search-command-invoke-locations.png" alt-text="Search command invoke locations":::
+:::image type="content" source="~/assets/images/messaging-extension/search-command-invoke-locations.png" alt-text="Screenshot shows the invoke locations of a search command in a Teams channel.":::
 
 ## Add the search command to your app manifest
 
@@ -49,28 +49,28 @@ The prerequisite to create a search command is that you must already have create
 1. After importing an app package, select **Message extensions** under **App features**.
 1. To create a message extension, you need a Microsoft registered bot. You can either use an existing bot or create a new bot. Select **Create new bot** option, give a name to the new bot, and then select **Create**.
 
-   :::image type="content" source="../../../assets/images/tdp/bot-page.png" alt-text="The screenshot show you how to create a bot in Developer Portal.":::
+   :::image type="content" source="../../../assets/images/tdp/bot-page.png" alt-text="Screenshot shows the options to configure a bot for an app in Teams Developer Portal.":::
 
 1. To use an existing bot, select **Select an existing bot** and choose the existing bots from the dropdown list, or select **Enter a bot ID** if you have a bot ID created already.
 
 1. Select the scope of the messaging extension and select **Save**.
 
-1. Select **Add a command** in the **Command** section to include the commands, which decides the behavior of message extension.
+1. Select **Add a command** in the **Command** section to include the commands, which decide the behavior of message extension.
 The following image displays command addition for message extension:
 
-   :::image type="content" source="../../../assets/images/tdp/add-a-command.PNG" alt-text="The screenshot shows how to add a command to define the behavior of the message extension.":::
+   :::image type="content" source="../../../assets/images/tdp/add-a-command.PNG" alt-text="Screenshot shows how to add a command in Teams Developer Portal to define the behavior of the message extension.":::
 
 1. Select **Search** and enter **Command ID**, **Command title**, and **Command description**.
 
 1. Enter all the parameters and select the type of input from the dropdown list.
 
-   :::image type="content" source="../../../assets/images/tdp/add-a-command-parameter.PNG" alt-text="The screenshot shows how to add a parameter to define your command for message extension.":::
+   :::image type="content" source="../../../assets/images/tdp/add-a-command-parameter.PNG" alt-text="Screenshot shows how to add a parameter to define your command in Teams Developer Portal for a message extension.":::
 
 1. Select **Add a domain** under **Preview links**.
 
 1. Enter valid domain and then select **Add**.
 
-   :::image type="content" source="../../../assets/images/tdp/add-domain.PNG" alt-text="Screenshot shows how to add a valid domain to your messaging extension for link unfurlings.":::
+   :::image type="content" source="../../../assets/images/tdp/add-domain.PNG" alt-text="Screenshot shows how to add a valid domain to your messaging extension for link unfurling.":::
 
 1. Select **Save**.
 
@@ -80,7 +80,7 @@ The following image displays command addition for message extension:
 
 1. Select ellipse under command section and then select **Edit parameter**.
 
-   :::image type="content" source="../../../assets/images/tdp/edit-parameters.PNG" alt-text="Screenshots shows how to add additional parameters for your message extension.":::
+   :::image type="content" source="../../../assets/images/tdp/edit-parameters.PNG" alt-text="Screenshots shows how to edit parameters for your message extension.":::
 
 1. Select **Add a Parameters** and enter all the parameters.
 
@@ -104,11 +104,11 @@ You must add the details of the search parameter that defines the text visible t
 | Property name | Purpose | Is required? | Minimum manifest version |
 |---|---|---|---|
 | `parameters` | This property defines a static list of parameters for the command. | No | 1.0 |
-| `parameter.name` | This property describes the name of the parameter. This is sent to your service in the user request. | Yes | 1.0 |
+| `parameter.name` | This property describes the name of the parameter. The `parameter.name` is sent to your service in the user request. | Yes | 1.0 |
 | `parameter.description` | This property describes the parameter’s purposes or example of the value that must be provided. This value appears in the UI. | Yes | 1.0 |
 | `parameter.title` | This property is a short user-friendly parameter title or label. | Yes | 1.0 |
 | `parameter.inputType` | This property is set to the type of the input required. Possible values include `text`, `textarea`, `number`, `date`, `time`, `toggle`. Default is set to `text`. | No | 1.4 |
-| `parameters.value` | Initial value for the parameter. Currently the value is not supported | No | 1.5 |
+| `parameters.value` | Initial value for the parameter. Currently the value isn't supported | No | 1.5 |
 
 #### Example
 
@@ -137,15 +137,16 @@ Following section is an example of the simple app manifest of the `composeExtens
   ],
 ...
 }
+
 ```
 
 For the complete app manifest, see [App manifest schema](~/resources/schema/manifest-schema.md).
 
 ## Code sample
 
-| Sample Name           | Description | .NET    | Node.js   |
-|:---------------------|:--------------|:---------|:--------|
-|Teams message extension search   |  Describes how to define search commands and respond to searches.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
+| Sample name           | Description | .NET    | Node.js   | Manifest|
+|:---------------------|:--------------|:---------|:--------|:--------------|
+|Teams message extension search   |  Describes how to define search commands and respond to searches.        |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp/demo-manifest/msgext-search.zip)|
 
 ## Step-by-step guide
 
@@ -155,3 +156,11 @@ Follow the [step-by-step guide](../../../sbs-messagingextension-searchcommand.ym
 
 > [!div class="nextstepaction"]
 > [Respond to the search commands](~/messaging-extensions/how-to/search-commands/respond-to-search.md).
+
+## See also
+
+* [Cards](../../../task-modules-and-cards/what-are-cards.md)
+* [Task modules](../../../task-modules-and-cards/what-are-task-modules.md)
+* [App manifest schema for Teams](../../../resources/schema/manifest-schema.md)
+* [Developer Portal for Teams](../../../concepts/build-and-test/teams-developer-portal.md)
+* [Message extensions](../../what-are-messaging-extensions.md)

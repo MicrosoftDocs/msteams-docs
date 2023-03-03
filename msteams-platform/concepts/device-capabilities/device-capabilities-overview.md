@@ -1,7 +1,7 @@
 ---
 title: Device capabilities - Overview
 author: Rajeshwari-v
-description: Learn how to integrate native device capabilities, such as, camera, image, media, microphone, QR code, and more with Microsoft Teams app.
+description: Learn how to integrate native device capabilities, such as, location and media (camera, microphone, gallery, QR or barcode scanner) with Microsoft Teams app.
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
@@ -15,7 +15,7 @@ Device permissions are different in the browser. Previously, browser handled how
 
 ## Native device capabilities
 
-A mobile or desktop has built-in devices, such as camera and microphone, called capabilities. You can access the following device capabilities on mobile or desktop through dedicated APIs available in [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true):
+A mobile or desktop has built-in devices, such as camera and microphone, called capabilities. You can access the following device capabilities on mobile or desktop through dedicated APIs available in [Microsoft Teams JavaScript client library](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true):
 
 * Media capabilities, such as
   * Camera
@@ -28,7 +28,7 @@ After getting access to the device capabilities, you can integrate them with the
 
 ## Request device permissions
 
-Use the tools present in [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) to request the required  [permissions](native-device-permissions.md) for accessing the native device capabilities. While access to these capabilities is standard in modern web browsers, you must inform Teams about the capabilities that you are using by updating your app manifest. This update allows you to request permissions while your app runs on Teams mobile or desktop clients.
+Use the tools present in [Microsoft Teams JavaScript client library](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) to request the required  [permissions](native-device-permissions.md) for accessing the native device capabilities. While access to these capabilities is standard in modern web browsers, you must inform Teams about the capabilities that you are using by updating your app manifest. This update allows you to request permissions while your app runs on Teams mobile or desktop clients.
 
 ## Integrate device capabilities
 
@@ -43,6 +43,6 @@ Also, you can integrate the Teams native [people picker control](people-picker-c
 
 ## Code sample
 
-| Sample Name           | Description | Node.js    |
-|:---------------------|:--------------|:---------|
-|Device permissions | Describes how to demonstrates Teams tab sample app for device permissions. |[View](<https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs>)|
+| Sample name           | Description | Node.js    | Manifest|
+|:---------------------|:--------------|:---------|:---------|
+|Device permissions | Describes how to demonstrate Teams tab sample app for device permissions. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs/demo-manifest/tab-device-permissions.zip)|

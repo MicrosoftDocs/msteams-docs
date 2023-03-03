@@ -38,10 +38,10 @@ The schema defines the following properties:
 |Property|Type|Maximum length|Description|
 |---------------|--------|---------|------------------|
 |`$schema`|URI|NA|The https:// URL referencing the JSON Schema for the manifest.|
-|`name.short`|String|30|Replaces the corresponding string from the app manifest with the value provided here.|
-|`name.full`|String|100|Replaces the corresponding string from the app manifest with the value provided here.|
-|`description.short`|String|80|Replaces the corresponding string from the app manifest with the value provided here.|
-|`description.full`|String|4000|Replaces the corresponding string from the app manifest with the value provided here.|
+|`name.short`|String|30|Replaces the corresponding string from the app manifest with the value provided here. The property is required in the localization JSON.|
+|`name.full`|String|100|Replaces the corresponding string from the app manifest with the value provided here. The property is required in the localization JSON.|
+|`description.short`|String|80|Replaces the corresponding string from the app manifest with the value provided here. The property is required in the localization JSON.|
+|`description.full`|String|4000|Replaces the corresponding string from the app manifest with the value provided here. The property is required in the localization JSON.|
 |`staticTabs\\[([0-9]|1[0-5])\\]\\.name`|String|128|Replaces the corresponding strings from the app manifest with the value provided here.|
 |`bots\\[0\\]\\.commandLists\\[[0-2]\\]\\.commands\\[[0-9]\\]\\.title`|String|32|Replaces the corresponding strings from the app manifest with the value provided here.|
 |`bots\\[0\\]\\.commandLists\\[[0-2]\\]\\.commands\\[[0-9]\\]\\.description`|String|128|Replaces the corresponding strings from the app manifest with the value provided here.|
@@ -57,4 +57,5 @@ The schema defines the following properties:
 
 ## See also
 
-[Localize your app](~/concepts/build-and-test/apps-localization.md)
+* [Localize your app](~/concepts/build-and-test/apps-localization.md)
+* [App manifest](manifest-schema.md)

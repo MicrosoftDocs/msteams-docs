@@ -1,0 +1,215 @@
+### YamlMime:Tutorial
+title: Create Teams workflow bot
+metadata:
+  title: Create Teams workflow bot
+  description: With this learning module, you'll learn to create a workflow bot in Microsoft Teams with the Adaptive Card action handler feature.
+  audience: Developer
+  level: Beginner
+  ms.date: 28/09/2022
+  ms.topic: interactive-tutorial
+  nextTutorialHref: toolkit/add-capability.md
+  nextTutorialTitle: Add capabilities to Teams apps
+  ms.custom: mvc
+  ms.localizationpriority: none
+items:
+- durationInMinutes: 1
+  content: |
+    The workflow bot allows users to interact with an Adaptive Card enabled by the Adaptive Card action handler feature in the workflow bot app. When you respond to the triggered Adaptive Card action, then a sequential workflow is completed.
+    When you get an Adaptive Card, it provides one or more buttons in the card for your input. You can also call an API, and then send another Adaptive Card in your conversation in response to the card action.
+    In this tutorial, you'll learn:
+      * How to build workflow bot with Teams Toolkit.
+      * About the directory structure of your app.
+      * Customize installation of your bot with the Adaptive Card response.
+    
+    You can see the following output:
+    
+    :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-final-output.png" alt-text="Workflow bot output.":::
+- title: Prerequisites
+  durationInMinutes: 1
+  content: |
+    Here's a list of tools you need for building and deploying your apps.
+
+    | &nbsp; | Install | For using |
+    | --- | --- | --- |
+    | **Required** | &nbsp; | &nbsp; |
+    | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript or TypeScript, build environments. Use the latest version. |
+    | &nbsp; | [Teams Toolkit](#install-the-teams-toolkit) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use version 4.0.0.|
+    | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. Use version 14 or 16.|
+    | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call and all in one place.|
+    | &nbsp; | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
+    | &nbsp; | [Microsoft 365 developer account](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | Access to Teams account with the appropriate permissions to install an app. |
+    > [!NOTE]
+    > The guide is tested on Teams Toolkit version 4.0.0 and Nodejs version 14 and 16. The steps in this guide may work with other versions, but that hasn't been tested.
+    
+    ## Prepare development environment
+    After you've installed the required tools, set up the development environment.
+    
+    ### Install the Teams Toolkit
+    The Teams Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app, publish to the Teams store, and more. 
+    
+    You can use the toolkit with Visual Studio Code or CLI (command-line interface) called `TeamsFx`.
+    
+    # [Visual Studio Code](#tab/vscode)
+    
+    1. Open Visual Studio Code and select **Extensions** (**Ctrl+Shift+X** / **⌘⇧-X** or **View > Extensions**).
+    1. In the search box, enter **Teams toolkit**.
+    1. Select **Install** next to the Teams Toolkit.
+       :::image type="content" source="~/assets/images/sbs-command-bot/teams-toolkit.png" alt-text="Illustration shows the Teams Toolkit extension installation.":::
+    
+    The Teams Toolkit :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/hw-teams-toolkit-sidebar-icon.png" alt-text="Illustration shows the Teams Toolkit icon in Visual Studio Code side bar."::: icon appears in the Visual Studio Code **Activity Bar** after it's installed.
+        
+    You can also find the Teams Toolkit on the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
+    
+    > [!NOTE]
+    > The latest version of Teams Toolkit is 4.2.0.
+
+    # [Command line](#tab/cli)
+    To install the TeamsFx CLI, use the `npm` package manager:
+    ``` bash
+    npm install -g @microsoft/teamsfx-cli
+    ```
+    Depending on your configuration, you may need to use `sudo` to install the CLI:
+    ``` bash
+    sudo npm install -g --unsafe-perm @microsoft/teamsfx-cli
+    ```
+    It's more common on Linux and macOS systems.
+    Ensure you add the npm global cache to your PATH. This step is normally done as part of the Node.js installer.  
+    You can use the CLI with the `teamsfx` command. Verify that the command is working by running `teamsfx -h`.
+    
+    > [!NOTE]
+    > Before you run TeamsFx in PowerShell terminals, ensure you enable the **remote signed** execution policy for PowerShell.
+    
+    ## Set up your Teams development tenant
+    A **tenant** is like a space, or a container where you chat, share files, and run meetings for your organization in Teams. You can also sideload and test your app.
+    ### Check for sideloading option
+    After creating the app, you must load your app in Teams without distributing it. This is known as sideloading. Sign-in to your Microsoft 365 account to view this option.
+    > [!NOTE]
+    > Sideloading is necessary for previewing and testing apps in Teams local environment. Enable Sideloading to preview and test your app in Teams locally.
+    
+    Do you already have a tenant, and do you have the admin access? Let's check if you really do!
+    To verify sideload apps in Teams:
+    1. In the Teams client, select **Store** .
+    1. Select **Manage your apps**.
+    1. Select **Publish an app**.
+    1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/upload-custom-app.png" alt-text="Illustration shows the option to upload a custom app in Teams.":::
+        > [!NOTE]
+        > Contact Teams administrator, if you don't have the option to upload a custom app.
+    ### Create a free Teams developer tenant (optional)
+    If you don't have a Teams developer account, you can get it free. Join the Microsoft 365 developer program!
+    1. Go to the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
+    1. Select **Join Now** and follow the onscreen instructions.
+    1. Select **Setup E5 subscription** from the welcome screen.
+    1. Set up administrator account. After you finish, the following screen displays.
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/microsoft-365.png" alt-text="Microsoft":::
+    1. Sign-in to Teams using the new administrator account. Now you should have the **Upload a custom app** option.
+
+- title: Build workflow bot
+  durationInMinutes: 5
+  content: |
+    To build workflow bot using Visual Studio Code, perform the following steps:
+    1. Open Visual Studio Code.
+    1. Select the **Teams Toolkit** :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code **Activity Bar**.
+    1. Select **Create a new app**.
+      
+        :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-create.png" alt-text="create a new teams app in side panel.":::
+    
+    1. Select **Create a new Teams** app option to create an app using Teams Toolkit.
+    
+        :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-teams-app.png" alt-text=" select option create a new teams app.":::
+    
+    1. Under **Scenario-based Teams apps**, select **Workflow bot** as the capability that you want to build in your app.
+    
+        :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-capabilities-workflow.png" alt-text=" select option Work flow bot for capabilities" lightbox="./assets/images/sbs-workflow-bot/sbs-workflow-bot-capabilities-workflow.png":::
+    
+    1. Select **TypeScript** as the programming language.
+    
+        :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-program-lang.png" alt-text=" select option type script for programming language":::
+    
+    1. Select **Default folder** to store your project root folder in default location.
+      
+        > [!NOTE]
+        > You can also change the default location by selecting **Browse...**
+        
+        :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-workspace-folder.png" alt-text=" select to add workspace folder":::
+       
+    1. Enter a suitable name for your app.
+              
+        :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-app-name.png" alt-text="enter application name":::
+    
+    1. Select **Enter**.
+        
+    1. The workflow bot is created in a few seconds, and you can see the scaffolding.
+        
+        :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-scaffolding1.png" alt-text="your app is created with the scaffolding visible in the side panel":::
+    
+    1. Select **Run and Debug** :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/run-debug-icon.png"::: icon from the Visual Studio Code **Activity Bar**.
+    
+    1. Select **Debug (Edge)** or **Debug (Chrome)** from the dropdown list.
+    
+       :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-local-debug1.png" alt-text="your app is created with the scaffolding visible in the side panel":::    
+    
+    1. Select **Start Debugging**.
+    
+    1. Select **Add**.
+        :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-add-app.png" alt-text="select add to add your workflow bot app":::
+    ### Take tour of source code
+    Teams Toolkit provides components for building an app. After creating the project, you can view the project folders and files in the Explorer area of Visual Studio Code for JavaScript/TypeScript. 
+    
+    :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-scaffolding2.png" alt-text="select add to add your workflow bot app":::
+    
+    
+    The created bot is a normal TeamsFx project that contains following folders:
+    
+    | Folder | Content |
+    |   ---  |   ---   |
+    |`.fx`   | Project level settings, configurations, and environment information.|
+    |`.vscode`| Visual Studio Code files for local debug |
+    |`bot`   | The source code for the workflow bot Teams application.|
+    |`templates`| Templates for the Teams application manifest and for provisioning Azure resources.|
+    
+    The core implementation for the Teams bot is in `bot/` folder. The following files under `bot/` folder provide the business logic for the workflow bot.
+    These files can be updated to fit your business logic requirements. The default implementation provides a starting point to help you get started:
+    
+    | Folder | Content |
+    |   ---  |   ---   |
+    |`src/index.js(ts)` | Application entry point and `restify` handlers for the workflow bot.|
+    |`src/adaptiveCards/helloworldCommand.json` | A generated Adaptive Card that is sent to Teams. |
+    |`src/commands/helloworldCommandHandler.js(ts)` | Responds to the command message.|
+    |`src/cardActions/doStuffActionHandler.js(ts)` | Responds to the `doStuff` card action.|
+    |`src/cardModels.js(ts)` | The default Adaptive Card data model.|
+    
+    The following file implements the core workflow bot on the Bot Framework, you generally don't need to customize this file:
+    
+    | File/Folder | Content |
+    |   ---  |   ---   |
+    | `src/internal/initialize.js(ts)`| Application initialization and bot message handling.|
+    
+    The following files are project-related files, you generally don't need to customize these files:
+    
+    | File/Folder | Content |
+    |   ---  |   ---   |
+    | `.gitignore` | Git ignore file|
+    | `package.json` | NPM package file|
+    
+- title: Interaction with the workflow bot
+  durationInMinutes: 2
+  content: |
+    You can interact with the bot in Teams by sending a helloWorld command. After running this template, you get a response then select the **workflow bot** and **Enter**.
+     :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-action-response.png" alt-text="select add to add your workflow bot app":::
+    
+    You'll receive the following command response in Adaptive Card:
+     :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-debug-output1.png" alt-text="select add to add your workflow bot app":::
+    
+    Then you can select the **DoStuff** button to invoke the action, that responds with the following updated Adaptive Card:
+     :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-debug-output2.png" alt-text="select add to add your workflow bot app":::
+       
+- title: Complete challenge
+  durationInMinutes: 1
+  content: |
+    Did you come up with something like this?
+
+    :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-debug-output2.png" alt-text="select add to add your workflow bot app":::
+    
+- content: |
+    You've completed the tutorial to get started with workflow bot for Microsoft Teams.

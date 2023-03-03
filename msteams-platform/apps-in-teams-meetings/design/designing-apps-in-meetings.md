@@ -20,7 +20,7 @@ You can find more comprehensive design guidelines, including elements that you c
 
 ## Add a meeting extension
 
-Users can add a meeting extension before and during meetings. They also can add an app for a specific meeting directly from the Teams store.
+Users can add a meeting extension before and during meetings. They can also add an app for a specific meeting directly from the Teams store.
 
 ### Add before a meeting
 
@@ -120,7 +120,7 @@ Remember the following if you allow scrolling:
 
 ### Navigation
 
-For scenarios with navigation layers or heavy content, we recommend allowing users to navigate to a secondary layer. Users must be able to go back to the previous layer.
+For scenarios with navigation layers or heavy content, we recommend allowing users to go to a secondary layer. Users must be able to go back to the previous layer.
 
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-nav.png" alt-text="Example shows in-meeting navigation.":::
 
@@ -188,9 +188,6 @@ You can allow users to share and interact with some or all of your app content o
 * Playing a game.
 
 Apps shared to the meeting stage occupy the same space as a shared screen. The stage reorients for all meeting participants the same way, too.
-
-> [!NOTE]
-> Currently, mobile users can't share app content to the meeting stage. They can see content shared from desktop, though.
 
 ### Use cases
 
@@ -265,12 +262,12 @@ The shared meeting stage is all about collaboration and participation. Here are 
 
 Apps shared to the meeting stage vary in size based on the state of the meeting and how the user resizes the window. Maintain padding and the responsive layout of navigation and controls just as you would in a browser.
 
-* **Side panel**: A user can have the side panel open at any time during a meeting to chat, view the roster, or use an app (i.e., in-meeting tab). The stage dynamically rearranges when the panel is open.
+* **Side panel**: A user can have the side panel open at any time during a meeting to chat, view the roster, or use an app (that is, in-meeting tab). The stage dynamically rearranges when the panel is open.
 * **Video and audio grid**: The video and audio grid is always visible to show meeting participants. When a user spotlights or pins someone in the meeting, this increases the height or width of the participant grid depending on the orientation.
 
 #### Meeting stage (without side panel)
 
-When the side panel isn't open, the meeting stage is 994x678 pixels by default and can be a minimum 792x382 pixels.
+When the side panel isn't open, the meeting stage is 994x678 pixels, by default and can be a minimum 792x382 pixel.
 
 :::image type="content" source="~/assets/images/apps-in-meetings/meeting-stage-no-side-panel.png" alt-text="Image showing shared meeting stage responsiveness with the side panel closed.":::
 
@@ -338,7 +335,7 @@ Your app should only ask users to focus on a single surface a time, whether it's
 
 #### Do: Use a one-column dialog
 
-Since the dialogs are at the center of the meeting stage, task completion should be fast and simple to avoid user frustration.
+Since the dialogs are at the center of the meeting stage, task completion should be fast, and simple to avoid user frustration.
 
    :::column-end:::
    :::column span="":::
@@ -474,7 +471,7 @@ Colors that clash with the meeting environment may be distracting and appear les
 
 #### Do: Have a back button
 
-If you have more than one layer of navigation in an in-meeting tab, users must be able to go back to their previous views.
+If you've more than one layer of navigation in an in-meeting tab, users must be able to go back to their previous views.
 
    :::column-end:::
    :::column span="":::
@@ -524,4 +521,4 @@ Floating navigation and controls off screen and requiring a scroll to find can b
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Configure your app for meetings](~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)
+> [Configure your app for meetings](~/apps-in-teams-meetings/build-tabs-for-meeting.md)

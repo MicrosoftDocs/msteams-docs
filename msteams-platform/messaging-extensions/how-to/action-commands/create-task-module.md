@@ -1,7 +1,7 @@
 ---
 title: Create and send task module
 author: surbhigupta
-description: In this module, learn how to handle the initial invoke action and respond with a task module from an action messaging extension command
+description: Learn how to create and send task modules. Handle the initial invoke action and respond with a task module from an action message extension command.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
@@ -978,10 +978,10 @@ private static Attachment GetAdaptiveCardAttachmentFromFile(string fileName)
 
 ## Code sample
 
-| Sample Name           | Description | .NET    | Node.js   | Python |
-|:---------------------|:--------------|:---------|:--------|
-|Teams message extension action| Describes how to define action commands, create task module, and  respond to task module submit action. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/51.teams-messaging-extensions-action) |
-|Teams message extension search   |  Describes how to define search commands and respond to searches.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/50.teams-messaging-extension-search)|
+| Sample name           | Description | .NET    | Node.js   | Python | Manifest|
+|:---------------------|:--------------|:---------|:--------|:--------|:--------|
+|Teams message extension action| Describes how to define action commands, create task module, and  respond to task module submit action. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/python) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/csharp/demo-manifest/msgext-action.zip)|
+|Teams message extension search   |  Describes how to define search commands and respond to searches.        |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/python)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp/demo-manifest/msgext-search.zip)|
 
 ## Next step
 
@@ -990,4 +990,9 @@ private static Attachment GetAdaptiveCardAttachmentFromFile(string fileName)
 
 ## See also
 
-[Define action commands](~/messaging-extensions/how-to/action-commands/define-action-command.md)
+* [Cards](../../../task-modules-and-cards/what-are-cards.md)
+* [People Picker in Adaptive Cards](../../../task-modules-and-cards/cards/people-picker.md)
+* [Task modules](../../../task-modules-and-cards/what-are-task-modules.md)
+* [App manifest schema for Teams](../../../resources/schema/manifest-schema.md)
+* [Define message extension action commands](define-action-command.md)
+* [Message extensions](../../what-are-messaging-extensions.md)

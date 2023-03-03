@@ -641,3 +641,8 @@ ms.topic: how-to
  "protocolProfileBehavior": {}
 }
 ```
+
+## See also
+
+* [Test resource-specific consent permissions in Teams](test-resource-specific-consent.md)
+* [Resource-specific consent](resource-specific-consent.md)

@@ -1,7 +1,7 @@
 ---
 title: Overview - User story for Microsoft Teams platform
 author: heath-hamilton
-description: Learn the overview user story of how app idea fits user requirements for Microsoft Teams platform.
+description: Learn how Microsoft Teams apps helps your users in the Teams environment. Understand your user, problem, app requirements, benefits, and user centric solution.
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar

@@ -49,7 +49,7 @@ When the content UX is loaded in a shared channel, use the data received from `g
 For more information to enable your tab, see:
 
 * [Get context for your tab for private channels](../../tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels)
-* [Get context for your tab for shared channels](../../tabs/how-to/access-teams-context.md#retrieve-context-in-microsoft-teams-connect-shared-channels)
+* [Get context in shared channels](../../tabs/how-to/access-teams-context.md#get-context-in-shared-channels)
 
 ## Apps and permissions in shared channels
 
@@ -105,5 +105,6 @@ Apps must function cross-tenants in installation and usage. The following table 
 
 * [Build tabs for Teams](../../tabs/what-are-tabs.md)
 * [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
-* [Shared channels in Microsoft Teams](/MicrosoftTeams/shared-channels)
-* [Retention policy for Teams locations](/microsoft-365/compliance/create-retention-policies)
+* [Shared channels in Microsoft Teams](/microsoftteams/shared-channels)
+* [Channel resource type](/graph/api/resources/channel)
+* [Retension policy for Teams locations](/microsoft-365/compliance/create-retention-policies)

@@ -1,6 +1,6 @@
 ---
 title: Public developer preview manifest schema reference
-description: Learn sample manifest file and description of all its components that are supported for Microsoft Teams.
+description: Learn how to enable the developer preview. Sample public developer preview manifest schema for Microsoft Teams.
 ms.topic: reference
 ms.localizationpriority: medium
 ms.date: 11/15/2021
@@ -10,7 +10,7 @@ ms.date: 11/15/2021
 For information on how to enable developer preview, see [public developer preview for Microsoft Teams](~/resources/dev-preview/developer-preview-intro.md).
 
 > [!NOTE]
-> If you aren't using developer preview features, including running [Teams personal tabs and message extensions in Outlook and Office](../../m365-apps/overview.md), use the [app manifest for GA features](~/resources/schema/manifest-schema.md) instead.
+> If you aren't using developer preview features, including running [Teams personal tabs and message extensions in Outlook and Microsoft 365 app](../../m365-apps/overview.md), use the [app manifest for GA features](~/resources/schema/manifest-schema.md) instead.
 
 The Microsoft Teams manifest describes how the app integrates into the Microsoft Teams platform. Your manifest must conform to the schema hosted at [`https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json`](https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json).
 
@@ -22,7 +22,6 @@ The Microsoft Teams manifest describes how the app integrates into the Microsoft
     "manifestVersion": "devPreview",
     "version": "1.0.0",
     "id": "%MICROSOFT-APP-ID%",
-    "packageName": "com.example.myapp",
     "devicePermissions": [
         "geolocation",
         "media"
@@ -63,7 +62,8 @@ The Microsoft Teams manifest describes how the app integrates into the Microsoft
             "scopes": [
                 "team",
                 "groupchat"
-            ]"context": []
+            ],
+            "context": []
         }
     ],
     "staticTabs": [
@@ -283,7 +283,7 @@ The version of the manifest schema this manifest is using.
 
 **Required** &ndash; String
 
-The version of the specific app. If you update something in your manifest, the version must be incremented as well. This way, when the new manifest is installed, it will overwrite the existing one and the user will get the new functionality. If this app was submitted to the store, the new manifest will have to be re-submitted and re-validated. Then, users of this app will get the new updated manifest automatically in a few hours, after it's approved.
+The version of the specific app. If you update something in your manifest, the version must be incremented as well. This way, when the new manifest is installed, it will overwrite the existing one and the user will get the new functionality. If this app was submitted to the store, the new manifest will have to be resubmitted and revalidated. Then, users of this app will get the new updated manifest automatically in a few hours, after it's approved.
 
 If the app requested permissions change, users will be prompted to upgrade and re-consent to the app.
 
@@ -294,12 +294,6 @@ This version string must follow the [semver](http://semver.org/) standard (MAJOR
 **Required** &ndash; Microsoft app ID
 
 The unique Microsoft-generated identifier for this app. If you've registered a bot via the Microsoft Bot Framework, or your tab's web app already signs in with Microsoft, then you should already have an ID and must enter it here. Otherwise, you must generate a new ID at the Microsoft Application Registration Portal ([My Applications](https://apps.dev.microsoft.com)), enter it here, and then reuse it when you [add a bot](~/bots/how-to/create-a-bot-for-teams.md).
-
-## packageName
-
-**Required** &ndash; String
-
-A unique identifier for this app in reverse domain notation; for example, com.example.myapp.
 
 ## developer
 
@@ -442,7 +436,7 @@ An optional list of commands that your bot can recommend to users. The object is
 
 Optional:
 
-The `connectors` block defines an Office 365 Connector for the app.
+The `connectors` block defines a connector for Microsoft 365 Groups for the app.
 
 The object is an array (maximum of 1 element) with all elements of type `object`. This block is required only for solutions that provide a Connector.
 
@@ -492,6 +486,7 @@ Each command item is an object with the following structure:
 |`messageHandlers`|Array of Objects|5||A list of handlers that allow apps to be invoked when certain conditions are met. Domains must also be listed in `validDomains`.|
 |`messageHandlers.type`|String|||The type of message handler. Must be `"link"`.|
 |`messageHandlers.value.domains`|Array of Strings|||Array of domains that the link message handler can register for.|
+|`messageHandlers.supportsAnonymizedPayloads`|Boolean|||A boolean value that indicates whether the app's link message handler supports anonymous invoke flow. The default value is `false`. To enable zero install for link unfurling, the value needs to be set to `true`. <br/> **Note**: The property `supportAnonymousAccess` is superseded by `supportsAnonymizedPayloads`.|
 |`parameters`|Array of object|5|✔️|The list of parameters the command takes. Minimum: 1; maximum: 5|
 |`parameter.name`|String|64 characters|✔️|The name of the parameter as it appears in the client. This is included in the user request.|
 |`parameter.title`|String|32 characters|✔️|User-friendly title for the parameter.|
@@ -528,7 +523,7 @@ Specifies the native features on a user's device that your app may request acces
 
 **Optional**, except **Required** where noted
 
-A list of valid domains from which the app expects to load any content. Domain listings can include wildcards, for example `*.example.com`. This matches exactly one segment of the domain; if you need to match `a.b.example.com` then use `*.*.example.com`. If your tab configuration or content UI needs to navigate to any other domain besides the one use for tab configuration, that domain must be specified here.
+A list of valid domains from which the app expects to load any content. Domain listings can include wildcards, for example `*.example.com`. This matches exactly one segment of the domain; if you need to match `a.b.example.com` then use `*.*.example.com`. If your tab configuration or content UI needs to go to any other domain besides the one use for tab configuration, that domain must be specified here.
 
 It is **not** necessary to include the domains of identity providers you want to support in your app, however. For example, to authenticate using a Google ID, it's necessary to redirect to accounts.google.com, but you shouldn't include accounts.google.com in `validDomains[]`.
 
@@ -553,7 +548,7 @@ Specify your Microsoft Azure Active Directory (Azure AD) App ID and Graph inform
 
 **Optional**—object
 
-Specify the app's Graph connector configuration. If this is present then [webApplicationInfo.id](#webapplicationinfo) must also be specified.
+Specify the app's Graph connector configuration. If this is present, then [webApplicationInfo.id](#webapplicationinfo) must also be specified.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
@@ -565,7 +560,9 @@ Specify the app's Graph connector configuration. If this is present then [webApp
 
 Indicates whether or not to show the loading indicator when an app or tab is loading. Default is **false**.
 > [!NOTE]
-> If you select`showLoadingIndicator` as true in your app manifest, to load the page correctly, modify the content pages of your tabs and task modules as described in [Show a native loading indicator](../../tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator) document.
+>
+> * If you select`showLoadingIndicator` as true in your app manifest, to load the page correctly, modify the content pages of your tabs and task modules as described in [Show a native loading indicator](../../tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator) document.
+> * If you don't modify the content pages of your tab, the tab app doesn't load and shows the error `There was a problem reaching this app`.
 
 ## isFullScreen
 
@@ -670,7 +667,7 @@ Enables your app in non-standard channels. If your app supports a team scope and
 > [!NOTE]
 >
 > * If your app supports a team scope, it functions in the standard channels regardless of the values that are defined in this property.
-> * Your app can account for the unique properties of each of the channel types to function properly. To enable your tab for private and shared channels, see [retrieve context in private channels](~/tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels) and [retrieve context in shared channels](~/tabs/how-to/access-teams-context.md#retrieve-context-in-microsoft-teams-connect-shared-channels).
+> * Your app can account for the unique properties of each of the channel types to function properly. To enable your tab for private and shared channels, see [retrieve context in private channels](~/tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels) and [get context in shared channels](../../tabs/how-to/access-teams-context.md#get-context-in-shared-channels)
 
 ## defaultInstallScope
 
@@ -769,6 +766,7 @@ Delegated permissions allow the app to access data on behalf of the signed-in us
     |`ChannelMeetingParticipant.Read.Group`| Allows the app to read participant information, including name, role, id, joined, and left times, of channel meetings associated with this team, on behalf of the signed-in user.|
     |`InAppPurchase.Allow.Group`| Allows the app to show marketplace offers to users in this team and complete their purchases within the app, on behalf of the signed-in user.|
     |`ChannelMeetingStage.Write.Group`| Allows the app to show content on the meeting stage in channel meetings associated with this team, on behalf of the signed-in user.|
+    |`LiveShareSession.ReadWrite.Group`|Allows the app to create and synchronize Live Share sessions for meetings associated with this team, and access related information about the meeting's roster, such as member's meeting role, on behalf of the signed-in user.|
 
 * **Resource-specific delegated permissions for chats or meetings**
 
@@ -778,21 +776,14 @@ Delegated permissions allow the app to access data on behalf of the signed-in us
     |`MeetingStage.Write.Chat`|Allows the app to show content on the meeting stage in meetings associated with this chat, on behalf of the signed-in user.|
     |`OnlineMeetingParticipant.Read.Chat`|Allows the app to read participant information, including name, role, id, joined, and left times, of meeting associated with this chat, on behalf of the signed-in user.|
     |`OnlineMeetingParticipant.ToggleIncomingAudio.Chat`|Allows the app to toggle incoming audio for participants in meetings associated with this chat, on behalf of the signed-in user.|
+    |`LiveShareSession.ReadWrite.Chat`|Allows the app to create and synchronize Live Share sessions for meetings associated with this chat, and access related information about the meeting's roster, such as member's meeting role, on behalf of the signed-in user.|
+   |`OnlineMeetingIncomingAudio.Detect.Chat`|Allows the app to detect changes in the status of incoming audio in meetings associated with this chat, on behalf of the signed-in user.|
 
 * **Resource-specific delegated permissions for users**
 
     |**Name**|**Description**|
     |---|---|
     |`InAppPurchase.Allow.User`|Allows the app to show the user marketplace offers and complete the user's purchases within the app, on behalf of the signed-in user.|
-
-* **Resource-specific permissions for Teams live share**
-
-   |Name| Description |
-   | ----- | ----- |
-   |`LiveShareSession.ReadWrite.Chat`|<!--- need info --->|
-   |`LiveShareSession.ReadWrite.Channel`|<!--- need info --->|
-   |`MeetingStage.Write.Chat`|<!--- need info --->|
-   |`OnlineMeetingIncomingAudio.Detect.Chat`|<!--- need info --->|
 
 ## See also
 

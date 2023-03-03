@@ -44,7 +44,7 @@ With Power Apps, you can build business apps that connect to your business data 
 
 ### Power Virtual Agents
 
-Power Virtual Agent is a no code, guided graphical interface solution. It's built on the Microsoft Power Platform and the Bot Framework. It empowers every member of your team to create and maintain rich conversational chatbots that easily integrate with the Teams platform. You can design, develop, and publish intelligent virtual agents for Teams without having to setup a development environment, create a web service, or directly register with the Bot Framework.
+Power Virtual Agent is a no code, guided graphical interface solution. It's built on the Microsoft Power Platform and the Bot Framework. It empowers every member of your team to create and maintain rich conversational chatbots that easily integrate with the Teams platform. You can design, develop, and publish intelligent virtual agents for Teams without having to set up a development environment, create a web service, or directly register with the Bot Framework.
 
 ### Create Virtual Assistant
 
@@ -60,7 +60,7 @@ Moodle is a popular open-source Learning Management System (LMS). It's now integ
 
 ## Create a Share-to-Teams button for your website
 
-Third-party websites can use the launcher script to embed Share to Teams buttons on their webpages. When you select the button, it launches the Share to Teams experience in a pop-up window. This allows you to share a link directly to any person or Microsoft Teams channel without switching context.
+Third-party websites can use the launcher script to embed Share to Teams buttons on their webpages. When you select the button, it launches the Share to Teams experience in a pop-up window. It allows you to share a link directly to any person or Microsoft Teams channel without switching context.
 
 ## Add a Microsoft Teams tab in SharePoint
 
@@ -72,7 +72,7 @@ You can create deep links to the entities in Teams. You can create links to info
 
 ## Integrate device capabilities
 
-Teams platform is continuously enhancing developer capabilities aligning with built-in first-party experiences. The enhanced Teams platform allows partners to access and integrate the native device capabilities, such as camera, QR or barcode scanner, photo gallery, microphone, and location using dedicated APIs available in Microsoft Teams JavaScript client SDK.
+Teams platform is continuously enhancing developer capabilities aligning with built-in first-party experiences. The enhanced Teams platform allows partners to access and integrate the native device capabilities, such as camera, QR or barcode scanner, photo gallery, microphone, and location using dedicated APIs available in Microsoft Teams JavaScript client library.
 
 ## Integrate People Picker
 
@@ -80,7 +80,7 @@ You can integrate the Teams native people picker control that allows users to se
 
 ## Integrate Teams in your external app
 
-You can embed your own experiences into Teams by building Teams apps. If you'd like to *reverse* this model and integrate Teams or other communication capabilities into your own external app experience, see [Azure Communication Services](/azure/communication-services/overview). Azure Communication Services are cloud-based services with REST APIs and client library SDKs to help you integrate communication into your own custom applications. You can embed generic or Teams-styled React Web components for calling and chat with the help of the [UI library](https://azure.github.io/communication-ui-library/).
+You can embed your own experiences into Teams by building Teams apps. If you'd like to *reverse* this model and integrate Teams or other communication capabilities into your own external app experience, see [Azure Communication Services](/azure/communication-services/overview). Azure Communication Services are cloud-based services with REST APIs and client libraries to help you integrate communication into your own custom applications. You can embed generic or Teams-styled React Web components for calling and chat with the help of the [UI library](https://azure.github.io/communication-ui-library/).
 
 Azure Communication Services applications can use public preview functionality to [interoperate with Teams](/azure/communication-services/concepts/teams-interop) and enable your custom application to join Teams meetings anonymously. For example, you can integrate video calling into a mobile banking application and allow end-users to virtually meet with bank employees using Teams.
 
@@ -91,6 +91,7 @@ You can also integrate Microsoft 365 identity to build external applications tha
 * [Map your app's use cases to Teams platform capabilities](~/concepts/design/map-use-cases.md)
 * [Determine your app's entry points](~/concepts/extensibility-points.md)
 * [Considerations for Teams integration](~/samples/integrating-web-apps.md)
+* [Authenticate users in Microsoft Teams](../concepts/authentication/authentication.md)
 * [Create low-code custom apps for Microsoft Teams](~/samples/teams-low-code-solutions.md)
 * [Add a Power Virtual Agents chatbot](~/bots/how-to/add-power-virtual-agents-bot-to-teams.md)
 * [Create virtual assistant](~/samples/virtual-assistant.md)
@@ -101,4 +102,4 @@ You can also integrate Microsoft 365 identity to build external applications tha
 * [Add a Teams tab to SharePoint](~/tabs/how-to/tabs-in-sharepoint.md)
 * [Create deep links](~/concepts/build-and-test/deep-links.md)
 * [Device capabilities](~/concepts/device-capabilities/device-capabilities-overview.md)
-* [people picker control](~/concepts/device-capabilities/people-picker-capability.md)
+* [People picker control](~/concepts/device-capabilities/people-picker-capability.md)

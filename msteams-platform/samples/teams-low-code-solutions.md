@@ -38,13 +38,13 @@ The new [Power Apps app](https://go.microsoft.com/fwlink/?linkid=2143374) in Tea
 
 ### ✔ Teams and Power Automate
 
-You can [create flows to automate repetitive work tasks](https://flow.microsoft.com/connectors/shared_teams/microsoft-teams/) directly within the Teams environment with the [Power Automate app in Teams](/power-automate/flows-teams). You can [trigger a flow from any message in Microsoft Teams](/power-automate/trigger-flow-teams-message) and [use Adaptive Cards within Power Automate](/power-automate/create-adaptive-cards). Additionally, you can build flows to customize and add further value to Microsoft Teams from within the new [Power Apps app](https://go.microsoft.com/fwlink/?linkid=2143539) in Teams.
+You can [create flows to automate repetitive work tasks](https://flow.microsoft.com/connectors/shared_teams/microsoft-teams/) directly within the Teams environment with the [Power Automate app in Teams](/power-automate/teams/install-teams-app). You can [trigger a flow from any message in Microsoft Teams](/power-automate/trigger-flow-teams-message) and [use Adaptive Cards within Power Automate](/power-automate/create-adaptive-cards). Additionally, you can build flows to customize and add further value to Microsoft Teams from within the new [Power Apps app](https://go.microsoft.com/fwlink/?linkid=2143539) in Teams.
 
 ### ✔ Teams and Power Virtual Agents
 
 [Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) is a no code, guided graphical interface solution, built on the Microsoft Power Platform and the Bot Framework. It empowers every member of your team to create and maintain rich, conversational chatbots that easily integrate with the Teams platform. All content authored in Power Virtual Agents renders naturally in Teams and Power Virtual Agents bots engage with users in the Teams native chat canvas. You can [integrate your Power Virtual Agents chatbot](/power-virtual-agents/publication-add-bot-to-microsoft-teams) to Teams through the [Power Virtual Agents portal](https://powervirtualagents.microsoft.com).
 
-Use the new [Power Virtual Agents app](https://aka.ms/pva-teams-docs) in Teams, to create, manage, and publish conversational chatbots easily from within Teams. You can share your bots with other people in your organization to chat and get answers for their questions.
+Use the new [Power Virtual Agents](/power-virtual-agents/teams/fundamentals-what-is-power-virtual-agents-teams) app in Teams, to create, manage, and publish conversational chatbots easily from within Teams. You can share your bots with other people in your organization to chat and get answers for their questions.
 
 ### ✔ Virtual Assistant for Teams
 
@@ -54,10 +54,10 @@ Virtual Assistant is a Microsoft open-source template that enables you to create
 
 |  Topic  |  Links  |
 |:---------|:----------------------|
-|Power BI|[Power BI for App Makers](/learn/browse/?expanded=power-platform&products=power-bi&roles=maker)</br>[Power BI for Developers](/learn/browse/?expanded=power-platform&products=power-bi&roles=developer)|
-|Power Apps|[Power Apps for App Makers](/learn/browse/?products=power-apps&roles=maker)</br>[Power Apps for Developers](/learn/browse/?products=power-apps)|
-|Power Automate|[Power Automate for App Makers](/learn/browse/?expanded=power-platform&products=power-automate&roles=maker)</br>[Power Automate for Developers](/learn/browse/?expanded=power-platform&products=power-automate&roles=developer)|
-|Power Virtual Agents|[Power Virtual Agents for App Makers and Developers](/learn/browse/?products=power-virtual-agents&expanded=power-platform&roles=maker)|
+|Power BI|[Power BI for App Makers](/training/browse/?expanded=power-platform&products=power-bi&roles=maker)</br>[Power BI for Developers](/training/browse/?expanded=power-platform&products=power-bi&roles=developer)|
+|Power Apps|[Power Apps for App Makers](/training/browse/?products=power-apps&roles=maker)</br>[Power Apps for Developers](/training/browse/?products=power-apps)|
+|Power Automate|[Power Automate for App Makers](/training/browse/?expanded=power-platform&products=power-automate&roles=maker)</br>[Power Automate for Developers](/training/browse/?expanded=power-platform&products=power-automate&roles=developer)|
+|Power Virtual Agents|[Power Virtual Agents for App Makers and Developers](/training/browse/?products=power-virtual-agents&expanded=power-platform&roles=maker)|
 
 ### ✔ Project Oakdale (preview)
 
@@ -82,4 +82,5 @@ Virtual Assistant is a Microsoft open-source template that enables you to create
 
 ## See also
 
-[Integrate web apps](~/samples/integrate-web-apps-overview.md)
+* [Integrate web apps](~/samples/integrate-web-apps-overview.md)
+* [Power Platform Connectors overview](/connectors/connectors)

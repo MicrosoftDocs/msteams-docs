@@ -30,7 +30,7 @@ For more information, see [authenticate a user in your Microsoft Teams](~/concep
 You can access context information in two ways:
 
 * Using [URL placeholder values](#get-context-by-inserting-url-placeholder-values).
-* From the Microsoft Teams JavaScript client SDK [context](/javascript/api/@microsoft/teams-js/app.context) object.
+* From the Microsoft Teams JavaScript client library [context](/javascript/api/@microsoft/teams-js/app.context) object.
 
 ### Get context by inserting URL placeholder values
 
@@ -42,7 +42,7 @@ Use placeholders in your configuration or content URLs. Microsoft Teams replaces
 * [{user.userPrincipalName}](/javascript/api/@microsoft/teams-js/app.userinfo#@microsoft-teams-js-app-userinfo-userprincipalname): The User Principal Name of the current user in the current tenant. (Known as `{userPrincipalName}` prior to TeamsJS v.2.0.0).
 * [{user.id}](/javascript/api/@microsoft/teams-js/app.userinfo#@microsoft-teams-js-app-userinfo-id): The Azure AD object ID of the current user in the current tenant. (Known as `{userObjectId}` prior to TeamsJS v.2.0.0).
 * [{app.theme}](/javascript/api/@microsoft/teams-js/app.appinfo#@microsoft-teams-js-app-appinfo-theme): The current user interface (UI) theme such as `default`, `dark`, or `contrast`. (Known as `{theme}` prior to TeamsJS v.2.0.0).
-* [{team.groupId}](/javascript/api/@microsoft/teams-js/app.teaminfo#@microsoft-teams-js-app-teaminfo-groupid): The ID of the Office 365 group in which the tab resides. (Known as `{groupId}` prior to TeamsJS v.2.0.0)
+* [{team.groupId}](/javascript/api/@microsoft/teams-js/app.teaminfo#@microsoft-teams-js-app-teaminfo-groupid): The ID of the Microsoft 365 group in which the tab resides. (Known as `{groupId}` prior to TeamsJS v.2.0.0)
 * [{user.tenant.id}](/javascript/api/@microsoft/teams-js/app.tenantinfo#@microsoft-teams-js-app-tenantinfo-id): The Azure AD tenant ID of the current user. (Known as `{tid}` prior to TeamsJS v.2.0.0).
 * [{app.locale}](/javascript/api/@microsoft/teams-js/app.appinfo#@microsoft-teams-js-app-appinfo-locale): The current locale of the user formatted as *languageId-countryId*, for example `en-us`. (Known as `{locale}` prior to TeamsJS v.2.0.0).
 
@@ -62,11 +62,82 @@ For example, in your app manifest if you set your tab *configurationUrl* attribu
 
 ### Get context by using the Microsoft Teams JavaScript library
 
-You can also retrieve the information listed above using the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client) by calling `microsoftTeams.getContext(function(context) { /* ... */ })`.
+You can also retrieve the context information using the [Microsoft Teams JavaScript client library](/javascript/api/overview/msteams-client).
+
+# [TeamsJS v2](#tab/Json-v2)
+
+ The information can be retrieved by calling `microsoftTeams.app.getContext().then((context) => {/*...*/});`.
+
+ The following code provides an example of context variable:
+
+ ```Json
+ {
+  "app": {
+    "host": {
+      "clientType": "The type of host client. Possible values are android, ios, web, desktop, surfaceHub, teamsRoomsAndroid, teamsPhones, teamsDisplays rigel (deprecated, use teamsRoomsWindows instead)",
+      "name": "",
+      "ringId": "The current ring ID",
+      "sessionId": "The unique ID for the current Teams session for use in correlating telemetry data"    },
+    "iconPositionVertical": "",
+    "locale": "The current locale of the user formatted as languageId-countryId (for example, en-us)",
+    "osLocaleInfo": "",
+    "parentMessageId": "The parent message ID from which this task module is launched",
+    "sessionId": "The unique ID for the current session used for correlating telemetry data",
+    "theme": "The current UI theme: default | dark | contrast",
+    "userClickTime": "",
+    "userFileOpenPreference": ""  },
+  "channel": {
+    "defaultOneNoteSectionId": "The OneNote section ID that is linked to the channel",
+    "displayName": "The name of the current channel",
+    "id": "The channel ID in the format 19:[id]@thread.skype",
+    "membershipType": "",
+    "ownerGroupId": "",
+    "ownerTenantId": "",
+    "relativeUrl": "The relative path to the SharePoint folder associated with the channel"  },
+  "chat": { "id": "The chat ID in the format 19:[id]@thread.skype" },
+  "meeting": {
+    "id": "The meeting ID used by tab when running in meeting context"  },
+  "page": {
+    "frameContext": "The context where tab URL is loaded (for example, content, task, setting, remove, sidePanel)",
+    "id": "The developer-defined unique ID for the entity this content points to",
+    "isFullScreen": "Indicates if the tab is in full-screen",
+    "isMultiWindow": "The indication whether the tab is in a pop out window",
+    "sourceOrigin": "",
+    "subPageId": "The developer-defined unique ID for the sub-entity this content points to"  },
+  "sharepoint": "The SharePoint context is available only when hosted in SharePoint",
+  "sharepointSite": {
+    "domain": "The domain of the root SharePoint site associated with the team",
+    "path": "The relative path to the SharePoint site associated with the team",
+    "url": "The root SharePoint site associated with the team"  },
+  "team": {
+    "displayName": "The name of the current team",
+    "groupId": "Guid identifying the current Office 365 Group ID",
+    "internalId": "The Microsoft Teams ID in the format 19:[id]@thread.skype",
+    "isArchived": "Indicates if team is archived",
+    "templateId": "",
+    "type": "The type of team",
+    "userRole": "The user's role in the team"  },
+  "user": {
+    "displayName": "",
+    "id": "The Azure AD object id of the current user, in the current tenant",
+    "isCallingAllowed": "Indicates if calling is allowed for the current logged in user",
+    "isPSTNCallingAllowed": "Indicates if PSTN calling is allowed for the current logged in user",
+    "licenseType": "The license type for the current user. Possible values are E1, E3, and E5 enterprise plans",
+    "loginHint": "A value suitable as a login hint for Azure AD. This is usually the login name of the current user, in their home tenant",
+    "tenant": {
+      "id": "The Azure AD tenant ID of the current user",
+      "teamsSku": "The license type for the current user tenant. Possible values are enterprise, free, edu, unknown"    },
+    "userPrincipalName": "The principal name of the current user, in the current tenant"  }
+}
+```
+
+# [TeamsJS v1](#tab/Json-v1)
+
+The information can be retrieved by calling `microsoftTeams.getContext(function(context) { /* ... */ })`.
 
 The following code provides an example of context variable:
 
-```json
+```Json
 {
     "teamId": "The Microsoft Teams ID in the format 19:[id]@thread.skype",
     "teamName": "The name of the current team",
@@ -106,6 +177,8 @@ The following code provides an example of context variable:
     "isMultiWindow": "The indication whether the tab is in a pop out window"
 }
 ```
+
+---
 
 # [TeamsJS v2](#tab/teamsjs-v2)
 
@@ -206,7 +279,7 @@ The following table lists commonly used context properties of the *context* obje
 | page.frameContext | frameContext | The context where page url is loaded (content, task, setting, remove, sidePanel) |
 | sharepoint | sharepoint | SharePoint context. This is only available when hosted in SharePoint. |
 | user.tenant.teamsSku | tenantSKU | The license type for the current user tenant. Possible values are enterprise, free, edu, unknown |
-| user.licenseType | userLicenseType | The license type for the current user. Possible values are E1, E3, and E5 enterprise plans |
+| user.licenseType | userLicenseType | The license type for the current user. Possible values are Unknown, Teacher, Student, Free, SmbBusinessVoice, SmbNonVoice, FrontlineWorker, and Anonymous. |
 | app.parentMessageId | parentMessageId | The ID of the parent message from which this task module was launched. This is only available in task modules launched from bot cards. |
 | app.host.ringId | ringId | Current ring ID. |
 | app.sessionId | appSessionId | Unique ID for the current Host session for use in correlating telemetry data. |
@@ -216,7 +289,7 @@ The following table lists commonly used context properties of the *context* obje
 | channel.defaultOneNoteSectionId | defaultOneNoteSectionId | The OneNote section ID that is linked to the channel. |
 | page.isMultiWindow | isMultiWindow | The indication whether the tab is in a pop out window. |
 
-For more information, see [Updates to the *Context* interface](using-teams-client-sdk.md#updates-to-the-context-interface) and the [Context interface](/javascript/api/@microsoft/teams-js/app.context) API reference.
+For more information, see [Updates to the *Context* interface](using-teams-client-library.md#updates-to-the-context-interface) and the [Context interface](/javascript/api/@microsoft/teams-js/app.context) API reference.
 
 ## Retrieve context in private channels
 
@@ -236,46 +309,23 @@ The following fields are changed when your content page is in a private channel:
 
 If your page makes use of any of these values, the value of `channel.membershipType` field must be `Private` to determine if your page is loaded in a private channel and can respond appropriately.
 
-## Retrieve context in Microsoft Teams Connect shared channels
-
 > [!NOTE]
-> Currently, Microsoft Teams Connect shared channels are in developer preview only.
-
-When your content page is loaded in a Microsoft Teams Connect shared channel, the data you receive from the `getContext` call is altered due to the unique roster of users in shared channels.
-The following fields are changed when your content page is in a shared channel:
-
-* `team.groupId`: Undefined for shared channels.
-* `team.internalId`: Set to the `threadId` of the team, the channel is shared for the current user. If the user has access to multiple teams, this is set to the team that hosts (creates) the shared channel.
-* `team.displayName`: Set to the name of the team, the channel is shared for the current user. If the user has access to multiple teams, this is set to the team that hosts (creates) the shared channel.
-* `sharepointSite.url`: Set to the URL of a distinct, unique SharePoint site for the shared channel.
-* `sharepointSite.path`: Set to the path of a distinct, unique SharePoint site for the shared channel.
-* `sharepointSite.domain`: Set to the domain of a distinct, unique SharePoint site domain for the shared channel.
-
-In addition to these field changes, there are two new fields available for shared channels:
-
-* `hostTeamGroupId`: Set to the `team.groupId` associated with the hosting team, or the team that created the shared channel. The property can make Microsoft Graph API calls retrieve membership of the shared channel.
-* `hostTeamTenantId`: Set to the `channel.ownerTenantId` associated with the hosting team, or the team that created the shared channel. The property can be cross-referenced with the current user's tenant ID found in the `user.tenant.id` field of the *context* object to determine if the user is internal or external to the hosting team's tenant.
-
-If your page makes use of any of these values, the value of `channel.membershipType` field must be `Shared` to determine if your page is loaded in a shared channel and can respond appropriately.
-
-> [!NOTE]
-> `teamSiteUrl` also works well for standard channels.
-> If your page makes use of any of these values, the value of `channelType` field must be `Shared` to determine if your page is loaded in a shared channel and can respond appropriately.
+>`teamSiteUrl` also works well for standard channels. If your page makes use of any of these values, the value of `channelType` field must be `Shared` to determine if your page is loaded in a shared channel and can respond appropriately.
 
 ## Get context in shared channels
 
 When the content UX is loaded in a shared channel, use the data received from `getContext` call for  shared channel changes. If tab makes use of any of the following values, you must populate the `channelType` field to determine if the tab is loaded in a shared channel, and respond appropriately.
 For shared channels, the `groupId` value is `null`, since the host team's groupId doesn't accurately reflect the true membership of the shared channel. To address this, the `hostTeamGroupID` and `hostTenantID` properties are newly added and useful for making Microsoft Graph API calls to retrieve membership. `hostTeam` refers to the Team that created the shared channel. `currentTeam` refers to Team that the current user is accessing the shared channel from.
 
-For more information about these concepts, see [Shared channels](~/concepts/build-and-test/shared-channels.md).
+For more information about these concepts, see [shared channels](~/concepts/build-and-test/shared-channels.md).
 
 Use the following `getContext` properties in shared channels:
 
 | Property | Description |
 |----------|--------------|
-|`channelId`| The property is set to the SC channel thread ID.|
+|`channelId`| The property is set to the shared channels thread ID.|
 |`channelType`| The property is set to `sharedChannel` for shared channels.|
-|`groupId`|The property is `null` for shared Channels.|
+|`groupId`|The property is `null` for shared channels.|
 |`hostTenantId`| The property is newly added and describes the host's tenant ID, useful for comparing against the current user's `tid` tenant ID property. |
 |`hostTeamGroupId`| The property is newly added and describes the host team’s Azure AD group ID, useful for making Microsoft Graph API calls to retrieve shared channel membership. |
 |`teamId`|The property is newly added and set to the thread ID of the current shared team. |
@@ -289,13 +339,19 @@ Use the following `getContext` properties in shared channels:
 |`userObjectId`|  The property describes current user’s ID.|
 |`userPrincipalName`| The property describes the current user’s UPN.|
 
-For more information on shared channels, see [Shared channels](~/concepts/build-and-test/shared-channels.md).
+For more information on shared channels, see [shared channels](~/concepts/build-and-test/shared-channels.md).
 
 ## Handle theme change
 
 You can register your app to be informed if the theme changes by calling `microsoftTeams.app.registerOnThemeChangeHandler(function(theme) { /* ... */ })`.
 
 The `theme` argument in the function is a string with a value of `default`, `dark`, or `contrast`.
+
+## Code sample
+
+| Sample name           | Description | Javascript|
+:---------------------|:--------------|:---------|
+|Tab channel context|This sample shows the contents of tab context object in a private and shared channel. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-context/nodejs)|
 
 ## Next step
 
@@ -304,8 +360,9 @@ The `theme` argument in the function is a string with a value of `default`, `dar
 
 ## See also
 
-* [Tab design guidelines](../../tabs/design/tabs.md)
-* [Teams tabs](~/tabs/what-are-tabs.md)
-* [Create a personal tab](~/tabs/how-to/create-personal-tab.md)
-* [Create a channel or group tab](~/tabs/how-to/create-channel-group-tab.md)
-* [Use task modules in tabs](~/task-modules-and-cards/task-modules/task-modules-tabs.md)
+* [Build tabs for Teams](../what-are-tabs.md)
+* [Design your tab for Microsoft Teams](../design/tabs.md)
+* [Enable SSO for tab app](authentication/tab-sso-overview.md)
+* [Microsoft Teams Connect shared channels](../../concepts/build-and-test/shared-channels.md)
+* [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
+* [Use task modules in tabs](../../task-modules-and-cards/task-modules/task-modules-tabs.md)

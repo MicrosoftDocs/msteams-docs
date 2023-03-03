@@ -1,33 +1,33 @@
 ### YamlMime:Tutorial
-title: Generate meeting content bubble
+title: Generate in-meeting notifications
 metadata:
-  title: Generate meeting content bubble
-  description: With this learning module, learn how to send reply to meeting content bubble using bot in Teams with attendees.
+  title: Generate in-meeting notifications
+  description: With this learning module, learn how to send reply to in-meeting notifications using bot in Teams with attendees.
   audience: Developer
   level: Beginner
   ms.date: 12/03/2021
   ms.topic: interactive-tutorial
-  nextTutorialHref: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
+  nextTutorialHref: apps-in-teams-meetings/build-tabs-for-meeting.md
   nextTutorialTitle: Read more to enable and configure apps for meetings 
   ms.custom: mvc
   ms.localizationpriority: high
 items:
 - durationInMinutes: 1
   content: |
-    Teams helps you to generate and interact with content bubble using bot.
+    Microsoft Teams helps you to generate and interact with in-meeting notifications using bot.
 
-    **Key features of meeting content bubble**:
+    **Key features of in-meeting notifications**:
 
     * View agenda items listed in an Adaptive Card.
     * Select any option in the given agenda.
-    * Submit your feedback on either content bubble or Adaptive Card sent in chat.
+    * Submit your feedback on either in-meeting notifications or Adaptive Card sent in chat.
     
     > [!NOTE]
-    > Meeting content bubble is available only for Azure AD users and not for anonymous users.
+    > In-meeting notifications is available only for Azure AD users and not for anonymous users.
     
-    This step-by-step guide helps you to generate meeting content bubble using bot in Teams meeting with attendees. You'll see the following output:
+    This step-by-step guide helps you to generate in-meeting notifications using bot in Teams meeting with attendees. You'll see the following output:
 
-      :::image type="content" source="~/assets/images/meeting-content-bubble/desktop-and-mobile-image-final.png" alt-text="Meeting content bubble introduction":::
+      :::image type="content" source="~/assets/images/meeting-content-bubble/desktop-and-mobile-image-final.png" alt-text="In-meeting notifications introduction":::
 
      
 
@@ -36,10 +36,13 @@ items:
   content: |
     Ensure you install the following tools and set up your development environment:  
 
-    * [Microsoft Teams](https://teams.microsoft.com/) with valid account
-    * [Latest version of .NET Core SDK](https://dotnet.microsoft.com/download) 
-    * [Latest version of Visual Studio](https://visualstudio.microsoft.com/downloads/)
-    * [Latest version of ngrok](https://ngrok.com/download) only for devbox testing or any equivalent tunneling solution
+     | &nbsp; | Install | For using... |
+     | --- | --- | --- |
+     | **Required** | &nbsp; | &nbsp; |
+     | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call and all in one place.|
+     | &nbsp; | [Visual Studio 2022 version 17.3](https://visualstudio.microsoft.com)<br> Install one of the following two workloads:<br> • **ASP.NET and web development** <br> • **.NET Core cross-platform development** | You can install the enterprise version in Visual Studio 2022, and install the workloads. |
+     | &nbsp; | [.NET Core SDK version 3.1](https://dotnet.microsoft.com/en-us/download) | Customized bindings for local debugging and Azure Functions app deployments. If you haven't installed the .NET 3.1 (or later) SDK globally, the portable version can be installed. |
+     | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots, message extensions, and incoming webhooks) require inbound connections. A tunnel connects your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
     
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
@@ -54,12 +57,12 @@ items:
    1. Select **Code**.
    1. From the dropdown menu, select **Open with GitHub Desktop**.
 
-     :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-clonerepository.png" alt-text="Clone repository":::
+      :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-clonerepository_1.png" alt-text="Clone repository":::
 
    1. Select **Clone**. 
 
-       > [!NOTE]
-       > If you encounter the error "Filename too long," apply the git command 'git config --system core.longpaths true' in your administrator terminal of choice.
+      > [!NOTE]
+      > If you encounter the error **Filename too long** apply the git command `git config --system core.longpaths true` in your administrator terminal of choice.
 
 - title: Create and register your bot 
   durationInMinutes: 5
@@ -80,24 +83,22 @@ items:
     1. Select **Enter**.
     1. Select **Azure Bot**.
 
-        :::image type="content" source="./assets/images/azure-bot.png" alt-text="Azure bot.":::
+        :::image type="content" source="./assets/images/azure-bot_1.png" alt-text="Azure bot.":::
 
     1. Select **Create**.
     1. Enter required bot handle name in **Bot handle**.
     1. Select your **Subscription** from the dropdown list.
     1. Select your **Resource group** from the dropdown list.
      
-        :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-review-plus-create.png" alt-text="Create resource Azure bot":::
+        :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-review-plus-create_1.png" alt-text="Create resource Azure bot":::
 
-       You can also create a new resource group (select **Create new** > enter resource name > select **OK**).
-    
-    1. If you've created a new resource group, select the required location from **New resource group location** dropdown list.
-
+       To create a new resource group, select **Create new** > enter resource name > select **OK**. Select the required location from **New resource group location** dropdown list.
+       
          :::image type="content" source="~/assets/images/bots/newresource.png" alt-text="Create resource Azure bot":::
 
     1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected. 
     
-       You can either select **Use existing app registration** and enter **Existing app ID** and **Existing app password**, or select **Create new Microsoft App ID**.
+       You can also select **Use existing app registration** and enter existing **App ID**, **App tenant ID**, and **MSI resource ID**.
 
        > [!NOTE]
        > You can't create more than one bot with the same **Microsoft App ID**.
@@ -106,7 +107,7 @@ items:
 
     1. Select **Review + create**.
 
-        :::image type="content" source="~/assets/images/meeting-content-bubble/Review-create.png" alt-text="Review Create":::
+        :::image type="content" source="~/assets/images/meeting-content-bubble/Review-create_1.png" alt-text="Review Create":::
 
     1. If the validation passes, select **Create**.
 
@@ -114,11 +115,11 @@ items:
 
     1. Select **Go to resource**. 
 
-         :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-botdeployment.png" alt-text="Deploy App":::
+         :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-botdeployment_1.png" alt-text="Deploy App":::
         
         Your Azure bot is created.
 
-         :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-creating-resource-group.png" alt-text="Azure bot resource created":::
+         :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-creating-resource-group_1.png" alt-text="Azure bot resource created":::
 
     **To create client secret**
 
@@ -131,11 +132,11 @@ items:
 
     1. Next to **Microsoft App ID**, select **Manage**.
 
-       :::image type="content" source="~/assets/images/manage-bot-label.png" alt-text="manage":::
+       :::image type="content" source="~/assets/images/manage-bot-label_1.png" alt-text="manage":::
 
     1. In the **Client secrets** section, select **New client secret**. 
 
-         :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-newclientsecret.png" alt-text="New client secret":::
+         :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-newclientsecret_1.png" alt-text="New client secret":::
         
        The **Add a client secret** window appears.  
 
@@ -143,11 +144,11 @@ items:
     
     1. Select **Add**.
 
-        :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-clientsecret.png" alt-text="Add client secret to app":::
+        :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-clientsecret_1.png" alt-text="Add client secret to app":::
 
     1. In the **Value** column, select **Copy to clipboard**.
 
-        :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-client-secret.png" alt-text="Value of client secret":::
+        :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-client-secret_1.png" alt-text="Value of client secret":::
        
        > [!TIP]
        > Save the **Client secrets** value or app password for future reference.
@@ -168,7 +169,7 @@ items:
     
     1. Select **Agree**.
 
-        :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-terms.png" alt-text="Terms of service":::
+        :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-terms_1.png" alt-text="Terms of service":::
 
     1. Select **Apply**.
     
@@ -191,7 +192,7 @@ items:
 
     1. From ngrok, copy the HTTPS URL.
 
-       :::image type="content" source="../msteams-platform/assets/images/ngrok-url.png" alt-text="ngrok HTTPS URL":::
+       :::image type="content" source="../msteams-platform/assets/images/ngrok-url_2.png" alt-text="ngrok HTTPS URL":::
 
         > [!NOTE]
         > The HTTPS URL in your ngrok is your fully qualified domain name.
@@ -201,7 +202,7 @@ items:
 
     1. In **Messaging endpoint**, use the HTTPS URL available from ngrok and at the end of the URL add **/api/messages**.
 
-         :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-config-messaging-end-point.png" alt-text="Messaging Endpoint":::
+         :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-config-messaging-end-point_1.png" alt-text="Messaging Endpoint":::
 
     1. Select **Apply**.
 
@@ -215,7 +216,7 @@ items:
 
     1. Select **Azure Active Directory**.
 
-    1. In the left navigation panel, select **App Registrations**.
+    1. In the left panel, select **App Registrations**.
 
     1. Select your bot.
 
@@ -225,11 +226,11 @@ items:
 
     1. Set the **Application ID URI** in the form of `api://your ngrok/botid-{AppID}`.
 
-        :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-set-api.png" alt-text="Set link":::
+        :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-set-api_1.png" alt-text="Set link":::
 
        The following image shows the domain name:
         
-         :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-exposeapi.png" alt-text="App ID URI":::
+         :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-exposeapi_1.png" alt-text="App ID URI":::
 
         > [!NOTE]
         > If you're using a tunneling service such as ngrok, ensure you update the value whenever your ngrok subdomain changes.
@@ -237,13 +238,13 @@ items:
 
     1. Select **Add a scope**. 
 
-        :::image type="content" source="~/assets/images/meetings-side-panel/selectscope.png" alt-text="Add Scope":::
+        :::image type="content" source="~/assets/images/meetings-side-panel/selectscope_1.png" alt-text="Add Scope":::
             
     1. In the panel that appears, enter `access_as_user` as the **Scope name**.
   
     1. Set **Who can consent?** to `Admins and users`.
   
-    1. To configure the admin and user consent prompts with appropriate values for `access_as_user` scope, provide the following information in the fields:</br>
+    1. To configure the admin and user consent prompts with appropriate values for `access_as_user` scope, provide the following information in the fields:
     
          * Enter `Teams can access the user’s profile` as **Admin consent display name**.
 
@@ -255,25 +256,24 @@ items:
   
        The following image shows the fields and the values:
 
-          :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-access-as-user.png" alt-text="Add a scope":::
+          :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-access-as-user_1.png" alt-text="Add a scope":::
 
     1. Ensure that **State** is set to **Enabled**.
   
     1. Select **Add scope** to save.
 
-        :::image type="content" source="~/assets/images/meeting-content-bubble/add-scope.png" alt-text="Add a scope":::
 
        > [!NOTE]
-       > The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.</br>
+       > The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.
            `api://****.ngrok.io/00000000-0000-0000-0000-000000000000/access_as_user`
   
-        :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-add-scope.png" alt-text="Scope":::
+        :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-add-scope_1.png" alt-text="Scope":::
 
     1. In the **Authorized client applications** section, identify the applications that you want to authorize for your app’s web application. 
 
     1. Select **Add a client application**. 
 
-        :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-selectclientapp.png" alt-text="Add client app":::
+        :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-selectclientapp_1.png" alt-text="Add client app":::
 
     1. Enter **Client ID**: `1fec8e78-bce4-4aaf-ab1b-5451cc387264` for Teams mobile or desktop application. 
 
@@ -285,7 +285,7 @@ items:
 
     1. Select **Authorized scopes**.
 
-        :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-add-client-app.png" alt-text="Add client application":::
+        :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-add-client-app_1.png" alt-text="Add client application":::
 
        The following image displays the Client ID:
 
@@ -298,13 +298,13 @@ items:
 
     1. Select **Add a permission**.
 
-        :::image type="content" source="~/assets/images/meetings-side-panel/addpermission.png" alt-text="Add Permission":::
+        :::image type="content" source="~/assets/images/meetings-side-panel/add-permission_1.png" alt-text="Add Permission":::
 
     1. Select **Microsoft Graph**.
 
     1. Select **Delegated permissions**.
 
-    1. Add the following permissions:</br>
+    1. Add the following permissions:
          * **email**
          * **offline_access**
          * **OpenId**
@@ -323,10 +323,9 @@ items:
          1. Select **Add a platform**.
          1. Select **Web**.
 
-             :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-platform-web.png" alt-text="Web":::
+             :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-platform-web_1.png" alt-text="Web":::
 
-         1. Enter the redirect URI for your app by appending `auth-end` to fully qualified domain name:</br> 
-           `https://your ngrok/auth-end`. </br>
+         1. Enter the redirect URI for your app by appending `auth-end` to fully qualified domain name: `https://your ngrok/auth-end`.
 
          1. Enable **Implicit grant and hybrid flows** by selecting the following checkboxes:
              * **ID tokens**
@@ -334,14 +333,14 @@ items:
    
          1. Select **Configure**.
 
-             :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-config-web.png" alt-text="Auth-end":::
+             :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-config-web_1.png" alt-text="Auth-end":::
 
 - title: Set up app settings
   durationInMinutes: 1
   content: |
-    1. Navigate to **appsettings.json** in cloned repository.
+    1. Go to **appsettings.json** in cloned repository.
 
-        :::image type="content" source="~/assets/images/meeting-content-bubble/navigate-to-meeting-content-bubble-repo.png" alt-text="App settings location":::
+        :::image type="content" source="~/assets/images/meeting-content-bubble/navigate-to-meeting-content-bubble-repo_1.png" alt-text="App settings location":::
 
     1. Open **appsettings.json** in Visual Studio and update the following information:  
 
@@ -349,23 +348,23 @@ items:
          * Set `"MicrosoftAppPassword"` to your bot's client secret ID value.
          * Set `"BaseURL"` to your `webAppDomain`.
 
-          :::image type="content" source="~/assets/images/meeting-content-bubble/appsettings-json1.png" alt-text="App settings":::
+          :::image type="content" source="~/assets/images/meeting-content-bubble/appsettings-json1_1.png" alt-text="App settings":::
 
 - title: Set up manifest file
   durationInMinutes: 1
   content: |
-    1. Navigate to **manifest.json** in cloned repository.
+    1. Go to **manifest.json** in cloned repository.
     
     1. Open **manifest.json** in Visual Studio and make the following changes:
     
-         * Set `id` to **Microsoft App ID**.
+         * Set `ID` to **Microsoft App ID**.
          * Set `botId` to **Microsoft App ID**.
          * Set `validDomains` to **Web App Domain Name**.
 
           > [!NOTE]
           > `WebAppDomain` is your ngrok domain.
 
-         :::image type="content" source="~/assets/images/meeting-content-bubble/manifest-set.png" alt-text="Manifest image1":::
+         :::image type="content" source="~/assets/images/meeting-content-bubble/manifest-set_1.png" alt-text="Manifest image1":::
 
 - title: Build and run the service
   durationInMinutes: 1
@@ -373,13 +372,13 @@ items:
     **To build and run the service using Visual Studio**
 
        1. Open **Visual Studio**.
-       1. Navigate to **File** > **Open** > **Project/Solution**.
+       1. Go to **File** > **Open** > **Project/Solution**.
     
-           :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-VSopenfile.png" alt-text="Open file":::
+           :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-VSopenfile_1.png" alt-text="Open file":::
 
        1. Open **ContentBubbleBot.sln** file.
 
-           :::image type="content" source="~/assets/images/meeting-content-bubble/proj-sln.png" alt-text="Open file":::
+           :::image type="content" source="~/assets/images/meeting-content-bubble/proj-sln_1.png" alt-text="Open file":::
 
        1. Press **F5** to run the project.
 
@@ -387,18 +386,18 @@ items:
 
            :::image type="content" source="~/assets/images/meeting-content-bubble/your-bot-is-ready.png" alt-text="App ready"::: 
     
-- title: Add Meeting content bubble App to Teams
+- title: Add in-meeting notifications app to Teams
   durationInMinutes: 1
   content: |
 
-    1. In your cloned repository, navigate to **csharp > Resources > Manifest**.
+    1. In your cloned repository, go to **csharp > Resources > Manifest**.
 
     1. Create a .zip with the following files that are present in the **Manifest** folder: 
        * manifest.json
        * icon-outline.png
        * icon-color.png
 
-        :::image type="content" source="~/assets/images/meeting-content-bubble/create-manifest-zip.png" alt-text="Zip file"::: 
+        :::image type="content" source="~/assets/images/meeting-content-bubble/create-manifest-zip_1.png" alt-text="Zip file"::: 
     
     1. Create a meeting with a few presenters and attendees.
    
@@ -408,19 +407,19 @@ items:
    
     1. In the pop-up window, select **Manage apps**.
 
-        :::image type="content" source="~/assets/images/meeting-content-bubble/manage-apps.png" alt-text="Manage apps"::: 
+        :::image type="content" source="~/assets/images/meeting-content-bubble/manage-apps_1.png" alt-text="Manage apps"::: 
    
-    1. Select **Upload a custom app**. 
+    1. Select **Upload an app** and select **Upload a custom app**. 
 
-        :::image type="content" source="~/assets/images/meeting-content-bubble/upload-custom-app.png" alt-text="Upload custom app"::: 
+        :::image type="content" source="~/assets/images/meeting-content-bubble/upload-custom-app_1.png" alt-text="Upload custom app"::: 
 
     1. Select **Open** to upload the .zip file that you created in the **Manifest** folder.
 
-        :::image type="content" source="~/assets/images/meeting-content-bubble/Zip-file.png" alt-text="Upload zip app":::
+        :::image type="content" source="~/assets/images/meeting-content-bubble/Zip-file_1.png" alt-text="Upload zip app":::
 
     1. Select **Add**.
 
-        :::image type="content" source="~/assets/images/meeting-content-bubble/content-bubble-demo.png" alt-text="Add the app"::: 
+        :::image type="content" source="~/assets/images/meeting-content-bubble/content-bubble-demo_1.png" alt-text="Add the app"::: 
 
     1. The **Manage apps** section displays the list of applications.
 
@@ -428,9 +427,9 @@ items:
 
     1. Go to Teams meeting chat.
     
-    1. **Content Bubble Demo** app sends an automatic reply to the meeting chat.
+    1. **In-meeting notifications Demo** app sends an automatic reply to the meeting chat.
 
-         :::image type="content" source="~/assets/images/meeting-content-bubble/content-bubble-demo-first-reply.png" alt-text="Content Bubble Demo reply"::: 
+         :::image type="content" source="~/assets/images/meeting-content-bubble/content-bubble-demo-first-reply.png" alt-text="in-meeting notifications Demo reply"::: 
 
     1. Send a **hello** message to bot.
 
@@ -457,12 +456,9 @@ items:
   content: |
     Did you come up with something like this?
 
-     :::image type="content" source="~/assets/images/meeting-content-bubble/desktop-and-mobile-image-final.png" alt-text="Content Bubble Demo desktop and mobile":::
+     :::image type="content" source="~/assets/images/meeting-content-bubble/desktop-and-mobile-image-final.png" alt-text="in-meeting notifications Demo desktop and mobile":::
 
 
 - content: |
-    You've completed the tutorial to get started with a generate meeting content bubble app.
-
-    
-
+    You've completed the tutorial to get started with generate in-meeting notifications app.
 
