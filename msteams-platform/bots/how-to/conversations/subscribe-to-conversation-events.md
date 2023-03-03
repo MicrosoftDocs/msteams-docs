@@ -1655,7 +1655,11 @@ It's important to know that new events can be added anytime in the future and yo
 
 ## Handling errors in conversation events
 
-In development phase, it's always helpful to send meaningful messages in conversations, which provides additional details about a specific error for better debugging. However, in production environment, you must log the errors or events to Azure Application Insights. For more information on how to add telemetry to your bot, see [https://aka.ms/bottelemetry](https://aka.ms/bottelemetry).
+When a bot encounters an error while handling different events or activities, don't send messages that have no meaningful context to the conversation as shown in the following screenshot:
+
+:::image type="content" source="../../../assets/images/handling-error.png" alt-text="Screenshot shows you the error message response in bot conversation.":::
+
+In development phase, it's always helpful to send meaningful messages in conversations, which provide additional details about a specific error for better debugging. However, in production environment, you must log the errors or events to Azure Application Insights. For more information on how to add telemetry to your bot, see [https://aka.ms/bottelemetry](https://aka.ms/bottelemetry).
 
 ## Code sample
 
