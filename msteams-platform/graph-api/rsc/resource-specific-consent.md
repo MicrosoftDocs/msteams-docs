@@ -20,9 +20,9 @@ In this section, you'll learn more about:
 
 To configure RSC permissions to your app, follow these steps:
 
-1. [Register your app with Microsoft identity platform](#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).
-1. [Add application RSC permissions to your app registered with Microsoft identity platform](#review-your-application-permissions-in-the-azure-ad-portal).
-1. [Add application and delegated RSC permission to your app manifest](#update-your-teams-app-manifest).
+1. [Register your app with Microsoft identity platform using the Azure AD portal](#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).
+1. [Review your application permissions in the Azure AD portal](#review-your-application-permissions-in-the-azure-ad-portal).
+1. [Update your Teams app manifest](#update-your-teams-app-manifest).
 
 ### Register your app with Microsoft identity platform using the Azure AD portal
 
