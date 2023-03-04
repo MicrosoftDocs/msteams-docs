@@ -40,42 +40,32 @@ Admins can set up an app governance process that manages your organization's IT 
 Following the below five easy steps, you can encourage customers to adopt your apps through admin recommendations to their users, for maximum adoption in an organization. Consider the following elements for app adoption.
 
 :::row:::
-   :::column span="1":::
       :::image type="icon" source="assets/images/app-adoption/internal-enablement.png" link="#perform-internal-enablement-to-support-app-adoption" border="false":::
    :::column-end:::
-   :::column span="3":::
      Share your app information and its importance with your customer-facing teams, such as CSM, support, marketing, and sales that help customers adopt your apps. To achieve this, provide an adoption toolkit, define a rollout process, and give enablement training for your customer-facing teams.
    :::column-end:::
 :::row-end:::
 :::row:::
-   :::column span="1":::
      :::image type="icon" source="assets/images/app-adoption/config-rollout.png" link="#help-admins-to-do-app-configuration-and-rollout-for-their-users" border="false":::
    :::column-end:::
-   :::column span="3":::
      Help the IT admins do the necessary configurations to enable your app for the users. Provide a help guide for IT admins to understand the configuration steps.
    :::column-end:::
 :::row-end:::
 :::row:::
-   :::column span="1":::
      :::image type="icon" source="assets/images/app-adoption/educate-drive.png" link="#educate-users-and-drive-adoption-change-management-for-your-app" border="false":::
    :::column-end:::
-   :::column span="3":::
      Provide user guide for the users that describes their jobs to be done (JTBD) and your app’s features. Promote awareness about your app and its use cases. You can conduct email campaigns, webinars, or social media engagements depending on your target audience.
    :::column-end:::
 :::row-end:::
 :::row:::
-   :::column span="1":::
      :::image type="icon" source="assets/images/app-adoption/provide-support.png" link="#provide-support-information-for-it-admins-and-users" border="false":::
    :::column-end:::
-   :::column span="3":::
      When admins or users encounter unknown issues or issues that can't be resolved using the documentation, they might reach for support. Providing support in such scenarios is helpful for healthy retention of users.
    :::column-end:::
 :::row-end:::
 :::row:::
-   :::column span="1":::
      :::image type="icon" source="assets/images/app-adoption/track-using-analytics.png" link="#track-app-adoption-and-usage-using-analytics" border="false":::
    :::column-end:::
-   :::column span="3":::
      Track your app adoption progress after the rollout and promptly resolve issues for the early adopters. Your CSM or account manager can engage with the customer's organization and its IT admins to track adoption and provide support.
    :::column-end:::
 :::row-end:::
