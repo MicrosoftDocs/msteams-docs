@@ -44,7 +44,7 @@ Following the below five easy steps, you can encourage customers to adopt your a
       :::image type="icon" source="assets/images/app-adoption/internal-enablement.png" link="#perform-internal-enablement-to-support-app-adoption" border="false":::
    :::column-end:::
    :::column span="3":::
-     Share your app information and its importance with your customer-facing teams, such as CSM, support, marketing, and sales that help customers adopt your apps. To achieve this, provide an adoption toolkit, define a rollout process, and give enablement training for your customer-facing teams.
+     **Step1**: Share your app information and its importance with your customer-facing teams, such as CSM, support, marketing, and sales that help customers adopt your apps. To achieve this, provide an adoption toolkit, define a rollout process, and give enablement training for your customer-facing teams.
    :::column-end:::
 :::row-end:::
 :::row:::
@@ -52,7 +52,7 @@ Following the below five easy steps, you can encourage customers to adopt your a
      :::image type="icon" source="assets/images/app-adoption/config-rollout.png" link="#help-admins-to-do-app-configuration-and-rollout-for-their-users" border="false":::
    :::column-end:::
    :::column span="3":::
-     Help the IT admins do the necessary configurations to enable your app for the users. Provide a help guide for IT admins to understand the configuration steps.
+     **Step2**: Help the IT admins do the necessary configurations to enable your app for the users. Provide a help guide for IT admins to understand the configuration steps.
    :::column-end:::
 :::row-end:::
 :::row:::
@@ -60,7 +60,7 @@ Following the below five easy steps, you can encourage customers to adopt your a
      :::image type="icon" source="assets/images/app-adoption/educate-drive.png" link="#educate-users-and-drive-adoption-change-management-for-your-app" border="false":::
    :::column-end:::
    :::column span="3":::
-     Provide user guide for the users that describes their jobs to be done (JTBD) and your app’s features. Promote awareness about your app and its use cases. You can conduct email campaigns, webinars, or social media engagements depending on your target audience.
+     **Step3**: Provide user guide for the users that describes their jobs to be done (JTBD) and your app’s features. Promote awareness about your app and its use cases. You can conduct email campaigns, webinars, or social media engagements depending on your target audience.
    :::column-end:::
 :::row-end:::
 :::row:::
@@ -68,7 +68,7 @@ Following the below five easy steps, you can encourage customers to adopt your a
      :::image type="icon" source="assets/images/app-adoption/provide-support.png" link="#provide-support-information-for-it-admins-and-users" border="false":::
    :::column-end:::
    :::column span="3":::
-     When admins or users encounter unknown issues or issues that can't be resolved using the documentation, they might reach for support. Providing support in such scenarios is helpful for healthy retention of users.
+     **Step4**: When admins or users encounter unknown issues or issues that can't be resolved using the documentation, they might reach for support. Providing support in such scenarios is helpful for healthy retention of users.
    :::column-end:::
 :::row-end:::
 :::row:::
@@ -76,11 +76,11 @@ Following the below five easy steps, you can encourage customers to adopt your a
      :::image type="icon" source="assets/images/app-adoption/track-using-analytics.png" link="#track-app-adoption-and-usage-using-analytics" border="false":::
    :::column-end:::
    :::column span="3":::
-     Track your app adoption progress after the rollout and promptly resolve issues for the early adopters. Your CSM or account manager can engage with the customer's organization and its IT admins to track adoption and provide support.
+     **Step5**: Track your app adoption progress after the rollout and promptly resolve issues for the early adopters. Your CSM or account manager can engage with the customer's organization and its IT admins to track adoption and provide support.
    :::column-end:::
 :::row-end:::
 
-## Perform internal enablement to support app adoption
+## Step 1: Perform internal enablement to support app adoption
 
 Within your organization, you must streamline the app support and guidance programs. Internal readiness and enablement training programs helps to create good content, do targeted marketing, create an informed support team, and streamline the sales. All these activities and assets in turn ensure smooth app adoption journey for your customers.
 
@@ -121,7 +121,7 @@ For help on creating these assets, register for the [ISV success program overvie
 
 [Back to top](#understand-how-you-can-drive-app-adoption)
 
-## Help admins to do app configuration and rollout for their users
+## Step 2: Help admins to do app configuration and rollout for their users
 
 Admins can set up an app governance process that manages your organization's IT policies, standards, and risk profiles. Admins control the availability of apps and influence the adoption of apps within their organizations.
 
@@ -207,7 +207,7 @@ Provide admin-focused documentation in your app toolkit that is based on the abo
 
 [Back to top](#understand-how-you-can-drive-app-adoption)
 
-## Educate users and drive adoption change management for your app
+## Step 3: Educate users and drive adoption change management for your app
 
 Apps in Microsoft Teams are designed to enable collaboration between people in your organization. Enabling the right workflows and notifications for critical events in your apps in Teams enhances collaboration. The settings proactively notify the users on the tasks to be done and how to do those tasks.
 
@@ -288,7 +288,7 @@ You can use Microsoft [Champions Program Guide](https://adoption.microsoft.com/b
 
 [Back to top](#understand-how-you-can-drive-app-adoption)
 
-## Provide support information for IT admins and users
+## Step 4: Provide support information for IT admins and users
 
 When your app is being rolled out or being used, your customers might have queries about configuration, admin settings, user flows, app features, support information, and other queries. Provide support at each stage of app lifecycle to facilitate rollout, onboard app users, build a good brand reputation, and exhibit commitment towards your app.
 
@@ -315,7 +315,7 @@ The following table provides the support information that you already submitted 
 
 [Back to top](#understand-how-you-can-drive-app-adoption)
 
-## Track app adoption and usage using analytics
+## Step 5: Track app adoption and usage using analytics
 
 You build an app for millions of Teams users to achieve specific business or customer goals. For this purpose, you distribute it using the options available on the app store versus a custom app. After the app is published, you'll want to measure how your app is performing in the real-world. You’d also want to guide the admins to measure their org-specific app usage.
 
