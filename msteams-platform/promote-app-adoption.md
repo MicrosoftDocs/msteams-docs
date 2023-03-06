@@ -44,7 +44,7 @@ Following the below five easy steps, you can encourage customers to adopt your a
       :::image type="icon" source="assets/images/app-adoption/internal-enablement.png" link="#step-1-perform-internal-enablement-to-support-app-adoption" border="false":::
    :::column-end:::
    :::column span="3":::
-     **Step1**: Share your app information and its importance with your customer-facing teams, such as CSM, support, marketing, and sales that help customers adopt your apps. To achieve this, provide an adoption toolkit, define a rollout process, and give enablement training for your customer-facing teams.
+     **Step 1**: Share your app information and its importance with your customer-facing teams, such as CSM, support, marketing, and sales that help customers adopt your apps. To achieve this, provide an adoption toolkit, define a rollout process, and give enablement training for your customer-facing teams.
    :::column-end:::
 :::row-end:::
 :::row:::
@@ -52,7 +52,7 @@ Following the below five easy steps, you can encourage customers to adopt your a
      :::image type="icon" source="assets/images/app-adoption/config-rollout.png" link="#step-2-help-admins-to-do-app-configuration-and-rollout-for-their-users" border="false":::
    :::column-end:::
    :::column span="3":::
-     **Step2**: Help the IT admins do the necessary configurations to enable your app for the users. Provide a help guide for IT admins to understand the configuration steps.
+     **Step 2**: Help the IT admins do the necessary configurations to enable your app for the users. Provide a help guide for IT admins to understand the configuration steps.
    :::column-end:::
 :::row-end:::
 :::row:::
@@ -60,7 +60,7 @@ Following the below five easy steps, you can encourage customers to adopt your a
      :::image type="icon" source="assets/images/app-adoption/educate-drive.png" link="#step-3-educate-users-and-drive-adoption-change-management-for-your-app" border="false":::
    :::column-end:::
    :::column span="3":::
-     **Step3**: Provide user guide for the users that describes their jobs to be done (JTBD) and your app’s features. Promote awareness about your app and its use cases. You can conduct email campaigns, webinars, or social media engagements depending on your target audience.
+     **Step 3**: Provide user guide for the users that describes their jobs to be done (JTBD) and your app’s features. Promote awareness about your app and its use cases. You can conduct email campaigns, webinars, or social media engagements depending on your target audience.
    :::column-end:::
 :::row-end:::
 :::row:::
@@ -68,7 +68,7 @@ Following the below five easy steps, you can encourage customers to adopt your a
      :::image type="icon" source="assets/images/app-adoption/provide-support.png" link="#step-4-provide-support-information-for-it-admins-and-users" border="false":::
    :::column-end:::
    :::column span="3":::
-     **Step4**: When admins or users encounter unknown issues or issues that can't be resolved using the documentation, they might reach for support. Providing support in such scenarios is helpful for healthy retention of users.
+     **Step 4**: When admins or users encounter unknown issues or issues that can't be resolved using the documentation, they might reach for support. Providing support in such scenarios is helpful for healthy retention of users.
    :::column-end:::
 :::row-end:::
 :::row:::
@@ -76,7 +76,7 @@ Following the below five easy steps, you can encourage customers to adopt your a
      :::image type="icon" source="assets/images/app-adoption/track-using-analytics.png" link="#step-5-track-app-adoption-and-usage-using-analytics" border="false":::
    :::column-end:::
    :::column span="3":::
-     **Step5**: Track your app adoption progress after the rollout and promptly resolve issues for the early adopters. Your CSM or account manager can engage with the customer's organization and its IT admins to track adoption and provide support.
+     **Step 5**: Track your app adoption progress after the rollout and promptly resolve issues for the early adopters. Your CSM or account manager can engage with the customer's organization and its IT admins to track adoption and provide support.
    :::column-end:::
 :::row-end:::
 
