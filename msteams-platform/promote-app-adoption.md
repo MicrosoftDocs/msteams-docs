@@ -119,7 +119,8 @@ Post-adoption, there's a need for continuous engagement to help existing users w
 
 For help on creating these assets, register for the [ISV success program overview](https://www.microsoft.com/isv/program-benefits).
 
-[Back to top](#understand-how-you-can-drive-app-adoption)
+> [!div class="nextstepaction"]
+> [Back to top](#understand-how-you-can-drive-app-adoption)
 
 ## Step 2: Help admins to do app configuration and rollout for their users
 
@@ -174,7 +175,7 @@ If your app accesses any data outside Teams, it does that using Microsoft Graph 
 
 ### Buy and manage licenses and subscriptions for paid apps
 
-Your app might require purchasing a service subscription to experience the app's full functionality and scope. These service subscriptions are called Software as a Service (SaaS) offers. A license can be made available for purchase through [AppSource](https://appsource.microsoft.com/?exp=ubp8) and through the [Teams admin center](https://admin.teams.microsoft.com/). Include instructions on buying and managing licenses, as part of your app’s admin documentation. The governance controls for admins on paid and free apps remain the same. Admins can purchase apps using a credit card, debit card, or with invoice billing. To learn more about licenses and subscriptions, see [how admins manage subscriptions for apps](/microsoftteams/purchase-third-party-apps).
+Your app might require purchasing a service subscription to experience the app's full functionality and scope. These service subscriptions are called Software as a Service (SaaS) offers. A license can be made available for purchase through [AppSource](https://appsource.microsoft.com/) and through the [Teams admin center](https://admin.teams.microsoft.com/). Include instructions on buying and managing licenses, as part of your app’s admin documentation. The governance controls for admins on paid and free apps remain the same. Admins can purchase apps using a credit card, debit card, or with invoice billing. To learn more about licenses and subscriptions, see [how admins manage subscriptions for apps](/microsoftteams/purchase-third-party-apps).
 
 ### Allow custom apps in an organization
 
@@ -205,7 +206,8 @@ Provide admin-focused documentation in your app toolkit that is based on the abo
 * Your contact information for app support. If admins can’t troubleshoot app rollout or issues faced by the users, then how do they contact you. Your contact information and method to raise a support ticket mustn’t require the user to sign in.
 * List of supported languages.
 
-[Back to top](#understand-how-you-can-drive-app-adoption)
+> [!div class="nextstepaction"]
+> [Back to top](#understand-how-you-can-drive-app-adoption)
 
 ## Step 3: Educate users and drive adoption change management for your app
 
@@ -286,7 +288,8 @@ Champions help:
 
 You can use Microsoft [Champions Program Guide](https://adoption.microsoft.com/become-a-champion/) as a reference and build this program in your organization for your app. For more information, see [Create your champions program for Microsoft Teams](/microsoftteams/teams-adoption-create-champions-program).
 
-[Back to top](#understand-how-you-can-drive-app-adoption)
+> [!div class="nextstepaction"]
+> [Back to top](#understand-how-you-can-drive-app-adoption)
 
 ## Step 4: Provide support information for IT admins and users
 
@@ -307,13 +310,14 @@ The following table provides the support information that you already submitted 
 
 |Input source when creating app|Parameter|Description and meaning|Visibility of the information in Teams|
 |-----|-----|-----|-----|
-|[Manifest file](resources/schema/manifest-schema.md)|websiteUrl|The web page at this URL provides support information for an app.|App details page in Teams admin center displays the website URL.|
-|[Manifest file](resources/schema/manifest-schema.md)|privacyUrl|The URL to the page that provides privacy information for the app.|• Displayed in app details page in Teams admin center. <br> • Displayed in Store listing.|
-|[Manifest file](resources/schema/manifest-schema.md)|termsOfUseUrl|The URL to the page that provides the terms of use for the app.|• Displayed in app details page in Teams admin center. <br> • Displayed in Store listing.|
-|[Manifest file](resources/schema/manifest-schema.md)|publisherDocsUrl|The URL to the page provides more app information for the admins.|Available in Teams admin center for apps that are blocked by publisher.|
-|[Partner Center submission](/azure/marketplace/add-in-submission-guide)|NA|Support or help documentation URL.|Displayed in [AppSource](https://appsource.microsoft.com/?exp=ubp8), under **Details + support** tab.|
+|[Manifest file](resources/schema/manifest-schema.md)|`websiteUrl`|The web page at this URL provides support information for an app.|App details page in Teams admin center displays the website URL.|
+|[Manifest file](resources/schema/manifest-schema.md)|`privacyUrl`|The URL to the page that provides privacy information for the app.|• Displayed in app details page in Teams admin center. <br> • Displayed in Store listing.|
+|[Manifest file](resources/schema/manifest-schema.md)|`termsOfUseUrl`|The URL to the page that provides the terms of use for the app.|• Displayed in app details page in Teams admin center. <br> • Displayed in Store listing.|
+|[Manifest file](resources/schema/manifest-schema.md)|`publisherDocsUrl`|The URL to the page provides more app information for the admins.|Available in Teams admin center for apps that are blocked by publisher.|
+|[Partner Center submission](/azure/marketplace/add-in-submission-guide)|NA|Support or help documentation URL.|Displayed in [AppSource](https://appsource.microsoft.com/), in the **Details + support** tab.|
 
-[Back to top](#understand-how-you-can-drive-app-adoption)
+> [!div class="nextstepaction"]
+> [Back to top](#understand-how-you-can-drive-app-adoption)
 
 ## Step 5: Track app adoption and usage using analytics
 
@@ -362,7 +366,8 @@ For better communication and adoption campaign, identify your metrics in advance
 
 After successful app adoption and analysis, share your journey and your achievements in the form of a case study or an app success story. Work with [Microsoft ISV success program](https://www.microsoft.com/isv/program-benefits) to publish it with Microsoft. For information on how Microsoft can help, see [Succeed with your collaborative app](concepts/deploy-and-publish/appsource/post-publish/app-growth/succeed.md).
 
-[Back to top](#understand-how-you-can-drive-app-adoption)
+> [!div class="nextstepaction"]
+> [Back to top](#understand-how-you-can-drive-app-adoption)
 
 ## See also
 
