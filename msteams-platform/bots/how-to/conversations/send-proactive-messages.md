@@ -175,6 +175,114 @@ You can only install apps that are in your organizational app catalog or the Tea
 
 See [install apps for users](/graph/api/userteamwork-post-installedapps) in the Graph documentation and [proactive bot installation and messaging in Teams with Graph](../../../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md). There's also a [Microsoft .NET framework sample](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176) on the GitHub platform.
 
+## Examples
+
+Be sure that you authenticate and have a bearer token before creating a new conversation using the REST API.
+
+**REST API to create a conversation in a one-one chat:**
+
+```json
+
+`POST {Service URL of your bot}/v3/conversations`
+
+JSON
+
+{
+   "bot": {
+        "id": "{{botID}}",
+        "name": "{{botName}}"
+    },
+  "members": [
+    {
+      "id": "{{memberID}}"
+    }
+  ],
+  "channelData": {
+    "tenant": {
+      "id": "{{tenantID}}"
+    }
+  }
+}
+
+```
+
+You can get the {Service URL of your bot} from TurnContext object like turnContext.Activity.ServiceURL parameter.
+Provide id as your bot app ID and name as your bot name.
+You can get the members id from your bots TurnContext object such as turnContext.Activity.From.Id.
+Similarly, id of tenant, from your bots TurnContext object such as turnContext.Activity.ChannelData.Tenant.Id.
+
+You must supply the user ID and the tenant ID. If the call succeeds, the API returns with the following response object.
+
+```json
+{
+  "id":"{{ personal chat's unique conversation ID}}"
+}
+```
+
+This ID is the personal chat's unique conversation ID. Store this value and reuse it for future interactions with the user.
+
+**REST API to create a conversation in a channel:**
+
+```json
+POST {Service URL of your bot}/v3/conversations
+JSON
+
+{
+    "activity": {
+        "type": "message",
+        "text": "new conversation"
+    },
+    "bot": {
+        "id": "{{botID}}",
+        "name": "{{botName}}"
+    },
+    "channelData":{
+      "teamsChannelId":"{{teamID}}",
+      "teamsTeamId":"{{teamID}}",
+      "channel":{"id":"{{teamID}}"},
+      "team":{"id":"{{teamID}}"},
+      "tenant":{"id": "{{tenantID}}"}
+    },
+    "isGroup": true,
+    "tenantId": "{{tenantID}}"
+}
+```
+
+You can get the {Service URL of your bot} from TurnContext object like turnContext.Activity.ServiceURL parameter.
+You can get the channelData from TurnContext object like turnContext.Activity.TeamsChannelData parameter.
+Provide id as your bot app ID and name as your bot name. Similarly, id of tenant, from your bots TurnContext object such as turnContext.Activity.ChannelData.Tenant.Id.
+If the call succeeds, the API returns with the following response object.
+
+```json
+{
+    "id": "{{conversationID}}",
+    "activityId": "{{activityID}}"
+}
+```
+
+**REST API to Update message in conversation**
+
+To update an existing activity within a conversation, include the conversationId and activityId in the request endpoint. To complete this scenario, you must cache the activity ID returned by the original post call.
+
+```json
+PUT {Service URL of your bot}/v3/conversations/{conversationId}/activities/{activityId}
+ 
+JSON
+{
+    "type": "message",
+    "text": "This message has been updated"
+}
+```
+
+To update an existing activity within a conversation, include the conversationId and activityId in the request endpoint. To complete this scenario, you must cache the activity ID returned by the original post call.
+If the call succeeds, the API returns with the following response object.
+
+```json
+{
+    "id": "{{activityID}}"
+}
+```
+
 ## Samples
 
 The following code shows how to send proactive messages:
@@ -258,6 +366,7 @@ Example of a code snippet to demonstrate creating conversation reference.
 ```
 
 # [TypeScript](#tab/typescript)
+
 * [SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#botbuilder-core-turncontext-getconversationreference&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/graph-proactive-installation/nodejs/bots/proactiveBot.js#L59)
 
@@ -287,6 +396,7 @@ async messageAllMembersAsync(context) {
 ```
 
 # [Python](#tab/python)
+
 * [SDK reference](/python/api/botbuilder-core/botbuilder.core.botframeworkadapter?view=botbuilder-py-latest#botbuilder-core-botframeworkadapter-create-conversation&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L200)
 
