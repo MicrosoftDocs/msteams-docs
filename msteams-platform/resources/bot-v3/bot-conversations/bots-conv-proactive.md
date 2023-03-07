@@ -164,7 +164,7 @@ Your team-added bot can post into a channel to create a new reply chain. If you'
 
 Alternatively, you can use the REST API and issue a POST request to [`/conversations`](/azure/bot-service/rest-api/bot-framework-rest-connector-send-and-receive-messages?#start-a-conversation) resource.
 
-## Examples
+Examples
 
 ```json
 POST {Service URL of your bot}/v3/conversations
