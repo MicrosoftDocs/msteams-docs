@@ -261,7 +261,7 @@ You must define the access token version for your app. This configuration is mad
 1. Enter **2** as the value for the `accessTokenAcceptedVersion` property.
 
     > [!NOTE]
-    > If we select personal Microsoft accounts or accounts in any organizational directory (Azure AD - Multi-tenant) during app registration, then only we need to alter as 2, if not we can leave the default null value alone.
+    > If you've selected personal Microsoft accounts or accounts in any organizational directory (Azure AD - Multi-tenant) during app registration, update the value for the `accessTokenAcceptedVersion` property as 2.
 
    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-manifest-value.png" alt-text="Value for accepted access token version":::
 
