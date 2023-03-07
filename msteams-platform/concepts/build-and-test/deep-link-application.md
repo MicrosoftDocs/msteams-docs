@@ -193,7 +193,7 @@ The query parameters are:
     >`https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456?context={"chatId": "17:b42de192376346a7906a7dd5cb84b673@thread.v2","contextType":"chat"}`
 
 > [!IMPORTANT]
-> Ensure that all the query parameters and white spaces are properly URI encoded. You must follow the preceding examples using the last example:
+> Ensure that all the query parameters and the white spaces are properly URI encoded. You must follow the preceding examples using the last example:
 >
 > ```javascript
 > var encodedWebUrl = encodeURIComponent(JSON.stringify('https://tasklist.example.com/123/456&label=Task 456'));
