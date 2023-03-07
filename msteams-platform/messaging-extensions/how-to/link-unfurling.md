@@ -27,7 +27,7 @@ The following image is an example of link unfurling when an Adaptive Card link i
 
 See the following video to learn more about link unfurling:
 <br>
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OFZG]
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWZdFE]
 <br>
 
 ## Add link unfurling to your app manifest
