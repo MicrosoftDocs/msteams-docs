@@ -214,6 +214,31 @@ async def on_members_added_activity(
 
 ```
 
+# [POST](#tab/json2)
+
+```http
+POST {Service URL of your bot}/v3/conversations
+```
+
+```json
+{
+   "bot": {
+        "id": "{{botID}}",
+        "name": "{{botName}}"
+    },
+  "members": [
+    {
+      "id": "{{memberID}}"
+    }
+  ],
+  "channelData": {
+    "tenant": {
+      "id": "{{tenantID}}"
+    }
+  }
+}
+```
+
 ---
 
 > [!NOTE]
@@ -316,6 +341,19 @@ async onTeamsMessageEdit(context) {
 
 ```
 
+# [PUT](#tab/json3)
+
+```http
+PUT {Service URL of your bot}/v3/conversations/{conversationId}/activities/{activityId}
+```
+
+```json
+{
+    "type": "message",
+    "text": "This message has been updated"
+}
+```
+
 ---
 
 The following is an example of an undelete message event notification when a deleted message is restored:
@@ -402,6 +440,19 @@ async onTeamsMessageUndelete(context) {
     await context.sendActivity(`Previously the message was deleted. After undeleting, the message is now: "${undeletedMessage}"`);
 }
 
+```
+
+# [PUT](#tab/json3)
+
+```http
+PUT {Service URL of your bot}/v3/conversations/{conversationId}/activities/{activityId}
+```
+
+```json
+{
+    "type": "message",
+    "text": "This message has been updated"
+}
 ```
 
 ---

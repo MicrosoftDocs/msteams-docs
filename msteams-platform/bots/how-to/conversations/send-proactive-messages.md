@@ -181,11 +181,11 @@ Be sure that you authenticate and have a bearer token before creating a new conv
 
 **REST API to create a conversation in a one-one chat:**
 
+```http
+POST {Service URL of your bot}/v3/conversations
+```
+
 ```json
-
-`POST {Service URL of your bot}/v3/conversations`
-
-JSON
 
 {
    "bot": {
@@ -206,10 +206,9 @@ JSON
 
 ```
 
-You can get the {Service URL of your bot} from TurnContext object like turnContext.Activity.ServiceURL parameter.
-Provide id as your bot app ID and name as your bot name.
-You can get the members id from your bots TurnContext object such as turnContext.Activity.From.Id.
-Similarly, id of tenant, from your bots TurnContext object such as turnContext.Activity.ChannelData.Tenant.Id.
+You can get the `{Service URL of your bot}` from `TurnContext` object like `turnContext.Activity.ServiceURL` parameter.
+
+Provide `id` as your bot app ID and `name` as your bot name. You can get the `members id` from your bots `TurnContext` object such as `turnContext.Activity.From.Id`. Similarly, `id` of tenant, from your bots `TurnContext` object such as `turnContext.Activity.ChannelData.Tenant.Id`.
 
 You must supply the user ID and the tenant ID. If the call succeeds, the API returns with the following response object.
 
@@ -223,9 +222,11 @@ This ID is the personal chat's unique conversation ID. Store this value and reus
 
 **REST API to create a conversation in a channel:**
 
-```json
+```http
 POST {Service URL of your bot}/v3/conversations
-JSON
+```
+
+```json
 
 {
     "activity": {
@@ -248,10 +249,11 @@ JSON
 }
 ```
 
-You can get the {Service URL of your bot} from TurnContext object like turnContext.Activity.ServiceURL parameter.
-You can get the channelData from TurnContext object like turnContext.Activity.TeamsChannelData parameter.
-Provide id as your bot app ID and name as your bot name. Similarly, id of tenant, from your bots TurnContext object such as turnContext.Activity.ChannelData.Tenant.Id.
-If the call succeeds, the API returns with the following response object.
+You can get the `{Service URL of your bot}` from `TurnContext` object like `turnContext.Activity.ServiceURL` parameter.
+
+Provide `id` as your bot app ID and `name` as your bot name. You can get the `members id` from your bots `TurnContext` object such as `turnContext.Activity.From.Id`. Similarly, `id` of tenant, from your bots `TurnContext` object such as `turnContext.Activity.ChannelData.Tenant.Id`.
+
+You must supply the user ID and the tenant ID. If the call succeeds, the API returns with the following response object.
 
 ```json
 {
@@ -264,18 +266,23 @@ If the call succeeds, the API returns with the following response object.
 
 To update an existing activity within a conversation, include the conversationId and activityId in the request endpoint. To complete this scenario, you must cache the activity ID returned by the original post call.
 
-```json
+```http
 PUT {Service URL of your bot}/v3/conversations/{conversationId}/activities/{activityId}
- 
-JSON
+```
+
+```json
+
 {
     "type": "message",
     "text": "This message has been updated"
 }
 ```
 
-To update an existing activity within a conversation, include the conversationId and activityId in the request endpoint. To complete this scenario, you must cache the activity ID returned by the original post call.
-If the call succeeds, the API returns with the following response object.
+You can get the `{Service URL of your bot}` from `TurnContext` object like `turnContext.Activity.ServiceURL` parameter.
+
+Provide `id` as your bot app ID and `name` as your bot name. You can get the `members id` from your bots `TurnContext` object such as `turnContext.Activity.From.Id`. Similarly, `id` of tenant, from your bots `TurnContext` object such as `turnContext.Activity.ChannelData.Tenant.Id`.
+
+You must supply the user ID and the tenant ID. If the call succeeds, the API returns with the following response object.
 
 ```json
 {
