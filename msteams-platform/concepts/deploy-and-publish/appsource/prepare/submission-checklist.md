@@ -41,16 +41,16 @@ Depending on your app functionality, you're required to provide Teams tenant con
 
 2. **Test Accounts**: Depending on your app's features, you need to provide the following accounts:
 
-    - Admin account (required)
-    - Non-admin accounts (required)
+    * Admin account (required)
+    * Non-admin accounts (required)
 
-        - Ensure that test accounts are safe-listed or configured with license keys, if applicable.
-        - If your app requires users to log in or connect to external services, provide the required credentials to complete the login or connection with the external service.
-        - Ensure that phone-based 2-way authentication is disabled for test accounts.
-        - If the app provides a collaborative experience, provide a non-admin account for each user persona. For example, if your app is used by teachers and students, provide credentials for both user personas.
-        - Ensure that at least one account has access to premium or upgraded features, if applicable.
-        - All accounts you provide must include pre-populated data to help in testing. For example, if your app helps to provide market insights based on the user profile, ensure that market data is pre-populated along with a few user profiles.
-        - Provide at least one account that isn't pre-configured to test the first-run sign-in experience properly.
+        * Ensure that test accounts are safe-listed or configured with license keys, if applicable.
+        * If your app requires users to log in or connect to external services, provide the required credentials to complete the login or connection with the external service.
+        * Ensure that phone-based 2-way authentication is disabled for test accounts.
+        * If the app provides a collaborative experience, provide a non-admin account for each user persona. For example, if your app is used by teachers and students, provide credentials for both user personas.
+        * Ensure that at least one account has access to premium or upgraded features, if applicable.
+        * All accounts you provide must include pre-populated data to help in testing. For example, if your app helps to provide market insights based on the user profile, ensure that market data is pre-populated along with a few user profiles.
+        * Provide at least one account that isn't pre-configured to test the first-run sign-in experience properly.
 
     > [!NOTE]
     > These accounts must be utilized only for validation requirements. The validation team will test your app fully, including first-run user experience.
@@ -65,9 +65,9 @@ Depending on your app functionality, you're required to provide Teams tenant con
 
 You can find the following [sample test instructions](https://github.com/MicrosoftDocs/msteams-docs/tree/19115f8bdd4be6a6c0c38a77651dd8d8c55c741b/msteams-platform/assets/sample-instructions) for your reference.
 
-- Sample 1: Educational app
-- Sample 2: ERP Data transfer
-- Sample 3: Collaborative app
+* Sample 1: Educational app
+* Sample 2: ERP Data transfer
+* Sample 3: Collaborative app
 
 ## Create your store listing details
 
@@ -215,6 +215,27 @@ During submission, you're asked to categorize your app. You can categorize your 
 | Financial management |
 | Maps and feeds |
 | Other |
+
+### Distribute your app to specific countries
+
+If you want to cater your app to a global audience, you can select from an available list of countries and communicate what’s great about your app in ways that are relevant to users in different countries. This is known as geo-fencing. For example, a Contoso US app, which sells gift cards that are only valid for users within the United States and Canada is only visible in the US and Canada Teams app store.
+
+Geo-fencing helps you improve your app's visibility within the Teams app Store to a particular country. When you publish your app to the store, you can target your release to users in specific countries.
+
+:::image type="content" source="../../../../assets/images/app-fundamentals/select-countries-app-partner-center.png" alt-text="Screenshot shows the list of available countries in Microsoft Partner Center.":::
+
+> [!NOTE]
+>
+> * Geo-fencing feature isn't supported in Government community cloud (GCC), GCC-H, and department of Defence (DoD) tenants.
+> * Geo-fencing is applicable only for apps listed in the Teams app store.
+
+Teams uses the `UsageLocation` property from the [user resource type](/graph/api/resources/user?view=graph-rest-#properties&preserve-view=true) Graph API to determine the location of the user and displays the apps available in the user's country. The following table describes the `UsageLocation` property:
+
+|Property  |Type  |Description  |
+|------------------------------------|---------------------|------------------------------------------------------------|
+|`usageLocation`    |string         | A two letter country code (ISO standard 3166). Required for users that will be assigned licenses due to legal requirement to check for availability of services in countries. Examples include: `US`, `JP`, and `GB`. Not nullable.<br> Supports `$filter` (`eq`, `ne`, `not`, `ge`, `le`, `in`, `startsWith`, and `eq` on `null` values).      |
+
+If the user wants to install the app from another country, they can use a deep link to install the app or install the app from [Microsoft AppSource](https://appsource.microsoft.com/en-US/?exp=ubp8). Already Installed apps aren't effected by this feature.
 
 ### Localize your store listing
 
