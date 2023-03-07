@@ -532,4 +532,4 @@ You can try the following code sample for a bot app:
 
 - [Apps for Teams meetings and calls](../../apps-in-teams-meetings/teams-apps-in-meetings.md)
 - [API reference for the Bot Framework Connector service](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference)
-- [Get notifications for Teams meeting call updates](/graph/changenotifications-for-onlinemeeting)
+- [Receive notifications for Teams meetings start, end, and roster events](/graph/changenotifications-for-onlinemeeting)
