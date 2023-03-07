@@ -164,6 +164,45 @@ Your team-added bot can post into a channel to create a new reply chain. If you'
 
 Alternatively, you can use the REST API and issue a POST request to [`/conversations`](/azure/bot-service/rest-api/bot-framework-rest-connector-send-and-receive-messages?#start-a-conversation) resource.
 
+## Examples
+
+```json
+POST {Service URL of your bot}/v3/conversations
+JSON
+
+{
+    "activity": {
+        "type": "message",
+        "text": "new conversation"
+    },
+    "bot": {
+        "id": "{{botID}}",
+        "name": "{{botName}}"
+    },
+    "channelData":{
+      "teamsChannelId":"{{teamID}}",
+      "teamsTeamId":"{{teamID}}",
+      "channel":{"id":"{{teamID}}"},
+      "team":{"id":"{{teamID}}"},
+      "tenant":{"id": "{{tenantID}}"}
+    },
+    "isGroup": true,
+    "tenantId": "{{tenantID}}"
+}
+```
+
+You can get the {Service URL of your bot} from TurnContext object like turnContext.Activity.ServiceURL parameter.
+You can get the channelData from TurnContext object like turnContext.Activity.TeamsChannelData parameter.
+Provide id as your bot app ID and name as your bot name. Similarly, id of tenant, from your bots TurnContext object such as turnContext.Activity.ChannelData.Tenant.Id.
+If the call succeeds, the API returns with the following response object.
+
+```json
+{
+    "id": "{{conversationID}}",
+    "activityId": "{{activityID}}"
+}
+```
+
 ### .NET example (from [this sample](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/32c39268d60078ef54f21fb3c6f42d122b97da22/template-bot-master-csharp/src/dialogs/examples/teams/ProactiveMsgTo1to1Dialog.cs))
 
 ```csharp

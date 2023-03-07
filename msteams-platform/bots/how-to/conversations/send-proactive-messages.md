@@ -260,7 +260,7 @@ If the call succeeds, the API returns with the following response object.
 }
 ```
 
-**REST API to Update message in conversation**
+**REST API to Update message in conversation:**
 
 To update an existing activity within a conversation, include the conversationId and activityId in the request endpoint. To complete this scenario, you must cache the activity ID returned by the original post call.
 
