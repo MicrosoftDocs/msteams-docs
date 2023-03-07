@@ -146,7 +146,7 @@ While it's recommended to use `shareDeepLink()` to generate a deep link to your 
 > [!NOTE]
 >
 > * Personal tabs have a `personal` scope, while channel and group tabs use `team` or `group` scopes. The two tab types have a slightly different syntax since only the configurable tab has a `channel` property associated with its context object. For more information on tab scopes, see the [manifest](~/resources/schema/manifest-schema.md) reference.
-> * Deep links work properly only if the tab was configured using the v0.4 or later library as it has an entity ID. Deep links to tabs without entity IDs still go to the tab but cannot provide the subentity ID to the tab.
+> * Deep links work properly only if the tab was configured using the v0.4 or later library as it has an entity ID. Deep links to tabs without entity IDs still go to the tab but can't provide the subentity ID to the tab.
 
 Use the following format for a deep link that you can use in a bot, connector, or message extension card:
 
