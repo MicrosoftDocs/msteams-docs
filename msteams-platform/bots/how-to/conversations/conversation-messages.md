@@ -442,7 +442,7 @@ async onTeamsMessageUndelete(context) {
 
 ```
 
-# [PUT](#tab/json3)
+# [PUT](#tab/json5)
 
 ```http
 PUT {Service URL of your bot}/v3/conversations/{conversationId}/activities/{activityId}
