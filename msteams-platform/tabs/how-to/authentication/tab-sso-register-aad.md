@@ -7,7 +7,7 @@ keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) 
 ---
 # Configure your tab app in Azure AD
 
-Azure AD provides access to your tab app based on the app user's Teams identity. You'll need to register your tab app with Azure AD so that the app user who has signed into Teams can be given access to your tab app.
+Azure Active Directory provides access to your tab app based on the app user's Teams identity. You'll need to register your tab app with Azure AD so that the app user who has signed into Teams can be given access to your tab app.
 
 ## Enabling SSO in Azure AD
 
@@ -261,7 +261,7 @@ You must define the access token version for your app. This configuration is mad
 1. Enter **2** as the value for the `accessTokenAcceptedVersion` property.
 
     > [!NOTE]
-    > If we select personal Microsoft accounts or accounts in any organizational directory (Azure AD directory - Multi-tenant) during app registration, then only we need to alter as 2, if not we can leave the default null value alone.
+    > If we select personal Microsoft accounts or accounts in any organizational directory (Azure AD - Multi-tenant) during app registration, then only we need to alter as 2, if not we can leave the default null value alone.
 
    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-manifest-value.png" alt-text="Value for accepted access token version":::
 
