@@ -305,26 +305,26 @@ Client Experience
 
     :::image type="content" source="../../../../assets/images/saas-offer/client-experience-1.png" alt-text="Screenshot showing the existing subscription.":::
 
-    :::image type="content" source="../../../../assets/images/saas-offer/client-experience-2.png" alt-text="Screenshot showing the assigned licenses highlighted in red.":::
+    :::image type="content" source="../../../../assets/images/saas-offer/client-experience-2.png" alt-text="Screenshot showing the assigned licenses highlighted in red":::
 
 1. To view license utilization and assign licenses, select Assign licenses.
 
-:::image type="content" source="../../../../assets/images/saas-offer/view-licence.png" alt-text="Screenshot showing the selected assigned licenses highlighted in red.":::
+    :::image type="content" source="../../../../assets/images/saas-offer/view-license.png" alt-text="Screenshot showing the selected assigned licenses highlighted in red.":::
 
 1. Search for a user or a team in the search box and select Assign. The license is assigned to the user or team.
 
-Purchaser can begin assigning licenses to users in the tenant by typing the user name. Purchaser can add one or more users for assignment. Click the “Assign” button. Purchaser can also assign licenses to a “Team” in Teams with a single click.
+    Purchaser can begin assigning licenses to users in the tenant by typing the user name. Purchaser can add one or more users for assignment. Click the “Assign” button. Purchaser can also assign licenses to a “Team” in Teams with a single click.
 
-:::image type="content" source="../../../../assets/images/saas-offer/assign-license.png" alt-text="Screenshot showing the example of assigning license to a Team with a single click highlighted in red.":::
+    :::image type="content" source="../../../../assets/images/saas-offer/assign-licenses.png" alt-text="Screenshot showing the example of assigning license to a Team with a single click highlighted in red.":::":::
 
 1. You can view the list of assigned users or teams for the subscription. You can also check the status of the assignment, if it’s pending or assigned.
 Once the “assign” button is clicked, licenses are successfully assigned and purchaser see the list of assigned users as below.
 
-:::image type="content" source="../../../../assets/images/saas-offer/list-of-assigned-users.png" alt-text="Screenshot showing the list of assigned users with assign licenses highlighted in red.":::
+    :::image type="content" source="../../../../assets/images/saas-offer/list-of-assigned-users.png" alt-text="Screenshot showing the list of assigned users with assign licenses highlighted in red.":::":::
 
 1. If you want to unassign a license for a user or a team, select the user or a team from the list and select Unassign. If the purchaser would like to unassign licenses, the purchaser can select the users and click the unassign button.
 
-:::image type="content" source="../../../../assets/images/saas-offer/unassign-button.png" alt-text="Screenshot showing the selection of unassign button highlighted in red to unassign the users.":::
+    :::image type="content" source="../../../../assets/images/saas-offer/unassign-button.png" alt-text="Screenshot showing the selection of unassign button highlighted in red to unassign the users.":::
 
 ### App launch experience
 
@@ -332,7 +332,7 @@ When a new user launches the app for the first time, they are requested to provi
 
 Consent dialog is part of the flow to get the users license information and may vary based on ISV’s integration approach.
 
-:::image type="content" source="../../../../assets/images/saas-offer/permission-requested.png" alt-text="Screenshot showing the permissions requested.":::
+:::image type="content" source="../../../../assets/images/saas-offer/permissions-requested.png" alt-text="Screenshot showing the permissions requested.":::
 
 ## Admin purchasing experience
 
