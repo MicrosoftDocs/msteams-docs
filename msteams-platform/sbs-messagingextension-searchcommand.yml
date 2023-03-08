@@ -415,16 +415,15 @@ items:
 
     1. Go to **Microsoft Teams**.
 
-    1. In the left panel, select **Apps** > **Manage your apps**.
+    1. Select **Apps** > **Manage your apps**.
 
        :::image type="content" source="./assets/images/Teams-Messaging-Extensions-Search/AppStore_1.png" alt-text="Screenshot of Teams Apps icon and Manage your apps highlighted in red.":::
    
-    1. Select **Upload a custom app**. 
+    1. Select **Upload an app** and select **Upload a custom app**.
 
-       :::image type="content" source="./assets/images/Teams-task-module/upload-app_1.png" alt-text="Screenshot of Upload a custom app under Manage your apps in Microsoft Teams highlighted in red.":::
+       :::image type="content" source="./assets/images/upload-a-custom-app.png" alt-text="Screenshot showing the selection of Upload a custom app highlighted in red.":::
 
     1. Select **Open** to upload the .zip file that you created in the **TeamsAppManifest** folder.
-
 
        :::image type="content" source="~/assets/images/Teams-Messaging-Extensions-Search/selectzipopen_1.png" alt-text="Screenshot of the cloned repository with the Search Command zip file and Open option highlighted in red.":::
 

@@ -130,24 +130,25 @@ items:
 
        :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/manifest-zip-tab-device1_1.png" alt-text="create a zip":::        
      
-    1. Go to **Teams**.
+    1. Go to **Microsoft Teams**.
+
     1. Select **Apps** > **Manage your apps**.
 
        :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/manageapps_2.png" alt-text="Manage apps":::
    
-    1. Select **Upload a custom app**.
+    1. Select **Upload an app** and select **Upload a custom app**.
 
-       :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/uploadapp_2.png" alt-text="Upload custom app":::
+       :::image type="content" source="assets/images/upload-custom-app.png" alt-text="Screenshot showing the selection of Upload a custom app highlighted in red.":::
 
-     1. Select **Open** to upload the .zip file that you created in the `appPackage` folder.
+    1. Select **Open** to upload the .zip file that you created in the `appPackage` folder.
 
          :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/manifest-folder-upload-tab-device1_2.png" alt-text="add the manifest zip":::             
   
-     1. Select **Add**.
+    1. Select **Add**.
 
          :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/sbs-add-desktop_2.png" alt-text="add the app tab device permission":::               
 
-     1. Select **Device Permission Tab** to see the following output:
+    1. Select **Device Permission Tab** to see the following output:
      
          :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/desktop-teams-permission1_2.png" alt-text="add tab device to desktop"::: 
 
@@ -164,12 +165,13 @@ items:
 
        :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/manifest-zip-tab-device1_1.png" alt-text="create a zip":::        
 
-    1. Go to **Teams**.
+    1. Go to **Microsoft Teams**.
+
     1. Select **Apps** > **Manage your apps**.
 
        :::image type="content" source="../msteams-platform/assets/images/conversation-bot/manageapps_1.png" alt-text="Manage apps":::
    
-    1. Select **Upload a custom app**.
+    1. Select **Upload an app** and select **Upload a custom app**.
 
        :::image type="content" source="../msteams-platform/assets/images/conversation-bot/uploadapp_1.png" alt-text="Upload custom app":::
    
