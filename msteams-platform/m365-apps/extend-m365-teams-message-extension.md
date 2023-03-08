@@ -55,7 +55,7 @@ To start with a [sample message extension](https://github.com/OfficeDev/TeamsFx-
 
 1. From Visual Studio Code, open the command palette (`Ctrl+Shift+P`), type `Teams: Create a new app`.
 1. Select **Create a new Teams app** option.
-1. Select **Search-based message extension** to download sample code for a Teams message extension using the latest Teams app manifest. For specific version information, refer to [Teams developer manifest](../resources/schema/manifest-schema.md)
+1. Select **Search-based message extension** to download the sample code for a Teams message extension using the latest Teams app manifest. For more information, see [Teams developer manifest](../resources/schema/manifest-schema.md).
 
     :::image type="content" source="images/toolkit-palatte-search-sample.png" alt-text="The screenshot is an example that shows the Type 'Create a new Teams app' VS Code command palette to list Teams sample options.":::
 
@@ -75,7 +75,7 @@ From here, you can skip ahead to [Add Microsoft 365 Extensions channel for your 
 
 ## Update the app manifest
 
-You need to use the Teams developer manifest schema version `1.13` (or higher) to enable your Teams message extension to run in Outlook. For version information, refer to [Teams developer manifest](../resources/schema/manifest-schema.md).
+You need to use the Teams developer manifest schema version `1.13` (or higher) to enable your Teams message extension to run in Outlook. For more information on schema version, see [Teams developer manifest](../resources/schema/manifest-schema.md).
 
 You have two options for updating your app manifest:
 
@@ -148,7 +148,7 @@ The final step is to sideload your updated message extension ([app package](/mic
 
     :::image type="content" source="images/toolkit-zip-teams-metadata-package.png" alt-text="The screenshot is an example that shows 'Zip Teams metadata package' option in Teams Toolkit extension for Visual Studio Code.":::
 
-1. Sign in to Teams with your sandbox tenant account.
+1. Go to **Microsoft Teams** and sign in using your sandbox tenant account.
 
 1. Select **Apps** to open the **Manage your apps** pane. Then select **Upload an app**.
 
