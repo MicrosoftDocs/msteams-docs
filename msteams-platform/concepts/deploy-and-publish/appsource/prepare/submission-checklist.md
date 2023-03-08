@@ -11,7 +11,7 @@ ms.author: surbhigupta
 
 You've designed, built, and tested your Microsoft Teams app. Now you're ready to list it so people can discover and start using your app.
 
-See the following video to learn more about publishing your app to the Microsoft Teams app store:
+See the following video to learn more about publishing your app to the Microsoft Teams store:
 <br>
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4WG3l]
@@ -218,16 +218,16 @@ During submission, you're asked to categorize your app. You can categorize your 
 
 ### Distribute your app to specific countries
 
-If you want to cater your app to a global audience, you can select from an available list of countries and communicate what’s great about your app in ways that are relevant to users in different countries. This is known as geo-fencing. For example, a Contoso US app, which sells gift cards that are only valid for users within the United States and Canada is only visible in the US and Canada Teams app store.
+If you want to cater your app to a global audience, you can select from an available list of countries and communicate what’s great about your app in ways that are relevant to users in different countries. This is known as geo-fencing. For example, a Contoso US app, which sells gift cards that are only valid for users within the United States and Canada is only visible in the US and Canada Teams store.
 
-Geo-fencing helps you improve your app's visibility within the Teams app Store to a particular country. When you publish your app to the store, you can target your release to users in specific countries.
+Geo-fencing helps you improve your app's visibility within the Teams store to a particular country. When you publish your app to the store, you can target your release to users in specific countries.
 
 :::image type="content" source="../../../../assets/images/app-fundamentals/select-countries-app-partner-center.png" alt-text="Screenshot shows the list of available countries in Microsoft Partner Center.":::
 
 > [!NOTE]
 >
 > * Geo-fencing feature isn't supported in Government community cloud (GCC), GCC-H, and department of Defence (DoD) tenants.
-> * Geo-fencing is applicable only for apps listed in the Teams app store.
+> * Geo-fencing is applicable only for apps listed in the Teams store.
 
 Teams uses the `UsageLocation` property from the [user resource type](/graph/api/resources/user?view=graph-rest-#properties&preserve-view=true) Graph API to determine the location of the user and displays the apps available in the user's country. The following table describes the `UsageLocation` property:
 
