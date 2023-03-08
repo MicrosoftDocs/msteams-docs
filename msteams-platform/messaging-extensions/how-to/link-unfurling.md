@@ -18,8 +18,8 @@ The document guides you on how to add link unfurling to your app manifest using 
 >
 > * Link unfurling isn't supported on Mobile clients.
 > * The link unfurling result is cached for 30 minutes.
-> * Only Adaptive Cards version 1.3 and earlier is supported in link unfurling.
-> * Message extension commands aren't required for link unfurling. However, there must be at least one command in manifest as it's a mandatory property in message extensions. For more information, see [compose extensions](/microsoftteams/platform/resources/schema/manifest-schema).
+> * Link unfurling supports Adaptive Cards version 1.3 and earlier.
+> * Message extension commands aren't required for link unfurling. However, since `commands` is a required property in  `composeExtensions`,  it’s recommended to have at least one command in the manifest. For more information, see [compose extensions](/microsoftteams/platform/resources/schema/manifest-schema#composeextensions).
 
 The following image is an example of link unfurling when an Adaptive Card link is pasted into the Teams compose message area, the link unfurls into a card:
 
@@ -100,7 +100,7 @@ For a complete manifest example, see [manifest reference](~/resources/schema/man
 After adding the domain to the app manifest, you must update your web service code to handle the invoke request. Use the received URL to search your service and create a card response. If you respond with more than one card, only the first card response is used.
 
 > [!Note]
-> Response from the bot must include a `preview` property.
+> The response from a bot must include a `preview` property.
 
 The following card types are supported:
 
@@ -113,7 +113,7 @@ For more information, see [Action type invoke](~/task-modules-and-cards/cards/ca
 
 The following is an example of the `invoke` request:
 
-# [C#/.NET](#tab/dotnet)
+# [C#](#tab/dotnet)
 
 ```csharp
  protected override Task<MessagingExtensionResponse> OnTeamsAppBasedLinkQueryAsync(ITurnContext<IInvokeActivity> turnContext, AppBasedLinkQuery query, CancellationToken cancellationToken)
@@ -154,7 +154,7 @@ The following is an example of the `invoke` request:
 
 ```
 
-# [JavaScript/Node.js](#tab/javascript)
+# [JavaScript](#tab/javascript)
 
 ```javascript
 
