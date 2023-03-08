@@ -469,7 +469,7 @@ items:
        * Update the `MicrosoftAppId` and `MicrosoftAppPassword` for your bot.
          You can obtain the `MicrosoftAppId` from the bot's configuration page. The `MicrosoftAppPassword` is the value for client secret ID that you saved previously in Azure portal.
        * Update `MicrosoftAppType` as `MultiTenant` if your bot is supported on multiple tenants. If your bot is supported on single tenant, update `MicrosoftAppType` as `SingleTenant`.
-       * Update `MicrosoftAppTenantId` as `common` if you're using multi-tenant. If you're using a single tenant app registration, update `tenantId` as the value for `MicrosoftAppTenantId`.
+       * Update `MicrosoftAppTenantId` as `common` if you're using a multi-tenant app registration. If you're using a single tenant app registration, update `tenantId` as the value for `MicrosoftAppTenantId`.
        * Use the OAuth connection name as the **Connection Name**.
 
     1. Select **F5**  to run the project.
