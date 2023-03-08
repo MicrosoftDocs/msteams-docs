@@ -214,7 +214,7 @@ async def on_members_added_activity(
 
 ```
 
-# [POST]()
+# [HTTP](#tab/http)
 
 ```http
 POST {Service URL of your bot}/v3/conversations
@@ -259,7 +259,7 @@ To get an edit or undelete message event notification in a bot, you can override
 
 The following is an example of an edit message event notification when a sent message is edited:
 
-# [C#](#tab/csharp3)
+# [C#](#tab/dotnet3)
 
 ```csharp
 
@@ -341,7 +341,7 @@ async onTeamsMessageEdit(context) {
 
 ```
 
-# [PUT](#tab)
+# [HTTP](#tab/http)
 
 ```http
 PUT {Service URL of your bot}/v3/conversations/{conversationId}/activities/{activityId}
@@ -358,7 +358,7 @@ PUT {Service URL of your bot}/v3/conversations/{conversationId}/activities/{acti
 
 The following is an example of an undelete message event notification when a deleted message is restored:
 
-# [C#](#tab/csharp4)
+# [C#](#tab/dotnet4)
 
 ```csharp
 
@@ -442,7 +442,7 @@ async onTeamsMessageUndelete(context) {
 
 ```
 
-# [PUT]()
+# [HTTP](#tab/http)
 
 ```http
 PUT {Service URL of your bot}/v3/conversations/{conversationId}/activities/{activityId}
