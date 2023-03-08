@@ -127,7 +127,10 @@ items:
         
              :::image type="content" source="~/assets/images/bots/newresource.png" alt-text="Screenshot showing the New resource group location.":::
         
-        1. Select **Type of App** as **Multi Tenant** if your bot is supported on multiple tenants. If your bot is supported on single tenant, select **Single Tenant**.
+        1. Select **Type of App** as follows:
+        
+            * **Multi Tenant** if your bot is supported on multiple tenants. 
+            * **Single Tenant** if your bot is supported on single tenant.
 
         1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected.
     
