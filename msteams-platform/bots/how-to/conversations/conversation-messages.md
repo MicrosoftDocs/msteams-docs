@@ -214,7 +214,7 @@ async def on_members_added_activity(
 
 ```
 
-# [POST](#tab/json2)
+# [POST](#tab)
 
 ```http
 POST {Service URL of your bot}/v3/conversations
@@ -341,7 +341,7 @@ async onTeamsMessageEdit(context) {
 
 ```
 
-# [PUT](#tab/json3)
+# [PUT](#tab)
 
 ```http
 PUT {Service URL of your bot}/v3/conversations/{conversationId}/activities/{activityId}
@@ -442,7 +442,7 @@ async onTeamsMessageUndelete(context) {
 
 ```
 
-# [PUT](#tab/)
+# [PUT](#tab)
 
 ```http
 PUT {Service URL of your bot}/v3/conversations/{conversationId}/activities/{activityId}
