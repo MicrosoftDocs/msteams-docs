@@ -226,6 +226,10 @@ Example for RSC in a team
                 "name": "TeamsActivity.Send.Group",
                 "type": "Application"
             }
+            {
+                "name": "ChannelMeeting.ReadBasic.Group",
+                "type": "Application"
+            }
         ]    
     }
 }
@@ -337,6 +341,7 @@ Example for RSC in a team
         "Channel.Create.Group",
         "Channel.Delete.Group",
         "ChannelMessage.Read.Group",
+        "ChannelMeeting.ReadBasic.Group",
         "TeamsAppInstallation.Read.Group",
         "TeamsTab.Read.Group",
         "TeamsTab.Create.Group",

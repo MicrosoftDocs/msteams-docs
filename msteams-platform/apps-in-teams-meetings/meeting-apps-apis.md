@@ -549,7 +549,12 @@ await turnContext.SendActivityAsync(JsonConvert.SerializeObject(result));
 
 ```javascript
 
-Not available
+this.onMessage(async(context, next) =>{
+  TurnContext.removeRecipientMention(context.activity);
+ 
+  const details=await TeamsInfo.getMeetingInfo(context);
+  await context.sendActivity(JSON.stringify(details, null, 2));
+});
 
 ```
 
