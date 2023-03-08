@@ -177,7 +177,7 @@ See [install apps for users](/graph/api/userteamwork-post-installedapps) in the 
 
 ## Examples
 
-Be sure that you authenticate and have a bearer token before creating a new conversation using the REST API.
+Be sure that you authenticate and have a [bearer token](https://learn.microsoft.com/en-us/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0&tabs=multitenant#bot-to-connector) before creating a new conversation using the REST API.
 
 **REST API to create a conversation in a one-one chat:**
 
@@ -278,11 +278,8 @@ PUT {Service URL of your bot}/v3/conversations/{conversationId}/activities/{acti
 }
 ```
 
-You can get the `{Service URL of your bot}` from `TurnContext` object like `turnContext.Activity.ServiceURL` parameter.
-
-Provide `id` as your bot app ID and `name` as your bot name. You can get the `members id` from your bots `TurnContext` object such as `turnContext.Activity.From.Id`. Similarly, `id` of tenant, from your bots `TurnContext` object such as `turnContext.Activity.ChannelData.Tenant.Id`.
-
-You must supply the user ID and the tenant ID. If the call succeeds, the API returns with the following response object.
+To update an existing activity within a conversation, include the `conversationId` and `activityId` in the request endpoint. To complete this scenario, you must cache the `activity ID` returned by the original post call.
+If the call succeeds, the API returns with the following response object.
 
 ```json
 {
