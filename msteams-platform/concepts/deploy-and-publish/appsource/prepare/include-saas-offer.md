@@ -301,7 +301,7 @@ The following example shows how users can purchase subscription plans for a fict
 Client Experience
 
 1. Go to Microsoft Teams.
-1. Select Apps > Manage your apps.
+1. Select **Apps** > **Manage your apps**.
 1. Select Subscriptions. A tab appears with a list of purchases made in the tenant.
 1. Choose an existing subscription from the list and select **Assign licenses**.
 
@@ -309,7 +309,7 @@ Client Experience
 
     :::image type="content" source="../../../../assets/images/saas-offer/client-experience-2.png" alt-text="Screenshot showing the assigned licenses highlighted in red":::
 
-1. To view license utilization and assign licenses, select Assign licenses.
+1. To view license utilization and assign licenses, select **Assign licenses**.
 
     :::image type="content" source="../../../../assets/images/saas-offer/view-license.png" alt-text="Screenshot showing the selected assigned licenses highlighted in red.":::
 
@@ -324,13 +324,13 @@ Once the “assign” button is clicked, licenses are successfully assigned and 
 
     :::image type="content" source="../../../../assets/images/saas-offer/list-of-assigned-users.png" alt-text="Screenshot showing the list of assigned users with assign licenses highlighted in red.":::":::
 
-1. If you want to unassign a license for a user or a team, select the user or a team from the list and select Unassign. If the purchaser would like to unassign licenses, the purchaser can select the users and click the unassign button.
+1. If you want to unassign a license for a user or a team, select the user or a team from the list and select Unassign. If the purchaser would like to unassign licenses, the purchaser can select the users and select the **unassign button**.
 
     :::image type="content" source="../../../../assets/images/saas-offer/unassign-button.png" alt-text="Screenshot showing the selection of unassign button highlighted in red to unassign the users.":::
 
 ### App launch experience
 
-When a new user launches the app for the first time, they are requested to provide consent to the app. Following is an example of the consent screen shown when calling for user profile data with minimum User.Read permission.
+When a new user launches the app for the first time, they're requested to provide consent to the app. Following is an example of the consent screen shown when calling for user profile data with minimum User.Read permission.
 
 Consent dialog is part of the flow to get the users license information and may vary based on ISV’s integration approach.
 
