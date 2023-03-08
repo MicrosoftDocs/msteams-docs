@@ -296,6 +296,8 @@ The following example shows how users can purchase subscription plans for a fict
 
     :::image type="content" source="~/assets/images/saas-offer/subscriptionlicenses.png" alt-text="Configuring user licenses.":::
 
+## End user experience for License Management in Teams
+
 Client Experience
 
 1. Go to Microsoft Teams.
