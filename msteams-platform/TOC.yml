@@ -433,8 +433,13 @@
   - name: Enable and configure apps for Teams meetings
     items:
     - name: Build tabs for meeting
-      href: apps-in-teams-meetings/build-tabs-for-meeting.md
-      displayName: anonymous, app caching, cache
+      items:
+      - name: Enable your tabs for Teams meeting
+        href: apps-in-teams-meetings/build-tabs-for-meeting.md
+        displayName: anonymous
+      - name: Enable app caching for your tab app
+        href: apps-in-teams-meetings/app-caching-for-your-tab-app.md
+        displayName: app caching, launch time
     - name: Build apps for meeting stage
       href: apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md
       displayName: MicrosoftTeams.meeting.getAppContentStageSharingState
@@ -758,7 +763,10 @@
       displayName: Microsoft Publisher Agreement, app update or new release, user engagement data 
     -  name: Common reasons for app validation failure
        href: concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md
-       displayName: Font, Broken links, functional bugs, app crashes, unexpected errors, app description, Microsoft trademark and brand guidelines, testability, app icon guidelines, app name mismatch, developer name mismatch
+       displayName: Font, Broken links, functional bugs, app crashes, unexpected errors, app description, Microsoft trademark and brand guidelines, testability, app icon guidelines, app name mismatch, developer name mismatch      
+  - name: Drive customer adoption of your app
+    href: promote-app-adoption.md
+    displayName: app promotion, awareness, adoption, rollout, admin approval, change management
 - name: Monetize your app
   items:
   - name: Overview
