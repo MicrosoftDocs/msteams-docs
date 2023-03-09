@@ -13,7 +13,7 @@ Deep links are a navigation mechanism that helps users to connect with features 
 
   :::image type="content" source="~/assets/images/deeplink-tasks.gif" alt-text="Graphical representation shows the user experience of deeplinks in tab app.":::
 
-* App users can enjoy enhanced app experience by using simplified or automated user tasks such as creating a new chat, scheduling a meeting by pre-populating the deep links with required parameters, and so on.
+* App users can enjoy enhanced app experience by using simplified or automated user tasks, such as creating a new chat, scheduling a meeting by pre-populating the deep links with required parameters, and so on.
 
   :::image type="content" source="~/assets/images/deeplink-schedule.gif" alt-text="Graphical representation shows the user experience of deeplinks to launch a meeting scheduling dialog.":::
 
