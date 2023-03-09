@@ -19,7 +19,7 @@ Example of localization JSON schema is as follows:
 
 ```json
 {
-    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.15/MicrosoftTeams.Localization.schema.json",
+    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.16/MicrosoftTeams.Localization.schema.json",
     "name.short": "Portail de Développement",
     "name.full": "Portail des développeurs",
     "description.short": "Configurer, distribuer et gérer vos applications Microsoft Teams",
@@ -37,7 +37,7 @@ The schema defines the following properties:
 
 |Property|Type|Maximum length|Description|Required|
 |---------------|--------|---------|------------------|----|
-|`$schema`|URI|NA|The <https://> URL referencing the JSON Schema for the manifest.||
+|`$schema`|URI|NA|The `https://` URL referencing the JSON Schema for the manifest.||
 |`name.short`|String|30|Replaces the corresponding string from the app manifest with the value provided here. The property is required in the localization JSON.|✔️|
 |`name.full`|String|100|Replaces the corresponding string from the app manifest with the value provided here. The property is required in the localization JSON.|✔️|
 |`description.short`|String|80|Replaces the corresponding string from the app manifest with the value provided here. The property is required in the localization JSON.|✔️|
@@ -58,7 +58,7 @@ The schema defines the following properties:
 
 <details><summary>Localization schema v1.15</summary>
 
-## Example
+## Localization schema v1.15 example
 
 Example of localization JSON schema is as follows:
 
@@ -82,7 +82,7 @@ The schema defines the following properties:
 
 |Property|Type|Maximum length|Description|Required|
 |---------------|--------|---------|------------------|----|
-|`$schema`|URI|NA|The <https://> URL referencing the JSON Schema for the manifest.|
+|`$schema`|URI|NA|The < <https://> > URL referencing the JSON Schema for the manifest.|
 |`name.short`|String|30|Replaces the corresponding string from the app manifest with the value provided here. The property is required in the localization JSON.|✔️|
 |`name.full`|String|100|Replaces the corresponding string from the app manifest with the value provided here. The property is required in the localization JSON.|✔️|
 |`description.short`|String|80|Replaces the corresponding string from the app manifest with the value provided here. The property is required in the localization JSON.|✔️|
@@ -106,7 +106,7 @@ The schema defines the following properties:
 
 <details><summary>Localization schema v1.14</summary>
 
-## Example
+## Localization schema v1.14 example
 
 Example of localization JSON schema is as follows:
 
@@ -130,7 +130,7 @@ The schema defines the following properties:
 
 |Property|Type|Maximum length|Description|
 |---------------|--------|---------|------------------|
-|`$schema`|URI|NA|The <https://> URL referencing the JSON Schema for the manifest.|
+|`$schema`|URI|NA|The `https://` URL referencing the JSON Schema for the manifest.|
 |`name.short`|String|30|Replaces the corresponding string from the app manifest with the value provided here. The property is required in the localization JSON.|
 |`name.full`|String|100|Replaces the corresponding string from the app manifest with the value provided here. The property is required in the localization JSON.|
 |`description.short`|String|80|Replaces the corresponding string from the app manifest with the value provided here. The property is required in the localization JSON.|
@@ -154,7 +154,7 @@ The schema defines the following properties:
 
 <details><summary>Localization schema v1.13</summary>
 
-## Example
+## Localization schema v1.13 example
 
 Example of localization JSON schema is as follows:
 
@@ -178,7 +178,7 @@ The schema defines the following properties:
 
 |Property|Type|Maximum length|Description|
 |---------------|--------|---------|------------------|
-|`$schema`|URI|NA|The <https://> URL referencing the JSON Schema for the manifest.|
+|`$schema`|URI|NA|The `https://` URL referencing the JSON Schema for the manifest.|
 |`name.short`|String|30|Replaces the corresponding string from the app manifest with the value provided here. The property is required in the localization JSON.|
 |`name.full`|String|100|Replaces the corresponding string from the app manifest with the value provided here. The property is required in the localization JSON.|
 |`description.short`|String|80|Replaces the corresponding string from the app manifest with the value provided here. The property is required in the localization JSON.|
@@ -202,7 +202,7 @@ The schema defines the following properties:
 
 <details><summary>Localization schema v1.12</summary>
 
-## Example
+## Localization schema v1.12 example
 
 Example of localization JSON schema is as follows:
 
@@ -226,7 +226,7 @@ The schema defines the following properties:
 
 |Property|Type|Maximum length|Description|
 |---------------|--------|---------|------------------|
-|`$schema`|URI|NA|The <https://> URL referencing the JSON Schema for the manifest.|
+|`$schema`|URI|NA|The `https://` URL referencing the JSON Schema for the manifest.|
 |`name.short`|String|30|Replaces the corresponding string from the app manifest with the value provided here. The property is required in the localization JSON.|
 |`name.full`|String|100|Replaces the corresponding string from the app manifest with the value provided here. The property is required in the localization JSON.|
 |`description.short`|String|80|Replaces the corresponding string from the app manifest with the value provided here. The property is required in the localization JSON.|
@@ -250,7 +250,7 @@ The schema defines the following properties:
 
 <details><summary>Localization schema v1.11</summary>
 
-## Example
+## Localization schema v1.11 example
 
 Example of localization JSON schema is as follows:
 
@@ -274,7 +274,7 @@ The schema defines the following properties:
 
 |Property|Type|Maximum length|Description|
 |---------------|--------|---------|------------------|
-|`$schema`|URI|NA|The <https://> URL referencing the JSON Schema for the manifest.|
+|`$schema`|URI|NA|The `https://` URL referencing the JSON Schema for the manifest.|
 |`name.short`|String|30|Replaces the corresponding string from the app manifest with the value provided here. The property is required in the localization JSON.|
 |`name.full`|String|100|Replaces the corresponding string from the app manifest with the value provided here. The property is required in the localization JSON.|
 |`description.short`|String|80|Replaces the corresponding string from the app manifest with the value provided here. The property is required in the localization JSON.|
@@ -298,7 +298,7 @@ The schema defines the following properties:
 
 <details><summary>Localization schema v1.10</summary>
 
-## Example
+## Localization schema v1.10 example
 
 Example of localization JSON schema is as follows:
 
@@ -322,7 +322,7 @@ The schema defines the following properties:
 
 |Property|Type|Maximum length|Description|
 |---------------|--------|---------|------------------|
-|`$schema`|URI|NA|The <https://> URL referencing the JSON Schema for the manifest.|
+|`$schema`|URI|NA|The `https://` URL referencing the JSON Schema for the manifest.|
 |`name.short`|String|30|Replaces the corresponding string from the app manifest with the value provided here. The property is required in the localization JSON.|
 |`name.full`|String|100|Replaces the corresponding string from the app manifest with the value provided here. The property is required in the localization JSON.|
 |`description.short`|String|80|Replaces the corresponding string from the app manifest with the value provided here. The property is required in the localization JSON.|
@@ -346,7 +346,7 @@ The schema defines the following properties:
 
 <details><summary>Localization schema v1.9</summary>
 
-## Example
+## Localization schema v1.9 example
 
 Example of localization JSON schema is as follows:
 
@@ -370,7 +370,7 @@ The schema defines the following properties:
 
 |Property|Type|Maximum length|Description|
 |---------------|--------|---------|------------------|
-|`$schema`|URI|NA|The <https://> URL referencing the JSON Schema for the manifest.|
+|`$schema`|URI|NA|The `https://` URL referencing the JSON Schema for the manifest.|
 |`name.short`|String|30|Replaces the corresponding string from the app manifest with the value provided here. The property is required in the localization JSON.|
 |`name.full`|String|100|Replaces the corresponding string from the app manifest with the value provided here. The property is required in the localization JSON.|
 |`description.short`|String|80|Replaces the corresponding string from the app manifest with the value provided here. The property is required in the localization JSON.|
@@ -393,7 +393,7 @@ The schema defines the following properties:
 
 <details><summary>Localization schema v1.8</summary>
 
-## Example
+## Localization schema v1.8 example
 
 Example of localization JSON schema is as follows:
 
@@ -417,7 +417,7 @@ The schema defines the following properties:
 
 |Property|Type|Maximum length|Description|
 |---------------|--------|---------|------------------|
-|`$schema`|URI|NA|The <https://> URL referencing the JSON Schema for the manifest.|
+|`$schema`|URI|NA|The `https://` URL referencing the JSON Schema for the manifest.|
 |`name.short`|String|30|Replaces the corresponding string from the app manifest with the value provided here. The property is required in the localization JSON.|
 |`name.full`|String|100|Replaces the corresponding string from the app manifest with the value provided here. The property is required in the localization JSON.|
 |`description.short`|String|80|Replaces the corresponding string from the app manifest with the value provided here. The property is required in the localization JSON.|
