@@ -115,7 +115,7 @@ If the Teams app is running within the host where the deep link is targeted, you
 
 You can allow app users, browse to a personal chat with the application by configuring the deep link manually using the following format:
 
-`https://teams.microsoft.com/l/entity/<appId>/conversations`, where `appId` is your application ID. To know about different app IDs used see, [app ID used for different apps](#app-id-used-for-different-apps).
+`https://teams.microsoft.com/l/entity/<appId>?tenantId=<tenantId>/conversations`, where `appId` is your application ID. To know about different app IDs used see, [app ID used for different apps](#app-id-used-for-different-apps).
 
 ## Share deep link for a tab
 
