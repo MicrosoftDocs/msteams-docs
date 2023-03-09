@@ -127,7 +127,10 @@ items:
         
              :::image type="content" source="~/assets/images/bots/newresource.png" alt-text="Screenshot showing the New resource group location.":::
         
-        1. Select **Type of App** as **Multi Tenant**. 
+        1. Select **Type of App** as follows:
+        
+            * **Multi Tenant**, if your bot is supported on multiple tenants. 
+            * **Single Tenant**, if your bot is supported on a single tenant.
 
         1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected.
     
@@ -423,7 +426,7 @@ items:
         | Client id | Saved previously as your **Microsoft App ID**. |
         | Client secret | Saved previously as **Value** of the client secret ID. |
         | Token Exchange URL | Use the **Application ID URL** obtained previously while exposing API endpoint. |
-        | Tenant ID | Enter **common**. |
+        | Tenant ID | Enter **common**. If you're using a single tenant app registration, use the tenant ID of the tenant where the bot is registered. |
         | Scopes | Enter **User.Read** and also add all the **Scopes** required while specifying permissions to downstream APIs. |
 
         :::image type="content" source="~/assets/images/bots/botserviceconnection.png" alt-text="Screenshot of New Connection Setting with the details entered and the Save option highlighted in red.":::
@@ -445,18 +448,29 @@ items:
 
         :::image type="content" source="~/assets/images/bots/project-solution_1.png" alt-text="Screenshot of Visual Studio file menu. The menu entries titled Open under File menu and Project/Solution under Open are highlighted in red.":::
 
-    1. Select **BotSSOCSharp.csproj** file from **csharp_dotnetcore** folder.
+    1. Select **BotConversationSsoQuickstart.sln** file from **bot-conversation-sso-quickstart** > **csharp_dotnetcore** folder.
 
         :::image type="content" source="~/assets/images/bots/filepath_1.png" alt-text="Screenshot of Project file with the file path and BotSSOCSharp.csproj file highlighted in red.":::
 
-    1. Open the **appsettings.json** file.
+    1. Open the **appsettings.json** file from **BotConversationSsoQuickstart** folder.
 
-    1. Update the **appsettings.json** configuration for the bot to use the `MicrosoftAppId` and `MicrosoftAppPassword`. Use the OAuth connection name as the **Connection Name**.
+    1. Update the following in **appsettings.json** file:
 
-        > [!NOTE]
-        > You can obtain the `MicrosoftAppId` from the bot's Configuration page. The `MicrosoftAppPassword` is the value for client secret ID that you saved previously in Azure portal.
+       ```json
+       {
+        "MicrosoftAppId": "{TODO: MicrosoftAppId}",
+        "MicrosoftAppPassword": "{TODO: ClientSecret}",
+        "ConnectionName": "{TODO: ConnectionName}",
+        "MicrosoftAppType": "MultiTenant", // Set this to SingleTenant if you are using a single tenant app registration
+        "MicrosoftAppTenantId": "common" // Set your tenantId here if you are using single tenant app registration.
+        }
+       ```
 
-         :::image type="content" source="~/assets/images/bots/appsettingsjson.png" alt-text="Screenshot of Visual Studio file explorer menu." lightbox="~/assets/images/bots/appsettingsjson.png":::
+       * Update the `MicrosoftAppId` and `MicrosoftAppPassword` for your bot.
+         You can obtain the `MicrosoftAppId` from the bot's configuration page. The `MicrosoftAppPassword` is the value for client secret ID that you saved previously in Azure portal.
+       * Update `MicrosoftAppType` as `MultiTenant` if your bot is supported on multiple tenants. If your bot is supported on single tenant, update `MicrosoftAppType` as `SingleTenant`.
+       * Update `MicrosoftAppTenantId` as `common` if you're using a multi-tenant app registration. If you're using a single tenant app registration, update `tenantId` as the value for `MicrosoftAppTenantId`.
+       * Use the OAuth connection name as the **Connection Name**.
 
     1. Select **F5**  to run the project.
 
@@ -496,9 +510,9 @@ items:
 
     1. Replace all occurrences of **{TODO: MicrosoftAppId}** with your bot's **Microsoft App ID**.
     
-    1. In your cloned repository, go to **bot-conversation-sso-quickstart** > **csharp_dotnetcore** > **appPackage** folder.
+    1. In your cloned repository, go to **bot-conversation-sso-quickstart** > **csharp_dotnetcore** > **BotConversationSsoQuickstart** > **appPackage**.
     
-    1. Create a .zip with the following files that are present in the **Manifest** folder: 
+    1. Create a .zip with the following files that are present in the **appPackage** folder: 
        * manifest.json
        * icon-outline.png
        * icon-color.png
@@ -519,9 +533,9 @@ items:
 
         :::image type="content" source="~/assets/images/bots/open-app.png" alt-text="Screenshot of Manifest folder with Open option to upload the Teams Bot zip file highlighted in red.":::
 
-    1. Select **Add** to add the conversation bot to your chat.
+    1. Select **Add** to add the bot to your chat.
 
-        :::image type="content" source="~/assets/images/bots/add-conversation-bot_1.png" alt-text="Screenshot of Conversation Bot with Add option highlighted in red.":::
+        :::image type="content" source="~/assets/images/bots/add-conversation-bot-1.png" alt-text="Screenshot of Conversation Bot with Add option highlighted in red.":::
 
         You can interact with the bot by sending it a message. The bot exchanges an SSO token and calls the Graph API on your behalf. It keeps you signed in unless you send a message to sign out.
 
