@@ -70,8 +70,11 @@ Meetings enable collaboration, partnership, informed communication, and shared f
 :::row-end:::
 -->
 
+You can create scenes for meetings, provide notifications to users, populate in-meeting dialogs, and much more with meeting app extensibility.
 
-You must be familiar with the following product concepts to create custom meeting experiences with apps in Microsoft Teams.
+Third-party and line-of-business apps built for meetings and calls are available in Government Community Cloud (GCC) but aren't available for GCC-High and Department of Defense (DOD) tenants. 
+
+You must be familiar with the concepts in this article to create custom meeting experiences with apps in Microsoft Teams.
 
 ## Supported meeting types in Teams
 
@@ -144,11 +147,6 @@ For more information, see [roles in a Teams meeting](https://support.microsoft.c
 > * The [default participant settings](/microsoftteams/meeting-policies-participants-and-guests) are determined by an organization's IT administrator. As per default settings, participants joining a meeting have the presenter role.
 > * Presenter role isn't available in one-on-one calls.
 > * A user who starts the group call from a chat is considered as an organizer.
-
-> [!IMPORTANT]
->
-> * Currently, third-party apps are available in Government Community Cloud (GCC) but aren't available for GCC-High and Department of Defense (DOD) tenants.
-> * Third-party apps are turned off by default for GCC. To turn on third-party apps for GCC, see [manage app permission policies](/microsoftteams/teams-app-permission-policies) and [manage apps](/microsoftteams/manage-apps).
 
 ## See also
 
