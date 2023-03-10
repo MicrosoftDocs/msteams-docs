@@ -766,7 +766,7 @@
        displayName: Font, Broken links, functional bugs, app crashes, unexpected errors, app description, Microsoft trademark and brand guidelines, testability, app icon guidelines, app name mismatch, developer name mismatch      
   - name: Drive customer adoption of your app
     href: promote-app-adoption.md
-    displayName: promote app awareness, app adoption, rollout, admin approval, adoption change management
+    displayName: app promotion, awareness, adoption, rollout, admin approval, change management
 - name: Monetize your app
   items:
   - name: Overview

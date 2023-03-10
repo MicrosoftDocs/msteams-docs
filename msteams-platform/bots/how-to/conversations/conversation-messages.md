@@ -341,7 +341,7 @@ async onTeamsMessageEdit(context) {
 
 ```
 
-# [HTTP](#tab/http)
+# [HTTP](#tab/http1)
 
 ```http
 PUT {Service URL of your bot}/v3/conversations/{conversationId}/activities/{activityId}
@@ -442,7 +442,7 @@ async onTeamsMessageUndelete(context) {
 
 ```
 
-# [HTTP](#tab/http)
+# [HTTP](#tab/http2)
 
 ```http
 PUT {Service URL of your bot}/v3/conversations/{conversationId}/activities/{activityId}
@@ -465,7 +465,7 @@ To get a soft delete message event notification in a bot, you can override the `
 
 The following is an example of a soft delete message event notification when a message is soft deleted:
 
-# [C#](#tab/csharp5)
+# [C#](#tab/dotnet5)
 
 ```csharp
 
