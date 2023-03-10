@@ -1,8 +1,9 @@
 ---
 title: Extend tab app with Microsoft Graph permissions
-description: Configure additional permissions and scopes, get access token with Microsoft Graph to enable single sign-on (SSO).
+description: Configure additional permissions and scopes, get access token with Microsoft Graph for to enable single sign-on (SSO).
 ms.topic: how-to
 ms.localizationpriority: high
+keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) Graph API Delegated permission access token scope
 ---
 # Extend tab app with Microsoft Graph permissions and scopes
 
@@ -52,7 +53,7 @@ You can configure additional Graph scopes in Azure AD for your app. These are de
 
     You can also enter the permission name in the search box to find it.
 
-    A message appears on the browser stating that the permissions were updated.
+    A message pops up on the browser stating that the permissions were updated.
 
    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/updated-permission-msg.png" alt-text="The screenshot shows the message that appears for the updated permissions.":::
 
@@ -121,6 +122,7 @@ The current implementation for SSO grants consent for only user-level permission
 After you've configured Graph permissions in Azure AD:
 
 1. [Get the token ID from Teams client](#get-the-token-id-from-teams-client)
+
 1. [Exchange the token ID with the server-side token](#exchange-the-token-id-with-the-server-side-token)
 
 ### Get the token ID from Teams client
@@ -209,12 +211,6 @@ If you need to access Microsoft Graph data, configure your server-side code to:
 > [!IMPORTANT]
 > As a best practice for security, always use the server-side code to make Microsoft Graph calls, or other calls that require passing an access token. Never return the OBO token to the client to enable the client to make direct calls to Microsoft Graph. This helps protect the token from being intercepted or leaked.
 
-## Code sample
-
-| **Sample name** | **Description** | **C#** | **Node.js** |
-| --- | --- | --- | --- |
-| Tabs Azure AD SSO | Microsoft Teams sample app for tabs Azure AD SSO, which uses OBO flow to call Graph APIs. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/69c76fded29d7ae0fde49841d4ec9af7597ceedd/samples/tab-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/69c76fded29d7ae0fde49841d4ec9af7597ceedd/samples/tab-sso/nodejs)|
-
 ## Known limitations
 
 Tenant admin consent: A simple way of [consenting on behalf of an organization as a tenant admin](/azure/active-directory/manage-apps/consent-and-permissions-overview#admin-consent) is by getting [consent from admin](/azure/active-directory/manage-apps/grant-admin-consent).
@@ -234,6 +230,12 @@ You can ask for consent using the Auth API. Another approach for getting Graph s
     To handle incremental consent for tab app, see [incremental and dynamic user consent](/azure/active-directory/develop/v2-permissions-and-consent).
 5. After the app user has granted more permissions, retry the OBO flow to get access to these other APIs.
     </details>
+
+## Code sample
+
+| **Sample name** | **Description** | **C#** | **Node.js** |
+| --- | --- | --- | --- |
+| Tabs Azure AD SSO | Microsoft Teams sample app for tabs Azure AD SSO, which uses OBO flow to call Graph APIs. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/69c76fded29d7ae0fde49841d4ec9af7597ceedd/samples/tab-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/69c76fded29d7ae0fde49841d4ec9af7597ceedd/samples/tab-sso/nodejs)|
 
 ## See also
 

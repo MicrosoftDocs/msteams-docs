@@ -24,9 +24,11 @@ You need to install the following tools and set up your development environment:
    | --- | --- | --- |
    | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use version 1.55 or later. |
    | &nbsp; | [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)| A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use 4.0.0 version. |
-   | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. Use the latest v16 LTS release.|
+   | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](tools-prerequisites.md#nodejs-version-compatibility-table-for-project-type). |
    | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call and all in one place.|
    | &nbsp; | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
+
+For more information on Node.js version compatibility, see [Prerequisites for creating your Teams app](/microsoftteams/platform/toolkit/tools-prerequisites?branch=pr-en-us-8020) using Visual Studio Code.
 
 > [!NOTE]
 > If your project has installed `botbuilder`related [packages](https://github.com/Microsoft/botbuilder-js#packages) as dependencies, ensure they are of the same version.
@@ -108,7 +110,7 @@ There are three credential classes to simplify authentication. Here's the corres
 
 `TeamsUserCredential` represents Teams current user's identity. For the first time user's credentials are authenticated, then Teams SSO does the  On-Behalf-Of flow for token exchange. SDK uses this credential when you choose user identity in the browser environment.
 
-The following code is an an example to create `TeamsUserCredential`:
+The following code is an example to create `TeamsUserCredential`:
 
 ```typescript
 const authConfig: TeamsUserCredentialAuthConfig = {
@@ -119,7 +121,7 @@ const authConfig: TeamsUserCredentialAuthConfig = {
 const credential = new TeamsUserCredential(authConfig);
 ```
 
-Required configurations are `initiateLoginEndpoint` and `clientId` which can be found inside type `TeamsUserCredentialAuthConfig`.
+Required configurations are `initiateLoginEndpoint` and `clientId` that's found inside type `TeamsUserCredentialAuthConfig`.
 
 </details>
 
@@ -141,7 +143,7 @@ const oboAuthConfig: OnBehalfOfCredentialAuthConfig = {
 const oboCredential = new OnBehalfOfUserCredential(ssoToken, oboAuthConfig);
 ```
 
-Required configurations are `authorityHost`, `tenantId`, `clientId`, `clientSecret`, or `certificateContent` which can be found inside type `OnBehalfOfCredentialAuthConfig`.
+Required configurations are `authorityHost`, `tenantId`, `clientId`, `clientSecret`, or `certificateContent` that's found inside type `OnBehalfOfCredentialAuthConfig`.
 
 </details>
 
@@ -162,7 +164,7 @@ const appAuthConfig: AppCredentialAuthConfig = {
 const appCredential = new AppCredential(appAuthConfig);
 ```
 
-Required configurations are `authorityHost`, `tenantId`, `clientId`, `clientSecret`, or `certificateContent` which can be found inside type `AppCredentialAuthConfig`
+Required configurations are `authorityHost`, `tenantId`, `clientId`, `clientSecret`, or `certificateContent` that's inside type `AppCredentialAuthConfig`
 </details>
 
 ### Bot SSO
@@ -223,7 +225,7 @@ You can pass custom config when creating a new `TeamsFx` instance to override de
 For tab project
 </b> </summary>
 
-If you've created tab project using Microsoft Visual Studio Code Toolkit, the following config values is used from pre-configured environment variables:
+If you've created tab project using Microsoft Visual Studio Code Toolkit, the following config values are used from pre-configured environment variables:
 
 * authorityHost (REACT_APP_AUTHORITY_HOST)
 * tenantId (REACT_APP_TENANT_ID)
@@ -240,7 +242,7 @@ If you've created tab project using Microsoft Visual Studio Code Toolkit, the fo
 For Azure Function or bot project
 </b></summary>
 
-If you've created Azure Function or bot project using Visual Studio Code Toolkit, the following config values is used from pre-configured environment variables:
+If you've created Azure Function or bot project using Visual Studio Code Toolkit, the following config values are used from pre-configured environment variables:
 
 * initiateLoginEndpoint (INITIATE_LOGIN_ENDPOINT)
 * authorityHost (M365_AUTHORITY_HOST)
@@ -298,7 +300,7 @@ try {
 }
 ```
 
-If a credential instance is used in other library, such as Microsoft Graph, its possible that an error is caught and transformed.
+If a credential instance is used in other library, such as Microsoft Graph, it's possible that an error is caught and transformed.
 
 ## Microsoft Graph Scenarios
 
@@ -673,7 +675,7 @@ This section provides several code snippets for common scenarios that are relate
     <details>
     <summary><b>Use client secret authentication in Azure Function</b></summary>
 
-    This code snippet shows you how to use client secret application permission to get the token that can be used to call Graph API.
+    This code snippet shows you how to use client secret application permission to get the token that's used to call Graph API.
 
     1. You can initialize the `authConfig` by providing a `client secret`.
 
