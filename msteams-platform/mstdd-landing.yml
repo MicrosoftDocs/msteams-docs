@@ -54,7 +54,7 @@ landingContent:
       links: 
       - text: Link unfurling for mobile
         url: messaging-extensions/how-to/link-unfurling.md
-      - text: Facilitate adoption of your app and create awareness
+      - text: Drive customer adoption of your app
         url: promote-app-adoption.md
       - text: Changelog for Developer Portal
         url: concepts/build-and-test/teams-developer-portal.md#changelog-for-developer-portal
