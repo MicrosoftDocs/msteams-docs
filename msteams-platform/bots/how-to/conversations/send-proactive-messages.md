@@ -175,11 +175,13 @@ You can only install apps that are in your organizational app catalog or the Tea
 
 See [install apps for users](/graph/api/userteamwork-post-installedapps) in the Graph documentation and [proactive bot installation and messaging in Teams with Graph](../../../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md). There's also a [Microsoft .NET framework sample](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176) on the GitHub platform.
 
-## Examples
+### Examples
 
-Be sure that you authenticate and have a bearer token before creating a new conversation using the REST API.
+Ensure that you authenticate and have a [bearer token](azure/bot-service/rest-api/bot-framework-rest-connector-authentication) before creating a new conversation using the REST API.
 
-**REST API to create a conversation in a one-one chat:**
+<br>
+<details>
+<summary><b>REST API to create a conversation in a one-on-one chat:</b></summary>
 
 ```http
 POST {Service URL of your bot}/v3/conversations
@@ -220,7 +222,12 @@ You must supply the user ID and the tenant ID. If the call succeeds, the API ret
 
 This ID is the personal chat's unique conversation ID. Store this value and reuse it for future interactions with the user.
 
-**REST API to create a conversation in a channel:**
+</details>
+<br>
+
+<br>
+<details>
+<summary><b>REST API to create a conversation in a channel:</b></summary>
 
 ```http
 POST {Service URL of your bot}/v3/conversations
@@ -262,7 +269,12 @@ You must supply the user ID and the tenant ID. If the call succeeds, the API ret
 }
 ```
 
-**REST API to Update message in conversation:**
+</details>
+<br>
+
+<br>
+<details>
+<summary><b>REST API to Update message in conversation:</b></summary>
 
 To update an existing activity within a conversation, include the conversationId and activityId in the request endpoint. To complete this scenario, you must cache the activity ID returned by the original post call.
 
@@ -286,6 +298,9 @@ If the call succeeds, the API returns with the following response object.
     "id": "{{activityID}}"
 }
 ```
+
+</details>
+<br>
 
 ## Samples
 

@@ -166,6 +166,8 @@ Alternatively, you can use the REST API and issue a POST request to [`/conversat
 
 ### Examples
 
+# [HTTP](#tab/http)
+
 ```http
 POST {Service URL of your bot}/v3/conversations
 
@@ -207,7 +209,9 @@ You must supply the user ID and the tenant ID. If the call succeeds, the API ret
 }
 ```
 
-### .NET example (from [this sample](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/32c39268d60078ef54f21fb3c6f42d122b97da22/template-bot-master-csharp/src/dialogs/examples/teams/ProactiveMsgTo1to1Dialog.cs))
+# [HTTP](#tab/http)
+
+The .NET example is from [this sample](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/32c39268d60078ef54f21fb3c6f42d122b97da22/template-bot-master-csharp/src/dialogs/examples/teams/ProactiveMsgTo1to1Dialog.cs)
 
 ```csharp
 using Microsoft.Bot.Builder.Dialogs;
@@ -252,6 +256,8 @@ namespace Microsoft.Teams.TemplateBotCSharp.Dialogs
     }
 }
 ```
+
+---
 
 ## See also
 
