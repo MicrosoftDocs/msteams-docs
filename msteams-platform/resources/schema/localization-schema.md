@@ -409,7 +409,7 @@ The schema defines the following properties:
 
 <details><summary>Localization schema v1.8</summary>
 
-## Localization schema v1.8 example
+## Localization schema v1.8
 
 Link to Localization schema v1.8: [https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json](https://developer.microsoft.com/en-us/json-schemas/teams/v1.15/MicrosoftTeams.Localization.schema.json)
 
