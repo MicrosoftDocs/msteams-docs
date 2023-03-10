@@ -184,12 +184,12 @@ You can set the description of Teams app to **my app description** for all the e
 As the Teams app manifest template is shared across all environments, you can update the description value in it for your target:
 
 1. Open the Teams app manifest template `templates\appPackage\manifest.template.json`.
-2. Update the value of the property `description` > `short` with permanent string **my app description**.
+2. Update the value of the property `description` > `short` with the permanent string **my app description**.
   
-  The updates to `manifest.template.json` are:
+    The updates to `manifest.template.json` are:
 
-  ```json
-  {
+    ```json
+    {
     "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.11/MicrosoftTeams.schema.json",
     "manifestVersion": "1.11",
     "version": "1.0.0",
@@ -199,25 +199,21 @@ As the Teams app manifest template is shared across all environments, you can up
       ...
     },
     ...
-  }
+    }
 
-  ```
+    ```
 
-3. Run the provision command against all environment to update the app name in remote environments.
-
-   > [!NOTE]
-   > For more information on running provision command with Teams Toolkit, see [how to provision using Teams Toolkit in Microsoft Visual Studio Code](provision.md#provision-using-teams-toolkit-in-microsoft-visual-studio-code).
+3. Run the provision command against all environments to update the app name in remote environments.
 
 </details>
 
 <details>
-<br><summary><b>Scenario 4: Customize Azure resources for different environment</b></summary>
+<summary><b>Scenario 4: Customize Azure resources for different environment</b></summary>
 
-You can customize Azure resources provisioned for each environment; For example edit the environment corresponding to `.fx\configs\azure.parameters.{env}.json` file to specify an Azure Function name.
+You can customize Azure resources provisioned for each environment. For example, edit the environment corresponding to `.fx\configs\azure.parameters.{env}.json` file to specify an Azure Function name.
 
 For more information on Bicep template and parameter files, see [how to provision cloud resources](provision.md).
 </details>
-</br>
 
 ## See also
 
