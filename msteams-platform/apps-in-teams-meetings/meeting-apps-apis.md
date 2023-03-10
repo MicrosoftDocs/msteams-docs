@@ -779,7 +779,7 @@ The following table provides the error codes:
 ## Get real-time Teams meeting events API
 
 > [!NOTE]
-> Real-time Teams meeting events are only supported for scheduled meetings.
+> Real-time Teams meeting events are supported for scheduled and channel meetings.
 
 The user can receive real-time meeting events. As soon as any app is associated with a meeting, the actual meeting start and end time are shared with the bot. The actual start and end time of a meeting are different from scheduled start and end time. The Meeting Details API provides the scheduled start and end time. The event provides the actual start and end time.
 
