@@ -22,7 +22,7 @@ Adding capabilities with Teams Toolkit allows you to extend the functionality of
 | **Notification bot** | Notification bot proactively sends messages in Teams channel or group chat, or personal chat. You can trigger the notification bot with an HTTP request, such as cards or texts. |SSO-enabled tab and basic tab|
 | **Command bot** | Command bot allows you to automate repetitive tasks using a command bot. It responds to simple commands sent in chats with the Adaptive Cards. |SSO-enabled tab and basic tab|
 | **Workflow bot** | Workflow bot allows users to interact with an Adaptive Card enabled by the Adaptive Card action handler in the workflow bot app.|SSO-enabled tab and basic tab|
-| **SPFx tab** | SPFx tab apps are hosted in Microsoft 365. They support developing and hosting your client-side SharePoint Framework (SPFx) solution.|None|
+| **SPFx tab** | Microsoft 365 hosts the SPFx tab apps, and supports developing and hosting your client-side SharePoint Framework (SPFx) solution.|None|
 | **SSO-enabled tab** |You can build SSO-enabled tab app that allows the user with single sign-on (SSO).|SSO-enabled tab, notification bot, command bot, basic bot, and basic message extension|
 
 > [!NOTE]
@@ -91,12 +91,12 @@ The following table shows the changes that you can see in the files of your app 
 
 |Add capability|Description| Changes|
 |------------|------------------------|---------|
-|Basic bot, basic message extension, and basic tab|Includes a basic bot or basic tab app template into your project.|A front-end bot or tab template code is added into a subfolder with path `yourProjectFolder\bot` or `yourProjectFolder\tab` respectively.|
-|Basic bot, message extension, and basic tab |Includes necessary scripts for Visual Studio Code and is executed when you want to debug your app locally. |Files `launch.json` and `task.json` under `.vscode` folder are updated.|
-|Basic bot and basic message extension|Information in the manifest file for a basic bot or basic tab app. This information represents your app in the Teams Platform.|The file `manifest.template.json` under `templates\appPackage` folder is updated, which includes tab-related information in the manifest file that represents your app in the Teams Platform. The changes are visible in the ID of your bot, the scopes of your bot, and the commands that your bot or tab app can respond to.|
+|Basic bot, basic message extension, and basic tab|Includes a basic bot or basic tab app template into your project.|Teams Toolkit adds a front-end bot or tab template code into a subfolder with path `yourProjectFolder\bot` or `yourProjectFolder\tab`, respectively.|
+|Basic bot, message extension, and basic tab |Includes necessary scripts for Visual Studio Code and is executed when you want to debug your app locally. |Teams Toolkit updates the `launch.json` and `task.json` files under the `.vscode` folder. |
+|Basic bot and basic message extension|Information in the manifest file for a basic bot or basic tab app. This information represents your app in the Teams Platform.|Teams Toolkit updates the file `manifest.template.json` under `templates\appPackage` folder. The manifest file includes tab-related information that represents your app in the Teams Platform. The changes are visible in the ID of your bot, the scopes of your bot, and the commands that your bot or tab app can respond to.|
 |Basic tab|Includes information in the manifest file for a basic bot or basic tab. This information represents your app in the Teams Platform.|The file `manifest.template.json` under `templates\appPackage` folder is updated, which includes tab-related information in the manifest file that represents your app in the Teams Platform. The changes are visible in the configurable and static tabs and scopes of the tabs.|
 |Basic bot, basic message extension, and basic tab|Includes information in TeamsFx for a basic bot or tab app. It also includes provision files that are for integrating Azure Functions.|Files under `templates\azure\teamsfx` are updated and `templates\azure\provision\xxx.bicep` files are regenerated.|
-|Basic bot, basic message extension, and basic tab|Ensure that your project is set up with the right configurations for the newly added capability.|Files under `.fx\config` are regenerated.|
+|Basic bot, basic message extension, and basic tab|Ensure that you've set up your project with the right configuration for the newly added capability.|Teams Toolkit regenerates the files under `.fx\config`.|
 
 ## Step-by-step guides
 
