@@ -31,7 +31,7 @@ The granular, Teams-specific, RSC permissions define what an application can do 
 |Channel.Create.Group|Create channels in this team. |
 |Channel.Delete.Group|Delete channels in this team. |
 |ChannelMessage.Read.Group |Get this team's channel messages. |
-|ChannelMeeting.ReadBasic.Group|Receive meeting events from channel meetings.|
+|ChannelMeeting.ReadBasic.Group|Read basic properties, such as name, schedule, organizer, join link, and start/end notifications, of a meeting associated with this team or channel.|
 |TeamsAppInstallation.Read.Group|Get a list of this team's installed apps.|
 |TeamsTab.Read.Group|Get a list of this team's tabs.|
 |TeamsTab.Create.Group|Create tabs in this team. |

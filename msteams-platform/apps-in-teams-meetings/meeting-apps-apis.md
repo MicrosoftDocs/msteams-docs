@@ -807,6 +807,10 @@ Your app manifest must have the `webApplicationInfo` property to receive the mee
                 "name": "OnlineMeeting.ReadBasic.Chat",
                 "type": "Application"
             }
+            {
+                "name": "ChannelMeeting.ReadBasic.Group",
+                "type": "Application"
+            }
         ]    
     }
 }
@@ -827,7 +831,8 @@ Your app manifest must have the `webApplicationInfo` property to receive the mee
     "id": "<bot id>",
     "resource": "https://RscPermission",
     "applicationPermissions": [
-      "OnlineMeeting.ReadBasic.Chat"
+      "OnlineMeeting.ReadBasic.Chat",
+      "ChannelMeeting.ReadBasic.Group"
     ]
 }
  ```
@@ -888,50 +893,36 @@ protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meet
 The following code provides an example of meeting start event payload:
 
 ```json
-{ 
-    "name": "application/vnd.microsoft.meetingStart", 
-    "type": "event", 
-    "timestamp": "2021-04-29T16:10:41.1252256Z", 
-    "id": "123", 
-    "channelId": "msteams", 
-    "serviceUrl": "https://microsoft.com", 
-    "from": { 
-        "id": "userID", 
-        "aadObjectId": "aadOnjectId" 
-    }, 
-    "conversation": { 
-        "isGroup": true, 
-        "tenantId": "tenantId", 
-        "id": "thread id" 
-    }, 
-    "recipient": { 
-        "id": "user Id", 
-        "name": "user name" 
-    }, 
-    "entities": [ 
-        { 
-            "locale": "en-US", 
-            "country": "US", 
-            "type": "clientInfo" 
-        } 
-    ], 
-    "channelData": { 
-        "tenant": { 
-            "id": "channel id" 
-        }, 
-        "source": null, 
-        "meeting": { 
-            "id": "meeting id" 
-        } 
-    }, 
-    "value": { 
-        "MeetingType": "Scheduled", 
-        "Title": "Meeting Start/End Event", 
-        "Id": "meeting id", 
-        "JoinUrl": "url" 
-        "StartTime": "2021-04-29T16:17:17.4388966Z" 
-    }, 
-    "locale": "en-US" 
+{
+  "name": " application/vnd.microsoft.meetingStart",
+  "type": "event",
+  "timestamp": "2023-02-23T19:34:07.478Z",
+  "localTimestamp": "2023-02-23T11:34:07.478-8",
+  "channelId": "msteams",
+  "serviceUrl": "https://smba.trafficmanager.net/teams/",
+  "from": {
+    "id": "user_id"
+  },
+  "conversation": {
+    "isGroup": true,
+    "conversationType": "groupchat",
+    "id": "conversation_id"
+  },
+  "recipient": {
+    "id": "28:f5d48856-5b42-41a0-8c3a-c5f944b679b0"
+  },
+  "value": {
+    "id": "meeting_id",
+    "joinUrl": "join_url",
+    "title": "Example meeting",
+    "meetingType": "Scheduled",
+    "startTime": "2023-02-23T19:34:07.478Z"
+  },
+  "channelData": {
+    "tenant": {
+      "id": "tenant_id"
+    }
+  }
 }
 ```
 
@@ -940,50 +931,36 @@ The following code provides an example of meeting start event payload:
 The following code provides an example of meeting end event payload:
 
 ```json
-{ 
-    "name": "application/vnd.microsoft.meetingEnd", 
-    "type": "event", 
-    "timestamp": "2021-04-29T16:17:17.4388966Z", 
-    "id": "123", 
-    "channelId": "msteams", 
-    "serviceUrl": "https://microsoft.com", 
-    "from": { 
-        "id": "user id", 
-        "aadObjectId": "aadObjectId" 
-    }, 
-    "conversation": { 
-        "isGroup": true, 
-        "tenantId": "tenantId", 
-        "id": "thread id" 
-    }, 
-    "recipient": { 
-        "id": "user id", 
-        "name": "user name" 
-    }, 
-    "entities": [ 
-        { 
-            "locale": "en-US", 
-            "country": "US", 
-            "type": "clientInfo" 
-        } 
-    ], 
-    "channelData": { 
-        "tenant": { 
-            "id": "channel id" 
-        }, 
-        "source": null, 
-        "meeting": { 
-            "id": "meeting Id" 
-        } 
-    }, 
-    "value": { 
-        "MeetingType": "Scheduled", 
-        "Title": "Meeting Start/End Event in Canary", 
-        "Id": "19:meeting_NTM3ZDJjOTUtZGRhOS00MzYxLTk5NDAtMzY4M2IzZWFjZGE1@thread.v2", 
-        "JoinUrl": "url", 
-        "EndTime": "2021-04-29T16:17:17.4388966Z" 
-    }, 
-    "locale": "en-US" 
+{
+  "name": " application/vnd.microsoft.meetingEnd",
+  "type": "event",
+  "timestamp": "2023-02-23T19:34:07.478Z",
+  "localTimestamp": "2023-02-23T11:34:07.478-8",
+  "channelId": "msteams",
+  "serviceUrl": "https://smba.trafficmanager.net/teams/",
+  "from": {
+    "id": "user_id"
+  },
+  "conversation": {
+    "isGroup": true,
+    "conversationType": "groupchat",
+    "id": "conversation_id"
+  },
+  "recipient": {
+    "id": "28:f5d48856-5b42-41a0-8c3a-c5f944b679b0"
+  },
+  "value": {
+    "id": "meeting_id",
+    "joinUrl": "join_url",
+    "title": "Example meeting",
+    "meetingType": "Scheduled",
+    "EndTime": "2023-02-23T20:30:07.478Z"
+  },
+  "channelData": {
+    "tenant": {
+      "id": "tenant_id"
+    }
+  }
 }
 ```
 
