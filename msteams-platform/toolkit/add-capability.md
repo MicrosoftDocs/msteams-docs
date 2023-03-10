@@ -44,7 +44,11 @@ You can add capabilities in the following ways:
 
        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/select-feature123_1.png" alt-text="Add capabilities from Teams Toolkit":::
 
-      After successfully adding the capabilities to your Teams app, you need to provision for each environment.
+   1. From the drop-down list that appears, select the capability you want to add to your app.
+
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/notification-add-capabilities_1.png" alt-text="notification":::
+
+      Teams Toolkit adds the selected capability to your app and updates the app directory structure for the new capability. After successfully adding the capability to your Teams app, you need to provision for each environment.
 
 ### Use the Command Palette
 
@@ -52,7 +56,7 @@ You can add capabilities in the following ways:
 
    1. Select **View** > **Command Palette...** or **Ctrl+Shift+P**.
 
-      :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add-capabilities-command-palette_1.png" alt-text="Add capabilities from command palatte":::
+      :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add-capabilities-command-palette_1.png" alt-text="Add capabilities from command palette":::
 
    1. Select **Teams: Add features**.
 
@@ -61,6 +65,8 @@ You can add capabilities in the following ways:
    1. From the drop-down list that appears, select the capability you want to add to your app.
 
        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/notification-add-capabilities_1.png" alt-text="notification":::
+
+      Teams Toolkit adds the selected capability to your app and updates the app directory structure for the new capability. After successfully adding the capability to your Teams app, you need to provision for each environment.
 
 ### Use TeamsFx CLI
 
