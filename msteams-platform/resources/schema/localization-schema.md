@@ -15,7 +15,7 @@ The Microsoft Teams localization file describes language translations that are s
 
 ## Example
 
-Example of localization JSON schema is as follows:
+Example of localization JSON schema v1.16 is as follows:
 
 ```json
 {
@@ -56,11 +56,15 @@ The schema defines the following properties:
 |`activities.activityTypes\\[\\b([0-9]|[1-8][0-9]|9[0-9]|1[01][0-9]|12[0-7])\\b]\\.templateText`|String|128|Ex: "{actor} created task {taskId} for you".||
 |`meetingExtensionDefinition.scenes \\[[0-9]\\]\\.name$`|String|128| |
 
+<br>
+
 <details><summary>Localization schema v1.15</summary>
 
-## Localization schema v1.15 example
+## Localization schema v1.15
 
-Example of localization JSON schema is as follows:
+Link to Localization schema v1.15: [https://developer.microsoft.com/en-us/json-schemas/teams/v1.15/MicrosoftTeams.Localization.schema.json](https://developer.microsoft.com/en-us/json-schemas/teams/v1.15/MicrosoftTeams.Localization.schema.json)
+
+Example:
 
 ```json
 {
@@ -106,9 +110,11 @@ The schema defines the following properties:
 
 <details><summary>Localization schema v1.14</summary>
 
-## Localization schema v1.14 example
+## Localization schema v1.14
 
-Example of localization JSON schema is as follows:
+Link to Localization schema v1.14: [https://developer.microsoft.com/en-us/json-schemas/teams/v1.14/MicrosoftTeams.Localization.schema.json](https://developer.microsoft.com/en-us/json-schemas/teams/v1.15/MicrosoftTeams.Localization.schema.json)
+
+Example:
 
 ```json
 {
@@ -154,9 +160,11 @@ The schema defines the following properties:
 
 <details><summary>Localization schema v1.13</summary>
 
-## Localization schema v1.13 example
+## Localization schema v1.13
 
-Example of localization JSON schema is as follows:
+Link to Localization schema v1.13: [https://developer.microsoft.com/en-us/json-schemas/teams/v1.13/MicrosoftTeams.Localization.schema.json](https://developer.microsoft.com/en-us/json-schemas/teams/v1.15/MicrosoftTeams.Localization.schema.json)
+
+Example:
 
 ```json
 {
@@ -202,9 +210,11 @@ The schema defines the following properties:
 
 <details><summary>Localization schema v1.12</summary>
 
-## Localization schema v1.12 example
+## Localization schema v1.12
 
-Example of localization JSON schema is as follows:
+Link to Localization schema v1.12: [https://developer.microsoft.com/en-us/json-schemas/teams/v1.12/MicrosoftTeams.Localization.schema.json](https://developer.microsoft.com/en-us/json-schemas/teams/v1.15/MicrosoftTeams.Localization.schema.json)
+
+Example:
 
 ```json
 {
@@ -250,9 +260,11 @@ The schema defines the following properties:
 
 <details><summary>Localization schema v1.11</summary>
 
-## Localization schema v1.11 example
+## Localization schema v1.11
 
-Example of localization JSON schema is as follows:
+Link to Localization schema v1.11: [https://developer.microsoft.com/en-us/json-schemas/teams/v1.11/MicrosoftTeams.Localization.schema.json](https://developer.microsoft.com/en-us/json-schemas/teams/v1.15/MicrosoftTeams.Localization.schema.json)
+
+Example:
 
 ```json
 {
@@ -298,9 +310,11 @@ The schema defines the following properties:
 
 <details><summary>Localization schema v1.10</summary>
 
-## Localization schema v1.10 example
+## Localization schema v1.10
 
-Example of localization JSON schema is as follows:
+Link to Localization schema v1.10: [https://developer.microsoft.com/en-us/json-schemas/teams/v1.10/MicrosoftTeams.Localization.schema.json](https://developer.microsoft.com/en-us/json-schemas/teams/v1.15/MicrosoftTeams.Localization.schema.json)
+
+Example:
 
 ```json
 {
@@ -346,9 +360,11 @@ The schema defines the following properties:
 
 <details><summary>Localization schema v1.9</summary>
 
-## Localization schema v1.9 example
+## Localization schema v1.9
 
-Example of localization JSON schema is as follows:
+Link to Localization schema v1.9: [https://developer.microsoft.com/en-us/json-schemas/teams/v1.9/MicrosoftTeams.Localization.schema.json](https://developer.microsoft.com/en-us/json-schemas/teams/v1.15/MicrosoftTeams.Localization.schema.json)
+
+Example:
 
 ```json
 {
@@ -395,7 +411,9 @@ The schema defines the following properties:
 
 ## Localization schema v1.8 example
 
-Example of localization JSON schema is as follows:
+Link to Localization schema v1.8: [https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json](https://developer.microsoft.com/en-us/json-schemas/teams/v1.15/MicrosoftTeams.Localization.schema.json)
+
+Example:
 
 ```json
 {
