@@ -20,7 +20,7 @@ Sending a message to start a new conversation thread is different than sending a
 1. [Obtain the user's unique ID and tenant ID](#obtain-necessary-user-information)
 1. [Send the message](#examples)
 
-When creating proactive messages you **must** call `MicrosoftAppCredentials.TrustServiceUrl`, and pass in the service URL before creating the `ConnectorClient` used to send the message. If you don't, a `401: Unauthorized` response is received by your app. For more information, see [the samples below](#net-example-from-this-sample).
+When creating proactive messages you **must** call `MicrosoftAppCredentials.TrustServiceUrl`, and pass in the service URL before creating the `ConnectorClient` used to send the message. If you don't, a `401: Unauthorized` response is received by your app. For more information, see [the samples below](#examples-for-creating-a-channel-conversation).
 
 ## Best practices for proactive messaging
 
@@ -164,7 +164,7 @@ Your team-added bot can post into a channel to create a new reply chain. If you'
 
 Alternatively, you can use the REST API and issue a POST request to [`/conversations`](/azure/bot-service/rest-api/bot-framework-rest-connector-send-and-receive-messages?#start-a-conversation) resource.
 
-### Examples
+### Examples for creating a channel conversation
 
 # [HTTP](#tab/http)
 
@@ -209,7 +209,7 @@ You must supply the user ID and the tenant ID. If the call succeeds, the API ret
 }
 ```
 
-# [HTTP](#tab/http)
+# [HTTP](#tab/https)
 
 The .NET example is from [this sample](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/32c39268d60078ef54f21fb3c6f42d122b97da22/template-bot-master-csharp/src/dialogs/examples/teams/ProactiveMsgTo1to1Dialog.cs)
 

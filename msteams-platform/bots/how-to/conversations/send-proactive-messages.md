@@ -177,7 +177,7 @@ See [install apps for users](/graph/api/userteamwork-post-installedapps) in the 
 
 ### Examples
 
-Ensure that you authenticate and have a [bearer token](azure/bot-service/rest-api/bot-framework-rest-connector-authentication) before creating a new conversation using the REST API.
+Ensure that you authenticate and have a [bearer token](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication.md) before creating a new conversation using the REST API.
 
 <br>
 <details>
