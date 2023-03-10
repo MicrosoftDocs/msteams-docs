@@ -209,7 +209,7 @@ You must supply the user ID and the tenant ID. If the call succeeds, the API ret
 }
 ```
 
-# [HTTP](#tab/https)
+# [C#](#tab/csharp)
 
 The .NET example is from [this sample](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/32c39268d60078ef54f21fb3c6f42d122b97da22/template-bot-master-csharp/src/dialogs/examples/teams/ProactiveMsgTo1to1Dialog.cs)
 
