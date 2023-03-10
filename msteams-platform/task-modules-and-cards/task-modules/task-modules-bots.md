@@ -7,7 +7,7 @@ ms.topic: how-to
 
 # Use task modules from bots
 
-Task modules can be invoked from Microsoft Teams bots using buttons on Adaptive Cards and Bot Framework cards that are hero, thumbnail, and Office 365 Connector. Task modules are often a better user experience than multiple conversation steps. Keep track of bot state and allow the user to interrupt or cancel the sequence.
+Task modules can be invoked from Microsoft Teams bots using buttons on Adaptive Cards and Bot Framework cards that are hero, thumbnail, and connector for Microsoft 365 Groups. Task modules are often a better user experience than multiple conversation steps. Keep track of bot state and allow the user to interrupt or cancel the sequence.
 
 There are two ways of invoking task modules:
 
@@ -46,7 +46,7 @@ The following steps provide the invoke task module using `task/fetch`:
     }
     ```
 
-    The `task/fetch` event and its response for bots is similar to the `microsoftTeams.tasks.startTask()` function in the TeamsJS library.
+    The `task/fetch` event and its response for bots is similar to the `microsoftTeams.tasks.startTask()` function in the Microsoft Teams JavaScript client library (TeamsJS).
 
 1. Microsoft Teams displays the task module.
 
@@ -201,9 +201,9 @@ The schema for Bot Framework card actions is different from Adaptive Card `Actio
 
 ## Code sample
 
-|Sample name | Description | .NET | Node.js|
-|----------------|-----------------|--------------|----------------|
-|Task module sample bots-V4 | Samples for creating task modules. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/nodejs)|
+|Sample name | Description | .NET | Node.js | Manifest|
+|----------------|-----------------|--------------|----------------|----------------|
+|Task module sample bots-V4 | Samples for creating task modules. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/csharp/demo-manifest/bot-task-module.zip)|
 
 ## Step-by-step guide
 

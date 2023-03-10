@@ -1,14 +1,14 @@
 ---
 title: Create and send messages
 author: laujan
-description: Create actionable messages, send message through Incoming Webhook, Office 365 Connector, cURL, or PowerShell. Send Adaptive Cards. Time based transaction. 
+description: Create actionable messages, send message through Incoming Webhook, connectors for Microsoft 365 Groups, cURL, or PowerShell. Send Adaptive Cards. Time based transaction. 
 ms.topic: how-to
 ms.localizationpriority: high
 ---
 
 # Create and send messages
 
-You can create actionable messages and send it through Incoming Webhook or Office 365 Connector.
+You can create actionable messages and send it through Incoming Webhook or connector for Microsoft 365 Groups.
 
 ## Create actionable messages
 
@@ -42,9 +42,9 @@ For more information on connector card actions, see [Actions](/outlook/actionabl
 > * Specifying `compact` for the `style` property in Microsoft Teams is the same as specifying `normal` for the `style` property in Microsoft Outlook.
 > * For the HttpPOST action, the bearer token is included with the requests. This token includes the Microsoft Azure Active Directory (Azure AD) identity of the Microsoft 365 user who took the action.
 
-## Send a message through Incoming Webhook or Office 365 Connector
+## Send a message through Incoming Webhook or connector for Microsoft 365 Groups
 
-To send a message through your Incoming Webhook or Office 365 Connector, post a JSON payload to the webhook URL. This payload must be in the form of an [Office 365 connector card](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card).
+To send a message through your Incoming Webhook or connector for Microsoft 365 Groups, post a JSON payload to the webhook URL. This payload must be in the form of a [connector card for Microsoft 365 Groups](~/task-modules-and-cards/cards/cards-reference.md#connector-card-for-microsoft-365-groups).
 
 You can also use this JSON to create cards containing rich inputs, such as text entry, multiselect, or selecting date and time. The code that generates the card and posts it to the webhook URL can run on any hosted service. These cards are defined as part of actionable messages and are also supported in [cards](~/task-modules-and-cards/what-are-cards.md) used in Teams bots and message extensions.
 

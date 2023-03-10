@@ -436,7 +436,7 @@ An optional list of commands that your bot can recommend to users. The object is
 
 Optional:
 
-The `connectors` block defines an Office 365 Connector for the app.
+The `connectors` block defines a connector for Microsoft 365 Groups for the app.
 
 The object is an array (maximum of 1 element) with all elements of type `object`. This block is required only for solutions that provide a Connector.
 

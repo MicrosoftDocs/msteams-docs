@@ -19,7 +19,7 @@ If you're going to meet user requirements with your app, you first need to under
   * Recognize user issues and identify the solutions to some common problems the users face.
   * Build your Teams app by finding the right combination of Teams features to meet your user's needs.
   * Understand use cases to know how an end-user interacts with your app.
-  * It's recommended to go through the lean module [how to publish your app to Teams app store](/training/modules/microsoft-teams-publish-app-to-store/) to help with your app to pass the Microsoft Teams store submission process.
+  * It's recommended to go through the learn module [how to publish your app to Teams app store](/training/modules/microsoft-teams-publish-app-to-store/) to help with your app to pass the Microsoft Teams store submission process.
 
 * **Understand the problem**: Work out the core problem your app must solve.
 

@@ -35,12 +35,12 @@ items:
     | &nbsp; | Install | For using... |
     | --- | --- | --- |
     | **Required** | &nbsp; | &nbsp; |
-    | &nbsp; | [Node.js and NPM](https://nodejs.org/) | Back-end JavaScript runtime environment. Use the latest v16 LTS release.|
+    | &nbsp; | [Node.js and NPM](https://nodejs.org/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](toolkit/tools-prerequisites.md#nodejs-version-compatibility-table-for-project-type).|
     | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots, message extensions, and incoming webhooks) require inbound connections. A tunnel connects your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
     | &nbsp; | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
     | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use version 1.55 or later. |
     | &nbsp; | [Git](https://git-scm.com/downloads) | Git to use the Sample Node.js app repo from GitHub. |
-    | &nbsp; |  [`gulp`](https://gulpjs.com/docs/en/getting-started/quick-start) | Open-source JavaScript toolkit. Install version 4.0.0 or later. |
+    | &nbsp; |  [gulp](https://gulpjs.com/docs/en/getting-started/quick-start) | Open-source JavaScript toolkit. Install version 4.0.0 or later. |
     | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call - all in one place. | 
     | **Optional** | &nbsp; | &nbsp; |
     | &nbsp; | [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack) and [Microsoft Azure CLI](/cli/azure/install-azure-cli) | Azure tools to access stored data or to deploy a cloud-based backend for your Teams app in Azure. |

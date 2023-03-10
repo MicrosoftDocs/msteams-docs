@@ -13,9 +13,6 @@ Universal Actions for Adaptive Cards bring the bot as the common backend for han
 
 This document helps you to understand how you can use Universal Actions model to enhance user experience of interacting with Adaptive Cards across platforms and applications.
 
-> [!NOTE]
-> Support for Universal Actions for Adaptive Cards v1.5 is only available for cards sent by bot. Support for cards sent through compose box and link unfurling cards is coming soon.
-
 ## Enhance user experiences with Universal Actions for Adaptive Cards
 
 Universal Actions for Adaptive Cards enhance user experience by enabling the following scenarios:
@@ -124,4 +121,5 @@ You can get started by updating scenarios using the [quick start guide].(Work-wi
 * [Adaptive Cards overview](~/task-modules-and-cards/what-are-cards.md)
 * [Adaptive Cards @ Microsoft Build 2020](https://youtu.be/hEBhwB72Qn4?t=1393)
 * [Adaptive Cards @ Ignite 2020](https://techcommunity.microsoft.com/t5/video-hub/elevate-user-experiences-with-teams-and-adaptive-cards/m-p/1689460).
-* [Universal Actions for search based message extensions](../../../messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md)
+* [Universal Actions for search based message extensions](../../../messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md)]
+* [Adaptive Card Templating SDKs](/adaptive-cards/templating/sdk)
