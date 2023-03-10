@@ -55,8 +55,6 @@ Meetings enable collaboration, partnership, informed communication, and shared f
     :::column-end:::
 :::row-end:::
 
-:::image type="content" source="../assets/images/apps-in-meetings/meeting-app-extensibility.png" alt-text="The screenshot shows you how meeting app extensibility works.":::
-
 <!--
 :::row:::
     :::column span="":::
