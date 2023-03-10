@@ -111,6 +111,14 @@ The following table lists the error codes and their descriptions:
 | **8000** | USER_ABORT |User canceled the operation.|
 | **9000** | OLD_PLATFORM | User is on an old platform build where implementation of the API is unavailable. Upgrade to the latest version of the build to resolve the issue.|
 
+## Invoke people picker from Task Module
+
+The following are steps to invoke people picker from i-framed Task Module:
+
+1. [Render people picker with an adaptive card in Teams](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/osheenkhare/people-picker/samples/app-people-picker/csharp).
+
+1. Render an adaptive card within your i-framed Task Module. For more information, see [render a card](/adaptive-cards/sdk/rendering-cards/javascript/render-a-card)
+
 ## Code sample
 
 | Sample name           | Description | .NET |Node.js    | Manifest|
