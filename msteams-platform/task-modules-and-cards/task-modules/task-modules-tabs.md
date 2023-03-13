@@ -9,7 +9,7 @@ ms.topic: how-to
 
 You can add modal dialogs (formerly known as *task modules*) to your tabs to simplify the user experience for workflows that require data input. Dialogs allow you to gather user input in a Microsoft Teams-aware modal window. A good example of this is editing planner cards. You can use dialogs to create a similar experience.
 
-The two main operations of dialogs involve opening and closing (submitting) them. The functions are slightly different for earlier versions (prior to v.2.x.x) of the TeamsJS library:
+The two main operations of dialogs involve opening and closing (submitting) them. The functions are slightly different for earlier versions (prior to v2.x.x) of the TeamsJS library:
 
 # [TeamsJs v1](#tab/teamsjs1)
 
