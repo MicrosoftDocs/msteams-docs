@@ -26,6 +26,8 @@ You can create notification bot in other scenarios, such as a notification can b
 > [!NOTE]
 > Bot application needs to be installed with the corresponding scope before sending notification.
 
+[Back to top](#notification-bot-in-teams)
+
 ## Notification based on events
 
 Bot Framework SDK provides the functionality to proactively message in Teams. TeamsFx SDK provides the functionality to manage bot's conversation references when a bot event is triggered. TeamsFx SDK recognizes the following bot events:
@@ -85,6 +87,8 @@ A notification bot needs to be installed into a team, or a group chat, or as per
 :::image type="content" source="../../../assets/images/notification-bot/notification-installation-scope.png" alt-text="add installation scope":::
 
 For more install options, see [configure default install options](../../../concepts/deploy-and-publish/apps-publish-overview.md#configure-default-install-options).
+
+[Back to top](#notification-bot-in-teams)
 
 ## Customize notification
 
@@ -321,6 +325,8 @@ foreach (var target in await _conversation.Notification.GetInstallationsAsync())
 
 ---
 
+[Back to top](#notification-bot-in-teams)
+
 ## Customize adapter
 
 You can customize by creating your own adapter, or customize the adapter after initialization. Following is the code sample for creating your adapter:
@@ -343,6 +349,8 @@ const bot = new ConversationBot({
 bot.adapter.onTurnError = ...
 
 ```
+
+[Back to top](#notification-bot-in-teams)
 
 ## Add storage
 
@@ -423,6 +431,8 @@ If you select HTTP trigger, the scaffolded notification API doesn't have authent
 
 There can be more authentication or authorization solutions for an API, you can select as required.
 
+[Back to top](#notification-bot-in-teams)
+
 ## Connect to existing APIs
 
 If you don't have the required SDK, and want to invoke external APIs in your code. The `Teams: Connect to an API` command in Microsoft Visual Studio Code Teams Toolkit extension, or `teamsfx add api-connection` command in TeamsFx CLI can be used to bootstrap code to call target APIs. For more information, see [connect to existing API](../../../toolkit/add-API-connection.md#steps-to-connect-to-api).
@@ -455,6 +465,8 @@ TeamsFx provides you with an [Incoming Webhook notification sample](https://gith
 
 * [Create an Incoming Webhook](../../../webhooks-and-connectors/how-to/add-incoming-webhook.md) in Teams.
 * Send notifications using Incoming Webhooks with Adaptive Cards.
+
+[Back to top](#notification-bot-in-teams)
 
 ## FAQ
 
