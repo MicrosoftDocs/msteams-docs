@@ -76,6 +76,8 @@ foreach (var target in await _conversation.Notification.GetInstallationsAsync())
 
 ---
 
+[Back to top](#notification-bot-in-teams)
+
 ## Notification bot installation
 
 A notification bot needs to be installed into a team, or a group chat, or as personal app, depending on the required scope. You need to select the installation target before adding the bot to your app.
@@ -275,9 +277,7 @@ You can customize sending the notification to the following targets:
    > [!NOTE]
    > To prevent an undefined output and a missing notification, you need to include the specific person in notification installation scope.
 
-<br>
-
-</details>
+[Back to top](#notification-bot-in-teams)
 
 ## Customize initialization
 
@@ -410,6 +410,8 @@ For sample implementation to use Azure blob storage, see [add notification stora
 
 > [!NOTE]
 > It's recommended to use your own shared storage for production environment.
+
+[Back to top](#notification-bot-in-teams)
 
 ## Add authentication for notification API
 
@@ -552,6 +554,8 @@ You can extend your notification bot by defining actions and use workflow bot to
 <br>
 
 </details>
+
+[Back to top](#notification-bot-in-teams)
 
 ## Step-by-step guide
 
