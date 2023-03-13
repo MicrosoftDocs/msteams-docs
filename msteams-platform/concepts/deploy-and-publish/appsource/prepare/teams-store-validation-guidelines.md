@@ -732,6 +732,8 @@ If setup of your app for testing purposes is complex, provide an end-to-end func
 
 </details>
 
+[Back to top](#microsoft-teams-store-validation-guidelines)
+
 ## Tabs
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: This section is in line with [Microsoft commercial marketplace policy number 1140.4.2](/legal/marketplace/certification-policies#114042-tabs).
@@ -1203,6 +1205,8 @@ Apps that provide only notifications with content such as, **You have a new noti
 
 </details>
 
+[Back to top](#microsoft-teams-store-validation-guidelines)
+
 ## Message extensions
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: This section is in line with [Microsoft commercial marketplace policy number 1140.4.4](/legal/marketplace/certification-policies#114044-messaging-extensions).
@@ -1322,6 +1326,8 @@ To pass validation for a search-based message extension only app, the following 
 Link unfurling only apps don't provide significant value within Teams. Consider building additional workflows in your app, if your app only supports link unfurling and has no other functionality.
 
 </details>
+
+[Back to top](#microsoft-teams-store-validation-guidelines)
 
 ## Task modules
 
@@ -1538,6 +1544,8 @@ If your app uses the [activity feed APIs provided by Microsoft Graph](/graph/tea
 * When selecting a notification, the user must be directed to relevant content within Teams. [*Mandatory Fix*]
 
 </details>
+
+[Back to top](#microsoft-teams-store-validation-guidelines)
 
 ## Microsoft 365 App Compliance Program
 
