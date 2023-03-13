@@ -39,7 +39,7 @@ A dialog includes the following as shown in the previous image:
 4. The dialog's close or cancel button. If the user selects this button, your app receives an `err` event. For more information, see [example for submitting the result of a dialog](~/task-modules-and-cards/task-modules/task-modules-tabs.md#example-of-submitting-the-result-of-a-dialog).
 
     > [!NOTE]
-    > It is currently not possible to detect the `err` event when a dialog is invoked from a bot.
+It's currently not possible to detect the `err` event when a dialog is invoked from a bot.
 
 5. The blue rectangle is where your web page appears if you're loading your own web page using the `url` property of the [DialogInfo object](~/task-modules-and-cards/task-modules/invoking-task-modules.md#dialoginfo-object). For more information, see [dialog sizing](~/task-modules-and-cards/task-modules/invoking-task-modules.md#dialog-sizing).
 6. If you're displaying an Adaptive Card using the `card` property of the [AdaptiveCardDialogInfo object](~/task-modules-and-cards/task-modules/invoking-task-modules.md#dialoginfo-object) the padding is added for you. For more information, see [CSS for HTML-based dialogs](~/task-modules-and-cards/task-modules/invoking-task-modules.md#css-for-html-or-javascript-dialogs).
