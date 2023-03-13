@@ -53,7 +53,7 @@ items:
   durationInMinutes: 1
   content: | 
 
-   1. Open [Microsoft Teams Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples).
+   1. Open [Microsoft Teams Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-notification/csharp/InMeetingNotifications).
    1. Select **Code**.
    1. From the dropdown menu, select **Open with GitHub Desktop**.
 
@@ -376,7 +376,7 @@ items:
     
            :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-VSopenfile_1.png" alt-text="Open file":::
 
-       1. Open **ContentBubbleBot.sln** file.
+       1. Open **InMeetingNotifications.sln** file.
 
            :::image type="content" source="~/assets/images/meeting-content-bubble/proj-sln_1.png" alt-text="Open file":::
 
