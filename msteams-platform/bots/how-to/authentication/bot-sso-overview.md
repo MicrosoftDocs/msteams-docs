@@ -35,10 +35,6 @@ The following image shows how SSO works when a Teams app user attempts to access
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/sso-runtime-seqd-bots.png" alt-text="SSO for bots and message extension at runtime" lightbox="../../../assets/images/authentication/teams-sso-bots/sso-runtime-seqd-bots.png":::
 
-See the following video to learn more about multi-tenant apps:
-
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWZb0O]
-
 | # | Interaction | What's going on |
 | --- | --- | --- |
 | 1 | Teams client → Bot service | The message that app user sends is received by the Teams client, which sends it to the bot. <br> If the app user has previously signed in, a token is saved in the Bot Framework Token Store. The bot calls the Bot Framework Token Service which checks for an existing token for the app user in the Bot Framework Token Store. <br> • If the token exists, the app user is given access. <br> • If no token is available, the bot triggers the auth flow. |
