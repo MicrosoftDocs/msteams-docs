@@ -88,11 +88,13 @@ For more install options, see [configure default install options](../../../conce
 
 You can make the following customizations to extend the notification template to fit your business need:
 
-<br>
+* [Customize the trigger point from event source](#customize-the-trigger-point-from-event-source)
+* [Customize the notification content](#customize-the-notification-content)
+* [Customize where notifications are sent](#customize-where-notifications-are-sent)
 
-<details>
+### Customize the trigger point from event source
 
-<summary><b>1. Customize the trigger point from event source</b></summary>
+You can customize the following triggers:
 
 * `Restify` based notification
 
@@ -122,25 +124,15 @@ You can make the following customizations to extend the notification template to
 
 For more information on support triggers, see [Azure Functions support triggers](/azure/azure-functions/functions-triggers-bindings?tabs=javascript).
 
-<br>
-
-</details>
-
-<details>
-
-<summary><b>2. Customize the notification content</b></summary>
+### Customize the notification content
 
 The file `src/adaptiveCards/notification-default.json` defines the default Adaptive Card. You can use the [Adaptive Card designer](https://adaptivecards.io/designer/) to help visually design your Adaptive Card UI. The `src/cardModels.ts` defines a data structure that is used to load data for the Adaptive Card. The binding between the card model and the Adaptive Card is done by matching name such as `CardData.title` maps to `${title}` in the Adaptive Card. You can add, edit, or remove properties and their bindings to customize the Adaptive Card as required.
 
 You can also add new cards if needed. For more information on how to build different types of Adaptive Cards with a list or table of dynamic contents using `ColumnSet` and `FactSet`, see [Adaptive Card notification sample](<https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/adaptive-card-notification>).
 
-<br>
+### Customize where notifications are sent
 
-</details>
-
-<details>
-
-<summary><b>3. Customize where notifications are sent</b></summary>
+You can customize sending the notification to the following targets:
 
 * Notifications to a personal chat:
 
