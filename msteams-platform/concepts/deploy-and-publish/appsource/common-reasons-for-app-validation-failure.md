@@ -66,7 +66,7 @@ Following are the most common reasons for your app to get rejected:
    :::column-end:::
 :::row-end:::
 
-[Back to top](prepare/teams-store-validation-guidelines.md#microsoft-teams-store-validation-guidelines)
+[Back to top](#common-reasons-for-app-validation-failure)
 
 ## Broken links, functional bugs, app crashes, and unexpected errors
 
@@ -92,7 +92,7 @@ Test your app to verify your app’s correctness, functionality, and usage. Ensu
 
 * Ensure that your app is complete and ready to publish before you submit for review.
 
-[Back to top](prepare/teams-store-validation-guidelines.md#microsoft-teams-store-validation-guidelines)
+[Back to top](#common-reasons-for-app-validation-failure)
 
 ## App description
 
@@ -140,7 +140,7 @@ A great description can make your app stand out in the Microsoft Teams store and
 
 * App short and full description are same.
 
-[Back to top](prepare/teams-store-validation-guidelines.md#microsoft-teams-store-validation-guidelines)
+[Back to top](#common-reasons-for-app-validation-failure)
 
 ## Violation of Microsoft trademark and brand guidelines
 
@@ -162,7 +162,7 @@ When referring to Microsoft trademarks, products names, and services, you must f
 
    :::image type="content" source="../../../assets/images/submission/validation-common-reason-fail-long-description.png" alt-text="Screenshot of image to show failed scenario of long description of Microsoft.":::
 
-[Back to top](prepare/teams-store-validation-guidelines.md#microsoft-teams-store-validation-guidelines)
+[Back to top](#common-reasons-for-app-validation-failure)
 
 ## Testability  
 
@@ -178,7 +178,7 @@ You must avoid the following issues that occur in 20% of apps that are rejected 
 
 * The provided test instructions and credentials aren't sufficient to complete app functional testing.
 
-[Back to top](prepare/teams-store-validation-guidelines.md#microsoft-teams-store-validation-guidelines)
+[Back to top](#common-reasons-for-app-validation-failure)
 
 ## Microsoft 365 App Compliance Program  
 
@@ -186,7 +186,7 @@ The Microsoft 365 App Compliance Program helps organizations assess and manage r
 
    :::image type="content" source="../../../assets/images/submission/validation-common-reason-pass-AAD-consent.png" alt-text="Screenshot of passed image of AAD consent dialog.":::
 
-[Back to top](#microsoft-teams-store-validation-guidelines)
+[Back to top](#common-reasons-for-app-validation-failure)
 
 ## Violation of app icon guidelines
 
@@ -202,7 +202,7 @@ Icons are one of the main elements people see when browsing the Microsoft Teams 
 
    :::image type="content" source="../../../assets/images/submission/validation-common-reason-fail-partner-center-manifest-different.png" alt-text="Screenshot to show the failed scenario of partner center and manifest which are different.":::
 
-[Back to top](prepare/teams-store-validation-guidelines.md#microsoft-teams-store-validation-guidelines)
+[Back to top](#common-reasons-for-app-validation-failure)
 
 ## App name
 
@@ -226,7 +226,7 @@ Your app name plays a critical role for users to discover your app on the Micros
 
    :::image type="content" source="../../../assets/images/submission/validation-common-reason-fail-old-app-name.png" alt-text="Screenshot of image to show failed app submission for old app name which is still used.":::
 
-[Back to top](prepare/teams-store-validation-guidelines.md#microsoft-teams-store-validation-guidelines)
+[Back to top](#common-reasons-for-app-validation-failure)
 
 ## Support link
 
@@ -240,7 +240,7 @@ Your app name plays a critical role for users to discover your app on the Micros
 
    :::image type="content" source="../../../assets/images/submission/validation-common-reason-failed-support-link-insecure.png" alt-text="Screenshot of image for invalid support link is insecure.":::
 
-[Back to top](prepare/teams-store-validation-guidelines.md#microsoft-teams-store-validation-guidelines)
+[Back to top](#common-reasons-for-app-validation-failure)
 
 ## Manifest schema
 
@@ -252,7 +252,7 @@ You must update the app version declared in the manifest if you're submitting an
 
 Your app package must only contain your app’s manifest, color icon, and outline icon. App packages that contain any other additional files or folders fail app review.
 
-[Back to top](prepare/teams-store-validation-guidelines.md#microsoft-teams-store-validation-guidelines)
+[Back to top](#common-reasons-for-app-validation-failure)
 
 ## App UI
 
@@ -268,13 +268,13 @@ Your app’s UI must not look incomplete and should be intuitive. Ensure that us
 
    :::image type="content" source="../../../assets/images/submission/validation-common-reason-fail-app-display-ads.png" alt-text="Screenshot to show that apps failed to display ads.":::
 
-[Back to top](prepare/teams-store-validation-guidelines.md#microsoft-teams-store-validation-guidelines)
+[Back to top](#common-reasons-for-app-validation-failure)
 
 ## Valid domains
 
 Your app submission must adhere to the [external domains](/legal/marketplace/certification-policies) guidelines under Microsoft’s Commercial Marketplace Certification Policy. For your app to pass review, ensure that the valid domains listed in the app manifest are under your organization's direct control.
 
-[Back to top](prepare/teams-store-validation-guidelines.md#microsoft-teams-store-validation-guidelines)
+[Back to top](#common-reasons-for-app-validation-failure)
 
 ## Localization information
 
@@ -288,7 +288,7 @@ You must include the localized language files in your app package if your app su
 
 You must ensure to provide the same developer name in your offer listing in both storefronts to avoid end-user confusion during the app’s acquisition from the Microsoft Teams store or Microsoft AppSource. Offers with mismatch in developer name frequently fail app review.
 
-[Back to top](prepare/teams-store-validation-guidelines.md#microsoft-teams-store-validation-guidelines)
+[Back to top](#common-reasons-for-app-validation-failure)
 
 ## Privacy policy
 
@@ -298,7 +298,7 @@ Your offer listing must include a valid privacy policy link. Offers with invalid
 
    :::image type="content" source="../../../assets/images/submission/validation-common-reason-failed-invalid-unsecure-broken-privacy-policy-links.png" alt-text="Screenshot to show the invalid, unsecure and broken privacy policy links.":::
 
-[Back to top](prepare/teams-store-validation-guidelines.md#microsoft-teams-store-validation-guidelines)
+[Back to top](#common-reasons-for-app-validation-failure)
 
 ## Terms of use
 
@@ -306,7 +306,7 @@ Your offer listing must include a valid Terms of use link. Offers with invalid, 
 
    :::image type="content" source="../../../assets/images/submission/validation-common-reason-fail-terms-of-use.png" alt-text="Screenshot of image for failed terms of use in production ready.":::
 
-[Back to top](prepare/teams-store-validation-guidelines.md#microsoft-teams-store-validation-guidelines)
+[Back to top](#common-reasons-for-app-validation-failure)
 
 ## See also
 
