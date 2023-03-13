@@ -58,7 +58,7 @@ The following sections explain the process of invoking a dialog from a tab and s
 ## Invoke a dialog from a tab
 
 > [!NOTE]
-> Starting with TeamsJS v2.8.x, Adaptive Card-based dialogs are supported by the [dialog](/javascript/api/@microsoft/teams-js/dialog) namespace and the `tasks` namespace is now fully deprecated. The `tasks` namespace is still supported for backward-compatibility, however best practice is to update `tasks.startTask()` calls to `dialog.url.open` or `dialog.adaptiveCard.open` for HTML- and Adaptive Card-based dialogs, respectively. For more info, see the [dialog namespace](../../tabs/how-to/using-teams-client-library.md#dialog-namespace).
+> Starting with TeamsJS v2.8.x, the [dialog](/javascript/api/@microsoft/teams-js/dialog) namespace supports Adaptive Card-based dialogs, and thus fully replaces the functionality of the `tasks` namespace. The `tasks` namespace is still supported for backward-compatibility, however best practice is to update `tasks.startTask()` calls to `dialog.url.open` or `dialog.adaptiveCard.open` for HTML- and Adaptive Card-based dialogs, respectively. For more info, see the [dialog namespace](../../tabs/how-to/using-teams-client-library.md#dialog-namespace).
 
 You can invoke either an HTML or Adaptive Card dialog from a tab.
 
