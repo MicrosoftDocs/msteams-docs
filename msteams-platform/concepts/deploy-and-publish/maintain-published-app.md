@@ -58,4 +58,4 @@ To discontinue your app:
 
 ## See also
 
-[Publish your app to the Microsoft Teams store](/concepts/deploy-and-publish/appsource/publish)
+[Publish your app to the Microsoft Teams store](appsource/publish.md)
