@@ -35,6 +35,10 @@ The following image shows how SSO works when a Teams app user attempts to access
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/sso-runtime-seqd-bots.png" alt-text="SSO for bots and message extension at runtime" lightbox="../../../assets/images/authentication/teams-sso-bots/sso-runtime-seqd-bots.png":::
 
+See the following video to learn more about multi-tenant apps:
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWZb0O]
+
 | # | Interaction | What's going on |
 | --- | --- | --- |
 | 1 | Teams client → Bot service | The message that app user sends is received by the Teams client, which sends it to the bot. <br> If the app user has previously signed in, a token is saved in the Bot Framework Token Store. The bot calls the Bot Framework Token Service which checks for an existing token for the app user in the Bot Framework Token Store. <br> • If the token exists, the app user is given access. <br> • If no token is available, the bot triggers the auth flow. |
@@ -61,7 +65,6 @@ This section describes the tasks involved in implementing SSO for a Teams bot or
 
 1. **Configure app with Azure AD**: Create an Azure AD app to generate an app ID and application ID URI. For generating an access token, you configure scopes and authorize trusted client applications. The configuration required in Azure AD for enabling SSO in a bot and message extension apps is the same. Create a bot resource and configure it's client secret, messaging endpoint, and OAuth connection to enable SSO.
 1. **Add code**: Add the code to handle access token to send this token to your app's server code in the Authorization header, and to validate the access token when it's received. The code required to enable SSO in a bot app is different from code required for a message extension app.
-
 
     > [!NOTE]
     > This section allows you to select the app for which you want to add code for enabling SSO.

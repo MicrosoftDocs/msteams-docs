@@ -53,6 +53,10 @@ The following image shows how SSO works when a Teams app user attempts to access
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-runtime-seqd.png" alt-text="Screenshot shows the tab SSO process flow and how it works." lightbox="../../../assets/images/authentication/teams-sso-tabs/sso-runtime-seqd.png":::
 
+See the following video to learn more about multi-tenant apps:
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWZb0O]
+
 | # | Interaction | What's going on |
 | --- | --- | --- |
 | 1 | Tab app → Teams Client | The tab app makes a JavaScript call to `getAuthToken()`, which tells Teams to obtain an access token. |
