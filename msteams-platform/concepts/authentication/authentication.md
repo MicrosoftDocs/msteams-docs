@@ -82,3 +82,5 @@ Enable authentication with SSO or third party OAuth IdPs in your tab app, bot ap
 - [Microsoft Teams authentication flow for tabs](~/tabs/how-to/authentication/auth-flow-tab.md)
 - [Single sign-on support for bots](~/bots/how-to/authentication/auth-aad-sso-bots.md)
 - [Add authentication to your message extension](~/messaging-extensions/how-to/add-authentication.md)
+- [Glossary](../../get-started/glossary.md)
+- [Microsoft Graph authentication provider based on scenario](/graph/sdks/choose-authentication-providers)

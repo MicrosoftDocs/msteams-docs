@@ -314,5 +314,5 @@ Execute the entire permissions collection for each API call. The permissions tha
 
 ## See also
 
+* [Test your app](../../concepts/build-and-test/test-app-overview.md)
 * [Microsoft Graph API and Teams](/graph/api/resources/teams-api-overview?view=graph-rest-1.0&preserve-view=true)
-* [Resource-specific consent](~/graph-api/rsc/resource-specific-consent.md)

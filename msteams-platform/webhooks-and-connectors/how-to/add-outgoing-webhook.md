@@ -9,7 +9,7 @@ ms.author: lajanuar
 
 # Create Outgoing Webhooks
 
-The Outgoing Webhook acts as a bot and search for messages in channels using **@mention**. It sends notifications to external web services and responds with rich messages, which include cards and images. It helps to skip the process of creating bots through the [Microsoft Bot Framework](https://dev.botframework.com/).
+The Outgoing Webhook acts as a bot and search for messages in channels using **@mention**. It sends notifications to an external web service and responds with rich messages, which include cards and images. It helps to skip the process of creating bots through the [Microsoft Bot Framework](https://dev.botframework.com/).
 
 <!--- TBD: Edit this article.
 * Admonitions/alerts may be overused in this article. Check once.
@@ -33,16 +33,14 @@ The following table provides the features and description of Outgoing Webhooks:
 
 | Features | Description |
 | ------- | ----------- |
-| Scoped configuration| Webhooks are scoped at the team level. Mandatory set up process for each adds an Outgoing Webhook. |
-| Reactive messaging| Users must use @mention for the webhook to receive messages. Currently, users can only message an Outgoing Webhook in public channels and not within the personal or private scope. |
+| Scoped configuration| Webhooks are scoped at the team level. Mandatory setup process for each adds an Outgoing Webhook. |
+| Reactive messaging| Users must use **@mention** for the webhook to receive messages. Currently, users can only message an Outgoing Webhook in public channels and not within the personal or private scope. |
 |Standard HTTP message exchange|Responses appear in the same chain as the original request message and can include any Bot Framework message content. For example, rich text, images, cards, and emojis. Although Outgoing Webhooks can use cards, they can't use any card actions except for `openURL`.|
 | Teams API method support|Outgoing Webhooks sends an HTTP POST to a web service and gets a response. They can't access any other APIs, such as retrieve the roster or list of channels in a team.|
 
 ## Create Outgoing Webhooks
 
-Create Outgoing Webhooks and add custom bots to Teams.
-
-To create an Outgoing Webhook, follow these steps:
+Create Outgoing Webhooks and add custom bots to Teams. To create an Outgoing Webhook, follow these steps:
 
 1. Select **Teams** from the left pane.
 
@@ -61,18 +59,18 @@ To create an Outgoing Webhook, follow these steps:
 
     :::image type="content" source="../../assets/images/outgoingwebhook3_1.png" alt-text="Select create outgoing webhook"lightbox="../../assets/images/outgoingwebhook3_1.png":::
 
-1. Type the following details in the **Create an Outgoing Webhook** page:
+1. Type the following details in the **Create an outgoing webhook** page:
 
-    * **Name**: The webhook title and @mention tab.
+    * **Name**: The webhook title and **@mention** tab.
     * **Callback URL**: The HTTPS endpoint that accepts JSON payloads and receives POST requests from Teams.
-    * **Description**: A detailed string that appears in the profile card and the team-level App dashboard.
-    * **Profile Picture**: An app icon for your webhook, which is optional.
+    * **Description**: A detailed string that appears in the profile card and the team-level app dashboard.
+    * **Profile picture**: An app icon for your webhook, which is optional.
 
 1. Select **Create**. The Outgoing Webhook is added to the current team's channel.
 
     :::image type="content" source="../../assets/images/outgoingwebhook_1.png" alt-text="Create outgoing webhook":::
 
-A [Hash-based Message Authentication Code (HMAC)](https://security.stackexchange.com/questions/20129/how-and-when-do-i-use-hmac/20301) dialogue box appears. It's a security token used to authenticate calls between Teams and the designated outside service. The HMAC security token doesn't expire and is unique for each configuration.
+A [Hash-based Message Authentication Code (HMAC)](https://security.stackexchange.com/questions/20129/how-and-when-do-i-use-hmac/20301) dialogue appears. It's a security token used to authenticate calls between Teams and the designated outside service. The HMAC security token doesn't expire and is unique for each configuration.
 
 >[!NOTE]
 > The Outgoing Webhook is available to the team's users, only if the URL is valid and the server and client authentication tokens are equal. For example, an HMAC handshake.
@@ -80,7 +78,7 @@ A [Hash-based Message Authentication Code (HMAC)](https://security.stackexchange
 The following scenario provides the details to add an Outgoing Webhook:
 
 * Scenario: Push change status notifications on a Teams channel database server to your app.
-* Example: You have a line of business app that tracks all CRUD (create, read, update, and delete) operations. These operations are made to the employee records by Teams channel HR users across an Office 365 tenancy.
+* Example: You have a line of business app that tracks all CRUD (create, read, update, and delete) operations. These operations are made to the employee records by Teams channel HR users across an Microsoft 365 tenancy.
 
 # [URL JSON payload](#tab/urljsonpayload)
 
@@ -88,7 +86,7 @@ The following scenario provides the details to add an Outgoing Webhook:
 
 Your service receives messages in a standard Azure bot service messaging schema. The Bot Framework connector is a RESTful service that empowers to process the interchange of JSON formatted messages through HTTPS protocols as documented in the [Azure Bot Service API](/bot-framework/rest-api/bot-framework-rest-connector-api-reference). Alternatively, you can follow the Microsoft Bot Framework SDK to process and parse messages. For more information, see [overview of Azure Bot Service](/azure/bot-service/bot-service-overview-introduction).
 
-Outgoing Webhooks are scoped to the `team` level and are visible to all the team members. Users need to **\@mention** the name of the Outgoing Webhook to invoke it in the channel.
+Outgoing Webhooks are scoped to the `team` level and are visible to all the team members. Users need to **@mention** the name of the Outgoing Webhook to invoke it in the channel.
 
 # [Verify HMAC token](#tab/verifyhmactoken)
 
@@ -124,19 +122,26 @@ Responses from your Outgoing Webhooks appear in the same reply chain as the orig
 
 ---
 
-> [!NOTE]
->
-> * You can send Adaptive Card, Hero card, and text messages as attachment with an Outgoing Webhook.
-> * Cards support formatting. For more information, see [format cards with markdown](~/task-modules-and-cards/cards/cards-format.md?tabs=adaptive-md%2Cconnector-html#format-cards-with-markdown).
-> * Adaptive Card in Outgoing Webhooks only support `openURL` card actions.
+### Use Adaptive Cards with Outgoing Webhooks
+
+You can send Adaptive Card, Hero card, and text messages as attachment with an Outgoing Webhook.
+Cards support formatting. For more information, see [format cards with Markdown](~/task-modules-and-cards/cards/cards-format.md?tabs=adaptive-md%2Cconnector-html#format-cards-with-markdown).
+Adaptive Card in Outgoing Webhooks supports only `openURL` card actions.
 
 The following codes are examples of an Adaptive Card response:
 
 # [C#/.NET](#tab/dotnet)
 
+[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/outgoing-webhook/csharp/Controllers/SampleController.cs#L20)
+
 ```csharp
-string content = await this.Request.Content.ReadAsStringAsync();
-Activity incomingActivity = JsonConvert.DeserializeObject<Activity>(content);
+
+// This method is to read the request body content
+string content;
+using (var reader = new StreamReader(Request.Body))
+    {
+        content = await reader.ReadToEndAsync();
+    }
 
 var Card = new AdaptiveCard(new AdaptiveSchemaVersion("1.4"))
 {
@@ -163,6 +168,8 @@ return sampleResponseActivity;
 ```
 
 # [JavaScript/Node.js](#tab/javascript)
+
+[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/outgoing-webhook/nodejs/app.js#L30)
 
 ```javascript
 var receivedMsg = JSON.parse(payload);
@@ -245,5 +252,5 @@ Follow the [step-by-step guide](../../sbs-outgoing-webhooks.yml) to create Outgo
 * [Webhooks and connectors](../what-are-webhooks-and-connectors.md)
 * [Create and send messages](connectors-using.md)
 * [Create Incoming Webhooks](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
-* [Create Office 365 Connectors](~/webhooks-and-connectors/how-to/connectors-creating.md)
+* [Create connectors for Microsoft 365 Groups](~/webhooks-and-connectors/how-to/connectors-creating.md)
 * [Adaptive Cards](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)

@@ -36,5 +36,7 @@ mConnect allows Moodle administrators to automatically set up Teams for Moodle c
 
 ## See also
 
+* [Integrate web apps](../samples/integrate-web-apps-overview.md)
+* [SSO Authentication](../concepts/authentication/authentication.md)
 * [Moodle FAQ](faqs.md)
 * [Skooler](https://skooler.com/mconnect/how-to/)

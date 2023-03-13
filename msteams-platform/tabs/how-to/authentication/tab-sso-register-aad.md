@@ -181,7 +181,7 @@ To configure scope and authorize trusted client applications, you'll need:
 
 1. Enter the details for configuring scope.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-scope.png" alt-text="Add scope details":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-scope.png" alt-text="The screenshot shows how to add scope details in Azure.":::
 
     1. Enter the scope name. This is a mandatory field.
     2. Select the user who can give consent for this scope. The default option is **Admins only**.
@@ -214,7 +214,7 @@ To configure scope and authorize trusted client applications, you'll need:
 
     > [!NOTE]
     >
-    > - The Microsoft 365 client IDs for mobile, desktop, and web applications for Teams, Office, and Outlook are the actual IDs that you must add.
+    > - The Microsoft 365 client IDs for mobile, desktop, and web applications for Teams, Microsoft 365 app, and Outlook are the actual IDs that you must add.
     > - For a Teams tab app, you'll need either Web or SPA, as you can't have a mobile or desktop client application in Teams.
 
     1. Choose one of the following client IDs:
@@ -223,10 +223,11 @@ To configure scope and authorize trusted client applications, you'll need:
        | --- | --- |
        | 1fec8e78-bce4-4aaf-ab1b-5451cc387264 | Teams mobile or desktop application |
        | 5e3ce6c0-2b1f-4285-8d4b-75ee78787346 | Teams web application |
-       | 4765445b-32c6-49b0-83e6-1d93765276ca | Office web application |
-       | 0ec893e0-5785-4de6-99da-4ed124e5296c | Office desktop application |
-       | d3590ed6-52b3-4102-aeff-aad2292ab01c | Outlook desktop, mobile application |
+       | 4765445b-32c6-49b0-83e6-1d93765276ca | Microsoft 365 web application |
+       | 0ec893e0-5785-4de6-99da-4ed124e5296c | Microsoft 365 desktop application |
+       | d3590ed6-52b3-4102-aeff-aad2292ab01c | Outlook desktop application |
        | bc59ab01-8403-45c6-8796-ac3ef710b3e3 | Outlook web application |
+       | 27922004-5251-4030-b22d-91ecd9a37ea4 | Outlook mobile application |
 
     1. Select the application ID URI you created for your app in **Authorized scopes** to add the scope to the web API you exposed.
 

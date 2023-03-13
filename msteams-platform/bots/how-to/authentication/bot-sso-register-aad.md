@@ -6,7 +6,7 @@ ms.localizationpriority: high
 ---
 # Configure your app in Azure AD
 
-Azure AD provides app users access to your bot or message extension app. The app user who has signed into Teams can be given access to your app.
+Azure AD provides app users access to your bot or message extension app. The app user who has signed in to Teams can be given access to your app.
 
 ## SSO configuration in Azure AD portal
 
@@ -19,6 +19,7 @@ To configure SSO for your bot or message extension app, you'll need to:
 
 > [!NOTE]
 > Ensure that you've created an app and a bot resource in Azure AD.
+>
 > - For more information about creating an app in Azure AD, see [Register a new app in Azure AD](../../../tabs/how-to/authentication/tab-sso-register-aad.md#to-register-a-new-app-in-azure-ad).
 > - For more information about creating and configuring your bot resource in Azure AD, see [Create Teams conversation bot](../../../sbs-teams-conversation-bot.yml).
 
@@ -164,8 +165,8 @@ You need:
     >
     >   | If base resource name used is | URL will be... | Format is supported on... |
     >   | --- | --- | --- |
-    >   | *demoapplication* | **<https://demoapplication.example.net>** | All platforms.|
-    >   | *DemoApplication* | **<https://DemoApplication.example.net>** | Desktop, web, and iOS only. It isn't supported in Android. |
+    >   | *demoapplication* | `https://demoapplication.example.net` | All platforms.|
+    >   | *DemoApplication* | `https://DemoApplication.example.net` | Desktop, web, and iOS only. It isn't supported in Android. |
     >
     >    Use the lowercase option *demoapplication* as base resource name.
 
@@ -193,7 +194,7 @@ The application ID URI is configured. You can now define scope and permissions f
 
 1. Enter the details for configuring scope.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-scope.png" alt-text="Add details for the scope" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-scope.png" alt-text="The screenshot shows how to add scope details in Azure.":::
 
     1. Enter the scope name.
     2. Select the user who can give consent for this scope. The default option is **Admins only**.
@@ -230,7 +231,7 @@ The scope and permissions are now configured. Next, you must configure the autho
 
     > [!NOTE]
     >
-    > - The Microsoft 365 client IDs for mobile, desktop, and web applications for Teams, Office, and Outlook are the actual IDs that you must add.
+    > - The Microsoft 365 client IDs for mobile, desktop, and web applications for Teams, Microsoft 365 app, and Outlook are the actual IDs that you must add.
     > - If your app has a tab app, you'll need either web or SPA, as you can't have a mobile or desktop client application in Teams.
 
 1. Choose one of the following client IDs:
@@ -239,8 +240,8 @@ The scope and permissions are now configured. Next, you must configure the autho
    | --- | --- |
    | 1fec8e78-bce4-4aaf-ab1b-5451cc387264 | Teams mobile or desktop application |
    | 5e3ce6c0-2b1f-4285-8d4b-75ee78787346 | Teams web application |
-   | 4765445b-32c6-49b0-83e6-1d93765276ca | Office web application |
-   | 0ec893e0-5785-4de6-99da-4ed124e5296c | Office desktop application |
+   | 4765445b-32c6-49b0-83e6-1d93765276ca | Microsoft 365 web application |
+   | 0ec893e0-5785-4de6-99da-4ed124e5296c | Microsoft 365 desktop application |
    | d3590ed6-52b3-4102-aeff-aad2292ab01c | Outlook desktop and mobile application |
    | bc59ab01-8403-45c6-8796-ac3ef710b3e3 | Outlook web application |
 
@@ -349,7 +350,7 @@ You can configure authentication for multiple platforms as long as the URL is un
 
     The **Configure platforms** page appears.
 
-1. Select the platform that you want to configure for your app. You can choose the platform type from web or SPA.
+1. Select the platform that you want to configure for your app. You can choose the platform type from Web or SPA.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/configure-platform.png" alt-text="Select web platform" border="true":::
 
@@ -368,7 +369,7 @@ You can configure authentication for multiple platforms as long as the URL is un
 
         > [!NOTE]
         > The URL mentioned in **Redirect URIs** is an example.
-    
+
     1. Enter the front-channel log-out URL.
     1. Select the tokens you want Azure AD to send for your app.
 
@@ -525,8 +526,8 @@ To configure scope and authorize trusted client applications, you'll need:
     >
     >   | If base resource name used is | URL will be... | Format is supported on... |
     >   | --- | --- | --- |
-    >   | *demoapplication* | **<https://demoapplication.example.net>** | All platforms.|
-    >   | *DemoApplication* | **<https://DemoApplication.example.net>** | Desktop, web, and iOS only. It isn't supported in Android. |
+    >   | *demoapplication* | `https://demoapplication.example.net` | All platforms.|
+    >   | *DemoApplication* | `https://DemoApplication.example.net` | Desktop, web, and iOS only. It isn't supported in Android. |
     >
     >    Use the lowercase option *demoapplication* as base resource name.
 
@@ -554,7 +555,7 @@ The application ID URI is configured. You can now define scope and permissions f
 
 1. Enter the details for configuring scope.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-scope.png" alt-text="Add details for the scope" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-scope.png" alt-text="The screenshot shows how to add scope details in Azure.":::
 
     1. Enter the scope name.
     2. Select the user who can give consent for this scope. The default option is **Admins only**.
@@ -591,7 +592,7 @@ The scope and permissions are now configured. Next, you must configure the autho
 
     > [!NOTE]
     >
-    > - The Microsoft 365 client IDs for mobile, desktop, and web applications for Teams, Office, and Outlook are the actual IDs that you must add.
+    > - The Microsoft 365 client IDs for mobile, desktop, and web applications for Teams, Microsoft 365 app, and Outlook are the actual IDs that you must add.
     > - If your app has a tab app, you'll need either web or SPA, as you can't have a mobile or desktop client application in Teams.
 
 1. Choose one of the following client IDs:
@@ -600,8 +601,8 @@ The scope and permissions are now configured. Next, you must configure the autho
    | --- | --- |
    | 1fec8e78-bce4-4aaf-ab1b-5451cc387264 | Teams mobile or desktop application |
    | 5e3ce6c0-2b1f-4285-8d4b-75ee78787346 | Teams web application |
-   | 4765445b-32c6-49b0-83e6-1d93765276ca | Office web application |
-   | 0ec893e0-5785-4de6-99da-4ed124e5296c | Office desktop application |
+   | 4765445b-32c6-49b0-83e6-1d93765276ca | Microsoft 365 web application |
+   | 0ec893e0-5785-4de6-99da-4ed124e5296c | Microsoft 365 desktop application |
    | d3590ed6-52b3-4102-aeff-aad2292ab01c | Outlook desktop and mobile application |
    | bc59ab01-8403-45c6-8796-ac3ef710b3e3 | Outlook web application |
 
@@ -726,7 +727,7 @@ You can configure authentication for multiple platforms as long as the URL is un
         > [!NOTE]
         > The URL mentioned in **Redirect URIs** is an example.
 
-    1. Enter the front-channel log-out URL.
+    1. Enter the front-channel logout URL.
     1. Select the tokens you want Azure AD to send for your app.
 
 1. Select **Configure**.

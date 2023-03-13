@@ -233,7 +233,7 @@ public class NotifyController : ControllerBase
     private async Task BotCallback(ITurnContext turnContext, CancellationToken cancellationToken)
     {
         // If you encounter permission-related errors when sending this message, see
-        // https://aka.ms/BotTrustServiceUrl
+        // https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp#avoiding-401-unauthorized-errors
         // Sends an activity to the sender of the incoming activity.
         await turnContext.SendActivityAsync("proactive hello");
     }
@@ -258,7 +258,6 @@ Example of a code snippet to demonstrate creating conversation reference.
 ```
 
 # [TypeScript](#tab/typescript)
-
 * [SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#botbuilder-core-turncontext-getconversationreference&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/graph-proactive-installation/nodejs/bots/proactiveBot.js#L59)
 
@@ -288,7 +287,6 @@ async messageAllMembersAsync(context) {
 ```
 
 # [Python](#tab/python)
-
 * [SDK reference](/python/api/botbuilder-core/botbuilder.core.botframeworkadapter?view=botbuilder-py-latest#botbuilder-core-botframeworkadapter-create-conversation&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L200)
 
