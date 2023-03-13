@@ -19,4 +19,4 @@ You must maintain the following app details
 | App details | Description |
 |---|---|
 | Your **app's listing** must be kept updated. | Any changes to functionality, pricing, visual appearance, or any other updates must be accurately reflected in your app's listing. |
-| You must regularly update your app to ensure that it remains **compliant with the commercial marketplace policies**. | Stay up to date with policy changes by subscribing to the [changelog here](https://learn.microsoft.com/en-us/legal/marketplace/offer-policies-change-history). |
+| You must regularly update your app to ensure that it remains **compliant with the commercial marketplace policies**. | Stay up to date with policy changes by subscribing to the [changelog here](/legal/marketplace/offer-policies-change-history). |
