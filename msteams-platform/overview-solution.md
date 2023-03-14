@@ -4,7 +4,6 @@ author: heath-hamilton
 description: Understand how to plan, design, build, extend to Microsoft 365, test, distribute, monetize, and integrate your app with Teams.
 ms.topic: overview
 ms.localizationpriority: high
-ms.author: lajanuar
 ms.date: 11/02/2021
 ---
 # The Teams solution

@@ -4,7 +4,6 @@ author: Rajeshwari-v
 description: Learn how to use Teams JavaScript client library to enable media capabilities using code examples and also learn the advantage of integrating media capabilities.
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.author: lajanuar
 ---
 
 # Integrate media capabilities

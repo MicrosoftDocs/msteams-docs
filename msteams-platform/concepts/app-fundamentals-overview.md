@@ -4,7 +4,6 @@ author: heath-hamilton
 description: Understand use case and Microsoft Teams app features, map use cases, plan responsive tabs for mobile. Learn Teams features and availability for GCC, GCC-High, and DOD.
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.author: lajanuar
 ---
 
 # Plan your app with Teams features

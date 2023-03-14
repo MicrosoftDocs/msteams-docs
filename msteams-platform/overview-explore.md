@@ -4,7 +4,6 @@ author: heath-hamilton
 description: Microsoft Teams platform features for your app on desktop and mobile. Tabs, bots, messaging extension, webhook, connectors, Microsoft Graph, or Adaptive Cards.
 ms.topic: overview
 ms.localizationpriority: high
-ms.author: lajanuar
 ms.date: 11/02/2021
 ---
 # Explore Teams platform features
