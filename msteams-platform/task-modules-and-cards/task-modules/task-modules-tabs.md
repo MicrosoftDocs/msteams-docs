@@ -51,6 +51,9 @@ microsoftTeams.dialog.adaptiveCard.open(
 
 ```
 
+> [!NOTE]
+> The `dialog.submit` property can only be called within a dialog.
+
 ---
 
 The following sections explain the process of invoking a dialog from a tab and submitting the result.

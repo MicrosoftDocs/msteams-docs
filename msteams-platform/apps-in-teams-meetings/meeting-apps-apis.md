@@ -1143,10 +1143,6 @@ The following table provides the response codes:
 * [Apps for Teams meetings](teams-apps-in-meetings.md)
 * [Live Share SDK](teams-live-share-overview.md)
 * [Teams cloud meeting recording](/microsoftteams/cloud-recording)
+* [Get the attendance report for an online meeting](/graph/api/meetingattendancereport-get)
 * [Build in-meeting notification for Teams meeting](in-meeting-notification-for-meeting.md)
-
-## Next step
-
-[Build tabs for meeting](build-tabs-for-meeting.md)
-
-* [Get change notifications for Microsoft Teams meeting call updates](/graph/changenotifications-for-onlinemeeting)
+* [Get notifications for Teams meeting call updates](/graph/changenotifications-for-onlinemeeting)

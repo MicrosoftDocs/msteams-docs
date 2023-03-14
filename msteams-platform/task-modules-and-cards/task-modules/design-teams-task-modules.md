@@ -80,7 +80,7 @@ Lists work nicely in a dialog because they're easy to scan.
 
 #### Desktop
 
-:::image type="content" source="../../assets/images/task-module/list.png" alt-text="Example list in a dialog.":::
+:::image type="content" source="../../assets/images/task-module/task-module-list-desktop.png" alt-text="Example list in a dialog.":::
 
 ### Form
 
@@ -88,11 +88,11 @@ Dialogs are a great place to surface forms with sequential user inputs and inlin
 
 #### Mobile
 
-:::image type="content" source="../../assets/images/task-module/mobile-form.png" alt-text="Example form in a dialog on mobile.":::
+:::image type="content" source="../../assets/images/task-module/task-module-mobile-form.png" alt-text="Example form in a dialog on mobile.":::
 
 #### Desktop
 
-:::image type="content" source="../../assets/form.png" alt-text="Example form in a dialog.":::
+:::image type="content" source="../../assets/task-module-form.png" alt-text="Example form in a dialog.":::
 
 ### Sign in
 

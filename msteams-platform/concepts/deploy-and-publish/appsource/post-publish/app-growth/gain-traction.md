@@ -8,9 +8,18 @@ ms.author: surbhigupta
 ---
 # Gain traction for your collaborative app in the market
 
-In the Traction stage, you’ll want to gain mindshare for your collaborative app among top customers. You will build readiness to scale adoption and growth, and start realizing return on investment. Here are the various initiatives and growth levers at your disposal:
+In the Traction stage, you’ll want to gain mindshare for your collaborative app among top customers. You'll build readiness to scale adoption and growth, and start realizing return on investment. Here are the various initiatives and growth levers at your disposal:
 
 ## What should you do during the Traction stage?
+
+<br>
+<details>
+<summary>Plan, build readiness and drive adoption among customers</summary>
+
+As soon as  your collaborative app is published and customers are made aware of its existence, the entire focus of your organization must shift towards driving adoption of your app among existing customers first. Follow the step-by-step guidance, resources and best practices available [here](../../../../../promote-app-adoption.md) to plan and support the rollout of your Teams app in your customers’ organizations, navigate business decision makers, IT admins and educate end-users. The outcome of a successful app rollout among your existing customers is a pre-requisite to learn from user feedback, achieve product-market fit, acquire net new customers, monetize your app and  eventually derive RoI out of your build and go-to-market investments.
+
+[Back to top](#what-should-you-do-during-the-traction-stage)
+</details>
 <br>
 <details>
 <summary>Upskill customer success team on your new Teams app</summary>
@@ -115,6 +124,14 @@ To get maximum ROI, surface the nudges contextually for scenarios that are inher
 
 [Back to top](#what-should-you-do-during-the-traction-stage)
 </details>
+<br>
+<details>
+<summary>Localize your app to support demand in global markets </summary>
+
+Microsoft Teams is available for users in more than 180 markets and supports over 50 languages. If you already have a core SaaS product for the web browser or native apps for Windows or mobile phones localized for one or more markets, consider also localizing your Teams app. You can evaluate and prioritize the localization markets based on the [geographical spread of users and tenants](/azure/marketplace/teams-apps-usage) and the [Teams app usage report](../overview.md#analyze-app-usage) in Partner Center. You can easily localize your Teams app by following the extensive developer guidance available [here](../../../../build-and-test/apps-localization.md).
+
+[Back to top](#what-should-you-do-during-the-traction-stage)
+</details>
 
 ## Where can Microsoft help?
 
@@ -191,4 +208,3 @@ Contact the Microsoft field, account, or engineering representatives to feature 
 ## See also
 
 [Strategize and execute growth for your app](overview-app-growth.md)
-
