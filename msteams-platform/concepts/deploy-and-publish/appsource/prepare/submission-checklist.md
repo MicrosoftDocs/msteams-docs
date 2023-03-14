@@ -220,20 +220,18 @@ During submission, you're asked to categorize your app. You can categorize your 
 
 If you want to cater your app to a global audience, you can select from an available list of countries and communicate what’s great about your app in ways that are relevant to users in different countries. This is known as Geo-fencing. For example, a Contoso US app, which sells gift cards that are only valid for users within the United States and Canada is only visible in the US and Canada Teams store.
 
-Geo-fencing helps you improve your app's visibility within the Teams store to a particular country. When you publish your app to the store, you can select from an available list of countries in that Partner Center to target your release to users in specific countries.
-
-:::image type="content" source="../../../../assets/images/app-fundamentals/select-countries-app-partner-center.png" alt-text="Screenshot shows the list of available countries in Microsoft Partner Center.":::
-
 > [!NOTE]
 >
 > * Geo-fencing feature isn't supported in Government community cloud (GCC), GCC-H, and department of Defence (DoD) tenants.
 > * Geo-fencing is applicable only for apps listed in the Teams store.
 
-Teams uses the `UsageLocation` property from the [user resource type](/graph/api/resources/user?view=graph-rest-#properties&preserve-view=true) Graph API to determine the location of the user and displays the apps available in the user's country. The following table describes the `UsageLocation` property:
+Geo-fencing helps you improve your app's visibility within the Teams store to a particular country. When you publish your app to the store, you can select from an available list of countries in the Partner Center to target your app to users in specific countries.
 
-|Property  |Type  |Description  |
-|------------------------------------|---------------------|------------------------------------------------------------|
-|`usageLocation`    |string         | A two letter country code (ISO standard 3166). Required for users that will be assigned licenses due to legal requirement to check for availability of services in countries. Examples include: `US`, `JP`, and `GB`. Not nullable.<br> Supports `$filter` (`eq`, `ne`, `not`, `ge`, `le`, `in`, `startsWith`, and `eq` on `null` values).      |
+ Teams uses the `UsageLocation` property from the [user resource type](/graph/api/resources/user?view=graph-rest-#properties&preserve-view=true) API to determine the location of the user and displays the apps available in the user's country. For more information on supported geographic locations, see [Geographic availability and currencies](/partner-center/marketplace/marketplace-geo-availability-currencies).
+
+ The following image shows an example of market selection in the Partner Center:
+
+:::image type="content" source="../../../../assets/images/app-fundamentals/select-countries-app-partner-center.png" alt-text="Screenshot shows the list of available countries in Microsoft Partner Center.":::
 
 If the user wants to install the app from another country, they can use a deep link to install the app or install the app from [Microsoft AppSource](https://appsource.microsoft.com/en-US/?exp=ubp8).
 
