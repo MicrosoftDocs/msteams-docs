@@ -218,12 +218,12 @@ During submission, you're asked to categorize your app. You can categorize your 
 
 ### Distribute your app to specific countries
 
-If you want to cater your app to a specific audience, you can select from the available list of countries and communicate what’s great about your app in ways that are relevant to users in different countries. This is known as Geo-fencing. Geo-fencing is applicable only for apps listed in the Teams store. For example, a Contoso US app, which sells gift cards that are valid within the US and Canada is only visible in the Teams store for the users in the US and Canada.
+If you want to cater your app to a specific audience, you can select from the available list of countries and communicate what’s great about your app in ways that are relevant to users. This is known as Geo-fencing. Geo-fencing is applicable only for apps listed in the Teams store. For example, a Contoso US app, which sells gift cards that are valid within the US and Canada is only visible in the Teams store for the users in the US and Canada.
 
 > [!NOTE]
-> Geo-fencing feature isn't supported in Government community cloud (GCC), GCC-H, and Department of Defence (DoD) tenants.
+> Geo-fencing feature isn't supported in Government community cloud (GCC), GCC-High, and Department of Defence (DoD) tenants.
 
-Geo-fencing helps you improve your app's visibility within the Teams store to a particular country. When you publish your app to the store, you can select from an available list of countries in the Partner Center to target your app to users in specific countries.
+Geo-fencing helps you improve your app's visibility in the Teams store. When you publish your app to the store, you can select from the available list of countries in the Partner Center to target your app to users in specific countries.
 
 :::image type="content" source="../../../../assets/images/app-fundamentals/select-countries-app-partner-center.png" alt-text="Screenshot shows the list of available countries in Microsoft Partner Center.":::
 
