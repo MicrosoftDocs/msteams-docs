@@ -20,7 +20,7 @@ In custom Together Mode scenes, the scene is an artifact. The scene is created b
 
 The following process gives an overview to create a scene only app:
 
-:::image type="content" source="../assets/images/apps-in-meetings/create-together-mode-scene-flow.png" alt-text="Create scene only app.":::
+:::image type="content" source="../assets/images/apps-in-meetings/create-together-mode-scene-flow.png" alt-text="Graphic shows the four steps to create scene only app in Teams.":::
 
 A scene only app is still an app in Teams. The Scene studio handles the app package creation in the background. Multiple scenes in a single app package appear as a flat list to the users.
 
@@ -62,7 +62,7 @@ A scene in the context of the Scene studio is an artifact that contains the foll
 
 The following image shows each seat represented as an avatar for building the scenes:
 
-![Scene studio](../assets/images/apps-in-meetings/scene-design-studio.png)
+:::image type="content" source="../assets/images/apps-in-meetings/scene-design-studio.png" alt-text="Screenshot shows seven avatars representing the participants in the scene studio.":::
 
 To build a scene using the Scene studio, follow these steps:
 
@@ -81,16 +81,16 @@ To build a scene using the Scene studio, follow these steps:
 
 1. Select **Add images** to add the image into the environment:
 
-   :::image type="content" source="../assets/images/apps-in-meetings/addimages.png" alt-text="Add images into environment.":::
+   :::image type="content" source="../assets/images/apps-in-meetings/addimages.png" alt-text="Screenshot shows the Add images option highlighted in red in the scene studio.":::
 
-    >[!NOTE]
-    >You can download the [SampleScene.zip](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleScene.zip) and [SampleApp.zip](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleApp.zip) files with the images.
+    > [!NOTE]
+    > You can download the [SampleScene.zip](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleScene.zip) and [SampleApp.zip](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleApp.zip) files with the images.
 
 1. Select the image that you've added.
 
 1. From the right pane, select an alignment for the image or use **Resize** to adjust the image size:
 
-    ![Alignment for images](../assets/images/apps-in-meetings/image-alignment.png)
+    :::image type="content" source="../assets/images/apps-in-meetings/image-alignment.png" alt-text="Screenshot shows the Resize option highlighted in red to align the image in a scene studio.":::
 
 1. Select an area outside of the image.
 
@@ -102,7 +102,7 @@ To build a scene using the Scene studio, follow these steps:
 
 1. Select **Meeting Organizer** or **Presenter** role for the participant. In a meeting, one participant must be assigned the role of a meeting organizer:
 
-   :::image type="content" source="../assets/images/apps-in-meetings/assign-spot.png" alt-text="Assign a spot to the participant.":::
+   :::image type="content" source="../assets/images/apps-in-meetings/assign-spot.png" alt-text="Screenshot shows the Assign spot check box for the participant 3 in the scene studio.":::
 
 1. Select **Save** and select **View in Teams** to quickly test your scene in Teams.
 
@@ -115,7 +115,7 @@ To build a scene using the Scene studio, follow these steps:
 
     The scene is tested or accessed by creating a test meeting and launching custom Together Mode scenes. For more information, see [activate custom Together Mode scenes](#activate-custom-together-mode-scenes):
 
-    ![Launch custom Together Mode scenes](../assets/images/apps-in-meetings/launchtogethermode.png)
+     :::image type="content" source="../assets/images/apps-in-meetings/launchtogethermode.png" alt-text="Screenshot shows the custom scene launched in a Teams meeting.":::
 
     The scene can then be viewed in the custom Together Mode scenes gallery.
 
@@ -125,7 +125,7 @@ After preview, the scene is shipped as an app to Teams by following the steps fo
 
 Optionally, the scene package is retrieved by selecting **Export** from the **Save** drop-down menu. A .zip file, that is the scene package, is downloaded. Scene package includes a scene.json and the PNG assets used to build a scene. The scene package is reviewed for incorporating other changes:
 
-![Export a scene](../assets/images/apps-in-meetings/build-a-scene.png)
+:::image type="content" source="../assets/images/apps-in-meetings/build-a-scene.png" alt-text="Screenshot shows the Export option to export a scene.":::
 
 A complex scene that uses the Z-axis is demonstrated in the step-by-step getting started sample.
 
@@ -208,13 +208,16 @@ Now that you've gone through the sample scene.json, you can activate the custom 
 
 ## Activate custom Together Mode scenes
 
+> [!NOTE]
+> You can apply a custom Together Mode scene that is deployed by your tenant admin only if you have a [Teams Premium license](/MicrosoftTeams/enhanced-teams-experience?branch=danismith-t-pre-licensing).
+
 Get more information of how a user engages with scenes in custom Together Mode scenes.
 
 To select scenes and activate custom Together Mode scenes, follow these steps:
 
 1. Create a new test meeting.
 
-    >[!NOTE]
+    > [!NOTE]
     > On selecting **Preview** in the Scene studio, the scene is installed as an app in Teams. This is the model for a developer to test and try out scenes from the Scene studio. After a scene is shipped as an app, users see these scenes in the scene gallery.
 
 1. From the **Gallery** drop-down in the upper-left corner, select **Together Mode**. The **Picker** dialog box appears and the scene that is added is available.
@@ -234,7 +237,7 @@ To select scenes and activate custom Together Mode scenes, follow these steps:
 
 You can share the Scene Package that is a .zip file retrieved from the Scene studio to other creators to further enhance the scene. The **Import a Scene** functionality helps unwrap a scene package to let the creator continue building the scene.
 
-![Scene zip file](../assets/images/apps-in-meetings/scene-zip-file.png)
+:::image type="content" source="../assets/images/apps-in-meetings/scene-zip-file.png" alt-text="Screenshot shows the Import a scene option highlighted in red in the scene studio.":::
 
 ## See also
 
