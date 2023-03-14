@@ -227,13 +227,13 @@ If you want to cater your app to a global audience, you can select from an avail
 
 Geo-fencing helps you improve your app's visibility within the Teams store to a particular country. When you publish your app to the store, you can select from an available list of countries in the Partner Center to target your app to users in specific countries.
 
- Teams uses the `UsageLocation` property from the [user resource type](/graph/api/resources/user?view=graph-rest-#properties&preserve-view=true) API to determine the location of the user and displays the apps available in the user's country. For more information on supported geographic locations, see [Geographic availability and currencies](/partner-center/marketplace/marketplace-geo-availability-currencies).
-
- The following image shows an example of market selection in the Partner Center:
-
-:::image type="content" source="../../../../assets/images/app-fundamentals/select-countries-app-partner-center.png" alt-text="Screenshot shows the list of available countries in Microsoft Partner Center.":::
+Teams uses the `UsageLocation` property from the [user resource type](/graph/api/resources/user?view=graph-rest-#properties&preserve-view=true) API to determine the location of the user and displays the apps available in the user's country. For more information on supported geographic locations, see [Geographic availability and currencies](/partner-center/marketplace/marketplace-geo-availability-currencies).
 
 If the user wants to install the app from another country, they can use a deep link to install the app or install the app from [Microsoft AppSource](https://appsource.microsoft.com/en-US/?exp=ubp8).
+
+The following image shows an example of market selection in the Partner Center:
+
+:::image type="content" source="../../../../assets/images/app-fundamentals/select-countries-app-partner-center.png" alt-text="Screenshot shows the list of available countries in Microsoft Partner Center.":::
 
 ### Localize your store listing
 
