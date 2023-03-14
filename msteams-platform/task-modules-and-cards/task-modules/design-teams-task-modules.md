@@ -80,7 +80,7 @@ Lists work nicely in a task module because they're easy to scan.
 
 #### Desktop
 
-:::image type="content" source="../../assets/images/task-module/list.png" alt-text="Example list in a task module.":::
+:::image type="content" source="../../assets/images/task-module/task-module-list-desktop.png" alt-text="Example list in a task module.":::
 
 ### Form
 
@@ -88,11 +88,11 @@ Task modules are a great place to surface forms with sequential user inputs and 
 
 #### Mobile
 
-:::image type="content" source="../../assets/images/task-module/mobile-form.png" alt-text="Example form in a task module on mobile.":::
+:::image type="content" source="../../assets/images/task-module/task-module-mobile-form.png" alt-text="Example form in a task module on mobile.":::
 
 #### Desktop
 
-:::image type="content" source="../../assets/form.png" alt-text="Example form in a task module.":::
+:::image type="content" source="../../assets/task-module-form.png" alt-text="Example form in a task module.":::
 
 ### Sign in
 
