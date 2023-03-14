@@ -55,9 +55,9 @@ Although the tab context provides helpful information regarding the user, don't 
 
 Sample code showing the tab authentication process:
 
-| **Sample name** | **Description** | **.NET** | **Node.js** |
-|-----------------|-----------------|-------------|------------|
-| App complete authentication | The sample demos authentication in a bot, tab, and messaging extension with Single sign-on (SSO) and in Facebook using a username and password | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-auth/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-auth/nodejs) |
+|| **Sample name** | **Description** | **.NET** | **Node.js** | **Manifest**
+|-----------------|-----------------|-------------|------------|------------|
+| App complete authentication | The sample shows authentication in a bot, tab, and messaging extension with Single sign-on (SSO) and in Facebook using a username and password | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-auth/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-auth/nodejs) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-auth/csharp/demo-manifest/App-Complete-Auth.zip) |
 
 ## See also
 

@@ -229,9 +229,10 @@ For more information on single sign-on (SSO), see the article [Silent authentica
 
 Sample code showing the tab authentication process using Azure AD:
 
-| **Sample name** | **description** | **.NET** | **Node.js** |
-|-----------------|-----------------|-------------|
-| Microsoft Teams tab authentication | Tab authentication process using Azure AD. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group-config-page-auth/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-auth/nodejs) |
+| Sample name | Description | .NET| Node.js |
+|---------------|---------------|------|--------------|
+| Tab SSO |This sample app shows Azure AD SSO for tabs in Teams.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs), </br>[Teams Toolkit](../../../toolkit/visual-studio-code-tab-sso.md)|
+| Tab, Bot and Message Extension (ME) SSO | This sample shows SSO for Tab, Bot and ME - search, action, linkunfurl. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) |
 
 ## See also
 

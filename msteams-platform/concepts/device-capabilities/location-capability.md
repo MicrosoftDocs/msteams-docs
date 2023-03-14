@@ -168,9 +168,9 @@ You must ensure to handle these errors appropriately in your Teams app. The foll
 
 ### Code sample
 
-|Sample name | Description | .NET | Node.js |
-|----------------|-----------------|--------------|--------------|
-| App check-in current location | Users can check in the current location and view all the previous location check-ins.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-checkin-location/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-checkin-location/nodejs) |
+|Sample name | Description | .NET | Node.js | Manifest
+|----------------|-----------------|--------------|--------------|--------------|
+| App check-in current location | This sample shows how users can check in the current location and view all the previous location check-ins using bot.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-checkin-location/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-checkin-location/nodejs) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-checkin-location/csharp/demo-manifest/App-checkin-location.zips) |
 
 ## See also
 

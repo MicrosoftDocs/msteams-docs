@@ -351,7 +351,7 @@ The `theme` argument in the function is a string with a value of `default`, `dar
 
 | Sample name           | Description | Javascript|
 :---------------------|:--------------|:---------|
-|Tab channel context|This sample shows the contents of tab context object in a private and shared channel. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-context/nodejs)|
+|Tab channel context|This is an sample tab application which shows the contents of tab context object in a private and shared channel. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-context/nodejs)
 
 ## Next step
 
