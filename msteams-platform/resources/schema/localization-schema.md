@@ -54,7 +54,7 @@ The schema defines the following properties:
 |`composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.taskInfo\\.title`|String|64|Replaces the corresponding strings from the app manifest with the value provided here.||
 |`activities.activityTypes\\[\\b([0-9]|[1-8][0-9]|9[0-9]|1[01][0-9]|12[0-7])\\b]\\.description`|String|128|A brief description of the notification.||
 |`activities.activityTypes\\[\\b([0-9]|[1-8][0-9]|9[0-9]|1[01][0-9]|12[0-7])\\b]\\.templateText`|String|128|Ex: "{actor} created task {taskId} for you".||
-|`meetingExtensionDefinition.scenes \\[[0-9]\\]\\.name$`|String|128| |
+|`meetingExtensionDefinition.scenes \\[[0-9]\\]\\.name$`|String|128|Replaces the corresponding strings from the app manifest. |
 
 <br>
 
@@ -62,7 +62,7 @@ The schema defines the following properties:
 
 ## Localization schema v1.15
 
-Link to Localization schema v1.15: [https://developer.microsoft.com/en-us/json-schemas/teams/v1.15/MicrosoftTeams.Localization.schema.json](https://developer.microsoft.com/en-us/json-schemas/teams/v1.15/MicrosoftTeams.Localization.schema.json)
+Link to localization schema v1.15: [https://developer.microsoft.com/en-us/json-schemas/teams/v1.15/MicrosoftTeams.Localization.schema.json](https://developer.microsoft.com/en-us/json-schemas/teams/v1.15/MicrosoftTeams.Localization.schema.json)
 
 Example:
 
@@ -86,7 +86,7 @@ The schema defines the following properties:
 
 |Property|Type|Maximum length|Description|Required|
 |---------------|--------|---------|------------------|----|
-|`$schema`|URI|NA|The < <https://> > URL referencing the JSON Schema for the manifest.|
+|`$schema`|URI|NA|The `https://` URL referencing the JSON Schema for the manifest.|
 |`name.short`|String|30|Replaces the corresponding string from the app manifest with the value provided here. The property is required in the localization JSON.|✔️|
 |`name.full`|String|100|Replaces the corresponding string from the app manifest with the value provided here. The property is required in the localization JSON.|✔️|
 |`description.short`|String|80|Replaces the corresponding string from the app manifest with the value provided here. The property is required in the localization JSON.|✔️|
@@ -103,7 +103,7 @@ The schema defines the following properties:
 |`composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.taskInfo\\.title`|String|64|Replaces the corresponding strings from the app manifest with the value provided here.|
 |`activities.activityTypes\\[\\b([0-9]|[1-8][0-9]|9[0-9]|1[01][0-9]|12[0-7])\\b]\\.description`|String|128|A brief description of the notification|
 |`activities.activityTypes\\[\\b([0-9]|[1-8][0-9]|9[0-9]|1[01][0-9]|12[0-7])\\b]\\.templateText`|String|128|Ex: "{actor} created task {taskId} for you"|
-|`meetingExtensionDefinition.scenes \\[[0-9]\\]\\.name$`|String|128| |
+|`meetingExtensionDefinition.scenes \\[[0-9]\\]\\.name$`|String|128| Replaces the corresponding strings from the app manifest.  |
 
 </details>
 <br/>
@@ -112,7 +112,7 @@ The schema defines the following properties:
 
 ## Localization schema v1.14
 
-Link to Localization schema v1.14: [https://developer.microsoft.com/en-us/json-schemas/teams/v1.14/MicrosoftTeams.Localization.schema.json](https://developer.microsoft.com/en-us/json-schemas/teams/v1.15/MicrosoftTeams.Localization.schema.json)
+Link to localization schema v1.14: [https://developer.microsoft.com/en-us/json-schemas/teams/v1.14/MicrosoftTeams.Localization.schema.json](https://developer.microsoft.com/en-us/json-schemas/teams/v1.15/MicrosoftTeams.Localization.schema.json)
 
 Example:
 
@@ -153,7 +153,7 @@ The schema defines the following properties:
 |`composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.taskInfo\\.title`|String|64|Replaces the corresponding strings from the app manifest with the value provided here.|
 |`activities.activityTypes\\[\\b([0-9]|[1-8][0-9]|9[0-9]|1[01][0-9]|12[0-7])\\b]\\.description`|String|128|A brief description of the notification|
 |`activities.activityTypes\\[\\b([0-9]|[1-8][0-9]|9[0-9]|1[01][0-9]|12[0-7])\\b]\\.templateText`|String|128|Ex: "{actor} created task {taskId} for you"|
-|`meetingExtensionDefinition.scenes \\[[0-9]\\]\\.name$`|String|128| |
+|`meetingExtensionDefinition.scenes \\[[0-9]\\]\\.name$`|String|128|Replaces the corresponding strings from the app manifest.  |
 
 </details>
 <br/>
@@ -162,7 +162,7 @@ The schema defines the following properties:
 
 ## Localization schema v1.13
 
-Link to Localization schema v1.13: [https://developer.microsoft.com/en-us/json-schemas/teams/v1.13/MicrosoftTeams.Localization.schema.json](https://developer.microsoft.com/en-us/json-schemas/teams/v1.15/MicrosoftTeams.Localization.schema.json)
+Link to localization schema v1.13: [https://developer.microsoft.com/en-us/json-schemas/teams/v1.13/MicrosoftTeams.Localization.schema.json](https://developer.microsoft.com/en-us/json-schemas/teams/v1.15/MicrosoftTeams.Localization.schema.json)
 
 Example:
 
@@ -203,7 +203,7 @@ The schema defines the following properties:
 |`composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.taskInfo\\.title`|String|64|Replaces the corresponding strings from the app manifest with the value provided here.|
 |`activities.activityTypes\\[\\b([0-9]|[1-8][0-9]|9[0-9]|1[01][0-9]|12[0-7])\\b]\\.description`|String|128|A brief description of the notification|
 |`activities.activityTypes\\[\\b([0-9]|[1-8][0-9]|9[0-9]|1[01][0-9]|12[0-7])\\b]\\.templateText`|String|128|Ex: "{actor} created task {taskId} for you"|
-|`meetingExtensionDefinition.scenes \\[[0-9]\\]\\.name$`|String|128| |
+|`meetingExtensionDefinition.scenes \\[[0-9]\\]\\.name$`|String|128|Replaces the corresponding strings from the app manifest.  |
 
 </details>
 <br/>
@@ -212,7 +212,7 @@ The schema defines the following properties:
 
 ## Localization schema v1.12
 
-Link to Localization schema v1.12: [https://developer.microsoft.com/en-us/json-schemas/teams/v1.12/MicrosoftTeams.Localization.schema.json](https://developer.microsoft.com/en-us/json-schemas/teams/v1.15/MicrosoftTeams.Localization.schema.json)
+Link to localization schema v1.12: [https://developer.microsoft.com/en-us/json-schemas/teams/v1.12/MicrosoftTeams.Localization.schema.json](https://developer.microsoft.com/en-us/json-schemas/teams/v1.15/MicrosoftTeams.Localization.schema.json)
 
 Example:
 
@@ -253,7 +253,7 @@ The schema defines the following properties:
 |`composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.taskInfo\\.title`|String|64|Replaces the corresponding strings from the app manifest with the value provided here.|
 |`activities.activityTypes\\[\\b([0-9]|[1-8][0-9]|9[0-9]|1[01][0-9]|12[0-7])\\b]\\.description`|String|128|A brief description of the notification|
 |`activities.activityTypes\\[\\b([0-9]|[1-8][0-9]|9[0-9]|1[01][0-9]|12[0-7])\\b]\\.templateText`|String|128|Ex: "{actor} created task {taskId} for you"|
-|`meetingExtensionDefinition.scenes \\[[0-9]\\]\\.name$`|String|128| |
+|`meetingExtensionDefinition.scenes \\[[0-9]\\]\\.name$`|String|128|Replaces the corresponding strings from the app manifest.  |
 
 </details>
 <br/>
@@ -262,7 +262,7 @@ The schema defines the following properties:
 
 ## Localization schema v1.11
 
-Link to Localization schema v1.11: [https://developer.microsoft.com/en-us/json-schemas/teams/v1.11/MicrosoftTeams.Localization.schema.json](https://developer.microsoft.com/en-us/json-schemas/teams/v1.15/MicrosoftTeams.Localization.schema.json)
+Link to localization schema v1.11: [https://developer.microsoft.com/en-us/json-schemas/teams/v1.11/MicrosoftTeams.Localization.schema.json](https://developer.microsoft.com/en-us/json-schemas/teams/v1.15/MicrosoftTeams.Localization.schema.json)
 
 Example:
 
@@ -303,7 +303,7 @@ The schema defines the following properties:
 |`composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.taskInfo\\.title`|String|64|Replaces the corresponding strings from the app manifest with the value provided here.|
 |`activities.activityTypes\\[\\b([0-9]|[1-8][0-9]|9[0-9]|1[01][0-9]|12[0-7])\\b]\\.description`|String|128|A brief description of the notification|
 |`activities.activityTypes\\[\\b([0-9]|[1-8][0-9]|9[0-9]|1[01][0-9]|12[0-7])\\b]\\.templateText`|String|128|Ex: "{actor} created task {taskId} for you"|
-|`meetingExtensionDefinition.scenes \\[[0-9]\\]\\.name$`|String|128| |
+|`meetingExtensionDefinition.scenes \\[[0-9]\\]\\.name$`|String|128|Replaces the corresponding strings from the app manifest.  |
 
 </details>
 <br/>
@@ -312,7 +312,7 @@ The schema defines the following properties:
 
 ## Localization schema v1.10
 
-Link to Localization schema v1.10: [https://developer.microsoft.com/en-us/json-schemas/teams/v1.10/MicrosoftTeams.Localization.schema.json](https://developer.microsoft.com/en-us/json-schemas/teams/v1.15/MicrosoftTeams.Localization.schema.json)
+Link to localization schema v1.10: [https://developer.microsoft.com/en-us/json-schemas/teams/v1.10/MicrosoftTeams.Localization.schema.json](https://developer.microsoft.com/en-us/json-schemas/teams/v1.15/MicrosoftTeams.Localization.schema.json)
 
 Example:
 
@@ -353,7 +353,7 @@ The schema defines the following properties:
 |`composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.taskInfo\\.title`|String|64|Replaces the corresponding strings from the app manifest with the value provided here.|
 |`activities.activityTypes\\[\\b([0-9]|[1-8][0-9]|9[0-9]|1[01][0-9]|12[0-7])\\b]\\.description`|String|128|A brief description of the notification|
 |`activities.activityTypes\\[\\b([0-9]|[1-8][0-9]|9[0-9]|1[01][0-9]|12[0-7])\\b]\\.templateText`|String|128|Ex: "{actor} created task {taskId} for you"|
-|`meetingExtensionDefinition.scenes \\[[0-9]\\]\\.name$`|String|128| |
+|`meetingExtensionDefinition.scenes \\[[0-9]\\]\\.name$`|String|128|Replaces the corresponding strings from the app manifest.  |
 
 </details>
 <br/>
@@ -362,7 +362,7 @@ The schema defines the following properties:
 
 ## Localization schema v1.9
 
-Link to Localization schema v1.9: [https://developer.microsoft.com/en-us/json-schemas/teams/v1.9/MicrosoftTeams.Localization.schema.json](https://developer.microsoft.com/en-us/json-schemas/teams/v1.15/MicrosoftTeams.Localization.schema.json)
+Link to localization schema v1.9: [https://developer.microsoft.com/en-us/json-schemas/teams/v1.9/MicrosoftTeams.Localization.schema.json](https://developer.microsoft.com/en-us/json-schemas/teams/v1.15/MicrosoftTeams.Localization.schema.json)
 
 Example:
 
@@ -411,7 +411,7 @@ The schema defines the following properties:
 
 ## Localization schema v1.8
 
-Link to Localization schema v1.8: [https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json](https://developer.microsoft.com/en-us/json-schemas/teams/v1.15/MicrosoftTeams.Localization.schema.json)
+Link to localization schema v1.8: [https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json](https://developer.microsoft.com/en-us/json-schemas/teams/v1.15/MicrosoftTeams.Localization.schema.json)
 
 Example:
 
