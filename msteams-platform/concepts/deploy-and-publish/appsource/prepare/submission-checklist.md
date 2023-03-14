@@ -218,7 +218,7 @@ During submission, you're asked to categorize your app. You can categorize your 
 
 ### Distribute your app to specific countries
 
-If you want to cater your app to a global audience, you can select from an available list of countries and communicate what’s great about your app in ways that are relevant to users in different countries. This is known as Geo-fencing. For example, a Contoso US app, which sells gift cards that are only valid for users within the United States and Canada is only visible in the US and Canada Teams store.
+If you want to cater your app to a specific audience, you can select from an available list of countries and communicate what’s great about your app in ways that are relevant to users in different countries. This is known as Geo-fencing. For example, a Contoso US app, which sells gift cards that are only valid for users within the United States and Canada is only visible in the US and Canada Teams store.
 
 > [!NOTE]
 >
