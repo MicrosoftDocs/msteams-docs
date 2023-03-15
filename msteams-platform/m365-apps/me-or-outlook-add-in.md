@@ -18,19 +18,19 @@ Create an Outlook Add-in if your app requires any of the following scenarios:
 
 * Access to the properties of email messages or calendar items.
 * Ability to respond automatically to changes in the properties of email messages or calendar items.
-* Fine-grained read or write access to the content of email messages and calendar items that is provided by the [Outlook add-in APIs](/office/dev/add-ins/outlook/apis.md).
-* Read or write access to the user's mailbox. (Requires the [Outlook add-in APIs](/office/dev/add-ins/outlook/apis.md).)
-* Ability to start up automatically in response to events without explicit user action. See [Event-based activation](/office/dev/add-ins/outlook/autolaunch.md).
-* Ability to manipulate Outlook-specific settings, such as [custom properties](/office/dev/add-ins/outlook/metadata-for-an-outlook-add-in.md), [internet headers](/office/dev/add-ins/outlook/internet-headers.md).
-* Ability to run in messages and calendar items in [shared mailboxes or shared folders](/office/dev/add-ins/outlook/delegate-access.md).
+* Fine-grained read or write access to the content of email messages and calendar items that is provided by the [Outlook add-in APIs](/office/dev/add-ins/outlook/apis).
+* Read or write access to the user's mailbox. (Requires the [Outlook add-in APIs](/office/dev/add-ins/outlook/apis)).
+* Ability to start up automatically in response to events without explicit user action. See [Event-based activation](/office/dev/add-ins/outlook/autolaunch).
+* Ability to manipulate Outlook-specific settings, such as [custom properties](/office/dev/add-ins/outlook/metadata-for-an-outlook-add-in), [internet headers](/office/dev/add-ins/outlook/internet-headers).
+* Ability to run in messages and calendar items in [shared mailboxes or shared folders](/office/dev/add-ins/outlook/delegate-access).
 
 # [Message extension](#tab/message-extension)
 
 Create a message extension if your app requires any of the following scenarios:
 
 * Ability to work in both Teams chat and Teams calendar items as well as Outlook email messages and calendar items.
-* Ability to use [Adaptive Cards](../task-modules-and-cards/cards/design-effective-cards.md) as the canvas for the content that is inserted.
-* Ability to use [link unfurling](../messaging-extensions/how-to/link-unfurling.md); that is, to insert a rich preview of a link.
+* Ability to use [Adaptive Cards](../task-modules-and-cards/cards/design-effective-cards) as the canvas for the content that is inserted.
+* Ability to use [link unfurling](../messaging-extensions/how-to/link-unfurling); that is, to insert a rich preview of a link.
 
 ---
 
