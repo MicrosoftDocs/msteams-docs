@@ -851,7 +851,7 @@ The bot receives the meeting start and meeting end events through the `OnTeamsMe
 > * Do not use conversation ID as meeting ID.
 > * Do not use meeting ID from meeting events payload `turncontext.activity.value`.
 
-The following examples show how to capture the meeting start and end events::
+The following examples show how to capture the meeting start and end events:
 
 **Meeting Start Event**
 
