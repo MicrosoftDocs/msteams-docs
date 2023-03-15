@@ -74,7 +74,7 @@ The following examples show the recommended app type for a scenario, based on th
 | Insert a meeting link into an invitation. | add-in |
 | Customize a meeting link based on the recipients, the meeting time, and other contextual facts. | add-in |
 | Updating a meeting link when the meeting is updated. | add-in |
-| Reply with a "Meet Now" invitation. | message extension |
+| Reply with a **Meet Now** invitation. | message extension |
 
 ### Signature management
 
