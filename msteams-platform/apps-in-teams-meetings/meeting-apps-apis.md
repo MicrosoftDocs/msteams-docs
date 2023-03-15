@@ -843,7 +843,7 @@ Your app manifest must have the `webApplicationInfo` property to receive the mee
 
 ### Example of getting `MeetingStartEndEventvalue`
 
-The bot receives these events through the `OnTeamsMeetingStartAsync` and `OnTeamsMeetingEndAsync` handlers. The information related to the meeting event is part of the `MeetingStartEventDetails` object which includes the metadata fields such as, `MeetingType`, `Title`, `Id`, `JoinUrl`, `StartTime`, and `EndTime`.
+The bot receives the meeting start and meeting end events through the `OnTeamsMeetingStartAsync` and `OnTeamsMeetingEndAsync` handlers. The information related to the meeting event is part of the `MeetingStartEventDetails` object, which includes the metadata fields such as, `meetingType`, `title`, `id`, `joinUrl`, `startTime`, and `EndTime`.
 
 > [!NOTE]
 >
