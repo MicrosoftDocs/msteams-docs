@@ -82,58 +82,12 @@ One of the benefits of using TeamsJS, particularly for Teams app that might run 
 
 For more information about capabilities and the APIs in the TeamsJS library, see [Building tabs and other hosted experiences with the TeamsJS library](~/tabs/how-to/using-teams-client-sdk.md#apis-organized-into-capabilities).
 
-You can configure deep links in your app through TeamsJS library to allow the app users browse to different pages within your app. The following code demonstrates how to navigate to a specific entity within your Teams app:
+You can configure deep links to browse within your app in one of the following two ways:
 
-# [TeamsJS v2](#tab/teamsjs-v2)
+* [Configure deep link to browse within your app manually](#configure-deep-link-to-browse-within-your-app-manually)
+* [Configure deep link to a tab using TeamsJS library](#configure-deep-link-to-a-tab-using-teamsjs-library)
 
-You can trigger navigation from your tab using the [pages.navigateToApp()](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest#@microsoft-teams-js-pages-navigatetoapp&preserve-view=true) function as shown in the following code:
-
-```javascript
-if (pages.isSupported()) {
-  const navPromise = pages.navigateToApp({ appId: <appId>, pageId: <pageId>, webUrl: <webUrl>, subPageId: <subPageId>, channelId:<channelId>});
-  navPromise.
-     then((result) => {/*Successful navigation*/}).
-     catch((error) => {/*Failed navigation*/});
-}
-else { /* handle case where capability isn't supported */ }
-```
-
-For more information about using the pages capability, see [pages.navigateToApp()](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest#@microsoft-teams-js-pages-navigatetoapp&preserve-view=true) and the [pages](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest&preserve-view=true) namespace for other navigation options. If needed, it's also possible to directly open a deep link using the [app.openLink()](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-openlink&preserve-view=true) function.
-
-# [TeamsJS v1](#tab/teamsjs-v1)
-
-To trigger a deep link from your tab, call:
-
-```javascript
-microsoftTeams.executeDeepLink(/*deepLink*/);
-```
-
----
-
-The navigation behavior of a Teams app extended across Microsoft 365 Office is dependent on two factors:
-
-1. The target that the deep link points to.
-1. The host where the Teams app is running.
-
-If the Teams app is running within the host where the deep link is targeted, your app will open directly within the host. However, if the Teams app is running in a different host from where the deep link is targeted, the app will first open in the browser.
-
-## Deep link to a chat with the application
-
-You can allow app users, browse to a personal chat with the application by configuring the deep link manually using the following format:
-
-`https://teams.microsoft.com/l/entity/<appId>?tenantId=<tenantId>/conversations`, where `appId` is your application ID. To know about different app IDs used see, [app ID used for different apps](#app-id-used-for-different-apps).
-
-## Share deep link for a tab
-
-You can share deep links to entities in Teams apps. This method is used to create and share links that navigate to the content and information within your tab app. For example, if your tab app contains a task list, team members can create and share links to individual tasks. When the app user selects the link, it navigates to your tab that focuses on the specific item.
-
-There are two ways to implement sharing deep link for a tab app:
-
-* [Configure deep link to share deep link for a tab manually](#configure-deep-link-to-share-deep-link-for-a-tab-manually)
-* [Configure deep link using TeamsJS library through `shareDeepLink()`](#configure-deep-link-using-teamsjs-library-through-sharedeeplink)
-
-
-#### Configure deep link to share deep link for a tab manually 
+#### Configure deep link to browse within your app manually 
 
 While it's recommended to use [`shareDeepLink()`](#configure-deep-link-using-teamsjs-library-through-sharedeeplink) to share a deep link to your tab, it's also possible to create one manually.
 
@@ -194,7 +148,52 @@ The query parameters are:
 > var taskItemUrl = 'https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=' + encodedWebUrl + '&context=' + encodedContext;
 > ```
 
-#### Configure deep link using TeamsJS library through `shareDeepLink()`
+#### Configure deep link to a tab using TeamsJS library
+
+You can configure deep links in your app through TeamsJS library to allow the app users browse to different pages within your app. The following code demonstrates how to navigate to a specific entity within your Teams app:
+
+# [TeamsJS v2](#tab/teamsjs-v2)
+
+You can trigger navigation from your tab using the [pages.navigateToApp()](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest#@microsoft-teams-js-pages-navigatetoapp&preserve-view=true) function as shown in the following code:
+
+```javascript
+if (pages.isSupported()) {
+  const navPromise = pages.navigateToApp({ appId: <appId>, pageId: <pageId>, webUrl: <webUrl>, subPageId: <subPageId>, channelId:<channelId>});
+  navPromise.
+     then((result) => {/*Successful navigation*/}).
+     catch((error) => {/*Failed navigation*/});
+}
+else { /* handle case where capability isn't supported */ }
+```
+
+For more information about using the pages capability, see [pages.navigateToApp()](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest#@microsoft-teams-js-pages-navigatetoapp&preserve-view=true) and the [pages](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest&preserve-view=true) namespace for other navigation options. If needed, it's also possible to directly open a deep link using the [app.openLink()](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-openlink&preserve-view=true) function.
+
+# [TeamsJS v1](#tab/teamsjs-v1)
+
+To trigger a deep link from your tab, call:
+
+```javascript
+microsoftTeams.executeDeepLink(/*deepLink*/);
+```
+
+---
+
+The navigation behavior of a Teams app extended across Microsoft 365 Office is dependent on two factors:
+
+1. The target that the deep link points to.
+1. The host where the Teams app is running.
+
+If the Teams app is running within the host where the deep link is targeted, your app will open directly within the host. However, if the Teams app is running in a different host from where the deep link is targeted, the app will first open in the browser.
+
+## Deep link to a chat with the application
+
+You can allow app users, browse to a personal chat with the application by configuring the deep link manually using the following format:
+
+`https://teams.microsoft.com/l/entity/<appId>?tenantId=<tenantId>/conversations`, where `appId` is your application ID. To know about different app IDs used see, [app ID used for different apps](#app-id-used-for-different-apps).
+
+## Share deep link for a tab
+
+You can share deep links to entities in Teams apps. This method is used to create and share links that navigate to the content and information within your tab app. For example, if your tab app contains a task list, team members can create and share links to individual tasks. When the app user selects the link, it navigates to your tab that focuses on the specific item.
 
 # [TeamsJS v2](#tab/teamsjs-v2)
 
@@ -233,8 +232,7 @@ You'll need to replace the parameters with the appropriate information:
 > * This deep link is different from the links provided by the **Copy link to tab** menu item, which just generates a deep link that points to this tab.
 > * `shareDeepLink` doesn't work on mobile platforms.
 
-
-### Deep link for SharePoint Framework tabs
+## Deep link for SharePoint Framework tabs
 
 You can use the following deep link format in a bot, connector, or message extension card:
 `https://teams.microsoft.com/l/entity/<AppId>/<EntityId>?webUrl=<entityWebUrl>/<EntityName>`.
