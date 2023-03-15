@@ -19,9 +19,9 @@ Create an Outlook Add-in if your app requires any of the following scenarios:
 * Access to the properties of email messages or calendar items.
 * Ability to respond automatically to changes in the properties of email messages or calendar items.
 * Fine-grained read or write access to the content of email messages and calendar items that is provided by the [Outlook add-in APIs](/office/dev/add-ins/outlook/apis).
-* Read or write access to the user's mailbox. (Requires the [Outlook add-in APIs](/office/dev/add-ins/outlook/apis)).
-* Ability to start up automatically in response to events without explicit user action. See [Event-based activation](/office/dev/add-ins/outlook/autolaunch).
-* Ability to manipulate Outlook-specific settings, such as [custom properties](/office/dev/add-ins/outlook/metadata-for-an-outlook-add-in), [internet headers](/office/dev/add-ins/outlook/internet-headers).
+* Read or write access to the user's mailbox. (Requires the [Outlook add-in APIs](/office/dev/add-ins/outlook/apis))
+* Ability to start up automatically in response to events without explicit user action. For more information, see [Event-based activation](/office/dev/add-ins/outlook/autolaunch).
+* Ability to manipulate Outlook-specific settings, such as [custom properties](/office/dev/add-ins/outlook/metadata-for-an-outlook-add-in) and [internet headers](/office/dev/add-ins/outlook/internet-headers).
 * Ability to run in messages and calendar items in [shared mailboxes or shared folders](/office/dev/add-ins/outlook/delegate-access).
 
 # [**Message extension**](#tab/message-extension)
@@ -29,23 +29,23 @@ Create an Outlook Add-in if your app requires any of the following scenarios:
 Create a message extension if your app requires any of the following scenarios:
 
 * Ability to work in both Teams chat and Teams calendar items as well as Outlook email messages and calendar items.
-* Ability to use [Adaptive Cards](../task-modules-and-cards/cards/design-effective-cards) as the canvas for the content that is inserted.
-* Ability to use [link unfurling](../messaging-extensions/how-to/link-unfurling); that is, to insert a rich preview of a link.
+* Ability to use [Adaptive Cards](../task-modules-and-cards/cards/design-effective-cards.md) as the canvas for the content that is inserted.
+* Ability to use [link unfurling](../messaging-extensions/how-to/link-unfurling.md); that is, to insert a rich preview of a link.
 
 ---
 
 > [!NOTE]
-> If your app includes scenarios from both Outlook add-in and message extension, then you need to create a message extension and an Outlook add-in (which can be hosted at the same domain and share files). We are working on a system that enables you to combine these into a single app. We'll update this article when that system is available.
+> If your app includes scenarios from Outlook add-in and message extension, then you need to create both the apps, a message extension and an Outlook add-in (which can be hosted at the same domain and share files). We are working on a system that enables you to combine these into a single app. We'll update this article when that system is available.
 
 ## Example applications of the guidance
 
-The following examples show the recommended app type for a scenario, based on the the task:
+The following examples show the recommended app type for a scenario, based on the task:
 
 ### Customer Relation Management
 
 | Scenario | App type |
 |:--|:--|
-| Save a lead that came on email into Customer Relation Management (CRM) .| add-in |
+| Save a lead that came on email into Customer Relation Management (CRM).| add-in |
 | Find and insert lead details into an email or meeting invitation | message extension |
 | Insert boilerplate responses from CRM into message or invitation body | message extension |
 | Track email open rates (by inserting a tracking pixel). | add-in |
@@ -56,9 +56,9 @@ The following examples show the recommended app type for a scenario, based on th
 | Scenario | App type |
 |:--|:--|
 | Marking an email as spam .| add-in |
-| Send test/mock emails for training and tracking action rates. | add-in |
-| Reading or setting the [MIP](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/announcing-new-microsoft-information-protection-capabilities-to/ba-p/1999692) label on an email based on business rules. | add-in |
-| Encrypt & decrypt emails and attachments based on business rules. | add-in |
+| Send test or mock emails for training and tracking action rates. | add-in |
+| Reading or setting the [Microsoft Information Protection (MIP)](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/announcing-new-microsoft-information-protection-capabilities-to/ba-p/1999692) label on an email based on business rules. | add-in |
+| Encrypt and decrypt emails and attachments based on business rules. | add-in |
 
 ### Attachment management
 
