@@ -56,7 +56,7 @@ To request RSC permissions for an app, list the permissions that the app require
 > [!NOTE]
 > For delegated permissions, use app manifest v1.12 or later.
 
-Whenever an authorized user installs your app within Teams, the RSC permissions requested in the app’s manifest are shown to the user and granted as part of the app installation process.
+Whenever an authorized user installs your app within Teams, the RSC permissions requested in the app’s manifest are shown to the user. The permissions are granted as part of the app installation process.
 
 <br>
 
@@ -371,12 +371,12 @@ If your Teams admin allows custom app uploads, you can [sideload your app](~/con
 
 ### Obtain an access token from the Microsoft identity platform
 
-To make Graph API calls, you must obtain an access token for your app from the identity platform. Before your app can get a token from the identity platform, you must register your app in the Azure AD portal. The access token contains information about your app and it's permissions for the resources and APIs available through Microsoft Graph.
+To make Graph API calls, you must obtain an access token for your app from the identity platform. Before your app can get a token from the identity platform, you must register your app in the Azure AD portal. The access token contains information about your app and its permissions for the resources and APIs available through Microsoft Graph.
 
 You must have the following values from the Azure AD registration process to retrieve an access token from the identity platform:
 
 * **Application ID**: The app ID assigned by the Azure AD portal to your app. If your app supports single sign-on (SSO), you must use the same app ID for your app and SSO.
-* **Client secret** or **Certificate**: The password for your app, or the public or private key pair that is the certificate. This isn't required for native apps.
+* **Client secret** or **Certificate**: The password for your app, or the public or private key pair that is the certificate. The client secret or certificate isn't required for native apps.
 * **Redirect URI**: The URL for your app to receive responses from Azure AD.
 
 For more information, see [get access on behalf of a user](/graph/auth-v2-user?view=graph-rest-1.0#3-get-a-token&preserve-view=true) and [get access without a user](/graph/auth-v2-service).
