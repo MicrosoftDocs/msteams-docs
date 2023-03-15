@@ -12,7 +12,7 @@ Message extensions and Outlook Add-ins add rich, interactive content to email me
 
 ## General guidance
 
-# [Outlook Add-in](#tab/outlook-add-in)
+# [**Outlook Add-in**](#tab/outlook-add-in)
 
 Create an Outlook Add-in if your app requires any of the following scenarios:
 
@@ -24,7 +24,7 @@ Create an Outlook Add-in if your app requires any of the following scenarios:
 * Ability to manipulate Outlook-specific settings, such as [custom properties](/office/dev/add-ins/outlook/metadata-for-an-outlook-add-in), [internet headers](/office/dev/add-ins/outlook/internet-headers).
 * Ability to run in messages and calendar items in [shared mailboxes or shared folders](/office/dev/add-ins/outlook/delegate-access).
 
-# [Message extension](#tab/message-extension)
+# [**Message extension**](#tab/message-extension)
 
 Create a message extension if your app requires any of the following scenarios:
 
