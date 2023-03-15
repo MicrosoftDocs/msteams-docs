@@ -223,6 +223,8 @@ If you want to cater your app to a specific audience, you can select from the av
 > [!NOTE]
 > Geo-fencing feature isn't supported in Government community cloud (GCC), GCC-High, and Department of Defence (DoD) tenants.
 
+:::image type="content" source="../../../../assets/images/app-fundamentals/geo-fencing-infographic.png" alt-text="Infographic shows the difference in the Teams Store for the apps available in the US and other countries.":::
+
 Geo-fencing helps you improve your app's visibility in the Teams store. When you publish your app to the store, you can select from the available list of countries in the Partner Center to target your app to users in specific countries.
 
 :::image type="content" source="../../../../assets/images/app-fundamentals/select-countries-app-partner-center.png" alt-text="Screenshot shows the list of available countries in Microsoft Partner Center.":::
