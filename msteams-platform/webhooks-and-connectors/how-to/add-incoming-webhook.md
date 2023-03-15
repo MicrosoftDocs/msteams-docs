@@ -35,7 +35,7 @@ The following table provides the features and description of an Incoming Webhook
 | Features | Description |
 | -------- | ----------- |
 |Adaptive Cards using an Incoming Webhook | Adaptive Cards can be sent through Incoming Webhooks. For more information, see [Send Adaptive Cards using Incoming Webhooks](../../webhooks-and-connectors/how-to/connectors-using.md#send-adaptive-cards-using-an-incoming-webhook).|
-|Actionable messaging support|Actionable message cards are supported in all Office 365 groups including Teams. If you send messages through cards, you must use the actionable message card format. For more information, see [Legacy actionable message card reference](/outlook/actionable-messages/message-card-reference) and [message card playground](https://messagecardplayground.azurewebsites.net).|
+|Actionable messaging support|Actionable message cards are supported in all Microsoft 365 groups including Teams. If you send messages through cards, you must use the actionable message card format. For more information, see [Legacy actionable message card reference](/outlook/actionable-messages/message-card-reference) and [message card playground](https://messagecardplayground.azurewebsites.net).|
 |Independent HTTPS messaging support|Cards provide information clearly and consistently. Any tool or framework that can send HTTPS POST requests can send messages to Teams through an Incoming Webhook.|
 |Markdown support|All text fields in actionable messaging cards support basic Markdown. Don't use HTML markup in your cards. HTML is ignored and treated as plain text.|
 |Scoped configuration|Incoming Webhook is scoped and configured at the channel level.|
@@ -71,10 +71,39 @@ To add an Incoming Webhook to a Teams channel, follow these steps:
 
 The webhook is now available in the Teams channel.
 
-You can create and send actionable messages through Incoming Webhook or Office 365 Connector. For more information, see [Create and send messages](~/webhooks-and-connectors/how-to/connectors-using.md).
+You can create and send actionable messages through Incoming Webhook or connector for Microsoft 365 Groups. For more information, see [Create and send messages](~/webhooks-and-connectors/how-to/connectors-using.md).
 
 > [!NOTE]
 > In Teams, select **Settings** > **Member permissions** > **Allow members to create, update, and remove connectors**, so that any team member can add, modify, or delete a connector.
+
+**Example**
+
+# [C#](#tab/dotnet)
+
+[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/incoming-webhook/csharp/IncomingWebhook/Controllers/CardController.cs#L28)
+
+```csharp
+url = {{Webhook_URL}};
+HttpClient client = new HttpClient();
+client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+var content = new StringContent({{formatted_Card_Payload}}(Adaptive_Card_Json), System.Text.Encoding.UTF8, "application/json");
+var response = await client.PostAsync({{WebhookUrl}}, content);
+```
+
+# [JavaScript](#tab/javascript)
+
+[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/incoming-webhook/nodejs/api/server/index.js#L16)
+
+```javascript
+ axios.post({{WebhookUrl}}, {{formatted_Card_Payload}})
+    .then(res => {
+        console.log(`statusCode: ${res.status}`)
+        console.log(res)
+    })
+    .catch(error => {
+        console.error(error)
+    })
+```
 
 ## Remove Incoming Webhooks
 
@@ -104,7 +133,7 @@ To remove an Incoming Webhook from a Teams channel, follow these steps:
 
 ## Code sample
 
-| Sample Name           | Description | C#    |  Node.js |
+| Sample Name           | Description | .NET    |  Node.js |
 |:---------------------|:--------------|:---------|:--------|
 |Incoming Webhook|This sample code demonstrates how to send card using Incoming Webhook. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/incoming-webhook/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/incoming-webhook/nodejs) |
 
@@ -112,7 +141,7 @@ To remove an Incoming Webhook from a Teams channel, follow these steps:
 
 * [Webhooks and connectors](../what-are-webhooks-and-connectors.md)
 * [Create Outgoing Webhooks](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)
-* [Create Office 365 Connectors](~/webhooks-and-connectors/how-to/connectors-creating.md)
+* [Create connectors for Microsoft 365 Groups](~/webhooks-and-connectors/how-to/connectors-creating.md)
 * [Create and send messages](~/webhooks-and-connectors/how-to/connectors-using.md)
 * [Build bots for Teams](../../bots/what-are-bots.md)
 * [Message extensions](../../messaging-extensions/what-are-messaging-extensions.md)

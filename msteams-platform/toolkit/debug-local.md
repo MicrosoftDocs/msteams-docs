@@ -2,7 +2,7 @@
 title: Debug your Teams app locally
 author: surbhigupta 
 description: In this module, learn how to debug your Teams app locally in Teams Toolkit.
-ms.author: v-amprasad
+ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
@@ -20,7 +20,6 @@ Teams Toolkit helps you to debug and preview your Microsoft Teams app locally. D
 Teams Toolkit in Microsoft Visual Studio Code gives you the features to automate debugging of your Teams app locally. Visual Studio Code allows you to debug tab, bot, and message extension. You need to set up Teams Toolkit before you debug your app.
 
 > [!NOTE]
->
 > You can upgrade your old Teams Toolkit project to use new tasks, for more information, see [debug settings doc](https://aka.ms/teamsfx-debug-upgrade-new-tasks)
 
 ## Set up your Teams Toolkit for debugging
@@ -176,7 +175,7 @@ Perform the following steps using the Teams Toolkit to debug your app after you 
    :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-signin-m365.png" alt-text="Sign in to Microsoft 365 account":::
 
    > [!Note]
-   > Learn more about sideloading permission by visiting <https://aka.ms/teamsfx-sideloading-option>.
+   > Learn more about sideloading permission by visiting [Prepare your Microsoft 365 tenant](../concepts/build-and-test/prepare-your-o365-tenant.md).
 
 1. Select **Debug** > **Start Debugging**, or directly select **F5**.
 
@@ -185,7 +184,7 @@ Perform the following steps using the Teams Toolkit to debug your app after you 
    Visual Studio launches the Teams app inside Microsoft Teams client in your browser.
 
    > [!Note]
-   > Learn more by visiting <https://aka.ms/teamsfx-vs-debug>.
+   > Learn more by visiting [Teams Toolkit Overview](teams-toolkit-fundamentals.md).
 
 1. After Microsoft Teams is loaded, select **Add** to install your app in Teams.
 

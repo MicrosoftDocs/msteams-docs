@@ -21,6 +21,9 @@ Sometimes screen sharing just isn't enough, which is why Microsoft built tools l
 > [!div class="nextstepaction"]
 > [Get started](teams-live-share-quick-start.md)
 
+> [!NOTE]
+> Live Share SDK is available only in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
+
 ## Feature overview
 
 Live Share has three packages that support limitless collaborative scenarios. These packages expose a set of distributed data structures (DDS), including primitive building blocks and turn-key scenarios.
