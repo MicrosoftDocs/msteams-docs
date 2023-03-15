@@ -26,6 +26,8 @@ You can create notification bot in other scenarios, such as a notification can b
 > [!NOTE]
 > Bot application needs to be installed with the corresponding scope before sending notification.
 
+[Back to top](#notification-bot-in-teams)
+
 ## Notification based on events
 
 Bot Framework SDK provides the functionality to proactively message in Teams. TeamsFx SDK provides the functionality to manage bot's conversation references when a bot event is triggered. TeamsFx SDK recognizes the following bot events:
@@ -76,6 +78,8 @@ foreach (var target in await _conversation.Notification.GetInstallationsAsync())
 
 ---
 
+[Back to top](#notification-bot-in-teams)
+
 ## Notification bot installation
 
 A notification bot needs to be installed into a team, or a group chat, or as personal app, depending on the required scope. You need to select the installation target before adding the bot to your app.
@@ -84,15 +88,19 @@ A notification bot needs to be installed into a team, or a group chat, or as per
 
 For more install options, see [configure default install options](../../../concepts/deploy-and-publish/apps-publish-overview.md#configure-default-install-options).
 
+[Back to top](#notification-bot-in-teams)
+
 ## Customize notification
 
 You can make the following customizations to extend the notification template to fit your business need:
 
-<br>
+* [Customize the trigger point from event source](#customize-the-trigger-point-from-event-source)
+* [Customize the notification content](#customize-the-notification-content)
+* [Customize where notifications are sent](#customize-where-notifications-are-sent)
 
-<details>
+### Customize the trigger point from event source
 
-<summary><b>1. Customize the trigger point from event source</b></summary>
+You can customize the following triggers:
 
 * `Restify` based notification
 
@@ -122,25 +130,15 @@ You can make the following customizations to extend the notification template to
 
 For more information on support triggers, see [Azure Functions support triggers](/azure/azure-functions/functions-triggers-bindings?tabs=javascript).
 
-<br>
-
-</details>
-
-<details>
-
-<summary><b>2. Customize the notification content</b></summary>
+### Customize the notification content
 
 The file `src/adaptiveCards/notification-default.json` defines the default Adaptive Card. You can use the [Adaptive Card designer](https://adaptivecards.io/designer/) to help visually design your Adaptive Card UI. The `src/cardModels.ts` defines a data structure that is used to load data for the Adaptive Card. The binding between the card model and the Adaptive Card is done by matching name such as `CardData.title` maps to `${title}` in the Adaptive Card. You can add, edit, or remove properties and their bindings to customize the Adaptive Card as required.
 
 You can also add new cards if needed. For more information on how to build different types of Adaptive Cards with a list or table of dynamic contents using `ColumnSet` and `FactSet`, see [Adaptive Card notification sample](<https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/adaptive-card-notification>).
 
-<br>
+### Customize where notifications are sent
 
-</details>
-
-<details>
-
-<summary><b>3. Customize where notifications are sent</b></summary>
+You can customize sending the notification to the following targets:
 
 * Notifications to a personal chat:
 
@@ -283,9 +281,7 @@ You can also add new cards if needed. For more information on how to build diffe
    > [!NOTE]
    > To prevent an undefined output and a missing notification, you need to include the specific person in notification installation scope.
 
-<br>
-
-</details>
+[Back to top](#notification-bot-in-teams)
 
 ## Customize initialization
 
@@ -329,6 +325,8 @@ foreach (var target in await _conversation.Notification.GetInstallationsAsync())
 
 ---
 
+[Back to top](#notification-bot-in-teams)
+
 ## Customize adapter
 
 You can customize by creating your own adapter, or customize the adapter after initialization. Following is the code sample for creating your adapter:
@@ -351,6 +349,8 @@ const bot = new ConversationBot({
 bot.adapter.onTurnError = ...
 
 ```
+
+[Back to top](#notification-bot-in-teams)
 
 ## Add storage
 
@@ -419,6 +419,8 @@ For sample implementation to use Azure blob storage, see [add notification stora
 > [!NOTE]
 > It's recommended to use your own shared storage for production environment.
 
+[Back to top](#notification-bot-in-teams)
+
 ## Add authentication for notification API
 
 If you select HTTP trigger, the scaffolded notification API doesn't have authentication or authorization enabled. Ensure that you add authentication or authorization for the API before using it for production. You can perform either of the following:
@@ -428,6 +430,8 @@ If you select HTTP trigger, the scaffolded notification API doesn't have authent
 * Use an access token issued by Azure Active Directory (Azure AD). For more information, see [Configure SSO for your bot in Azure AD](../authentication/bot-sso-register-aad.md).
 
 There can be more authentication or authorization solutions for an API, you can select as required.
+
+[Back to top](#notification-bot-in-teams)
 
 ## Connect to existing APIs
 
@@ -461,6 +465,8 @@ TeamsFx provides you with an [Incoming Webhook notification sample](https://gith
 
 * [Create an Incoming Webhook](../../../webhooks-and-connectors/how-to/add-incoming-webhook.md) in Teams.
 * Send notifications using Incoming Webhooks with Adaptive Cards.
+
+[Back to top](#notification-bot-in-teams)
 
 ## FAQ
 
@@ -560,6 +566,8 @@ You can extend your notification bot by defining actions and use workflow bot to
 <br>
 
 </details>
+
+[Back to top](#notification-bot-in-teams)
 
 ## Step-by-step guide
 
