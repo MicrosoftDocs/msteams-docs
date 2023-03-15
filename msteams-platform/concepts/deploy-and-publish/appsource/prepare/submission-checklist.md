@@ -220,7 +220,7 @@ During submission, you're asked to categorize your app. You can categorize your 
 
 If you want to cater your app to a specific audience, you can select from the available list of countries and communicate what’s great about your app in ways that are relevant to users. This is known as Geo-fencing. Geo-fencing is applicable only for apps listed in the Teams store. For example, a Contoso US app, which sells gift cards that are valid within the US and Canada is only visible in the Teams store for the users in the US and Canada.
 
-:::image type="content" source="../../../../assets/images/app-fundamentals/geo-fencing-infographic.png" alt-text="Infographic shows the difference in the Teams Store for the apps available in the US and other countries.":::
+:::image type="content" source="../../../../assets/images/app-fundamentals/geo-fencing-infographic.png" alt-text="Infographic shows the difference in the Teams Store for the apps available in the US and other countries." lightbox="../../../../assets/images/app-fundamentals/geo-fencing-infographic.png":::
 
 > [!NOTE]
 > Geo-fencing isn't supported in Government community cloud (GCC), GCC-High, and Department of Defence (DoD) tenants.
