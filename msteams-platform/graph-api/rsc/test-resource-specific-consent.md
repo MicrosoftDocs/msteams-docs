@@ -13,7 +13,7 @@ keywords: teams authorization OAuth SSO Microsoft Azure Active Directory (Azure 
 > [!NOTE]
 > Resource-specific consent for chat scope is available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md) only.
 
-Resource-specific consent (RSC) is a Microsoft Teams and Graph API integration that enables your app to use API endpoints to manage specific resources—either teams or chats—within an organization. For more information, see [Resource-specific consent (RSC) — Microsoft Teams Graph API](resource-specific-consent.md).
+Resource-specific consent (RSC) is a Microsoft Teams and Graph API integration that enables your app to use API endpoints to manage specific resources—either teams or chats—within an organization. For more information, see [Resource-specific consent (RSC)](resource-specific-consent.md).
 
 ## Prerequisites
 
@@ -274,7 +274,7 @@ To check whether the RSC permissions are being honored by the API request payloa
 * `azureADAppId`: Your app's Azure AD app ID.
 * `azureADAppSecret`: Your Azure AD app password.
 * `token_scope`: The scope is required to get a token. Set the value to `https://graph.microsoft.com/.default`.
-* `teamGroupId`: You can get the team group id from the Teams client as follows:
+* `teamGroupId`: You can get the team group ID from the Teams client as follows:
 
     1. In the Teams client, select **Teams** from the far left navigation bar.
     2. Select the team where the app is installed from the dropdown menu.
@@ -290,12 +290,12 @@ To check whether the RSC permissions are being honored by the API request payloa
 * `azureADAppSecret`: Your Azure AD app password.
 * `token_scope`: The scope is required to get a token. Set the value to `https://graph.microsoft.com/.default`.
 * `tenantId`: The name or the Azure AD Object ID of your tenant.
-* `chatId`: You can get the chat thread id from the Teams *web* client as follows:
+* `chatId`: You can get the chat thread ID from the Teams *web* client as follows:
 
     1. In the Teams web client, select **Chat** from the far left navigation bar.
     2. Select the chat where the app is installed from the dropdown menu.
-    3. Copy the web URL and save the chat thread id from the string.
-![Chat thread id from web URL.](../../assets/images/chat-thread-id.png)
+    3. Copy the web URL and save the chat thread ID from the string.
+![Chat thread ID from web URL.](../../assets/images/chat-thread-id.png)
 
 ### Use Postman
 
