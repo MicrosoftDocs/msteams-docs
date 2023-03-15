@@ -9,11 +9,11 @@ ms.topic: conceptual
 
 # Resource-specific consent for your Teams app
 
-Resource-specific consent (RSC) is an authorization framework built by Microsoft Teams and Microsoft identity that allows for granting scoped access to an app.
+Resource-specific consent (RSC) is an authorization framework built by Microsoft Teams and Microsoft identity platform that allows for granting scoped access to an app.
 
 Through RSC, an authorized user can give an app access to the data of a specific instance of a resource type. They don't need to give app access to every instance of the resource type in the entire tenant.
 
-For example, a person who owns both team A and team B can decide to give the data for the Contoso app to only team A and not team B. The same concept of scoped data access applies to chats and meetings.
+For example, a person who owns both team A and team B can decide to give the data access for the Contoso app to only team A and not team B. The same concept of scoped data access applies to chats and meetings.
 
 RSC permissions are categorized based on:
 
@@ -37,17 +37,12 @@ In this section, you'll learn more about:
 
 Use RSC permissions to determine the data access methods for your app. A user's ability to grant RSC permissions varies based on resource types and access modes. The following are the types of RSC permissions for an app based on access mode:
 
-* **Application context RSC permissions**: This type of RSC permission allows an app to access data without the user being signed in. Users authorized to install an app in a specific scope can also grant any RSC permission that the app requests in that specific scope.
-
-  In the app-only mode, a user can grant RSC permissions to access data in the following scenarios:
-  * For a team, the user must be an owner of that team.
-  * For a chat, the user must be a member of the chat.
-  * For a meeting, the user must be an organizer or presenter in the meeting.
+* **Application context RSC permissions (application permission)**: This type of RSC permission allows an app to access data without the user being signed in. Users authorized to install an app in a specific scope can also grant any RSC permission that the app requests in that specific scope.
 
   > [!NOTE]
   > Application RSC permissions for chat scope are available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md) only.
 
-* **Delegated context RSC permissions**: This type of RSC permission allows an app to access data only on behalf of a signed-in user. No access is allowed in the absence of a signed-in user. Only authorized users can install an app in a specific scope. They can also grant any RSC permissions that the app requests in that specific scope at app installation. For example, if regular members have the permission to install an app inside a team, then they can also grant delegated RSC permission to the app in that specific team.
+* **Delegated context RSC permissions (delegated permission)**: This type of RSC permission allows an app to access data only on behalf of a signed-in user. No access is allowed in the absence of a signed-in user. Only authorized users can install an app in a specific scope. They can also grant any RSC permissions that the app requests in that specific scope at app installation. For example, if regular members have the permission to install an app inside a team, then they can also grant delegated RSC permission to the app in that specific team.
 
 ### RSC-based data access APIs
 
@@ -55,7 +50,7 @@ Microsoft Graph SDK, Microsoft Bot Framework SDK, and Microsoft TeamsJS client l
 
 | RSC mode or type | Supported SDKs | App manifest version | Resource types | RSC-related controls for the entire tenant | Who can consent to RSC permissions? |
 |---------|---------|---------|---------|---------|---------|
-|Application| • Microsoft Graph  <br> • Microsoft Bot Framework | >=v1.6 | Teams, chats, and meetings | • Microsoft Graph-based controls for chats and meetings. <br> • Azure Active Directory (Azure AD) portal-based controls for teams. |• Team: A team owner. <br> • Chat: A chat member. <br> • Meeting: A meeting organizer or presenter. |
+|Application| • Microsoft Graph  <br> • Microsoft Bot Framework | >=v1.6 | Teams, chats, and meetings | • Microsoft Graph-based controls for chats and meetings <br> • Azure Active Directory (Azure AD) portal-based controls for Teams |• Team: A team owner <br> • Chat: A chat member <br> • Meeting: A meeting organizer or presenter |
 | Delegated | Microsoft Teams Client | >=v1.12 | Teams, chats, meetings, and users | Always on | Any user authorized to install an app in the specific scope. |
 
 ## Supported RSC permissions
