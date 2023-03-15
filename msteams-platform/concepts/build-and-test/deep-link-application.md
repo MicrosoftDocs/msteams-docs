@@ -16,9 +16,9 @@ If your app is approved for mobile platform, you can create a deep link to the a
 Deep links can allow users to know more about an app and install it in different scopes. You can also create deep links for your users to go to specific pages of your app. In this article, you’ll learn to configure a deep link:
 
 - [To open application install dialog](#deep-link-to-open-application-install-dialog)
-- [To go to a specific page of the app](#deep-link-to-browse-within-your-app)
-- [To go to a chat with your app](#deep-link-to-a-chat-with-the-application)
-- [To open a tab](#share-deep-link-for-a-tab)
+- [To browse within your app](#deep-link-to-browse-within-your-app)
+- [To go to a chat with the application](#deep-link-to-a-chat-with-the-application)
+- [Share deep link for a tab](#share-deep-link-for-a-tab)
 - [To open a task module](#deep-link-to-open-a-task-module)
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
@@ -89,13 +89,6 @@ You can configure deep links to browse within your app in one of the following t
 
 #### Configure deep link to browse within your app manually 
 
-While it's recommended to use [`shareDeepLink()`](#configure-deep-link-using-teamsjs-library-through-sharedeeplink) to share a deep link to your tab, it's also possible to create one manually.
-
-> [!NOTE]
->
-> * Personal tabs have a `personal` scope, while channel and group tabs use `team` or `group` scopes. The two tab types have a slightly different syntax since only the configurable tab has a `channel` property associated with its context object. For more information on tab scopes, see the [manifest](~/resources/schema/manifest-schema.md) reference.
-> * Deep links work properly only if the tab was configured using the v0.4 or later library as it has an entity ID. Deep links to tabs without entity IDs still go to the tab but can't provide the subentity ID to the tab.
-
 Use the following format for a deep link that you can use in a bot, connector, or message extension card:
 
 `https://teams.microsoft.com/l/entity/<appId>/<entityId>?tenantId=<tenantId>&webUrl=<entityWebUrl>&label=<entityLabel>&context=<context>`
@@ -116,6 +109,11 @@ The query parameters are:
 | `context.channelId`&emsp; | Microsoft Teams channel ID that is available from the tab [context](~/tabs/how-to/access-teams-context.md). This property is only available in configurable tabs with a scope of **team**. It isn't available in static tabs, which have a scope of **personal**.| 19:cbe3683f25094106b826c9cada3afbe0@thread.skype |
 | `context.chatId`&emsp; | Chat ID that is available from the tab [context](~/tabs/how-to/access-teams-context.md) for group and meeting chat. | 17:b42de192376346a7906a7dd5cb84b673@thread.v2 |
 | `context.contextType`&emsp; |  Chat is the only supported contextType for meetings. | chat |
+
+> [!NOTE]
+>
+> * Personal tabs have a `personal` scope, while channel and group tabs use `team` or `group` scopes. The two tab types have a slightly different syntax since only the configurable tab has a `channel` property associated with its context object. For more information on tab scopes, see the [manifest](~/resources/schema/manifest-schema.md) reference.
+> * Deep links work properly only if the tab was configured using the v0.4 or later library as it has an entity ID. Deep links to tabs without entity IDs still go to the tab but can't provide the subentity ID to the tab.
 
 **Examples**:
 
