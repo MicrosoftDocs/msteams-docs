@@ -9,9 +9,39 @@ ms.localizationpriority: high
 
 # Deep link to Teams chat
 
-You can navigate to or create private chats between users with the Microsoft Teams JavaScript client library (TeamsJS) by specifying the set of participants. If a chat doesn’t exist with the specified participants, the user is navigated to an empty new chat. New chats are created in draft state until the user sends the first message. Otherwise, you can specify the name of the chat if it doesn’t already exist, along with text that should be inserted into the user's compose box. You can think of this feature as a shortcut for the user taking the manual action of navigating to or creating the chat, and then typing out the message.
+You can create a deep link to a Teams chat, such as to start a new chat, browse to a channel conversation and to a file in a channel.
 
-As a use-case example, if you’re returning a Microsoft 365 user profile from your bot as a card, this deep link can allow the user to easily chat with that person. The following example demonstrates how to open a chat message to a group of participants with an initial message.
+## Deep link to start a new chat
+
+You can navigate to or create private chats between users with the Microsoft Teams JavaScript client library (TeamsJS) by specifying the set of participants. If a chat doesn’t exist with the specified participants, the user is navigated to an empty new chat.
+
+When a user creates a new chat using a deep link, Teams creates the new chat in the draft state until the user sends the first message. Otherwise, you can specify the name of the chat if it doesn’t already exist, along with text that should be inserted into the user's compose box. You can think of this as a shortcut for the user taking the manual action of navigating to or creating the chat, and then typing out the message.
+
+As a use-case example, if you’re retrieving a Microsoft 365 user profile information from your bot as a card, this deep link can allow the app user to easily chat with that person.
+
+You can configure deep links to start a new chat in one of the following two ways:
+
+[Configure deep link to start a chat manually](#configure-deep-link-to-start-a-chat-manually)
+[Configure deep link to start a chat using TeamsJS library](#configure-deep-link-to-start-a-chat-using-teamsjs-library)
+
+#### Configure deep link to start a chat manually
+
+While use of the typed APIs is recommended, you can alternatively use the following format for a manually created deep link that you can use in a bot, connector, or message extension card. To use this deep link with your bot, specify this as the URL target in your card's button or tap action through the `openUrl` action type.
+
+`https://teams.microsoft.com/l/chat/0/0?tenantId=<tenantId>&users=<user1>,<user2>,...&topicName=<chat name>&message=<precanned text>`
+
+The query parameters are:
+
+* `users`: A comma-separated list of user IDs representing the participants of the chat. The user that performs the action is always included as a participant. Currently, the User ID parameter supports the Microsoft Azure Active Directory (Azure AD) UserPrincipalName, such as an email address only.
+* `topicName`: An optional field for chat's display name if a chat has three or more users. If this field isn't specified, the chat's display name is based on the names of the participants.
+* `message`: An optional field for the message text that you want to insert into the current app user's compose box while the chat is in the draft state.
+
+Example: `https://teams.microsoft.com/l/chat/0/0?users=joe@contoso.com,bob@contoso.com&topicName=Prep%20For%20Meeting%20Tomorrow&message=Hi%20folks%2C%20kicking%20off%20a%20chat%20about%20our%20meeting%20tomorrow`
+
+
+#### Configure deep link to start a chat using TeamsJS library
+
+The following example demonstrates how to open a chat message to a group of participants with an initial message.
 
 ```javascript
 if(chat.isSupported()) {
@@ -23,27 +53,12 @@ if(chat.isSupported()) {
 else { /* handle case where capability isn't supported */ }
 ```
 
-While use of the typed APIs is recommended, you can alternatively use the following format for a manually created deep link that you can use in a bot, connector, or message extension card:
-
-`https://teams.microsoft.com/l/chat/0/0?users=<user1>,<user2>,...&topicName=<chat name>&message=<precanned text>`
-
-Example: `https://teams.microsoft.com/l/chat/0/0?users=joe@contoso.com,bob@contoso.com&topicName=Prep%20For%20Meeting%20Tomorrow&message=Hi%20folks%2C%20kicking%20off%20a%20chat%20about%20our%20meeting%20tomorrow`
-
-The query parameters are:
-
-* `users`: The comma-separated list of user IDs representing the participants of the chat. The user that performs the action is always included as a participant. Currently, the User ID field supports the Microsoft Azure Active Directory (Azure AD) UserPrincipalName, such as an email address only.
-* `topicName`: An optional field for chat's display name if a chat has three or more users. If this field isn't specified, the chat's display name is based on the names of the participants.
-* `message`: An optional field for the message text that you want to insert into the current user's compose box while the chat is in a draft state.
-
-To use this deep link with your bot, specify this as the URL target in your card's button or tap action through the `openUrl` action type.
 
 ## Deep links to navigate to channel conversation
 
-Use the following deep link format to go to a particular conversation within channel thread:
+You can use the following deep link format to go to a particular conversation within channel thread:
 
 `https://teams.microsoft.com/l/message/<channelId>/<parentMessageId>?tenantId=<tenantId>&groupId=<groupId>&parentMessageId=<parentMessageId>&teamName=<teamName>&channelName=<channelName>&createdTime=<createdTime>`
-
-Example: `https://teams.microsoft.com/l/message/<channelId>/1648741500652?tenantId=<tenantId>&groupId=<groupId>&parentMessageId=1648741500652&teamName=<teamName>&channelName=<channelName>&createdTime=1648741500652`
 
 The query parameters are:
 
@@ -57,11 +72,13 @@ The query parameters are:
 > [!NOTE]
 > You can see `channelId` and `groupId` in the URL from the channel.
 
+Example: `https://teams.microsoft.com/l/message/<channelId>/1648741500652?tenantId=<tenantId>&groupId=<groupId>&parentMessageId=1648741500652&teamName=<teamName>&channelName=<channelName>&createdTime=1648741500652`
+
 ## Deep links to navigate to chat messages
 
 Use the following deep link format to navigate a user to a message in a personal or group chat in Teams:
 
-`http://teams.microsoft.com/l/message/{chatId}/{messageId}?context={"contextType":"chat"}`
+`http://teams.microsoft.com/l/message/{chatId}/{messageId}?tenantId=<tenantId>&context={"contextType":"chat"}`
 
 Example: `http://teams.microsoft.com/l/message/19:253f5895-9a62-4362-8d38-43f0205c702c_f1b94dcf-0aa3-4989-bcdf-ef4a5ed00f86@unq.gbl.spaces/1563480968434?context=%7B%22contextType%22:%22chat%22%7D`
 
@@ -74,13 +91,13 @@ The query parameters are:
    > [!NOTE]
    > For one-on-one chats with bot, the incoming payload to bot contains the conversation ID in a:xxx format.
 
-* `messageId`: Each message in a chat has a unique ID. When a bot posts a message in chat, the `messageId` is returned. You can also get the `messageId` through [Microsoft Graph APIs](/graph/api/message-get?view=graph-rest-1.0&tabs=http&preserve-view=true). For example, `1563480968434`.
+* `messageId`: Unique message ID of each message in a chat. When a bot posts a message in chat, the `messageId` is returned. You can also get the `messageId` through [Microsoft Graph APIs](/graph/api/message-get?view=graph-rest-1.0&tabs=http&preserve-view=true). For example, `1563480968434`.
 
 * `context`: Specify the contextType as chat.
 
 ## Generate deep links to file in a channel
 
-The following deep link format can be used in a bot, connector, or message extension card:
+The following deep link format can be used in a bot, connector, or message extension card for configuring a deep link to connect to a file in a channel:
 
 `https://teams.microsoft.com/l/file/<fileId>?tenantId=<tenantId>&fileType=<fileType>&objectURL=<objectURL>&baseUrl=<baseURL>&serviceName=<Name>&threadId=<threadId>&groupId=<groupId>`
 
@@ -97,10 +114,6 @@ The query parameters are:
 
 > [!NOTE]
 > You can see `threadId` and `groupId` in the URL from the channel.  
-
-The following deep link format is used in a bot, connector, or message extension card:
-
-`https://teams.microsoft.com/l/file/<fileId>?tenantId=<tenantId>&fileType=<fileType>&objectURL=<objectURL>&baseUrl=<baseURL>&serviceName=<Name>&threadId=<threadId>&groupId=<groupId>`
 
 The following example format illustrates the deep link to files:
 
