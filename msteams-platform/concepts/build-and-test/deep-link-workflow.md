@@ -137,10 +137,10 @@ For deep links to share content to stage, see [deep link to share content to sta
 
 ## Deep link to join a meeting
 
-Application can read the URL for, joining a meeting URL through Graph APIs. This deep link brings up the UI for the user to join the meeting. For more information see, [Get `onlineMeeting`](/graph/api/onlinemeeting-get&tabs=http#response-1)
+Application can read the URL for, joining a meeting URL through Graph APIs. This deep link brings up the UI for the user to join the meeting. For more information see, [Get `onlineMeeting`](/graph/api/onlinemeeting-get#response-1)
 
 ## Invoke Stage View through deep link
 
-To invoke the Stage View through deep link from your tab, you must wrap the deep link URL in the app.openLink(url) API. The deep link can also be passed through an OpenURL action in the card. For more information see, [Stage View](~/tabs/tabs-link-unfurling.md#invoke-stage-view-through-deep-link)
+To invoke the Stage View through deep link from your tab, you must wrap the deep link URL in the `app.openLink(url)` API. The deep link can also be passed through an `OpenURL` action in the card. For more information see, [Stage View](~/tabs/tabs-link-unfurling.md#invoke-stage-view-through-deep-link).
 
 
