@@ -520,6 +520,7 @@ Use the following example to configure your app manifest's `webApplicationInfo` 
 > [!NOTE]
 >
 > * The bot can receive meeting start or end events automatically from all the meetings created in all the channels by adding `ChannelMeeting.ReadBasic.Group` to manifest for RSC permission.
+> * If the `ChannelMeeting.ReadBasic.Group` property is added to the manifest, the bot receives the meeting start or end events automatically from all the channel meetings created where the bot is a member.
 > * For a one-on-one call `organizer` is the initiator of the chat and for group calls `organizer` is the call initiator. For public channel meetings `organizer` is the person who created the channel post.
 
 ### Query parameter
@@ -785,6 +786,8 @@ The user can receive real-time meeting events. As soon as any app is associated 
 
 You must be familiar with the `TurnContext` object available through the Bot SDK. The `Activity` object in `TurnContext` contains the payload with the actual start and end time. Real-time meeting events require a registered bot ID from the Teams platform. The bot can automatically receive meeting start or end event by adding `ChannelMeeting.ReadBasic.Group` in the manifest.
 
+If the `ChannelMeeting.ReadBasic.Group` and `OnlineMeeting.ReadBasic.Chat` permissions are added in the manifest, the bot automatically starts receiving the meeting start or end events for the scheduled and channel meeting types.
+
 ### Prerequisite
 
 Your app manifest must have the `webApplicationInfo` property to receive the meeting start and end events. Use the following examples to configure your manifest:
@@ -841,7 +844,7 @@ Your app manifest must have the `webApplicationInfo` property to receive the mee
 
 </details>
 
-### Example of getting `MeetingStartEndEventvalue`
+### Example of getting `Meeting Start or End Events`
 
 The bot receives the meeting start and meeting end events through the `OnTeamsMeetingStartAsync` and `OnTeamsMeetingEndAsync` handlers. The information related to the meeting event is part of the `MeetingStartEventDetails` object, which includes the metadata fields such as, `meetingType`, `title`, `id`, `joinUrl`, `startTime`, and `EndTime`.
 
