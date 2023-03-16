@@ -122,6 +122,9 @@
     displayName: Customize your app, update app name, branding, hide and unhide app, accent 
 - name: Tools and SDKs
   items:
+  - name: Overview
+    href: concepts/build-and-test/tool-sdk-overview.md
+    displayName: Tools and SDKs
   - name: Teams Toolkit 
     items:
     - name: Teams Toolkit overview
