@@ -7,9 +7,9 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ---
 
-# Execution of deep links
+# Configuration and handling of deep links
 
-Applications can execute deep links from the following different contexts:
+You can configure your Teams app to execute deep links from the following different contexts:
 
 * Personal tab
 * Shared tab
@@ -46,31 +46,30 @@ microsoftTeams.executeDeepLink(/*deepLink*/);
 
 ---
 
-Applications can also use the SDK to execute certain scenarios without building a deep link themselves. Refer to each scenario for sample code.
-
 ## Chat message
 
-Applications can post messages to a chat and add deep links to them. The following are different ways an application can include a deep link in a message.
+You can configure your app to post messages to a chat and add deep links to them. The following are different ways you can include a deep link in a message:
 
 ### Hyperlink text message
 
-Applications can add a deep link as a hyperlink markdown. The deep link is executed within teams. Refer the following code sample::
+When you add a deep link to a hyperlinked markdown text message, it's triggered and opened within Teams. Following is an example:
 
-`[App](URL)`
+Example: `[App](https://teams.microsoft.com/l/app/{appId})`, where `appId` is your application ID. To know more about different app IDs used see, [app ID used for different apps](~/concepts/build-and-test/deep-link-application.md#app-id-used-for-different-apps).
 
-`[App](https://teams.microsoft.com/l/app/{appId})`
-
-For more information, see [use Markdown formatting in Teams](https://support.microsoft.com/en-us/office/use-markdown-formatting-in-teams-4d10bd65-55e2-4b2d-a1f3-2bebdcd2c772)
+For more information, see [use Markdown formatting in Teams](https://support.microsoft.com/en-us/office/use-markdown-formatting-in-teams-4d10bd65-55e2-4b2d-a1f3-2bebdcd2c772).
 
 ### Raw link text message
 
-Applications can include the raw link in a message. The deep link is executed within teams. Refer the code below:
+When you add a deep link to a raw text message, it's triggered and opened within Teams. Following is an example:
 
-`https://teams.microsoft.com/l/app/{appId}`
+Example: `https://teams.microsoft.com/l/app/{appId}`, where `appId` is your application ID. To know more about different app IDs used see, [app ID used for different apps](~/concepts/build-and-test/deep-link-application.md#app-id-used-for-different-apps).
 
-### Adaptive Card – Open URL action  
 
-Applications can include an `open URL` action in an Adaptive Card and add a deep link to it. The deep link is executed within Teams. Refer to the following sample Adaptive Card payload:
+### Adaptive Card
+
+You can include an `open URL` action in an Adaptive Card and add a deep link to it. The deep link is executed within Teams. As raw links or hyperlinks in an Adaptive Card open in the browser, it's recommended that you use `open URL` action. For more information, see [Action.OpenUrl](https://adaptivecards.io/explorer/Action.OpenUrl.html).
+
+Following is an example Adaptive Card payload:
 
 ```json
 
@@ -95,19 +94,12 @@ Applications can include an `open URL` action in an Adaptive Card and add a deep
 
 ```
 
-> [!NOTE]
-> Raw links or hyperlinks in an adaptive card body will navigate the user to the browser. We recommend using the `open URL` action.
+## Handle deep links
 
-For more information, see [Action.OpenUrl](https://adaptivecards.io/explorer/Action.OpenUrl.html).
-
-## Handling deep links
-
-When a deep link to an application tab is executed, applications should make sure they respect all the parameters set in that link on the tab context. Applications should read the tab context to identify the page, subpage, or label referred to in the deep link and should navigate to the specific section.
-
-`example`
+When a deep link to a tab app is triggered, ensure that all parameters are set in that link for the tab context. It allows the tab context to identify the page, subpage, or label configured in the deep link and open the specific section. For more information, see [Get context for your tab.](/tabs/how-to/access-teams-context.md)
 
 ## Consume a deep link from a tab
 
-When navigating to a deep link, Microsoft Teams navigates to the tab and provides a mechanism through the TeamsJS library to retrieve the subpage ID if it exists.
+When Teams navigates to the tab through a deep link, Teams verifies if the subpage ID exists and retrieves it through the TeamsJS library.
 
-If the tab is navigated through a deep link, the [`app.getContext()`](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-getcontext&preserve-view=true) call (`microsoftTeams.getContext()`) in TeamsJS v1 returns a promise that will resolve with the context that includes the `subPageId` property (subEntityId for TeamsJS v1). For more information, see [PageInfo interface](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-pageinfo&preserve-view=true).
+If the tab is navigated through a deep link, the [`app.getContext()`](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-getcontext&preserve-view=true) calls (`microsoftTeams.getContext()`) to verify if the subpage ID exists. In TeamsJS v1 library subpage ID is named as `subPageId` and in v2 it's `SubEntityId`. For more information, see [PageInfo interface](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-pageinfo&preserve-view=true).
