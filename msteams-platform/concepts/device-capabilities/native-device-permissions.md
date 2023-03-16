@@ -253,7 +253,7 @@ Device permissions are stored for every sign in session. It means that if you si
 ## Code sample
 
 | Sample name           | Description | Node.js    | Manifest
-|:---------------------|:--------------|:---------|:---------|
+|---------------------|--------------|---------|---------|
 |Device permissions | The sample shows how to use the device permissions using teams js sdk and browser api's. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs/demo-manifest/tab-device-permissions.zip)
 
 ## Next step
