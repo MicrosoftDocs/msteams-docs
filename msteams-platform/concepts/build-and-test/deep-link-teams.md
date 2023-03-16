@@ -21,8 +21,8 @@ As a use-case example, if you’re retrieving a Microsoft 365 user profile infor
 
 You can configure deep links to start a new chat in one of the following two ways:
 
-[Configure deep link to start a chat manually](#configure-deep-link-to-start-a-chat-manually)
-[Configure deep link to start a chat using TeamsJS library](#configure-deep-link-to-start-a-chat-using-teamsjs-library)
+* [Configure deep link to start a chat manually](#configure-deep-link-to-start-a-chat-manually)
+* [Configure deep link to start a chat using TeamsJS library](#configure-deep-link-to-start-a-chat-using-teamsjs-library)
 
 #### Configure deep link to start a chat manually
 
@@ -33,7 +33,7 @@ While use of the typed APIs is recommended, you can alternatively use the follow
 The query parameters are:
 
 * `users`: A comma-separated list of user IDs representing the participants of the chat. The user that performs the action is always included as a participant. Currently, the User ID parameter supports the Microsoft Azure Active Directory (Azure AD) UserPrincipalName, such as an email address only.
-* `topicName`: An optional field for chat's display name if a chat has three or more users. If this field isn't specified, the chat's display name is based on the names of the participants.
+* `topicName`: An optional parameter for chat's display name if a chat has three or more users. If this field isn't specified, the chat's display name is based on the names of the participants.
 * `message`: An optional field for the message text that you want to insert into the current app user's compose box while the chat is in the draft state.
 
 Example: `https://teams.microsoft.com/l/chat/0/0?users=joe@contoso.com,bob@contoso.com&topicName=Prep%20For%20Meeting%20Tomorrow&message=Hi%20folks%2C%20kicking%20off%20a%20chat%20about%20our%20meeting%20tomorrow`
@@ -41,7 +41,7 @@ Example: `https://teams.microsoft.com/l/chat/0/0?users=joe@contoso.com,bob@conto
 
 #### Configure deep link to start a chat using TeamsJS library
 
-The following example demonstrates how to open a chat message to a group of participants with an initial message.
+The following example demonstrates how to open a chat message to a group of participants with an initial message. You can target the deep link to an existing or a new chat. If a chat already exists deep link opens in that chat.
 
 ```javascript
 if(chat.isSupported()) {
@@ -52,7 +52,6 @@ if(chat.isSupported()) {
 }
 else { /* handle case where capability isn't supported */ }
 ```
-
 
 ## Deep links to navigate to channel conversation
 
@@ -80,20 +79,16 @@ Use the following deep link format to navigate a user to a message in a personal
 
 `http://teams.microsoft.com/l/message/{chatId}/{messageId}?tenantId=<tenantId>&context={"contextType":"chat"}`
 
-Example: `http://teams.microsoft.com/l/message/19:253f5895-9a62-4362-8d38-43f0205c702c_f1b94dcf-0aa3-4989-bcdf-ef4a5ed00f86@unq.gbl.spaces/1563480968434?context=%7B%22contextType%22:%22chat%22%7D`
-
 The query parameters are:
 
 * `chatId`: ChatID of the conversation. The supported format for `chatId` is 19:xxx. For example, `19:253f5895-9a62-4362-8d38-43f0205c702c_f1b94dcf-0aa3-4989-bcdf-ef4a5ed00f86@unq.gbl.spaces`.
-
    Apps can read a chat ID through app context in Teams, incoming payload to bot, or through [Microsoft Graph APIs](/graph/api/chat-get?view=graph-rest-1.0&tabs=http&preserve-view=true).
-
    > [!NOTE]
    > For one-on-one chats with bot, the incoming payload to bot contains the conversation ID in a:xxx format.
-
 * `messageId`: Unique message ID of each message in a chat. When a bot posts a message in chat, the `messageId` is returned. You can also get the `messageId` through [Microsoft Graph APIs](/graph/api/message-get?view=graph-rest-1.0&tabs=http&preserve-view=true). For example, `1563480968434`.
-
 * `context`: Specify the contextType as chat.
+
+Example: `http://teams.microsoft.com/l/message/19:253f5895-9a62-4362-8d38-43f0205c702c_f1b94dcf-0aa3-4989-bcdf-ef4a5ed00f86@unq.gbl.spaces/1563480968434?context=%7B%22contextType%22:%22chat%22%7D`
 
 ## Generate deep links to file in a channel
 
