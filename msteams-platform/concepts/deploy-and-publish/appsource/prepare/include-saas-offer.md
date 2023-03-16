@@ -159,19 +159,22 @@ Once published, users will see a **Buy a subscription** option in the app detail
 
 ## End-user purchasing experience
 
-The following example shows how users can purchase subscription plans for a fictional Teams app called *Recloud*.
+The following example shows how users can purchase subscription plans for a fictional Teams app called *Contoso Tasks for Teams*.
 
-1. In the Teams store, find and select the *Recloud* app.
+1. In the Teams store, find and select the *Contoso Tasks for Teams* app.
 
 1. In the app details dialog, select **Buy a subscription**.
 
-    :::image type="content" source="~/assets/images/saas-offer/buysubscriptionplan.png" alt-text="Buying the subscription for the selected app.":::
+    :::image type="content" source="~/assets/images/saas-offer/buysubscriptionplancontoso.png" alt-text="Buying the subscription for the selected app.":::
 
 1. Select your country to see subscription plans for your location.
 
-1. In the **Choose a subscription plan** dialog, choose the plan you want and select **Checkout**. (Note: Private plans are visible only to users in orgs you're providing the offer to. These plans are indicated with a **Special offer** :::image type="icon" source="~/assets/icons/special-icon.png"::: icon.)
+1. In the **Choose a subscription plan** dialog, choose the plan you want and select **Checkout**.
 
-    :::image type="content" source="~/assets/images/saas-offer/choosingsubscriptionplan.png" alt-text="Selecting the appropriate subscription plan.":::
+   > [!NOTE]
+   > Private plans are visible only to users in orgs you're providing the offer to. These plans are indicated with a **Special offer** :::image type="icon" source="~/assets/icons/special-icon.png"::: icon.
+
+   :::image type="content" source="~/assets/images/saas-offer/choosingsubscriptionplancontoso.png" alt-text="Selecting the appropriate subscription plan." lightbox="../../../../assets/images/saas-offer/choosingsubscriptionplancontoso.png":::
 
 1. In the **Checkout** dialog, provide any required information and select **Place order**.
 
@@ -182,8 +185,6 @@ The following example shows how users can purchase subscription plans for a fict
     :::image type="content" source="~/assets/images/saas-offer/saas-offer-set-up.png" alt-text="Setting up the subscription.":::
 
 1. Manage your subscription plan through the *Recloud* website (also known as a [landing page](#build-a-landing-page-for-subscription-management)).
-
-    :::image type="content" source="~/assets/images/saas-offer/subscriptionlicenses.png" alt-text="Configuring user licenses.":::
 
 ## Admin purchasing experience
 
