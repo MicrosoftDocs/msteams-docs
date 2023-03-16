@@ -177,7 +177,7 @@ See [install apps for users](/graph/api/userteamwork-post-installedapps) in the 
 
 ### Examples
 
-Ensure that you authenticate and have a [bearer token](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0&tabs=multitenant&preserve-view=true) before creating a new conversation using the REST API.
+Ensure that you authenticate and have a [bearer token](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0&tabs=multitenant&preserve-view=true) before creating a new conversation using the REST API. The following are REST API to create a conversation in different contexts:
 
 * [REST API to create a conversation in a one-on-one chat](../../../resources/bot-v3/bot-conversations/bots-conv-proactive.md#examples).
 * [REST API to create a conversation in a channel](../../../resources/bot-v3/bot-conversations/bots-conv-proactive.md#examples-for-creating-a-channel-conversation).
