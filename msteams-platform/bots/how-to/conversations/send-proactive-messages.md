@@ -179,30 +179,30 @@ See [install apps for users](/graph/api/userteamwork-post-installedapps) in the 
 
 Ensure that you authenticate and have a [bearer token](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0&tabs=multitenant&preserve-view=true) before creating a new conversation using the REST API.
 
-* [REST API to create a conversation in a one-on-one chat](../../../resources/bot-v3/bot-conversations/bots-conv-proactive.md#examples)
-* [REST API to create a conversation in a channel](../../../resources/bot-v3/bot-conversations/bots-conv-proactive.md#examples-for-creating-a-channel-conversation)
+* [REST API to create a conversation in a one-on-one chat](../../../resources/bot-v3/bot-conversations/bots-conv-proactive.md#examples).
+* [REST API to create a conversation in a channel](../../../resources/bot-v3/bot-conversations/bots-conv-proactive.md#examples-for-creating-a-channel-conversation).
 * REST API to Update message in conversation: To update an existing activity within a conversation, include the conversationId and activityId in the request endpoint. To complete this scenario, you must cache the activity ID returned by the original post call.
 
-```http
-PUT {Service URL of your bot}/v3/conversations/{conversationId}/activities/{activityId}
-```
+    ```http
+    PUT {Service URL of your bot}/v3/conversations/{conversationId}/activities/{activityId}
+    ```
 
-```json
+    ```json
+    
+    {
+        "type": "message",
+        "text": "This message has been updated"
+    }
+    ```
 
-{
-    "type": "message",
-    "text": "This message has been updated"
-}
-```
+    To update an existing activity within a conversation, include the `conversationId` and `activityId` in the request endpoint. To complete this scenario, you must cache the `activity ID` returned by the original post call.
+    If the call succeeds, the API returns with the following response object.
 
-To update an existing activity within a conversation, include the `conversationId` and `activityId` in the request endpoint. To complete this scenario, you must cache the `activity ID` returned by the original post call.
-If the call succeeds, the API returns with the following response object.
-
-```json
-{
-    "id": "{{activityID}}"
-}
-```
+    ```json
+    {
+        "id": "{{activityID}}"
+    }
+    ```
 
 ## Samples
 
