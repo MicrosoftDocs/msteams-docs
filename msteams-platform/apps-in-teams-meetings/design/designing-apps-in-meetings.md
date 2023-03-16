@@ -242,9 +242,9 @@ The shared meeting stage is all about collaboration and participation. Here are 
 |----------|-----------|
 |1|**App icon**: The highlighted icon indicates the app's in-meeting tab is open.|
 |2|**Share to meeting button**: The entry point to share the app to the meeting. Displays if you configure your app to use the shared meeting stage.|
-|3|**Presenter attribution**: Displays the name of the participant who shared the app.|
-|4|**iframe**: Displays your app content.|
-|5|**Stop sharing button**: Stops sharing the app to the meeting stage. Displays only for the participant who started the share.|
+|3|**iframe**: Displays your app content.|
+|4|**Stop sharing button**: Stops sharing the app to the meeting stage. Displays only for the participant who started the share.|
+|5|**Presenter attribution**: Displays the name of the participant who shared the app.|
 
 ### Anatomy: Share specific app content to a meeting
 
@@ -254,9 +254,9 @@ The shared meeting stage is all about collaboration and participation. Here are 
 |----------|-----------|
 |1|**App icon**: The highlighted icon indicates the app's in-meeting tab is open.|
 |2|**Share to meeting button**: The entry point to share the app to the meeting. For a consistent experience, always use the standard Teams share icon. **Share to meeting** is the recommended default text, but you can also customize it for your use cases. For example, **Play together** for a gaming app or **Watch together** for a video app. Either way, make it clear that the action will create a shared, interactive experience with everyone in the meeting.|
-|3|**Presenter attribution**: Displays the name of the participant who shared the app.|
-|4|**iframe**: Displays your app content.|
-|5|**Stop sharing button**: Stops sharing the app to the meeting stage. Displays only for the participant who started the share.|
+|3|**iframe**: Displays your app content.|
+|4|**Stop sharing button**: Stops sharing the app to the meeting stage. Displays only for the participant who started the share.|
+|5|**Presenter attribution**: Displays the name of the participant who shared the app.|
 
 ### Responsive behavior: Shared meeting stage
 
