@@ -179,104 +179,9 @@ See [install apps for users](/graph/api/userteamwork-post-installedapps) in the 
 
 Ensure that you authenticate and have a [bearer token](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0&tabs=multitenant&preserve-view=true) before creating a new conversation using the REST API.
 
-<br>
-<details>
-<summary><b>REST API to create a conversation in a one-on-one chat</b></summary>
-
-```http
-POST {Service URL of your bot}/v3/conversations
-```
-
-```json
-
-{
-   "bot": {
-        "id": "{{botID}}",
-        "name": "{{botName}}"
-    },
-  "members": [
-    {
-      "id": "{{memberID}}"
-    }
-  ],
-  "channelData": {
-    "tenant": {
-      "id": "{{tenantID}}"
-    }
-  }
-}
-
-```
-
-You can get the `{Service URL of your bot}` from `TurnContext` object like `turnContext.Activity.ServiceURL` parameter.
-
-Provide `id` as your bot app ID and `name` as your bot name. You can get the `members id` from your bots `TurnContext` object such as `turnContext.Activity.From.Id`. Similarly, `id` of tenant, from your bots `TurnContext` object such as `turnContext.Activity.ChannelData.Tenant.Id`.
-
-You must supply the user ID and the tenant ID. If the call succeeds, the API returns with the following response object.
-
-```json
-{
-  "id":"{{ personal chat's unique conversation ID}}"
-}
-```
-
-This ID is the personal chat's unique conversation ID. Store this value and reuse it for future interactions with the user.
-
-</details>
-
-<br>
-<details>
-<summary><b>REST API to create a conversation in a channel</b></summary>
-
-```http
-POST {Service URL of your bot}/v3/conversations
-```
-
-```json
-
-{
-    "activity": {
-        "type": "message",
-        "text": "new conversation"
-    },
-    "bot": {
-        "id": "{{botID}}",
-        "name": "{{botName}}"
-    },
-    "channelData":{
-      "teamsChannelId":"{{teamID}}",
-      "teamsTeamId":"{{teamID}}",
-      "channel":{"id":"{{teamID}}"},
-      "team":{"id":"{{teamID}}"},
-      "tenant":{"id": "{{tenantID}}"}
-    },
-    "isGroup": true,
-    "tenantId": "{{tenantID}}"
-}
-```
-
-You can get the `{Service URL of your bot}` from `TurnContext` object like `turnContext.Activity.ServiceURL` parameter.
-
-You can get the `channelData` from `TurnContext` object  like `turnContext.Activity.TeamsChannelData` parameter.
-Provide `id` as your bot app ID and `name` as your bot name. Similarly, `id` of tenant, from your bots `TurnContext` object such as `turnContext.Activity.ChannelData.Tenant.Id`.
-Similarly, you can provide the `teamID` for `teamsChannelId`, `teamsTeamId`, channel, team in `channelData` section which will send the message to general channel of team.
-
-If the call succeeds, the API returns with the following response object.
-
-```json
-{
-    "id": "{{conversationID}}",
-    "activityId": "{{activityID}}"
-}
-```
-
-</details>
-
-<br>
-<details>
-<summary><b>REST API to Update message in conversation</b></summary>
-
-To update an existing activity within a conversation, include the conversationId and activityId in the request endpoint. To complete this scenario, you must cache the activity ID returned by the original post call.
+* [REST API to create a conversation in a one-on-one chat](../../../resources/bot-v3/bot-conversations/bots-conv-proactive.md#examples)
+* [REST API to create a conversation in a channel](../../../resources/bot-v3/bot-conversations/bots-conv-proactive.md#examples-for-creating-a-channel-conversation)
+* REST API to Update message in conversation: To update an existing activity within a conversation, include the conversationId and activityId in the request endpoint. To complete this scenario, you must cache the activity ID returned by the original post call.
 
 ```http
 PUT {Service URL of your bot}/v3/conversations/{conversationId}/activities/{activityId}
@@ -298,8 +203,6 @@ If the call succeeds, the API returns with the following response object.
     "id": "{{activityID}}"
 }
 ```
-
-</details>
 
 ## Samples
 
