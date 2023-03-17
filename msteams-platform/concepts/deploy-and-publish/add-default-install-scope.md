@@ -58,6 +58,23 @@ To configure details in app manifest:
     }
     ```
 
+## Block apps by default for users until an admin approves
+
+To enhance Teams app experience, you can hide an app from users by default until admin allows to unhide the app. For example, Contoso Electronics has created a help desk app for Teams. To enable appropriate functioning of the app, Contoso Electronics’ wants the customers to first configure specific properties of the app. The app is hidden by default and is available to users only after the admin allows it.
+
+To block the app by default, in the app manifest file, set the `defaultBlockUntilAdminAction` property to `true`. When the property is set to `true`, the status of the app in Teams admin center is **Blocked by publisher** in the [Manage apps](https://admin.teams.microsoft.com/policies/manage-apps) page.
+
+:::image type="content" source="../../assets/images/manage-apps-status.png" alt-text="The screenshot is an example that shows an app blocked by publisher." lightbox="../../assets/images/manage-apps-status-expanded.png":::
+
+The admin gets a request to take action before a user can access the app. Under **Manage apps**, the admins can select **Allow** to allow the app with **Blocked by publisher** status:
+
+:::image type="content" source="../../assets/images/manage-apps-allow.png" alt-text="The screenshot is an example that shows the allow option for the app blocked by publisher." lightbox="../../assets/images/manage-apps-allow-expanded.png":::
+
+If by default, you don't want the app to be hidden, you can update the `defaultBlockUntilAdminAction` property to `false`. When the new version of the app is approved, by default the app will be allowed as long as the admin hasn't taken any explicit action.
+
+> [!NOTE]
+> For LOB apps, `defaultBlockUntilAdminAction` is not supported. The app is not blocked if you upload a LOB app with this property.
+
 ## Next step
 
 > [!div class="nextstepaction"]
