@@ -62,7 +62,6 @@ This section describes the tasks involved in implementing SSO for a Teams bot or
 1. **Configure app with Azure AD**: Create an Azure AD app to generate an app ID and application ID URI. For generating an access token, you configure scopes and authorize trusted client applications. The configuration required in Azure AD for enabling SSO in a bot and message extension apps is the same. Create a bot resource and configure it's client secret, messaging endpoint, and OAuth connection to enable SSO.
 1. **Add code**: Add the code to handle access token to send this token to your app's server code in the Authorization header, and to validate the access token when it's received. The code required to enable SSO in a bot app is different from code required for a message extension app.
 
-
     > [!NOTE]
     > This section allows you to select the app for which you want to add code for enabling SSO.
 
