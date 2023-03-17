@@ -14,11 +14,9 @@ It's recommended to start with [build your first bot app using JavaScript](../sb
 
 > [!IMPORTANT]
 >
-> * Bots are available in Government Community Cloud (GCC), GCC-High, and Department of Defense (DOD).
+> * Bots are available in [Government Community Cloud (GCC) and Department of Defense (DOD)](~/concepts/app-fundamentals-overview.md#government-community-cloud) environments. Bot applications within Microsoft Teams for GCC-High and DOD are available through [Azure bot Service](/azure/bot-service/how-to-deploy-gov-cloud-high) and bot channel registration must be done in Azure Government portal.
 >
-> * Bot applications within Microsoft Teams for GCC-High and DOD are available through [Azure bot Service](/azure/bot-service/how-to-deploy-gov-cloud-high) and bot channel registration must be done in Azure Government portal.
->
-> * Applications in GCCH only support up to manifest version v1.10. Image URLs in Adaptive Cards aren't supported in GCCH and DOD environments. You can replace an image URL with Base64 encoded DataUri.
+> * Applications in GCC-High only support up to manifest version v1.10. Image URLs in Adaptive Cards aren't supported in GCC-High and DOD environments. You can replace an image URL with Base64 encoded DataUri.
 
 Conversational bots allow users to interact with your web service using text, interactive cards, and task modules.
 

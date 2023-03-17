@@ -9,7 +9,7 @@ ms.topic: how-to
 
 > [!IMPORTANT]
 > * This article is based on the v4 Bot Framework SDK.
-> * Bots in Department of Defense (DOD) environment doesn't support send and receive files.
+> * Bots don't support sending and receiving files in the Department of Defense (DOD) environment.
 
 There are two ways to send files to and receive files from a bot:
 
