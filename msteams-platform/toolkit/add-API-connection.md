@@ -65,40 +65,40 @@ Add a connection to an existing third-party API using the following steps:
 
 # [Basic](#tab/basic)
 
-    For implementing basic authentication using username and password:
+For implementing basic authentication using username and password:
 
-    * Select **Basic**.
-    * Enter the username for basic Auth.
+* Select **Basic**.
+* Enter the username for basic Auth.
 
-      Teams Toolkit generates the sample code to call your API at bot\myAPI.js.
+Teams Toolkit generates the sample code to call your API at bot\myAPI.js.
 
 # [Certification](#tab/certification)
 
-    * Select **Certification** to authenticate requests using certificates.
+* Select **Certification** to authenticate requests using certificates.
 
-      Teams Toolkit generates the sample code to call your API at bot\myAPI.js.
+Teams Toolkit generates the sample code to call your API at bot\myAPI.js.
 
 # [Azure Active Directory (Azure AD)](#tab/AAD)
 
-    * Select **Azure Active Directory (Azure AD)** to authenticate requests using Azure AD access tokens.
+* Select **Azure Active Directory (Azure AD)** to authenticate requests using Azure AD access tokens.
 
-      Teams Toolkit generates the sample code to call your API at bot\myAPI.js.
+Teams Toolkit generates the sample code to call your API at bot\myAPI.js.
 
 # [API Key](#tab/apikey)
 
-    * Select **API Key** to implement authentication using an API key.
-    * Select the required API key position in request.
-    * Enter an API key name.
+* Select **API Key** to implement authentication using an API key.
+* Select the required API key position in request.
+* Enter an API key name.
 
-      Teams Toolkit generates the sample code to call your API at bot\myAPI.js.
+Teams Toolkit generates the sample code to call your API at bot\myAPI.js.
 
 # [Custom Auth Implementation](#tab/CustomAuthImplementation)
 
-    * Select **Custom Auth Implementation** to customize authentication according to your app requirement.
+* Select **Custom Auth Implementation** to customize authentication according to your app requirement.
 
-      Teams Toolkit generates the sample code to call your API at bot\myAPI.js.
+Teams Toolkit generates the sample code to call your API at bot\myAPI.js.
 
-    ---
+---
 
 You've successfully added a connection in your Teams app to an existing API.
 
