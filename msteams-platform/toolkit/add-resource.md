@@ -39,7 +39,9 @@ You can add cloud resources in the following ways:
 
       :::image type="content" source="../assets/images/teams-toolkit-v2/manual/cloud/Teams-add-features1_1.png" alt-text="Type add feature and enter":::
 
-   1. From the pop-up window that appears, select the **Cloud resources** to add to your project.
+      A list of cloud resources appears.
+
+   1. Select the **Cloud resources** to add to your project.
 
       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/updated-final-cloud_1.png" alt-text="final":::
 
@@ -63,7 +65,7 @@ In the following scenarios, TeamsFx integrates the Azure services with your Team
 
 * [Azure Functions](/azure/azure-functions/functions-overview): A serverless solution to meet your on-demand requirements, such as creating web APIs for your Teams app back-end.
 * [Azure SQL Database](/azure/azure-sql/database/sql-database-paas-overview): A platform as a service (PaaS) database engine to serve as your Teams app data store.
-* [Azure API Management](deploy.md): An API gateway can be used to administer APIs created for Teams apps and publish them so other apps can consume them such as Power app.
+* [Azure API Management](deploy.md): An API gateway can be used to administer APIs created for Teams apps and publish them so other apps can consume them, such as Power app.
 * [Azure Key Vault](/azure/key-vault/general/overview): Safeguard cryptographic keys and other secrets used by cloud apps and services.
 
 ## Changes after adding Azure resources
