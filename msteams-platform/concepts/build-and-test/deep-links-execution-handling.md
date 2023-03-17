@@ -91,7 +91,7 @@ Following is an example Adaptive Card payload:
 
 ## Handle deep links
 
-When a deep link to a tab app is triggered, ensure that all parameters are set in that link for the tab context. It allows the tab context to identify the page, subpage, or label configured in the deep link and open the specific section. For more information, see [Get context for your tab.](/tabs/how-to/access-teams-context.md)
+When a deep link to a tab app is triggered, ensure that all parameters are set in that link for the tab context. It allows the tab context to identify the page, subpage, or label configured in the deep link and open the specific section. For more information, see [Get context for your tab.](~/tabs/how-to/access-teams-context.md)
 
 ## Consume a deep link from a tab
 
