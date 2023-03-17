@@ -31,14 +31,14 @@ Use the following format for configuring a deep link that you can use in a bot, 
 
 The query parameters are:
 
-* `attendees`: An optional comma-separated list of user IDs representing the attendees of the meeting. The user performing the action is the meeting organizer. Currently, the user ID field supports only the Azure AD UserPrincipalName, typically an email address.
+* `attendees`: An optional comma-separated list of user IDs representing the attendees of the meeting. The user performing the action is the meeting organizer. The user ID field supports only the Azure AD `UserPrincipalName`, typically an email address.
 * `startTime`: The optional parameter for start time of the event. Start time should be in [long ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601), for example *2018-03-12T23:55:25+02:00*.
 * `endTime`: An optional parameter for end time of the event, also in ISO 8601 format.
 * `subject`: An optional parameter for the meeting subject.
 * `content`: An optional parameter for the meeting details field.
 
 > [!NOTE]
-> You can't specify the location as it isn't supported. You must specify the UTC offset. Which includes time zones, when generating the start and end times.
+> You can't specify the location as it isn't supported. You must specify the UTC offset, which includes time zones, when generating the start and end times.
 
 To use this deep link with your bot, you can specify the deep link as the URL target in your card's button or as a tap action through the `openUrl` action type.
 
@@ -46,7 +46,7 @@ Example: `https://teams.microsoft.com/l/meeting/new?subject=test%20subject&atten
 
 #### Configure deep link using TeamsJS library to open a meeting scheduling dialog
 
-You can also use TeamsJS library 2.0 in your Teams app to open the meeting scheduling dialog without having to manually prepare the link. Refer to the following code sample, in order to open the scheduling dialog in Teams, you need to continue using the original deep-link URL based method, since Teams doesn't support the calendar capability yet:
+You can also use TeamsJS library 2.0 in your Teams app to open the meeting scheduling dialog without having to manually prepare the link. In order to open the scheduling dialog in Teams, you must continue using the original deep-link URL based method, as Teams doesn't support the calendar capability yet:
 
 # [TeamsJS v2](#tab/teamsjs-v2)
 
@@ -79,12 +79,12 @@ For more information about working with the calendar, see [calendar](/javascript
 
 ## Deep link to start an audio-video call with users
 
-You can configure your Teams apps to prepare a deep link for users to start one-on-one call or a group audio or video call. You can invoke audio only or audio-video calls to a single user or a group of users by specifying the call type and the participants. Before placing the call, Teams client prompts a confirmation to make the call. If there's a group call, you can call a set of VoIP users and a set of PSTN users in the same deep link invocation.
+You can configure your Teams apps to prepare a deep link for users to start one-on-one call, a group call, or video call. You can invoke audio only or audio-video calls to a single user or a group of users by specifying the call type and the participants. Before placing the call, Teams client prompts for a confirmation to make the call. If there's a group call, you can call a set of VoIP users and a set of PSTN users in the same deep link invocation.
 
-In a video call, the Teams client asks for confirmation and turns on the caller's video for the call. The receiver of the call has a choice to respond through audio only or audio and video, through the Teams call notification window.
+In a video call, the Teams client asks for confirmation before turning on the caller's video for the call. The receiver of the call has a choice to respond through audio only or audio and video, through the Teams call notification window.
 
 > [!NOTE]
-> This method cannot be used for invoking a meeting.
+> This method can't be used for invoking a meeting.
 
 You can configure deep links in one of the following two ways:
 
@@ -137,7 +137,7 @@ For deep links to share content to stage, see [deep link to share content to sta
 
 ## Deep link to join a meeting
 
-Application can read the URL for, joining a meeting URL through Graph APIs. This deep link brings up the UI for the user to join the meeting. For more information see, [Get `onlineMeeting`](/graph/api/onlinemeeting-get#response-1)
+Teams app can read the URL for, joining a meeting URL through Graph APIs. This deep link brings up the UI for the user to join the meeting. For more information see, [Get `onlineMeeting`](/graph/api/onlinemeeting-get#response-1)
 
 ## Invoke Stage View through deep link
 

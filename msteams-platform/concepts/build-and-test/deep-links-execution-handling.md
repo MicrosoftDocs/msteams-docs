@@ -9,12 +9,7 @@ ms.localizationpriority: high
 
 # Configuration and handling of deep links
 
-You can configure your Teams app to execute deep links from the following different contexts:
-
-* Personal tab
-* Shared tab
-* Chat message
-* Bot
+You can configure your Teams app to execute deep links from different contexts such as personal tab, shared tab, chat message, and bot.
 
 ## Personal or Shared tab
 
@@ -67,7 +62,7 @@ Example: `https://teams.microsoft.com/l/app/{appId}`, where `appId` is your appl
 
 ### Adaptive Card
 
-You can include an `open URL` action in an Adaptive Card and add a deep link to it. The deep link is executed within Teams. As raw links or hyperlinks in an Adaptive Card open in the browser, it's recommended that you use `open URL` action. For more information, see [Action.OpenUrl](https://adaptivecards.io/explorer/Action.OpenUrl.html).
+You can include an `openURL` action in an Adaptive Card and add a deep link to it. The deep link is executed within Teams. As raw links or hyperlinks in an Adaptive Card open in the browser, it's recommended that you use `openURL` action. For more information, see [Action.OpenUrl](https://adaptivecards.io/explorer/Action.OpenUrl.html).
 
 Following is an example Adaptive Card payload:
 
@@ -102,4 +97,4 @@ When a deep link to a tab app is triggered, ensure that all parameters are set i
 
 When Teams navigates to the tab through a deep link, Teams verifies if the subpage ID exists and retrieves it through the TeamsJS library.
 
-If the tab is navigated through a deep link, the [`app.getContext()`](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-getcontext&preserve-view=true) calls (`microsoftTeams.getContext()`) to verify if the subpage ID exists. In TeamsJS v1 library subpage ID is named as `subPageId` and in v2 it's `SubEntityId`. For more information, see [PageInfo interface](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-pageinfo&preserve-view=true).
+If the tab is navigated through a deep link, the [`app.getContext()`](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-getcontext&preserve-view=true) calls `microsoftTeams.getContext()` to verify if the subpage ID exists. In TeamsJS v1 library subpage ID is named as `subPageId` and in v2 it's `SubEntityId`. For more information, see [PageInfo interface](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-pageinfo&preserve-view=true).
