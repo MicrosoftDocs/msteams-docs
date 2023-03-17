@@ -197,9 +197,13 @@ POST {Service URL of your bot}/v3/conversations
 
 You can get the `{Service URL of your bot}` from `TurnContext` object like `turnContext.Activity.ServiceURL` parameter.
 
-Provide `id` as your bot app ID and `name` as your bot name. You can get the `members id` from your bots `TurnContext` object such as `turnContext.Activity.From.Id`. Similarly, `id` of tenant, from your bots `TurnContext` object such as `turnContext.Activity.ChannelData.Tenant.Id`.
+You can get the `channelData` from `TurnContext` object  like `turnContext.Activity.TeamsChannelData` parameter.
 
-You must supply the user ID and the tenant ID. If the call succeeds, the API returns with the following response object.
+Provide `id` as your bot app ID and `name` as your bot name. Similarly, `id` of tenant, from your bots `TurnContext` object such as `turnContext.Activity.ChannelData.Tenant.Id`.
+
+Similarly, you can provide the `teamID` for `teamsChannelId`, `teamsTeamId`, `channel`, `team` in `channelData` section which sends the message to general channel of team.
+
+If the call succeeds, the API returns with the following response object:
 
 ```json
 {
