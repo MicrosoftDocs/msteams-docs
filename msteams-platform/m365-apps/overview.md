@@ -21,7 +21,10 @@ The Teams app platform continues to evolve and expand holistically into the Micr
 | link unfurling | `composeExtensions.messageHandlers` | Web, Desktop | Web (Targeted Release), Desktop (Beta Channel) | - | See [notes](extend-m365-teams-message-extension.md#link-unfurling) |
 | [**Office Add-ins**](/office/dev/add-ins/develop/json-manifest-overview) (preview) | `extensions` | - | Web, Desktop | - | Only available in [devPreview](../resources/schema/manifest-schema-dev-preview.md) manifest version. See [notes](#office-add-ins-preview).|
 
-\* The [Microsoft 365 Targeted release](/microsoft-365/admin/manage/release-options-in-office-365) option and [Microsoft 365 Apps update channel](/deployoffice/change-update-channels) enrollment require admin opt-in for the entire organization or selected users. For more information, see [Manage access to Teams apps across Microsoft 365](/microsoftteams/manage-third-party-teams-apps) Update channels are device specific and apply only to installations of Microsoft 365 running on Windows.
+> [!WARNING]
+> After an in-market app on the Teams platform is updated to a new manifest version, users enrolled for Microsoft 365 Targeted Release will lose access to the app. For more information, see [Manage access to Teams apps across Microsoft 365](/microsoftteams/manage-third-party-teams-apps).
+
+Enrollment to [Microsoft 365 Targeted Release](/microsoft-365/admin/manage/release-options-in-office-365) and [Microsoft 365 Apps update channel](/deployoffice/change-update-channels) requires admin opt-in for the entire organization or selected users. For more information, see [Manage access to Teams apps across Microsoft 365](/microsoftteams/manage-third-party-teams-apps). Update channels are device specific and apply only to installations of Microsoft 365 running on Windows.
 
 For guidance about the Teams app manifest and TeamsJS versioning guidance, and further details about current Teams platform capability support across Microsoft 365, see the [Teams JavaScript client library overview](../tabs/how-to/using-teams-client-library.md).
 
