@@ -11,8 +11,9 @@ ms.localizationpriority: high
 
 Application can open the profile dialog through deep links and help users to learn more about the application, permissions, and more. You can create a deep link for the app after the app is listed in the Teams store. To create a link to launch Teams, append the app ID to the URL, `https://teams.microsoft.com/l/app/<your-app-id>`. A dialog appears to install or open the app.
 
-> [!NOTE]
-> If your app is approved for mobile platform, you can deep link to an app on mobile. Apple App Store Connect Team ID is required additionally for the deep link to work on Teams-iOS. For more information, see [how to update Apple App Store Connect Team ID](../deploy-and-publish/appsource/prepare/update-apple-store-team-connect-id.md).
+If your app is approved for mobile platform, you can deep link to an app on mobile. Apple App Store Connect Team ID is required additionally for the deep link to work on Teams-iOS. For more information, see [how to update Apple App Store Connect Team ID](../deploy-and-publish/appsource/prepare/update-apple-store-team-connect-id.md).
+
+Deep link to an app isn't supported for custom apps.
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
@@ -22,7 +23,7 @@ You can open an app install dialog from your Teams app and also can install the 
 
 `https://teams.microsoft.com/l/app/<your-app-id>`, where `<your-app-id>` is the application ID(f46ad259-0fe5-4f12-872d-c737b174bcb4).
 
-Applications can use the Teams Java Script library (TeamsJS) to open the dialog without manually generating the deep link. Following is an example to open the app install dialog using TeamsJS:
+Applications can use the TeamsJS library to open the dialog without manually generating the deep link. Following is an example to open the app install dialog using TeamsJS:
 
 # [TeamsJS v2](#tab/teamsjs-v2)
 
@@ -145,7 +146,7 @@ While it's recommended to use `shareDeepLink()` to generate a deep link to your 
 > [!NOTE]
 >
 > * Personal tabs have a `personal` scope, while channel and group tabs use `team` or `group` scopes. The two tab types have a slightly different syntax since only the configurable tab has a `channel` property associated with its context object. For more information on tab scopes, see the [manifest](~/resources/schema/manifest-schema.md) reference.
-> * Deep links work properly only if the tab was configured using the v0.4 or later library as it has an entity ID. Deep links to tabs without entity IDs still go to the tab but cannot provide the subentity ID to the tab.
+> * Deep links work properly only if the tab was configured using the v0.4 or later library as it has an entity ID. Deep links to tabs without entity IDs still go to the tab but can't provide the subentity ID to the tab.
 
 Use the following format for a deep link that you can use in a bot, connector, or message extension card:
 
@@ -192,7 +193,7 @@ The query parameters are:
     >`https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456?context={"chatId": "17:b42de192376346a7906a7dd5cb84b673@thread.v2","contextType":"chat"}`
 
 > [!IMPORTANT]
-> Ensure that all the query parameters are properly URI encoded. You must follow the preceding examples using the last example:
+> Ensure that all the query parameters and the white spaces are properly URI encoded. You must follow the preceding examples using the last example:
 >
 > ```javascript
 > var encodedWebUrl = encodeURIComponent(JSON.stringify('https://tasklist.example.com/123/456&label=Task 456'));
@@ -206,7 +207,7 @@ You can navigate to content in Teams from your tab using TeamsJS or deep links. 
 
 One of the benefits of using TeamsJS, particularly for Teams app that might run in other hosts (Outlook and Office), is that it's possible to check if the host supports the capability you're attempting to use. To check a host's support of a capability, you can use the `isSupported()` function associated with the namespace of the API. The TeamsJS library organizes APIs into capabilities by way of namespaces. For example, prior to usage of an API in the `pages` namespace you can check the returned Boolean value from `pages.isSupported()` and take the appropriate action within the context of your app and apps UI.  
 
-For more information about capabilities and the APIs in TeamsJS, see [Building tabs and other hosted experiences with the Microsoft Teams JavaScript client library](~/tabs/how-to/using-teams-client-sdk.md#apis-organized-into-capabilities).
+For more information about capabilities and the APIs in the TeamsJS library, see [Building tabs and other hosted experiences with the TeamsJS library](~/tabs/how-to/using-teams-client-sdk.md#apis-organized-into-capabilities).
 
 ### Deep link for SharePoint Framework tabs
 

@@ -32,7 +32,7 @@ For more information, see [upload your app in Teams](apps-upload.md).
 
 Make your app available to people in your org. This kind of distribution requires your Teams admin's approval.
 
-For more information, see [manage your apps in the Teams admin center](/MicrosoftTeams/manage-apps?toc=%2Fmicrosoftteams%2Fplatform%2Ftoc.json&bc=%2FMicrosoftTeams%2Fbreadcrumb%2Ftoc.json).
+For more information, see [manage your apps in the Teams admin center](/microsoftteams/manage-apps?toc=%2Fmicrosoftteams%2Fplatform%2Ftoc.json&bc=%2FMicrosoftTeams%2Fbreadcrumb%2Ftoc.json).
 
 ### Government Community Cloud (GCC) organizations
 
@@ -57,3 +57,5 @@ For more information, see [publish to the Teams store](~/concepts/deploy-and-pub
 * [Microsoft 365 App Compliance Program](/microsoft-365-app-certification/overview)
 * [Create Teams app package](../build-and-test/apps-package.md)
 * [Publish to org](/microsoftteams/upload-custom-apps)
+* [Modify your app's registration in the Azure portal](/azure/active-directory/develop/howto-modify-supported-accounts)
+* [Growth lifecycle for your app](appsource/post-publish/app-growth/app-growth-lifecycle.md)

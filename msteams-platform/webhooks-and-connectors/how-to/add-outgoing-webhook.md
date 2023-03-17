@@ -122,19 +122,26 @@ Responses from your Outgoing Webhooks appear in the same reply chain as the orig
 
 ---
 
-> [!NOTE]
->
-> * You can send Adaptive Card, Hero card, and text messages as attachment with an Outgoing Webhook.
-> * Cards support formatting. For more information, see [format cards with Markdown](~/task-modules-and-cards/cards/cards-format.md?tabs=adaptive-md%2Cconnector-html#format-cards-with-markdown).
-> * Adaptive Card in Outgoing Webhooks only support `openURL` card actions.
+### Use Adaptive Cards with Outgoing Webhooks
+
+You can send Adaptive Card, Hero card, and text messages as attachment with an Outgoing Webhook.
+Cards support formatting. For more information, see [format cards with Markdown](~/task-modules-and-cards/cards/cards-format.md?tabs=adaptive-md%2Cconnector-html#format-cards-with-markdown).
+Adaptive Card in Outgoing Webhooks supports only `openURL` card actions.
 
 The following codes are examples of an Adaptive Card response:
 
 # [C#/.NET](#tab/dotnet)
 
+[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/outgoing-webhook/csharp/Controllers/SampleController.cs#L20)
+
 ```csharp
-string content = await this.Request.Content.ReadAsStringAsync();
-Activity incomingActivity = JsonConvert.DeserializeObject<Activity>(content);
+
+// This method is to read the request body content
+string content;
+using (var reader = new StreamReader(Request.Body))
+    {
+        content = await reader.ReadToEndAsync();
+    }
 
 var Card = new AdaptiveCard(new AdaptiveSchemaVersion("1.4"))
 {
@@ -161,6 +168,8 @@ return sampleResponseActivity;
 ```
 
 # [JavaScript/Node.js](#tab/javascript)
+
+[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/outgoing-webhook/nodejs/app.js#L30)
 
 ```javascript
 var receivedMsg = JSON.parse(payload);
@@ -243,5 +252,5 @@ Follow the [step-by-step guide](../../sbs-outgoing-webhooks.yml) to create Outgo
 * [Webhooks and connectors](../what-are-webhooks-and-connectors.md)
 * [Create and send messages](connectors-using.md)
 * [Create Incoming Webhooks](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
-* [Create Office 365 Connectors](~/webhooks-and-connectors/how-to/connectors-creating.md)
+* [Create connectors for Microsoft 365 Groups](~/webhooks-and-connectors/how-to/connectors-creating.md)
 * [Adaptive Cards](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)

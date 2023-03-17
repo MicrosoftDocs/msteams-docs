@@ -7,7 +7,7 @@ ms.localizationpriority: high
 
 # App manifest schema for Teams
 
-The Microsoft Teams app manifest describes how your app integrates into the Microsoft Teams product. Your app manifest must conform to the schema hosted at [`https://developer.microsoft.com/json-schemas/teams/v1.15/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.15/MicrosoftTeams.schema.json). Previous versions 1.0, 1.1,...,1.14, and the current version is 1.15 are each supported (using "v1.x" in the URL).
+The Microsoft Teams app manifest describes how your app integrates into the Microsoft Teams product. Your app manifest must conform to the schema hosted at [`https://developer.microsoft.com/json-schemas/teams/v1.16/MicrosoftTeams.schema.json`](https://developer.microsoft.com/json-schemas/teams/v1.16/MicrosoftTeams.schema.json). Previous versions 1.0, 1.1,...,1.15, and the current version is 1.16 are each supported (using "v1.x" in the URL).
 For more information on the changes made in each version, see [manifest change log](https://github.com/OfficeDev/microsoft-teams-app-schema/releases).
 
 The following table lists TeamsJS version and app manifest versions as per different app scenarios:
@@ -20,8 +20,8 @@ The following schema sample shows all extensibility options:
 
 ```json
 {
-    "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.15/MicrosoftTeams.schema.json",
-    "manifestVersion": "1.15",
+    "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.16/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.16",
     "version": "1.0.0",
     "id": "%MICROSOFT-APP-ID%",
     "localizationInfo": {
@@ -58,7 +58,7 @@ The following schema sample shows all extensibility options:
             "configurationUrl": "https://contoso.com/teamstab/configure",
             "scopes": [
                 "team",
-                "groupchat"
+                "groupChat"
             ],
             "canUpdateConfiguration": true,
             "context": [
@@ -98,7 +98,7 @@ The following schema sample shows all extensibility options:
             "scopes": [
                 "team",
                 "personal",
-                "groupchat"
+                "groupChat"
             ],
             "needsChannelSelector": false,
             "isNotificationOnly": false,
@@ -109,7 +109,7 @@ The following schema sample shows all extensibility options:
                 {
                     "scopes": [
                         "team",
-                        "groupchat"
+                        "groupChat"
                     ],
                     "commands": [
                         {
@@ -125,7 +125,7 @@ The following schema sample shows all extensibility options:
                 {
                     "scopes": [
                         "personal",
-                        "groupchat"
+                        "groupChat"
                     ],
                     "commands": [
                         {
@@ -290,7 +290,7 @@ The following schema sample shows all extensibility options:
     "defaultGroupCapability": {
         "meetings": "tab",
         "team": "bot",
-        "groupchat": "bot"
+        "groupChat": "bot"
     },
     "configurableProperties": [
         "name",
@@ -387,7 +387,7 @@ The name of your app experience, displayed to users in the Teams experience. For
 |Name| Maximum size | Required | Description|
 |---|---|---|---|
 |`short`|30 characters|✔️|The short display name for the app.|
-|`full`|100 characters||The full name of the app, used if the full app name exceeds 30 characters.|
+|`full`|100 characters|✔️|The full name of the app, used if the full app name exceeds 30 characters.|
 
 ## description
 
@@ -444,16 +444,17 @@ The value must be a valid HTML color code starting with '#', for example `#4464e
 
 **Optional**—array
 
-Used when your app experience has a team channel tab experience that requires extra configuration before it's added. Configurable tabs are supported only in the `team` and `groupchat` scopes and you can configure the same tabs multiple times. However, you can define it in the manifest only once.
+Used when your app experience has a team channel tab experience that requires extra configuration before it's added. Configurable tabs are supported only in the `team` and `groupChat` scopes and you can configure the same tabs multiple times. However, you can define it in the manifest only once.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`configurationUrl`|string|2048 characters|✔️|The https:// URL to use when configuring the tab.|
-|`scopes`|array of enums|1|✔️|Currently, configurable tabs support only the `team` and `groupchat` scopes. |
+|`scopes`|array of enums|2|✔️|Currently, configurable tabs support only the `team` and `groupChat` scopes. |
 |`canUpdateConfiguration`|Boolean|||A value indicating whether an instance of the tab's configuration can be updated by the user after creation. Default: **true**.|
-|`context` |array of enums|6||The set of `contextItem` scopes where a [tab is supported](../../tabs/how-to/access-teams-context.md). Default: **[channelTab, privateChatTab, meetingChatTab, meetingDetailsTab]**.|
+|`meetingSurfaces`|array of enums|2||The set of `meetingSurfaceItem` scopes where a [tab is supported](../../tabs/how-to/access-teams-context.md). Default: **[sidepanel, stage]**. |
+|`context` |array of enums|8||The set of `contextItem` scopes where a [tab is supported](../../tabs/how-to/access-teams-context.md). Default: **[personalTab, channelTab, privateChatTab, meetingChatTab, meetingDetailsTab, meetingStage, callingSidepanel]**.|
 |`sharePointPreviewImage`|string|2048||A relative file path to a tab preview image for use in SharePoint. Size 1024x768. |
-|`supportedSharePointHosts`|array of enums|1||Defines how your tab is made available in SharePoint. Options are `sharePointFullPage` and `sharePointWebPart` |
+|`supportedSharePointHosts`|array of enums|2||Defines how your tab is made available in SharePoint. Options are `sharePointFullPage` and `sharePointWebPart`. |
 
 ## staticTabs
 
@@ -466,12 +467,13 @@ This item is an array (maximum of 16 elements) with all elements of the type `ob
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`entityId`|string|64 characters|✔️|A unique identifier for the entity that the tab displays.|
-|`name`|string|128 characters|✔️|The display name of the tab in the channel interface.|
-|`contentUrl`|string||✔️|The https:// URL that points to the entity UI to be displayed in the Teams canvas.|
+|`name`|string|128 characters||The display name of the tab in the channel interface.|
+|`contentUrl`|string|||The https:// URL that points to the entity UI to be displayed in the Teams canvas.|
+|`contentBotId`|string|||The Microsoft app ID specified for the bot in the [Bot Framework portal](https://dev.botframework.com/bots).|
 |`websiteUrl`|string|||The https:// URL to point to if a user opts to view in a browser.|
 |`searchUrl`|string|||The https:// URL to point to for a user's search queries.|
-|`scopes`|array of enums|1|✔️|Currently, static tabs support only the `personal` scope, which means it can be provisioned only as part of the personal experience.|
-|`context` | array of enums| 2|| The set of `contextItem` scopes where a tab is supported.|
+|`scopes`|array of enums|3|✔️|Currently, static tabs support only the `personal` scope, which means it can be provisioned only as part of the personal experience.|
+|`context` | array of enums| 8|| The set of `contextItem` scopes where a [tab is supported](../../tabs/how-to/access-teams-context.md). Default: **[personalTab, channelTab, privateChatTab, meetingChatTab, meetingDetailsTab, meetingStage, meetingSidepanel, teamLevelApp]**.|
 
 > [!NOTE]
 > The searchUrl feature is not available for the third-party developers.
@@ -488,7 +490,7 @@ The item is an array (maximum of only one element&mdash;currently only one bot i
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`botId`|string|64 characters|✔️|The unique Microsoft app ID for the bot as registered with the Bot Framework. The ID can be the same as the overall [app ID](#id).|
-|`scopes`|array of enums|3|✔️|Specifies whether the bot offers an experience in the context of a channel in a `team`, in a group chat (`groupchat`), or an experience scoped to an individual user alone (`personal`). These options are non-exclusive.|
+|`scopes`|array of enums|3|✔️|Specifies whether the bot offers an experience in the context of a channel in a `team`, in a group chat (`groupChat`), or an experience scoped to an individual user alone (`personal`). These options are non-exclusive.|
 |`needsChannelSelector`|Boolean|||Describes whether or not the bot uses a user hint to add the bot to a specific channel. Default: **`false`**|
 |`isNotificationOnly`|Boolean|||Indicates whether a bot is a one-way, notification-only bot, as opposed to a conversational bot. Default: **`false`**|
 |`supportsFiles`|Boolean|||Indicates whether the bot supports the ability to upload/download files in personal chat. Default: **`false`**|
@@ -501,21 +503,21 @@ A list of commands that your bot can recommend to users. The object is an array 
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`items.scopes`|array of enums|3|✔️|Specifies the scope for which the command list is valid. Options are `team`, `personal`, and `groupchat`.|
+|`items.scopes`|array of enums|3|✔️|Specifies the scope for which the command list is valid. Options are `team`, `personal`, and `groupChat`.|
 |`items.commands`|array of objects|10|✔️|An array of commands the bot supports:<br>`title`: the bot command name (string, 32)<br>`description`: a simple description or example of the command syntax and its argument (string, 128).|
 
 ### bots.commandLists.commands
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|title|string|12|✔️|The bot command name.|
+|title|string|32|✔️|The bot command name.|
 |description|string|128 characters|✔️|A simple text description or an example of the command syntax and its arguments.|
 
 ## connectors
 
 **Optional**—array
 
-The `connectors` block defines an Office 365 Connector for the app.
+The `connectors` block defines a connector card for Microsoft 365 Groups for the app.
 
 The object is an array (maximum of one element) with all elements of type `object`. This block is required only for solutions that provide a Connector.
 
@@ -543,7 +545,7 @@ The item is an array (maximum of one element) with all elements of type `object`
 |`canUpdateConfiguration`|Boolean|||A value indicating whether the configuration of a message extension can be updated by the user. Default: **false**.|
 |`messageHandlers`|array of Objects|5||A list of handlers that allow apps to be invoked when certain conditions are met.|
 |`messageHandlers.type`|string|||The type of message handler. Must be `"link"`.|
-|`messageHandlers.value.domains`|array of Strings|||Array of domains that the link message handler can register for.|
+|`messageHandlers.value.domains`|array of Strings|2048 characters||Array of domains that the link message handler can register for.|
 |`messageHandlers.value.supportsAnonymizedPayloads`|Boolean||| A boolean value that indicates whether the app's link message handler supports anonymous invoke flow. Default is false.|
 
 ### composeExtensions.commands
@@ -739,7 +741,7 @@ Specifies the install scope defined for this app by default. The defined scope w
 
 * `personal`
 * `team`
-* `groupchat`
+* `groupChat`
 * `meetings`
 
 ## defaultGroupCapability
@@ -749,13 +751,13 @@ Specifies the install scope defined for this app by default. The defined scope w
 When a group install scope is selected, it will define the default capability when the user installs the app. Options are:
 
 * `team`
-* `groupchat`
+* `groupChat`
 * `meetings`
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`team`|string|||When the install scope selected is `team`, this field specifies the default capability available. Options: `tab`, `bot`, or `connector`.|
-|`groupchat`|string|||When the install scope selected is `groupchat`, this field specifies the default capability available. Options: `tab`, `bot`, or `connector`.|
+|`groupChat`|string|||When the install scope selected is `groupChat`, this field specifies the default capability available. Options: `tab`, `bot`, or `connector`.|
 |`meetings`|string|||When the install scope selected is `meetings`, this field specifies the default capability available. Options: `tab`, `bot`, or `connector`.|
 
 ## configurableProperties
@@ -824,6 +826,7 @@ Specify meeting extension definition. For more information, see [custom Together
 |---|---|---|---|---|
 |`scenes`|array of objects| 5 items||Meeting supported scenes.|
 |`supportsStreaming`|Boolean|||A value that indicates whether an app can stream the meeting's audio and video content to a real-time meeting protocol (RTMP) endpoint. The default value is **false**.|
+|`supportsAnonymousGuestUsers`|Boolean|||A value that indicates whether an app supports access for anonymous users. The default value is **false**.|
 
 ### meetingExtensionDefinition.scenes
 
@@ -889,6 +892,7 @@ Delegated permissions allow the app to access data on behalf of the signed-in us
     |`OnlineMeetingParticipant.ToggleIncomingAudio.Chat`|Allows the app to toggle incoming audio for participants in meetings associated with this chat, on behalf of the signed-in user.|
     |`LiveShareSession.ReadWrite.Chat`|Allows the app to create and synchronize Live Share sessions for meetings associated with this chat, and access related information about the meeting's roster, such as member's meeting role, on behalf of the signed-in user.|
    |`OnlineMeetingIncomingAudio.Detect.Chat`|Allows the app to detect changes in the status of incoming audio in meetings associated with this chat, on behalf of the signed-in user.|
+   |`OnlineMeetingNotification.Send.Chat`|Allows the app to send notifications for the meetings associated with the chat.|
 
 * **Resource-specific delegated permissions for users**
 

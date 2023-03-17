@@ -73,7 +73,7 @@ conceptualContent:
           text: Collect input and gather information with task modules
         - url: /training/modules/msteams-webhooks-connectors/
           itemType: learn
-          text: Connect web services to channels and teams with webhooks and Office 365 Connectors
+          text: Connect web services to channels and teams with webhooks and connectors for Microsoft 365 Groups
         - url: /microsoftteams/platform/m365-apps/overview
           itemType: overview
           text: Extend Teams apps across Microsoft 365
@@ -107,6 +107,9 @@ conceptualContent:
         - url: /microsoftteams/platform/apps-in-teams-meetings/video-filters-for-meeting-apps.md
           itemType: concept
           text: Video filters for meeting apps
+        - url: concepts/deploy-and-publish/appsource/post-publish/app-growth/overview-app-growth.md
+          itemType: reference
+          text: Plan your app growth in Teams
         - url: concepts/design/overview-analytics.md
           itemType: reference
           text: Plan analytics for Teams apps
@@ -215,7 +218,7 @@ tools:
       imageSrc: ./assets/icons/graph-icon-1.png
       url: https://learn.microsoft.com/graph/sdks/sdks-overview
     # Card
-    - title: TeamsJS client library for tabs and other hosted experiences
+    - title: Microsoft Teams JavaScript client library (TeamsJS) for tabs and other hosted experiences
       # imageSrc should be square in ratio with no whitespace
       imageSrc: ./assets/icons/logo_js.png
       url: /microsoftteams/platform/tabs/how-to/using-teams-client-library
