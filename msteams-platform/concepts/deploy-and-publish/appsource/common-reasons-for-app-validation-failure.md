@@ -280,7 +280,7 @@ You must include the localized language files in your app package if your app su
 
    :::image type="content" source="../../../assets/images/submission/validation-common-reason-failed-app-localization-manifest.png" alt-text="Screenshot of failed app that supports localization manifest.":::
 
-[Back to top](prepare/teams-store-validation-guidelines.md#microsoft-teams-store-validation-guidelines)
+[Back to top](#common-reasons-for-app-validation-failure)
 
 ## Provider or developer name mismatch
 
