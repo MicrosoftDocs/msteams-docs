@@ -168,8 +168,10 @@ You can call Graph APIs to determine if the currently logged in user with a vali
 1. Call UsageRights API to determine the user has License to the plan [List user usageRights - Microsoft Graph beta | Microsoft Docs](/graph/api/user-list-usagerights?view=graph-rest-beta&tabs=http&preserve-view=true).
 
    > [!NOTE]
-   > You need to have minimum `User.Read` permissions to call UsageRights.
+   >
+   > * You need to have minimum `User.Read` permissions to call UsageRights.
    > The UsageRights API is currently in beta version. After the version is updated to V1, ISV users should upgrade from beta to V1 version.
+   > *
 
 ### Check license usage in Partner Center analytics
 
