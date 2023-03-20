@@ -1,6 +1,6 @@
 ---
 title: User Specific Views
-description: Learn about User Specific Views using Universal Actions with Code Sample 
+description: In this module, learn about User Specific Views using Universal Actions with Code Sample and adaptiveCard/action invoke response card
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
@@ -8,10 +8,12 @@ ms.localizationpriority: medium
 
 # User Specific Views
 
-Earlier if Adaptive Cards were sent in a Teams conversation, all users see the exact same card content. With the introduction of the Universal Actions model and `refresh` for Adaptive Cards, bot developers can now provide User Specific Views of Adaptive Cards to users. The same Adaptive Card can now refresh to a User Specific Adaptive Card. Maximum 60 different users can see a different version of the card with additional information or actions. The Adaptive Card provides powerful scenarios like approvals, poll creator controls, ticketing, incident management, and project management cards.
+Earlier if Adaptive Cards were sent in a Teams conversation, all users would see the exact same card content. With the introduction of the Universal Actions model and `refresh` for Adaptive Cards, bot developers can now provide User Specific Views of Adaptive Cards to users. The same Adaptive Card can now refresh to a User Specific Adaptive Card. The Adaptive Card provides powerful scenarios like approvals, poll creator controls, ticketing, incident management, and project management cards.
 
 > [!NOTE]
-> User Specific View is supported for Adaptive Cards sent by a bot and is dependent on Universal Actions.
+>
+> * User Specific View is supported for Adaptive Cards sent by a bot and is dependent on Universal Actions.
+> * Maximum 60 different users can see a different version of the card with additional information or actions.
 
 For example, Megan, a safety inspector at Contoso, wants to create an incident and assign it to Alex. Megan also wants everyone in the team to be aware about the incident. Megan uses Contoso incident reporting message extension powered by Universal Actions for Adaptive Cards.
 
@@ -213,22 +215,37 @@ const cardRes = {
 
 ***
 
-Card design guidelines to keep in mind while designing User Specific Views:
+The following list provides card design guidelines for User Specific Views:
 
-* You can create a maximum of **60 User Specific Views** for a particular card sent to a chat or channel by specifying their `userIds` in the `refresh` section.
-* **Base Card:** The base version of the card that the bot developer sends to the chat. The base version is the version of the Adaptive Card for all users who are not specified in the `userIds` section.
-* A message update can be used to update the base card and simultaneously refresh the User Specific Card. Opening the chat or channel also refreshes the card for users with refresh enabled.
-* For scenarios with larger groups where users switch to a view on action, which needs dynamic updates for responders, you can keep adding up to 60 users to the `userIds` list. You can remove the first responder from the list when the 61st user responds. For the users who get removed from the `userIds` list, you can provide a manual refresh button or use the refresh button in the message options menu to get the latest result.
-* Give a prompt to users to get a User Specific View, where they see only a particular view of the card or some actions.
+* Refresh behavior: You can create a maximum of 60 User Specific Views for a particular card sent to a conversation by specifying their `userIds` in the `Refresh` property.
+
+  * If the `userIds` field isn't specified in the `Refresh` property, Teams client can automatically trigger refresh for all users when there are less than or equal to 60 members in the conversation.
+
+  * For users to manually trigger card refresh, they can select **Refresh** from the message options menu. This happens to all users when there are fewer than 60 members in a conversation, or to the set of users not specified in the `userIds` list when there are all or fewer than 60 users in a conversation.
+
+* Base card: The bot sends the message, which embeds with the base version of the card. All members of the conversation can view the same. The bot later fetches the User Specific Card through refresh for the users specified in the `userIds` section.
+
+* Refresh timeout: Teams client triggers a refresh in two ways, either through **Refresh** or by selecting **Execute**. The refresh triggers only if the card from the last invoke is older than a minute. You can control the refresh behavior by adding a timestamp to the data bag and checking it before sending the refreshed card.
+
+* A message update can be used to update the base card and simultaneously refresh the User Specific Card. Opening the chat or channel also refreshes the card for users with **Refresh** enabled.
+
+* For scenarios with larger groups where users switch to a view on action, which needs dynamic updates for responders, you can keep adding up to 60 users to the `userIds` list. You can remove the first responder from the list when the 61st user responds. For the users who get removed from the `userIds` list, you can provide a manual **Refresh** to get the latest result.
+
+* Give prompt to the users to get a User Specific View, where they see only a particular view of the card or some actions.
+
+> [!NOTE]
+> The User Specific Card returned by the bot is sent only to the specific client that requested for it. For example, if a user switches to a different client, such as from desktop to mobile, then another invoke event is triggered to fetch the refreshed card.
 
 ## Code sample
 
-|Sample name | Description | .NETCore | Node.js |
+|Sample name | Description | .NET | Node.js |
 |----------------|-----------------|--------------|--------------|
 | Sequential Workflows Adaptive Cards | Demonstrate how to implement Sequential Workflows, User Specific Views, and up to date Adaptive Cards in bots. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) |
 
 ## See also
 
-* [Work with Universal Actions for Adaptive Cards](Work-with-universal-actions-for-adaptive-cards.md)
-* [Up to date views](Up-To-Date-Views.md)
-* [Form completion feedback](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)
+* [Cards and task modules](../../cards-and-task-modules.md)
+* [Work with Universal Actions for Adaptive Cards](Work-with-Universal-Actions-for-Adaptive-Cards.md)
+* [Up to date cards](Up-To-Date-Views.md)
+* [Cards](../../what-are-cards.md)
+* [Form completion feedback](../../../bots/how-to/conversations/conversation-messages.md#form-completion-feedback)

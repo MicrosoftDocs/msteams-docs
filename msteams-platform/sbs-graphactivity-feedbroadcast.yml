@@ -1,0 +1,485 @@
+### YamlMime:Tutorial
+title: Send activity feed notification
+metadata:
+  title: Send activity feed notification
+  description: In this tutorial, you'll learn to broadcast a message to all members of organization using activity feed notification.
+  audience: Developer
+  level: Beginner
+  ms.date: 04/08/2022 
+  ms.topic: interactive-tutorial
+  nextTutorialHref: concepts/design/activity-feed-notifications.md
+  nextTutorialTitle: Read more on activity feed notifications
+  ms.custom: mvc
+  ms.localizationpriority: high
+items:
+- durationInMinutes: 1
+  content: |
+    The Microsoft Teams activity feed helps users to assess items that require attention by notifying changes. You can apply by using the activity feed notification APIs in Microsoft Graph to extend the functionality to your app.
+    
+
+    **Key features of activity feed broadcast**
+
+    * Provides enhanced experience.
+    * Keeps users up to date.
+    * Broadcasts message for all the members.
+    * Displays activity feed notification.
+    * Broadcasts details available for members.
+
+    This step-by-step guide helps you to broadcast messages and notify all the members of an organization using activity feed notification. You'll see the following output:
+
+      :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/output-ready1.png" alt-text="Output of feed broad cast" border="true":::
+
+      :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/notification-recipient1.png" alt-text="Final output" border="true"::: 
+
+- title: Prerequisites
+  durationInMinutes: 1
+  content: |
+    Ensure you install the following tools and set up your development environment:  
+
+     | &nbsp; | Install | For using... |
+     | --- | --- | --- |
+     | **Required** | &nbsp; | &nbsp; |
+     | &nbsp; | [Visual Studio 2022 version 17.3](https://visualstudio.microsoft.com)<br> Install one of the following two workloads:<br> • **ASP.NET and web development** <br> • **.NET Core cross-platform development** | You can install the enterprise version in Visual Studio 2022, and install the workloads. |
+     | &nbsp; | [.NET Core SDK version 3.1](https://dotnet.microsoft.com/en-us/download) | Customized bindings for local debugging and Azure Functions app deployments. If you haven't installed the .NET 3.1 (or later) SDK globally, the portable version to be installed. |
+     | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots, message extensions, and incoming webhooks) require inbound connections. A tunnel connects your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
+
+      > [!NOTE]
+      > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
+
+    Ensure you have the following accounts and set up your development environment:
+    
+    * [Microsoft](https://teams.microsoft.com/) account.
+    * The Teams app must be installed for the recipient, either personally, or in a team or chat.
+    * The Tenant ID for sending and receiving notifications must match.
+ 
+    ## Set up your Teams development tenant
+
+    A **tenant** is like a space or a container where you chat, share files, and run meetings for your organization in Teams. You can also sideload and test the app.
+
+    ### Check for sideloading option
+
+    After creating the app, you must load your app in Teams without distributing it. The function is known as sideloading. Sign in to your Microsoft 365 account to view this option.
+
+    > [!NOTE]
+    > Sideloading is necessary for previewing and testing apps in Teams local environment. Enable Sideloading to preview and test your app in Teams locally.
+
+    Do you already have a tenant, and do you have the admin access? Let's check if you really do!
+
+    To verify sideload apps in Teams:
+
+    1. Go to **Microsoft Teams**.
+    1. Select **Apps** > **Manage your apps**.
+    1. Select **Upload an app**.
+
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/upload-app.png" alt-text=" upload an app in Teams.":::
+
+    1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
+
+        :::image type="content" source="~/assets/images/upload-a-custom-app.png" alt-text="Screenshot showing the selection of Upload a custom app highlighted in red.":::
+
+        > [!NOTE]
+        > Contact Teams administrator, if you can't upload a custom app.
+
+    ### Create a free Teams developer tenant (optional)
+
+    If you don't have a Teams developer account, you can get it free. Join the Microsoft 365 developer program!
+
+    1. Go to the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
+    1. Select **Join Now** and follow the onscreen instructions.
+    1. Select **Set-up E5 subscription** from the welcome screen.
+    1. Set up administrator account. After you finish, the following screen displays.
+
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/microsoft-365.png" alt-text="Microsoft" border="true":::
+
+    1. Sign in to Teams using the new administrator account. Now you can select **Upload a custom app**.
+
+- title: Set up local environment
+  durationInMinutes: 1 
+  content: | 
+
+    1. Open [Microsoft Teams Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples).
+    1. Select **Code**.
+    1. From the dropdown menu, select **Open with GitHub Desktop**.
+
+        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/clone-repository-sbs-graph1.png" alt-text="Clone repository" border="true":::
+
+    1. Select **Clone**. 
+
+- title: Register your Teams Auth SSO with Azure AD
+  durationInMinutes: 1
+  content: |
+    The following steps help you to create and register Teams authentication SSO in Azure portal:
+
+    * Create and register a new application under App registrations
+    * Use ngrok to create a tunnel to your web server's endpoints
+      
+    **To create and register new application**
+
+    1. Go to the [Azure portal](https://portal.azure.com/). The system prompts you to sign in with your Microsoft account credentials
+    1. Select **Azure Active Directory**.
+     
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/select-azure-active.png" alt-text="New registration" border="true":::
+
+    1. In the left navigation panel, select **App Registrations**.
+
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/select-app-registration.png" alt-text="New registration" border="true":::
+
+    1. Select **New registration**.
+
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/new-app-registration2.png" alt-text="New registration" border="true":::
+
+       Register an application page appears.
+
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/register.png" alt-text="New registration" border="true":::
+
+    1. Enter the following details to register an application.
+
+       1.  Set **Name** to your app name
+       1.  Set **Supported account types** to any account type
+       1.  Leave the **Redirect URI** empty
+    
+    1. Select **Register**.
+
+       App **Overview** page appears.
+
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/app-id2.png" alt-text="New registration" border="true":::
+
+       > [!Important]
+       > Save the **Application (client) ID** and **Directory (tenant) ID** for future reference.
+       
+    **To create tunnel for local web server**
+
+      Use ngrok or Command Prompt to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
+
+     ```bash
+     ngrok http --host-header=localhost 3978
+     ```
+     
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/ngrok2.png" alt-text="New registration" border="true":::
+
+    > [!TIP]
+    > If you encounter **ERR_NGROK_4018**, follow the steps provided in the Command Prompt to sign up and authenticate ngrok. Then run the `ngrok http --host-header=localhost 3978` command.
+
+- title: Update the Azure AD app registration
+  durationInMinutes: 1
+  content: |
+    1. In the left navigation panel, select **Expose an API**.
+
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/select-exposeanapi.png" alt-text="Expose an API" border="true":::
+
+    1. Select **Set**.
+
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/expose-an-api1.png" alt-text="Expose and api" border="true":::
+
+    1. Set the **Application ID URI** in the form of `api://{AppID}`.
+
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/setlink.png" alt-text="Set a link" border="true":::
+
+    1. Insert the `WebAppDomain` value between `api://` and `/{AppID}`.</br>
+        `api:// your ngrok/{AppID}`</br>
+        
+       The following image shows the domain name:
+        
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/savelink.png" alt-text="Save a link" border="true":::
+
+        > [!NOTE]
+        > If you're using a tunneling service such as ngrok, ensure you update the value whenever your ngrok subdomain changes.
+        > `For example: api://f631****.ngrok.io/c4e88a5d-e3d4-47f4-accb-0ef9de3bce8a`, where `f631****.ngrok.io` is the new ngrok subdomain name.
+
+    1. Select **Add a scope**. 
+
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/addascope.png" alt-text="Add scope" border="true":::
+
+       Add a scope page appears.
+
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/add-scope.png" alt-text="Add scope" border="true":::
+
+    1. Enter the details for configuring scope.
+     
+        1. Enter `access_as_user` as the **Scope name**.
+
+          > [!NOTE]
+          > The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.</br>
+           `api://bff2****.ngrok.io/00000000-0000-0000-0000-000000000000/access_as_user`.
+
+        1. Set **Who can consent** to `Admins and users`.
+        1. To configure the admin and user consent prompts with appropriate values for `access_as_user` scope, provide the following information in the fields:</br>
+    
+            * Enter `Teams can access the user’s profile` as **Admin consent display name**
+
+            * Enter `Allows Teams to call the app’s web APIs as the current user` as **Admin consent description**
+
+            * Enter `Teams can access the user profile and make requests on the user’s behalf` as **User consent display name**
+
+            * Enter `Enable Teams to call this app’s APIs with the same rights as the user` as **User consent description**
+  
+        1. Ensure that **State** is set to **Enabled**.
+
+        1. Select **Add scope** to save.
+
+       Your application ID URI is created with scope name.
+
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/accessasuser.png" alt-text="Access as user" border="true":::
+
+    1. In the **Authorized client applications** section, identify the applications that you want to authorize for your app’s web application. 
+    
+    1. Select **Add a client application**. 
+
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/add-a-client.png" alt-text="Add client" border="true":::
+
+       Add a client application panel appears.
+
+    1. Enter the Client ID for desktop and web application separately that you want to authorize. It's the application ID of client application that you want to authorize.
+       
+       | **Client ID** | **For authorizing** |
+       |--------|-------------|
+       | `1fec8e78-bce4-4aaf-ab1b-5451cc387264` | Teams desktop or mobile application |
+       | `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` | Teams web application |
+
+    1. Select **Authorized scopes** to determine, which type of token return the service.
+
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/add-desktop-app.png" alt-text="Authroized scope" border="true":::
+
+       The following image displays the Client ID:
+
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/clientapplications.png" alt-text="Client application" border="true":::
+
+    1. In the left panel, select **API Permissions**. 
+
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/select-api-permission.png" alt-text="Client application" border="true":::
+
+       > [!NOTE]
+       > Users need to consent to these permissions only if the Azure AD app is registered in a different tenant.
+
+    1. Select **Add a permission**.
+
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/configured-permission1.png" alt-text="Add a permission" border="true":::
+
+       Request API permission page appears.
+
+    1. Select **Microsoft Graph**.
+
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/selectmicrosoftgraph.png" alt-text="Select Microsoft graph" border="true":::
+
+    1. Select **Delegated permissions**.
+
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/select-graph-permissions.png" alt-text="Select graph permission" border="true":::
+
+    1. Add the following permissions:</br>
+         * **Directory.Read.All**
+         * **Directory.ReadWrite.All**
+         * **TeamsActivity.Send**
+         * **TeamsAppInstallation.ReadForUser**
+         * **TeamsAppInstallation.ReadWriteForUser**
+         * **User.Read**
+          
+       > [!NOTE]
+       > User. Read is enabled by default.
+
+    1. Select **Add permissions**.
+
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/requestpermissions.png" alt-text="Request permission" border="true":::
+
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/requestpermissions3.png" alt-text="Request permission" border="true":::
+
+   
+    1. Select **Add a permission**.
+
+    1. Select **Microsoft Graph**.
+ 
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/selectmicrosoftgraph.png" alt-text="Select Microsoft graph" border="true":::
+
+    1. Select **Application permissions**.
+
+        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/select-graph-permissions1.png" alt-text="Select Microsoft graph" border="true":::
+
+    1. Add the following permissions:</br> 
+
+         * **Directory.Read.All**
+         * **TeamsActivity.Send** 
+         * **TeamsAppInstallation.ReadForUser.All**
+
+    1. Select **Add permissions**. 
+
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/request-application-permission.png" alt-text="Request permission" border="true":::
+
+    1. Ensure to grant the admin consent for the required permissions.
+
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/admin-consent.png" alt-text="Add platform" border="true":::
+
+    1. From the left panel, select **Authentication** to set a redirect URI. 
+
+        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/select-authentication.png" alt-text="Select Authentication" border="true":::
+
+       > [!NOTE]
+       > If an app isn't granted IT admin consent, users must provide consent the first time they use an app.
+               
+         1. Select **Add a platform**.
+
+         1. For this tutorial, select **Web**.
+
+             :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/add-a-platform.png" alt-text="Add platform" border="true":::
+
+         1. Enter the redirect URI for your app by appending `Auth/end` to fully qualified domain name:</br> 
+           `https://ngrok.io/Auth/end`. </br>
+
+         1. Enable **Implicit grant and hybrid flows** by selecting the following checkboxes:
+             * **ID tokens**
+             * **Access tokens**
+   
+         1. Select **Configure**.
+
+             :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/configure-web-details.png" alt-text="Configure web" border="true":::
+
+         1. Select **Add URI** and enter `https://ngrok.io/Auth/Start`. 
+
+         1. Select **Save**.
+
+             :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/add-uri.png" alt-text="Redirect uri" border="true":::
+
+    **To create client secret**
+
+    1. In the left panel, select **Certificates & secrets**. 
+
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/select-certificate.png" alt-text="Select Certificate" border="true":::
+
+    1. In the **Client secrets** section, select **New client secret**. 
+
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/client-secret.png" alt-text="Client secret" border="true":::
+    
+       The **Add a client secret** window appears.  
+
+    1. Enter a value in **Description**.
+
+    1. Select **Add**.
+
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/secret-save.png" alt-text="Secret id" border="true":::
+
+    1. In the **Value** column, select **Copy to clipboard**.
+
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/client-secret-code.png" alt-text="Client secret code" border="true":::
+       
+       > [!Important]
+       > Save the **Client secrets** value or app password for future reference.
+
+
+- title: Set up app settings and manifest files
+  durationInMinutes: 1
+  content: |
+    1. Go to **appsettings.json** in cloned repository.
+
+          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/appsettings-location.png" alt-text="App settings location" border="true":::
+
+    1. Open **appsettings.json** in the latest version of Visual Studio and update the following information:  
+
+         * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
+         * Set `"TenantID"` to **Directory (tenant) ID**.
+         * Set `"MicrosoftAppPassword"` to your bot's client secret ID value.
+         * Set `"BaseUrl"` to the `[WebAppDomainName]`.
+      
+          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/app-settings-details1.png" alt-text="Appsettings" border="true":::
+
+    1. Go to **manifest.json** in cloned repository.
+
+          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/manifest-location-package.png" alt-text="Manifest location" border="true":::
+
+    1. Open **manifest.json** in the latest version of Visual Studio and make the following changes:
+
+         * Replace all occurrences of `<<Microsoft-App-ID>>` with your bot's **Microsoft App ID**.
+         * Replace all occurrences of `<<Base_URL>>` with your fully qualified domain name.
+         * Set `validDomains` to `[WebAppDomainName]`.
+
+          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/manifest-file.png" alt-text="Manifest file" border="true":::
+
+- title: Build and run the service
+  durationInMinutes: 1
+  content: |
+       1. Open Visual Studio.
+       1. Go to **File** > **Open** > **Project/Solution**.
+    
+          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/VSopenfile.png" alt-text="Open file in Visual Studio" border="true":::
+
+       1. Select **ActivityFeedBroadcast.sln** file from **csharp** folder.
+
+       1. Select **Open**.
+
+          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/open-project.png" alt-text="Open a project" border="true":::
+
+       1. Press **F5** to run the project.
+    
+       1. Select **Yes** if the following dialog appears:
+
+          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/graphactivity-generator-certificate.png" alt-text="Select certificate" border="true":::
+
+          A webpage opens with a message **. Your bot is ready!**
+
+          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/app-is-ready.png" alt-text="App is ready" border="true":::
+
+- title: Add activity feed broadcast app to Teams
+  durationInMinutes: 1
+  content: |      
+    1. In your cloned repository, go to  **graph-activity-feed-broadcast** > **csharp** > **ActivityFeedBroadcast** > **AppPackage**.
+
+    1. Create a .zip with the following files that are present in the **AppPackage** folder: 
+       * manifest.json
+       * icon-outline.png
+       * icon-color.png
+
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/selectzip.png" alt-text="Select zip file" border="true":::
+    
+    1. Go to **Microsoft Teams**.
+
+    1. Select **Apps** > **Manage your apps**.
+
+       :::image type="content" source="~/assets/images/Teams-task-module/manage-apps_3.png" alt-text="Manage apps":::
+    
+    1. Select **Submit an app to your org**. 
+
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/submit-an-app-to-your-org.png" alt-text="Screenshot showing the selection of submit an app to your org highlighted in red.":::
+       
+    1. Select **Open** to upload the .zip file that you created in the **AppPackage** folder.
+
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/open-a-custom-app.png" alt-text="Open a custom app" border="true":::
+
+    1. Select **Add**.
+
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/add-an-app.png" alt-text="Add app" border="true":::
+   
+          The app is visible in the meeting SidePanel.
+
+- title: Interact with the app in Teams
+  durationInMinutes: 1
+  content: |
+
+    Let's interact with the app in Teams!
+
+    1. The **BroadcastTab** displays **Message title** and **Message description**.
+            
+    1. Enter the message title and description, and then select **Send message**. 
+
+       The Message broadcasted successfully appears.
+
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/output-ready1.png" alt-text="Final output" border="true":::
+
+    1. Activity feed notification displays in the **Activity** tab of the recipient with the same Tenant ID.  
+
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/activity-feed.png" alt-text="Final output" border="true":::
+
+    1. The message details appear on selecting the message.  
+
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/message-members.png" alt-text="Final output" border="true":::
+     
+- title: Complete challenge
+  durationInMinutes: 1
+  content: |
+    Did you come up with something like this?
+
+    :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/output-ready1.png" alt-text="Final output" border="true"::: 
+
+    :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/notification-recipient1.png" alt-text="Final output" border="true"::: 
+
+- content: |
+    You've completed the tutorial to get started with the **activity feed broadcast** app!
+    
+
+

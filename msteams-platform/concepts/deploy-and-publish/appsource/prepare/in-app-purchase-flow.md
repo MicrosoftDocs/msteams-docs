@@ -9,13 +9,13 @@ ms.localizationpriority: high
 
 # In-app purchases
 
-Microsoft Teams provide APIs that you can use to implement the in-app purchases to upgrade from free to paid Teams apps. In-app purchase allows you to convert users from free to paid plans directly from within your app.
+Microsoft Teams provides APIs that you can use to implement the in-app purchases to upgrade from free to paid Teams apps. In-app purchase allows you to convert users from free to paid plans directly from within your app.
 
 ## Implement in-app purchases
 
 To offer an in-app purchase experience to the users of your app, ensure the following:
 
-* App is built on [Teams client SDK library](https://github.com/OfficeDev/microsoft-teams-library-js).
+* App is built with [Microsoft Teams JavaScript client library (TeamsJS)](https://github.com/OfficeDev/microsoft-teams-library-js).
 
 * App is enabled with a transactable [SaaS offer](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md).
 
@@ -47,32 +47,54 @@ To enable in-app purchase experience, update your Teams app `manifest.json` file
 
 To trigger in-app purchase for the app, invoke the `openPurchaseExperience` API from your web app.
 
-Following is an example of calling the API from the app:
+Following code snippet is an example of calling the API from the Teams app built using Microsoft Teams JavaScript client library:
+
+# [TeamsJS v1](#tab/jsonV11)
 
 ```json
-<body> 
 <div> 
-<div class="sectionTitle">openPurchaseExperience</div> 
-<button onclick="openPurchaseExperience()">openPurchaseExperience</button> 
-</div> 
-</body> 
-<script> 
-   function openPurchaseExperience() {
+<div class="sectionTitle">openPurchaseExperience</div>
+<button onclick="openPurchaseExperience()">openPurchaseExperience</button>
+</div>
+</body>
+<script>
+   function openPurchaseExperience()
       microsoftTeams.initialize();
       let callbackcalled = false;
       microsoftTeams.monetization.openPurchaseExperience((e) => {
-      console.log("callback is being called");
-      callbackcalled = true;  
-      if (!!e && typeof e !== "string") {
-            e = JSON.stringify(e);
-            alert(e);
-        }
-        return;
-      });
+            console.log("callback is being called");
+            console.log(e);
+            if (!!e && typeof e !== "string") {
+                  alert(JSON.stringify(e));
+              }
+              return;
+            });
       console.log("after callback: ",callbackcalled);
-    } 
-</script> 
+    }
+</script>
 ```
+
+# [TeamsJS V2](#tab/jsonV2)
+
+```json
+<div>
+<div class="sectionTitle">openPurchaseExperience</div>
+<button onclick="openPurchaseExperience()">openPurchaseExperience</button>
+</div>
+</body>
+<script>
+    function openPurchaseExperience() {
+      micorosftTeams.app.initialize();
+      var planInfo = {
+          planId: "<Plan id>", // Plan Id of the published SAAS Offer
+          term: "<Plan Term>" // Term of the plan.
+      }
+      monetization.openPurchaseExperience(planInfo);
+    }
+</script>
+```
+
+---
 
 ## End-user in-app purchasing experience
 
@@ -82,21 +104,21 @@ The following example shows the users to purchase subscription plans for a ficti
 
 1. In the app details dialog, select **Buy a subscription** or **Add for me**.
 
-    :::image type="content" source="~/assets/images/saas-offer/buysubscriptionplancontoso.png" alt-text="Buying the subscription for the selected app." border="true":::
+    :::image type="content" source="~/assets/images/saas-offer/buysubscriptionplancontoso.png" alt-text="Buying the subscription for the selected app.":::
 
 1. **Add for me** offers a free trial version of the app and later **Upgrade** it to a paid version.
 
-    :::image type="content" source="~/assets/images/saas-offer/upgradeapp.png" alt-text="Upgrading to the subscription for the selected app." lightbox="../../../../assets/images/saas-offer/upgradeapp.png" border="true":::
+    :::image type="content" source="~/assets/images/saas-offer/upgradeapp.png" alt-text="Upgrading to the subscription for the selected app." lightbox="../../../../assets/images/saas-offer/upgradeapp.png":::
 
 1. In the **Choose a subscription plan** dialog, choose the plan and select **Checkout**.
 
-    :::image type="content" source="~/assets/images/saas-offer/choosingsubscriptionplancontoso.png" alt-text="Selecting the appropriate subscription plan." lightbox="../../../../assets/images/saas-offer/choosingsubscriptionplancontoso.png" border="true":::
+    :::image type="content" source="~/assets/images/saas-offer/choosingsubscriptionplancontoso.png" alt-text="Selecting the appropriate subscription plan." lightbox="../../../../assets/images/saas-offer/choosingsubscriptionplancontoso.png":::
 
 1. Complete the transaction and select **Configure now** to set up your subscription.
 
-    :::image type="content" source="~/assets/images/saas-offer/saas-offer-configure-now.png" alt-text="Setting up the subscription." lightbox="../../../../assets/images/saas-offer/saas-offer-configure-now.png" border="true":::
+    :::image type="content" source="~/assets/images/saas-offer/saas-offer-configure-now.png" alt-text="Setting up the subscription." lightbox="../../../../assets/images/saas-offer/saas-offer-configure-now.png":::
 
-    :::image type="content" source="~/assets/images/saas-offer/getstarted.png" alt-text="Landing page of the subscription." lightbox="../../../../assets/images/saas-offer/getstarted.png" border="true":::
+    :::image type="content" source="~/assets/images/saas-offer/getstarted.png" alt-text="Landing page of the subscription." lightbox="../../../../assets/images/saas-offer/getstarted.png":::
 
 ## Next step
 
@@ -105,5 +127,5 @@ The following example shows the users to purchase subscription plans for a ficti
 
 ## See also
 
-* [Include a SaaS offer with your Microsoft Teams app](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)
-* [Create a Software as a Service (SaaS) offer](include-saas-offer.md#create-your-saas-offer)
+* [Monetize your app](monetize-overview.md)
+* [App Manifest](../../../../resources/schema/manifest-schema-dev-preview.md)

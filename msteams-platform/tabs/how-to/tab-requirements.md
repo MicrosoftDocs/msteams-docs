@@ -1,9 +1,8 @@
 ---
 title: Prerequisites
 author: surbhigupta
-description: Every tab in Microsoft Teams must adhere to these requirements.
-keywords: teams tabs group channel configurable
-ms.localizationpriority: medium
+description: In this article, learn the prerequisites to build Microsoft Teams personal, channel, or group tab. Know the tools required to build your tab.
+ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
 ---
@@ -26,23 +25,25 @@ Ensure that you adhere to the following prerequisites while building your Teams 
 
 * Style your tabs based on the Teams client's theme, design, and intent. Tabs work best when they're built to address a specific need and focus on a small set of tasks or a subset of data that is relevant to the tab's channel location.
 
-* Within your content page, add a reference to [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client) using script tags. After your page loads, make a call to `microsoftTeams.initialize()`, otherwise your page is not displayed.
+* Within your content page, add a reference to [Microsoft Teams JavaScript client library](/javascript/api/overview/msteams-client) using script tags. After your page loads, make a call to `app.initialize()`, otherwise your page won't be displayed.
 
-* For authentication to work on mobile clients, you must upgrade to Teams JavaScript SDK 1.4.1 and later.
+* For authentication to work on mobile clients, you must upgrade to TeamsJS version 1.4.1 or later.
 
-* If you choose to have your channel or group tab to appear on Teams mobile client, the `setSettings()` configuration must have a value for the `websiteUrl` property.
+* If you choose to have your channel or group tab to appear on Teams mobile client, the `setConfig()` configuration must have a value for the `websiteUrl` property.
 
-* Microsoft Teams tab does'nt support the ability to load intranet websites that use self-signed certificates.
+* Microsoft Teams tab doesn't support the ability to load intranet websites that use self-signed certificates.
+
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 ## Tools to build tabs
 
 | &nbsp; | Install | For using... |
 | --- | --- | --- |
 | **Required** | &nbsp; | &nbsp; |
-| &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. Use the latest v14 LTS release.|
+| &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. Use the latest v16 LTS release.|
 | &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
 | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. |
-| &nbsp; | [Visual Studio 2019](https://visualstudio.com/download), **ASP.NET and web development**, or **.NET Core cross-platform development** workload | .NET. You can install the free community edition of Visual Studio 2019. |
+| &nbsp; | [Visual Studio 2022](https://visualstudio.microsoft.com), **ASP.NET and web development**, or **.NET Core cross-platform development** workload | .NET. You can install the free community edition of Visual Studio 2022. |
 | &nbsp; | [Git](https://git-scm.com/downloads) | Git to use the sample apps repo from GitHub. |
 | &nbsp; | [Microsoft Teams](https://www.microsoft.com/en-us/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call - all in one place. |
 | &nbsp; | [ngrok](https://ngrok.com/download) | Ngrok is a reverse proxy software tool. Ngrok creates a tunnel to your locally running web server's publicly available HTTPS endpoints. Your server's web endpoints are available during the current session on your computer. When the computer is shut down or goes to sleep, the service is no longer available. |
@@ -59,5 +60,7 @@ Now let's build your tab. But first select your choice of tab to build:
 
 ## See also
 
-* [Teams tabs](~/tabs/what-are-tabs.md)
+* [Build tabs for Teams](../what-are-tabs.md)
+* [Build your first tab app using JavaScript](../../sbs-gs-javascript.yml)
+* [Register your tab app in Azure AD](authentication/tab-sso-register-aad.md)
 * [Tabs on mobile](~/tabs/design/tabs-mobile.md)

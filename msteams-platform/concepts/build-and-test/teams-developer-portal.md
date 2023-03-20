@@ -1,81 +1,93 @@
 ---
-title: Manage your apps with the Developer Portal
-description: Learn how to configure, distribute, and manage your apps using the Developer Portal for Microsoft Teams.
-keywords: getting started developer portal teams
+title: Developer Portal for Teams
+description: In this article, learn how to create a brand new app and import an existing app in Teams Developer Portal. Also, learn about the Changelog for Developer Portal.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
 ---
 
-# Manage your apps with the Developer Portal for Microsoft Teams
+# Developer Portal for Teams
 
-The <a href="https://dev.teams.microsoft.com" target="_blank">Developer Portal for Teams</a> is the primary tool for configuring, distributing, and managing your Microsoft Teams apps. With the Developer Portal, you can collaborate with colleagues on your app, set up runtime environments, and much more.
+<a href="https://dev.teams.microsoft.com" target="_blank">Developer Portal for Teams</a> is the primary tool for configuring, distributing, and managing your Microsoft Teams apps. With Developer Portal, you can collaborate with colleagues on your app, set up runtime environments, and much more.
 
-:::image type="content" source="../../assets/images/tdp/tdp_home_1.png" alt-text="Screenshot showing the home page of the Developer Portal for Teams.":::
+:::image type="content" source="../../assets/images/tdp/tdp-home.png" alt-text="Screenshot shows the home page of Developer Portal for Teams." lightbox="../../assets/images/tdp/tdp-home.png":::
 
 > [!NOTE]
 >
-> * Currently, Developer Portal is not available for Government Community Cloud (GCC), GCC-High, or Department of Defense (DOD) tenants.
-> * However, you can use a regular tenant to build an app in the Developer Portal, download the app, and upload the app using [Microsoft Graph](/graph/api/teamsapp-publish?view=graph-rest-1.0&tabs=http&preserve-view=true) to a national cloud. For more information, see [National cloud deployments](/graph/deployments).
+> * Developer Portal isn't available for Government Community Cloud (GCC)-High or Department of Defense (DOD) tenants.
+> * However, you can use a regular tenant to build an app in Developer Portal, download the app, and upload the app using [Microsoft Graph](/graph/api/teamsapp-publish?view=graph-rest-1.0&tabs=http&preserve-view=true) to a national cloud. For more information, see [National cloud deployments](/graph/deployments).
 
 ## Register an app
 
-The Developer Portal provides a couple ways to register a Teams app:
+Developer Portal provides the following ways to register a Teams app:
 
-* Register a brand new app
-* Import an existing app package
+* [Create and register a brand new app](#create-and-register-a-brand-new-app).
+* [Import an existing app package](#import-an-existing-app).
 
-> [!NOTE]
-> If you create an app using the [Microsoft Teams Toolkit for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension), you can manage that app in the Developer Portal.
+### Create and register a brand new app
 
-## Set up an environment
+Developer Portal allows you to create a brand new app:
 
-You can configure environments and global variables to help transition your app from your local runtime to production. Global variables are used across all environments.
+1. Sign in to [Developer Portal](https://dev.teams.microsoft.com) and select **Apps** from the left pane.
 
-To set up an environment:
+   :::image type="content" source="../../assets/images/tdp/home-page.png" alt-text="Screenshot shows the home page of Developer Portal for Teams with the Apps option highlighted in red." lightbox="../../assets/images/tdp/home-page.png":::
 
-1. In the Developer Portal, select the app you're working on.
-2. Go to the **Environments** page and select **+ Add an environment**.
-3. Select **+ Add a variable** to create configuration variables for your environment.
+1. Select **+ New app**.
 
-To use variables:
+   :::image type="content" source="../../assets/images/tdp/enter-app-name-tdp.png" alt-text="Screenshot shows how to create a brand new app in Developer Portal for Teams." lightbox="../../assets/images/tdp/create-new-app-in-tdp.png":::
 
-Use the variable names instead of hard-coded values to set your app configurations.
+1. Enter app name and select **Add**.
 
-1. Enter `{{` in any field in the Developer Portal. A dropdown with all the variables you've created for the chosen environment along with the global variables appears.  
-1. Before downloading your app package (for example, when getting ready to publish to the Teams store), select the environment you want to use. Your app configurations update automatically based on the environment.
+   :::image type="content" source="../../assets/images/tdp/enter-app-name-tdp.png" alt-text="The screenshot shows how to create a brand new app in Developer Portal for Teams." lightbox="../../assets/images/tdp/enter-app-name-tdp.png":::
 
-## Identify app owners
+Now you've successfully created a brand new app and you can see all the basic information of the new app.
 
-Each app includes an **Owners** page, where you can share your app registration with colleagues in your org. The **Contributor** role has the same permissions as the **Owner** role except the ability to delete an app.
+:::image type="content" source="../../assets/images/tdp/basic-information-app-tdp.png" alt-text="Screenshot shows the basic information of the app you created in Developer Portal for Teams." lightbox="../../assets/images/tdp/basic-information-app-tdp.png":::
 
-## Configure your app's capabilities and other important metadata
+### Import an existing app
 
-A Teams app is a web app. Like all web apps, its source code is typically developed in an IDE or code editor and hosted somewhere in the cloud (like Azure).
+Follow the steps to import and manage your existing app in Developer Portal:
 
-To install and render your app in Teams, you must include a set of configurations that Teams recognizes. This has traditionally been done by crafting an app manifest, a JSON file that contains all the metadata Teams needs to display your app content. The Developer Portal abstracts this process and includes new features and tooling to help you be more successful.
+1. In Developer Portal, select **Apps** from the left pane.
+1. Select **Import app**.
 
-## Test your app directly in Teams
+   :::image type="content" source="../../assets/images/tdp/import-app.png" alt-text="Screenshot shows how to import your existing app in Developer Portal for Teams to manage your apps." lightbox="../../assets/images/tdp/import-app.png":::
 
-The Developer Portal provides options for testing and debugging your app:
+1. Select the app manifest file, and then select **Open**.
 
-* On the **Overview** page, you can see a snapshot of whether your app's configurations validate against Teams store test cases.
-* The **Preview in Teams** button lets you launch your app quickly in the Teams client for debugging.
+   > [!NOTE]
+   > You can receive an error message such as **Provided add-in package was not understood. Ensure that the file being submitted is a valid Office add-in package**, if there are nested folders or missing files in the app package folder.
 
-## Distribute your app
+1. Select **Import**.
 
-From the Developer Portal, use the **Distribute** button to download an app package, publish to your org, or publish to the Teams store.
+   * Developer Portal creates a unique app ID and locks the ID for your registered Teams app. You can’t edit or provide an ID of your choice, which prevents to have duplicate app IDs for multiple apps.
+   * If you create an app using the Microsoft Teams Toolkit for Visual Studio Code, you can manage your app in Developer Portal.
+   * You can import an existing app which you created on App Studio to Developer Portal. To import an already published app to Developer Portal, the [app owner](~/concepts/build-and-test/manage-your-apps-in-developer-portal.md#advanced) needs to raise a service request through [admin portal](https://admin.microsoft.com/Adminportal/Home?#/support) to transfer the ownership over the app ID.
 
-For more information, see [distribute your Teams app](~/concepts/deploy-and-publish/apps-publish-overview.md).
+## Changelog for Developer Portal
 
-## Use tools to create app features
+Changelog for Developer Portal allows you to stay engaged with the latest updates in Teams. You can view the updates about features, recent changes in APIs, and important bug fixes.
 
-The Developer Portal also includes tools to help you build some key features of Teams apps. Some of these tools include:
+To view **Changelog**, sign in to [Developer Portal](https://dev.teams.microsoft.com) and select **Changelog** from the left pane.
 
-* **Scene studio**: Design [custom Together Mode scenes](~/apps-in-teams-meetings/teams-together-mode.md) for Teams meetings.
-* **Adaptive Cards editor**: Create and preview Adaptive Cards to include with your apps.
-* **Microsoft identity platform management**: Register your apps with Azure Active Directory to help users sign in and provide access to APIs.
+:::image type="content" source="../../assets/images/tdp/changelog.png" alt-text="Screenshot shows the Changelog in the Developer Portal highlighted in red.":::
+
+The updates for Changelog in Developer Portal are categorized based on the following:
+
+* **Added**: Updates on a service or feature that's a new feature or capability.
+* **Changed**: Updates on a service or API that's modified.
+* **Removed**: Updates on a service or API that's removed and may be replaced with a new and updated service.
+* **Fixed**: Updates on a service or API that was previously identified as a high-priority or breaking-change issue that's fixed or mitigated.
+* **Deprecated**: Updates on a service or API at the end of its life and deprecated.
+* **Security**: Updates on important and critical security patch.
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Manage your apps in Developer Portal](manage-your-apps-in-developer-portal.md)
 
 ## See also
 
-[Include a SaaS offer with your Microsoft Teams app](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)
+* [Teams Toolkit Overview](../../toolkit/teams-toolkit-fundamentals.md)
+* [Analyze your app's usage in Developer Portal](analyze-your-apps-usage-in-developer-portal.md)
+* [Include a SaaS offer with your Microsoft Teams app](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)

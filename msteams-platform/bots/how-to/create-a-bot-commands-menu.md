@@ -1,14 +1,16 @@
 ---
 title: Create a command menu for your bot
 author: surbhigupta
-description: Learn how to create a command menu for your Microsoft Teams bot with Code samples.
+description: Learn how to create and handle a command menu for your Microsoft Teams bot, and best practices. Know how to remove commands from your manifest.
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: anclear
-keywords: command menu compose message conversation @mention 
 ---
 
-# Bot command menus
+# Create a commands menu
+
+> [!NOTE]
+> It's recommended that you'd create a command bot by following the step-by-step guide to [Build command bot with JavaScript](../../sbs-gs-commandbot.yml) using the new generation development tool for Teams. For more information about Teams Toolkit, see [Teams Toolkit Overview for Visual Studio Code](../../toolkit/teams-toolkit-fundamentals.md) and [Teams Toolkit overview for Visual Studio](../../toolkit/teams-toolkit-overview-visual-studio.md).
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
@@ -16,47 +18,44 @@ To define a set of core commands that your bot can respond to, you can add a com
 
 # [Desktop](#tab/desktop)
 
-![Bot command menu](./conversations/media/bot-menu-sample.png)
+:::image type="content" source="conversations/Media/bot-menu-sample.png" alt-text="Bot-command-menu":::
 
 # [Mobile](#tab/mobile)
 
-![Mobile bot command menu](./conversations/media/mobile-bot-menu-sample.png)
+:::image type="content" source="conversations/Media/mobile-bot-menu-sample.png" alt-text="Mobile-bot-command-menu":::
 
 * * *
 
 ## Create a command menu for your bot
 
-Command menus are defined in your app manifest. You can either use **App Studio** to create them or add them manually in the app manifest.
+Command menus are defined in your app manifest. You can either use **Developer Portal** to create them or add them manually in the app manifest.
 
-### Create a command menu for your bot using App Studio
+### Create a command menu for your bot using Developer Portal
 
 A prerequisite to create a command menu for your bot is that you must edit an existing app manifest. The steps to add a command menu are the same, whether you create a new manifest or edit an existing one.
 
-**To create a command menu for your bot using App Studio**
+To create a command menu for your bot using Developer Portal:
 
-1. Open Teams and select **Apps** from the left pane. In the **Apps** page, search for **App Studio**, and select **Open**.
-   > [!NOTE]
-   > If you don't have **App Studio**, you can download it. For more information, see [installing App Studio](~/concepts/build-and-test/app-studio-overview.md#installing-app-studio).
+1. Open Teams and select **Apps** from the left pane. In the **Apps** page, search for **Developer Portal**, and then select **Open**.
 
-  > If you have been using App Studio, we recommend that you'd try the Developer Portal to configure, distribute, and manage your Teams apps. App Studio will be deprecated by June 30, 2022
+   :::image type="content" source="../../assets/images/tdp/add-dev-portal.png" alt-text="Screenshot shows how to add Developer Portal in Teams client.":::
+  
+1. In **Developer Portal**, select the **Apps** tab. If you don't have an existing app package, you can create or import an existing app. For more information, see [Developer Portal for Teams](../../concepts/build-and-test/teams-developer-portal.md).
 
-  :::image type="content" source="/media/AppStudio.png" alt-text="Installing app studio"lightbox="media/AppStudio.png"border="true":::
+1. Select **Apps** tab, select **App features** from the left pane, and then select **Bots**.
 
-2. In **App Studio**, select the **Manifest editor** tab. If you do not have an existing app package, you can create or import an existing app. For more information, see [update an app package](~/get-started/deploy-csharp-app-studio.md).
+1. Select **Add a command** under **Commands** section.
 
-3. In the left pane of the **Manifest editor** and in the **Capabilities** section, select **Bots**.
+   :::image type="content" source="../../assets/images/tdp/add-a-bot-command.png" alt-text="Screenshot shows how to add a command for your bot in Developer Portal.":::
 
-4. In the right pane of the **Manifest editor** and in the **Commands** section, select **Add**. The **New Command** screen appears.
+1. Enter the **Command** that appears as the command menu for your bot.
 
-    :::image type="content" source="/media/AppStudio-CommandMenu-Add.png" alt-text="Select the app package"lightbox="/media/AppStudio-CommandMenu-Add.png"border="true":::
+1. Enter the **Description** that appears under the command text in the menu. **Description** must be a brief explanation of the purpose of the command.
 
-5. Enter the **Command text** that must appear as the command menu for your bot.
+1. Select the **Scope** check box and then select **Add**.
+   This defines where the command menu must appear.
 
-6. Enter the **Help text** that must appear under the command text in the menu. **Help text** must be a brief explanation of the purpose of the command.
-
-7. Select the **Scope** check boxes to select where this command menu must appear, and select **Save**.
-
-:::image type="content" source="/media/AppStudio-NewCommandMenu.png" alt-text="App Studio new commands menu button"lightbox="/media/AppStudio-NewCommandMenu.png"border="true":::
+   :::image type="content" source="../../assets/images/tdp/bot-command.png" alt-text="Screenshot shows how to add a command, description and scopes for your bot.":::
 
 ### Create a command menu for your bot by editing Manifest.json
 
@@ -167,31 +166,47 @@ Bots in a group or channel respond only when they are mentioned `@botname` in a 
 
 # [C#](#tab/dotnet)
 
+* [SDK reference](/dotnet/api/microsoft.bot.schema.activityextensions.removerecipientmention?view=botbuilder-dotnet-stable#microsoft-bot-schema-activityextensions-removerecipientmention(microsoft-bot-schema-imessageactivity)&preserve-view=true)
+
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-hello-world/csharp/Microsoft.Teams.Samples.HelloWorld.Web/Bots/MessageExtension.cs#L19)
+
 You can parse out the **\@Mention** portion of the message text using a static method provided with the Microsoft Bot Framework. It is a method of the `Activity` class named `RemoveRecipientMention`.
 
 The C# code to parse out the **\@Mention** portion of the message text is as follows:
 
 ```csharp
+// Remove recipient mention text from Text property.
+// Use with caution because this function is altering the text on the Activity.
 var modifiedText = turnContext.Activity.RemoveRecipientMention();
 ```
 
 # [JavaScript](#tab/javascript)
+
+* [SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#botbuilder-core-turncontext-removementiontext&preserve-view=true)
+
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-people-picker-adaptive-card/nodejs/bots/teamsBot.js#L21)
 
 You can parse out the **\@Mention** portion of the message text using a static method provided with the Bot Framework. It is a method of the `TurnContext` class named `removeMentionText`.
 
 The JavaScript code to parse out the **\@Mention** portion of the message text is as follows:
 
 ```javascript
+// Remove mention text from Text property, this function is altering the text on the Activity.
 const modifiedText = TurnContext.removeMentionText(turnContext.activity, turnContext.activity.recipient.id);
 ```
 
 # [Python](#tab/python)
+
+* [SDK reference](/python/api/botbuilder-core/botbuilder.core.turncontext?view=botbuilder-py-latest#botbuilder-core-turncontext-remove-recipient-mention&preserve-view=true)
+
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L34)
 
 You can parse out the **@Mention** portion of the message text using a static method provided with the Bot Framework. It is a method of the `TurnContext` class named `remove_recipient_mention`.
 
 The Python code to parse out the **\@Mention** portion of the message text is as follows:
 
 ```python
+# Remove recipient mention text from Text property, this function is altering the text on the Activity.
 modified_text = TurnContext.remove_recipient_mention(turn_context.activity)
 ```
 
@@ -213,4 +228,10 @@ Following are the command menu best practices:
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Channel and group conversations](~/bots/how-to/conversations/channel-and-group-conversations.md)
+> [Channel and group chat conversations with a bot](conversations/channel-and-group-conversations.md)
+
+## See also
+
+* [Build bots for Teams](../what-are-bots.md)
+* [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
+* [Messages in bot conversations](conversations/conversation-messages.md)

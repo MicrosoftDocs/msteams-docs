@@ -1,16 +1,16 @@
 ---
 title: Designing task modules
 author: heath-hamilton
-description: Learn how to design task modules for Teams apps and get the Microsoft Teams UI Kit.
+description: In this module, learn how to design task modules for your Teams apps and get the Microsoft Teams UI Kit.
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.topic: reference
 ---
 # Designing task modules for your Microsoft Teams app
 
-You can create modal popup experiences in your Teams app with task modules. Use this capability to display rich media and information or complete a complex task.
+You can create modal pop-up experiences in your Teams app with task modules. Use this capability to display rich media and information or complete a complex task.
 
-:::image type="content" source="../../assets/images/task-module/task-module-overview.png" alt-text="Example shows a task module." border="false":::
+:::image type="content" source="../../assets/images/task-module/task-module-overview.png" alt-text="Example shows a task module.":::
 
 ## Microsoft Teams UI Kit
 
@@ -37,7 +37,7 @@ They can also be built with the [Adaptive Cards](../../task-modules-and-cards/ca
 
 ### Mobile
 
-:::image type="content" source="../../assets/images/task-module/mobile-task-module-anatomy.png" alt-text="Illustration showing the UI anatomy of a task module on mobile." border="false":::
+:::image type="content" source="../../assets/images/task-module/mobile-task-module-anatomy.png" alt-text="Illustration showing the UI anatomy of a task module on mobile.":::
 
 |Counter|Description|
 |----------|-----------|
@@ -49,7 +49,7 @@ They can also be built with the [Adaptive Cards](../../task-modules-and-cards/ca
 
 ### Desktop
 
-:::image type="content" source="../../assets/images/task-module/task-module-anatomy.png" alt-text="Illustration showing the UI anatomy of a task module." border="false":::
+:::image type="content" source="../../assets/images/task-module/task-module-anatomy.png" alt-text="Illustration showing the UI anatomy of a task module.":::
 
 |Counter|Description|
 |----------|-----------|
@@ -76,11 +76,11 @@ Lists work nicely in a task module because they're easy to scan.
 
 #### Mobile
 
-:::image type="content" source="../../assets/images/task-module/mobile-list.png" alt-text="Example list in a task module on mobile." border="false":::
+:::image type="content" source="../../assets/images/task-module/mobile-list.png" alt-text="Example list in a task module on mobile.":::
 
 #### Desktop
 
-:::image type="content" source="../../assets/images/task-module/list.png" alt-text="Example list in a task module." border="false":::
+:::image type="content" source="../../assets/images/task-module/task-module-list-desktop.png" alt-text="Example list in a task module.":::
 
 ### Form
 
@@ -88,11 +88,11 @@ Task modules are a great place to surface forms with sequential user inputs and 
 
 #### Mobile
 
-:::image type="content" source="../../assets/images/task-module/mobile-form.png" alt-text="Example form in a task module on mobile." border="false":::
+:::image type="content" source="../../assets/images/task-module/task-module-mobile-form.png" alt-text="Example form in a task module on mobile.":::
 
 #### Desktop
 
-:::image type="content" source="../../assets/form.png" alt-text="Example form in a task module." border="false":::
+:::image type="content" source="../../assets/task-module-form.png" alt-text="Example form in a task module.":::
 
 ### Sign in
 
@@ -100,11 +100,11 @@ Create a focused sign in or sign-up flow with a series of task modules, letting 
 
 #### Mobile
 
-:::image type="content" source="../../assets/images/task-module/mobile-sign-in.png" alt-text="Example sign in experience in a task module on mobile." border="false":::
+:::image type="content" source="../../assets/images/task-module/mobile-sign-in.png" alt-text="Example sign in experience in a task module on mobile.":::
 
 #### Desktop
 
-:::image type="content" source="../../assets/images/task-module/sign-in.png" alt-text="Example sign in experience in a task module." border="false":::
+:::image type="content" source="../../assets/images/task-module/sign-in.png" alt-text="Example sign in experience in a task module.":::
 
 ### Media
 
@@ -112,11 +112,11 @@ Embed media content in a task module for a focused viewing experience.
 
 #### Mobile
 
-:::image type="content" source="../../assets/images/task-module/mobile-media.png" alt-text="Example media content in a task module on mobile." border="false":::
+:::image type="content" source="../../assets/images/task-module/mobile-media.png" alt-text="Example media content in a task module on mobile.":::
 
 #### Desktop
 
-:::image type="content" source="../../assets/images/task-module/media.png" alt-text="Example media content in a task module." border="false":::
+:::image type="content" source="../../assets/images/task-module/media.png" alt-text="Example media content in a task module.":::
 
 ### Empty state
 
@@ -124,11 +124,11 @@ Use for welcome, error, and success messages.
 
 #### Mobile
 
-:::image type="content" source="../../assets/images/task-module/mobile-empty-state.png" alt-text="Example empty state in a task module on mobile." border="false":::
+:::image type="content" source="../../assets/images/task-module/mobile-empty-state.png" alt-text="Example empty state in a task module on mobile.":::
 
 #### Desktop
 
-:::image type="content" source="../../assets/images/task-module/empty-state.png" alt-text="Example empty state in a task module." border="false":::
+:::image type="content" source="../../assets/images/task-module/empty-state.png" alt-text="Example empty state in a task module.":::
 
 ### Image gallery
 
@@ -136,11 +136,11 @@ Embed a gallery carousel in an iframe (desktop) or webview (mobile).
 
 ##### Mobile
 
-:::image type="content" source="../../assets/images/task-module/mobile-image-gallery.png" alt-text="Example image gallery in a task module on mobile." border="false":::
+:::image type="content" source="../../assets/images/task-module/mobile-image-gallery.png" alt-text="Example image gallery in a task module on mobile.":::
 
 ##### Desktop
 
-:::image type="content" source="../../assets/images/task-module/image-gallery.png" alt-text="Example image gallery in a task module." border="false":::
+:::image type="content" source="../../assets/images/task-module/image-gallery.png" alt-text="Example image gallery in a task module.":::
 
 ### Poll
 
@@ -148,11 +148,11 @@ This example shows poll results launched from an Adaptive Card. The poll can be 
 
 #### Mobile
 
-:::image type="content" source="../../assets/images/task-module/mobile-poll.png" alt-text="Example poll in a task module on mobile." border="false":::
+:::image type="content" source="../../assets/images/task-module/mobile-poll.png" alt-text="Example poll in a task module on mobile.":::
 
 #### Desktop
 
-:::image type="content" source="../../assets/images/task-module/poll.png" alt-text="Example poll in a task module." border="false":::
+:::image type="content" source="../../assets/images/task-module/poll.png" alt-text="Example poll in a task module.":::
 
 ## Best practices
 
@@ -162,7 +162,7 @@ Use these recommendations to create a quality app experience.
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/usability-do.png" alt-text="Example showing a task module best practice (one task module at a time)." border="false":::
+:::image type="content" source="../../assets/images/task-module/usability-do.png" alt-text="Example showing a task module best practice (one task module at a time).":::
 
 #### Do: Use one task module at a time
 
@@ -170,7 +170,7 @@ The goal is to focus the user on completing a task after all!
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/usability-dont.png" alt-text="Example showing a task module best practice (pop a dialog on top of a task module)." border="false":::
+:::image type="content" source="../../assets/images/task-module/usability-dont.png" alt-text="Example showing a task module best practice (pop a dialog on top of a task module).":::
 
 #### Don't: Pop a dialog on top of a task module
 
@@ -183,7 +183,7 @@ This creates an unfocused, confusing user experience.
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/responsive-do.png" alt-text="Example showing a task module best practice (make sure the content is responsive)." border="false":::
+:::image type="content" source="../../assets/images/task-module/responsive-do.png" alt-text="Example showing a task module best practice (make sure the content is responsive).":::
 
 #### Do: Make sure the content is responsive
 
@@ -191,7 +191,7 @@ While Adaptive Cards hosted in a task module render well on mobile devices, if y
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/responsive-dont.png" alt-text="Example showing a task module best practice (don't use horizontal scroll bars)." border="false":::
+:::image type="content" source="../../assets/images/task-module/responsive-dont.png" alt-text="Example showing a task module best practice (don't use horizontal scroll bars).":::
 
 #### Don't: Use horizontal scroll bars
 
@@ -204,7 +204,7 @@ It's a best practice to keep content focused and not too lengthy. If a scroll is
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/simplicity-do.png" alt-text="Example showing a task module best practice (keep it short)." border="false":::
+:::image type="content" source="../../assets/images/task-module/simplicity-do.png" alt-text="Example showing a task module best practice (keep it short).":::
 
 #### Do: Keep it short
 
@@ -212,7 +212,7 @@ You can easily create a multi-step wizard, but that doesn't necessarily mean you
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/simplicity-dont.png" alt-text="Example showing a task module best practice (don't have long interactions)." border="false":::
+:::image type="content" source="../../assets/images/task-module/simplicity-dont.png" alt-text="Example showing a task module best practice (don't have long interactions).":::
 
 #### Don't: Have long interactions
 
@@ -225,7 +225,7 @@ Try to keep your interactions short and to the point.
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/error-messages-do.png" alt-text="Example showing a task module best practice (use inline error messages)." border="false":::
+:::image type="content" source="../../assets/images/task-module/error-messages-do.png" alt-text="Example showing a task module best practice (use inline error messages).":::
 
 #### Do: Use inline error messages
 
@@ -233,7 +233,7 @@ See the forms UI template for guidelines on inline error handling.
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/error-messages-dont.png" alt-text="Example showing a task module best practice (put error messages in dialogs)." border="false":::
+:::image type="content" source="../../assets/images/task-module/error-messages-dont.png" alt-text="Example showing a task module best practice (put error messages in dialogs).":::
 
 #### Don't: Put error messages in dialogs
 

@@ -20,3 +20,42 @@ groups:
     title: ASP.NET Core
   - id: mvc-csharp
     title: ASP.NET Core MVC
+- id: teams-app-environment-blazor
+  title: Teams app environment
+  prompt: Before you begin, select the environment in which you want to build
+  pivots:
+  - id: node-java-script
+    title: Node.js
+  - id: razor-csharp
+    title: ASP.NET Core
+  - id: mvc-csharp
+    title: ASP.NET Core MVC
+  - id: blazor-app
+    title: Blazor
+- id: What-new-features
+  title: Teams feature updates
+  prompt: Select the feature availability type to explore the features
+  pivots:
+  - id: ga-feature
+    title: Generally available
+  - id: dev-preview
+    title: Developer preview
+  - id: dep-feature
+    title: Deprecated
+- id: teams-app-platform
+  title: Teams app platform
+  prompt: Before you begin, choose your development environment.
+  pivots:
+  - id: visual-studio-code
+    title: Visual Studio Code
+  - id: visual-studio
+    title: Visual Studio   
+- id: enable-sso
+  title: Add code to enable SSO for your app
+  prompt: Before you begin, select the app for which you want to add code to enable SSO.
+  pivots:
+  - id: bot-app
+    title: Add code for bot app
+  - id: mex-app
+    title: Add code for message extension app    
+

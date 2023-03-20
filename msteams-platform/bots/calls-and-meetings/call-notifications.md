@@ -1,9 +1,8 @@
 ---
 title: Incoming call notifications
-description: Learn about detailed technical information on handling notifications from incoming calls, redirecting and authenticating calls using code samples
+description: Learn about incoming notification protocol to convert the call from legacy to Graph format, redirects for region affinity and authenticate the callback.
 ms.topic: conceptual
 ms.localizationpriority: medium
-keywords: calling calls notifications callback region affinity
 ms.date: 04/02/2019
 ---
 
@@ -13,7 +12,7 @@ In [registering a calls and meetings bot for Microsoft Teams](./registering-call
 
 ## Protocol determination
 
-The incoming notification is provided in a legacy format for compatibility with the previous [Skype protocol](/azure/bot-service/dotnet/bot-builder-dotnet-real-time-media-concepts?view=azure-bot-service-3.0&preserve-view=true). In order to convert the call to the Microsoft Graph protocol, your bot must determine whether the notification is in a legacy format and provide the following response:
+The incoming notification is provided in a legacy format for compatibility with the previous [Skype protocol](/azure/bot-service/dotnet/bot-builder-dotnet-real-time-media-concepts?view=azure-bot-service-3.0&preserve-view=true). In order to convert the call to the Microsoft Graph protocol, your bot must determine whether the notification is in a legacy format and provides the following response:
 
 ```http
 HTTP/1.1 204 No Content
@@ -27,7 +26,7 @@ The next section provides details on incoming call notifications redirected for 
 
 ## Redirects for region affinity
 
-You call your webhook from the data-center hosting the call. The call starts in any data center and does not take into account region affinities. The notification is sent to your deployment depending on the GeoDNS resolution. If your application determines, by inspecting the initial notification payload or otherwise, that it needs to run in a different deployment, the application provides the following response:
+You call your webhook from the data-center hosting the call. The call starts in any data center and doesn't take into account region affinities. The notification is sent to your deployment depending on the GeoDNS resolution. If your application determines, by inspecting the initial notification payload or otherwise, that it needs to run in a different deployment, the application provides the following response:
 
 ```http
 HTTP/1.1 302 Found
@@ -82,7 +81,7 @@ The OpenID configuration published at <https://api.aps.skype.com/v1/.well-known/
 * `tid` is the tenant id for Contoso.com.
 * `iss` is the token issuer, `https://api.botframework.com`.
 
-For your code handling, the webhook must validate the token, ensure it has not expired, and check whether it has been signed by the published OpenID configuration. You must also check whether aud matches your App ID before accepting the callback request.
+For your code handling, the webhook must validate the token, ensure it hasn't expired, and check whether it has been signed by the published OpenID configuration. You must also check whether aud matches your App ID before accepting the callback request.
 
 For more information, see [validate inbound requests](https://github.com/microsoftgraph/microsoft-graph-comms-samples/blob/master/Samples/Common/Sample.Common/Authentication/AuthenticationProvider.cs).
 
@@ -93,5 +92,9 @@ For more information, see [validate inbound requests](https://github.com/microso
 
 ## See also
 
+* [Build bots for Teams](../what-are-bots.md)
+* [Calls and online meetings bots](calls-meetings-bots-overview.md)
+* [Work with the cloud communications API in Microsoft Graph](/graph/api/resources/communications-api-overview)
+* [Authentication flow for bots in Microsoft Teams](../how-to/authentication/auth-flow-bot.md)
 * [Set up an auto attendant](/microsoftteams/create-a-phone-system-auto-attendant)
 * [Set up auto answer for Microsoft Teams Rooms on Android and Teams video phone devices](/microsoftteams/set-up-auto-answer-on-teams-android)

@@ -1,11 +1,10 @@
 ---
 title: Test preview for monetized apps 
 author: v-ypalikila
-description: Create and test SaaS Preview offers for Teams app before pushing the offer live.
+description: Create and test SaaS Preview offers for Teams app before pushing the offer live. Create a preview offer ID, configure your app with the preview offer ID, and sideload. 
 ms.topic: conceptual
 ms.author: v-ypalikila
 ms.localizationpriority: high
-keywords: teams apps SaaS offer preview offer test preview monetized saas
 ---
 
 # Test preview for monetized apps
@@ -22,11 +21,11 @@ You can generate the Preview offer ID from the **AppSource preview** link in the
 1. Add a [preview audience](/azure/marketplace/create-new-saas-offer-preview) for your SaaS offer.
 1. Select **AppSource preview** link under **Go Live** to find the Preview offer ID in the browser address bar with *publisherId.offerId-preview* format.
 
-    :::image type="content" source="../../../../assets/images/apps-in-meetings/publish-status-publisher-signoff.png" alt-text="preview offer id" border="true" :::
+    :::image type="content" source="../../../../assets/images/apps-in-meetings/publish-status-publisher-signoff.png" alt-text="preview offer id" :::
 
 1. Copy the Preview offer ID from the browser address bar.
 
-      :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-monetized-apps-preview-offer-id.png" alt-text="Preview offer ID" border="true" :::
+      :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-monetized-apps-preview-offer-id.png" alt-text="Preview offer ID" :::
 
     > [!NOTE]
     > Unlike a public offer ID, the Preview offer ID can be recognized with the *-preview* suffix. For example, **publisherId.offerId-preview**.
@@ -56,7 +55,9 @@ The subscriptionOffer property is added to your app manifest.
 ```
 
 >[!NOTE]
-> Check for the label *Preview offer* next to **Apps subscription** to confirm if the offer is a Preview Offer.
+>
+> * Check for the label *Preview offer* next to **Apps subscription** to confirm if the offer is a Preview Offer.
+> * The `subscriptionOffer` property is supported in manifest schema version 1.10 or later.
 
 ## Sideload the app to Teams
 
@@ -64,7 +65,7 @@ After you configure your app with the Preview Offer ID, create an updated app pa
 
 If the Preview offer is specified in the app manifest and the preview audience is defined in the Partner center for the offer, the user can see the **Buy a subscription** button.
 
-:::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-buy-subscription.png" alt-text="buy a subscription" border="true":::
+:::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-buy-subscription.png" alt-text="buy a subscription":::
 
 ### Error scenarios
 
@@ -72,18 +73,19 @@ If the Preview offer is specified in the app manifest and the preview audience i
 
   No plans found with **-preview**. Make sure you're in the preview audience.
 
-  :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-no-preview-audience.png" alt-text="no preivew audience" border="true" :::
+  :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-no-preview-audience.png" alt-text="no preivew audience" :::
 
 * If the offer ID specified in the app manifest isn't a Preview offer, the app shows the following warning message to the user and sideloading is disabled:
   
   This isn't a preview offer. Be sure to append the **-preview** to the Offer ID.
 
-  :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-no-preview-offer-id.png" alt-text="no -preview" border="true" :::
+  :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-no-preview-offer-id.png" alt-text="no -preview" :::
 
 ## See also
 
+* [Monetize your app](monetize-overview.md)
 * [Include a SaaS offer with your Microsoft Teams app](include-saas-offer.md)
-* [Create a Software as a Service (SaaS) offer](include-saas-offer.md#create-your-saas-offer)
 * [Add a preview audience for a SaaS offer](/azure/marketplace/create-new-saas-offer-preview)
 * [Preview creation phase](/azure/marketplace/review-publish-offer)
 * [Review and publish an offer to the commercial marketplace](/azure/marketplace/review-publish-offer#validation-and-publishing-steps)
+* [App Manifest](../../../../resources/schema/manifest-schema-dev-preview.md)

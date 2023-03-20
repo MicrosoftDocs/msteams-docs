@@ -1,11 +1,10 @@
 ---
-title: Use Microsoft Graph to import external platform messages to Teams 
-description: Describes how to use Microsoft Graph to import messages from an external platform to Teams
+title: Use Microsoft Graph to import external platform messages to Teams
+description: Describes how to use Microsoft Graph to import messages from an external platform to Teams.
 ms.localizationpriority: high
-author: akjo 
-ms.author: lajanuar
+author: "akjo" 
+ms.author: "lajanuar"
 ms.topic: Overview
-keywords: teams import messages api graph microsoft migrate migration post
 ---
 
 # Import third-party platform messages to Teams using Microsoft Graph
@@ -34,14 +33,14 @@ At a high level, the import process consists of the following:
 * Map the third-party chat structure to the Teams structure.  
 * Convert import data into format needed for migration.  
 
-### Set up your Office 365 tenant
+### Set up your Microsoft 365 tenant
 
-* Ensure that an Office 365 tenant exists for the import data. For more information on setting up an Office 365 tenancy for Teams, see [prepare your Office 365 tenant](../../concepts/build-and-test/prepare-your-o365-tenant.md).
+* Ensure that a Microsoft 365 tenant exists for the import data. For more information on setting up a Microsoft 365 tenancy for Teams, see [prepare your Microsoft 365 tenant](../../concepts/build-and-test/prepare-your-o365-tenant.md).
 * Make sure that team members are in Azure Active Directory. For more information, see [add a new user](/azure/active-directory/fundamentals/add-users-azure-active-directory) to Azure AD.
 
 ## Step 1: Create a team
 
-Since you are migrating existing data, maintaining the original message timestamps, and preventing messaging activity during the migration process are key to recreating the user's existing message flow in Teams. This is achieved as follows:
+Since you're migrating existing data, maintaining the original message timestamps, and preventing messaging activity during the migration process are key to recreating the user's existing message flow in Teams. This is achieved as follows:
 
 > [Create a new team](/graph/api/team-post?view=graph-rest-beta&tabs=http&preserve-view=true) with a back-in-time timestamp using the team resource `createdDateTime` property. Place the new team in `migration mode`, a special state that restricts users from most activities within the team until the migration process is complete. Include the `teamCreationMode` instance attribute with the `migration` value in the POST request to explicitly identify the new team as being created for migration.  
 
@@ -54,14 +53,14 @@ Since you are migrating existing data, maintaining the original message timestam
 
 |ScopeName|DisplayName|Description|Type|Admin Consent?|Entities/APIs covered|
 |-|-|-|-|-|-|
-|`Teamwork.Migrate.All`|Manage migration to Microsoft Teams|Creating and managing resources for migration to Microsoft Teams.|**Application-only**|**Yes**|`POST /teams`|
+|`Teamwork.Migrate.All`|Manage migration to Microsoft Teams|Creating and managing resources for migration to Teams.|**Application-only**|**Yes**|`POST /teams`|
 
 #### Request (create a team in migration state)
 
 ```http
 POST https://graph.microsoft.com/v1.0/teams
-
 Content-Type: application/json
+
 {
   "@microsoft.graph.teamCreationMode": "migration",
   "template@odata.bind": "https://graph.microsoft.com/v1.0/teamsTemplates('standard')",
@@ -100,14 +99,14 @@ Creating a channel for the imported messages is similar to the create team scena
 
 |ScopeName|DisplayName|Description|Type|Admin Consent?|Entities/APIs covered|
 |-|-|-|-|-|-|
-|`Teamwork.Migrate.All`|Manage migration to Microsoft Teams|Creating and managing resources for migration to Microsoft Teams.|**Application-only**|**Yes**|`POST /teams`|
+|`Teamwork.Migrate.All`|Manage migration to Microsoft Teams|Creating and managing resources for migration to Teams.|**Application-only**|**Yes**|`POST /teams`|
 
 #### Request (create a channel in migration state)
 
 ```http
 POST https://graph.microsoft.com/v1.0/teams/{team-id}/channels
-
 Content-Type: application/json
+
 {
   "@microsoft.graph.channelCreationMode": "migration",
   "displayName": "Architecture Discussion",
@@ -298,7 +297,6 @@ After the message migration process has completed, both the team and channel are
 
 ```http
 POST https://graph.microsoft.com/v1.0/teams/team-id/channels/channel-id/completeMigration
-
 ```
 
 #### Response
@@ -319,7 +317,7 @@ POST https://graph.microsoft.com/v1.0/teams/team-id/completeMigration
 HTTP/1.1 204 NoContent
 ```
 
-Action called on a `team` or `channel` that is not in `migrationMode`.
+Action called on a `team` or `channel` that isn't in `migrationMode`.
 
 ## Step five: Add team members
 
@@ -331,10 +329,11 @@ You can add a member to a team [using the Teams UI](https://support.microsoft.co
 POST https://graph.microsoft.com/beta/teams/{team-id}/members
 Content-type: application/json
 Content-length: 30
+
 {
-"@odata.type": "#microsoft.graph.aadUserConversationMember",
-"roles": [],
-"user@odata.bind": "https://graph.microsoft.com/beta/users/{user-id}"
+   "@odata.type": "#microsoft.graph.aadUserConversationMember",
+   "roles": [],
+   "user@odata.bind": "https://graph.microsoft.com/beta/users/{user-id}"
 }
 ```
 
@@ -349,13 +348,13 @@ HTTP/1.1 204 No Content
 <!-- markdownlint-disable MD001 -->
 <!-- markdownlint-disable MD026 -->
 
-* After the `completeMigration` request is made, you cannot import further messages into the team.
+* After the `completeMigration` request is made, you can't import further messages into the team.
 
 * You can only add team members to the new team after the `completeMigration` request has returned a successful response.
 
 * Throttling: Messages import at five RPS per channel.
 
-* If you need to make a correction to the migration results, you must delete the team and repeat the steps to create the team and channel and re-migrate the messages.
+* If you need to make a correction to the migration results, you must delete the team, repeat the steps to create the team and channel and re-migrate the messages.
 
 > [!NOTE]
 > Currently, inline images are the only type of media supported by the import message API schema.
@@ -381,4 +380,7 @@ The following table provides the content scope:
 
 ## See also
 
-[Microsoft Graph and Teams integration](/graph/teams-concept-overview)
+* [Microsoft Graph and Teams integration](/graph/teams-concept-overview)
+* [Export content with the Microsoft Teams Export APIs](/microsoftteams/export-teams-content)
+* [Microsoft Teams service limits](/graph/throttling-limits#microsoft-teams-service-limits)
+* [Licensing and payment requirements for the Microsoft Teams API](/graph/teams-licenses)

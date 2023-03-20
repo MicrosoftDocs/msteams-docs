@@ -1,22 +1,21 @@
 ---
 title: Add test data to your Microsoft 365 test tenant
-description: Set up your Office 365 developer program subscription for successful testing of Microsoft Teams Apps using code snippets
+description: Learn to set up your Microsoft 365 developer program subscription for successful testing of Microsoft Teams Apps using code snippets
 ms.topic: how-to
 ms.localizationpriority: medium    
-keywords: testing apps developer program teams
 ms.date: 11/01/2019
 ---
 
-# Add test data to your Microsoft 365 test tenant
+# Add test data to your environment
 
 You can test your Microsoft Teams app with sample data with a Microsoft 365 developer subscription.
 
 ## Prerequisites
 
-1. [Join the Microsoft 365 Developer Program](/office/developer-program/office-365-developer-program), if you do not have a test tenant.
+1. [Join the Microsoft 365 Developer Program](/office/developer-program/office-365-developer-program), if you don't have a test tenant.
 2. [Set up a Microsoft 365 Developer Subscription](/office/developer-program/office-365-developer-program-get-started).
 3. [Use sample data packs with your Microsoft 365 developer subscription to install the Users content pack](/office/developer-program/install-sample-packs).
-4. [Install the Teams PowerShell module](https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2).
+4. [Install the Teams PowerShell module](https://www.powershellgallery.com/packages/microsoftteams/1.0.2).
 5. [Install the Azure AD PowerShell module](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0#installing-the-azure-ad-module&preserve-view=true).
 
 > [!NOTE]
@@ -142,7 +141,7 @@ By default, only global admins or Teams service admins can upload (sideload) app
     </Teams>
     ```
 
-2. Save the following snippet as a PowerShell script (.ps1) and note where you have saved it. This script executes the steps to create the team and channel, and add members to them:
+2. Save the following snippet as a PowerShell script (.ps1) and note where you've saved it. This script executes the steps to create the team and channel, and add members to them:
 
     ```powershell
     Param(
@@ -159,7 +158,7 @@ By default, only global admins or Teams service admins can upload (sideload) app
 
         try {
 
-            # 1. Login with the global administrator account for your Office 365 Developer Program tenant. This script uses these credentials to connect to the PowerShell modules for Azure Active Directory and Microsoft Teams
+            # 1. Login with the global administrator account for your Microsoft 365 Developer Program tenant. This script uses these credentials to connect to the PowerShell modules for Azure Active Directory and Microsoft Teams
 
             $creds = Get-Credential
 
@@ -175,7 +174,7 @@ By default, only global admins or Teams service admins can upload (sideload) app
 
             foreach ($team in $XmlDocument.Teams.Team ) {
                 try {
-                    $group = New-Team -DisplayName $team.Name -Description $teams.description -visibility public 
+                    $group = New-Team -DisplayName $team.Name -Description $team.description -visibility public 
                     Write-Host "Successfully created team: " $group.DisplayName
                 }
                 catch {
@@ -233,8 +232,8 @@ By default, only global admins or Teams service admins can upload (sideload) app
     }
     ```
 
-3. Open a Windows PowerShell session in Administrator mode, and run the script that you just saved.
-4. When you are prompted to provide the credentials, enter the Global Administrator credentials you received when you first signed up for your developer subscription.
+3. Open a Windows PowerShell session in Administrator mode, and run the script that you saved.
+4. When you're prompted to provide the credentials, enter the Global Administrator credentials you received when you first signed up for your developer subscription.
 
     > [!Note]
     > Do not close your PowerShell session as the script takes several minutes to execute. If you have modified the users in your subscription from what is created in the default content pack, some users may not be added to Teams. As the script executes it displays successful or failed actions.
@@ -243,6 +242,7 @@ By default, only global admins or Teams service admins can upload (sideload) app
 
 ## See also
 
+* [Test your app](test-app-overview.md)
 * [Debug your tab](~/tabs/how-to/developer-tools.md)
 * [Debug your bots](~/bots/how-to/debug/locally-with-an-ide.md)
 * [Test RSC permissions](~/graph-api/rsc/test-resource-specific-consent.md)

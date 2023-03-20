@@ -1,5 +1,5 @@
 ---
-title: https://review.docs.microsoft.com/help/contribute/metadata-attributes?branch=master
+title: https://review.learn.microsoft.com/help/contribute/metadata-attributes?branch=main
 author: 
 description:
 localization_priority: Normal

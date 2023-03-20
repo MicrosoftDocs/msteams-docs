@@ -730,7 +730,131 @@
       },
       {
         "source_path": "msteams-platform/platform/sbs-gs-blazorapp.yml",
-        "redirect_url": "/msteams-platform/platform/sbs-gs-blazorupdate"
+        "redirect_url": "/microsoftteams/platform/sbs-gs-blazorupdate"
+      },
+      {
+        "source_path": "msteams-platform/platform/m365-apps/using-teams-client-sdk-preview.md",
+        "redirect_url": "/microsoftteams/platform/tabs/how-to/using-teams-client-sdk"
+      },
+      {
+        "source_path": "msteams-platform/platform/tabs/how-to/authentication/auth-aad-sso.md",
+        "redirect_url": "/microsoftteams/platform/tabs/how-to/authentication/tab-sso-overview"
+      },
+      {
+        "source_path": "msteams-platform/concepts/build-and-test/app-studio-overview.md",
+        "redirect_url": "/microsoftteams/platform/concepts/build-and-test/teams-developer-portal"
+      },
+      { 
+        "source_path": "msteams-platform/resources/bot-v3/bot-authentication/auth-flow-bot.md",
+        "redirect_url": "/microsoftteams/platform/bots/how-to/authentication/auth-flow-bot"
+      },
+      {
+        "source_path": "msteams-platform/resources/bot-v3/bot-authentication/auth-bot-aad.md",
+        "redirect_url": "/microsoftteams/platform/bots/how-to/authentication/auth-flow-bot"
+      },
+      {
+        "source_path": "msteams-platform/resources/bot-v3/bot-authentication/auth-oauth-card.md",
+        "redirect_url": "/microsoftteams/platform/bots/how-to/authentication/auth-flow-bot"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/visual-studio-code-overview.md",
+        "redirect_url": "/microsoftteams/platform/toolkit/teams-toolkit-fundamentals"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/visual-studio-code-tab-sso.md",
+        "redirect_url": "/microsoftteams/platform/toolkit/teams-toolkit-fundamentals"
+      },
+      {
+        "source_path": "msteams-platform/get-started/deploy-csharp-app-studio.md",
+        "redirect_url": "/microsoftteams/platform/concepts/build-and-test/teams-developer-portal"
+      },
+      {
+        "source_path": "msteams-platform/get-started/deploy-nodejs-app-studio.md",
+        "redirect_url": "/microsoftteams/platform/concepts/build-and-test/teams-developer-portal"
+      },
+      {
+        "source_path": "msteams-platform/tabs/how-to/authentication/tab-sso-client-secret.md",
+        "redirect_url": "/microsoftteams/platform/tabs/how-to/authentication/tab-sso-overview"
+      },
+      {
+        "source_path": "msteams-platform/tabs/how-to/authentication/tab-sso-admin-consent.md",
+        "redirect_url": "/microsoftteams/platform/tabs/how-to/authentication/tab-sso-overview"
+      },
+      {
+        "source_path": "msteams-platform/concepts/authentication/configure-identity-provider.md",
+        "redirect_url": "/microsoftteams/platform/concepts/authentication/authentication"
+      },
+      {
+        "source_path": "msteams-platform/resources/create-messaging-extension-using-appstudio.md",
+        "redirect_url": "/microsoftteams/platform/concepts/build-and-test/teams-developer-portal"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/accounts.md",
+        "redirect_url": "/microsoftteams/platform/toolkit/tools-prerequisites"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/create-new-teams-app-for-Visual-Studio.md",
+        "redirect_url": "/microsoftteams/platform/toolkit/create-new-project"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/debug-teams-app-visual-studio.md",
+        "redirect_url": "/microsoftteams/platform/toolkit/debug-overview"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/deploy-teams-app.md",
+        "redirect_url": "/microsoftteams/platform/toolkit/deploy"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/teams-toolkit-overview-visual-studio.md",
+        "redirect_url": "/microsoftteams/platform/toolkit/teams-toolkit-fundamentals"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/VS-TeamsFx-preview-and-customize-app-manifest.md",
+        "redirect_url": "/microsoftteams/platform/toolkit/teamsfx-preview-and-customize-app-manifest"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/provision-cloud-resources.md",
+        "redirect_url": "/microsoftteams/platform/toolkit/provision"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/visual-studio-overview.md",
+        "redirect_url": "/microsoftteams/platform/toolkit/teams-toolkit-fundamentals"
+      },
+      {
+        "source_path": "msteams-platform/apps-in-teams-meetings/API-references.md",
+        "redirect_url": "/microsoftteams/platform/apps-in-teams-meetings/meeting-apps-apis"
+      },
+      {
+        "source_path": "msteams-platform/apps-in-teams-meetings/meeting-app-extensibility.md",
+        "redirect_url": "/microsoftteams/platform/apps-in-teams-meetings/teams-apps-in-meetings"
+      },
+      {
+        "source_path": "msteams-platform/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md",
+        "redirect_url": "/microsoftteams/platform/apps-in-teams-meetings/build-tabs-for-meeting"
+      },
+      {
+        "source_path": "msteams-platform/tabs/how-to/using-teams-client-sdk.md",
+        "redirect_url": "/microsoftteams/platform/tabs/how-to/using-teams-client-library"
+      },
+      {
+        "source_path": "msteams-platform/tabs/how-to/authentication/auth-silent-aad.md",
+        "redirect_url": "/microsoftteams/platform/concepts/authentication/authentication"
+      },
+      {
+        "source_path": "msteams-platform/bots/how-to/authentication/auth-aad-sso-bots.md",
+        "redirect_url": "/microsoftteams/platform/bots/how-to/authentication/bot-sso-overview"
+      },
+      {
+        "source_path": "msteams-platform/messaging-extensions/how-to/enable-SSO-auth-me.md",
+        "redirect_url": "/microsoftteams/platform/bots/how-to/authentication/bot-sso-overview"
+      },
+      {
+        "source_path": "msteams-platform/bots/how-to/authentication/auth-flow-bot.md",
+        "redirect_url": "/microsoftteams/platform/bots/how-to/authentication/add-authentication"
+      },
+      {
+        "source_path": "msteams-platform/tabs/how-to/dashboard-teams-toolkit.md",
+        "redirect_url": "/microsoftteams/platform/tabs/how-to/build-a-dashboard-tab-app"
       }
     ]
 }

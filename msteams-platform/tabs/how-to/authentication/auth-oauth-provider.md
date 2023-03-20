@@ -1,58 +1,58 @@
 ---
 title: Use external OAuth providers  
-description: Describes authentication using external OAuth providers  
+description: Authenticate your app users using external OAuth providers and learn how to add it to external browser.
 ms.topic: how-to
 ms.localizationpriority: high
-keywords: teams authentication using external OAuth provider
 ---
 
 # Use external OAuth providers
 
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
+
 You can support external or third-party (3P) OAuth providers, such as Google, GitHub, LinkedIn, and Facebook using the updated `authenticate()` API:
 
 ```JavaScript
-function authenticate(authenticateParameters?: AuthenticateParameters)
-``` 
+function authenticate(authenticateParameters: AuthenticatePopUpParameters): Promise<string>
+```
 
 The following are added to the `authenticate()` API to support external OAuth providers:
 
 * `isExternal` parameter
 * Two placeholder values in the existing `url` parameter
 
-The following table provides the list of `authenticate()` API parameters and functions along with their descriptions:
+The following table provides the list of `authenticate()` API parameters (`AuthenticatePopUpParameters`) and functions along with their descriptions:
 
 | Parameter| Description|
 | --- | --- |
 |`isExternal` | The type of parameter is Boolean, which indicates that the auth window opens in an external browser.|
-|`failureCallback`| The function is called if the authentication fails and the authentication pop-up specifies the reason for failure.|
 |`height` |The preferred height for the pop-up. The value can be ignored if outside the acceptable bounds.|
-|`successCallback`| The function is called if the authentication succeeds, with the result returned from the authentication pop-up. Authcode is the result.|
-|`url`  <br>|The URL of 3P app server for the authentication pop-up, with the following two parameter placeholders:</br> <br> - `oauthRedirectMethod`: Pass placeholder in `{}`. This placeholder is replaced by deeplink or web page by Teams platform, which informs app server if the call is coming from mobile platform.</br> <br> - `authId`: This placeholder is replaced by UUID. The app server uses it to maintain session.| 
+|`url`  <br>|The URL of 3P app server for the authentication pop-up, with the following two parameter placeholders:</br> <br> - `oauthRedirectMethod`: Pass placeholder in `{}`. This placeholder is replaced by deeplink or web page by Teams platform, which informs app server if the call is coming from mobile platform.</br> <br> - `authId`: This placeholder is replaced by UUID. The app server uses it to maintain session.|
 |`width`|The preferred width for the pop-up. The value can be ignored if outside the acceptable bounds.|
 
-For more information on parameters, see [authenticate parameters interface](/javascript/api/@microsoft/teams-js/microsoftteams.authentication.authenticateparameters?view=msteams-client-js-latest&preserve-view=true).
+For more information on parameters, see the [authenticate(AuthenticatePopUpParameters)](/javascript/api/@microsoft/teams-js/authentication#@microsoft-teams-js-authentication-authenticate) function.
 
 ## Add authentication to external browsers
 
 > [!NOTE]
-> * Currently, you can add authentication to external browsers for tabs in mobile only. 
-> * Use the beta version of JS SDK to leverage the functionality. Beta versions are available through [NPM](https://www.npmjs.com/package/@microsoft/teams-js/v/1.12.0-beta.2).
+>
+> * Currently, you can add authentication to external browsers for tabs in mobile only.
+> * Use the beta version of TeamsJS to leverage the functionality. Beta versions are available through [NPM](https://www.npmjs.com/package/@microsoft/teams-js/v/1.12.0-beta.2).
 
 The following image provides the flow to add authentication to external browsers:
 
- :::image type="content" source="../../../assets/images/tabs/tabs-authenticate-OAuth.PNG" alt-text="authenticate-OAuth" border="true":::
+ :::image type="content" source="../../../assets/images/tabs/tabs-authenticate-OAuth.PNG" alt-text="authenticate-OAuth":::
 
 **To add authentication to external browsers**
 
 1. Initiate the external auth-login process.
 
-   The 3P app calls the SDK function `microsoftTeams.authentication.authenticate` with `isExternal` set as true to initiate the external auth-login process. 
+   The 3P app calls the TeamsJS function `authentication.authenticate` with `isExternal` set as true to initiate the external auth-login process.
 
    The passed `url` contains placeholders for `{authId}`, and `{oauthRedirectMethod}`.  
 
-
     ```JavaScript
-    microsoftTeams.authentication.authenticate({
+    import { authentication } from "@microsoft/teams-js";
+    authentication.authenticate({
        url: 'https://3p.app.server/auth?oauthRedirectMethod={oauthRedirectMethod}&authId={authId}',
        isExternal: true,
        successCallback: function (result) {
@@ -65,7 +65,7 @@ The following image provides the flow to add authentication to external browsers
 
 2. Teams link opens in an external browser.
 
-   The Teams clients open the URL in an external browser after replacing the placeholders for `oauthRedirectMethod` and `authId` with suitable values. 
+   The Teams clients open the URL in an external browser after replacing the placeholders for `oauthRedirectMethod` and `authId` with suitable values.
 
    #### Example
 
@@ -83,11 +83,11 @@ The following image provides the flow to add authentication to external browsers
    |`authId` | The request-id Teams created for this specific authentication request that needs to be sent back to Teams through deeplink.|
 
     > [!TIP]
-    > The 3P app can marshal `authId`, `oauthRedirectMethod` in the OAuth `state` query parameter while generating the login URL for the OAuthProvider. The `state` contains the passed `authId` and `oauthRedirectMethod`, when OAuthProvider redirects back to the 3P server and the 3P app uses the values for sending authentication response back to Teams as described in **6. The 3P app server response to Teams**. 
+    > The 3P app can marshal `authId`, `oauthRedirectMethod` in the OAuth `state` query parameter while generating the login URL for the OAuthProvider. The `state` contains the passed `authId` and `oauthRedirectMethod`, when OAuthProvider redirects back to the 3P server and the 3P app uses the values for sending authentication response back to Teams as described in **6. The 3P app server response to Teams**.
 
 4. The 3P app server redirects to specified `url`.
 
-   The 3P app server redirects to OAuth providers auth page in the external browser. The `redirect_uri` is a dedicated route on the 3P app server. You can register `redirect_uri` in the OAuth provider’s dev console as static, the parameters need to be sent through the state object. 
+   The 3P app server redirects to OAuth providers auth page in the external browser. The `redirect_uri` is a dedicated route on the 3P app server. You can register `redirect_uri` in the OAuth provider’s dev console as static, the parameters need to be sent through the state object.
 
    #### Example
 
@@ -106,7 +106,7 @@ The following image provides the flow to add authentication to external browsers
       ```JavaScript
       const state = JSON.parse(req.query.state)
       if (state.oauthRedirectMethod === 'deeplink') {
-         return res.redirect('msteams://teams.microsoft.com/l/auth-callback?authId=${state.authId}&code=${req.query.code}')
+         return res.redirect('msteams://teams.microsoft.com/l/auth-callback?authId=${state.authId}&result=${req.query.code}')
       }
       else {
       // continue redirecting to a web-page that will call notifySuccess() – usually this method is used in Teams-Web
@@ -118,10 +118,10 @@ The following image provides the flow to add authentication to external browsers
    The 3P app generates a deeplink for Teams mobile in the following format, and sends the auth code with the session ID back to Teams.
 
    ```JavaScript
-   return res.redirect(`msteams://teams.microsoft.com/l/auth-callback?authId=${state.authId}&code=${req.query.code}`)
+   return res.redirect(`msteams://teams.microsoft.com/l/auth-callback?authId=${state.authId}&result=${req.query.code}`)
    ```
 
- 8. Teams calls success callback and sends result.
+8. Teams calls success callback and sends result.
 
     Teams calls the success callback and sends the result (auth code) to the 3P app. The 3P app receives the code in the success callback and use the code to retrieve the token, then the user information and update the user interface.
 
@@ -133,5 +133,5 @@ The following image provides the flow to add authentication to external browsers
 
 ## See also
 
-* [Configure identity providers](../../../concepts/authentication/configure-identity-provider.md)
+* [Configure identity providers](~/concepts/authentication/authentication.md)
 * [Microsoft Teams authentication flow for tabs](auth-flow-tab.md)

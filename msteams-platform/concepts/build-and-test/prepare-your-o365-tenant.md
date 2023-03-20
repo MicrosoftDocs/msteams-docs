@@ -1,9 +1,8 @@
 ---
 title: Prepare your Microsoft 365 tenant
-description: How to get started with Teams in Microsoft 365
+description: In this module, learn how to get started with Teams in Microsoft 365 and create your development environment
 ms.topic: how-to
 ms.localizationpriority: medium
-keywords: Configure Microsoft 365 tenant Teams uploading
 ---
 
 # Prepare your Microsoft 365 tenant
@@ -31,6 +30,9 @@ Enable Teams for your organization and for more information, see [enabling Teams
 
 ## Enable custom Teams apps and turn on custom app uploading
 
+> [!IMPORTANT]
+> If you've set up a Microsoft 365 Developer Program instant sandbox or a configurable sandbox with the Teams sample data pack, you can skip the steps to enable sideloading. The **Upload custom apps** setting is enabled by default in the Teams sample data pack.
+
 To turn on the custom app uploading or sideloading for your developer tenant:
 
 1. Sign in to [Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) with your admin credentials.
@@ -42,7 +44,7 @@ To turn on the custom app uploading or sideloading for your developer tenant:
     > [!Note]
     > It can take up to 24 hours for the **Teams** option to appear. You can [upload your custom app to a Teams environment](/microsoftteams/upload-custom-apps#validate) for testing and validation in that time.
 
-3. Navigate to **Teams apps** > **Setup Policies** > **Global**.
+3. Go to **Teams apps** > **Setup Policies** > **Global**.
 
    ![Turn on sideload view](~/assets/images/prepare-test-tenant/turn-on-sideload.png)
 
@@ -64,4 +66,6 @@ For complete information on how these settings interact, see [manage custom app 
 
 ## See also
 
-[Add test data to your Microsoft 365 test tenant](~/concepts/build-and-test/test-data.md)
+* [Test your app](test-app-overview.md)
+* [Add test data to your Microsoft 365 test tenant](~/concepts/build-and-test/test-data.md)
+* [Microsoft 365 Multi-Geo](/microsoft-365/enterprise/microsoft-365-multi-geo?view=o365-worldwide&preserve-view=true)

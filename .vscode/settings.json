@@ -3,30 +3,52 @@
         "addpart",
         "anclear",
         "appsource",
+        "Appstore",
+        "aspnet",
+        "blazorapp",
         "botid",
         "Chatbots",
+        "commandbot",
         "Contoso",
         "debugcheck",
+        "freemium",
         "lajanuar",
         "laujan",
+        "lightbox",
         "localizationpriority",
         "microsoftteams",
+        "moodleinstructions",
+        "msgex",
+        "msteams",
         "nextstepaction",
         "officedev",
+        "outgoingwebhook",
+        "preauthorizedapplications",
+        "redirections",
+        "requiredresourceaccess",
+        "Restify",
         "sideload",
         "sideloaded",
         "sideloading",
         "surbhigupta",
         "teamsfx",
+        "upsell",
+        "virality",
         "Webpart",
         "webparts",
         "zyxiaoyuer"
     ],
+    "[markdown]": {
+          "editor.formatOnSave": "false",
+          "editor.wordWrap": "on",
+          "editor.renderWhitespace": "all",
+          "editor.acceptSuggestionOnEnter": "off"
+        },
     "markdownlint.config": {
         "MD028": false,
         "MD025": {
             "front_matter_title": ""
-        }
+        },
     },
     "docsImages.maxWidth": 0
 }

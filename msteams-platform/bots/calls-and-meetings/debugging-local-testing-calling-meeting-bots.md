@@ -1,15 +1,14 @@
 ---
 title: Debug your calling and meeting bot locally
-description: Learn how you can also use ngrok to develop calls and online meeting bots on your local PC.
+description: In this module, learn how you can also use ngrok to develop calls and online meeting bots on your local PC.
 ms.topic: how-to
 ms.localizationpriority: medium
-keywords: local development ngrok tunnel
 ms.date: 11/18/2018
 ---
 
 # Develop calling and online meeting bots on your local PC
 
-In [Run and debug your app](../../concepts/build-and-test/debug.md) we explain how to use [ngrok](https://ngrok.com) to create a tunnel between your local computer and the internet. In this topic, learn how you can also use ngrok and your local PC to develop bots that support calls and online meetings.
+In [Run and debug your app](../../concepts/build-and-test/debug.md), we explain how to use [ngrok](https://ngrok.com) to create a tunnel between your local computer and the internet. In this topic, learn how you can also use ngrok and your local PC to develop bots that support calls and online meetings.
 
 Messaging bots use HTTP, but calls and online meeting bots use the lower-level TCP. Ngrok supports TCP tunnels in addition to HTTP tunnels.
 
@@ -17,7 +16,7 @@ Messaging bots use HTTP, but calls and online meeting bots use the lower-level T
 
 Go to [ngrok](https://ngrok.com) and sign up for a free account or log into your existing account. After you've signed in, go to the [dashboard](https://dashboard.ngrok.com) and get your auth token.
 
-Create an ngrok configuration file `ngrok.yml` and add the following line. For more information on where the file can be located, see [ngrok](https://ngrok.com/docs#config):
+Create a ngrok configuration file `ngrok.yml` and add the following line. For more information on where the file can be located, see [ngrok](https://ngrok.com/docs#config):
 
   `authtoken: <Your-AuthToken>`
 
@@ -41,7 +40,7 @@ tunnels:
 
 Application-hosted media uses certificates and TCP tunnels. The following steps are required:
 
-1. Ngrok's public TCP endpoints have fixed URLs. They are `0.tcp.ngrok.io`, `1.tcp.ngrok.io`, and so on. You must have a DNS CNAME entry for your service that points to these URLs. For example, let's say `0.bot.contoso.com` refers to `0.tcp.ngrok.io`, `1.bot.contoso.com` refers to `1.tcp.ngrok.io`, and so on.
+1. Ngrok's public TCP endpoints have fixed URLs. They're `0.tcp.ngrok.io`, `1.tcp.ngrok.io`, and so on. You must have a DNS CNAME entry for your service that points to these URLs. For example, let's say `0.bot.contoso.com` refers to `0.tcp.ngrok.io`, `1.bot.contoso.com` refers to `1.tcp.ngrok.io`, and so on.
 2. An SSL certificate is required for your URLs. To make it easy, use an SSL certificate issued to a wild card domain. In this case, it would be `*.bot.contoso.com`. This SSL certificate is validated by the media SDK, so it must match your bot's public URL. Note the thumbprint and install it in your machine certificates.
 3. Now, set up a TCP tunnel to forward the traffic to localhost. Write the following lines into your ngrok.yml:
 
@@ -57,7 +56,7 @@ Now that the ngrok configuration is ready, launch it:
 
   `ngrok.exe start -all -config <Path to your ngrok.yml>`
 
-This starts ngrok and defines the public URLs which provide the tunnels to your localhost. Following is an example of the output:
+This starts ngrok and defines the public URLs, which provide the tunnels to your localhost. Following is an example of the output:
 
 ```cmd
 Forwarding  http://signal.ngrok.io -> localhost:12345
@@ -114,5 +113,10 @@ var mediaPlatform = new MediaPlatformSettings
 ## Caveats
 
 * Ngrok free accounts **don't** provide end-to-end encryption. The HTTPS data ends at the ngrok URL and the data flows unencrypted from ngrok to `localhost`. If you require end-to-end encryption, consider a paid ngrok account. See [TLS tunnels](https://ngrok.com/docs#tls) for steps on setting up secure end-to-end tunnels.
-* Because the bot callback URL is dynamic, incoming call scenarios require you to frequently update your ngrok endpoints. One way to fix this is to use a paid ngrok account which provides fixed subdomains to which you can point your bot and the platform.
+* Because the bot callback URL is dynamic, incoming call scenarios require you to frequently update your ngrok endpoints. One way to fix this is to use a paid ngrok account, which provides fixed subdomains to which you can point your bot and the platform.
 * Ngrok tunnels can also be used with [Azure Service Fabric](/azure/service-fabric/service-fabric-overview). For an example of how to do this, see the [HueBot sample app](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/LocalMediaSamples/HueBot/HueBot).
+
+## See also
+
+* [Test your app](../../concepts/build-and-test/test-app-overview.md)
+* [Test and debug your bot locally with IDE](../how-to/debug/locally-with-an-ide.md)

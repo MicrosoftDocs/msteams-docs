@@ -1,11 +1,11 @@
 ---
 title: Configure default install options for your app
-description: Describes how to specify your app's default install options and default capability for shared scopes.
+description: Learn how to specify your Teams app's default install options and default capability for shared scopes.
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ---
-# Configure default install options for your Microsoft Teams app
+# Configure default install options for Teams app
 
 It’s common for an app to support multiple scenarios in Teams, but you may have designed it with a specific scope and capability in mind. For example, if your app is primarily for team or channel use, you can make sure that the first install option users see in the store is **Add to a team**.
 
@@ -23,7 +23,7 @@ If your app's primary capability is a bot, you can also make the bot the default
 
 ## Configure your app's default install scope
 
-Configure the default install scope for your app. You can set only one scope at a time.
+Configure the default install scope for your app. You can set only one scope at a time. For more information, see [app manifest schema](~/resources/schema/manifest-schema.md).
 
 To configure the default install scope in your app manifest:
 
@@ -33,9 +33,6 @@ To configure the default install scope in your app manifest:
     ```json
     "defaultInstallScope": "meetings",
     ```
-
-> [!NOTE]
-> For more information, see the [app manifest schema](~/resources/schema/manifest-schema.md).
 
 ## Configure the default capability for shared scopes
 
@@ -61,10 +58,11 @@ To configure details in app manifest:
     }
     ```
 
-> [!NOTE]
-> For more information, see the [app manifest schema](~/resources/schema/manifest-schema.md).
-
 ## Next step
 
 > [!div class="nextstepaction"]
 > [Create your app package](~/concepts/build-and-test/apps-package.md)
+
+## See also
+
+[Distribute your Microsoft Teams app](apps-publish-overview.md)

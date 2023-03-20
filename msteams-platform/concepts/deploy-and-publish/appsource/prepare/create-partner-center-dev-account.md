@@ -57,7 +57,7 @@ Visit the [publishers support page](https://aka.ms/marketplacepublishersupport) 
 
 <details>
 
-<summary><b>How do I manage my Office Store account in Partner Center?</b></summary>
+<summary><b>How do I manage my Microsoft 365 Store account in Partner Center?</b></summary>
 
 See [manage your account through Partner Center](/office/dev/store/manage-account-settings-and-profile) for information.
 
@@ -202,7 +202,14 @@ The following resources can also assist:
 
 </details>
 
+> [!NOTE]
+> To enable end-users to install your app on the Teams iOS platform, see [Update Apple App Store Connect Team ID on Partner Center](update-apple-store-team-connect-id.md).
+
 ## Next step
 
 > [!div class="nextstepaction"]
 > [Prepare your store submission](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)
+
+## See also
+
+[Publish your app to the Microsoft Teams store](../publish.md)

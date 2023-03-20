@@ -1,14 +1,17 @@
 ---
-title: Add authentication to your message extension
+title: Add third party authentication to your message extension
 author: surbhigupta
-description: Learn how to add authentication to a messaging extension using code examples and sample
+description: Enable authentication in Teams message extension app using third-party provider with Azure AD configuration and code sample.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
 ---
-# Add authentication to your message extension
+# Add third party authentication to your message extension
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
+
+> [!NOTE]
+> After adding authentication to the message extension, you must add "**token.botframework.com**" to the "**validDomains**" section in the manifest.
 
 ## Identify the user
 
@@ -36,11 +39,11 @@ The sequence is as follows:
 1. After the user signs in, you should close your window and send an **authentication code** to the Teams client.
 1. The Teams client then reissues the query to your service, which includes the authentication code passed in Step 5.
 
-Your service should verify that the authentication code received in step 6 matches the one from step 5. This ensures that a malicious user doesn't try to spoof or compromise the sign in flow. This effectively "closes the loop" to finish the secure authentication sequence.
+Your service should verify the authentication code received in step 6 matches with step 5. The steps ensure that a malicious user doesn't try to spoof or compromise the sign-in flow. The flow effectively "closes the loop" to finish the secure authentication sequence.
 
 ### Respond with a sign in action
 
-To prompt an unauthenticated user to sign in, respond with a suggested action of type `openUrl` that includes the authentication URL.
+To prompt an unauthenticated user, to sign in, respond with a suggested action of type `openUrl` that includes the authentication URL.
 
 #### Response example for a sign in action
 
@@ -68,16 +71,16 @@ To prompt an unauthenticated user to sign in, respond with a suggested action of
 
 ### Start the sign in flow
 
-Your sign in experience must be responsive and fit within a pop-up window. It should integrate with the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client), which uses message passing.
+Your sign in experience must be responsive and fit within a pop-up window. It should integrate with the [Microsoft Teams JavaScript client library](/javascript/api/overview/msteams-client), which uses message passing.
 
-As with other embedded experiences running inside Microsoft Teams, your code inside the window needs to first call `microsoftTeams.initialize()`. If your code performs an OAuth flow, you can pass the Teams user ID into your window, which then passes it to the OAuth sign-in URL.
+As with other embedded experiences running inside Microsoft Teams, your code inside the window needs to first call `app.initialize()`. If your code performs an OAuth flow, you can pass the Teams user ID into your window, which then passes it to the OAuth sign-in URL.
 
 ### Complete the sign in flow
 
 When the sign in request completes and redirects back to your page, it must perform the following steps:
 
-1. Generate a security code, a random number. You must cache this code on your service, along with the credentials obtained through the sign-in flow, such as OAuth 2.0 tokens.
-1. Call `microsoftTeams.authentication.notifySuccess` and pass the security code.
+1. Generate a security code, a random number. You must cache this code on your service, with the credentials obtained through the sign-in flow, such as OAuth 2.0 tokens.
+1. Call `authentication.notifySuccess` and pass the security code.
 
 At this point, the window closes and the control is passed to the Teams client. The client now reissues the original user query, along with the security code in the `state` property. Your code can use the security code to look up the credentials stored earlier to complete the authentication sequence and then complete the user request.
 
@@ -132,10 +135,10 @@ At this point, the window closes and the control is passed to the Teams client. 
 
 ## Code sample
 
-|**Sample name** | **Description** |**.NET** | **Node.js**|
-|----------------|-----------------|--------------|----------------|
-|Message extensions - auth and config | A Message Extension that has a configuration page, accepts search requests, and returns results after the user has signed in. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config)|
+|**Sample name** | **Description** |**.NET** | **Node.js**| **Manifest**|
+|----------------|-----------------|--------------|----------------|----------------|
+|Message extensions - auth and config | A message extension that has a configuration page, accepts search requests, and returns results after the user has signed in. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search-auth-config/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search-sso-config/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search-auth-config/csharp/demo-manifest/msgext-search-auth-config.zip)|
 
 ## See also
 
-[Single sign-on (SSO) support for message extensions](~/messaging-extensions/how-to/enable-sso-auth-me.md)
+[Enable SSO for your bot and message extension app](../../bots/how-to/authentication/bot-sso-overview.md)

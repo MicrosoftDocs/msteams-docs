@@ -1,7 +1,7 @@
 ---
 title: Respond to the task module submit action
 author: surbhigupta
-description: Describes how to respond to the task module submit action from a messaging extension action command with Proactive message, another task module, Adaptive card bot, and more using Code samples.
+description: Learn how to respond to the task module submit action from a message extension action command with Proactive message. Define search commands and respond to searches.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
@@ -12,32 +12,37 @@ ms.author: anclear
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
 This document guides you on how your app responds to the action commands, such as user's task module submit action.
-After a user submits the task module, your web service receives a `composeExtension/submitAction` invoke message with the command ID and parameter values. Your app has five seconds to respond to invoke, otherwise the user receives an error message **Unable to reach the app**, and any reply to invoke is ignored by the Teams client.
+After a user submits the task module, your web service receives a `composeExtension/submitAction` invoke message with the command ID and parameter values. Your app has five seconds to respond to the invoke.  
 
 You have the following options to respond:
 
-* No response: Use the submit action to trigger a process in an external system and not provide any feedback to the user. It is useful for long-running processes and to provide feedback alternately. For example, you can give feedback with a [proactive message](~/bots/how-to/conversations/send-proactive-messages.md).
+* No response: Use the submit action to trigger a process in an external system and not provide any feedback to the user. It's useful for long-running processes and to provide feedback alternately. For example, you can give feedback with a [proactive message](~/bots/how-to/conversations/send-proactive-messages.md).
 * [Another task module](#respond-with-another-task-module): You can respond with an additional task module as part of a multi-step interaction.
 * [Card response](#respond-with-a-card-inserted-into-the-compose-message-area): You can respond with a card that the user can interact with or insert into a message.
 * [Adaptive Card from bot](#bot-response-with-adaptive-card): Insert an Adaptive Card directly into the conversation.
 * [Request the user to authenticate](~/messaging-extensions/how-to/add-authentication.md).
 * [Request the user to provide additional configuration](~/get-started/first-message-extension.md).
 
-For authentication or configuration, after the user completes the process, the original invoke is resent to your web service. The following table shows which types of responses are available based on the invoke location `commandContext` of the message extension:
+If the app doesn't respond within five seconds, the Teams client will retry the request twice before it sends an error message **Unable to reach the app**. If the bot replies after the timeout, the response is ignored.
+
+> [!NOTE]
+> The app must defer any long-running actions after the bot replies to the invoke request. The long-running action results can be delivered as a message.
+
+For authentication or configuration, after the user completes the process, the original invoke is resent to your web service. The following table shows which types of responses are available, based on the invoke location `commandContext` of the message extension:
 
 |Response Type | Compose | Command bar | Message |
 |--------------|:-------------:|:-------------:|:---------:|
-|Card response | ✔ | ✔ | ✔ |
-|Another task module | ✔ | ✔ | ✔ |
-|Bot with Adaptive Card | ✔ | x | ✔ |
-| No response | ✔ | ✔ | ✔ |
+|Card response | ✔️ | ✔️ | ✔️ |
+|Another task module | ✔️ | ✔️ | ✔️ |
+|Bot with Adaptive Card | ✔️ | ❌ | ✔️ |
+| No response | ✔️ | ✔️ | ✔️ |
 
 > [!NOTE]
 >
 > * When you select **Action.Submit** through ME cards, it sends invoke activity with the name **composeExtension**, where the value is equal to the usual payload.
 > * When you select **Action.Submit** through conversation, you receive message activity with the name **onCardButtonClicked**, where the value is equal to the usual payload.
 
-If the app contains a conversational bot, install the bot in the conversation and then load the task module. The bot is useful to get additional context for the task module. To install conversational bot, see [Request to install your conversational bot](create-task-module.md#request-to-install-your-conversational-bot).
+If the app contains a conversational bot, install the bot in the conversation, and then load the task module. The bot is useful to get additional context for the task module. To install conversational bot, see [Request to install your conversational bot](create-task-module.md#request-to-install-your-conversational-bot).
 
 ## The submitAction invoke event
 
@@ -210,18 +215,18 @@ To configure the poll:
 1. The user selects the message extension to invoke the task module.
 1. The user configures the poll with the task module.
 1. After submitting the task module, the app uses the information provided to build the poll as an Adaptive Card and sends it as a `botMessagePreview` response to the client.
-1. The user can then preview the Adaptive Card message before the bot inserts it into the channel. If the app is not a member of the channel, select `Send` to add it.
+1. The user can then preview the Adaptive Card message before the bot inserts it into the channel. If the app isn't a member of the channel, select `Send` to add it.
 
     > [!NOTE]
     >
     > * The users can also select to `Edit` the message, which returns them to the original task module.
     > * Interaction with the Adaptive Card changes the message before sending it.
     >
-1. After the user selects `Send` the bot posts the message to the channel.
+1. After the user selects `Send`, the bot posts the message to the channel.
 
 ## Respond to initial submit action
 
-Your task module must respond to the initial `composeExtension/submitAction` message with a preview of the card that the bot sends to the channel. The user can verify the card before sending, and try to install your bot in the conversation if the bot is not already installed.
+Your task module must respond to the initial `composeExtension/submitAction` message with a preview of the card that the bot sends to the channel. The user can verify the card before sending, and try to install your bot in the conversation if the bot is already installed.
 
 # [C#/.NET](#tab/dotnet)
 
@@ -594,10 +599,10 @@ The following section is a description of the entities in the `OnBehalfOf` Array
   
 ## Code sample
 
-| Sample Name           | Description | .NET    | Node.js   |
-|:---------------------|:--------------|:---------|:--------|
-|Teams message extension action| Describes how to define action commands, create task module, and  respond to task module submit action. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) |
-|Teams message extension search   |  Describes how to define search commands and respond to searches.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
+| Sample name           | Description | .NET    | Node.js   | Manifest|
+|:---------------------|:--------------|:---------|:--------|:--------|
+|Teams message extension action| Describes how to define action commands, create task module, and  respond to task module submit action. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/nodejs) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/csharp/demo-manifest/msgext-action.zip)|
+|Teams message extension search   |  Describes how to define search commands and respond to searches.        |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp/demo-manifest/msgext-search.zip)|
 
 ## Next Step
 
@@ -606,4 +611,6 @@ The following section is a description of the entities in the `OnBehalfOf` Array
 
 ## See also
 
-[Respond to search command](~/messaging-extensions/how-to/search-commands/respond-to-search.md)
+* [App manifest schema for Teams](../../../resources/schema/manifest-schema.md)
+* [Respond to search command](../search-commands/respond-to-search.md)
+* [Message extensions](../../what-are-messaging-extensions.md)

@@ -1,14 +1,12 @@
 ---
-title: Optimize your bot with rate limiting in Teams
-description: Learn about handling rate limit for bots with Per bot per thread limit and per limit for all bots using Code examples. Additionally, learn rate limiting best practices in Microsoft Teams.
-ms.topic: conceptual
+title: Rate limiting for bots
+description: Learn how to optimize bot with rate limiting. Detect transient exceptions, per bot thread limit. You can also perform an exponential backoff.
 ms.localizationpriority: medium
-keywords: teams bots rate limiting
 ---
 
 # Optimize your bot with rate limiting in Teams
 
-Rate limiting is a method to limit messages to a certain maximum frequency. As a general principle, your application must limit the number of messages it posts to an individual chat or channel conversation. This ensures an optimal experience and messages do not appear as spam to your users.
+Rate limiting is a method to limit messages to a certain maximum frequency. As a general principle, your application must limit the number of messages it posts to an individual chat or channel conversation. This ensures an optimal experience and messages don't appear as spam to your users.
 
 To protect Microsoft Teams and its users, the bot APIs provide a rate limit for incoming requests. Apps that go over this limit receive an `HTTP 429 Too Many Requests` error status. All requests are subject to the same rate limiting policy, including sending messages, channel enumerations, and roster fetches.
 
@@ -41,7 +39,7 @@ After you handle rate limits for bots, you can handle `HTTP 429` responses using
 
 In general, you must take simple precautions to avoid receiving `HTTP 429` responses. For example, avoid issuing multiple requests to the same personal or channel conversation. Instead, create a batch of the API requests.
 
-Using an exponential backoff with a random jitter is the recommended way to handle 429s. This ensures that multiple requests do not introduce collisions on retries.
+Using an exponential backoff with a random jitter is the recommended way to handle 429s. This ensures that multiple requests don't introduce collisions on retries.
 
 After you handle `HTTP 429` responses, you can go through the example for detecting transient exceptions.
 
@@ -115,7 +113,7 @@ You can also handle rate limit using the per bot per thread limit.
 
 ## Per bot per thread limit
 
-The per bot per thread limit controls the traffic that a bot is allowed to generate in a single conversation. A conversation is 1:1 between bot and user, a group chat, or a channel in a team. So, if the application sends one bot message to each user, the thread limit does not throttle.
+The per bot per thread limit controls the traffic that a bot is allowed to generate in a single conversation. A conversation is 1:1 between bot and user, a group chat, or a channel in a team. So, if the application sends one bot message to each user, the thread limit doesn't throttle.
 
 >[!NOTE]
 >
@@ -151,7 +149,7 @@ You can also handle rate limit using the per thread limit for all bots.
 
 ## Per thread limit for all bots
 
-The per thread limit for all bots controls the traffic that all bots are allowed to generate across a single conversation. A conversation here is 1:1 between bot and user, a group chat, or a channel in a team.
+The per thread limit for all bots controls the traffic that all bots are allowed to generate across a single conversation. A conversation here's 1:1 between bot and user, a group chat, or a channel in a team.
 
 The following table provides the per thread limit for all bots:
 
@@ -171,4 +169,9 @@ The following table provides the per thread limit for all bots:
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Calls and meetings bots](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)
+> [Calls and online meetings bots](../calls-and-meetings/calls-meetings-bots-overview.md)
+
+## See also
+
+* [Build bots for Teams](../what-are-bots.md)
+* [Manage a long-running operation](/azure/bot-service/bot-builder-howto-long-operations-guidance?view=azure-bot-service-4.0&preserve-view=true)

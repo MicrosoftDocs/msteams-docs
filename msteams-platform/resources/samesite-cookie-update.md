@@ -2,7 +2,6 @@
 title: SameSite cookie attribute 
 author: laujan
 description: Learn about Types of cookies, including SameSite cookies, their attributes, their implications in Teams tabs, task modules, and message extensions, and their authentication in Teams
-keywords: cookie attributes samesite
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur
@@ -10,7 +9,7 @@ ms.author: lomeybur
 
 # SameSite cookie attribute
 
-Cookies are text strings sent from websites and stored on a computer by the web browser. They are used for authentication and personalization. For example, cookies are used to recall stateful information, preserve user settings, record browsing activity, and display relevant ads. Cookies are always linked to a particular domain and are installed by various parties.
+Cookies are text strings sent from websites and stored on a computer by the web browser. They're used for authentication and personalization. For example, cookies are used to recall stateful information, preserve user settings, record browsing activity, and display relevant ads. Cookies are always linked to a particular domain and are installed by various parties.
 
 ## Types of cookies
 
@@ -18,9 +17,9 @@ The cookie types and their corresponding scopes are as follows:
 
 |Cookie|Scope|
 | ------ | ------ |
-|First party cookie|A first party cookie is created by websites that a user visits. It is used to save data, such as shopping cart items, sign in credentials. For example, authentication cookies, and other analytics.|
+|First party cookie|A first party cookie is created by websites that a user visits. It's used to save data, such as shopping cart items, sign in credentials. For example, authentication cookies, and other analytics.|
 |Second party cookie|A second party cookie is technically the same as a first party cookie. The difference is that data is shared with a second party through a data partnership agreement. For example, [Microsoft Teams analytics and reporting](/microsoftteams/teams-analytics-and-reports/teams-reporting-reference). |
-|Third party cookie|A third party cookie is installed by a domain other than the one the user explicitly visited and is mainly used for tracking. For example, **Like** buttons, ad serving, and live chats.|
+|Third party cookie|A third party cookie is installed by a domain other than the one the user explicitly visited and is used for tracking. For example, **Like** buttons, ad serving, and live chats.|
 
 ## Cookies and HTTP requests
 
@@ -42,7 +41,7 @@ SameSite cookie attributes are as follows:
 | -------- | ----------- | --------|--------|
 | **Lax**  | Cookies are sent automatically only in a **first party** context and with HTTP GET requests. SameSite cookies are withheld on cross site sub requests, such as calls to load images or iframes. They sent when a user navigates to the URL from an external site, for example, by following a link.| **Default** |`Set-Cookie: key=value; SameSite=Lax`|
 | **Strict** |The browser only sends cookies for first party context requests. These are requests originating from the site that set the cookie. If the request originated from a different URL than that of the current location, none of the cookies tagged with the `Strict` attribute are sent.| Optional |`Set-Cookie: key=value; SameSite=Strict`|
-| **None** | Cookies are sent in both first party context and cross origin requests; however, the value must be explicitly set to **`None`** and all browser requests **must follow the HTTPS protocol** and include the **`Secure`** attribute which requires an encrypted connection. Cookies that do not adhere to that requirement are **rejected**. <br/>**Both attributes are required together**. If  **`None`** is specified without **`Secure`**  or if the HTTPS protocol is not used, then the third party cookies are rejected.| Optional, but, if set, the HTTPS protocol is required. |`Set-Cookie: key=value; SameSite=None; Secure` |
+| **None** | Cookies are sent in both first party context and cross origin requests; however, the value must be explicitly set to **`None`** and all browser requests **must follow the HTTPS protocol** and include the **`Secure`** attribute, which requires an encrypted connection. Cookies that don't adhere to that requirement are **rejected**. <br/>**Both attributes are required together**. If  **`None`** is specified without **`Secure`**  or if the HTTPS protocol isn't used, then the third party cookies are rejected.| Optional, but, if set, the HTTPS protocol is required. |`Set-Cookie: key=value; SameSite=None; Secure` |
 
 ## Teams implications and adjustments
 
@@ -56,7 +55,7 @@ SameSite cookie attributes are as follows:
 ### Tabs, task modules, and message extensions
 
 * Teams tabs use `<iframes>` to embed content that is viewed at a top level or first party context.
-* Task modules allow you to create modal popup experiences in your Teams application. Similar to a tab, a modal window opens inside the current page.
+* Task modules allow you to create modal pop-up experiences in your Teams application. Similar to a tab, a modal window opens inside the current page.
 * Message extensions allow you to insert enriched content into a chat message from external resources.
 
 Any cookies used by embedded content are considered as third party when the site is displayed in an `<iframe>`. In addition, if any remote resources on a page rely on cookies being sent with a request `<img>` and `<script>` tags, external fonts, and personalized content, you must ensure those are marked for cross site usage, such as `SameSite=None; Secure` or ensure that a fallback is in place.
@@ -69,11 +68,11 @@ You must use the web based authentication flow for the following:
 * Configuration page, task module, and message extension.
 * Conversational bot with a task module.
 
-According to the updated SameSite restrictions, a browser does not add a cookie to an already authenticated web site if the link derives from an external site. You must ensure your authentication cookies are marked for cross site usage `SameSite=None; Secure` or ensure that a fallback is in place.
+According to the updated SameSite restrictions, a browser doesn't add a cookie to an already authenticated web site if the link derives from an external site. You must ensure your authentication cookies are marked for cross site usage `SameSite=None; Secure` or ensure that a fallback is in place.
 
 ## Android System WebView
 
-Android WebView is a Chrome system component that allows Android apps to display the web content. While the new restrictions are default, starting with Chrome 80, they are not immediately enforced on WebViews. They will be applied in the future. To prepare, Android allows native apps to set cookies directly through the [CookieManager API](https://developer.android.com/reference/android/webkit/CookieManager).
+Android WebView is a Chrome system component that allows Android apps to display the web content. While the new restrictions are default, starting with Chrome 80, they aren't immediately enforced on WebViews. They'll be applied in the future. To prepare, Android allows native apps to set cookies directly through the [CookieManager API](https://developer.android.com/reference/android/webkit/CookieManager).
 
 > [!NOTE]
 >
@@ -82,6 +81,7 @@ Android WebView is a Chrome system component that allows Android apps to display
 
 ## See also
 
+* [Localize your app](../concepts/build-and-test/apps-localization.md)
 * [SameSite examples](https://github.com/GoogleChromeLabs/samesite-examples)
 * [SameSite cookie recipes](https://web.dev/samesite-cookie-recipes/)
 * [Known Incompatible Clients]( https://www.chromium.org/updates/same-site/incompatible-clients)

@@ -8,7 +8,7 @@ brand: teams
 metadata:
   title: Microsoft Teams Platform developer documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
   description: The Microsoft Teams developer platform makes it easy for developers to integrate their own apps and services to improve productivity, make decisions faster, provide focus by reducing context switching, and create collaboration around existing content and workflows. # Required; article description that is displayed in search results. < 160 chars.
-  ms.service: msteams #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.service: msteams
   ms.topic: hub-page # Required
   ms.collection: collection # Optional; Remove if no collection is used.
   author: akjo #Required; your GitHub user alias, with correct capitalization.
@@ -53,24 +53,27 @@ conceptualContent:
   # Card
     - title: Learn
       links:
-        - url: /learn/modules/intro-microsoft-teams-apps
+        - url: /training/modules/microsoft-teams-publish-app-to-store
+          itemType: learn
+          text: Publish Teams apps in Microsoft Teams store
+        - url: /training/modules/intro-microsoft-teams-apps
           itemType: learn
           text: Build apps for Microsoft Teams
-        - url: /learn/modules/embedded-web-experiences
+        - url: /training/modules/embedded-web-experiences
           itemType: learn
           text: Create embedded web experiences with tabs
-        - url:  /learn/modules/msteams-conversation-bots/
+        - url:  /training/modules/msteams-conversation-bots/
           itemType: learn
           text: Create conversational interactions with bots
-        - url: /learn/modules/msteams-messaging-extensions/
+        - url: /training/modules/msteams-messaging-extensions/
           itemType: learn
           text: Create task-oriented interactions with message extensions
-        - url: /learn/modules/msteams-task-modules/
+        - url: /training/modules/msteams-task-modules/
           itemType: learn
           text: Collect input and gather information with task modules
-        - url: /learn/modules/msteams-webhooks-connectors/
+        - url: /training/modules/msteams-webhooks-connectors/
           itemType: learn
-          text: Connect web services to channels and teams with webhooks and Office 365 Connectors
+          text: Connect web services to channels and teams with webhooks and connectors for Microsoft 365 Groups
         - url: /microsoftteams/platform/m365-apps/overview
           itemType: overview
           text: Extend Teams apps across Microsoft 365
@@ -101,6 +104,15 @@ conceptualContent:
    # Card
     - title: Explore
       links:
+        - url: concepts/deploy-and-publish/appsource/post-publish/app-growth/overview-app-growth.md
+          itemType: reference
+          text: Plan your app growth in Teams
+        - url: concepts/design/overview-analytics.md
+          itemType: reference
+          text: Plan analytics for Teams apps
+        - url: /microsoftteams/platform/apps-in-teams-meetings/teams-live-share-overview
+          itemType: concept
+          text: Enhanced collaboration with Live Share SDK
         - url: /microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/include-saas-offer
           itemType: concept
           text: Monetize your Teams app with a transactable SaaS offer
@@ -116,7 +128,7 @@ conceptualContent:
         - url:  /microsoftteams/platform/resources/schema/manifest-schema
           itemType: reference
           text: Manifest schema for Teams apps
-        - url:  https://adoption.microsoft.com/extensibility-look-book/scenarios/
+        - url:  https://developer.microsoft.com/microsoft-teams/app-development-resources/?filter=commonscenarios
           itemType: reference
           text: Build scenarios for Teams apps
         - url:  https://developer.microsoft.com/microsoft-teams/app-development-resources
@@ -130,7 +142,7 @@ conceptualContent:
         - url: /microsoftteams/platform/bots/how-to/add-power-virtual-agents-bot-to-teams
           itemType: how-to-guide
           text: Integrate a Power Virtual Agents chatbot
-        - url: /microsoftteams/platform/concepts/build-and-test/share-to-teams
+        - url: /microsoftteams/platform/concepts/build-and-test/share-to-teams-from-web-apps
           itemType: reference
           text: Integrate Share-to-Teams button for your website
         - url: /microsoftteams/platform/tabs/how-to/tabs-in-sharepoint
@@ -155,7 +167,7 @@ conceptualContent:
         - url: https://aka.ms/microsoftteamscommunitycall
           itemType: overview
           text: Microsoft Teams community calls
-        - url: https://docs.microsoft.com/teamblog/
+        - url: https://techcommunity.microsoft.com/t5/microsoft-learn-blog/bg-p/MicrosoftLearnBlog
           itemType: whats-new
           text: Announcements
         - url: /microsoftteams/platform/feedback
@@ -186,12 +198,12 @@ tools:
     - title: Microsoft Teams Toolkit extension for Visual Studio Code
       # imageSrc should be square in ratio with no whitespace
       imageSrc: /media/logos/logo_vs-code.svg
-      url: /microsoftteams/platform/toolkit/visual-studio-code-overview
+      url: /microsoftteams/platform/toolkit/teams-toolkit-fundamentals
   # Card
     - title: Microsoft Teams Toolkit extension for Visual Studio
       # imageSrc should be square in ratio with no whitespace
       imageSrc: /media/logos/logo_vs-ide.svg
-      url: /microsoftteams/platform/toolkit/visual-studio-overview
+      url: /microsoftteams/platform/toolkit/teams-toolkit-overview-visual-studio
     # Card
     - title: Developer Portal
     # imageSrc should be square in ratio with no whitespace
@@ -201,12 +213,12 @@ tools:
     - title: Microsoft Graph SDKs
     # imageSrc should be square in ratio with no whitespace
       imageSrc: ./assets/icons/graph-icon-1.png
-      url: https://docs.microsoft.com/graph/sdks/sdks-overview  
+      url: https://learn.microsoft.com/graph/sdks/sdks-overview
     # Card
-    - title: JavaScript client SDK for tabs and other hosted experiences
+    - title: Microsoft Teams JavaScript client library (TeamsJS) for tabs and other hosted experiences
       # imageSrc should be square in ratio with no whitespace
       imageSrc: ./assets/icons/logo_js.png
-      url: /microsoftteams/platform/tabs/how-to/using-teams-client-sdk
+      url: /microsoftteams/platform/tabs/how-to/using-teams-client-library
     # Card
     - title: Node.js Bot Framework SDK for bots and message extensions
     # imageSrc should be square in ratio with no whitespace

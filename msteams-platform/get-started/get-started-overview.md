@@ -1,9 +1,8 @@
 ---
 title: Get started - Overview
-description: Overview to Get started for Microsoft Teams Developer Documentation
+description: Get started. Build your first Microsoft Teams app based on language (Node.js, C#, Java, and Python) and developement environment, understand app capabilities, SDKs.
 ms.localizationpriority: high
 ms.topic: reference
-keywords: Microsoft Teams developer samples
 ---
 # Get started
 
@@ -17,7 +16,7 @@ Here's an idea of what you'll learn:
 - Get experience with the Toolkit and SDKs.
 - Configure and build different types of Teams apps.
 
-Let's take a quick glance at the build environment options you can choose from, and the road-map to building and deploying a Teams app.
+Let's take a quick glance at the build environment options you can choose from, and the road-map to build and deploy a Teams app.
 
 :::image type="content" source="../assets/images/get-started/gs-build-options.png" alt-text="Illustration showing basic steps to build and deploy a Teams app":::
 
@@ -27,7 +26,7 @@ Depending on the capabilities you want for your app, choose an appropriate devel
 
 | App capabilities | User interactions | Recommended tools | SDKs | Technology stacks / Languages |
 |--------|-------------|--------|--------|--------|
-| Tabs | A full-screen embedded web experience. | Microsoft Visual Studio Code with Teams Toolkit extension, or [TeamsFx CLI](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) if you prefer using CLI | [TeamsFx SDK](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true) for core libs and [Teams client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) for UI functionalities | Web technology in general, HTML, CSS, and JavaScript (incl. React). |
+| Tabs | A full-screen embedded web experience. | Microsoft Visual Studio Code with Teams Toolkit extension, or [TeamsFx CLI](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) if you prefer using CLI | [TeamsFx SDK](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true) for core libs and [Teams JavaScript client library](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) for UI functionalities | Web technology in general, HTML, CSS, and JavaScript (incl. React). |
 | Bots | A chat bot that converses with members. | Visual Studio Code with Teams Toolkit extension, or [TeamsFx CLI](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) | [TeamsFx SDK](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true) and [Bot Framework SDK](https://dev.botframework.com/) | Node.js, C#, Java, and Python. |
 | Message extensions | Shortcuts for inserting external content into a conversation or taking action on messages. | Visual Studio Code with Teams Toolkit extension, or [TeamsFx CLI](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) | [TeamsFx SDK](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true) and [Bot Framework SDK](https://dev.botframework.com/) | Node.js, C#, Java, and Python. |
 
@@ -35,15 +34,16 @@ Depending on the capabilities you want for your app, choose an appropriate devel
 
 If you are already familiar with Yeoman workflow, you may prefer using [YoTeams Yeoman Generator](https://github.com/pnp/generator-teams/blob/master/docs/docs/tutorials/build-your-first-microsoft-teams-app.md) to build your apps.
 
-> [!NOTE]
-> If you have been using App Studio, we recommend that you'd try the Developer Portal to configure, distribute, and manage your Teams apps. <br> App studio will be deprecated by June 30, 2022.
-
 ## Build your first Teams app
 
 Now, let's build your first Teams app. But first, pick your language (or framework) and prepare your development environment.
 
 > [!div class="nextstepaction"]
-> [Build a Teams app with JavaScript using React](../sbs-gs-javascript.yml)
+> [Build a Teams tab app with JavaScript using React](../sbs-gs-javascript.yml)
+> [!div class="nextstepaction"]
+> [Build a Teams bot app with JavaScript](../sbs-gs-bot.yml)
+> [!div class="nextstepaction"]
+> [Build a Teams message extension app with JavaScript using React](../sbs-gs-msgext.yml)
 > [!div class="nextstepaction"]
 > [Build a Teams app with Blazor](../sbs-gs-blazorupdate.yml)
 > [!div class="nextstepaction"]
@@ -52,8 +52,13 @@ Now, let's build your first Teams app. But first, pick your language (or framewo
 > [Build a Teams app with C# or .NET](../sbs-gs-csharp.yml)
 > [!div class="nextstepaction"]
 > [Build a Teams app with Node.js](../sbs-gs-nodejs.yml)
+> [!div class="nextstepaction"]
+> [Build notification bot with JavaScript](../sbs-gs-notificationbot.yml)
+> [!div class="nextstepaction"]
+> [Build command bot with JavaScript](../sbs-gs-commandbot.yml)
+> [!div class="nextstepaction"]
 
 ## See also
 
-* [Microsoft Teams samples](https://github.com/OfficeDev/Microsoft-Teams-Samples#microsoft-teams-samples)
-* [Git and GitHub resources](/contribute/additional-resources)
+- [Microsoft Teams samples](https://github.com/OfficeDev/Microsoft-Teams-Samples#microsoft-teams-samples)
+- [Git and GitHub resources](/contribute/additional-resources)

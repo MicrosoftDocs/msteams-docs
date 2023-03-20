@@ -1,11 +1,10 @@
 ---
 title: Overview - Distribute your app
-description: Describes the options for publishing your Microsoft Teams app, uploading your app, and GCC.
+description: Learn to distribute, publish your app to Microsoft Teams store or to your org. Understand how app's endpoints must comply with your Government Community Cloud(GCC) organization's requirements.
 ms.topic: conceptual
 author: v-rpatkur
 ms.author: surbhigupta
 ms.localizationpriority: high
-keywords: deploy publish app upload gcc 
 ---
 
 # Distribute your Microsoft Teams app
@@ -14,11 +13,11 @@ You can provide your Microsoft Teams app to an individual, team, organization, o
 
 ## Configure default install options
 
-You configure default install options. For example, if your app's primary capability is a bot, you can also make the bot the default capability when a user installs your app to a team.
+You can configure default install options. For example, if your app's primary capability is a bot, you can make the bot the default capability when a user installs your app to a team.
 
-## Create your app package
+## Create Teams app package
 
-To distribute your Microsoft Teams app, you must have a valid app package.  An app package is a zip file that contains an **app manifest** and **app icons**.
+To distribute your Teams app, you must have a valid app package.  An app package is a zip file that contains an **app manifest** and **app icons**.
 
 ## Upload your app in Teams
 
@@ -29,11 +28,11 @@ Sideload an app for personal use, collaborating with your team, or testing and d
 
 For more information, see [upload your app in Teams](apps-upload.md).
 
-## Publish your app to your org
+## Publish to your org
 
 Make your app available to people in your org. This kind of distribution requires your Teams admin's approval.
 
-For more information, see [manage your apps in the Teams admin center](/MicrosoftTeams/manage-apps?toc=%2Fmicrosoftteams%2Fplatform%2Ftoc.json&bc=%2FMicrosoftTeams%2Fbreadcrumb%2Ftoc.json).
+For more information, see [manage your apps in the Teams admin center](/microsoftteams/manage-apps?toc=%2Fmicrosoftteams%2Fplatform%2Ftoc.json&bc=%2FMicrosoftTeams%2Fbreadcrumb%2Ftoc.json).
 
 ### Government Community Cloud (GCC) organizations
 
@@ -55,4 +54,8 @@ For more information, see [publish to the Teams store](~/concepts/deploy-and-pub
 
 ## See also
 
-[Microsoft 365 App Compliance Program](/microsoft-365-app-certification/overview)
+* [Microsoft 365 App Compliance Program](/microsoft-365-app-certification/overview)
+* [Create Teams app package](../build-and-test/apps-package.md)
+* [Publish to org](/microsoftteams/upload-custom-apps)
+* [Modify your app's registration in the Azure portal](/azure/active-directory/develop/howto-modify-supported-accounts)
+* [Growth lifecycle for your app](appsource/post-publish/app-growth/app-growth-lifecycle.md)

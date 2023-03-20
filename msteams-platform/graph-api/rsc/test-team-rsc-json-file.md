@@ -1,11 +1,10 @@
 ---
 title: Test resource-specific consent for a team in Teams
-description: Learn How to test resource-specific consent for a team in Teams using Postman with a sample JSON file.
+description: In this module, learn How to test resource-specific consent for a team in Teams using Postman with a sample JSON file.
 ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: how-to
-keywords: teams authorization OAuth SSO Azure AD rsc Postman Graph
 ---
 
 # Test team RSC Postman collection JSON
@@ -642,3 +641,8 @@ keywords: teams authorization OAuth SSO Azure AD rsc Postman Graph
  "protocolProfileBehavior": {}
 }
 ```
+
+## See also
+
+* [Test resource-specific consent permissions in Teams](test-resource-specific-consent.md)
+* [Resource-specific consent](resource-specific-consent.md)

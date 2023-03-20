@@ -1,11 +1,10 @@
 ---
 title: Create conversational tabs
 author: surbhigupta
-description: Learn to create conversational subentity chat for your channel tabs, to manage conversations using code samples
-keywords: teams tabs channel configurable 
+description: Learn to create conversational tabs in Microsoft Teams to start, continue, enhance, and close a conversation.
 ms.topic: conceptual
 ms.author: lomeybur
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ---
 
 # Create conversational tabs
@@ -35,7 +34,7 @@ microsoftTeams.conversations.openConversation(openConversationRequest);
    > The **channelId** is optional for channel tabs. However, it is recommended if you want to keep your implementation across channel and static tabs the same.
 * **title**: The title that is shown to the user in the chat panel.
 
-Most of these values can also be retrieved from the `getContext` API.
+Most of these values can also be retrieved from the [`app.getContext()`](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-getcontext&preserve-view=true) API (`microsoftTeams.getContext()` in TeamsJS v1). For more information, see [PageInfo interface](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-pageinfo&preserve-view=true)
 
 ```javascript
 microsoftTeams.conversations.openConversation({“subEntityId”:”task-1”, “entityId”: “tabInstanceId-1”, “channelId”: ”19:baa6e71f65b948d189bf5c892baa8e5a@thread.skype”, “title”: "Task Title”});
@@ -43,14 +42,17 @@ microsoftTeams.conversations.openConversation({“subEntityId”:”task-1”, �
 
 The following image shows the conversation panel:
 
-![Conversational sub-entities - start conversation](~/assets/images/tabs/conversational-subentities/start-conversation.png)
+:::image type="content" source="../../assets/images/tabs/conversational-subentities/start-conversation.png" alt-text="start conversations":::
 
 If the user starts a conversation, it's important to listen for the callback of that event to retrieve and save the **conversationId**:
 
 ```javascript
-microsoftTeams.conversations.onStartConversation = (conversationResponse) => {
-    // console.log(conversationReponse.conversationId)
-};
+⁠microsoftTeams.conversations.openConversation({
+    ...,
+    onStartConversation: (conversationResponse) => {
+        ⁠// console.log(conversationResponse)
+    },
+});
 ```
 
 The `conversationResponse` object contains information related to the conversation that was started. It's recommended that you save all the properties of this response object for later use.
@@ -61,7 +63,7 @@ After a conversation starts, subsequent calls to `openConversation()` require, t
 
 The following image shows the conversation panel with the appropriate conversation:
 
-![Conversational sub-entities - continue conversation](~/assets/images/tabs/conversational-subentities/continue-conversation.png)
+:::image type="content" source="../../assets/images/tabs/conversational-subentities/continue-conversation.png" alt-text="continue conversations":::
 
 ## Enhance a conversation
 
@@ -77,19 +79,22 @@ You can manually close the conversation view by calling the `closeConversation()
 microsoftTeams.conversations.closeConversation();
 ```
 
-You can also listen for an event when the conversation view is closed by a user.
+You can also listen for an event when the users selects **Close (X)** in the conversation view.
 
 ```javascript
-microsoftTeams.conversations.onCloseConversation = (conversationResponse) => {
-    // console.log(conversationResponse)
-};
+⁠microsoftTeams.conversations.openConversation({
+    ...,
+    onCloseConversation: (conversationResponse) => {
+        ⁠// console.log(conversationResponse)
+    },
+});
 ```
 
 ## Code sample
 
-| Sample name | Description | C# |Node.js|
-|-------------|-------------|------|----|
-|Create Conversational tab| Microsoft Teams tab sample app for demonstrating create conversation tab. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/nodejs) |
+| Sample name | Description | .NET |Node.js|Manifest|
+|-------------|-------------|------|----|----|
+|Create Conversational tab| Microsoft Teams tab sample app for demonstrating create conversation tab. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/nodejs) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/csharp/demo-manifest/tab-conversations.zip)|
 
 ## Next step
 
@@ -98,8 +103,8 @@ microsoftTeams.conversations.onCloseConversation = (conversationResponse) => {
 
 ## See also
 
-* [Teams tabs](~/tabs/what-are-tabs.md)
-* [Create a personal tab](~/tabs/how-to/create-personal-tab.md)
-* [Create a channel or group tab](~/tabs/how-to/create-channel-group-tab.md)
+* [Build tabs for Teams](../what-are-tabs.md)
+* [Create a personal tab](create-personal-tab.md)
+* [Create a channel tab or group tab](create-channel-group-tab.md)
+* [Build tabs with Adaptive Cards](build-adaptive-card-tabs.md)
 * [Tabs on mobile](~/tabs/design/tabs-mobile.md)
-* [Build tabs with Adaptive Cards](~/tabs/how-to/build-adaptive-card-tabs.md)
