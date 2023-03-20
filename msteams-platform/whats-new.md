@@ -26,7 +26,8 @@ Teams platform features that are available to all app developers.
 
 **2023 March**
 
-* ***March 20, 2023***: [Bots and message extensions are available in DOD](bots/what-are-bots.md)
+* ***March 20, 2023***: [Bots are available in DOD](bots/what-are-bots.md)
+* ***March 20, 2023***: [Message extensions are available in DOD](messaging-extensions/what-are-messaging-extensions.md)
 
 :::column-end:::
 :::row-end:::

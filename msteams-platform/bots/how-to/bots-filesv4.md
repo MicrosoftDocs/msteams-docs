@@ -9,7 +9,7 @@ ms.topic: how-to
 
 > [!IMPORTANT]
 > * This article is based on the v4 Bot Framework SDK.
-> * Bots don't support sending and receiving files in Government Community Cloud (GCC) High and Department of Defense (DOD) environments.
+> * Bots don't support sending and receiving files in Governmernt Community Cloud High (GCC-High) and Department of Defense (DOD) environments.
 
 There are two ways to send files to and receive files from a bot:
 
