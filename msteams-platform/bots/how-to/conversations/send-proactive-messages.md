@@ -25,7 +25,7 @@ To send a proactive message to a user, a group chat, or a team, your bot must ha
 
 You can [proactively install your app using Microsoft Graph](#proactively-install-your-app-using-graph) in a team, if necessary, or use a [custom app policy](/microsoftteams/teams-custom-app-policies-and-settings) to install an app in your teams and for organization's users. For certain scenarios, you must [proactively install your app using Graph](#proactively-install-your-app-using-graph). For a user to receive proactive messages, install the app for the user or make the user a part of a team in which the app is installed.
 
-Sending a proactive message is different from sending a regular message. There's no active `turnContext` to use for a reply. You must create the conversation before sending the message. For example, a new one-to-one chat or a new conversation thread in a channel. You can't create a new group chat or a new channel in a team with proactive messaging.
+Sending a proactive message is different from sending a regular message. There's no active `turnContext` to use for a reply. You must create the conversation before sending the message. For example, a new one-on-one chat or a new conversation thread in a channel. You can't create a new group chat or a new channel in a team with proactive messaging.
 
 To send a proactive message, follow these steps:
 
@@ -34,7 +34,7 @@ To send a proactive message, follow these steps:
 1. [Get the conversation ID](#get-the-conversation-id).
 1. [Send the message](#send-the-message).
 
-The code snippets in the [samples](#samples) section are to create a one-to-one conversation. For links to samples for both one-to-one conversations and group or channels messages, see [code sample](#code-sample). To use proactive messages effectively, see [best practices for proactive messaging](#best-practices-for-proactive-messaging).
+The code snippets in the [samples](#samples) section are to create a one-on-one conversation. For links to samples for both one-on-one conversations and group or channels messages, see [code sample](#code-sample). To use proactive messages effectively, see [best practices for proactive messaging](#best-practices-for-proactive-messaging).
 
 ## Get the user ID, team ID, or channel ID
 
@@ -174,6 +174,35 @@ Proactively message users that have previously not installed or interacted with 
 You can only install apps that are in your organizational app catalog or the Teams App Store.
 
 See [install apps for users](/graph/api/userteamwork-post-installedapps) in the Graph documentation and [proactive bot installation and messaging in Teams with Graph](../../../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md). There's also a [Microsoft .NET framework sample](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176) on the GitHub platform.
+
+### Examples
+
+Ensure that you authenticate and have a [bearer token](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0&tabs=multitenant&preserve-view=true) before creating a new conversation using the REST API. The following are REST API to create a conversation in different contexts:
+
+* [REST API to create a conversation in a one-on-one chat](../../../resources/bot-v3/bot-conversations/bots-conv-proactive.md#examples).
+* [REST API to create a conversation in a channel](../../../resources/bot-v3/bot-conversations/bots-conv-proactive.md#examples-for-creating-a-channel-conversation).
+* REST API to Update message in conversation: To update an existing activity within a conversation, include the conversationId and activityId in the request endpoint. To complete this scenario, you must cache the activity ID returned by the original post call.
+
+    ```http
+    PUT {Service URL of your bot}/v3/conversations/{conversationId}/activities/{activityId}
+    ```
+
+    ```json
+    
+    {
+        "type": "message",
+        "text": "This message has been updated"
+    }
+    ```
+
+    To update an existing activity within a conversation, include the `conversationId` and `activityId` in the request endpoint. To complete this scenario, you must cache the `activity ID` returned by the original post call.
+    If the call succeeds, the API returns with the following response object.
+
+    ```json
+    {
+        "id": "{{activityID}}"
+    }
+    ```
 
 ## Samples
 
