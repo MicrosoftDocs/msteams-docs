@@ -97,7 +97,9 @@ Install the Microsoft 365 app to preview your Teams personal tab app running on 
 
 1. Ensure you're using a Google Play [supported Android device](https://support.google.com/googleplay/answer/1727131).
 1. Launch the **Play Store** on your Android device.
-1. Search for your app of choice. For Microsoft 365 app (formerly Office), search office and select **Microsoft 365 app**. For Outlook, search outlook and select **Microsoft Outlook**.
+1. Search for your app of choice. 
+    1. For Microsoft 365 app (formerly Office), search office and select **Microsoft 365 app**.
+    1. For Outlook, search outlook and select **Microsoft Outlook**.
 1. Select the **Install** button.
 
     :::image type="content" source="images/office-android-install.png" alt-text="The screenshot is an example that shows the install button for the Office (Microsoft 365) app in Google Play Store.":::
@@ -108,17 +110,18 @@ Install the Microsoft 365 app to preview your Teams personal tab app running on 
 
 1. Launch the Microsoft 365 app and sign in with your test tenant credentials.
 1. Open your profile **(Me) > Settings** and scroll to the bottom of the menu.
-1. Ensure you use Microsoft 365 app version 16.0.15726.20000 or higher for Android and/or Outlook app version 4.2247.1 (52247812) or higher for Android.
+1. Ensure that you use Microsoft 365 app version 16.0.15726.20000 or higher for Android and Outlook app version 4.2247.1 (52247812) or higher for Android.
 
 ## Switch to the Developer Preview version of Teams
 
 Ensure that you switch to the [Public Developer Preview](../resources/dev-preview/developer-preview-intro.md) from your Microsoft Teams client.
 
-1. Sign in to Teams with your sandbox tenant credentials.
-1. From the ellipsis (**...**) menu next to your user profile, select **About** > **Developer preview**. A dialog appears, select **Switch to developer preview**.
-1. After the Teams app restarts, go to the ellipsis (**...**) menu next to your user profile and check if **Developer Preview** is selected.
+1. Sign in to Teams desktop client with your sandbox tenant credentials.
+1. Select the **Settings and more** icon (**...**) next to your user profile. 
+1. Select **About** > **Developer Preview**. A dialog appears, select **Switch to Developer Preview**. The Teams app restarts and the Teams version is changed to Developer Preview.
+1. Select the **Settings and more** icon (**...**) next to your user profile and check if the **Developer Preview** option is selected.
 
-    :::image type="content" source="images/teams-dev-preview.png" alt-text="The screenshot is an example that shows the public developer preview option in Teams.":::
+    :::image type="content" source="images/teams-dev-preview.png" alt-text="The screenshot is an example that shows the public Developer Preview option in Teams.":::
 
 ## Install Visual Studio Code and Teams Toolkit extension
 

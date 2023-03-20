@@ -217,9 +217,9 @@ To view your app in Outlook on the web:
 
 To view your app running in Outlook app for Android:
 
-1. Launch the Outlook app and sign in using your dev tenant account. If the Outlook app for Android was already running prior to sideloading your app in Teams, you need to restart it in order to see in your installed apps.
+1. Open the Outlook app on your android device and sign in using your developer tenant account. If the Outlook app for Android was already running prior to sideloading your app in Teams, restart Teams to see it in the installed apps section.
 1. Select the **More** icon. Your sideloaded app appears among installed apps.
-1. Select your app icon to launch your app in Outlook app for Android.
+1. Select your app icon to open your app in Outlook app for Android.
 
     :::image type="content" source="images/outlook-mobile-more.png" alt-text="The screenshot is an example that shows the 'More' option on the side bar of the Outlook app to see your installed personal tabs.":::
 
@@ -278,9 +278,9 @@ Provide feedback and report any issues with the Teams Toolkit debugging experien
 #### Mobile debugging
 
 > [!IMPORTANT]
-> For Mobile dubugging on Outlook for Android
-> 1. Select **More** and launch your sideloaded app to run within the Outlook app. 
-> 1. Follow steps 7-9.
+> To debug your app in Outlook for Android:
+> 1. Select the **More** icon in the Teams mobile client and open your sideloaded app to run within the Outlook app. 
+> 1. Follow the steps 7 through 9.
 
 Teams Toolkit (`F5`) debugging isn't yet supported with Microsoft 365 app for Android. Here's how to remotely debug your app running in Microsoft 365 app for Android:
 
