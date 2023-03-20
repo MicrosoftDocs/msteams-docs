@@ -213,6 +213,17 @@ To view your app in Outlook on the web:
 
     :::image type="content" source="images/outlook-web-more-apps.png" alt-text="The screenshot is an example that shows the ellipses (More apps) option on the side bar of outlook.com to see your installed personal tabs.":::
 
+### Outlook app for Mobile (Android/iOS)
+
+To view your app running in Outlook app for Mobile:
+
+1. Open the Outlook app on your device and sign in using your developer tenant account. If the Outlook app was already running prior to sideloading your app in Teams, restart Teams to see it in the installed apps section.
+1. Select the **More** icon. Your sideloaded app appears among installed apps.
+1. Select your app icon to open your app in the mobile Outlook app.
+
+    :::image type="content" source="images/outlook-mobile-more.png" alt-text="The screenshot is an example that shows the 'More' option on the side bar of the Outlook app to see your installed personal tabs.":::
+    :::image type="content" source="images/outlook-mobile-ios-more.png" alt-text="The screenshot is an example that shows the 'More' option on the side bar of the Outlook app to see your installed personal tabs.":::
+
 ### Microsoft 365 on Windows
 
 To view your app running in Microsoft 365 on Windows desktop:

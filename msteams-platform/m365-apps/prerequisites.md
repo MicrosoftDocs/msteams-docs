@@ -91,10 +91,26 @@ To install Microsoft 365 Beta Channel applications in your test environment:
 
 ### Mobile
 
+#### Android
+
 Install the Microsoft 365 app to preview your Teams personal tab app running your physical Android device or Android emulator:
 
 1. Ensure you're using a Google Play [supported Android device](https://support.google.com/googleplay/answer/1727131).
-1. Launch the **Play Store** on your Android device.
+1. Open the **Play Store** on your Android device.
+1. Search for "Office" and select **Office (Microsoft 365)**.
+1. Select the **Install** button.
+
+    :::image type="content" source="images/office-android-install.png" alt-text="The screenshot is an example that shows the install button for the Office (Microsoft 365) app in Google Play Store.":::
+
+1. Launch the Microsoft 365 app and sign in with your test tenant credentials.
+1. Open your profile **(Me) > Settings** and scroll to the bottom of the menu.
+1. Ensure you use Microsoft 365 app version 16.0.15726.20000 or higher for Android.
+
+#### iOS
+
+Install the Microsoft 365 app to preview your Teams personal tab app running your iOS device:
+
+1. Open the **App Store** on your iOS device.
 1. Search for "Office" and select **Office (Microsoft 365)**.
 1. Select the **Install** button.
 
