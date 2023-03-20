@@ -723,7 +723,7 @@
   - name: Overview
     href: concepts/deploy-and-publish/apps-publish-overview.md
     displayName: configure default install options, GCC
-  - name: Configure default install options for Teams app
+  - name: Configure default options for Teams app
     href: concepts/deploy-and-publish/add-default-install-scope.md
     displayName: default install scope, default capability for shared scopes, block apps
   - name: Enable customization for your app
