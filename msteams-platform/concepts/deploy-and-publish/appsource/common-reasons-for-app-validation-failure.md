@@ -66,8 +66,6 @@ Following are the most common reasons for your app to get rejected:
    :::column-end:::
 :::row-end:::
 
-[Back to top](#common-reasons-for-app-validation-failure)
-
 ## Broken links, functional bugs, app crashes, and unexpected errors
 
 Test your app to verify your app’s correctness, functionality, and usage. Ensure that you test your app thoroughly, check all the end to end workflows that your app supports, test the app compatibility on the operating systems and browsers as per the  [Commercial Marketplace Certification policy](/legal/marketplace/certification-policies), and fix all the bugs. You must avoid the following mistakes in your app before you submit for review:
