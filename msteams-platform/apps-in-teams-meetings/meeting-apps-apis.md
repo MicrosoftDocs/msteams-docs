@@ -519,8 +519,7 @@ Use the following example to configure your app manifest's `webApplicationInfo` 
 
 > [!NOTE]
 >
-> * The bot can receive meeting start or end events automatically from all the meetings created in all the channels by adding `ChannelMeeting.ReadBasic.Group` to manifest for RSC permission.
-> * If the `ChannelMeeting.ReadBasic.Group` property is added to the manifest, the bot receives the meeting start or end events automatically from all the channel meetings created where the bot is a member.
+> * If the `ChannelMeeting.ReadBasic.Group` permission is added to the manifest, the bot receives the meeting start or end events automatically from all the channel meetings created where the bot is added.
 > * For a one-on-one call `organizer` is the initiator of the chat and for group calls `organizer` is the call initiator. For public channel meetings `organizer` is the person who created the channel post.
 
 ### Query parameter
@@ -783,8 +782,6 @@ The following table provides the error codes:
 > Real-time Teams meeting events are supported for scheduled and channel meetings.
 
 The user can receive real-time meeting events. As soon as any app is associated with a meeting, the actual meeting start and end time are shared with the bot. The actual start and end time of a meeting are different from scheduled start and end time. The Meeting Details API provides the scheduled start and end time. The event provides the actual start and end time.
-
-You must be familiar with the `TurnContext` object available through the Bot SDK. The `Activity` object in `TurnContext` contains the payload with the actual start and end time. Real-time meeting events require a registered bot ID from the Teams platform. The bot can automatically receive meeting start or end event by adding `ChannelMeeting.ReadBasic.Group` in the manifest.
 
 If the `ChannelMeeting.ReadBasic.Group` and `OnlineMeeting.ReadBasic.Chat` permissions are added in the manifest, the bot automatically starts receiving the meeting start or end events for the scheduled and channel meeting types.
 
