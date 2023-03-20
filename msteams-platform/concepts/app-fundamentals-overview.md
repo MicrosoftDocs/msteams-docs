@@ -71,7 +71,7 @@ Government Community Cloud (GCC) is a government focused copy of the commercial 
 
 The following table includes Teams features and availability for GCC, GCC-High, and DOD:
 
-| Features   | GCC | GCC-High | DOD |
+|  | GCC | GCC-High | DOD |
 |-------------|---------|---|---|
 | **Apps** | &nbsp; | &nbsp; | &nbsp; |
 | Teams owned apps as in internally developed apps | ✔️ App is enabled if it has GCC. | ✔️ App is enabled if it has GCC-High. | ✔️ App is enabled if it has DOD. |
