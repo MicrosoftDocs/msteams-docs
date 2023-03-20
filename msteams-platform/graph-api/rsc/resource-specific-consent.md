@@ -158,7 +158,7 @@ Specify permissions needed by the app.
 
 |Name| Type | Description|
 |---|---|---|
-|`authorization`|Object|List of permissions that the app needs to function. For more information, see [placeholder for link- authorization in manifest]
+|`authorization`|Object|List of permissions that the app needs to function. For more information, see [authorization](../../resources/schema/manifest-schema.md#authorization).|
 
 Example for RSC in a team
 
