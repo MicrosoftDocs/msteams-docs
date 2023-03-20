@@ -1,6 +1,6 @@
 ---
 title: Configure default install options for your app
-description: Learn how to specify your Teams app's default install options and default capability for shared scopes.
+description: Learn how to specify your Teams app's default install options, default capability for shared scopes and block apps by default.
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: surbhigupta

@@ -725,7 +725,7 @@
     displayName: configure default install options, GCC
   - name: Configure default install options for Teams app
     href: concepts/deploy-and-publish/add-default-install-scope.md
-    displayName: default install scope, default capability for shared scopes
+    displayName: default install scope, default capability for shared scopes, block apps
   - name: Enable customization for your app
     href: concepts/design/enable-app-customization.md
     displayName: Customize your app, update app name, branding, hide and unhide app, accent 
