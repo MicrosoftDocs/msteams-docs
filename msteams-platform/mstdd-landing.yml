@@ -51,7 +51,7 @@ landingContent:
       - text: Community chat room for Microsoft Teams app developers
         url: https://gitter.im/OfficeDev/home
     - linkListType: whats-new
-      links: 
+      links:
       - text: Drive customer adoption of your app
         url: promote-app-adoption.md
       - text: Changelog for Developer Portal
@@ -70,6 +70,8 @@ landingContent:
         url: apps-in-teams-meetings/app-caching-for-your-tab-app.md
       - text: Update and soft delete event notifications in bot
         url: bots/how-to/conversations/conversation-messages.md#update-message
+      - text: Teams developer documentation FAQs
+        url: teams-faq.md
 
     - linkListType: whats-new
       links:
