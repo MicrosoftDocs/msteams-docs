@@ -14,6 +14,7 @@ Resource-specific consent (RSC) is a Microsoft Teams and Microsoft Graph API int
 In this section, you'll learn to:
 
 1. [Add RSC permissions to your Teams app](#add-rsc-permissions-to-your-teams-app)
+1. [Install your app in a team or chat](#install-your-app-in-a-team-or-chat)
 1. [Verify app RSC permission granted to your app](#verify-app-rsc-permission-granted-to-your-app)
 
 ## Add RSC permissions to your Teams app
@@ -313,14 +314,12 @@ Example for RSC permissions in a chat:
 <br>
 </details>
 
-## Verify app RSC permission granted to your app
+## Install your app in a team or chat
 
-To verify the app RSC permissions, follow these steps:
+To install your app on which you've enabled with RSC permission in a team or chat:
 
 1. Ensure that you've configured [consent settings](#configure-consent-settings) for team or chat.
 1. [Sideload your app in Teams](#sideload-your-app-in-teams).
-1. [Obtain an access token from the Microsoft identity platform](#obtain-an-access-token-from-the-microsoft-identity-platform).
-1. [Check the RSC permissions granted to a specific resource](#check-the-rsc-permissions-granted-to-a-specific-resource).
 
 ### Configure consent settings
 
@@ -368,6 +367,13 @@ The default value of the property `isChatResourceSpecificConsentEnabled` is base
 ### Sideload your app in Teams
 
 If your Teams admin allows custom app uploads, you can [sideload your app](~/concepts/deploy-and-publish/apps-upload.md) directly to a specific team or chat.
+
+## Verify app RSC permission granted to your app
+
+To verify the app RSC permissions, follow these steps:
+
+1. [Obtain an access token from the Microsoft identity platform](#obtain-an-access-token-from-the-microsoft-identity-platform).
+1. [Check the RSC permissions granted to a specific resource](#check-the-rsc-permissions-granted-to-a-specific-resource).
 
 ### Obtain an access token from the Microsoft identity platform
 
