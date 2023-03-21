@@ -58,9 +58,9 @@ You can add single sign-on authentication to your conversation bot using the fol
 
 ## Code samples
 
-|Sample name | Description |.NET | Node.js |
-|----------------|-----------------|--------------|--------------|
-| Bot daily task reminder| Demonstrate how to schedule a recurring task and get a reminder at a scheduled time. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-daily-task-reminder/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-daily-task-reminder/nodejs) |
+|Sample name | Description |.NET | Node.js | Manifest
+|----------------|-----------------|--------------|--------------|--------------|
+| Bot daily task reminder| This sample shows how to schedule a recurring task and get a reminder at a scheduled time using bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-daily-task-reminder/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-daily-task-reminder/nodejs) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-daily-task-reminder/csharp/demo-manifest/Bot-Daily-Task-Reminder.zip) |
 | Hello World Bot | This is a simple hello world application with both Bot and Message extension capabilities. | NA | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/v1.0.0/hello-world-bot) |
 | Adaptive Card Notification | This is a sample, which shows how to send notifications with different adaptive cards using Bots. | NA | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/v1.0.0/adaptive-card-notification) |
 | Incoming Webhook Notification | This is a sample, which shows how to send notifications via Incoming Webhook in Microsoft Teams channels. | NA | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/v1.0.0/incoming-webhook-notification) |
