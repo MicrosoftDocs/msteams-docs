@@ -98,96 +98,23 @@ To enable app caching for your app, follow the steps:
    * Dispose resources and perform any cleanup needed in the `beforeUnload` handler.
    * Invoke the `readyToUnload` callback to notify Teams client that the app unload flow is complete.
 
-After you configure your app code for app caching, your code must be as shown in the following example:
+The following code snippet is an example of the `teamsCore.registerBeforeUnloadHandler` and `teamsCore.registerOnLoadHandler` handlers:
 
 ```javascript
-/// </summary>
-/// In beforeUnloadHandler using setItems and readyToUnload callback function
-/// </summary>
-const beforeUnloadHandler = (
-    setItems: React.Dispatch<React.SetStateAction<string[]>>,
-    readyToUnload: () => void) => {
-    setItems((Items) => [...Items, logItem("OnBeforeUnload", "purple", "Started")]);
+microsoftTeams.teamsCore.registerBeforeUnloadHandler((readyToUnload: any) => {
+    const result = beforeUnloadHandler(setItems, readyToUnload);
+    return result;
+    });
 
-    // Dispose resources and cleanup
-    // Write your custom code to perform resource cleanup.
-    setItems((Items) => [...Items, logItem("OnBeforeUnload", "purple", "Dispose resources and cleanup")]);
-    setItems((Items) => [...Items, logItem("OnBeforeUnload", "purple", "Completed")]);
-    console.log("sending readyToUnload to TEAMS");
-    readyToUnload();
+microsoftTeams.teamsCore.registerOnLoadHandler((data: any) => {
+    loadHandler(setItems, data);
+    setTitle("Entity Id : " + data.entityId);
+    console.log(data.contentUrl, data.entityId);
+    });
 
-    return true;
-};
-
-/// </summary>
-/// loadHandler using setItems to set values
-/// </summary>
-const loadHandler = (
-    setItems: React.Dispatch<React.SetStateAction<string[]>>,
-    data: microsoftTeams.LoadContext) => { 
-    setItems((Items) => [...Items, logItem("OnLoad", "blue", "Started for " + data.entityId)]);
-
-    // Use the entityId, contentUrl to route to the correct page within your App and then invoke notifySuccess
-    setItems((Items) => [...Items, logItem("OnLoad", "blue", "Route to specific page")]);
-    setItems((Items) => [...Items, logItem("OnLoad", "blue", "Completed for " + data.entityId)]);
-    microsoftTeams.app.notifySuccess();
-};
-
-const AppCacheTab = () => {
-    const [items, setItems] = useState<string[]>([]);
-    const [title, setTitle] = useState("App Caching Sample");
-  
-    React.useEffect(() => {
-        let app = microsoftTeams.app;
-        app.initialize().then(app.getContext).then((context: any) => {
-            app.notifySuccess();
-
-            // Check if the framecontext is set to sidepanel
-            if (context.page.frameContext === "sidePanel") {
-                const loadContext = logItem("Success", "green", "Loaded Teams context");
-                setItems((Items) => [...Items, loadContext]);
-
-                const newLogItem = logItem("FrameContext", "orange", "Frame context is " + context.page.frameContext);
-                setItems((Items) => [...Items, newLogItem]);
-
-                microsoftTeams.teamsCore.registerBeforeUnloadHandler((readyToUnload: any) => {
-                    const result = beforeUnloadHandler(setItems, readyToUnload);
-                   
-                    return result;
-                });
-
-                microsoftTeams.teamsCore.registerOnLoadHandler((data: any) => {
-                    loadHandler(setItems, data);
-                    setTitle("Entity Id : " + data.entityId);
-                    console.log(data.contentUrl, data.entityId);
-                });
-
-                const newItem = logItem("Handlers", "orange", "Registered load and before unload handlers. Ready for app caching.");
-                setItems((Items) => [...Items, newItem]);
-            }
-
-        }).catch(function (error: any) {
-            console.log(error, "Could not register handlers.");
-        });
-
-        return () => {
-            console.log("useEffect cleanup - Tab");
-        };
-
-    }, []);
-
-    return (
-        <div>
-            <h3>{title}</h3>
-            {items.map((item) => {
-                return <div dangerouslySetInnerHTML={{ __html: item }} />;
-            })}
-        </div>
-    );
-};
-
-export default AppCacheTab;
 ```
+
+To view the complete code sample, go to [**app caching in meeting**](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-cache-meetings/nodejs) > **src** > **components** > **app-cache-tab.tsx**.
 
 ## Best practices
 
