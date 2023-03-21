@@ -44,7 +44,7 @@ You can add capabilities in the following ways:
 
        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/select-feature123_1.png" alt-text="Add capabilities from Teams Toolkit":::
 
-   1. From the drop-down list that appears, select the capability you want to add to your app.
+   1. From the dropdown list that appears, select the capability you want to add to your app.
 
        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/notification-add-capabilities_1.png" alt-text="notification":::
 
@@ -62,7 +62,7 @@ You can add capabilities in the following ways:
 
       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/teams-add-features_1.png" alt-text="To add capabilities by using command palette.":::
 
-   1. From the drop-down list that appears, select the capability you want to add to your app.
+   1. From the dropdown list that appears, select the capability you want to add to your app.
 
        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/notification-add-capabilities_1.png" alt-text="notification":::
 
