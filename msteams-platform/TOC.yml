@@ -506,6 +506,7 @@
     displayName: HMAC security token
   - name: Create Incoming Webhooks
     href: webhooks-and-connectors/how-to/add-incoming-webhook.md
+    display name: share content in Microsoft Teams channels, 
   - name: Create connectors for Microsoft 365 Groups
     href: webhooks-and-connectors/how-to/connectors-creating.md
   - name: Create and send messages
@@ -535,6 +536,9 @@
     - name: Typeahead search in Adaptive Cards
       href: task-modules-and-cards/cards/dynamic-search.md
       displayName: Static and dynamic typeahead search  
+    - name: Media elements in Adaptive Cards
+      href: task-modules-and-cards/cards/media-elements-in-adaptive-cards.md
+      displayName: media elements        
     - name: Universal Actions for Adaptive Cards
       items:
       - name: Overview
