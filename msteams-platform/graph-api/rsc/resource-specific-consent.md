@@ -316,7 +316,7 @@ Example for RSC permissions in a chat:
 
 ## Install your app in a team or chat
 
-To install your app on which you've enabled with RSC permission in a team or chat:
+To install your app on which you've enabled RSC permission in a team or chat:
 
 1. Ensure that you've configured [consent settings](#configure-consent-settings) for team or chat.
 1. [Sideload your app in Teams](#sideload-your-app-in-teams).
