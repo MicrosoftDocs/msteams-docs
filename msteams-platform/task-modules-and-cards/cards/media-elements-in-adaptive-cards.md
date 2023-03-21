@@ -5,13 +5,13 @@ ms.localizationpriority: high
 ms.topic: reference
 ---
 
-# Overview
+# Media elements in Adaptive Cards
 
 The Media Elements such as audio or video clips are supported in the Adaptive Cards SDK but not in Teams. Currently, Teams doesn't provide media support like audio, video, and animation cards from Bot Framework. To increase engagement with cards and provide a new experience in the media elements, we are bringing in parity with the SDK that already supports media elements.
 
 The Media Elements now supports consumption of media elements directly within Teams Adaptive Cards without force exit from Teams to view media. Following are the scenarios:
 
-### Support LOB scenarios
+## Support LOB scenarios
 
 Following three data sources are supported primarily for the in-line media playback:
 
@@ -19,7 +19,7 @@ Following three data sources are supported primarily for the in-line media playb
 * Inline YouTube video playback through an embedded YouTube player. This experience looks different from the rest of the media elements that leverage one player.
 * Video or audio files are directly uploaded to OneDrive Sharepoint and are accessible within the tenant and Adaptive Card plays the file through player.
 
-### Support third party partner scenarios
+## Support third party partner scenarios
 
 To improve the ability to deal with media files, following are the dynamic user-uploaded scenarios where users upload video or audio files within OneDrive, SharePoint in other tenants and be able to link to them:
 
@@ -32,7 +32,7 @@ To improve the ability to deal with media files, following are the dynamic user-
 
 (Content)
 
-## End user Media Elements experience
+## End user experience
 
 **Media Elements-Video (Channel)**:
 The media playback lives within the Adaptive Card. Users need to press **play** button and videos are directly replayed. For example, video is within the channel in the following image:
@@ -121,3 +121,7 @@ Following are the limitations:
 
 1. The MIME type, that is able to support certain file types and using the MIME type.
 1. Size limitation.
+
+## See also
+
+*
