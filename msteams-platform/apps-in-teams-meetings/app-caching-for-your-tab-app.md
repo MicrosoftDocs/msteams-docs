@@ -98,7 +98,7 @@ To enable app caching for your app, follow the steps:
    * Dispose resources and perform any cleanup needed in the `beforeUnload` handler.
    * Invoke the `readyToUnload` callback to notify Teams client that the app unload flow is complete.
 
-The following code snippet is an example of the `teamsCore.registerBeforeUnloadHandler` and `teamsCore.registerOnLoadHandler` handlers:
+The following code snippet is an example of the `teamsCore.registerBeforeUnloadHandler` and `teamsCore.registerOnLoadHandler` handlers from app-cache-tab.tsx in the [code sample](#code-sample):
 
 ```javascript
 microsoftTeams.teamsCore.registerBeforeUnloadHandler((readyToUnload: any) => {
@@ -113,8 +113,6 @@ microsoftTeams.teamsCore.registerOnLoadHandler((data: any) => {
     });
 
 ```
-
-To view the complete code sample, go to [**app caching in meeting**](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-cache-meetings/nodejs) > **src** > **components** > **app-cache-tab.tsx**.
 
 ## Best practices
 
