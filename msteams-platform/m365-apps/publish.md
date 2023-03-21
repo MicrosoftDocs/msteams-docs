@@ -20,7 +20,7 @@ Outlook-enabled message extensions can be distributed to test and production ten
 
 ### Teams client
 
-From the **Apps** menu, select **Manage your apps** > **Publish an app** > **Submit an app to your org**. To submit an app requires approval from your IT admin.
+From the **Apps** menu, select **Manage your apps** > **Upload an app** > **Submit an app to your org**. To submit an app requires approval from your IT admin.
 
 ### Teams Developer Portal
 
@@ -40,6 +40,10 @@ The [Microsoft commercial marketplace](https://appsource.microsoft.com/) (Micros
 
 > [!TIP]
 > Use Teams Developer Portal to [validate your app package](https://dev.teams.microsoft.com/validation) to resolve any errors or warnings before submitting it to the Teams store (via [Microsoft Partner Network](https://partner.microsoft.com/)).
+
+See the following video to learn more about multi-tenant apps:
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWZb0O]
 
 To get started, see [distribute your Microsoft Teams app](../concepts/deploy-and-publish/apps-publish-overview.md).
 

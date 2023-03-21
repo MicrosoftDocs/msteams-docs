@@ -202,7 +202,7 @@
     items:
     - name: Overview
       href: concepts/build-and-test/teams-developer-portal.md
-      displayName: App Studio
+      displayName: App Studio, Changelog for Developer Portal
     - name: Manage your apps in Developer Portal
       href: concepts/build-and-test/manage-your-apps-in-developer-portal.md
       displayName: AppID 
@@ -433,8 +433,13 @@
   - name: Enable and configure apps for Teams meetings
     items:
     - name: Build tabs for meeting
-      href: apps-in-teams-meetings/build-tabs-for-meeting.md
-      displayName: anonymous, app caching, cache
+      items:
+      - name: Enable your tabs for Teams meeting
+        href: apps-in-teams-meetings/build-tabs-for-meeting.md
+        displayName: anonymous
+      - name: Enable app caching for your tab app
+        href: apps-in-teams-meetings/app-caching-for-your-tab-app.md
+        displayName: app caching, launch time
     - name: Build apps for meeting stage
       href: apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md
       displayName: MicrosoftTeams.meeting.getAppContentStageSharingState
@@ -670,7 +675,11 @@
     displayName: Microsoft 365, Office 365
   - name: Enable a Teams message extension for Outlook
     href: m365-apps/extend-m365-teams-message-extension.md
+
     displayName: mail, Microsoft 365, Office 365
+  - name: Decide the app type for your scenario
+    href: m365-apps/me-or-outlook-add-in.md
+    displayName: mail, Microsoft 365, Office 365, OUtlook add-in, message extension
   - name: Publish Teams apps for Microsoft 365
     href: m365-apps/publish.md
 - name: Teams developer documentation FAQs
@@ -758,7 +767,10 @@
       displayName: Microsoft Publisher Agreement, app update or new release, user engagement data 
     -  name: Common reasons for app validation failure
        href: concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md
-       displayName: Font, Broken links, functional bugs, app crashes, unexpected errors, app description, Microsoft trademark and brand guidelines, testability, app icon guidelines, app name mismatch, developer name mismatch
+       displayName: Font, Broken links, functional bugs, app crashes, unexpected errors, app description, Microsoft trademark and brand guidelines, testability, app icon guidelines, app name mismatch, developer name mismatch      
+  - name: Drive customer adoption of your app
+    href: promote-app-adoption.md
+    displayName: app promotion, awareness, adoption, rollout, admin approval, change management
 - name: Monetize your app
   items:
   - name: Overview

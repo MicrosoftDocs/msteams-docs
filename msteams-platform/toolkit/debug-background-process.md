@@ -2,7 +2,7 @@
 title: Debug background processes
 author: surbhigupta
 description: In this module, learn how Visual Studio Code and Teams Toolkit work during local debug process. Also learn how to register and configure your Teams app.
-ms.author: v-amprasad
+ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/03/2022
@@ -34,6 +34,8 @@ Teams Toolkit checks the following prerequisites during the debug process:
   |SPFx Tab | 14, 16 (recommended)|
   |Bot |  14, 16 (recommended)|
   |Message extension | 14, 16 (recommended) |
+
+For more information, see [Node.js version compatibility table for project type](tools-prerequisites.md#nodejs-version-compatibility-table-for-project-type).
 
 * Teams Toolkit prompts you to sign-in to Microsoft 365 account, if you haven't signed in with your valid credentials.
 * Custom app uploading or sideloading for your developer tenant is turned on, to prevent local debug termination.

@@ -1,7 +1,7 @@
 ---
 title: Extend a Teams message extension across Microsoft 365
 description: Learn how to update your search-based message extension to run in Outlook and add Microsoft 365 channel for your bot.
-ms.date: 10/10/2022
+ms.date: 01/31/2023
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: high
@@ -20,7 +20,7 @@ The process to update your search-based Teams message extension involves the fol
 > [!div class="checklist"]
 >
 > * Update your app manifest.
-> * Add Microsoft 365 Extensions channel for your bot.
+> * Add the Microsoft 365 Extensions channel for your bot.
 > * Sideload your updated app in Teams.
 
 The rest of this guide walks you through these steps and shows how to preview your message extension in Outlook for Windows desktop and web.
@@ -53,9 +53,9 @@ Alternately, you can use the ready-made Outlook-enabled app in the following sec
 
 To start with a [sample message extension](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/NPM-search-connector-M365) that's already enabled to run in Outlook, use Teams Toolkit extension for Visual Studio Code.
 
-1. From Visual Studio Code, open the command palette (`Ctrl+Shift+P`), type `Teams: Create a new Teams app`.
+1. From Visual Studio Code, open the command palette (`Ctrl+Shift+P`), type `Teams: Create a new app`.
 1. Select **Create a new Teams app** option.
-1. Select **Search-based message extension** to download sample code for a Teams message extension using the latest Teams app manifest (version `1.13`).
+1. Select **Search-based message extension** to download the sample code for a Teams message extension using the latest Teams app manifest. For more information, see [Teams developer manifest](../resources/schema/manifest-schema.md).
 
     :::image type="content" source="images/toolkit-palatte-search-sample.png" alt-text="The screenshot is an example that shows the Type 'Create a new Teams app' VS Code command palette to list Teams sample options.":::
 
@@ -75,7 +75,7 @@ From here, you can skip ahead to [Add Microsoft 365 Extensions channel for your 
 
 ## Update the app manifest
 
-You need to use the [Teams developer manifest](../resources/schema/manifest-schema.md) schema version `1.13` to enable your Teams message extension to run in Outlook.
+You need to use the Teams developer manifest schema version `1.13` (or higher) to enable your Teams message extension to run in Outlook. For more information on schema version, see [Teams developer manifest](../resources/schema/manifest-schema.md).
 
 You have two options for updating your app manifest:
 
@@ -90,8 +90,8 @@ Open your Teams app manifest and update the `$schema` and `manifestVersion` with
 
 ```json
 {
-    "$schema" : "https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json",
-    "manifestVersion" : "1.13"
+    "$schema" : "https://developer.microsoft.com/json-schemas/teams/v1.14/MicrosoftTeams.schema.json",
+    "manifestVersion" : "1.14"
 }
 ```
 
@@ -148,9 +148,7 @@ The final step is to sideload your updated message extension ([app package](/mic
 
     :::image type="content" source="images/toolkit-zip-teams-metadata-package.png" alt-text="The screenshot is an example that shows 'Zip Teams metadata package' option in Teams Toolkit extension for Visual Studio Code.":::
 
-1. Sign in to Teams with your sandbox tenant account, and toggle into  *Developer Preview* mode. Select the ellipsis (**...**) menu by your user profile, then select: **About** > **Developer preview**.
-
-    :::image type="content" source="images/teams-dev-preview.png" alt-text="The screenshot is an example that shows the 'Developer Preview' option.":::
+1. Go to **Microsoft Teams** and sign in using your sandbox tenant account.
 
 1. Select **Apps** to open the **Manage your apps** pane. Then select **Upload an app**.
 

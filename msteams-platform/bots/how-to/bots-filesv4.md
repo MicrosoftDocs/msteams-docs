@@ -8,7 +8,8 @@ ms.topic: how-to
 # Send and receive files using bot
 
 > [!IMPORTANT]
-> The articles in this document are based on the v4 Bot Framework SDK.
+> * This article is based on the v4 Bot Framework SDK.
+> * Bots don't support sending and receiving files in Governmernt Community Cloud High (GCC-High) and Department of Defense (DOD) environments.
 
 There are two ways to send files to and receive files from a bot:
 

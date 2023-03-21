@@ -52,6 +52,10 @@ landingContent:
         url: https://gitter.im/OfficeDev/home
     - linkListType: whats-new
       links:
+      - text: Drive customer adoption of your app
+        url: promote-app-adoption.md
+      - text: Changelog for Developer Portal
+        url: concepts/build-and-test/teams-developer-portal.md#changelog-for-developer-portal
       - text: SSO authentication for your Adaptive Cards Universal Actions
         url: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/enable-sso-for-your-adaptive-cards-universal-action.md
       - text: Third party authentication for Adaptive Cards Universal Actions
@@ -62,16 +66,13 @@ landingContent:
         url:  tabs/how-to/build-a-dashboard-tab-app.md
       - text: Targeted in-meeting notification (Developer preview)
         url: apps-in-teams-meetings/in-meeting-notification-for-meeting.md#targeted-in-meeting-notification
-      - text: Enable app caching to improve subsequent launch time of the apps to the meeting side panel (Developer preview)
-        url: apps-in-teams-meetings/build-tabs-for-meeting.md#app-caching
+      - text: Enable app caching for your tab app (Developer preview)
+        url: apps-in-teams-meetings/app-caching-for-your-tab-app.md
       - text: Update and soft delete event notifications in bot
         url: bots/how-to/conversations/conversation-messages.md#update-message
       - text: Teams developer documentation FAQs
         url: teams-faq.md
-      - text: Share-in-meeting to share any document or third-party app to the meeting stage
-        url: ~/concepts/build-and-test/share-in-meeting.md
-      - text: Plan analytics for your Teams app
-        url: concepts/design/overview-analytics.md
+
     - linkListType: whats-new
       links:
       - text: Apps for Teams meetings support anonymous users
