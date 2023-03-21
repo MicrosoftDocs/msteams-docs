@@ -130,7 +130,7 @@ Install the Microsoft 365 app to preview your Teams personal tab app running on 
     :::image type="content" source="images/m365-ios-install.png" alt-text="The screenshot is an example that shows the install button for the Microsoft 365 (Office) app in App Center.":::
 
 1. iOS restricts apps from being downloaded from the browser, to approve the app for use, **Open Settings Apps > General > VPN & Device Management**. 
-1. Under Enterprise App click Microsoft Corporation. Within this menu Click **Trust "Microsoft Corporation"** to enable 
+1. Under Enterprise App select Microsoft Corporation. Within this menu select **Trust "Microsoft Corporation"** to enable 
 
     :::image type="content" source="images/trusted-enterprise-developer.png" alt-text="The screenshot shows the message to Trust iPhone Distribution: Microsoft Corporation  Untrusted Enterprise Developer.":::
 
