@@ -126,7 +126,7 @@ You can define Teams app description for each environment:
 Follow these steps customizing the environment description:
 
 1. Open the configuration file `.fx\configs\config.dev.json`.
-2. Add a new property for `manifest` > `description` > `short`, and enter its value as **my app description for dev**.
+2. Add a new property for `manifest` > `description` > `short` and enter its value as **my app description for dev**.
 
   The updates to `.fx\configs\config.dev.json` are:
 
