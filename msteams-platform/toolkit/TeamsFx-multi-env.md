@@ -10,7 +10,7 @@ ms.date: 11/29/2021
 
 # Manage multiple environments
 
- Teams Toolkit provides a simple way for you to create and manage multiple environments. You can use environments to provision resources, and deploy artifacts to the target environment for your Microsoft Teams app.
+ Teams Toolkit provides a simple way for you to create and manage multiple environments. You can use environments to provision resources and deploy artifacts to the target environment for your Microsoft Teams app.
 
  You can perform the following activities with environments:
 
