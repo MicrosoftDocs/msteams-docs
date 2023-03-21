@@ -24,17 +24,11 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 Teams platform features that are available to all app developers.
 
-**2023 February**
+**2023 March**
 
-* ***February 28, 2022***: [Link unfurling for mobile](messaging-extensions/how-to/link-unfurling.md).
-* ***February 28, 2023***: [Facilitate adoption of your app and create awareness](promote-app-adoption.md)
-* ***February 27, 2022***: [Changelog for Developer Portal.](concepts/build-and-test/teams-developer-portal.md#changelog-for-developer-portal)
-* ***February 23, 2022***: [SSO authentication for your Adaptive Cards Universal Actions.](task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/enable-sso-for-your-adaptive-cards-universal-action.md)
-* ***February 23, 2022***: [Third party authentication for Adaptive Cards Universal Actions.](task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/authentication-flow-in-universal-action-for-adaptive-cards.md)
-* ***February 21, 2023***: [Targeted in-meeting notification for apps in Teams](apps-in-teams-meetings/in-meeting-notification-for-meeting.md#targeted-in-meeting-notification).
-* ***February 20, 2023***: [Plan your app growth in Teams.](concepts/deploy-and-publish/appsource/post-publish/app-growth/overview-app-growth.md)
-* ***February 17, 2023***: [Build a dashboard tab app.](tabs/how-to/build-a-dashboard-tab-app.md#build-a-dashboard-tab-app)
-* ***February 09, 2023***: [Apps for Teams meetings support anonymous users.](apps-in-teams-meetings/build-apps-for-anonymous-user.md)
+* ***March 21, 2022***: [Link unfurling for mobile](messaging-extensions/how-to/link-unfurling.md)
+* ***March 20, 2023***: [Bots are available in DOD](bots/what-are-bots.md)
+* ***March 20, 2023***: [Message extensions are available in DOD](messaging-extensions/what-are-messaging-extensions.md)
 
 :::column-end:::
 :::row-end:::
@@ -45,6 +39,14 @@ Teams platform features that are available to all app developers.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
+| 28/02/2023 | Facilitate adoption of your app and create awareness | Distribute your app > adoption > [Drive customer adoption of your app](promote-app-adoption.md) |
+| 27/02/2023 | Changelog for Developer Portal | Tools and SDKs > Developer Portal for Teams > [Overview](concepts/build-and-test/teams-developer-portal.md#changelog-for-developer-portal) |
+| 23/02/2023 | SSO authentication for your Adaptive Cards Universal Actions | Add authentication > Enable SSO for your Teams app > Enable SSO for Adaptive Cards Universal Actions in your bot > [Overview](task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/enable-sso-for-your-adaptive-cards-universal-action.md) |
+|23/02/2023| Third party authentication for Adaptive Cards Universal Actions | Add authentication > Use third party IdP authentication > [Third party authentication for Adaptive Cards Universal Actions](task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/authentication-flow-in-universal-action-for-adaptive-cards.md) |
+|21/02/2023| Targeted in-meeting notification for apps in Teams | Build apps for Teams meetings and calls > Enable and configure apps for Teams meeting > [Targeted in-meeting notification for apps in Teams](apps-in-teams-meetings/in-meeting-notification-for-meeting.md#targeted-in-meeting-notification) |
+|20/02/2023| Plan your app growth in Teams | Grow your app > [Strategize and execute growth for your app](concepts/deploy-and-publish/appsource/post-publish/app-growth/overview-app-growth.md)|
+|17/02/2023| Build a dashboard tab app | Build Tabs > [Build a dashboard tab app](tabs/how-to/build-a-dashboard-tab-app.md#build-a-dashboard-tab-app)|
+|09/02/2023| Apps for Teams meetings support anonymous users | Build apps for Teams meetings and calls > Enable and configure apps for Teams meeting > [Build apps for anonymous users](apps-in-teams-meetings/build-apps-for-anonymous-user.md) |
 |31/01/2023| Introducing update and soft delete event notifications in bot | Build bots > Bot conversations > [Messages in bot conversations](bots/how-to/conversations/conversation-messages.md#update-message)
 
 </details>
