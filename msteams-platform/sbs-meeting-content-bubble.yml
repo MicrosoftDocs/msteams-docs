@@ -14,18 +14,19 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Microsoft Teams helps you to generate and interact with in-meeting notifications using bot.
+    Microsoft Teams helps you to generate and interact with in-meeting notifications using a bot.
 
     **Key features of in-meeting notifications**:
 
     * View agenda items listed in an Adaptive Card.
     * Select any option in the given agenda.
     * Submit your feedback on either in-meeting notifications or Adaptive Card sent in chat.
+    * Send targeted notifications to a specific user in a meeting.
     
     > [!NOTE]
     > In-meeting notifications is available only for Azure AD users and not for anonymous users.
     
-    This step-by-step guide helps you to generate in-meeting notifications using bot in Teams meeting with attendees. You'll see the following output:
+    This step-by-step guide helps you to generate in-meeting notifications using a bot in Teams meeting. You'll see the following output:
 
       :::image type="content" source="~/assets/images/meeting-content-bubble/desktop-and-mobile-image-final.png" alt-text="Screenshot showing the final output of in-meeting notification.":::
 
@@ -34,7 +35,11 @@ items:
 - title: Prerequisites
   durationInMinutes: 1
   content: |
-    Ensure you install the following tools and set up your development environment:  
+    
+    The following are the prerequisites:
+
+    * Ensure that you have a working knowledge of the [CSharp language](/dotnet/csharp/fundamentals/tutorials/how-to-display-command-line-arguments).
+    * Ensure that you install the following tools and set up your development environment:  
 
      | &nbsp; | Install | For using... |
      | --- | --- | --- |
@@ -47,7 +52,7 @@ items:
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
 
-    Ensure you have working knowledge of [C#](/dotnet/csharp/fundamentals/tutorials/how-to-display-command-line-arguments).
+   
 
 - title: Set up local environment
   durationInMinutes: 1
@@ -342,7 +347,7 @@ items:
 
         :::image type="content" source="~/assets/images/meeting-content-bubble/navigate-to-meeting-content-bubble-repo_1.png" alt-text="App settings location":::
 
-    1. Open **appsettings.json** in Visual Studio and update the following information:  
+    1. Open the **appsettings.json** file in Visual Studio and update the following information:  
 
          * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
          * Set `"MicrosoftAppPassword"` to your bot's client secret ID value.
@@ -355,7 +360,7 @@ items:
   content: |
     1. Go to **manifest.json** in cloned repository.
     
-    1. Open **manifest.json** in Visual Studio and make the following changes:
+    1. Open the **manifest.json** file in Visual Studio and make the following changes:
     
          * Set `ID` to **Microsoft App ID**.
          * Set `botId` to **Microsoft App ID**.
@@ -376,7 +381,7 @@ items:
     
            :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-VSopenfile_1.png" alt-text="Screenshot of Visual Studio with File, Open and Project-Solution highlighted in red":::
 
-       1. Open **InMeetingNotifications.sln** file.
+       1. Open the **InMeetingNotifications.sln** file in Visual Studio Code.
 
            :::image type="content" source="~/assets/images/meeting-content-bubble/proj-sln_1.png" alt-text="Screenshot of cloned repository with InMeetingNotifications.sln file highlighted in red.":::
 
@@ -401,7 +406,7 @@ items:
     
     1. Create a meeting with a few presenters and attendees.
    
-    1. After the meeting is created, select **+** to **Add an App**.
+    1. After the meeting is created, select **+ Apps** to add an App.
 
         :::image type="content" source="~/assets/images/meeting-content-bubble/add-an-app.png" alt-text="Screenshot of Teams call with Apps option highlighted in red."::: 
    
@@ -409,11 +414,11 @@ items:
 
         :::image type="content" source="~/assets/images/meeting-content-bubble/manage-apps_1.png" alt-text="Screenshot of Teams apps with Manage apps highlighted in red."::: 
    
-    1. Select **Upload an app** and select **Upload a custom app**. 
+    1. Select **Upload an app** > **Upload a custom app**. 
 
         :::image type="content" source="~/assets/images/meeting-content-bubble/upload-custom-app_1.png" alt-text="Screenshot of Teams apps with Upload a custom app highlighted in red."::: 
 
-    1. Select **Open** to upload the .zip file that you created in the **Manifest** folder.
+    1. Select the upload the .zip file that you created in the **Manifest** folder and select **Open**.
 
         :::image type="content" source="~/assets/images/meeting-content-bubble/Zip-file_1.png" alt-text="Screenshot of manifest folder with in-meeting notification demo zip file and Open option highlighted in red.":::
 
