@@ -93,32 +93,50 @@ To install Microsoft 365 Beta Channel applications in your test environment:
 
 #### Android
 
-Install the Microsoft 365 app to preview your Teams personal tab app running your physical Android device or Android emulator:
+You can preview Teams personal tabs running in Microsoft 365 app for Android by joining the beta program.
+
+Install the Microsoft 365 app to preview your Teams personal tab app running on your physical Android device or Android emulator:
 
 1. Ensure you're using a Google Play [supported Android device](https://support.google.com/googleplay/answer/1727131).
-1. Open the **Play Store** on your Android device.
-1. Search for "Office" and select **Office (Microsoft 365)**.
+1. Launch the **Play Store** on your Android device.
+1. Search for your app of choice. 
+    1. For Microsoft 365 app (formerly Office), search office and select **Microsoft 365 app**.
+    1. For Outlook, search outlook and select **Microsoft Outlook**.
 1. Select the **Install** button.
 
-    :::image type="content" source="images/office-android-install.png" alt-text="The screenshot is an example that shows the install button for the Office (Microsoft 365) app in Google Play Store.":::
+    :::image type="content" source="images/office-android-install.png" alt-text="The screenshot is an example that shows the install button for the Office Microsoft 365 (Office) app in Google Play Store.":::
+
+1. For Microsoft 365 app, select **Join** under **Join the beta** section after the installation completes.
+
+    :::image type="content" source="images/office-android-join-beta.png" alt-text="The screenshot is an example that shows the Join the beta screen.":::
 
 1. Launch the Microsoft 365 app and sign in with your test tenant credentials.
 1. Open your profile **(Me) > Settings** and scroll to the bottom of the menu.
-1. Ensure you use Microsoft 365 app version 16.0.15726.20000 or higher for Android.
+1. Ensure that you use Microsoft 365 app version 16.0.15726.20000 or higher for Android and Outlook app version 4.2247.1 (52247812) or higher for Android.
+
 
 #### iOS
 
-Install the Microsoft 365 app to preview your Teams personal tab app running your iOS device:
+You can preview Teams personal tabs running in Microsoft 365 app for iOS by installing the prerelease version on the [App Center website](appcenter.ms) in your browser of choice.
 
-1. Open the **App Store** on your iOS device.
-1. Search for "Office" and select **Office (Microsoft 365)**.
+Install the Microsoft 365 app to preview your Teams personal tab app running on your iOS device:
+
+1. In your iOS browser of choice. Visit the [App Center website](appcenter.ms) and login with your test tenant account.
+1. Search for the latest beta version for your app of choice. 
+    1. For Microsoft 365 app (formerly Office), search office and select **Microsoft 365 app**.
+    1. For Outlook, search outlook and select **Microsoft Outlook**.
 1. Select the **Install** button.
 
-    :::image type="content" source="images/office-android-install.png" alt-text="The screenshot is an example that shows the install button for the Office (Microsoft 365) app in Google Play Store.":::
+    :::image type="content" source="images/m365-ios-install.png" alt-text="The screenshot is an example that shows the install button for the Microsoft 365 (Office) app in App Center.":::
 
-1. Launch the Microsoft 365 app and sign in with your test tenant credentials.
+1. iOS restricts apps from being downloaded from the browser, to approve the app for use, **Open Settings Apps > General > VPN & Device Management**. 
+1. Under Enterprise App click Microsoft Corporation. Within this menu Click **Trust "Microsoft Corporation"** to enable 
+
+    :::image type="content" source="images/trusted-enterprise-developer.png" alt-text="The screenshot shows the message to Trust iPhone Distribution: Microsoft Corporation  Untrusted Enterprise Developer.":::
+
+1. Open the Microsoft 365  or Outlook app and sign in with your test tenant credentials.
 1. Open your profile **(Me) > Settings** and scroll to the bottom of the menu.
-1. Ensure you use Microsoft 365 app version 16.0.15726.20000 or higher for Android.
+1. Ensure that you use Microsoft 365 app version 2.72.23030700 or higher for iOS and Outlook app version 4.2310.0 (18999702) or higher for iOS.
 
 ## Install Visual Studio Code and Teams Toolkit extension
 
