@@ -120,3 +120,9 @@ threadId: = "19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype",
 groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 }
 ```
+
+## Code Sample
+
+| Sample name | Description | .NET |Node.js|
+|-------------|-------------|------|----|
+|Deep link consuming Subentity ID | This sample shows how to use deep-link from bot chat to tab consuming Subentity ID. It also shows deeplinks for navigate to app, navigate to chat, open profile dialog and open scheduling dialog.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs)|
