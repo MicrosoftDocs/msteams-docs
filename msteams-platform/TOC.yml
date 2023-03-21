@@ -722,7 +722,7 @@
   items:
   - name: Overview
     href: concepts/deploy-and-publish/apps-publish-overview.md
-    displayName: configure default install options, GCC
+    displayName: configure default install options, GCC, Customize your app
   - name: Enable customization for your app
     href: concepts/design/enable-app-customization.md
     displayName: Customize your app, update app name, branding, hide and unhide app, accent
