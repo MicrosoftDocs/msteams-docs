@@ -114,7 +114,7 @@ microsoftTeams.teamsCore.registerOnLoadHandler((data: any) => {
 
 ```
 
-To view the complete code sample, see [app caching in meeting](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/690da06cece8d2580bbab66ac466f4d4f192416e/samples/app-cache-meetings/nodejs/src/components/app-cache-tab.tsx#L73).
+To view the complete code sample, see [app caching in meeting](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-cache-meetings/nodejs/src/components/app-cache-tab.tsx#L73).
 
 ## Best practices
 
