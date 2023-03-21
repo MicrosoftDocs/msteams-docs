@@ -134,8 +134,8 @@ To remove an Incoming Webhook from a Teams channel, follow these steps:
 
 ## Code sample
 
-| Sample Name           | Description | .NET    |  Node.js |
-|:---------------------|:--------------|:---------|:--------|
+| Sample Name       | Description | .NET    |  Node.js |Manifest |
+|---------------------|--------------|---------|--------|--------|
 |Task module sample bots-V4 | This sample shows how to create task modules using bot framework v4 and teams tabs. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/csharp/demo-manifest/bot-task-module.zip)|
 
 ## See also
