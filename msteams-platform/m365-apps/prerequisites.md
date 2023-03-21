@@ -117,11 +117,11 @@ Install the Microsoft 365 app to preview your Teams personal tab app running on 
 
 #### iOS
 
-You can preview Teams personal tabs running in Microsoft 365 app for iOS by installing the prerelease version on the [App Center website](appcenter.ms) in your browser of choice.
+You can preview Teams personal tabs running in Microsoft 365 app for iOS by installing the prerelease version on the [App Center website](https://appcenter.ms/) in your browser of choice.
 
 Install the Microsoft 365 app to preview your Teams personal tab app running on your iOS device:
 
-1. In your iOS browser of choice. Visit the [App Center website](appcenter.ms) and login with your test tenant account.
+1. In your iOS browser of choice. Visit the [App Center website](https://appcenter.ms/) and login with your test tenant account.
 1. Search for the latest beta version for your app of choice. 
     1. For Microsoft 365 app (formerly Office), search office and select **Microsoft 365 app**.
     1. For Outlook, search outlook and select **Microsoft Outlook**.
