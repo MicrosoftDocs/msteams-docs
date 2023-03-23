@@ -37,12 +37,12 @@ In this section, you'll learn more about:
 
 Use RSC permissions to determine the data access methods for your app. A user's ability to grant RSC permissions varies based on resource types and access modes. The following are the types of RSC permissions for an app based on access mode:
 
-* **Application context RSC permissions (application permission)**: This type of RSC permission allows an app to access data without the user being signed in. Users authorized to install an app in a specific scope can also grant any RSC permission that the app requests in that specific scope.
+* **Application context RSC permissions (application permission)**: This type of RSC permission allows an app to access data without the user being signed in. Only resource owners can grant application RSC permissions.
 
   > [!NOTE]
   > Application RSC permissions for chat scope are available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md) only.
 
-* **Delegated context RSC permissions (delegated permission)**: This type of RSC permission allows an app to access data only on behalf of a signed-in user. No access is allowed in the absence of a signed-in user. Only authorized users can install an app in a specific scope. They can also grant any RSC permissions that the app requests in that specific scope at app installation. For example, if regular members have the permission to install an app inside a team, then they can also grant delegated RSC permission to the app in that specific team.
+* **Delegated context RSC permissions (delegated permission)**: This type of RSC permission allows an app to access data only on behalf of a signed-in user. No access is allowed in the absence of a signed-in user. Only authorized users can install an app in a specific scope. They can also grant any delegated RSC permissions that the app requests in that specific scope at app installation. For example, if regular members have the permission to install an app inside a team, then they can also grant delegated RSC permission to the app in that specific team.
 
 ### RSC-based data access APIs
 
