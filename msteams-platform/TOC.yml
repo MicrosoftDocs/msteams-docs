@@ -787,6 +787,9 @@
   - name: Manage license for third party apps in Teams
     href: concepts/deploy-and-publish/appsource/prepare/manage-third-party-apps-license.md
     displayName: ISVs, Manage, License, third party, SaaS, Partner Center, UsageRights
+  - name: End-user purchase experience
+    href: concepts/deploy-and-publish/appsource/prepare/end-user-purchase-experience.md
+    displayName: Purchase, apps, License
 - name: Grow your app
   items:
     - name: Strategize and execute growth for your app
