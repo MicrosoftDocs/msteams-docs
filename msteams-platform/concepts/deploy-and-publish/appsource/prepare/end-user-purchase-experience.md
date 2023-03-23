@@ -7,7 +7,9 @@ ms.topic: how-to
 ms.localizationpriority: high
 ---
 
-# App launch experience
+# End-user purchase experience
+
+Add functionality to your Teams experience by subscribing to apps made just for Teams and managing licenses. When you add an app to Teams, check if additional features are available through subscription. You can purchase subscriptions and manage licenses for yourself, your team, or your organization directly from Apps
 
 When a new user launches the app for the first time, they're requested to provide consent to the app. Following is an example of the consent screen shown when calling for user profile data with minimum User.Read permission.
 
@@ -15,7 +17,7 @@ Consent dialog is part of the flow to get the users license information and may 
 
 :::image type="content" source="../../../../assets/images/saas-offer/permissions-requested.png" alt-text="Screenshot showing the permissions requested.":::
 
-## End-user purchasing experience
+## End-user experience
 
 The following example shows how users can purchase subscription plans for a fictional Teams app called *Recloud*.
 
@@ -39,11 +41,11 @@ The following example shows how users can purchase subscription plans for a fict
 
     :::image type="content" source="~/assets/images/saas-offer/saas-offer-set-up.png" alt-text="Setting up the subscription.":::
 
-1. Manage your subscription plan through the *Recloud* website (also known as a [landing page](#build-a-landing-page-for-subscription-management)).
+1. Manage your subscription plan through the *Recloud* website (also known as a [landing page](include-saas-offer.md#build-a-landing-page-for-subscription-management)).
 
     :::image type="content" source="~/assets/images/saas-offer/subscriptionlicenses.png" alt-text="Configuring user licenses.":::
 
-## End-user experience for License Management in Teams
+## End-user experience for license management in Teams
 
 1. Go to **Microsoft Teams**.
 1. Select **Apps** > **Manage your apps**.

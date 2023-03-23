@@ -69,7 +69,7 @@ With a transactable Software as a Service (SaaS) offer, you can test the end-to-
 
 :::row:::
     :::column:::
-        :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-monetize-app-images.png" alt-text="Manage license for tird party apps:::
+        :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-monetize-app-images.png" alt-text="Manage license for tird party apps":::
     :::column-end:::
     :::column span="2":::
 
