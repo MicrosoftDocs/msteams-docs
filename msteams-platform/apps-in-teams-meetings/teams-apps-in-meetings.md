@@ -90,7 +90,7 @@ Teams supports access to apps during meeting for the following meeting types:
 Learn more about [Teams meetings, expiration, and policies](/microsoftteams/meeting-expiration) and [meetings, webinars, and live events](/microsoftteams/quick-start-meetings-live-events).
 > [!NOTE]
 >
-> * Apps aren't supported in the following:
+> Apps aren't supported in the following:
 >   * [Public Switched Telephone Network (PSTN) Teams calls](/microsoftteams/cloud-voice-landing-page#public-switched-telephone-network-connectivity-options)
 >   * [End-to-end encrypted Teams calls](https://support.microsoft.com/office/use-end-to-end-encryption-for-teams-calls-1274b4d2-b5c5-4b24-a376-606fa6728a90)
 >   * [Instant channel meetings](https://support.microsoft.com/office/start-an-instant-meeting-in-teams-ff95e53f-8231-4739-87fa-00b9723f4ef5)
