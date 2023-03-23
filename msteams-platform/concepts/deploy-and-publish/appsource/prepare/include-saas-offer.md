@@ -171,13 +171,15 @@ You can call Graph APIs to determine if the currently logged in user with a vali
    >
    > * You need to have minimum `User.Read` permissions to call UsageRights.
    > The UsageRights API is currently in beta version. After the version is updated to V1, ISV users should upgrade from beta to V1 version.
-   > * If the aad app you use for SaaS fulfillment API is used for usageRights API, ensure that the tenant under which the add app is created is either the publishing tenant or associated tenant in a partner center.
+   > * If the Azure AD app is used for both SaaS Fulfillment APIs and UsageRights API, ensure that the tenant under which the Azure AD app is created is either the publishing tenant or the associated tenant in the Partner Center.
 
-Use the following steps to determine whether the tenant that the AAD app is created under is part of the partner center setup.
+To determine if the tenant for the Azure AD app is part of the Partner Center setup, follow these steps:
 
-1. Login to [Microsoft Partner Center](https://partner.microsoft.com/) with the publisher account that is used to publish the SaaS offer.
-1. On the upper-right corner, select **Account Settings** and select **tenants**.
-   You can see all tenants associated with the MPN account. The tenant, who is the owner of the AAD app, should be on this list. If the tenant is not on the list, then you can use the "Associate Azure ID" button to link the tenant.
+1. Sign in  to [Microsoft Partner Center](https://partner.microsoft.com/) with the publisher account that is used to publish the SaaS offer.
+1. On the upper-right corner, select the **Settings** icon.
+1. Select **Account Settings**.
+1. On the left pane, select **Tenants**.
+   You can see all tenants associated with the Microsoft Partner Network (MPN) account. The tenant, who is the owner of the Azure AD app, should be available in the list. If the tenant isn’t on the list, you can use the **Associate Azure ID** button to link the tenant.
 
 ### Check license usage in Partner Center analytics
 
