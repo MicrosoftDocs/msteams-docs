@@ -519,7 +519,7 @@ Use the following example to configure your app manifest's `webApplicationInfo` 
 
 > [!NOTE]
 >
-> * If the `ChannelMeeting.ReadBasic.Group` permission is added to the manifest, the bot automatically receives the meeting start or end events from the channel meetings created in the teams the bot is added.
+> * If the `ChannelMeeting.ReadBasic.Group` permission is added to the manifest, the bot receives the meeting start or end events automatically from the channel meetings created in all the teams where the bot is added.
 > * For a one-on-one call `organizer` is the initiator of the chat and for group calls `organizer` is the call initiator. For public channel meetings `organizer` is the person who created the channel post.
 
 ### Query parameter
