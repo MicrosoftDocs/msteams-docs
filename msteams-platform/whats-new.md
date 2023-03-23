@@ -26,6 +26,7 @@ Teams platform features that are available to all app developers.
 
 **2023 March**
 
+* ***March 23, 2023***: [Apps are available for scheduled public channel meetings](apps-in-teams-meetings/teams-apps-in-meetings.md)
 * ***March 20, 2023***: [Bots are available in DOD](bots/what-are-bots.md)
 * ***March 20, 2023***: [Message extensions are available in DOD](messaging-extensions/what-are-messaging-extensions.md)
 
@@ -331,7 +332,6 @@ Developer preview is a public program that provides early access to unreleased T
 |10/11/2022|Generate a deep link to share content to stage in meetings.|Build apps for Teams meetings and calls > Enable and configure apps for meetings > Share in meeting > [Generate a deep link to share content to stage in meetings.](concepts/build-and-test/share-in-meeting.md) |
 | 09/23/2022 | Introduced meeting app support for Scheduled Channel Meetings. | Build apps for Teams meetings and calls > [Apps for Teams meetings and calls](apps-in-teams-meetings/teams-apps-in-meetings.md) |
 | 08/23/2022 | Share apps to the Teams meeting stage in mobile | Build apps for Teams meetings and calls > [Enable and configure apps for meetings](/microsoftteams/platform/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings) |
-| 08/10/2022 | Apps for scheduled public channel meetings | Build apps for Teams meetings and calls > [Overview](apps-in-teams-meetings/teams-apps-in-meetings.md) |
 | 08/03/2022 | Mute and unmute APIs for apps in Teams meeting stage | Build apps for Teams meetings and calls > [Meeting apps API references](/microsoftteams/platform/apps-in-teams-meetings/api-references?tabs=dotnet) |
 | 08/02/2022| Collaboration controls for Teams| Integrate with Teams > [Collaboration controls](samples/collaboration-control.md) |
 |05/24/2022| Enhanced collaboration with Live Share SDK | Build apps for Teams meetings > Enhanced collaboration with Live Share > [Overview](apps-in-teams-meetings/teams-live-share-overview.md) |

@@ -204,7 +204,7 @@ If you unlink a SaaS offer included in your Teams store listing, you must republ
 
 | **Sample name** | **Description** | **Node.js** | **Manifest**|
 |-----------------|-----------------|----------------|----------------|----------------|
-| Tab app monetization | This sample app demonstrates how to open a purchase dialog and trigger a purchase flow using Microsoft Teams JavaScript client library (TeamsJS).|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-app-monetization/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-app-monetization/nodejs/demo-manifest/tab-app-monetization.zip)|
+| Tab App Monetization | This is an sample tab application which shows how to open purchase dialog and trigger purchase flow using Teams JS SDK.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-app-monetization/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-app-monetization/nodejs/demo-manifest/tab-app-monetization.zip)|
 
 ## See also
 
