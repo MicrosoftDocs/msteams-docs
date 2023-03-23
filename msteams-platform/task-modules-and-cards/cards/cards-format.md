@@ -133,7 +133,8 @@ Bots and message extensions can include mentions within the card content in [Tex
 > * [Media elements](https://adaptivecards.io/explorer/Media.html) are currently not supported in Adaptive Cards on Teams platform.
 > * Channel and team mentions aren't supported in bot messages.
 
-Multiple users can be @mentioned in a single Adaptive Card message. But ensure not to exceed the size limitations. For an [incoming webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md) the size limitation is 28 KB and for a [bot message](~/bots/how-to/format-your-bot-messages.md) it's 40 KB.
+
+You can @mention multiple users in a single Adaptive Card message and ensure that the message size limit doesn't exceed 28 KB for [Incoming Webhooks](~/webhooks-and-connectors/how-to/add-incoming-webhook.md) and 40 KB for a [bot message](~/bots/how-to/format-your-bot-messages.md).
 
 To include a mention in an Adaptive Card, your app needs to include the following elements:
 
