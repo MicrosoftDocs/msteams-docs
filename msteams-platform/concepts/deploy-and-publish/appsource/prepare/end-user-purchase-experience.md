@@ -1,6 +1,6 @@
 ---
 title: End-user purchase experience
-description: Learn to purchase apps and manage licenses in Teams. 
+description: Learn how to purchase, assign, and manage licenses for third party apps in Teams. 
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: how-to
@@ -9,17 +9,11 @@ ms.localizationpriority: high
 
 # End-user purchase experience
 
-Add functionality to your Teams experience by subscribing to apps made just for Teams and managing licenses. When you add an app to Teams, check if additional features are available through subscription. You can purchase subscriptions and manage licenses for yourself, your team, or your organization directly from Apps
+Add functionality to your Teams experience by subscribing and managing licenses for apps made just for Teams. When you add an app to Teams, check if additional features are available through subscription. You can purchase subscriptions and manage licenses for yourself, your team, or your organization directly from the Teams store.
 
-When a new user launches the app for the first time, they're requested to provide consent to the app. Following is an example of the consent screen shown when calling for user profile data with minimum User.Read permission.
+## End-user subscription experience
 
-Consent dialog is part of the flow to get the users license information and may vary based on ISV’s integration approach.
-
-:::image type="content" source="../../../../assets/images/saas-offer/permissions-requested.png" alt-text="Screenshot showing the permissions requested.":::
-
-## End-user experience
-
-The following example shows how users can purchase subscription plans for a fictional Teams app called *Recloud*.
+The following example shows how users can purchase subscription plans for a fictional Teams app called *Recloud*:
 
 1. In the Teams store, find and select the *Recloud* app.
 
@@ -45,9 +39,18 @@ The following example shows how users can purchase subscription plans for a fict
 
     :::image type="content" source="~/assets/images/saas-offer/subscriptionlicenses.png" alt-text="Configuring user licenses.":::
 
+When a new user launches the app for the first time, they're requested to provide consent to the app. Following is an example of the consent screen shown when calling for user profile data with minimum User.Read permission.
+
+Consent dialog is part of the flow to get the users license information and may vary based on ISV’s integration approach.
+
+:::image type="content" source="../../../../assets/images/saas-offer/permissions-requested.png" alt-text="Screenshot showing the permissions requested.":::
+
 ## End-user experience for license management in Teams
 
+The following example shows how users can manage licenses for third party apps from the Teams store:
+
 1. Go to **Microsoft Teams**.
+
 1. Select **Apps** > **Manage your apps**.
 
     :::image type="content" source="../../../../assets/images/saas-offer/client-experience-1.png" alt-text="Screenshot showing the existing subscription.":::
@@ -75,7 +78,7 @@ The following example shows how users can purchase subscription plans for a fict
 
 ## Admin purchasing experience
 
-Admins can purchase app subscription plans in the [Teams admin center](/microsoftteams/purchase-third-party-apps)
+Admins can manage the app subscriptions and licenses in the Teams admin center. For more information, see [Purchase third-party Teams apps and manage subscriptions](/microsoftteams/purchase-third-party-apps).
 
 ## See also
 

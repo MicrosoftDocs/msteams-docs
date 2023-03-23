@@ -75,7 +75,7 @@ With a transactable Software as a Service (SaaS) offer, you can test the end-to-
 
 **Manage license for third party apps in Teams**
 
-Using Microsoft license management, independent software vendors (ISVs) can manage SaaS license purchased in Teams to easily assign, unassign, use, and track SaaS licenses.
+If you choose to use Microsoft license management to manage a SaaS license purchased in Teams, you can easily assign, unassign, use, and track SaaS licenses from the Teams store.
 
 [Manage license for third party apps in Teams](manage-third-party-apps-license.md).
 
