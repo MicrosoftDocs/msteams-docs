@@ -78,7 +78,9 @@ Following these guidelines increases the chances of your app to pass the Microso
 
 ## Value proposition
 
-:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: This section is in line with [Microsoft commercial certification policy number 1140.1](/legal/marketplace/certification-policies#11401-value-proposition-and-offer-requirements) and provides additional guidance to developers of Microsoft Teams apps on their offer’s value proposition.  
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: This section is in line with [Microsoft commercial certification policy number 1140.1](/legal/marketplace/certification-policies#11401-value-proposition-and-offer-requirements) and provides additional guidance to developers of Microsoft Teams apps on their offer’s value proposition.
+
+[Back to top](#microsoft-teams-store-validation-guidelines)
 
 ### App Name
 
@@ -192,6 +194,8 @@ If your app authenticates users with an external service, follow these guideline
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: This section is in line with [Microsoft commercial certification policy number 1140.3](/legal/marketplace/certification-policies#11403-security).
 
+[Back to top](#microsoft-teams-store-validation-guidelines)
+
 ### Financial information
 
 [*Mandatory Fix*]
@@ -291,6 +295,8 @@ App must warn users before downloading any files or executables (.exe) into the 
 * Calling out account dependency or limitations under app functionality isn't required but is mandatory to add it in both manifest long description and AppSource app listing.
 * You must call out any dependency on tenant admins for new users. If there's no dependency, it's mandatory to provide a sign up, contact us, get started link, or email.
 
+[Back to top](#microsoft-teams-store-validation-guidelines)
+
 ### Launching external functionality
 
 [*Mandatory Fix*]
@@ -356,6 +362,8 @@ App packages must be correctly formatted and include all required information an
 >   * **Emphasis on any considerations** for testers while validating your app submission.
 >   * **Prepopulate the test accounts with dummy data** to aid testing.
 >   * If you are providing your test accounts, ensure that you enable third-party integration. Also, disable two-factor or multi-factor authentication.
+
+[Back to top](#microsoft-teams-store-validation-guidelines)
 
 ### App manifest
 
@@ -724,6 +732,8 @@ If setup of your app for testing purposes is complex, provide an end-to-end func
 
 </details>
 
+[Back to top](#microsoft-teams-store-validation-guidelines)
+
 ## Tabs
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: This section is in line with [Microsoft commercial marketplace policy number 1140.4.2](/legal/marketplace/certification-policies#114042-tabs).
@@ -908,6 +918,8 @@ The following are the navigation guidelines:
 
 </details>
 <br/>
+
+[Back to top](#microsoft-teams-store-validation-guidelines)
 
 ## Bots
 
@@ -1193,6 +1205,8 @@ Apps that provide only notifications with content such as, **You have a new noti
 
 </details>
 
+[Back to top](#microsoft-teams-store-validation-guidelines)
+
 ## Message extensions
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: This section is in line with [Microsoft commercial marketplace policy number 1140.4.4](/legal/marketplace/certification-policies#114044-messaging-extensions).
@@ -1313,6 +1327,8 @@ Link unfurling only apps don't provide significant value within Teams. Consider 
 
 </details>
 
+[Back to top](#microsoft-teams-store-validation-guidelines)
+
 ## Task modules
 
 [*Mandatory Fix*]
@@ -1333,6 +1349,8 @@ For more information, see [Teams task module design guidelines](~\task-modules-a
 > For more information on creating a high-quality app experience, see [Teams task module design guidelines](~/task-modules-and-cards/task-modules/design-teams-task-modules.md).
 
 </details>
+
+[Back to top](#microsoft-teams-store-validation-guidelines)
 
 ## Meeting extensions
 
@@ -1465,6 +1483,8 @@ Shared meeting stage feature can only be launched through the Teams desktop app.
 
 </details>
 
+[Back to top](#microsoft-teams-store-validation-guidelines)
+
 ## Notifications
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: This section is in line with [Microsoft commercial marketplace policy number 1140.4.7](/legal/marketplace/certification-policies#114047-notification-apis).
@@ -1525,6 +1545,8 @@ If your app uses the [activity feed APIs provided by Microsoft Graph](/graph/tea
 
 </details>
 
+[Back to top](#microsoft-teams-store-validation-guidelines)
+
 ## Microsoft 365 App Compliance Program
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: This section is in line with [Microsoft commercial marketplace policy number 1140.6](/legal/marketplace/certification-policies#11406-publisher-attestation).
@@ -1543,6 +1565,8 @@ The Microsoft 365 App Compliance Program is intended to help organizations asses
 
 </details>
 
+[Back to top](#microsoft-teams-store-validation-guidelines)
+
 ## Advertising
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: This section is in line with [Microsoft commercial marketplace policy number 1140.7](/legal/marketplace/certification-policies#11407-advertising).
@@ -1550,6 +1574,8 @@ The Microsoft 365 App Compliance Program is intended to help organizations asses
 Apps mustn't display advertising, including dynamic ads, banner ads, and ads in message. [*Mandatory Fix*]
 
 :::image type="content" source="../../../../assets/images/submission/validation-advertising-banners.png" alt-text="Graphic shows an example of a failed scenario of advertising in Teams.":::
+
+[Back to top](#microsoft-teams-store-validation-guidelines)
 
 ## Cryptocurrency based apps
 
@@ -1571,12 +1597,16 @@ You must demonstrate compliance with all laws where your app is distributed, if 
 
 After an internal Microsoft review, if the compliance demonstration is satisfactory, Microsoft may proceed with further certification of your app. If the compliance demonstration is unsatisfactory, Microsoft will keep you informed of the decision to not proceed with certification of your app.
 
+[Back to top](#microsoft-teams-store-validation-guidelines)
+
 ## App functionality
 
 * Workflows or content in the app must be related to the scope. [*Mandatory Fix*]
 * All app capabilities must be functional and must work properly as described in the AppSource or manifest long description. [*Mandatory Fix*]
 * Apps must always notify the user before downloading any file or executable on the user’s environment. Any call to action (CTA), either text based or otherwise, that makes it clear to the user that a file or executable is downloaded on user action is allowed in the app. [*Mandatory Fix*]
 * Apps with region dependency must notify the users with a graceful failure message in all applicable capabilities if they attempt to use it in an unsupported region. [*Mandatory Fix*]
+
+[Back to top](#microsoft-teams-store-validation-guidelines)
 
 ## Mobile experience
 
@@ -1605,6 +1635,8 @@ After an internal Microsoft review, if the compliance demonstration is satisfact
 * Teams apps must offer an appropriate cross-device mobile experience. [*Mandatory Fix*]
 
 * Capabilities that aren't supported on mobile mustn't dead-end a user and must provide a graceful failure message where applicable. [*Mandatory Fix*]
+
+[Back to top](#microsoft-teams-store-validation-guidelines)
 
 ## Next step
 
