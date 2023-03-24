@@ -304,9 +304,9 @@ Specifies information about your company. For apps submitted to AppSource (forme
 |Name| Maximum size | Required | Description|
 |---|---|---|---|
 |`name`|32 characters|✔️|The display name for the developer.|
-|`websiteUrl`|2048 characters|✔️|The https:// URL to the developer's website. This link should take users to your company or product-specific landing page.|
-|`privacyUrl`|2048 characters|✔️|The https:// URL to the developer's privacy policy.|
-|`termsOfUseUrl`|2048 characters|✔️|The https:// URL to the developer's terms of use.|
+|`websiteUrl`|2048 characters|✔️|The <https://> URL to the developer's website. This link should take users to your company or product-specific landing page.|
+|`privacyUrl`|2048 characters|✔️|The <https://> URL to the developer's privacy policy.|
+|`termsOfUseUrl`|2048 characters|✔️|The <https://> URL to the developer's terms of use.|
 |`mpnId`|10 characters|✔️|**Optional** The Microsoft Partner Network ID that identifies the partner organization building the app.|
 
 ## localizationInfo
@@ -381,7 +381,7 @@ The object is an array with all elements of the type `object`. This block is req
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`configurationUrl`|String|2048 characters|✔️|The https:// URL to use when configuring the tab.|
+|`configurationUrl`|String|2048 characters|✔️|The <https://> URL to use when configuring the tab.|
 |`canUpdateConfiguration`|Boolean|||A value indicating whether an instance of the tab's configuration can be updated by the user after creation. Default: `true`|
 |`scopes`|Array of enum|1|✔️|Currently, configurable tabs support only the `team` and `groupchat` scopes. |
 |`context` |array of enums|6||The set of `contextItem` scopes where a [tab is supported](../../tabs/how-to/access-teams-context.md). Default: `channelTab`, `privateChatTab`, `meetingChatTab`, `meetingDetailsTab`, `meetingSidePanel`, and `meetingStage`.|
@@ -402,9 +402,9 @@ The object is an array (maximum of 16 elements) with all elements of the type `o
 |---|---|---|---|---|
 |`entityId`|String|64 characters|✔️|A unique identifier for the entity that the tab displays.|
 |`name`|String|128 characters|✔️|The display name of the tab in the channel interface.|
-|`contentUrl`|String|2048 characters|✔️|The https:// URL that points to the entity UI to be displayed in the Teams canvas.|
+|`contentUrl`|String|2048 characters|✔️|The <https://> URL that points to the entity UI to be displayed in the Teams canvas.|
 |`contentBotId`|   | | | The Microsoft Teams app ID specified for the bot in the Bot Framework portal. |
-|`websiteUrl`|String|2048 characters||The https:// URL to point at if a user opts to view in a browser.|
+|`websiteUrl`|String|2048 characters||The <https://> URL to point at if a user opts to view in a browser.|
 |`scopes`|Array of enum|1|✔️|Currently, static tabs support only the `personal` scope, which means it can be provisioned only as part of the personal experience.|
 
 ## bots
@@ -442,7 +442,7 @@ The object is an array (maximum of 1 element) with all elements of type `object`
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`configurationUrl`|String|2048 characters|✔️|The https:// URL to use when configuring the connector.|
+|`configurationUrl`|String|2048 characters|✔️|The <https://> URL to use when configuring the connector.|
 |`connectorId`|String|64 characters|✔️|A unique identifier for the Connector that matches its ID in the [Connectors Developer Dashboard](https://aka.ms/connectorsdashboard).|
 |`scopes`|Array of enum|1|✔️|Specifies whether the Connector offers an experience in the context of a channel in a `team`, or an experience scoped to an individual user alone (`personal`). Currently, only the `team` scope is supported.|
 
@@ -756,7 +756,7 @@ Specify and consolidate authorization related information for the app.
 
 #### RSC application permissions
 
-Application permissions allow the app to access data without a signed-in user. For information on application permissions, see [RSC permissions for Microsoft Graph and Microsoft BotSDK](../../graph-api/rsc/rsc-overview.md).
+Application permissions allow the app to access data without a signed-in user. For information on application permissions, see [RSC permissions for Microsoft Graph and Microsoft BotSDK](../../graph-api/rsc/resource-specific-consent.md).
 
 #### RSC delegated permissions
 

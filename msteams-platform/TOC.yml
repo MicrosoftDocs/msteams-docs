@@ -651,9 +651,9 @@
   - name: Resource-specific consent
     items:
     - name: Overview
-      href: graph-api/rsc/rsc-overview.md
-    - name: Grant RSC permission to your app
       href: graph-api/rsc/resource-specific-consent.md
+    - name: Grant RSC permission to your app
+      href: graph-api/rsc/grant-resource-specific-consent.md
     displayName: Permissions, delegated
   - name: Proactive installation of apps using Graph API to send messages
     href: graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md

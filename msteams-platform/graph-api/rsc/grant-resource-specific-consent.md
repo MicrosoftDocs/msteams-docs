@@ -71,7 +71,7 @@ To add RSC permission in app manifest:
 
     |Name| Type | Description|
     |---|---|---|
-    |`id` |String |Your Azure AD app ID. For more information, see [register your app in the Azure AD portal](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).|
+    |`id` |String |Your Azure AD app ID. For more information, see [register your app in the Azure AD portal](grant-resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).|
     |`resource`|String| This field has no operation in RSC but you must add a value to avoid an error response. You can add any string as value.|
 
 1. Add permissions needed by your app.
@@ -255,9 +255,9 @@ Add the [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplic
 
 |Name| Type | Description|
 |---|---|---|
-|`id` |String |Your Azure AD app ID. For more information, see [register your app in the Azure AD portal](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).|
+|`id` |String |Your Azure AD app ID. For more information, see [register your app in the Azure AD portal](grant-resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).|
 |`resource`|String| This field has no operation in RSC but you must add a value to avoid an error response. You can add any string as value.|
-|`applicationPermissions`|Array of strings|RSC permissions for  your app. For more information, see [Supported RSC permissions](rsc-overview.md#supported-rsc-permissions).|
+|`applicationPermissions`|Array of strings|RSC permissions for  your app. For more information, see [Supported RSC permissions](resource-specific-consent.md#supported-rsc-permissions).|
 
 If an app is meant to support installation in both team and chat scopes, then both team and chat permissions can be specified in the same manifest under `applicationPermissions`.
 
