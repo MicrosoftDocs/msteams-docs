@@ -14,9 +14,9 @@ The following table lists TeamsJS version and app manifest versions as per diffe
 
 [!INCLUDE [pre-release-label](~/includes/teamjs-version-details.md)]
 
-The following schema sample shows all extensibility options:
+The following is the sample manifest schema:
 
-## Sample full manifest
+## Sample manifest
 
 ```json
 {
@@ -906,7 +906,7 @@ If your app doesn't have a Teams app manifest file, you'll need to create it.
 
 To create a Teams app manifest file:
 
-1. Use the [sample manifest schema](#sample-full-manifest) to create a .json file.
+1. Use the [sample manifest schema](#sample-manifest) to create a .json file.
 1. Save it in the root of your project folder as `manifest.json`.
 
 <br>
@@ -915,7 +915,7 @@ To create a Teams app manifest file:
 <br>
 
 > [!NOTE]
-> The manifest example content shown here is only for a tab app. It uses example values for subdomain URI. For more information, see [sample manifest schema](#sample-full-manifest).
+> The manifest example content shown here is only for a tab app. It uses example values for subdomain URI. For more information, see [sample manifest schema](#sample-manifest).
 
   ```json
 { 
