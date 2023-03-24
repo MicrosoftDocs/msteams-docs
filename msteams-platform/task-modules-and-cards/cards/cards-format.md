@@ -28,6 +28,9 @@ The following card types support Markdown formatting in Teams:
 * Adaptive Cards: Markdown is supported in Adaptive Card `Textblock` field, and `Fact.Title` and `Fact.Value`. HTML isn't supported in Adaptive Cards.
 * Connector cards for Microsoft 365 Groups: Markdown and limited HTML is supported in connector cards for Microsoft 365 Groups in the text fields.
 
+> [!NOTE]
+> Markdown isn't supported for OAuth sign in cards in bots.
+
 You can use newlines for Adaptive Cards using `\r` or `\n` escape sequences for newlines in lists. Formatting is different between the desktop and the mobile versions of Teams for Adaptive Cards. Card-based mentions are supported in web, desktop, and mobile clients. You can use the information masking property to mask specific information, such as password or sensitive information from users within the Adaptive Card `Input.Text` input element. You can expand the width of an Adaptive Card using the `width` object. You can enable typeahead support within Adaptive Cards and filter the set of input choices as the user types the input. You can use the `msteams` property to add the ability to display images in stage view selectively.
 
 Formatting is different between the desktop and the mobile versions of Teams for Adaptive Cards and connector cards. In this section, you can go through the Markdown format example for Adaptive Cards and connector cards.
@@ -132,6 +135,7 @@ Bots and message extensions can include mentions within the card content in [Tex
 >
 > * [Media elements](https://adaptivecards.io/explorer/Media.html) are currently not supported in Adaptive Cards on Teams platform.
 > * Channel and team mentions aren't supported in bot messages.
+> * You can @mention multiple users in a single Adaptive Card message, however, ensure that the message size limit doesn't exceed 28 KB for [Incoming Webhooks](~/webhooks-and-connectors/how-to/add-incoming-webhook.md) and 40 KB for a [bot message](~/bots/how-to/format-your-bot-messages.md).
 
 To include a mention in an Adaptive Card, your app needs to include the following elements:
 
@@ -768,9 +772,9 @@ You can test formatting in your own cards by modifying this code.
 
 ## Code samples
 
-|S.No.| Description|.NET|Node.js|
-|:--|:--|:--------------------------------------------------------|-----|
-|1|Sample which showcase different card formatting used.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-formatting-cards/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-formatting-cards/nodejs)|
+|S.No.| Description|.NET|Node.js|Manifest
+|:--|:--|:--------------------------------------------------------|-----|-----|
+|1|This sample app shows different card formatting supported in Teams.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-formatting-cards/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-formatting-cards/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-formatting-cards/csharp/demo-manifest/bot-formatting-cards.zip)
 
 ## See also
 

@@ -214,6 +214,31 @@ async def on_members_added_activity(
 
 ```
 
+# [HTTP](#tab/http)
+
+```http
+POST {Service URL of your bot}/v3/conversations
+```
+
+```json
+{
+   "bot": {
+        "id": "{{botID}}",
+        "name": "{{botName}}"
+    },
+  "members": [
+    {
+      "id": "{{memberID}}"
+    }
+  ],
+  "channelData": {
+    "tenant": {
+      "id": "{{tenantID}}"
+    }
+  }
+}
+```
+
 ---
 
 > [!NOTE]
@@ -234,7 +259,7 @@ To get an edit or undelete message event notification in a bot, you can override
 
 The following is an example of an edit message event notification when a sent message is edited:
 
-# [C#](#tab/csharp3)
+# [C#](#tab/dotnet3)
 
 ```csharp
 
@@ -316,11 +341,24 @@ async onTeamsMessageEdit(context) {
 
 ```
 
+# [HTTP](#tab/http1)
+
+```http
+PUT {Service URL of your bot}/v3/conversations/{conversationId}/activities/{activityId}
+```
+
+```json
+{
+    "type": "message",
+    "text": "This message has been updated"
+}
+```
+
 ---
 
 The following is an example of an undelete message event notification when a deleted message is restored:
 
-# [C#](#tab/csharp4)
+# [C#](#tab/dotnet4)
 
 ```csharp
 
@@ -404,6 +442,19 @@ async onTeamsMessageUndelete(context) {
 
 ```
 
+# [HTTP](#tab/http2)
+
+```http
+PUT {Service URL of your bot}/v3/conversations/{conversationId}/activities/{activityId}
+```
+
+```json
+{
+    "type": "message",
+    "text": "This message has been updated"
+}
+```
+
 ---
 
 ## Soft delete message
@@ -414,7 +465,7 @@ To get a soft delete message event notification in a bot, you can override the `
 
 The following is an example of a soft delete message event notification when a message is soft deleted:
 
-# [C#](#tab/csharp5)
+# [C#](#tab/dotnet5)
 
 ```csharp
 
@@ -803,11 +854,11 @@ The general retry guidance for each status code is listed in the following table
 
 ## Code sample
 
-| Sample name | Description | Node.js | .NETCore | Python | .NET |
-|----------------|-----------------|--------------|----------------|-----------|-----|
-| Teams conversation bot | Messaging and conversation event handling. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/python) | NA |
-| Teams app localization | Teams app localization using bot and tab. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/nodejs) | NA | NA | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) |
-| Update and delete message | Sample app shows how to get a update and delete event notification in your bot. | [View]() | NA | NA | [View]() |
+| Sample name | Description | Node.js | .NETCore | Python | .NET | Manifest
+|----------------|-----------------|--------------|----------------|-----------|-----|-----|
+| Teams conversation bot | This sample app shows how to use different bot conversation events available in bot framework v4. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/python) | NA |
+| Teams app localization | This sample shows Teams app localization using bot and tab. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/nodejs) | NA | NA | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) |
+| Update and delete message | This sample shows how to capture events for updated and delete messages in chat using bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp) | NA | NA |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/demo-manifest/bot-conversation.zip)
 
 ## Next step
 
