@@ -796,7 +796,7 @@ Enables your app in non-standard channels. If your app supports a team scope and
 
 **Optional** - Boolean
 
-When `defaultBlockUntilAdminAction` property is set to **true**, the app is hidden from users by default until admin allows it. If set to **true**, the app is hidden for all tenants and end users. The tenant admins can see the app in the Teams admin center and take action to allow or block the app. The default value is **false**. For more information on default app block, see [Block apps by default for users until an admin approves](../../concepts/design/enable-app-customization.md#block-apps-by-default-for-users-until-an-admin-approves)
+When `defaultBlockUntilAdminAction` property is set to **true**, the app is hidden from users by default until admin allows it. If set to **true**, the app is hidden for all tenants and end users. The tenant admins can see the app in the Teams admin center and take action to allow or block the app. The default value is **false**. For more information on default app block, see [Block apps by default for users until an admin approves](../../concepts/deploy-and-publish/add-default-install-scope.md#block-apps-by-default-for-users-until-an-admin-approves).
 
 ## publisherDocsUrl
 
@@ -951,7 +951,7 @@ To create a Teams app manifest file:
     { 
      "entityId": "auth", 
      "name": "Auth", 
-     "contentUrl": "https://https://subdomain.example.com/Home/Index", 
+     "contentUrl": "https://subdomain.example.com/Home/Index", 
      "scopes": [ "personal" ] 
     } 
   ], 
