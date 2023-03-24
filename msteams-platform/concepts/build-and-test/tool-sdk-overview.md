@@ -11,7 +11,6 @@ ms.author: surbhigupta
 
 You can build your Microsoft Teams app using following different tools and SDKs:
 
-
 :::row:::
     :::column span="1":::
         **Teams Toolkit**
@@ -80,7 +79,7 @@ You can build your Microsoft Teams app using following different tools and SDKs:
         The Microsoft Graph SDKs are designed to simplify building high-quality, efficient, and resilient applications that access Microsoft Graph.
 
         > [!div class="nextstepaction"]
-        > [Microsoft Graph SDKs](~/graph/sdks/sdks-overview.md)
+        > [Microsoft Graph SDKs](/graph/sdks/sdks-overview)
     :::column-end:::
 :::row-end:::
 
