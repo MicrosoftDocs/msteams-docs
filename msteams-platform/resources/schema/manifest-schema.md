@@ -14,9 +14,9 @@ The following table lists TeamsJS version and app manifest versions as per diffe
 
 [!INCLUDE [pre-release-label](~/includes/teamjs-version-details.md)]
 
-The following schema sample shows all extensibility options:
+The following is the sample manifest schema:
 
-## Sample full manifest
+## Sample manifest
 
 ```json
 {
