@@ -37,6 +37,484 @@ The following table provides a list of APIs available across the Microsoft Teams
 
 To identify and retrieve contextual information for your tab content, see [get context for your Teams tab](../tabs/how-to/access-teams-context.md#get-context-by-using-the-microsoft-teams-javascript-library). `meetingId` is used by a tab running in the meeting context and is added for the response payload.
 
+<details><summary>The following is a JSON payload example for a channel meeting: </summary>
+
+```json
+{
+ "app": {
+  "locale": "en-us",
+  "sessionId": "ff47ec00-e6a7-4dc1-a6ae-f44110f50c94",
+  "theme": "default",
+  "iconPositionVertical": 0,
+  "osLocaleInfo": {
+   "platform": "windows",
+   "regionalFormat": "en-in",
+   "shortDate": "dd-MM-yyyy",
+   "longDate": "dd MMMM yyyy",
+   "shortTime": "HH:mm",
+   "longTime": "HH:mm:ss"
+  },
+  "parentMessageId": "1678109354022",
+  "userClickTime": 1678109521159,
+  "userFileOpenPreference": "inline",
+  "host": {
+   "name": "Teams",
+   "clientType": "desktop",
+   "sessionId": "c3c3c0a0-f7a1-b070-6b89-c8cd1f380042",
+   "ringId": "ring1"
+  },
+  "appLaunchId": "7346ae66-5cac-47f9-8a0d-1228dac474cb"
+ },
+ "page": {
+  "id": "Test",
+  "frameContext": "sidePanel",
+  "subPageId": "",
+  "isFullScreen": false,
+  "isMultiWindow": true,
+  "sourceOrigin": ""
+ },
+ "user": {
+  "id": "57efa5f3-273c-47e2-a871-4879e5d849cf",
+  "displayName": "",
+  "isCallingAllowed": undefined,
+  "isPSTNCallingAllowed": undefined,
+  "licenseType": "Unknown",
+  "loginHint": "v-prkamble@microsoft.com",
+  "userPrincipalName": "v-prkamble@microsoft.com",
+  "tenant": {
+   "id": "72f988bf-86f1-41af-91ab-2d7cd011db47",
+   "teamsSku": "enterprise"
+  }
+ },
+ "channel": {
+  "id": "19:49683807ffce4318ad6d6d7a24dbde45@thread.tacv2",
+  "displayName": undefined,
+  "relativeUrl": undefined,
+  "membershipType": undefined,
+  "defaultOneNoteSectionId": undefined,
+  "ownerGroupId": undefined,
+  "ownerTenantId": undefined
+ },
+ "chat": {
+  "id": "19:49683807ffce4318ad6d6d7a24dbde45@thread.tacv2"
+ },
+ "meeting": {
+  "id": "MCMxOTo0OTY4MzgwN2ZmY2U0MzE4YWQ2ZDZkN2EyNGRiZGU0NUB0aHJlYWQudGFjdjIjMTY3ODEwOTM1NDAyMg=="
+ },
+ "sharepoint": undefined,
+ "team": {
+  "internalId": "19:b34aeec3f8e54240a5c283e86bfc4878@thread.tacv2",
+  "displayName": undefined,
+  "type": undefined,
+  "groupId": undefined,
+  "templateId": undefined,
+  "isArchived": undefined,
+  "userRole": 1
+ },
+ "sharePointSite": {
+  "teamSiteUrl": "",
+  "teamSiteDomain": "microsoft.sharepoint.com",
+  "teamSitePath": "",
+  "teamSiteId": "",
+  "mySitePath": undefined,
+  "mySiteDomain": undefined
+ }
+}
+```
+
+</details>
+</br>
+
+<details><summary>The following is a JSON payload example for a scheduled meeting: </summary>
+
+```json
+ {
+  "app": {
+   "locale": "en-us",
+   "sessionId": "e746c935-0991-47b8-b7f4-16db7646771f",
+   "theme": "default",
+   "iconPositionVertical": 22.998046875,
+   "osLocaleInfo": null,
+   "parentMessageId": "",
+   "userClickTime": 1678023107126,
+   "userFileOpenPreference": "inline",
+   "host": {
+    "name": "Teams",
+    "clientType": "web",
+    "sessionId": "5f2a15f6-75bd-2612-c0ff-2e1085dd165a",
+    "ringId": "general"
+   },
+   "appLaunchId": "e07b6f2c-dc0f-4de2-9b1f-44dba2ea733c"
+  },
+  "page": {
+   "id": "Test",
+   "frameContext": "content",
+   "subPageId": "",
+   "isFullScreen": false,
+   "isMultiWindow": false,
+   "sourceOrigin": NULL
+  },
+  "user": {
+   "id": "e652dd92-dd63-4fcc-b5b2-2005681e8e9f",
+   "displayName": null,
+   "isCallingAllowed": null,
+   "isPSTNCallingAllowed": null,
+   "licenseType": "Unknown",
+   "loginHint": "admin@M365x94626565.onmicrosoft.com",
+   "userPrincipalName": "admin@M365x94626565.onmicrosoft.com",
+   "tenant": {
+    "id": "aa923623-ae61-49ee-b401-81f414b6ad5a",
+    "teamsSku": "enterprise"
+   }
+  },
+  "channel": null,
+  "chat": {
+   "id": "19:meeting_YmU5NWM3NGEtZjMyMi00ZDg4LTk4OGUtMjUzMGJkZjRhMDhm@thread.v2"
+  },
+  "meeting": {
+   "id": "MCMxOTptZWV0aW5nX1ltVTVOV00zTkdFdFpqTXlNaTAwWkRnNExUazRPR1V0TWpVek1HSmtaalJoTURobUB0aHJlYWQudjIjMA=="
+  },
+  "sharepoint": null,
+  "team": null,
+  "sharePointSite": {
+   "teamSiteUrl": "",
+   "teamSiteDomain": "m365x94626565.sharepoint.com",
+   "teamSitePath": "",
+   "teamSiteId": null,
+   "mySitePath": "/personal/admin_m365x94626565_onmicrosoft_com",
+   "mySiteDomain": "m365x94626565-my.sharepoint.com"
+  }
+ }
+
+```
+
+</details>
+</br>
+
+<details><summary>The following is a JSON payload example for a scheduled meeting for a guest user: </summary>
+
+```json
+ {
+  "app": {
+   "locale": "en-us",
+   "sessionId": "268beeb4-a52d-4ba8-b1c8-8b9f0b9b3492",
+   "theme": "default",
+   "iconPositionVertical": 23,
+   "osLocaleInfo": {
+    "platform": "windows",
+    "regionalFormat": "en-in",
+    "longDate": "dd MMMM yyyy",
+    "shortDate": "dd-MM-yyyy",
+    "longTime": "HH:mm:ss",
+    "shortTime": "HH:mm"
+   },
+   "parentMessageId": "",
+   "userClickTime": 1678023265131,
+   "userFileOpenPreference": "inline",
+   "host": {
+    "name": "Teams",
+    "clientType": "desktop",
+    "sessionId": "967c980b-1e41-a2cd-eac0-a4bff8f73ce7",
+    "ringId": "ring1"
+   },
+   "appLaunchId": "c35c4496-f28c-4107-8e6c-2dba09fb881a"
+  },
+  "page": {
+   "id": "Test",
+   "frameContext": "content",
+   "subPageId": "",
+   "isFullScreen": false,
+   "isMultiWindow": false,
+   "sourceOrigin": NULL
+  },
+  "user": {
+   "id": "57efa5f3-273c-47e2-a871-4879e5d849cf",
+   "displayName": undefined,
+   "isCallingAllowed": undefined,
+   "isPSTNCallingAllowed": undefined,
+   "licenseType": "Unknown",
+   "loginHint": "v-prkamble@microsoft.com",
+   "userPrincipalName": "v-prkamble@microsoft.com",
+   "tenant": {
+    "id": "72f988bf-86f1-41af-91ab-2d7cd011db47",
+    "teamsSku": "enterprise"
+   }
+  },
+  "channel": undefined,
+  "chat": {
+   "id": "19:meeting_YmU5NWM3NGEtZjMyMi00ZDg4LTk4OGUtMjUzMGJkZjRhMDhm@thread.v2"
+  },
+  "meeting": {
+   "id": "MCMxOTptZWV0aW5nX1ltVTVOV00zTkdFdFpqTXlNaTAwWkRnNExUazRPR1V0TWpVek1HSmtaalJoTURobUB0aHJlYWQudjIjMA=="
+  },
+  "sharepoint": undefined,
+  "team": undefined,
+  "sharePointSite": {
+   "teamSiteUrl": "",
+   "teamSiteDomain": "microsoft.sharepoint.com",
+   "teamSitePath": "",
+   "teamSiteId": undefined,
+   "mySitePath": "/personal/v-prkamble_microsoft_com",
+   "mySiteDomain": "microsoft-my.sharepoint.com"
+  }
+ }
+```
+
+</details>
+</br>
+
+<details><summary>The following is a JSON payload example for a scheduled meeting for an anonymous user: </summary>
+
+```json
+{
+    "app": {
+        "locale": "en-us",
+        "sessionId": "a57af773-73b1-480c-a525-0c9487a51792",
+        "theme": "dark",
+        "parentMessageId": "",
+        "userClickTime": 1678369341888,
+        "host": {
+            "name": "Teams",
+            "clientType": "web",
+            "sessionId": "",
+            "ringId": "general"
+        }
+    },
+    "page": {
+        "frameContext": "meetingStage",
+        "subPageId": "",
+        "isMultiWindow": false,
+        "sourceOrigin": ""
+    },
+    "user": {
+        "id": "",
+        "licenseType": "Anonymous",
+        "loginHint": "",
+        "userPrincipalName": ""
+    },
+    "chat": {
+        "id": "19:meeting_NTZmNTI3ODgtOWZkOS00NjgzLWJhNTMtMDhlNjE5ZjAwYWYx@thread.v2"
+    },
+    "meeting": {
+        "id": "MCMxOTptZWV0aW5nX05UWm1OVEkzT0RndE9XWmtPUzAwTmpnekxXSmhOVE10TURobE5qRTVaakF3WVdZeEB0aHJlYWQudjIjMA=="
+    }
+}
+```
+
+</details>
+</br>
+
+<details><summary>The following is a JSON payload example for a scheduled meeting for an external user: </summary>
+
+```json
+{
+ "app": {
+  "locale": "en-us",
+  "sessionId": "fe4d7f01-e049-4238-8c5a-3c6bcf4517cd",
+  "theme": "default",
+  "iconPositionVertical": 0,
+  "osLocaleInfo": {
+   "platform": "windows",
+   "regionalFormat": "en-us",
+   "shortDate": "M/d/yyyy",
+   "longDate": "dddd, MMMM d, yyyy",
+   "shortTime": "h:mm tt",
+   "longTime": "h:mm:ss tt"
+  },
+  "parentMessageId": "",
+  "userClickTime": 0,
+  "userFileOpenPreference": "inline",
+  "host": {
+   "name": "Teams",
+   "clientType": "desktop",
+   "sessionId": "d6d8d834-b13c-95bb-96bd-3bed74fdad4c",
+   "ringId": "ring1"
+  },
+  "appLaunchId": "4ce26ee3-a6b6-4dad-9484-3b218d5603be"
+ },
+ "page": {
+  "id": "Test",
+  "frameContext": "sidePanel",
+  "subPageId": "",
+  "isFullScreen": false,
+  "isMultiWindow": true,
+  "sourceOrigin": ""
+ },
+ "user": {
+  "id": "aeee11b1-7838-4b4a-8064-12ce5b01258f",
+  "displayName": "",
+  "licenseType": "Unknown",
+  "loginHint": "v-hrajandira@microsoft.com",
+  "userPrincipalName": "v-hrajandira@microsoft.com",
+  "tenant": {
+   "id": "72f988bf-86f1-41af-91ab-2d7cd011db47",
+   "teamsSku": "enterprise"
+  }
+ },
+ "chat": {
+  "id": "19:meeting_Mzg5ZmQwYzItY2U3NS00MDE4LThkZjQtMzNjNWZiMzM5MzNi@thread.v2"
+ },
+ "meeting": {
+  "id": "MCMxOTptZWV0aW5nX016ZzVabVF3WXpJdFkyVTNOUzAwTURFNExUaGtaalF0TXpOak5XWmlNek01TXpOaUB0aHJlYWQudjIjMA=="
+ },
+ "sharePointSite": {
+  "teamSiteUrl": "",
+  "teamSiteDomain": "microsoft.sharepoint.com",
+  "teamSitePath": "",
+  "teamSiteId": ""
+ }
+}
+
+```
+
+</details>
+</br>
+
+<details><summary>The following is a JSON payload example for a One-on-one call: </summary>
+
+```json
+{
+ "app": {
+  "locale": "en-us",
+  "sessionId": "1b3dc47e-f6ae-4fe2-8ed6-844a505f3186",
+  "theme": "dark",
+  "iconPositionVertical": null,
+  "osLocaleInfo": {
+   "platform": "windows",
+   "regionalFormat": "en-in",
+   "shortDate": "dd-MM-yyyy",
+   "longDate": "dd MMMM yyyy",
+   "shortTime": "HH:mm",
+   "longTime": "HH:mm:ss"
+  },
+  "parentMessageId": "",
+  "userClickTime": 1678088052473,
+  "userFileOpenPreference": undefined,
+  "host": {
+   "name": "Teams",
+   "clientType": "desktop",
+   "sessionId": "",
+   "ringId": "general"
+  },
+  "appLaunchId": undefined
+ },
+ "page": {
+  "id": "Test",
+  "frameContext": "sidePanel",
+  "subPageId": "",
+  "isFullScreen": undefined,
+  "isMultiWindow": true,
+  "sourceOrigin": ""
+ },
+ "user": {
+  "id": "e652dd92-dd63-4fcc-b5b2-2005681e8e9f",
+  "displayName": undefined,
+  "isCallingAllowed": undefined,
+  "isPSTNCallingAllowed": undefined,
+  "licenseType": "Unknown",
+  "loginHint": "admin@M365x94626565.onmicrosoft.com",
+  "userPrincipalName": "admin@M365x94626565.onmicrosoft.com",
+  "tenant": {
+   "id": "aa923623-ae61-49ee-b401-81f414b6ad5a",
+   "teamsSku": "unknown"
+  }
+ },
+ "channel": undefined,
+ "chat": {
+  "id": "19:a74d8489-4455-4670-9581-7b38a8017c58_e652dd92-dd63-4fcc-b5b2-2005681e8e9f@unq.gbl.spaces"
+ },
+ "meeting": {
+  "id": "MCMxOTphNzRkODQ4OS00NDU1LTQ2NzAtOTU4MS03YjM4YTgwMTdjNThfZTY1MmRkOTItZGQ2My00ZmNjLWI1YjItMjAwNTY4MWU4ZTlmQHVucS5nYmwuc3BhY2VzIzA="
+ },
+ "sharepoint": undefined,
+ "team": undefined,
+ "sharePointSite": {
+  "teamSiteUrl": undefined,
+  "teamSiteDomain": "m365x94626565.sharepoint.com",
+  "teamSitePath": undefined,
+  "teamSiteId": undefined,
+  "mySitePath": undefined,
+  "mySiteDomain": undefined
+ }
+}
+
+```
+
+</details>
+</br>
+
+<details><summary>The following is a JSON payload example for a group chat call: </summary>
+
+```json
+{
+ "app": {
+  "locale": "en-us",
+  "sessionId": "cbc005c1-8c10-4dfb-a7c6-711353009cc3",
+  "theme": "dark",
+  "iconPositionVertical": undefined,
+  "osLocaleInfo": {
+   "platform": "windows",
+   "regionalFormat": "en-in",
+   "shortDate": "dd-MM-yyyy",
+   "longDate": "dd MMMM yyyy",
+   "shortTime": "HH:mm",
+   "longTime": "HH:mm:ss"
+  },
+  "parentMessageId": "",
+  "userClickTime": 1678087909562,
+  "userFileOpenPreference": undefined,
+  "host": {
+   "name": "Teams",
+   "clientType": "desktop",
+   "sessionId": "",
+   "ringId": "general"
+  },
+  "appLaunchId": undefined
+ },
+ "page": {
+  "id": "Test",
+  "frameContext": "sidePanel",
+  "subPageId": "",
+  "isFullScreen": undefined,
+  "isMultiWindow": true,
+  "sourceOrigin": ""
+ },
+ "user": {
+  "id": "e652dd92-dd63-4fcc-b5b2-2005681e8e9f",
+  "displayName": undefined,
+  "isCallingAllowed": undefined,
+  "isPSTNCallingAllowed": undefined,
+  "licenseType": "Unknown",
+  "loginHint": "admin@M365x94626565.onmicrosoft.com",
+  "userPrincipalName": "admin@M365x94626565.onmicrosoft.com",
+  "tenant": {
+   "id": "aa923623-ae61-49ee-b401-81f414b6ad5a",
+   "teamsSku": "unknown"
+  }
+ },
+ "channel": undefined,
+ "chat": {
+  "id": "19:a91b5c5f7dbc4eb58e8592240db70299@thread.v2"
+ },
+ "meeting": {
+  "id": "MCMxOTphOTFiNWM1ZjdkYmM0ZWI1OGU4NTkyMjQwZGI3MDI5OUB0aHJlYWQudjIjMA=="
+ },
+ "sharepoint": undefined,
+ "team": undefined,
+ "sharePointSite": {
+  "teamSiteUrl": undefined,
+  "teamSiteDomain": "m365x94626565.sharepoint.com",
+  "teamSitePath": undefined,
+  "teamSiteId": undefined,
+  "mySitePath": undefined,
+  "mySiteDomain": undefined
+ }
+}
+
+```
+
+</details>
+
 ## Get participant API
 
 The `GetParticipant` API must have a bot registration and ID to generate auth tokens. For more information, see [bot registration and ID](../build-your-first-app/build-bot.md).
@@ -979,7 +1457,7 @@ The following code provides an example of meeting end event payload:
         "EndTime": "2021-04-29T16:17:17.4388966Z" 
     }, 
     "locale": "en-US" 
-}
+ }
 ```
 
 | Property name | Description |
