@@ -8,7 +8,7 @@ ms.localizationpriority: medium
 ---
 # Scenarios for creating a message extension or an Outlook add-in
 
-Message extensions and Outlook add-ins allows you to create rich and interactive content to email messages and meeting invitations. You can create a message extension or an Outlook add-in for your app based on your scenario.
+Message extensions and Outlook add-ins allow you to create rich and interactive content for email messages and meeting invitations. You can create a message extension or an Outlook add-in for your Teams app based on the scenario.
 
 If your app includes scenarios from Outlook add-in and message extension, then you must create both apps, a message extension and an Outlook add-in. You must host both these apps at the same domain so that they can share files.
 
@@ -48,15 +48,15 @@ The following examples show the recommended app type for different scenarios bas
 | Find and insert lead details into an email or meeting invitation. | Message extension |
 | Insert boilerplate responses from CRM into message or invitation body. | Message extension |
 | Track email open rates (by inserting a tracking pixel). | Outlook add-in |
-| Log email/meeting/engagement in Outlook into CRM. | Outlook add-in |
+| Log email or meeting or engagement in Outlook into CRM. | Outlook add-in |
 
 ### Security
 
 | Scenario | App type |
 |:--|:--|
-| Marking an email as spam. | Outlook add-in |
+| Mark an email as spam. | Outlook add-in |
 | Send test or mock emails for training and tracking action rates. | Outlook add-in |
-| Reading or setting the [Microsoft Information Protection (MIP)](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/announcing-new-microsoft-information-protection-capabilities-to/ba-p/1999692) label on an email based on business rules. | Outlook add-in |
+| Read or set the [Microsoft Information Protection (MIP)](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/announcing-new-microsoft-information-protection-capabilities-to/ba-p/1999692) label on an email based on business rules. | Outlook add-in |
 | Encrypt and decrypt emails and attachments based on business rules. |Outlook add-in |
 
 ### Attachment management
@@ -72,17 +72,17 @@ The following examples show the recommended app type for different scenarios bas
 |:--|:--|
 | Insert a meeting link into an invitation. | Outlook add-in |
 | Customize a meeting link based on the recipients, the meeting time, and other contextual facts. | Outlook add-in |
-| Updating a meeting link when the meeting is updated. | Outlook add-in |
+| Update a meeting link when the meeting is updated. | Outlook add-in |
 | Reply with a **Meet Now** invitation. | Message extension |
 
 ### Signature management
 
 | Scenario | App type |
 |:--|:--|
-| Automatically insert a signature in mail message. | Outlook add-in |
+| Insert a signature in mail message automatically. | Outlook add-in |
 | Customize a signature based on the recipients, new thread or reply, and other contextual facts. | Outlook add-in |
 | Synchronize a signature across devices. | Outlook add-in |
-| Administrator management of signatures for an organization. | Outlook add-in |
+| Enable administrator management of signatures for an organization. | Outlook add-in |
 
 ## See also
 
