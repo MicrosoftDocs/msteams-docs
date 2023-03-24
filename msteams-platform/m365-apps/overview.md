@@ -42,7 +42,7 @@ You can also extend your search-based [Teams message extensions](extend-m365-tea
 
 :::image type="content" source="images/outlook-teams-messaging-ext.png" alt-text="The screenshot is an example that shows Message extension running in Outlook and Teams.":::
 
-Link unfurling works in Outlook web and Windows environments the same way it does in Microsoft Teams without any further work than using Teams app manifest version 1.13 or later.
+Link unfurling works in Outlook web and Windows environments the same way it does in Microsoft Teams without any further work than using Teams app manifest version 1.13 or later. You can also unfurl links with cards that launch stage view.
 
 :::image type="content" source="images/outlook-teams-link-unfurling.png" alt-text="The screenshot is an example that shows Link unfurling running in Outlook and Teams.":::
 
