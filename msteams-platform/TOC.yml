@@ -503,7 +503,7 @@
     displayName: HMAC security token
   - name: Create Incoming Webhooks
     href: webhooks-and-connectors/how-to/add-incoming-webhook.md
-    display name: share content in Microsoft Teams channels, external applications
+    displayName: share content in Microsoft Teams channels, external applications
   - name: Create connectors for Microsoft 365 Groups
     href: webhooks-and-connectors/how-to/connectors-creating.md
   - name: Create and send messages
