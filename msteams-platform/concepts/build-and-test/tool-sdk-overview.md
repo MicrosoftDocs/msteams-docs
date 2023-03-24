@@ -106,3 +106,63 @@ You can build your Microsoft Teams app using following different tools and SDKs:
         > [Plan your app](~/resources/messaging-extension-v3/messaging-extensions-overview.md)
     :::column-end:::
 :::row-end:::
+
+:::row:::
+    :::column span="1":::
+        **Microsoft Authentication Library (MSAL)**
+    :::column-end:::
+    :::column span="2":::
+        The Microsoft Authentication Library (MSAL) enables developers to acquire security tokens from the Microsoft identity platform to authenticate users and access secured web APIs.
+
+        > [!div class="nextstepaction"]
+        > [Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-overview.md)
+    :::column-end:::
+:::row-end:::
+
+:::row:::
+    :::column span="1":::
+        **Microsoft Graph**
+    :::column-end:::
+    :::column span="2":::
+        Microsoft Graph is the gateway to data and intelligence in Microsoft 365.
+
+        > [!div class="nextstepaction"]
+        > [Microsoft Graph](/graph/overview.md)
+    :::column-end:::
+:::row-end:::
+
+:::row:::
+    :::column span="1":::
+        **SharePoint Framework (SPFx)**
+    :::column-end:::
+    :::column span="2":::
+        The SharePoint Framework (SPFx) is a page and web part model that provides full support for client-side SharePoint development, easy integration with SharePoint data, and extending Microsoft Teams and Microsoft Viva.
+
+        > [!div class="nextstepaction"]
+        > [SharePoint Framework (SPFx)](/sharepoint/dev/spfx/sharepoint-framework-overview.md)
+    :::column-end:::
+:::row-end:::
+
+:::row:::
+    :::column span="1":::
+        **SharePoint Framework (SPFx)**
+    :::column-end:::
+    :::column span="2":::
+        The SharePoint Framework (SPFx) is a page and web part model that provides full support for client-side SharePoint development, easy integration with SharePoint data, and extending Microsoft Teams and Microsoft Viva.
+
+        > [!div class="nextstepaction"]
+        > [SharePoint Framework (SPFx)](/sharepoint/dev/spfx/sharepoint-framework-overview.md)
+    :::column-end:::
+:::row-end:::
+
+:::row:::
+    :::column span="1":::
+        **Live Share SDK**
+    :::column-end:::
+    :::column span="2":::
+        Live Share is an SDK designed to transform Teams apps into collaborative multi-user experiences without writing any dedicated back-end code.
+
+        > [!div class="nextstepaction"]
+        > [Live Share SDK](/apps-in-teams-meetings/teams-live-share-overview.md)
+    :::column-end:::
+:::row-end:::
