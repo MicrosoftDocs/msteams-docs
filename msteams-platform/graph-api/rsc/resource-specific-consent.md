@@ -23,8 +23,8 @@ RSC permissions are categorized based on:
     * Users
 
 1. The mode of data access:
-    * Application: The app access data without the presence of a signed-in user.
-    * Delegated: The app access data in the context of a signed-in users session only. No access is allowed in the absence of a signed-in user.
+    * Application: The app accesses data without the presence of a signed-in user.
+    * Delegated: The app accesses data in the context of a signed-in users session only. No access is allowed in the absence of a signed-in user.
 
 | &nbsp; | Application context RSC permissions | Delegated context RSC permissions |
 | ---- | :----: | :----: |
