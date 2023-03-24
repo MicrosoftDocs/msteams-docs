@@ -14,9 +14,9 @@ The following table lists TeamsJS version and app manifest versions as per diffe
 
 [!INCLUDE [pre-release-label](~/includes/teamjs-version-details.md)]
 
-The following schema sample shows all extensibility options:
+The following is the sample manifest schema:
 
-## Sample full manifest
+## Sample manifest
 
 ```json
 {
@@ -796,7 +796,7 @@ Enables your app in non-standard channels. If your app supports a team scope and
 
 **Optional** - Boolean
 
-When `defaultBlockUntilAdminAction` property is set to **true**, the app is hidden from users by default until admin allows it. If set to **true**, the app is hidden for all tenants and end users. The tenant admins can see the app in the Teams admin center and take action to allow or block the app. The default value is **false**. For more information on default app block, see [Block apps by default for users until an admin approves](../../concepts/design/enable-app-customization.md#block-apps-by-default-for-users-until-an-admin-approves)
+When `defaultBlockUntilAdminAction` property is set to **true**, the app is hidden from users by default until admin allows it. If set to **true**, the app is hidden for all tenants and end users. The tenant admins can see the app in the Teams admin center and take action to allow or block the app. The default value is **false**. For more information on default app block, see [Block apps by default for users until an admin approves](../../concepts/deploy-and-publish/add-default-install-scope.md#block-apps-by-default-for-users-until-an-admin-approves).
 
 ## publisherDocsUrl
 
@@ -906,7 +906,7 @@ If your app doesn't have a Teams app manifest file, you'll need to create it.
 
 To create a Teams app manifest file:
 
-1. Use the [sample manifest schema](#sample-full-manifest) to create a .json file.
+1. Use the [sample manifest schema](#sample-manifest) to create a .json file.
 1. Save it in the root of your project folder as `manifest.json`.
 
 <br>
@@ -915,7 +915,7 @@ To create a Teams app manifest file:
 <br>
 
 > [!NOTE]
-> The manifest example content shown here is only for a tab app. It uses example values for subdomain URI. For more information, see [sample manifest schema](#sample-full-manifest).
+> The manifest example content shown here is only for a tab app. It uses example values for subdomain URI. For more information, see [sample manifest schema](#sample-manifest).
 
   ```json
 { 
@@ -951,7 +951,7 @@ To create a Teams app manifest file:
     { 
      "entityId": "auth", 
      "name": "Auth", 
-     "contentUrl": "https://https://subdomain.example.com/Home/Index", 
+     "contentUrl": "https://subdomain.example.com/Home/Index", 
      "scopes": [ "personal" ] 
     } 
   ], 

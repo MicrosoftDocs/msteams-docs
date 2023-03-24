@@ -117,9 +117,6 @@
     - name: Activity feed notifications
       href: concepts/design/activity-feed-notifications.md
       displayName: notify, notification
-  - name: App customization
-    href: concepts/design/enable-app-customization.md
-    displayName: Customize your app, update app name, branding, hide and unhide app, accent 
 - name: Tools and SDKs
   items:
   - name: Teams Toolkit 
@@ -725,10 +722,13 @@
   items:
   - name: Overview
     href: concepts/deploy-and-publish/apps-publish-overview.md
-    displayName: configure default install options, GCC
-  - name: Configure default install options for Teams app
+    displayName: configure default install options, GCC, Customize your app
+  - name: Enable customization for your app
+    href: concepts/design/enable-app-customization.md
+    displayName: Customize your app, update app name, branding, hide and unhide app, accent
+  - name: Configure default options for Teams app
     href: concepts/deploy-and-publish/add-default-install-scope.md
-    displayName: default install scope, default capability for shared scopes
+    displayName: default install scope, default capability for shared scopes, block apps 
   - name: Create Teams app package
     href: concepts/build-and-test/apps-package.md
     displayName: Host your app, HTTPS, cloud server
