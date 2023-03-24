@@ -113,7 +113,7 @@ To build a scene using the Scene studio, follow these steps:
 1. In **View in Teams**, select **Preview in Teams**.
 1. In the dialog box that appears, select **Add**.
 
-    The scene is tested or accessed by creating a test meeting and launching custom Together Mode scenes. For more information, see [activate custom Together Mode scenes](#activate-custom-together-mode-scenes):
+    The scene is tested or accessed by creating a test meeting and launching custom Together Mode scenes. For more information, see [Use custom Together Mode scenes](#use-custom-together-mode-scenes):
 
      :::image type="content" source="../assets/images/apps-in-meetings/launchtogethermode.png" alt-text="Screenshot shows the custom scene launched in a Teams meeting.":::
 
@@ -204,21 +204,21 @@ Each scene has a unique ID and name. The scene JSON also contains information on
 
 The `zOrder` represents the order of placing images and seats along the Z-axis. It gives a sense of depth or partition if necessary. See the step-by-step getting started sample. The sample uses the `zOrder`.
 
-Now that you've gone through the sample scene.json, you can activate the custom Together Mode scenes to engage in scenes.
+Now that you've gone through the sample scene.json, you can use the custom Together Mode scenes to engage in scenes.
 
-## Activate custom Together Mode scenes
+## Use custom Together Mode scenes
 
 > [!NOTE]
 > You can apply a custom Together Mode scene that is deployed by your tenant admin only if you have a [Teams Premium license](/MicrosoftTeams/enhanced-teams-experience?branch=danismith-t-pre-licensing).
 
 Get more information of how a user engages with scenes in custom Together Mode scenes.
 
-To select scenes and activate custom Together Mode scenes, follow these steps:
+To select scenes and use custom Together Mode scenes, follow these steps:
 
 1. Create a new test meeting.
 
     > [!NOTE]
-    > On selecting **Preview** in the Scene studio, the scene is installed as an app in Teams. This is the model for a developer to test and try out scenes from the Scene studio. After a scene is shipped as an app, users see these scenes in the scene gallery.
+    > On selecting **Preview** in the Scene studio, the scene is installed as an app in Teams. This is the model for a developer to test and try out scenes from the Scene studio. After a scene is exported and sideloaded as a custom app, users can view the scenes in the scene gallery.
 
 1. From the **Gallery** drop-down in the upper-left corner, select **Together Mode**. The **Picker** dialog box appears and the scene that is added is available.
 
