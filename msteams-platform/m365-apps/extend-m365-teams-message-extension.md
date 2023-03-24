@@ -170,9 +170,9 @@ To preview your app running in Outlook on the web:
 
 1. Sign in to [outlook.com](https://www.outlook.com) using your test tenant credentials.
 1. Select **New message**.
-1. Open **More apps** flyout menu on the bottom of the composition window.
+1. Select **Apps** on the ribbon.
 
-    :::image type="content" source="images/outlook-web-compose-more-apps.png" alt-text="The screenshot is an example that shows the 'More apps' menu on the bottom of the mail composition window to use your message extension.":::
+    :::image type="content" source="images/outlook-web-compose-more-apps.png" alt-text="The screenshot is an example that shows the 'Apps' menu on the ribbon of the mail composition window to launch your message extension.":::
 
 Your message extension is listed. You can invoke it from there and use it just as you would while composing a message in Teams.
 
@@ -182,9 +182,9 @@ To preview your app running in Outlook on Windows desktop:
 
 1. Launch Outlook and sign in with your test tenant credentials.
 1. Select **New Email**.
-1. Open the **More Apps** flyout menu on the top ribbon.
+1. Select **Apps** on the ribbon.
 
-    :::image type="content" source="images/outlook-desktop-compose-more-apps.png" alt-text="The screenshot is an example that shows the 'More Apps' on the composition window ribbon to use your message extension.":::
+    :::image type="content" source="images/outlook-desktop-compose-more-apps.png" alt-text="The screenshot is an example that shows the 'Apps' menu on the ribbon of the composition window to launch your message extension.":::
 
 Your message extension is listed, it opens an adjacent pane to display search results.
 

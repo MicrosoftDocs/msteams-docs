@@ -198,20 +198,20 @@ Here's how to preview your app running in Microsoft 365 and Outlook, web and Win
 To view your app running in Outlook on Windows desktop:
 
 1. Launch Outlook and sign in using your dev tenant account.
-1. On the side bar, select  **More Apps**. Your sideloaded app title appears among your installed apps.
+1. On the side bar, select  **More apps**. Your sideloaded app title appears among your installed apps.
 1. Select your app icon to launch your app in Outlook.
 
-    :::image type="content" source="images/outlook-desktop-more-apps.png" alt-text="The screenshot is an example that shows the ellipses (More apps) option on the side bar of Outlook desktop client to see your installed personal tabs.":::
+    :::image type="content" source="images/outlook-desktop-more-apps.png" alt-text="The screenshot is an example that shows the More apps option on the side bar of Outlook desktop client to see your installed tab app.":::
 
 ### Outlook on the web
 
 To view your app in Outlook on the web:
 
 1. Go to [Outlook on the web](https://outlook.office.com) and sign in using your dev tenant account.
-1. On the side bar, select  **More Apps**. Your sideloaded app title appears among your installed apps.
+1. On the side bar, select  **Apps**. Your sideloaded app title appears among your installed apps.
 1. Select your app icon to launch and preview your app running in Outlook on the web.
 
-    :::image type="content" source="images/outlook-web-more-apps.png" alt-text="The screenshot is an example that shows the ellipses (More apps) option on the side bar of outlook.com to see your installed personal tabs.":::
+    :::image type="content" source="images/outlook-web-more-apps.png" alt-text="The screenshot is an example that shows the Apps option on the side bar of outlook.com to see your installed tab app.":::
 
 ### Microsoft 365 on Windows
 
@@ -221,7 +221,7 @@ To view your app running in Microsoft 365 on Windows desktop:
 1. Select the **Apps** icon on the side bar. Your sideloaded app title appears among your installed apps.
 1. Select your app icon to launch your app in Microsoft 365.
 
-    :::image type="content" source="images/office-desktop-more-apps.png" alt-text="The screenshot is an example that shows the ellipses (More apps) option on the side bar of Microsoft 365 desktop client to see your installed personal tabs.":::
+    :::image type="content" source="images/office-desktop-more-apps.png" alt-text="The screenshot is an example that shows Apps option on the side bar of Microsoft 365 desktop client to see your installed tab app.":::
 
 ### Microsoft 365 on the web
 
@@ -231,7 +231,7 @@ To preview your app running in Microsoft 365 on the web:
 1. Select the **Apps** icon on the side bar. Your sideloaded app title appears among your installed apps.
 1. Select your app icon to launch your app in Microsoft 365 on the web.
 
-    :::image type="content" source="images/office-web-more-apps.png" alt-text="The screenshot is an example that shows the (More apps) option on the side bar of microsoft365.com to see your installed personal tabs.":::
+    :::image type="content" source="images/office-web-more-apps.png" alt-text="The screenshot is an example that shows the Apps option on the side bar of microsoft365.com to see your installed tab app.":::
 
 ### Microsoft 365 app for Android
 
