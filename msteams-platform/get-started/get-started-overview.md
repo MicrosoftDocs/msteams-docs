@@ -13,8 +13,10 @@ Walk through the steps to build a basic, real-world Teams app. The Get started a
 Here's an idea of what you'll learn:
 
 - Get up and running quickly with the Microsoft Teams Toolkit (a Visual Studio Code extension).
+- Learn to build scenario-based apps, such as a notification bot.
 - Get experience with the Toolkit and SDKs.
 - Configure and build different types of Teams apps.
+- Learn about extending your Teams app across Microsoft 365.
 
 Let's take a quick glance at the build environment options you can choose from, and the road-map to build and deploy a Teams app.
 
