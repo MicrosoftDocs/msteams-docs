@@ -1,21 +1,18 @@
 ---
-title: Decide between creating a messaging extension or an Outlook add-in
-description: Learn how to decide whether your Microsoft 365 app should be messaging extension or an Outlook add-in.
+title: Decide between creating a message extension or an Outlook add-in
+description: Learn how to decide whether your Microsoft 365 app should be message extension or an Outlook add-in.
 ms.date: 01/05/2023
 ms.topic: conceptual
 ms.custom: m365apps
 ms.localizationpriority: medium
 ---
-# Decide between creating a messaging extension or an Outlook add-in
+# Scenarios for creating a message extension or an Outlook add-in
 
-Messaging extensions and Outlook add-ins helps you to create rich and interactive content to email messages and meeting invitations. You can create a messaging extension or an Outlook add-in for your app based on your scenario.
+Message extensions and Outlook add-ins allows you to create rich and interactive content to email messages and meeting invitations. You can create a message extension or an Outlook add-in for your app based on your scenario.
 
-If your app includes scenarios from Outlook add-in and messaging extension, then you need to create both the apps, a messaging extension and an Outlook add-in (which can be hosted at the same domain and share files).
+If your app includes scenarios from Outlook add-in and message extension, then you must create both apps, a message extension and an Outlook add-in. You must host both these apps at the same domain so that they can share files.
 
-> [!NOTE]
-> Messaging extension and an Outlook add-in isn't available in a single app.
-
-## General guidance
+## Guidelines for Outlook add-in and message extension
 
 # [**Outlook add-in**](#tab/outlook-add-in)
 
@@ -23,33 +20,33 @@ Create an Outlook add-in if your app requires any of the following scenarios:
 
 * Access to the properties of email messages or calendar items.
 * Ability to respond automatically to changes in the properties of email messages or calendar items.
-* Access to the content of email messages and calendar items with fine-grained read or write access given in the [Outlook add-in APIs](/office/dev/add-ins/outlook/apis).
-* Read or write access to the user's mailbox. (Requires the [Outlook add-in APIs](/office/dev/add-ins/outlook/apis))
+* Access to the content of email messages and calendar items with fine-grained read or write access that is provided by [Outlook add-in APIs](/office/dev/add-ins/outlook/apis).
+* Read or write access to the user's mailbox using the [Outlook add-in APIs](/office/dev/add-ins/outlook/apis).
 * Ability to start up automatically in response to events without explicit user action. For more information, see [Event-based activation](/office/dev/add-ins/outlook/autolaunch).
 * Ability to manipulate Outlook-specific settings, such as [custom properties](/office/dev/add-ins/outlook/metadata-for-an-outlook-add-in) and [internet headers](/office/dev/add-ins/outlook/internet-headers).
-* Ability to run messages and calendar items in [shared mailboxes or shared folders](/office/dev/add-ins/outlook/delegate-access).
+* Ability to run within messages and calendar items in [shared mailboxes or shared folders](/office/dev/add-ins/outlook/delegate-access).
 
-# [**Messaging extension**](#tab/messaging-extension)
+# [**Message extension**](#tab/messaging-extension)
 
-Create a messaging extension if your app requires any of the following scenarios:
+Create a message extension if your app requires any of the following scenarios:
 
 * Ability to work in both Teams chat and Teams calendar items, as well as Outlook email messages and calendar items.
 * Ability to use [Adaptive Cards](../task-modules-and-cards/cards/design-effective-cards.md) as the canvas for the inserted content.
-* Ability to use [link unfurling](../messaging-extensions/how-to/link-unfurling.md); that is, to insert a rich preview of a link.
+* Ability to use [link unfurling](../messaging-extensions/how-to/link-unfurling.md), that is, to insert a rich preview of a link.
 
 ---
 
-## Example applications of the guidance
+## Scenarios for Outlook add-in and message extension
 
-The following examples show the recommended app type for different scenarios, based on the task:
+The following examples show the recommended app type for different scenarios based on the task:
 
-### Customer relation Management
+### Customer relation management
 
 | Scenario | App type |
 |:--|:--|
 | Save a lead that came on email into Customer Relation Management (CRM).| Outlook add-in |
-| Find and insert lead details into an email or meeting invitation | Messaging extension |
-| Insert boilerplate responses from CRM into message or invitation body | Messaging extension |
+| Find and insert lead details into an email or meeting invitation. | Message extension |
+| Insert boilerplate responses from CRM into message or invitation body. | Message extension |
 | Track email open rates (by inserting a tracking pixel). | Outlook add-in |
 | Log email/meeting/engagement in Outlook into CRM. | Outlook add-in |
 
@@ -67,7 +64,7 @@ The following examples show the recommended app type for different scenarios, ba
 | Scenario | App type |
 |:--|:--|
 | Save attachments in email into cloud storage. | Outlook add-in |
-| Attach files from cloud storage to a message or invitation. | Messaging extension |
+| Attach files from cloud storage to a message or invitation. | Message extension |
 
 ### Meeting management
 
@@ -76,7 +73,7 @@ The following examples show the recommended app type for different scenarios, ba
 | Insert a meeting link into an invitation. | Outlook add-in |
 | Customize a meeting link based on the recipients, the meeting time, and other contextual facts. | Outlook add-in |
 | Updating a meeting link when the meeting is updated. | Outlook add-in |
-| Reply with a **Meet Now** invitation. | Messaging extension |
+| Reply with a **Meet Now** invitation. | Message extension |
 
 ### Signature management
 
