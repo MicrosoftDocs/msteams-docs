@@ -145,18 +145,6 @@ You can build your Microsoft Teams app using following different tools and SDKs:
 
 :::row:::
     :::column span="1":::
-        **SharePoint Framework (SPFx)**
-    :::column-end:::
-    :::column span="2":::
-        The SharePoint Framework (SPFx) is a page and web part model that provides full support for client-side SharePoint development, easy integration with SharePoint data, and extending Microsoft Teams and Microsoft Viva.
-
-        > [!div class="nextstepaction"]
-        > [SharePoint Framework (SPFx)](/sharepoint/dev/spfx/sharepoint-framework-overview)
-    :::column-end:::
-:::row-end:::
-
-:::row:::
-    :::column span="1":::
         **Live Share SDK**
     :::column-end:::
     :::column span="2":::
