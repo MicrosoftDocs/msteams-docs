@@ -101,16 +101,17 @@ To enable app caching for your app, follow the steps:
 The following code snippet is an example of the `teamsCore.registerBeforeUnloadHandler` and `teamsCore.registerOnLoadHandler` handlers:
 
 ```javascript
-microsoftTeams.teamsCore.registerBeforeUnloadHandler((readyToUnload: any) => {
-    const result = beforeUnloadHandler(setItems, readyToUnload);
-    return result;
-    });
-
-microsoftTeams.teamsCore.registerOnLoadHandler((data: any) => {
-    loadHandler(setItems, data);
-    setTitle("Entity Id : " + data.entityId);
-    console.log(data.contentUrl, data.entityId);
-    });
+microsoftTeams.teamsCore.registerOnLoadHandler((data) => {
+    console.log("got load from TEAMS", data.contentUrl, data.entityId);
+    // use contentUrl to route to correct page 
+    // invoke notifySuccess when ready  
+    app.notifySuccess();
+});
+microsoftTeams.teamsCore.registerBeforeUnloadHandler((readyToUnload) => {
+    // dispose resources and then invoke readyToUnload
+    readyToUnload();
+    return true;
+});
 
 ```
 
