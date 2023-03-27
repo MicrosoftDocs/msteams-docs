@@ -106,6 +106,7 @@ The following code snippet is an example of the `teamsCore.registerBeforeUnloadH
 
 ```javascript
 microsoftTeams.teamsCore.registerBeforeUnloadHandler((readyToUnload) => {
+    console.log("got beforeunload from TEAMS"); 
     // dispose resources and then invoke readyToUnload
     readyToUnload();
     return true;
