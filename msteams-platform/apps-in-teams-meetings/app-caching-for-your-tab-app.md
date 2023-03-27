@@ -138,6 +138,8 @@ microsoftTeams.registerBeforeUnloadHandler((readyToUnload) => { 
 
 ```
 
+---
+
 ## Best practices
 
 * Single-page apps that use client-side routing for page navigation can benefit from app caching. It's recommended that you use the same domain across all contexts of your app launch.
