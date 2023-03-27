@@ -123,29 +123,18 @@ microsoftTeams.teamsCore.registerBeforeUnloadHandler((readyToUnload) => {
 The following code snippet is an example of the `registerBeforeUnloadHandler` and `registerOnLoadHandler` handlers:
 
 ```javascript
-microsoftTeams.registerBeforeUnloadHandler((readyToUnload) => { 
-
-console.log("got beforeunload from TEAMS"); 
-
-// dispose resources and then invoke readyToUnload 
-
-readyToUnload(); 
-
-return true; 
-
-}); 
-
 microsoftTeams.registerOnLoadHandler((data) => { 
-
-console.log("got load from TEAMS", data.contentUrl, data.entityId); 
-
-// use contentUrl to route to correct page 
-
-// invoke notifySuccess when ready 
-
-microsoftTeams.appInitialization.notifySuccess(); 
-
+    console.log("got load from TEAMS", data.contentUrl, data.entityId); 
+    // use contentUrl to route to correct page 
+    // invoke notifySuccess when ready 
+    microsoftTeams.appInitialization.notifySuccess(); 
 }); 
+microsoftTeams.registerBeforeUnloadHandler((readyToUnload) => { 
+    console.log("got beforeunload from TEAMS"); 
+    // dispose resources and then invoke readyToUnload 
+    readyToUnload(); 
+    return true; 
+});
 
 ```
 
