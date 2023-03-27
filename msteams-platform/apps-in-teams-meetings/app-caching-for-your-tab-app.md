@@ -120,7 +120,7 @@ microsoftTeams.teamsCore.registerBeforeUnloadHandler((readyToUnload) => {
 
 # [TeamsJS v1](#tab/teamsjs-v1)
 
-The following code snippet is an example of the `registerBeforeUnloadHandler` and `registerOnLoadHandler` handlers:
+The following code snippet is an example of the `registerOnLoadHandler`  and  `registerBeforeUnloadHandler` handlers:
 
 ```javascript
 microsoftTeams.registerOnLoadHandler((data) => { 
