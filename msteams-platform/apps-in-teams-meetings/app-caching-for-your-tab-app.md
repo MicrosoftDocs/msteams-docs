@@ -94,7 +94,7 @@ To enable app caching for your app, follow the steps:
 
 1. In the `app-cache-tab.tsx` file (or the equivalent file in your app), configure the following:
 
-   * Call `teamsCore.registerBeforeUnloadHandler` and `teamsCore.registerOnLoadHandler` APIs.
+   * Call `teamsCore.registerOnLoadHandler`and `teamsCore.registerBeforeUnloadHandler` APIs.
    * Dispose resources and perform any cleanup needed in the `beforeUnload` handler.
    * Invoke the `readyToUnload` callback to notify Teams client that the app unload flow is complete.
 
