@@ -35,9 +35,9 @@ The following is the sample manifest schema:
     },
     "developer": {
         "name": "Publisher Name",
-        "websiteUrl": "https://website.com/",
-        "privacyUrl": "https://website.com/privacy",
-        "termsOfUseUrl": "https://website.com/app-tos",
+        "websiteUrl": "https://example.com/",
+        "privacyUrl": "https://example.com/privacy",
+        "termsOfUseUrl": "https://example.com/app-tos",
         "mpnId": "1234567890"
     },
     "name": {
@@ -635,7 +635,7 @@ Provide your Azure Active Directory App ID and Microsoft Graph information to he
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`id`|string|36 characters|✔️|Azure AD application ID of the app. This ID must be a GUID.|
-|`resource`|string|2048 characters|✔️|Resource URL of app for acquiring auth token for SSO. </br> **NOTE:** If you aren't using SSO, ensure that you enter a dummy string value in this field to your app manifest, for example, `https://notapplicable` to avoid an error response. |
+|`resource`|string|2048 characters|✔️|Resource URL of app for acquiring auth token for SSO. </br> **NOTE:** If you aren't using SSO, ensure that you enter a dummy string value in this field to your app manifest, for example, `https://example` to avoid an error response. |
 
 ## graphConnector
 
