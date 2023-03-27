@@ -94,7 +94,7 @@ To enable app caching for your app, follow the steps:
 
 1. In the `app-cache-tab.tsx` file (or the equivalent file in your app), configure the following:
 
-   * Call `teamsCore.registerOnLoadHandler`and `teamsCore.registerBeforeUnloadHandler` APIs.
+   * Call `teamsCore.registerBeforeUnloadHandler` and `teamsCore.registerOnLoadHandler` APIs.
    * Dispose resources and perform any cleanup needed in the `beforeUnload` handler.
    * Invoke the `readyToUnload` callback to notify Teams client that the app unload flow is complete.
 
@@ -102,39 +102,40 @@ To enable app caching for your app, follow the steps:
 
 [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-cache-meetings/nodejs/src/components/app-cache-tab.tsx#L73)
 
-The following code snippet is an example of the `teamsCore.registerOnLoadHandler` and `teamsCore.registerBeforeUnloadHandler`  handlers:
+The following code snippet is an example of the `teamsCore.registerBeforeUnloadHandler` and `teamsCore.registerOnLoadHandler` handlers:
 
 ```javascript
+microsoftTeams.teamsCore.registerBeforeUnloadHandler((readyToUnload) => {
+    // dispose resources and then invoke readyToUnload
+    readyToUnload();
+    return true;
+});
 microsoftTeams.teamsCore.registerOnLoadHandler((data) => {
     console.log("got load from TEAMS", data.contentUrl, data.entityId);
     // use contentUrl to route to correct page 
     // invoke notifySuccess when ready  
     app.notifySuccess();
 });
-microsoftTeams.teamsCore.registerBeforeUnloadHandler((readyToUnload) => {
-    // dispose resources and then invoke readyToUnload
-    readyToUnload();
-    return true;
-});
+
 ```
 
 # [TeamsJS v1](#tab/teamsjs-v1)
 
-The following code snippet is an example of the `registerOnLoadHandler`  and  `registerBeforeUnloadHandler` handlers:
+The following code snippet is an example of the `registerBeforeUnloadHandler` and `registerOnLoadHandler` handlers:
 
 ```javascript
-microsoftTeams.registerOnLoadHandler((data) => { 
-    console.log("got load from TEAMS", data.contentUrl, data.entityId); 
-    // use contentUrl to route to correct page 
-    // invoke notifySuccess when ready 
-    microsoftTeams.appInitialization.notifySuccess(); 
-}); 
 microsoftTeams.registerBeforeUnloadHandler((readyToUnload) => { 
     console.log("got beforeunload from TEAMS"); 
     // dispose resources and then invoke readyToUnload 
     readyToUnload(); 
     return true; 
 });
+microsoftTeams.registerOnLoadHandler((data) => { 
+    console.log("got load from TEAMS", data.contentUrl, data.entityId); 
+    // use contentUrl to route to correct page 
+    // invoke notifySuccess when ready 
+    microsoftTeams.appInitialization.notifySuccess(); 
+}); 
 
 ```
 
