@@ -102,7 +102,7 @@ To enable app caching for your app, follow the steps:
 
 [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-cache-meetings/nodejs/src/components/app-cache-tab.tsx#L73)
 
-The following code snippet is an example of the `teamsCore.registerBeforeUnloadHandler` and `teamsCore.registerOnLoadHandler` handlers:
+The following code snippet is an example of the `teamsCore.registerOnLoadHandler` and `teamsCore.registerBeforeUnloadHandler`  handlers:
 
 ```javascript
 microsoftTeams.teamsCore.registerOnLoadHandler((data) => {
