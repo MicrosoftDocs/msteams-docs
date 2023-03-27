@@ -28,7 +28,7 @@ No, developers bring their own LLMs – hosted in Azure OpenAI, or elsewhere.
 <details>
 <summary><b>Can the SDK be used against LLMs other than those from OpenAI?</b></summary>
 
-Yes, it is theoretically possible to utilize LLMs other than those from OpenAI.
+Yes, it's theoretically possible to utilize LLMs other than those from OpenAI.
 
 </details>
 <br>
@@ -50,9 +50,9 @@ The two are independent.
 <br>
 
 <details>
-<summary> How does the SDK co-exist against the “hero story” of developers building for the Skills ecosystem in M365?</summary>
+<summary> How does the SDK co-exist against the “hero story” of developers building for the Skills ecosystem in Microsoft 365?</summary>
 
-The SDK story is targeted at Pro Devs and separate from the hero-story around Skills ecosystem in M365.
+The SDK story is targeted at Pro Devs and separate from the hero-story around Skills ecosystem in Microsoft 365.
 
 </details>
 <br>
@@ -68,7 +68,7 @@ The SDK will be public preview state by Build 2023.
 <details>
 <summary> How should information about the existing Bot Framework SDK be communicated after announcing a new version? </summary>
 
-The new SDK works alongside the existing Bot Framework SDK and is not a replacement.
+The new SDK works alongside the existing Bot Framework SDK and isn't a replacement.
 
 </details>
 <br>

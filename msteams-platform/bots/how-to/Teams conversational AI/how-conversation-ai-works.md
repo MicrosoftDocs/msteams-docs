@@ -1,6 +1,6 @@
 ---
 title: Getting started
-description: In this article, learn how to create a brand new app and import an existing app in Teams Developer Portal. Also, learn about the Changelog for Developer Portal.
+description: In this article, learn how to create an app using Teams conversational IA and it's capabilities.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
@@ -19,10 +19,10 @@ To get started, Set up migration guide and start GPT setup guide
 
 ## Capabilities
 
-With the Teams Conversational AI SDK, building apps for Teams is drastically simpler, with rich natural language capabilities out of the box that bring any app experience into the conversation.
+With the Teams Conversational AI SDK, building apps for Teams is drastically simpler, with rich natural language capabilities out of the box that brings any app experience into the conversation.
 
 1. [Simple Teams-Centric Component Scaffolding](#simple-teams-centric-component-scaffolding)
-1. [Natural Language Modelling](#natural-language-modelling)
+1. [Natural Language Modeling](#natural-language-modeling)
 1. [Prompt Engineering](#prompt-engineering)
 1. [Topic Filtering](#topic-filtering)
 1. [Predictive Engine for Mapping Intents to Actions](#predictive-engine-for-mapping-intents-to-actions)
@@ -33,13 +33,13 @@ With the Teams Conversational AI SDK, building apps for Teams is drastically sim
 
 ### Simple Teams-Centric Component Scaffolding
 
-The Conversational AI SDK simplifies the Teams app model to focus on the extension needed vs the protocol required. Previously, if a developer intended to build a simple message extension, they would need to learn primitive conversational protocols, i.e., “member addition”, “channel creation”, etc. With the new SDK, developers can leverage pre-built templates, and simply add their business logic to this scaffold. From there, you can easily add modules like bots, message extensions, Adaptive Cards, link unfurling, etc.  
+The Conversational AI SDK simplifies the Teams app model to focus on the extension needed vs the protocol required. Previously, if a developer intended to build a message extension, they would need to learn primitive conversational protocols, that is , *member addition*, *channel creation*, and so on. With the new SDK, developers can leverage pre-built templates, and simply add their business logic to this scaffold. From there, you can easily add modules like bots, message extensions, Adaptive Cards, link unfurling, etc.  
 
-### Natural Language Modelling
+### Natural Language Modeling
 
-The Conversational AI SDK is built with GPT-powered language models from day zero, alleviating the need for developers to take on the complex and expensive task of writing this themselves. This makes building AI-powered Teams apps easier, more compliant, and consistently usable than ever before. Developers can focus on their own business logic and leave the AI-powered, Teams-centric language modelling to us.
+The Conversational AI SDK is built with GPT-powered language models from day zero, alleviating the need for developers to take on the complex and expensive task of writing this themselves. This makes building AI-powered Teams apps easier, more compliant, and consistently usable than ever before. Developers can focus on their own business logic and leave the AI-powered, Teams-centric language modeling to us.
 
-This means bots can run in-context and immediately assist when they recognize a user intent maps to one of their app actions, boosting the conversation without requiring users to explicitly talk to the bot using a small set of registered actions.
+This means bots can run in-context and immediately assist when they recognize a user intent map to one of their app actions, boosting the conversation without requiring users to explicitly talk to the bot using a small set of registered actions.
 
 ### Prompt Engineering
 
@@ -71,6 +71,6 @@ Since the launch of ChatGPT, the internet is filled with examples of the dark si
 
 * Moderation hooks, which can be used to regulate bot responses against any moderation API.
 * Conversation sweeping, which helps developers monitor conversations and intervene when the conversation goes astray through proactive detection and remediation.
-* Feedback loops, which allows developers to evaluate the performance of the bot for high quality conversations and fine-tune their experience for improvement.
+* Feedback loops, which allow developers to evaluate the performance of the bot for high quality conversations and fine-tune their experience for improvement.
 
-In summary, the Conversational AI SDK offers wide support from low code to complex scenarios. The SDK extends capabilities with AI constructs to build natural language modelling, scenario-specific user intent, personalization, and automated, context-aware conversations.
+In summary, the Conversational AI SDK offers wide support from low code to complex scenarios. The SDK extends capabilities with AI constructs to build natural language modeling, scenario-specific user intent, personalization, and automated, context-aware conversations.
