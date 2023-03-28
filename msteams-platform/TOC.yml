@@ -31,6 +31,8 @@
     href: sbs-gs-notificationbot.yml
   - name: Build your first message extension app using JavaScript
     href: sbs-gs-msgext.yml
+  - name: Teams app tutorials
+    href: get-started/teams-toolkit-tutorial.md
   - name: Code samples
     href: https://github.com/OfficeDev/Microsoft-Teams-Samples
 - name: Plan your app
