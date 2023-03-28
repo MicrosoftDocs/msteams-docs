@@ -36,29 +36,17 @@ Depending on the capabilities you want for your app, choose an appropriate devel
 
 If you are already familiar with Yeoman workflow, you may prefer using [YoTeams Yeoman Generator](https://github.com/pnp/generator-teams/blob/master/docs/docs/tutorials/build-your-first-microsoft-teams-app.md) to build your apps.
 
-### Build your first Teams app
+### Build your Teams app
 
-Now, let's build your first Teams app. But first, pick your language (or framework) and prepare your development environment.
+Here’s how you proceed:
 
-> [!div class="nextstepaction"]
-> [Build a Teams tab app with JavaScript using React](../sbs-gs-javascript.yml)
-> [!div class="nextstepaction"]
-> [Build a Teams bot app with JavaScript](../sbs-gs-bot.yml)
-> [!div class="nextstepaction"]
-> [Build a Teams message extension app with JavaScript using React](../sbs-gs-msgext.yml)
-> [!div class="nextstepaction"]
-> [Build a Teams app with Blazor](../sbs-gs-blazorupdate.yml)
-> [!div class="nextstepaction"]
-> [Build a Teams app with SPFx](../sbs-gs-spfx.yml)
-> [!div class="nextstepaction"]
-> [Build a Teams app with C# or .NET](../sbs-gs-csharp.yml)
-> [!div class="nextstepaction"]
-> [Build a Teams app with Node.js](../sbs-gs-nodejs.yml)
-> [!div class="nextstepaction"]
-> [Build notification bot with JavaScript](../sbs-gs-notificationbot.yml)
-> [!div class="nextstepaction"]
-> [Build command bot with JavaScript](../sbs-gs-commandbot.yml)
-> [!div class="nextstepaction"]
+Select the section based on the type of Teams app you want to build:
+
+If you’re new to building a Teams app, see [build a basic Teams app](#build-a-basic-teams-app)
+
+If you’ve created Teams app, and want to build apps to suit a particular scenario, see [Scenario-based apps](#build-a-scenario-based-teams-app).
+
+If you want to extend your Teams app across M365, see [Extend Teams app across M365](#extend-your-teams-app-across-microsoft-365).
 
 ### Build a basic Teams app
 
