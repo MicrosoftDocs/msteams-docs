@@ -444,111 +444,83 @@ Subcapability for interacting with URL-based dialogs.
 
 Navigation-specific part of the TeamsJS library.
 
+<br />
+<table border>
+    <thead>
+        <tr>
+            <th></th>
+            <th colspan=3>Web</th>
+            <th colspan=3>Desktop</th>
+            <th colspan=6>Mobile</th>
+        </tr>
+        <tr>
+            <th></th>
+            <th colspan=3></th>
+            <th colspan=3>Windows</th>
+            <th colspan=3>Android</th>
+            <th colspan=3>iOS</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td><image alt="Teams" src="./images/teams-thumb.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft365-thumb.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-thumb.png"/></td>
+            <td><image alt="Teams" src="./images/teams-thumb.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft365-thumb.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-thumb.png"/></td>
+            <td><image alt="Teams" src="./images/teams-thumb.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft365-thumb.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-thumb.png"/></td>
+            <td><image alt="Teams" src="./images/teams-thumb.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft365-thumb.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-thumb.png"/></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th><a href="pagescurrentapp">pages.currentApp</a></th>
+            <td></td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
+            <td></td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th><a href="pagestab">pages.tab</a></th>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
+            <td></td>
+            <td>&#x2713;</td>
+            <td></td>
+            <td></td>
+            <td>&#x2713;</td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+
 ### `pages.currentApp`
 
 [Reference](https://learn.microsoft.com/en-us/javascript/api/@microsoft/teams-js/pages.currentapp?view=msteams-client-js-latest) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teamsjs-cc-app/tabs/src/components/capabilities/Pages.Current.tsx)
 
 Provides functions for navigating without needing to specify your application ID.
 
-<br />
-<table border>
-    <thead>
-        <tr>
-            <th colspan=3>Web</th>
-            <th colspan=3>Desktop</th>
-            <th colspan=6>Mobile</th>
-        </tr>
-        <tr>
-            <th colspan=3></th>
-            <th colspan=3>Windows</th>
-            <th colspan=3>Android</th>
-            <th colspan=3>iOS</th>
-        </tr>
-        <tr>
-            <td><image alt="Teams" src="./images/teams-thumb.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft365-thumb.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-thumb.png"/></td>
-            <td><image alt="Teams" src="./images/teams-thumb.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft365-thumb.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-thumb.png"/></td>
-            <td><image alt="Teams" src="./images/teams-thumb.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft365-thumb.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-thumb.png"/></td>
-            <td><image alt="Teams" src="./images/teams-thumb.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft365-thumb.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-thumb.png"/></td>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td></td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td></td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-    </tbody>
-</table>
-
 ### `pages.tab`
 
 [Reference](https://learn.microsoft.com/en-us/javascript/api/@microsoft/teams-js/pages.currentapp?view=msteams-client-js-latest) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teamsjs-cc-app/tabs/src/components/capabilities/Pages.Current.tsx)
 
 Provides APIs for querying and navigating between contextual tabs of an application. Unlike personal tabs, contextual tabs are pages associated with a specific context, such as channel or chat.
-
-<br />
-<table border>
-    <thead>
-        <tr>
-            <th colspan=3>Web</th>
-            <th colspan=3>Desktop</th>
-            <th colspan=6>Mobile</th>
-        </tr>
-        <tr>
-            <th colspan=3></th>
-            <th colspan=3>Windows</th>
-            <th colspan=3>Android</th>
-            <th colspan=3>iOS</th>
-        </tr>
-        <tr>
-            <td><image alt="Teams" src="./images/teams-thumb.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft365-thumb.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-thumb.png"/></td>
-            <td><image alt="Teams" src="./images/teams-thumb.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft365-thumb.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-thumb.png"/></td>
-            <td><image alt="Teams" src="./images/teams-thumb.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft365-thumb.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-thumb.png"/></td>
-            <td><image alt="Teams" src="./images/teams-thumb.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft365-thumb.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-thumb.png"/></td>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td></td>
-            <td>&#x2713;</td>
-            <td></td>
-            <td></td>
-            <td>&#x2713;</td>
-            <td></td>
-            <td></td>
-        </tr>
-    </tbody>
-</table>
 
 ## `tasks`
 
