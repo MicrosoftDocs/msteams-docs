@@ -14,9 +14,9 @@ The following table lists TeamsJS version and app manifest versions as per diffe
 
 [!INCLUDE [pre-release-label](~/includes/teamjs-version-details.md)]
 
-The following schema sample shows all extensibility options:
+The following is the sample manifest schema:
 
-## Sample full manifest
+## Sample manifest
 
 ```json
 {
@@ -35,9 +35,9 @@ The following schema sample shows all extensibility options:
     },
     "developer": {
         "name": "Publisher Name",
-        "websiteUrl": "https://website.com/",
-        "privacyUrl": "https://website.com/privacy",
-        "termsOfUseUrl": "https://website.com/app-tos",
+        "websiteUrl": "https://example.com/",
+        "privacyUrl": "https://example.com/privacy",
+        "termsOfUseUrl": "https://example.com/app-tos",
         "mpnId": "1234567890"
     },
     "name": {
@@ -635,7 +635,7 @@ Provide your Azure Active Directory App ID and Microsoft Graph information to he
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`id`|string|36 characters|✔️|Azure AD application ID of the app. This ID must be a GUID.|
-|`resource`|string|2048 characters|✔️|Resource URL of app for acquiring auth token for SSO. </br> **NOTE:** If you aren't using SSO, ensure that you enter a dummy string value in this field to your app manifest, for example, `https://notapplicable` to avoid an error response. |
+|`resource`|string|2048 characters|✔️|Resource URL of app for acquiring auth token for SSO. </br> **NOTE:** If you aren't using SSO, ensure that you enter a dummy string value in this field to your app manifest, for example, `https://example` to avoid an error response. |
 
 ## graphConnector
 
@@ -916,7 +916,7 @@ If your app doesn't have a Teams app manifest file, you'll need to create it.
 
 To create a Teams app manifest file:
 
-1. Use the [sample manifest schema](#sample-full-manifest) to create a .json file.
+1. Use the [sample manifest schema](#sample-manifest) to create a .json file.
 1. Save it in the root of your project folder as `manifest.json`.
 
 <br>
@@ -925,7 +925,7 @@ To create a Teams app manifest file:
 <br>
 
 > [!NOTE]
-> The manifest example content shown here is only for a tab app. It uses example values for subdomain URI. For more information, see [sample manifest schema](#sample-full-manifest).
+> The manifest example content shown here is only for a tab app. It uses example values for subdomain URI. For more information, see [sample manifest schema](#sample-manifest).
 
   ```json
 { 

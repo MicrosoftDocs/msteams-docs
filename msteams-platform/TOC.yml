@@ -456,7 +456,8 @@
   - name: Get meeting transcripts using Graph APIs
     items:
     - name: Overview
-      href: graph-api/meeting-transcripts/overview-transcripts.md 
+      href: graph-api/meeting-transcripts/overview-transcripts.md
+      displayName: get meeting transcripts, teams meeting transcript
     - name: Fetch meeting ID and organizer ID
       href: graph-api/meeting-transcripts/fetch-id.md
       displayName: Obtain meeting details using user-level notification, tenant-level notification
@@ -503,6 +504,7 @@
     displayName: HMAC security token
   - name: Create Incoming Webhooks
     href: webhooks-and-connectors/how-to/add-incoming-webhook.md
+    displayName: share content in Microsoft Teams channels, external applications
   - name: Create connectors for Microsoft 365 Groups
     href: webhooks-and-connectors/how-to/connectors-creating.md
   - name: Create and send messages
@@ -522,7 +524,7 @@
       displayName: correlationId, Markdown, what-are-webhooks-and-connectors Button, Flexible layout, receipt card, carousel card, Hero card, List card, Card collections, Thumbnail card, Receipt card
     - name: Format cards in Microsoft Teams
       href: task-modules-and-cards/cards/cards-format.md
-      displayName: Information masking, background, extension, notification, HTML
+      displayName: Information masking, background, extension, notification, HTML, rich text
     - name: Card actions
       href: task-modules-and-cards/cards/cards-actions.md
       displayName: openUrl, potentialAction, messageBack, imBack, invoke, signin
