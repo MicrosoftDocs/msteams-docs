@@ -13,56 +13,7 @@ TeamsJS v2.0 introduces the ability for certain types of Teams apps to run acros
 
 This article details the level of support of Teams JavaScript client (TeamsJS) library capabilities across various Microsoft 365 host applications.
 
-## `app` namespace
-
 <br />
-<table border>
-    <thead>
-        <tr>
-            <th colspan=3>Web</th>
-            <th colspan=3>Desktop</th>
-            <th colspan=6>Mobile</th>
-        </tr>
-        <tr>
-            <th colspan=3></th>
-            <th colspan=3>Windows</th>
-            <th colspan=3>Android</th>
-            <th colspan=3>iOS</th>
-        </tr>
-        <tr>
-            <td><image alt="Teams" src="./images/teams-thumb.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft365-thumb.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-thumb.png"/></td>
-            <td><image alt="Teams" src="./images/teams-thumb.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft365-thumb.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-thumb.png"/></td>
-            <td><image alt="Teams" src="./images/teams-thumb.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft365-thumb.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-thumb.png"/></td>
-            <td><image alt="Teams" src="./images/teams-thumb.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft365-thumb.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-thumb.png"/></td>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td></td>
-            <td>&#x2713;</td>
-            <td></td>
-            <td></td>
-            <td>&#x2713;</td>
-            <td></td>
-            <td></td>
-        </tr>
-    </tbody>
-</table>
-
-<br /><br />
 <table border>
     <thead>
         <tr>
@@ -72,19 +23,26 @@ This article details the level of support of Teams JavaScript client (TeamsJS) l
             <th colspan=6>Mobile</th>
         </tr>
         <tr>
+            <th></th>
+            <th colspan=3></th>
+            <th colspan=3>Windows</th>
+            <th colspan=3>Android</th>
+            <th colspan=3>iOS</th>
+        </tr>
+        <tr>
             <td></td>
-            <td>Teams</td>
-            <td>Microsoft 365 app</td>
-            <td>Outlook</td>
-            <td>Teams for Windows</td>
-            <td>Microsoft 365 for Windows</td>
-            <td>Outlook for Windows</td>
-            <td>Teams for Android</td>
-            <td>Teams for iOS</td>
-            <td>Microsoft 365 for Android</td>
-            <td>Microsoft 365 for iOS</td>
-            <td>Outlook for Android</td>
-            <td>Outlook for iOS</td>
+            <td><image alt="Teams" src="./images/teams-thumb.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft365-thumb.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-thumb.png"/></td>
+            <td><image alt="Teams" src="./images/teams-thumb.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft365-thumb.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-thumb.png"/></td>
+            <td><image alt="Teams" src="./images/teams-thumb.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft365-thumb.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-thumb.png"/></td>
+            <td><image alt="Teams" src="./images/teams-thumb.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft365-thumb.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-thumb.png"/></td>
         </tr>
     </thead>
     <tbody>
@@ -331,19 +289,26 @@ Namespace to interact with app initialization and lifecycle.
             <th colspan=6>Mobile</th>
         </tr>
         <tr>
+            <th></th>
+            <th colspan=3></th>
+            <th colspan=3>Windows</th>
+            <th colspan=3>Android</th>
+            <th colspan=3>iOS</th>
+        </tr>
+        <tr>
             <td></td>
-            <td style="writing-mode:vertical-lr">teams.microsoft.com</td>
-            <td style="writing-mode:vertical-lr">microsoft365.com</td>
-            <td style="writing-mode:vertical-lr">outlook.com</td>
-            <td style="writing-mode:vertical-lr">Teams for Windows</td>
-            <td style="writing-mode:vertical-lr">Microsoft 365 app for Windows</td>
-            <td style="writing-mode:vertical-lr">Outlook for Windows</td>
-            <td style="writing-mode:vertical-lr">Teams for Android</td>
-            <td style="writing-mode:vertical-lr">Teams for iOS</td>
-            <td style="writing-mode:vertical-lr">Microsoft 365 app for Android</td>
-            <td style="writing-mode:vertical-lr">Microsoft 365 app for iOS</td>
-            <td style="writing-mode:vertical-lr">Outlook for Android</td>
-            <td style="writing-mode:vertical-lr">Outlook for iOS</td>
+            <td><image alt="Teams" src="./images/teams-thumb.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft365-thumb.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-thumb.png"/></td>
+            <td><image alt="Teams" src="./images/teams-thumb.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft365-thumb.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-thumb.png"/></td>
+            <td><image alt="Teams" src="./images/teams-thumb.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft365-thumb.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-thumb.png"/></td>
+            <td><image alt="Teams" src="./images/teams-thumb.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft365-thumb.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-thumb.png"/></td>
         </tr>
     </thead>
     <tbody>
@@ -358,8 +323,8 @@ Namespace to interact with app initialization and lifecycle.
             <td>&#x2713;</td>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
-            <td></td>
             <td>&#x2713;</td>
+            <td></td>
             <td></td>
         </tr>
     </tbody>
