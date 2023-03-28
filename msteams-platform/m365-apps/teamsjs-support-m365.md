@@ -391,7 +391,7 @@ This group of capabilities enables apps to show modal dialogs. There are two pri
     </thead>
     <tbody>
         <tr>
-            <th>dialog.adaptiveCard <img src="./images/preview-badge.png" /></th>
+            <th><a href="#dialogadaptivecard">dialog.adaptiveCard</a> <img src="./images/preview-badge.png" /></th>
             <td></td>
             <td></td>
             <td></td>
@@ -406,7 +406,7 @@ This group of capabilities enables apps to show modal dialogs. There are two pri
             <td></td>
         </tr>
         <tr>
-            <th>dialog.url</th>
+            <th><a href="#dialogurl">dialog.url</a></th>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
