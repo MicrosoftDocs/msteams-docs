@@ -719,7 +719,9 @@
       items:
       - name: Overview
         href: bots/how-to/Teams conversational AI/teams-conversation-ai-overview.md
-      - name: Get started
+      - name: Conversational AI quick start guide
+        href: bots/how-to/Teams conversational AI/conversation-ai-quick-start.md
+      - name: Teams AI core capabilities
         href: bots/how-to/Teams conversational AI/how-conversation-ai-works.md
       - name: Teams conversational AI FAQs
         href: bots/how-to/Teams conversational AI/coversational-ai-faq.md
