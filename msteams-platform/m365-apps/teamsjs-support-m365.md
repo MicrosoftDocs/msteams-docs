@@ -24,18 +24,24 @@ This article details the level of support of Teams JavaScript client (TeamsJS) l
             <th colspan=6>Mobile</th>
         </tr>
         <tr>
-            <td>Teams</td>
-            <td>Microsoft 365</td>
-            <td>Outlook</td>
-            <td>Teams (Windows)</td>
-            <td>Microsoft 365 (Windows)</td>
-            <td>Outlook (Windows)</td>
-            <td>Teams (Android)</td>
-            <td>Teams (iOS)</td>
-            <td>Microsoft 365 (Android)</td>
-            <td>Microsoft 365 (iOS)</td>
-            <td>Outlook (Android)</td>
-            <td>Outlook (iOS)</td>
+            <th colspan=3></th>
+            <th colspan=3>Windows</th>
+            <th colspan=3>Android</th>
+            <th colspan=3>iOS</th>
+        </tr>
+        <tr>
+            <td><image alt="Teams" src="./images/teams-thumb.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft365-thumb.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-thumb.png"/></td>
+            <td><image alt="Teams" src="./images/teams-thumb.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft365-thumb.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-thumb.png"/></td>
+            <td><image alt="Teams" src="./images/teams-thumb.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft365-thumb.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-thumb.png"/></td>
+            <td><image alt="Teams" src="./images/teams-thumb.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft365-thumb.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-thumb.png"/></td>
         </tr>
     </thead>
     <tbody>
@@ -47,9 +53,9 @@ This article details the level of support of Teams JavaScript client (TeamsJS) l
             <td>&#x2713;</td>
             <td></td>
             <td>&#x2713;</td>
+            <td></td>
+            <td></td>
             <td>&#x2713;</td>
-            <td></td>
-            <td></td>
             <td></td>
             <td></td>
         </tr>
