@@ -235,4 +235,4 @@ Following are the command menu best practices:
 * [Build bots for Teams](../what-are-bots.md)
 * [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
 * [Messages in bot conversations](conversations/conversation-messages.md)
-* [Adaptive Cards for Bot Developers](adaptive-cards/getting-started/bots.md)
+* [Adaptive Cards for Bot Developers](/adaptive-cards/getting-started/bots)
