@@ -143,4 +143,9 @@ Teams app can read the URL for, joining a meeting URL through Graph APIs. This d
 
 To invoke the Stage View through deep link from your tab, you must wrap the deep link URL in the `app.openLink(url)` API. The deep link can also be passed through an `OpenURL` action in the card. For more information see, [Stage View](~/tabs/tabs-link-unfurling.md#invoke-stage-view-through-deep-link).
 
+## Code Sample
+
+| Sample name | Description | .NET |Node.js|
+|-------------|-------------|------|----|
+|Deep link consuming Subentity ID | This sample shows how to use deep-link from bot chat to tab consuming Subentity ID. It also shows deeplinks for navigate to app, navigate to chat, open profile dialog and open scheduling dialog.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs)|
 
