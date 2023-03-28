@@ -354,11 +354,6 @@ The following are the limitations for app caching:
 * Follow the [step-by-step guide](../sbs-meetings-stage-view.yml) to share meeting stage view in your Teams meeting.
 * Follow the [step-by-step guide](../sbs-meeting-content-bubble.yml) to generate in-meeting notification in your Teams meeting.
 
-## Next step
-
-> [!div class="nextstepaction"]
-> [Enable app caching for your tab app](app-caching-for-your-tab-app.md)
-
 ## See also
 
 * [Apps for Teams meetings and calls](teams-apps-in-meetings.md)
