@@ -394,7 +394,7 @@ The following code shows an example of Adaptive Card with typeahead support:
 
 ### Stage view for images in Adaptive Cards
 
-In an Adaptive Card, you can use the `msteams` property to add the ability to display images in stage view selectively. When users hover over the images, they can see an expand icon, for which the `allowExpand` attribute is set to `true`. However, stage view for images in Adaptive Cards doesn't support Base64 encoded images. For more information, see the following example:
+In an Adaptive Card, you can use the `msteams` property to add the ability to display images in stage view selectively. When users hover over the images, they can see an expand icon, for which the `allowExpand` attribute is set to `true`. The following is an example of the `msteams` property:
 
 ``` json
 {
@@ -427,6 +427,7 @@ In the stage view, users can zoom in and zoom out of the image. You can select t
 >
 > * Zoom in and zoom out capability applies only to the image elements that is image type in an Adaptive Card.
 > * For Teams mobile apps, stage view functionality for images in Adaptive Cards is available by default. Users can view Adaptive Card images in stage view by simply tapping on the image, irrespective of whether the `allowExpand` attribute is present or not.
+> * Stage view for images in Adaptive Cards doesn't support Base64 encoded images.
 
 # [Markdown format for connector cards for Microsoft 365 Groups](#tab/connector-md)
 
