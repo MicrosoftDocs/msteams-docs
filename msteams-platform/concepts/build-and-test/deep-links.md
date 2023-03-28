@@ -21,28 +21,6 @@ Deep links can be categorized as follows:
 
 :::image type="content" source="~/assets/images/deep-links.png" alt-text="Diagram that shows different scenarios for deep links.":::
 
-:::row::: 
-    :::column::: 
-        :::image type="content" source="~/assets/images/deep-link-select.png" alt-text="deeplink":::
-    :::column-end::: 
-    :::column span="2":::
-
-:::image type="content" source="~/assets/images/deep-link-app.png" alt-text="Deeplink to an app":::
-
-:::column-end:::
-:::column:::
-    :::column-end:::
-    :::column span="2":::
-
-:::image type="content" source="~/assets/images/deep-link-chat.png" alt-text="Deeplink to a chat":::
-    :::column-end:::
-:::column:::
-    :::column-end:::
-    :::column span="2":::
-:::image type="content" source="~/assets/images/deep-link-workflow.png" alt-text="Deeplink to a workflow":::
-    :::column-end:::
-:::row-end:::
-
 * **Deep link to an app**: You can open the app install dialog, navigate within your app, and generate a deep link and navigate to your tab through [deep link to an app](~/concepts/build-and-test/deep-link-application.md).
 
 * **Deep link to a chat**: You can navigate to a channel conversation, chat messages, and to file in a channel through [deep link to a chat](~/concepts/build-and-test/deep-link-teams.md).
