@@ -13,7 +13,7 @@ ms.date: 04/07/2022
 > [!NOTE]
 > App caching is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
 
-You can configure your tab app (app) to enable app caching to reduce the reload time of your app during a meeting. You can store your app data in the meeting by enabling app caching. The app reloads from the cache, which improves the app relaunch time within the meeting. App caching is supported only for tabs loaded in the meeting side panel in Teams desktop client.
+You can configure your tab app (app) to enable app caching to reduce the reload time of your app that are loaded in the meeting side panel during a meeting. This allows you to keep some resources and assets in memory that you can use. The app reloads from the cache, which improves the app relaunch time within the meeting. App caching is supported only for tabs loaded in the meeting side panel in Teams desktop client.
 
 Here's what you'll learn in this section:
 
