@@ -25,17 +25,17 @@ This article details the level of support of Teams JavaScript client (TeamsJS) l
         </tr>
         <tr>
             <td>Teams</td>
-            <td>Microsoft 365 app</td>
+            <td>Microsoft 365</td>
             <td>Outlook</td>
-            <td>Teams for Windows</td>
-            <td>Microsoft 365 for Windows</td>
-            <td>Outlook for Windows</td>
-            <td>Teams for Android</td>
-            <td>Teams for iOS</td>
-            <td>Microsoft 365 for Android</td>
-            <td>Microsoft 365 for iOS</td>
-            <td>Outlook for Android</td>
-            <td>Outlook for iOS</td>
+            <td>Teams (Windows)</td>
+            <td>Microsoft 365 (Windows)</td>
+            <td>Outlook (Windows)</td>
+            <td>Teams (Android)</td>
+            <td>Teams (iOS)</td>
+            <td>Microsoft 365 (Android)</td>
+            <td>Microsoft 365 (iOS)</td>
+            <td>Outlook (Android)</td>
+            <td>Outlook (iOS)</td>
         </tr>
     </thead>
     <tbody>
