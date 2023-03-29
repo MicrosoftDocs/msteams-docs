@@ -15,6 +15,6 @@ In this tutorial, get acquainted with a scenario-based Teams app in one of the f
 
 **Pre-requisites for building a notification bot (scenario-based app):**
 
-If you want to learn how to build a notification bot, ensure that you’ve prepared the build environment with prerequisite tools. For more information on prerequisites, see <link to: Tools and SDKs > TTk v4/v5 >
+If you want to learn how to build a notification bot, ensure that you’ve prepared the build environment with prerequisite tools. For more information on prerequisites, see link to: Tools and SDKs > TTk v4/v5 >
 
 Prepare to build apps using TTk > Prerequisites for creating your Teams app>.

@@ -52,13 +52,12 @@ If you want to extend your Teams app across M365, see [Extend Teams app across M
 
 You can get started with building a Teams app with a basic tab app, bot app, or a message extension app. The process to create the Teams app is similar for any basic app.
 
-You can start by building a [basic tab app](msteams-docs/msteams-platform/sbs-gs-javascript.yml)
+You can start by building a basic tab app
+For building other basic Teams app, see link to: Tools and SDKs > TTk v5 > TTk Tutorials> Basic apps. (Doc yet to be created)
 
-For building other basic Teams app, see <link to: Tools and SDKs > TTk v5 > TTk Tutorials> Basic apps. (Doc yet to be created)
+You can start by building a scenario-based app
 
-You can start by building a [scenario-based app](msteams-platform/sbs-gs-notificationbot.yml).
-
-For building other basic Teams app, see <link to: Tools and SDKs > TTk v5 > TTk Tutorials > Scenario-based apps>.(Doc yet to be created)
+For building other basic Teams app, see link to: Tools and SDKs > TTk v5 > TTk Tutorials > Scenario-based apps>.
 
 ### Build a scenario-based Teams app
 
