@@ -1,6 +1,6 @@
 ---
-title: Build your Teams app
-description: Build your first Team app
+title: Build basic tab app
+description: Build your basic tab app
 ms.localizationpriority: high
 ms.topic: reference
 ---

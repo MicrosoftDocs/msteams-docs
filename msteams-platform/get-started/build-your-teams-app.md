@@ -36,7 +36,7 @@ You can build Teams app to suit your business needs as shown in the following sc
 :::image type="content" source="../assets/images/get-started/info-graphic-build-a-scenario-based-app.png" alt-text="Screenshot showing the developer persona and user stories.":::
 
 You can start by building a [scenario-based app](../sbs-gs-notificationbot.yml)
-For building other basic Teams app, see <lTools and SDKs > TTk v5 > TTk Tutorials > Scenario-based apps>.
+For building other basic Teams app, see Tools and SDKs > TTk v5 > TTk Tutorials Scenario-based apps.
 
 ### Extend your Teams app across Microsoft 365
 
