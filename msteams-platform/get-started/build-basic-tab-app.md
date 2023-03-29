@@ -28,8 +28,8 @@ To use codespaces for creating a Teams tab app:
 The Create codespace page appears for Teams notification bot.
 1. Select Create codespaces. The Setting up your codespace page appears. Teams Toolkit prepares the app project for you and opens it in Visual Studio Code in the browser. Teams Toolkit icon appears in the activity bar of Visual Studio Code.
 1. Select Preview your Teams App (F5) to build the app.
-1. Sign in to your Microsoft 365 account.Teams Toolkit codespaces builds the app. A dialog appears to prompt you to open the app in a browser.
-1. Select the option to preview the app in the browser.The tab app is sideloaded to Teams and opens in the browser.
+1. Sign in to your Microsoft 365 account. Teams Toolkit codespaces builds the app. A dialog appears to prompt you to open the app in a browser.
+1. Select the option to preview the app in the browser. The tab app is sideloaded to Teams and opens in the browser.
 
 ## Use step-by-step guide to build a basic tab app
 
