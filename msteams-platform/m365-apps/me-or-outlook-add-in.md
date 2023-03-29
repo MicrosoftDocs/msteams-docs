@@ -6,11 +6,11 @@ ms.topic: conceptual
 ms.custom: m365apps
 ms.localizationpriority: medium
 ---
-# Scenarios for creating a message extension or an Outlook add-in
+# Scenarios for creating an Outlook add-in and a message extension
 
-Message extensions and Outlook add-ins allow you to create rich and interactive content for email messages and meeting invitations. You can create a message extension or an Outlook add-in for your Teams app based on the scenario.
+Outlook add-in and a message extension allow you to create rich and interactive content for email messages and meeting invitations. You can create an Outlook add-in and a message extension for your Teams app based on the scenario.
 
-If your app includes scenarios from Outlook add-in and message extension, then you must create both apps, a message extension and an Outlook add-in. You must host both these apps at the same domain so that they can share files.
+If your app includes scenarios from Outlook add-in and message extension, then you must create both apps, an Outlook add-in and a message extension. You must host both these apps at the same domain so that they can share files.
 
 ## Guidelines for Outlook add-in and message extension
 
