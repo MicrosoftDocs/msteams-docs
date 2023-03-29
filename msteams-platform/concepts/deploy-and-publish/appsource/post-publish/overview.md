@@ -41,10 +41,6 @@ If you make any of the following changes to your app, however, your existing use
 * Add a connector.
 * Modify configurations related to your Microsoft Azure Active Directory (Azure AD) app registration. For more information, see [`webApplicationInfo`](~/resources/schema/manifest-schema.md#webapplicationinfo).
 
-## Fix issues with your published app
-
-Microsoft runs daily automation tests on apps listed on the Teams store. If issues with your app are identified, we contact you with a detailed report on how to reproduce the issues and recommendations to resolve them. If you can't fix the problems within a stated timeline, your app listing may be removed from the store.
-
 ## Promote your app on another site
 
 When your app is listed in the Teams store, you can create a link that launches Teams and displays a dialog to install your app. You could include this link, for example, with a download button on your product's marketing page.
@@ -55,9 +51,9 @@ Create the link using the following URL appended with your app ID: `https://team
 
 [Microsoft 365 Certification](/microsoft-365-app-certification/docs/certification) offers assurances that data and privacy are adequately secured and protected when a third-party Microsoft 365 app or an add-in is installed in your Microsoft 365 ecosystem. The certification confirms that your app is compatible with Microsoft technologies, is compliant with cloud app security best practices, and is supported by Microsoft.
 
-## Maintain app details
+## Keep your app details updated
 
-You must maintain the following app details
+You must keep the following app details updated:
 
 | App details | Description |
 |---|---|
@@ -65,6 +61,10 @@ You must maintain the following app details
 | You must regularly update your app to ensure that it remains **compliant with the commercial marketplace policies**. | Stay up to date with policy changes by subscribing to the [changelog here](/legal/marketplace/offer-policies-change-history). |
 | Your **contact details** must be kept up to date in your Partner Center account. | We'll contact you occasionally to resolve any bugs or commercial marketplace policy violations in your app. If your contact details aren't updated, you might miss important notices or updates from us. |
 | Maintain your app's **functionality** and **user experience**. | Your app's functionality and user experience must match or exceed the quality of experience at submission, and you must maintain your app's performance. |
+
+## Fix issues with your published app
+
+Microsoft runs daily automation tests on apps listed on the Teams store. If issues with your app are identified, we contact you with a detailed report on how to reproduce the issues and recommendations to resolve them. If you can't fix the problems within a stated timeline, your app listing may be removed from the store.
 
 ## Possible enforcement actions
 
