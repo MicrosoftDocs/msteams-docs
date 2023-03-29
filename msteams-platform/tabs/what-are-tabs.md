@@ -93,3 +93,4 @@ You can have multiple channels or group tabs, and up to 16 personal tabs per app
 * [Tabs on mobile](design/tabs-mobile.md#tabs-on-mobile)
 * [App capabilities mapped to features](../concepts/design/map-use-cases.md#app-capabilities-mapped-to-features)
 * [Instrumenting for Teams app specific analytics](../concepts/design/overview-analytics.md#instrumenting-for-teams-app-specific-analytics)
+* [Extend tab app with Microsoft Graph permissions and scopes](how-to/authentication/tab-sso-graph-api.md)

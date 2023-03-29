@@ -37,14 +37,14 @@ You can add a custom app to Teams by uploading an [app package](../concepts/buil
 
 You can build an app for internal use and share it with your team without submitting it to the Microsoft Teams app catalog in the Teams app store. For more information, see [how to upload your app in Teams](../concepts/deploy-and-publish/apps-upload.md).
 
-### To build your app to zip app package file
+### Build app package
 
 You need to run **Provision in the cloud** before you build the app package. The following step helps you to build the app package:
 
 * Select **Zip Teams metadata package** under **DEPLOYMENT**.<br>
     The generated app package is located in `{your project folder}\build\appPackage\appPackage.{env}.zip`.
 
-### To upload app package
+### Upload app package
 
 Perform the following steps to upload app package:
 
