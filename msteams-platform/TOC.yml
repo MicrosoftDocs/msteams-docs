@@ -25,12 +25,12 @@
   - name: Overview
     href: get-started/get-started-overview.md
     displayName: First Teams app, Python, .NET, Java, Node.js
+  - name: Know your Teams app
+    href: get-started/know-your-teams-app.md
   - name: Build your first tab app using JavaScript
-    href: sbs-gs-javascript.yml
+    href: get-started/build-basic-tab-app.md
   - name: Build notification bot with JavaScript
-    href: sbs-gs-notificationbot.yml
-  - name: Build your first message extension app using JavaScript
-    href: sbs-gs-msgext.yml
+    href: get-started/build-notification-bot.md
   - name: Teams app tutorials
     href: get-started/teams-toolkit-tutorial.md
   - name: Code samples
