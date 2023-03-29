@@ -236,19 +236,19 @@ All entities are required parameters to actions
 
 Current list names:
 
-```
+```javascript
 {{conversation.listNames}}
 ```
 
 Conversation history:
 
-```
+```javascript
 {{conversation.history}}
 ```
 
 Current query:
 
-```
+```javascript
 Human: {{activity.text}}
 ```
 
