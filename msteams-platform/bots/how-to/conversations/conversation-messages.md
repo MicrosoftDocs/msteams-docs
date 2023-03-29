@@ -250,9 +250,9 @@ Messages sent between users and bots include internal channel data within the me
 
 ## Edit or delete message
 
-When you edit, undelete or soft delete a message in a chat, the bot gets a notification of the edit, undelete, or soft delete message event.
+When you edit, undelete, or soft delete a message in a chat, the bot gets a notification of the edit, undelete, or soft delete message event.
 
-To get an edit, undelete or soft delete message event notification in a bot, you can override the following handlers:
+To get an edit, undelete, or soft delete message event notification in a bot, you can override the following handlers:
 
 ### To edit a message
 
@@ -260,100 +260,100 @@ The following is an example of an edit message event notification using `OnTeams
 
 # [C#](#tab/dotnet3)
 
-    ```csharp
-    
-    protected override async Task OnTeamsMessageEditAsync(ITurnContext<IMessageUpdateActivity> turnContext, CancellationToken cancellationToken) 
-    { 
-    var replyActivity = MessageFactory.Text("message is updated"); 
-    await turnContext.SendActivityAsync(replyActivity, cancellationToken); 
-    } 
-    
-    ```
+```csharp
+
+protected override async Task OnTeamsMessageEditAsync(ITurnContext<IMessageUpdateActivity> turnContext, CancellationToken cancellationToken) 
+{ 
+var replyActivity = MessageFactory.Text("message is updated"); 
+await turnContext.SendActivityAsync(replyActivity, cancellationToken); 
+} 
+
+```
 
 # [JSON](#tab/json3)
 
-    ```json
-    
+```json
+
+{
+"type":"messageUpdate",
+"timestamp":"2022-10-28T17:19:39.4615413Z",
+"localTimestamp":"2022-10-28T10:19:39.4615413-07:00",
+"id":"1666977568748",
+"channelId":"msteams",
+"serviceUrl":"https://canary.botapi.skype.com/amer/",
+"from": {
+    "id":"29:1BLjP9j3_PM4mubmQZsYPx7jDyLeLf_YVA9sVPV08KMAFMjJWB_EUGveb9EVDh9TslNp9qjnzEBy3kgw01Jf1Kg",
+    "name":"Mike Wilber",
+    "aadObjectId":"520e4d1e-2108-43ee-a092-46a9507c6200"caching
+},
+"conversation":{
+    "conversationType":"personal",
+    "tenantId":"528dbe3f-15e0-4e37-84a1-00cc305847dd","id":"a:1pweuGJ44RkB90tiJNQ_I6g3vyuP4CYA_f-v6f0Vd-Bs3Ce85C73Ah1y8TvyjESsTHWjjgw-gnsuIuCUOWkfOCq6qaUYsk2_-fj93XXXHUMAUzhFFvTnaCU7V4WiMqRPB"
+},
+"recipient":{
+    "id":"28:0d569679-gb4j-479a-b0d8-238b6e6b1149",
+    "name":"TestBot"
+},
+"entities":[
     {
-    "type":"messageUpdate",
-    "timestamp":"2022-10-28T17:19:39.4615413Z",
-    "localTimestamp":"2022-10-28T10:19:39.4615413-07:00",
-    "id":"1666977568748",
-    "channelId":"msteams",
-    "serviceUrl":"https://canary.botapi.skype.com/amer/",
-    "from": {
-        "id":"29:1BLjP9j3_PM4mubmQZsYPx7jDyLeLf_YVA9sVPV08KMAFMjJWB_EUGveb9EVDh9TslNp9qjnzEBy3kgw01Jf1Kg",
-        "name":"Mike Wilber",
-        "aadObjectId":"520e4d1e-2108-43ee-a092-46a9507c6200"
-    },
-    "conversation":{
-        "conversationType":"personal",
-        "tenantId":"528dbe3f-15e0-4e37-84a1-00cc305847dd","id":"a:1pweuGJ44RkB90tiJNQ_I6g3vyuP4CYA_f-v6f0Vd-Bs3Ce85C73Ah1y8TvyjESsTHWjjgw-gnsuIuCUOWkfOCq6qaUYsk2_-fj93XXXHUMAUzhFFvTnaCU7V4WiMqRPB"
-    },
-    "recipient":{
-        "id":"28:0d569679-gb4j-479a-b0d8-238b6e6b1149",
-        "name":"TestBot"
-    },
-    "entities":[
-        {
-            "locale":"en-US",
-            "country":"US",
-            "platform":"Web",
-            "timezone":"America/Los_Angeles",
-            "type":"clientInfo"
-        }
-    ],
-    "channelData":{
-        "eventType":"editMessage",
-        "tenant":{"id":"528dbe3f-15e0-4e37-84a1-00cc305847dd"}
-    },
-    "locale":"en-US",
-    "localTimezone":"America/Los_Angeles"
-    }  
-    
-    ```
+        "locale":"en-US",
+        "country":"US",
+        "platform":"Web",
+        "timezone":"America/Los_Angeles",
+        "type":"clientInfo"
+    }
+],
+"channelData":{
+    "eventType":"editMessage",
+    "tenant":{"id":"528dbe3f-15e0-4e37-84a1-00cc305847dd"}
+},
+"locale":"en-US",
+"localTimezone":"America/Los_Angeles"
+}  
+
+```
 
 # [JavaScript](#tab/javascript3)
 
 You can either use **​event function registration** or **​method override** method to get event notifications to handle the message updates using the Bot SDK:
 
-    **​Event function registration**:
+**​Event function registration**:
 
-    ```javascript
-    
-    this.onTeamsMessageEditEvent(async (context, next) => {
-      let editedMessage = context.activity.text;
-      await context.sendActivity(`The edited message is ${editedMessage}"`);
-      next();
-    })
-    
-    ```
+```javascript
 
-    **​Method override**:
+this.onTeamsMessageEditEvent(async (context, next) => {
+  let editedMessage = context.activity.text;
+  await context.sendActivity(`The edited message is ${editedMessage}"`);
+  next();
+})
 
-    ```javascript
-    
-    async onTeamsMessageEdit(context) {
-        let editedMessage = context.activity.text;
-        await context.sendActivity(`The edited message is ${editedMessage}"`);
-    }
-    
-    ```
+```
+
+**​Method override**:
+
+```javascript
+
+async onTeamsMessageEdit(context) {
+    let editedMessage = context.activity.text;
+    await context.sendActivity(`The edited message is ${editedMessage}"`);
+}
+
+```
 
 # [HTTP](#tab/http1)
 
-    ```http
-    PUT {Service URL of your bot}/v3/conversations/{conversationId}/activities/{activityId}
-    ```
+```http
+PUT {Service URL of your bot}/v3/conversations/{conversationId}/activities/{activityId}
+```
 
-    ```json
-    {
-        "type": "message",
-        "text": "This message has been updated"
-    }
-    ```
+```json
+{
+    "type": "message",
+    "text": "This message has been updated"
+}
+```
 
-    ---
+---
 
 ### To undelete a message
 
@@ -361,102 +361,102 @@ The following is an example of an undelete message event notification using `OnT
 
 # [C#](#tab/dotnet4)
 
-    ```csharp
-    
-    protected override async Task OnTeamsMessageUndeleteAsync(ITurnContext<IMessageUpdateActivity> turnContext, CancellationToken cancellationToken)
-    { 
-    var replyActivity = MessageFactory.Text("message is undeleted"); 
-    await turnContext.SendActivityAsync(replyActivity, cancellationToken); 
-    } 
-    
-    ```
+```csharp
+
+protected override async Task OnTeamsMessageUndeleteAsync(ITurnContext<IMessageUpdateActivity> turnContext, CancellationToken cancellationToken)
+{ 
+var replyActivity = MessageFactory.Text("message is undeleted"); 
+await turnContext.SendActivityAsync(replyActivity, cancellationToken); 
+} 
+
+```
 
 # [JSON](#tab/json4)
 
-    ```json
-    
+```json
+
+{
+"type":"messageUpdate",
+"timestamp":"2022-10-28T17:19:39.4615413Z",
+"localTimestamp":"2022-10-28T10:19:39.4615413-07:00",
+"id":"1666977568748",
+"channelId":"msteams",
+"serviceUrl":"https://canary.botapi.skype.com/amer/",
+"from": {
+    "id":"29:1BLjP9j3_TM4mubmQZsYEo7jDyLeLf_YVA9sVPVO7KMAFMjJWB_EUGveb9EVDh9LgoNp9qjnzEBy4kgw83Jf1Kg",
+    "name":"Alex Wilber",
+    "aadObjectId":"976e4d1e-2108-43ee-a092-46a9507c5606"
+},
+"conversation":{
+    "conversationType":"personal",
+    "tenantId":"528dbe3f-15e0-4e37-84a1-00cc305847dd","id":"a:1tewuGJ44RkB90tiJNQ_I4q8vyuN5CYA_f-v6f0Vd-Bs3Ce85C73Ah1y8TvyjESsTHWjjgw-gnsuIuCUOWkfOCq6qaUYsk2_-fj93XXXHUMAUzhFFvTnaCU7V4WiMqXQL"
+},
+"recipient":{
+    "id":"28:0d469698-ab9d-479a-b0d8-758b6e6b1234",
+    "name":"Testbot"
+},
+"entities":[
     {
-    "type":"messageUpdate",
-    "timestamp":"2022-10-28T17:19:39.4615413Z",
-    "localTimestamp":"2022-10-28T10:19:39.4615413-07:00",
-    "id":"1666977568748",
-    "channelId":"msteams",
-    "serviceUrl":"https://canary.botapi.skype.com/amer/",
-    "from": {
-        "id":"29:1BLjP9j3_TM4mubmQZsYEo7jDyLeLf_YVA9sVPVO7KMAFMjJWB_EUGveb9EVDh9LgoNp9qjnzEBy4kgw83Jf1Kg",
-        "name":"Alex Wilber",
-        "aadObjectId":"976e4d1e-2108-43ee-a092-46a9507c5606"
-    },
-    "conversation":{
-        "conversationType":"personal",
-        "tenantId":"528dbe3f-15e0-4e37-84a1-00cc305847dd","id":"a:1tewuGJ44RkB90tiJNQ_I4q8vyuN5CYA_f-v6f0Vd-Bs3Ce85C73Ah1y8TvyjESsTHWjjgw-gnsuIuCUOWkfOCq6qaUYsk2_-fj93XXXHUMAUzhFFvTnaCU7V4WiMqXQL"
-    },
-    "recipient":{
-        "id":"28:0d469698-ab9d-479a-b0d8-758b6e6b1234",
-        "name":"Testbot"
-    },
-    "entities":[
-        {
-            "locale":"en-US",
-            "country":"US",
-            "platform":"Web",
-            "timezone":"America/Los_Angeles",
-            "type":"clientInfo"
-        }
-    ],
-    "channelData":{
-        "eventType":"undeleteMessage",
-        "tenant":{"id":"528dbe3f-15e0-4e37-84a1-00cc305847dd"}
-    },
-    "locale":"en-US",
-    "localTimezone":"America/Los_Angeles"
-    }  
-    
-    ```
+           "locale":"en-US",
+        "country":"US",
+        "platform":"Web",
+        "timezone":"America/Los_Angeles",
+        "type":"clientInfo"
+    }
+],
+"channelData":{
+    "eventType":"undeleteMessage",
+    "tenant":{"id":"528dbe3f-15e0-4e37-84a1-00cc305847dd"}
+},
+"locale":"en-US",
+"localTimezone":"America/Los_Angeles"
+}  
+
+```
 
 # [JavaScript](#tab/javascript4)
 
 You can either use **​event function registration** or **​method override** method to get event notifications to handle the message updates using the Bot SDK:
 
-    **​Event function registration**:
+**​Event function registration**:
 
-    ```javascript
-    
-    this.onTeamsMessageUndeleteEvent(async (context, next) => {
-        let undeletedMessage = context.activity.text;
-        let messageId = context.activity.id;
-            await context.sendActivity(`Previously the message was deleted. After undeleting, the message is now: "${undeletedMessage}"`);
-        next();
-    })
-    
-    ```
+```javascript
 
-    **​Method override**:
+this.onTeamsMessageUndeleteEvent(async (context, next) => {
+    let undeletedMessage = context.activity.text;
+    let messageId = context.activity.id;
+    await context.sendActivity(`Previously the message was deleted. After undeleting, the message is now: "${undeletedMessage}"`);
+next();
+})
 
-    ```javascript
-    
-    async onTeamsMessageUndelete(context) {
-        let undeletedMessage = context.activity.text;
-        let messageId = context.activity.id;
-        await context.sendActivity(`Previously the message was deleted. After undeleting, the message is now: "${undeletedMessage}"`);
-    }
-    
-    ```
+```
+
+**​Method override**:
+
+```javascript
+
+async onTeamsMessageUndelete(context) {
+    let undeletedMessage = context.activity.text;
+    let messageId = context.activity.id;
+    await context.sendActivity(`Previously the message was deleted. After undeleting, the message is now: "${undeletedMessage}"`);
+}
+
+```
 
 # [HTTP](#tab/http2)
 
-    ```http
-    PUT {Service URL of your bot}/v3/conversations/{conversationId}/activities/{activityId}
-    ```
+```http
+PUT {Service URL of your bot}/v3/conversations/{conversationId}/activities/{activityId}
+```
 
-    ```json
-    {
-        "type": "message",
-        "text": "This message has been updated"
-    }
-    ```
+```json
+{
+    "type": "message",
+    "text": "This message has been updated"
+}
+```
 
-    ---
+---
 
 ### To soft delete a message
 
@@ -464,87 +464,87 @@ The following is an example of a soft delete message event notification using `O
 
 # [C#](#tab/dotnet5)
 
-    ```csharp
-    
-    protected override async Task OnTeamsMessageSoftDeleteAsync(ITurnContext<IMessageDeleteActivity> turnContext, CancellationToken cancellationToken) 
-    { 
-    var replyActivity = MessageFactory.Text("message is soft deleted"); 
-    await turnContext.SendActivityAsync(replyActivity, cancellationToken); 
-    } 
-    
-    ```
+```csharp
+
+protected override async Task OnTeamsMessageSoftDeleteAsync(ITurnContext<IMessageDeleteActivity> turnContext, CancellationToken cancellationToken) 
+{ 
+var replyActivity = MessageFactory.Text("message is soft deleted"); 
+await turnContext.SendActivityAsync(replyActivity, cancellationToken); 
+} 
+
+```
 
 # [JSON](#tab/json5)
 
-    ```json
-    
+```json
+
+{
+"type":"messageDelete",
+"timestamp":"2022-10-28T17:19:43.1612052Z",
+"localTimestamp":"2022-10-28T10:19:43.1612052-07:00",
+"id":"1666977568748",
+"channelId":"msteams",
+"serviceUrl":"https://canary.botapi.skype.com/amer/",
+"from": {
+    "id":"29:1BLjP9j3_TM4mubmQZsYEo7jDyLeLf_YVA9sVPVO7KMAFMjJWB_EUGveb9EVDh9LgoNp9qjnzEBy4kgw83Jf1Kg",
+    "name":"Alex Wilber",
+    "aadObjectId":"976e4d1e-2108-43ee-a092-46a9507c5606"
+},
+"conversation":{
+    "conversationType":"personal",
+    "tenantId":"528dbe3f-15e0-4e37-84a1-00cc305847dd","id":"a:1tewuGJ44RkB90tiJNQ_I4q8vyuN5CYA_f-v6f0Vd-Bs3Ce85C73Ah1y8TvyjESsTHWjjgw-gnsuIuCUOWkfOCq6qaUYsk2_-fj93XXXHUMAUzhFFvTnaCU7V4WiMqXQL"
+},
+"recipient":{
+    "id":"28:0d469698-ab9d-479a-b0d8-758b6e6b1235",
+    "name":"Testbot"
+},
+"entities":[
     {
-    "type":"messageDelete",
-    "timestamp":"2022-10-28T17:19:43.1612052Z",
-    "localTimestamp":"2022-10-28T10:19:43.1612052-07:00",
-    "id":"1666977568748",
-    "channelId":"msteams",
-    "serviceUrl":"https://canary.botapi.skype.com/amer/",
-    "from": {
-        "id":"29:1BLjP9j3_TM4mubmQZsYEo7jDyLeLf_YVA9sVPVO7KMAFMjJWB_EUGveb9EVDh9LgoNp9qjnzEBy4kgw83Jf1Kg",
-        "name":"Alex Wilber",
-        "aadObjectId":"976e4d1e-2108-43ee-a092-46a9507c5606"
-    },
-    "conversation":{
-        "conversationType":"personal",
-        "tenantId":"528dbe3f-15e0-4e37-84a1-00cc305847dd","id":"a:1tewuGJ44RkB90tiJNQ_I4q8vyuN5CYA_f-v6f0Vd-Bs3Ce85C73Ah1y8TvyjESsTHWjjgw-gnsuIuCUOWkfOCq6qaUYsk2_-fj93XXXHUMAUzhFFvTnaCU7V4WiMqXQL"
-    },
-    "recipient":{
-        "id":"28:0d469698-ab9d-479a-b0d8-758b6e6b1235",
-        "name":"Testbot"
-    },
-    "entities":[
-        {
-            "locale":"en-US",
-            "country":"US",
-            "platform":"Web",
-            "timezone":"America/Los_Angeles",
-            "type":"clientInfo"
-        }
-    ],
-    "channelData":{
-        "eventType":"softDeleteMessage",
-        "tenant":{"id":"528dbe3f-15e0-4e37-84a1-00cc305847dd"}
-    },
-    "locale":"en-US",
-    "localTimezone":"America/Los_Angeles"
-    }  
-    
-    ```
+        "locale":"en-US",
+        "country":"US",
+        "platform":"Web",
+        "timezone":"America/Los_Angeles",
+        "type":"clientInfo"
+    }
+],
+"channelData":{
+    "eventType":"softDeleteMessage",
+    "tenant":{"id":"528dbe3f-15e0-4e37-84a1-00cc305847dd"}
+},
+"locale":"en-US",
+"localTimezone":"America/Los_Angeles"
+}  
+
+```
 
 # [JavaScript](#tab/javascript5)
 
 You can either use **​event function registration** or **​method override** method to get event notifications to handle the message updates using the Bot SDK:
 
-    **​Event function registration**:
+**​Event function registration**:
 
-    ```javascript
-    
-    this.onTeamsMessageSoftDeleteEvent(async (context, next) => {
-        let messageId = context.activity.id;
-          await context.sendActivity(`The deleted message id is ${messageId}`);
-        next();
-    })
-    
-    ```
+```javascript
 
-    **​Method override**:
+this.onTeamsMessageSoftDeleteEvent(async (context, next) => {
+    let messageId = context.activity.id;
+      await context.sendActivity(`The deleted message id is ${messageId}`);
+    next();
+})
 
-    ```javascript
-    
-    async onTeamsMessageSoftDelete(context) {
-        let messageId = context.activity.id;
-        await context.sendActivity(`The deleted message id is ${messageId}`);
-    }
-    
-    ```
+```
 
-    ---
+**​Method override**:
+
+```javascript
+
+async onTeamsMessageSoftDelete(context) {
+    let messageId = context.activity.id;
+    await context.sendActivity(`The deleted message id is ${messageId}`);
+}
+
+```
+
+---
 
 ## Send suggested actions
 
