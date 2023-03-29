@@ -248,14 +248,15 @@ POST {Service URL of your bot}/v3/conversations
 
 Messages sent between users and bots include internal channel data within the message. This data allows the bot to communicate properly on that channel. The Bot Builder SDK allows you to modify the message structure.
 
-## Update message
+## Edit or Soft delete message
 
-When you edit or undelete a message in a chat, the bot gets a notification of the edit message or undelete message event.
+When you edit, undelete or soft delete a message in a chat, the bot gets a notification of the edit, undelete, or soft delete message event.
 
-To get an edit or undelete message event notification in a bot, you can override the following handlers:
+To get an edit, undelete or soft delete message event notification in a bot, you can override the following handlers:
 
 * For edit: `OnTeamsMessageEditAsync`
 * For undelete: `OnTeamsMessageUndeleteAsync`
+* For soft delete:  `OnTeamsMessageSoftDeleteAsync`
 
 The following is an example of an edit message event notification when a sent message is edited:
 
@@ -456,12 +457,6 @@ PUT {Service URL of your bot}/v3/conversations/{conversationId}/activities/{acti
 ```
 
 ---
-
-## Soft delete message
-
-When you soft delete a message in a chat, the bot gets a notification of the soft delete message event.
-
-To get a soft delete message event notification in a bot, you can override the `OnTeamsMessageSoftDeleteAsync` handler.
 
 The following is an example of a soft delete message event notification when a message is soft deleted:
 
