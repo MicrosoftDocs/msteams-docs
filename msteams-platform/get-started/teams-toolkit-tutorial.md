@@ -11,5 +11,5 @@ Tools and SDKs > TTk v4/v5 > TTk Tutorials
 | &nbsp; |  &nbsp; |  App capabilities |  &nbsp; |  Multi-capability |
 | --- | --- | --- | --- | --- |
 | &nbsp; | **Tab** | **Bot** | **Message extension** | &nbsp; |
-| **Basic app** | link to: SBS: basic tab using JS> <br> <link to: SBS: basic tab using C#, Blazor> |  link to: basic bot using JS> <br> <link to: SBS: basic bot using C#, Blazor |  link to: SBS: basic mex using JS |  link to: SBS: basic tab using Node.js |
-| &nbsp; | link to: SBS: SPFx tab using JS &nbsp; | &nbsp; | &nbsp; | &nbsp; |
+| **Basic app** | [Basic tab using JavaScript](../sbs-gs-javascript.yml) <br> basic tab using C#, Blazor> | [Basic bot using JavaScript](../sbs-gs-bot.yml) <br> Basic bot using C#, Blazor |  [Basic message extension using JavaScript](../sbs-gs-msgext.yml) | [basic tab using Node.js](../sbs-gs-nodejs.yml) |
+| &nbsp; | [SPFx tab using JavaScript](../sbs-gs-spfx.yml) &nbsp; | &nbsp; | &nbsp; | &nbsp; |
