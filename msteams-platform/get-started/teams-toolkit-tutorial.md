@@ -6,10 +6,12 @@ ms.topic: reference
 ---
 # Teams toolkit tutorials
 
-Tools and SDKs > TTk v4/v5 > TTk Tutorials
-
 | &nbsp; |  &nbsp; |  App capabilities |  &nbsp; |  Multi-capability |
 | --- | --- | --- | --- | --- |
 | &nbsp; | **Tab** | **Bot** | **Message extension** | &nbsp; |
-| **Basic app** | [Basic tab using JavaScript](../sbs-gs-javascript.yml) <br> basic tab using C#, Blazor> | [Basic bot using JavaScript](../sbs-gs-bot.yml) <br> Basic bot using C#, Blazor |  [Basic message extension using JavaScript](../sbs-gs-msgext.yml) | [basic tab using Node.js](../sbs-gs-nodejs.yml) |
+| **Basic app** | [Basic tab using JavaScript](../sbs-gs-javascript.yml) <br> [basic tab using C#, Blazor](../sbs-gs-csharp.yml) | [Basic bot using JavaScript](../sbs-gs-bot.yml) <br> [Basic bot using C#](../sbs-gs-blazorupdate.yml), Blazor |  [Basic message extension using JavaScript](../sbs-gs-msgext.yml) | [basic tab using Node.js](../sbs-gs-nodejs.yml) |
 | &nbsp; | [SPFx tab using JavaScript](../sbs-gs-spfx.yml) &nbsp; | &nbsp; | &nbsp; | &nbsp; |
+| **Scenario-based app** | NA | SBS: notification bot using JS | NA | NA |
+| | | SBS: command bot using JS | | |
+| | | SBS: workflow bot using JS | | |
+| Extend app across Microsoft 365 | A code sample of a To-do list (tab) exists, but there’s no SBS afaik. | | | |

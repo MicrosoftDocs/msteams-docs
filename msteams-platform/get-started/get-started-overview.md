@@ -26,6 +26,14 @@ Let's take a quick glance at the build environment options you can choose from, 
 
 Depending on the capabilities you want for your app, choose an appropriate development tool set.
 
+| App capabilities | Tabs | Bots | Message extensions |
+|--------|-------------|--------|--------|
+| **User interactions** | A full-screen embedded web experience. | A chat bot that converses with members. | Shortcuts for inserting external content into a conversation or taking action on messages. |
+| **Recommended tools** | Microsoft Visual Studio Code with Teams Toolkit extension, or TeamsFx CLI if you prefer using CLI | Visual Studio Code with Teams Toolkit extension, or TeamsFx CLI | Visual Studio Code with Teams Toolkit extension, or TeamsFx CLI |
+| **SDKs** | TeamsFx SDK for core libs and Teams JavaScript client library for UI functionalities | TeamsFx SDK and Bot Framework SDK | TeamsFx SDK and Bot Framework SDK |
+| **Technology stacks or Languages** | Web technology in general, HTML, CSS, and JavaScript (incl. React). | Node.js, C#, Java, and Python. | Node.js, C#, Java, and Python. |
+| **Extend for Microsoft 365** | | | |
+
 | App capabilities | User interactions | Recommended tools | SDKs | Technology stacks / Languages |
 |--------|-------------|--------|--------|--------|
 | Tabs | A full-screen embedded web experience. | Microsoft Visual Studio Code with Teams Toolkit extension, or [TeamsFx CLI](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) if you prefer using CLI | [TeamsFx SDK](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true) for core libs and [Teams JavaScript client library](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) for UI functionalities | Web technology in general, HTML, CSS, and JavaScript (incl. React). |
@@ -35,39 +43,6 @@ Depending on the capabilities you want for your app, choose an appropriate devel
 *You aren't limited to using these particular stacks!*
 
 If you are already familiar with Yeoman workflow, you may prefer using [YoTeams Yeoman Generator](https://github.com/pnp/generator-teams/blob/master/docs/docs/tutorials/build-your-first-microsoft-teams-app.md) to build your apps.
-
-### Build your Teams app
-
-Here’s how you proceed:
-
-Select the section based on the type of Teams app you want to build:
-
-If you’re new to building a Teams app, see [build a basic Teams app](#build-a-basic-teams-app)
-
-If you’ve created Teams app, and want to build apps to suit a particular scenario, see [Scenario-based apps](#build-a-scenario-based-teams-app).
-
-If you want to extend your Teams app across M365, see [Extend Teams app across M365](#extend-your-teams-app-across-microsoft-365).
-
-### Build a basic Teams app
-
-You can get started with building a Teams app with a basic tab app, bot app, or a message extension app. The process to create the Teams app is similar for any basic app.
-
-You can start by building a [basic tab app](../sbs-gs-javascript.yml)
-For building other basic Teams app, see link to: Tools and SDKs > TTk v5 > TTk Tutorials> Basic apps. (Doc yet to be created)
-
-You can start by building a scenario-based app
-
-For building other basic Teams app, see link to: Tools and SDKs > TTk v5 > TTk Tutorials > Scenario-based apps>.
-
-### Build a scenario-based Teams app
-
-You can build a Teams app that is suitable for a particular scenario or use-case. For example, a notification bot is suitable to send notifications but not to chat.
-
-### Extend your Teams app across Microsoft 365
-
-* Content for extending the app
-* Introduce unified app manifest
-* To do list – code sample, no SBS yet
 
 ## See also
 
