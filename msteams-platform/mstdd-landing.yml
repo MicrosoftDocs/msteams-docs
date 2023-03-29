@@ -71,7 +71,7 @@ landingContent:
       - text: Enable app caching for your tab app (Developer preview)
         url: apps-in-teams-meetings/app-caching-for-your-tab-app.md
       - text: Update and soft delete event notifications in bot
-        url: bots/how-to/conversations/conversation-messages.md#update-message
+        url: bots/how-to/conversations/conversation-messages.md#edit-or-delete-message
 
     - linkListType: whats-new
       links:

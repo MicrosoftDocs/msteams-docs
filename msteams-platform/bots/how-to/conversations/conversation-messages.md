@@ -248,7 +248,7 @@ POST {Service URL of your bot}/v3/conversations
 
 Messages sent between users and bots include internal channel data within the message. This data allows the bot to communicate properly on that channel. The Bot Builder SDK allows you to modify the message structure.
 
-## Edit or Soft delete message
+## Edit or delete message
 
 When you edit, undelete or soft delete a message in a chat, the bot gets a notification of the edit, undelete, or soft delete message event.
 
