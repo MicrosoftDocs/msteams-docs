@@ -39,7 +39,7 @@ To update your app's code:
 
 1. Add code snippet for `TeamsSSOTokenExchangeMiddleware`.
 
-# [csharp](#tab/cs1)
+   # [csharp](#tab/cs1)
 
     Add the following code snippet to `AdapterWithErrorHandler.cs` (or the equivalent class in your app's code):
 
@@ -47,7 +47,7 @@ To update your app's code:
     base.Use(new TeamsSSOTokenExchangeMiddleware(storage, configuration["ConnectionName"]));
     ```
 
-# [JavaScript](#tab/js1)
+   # [JavaScript](#tab/js1)
 
     Add the following code snippet to `index.js` (or the equivalent class in your app's code):
 
@@ -64,7 +64,7 @@ To update your app's code:
 
 1. Use the following code snippet for requesting a token.
 
-# [csharp](#tab/cs2)
+   # [csharp](#tab/cs2)
 
    After you add the `AdapterWithErrorHandler.cs`, your code should be as shown below:
 
@@ -119,7 +119,7 @@ To update your app's code:
        }
    ```
 
-# [JavaScript](#tab/js2)
+   # [JavaScript](#tab/js2)
 
     After you add the code to `index.js`, your code should be as shown below:
 
@@ -243,7 +243,7 @@ sign in/tokenExchange, and the **value** field. The **value** field contains the
 
 Use the following code snippet example to invoke response:
 
-# [csharp](#tab/cs3)
+   # [csharp](#tab/cs3)
 
 ```csharp
 public MainDialog(IConfiguration configuration, ILogger<MainDialog> logger)
@@ -297,7 +297,7 @@ private async Task<DialogTurnResult> LoginStepAsync(WaterfallStepContext stepCon
         }
 ```
 
-# [JavaScript](#tab/js3)
+   # [JavaScript](#tab/js3)
 
    ```JavaScript
     class MainDailog {
@@ -412,7 +412,7 @@ If you're using the OAuth connection, you must update or add the token in the Bo
 > [!NOTE]
 > You can find the sample `TeamsMessagingExtensionsSearchAuthConfigBot.cs` in [Tab, Bot, and Message Extension (ME) SSO](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp/App%20SSO%20Sample/Bots).
 
-# [csharp](#tab/cs4)
+   # [csharp](#tab/cs4)
 
 ```csharp
 protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
@@ -473,7 +473,7 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
      }
 ```
 
-# [JavaScript](#tab/js4)
+   # [JavaScript](#tab/js4)
 
 ```JavaScript
 
@@ -524,7 +524,7 @@ async tokenIsExchangeable(context) {
 
 Use the following code snippet to handle the access token in case the app user logs out:
 
-# [csharp](#tab/cs5)
+   # [csharp](#tab/cs5)
 
 ```csharp
     private async Task<DialogTurnResult> InterruptAsync(DialogContext innerDc, 
@@ -555,7 +555,7 @@ Use the following code snippet to handle the access token in case the app user l
         }
 ```
 
-# [JavaScript](#tab/js5)
+   # [JavaScript](#tab/js5)
 
 ```JavaScript
     async interrupt(innerDc) {
