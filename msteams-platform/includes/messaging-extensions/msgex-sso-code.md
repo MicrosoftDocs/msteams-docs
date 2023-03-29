@@ -39,7 +39,7 @@ To update your app's code:
 
 1. Add code snippet for `TeamsSSOTokenExchangeMiddleware`.
 
-   # [csharp](#tab/cs1)
+   # [C#](#tab/cs1)
 
     Add the following code snippet to `AdapterWithErrorHandler.cs` (or the equivalent class in your app's code):
 
@@ -64,7 +64,7 @@ To update your app's code:
 
 1. Use the following code snippet for requesting a token.
 
-   # [csharp](#tab/cs2)
+   # [C#](#tab/cs2)
 
    After you add the `AdapterWithErrorHandler.cs`, your code should be as shown below:
 
@@ -243,7 +243,7 @@ sign in/tokenExchange, and the **value** field. The **value** field contains the
 
 Use the following code snippet example to invoke response:
 
-   # [csharp](#tab/cs3)
+   # [C#](#tab/cs3)
 
 ```csharp
 public MainDialog(IConfiguration configuration, ILogger<MainDialog> logger)
@@ -412,7 +412,7 @@ If you're using the OAuth connection, you must update or add the token in the Bo
 > [!NOTE]
 > You can find the sample `TeamsMessagingExtensionsSearchAuthConfigBot.cs` in [Tab, Bot, and Message Extension (ME) SSO](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp/App%20SSO%20Sample/Bots).
 
-   # [csharp](#tab/cs4)
+   # [C#](#tab/cs4)
 
 ```csharp
 protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
@@ -524,7 +524,7 @@ async tokenIsExchangeable(context) {
 
 Use the following code snippet to handle the access token in case the app user logs out:
 
-   # [csharp](#tab/cs5)
+   # [C#](#tab/cs5)
 
 ```csharp
     private async Task<DialogTurnResult> InterruptAsync(DialogContext innerDc, 
