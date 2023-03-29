@@ -8,7 +8,7 @@ ms.localizationpriority: medium
 ---
 # Scenarios for creating an Outlook add-in and a message extension
 
-Outlook add-in and a message extension allow you to create rich and interactive content for email messages and meeting invitations. You can create an Outlook add-in and a message extension for your Teams app based on the scenario.
+An Outlook add-in and a message extension allow you to create rich and interactive content for email messages and meeting invitations. You can create an Outlook add-in and a message extension for your Teams app based on the scenario.
 
 If your app includes scenarios from Outlook add-in and message extension, then you must create both apps, an Outlook add-in and a message extension. You must host both these apps at the same domain so that they can share files.
 
