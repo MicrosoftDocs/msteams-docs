@@ -259,6 +259,7 @@ When you opt into app caching, the webview that is used to host the embedded app
 
 > [!NOTE]
 > If the app caching isn't enabled, the webview is recreated every time the user launches the app.
+
 There are multiple reasons for an app to not get cached or for an app to get removed from the cache, some of the reasons are (numbers here are subject to change):
 
 * If the system memory load is high, the app is removed from the cache.
