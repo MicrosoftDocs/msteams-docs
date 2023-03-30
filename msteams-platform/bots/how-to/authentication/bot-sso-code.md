@@ -56,7 +56,7 @@ To update your app's code:
 
 1. Add code snippet for `TeamsSSOTokenExchangeMiddleware`.
 
-   # [csharp](#tab/cs1)
+   # [C#](#tab/cs1)
 
     Add the following code snippet to `AdapterWithErrorHandler.cs` (or the equivalent class in your app's code):
 
@@ -81,7 +81,7 @@ To update your app's code:
 
 1. Use the following code snippet for requesting a token.
 
-   # [csharp](#tab/cs2)
+   # [C#](#tab/cs2)
 
     After you add the `AdapterWithErrorHandler.cs`, your code should be as shown below:
 
@@ -266,7 +266,7 @@ The response with the token is sent through an invoke activity with the same sch
 
 Use the following code snippet to invoke response:
 
-# [csharp](#tab/cs3)
+# [C#](#tab/cs3)
 
 ```csharp
 public MainDialog(IConfiguration configuration, ILogger<MainDialog> logger)
@@ -421,7 +421,7 @@ The following is a typical decoded payload of an access token.
 
 Use the following code snippet to handle the access token in case the app user logs out:
 
-# [csharp](#tab/cs4)
+# [C#](#tab/cs4)
 
 ```csharp
     private async Task<DialogTurnResult> InterruptAsync(DialogContext innerDc, 
