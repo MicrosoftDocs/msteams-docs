@@ -306,6 +306,74 @@ Your offer listing must include a valid Terms of use link. Offers with invalid, 
 
 [Back to top](#common-reasons-for-app-validation-failure)
 
+
+## Most Failed Scenarios for MetaOS
+
+### Microsoft 365 Re-Branding 
+
+* Tab does not load or shows an error page/message on the Office Client, when tested by replacing www.office.com/in the tab URL with www.microsoft365.com/ 
+
+### App Functionality 
+
+Broken Functionality visible in any of the Hubs: 
+
+1.	Functionality Cross-Parity not maintained/missing across M365 Hubs.
+
+2. Continuous Loading Indicator visible in Tabs (Teams/Outlook/Office) and Bots (Teams).
+
+3.	Blank Screen visible in Tabs in Office/Outlook Hubs.
+
+4. Error Message when adding app to Outlook/Office Hubs.
+
+5.	Clicking on buttons does not perform the action intended. But does so post refreshing the session.
+
+6.	Switching between Tabs asks for authentication again in Outlook Hub. 
+
+7.	Clicking on intended feature in Office Hub opens two browser instances. 
+
+8.	Clicking on the intended feature in Outlook/Office throws an Error Message.
+
+   * Content in “Help” Tab must be publicly available to learn more about the app offering. App must not ask for authentication.
+
+   * No Sign-out option present within Tab.
+
+   * Content in “Help”/ “About” Tab related to Teams Hub only. 
+
+   * Tab having duplicate Header or Logo.
+
+   * User unable to undo last action or back button not available in Tabs to go back to previous work state.
+
+   * Content in app is specific to Teams only.
+
+9. Unable to login to app in outlook.
+
+
+### App Responsiveness 
+
+Responsiveness Issues visible in any of the Hubs: 
+
+1.	Horizontal Scroll bar visible in Tabs.
+
+2.	Content Truncation visible.
+
+3.	App not responsive to 100% screen resolution.
+
+   * Office Hub: Case1: Close button doesn’t appear in 100% resolution.
+
+   * Teams Hub: Case2: Data truncation in “My week Settings”. 
+
+### App package & Store Listing (Metadata & Manifest) 
+
+* App Listing Screenshots only relevant to Teams Hub.
+
+* App Description (manifest/metadata) only relevant to Teams Hub.
+
+* Support URL/Privacy Policy/Terms of Use content (manifest/metadata) only relevant to Teams Hub.
+
+* Provided Test Accounts are not working for targeted release (Across all MetaOS Hubs)
+
+[Back to top](#common-reasons-for-app-validation-failure)
+
 ## See also
 
 * [Distribute your Microsoft Teams app](../apps-publish-overview.md)

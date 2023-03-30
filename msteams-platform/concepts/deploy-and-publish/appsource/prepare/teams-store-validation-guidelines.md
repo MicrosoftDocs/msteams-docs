@@ -113,6 +113,8 @@ An app's name plays a critical role in how users discover it in the store. Use t
 
 * App manifests submitted must be production manifests. Accordingly, app name mustn't indicate that the app is a preproduction app. For example, app name mustn't contain words such as Beta, Dev, Preview, and UAT. [*Mandatory Fix*]
 
+* App name must be exactly same in manifest and AppSource. [Mandatory Fix]
+
  > [!TIP]
  > Your app’s branding on the Microsoft Teams store and AppSource including your app name, developer name, app icon, AppSource screenshots, video, short description, and website either separately or taken together mustn't impersonate an official Microsoft offering unless your app is an official Microsoft 1P offering.
 
@@ -258,6 +260,8 @@ Don't include domains outside of your organization's control (including wildcard
 * Don't use **.onmicrosoft.com or** as a valid domain where **onmicrosoft** isn't under your control. However, you can use **yoursite.com** as a valid domain where **yoursite** is under your control even though the domain includes a wildcard. [*Mandatory Fix*]
 
 * If your app is a PowerApp built on the Microsoft Power Platform, you must include *apps.powerapps.com* as a valid domain to enable your app to be accessible and functional within Teams.
+
+* External domains declared for your submission must not contain URLs (e.g.: initiating with www or https) [Mandatory Fix]
 
 * If your app uses the Azure Bot Service's OAuthCard, you must include *token.botframework.com* as a valid domain or else the Sign in button won't work. You mustn't declare *.botframework.com* as wildcards are not allowed with this domain name. [*Mandatory Fix*]
 
@@ -411,6 +415,7 @@ Icons are one of the main elements people see when browsing the Teams store.
 
 Your icons must communicate your app's brand and purpose while adhering to the following requirements:
 
+* App color and outline icon submitted in the app listing must match [Mandatory Fix]
 * Your app package must include two .png versions of your app icon: A color icon and an outline icon. [*Mandatory Fix*]
 * The color version of your icon must be 192x192 pixels. Your icon symbol can be any color or colors, but it must sit on a solid or fully transparent square background. [*Mandatory Fix*]
 * The outline version of your icon is displayed in the following scenarios:
@@ -613,12 +618,17 @@ Remember the following:
 
    :::image type="content" source="../../../../assets/images/submission/validation-guidelines-fail-app-functionality-teams.png" alt-text="Screenshot shows the failed scenario of unrelated app functionality in Teams.":::
 
-> [!TIP]
->
-> * A video can be the most effective way to communicate why people must use your app. A video also is the first thing users see in your listing.
-> * If you choose to provide a video in your app listing, you must turn off ads in YouTube or Vimeo settings before submitting the video link in the Partner Center. Videos provided in the app listing mustn't be more than 90 seconds in duration and must only depict the app functionality and integration with Microsoft Teams. For more information, see [create a video for your store listing](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#create-a-video). [*Mandatory Fix*]
-
 </details>
+
+## Videos 
+
+* A video in your listing can be the most effective way to communicate why people should use your app. You can add a URL for your YouTube or Vimeo video. 
+* If you have chosen to submit a video as part of your app listing in your Partner Center account, you must ensure the duration of the video is not more than 90 seconds. [Suggested Fix]
+* If you have chosen to submit a video as part of your app listing in your Partner Center account, you must turn off advertisements (from your YouTube/Vimeo account settings) before submitting the Video link in the app listing [Mandatory Fix]
+* If you have chosen to submit a video as part of your app listing in your Partner Center account, you must ensure the video showcases your app’s functionality and integration within Teams [Mandatory Fix]
+* If you have chosen to submit a video as part of your app listing in your Partner Center account, you must ensure the video is available as a functional link [Mandatory Fix]
+
+<br></br>
 
 ### Privacy policy
 
@@ -633,6 +643,7 @@ The privacy policy can be specific to your Teams app or an overall policy for al
 * Must not include links to AppSource.
 * Must not require authentication to access privacy policy.
 * Must not include any commerce UI or store links.
+* Link in the manifest and AppSource must be the same.
 
 ### Terms of use
 
@@ -644,6 +655,7 @@ Use the following guidelines to write the Terms of use:
 * Must be hosted on your own domain.
 * Must have a secure (HTTPS) link.
 * Access to Terms of use mustn't require authentication.
+* Link in the manifest and AppSource must be the same.
 
 ### Support links
 
@@ -842,6 +854,8 @@ The following are the navigation guidelines:
 
    :::image type="content" source="../../../../assets/images/submission/validation-horizontal-scroll-in-list-view.png" alt-text="Graphic shows an example of horizontal scroll in list view.":::
 
+* User must have option to navigate back to previous work state [Mandatory Fix]
+
 * Horizontal scroll in Adaptive Cards mustn't be present in Teams. [*Mandatory Fix*]
 
 * Bottom rail used for navigation in tabs mustn't conflict with Teams native mobile app navigation. [*Mandatory Fix*]
@@ -956,7 +970,7 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
    :::image type="content" source="../../../../assets/images/submission/validation-bot-commands-deadend.png" alt-text="validation-bot-commands-dead-end":::
 
-* You must list at least one valid bot command in the `items.commands.title` section of the manifest and add a suitable description that gives clarity to the user on the bot command and its usage. Bot commands listed in the `commandLists` section of the manifest surface as prepopulated commands in the bot command menu and provide a way forward for the new user to interact with the bot. [*Mandatory Fix*]
+* You must list at least one valid bot command in the `items.commands.title` section of the manifest and add a suitable description that gives clarity to the user on the bot command and its usage. Bot commands listed in the `commandLists` section of the manifest surface as prepopulated commands in the bot command menu and provide a way forward for the new user to interact with the bot. [*Suggested Fix*]
 
 * Bot response mustn't contain any official Microsoft product images or avatars. Use your own assets in your app. Use of Microsoft product images in your app isn't allowed. You may only copy, modify, distribute, display, license, or sell Microsoft copyrighted product images if you're granted explicit permission within the End-User License Agreement (EULA), license terms that accompany the content, or in the [Microsoft Trademark and Brand guidelines](https://www.microsoft.com/legal/intellectualproperty/trademarks). [*Mandatory Fix*]
 
@@ -1178,8 +1192,6 @@ Apps that provide only notifications with content such as, **You have a new noti
 
 * Bot information in the app manifest (bot name, logo, privacy link, and terms of service link) must be consistent with the Bot Framework metadata. [*Mandatory Fix*]
 
-* Bot ID must match in the app manifest and Bot Framework metadata. [*Mandatory Fix*]
-
 * Ensure that the bot ID in the app manifest matches with bot ID in the last store published version of your app. Changing bot IDs in an app update leads to permanent loss of all user interaction history with the bot for existing users of your app and starts a new conversation chain with the new Bot ID. [*Mandatory Fix*]
 
 * Any change to app name, metadata, bot welcome message, or bot responses must be updated with new name. [*Mandatory Fix*]
@@ -1280,6 +1292,7 @@ Action-based message extensions must do the following:
 
 [*Mandatory Fix*]
 
+* If app has declared “supportsAnonymizedPayloads” in the manifest, the links shared from such an app with a user who does not have the app installed must get unfurled and user must see add app dialog once the card is clicked [Mandatory Fix]
 * Message extensions must preview recognized links in the Teams compose box. Don't add domains that are outside your control (either absolute URLs or wildcards). For example, `yourapp.onmicrosoft.com` is valid but `*.onmicrosoft.com` isn't valid. Top-level domains also are prohibited. For example, `*.com` or `*.org`. [*Mandatory Fix*]
 
 * Apps must only declare that are under the app publisher’s direct ownership in the `messageHandler` link unfurling section of the manifest. It mustn’t contain `*.botframework.com.` [*Mandatory Fix*]
@@ -1478,6 +1491,11 @@ Shared meeting stage feature can only be launched through the Teams desktop app.
 </details>
 
 [Back to top](#microsoft-teams-store-validation-guidelines)
+
+## Connector 
+
+* Connector name must be same as app name within the app and in the manifest provided.
+* While configuring the connector user must not encounter any error.
 
 ## Notifications
 
