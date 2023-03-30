@@ -72,7 +72,7 @@ Meetings enable collaboration, partnership, informed communication, and shared f
 
 You can create scenes for meetings, provide notifications to users, populate in-meeting dialogs, and much more with meeting app extensibility.
 
-Third-party and line-of-business apps built for meetings and calls are available in Government Community Cloud (GCC) but aren't available for GCC-High and Department of Defense (DOD) tenants. 
+Third-party and line-of-business apps built for meetings and calls are available in Government Community Cloud (GCC) but aren't available for GCC-High and Department of Defense (DOD) tenants.
 
 You must be familiar with the concepts in this article to create custom meeting experiences with apps in Microsoft Teams.
 
@@ -90,12 +90,12 @@ Teams supports access to apps during meeting for the following meeting types:
 Learn more about [Teams meetings, expiration, and policies](/microsoftteams/meeting-expiration) and [meetings, webinars, and live events](/microsoftteams/quick-start-meetings-live-events).
 > [!NOTE]
 >
-> * Apps for scheduled public channel meetings are available in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
-> * Apps aren't supported in the following:
->   * [Public Switched Telephone Network (PSTN) Teams calls](/microsoftteams/cloud-voice-landing-page#public-switched-telephone-network-connectivity-options)
->   * [End-to-end encrypted Teams calls](https://support.microsoft.com/office/use-end-to-end-encryption-for-teams-calls-1274b4d2-b5c5-4b24-a376-606fa6728a90)
->   * [Instant channel meetings](https://support.microsoft.com/office/start-an-instant-meeting-in-teams-ff95e53f-8231-4739-87fa-00b9723f4ef5)
->   * Meetings in [shared channel](https://support.microsoft.com/office/what-is-a-shared-channel-in-teams-e70a8c22-fee4-4d6e-986f-9e0781d7d11d)
+> Apps aren't supported in the following:
+>
+> * [Public Switched Telephone Network (PSTN) Teams calls](/microsoftteams/cloud-voice-landing-page#public-switched-telephone-network-connectivity-options)
+> * [End-to-end encrypted Teams calls](https://support.microsoft.com/office/use-end-to-end-encryption-for-teams-calls-1274b4d2-b5c5-4b24-a376-606fa6728a90)
+> * [Instant channel meetings](https://support.microsoft.com/office/start-an-instant-meeting-in-teams-ff95e53f-8231-4739-87fa-00b9723f4ef5)
+> * Meetings in [shared channel](https://support.microsoft.com/office/what-is-a-shared-channel-in-teams-e70a8c22-fee4-4d6e-986f-9e0781d7d11d)
 
 ## Meeting lifecycle
 
@@ -103,7 +103,7 @@ A meeting lifecycle includes pre-meeting, in-meeting, and post-meeting app exper
 
 ### App caching for tab app in Teams meeting
 
-You can configure your tab app to enable app caching to reduce the reload time of your app during a meeting. The app reloads from the cache, which improves the app relaunch time within the meeting. For more information, see [enable app caching for your tab app](app-caching-for-your-tab-app.md).
+You can configure your tab app to enable app caching to reduce the reload time of your app during a meeting. The app reloads from the cache, which improves the app relaunch time within the meeting. For more information, see [enable app caching for your tab app](build-tabs-for-meeting.md#app-caching).
 
 ## User types in Teams
 
