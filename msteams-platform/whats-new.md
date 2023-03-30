@@ -162,7 +162,7 @@ Explore updates from the previous GA releases listed here.
 |10/20/2021| Meeting Details API and real-time Teams meeting events | Build apps for Teams meetings > [Get meeting details API](apps-in-teams-meetings/meeting-apps-apis.md) |
 |10/18/2021| Tabs link unfurling and stage view | Build tabs > [Tabs link unfurling and stage view](tabs/tabs-link-unfurling.md) |
 |10/08/2021| New best practices for designing Adaptive Cards | Design your app > UI components > [Designing Adaptive Cards for your Teams app](task-modules-and-cards/cards/design-effective-cards.md) |
-|10/05/2021| Hide Teams app until Admin allows to un-hide the app | Design your app > [Block apps by default for users until an admin approves](concepts/design/enable-app-customization.md#block-apps-by-default-for-users-until-an-admin-approves) |
+|10/05/2021| Hide Teams app until Admin allows to un-hide the app | Design your app > [Block apps by default for users until an admin approves](concepts/deploy-and-publish/add-default-install-scope.md#block-apps-by-default-for-users-until-an-admin-approves) |
 |10/05/2021| Plan your apps for Teams mobile | App fundamentals > [Plan responsive tabs for Teams mobile](concepts/design/plan-responsive-tabs-for-teams-mobile.md) |
 |10/04/2021| New Developer Portal for Teams introduced for managing your Teams apps | Tools and SDK > [Developer Portal for Teams](concepts/build-and-test/teams-developer-portal.md) |
 |09/21/2021|Teams supports Azure AD Object ID and UPN in user mention for bots and Incoming Webhooks | • Build cards and task modules > Build cards > [Azure AD Object ID and UPN in user mention](task-modules-and-cards/what-are-cards.md#support-for-azure-ad-object-id-and-upn-in-user-mention) </br> • Build cards and task modules > Build cards > [Cards- Overview](task-modules-and-cards/cards/cards-format.md#format-cards-with-markdown) |
@@ -320,7 +320,7 @@ Developer preview is a public program that provides early access to unreleased T
 **2023 January**
 
 * ***January 31, 2023***: [Introducing Targeted in-meeting notification for apps in Teams.](apps-in-teams-meetings/in-meeting-notification-for-meeting.md#targeted-in-meeting-notification)
-* ***January 30, 2023***: [Enable app caching to improve subsequent launch time of the apps to the meeting side panel.](apps-in-teams-meetings/app-caching-for-your-tab-app.md)
+* ***January 30, 2023***: [Enable app caching to improve subsequent launch time of the apps to the meeting side panel.](apps-in-teams-meetings/build-tabs-for-meeting.md#app-caching)
 
 :::column-end:::
 :::row-end:::
