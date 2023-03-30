@@ -1,6 +1,6 @@
 ---
 title: Real-time media calls and online meetings with Microsoft Teams
-description: Learn key concepts in building bot that can conduct real-time audio and video calls and online meetings.
+description: Learn how Real-time Media Platform enables bots to interact with Microsoft Teams calls and meetings. Explore, media sessions, frames and frame rate, audio and video format, active speakers, video subscription. 
 ms.topic: conceptual
 ms.localizationpriority: medium
 ---
@@ -62,8 +62,10 @@ Application-hosted media bots require .NET or C# and Windows Server. For more in
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Register a calling bot](~/bots/calls-and-meetings/registering-calling-bot.md)
+> [Register calls and meetings bot for Microsoft Teams](registering-calling-bot.md)
 
 ## See also
 
-[Supported media formats for bots](~/resources/media-formats.md)
+* [Build bots for Teams](../what-are-bots.md)
+* [Calls and online meetings bots](calls-meetings-bots-overview.md)
+* [Supported media formats for bots](~/resources/media-formats.md)

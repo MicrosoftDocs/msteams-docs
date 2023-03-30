@@ -17,7 +17,7 @@ The following types of cards are supported in bots for Teams:
 * Adaptive Card
 * Hero card
 * List card
-* Office 365 Connector card
+* Connector card for Microsoft 365 Groups
 * Receipt card
 * Sign in card
 * Thumbnail card
@@ -39,3 +39,5 @@ You can provide [dynamic search](~/task-modules-and-cards/cards/dynamic-search.m
 
 * [Cards](~/task-modules-and-cards/what-are-cards.md)
 * [Task modules](~/task-modules-and-cards/what-are-task-modules.md)
+* [Authenticate users in Microsoft Teams](../concepts/authentication/authentication.md)
+* [Create connectors for Microsoft 365 Groups](../webhooks-and-connectors/how-to/connectors-creating.md)

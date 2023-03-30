@@ -36,9 +36,12 @@ items:
   content: |
     Ensure you install the following tools and set up your development environment:  
 
-    * [Latest version of .NET Core SDK](https://dotnet.microsoft.com/download).
-    * [Latest version of Visual Studio](https://visualstudio.microsoft.com/downloads/).
-    * [Latest version of ngrok](https://ngrok.com/download) only for devbox testing or any equivalent tunneling solution.
+     | &nbsp; | Install | For using... |
+     | --- | --- | --- |
+     | **Required** | &nbsp; | &nbsp; |
+     | &nbsp; | [Visual Studio 2022 version 17.3](https://visualstudio.microsoft.com)<br> Install the <br> **ASP.NET and web development** workload. | You can install the enterprise version in Visual Studio 2022, and install the workloads. |
+     | &nbsp; | [.NET Core SDK version 3.1](https://dotnet.microsoft.com/en-us/download) | Customized bindings for local debugging and Azure Functions app deployments. If you haven't installed the .NET 3.1 (or later) SDK globally, the portable version to be installed. |
+     | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots, message extensions, and incoming webhooks) require inbound connections. A tunnel connects your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
 
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
@@ -55,7 +58,7 @@ items:
 
     ### Check for sideloading option
 
-    After creating the app, you must load your app in Teams without distributing it. The function is known as sideloading. Sign-in to your Microsoft 365 account to view this option.
+    After creating the app, you must load your app in Teams without distributing it. The function is known as sideloading. Sign in to your Microsoft 365 account to view this option.
 
     > [!NOTE]
     > Sideloading is necessary for previewing and testing apps in Teams local environment. Enable Sideloading to preview and test your app in Teams locally.
@@ -64,15 +67,15 @@ items:
 
     To verify sideload apps in Teams:
 
-    1. In the Teams client, select **Store**.
-    1. Select **Manage your apps**.
+    1. Go to **Microsoft Teams**.
+    1. Select **Apps** > **Manage your apps**.
     1. Select **Upload an app**.
 
        :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/upload-app.png" alt-text=" upload an app in Teams.":::
 
     1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/upload-custom-app1.png" alt-text="Illustration shows the option to upload a custom app in Teams.":::
+        :::image type="content" source="~/assets/images/upload-a-custom-app.png" alt-text="Screenshot showing the selection of Upload a custom app highlighted in red.":::
 
         > [!NOTE]
         > Contact Teams administrator, if you can't upload a custom app.
@@ -83,12 +86,12 @@ items:
 
     1. Go to the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
     1. Select **Join Now** and follow the onscreen instructions.
-    1. Select Set-up E5 subscription** from the welcome screen.
+    1. Select **Set-up E5 subscription** from the welcome screen.
     1. Set up administrator account. After you finish, the following screen displays.
 
        :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/microsoft-365.png" alt-text="Microsoft" border="true":::
 
-    1. Sign-in to Teams using the new administrator account. Now you can select **Upload a custom app**.
+    1. Sign in to Teams using the new administrator account. Now you can select **Upload a custom app**.
 
 - title: Set up local environment
   durationInMinutes: 1 
@@ -134,7 +137,8 @@ items:
        1.  Set **Name** to your app name
        1.  Set **Supported account types** to any account type
        1.  Leave the **Redirect URI** empty
-       1.  Select **Register**
+    
+    1. Select **Register**.
 
        App **Overview** page appears.
 
@@ -232,7 +236,7 @@ items:
        | `1fec8e78-bce4-4aaf-ab1b-5451cc387264` | Teams desktop or mobile application |
        | `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` | Teams web application |
 
-    1. Select **Authorized scopes** to determine, which type of token will be returned by the service.
+    1. Select **Authorized scopes** to determine, which type of token return the service.
 
        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/add-desktop-app.png" alt-text="Authroized scope" border="true":::
 
@@ -362,7 +366,7 @@ items:
 - title: Set up app settings and manifest files
   durationInMinutes: 1
   content: |
-    1. Navigate to **appsettings.json** in cloned repository.
+    1. Go to **appsettings.json** in cloned repository.
 
           :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/appsettings-location.png" alt-text="App settings location" border="true":::
 
@@ -375,7 +379,7 @@ items:
       
           :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/app-settings-details1.png" alt-text="Appsettings" border="true":::
 
-    1. Navigate to **manifest.json** in cloned repository.
+    1. Go to **manifest.json** in cloned repository.
 
           :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/manifest-location-package.png" alt-text="Manifest location" border="true":::
 
@@ -391,7 +395,7 @@ items:
   durationInMinutes: 1
   content: |
        1. Open Visual Studio.
-       1. Navigate to **File** > **Open** > **Project/Solution**.
+       1. Go to **File** > **Open** > **Project/Solution**.
     
           :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/VSopenfile.png" alt-text="Open file in Visual Studio" border="true":::
 
@@ -414,7 +418,7 @@ items:
 - title: Add activity feed broadcast app to Teams
   durationInMinutes: 1
   content: |      
-    1. In your cloned repository, navigate to  **graph-activity-feed-broadcast** > **csharp** > **ActivityFeedBroadcast** > **AppPackage**.
+    1. In your cloned repository, go to  **graph-activity-feed-broadcast** > **csharp** > **ActivityFeedBroadcast** > **AppPackage**.
 
     1. Create a .zip with the following files that are present in the **AppPackage** folder: 
        * manifest.json
@@ -423,18 +427,16 @@ items:
 
        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/selectzip.png" alt-text="Select zip file" border="true":::
     
-    1. Go to **Teams** client.
+    1. Go to **Microsoft Teams**.
 
-    1. Select **Apps**.
+    1. Select **Apps** > **Manage your apps**.
 
-    1. Select **Manage your apps**.
-
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/manage-your-app.png" alt-text="Manage your app" border="true":::
+       :::image type="content" source="~/assets/images/Teams-task-module/manage-apps_3.png" alt-text="Manage apps":::
     
-    1. Select **Upload an app to your org's app catalog**. 
+    1. Select **Submit an app to your org**. 
 
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/upload-app-org.png" alt-text="Upload a custom app" border="true":::
-
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/submit-an-app-to-your-org.png" alt-text="Screenshot showing the selection of submit an app to your org highlighted in red.":::
+       
     1. Select **Open** to upload the .zip file that you created in the **AppPackage** folder.
 
        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/open-a-custom-app.png" alt-text="Open a custom app" border="true":::

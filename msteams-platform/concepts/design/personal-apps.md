@@ -8,7 +8,7 @@ ms.author: lajanuar
 --- 
 # Designing your personal app for Microsoft Teams
 
-A personal app can be a bot, private workspace, or both. Sometimes it functions like a place to create or view content, other times it offers the user a bird’s eye view of everything that's theirs when the app has been configured as a tab in multiple channels.
+A personal app can be a bot, private workspace, or both. Sometimes it functions as a place to create or view content. Other times, it offers the user a bird’s eye view of everything that's theirs when the app has been configured as a tab in multiple channels.
 
 To guide your app design, the following information describes and illustrates how people can add, use, and manage personal apps in Teams.
 
@@ -41,8 +41,36 @@ With a private workspace, users can view app content that's meaningful to them i
 |----------|-----------|
 |A|**App attribution**: Your app name.|
 |B|**Tabs**: Provides navigation for your personal app.|
-|C|**More menu**: Includes additional app options and information.|
+|C|**More menu**: Includes other app options and information.|
 |D|**Primary navigation**: Provides navigation to your app other main Teams features.|
+
+#### **Configure and add multiple actions in NavBar**
+
+You can add multiple actions to the upper right NavBar and build an overflow menu for extra actions in an app. A maximum of five actions can be added in the NavBar, including the overflow menu.
+
+:::image type="content" source="../../assets/images/overflow-menu-and-multiple-actionsoptions.png" alt-text="The screenshot is an example thats describes the NavBar and Overflow menu.":::
+
+To **Configure and add multiple actions in NavBar**, call [setNavBarMenu](/javascript/api/@microsoft/teams-js/microsoftteams.menus?view=msteams-client-js-1.12.1&preserve-view=true) API and add the `displayMode enum` property to `MenuItem`. The `displayMode enum` defines how a menu appears in the NavBar. The default value of `displayMode enum` is set to `ifRoom`.
+
+Based on the requirements and space available in the NavBar, set `displayMode enum` considering one of the following.
+
+* If there's room, set `ifRoom = 0` to place an item in the NavBar.
+* If there's no room, set `overflowOnly = 1`, so that item would always be placed in the NavBar's overflow menu but not in the NavBar.
+
+The following is an example of configuring the NavBar with an overflow menu for multiple actions:
+
+```typescript
+const menuItems = [item1, item2, item3, item4, item5]
+microsoftTeams.menus.setNavBarMenu(menuItems, (id: string) => {
+  output(`Clicked ${id}`)
+  return true;
+})
+```
+
+> [!NOTE]
+> The `setNavBarMenu` API doesn't control the **Refresh** button. It appears by default.
+
+:::image type="content" source="../../assets/images/overflow-menu-and-multple-actions.png" alt-text="The screenshot is an example that shows the navbar and multiple actions in an overflow menu.":::
 
 :::image type="content" source="../../assets/images/personal-apps/mobile-personal-tab-structural-anatomy.png" alt-text="Example shows personal tab's structural anatomy.":::
 
@@ -60,7 +88,7 @@ With a private workspace, users can view app content that's meaningful to them i
 |A|**App attribution**: Your app logo and name.|
 |B|**Tabs**: Provides navigation for your personal app.|
 |C|**Popout view**: Pushes your app content from a parent window to a standalone child window.|
-|D|**More menu**: Includes additional app options and information. (You could alternatively make **Settings** a tab.)|
+|D|**More menu**: Includes other app options and information. (You could alternatively make **Settings** a tab.)|
 
 :::image type="content" source="../../assets/images/personal-apps/personal-tab-structural-anatomy.png" alt-text="This example shows personal tab's structural anatomy.":::
 
@@ -96,6 +124,30 @@ Personal apps can include a bot for one-on-one conversations and private notific
 |B|**Back button**: Takes users back to the private workspace.|
 |C|**Bot message**: Bots often send messages and notifications in the form of a card (such as an Adaptive Card).|
 |D|**Compose box**: Input field for sending messages to the bot.|
+
+#### Configure back button
+
+When you select the back button in a Teams app, you will return to the Teams platform without navigating inside the app.
+
+To navigate within the app, configure the back button so that when you select the back button, you can go back to previous steps and navigate within the app.
+
+To **Configure back button**, call [registerBackButtonHandler](/javascript/api/@microsoft/teams-js/pages.backstack) API, which handles the functionality of the back button depending on one of the following conditions:
+
+* When `registerBackButtonHandler` is set to `false`, TeamsJS calls the `navigateBack` API and the Teams platform handles the back button.
+* When `registerBackButtonHandler` is set to `true`, the app handles the functionality of back button (you can go back to previous steps and navigate within the app), and the Teams platform takes no further actions.
+
+The following is an example of configuring the back button:
+
+```typescript
+microsoftTeams.registerBackButtonHandler(() => {
+  const selectOption = registerBackReturn.options[registerBackReturn.selectedIndex].value
+  var isHandled = false
+  if (selectOption == 'true') 
+    isHandled = true;
+  output(`onBack isHandled ${isHandled}`)
+  return isHandled;
+})
+```
 
 #### Desktop
 
@@ -193,9 +245,17 @@ Unless you created your app specifically for Teams, you probably have features t
 
 :::image type="content" source="../../assets/images/personal-apps/personal-tab-feature-dont.png" alt-text="Example shows how not to handle complex app features with a personal app.":::
 
+## Code sample
+
+|Sample name | Description | Typescript|
+|----------------|--------------------------------------------------------|--------------|
+| Meeting app | Sample to show navbar-menu in personal tab app. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-navbar-menu/ts) |
+
 ## See also
 
 These other design guidelines may help depending on the scope of your personal app:
 
 * [Designing your tab](../../tabs/design/tabs.md)
-* [Designing you bot](../../bots/design/bots.md)
+* [Designing your bot](../../bots/design/bots.md)
+* [registerBackButtonHandler](/javascript/api/@microsoft/teams-js/pages.backstack)
+* [DisplayMode enum](/javascript/api/@microsoft/teams-js/menus.displaymode?view=msteams-client-js-latest&preserve-view=true)

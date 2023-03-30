@@ -53,13 +53,13 @@ Ensure to install and download the following before proceeding with the Microsof
 
 ### Microsoft 365 Moodle plugins
 
-1. Download the plugins, extract them, and upload to their corresponding folders. For example, extract the OpenID Connect plugin (auth_oidc) to a folder called **oidc**, and upload to the **auth** folder of your Moodle document root. 
+1. Download the plugins, extract them, and upload to their corresponding folders. For example, extract the OpenID Connect plugin (auth_oidc) to a folder called **oidc**, and upload to the **auth** folder of your Moodle document root.
 
 1. Sign in to your Moodle server as an administrator and select **Site administration**.
 
 1. After the detection of new plugins to be installed, Moodle should redirect you to the install new plugins page. If this doesn't happen, in the **Site administration** page, select **Notifications** in the **General** tab, this should trigger the installation of the plugins.
 
-1. After the plugins are install, go to the **Plugins** tab in the **Site administrator** page, select **Authentication** section link, and enable **OpenID Connect**. It is OK to leave the plugin configuration blank - they will be filled in later.
+1. After the plugins are install, go to the **Plugins** tab in the **Site administrator** page, select **Authentication** section link, and enable **OpenID Connect**. It's OK to leave the plugin configuration blank - they'll be filled in later.
 
 1. In the **Site administrator** page, scroll down to the **Local plugins** section and select the **Microsoft 365 Integration** link.
 
@@ -110,7 +110,7 @@ Use the generated `AppID` and `Key` in your Microsoft 365 Moodle Plugins setup p
     1. Right-click on **Windows PowerShell**.
     1. Select **Run as Administrator**.
 
-1. Navigate to the unzipped directory by typing `cd .../.../Moodle-AzureAD-Powershell` where `.../...` is the path to the directory.
+1. Go to the unzipped directory by typing `cd .../.../Moodle-AzureAD-Powershell` where `.../...` is the path to the directory.
 
 1. Execute the PowerShell script:
 
@@ -148,7 +148,7 @@ Use the generated `AppID` and `Key` in your Microsoft 365 Moodle Plugins setup p
 
         ✔ Update all accounts in Moodle for users in Azure AD.
 
-    1. In the **User Creation Restriction** section, you can setup a filter to limit the Azure AD users that is synced to Moodle.
+    1. In the **User Creation Restriction** section, you can set up a filter to limit the Azure AD users that is synced to Moodle.
 
 1. To validate [cron](https://docs.moodle.org/400/en/Cron) jobs and run them manually for the first run, select the **Scheduled tasks management page** link in the **Sync users with Azure AD** section. This takes you to the **Scheduled Tasks** page.
 
@@ -161,7 +161,7 @@ Use the generated `AppID` and `Key` in your Microsoft 365 Moodle Plugins setup p
 
 1. Return to the plugins administration page, **Site administration > Plugins > Microsoft 365 Integration**, and select the **Teams Settings** page.
 
-1. On the **Teams Settings** page, configure the required settings to enable the Teams app integration by clicking the **Check Moodle settings** link will update all required configurations for the Teams integration to work. 
+1. On the **Teams Settings** page, configure the required settings to enable the Teams app integration by clicking the **Check Moodle settings** link will update all required configurations for the Teams integration to work.
 
 ## 3. Deploy the Moodle Assistant Bot to Azure
 
@@ -233,14 +233,14 @@ To deploy your app:
 
 1. Select the **Manage your apps** link in the navigation menu.
 
-1. Click **Publish an app** and select **Upload an app to your org's app catalog**.
+1. Select **Upload an app** and select **Upload an app to your org's app catalog**.
 
    > [!NOTE]
    > If you are logged in as a global administrator, you must have the option of uploading the app to your organization's app catalog, otherwise you can only load the app for a team in which you are a member.
 
-4. Select the `manifest.zip` package you downloaded previously and select **Save**. If you have not downloaded the app manifest package, you can download from the **Team Settings** tab of the plugins configuration page in Moodle.
+4. Select the `manifest.zip` package you downloaded previously and select **Save**. If you haven't downloaded the app manifest package, you can download from the **Team Settings** tab of the plugins configuration page in Moodle.
 
-Now that you have the app installed, you can add the tab to any channel that you have access to. To do so, navigate to the channel, select the **plus** (➕) symbol and select your app from the list. Follow the prompts to finish adding your Moodle course tab to a channel.
+Now that you have the app installed, you can add the tab to any channel that you have access to. To do so, go to the channel, select the **plus** (➕) symbol and select your app from the list. Follow the prompts to finish adding your Moodle course tab to a channel.
 
 ## 5. Allow automatic creation of Moodle tabs in Microsoft Teams
 
@@ -252,9 +252,9 @@ To allow automatic creation of Moodle tabs:
 
 1. If the Azure app has the recommendated permission, for the **Moodle app ID** setting, it should show an **Automatically detected value**, copy this value to the setting.
 
-1. If the automatically detected value does not present, follow the instruction on the page to find the Moodle app ID and fill in the setting.
+1. If the automatically detected value doesn't present, follow the instruction on the page to find the Moodle app ID and fill in the setting.
 
-When a Moodle course is synced, Teams automatically installs the Moodle app in the team, creates a Moodle tab in the General channel of Teams, and configures it to contain the course page for the Moodle course from which it is synced. You can now start working with your Moodle courses directly from Teams.
+When a Moodle course is synced, Teams automatically installs the Moodle app in the team, creates a Moodle tab in the General channel of Teams, and configures it to contain the course page for the Moodle course from which it's synced. You can now start working with your Moodle courses directly from Teams.
 
 > [!NOTE]
 > To share any feature requests or feedback with us, visit our [User Voice page](https://support.microsoft.com/en-us/office/uservoice-pages-430e1a78-e016-472a-a10f-dc2a3df3450a).

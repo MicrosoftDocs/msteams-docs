@@ -1,7 +1,7 @@
 ---
 title: Define message extension search commands
 author: surbhigupta
-description: In this module, learn about search command invoke locations and how to create a search command for messaging extensions.
+description: Learn about message extension search commands for Teams apps, to create a search command through app manifest and manually.
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: medium
@@ -28,7 +28,7 @@ The search command is invoked from any one or both of the following locations:
 * Compose message area: The buttons at the bottom of the compose message area.
 * Command box: By @mentioning in the command box.
 
-  When a search command is invoked from the compose message area, the user sends the results to the conversation. When it's invoked from the command box, the user interacts with the resulting card, or copies it for use elsewhere.
+When a search command is invoked from the compose message area, the user sends the results to the conversation. When it's invoked from the command box, the user interacts with the resulting card, or copies it for use elsewhere.
 
 The following image displays the invoke locations of the search command:
 
@@ -144,9 +144,9 @@ For the complete app manifest, see [App manifest schema](~/resources/schema/mani
 
 ## Code sample
 
-| Sample Name           | Description | .NET    | Node.js   |
-|:---------------------|:--------------|:---------|:--------|
-|Teams message extension search   |  Describes how to define search commands and respond to searches.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
+| Sample name           | Description | .NET    | Node.js   | Manifest|
+|:---------------------|:--------------|:---------|:--------|:--------------|
+|Teams message extension search   |  This sample shows how to build a Search-based Message Extension. It searches nudget packages and displays the results in search based messaging extension.        |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp/demo-manifest/msgext-search.zip)
 
 ## Step-by-step guide
 
@@ -156,3 +156,11 @@ Follow the [step-by-step guide](../../../sbs-messagingextension-searchcommand.ym
 
 > [!div class="nextstepaction"]
 > [Respond to the search commands](~/messaging-extensions/how-to/search-commands/respond-to-search.md).
+
+## See also
+
+* [Cards](../../../task-modules-and-cards/what-are-cards.md)
+* [Task modules](../../../task-modules-and-cards/what-are-task-modules.md)
+* [App manifest schema for Teams](../../../resources/schema/manifest-schema.md)
+* [Developer Portal for Teams](../../../concepts/build-and-test/teams-developer-portal.md)
+* [Message extensions](../../what-are-messaging-extensions.md)

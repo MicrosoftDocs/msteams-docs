@@ -1,7 +1,7 @@
 ---
 title: Integrate media capabilities 
 author: Rajeshwari-v
-description: Learn how to use Teams JavaScript client SDK to enable media capabilities using code examples and also learn the advantage of integrating media capabilities.
+description: Learn how to use Teams JavaScript client library to enable media capabilities using code examples and also learn the advantage of integrating media capabilities.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
@@ -9,21 +9,21 @@ ms.author: lajanuar
 
 # Integrate media capabilities
 
-You can integrate native device capabilities, such as camera and microphone with your Teams app. For integration, you can use [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) that provides the necessary tools for your app to access a user’s [device permissions](native-device-permissions.md). Use suitable media capability APIs to integrate the device capabilities, such as camera and microphone with the Teams platform within your Microsoft Teams app, and build a richer experience. The media capability is available for Teams web client, desktop, and mobile. To integrate media capabilities, you must update the app manifest file and call the media capability APIs.
+You can integrate native device capabilities, such as camera and microphone with your Teams app. For integration, you can use [Microsoft Teams JavaScript client library](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) that provides the necessary tools for your app to access a user’s [device permissions](native-device-permissions.md). Use suitable media capability APIs to integrate the device capabilities, such as camera and microphone with the Teams platform within your Microsoft Teams app, and build a richer experience. The media capability is available for Teams web client, desktop, and mobile. To integrate media capabilities, you must update the app manifest file and call the media capability APIs.
 
 For effective integration, you must have a good understanding of [code snippets](#code-snippets) for calling the respective APIs, which allows you to use native media capabilities. It's important to familiarize yourself with the [API response errors](#error-handling) to handle the errors in your Teams app.
 
 ## Advantages
 
-The main advantage of integrating device capabilities in your Teams apps is it uses native Teams controls to provide a rich and immersive experience to your users. The following scenarios showcase the advantages of media capabilities:
+The advantage of integrating device capabilities into your Teams apps is that it uses native Teams controls to provide a rich and immersive experience for your users. The following scenarios showcase the advantages of media capabilities:
 
-* Allow the user to capture the rough mockups drawn on a physical whiteboard through the cell phone and use the captured images as poll options in Teams group chat.
+* Allow the user to capture the rough mockups drawn on a physical whiteboard through their mobile phone and use the captured images as poll options in Teams group chat.
 
 * Allow the user to record audio message and attach it to an incident ticket.
 
 * Allow the user to scan the physical documents from the smartphone to file a car insurance claim.
 
-* Allow the user to record a video at a worksite and upload for attendance.
+* Allow the user to record a video at a worksite and upload it for attendance.
 
 > [!NOTE]
 >
@@ -46,25 +46,26 @@ Update your Teams app [manifest.json](../../resources/schema/manifest-schema.md#
 The [selectMedia](/javascript/api/@microsoft/teams-js/media#@microsoft-teams-js-media-selectmedia), [getMedia](/javascript/api/@microsoft/teams-js/media.media#@microsoft-teams-js-media-media-getmedia), and [viewImages](/javascript/api/@microsoft/teams-js/media#@microsoft-teams-js-media-viewimages) APIs enable you to use native media capabilities as follows:
 
 * Use the native **microphone** to allow users to **record audio** (record 10 minutes of conversation) from the device.
-* Use native **camera control** to allow users to **capture and attach images** and **capture videos** (record upto 5 minutes of video) on the go.
+* Use native **camera control** to allow users to **capture and attach images** and **capture videos** (record up to five minutes of video) on the go.
 * Use native **gallery support** to allow users to **select device images** as attachments.
 * Use native **image viewer control** to **preview multiple images** at one time.
-* Support **large image transfer** (from 1 MB to 50 MB) through the SDK bridge.
+* Support **large image transfer** (from 1 MB to 50 MB) through the TeamsJS bridge.
 * Support **advanced image capabilities** by allowing users to preview and edit images.
 * Scan documents, whiteboard, and business cards through the camera.
   
 > [!IMPORTANT]
 >
 > * The `selectMedia`, `getMedia`, and `viewImages` APIs can be invoked from multiple Teams surfaces, such as task modules, tabs, and personal apps. For more information, see [Entry points for Teams apps](../extensibility-points.md).</br>
-> * `selectMedia` API supports both camera and microphone capabilities through different input configurations.
+> * The `selectMedia` API supports both camera and microphone capabilities through different input configurations.
 > * The `selectMedia` API for accessing microphone capability supports for mobile clients only.
+> * The maximum count of images uploaded is determined by [`maxMediaCount`](/javascript/api/@microsoft/teams-js/media.mediainputs#@microsoft-teams-js-media-mediainputs-maxmediacount) and also by the total size of array returned by the `selectMedia` API. Ensure that the array size doesn't exceed 4 MB, if the array size exceeds 4 MB, the API generates an error code 10000 that is SIZE_EXCEEDED error.
 
 The following table lists set of APIs to enable your device's media capabilities:
 
 | API      | Description   |
 | --- | --- |
 | [**selectMedia**](/javascript/api/@microsoft/teams-js/media#@microsoft-teams-js-media-selectmedia) (**Camera)**| This API allows users to **capture or select media from the device camera** and return it to the web-app. The users can edit, crop, rotate, annotate, or draw over images before submission. In response to `selectMedia`, the web-app receives the media IDs of selected images and a thumbnail of the selected media. This API can be further configured through the [ImageProps](/javascript/api/@microsoft/teams-js/media.imageprops) configuration. |
-| [**selectMedia**](/javascript/api/@microsoft/teams-js/media#@microsoft-teams-js-media-selectmedia) (**Microphone**)| Set the [mediaType](/javascript/api/@microsoft/teams-js/media.mediatype) to `4` (Audio) in `selectMedia` API for accessing microphone capability. This API also allows users to record audio from the device microphone and return recorded clips to the web app. The users can pause, re-record, and play recording preview before submission. In response to **selectMedia**, the web-app receives media IDs of the selected audio recording. <br/> Use `maxDuration`, if you require to configure a duration in minutes for recording the conversation. The current duration for recording is 10 minutes, after which the recording terminates.  |
+| [**selectMedia**](/javascript/api/@microsoft/teams-js/media#@microsoft-teams-js-media-selectmedia) (**Microphone**)| Set the [mediaType](/javascript/api/@microsoft/teams-js/media.mediatype) to `4` (Audio) in `selectMedia` API for accessing microphone capability. This API also allows users to record audio from the device microphone and return recorded clips to the web app. The users can pause, re-record, and play recording preview before submission. In response to **selectMedia**, the web-app receives media IDs of the selected audio recordings. <br/> Use `maxDuration`, if you need to configure a duration in minutes for recording the conversation. The current duration for recording is 10 minutes, after which the recording terminates.  |
 | [**getMedia**](/javascript/api/@microsoft/teams-js/media.media#@microsoft-teams-js-media-media-getmedia)| This API retrieves the media captured by `selectMedia` API in chunks, irrespective of the media size. These chunks are assembled and sent back to the web app as a file or blob. Breaking media into smaller chunks facilitates large file transfer. |
 | [**viewImages**](/javascript/api/@microsoft/teams-js/media#@microsoft-teams-js-media-viewimages)| This API enables the user to view images in full-screen mode as a scrollable list.|
 
@@ -75,7 +76,6 @@ The following image depicts the web app experience of `selectMedia` API for the 
 :::image type="content" source="~/assets/images/tabs/media-capability-mobile2.png" alt-text="Illustration shows the image capability for mobile.":::
 
 > [!NOTE]
->
 > In devices with Android version under 7, the `selectMedia` API launches the native Android camera experience instead of the native Teams camera experience.
 
 The following image depicts the web app experience of `selectMedia` API for the microphone capability:
@@ -164,7 +164,7 @@ Ensure to handle these errors appropriately in your Teams app. The following tab
 
        `fullscreen: false` opens the camera in video recording mode and uses the front camera only. Typically `fullscreen: false` is used when user wants to record video while reading content on the device screen.
 
-       This mode also supports `isStopButtonVisible: true` which adds a stop button on the screen that allows user to stop the recording. If `isStopButtonVisible: false`, recording can be stopped either by calling mediaController API or when the recording duration has reached `maxDuration` time specified.
+       This mode also supports `isStopButtonVisible: true` that adds a stop button on the screen that allows user to stop the recording. If `isStopButtonVisible: false`, recording can be stopped either by calling mediaController API or when the recording duration has reached `maxDuration` time specified.
 
        Following is an example to stop the recording with `maxDuration` time specified:
 
@@ -380,9 +380,29 @@ Ensure to handle these errors appropriately in your Teams app. The following tab
     });
     ```
 
+## File download on Teams mobile
+
+You can configure an app to enable users to download files from the webview to their mobile device.
+
+>[!NOTE]
+> Downloading files is only supported on Android Teams mobile client and only unauthenticated files can be downloaded.
+
+To enable, follow the steps:
+
+1. Update your Teams app [manifest.json](../../resources/schema/manifest-schema.md#devicepermissions) file by adding the `devicePermissions` property and specifying `media` as shown in the [update manifest](#update-manifest).
+
+2. Use the following format and add the HMTL download attribute to the webpage:
+
+    ```html
+    <a href="path_to_file" download="download">Download</a>
+    ```
+
 ## See also
 
+* [Device capabilities](device-capabilities-overview.md)
 * [Integrate QR or barcode scanner capability in Teams](qr-barcode-scanner-capability.md)
 * [Integrate location capabilities in Teams](location-capability.md)
 * [Integrate People Picker](people-picker-capability.md)
 * [Requirements and considerations for application-hosted media bots](~/bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md)
+* [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
+* [Plan responsive tabs for Teams mobile](../design/plan-responsive-tabs-for-teams-mobile.md)

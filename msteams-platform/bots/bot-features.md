@@ -1,7 +1,7 @@
 ---
 title: Bots and SDKs
 author: surbhigupta
-description: In this article, learn about tools and Bot Framework SDKs(C#,Python,Java,JavaScript) for Microsoft Teams bots and it's advantages and disadvantages.
+description: In this article, learn about tools and Bot Framework SDKs(C#, Python, Java, JavaScript) for Microsoft Teams bots and its advantages and disadvantages.
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
@@ -17,6 +17,7 @@ You can create a bot that works in Microsoft Teams with one of the following too
 * [Power Virtual Agents](#bots-with-power-virtual-agents)
 * [Virtual Assistant](~/samples/virtual-assistant.md)
 * [Webhooks and connectors](#bots-with-webhooks-and-connectors)
+* [Bot Framework Composer](/composer/introduction)
 
 ## Bots with the Microsoft Bot Framework
 
@@ -31,12 +32,11 @@ Your Teams bot consists of the following:
 
 The [Bot Framework](https://dev.botframework.com/) is a rich SDK used to create bots using C#, Java, Python, and JavaScript. If you already have a bot that is based on the Bot Framework, you can easily modify it to work in Teams. Use either C# or Node.js to take advantage of our [SDKs](/microsoftteams/platform/#pivot=sdk-tools). These packages extend the basic Bot Builder SDK classes and methods as follows:
 
-* Use specialized card types like the Office 365 connector card.
+* Use specialized card types like the connector card for Microsoft 365 Groups.
 * Set Teams-specific channel data on activities.
 * Process message extension requests.
 
-> [!IMPORTANT]
-> You can develop Teams apps in any web programming technology and call the [Bot Framework REST APIs](/bot-framework/rest-api/bot-framework-rest-overview) directly. But you must perform token handling in all cases.
+You can develop Teams apps in any web programming technology and call the [Bot Framework REST APIs](/bot-framework/rest-api/bot-framework-rest-overview) directly. You must perform token handling in all cases.
 
 ## Bots with Power Virtual Agents
 
@@ -61,7 +61,7 @@ Bots in Microsoft Teams can be part of a one-to-one conversation, a group chat, 
 
 ### In a channel
 
-Channels contain threaded conversations between multiple people even up to two thousand. This potentially gives your bot massive reach, but individual interactions must be concise. Traditional multi-turn interactions don't work. Instead, you must look to use interactive cards or task modules, or move the conversation to a one-to-one conversation to collect lots of information. Your bot only has access to messages where it's `@mentioned`. You can retrieve additional messages from the conversation using Microsoft Graph and organization-level permissions.
+Channels contain threaded conversations between multiple people even up to 2000. This potentially gives your bot massive reach, but individual interactions must be concise. Traditional multi-turn interactions don't work. Instead, you must look to use interactive cards or task modules, or move the conversation to a one-to-one conversation to collect lots of information. Your bot only has access to messages where it's `@mentioned`. You can retrieve additional messages from the conversation using Microsoft Graph and organization-level permissions.
 
 Bots work better in a channel in the following cases:
 
@@ -92,11 +92,11 @@ An extensive dialog between your bot and the user is a slow and complex way to g
 
 ### Have multi-turn experiences in chat
 
-An extensive dialog requires the developer to maintain state. To exit this state, a user must either timeout or select **Cancel**. Also, the process is tedious. For example, see the following conversation scenario:
+An extensive dialog requires the developer to maintain state. To exit this state, a user must either time out or select **Cancel**. Also, the process is tedious. For example, see the following conversation scenario:
 
 USER: Schedule a meeting with Megan.
 
-BOT: I’ve found 200 results, please include a first and last name.
+BOT: I’ve found 200 results, include a first and last name.
 
 USER: Schedule a meeting with Megan Bowen.
 
@@ -120,6 +120,10 @@ The following code provides an example of bot activity for a channel team scope:
 
 # [C#](#tab/dotnet)
 
+* [SDK reference](/dotnet/api/microsoft.bot.builder.activityhandler.onmessageactivityasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-activityhandler-onmessageactivityasync(microsoft-bot-builder-iturncontext((microsoft-bot-schema-imessageactivity))-system-threading-cancellationtoken)&preserve-view=true)
+
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-localization/csharp/Localization/Bots/LocalizerBot.cs#L20)
+
 ```csharp
 
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
@@ -127,12 +131,15 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
     var mention = new Mention
     {
         Mentioned = turnContext.Activity.From,
+        // EncodeName: Converts the name to a valid XML name.
         Text = $"<at>{XmlConvert.EncodeName(turnContext.Activity.From.Name)}</at>",
     };
-
+    
+    // MessageFactory.Text(): Specifies the type of text data in a message attachment.
     var replyActivity = MessageFactory.Text($"Hello {mention.Text}.");
     replyActivity.Entities = new List<Entity> { mention };
 
+    // Sends a message activity to the sender of the incoming activity.
     await turnContext.SendActivityAsync(replyActivity, cancellationToken);
 }
 
@@ -140,14 +147,21 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 
 # [Node.js](#tab/nodejs)
 
+* [SDK reference](/javascript/api/botbuilder-core/activityhandler?view=botbuilder-ts-latest#botbuilder-core-activityhandler-onmessage&preserve-view=true)
+
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-localization/nodejs/server/bot/botActivityHandler.js#L25)
+
 ```javascript
 
 this.onMessage(async (turnContext, next) => {
     const mention = {
         mentioned: turnContext.activity.from,
+
+        // TextEncoder().encode(): Encodes the supplied characters.
         text: `<at>${ new TextEncoder().encode(turnContext.activity.from.name) }</at>`,
     } as Mention;
 
+    // MessageFactory.text(): Specifies the type of text data in a message attachment.
     const replyActivity = MessageFactory.text(`Hello ${mention.text}`);
     replyActivity.entities = [mention];
 
@@ -165,21 +179,33 @@ The following code provides an example of bot activity for a one-to-one chat:
 
 # [C#](#tab/dotnet)
 
+* [SDK reference](/dotnet/api/microsoft.bot.schema.activityextensions.removerecipientmention?view=botbuilder-dotnet-stable#microsoft-bot-schema-activityextensions-removerecipientmention(microsoft-bot-schema-imessageactivity)&preserve-view=true)
+
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-hello-world/csharp/Microsoft.Teams.Samples.HelloWorld.Web/Bots/MessageExtension.cs#L19)
+
 ```csharp
 
 // Handle message activity
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
 {
+    // Remove recipient mention text from Text property.
+    // Use with caution because this function is altering the text on the Activity.
     turnContext.Activity.RemoveRecipientMention();
     var text = turnContext.Activity.Text.Trim().ToLower();
-  await turnContext.SendActivityAsync(MessageFactory.Text($"Your message is {text}."), cancellationToken);
+
+    // Sends a message activity to the sender of the incoming activity.
+    await turnContext.SendActivityAsync(MessageFactory.Text($"Your message is {text}."), cancellationToken);
 }
 ```
 
 # [Node.js](#tab/nodejs)
 
+* [SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#botbuilder-core-turncontext-sendactivity&preserve-view=true)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-receive-channel-messages-withRSC/nodejs/server/bot/botActivityHandler.js#L20)
+
 ```javascript
 this.onMessage(async (context, next) => {
+    // MessageFactory.text(): Specifies the type of text data in a message attachment.
     await context.sendActivity(MessageFactory.text("Your message is:" + context.activity.text));
     await next();
 });
@@ -189,10 +215,10 @@ this.onMessage(async (context, next) => {
 
 ## Code sample
 
-|Sample name | Description | .NETCore | Node.js | Python|
-|----------------|-----------------|--------------|----------------|-------|
-| Teams conversation bot | Messaging and conversation event handling. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot)|
-| Bot samples | Set of bot samples | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore) |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python)|
+|Sample name | Description | .NETCore | Node.js | Python| Manifest
+|----------------|-----------------|--------------|----------------|-------|-------|
+| Teams conversation bot | This sample app shows how to use different bot conversation events available in bot framework v4. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/python)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/demo-manifest/bot-conversation.zip)|
+| Bot samples | Set of bot framework v4 samples | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk)|
 
 ## Next step
 
@@ -201,10 +227,9 @@ this.onMessage(async (context, next) => {
 
 ## See also
 
-* [Calls and meetings bots](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)
-* [Bot conversations](~/bots/how-to/conversations/conversation-basics.md)
-* [Bot command menus](~/bots/how-to/create-a-bot-commands-menu.md)
-* [Authentication flow for bots in Microsoft Teams](~/bots/how-to/authentication/auth-flow-bot.md)
-* [Use task modules from bots](~/task-modules-and-cards/task-modules/task-modules-bots.md)
-* [Publish your bot to Azure](/azure/bot-service/bot-builder-deploy-az-cli)
+* [Build bots for Teams](what-are-bots.md)
+* [Create custom triggers in Bot Framework Composer](/composer/how-to-create-custom-triggers)
 * [API reference for the Bot Framework Connector service](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference)
+* [Publish your bot to Azure](/azure/bot-service/bot-builder-deploy-az-cli)
+* [Authentication flow for bots in Microsoft Teams](how-to/authentication/auth-flow-bot.md)
+* [Channel and group chat conversations with a bot](how-to/conversations/channel-and-group-conversations.md)

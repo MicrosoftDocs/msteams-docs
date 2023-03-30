@@ -8,7 +8,7 @@ ms.localizationpriority: high
 ---
 # Create a Partner Center developer account
 
-To publish your app to the Microsoft Teams store, you must [set up your Partner Center developer account](/office/dev/store/open-a-developer-account). Depending on your scenario, you might be able to use an existing account.
+To publish your app to the Microsoft Teams store, you must [create your Partner Center developer account](/office/dev/store/open-a-developer-account). Depending on your scenario, you might be able to use an existing account.
 
 ## FAQ
 
@@ -57,7 +57,7 @@ Visit the [publishers support page](https://aka.ms/marketplacepublishersupport) 
 
 <details>
 
-<summary><b>How do I manage my Office Store account in Partner Center?</b></summary>
+<summary><b>How do I manage my Microsoft 365 Store account in Partner Center?</b></summary>
 
 See [manage your account through Partner Center](/office/dev/store/manage-account-settings-and-profile) for information.
 
@@ -202,26 +202,14 @@ The following resources can also assist:
 
 </details>
 
-## Update Apple App Store Connect Team ID on Partner Center
-
-To enable end-users to install your app on the Teams iOS platform, update your Apple App Store Connect Team ID in the Microsoft Partner Center. The Apple App Store Connect Team ID is shared with Apple. To update your Apple App Store Connect Team ID, follow these steps:
-
-1. Login to [Microsoft Partner Center](https://partner.microsoft.com/dashboard/home) using the global admin credentials.
-1. Select the settings icon from the upper right corner of the page.
-1. Go to the **Legal info** section under **Organization profile** from the left pane.
-1. Select the **Developer** tab.
-1. Provide your Apple App Store Connect Team ID.
-1. Go to the offer page and republish your Teams app.
-  
-Your Apple App Store Connect Team ID is now updated and users can install your app on the Teams iOS platform.
-
-To get Apple App Store Connect Team ID from Apple Developer portal, follow these steps:
-
-1. Login to [Apple Developer Center](https://developer.apple.com/).
-1. Select **Account** and go to **Membership**.
-1. Under **Membership**, access **Apple App Store Connect Team ID**.
+> [!NOTE]
+> To enable end-users to install your app on the Teams iOS platform, see [Update Apple App Store Connect Team ID on Partner Center](update-apple-store-team-connect-id.md).
 
 ## Next step
 
 > [!div class="nextstepaction"]
 > [Prepare your store submission](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)
+
+## See also
+
+[Publish your app to the Microsoft Teams store](../publish.md)

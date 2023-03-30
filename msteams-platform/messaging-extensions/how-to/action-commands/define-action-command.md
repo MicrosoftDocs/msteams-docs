@@ -1,7 +1,7 @@
 ---
 title: Define message extension action commands
 author: surbhigupta
-description: In this module, learn to define messaging extension action commands with app manifest example in Microsoft Teams.
+description: Learn to define messaging extension action commands with app manifest example in Microsoft Teams. Sample (.NET, Node.js) how to define action commands, create task module, and respond to task module submit action.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
@@ -95,7 +95,7 @@ To create an action command:
 
 1. To use an existing bot, select **Select an existing bot** and choose the existing bots from the dropdown list or select **Enter a bot ID** if you have a bot id created already.
 
-1. Select the scope of the messaging extension and select **Save**.
+1. Select the scope of the bot and **Save**.
 
 1. Select **Add a command** in the **Command** section to include the commands, which decides the behavior of message extension.
 
@@ -163,17 +163,13 @@ If you're using an embedded web view, you can optionally add the `taskInfo` obje
 
 #### App manifest example
 
-The following section is an example of a `composeExtensions` object defining two action commands. It isn't an example of the complete manifest. For the complete app manifest schema, see [app manifest schema](~/resources/schema/manifest-schema.md):
+This section isn't an example of the complete manifest. For the complete app manifest schema, see [app manifest schema](~/resources/schema/manifest-schema.md). The following is an example of a `composeExtensions` object defining two action commands:
 
 ```json
 ...
 "composeExtensions": [
   {
     "botId": "c8fa3cf6-b1f0-4ba8-a5bf-a241bc29adf3",
-    "scopes": [
-      "personal",
-      "groupchat"
-    ],
     "commands": [
       {
         "id": "To do",
@@ -226,9 +222,10 @@ The following section is an example of a `composeExtensions` object defining two
 
 ## Code sample
 
-| Sample Name           | Description | .NET    | Node.js   |
-|:---------------------|:--------------|:---------|:--------|
-|Teams message extension action| Describes how to define action commands, create task module, and  respond to task module submit action. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) |
+| Sample name           | Description | .NET    | Node.js   | Manifest|
+|:---------------------|:--------------|:---------|:--------|:--------------|
+|Teams message extension action| This sample shows how to define action commands, create task module, and  respond to task module submit action. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/nodejs) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/csharp/demo-manifest/msgext-action.zip) |
+|Message extension action preview| This sample shows how to use action preview in Messaging Extensions using Bot Framework v4. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action-preview/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action-preview/nodejs) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action-preview/csharp/demo-manifest/msgext-action-preview.zip) |
 
 ## Step-by-step guide
 
@@ -245,3 +242,11 @@ If you're using the parameters or an embedded web view with a `taskInfo` object,
 
 > [!div class="nextstepaction"]
 > [Respond to task module submit](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
+
+## See also
+
+* [Cards](../../../task-modules-and-cards/what-are-cards.md)
+* [Task modules](../../../task-modules-and-cards/what-are-task-modules.md)
+* [App manifest schema for Teams](../../../resources/schema/manifest-schema.md)
+* [Developer Portal for Teams](../../../concepts/build-and-test/teams-developer-portal.md)
+* [Message extensions](../../what-are-messaging-extensions.md)

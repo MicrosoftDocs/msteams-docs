@@ -2,23 +2,23 @@
 
 You must have an understanding of the following prerequisites:
 
-- You must have an Office 365 tenant and a team configured with **Allow uploading custom apps** enabled. For more information, see [prepare your Office 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md).
+- You must have a Microsoft 365 tenant and a team configured with **Allow uploading custom apps** enabled. For more information, see [prepare your Microsoft 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md).
 
-  - If you don't currently have an Office 365 account, you can sign up for a free subscription through the Office 365 Developer Program. The subscription remains active as long as you're using it for ongoing development. See [welcome to the Office 365 Developer Program](/office/developer-program/microsoft-365-developer-program).
+  - If you don't currently have a Microsoft 365 account, you can sign up for a free subscription through the Microsoft 365 Developer Program. The subscription remains active as long as you're using it for ongoing development. See [welcome to the Microsoft 365 Developer Program](/office/developer-program/microsoft-365-developer-program).
 
-In addition, this project requires that you have the following installed in your development environment:
+In addition, this project requires that you have the following tools installed in your development environment:
 
 - Any text editor or IDE. You can install and use [Visual Studio Code](https://code.visualstudio.com/download) for free.
 
 - [Node.js/npm](https://nodejs.org/en/). Use the latest LTS version. The Node Package Manager (npm) installs in your system with the installation of Node.js.
 
-- After you have successfully installed Node.js, install the [Yeoman](https://yeoman.io/) and [gulp-cli](https://www.npmjs.com/package/gulp-cli) packages by typing the following in your command prompt:
+- After you have successfully installed Node.js, install the [Yeoman](https://yeoman.io/) and [gulp-cli](https://www.npmjs.com/package/gulp-cli) packages by typing the following command in your command prompt:
 
     ```bash
     npm install yo gulp-cli --global
     ```
 
-- Install the Microsoft Teams Apps generator by typing the following in your command prompt:
+- Install the Microsoft Teams Apps generator by typing the following command in your command prompt:
 
     ```bash
     npm install generator-teams --global
@@ -30,7 +30,7 @@ In addition, this project requires that you have the following installed in your
 
 1. Open a command prompt and create a new directory for your tab project.
 
-1. To start the generator, navigate to your new directory and type the following command:
+1. To start the generator, go to your new directory and type the following command:
 
     ```bash
     yo teams
@@ -95,4 +95,3 @@ In addition, this project requires that you have the following installed in your
     **Default Tab Name (max 16 characters)?**
 
     Name your tab. This tab name will be used throughout your project as a file or URL path component.
-

@@ -1,24 +1,24 @@
 ---
 title: Create and send messages
 author: laujan
-description: In this module, learn how to use Office 365 Connectors and create and send actionable message in Microsoft Teams
+description: Create actionable messages, send message through Incoming Webhook, connectors for Microsoft 365 Groups, cURL, or PowerShell. Send Adaptive Cards. Time based transaction. 
 ms.topic: how-to
 ms.localizationpriority: high
 ---
 
 # Create and send messages
 
-You can create actionable messages and send it through Incoming Webhook or Office 365 Connector.
+You can create actionable messages and send it through Incoming Webhook or connector for Microsoft 365 Groups.
 
 ## Create actionable messages
 
-The actionable messages include six visible buttons on the card. Each button is defined in the `potentialAction` property of the message by using `ActionCard` actions, each with an input type, a text field, a date picker, or a multi-choice list. Each `ActionCard` has an associated action, for example `HttpPOST`.
+The actionable messages include six visible buttons on the card. Each button is defined in the `potentialAction` property of the message by using `ActionCard` actions, each with an input type, a text field, a date picker, or a multiple-choice list. Each `ActionCard` has an associated action, for example `HttpPOST`.
 
 The connector cards support the following actions:
 
 * `ActionCard`: Presents one or more input types and associated actions.
 * `HttpPOST`: Sends POST request to a URL.
-* `OpenUri`: Opens URI in a separate browser or app, optionally targets different URIs based on operating systems.
+* `OpenUri`: Opens URI in a separate browser or app. Optionally, targets different URIs based on operating systems.
 
 The `ActionCard` action supports three input types:
 
@@ -28,7 +28,7 @@ The `ActionCard` action supports three input types:
 
 `MultichoiceInput` supports a `style` property that controls whether the list initially appears fully expanded. The default value of `style` depends on the value of `isMultiSelect` as follows:
 
-| `isMultiSelect` | `style` default |
+| `isMultiSelect` | default `style` |
 | --- | --- |
 | `false` or not specified | `compact` |
 | `true` | `expanded` |
@@ -40,13 +40,13 @@ For more information on connector card actions, see [Actions](/outlook/actionabl
 > [!NOTE]
 >
 > * Specifying `compact` for the `style` property in Microsoft Teams is the same as specifying `normal` for the `style` property in Microsoft Outlook.
-> * For the HttpPOST action, the bearer token is included with the requests. This token includes the Microsoft Azure Active Directory (Azure AD) identity of the Office 365 user who took the action.
+> * For the HttpPOST action, the bearer token is included with the requests. This token includes the Microsoft Azure Active Directory (Azure AD) identity of the Microsoft 365 user who took the action.
 
-## Send a message through Incoming Webhook or Office 365 Connector
+## Send a message through Incoming Webhook or connector for Microsoft 365 Groups
 
-To send a message through your Incoming Webhook or Office 365 Connector, post a JSON payload to the webhook URL. This payload must be in the form of an [Office 365 connector card](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card).
+To send a message through your Incoming Webhook or connector for Microsoft 365 Groups, post a JSON payload to the webhook URL. This payload must be in the form of a [connector card for Microsoft 365 Groups](~/task-modules-and-cards/cards/cards-reference.md#connector-card-for-microsoft-365-groups).
 
-You can also use this JSON to create cards containing rich inputs, such as text entry, multiselect, or selecting date and time. The code that generates the card and posts it to the webhook URL can run on any hosted service. These cards are defined as part of actionable messages and are also supported in [cards](~/task-modules-and-cards/what-are-cards.md), used in Teams bots and message extensions.
+You can also use this JSON to create cards containing rich inputs, such as text entry, multiselect, or selecting date and time. The code that generates the card and posts it to the webhook URL can run on any hosted service. These cards are defined as part of actionable messages and are also supported in [cards](~/task-modules-and-cards/what-are-cards.md) used in Teams bots and message extensions.
 
 ### Example of connector message
 
@@ -138,7 +138,7 @@ An example of connector message is as follows:
 
 This message provides the following card in the channel:
 
-![Screenshot of a connector card](~/assets/images/connectorcard.png)
+:::image type="content" source="../../assets/images/connectorcard_1.png" alt-text="Screenshot of a coonector card.":::
 
 ## Send messages using cURL and PowerShell
 
@@ -180,7 +180,7 @@ To post a message to the webhook with PowerShell, follow these steps:
     > [!NOTE]
     > If the POST succeeds, you must see a simple **1** output by `Invoke-RestMethod`.
 
-1. Check the Teams channel associated with the webhook URL. You can see the new card posted to the channel. Before you use the connector to test or publish your app, you must do the following:
+1. Check the Teams channels associated with the webhook URL. You can see the new card posted to the channel. Before you use the connector to test or publish your app, you must do the following:
 
     * [Include two icons](../../concepts/build-and-test/apps-package.md#app-icons).
     * Modify the `icons` portion of the manifest to the file names of the icons instead of URLs.
@@ -196,7 +196,7 @@ To post a message to the webhook with PowerShell, follow these steps:
 
 To send Adaptive Cards through an Incoming Webhook, follow these steps:
 
-1. [Setup a custom webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md) in Teams.
+1. [Set up a custom webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md) in Teams.
 1. Create Adaptive Card JSON file using the following code:
 
     ```json
@@ -253,8 +253,6 @@ The following table provides the time based transaction details:
 | 7200 | 150  |
 | 86400  | 1800  |
 
-A [retry logic with exponential back-off](/azure/architecture/patterns/retry) can mitigate rate limiting for cases where requests are exceeding the limits within a second. Follow [best practices](../../bots/how-to/rate-limit.md) to avoid hitting the rate limits.
-
 > [!NOTE]
 > A [retry logic with exponential back-off](/azure/architecture/patterns/retry) can mitigate rate limiting for cases where requests are exceeding the limits within a second. Refer [HTTP 429 responses](../../bots/how-to/rate-limit.md#handle-http-429-responses) to avoid hitting the rate limits.
 
@@ -278,11 +276,11 @@ These limits are in place to reduce spamming a channel by a connector and ensure
 
 ## See also
 
-* [Office 365 Connectors for Microsoft Teams](~/webhooks-and-connectors/how-to/connectors-creating.md)
-* [Create an Incoming Webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
-* [Create an Outgoing Webhook](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)
+* [Webhooks and connectors](../what-are-webhooks-and-connectors.md)
+* [Create Incoming Webhooks](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
+* [Create Outgoing Webhooks](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)
 * [Rate limiting for Teams bots messages](~/bots/how-to/rate-limit.md)
-* [Build tabs with Adaptive Cards](~/tabs/how-to/build-adaptive-card-tabs.md)
-* [Format cards in Microsoft Teams](~/task-modules-and-cards/cards/cards-format.md)
-* [Build notification bot with JavaScript](../../sbs-gs-notificationbot.yml)
-* [Build your first bot app using JavaScript](../../sbs-gs-bot.yml)
+* [Build tabs with Adaptive Cards](../../tabs/how-to/build-adaptive-card-tabs.md)
+* [Format cards in Microsoft Teams](../../task-modules-and-cards/cards/cards-format.md)
+* [Adaptive Cards](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
+* [App manifest schema for Teams](../../resources/schema/manifest-schema.md)

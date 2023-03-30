@@ -8,18 +8,17 @@ ms.author: anclear
 ---
 # Build bots for Teams
 
-> [!NOTE]
-> It's recommended that you'd create your first bot app or notification bot app using the new generation development tool for Teams. For more information, see [Teams Toolkit for Visual Studio Code](../toolkit/teams-toolkit-fundamentals.md) and [Teams Toolkit for Visual Studio](../toolkit/teams-toolkit-overview-visual-studio.md).
-
 A bot is also referred to as a chatbot or conversational bot. It's an app that runs simple and repetitive tasks by users such as customer service or support staff. Everyday use of bots include, bots that provide information about the weather, make dinner reservations, or provide travel information. Interactions with bots can be quick questions and answers or complex conversations.
+
+It's recommended to start with [build your first bot app using JavaScript](../sbs-gs-bot.yml) or [build notification bot with JavaScript](../sbs-gs-notificationbot.yml) by using the new generation development tool for Teams. For more information, see [Teams Toolkit overview](../toolkit/teams-toolkit-fundamentals.md).
 
 > [!IMPORTANT]
 >
-> * Currently, bots are available in Government Community Cloud (GCC) and GCC-High but not in Department of Defense (DOD).
+> * Bots are available in [Government Community Cloud (GCC), GCC-High, and Department of Defense (DOD)](~/concepts/app-fundamentals-overview.md#government-community-cloud) environments. Bot applications within Microsoft Teams for GCC-High and DOD are available through [Azure bot Service](/azure/bot-service/how-to-deploy-gov-cloud-high) and bot channel registration must be done in Azure Government portal.
 >
-> * Bot applications within Microsoft Teams are available in GCC-High through [Azure bot Service](/azure/bot-service/how-to-deploy-gov-cloud-high) and bot channel registration must be done in Azure Government portal.
+> * Image URLs in Adaptive Cards aren't supported in GCC-High and DOD environments. You can replace an image URL with Base64 encoded DataUri.
 >
-> * Applications in GCCH only support up to manifest version v1.10. Image URLs in Adaptive Cards aren't supported in GCCH environment. You can replace an image URL with Base64 encoded DataUri.
+> * When a user changes the Teams theme in a bot, the theme doesn’t apply to the content shared using an Adaptive Card.
 
 Conversational bots allow users to interact with your web service using text, interactive cards, and task modules.
 
@@ -49,30 +48,38 @@ With Microsoft Graph APIs for calls and online meetings, Teams apps can now inte
 
 You can use the Teams bot APIs to get information for members of a chat or team. See [changes to Teams bot APIs for fetching team or chat members](~/resources/team-chat-member-api-changes.md).
 
+## Add SSO authentication to your conversation bots
+
+You can add single sign-on authentication to your conversation bot using the following steps:
+
+* [Create Teams conversation bot](../sbs-teams-conversation-bot.yml)
+* [Configure your bot app in Azure AD](~/bots/how-to/authentication/bot-sso-register-aad.md)
+
 <!--- TBD: For quick scanning, see if the above information can be itemized as a list.
 --->
+
+## Code samples
+
+|Sample name | Description |.NET | Node.js | Manifest
+|----------------|-----------------|--------------|--------------|--------------|
+| Bot daily task reminder| This sample shows how to schedule a recurring task and get a reminder at a scheduled time using bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-daily-task-reminder/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-daily-task-reminder/nodejs) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-daily-task-reminder/csharp/demo-manifest/Bot-Daily-Task-Reminder.zip) |
+| Hello World Bot | This is a simple hello world application with both Bot and Message extension capabilities. | NA | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/v1.0.0/hello-world-bot) |
+| Adaptive Card Notification | This is a sample, which shows how to send notifications with different adaptive cards using Bots. | NA | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/v1.0.0/adaptive-card-notification) |
+| Incoming Webhook Notification | This is a sample, which shows how to send notifications via Incoming Webhook in Microsoft Teams channels. | NA | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/v1.0.0/incoming-webhook-notification) |
 
 ## Next step
 
 > [!div class="nextstepaction"]
 > [Bots and SDKs](~/bots/bot-features.md)
 
-## Code samples
-
-|Sample name | Description | C# | Node.js |
-|----------------|-----------------|--------------|--------------|
-| Bot daily task reminder| Demonstrate how to schedule a recurring task and get a reminder at a scheduled time. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-daily-task-reminder/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-daily-task-reminder/nodejs) |
-| Hello World Bot | This is a simple hello world application with both Bot and Message extension capabilities. |  | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/v1.0.0/hello-world-bot) |
-| Adaptive Card Notification | This is a sample which shows how to send notifications with different adaptive cards using Bots. |  | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/v1.0.0/adaptive-card-notification) |
-| Incoming Webhook Notification | This is a sample which shows how to send notifications via Incoming Webhook in Microsoft Teams channels. |  | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/v1.0.0/incoming-webhook-notification) |
-
 ## See also
 
-* [Create a bot for Teams](../resources/bot-v3/bots-create.md)
 * [How Microsoft Teams bots work](/azure/bot-service/bot-builder-basics-teams)
-* [Register calls and meetings bot for Microsoft Teams](~/bots/calls-and-meetings/registering-calling-bot.md)
-* [Add authentication to your Teams bot](~/bots/how-to/authentication/add-authentication.md)
-* [Bot activity handlers](~/bots/bot-basics.md)
-* [Conversation events in your Teams bot](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
+* [Designing your Microsoft Teams bot](design/bots.md)
+* [Create a bot for Teams](../resources/bot-v3/bots-create.md)
+* [Test and debug your Microsoft Teams bot](../resources/bot-v3/bots-test.md)
 * [Build your first bot app using JavaScript](../sbs-gs-bot.yml)
-* [Build notification bot with JavaScript](../sbs-gs-notificationbot.yml)
+* [Add authentication to your Teams bot](how-to/authentication/add-authentication.md)
+* [Use task modules from bots](../task-modules-and-cards/task-modules/task-modules-bots.md)
+* [Create Incoming Webhooks](../webhooks-and-connectors/how-to/add-incoming-webhook.md)
+* [Instrumenting for Teams app specific analytics](../concepts/design/overview-analytics.md#instrumenting-for-teams-app-specific-analytics)

@@ -1,6 +1,6 @@
 ---
 title: Device permissions for the browser
-description: Learn how to securely bring back device permissions, such as camera or microphone access for apps in web client.
+description: app that requires device permissions, such as camera or microphone access, now require users to manually grant permission at a per app level in the web browser.
 localization_priority: medium
 ms.topic: how-to
 ---
@@ -35,9 +35,9 @@ Teams app that requires device permissions in the browser must show instructions
 
 ## Code sample
 
-|Sample name | Description | Node.js |
-|----------------|-----------------|--------------|
-| Tab device permissions for browser | The sample code demonstrates how to show the device permissions for browser. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs) |
+|Sample name | Description | Node.js | Manifest
+|----------------|-----------------|--------------|--------------|
+| Tab device permissions for browser | The sample shows how to show the device permissions using Teans JS SDK and browser api's. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs/demo-manifest/tab-device-permissions.zip)
 
 ## Step-by-step guide
 
@@ -47,3 +47,4 @@ Follow the [step-by-step guide](../../sbs-tab-device-permissions.yml) to grant t
 
 * [Device capabilities overview](device-capabilities-overview.md)
 * [Request device permissions](native-device-permissions.md)
+* [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
