@@ -169,7 +169,7 @@ The following steps guide you to sideload and validate bot that receives all cha
 
 # [Chat messages](#tab/chat)
 
-The following steps guide you to sideload and validate bot that receives all chat messages in a Chat without being @mentioned:
+The following steps guide you to sideload and validate bot that receives all chat messages in a chat without being @mentioned:
 
 1. Select or create a group chat.
 1. Select the ellipses &#x25CF;&#x25CF;&#x25CF; from the group chat. The dropdown menu appears.
