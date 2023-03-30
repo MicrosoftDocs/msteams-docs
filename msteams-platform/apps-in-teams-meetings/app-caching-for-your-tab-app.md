@@ -85,18 +85,15 @@ The following flow diagram shows how a cached app is reloaded:
 
 Before you enable app caching for your app, you must [enable your app for Teams meeting](build-tabs-for-meeting.md).
 
-To enable app caching for your app, follow the steps:
+To enable app caching for your app, in the `app-cache-tab.tsx` file (or the equivalent file in your app):
 
-1. In the `configure.jsx` file (or the equivalent file in your app), pass `contentUrl` and `entityId` into the load handler to route to the correct page within your app. It also invokes `notifySuccess` or `notifyFailure` to notify Teams client when the app initialization flow is complete.
-
+1. Pass `contentUrl` and `entityId` into the load handler to route to the correct page within your app. It also invokes `notifySuccess` or `notifyFailure` to notify Teams client when the app initialization flow is complete.
    * [contentUrl](../tabs/how-to/create-tab-pages/configuration-page.md#modify-or-remove-a-tab): Add content page URL.
    * [entityId](../tabs/how-to/create-tab-pages/configuration-page.md#modify-or-remove-a-tab): Add a unique identifier.
 
-1. In the `app-cache-tab.tsx` file (or the equivalent file in your app), configure the following:
-
-   * Call `teamsCore.registerBeforeUnloadHandler` and `teamsCore.registerOnLoadHandler` APIs.
-   * Dispose resources and perform any cleanup needed in the `beforeUnload` handler.
-   * Invoke the `readyToUnload` callback to notify Teams client that the app unload flow is complete.
+1. Call `teamsCore.registerBeforeUnloadHandler` and `teamsCore.registerOnLoadHandler` APIs.
+1. Dispose resources and perform any cleanup needed in the `beforeUnload` handler.
+1. Invoke the `readyToUnload` callback to notify Teams client that the app unload flow is complete.
 
 # [TeamsJS v2](#tab/teamsjs-v2)
 
