@@ -26,7 +26,7 @@ Teams platform features that are available to all app developers.
 
 **2023 March**
 
-* ***March 30, 2023***: [Tab apps in shared channel are available in DOD](~/concepts/build-and-test/shared-channels.md)
+* ***March 31, 2023***: [Tab apps in shared channel are available in DOD](~/concepts/build-and-test/shared-channels.md)
 * ***March 23, 2023***: [Apps are available for scheduled public channel meetings](apps-in-teams-meetings/teams-apps-in-meetings.md)
 * ***March 20, 2023***: [Bots are available in DOD](bots/what-are-bots.md)
 * ***March 20, 2023***: [Message extensions are available in DOD](messaging-extensions/what-are-messaging-extensions.md)
