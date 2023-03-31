@@ -84,15 +84,23 @@ You can create and send actionable messages through Incoming Webhook or connecto
 
 ```csharp
 var adaptiveCardJson = @"{
-    ""type"": ""AdaptiveCard"",
-    ""body"": [
-        {
+  ""type"": ""message"",
+  ""attachments"": [
+    {
+      ""contentType"": ""application/vnd.microsoft.card.adaptive"",
+      ""content"": {
+        ""type"": ""AdaptiveCard"",
+        ""body"": [
+          {
             ""type"": ""TextBlock"",
             ""text"": ""Message Text""
-        }
-    ],
-    ""$schema"": ""http://adaptivecards.io/schemas/adaptive-card.json"",
-    ""version"": ""1.0""
+          }
+        ],
+        ""$schema"": ""http://adaptivecards.io/schemas/adaptive-card.json"",
+        ""version"": ""1.0""
+      }
+    }
+  ]
 }";
 
 var webhookUrl = "https://xxxxx.webhook.office.com/xxxxxxxxx";
