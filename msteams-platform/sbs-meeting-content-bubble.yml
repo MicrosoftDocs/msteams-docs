@@ -45,7 +45,7 @@ items:
      | --- | --- | --- |
      | **Required** | &nbsp; | &nbsp; |
      | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call and all in one place.|
-sbs-guide-correction-generate-in-meeting-notification
+
      | &nbsp; | [Visual Studio 2022 version 17.3](https://visualstudio.microsoft.com)<br> | You can install the enterprise version in Visual Studio 2022, and install the workloads. Install one of the following two workloads:<br> • **ASP.NET and web development** <br> • **.NET Core cross-platform development** |
      | &nbsp; | [Visual Studio 2022 version 17.3](https://visualstudio.microsoft.com)<br> Install the <br> **ASP.NET and web development** workload.| You can install the enterprise version in Visual Studio 2022, and install the workloads. |
      | &nbsp; | [.NET Core SDK version 3.1](https://dotnet.microsoft.com/en-us/download) | Customized bindings for local debugging and Azure Functions app deployments. If you haven't installed the .NET 3.1 (or later) SDK globally, the portable version can be installed. |
@@ -53,8 +53,6 @@ sbs-guide-correction-generate-in-meeting-notification
     
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
-
-   
 
 - title: Set up local environment
   durationInMinutes: 1
