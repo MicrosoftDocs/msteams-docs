@@ -307,54 +307,42 @@ Your offer listing must include a valid Terms of use link. Offers with invalid, 
 [Back to top](#common-reasons-for-app-validation-failure)
 
 
-## Most Failed Scenarios for MetaOS
+## Common reasons for MetaOS validation failure
 
 ### Microsoft 365 Re-Branding 
 
-* Tab does not load or shows an error page/message on the Office Client, when tested by replacing www.office.com/in the tab URL with www.microsoft365.com/ 
+Tab doesn't load or show an error page or message on the office client, when you replace the tab url from www.office.com/in to www.microsoft365.com/.
 
 ### App Functionality 
 
-Broken Functionality visible in any of the Hubs: 
+The Broken Functionality are visible in any of the following Hubs: 
 
-1.	Functionality Cross-Parity not maintained/missing across M365 Hubs.
+1. Functionality cross-parity not maintained or missing across M365 Hubs.
 
-2. Continuous Loading Indicator visible in Tabs (Teams/Outlook/Office) and Bots (Teams).
+1. Continuous loading indicator visible in tabs (Teams, Outlook or Office) and Bots (Teams).
 
-3.	Blank Screen visible in Tabs in Office/Outlook Hubs.
+1. Blank screen are visible in the Office or Outlook tab Hubs.
 
-4. Error Message when adding app to Outlook/Office Hubs.
+1. Error message appears when adding app to Outlook or Office Hubs.
 
-5.	Clicking on buttons does not perform the action intended. But does so post refreshing the session.
+1. Clicking on buttons does not perform the action intended. But does so post refreshing the session.
 
-6.	Switching between Tabs asks for authentication again in Outlook Hub. 
+1. Switch between the tabs requests for authentication again in Outlook Hub. 
 
-7.	Clicking on intended feature in Office Hub opens two browser instances. 
+1. Select an intended feature in Office Hub opens two browser instances. 
 
-8.	Clicking on the intended feature in Outlook/Office throws an Error Message.
+1. Select an intended feature in Outlook or Office throws an Error Message.
 
-   * Content in “Help” Tab must be publicly available to learn more about the app offering. App must not ask for authentication.
-
-   * No Sign-out option present within Tab.
-
-   * Content in “Help”/ “About” Tab related to Teams Hub only. 
-
-   * Tab having duplicate Header or Logo.
-
-   * User unable to undo last action or back button not available in Tabs to go back to previous work state.
-
-   * Content in app is specific to Teams only.
-
-9. Unable to login to app in outlook.
+1. Unable to login to the app in Outlook.
 
 
 ### App Responsiveness 
 
-Responsiveness Issues visible in any of the Hubs: 
+Responsiveness issues visible in any of the Hubs: 
 
-1.	Horizontal Scroll bar visible in Tabs.
+1.	Horizontal scroll bar visible in Tabs.
 
-2.	Content Truncation visible.
+2.	Content truncation visible.
 
 3.	App not responsive to 100% screen resolution.
 
@@ -364,13 +352,13 @@ Responsiveness Issues visible in any of the Hubs:
 
 ### App package & Store Listing (Metadata & Manifest) 
 
-* App Listing Screenshots only relevant to Teams Hub.
+* App listing screenshots only relevant to Teams Hub.
 
-* App Description (manifest/metadata) only relevant to Teams Hub.
+* App description manifest or metadata only have relevant to Teams Hub.
 
-* Support URL/Privacy Policy/Terms of Use content (manifest/metadata) only relevant to Teams Hub.
+* Support URL, Privacy policy, and terms of use content in manifest or metadata only have relevant to Teams Hub.
 
-* Provided Test Accounts are not working for targeted release (Across all MetaOS Hubs)
+* Provided test accounts are not working for targeted release, across all MetaOS Hubs.
 
 [Back to top](#common-reasons-for-app-validation-failure)
 
