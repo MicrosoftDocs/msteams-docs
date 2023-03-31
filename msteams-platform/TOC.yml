@@ -117,9 +117,6 @@
     - name: Activity feed notifications
       href: concepts/design/activity-feed-notifications.md
       displayName: notify, notification
-  - name: App customization
-    href: concepts/design/enable-app-customization.md
-    displayName: Customize your app, update app name, branding, hide and unhide app, accent 
 - name: Tools and SDKs
   items:
   - name: Teams Toolkit 
@@ -433,13 +430,8 @@
   - name: Enable and configure apps for Teams meetings
     items:
     - name: Build tabs for meeting
-      items:
-      - name: Enable your tabs for Teams meeting
-        href: apps-in-teams-meetings/build-tabs-for-meeting.md
-        displayName: anonymous
-      - name: Enable app caching for your tab app
-        href: apps-in-teams-meetings/app-caching-for-your-tab-app.md
-        displayName: app caching, launch time
+      href: apps-in-teams-meetings/build-tabs-for-meeting.md
+      displayName: anonymous, app caching, launch time
     - name: Build apps for meeting stage
       href: apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md
       displayName: MicrosoftTeams.meeting.getAppContentStageSharingState
@@ -459,7 +451,8 @@
   - name: Get meeting transcripts using Graph APIs
     items:
     - name: Overview
-      href: graph-api/meeting-transcripts/overview-transcripts.md 
+      href: graph-api/meeting-transcripts/overview-transcripts.md
+      displayName: get meeting transcripts, teams meeting transcript
     - name: Fetch meeting ID and organizer ID
       href: graph-api/meeting-transcripts/fetch-id.md
       displayName: Obtain meeting details using user-level notification, tenant-level notification
@@ -506,6 +499,7 @@
     displayName: HMAC security token
   - name: Create Incoming Webhooks
     href: webhooks-and-connectors/how-to/add-incoming-webhook.md
+    displayName: share content in Microsoft Teams channels, external applications
   - name: Create connectors for Microsoft 365 Groups
     href: webhooks-and-connectors/how-to/connectors-creating.md
   - name: Create and send messages
@@ -525,7 +519,7 @@
       displayName: correlationId, Markdown, what-are-webhooks-and-connectors Button, Flexible layout, receipt card, carousel card, Hero card, List card, Card collections, Thumbnail card, Receipt card
     - name: Format cards in Microsoft Teams
       href: task-modules-and-cards/cards/cards-format.md
-      displayName: Information masking, background, extension, notification, HTML
+      displayName: Information masking, background, extension, notification, HTML, rich text
     - name: Card actions
       href: task-modules-and-cards/cards/cards-actions.md
       displayName: openUrl, potentialAction, messageBack, imBack, invoke, signin
@@ -652,7 +646,11 @@
   - name: Teams app permissions
     href: graph-api/app-permissions/teams-app-permissions.md
   - name: Resource-specific consent
-    href: graph-api/rsc/resource-specific-consent.md
+    items:
+    - name: Overview
+      href: graph-api/rsc/resource-specific-consent.md
+    - name: Grant RSC permission to your app
+      href: graph-api/rsc/grant-resource-specific-consent.md
     displayName: Permissions, delegated
   - name: Proactive installation of apps using Graph API to send messages
     href: graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md
@@ -725,10 +723,13 @@
   items:
   - name: Overview
     href: concepts/deploy-and-publish/apps-publish-overview.md
-    displayName: configure default install options, GCC
-  - name: Configure default install options for Teams app
+    displayName: configure default install options, GCC, Customize your app
+  - name: Enable customization for your app
+    href: concepts/design/enable-app-customization.md
+    displayName: Customize your app, update app name, branding, hide and unhide app, accent
+  - name: Configure default options for Teams app
     href: concepts/deploy-and-publish/add-default-install-scope.md
-    displayName: default install scope, default capability for shared scopes
+    displayName: default install scope, default capability for shared scopes, block apps 
   - name: Create Teams app package
     href: concepts/build-and-test/apps-package.md
     displayName: Host your app, HTTPS, cloud server
