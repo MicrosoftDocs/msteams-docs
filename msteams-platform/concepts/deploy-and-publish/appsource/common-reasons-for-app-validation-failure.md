@@ -340,11 +340,11 @@ The Broken Functionality are visible in any of the following Hubs:
 
 Responsiveness issues visible in any of the Hubs: 
 
-1.	Horizontal scroll bar visible in Tabs.
+1. Horizontal scroll bar visible in Tabs.
 
-2.	Content truncation visible.
+1. Content truncation visible.
 
-3.	App not responsive to 100% screen resolution.
+1. App not responsive to 100% screen resolution.
 
    * Office Hub: Case1: Close button doesn’t appear in 100% resolution.
 
