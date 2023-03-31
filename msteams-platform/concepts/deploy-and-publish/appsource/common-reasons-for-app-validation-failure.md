@@ -307,31 +307,45 @@ Your offer listing must include a valid Terms of use link. Offers with invalid, 
 [Back to top](#common-reasons-for-app-validation-failure)
 
 
-## Common reasons for MetaOS validation failure
+## Common reasons for Teams apps extensible across Microsoft 365 validation failure
 
 ### Microsoft 365 re-branding 
 
-Tab doesn't load or show an error page or message on the office client, when you replace the tab url from www.office.com/ to www.microsoft365.com/.
+Tab doesn't load or show an error page or message on the Microsoft 365 client, when you replace the tab url from www.office.com/ to www.microsoft365.com/.
 
 ### App functionality 
 
-The app must not have the following broken functionalities in Outlook and Office hubs:
+The app must not have the following broken functionalities in Outlook and Microsoft 365 clients:
 
-1. Functionality cross-parity isn't maintained or missing across Microsoft 365 hubs.
+1. Functionality cross-parity isn't maintained or missing across Microsoft 365 client.
 
-1. Continuous loading indicator visible in tabs (Teams, Outlook, or Office), and bots (Teams).
+1. Continuous loading indicator visible in tabs for Teams apps extensible across Microsoft 365 and bots (Teams).
 
-1. Blank screen is visible in tabs in Office or Outlook hubs.
+1. Blank screen is visible in tabs for Teams apps extensible across Microsoft 365.
 
-1. Error message appears when adding app to Outlook or Office hubs.
+1. Error message appears when adding app to the Teams apps extensible across Microsoft 365.
 
 1. A button dosen't perform the intended action upon selection, but it does after the session is refreshed.
 
-1. Switching between the tabs requests for authentication again in Outlook hub. 
+1. Switching between the tabs requests for authentication again in Outlook client. 
 
-1. An intended feature in Office hub opens two browser instances upon selection 
+1. An intended feature in Microsoft 365 client opens two browser instances upon selection 
 
-1. An intended feature in Outlook or Office shows an error message upon selection.
+1. An intended feature in Teams apps extensible across Microsoft 365 shows an error message upon selection.
+
+   * Content in “Help” tab must be publicly available to learn more about the app offering. App must not ask for authentication. 
+
+   * No Sign-out option present within tab. 
+
+   * Content in “Help” or “About” tab related to Teams clients. 
+
+   * Tab having duplicate Header or Logo.
+
+   * The User unable to revert last action or doesn't have back button option to go to previous work state.
+
+   * Content in app is specific to Teams only.
+
+   * Incorrect reference to Teams app extensible across Microsoft 365.
 
 1. Unable to login to the app in Outlook.
 
@@ -350,13 +364,11 @@ You must avoid the following responsiveness issues in your app before you submit
 
 You must avoid the following app package and store listing issues in your app before you submit for review:
 
-* App listing screenshots are only relevant to Teams hub.
+* App listing screenshots are only relevant to Teams client.
 
-* App description in the manifest or metadata is only relevant to Teams hub.
+* App description in the manifest or metadata is only relevant to Teams client.
 
-* Support URL, privacy policy, and terms of use content in the manifest or metadata is only relevant to Teams hub.
-
-* Provided test accounts aren't working for targeted release, across all MetaOS hubs.
+* Support URL, privacy policy, and terms of use content in the manifest or metadata is only relevant to Teams client.
 
 [Back to top](#common-reasons-for-app-validation-failure)
 
