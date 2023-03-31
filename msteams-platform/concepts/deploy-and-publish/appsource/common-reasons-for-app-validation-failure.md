@@ -333,17 +333,17 @@ The app must not have the following broken functionalities in Outlook and Micros
 
 1. An intended feature in Teams apps extensible across Microsoft 365 shows an error message upon selection.
 
-   * Content in “Help” tab must be publicly available to learn more about the app offering. App must not ask for authentication. 
+   * Content in the <b>Help</b> tab must be publicly available to learn more about the app offering. The app must not ask for authentication. 
 
-   * No Sign-out option present within tab. 
+   * No sign-out option present within tab. 
 
-   * Content in “Help” or “About” tab related to Teams clients. 
+   * Content in the <b>Help</b> or <b>About</b> tab related to Teams clients. 
 
    * Tab having duplicate Header or Logo.
 
-   * The User unable to revert last action or doesn't have back button option to go to previous work state.
+   * The user unable to revert last action or doesn't have back button option to go to previous work state.
 
-   * Content in app is specific to Teams only.
+   * Content in the app is specific to Teams only.
 
    * Incorrect reference to Teams app extensible across Microsoft 365.
 
@@ -358,7 +358,7 @@ You must avoid the following responsiveness issues in your app before you submit
 
 1. Content truncation.
 
-1. App isn't responsive to 100% screen resolution.
+1. App isn't responsive to 100 percent screen resolution.
 
 ### App package and store listing (metadata and manifest) 
 

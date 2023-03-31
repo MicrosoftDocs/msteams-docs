@@ -415,7 +415,12 @@ Icons are one of the main elements people see when browsing the Teams store.
 
 Your icons must communicate your app's brand and purpose while adhering to the following requirements:
 
-* The color and outline icon of your app submitted in the app listing must match.[*Mandatory Fix*]
+* The color icon and outline icon of your app submitted in the app listing must match.[*Mandatory Fix*]
+
+   :::image type="content" source="../../../../assets/images/submission/color-outline-icon-same.png" alt-text="Screenshot shows color icon and outline icon are same.":::
+
+   :::image type="content" source="../../../../assets/images/submission/color-outline-icon-not-same.png" alt-text="Screenshot shows color icon and outline icon aren’t same.":::
+
 * Your app package must include two .png versions of your app icon: A color icon and an outline icon. [*Mandatory Fix*]
 * The color version of your icon must be 192x192 pixels. Your icon symbol can be any color or colors, but it must sit on a solid or fully transparent square background. [*Mandatory Fix*]
 * The outline version of your icon is displayed in the following scenarios:
@@ -622,7 +627,7 @@ Remember the following:
 
 ## Videos 
 
-A video in your listing can be the most effective way to communicate why people should use your app. You can add a URL for your <b>YouTube or Vimeo video</b>. 
+A video in your listing can be the most effective way to communicate why people should use your app. You can add a URL for your  `YouTube or Vimeo video`. 
 
 If you choose to submit a video as part of your app listing in your Partner Center account, ensure the following:
 
@@ -630,6 +635,8 @@ If you choose to submit a video as part of your app listing in your Partner Cent
 * Turn off advertisements from your YouTube or Vimeo account settings before submitting the video link in the app listing. [*Mandatory Fix*]
 * The video showcases your app’s functionality and integration within Teams. [*Mandatory Fix*]
 * The video is available as a functional link. [*Mandatory Fix*]
+
+   :::image type="content" source="../../../../assets/images/submission/video-app-listing-partner-center.png" alt-text="Screenshot shows the failed scenario of video submitted as part of app listing in partner center.":::
 
 <br></br>
 
@@ -858,6 +865,10 @@ The following are the navigation guidelines:
    :::image type="content" source="../../../../assets/images/submission/validation-horizontal-scroll-in-list-view.png" alt-text="Graphic shows an example of horizontal scroll in list view.":::
 
 * The user must have back button option to go to previous work state.[*Mandatory Fix*]
+
+   :::image type="content" source="../../../../assets/images/submission/ back-button-available.png" alt-text=" Screenshot shows back button option available.":::
+
+   :::image type="content" source="../../../../assets/images/submission/ no-back-button-available.png" alt-text="Screenshot shows failed scenario of no back button option available.":::
 
 * Horizontal scroll in Adaptive Cards mustn't be present in Teams.[*Mandatory Fix*]
 
@@ -1498,8 +1509,13 @@ Shared meeting stage feature can only be launched through the Teams desktop app.
 
 ## Connector 
 
-* Connector name must be same as app name within the app and in the manifest provided.
-* While configuring the connector user must not encounter any error.
+1. Connector name must be same as app name within the app and in the manifest provided.
+
+   :::image type="content" source="../../../../assets/images/submission/ connector-mismatch-app-name.png" alt-text="Screenshot shows the mismatch in app name between app and manifest.”:::
+
+2. The user must not encounter any error While configuring the connector.
+
+   :::image type="content" source="../../../../assets/images/submission/ connector-error-configuring.png" alt-text="Screenshot shows an error while user configuring the connector.":::
 
 ## Notifications
 
