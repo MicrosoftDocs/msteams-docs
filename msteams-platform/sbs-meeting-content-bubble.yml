@@ -44,7 +44,6 @@ items:
      | --- | --- | --- |
      | **Required** | &nbsp; | &nbsp; |
      | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call and all in one place.|
-
      | &nbsp; | [Visual Studio 2022 version 17.3](https://visualstudio.microsoft.com)<br> | You can install the enterprise version in Visual Studio 2022, and install the workloads. Install one of the following two workloads:<br> • **ASP.NET and web development** <br> • **.NET Core cross-platform development** |
      | &nbsp; | [Visual Studio 2022 version 17.3](https://visualstudio.microsoft.com)<br> Install the <br> **ASP.NET and web development** workload.| You can install the enterprise version in Visual Studio 2022, and install the workloads. |
      | &nbsp; | [.NET Core SDK version 3.1](https://dotnet.microsoft.com/en-us/download) | Customized bindings for local debugging and Azure Functions app deployments. If you haven't installed the .NET 3.1 (or later) SDK globally, the portable version can be installed. |
@@ -417,7 +416,7 @@ items:
 
         :::image type="content" source="~/assets/images/meeting-content-bubble/upload-custom-app_1.png" alt-text="Screenshot of Teams apps with Upload a custom app highlighted in red."::: 
 
-    1. Select the upload the .zip file that you created in the **Manifest** folder and select **Open**.
+    1. Select the upload .zip file that you created in the **Manifest** folder and select **Open**.
 
         :::image type="content" source="~/assets/images/meeting-content-bubble/Zip-file_1.png" alt-text="Screenshot of manifest folder with in-meeting notification demo zip file and Open option highlighted in red.":::
 
@@ -433,7 +432,7 @@ items:
     
     1. **In-meeting notifications Demo** app sends an automatic reply to the meeting chat. You can send a targeted notification and also a in-meeting notification.
 
-         :::image type="content" source="~/assets/images/meeting-content-bubble/content-bubble-demo-first-reply.png" alt-text="Screenshot showing the suggestions in the Teams chat."::: 
+         :::image type="content" source="~/assets/images/meeting-content-bubble/desktop-and-mobile-image-final.png" alt-text="Screenshot showing the suggestions in the Teams chat."::: 
       
 - title: Complete challenge
   durationInMinutes: 1
