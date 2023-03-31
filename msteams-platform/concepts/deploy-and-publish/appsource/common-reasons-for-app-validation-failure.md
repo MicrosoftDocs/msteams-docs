@@ -309,56 +309,54 @@ Your offer listing must include a valid Terms of use link. Offers with invalid, 
 
 ## Common reasons for MetaOS validation failure
 
-### Microsoft 365 Re-Branding 
+### Microsoft 365 re-branding 
 
-Tab doesn't load or show an error page or message on the office client, when you replace the tab url from www.office.com/in to www.microsoft365.com/.
+Tab doesn't load or show an error page or message on the office client, when you replace the tab url from www.office.com/ to www.microsoft365.com/.
 
-### App Functionality 
+### App functionality 
 
-The Broken Functionality are visible in any of the following Hubs: 
+The app must not have the following broken functionalities in Outlook and Office hubs:
 
-1. Functionality cross-parity not maintained or missing across M365 Hubs.
+1. Functionality cross-parity isn't maintained or missing across Microsoft 365 hubs.
 
-1. Continuous loading indicator visible in tabs (Teams, Outlook or Office) and Bots (Teams).
+1. Continuous loading indicator visible in tabs (Teams, Outlook, or Office), and bots (Teams).
 
-1. Blank screen are visible in the Office or Outlook tab Hubs.
+1. Blank screen is visible in tabs in Office or Outlook hubs.
 
-1. Error message appears when adding app to Outlook or Office Hubs.
+1. Error message appears when adding app to Outlook or Office hubs.
 
-1. If a button dosn't perform the intended action on user selection, but performs the intended action after the session is refreshed.
+1. A button dosen't perform the intended action upon selection, but it does after the session is refreshed.
 
-1. Switch between the tabs requests for authentication again in Outlook Hub. 
+1. Switching between the tabs requests for authentication again in Outlook hub. 
 
-1. Select an intended feature in Office Hub opens two browser instances. 
+1. An intended feature in Office hub opens two browser instances upon selection 
 
-1. Select an intended feature in Outlook or Office throws an Error Message.
+1. An intended feature in Outlook or Office shows an error message upon selection.
 
 1. Unable to login to the app in Outlook.
 
 
-### App Responsiveness 
+### App responsiveness 
 
-Responsiveness issues visible in any of the Hubs: 
+You must avoid the following responsiveness issues in your app before you submit for review:
 
-1. Horizontal scroll bar visible in Tabs.
+1. Horizontal scroll bar in tabs.
 
-1. Content truncation visible.
+1. Content truncation.
 
-1. App not responsive to 100% screen resolution.
+1. App isn't responsive to 100% screen resolution.
 
-   * Office Hub: Case1: Close button doesn’t appear in 100% resolution.
+### App package and store listing (metadata and manifest) 
 
-   * Teams Hub: Case2: Data truncation in “My week Settings”. 
+You must avoid the following app package and store listing issues in your app before you submit for review:
 
-### App package & Store Listing (Metadata & Manifest) 
+* App listing screenshots are only relevant to Teams hub.
 
-* App listing screenshots only relevant to Teams Hub.
+* App description in the manifest or metadata is only relevant to Teams hub.
 
-* App description manifest or metadata only have relevant to Teams Hub.
+* Support URL, privacy policy, and terms of use content in the manifest or metadata is only relevant to Teams hub.
 
-* Support URL, Privacy policy, and terms of use content in manifest or metadata only have relevant to Teams Hub.
-
-* Provided test accounts are not working for targeted release, across all MetaOS Hubs.
+* Provided test accounts aren't working for targeted release, across all MetaOS hubs.
 
 [Back to top](#common-reasons-for-app-validation-failure)
 
