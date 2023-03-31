@@ -866,9 +866,9 @@ The following are the navigation guidelines:
 
 * The user must have back button option to go to previous work state.[*Mandatory Fix*]
 
-   :::image type="content" source="../../../../assets/images/submission/ back-button-available.png" alt-text=" Screenshot shows back button option available.":::
+   :::image type="content" source="../../../../assets/images/submission/back-button-available.png" alt-text=" Screenshot shows back button option available.":::
 
-   :::image type="content" source="../../../../assets/images/submission/ no-back-button-available.png" alt-text="Screenshot shows failed scenario of no back button option available.":::
+   :::image type="content" source="../../../../assets/images/submission/no-back-button-available.png" alt-text="Screenshot shows failed scenario of no back button option available.":::
 
 * Horizontal scroll in Adaptive Cards mustn't be present in Teams.[*Mandatory Fix*]
 
@@ -1511,11 +1511,11 @@ Shared meeting stage feature can only be launched through the Teams desktop app.
 
 1. Connector name must be same as app name within the app and in the manifest provided.
 
-   :::image type="content" source="../../../../assets/images/submission/ connector-mismatch-app-name.png" alt-text="Screenshot shows the mismatch in app name between app and manifest.”:::
+   :::image type="content" source="../../../../assets/images/submission/connector-mismatch-app-name.png" alt-text="Screenshot shows the mismatch in app name between app and manifest.":::
 
 2. The user must not encounter any error While configuring the connector.
 
-   :::image type="content" source="../../../../assets/images/submission/ connector-error-configuring.png" alt-text="Screenshot shows an error while user configuring the connector.":::
+   :::image type="content" source="../../../../assets/images/submission/connector-error-configuring.png" alt-text="Screenshot shows an error while user configuring the connector.":::
 
 ## Notifications
 
