@@ -111,7 +111,7 @@
     - name: Adaptive Cards
       href: task-modules-and-cards/cards/design-effective-cards.md
       displayName: column, ColumnSet 
-    - name: Task modules
+    - name: dialogs
       href: task-modules-and-cards/task-modules/design-teams-task-modules.md
       displayname: Forms
     - name: Activity feed notifications
@@ -308,7 +308,7 @@
     displayName: Cross-tenant notifications, context for shared channel, apps and permissions in shared channels
   - name: Build tabs with Adaptive Cards
     href: tabs/how-to/build-adaptive-card-tabs.md
-    displayName: Slow load times, iFrame constraints, invoke activities, task module, task fetch, task submit, authentication
+    displayName: Slow load times, iFrame constraints, invoke activities, task module, dialog, task fetch, task submit, authentication
   - name: Tabs link unfurling and Stage View
     href: tabs/tabs-link-unfurling.md
     displayName: Tab in stage view
@@ -407,10 +407,10 @@
     - name: Define action commands
       href: messaging-extensions/how-to/action-commands/define-action-command.md
       displayName: Command invoke locations, static list of parameters, action command manually
-    - name: Create and send task module
+    - name: Create and send dialog
       href: messaging-extensions/how-to/action-commands/create-task-module.md
       displayName: Initial invoke request, respond to fetchTask, payload activity, handleTeamsMessagingExtensionFetchTask
-    - name: Respond to the task module submit action
+    - name: Respond to the dialog submit action
       href: messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md
       displayName: Compose, Respond to initial submit action, configure the poll, attribution for bot messages, submit action
   - name: Search commands
@@ -511,7 +511,7 @@
   - name: Create and send messages
     href: webhooks-and-connectors/how-to/connectors-using.md
     displayName: Attachments, potentialAction, Send messages using cURL and PowerShell, Rate limiting for connectors, ActionCard
-- name: Build cards and task modules
+- name: Build cards and dialogs
   items:
   - name: Overview
     href: task-modules-and-cards/cards-and-task-modules.md
@@ -550,17 +550,17 @@
         displayName: Sequential Workflows
       - name: Up to date cards
         href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Up-To-Date-Views.md
-  - name: Build task modules
+  - name: Build dialogs
     items:
     - name: Overview
       href: task-modules-and-cards/what-are-task-modules.md
-    - name: Invoke and dismiss task modules
+    - name: Invoke and dismiss dialogs
       href: task-modules-and-cards/task-modules/invoking-task-modules.md
-      displayName: JavaScript task modules, keyboard and accessibility guidelines, module sizing, css
-    - name: Use task modules in tabs
+      displayName: JavaScript task modules, JavaScript dialogs, keyboard and accessibility guidelines, module sizing, css
+    - name: Use dialogs in tabs
       href: task-modules-and-cards/task-modules/task-modules-tabs.md
       displayName: payload
-    - name: Use task modules from bots
+    - name: Use dialogs from bots
       href: task-modules-and-cards/task-modules/task-modules-bots.md
 - name: Add authentication
   items:
