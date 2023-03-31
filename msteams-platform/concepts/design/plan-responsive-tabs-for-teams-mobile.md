@@ -146,7 +146,7 @@ In the first stage, you can consider desktop experience to show the content and 
 
 :::image type="content" source="../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-consumption.png" alt-text="Shows content and assets in desktop experience.":::
 
-Quick Actions:
+Quick actions:
 
 In the second stage, you can introduce the following actions:
 
