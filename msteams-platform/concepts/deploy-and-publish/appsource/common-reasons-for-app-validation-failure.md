@@ -325,7 +325,7 @@ The Broken Functionality are visible in any of the following Hubs:
 
 1. Error message appears when adding app to Outlook or Office Hubs.
 
-1. Clicking on buttons does not perform the action intended. But does so post refreshing the session.
+1. If a button dosn't perform the intended action on user selection, but performs the intended action after the session is refreshed.
 
 1. Switch between the tabs requests for authentication again in Outlook Hub. 
 
