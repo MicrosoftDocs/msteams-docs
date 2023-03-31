@@ -35,7 +35,6 @@ items:
 - title: Prerequisites
   durationInMinutes: 1
   content: |
-    
     The following are the prerequisites:
 
     * Ensure that you have a working knowledge of the [CSharp language](/dotnet/csharp/fundamentals/tutorials/how-to-display-command-line-arguments).
