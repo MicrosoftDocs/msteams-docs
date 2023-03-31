@@ -4,7 +4,7 @@ author: surbhigupta
 description: With this learning module, you'll learn how to plan for creating an app on Teams mobile and understand different stages to build app.
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.author: v-abirade
+ms.author: surbhigupta
 ---
 # Plan responsive tabs for Teams mobile
 
