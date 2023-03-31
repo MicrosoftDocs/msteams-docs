@@ -8,7 +8,7 @@ ms.localizationpriority: high
 ---
 # Create a Partner Center developer account
 
-To publish your app to the Microsoft Teams store, you must [set up your Partner Center developer account](/office/dev/store/open-a-developer-account). Depending on your scenario, you might be able to use an existing account.
+To publish your app to the Microsoft Teams store, you must [create your Partner Center developer account](/office/dev/store/open-a-developer-account). Depending on your scenario, you might be able to use an existing account.
 
 ## FAQ
 

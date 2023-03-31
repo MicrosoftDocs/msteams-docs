@@ -33,8 +33,7 @@ Alternately, you can send files to and receive files from a bot using the Teams 
 
 ## Use the Teams bot APIs
 
-> [!NOTE]
-> Teams bot APIs work only in the `personal` context. They do not work in the `channel` or `groupchat` context.
+Teams bot APIs work only in the `personal` context. They don't work in the `channel` or `groupchat` context.
 
 Using Teams APIs, the bot can directly send and receive files with users in the `personal` context, also known as personal chats. Implement features, such as expense reporting, image recognition, file archival, and e-signatures involving the editing of file content. Files shared in Teams typically appear as cards and allow rich in-app viewing.
 
@@ -317,7 +316,7 @@ The following code sample demonstrates how to obtain file consent and upload fil
 
 |**Sample name** | **Description** | **.NET** | **Node.js** | **Python**| **Manifest**|
 |----------------|-----------------|--------------|----------------|-----------|-----------|
-| File upload | Demonstrates how to obtain file consent and upload files to Teams from a bot. Also, how to receive a file sent to a bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-file-upload/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-file-upload/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-file-upload/python) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-file-upload/csharp/demo-manifest/bot-file-upload.zip)|
+| File upload | This sample shows how to obtain file consent and upload files to Teams using bot. Also, how to receive a file sent to a bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-file-upload/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-file-upload/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-file-upload/python) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-file-upload/csharp/demo-manifest/bot-file-upload.zip)
 
 ## Step-by-step guide
 

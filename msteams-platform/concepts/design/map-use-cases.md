@@ -89,6 +89,9 @@ For example:
 * Use the **tab** capability to display task modules, request device permissions, display <`iframe`> content, or using deep links.
 * Use the **message extension** capability to send cards, unfurl links, or take action on messages.
 
+> [!NOTE]
+> You can also explore the capability to add meeting app extensibility to your Teams app. For more information, see [apps for Teams meetings and calls](../../apps-in-teams-meetings/teams-apps-in-meetings.md).
+
 ## See also
 
 * [Plan your app with Teams features](../app-fundamentals-overview.md)
