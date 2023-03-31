@@ -26,7 +26,7 @@ After you've identified the app scope, it's time to understand the following thr
 
    View apps on mobile. To build an app on mobile, you can start with the consumption experience. Since the mobile world has made scrolling for content a common practice, you can show relevant information. Use engagement mechanisms, such as notifications to inform updates.
 
-2. **Quick Actions**
+2. **Quick actions**
 
    Use app on mobile. After your users start consuming the content on mobile, you can scale your app to the next level by migrating some actions from desktop app. You can optimize and build new actions for mobile.
 
