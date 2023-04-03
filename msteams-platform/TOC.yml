@@ -430,8 +430,13 @@
   - name: Enable and configure apps for Teams meetings
     items:
     - name: Build tabs for meeting
-      href: apps-in-teams-meetings/build-tabs-for-meeting.md
-      displayName: anonymous, app caching, launch time
+      items:
+      - name: Overview
+        href: apps-in-teams-meetings/build-tabs-for-meeting.md
+        displayName: anonymous
+      - name: Enable app caching for your tab app
+        href: apps-in-teams-meetings/build-tabs-for-meeting.md
+        displayName: app caching, launch time
     - name: Build apps for meeting stage
       href: apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md
       displayName: MicrosoftTeams.meeting.getAppContentStageSharingState
