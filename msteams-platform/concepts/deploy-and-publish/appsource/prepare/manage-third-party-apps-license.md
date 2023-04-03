@@ -1,5 +1,5 @@
 ---
-title: Set up and manage license for third party apps in Teams
+title: Set up Microsoft license for third party apps in Partner Center
 description: Learn to manage SaaS licenses for third party apps purchased from Teams storefront. 
 author: heath-hamilton
 ms.author: surbhigupta
@@ -7,7 +7,7 @@ ms.topic: how-to
 ms.localizationpriority: high
 ---
 
-# Set up and manage licenses for third party apps in Teams
+# Set up Microsoft license for third party apps in Partner Center
 
 Teams allows independent software vendors (ISVs) admins or users to manage SaaS licenses for third party apps purchased from Teams storefront. ISV admins or users can easily assign, unassign, use, and track SaaS licenses.
 
