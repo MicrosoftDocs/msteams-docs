@@ -1513,7 +1513,7 @@ Shared meeting stage feature can only be launched through the Teams desktop app.
 
    :::image type="content" source="../../../../assets/images/submission/connector-mismatch-app-name.png" alt-text="Screenshot shows the mismatch in app name between app and manifest.":::
 
-2. The user must not encounter any error While configuring the connector.
+2. The user must not encounter any error while configuring the connector.
 
    :::image type="content" source="../../../../assets/images/submission/connector-error-configuring.png" alt-text="Screenshot shows an error while user configuring the connector.":::
 
@@ -1644,7 +1644,7 @@ After an internal Microsoft review, if the compliance demonstration is satisfact
 
 * Mobile add-ins must be free. There mustn't be any in-app content or links that promote upselling, online stores, or other requests for payment. Any accounts required for apps must have no charge for use and if time-limited, mustn't include any content indicating a need to pay. [*Mandatory Fix*]
 
-   :::image type="content" source="../../../../assets/images/submission/validation-mobile-add-in-charges.png" alt-text="Graphic shows an example of a mobile aPridd-in asking for payment.":::
+   :::image type="content" source="../../../../assets/images/submission/validation-mobile-add-in-charges.png" alt-text="Graphic shows an example of a mobile add-in asking for payment.":::
 
 * Use of the word **FREE**, **FREE TRIAL**, or **TRY FREE** is allowed on desktop or web app experience without any limitation or consideration.
 
