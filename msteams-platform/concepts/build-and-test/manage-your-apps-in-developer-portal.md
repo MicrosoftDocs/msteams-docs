@@ -79,7 +79,7 @@ In the **Advanced** section, you can see the following components to manage your
 
 * **App content**: You can configure your app with the following features:
   
-  * **Loading indicator**: Displays an indicator to let users know your hosted app content (for example, Tabs and Task modules) is loading.
+  * **Loading indicator**: Displays an indicator to let users know your hosted app content (for example, Tabs and Dialogs) is loading.
   * **Full-screen mode**: Displays a personal app without an app header. It's supported for the published apps to your org.
   * **Supported channel types**: Lists the non-standard channel types that the app supports.
   * **Default group capability**: For apps that support multiple group capabilities, such as teams, group chat, or meetings, select the default capability to navigate users when you add your app from the store.

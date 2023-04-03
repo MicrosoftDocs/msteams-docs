@@ -22,7 +22,7 @@ items:
     
     * Changes required to be made to the app manifest.
     * Identifies how the invoke activity requests and sends information in tab with the Adaptive Cards.
-    * Effects on the task module workflow.
+    * Effects on the dialog workflow.
     
     This step-by-step guide helps you to build tabs with the Adaptive Cards on desktop and mobile. You'll see the following output:
 

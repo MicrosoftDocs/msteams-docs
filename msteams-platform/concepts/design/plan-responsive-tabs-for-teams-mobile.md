@@ -8,7 +8,7 @@ ms.author: v-abirade
 ---
 # Plan responsive tabs for Teams mobile
 
- Teams platform offers opportunity to build apps on mobile and desktop. Your app users can prefer either desktop or mobile, or both. The users can prepare data on desktop but consume and share more data using mobile. The key to build any app is to understand and meet users' needs. There are capabilities like bots, message extensions, and connectors that work seamlessly on desktop and mobile. However, building tabs and task modules require planning for hosting your web experience on Teams mobile. The article guides to plan your responsive web pages on Teams mobile.
+ Teams platform offers opportunity to build apps on mobile and desktop. Your app users can prefer either desktop or mobile, or both. The users can prepare data on desktop but consume and share more data using mobile. The key to build any app is to understand and meet users' needs. There are capabilities like bots, message extensions, and connectors that work seamlessly on desktop and mobile. However, building tabs and dialogs require planning for hosting your web experience on Teams mobile. The article guides to plan your responsive web pages on Teams mobile.
 
 ## Identify apps scope
 
@@ -51,7 +51,7 @@ You can understand how to plan responsive tabs for dashboarding and data visuali
 
 Consumption:
 
-In the first stage, you can implement the most basic consumption experience, to view data. The purpose of any app in the domain is to show data in the form of visualizations. In your app, you can show recently viewed visualizations on desktop, or list of all authorized charts for the users. After creating dashboards on desktop, users can access the information using mobile. You can show a detailed view of any chart selected by user as an expanded view in your tabs or by using task modules.
+In the first stage, you can implement the most basic consumption experience, to view data. The purpose of any app in the domain is to show data in the form of visualizations. In your app, you can show recently viewed visualizations on desktop, or list of all authorized charts for the users. After creating dashboards on desktop, users can access the information using mobile. You can show a detailed view of any chart selected by user as an expanded view in your tabs or by using dialogs.
 
 You can show the following information:
 
@@ -73,7 +73,7 @@ In the second stage, the users can work on the existing charts and visuals from 
 
 Enablement:
 
-In the third stage, enable users to create content such as, charts and graphics from scratch. Ensure to introduce all the capabilities in your app for mobile. For example, you can use task modules to help access specific data items with detailed view.
+In the third stage, enable users to create content such as, charts and graphics from scratch. Ensure to introduce all the capabilities in your app for mobile. For example, you can use dialogs to help access specific data items with detailed view.
 
 You can provide following access to users:
 
@@ -108,7 +108,7 @@ In the second stage, you can provide the following app access to users:
 * Create tasks or items with the mandatory fields to reduce cognitive load of the users.
 * Change the board type or view.
 * Review tasks by expanding the view.
-* Use task modules to see detailed view.
+* Use dialogs to see detailed view.
 * Move the tasks into different categories.
 * Share relevant tasks in chats and channels through emails and activity feed.
 
@@ -180,6 +180,6 @@ In the third stage, provide complete experience to your users. You can enable us
 * [Plan your app with Teams features](../app-fundamentals-overview.md)
 * [Designing your tab](../../tabs/design/tabs.md)
 * [Designing your bot](../../bots/design/bots.md)
-* [Designing task modules](../..//task-modules-and-cards/task-modules/design-teams-task-modules.md)
+* [Designing dialogs](../..//task-modules-and-cards/task-modules/design-teams-task-modules.md)
 * [Store validation guidelines](../deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)
 * [Tabs on mobile](../../tabs/design/tabs-mobile.md)

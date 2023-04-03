@@ -25,7 +25,7 @@ With Teams, you can build your app in a feature-rich environment. Using Teams as
 | Webhooks and connectors | Communicate with external apps, and send or receive notifications and messages from other apps. | Subscribe to receive notifications and messages from your web services. |
 | Microsoft Graph | Microsoft Graph is the gateway to data and intelligence in Microsoft 365 and can be incorporated in any kind of Teams app. | Create, manage, find, and archive large number of teams and populate them with users and channels. |
 | Adaptive Card | Cards help you organize information into groups and give users the opportunity to interact with specific parts of the information. | Sharing using text and images; gathering information using input forms. |
-| Task modules | Task modules permit you to create modal pop-up experiences in your Teams application. | Run your own custom HTML or JavaScript code. Show an <`iframe`>-based widget such as a YouTube or Microsoft Stream video. |
+| Dialogs | Dialogs permit you to create modal pop-up experiences in your Teams application. | Run your own custom HTML or JavaScript code. Show an <`iframe`>-based widget such as a YouTube or Microsoft Stream video. |
 
 ## Dive deeper
 

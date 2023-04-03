@@ -550,7 +550,7 @@
       href: task-modules-and-cards/what-are-task-modules.md
     - name: Invoke and dismiss dialogs
       href: task-modules-and-cards/task-modules/invoking-task-modules.md
-      displayName: JavaScript task modules, JavaScript dialogs, keyboard and accessibility guidelines, module sizing, css
+      displayName: JavaScript task modules, dialog, JavaScript dialogs, keyboard and accessibility guidelines, module sizing, css
     - name: Use dialogs in tabs
       href: task-modules-and-cards/task-modules/task-modules-tabs.md
       displayName: payload

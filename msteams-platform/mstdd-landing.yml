@@ -178,7 +178,7 @@ landingContent:
       url: ~/apps-in-teams-meetings/teams-apps-in-meetings.md
     - text: Build webhooks and connectors
       url: ~/webhooks-and-connectors/what-are-webhooks-and-connectors.md
-    - text: Build cards and task modules
+    - text: Build cards and dialogs
       url: ~/task-modules-and-cards/cards-and-task-modules.md
     - text: App manifest
       url: ../msteams-platform/resources/schema/manifest-schema.md
@@ -223,7 +223,7 @@ landingContent:
           url: ~/sbs-file-handling-in-bot.yml
         - text: Generate meeting content bubble
           url: ~/sbs-meeting-content-bubble.yml
-        - text: Invoke task modules from Microsoft Teams
+        - text: Invoke dialogs from Microsoft Teams
           url: ~/sbs-botbuilder-taskmodule.yml
         - text: Build search based message extension
           url: ~/sbs-messagingextension-searchcommand.yml

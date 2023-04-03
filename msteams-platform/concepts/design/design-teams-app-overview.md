@@ -182,4 +182,4 @@ Design Adaptive Cards in our web-based tool.
 * [Enable and configure your apps for meeting stage](../../apps-in-teams-meetings/build-tabs-for-meeting.md)
 * [Designing your Microsoft Teams bot](~/bots/design/bots.md)
 * [Create Virtual Assistant](~/samples/virtual-assistant.md)
-* [Designing task modules for your Microsoft Teams app](~/task-modules-and-cards/task-modules/design-teams-task-modules.md)
+* [Designing dialogs for your Microsoft Teams app](~/task-modules-and-cards/task-modules/design-teams-task-modules.md)

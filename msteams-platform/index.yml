@@ -70,7 +70,7 @@ conceptualContent:
           text: Create task-oriented interactions with message extensions
         - url: /training/modules/msteams-task-modules/
           itemType: learn
-          text: Collect input and gather information with task modules
+          text: Collect input and gather information with dialogs
         - url: /training/modules/msteams-webhooks-connectors/
           itemType: learn
           text: Connect web services to channels and teams with webhooks and connectors for Microsoft 365 Groups
@@ -95,7 +95,7 @@ conceptualContent:
           text: Apps for Teams meetings
         - url: /microsoftteams/platform/task-modules-and-cards/cards-and-task-modules
           itemType: concept
-          text: Cards and task modules
+          text: Cards and dialogs
         - url: /microsoftteams/platform/webhooks-and-connectors/what-are-webhooks-and-connectors
           itemType: overview
           text: Webhooks and connectors

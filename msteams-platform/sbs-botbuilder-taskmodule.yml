@@ -1,30 +1,30 @@
 ### YamlMime:Tutorial
-title: Invoke task modules from Microsoft Teams
+title: Invoke dialogs from Microsoft Teams
 metadata:
-  title: Invoke task modules from Microsoft Teams
-  description: With this learning module, learn how to set up Teams task module by using Adaptive Cards or Bot Framework cards.
+  title: Invoke dialogs from Microsoft Teams
+  description: With this learning module, learn how to set up Teams dialog by using Adaptive Cards or Bot Framework cards.
   audience: Developer
   level: Beginner
   ms.date: 23/02/2022
   ms.topic: interactive-tutorial
   nextTutorialHref: task-modules-and-cards/task-modules/task-modules-bots.md
-  nextTutorialTitle: Read more on task modules from bots
+  nextTutorialTitle: Read more on dialogs from bots
   ms.custom: mvc
   ms.localizationpriority: High
 items:
 - durationInMinutes: 1
   content: |
-    You can invoke task modules from Teams bots by using Adaptive Cards or Bot Framework cards.
+    You can invoke dialogs from Teams bots by using Adaptive Cards or Bot Framework cards.
 
-    **Key features of task modules:**
+    **Key features of dialogs:**
 
     * Enhance user experience by avoiding multiple steps.
     * Help users to keep track of the bot state.
     * Retrieve input from user and display custom web page content.
 
-    This step-by-step guide helps you to create a sample Azure bot to invoke Teams task module. You'll see the following output:
+    This step-by-step guide helps you to create a sample Azure bot to invoke Teams dialog. You'll see the following output:
 
-     :::image type="content" source="./assets/images/Teams-task-module/final_image.png" alt-text="Task module":::
+     :::image type="content" source="./assets/images/Teams-task-module/final_image.png" alt-text="Dialog":::
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -395,7 +395,7 @@ items:
    
     :::image type="content" source="~/assets/images/Teams-task-module/dotnetrun.png" alt-text="Screenshot shows the command prompt of dotnet run."::: 
 
-- title: Upload Task Module app
+- title: Upload Dialog app
   durationInMinutes: 1
   content: |
     1. In your cloned repository, go to **samples** > **bot-task-module** > **csharp** > **TeamsAppManifest**.
@@ -492,5 +492,5 @@ items:
        :::image type="content" source="./assets/images/Teams-task-module/final_image.png" alt-text="Task module":::
 
 - content: |
-    You've completed the tutorial to get started with Teams task module app!
+    You've completed the tutorial to get started with Teams dialog app!
 
