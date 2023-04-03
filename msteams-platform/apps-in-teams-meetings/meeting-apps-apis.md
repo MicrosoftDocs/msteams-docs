@@ -41,7 +41,7 @@ To identify and retrieve contextual information for your tab content, see [get c
 
 1. Meeting type
 
-# [Channel meeting](#tab/channel-meeting)
+   # [Channel meeting](#tab/channel-meeting)
 
    The following is a JSON payload example for a channel meeting:
 
@@ -128,7 +128,7 @@ To identify and retrieve contextual information for your tab content, see [get c
     }
    ```
 
-# [Scheduled meeting](#tab/scheduled-meeting)
+   # [Scheduled meeting](#tab/scheduled-meeting)
 
    The following is a JSON payload example for a scheduled meeting:
 
@@ -195,9 +195,9 @@ To identify and retrieve contextual information for your tab content, see [get c
 
 ---
 
-2. User type
+1. User type
 
-# [Guest user](#tab/guest-user)
+   # [Guest user](#tab/guest-user)
 
    The following is a JSON payload example for a scheduled meeting for a guest user:
 
@@ -268,7 +268,7 @@ To identify and retrieve contextual information for your tab content, see [get c
      }
    ```
 
-# [Anonymous user](#tab/anonymous-user)
+   # [Anonymous user](#tab/anonymous-user)
 
    The following is a JSON payload example for a scheduled meeting for an anonymous user:
 
@@ -308,7 +308,7 @@ To identify and retrieve contextual information for your tab content, see [get c
     }
    ```
 
-# [External user](#tab/external-user)
+   # [External user](#tab/external-user)
 
    The following is a JSON payload example for a scheduled meeting for an external user:
 
@@ -375,9 +375,9 @@ To identify and retrieve contextual information for your tab content, see [get c
 
 ---
 
-3. Call type
+1. Call type
 
-# [One-on-One call](#tab/one-on-one-call)
+   # [One-on-One call](#tab/one-on-one-call)
 
    The following is a JSON payload example for a One-on-one call:
 
@@ -449,7 +449,7 @@ To identify and retrieve contextual information for your tab content, see [get c
 
    ```
 
-# [Group call](#tab/group-call)
+   # [Group call](#tab/group-call)
 
    The following is a JSON payload example for a group chat call:
 
