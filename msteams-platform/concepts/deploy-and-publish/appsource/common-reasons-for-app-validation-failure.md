@@ -319,7 +319,7 @@ The app must not have the following broken functionalities in Outlook and Micros
 
 1. Functionality cross-parity isn't maintained or missing across Microsoft 365 client.
 
-1. Continuous loading indicator visible in tabs for Teams apps extensible across Microsoft 365 and bots (Teams).
+1. Continuous loading indicator visible in tabs for Teams apps extensible across Microsoft 365.
 
 1. Blank screen is visible in tabs for Teams apps extensible across Microsoft 365.
 
@@ -333,19 +333,19 @@ The app must not have the following broken functionalities in Outlook and Micros
 
 1. An intended feature in Teams apps extensible across Microsoft 365 shows an error message upon selection.
 
-   * Content in the <b>Help</b> tab must be publicly available to learn more about the app offering. The app must not ask for authentication. 
+1. Content in the <b>Help</b> tab must be publicly available to learn more about the app offering. The app must not ask for authentication.
 
-   * No sign-out option present within tab. 
+1. No sign-out option present within tab. 
 
-   * Content in the <b>Help</b> or <b>About</b> tab related to Teams clients. 
+1. Content in the <b>Help</b> or <b>About</b> tab related to Teams clients. 
 
-   * Tab having duplicate Header or Logo.
+1. Tab having duplicate Header or Logo.
 
-   * The user unable to revert last action or doesn't have back button option to go to previous work state.
+1. The user unable to revert last action or doesn't have back button option to go to previous work state.
 
-   * Content in the app is specific to Teams only.
+1. Content in the app is specific to Teams only.
 
-   * Incorrect reference to Teams app extensible across Microsoft 365.
+1. Incorrect reference to Teams app extensible across Microsoft 365.
 
 1. Unable to login to the app in Outlook.
 
