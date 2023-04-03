@@ -222,11 +222,13 @@ The example payload which contains static and dynamic typeahead search with sing
                   "value": "static_option_3"
                 }
               ],
+              "value": "Static_option_2",
               "isMultiSelect": true,
               "style": "filtered",
               "choices.data": {
                 "type": "Data.Query",
-                "dataset": "xbox"
+                "dataset": "npmpackages",
+                "count":12
               },
               "id": "choiceGameMulti",
               "type": "Input.ChoiceSet"
