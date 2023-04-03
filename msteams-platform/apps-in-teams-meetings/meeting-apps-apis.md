@@ -36,7 +36,7 @@ The following table provides a list of APIs available across the Microsoft Teams
 ## Get user context API
 
 To identify and retrieve contextual information for your tab content, see [get context for your Teams tab](../tabs/how-to/access-teams-context.md#get-context-by-using-the-microsoft-teams-javascript-library). `meetingId` is used by a tab running in the meeting context and is added for the response payload.
-
+<br/>
 <details><summary>The following is a JSON payload example for a channel meeting: </summary>
 
 ```json
