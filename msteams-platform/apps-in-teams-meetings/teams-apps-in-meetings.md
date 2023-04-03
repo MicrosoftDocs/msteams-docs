@@ -103,7 +103,7 @@ A meeting lifecycle includes pre-meeting, in-meeting, and post-meeting app exper
 
 ### App caching for tab app in Teams meeting
 
-You can configure your tab app to enable app caching to reduce the reload time of your app during a meeting. The app reloads from the cache, which improves the app relaunch time within the meeting. For more information, see [enable app caching for your tab app](build-tabs-for-meeting.md#app-caching).
+You can configure your tab app to enable app caching to reduce the reload time of your app during a meeting. The app reloads from the cache, which improves the app relaunch time within the meeting. For more information, see [enable app caching for your tab app](app-caching-for-your-tab-app.md).
 
 ## User types in Teams
 
