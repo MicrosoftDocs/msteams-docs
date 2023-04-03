@@ -192,7 +192,6 @@ To identify and retrieve contextual information for your tab content, see [get c
      }
 
    ```
-
    ---
 
 1. User type
@@ -372,7 +371,6 @@ To identify and retrieve contextual information for your tab content, see [get c
     }
 
    ```
-
    ---
 
 1. Call type
@@ -520,7 +518,7 @@ To identify and retrieve contextual information for your tab content, see [get c
     }
     
    ```
----
+   ---
 
 ## Get participant API
 
