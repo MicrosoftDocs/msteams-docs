@@ -27,7 +27,7 @@ The following image is an example of link unfurling in Teams desktop and mobile 
 
 When the Azure DevOps link is pasted into the Teams compose message area, the link unfurls into a card with the work item details.
 
-:::image type="content" source="../../assets/images/tdp/link-unfurling.png" alt-text="Screenshot of link urfurling example for an Adaptive Card pasted in teams compose message area.":::
+:::image type="content" source="../../assets/images/messaging-extension/messagingextensions_linkunfurl.png" alt-text="Screenshot of link unfurling example for Azure Dev Ops links pasted in teams compose message area.":::
 
 # [Mobile](#tab/mobile)
 
@@ -39,7 +39,7 @@ When the app link is pasted into the Teams compose message area, the link unfurl
 
 See the following video to learn more about link unfurling:
 <br>
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWZdFE]
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OFZG]
 <br>
 
 ## Add link unfurling to your app manifest
@@ -116,14 +116,54 @@ After adding the domain to the app manifest, you must update your web service co
 
 The following card types are supported:
 
+* [Adaptive Card](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 * [Thumbnail card](~/task-modules-and-cards/cards/cards-reference.md#thumbnail-card)
 * [Hero card](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
 * [Connector card for Microsoft 365 Groups](../../task-modules-and-cards/cards/cards-reference.md#connector-card-for-microsoft-365-groups)
-* [Adaptive Card](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 
 For more information, see [Action type invoke](~/task-modules-and-cards/cards/cards-actions.md#action-type-invoke).
 
 The following is an example of the `invoke` request:
+
+# [JSON](#tab/json)
+
+ Following is an example of the `invoke` sent to your bot:
+
+```json
+   {
+     "type": "invoke",
+     "name": "composeExtension/queryLink",
+     "value": {
+       "url": "https://theurlsubmittedbyyouruser.trackeddomain.com/id/1234"
+     }
+   }
+```
+
+Following is an example of the response:
+
+```json
+{
+ "composeExtension":
+   {
+     "type": "result",
+     "attachmentLayout": "list",
+     "attachments": 
+     [
+       {
+         "contentType": "application/vnd.microsoft.card.adaptive",
+         "preview": 
+          {
+            "contentType": "application/vnd.microsoft.card.adaptive",
+            "content": << Card Payload >>
+          },
+          "contentType": "application/vnd.microsoft.card.adaptive",
+          "content": << Card Payload >>
+       }
+      ]
+   }
+}
+      
+```
 
 # [C#](#tab/dotnet)
 
@@ -190,46 +230,6 @@ attachment.preview = {
 contentType: "application/vnd.microsoft.card.thumbnail",
 }
 
-```
-
-# [JSON](#tab/json)
-
-   Following is an example of the `invoke` sent to your bot:
-
-```json
-   {
-     "type": "invoke",
-     "name": "composeExtension/queryLink",
-     "value": {
-       "url": "https://theurlsubmittedbyyouruser.trackeddomain.com/id/1234"
-     }
-   }
-```
-
-Following is an example of the response:
-
-```json
-{
- "composeExtension":
-   {
-     "type": "result",
-     "attachmentLayout": "list",
-     "attachments": 
-     [
-       {
-         "contentType": "application/vnd.microsoft.card.adaptive",
-         "preview": 
-          {
-            "contentType": "application/vnd.microsoft.card.adaptive",
-            "content": << Card Payload >>
-          },
-          "contentType": "application/vnd.microsoft.card.adaptive",
-          "content": << Card Payload >>
-       }
-      ]
-   }
-}
-      
 ```
 
 ---
