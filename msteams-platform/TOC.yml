@@ -435,7 +435,7 @@
         href: apps-in-teams-meetings/build-tabs-for-meeting.md
         displayName: anonymous
       - name: Enable app caching for your tab app
-        href: apps-in-teams-meetings/build-tabs-for-meeting.md
+        href: apps-in-teams-meetings/app-caching-for-your-tab-app.md
         displayName: app caching, launch time
     - name: Build apps for meeting stage
       href: apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md
