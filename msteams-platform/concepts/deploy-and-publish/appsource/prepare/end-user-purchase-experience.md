@@ -1,5 +1,5 @@
 ---
-title: End-user purchase experience
+title: Purchase and manage app subscriptions and licenses
 description: Learn how to purchase, assign, and manage licenses for third party apps in Teams. 
 author: heath-hamilton
 ms.author: surbhigupta
@@ -7,7 +7,7 @@ ms.topic: how-to
 ms.localizationpriority: high
 ---
 
-# End-user purchase experience
+# Purchase and manage app subscriptions and licenses
 
 Add functionality to your Teams experience by subscribing and managing licenses for apps made just for Teams. When you add an app to Teams, check if additional features are available through subscription. You can purchase subscriptions and manage licenses for yourself, your team, or your organization directly from the Teams store.
 
