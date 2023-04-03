@@ -625,7 +625,7 @@ Remember the following:
 
 </details>
 
-## Videos 
+### Videos 
 
 A video in your listing can be the most effective way to communicate why people should use your app. You can add a URL for your  `YouTube or Vimeo video`. 
 

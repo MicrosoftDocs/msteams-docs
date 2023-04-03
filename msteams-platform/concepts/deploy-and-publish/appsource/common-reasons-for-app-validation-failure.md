@@ -307,7 +307,7 @@ Your offer listing must include a valid Terms of use link. Offers with invalid, 
 [Back to top](#common-reasons-for-app-validation-failure)
 
 
-## Common reasons for Teams apps extensible across Microsoft 365 validation failure
+## Teams apps extensible across Microsoft 365
 
 ### Microsoft 365 re-branding 
 
