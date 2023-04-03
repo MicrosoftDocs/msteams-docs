@@ -41,7 +41,7 @@ To enable license management for an app in Teams, follow the steps:
 
    :::image type="content" source="~/assets/images/first-party-license-mgt/saas.png" alt-text="The screenshots shows how to enter Offer ID and Offer alias in the Partner Center.":::
 
-1. In Offer setup page, under setup details, select the checkbox **Yes, I would like Microsoft to manage customer licenses on my behalf**.
+1. In the Offer setup page, under setup details, select the checkbox **Yes, I would like Microsoft to manage customer licenses on my behalf**.
 
    :::image type="content" source="~/assets/images/first-party-license-mgt/saas-isvpilot.png" alt-text="The screenshots shows the offer setup page to setup license to manage for your app within Teams.":::
 
