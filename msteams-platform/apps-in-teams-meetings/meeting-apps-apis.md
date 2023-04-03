@@ -36,8 +36,12 @@ The following table provides a list of APIs available across the Microsoft Teams
 ## Get user context API
 
 To identify and retrieve contextual information for your tab content, see [get context for your Teams tab](../tabs/how-to/access-teams-context.md#get-context-by-using-the-microsoft-teams-javascript-library). `meetingId` is used by a tab running in the meeting context and is added for the response payload.
-<br/>
-<details><summary>The following is a JSON payload example for a channel meeting: </summary>
+
+The following table shows the JavaScript V2 JSON payload response based on meeting type:
+
+# [Channel meeting](#tab/channel-meeting)
+
+The following is a JSON payload example for a channel meeting:
 
 ```json
 {
@@ -122,10 +126,9 @@ To identify and retrieve contextual information for your tab content, see [get c
 }
 ```
 
-</details>
-</br>
+# [Scheduled meeting](#tab/scheduled-meeting)
 
-<details><summary>The following is a JSON payload example for a scheduled meeting: </summary>
+The following is a JSON payload example for a scheduled meeting:
 
 ```json
  {
@@ -188,10 +191,13 @@ To identify and retrieve contextual information for your tab content, see [get c
 
 ```
 
-</details>
-</br>
+---
 
-<details><summary>The following is a JSON payload example for a scheduled meeting for a guest user: </summary>
+The following table shows the JavaScript V2 JSON payload response based on user type:
+
+# [Guest user](#tab/guest-user)
+
+The following is a JSON payload example for a scheduled meeting for a guest user:
 
 ```json
  {
@@ -260,10 +266,9 @@ To identify and retrieve contextual information for your tab content, see [get c
  }
 ```
 
-</details>
-</br>
+# [Anonymous user](#tab/anonymous-user)
 
-<details><summary>The following is a JSON payload example for a scheduled meeting for an anonymous user: </summary>
+The following is a JSON payload example for a scheduled meeting for an anonymous user:
 
 ```json
 {
@@ -301,10 +306,9 @@ To identify and retrieve contextual information for your tab content, see [get c
 }
 ```
 
-</details>
-</br>
+# [External user](#tab/external-user)
 
-<details><summary>The following is a JSON payload example for a scheduled meeting for an external user: </summary>
+The following is a JSON payload example for a scheduled meeting for an external user:
 
 ```json
 {
@@ -367,8 +371,11 @@ To identify and retrieve contextual information for your tab content, see [get c
 
 ```
 
-</details>
-</br>
+---
+
+The following table shows the JavaScript V2 JSON payload response based on call type:
+
+# [One-on-One call](#tab/one-on-one-call)
 
 <details><summary>The following is a JSON payload example for a One-on-one call: </summary>
 
@@ -440,10 +447,9 @@ To identify and retrieve contextual information for your tab content, see [get c
 
 ```
 
-</details>
-</br>
+# [Group call](#tab/group-call)
 
-<details><summary>The following is a JSON payload example for a group chat call: </summary>
+The following is a JSON payload example for a group chat call:
 
 ```json
 {
@@ -513,7 +519,7 @@ To identify and retrieve contextual information for your tab content, see [get c
 
 ```
 
-</details>
+---
 
 ## Get participant API
 
