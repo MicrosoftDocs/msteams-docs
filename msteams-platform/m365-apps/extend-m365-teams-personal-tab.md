@@ -243,7 +243,7 @@ To preview your app running in Microsoft 365 on the web:
 
     :::image type="content" source="images/office-web-more-apps.png" alt-text="The screenshot is an example that shows the (More apps) option on the side bar of microsoft365.com to see your installed personal tabs.":::
 
-### Microsoft 365 app for Mobile (Android/iOS)
+### Microsoft 365 app for Mobile (Android)
 
 To view your app running in Microsoft 365 app for Mobile:
 

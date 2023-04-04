@@ -117,26 +117,25 @@ Install the Microsoft 365 app to preview your Teams personal tab app running on 
 
 #### iOS
 
-You can preview Teams personal tabs running in Microsoft 365 app for iOS by installing the prerelease version on the [App Center website](https://appcenter.ms/) in your browser of choice.
+You can preview Teams personal tabs running in Outlook app for iOS by installing the prerelease version on the [App Center website](https://appcenter.ms/) in your browser of choice.
 
-Install the Microsoft 365 app to preview your Teams personal tab app running on your iOS device:
+Install the Outlook app to preview your Teams personal tab app running on your iOS device:
 
 1. In your iOS browser of choice. Visit the [App Center website](https://appcenter.ms/) and login with your test tenant account.
 1. Search for the latest beta version for your app of choice. 
-    1. For Microsoft 365 app (formerly Office), search office and select **Microsoft 365 app**.
     1. For Outlook, search outlook and select **Microsoft Outlook**.
 1. Select the **Install** button.
 
-    :::image type="content" source="images/m365-ios-install.png" alt-text="The screenshot is an example that shows the install button for the Microsoft 365 (Office) app in App Center.":::
+    :::image type="content" source="images/outlook-ios-install.png" alt-text="The screenshot is an example that shows the install button for the Outlook app in App Center.":::
 
 1. iOS restricts apps from being downloaded from the browser, to approve the app for use, **Open Settings Apps > General > VPN & Device Management**. 
 1. Under Enterprise App select Microsoft Corporation. Within this menu select **Trust "Microsoft Corporation"** to enable 
 
     :::image type="content" source="images/trusted-enterprise-developer.png" alt-text="The screenshot shows the message to Trust iPhone Distribution: Microsoft Corporation  Untrusted Enterprise Developer.":::
 
-1. Open the Microsoft 365  or Outlook app and sign in with your test tenant credentials.
+1. Open the Outlook app and sign in with your test tenant credentials.
 1. Open your profile **(Me) > Settings** and scroll to the bottom of the menu.
-1. Ensure that you use Microsoft 365 app version 2.72.23030700 or higher for iOS and Outlook app version 4.2310.0 (18999702) or higher for iOS.
+1. Ensure that you use Outlook app version 4.2310.0 (18999702) or later for iOS.
 
 ## Install Visual Studio Code and Teams Toolkit extension
 
