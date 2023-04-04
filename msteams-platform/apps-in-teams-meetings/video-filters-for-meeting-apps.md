@@ -360,7 +360,7 @@ You can upload the video filter app to your organization's store or publish the 
 
         The following is example of an app manifest with the `applicableLicenseCategories` property:
 
-        :::image type="content" source="../assets/images/apps-in-meetings/video-filters-edu-tenant-manifest.png" alt-text="Screenshot shows an example of app manifest with applicableLicenseCategories property.":::
+        :::image type="content" source="../assets/images/apps-in-meetings/video-filters-edu-tenant-manifest.png" alt-text="Screenshot shows an example of app manifest with applicableLicenseCategories property." lightbox="../assets/images/apps-in-meetings/video-filters-edu-tenant-manifest.png":::
 
      1. [Publish your app to the Microsoft Teams store](../concepts/deploy-and-publish/appsource/publish.md).
 
