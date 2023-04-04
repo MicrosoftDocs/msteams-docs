@@ -23,7 +23,7 @@ Teams Toolkit codespaces allows you to experience a Teams app in a few steps. Yo
 
 To use codespaces for creating a Teams tab app:
 
-[![Open notification app in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?hide_repo_select=true&ref=dol%2Fcodespaces&repo=348288141&machine=standardLinux32gb&devcontainer_path=.devcontainer%2Fhello-world-tab-codespaces%2Fdevcontainer.json&location=WestUs2&azure-portal=true)
+<a href="https://github.com/codespaces/new?hide_repo_select=true&amp;ref=dol%2Fcodespaces&amp;repo=348288141&amp;machine=standardLinux32gb&amp;devcontainer_path=.devcontainer%2Fhello-world-tab-codespaces%2Fdevcontainer.json&amp;location=WestUs2" target="_blank"><img src="https://github.com/codespaces/badge.svg" alt="Open hello-world tab in GitHub Codespaces"></a>
 
 1. Click the button above to open Codespaces. You may be asked to login to GitHub if you haven't.
 1. Select **Create codespaces**. The Setting up your codespace page appears. Teams Toolkit prepares the app project for you and opens it in Visual Studio Code in the browser. Teams Toolkit icon appears in the activity bar of Visual Studio Code.
@@ -34,7 +34,6 @@ To use codespaces for creating a Teams tab app:
 > [!TIP]
 > Your browser may block a pop-up to prevent to open a new browser tab or window.  
 > You need to allow pop-ups so that Codespace can sideload the app to Teams client in another tab.
-
 
 ## Use step-by-step guide to build a basic tab app
 
