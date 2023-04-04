@@ -26,7 +26,7 @@ Teams platform features that are available to all app developers.
 
 **2023 April**
 
-* ***April 4, 2023***: [Tab apps in shared channel are available in DOD](~/concepts/build-and-test/shared-channels.md)
+* ***April 4, 2023***: [Tab apps in shared channels are available in DOD](~/concepts/build-and-test/shared-channels.md)
 
 :::column-end:::
 :::row-end:::
