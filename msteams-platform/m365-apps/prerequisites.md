@@ -112,7 +112,7 @@ Install the Microsoft 365 app to preview your Teams personal tab app running on 
 
 1. Launch the Microsoft 365 app and sign in with your test tenant credentials.
 1. Open your profile **(Me) > Settings** and scroll to the bottom of the menu.
-1. Ensure that you use Microsoft 365 app version 16.0.15726.20000 or higher for Android and Outlook app version 4.2247.1 (52247812) or higher for Android.
+1. Ensure that you use Microsoft 365 app version 16.0.15726.20000 or later for Android and Outlook app version 4.2247.1 (52247812) or later for Android.
 
 
 #### iOS
