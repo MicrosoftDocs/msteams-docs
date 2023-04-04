@@ -257,6 +257,10 @@ To get an edit or undelete message event notification in a bot, you can override
 * For edit: `OnTeamsMessageEditAsync`
 * For undelete: `OnTeamsMessageUndeleteAsync`
 
+> [!NOTE]
+>
+>The `OnTeamsMessageEditAsync` handler isn’t supported in group chat and teams channel scopes.
+
 The following is an example of an edit message event notification when a sent message is edited:
 
 # [C#](#tab/dotnet3)
@@ -456,11 +460,6 @@ PUT {Service URL of your bot}/v3/conversations/{conversationId}/activities/{acti
 ```
 
 ---
-
-> [!NOTE]
->
->* `OnTeamsMessageEditAsync` isn’t supported for the specific event in group chat and teams channel scope.
-
 
 ## Soft delete message
 
