@@ -435,7 +435,7 @@ There can be more authentication or authorization solutions for an API, you can 
 
 ## Connect to existing APIs
 
-If you don't have the required SDK, and want to invoke external APIs in your code. The `Teams: Connect to an API` command in Microsoft Visual Studio Code Teams Toolkit extension, or `teamsfx add api-connection` command in TeamsFx CLI can be used to bootstrap code to call target APIs. For more information, see [connect to existing API](../../../toolkit/add-API-connection.md#steps-to-connect-to-api).
+If you don't have the required SDK, and want to invoke external APIs in your code. The `Teams: Connect to an API` command in Microsoft Visual Studio Code Teams Toolkit extension, or `teamsfx add api-connection` command in TeamsFx CLI can be used to bootstrap code to call target APIs. For more information, see [configure API connection](../../../toolkit/add-API-connection.md#configure-api-connection).
 
 ### Teams bot application or Teams Incoming Webhook
 
