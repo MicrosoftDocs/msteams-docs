@@ -9,7 +9,7 @@ ms.localizationpriority: high
 
 # Set up Microsoft license management
 
-You can set up Microsoft license management for third party apps in Partner Center to allows independent software vendor (ISV) admins or users to manage SaaS licenses for third party apps purchased from Teams storefront. ISV admins or users to easily assign, unassign, use, and track SaaS licenses within Teams.
+Independent software vendors (ISVs) can configure Microsoft license management for third party SaaS apps in Partner Center as part of the offer publishing. This allows Teams admins or users to easily assign, unassign, use, and track SaaS licenses for their third party app subscriptions within Teams.
 
 To enable license management for a third party app in Teams, follow the steps:
 
@@ -111,7 +111,7 @@ You can call Graph APIs to determine if the currently logged in user with a vali
    > [!NOTE]
    >
    > * You need to have minimum `User.Read` permissions to call UsageRights.
-   > The UsageRights API is currently in beta version. After the version is updated to V1, ISV users should upgrade from beta to V1 version.
+   > The UsageRights API is currently in beta version. After the version is updated to V1, users should upgrade from beta to V1 version.
    > * If the Azure AD app is used for both SaaS Fulfillment APIs and UsageRights API, ensure that the tenant under which the Azure AD app is created is either the publishing tenant or the associated tenant in the Partner Center.
 
 To determine if the tenant for the Azure AD app is part of the Partner Center setup, follow these steps:
