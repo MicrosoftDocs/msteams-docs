@@ -47,6 +47,8 @@ The following steps helps you to open Teams Developer Portal from Visual Studio 
 
 1. Teams Toolkit will open your app in **Teams Developer Portal** and direct you to the **Publish to your org** page, from there you can select **Publish your app** to continue with your publishing process.
 
+---
+
 ## To update Manifest file and app package
 
 If there are any changes related to Teams app's manifest file, you can update the manifest and publish the Teams app again. To publish Teams app manually, you can use [Developer Portal for Teams](https://dev.teams.microsoft.com/home).
