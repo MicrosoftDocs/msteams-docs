@@ -116,3 +116,4 @@ The following table shows the changes that you can see in the files of your app 
 * [Authenticate users in Microsoft Teams](../concepts/authentication/authentication.md)
 * [Provision cloud resources](provision.md)
 * [Create new Teams project](create-new-project.md)
+* [Combine bots with tabs](../resources/bot-v3/bots-with-tabs.md)
