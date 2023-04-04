@@ -457,6 +457,11 @@ PUT {Service URL of your bot}/v3/conversations/{conversationId}/activities/{acti
 
 ---
 
+> [!NOTE]
+>
+>* `OnTeamsMessageEditAsync` isn’t supported for the specific event in group chat and teams channel scope.
+
+
 ## Soft delete message
 
 When you soft delete a message in a chat, the bot gets a notification of the soft delete message event.
