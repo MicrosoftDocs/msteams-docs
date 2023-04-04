@@ -259,7 +259,7 @@ To get an edit or undelete message event notification in a bot, you can override
 
 > [!NOTE]
 >
->The `OnTeamsMessageEditAsync` handler isn’t supported in group chat and teams channel scopes.
+>The `OnTeamsMessageEditAsync` handler isn’t supported in group chat and Teams channel scopes.
 
 The following is an example of an edit message event notification when a sent message is edited:
 
