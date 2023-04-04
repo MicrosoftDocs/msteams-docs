@@ -23,21 +23,21 @@ Following are the steps to open your app in Visual Studio Code:
 
     :::image type="content" source="../../assets/images/tdp/open-in-teams-toolkit.png" alt-text="Screenshot shows the Developer Portal with Open in Teams Toolkit highlighted in red. ":::
 
-1. Select **Open Link**
+1. Select **Open**
 
     :::image type="content" source="../../assets/images/tdp/open-link.png" alt-text="Screenshot shows Developer Preview page with Open option highlighted in red.":::
 
 1. Select **Open**. Sign in to your Microsoft 365 account.
 
-1. Select your preferred programming language.
+1. Select your preferred **Programming Language**.
 
     :::image type="content" source="../../assets/images/tdp/select-programmimg-language.png" alt-text="Screenshot shows Teams Toolkit with Select a programming language highlighted in red.":::
 
-1. Select your workspace folder.
+1. Select your **Workspace folder**.
 
     :::image type="content" source="../../assets/images/tdp/workspace-folder.png" alt-text="Screenshot shows the Teams Toolkit with workspace folder highlighted in red":::
 
-1. Enter your application name.
+1. Enter **Application name**.
 
     :::image type="content" source="../../assets/images/tdp/select-application-name.png" alt-text="Screenshot of Teams Toolkit with Application name highlighted in red.":::
 
