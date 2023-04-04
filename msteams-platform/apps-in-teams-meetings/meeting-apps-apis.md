@@ -39,11 +39,13 @@ To identify and retrieve contextual information for your tab content, see [get c
 
 ### Examples
 
+The following are the TeamsJS v2 SDK JSON responses for Get user context API based on meeting type, user type and call type:
+
 1. Meeting type
 
    # [Channel meeting](#tab/channel-meeting)
 
-   The following is a JSON payload example for a channel meeting:
+   The following is a JSON payload response for a channel meeting:
 
    ```json
     {
@@ -130,7 +132,7 @@ To identify and retrieve contextual information for your tab content, see [get c
 
    # [Scheduled meeting](#tab/scheduled-meeting)
 
-   The following is a JSON payload example for a scheduled meeting:
+   The following is a JSON payload response for a scheduled meeting:
 
    ```json
      {
@@ -198,7 +200,7 @@ To identify and retrieve contextual information for your tab content, see [get c
 
    # [Guest user](#tab/guest-user)
 
-   The following is a JSON payload example for a scheduled meeting for a guest user:
+   The following is a JSON payload response in a scheduled meeting for a guest user:
 
    ```json
      {
@@ -269,7 +271,7 @@ To identify and retrieve contextual information for your tab content, see [get c
 
    # [Anonymous user](#tab/anonymous-user)
 
-   The following is a JSON payload example for a scheduled meeting for an anonymous user:
+   The following is a JSON payload response in a scheduled meeting for an anonymous user:
 
    ```json
     {
@@ -309,7 +311,7 @@ To identify and retrieve contextual information for your tab content, see [get c
 
    # [External user](#tab/external-user)
 
-   The following is a JSON payload example for a scheduled meeting for an external user:
+   The following is a JSON payload response in a scheduled meeting for an external user:
 
    ```json
     {
@@ -377,7 +379,7 @@ To identify and retrieve contextual information for your tab content, see [get c
 
    # [One-on-One call](#tab/one-on-one-call)
 
-   The following is a JSON payload example for a One-on-one call:
+   The following is a JSON payload response for a One-on-one call:
 
    ```json
     {
@@ -449,7 +451,7 @@ To identify and retrieve contextual information for your tab content, see [get c
 
    # [Group call](#tab/group-call)
 
-   The following is a JSON payload example for a group chat call:
+   The following is a JSON payload response for a group chat call:
 
    ```json
     {
