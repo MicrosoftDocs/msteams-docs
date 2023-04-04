@@ -676,8 +676,8 @@ It's easy to send multiple cards into a conversation, but once cards scroll out 
 
 ## See also
 
-* [Cards and task modules](~/task-modules-and-cards/cards-and-task-modules.md)
-* [Cards and task modules supported in Teams bot](~/task-modules-and-cards/what-are-task-modules.md)
+* [Cards and dialogs](~/task-modules-and-cards/cards-and-task-modules.md)
+* [Cards and dialogs supported in Teams bot](~/task-modules-and-cards/what-are-task-modules.md)
 * [Work with Universal Actions for Adaptive Cards](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/work-with-universal-actions-for-adaptive-cards.md)
-* [Respond to the task module submit action](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
+* [Respond to the dialog submit action](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
 * [User Specific Views](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/user-specific-views.md)

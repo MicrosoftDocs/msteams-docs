@@ -116,7 +116,7 @@ You can get started by updating scenarios using the [quick start guide].(Work-wi
 
 ## See also
 
-* [Cards and task modules](../../cards-and-task-modules.md)
+* [Cards and dialogs](../../cards-and-task-modules.md)
 * [Build bots for Teams](../../../bots/what-are-bots.md)
 * [Adaptive Cards overview](~/task-modules-and-cards/what-are-cards.md)
 * [Adaptive Cards @ Microsoft Build 2020](https://youtu.be/hEBhwB72Qn4?t=1393)

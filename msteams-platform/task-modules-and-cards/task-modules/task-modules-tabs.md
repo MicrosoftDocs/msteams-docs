@@ -87,9 +87,9 @@ The next section gives an example of invoking a dialog.
 
 The following image displays the dialog (task module):
 
-:::image type="content" source="../../assets/images/task-module/task-module-custom-form.png" alt-text="Task Module Custom Form":::
+:::image type="content" source="../../assets/images/task-module/task-module-custom-form.png" alt-text="Dialog Custom Form":::
 
-The following code is adapted from [the task module sample](~/task-modules-and-cards/task-modules/invoking-task-modules.md#code-sample):
+The following code is adapted from [the dialog sample](~/task-modules-and-cards/task-modules/invoking-task-modules.md#code-sample):
 
 # [TeamsJs v1](#tab/teamsjs2)
 
@@ -240,10 +240,10 @@ function validateForm() {
 }
 ```
 
-## Task module invocation errors
+## Dialog invocation errors
 
 > [!NOTE]
-> This section pertains to usage patterns for the `tasks` (task module) namespace, which is now deprecated in favor of the `dialog` namespace and its HTML (`url`), Adaptive Card (`adaptiveCard`), and bot (`dialog.url.bot` and `dialog.adaptiveCard.bot`) sub-namespaces.
+> This section pertains to usage patterns for the `tasks` (dialog) namespace, which is now deprecated in favor of the `dialog` namespace and its HTML (`url`), Adaptive Card (`adaptiveCard`), and bot (`dialog.url.bot` and `dialog.adaptiveCard.bot`) sub-namespaces.
 
 The following table provides the possible values of `err` that can be received by your `submitHandler`:
 
@@ -252,13 +252,13 @@ The following table provides the possible values of `err` that can be received b
 | Values for both `TaskInfo.url` and `TaskInfo.card` were specified. | Values for both card and URL were specified. One or the other, but not both, are allowed. |
 | Neither `TaskInfo.url` nor `TaskInfo.card` specified. | You must specify a value for either card or URL. |
 | Invalid `appId`. | Invalid app ID. |
-| User selected X button, closing it. | User canceled or closed the task module. |
+| User selected X button, closing it. | User canceled or closed the dialog. |
 
 ## Code sample
 
 |Sample name | Description | .NET | Node.js | Manifest
 |----------------|-----------------|--------------|----------------|----------------|
-|Task module sample bots-V4 | This sample shows how to create task modules using bot framework v4 and teams tabs. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/csharp/demo-manifest/bot-task-module.zip)
+|Dialog sample bots-V4 | This sample shows how to create dialogs using bot framework v4 and teams tabs. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/csharp/demo-manifest/bot-task-module.zip)
 
 ## Next step
 

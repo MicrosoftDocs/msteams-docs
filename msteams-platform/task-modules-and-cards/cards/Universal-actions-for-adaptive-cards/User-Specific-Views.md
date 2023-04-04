@@ -244,7 +244,7 @@ The following list provides card design guidelines for User Specific Views:
 
 ## See also
 
-* [Cards and task modules](../../cards-and-task-modules.md)
+* [Cards and dialogs](../../cards-and-task-modules.md)
 * [Work with Universal Actions for Adaptive Cards](Work-with-Universal-Actions-for-Adaptive-Cards.md)
 * [Up to date cards](Up-To-Date-Views.md)
 * [Cards](../../what-are-cards.md)

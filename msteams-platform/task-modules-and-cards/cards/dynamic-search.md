@@ -414,5 +414,5 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
 
 ## See also
 
-* [Cards and task modules](../cards-and-task-modules.md)
+* [Cards and dialogs](../cards-and-task-modules.md)
 * [Universal Actions for Adaptive Cards](Universal-actions-for-adaptive-cards/Overview.md)

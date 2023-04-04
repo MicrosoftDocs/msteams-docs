@@ -170,7 +170,7 @@ The goal is to focus the user on completing a task after all!
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/usability-dont.png" alt-text="Example showing a dialog best practice (pop a dialog on top of a task module).":::
+:::image type="content" source="../../assets/images/task-module/usability-dont.png" alt-text="Example showing a dialog best practice (pop a dialog on top of a dialog).":::
 
 #### Don't: Pop a dialog on top of a dialog
 
