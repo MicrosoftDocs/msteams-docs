@@ -227,8 +227,7 @@ The example payload which contains static and dynamic typeahead search with sing
               "style": "filtered",
               "choices.data": {
                 "type": "Data.Query",
-                "dataset": "npmpackages",
-                "count":12
+                "dataset": "xbox"
               },
               "id": "choiceGameMulti",
               "type": "Input.ChoiceSet"
