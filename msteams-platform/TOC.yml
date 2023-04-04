@@ -431,7 +431,7 @@
     items:
     - name: Build tabs for meeting
       items:
-      - name: Overview
+      - name: Enable your tabs for Teams meeting
         href: apps-in-teams-meetings/build-tabs-for-meeting.md
         displayName: anonymous
       - name: Enable app caching for your tab app
