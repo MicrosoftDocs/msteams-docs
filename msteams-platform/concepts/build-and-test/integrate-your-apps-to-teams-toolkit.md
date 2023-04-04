@@ -23,21 +23,23 @@ Following are the steps to open your app in Visual Studio Code:
 
     :::image type="content" source="../../assets/images/tdp/open-in-teams-toolkit.png" alt-text="Screenshot shows the Developer Portal with Open in Teams Toolkit highlighted in red. ":::
 
-1. Select **Open**
+1. Select **Open**.
+
+    :::image type="content" source="../../assets/images/tdp/select-open.png" alt-text="Screenshot of browser with Open option highlighted in red.":::
+
+1. Select **Open**. If required, sign in to your Microsoft 365 account.
 
     :::image type="content" source="../../assets/images/tdp/open-link.png" alt-text="Screenshot shows Developer Preview page with Open option highlighted in red.":::
 
-1. Select **Open**. Sign in to your Microsoft 365 account.
-
-1. Select your preferred **Programming Language**.
+1. Select your preferred programming language.
 
     :::image type="content" source="../../assets/images/tdp/select-programmimg-language.png" alt-text="Screenshot shows Teams Toolkit with Select a programming language highlighted in red.":::
 
-1. Select your **Workspace folder**.
+1. Select your workspace folder.
 
     :::image type="content" source="../../assets/images/tdp/workspace-folder.png" alt-text="Screenshot shows the Teams Toolkit with workspace folder highlighted in red":::
 
-1. Enter **Application name**.
+1. Enter application name.
 
     :::image type="content" source="../../assets/images/tdp/select-application-name.png" alt-text="Screenshot of Teams Toolkit with Application name highlighted in red.":::
 
@@ -45,7 +47,7 @@ Following are the steps to open your app in Visual Studio Code:
 
     :::image type="content" source="../../assets/images/tdp/select-ok.png" alt-text="Screenshot shows Teams Toolkit with OK option highlighted in red.":::
 
-1. Teams Toolkit would then scaffold your project, you now are ready to start development.
+1. Teams Toolkit scaffolds your project, you now are ready to start development.
 
     :::image type="content" source="../../assets/images/tdp/scaffold.png" alt-text="Screenshot showing the scaffolding of your project. ":::
 
