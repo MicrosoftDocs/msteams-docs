@@ -82,4 +82,5 @@ Admins can manage the app subscriptions and licenses in the Teams admin center. 
 
 ## See also
 
-[Monetize your app](monetize-overview.md)
+* [Monetize your app](monetize-overview.md)
+* [Set up Microsoft license management for third party apps](manage-third-party-apps-license.md)
