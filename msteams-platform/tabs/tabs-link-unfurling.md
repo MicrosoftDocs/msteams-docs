@@ -21,11 +21,11 @@ Stage View is a full screen UI component that you can invoke to surface your web
 
 Stage View helps provide a more seamless experience of viewing content in Teams. Users can open and view the content provided by your app without leaving the context, and they can pin the content to the chat or channel for future quick access leading to a higher user engagement with your app.
 
-## Stage View vs. Task module
+## Stage View vs. Dialog
 
-|Stage View|Task module|
+|Stage View|Dialog|
 |:-----------|:-----------|
-|Stage View is useful when you have rich content to display to the users, such as a page, a dashboard, a file, and so on. It provides rich features that help to render your content in the full-screen canvas.|[Task module](../task-modules-and-cards/task-modules/task-modules-tabs.md) is especially useful to display messages that require user attention, or collect information required to move to the next step.|
+|Stage View is useful when you have rich content to display to the users, such as a page, a dashboard, a file, and so on. It provides rich features that help to render your content in the full-screen canvas.|[Dialog](../task-modules-and-cards/task-modules/task-modules-tabs.md) is especially useful to display messages that require user attention, or collect information required to move to the next step.|
   
 ## Invoke Stage View
 

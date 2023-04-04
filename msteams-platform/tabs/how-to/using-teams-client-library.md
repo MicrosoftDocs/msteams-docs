@@ -26,7 +26,7 @@ The remainder of this article will walk you through the structure and latest upd
 
 TeamsJS v.2.0 introduces the ability for certain types of Teams apps to run across the Microsoft 365 ecosystem. Currently, other Microsoft 365 application hosts (including Microsoft 365 app and Outlook) for Teams apps support a subset of the application types and capabilities you can build for the Teams platform. This support will expand over time. For a summary of host support for Teams apps, see [Extend Teams apps across Microsoft 365](../../m365-apps/overview.md).
 
-The following table lists Teams tabs and dialogs (task modules) capabilities (public namespaces) with expanded support to run in other Microsoft 365 hosts.
+The following table lists Teams tabs and dialogs (dialogs) capabilities (public namespaces) with expanded support to run in other Microsoft 365 hosts.
 
 > [!TIP]
 > Check for host support of a given capability at runtime by calling the `isSupported()` function on that capability (namespace).
@@ -100,7 +100,7 @@ For any other external deep linking scenarios, you can use `app.openLink`, which
 
 ### Dialogs
 
-Starting with version 2.0 of TeamsJS, the Teams platform concept of [task module](../../task-modules-and-cards/what-are-task-modules.md) has been renamed to *dialog* for better consistency with existing concepts across the Microsoft 365 developer ecosystem. Accordingly, the `tasks` namespace has been deprecated in favor of the new `dialog` namespace.
+Starting with version 2.0 of TeamsJS, the Teams platform concept of [dialog](../../task-modules-and-cards/what-are-task-modules.md) has been renamed to *dialog* for better consistency with existing concepts across the Microsoft 365 developer ecosystem. Accordingly, the `tasks` namespace has been deprecated in favor of the new `dialog` namespace.
 
 The new `dialog` capability is split into two subcapabilities: `dialog.url` for HTML-based dialogs, and `dialog.adaptiveCard` for Adaptive Card-based dialogs. Functions used for communication between an app and its dialog have been moved into the `dialog.url` subcapability (as these only ever worked for HTML-based dialogs). For Adaptive Card dialogs, a new function `microsoftTeams.getAdaptiveCardSchemaVersion` has been added to check what schema version is supported by the host currently running your app. If the host doesn't support Adaptive Cards, it will return `undefined`.
 

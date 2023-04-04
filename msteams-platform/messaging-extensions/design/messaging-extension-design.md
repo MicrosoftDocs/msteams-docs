@@ -75,7 +75,7 @@ You have some options for displaying message extension search results, including
 
 Action commands allow people to trigger actions and process requests in external services within Teams. For example, if your app tracks orders, a user could create a new order using the contents of a colleague’s message from right inside their chat.
 
-Action-based message extensions frequently require users to complete a form or some other kind of configuration within a modal. You can create these experiences with [task modules](../../task-modules-and-cards/task-modules/design-teams-task-modules.md).
+Action-based message extensions frequently require users to complete a form or some other kind of configuration within a modal. You can create these experiences with [dialogs](../../task-modules-and-cards/task-modules/design-teams-task-modules.md).
 
 ## Open a message extension
 
@@ -255,9 +255,9 @@ If it makes sense for your use cases, consider creating a search-based message e
    :::column span="":::
 :::image type="content" source="../../assets/images/messaging-extension/templating-dont.png" alt-text="Example of handling design work.":::
 
-#### Don't: Embed your entire app in a task module
+#### Don't: Embed your entire app in a dialog
 
-If your message extension requires action commands, keep the task module simple and display only the components required to complete the action.
+If your message extension requires action commands, keep the dialog simple and display only the components required to complete the action.
 
    :::column-end:::
 :::row-end:::

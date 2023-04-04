@@ -81,7 +81,7 @@ You can also retrieve the context information using the [Microsoft Teams JavaScr
     "iconPositionVertical": "",
     "locale": "The current locale of the user formatted as languageId-countryId (for example, en-us)",
     "osLocaleInfo": "",
-    "parentMessageId": "The parent message ID from which this task module is launched",
+    "parentMessageId": "The parent message ID from which this dialog is launched",
     "sessionId": "The unique ID for the current session used for correlating telemetry data",
     "theme": "The current UI theme: default | dark | contrast",
     "userClickTime": "",
@@ -167,7 +167,7 @@ The following code provides an example of context variable:
     "sharepoint": "The SharePoint context is available only when hosted in SharePoint",
     "tenantSKU": "The license type for the current user tenant. Possible values are enterprise, free, edu, unknown",
     "userLicenseType": "The license type for the current user",
-    "parentMessageId": "The parent message ID from which this task module is launched",
+    "parentMessageId": "The parent message ID from which this dialog is launched",
     "ringId": "The current ring ID",
     "appSessionId": "The unique ID for the current session used for correlating telemetry data",
     "isCallingAllowed": "Indicates if calling is allowed for the current logged in user",
@@ -365,4 +365,4 @@ The `theme` argument in the function is a string with a value of `default`, `dar
 * [Enable SSO for tab app](authentication/tab-sso-overview.md)
 * [Microsoft Teams Connect shared channels](../../concepts/build-and-test/shared-channels.md)
 * [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
-* [Use task modules in tabs](../../task-modules-and-cards/task-modules/task-modules-tabs.md)
+* [Use dialogs in tabs](../../task-modules-and-cards/task-modules/task-modules-tabs.md)

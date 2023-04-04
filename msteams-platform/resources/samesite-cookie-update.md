@@ -1,7 +1,7 @@
 ---
 title: SameSite cookie attribute 
 author: laujan
-description: Learn about Types of cookies, including SameSite cookies, their attributes, their implications in Teams tabs, task modules, and message extensions, and their authentication in Teams
+description: Learn about Types of cookies, including SameSite cookies, their attributes, their implications in Teams tabs, dialogs, and message extensions, and their authentication in Teams
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur
@@ -52,10 +52,10 @@ SameSite cookie attributes are as follows:
 > [!NOTE]
 > You must set SameSite attributes to reflect the intended use for your cookies. Do not rely on default browser behavior. For more information, see [Developers: Get Ready for New SameSite=None; Secure Cookie Settings](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html).
 
-### Tabs, task modules, and message extensions
+### Tabs, dialogs, and message extensions
 
 * Teams tabs use `<iframes>` to embed content that is viewed at a top level or first party context.
-* Task modules allow you to create modal pop-up experiences in your Teams application. Similar to a tab, a modal window opens inside the current page.
+* Dialogs allow you to create modal pop-up experiences in your Teams application. Similar to a tab, a modal window opens inside the current page.
 * Message extensions allow you to insert enriched content into a chat message from external resources.
 
 Any cookies used by embedded content are considered as third party when the site is displayed in an `<iframe>`. In addition, if any remote resources on a page rely on cookies being sent with a request `<img>` and `<script>` tags, external fonts, and personalized content, you must ensure those are marked for cross site usage, such as `SameSite=None; Secure` or ensure that a fallback is in place.
@@ -65,8 +65,8 @@ Any cookies used by embedded content are considered as third party when the site
 You must use the web based authentication flow for the following:
 
 * Embedded content pages in tabs.
-* Configuration page, task module, and message extension.
-* Conversational bot with a task module.
+* Configuration page, dialog, and message extension.
+* Conversational bot with a dialog.
 
 According to the updated SameSite restrictions, a browser doesn't add a cookie to an already authenticated web site if the link derives from an external site. You must ensure your authentication cookies are marked for cross site usage `SameSite=None; Secure` or ensure that a fallback is in place.
 

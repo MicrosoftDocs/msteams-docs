@@ -256,7 +256,7 @@ CardFactory.actions([
 
 ## Action type invoke
 
-The `invoke` action is used for invoking [task modules](~/task-modules-and-cards/task-modules/task-modules-bots.md).
+The `invoke` action is used for invoking [dialogs](~/task-modules-and-cards/task-modules/task-modules-bots.md).
 
 The `invoke` action contains three properties, `type`, `title`, and `value`.
 
@@ -427,7 +427,7 @@ You can also modify the Adaptive Card `Action.Submit` payload to support existin
 
 > [!NOTE]
 >
->* Adding `msteams` to data with a Bot Framework action does not work with an Adaptive Card task module.
+>* Adding `msteams` to data with a Bot Framework action does not work with an Adaptive Card dialog.
 >
 >* Primary or desctuctive `ActionStyle` is not supported in Microsoft Teams.
 
@@ -577,6 +577,6 @@ The following code shows an example of Adaptive Cards with `invoke` action with 
 
 * [Cards reference](./cards-reference.md)
 * [Types of cards](cards-reference.md)
-* [Use task modules from bots](~/task-modules-and-cards/task-modules/task-modules-bots.md)
+* [Use dialogs from bots](~/task-modules-and-cards/task-modules/task-modules-bots.md)
 * [Adaptive Cards in bots](../../bots/how-to/conversations/conversation-messages.md#adaptive-cards)
 * [Form completion feedback](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)

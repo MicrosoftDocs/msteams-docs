@@ -29,7 +29,7 @@ The following image displays the business functions of Virtual Assistant:
 
 ## Create a Teams-focused Virtual Assistant
 
-Microsoft has published a [Microsoft template](https://botbuilder.myget.org/feed/aitemplates/package/nuget/Microsoft.Bot.Solutions.VirtualAssistantTemplate) for building Virtual Assistants and skills. With the template, you can create a Virtual Assistant, powered by a text based experience with support for limited rich cards with actions. We've enhanced template to include Microsoft Teams platform capabilities and power great Teams app experiences. A few of the capabilities include support for rich Adaptive Cards, task modules, teams or group chats, and message extensions. For more information on extending Virtual Assistant to Microsoft Teams, see [Tutorial: Extend Your Virtual Assistant to Microsoft Teams](https://microsoft.github.io/botframework-solutions/clients-and-channels/tutorials/enable-teams/1-intro/).
+Microsoft has published a [Microsoft template](https://botbuilder.myget.org/feed/aitemplates/package/nuget/Microsoft.Bot.Solutions.VirtualAssistantTemplate) for building Virtual Assistants and skills. With the template, you can create a Virtual Assistant, powered by a text based experience with support for limited rich cards with actions. We've enhanced template to include Microsoft Teams platform capabilities and power great Teams app experiences. A few of the capabilities include support for rich Adaptive Cards, dialogs, teams or group chats, and message extensions. For more information on extending Virtual Assistant to Microsoft Teams, see [Tutorial: Extend Your Virtual Assistant to Microsoft Teams](https://microsoft.github.io/botframework-solutions/clients-and-channels/tutorials/enable-teams/1-intro/).
 The following image displays the high level diagram of a Virtual Assistant solution:
 
 :::image type="content" source="../assets/images/bots/virtual-assistant/high-level-diagram.png" alt-text="Diagram that shows Virtual Assistant solution.":::
@@ -121,9 +121,9 @@ Virtual Assistant can handle interruptions in cases where a user tries to invoke
 
 :::image type="content" source="../assets/images/bots/virtual-assistant/switch-skills-prompt.png" alt-text="Screenshot of the confirmation prompt when switching to a new skill.":::
 
-### Handle task module requests
+### Handle dialog requests
 
-To add task module capabilities to a Virtual Assistant, two additional methods are included in the Virtual Assistant activity handler: `OnTeamsTaskModuleFetchAsync` and `OnTeamsTaskModuleSubmitAsync`. These methods listen to task module-related activities from Virtual Assistant, identify the skill associated with the request, and forward the request to the identified skill.
+To add dialog capabilities to a Virtual Assistant, two additional methods are included in the Virtual Assistant activity handler: `OnTeamsTaskModuleFetchAsync` and `OnTeamsTaskModuleSubmitAsync`. These methods listen to dialog-related activities from Virtual Assistant, identify the skill associated with the request, and forward the request to the identified skill.
 
 Request forwarding is done through the [SkillHttpClient](/dotnet/api/microsoft.bot.builder.integration.aspnet.core.skills.skillhttpclient?view=botbuilder-dotnet-stable&preserve-view=true), `PostActivityAsync` method. It returns the response as `InvokeResponse` which is parsed and converted to `TaskModuleResponse` .
 
@@ -164,13 +164,13 @@ Request forwarding is done through the [SkillHttpClient](/dotnet/api/microsoft.b
         }
 ```
 
-A similar approach is followed for card action dispatching and task module responses. Task module fetch and submit action data is updated to include `skillId`.
+A similar approach is followed for card action dispatching and dialog responses. Dialog fetch and submit action data is updated to include `skillId`.
 Activity Extension method `GetSkillId` extracts `skillId` from the payload which provides details about the skill that needs to be invoked.
 
 The code snippet for `OnTeamsTaskModuleFetchAsync` and `OnTeamsTaskModuleSubmitAsync` methods are given in the following section:
 
 ```csharp
-    // Invoked when a "task/fetch" event is received to invoke task module.
+    // Invoked when a "task/fetch" event is received to invoke dialog.
     protected override async Task<TaskModuleResponse> OnTeamsTaskModuleFetchAsync(ITurnContext<IInvokeActivity> turnContext, TaskModuleRequest taskModuleRequest, CancellationToken cancellationToken)
     {
         try
@@ -192,7 +192,7 @@ The code snippet for `OnTeamsTaskModuleFetchAsync` and `OnTeamsTaskModuleSubmitA
         }
     }
 
-    // Invoked when a 'task/submit' invoke activity is received for task module submit actions.
+    // Invoked when a 'task/submit' invoke activity is received for dialog submit actions.
     protected override async Task<TaskModuleResponse> OnTeamsTaskModuleSubmitAsync(ITurnContext<IInvokeActivity> turnContext, TaskModuleRequest taskModuleRequest, CancellationToken cancellationToken)
     {
         try
@@ -215,7 +215,7 @@ The code snippet for `OnTeamsTaskModuleFetchAsync` and `OnTeamsTaskModuleSubmitA
     }
 ```
 
-Additionally, you must include all skill domains in the `validDomains` section in Virtual Assistant's manifest file so that task modules invoked through a skill render properly.
+Additionally, you must include all skill domains in the `validDomains` section in Virtual Assistant's manifest file so that dialogs invoked through a skill render properly.
 
 ### Handle collaborative app scopes
 
@@ -534,10 +534,10 @@ For more information on adding claims validation to a skill, see [add claims val
 
 Updating activity, such as card refresh isn't supported yet through Virtual Assistant ([github issue](https://github.com/microsoft/botbuilder-dotnet/issues/3686)). Hence, we've replaced all card refresh calls `UpdateActivityAsync` with posting new card calls `SendActivityAsync`.
 
-### Card actions and task module flows
+### Card actions and dialog flows
 
-To forward card action or task module activities to an associated skill, the skill must embed `skillId` to it.
-`Book-a-room` bot card action, task module fetch and submit action payloads are modified to contain `skillId` as a parameter.
+To forward card action or dialog activities to an associated skill, the skill must embed `skillId` to it.
+`Book-a-room` bot card action, dialog fetch and submit action payloads are modified to contain `skillId` as a parameter.
 
 For more information,, refer [this](/microsoftteams/platform/samples/virtual-assistant#add-adaptive-cards-to-your-virtual-assistant) section from this documentation.
 
