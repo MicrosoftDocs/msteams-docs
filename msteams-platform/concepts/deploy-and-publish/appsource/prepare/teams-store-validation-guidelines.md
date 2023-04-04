@@ -1670,6 +1670,59 @@ After an internal Microsoft review, if the compliance demonstration is satisfact
 
 [Back to top](#microsoft-teams-store-validation-guidelines)
 
+## Apps extended across Microsoft 365 clients 
+
+### General
+
+* The apps that are intended to extend Teams apps across Microsoft 365 must use schema version 1.13 or later. 
+
+* Your app’s Support URL must contain content relevant for the Teams app extensible across Microsoft 365 clients and shouldn't talk about or call out a single client only.
+
+* If your Teams app is extensible across Microsoft 365 clients, you must ensure the screenshots depict the app functionality on all the supported clients.
+
+* You must provide relevant reference to Teams app extensible across Microsoft 365 clients in the app description.
+ 
+* If your Teams app is extensible across Microsoft 365, the content provided in your app’s get started, sign-in, sign-up, sign-out, or help pages must call out all clients.
+
+### Compatibility
+
+Teams apps extensible across Microsoft 365 must be fully responsive and functional on the latest versions of Microsoft Edge and Google Chrome clients. The user must be able to invoke and continue to use personal tabs or message extensions on the following:
+
+   * Outlook for Windows and web.
+   * Microsoft 365 on desktop, web and Android.
+   * Microsoft Teams on desktop and web.
+   * Microsoft Teams on Android and iOS.
+
+### Mobile experience
+
+Users must be able to launch the app from the actions flyout within the Microsoft 365 Client on Mobile. The app name must be displayed properly in the action bar. [*Mandatory Fix*]
+
+#### App launch from actions flyout
+
+Users must be able to successfully launch and switch between multiple static tabs within the Microsoft 365 client on a mobile. The tabs must load properly. If there are more than three static tabs, the remaining tabs must be visible under the **More** section. [*Mandatory Fix*]
+
+#### Multi tab experience
+
+If your app uses SSO, it must authenticate the user successfully. SSO allows users to sign in using one set of credentials to multiple independent software systems. Users can access all the required applications without using different credentials to authenticate. [*Mandatory Fix*]
+
+#### App authentication
+
+The app must terminate the user account instance when the user is switched or logged out within the Microsoft 365 client on mobile. [*Mandatory Fix*]
+
+#### Account Switching and Logout Experience
+
+* Users must be able to navigate back to previous instances. If the user is on the root page, the back navigation must terminate the app instance within the Microsoft 365 client on mobile. [*Mandatory Fix*]
+
+* Apps that support deep linking workflow must be able to deep link the user to the appropriate landing page experience. [*Mandatory Fix*]
+
+#### Tab Navigation
+
+* The progress indicator must be visible when the app is loading and must dismiss automatically after the app is completely loaded.[*Mandatory Fix*]
+
+* An error screen must appear when an app fails to load in the instances such as incoherent or broken network, time-out, or authentication failure and so on. [*Mandatory Fix*]
+
+[Back to top](#microsoft-teams-store-validation-guidelines)
+
 ## Next step
 
 > [!div class="nextstepaction"]
