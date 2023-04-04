@@ -34,7 +34,7 @@ Reach your users where they are, right in the context of their work by extending
 
 :::image type="content" source="images/outlook-office-teams-personal-tab.png" alt-text="The screenshot is an example that shows Personal tab running in Outlook, Microsoft 365, and Teams.":::
 
-On mobile, you can test and debug your Teams personal tab running on [Microsoft 365 app for Android](extend-m365-teams-personal-tab.md#microsoft-365-app-for-android).
+On mobile, you can test and debug your Teams personal tab running on [Microsoft 365 app for Android](extend-m365-teams-personal-tab.md#microsoft-365-app-for-mobile).
 
 :::image type="content" source="images/office-mobile-personal-tab.png" alt-text="The screenshot is an example that shows personal tab running in Microsoft 365.":::
 

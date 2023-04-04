@@ -213,7 +213,7 @@ To view your app in Outlook on the web:
 
     :::image type="content" source="images/outlook-web-more-apps.png" alt-text="The screenshot is an example that shows the ellipses (More apps) option on the side bar of outlook.com to see your installed personal tabs.":::
 
-### Outlook app for Mobile (Android/iOS)
+### Outlook app for Mobile (iOS)
 
 To view your app running in Outlook app for Mobile:
 
