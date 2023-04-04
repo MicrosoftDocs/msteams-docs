@@ -24,11 +24,9 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 Teams platform features that are available to all app developers.
 
-**2023 March**
+**2023 April**
 
-* ***March 23, 2023***: [Apps are available for scheduled public channel meetings](apps-in-teams-meetings/teams-apps-in-meetings.md)
-* ***March 20, 2023***: [Bots are available in DOD](bots/what-are-bots.md)
-* ***March 20, 2023***: [Message extensions are available in DOD](messaging-extensions/what-are-messaging-extensions.md)
+* ***April 4, 2023***: [Tab apps in shared channels are available in DOD](~/concepts/build-and-test/shared-channels.md)
 
 :::column-end:::
 :::row-end:::
@@ -39,6 +37,9 @@ Teams platform features that are available to all app developers.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
+| 23/03/2023 | Apps are available for scheduled public channel meetings | Build apps for Teams meetings and calls > [Overview](apps-in-teams-meetings/teams-apps-in-meetings.md) |
+| 20/03/2023 | Bots are available in DOD | Build bots > [Overview](bots/what-are-bots.md)|
+| 20/03/2023 | Message extensions are available in DOD | Build message extensions > [Overview](messaging-extensions/what-are-messaging-extensions.md)|
 | 28/02/2023 | Facilitate adoption of your app and create awareness | Distribute your app > adoption > [Drive customer adoption of your app](promote-app-adoption.md) |
 | 27/02/2023 | Changelog for Developer Portal | Tools and SDKs > Developer Portal for Teams > [Overview](concepts/build-and-test/teams-developer-portal.md#changelog-for-developer-portal) |
 | 23/02/2023 | SSO authentication for your Adaptive Cards Universal Actions | Add authentication > Enable SSO for your Teams app > Enable SSO for Adaptive Cards Universal Actions in your bot > [Overview](task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/enable-sso-for-your-adaptive-cards-universal-action.md) |
@@ -320,7 +321,7 @@ Developer preview is a public program that provides early access to unreleased T
 **2023 January**
 
 * ***January 31, 2023***: [Introducing Targeted in-meeting notification for apps in Teams.](apps-in-teams-meetings/in-meeting-notification-for-meeting.md#targeted-in-meeting-notification)
-* ***January 30, 2023***: [Enable app caching to improve subsequent launch time of the apps to the meeting side panel.](apps-in-teams-meetings/app-caching-for-your-tab-app.md)
+* ***January 30, 2023***: [Enable app caching to improve subsequent launch time of the apps to the meeting side panel.](apps-in-teams-meetings/build-tabs-for-meeting.md#app-caching)
 
 :::column-end:::
 :::row-end:::
