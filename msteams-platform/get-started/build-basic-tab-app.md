@@ -23,6 +23,8 @@ Teams Toolkit codespaces allows you to experience a Teams app in a few steps. Yo
 
 To use codespaces for creating a Teams tab app:
 
+<a href="https://github.com/codespaces/new?hide_repo_select=true&amp;ref=dol%2Fcodespaces&amp;repo=348288141&amp;machine=standardLinux32gb&amp;devcontainer_path=.devcontainer%2Fhello-world-tab-codespaces%2Fdevcontainer.json&amp;location=WestUs2"><img src="https://github.com/codespaces/badge.svg" alt="Open hello-world tab in GitHub Codespaces" target="_blank"></a>
+
 1. Log into GitHub and open [GitHub codespaces for Teams](https://github.com/OfficeDev/TeamsFx/wiki/Teams-Toolkit-for-Codespaces/33141593c9c97bdfb478c052f90345cbf226856a) The Teams Toolkit for Codespaces page appears.
 1. Select open in GitHub codespaces for Hello World Tab.
 The Create codespace page appears for Teams notification bot.
