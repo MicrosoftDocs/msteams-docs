@@ -39,7 +39,7 @@ To identify and retrieve contextual information for your tab content, see [get c
 
 ### Examples
 
-The following are the TeamsJS v2 SDK JSON responses for Get user context API based on meeting type, user type and call type:
+The following are the TeamsJS v2 responses for Get user context API based on meeting type, user type, and call type:
 
 1. Meeting type
 
