@@ -79,6 +79,7 @@ The following properties are the new additions to the [`Input.ChoiceSet`](https:
 |-----------|------|----------|-------------|
 | style | Compact <br/> Expanded <br/> Filtered | No | Adds filtered style to the list of supported validations for static typeahead.|
 | choices.data | Data.Query | No | Enables dynamic typeahead as the user types, by fetching a remote set of choices from a backend. |
+| value | String | No | The initial choice (or set of choices) that should be selected. For multi-select, specify a comma-separated string of values. |
 
 ### Data.Query definition
 
