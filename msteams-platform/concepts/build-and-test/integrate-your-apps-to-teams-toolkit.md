@@ -6,16 +6,18 @@ ms.topic: overview
 ms.author: v-sdhakshina
 ---
 
-# Integrate with Visual Studio Code and Visual Studio
+# Integrate Developer Portal with Teams Toolkit in Visual Studio Code and Visual Studio
 
 After you create your app in Teams Developer Portal, you can:
 
 * [Open your app in Visual Studio Code](#open-your-app-in-visual-studio-code)
 * [Open your app in Visual Studio](#open-your-app-in-visual-studio)
 
+This makes a seamless transition between Teams Developer Portal and Teams Toolkit in Visual Studio Code and Visual Studio.
+
 ## Open your app in Visual Studio Code
 
-In Teams Developer Portal, you can now directly open and launch your project in Visual Studio Code. Teams Toolkit scaffolds the necessary files based on the feature and configurations you set in Teams Developer Portal, so there's seamless transition and all the context needed to start coding in detail.
+In Teams Developer Portal, you can now directly open and launch your project in Visual Studio Code. Teams Toolkit scaffolds the necessary files based on the feature and configurations you set in Teams Developer Portal.
 
 Following are the steps to open your app in Visual Studio Code:
 
