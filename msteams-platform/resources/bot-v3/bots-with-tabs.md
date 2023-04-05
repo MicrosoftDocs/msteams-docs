@@ -41,3 +41,7 @@ There are two ways of achieving this scenario:
 2. If you wish to only notify the recipient or interested parties involved with the action, your bot can send a personal chat message to the user. You should first check to see if a personal conversation between your bot and the user exists. If not, you can call `CreateConversation` to initiate the personal chat.
 
 In both cases, use event notifications wisely and never spam the user with unnecessary updates.
+
+## See also
+
+* [Add capabilities to Microsoft Teams app](../../toolkit/add-capability.md)
