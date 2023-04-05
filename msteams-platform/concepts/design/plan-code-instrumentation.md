@@ -22,7 +22,7 @@ Azure Applications Insights does auto-instrumentation to automatically collect p
 - The [retention workbook](/azure/azure-monitor/app/usage-retention) provides user retention analysis out of box. The workbook allows measuring retention by pre-defined custom events.
 - [User Flows](/azure/azure-monitor/app/usage-flows) provides useful insight on how your users navigate through the app and can be used for tracking custom events as well.
 
-## Telemetry as an Investment
+## Telemetry as an investment
 
 Collecting instrumentation data using the generated analytics is important for improving your app experience and guiding your roadmap. However, your investment in planning analytics and using instrumentation goes beyond the solution. It provides a window into your user’s mind and collects behavior patterns that can help you find the crucial product market fit.
 
