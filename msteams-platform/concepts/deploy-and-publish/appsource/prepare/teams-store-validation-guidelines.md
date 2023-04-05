@@ -605,7 +605,8 @@ Remember the following:
    :::image type="content" source="../../../../assets/images/submission/validation-guidelines-fail-app-functionality.png" alt-text="Screenshot shows the failed scenario of app functionality or integration.":::
 
 * Provided screenshots mustn't incorrectly reference Microsoft Teams as MS, MSFT, or MS Teams. [*Mandatory Fix*]
-* If your Teams app is extensible across Microsoft 365 clients (Office, Outlook, and Microsoft Teams), the screenshots provided must depict the app functionality in other Microsoft 365 clients. [*Mandatory Fix*]
+
+* If your Teams app is extensible across Microsoft 365 clients (Microsoft 365, Outlook, and Microsoft Teams), the screenshots provided must depict the app functionality in other Microsoft 365 clients. [Mandatory Fix]
 
    :::image type="content" source="../../../../assets/images/submission/validation-guidelines-pass-app-functionality-MS-365.png" alt-text="Screenshot shows the passed scenario of Teams app functionality in MS 365 clients.":::
 
@@ -1674,19 +1675,17 @@ After an internal Microsoft review, if the compliance demonstration is satisfact
 
 ### General
 
-* The apps that are intended to extend Teams apps across Microsoft 365 must use schema version 1.13 or later. 
+* The apps that are intended to extend Teams apps across Microsoft 365 clients must use schema version 1.13 or later. 
 
 * Your app’s Support URL must contain content relevant for the Teams app extensible across Microsoft 365 clients and shouldn't talk about or call out a single client only.
 
-* If your Teams app is extensible across Microsoft 365 clients, you must ensure the screenshots depict the app functionality on all the supported clients.
-
 * You must provide relevant reference to Teams app extensible across Microsoft 365 clients in the app description.
  
-* If your Teams app is extensible across Microsoft 365, the content provided in your app’s get started, sign-in, sign-up, sign-out, or help pages must call out all clients.
+* If your Teams app is extensible across Microsoft 365 clients , the content provided in your app’s get started, sign-in, sign-up, sign-out,  help pages or way- forward messages must call out all clients.
 
 ### Compatibility
 
-Teams apps extensible across Microsoft 365 must be fully responsive and functional on the latest versions of Microsoft Edge and Google Chrome clients. The user must be able to invoke and continue to use personal tabs or message extensions on the following:
+Teams apps extensible across Microsoft 365 clients must be fully responsive and functional on the latest versions of Microsoft Edge and Google Chrome clients. The user must be able to invoke and continue to use personal tabs or message extensions on the following:
 
    * Outlook for Windows and web.
    * Microsoft 365 on desktop, web and Android.
