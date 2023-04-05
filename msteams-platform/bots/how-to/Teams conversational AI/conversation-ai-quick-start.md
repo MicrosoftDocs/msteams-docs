@@ -1,7 +1,7 @@
 ---
 title: Conversation AI quick start
 author: surbhigupta
-description:  In this module, learn how to quickly try the the Teams AI SDK
+description:  In this module, learn how to quickly try the Teams AI SDK.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: v-ypalikila
@@ -12,7 +12,7 @@ ms.date: 04/07/2022
 
 The Teams AI SDK simplifies the process of creating and powering bots with AI capabilities. It provides APIs to access and manipulate data, as well as a range of controls and components to create custom user interfaces. With the PredictionEngine (Open AI plugin), developers can easily add AI capabilities to their Teams applications.
 
-DevOps, an Azure-powered application, enables users to track work items to manage projects, track bugs, or plan complex project management scenarios. To increase engagement, DevOps Teams bots will leverage GPT (Generative Pre-trained Transformer) capabilities. The key entity with which DevOps Bot operates is work items. All bugs are also categorized as work items for the purposes of this document.
+DevOps, an Azure-powered application, enables users to track work items to manage projects, track bugs, or plan complex project management scenarios. To increase engagement, DevOps Teams bots will use GPT (Generative Pre-trained Transformer) capabilities. The key entity with which DevOps Bot operates is work items. All bugs are also categorized as work items for the purposes of this document.
 
 This document is intended to help Teams developers to GPTify their bots and spark creativity.
 
@@ -25,7 +25,7 @@ This document is intended to help Teams developers to GPTify their bots and spar
 
 ## Setup the SDK
 
-To get started, you must first create an application package. To do this, you will need to use the App Studio tool in the Microsoft Teams app. This will allow you to create an application package that contains all the necessary files and scaffolding needed to run your app in Teams.
+To get started, you must first create an application package. To do this, you'll need to use the App Studio tool in the Microsoft Teams app. This will allow you to create an application package that contains all the necessary files and scaffolding needed to run your app in Teams.
 
 To get started import the AI SDK package into your source file. This will add SDK’s new Application class to your app and configure it with an OpenAI powered prediction engine and the state storage provider of your choice:
 
@@ -52,7 +52,7 @@ storage
 
 Next step is to pick the capabilities needed. Developers will need to use the SDK to scaffold bot and adaptive card handlers to the source file.
 
-**Card handler** – Add it to the cards folder in the source folder 
+**Card handler** – Add it to the cards folder in the source folder
 
 ```javascript
 Import {Attachment, Cardfactory} from ‘botbuilder’;
@@ -63,7 +63,7 @@ return Cardfactory.adaptivecard{
 
 ```
 
-**Bot handler** – Add it to the main activity manager file. Once you have configured your Open AI API, you need to create a Bot Activity Handler class. This class will contain all the logic for handling user requests and responding with the appropriate response.
+**Bot handler** – Add it to the main activity manager file. Once you've configured your Open AI API, you need to create a Bot Activity Handler class. This class will contain all the logic for handling user requests and responding with the appropriate response.
 
 ```javascript
 import { 
@@ -74,12 +74,12 @@ ActivityTypes } from 'botbuilder';
 
 const adapter = new CloudAdapter(botFrameworkAuthentication);
 ```
- 
+
 ## Prompt engineering: Add AI instructions
 
-Prompts are pieces of text that can be used to create conversational experiences. They are used to start conversations, ask questions, and generate responses. They can be used to create natural language experiences for chatbots, virtual assistants, and other conversational user interfaces. The use of prompts can help reduce the complexity of creating conversational experiences and make them more engaging for the user.
+Prompts are pieces of text that can be used to create conversational experiences. They're used to start conversations, ask questions, and generate responses. They can be used to create natural language experiences for chatbots, virtual assistants, and other conversational user interfaces. The use of prompts can help reduce the complexity of creating conversational experiences and make them more engaging for the user.
 
-The Teams AI SDK provide developers with access to OpenAI's machine learning capabilities through the PredictionEngine plugin. This is the default AI plugin that comes with the SDK, but developers can also create their own plugin or connector to use an alternative plugin.
+The Teams AI SDK provides developers with access to OpenAI's machine learning capabilities through the PredictionEngine plugin. This is the default AI plugin that comes with the SDK, but developers can also create their own plugin or connector to use an alternative plugin.
 
 Add the prompt details via the PredictionEngine initializer (refer step #1).
 
@@ -110,13 +110,8 @@ stop: [' Human:', ' AI:'] },
 
 ```
 
-Once you the prompt initialized, you need to add the details in the prompt.txt to provide the functional outline for the bot. Using prompt.txt, bot understands which how it operates and what actions it can perform.
+Once the prompt initialized, you need to add the details in the prompt.txt to provide the functional outline for the bot. Using prompt.txt, bot understands which how it operates and what actions it can perform.
 The following is a conversation with AI assistant.
-
-The assistant can create, update, assign and triage work items with the following commands:
-
-* DO <action> <optional WI #>
-* SAY <response>
 
 The following actions are supported:
 
@@ -129,7 +124,7 @@ All entities are required parameters to actions.
 
 ## Topic filters: Pick the subject(s)
 
-The topic filter for the DevOps bot is an important feature that allows it to respond to specific topics, such as bugs or work items. By applying the topic filter, the bot can focus its attention on the topics that are most important to the user. This makes it easier for the user to find the information they need quickly and efficiently, as the app will not be distracted by topics that are not relevant to their needs. Additionally, the topic filter helps to ensure that the bot provides accurate and up-to-date information by filtering out irrelevant topics.
+The topic filter for the DevOps bot is an important feature that allows it to respond to specific topics, such as bugs or work items. By applying the topic filter, the bot can focus its attention on the topics that are most important to the user. This makes it easier for the user to find the information they need quickly and efficiently, as the app will not be distracted by topics that aren't relevant to their needs. Additionally, the topic filter helps to ensure that the bot provides accurate and up-to-date information by filtering out irrelevant topics.
 
 Teams AI SDK offers topic filtering services via the PredictionEngine.
 
@@ -158,7 +153,7 @@ Humans can chat with AI for the following tasks.
 * Greet the AI
 * Ask for help
 * Answer question asked by AI
-* Ask AI to perform certain task it is capable of
+* Ask AI to perform certain task it's capable of
 
 Conversation History:
 
@@ -178,7 +173,7 @@ Think about the topic of this message. Is the human allowed to chat with the AI 
 
 ## Actions: Execute the right command(s)
 
-This is the place where everything comes together. In step #2 we defined in prompt that Dev bot can perform 4 actions of:
+This is the place where everything comes together. In step #2 we defined in prompt that Dev bot can perform four actions of:
 
 1. CreateWI
 1. TriageWI
@@ -187,7 +182,7 @@ This is the place where everything comes together. In step #2 we defined in prom
 
 These actions need to be registered in the source file. These actions are required for the bot to execute when AI finds an intent match from the user conversation, it needs to find the relevant action to be executed (refer #2 prompt on how the mapping is defined).  
 
-Here is the code sample for actions in the main app handler:
+The following is the code sample for actions in the main app handler:
 
 ```javascript
 CreateWI {
