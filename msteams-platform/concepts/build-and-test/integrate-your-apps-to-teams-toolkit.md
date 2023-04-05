@@ -15,7 +15,7 @@ After you create your app in Teams Developer Portal, you can:
 
 ## Open your app in Visual Studio Code
 
-In Teams Developer Portal, you can now directly open in Visual Studio Code and launch your project in Visual Studio Code. Teams Toolkit scaffolds the necessary files based on the feature and configurations you set in Teams Developer Portal, so there's seamless transition and all the context needed to start coding in detail.
+In Teams Developer Portal, you can now directly open and launch your project in Visual Studio Code. Teams Toolkit scaffolds the necessary files based on the feature and configurations you set in Teams Developer Portal, so there's seamless transition and all the context needed to start coding in detail.
 
 Following are the steps to open your app in Visual Studio Code:
 
@@ -53,10 +53,9 @@ Following are the steps to open your app in Visual Studio Code:
 
 ## Open your app in Visual Studio
 
-You can open your project in Visual Studio directly:
+You can open your project in Visual Studio and scaffold you project in Visual Studio with Teams Toolkit. Ensure that you installed [Visual Studio 2022 version 17.6 Preview 2](/visualstudio/releases/2022/release-notes-preview#17.6.0-pre.2.0).
 
-> [!NOTE]
->It requires Visual Studio 2022 17.6 Preview 2.
+Following are the steps to open your app in Visual Studio:
 
 1. Select **Develop (Preview)** > **Open in Teams Toolkit**.
 
