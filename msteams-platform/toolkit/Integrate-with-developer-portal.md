@@ -43,9 +43,13 @@ The following steps helps you to open Teams Developer Portal from Visual Studio 
 
 1. Select **Project** > **Teams Toolkit** > **Open Teams Developer Portal to Publish**.
 
-1. Select the **Teams zipped app package**.
+    :::image type="content" source="../assets/images/tdp/tdp-vs.png" alt-text="Screenshot shows you how to open developer portal from visual studio.":::
+
+1. Select the app package.
 
 1. Teams Toolkit will open your app in **Teams Developer Portal** and direct you to the **Publish to your org** page, from there you can select **Publish your app** to continue with your publishing process.
+
+    :::image type="content" source="../assets/images/tdp/vs-tdp.png" alt-text="Screenshot shows you the app open in Teams Developer Portal.":::
 
 ---
 
