@@ -4,14 +4,16 @@ description: Build your basic tab app
 ms.localizationpriority: high
 ms.topic: reference
 ---
-# Build basic tab app
+# Hello world - Build basic tab app
 
 Start Microsoft Teams app development with your first Teams app. You can create a tab app with Teams.
 
 In this tutorial, get acquainted with a basic Teams tab app in one of the following ways:
 
-* Use Teams Toolkit for app development in codespaces
-* Use step-by-step guide to build a Teams app using Teams Toolkit
+* Use [Teams Toolkit for app development in codespaces](#use-teams-toolkit-codespaces)
+* Use [step-by-step guide](#use-step-by-step-guide-to-build-a-basic-tab-app) to build a Teams app using Teams Toolkit
+
+:::image type="content" border="false" source="../assets/images/get-started/codescpaces-vs-manual.png" alt-text="Illustration showing your choices to build Teams app":::
 
 ## Use Teams Toolkit codespaces
 

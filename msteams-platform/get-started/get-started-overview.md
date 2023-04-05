@@ -20,7 +20,7 @@ Here's an idea of what you'll learn:
 
 Let's take a quick glance at the build environment options you can choose from, and the road-map to build and deploy a Teams app.
 
-:::image type="content" source="../assets/images/get-started/gs-build-options.png" alt-text="Illustration showing basic steps to build and deploy a Teams app":::
+:::image type="content" border="false" source="../assets/images/get-started/get-started.png" alt-text="Illustration showing your choices to build Teams app":::
 
 ## App capabilities and development tools
 
