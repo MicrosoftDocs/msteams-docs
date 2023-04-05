@@ -73,6 +73,10 @@ The following image shows a tab added to the meeting details page in the Teams m
 
    :::image type="content" source="../assets/images/side-panel-view.png" alt-text="Screenshot shows side panel view with the list of apps.":::
 
+#### Deeplink to meeting sidepanel
+
+When app users in selects the deeplink is selected to meeting sidepanel is selected in the meeting stage, it opens the sidepanel in the meeting stage. If the deeplink to meeting sidepanel is selected anywhere other than meeting stage, deeplink opens pre-meeting or post-meeting tab.
+
 ### Meeting stage view
 
 1. After a tab is added to the meeting side panel, you can now choose to opt into global app sharing.
