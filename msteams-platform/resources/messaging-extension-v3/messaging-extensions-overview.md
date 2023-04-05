@@ -3,6 +3,7 @@ title: Develop message extensions
 description: In this module, learn how to get started with message extensions in Microsoft Teams
 ms.topic: overview
 ms.localizationpriority: medium
+ms.date: 04/02/2023
 ---
 # Develop message extensions for Microsoft Teams
 

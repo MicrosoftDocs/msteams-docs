@@ -3,7 +3,7 @@ title: Search with message extensions
 description: In this article, you'll learn how to develop search based message extensions
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.date: 07/20/2019
+ms.date: 04/02/2023
 ---
 # Search with message extensions
 

@@ -3,7 +3,7 @@ title: Combine bots with tabs
 description: In this article, you'll learn how to use tabs and bots together, constructing deep links to tabs in messages from your bot, and teams bots tabs development
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.date: 03/15/2018
+ms.date: 04/02/2023
 ---
 # Combine bots with tabs
 

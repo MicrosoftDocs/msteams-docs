@@ -73,6 +73,10 @@ Here's why Teams is best-suited for your app needs:
 
     For example, if your app is a design tool with multiple collaborators, a shared bot that notifies all users helps to build user engagement.
 
+- **Build once, run everywhere**
+
+    By updating your app you can extend your teams personal tab app or message extension beyond the Teams to other Microsoft 365 applications. Reach users on platforms like Outlook or Microsoft 365 all with the same codebase; broadening the reach of your app and streamlining development resources.  
+
 ## Next step
 
 > [!div class="nextstepaction"]

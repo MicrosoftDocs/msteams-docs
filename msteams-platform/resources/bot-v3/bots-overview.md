@@ -3,7 +3,7 @@ title: Add bots to Microsoft Teams apps
 description: In this module, learn how to get started developing bots in Microsoft Teams and what are all the requirements to add a bot in Teams
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.date: 05/20/2018
+ms.date: 04/02/2023
 ---
 # Add bots to Microsoft Teams apps
 

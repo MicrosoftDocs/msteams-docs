@@ -3,7 +3,7 @@ title: Create a bot
 description: In this module, learn how to create a bots using the Microsoft Bot Framework and ready to work in Microsoft Teams
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.date: 12/07/2018
+ms.date: 04/02/2023
 ---
 # Create a bot
 
