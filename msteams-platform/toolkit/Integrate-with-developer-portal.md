@@ -18,7 +18,7 @@ You can publish your app which is created in Visual Studio and Visual Studio Cod
 
 # [Visual Studio Code](#tab/visualstudiocode)
 
-The following steps help to publish your app in Developer Portal:
+The following are steps to publish your app in Teams Developer Portal to publish:
 
 1. Select **Developer Portal for Teams** under **DEPLOYMENT**.
 
@@ -37,7 +37,7 @@ The following steps help to publish your app in Developer Portal:
 
 # [Visual Studio](#tab/visualstudio)
 
-The following steps helps you to open Teams Developer Portal from Visual Studio to publish:
+The following are steps to open you app in Teams Developer Portal to publish:
 
 1. Open **Teams Developer Portal** to publish your app.
 
