@@ -45,7 +45,7 @@ Following are the steps to open your app in Visual Studio Code:
 
     :::image type="content" source="../../assets/images/tdp/select-application-name.png" alt-text="Screenshot of Teams Toolkit with Application name highlighted in red.":::
 
-1. Select your URL and select **OK**. Teams Toolkit will convert the URL you configured in Teams Developer Portal to a localhost address to work with the debugging process.
+1. Select your app and select **OK**. Teams Toolkit will convert the URL you configured in Teams Developer Portal to a localhost address to work with the debugging process.
 
     :::image type="content" source="../../assets/images/tdp/select-ok.png" alt-text="Screenshot shows Teams Toolkit with OK option highlighted in red.":::
 
@@ -69,15 +69,15 @@ Following are the steps to open your app in Visual Studio:
 
    If required, sign in to your Microsoft 365 account.
 
-1. Set your project name, location and solution name. Select **Create** in the **Configure your new project**.
+1. Enter your project name, location and solution name. Select **Create**.
 
     :::image type="content" source="../../assets/images/tdp/tdp-vs-open-file.png" alt-text="Screenshot shows you the details tab to set the app name.":::
 
-1. Select the application type and select **Next**. Teams Toolkit will convert the app you configured in Teams Developer Portal to a localhost address to work with the debugging process.
+1. Select the application type and select **Next**. Teams Toolkit converts the app you configured in Teams Developer Portal to a localhost address to work with the debugging process.
 
     :::image type="content" source="../../assets/images/tdp/tdp-vs-bot.png" alt-text="Screenshot shows you the type of app in visual studio.":::
 
-1. Teams Toolkit would then scaffold your project, you now are ready to start development.
+1. Teams Toolkit scaffolds your project, now you're ready to start development.
 
     :::image type="content" source="../../assets/images/tdp/vs-scaffold.png" alt-text="Screenshot shows you the scaffolding of your project in visual studio. ":::
 
