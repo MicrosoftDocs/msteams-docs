@@ -9,8 +9,6 @@ ms.topic: reference
 
 The media elements such as audio or video clips are supported in the Adaptive Cards SDK but not in Teams. Currently, Teams doesn't provide media support like audio, video, and animation cards from Bot Framework. To increase engagement with cards and provide a new experience in the media elements, we're bringing in parity with the SDK that already supports media elements.
 
-:::image type="content" source="../../assets/images/media-elements-in-adaptive-cards/flow-diagram.png" alt-text="Screenshot shows you the flow diagram for media elements in adaptive card.":::
-
 The Media Elements now supports consumption of media elements directly within the Adaptive Cards without force exit from Teams to view media. Following are the scenarios:
 
 **LOB scenarios**
@@ -41,7 +39,7 @@ To add media elements to your Adaptive Cards, follow the steps:
    :::image type="content" source="../../assets/images/media-elements-in-adaptive-cards/adaptive-card-json.png" alt-text="Screenshot shows you the Adaptive Card json code.":::
 
 >[!NOTE]
-> Do not use links copied directly from address bar.
+> Links copied directly from address bar won't works.
 
 ## End user experience
 
@@ -89,9 +87,7 @@ Following image shows error state if a video or audio isn't found or not support
 
 Following are the limitations:
 
-1. The MIME type, that is able to support certain file types and using the MIME type.
-1. Size limitation.
-1. Support only the sharepoint or OneDrive links
+1. Only sharepoint or OneDrive links of media supports now.
 1. It is not likely that Guest, Federated, or Anonymous users will be able to view videos unless the shared video permissions is public to those users.
 1. You must inform users or admin before you share a link that they are responsible for ensuring that the audience can view the link. That means that whoever can view the adaptive card is in the permissions group to view the media file.
 
