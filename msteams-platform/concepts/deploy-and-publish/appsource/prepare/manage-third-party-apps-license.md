@@ -106,7 +106,7 @@ You can call Graph APIs to determine if the currently logged in user with a vali
 
 1. Call Graph to get user’s object ID: [Use the Microsoft Graph API](/graph/use-the-api).
 
-1. Call usageRights API to determine the user has License to the plan [List user usageRights API](/graph/api/user-list-usagerights?view=graph-rest-beta&tabs=http&preserve-view=true).
+1. Call usageRights API to determine the user has License to the plan: [List user usageRights API](/graph/api/user-list-usagerights?view=graph-rest-beta&tabs=http&preserve-view=true).
 
    > [!NOTE]
    >
