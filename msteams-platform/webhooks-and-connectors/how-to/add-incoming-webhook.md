@@ -83,11 +83,33 @@ You can create and send actionable messages through Incoming Webhook or connecto
 [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/incoming-webhook/csharp/IncomingWebhook/Controllers/CardController.cs#L28)
 
 ```csharp
-url = {{Webhook_URL}};
-HttpClient client = new HttpClient();
+var adaptiveCardJson = @"{
+  ""type"": ""message"",
+  ""attachments"": [
+    {
+      ""contentType"": ""application/vnd.microsoft.card.adaptive"",
+      ""content"": {
+        ""type"": ""AdaptiveCard"",
+        ""body"": [
+          {
+            ""type"": ""TextBlock"",
+            ""text"": ""Message Text""
+          }
+        ],
+        ""$schema"": ""http://adaptivecards.io/schemas/adaptive-card.json"",
+        ""version"": ""1.0""
+      }
+    }
+  ]
+}";
+
+var webhookUrl = "https://xxxxx.webhook.office.com/xxxxxxxxx";
+
+var client = new HttpClient();
 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-var content = new StringContent({{formatted_Card_Payload}}(Adaptive_Card_Json), System.Text.Encoding.UTF8, "application/json");
-var response = await client.PostAsync({{WebhookUrl}}, content);
+
+var content = new StringContent(adaptiveCardJson, System.Text.Encoding.UTF8, "application/json");
+var response = await client.PostAsync(webhookUrl, content);
 ```
 
 # [JavaScript](#tab/javascript)
