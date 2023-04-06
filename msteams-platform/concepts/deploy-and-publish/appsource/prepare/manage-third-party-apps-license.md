@@ -16,7 +16,7 @@ To enable license management for a third-party app in Teams, follow the steps:
 1. [Create an offer in Partner Center](#create-an-offer-in-partner-center)
 1. [Update your Teams app](#update-your-teams-app)
 1. [Post purchase](#post-purchase)
-1. [Integrate with Graph usageRights API](#integrate-with-graph-usage-right-api)
+1. [Integrate with Graph usageRights API](#integrate-with-graph-usagerights-api)
 
 ## Create an offer in Partner Center
 
