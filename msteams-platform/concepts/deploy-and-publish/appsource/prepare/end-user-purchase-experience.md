@@ -1,6 +1,6 @@
 ---
 title: Purchase and manage app subscriptions and licenses
-description: Learn how to purchase, assign, and manage licenses for third party apps in Teams. 
+description: Learn how to purchase, assign, and manage licenses for third-party apps in Teams. 
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: how-to
@@ -47,7 +47,7 @@ Consent dialog is part of the flow to get the users license information and may 
 
 ## License management experience
 
-The following example shows how users can manage licenses for third party apps from the Teams store:
+The following example shows how users can manage licenses for third-party apps from the Teams store:
 
 1. Go to **Microsoft Teams**.
 
@@ -83,4 +83,4 @@ Admins can manage the app subscriptions and licenses in the Teams admin center. 
 ## See also
 
 * [Monetize your app](monetize-overview.md)
-* [Set up Microsoft license management for third party apps](manage-third-party-apps-license.md)
+* [Set up Microsoft license management for third-party apps](manage-third-party-apps-license.md)
