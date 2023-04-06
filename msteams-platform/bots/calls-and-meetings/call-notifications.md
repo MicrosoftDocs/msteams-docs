@@ -92,5 +92,9 @@ For more information, see [validate inbound requests](https://github.com/microso
 
 ## See also
 
+* [Build bots for Teams](../what-are-bots.md)
+* [Calls and online meetings bots](calls-meetings-bots-overview.md)
+* [Work with the cloud communications API in Microsoft Graph](/graph/api/resources/communications-api-overview)
+* [Authentication flow for bots in Microsoft Teams](../how-to/authentication/auth-flow-bot.md)
 * [Set up an auto attendant](/microsoftteams/create-a-phone-system-auto-attendant)
 * [Set up auto answer for Microsoft Teams Rooms on Android and Teams video phone devices](/microsoftteams/set-up-auto-answer-on-teams-android)

@@ -2,7 +2,7 @@
 title: Build your first bot app using JavaScript
 metadata:
   title: Hello World with JavaScript
-  description: With this learning module, you'll learn how to build Hello World app with JavaScript by setting up a new project with Teams Toolkit, build and deploy a bot app.
+  description: With this learning module, you learn how to build Hello World app with JavaScript by setting up a new project with Teams Toolkit, build and deploy a bot app.
   audience: Developer
   level: Beginner
   ms.date: 10/21/2021
@@ -15,16 +15,16 @@ items:
 - durationInMinutes: 1
   content: |
     Start Microsoft Teams app development with your first Teams app. 
-    You'll create a bot app with Teams. 
+    You can create a bot app with Teams. 
 
     Your app will have a capability, which comes with its own UI and UX:
     
     :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/your-helloworld-app.png" alt-text="Diagram showing this app has three features.":::
     
     > [!NOTE]
-    > In this tutorial, you'll create a bot app.
+    > In this tutorial, you can create a bot app.
 
-    In this tutorial, you'll learn:
+    In this tutorial, you learn:
 
     - How to set up a new project with Teams Toolkit.
     - How to build a bot app.
@@ -34,14 +34,14 @@ items:
   durationInMinutes: 1
   content: |
 
-   Here's a list of tools you'll need for building and deploying your apps.
+   Here's a list of tools you need for building and deploying your apps.
 
    | &nbsp; | Install | For using... |
    | --- | --- | --- |
    | **Required** | &nbsp; | &nbsp; |
    | &nbsp; | [Teams Toolkit](#install-the-teams-toolkit) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use 4.0.0 version. |
    | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call - all in one place.|
-   | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. Use the latest v16 LTS release.|
+   | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](toolkit/tools-prerequisites.md#nodejs-version-compatibility-table-for-project-type).|
    | &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
    | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use version 1.55 or later. |
    | **Optional** | &nbsp; | &nbsp; |
@@ -70,16 +70,19 @@ items:
    # [Visual Studio Code](#tab/vscode)
 
    1. Open Visual Studio Code and select the **Extensions** view (**Ctrl+Shift+X** / **⌘⇧-X** or **View > Extensions**).
-   1. In the search box, enter **Teams Toolkit**.
+   1. In the search box, enter **Teams toolkit**.
    1. Select **Install** next to the Teams Toolkit.
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/install-toolkit-vscodeversion.png" alt-text="Illustration shows the Teams Toolkit extension installation.":::
+      :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/install-toolkit-vscodeversion.png" alt-text="Illustration shows the Teams Toolkit extension installation.":::
 
-    The Teams Toolkit icon appears in the Visual Studio Code sidebar after it's installed.
+    The Teams Toolkit icon appears in the Visual Studio Code **Activity Bar** after it's installed.
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/hw-teams-toolkit-sidebar-icon.png" alt-text="Illustration shows the Teams Toolkit icon in Visual Studio Code sidebar.":::
 
    You can also find the Teams Toolkit on the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
+
+   > [!NOTE]
+   > The latest version of Teams Toolkit is 4.2.0.
 
    # [Command line](#tab/cli)
 
@@ -121,9 +124,9 @@ items:
 
    Verify if you can sideload apps in Teams:
 
-    1. In the Teams client, select the **Store** icon.
+    1. In the Teams client, select the **Apps** icon.
     1. Select **Manage your apps**.
-    1. Select **Publish an app**.
+    1. Select **Upload an app**.
     1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
 
         :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-custom-new1.png" alt-text="bot home":::
@@ -162,7 +165,7 @@ items:
     
     As you've already prepared for creating these apps, you can set up a new Teams project for creating the bot app.
 
-    In this tutorial, you'll learn:
+    In this tutorial, you learn:
 
     1. [How to set up a new bot project with Teams Toolkit.](#create-your-bot-project-workspace)
     1. [About the directory structure of your app project.](#take-a-tour-of-the-bot-app-source-code)
@@ -180,9 +183,9 @@ items:
     # [Visual Studio Code](#tab/vscode)
 
     1. Open Visual Studio Code.
-    1. Select the Teams Toolkit :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
+    1. Select the Teams Toolkit :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code **Activity Bar**.
 
-    1. Select **Create a new Teams app**.
+    1. Select **Create a new app**.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/create-project.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar.":::
 
@@ -213,7 +216,7 @@ items:
 
            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/select-folder.png" alt-text="Screenshot showing how to select the programming language.":::
 
-    1. Enter a suitable name for your app, like `hellobot`. Ensure that your app's name is alphanumeric. Select **Enter**.
+    1. Enter a suitable name for your app. Select **Enter**.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/hello-bot.png" alt-text="Screenshot showing where to enter the app name.":::
 
@@ -221,10 +224,6 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/vsc-trust-authors.png" alt-text="This screenshot is an example of the dialog to trust or not the authors of the files in this folder ":::
     
-    1. By default, project opens in new window within 10 seconds. If you want to open in current window, select **Open in current window**.
-
-         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/new-window-notification.png" alt-text="New window pop-up":::
-
         Your Teams app with a bot capability is created in a few seconds.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/app-created-bot.png" alt-text="Screenshot showing the app created.":::
@@ -375,7 +374,7 @@ items:
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/f5-build-and-run.png" alt-text="Screenshot showing when F5 key is pressed for debugging.":::
 
         > [!NOTE]
-        > When you run the app for the first time, all dependencies are downloaded, and the app is built. A browser window automatically opens when the build is complete. This process can take 3-5 minutes to complete.
+        > When you run the app for the first time, all dependencies are downloaded, and the app is built. A browser window automatically opens when the build is complete. This process can take three to five minutes to complete.
 
         Teams runs your app in a web browser.
 

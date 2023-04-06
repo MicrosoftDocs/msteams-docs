@@ -1,5 +1,5 @@
 ### YamlMime:Tutorial
-title: Generate meeting 
+title: Generate in-meeting notifications
 metadata:
   title: Generate in-meeting notifications
   description: With this learning module, learn how to send reply to in-meeting notifications using bot in Teams with attendees.
@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Teams helps you to generate and interact with in-meeting notifications using bot.
+    Microsoft Teams helps you to generate and interact with in-meeting notifications using bot.
 
     **Key features of in-meeting notifications**:
 
@@ -27,7 +27,7 @@ items:
     
     This step-by-step guide helps you to generate in-meeting notifications using bot in Teams meeting with attendees. You'll see the following output:
 
-      :::image type="content" source="~/assets/images/meeting-content-bubble/desktop-and-mobile-image-final.png" alt-text="Meeting in-meeting notifications introduction":::
+      :::image type="content" source="~/assets/images/meeting-content-bubble/desktop-and-mobile-image-final.png" alt-text="In-meeting notifications introduction":::
 
      
 
@@ -40,7 +40,7 @@ items:
      | --- | --- | --- |
      | **Required** | &nbsp; | &nbsp; |
      | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call and all in one place.|
-     | &nbsp; | [Visual Studio 2022 version 17.3](https://visualstudio.microsoft.com)<br> Install one of the following two workloads:<br> • **ASP.NET and web development** <br> • **.NET Core cross-platform development** | You can install the enterprise version in Visual Studio 2022, and install the workloads. |
+     | &nbsp; | [Visual Studio 2022 version 17.3](https://visualstudio.microsoft.com)<br> Install the <br> **ASP.NET and web development** workload.| You can install the enterprise version in Visual Studio 2022, and install the workloads. |
      | &nbsp; | [.NET Core SDK version 3.1](https://dotnet.microsoft.com/en-us/download) | Customized bindings for local debugging and Azure Functions app deployments. If you haven't installed the .NET 3.1 (or later) SDK globally, the portable version can be installed. |
      | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots, message extensions, and incoming webhooks) require inbound connections. A tunnel connects your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
     
@@ -57,12 +57,12 @@ items:
    1. Select **Code**.
    1. From the dropdown menu, select **Open with GitHub Desktop**.
 
-     :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-clonerepository_1.png" alt-text="Clone repository":::
+      :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-token-generator-clonerepository_1.png" alt-text="Clone repository":::
 
    1. Select **Clone**. 
 
-       > [!NOTE]
-       > If you encounter the error "Filename too long," apply the git command 'git config --system core.longpaths true' in your administrator terminal of choice.
+      > [!NOTE]
+      > If you encounter the error **Filename too long** apply the git command `git config --system core.longpaths true` in your administrator terminal of choice.
 
 - title: Create and register your bot 
   durationInMinutes: 5
@@ -216,7 +216,7 @@ items:
 
     1. Select **Azure Active Directory**.
 
-    1. In the left navigation panel, select **App Registrations**.
+    1. In the left panel, select **App Registrations**.
 
     1. Select your bot.
 
@@ -244,7 +244,7 @@ items:
   
     1. Set **Who can consent?** to `Admins and users`.
   
-    1. To configure the admin and user consent prompts with appropriate values for `access_as_user` scope, provide the following information in the fields:</br>
+    1. To configure the admin and user consent prompts with appropriate values for `access_as_user` scope, provide the following information in the fields:
     
          * Enter `Teams can access the user’s profile` as **Admin consent display name**.
 
@@ -264,7 +264,7 @@ items:
 
 
        > [!NOTE]
-       > The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.</br>
+       > The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.
            `api://****.ngrok.io/00000000-0000-0000-0000-000000000000/access_as_user`
   
         :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-add-scope_1.png" alt-text="Scope":::
@@ -304,7 +304,7 @@ items:
 
     1. Select **Delegated permissions**.
 
-    1. Add the following permissions:</br>
+    1. Add the following permissions:
          * **email**
          * **offline_access**
          * **OpenId**
@@ -325,8 +325,7 @@ items:
 
              :::image type="content" source="~/assets/images/meeting-content-bubble/meeting-content-bubble-platform-web_1.png" alt-text="Web":::
 
-         1. Enter the redirect URI for your app by appending `auth-end` to fully qualified domain name:</br> 
-           `https://your ngrok/auth-end`. </br>
+         1. Enter the redirect URI for your app by appending `auth-end` to fully qualified domain name: `https://your ngrok/auth-end`.
 
          1. Enable **Implicit grant and hybrid flows** by selecting the following checkboxes:
              * **ID tokens**
@@ -387,7 +386,7 @@ items:
 
            :::image type="content" source="~/assets/images/meeting-content-bubble/your-bot-is-ready.png" alt-text="App ready"::: 
     
-- title: Add in-meeting notifications App to Teams
+- title: Add in-meeting notifications app to Teams
   durationInMinutes: 1
   content: |
 
@@ -410,7 +409,7 @@ items:
 
         :::image type="content" source="~/assets/images/meeting-content-bubble/manage-apps_1.png" alt-text="Manage apps"::: 
    
-    1. Select **Upload a custom app**. 
+    1. Select **Upload an app** and select **Upload a custom app**. 
 
         :::image type="content" source="~/assets/images/meeting-content-bubble/upload-custom-app_1.png" alt-text="Upload custom app"::: 
 
@@ -428,7 +427,7 @@ items:
 
     1. Go to Teams meeting chat.
     
-    1. **in-meeting notifications Demo** app sends an automatic reply to the meeting chat.
+    1. **In-meeting notifications Demo** app sends an automatic reply to the meeting chat.
 
          :::image type="content" source="~/assets/images/meeting-content-bubble/content-bubble-demo-first-reply.png" alt-text="in-meeting notifications Demo reply"::: 
 
@@ -461,5 +460,5 @@ items:
 
 
 - content: |
-    You've completed the tutorial to get started with a generate in-meeting notifications app.
+    You've completed the tutorial to get started with generate in-meeting notifications app.
 

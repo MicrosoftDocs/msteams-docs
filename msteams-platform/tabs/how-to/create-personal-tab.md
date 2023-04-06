@@ -240,8 +240,7 @@ At the command prompt exit the localhost and enter the following command to esta
 gulp ngrok-serve
 ```
 
-> [!IMPORTANT]
-> After your tab is uploaded to Microsoft Teams through **ngrok**, and successfully saved, you can view it in Teams until your tunnel session ends.
+After your tab is uploaded to Microsoft Teams through **ngrok** and successfully saved, you can view it in Teams until your tunnel session ends.
 
 ### Upload your application to Teams
 
@@ -613,6 +612,12 @@ If you create a bot with a **personal** scope, it appears in the first tab posit
 
 ```
 
+## Code sample
+
+| Sample name | Description | .NET |Node.js|Manifest|
+|-------------|-------------|------|----|----|
+|Tab personal|Sample app which showcases creating a custom channel/group tab with ASP.Net Core and MVC. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-personal/mvc-csharp) |  NA |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-personal/mvc-csharp/demo-manifest/tab-personal.zip)|
+
 ## Next step
 
 > [!div class="nextstepaction"]
@@ -620,8 +625,10 @@ If you create a bot with a **personal** scope, it appears in the first tab posit
 
 ## See also
 
-* [Teams tabs](~/tabs/what-are-tabs.md)
-* [Tabs on mobile](~/tabs/design/tabs-mobile.md)
-* [Build tabs with Adaptive Cards](~/tabs/how-to/build-adaptive-card-tabs.md)
-* [Create conversational tabs](~/tabs/how-to/conversational-tabs.md)
+* [Build tabs for Teams](../what-are-tabs.md)
+* [Create a channel tab or group tab](create-channel-group-tab.md)
 * [Share to Teams from personal app or tab](~/concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md)
+* [Developer Portal for Teams](../../concepts/build-and-test/teams-developer-portal.md)
+* [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
+* [Build tabs with Adaptive Cards](build-adaptive-card-tabs.md)
+* [Tabs on mobile](../design/tabs-mobile.md)

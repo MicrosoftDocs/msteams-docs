@@ -21,7 +21,7 @@ You can sideload Microsoft Teams apps without having to publish to your organiza
 > [!IMPORTANT]
 >
 > * Currently, sideloading of apps is possible only in Government Community Cloud (GCC) and is not possible in GCC-High and Department of Defense (DOD).
-> * App installation is supported only on Teams desktop app.
+> * App installation is supported only on Teams desktop client.
 
 ## Prerequisites
 
@@ -33,8 +33,9 @@ You can sideload Microsoft Teams apps without having to publish to your organiza
 
 You can sideload your app to a team, chat, meeting, or for personal use depending on how you configured your app's scope.
 
-1. Log in to the Teams client with your [Microsoft 365 development account](https://developer.microsoft.com/en-us/microsoft-365/dev-program).
-1. Select **Apps** > **Manage your apps** and **Publish an app**.
+1. Log in to the Teams client with your [Microsoft 365 development account](https://developer.microsoft.com/microsoft-365/dev-program).
+
+1. Select **Apps** > **Manage your apps** and **Upload an app**.
 
     :::image type="content" source="~/assets/images/publish-app/manage-apps.png" alt-text="Publish an app":::
 
@@ -89,7 +90,7 @@ If an update is available to your app, then the **Update available** option is e
      :::image type="content" source="~/assets/images/publish-app/update-available.png" alt-text="Update Teams app.":::
 
 1. Select **View update**. A window with update option appears.
-1. Select **Update** button to update your app.
+1. Select **Update** to update your app.
 
      :::image type="content" source="~/assets/images/publish-app/update-window.png" alt-text="Update Teams app in manage apps.":::
 
@@ -112,7 +113,7 @@ To remove app from Teams, follow the steps:
 > [!NOTE]
 >
 > * You can't remove personal bot activity entirely. If you remove the app and add it again, new communication with the bot appends to the previous conversation with it.
-> * Currently, you can't migrate your custom app to the Teams store. If you want to list your app to the Teams store, see [Publish your app to the Microsoft Teams store](appsource/publish.md).
+> * Currently, you can't migrate your custom app to the Teams store. If you want to list your app to the Teams store, see [how to publish your app to the Microsoft Teams store](appsource/publish.md).
 
 ## Next step
 
@@ -121,6 +122,7 @@ To remove app from Teams, follow the steps:
 
 ## See also
 
+* [Distribute your Microsoft Teams app](apps-publish-overview.md)
 * [Configure default install options](~/concepts/deploy-and-publish/add-default-install-scope.md)
 * [Maintain your published Microsoft Teams app](~/concepts/deploy-and-publish/appsource/post-publish/overview.md)
 * [Add app to chat](/graph/api/chat-post-installedapps)

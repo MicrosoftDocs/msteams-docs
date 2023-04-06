@@ -1,125 +1,135 @@
 ---
-title: Integrate existing third party APIs
+title: Integrate existing third-party APIs
 author: MuyangAmigo
-description:  In this article, learn how toolkit helps you bootstrap sample access to existing APIs. It provides list of different authentication types.
+description: Learn how toolkit allows bootstrap sample access to existing APIs. List of different authentication types.
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: Overview
 ms.date: 05/20/2022
 ---
 
-# Integrate existing third party APIs
+# Integrate existing third-party APIs
 
-Teams Toolkit helps you to access existing APIs for building Teams applications. These APIs are developed by your organization or third-party. When you use Teams Toolkit to connect to an existing API, Teams Toolkit performs the following function:
+Teams Toolkit allows you to access and use existing APIs for building Teams apps. Your organization or a third-party might have developed these APIs. When you use Teams Toolkit to connect to an existing API, Teams Toolkit performs the following functions:
 
-* Generate sample code under `./bot` or `./api` folder.
+* Generate sample code in the `./bot` or `./api` folder.
 * Add a reference to the `@microsoft/teamsfx` package to `package.json`.
-* Add application settings for your API in  `.env.teamsfx.local` that configures local debugging.
+* Add app settings for your API in  `.env.teamsfx.local` that configures local debugging.
 
-## Steps to connect to API
+Teams Toolkit allows you bootstrap sample code to access the APIs, if you don't have language appropriate SDKs to access these APIs.
 
-You can add API connection using Visual Studio Code and CLI command.
+## Configure API connection
 
-### Add API connection using Visual Studio Code
+You can add an existing third-party API to your Teams app using:
 
-The following steps help you to add API connection using Visual Studio Code:
+* [Teams Toolkit](#add-api-connection-using-teams-toolkit)
+* [TeamsFx CLI commands](#add-api-connection-using-teamsfx-cli)
 
-1. Open Microsoft Visual Studio Code.
-2. Select Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/add-API/api-add-icon.png" alt-text="api icon"::: from the Visual Studio Code toolbar.
-3. Select **Add features** under **DEVELOPMENT**:
+### Add API connection using Teams Toolkit
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-add-features.png" alt-text="api add features":::
+Add a connection to an existing third-party API using the following steps:
 
-    * You can also open the command palette and enter **Teams: Add cloud resources**.
+1. Open your Teams app project in **Visual Studio Code**.
+2. Select **Teams Toolkit** from the Visual Studio Code activity bar.
+3. Select **Add features** in the **DEVELOPMENT** section.
 
-4. From the pop-up, select the **API Connection** you want to add to your Teams app project:
+    :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-add-features_1.png" alt-text="api add features":::
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-select-features.png" alt-text="api select features":::
+     The **Add Feature** drop-down list appears.
 
-5. Select **OK**.
+4. Select **API Connection**.
 
-6. Enter endpoint for the API. It's added to the project's local application settings and it's the base URL for API requests.
+    :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-select-features_1.png" alt-text="api select features":::
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-endpoint.png" alt-text="api endpoint":::
+5. Enter endpoint for the API, and then press **Enter**.
 
-     > [!NOTE]
-     > Ensure the endpoint is a valid http(s) URL.
+    Ensure that the endpoint is a valid http(s) URL. Teams Toolkit adds the endpoint to the project's local app settings, and it's the base URL for API requests.
 
-7. Select the component that accesses the API.
+    :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-endpoint_1.png" alt-text="api endpoint":::
 
-8. Select **OK**.
+7. Select the component that needs to connect to the API, and then select **OK**.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-invoke.png" alt-text="api invoke":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-invoke_1.png" alt-text="api invoke":::
 
-9. Enter an alias for the API. The alias generates an application setting name for the API that is added to the project's local application setting.
+9. Enter an alias for the API, and then press **Enter**.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-alias.png" alt-text="api alias":::
+    The alias generates an app setting name for the API. Teams Toolkit adds the alias to the project's local app setting.
 
-10. Select required authentication for the API request from the **API authentication type**. It generates appropriate sample code and adds corresponding local application settings based on your selection.
+    :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-alias_1.png" alt-text="api alias":::
+
+11. Select the required authentication for the API request from the **API authentication type**.
 
      :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/myAPI connection.png" alt-text="api auth":::
 
-     Based on the authentication type selected, following steps is required to completed extra configuration
+     Teams Toolkit generates appropriate sample code and adds corresponding local application settings based on authentication that you select. To configure authentication:
 
 # [Basic](#tab/basic)
 
+For implementing basic authentication using username and password:
+
+* Select **Basic**.
 * Enter the username for basic Auth.
 
-  Now the sample code got generated to call your API at bot\myAPI.js.
+Teams Toolkit generates the sample code to call your API at bot\myAPI.js.
 
 # [Certification](#tab/certification)
 
-   Now the sample code got generated to call your API at bot\myAPI.js.
+* Select **Certification** to authenticate requests using certificates.
 
-# [Azure Active Directory](#tab/AAD)
+Teams Toolkit generates the sample code to call your API at bot\myAPI.js.
 
-  Now the sample code got generated to call your API at bot\myAPI.js.
+# [Azure Active Directory (Azure AD)](#tab/AAD)
+
+* Select **Azure Active Directory (Azure AD)** to authenticate requests using Azure AD access tokens.
+
+Teams Toolkit generates the sample code to call your API at bot\myAPI.js.
 
 # [API Key](#tab/apikey)
 
+* Select **API Key** to implement authentication using an API key.
 * Select the required API key position in request.
-
 * Enter an API key name.
 
-  Now the sample code got generated to call your API at bot\myAPI.js.
+Teams Toolkit generates the sample code to call your API at bot\myAPI.js.
 
 # [Custom Auth Implementation](#tab/CustomAuthImplementation)
 
-  Now the sample code got generated to call your API at bot\myAPI.js.
+* Select **Custom Auth Implementation** to customize authentication according to your app requirement.
+
+Teams Toolkit generates the sample code to call your API at bot\myAPI.js.
 
 ---
 
-## Add API connection using CLI
+You've successfully added a connection in your Teams app to an existing API.
 
-The base command of this feature is `teamsfx add api-connection [authentication type]`. The following table provides list of different authentication types and their corresponding sample commands:
+## Add API connection using TeamsFx CLI
+
+The base command of this feature is `teamsfx add api-connection [authentication type]`. The following table provides a list of different authentication types and their corresponding sample commands:
 
  > [!TIP]
  > You can use `teamsfx add api-connection [authentication type] -h` to get help document.
 
    |**Authentication type**|**Sample command**|
    |-----------------------|------------------|
-   |Basic|teamsfx add api-connection basic--endpoint <https://example.com> --component bot--alias example--user-name exampleuser--interactive false|
-   |API Key|teamsfx add api-connection apikey--endpoint <https://example.com> --component bot--alias example--key-location header--key-name example-key-name--interactive false|
-   |Azure AD|teamsfx add api-connection aad--endpoint <https://example.com> --component bot--alias example--app-type custom--tenant-id your_tenant_id--app-id your_app_id--interactive false|
-   |Certificate|teamsfx add api-connection cert--endpoint <https://example.com> --component bot--alias example--interactive false|
-   |Custom|teamsfx add api-connection custom--endpoint <https://example.com> --component bot--alias example--interactive false|
+   |**Basic**|teamsfx add api-connection basic--endpoint <https://example.com> --component bot--alias example--user-name example user--interactive false|
+   |**API Key**|teamsfx add api-connection apikey--endpoint <https://example.com> --component bot--alias example--key-location header--key-name example-key-name--interactive false|
+   |**Azure AD**|teamsfx add api-connection aad--endpoint <https://example.com> --component bot--alias example--app-type custom--tenant-id your_tenant_id--app-id your_app_id--interactive false|
+   |**Certificate**|teamsfx add api-connection cert--endpoint <https://example.com> --component bot--alias example--interactive false|
+   |**Custom**|teamsfx add api-connection custom--endpoint <https://example.com> --component bot--alias example--interactive false|
 
 ---
 
 ## Directory structure updates to your project
 
- Teams Toolkit modifies `bot` or `api` folder based on your selections:
+ Teams Toolkit modifies `bot` or `api` folder based on your selection:
 
-1. Generate `{your_api_alias}.js/ts` file. The file initializes an API client for your API and exports the API client.
+1. Generate `{your_api_alias}.js\ts` file. The file initializes an API client for your API and exports the API client.
 
-2. Add `@microsoft/teamsfx` package to `package.json`. The package provides support for the common API authentication methods.
+2. Add `@microsoft\teamsfx` package to `package.json`. The package provides support for the common API authentication methods.
 
-3. Add environment variables to `.env.teamsfx.local`. They're the configurations for the selected authentication type. The generated code reads values from the environment variables.
-
-## Advantages
-
-Teams Toolkit helps you bootstrap sample code to access the APIs, if you don't have language appropriate SDKs to access these APIs.
+3. Add environment variables to `.env.teamsfx.local`. You must configure environment variables for the selected authentication type. The generated code reads values from the environment variables.
 
 ## See also
 
+* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
 * [Publish Teams apps using Teams Toolkit](publish.md)

@@ -8,7 +8,7 @@ ms.localizationpriority: medium
 
 # Up to date cards
 
-You can now provide latest information to your users on Adaptive Cards. Include a combination of refresh and message edits in Teams. Update the User Specific Views dynamically to its latest state as and when there is a change on your service. For example, for project management or ticketing cards, update comments and the task status. For approvals the latest state is reflected while also providing differentiated information and actions.
+You can now provide latest information to your users on Adaptive Cards. Include a combination of refresh and message edits in Teams. Update the User Specific Views dynamically to its latest state as and when there's a change on your service. For example, for project management or ticketing cards, update comments and the task status. For approvals, the latest state is reflected while also providing differentiated information and actions.
 
 For example, a user can create an asset approval request in a Teams conversation. Alex creates an approval request and assigns it to Megan and Nestor. The following are the two parts to create the approval request:
 
@@ -107,7 +107,7 @@ The following code provides an example of an approval card with **Approve** and 
 
 Following are the two roles that are shown to users depending on the approval request:
 
-* Approval base card: Shown to users not part of approvers list and the request is not yet approved or rejected, and not part of `userIds` list in `refresh` property of the Adaptive Card JSON.
+* Approval base card: Shown to users not part of approvers list and the request isn't yet approved or rejected, and not part of `userIds` list in `refresh` property of the Adaptive Card JSON.
 * Approval card with **Approve** or **Reject** buttons: Shown to the users who are part of the approvers list and the `userIds` list in the `refresh` property of the Adaptive Card JSON.
 
 To send the asset approval request:
@@ -126,7 +126,7 @@ To send the asset approval request:
 
 7. Now, Megan selects the **Approve** button, which is powered with `Action.Execute`. The bot gets an `adaptiveCard/action` invoke request to which it can return an Adaptive Card in response.
 8. The bot triggers a message edit with an updated card, which says Nestor and Megan have approved the request.
-9. Bot message edit does not trigger any automatic refresh. Megan's user MRI is also removed from the `userIds` list in `refresh` property of this Adaptive Card JSON in steps 7 and 8.
+9. Bot message edit doesn't trigger any automatic refresh. Megan's user MRI is also removed from the `userIds` list in `refresh` property of this Adaptive Card JSON in steps 7 and 8.
 
     :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-up-to-date-views-3.png" alt-text="Up to date views":::
 
@@ -256,12 +256,13 @@ The following code provides an example of Adaptive Cards sent as response of `ad
 
 ## Code sample
 
-|Sample name | Description | .NETCore | Node.js |
-|----------------|-----------------|--------------|--------------|
-| Sequential Workflows Adaptive Cards | Demonstrate how to implement Sequential Workflows, User Specific Views, and up to date Adaptive Cards in bots. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) |
+|Sample name | Description | .NET | Node.js | Manifest
+|----------------|-----------------|--------------|--------------|--------------|
+| Sequential Workflows Adaptive Cards | This sample shows how to implement Sequential Workflows, User Specific Views, and up to date Adaptive Cards in bots. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp/demo-manifest/bot-adaptivecards-user-specific-views.zip)
 
 ## See also
 
+* [Cards and task modules](../../cards-and-task-modules.md)
 * [Work with Universal Actions for Adaptive Cards](Work-with-universal-actions-for-adaptive-cards.md)
 * [User Specific Views](User-Specific-Views.md)
-* [Form completion feedback](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)
+* [Form completion feedback](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)*

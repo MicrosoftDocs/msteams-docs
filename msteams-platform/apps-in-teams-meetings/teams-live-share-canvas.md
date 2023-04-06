@@ -14,7 +14,7 @@ ms.date: 10/04/2022
 
 In conference rooms and classrooms across the globe, whiteboards are a pivotal part of collaboration. In modern times however, the whiteboard is no longer enough. With numerous digital tools such as PowerPoint being the focal point of collaboration in the modern era, it's essential to enable the same creative potential.
 
-To enable more seamless collaboration, Microsoft created PowerPoint Live, which has become instrumental to how people work in Teams. Presenters can annotate over slides for everyone to see, using pens, highlighters, and laser pointers to draw attention to key concepts. Using Live Share canvas, your app can bring the power of PowerPoint Live inking tools with minimal effort.
+To enable more seamless collaboration, Microsoft created PowerPoint Live, which has become instrumental to how people work in Microsoft Teams. Presenters can annotate over slides for everyone to see, using pens, highlighters, and laser pointers to draw attention to key concepts. Using Live Share canvas, your app can bring the power of PowerPoint Live inking tools with minimal effort.
 
 ## Install
 
@@ -56,9 +56,11 @@ Example:
 ```javascript
 import { LiveShareClient } from "@microsoft/live-share";
 import { InkingManager, LiveCanvas } from "@microsoft/live-share-canvas";
+import { LiveShareHost } from "@microsoft/teams-js";
 
 // Setup the Fluid container
-const liveShare = new LiveShareClient();
+const host = LiveShareHost.create(host);
+const liveShare = new LiveShareClient(host);
 const schema = {
   initialObjects: { liveCanvas: LiveCanvas },
 };
@@ -71,6 +73,8 @@ const inkingManager = new InkingManager(canvasHostElement);
 
 // Begin synchronization for LiveCanvas
 await liveCanvas.initialize(inkingManager);
+
+inkingManager.activate();
 ```
 
 # [TypeScript](#tab/typescript)
@@ -78,10 +82,12 @@ await liveCanvas.initialize(inkingManager);
 ```TypeScript
 import { LiveShareClient } from "@microsoft/live-share";
 import { InkingManager, LiveCanvas } from "@microsoft/live-share-canvas";
+import { LiveShareHost } from "@microsoft/teams-js";
 import { ContainerSchema } from "fluid-framework";
 
 // Setup the Fluid container
-const liveShare = new LiveShareClient();
+const host = LiveShareHost.create(host);
+const liveShare = new LiveShareClient(host);
 const schema: ContainerSchema = {
   initialObjects: { liveCanvas: LiveCanvas },
 };
@@ -94,6 +100,8 @@ const inkingManager = new InkingManager(canvasHostElement);
 
 // Begin synchronization for LiveCanvas
 await liveCanvas.initialize(inkingManager);
+
+inkingManager.activate();
 ```
 
 ---
@@ -265,7 +273,7 @@ import {
 
 // Change the selected tool to laser pointer
 document.getElementById("laser").onclick = () => {
-  inkingManager.tool = InkingTool.highlighter;
+  inkingManager.tool = InkingTool.laserPointer;
 };
 // Change the selected color for laser pointer
 document.getElementById("laser-color").onchange = () => {
@@ -441,10 +449,10 @@ Both the scenarios work well because the content can be viewed the same on all d
 
 ## Code samples
 
-| Sample name          | Description                            | JavaScript                                                                                |
-| -------------------- | -------------------------------------- | ----------------------------------------------------------------------------------------- |
-| Live Canvas demo     | Simple whiteboard application.         | [View](https://github.com/microsoft/live-share-sdk/tree/main/samples/03.live-canvas-demo) |
-| React media template | Draw over a synchronized video player. | [View](https://aka.ms/liveshare-mediatemplate)                                            |
+| Sample name | Description | JavaScript |
+| ------ | ----- | ---- |
+| Live Canvas demo | Simple whiteboard application. | [View](https://github.com/microsoft/live-share-sdk/tree/main/samples/javascript/03.live-canvas-demo) |
+| React media template | Draw over a synchronized video player. | [View](https://aka.ms/liveshare-mediatemplate) |
 
 ## Next step
 
@@ -453,7 +461,8 @@ Both the scenarios work well because the content can be viewed the same on all d
 
 ## See also
 
+- [Apps for Teams meetings](teams-apps-in-meetings.md)
 - [Live Share SDK FAQ](teams-live-share-faq.md)
 - [Live Share SDK reference docs](/javascript/api/@microsoft/live-share/)
 - [Live Share Canvas SDK reference docs](/javascript/api/@microsoft/live-share-canvas/)
-- [Teams apps in meetings](teams-apps-in-meetings.md)
+- [Use Fluid with Teams](../tabs/how-to/using-fluid-msteam.md)

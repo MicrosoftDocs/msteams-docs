@@ -35,7 +35,7 @@ items:
      | --- | --- | --- |
      | **Required** | &nbsp; | &nbsp; |
      | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call and all in one place.|
-     | &nbsp; | [Visual Studio 2022 version 17.3](https://visualstudio.microsoft.com)<br> Install one of the following two workloads:<br> • ASP.NET and web development <br> • .NET Core cross-platform development | You can install the enterprise version in Visual Studio 2022, and install the workloads. |
+     | &nbsp; | [Visual Studio 2022 version 17.3](https://visualstudio.microsoft.com)<br> Install the <br> ASP.NET and web development workload.| You can install the enterprise version in Visual Studio 2022, and install the workloads. |
      | &nbsp; | [.NET Core SDK version 3.1](https://dotnet.microsoft.com/en-us/download) | Customized bindings for local debugging and Azure Functions app deployments. If you haven't installed the .NET 3.1 (or later) SDK globally, the portable version can be installed. |
      | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots, message extensions, and incoming webhooks) require inbound connections. A tunnel connects your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
    
@@ -46,11 +46,11 @@ items:
   durationInMinutes: 1
   content: |  
 
-    1. Open [BotBuilder-Samples](https://github.com/Microsoft/BotBuilder-Samples).
+    1. Open [Microsoft-Teams-Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples).
     1. Select **Code**.
     1. From the dropdown menu, select **Open with GitHub Desktop**.
 
-       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/botbuilder-sample_1.png" alt-text="Screenshot showing the cloning of repository":::
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/clone-repository.png" alt-text="Screenshot showing the cloning of repository":::
 
     1. Select **Clone**. 
 
@@ -358,7 +358,7 @@ items:
   content: |
     1. Go to **appsettings.json** in the cloned repository.
 
-       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/appsettings-file_1.png" alt-text="app settings manifest":::
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/appsettings-file-location.png" alt-text="app settings manifest":::
                       
     1. Open **appsettings.json** in Visual Studio.
 
@@ -373,7 +373,7 @@ items:
            
     1. Go to **manifest.json** in the cloned repository.
 
-       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/teams-app-manifest_1.png" alt-text="open manifest file":::
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/manifest-file-location.png" alt-text="open manifest file":::
          
     1. Open **manifest.json** in Visual Studio and make the following changes:
     
@@ -394,19 +394,13 @@ items:
 
            :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/VS-open-file_1.png" alt-text="visual studio":::      
         
-       1. Select **TeamsFileUpload.csproj** file from **56.teams-file-upload** folder.
+       1. Select **TeamsFileUpload.csproj** file from **samples** > **bot-file-upload** > **csharp** folder.
 
-           :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/csproj-folder_1.png" alt-text="folder":::        
+           :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/project-file-location.png" alt-text="folder":::        
 
        1. Open **Solution Explorer** from **View**.
 
           :::image type="content" source="../msteams-platform/assets/images/Teams-task-module/solutionexplorer_1.png" alt-text="view":::
-
-       1. Right-click on **TeamsFileUpload**.
-
-       1. Select **Set as Startup Project**.
-          
-          :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/teams-file-upload_1.png" alt-text="start up project":::
           
        1. Press **F5** to run the project.
     
@@ -423,39 +417,39 @@ items:
  
      # [Command line](#tab/cli)
 
-     Go to **BotBuilder-Samples > samples > csharp_dotnetcore > 50.teams-messaging-extensions-search** in Command Prompt window and enter the following command:
+     Go to **Microsoft-Teams-Samples** > **samples** > **bot-file-upload** > **csharp** in Command Prompt window and enter the following command:
 
      ```bash
      dotnet run
      ```
    
-     ![Dotnet](~/assets/images/Teams-Messaging-Extensions-Search/dotnetruncmd.png)
+     ![Dotnet](~/assets/images/teams-file-upload-bot/dotnet-run-command.png)
 
 - title: Add file upload bot in Teams
   durationInMinutes: 2
   content: | 
-     1. In your cloned repository, Go to **csharp_dotnetcore** > **56.teams-file-upload** > **TeamsAppManifest**.
+     1. In your cloned repository, Go to **Microsoft-Teams-Samples** > **samples** > **bot-file-upload** > **csharp** > **TeamsAppManifest**.
 
      1. Create a .zip with the following files that are present in the **TeamsAppManifest** folder: 
        * manifest.json
        * icon-outline.png
        * icon-color.png 
 
-         :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/teams-upload-manifest_1.png" alt-text="manifest folder":::
+         :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/manifest-zip-file-location.png" alt-text="manifest folder":::
 
       1. Go to **Microsoft Teams**.
 
-      1. In the left panel, select **Apps** > **Manage your apps**.
+      1. Select **Apps** > **Manage your apps**.
 
          :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/AppStore1_1.png" alt-text="adding app":::
 
-      1. Select **Upload a custom app**.
+      1. Select **Upload an app** and select **Upload a custom app**.
 
-         :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/upload-custom-app_1.png" alt-text="custom apps":::
+         :::image type="content" source="assets/images/upload-custom-app.png" alt-text="Screenshot showing the selection of Upload a custom app highlighted in red.":::
 
       1. Select **Open** to upload the .zip file that you created in the **TeamsAppManifest** folder.
 
-         :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/teams-manifest_1.png" alt-text="manifest open"::: 
+         :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/upload-manifest-zip.png" alt-text="manifest open"::: 
 
       1. Select **Add**.
 

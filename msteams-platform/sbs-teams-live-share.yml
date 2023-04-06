@@ -41,7 +41,7 @@ items:
   durationInMinutes: 1
   content: |
 
-    1. Go to the [Agile Poker](https://github.com/microsoft/live-share-sdk/tree/main/samples/22.react-agile-poker) sample app.
+    1. Go to the [Agile Poker](https://github.com/microsoft/live-share-sdk/tree/main/samples/javascript/22.react-agile-poker) sample app.
 
     1. Clone the Live Share SDK repository to test the sample app:
        ```
