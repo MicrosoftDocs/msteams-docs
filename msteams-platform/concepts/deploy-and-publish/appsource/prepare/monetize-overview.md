@@ -73,11 +73,11 @@ With a transactable Software as a Service (SaaS) offer, you can test the end-to-
     :::column-end:::
     :::column span="2":::
 
-**Manage license for third party apps in Teams**
+**Set up Microsoft license management**
 
 If you choose to use Microsoft license management to manage a SaaS license purchased in Teams, you can easily assign, unassign, use, and track SaaS licenses from the Teams store.
 
-[Manage license for third party apps in Teams](manage-third-party-apps-license.md).
+[Set up Microsoft license management](manage-third-party-apps-license.md).
 
 :::column-end:::
 :::row-end:::
