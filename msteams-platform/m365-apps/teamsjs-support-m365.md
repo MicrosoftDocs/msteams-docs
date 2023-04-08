@@ -293,7 +293,7 @@ This article details the level of support of Teams JavaScript client (TeamsJS) l
 
 [Reference](https://learn.microsoft.com/javascript/api/@microsoft/teams-js/app) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teamsjs-cc-app/tabs/src/components/capabilities/App.tsx)
 
-Namespace to interact with app initialization and lifecycle. 
+Namespace to interact with app initialization and lifecycle.
 
 ## Functions
 
@@ -347,6 +347,24 @@ Namespace to interact with app initialization and lifecycle.
         </tr>
     </tbody>
 </table>
+
+## `appInstallDialog`
+
+[Reference](https://learn.microsoft.com/en-us/javascript/api/@microsoft/teams-js/appinstalldialog?view=msteams-client-js-latest) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teamsjs-cc-app/tabs/src/components/capabilities/AppInstallDialog.tsx)
+
+TODO: Description
+
+## `call`
+
+[Reference](https://learn.microsoft.com/en-us/javascript/api/@microsoft/teams-js/call?view=msteams-client-js-latest) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teamsjs-cc-app/tabs/src/components/capabilities/Call.tsx)
+
+TODO: Description
+
+## `chat`
+
+[Reference](https://learn.microsoft.com/en-us/javascript/api/@microsoft/teams-js/chat?view=msteams-client-js-latest) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teamsjs-cc-app/tabs/src/components/capabilities/Chat.tsx)
+
+Contains functionality to start chat with others.
 
 ## `dialog`
 
@@ -438,6 +456,24 @@ Subcapability for interacting with URL-based dialogs.
 
 [Reference](https://learn.microsoft.com/javascript/api/@microsoft/teams-js/dialog.url) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teamsjs-cc-app/tabs/src/components/capabilities/Dialog.tsx)
 
+## `geoLocation`
+
+[Reference](https://learn.microsoft.com/en-us/javascript/api/@microsoft/teams-js/geolocation?view=msteams-client-js-latest) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teamsjs-cc-app/tabs/src/components/capabilities/GeoLocation.tsx)
+
+Namespace to interact with the geoLocation module-specific part of the SDK. This is the newer version of location module.
+
+## `menus`
+
+[Reference](https://learn.microsoft.com/en-us/javascript/api/@microsoft/teams-js/menus?view=msteams-client-js-latest) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teamsjs-cc-app/tabs/src/components/capabilities/Menus.tsx)
+
+Namespace to interact with the menu-specific part of the SDK. This object is used to show View Configuration, Action Menu and Navigation Bar Menu.
+
+## `monetization`
+
+[Reference](https://learn.microsoft.com/en-us/javascript/api/@microsoft/teams-js/monetization?view=msteams-client-js-latest) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teamsjs-cc-app/tabs/src/components/capabilities/Monetization.tsx)
+
+TODO: No public APIs. Remove?
+
 ## `pages`
 
 [Reference](https://learn.microsoft.com/javascript/api/@microsoft/teams-js/pages) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teamsjs-cc-app/tabs/src/components/capabilities/Pages.tsx)
@@ -522,6 +558,12 @@ Provides functions for navigating without needing to specify your application ID
 
 Provides APIs for querying and navigating between contextual tabs of an application. Unlike personal tabs, contextual tabs are pages associated with a specific context, such as channel or chat.
 
+## `people`
+
+[Reference](https://learn.microsoft.com/en-us/javascript/api/@microsoft/teams-js/people?view=msteams-client-js-latest) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teamsjs-cc-app/tabs/src/components/capabilities/People.tsx)
+
+TODO: description
+
 ## `tasks`
 
 [Reference](https://learn.microsoft.com/javascript/api/@microsoft/teams-js/tasks) | Sample
@@ -530,6 +572,24 @@ Provides APIs for querying and navigating between contextual tabs of an applicat
 > This namespace is slated for deprecation. It is currently supported for backwards compability purposes. For new apps, please use the [dialog](#dialog) capability.
 
 Earlier version of the capability for providing modal dialog (task module) support, prior to TeamsJS v2.8.0.
+
+## `teamsCore`
+
+[Reference](https://learn.microsoft.com/en-us/javascript/api/@microsoft/teams-js/teamscore?view=msteams-client-js-latest) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teamsjs-cc-app/tabs/src/components/capabilities/TeamsCore.tsx)
+
+Namespace containing the set of APIs that support Teams-specific functionalities.
+
+## `video`
+
+[Reference](https://learn.microsoft.com/en-us/javascript/api/@microsoft/teams-js/video?view=msteams-client-js-latest) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teamsjs-cc-app/tabs/src/components/capabilities/Video.tsx)
+
+Namespace to video extensibility of the SDK.
+
+## `webStorage`
+
+[Reference](https://learn.microsoft.com/en-us/javascript/api/@microsoft/teams-js/webstorage?view=msteams-client-js-latest) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teamsjs-cc-app/tabs/src/components/capabilities/WebStorage.tsx)
+
+Contains functionality to allow web apps to store data in webview cache.
 
 ## Code sample
 
