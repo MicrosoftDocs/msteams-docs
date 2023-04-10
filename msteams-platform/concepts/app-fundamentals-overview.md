@@ -76,7 +76,7 @@ The following table includes Teams features and availability for GCC, GCC-High, 
 | **Apps** | &nbsp; | &nbsp; | &nbsp; |
 | Microsoft apps | ✔️ Microsoft apps compliant with GCC. | ✔️ Microsoft apps compliant with GCC-High. | ✔️ Microsoft apps compliant with DOD. |
 | 3P or third-party apps | ✔️ Third-party apps are available. Disabled by default and tenant admin use their own discretion to enable it. | ❌ | ❌ |
-|Line-of-business apps| ✔️ | ✔️ | ✔️ |
+|Line-of-business apps| ✔️ | ❌ | ❌ |
 |Custom apps| ✔️ | ✔️ | ✔️ |
 |Sideloading apps | ✔️ | ❌ | ❌ |
 | **Capabilities** | &nbsp; | &nbsp; | &nbsp; |
