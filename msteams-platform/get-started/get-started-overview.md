@@ -34,12 +34,6 @@ Depending on the capabilities you want for your app, choose an appropriate devel
 | **Technology stacks or Languages** | Web technology in general, HTML, CSS, and JavaScript (incl. React). | Node.js, C#, Java, and Python. | Node.js, C#, Java, and Python. |
 | **Extend for Microsoft 365** | | | |
 
-| App capabilities | User interactions | Recommended tools | SDKs | Technology stacks / Languages |
-|--------|-------------|--------|--------|--------|
-| Tabs | A full-screen embedded web experience. | Microsoft Visual Studio Code with Teams Toolkit extension, or [TeamsFx CLI](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) if you prefer using CLI | [TeamsFx SDK](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true) for core libs and [Teams JavaScript client library](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) for UI functionalities | Web technology in general, HTML, CSS, and JavaScript (incl. React). |
-| Bots | A chat bot that converses with members. | Visual Studio Code with Teams Toolkit extension, or [TeamsFx CLI](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) | [TeamsFx SDK](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true) and [Bot Framework SDK](https://dev.botframework.com/) | Node.js, C#, Java, and Python. |
-| Message extensions | Shortcuts for inserting external content into a conversation or taking action on messages. | Visual Studio Code with Teams Toolkit extension, or [TeamsFx CLI](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) | [TeamsFx SDK](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true) and [Bot Framework SDK](https://dev.botframework.com/) | Node.js, C#, Java, and Python. |
-
 *You aren't limited to using these particular stacks!*
 
 If you are already familiar with Yeoman workflow, you may prefer using [YoTeams Yeoman Generator](https://github.com/pnp/generator-teams/blob/master/docs/docs/tutorials/build-your-first-microsoft-teams-app.md) to build your apps.

@@ -15,3 +15,7 @@ ms.topic: reference
 | | | SBS: command bot using JS | | |
 | | | SBS: workflow bot using JS | | |
 | Extend app across Microsoft 365 | A code sample of a To-do list (tab) exists, but there’s no SBS afaik. | | | |
+
+## Code samples
+
+Samples built using new generation of Teams development tool - Teams Toolkit. Learn more about [code samples](https://github.com/OfficeDev/Microsoft-Teams-Samples).

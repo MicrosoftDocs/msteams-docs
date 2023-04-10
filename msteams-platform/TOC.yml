@@ -27,9 +27,9 @@
     displayName: First Teams app, Python, .NET, Java, Node.js
   - name: Know your Teams app
     href: get-started/know-your-teams-app.md
-  - name: Build your first tab app using JavaScript
+  - name: Build your first tab app
     href: get-started/build-basic-tab-app.md
-  - name: Build notification bot with JavaScript
+  - name: Build notification bot
     href: get-started/build-notification-bot.md
   - name: Teams app tutorials
     href: get-started/teams-toolkit-tutorial.md
