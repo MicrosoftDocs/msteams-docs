@@ -33,8 +33,7 @@
     href: get-started/build-notification-bot.md
   - name: Teams app tutorials
     href: get-started/teams-toolkit-tutorial.md
-  - name: Code samples
-    href: https://github.com/OfficeDev/Microsoft-Teams-Samples
+  
 - name: Plan your app
   items:
   - name: Overview
