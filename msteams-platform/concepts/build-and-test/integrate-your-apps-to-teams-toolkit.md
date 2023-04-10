@@ -21,17 +21,19 @@ In Teams Developer Portal, you can now directly open and launch your project in 
 
 Following are the steps to open your app in Visual Studio Code:
 
-1. Select **Develop (Preview)** > **Open in Teams Toolkit (JS/TS)** to open Visual Studio Code and scaffold your app.
+1. Select **Develop (Preview)** > **Open in Teams Toolkit** > **Open in Visual Studio Code (JS/TS)** to open Visual Studio Code and scaffold your app.
 
-    :::image type="content" source="../../assets/images/tdp/open-in-teams-toolkit.png" alt-text="Screenshot shows the Developer Portal with Open in Teams Toolkit highlighted in red. ":::
+    :::image type="content" source="../../assets/images/tdp/open-in-teams-toolkit.png" alt-text="Screenshot shows the Developer Portal with Open in Teams Toolkit highlighted in red." lightbox="../../assets/images/tdp/open-in-teams-toolkit.png":::
 
 1. Select **Open**.
 
     :::image type="content" source="../../assets/images/tdp/select-open.png" alt-text="Screenshot of browser with Open option highlighted in red.":::
 
-1. Select **Open**. If required, sign in to your Microsoft 365 account.
+1. Select **Open**.
 
     :::image type="content" source="../../assets/images/tdp/open-link.png" alt-text="Screenshot shows Developer Preview page with Open option highlighted in red.":::
+
+   If required, sign in to your Microsoft 365 account.
 
 1. Select your preferred programming language.
 
@@ -41,15 +43,17 @@ Following are the steps to open your app in Visual Studio Code:
 
     :::image type="content" source="../../assets/images/tdp/workspace-folder.png" alt-text="Screenshot shows the Teams Toolkit with workspace folder highlighted in red":::
 
-1. Enter application name.
+1. Enter an app name.
 
     :::image type="content" source="../../assets/images/tdp/select-application-name.png" alt-text="Screenshot of Teams Toolkit with Application name highlighted in red.":::
 
-1. Select your app and select **OK**. Teams Toolkit will convert the URL you configured in Teams Developer Portal to a localhost address to work with the debugging process.
+1. Select your app and select **OK**.
+
+   Teams Toolkit will convert the URL you configured in Teams Developer Portal to a localhost address to work with the debugging process.
 
     :::image type="content" source="../../assets/images/tdp/select-ok.png" alt-text="Screenshot shows Teams Toolkit with OK option highlighted in red.":::
 
-1. Teams Toolkit scaffolds your project, you now are ready to start development.
+1. Teams Toolkit scaffolds your project with all the necessary config and code files, now you're ready to start development.
 
     :::image type="content" source="../../assets/images/tdp/scaffold.png" alt-text="Screenshot shows you the scaffolding of your project in Visual Studio Code. ":::
 
@@ -59,7 +63,7 @@ You can open your project in Visual Studio and scaffold you project in Visual St
 
 Following are the steps to open your app in Visual Studio:
 
-1. Select **Develop (Preview)** > **Open in Teams Toolkit**.
+1. Select **Develop (Preview)** > **Open in Teams Toolkit** > **Open in Visual Studio (.NET)**.
 
     :::image type="content" source="../../assets/images/tdp/tdp-teams-toolkit-vs.png" alt-text="Screenshot shows the Developer Portal with Open in Teams Toolkit. ":::
 
@@ -69,15 +73,17 @@ Following are the steps to open your app in Visual Studio:
 
    If required, sign in to your Microsoft 365 account.
 
-1. Enter your project name, location and solution name. Select **Create**.
+1. Enter your project name, location, and solution name. Select **Create**.
 
     :::image type="content" source="../../assets/images/tdp/tdp-vs-open-file.png" alt-text="Screenshot shows you the details tab to set the app name.":::
 
-1. Select the application type and select **Next**. Teams Toolkit converts the app you configured in Teams Developer Portal to a localhost address to work with the debugging process.
+1. Select the application type and select **Next**.
+
+   Teams Toolkit converts the app you configured in Teams Developer Portal to a localhost address to work with the debugging process.
 
     :::image type="content" source="../../assets/images/tdp/tdp-vs-bot.png" alt-text="Screenshot shows you the type of app in visual studio.":::
 
-1. Teams Toolkit scaffolds your project, now you're ready to start development.
+1. Teams Toolkit scaffolds your project with all the necessary config and code files, now you're ready to start development.
 
     :::image type="content" source="../../assets/images/tdp/vs-scaffold.png" alt-text="Screenshot shows you the scaffolding of your project in visual studio. ":::
 

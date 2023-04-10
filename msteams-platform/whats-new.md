@@ -26,6 +26,8 @@ Teams platform features that are available to all app developers.
 
 **2023 April**
 
+* ***April 11, 2023***: [Integrate Developer Portal with Teams Toolkit](concepts/build-and-test/integrate-your-apps-to-teams-toolkit.md)
+
 * ***April 6, 2023***: [Set up Microsoft license management](concepts/deploy-and-publish/appsource/prepare/manage-third-party-apps-license.md)
 
 * ***April 4, 2023***: [Tab apps in shared channels are available in DOD](~/concepts/build-and-test/shared-channels.md)

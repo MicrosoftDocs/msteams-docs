@@ -13,6 +13,7 @@ After you create or upload your app, you can manage your apps in Developer Porta
 * [Overview](#overview)
 * [Configure](#configure)
 * [Advanced](#advanced)
+* [Develop (Preview)](#develop-preview)
 * [Publish](#publish)
 * [Manage rollouts](#manage-rollouts)
 
@@ -109,6 +110,10 @@ In the **Advanced** section, you can see the following components to manage your
 * **Admin settings**:
   * **App Customization**: You can customize your app by selecting different properties, such as **Name**, **Short description**, **Small icon**, and other properties.  
   * **Block app by default**: You can block your app by default for users until a tenant admin selects to enable it.
+
+## Develop (Preview)
+
+In the **Develop (Preview)** section, you can open your app in Teams Toolkit in the Visual Studio Code and Visual Studio. For more information, see [integrate Developer Portal with Teams Toolkit](integrate-your-apps-to-teams-toolkit.md).
 
 ## Publish
 
