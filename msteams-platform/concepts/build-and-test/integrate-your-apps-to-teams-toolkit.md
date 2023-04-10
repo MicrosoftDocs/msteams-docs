@@ -1,6 +1,6 @@
 ---
 title: Integrate Developer Portal with Teams Toolkit
-description: Learn how to integrate your app from Teams Developer portal to Teams Toolkit in Visual Studio Code and Visual Studio.
+description: Learn how to integrate your app from Teams Developer Portal to Teams Toolkit in Visual Studio Code and Visual Studio.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: v-sdhakshina
