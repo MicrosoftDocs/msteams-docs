@@ -233,7 +233,8 @@ App caching improves subsequent launch time of the apps that are loaded in the m
 >
 > * App caching in Teams desktop client is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
 > * App caching in iOS personal tray is generally available (GA).
-> * App caching is supported only for tabs loaded in the meeting side panel in Teams desktop client and iOS personal tray. While it can work in other contexts such as personal apps and chat or channel tabs, it isn't officially supported. We recommend to register the `onLoad` or `beforeUnload` handlers when in the sidePanel frameContext.
+> * App caching in iOS personal tray supported only in personal scope.
+> * App caching is supported only for tabs loaded in the meeting side panel in Teams desktop client. While it can work in other contexts such as personal apps and chat or channel tabs, it isn't officially supported. We recommend to register the `onLoad` or `beforeUnload` handlers when in the sidePanel frameContext.
 
 ### Enable app caching
 
@@ -292,7 +293,7 @@ microsoftTeams.teamsCore.registerBeforeUnloadHandler((readyToUnload) => {
 
 ### Best practices
 
-For iOS personal tray, you can use web storage to store your data locally and use it during the subsequent launch of the app. The data is stored in the key or value pair format.
+For iOS personal tray, you can use web storage to store your web app data locally and use it during the subsequent launch of the app. The data is stored in the key or value pair format.
 
 ### Limitations
 
