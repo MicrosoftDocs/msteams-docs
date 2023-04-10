@@ -61,6 +61,16 @@ Use Delete messages-Bot framework's `DeleteActivity` method: [Update and delete
 
 You can test or validate the Adaptive Card schema using the **Adaptive cards editor (preview)** option in [Developer Portal > Tools](https://dev.teams.microsoft.com/tools).
 </details>
+<details>
+<summary>Why my bot isn't getting created in developer portal</summary>
+
+Check for the following:
+
+1. [If app registration is disabled org-wide, enable it ]().
+1. [In case ORG WIDE app Registration is disabled, and permissions need to be provided on “Per User Basis.” - With AAD for Microsoft 365 License assigned to User.]().
+1. [With AAD P1/P2 Plans assigned to User ](/partner-center/mpn-benefits-azure-cloud).
+</details>
+
 
 ## Live share
 
