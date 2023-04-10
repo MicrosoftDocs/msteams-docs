@@ -56,7 +56,7 @@ In the **Configure** section, you can see the following components to manage and
   * Meeting extension
   * Activity feed notification
   > [!NOTE]
-  > Connector is not available for Government Community Cloud (GCC) tenants.
+  > Connector isn't available for Government Community Cloud (GCC) tenants.
 * **Permissions**: This section allows you to give **Device permissions**, **Team Permissions**, **Chat/Meeting permissions**, and **User Permissions** for your app.
 * **Single sign-on**: Bot registered on Microsoft Azure Active Directory (Azure AD) supports single sign-on (SSO). If a bot is registered on Bot Framework portal (or within the Developer Portal under **Bot management**), then a bot doesn't support SSO, and you have to register your bot on Azure AD to support SSO. For a bot registered on Azure AD, add the **Application ID URI**. To get **Application ID URI** from Azure AD, see [how to use SSO authentication for bots](../../bots/how-to/authentication/auth-aad-sso-bots.md).
 * **Languages**: This section allows you to set up or change the language of your app.
