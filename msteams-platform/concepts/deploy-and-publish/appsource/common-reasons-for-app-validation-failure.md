@@ -306,69 +306,67 @@ Your offer listing must include a valid Terms of use link. Offers with invalid, 
 
 [Back to top](#common-reasons-for-app-validation-failure)
 
-
 ## Teams apps extensible across Microsoft 365
 
-### Microsoft 365 re-branding 
+### Microsoft 365 re-branding
 
-Tab doesn't load or show an error page or message on the Microsoft 365 client, when you replace the tab url from www.office.com/ to www.microsoft365.com/.
+Tab doesn't load or show an error page or message on the Microsoft 365 client when you replace the tab url from www.office.com/ to www.microsoft365.com/.
 
-### App functionality 
+### App functionality
 
-The app must not have the following broken functionalities in Outlook and Microsoft 365 clients:
+Your app must not have the following issues in Outlook and Microsoft 365 clients:
 
-1. Functionality cross-parity isn't maintained or missing across Microsoft 365 client.
+1. Functionality cross-parity isn't maintained or missing across Microsoft 365 clients.
 
-1. Continuous loading indicator visible in tabs for Teams apps extensible across Microsoft 365.
+1. Continuous loading indicator is visible in tabs for Teams apps extensible across Microsoft 365.
 
 1. Blank screen is visible in tabs for Teams apps extensible across Microsoft 365.
 
-1. Error message appears when adding app to the Teams apps extensible across Microsoft 365.
+1. Error message appears when adding an app for Teams apps extensible across Microsoft 365.
 
-1. A button dosen't perform the intended action upon selection, but it does after the session is refreshed.
+1. A button doesn't perform the intended action upon selection, but it does after the session is refreshed.
 
-1. Switching between the tabs requests for authentication again in Outlook client. 
+1. App requests for authentication in the Outlook client when switching between the tabs.
 
-1. An intended feature in Microsoft 365 client opens two browser instances upon selection 
+1. An intended feature in the Microsoft 365 client opens two browser instances upon selection.
 
 1. An intended feature in Teams apps extensible across Microsoft 365 shows an error message upon selection.
 
-1. Content in the <b>Help</b> tab must be publicly available to learn more about the app offering. The app must not ask for authentication.
+1. The content in the **Help** tab isn't publicly available to learn more about the app's offering. The app asks for authentication.
 
-1. No sign-out option present within tab. 
+1. Sign out option isn't available within the tab.
 
-1. Content in the <b>Help</b> or <b>About</b> tab related to Teams clients. 
+1. The content in the **Help** or **About** tab is only related to Teams clients.
 
-1. Tab having duplicate Header or Logo.
+1. The tab has a duplicate header or logo.
 
-1. The user unable to revert last action or doesn't have back button option to go to previous work state.
+1. The user is unable to revert the last action or doesn't have a back button to go to the previous work state.
 
-1. Content in the app is specific to Teams only.
+1. The content in the app is specific to Teams only.
 
-1. Incorrect reference to Teams app extensible across Microsoft 365.
+1. The user is unable to login to the app in Outlook.
 
-1. Unable to login to the app in Outlook.
+### App responsiveness
 
+You must avoid the following issues in your app before you submit for review:
 
-### App responsiveness 
+1. Horizontal scroll bar is present in tabs.
 
-You must avoid the following responsiveness issues in your app before you submit for review:
-
-1. Horizontal scroll bar in tabs.
-
-1. Content truncation.
+1. App has truncated content.
 
 1. App isn't responsive to 100 percent screen resolution.
 
-### App package and store listing (metadata and manifest) 
+### App package and store listing (metadata and manifest)
 
-You must avoid the following app package and store listing issues in your app before you submit for review:
+You must avoid the following issues in your app before you submit for review:
 
-* App listing screenshots are only relevant to Teams client.
+* App listing screenshots are only relevant to the Teams client.
 
-* App description in the manifest or metadata is only relevant to Teams client.
+* App description in the manifest or metadata is only relevant to the Teams client.
 
-* Support URL, privacy policy, and terms of use content in the manifest or metadata is only relevant to Teams client.
+* App has incorrect reference to the Teams app extensible across Microsoft 365.
+
+* Support URL, privacy policy, or terms of use content in the manifest or metadata is only relevant to the Teams client.
 
 [Back to top](#common-reasons-for-app-validation-failure)
 

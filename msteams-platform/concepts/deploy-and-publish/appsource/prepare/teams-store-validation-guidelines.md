@@ -415,7 +415,7 @@ Icons are one of the main elements people see when browsing the Teams store.
 
 Your icons must communicate your app's brand and purpose while adhering to the following requirements:
 
-* The color icon and outline icon of your app submitted in the app listing must match.[*Mandatory Fix*]
+* App's color and outline icon submitted in the app listing must match. [*Mandatory Fix*]
 
    :::image type="content" source="../../../../assets/images/submission/color-outline-icon-same.png" alt-text="Screenshot shows color icon and outline icon are same.":::
 
@@ -626,14 +626,14 @@ Remember the following:
 
 </details>
 
-### Videos 
+### Videos
 
-A video in your listing can be the most effective way to communicate why people should use your app. You can add a URL for your  `YouTube or Vimeo video`. 
+A video in your app listing is one of the most effective ways to communicate why people should use your app. You can add a URL for your YouTube or Vimeo video.
 
 If you choose to submit a video as part of your app listing in your Partner Center account, ensure the following:
 
 * The duration of the video doesn't exceed 90 seconds. [*Suggested Fix*]
-* Turn off advertisements from your YouTube or Vimeo account settings before submitting the video link in the app listing. [*Mandatory Fix*]
+* You turn off advertisements from your YouTube or Vimeo account settings before submitting the video link in the app listing. [*Mandatory Fix*]
 * The video showcases your app’s functionality and integration within Teams. [*Mandatory Fix*]
 * The video is available as a functional link. [*Mandatory Fix*]
 
@@ -698,7 +698,7 @@ Support URLs must include your contact details or a way forward for users to rai
 
 ## Apps linked to SaaS offer
 
-:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: This section is in line with [Microsoft commercial marketplace policy number 1140.5](/legal/marketplace/certification-policies?branch=pr-en-us-5673). If you're building a Teams app linked to a SaaS offer, ensure that it adheres to these guidelines.
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: This section is in line with [Microsoft commercial marketplace policy number 1140.5](/legal/marketplace/certification-policies?branch=pr-en-us-5673). If you're building a Teams app linked to a Software as a Service (SaaS) offer, ensure that it adheres to these guidelines.
 <br></br>
 <details><summary>General</summary>
 
@@ -732,6 +732,8 @@ Support URLs must include your contact details or a way forward for users to rai
 * Validate users to ensure that they don’t already have license assigned through another user.
 * Notify users after license assignment.
 * Guide users on how to add the app to Teams and get started through Teams chat bot or email.
+
+* If a SaaS app uses [Microsoft license management](manage-third-party-apps-license.md), after the confirmation of the app subscription on the ISV's landing page, the user must be redirected to the Microsoft license management in Teams to avoid a dead-end and allow the user to manage licenses within Teams.
 
 </details>
 </br>
@@ -865,13 +867,13 @@ The following are the navigation guidelines:
 
    :::image type="content" source="../../../../assets/images/submission/validation-horizontal-scroll-in-list-view.png" alt-text="Graphic shows an example of horizontal scroll in list view.":::
 
-* The user must have back button option to go to previous work state.[*Mandatory Fix*]
+* The user must have an option to go to previous work state. [*Mandatory Fix*]
 
    :::image type="content" source="../../../../assets/images/submission/back-button-available.png" alt-text=" Screenshot shows back button option available.":::
 
    :::image type="content" source="../../../../assets/images/submission/no-back-button-available.png" alt-text="Screenshot shows failed scenario of no back button option available.":::
 
-* Horizontal scroll in Adaptive Cards mustn't be present in Teams.[*Mandatory Fix*]
+* Horizontal scroll in Adaptive Cards mustn't be present in Teams. [*Mandatory Fix*]
 
 * Bottom rail used for navigation in tabs mustn't conflict with Teams native mobile app navigation. [*Mandatory Fix*]
 
@@ -1508,9 +1510,9 @@ Shared meeting stage feature can only be launched through the Teams desktop app.
 
 [Back to top](#microsoft-teams-store-validation-guidelines)
 
-## Connector 
+## Connector
 
-1. Connector name must be same as app name within the app and in the manifest provided.
+1. The connector name must be the same as the app name within the app and in the manifest.
 
    :::image type="content" source="../../../../assets/images/submission/connector-mismatch-app-name.png" alt-text="Screenshot shows the mismatch in app name between app and manifest.":::
 
@@ -1671,34 +1673,34 @@ After an internal Microsoft review, if the compliance demonstration is satisfact
 
 [Back to top](#microsoft-teams-store-validation-guidelines)
 
-## Apps extended across Microsoft 365 clients 
+## Apps extended across Microsoft 365 clients
 
 ### General
 
-* The apps that are intended to extend Teams apps across Microsoft 365 clients must use schema version 1.13 or later. 
+* The apps that are intended to extend Teams apps across Microsoft 365 clients must use the schema version 1.13 or later.
 
-* Your app’s Support URL must contain content relevant for the Teams app extensible across Microsoft 365 clients and shouldn't talk about or call out a single client only.
+* Your app’s support URL must contain content relevant for the Teams app extensible across Microsoft 365 clients and must not call out a single client only.
 
-* You must provide relevant reference to Teams app extensible across Microsoft 365 clients in the app description.
- 
-* If your Teams app is extensible across Microsoft 365 clients , the content provided in your app’s get started, sign-in, sign-up, sign-out,  help pages or way- forward messages must call out all clients.
+* You must provide relevant reference to the Teams app extensible across Microsoft 365 clients in the app description.
+
+* If your Teams app is extensible across Microsoft 365 clients, the content provided in your app’s get started, sign in, sign up, sign out, help pages, or way forward messages must call out all the clients.
 
 ### Compatibility
 
 Teams apps extensible across Microsoft 365 clients must be fully responsive and functional on the latest versions of Microsoft Edge and Google Chrome clients. The user must be able to invoke and continue to use personal tabs or message extensions on the following:
 
-   * Outlook for Windows and web.
-   * Microsoft 365 on desktop, web and Android.
-   * Microsoft Teams on desktop and web.
-   * Microsoft Teams on Android and iOS.
+* Outlook for Windows and web.
+* Microsoft 365 on desktop, web and Android.
+* Microsoft Teams on desktop and web.
+* Microsoft Teams on Android and iOS.
 
 ### Mobile experience
 
-Users must be able to launch the app from the actions flyout within the Microsoft 365 Client on Mobile. The app name must be displayed properly in the action bar. [*Mandatory Fix*]
+Users must be able to launch the app from the actions flyout menu within the Microsoft 365 client on mobile. The app name must be displayed correctly in the action bar. [*Mandatory Fix*]
 
 #### App launch from actions flyout
 
-Users must be able to successfully launch and switch between multiple static tabs within the Microsoft 365 client on a mobile. The tabs must load properly. If there are more than three static tabs, the remaining tabs must be visible under the **More** section. [*Mandatory Fix*]
+Users must be able to successfully launch and switch between multiple static tabs within the Microsoft 365 client on mobile. The tabs must load properly. If there are more than three static tabs, the remaining tabs must be visible under the **More** section. [*Mandatory Fix*]
 
 #### Multi tab experience
 
@@ -1708,17 +1710,17 @@ If your app uses SSO, it must authenticate the user successfully. SSO allows use
 
 The app must terminate the user account instance when the user is switched or logged out within the Microsoft 365 client on mobile. [*Mandatory Fix*]
 
-#### Account Switching and Logout Experience
+#### Account switching and logout experience
 
-* Users must be able to navigate back to previous instances. If the user is on the root page, the back navigation must terminate the app instance within the Microsoft 365 client on mobile. [*Mandatory Fix*]
+* Users must be able to go back to the previous work state. If the user is on the root page, the back navigation must terminate the app instance within the Microsoft 365 client on mobile. [*Mandatory Fix*]
 
-* Apps that support deep linking workflow must be able to deep link the user to the appropriate landing page experience. [*Mandatory Fix*]
+* Apps that support deep link to a workflow must be able redirect the user to the appropriate landing page experience. [*Mandatory Fix*]
 
-#### Tab Navigation
+#### Tab navigation
 
-* The progress indicator must be visible when the app is loading and must dismiss automatically after the app is completely loaded.[*Mandatory Fix*]
+* The progress indicator must appear when the app is loading and dismiss automatically after the app is completely loaded. [*Mandatory Fix*]
 
-* An error screen must appear when an app fails to load in the instances such as incoherent or broken network, time-out, or authentication failure and so on. [*Mandatory Fix*]
+* An error screen must appear when an app fails to load in the instances such as incoherent or broken network, time-out, or authentication failure, and so on. [*Mandatory Fix*]
 
 [Back to top](#microsoft-teams-store-validation-guidelines)
 
