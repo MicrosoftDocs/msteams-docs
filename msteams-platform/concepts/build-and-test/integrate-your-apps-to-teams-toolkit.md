@@ -13,11 +13,11 @@ After you create your app in Teams Developer Portal, you can:
 * [Open your app in Visual Studio Code](#open-your-app-in-visual-studio-code)
 * [Open your app in Visual Studio](#open-your-app-in-visual-studio)
 
-This makes a seamless transition between Teams Developer Portal and Teams Toolkit in Visual Studio Code and Visual Studio.
+Teams Toolkit scaffolds the necessary files based on the feature and configurations you set in Teams Developer Portal. This makes a seamless transition between Teams Developer Portal and Teams Toolkit in Visual Studio Code and Visual Studio.
 
 ## Open your app in Visual Studio Code
 
-In Teams Developer Portal, you can now directly open and launch your project in Visual Studio Code. Teams Toolkit scaffolds the necessary files based on the feature and configurations you set in Teams Developer Portal.
+In Teams Developer Portal, you can now directly open and launch your project in Visual Studio Code.
 
 Following are the steps to open your app in Visual Studio Code:
 
@@ -65,7 +65,7 @@ Following are the steps to open your app in Visual Studio:
 
 1. Select **Develop (Preview)** > **Open in Teams Toolkit** > **Open in Visual Studio (.NET)**.
 
-    :::image type="content" source="../../assets/images/tdp/tdp-teams-toolkit-vs.png" alt-text="Screenshot shows the Developer Portal with Open in Teams Toolkit. ":::
+    :::image type="content" source="../../assets/images/tdp/tdp-teams-toolkit-vs.png" alt-text="Screenshot shows the Developer Portal with Open in Teams Toolkit." lightbox="../../assets/images/tdp/tdp-teams-toolkit-vs.png":::
 
 1. Select **Open** button to scaffold your project.
 
