@@ -75,6 +75,8 @@ landingContent:
 
     - linkListType: whats-new
       links:
+      - text: Set up Microsoft license management
+        url: concepts/deploy-and-publish/appsource/prepare/manage-third-party-apps-license.md
       - text: Apps for Teams meetings support anonymous users
         url: apps-in-teams-meetings/build-apps-for-anonymous-user.md
       - text: Notification bot in Teams
@@ -93,8 +95,6 @@ landingContent:
         url: bots/how-to/conversations/send-proactive-messages.md#create-the-conversation
       - text: Developer Portal for Teams is now available for GCC tenants
         url: concepts/build-and-test/teams-developer-portal.md
-      - text: Live Share canvas
-        url: apps-in-teams-meetings/teams-live-share-canvas.md
 
 
 - title: Get started
