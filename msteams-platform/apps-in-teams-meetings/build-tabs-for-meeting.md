@@ -231,7 +231,8 @@ App caching improves subsequent launch time of the apps that are loaded in the m
 
 > [!NOTE]
 >
-> * App caching is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
+> * App caching in Teams desktop client is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
+> * App caching in iOS personal tray is generally available (GA).
 > * App caching is supported only for tabs loaded in the meeting side panel in Teams desktop client and iOS personal tray. While it can work in other contexts such as personal apps and chat or channel tabs, it isn't officially supported. We recommend to register the `onLoad` or `beforeUnload` handlers when in the sidePanel frameContext.
 
 ### Enable app caching
@@ -264,7 +265,7 @@ There are multiple reasons for an app to not get cached or for an app to get rem
 
 * If the system memory load is high, the app is removed from the cache.
 * If the number of cached apps exceed the maximum cache size, the oldest cached app is removed from the cache.
-* If the user doesn't return to the app within 20 minutes, the app is removed from the cache.
+* If the user doesn't return to the app within 20 minutes in Teams desktop client or 10 minutes in iOS personal tray, the app is removed from the cache.
 * The app isn't cached if Teams doesn't receive the `readyToUnload` signal from the app within 30 seconds after sending the `beforeUnload` notification.
 * App caching is disabled if the system memory is less than 4 GB or if the available memory is less than 1 GB on Windows or 512 MB on Mac.
 * Side panel is the only supported frameContext for app caching in meetings.
@@ -288,6 +289,10 @@ microsoftTeams.teamsCore.registerBeforeUnloadHandler((readyToUnload) => {
     return true;
 });
 ```
+
+### Best practices
+
+For iOS personal tray, you can use web storage to store your data locally and use it during the subsequent launch of the app. The data is stored in the key or value pair format.
 
 ### Limitations
 
