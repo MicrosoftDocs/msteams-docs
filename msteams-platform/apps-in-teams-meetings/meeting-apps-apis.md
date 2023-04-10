@@ -1011,6 +1011,108 @@ The following code provides an example of meeting end event payload:
 | **value.EndTime** | The meeting end time in UTC. |
 | **locale**| The locale of the message set by the client. |
 
+#### Participant join event
+
+The following code provides an example of meeting participant join event payload:
+
+```json
+{ 
+
+    "type": "event", 
+    "name": "application/vnd.microsoft.meetingParticipantJoin",
+    "timestamp": "2023-02-23T19:34:07.478Z", 
+    "channelId": "msteams", 
+    "serviceUrl": "https://smba.trafficmanager.net/amer/", 
+    "from": { 
+        "id": "29:id_xyz" 
+    }, 
+    "conversation": { 
+        "isGroup": true, 
+        "conversationType": "groupchat", 
+        "id": "19:meeting_threadId@thread.v2" 
+    }, 
+"recipient": { 
+    "id": "28:botid" 
+    },  
+    "value": { 
+       "members": [ 
+       { 
+        "user": { 
+            "tenantId": "tenantid", 
+            "objectId": "user_object_Id", 
+            "id": "29:userId ", 
+            "name": "Test User", 
+            "aadObjectId": " user_object_Id " 
+        },   
+        "meeting": { 
+            "inMeeting": true, 
+            "role": "Organizer" //Atendee, Organizer, Presenter 
+        },  
+        }], 
+    }, 
+    "channelData": { 
+        "tenant": { 
+            "id": "tenantId" 
+        }, 
+        "meeting": { 
+            "id": "encoded_meetingId" 
+        } 
+    } 
+} 
+```
+
+If your bot is developed through developer portal then select the option participant join the meeting in meeting event section of the bot.
+
+#### Participant leave event
+
+The following code provides an example of meeting participant leave event payload:
+
+```json
+{ 
+
+    "type": "event", 
+    "name": "application/vnd.microsoft.meetingParticipantLeave ",
+    "timestamp": "2023-02-23T19:34:07.478Z", 
+    "channelId": "msteams", 
+    "serviceUrl": "https://smba.trafficmanager.net/amer/", 
+    "from": { 
+        "id": "29:id_xyz" 
+    }, 
+    "conversation": { 
+        "isGroup": true, 
+        "conversationType": "groupchat", 
+        "id": "19:meeting_threadId@thread.v2" 
+    }, 
+"recipient": { 
+    "id": "28:botid" 
+    },  
+    "value": { 
+       "members": [ 
+       { 
+        "user": { 
+            "tenantId": "tenantid", 
+            "objectId": "user_object_Id", 
+            "id": "29:userId ", 
+            "name": "Test User", 
+            "aadObjectId": " user_object_Id " 
+        },   
+        "meeting": { 
+            "inMeeting": true, 
+            "role": "Organizer" //Atendee, Organizer, Presenter 
+        },  
+        }], 
+    }, 
+    "channelData": { 
+        "tenant": { 
+            "id": "tenantId" 
+        }, 
+        "meeting": { 
+            "id": "encoded_meetingId" 
+        } 
+    } 
+} 
+```
+
 ## Get incoming audio state
 
 The `getIncomingClientAudioState` API allows an app to get the incoming audio state setting for the meeting user. The API is available through the TeamsJS library.
