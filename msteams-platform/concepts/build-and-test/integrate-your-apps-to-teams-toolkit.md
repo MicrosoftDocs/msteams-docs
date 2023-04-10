@@ -67,7 +67,7 @@ Following are the steps to open your app in Visual Studio:
 
     :::image type="content" source="../../assets/images/tdp/tdp-teams-toolkit-vs.png" alt-text="Screenshot shows the Developer Portal with Open in Teams Toolkit." lightbox="../../assets/images/tdp/tdp-teams-toolkit-vs.png":::
 
-1. Select **Open** button to scaffold your project.
+1. Select **Open** to scaffold your project.
 
     :::image type="content" source="../../assets/images/tdp/tdp-vs-open.png" alt-text="Screenshot of browser with Open option in visual studio.":::
 
