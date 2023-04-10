@@ -37,7 +37,7 @@ The following are steps to publish your app in Teams Developer Portal to publish
 
 # [Visual Studio](#tab/visualstudio)
 
-The following are steps to open you app in Teams Developer Portal to publish:
+The following are steps to publish your app in Teams Developer Portal to publish:
 
 1. Open **Teams Developer Portal** to publish your app.
 
