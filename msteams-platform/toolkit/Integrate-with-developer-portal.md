@@ -47,7 +47,7 @@ The following are steps to publish your app in Teams Developer Portal to publish
 
 1. Select the app package.
 
-1. Teams Toolkit will open your app in **Teams Developer Portal** and direct you to the **Publish to your org** page, from there you can select **Publish your app** to continue with your publishing process.
+1. Teams Toolkit opens your app in **Teams Developer Portal** and direct you to the **Publish to your org** page, from there you can select **Publish your app** to continue with your publishing process.
 
     :::image type="content" source="../assets/images/tdp/vs-tdp.png" alt-text="Screenshot shows you the app open in Teams Developer Portal.":::
 

@@ -49,7 +49,7 @@ Following are the steps to open your app in Visual Studio Code:
 
 1. Select your app and select **OK**.
 
-   Teams Toolkit will convert the URL you configured in Teams Developer Portal to a localhost address to work with the debugging process.
+   Teams Toolkit converts the URL you configured in Teams Developer Portal to a localhost address to work with the debugging process.
 
     :::image type="content" source="../../assets/images/tdp/select-ok.png" alt-text="Screenshot shows Teams Toolkit with OK option highlighted in red.":::
 
@@ -59,7 +59,7 @@ Following are the steps to open your app in Visual Studio Code:
 
 ## Open your app in Visual Studio
 
-You can open your project in Visual Studio and scaffold you project in Visual Studio with Teams Toolkit. Ensure that you installed [Visual Studio 2022 version 17.6 Preview 2](/visualstudio/releases/2022/release-notes-preview#17.6.0-pre.2.0).
+You can open your project in Visual Studio and scaffold your project in Visual Studio with Teams Toolkit. Ensure that you installed [Visual Studio 2022 version 17.6 Preview 2](/visualstudio/releases/2022/release-notes-preview#17.6.0-pre.2.0).
 
 Following are the steps to open your app in Visual Studio:
 
