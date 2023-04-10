@@ -83,9 +83,9 @@ Teams provides several ways to open apps. For more information, see [access your
 
 You don't have to sideload your app again if you make code changes (these are reflected in Teams in real-time). However, you must reinstall if you change any app configurations. For more information, see [Role of an admin in upgrading Teams apps](/MicrosoftTeams/apps-update-experience).
 
-When a Teams app receives an update, the user must consent to update the app in one context, and the app is automatically updated in all the related chats, channels, and meetings where the app is installed.
+When a Teams app receives an update, the user must consent to update the app in any one context, and the app is automatically updated in all the related contexts (chats, channels, and meetings) where the app is installed. The user can update the app from any context.
 
-If an update is available to your app, follow these steps to update your app:
+If an update is available to your app, follow these steps to update your app from the Microsoft Teams store:
 
 1. Go to **Microsoft Teams**.
 1. Select **Apps** > **Manage your apps**.
@@ -102,7 +102,7 @@ If an update is available to your app, follow these steps to update your app:
 
    :::image type="content" source="../../assets/images/publish-app/update-window.png" alt-text="Update Teams app in manage apps.":::
 
-   The app is automatically updated in all the related chats, channels, and meetings where the app is installed.
+   The app is automatically updated in all the related contexts (chats, channels, and meetings) where the app is installed.
 
 If you have multiple app updates and you want to update all your apps at once, select **Apps** > **Manage your apps** and then select **Update all**.
 
