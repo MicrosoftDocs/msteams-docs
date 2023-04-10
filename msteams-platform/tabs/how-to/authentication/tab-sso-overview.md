@@ -40,9 +40,6 @@ Here's what your app users get with SSO experience:
 - The access token is pre-fetched by Teams to improve performance and load time of the app in the Teams environment.
 - The app users don't need to memorize or record several passwords to access and use apps in Teams environment.
 
-> [!NOTE]
-> App users can't give permission to some permission scopes, such as `Sites.ReadWrite.All`, which allows the app user to read and write to all SharePoint and OneDrive assets in the tenant. For such scopes, only the tenant administrator can grant consent on an app user's behalf.
-
 Now, let's see what happens at the backend during runtime to achieve SSO experience within Teams.
 
 ## SSO in Teams at runtime
