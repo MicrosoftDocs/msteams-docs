@@ -100,7 +100,7 @@ A great description can make your app stand out in the Microsoft Teams store and
 
  :::image type="content" source="../../../assets/images/submission/validation-common-reason-fail-grammatical-error.png" alt-text="Screenshot of failed image for long description, grammatical errors and capitalization":::
 
- :::image type="content" source="../../../assets/images/submission/validation-common-reason-fail-app-description-truncation.png" alt-text="Screenshot of failed scenario of app description guidelines which has incomplete truncation":::
+ :::image type="content" source="../../../assets/images/submission/validation-common-reason-fail-app-description-truncation.png" alt-text="Screenshot of failed scenario of app description guidelines, which has incomplete truncation":::
 
    :::image type="content" source="../../../assets/images/submission/validation-common-reasons-pass-inadequate-app-description.png" alt-text="Screenshot to show the pass scenarios with inadequate app description.":::
 
@@ -198,7 +198,7 @@ Icons are one of the main elements people see when browsing the Microsoft Teams 
 
 * App submissions with different logos in Partner Center and the app package submitted for review.
 
-   :::image type="content" source="../../../assets/images/submission/validation-common-reason-fail-partner-center-manifest-different.png" alt-text="Screenshot to show the failed scenario of partner center and manifest which are different.":::
+   :::image type="content" source="../../../assets/images/submission/validation-common-reason-fail-partner-center-manifest-different.png" alt-text="Screenshot to show the failed scenario of partner center and manifest, which are different.":::
 
 [Back to top](#common-reasons-for-app-validation-failure)
 
@@ -208,9 +208,9 @@ Your app name plays a critical role for users to discover your app on the Micros
 
 * Inconsistent usage of app name throughout the app’s functionality.
 
-   :::image type="content" source="../../../assets/images/submission/validation-common-reason-pass-inconsistent-app-functionality.png" alt-text="Screenshot of image to show pass inconsistent usage of app name in app's functionality.":::
+   :::image type="content" source="../../../assets/images/submission/validation-common-reason-pass-inconsistent-app-functionality.png" alt-text="Screenshot of image to show the pass scenario for inconsistent usage of app name in app's functionality.":::
 
-   :::image type="content" source="../../../assets/images/submission/validation-common-reason-fail-inconsistent-app-functionality.png" alt-text="Screenshot of image to show fail inconsistent usage of app name in app's functionality.":::
+   :::image type="content" source="../../../assets/images/submission/validation-common-reason-fail-inconsistent-app-functionality.png" alt-text="Screenshot of image to show the fail scenario for inconsistent usage of app name in app's functionality.":::
 
 * Mismatch between the app name mentioned in the app manifest submitted as part of the app package and Partner Center.
 
@@ -222,7 +222,7 @@ Your app name plays a critical role for users to discover your app on the Micros
 
 * App submissions where the developer has changed the app name, but the old app name is still used within the app.
 
-   :::image type="content" source="../../../assets/images/submission/validation-common-reason-fail-old-app-name.png" alt-text="Screenshot of image to show failed app submission for old app name which is still used.":::
+   :::image type="content" source="../../../assets/images/submission/validation-common-reason-fail-old-app-name.png" alt-text="Screenshot of image to show failed app submission for old app name, which is still used.":::
 
 [Back to top](#common-reasons-for-app-validation-failure)
 
@@ -244,7 +244,7 @@ Your app name plays a critical role for users to discover your app on the Micros
 
 The Teams app manifest describes how the app integrates into the Microsoft Teams product. Your app manifest must conform to a publicly released [manifest schema](../../../resources/schema/manifest-schema.md). If your app supports localization, ensure that use a localization manifest schema version 1.5 or later. App packages that contain preview schemas (not publicly released) fail app review.
 
-You must update the app version declared in the manifest if you're submitting an app update. We recommend you to always use the latest publicly released manifest schema when submitting a new app or an app update and ensure that the manifest schema version in Microsoft Teams store and Microsoft AppSource is the same.
+You must update the app version declared in the manifest if you're submitting an app update. It's recommended to always use the latest publicly released manifest schema when submitting a new app or an app update and ensure that the manifest schema version in Microsoft Teams store and Microsoft AppSource is the same.
 
    :::image type="content" source="../../../assets/images/submission/validation-common-reason-pass-app-version-number.png" alt-text="Screenshot to show the app version number incremented.":::
 

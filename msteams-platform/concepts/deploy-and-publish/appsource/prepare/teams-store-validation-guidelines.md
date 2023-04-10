@@ -263,9 +263,9 @@ Don't include domains outside of your organization's control (including wildcard
 
 * External domains declared for your submission must not contain URLs. For example, www or https. [*Mandatory Fix*]
 
-* If your app uses the Azure Bot Service's OAuthCard, you must include *token.botframework.com* as a valid domain or else the Sign in button won't work. You mustn't declare *.botframework.com* as wildcards are not allowed with this domain name. [*Mandatory Fix*]
+* If your app uses the Azure Bot Service's OAuthCard, you must include *token.botframework.com* as a valid domain or else the Sign in button won't work. You mustn't declare *.botframework.com* as wildcards aren't allowed with this domain name. [*Mandatory Fix*]
 
-* Following External Domains are not allowed: [*Mandatory Fix*]
+* Following External Domains aren't allowed: [*Mandatory Fix*]
   * *.azurewebsites.net
   * *.azureedge.com
   * *.microsoft.com
@@ -279,7 +279,7 @@ When using wildcards (`*`), the following rules apply:
 * If a subdomain segment includes a wildcard, it must be the only character in the segment.
 * Any segment preceding a wildcard segment must also be a wildcard segment.
 
-For example, *\*.\*.domain.com* is valid, but *foo.\*.myteam.domain.com* is not valid.
+For example, *\*.\*.domain.com* is valid, but *foo.\*.myteam.domain.com* isn't valid.
 
 </details>
 
@@ -1222,7 +1222,7 @@ Apps that provide only notifications with content such as, **You have a new noti
 
 * Bot installation in a channel or group chat scope to obtain the team roster for sending proactive notifications for users as 1:1 chats for team specific triggers isn't allowed. For example, app that pairs people for a meetup. [*Mandatory Fix*]
 
-* Bot in channel or group chat only used to obtain the messages or posts in Channel or group chat for sending proactive notifications for users as 1:1 chats isn't allowed. [*Mandatory Fix*]
+* Bot in a channel or a group chat only used to obtain the messages or posts for sending proactive notifications for users as 1:1 chats isn't allowed. [*Mandatory Fix*]
 
 * Bots installed in collaborative scope must provide a user value in the collaborative scope. [*Mandatory Fix*]
 
