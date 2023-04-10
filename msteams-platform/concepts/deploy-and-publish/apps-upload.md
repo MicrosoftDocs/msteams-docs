@@ -85,7 +85,7 @@ You don't have to sideload your app again if you make code changes (these are re
 
 When a Teams app receives an update, the user must consent to update the app in any one context, and the app is automatically updated in all the related contexts (chats, channels, and meetings) where the app is installed. The user can update the app from any context.
 
-If an update is available to your app, follow these steps to update your app from the Microsoft Teams store:
+If an update is available for your app, follow these steps to update your app from the Microsoft Teams store:
 
 1. Go to **Microsoft Teams**.
 1. Select **Apps** > **Manage your apps**.
@@ -114,13 +114,13 @@ To remove app from Teams, follow the steps:
 
 1. Find the app in **Manage your app**.
 
-1. Select &nbsp;:::image type="content" source="~/assets/images/publish-app/bin-icon.png" alt-text="Remove app in Teams.":::&nbsp; at the scope of the installed app.
+1. Select &nbsp;:::image type="content" source="../../assets/images/publish-app/bin-icon.png" alt-text="Remove app in Teams.":::&nbsp; at the scope of the installed app.
 
-    :::image type="content" source="~/assets/images/publish-app/uninstall-from-channel.png" alt-text="Remove app in a channel.":::
+    :::image type="content" source="../../assets/images/publish-app/uninstall-from-channel.png" alt-text="Remove app in a channel.":::
 
 1. Select **Remove** to remove your app.
 
-    :::image type="content" source="~/assets/images/publish-app/remove-app-teams.png" alt-text="Remove an app from Teams.":::
+    :::image type="content" source="../../assets/images/publish-app/remove-app-teams.png" alt-text="Remove an app from Teams.":::
 
 > [!NOTE]
 >
