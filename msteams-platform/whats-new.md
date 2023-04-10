@@ -26,6 +26,8 @@ Teams platform features that are available to all app developers.
 
 **2023 April**
 
+* ***April 10, 2023***: [App caching for iOS personal tray](apps-in-teams-meetings/build-tabs-for-meeting.md#app-caching)
+
 * ***April 6, 2023***: [Set up Microsoft license management](concepts/deploy-and-publish/appsource/prepare/manage-third-party-apps-license.md)
 
 * ***April 4, 2023***: [Tab apps in shared channels are available in DOD](~/concepts/build-and-test/shared-channels.md)
