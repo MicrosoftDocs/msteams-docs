@@ -260,6 +260,45 @@ namespace Microsoft.Teams.TemplateBotCSharp.Dialogs
 }
 ```
 
+# [Node.js](#tab/nodejs)
+
+```typescript
+export async function startReplyChain(chatConnector: builder.ChatConnector, message: builder.Message, channelId: string): Promise<builder.IChatConnectorAddress> {
+    let activity = message.toMessage();
+
+    // Build request
+    let options: request.Options = {
+        method: "POST",
+        // We use urlJoin to concatenate urls. url.resolve should not be used here,
+        // since it resolves urls as hrefs are resolved, which could result in losing
+        // the last fragment of the serviceUrl
+        url: urlJoin((activity.address as any).serviceUrl, "/v3/conversations"),
+        body: {
+            isGroup: true,
+            activity: activity,
+            channelData: {
+                teamsChannelId: channelId,
+            },
+        },
+        json: true,
+    };
+
+    let response = await sendRequestWithAccessToken(chatConnector, options);
+    if (response && response.hasOwnProperty("id")) {
+        let address = createAddressFromResponse(activity.address, response) as any;
+        if (address.user) {
+            delete address.user;
+        }
+        if (address.correlationId) {
+            delete address.correlationId;
+        }
+        return address;
+    } else {
+        throw new Error("Failed to start reply chain: no conversation ID returned.");
+    }
+}
+```
+
 ---
 
 ## See also
