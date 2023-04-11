@@ -293,7 +293,7 @@ microsoftTeams.teamsCore.registerBeforeUnloadHandler((readyToUnload) => {
 
 ### Best practices
 
-For iOS personal tray, you can use web storage to store your web app data locally and use it during the subsequent launch of the app. The data is stored in the key or value pair format.
+We recommend you to implement web storage capabilities to cache the users app data. This helps to load the app faster in subsequent launches.
 
 ### Limitations
 
