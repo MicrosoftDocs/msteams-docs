@@ -21,7 +21,7 @@ It is not necessary for the new message to match the original in type. For examp
 
 # [C#](#tab/dotnet)
 
-* [SDK reference](/dotnet/api/microsoft.bot.builder.turncontext.updateactivityasync?view=botbuilder-dotnet-stable)
+* [SDK reference](/dotnet/api/microsoft.bot.builder.turncontext.updateactivityasync=botbuilder-dotnet-stable)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L266)
 
 To update an existing message, pass a new `Activity` object with the existing activity ID to the `UpdateActivityAsync` method of the `TurnContext` class.
@@ -37,7 +37,7 @@ await turnContext.UpdateActivityAsync(newActivity, cancellationToken);
 
 # [TypeScript](#tab/typescript)
 
-* [SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest)
+* [SDK reference](/javascript/api/botbuilder-core/turncontext=botbuilder-ts-latest)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L162)
 
 To update an existing message, pass a new `Activity` object with the existing activity ID to the `updateActivity` method of the `TurnContext` object.
@@ -53,7 +53,7 @@ await turnContext.updateActivity(newActivity);
 
 # [Python](#tab/python)
 
-* [SDK reference](/python/api/botbuilder-core/botbuilder.core.turncontext?view=botbuilder-py-latest)
+* [SDK reference](/python/api/botbuilder-core/botbuilder.core.turncontext=botbuilder-py-latest)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L156)
 
 To update an existing message, pass a new `Activity` object with the existing activity ID to the `update_activity` method of the `TurnContext` class.
@@ -93,7 +93,7 @@ To update the existing card on button selection, you can use `ReplyToId` of inco
 
 # [C#/.NET](#tab/dotnet)
 
-* [SDK reference](/dotnet/api/microsoft.bot.builder.turncontext.updateactivityasync?view=botbuilder-dotnet-stable)
+* [SDK reference](/dotnet/api/microsoft.bot.builder.turncontext.updateactivityasync=botbuilder-dotnet-stable)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L266)
 
 To update existing card on a button selection, pass a new `Activity` object with updated card and `ReplyToId` as activity ID to the `UpdateActivityAsync` method of the `TurnContext` class.
@@ -109,7 +109,7 @@ await turnContext.UpdateActivityAsync(activity, cancellationToken);
 
 # [TypeScript](#tab/typescript)
 
-* [SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest)
+* [SDK reference](/javascript/api/botbuilder-core/turncontext=botbuilder-ts-latest)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L162)
 
 To update existing card on a button selection, pass a new `Activity` object with updated card and `replyToId` as activity ID to the `updateActivity` method of the `TurnContext` object.
@@ -164,7 +164,7 @@ In the Bot Framework, every message has its unique activity identifier. Messages
 
 # [C#](#tab/dotnet)
 
-* [SDK reference](/dotnet/api/microsoft.bot.builder.botadapter.deleteactivityasync?view=botbuilder-dotnet-stable)
+* [SDK reference](/dotnet/api/microsoft.bot.builder.botadapter.deleteactivityasync=botbuilder-dotnet-stable)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L165)
 
 To delete a message, pass that activity's ID to the `DeleteActivityAsync` method of the `TurnContext` class.
@@ -179,7 +179,7 @@ foreach (var activityId in _list)
 
 # [TypeScript](#tab/typescript)
 
-* [SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest)
+* [SDK reference](/javascript/api/botbuilder-core/turncontext=botbuilder-ts-latest)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L255)
 
 To delete a message, pass that activity's ID to the `deleteActivity` method of the `TurnContext` object.
@@ -193,7 +193,7 @@ for (let i = 0; i < activityIds.length; i++) {
 
 # [Python](#tab/python)
 
-* [SDK reference](/python/api/botbuilder-core/botbuilder.core.turncontext?view=botbuilder-py-latest)
+* [SDK reference](/python/api/botbuilder-core/botbuilder.core.turncontext=botbuilder-py-latest)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L227)
 
 To delete that message, pass that activity's ID to the `delete_activity` method of the `TurnContext` object.
