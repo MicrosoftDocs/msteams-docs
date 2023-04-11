@@ -417,13 +417,8 @@
   - name: Enable and configure apps for Teams meetings
     items:
     - name: Build tabs for meeting
-      items:
-      - name: Enable your tabs for Teams meeting
-        href: apps-in-teams-meetings/build-tabs-for-meeting.md
-        displayName: anonymous
-      - name: Enable app caching for your tab app
-        href: apps-in-teams-meetings/app-caching-for-your-tab-app.md
-        displayName: app caching, launch time
+      href: apps-in-teams-meetings/build-tabs-for-meeting.md
+      displayName: anonymous, app caching, launch time
     - name: Build apps for meeting stage
       href: apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md
       displayName: MicrosoftTeams.meeting.getAppContentStageSharingState
@@ -777,6 +772,12 @@
   - name: Test preview for monetized apps
     href: concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
     displayName: paid, AppSource, fee 
+  - name: Set up Microsoft license management
+    href: concepts/deploy-and-publish/appsource/prepare/manage-third-party-apps-license.md
+    displayName: ISVs, Manage, License, third party, SaaS, Partner Center, UsageRights
+  - name: Purchase and manage app subscriptions and licenses
+    href: concepts/deploy-and-publish/appsource/prepare/end-user-purchase-experience.md
+    displayName: Purchase, apps, License, manage
 - name: Grow your app
   items:
     - name: Strategize and execute growth for your app
