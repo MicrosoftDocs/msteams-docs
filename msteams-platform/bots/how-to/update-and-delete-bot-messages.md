@@ -91,7 +91,7 @@ Now that you have updated messages, update the existing card on button selection
 
 To update the existing card on button selection, you can use `ReplyToId` of incoming activity.
 
-# [C#/.NET](#tab/dotnet)
+# [C#](#tab/dotnet)
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.turncontext.updateactivityasync#microsoft-bot-builder-turncontext-updateactivityasync(microsoft-bot-schema-iactivity-system-threading-cancellationtoken))
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L266)
