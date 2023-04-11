@@ -7,9 +7,11 @@ ms.topic: reference
 
 # Media elements in Adaptive Cards
 
-The media elements such as audio or video clips are supported in the Adaptive Cards SDK but not in Teams. Currently, Teams doesn't provide media support like audio, video, and animation cards from Bot Framework. To increase engagement with cards and provide a new experience in the media elements, we're bringing in parity with the SDK that already supports media elements.
+The media elements such as audio or video clips are supported in the Adaptive Cards, files from OneDrive, and SharePoint but not in Teams. Teams don’t provide any media support like audio, video, and animation cards from Bot Framework.
 
-The Media Elements now supports consumption of media elements directly within the Adaptive Cards without force exit from Teams to view media. Following are the scenarios:
+To increase engagement with the Adaptive cards and to provide new experience in the media elements, Teams in parity with the SDK that supports media elements.
+
+Adaptive Cards now supports the consumption of the media elements directly without the force exit from Teams to view media. Following are the scenarios:
 
 **LOB scenarios**
 
@@ -34,58 +36,14 @@ To add media elements to your Adaptive Cards, follow the steps:
 
    :::image type="content" source="../../assets/images/media-elements-in-adaptive-cards/share-link.png" alt-text="Screenshot shows you from where you can take a link.":::
 
+    >[!NOTE]
+    > Links copied directly from address bar won't works.
+
 1. Add your media file or DriveItem url or link to your Adaptive Card json file in `url`:
 
    :::image type="content" source="../../assets/images/media-elements-in-adaptive-cards/adaptive-card-json.png" alt-text="Screenshot shows you the Adaptive Card json code.":::
 
->[!NOTE]
-> Links copied directly from address bar won't works.
-
-## End user experience
-
-**Media Elements-Video (Channel)**:
-The media playback lives within the Adaptive Card. Users need to press **play** button and videos are directly replayed. For example, video is within the channel in the following image:
-
-:::image type="content" source="~/assets/images/media-elements-in-adaptive-cards/design-video-channel.png" alt-text="Video channel design":::
-
-**Media Elements-Video (Chat)**:
-Following image shows video within the Adaptive Card in a chat:
-
-:::image type="content" source="~/assets/images/media-elements-in-adaptive-cards/video-chat.png" alt-text="Video chat design":::
-
-**Media Elements-Video (Narrow card in a meeting)**:
-Following image shows video within the Adaptive Card in a meeting:
-
-:::image type="content" source="~/assets/images/media-elements-in-adaptive-cards/video-narrow-card-in-meeting.png" alt-text="Video narrow card in meeting design":::
-
-**Media Elements-Video (Mobile card in channel)**:
-Following image shows video within the Adaptive Card in a mobile view:
-
-:::image type="content" source="~/assets/images/media-elements-in-adaptive-cards/video-mobile-card-in-channel.png" alt-text="Video Mobile card in channel":::
-
-**Media Elements-Audio (Channel)**:
-Following image shows audio within the Adaptive Card in a channel:
-
-:::image type="content" source="~/assets/images/media-elements-in-adaptive-cards/audio-channel.png" alt-text="Audio channel":::
-
-**Media Elements-Audio (Chat)**:
-Following image shows audio within the Adaptive Card in a chat:
-
-:::image type="content" source="~/assets/images/media-elements-in-adaptive-cards/audio-chat.png" alt-text="Audio chat":::
-
-**Media Elements-Audio (Mobile)**:
-Following image shows audio within the Adaptive Card in a mobile view:
-
-:::image type="content" source="~/assets/images/media-elements-in-adaptive-cards/audio-mobile.png" alt-text="Audio mobile":::
-
-**Unsupported media error state**:
-Following image shows error state if a video or audio isn't found or not supported:
-
-:::image type="content" source="~/assets/images/media-elements-in-adaptive-cards/unsupported-media-error-state.png" alt-text="Unsupported Media error state":::
-
 ## Limitations
-
-Following are the limitations:
 
 1. Only sharepoint or OneDrive links of media supports now.
 1. It is not likely that Guest, Federated, or Anonymous users will be able to view videos unless the shared video permissions is public to those users.
