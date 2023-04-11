@@ -262,7 +262,7 @@ namespace Microsoft.Teams.TemplateBotCSharp.Dialogs
 
 # [Node.js](#tab/nodejs)
 
-```typescript
+```Javascript
 export async function startReplyChain(chatConnector: builder.ChatConnector, message: builder.Message, channelId: string): Promise<builder.IChatConnectorAddress> {
     let activity = message.toMessage();
 
