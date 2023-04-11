@@ -104,10 +104,6 @@ If an update is available for your app, follow these steps to update your app fr
 
    The app is automatically updated in all the related contexts (chats, channels, and meetings) where the app is installed.
 
-If you have multiple app updates and you want to update all your apps at once, select **Apps** > **Manage your apps** and then select **Update all**.
-
-:::image type="content" source="../../assets/images/publish-app/update-apps-update-all.png" alt-text="Screenshot shows the Update all option in Teams app store.":::
-
 ### Remove your app
 
 To remove app from Teams, follow the steps:
