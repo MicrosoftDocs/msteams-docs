@@ -10,19 +10,31 @@ ms.author: v-ypalikila
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-The document guides you on how to add link unfurling to your app manifest using Developer Portal and manually. With link unfurling, your app can register to receive an `invoke` activity when URLs with a particular domain are pasted into the compose message area. The `invoke` contains the full URL that was pasted into the compose message area, and you can respond with a card that the user can unfurl, providing additional information or actions. This works similar to a search command with the URL serving as the search term. You can now add link unfurling to Microsoft Teams without installing app.
+The document guides you on how to add link unfurling to your app manifest using Developer Portal and manually. With link unfurling, your app can register to receive an `invoke` activity when URLs with a particular domain are pasted into the compose message area. The `invoke` contains the full URL that was pasted into the compose message area, and you can respond with a card that the user can unfurl, providing additional information or actions. This works similar to a search command with the URL serving as the search term. You can now add link unfurling to Microsoft Teams without installing the app.
 
 :::image type="content" source="../../assets/images/tdp/link-unfurling-adaptive-cards1.png" alt-text="Screenshot shows the link unfurling experience in a tree chat for a Teams app installed or not installed in Teams and other apps when the link is pasted in Teams compose message area." lightbox="../../assets/images/tdp/link-unfurling-adaptive-cards1.png":::
 
 > [!NOTE]
 >
-> * Currently, link unfurling is not supported on Mobile clients.
 > * The link unfurling result is cached for 30 minutes.
-> * Messaging extension commands are not required for Link unfurling. However, there must be at least one command in manifest as it is a mandatory property in messaging extensions. For more information, see [compose extensions](/microsoftteams/platform/resources/schema/manifest-schema).
+> * Messaging extension commands aren't required for Link unfurling. However, there must be at least one command in manifest as it is a mandatory property in messaging extensions. For more information, see [compose extensions](/microsoftteams/platform/resources/schema/manifest-schema).
+> * For mobile client, link unfurling is supported only for links that don't require authentication.
 
-The following image is an example of link unfurling using the Azure DevOps message extension. When the Azure DevOps link is pasted into the Teams compose message area, the link unfurls into a card with the work item details:
+The following image is an example of link unfurling in Teams desktop and mobile clients:
 
-:::image type="content" source="../../assets/images/messaging-extension/messagingextensions_linkunfurl.png" alt-text="Screenshot of link urfurling example for Azure Dev Ops links pasted in teams compose message area.":::
+# [Mobile](#tab/mobile)
+
+When the app link is pasted into the Teams compose message area, the link unfurls into a card with the link details.
+
+:::image type="content" source="../../assets/images/messaging-extension/android-linkunfurl.png" alt-text="Screenshot shows you the link unfurling in Android mobile client.":::
+
+# [Desktop](#tab/desktop)
+
+When the Azure DevOps link is pasted into the Teams compose message area, the link unfurls into a card with the work item details.
+
+:::image type="content" source="../../assets/images/messaging-extension/messagingextensions_linkunfurl.png" alt-text="Screenshot of link unfurling example for Azure Dev Ops links pasted in teams compose message area.":::
+
+---
 
 See the following video to learn more about link unfurling:
 <br>
@@ -31,31 +43,31 @@ See the following video to learn more about link unfurling:
 
 ## Add link unfurling to your app manifest
 
-To add link unfurling to your app manifest, add a new `messageHandlers` array to the `composeExtensions` section of your app manifest JSON. You can add the array with the help of Developer Portal or manually. Domain listings can include wildcards, for example `*.example.com`. This matches exactly one segment of the domain; if you need to match `a.b.example.com` then use `*.*.example.com`.
+To add link unfurling to your app manifest, add a new `messageHandlers` array to the `composeExtensions` section of your app manifest JSON. You can add the array with the help of Developer Portal or manually. Domain listings can include wildcards, for example `*.example.com`. This matches exactly one segment of the domain; if you need to match `a.b.example.com`, then use `*.*.example.com`.
 
 > [!NOTE]
-> Ensure not to add domains that are not in your control, either directly or through wildcards. For example, `yourapp.onmicrosoft.com` is valid, but `*.onmicrosoft.com` is not valid. The top-level domains are prohibited, for example, `*.com`, `*.org`.
+> Ensure that you don't add domains that aren't in your control, either directly or through wildcards. For example, `yourapp.onmicrosoft.com` is valid, but `*.onmicrosoft.com` isn't valid. The top-level domains are prohibited, for example, `*.com`, `*.org`.
 
 ### Add link unfurling using Developer Portal
 
 1. Open **Developer Portal** from the Microsoft Teams client and then select the **Apps** tab.
 
-   :::image type="content" source="../../assets/images/tdp/create-new-app.png" alt-text="create new app in developer portal" lightbox="../../assets/images/tdp/create-new-app.png":::
+   :::image type="content" source="../../assets/images/tdp/create-new-app.png" alt-text="Screenshot shows Developer portal with Apps highlighted in red." lightbox="../../assets/images/tdp/create-new-app.png":::
 
    > [!NOTE]
-   > You need to add Developer Portal app, if you don't have it added in your Teams client.
+   > You must add Developer Portal app, if you don't have it added in your Teams client.
 
-    :::image type="content" source="../../assets/images/tdp/dev-portal-app.png" alt-text="Add developer portal app" lightbox="../../assets/images/tdp/dev-portal-app.png":::
+    :::image type="content" source="../../assets/images/tdp/dev-portal-app.png" alt-text="Screenshot shows Teams with search and Developer portal highlighted in red." lightbox="../../assets/images/tdp/dev-portal-app.png":::
 
 1. Load your app manifest.
 
-   :::image type="content" source="../../assets/images/tdp/load-app-manifest.png" alt-text="load your app manifest" lightbox="../../assets/images/tdp/load-app-manifest.png":::
+   :::image type="content" source="../../assets/images/tdp/load-app-manifest.png" alt-text="Screenshot of Developer portal showing the apps information." lightbox="../../assets/images/tdp/load-app-manifest.png":::
 
 1. Select **Messaging Extension** under **App features** and then either choose **Select an existing bot** or **Create a new bot**.
 
-   :::image type="content" source="../../assets/images/tdp/select-messaging-extension.png" alt-text="Select messaging extension option" lightbox="../../assets/images/tdp/select-messaging-extension.png":::
+   :::image type="content" source="../../assets/images/tdp/select-messaging-extension.png" alt-text="Screenshot of App features with App features and Messaging extension highlighted in red." lightbox="../../assets/images/tdp/select-messaging-extension.png":::
 
-   :::image type="content" source="../../assets/images/tdp/select-create-bot.png" alt-text="select existing bot or create a new bot" lightbox="../../assets/images/tdp/select-create-bot.png":::
+   :::image type="content" source="../../assets/images/tdp/select-create-bot.png" alt-text="Screenshot of Messaging extension with Select an existing bot highlighted in red." lightbox="../../assets/images/tdp/select-create-bot.png":::
 
 1. Select **Save**.
 1. Select **Add a domain** under **Preview links** section and then enter valid domain.
@@ -68,7 +80,7 @@ To add link unfurling to your app manifest, add a new `messageHandlers` array to
 > [!NOTE]
 > If authentication is added through Azure AD, [unfurl links in Teams using bot](/microsoftteams/platform/sbs-botbuilder-linkunfurling?tabs=vs&tutorial-step=4).
 
-First, you need to add the `messageHandlers` array to your app manifest and enable your message extension to interact with links. The following example explains how to add link unfurling manually:
+First, you must add the `messageHandlers` array to your app manifest and enable your message extension to interact with links. The following example explains how to add link unfurling manually:
 
 ```json
 ...
@@ -279,7 +291,7 @@ To get your app ready for zero install link unfurling, follow these steps:
 
 1. Respond to the `composeExtension/anonymousQueryLink` payload.
 
-   1. For non-auth scenarios: You need to send back a response with the `type` as `result` and a card. Use the following template:
+   1. For non-auth scenarios: You must send back a response with the `type` as `result` and a card. Use the following template:
 
       ```json
       {
@@ -316,7 +328,7 @@ To get your app ready for zero install link unfurling, follow these steps:
       }
       ```
 
-   1. For auth scenarios: You need to send back a response with the `type` as `auth` with an optional pre-auth card in the attachments. Use the following template:
+   1. For auth scenarios: You must send back a response with the `type` as `auth` with an optional pre-auth card in the attachments. Use the following template:
   
       ```json
       {
@@ -350,7 +362,7 @@ To get your app ready for zero install link unfurling, follow these steps:
 
 1. Pre-auth card (for auth only): Create a card preview to unfurl your links for users who don't have your app installed. You can either create a pre-templated card or add relevant placeholder fields for the users to update. The users can learn about the app even before they’ve installed it.
 
-   You can create customized card and add relevant fields. The users can fill in the required information as per the fields. The following image illustrates a customized card preview:
+   You can create a customized card and add relevant fields. The users can fill in the required information as per the fields. The following image illustrates a customized card preview:
 
    :::image type="content" source="../../assets/images/tdp/custom-card.png" alt-text="Screenshot of the customized card with fields for user to update." lightbox="../../assets/images/tdp/custom-card.png":::
 
@@ -363,24 +375,28 @@ To get your app ready for zero install link unfurling, follow these steps:
 
 1. **Advantages and limitations**:
 
-   # [Advantages](#tab/advantages)
+# [Advantages](#tab/advantages)
 
-    Zero install link unfurling helps you provide enhanced experience to the users, such as:
+Zero install link unfurling helps you provide enhanced experience to the users, such as:
 
-    * Unfurl previews for your links that users share in Teams even before they've installed your app.
+* Unfurl previews for your links that users share in Teams even before they've installed your app.
+* Create a welcome card for your app to show a preview with the placeholder fields.
 
-    * Create a welcome card for your app to show a preview with the placeholder fields.
+# [Limitations](#tab/limitations)
 
-   # [Limitations](#tab/limitations)
+The following are the limitations:
 
-    The following are the limitations:
+* The bot can only send back a response as `result` or `auth` as the value for the `type` property in response to the `composeExtension/anonymousQueryLink` invoke request. The user can log an error for all other response types, such as, *silentAuth* and *config*.
 
-     * The bot can only send back a response as `result` or `auth` as the value for the `type` property in response to the `composeExtension/anonymousQueryLink` invoke request. The user can log an error for all other response types, such as, *silentAuth* and *config*.
+* The bot can't send back an acv2 card in response to the `composeExtension/anonymousQueryLink` invoke request, either as a result or as a pre-auth card in auth.
 
-     * The bot can't send back an acv2 card in response to the `composeExtension/anonymousQueryLink` invoke request, either as a result or as a pre-auth card in auth.
+* If the bot selects to send back the `"type": "auth"` with a pre-auth card, the Teams client strips away any action buttons from the card, and adds a sign in action button to get users to authenticate into your app.
 
-     * If the bot selects to send back the `"type": "auth"` with a pre-auth card, the Teams client strips away any action buttons from the card, and adds a sign in action button to get users to authenticate into your app.
-    ---
+  * The bot can't send back an acv2 card in response to the `composeExtension/anonymousQueryLink` invoke request, either as a result or as a pre-auth card in auth.
+
+    * If the bot selects to send back the `"type": "auth"` with a pre-auth card, the Teams client strips away any action buttons from the card, and adds a sign in action button to get users to authenticate into your app.
+
+---
 
 ## Remove link unfurling cache
 
@@ -404,6 +420,12 @@ The following JSON payload example for `suggestedActions` property:
 ## Step-by-step guide
 
 Follow the [step-by-step guide](../../sbs-botbuilder-linkunfurling.yml) to unfurl links in Teams using bot.
+
+## Code sample
+
+|**Sample name** | **Description** | **.NET** | **Node.js**| **Manifest**
+|----------------|-----------------|--------------|----------------|----------------|
+| Zero install link unfurling. | This sample shows how to use Search-based Messaging Extension with a configuration page. This sampe also features zero install link unfurling. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search-auth-config/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search-sso-config/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msgext-search-auth-config/csharp/demo-manifest/msgext-search-auth-config.zip)|
 
 ## See also
 

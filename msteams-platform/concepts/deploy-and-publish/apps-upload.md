@@ -21,7 +21,7 @@ You can sideload Microsoft Teams apps without having to publish to your organiza
 > [!IMPORTANT]
 >
 > * Currently, sideloading of apps is possible only in Government Community Cloud (GCC) and is not possible in GCC-High and Department of Defense (DOD).
-> * App installation is supported only on Teams desktop app.
+> * App installation is supported only on Teams desktop client.
 
 ## Prerequisites
 
@@ -33,8 +33,9 @@ You can sideload Microsoft Teams apps without having to publish to your organiza
 
 You can sideload your app to a team, chat, meeting, or for personal use depending on how you configured your app's scope.
 
-1. Log in to the Teams client with your [Microsoft 365 development account](https://developer.microsoft.com/en-us/microsoft-365/dev-program).
-1. Select **Apps** > **Manage your apps** > **Upload an app**.
+1. Log in to the Teams client with your [Microsoft 365 development account](https://developer.microsoft.com/microsoft-365/dev-program).
+
+1. Select **Apps** > **Manage your apps** and **Upload an app**.
 
     :::image type="content" source="~/assets/images/publish-app/manage-apps.png" alt-text="Screenshot of Teams app that shows the Publish an app option under Manage your apps.":::
 

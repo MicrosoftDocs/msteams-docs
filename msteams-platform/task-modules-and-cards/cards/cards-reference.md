@@ -966,6 +966,12 @@ The following cards are implemented by the Bot Framework, but aren't supported b
 * Audio cards
 * Video cards
 
+## Code samples
+
+|S.No.| Description|.NET|Node.js|Manifest
+|--|--|--------------------------------------------------------|-----|-----|
+|1|This sample shows how user can send different types of cards using bot which are supported in Teams.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-all-cards/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-all-cards/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-all-cards/csharp/demo-manifest/bot-all-cards.zip)
+
 ## See also
 
 * [Cards and task modules](../cards-and-task-modules.md)

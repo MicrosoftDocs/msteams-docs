@@ -7,7 +7,7 @@ keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) 
 ---
 # Configure your tab app in Azure AD
 
-Azure AD provides access to your tab app based on the app user's Teams identity. You'll need to register your tab app with Azure AD so that the app user who has signed into Teams can be given access to your tab app.
+Azure Active Directory (Azure AD) provides access to your tab app based on the app user's Teams identity. You'll need to register your tab app with Azure AD so that the app user who has signed into Teams can be given access to your tab app.
 
 ## Enabling SSO in Azure AD
 
@@ -181,7 +181,7 @@ To configure scope and authorize trusted client applications, you'll need:
 
 1. Enter the details for configuring scope.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-scope.png" alt-text="Add scope details":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-scope.png" alt-text="The screenshot shows how to add scope details in Azure.":::
 
     1. Enter the scope name. This is a mandatory field.
     2. Select the user who can give consent for this scope. The default option is **Admins only**.
@@ -225,8 +225,9 @@ To configure scope and authorize trusted client applications, you'll need:
        | 5e3ce6c0-2b1f-4285-8d4b-75ee78787346 | Teams web application |
        | 4765445b-32c6-49b0-83e6-1d93765276ca | Microsoft 365 web application |
        | 0ec893e0-5785-4de6-99da-4ed124e5296c | Microsoft 365 desktop application |
-       | d3590ed6-52b3-4102-aeff-aad2292ab01c | Outlook desktop, mobile application |
+       | d3590ed6-52b3-4102-aeff-aad2292ab01c | Outlook desktop application |
        | bc59ab01-8403-45c6-8796-ac3ef710b3e3 | Outlook web application |
+       | 27922004-5251-4030-b22d-91ecd9a37ea4 | Outlook mobile application |
 
     1. Select the application ID URI you created for your app in **Authorized scopes** to add the scope to the web API you exposed.
 
@@ -259,7 +260,10 @@ You must define the access token version for your app. This configuration is mad
 
 1. Enter **2** as the value for the `accessTokenAcceptedVersion` property.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-manifest-value.png" alt-text="Value for accepted access token version":::
+    > [!NOTE]
+    > If you've selected **Personal Microsoft accounts only** or **Accounts in any organizational directory (Any Azure AD directory - Multitenant) and personal Microsoft accounts (e.g. Skype, Xbox)** during app registration, update the value for the `accessTokenAcceptedVersion` property as 2.
+
+   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-manifest-value.png" alt-text="Value for accepted access token version":::
 
 1. Select **Save**
 

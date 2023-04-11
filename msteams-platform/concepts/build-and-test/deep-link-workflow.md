@@ -25,7 +25,7 @@ The query parameters are:
 * `topicName`: An optional field for chat's display name if a chat has three or more users. If this field isn't specified, the chat's display name is based on the names of the participants.
 * `message`: An optional field for the message text that you want to insert into the current user's compose box while the chat is in a draft state.
 
-To use this deep link with your bot, specify the deep link as the URL target in your card's button or tap action through the `openUrl` action type. Apps can also use Teams Java Script library 2.0 to create this without having to manually prepare the deep link. Following is an example using TeamsJS library:
+To use this deep link with your bot, specify the deep link as the URL target in your card's button or tap action through the `openUrl` action type. Apps can also use Teams Java Script library 2.0 to create this without having to manually prepare the deep link. Following is an example using Microsoft Teams JavaScript client library (TeamsJS):
 
 ```javascript
 if(chat.isSupported()) {
@@ -150,3 +150,9 @@ For deep links to share content to stage, see [deep link to share content to sta
 ## Deep link to join a meeting
 
 Application can read, join a meeting URL through Graph APIs. This deep link brings up the UI for the user to join that meeting.
+
+## Code Sample
+
+| Sample name | Description | .NET |Node.js|
+|-------------|-------------|------|----|
+|Deep link consuming Subentity ID | This sample shows how to use deep-link from bot chat to tab consuming Subentity ID. It also shows deeplinks for navigate to app, navigate to chat, open profile dialog and open scheduling dialog.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs)|

@@ -250,44 +250,44 @@ microsoftTeams.getContext((context) => {
 
 The following table lists commonly used context properties of the *context* object:
 
-| TeamsJS v2 name | TeamsJS v1 name | Description |
-|-----------------|-----------------|-------------|
-| team.internalId | teamId | The Microsoft Teams ID for the team with which the content is associated. |
-| team.displayName | teamName | The name for the team with which the content is associated. |
-| channel.id | channelId | The Microsoft Teams ID for the channel with which the content is associated. |
-| channel.displayName | channelName | The name for the channel with which the content is associated. |
-| chat.id | chatId | The Microsoft Teams ID for the chat with which the content is associated. |
-| app.locale | locale | The current locale that the user has configured for the app formatted as languageId-countryId (for example, en-us). |
-| page.id | entityId | The developer-defined unique ID for the page this content points to. |
-| page.subPageId | subEntityId | The developer-defined unique ID for the subpage this content points to. This field should be used to restore to a specific state within a page, such as scrolling to or activating a specific piece of content. |
-| user.loginHint | loginHint | A value suitable for use as a login_hint when authenticating with Azure AD. Because a malicious party can run your content in a browser, this value should be used only as a hint as to who the user is and never as proof of identity. This field is available only when the identity permission is requested in the manifest. |
-| user.userPrincipalName | upn | The UPN of the current user. This may be an externally authenticated UPN (for example, guest users). Because a malicious party runs your content in a browser, this value should be used only as a hint as to who the user is and never as proof of identity. This field is available only when the identity permission is requested in the manifest. |
-| user.id | userObjectId | The Azure AD object ID of the current user. Because a malicious party runs your content in a browser, this value should be used only as a hint as to who the user is and never as proof of identity. This field is available only when the identity permission is requested in the manifest. |
-| user.tenant.id | tid | The Azure AD tenant ID of the current user. Because a malicious party can run your content in a browser, this value should be used only as a hint as to who the user is and never as proof of identity. This field is available only when the identity permission is requested in the manifest. |
-| team.groupId | groupId | The Office 365 group ID for the team with which the content is associated. This field is available only when the identity permission is requested in the manifest. |
-| app.theme  | theme | The current UI theme: default, dark, contrast |
-| page.isFullScreen | isFullScreen | Indication whether the page is in full-screen mode. |
-| team.type | teamType | The type of the team. |
-| sharepointSite.teamSiteUrl | teamSiteUrl | The root SharePoint site associated with the team. |
-| sharepointSite.teamSiteDomain | teamSiteDomain | The domain of the root SharePoint site associated with the team. |
-| sharepointSite.teamSitePath | teamSitePath | The relative path to the SharePoint site associated with the team. |
-| channel.relativeUrl | channelRelativeUrl | The relative path to the SharePoint folder associated with the channel. |
-| app.host.sessionId | sessionId | Unique ID for the current Host session for use in correlating telemetry data. |
-| team.userRole | userTeamRole | The user's role in the team. Because a malicious party can run your content in a browser, this value should be used only as a hint as to the user's role, and never as proof of her role. |
-| team.isArchived | isTeamArchived | Indicates whether team is archived. Apps should use this as a signal to prevent any changes to content associated with archived teams. |
-| app.host.clientType | hostClientType | The type of the host client. Possible values are: android, ios, web, desktop, rigel |
-| page.frameContext | frameContext | The context where page url is loaded (content, task, setting, remove, sidePanel) |
-| sharepoint | sharepoint | SharePoint context. This is only available when hosted in SharePoint. |
-| user.tenant.teamsSku | tenantSKU | The license type for the current user tenant. Possible values are enterprise, free, edu, unknown |
-| user.licenseType | userLicenseType | The license type for the current user. Possible values are E1, E3, and E5 enterprise plans |
-| app.parentMessageId | parentMessageId | The ID of the parent message from which this task module was launched. This is only available in task modules launched from bot cards. |
-| app.host.ringId | ringId | Current ring ID. |
-| app.sessionId | appSessionId | Unique ID for the current Host session for use in correlating telemetry data. |
-| user.isCallingAllowed | isCallingAllowed | Represents whether calling is allowed for the current logged-in user. |
-| user.isPSTNCallingAllowed | isPSTNCallingAllowed | Indicates if PSTN calling is allowed for the current user |
-| meeting.id | meetingId | The meeting ID used by tab when running in meeting context. |
-| channel.defaultOneNoteSectionId | defaultOneNoteSectionId | The OneNote section ID that is linked to the channel. |
-| page.isMultiWindow | isMultiWindow | The indication whether the tab is in a pop out window. |
+| TeamsJS v2 name | TeamsJS v1 name |
+|---|---|
+| team.internalId | teamId |
+| team.displayName | teamName |
+| channel.id | channelId |
+| channel.displayName | channelName |
+| chat.id | chatId |
+| app.locale | locale |
+| page.id | entityId |
+| page.subPageId | subEntityId |
+| user.loginHint | loginHint |
+| user.userPrincipalName | upn |
+| user.id | userObjectId |
+| user.tenant.id | tid |
+| team.groupId | groupId |
+| app.theme | theme |
+| page.isFullScreen | isFullScreen |
+| team.type | teamType |
+| sharepointSite.teamSiteUrl | teamSiteUrl |
+| sharepointSite.teamSiteDomain | teamSiteDomain |
+| sharepointSite.teamSitePath | teamSitePath |
+| channel.relativeUrl | channelRelativeUrl |
+| app.host.sessionId | sessionId |
+| team.userRole | userTeamRole |
+| team.isArchived | isTeamArchived |
+| app.host.clientType | hostClientType |
+| page.frameContext | frameContext |
+| sharepoint | sharepoint |
+| user.tenant.teamsSku | tenantSKU |
+| user.licenseType | userLicenseType |
+| app.parentMessageId | parentMessageId |
+| app.host.ringId | ringId |
+| app.sessionId | appSessionId |
+| user.isCallingAllowed | isCallingAllowed |
+| user.isPSTNCallingAllowed | isPSTNCallingAllowed |
+| meeting.id | meetingId |
+| channel.defaultOneNoteSectionId | defaultOneNoteSectionId |
+| page.isMultiWindow | isMultiWindow |
 
 For more information, see [Updates to the *Context* interface](using-teams-client-library.md#updates-to-the-context-interface) and the [Context interface](/javascript/api/@microsoft/teams-js/app.context) API reference.
 
@@ -346,6 +346,12 @@ For more information on shared channels, see [shared channels](~/concepts/build-
 You can register your app to be informed if the theme changes by calling `microsoftTeams.app.registerOnThemeChangeHandler(function(theme) { /* ... */ })`.
 
 The `theme` argument in the function is a string with a value of `default`, `dark`, or `contrast`.
+
+## Code sample
+
+| Sample name           | Description | Javascript|
+:---------------------|:--------------|:---------|
+|Tab channel context|This sample shows how to use the contents of tab context object in a private and shared channel. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-context/nodejs)
 
 ## Next step
 

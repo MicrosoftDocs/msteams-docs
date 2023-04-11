@@ -122,19 +122,26 @@ Responses from your Outgoing Webhooks appear in the same reply chain as the orig
 
 ---
 
-> [!NOTE]
->
-> * You can send Adaptive Card, Hero card, and text messages as attachment with an Outgoing Webhook.
-> * Cards support formatting. For more information, see [format cards with Markdown](~/task-modules-and-cards/cards/cards-format.md?tabs=adaptive-md%2Cconnector-html#format-cards-with-markdown).
-> * Adaptive Card in Outgoing Webhooks only support `openURL` card actions.
+### Use Adaptive Cards with Outgoing Webhooks
+
+You can send Adaptive Card, Hero card, and text messages as attachment with an Outgoing Webhook.
+Cards support formatting. For more information, see [format cards with Markdown](~/task-modules-and-cards/cards/cards-format.md?tabs=adaptive-md%2Cconnector-html#format-cards-with-markdown).
+Adaptive Card in Outgoing Webhooks supports only `openURL` card actions.
 
 The following codes are examples of an Adaptive Card response:
 
 # [C#/.NET](#tab/dotnet)
 
+[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/outgoing-webhook/csharp/Controllers/SampleController.cs#L20)
+
 ```csharp
-string content = await this.Request.Content.ReadAsStringAsync();
-Activity incomingActivity = JsonConvert.DeserializeObject<Activity>(content);
+
+// This method is to read the request body content
+string content;
+using (var reader = new StreamReader(Request.Body))
+    {
+        content = await reader.ReadToEndAsync();
+    }
 
 var Card = new AdaptiveCard(new AdaptiveSchemaVersion("1.4"))
 {
@@ -161,6 +168,8 @@ return sampleResponseActivity;
 ```
 
 # [JavaScript/Node.js](#tab/javascript)
+
+[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/outgoing-webhook/nodejs/app.js#L30)
 
 ```javascript
 var receivedMsg = JSON.parse(payload);
@@ -232,7 +241,7 @@ var responseMsg = JSON.stringify({
 
 |**Sample name** | **Description** | **.NET** | **Node.js** |
 |----------------|------------------|--------|----------------|
-| Outgoing Webhooks | Samples to create custom bots to be used in Teams.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/nodejs)|
+| Outgoing Webhooks | This sample shows how to  implement and use outgoing webhook.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/nodejs)|
 
 ## Step-by-step guide
 

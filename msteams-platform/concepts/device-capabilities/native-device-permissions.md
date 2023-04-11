@@ -31,7 +31,7 @@ By accessing the device capabilities, you can build richer experiences on the Te
 > [!NOTE]
 >
 > * Device permissions are different in the browser. For more information, see [browser device permissions](browser-device-permissions.md).
-> * Teams support for QR barcode scanner capability is only available for mobile clients.
+> * Teams supports for QR barcode scanner capability, that is only available for mobile clients.
 
 ## Access device permissions
 
@@ -252,9 +252,9 @@ Device permissions are stored for every sign in session. It means that if you si
 
 ## Code sample
 
-| **Sample Name** | **Description** | **Node.js** |
-|---------------|--------------|--------|
-|Device permissions | Use Microsoft Teams tab sample app to demonstrate device permissions |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs) |
+| Sample name           | Description | Node.js    | Manifest
+|---------------------|--------------|---------|---------|
+|Device permissions | The sample shows how to use the device permissions using teams js sdk and browser api's. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs/demo-manifest/tab-device-permissions.zip)
 
 ## Next step
 

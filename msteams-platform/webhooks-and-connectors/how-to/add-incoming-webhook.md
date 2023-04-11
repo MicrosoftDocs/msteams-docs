@@ -76,6 +76,58 @@ You can create and send actionable messages through Incoming Webhook or connecto
 > [!NOTE]
 > In Teams, select **Settings** > **Member permissions** > **Allow members to create, update, and remove connectors**, so that any team member can add, modify, or delete a connector.
 
+**Example**
+
+# [C#](#tab/dotnet)
+
+[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/incoming-webhook/csharp/IncomingWebhook/Controllers/CardController.cs#L28)
+
+```csharp
+var adaptiveCardJson = @"{
+  ""type"": ""message"",
+  ""attachments"": [
+    {
+      ""contentType"": ""application/vnd.microsoft.card.adaptive"",
+      ""content"": {
+        ""type"": ""AdaptiveCard"",
+        ""body"": [
+          {
+            ""type"": ""TextBlock"",
+            ""text"": ""Message Text""
+          }
+        ],
+        ""$schema"": ""http://adaptivecards.io/schemas/adaptive-card.json"",
+        ""version"": ""1.0""
+      }
+    }
+  ]
+}";
+
+var webhookUrl = "https://xxxxx.webhook.office.com/xxxxxxxxx";
+
+var client = new HttpClient();
+client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+var content = new StringContent(adaptiveCardJson, System.Text.Encoding.UTF8, "application/json");
+var response = await client.PostAsync(webhookUrl, content);
+```
+
+# [JavaScript](#tab/javascript)
+
+[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/incoming-webhook/nodejs/api/server/index.js#L16)
+
+```javascript
+ axios.post({{WebhookUrl}}, {{formatted_Card_Payload}})
+    .then(res => {
+        console.log(`statusCode: ${res.status}`)
+        console.log(res)
+    })
+    .catch(error => {
+        console.error(error)
+    })
+```
+---
+
 ## Remove Incoming Webhooks
 
 To remove an Incoming Webhook from a Teams channel, follow these steps:
@@ -104,9 +156,9 @@ To remove an Incoming Webhook from a Teams channel, follow these steps:
 
 ## Code sample
 
-| Sample Name           | Description | .NET    |  Node.js |
-|:---------------------|:--------------|:---------|:--------|
-|Incoming Webhook|This sample code demonstrates how to send card using Incoming Webhook. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/incoming-webhook/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/incoming-webhook/nodejs) |
+| Sample Name       | Description | .NET    |  Node.js |Manifest |
+|---------------------|--------------|---------|--------|--------|
+|Task module sample bots-V4 | This sample shows how to create task modules using bot framework v4 and teams tabs. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/csharp/demo-manifest/bot-task-module.zip)|
 
 ## See also
 

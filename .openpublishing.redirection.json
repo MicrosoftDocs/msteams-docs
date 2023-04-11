@@ -851,6 +851,14 @@
       {
         "source_path": "msteams-platform/bots/how-to/authentication/auth-flow-bot.md",
         "redirect_url": "/microsoftteams/platform/bots/how-to/authentication/add-authentication"
+      },
+      {
+        "source_path": "msteams-platform/tabs/how-to/dashboard-teams-toolkit.md",
+        "redirect_url": "/microsoftteams/platform/tabs/how-to/build-a-dashboard-tab-app"
+      },
+      {
+        "source_path": "msteams-platform/apps-in-teams-meetings/app-caching-for-your-tab-app.md",
+        "redirect_url": "/microsoftteams/platform/apps-in-teams-meetings/build-tabs-for-meeting"
       }
     ]
 }

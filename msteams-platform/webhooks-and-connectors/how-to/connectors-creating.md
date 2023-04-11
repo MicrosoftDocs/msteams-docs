@@ -47,7 +47,7 @@ You can reuse your existing web configuration experience or create a separate ve
 To integrate the configuration experience:
 
 > [!NOTE]
-> Starting with TeamsJS client library (TeamsJS) v.2.0.0, APIs in the *settings* namespace have been deprecated in favor of equivalent APIs in the *pages* namespace, including `pages.getConfig()` and other APIs in the `pages.config` sub-namespace. For more information, see [What's new in TeamsJS version 2.x.x](../../tabs/how-to/using-teams-client-library.md#whats-new-in-teamsjs-version-2xx).
+> Starting with TeamsJS library v.2.0.0, APIs in the *settings* namespace have been deprecated in favor of equivalent APIs in the *pages* namespace, including `pages.getConfig()` and other APIs in the `pages.config` sub-namespace. For more information, see [What's new in TeamsJS version 2.x.x](../../tabs/how-to/using-teams-client-library.md#whats-new-in-teamsjs-version-2xx).
 
 1. Initialize TeamsJS by calling `app.initialize()`.
 1. Call `pages.config.setValidityState(true)` to enable **Save**.
@@ -237,8 +237,8 @@ The following table provides the sample name and its description:
 
 |**Sample name** | **Description** | **.NET** | **Node.js** |
 |----------------|------------------|--------|----------------|
-| Connectors | Sample connector for Microsoft 365 Groups generating notifications to Teams channel.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-todo-notification/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-github-notification/nodejs)|
-| Generic connectors sample |Sample code for a generic connector that is easy to customize for any system that supports webhooks.| | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-generic/nodejs)|
+| Connector TODO notification |This sample shows a connector for Microsoft 365 Groups, which generates and sends notifications for Teams channel.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-todo-notification/csharp)| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-todo-notification/nodejs)|
+| Generic connectors sample |This sample shows a generic connector that is easy to customize for any system that supports webhooks.| NA| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-generic/nodejs)|
 
 ## Step-by-step guide
 
