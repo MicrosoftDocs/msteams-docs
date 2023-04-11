@@ -293,7 +293,7 @@ microsoftTeams.teamsCore.registerBeforeUnloadHandler((readyToUnload) => {
 
 ### Best practices
 
-We recommend you to implement web storage capabilities to cache the users app data. This helps to load the app faster in subsequent launches.
+We recommend you to implement web storage capabilities to cache the user's app data. This helps to load the app faster in subsequent launches.
 
 ### Limitations
 
