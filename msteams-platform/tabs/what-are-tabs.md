@@ -76,6 +76,13 @@ For channel or group tabs, you can also create an extra configuration page. This
 
 You can have multiple channels or group tabs, and up to 16 personal tabs per app.
 
+## Instant tabs
+
+Bringing full support of static tabs to teams will have a number of benefits, including allowing tabs to be pre-pinned by admins and be included as pre-pinned tabs in meeting templates. It will also allow developers to build tabs that behave more like 'apps', instead of 'pinned app content' because there will only ever be one tab pinned at a time
+
+> [!Note]
+> If you have both a configurable tab and a static tab in your app manifest that work in a specific context, Teams will always bias towards pinning the static tab and ignore the configurable tab. 
+
 ### Tools to build tabs
 
 * [Teams Toolkit for Visual Studio Code](../toolkit/teams-toolkit-fundamentals.md)

@@ -175,6 +175,13 @@ The configuration page code informs Teams that the configuration requirements ar
 >* If you do not register a save handler, the `saveEvent.notifySuccess()` call is made automatically when the user selects **Save**.
 >* Ensure to have unique `entityId`. Duplicate `entityId` redirects to the first instance of the tab.
 
+## Migrate configurable tab to instant tab
+
+move all the configuration logic out of your configuration dialog and into your contentUrl. Your configurationUrl (dialog) should be very simple, and all it should do is show a light-hearted splash screen and ask the user to pin the tab (ie: pin the contentUrl). If you are doing any middle-tier requests or API calls int the configuration dialog: move them into your configurationUrl instead. The getSettings and setSettings APIs that you are accustomed to using in your configuration dialog can also be used from contentUrl. This is where you should really be moving all you configuration logic: in the contentUrl. 
+
+ 
+This will allow you to get your configurable tab ready for Instant Tabs. All that will be required to adopt Instant (Static) Tabs after this is done is to update your manifest by adding a `staticTab` that pins the `contentUrl` you decided to use in the given `scope` and `context`. 
+
 ### Get context data for your tab settings
 
 Your tab requires contextual information to display relevant content. Contextual information further enhances your tab's appeal by providing a more customized user experience.
