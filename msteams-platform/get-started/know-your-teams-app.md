@@ -44,8 +44,6 @@ For building other basic Teams app, see Tools and SDKs > TTk v5 > TTk Tutorials 
 * Introduce unified app manifest.
 * To do list – code sample, no sbs yet.
 
-### Unified app manifest
-
 Extend your Teams app across Microsoft 365 by updating the Teams unified app manifest. Configure the properties in the Teams app manifest to make your app accessible over Outlook and Office.
 
 :::image type="content" source="../assets/images/get-started/unified-app-manifest.png" alt-text="Screenshot showing the configuration of properties in the Teams app manifest.":::
