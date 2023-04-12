@@ -437,7 +437,7 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
 
    # [One-on-One call](#tab/one-on-one-call)
 
-   The following is a JSON payload response for a One-on-one call for an in-tenant user:
+   The following is a JSON payload response for a one-on-one call for an in-tenant user:
 
    ```json
     {
