@@ -34,7 +34,7 @@ Teams as a platform offers you toolkits, libraries, and apps at every stage of a
 
 Understanding the user and their concern are the first indicators of how a Teams app can help. Build your use case around the problem, determine how an app can solve it, and draw a solution.
 
-* **Understand your use case and Teams App Features**: Understand your user's requirement and you can identify the right features.
+* **Understand your use case and Teams app features**: Understand your user's requirement and you can identify the right features.
 
 * **Map your use cases**: Map common use cases to Teams features based on requirements, such as sharing, collaborating, workflows, relevant social platforms, and more.
 
@@ -76,7 +76,7 @@ The following table includes Teams features and availability for GCC, GCC-High, 
 | **Apps** | &nbsp; | &nbsp; | &nbsp; |
 | Microsoft apps | ✔️ Microsoft apps compliant with GCC. | ✔️ Microsoft apps compliant with GCC-High. | ✔️ Microsoft apps compliant with DOD. |
 | 3P or third-party apps | ✔️ Third-party apps are available. Disabled by default and tenant admin use their own discretion to enable it. | ❌ | ❌ |
-|Line-of-business apps| ✔️ | ✔️ | ✔️ |
+|Line-of-business apps| ✔️ | ❌ | ❌ |
 |Custom apps| ✔️ | ✔️ | ✔️ |
 |Sideloading apps | ✔️ | ❌ | ❌ |
 | **Capabilities** | &nbsp; | &nbsp; | &nbsp; |
