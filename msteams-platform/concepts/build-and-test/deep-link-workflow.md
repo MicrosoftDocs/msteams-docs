@@ -147,6 +147,10 @@ For deep links to share content to stage, see [deep link to share content to sta
 > * Currently, generating a deep link to share content to stage in meetings is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
 > * Deep link to share content to stage in meeting is supported in Teams desktop client only.
 
+## Deep link to meeting side panel
+
+You can also generate a deep link to [meeting side panel](~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#share-entire-app-to-stage) in a meeting.
+
 ## Deep link to join a meeting
 
 Application can read, join a meeting URL through Graph APIs. This deep link brings up the UI for the user to join that meeting.
