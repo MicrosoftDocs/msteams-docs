@@ -39,8 +39,6 @@ The following are the steps to publish your app in Teams Developer Portal:
 
 The following are the steps to publish your app in Teams Developer Portal:
 
-1. Open **Teams Developer Portal** to publish your app.
-
 1. Select **Project** > **Teams Toolkit** > **Open Teams Developer Portal to Publish**.
 
     :::image type="content" source="../assets/images/tdp/tdp-vs.png" alt-text="Screenshot shows you how to open developer portal from visual studio.":::
@@ -85,4 +83,4 @@ You can do the following configuration for your app in the Developer Portal:
 * [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
 * [Developer Portal for Teams](../concepts/build-and-test/teams-developer-portal.md)
 * [Manage your apps in Developer Portal](../concepts/build-and-test/manage-your-apps-in-developer-portal.md)
-* [Integrate with Visual Studio Code and Visual Studio](../concepts/build-and-test/integrate-your-apps-to-teams-toolkit.md)
+* [Integrate with Visual Studio Code and Visual Studio](../concepts/build-and-test/develop-your-app-with-teams-toolkit.md)

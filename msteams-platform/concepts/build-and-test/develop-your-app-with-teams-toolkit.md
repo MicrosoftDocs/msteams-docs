@@ -1,12 +1,12 @@
 ---
-title: Integrate Developer Portal with Teams Toolkit
+title: Develop your app with Teams Toolkit
 description: Learn how to integrate your app from Teams Developer Portal to Teams Toolkit in Visual Studio Code and Visual Studio.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: v-sdhakshina
 ---
 
-# Integrate Developer Portal with Teams Toolkit
+# Develop your app with Teams Toolkit
 
 After you create your app in Teams Developer Portal, you can:
 
@@ -17,7 +17,7 @@ Teams Toolkit scaffolds the necessary files based on the feature and configurati
 
 ## Open your app in Visual Studio Code
 
-In Teams Developer Portal, you can now directly open and launch your project in Visual Studio Code.
+In Teams Developer Portal, you can open and launch your project in Visual Studio Code.
 
 Following are the steps to open your app in Visual Studio Code:
 
@@ -86,6 +86,8 @@ Following are the steps to open your app in Visual Studio:
 1. Teams Toolkit scaffolds your project with all the necessary config and code files, now you're ready to start development.
 
     :::image type="content" source="../../assets/images/tdp/vs-scaffold.png" alt-text="Screenshot shows you the scaffolding of your project in visual studio. ":::
+
+After you open your app in Teams Toolkit, you can now [develop your Teams app](/microsoftteams/platform/toolkit/teamsfx-multi-env) and [debug your Teams app](../../toolkit/debug-overview.md) in Teams Toolkit.
 
 ## See also
 
