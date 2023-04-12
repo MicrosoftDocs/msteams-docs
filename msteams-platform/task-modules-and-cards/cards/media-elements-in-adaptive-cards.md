@@ -11,7 +11,7 @@ The media elements such as audio or video clips are supported in the Adaptive Ca
 
 To increase engagement with the Adaptive cards and to provide new experience in the media elements, Teams in parity with the SDK that supports media elements.
 
-Adaptive Cards now supports the consumption of the media elements directly without the force exit from Teams to view media. Following are the scenarios:
+Adaptive Cards now supports the consumption of the media elements without the force exit from Teams to view media. Following are the scenarios:
 
 **LOB scenarios**
 
