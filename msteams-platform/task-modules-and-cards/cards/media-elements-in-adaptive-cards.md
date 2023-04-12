@@ -37,18 +37,18 @@ To add media elements to your Adaptive Cards, follow the steps:
    :::image type="content" source="../../assets/images/media-elements-in-adaptive-cards/share-link.png" alt-text="Screenshot shows you from where you can take a link.":::
 
     >[!NOTE]
-    > Links copied directly from address bar won't works.
+    > Adaptive don't support media elements link that are copied directly from address bar.
 
-1. Add your media file or DriveItem url or link to your Adaptive Card json file in `url`:
+1. Add your media file url or link to your Adaptive Card json file in `url` property:
 
    :::image type="content" source="../../assets/images/media-elements-in-adaptive-cards/adaptive-card-json.png" alt-text="Screenshot shows you the Adaptive Card json code.":::
 
 ## Limitations
 
 1. Only sharepoint or OneDrive links of media supports now.
-1. It is not likely that Guest, Federated, or Anonymous users will be able to view videos unless the shared video permissions is public to those users.
-1. You must inform users or admin before you share a link that they are responsible for ensuring that the audience can view the link. That means that whoever can view the adaptive card is in the permissions group to view the media file.
+1. It isn't likely that Guest, Federated, or Anonymous users can view videos unless the shared video permissions are public to those users.
+1. You must inform users or admin before you share a link that they're responsible for ensuring that the audience can view the link. That means that whoever can view the adaptive card is in the permissions group to view the media file.
 
 ## See also
 
-* [Adaptive Card](cards-reference.md#adaptive-card)
+[Adaptive Card](cards-reference.md#adaptive-card)
