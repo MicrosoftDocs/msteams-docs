@@ -1,12 +1,12 @@
 ---
-title: Develop your app with Teams Toolkit
+title: Develop your apps with Teams Toolkit
 description: Learn how to integrate your app from Teams Developer Portal to Teams Toolkit in Visual Studio Code and Visual Studio.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: v-sdhakshina
 ---
 
-# Develop your app with Teams Toolkit
+# Develop your apps with Teams Toolkit
 
 After you create your app in Teams Developer Portal, you can:
 

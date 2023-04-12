@@ -83,4 +83,4 @@ You can do the following configuration for your app in the Developer Portal:
 * [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
 * [Developer Portal for Teams](../concepts/build-and-test/teams-developer-portal.md)
 * [Manage your apps in Developer Portal](../concepts/build-and-test/manage-your-apps-in-developer-portal.md)
-* [Integrate with Visual Studio Code and Visual Studio](../concepts/build-and-test/develop-your-app-with-teams-toolkit.md)
+* [Integrate with Visual Studio Code and Visual Studio](../concepts/build-and-test/develop-your-apps-with-teams-toolkit.md)
