@@ -195,9 +195,9 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
 
    ```
 
-   # [Meet now meeting](#tab/meet-now-meeting)
+   # [Instant meeting](#tab/instant-meeting)
 
-   The following is a JSON payload response for a Meet now meeting for in-tenant users:
+   The following is a JSON payload response for a Instant meeting (Meet now) for in-tenant users:
 
    ```json
       {
