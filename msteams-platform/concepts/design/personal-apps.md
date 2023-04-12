@@ -46,7 +46,7 @@ With a private workspace, users can view app content that's meaningful to them i
 
 #### **Configure and add multiple actions in NavBar**
 
-You can add multiple actions to the upper right NavBar and build an overflow menu for extra actions in an app. A maximum of five actions can be added in the NavBar, including the overflow menu.
+You can add multiple actions to the upper-right NavBar and build an overflow menu for extra actions in an app. A maximum of five actions can be added in the NavBar, including the overflow menu.
 
 :::image type="content" source="../../assets/images/overflow-menu-and-multiple-actionsoptions.png" alt-text="The screenshot is an example thats describes the NavBar and Overflow menu.":::
 
@@ -235,7 +235,7 @@ In personal contexts, don’t display content for teams a user isn't part of. Pe
 
 #### Do: Allow users to access complex features in a browser
 
-Your app should focus on core tasks in Teams, but you can still view the full, standalone app in a browser.
+Your app should focus on core tasks in Teams, but you can still view the full, stand-alone app in a browser.
 
 :::image type="content" source="../../assets/images/personal-apps/personal-tab-feature-do.png" alt-text="Example shows how to handle complex app features with a personal app.":::
 
@@ -247,7 +247,7 @@ Unless you created your app specifically for Teams, you probably have features t
 
 ## Code sample
 
-|Sample name | Description | Typescript|
+|Sample name | Description | TypeScript|
 |----------------|--------------------------------------------------------|--------------|
 | Meeting app | Sample to show navbar-menu in personal tab app. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-navbar-menu/ts) |
 
