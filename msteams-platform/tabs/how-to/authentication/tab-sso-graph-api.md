@@ -1,6 +1,6 @@
 ---
 title: Extend tab app with Microsoft Graph permissions
-description: Configure additional permissions and scopes with Microsoft Graph for enabling Single sign-on (SSO).
+description: Configure additional permissions and scopes, get access token with Microsoft Graph for to enable single sign-on (SSO).
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) Graph API Delegated permission access token scope
@@ -27,39 +27,39 @@ You can configure additional Graph scopes in Azure AD for your app. These are de
 
 2. Select **Manage** > **API permissions** from the left pane.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/api-permission-menu.png" alt-text="App permissions menu option.":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/api-permission-menu.png" alt-text="The screenshot shows the app permissions menu option.":::
 
     The **API permissions** page appears.
 
 3. Select **+ Add a permission** to add Microsoft Graph API permissions.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-permission.png" alt-text="App permissions page.":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-permission.png" alt-text="The screenshot shows the app permissions page.":::
 
     The **Request API permissions** page appears.
 
 4. Select **Microsoft Graph**.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/request-api-permission.png" alt-text="Request API permissions page.":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/request-api-permission.png" alt-text="The screenshot shows shows the request API permissions page.":::
 
     The options for Graph permissions display.
 
 5. Select **Delegated permissions** to view the list of permissions.
 
-   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/delegated-permission.png" alt-text="Delegated permissions.":::
+   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/delegated-permission.png" alt-text="The screenshot shows the delegated permissions.":::
 
 6. Select relevant permissions for your app, and then select **Add permissions**.
 
-   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/select-permission.png" alt-text="Select permissions.":::
+   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/select-permission.png" alt-text="The screenshot shows the add permissions option.":::
 
     You can also enter the permission name in the search box to find it.
 
     A message pops up on the browser stating that the permissions were updated.
 
-   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/updated-permission-msg.png" alt-text="Permissions updated message.":::
+   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/updated-permission-msg.png" alt-text="The screenshot shows the message that appears for the updated permissions.":::
 
     The added permissions are displayed in the **API permissions** page.
 
-   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/configured-permissions.png" alt-text="API permissions are configured.":::
+   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/configured-permissions.png" alt-text="The screenshot shows an example of the API permissions, which are configured.":::
 
     You've configured your app with Microsoft Graph permissions.
 
@@ -70,7 +70,7 @@ Depending on the platform or device where you want to target your app, additiona
 > [!NOTE]
 >
 > - If your tab app hasn't been granted IT admin consent, app users have to provide consent the first time they use your app on a different platform.
-> - Implicit grant is not required if SSO is enabled on a tab app.
+> - Implicit grant isn't required if SSO is enabled on a tab app.
 
 You can configure authentication for multiple platforms as long as the URL is unique.
 
@@ -80,19 +80,19 @@ You can configure authentication for multiple platforms as long as the URL is un
 
 1. Select **Manage** > **Authentication** from the left pane.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-portal-platform.png" alt-text="Authenticate for platforms":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-portal-platform.png" alt-text="The screenshot for authenticating platforms.":::
 
     The **Platform configurations** page appears.
 
 1. Select **+ Add a platform**.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-platform.png" alt-text="Add a platforms":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-platform.png" alt-text="The screenshot shows the options to add add a platform.":::
 
     The **Configure platforms** page appears.
 
-1. Select the platform that you want to configure for your tab app. You can choose the platform type from web or SPA.
+1. Select the platform that you want to configure for your tab app. You can choose the platform type from **web** or **Single-page application**.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/configure-platform.png" alt-text="Select web platform":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/configure-platform.png" alt-text="The screenshot for selecting web platform.":::
 
     You can configure multiple platforms for a particular platform type. Ensure that the redirect URI is unique for every platform you configure.
 
@@ -103,7 +103,7 @@ You can configure authentication for multiple platforms as long as the URL is un
 
 1. Enter the configuration details for the platform.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/config-web-platform.png" alt-text="Configure web platform":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/config-web-platform.png" alt-text="The screenshot for configuring web platform.":::
 
     1. Enter the redirect URI. The URI should be unique.
     2. Enter the front-channel logout URL.
@@ -115,18 +115,30 @@ You can configure authentication for multiple platforms as long as the URL is un
 
 ## Acquire access token for MS Graph
 
-You'll need to acquire access token for Microsoft Graph. You can do so by using Azure AD OBO flow.
+You'll need to acquire access token for Microsoft Graph. You can do so by using Azure AD on-behalf-of (OBO) flow.
 
-The current implementation for SSO grants consent for only user-level permissions that are not usable for making Graph calls. To get the permissions (scopes) needed to make a Graph call, SSO apps must implement a custom web service to exchange the token received from the Teams JavaScript library for a token that includes the needed scopes. You can use Microsoft Authentication Library (MSAL) for fetching the token from the client side.
+The current implementation for SSO grants consent for only user-level permissions that aren't usable for making Graph calls. To get the permissions (scopes) needed to make a Graph call, SSO apps must implement a custom web service to exchange the token received from the Teams JavaScript library for a token that includes the needed scopes. You can use Microsoft Authentication Library (MSAL) for fetching the token from the client side.
 
 After you've configured Graph permissions in Azure AD:
 
-- [Configure your client-side code to fetch access token using MSAL](#configure-code-to-fetch-access-token-using-msal)
-- [Pass the access token to server-side code](#pass-the-access-token-to-server-side-code)
+1. [Get the token ID from Teams client](#get-the-token-id-from-teams-client)
 
-### Configure code to fetch access token using MSAL
+1. [Exchange the token ID with the server-side token](#exchange-the-token-id-with-the-server-side-token)
 
-The following code provides an example of OBO flow to fetch access token from the Teams client using MSAL.
+### Get the token ID from Teams client
+
+The following is an example for calling token ID from Teams client:
+
+```csharp
+microsoftTeams.authentication.getAuthToken().then((result) => {
+    //result contains the id token
+            console.log(result);
+        })
+```
+
+### Exchange the token ID with the server-side token
+
+The following is an example of OBO flow to fetch access token from the Teams client using MSAL:
 
 ### [C#](#tab/dotnet)
 
@@ -189,8 +201,6 @@ IConfidentialClientApplication app = ConfidentialClientApplicationBuilder.Create
 
 ---
 
-### Pass the access token to server-side code
-
 If you need to access Microsoft Graph data, configure your server-side code to:
 
 1. Validate the access token. For more information, see [Validate the access token](tab-sso-code.md#validate-the-access-token).
@@ -199,7 +209,9 @@ If you need to access Microsoft Graph data, configure your server-side code to:
 1. Use token cache serialization in MSAL.NET to cache the new access token for multiple, if required.
 
 > [!IMPORTANT]
-> As a best practice for security, always use the server-side code to make Microsoft Graph calls, or other calls that require passing an access token. Never return the OBO token to the client to enable the client to make direct calls to Microsoft Graph. This helps protect the token from being intercepted or leaked.
+> * As a best practice for security, always use the [server-side code to make Microsoft Graph calls](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow#middle-tier-access-token-request) or other calls that require passing an access token. You must not return the OBO token to the client because it enables the client to make direct calls to Microsoft Graph. This helps protect the token from being intercepted or leaked.
+> 
+> * Don’t use `notifySuccess` result to return the token information to the parent page. Use `localStorage` to save the token and pass the item key via `notifySuccess`.
 
 ## Known limitations
 
@@ -220,6 +232,12 @@ You can ask for consent using the Auth API. Another approach for getting Graph s
     To handle incremental consent for tab app, see [incremental and dynamic user consent](/azure/active-directory/develop/v2-permissions-and-consent).
 5. After the app user has granted more permissions, retry the OBO flow to get access to these other APIs.
     </details>
+
+## Code sample
+
+| **Sample name** | **Description** | **C#** | **Node.js** |
+| --- | --- | --- | --- |
+| Tabs Azure AD SSO | Microsoft Teams sample app for tabs Azure AD SSO, which uses OBO flow to call Graph APIs. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/69c76fded29d7ae0fde49841d4ec9af7597ceedd/samples/tab-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/69c76fded29d7ae0fde49841d4ec9af7597ceedd/samples/tab-sso/nodejs)|
 
 ## See also
 

@@ -19,14 +19,17 @@ Formatting support differs between card types. Rendering of the card can differ 
 
 You can include an inline image with any Teams card. Supported image formats are .png, .jpg, or .gif formats. Keep the dimensions within 1024 x 1024 pixels and file size less than 1 MB. Animated .gif images aren't supported. For more information, see [types of cards](./cards-reference.md#inline-card-images).
 
-You can format Adaptive Cards and Office 365 Connector cards with Markdown that include certain supported styles.
+You can format Adaptive Cards and connector cards for Microsoft 365 Groups with Markdown that include certain supported styles.
 
 ## Format cards with Markdown
 
 The following card types support Markdown formatting in Teams:
 
 * Adaptive Cards: Markdown is supported in Adaptive Card `Textblock` field, and `Fact.Title` and `Fact.Value`. HTML isn't supported in Adaptive Cards.
-* Office 365 Connector cards: Markdown and limited HTML is supported in Office 365 Connector cards in the text fields.
+* Connector cards for Microsoft 365 Groups: Markdown and limited HTML is supported in connector cards for Microsoft 365 Groups in the text fields.
+
+> [!NOTE]
+> Markdown isn't supported for OAuth sign in cards in bots.
 
 You can use newlines for Adaptive Cards using `\r` or `\n` escape sequences for newlines in lists. Formatting is different between the desktop and the mobile versions of Teams for Adaptive Cards. Card-based mentions are supported in web, desktop, and mobile clients. You can use the information masking property to mask specific information, such as password or sensitive information from users within the Adaptive Card `Input.Text` input element. You can expand the width of an Adaptive Card using the `width` object. You can enable typeahead support within Adaptive Cards and filter the set of input choices as the user types the input. You can use the `msteams` property to add the ability to display images in stage view selectively.
 
@@ -132,6 +135,7 @@ Bots and message extensions can include mentions within the card content in [Tex
 >
 > * [Media elements](https://adaptivecards.io/explorer/Media.html) are currently not supported in Adaptive Cards on Teams platform.
 > * Channel and team mentions aren't supported in bot messages.
+> * You can @mention multiple users in a single Adaptive Card message, however, ensure that the message size limit doesn't exceed 28 KB for [Incoming Webhooks](~/webhooks-and-connectors/how-to/add-incoming-webhook.md) and 40 KB for a [bot message](~/bots/how-to/format-your-bot-messages.md).
 
 To include a mention in an Adaptive Card, your app needs to include the following elements:
 
@@ -390,7 +394,7 @@ The following code shows an example of Adaptive Card with typeahead support:
 
 ### Stage view for images in Adaptive Cards
 
-In an Adaptive Card, you can use the `msteams` property to add the ability to display images in stage view selectively. When users hover over the images, they can see an expand icon, for which the `allowExpand` attribute is set to `true`. For information on how to use the property, see the following example:
+In an Adaptive Card, you can use the `msteams` property to add the ability to display images in stage view selectively. When users hover over the images, they can see an expand icon, for which the `allowExpand` attribute is set to `true`. The following is an example of the `msteams` property:
 
 ``` json
 {
@@ -423,8 +427,9 @@ In the stage view, users can zoom in and zoom out of the image. You can select t
 >
 > * Zoom in and zoom out capability applies only to the image elements that is image type in an Adaptive Card.
 > * For Teams mobile apps, stage view functionality for images in Adaptive Cards is available by default. Users can view Adaptive Card images in stage view by simply tapping on the image, irrespective of whether the `allowExpand` attribute is present or not.
+> * Stage view for images in Adaptive Cards doesn't support Base64 encoded images.
 
-# [Markdown format for Office 365 Connector cards](#tab/connector-md)
+# [Markdown format for connector cards for Microsoft 365 Groups](#tab/connector-md)
 
 Connector cards support limited Markdown and HTML formatting.
 
@@ -624,12 +629,12 @@ When a user selects the overflow menu on mobile, the Adaptive Card displays the 
 
 The following card types support HTML formatting in Teams:
 
-* Office 365 Connector cards: Limited Markdown and HTML formatting are supported in Office 365 Connector cards.
+* Connector cards for Microsoft 365 Groups: Limited Markdown and HTML formatting are supported in connector card for Microsoft 365 Groups.
 * Hero and thumbnail cards: HTML tags are supported for simple cards, such as the hero and thumbnail cards.
 
-Formatting is different between the desktop and the mobile versions of Teams for Office 365 Connector cards and simple cards. In this section, you can go through the HTML format example for connector cards and simple cards.
+Formatting is different between the desktop and the mobile versions of Teams for connector cards for Microsoft 365 Groups and simple cards. In this section, you can go through the HTML format example for connector cards and simple cards.
 
-# [HTML format for Office 365 Connector cards](#tab/connector-html)
+# [HTML format for connector cards for Microsoft 365 Groups](#tab/connector-html)
 
 Connector cards support limited Markdown and HTML formatting.
 
@@ -766,11 +771,17 @@ You can test formatting in your own cards by modifying this code.
 
 ---
 
+## Code samples
+
+|S.No.| Description|.NET|Node.js|Manifest
+|:--|:--|:--------------------------------------------------------|-----|-----|
+|1|This sample app shows different card formatting supported in Teams.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-formatting-cards/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-formatting-cards/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-formatting-cards/csharp/demo-manifest/bot-formatting-cards.zip)
+
 ## See also
 
 * [Cards and task modules](../cards-and-task-modules.md)
 * [Format your bot messages](~/bots/how-to/format-your-bot-messages.md)
 * [Use task modules from bots](~/task-modules-and-cards/task-modules/task-modules-bots.md)
 * [Schema explorer for Adaptive Cards](https://adaptivecards.io/explorer/TextBlock.html)
-* [Create Office 365 Connectors](../../webhooks-and-connectors/how-to/connectors-creating.md)
+* [Create connectors for Microsoft 365 Groups](../../webhooks-and-connectors/how-to/connectors-creating.md)
 * [Create Incoming Webhooks](../../webhooks-and-connectors/how-to/add-incoming-webhook.md)

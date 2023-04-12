@@ -37,14 +37,14 @@ You can add a custom app to Teams by uploading an [app package](../concepts/buil
 
 You can build an app for internal use and share it with your team without submitting it to the Microsoft Teams app catalog in the Teams app store. For more information, see [how to upload your app in Teams](../concepts/deploy-and-publish/apps-upload.md).
 
-### To build your app to zip app package file
+### Build app package
 
 You need to run **Provision in the cloud** before you build the app package. The following step helps you to build the app package:
 
 * Select **Zip Teams metadata package** under **DEPLOYMENT**.<br>
     The generated app package is located in `{your project folder}\build\appPackage\appPackage.{env}.zip`.
 
-### To upload app package
+### Upload app package
 
 Perform the following steps to upload app package:
 
@@ -127,8 +127,8 @@ The following steps help you to approve from Admin Center:
 1. Select the status dropdown and change from **Submitted** to **Publish**.
 
    After you publish the app, the publishing status changes to published and the status automatically changes to allowed.
-s
-   For more information, see [Publish to your org](/MicrosoftTeams/manage-apps?toc=%2Fmicrosoftteams%2Fplatform%2Ftoc.json&bc=%2Fmicrosoftteams%2Fplatform%2Fbreadcrumb%2Ftoc.json)
+
+   For more information, see [Publish to your org](/microsoftteams/manage-apps?toc=%2Fmicrosoftteams%2Fplatform%2Ftoc.json&bc=%2Fmicrosoftteams%2Fplatform%2Fbreadcrumb%2Ftoc.json)
 
 ## Publish to Microsoft Teams store
 
@@ -142,4 +142,4 @@ For more information, see [how to publish to the Teams store](../concepts/deploy
 * [Distribute your Microsoft Teams app](../concepts/deploy-and-publish/apps-publish-overview.md)
 * [Create Teams app package](../concepts/build-and-test/apps-package.md)
 * [Prepare your Microsoft 365 tenant](../concepts/build-and-test/prepare-your-o365-tenant.md)
-* [Manage Teams app in the Microsoft Teams admin center](/MicrosoftTeams/manage-apps?toc=%2Fmicrosoftteams%2Fplatform%2Ftoc.json&bc=%2Fmicrosoftteams%2Fplatform%2Fbreadcrumb%2Ftoc.json)
+* [Manage Teams app in the Microsoft Teams admin center](/microsoftteams/manage-apps?toc=%2Fmicrosoftteams%2Fplatform%2Ftoc.json&bc=%2Fmicrosoftteams%2Fplatform%2Fbreadcrumb%2Ftoc.json)

@@ -246,25 +246,25 @@ We support the following attachment types:
 
 * [Thumbnail card](~/task-modules-and-cards/cards/cards-reference.md#thumbnail-card)
 * [Hero card](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
-* [Office 365 Connector card](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
+* [Connector card for Microsoft 365 Groups](~/task-modules-and-cards/cards/cards-reference.md#connector-card-for-microsoft-365-groups)
 * [Adaptive card](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 
 For more information, see [Cards](~/task-modules-and-cards/what-are-cards.md) for an overview.
 
 To learn how to use the thumbnail and hero card types, see [Add cards and card actions](~/task-modules-and-cards/cards/cards-actions.md).
 
-For additional documentation regarding the Office 365 Connector card, see [Using Office 365 Connector cards](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card).
+For additional documentation regarding the connector card for Microsoft 365 Groups, see [Using connector card for Microsoft 365 Groups](~/task-modules-and-cards/cards/cards-reference.md#connector-card-for-microsoft-365-groups).
 
 The result list is displayed in the Microsoft Teams UI with a preview of each item. The preview is generated in one of two ways:
 
 * Using the `preview` property within the `attachment` object. The `preview` attachment can only be a Hero or Thumbnail card.
 * Extracted from the basic `title`, `text`, and `image` properties of the attachment. These are used only if the `preview` property isn't set and these properties are available.
 
-You can display a preview of an Adaptive or Office 365 Connector card in the result list simply by setting its preview property. This isn't necessary if the results are already hero or thumbnail cards. If you use the preview attachment, it must be either a Hero or Thumbnail card. If no preview property is specified, the preview of the card will fail, and nothing will be displayed.
+You can display a preview of an Adaptive or connector card for Microsoft 365 Groups in the result list simply by setting its preview property. This isn't necessary if the results are already hero or thumbnail cards. If you use the preview attachment, it must be either a Hero or Thumbnail card. If no preview property is specified, the preview of the card will fail, and nothing will be displayed.
 
 #### Response example
 
-This example shows a response with two results, mixing different card formats: Office 365 Connector and Adaptive. While you'll likely want to stick with one card format in your response, it shows how the `preview` property of each element in the `attachments` collection must explicitly define a preview in hero or thumbnail format as described above.
+This example shows a response with two results, mixing different card formats: Connector for Microsoft 365 Groups and Adaptive. While you'll likely want to stick with one card format in your response, it shows how the `preview` property of each element in the `attachments` collection must explicitly define a preview in hero or thumbnail format as described above.
 
 ```json
 {

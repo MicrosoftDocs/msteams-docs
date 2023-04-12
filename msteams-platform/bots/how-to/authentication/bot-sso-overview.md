@@ -8,6 +8,9 @@ ms.localizationpriority: high
 
 With Single sign-on (SSO) in Teams, app users have the advantage of using Teams to access bot or message extension apps. After logging into Teams using Microsoft or Microsoft 365 account, app users can use your app without needing to sign in again. Your app is available to app users on any device with access granted through Azure Active Directory (AD).
 
+> [!NOTE]
+> SSO for a bot app in Teams is supported only in one-on-one chat.
+
 This section covers SSO configuration required for bot and messaging extension apps.
 
 ## SSO user experience in Teams
@@ -58,7 +61,6 @@ This section describes the tasks involved in implementing SSO for a Teams bot or
 
 1. **Configure app with Azure AD**: Create an Azure AD app to generate an app ID and application ID URI. For generating an access token, you configure scopes and authorize trusted client applications. The configuration required in Azure AD for enabling SSO in a bot and message extension apps is the same. Create a bot resource and configure it's client secret, messaging endpoint, and OAuth connection to enable SSO.
 1. **Add code**: Add the code to handle access token to send this token to your app's server code in the Authorization header, and to validate the access token when it's received. The code required to enable SSO in a bot app is different from code required for a message extension app.
-
 
     > [!NOTE]
     > This section allows you to select the app for which you want to add code for enabling SSO.

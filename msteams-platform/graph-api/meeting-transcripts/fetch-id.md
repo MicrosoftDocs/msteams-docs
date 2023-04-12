@@ -519,7 +519,7 @@ After your app obtains the meeting ID and the organizer ID, it triggers the Grap
 
 You can try the following code sample for a bot app:
 
-| **Sample name** | **Description** | **C#** | **Node.js** |
+| **Sample name** | **Description** | **.NET** | **Node.js** |
 |----------------|-----------------|--------------|--------------|--------------|
 | Meeting transcription | This is a sample application which demonstrates how to get Transcript using Graph API and show it in the task module. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-transcription/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-transcription/nodejs) |
 
@@ -532,3 +532,4 @@ You can try the following code sample for a bot app:
 
 - [Apps for Teams meetings and calls](../../apps-in-teams-meetings/teams-apps-in-meetings.md)
 - [API reference for the Bot Framework Connector service](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference)
+- [Receive notifications for Teams meetings start, end, and roster events](/graph/changenotifications-for-onlinemeeting)

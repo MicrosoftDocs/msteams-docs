@@ -1,16 +1,16 @@
 ---
-title: Create Office 365 Connectors
+title: Create connectors for Microsoft 365 Groups
 author: laujan
-description: Get started with Office 365 Connectors. Add connector to Teams app in Microsoft Teams. Sample(.NET, Node.js) Office 365 Connector generating notifications to Teams channel.
+description: Get started with connectors for Microsoft 365 Groups. Add connector to Teams app in Microsoft Teams. Sample(.NET, Node.js) connector for Microsoft 365 Groups generating notifications to Teams channel.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/16/2021
 ---
-# Create Office 365 Connectors
+# Create connectors for Microsoft 365 Groups
 
-With Microsoft Teams apps, you can add your existing Office 365 Connector or build a new one within Teams. For more information, see [build your own connector](/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector).
+With Microsoft Teams apps, you can add your existing connector for Microsoft 365 Groups or build a new one within Teams. For more information, see [build your own connector](/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector).
 
-See the following video to learn how to create an Office 365 Connectors:
+See the following video to learn how to create an connectors for Microsoft 365 Groups:
 <br>
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OIzv]
@@ -47,7 +47,7 @@ You can reuse your existing web configuration experience or create a separate ve
 To integrate the configuration experience:
 
 > [!NOTE]
-> Starting with TeamsJS client library (TeamsJS) v.2.0.0, APIs in the *settings* namespace have been deprecated in favor of equivalent APIs in the *pages* namespace, including `pages.getConfig()` and other APIs in the `pages.config` sub-namespace. For more information, see [What's new in TeamsJS version 2.x.x](../../tabs/how-to/using-teams-client-library.md#whats-new-in-teamsjs-version-2xx).
+> Starting with TeamsJS library v.2.0.0, APIs in the *settings* namespace have been deprecated in favor of equivalent APIs in the *pages* namespace, including `pages.getConfig()` and other APIs in the `pages.config` sub-namespace. For more information, see [What's new in TeamsJS version 2.x.x](../../tabs/how-to/using-teams-client-library.md#whats-new-in-teamsjs-version-2xx).
 
 1. Initialize TeamsJS by calling `app.initialize()`.
 1. Call `pages.config.setValidityState(true)` to enable **Save**.
@@ -140,7 +140,7 @@ The following table provides the parameters and the details of `getConfig` respo
 | `configName`  | The configuration name, as set by your code when calling `setConfig()`. |
 | `contentUrl` | The URL of the configuration page, as set by your code when calling `setConfig()`. |
 | `webhookUrl` | The webhook URL created for the connector. Use the webhook URL to POST structured JSON to send cards to the channel. The `webhookUrl` is returned only when the application returns data successfully. |
-| `appType` | The values returned can be `mail`, `groups`, or `teams` corresponding to the Microsoft 365 Mail, Office 365 Groups, or Teams. respectively. |
+| `appType` | The values returned can be `mail`, `groups`, or `teams` corresponding to the Microsoft 365 Mail, Microsoft 365 Groups, or Teams. respectively. |
 | `userObjectId` | The unique ID corresponding to the Microsoft 365 user who initiated the setup of the connector. It must be secured. This value can be used to associate the user in Microsoft 365, who has setup the configuration in your service. |
 
 #### Handle edits
@@ -227,7 +227,7 @@ Follow the [step-by-step guide](../../sbs-teams-connectors.yml) to create and te
 
 1. [Create Incoming Webhooks](add-incoming-webhook.md#create-incoming-webhooks) directly for your team.
 
-1. Add a [configuration page](~/webhooks-and-connectors/how-to/connectors-creating.md?#integrate-the-configuration-experience) and publish your Incoming Webhook in an Office 365 Connector.
+1. Add a [configuration page](~/webhooks-and-connectors/how-to/connectors-creating.md?#integrate-the-configuration-experience) and publish your Incoming Webhook in a connector for Microsoft 365 Groups.
 
 1. Package and publish your connector as part of your [AppSource](~/concepts/deploy-and-publish/office-store-guidance.md) submission.
 
@@ -237,8 +237,8 @@ The following table provides the sample name and its description:
 
 |**Sample name** | **Description** | **.NET** | **Node.js** |
 |----------------|------------------|--------|----------------|
-| Connectors | Sample Office 365 Connector generating notifications to Teams channel.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-todo-notification/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-github-notification/nodejs)|
-| Generic connectors sample |Sample code for a generic connector that is easy to customize for any system that supports webhooks.| | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-generic/nodejs)|
+| Connector TODO notification |This sample shows a connector for Microsoft 365 Groups, which generates and sends notifications for Teams channel.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-todo-notification/csharp)| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-todo-notification/nodejs)|
+| Generic connectors sample |This sample shows a generic connector that is easy to customize for any system that supports webhooks.| NA| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-generic/nodejs)|
 
 ## Step-by-step guide
 
@@ -250,7 +250,7 @@ Follow the [step-by-step guide](../../sbs-teams-connectors.yml) to build and tes
 * [Create Incoming Webhooks](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
 * [Create Outgoing Webhooks](add-outgoing-webhook.md)
 * [Create and send messages](connectors-using.md)
-* [How admins can enable or disable connectors](/MicrosoftTeams/office-365-custom-connectors#enable-or-disable-connectors-in-teams)
-* [How admins can publish custom connectors within their org](/MicrosoftTeams/office-365-custom-connectors)
+* [How admins can enable or disable connectors](/microsoftteams/office-365-custom-connectors#enable-or-disable-connectors-in-teams)
+* [How admins can publish custom connectors within their org](/microsoftteams/office-365-custom-connectors)
 * [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
 * [getConfig](/javascript/api/@microsoft/teamsfx/teamsfxconfiguration?view=msteams-client-js-latest&preserve-view=true)

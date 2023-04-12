@@ -13,8 +13,6 @@ The Microsoft Teams Platform is a powerful, flexible platform for creating apps 
 
 ## The user story
 
-:::image type="content" source="assets/images/meetings-side-panel/sidepanelondesktopmobile_1.png" alt-text="The screenshot demonstrating the final output":::
-
 You've had a view of Teams offerings. You can now map them to user needs. Let’s revisit the scenario.
 
 The developer from Tours and Travel agency wants to build an app for their users, the travelers. The app must:
@@ -70,7 +68,7 @@ From designing to building and distributing a Teams app, you can use various too
 1. Extend functionality by adding more Teams capabilities and M365 data with :::image type="icon" source="assets/icons/microsoft-icon.png"::: Microsoft Graph.
 1. Test the app on a developer tenant with sample user data.
 1. Deploy the app to Azure.
-1. Manage and publish the apps to Store with Developer Portal. Monetize your app with options, such as SaaS offers, in-app purchases, and more.
+1. Manage and publish the apps to Teams store with Developer Portal. Monetize your app with options, such as SaaS offers, in-app purchases, and more.
 
 ## Next step
 

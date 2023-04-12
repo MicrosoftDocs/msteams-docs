@@ -111,6 +111,12 @@ The following table lists the error codes and their descriptions:
 | **8000** | USER_ABORT |User canceled the operation.|
 | **9000** | OLD_PLATFORM | User is on an old platform build where implementation of the API is unavailable. Upgrade to the latest version of the build to resolve the issue.|
 
+## Code sample
+
+| Sample name           | Description | .NET |Node.js    | Manifest|
+|:---------------------|:--------------|:---------|:---------|:---------|
+|Tab people picker | This sample shows the feature of people picker using teams js client sdk inside tab. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-people-picker/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-people-picker/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-people-picker/csharp/demo-manifest/Tab-People-Picker.zip)
+
 ## See also
 
 * [Integrate web apps](../../samples/integrate-web-apps-overview.md)
