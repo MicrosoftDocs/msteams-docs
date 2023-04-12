@@ -33,7 +33,7 @@ Following are the steps to open your app in Visual Studio Code:
 
     :::image type="content" source="../../assets/images/tdp/open-link.png" alt-text="Screenshot shows Developer Preview page with Open option highlighted in red.":::
 
-   If required, sign in to your Microsoft 365 account.
+   If necessary, sign in to your Microsoft 365 account.
 
 1. Select your preferred programming language.
 
@@ -71,7 +71,7 @@ Following are the steps to open your app in Visual Studio:
 
     :::image type="content" source="../../assets/images/tdp/tdp-vs-open.png" alt-text="Screenshot of browser with Open option in visual studio.":::
 
-   If required, sign in to your Microsoft 365 account.
+   If necessary, sign in to your Microsoft 365 account.
 
 1. Enter your project name, location, and solution name. Select **Create**.
 
