@@ -1,8 +1,10 @@
 ---
 title: Media Elements in Adaptive Cards
+author: v-sdhakshina
 description: Learn how the media elements are supported in the Adaptive Cards and support consumption directly within Teams Adaptive Cards.
 ms.localizationpriority: high
 ms.topic: reference
+ms.author: v-sdhakshina
 ---
 
 # Media elements in Adaptive Cards
@@ -29,9 +31,12 @@ To improve the ability to deal with media files, following are the dynamic user-
 
 ## Add media elements to your Adaptive Cards
 
-To add media elements to your Adaptive Cards, follow the steps:
+After you created an Adaptive Cards using [Teams Developer Portal](https://dev.teams.microsoft.com/cards) or [Adaptive Cards Designer](https://adaptivecards.io/designer), you can add any media files to your Adaptive Cards as follows:
+
+1. Add media elements to your Adaptive Card json schema.
 
 1. Add your media files to OneDrive or SharePoint.
+
 1. [Create a sharing link or url for a DriveItem](/graph/api/driveitem-createlink) or get a link using the following options from the OneDrive or share point.
 
    :::image type="content" source="../../assets/images/media-elements-in-adaptive-cards/share-link.png" alt-text="Screenshot shows you from where you can take a link.":::
@@ -39,82 +44,50 @@ To add media elements to your Adaptive Cards, follow the steps:
     >[!NOTE]
     > Adaptive don't support media elements link that are copied directly from address bar.
 
-1. Add your media file url or link to your Adaptive Card json file in `url` property and add poster url in the `poster` property:
+1. Add your media file url in the `url` property of Adaptive Card json file.
 
-   :::image type="content" source="../../assets/images/media-elements-in-adaptive-cards/adaptive-card-json.png" alt-text="Screenshot shows you the Adaptive Card json code.":::
+1. Add image url in the `poster` property of Adaptive Card json file. For more information, see [Adaptive Card media](https://adaptivecards.io/explorer/Media.html).
 
-   The following code shows an example of an Adaptive Card with media elements:
+    The following code shows an example of an Adaptive Card with media elements:
 
     ```json
     {
-     "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-     "type": "AdaptiveCard",
-     "version": "1.5",
-     "body": [
-      {
-      "type": "TextBlock",
-      "text": "Media supports **audio** and **video** content!",
-      "wrap": true
-      },
-      {
-      "type": "TextBlock",
-      "text": "Video",
-      "horizontalAlignment": "Center",
-      "spacing": "Medium",
-      "separator": true,
-      "size": "Large"
-       },
-       {
-      "type": "Media",
-      "poster": "https://adaptivecards.io/content/poster-video.png",
-      "altText": "Adaptive Cards overview video",
-      "sources": [
-          {
-           "mimeType": "video/mp4",
-           "url": "[insert share link of an video file]"
-          }
-      ],
-      "captionSources": [
-          {
-           "mimeType": "vtt",
-           "label": "English (vtt)",
-           "url": "https://raw.githubusercontent.com/microsoft/AdaptiveCards/5ac07e8adb8d7dcd7480973321e57d279d1f7d2c/assets/ProductVideoSubtitles.vtt"
-          },
-          {
-           "mimeType": "srt",
-           "label": "English (srt)",
-
- "url":"https://raw.githubusercontent.com/microsoft/AdaptiveCards/da2eb4ad4de60d14b37decc062d3952da9dbb790/assets/ProductVideoSubtitles.srt"
-          }
-      ]
-            },
-            {
-      "type": "TextBlock",
-      "text": "Audio",
-      "horizontalAlignment": "Center",
-      "separator": true,
-      "size": "Large"
-            },
-            {
-      "type": "Media",
-      "poster": "https://adaptivecards.io/content/poster-audio.jpg",
-      "altText": "Adaptive Cards overview audio",
-      "sources": [
-          {
-            "mimeType": "audio/mpeg",
-            "url": "[insert share link of an audio file]"
-          }
-      ]
-            }
-        ]
+      "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+      "type": "AdaptiveCard",
+      "version": "1.6",
+      "fallbackText": "This card requires CaptionSource to be viewed. Ask your platform to update to Adaptive Cards v1.6 for this and more!",
+      "body": [
+        {
+          "type": "Media",
+          "poster": "https://adaptivecards.io/content/poster-video.png",
+          "sources": [
+            {
+              "mimeType": "video/mp4",
+              "url": "https://adaptivecardsblob.blob.core.windows.net/assets/AdaptiveCardsOverviewVideo.mp4"
+            }
+          ],
+          "captionSources": [
+            {
+              "mimeType": "vtt",
+              "label": "English (vtt)",
+              "url": "https://raw.githubusercontent.com/microsoft/AdaptiveCards/5ac07e8adb8d7dcd7480973321e57d279d1f7d2c/assets/ProductVideoSubtitles.vtt"
+            },
+            {
+              "mimeType": "srt",
+              "label": "English (srt)",
+              "url": "https://raw.githubusercontent.com/microsoft/AdaptiveCards/da2eb4ad4de60d14b37decc062d3952da9dbb790/assets/ProductVideoSubtitles.srt"
+            }
+          ]
+        }
+      ]
     }
+    
     ```
 
 ## Limitations
 
-1. Only sharepoint or OneDrive links of media supports now.
-1. It isn't likely that Guest, Federated, or Anonymous users can view videos unless the shared video permissions are public to those users.
-1. You must inform users or admin before you share a link that they're responsible for ensuring that the audience can view the link. That means that whoever can view the adaptive card is in the permissions group to view the media file.
+1. Adaptive Cards supports only the links from sharepoint or OneDrive.
+1. You must inform users or admin before you share a link that they're responsible for ensuring that the audience can view the link.
 
 ## See also
 
