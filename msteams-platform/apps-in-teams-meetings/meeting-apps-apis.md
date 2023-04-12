@@ -42,8 +42,6 @@ To identify and retrieve contextual information for your tab content, see [get c
 The following are the TeamsJS v2 responses for Get user context API based on meeting type, user type, and call type:
 
 1. Meeting type
-  
-   The following JSON responses for the meeting types are for in-tenant users:
 
    # [Channel meeting](#tab/channel-meeting)
 
