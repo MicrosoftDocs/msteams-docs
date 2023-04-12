@@ -62,8 +62,8 @@ The following code shows an example of channel created event:
 
 # [C#](#tab/dotnet)
 
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L335)
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamschannelcreatedasync?view=botbuilder-dotnet-stable&preserve-view=true)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L335)
 
 ```csharp
 protected override async Task OnTeamsChannelCreatedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -767,7 +767,6 @@ The following code shows an example of team renamed event:
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsteamrenamedasync?view=botbuilder-dotnet-stable#definition&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L370)
-
 
 ```csharp
 protected override async Task OnTeamsTeamRenamedAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -1513,7 +1512,6 @@ In this example, the `conversation.id` of the `conversationUpdate` and `installa
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.activityhandler.oninstallationupdateactivityasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-activityhandler-oninstallationupdateactivityasync(microsoft-bot-builder-iturncontext((microsoft-bot-schema-iinstallationupdateactivity))-system-threading-cancellationtoken)&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L73)
-
 
 ```csharp
 protected override async Task OnInstallationUpdateActivityAsync(ITurnContext<IInstallationUpdateActivity> turnContext, CancellationToken cancellationToken)
