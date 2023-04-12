@@ -41,7 +41,7 @@ To identify and retrieve contextual information for your tab content, see [get c
 
 The following are the TeamsJS v2 responses for Get user context API based on meeting type, user type, and call type:
 
-1. Meeting type
+* Meeting type
 
    # [Channel meeting](#tab/channel-meeting)
 
@@ -253,7 +253,7 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
 
    ---
 
-1. User type
+* User type
 
    # [Guest user](#tab/guest-user)
 
@@ -433,7 +433,7 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
 
    ---
 
-1. Call type
+* Call type
 
    # [One-on-One call](#tab/one-on-one-call)
 
