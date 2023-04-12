@@ -430,7 +430,7 @@ You can also modify the Adaptive Card `Action.Submit` payload to support existin
 >* Adding `msteams` to data with a Bot Framework action doesn't work with an Adaptive Card task module.
 >
 >* Primary or destructive `ActionStyle` isn't supported in Microsoft Teams.
->* Your app has five seconds to respond to the invoke.
+>* Your app has five seconds to respond to the invoke message.
 
 ### Adaptive Cards with messageBack action
 
