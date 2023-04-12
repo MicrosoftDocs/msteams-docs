@@ -52,8 +52,8 @@ landingContent:
         url: https://gitter.im/OfficeDev/home
     - linkListType: whats-new
       links:
-      - text: Integrate Developer Portal with Teams Toolkit
-        url: concepts/build-and-test/develop-your-app-with-teams-toolkit.md
+      - text: Develop your apps with Teams Toolkit
+        url: concepts/build-and-test/develop-your-apps-with-teams-toolkit.md
       - text: Resource-specific consent for your Teams app
         url: graph-api/rsc/resource-specific-consent.md      
       - text: Drive customer adoption of your app
