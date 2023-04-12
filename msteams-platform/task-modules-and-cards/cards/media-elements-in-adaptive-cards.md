@@ -43,6 +43,70 @@ To add media elements to your Adaptive Cards, follow the steps:
 
    :::image type="content" source="../../assets/images/media-elements-in-adaptive-cards/adaptive-card-json.png" alt-text="Screenshot shows you the Adaptive Card json code.":::
 
+```json
+{
+ "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+ "type": "AdaptiveCard",
+ "version": "1.5",
+ "body": [
+  {
+  "type": "TextBlock",
+  "text": "Media supports **audio** and **video** content!",
+  "wrap": true
+  },
+  {
+  "type": "TextBlock",
+  "text": "Video",
+  "horizontalAlignment": "Center",
+  "spacing": "Medium",
+  "separator": true,
+  "size": "Large"
+   },
+   {
+  "type": "Media",
+  "poster": "https://adaptivecards.io/content/poster-video.png",
+  "altText": "Adaptive Cards overview video",
+  "sources": [
+      {
+       "mimeType": "video/mp4",
+       "url": "[insert share link of an video file]"
+      }
+  ],
+  "captionSources": [
+      {
+       "mimeType": "vtt",
+       "label": "English (vtt)",
+       "url": "https://raw.githubusercontent.com/microsoft/AdaptiveCards/5ac07e8adb8d7dcd7480973321e57d279d1f7d2c/assets/ProductVideoSubtitles.vtt"
+      },
+      {
+       "mimeType": "srt",
+       "label": "English (srt)",
+ "url":"https://raw.githubusercontent.com/microsoft/AdaptiveCards/da2eb4ad4de60d14b37decc062d3952da9dbb790/assets/ProductVideoSubtitles.srt"
+      }
+  ]
+        },
+        {
+  "type": "TextBlock",
+  "text": "Audio",
+  "horizontalAlignment": "Center",
+  "separator": true,
+  "size": "Large"
+        },
+        {
+  "type": "Media",
+  "poster": "https://adaptivecards.io/content/poster-audio.jpg",
+  "altText": "Adaptive Cards overview audio",
+  "sources": [
+      {
+          "mimeType": "audio/mpeg",
+          "url": "[insert share link of an audio file]"
+      }
+  ]
+        }
+    ]
+}
+```
+
 ## Limitations
 
 1. Only sharepoint or OneDrive links of media supports now.
