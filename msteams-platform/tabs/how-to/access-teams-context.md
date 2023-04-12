@@ -34,6 +34,9 @@ You can access context information in two ways:
 
 ### Get context by inserting URL placeholder values
 
+> [!IMPORTANT]
+> Teams supports light theme for apps in Teams meetings. The `app.theme` property returns light theme as default.
+
 Use placeholders in your configuration or content URLs. Microsoft Teams replaces the placeholders with the relevant values when determining the actual configuration or content URL. The available placeholders include all fields on the [context](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) object. Common placeholders include the following properties:
 
 * [{page.id}](/javascript/api/@microsoft/teams-js/app.pageinfo#@microsoft-teams-js-app-pageinfo-id): The developer-defined unique ID for the page defined when first [configuring the page](~/tabs/how-to/create-tab-pages/configuration-page.md). (Known as `{entityId}` prior to TeamsJS v.2.0.0).
@@ -342,6 +345,9 @@ Use the following `getContext` properties in shared channels:
 For more information on shared channels, see [shared channels](~/concepts/build-and-test/shared-channels.md).
 
 ## Handle theme change
+
+> [!IMPORTANT]
+> Teams supports light theme as the default theme for apps in Teams meetings.
 
 You can register your app to be informed if the theme changes by calling `microsoftTeams.app.registerOnThemeChangeHandler(function(theme) { /* ... */ })`.
 
