@@ -204,7 +204,7 @@
       href: concepts/build-and-test/manage-your-apps-in-developer-portal.md
       displayName: AppID 
     - name: Integrate Developer Portal with Teams Toolkit
-      href: concepts/build-and-test/integrate-your-apps-to-teams-toolkit.md
+      href: concepts/build-and-test/develop-your-apps-with-teams-toolkit.md
       displayName: visual studio code, visual studio, teams toolkit
     - name: Analyze your apps usage in Developer Portal
       href: concepts/build-and-test/analyze-your-apps-usage-in-developer-portal.md  

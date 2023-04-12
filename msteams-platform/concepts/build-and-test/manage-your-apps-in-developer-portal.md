@@ -113,7 +113,7 @@ In the **Advanced** section, you can see the following components to manage your
 
 ## Develop (Preview)
 
-In the **Develop (Preview)** section, you can open your app in Teams Toolkit in the Visual Studio Code and Visual Studio. For more information, see [integrate Developer Portal with Teams Toolkit](integrate-your-apps-to-teams-toolkit.md).
+In the **Develop (Preview)** section, you can open and develop your app in Teams Toolkit in the Visual Studio Code and Visual Studio. For more information, see [develop your app with Teams Toolkit](develop-your-apps-with-teams-toolkit.md).
 
 ## Publish
 
