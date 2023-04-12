@@ -234,17 +234,9 @@ interface IDashboardState {
   observer?: ResizeObserver;
 }
 
-/**
- * The dashboard class which is the base class for all dashboard components.
- */
 export class Dashboard extends Component<{}, IDashboardState> {
   private ref: React.RefObject<HTMLDivElement>;
 
-  /**
-   * Constructor for the dashboard class.
-   * Initializes the dashboard state.
-   * @param props The properties for the dashboard.
-   */
   constructor(props: any) {
     super(props);
     this.state = {
@@ -254,11 +246,6 @@ export class Dashboard extends Component<{}, IDashboardState> {
     this.ref = React.createRef<HTMLDivElement>();
   }
 
-  /**
-   * This method is invoked immediately after a component is mounted.
-   * It's a good place to fetch data from server.
-   * For more information about react lifecycle, please refer to https://reactjs.org/docs/react-component.html#componentdidmount
-   */
   componentDidMount(): void {
     // Observe the dashboard div for resize events
     const observer = new ResizeObserver((entries) => {
@@ -272,10 +259,6 @@ export class Dashboard extends Component<{}, IDashboardState> {
     observer.observe(this.ref.current!);
   }
 
-  /**
-   * This method is invoked immediately when a component will be unmounted.
-   * It's a good place to clean up the resources.
-   */
   componentWillUnmount(): void {
     // Unobserve the dashboard div for resize events
     if (this.state.observer && this.ref.current) {
@@ -283,9 +266,6 @@ export class Dashboard extends Component<{}, IDashboardState> {
     }
   }
 
-  /**
-   * Define thie dashboard default layout, you can edit the code here to customize your dashboard layout.
-   */
   render() {
     const styling = mergeStyles({
       display: "grid",
@@ -307,27 +287,14 @@ export class Dashboard extends Component<{}, IDashboardState> {
     );
   }
 
-  /**
-   * Implement this method to define the row heights of the dashboard.
-   * For example, if you want to have 3 rows, and the height of the first row is 100px, the height of the second row is 200px, and the height of the third row is 300px, you can return "100px 200px 300px".
-   * @returns The row heights of the dashboard.
-   */
   protected rowHeights(): string | undefined {
     return undefined;
   }
 
-  /**
-   * Implement this method to define the column widths of the dashboard.
-   * For example, if you want to have 3 columns, and each column occupies 1/3 of the full width, you can return "1fr 1fr 1fr".
-   * @returns The column widths of the dashboard.
-   */
   protected columnWidths(): string | undefined {
     return undefined;
   }
 
-  /**
-   * Implement this method to define the dashboard layout.
-   */
   protected dashboardLayout(): JSX.Element | undefined {
     return undefined;
   }
@@ -605,30 +572,16 @@ import "./Widget.css";
 
 import { Component } from "react";
 
-/**
- * Defined a widget, it's also a react component.
- * For more information about react component, please refer to https://reactjs.org/docs/react-component.html
- * @param P is the props type of the widget.
- * @param T is the model type of the widget.
- */
 export abstract class Widget<P, T> extends Component<P, T> {
   constructor(props: any) {
     super(props);
     this.state = {} as T;
   }
 
-  /**
-   * This method is invoked immediately after a component is mounted.
-   * It's a good place to fetch data from server.
-   * For more information about react lifecycle, please refer to https://reactjs.org/docs/react-component.html#componentdidmount
-   */
   async componentDidMount() {
     this.setState({ ...(await this.getData()) });
   }
 
-  /**
-   * Define your widget layout, you can edit the code here to customize your widget.
-   */
   render() {
     return (
       <div className="widget-root">
@@ -639,34 +592,18 @@ export abstract class Widget<P, T> extends Component<P, T> {
     );
   }
 
-  /**
-   * Get data required by the widget, you can get data from a api call or static data stored in a file. Override this method according to your needs.
-   * @returns data for the widget
-   */
   protected async getData(): Promise<T> {
     return new Promise<T>(() => {});
   }
 
-  /**
-   * Override this method to customize the widget header.
-   * @returns JSX component for the widget body
-   */
   protected headerContent(): JSX.Element | undefined {
     return undefined;
   }
 
-  /**
-   * Override this method to customize the widget body.
-   * @returns JSX component for the widget body
-   */
   protected bodyContent(): JSX.Element | undefined {
     return undefined;
   }
 
-  /**
-   * Override this method to customize the widget footer.
-   * @returns react node for the widget footer
-   */
   protected footerContent(): JSX.Element | undefined {
     return undefined;
   }
