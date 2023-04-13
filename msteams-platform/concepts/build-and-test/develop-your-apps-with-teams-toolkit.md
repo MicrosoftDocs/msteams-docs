@@ -91,4 +91,4 @@ After you open your app in Teams Toolkit, you can now [develop](/microsoftteams/
 
 ## See also
 
-[Integrate with Developer Portal](../../toolkit/Integrate-with-developer-portal.md)
+[Publish your Teams apps using Developer Portal](../../toolkit/publish-your-teams-apps-using-developer-portal.md)
