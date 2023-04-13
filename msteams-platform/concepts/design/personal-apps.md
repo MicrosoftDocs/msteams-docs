@@ -87,7 +87,7 @@ microsoftTeams.menus.setNavBarMenu(menuItems, (id: string) => {
 |----------|-----------|
 |A|**App attribution**: Your app logo and name.|
 |B|**Tabs**: Provides navigation for your personal app.|
-|C|**Pop-out view**: Pushes your app content from a parent window to a standalone child window.|
+|C|**Popout view**: Pushes your app content from a parent window to a standalone child window.|
 |D|**More menu**: Includes other app options and information. (You could alternatively make **Settings** a tab.)|
 
 :::image type="content" source="../../assets/images/personal-apps/personal-tab-structural-anatomy.png" alt-text="This example shows personal tab's structural anatomy.":::
