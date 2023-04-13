@@ -96,7 +96,7 @@ Tabs provide a full-screen web experience in Teams where you can display collabo
 |----------|-----------|
 |1|**Tab name**: Navigation label for your tab.|
 |2|**Tab chat**: Opens a chat that allows users to have a conversation next to the content.|
-|3|**webview**: Displays your app content.|
+|3|**Webview**: Displays your app content.|
 
 #### Desktop
 
@@ -182,7 +182,7 @@ You can include options to rename, remove, or modify a tab.
 
 ## Tab notifications and deep linking
 
-You can send a message with a deep link to your tab. For example, a card shows a summary of bug data a user can select to see the entire bug in a tab. Sending messages about tab activity increases awareness without explicitly notifying everyone (i.e., activity without noise). You also can @mention specific users if needed.
+You can send a message with a deep link to your tab. For example, a card shows a summary of bug data a user can select to see the entire bug in a tab. Sending messages about tab activity increases awareness without explicitly notifying everyone (that is, activity without noise). You also can @mention specific users if needed.
 
 Notify users of tab activity one of the following ways:
 
@@ -230,7 +230,7 @@ Tabs work best when they address specific needs. Include a limited set of tasks 
 
 #### Don't: Embed your entire app
 
-Using a tab to display an entire app with multi-level navigation and complex interactions leads to information overload.
+Using a tab to display an entire app with multilevel navigation and complex interactions leads to information overload.
 
    :::column-end:::
 :::row-end:::
