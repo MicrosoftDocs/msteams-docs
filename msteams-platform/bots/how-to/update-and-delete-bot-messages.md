@@ -90,7 +90,7 @@ Now that you have updated messages, update the existing card on button selection
 
 ## Edit or delete message
 
-When you edit, or undelete a message in a chat, the bot gets a notification of the edit, undelete, or soft delete message event.
+When you edit, or undelete a message in a chat, the bot gets a notification of the edit, undelete message event.
 
 > [!NOTE]
 >
@@ -432,6 +432,8 @@ DELETE /v3/conversations/{conversationId}/activities/{activityId}
 ---
 
 ### To soft delete a message
+
+When you soft delete a message in a chat, the bot gets a notification of the soft delete message event.
 
 The following is an example of a soft delete message event notification using `OnTeamsMessageSoftDeleteAsync` when a message is soft deleted:
 
