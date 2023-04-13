@@ -23,9 +23,9 @@ Let's look at some areas where an app helps to meet a business need.
 
 :::image type="content" source="../msteams-platform/assets/images/overview/why-teams-apps.png" alt-text="Why should you build Teams apps?":::
 
-| **Development Options** | **Business Opportunities** |
+| **Development options** | **Business opportunities** |
 | --- | --- |
-| - Desktop app <br> - Web app <br> - Mobile app | - Increase user engagements <br> - Make your app discoverable on Teams Store |
+| - Desktop app <br> - Web app <br> - Mobile app | - Increase user engagements <br> - Make your app discoverable on Teams store |
 | **Customer benefits** | **Internal workflows** |
 | - On-the-go accessibility <br> - Secure customer data <br> - Ease of communication | - Automate repetitive tasks <br> - Simplify tasks with bots, <br> &nbsp;&nbsp; such as Q&A and Help-desk |
 
@@ -57,9 +57,9 @@ Here's why Teams is best-suited for your app needs:
 
     :::image type="content" source="../msteams-platform/assets/images/overview/teams-apps-bot.png" alt-text="Teams app for internal use":::
 
-- **Teams Store advantage**
+- **Teams store advantage**
 
-    Push your app on Teams store to improve app's availability and you can use it as a marketing opportunity. If you're running a startup, Teams platform helps to increase awareness of your products. Teams Store marketplace can be a great platform for large audiences to discover your app.
+    Push your app on Teams store to improve app's availability and you can use it as a marketing opportunity. If you're running a startup, Teams platform helps to increase awareness of your products. Teams store marketplace can be a great platform for large audiences to discover your app.
 
 - **Surface existing app**
 
