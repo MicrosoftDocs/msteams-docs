@@ -785,6 +785,12 @@
   - name: Test preview for monetized apps
     href: concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
     displayName: paid, AppSource, fee 
+  - name: Set up Microsoft license management
+    href: concepts/deploy-and-publish/appsource/prepare/manage-third-party-apps-license.md
+    displayName: ISVs, Manage, License, third party, SaaS, Partner Center, UsageRights
+  - name: Purchase and manage app subscriptions and licenses
+    href: concepts/deploy-and-publish/appsource/prepare/end-user-purchase-experience.md
+    displayName: Purchase, apps, License, manage
 - name: Grow your app
   items:
     - name: Strategize and execute growth for your app
