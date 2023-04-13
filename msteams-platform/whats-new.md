@@ -50,7 +50,7 @@ Teams platform features that are available to all app developers.
 |20/02/2023| Plan your app growth in Teams | Grow your app > [Strategize and execute growth for your app](concepts/deploy-and-publish/appsource/post-publish/app-growth/overview-app-growth.md)|
 |17/02/2023| Build a dashboard tab app | Build Tabs > [Build a dashboard tab app](tabs/how-to/build-a-dashboard-tab-app.md#build-a-dashboard-tab-app)|
 |09/02/2023| Apps for Teams meetings support anonymous users | Build apps for Teams meetings and calls > Enable and configure apps for Teams meeting > [Build apps for anonymous users](apps-in-teams-meetings/build-apps-for-anonymous-user.md) |
-|31/01/2023| Introducing update and soft delete event notifications in bot | Build bots > Bot conversations > [Update and delete messages sent from bot](bots/how-to/update-and-delete-bot-messages.md#edit-or-delete-message)
+|31/01/2023| Introducing update and soft delete event notifications in bot | Build bots > Bot conversations > [Update and delete messages sent from bot](bots/how-to/update-and-delete-bot-messages.md#to-get-edit-or-delete-message-events)
 
 </details>
 </br>
