@@ -88,17 +88,17 @@ PUT /v3/conversations/{conversationId}/activities/{activityId}
 
 Now that you have updated messages, update the existing card on button selection for incoming activities.
 
-## Edit or delete message
+### To get edit or delete message events
 
-When you edit, or undelete a message in a chat, the bot gets a notification of the edit, undelete message event.
+When you edit or undelete a message in a chat, the bot gets a notification of the edit, undelete message event.
 
 > [!NOTE]
 >
 >The `OnTeamsMessageEditAsync` and `OnTeamsMessageUndeleteAsync` handlers aren’t supported in group chat and Teams channel scopes.
 
-To get an edit, undelete, or soft delete message event notification in a bot, you can override the following handlers:
+To get an edit or undelete message event notification in a bot, you can override the following handlers:
 
-### To edit a message
+#### To edit a message
 
 The following is an example of an edit message event notification using `OnTeamsMessageEditAsync` when a sent message is edited:
 
@@ -199,7 +199,7 @@ PUT {Service URL of your bot}/v3/conversations/{conversationId}/activities/{acti
 
 ---
 
-### To undelete a message
+#### To undelete a message
 
 The following is an example of an undelete message event notification using `OnTeamsMessageUndeleteAsync` when a deleted message is restored:
 
@@ -431,7 +431,7 @@ DELETE /v3/conversations/{conversationId}/activities/{activityId}
 
 ---
 
-### To soft delete a message
+### To get soft delete message events
 
 When you soft delete a message in a chat, the bot gets a notification of the soft delete message event.
 
