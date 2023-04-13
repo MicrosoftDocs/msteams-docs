@@ -39,15 +39,15 @@ The following examples show how to add a message extension in a channel.
 
 Authentication isn't mandatory, but if your app is something like a ticket tracking tool, you may need people to sign in to use the message extension.
 
-For consistency across Teams apps, you can't customize the sign-in screen. If you use single sign-on (SSO) authentication, users are signed in automatically.
+For consistency across Teams apps, you can't customize the screen of the sign in. If you use single sign-on (SSO) authentication, users are signed in automatically.
 
 ### Mobile
 
-:::image type="content" source="../../assets/images/messaging-extension/mobile-set-up.png" alt-text="Example shows message extension setup screen with a sign-in button on mobile.":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-set-up.png" alt-text="Example shows message extension setup screen with a sign in on mobile.":::
 
 ### Desktop
 
-:::image type="content" source="../../assets/images/messaging-extension/set-up.png" alt-text="Example shows message extension setup screen with a sign-in button.":::
+:::image type="content" source="../../assets/images/messaging-extension/set-up.png" alt-text="Example shows message extension setup screen with a sign in.":::
 
 ## Types of message extensions
 
