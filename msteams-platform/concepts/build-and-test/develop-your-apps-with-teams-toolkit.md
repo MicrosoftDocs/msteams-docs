@@ -87,7 +87,7 @@ Following are the steps to open your app in Visual Studio:
 
     :::image type="content" source="../../assets/images/tdp/vs-scaffold.png" alt-text="Screenshot shows you the scaffolding of your project in visual studio. ":::
 
-After you open your app in Teams Toolkit, you can now [develop your Teams app](/microsoftteams/platform/toolkit/teamsfx-multi-env) and [debug your Teams app](../../toolkit/debug-overview.md) in Teams Toolkit.
+After you open your app in Teams Toolkit, you can now [develop](/microsoftteams/platform/toolkit/teamsfx-multi-env) and [debug](../../toolkit/debug-overview.md) your Teams app in Teams Toolkit.
 
 ## See also
 
