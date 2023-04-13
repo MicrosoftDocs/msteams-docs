@@ -252,6 +252,10 @@ Messages sent between users and bots include internal channel data within the me
 
 When you edit, undelete, or soft delete a message in a chat, the bot gets a notification of the edit, undelete, or soft delete message event.
 
+> [!NOTE]
+>
+>The `OnTeamsMessageEditAsync` and `OnTeamsMessageUndeleteAsync` handlers aren’t supported in group chat and Teams channel scopes.
+
 To get an edit, undelete, or soft delete message event notification in a bot, you can override the following handlers:
 
 ### To edit a message
@@ -461,6 +465,10 @@ PUT {Service URL of your bot}/v3/conversations/{conversationId}/activities/{acti
 ### To soft delete a message
 
 The following is an example of a soft delete message event notification using `OnTeamsMessageSoftDeleteAsync` when a message is soft deleted:
+
+> [!NOTE]
+>
+> The `OnTeamsMessageSoftDeleteAsync` handler isn’t supported in group chat and Teams channel scopes.
 
 # [C#](#tab/dotnet5)
 
