@@ -50,7 +50,7 @@ You can add multiple actions to the upper-right NavBar and build an overflow men
 
 :::image type="content" source="../../assets/images/overflow-menu-and-multiple-actionsoptions.png" alt-text="The screenshot is an example thats describes the NavBar and Overflow menu.":::
 
-To **Configure and add multiple actions in NavBar**, call [setNavBarMenu](/javascript/api/@microsoft/teams-js/microsoftteams.menus?view=msteams-client-js-1.12.1&preserve-view=true) API and add the `displayMode enum` property to `MenuItem`. The `displayMode enum` defines how a menu appears in the NavBar. The default value of `displayMode enum` is set to `ifRoom`.
+To configure and add multiple actions in NavBar, call [setNavBarMenu](/javascript/api/@microsoft/teams-js/microsoftteams.menus?view=msteams-client-js-1.12.1&preserve-view=true) API and add the `displayMode enum` property to `MenuItem`. The `displayMode enum` defines how a menu appears in the NavBar. The default value of `displayMode enum` is set to `ifRoom`.
 
 Based on the requirements and space available in the NavBar, set `displayMode enum` considering one of the following.
 
@@ -77,7 +77,7 @@ microsoftTeams.menus.setNavBarMenu(menuItems, (id: string) => {
 |Counter|Description|
 |----------|-----------|
 |A|**Tabs**: Provides navigation for your personal app.|
-|1|**webview**: Displays your app content.|
+|1|**Webview**: Displays your app content.|
 
 #### Desktop
 
@@ -87,7 +87,7 @@ microsoftTeams.menus.setNavBarMenu(menuItems, (id: string) => {
 |----------|-----------|
 |A|**App attribution**: Your app logo and name.|
 |B|**Tabs**: Provides navigation for your personal app.|
-|C|**Popout view**: Pushes your app content from a parent window to a standalone child window.|
+|C|**Pop-out view**: Pushes your app content from a parent window to a standalone child window.|
 |D|**More menu**: Includes other app options and information. (You could alternatively make **Settings** a tab.)|
 
 :::image type="content" source="../../assets/images/personal-apps/personal-tab-structural-anatomy.png" alt-text="This example shows personal tab's structural anatomy.":::
@@ -131,7 +131,7 @@ When you select the back button in a Teams app, you will return to the Teams pla
 
 To navigate within the app, configure the back button so that when you select the back button, you can go back to previous steps and navigate within the app.
 
-To **Configure back button**, call [registerBackButtonHandler](/javascript/api/@microsoft/teams-js/pages.backstack) API, which handles the functionality of the back button depending on one of the following conditions:
+To configure back button, call [registerBackButtonHandler](/javascript/api/@microsoft/teams-js/pages.backstack) API, which handles the functionality of the back button depending on one of the following conditions:
 
 * When `registerBackButtonHandler` is set to `false`, TeamsJS calls the `navigateBack` API and the Teams platform handles the back button.
 * When `registerBackButtonHandler` is set to `true`, the app handles the functionality of back button (you can go back to previous steps and navigate within the app), and the Teams platform takes no further actions.
@@ -201,7 +201,7 @@ Your content should progress in a logical order that helps users make sense of i
 
 #### Do: Include a first-run experience
 
-There should be at least a welcome screen the first time you use a personal app. For bots, describe what your bot can do and provide quick actions, such as a sign-in button.
+There should be at least a welcome screen the first time you use a personal app. For bots, describe what your bot can do and provide quick actions, such as a sign in.
 
 :::image type="content" source="../../assets/images/personal-apps/personal-tab-fre-do.png" alt-text="Example shows what to do during a personal app first-run experience.":::
 
@@ -235,7 +235,7 @@ In personal contexts, don’t display content for teams a user isn't part of. Pe
 
 #### Do: Allow users to access complex features in a browser
 
-Your app should focus on core tasks in Teams, but you can still view the full, stand-alone app in a browser.
+Your app should focus on core tasks in Teams, but you can still view the full, standalone app in a browser.
 
 :::image type="content" source="../../assets/images/personal-apps/personal-tab-feature-do.png" alt-text="Example shows how to handle complex app features with a personal app.":::
 
