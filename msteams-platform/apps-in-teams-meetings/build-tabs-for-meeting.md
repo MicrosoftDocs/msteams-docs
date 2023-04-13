@@ -266,7 +266,7 @@ There are multiple reasons for an app to not get cached or for an app to get rem
 * If the system memory load is high, the app is removed from the cache.
 * If the number of cached apps exceed the maximum cache size, the oldest cached app is removed from the cache.
 * In Teams desktop client, if the user doesn't return to the app within 20 minutes, the app is removed from the cache.
-* In iOS personal tray, if the user doesn't return to the app within 10 minutes, the app is removed from the cache.
+* In iOS personal tray, if the user doesn't return to the app within 10 minutes through the personal scope, the app is removed from the cache.
 * The app isn't cached if Teams doesn't receive the `readyToUnload` signal from the app within 30 seconds after sending the `beforeUnload` notification.
 * App caching is disabled if the system memory is less than 4 GB or if the available memory is less than 1 GB on Windows or 512 MB on Mac.
 * Side panel is the only supported frameContext for app caching in meetings.
