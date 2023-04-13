@@ -39,7 +39,7 @@ The following example shows how users can add a tab in a channel.
 
 ## Set up a tab
 
-There's a short setup process to add an app as a channel, chat, or meeting tab. The experience is largely up to you. For example, you could have a description of how to use the app and some optional settings. Include a sign-in step here if you need to authenticate users.
+There's a short setup process to add an app as a channel, chat, or meeting tab. The experience is largely up to you. For example, you could have a description of how to use the app and some optional settings. Include a step here to sign in if you need to authenticate users.
 
 ### Tab configuration dialog
 
@@ -243,7 +243,7 @@ Using a tab to display an entire app with multilevel navigation and complex inte
 
 #### Do: Keep it simple
 
-If your app requires authentication, try integrating Microsoft single sign-on (SSO) for a more seamless sign-in experience. Also, only include essential information and steps to add the tab.
+If your app requires authentication, try integrating Microsoft SSO for a more seamless experience during sign in. Also, only include essential information and steps to add the tab.
 
    :::column-end:::
    :::column span="":::

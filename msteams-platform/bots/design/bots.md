@@ -37,7 +37,7 @@ Users can access bots that were added on desktop with an @mention.
 Users can add a bot one of the following ways:
 
 * From the Teams store.
-* Using the app flyout by selecting the **More** icon on the left side of Teams.
+* Using the app flyout menu by selecting the **More** icon on the left side of Teams.
 * With an @mention in the new chat or compose box (the following example shows how you can do this in a group chat).
 
     :::image type="content" source="../../assets/images/bots/add-bot-chat-at-mention.png" alt-text="Example shows how to add a bot in a group chat using an @mention.":::
@@ -60,7 +60,7 @@ In personal contexts, welcome messages set your bot's tone. The message includes
 
 ### Welcome message in channels and group chats
 
-Your bot's introduction should be slightly different in channels and group chats compared to a personal space (like a personal app). In real life, if you entered a room full of people; you’d introduce yourself instead of welcoming everyone who’s already there. Carry that thinking into your bot design.
+Your bot's introduction should be slightly different in channels and group chats compared to a personal space (like a personal app). In real life, if you entered a room full of people, you’d introduce yourself instead of welcoming everyone who’s already there. Carry that thinking into your bot design.
 
 #### Mobile
 
@@ -86,7 +86,7 @@ Don’t forget: In the bot command menu (**What can I do?**), you must also prov
 
 ### Tours
 
-You can include a tour with welcome messages and if the bot responds to something like a “help” command. A tour is the most effective way to describe what your bot can do. If applicable, they’re also great for describing your app’s other features. For example, include screenshots of your message extension.
+You can include a tour with welcome messages and if the bot responds to something like a help command. A tour is the most effective way to describe what your bot can do. If applicable, they’re also great for describing your app’s other features. For example, include screenshots of your message extension.
 
 > [!IMPORTANT]
 > Tours should be accessible without having to sign in.
@@ -105,7 +105,7 @@ In a personal app, a carousel can provide an effective overview of your bot and 
 
 ### Channels and group chats
 
-In channels and group chats, a tour should open in a modal (also known as a [task module](../../task-modules-and-cards/task-modules/design-teams-task-modules.md) so it doesn’t interrupt ongoing conversations. This also gives you the option to implement role-based views for your tour.
+In channels and group chats, a tour should open in a modal (also known as a [task module](../../task-modules-and-cards/task-modules/design-teams-task-modules.md)) so it doesn’t interrupt ongoing conversations. This also gives you the option to implement role-based views for your tour.
 
 #### Mobile
 
@@ -126,7 +126,7 @@ You can use bots in the following contexts:
 * **Personal apps**: In a personal app, a bot has a dedicated chat tab.
 * **One-on-one chat**: A user can initiate a private conversation with a bot. It's the same experience as using a bot in a personal app.
 * **Group chat**: People can interact with a bot in a group chat by @mentioning the bot.
-* **Channel**: People can interact with a bot in a channel. by @mentioning the bot name in the compose box. Remember, in this context, the bot is available to the entire team, not just the channel.
+* **Channel**: People can interact with a bot in a channel by @mentioning the bot name in the compose box. Remember, in this context, the bot is available to the entire team, not just the channel.
 
 ### Anatomy
 
@@ -306,7 +306,7 @@ Welcome messages and tours help people understand what they can do with your bot
 
 #### Don't: Obscure your bot's features
 
-First impressions matter. People will likely be confused or suspicious when presented with a nondescript sign-in message.
+First impressions matter. People will likely be confused or suspicious when presented with a nondescriptive message.
 
    :::column-end:::
 :::row-end:::
@@ -315,7 +315,7 @@ First impressions matter. People will likely be confused or suspicious when pres
    :::column span="":::
 :::image type="content" source="../../assets/images/bots/bot-content-understand-do.png" alt-text="Example showing your bot should recognize non-questions.":::
 
-#### Do: Recognize non-questions
+#### Do: Recognize non-interrogative phrases
 
 Your bot should be able to respond to messages like "Hi", "Help", and "Thanks" while also accounting for common misspellings and colloquialisms.
 
