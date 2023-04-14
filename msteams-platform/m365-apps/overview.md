@@ -34,7 +34,7 @@ Reach your users where they are, right in the context of their work by extending
 
 :::image type="content" source="images/outlook-office-teams-personal-tab.png" alt-text="The screenshot is an example that shows Personal tab running in Outlook, Microsoft 365, and Teams.":::
 
-On mobile, you can test and debug your Teams personal tab running on [Microsoft 365 app for Android](extend-m365-teams-personal-tab.md#microsoft-365-app-for-android) and [Outlook app for Android](extend-m365-teams-personal-tab.md#outlook-app-for-android).
+On mobile, you can test and debug your Teams personal tab running on [Microsoft 365 for Android app](extend-m365-teams-personal-tab.md#microsoft-365-app-for-android) and [Outlook for Android app](extend-m365-teams-personal-tab.md#outlook-for-android-app).
 
 :::image type="content" source="images/office-mobile-personal-tab.png" alt-text="The screenshot is an example that shows personal tab running in Microsoft 365.":::
 
@@ -54,7 +54,7 @@ With an aim toward simplifying and streamlining the Microsoft 365 developer ecos
 
 ### Office Add-ins (preview)
 
-You can now define and deploy Office Add-ins in the [developer preview version](../resources/schema/manifest-schema-dev-preview.md) of the Microsoft Teams app manifest. Currently, this preview is limited to Outlook Add-ins running on subscription Microsoft 365 app for Windows.
+You can now define and deploy Office Add-ins in the [developer preview version](../resources/schema/manifest-schema-dev-preview.md) of the Microsoft Teams app manifest. Currently, this preview is limited to Outlook Add-ins running on subscription Microsoft 365 for Windows app.
 
 For more information, see [Teams manifest for Office Add-ins (preview)](/office/dev/add-ins/develop/json-manifest-overview).
 
