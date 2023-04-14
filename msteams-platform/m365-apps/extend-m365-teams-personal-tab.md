@@ -213,13 +213,13 @@ To view your app in Outlook on the web:
 
     :::image type="content" source="images/outlook-web-more-apps.png" alt-text="The screenshot is an example that shows the ellipses (More apps) option on the side bar of outlook.com to see your installed personal tabs.":::
 
-### Outlook app for Android
+### Outlook for Android app
 
-To view your app running in Outlook app for Android:
+To view your app running in Outlook for Android app:
 
-1. Open the Outlook app on your android device and sign in using your developer tenant account. If the Outlook app for Android was already running prior to sideloading your app in Teams, restart Teams to see it in the installed apps section.
+1. Open the Outlook app on your Android device and sign in using your developer tenant account. If the Outlook for Android app was already running prior to sideloading your app, restart Outlook to see it in the installed apps section.
 1. Select the **More** icon. Your sideloaded app appears among installed apps.
-1. Select your app icon to open your app in Outlook app for Android.
+1. Select your app icon to open your app in Outlook for Android.
 
     :::image type="content" source="images/outlook-mobile-more.png" alt-text="The screenshot is an example that shows the 'More' option on the side bar of the Outlook app to see your installed personal tabs.":::
 
@@ -277,10 +277,19 @@ Provide feedback and report any issues with the Teams Toolkit debugging experien
 
 #### Mobile debugging
 
-> [!IMPORTANT]
-> To debug your app in Outlook for Android:
-> 1. Select the **More** icon in the Teams mobile client and open your sideloaded app to run within the Outlook app. 
-> 1. Follow the steps 7 through 9.
+##### Debugging Outlook for Android 
+
+To debug your app in Outlook for Android:
+
+1. Select the **More** icon in the Teams mobile client and open your sideloaded app to run within the Outlook app. 
+1. Ensure your Android device is connected to your dev machine. From your dev machine, open your browser to its DevTools inspection page. For example, go to `edge://inspect/#devices` in Microsoft Edge to display a list of debug-enabled Android WebViews.
+1. Find the `Microsoft Teams Tab` with your tab URL and select **inspect** to start debugging your app with DevTools.
+
+    :::image type="content" source="images/office-android-debug.png" alt-text="The screenshot is an example that shows the list of webviews in devtool.":::
+
+1. Debug your tab app within the Android WebView. In the same way you [remotely debug](/microsoft-edge/devtools-guide-chromium/remote-debugging) a regular website on an Android device
+
+##### Debugging Microsoft 365 for Android
 
 Teams Toolkit (`F5`) debugging isn't yet supported with Microsoft 365 app for Android. Here's how to remotely debug your app running in Microsoft 365 app for Android:
 
