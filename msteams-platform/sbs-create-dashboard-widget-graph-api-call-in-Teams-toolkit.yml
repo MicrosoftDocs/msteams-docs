@@ -92,8 +92,8 @@ items:
 
       The following files provide the business logic for the dashboard tab. These files can be updated to fit your business logic requirements. The default implementation provides a starting point to help you get started.
 
-      | File                                       | Contents                                           |
-      | ------------------------------------------  -------------------------------------------------- |
+      | **File**                                   | **Contents**                                       |
+      | ------------------------------------------ | -------------------------------------------------- |
       | src/data/listData.json                     | Data for the list widget                           |
       | src/models/listModel.ts                    | Data model for the list widget                     |
       | src/services/chartService.ts               | A data retrive implementation for the chart widget |
@@ -111,7 +111,7 @@ items:
 
       The following files are project-related files and you need not customize these files:
 
-      | File                               | Contents                                                     |
+      | **File**                           | **Contents**                                                 |
       | ---------------------------------- | ------------------------------------------------------------ |
       | src/index.css                      | The style of application entry point                         |
       | src/index.tsx                      | Application entry point                                      |
