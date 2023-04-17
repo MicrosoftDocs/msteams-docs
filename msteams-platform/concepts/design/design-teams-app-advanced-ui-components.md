@@ -79,8 +79,8 @@ See how to implement [stage view](~/tabs/tabs-link-unfurling.md).
 
 ### Top use cases
 
-* Display content in a large surface within Teams instead of another app or browser
-* Spotlight media or other rich content
+* Display content in a large surface within Teams instead of another app or browser.
+* Spotlight media or other rich content.
 
 ### Mobile
 
