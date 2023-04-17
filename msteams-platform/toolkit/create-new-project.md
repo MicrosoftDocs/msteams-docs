@@ -18,7 +18,7 @@ In this section, you can learn how to create a new Teams project using Microsoft
 
 You can build a new Teams project by selecting **Create a new Teams app** in Teams Toolkit. You can create the following types of apps in Teams Toolkit:
 
-| App Types | Definition |
+| App types | Definition |
 | --- | --- |
 | **Basic Teams apps** | Basic Teams apps are tab, bot, or message extension that you can create and customize based on your requirement. |
 | **Scenario-based Teams apps** | Scenario-based Teams apps are notification bot, command bot, workflow bot, SSO-enabled tab, or SPFx tab app and these are suitable for one particular scenario. For example, a notification bot is suitable to send notifications and not used for chat. |

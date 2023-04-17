@@ -76,7 +76,7 @@ This section lists the capabilities you can add to your Teams app using TeamsFx 
 
 The following table lists the capabilities and the TeamsFx CLI commands for adding them:
 
-  |Capability and Scenario| Command|
+  |Capability and scenario| Command|
   |-----------------------|----------|
   |To add notification bot |`teamsfx add notification`|
   |To add command bot |`teamsfx add command-and-response`|
