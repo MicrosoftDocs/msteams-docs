@@ -44,7 +44,7 @@ They can also be built with the [Adaptive Cards](../../task-modules-and-cards/ca
 |1|**Header**: Make headers clear and concise. Describe the task you want users to complete.
 |2|**App name**: Full name of your app.|
 |3|**Close button**: Closes the task module. Does not apply unsaved changes in the app content.|
-|4|**webview**: Responsive space that hosts your app content.|
+|4|**Webview**: Responsive space that hosts your app content.|
 |5|**Actions (optional)**: Buttons related to your app content.|
 
 ### Desktop
@@ -96,7 +96,7 @@ Task modules are a great place to surface forms with sequential user inputs and 
 
 ### Sign in
 
-Create a focused sign in or sign-up flow with a series of task modules, letting users move easily through sequential steps.
+Create a focused sign in or a flow to sign in with a series of task modules, letting users move easily through sequential steps.
 
 #### Mobile
 
