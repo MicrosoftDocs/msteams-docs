@@ -306,7 +306,7 @@ Welcome messages and tours help people understand what they can do with your bot
 
 #### Don't: Obscure your bot's features
 
-First impressions matter. People will likely be confused or suspicious when presented with a nondescriptive message.
+First impressions matter. People will likely be confused or suspicious when presented with a nondescriptive message to sign in.
 
    :::column-end:::
 :::row-end:::
