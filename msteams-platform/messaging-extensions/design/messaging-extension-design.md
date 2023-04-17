@@ -222,7 +222,7 @@ Use these recommendations to create a quality app experience.
    :::column span="":::
 :::image type="content" source="../../assets/images/messaging-extension/setup-do.png" alt-text="Example of setup and general usage.":::
 
-#### Do: Integrate with single sing-on
+#### Do: Integrate with SSO
 
 SSO makes the process of sign in easier, faster, and secure. Also, if a user has already signed in to your personal app, they don’t have to also sign in again to access the message extension.
 
