@@ -5,7 +5,7 @@ description: Microsoft Teams platform features for your app on desktop and mobil
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.date: 11/02/2021
+ms.date: 04/16/2023
 ---
 # Explore Teams platform features
 
@@ -30,6 +30,8 @@ With Teams, you can build your app in a feature-rich environment. Using Teams as
 ## Dive deeper
 
 Choose to customize your app with features and tools, such as user authentication, Microsoft Graph, and Developer Portal.
+
+Think you Teams personal tab app adds value to your user base in other Microsoft 365 platforms ? [Consider upgrading it run across the M365 ecosystem](/msteams-platform/m365-apps/overview.md).
 
 You've had a short tour through some of Teams platform features. You're ready to see how you can use them to build your app. Let's head towards the solution for the user story.
 

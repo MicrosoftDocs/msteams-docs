@@ -5,7 +5,7 @@ description: In this module, learn about TeamsFx SDK, core concepts and code str
 ms.author: v-npaladugu
 ms.localizationpriority: medium
 ms.topic: overview
-ms.date: 11/29/2021
+ms.date: 04/16/2023
 ---
 
 # TeamsFx SDK

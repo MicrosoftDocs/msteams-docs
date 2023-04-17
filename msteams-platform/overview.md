@@ -5,7 +5,7 @@ description: Learn about Microsoft Teams, why should you build apps on Teams pla
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.date: 05/24/2021
+ms.date: 04/02/2023
 ---
 # Teams app that fits
 
