@@ -82,7 +82,7 @@ Following are the steps to create a personal tab:
 
       The default is yes; enter **n** to enter your Microsoft Partner ID.
 
-    * **Enter your Microsoft Partner Id, if you have one? (Leave blank to skip)**
+    * **Enter your Microsoft Partner Id, if you have one? (leave blank to skip)**
 
       This field isn't required and must be used only if you're already part of the [Microsoft Partner Network](https://partner.microsoft.com).
 
@@ -102,7 +102,7 @@ Following are the steps to create a personal tab:
 
       Choose **not** to include personal apps to be rendered without a tab header-bar. Default is no, enter **n**.
 
-    * **Would you like to include Test framework and initial tests? (y/N)**
+    * **Would you like to include test framework and initial tests? (y/N)**
 
       Choose **not** to include a test framework for this project. The default is no, enter **n**.
 
@@ -114,17 +114,17 @@ Following are the steps to create a personal tab:
 
       Choose **not** to include [Azure Application Insights](/azure/azure-monitor/app/app-insights-overview). The default is no; enter **n**.
 
-    * **Default Tab Name (max 16 characters)?**
+    * **Default tab Name (max 16 characters)?**
 
       Name your tab. This tab name is used throughout your project as a file or URL path component.
 
-    * **What kind of Tab would you like to create?**
+    * **What kind of tab would you like to create?**
 
       Use the arrow keys to select **Personal (static)**.
 
-    * **Do you require Microsoft Azure Active Directory (Azure AD) Single-Sign-On support for the tab?**
+    * **Do you require Microsoft Azure Active Directory (Azure AD) single sign-on (SSO) support for the tab?**
 
-      Choose **not** to include Azure AD Single-Sign-On support for the tab. The default is yes, enter **n**.
+      Choose **not** to include Azure AD SSO support for the tab. The default is yes, enter **n**.
     > [!NOTE]
     > In a tab, the tab home page appears only when the user selects the back button (or moves out of the tab) and comes back to the home page. The tab doesn't maintain or retain the previous state by design.
     </details>
