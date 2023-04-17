@@ -22,7 +22,7 @@ Teams Toolkit appears within Visual Studio Code as an extension. After you insta
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/overview1_1.png" alt-text="Overview of Teams Toolkit" lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/overview1_1.png":::
 
-| Serial No. | UI Elements | Definition |
+| S.No. | UI elements | Definition |
 | --- | --- | --- |
 | 1 | **Documentation** | Access the Microsoft Teams Developer documentation. |
 | 2 | **How-to guides** | Access how-to guides for app scenario and app development. |
@@ -96,7 +96,7 @@ From the task pane, you can see the following sections:
 
         * **View samples**: Select any of the Teams Toolkit's sample apps. The toolkit downloads the app code from GitHub and you can build the sample app.
 
-        * **View how-to-guides**: Select to view Teams app scenario guides and development guides.
+        * **View how-to guides**: Select to view Teams app scenario guides and development guides.
 
         * **Add features**: Add other Teams capabilities to the Teams app during the development process and add optional cloud resources suitable for your app.
        
