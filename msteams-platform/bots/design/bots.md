@@ -315,7 +315,7 @@ First impressions matter. People will likely be confused or suspicious when pres
    :::column span="":::
 :::image type="content" source="../../assets/images/bots/bot-content-understand-do.png" alt-text="Example showing your bot should recognize non-questions.":::
 
-#### Do: Recognize non-interrogative phrases
+#### Do: Recognize non-questions
 
 Your bot should be able to respond to messages like "Hi", "Help", and "Thanks" while also accounting for common misspellings and colloquialisms.
 

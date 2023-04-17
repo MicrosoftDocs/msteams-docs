@@ -182,7 +182,7 @@ You can include options to rename, remove, or modify a tab.
 
 ## Tab notifications and deep linking
 
-You can send a message with a deep link to your tab. For example, a card shows a summary of bug data a user can select to see the entire bug in a tab. Sending messages about tab activity increases awareness without explicitly notifying everyone (that is, activity without noise). You also can @mention specific users if needed.
+You can send a message with a deep link to your tab. For example, a card shows a summary of bug data a user can select to see the entire bug in a tab. Sending messages about tab activity increases awareness without explicitly notifying everyone (such as an activity without noise). You also can @mention specific users if needed.
 
 Notify users of tab activity one of the following ways:
 
