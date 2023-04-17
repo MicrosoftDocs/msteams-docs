@@ -353,7 +353,7 @@ This section provides several code snippets for common scenarios that are relate
        }
        ```
 
-    For more information on sample to use Graph API in tab app, see [hello-world-tab sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-tab).
+    For more information on sample to use Graph API in tab app, see [graph-connector-app sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/graph-connector-app).
 
     </details>
 
