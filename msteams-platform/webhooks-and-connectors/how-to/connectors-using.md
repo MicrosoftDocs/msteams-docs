@@ -193,7 +193,7 @@ To post a message to the webhook with PowerShell, follow these steps:
 >
 > * All native Adaptive Card schema elements, except `Action.Submit`, are fully supported.
 > * The supported actions are [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html), and [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html).
-> * Adaptive Card supports only Incoming Webhook O365 Connector type and not any other O365 Connector types. You can send the adaptive cards for these connectors using the following JSON format.
+> * Adaptive Card supports only Incoming Webhook for Microsoft 365 Groups connector type.
 
 To send Adaptive Cards through an Incoming Webhook, follow these steps:
 
