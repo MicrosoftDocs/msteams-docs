@@ -73,7 +73,7 @@ Ensure that you have all the [prerequisites](~/tabs/how-to/tab-requirements.md) 
 
     The default is yes; enter **n** to enter your Microsoft Partner ID.
 
-* **Enter your Microsoft Partner Id, if you have one? (Leave blank to skip)**
+* **Enter your Microsoft Partner Id, if you have one? (leave blank to skip)**
 
     This field isn't required and must be used only if you're already part of the [Microsoft Partner Network](https://partner.microsoft.com).
 
@@ -93,7 +93,7 @@ Ensure that you have all the [prerequisites](~/tabs/how-to/tab-requirements.md) 
 
     Choose **not** to include personal apps to be rendered without a tab header-bar. Default is no, enter **n**.
 
-* **Would you like to include Test framework and initial tests? (y/N)**
+* **Would you like to include test framework and initial tests? (y/N)**
 
     Choose **not** to include a test framework for this project. The default is no, enter **n**.
 
@@ -105,21 +105,21 @@ Ensure that you have all the [prerequisites](~/tabs/how-to/tab-requirements.md) 
 
     Choose **not** to include [Azure Application Insights](/azure/azure-monitor/app/app-insights-overview). The default is no; enter **n**.
 
-* **Default Tab Name (max 16 characters)?**
+* **Default tab name (max 16 characters)?**
 
     Name your tab. This tab name is used throughout your project as a file or URL path component.
 
-* **What kind of Tab would you like to create?**
+* **What kind of tab would you like to create?**
 
     Use the arrow keys to select **Configurable** tab.
 
-* **What scopes do you intend to use for your Tab?**
+* **What scopes do you intend to use for your tab?**
 
     You can select a team or a group chat.
 
-* **Do you require Microsoft Azure Active Directory (Azure AD) Single-Sign-On support for the tab?**
+* **Do you require Microsoft Azure Active Directory (Azure AD) single sign-on (SSO) support for the tab?**
 
-    Choose **not** to include Microsoft Azure Active Directory (Azure AD) Single-Sign-On support for the tab. The default is yes, enter **n**.
+    Choose **not** to include Azure AD SSO support for the tab. The default is yes, enter **n**.
 
 * **Do you want this tab to be available in SharePoint Online? (Y/n)**
 
