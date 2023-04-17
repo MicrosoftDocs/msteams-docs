@@ -86,7 +86,7 @@ Don’t forget: In the bot command menu (**What can I do?**), you must also prov
 
 ### Tours
 
-You can include a tour with welcome messages and if the bot responds to something like a help command. A tour is the most effective way to describe what your bot can do. If applicable, they’re also great for describing your app’s other features. For example, include screenshots of your message extension.
+You can include a tour with welcome messages and if the bot responds to something like a "help" command. A tour is the most effective way to describe what your bot can do. If applicable, they’re also great for describing your app’s other features. For example, include screenshots of your message extension.
 
 > [!IMPORTANT]
 > Tours should be accessible without having to sign in.
