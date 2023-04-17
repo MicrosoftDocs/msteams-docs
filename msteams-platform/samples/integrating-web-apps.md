@@ -36,6 +36,7 @@ Your Teams app must include required and expected collaborative features. To wor
 |Message external services  |[Bots](../bots/what-are-bots.md)<br/>[Outgoing Webhooks](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)  |
 |Modals  |[Task modules](../task-modules-and-cards/what-are-task-modules.md)  |
 |Content-rich cards  |[Adaptive Cards](../task-modules-and-cards/what-are-cards.md)  |
+|Multi-app support  |[Extend across Microsoft 365](../m365-apps/overview.md)  |
 
 ## Determine a subset of functionality
 
