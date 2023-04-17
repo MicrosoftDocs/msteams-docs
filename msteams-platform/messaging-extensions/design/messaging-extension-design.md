@@ -270,7 +270,7 @@ If your message extension requires action commands, keep the task module simple 
 
 #### Do: Take advantage of Teams color tokens
 
-Each Teams theme has its own color scheme. To handle theme changes automatically, use [color tokens (Fluent UI)](https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme) in your design.
+Each Teams theme has its own color scheme. To handle theme changes automatically, use [color tokens (Fluent UI)](https://fluentsite.z22.web.core.windows.net/0.51.7/colors#color-scheme) in your design.
 
    :::column-end:::
    :::column span="":::
