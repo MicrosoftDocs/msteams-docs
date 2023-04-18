@@ -111,7 +111,7 @@ Use the following code snippet example to setup an existing bot for debugging:
 
 </details>
 
-### Customize Scenarios
+### Customize scenarios
 
 Here's a list of debug scenarios that you can use:
 <br>
