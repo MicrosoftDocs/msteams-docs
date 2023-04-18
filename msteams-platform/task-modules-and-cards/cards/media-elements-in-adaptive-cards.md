@@ -20,7 +20,7 @@ Adaptive Card now supports the consumption of the media elements without the for
 The following data sources are supported primarily for the in-line media playback:
 
 * Video or audio files are linked externally via any publicly available URL that points to a supported media file.
-* Video or audio files are directly uploaded to OneDrive or Sharepoint and accessible within the tenant and Adaptive Card plays the file through player.
+* Video or audio files are directly uploaded to OneDrive or SharePoint and accessible within the tenant and Adaptive Card plays the file through player.
 
 **Third party partner scenarios**
 
