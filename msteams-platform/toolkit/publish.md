@@ -73,7 +73,7 @@ The following steps help you to publish the app from Teams Toolkit:
 
 1. You can publish your Teams app in one of the following ways:
      * Select **Publish to Teams** under **DEPLOYMENT**.
-     * Select **View > Command Palette... > Teams: Publish to Teams**.
+     * Select **View** > **Command Palette...** > **Teams: Publish to Teams**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-publish_1.png" alt-text="Select Publish":::
 
@@ -138,7 +138,7 @@ For more information, see [how to publish to the Teams store](../concepts/deploy
 
 ## See also
 
-* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
+* [Teams Toolkit overview](teams-toolkit-fundamentals.md)
 * [Distribute your Microsoft Teams app](../concepts/deploy-and-publish/apps-publish-overview.md)
 * [Create Teams app package](../concepts/build-and-test/apps-package.md)
 * [Prepare your Microsoft 365 tenant](../concepts/build-and-test/prepare-your-o365-tenant.md)
