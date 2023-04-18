@@ -425,8 +425,6 @@ To make this work in your app:
 
 </details>
 
-<br>
-
 ## Debug your app
 
 Press **F5** to debug your application. Teams Toolkit uses the Azure AD manifest file to register an Azure AD app for SSO. For Teams Toolkit local debug functionalities, see [how to debug your Teams app locally](debug-local.md).
@@ -525,7 +523,7 @@ You can perform the following steps to add SSO using Teams Toolkit in Visual Stu
 
 1. Select the required application type under **Create a new Teams application**, clear the **Configure with single sign-on** check box.
 
-1. Select **create**.
+1. Select **Create**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso-vs/vs-2022-preview-create-teamsapp-sso-uncheck_1.png" alt-text="select the teams app to be created and uncheck sso check box" lightbox="../assets/images/teams-toolkit-v2/add-sso-vs/vs-2022-preview-create-teamsapp-sso-uncheck.png":::
 
@@ -738,4 +736,4 @@ For more information about how to use an existing Azure AD app in your TeamsFx p
 * [Prerequisites for creating your Teams app](tools-prerequisites.md)
 * [Enable SSO for tab app](../tabs/how-to/authentication/tab-sso-overview.md)
 * [Enable SSO for your bot and message extension](../bots/how-to/authentication/bot-sso-overview.md)
-* [Prepare Accounts to build your Teams app](tools-prerequisites.md#accounts-to-build-your-teams-app)
+* [Prepare accounts to build your Teams app](tools-prerequisites.md#accounts-to-build-your-teams-app)
