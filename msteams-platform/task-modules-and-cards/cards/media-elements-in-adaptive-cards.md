@@ -9,7 +9,7 @@ ms.author: v-sdhakshina
 
 # Media elements in Adaptive Card
 
-The media elements such as audio or video clips are supported in the Adaptive Card, files from OneDrive, and SharePoint but not in Teams. Teams don’t provide any media support like audio, video, and animation cards from Bot Framework.
+The media elements such as audio or video clips are supported in the Adaptive Card, files from OneDrive and SharePoint but not in Teams. Teams don’t provide any media support like audio, video, and animation cards from Bot Framework.
 
 To increase engagement with the Adaptive Card and to provide new experience in the media elements, Teams in parity with the SDK that supports media elements.
 
@@ -26,8 +26,20 @@ The following data sources are supported primarily for the in-line media playbac
 
 To improve the ability to deal with media files, following are the dynamic user-uploaded scenarios where users upload video or audio files within OneDrive or SharePoint in other tenants and be able to link to them:
 
-* Files are directly uploaded to OneDrive Sharepoint external to the current tenant.
-* Files hidden behind external SSO or authentication. For example, Google Drive, Dropbox, etc.
+* Files are directly uploaded to OneDrive or SharePoint external to the current tenant.
+* Files are hidden behind external SSO or authentication. For example, Google Drive, Dropbox, etc.
+
+The following screenshot shows you the media elements in your Adaptive Card:
+
+# [Desktop](#tab/desktop)
+
+:::image type="content" source="../../assets/images/media-elements-in-adaptive-cards/desktop-media.png" alt-text="Screenshot shows you the media elements in desktop.":::
+
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/media-elements-in-adaptive-cards/mobile-media.png" alt-text="Screenshot shows you the media elements in mobile.":::
+
+---
 
 ## Add media elements to your Adaptive Card
 
@@ -37,12 +49,12 @@ After you created an Adaptive Card using [Teams Developer Portal](https://dev.te
 
 1. Add your media files to OneDrive or SharePoint.
 
-1. [Create a sharing link or url for a DriveItem](/graph/api/driveitem-createlink) or get a link using the following options from the OneDrive or share point.
+1. [Create a sharing link or url for a DriveItem](/graph/api/driveitem-createlink) or get a link using the following options from the OneDrive or SharePoint.
 
    :::image type="content" source="../../assets/images/media-elements-in-adaptive-cards/share-link.png" alt-text="Screenshot shows you from where you can take a link.":::
 
     >[!NOTE]
-    > AdaptiveCard don't support media file links that are copied directly from the address bar.
+    > Adaptive Card don't support media file links that are copied directly from the address bar.
 
 1. Add your media file url in the `url` property of Adaptive Card json file.
 
@@ -84,12 +96,10 @@ After you created an Adaptive Card using [Teams Developer Portal](https://dev.te
     
     ```
 
-The following screenshot shows you the media elements in your Adaptive Card:
-
 ## Limitations
 
-1. Adaptive Card supports only the links from sharepoint or OneDrive.
-1. You must inform users or admin before you share a link that they're responsible for ensuring that the audience can view the link.
+1. Adaptive Card supports only the links from SharePoint or OneDrive.
+1. You must inform users or admin before you share a link that they're responsible to ensure that the audience can view the link.
 
 ## See also
 
