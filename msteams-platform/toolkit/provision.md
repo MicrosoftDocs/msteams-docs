@@ -22,7 +22,7 @@ TeamsFx integrates with Azure and the Microsoft 365 cloud, which allows to place
 
 Provision Azure resources with a single command in Teams Toolkit for Visual Studio Code or TeamsFx CLI. For more information, see [how to provision Azure-based app](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=8).
 
-## Create Resources
+## Create resources
 
 When you trigger the provision command in Teams Toolkit or TeamsFx CLI, you can get the following resources:
 
@@ -39,7 +39,7 @@ The following list shows the resource creation for different types of app and Az
 <br>
 
 <details>
-<summary><b>Resource creation for Teams Tab app</b></summary>
+<summary><b>Resource creation for Teams tab app</b></summary>
 
 |Resource|Purpose|Description |
 |----------|--------------------------------|-----|
@@ -88,7 +88,7 @@ The following list shows the resource creation for different types of app and Az
 <br>
 
 <details>
-<summary><b>Resource creation for Azure API Management in the project</b></summary>
+<summary><b>Resource creation for Azure API management in the project</b></summary>
 
 |Resource|Purpose|
 |----------|--------------------------------|
@@ -401,7 +401,7 @@ The following list shows the resource creation for different types of app and Az
 <br>
 
 <details>
-<summary><b>Resource creation for Teams Tab app</b></summary>
+<summary><b>Resource creation for Teams tab app</b></summary>
 
 | Resource | Purpose | Description |
 | --- | --- | --- |
@@ -614,7 +614,7 @@ If you get an insufficient permission error when Teams Toolkit tries to add user
 
 ## See also
 
-* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
+* [Teams Toolkit overview](teams-toolkit-fundamentals.md)
 * [Deploy Teams app to the cloud](deploy.md)
 * [Manage multiple environments](TeamsFx-multi-env.md)
 * [Collaborate with other developers on Teams project](TeamsFx-collaboration.md)
