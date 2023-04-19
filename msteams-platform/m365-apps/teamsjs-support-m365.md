@@ -22,11 +22,13 @@ The following table lists TeamsJS capabilities (public namespaces) and their sup
 |- | - | - |
 | :::image type="content" source="./images/teams-icon.png" alt-text="Microsoft Teams icon"::: | :::image type="content" source="./images/microsoft-365-icon.png" alt-text="Microsoft 365 app icon"::: | :::image type="content" source="./images/outlook-icon.png" alt-text="Microsoft Outlook icon"::: |
 
+Click on any TeamsJS Capability to find resources on usage and host support details of its subcapabilities (if any).
+
 <br />
 <table border>
     <thead>
         <tr>
-            <th></th>
+            <th>TeamsJS Capability</th>
             <th colspan=3>Web</th>
             <th colspan=3>Desktop</th>
             <th colspan=6>Mobile</th>
@@ -62,6 +64,21 @@ The following table lists TeamsJS capabilities (public namespaces) and their sup
             <td>&#x2713;</td>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
+        </tr>
+        <tr>
+            <th><a href="#appinitialization">appInitialization</a><br /><img src="./images/deprecated-badge.png" /></th>
+            <td>&#x2713;</td>
+            <td></td>
+            <td></td>
+            <td>&#x2713;</td>
+            <td></td>
             <td></td>
             <td>&#x2713;</td>
             <td></td>
@@ -71,7 +88,7 @@ The following table lists TeamsJS capabilities (public namespaces) and their sup
             <td></td>
         </tr>
         <tr>
-            <th><a href="#appInstallDialog">appInstallDialog</a></th>
+            <th><a href="#appinstalldialog">appInstallDialog</a></th>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
             <td></td>
@@ -84,6 +101,51 @@ The following table lists TeamsJS capabilities (public namespaces) and their sup
             <td>&#x2713;</td>
             <td></td>
             <td></td>
+        </tr>
+        <tr>
+            <th><a href="#authentication">authentication</a></th>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
+        </tr>
+        <tr>
+            <th><a href="#barcode">barCode</a><br /><img src="./images/preview-badge.png" /></th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th><a href="#calendar">calendar</a></th>
+            <td></td>
+            <td></td>
+            <td>&#x2713;</td>
+            <td></td>
+            <td></td>
+            <td>&#x2713;</td>
+            <td></td>
+            <td></td>
+            <td>?</td>
+            <td></td>
+            <td></td>
+            <td>?</td>
         </tr>
         <tr>
             <th><a href="#call">call</a></th>
@@ -101,7 +163,7 @@ The following table lists TeamsJS capabilities (public namespaces) and their sup
             <td></td>
         </tr>
         <tr>
-            <th><a href="#chat">chat</a></th>
+            <th><a href="#chat">chat</a><br /><img src="./images/preview-badge.png" /></th>
             <td>&#x2713;</td>
             <td></td>
             <td>&#x2713;</td>
@@ -116,7 +178,7 @@ The following table lists TeamsJS capabilities (public namespaces) and their sup
             <td></td>
         </tr>
         <tr>
-            <th><a href="#dialog">dialog</a></th>
+            <th><a href="#dialog">dialog</a><br /><img src="./images/preview-badge.png" /></th>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
@@ -131,12 +193,72 @@ The following table lists TeamsJS capabilities (public namespaces) and their sup
             <td></td>
         </tr>
         <tr>
-            <th><a href="#geoLocation">geoLocation</a><img src="./images/preview-badge.png" /></th>
+            <th><a href="#geoLocation">geoLocation</a><br /><img src="./images/preview-badge.png" /></th>
             <td></td>
             <td>&#x2713;</td>
             <td></td>
             <td></td>
             <td>&#x2713;</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th><a href="#location">location</a><br /><img src="./images/deprecated-badge.png" /></th>
+            <td>&#x2713;</td>
+            <td></td>
+            <td></td>
+            <td>&#x2713;</td>
+            <td></td>
+            <td></td>
+            <td>&#x2713;</td>
+            <td></td>
+            <td></td>
+            <td>&#x2713;</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th><a href="#mail">mail</a></th>
+            <td></td>
+            <td></td>
+            <td>&#x2713;</td>
+            <td></td>
+            <td></td>
+            <td>&#x2713;</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th><a href="#media">media</a></th>
+            <td>&#x2713;</td>
+            <td></td>
+            <td></td>
+            <td>&#x2713;</td>
+            <td></td>
+            <td></td>
+            <td>&#x2713;</td>
+            <td></td>
+            <td></td>
+            <td>&#x2713;</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th><a href="#meeting">meeting</a></th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
             <td></td>
             <td></td>
             <td></td>
@@ -162,16 +284,16 @@ The following table lists TeamsJS capabilities (public namespaces) and their sup
         </tr>
         <tr>
             <th><a href="#monetization">monetization</a></th>
-            <td>&#x2713;</td>
             <td></td>
             <td></td>
-            <td>&#x2713;</td>
             <td></td>
             <td></td>
-            <td>&#x2713;</td>
             <td></td>
             <td></td>
-            <td>&#x2713;</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
             <td></td>
             <td></td>
         </tr>
@@ -206,6 +328,51 @@ The following table lists TeamsJS capabilities (public namespaces) and their sup
             <td></td>
         </tr>
         <tr>
+            <th><a href="#profile">profile</a><br /><img src="./images/preview-badge.png" /></th>
+            <td>&#x2713;</td>
+            <td></td>
+            <td></td>
+            <td>&#x2713;</td>
+            <td></td>
+            <td></td>
+            <td>&#x2713;</td>
+            <td></td>
+            <td></td>
+            <td>&#x2713;</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th><a href="#search">search</a><br /><img src="./images/preview-badge.png" /></th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th><a href="#settings">settings</a><br /><img src="./images/deprecated-badge.png" /></th>
+            <td>&#x2713;</td>
+            <td></td>
+            <td></td>
+            <td>&#x2713;</td>
+            <td></td>
+            <td></td>
+            <td>&#x2713;</td>
+            <td></td>
+            <td></td>
+            <td>&#x2713;</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
             <th><a href="#sharing">sharing</a></th>
             <td>&#x2713;</td>
             <td></td>
@@ -221,7 +388,7 @@ The following table lists TeamsJS capabilities (public namespaces) and their sup
             <td></td>
         </tr>
         <tr>
-            <th><a href="#stageView">stageView</a></th>
+            <th><a href="#stageView">stageView</a><br /><img src="./images/preview-badge.png" /></th>
             <td>&#x2713;</td>
             <td></td>
             <td></td>
@@ -236,7 +403,7 @@ The following table lists TeamsJS capabilities (public namespaces) and their sup
             <td></td>
         </tr>
         <tr>
-            <th><a href="#tasks">tasks</a><img src="./images/deprecated-badge.png" /></th>
+            <th><a href="#tasks">tasks</a><br /><img src="./images/deprecated-badge.png" /></th>
             <td>&#x2713;</td>
             <td></td>
             <td></td>
@@ -266,7 +433,7 @@ The following table lists TeamsJS capabilities (public namespaces) and their sup
             <td></td>
         </tr>
         <tr>
-            <th><a href="#video">video</a></th>
+            <th><a href="#video">video</a><br /><img src="./images/preview-badge.png" /></th>
             <td>&#x2713;</td>
             <td></td>
             <td></td>
@@ -281,7 +448,7 @@ The following table lists TeamsJS capabilities (public namespaces) and their sup
             <td></td>
         </tr>
         <tr>
-            <th><a href="#webStorage">webStorage</a></th>
+            <th><a href="#webStorage">webStorage</a><br /><img src="./images/preview-badge.png" /></th>
             <td></td>
             <td></td>
             <td></td>
