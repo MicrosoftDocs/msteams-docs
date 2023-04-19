@@ -21,7 +21,7 @@ Deep link to an app isn't supported for custom apps.
 
 You can open an app install dialog from your Teams app and also can install the app in other contexts. Use the following deep link format to open an app install dialog from your Teams:
 
-`https://teams.microsoft.com/l/app/<your-app-id>`, where `<your-app-id>` is the application ID(f46ad259-0fe5-4f12-872d-c737b174bcb4).
+`https://teams.microsoft.com/l/app/<your-app-id>`, where `<your-app-id>` is the application ID.
 
 Applications can use the TeamsJS library to open the dialog without manually generating the deep link. Following is an example to open the app install dialog using TeamsJS:
 
