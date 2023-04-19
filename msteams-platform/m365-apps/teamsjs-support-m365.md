@@ -18,9 +18,9 @@ This article details the level of support of Teams JavaScript client (TeamsJS) l
 
 The following table lists TeamsJS capabilities (public namespaces) and their support across Microsoft 365 hosts. For readability, Microsoft 365 hosts are signified by the following product icons:
 
-| Microsoft Teams | Microsoft 365 app | Outlook |
+| Microsoft Teams | Microsoft 365 app | Microsoft Outlook |
 |- | - | - |
-| :::image type="content" source="./images/teams-thumb.png" alt-text="{alt-text}"::: | :::image type="content" source="./images/microsoft365-thumb.png" alt-text="{alt-text}"::: | :::image type="content" source="./images/outlook-thumb.png" alt-text="{alt-text}"::: |
+| :::image type="content" source="./images/teams-icon.png" alt-text="Microsoft Teams icon"::: | :::image type="content" source="./images/microsoft-365-icon.png" alt-text="Microsoft 365 app icon"::: | :::image type="content" source="./images/outlook-icon.png" alt-text="Microsoft Outlook icon"::: |
 
 <br />
 <table border>
@@ -40,18 +40,18 @@ The following table lists TeamsJS capabilities (public namespaces) and their sup
         </tr>
         <tr>
             <td></td>
-            <td><image alt="Teams" src="./images/teams-thumb.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft365-thumb.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-thumb.png"/></td>
-            <td><image alt="Teams" src="./images/teams-thumb.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft365-thumb.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-thumb.png"/></td>
-            <td><image alt="Teams" src="./images/teams-thumb.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft365-thumb.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-thumb.png"/></td>
-            <td><image alt="Teams" src="./images/teams-thumb.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft365-thumb.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-thumb.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
         </tr>
     </thead>
     <tbody>
@@ -304,58 +304,6 @@ The following table lists TeamsJS capabilities (public namespaces) and their sup
 
 Namespace to interact with app initialization and lifecycle.
 
-### Functions
-
-<br />
-<table border>
-    <thead>
-        <tr>
-            <th></th>
-            <th colspan=3>Web</th>
-            <th colspan=3>Desktop</th>
-            <th colspan=6>Mobile</th>
-        </tr>
-        <tr>
-            <th></th>
-            <th colspan=3></th>
-            <th colspan=3>Windows</th>
-            <th colspan=3>Android</th>
-            <th colspan=3>iOS</th>
-        </tr>
-        <tr>
-            <td></td>
-            <td><image alt="Teams" src="./images/teams-thumb.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft365-thumb.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-thumb.png"/></td>
-            <td><image alt="Teams" src="./images/teams-thumb.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft365-thumb.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-thumb.png"/></td>
-            <td><image alt="Teams" src="./images/teams-thumb.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft365-thumb.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-thumb.png"/></td>
-            <td><image alt="Teams" src="./images/teams-thumb.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft365-thumb.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-thumb.png"/></td>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <th>getContext</th>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td></td>
-            <td></td>
-        </tr>
-    </tbody>
-</table>
 
 ## `appInstallDialog`
 
