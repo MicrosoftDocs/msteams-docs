@@ -22,11 +22,6 @@ The following table lists TeamsJS capabilities (public namespaces) and their sup
 |- | - | - |
 | :::image type="content" source="./images/teams-thumb.png" alt-text="{alt-text}"::: | :::image type="content" source="./images/microsoft365-thumb.png" alt-text="{alt-text}"::: | :::image type="content" source="./images/outlook-thumb.png" alt-text="{alt-text}"::: |
 
-
-- Microsoft Teams :::image type="content" source="./images/teams-thumb.png" alt-text="{alt-text}":::
-- Microsoft 365 app :::image type="content" source="./images/microsoft365-thumb.png" alt-text="{alt-text}":::
-- Outlook :::image type="content" source="./images/outlook-thumb.png" alt-text="{alt-text}":::
-
 <br />
 <table border>
     <thead>
