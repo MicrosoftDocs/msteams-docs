@@ -73,7 +73,7 @@ Click on any TeamsJS Capability to find resources on usage and host support deta
             <td>&#x2713;</td>
         </tr>
         <tr>
-            <th><a href="#appinitialization">appInitialization</a><br /><img src="./images/deprecated-badge.png" /></th>
+            <th><a href="#appinitialization">appInitialization</a><img src="./images/deprecated-badge.png" /></th>
             <td>&#x2713;</td>
             <td></td>
             <td></td>
@@ -118,7 +118,7 @@ Click on any TeamsJS Capability to find resources on usage and host support deta
             <td>&#x2713;</td>
         </tr>
         <tr>
-            <th><a href="#barcode">barCode</a><br /><img src="./images/preview-badge.png" /></th>
+            <th><a href="#barcode">barCode</a><img src="./images/preview-badge.png" /></th>
             <td></td>
             <td></td>
             <td></td>
@@ -163,7 +163,7 @@ Click on any TeamsJS Capability to find resources on usage and host support deta
             <td></td>
         </tr>
         <tr>
-            <th><a href="#chat">chat</a><br /><img src="./images/preview-badge.png" /></th>
+            <th><a href="#chat">chat</a><img src="./images/preview-badge.png" /></th>
             <td>&#x2713;</td>
             <td></td>
             <td>&#x2713;</td>
@@ -178,7 +178,7 @@ Click on any TeamsJS Capability to find resources on usage and host support deta
             <td></td>
         </tr>
         <tr>
-            <th><a href="#dialog">dialog</a><br /><img src="./images/preview-badge.png" /></th>
+            <th><a href="#dialog">dialog</a><img src="./images/preview-badge.png" /></th>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
@@ -193,7 +193,7 @@ Click on any TeamsJS Capability to find resources on usage and host support deta
             <td></td>
         </tr>
         <tr>
-            <th><a href="#geoLocation">geoLocation</a><br /><img src="./images/preview-badge.png" /></th>
+            <th><a href="#geoLocation">geoLocation</a><img src="./images/preview-badge.png" /></th>
             <td></td>
             <td>&#x2713;</td>
             <td></td>
@@ -208,7 +208,7 @@ Click on any TeamsJS Capability to find resources on usage and host support deta
             <td></td>
         </tr>
         <tr>
-            <th><a href="#location">location</a><br /><img src="./images/deprecated-badge.png" /></th>
+            <th><a href="#location">location</a><img src="./images/deprecated-badge.png" /></th>
             <td>&#x2713;</td>
             <td></td>
             <td></td>
@@ -328,7 +328,7 @@ Click on any TeamsJS Capability to find resources on usage and host support deta
             <td></td>
         </tr>
         <tr>
-            <th><a href="#profile">profile</a><br /><img src="./images/preview-badge.png" /></th>
+            <th><a href="#profile">profile</a><img src="./images/preview-badge.png" /></th>
             <td>&#x2713;</td>
             <td></td>
             <td></td>
@@ -343,7 +343,7 @@ Click on any TeamsJS Capability to find resources on usage and host support deta
             <td></td>
         </tr>
         <tr>
-            <th><a href="#search">search</a><br /><img src="./images/preview-badge.png" /></th>
+            <th><a href="#search">search</a><img src="./images/preview-badge.png" /></th>
             <td></td>
             <td></td>
             <td></td>
@@ -358,7 +358,7 @@ Click on any TeamsJS Capability to find resources on usage and host support deta
             <td></td>
         </tr>
         <tr>
-            <th><a href="#settings">settings</a><br /><img src="./images/deprecated-badge.png" /></th>
+            <th><a href="#settings">settings</a><img src="./images/deprecated-badge.png" /></th>
             <td>&#x2713;</td>
             <td></td>
             <td></td>
@@ -388,7 +388,7 @@ Click on any TeamsJS Capability to find resources on usage and host support deta
             <td></td>
         </tr>
         <tr>
-            <th><a href="#stageView">stageView</a><br /><img src="./images/preview-badge.png" /></th>
+            <th><a href="#stageView">stageView</a><img src="./images/preview-badge.png" /></th>
             <td>&#x2713;</td>
             <td></td>
             <td></td>
@@ -403,7 +403,7 @@ Click on any TeamsJS Capability to find resources on usage and host support deta
             <td></td>
         </tr>
         <tr>
-            <th><a href="#tasks">tasks</a><br /><img src="./images/deprecated-badge.png" /></th>
+            <th><a href="#tasks">tasks</a><img src="./images/deprecated-badge.png" /></th>
             <td>&#x2713;</td>
             <td></td>
             <td></td>
@@ -433,7 +433,7 @@ Click on any TeamsJS Capability to find resources on usage and host support deta
             <td></td>
         </tr>
         <tr>
-            <th><a href="#video">video</a><br /><img src="./images/preview-badge.png" /></th>
+            <th><a href="#video">video</a><img src="./images/preview-badge.png" /></th>
             <td>&#x2713;</td>
             <td></td>
             <td></td>
@@ -448,7 +448,7 @@ Click on any TeamsJS Capability to find resources on usage and host support deta
             <td></td>
         </tr>
         <tr>
-            <th><a href="#webStorage">webStorage</a><br /><img src="./images/preview-badge.png" /></th>
+            <th><a href="#webStorage">webStorage</a><img src="./images/preview-badge.png" /></th>
             <td></td>
             <td></td>
             <td></td>
@@ -465,16 +465,40 @@ Click on any TeamsJS Capability to find resources on usage and host support deta
     </tbody>
 </table>
 
-## `app` 
+## `app`
 
 [Reference](/javascript/api/@microsoft/teams-js/app) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teamsjs-cc-app/tabs/src/components/capabilities/App.tsx)
 
 Namespace to interact with app initialization and lifecycle.
 
+## `appInitialization`
+
+[Reference](/javascript/api/@microsoft/teams-js/appInitialization)
+
+> [!CAUTION]
+> This namespace is slated for deprecation. It is currently supported for backwards compability purposes. For new apps, please use [app.initialize()](/javascript/api/@microsoft/teams-js/app#@microsoft-teams-js-app-initialize) from the [app](#app) capability.
 
 ## `appInstallDialog`
 
 [Reference](/javascript/api/@microsoft/teams-js/appinstalldialog) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teamsjs-cc-app/tabs/src/components/capabilities/AppInstallDialog.tsx)
+
+TODO: Description
+
+## `authentication`
+
+[Reference](/javascript/api/@microsoft/teams-js/authentication)
+
+TODO: Description
+
+## `barCode`
+
+[Reference](/javascript/api/@microsoft/teams-js/barcode)
+
+TODO: Description
+
+## `calendar`
+
+[Reference](/javascript/api/@microsoft/teams-js/calendar)
 
 TODO: Description
 
@@ -487,6 +511,9 @@ TODO: Description
 ## `chat`
 
 [Reference](/javascript/api/@microsoft/teams-js/chat) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teamsjs-cc-app/tabs/src/components/capabilities/Chat.tsx)
+
+> [!IMPORTANT]
+> This namespace is in preview and subject to change based on feedback. Please do not use in production.
 
 Contains functionality to start chat with others.
 
@@ -584,7 +611,35 @@ Subcapability for interacting with URL-based dialogs.
 
 [Reference](/javascript/api/@microsoft/teams-js/geolocation) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teamsjs-cc-app/tabs/src/components/capabilities/GeoLocation.tsx)
 
+> [!IMPORTANT]
+> This namespace is in preview and subject to change based on feedback. Please do not use in production.
+
 Namespace to interact with the geoLocation module-specific part of the SDK. This is the newer version of location module.
+
+## `location`
+
+[Reference](/javascript/api/@microsoft/teams-js/location)
+
+> [!CAUTION]
+> This namespace is slated for deprecation. It is currently supported for backwards compability purposes. For new apps, please use the [geoLocation](#geoLocation) capability.
+
+## `mail`
+
+[Reference](/javascript/api/@microsoft/teams-js/mail)
+
+TODO: Description
+
+## `media`
+
+[Reference](/javascript/api/@microsoft/teams-js/media)
+
+TODO: Description
+
+## `meeting`
+
+[Reference](/javascript/api/@microsoft/teams-js/meeting)
+
+TODO: Description
 
 ## `menus`
 
@@ -688,6 +743,33 @@ Provides APIs for querying and navigating between contextual tabs of an applicat
 
 TODO: description
 
+## `profile`
+
+[Reference](/javascript/api/@microsoft/teams-js/profile)
+
+> [!IMPORTANT]
+> This namespace is in preview and subject to change based on feedback. Please do not use in production.
+
+TODO: Description
+
+## `search`
+
+[Reference](/javascript/api/@microsoft/teams-js/seach)
+
+> [!IMPORTANT]
+> This namespace is in preview and subject to change based on feedback. Please do not use in production.
+
+TODO: Description
+
+## `settings`
+
+[Reference](/javascript/api/@microsoft/teams-js/settings)
+
+> [!CAUTION]
+> This namespace is slated for deprecation. It is currently supported for backwards compability purposes. For new apps, please use the [geoLocation](#geoLocation) capability.
+
+TODO: Description
+
 ## `sharing`
 
 [Reference](/javascript/api/@microsoft/teams-js/sharing) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teamsjs-cc-app/tabs/src/components/capabilities/Sharing.tsx)
@@ -697,6 +779,9 @@ Namespace to open a share dialog for web content. For more info, see [Share to T
 ## `stageView`
 
 [Reference](/javascript/api/@microsoft/teams-js/stageview) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teamsjs-cc-app/tabs/src/components/capabilities/StageView.tsx)
+
+> [!IMPORTANT]
+> This namespace is in preview and subject to change based on feedback. Please do not use in production.
 
 Namespace to interact with the stage view specific part of the SDK.
 
@@ -719,11 +804,17 @@ Namespace containing the set of APIs that support Teams-specific functionalities
 
 [Reference](/javascript/api/@microsoft/teams-js/video) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teamsjs-cc-app/tabs/src/components/capabilities/Video.tsx)
 
+> [!IMPORTANT]
+> This namespace is in preview and subject to change based on feedback. Please do not use in production.
+
 Namespace to video extensibility of the SDK.
 
 ## `webStorage`
 
 [Reference](/javascript/api/@microsoft/teams-js/webstorage) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teamsjs-cc-app/tabs/src/components/capabilities/WebStorage.tsx)
+
+> [!IMPORTANT]
+> This namespace is in preview and subject to change based on feedback. Please do not use in production.
 
 Contains functionality to allow web apps to store data in webview cache.
 
