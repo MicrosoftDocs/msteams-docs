@@ -32,7 +32,7 @@ If the app doesn't respond within five seconds, the Teams client will retry the 
 
 For authentication or configuration, after the user completes the process, the original invoke is resent to your web service. The following table shows which types of responses are available, based on the invoke location `commandContext` of the message extension:
 
-|Response Type | Compose | Command bar | Message |
+|Response type | Compose | Command bar | Message |
 |--------------|:-------------:|:-------------:|:---------:|
 |Card response | ✔️ | ✔️ | ✔️ |
 |Another task module | ✔️ | ✔️ | ✔️ |
