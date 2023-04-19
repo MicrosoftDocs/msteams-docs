@@ -73,7 +73,7 @@ In the **Advanced** section, you can see the following components to manage your
 
     1. In the **Advanced** section, select **Owners**.
     1. Select **Add owners**.
-    1. Enter a name and select a user ID from the drop-down list.
+    1. Enter a name and select a user ID from the dropdown list.
     1. Under **Role**, select **Operative** or **Administrator**.
     1. Select **Add**.
 
@@ -107,7 +107,7 @@ In the **Advanced** section, you can see the following components to manage your
 
 * **Plan and pricing**: You can link a Software-as-a-Services (SaaS) offer that you've created in the Partner center for your app.
 * **Admin settings**:
-  * **App Customization**: You can customize your app by selecting different properties, such as **Name**, **Short description**, **Small icon**, and other properties.  
+  * **App customization**: You can customize your app by selecting different properties, such as **Name**, **Short description**, **Small icon**, and other properties.  
   * **Block app by default**: You can block your app by default for users until a tenant admin selects to enable it.
 
 ## Publish
@@ -179,5 +179,5 @@ From the Developer Portal, you can go to Bot Framework portal and configure your
 
 ## See also
 
-* [Teams Toolkit Overview](../../toolkit/teams-toolkit-fundamentals.md)
+* [Teams Toolkit overview](../../toolkit/teams-toolkit-fundamentals.md)
 * [Include a SaaS offer with your Microsoft Teams app](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)

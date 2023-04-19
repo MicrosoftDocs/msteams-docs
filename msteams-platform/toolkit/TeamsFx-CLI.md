@@ -17,7 +17,7 @@ For more information, see:
 * [Source code](https://github.com/OfficeDev/TeamsFx/tree/dev/packages/cli)
 * [Package (NPM)](https://www.npmjs.com/package/@microsoft/teamsfx-cli)
 
-## TeamsFx Library
+## TeamsFx library
 
 Microsoft Teams Framework (TeamsFx) is a library encapsulating common functionality and integration patterns, such as simplified access to Microsoft Identity. You can build apps for Microsoft Teams with zero configuration.
 
@@ -29,7 +29,7 @@ Following is a list of main TeamsFx features:
 
 * **TeamsFx SDK**: Provides access to database, such as the primary TeamsFx code library containing simple authentication for both client and server-side code tailored for Teams developers.
 
-## Get Started
+## Get started
 
 Install `teamsfx-cli` from `npm` and run `teamsfx -h` to check all available commands:
 
@@ -220,7 +220,7 @@ Preview the current application from local or remote.
 
 The following list provides the common scenarios for`teamsfx preview:
 
-* Local Preview
+* Local preview
 
   Dependencies:
 
@@ -233,7 +233,7 @@ The following list provides the common scenarios for`teamsfx preview:
   teamsfx preview --local --browser chrome
   ```
 
-* Remote Preview
+* Remote preview
 
   ```bash
   teamsfx preview --remote
@@ -338,7 +338,7 @@ TeamsFx CLI provides `teamsFx permission` commands for collaboration scenarios.
 
 The following list provides required permissions for `TeamsFx` projects:
 
-* Grant Permission
+* Grant permission
 
   Project creator and collaborators can use `teamsfx permission grant` command to add a new collaborator to the project:
 
@@ -348,7 +348,7 @@ The following list provides required permissions for `TeamsFx` projects:
 
   After receiving required permission, project creator and collaborators can share the project with the new collaborator by GitHub, and the new collaborator can have all the permissions for Microsoft 365 account.
 
-* Show Permission Status
+* Show permission status
 
   Project creator and collaborators can use `teamsfx permission status` command to view Microsoft 365 account permission for specific env:
 
@@ -356,7 +356,7 @@ The following list provides required permissions for `TeamsFx` projects:
   teamsfx permission status --env dev
   ```
 
-* List All Collaborators
+* List all collaborators
 
   Project creator and collaborators can use `teamsfx permission status` command to view all collaborators for specific env:
 
@@ -405,7 +405,7 @@ The following list provides required permissions for `TeamsFx` projects:
 
     * To push your project to GitHub
 
-  * As a Project Collaborator:
+  * As a project collaborator:
 
     * Clone the project from GitHub.
     * Log in to Microsoft 365 account. Ensure that the same Microsoft 365 account is added:
@@ -434,7 +434,7 @@ The following list provides required permissions for `TeamsFx` projects:
     * Update Tab code, and deploy the project to remote.
     * Launch remote and the project.
 
-## Deploy to azure web app manually
+## Deploy to Azure web app manually
 
 1. Create a SSO enable tab.
 2. Provision your project:
@@ -457,7 +457,7 @@ The following list provides required permissions for `TeamsFx` projects:
 
 ## See also
 
-* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
+* [Teams Toolkit overview](teams-toolkit-fundamentals.md)
 * [TeamsFx SDK for TypeScript or JavaScript](TeamsFx-SDK.md)
 * [Manage multiple environments in Teams Toolkit](TeamsFx-multi-env.md)
 * [Collaborate on Teams project using Teams Toolkit](TeamsFx-collaboration.md)
