@@ -9,9 +9,30 @@ keywords: TeamsJS Teams JavaScript library capability Microsoft 365 M365
 ---
 # TeamsJS capability support across Microsoft 365
 
-TeamsJS v2.0 introduces the ability for certain types of Teams apps to run across the Microsoft 365 ecosystem. Currently, other Microsoft 365 application hosts (including Microsoft 365 app and Outlook) for Teams apps support a subset of the application types and capabilities you can build for the Teams platform. This support will expand over time. For a summary of host support for Teams apps, see [Extend Teams apps across Microsoft 365](../../m365-apps/overview.md).
+Starting with version 2.0.0, Teams JavaScript client library (TeamsJS) enables [certain types of Teams apps](./overview.md) to run across the Microsoft 365 ecosystem. Currently, Microsoft 365 application hosts (Microsoft 365 app and Outlook) for Teams apps support a subset of the application types and capabilities you can build for the Teams platform. This support will expand over time.
 
-This article details the level of support of Teams JavaScript client (TeamsJS) library capabilities across various Microsoft 365 host applications.
+This article details the level of support of Teams JavaScript client (TeamsJS) library capabilities for tab apps and dialogs (task modules) across various Microsoft 365 host applications.
+
+> [!TIP]
+> You can check for host support of a given capability at runtime by calling the `isSupported()` function on that capability (namespace or subnamespace).
+
+The following table lists TeamsJS capabilities (public namespaces) and their support across Microsoft 365 hosts. For readability, Microsoft 365 hosts are signified by the following product icons:
+
+| | |
+|----------|------------|
+| Microsoft Teams | :::image type="content" source="{source}" alt-text="{alt-text}"::: |
+| Microsoft 365 app | :::image type="content" source="{source}" alt-text="{alt-text}"::: |
+| Outlook | :::image type="content" source="{source}" alt-text="{alt-text}":::|
+
+
+| Microsoft Teams | Microsoft 365 app | Outlook |
+|- | - | - |
+| :::image type="content" source="{source}" alt-text="{alt-text}"::: | :::image type="content" source="{source}" alt-text="{alt-text}"::: | :::image type="content" source="{source}" alt-text="{alt-text}"::: |
+
+
+- Microsoft Teams :::image type="content" source="{source}" alt-text="{alt-text}":::
+- Microsoft 365 app :::image type="content" source="{source}" alt-text="{alt-text}":::
+- Outlook :::image type="content" source="{source}" alt-text="{alt-text}":::
 
 <br />
 <table border>
