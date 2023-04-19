@@ -482,31 +482,31 @@ Namespace to interact with app initialization and lifecycle.
 
 [Reference](/javascript/api/@microsoft/teams-js/appinstalldialog) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teamsjs-cc-app/tabs/src/components/capabilities/AppInstallDialog.tsx)
 
-TODO: Description
+Namespace used to open a dialog for installing an application.
 
 ## `authentication`
 
 [Reference](/javascript/api/@microsoft/teams-js/authentication)
 
-TODO: Description
+Namespace to interact with the authentication-specific part of the SDK. This module is used for starting or completing authentication flows.
 
 ## `barCode`
 
 [Reference](/javascript/api/@microsoft/teams-js/barcode)
 
-TODO: Description
+Namespace to interact with the barcode scanning-specific part of the SDK.
 
 ## `calendar`
 
 [Reference](/javascript/api/@microsoft/teams-js/calendar)
 
-TODO: Description
+Namespace providing calendar-specific functionality.
 
 ## `call`
 
 [Reference](/javascript/api/@microsoft/teams-js/call) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teamsjs-cc-app/tabs/src/components/capabilities/Call.tsx)
 
-TODO: Description
+Namespace providing functionality to start a call with others.
 
 ## `chat`
 
@@ -515,7 +515,7 @@ TODO: Description
 > [!IMPORTANT]
 > This namespace is in preview and subject to change based on feedback. Please do not use in production.
 
-Contains functionality to start chat with others.
+Namespace providing functionality to start a chat with others.
 
 ## `dialog`
 
@@ -544,18 +544,18 @@ This group of capabilities enables apps to show modal dialogs. There are two pri
         </tr>
         <tr>
             <td></td>
-            <td><image alt="Teams" src="./images/teams-thumb.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft365-thumb.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-thumb.png"/></td>
-            <td><image alt="Teams" src="./images/teams-thumb.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft365-thumb.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-thumb.png"/></td>
-            <td><image alt="Teams" src="./images/teams-thumb.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft365-thumb.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-thumb.png"/></td>
-            <td><image alt="Teams" src="./images/teams-thumb.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft365-thumb.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-thumb.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
         </tr>
     </thead>
     <tbody>
@@ -623,29 +623,31 @@ Namespace to interact with the geoLocation module-specific part of the SDK. This
 > [!CAUTION]
 > This namespace is slated for deprecation. It is currently supported for backwards compability purposes. For new apps, please use the [geoLocation](#geoLocation) capability.
 
+Deprecated. Namespace providing location-specific functionality (get and show location). Please use [geoLocation](#geoLocation) for new apps.
+
 ## `mail`
 
 [Reference](/javascript/api/@microsoft/teams-js/mail)
 
-TODO: Description
+Namespace providing email-specific functionality.
 
 ## `media`
 
 [Reference](/javascript/api/@microsoft/teams-js/media)
 
-TODO: Description
+Namespace providing image file-related functionality.
 
 ## `meeting`
 
 [Reference](/javascript/api/@microsoft/teams-js/meeting)
 
-TODO: Description
+Namespace providing in-meeting app functionality.
 
 ## `menus`
 
 [Reference](/javascript/api/@microsoft/teams-js/menus) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teamsjs-cc-app/tabs/src/components/capabilities/Menus.tsx)
 
-Namespace to interact with the menu-specific part of the SDK. This object is used to show View Configuration, Action Menu and Navigation Bar Menu.
+Namespace to interact with the menu-specific part of the SDK. This module is used to show View Configuration, Action Menu and Navigation Bar Menu.
 
 ## `monetization`
 
@@ -741,7 +743,7 @@ Provides APIs for querying and navigating between contextual tabs of an applicat
 
 [Reference](/javascript/api/@microsoft/teams-js/people) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teamsjs-cc-app/tabs/src/components/capabilities/People.tsx)
 
-TODO: description
+Namespace providing functionality for [People Picker API](/concepts/device-capabilities/people-picker-capability).
 
 ## `profile`
 
@@ -750,7 +752,7 @@ TODO: description
 > [!IMPORTANT]
 > This namespace is in preview and subject to change based on feedback. Please do not use in production.
 
-TODO: Description
+Namespace providing for profile-related functionality.
 
 ## `search`
 
@@ -759,16 +761,16 @@ TODO: Description
 > [!IMPORTANT]
 > This namespace is in preview and subject to change based on feedback. Please do not use in production.
 
-TODO: Description
+Allows your application to interact with the host Microsoft 365 application's search box. By integrating your application with the host's search box, users can search your app using the same search box they use elsewhere in Teams, Outlook, or Microsoft 365 app.
 
 ## `settings`
 
 [Reference](/javascript/api/@microsoft/teams-js/settings)
 
 > [!CAUTION]
-> This namespace is slated for deprecation. It is currently supported for backwards compability purposes. For new apps, please use the [geoLocation](#geoLocation) capability.
+> This namespace is slated for deprecation. It is currently supported for backwards compability purposes. For new apps, please use equivalent APIs from the [pages](#pages) capability.
 
-TODO: Description
+Deprecated. Provides settings-related functionality. Please use equivalent APIs from the [pages](#pages) for new apps.
 
 ## `sharing`
 
