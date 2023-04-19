@@ -19,9 +19,7 @@ Following are the different scenarios:
 
 **LOB scenarios**
 
-The following data sources are supported primarily for the in-line media playback:
-
-* Video or audio files are directly uploaded to OneDrive or SharePoint and accessible within the tenant and Adaptive Cards plays the file through OnePlayer.
+Video or audio files are directly uploaded to OneDrive or SharePoint and accessible within the tenant and Adaptive Cards plays the file through OnePlayer.
 
 **Third party partner scenarios**
 
@@ -59,11 +57,11 @@ After you created an Adaptive Cards using [Teams Developer Portal](https://dev.t
 
 1. Add your media file url in the `URL` of Adaptive Cards media element properties.
 
-1. Add image url in the `poster` of Adaptive Cards media element properties. For more information, see [Adaptive Cards media](https://adaptivecards.io/explorer/Media.html).
+1. Add image url in the `Poster URL` of Adaptive Cards media element properties. For more information, see [Adaptive Cards media](https://adaptivecards.io/explorer/Media.html).
 
    :::image type="content" source="../../assets/images/media-elements-in-adaptive-cards/media-elements.jpg" alt-text="Screenshot shows you the Adaptive Cards with media elements.":::
 
-### Code example
+### Example
 
 The following code shows an example of an Adaptive Cards with media elements:
 
