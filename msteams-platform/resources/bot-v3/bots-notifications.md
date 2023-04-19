@@ -125,7 +125,7 @@ bot.on('conversationUpdate', (msg) => {
 }
 ```
 
-### User Added to a meeting
+### User added to a meeting
 
 The `conversationUpdate` event with the `membersAdded` object in the payload is sent when a user is added to a private scheduled meeting. The event details will be sent even when anonymous users join the meeting.
 
@@ -182,7 +182,7 @@ Your bot receives a `conversationUpdate` with `membersAdded` when a user adds it
 > [!NOTE]
 > For personal scoped bots, your bot will  receive the `conversationUpdate` event multiple times, even if the bot is removed and re-added. For development and testing you may find it useful to add a helper function that will allow you to reset your bot completely. See a [Node.js example](https://github.com/OfficeDev/microsoft-teams-sample-complete-node/blob/master/src/middleware/SimulateResetBotChat.ts) or [C# example](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/master/template-bot-master-csharp/src/controllers/MessagesController.cs#L238) for more details on implementing this.
 
-#### Schema example: bot added to personal context
+#### Schema example: Bot added to personal context
 
 ```json
 {
@@ -487,7 +487,7 @@ The `messageReaction` event is sent when a user adds or removes his or her react
 }
 ```
 
-### Schema example: A user un-likes a message
+### Schema example: A user unlikes a message
 
 ```json
 {
