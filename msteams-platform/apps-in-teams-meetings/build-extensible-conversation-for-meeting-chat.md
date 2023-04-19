@@ -30,7 +30,7 @@ The [Bot Framework](https://dev.botframework.com/) is a rich SDK used to create 
 
 Message extensions allow the users to interact with your web service through buttons and forms in the Teams client. Users can search or initiate actions in an external system from the compose message area, the command box, or directly from a message. You can send back the results of that interaction to the Teams client in the form of a richly formatted card. Implementing message extensions for meeting chats is no different than regular chats. To implement message extension, start with [message extensions](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions?tabs=dotnet).
 
-## Cards and Task modules
+## Cards and task modules
 
 Cards provide users with various visual, audio, and selectable messages and help in conversation flow. With task modules, you can create modal pop-up experiences in Teams. They're useful for starting and completing the tasks, or displaying rich information like videos or Power business intelligence (BI) dashboards. For more information, see [building cards and task modules](/microsoftteams/platform/task-modules-and-cards/cards-and-task-modules).
 

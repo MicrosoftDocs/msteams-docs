@@ -40,7 +40,7 @@ Teams admins can use the Teams admin center to enable or disable anonymous user 
 
 To test your apps experience for anonymous users, select the URL in the meeting invite and join the meeting from a private browser window.
 
-## In-Meeting getContext from Teams client library
+## In-meeting getContext from Teams client library
 
 Apps receive the following information for an anonymous user when they call the `getContext` API from the [shared app stage](~/apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md). You can recognize anonymous users by checking for a `userLicenseType` value of `Anonymous`.
 
