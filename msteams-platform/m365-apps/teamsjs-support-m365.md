@@ -18,21 +18,14 @@ This article details the level of support of Teams JavaScript client (TeamsJS) l
 
 The following table lists TeamsJS capabilities (public namespaces) and their support across Microsoft 365 hosts. For readability, Microsoft 365 hosts are signified by the following product icons:
 
-| | |
-|----------|------------|
-| Microsoft Teams | :::image type="content" source="{source}" alt-text="{alt-text}"::: |
-| Microsoft 365 app | :::image type="content" source="{source}" alt-text="{alt-text}"::: |
-| Outlook | :::image type="content" source="{source}" alt-text="{alt-text}":::|
-
-
 | Microsoft Teams | Microsoft 365 app | Outlook |
 |- | - | - |
-| :::image type="content" source="{source}" alt-text="{alt-text}"::: | :::image type="content" source="{source}" alt-text="{alt-text}"::: | :::image type="content" source="{source}" alt-text="{alt-text}"::: |
+| :::image type="content" source="./images/teams-thumb.png" alt-text="{alt-text}"::: | :::image type="content" source="./images/microsoft365-thumb.png" alt-text="{alt-text}"::: | :::image type="content" source="./images/outlook-thumb.png" alt-text="{alt-text}"::: |
 
 
-- Microsoft Teams :::image type="content" source="{source}" alt-text="{alt-text}":::
-- Microsoft 365 app :::image type="content" source="{source}" alt-text="{alt-text}":::
-- Outlook :::image type="content" source="{source}" alt-text="{alt-text}":::
+- Microsoft Teams :::image type="content" source="./images/teams-thumb.png" alt-text="{alt-text}":::
+- Microsoft 365 app :::image type="content" source="./images/microsoft365-thumb.png" alt-text="{alt-text}":::
+- Outlook :::image type="content" source="./images/outlook-thumb.png" alt-text="{alt-text}":::
 
 <br />
 <table border>
