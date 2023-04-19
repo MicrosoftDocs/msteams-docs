@@ -1,11 +1,11 @@
 ---
-title: Channel and Group chat conversations with bots
+title: Channel and group chat conversations with bots
 description: In this module, learn end-to-end scenario of having a conversation with a bot in a channel in Microsoft Teams
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/25/2019
 ---
-# Channel and Group chat conversations with a Microsoft Teams bot
+# Channel and group chat conversations with a Microsoft Teams bot
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
