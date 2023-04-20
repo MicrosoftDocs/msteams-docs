@@ -11,18 +11,25 @@ keywords: TeamsJS Teams JavaScript library capability Microsoft 365 M365
 
 Starting with version 2.0.0, Teams JavaScript client library (TeamsJS) enables [certain types of Teams apps](./overview.md) to run across the Microsoft 365 ecosystem. Currently, Microsoft 365 application hosts (Microsoft 365 app and Outlook) for Teams apps support a subset of the application types and capabilities you can build for the Teams platform. This support will expand over time.
 
-This article details the level of support of Teams JavaScript client (TeamsJS) library capabilities for tab apps and dialogs (task modules) across various Microsoft 365 host applications.
+This article details the level of support of Teams JavaScript client (TeamsJS) library capabilities for *personal scope* tab apps and dialogs (task modules) across various Microsoft 365 host applications.
 
 > [!TIP]
 > You can check for host support of a given capability at runtime by calling the `isSupported()` function on that capability (namespace or subnamespace).
 
-The following table lists TeamsJS capabilities (public namespaces) and their support across Microsoft 365 hosts. For readability, Microsoft 365 hosts are signified by the following product icons:
+The *TeamsJS Capability* table below lists TeamsJS capabilities (public namespaces) and their support across Microsoft 365 hosts. Some capabilties are marked with  "Deprecated" or "Preview" badges, which have the following meanings:
+
+| Badge | Meaning |
+| - | - |
+| Preview :::image type="content" source="./images/preview-badge.png" alt-text="Image with the word 'Preview' inside a blue rectangle"::: | This capability is in preview and subject to change based on feedback. Please do not use in production. |
+| Deprecated :::image type="content" source="./images/deprecated-badge.png" alt-text="Image with the word 'Deprecated' inside an orange rectangle"::: | This capability is deprecated in favor of newer functionality, though  supported for backwards compability purposes. For new apps, please use the capability recommended in the usage notes of the deprecated capability. |
+
+For readability, Microsoft 365 hosts are signified by the following product icons:
 
 | Microsoft Teams | Microsoft 365 app | Microsoft Outlook |
-|- | - | - |
+| :-: | :-: | :-: |
 | :::image type="content" source="./images/teams-icon.png" alt-text="Microsoft Teams icon"::: | :::image type="content" source="./images/microsoft-365-icon.png" alt-text="Microsoft 365 app icon"::: | :::image type="content" source="./images/outlook-icon.png" alt-text="Microsoft Outlook icon"::: |
 
-Click on any TeamsJS Capability to find resources on usage and host support details of its subcapabilities (if any).
+Entries marked with a check and asterisk (&#x2713;*) indicate support for that host is available only to preview audiences. Click on any TeamsJS Capability to find further details, including host version availability, recommended alternative capability or APIs (for deprecated capabilities), usage notes, and further resources.
 
 <br />
 <table border>
@@ -73,7 +80,7 @@ Click on any TeamsJS Capability to find resources on usage and host support deta
             <td>&#x2713;</td>
         </tr>
         <tr>
-            <th><a href="#appinitialization">appInitialization</a><img src="./images/deprecated-badge.png" alt="Badge indicating this capability is slated for deprecation" /></th>
+            <th><a href="#appinitialization">appInitialization</a><img src="./images/deprecated-badge.png" alt="Badge indicating this capability is deprecated" /></th>
             <td>&#x2713;</td>
             <td></td>
             <td></td>
@@ -208,7 +215,7 @@ Click on any TeamsJS Capability to find resources on usage and host support deta
             <td></td>
         </tr>
         <tr>
-            <th><a href="#location">location</a><img src="./images/deprecated-badge.png" alt="Badge indicating this capability is slated for deprecation" /></th>
+            <th><a href="#location">location</a><img src="./images/deprecated-badge.png" alt="Badge indicating this capability is deprecated" /></th>
             <td>&#x2713;</td>
             <td></td>
             <td></td>
@@ -343,7 +350,7 @@ Click on any TeamsJS Capability to find resources on usage and host support deta
             <td></td>
         </tr>
         <tr>
-            <th><a href="#settings">settings</a><img src="./images/deprecated-badge.png" alt="Badge indicating this capability is slated for deprecation" /></th>
+            <th><a href="#settings">settings</a><img src="./images/deprecated-badge.png" alt="Badge indicating this capability is  deprecated" /></th>
             <td>&#x2713;</td>
             <td></td>
             <td></td>
@@ -388,7 +395,7 @@ Click on any TeamsJS Capability to find resources on usage and host support deta
             <td></td>
         </tr>
         <tr>
-            <th><a href="#tasks">tasks</a><img src="./images/deprecated-badge.png" alt="Badge indicating this capability is slated for deprecation" /></th>
+            <th><a href="#tasks">tasks</a><img src="./images/deprecated-badge.png" alt="Badge indicating this capability is deprecated" /></th>
             <td>&#x2713;</td>
             <td></td>
             <td></td>
@@ -547,7 +554,7 @@ Deprecated. Namespace for initializting an app. For new apps, please use [app.in
     </thead>
     <tbody>
         <tr>
-            <th>appInitialization</th>
+            <th>appInitialization <img src="./images/deprecated-badge.png" alt="Badge indicating this capability is deprecated" /></th>
             <td></td>
             <td></td>
             <td></td>
@@ -682,7 +689,7 @@ Namespace to interact with the authentication-specific part of the library. This
 
 [Reference](/javascript/api/@microsoft/teams-js/barcode)
 
-Namespace to interact with the barcode scanning-specific part of the library.
+Preview. Namespace to interact with the barcode scanning-specific part of the library.
 
 <br />
 <table border>
@@ -718,7 +725,7 @@ Namespace to interact with the barcode scanning-specific part of the library.
     </thead>
     <tbody>
         <tr>
-            <th>barCode</th>
+            <th>barCode <img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
             <td></td>
             <td></td>
             <td></td>
@@ -853,10 +860,7 @@ Namespace providing functionality to start a call with others.
 
 [Reference](/javascript/api/@microsoft/teams-js/chat) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teamsjs-cc-app/tabs/src/components/capabilities/Chat.tsx)
 
-> [!IMPORTANT]
-> This namespace is in preview and subject to change based on feedback. Please do not use in production.
-
-Namespace providing functionality to start a chat with others.
+Preview. Namespace providing functionality to start a chat with others.
 
 <br />
 <table border>
@@ -892,7 +896,7 @@ Namespace providing functionality to start a chat with others.
     </thead>
     <tbody>
         <tr>
-            <th>chat</th>
+            <th>chat <img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
             <td></td>
             <td></td>
             <td></td>
@@ -913,7 +917,7 @@ Namespace providing functionality to start a chat with others.
 
 [Reference](/javascript/api/@microsoft/teams-js/dialog) | Sample
 
-This group of capabilities enables apps to show modal dialogs. There are two primary types of dialogs: URL-based dialogs and Adaptive Card dialogs. Both types of dialogs are shown on top of your app, preventing interaction with your app while they are displayed.
+Preview. This group of capabilities enables apps to show modal dialogs. There are two primary types of dialogs: URL-based dialogs and Adaptive Card dialogs. Both types of dialogs are shown on top of your app, preventing interaction with your app while they are displayed.
 
 - URL-based dialogs allow you to specify a URL from which the contents will be shown inside the dialog. For URL dialogs, use the functions and interfaces in the url namespace.
 - Adaptive Card-based dialogs allow you to provide JSON describing an Adaptive Card that will be shown inside the dialog. For Adaptive Card dialogs, use the functions and interfaces in the adaptiveCard namespace.
@@ -952,7 +956,7 @@ This group of capabilities enables apps to show modal dialogs. There are two pri
     </thead>
     <tbody>
         <tr>
-            <th>dialog</th>
+            <th>dialog <img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
             <td></td>
             <td></td>
             <td></td>
@@ -982,7 +986,7 @@ This group of capabilities enables apps to show modal dialogs. There are two pri
             <td></td>
         </tr>
         <tr>
-            <th><a href="#dialogurl">dialog.url</a></th>
+            <th><a href="#dialogurl">dialog.url</a><img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
@@ -1003,14 +1007,11 @@ This group of capabilities enables apps to show modal dialogs. There are two pri
 
 [Reference](/javascript/api/@microsoft/teams-js/dialog.adaptivecard) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teamsjs-cc-app/tabs/src/components/capabilities/Dialog.AdaptiveCard.tsx)
 
-> [!IMPORTANT]
-> This namespace is in preview and subject to change based on feedback. Please do not use in production.
-
-Subcapability for interacting with adaptive card dialogs.
+Preview. Subcapability for interacting with adaptive card dialogs.
 
 ### `dialog.url`
 
-Subcapability for interacting with URL-based dialogs.
+Preview. Subcapability for interacting with URL-based dialogs.
 
 [Reference](/javascript/api/@microsoft/teams-js/dialog.url) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teamsjs-cc-app/tabs/src/components/capabilities/Dialog.tsx)
 
@@ -1018,10 +1019,7 @@ Subcapability for interacting with URL-based dialogs.
 
 [Reference](/javascript/api/@microsoft/teams-js/geolocation) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teamsjs-cc-app/tabs/src/components/capabilities/GeoLocation.tsx)
 
-> [!IMPORTANT]
-> This namespace is in preview and subject to change based on feedback. Please do not use in production.
-
-Namespace to interact with the geoLocation module-specific part of the library. This is the newer version of location module.
+Preview. Namespace to interact with the geoLocation module-specific part of the library. This is the newer version of location module.
 
 <br />
 <table border>
@@ -1057,7 +1055,7 @@ Namespace to interact with the geoLocation module-specific part of the library. 
     </thead>
     <tbody>
         <tr>
-            <th>geoLocation</th>
+            <th>geoLocation <img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
             <td></td>
             <td></td>
             <td></td>
@@ -1077,9 +1075,6 @@ Namespace to interact with the geoLocation module-specific part of the library. 
 ## `location`
 
 [Reference](/javascript/api/@microsoft/teams-js/location)
-
-> [!CAUTION]
-> This namespace is slated for deprecation. It is currently supported for backwards compability purposes. For new apps, please use the [geoLocation](#geolocation) capability.
 
 Deprecated. Namespace providing location-specific functionality (get and show location). Please use [geoLocation](#geolocation) for new apps.
 
@@ -1117,7 +1112,7 @@ Deprecated. Namespace providing location-specific functionality (get and show lo
     </thead>
     <tbody>
         <tr>
-            <th>location</th>
+            <th>location <img src="./images/deprecated-badge.png" alt="Badge indicating this capability is deprecated" /></th>
             <td></td>
             <td></td>
             <td></td>
@@ -1522,10 +1517,7 @@ Namespace providing functionality for [People Picker API](../concepts/device-cap
 
 [Reference](/javascript/api/@microsoft/teams-js/profile)
 
-> [!IMPORTANT]
-> This namespace is in preview and subject to change based on feedback. Please do not use in production.
-
-Namespace providing for profile-related functionality.
+Preview. Namespace providing for profile-related functionality.
 
 <br />
 <table border>
@@ -1561,7 +1553,7 @@ Namespace providing for profile-related functionality.
     </thead>
     <tbody>
         <tr>
-            <th>profile</th>
+            <th>profile <img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
             <td></td>
             <td></td>
             <td></td>
@@ -1582,10 +1574,7 @@ Namespace providing for profile-related functionality.
 
 [Reference](/javascript/api/@microsoft/teams-js/search)
 
-> [!IMPORTANT]
-> This namespace is in preview and subject to change based on feedback. Please do not use in production.
-
-Allows your application to interact with the host Microsoft 365 application's search box. By integrating your application with the host's search box, users can search your app using the same search box they use elsewhere in Teams, Outlook, or Microsoft 365 app.
+Preview. Allows your application to interact with the host Microsoft 365 application's search box. By integrating your application with the host's search box, users can search your app using the same search box they use elsewhere in Teams, Outlook, or Microsoft 365 app.
 
 <br />
 <table border>
@@ -1621,7 +1610,7 @@ Allows your application to interact with the host Microsoft 365 application's se
     </thead>
     <tbody>
         <tr>
-            <th>search</th>
+            <th>search <img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
             <td></td>
             <td></td>
             <td></td>
@@ -1641,9 +1630,6 @@ Allows your application to interact with the host Microsoft 365 application's se
 ## `settings`
 
 [Reference](/javascript/api/@microsoft/teams-js/settings)
-
-> [!CAUTION]
-> This namespace is slated for deprecation. It is currently supported for backwards compability purposes. For new apps, please use equivalent APIs from the [pages](#pages) capability.
 
 Deprecated. Provides settings-related functionality. Please use equivalent APIs from the [pages](#pages) for new apps.
 
@@ -1681,7 +1667,7 @@ Deprecated. Provides settings-related functionality. Please use equivalent APIs 
     </thead>
     <tbody>
         <tr>
-            <th>settings</th>
+            <th>settings <img src="./images/deprecated-badge.png" alt="Badge indicating this capability is deprecated" /></th>
             <td></td>
             <td></td>
             <td></td>
@@ -1759,10 +1745,7 @@ Namespace to open a share dialog for web content. For more info, see [Share to T
 
 [Reference](/javascript/api/@microsoft/teams-js/stageview) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teamsjs-cc-app/tabs/src/components/capabilities/StageView.tsx)
 
-> [!IMPORTANT]
-> This namespace is in preview and subject to change based on feedback. Please do not use in production.
-
-Namespace to interact with the stage view specific part of the library.
+Preview. Namespace to interact with the stage view specific part of the library.
 
 <br />
 <table border>
@@ -1798,7 +1781,7 @@ Namespace to interact with the stage view specific part of the library.
     </thead>
     <tbody>
         <tr>
-            <th>stageView</th>
+            <th>stageView <img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
             <td></td>
             <td></td>
             <td></td>
@@ -1817,12 +1800,9 @@ Namespace to interact with the stage view specific part of the library.
 
 ## `tasks`
 
-[Reference](/javascript/api/@microsoft/teams-js/tasks) | Sample
+[Reference](/javascript/api/@microsoft/teams-js/tasks)
 
-> [!CAUTION]
-> This namespace is slated for deprecation. It is currently supported for backwards compability purposes. For new apps, please use the [dialog](#dialog) capability.
-
-Earlier version of the capability for providing modal dialog (task module) support, prior to TeamsJS v2.8.0.
+Earlier version of the capability for providing modal dialog (task module) support, prior to TeamsJS v2.8.0. For new apps, please use the [dialog](#dialog) capability.
 
 <br />
 <table border>
@@ -1858,7 +1838,7 @@ Earlier version of the capability for providing modal dialog (task module) suppo
     </thead>
     <tbody>
         <tr>
-            <th>tasks</th>
+            <th>tasks <img src="./images/deprecated-badge.png" alt="Badge indicating this capability is deprecated" /></th>
             <td></td>
             <td></td>
             <td></td>
@@ -1936,10 +1916,7 @@ Namespace containing the set of APIs that support Teams-specific functionalities
 
 [Reference](/javascript/api/@microsoft/teams-js/video) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teamsjs-cc-app/tabs/src/components/capabilities/Video.tsx)
 
-> [!IMPORTANT]
-> This namespace is in preview and subject to change based on feedback. Please do not use in production.
-
-Namespace to video extensibility of the library.
+Preview. Namespace to video extensibility of the library.
 
 <br />
 <table border>
@@ -1975,7 +1952,7 @@ Namespace to video extensibility of the library.
     </thead>
     <tbody>
         <tr>
-            <th>video</th>
+            <th>video <img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
             <td></td>
             <td></td>
             <td></td>
@@ -1996,10 +1973,7 @@ Namespace to video extensibility of the library.
 
 [Reference](/javascript/api/@microsoft/teams-js/webstorage) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teamsjs-cc-app/tabs/src/components/capabilities/WebStorage.tsx)
 
-> [!IMPORTANT]
-> This namespace is in preview and subject to change based on feedback. Please do not use in production.
-
-Contains functionality to allow web apps to store data in webview cache.
+Preview. Contains functionality to allow web apps to store data in webview cache.
 
 <br />
 <table border>
@@ -2035,7 +2009,7 @@ Contains functionality to allow web apps to store data in webview cache.
     </thead>
     <tbody>
         <tr>
-            <th>webStorage</th>
+            <th>webStorage <img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
             <td></td>
             <td></td>
             <td></td>
