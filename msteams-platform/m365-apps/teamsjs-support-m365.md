@@ -20,7 +20,7 @@ The following table lists TeamsJS capabilities (public namespaces) and their sup
 
 | Microsoft Teams | Microsoft 365 app | Microsoft Outlook |
 |- | - | - |
-| :::image type="content" source="./images/teams-icon.png" alt-text="Microsoft Teams icon"::: | :::image type="content" source="./images/microsoft-365-icon.png" alt-text="Microsoft 365 app icon"::: | :::image type="content" source="./images/outlook-icon.png" alt-text="Microsoft Outlook icon"::: |
+| :::image type="content" source="./images/teams-icon.png" alt="Microsoft Teams icon"::: | :::image type="content" source="./images/microsoft-365-icon.png" alt="Microsoft 365 app icon"::: | :::image type="content" source="./images/outlook-icon.png" alt="Microsoft Outlook icon"::: |
 
 Click on any TeamsJS Capability to find resources on usage and host support details of its subcapabilities (if any).
 
@@ -73,7 +73,7 @@ Click on any TeamsJS Capability to find resources on usage and host support deta
             <td>&#x2713;</td>
         </tr>
         <tr>
-            <th><a href="#appinitialization">appInitialization</a><img src="./images/deprecated-badge.png" alt-text="Badge indicating this capability is slated for deprecation" /> /></th>
+            <th><a href="#appinitialization">appInitialization</a><img src="./images/deprecated-badge.png" alt="Badge indicating this capability is slated for deprecation" /></th>
             <td>&#x2713;</td>
             <td></td>
             <td></td>
@@ -118,7 +118,7 @@ Click on any TeamsJS Capability to find resources on usage and host support deta
             <td>&#x2713;</td>
         </tr>
         <tr>
-            <th><a href="#barcode">barCode</a><img src="./images/preview-badge.png" alt-text="Badge indicating this capability is in preview" /></th>
+            <th><a href="#barcode">barCode</a><img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
             <td></td>
             <td></td>
             <td></td>
@@ -163,7 +163,7 @@ Click on any TeamsJS Capability to find resources on usage and host support deta
             <td></td>
         </tr>
         <tr>
-            <th><a href="#chat">chat</a><img src="./images/preview-badge.png" alt-text="Badge indicating this capability is in preview" /></th>
+            <th><a href="#chat">chat</a><img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
             <td>&#x2713;</td>
             <td></td>
             <td>&#x2713;</td>
@@ -178,7 +178,7 @@ Click on any TeamsJS Capability to find resources on usage and host support deta
             <td></td>
         </tr>
         <tr>
-            <th><a href="#dialog">dialog</a><img src="./images/preview-badge.png" alt-text="Badge indicating this capability is in preview" /></th>
+            <th><a href="#dialog">dialog</a><img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
@@ -193,7 +193,7 @@ Click on any TeamsJS Capability to find resources on usage and host support deta
             <td></td>
         </tr>
         <tr>
-            <th><a href="#geoLocation">geoLocation</a><img src="./images/preview-badge.png" alt-text="Badge indicating this capability is in preview" /></th>
+            <th><a href="#geolocation">geoLocation</a><img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
             <td></td>
             <td>&#x2713;</td>
             <td></td>
@@ -208,7 +208,7 @@ Click on any TeamsJS Capability to find resources on usage and host support deta
             <td></td>
         </tr>
         <tr>
-            <th><a href="#location">location</a><img src="./images/deprecated-badge.png" alt-text="Badge indicating this capability is slated for deprecation" /> /></th>
+            <th><a href="#location">location</a><img src="./images/deprecated-badge.png" alt="Badge indicating this capability is slated for deprecation" /></th>
             <td>&#x2713;</td>
             <td></td>
             <td></td>
@@ -313,7 +313,7 @@ Click on any TeamsJS Capability to find resources on usage and host support deta
             <td></td>
         </tr>
         <tr>
-            <th><a href="#profile">profile</a><img src="./images/preview-badge.png" alt-text="Badge indicating this capability is in preview" /></th>
+            <th><a href="#profile">profile</a><img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
             <td>&#x2713;</td>
             <td></td>
             <td></td>
@@ -328,7 +328,7 @@ Click on any TeamsJS Capability to find resources on usage and host support deta
             <td></td>
         </tr>
         <tr>
-            <th><a href="#search">search</a><img src="./images/preview-badge.png" alt-text="Badge indicating this capability is in preview" /></th>
+            <th><a href="#search">search</a><img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
             <td></td>
             <td></td>
             <td></td>
@@ -343,7 +343,7 @@ Click on any TeamsJS Capability to find resources on usage and host support deta
             <td></td>
         </tr>
         <tr>
-            <th><a href="#settings">settings</a><img src="./images/deprecated-badge.png" alt-text="Badge indicating this capability is slated for deprecation" /> /></th>
+            <th><a href="#settings">settings</a><img src="./images/deprecated-badge.png" alt="Badge indicating this capability is slated for deprecation" /></th>
             <td>&#x2713;</td>
             <td></td>
             <td></td>
@@ -373,7 +373,7 @@ Click on any TeamsJS Capability to find resources on usage and host support deta
             <td></td>
         </tr>
         <tr>
-            <th><a href="#stageview">stageView</a><img src="./images/preview-badge.png" alt-text="Badge indicating this capability is in preview" /></th>
+            <th><a href="#stageview">stageView</a><img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
             <td>&#x2713;</td>
             <td></td>
             <td></td>
@@ -388,7 +388,7 @@ Click on any TeamsJS Capability to find resources on usage and host support deta
             <td></td>
         </tr>
         <tr>
-            <th><a href="#tasks">tasks</a><img src="./images/deprecated-badge.png" alt-text="Badge indicating this capability is slated for deprecation" /> /></th>
+            <th><a href="#tasks">tasks</a><img src="./images/deprecated-badge.png" alt="Badge indicating this capability is slated for deprecation" /></th>
             <td>&#x2713;</td>
             <td></td>
             <td></td>
@@ -403,7 +403,7 @@ Click on any TeamsJS Capability to find resources on usage and host support deta
             <td></td>
         </tr>
         <tr>
-            <th><a href="#teamsCore">teamsCore</a></th>
+            <th><a href="#teamscore">teamsCore</a></th>
             <td>&#x2713;</td>
             <td></td>
             <td></td>
@@ -418,7 +418,7 @@ Click on any TeamsJS Capability to find resources on usage and host support deta
             <td></td>
         </tr>
         <tr>
-            <th><a href="#video">video</a><img src="./images/preview-badge.png" alt-text="Badge indicating this capability is in preview" /></th>
+            <th><a href="#video">video</a><img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
             <td>&#x2713;</td>
             <td></td>
             <td></td>
@@ -433,7 +433,7 @@ Click on any TeamsJS Capability to find resources on usage and host support deta
             <td></td>
         </tr>
         <tr>
-            <th><a href="#webStorage">webStorage</a><img src="./images/preview-badge.png" alt-text="Badge indicating this capability is in preview" /></th>
+            <th><a href="#webstorage">webStorage</a><img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
             <td></td>
             <td></td>
             <td></td>
@@ -952,7 +952,22 @@ This group of capabilities enables apps to show modal dialogs. There are two pri
     </thead>
     <tbody>
         <tr>
-            <th><a href="#dialogadaptivecard">dialog.adaptiveCard</a> <img src="./images/preview-badge.png" alt-text="Badge indicating this capability is in preview" /></th>
+            <th>dialog</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th><a href="#dialogadaptivecard">dialog.adaptiveCard</a> <img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
             <td></td>
             <td></td>
             <td></td>
@@ -1386,6 +1401,21 @@ Navigation-specific part of the TeamsJS library.
         </tr>
     </thead>
     <tbody>
+        <tr>
+            <th>pages</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
         <tr>
             <th><a href="pagescurrentapp">pages.currentApp</a></th>
             <td></td>
@@ -2032,5 +2062,5 @@ Contains functionality to allow web apps to store data in webview cache.
 
 * [Extend Teams apps across Microsoft 365](../../m365-apps/overview.md)
 * [Extend a Teams personal tab across Microsoft 365 app](../../m365-apps/extend-m365-teams-personal-tab.md)
-* [Teams JavaScript client library overview](./using-teams-client-library.md)
+* [Teams JavaScript client library overview](../tabs/how-to/using-teams-client-library.md)
 * [TeamsJS API Reference](/javascript/api/@microsoft/teams-js)
