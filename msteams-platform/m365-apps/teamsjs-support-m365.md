@@ -1417,7 +1417,7 @@ Navigation-specific part of the TeamsJS library.
             <td></td>
         </tr>
         <tr>
-            <th><a href="pagescurrentapp">pages.currentApp</a></th>
+            <th><a href="#pagescurrentapp">pages.currentApp</a></th>
             <td></td>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
@@ -1432,7 +1432,7 @@ Navigation-specific part of the TeamsJS library.
             <td></td>
         </tr>
         <tr>
-            <th><a href="pagestab">pages.tab</a></th>
+            <th><a href="#pagestab">pages.tab</a></th>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
@@ -1465,7 +1465,7 @@ Provides APIs for querying and navigating between contextual tabs of an applicat
 
 [Reference](/javascript/api/@microsoft/teams-js/people) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teamsjs-cc-app/tabs/src/components/capabilities/People.tsx)
 
-Namespace providing functionality for [People Picker API](../concepts/device-capabilities/people-picker-capability).
+Namespace providing functionality for [People Picker API](../concepts/device-capabilities/people-picker-capability.md).
 
 <br />
 <table border>
