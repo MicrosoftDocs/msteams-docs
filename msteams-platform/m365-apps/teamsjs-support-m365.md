@@ -111,18 +111,18 @@ Entries marked with a check and asterisk (&#x2713;*) indicate support for that h
         </tr>
         <tr>
             <th><a href="#authentication">authentication</a></th>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
         </tr>
         <tr>
             <th><a href="#barcode">barCode</a><img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
@@ -143,22 +143,22 @@ Entries marked with a check and asterisk (&#x2713;*) indicate support for that h
             <th><a href="#calendar">calendar</a></th>
             <td></td>
             <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
             <td>&#x2713;</td>
-            <td></td>
-            <td></td>
-            <td>&#x2713;</td>
-            <td></td>
-            <td></td>
-            <td>?</td>
-            <td></td>
-            <td></td>
-            <td>?</td>
         </tr>
         <tr>
             <th><a href="#call">call</a></th>
             <td>&#x2713;</td>
             <td></td>
-            <td>&#x2713;</td>
+            <td></td>
             <td>&#x2713;</td>
             <td></td>
             <td></td>
@@ -173,7 +173,7 @@ Entries marked with a check and asterisk (&#x2713;*) indicate support for that h
             <th><a href="#chat">chat</a><img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
             <td>&#x2713;</td>
             <td></td>
-            <td>&#x2713;</td>
+            <td></td>
             <td>&#x2713;</td>
             <td></td>
             <td></td>
@@ -191,7 +191,7 @@ Entries marked with a check and asterisk (&#x2713;*) indicate support for that h
             <td>&#x2713;</td>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
-            <td></td>
+            <td>&#x2713;</td>
             <td>&#x2713;</td>
             <td></td>
             <td></td>
@@ -204,7 +204,7 @@ Entries marked with a check and asterisk (&#x2713;*) indicate support for that h
             <td></td>
             <td>&#x2713;</td>
             <td></td>
-            <td></td>
+            <td>&#x2713;</td>
             <td>&#x2713;</td>
             <td></td>
             <td></td>
@@ -246,16 +246,16 @@ Entries marked with a check and asterisk (&#x2713;*) indicate support for that h
         </tr>
         <tr>
             <th><a href="#media">media</a></th>
-            <td>&#x2713;</td>
             <td></td>
             <td></td>
-            <td>&#x2713;</td>
             <td></td>
             <td></td>
-            <td>&#x2713;</td>
             <td></td>
             <td></td>
-            <td>&#x2713;</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
             <td></td>
             <td></td>
         </tr>
@@ -312,25 +312,25 @@ Entries marked with a check and asterisk (&#x2713;*) indicate support for that h
             <td>&#x2713;</td>
             <td></td>
             <td></td>
-            <td>?</td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
-            <td>?</td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
         </tr>
         <tr>
             <th><a href="#profile">profile</a><img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
-            <td>&#x2713;</td>
             <td></td>
             <td></td>
-            <td>&#x2713;</td>
             <td></td>
             <td></td>
-            <td>&#x2713;</td>
             <td></td>
             <td></td>
-            <td>&#x2713;</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
             <td></td>
             <td></td>
         </tr>
@@ -351,16 +351,16 @@ Entries marked with a check and asterisk (&#x2713;*) indicate support for that h
         </tr>
         <tr>
             <th><a href="#settings">settings</a><img src="./images/deprecated-badge.png" alt="Badge indicating this capability is  deprecated" /></th>
-            <td>&#x2713;</td>
             <td></td>
             <td></td>
-            <td>&#x2713;</td>
             <td></td>
             <td></td>
-            <td>&#x2713;</td>
             <td></td>
             <td></td>
-            <td>&#x2713;</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
             <td></td>
             <td></td>
         </tr>
@@ -372,10 +372,10 @@ Entries marked with a check and asterisk (&#x2713;*) indicate support for that h
             <td>&#x2713;</td>
             <td></td>
             <td></td>
-            <td>?</td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
-            <td>?</td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
         </tr>
@@ -387,10 +387,10 @@ Entries marked with a check and asterisk (&#x2713;*) indicate support for that h
             <td>&#x2713;</td>
             <td></td>
             <td></td>
-            <td>?</td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
-            <td>?</td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
         </tr>
@@ -417,10 +417,10 @@ Entries marked with a check and asterisk (&#x2713;*) indicate support for that h
             <td>&#x2713;</td>
             <td></td>
             <td></td>
-            <td>?</td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
-            <td>?</td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
         </tr>
@@ -432,10 +432,10 @@ Entries marked with a check and asterisk (&#x2713;*) indicate support for that h
             <td>&#x2713;</td>
             <td></td>
             <td></td>
-            <td>?</td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
-            <td>?</td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
         </tr>
@@ -992,11 +992,11 @@ Preview. This group of capabilities enables apps to show modal dialogs. There ar
             <td>&#x2713;</td>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
             <td></td>
-            <td>?</td>
             <td></td>
-            <td></td>
-            <td>?</td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
         </tr>
@@ -1442,27 +1442,27 @@ Prior to TeamsJS version 2.0, all deep linking scenarios were handled using `sha
         </tr>
         <tr>
             <th><a href="#pagescurrentapp">pages.currentApp</a></th>
-            <td></td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
             <td></td>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
             <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
         </tr>
         <tr>
             <th><a href="#pagestab">pages.tab</a></th>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
             <td></td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
             <td>&#x2713;</td>
             <td></td>
             <td></td>
