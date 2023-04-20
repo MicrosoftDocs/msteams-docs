@@ -42,18 +42,18 @@ Click on any TeamsJS Capability to find resources on usage and host support deta
         </tr>
         <tr>
             <td></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
         </tr>
     </thead>
     <tbody>
@@ -474,18 +474,18 @@ Namespace to interact with app initialization and lifecycle.
         </tr>
         <tr>
             <td></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
         </tr>
     </thead>
     <tbody>
@@ -531,18 +531,18 @@ Deprecated. Namespace for initializting an app. For new apps, please use [app.in
         </tr>
         <tr>
             <td></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
         </tr>
     </thead>
     <tbody>
@@ -588,18 +588,18 @@ Namespace used to open a dialog for installing an application.
         </tr>
         <tr>
             <td></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
         </tr>
     </thead>
     <tbody>
@@ -645,18 +645,18 @@ Namespace to interact with the authentication-specific part of the library. This
         </tr>
         <tr>
             <td></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
         </tr>
     </thead>
     <tbody>
@@ -702,18 +702,18 @@ Namespace to interact with the barcode scanning-specific part of the library.
         </tr>
         <tr>
             <td></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
         </tr>
     </thead>
     <tbody>
@@ -759,18 +759,18 @@ Namespace providing calendar-specific functionality.
         </tr>
         <tr>
             <td></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
         </tr>
     </thead>
     <tbody>
@@ -816,18 +816,18 @@ Namespace providing functionality to start a call with others.
         </tr>
         <tr>
             <td></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
         </tr>
     </thead>
     <tbody>
@@ -876,18 +876,18 @@ Namespace providing functionality to start a chat with others.
         </tr>
         <tr>
             <td></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
         </tr>
     </thead>
     <tbody>
@@ -936,18 +936,18 @@ This group of capabilities enables apps to show modal dialogs. There are two pri
         </tr>
         <tr>
             <td></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
         </tr>
     </thead>
     <tbody>
@@ -1041,18 +1041,18 @@ Namespace to interact with the geoLocation module-specific part of the library. 
         </tr>
         <tr>
             <td></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
         </tr>
     </thead>
     <tbody>
@@ -1101,18 +1101,18 @@ Deprecated. Namespace providing location-specific functionality (get and show lo
         </tr>
         <tr>
             <td></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
         </tr>
     </thead>
     <tbody>
@@ -1158,18 +1158,18 @@ Namespace providing email-specific functionality.
         </tr>
         <tr>
             <td></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
         </tr>
     </thead>
     <tbody>
@@ -1215,18 +1215,18 @@ Namespace providing image file-related functionality.
         </tr>
         <tr>
             <td></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
         </tr>
     </thead>
     <tbody>
@@ -1272,18 +1272,18 @@ Namespace providing in-meeting app functionality.
         </tr>
         <tr>
             <td></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
         </tr>
     </thead>
     <tbody>
@@ -1329,18 +1329,18 @@ Namespace to interact with the menu-specific part of the library. This module is
         </tr>
         <tr>
             <td></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
         </tr>
     </thead>
     <tbody>
@@ -1386,18 +1386,18 @@ Navigation-specific part of the TeamsJS library.
         </tr>
         <tr>
             <td></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
         </tr>
     </thead>
     <tbody>
@@ -1417,7 +1417,7 @@ Navigation-specific part of the TeamsJS library.
             <td></td>
         </tr>
         <tr>
-            <th><a href="pagescurrentapp">pages.currentApp</a></th>
+            <th><a href="pages.currentapp">pages.currentApp</a></th>
             <td></td>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
@@ -1432,7 +1432,7 @@ Navigation-specific part of the TeamsJS library.
             <td></td>
         </tr>
         <tr>
-            <th><a href="pagestab">pages.tab</a></th>
+            <th><a href="pages.tab">pages.tab</a></th>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
@@ -1485,18 +1485,18 @@ Namespace providing functionality for [People Picker API](/concepts/device-capab
         </tr>
         <tr>
             <td></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
         </tr>
     </thead>
     <tbody>
@@ -1545,18 +1545,18 @@ Namespace providing for profile-related functionality.
         </tr>
         <tr>
             <td></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
         </tr>
     </thead>
     <tbody>
@@ -1605,18 +1605,18 @@ Allows your application to interact with the host Microsoft 365 application's se
         </tr>
         <tr>
             <td></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
         </tr>
     </thead>
     <tbody>
@@ -1665,18 +1665,18 @@ Deprecated. Provides settings-related functionality. Please use equivalent APIs 
         </tr>
         <tr>
             <td></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
         </tr>
     </thead>
     <tbody>
@@ -1722,18 +1722,18 @@ Namespace to open a share dialog for web content. For more info, see [Share to T
         </tr>
         <tr>
             <td></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
         </tr>
     </thead>
     <tbody>
@@ -1782,18 +1782,18 @@ Namespace to interact with the stage view specific part of the library.
         </tr>
         <tr>
             <td></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
         </tr>
     </thead>
     <tbody>
@@ -1842,18 +1842,18 @@ Earlier version of the capability for providing modal dialog (task module) suppo
         </tr>
         <tr>
             <td></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
         </tr>
     </thead>
     <tbody>
@@ -1899,18 +1899,18 @@ Namespace containing the set of APIs that support Teams-specific functionalities
         </tr>
         <tr>
             <td></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
         </tr>
     </thead>
     <tbody>
@@ -1959,18 +1959,18 @@ Namespace to video extensibility of the library.
         </tr>
         <tr>
             <td></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
         </tr>
     </thead>
     <tbody>
@@ -2019,18 +2019,18 @@ Contains functionality to allow web apps to store data in webview cache.
         </tr>
         <tr>
             <td></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
-            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
         </tr>
     </thead>
     <tbody>
@@ -2060,7 +2060,7 @@ Contains functionality to allow web apps to store data in webview cache.
 
 ## See also
 
-* [Extend Teams apps across Microsoft 365](../../m365-apps/overview.md)
-* [Extend a Teams personal tab across Microsoft 365 app](../../m365-apps/extend-m365-teams-personal-tab.md)
+* [Extend Teams apps across Microsoft 365](./overview.md)
+* [Extend a Teams personal tab across Microsoft 365 app](./extend-m365-teams-personal-tab.md)
 * [Teams JavaScript client library overview](../tabs/how-to/using-teams-client-library.md)
 * [TeamsJS API Reference](/javascript/api/@microsoft/teams-js)
