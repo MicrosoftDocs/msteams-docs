@@ -114,9 +114,17 @@ As there are only six visible commands in the current bot menu, anything more is
 
 One of the disadvantages of bots is that it's difficult to maintain a large retrieval knowledge base with unranked responses. Bots are best suited for short, quick interactions, and not sifting through long lists looking for an answer.
 
+## Limitations and known issues
+
+If a bot isn't being created in developer portal with 404 error ensure the following:
+
+* When an app registration is disabled org-wide, none of the users (other than users with AAD admin access) can register new app. Admins need to select **Yes** for **Users can register applications** in [AAD portal](/azure/active-directory/fundamentals/users-default-permissions#restrict-member-users-default-permissions), however this will give access to all the users in the tenant to register new applications.
+
+* 
+
 ## Code snippets
 
-The following code provides an example of bot activity for a channel team scope:
+The following code provides an example of bot activity fo**r a channel team scope:
 
 # [C#](#tab/dotnet)
 
