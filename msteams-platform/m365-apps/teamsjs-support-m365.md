@@ -73,7 +73,7 @@ Click on any TeamsJS Capability to find resources on usage and host support deta
             <td>&#x2713;</td>
         </tr>
         <tr>
-            <th><a href="#appinitialization">appInitialization</a><img src="./images/deprecated-badge.png" /></th>
+            <th><a href="#appinitialization">appInitialization</a><img src="./images/deprecated-badge.png" alt-text="Badge indicating this capability is slated for deprecation" /> /></th>
             <td>&#x2713;</td>
             <td></td>
             <td></td>
@@ -118,7 +118,7 @@ Click on any TeamsJS Capability to find resources on usage and host support deta
             <td>&#x2713;</td>
         </tr>
         <tr>
-            <th><a href="#barcode">barCode</a><img src="./images/preview-badge.png" /></th>
+            <th><a href="#barcode">barCode</a><img src="./images/preview-badge.png" alt-text="Badge indicating this capability is in preview" /></th>
             <td></td>
             <td></td>
             <td></td>
@@ -163,7 +163,7 @@ Click on any TeamsJS Capability to find resources on usage and host support deta
             <td></td>
         </tr>
         <tr>
-            <th><a href="#chat">chat</a><img src="./images/preview-badge.png" /></th>
+            <th><a href="#chat">chat</a><img src="./images/preview-badge.png" alt-text="Badge indicating this capability is in preview" /></th>
             <td>&#x2713;</td>
             <td></td>
             <td>&#x2713;</td>
@@ -178,7 +178,7 @@ Click on any TeamsJS Capability to find resources on usage and host support deta
             <td></td>
         </tr>
         <tr>
-            <th><a href="#dialog">dialog</a><img src="./images/preview-badge.png" /></th>
+            <th><a href="#dialog">dialog</a><img src="./images/preview-badge.png" alt-text="Badge indicating this capability is in preview" /></th>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
@@ -193,7 +193,7 @@ Click on any TeamsJS Capability to find resources on usage and host support deta
             <td></td>
         </tr>
         <tr>
-            <th><a href="#geoLocation">geoLocation</a><img src="./images/preview-badge.png" /></th>
+            <th><a href="#geoLocation">geoLocation</a><img src="./images/preview-badge.png" alt-text="Badge indicating this capability is in preview" /></th>
             <td></td>
             <td>&#x2713;</td>
             <td></td>
@@ -208,7 +208,7 @@ Click on any TeamsJS Capability to find resources on usage and host support deta
             <td></td>
         </tr>
         <tr>
-            <th><a href="#location">location</a><img src="./images/deprecated-badge.png" /></th>
+            <th><a href="#location">location</a><img src="./images/deprecated-badge.png" alt-text="Badge indicating this capability is slated for deprecation" /> /></th>
             <td>&#x2713;</td>
             <td></td>
             <td></td>
@@ -283,21 +283,6 @@ Click on any TeamsJS Capability to find resources on usage and host support deta
             <td></td>
         </tr>
         <tr>
-            <th><a href="#monetization">monetization</a></th>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
             <th><a href="#pages">pages</a></th>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
@@ -328,7 +313,7 @@ Click on any TeamsJS Capability to find resources on usage and host support deta
             <td></td>
         </tr>
         <tr>
-            <th><a href="#profile">profile</a><img src="./images/preview-badge.png" /></th>
+            <th><a href="#profile">profile</a><img src="./images/preview-badge.png" alt-text="Badge indicating this capability is in preview" /></th>
             <td>&#x2713;</td>
             <td></td>
             <td></td>
@@ -343,7 +328,7 @@ Click on any TeamsJS Capability to find resources on usage and host support deta
             <td></td>
         </tr>
         <tr>
-            <th><a href="#search">search</a><img src="./images/preview-badge.png" /></th>
+            <th><a href="#search">search</a><img src="./images/preview-badge.png" alt-text="Badge indicating this capability is in preview" /></th>
             <td></td>
             <td></td>
             <td></td>
@@ -358,7 +343,7 @@ Click on any TeamsJS Capability to find resources on usage and host support deta
             <td></td>
         </tr>
         <tr>
-            <th><a href="#settings">settings</a><img src="./images/deprecated-badge.png" /></th>
+            <th><a href="#settings">settings</a><img src="./images/deprecated-badge.png" alt-text="Badge indicating this capability is slated for deprecation" /> /></th>
             <td>&#x2713;</td>
             <td></td>
             <td></td>
@@ -388,7 +373,7 @@ Click on any TeamsJS Capability to find resources on usage and host support deta
             <td></td>
         </tr>
         <tr>
-            <th><a href="#stageView">stageView</a><img src="./images/preview-badge.png" /></th>
+            <th><a href="#stageview">stageView</a><img src="./images/preview-badge.png" alt-text="Badge indicating this capability is in preview" /></th>
             <td>&#x2713;</td>
             <td></td>
             <td></td>
@@ -403,7 +388,7 @@ Click on any TeamsJS Capability to find resources on usage and host support deta
             <td></td>
         </tr>
         <tr>
-            <th><a href="#tasks">tasks</a><img src="./images/deprecated-badge.png" /></th>
+            <th><a href="#tasks">tasks</a><img src="./images/deprecated-badge.png" alt-text="Badge indicating this capability is slated for deprecation" /> /></th>
             <td>&#x2713;</td>
             <td></td>
             <td></td>
@@ -433,7 +418,7 @@ Click on any TeamsJS Capability to find resources on usage and host support deta
             <td></td>
         </tr>
         <tr>
-            <th><a href="#video">video</a><img src="./images/preview-badge.png" /></th>
+            <th><a href="#video">video</a><img src="./images/preview-badge.png" alt-text="Badge indicating this capability is in preview" /></th>
             <td>&#x2713;</td>
             <td></td>
             <td></td>
@@ -448,7 +433,7 @@ Click on any TeamsJS Capability to find resources on usage and host support deta
             <td></td>
         </tr>
         <tr>
-            <th><a href="#webStorage">webStorage</a><img src="./images/preview-badge.png" /></th>
+            <th><a href="#webStorage">webStorage</a><img src="./images/preview-badge.png" alt-text="Badge indicating this capability is in preview" /></th>
             <td></td>
             <td></td>
             <td></td>
@@ -471,12 +456,113 @@ Click on any TeamsJS Capability to find resources on usage and host support deta
 
 Namespace to interact with app initialization and lifecycle.
 
+<br />
+<table border>
+    <thead>
+        <tr>
+            <th></th>
+            <th colspan=3>Web</th>
+            <th colspan=3>Desktop</th>
+            <th colspan=6>Mobile</th>
+        </tr>
+        <tr>
+            <th></th>
+            <th colspan=3></th>
+            <th colspan=3>Windows</th>
+            <th colspan=3>Android</th>
+            <th colspan=3>iOS</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>app</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+
 ## `appInitialization`
 
 [Reference](/javascript/api/@microsoft/teams-js/appInitialization)
 
-> [!CAUTION]
-> This namespace is slated for deprecation. It is currently supported for backwards compability purposes. For new apps, please use [app.initialize()](/javascript/api/@microsoft/teams-js/app#@microsoft-teams-js-app-initialize) from the [app](#app) capability.
+Deprecated. Namespace for initializting an app. For new apps, please use [app.initialize()](/javascript/api/@microsoft/teams-js/app#@microsoft-teams-js-app-initialize) from the [app](#app) capability.
+
+<br />
+<table border>
+    <thead>
+        <tr>
+            <th></th>
+            <th colspan=3>Web</th>
+            <th colspan=3>Desktop</th>
+            <th colspan=6>Mobile</th>
+        </tr>
+        <tr>
+            <th></th>
+            <th colspan=3></th>
+            <th colspan=3>Windows</th>
+            <th colspan=3>Android</th>
+            <th colspan=3>iOS</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>appInitialization</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
 
 ## `appInstallDialog`
 
@@ -484,17 +570,170 @@ Namespace to interact with app initialization and lifecycle.
 
 Namespace used to open a dialog for installing an application.
 
+<br />
+<table border>
+    <thead>
+        <tr>
+            <th></th>
+            <th colspan=3>Web</th>
+            <th colspan=3>Desktop</th>
+            <th colspan=6>Mobile</th>
+        </tr>
+        <tr>
+            <th></th>
+            <th colspan=3></th>
+            <th colspan=3>Windows</th>
+            <th colspan=3>Android</th>
+            <th colspan=3>iOS</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>barCode</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+
 ## `authentication`
 
 [Reference](/javascript/api/@microsoft/teams-js/authentication)
 
-Namespace to interact with the authentication-specific part of the SDK. This module is used for starting or completing authentication flows.
+Namespace to interact with the authentication-specific part of the library. This module is used for starting or completing authentication flows.
+
+<br />
+<table border>
+    <thead>
+        <tr>
+            <th></th>
+            <th colspan=3>Web</th>
+            <th colspan=3>Desktop</th>
+            <th colspan=6>Mobile</th>
+        </tr>
+        <tr>
+            <th></th>
+            <th colspan=3></th>
+            <th colspan=3>Windows</th>
+            <th colspan=3>Android</th>
+            <th colspan=3>iOS</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>authentication</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
 
 ## `barCode`
 
 [Reference](/javascript/api/@microsoft/teams-js/barcode)
 
-Namespace to interact with the barcode scanning-specific part of the SDK.
+Namespace to interact with the barcode scanning-specific part of the library.
+
+<br />
+<table border>
+    <thead>
+        <tr>
+            <th></th>
+            <th colspan=3>Web</th>
+            <th colspan=3>Desktop</th>
+            <th colspan=6>Mobile</th>
+        </tr>
+        <tr>
+            <th></th>
+            <th colspan=3></th>
+            <th colspan=3>Windows</th>
+            <th colspan=3>Android</th>
+            <th colspan=3>iOS</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>barCode</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
 
 ## `calendar`
 
@@ -502,11 +741,113 @@ Namespace to interact with the barcode scanning-specific part of the SDK.
 
 Namespace providing calendar-specific functionality.
 
+<br />
+<table border>
+    <thead>
+        <tr>
+            <th></th>
+            <th colspan=3>Web</th>
+            <th colspan=3>Desktop</th>
+            <th colspan=6>Mobile</th>
+        </tr>
+        <tr>
+            <th></th>
+            <th colspan=3></th>
+            <th colspan=3>Windows</th>
+            <th colspan=3>Android</th>
+            <th colspan=3>iOS</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>calendar</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+
 ## `call`
 
 [Reference](/javascript/api/@microsoft/teams-js/call) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teamsjs-cc-app/tabs/src/components/capabilities/Call.tsx)
 
 Namespace providing functionality to start a call with others.
+
+<br />
+<table border>
+    <thead>
+        <tr>
+            <th></th>
+            <th colspan=3>Web</th>
+            <th colspan=3>Desktop</th>
+            <th colspan=6>Mobile</th>
+        </tr>
+        <tr>
+            <th></th>
+            <th colspan=3></th>
+            <th colspan=3>Windows</th>
+            <th colspan=3>Android</th>
+            <th colspan=3>iOS</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>call</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
 
 ## `chat`
 
@@ -516,6 +857,57 @@ Namespace providing functionality to start a call with others.
 > This namespace is in preview and subject to change based on feedback. Please do not use in production.
 
 Namespace providing functionality to start a chat with others.
+
+<br />
+<table border>
+    <thead>
+        <tr>
+            <th></th>
+            <th colspan=3>Web</th>
+            <th colspan=3>Desktop</th>
+            <th colspan=6>Mobile</th>
+        </tr>
+        <tr>
+            <th></th>
+            <th colspan=3></th>
+            <th colspan=3>Windows</th>
+            <th colspan=3>Android</th>
+            <th colspan=3>iOS</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>chat</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
 
 ## `dialog`
 
@@ -560,7 +952,7 @@ This group of capabilities enables apps to show modal dialogs. There are two pri
     </thead>
     <tbody>
         <tr>
-            <th><a href="#dialogadaptivecard">dialog.adaptiveCard</a> <img src="./images/preview-badge.png" /></th>
+            <th><a href="#dialogadaptivecard">dialog.adaptiveCard</a> <img src="./images/preview-badge.png" alt-text="Badge indicating this capability is in preview" /></th>
             <td></td>
             <td></td>
             <td></td>
@@ -614,16 +1006,118 @@ Subcapability for interacting with URL-based dialogs.
 > [!IMPORTANT]
 > This namespace is in preview and subject to change based on feedback. Please do not use in production.
 
-Namespace to interact with the geoLocation module-specific part of the SDK. This is the newer version of location module.
+Namespace to interact with the geoLocation module-specific part of the library. This is the newer version of location module.
+
+<br />
+<table border>
+    <thead>
+        <tr>
+            <th></th>
+            <th colspan=3>Web</th>
+            <th colspan=3>Desktop</th>
+            <th colspan=6>Mobile</th>
+        </tr>
+        <tr>
+            <th></th>
+            <th colspan=3></th>
+            <th colspan=3>Windows</th>
+            <th colspan=3>Android</th>
+            <th colspan=3>iOS</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>geoLocation</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
 
 ## `location`
 
 [Reference](/javascript/api/@microsoft/teams-js/location)
 
 > [!CAUTION]
-> This namespace is slated for deprecation. It is currently supported for backwards compability purposes. For new apps, please use the [geoLocation](#geoLocation) capability.
+> This namespace is slated for deprecation. It is currently supported for backwards compability purposes. For new apps, please use the [geoLocation](#geolocation) capability.
 
-Deprecated. Namespace providing location-specific functionality (get and show location). Please use [geoLocation](#geoLocation) for new apps.
+Deprecated. Namespace providing location-specific functionality (get and show location). Please use [geoLocation](#geolocation) for new apps.
+
+<br />
+<table border>
+    <thead>
+        <tr>
+            <th></th>
+            <th colspan=3>Web</th>
+            <th colspan=3>Desktop</th>
+            <th colspan=6>Mobile</th>
+        </tr>
+        <tr>
+            <th></th>
+            <th colspan=3></th>
+            <th colspan=3>Windows</th>
+            <th colspan=3>Android</th>
+            <th colspan=3>iOS</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>location</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
 
 ## `mail`
 
@@ -631,11 +1125,113 @@ Deprecated. Namespace providing location-specific functionality (get and show lo
 
 Namespace providing email-specific functionality.
 
+<br />
+<table border>
+    <thead>
+        <tr>
+            <th></th>
+            <th colspan=3>Web</th>
+            <th colspan=3>Desktop</th>
+            <th colspan=6>Mobile</th>
+        </tr>
+        <tr>
+            <th></th>
+            <th colspan=3></th>
+            <th colspan=3>Windows</th>
+            <th colspan=3>Android</th>
+            <th colspan=3>iOS</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>mail</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+
 ## `media`
 
 [Reference](/javascript/api/@microsoft/teams-js/media)
 
 Namespace providing image file-related functionality.
+
+<br />
+<table border>
+    <thead>
+        <tr>
+            <th></th>
+            <th colspan=3>Web</th>
+            <th colspan=3>Desktop</th>
+            <th colspan=6>Mobile</th>
+        </tr>
+        <tr>
+            <th></th>
+            <th colspan=3></th>
+            <th colspan=3>Windows</th>
+            <th colspan=3>Android</th>
+            <th colspan=3>iOS</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>media</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
 
 ## `meeting`
 
@@ -643,17 +1239,113 @@ Namespace providing image file-related functionality.
 
 Namespace providing in-meeting app functionality.
 
+<br />
+<table border>
+    <thead>
+        <tr>
+            <th></th>
+            <th colspan=3>Web</th>
+            <th colspan=3>Desktop</th>
+            <th colspan=6>Mobile</th>
+        </tr>
+        <tr>
+            <th></th>
+            <th colspan=3></th>
+            <th colspan=3>Windows</th>
+            <th colspan=3>Android</th>
+            <th colspan=3>iOS</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>meeting</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+
 ## `menus`
 
 [Reference](/javascript/api/@microsoft/teams-js/menus) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teamsjs-cc-app/tabs/src/components/capabilities/Menus.tsx)
 
-Namespace to interact with the menu-specific part of the SDK. This module is used to show View Configuration, Action Menu and Navigation Bar Menu.
+Namespace to interact with the menu-specific part of the library. This module is used to show View Configuration, Action Menu and Navigation Bar Menu.
 
-## `monetization`
-
-[Reference](/javascript/api/@microsoft/teams-js/monetization) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teamsjs-cc-app/tabs/src/components/capabilities/Monetization.tsx)
-
-TODO: No public APIs. Remove?
+<br />
+<table border>
+    <thead>
+        <tr>
+            <th></th>
+            <th colspan=3>Web</th>
+            <th colspan=3>Desktop</th>
+            <th colspan=6>Mobile</th>
+        </tr>
+        <tr>
+            <th></th>
+            <th colspan=3></th>
+            <th colspan=3>Windows</th>
+            <th colspan=3>Android</th>
+            <th colspan=3>iOS</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>menus</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
 
 ## `pages`
 
@@ -679,18 +1371,18 @@ Navigation-specific part of the TeamsJS library.
         </tr>
         <tr>
             <td></td>
-            <td><image alt="Teams" src="./images/teams-thumb.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft365-thumb.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-thumb.png"/></td>
-            <td><image alt="Teams" src="./images/teams-thumb.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft365-thumb.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-thumb.png"/></td>
-            <td><image alt="Teams" src="./images/teams-thumb.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft365-thumb.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-thumb.png"/></td>
-            <td><image alt="Teams" src="./images/teams-thumb.png"/></td>
-            <td><image alt="Microsoft 365 app" src="./images/microsoft365-thumb.png"/></td>
-            <td><image alt="Outlook" src="./images/outlook-thumb.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
         </tr>
     </thead>
     <tbody>
@@ -745,6 +1437,57 @@ Provides APIs for querying and navigating between contextual tabs of an applicat
 
 Namespace providing functionality for [People Picker API](/concepts/device-capabilities/people-picker-capability).
 
+<br />
+<table border>
+    <thead>
+        <tr>
+            <th></th>
+            <th colspan=3>Web</th>
+            <th colspan=3>Desktop</th>
+            <th colspan=6>Mobile</th>
+        </tr>
+        <tr>
+            <th></th>
+            <th colspan=3></th>
+            <th colspan=3>Windows</th>
+            <th colspan=3>Android</th>
+            <th colspan=3>iOS</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>people</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+
 ## `profile`
 
 [Reference](/javascript/api/@microsoft/teams-js/profile)
@@ -753,6 +1496,57 @@ Namespace providing functionality for [People Picker API](/concepts/device-capab
 > This namespace is in preview and subject to change based on feedback. Please do not use in production.
 
 Namespace providing for profile-related functionality.
+
+<br />
+<table border>
+    <thead>
+        <tr>
+            <th></th>
+            <th colspan=3>Web</th>
+            <th colspan=3>Desktop</th>
+            <th colspan=6>Mobile</th>
+        </tr>
+        <tr>
+            <th></th>
+            <th colspan=3></th>
+            <th colspan=3>Windows</th>
+            <th colspan=3>Android</th>
+            <th colspan=3>iOS</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>profile</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
 
 ## `search`
 
@@ -763,6 +1557,57 @@ Namespace providing for profile-related functionality.
 
 Allows your application to interact with the host Microsoft 365 application's search box. By integrating your application with the host's search box, users can search your app using the same search box they use elsewhere in Teams, Outlook, or Microsoft 365 app.
 
+<br />
+<table border>
+    <thead>
+        <tr>
+            <th></th>
+            <th colspan=3>Web</th>
+            <th colspan=3>Desktop</th>
+            <th colspan=6>Mobile</th>
+        </tr>
+        <tr>
+            <th></th>
+            <th colspan=3></th>
+            <th colspan=3>Windows</th>
+            <th colspan=3>Android</th>
+            <th colspan=3>iOS</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>search</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+
 ## `settings`
 
 [Reference](/javascript/api/@microsoft/teams-js/settings)
@@ -772,11 +1617,113 @@ Allows your application to interact with the host Microsoft 365 application's se
 
 Deprecated. Provides settings-related functionality. Please use equivalent APIs from the [pages](#pages) for new apps.
 
+<br />
+<table border>
+    <thead>
+        <tr>
+            <th></th>
+            <th colspan=3>Web</th>
+            <th colspan=3>Desktop</th>
+            <th colspan=6>Mobile</th>
+        </tr>
+        <tr>
+            <th></th>
+            <th colspan=3></th>
+            <th colspan=3>Windows</th>
+            <th colspan=3>Android</th>
+            <th colspan=3>iOS</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>settings</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+
 ## `sharing`
 
 [Reference](/javascript/api/@microsoft/teams-js/sharing) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teamsjs-cc-app/tabs/src/components/capabilities/Sharing.tsx)
 
 Namespace to open a share dialog for web content. For more info, see [Share to Teams from personal app or tab](../concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md).
+
+<br />
+<table border>
+    <thead>
+        <tr>
+            <th></th>
+            <th colspan=3>Web</th>
+            <th colspan=3>Desktop</th>
+            <th colspan=6>Mobile</th>
+        </tr>
+        <tr>
+            <th></th>
+            <th colspan=3></th>
+            <th colspan=3>Windows</th>
+            <th colspan=3>Android</th>
+            <th colspan=3>iOS</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>sharing</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
 
 ## `stageView`
 
@@ -785,7 +1732,58 @@ Namespace to open a share dialog for web content. For more info, see [Share to T
 > [!IMPORTANT]
 > This namespace is in preview and subject to change based on feedback. Please do not use in production.
 
-Namespace to interact with the stage view specific part of the SDK.
+Namespace to interact with the stage view specific part of the library.
+
+<br />
+<table border>
+    <thead>
+        <tr>
+            <th></th>
+            <th colspan=3>Web</th>
+            <th colspan=3>Desktop</th>
+            <th colspan=6>Mobile</th>
+        </tr>
+        <tr>
+            <th></th>
+            <th colspan=3></th>
+            <th colspan=3>Windows</th>
+            <th colspan=3>Android</th>
+            <th colspan=3>iOS</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>stageView</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
 
 ## `tasks`
 
@@ -796,11 +1794,113 @@ Namespace to interact with the stage view specific part of the SDK.
 
 Earlier version of the capability for providing modal dialog (task module) support, prior to TeamsJS v2.8.0.
 
+<br />
+<table border>
+    <thead>
+        <tr>
+            <th></th>
+            <th colspan=3>Web</th>
+            <th colspan=3>Desktop</th>
+            <th colspan=6>Mobile</th>
+        </tr>
+        <tr>
+            <th></th>
+            <th colspan=3></th>
+            <th colspan=3>Windows</th>
+            <th colspan=3>Android</th>
+            <th colspan=3>iOS</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>tasks</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+
 ## `teamsCore`
 
 [Reference](/javascript/api/@microsoft/teams-js/teamscore) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teamsjs-cc-app/tabs/src/components/capabilities/TeamsCore.tsx)
 
 Namespace containing the set of APIs that support Teams-specific functionalities.
+
+<br />
+<table border>
+    <thead>
+        <tr>
+            <th></th>
+            <th colspan=3>Web</th>
+            <th colspan=3>Desktop</th>
+            <th colspan=6>Mobile</th>
+        </tr>
+        <tr>
+            <th></th>
+            <th colspan=3></th>
+            <th colspan=3>Windows</th>
+            <th colspan=3>Android</th>
+            <th colspan=3>iOS</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>teamsCore</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
 
 ## `video`
 
@@ -809,7 +1909,58 @@ Namespace containing the set of APIs that support Teams-specific functionalities
 > [!IMPORTANT]
 > This namespace is in preview and subject to change based on feedback. Please do not use in production.
 
-Namespace to video extensibility of the SDK.
+Namespace to video extensibility of the library.
+
+<br />
+<table border>
+    <thead>
+        <tr>
+            <th></th>
+            <th colspan=3>Web</th>
+            <th colspan=3>Desktop</th>
+            <th colspan=6>Mobile</th>
+        </tr>
+        <tr>
+            <th></th>
+            <th colspan=3></th>
+            <th colspan=3>Windows</th>
+            <th colspan=3>Android</th>
+            <th colspan=3>iOS</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>video</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
 
 ## `webStorage`
 
@@ -820,16 +1971,62 @@ Namespace to video extensibility of the SDK.
 
 Contains functionality to allow web apps to store data in webview cache.
 
+<br />
+<table border>
+    <thead>
+        <tr>
+            <th></th>
+            <th colspan=3>Web</th>
+            <th colspan=3>Desktop</th>
+            <th colspan=6>Mobile</th>
+        </tr>
+        <tr>
+            <th></th>
+            <th colspan=3></th>
+            <th colspan=3>Windows</th>
+            <th colspan=3>Android</th>
+            <th colspan=3>iOS</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><image alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><image alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><image alt="Outlook" src="./images/outlook-icon.png"/></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>webStorage</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+
 ## Code sample
 
 | Sample name           | Description | Source|
 :---------------------|:--------------|:---------|
-| TeamsJS Capability Checker| Sample application to demonstrate the capabilities of Teams JS SDK v2 in Microsoft Teams apps extended across Outlook and Microsoft 365. | [TypeScript](https://github.com/vikramtha/microsoft-teams-library-js/tree/vikramtha/teamsjs-cc-app/apps/teamsjs-cc-app)
-
-## Next step
-
-> [!div class="nextstepaction"]
-> []()
+| TeamsJS Capability Checker| Sample application to demonstrate the capabilities of TeamsJS library v2 in Microsoft Teams apps extended across Outlook and Microsoft 365. | [TypeScript](https://github.com/vikramtha/microsoft-teams-library-js/tree/vikramtha/teamsjs-cc-app/apps/teamsjs-cc-app)
 
 ## See also
 
