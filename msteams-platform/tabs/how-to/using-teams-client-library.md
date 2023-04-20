@@ -145,6 +145,9 @@ For more info, see [Extend Teams apps across Microsoft 365](../../m365-apps/over
 
 ### Callbacks converted to promises
 
+> [!NOTE]
+> The `getTabInstances` API isn't implemented on mobile app.
+
 Teams APIs that previously took a callback parameter have been updated to return a JavaScript [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) object. These include the following APIs:
 
 ```js
