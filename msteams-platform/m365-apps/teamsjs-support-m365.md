@@ -20,7 +20,7 @@ The following table lists TeamsJS capabilities (public namespaces) and their sup
 
 | Microsoft Teams | Microsoft 365 app | Microsoft Outlook |
 |- | - | - |
-| :::image type="content" source="./images/teams-icon.png" alt="Microsoft Teams icon"::: | :::image type="content" source="./images/microsoft-365-icon.png" alt="Microsoft 365 app icon"::: | :::image type="content" source="./images/outlook-icon.png" alt="Microsoft Outlook icon"::: |
+| :::image type="content" source="./images/teams-icon.png" alt-text="Microsoft Teams icon"::: | :::image type="content" source="./images/microsoft-365-icon.png" alt-text="Microsoft 365 app icon"::: | :::image type="content" source="./images/outlook-icon.png" alt-text="Microsoft Outlook icon"::: |
 
 Click on any TeamsJS Capability to find resources on usage and host support details of its subcapabilities (if any).
 
@@ -1417,7 +1417,7 @@ Navigation-specific part of the TeamsJS library.
             <td></td>
         </tr>
         <tr>
-            <th><a href="pages.currentapp">pages.currentApp</a></th>
+            <th><a href="pagescurrentapp">pages.currentApp</a></th>
             <td></td>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
@@ -1432,7 +1432,7 @@ Navigation-specific part of the TeamsJS library.
             <td></td>
         </tr>
         <tr>
-            <th><a href="pages.tab">pages.tab</a></th>
+            <th><a href="pagestab">pages.tab</a></th>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
@@ -1465,7 +1465,7 @@ Provides APIs for querying and navigating between contextual tabs of an applicat
 
 [Reference](/javascript/api/@microsoft/teams-js/people) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teamsjs-cc-app/tabs/src/components/capabilities/People.tsx)
 
-Namespace providing functionality for [People Picker API](/concepts/device-capabilities/people-picker-capability).
+Namespace providing functionality for [People Picker API](../concepts/device-capabilities/people-picker-capability).
 
 <br />
 <table border>
@@ -1580,7 +1580,7 @@ Namespace providing for profile-related functionality.
 
 ## `search`
 
-[Reference](/javascript/api/@microsoft/teams-js/seach)
+[Reference](/javascript/api/@microsoft/teams-js/search)
 
 > [!IMPORTANT]
 > This namespace is in preview and subject to change based on feedback. Please do not use in production.
