@@ -14,7 +14,7 @@ ms.date: 07/21/2022
 
 While you likely will prefer using our free hosted service, there are situations where it's beneficial to use your own Azure Fluid Relay service for your Live Share app.
 
-## Pre-requisites
+## Prerequisites
 
 1. Build a meeting side panel and stage app meeting extension, as shown in the [dice roller tutorial](../teams-live-share-tutorial.md).
 2. Update your app manifest to include all [necessary permissions](../teams-live-share-capabilities.md#register-rsc-permissions).

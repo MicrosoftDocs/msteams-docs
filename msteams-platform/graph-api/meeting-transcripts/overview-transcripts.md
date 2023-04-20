@@ -10,7 +10,7 @@ You can now configure your app to fetch Microsoft Teams meeting transcripts in t
 
 Here are some use cases for fetching meeting transcripts using Graph API:
 
-| Use case | How Transcript APIs help... |
+| Use case | How transcript APIs help... |
 | --- | --- |
 | You need to obtain transcripts for capturing meaningful insights from multiple meetings across the Sales vertical. It's time-consuming and inefficient to keep track of all meetings, and to retrieve meeting notes manually. After the meeting is over, you'd need to examine conversations in all those meetings to obtain useful information. | Using Graph APIs in your app to fetch meeting transcripts automatically retrieves the transcripts from all meetings relevant for your purpose. Your app can receive meeting notifications, and get the transcript when it's generated after the meeting ends. This data can then be used to gain: <br> • Aggregated insights and intelligence analysis <br> • New leads and highlights <br> • Meeting follow-ups and summaries |
 | As an HR initiative, you're holding a brainstorming session to understand and improve employee health and productivity. Having to continually take notes to provide post-meeting summary can impede the flow of thoughts, and you might not capture all valuable suggestions. After the session, you'd need to analyze the discussion to gather data points for planning improvements. | Using Graph APIs in your app to fetch transcripts post-meeting frees you and the participants to fully focus on the discussion. The content of the meeting transcript is available for: <br> • Engagement and sentiment analysis <br> • Listing tasks or issues <br> • Follow-up meetings and notifications |
