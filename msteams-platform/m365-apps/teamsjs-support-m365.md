@@ -632,7 +632,7 @@ Namespace used to open a dialog for installing an application.
 
 [Reference](/javascript/api/@microsoft/teams-js/authentication)
 
-Namespace to interact with the authentication-specific part of the library. This module is used for starting or completing authentication flows.
+Namespace to interact with the authentication-related part of the library. This module is used for starting or completing authentication flows.
 
 <br />
 <table border>
@@ -689,7 +689,7 @@ Namespace to interact with the authentication-specific part of the library. This
 
 [Reference](/javascript/api/@microsoft/teams-js/barcode)
 
-Preview. Namespace to interact with the barcode scanning-specific part of the library.
+Preview. Namespace to interact with the barcode scanning-related part of the library.
 
 <br />
 <table border>
@@ -746,7 +746,7 @@ Preview. Namespace to interact with the barcode scanning-specific part of the li
 
 [Reference](/javascript/api/@microsoft/teams-js/calendar)
 
-Namespace providing calendar-specific functionality.
+Namespace providing calendar-related functionality.
 
 <br />
 <table border>
@@ -1019,7 +1019,7 @@ Preview. Subcapability for interacting with URL-based dialogs.
 
 [Reference](/javascript/api/@microsoft/teams-js/geolocation) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teamsjs-cc-app/tabs/src/components/capabilities/GeoLocation.tsx)
 
-Preview. Namespace to interact with the geoLocation module-specific part of the library. This is the newer version of location module.
+Preview. Namespace providing location-related functionality. This is the newer version of location module.
 
 <br />
 <table border>
@@ -1076,7 +1076,7 @@ Preview. Namespace to interact with the geoLocation module-specific part of the 
 
 [Reference](/javascript/api/@microsoft/teams-js/location)
 
-Deprecated. Namespace providing location-specific functionality (get and show location). Please use [geoLocation](#geolocation) for new apps.
+Deprecated. Namespace providing location-related functionality (get and show location). Please use [geoLocation](#geolocation) for new apps.
 
 <br />
 <table border>
@@ -1133,7 +1133,7 @@ Deprecated. Namespace providing location-specific functionality (get and show lo
 
 [Reference](/javascript/api/@microsoft/teams-js/mail)
 
-Namespace providing email-specific functionality.
+Namespace providing email-related functionality.
 
 <br />
 <table border>
@@ -1192,11 +1192,11 @@ Namespace providing email-specific functionality.
 
 Namespace providing image file-related functionality.
 
-App capabilities that require the user to grant [device permissions](../../concepts/device-capabilities/device-capabilities-overview.md) (such as *location*) aren't yet supported for apps running outside of Teams. There is currently no way to check app permissions in Settings or your app header when running in Outlook or Microsoft 365 app. If a Teams app running in Microsoft 365 app or Outlook calls a TeamsJS (or HTML5) API that triggers device permissions, that API will generates an error and fail to display a system dialog asking for user consent.
+App capabilities that require the user to grant [device permissions](../concepts/device-capabilities/device-capabilities-overview.md) (such as *media*) aren't yet supported for apps running outside of Teams. There is currently no way to check app permissions in Settings or your app header when running in Outlook or Microsoft 365 app. If a Teams app running in Microsoft 365 app or Outlook calls a TeamsJS (or HTML5) API that triggers device permissions, that API will generates an error and fail to display a system dialog asking for user consent.
 
-Current guidance for now is to modify your code to catch the failure:
+Current guidance is to modify your code to catch the failure:
 
-* Check [isSupported()](#differentiate-your-app-experience) on a capability before using it. `media`, `meeting`, and `files` don't yet support *isSupported* calls and don't yet work outside of Teams.
+* Check [isSupported()](../tabs/how-to/using-teams-client-library.md#differentiate-your-app-experience) on a capability before using it. Some capabilities, such as `media` and `meeting` don't yet support *isSupported* calls and don't yet work outside of Teams.
 * Catch and handle errors when calling TeamsJS and HTML5 APIs.
 
 When an API is unsupported or generates an error, add logic to fail gracefully or provide a workaround. For example:
@@ -1319,7 +1319,7 @@ Namespace providing in-meeting app functionality.
 
 [Reference](/javascript/api/@microsoft/teams-js/menus) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teamsjs-cc-app/tabs/src/components/capabilities/Menus.tsx)
 
-Namespace to interact with the menu-specific part of the library. This module is used to show View Configuration, Action Menu and Navigation Bar Menu.
+Namespace to interact with the menu-related part of the library. This module is used to show *View Configuration*, *Action Menu* and *Navigation Bar Menu*.
 
 <br />
 <table border>
@@ -1376,31 +1376,21 @@ Namespace to interact with the menu-specific part of the library. This module is
 
 [Reference](/javascript/api/@microsoft/teams-js/pages) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teamsjs-cc-app/tabs/src/components/capabilities/Pages.tsx)
 
-Navigation-specific part of the TeamsJS library.
+Navigation-related part of the TeamsJS library.
 
 Prior to TeamsJS version 2.0, all deep linking scenarios were handled using `shareDeepLink` (to generate a link *to* a specific part of your app) and `executeDeepLink` (to navigate to a deeplink *from* or *within* your app). TeamsJS v.2.0 introduces a new API, `navigateToApp`, for navigating to pages (and subpages) within an app in a consistent way across app hosts (Microsoft 365 app and Outlook, in addition to Teams). For new apps, please follow the linked updated guidance depending on your navigation scenario:
 
-### Deep linking
+- **Deep links into your app.** Use `pages.shareDeepLink` (known as *shareDeepLink* prior to TeamsJS v.2.0) to generate and display a copyable link for the user to share. When clicked, a user will be prompted to install the app if it's not already installed for the application host (specified in the link path).
 
-Prior to TeamsJS version 2.0, all deep linking scenarios were handled using `shareDeepLink` (to generate a link *to* a specific part of your app) and `executeDeepLink` (to navigate to a deeplink *from* or *within* your app). TeamsJS v.2.0 introduces a new API, `navigateToApp`, for navigating to pages (and subpages) within an app in a consistent way across app hosts (Microsoft 365 app and Outlook, in addition to Teams). Here's the updated guidance for deep linking scenarios:
+- **Navigation within your app.** Use the new [`pages.currentApp`](/javascript/api/@microsoft/teams-js/pages.currentapp) namespace to navigate within your app within the hosting application. Specifically, the function `navigateTo(NavigateWithinAppParams)` to allow navigation to a specific tab within the current app and the function `navigateToDefaultPage()` to navigate to the first tab defined in the app's manifest. For more information, see [Navigate within a tab app](tab-navigation.md). 
 
-#### Deep links into your app
+    These APIs provide the equivalent of navigating to a deep link (as the now deprecated *executeDeepLink* was once used for) without requiring your app to construct a URL or manage different deep link formats for different application hosts.
 
-Use `pages.shareDeepLink` (known as *shareDeepLink* prior to TeamsJS v.2.0) to generate and display a copyable link for the user to share. When clicked, a user will be prompted to install the app if it's not already installed for the application host (specified in the link path).
+- **Deep links out of your app.** For deep links from your app to various     areas of its current host, use the strongly typed APIs provided by the TeamsJS library. For example, use the *Calendar* capability to open a scheduling dialog or calendar item from your app.
 
-#### Navigation within your app
+    For deep links from your app to other apps running in the same host, use `pages.navigateToApp`.
 
-Use the new [`pages.currentApp`](/javascript/api/@microsoft/teams-js/pages.currentapp) namespace to navigate within your app within the hosting application. Specifically, the function `navigateTo(NavigateWithinAppParams)` to allow navigation to a specific tab within the current app and the function `navigateToDefaultPage()` to navigate to the first tab defined in the app's manifest. For more information, see [Navigate within a tab app](tab-navigation.md).
-
-These APIs provide the equivalent of navigating to a deep link (as the now deprecated *executeDeepLink* was once used for) without requiring your app to construct a URL or manage different deep link formats for different application hosts.
-
-#### Deep links out of your app
-
-For deep links from your app to various areas of its current host, use the strongly typed APIs provided by the TeamsJS library. For example, use the *Calendar* capability to open a scheduling dialog or calendar item from your app.
-
-For deep links from your app to other apps running in the same host, use `pages.navigateToApp`.
-
-For any other external deep linking scenarios, you can use `app.openLink`, which provides similar functionality to the now deprecated (starting in TeamsJS v.2.0) *executeDeepLink* API.
+    For any other external deep linking scenarios, you can use `app.openLink`, which provides similar functionality to the now deprecated (starting in TeamsJS v.2.0) *executeDeepLink* API.
 
 <br />
 <table border>
