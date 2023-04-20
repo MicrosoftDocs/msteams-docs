@@ -498,18 +498,18 @@ Namespace to interact with app initialization and lifecycle.
     <tbody>
         <tr>
             <th>app</th>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
         </tr>
     </tbody>
 </table>
@@ -555,16 +555,16 @@ Deprecated. Namespace for initializting an app. For new apps, please use [app.in
     <tbody>
         <tr>
             <th>appInitialization <img src="./images/deprecated-badge.png" alt="Badge indicating this capability is deprecated" /></th>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
         </tr>
@@ -611,17 +611,17 @@ Namespace used to open a dialog for installing an application.
     </thead>
     <tbody>
         <tr>
-            <th>barCode</th>
+            <th>appInstallDialog</th>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
+            <td></td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
+            <td></td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
         </tr>
@@ -794,7 +794,7 @@ Namespace providing calendar-related functionality.
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
+            <td>&#x2713;</td>
         </tr>
     </tbody>
 </table>
@@ -840,16 +840,16 @@ Namespace providing functionality to start a call with others.
     <tbody>
         <tr>
             <th>call</th>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
         </tr>
@@ -897,16 +897,16 @@ Preview. Namespace providing functionality to start a chat with others.
     <tbody>
         <tr>
             <th>chat <img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
         </tr>
@@ -915,7 +915,7 @@ Preview. Namespace providing functionality to start a chat with others.
 
 ## `dialog`
 
-[Reference](/javascript/api/@microsoft/teams-js/dialog) | Sample
+[Reference](/javascript/api/@microsoft/teams-js/dialog) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teamsjs-cc-app/tabs/src/components/capabilities/Dialog.tsx)
 
 Preview. This group of capabilities enables apps to show modal dialogs. There are two primary types of dialogs: URL-based dialogs and Adaptive Card dialogs. Both types of dialogs are shown on top of your app, preventing interaction with your app while they are displayed.
 
@@ -957,16 +957,16 @@ Preview. This group of capabilities enables apps to show modal dialogs. There ar
     <tbody>
         <tr>
             <th>dialog <img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
         </tr>
@@ -1011,9 +1011,9 @@ Preview. Subcapability for interacting with adaptive card dialogs.
 
 ### `dialog.url`
 
-Preview. Subcapability for interacting with URL-based dialogs.
-
 [Reference](/javascript/api/@microsoft/teams-js/dialog.url) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teamsjs-cc-app/tabs/src/components/capabilities/Dialog.tsx)
+
+Preview. Subcapability for interacting with URL-based dialogs.
 
 ## `geoLocation`
 
@@ -1057,10 +1057,10 @@ Preview. Namespace providing location-related functionality. This is the newer v
         <tr>
             <th>geoLocation <img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
             <td></td>
+            <td>&#x2713;</td>
             <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
             <td></td>
@@ -1113,16 +1113,16 @@ Deprecated. Namespace providing location-related functionality (get and show loc
     <tbody>
         <tr>
             <th>location <img src="./images/deprecated-badge.png" alt="Badge indicating this capability is deprecated" /></th>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
         </tr>
@@ -1172,10 +1172,10 @@ Namespace providing email-related functionality.
             <th>mail</th>
             <td></td>
             <td></td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
             <td></td>
@@ -1356,16 +1356,16 @@ Namespace to interact with the menu-related part of the library. This module is 
     <tbody>
         <tr>
             <th>menus</th>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
         </tr>
@@ -1427,14 +1427,14 @@ Prior to TeamsJS version 2.0, all deep linking scenarios were handled using `sha
     <tbody>
         <tr>
             <th>pages</th>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
             <td></td>
@@ -1526,16 +1526,16 @@ Namespace providing functionality for [People Picker API](../concepts/device-cap
     <tbody>
         <tr>
             <th>people</th>
+            <td>&#x2713;</td>
+            <td></td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
         </tr>
@@ -1754,16 +1754,16 @@ Namespace to open a share dialog for web content. For more info, see [Share to T
     <tbody>
         <tr>
             <th>sharing</th>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
         </tr>
@@ -1811,16 +1811,16 @@ Preview. Namespace to interact with the stage view specific part of the library.
     <tbody>
         <tr>
             <th>stageView <img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
         </tr>
@@ -1868,16 +1868,16 @@ Earlier version of the capability for providing modal dialog (task module) suppo
     <tbody>
         <tr>
             <th>tasks <img src="./images/deprecated-badge.png" alt="Badge indicating this capability is deprecated" /></th>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
         </tr>
@@ -1925,16 +1925,16 @@ Namespace containing the set of APIs that support Teams-specific functionalities
     <tbody>
         <tr>
             <th>teamsCore</th>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
         </tr>
@@ -1982,16 +1982,16 @@ Preview. Namespace to video extensibility of the library.
     <tbody>
         <tr>
             <th>video <img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
         </tr>
@@ -2042,13 +2042,13 @@ Preview. Contains functionality to allow web apps to store data in webview cache
             <td></td>
             <td></td>
             <td></td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
         </tr>
