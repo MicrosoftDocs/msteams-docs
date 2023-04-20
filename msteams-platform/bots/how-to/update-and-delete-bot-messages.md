@@ -87,7 +87,7 @@ PUT /v3/conversations/{conversationId}/activities/{activityId}
 
 Now that you have updated messages, update the existing card on button selection for incoming activities.
 
-### To get edit or delete message events
+### Get edit or undelete message events
 
 When you edit or undelete a message in a chat, the bot gets a notification of the edit or undelete message event.
 
@@ -97,7 +97,7 @@ When you edit or undelete a message in a chat, the bot gets a notification of th
 
 To get an edit or undelete message event notification in a bot, you can override the following handlers:
 
-#### For edit message event
+#### Edit message event
 
 Following is an example of an edit message event notification using `OnTeamsMessageEditAsync` when a sent message is edited:
 
@@ -198,7 +198,7 @@ PUT {Service URL of your bot}/v3/conversations/{conversationId}/activities/{acti
 
 ---
 
-#### For undelete message event
+#### Undelete message event
 
 The following is an example of an undelete message event notification using `OnTeamsMessageUndeleteAsync` when a deleted message is restored:
 
@@ -432,7 +432,7 @@ DELETE /v3/conversations/{conversationId}/activities/{activityId}
 
 ---
 
-### To get soft delete message events
+### Get soft delete message events
 
 When you soft delete a message in a chat, the bot gets a notification of the soft delete message event.
 
