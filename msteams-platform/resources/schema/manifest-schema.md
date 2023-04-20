@@ -558,7 +558,7 @@ Each command item is an object with the following structure:
 |---|---|---|---|---|
 |`id`|string|64 characters|✔️|The ID for the command.|
 |`title`|string|32 characters|✔️|The user-friendly command name.|
-|`type`|string|64 characters||Type of the command. One of `query` or `action`. Default: **query**.|
+|`type`|string|||Type of the command. One of `query` or `action`. Default: **query**.|
 |`description`|string|128 characters||The description that appears to users to indicate the purpose of this command.|
 |`initialRun`|Boolean|||A Boolean value indicates whether the command runs initially with no parameters. Default is **false**.|
 |`context`|array of Strings|3||Defines where the message extension can be invoked from. Any combination of`compose`,`commandBox`,`message`. Default is `["compose","commandBox"]`.|
@@ -573,7 +573,7 @@ Each command item is an object with the following structure:
 |`parameters.title`|string|32 characters|✔️|User-friendly title for the parameter.|
 |`parameters.description`|string|128 characters||User-friendly string that describes this parameter’s purpose.|
 |`parameters.value`|string|512 characters||Initial value for the parameter. Currently the value isn't supported|
-|`parameters.inputType`|string|128 characters||Defines the type of control displayed on a task module for`fetchTask: false` . One of `text, textarea, number, date, time, toggle, choiceset` .|
+|`parameters.inputType`|string|||Defines the type of control displayed on a task module for`fetchTask: false` . Input value can only be one of `text, textarea, number, date, time, toggle, choiceset` .|
 |`parameters.choices`|array of objects|10 items||The choice options for the`choiceset`. Use only when`parameter.inputType` is `choiceset`.|
 |`parameters.choices.title`|string|128 characters|✔️|Title of the choice.|
 |`parameters.choices.value`|string|512 characters|✔️|Value of the choice.|
