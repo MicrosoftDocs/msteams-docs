@@ -47,7 +47,7 @@ To customize the barcode scanning experience, optional [barcode configuration](/
 
 The **scanBarCode()** API supports the following barcode types:
 
-| Barcode Type | Supported on Android | Supported on iOS |
+| Barcode type | Supported on Android | Supported on iOS |
 | ---------- | ---------- | ------------ |
 | Codebar | Yes | No |
 | Code 39 | Yes | Yes |
