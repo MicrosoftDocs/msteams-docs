@@ -17,7 +17,7 @@ Your bot can dynamically update messages after sending them instead of having th
 
 You can use dynamic message updates for scenarios, such as poll updates, modifying available actions after a button press, or any other asynchronous state change.
 
-It is not necessary for the new message to match the original in type. For example, if the original message contains an attachment, the new message can be a simple text message.
+It isn't necessary for the new message to match the original in type. For example, if the original message contains an attachment, the new message can be a simple text message.
 
 # [C#](#tab/dotnet)
 
@@ -89,7 +89,7 @@ Now that you have updated messages, update the existing card on button selection
 
 ### To get edit or delete message events
 
-When you edit or undelete a message in a chat, the bot gets a notification of the edit, undelete message event.
+When you edit or undelete a message in a chat, the bot gets a notification of the edit or undelete message event.
 
 > [!NOTE]
 >
@@ -97,9 +97,9 @@ When you edit or undelete a message in a chat, the bot gets a notification of th
 
 To get an edit or undelete message event notification in a bot, you can override the following handlers:
 
-#### To edit a message
+#### For edit message event
 
-The following is an example of an edit message event notification using `OnTeamsMessageEditAsync` when a sent message is edited:
+Following is an example of an edit message event notification using `OnTeamsMessageEditAsync` when a sent message is edited:
 
 # [C#](#tab/dotnet3)
 
@@ -198,7 +198,7 @@ PUT {Service URL of your bot}/v3/conversations/{conversationId}/activities/{acti
 
 ---
 
-#### To undelete a message
+#### For undelete message event
 
 The following is an example of an undelete message event notification using `OnTeamsMessageUndeleteAsync` when a deleted message is restored:
 
@@ -436,7 +436,7 @@ DELETE /v3/conversations/{conversationId}/activities/{activityId}
 
 When you soft delete a message in a chat, the bot gets a notification of the soft delete message event.
 
-The following is an example of a soft delete message event notification using `OnTeamsMessageSoftDeleteAsync` when a message is soft deleted:
+Following is an example of a soft delete message event notification using `OnTeamsMessageSoftDeleteAsync` when a message is soft deleted:
 
 > [!NOTE]
 >
