@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 
 # Build visual indicator for your Teams app
 
-With the visuaI indicator on Teams UI bar, whenever there’s a new activity during the meeting will catch the user’s attention more easily so that the user may open the side panel whenever required and consume the new alerts. The app’s value-add is not diminished even in the absence of side panel. The app will trigger our meeting notification API and pass the MRI ids of the intended recipients along with “meetingTabIcon” in the surfaces param to get the end user’s attention.
+With the visual indicator on Teams UI bar, whenever there’s a new activity during the meeting will catch the user’s attention more easily so that the user may open the side panel whenever required and consume the new alerts. The app’s value-add isn't diminished even in the absence of side panel. The app will trigger our meeting notification API and pass the MRI IDs of the intended recipients along with “meetingTabIcon” in the surfaces param to get the end user’s attention.
 
 > [!NOTE]
 >
@@ -20,10 +20,10 @@ With the visuaI indicator on Teams UI bar, whenever there’s a new activity dur
 
 1. ​This feature requires the app to have integrated with our Bot SDK and have a tab app that supports meeting side panel context.
 1. ​The tab should be installed in the meeting for which the app makes the notification call.
-1. The [Meeting Notification API](in-meeting-notification-for-meeting.md#enable-targeted-in-meeting-notification) in our Bot SDK has been extended to support this capability of showing a visual indicator on the tab icon. The “surfaces” param now supports a “meetingTabIcon” value which is to be used by the app for this feature.
-1. ​Whenever there’s a new activity for which the app wants to get the end user’s attention, the app will call our meeting notification API and pass the MRI ids of the intended recipients along with “meetingTabIcon” in the surfaces param.  
-1. ​The app can optionally also pass the tab entity id if there are multiple instances of the tab added to the same meeting. If the tab entity id is not passed by the app, then Teams will show the indicator on the first tab icon visible on the user’s meeting window.
-1. This API already supports Targeted In-Meeting Notifications for the meetingStage surface and thus apps can define multiple surfaces in the same API call if there are relevant scenarios. The app could define two objects under the “surfaces” array, one for “meetingTabIcon” and the other for “meetingStage” which would show an indicator on the tab icon as well as an in-meeting notification on the meeting stage for the same user(s).
+1. The [Meeting Notification API](in-meeting-notification-for-meeting.md#enable-targeted-in-meeting-notification) in our Bot SDK has been extended to support this capability of showing a visual indicator on the tab icon. The “surfaces” param now supports a “meetingTabIcon” value, which is to be used by the app for this feature.
+1. ​Whenever there’s a new activity for which the app wants to get the end user’s attention, the app will call our meeting notification API and pass the MRI IDs of the intended recipients along with “meetingTabIcon” in the surfaces param.  
+1. ​The app can optionally also pass the tab entity ID if there are multiple instances of the tab added to the same meeting. If the tab entity ID isn't passed by the app, then Teams will show the indicator on the first tab icon visible on the user’s meeting window.
+1. This API already supports Targeted In-Meeting Notifications for the meetingStage surface and thus apps can define multiple surfaces in the same API call if there are relevant scenarios. The app could define two objects under the “surfaces” array, one for “meetingTabIcon” and the other for “meetingStage”, which would show an indicator on the tab icon and an in-meeting notification on the meeting stage for the same user(s).
 
 The following is an example of a payload:
 
@@ -57,7 +57,7 @@ For more information on `targetedMeetingNotification`, see [Targeted meeting not
 
 ## Response codes
 
-The following table includes the response codes and it's description:
+The following table includes the response codes and its description:
 
 |Response code|Description|
 |---|---|
@@ -76,7 +76,7 @@ The following are the limitations:
 
 * The indicator will show to a maximum of first 50 in the array of participants in a particular meeting. For the above 50 participants it will be a no-op.
 
-* The app and its corresponding JS SDK bridge is terminated within the Teams ecosystem as soon as the tab is closed.
+* The app and its corresponding JS SDK bridge are terminated within the Teams ecosystem as soon as the tab is closed.
 
 ## See also
 
