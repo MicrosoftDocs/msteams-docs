@@ -242,7 +242,7 @@ Incoming webhooks start to support user mention in Adaptive Cards with the Azure
 
 > [!NOTE]
 >
-> * Enable user mention in the schema for Incoming webhooks to support Azure AD Object ID and UPN.
+> * Enable user mention in the schema for Incoming Webhooks to support Azure AD Object ID and UPN.
 > * UI/UX changes aren't required for user mentions with Azure AD Object ID and UPN.
 
 ##### Example
