@@ -910,6 +910,86 @@ Delegated permissions allow the app to access data on behalf of the signed-in us
     |`MicrophoneStream.Read.User`| Allows the app to read user's microphone stream.|
     |`MeetingParticipantReaction.Read.User`| Allows the app to read user's reactions while participating in a meeting.|
 
+## extensions
+
+**Optional** - array
+
+The set of extensions for this app.
+
+> [!NOTE]
+> Only one extension per app is supported.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`requirements`|object| TBD |TBD| TBD |
+|`runtimes`|array|TBD| TBD | TBD |
+|`ribbons`|array|TBD| TBD | TBD |
+|`autoRunEvents`|array|TBD| TBD | TBD |
+|`alternates`|array|TBD| TBD | TBD |
+|`audienceClaimUrl`|string|2048| TBD | The url for your extension, used to validate Exchange user identity tokens. |
+
+### extensions.requirements
+
+**TBD** - object
+
+TBD
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`capabilities`|array| TBD |TBD | TBD |
+|`scopes`|array|TBD| TBD | TBD |
+|`formFactors`|array|TBD| TBD | TBD |
+
+### extensions.runtimes
+
+**TBD** - array
+
+A runtime environment for a page or script
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`requirements`|object| TBD |TBD| TBD |
+|`id`|string|64 characters | TBD | A unique identifier for this runtime within the app. |
+|`type`|string|TBD| TBD | TBD |
+|`code`|object|TBD| TBD | TBD |
+|`lifetime`|string|TBD| TBD | TBD |
+|`actions`|array|TBD| TBD | TBD |
+
+### extensions.ribbons
+
+**TBD** - array
+
+TBD
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`requirements`|object| TBD |TBD | TBD |
+|`events`|array|TBD | ✔️ | TBD |
+
+### extensions.autorunevents
+
+**TBD** - array
+
+TBD
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`requirements`|object| TBD |TBD | TBD |
+|`contexts`|array|TBD | TBD | TBD |
+|`tabs`|array|TBD| ✔️ | TBD |
+
+### extensions.alternates
+
+**TBD** - array
+
+TBD
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`requirements`|object| TBD |TBD | TBD |
+|`prefer`|TBD|TBD | TBD | TBD |
+|`hide`|TBD|TBD| TBD | TBD |
+
 ## Create a manifest file
 
 If your app doesn't have a Teams app manifest file, you'll need to create it.
