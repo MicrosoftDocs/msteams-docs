@@ -118,9 +118,18 @@ One of the disadvantages of bots is that it's difficult to maintain a large retr
 
 If a bot isn't being created in developer portal with 404 error ensure the following:
 
-* When an app registration is disabled org-wide, none of the users (other than users with AAD admin access) can register new app. Admins need to select **Yes** for **Users can register applications** in [AAD portal](/azure/active-directory/fundamentals/users-default-permissions#restrict-member-users-default-permissions), however this will give access to all the users in the tenant to register new applications.
+* When an app registration is disabled org-wide, none of the users (other than users with AAD admin access) can register new app. Admins need to select **Yes** for **Users can register applications** in [Azure Active Directory portal](/azure/active-directory/fundamentals/users-default-permissions#restrict-member-users-default-permissions), however this will give access to all the users in the tenant to register new applications.
 
-* 
+* To give specific users permission to register new apps:
+
+    * Tenant admin needs to ensure that Azure AD license is added for the user with any one of the role assigned. For information about how to assign roles, see [Assign Azure AD roles to users](/azure/active-directory/roles/manage-roles-portal).
+        * [Application Administrator](/azure/active-directory/roles/permissions-reference#application-administrator)
+        * [Application Developer](/azure/active-directory/roles/permissions-reference#application-developer)
+        * [Cloud Application Administrator](/azure/active-directory/roles/permissions-reference#cloud-application-administrator)
+
+    * Tenant admins needs to ensure that Azure AD P1 or P2 plan is added to the user and a [custom role](/azure/active-directory/roles/custom-create) is assigned with the following permissions:
+        * `microsoft.directory/applications/create`
+        * `microsoft.directory/applications/createAsOwner`
 
 ## Code snippets
 
