@@ -64,11 +64,7 @@ You can test or validate the Adaptive Card schema using the **Adaptive cards edi
 <details>
 <summary>Why my bot isn't getting created in developer portal</summary>
 
-Check for the following:
-
-1. [If app registration is disabled org-wide, enable it ]().
-1. [In case ORG WIDE app Registration is disabled, and permissions need to be provided on “Per User Basis.” - With AAD for Microsoft 365 License assigned to User.]().
-1. [With AAD P1/P2 Plans assigned to User ](/partner-center/mpn-benefits-azure-cloud).
+If there is a 404 error, see [limitations and known issues](~/bots/bot-features.md)
 </details>
 
 
