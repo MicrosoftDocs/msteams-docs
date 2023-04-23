@@ -47,12 +47,23 @@ You can media files to an existing or new Adaptive Card using [Teams Developer P
 
 1. In **ELEMENT PROPERTIES**, update the following fields:
 
+|Field|Value|REquired|
+|---|---|---|
+|Data content|||
+|Only show when|||
+|id|||
+|Alternate text|||
+|Poster URL|||
+|Spacing|||
+|Horizontal alignment|||
+|Height|||
+|URL|||
+|MIME Type|||
+
     *Add your media file url in the **URL** of Adaptive Cards media element properties.
 
     >[!NOTE]
     > Adaptive Cards don't support media file links that are copied directly from the address bar.
-
-1. Add media elements to your Adaptive Cards.
 
 1. Add your media file url in the `URL` of Adaptive Cards media element properties.
 
