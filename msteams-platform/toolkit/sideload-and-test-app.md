@@ -10,7 +10,7 @@ ms.date: 03/03/2022
 
 # Sideload and test app in Teams environment
 
-After adding API connection, you can test API connection in the Teams Toolkit local environment and deploy your application to the cloud. In CI/CD pipeline, after setup with different platform, you need to create Azure service principal to provision and deploy resources.
+After adding API connection, you can test API connection in the Teams Toolkit local environment and deploy your application to the cloud. In CI/CD pipeline, after set-up with different platform, you need to create Azure service principal to provision and deploy resources.
 
 In this section, you'll learn
 
@@ -72,5 +72,5 @@ For more information, see [Azure service principals guidelines](/azure/active-di
 
 ## See also
 
-* [Teams Toolkit overview](teams-toolkit-fundamentals.md)
+* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
 * [Publish Teams apps using Teams Toolkit](publish.md)

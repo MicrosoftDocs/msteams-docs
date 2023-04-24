@@ -53,7 +53,7 @@ The following sections guide us to understand the collaboration process as proje
      > [!NOTE]
      > Collaborators must log in using the account that project owner adds under the same tenant with project owner. For more information, see [build and run your Teams app in remote environment](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=3).
 
-## Remove collaborators
+## Remove Collaborators
 
 If you want to remove collaborators from Teams Toolkit extension, you need to remove manually as you can't remove them directly. Perform the following steps to remove collaborators manually:
 
@@ -77,7 +77,7 @@ If you want to remove collaborators from Teams Toolkit extension, you need to re
 
 ## See also
 
-* [Teams Toolkit overview](teams-toolkit-fundamentals.md)
+* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
 * [Provision cloud resources](provision.md)
 * [Deploy Teams app to the cloud](deploy.md)
 * [Manage multiple environments](TeamsFx-multi-env.md)
