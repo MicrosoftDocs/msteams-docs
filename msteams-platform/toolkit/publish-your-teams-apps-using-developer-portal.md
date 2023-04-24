@@ -20,14 +20,14 @@ You can publish your app, which is created in Visual Studio and Visual Studio Co
 
 The following are the steps to publish your app in Teams Developer Portal:
 
-1. Select **Developer Portal for Teams** under **DEPLOYMENT**.
+1. In **Teams Toolkit**, under **DEPLOYMENT** select **Developer Portal for Teams**.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/dev-portal-ttk_1.png" alt-text="Developer Portal for Teams":::
 
    Developer Portal opens in a browser.
 
 1. Sign in to [Developer Portal for Teams](https://dev.teams.microsoft.com) using the corresponding account.
-1. Select **Apps** > **Import app** to import your app package in zip format.
+1. To import your app package in zip format, select **Apps** > **Import app**.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/Select_Import_app.png" alt-text="Select Import app":::
 

@@ -21,13 +21,17 @@ In Teams Developer Portal, you can open and launch your project in Visual Studio
 
 Following are the steps to open your app in Visual Studio Code:
 
-1. Select **Develop (Preview)** > **Open in Teams Toolkit** > **Open in Visual Studio Code (JS/TS)** to open Visual Studio Code and scaffold your app.
+1. Select **Develop (Preview)** > **Open in Teams Toolkit** > **Open in Visual Studio Code (JS/TS)**.
 
     :::image type="content" source="../../assets/images/tdp/open-in-teams-toolkit.png" alt-text="Screenshot shows the Developer Portal with Open in Teams Toolkit highlighted in red." lightbox="../../assets/images/tdp/open-in-teams-toolkit.png":::
+
+    A dialog is displayed.
 
 1. Select **Open**.
 
     :::image type="content" source="../../assets/images/tdp/select-open.png" alt-text="Screenshot of browser with Open option highlighted in red.":::
+
+    A dialog is displayed.
 
 1. Select **Open**.
 
@@ -53,7 +57,7 @@ Following are the steps to open your app in Visual Studio Code:
 
     :::image type="content" source="../../assets/images/tdp/select-ok.png" alt-text="Screenshot shows Teams Toolkit with OK option highlighted in red.":::
 
-1. Teams Toolkit scaffolds your project with all the necessary config and code files, now you're ready to start development.
+   Teams Toolkit scaffolds your project with all the necessary config and code files, now you're ready to start development.
 
     :::image type="content" source="../../assets/images/tdp/scaffold.png" alt-text="Screenshot shows you the scaffolding of your project in Visual Studio Code. ":::
 
@@ -83,7 +87,7 @@ Following are the steps to open your app in Visual Studio:
 
     :::image type="content" source="../../assets/images/tdp/tdp-vs-bot.png" alt-text="Screenshot shows you the type of app in visual studio.":::
 
-1. Teams Toolkit scaffolds your project with all the necessary config and code files, now you're ready to start development.
+   Teams Toolkit scaffolds your project with all the necessary config and code files, now you're ready to start development.
 
     :::image type="content" source="../../assets/images/tdp/vs-scaffold.png" alt-text="Screenshot shows you the scaffolding of your project in visual studio. ":::
 

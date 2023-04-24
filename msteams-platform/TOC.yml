@@ -186,7 +186,7 @@
       - name: Publish Teams apps using Teams Toolkit 
         href: toolkit/publish.md
         displayName: license
-      - name: Publish your Teams apps using Teams Toolkit 
+      - name: Publish Teams apps using Developer Portal 
         href: toolkit/publish-your-teams-apps-using-developer-portal.md
     - name: FAQ
       href: toolkit/faq.md  
