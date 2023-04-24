@@ -63,7 +63,7 @@ To get started, install:
 
     :::image type="content" source="../assets/images/teams-live-share/dice-roller.png" alt-text="Dice Roller multiple tabs":::
   
-   **Congratulations**! You've learned how to build and run an app using the Live Share SDK.
+   **Congratulations** you've learned how to build and run an app using the Live Share SDK.
 
 ## Next step
 

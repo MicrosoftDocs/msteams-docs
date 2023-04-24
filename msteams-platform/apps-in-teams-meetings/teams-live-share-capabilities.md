@@ -12,7 +12,7 @@ ms.date: 04/07/2022
 
 :::image type="content" source="../assets/images/teams-live-share/Teams-live-share-core-capabilities-hero.png" alt-text="Screenshot shows an example of users playing agile poker game in a Teams meeting, which showcases the Live share capability.":::
 
-The Live Share SDK can be added to your meeting extension's `sidePanel` and `meetingStage` contexts with minimal effort. 
+The Live Share SDK can be added to your meeting extension's `sidePanel` and `meetingStage` contexts with minimal effort.
 
 > [!NOTE]
 > The Live Share SDK isn't supported for anonymous users.
@@ -143,7 +143,7 @@ The Live Share SDK supports any [distributed data structure](https://fluidframew
 
 Following are the different types of objects available:
 
-| Shared object                                                                       | Description                                                                                                                             |
+| Shared Object                                                                       | Description                                                                                                                             |
 | ----------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
 | [SharedMap](https://fluidframework.com/docs/data-structures/map/)                   | A distributed key-value store. Set any JSON-serializable object for a given key to synchronize that object for everyone in the session. |
 | [SharedSegmentSequence](https://fluidframework.com/docs/data-structures/sequences/) | A list-like data structure for storing a set of items (called segments) at set positions.                                               |
@@ -222,7 +222,7 @@ function onClickAddToPlaylist(video: IVideo) {
 
 The Live Share SDK includes a set of new distributed-data structures that extend Fluid's `SharedObject` class, providing new types of stateful and stateless objects. Unlike Fluid data structures, Live Share's `SharedObject` classes don’t write changes to the Fluid container, enabling faster synchronization. Further, these classes were designed from the ground up for common meeting scenarios in Teams meetings. Common scenarios include synchronizing what content the presenter is viewing, displaying metadata for each user in the meeting, or displaying a countdown timer.
 
-| Live object    | Description                                                                                                                             |
+| Live Object    | Description                                                                                                                             |
 | -------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
 | `LivePresence` | See which users are online, set custom properties for each user, and broadcast changes to their presence.                               |
 | `LiveEvent`    | Broadcast individual events with any custom data attributes in the payload.                                                             |

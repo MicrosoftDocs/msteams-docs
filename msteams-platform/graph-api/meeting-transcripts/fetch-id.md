@@ -270,7 +270,7 @@ To obtain meeting ID and organizer ID from tenant-level notification:
 
       Examples for response payload scenarios depending on the type of join meeting URL:
 
-        - Online Teams meeting where `joinWebUrl` is available.
+        - Online Teams meeting where `joinWebUrl` is available
 
             <details>
             <summary><b>Example</b>: Response payload for online meeting</b></summary>
@@ -300,7 +300,7 @@ To obtain meeting ID and organizer ID from tenant-level notification:
 
             </details>
 
-        - Meeting scheduled through Teams client or Outlook client, not marked as an online meeting where `calendarEventId` is available.
+        - Meeting scheduled through Teams client or Outlook client, not marked as an online meeting where `calendarEventId` is available
 
             <details>
             <summary><b>Example</b>: Response payload for meeting not marked as online</summary>
@@ -521,7 +521,7 @@ You can try the following code sample for a bot app:
 
 | **Sample name** | **Description** | **.NET** | **Node.js** |
 |----------------|-----------------|--------------|--------------|--------------|
-| Meeting transcription | This is a sample application which demonstrates how to get transcript using Graph API and show it in the task module. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-transcription/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-transcription/nodejs) |
+| Meeting transcription | This is a sample application which demonstrates how to get Transcript using Graph API and show it in the task module. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-transcription/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-transcription/nodejs) |
 
 ## Next step
 
