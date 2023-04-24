@@ -454,11 +454,11 @@ The sequence is as follows:
 
 Your service should verify that the authentication code received in step 6 matches the one from step 5, which ensures that a malicious user doesn't try to spoof or compromise the flow to sign in. This effectively "closes the loop" to finish the secure authentication sequence.
 
-### Respond with an action to sign in
+### Respond with a sign-in action
 
 To prompt an unauthenticated user to sign in, respond with a suggested action of type `openUrl` that includes the authentication URL.
 
-#### Response example for sign in
+#### Response example for a sign-in action
 
 ```json
 {
@@ -480,13 +480,13 @@ To prompt an unauthenticated user to sign in, respond with a suggested action of
 > [!NOTE]
 > For the sign in to be hosted in a Teams pop-up, the domain portion of the URL must be in your app’s list of valid domains. For more information, see [validDomains](~/resources/schema/manifest-schema.md#validdomains) in the manifest schema.
 
-### Start the process of sign in
+### Start the sign-in flow
 
 Your sign in should be responsive and fit within a pop-up window. It should integrate with the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client), which uses message passing.
 
 As with other embedded experiences running inside Teams, your code inside the window needs to first call `microsoftTeams.initialize()`. If your code performs an OAuth flow, you can pass the Teams user ID into your window, which then can pass it to the URL of OAuth sign in.
 
-### Complete the process of sign in
+### Complete the sign-in flow
 
 When the request to sign in completes and redirects back to your page, it should perform the following steps:
 
