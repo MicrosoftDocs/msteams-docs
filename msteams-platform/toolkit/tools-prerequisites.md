@@ -12,7 +12,7 @@ ms.date: 03/14/2022
 Before you create your Teams app project, ensure that the prerequisites are in place. You must:
 
 * [Install required tools to build your Teams app](#install-required-tools-to-build-your-teams-app)
-* [Prepare accounts to build your Teams app](#accounts-to-build-your-teams-app)
+* [Prepare Accounts to build your Teams app](#accounts-to-build-your-teams-app)
 * [Sideload permission](tools-prerequisites.md)
 * [Verify sideloading permission](#verify-sideloading-permission)
 
@@ -59,7 +59,7 @@ It's recommended that you bookmark the Microsoft Graph Explorer to learn about M
 
 ### Node.js version compatibility table for project type
 
-|Teams Toolkit version | Project type | Supported Node.js versions |
+|Teams Toolkit Version | Project Type | Supported Node.js Versions |
 |---|---|---|
 | 4.2.2 | Notify with http or timer trigger <br> Azure functions <br> SPFx <br> Other | 14, 16, 18 (Preview) <br> 14, 16, 18 (Preview) <br> 16 <br> 14, 16, 18 |
 | 4.2.0 | SPFx | 16 |

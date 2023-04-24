@@ -52,7 +52,7 @@ You can add cloud resources in the following ways:
 * Before you add cloud resources, ensure that you change the directory to your **project directory**.
 * The following table lists the capabilities and required commands:
 
-  |Cloud resource|Command|
+  |Cloud Resource|Command|
   |---------------|----------|
   | **Azure Functions**|`teamsfx add azure-function`|
   | **Azure SQL Database**|`teamsfx add azure-sql`|

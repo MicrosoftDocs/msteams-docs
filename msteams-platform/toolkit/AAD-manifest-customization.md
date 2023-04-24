@@ -274,17 +274,17 @@ You can use the existing Azure AD application for the Teams project. For more in
 
 You need to interact with Azure AD application during various stages of your Teams application development lifecycle.
 
-1. **To create project**
+1. **To create Project**
 
       You can create a project with Teams Toolkit that comes with single sign-on (SSO) support by default such as `SSO-enabled tab`. For more information on how to create a new app, see [create new Teams application using Teams Toolkit](create-new-project.md). An Azure AD manifest file is automatically created for you in `templates\appPackage\aad.template.json`. Teams Toolkit creates or updates the Azure AD application during local development or while you move the application to the cloud.
 
-2. **To add SSO to your bot or tab**
+2. **To add SSO to your Bot or Tab**
 
       After you create a Teams application without built-in SSO, Teams Toolkit progressively helps you to add SSO for the project. As a result, an Azure AD manifest file is automatically created for you in `templates\appPackage\aad.template.json`.
 
       Teams Toolkit creates or updates the Azure AD application during next local development session or while you move the application to the cloud.
 
-3. **To build locally**
+3. **To build Locally**
 
     Teams Toolkit performs the following functions during local development:
 
@@ -339,8 +339,8 @@ You need to interact with Azure AD application during various stages of your Tea
 
 ## See also
 
-- [Teams Toolkit overview](teams-toolkit-fundamentals.md)
+- [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
 - [Azure AD manifest](/azure/active-directory/develop/reference-app-manifest)
-- [Preview and customize app manifest in Toolkit](TeamsFx-preview-and-customize-app-manifest.md)
+- [Preview and Customize app manifest in Toolkit](TeamsFx-preview-and-customize-app-manifest.md)
 - [Debug your Teams app](debug-overview.md)
 - [Debug your Teams app locally](debug-local.md)
