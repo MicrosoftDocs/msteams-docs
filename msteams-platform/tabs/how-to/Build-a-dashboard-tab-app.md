@@ -82,7 +82,7 @@ export default class YourDashboard extends Dashboard {
 
 You must link your widget to a data source file. The widget picks up the data that's presented in the dashboard from the source file.
 
-Open `tabs/src/App.tsx` file and add a route for the new dashboard. Here's an example:
+Open the **tabs/src/App.tsx** file and add a route for the new dashboard. Here's an example:
 
 ```typescript
 import YourDashboard from "./views/dashboards/YourDashboard";
@@ -96,7 +96,7 @@ export default function App() {
 
 ### Modify manifest to add a new dashboard tab app
 
-Open `templates/appPackage/manifest.template.json` file and add a new dashboard tab under the `staticTabs`. Here's an example:
+Open the **templates/appPackage/manifest.template.json** file and add a new dashboard tab under **staticTabs**. Here's an example:
 
 ```json
 {
@@ -112,7 +112,7 @@ Open `templates/appPackage/manifest.template.json` file and add a new dashboard 
 
 Teamsfx provides convenient methods to define and modify the layout of the dashboard. The following are the methods:
 
-* Three widgets in a row with the height of 350px occupying 20 percent, 60 percent, and 20 percent of the width, respectively.
+* Three widgets in a row with the height of 350 px occupying 20 percent, 60 percent, and 20 percent of the width, respectively.
 
     ```typescript
     export default class SampleDashboard extends Dashboard {
@@ -138,7 +138,7 @@ Teamsfx provides convenient methods to define and modify the layout of the dashb
 
    :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/customize-dashboard-layout.png" alt-text="Screenshot shows the customized dashboard layout.":::
 
-* Two widgets in a row with a width of 600px and 1100px. The height of the first line is the maximum height of its content, and the height of the second line is 400px.
+* Two widgets in a row with a width of 600px and 1100 px. The height of the first line is the maximum height of its content, and the height of the second line is 400 px.
 
     ```typescript
     export default class SampleDashboard extends Dashboard {
@@ -192,7 +192,7 @@ Teamsfx provides convenient methods to define and modify the layout of the dashb
 
 * Customize the height of widgets in a row.
 
-    The following code can achieve a height of 400px for the `ListWidget` and a height of 350px for the `ChartWidget`:
+    The following code can achieve a height of 400 px for the `ListWidget` and a height of 350 px for the `ChartWidget`:
 
     ```css
     .one-column {
