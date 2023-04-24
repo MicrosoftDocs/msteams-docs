@@ -22,7 +22,7 @@ Teams Toolkit appears within Visual Studio Code as an extension. After you insta
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/overview1_1.png" alt-text="Overview of Teams Toolkit" lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/overview1_1.png":::
 
-| S.No. | UI elements | Definition |
+| Serial.No. | UI Elements | Definition |
 | --- | --- | --- |
 | 1 | **Documentation** | Access the Microsoft Teams Developer documentation. |
 | 2 | **How-to guides** | Access how-to guides for app scenario and app development. |
