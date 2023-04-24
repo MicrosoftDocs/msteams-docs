@@ -138,7 +138,7 @@ Teamsfx provides convenient methods to define and modify the layout of the dashb
 
    :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/customize-dashboard-layout.png" alt-text="Screenshot shows the customized dashboard layout.":::
 
-* Two widgets in a row with a width of 600px and 1100 px. The height of the first line is the maximum height of its content, and the height of the second line is 400 px.
+* Two widgets in a row with a width of 600 px and 1100 px. The height of the first line is the maximum height of its content, and the height of the second line is 400 px.
 
     ```typescript
     export default class SampleDashboard extends Dashboard {
