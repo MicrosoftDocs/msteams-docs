@@ -126,7 +126,7 @@ You can use bots in the following contexts:
 * **Personal apps**: In a personal app, a bot has a dedicated chat tab.
 * **One-on-one chat**: A user can initiate a private conversation with a bot. It's the same experience as using a bot in a personal app.
 * **Group chat**: People can interact with a bot in a group chat by @mentioning the bot.
-* **Channel**: People can interact with a bot in a channel, by @mentioning the bot name in the compose box. Remember, in this context, the bot is available to the entire team, not just the channel.
+* **Channel**: People can interact with a bot in a channel by @mentioning the bot name in the compose box. Remember, in this context, the bot is available to the entire team, not just the channel.
 
 ### Anatomy
 
