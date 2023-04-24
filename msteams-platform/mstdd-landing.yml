@@ -54,6 +54,8 @@ landingContent:
       links:
       - text: Develop your apps with Teams Toolkit
         url: concepts/build-and-test/develop-your-apps-with-teams-toolkit.md
+      - text: Contextless app update
+        url: concepts/deploy-and-publish/apps-upload.md#update-your-app
       - text: Resource-specific consent for your Teams app
         url: graph-api/rsc/resource-specific-consent.md      
       - text: Drive customer adoption of your app
