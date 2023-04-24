@@ -82,7 +82,7 @@ export default class YourDashboard extends Dashboard {
 
 You must link your widget to a data source file. The widget picks up the data that's presented in the dashboard from the source file.
 
-Open the **tabs/src/App.tsx** file and add a route for the new dashboard. Here's an example:
+Open **tabs/src/App.tsx** and add a route for the new dashboard. Here's an example:
 
 ```typescript
 import YourDashboard from "./views/dashboards/YourDashboard";
@@ -96,7 +96,7 @@ export default function App() {
 
 ### Modify manifest to add a new dashboard tab app
 
-Open the **templates/appPackage/manifest.template.json** file and add a new dashboard tab under **staticTabs**. Here's an example:
+Open **templates/appPackage/manifest.template.json** and add a new dashboard tab under **staticTabs**. Here's an example:
 
 ```json
 {
