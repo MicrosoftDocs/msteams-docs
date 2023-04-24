@@ -160,8 +160,8 @@ You can use a list to display related items in a scannable format and allow user
 :::image type="content" source="../../assets/images/ui-templates/list.png" alt-text="Example shows a list UI template on desktop.":::
 
 ## Sign in
-
-You can design the flow of app sign in for different Teams contexts and identity providers. The following example includes single sign-on (SSO), which we recommend for the simplest authentication experience.
+design app sign-in flows for 
+You can design app sign in flows for different Teams contexts and identity providers. The following example includes single sign-on (SSO), which we recommend for the simplest authentication experience.
 
 ### Top use case
 
