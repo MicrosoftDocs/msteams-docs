@@ -2,7 +2,7 @@
 title: Add single sign-on to your Teams apps
 author: surbhigupta
 description: In this module, learn how to add single sign-on (SSO) of Teams Toolkit, enable SSO support, update your application to use SSO
-ms.author: v-amprasad
+ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/20/2022
