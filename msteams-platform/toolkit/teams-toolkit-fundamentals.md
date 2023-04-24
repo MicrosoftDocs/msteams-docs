@@ -9,7 +9,7 @@ ms.date: 05/24/2022
 zone_pivot_groups: teams-app-platform
 ---
 
-# Teams Toolkit overview
+# Teams Toolkit Overview
 
 ::: zone pivot="visual-studio-code"
 
