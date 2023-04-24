@@ -44,7 +44,7 @@ For more information about the install dialog, see the [appInstallDialog.openApp
 
 ```javascript
 // Open an app install dialog from your tab
-microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/app/f46ad259-0fe5-4f12-872d-c737b174bcb4");
+microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/app");
 ```
 
 ---
