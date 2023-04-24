@@ -230,7 +230,7 @@ Tabs work best when they address specific needs. Include a limited set of tasks 
 
 #### Don't: Embed your entire app
 
-Using a tab to display an entire app with multi-level navigation and complex interactions leads to information overload.
+Using a tab to display an entire app with multilevel navigation and complex interactions leads to information overload.
 
    :::column-end:::
 :::row-end:::
