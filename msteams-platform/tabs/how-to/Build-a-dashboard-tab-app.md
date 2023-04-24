@@ -848,7 +848,7 @@ async function callFunction(teamsfx) {
 
 For more information, see:
 
-* [sample](https://github.com/OfficeDev/TeamsFx-Samples/blob/dev/hello-world-tab-with-backend/tabs/src/components/sample/AzureFunctions.tsx)
+* [Sample](https://github.com/OfficeDev/TeamsFx-Samples/blob/dev/hello-world-tab-with-backend/src/components/sample/AzureFunctions.tsx)
 * [Developer guide](/azure/azure-functions/functions-reference?tabs=blob)
 
 ## Embed Power BI to dashboard
