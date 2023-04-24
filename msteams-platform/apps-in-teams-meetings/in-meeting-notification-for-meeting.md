@@ -63,7 +63,7 @@ The following table provides the user types and lists the features that each use
 | In-tenant | Available | Available |  Available | Available |
 | Guest | Available | Available |  Available | Available |
 | Federated or External | Available | Not available | Not available | Available |
-| Anonymous | Available | Not available | Not available | Not available |
+| Anonymous | Not available | Not available | Not available | Not available |
 
 ## Targeted in-meeting notification
 

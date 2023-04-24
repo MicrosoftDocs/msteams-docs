@@ -64,7 +64,6 @@ For more information, see [Add code to enable SSO in a tab app](tab-sso-code.md)
 > [!IMPORTANT]
 >
 > - The `getAuthToken()` is valid only for consenting to a limited set of user-level APIs, such as email, profile, offline_access, and OpenId. It isn't used for other Graph scopes such as `User.Read` or `Mail.Read`. For suggested workarounds, see [Extend your app with Microsoft Graph permissions](tab-sso-graph-api.md).
-> - The `getAuthToken` fails for anonymous users as they aren't Azure AD accounts.
 
 Tabs are Teams-aware web pages. To enable SSO in a webpage hosted inside a tab app, add [Teams Javascript client library](/javascript/api/overview/msteams-client?) and call `microsoftTeams.initialize()`. After initialization, call `microsoftTeams.getAuthToken()` to get the access token for your app.
 

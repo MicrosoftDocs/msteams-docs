@@ -77,8 +77,6 @@ landingContent:
       links:
       - text: Set up Microsoft license management
         url: concepts/deploy-and-publish/appsource/prepare/manage-third-party-apps-license.md
-      - text: Apps for Teams meetings support anonymous users
-        url: apps-in-teams-meetings/build-apps-for-anonymous-user.md
       - text: Notification bot in Teams
         url: bots/how-to/conversations/notification-bot-in-teams.md
       - text: Command bot in Teams
