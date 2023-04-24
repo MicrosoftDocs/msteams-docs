@@ -101,7 +101,7 @@ The following properties are additions to the `Input.ChoiceSet` schema to enable
 
 The following table provides predefined values as **dataset** for people picker:
 
-|dataset|Search scope
+|dataset|Search Scope
 |--|--|
 |**graph.microsoft.com/users** |Search all members across the organization.|
 |**graph.microsoft.com/users?scope=currentContext** |Search within the members of the current conversation, such as chat or channel in which the particular card is sent.|
@@ -148,7 +148,7 @@ The following image illustrates People Picker in Adaptive Cards with organizatio
 
 To enable search within a list of conversation members, use the appropriate dataset defined in the [dataset](#dataset) table. `isMultiSelect` property is used to enable the selection of multiple users  in the control. It's set to false by default and this setting allows you to select single user only.
 
-### Data submission
+### Data Submission
 
 You can use `Action.Submit` or `Action.Execute` to submit selected data to your bot. The `invoke` payload received on your bot is a list of Microsoft Azure Active Directory (Azure AD) IDs or the IDs provided in static list.
 In People Picker, when a user is selected in the control, the `Azure AD ID` of the user is the value sent back. The `Azure AD ID` is a string and uniquely identifies a user in the directory.
@@ -298,7 +298,7 @@ You can implement People Picker for efficient task management in different scena
 
 ## Code sample
 
-| Sample name           | Description | .NET    | Node.js   | Manifest
+| Sample Name           | Description | .NET    | Node.js   | Manifest
 |:---------------------|:--------------|:---------|:--------|:--------|
 |People picker control in Adaptive Cards| This sample shows how to use the people picker control in Adaptive Cards.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-people-picker-adaptive-card/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-people-picker-adaptive-card/nodejs) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-people-picker-adaptive-card/csharp/demo-manifest/People-picker-adaptive-card.zip)
 
