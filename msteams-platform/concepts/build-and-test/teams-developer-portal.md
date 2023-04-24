@@ -90,6 +90,6 @@ The updates for Changelog in Developer Portal are categorized based on the follo
 
 ## See also
 
-* [Teams Toolkit overview](../../toolkit/teams-toolkit-fundamentals.md)
+* [Teams Toolkit Overview](../../toolkit/teams-toolkit-fundamentals.md)
 * [Analyze your app's usage in Developer Portal](analyze-your-apps-usage-in-developer-portal.md)
 * [Include a SaaS offer with your Microsoft Teams app](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)

@@ -179,5 +179,5 @@ From the Developer Portal, you can go to Bot Framework portal and configure your
 
 ## See also
 
-* [Teams Toolkit overview](../../toolkit/teams-toolkit-fundamentals.md)
+* [Teams Toolkit Overview](../../toolkit/teams-toolkit-fundamentals.md)
 * [Include a SaaS offer with your Microsoft Teams app](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)

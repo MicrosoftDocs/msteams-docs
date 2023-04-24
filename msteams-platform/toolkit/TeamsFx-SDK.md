@@ -65,8 +65,8 @@ When creating a TeamsFx instance, you need to specify the identity type.
 
 The following list provides the two different type of identities:
 
-* **User identity**: Represents the current user of Teams.
-* **Application identity**: Represents the application itself.
+* **User Identity**: Represents the current user of Teams.
+* **Application Identity**: Represents the application itself.
 
     > [!NOTE]
     > The TeamsFx constructors and methods aren't the same for these two identity types.
@@ -414,7 +414,7 @@ This section provides several code snippets for common scenarios that are relate
 
 * User delegate permission in backend (Use `OnBehalfOfUserCredential`)
     <details>
-    <summary><b>Use Graph API in bot application</b></summary>
+    <summary><b>Use Graph API in bot Application</b></summary>
 
     This code snippet shows you how to use `TeamsBotSsoPrompt` to set a dialog and then sign in to get an access token.
 
@@ -475,7 +475,7 @@ This section provides several code snippets for common scenarios that are relate
     </details>
 
     <details>
-    <summary><b>Use Graph API in message extension</b></summary>
+    <summary><b>Use Graph API in Message Extension</b></summary>
 
     The following code snippet shows how to override `handleTeamsMessagingExtensionQuery` that extends from `TeamsActivityHandler`, and use `handleMessageExtensionQueryWithSSO` provided by TeamsFx SDK to sign in to get an access token:
 
@@ -500,7 +500,7 @@ This section provides several code snippets for common scenarios that are relate
     </details>
 
     <details>
-    <summary><b>Use Graph API in command bot</b></summary>
+    <summary><b>Use Graph API in Command Bot</b></summary>
 
     This code snippet shows you how to implement `TeamsFxBotSsoCommandHandler` for command bot to call Microsoft API.
 
@@ -704,7 +704,7 @@ This section provides several code snippets for common scenarios that are relate
 This section provides several code snippets for other scenarios that are related to Microsoft Graph. You can create API client in Bot or Azure Function and access SQL database in Azure Function.
 
   <details>
-  <summary><b>Create API client to call existing API in bot or Azure Function</b></summary>
+  <summary><b>Create API client to call existing API in Bot or Azure Function</b></summary>
 
   This code snippet shows you how to call an existing API in bot by `ApiKeyProvider`.
 
@@ -768,7 +768,7 @@ For more information on sample to access SQL database in Azure Function, see [sh
 
 </details>
 
-## Advanced customization
+## Advanced Customization
 
 ### Configure log
 
@@ -829,7 +829,7 @@ If you're using the version of SDK that has `loadConfiguration()`, you can follo
 
 ## See also
 
-* [Teams Toolkit overview](teams-toolkit-fundamentals.md)
+* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
 * [Teams Toolkit CLI](TeamsFx-CLI.md)
 * [Microsoft TeamsFx sample gallery](https://github.com/OfficeDev/TeamsFx-Samples).
 * [Add single sign-on to Teams app](add-single-sign-on.md)
