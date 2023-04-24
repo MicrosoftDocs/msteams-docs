@@ -451,8 +451,8 @@ The sequence is as follows:
 4. The Microsoft Teams client launches a pop-up window hosting your webpage using the given authentication URL.
 5. After the user signs in, you should close your window and send an "authentication code" to the Teams client.
 6. The Teams client then reissues the query to your service, which includes the authentication code passed in step 5.
-
-Your service should verify that the authentication code received in step 6 matches the one from step 5, which ensures that a malicious user doesn't try to spoof or compromise the flow to sign in. This effectively "closes the loop" to finish the secure authentication sequence.
+ sign-in flow. 
+Your service should verify that the authentication code received in step 6 matches the one from step 5, which ensures that a malicious user doesn't try to spoof or compromise the sign in flow. This effectively "closes the loop" to finish the secure authentication sequence.
 
 ### Respond with a sign-in action
 
