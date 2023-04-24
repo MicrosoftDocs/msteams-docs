@@ -39,7 +39,7 @@ The following examples show how to add a message extension in a channel.
 
 Authentication isn't mandatory, but if your app is something like a ticket tracking tool, you may need people to sign in to use the message extension.
 
-For consistency across Teams apps, you can't customize the screen of the sign in. If you use single sign-on (SSO) authentication, users are signed in automatically.
+For consistency across Teams apps, you can't customize the screen of sign in. If you use single sign-on (SSO) authentication, users are signed in automatically.
 
 ### Mobile
 
@@ -270,7 +270,7 @@ If your message extension requires action commands, keep the task module simple 
 
 #### Do: Take advantage of Teams color tokens
 
-Each Teams theme has its own color scheme. To handle theme changes automatically, use [color tokens (Fluent UI)](https://fluentsite.z22.web.core.windows.net/0.51.7/colors#color-scheme) in your design.
+Each Teams theme has its own color scheme. To handle theme changes automatically, use [color tokens (Fluent UI)](https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme) in your design.
 
    :::column-end:::
    :::column span="":::

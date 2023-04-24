@@ -37,7 +37,7 @@ Users can access bots that were added on desktop with an @mention.
 Users can add a bot one of the following ways:
 
 * From the Teams store.
-* Using the app flyout menu by selecting the **More** icon on the left side of Teams.
+* Using the app flyout by selecting the **More** icon on the left side of Teams.
 * With an @mention in the new chat or compose box (the following example shows how you can do this in a group chat).
 
     :::image type="content" source="../../assets/images/bots/add-bot-chat-at-mention.png" alt-text="Example shows how to add a bot in a group chat using an @mention.":::
@@ -60,7 +60,7 @@ In personal contexts, welcome messages set your bot's tone. The message includes
 
 ### Welcome message in channels and group chats
 
-Your bot's introduction should be slightly different in channels and group chats compared to a personal space (like a personal app). In real life, if you entered a room full of people, you’d introduce yourself instead of welcoming everyone who’s already there. Carry that thinking into your bot design.
+Your bot's introduction should be slightly different in channels and group chats compared to a personal space (like a personal app). In real life, if you entered a room full of people; you’d introduce yourself instead of welcoming everyone who’s already there. Carry that thinking into your bot design.
 
 #### Mobile
 
@@ -126,7 +126,7 @@ You can use bots in the following contexts:
 * **Personal apps**: In a personal app, a bot has a dedicated chat tab.
 * **One-on-one chat**: A user can initiate a private conversation with a bot. It's the same experience as using a bot in a personal app.
 * **Group chat**: People can interact with a bot in a group chat by @mentioning the bot.
-* **Channel**: People can interact with a bot in a channel by @mentioning the bot name in the compose box. Remember, in this context, the bot is available to the entire team, not just the channel.
+* **Channel**: People can interact with a bot in a channel, by @mentioning the bot name in the compose box. Remember, in this context, the bot is available to the entire team, not just the channel.
 
 ### Anatomy
 
