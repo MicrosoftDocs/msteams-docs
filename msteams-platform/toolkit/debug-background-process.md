@@ -101,15 +101,15 @@ When you select **Start Debugging (F5)**, Teams Toolkit output channel displays 
 
 ## Register and configure Teams app
 
-In the setup process, Teams Toolkit prepares the following registrations and configurations for your Teams app:
+In the set-up process, Teams Toolkit prepares the following registrations and configurations for your Teams app:
 
-1. [Registers and configures Microsoft Azure Active Directory (Azure AD) app](#registers-and-configures-microsoft-azure-active-directory-azure-ad-app)
+1. [Registers and configures Microsoft Azure Active Directory(Azure AD) app](#registers-and-configures-microsoft-azure-active-directoryazure-ad-app)
 
 1. [Registers and configures bot](#registers-and-configures-bot)
 
 1. [Registers and configures Teams app](#registers-and-configures-teams-app)
 
-### Registers and configures Microsoft Azure Active Directory (Azure AD) app
+### Registers and configures Microsoft Azure Active Directory(Azure AD) app
 
 1. Registers an Azure AD app.
 
@@ -177,7 +177,7 @@ You can view the project folders and files under **Explorer** in Visual Studio C
 
 ## See also
 
-* [Teams Toolkit overview](teams-toolkit-fundamentals.md)
+* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
 * [Debug your Teams app using Teams Toolkit](debug-local.md)
 * [Use Teams Toolkit to provision cloud resources](provision.md)
 * [Deploy to the cloud](deploy.md)

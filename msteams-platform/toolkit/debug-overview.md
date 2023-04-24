@@ -111,7 +111,7 @@ Use the following code snippet example to setup an existing bot for debugging:
 
 </details>
 
-### Customize scenarios
+### Customize Scenarios
 
 Here's a list of debug scenarios that you can use:
 <br>
@@ -345,7 +345,7 @@ You can launch Teams app as a web app instead of running in Teams client.
 
 ## See also
 
-* [Teams Toolkit overview](teams-toolkit-fundamentals.md)
+* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
 * [Debug background process](debug-background-process.md)
 * [Use Teams Toolkit to provision cloud resources](provision.md)
 * [Deploy to the cloud](deploy.md)

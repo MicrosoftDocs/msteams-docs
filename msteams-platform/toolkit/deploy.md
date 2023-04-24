@@ -115,7 +115,7 @@ The other way to preview your app:
 
 ## See also
 
-* [Teams Toolkit overview](teams-toolkit-fundamentals.md)
+* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
 * [Create and deploy an Azure cloud service](/azure/cloud-services/cloud-services-how-to-create-deploy-portal)
 * [Create multi-capability Teams apps](add-capability.md)
 * [Add cloud resources to Microsoft Teams app](add-resource.md)

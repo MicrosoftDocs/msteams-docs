@@ -11,7 +11,7 @@ zone_pivot_groups: teams-app-platform
 
 # Debug your Teams app locally
 
-Teams Toolkit helps you to debug and preview your Microsoft Teams app locally. During the debug process, Teams Toolkit automatically starts app services, launches debuggers, and sideloads the Teams app. You can preview your Teams app in Teams web client locally after debugging.
+Teams Toolkit helps you to debug and preview your Microsoft Teams app locally. During the debug process, Teams Toolkit automatically starts app services, launches debuggers, and side-loads the Teams app. You can preview your Teams app in Teams web client locally after debugging.
 
 ::: zone pivot="visual-studio-code"
 
@@ -102,9 +102,9 @@ Runs tasks as defined in `.vscode/tasks.json`.
 
 |  Component |  Task name  | Folder |
 | --- | --- | --- |
-|  Tab |  **Start frontend** |  tabs |
-|  Bot or message extensions |  **Start bot** |  bot |
-|  Azure Functions |  **Start backend** |  API |
+|  Tab |  **Start Frontend** |  tabs |
+|  Bot or message extensions |  **Start Bot** |  bot |
+|  Azure Functions |  **Start Backend** |  API |
 
 The following image displays task names in the **OUTPUT** and **TERMINAL** tabs of the Visual Studio Code while running tab, bot or message extension, and Azure Functions.
 
@@ -124,7 +124,7 @@ The following table lists the debug configuration names and types for project wi
 |  Bot or message extensions |   **Attach to Bot** |  pwa-node |
 | Azure Functions |   **Attach to Backend** |  pwa-node |
 
-The following table lists the debug configuration names and types for project with bot app, Azure Functions, and without tab app:
+The following table lists the debug configuration names and types for project with bot app, Azure Functions and without tab app:
 
 |  Component |  Debug configuration name  | Debug configuration type  |
 | --- | --- | --- |
@@ -134,7 +134,7 @@ The following table lists the debug configuration names and types for project wi
 
 ### Sideloads the Teams app
 
-The configuration **Attach to Frontend** or **Launch Bot** launches Microsoft Edge or Chrome browser instance to load Teams client in web page. After the Teams client is loaded, Teams sideloads the Teams app that is controlled by the sideloading URL defined in the launch configurations [Microsoft Teams](https://teams.microsoft.com/l/app/>${localTeamsAppId}?installAppPackage=true&webjoin=true&${account-hint}). When Teams client loads in the web browser, select **Add** or select an option from the dropdown as per your requirement.
+The configuration **Attach to Frontend** or **Launch Bot** launches Microsoft Edge or Chrome browser instance to load Teams client in web page. After the Teams client is loaded, Teams side-loads the Teams app that is controlled by the sideloading URL defined in the launch configurations [Microsoft Teams](https://teams.microsoft.com/l/app/>${localTeamsAppId}?installAppPackage=true&webjoin=true&${account-hint}). When Teams client loads in the web browser, select **Add** or select an option from the dropdown as per your requirement.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/hello-local-debug.png" alt-text="Add local debug" lightbox="../assets/images/teams-toolkit-v2/debug/hello-local-debug.png":::
 
@@ -148,7 +148,7 @@ The configuration **Attach to Frontend** or **Launch Bot** launches Microsoft Ed
 
 Teams Toolkit helps you to debug and preview your Microsoft Teams app locally. Visual Studio allows you to debug tab, bot, and message extension. You can debug your app locally in Visual Studio using Teams Toolkit by performing:
 
-### Set up ngrok (Only for bot and message extension app)
+### Set up ngrok (Only for Bot and Message Extension app)
 
 Use command prompt to run this command:
 
@@ -208,7 +208,7 @@ Perform the following steps using the Teams Toolkit to debug your app after you 
 
 ## See also
 
-* [Teams Toolkit overview](teams-toolkit-fundamentals.md)
+* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
 * [Introduction to Azure Functions](/azure/azure-functions/functions-overview)
 * [Use Teams Toolkit to provision cloud resources](provision.md)
 * [Add capabilities to your Teams apps](add-capability.md)
