@@ -36,9 +36,7 @@ The following table provides a list of APIs available across the Microsoft Teams
 ## Get user context API
 
 > [!IMPORTANT]
->
-> * Teams supports light theme for apps in Teams meetings. The `app.theme` property in the getContext API returns light theme as default.
-> * Earlier, the meeting canvas only supported dark and contrast themes even when the  `app.theme` property values was set to default. If your app uses the getContext API, ensure that your app respects the light theme after the user leaves the meeting canvas.
+> Teams supports default (light), dark, and contrast themes for apps in Teams meetings. The `app.theme` property in the getContext API returns the light theme as default.
 
 To identify and retrieve contextual information for your tab content, see [get context for your Teams tab](../tabs/how-to/access-teams-context.md#get-context-by-using-the-microsoft-teams-javascript-library). `meetingId` is used by a tab running in the meeting context and is added for the response payload.
 

@@ -35,7 +35,7 @@ You can access context information in two ways:
 ### Get context by inserting URL placeholder values
 
 > [!IMPORTANT]
-> Teams supports light theme for apps in Teams meetings. The `app.theme` property returns light theme as default.
+> Teams supports default (light), dark, and contrast themes for apps in Teams meetings. The `app.theme` property returns the light theme as default.
 
 Use placeholders in your configuration or content URLs. Microsoft Teams replaces the placeholders with the relevant values when determining the actual configuration or content URL. The available placeholders include all fields on the [context](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) object. Common placeholders include the following properties:
 
