@@ -107,7 +107,7 @@ In the **Advanced** section, you can see the following components to manage your
 
 * **Plan and pricing**: You can link a Software-as-a-Services (SaaS) offer that you've created in the Partner center for your app.
 * **Admin settings**:
-  * **App customization**: You can customize your app by selecting different properties, such as **Name**, **Short description**, **Small icon**, and other properties.  
+  * **App Customization**: You can customize your app by selecting different properties, such as **Name**, **Short description**, **Small icon**, and other properties.  
   * **Block app by default**: You can block your app by default for users until a tenant admin selects to enable it.
 
 ## Publish

@@ -434,7 +434,7 @@ The following list provides required permissions for `TeamsFx` projects:
     * Update Tab code, and deploy the project to remote.
     * Launch remote and the project.
 
-## Deploy to Azure web app manually
+## Deploy to azure web app manually
 
 1. Create a SSO enable tab.
 2. Provision your project:

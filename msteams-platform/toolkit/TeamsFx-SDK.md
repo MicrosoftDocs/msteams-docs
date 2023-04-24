@@ -302,7 +302,7 @@ try {
 
 If a credential instance is used in other library, such as Microsoft Graph, it's possible that an error is caught and transformed.
 
-## Microsoft Graph scenarios
+## Microsoft Graph Scenarios
 
 This section provides several code snippets for common scenarios that are related to the Microsoft Graph. In such scenarios, user can call APIs using different permissions in frontend or backend.
 
