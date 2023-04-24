@@ -488,7 +488,7 @@ As with other embedded experiences running inside Teams, your code inside the wi
 
 ### Complete the sign-in flow
 
-When the request to sign in completes and redirects back to your page, it should perform the following steps:
+When the sign in request completes and redirects back to your page, it should perform the following steps:
 
 1. Generate a security code. (This can be a random number.) You need to cache this code on your service, along with the credentials obtained through sign in such as, OAuth 2.0 tokens.
 2. Call `microsoftTeams.authentication.notifySuccess` and pass the security code.
