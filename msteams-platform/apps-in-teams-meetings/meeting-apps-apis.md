@@ -909,7 +909,7 @@ The following code provides an example of meeting start event payload:
     "id": "conversation_id"
   },
   "recipient": {
-    "id": "28:f5d48856-5b42-41a0-8c3a-c5f944b679b0"
+    "id": "28:65f50003-e15d-434a-9e14-0fcfeb3d7817"
   },
   "value": {
     "id": "meeting_id",
@@ -947,7 +947,7 @@ The following code provides an example of meeting end event payload:
     "id": "conversation_id"
   },
   "recipient": {
-    "id": "28:f5d48856-5b42-41a0-8c3a-c5f944b679b0"
+    "id": "28:65f50003-e15d-434a-9e14-0fcfeb3d7817"
   },
   "value": {
     "id": "meeting_id",
