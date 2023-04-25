@@ -20,7 +20,7 @@ It's recommended to start with [build your first bot app using JavaScript](../sb
 >
 > * When a user changes the Teams theme in a bot, the theme doesn’t apply to the content shared using an Adaptive Card.
 
-Conversational bots allow users to interact with your web service using text, interactive cards, and task modules.
+Conversational bots are incredibly flexible. Bots allow users to interact with your web service using text, interactive cards, and task modules. Bots can handle a few basic commands or complex tasks that involve artificial intelligence and natural language processing. Bots can be part of a larger application or be standalone.
 
 :::image type="content" source="../assets/images/invokebotwithtext.png" alt-text="The screenshot is an example that shows a web service using text."lightbox="../assets/images/invokebotwithtext.png":::
 
@@ -28,9 +28,8 @@ Conversational bots allow users to interact with your web service using text, in
 
 :::image type="content" source="../assets/images/task-module-example.png" alt-text="The screenshot is an example that shows a web service using task module." lightbox="../assets/images/task-module-example-expanded.png":::
 
-Conversational bots are incredibly flexible. Bots can handle a few basic commands or complex tasks that involve artificial intelligence and natural language processing. Bots can be part of a larger application or be standalone.
-
-Use the right mix of cards, text, and task modules to create a useful bot. The following image shows a user conversing with a bot in a one-to-one chat using text and interactive cards.
+Use the right mix of cards, text, and task modules to create a useful bot.
+The following image shows a user conversing with a bot in a one-to-one chat using text and interactive cards.
 
 :::image type="content" source="~/assets/images/FAQPlusEndUser.gif" alt-text="The screenshot is an example that shows a sample FAQ bot.":::
 
