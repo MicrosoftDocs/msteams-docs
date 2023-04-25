@@ -64,7 +64,15 @@ There's a short setup process to add an app as a channel, chat, or meeting tab. 
 
 You can add a step in which users must first sign in with their Microsoft credentials. This authentication method is called single sign-on (SSO).
 
+#### Desktop
+
 :::image type="content" source="../../assets/images/tabs/design-set-up-tab-auth.png" alt-text="Example shows a tab authentication screen.":::
+
+#### Mobile
+
+:::image type="content" source="~/assets/images/tabs/mobile-tab-set-up-sso.png" alt-text="Example shows a list of tab apps for authentication screen.":::
+
+:::image type="content" source="~/assets/images/tabs/mobile-tab-sso.png" alt-text="Example shows a tab authentication mobile screen.":::
 
 ### Design a tab setup with UI templates
 
@@ -193,13 +201,15 @@ Notify users of tab activity one of the following ways:
 
 Use these recommendations to create a quality app experience:
 
-### Collaboration
+### Desktop
+
+#### Collaboration
 
 :::row:::
    :::column span="":::
 :::image type="content" source="../../assets/images/tabs/design-tab-collaboration-do.png" alt-text="Illustration shows what to do with tab navigation design.":::
 
-#### Do: Facilitate conversation
+##### Do: Facilitate conversation
 
 Include content and components people can talk about. If it doesn’t fit within the context of a chat, channel, or meeting, it doesn’t belong in your tab.
 
@@ -207,20 +217,20 @@ Include content and components people can talk about. If it doesn’t fit within
    :::column span="":::
 :::image type="content" source="../../assets/images/tabs/design-tab-collaboration-dont.png" alt-text="Example shows what not to do with tab navigation design.":::
 
-#### Don't: Treat your tab like any other webpage
+##### Don't: Treat your tab like any other webpage
 
 A tab isn’t a webpage someone might view once. A tab should display your most important, relevant content that people need to accomplish something together.
 
    :::column-end:::
 :::row-end:::
 
-### Navigation
+#### Navigation
 
 :::row:::
    :::column span="":::
 :::image type="content" source="../../assets/images/tabs/design-tab-nav-do.png" alt-text="Example showing what to do with tab navigation design.":::
 
-#### Do: Limit tasks and data
+##### Do: Limit tasks and data
 
 Tabs work best when they address specific needs. Include a limited set of tasks and data relevant to the team or group.
 
@@ -228,20 +238,20 @@ Tabs work best when they address specific needs. Include a limited set of tasks 
    :::column span="":::
 :::image type="content" source="../../assets/images/tabs/design-tab-nav-dont.png" alt-text="Illustration showing what not to do with tab navigation design.":::
 
-#### Don't: Embed your entire app
+##### Don't: Embed your entire app
 
 Using a tab to display an entire app with multi-level navigation and complex interactions leads to information overload.
 
    :::column-end:::
 :::row-end:::
 
-### Setup
+#### Setup
 
 :::row:::
    :::column span="":::
 :::image type="content" source="../../assets/images/tabs/design-tab-setup-do.png" alt-text="Illustration showing what to do with tab setup design.":::
 
-#### Do: Keep it simple
+##### Do: Keep it simple
 
 If your app requires authentication, try integrating Microsoft single sign-on (SSO) for a more seamless sign-in experience. Also, only include essential information and steps to add the tab.
 
@@ -249,20 +259,20 @@ If your app requires authentication, try integrating Microsoft single sign-on (S
    :::column span="":::
 :::image type="content" source="../../assets/images/tabs/design-tab-setup-dont.png" alt-text="Illustration showing what not to do with tab setup design.":::
 
-#### Don't: Have too many steps
+##### Don't: Have too many steps
 
 Remove any unnecessary steps for adding a tab.
 
    :::column-end:::
 :::row-end:::
 
-### Theming
+#### Theming
 
 :::row:::
    :::column span="":::
 :::image type="content" source="../../assets/images/tabs/design-tab-theming-do.png" alt-text="Illustration showing what to do with tab theming.":::
 
-#### Do: Take advantage of Teams color tokens
+##### Do: Take advantage of Teams color tokens
 
 Each Teams theme has its own color scheme. To handle theme changes automatically, use [color tokens (Fluent UI)](https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme) in your design.
 
@@ -270,12 +280,19 @@ Each Teams theme has its own color scheme. To handle theme changes automatically
    :::column span="":::
 :::image type="content" source="../../assets/images/tabs/design-tab-theming-dont.png" alt-text="Illustration showing what not to do with tab theming.":::
 
-#### Don't: Hard code color values
+##### Don't: Hard code color values
 
 If you don’t use Teams color tokens, your designs will be less scalable and take more time to manage.
 
    :::column-end:::
 :::row-end:::
+
+### Mobile
+
+:::image type="content" source="~/assets/images/tabs/mobile-tab-set-up-sso.png" alt-text="Illustration showing best practices in mobile.":::
+
+:::image type="content" source="~/assets/images/tabs/mobile-tab-best-practices.png" alt-text="Illustration showing best practices in mobile tab app.":::
+
 
 ## See also
 
