@@ -418,18 +418,19 @@ CardFactory.actions([
 
 Adaptive Cards support four action types:
 
-* [Action.OpenUrl](http://adaptivecards.io/explorer/Action.OpenUrl.html)
-* [Action.Submit](http://adaptivecards.io/explorer/Action.Submit.html)
-* [Action.ShowCard](http://adaptivecards.io/explorer/Action.ShowCard.html)
+* [Action.OpenUrl](https://adaptivecards.io/explorer/Action.OpenUrl.html)
+* [Action.Submit](https://adaptivecards.io/explorer/Action.Submit.html)
+* [Action.ShowCard](https://adaptivecards.io/explorer/Action.ShowCard.html)
 * [Action.Execute](/adaptive-cards/authoring-cards/universal-action-model#actionexecute)
 
 You can also modify the Adaptive Card `Action.Submit` payload to support existing Bot Framework actions using an `msteams` property in the `data` object of `Action.Submit`. The next section provides details on how to use existing Bot Framework actions with Adaptive Cards.
 
 > [!NOTE]
 >
->* Adding `msteams` to data with a Bot Framework action does not work with an Adaptive Card task module.
+>* Adding `msteams` to data with a Bot Framework action doesn't work with an Adaptive Card task module.
 >
->* Primary or desctuctive `ActionStyle` is not supported in Microsoft Teams.
+>* Primary or destructive `ActionStyle` isn't supported in Microsoft Teams.
+>* Your app has five seconds to respond to the invoke message.
 
 ### Adaptive Cards with messageBack action
 
@@ -566,7 +567,7 @@ The following code shows an example of Adaptive Cards with `invoke` action with 
 |3|Adaptive cards|Demonstrates how the multi-turn dialog can use a card to get user input for name and age.|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/07.using-adaptive-cards)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/07.using-adaptive-cards)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/07.using-adaptive-cards)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/java_springboot/07.using-adaptive-cards)|
 
 > [!NOTE]
-> Media elements are not supported for adaptive card in Teams
+> Media elements are not supported for Adaptive Card in Teams.
 
 ## Next step
 
