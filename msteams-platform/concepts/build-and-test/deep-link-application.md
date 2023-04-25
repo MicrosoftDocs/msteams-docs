@@ -30,7 +30,7 @@ Applications can use the TeamsJS library to open the dialog without manually gen
 ```javascript
 // Open an app install dialog from your tab
 if(appInstallDialog.isSupported()) {
-    const dialogPromise = appInstallDialog.openAppInstallDialog({appId});
+    const dialogPromise = appInstallDialog.openAppInstallDialog(<appId>);
     dialogPromise.
       then((result) => {/*Successful operation*/}).
       catch((error) => {/*Unsuccessful operation*/});
@@ -44,7 +44,7 @@ For more information about the install dialog, see the [appInstallDialog.openApp
 
 ```javascript
 // Open an app install dialog from your tab
-microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/app");
+microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/app/<appId>");
 ```
 
 ---
