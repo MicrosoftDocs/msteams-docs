@@ -12,7 +12,7 @@ ms.author: anclear
 You can create a bot that works in Microsoft Teams with one of the following tools or capabilities:
 
 * [Microsoft Bot Framework SDK](#bots-with-the-microsoft-bot-framework)
-* [Azure Active Directory](~/bots/how-to/authentication/auth-aad-sso-bots.md#develop-an-sso-teams-bot)
+* [Azure Active Directory (Azure AD)](~/bots/how-to/authentication/auth-aad-sso-bots.md#develop-an-sso-teams-bot)
 * [Developer Portal](~/concepts/build-and-test/manage-your-apps-in-developer-portal.md#configure)
 * [Power Virtual Agents](#bots-with-power-virtual-agents)
 * [Virtual Assistant](~/samples/virtual-assistant.md)
@@ -116,24 +116,26 @@ One of the disadvantages of bots is that it's difficult to maintain a large retr
 
 ## Limitations and known issues
 
-If a bot isn't being created in developer portal with 404 error ensure the following:
+If you get a 404 error while creating a bot in Developer Portal, ensure the following:
 
-* When an app registration is disabled org-wide, none of the users (other than users with AAD admin access) can register new app. Admins need to select **Yes** for **Users can register applications** in [Azure Active Directory portal](/azure/active-directory/fundamentals/users-default-permissions#restrict-member-users-default-permissions), however this will give access to all the users in the tenant to register new applications.
+* **App registration is enabled for users**: When an app registration is disabled org-wide, users (other than users with AAD admin access) can't register new apps. To allow users to register appd, admins must select the **Users can register applications** toggle as **Yes**  in the [Azure AD portal](/azure/active-directory/fundamentals/users-default-permissions#restrict-member-users-default-permissions).
 
-* To give specific users permission to register new apps:
+* **Give permissions to specific users to register new apps**:
 
-    * Tenant admin needs to ensure that Azure AD license is added for the user with any one of the role assigned. For information about how to assign roles, see [Assign Azure AD roles to users](/azure/active-directory/roles/manage-roles-portal).
-        * [Application Administrator](/azure/active-directory/roles/permissions-reference#application-administrator)
-        * [Application Developer](/azure/active-directory/roles/permissions-reference#application-developer)
-        * [Cloud Application Administrator](/azure/active-directory/roles/permissions-reference#cloud-application-administrator)
+  * Ensure that the tenant admin adds the Azure AD license to a user with the following roles:
+    * [Application Administrator](/azure/active-directory/roles/permissions-reference#application-administrator)
+    * [Application Developer](/azure/active-directory/roles/permissions-reference#application-developer)
+    * [Cloud Application Administrator](/azure/active-directory/roles/permissions-reference#cloud-application-administrator)
 
-    * Tenant admins needs to ensure that Azure AD P1 or P2 plan is added to the user and a [custom role](/azure/active-directory/roles/custom-create) is assigned with the following permissions:
-        * `microsoft.directory/applications/create`
-        * `microsoft.directory/applications/createAsOwner`
+    For information about how to assign roles, see [Assign Azure AD roles to users](/azure/active-directory/roles/manage-roles-portal).
+
+  * Ensure that the tenant admin adds the Azure AD P1 or P2 plan to a user and assigns a [custom role](/azure/active-directory/roles/custom-create) to the user with the following permissions:
+    * `microsoft.directory/applications/create`
+    * `microsoft.directory/applications/createAsOwner`
 
 ## Code snippets
 
-The following code provides an example of bot activity fo**r a channel team scope:
+The following code provides an example of a bot activity for a channel team scope:
 
 # [C#](#tab/dotnet)
 
