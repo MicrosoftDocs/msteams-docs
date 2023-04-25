@@ -5,7 +5,7 @@ description: Learn how to do provision cloud resources using Teams Toolkit in Vi
 ms.author: shenwe
 ms.localizationpriority: medium
 ms.topic: overview
-ms.date: 04/17/2023
+ms.date: 11/29/2021
 zone_pivot_groups: teams-app-platform
 ---
 
