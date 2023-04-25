@@ -431,6 +431,9 @@ The Meeting Details API enables your app to get a meeting's static metadata. The
 
 The `Meeting Details` API must have a bot registration and bot ID. It requires Bot SDK to get `TurnContext`. To use the Meeting Details API, you must obtain different RSC permission based on the scope of any meeting, such as private meeting or channel meeting.
 
+> [!NOTE]
+> The `meeting details` API is supported for scheduled private meetings, scheduled channel meeting, instant meetings (Meet now), one-on-one calls, and group calls in Teams desktop and mobile clients.
+
 ### Prerequisite
 
 To use the Meeting Details API, you must obtain different RSC permission based on the scope of any meeting, such as private meeting or channel meeting.
