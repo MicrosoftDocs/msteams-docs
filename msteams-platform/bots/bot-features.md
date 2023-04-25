@@ -129,7 +129,7 @@ If you get a 404 error while creating a bot in Developer Portal, ensure the foll
 
     For information about how to assign roles, see [Assign Azure AD roles to users](/azure/active-directory/roles/manage-roles-portal).
 
-  * Ensure that the tenant admin adds the Azure AD P1 or P2 plan to a user and assigns a [custom role](/azure/active-directory/roles/custom-create) to the user with the following permissions:
+  * Ensure that the tenant admin adds the Azure AD P1 or P2 plan to a user and assigns a [Custom role](/azure/active-directory/roles/custom-create) to the user with the following permissions:
     * `microsoft.directory/applications/create`
     * `microsoft.directory/applications/createAsOwner`
 
