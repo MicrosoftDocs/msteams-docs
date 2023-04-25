@@ -15,7 +15,7 @@ Bots and tabs work together, and are often combined into a single back-end servi
 
 For example:
 Suppose your tab application uses a proprietary ID system to secure its content. Suppose you also have a bot that can interact with the user. Typically, you’ll want to show content in the tab that is specific to the viewing user. The challenge is that the user ID in your system is likely different from the Microsoft Teams user ID. So how do you associate these two identities?
-In general, the recommended approach is to sign the user in with the bot using the same identity system used to provide authentication for the tab content. You can implement via the sign in action, which typically signs the user via an OAuth flow.
+In general, the recommended approach is to sign the user in with the bot using the same identity system used to provide authentication for the tab content. You can implement via the sign in action, which typically signs in the user via an OAuth flow.
 
 This flow works best if your identity provider implements the OAuth 2.0 protocol. You can then associate the Teams user ID with the user’s credentials from your own identity service.
 
