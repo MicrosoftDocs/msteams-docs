@@ -14,7 +14,11 @@ SDK helps developers create applications that include AI and ML capabilities. Th
 
 The Conversational AI SDK makes Teams apps truly conversational, not driven by rigid command structures. SDK is designed to seamlessly integrate with the Teams Bot Framework SDK and offers developers essential abstractions that greatly enhance productivity and enable them to handle these considerations effectively, particularly within the context of enterprise scenarios.
 
-With the Teams Conversational AI SDK, building apps for Teams is drastically simpler, with rich natural language features out of the box that brings any app experience into the conversation. The following are some of the main features available through Teams Conversational AI SDK:
+With the Teams Conversational AI SDK, building apps for Teams is drastically simpler, with rich natural language features out of the box that brings any app experience into the conversation.
+
+:::image type="content" source="../../../assets/images/bots/Teams-ai-sdk-features.png" alt-text="Graphic shows the main features available through Teams conversation AI SDK.":::
+
+The following are some of the main features available through Teams Conversational AI SDK:
 
 1. [Simple Teams-Centric Component Scaffolding](#simple-teams-centric-component-scaffolding)
 1. [Natural Language Modeling](#natural-language-modeling)
