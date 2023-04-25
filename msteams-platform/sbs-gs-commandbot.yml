@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Microsoft Teams allows you to automate repetitive tasks using a command bot. It responds to simple commands sent in chats with adaptive cards. 
+    Microsoft Teams allows you to automate repetitive tasks using a command bot. It responds to simple commands sent in chats with Adaptive Cards. 
 
     In this tutorial, you learn:
 
@@ -207,7 +207,7 @@ items:
 
          :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/hello-world-command.png" alt-text="Screenshot shows the suggestion in the Chat tab of the app created.":::  
 
-       You receive the following command response in adaptive card:
+       You receive the following command response in Adaptive Card:
 
         :::image type="content" source="~/assets/images/sbs-command-bot/final-output.png" alt-text="Screenshot shows the final output.":::      
 
@@ -223,8 +223,8 @@ items:
     | --- | --- |
     | `bot/src/internal/initialize.js` | Create the global bot adapter and initialize with Teams Frameworks |
     | `bot/src/index.js` | Server code to host the bot app and listen on /api/messages to process Teams activity with Bot Framework |
-    | `bot/src/helloworldCommandHandler.js` | A hello world command handler to process a helloworld command and return an adaptive card as response |
-    | `bot/src/adaptiveCards/*.json` | Adaptive card JSON file used as your command response |
+    | `bot/src/helloworldCommandHandler.js` | A hello world command handler to process a helloworld command and return an Adaptive Card as response |
+    | `bot/src/adaptiveCards/*.json` | Adaptive Card JSON file used as your command response |
 
 - title: Deploy your first Teams app
   durationInMinutes: 1
@@ -314,7 +314,7 @@ items:
 
         :::image type="content" source="~/assets/images/sbs-command-bot/hello-world-cloud.png" alt-text="Screenshot shows the suggestion in the Chat tab of the app created.":::
 
-        You receive the following command response in adaptive card:
+        You receive the following command response in Adaptive Card:
 
          :::image type="content" source="~/assets/images/sbs-command-bot/cloud-final-output.png" alt-text="Screenshot shows the cloud final output.":::
 

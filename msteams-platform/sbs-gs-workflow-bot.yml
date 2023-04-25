@@ -199,17 +199,17 @@ items:
      :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-action-response.png" alt-text="Screenshot shows the sample command under the Chat tab of the workflow bot.":::
     
     You'll receive the following command response in Adaptive Card:
-     :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-debug-output1.png" alt-text="Screenshot shows the command response as an adaptive card.":::
+     :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-debug-output1.png" alt-text="Screenshot shows the command response as an Adaptive Card.":::
     
     Then you can select the **DoStuff** button to invoke the action, that responds with the following updated Adaptive Card:
-     :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-debug-output2.png" alt-text="Screenshot shows the updated adaptive card upon invoke action.":::
+     :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-debug-output2.png" alt-text="Screenshot shows the updated Adaptive Card upon invoke action.":::
        
 - title: Complete challenge
   durationInMinutes: 1
   content: |
     Did you come up with something like this?
 
-    :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-debug-output2.png" alt-text="Screenshot shows the output of the updated adaptive card.":::
+    :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-debug-output2.png" alt-text="Screenshot shows the output of the updated Adaptive Card.":::
     
 - content: |
     You've completed the tutorial to get started with workflow bot for Microsoft Teams.
