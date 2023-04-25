@@ -26,6 +26,10 @@ Teams platform features that are available to all app developers.
 
 **2023 April**
 
+* ***April 24, 2023***: [Develop your apps with Teams Toolkit](concepts/build-and-test/develop-your-apps-with-teams-toolkit.md)
+
+* ***April 14, 2023***: [Contextless app update](concepts/deploy-and-publish/apps-upload.md#update-your-app).
+
 * ***April 6, 2023***: [Set up Microsoft license management](concepts/deploy-and-publish/appsource/prepare/manage-third-party-apps-license.md)
 
 * ***April 4, 2023***: [Tab apps in shared channels are available in DOD](~/concepts/build-and-test/shared-channels.md)
