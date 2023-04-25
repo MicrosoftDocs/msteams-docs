@@ -274,7 +274,7 @@ Remove any unnecessary steps for adding a tab.
 
 ##### Do: Take advantage of Teams color tokens
 
-Each Teams theme has its own color scheme. To handle theme changes automatically, use [color tokens (Fluent UI)](https://fluentsite.z22.web.core.windows.net/colors#color-scheme) in your design.
+Each Teams theme has its own color scheme. To handle theme changes automatically, use [color tokens (Fluent UI)](https://fluentsite.z22.web.core.windows.net/0.66.2/colors#color-scheme) in your design.
 
    :::column-end:::
    :::column span="":::
