@@ -1,7 +1,7 @@
 ---
-title: Install Teams Toolkit 
+title: Install Teams Toolkit v4
 author: zyxiaoyuer
-description: Learn about installation of Teams Toolkit of different versions in Visual Studio Code, Visual Studio, and marketplace.
+description: Learn about installation of Teams Toolkit v4 of different versions in Visual Studio Code, Visual Studio, and marketplace.
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
@@ -9,7 +9,7 @@ ms.date: 07/29/2022
 zone_pivot_groups: teams-app-platform
 ---
 
-# Install Teams Toolkit
+# Install Teams Toolkit v4
 
 ## Prerequisites
 
@@ -150,12 +150,12 @@ Teams Toolkit menu options are available in Visual Studio only when an app proje
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Explore Teams Toolkit](explore-Teams-Toolkit.md)
+> [Explore Teams Toolkit](explore-Teams-Toolkit-v4.md)
 
 ## See also
 
-* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
-* [Prepare to build apps](build-environments.md)
-* [Provision cloud resources](provision.md)
-* [Deploy Teams app to the cloud](deploy.md)
-* [Create new Teams app](create-new-project.md#create-new-teams-app-in-visual-studio)
+* [Teams Toolkit Overview](teams-toolkit-fundamentals-v4.md)
+* [Prepare to build apps](build-environments-v4.md)
+* [Provision cloud resources](provision-v4.md)
+* [Deploy Teams app to the cloud](deploy-v4.md)
+* [Create new Teams app](create-new-project.md#create-new-teams-app-in-visual-studio-v4)

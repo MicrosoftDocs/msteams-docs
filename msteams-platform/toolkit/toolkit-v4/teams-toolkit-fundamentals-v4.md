@@ -1,5 +1,5 @@
 ---
-title: Teams Toolkit Overview
+title: Teams Toolkit Overview v4
 author: zyxiaoyuer
 description: Learn about Teams Toolkit, it's installation, navigation, and user journey. Teams Toolkit is available for Visual Studio code and Visual Studio.
 ms.author: zhany
@@ -9,7 +9,7 @@ ms.date: 05/24/2022
 zone_pivot_groups: teams-app-platform
 ---
 
-# Teams Toolkit Overview
+# Teams Toolkit Overview v4
 
 ::: zone pivot="visual-studio-code"
 
@@ -26,7 +26,7 @@ Teams Toolkit makes it simple to get started with app development for Microsoft 
 
 ## Available for Visual Studio Code
 
-Teams Toolkit is available for free for Visual Studio Code. For more information about installation and setup, see [install Teams Toolkit](./install-Teams-Toolkit.md).
+Teams Toolkit v4 is available for free for Visual Studio Code. For more information about installation and setup, see [install Teams Toolkit](./install-Teams-Toolkit.md).
 
 | Teams Toolkit | Visual Studio Code |
 | - | ------------------ |
@@ -49,7 +49,7 @@ Teams Toolkit makes it simple to get started with app development for Microsoft 
 
 ## Available for Visual Studio
 
-Teams Toolkit is available for free for Visual Studio 2022 Community, Professional, and Enterprise. For more information about installation and setup, see [install Teams Toolkit](./install-Teams-Toolkit.md).
+Teams Toolkit v4 is available for free for Visual Studio 2022 Community, Professional, and Enterprise. For more information about installation and setup, see [install Teams Toolkit](./install-Teams-Toolkit.md).
 
 | Teams Toolkit | Visual Studio |
 | - | ------------- |
@@ -125,7 +125,7 @@ You can access Teams Developer Portal quickly, where you can configure, distribu
 * [Build tabs for Teams](~/tabs/what-are-tabs.md)
 * [Build bots for Teams](~/bots/what-are-bots.md)
 * [Build Message extensions](~/messaging-extensions/what-are-messaging-extensions.md)
-* [Create a new Teams app](create-new-project.md)
+* [Create a new Teams app](create-new-project-v4.md)
 * [Provision cloud resources](provision-cloud-resources.md)
-* [Deploy Teams app to the cloud](deploy.md)
-* [Publish Teams apps](publish.md)
+* [Deploy Teams app to the cloud](deploy-v4.md)
+* [Publish Teams apps](publish-v4.md)
