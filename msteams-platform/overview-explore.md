@@ -31,8 +31,6 @@ With Teams, you can build your app in a feature-rich environment. Using Teams as
 
 Choose to customize your app with features and tools, such as user authentication, Microsoft Graph, and Developer Portal.
 
-Think you Teams personal tab app adds value to your user base in other Microsoft 365 platforms ? [Consider upgrading it run across the M365 ecosystem](/msteams-platform/m365-apps/overview.md).
-
 You've had a short tour through some of Teams platform features. You're ready to see how you can use them to build your app. Let's head towards the solution for the user story.
 
 ## Next step
