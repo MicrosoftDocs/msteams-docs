@@ -196,6 +196,8 @@
       href: toolkit/toolkit-v4/teams-toolkit-fundamentals-v4.md
     - name: Install Teams Toolkit v4
       href: toolkit/toolkit-v4/install-Teams-Toolkit-v4.md
+    - name: Explore Teams Toolkit v4
+      href: toolkit/toolkit-v4/explore-Teams-Toolkit-v4.md
   - name: TeamsFx SDK
     href: toolkit/TeamsFx-SDK.md
     displayName: getUserinfo    
