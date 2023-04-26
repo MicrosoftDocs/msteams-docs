@@ -64,7 +64,7 @@ You can test or validate the Adaptive Card schema using the **Adaptive cards edi
 <details>
 <summary>Why can't I create a bot in Developer Portal?</summary>
 
-If there's a 404 error, see [limitations and known issues](~/bots/bot-features.md)
+If there's a 404 error, see [limitations and known issues.](~/bots/bot-features.md)
 </details>
 
 ## Live share
