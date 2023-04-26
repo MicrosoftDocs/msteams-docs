@@ -893,17 +893,17 @@ To build and run your app:
 
     Teams is loaded in a web browser.
 
-1. Select **Add** when prompted to install the app to Teams.
+1. Select **Add to a Teams** when prompted to install the app to Teams.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/blazor-add-app_1.png" alt-text="Screenshot8 of BlazorApp local debug with Add option highlighted in red.":::
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/blazor-add-app_2.png" alt-text="Screenshot8 of BlazorApp local debug with Add option highlighted in red.":::
 
     Congratulations, your first tab app is running in your local environment!
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/app-local.png" alt-text="Screenshot9 of Microsoft Teams with Your app is running in your local environment highlighted in red.":::
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/app-local_1.png" alt-text="Screenshot9 of Microsoft Teams with Your app is running in your local environment highlighted in red.":::
 
 1. Move through the page to view the user details.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/authorize-user-info.png" alt-text="Screenshot10 of Microsoft Teams with Authorize option highlighted in red.":::
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/authorize-user-info_1.png" alt-text="Screenshot10 of Microsoft Teams with Authorize option highlighted in red.":::
 
 1. Select **Authorize** to let your app retrieve user details using Microsoft Graph.
 
@@ -913,9 +913,9 @@ To build and run your app:
 
 1. Select **Accept** to let your app access user details.
 
-    Your photograph and details appear in your **Personal Tab**.
+    Your photograph and details appear in your **Channel Tab**.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor/tab-user-info.png" alt-text="Screenshot12 of your Personal Tab displaying basic information.":::
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/user-tab-info.png" alt-text="Screenshot12 of your Channel Tab displaying basic information":::
 
     You can do normal debugging activities, such as setting breakpoints, as if it were any other web application. The app supports hot reloading.  If you change any file within the project, the page will be reloaded.
 
