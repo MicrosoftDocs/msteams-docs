@@ -1,5 +1,5 @@
 ---
-title: Teams Toolkit Overview v4
+title: Teams Toolkit v4 Overview
 author: zyxiaoyuer
 description: Learn about Teams Toolkit v4, it's installation, navigation, and user journey. Teams Toolkit is available for Visual Studio code and Visual Studio.
 ms.author: zhany
@@ -9,7 +9,7 @@ ms.date: 05/24/2022
 zone_pivot_groups: teams-app-platform
 ---
 
-# Teams Toolkit Overview v4
+# Teams Toolkit v4 Overview
 
 ::: zone pivot="visual-studio-code"
 
