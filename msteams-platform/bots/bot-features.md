@@ -116,20 +116,22 @@ One of the disadvantages of bots is that it's difficult to maintain a large retr
 
 ## Limitations and known issues
 
-If you get a 404 error while creating a bot in Developer Portal, ensure the following:
+If you're unable to create a bot in Developer Portal, ensure the following:
 
 * **App registration is enabled for users**: When an app registration is disabled org-wide, users (other than users with AAD admin access) can't register new apps. To allow users to register apps, admins must toggle **Users can register applications** to **Yes** in the [Azure AD portal](/azure/active-directory/fundamentals/users-default-permissions#restrict-member-users-default-permissions).
 
 * **Give permissions to specific users to register new apps**:
 
-  * Ensure that the tenant admin adds the Azure AD license to a user with the following roles:
+  * For Microsoft 365 licenses where app registration limit is 250 apps per user, ensure that the tenant admin adds Azure AD to a user with the following roles:
+
     * [Application Administrator](/azure/active-directory/roles/permissions-reference#application-administrator)
     * [Application Developer](/azure/active-directory/roles/permissions-reference#application-developer)
     * [Cloud Application Administrator](/azure/active-directory/roles/permissions-reference#cloud-application-administrator)
 
     For information about how to assign roles, see [Assign Azure AD roles to users](/azure/active-directory/roles/manage-roles-portal).
 
-  * Ensure that the tenant admin adds the Azure AD P1 or P2 plan to a user and assigns a [Custom role](/azure/active-directory/roles/custom-create) to the user with the following permissions:
+  * For Microsoft 365 (P1, P2, E3, or E5 plan) license where app registration limit is default to tenant limit (more than 300,000) per user, ensure that the tenant admin adds Azure AD  to a user and assigns a [Custom role](/azure/active-directory/roles/custom-create) to the user with the following permissions:
+
     * `microsoft.directory/applications/create`
     * `microsoft.directory/applications/createAsOwner`
 
