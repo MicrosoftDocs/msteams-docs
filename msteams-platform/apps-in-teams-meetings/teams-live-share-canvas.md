@@ -334,6 +334,28 @@ document.getElementById("line-tip-size").onclick = () => {
 
 You can clear all strokes in the canvas by calling `inkingManager.clear()`. This deletes all strokes from the canvas.
 
+#### Import and export raw strokes
+
+Live Share Canvas supports importing and exporting raw strokes from `InkingManager`, which enables you to export them to your backend for later use in a future session.
+
+```javascript
+// Export raw strokes
+const strokes = inkingManager.exportRaw();
+
+// Optionally clear out existing strokes, and import strokes
+inkingManager.clear();
+inkingManager.importRaw(strokes);
+```
+
+#### Export strokes as an SVG
+
+You can also export your entire drawing within the `InkingManager` to an SVG. The SVG contents will be returned as a string, which you can then store in your server as an `.svg` file.
+
+```javascript
+// Export raw strokes
+const svgText = inkingManager.exportSVG();
+```
+
 ### Cursors
 
 :::image type="content" source="../assets/images/teams-live-share/canvas-cursors.gif" alt-text="GIF shows an example of users sharing a cursor on a canvas.":::
