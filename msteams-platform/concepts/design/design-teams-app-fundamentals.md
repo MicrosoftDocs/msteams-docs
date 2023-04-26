@@ -19,7 +19,7 @@ Quickly learn about the fundamentals of Teams app design. You can find comprehen
       Teams relies on a grid layout to ensure consistent and elegant relationships between design components. The grid’s 4-pixel base unit allows components to scale consistently across all display sizes in Teams.
 
       * [See full layout guidelines (Figma)](https://www.figma.com/community/file/916836509871353159)
-      * [Implement layout (Fluent UI)](https://developer.microsoft.com/fluentui#/styles/web/layout)
+      * [Implement layout (Fluent UI)](https://react.fluentui.dev/?path=/docs/preview-components-tree-layouts--default)
 
    :::column-end:::
    :::column span="1":::
@@ -57,7 +57,7 @@ Quickly learn about the fundamentals of Teams app design. You can find comprehen
       You also can use Fluent UI icons throughout your app:
 
       * [Get the latest Fluent icon set (Figma)](https://www.figma.com/community/file/836835755999342788)
-      * [Implement the icons (Fluent UI)](https://developer.microsoft.com/fluentui#/styles/web/icons)
+      * [Implement the icons (Fluent UI)](https://react.fluentui.dev/?path=/docs/concepts-developer-icons-icons--page)
 
    :::column-end:::
    :::column span="1":::
@@ -76,7 +76,7 @@ Quickly learn about the fundamentals of Teams app design. You can find comprehen
       Teams uses Segoe UI for its type ramp and different font sizes and weights to help create hierarchy and ensure readability.
 
       * [See full type guidelines (Figma)](https://www.figma.com/community/file/916836509871353159)
-      * [Implement typography (Fluent UI)](https://developer.microsoft.com/fluentui#/styles/web/typography)
+      * [Implement typography (Fluent UI)](https://react.fluentui.dev/?path=/docs/theme-typography--page)
 
    :::column-end:::
    :::column span="1":::
@@ -95,7 +95,7 @@ Quickly learn about the fundamentals of Teams app design. You can find comprehen
       Teams web and desktop supports default (light), dark, and high-contrast themes, while Teams mobile supports light and dark themes. Each theme has its own color scheme.
 
       * [See full color guidelines and available color tokens (Figma)](https://www.figma.com/community/file/916836509871353159)
-      * [Implement colors (Fluent UI)](https://fluentsite.z22.web.core.windows.net/0.51.7/colors)
+      * [Implement colors (Fluent UI)](https://react.fluentui.dev/?path=/docs/theme-colors--page)
 
    :::column-end:::
    :::column span="1":::

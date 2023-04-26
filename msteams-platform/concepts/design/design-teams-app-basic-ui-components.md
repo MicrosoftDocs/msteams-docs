@@ -14,7 +14,7 @@ The illustrations on this page show how components look in Teams default (light)
 
 ## Microsoft Teams UI Kit
 
-Based on <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Fluent UI</a>, the Microsoft Teams UI Kit includes components and patterns that are designed specifically for building Teams apps. In the UI kit, you can grab and insert the components listed here directly into your design and see more examples of how to use each component.
+Based on <a href="https://react.fluentui.dev/?path=/docs/" target="_blank">Fluent UI</a>, the Microsoft Teams UI Kit includes components and patterns that are designed specifically for building Teams apps. In the UI kit, you can grab and insert the components listed here directly into your design and see more examples of how to use each component.
 
 > [!div class="nextstepaction"]
 > [Get the Microsoft Teams UI Kit (Figma)](https://www.figma.com/community/file/916836509871353159).
@@ -130,4 +130,4 @@ Note: In Fluent UI, toggle is a type of checkbox.
 Get code samples and implementation details for some of the components listed here and in the Microsoft Teams UI Kit.
 
 > [!div class="nextstepaction"]
-> [Try the components (Fluent UI)](https://fluentsite.z22.web.core.windows.net/)
+> [Try the components (Fluent UI)](https://react.fluentui.dev/?path=/docs/)
