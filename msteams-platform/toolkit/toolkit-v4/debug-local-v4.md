@@ -163,7 +163,7 @@ Perform the following steps using the Teams Toolkit to debug your app after you 
 1. Right-click on your project.
 1. Select **Teams Toolkit** > **Prepare Teams App Dependencies**.
 
-   :::image type="content" source="images/vs-localdebug-teamsappdependencies-v4.png" alt-text="Teams app dependencies for local debug" lightbox="images/vs-localdebug-teamsappdependencies-v4.png":::
+   :::image type="content" source="~/images/vs-localdebug-teamsappdependencies-v4.png" alt-text="Teams app dependencies for local debug" lightbox="images/vs-localdebug-teamsappdependencies-v4.png":::
 
    > [!NOTE]
    > In this scenario the project name is MyTeamsApp1.
@@ -172,7 +172,7 @@ Perform the following steps using the Teams Toolkit to debug your app after you 
 
 1. Sign in to your **Microsoft 365 Account**, then select **Continue**.
 
-   :::image type="content" source="images/debug-teams-app/vs-localdebug-signin-m365-v4.png" alt-text="Sign in to Microsoft 365 account":::
+   :::image type="content" source="~/images/debug-teams-app/vs-localdebug-signin-m365-v4.png" alt-text="Sign in to Microsoft 365 account":::
 
    > [!Note]
    > Learn more about sideloading permission by visiting [Prepare your Microsoft 365 tenant](../concepts/build-and-test/prepare-your-o365-tenant.md).

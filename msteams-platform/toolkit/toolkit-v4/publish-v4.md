@@ -1,14 +1,14 @@
 ---
-title: Publish Teams apps using Teams Toolkit
+title: Publish Teams apps using Teams Toolkit v4
 author: zyxiaoyuer
-description: In this module, learn how to publish Teams apps using Teams Toolkit and publish to individual scope or sideload permission
+description: In this module, learn how to publish Teams apps using Teams Toolkit v4 and publish to individual scope or sideload permission
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
 ---
 
 
-# Publish Teams apps using Teams Toolkit
+# Publish Teams apps using Teams Toolkit v4
 
 After creating the app, you can distribute your app to different scopes, such as an individual, a team, or an organization. The distribution depends on multiple factors such as needs, business and technical requirements, and your goal for the app. Distribution to different scope may need different review process. In general, the bigger the scope, the more review the app needs to go through for security and compliance concerns.
 

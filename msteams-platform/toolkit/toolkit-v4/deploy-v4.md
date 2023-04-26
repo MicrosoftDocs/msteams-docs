@@ -1,7 +1,7 @@
 ---
-title: Deploy to the cloud
+title: Deploy to the cloud v4
 author: MuyangAmigo
-description: Learn how to deploy app to the cloud, Azure, or SharePoint using Teams Toolkit in Visual Studio Code and Visual Studio.
+description: Learn how to deploy app to the cloud v4, Azure, or SharePoint using Teams Toolkit in Visual Studio Code and Visual Studio.
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
@@ -9,7 +9,7 @@ ms.date: 11/29/2021
 zone_pivot_groups: teams-app-platform
 ---
 
-# Deploy Teams app to the cloud
+# Deploy Teams app to the cloud v4
 
 Teams Toolkit helps to deploy or upload the front-end and back-end code in your app to your provisioned cloud resources in Azure.
 
@@ -72,7 +72,7 @@ After deploying, you can preview the app in Teams client or the web browser befo
 
 1. In the pop-up window that appears, select **Deploy**.
 
-   :::image type="content" source="images/vs-deploy-confirmation-v4.png" alt-text="Deploy to cloud confirmation dialog":::
+   :::image type="content" source="~/images/vs-deploy-confirmation-v4.png" alt-text="Deploy to cloud confirmation dialog":::
 
    After the deploy process completes, you can see a pop-up with the confirmation that it has been successfully deployed. You can also check the status in the output window.
 
