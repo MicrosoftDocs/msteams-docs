@@ -62,9 +62,9 @@ Use Delete messages-Bot framework's `DeleteActivity` method: [Update and delete
 You can test or validate the Adaptive Card schema using the **Adaptive cards editor (preview)** option in [Developer Portal > Tools](https://dev.teams.microsoft.com/tools).
 </details>
 <details>
-<summary>Why can't I create a bot in Developer Portal?</summary>
+<summary>Why am I getting a 404 error while creating a bot in Developer Portal?</summary>
 
-If there's a 404 error, see [limitations and known issues.](~/bots/bot-features.md)
+See [limitations and known issues.](~/bots/bot-features.md)
 </details>
 
 ## Live share
