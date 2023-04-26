@@ -19,7 +19,7 @@ Quickly learn about the fundamentals of Teams app design. You can find comprehen
       Teams relies on a grid layout to ensure consistent and elegant relationships between design components. The grid’s 4-pixel base unit allows components to scale consistently across all display sizes in Teams.
 
       * [See full layout guidelines (Figma)](https://www.figma.com/community/file/916836509871353159)
-      * [Implement layout (Fluent UI)](https://react.fluentui.dev/?path=/docs/preview-components-tree-layouts--default)
+      * [Implement layout (Fluent UI)](https://developer.microsoft.com/fluentui#/styles/web/layout)
 
    :::column-end:::
    :::column span="1":::
@@ -57,7 +57,7 @@ Quickly learn about the fundamentals of Teams app design. You can find comprehen
       You also can use Fluent UI icons throughout your app:
 
       * [Get the latest Fluent icon set (Figma)](https://www.figma.com/community/file/836835755999342788)
-      * [Implement the icons (Fluent UI)](https://react.fluentui.dev/?path=/docs/concepts-developer-icons-icons--page)
+      * [Implement the icons (Fluent UI)](https://developer.microsoft.com/fluentui#/styles/web/icons)
 
    :::column-end:::
    :::column span="1":::
@@ -76,7 +76,7 @@ Quickly learn about the fundamentals of Teams app design. You can find comprehen
       Teams uses Segoe UI for its type ramp and different font sizes and weights to help create hierarchy and ensure readability.
 
       * [See full type guidelines (Figma)](https://www.figma.com/community/file/916836509871353159)
-      * [Implement typography (Fluent UI)](https://react.fluentui.dev/?path=/docs/theme-typography--page)
+      * [Implement typography (Fluent UI)](https://developer.microsoft.com/fluentui#/styles/web/typography)
 
    :::column-end:::
    :::column span="1":::
