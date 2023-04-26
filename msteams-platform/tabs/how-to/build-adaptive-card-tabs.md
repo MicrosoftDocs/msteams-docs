@@ -12,7 +12,7 @@ ms.localizationpriority: high
 > [!IMPORTANT]
 >
 > * Tabs with Adaptive Cards are only supported as personal apps.
-> * Adaptive Card tabs will be deprecated by 31st May, 2023.  If there are any apps which use Adaptive Card tabs, it's recommended to switch to use Webview tabs.
+> * Adaptive Card tabs will be deprecated by 31st May, 2023.  For apps which use Adaptive Card tabs, it's recommended to switch to use WebView tabs.
 
 When developing a tab using the traditional method, you might run into these issues:
 

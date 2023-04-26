@@ -32,7 +32,7 @@ You can build tabs with Adaptive Cards and centralize all Teams app capabilities
 
 > [!NOTE]
 >
-> * Adaptive Card tabs will be deprecated by 31st May, 2023.  If there are any apps which use Adaptive Card tabs, it's recommended to switch to use Webview tabs.
+> * Adaptive Card tabs will be deprecated by 31st May, 2023.  For apps which use Adaptive Card tabs, it's recommended to switch to use WebView tabs.
 > * **Posts** and **Files** can't be moved from their positions.
 
 ## Tab features
