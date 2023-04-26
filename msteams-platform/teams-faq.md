@@ -64,7 +64,7 @@ You can test or validate the Adaptive Card schema using the **Adaptive cards edi
 <details>
 <summary>Why am I getting a 404 error while creating a bot in Developer Portal?</summary>
 
-See [limitations and known issues.](~/bots/bot-features.md)
+App registration is disabled for the user or the user doesn't have enough permissions to create an app. For more information, see [limitations and known issues.](~/bots/bot-features.md#limitations-and-known-issues)
 </details>
 
 ## Live share
