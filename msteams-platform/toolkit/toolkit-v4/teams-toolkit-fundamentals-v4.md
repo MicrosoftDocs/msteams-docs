@@ -102,7 +102,7 @@ You can create different groupings of cloud resources to run and test your app. 
 
 ### Quick access to Teams Developer Portal
 
-You can access Teams Developer Portal quickly, where you can configure, distribute, and manage your app. For more information, see [manage your Teams apps using Developer Portal](../concepts/build-and-test/manage-your-apps-in-developer-portal.md).
+You can access Teams Developer Portal quickly, where you can configure, distribute, and manage your app. For more information, see [manage your Teams apps using Developer Portal](~/concepts/build-and-test/manage-your-apps-in-developer-portal.md).
 
 :::image type="content" source="images/build-environment-developer-portal-2-v4.png" alt-text="Developer Portal":::
 
@@ -122,9 +122,9 @@ You can access Teams Developer Portal quickly, where you can configure, distribu
 
 ## See also
 
-* [Build tabs for Teams](../tabs/what-are-tabs.md)
-* [Build bots for Teams](../bots/what-are-bots.md)
-* [Build Message extensions](../messaging-extensions/what-are-messaging-extensions.md)
+* [Build tabs for Teams](~/tabs/what-are-tabs.md)
+* [Build bots for Teams](~/bots/what-are-bots.md)
+* [Build Message extensions](~/messaging-extensions/what-are-messaging-extensions.md)
 * [Create a new Teams app](create-new-project.md)
 * [Provision cloud resources](provision-cloud-resources.md)
 * [Deploy Teams app to the cloud](deploy.md)

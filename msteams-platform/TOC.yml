@@ -190,6 +190,10 @@
         href: toolkit/publish-your-teams-apps-using-developer-portal.md
     - name: FAQ
       href: toolkit/faq.md  
+  - name: Teams Toolkit v4
+    items:
+    - name: Teams Toolkit overview v4
+      href: toolkit/teams-toolkit-fundamentals-v4.md
   - name: TeamsFx SDK
     href: toolkit/TeamsFx-SDK.md
     displayName: getUserinfo    
