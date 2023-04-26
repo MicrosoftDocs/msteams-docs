@@ -14,7 +14,7 @@ A proactive message is a message that is sent by a bot to start a conversation. 
 * Poll responses.
 * External event notifications.
 
-Sending a message to start a new conversation thread is different than sending a message in response to an existing conversation. When your bot starts a new conversation, there's no pre-existing conversation to post the message to. To send a proactive message, you need to:
+Sending a message to start a new conversation thread is different than sending a message in response to an existing conversation. When your bot starts a new conversation, there's no preexisting conversation to post the message to. To send a proactive message, you need to:
 
 1. [Decide what you're going to say](#best-practices-for-proactive-messaging)
 1. [Obtain the user's unique ID and tenant ID](#obtain-necessary-user-information)
