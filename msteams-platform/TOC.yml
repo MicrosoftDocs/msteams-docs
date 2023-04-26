@@ -192,7 +192,7 @@
       href: toolkit/faq.md  
   - name: Teams Toolkit v4
     items:
-    - name: Teams Toolkit overview v4
+    - name: Teams Toolkit v4 overview
       href: toolkit/toolkit-v4/teams-toolkit-fundamentals-v4.md
     - name: Install Teams Toolkit v4
       href: toolkit/toolkit-v4/install-Teams-Toolkit-v4.md
