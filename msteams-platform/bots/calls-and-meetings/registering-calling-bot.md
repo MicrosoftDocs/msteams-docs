@@ -41,6 +41,10 @@ To create a new bot for Teams:
 
 The next section provides a list of application permissions supported for calls and online meetings.
 
+## Add RSC permissions
+
+Resource-specific consent (RSC) is an authorization framework built by Microsoft Teams and Microsoft identity platform that allows for granting scoped access to an app. The recommended approach to use RSC following security principles [RSC permissions for a chat or meeting](../../graph-api/rsc/resource-specific-consent.md)
+
 ## Add Graph permissions
 
 The Graph provides granular permissions to control the access that apps have to resources. You decide which permissions for Graph your app requests. The Graph calling APIs support application permissions, which are used by apps that run without a signed-in user present. A tenant administrator must grant consent to application permissions.
