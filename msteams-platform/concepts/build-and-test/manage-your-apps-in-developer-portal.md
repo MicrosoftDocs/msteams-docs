@@ -74,7 +74,7 @@ In the **Advanced** section, you can see the following components to manage your
 
     1. In the **Advanced** section, select **Owners**.
     1. Select **Add owners**.
-    1. Enter a name and select a user ID from the drop-down list.
+    1. Enter a name and select a user ID from the dropdown list.
     1. Under **Role**, select **Operative** or **Administrator**.
     1. Select **Add**.
 
