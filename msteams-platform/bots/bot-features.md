@@ -118,7 +118,7 @@ One of the disadvantages of bots is that it's difficult to maintain a large retr
 
 If you get a 404 error while creating a bot in Developer Portal, ensure the following:
 
-* **App registration is enabled for users**: When an app registration is disabled org-wide, users (other than users with AAD admin access) can't register new apps. To allow users to register appd, admins must select the **Users can register applications** toggle as **Yes**  in the [Azure AD portal](/azure/active-directory/fundamentals/users-default-permissions#restrict-member-users-default-permissions).
+* **App registration is enabled for users**: When an app registration is disabled org-wide, users (other than users with AAD admin access) can't register new apps. To allow users to register apps, admins must select the **Users can register applications** toggle as **Yes**  in the [Azure AD portal](/azure/active-directory/fundamentals/users-default-permissions#restrict-member-users-default-permissions).
 
 * **Give permissions to specific users to register new apps**:
 
