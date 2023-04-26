@@ -1,7 +1,7 @@
 ---
-title: Debug your Teams app locally
+title: Debug your Teams app locally v4
 author: surbhigupta 
-description: In this module, learn how to debug your Teams app locally in Teams Toolkit.
+description: In this module, learn how to debug your Teams app locally v4 in Teams Toolkit.
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
@@ -9,7 +9,7 @@ ms.date: 03/21/2022
 zone_pivot_groups: teams-app-platform
 ---
 
-# Debug your Teams app locally
+# Debug your Teams app locally v4
 
 Teams Toolkit helps you to debug and preview your Microsoft Teams app locally. During the debug process, Teams Toolkit automatically starts app services, launches debuggers, and side-loads the Teams app. You can preview your Teams app in Teams web client locally after debugging.
 
@@ -34,7 +34,7 @@ The following steps help you set up your Teams Toolkit before you initiate the d
 
 1. Select **Run** > **Start Debugging (F5)**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/start-debugging.png" alt-text="Start debugging":::
+   :::image type="content" source="images/start-debugging-v4.png" alt-text="Start debugging":::
 
 3. Select **Sign in** to Microsoft 365 account.
 
@@ -114,7 +114,7 @@ The following image displays task names in the **OUTPUT** and **TERMINAL** tabs 
 
 Launches the debug configurations as defined in `.vscode/launch.json`.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/debug/launch-debuggers.png" alt-text="Launch debugger":::
+:::image type="content" source="images/launch-debuggers-v4.png" alt-text="Launch debugger":::
 
 The following table lists the debug configuration names and types for project with tab, bot or message extension app, and Azure Functions:
 
@@ -136,7 +136,7 @@ The following table lists the debug configuration names and types for project wi
 
 The configuration **Attach to Frontend** or **Launch Bot** launches Microsoft Edge or Chrome browser instance to load Teams client in web page. After the Teams client is loaded, Teams side-loads the Teams app that is controlled by the sideloading URL defined in the launch configurations [Microsoft Teams](https://teams.microsoft.com/l/app/>${localTeamsAppId}?installAppPackage=true&webjoin=true&${account-hint}). When Teams client loads in the web browser, select **Add** or select an option from the dropdown as per your requirement.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/hello-local-debug.png" alt-text="Add local debug" lightbox="../assets/images/teams-toolkit-v2/debug/hello-local-debug.png":::
+   :::image type="content" source="images/hello-local-debug-v4.png" alt-text="Add local debug" lightbox="images/hello-local-debug.png-v4":::
 
    Your app is added to Teams!
 
@@ -163,7 +163,7 @@ Perform the following steps using the Teams Toolkit to debug your app after you 
 1. Right-click on your project.
 1. Select **Teams Toolkit** > **Prepare Teams App Dependencies**.
 
-   :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-teamsappdependencies.png" alt-text="Teams app dependencies for local debug" lightbox="../assets/images/debug-teams-app/vs-localdebug-teamsappdependencies.png":::
+   :::image type="content" source="images/vs-localdebug-teamsappdependencies-v4.png" alt-text="Teams app dependencies for local debug" lightbox="images/vs-localdebug-teamsappdependencies-v4.png":::
 
    > [!NOTE]
    > In this scenario the project name is MyTeamsApp1.
@@ -172,7 +172,7 @@ Perform the following steps using the Teams Toolkit to debug your app after you 
 
 1. Sign in to your **Microsoft 365 Account**, then select **Continue**.
 
-   :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-signin-m365.png" alt-text="Sign in to Microsoft 365 account":::
+   :::image type="content" source="images/debug-teams-app/vs-localdebug-signin-m365-v4.png" alt-text="Sign in to Microsoft 365 account":::
 
    > [!Note]
    > Learn more about sideloading permission by visiting [Prepare your Microsoft 365 tenant](../concepts/build-and-test/prepare-your-o365-tenant.md).
@@ -181,6 +181,8 @@ Perform the following steps using the Teams Toolkit to debug your app after you 
 
    :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-Startdebug.png" alt-text="Start Debugging":::
 
+   :::image type="content" source="images/vs-localdebug-Startdebug-v4.png" alt-text="Start Debugging":::
+
    Visual Studio launches the Teams app inside Microsoft Teams client in your browser.
 
    > [!Note]
@@ -188,7 +190,7 @@ Perform the following steps using the Teams Toolkit to debug your app after you 
 
 1. After Microsoft Teams is loaded, select **Add** to install your app in Teams.
 
-   :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-add-loadapp.png" alt-text="Select add to load app":::
+   :::image type="content" source="images/vs-localdebug-add-loadapp-v4.png" alt-text="Select add to load app":::
 
    > [!TIP]
    > You can also use hot reload function of Visual Studio during debug. Learn more by visiting <https://aka.ms/teamsfx-vs-hotreload>.
