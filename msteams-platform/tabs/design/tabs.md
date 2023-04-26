@@ -289,9 +289,9 @@ If you don’t use Teams color tokens, your designs will be less scalable and ta
 
 ### Mobile
 
-:::image type="content" source="~/assets/images/tabs/mobile-tab-set-up-sso.png" alt-text="Illustration showing best practices in mobile.":::
+:::image type="content" source="~/assets/images/tabs/mobile-tab-set-up-sso.png" alt-text="Illustration shows the best practices to follow when using a Tab app in Teams mobile.":::
 
-:::image type="content" source="~/assets/images/tabs/mobile-tab-best-practices.png" alt-text="Illustration showing best practices in mobile tab app.":::
+:::image type="content" source="~/assets/images/tabs/mobile-tab-best-practices.png" alt-text="Illustration shows the best practices to follow when using mobile tab app.":::
 
 
 ## See also
