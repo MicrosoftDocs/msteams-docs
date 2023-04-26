@@ -208,9 +208,9 @@ After you've created your Teams app project, you can use the following options t
 ## See also
 
 * [Teams Toolkit Overview](teams-toolkit-fundamentals-v4.md)
-* [Create a new Teams app using Teams Toolkit](create-new-project.md)
-* [App manifest schema](../resources/schema/manifest-schema.md)
-* [Prepare to build apps using Teams Toolkit](build-environments.md)
+* [Create a new Teams app using Teams Toolkit](create-new-project-v4.md)
+* [App manifest schema](~/resources/schema/manifest-schema.md)
+* [Prepare to build apps using Teams Toolkit](build-environments-v4.md)
 
 <!--  
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/ui-elements.png" alt-text="UI Elements":::
