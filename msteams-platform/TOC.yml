@@ -198,6 +198,14 @@
       href: toolkit/toolkit-v4/install-Teams-Toolkit-v4.md
     - name: Explore Teams Toolkit v4
       href: toolkit/toolkit-v4/explore-Teams-Toolkit-v4.md
+    - name: Prepare to build apps using Teams Toolkit v4
+      href: toolkit/toolkit-v4/build-environments-v4.md
+      items:
+      - name: Prerequisites for creating your Teams app
+        href: toolkit/toolkit-v4/tools-prerequisites-v4.md
+        displayName: Accounts to build your Teams app    
+      - name: Create a new Teams app project
+        href: toolkit/toolkit-v4/create-new-project-v4.md
   - name: TeamsFx SDK
     href: toolkit/TeamsFx-SDK.md
     displayName: getUserinfo    
