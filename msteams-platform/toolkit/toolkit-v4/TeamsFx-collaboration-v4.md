@@ -19,7 +19,7 @@ The following sections guide us to understand the collaboration process as proje
 ### As project owner
 
   > [!NOTE]
-  > Before adding collaborators for an environment, project owner needs to [provision](provision.md) the project first.
+  > Before adding collaborators for an environment, project owner needs to [provision](provision-v4.md) the project first.
 
   1. Select **Teams Toolkit** in the activity bar.
   
@@ -77,7 +77,7 @@ If you want to remove collaborators from Teams Toolkit extension, you need to re
 
 ## See also
 
-* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
-* [Provision cloud resources](provision.md)
-* [Deploy Teams app to the cloud](deploy.md)
-* [Manage multiple environments](TeamsFx-multi-env.md)
+* [Teams Toolkit Overview](teams-toolkit-fundamentals-v4.md)
+* [Provision cloud resources](provision-v4.md)
+* [Deploy Teams app to the cloud](deploy-v4.md)
+* [Manage multiple environments](TeamsFx-multi-env-v4.md)

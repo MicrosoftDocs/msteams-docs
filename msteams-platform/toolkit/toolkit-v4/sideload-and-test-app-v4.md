@@ -72,5 +72,5 @@ For more information, see [Azure service principals guidelines](/azure/active-di
 
 ## See also
 
-* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
-* [Publish Teams apps using Teams Toolkit](publish.md)
+* [Teams Toolkit Overview](teams-toolkit-fundamentals-v4.md)
+* [Publish Teams apps using Teams Toolkit](publish-v4.md)

@@ -206,6 +206,60 @@
         displayName: Accounts to build your Teams app    
       - name: Create a new Teams app project
         href: toolkit/toolkit-v4/create-new-project-v4.md
+      - name: Develop your Teams app
+        items: 
+        - name: Add and manage environment
+          href: toolkit/toolkit-v4/TeamsFx-multi-env-v4.md
+        - name: Create multi capability app
+          href: toolkit/toolkit-v4/add-capability-v4.md
+          displayName: Multiple capabilities app 
+        - name: Create capability based cloud resources
+          href: toolkit/toolkit-v4/add-resource-v4.md  
+          displayName: application 
+        - name: Integrate existing third party APIs
+          href: toolkit/toolkit-v4/add-API-connection-v4.md
+          displayName: endpoint
+        - name: Add single sign-on to Teams app
+          href: toolkit/toolkit-v4/add-single-sign-on-v4.md  
+      - name: Customize Manifest
+        items:
+        - name: Customize Teams app Manifest
+          href: toolkit/toolkit-v4/TeamsFx-preview-and-customize-app-manifest-v4.md
+        - name: Edit Azure AD manifest
+          href: toolkit/toolkit-v4/AAD-manifest-customization-v4.md
+      - name: Debug your Teams app
+        items: 
+        - name: Overview
+          href: toolkit/toolkit-v4/debug-overview-v4.md
+        - name: Debug your Teams app locally
+          href: toolkit/toolkit-v4/debug-local-v4.md
+        - name: Debug background process
+          href: toolkit/toolkit-v4/debug-background-process-v4.md
+      - name: Host your app on Azure
+        items:    
+        - name: Provision cloud resources
+          href: toolkit/toolkit-v4/provision-v4.md
+        - name: Deploy Teams app to the cloud
+          href: toolkit/toolkit-v4/deploy-v4.md
+      - name: Test your Teams app
+        items: 
+        - name: Integrate and collaborate
+          href: toolkit/toolkit-v4/TeamsFx-collaboration-v4.md
+        - name: Set up CI/CD pipelines
+          href: toolkit/toolkit-v4/use-CICD-template-v4.md  
+        - name: Sideload and test app in Teams environment
+          href: toolkit/toolkit-v4/sideload-and-test-app-v4.md 
+        - name: Test app behavior in different environment
+          href: toolkit/toolkit-v4/test-app-behavior-v4.md
+    - name: Publish your Teams app
+      items:
+      - name: Publish Teams apps using Teams Toolkit v4
+        href: toolkit/toolkit-v4/publish-v4.md
+        displayName: license
+      - name: Publish Teams apps using Developer Portal 
+        href: toolkit/toolkit-v4/publish-your-teams-apps-using-developer-portal-v4.md
+    - name: FAQ
+      href: toolkit/toolkit-v4/faq-v4.md  
   - name: TeamsFx SDK
     href: toolkit/TeamsFx-SDK.md
     displayName: getUserinfo    

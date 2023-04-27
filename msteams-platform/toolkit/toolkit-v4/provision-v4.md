@@ -30,7 +30,7 @@ When you trigger the provision command in Teams Toolkit or TeamsFx CLI, you can 
 * Teams app registration under your Microsoft 365 tenant's Teams platform.
 * Azure resources under your selected Azure subscription.
 
-When you create a new project, you also need to create Azure resources. The ARM template defines all the Azure resources and helps to create required Azure resources during provision. When you [add a new capability resource](./add-resource.md) to an existing project, the updated ARM template reflects the latest change.
+When you create a new project, you also need to create Azure resources. The ARM template defines all the Azure resources and helps to create required Azure resources during provision. When you [add a new capability resource](./add-resource-v4.md) to an existing project, the updated ARM template reflects the latest change.
 
 > [!NOTE]
 > Azure services incur costs in your subscription. For more information on cost estimation, see [pricing calculator](https://azure.microsoft.com/pricing/calculator/).
@@ -285,7 +285,7 @@ To add other Azure resource or storage to the app, consider the following scenar
 Add Azure storage to your Azure function back-end to store blob data. There's no auto flow to update the `bicep` template with the Azure storage support. However, you can edit the `bicep` file and add the resource. Follow these steps:
 
 1. Create a tab project.
-2. Add function to the project. For more information, see [how to add resources](./add-resource.md).
+2. Add function to the project. For more information, see [how to add resources](./add-resource-v4.md).
 3. Declare the new storage account in ARM template. You can declare the resource at `templates\azure\provision\function.bicep` directly. You can declare the resources in other places.
 
     `````````bicep
@@ -614,8 +614,8 @@ If you get an insufficient permission error when Teams Toolkit tries to add user
 
 ## See also
 
-* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
-* [Deploy Teams app to the cloud](deploy.md)
-* [Manage multiple environments](TeamsFx-multi-env.md)
-* [Collaborate with other developers on Teams project](TeamsFx-collaboration.md)
+* [Teams Toolkit Overview](teams-toolkit-fundamentals-v4.md)
+* [Deploy Teams app to the cloud](deploy-v4.md)
+* [Manage multiple environments](TeamsFx-multi-env-v4.md)
+* [Collaborate with other developers on Teams project](TeamsFx-collaboration-v4.md)
 * [Edit Teams app manifest using Visual Studio](VS-TeamsFx-preview-and-customize-app-manifest.md)

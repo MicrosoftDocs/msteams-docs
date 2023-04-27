@@ -29,13 +29,13 @@ Here's what you'll learn in this section:
 
 ## Publish to individual scope or sideload permission
 
-You can add a custom app to Teams by uploading an [app package](../concepts/build-and-test/apps-package.md) in `.zip` file directly to a team or in personal context. Adding a custom app by uploading an app package is known as sideloading. It allows you to test app while being uploaded in Teams. You can build and test app in the following scenarios:
+You can add a custom app to Teams by uploading an [app package](~/concepts/build-and-test/apps-package.md) in `.zip` file directly to a team or in personal context. Adding a custom app by uploading an app package is known as sideloading. It allows you to test app while being uploaded in Teams. You can build and test app in the following scenarios:
 
 * Test and debug an app locally.
 * Build an app for yourself, such as to automate a workflow.
 * Build an app for small set of users, such as, your work group.
 
-You can build an app for internal use and share it with your team without submitting it to the Microsoft Teams app catalog in the Teams app store. For more information, see [how to upload your app in Teams](../concepts/deploy-and-publish/apps-upload.md).
+You can build an app for internal use and share it with your team without submitting it to the Microsoft Teams app catalog in the Teams app store. For more information, see [how to upload your app in Teams](~/concepts/deploy-and-publish/apps-upload.md).
 
 ### Build app package
 
@@ -134,12 +134,12 @@ The following steps help you to approve from Admin Center:
 
 You can distribute your app directly to the store inside Microsoft Teams and reach millions of users around the world. If your app is also featured in the store, you can instantly reach potential customers. The apps published to the Teams store also automatically list on Microsoft AppSource, which is the official marketplace for Microsoft 365 apps and solutions.
 
-For more information, see [how to publish to the Teams store](../concepts/deploy-and-publish/appsource/publish.md#publish-your-app-to-the-microsoft-teams-store).
+For more information, see [how to publish to the Teams store](~/concepts/deploy-and-publish/appsource/publish.md#publish-your-app-to-the-microsoft-teams-store).
 
 ## See also
 
-* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
-* [Distribute your Microsoft Teams app](../concepts/deploy-and-publish/apps-publish-overview.md)
-* [Create Teams app package](../concepts/build-and-test/apps-package.md)
-* [Prepare your Microsoft 365 tenant](../concepts/build-and-test/prepare-your-o365-tenant.md)
+* [Teams Toolkit Overview](teams-toolkit-fundamentals-v4.md)
+* [Distribute your Microsoft Teams app](~/concepts/deploy-and-publish/apps-publish-overview.md)
+* [Create Teams app package](~/concepts/build-and-test/apps-package.md)
+* [Prepare your Microsoft 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md)
 * [Manage Teams app in the Microsoft Teams admin center](/microsoftteams/manage-apps?toc=%2Fmicrosoftteams%2Fplatform%2Ftoc.json&bc=%2Fmicrosoftteams%2Fplatform%2Fbreadcrumb%2Ftoc.json)

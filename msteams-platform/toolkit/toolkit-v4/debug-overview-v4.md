@@ -341,12 +341,12 @@ You can launch Teams app as a web app instead of running in Teams client.
 ## Next
 
 > [!div class="nextstepaction"]
-> [Debug your app locally](debug-local.md)
+> [Debug your app locally](debug-local-v4.md)
 
 ## See also
 
-* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
-* [Debug background process](debug-background-process.md)
-* [Use Teams Toolkit to provision cloud resources](provision.md)
-* [Deploy to the cloud](deploy.md)
-* [Preview and customize Teams app manifest](TeamsFx-preview-and-customize-app-manifest.md)
+* [Teams Toolkit Overview](teams-toolkit-fundamentals-v4.md)
+* [Debug background process](debug-background-process-v4.md)
+* [Use Teams Toolkit to provision cloud resources](provision-v4.md)
+* [Deploy to the cloud](deploy-v4.md)
+* [Preview and customize Teams app manifest](TeamsFx-preview-and-customize-app-manifest-v4.md)

@@ -24,7 +24,7 @@ You can deploy the following to the cloud:
 * The bot or message extension is deployed to Azure App Service.
 
   > [!NOTE]
-  > Before you deploy app code to Azure cloud, you need to successfully complete the [provisioning of cloud resources](provision.md).
+  > Before you deploy app code to Azure cloud, you need to successfully complete the [provisioning of cloud resources](provision-v4.md).
 
 ## Deploy Teams apps using Teams Toolkit
 
@@ -85,7 +85,7 @@ To preview your app, you need to create a **Zip App Package** and sideload into 
 1. Select **Project** > **Teams Toolkit** > **Zip App Package**.
 1. Select **For Local** or **For Azure** to generate Teams app package.
 
-   :::image type="content" source="images/vs-deploy-ZipApp-package1-v4.png" alt-text="deploy to cloud popup":::
+   :::image type="content" source="images/vs-deploy-ZipApp-package1-v4.png" alt-text="deploy to cloud popup.":::
 
 **To preview your app in Teams client**
 
@@ -115,11 +115,11 @@ The other way to preview your app:
 
 ## See also
 
-* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
+* [Teams Toolkit Overview](teams-toolkit-fundamentals-v4.md)
 * [Create and deploy an Azure cloud service](/azure/cloud-services/cloud-services-how-to-create-deploy-portal)
-* [Create multi-capability Teams apps](add-capability.md)
-* [Add cloud resources to Microsoft Teams app](add-resource.md)
-* [Create new Teams app in Visual Studio](create-new-project.md#create-new-teams-app-in-visual-studio)
+* [Create multi-capability Teams apps](add-capability-v4.md)
+* [Add cloud resources to Microsoft Teams app](add-resource-v4.md)
+* [Create new Teams app in Visual Studio](create-new-project-v4.md#create-new-teams-app-in-visual-studio)
 * [Provision cloud resources using Visual Studio](provision-cloud-resources.md)
 * [Edit Teams app manifest using Visual Studio](VS-TeamsFx-preview-and-customize-app-manifest.md)
-* [Debug your Teams app locally using Visual Studio](debug-local.md#debug-your-teams-app-locally-using-visual-studio)
+* [Debug your Teams app locally using Visual Studio](debug-local-v4.md#debug-your-teams-app-locally-using-visual-studio)

@@ -12,7 +12,7 @@ ms.date: 11/29/2021
 
 You can see the FAQ for all the sections of Teams Toolkit for Visual Studio Code.
 
-FAQ for [Provision cloud resources using Teams Toolkit](provision.md)
+FAQ for [Provision cloud resources using Teams Toolkit](provision-v4.md)
 
 <br>
 
