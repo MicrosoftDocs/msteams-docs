@@ -212,7 +212,7 @@ For more information about capabilities and the APIs in the TeamsJS library, see
 ### Deep link for SharePoint Framework tabs
 
 You can use the following deep link format in a bot, connector, or message extension card:
-`https://teams.microsoft.com/l/entity/<AppId>/<EntityId>?webUrl=<entityWebUrl>/<EntityName>`.
+`https://teams.microsoft.com/l/entity/<appId>/<EntityId>?webUrl=<entityWebUrl>/<EntityName>`.
 
 > [!NOTE]
 >
