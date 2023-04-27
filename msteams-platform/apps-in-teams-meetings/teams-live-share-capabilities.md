@@ -545,7 +545,7 @@ timer.play();
 
 :::image type="content" source="../assets/images/teams-live-share/live-share-state.png" alt-text="Screenshot shows an example of Live Share state to synchronize what planet in the solar system is actively presented to the meeting.":::
 
-The `LiveState` class enables synchronizing simple application state for everyone in a meeting. `LiveState` synchronizes two values: a `state` string and a corresponding `data` object, which allows you to build an ephemeral distributed-state machine.
+The `LiveState` class enables synchronizing simple application state for everyone in a meeting. `LiveState` synchronizes a single `state` value, allowing you to synchronize any JSON serializable value, such as a `string`, `number`, or `object`.
 
 The following are a few examples in which `LiveState` can be used in your application:
 
@@ -554,7 +554,7 @@ The following are a few examples in which `LiveState` can be used in your applic
 - Synchronizing the current step in a multi-round group activity. For example, the guessing phase during the Agile Poker game.
 
 > [!NOTE]
-> Unlike `SharedMap`, the `state` and `data` values in `LiveState` will be reset after all the users disconnect from a session.
+> Unlike `SharedMap`, the `state` value in `LiveState` will be reset after all the users disconnect from a session.
 
 Example:
 
@@ -573,23 +573,16 @@ const schema = {
 const { container } = await liveShare.joinContainer(schema);
 const { appState } = container.initialObjects;
 
-// Register listener for changes to state and corresponding custom data
-appState.on("stateChanged", (state, data, local) => {
-  if (state === "planet-viewer") {
-    const planetName = data?.planetName;
-    // Update app to display an image of the selected planet for the selected solar system
-  } else {
-    // No planet is yet selected
-  }
+// Register listener for changes to state
+appState.on("stateChanged", (planetName, local) => {
+  // Update app with newly selected planet
 });
 
-// Set roles who can change state and start listening for changes
-appState.initialize();
+// Set a default value and start listening for changes
+await appState.initialize("Mercury");
 
 function onSelectPlanet(planetName) {
-  appState.changeState("planet-viewer", {
-    planetName,
-  });
+  appState.set(planetName);
 }
 ```
 
@@ -610,39 +603,27 @@ enum PlanetName {
   NEPTUNE = "Neptune",
 }
 
-// Declare interface for type of custom data for user
-interface ICustomState {
-  planetName: PlanetName;
-}
-
 // Join the Fluid container
 const host = LiveShareHost.create();
 const liveShare = new LiveShareClient(host);
 const schema = {
   initialObjects: {
-    appState: LiveState<ICustomState>,
+    appState: LiveState<PlanetName>,
   },
 };
 const { container } = await liveShare.joinContainer(schema);
-const appState = container.initialObjects.appState as LiveState<ICustomState>;
+const appState = container.initialObjects.appState as LiveState<PlanetName>;
 
-// Register listener for changes to state and corresponding custom data
-appState.on("stateChanged", (state: string, data: ICustomState | undefined, local: boolean) => {
-  if (state === "planet-viewer") {
-    const planetName = data?.planetName;
-    // Update app to display an image of the selected planet for the selected solar system
-  } else {
-    // No planet is yet selected
-  }
+// Register listener for changes to state
+appState.on("stateChanged", (planetName: PlanetName, local: boolean) => {
+  // Update app to display an image of the selected planet for the selected solar system
 });
 
-// Set roles who can change state and start listening for changes
-appState.initialize();
+// Set a default value and start listening for changes
+await appState.initialize(PlanetName.MERCURY);
 
 function onSelectPlanet(planetName: PlanetName) {
-  appState.changeState("planet-viewer", {
-    planetName,
-  });
+  appState.set(planetName);
 }
 ```
 
@@ -676,23 +657,26 @@ const schema = {
 const { container } = await liveShare.joinContainer(schema);
 const { appState } = container.initialObjects;
 
-// Register listener for changes to state and corresponding custom data
-appState.on("stateChanged", (state, data, local) => {
+// Register listener for changes to state
+appState.on("stateChanged", (state, local) => {
   // Update local app state
 });
 
 // Set roles who can change state and start listening for changes
+const initialState = {
+  documentId: "INITIAL_DOCUMENT_ID",
+};
 const allowedRoles = [UserMeetingRole.organizer, UserMeetingRole.presenter];
-appState.initialize(allowedRoles);
+await appState.initialize(initialState, allowedRoles);
 
 function onSelectEditMode(documentId) {
-  appState.changeState("editing", {
+  appState.set({
     documentId,
   });
 }
 
 function onSelectPresentMode(documentId) {
-  appState.changeState("presenting", {
+  appState.set({
     documentId,
     presentingUserId: "LOCAL_USER_ID",
   });
@@ -722,23 +706,26 @@ const schema = {
 const { container } = await liveShare.joinContainer(schema);
 const appState = container.initialObjects.appState as LiveState<ICustomState>;
 
-// Register listener for changes to state and corresponding custom data
-appState.on("stateChanged", (state: string, data: ICustomState | undefined, local: boolean) => {
+// Register listener for changes to state
+appState.on("stateChanged", (state: ICustomState, local: boolean) => {
   // Update local app state
 });
 
 // Set roles who can change state and start listening for changes
+const initialState: ICustomState = {
+  documentId: "INITIAL_DOCUMENT_ID",
+};
 const allowedRoles: UserMeetingRole[] = [UserMeetingRole.organizer, UserMeetingRole.presenter];
-appState.initialize(allowedRoles);
+await appState.initialize(initialState, allowedRoles);
 
 function onSelectEditMode(documentId: string) {
-  appState.changeState("editing", {
+  appState.set({
     documentId,
   });
 }
 
 function onSelectPresentMode(documentId: string) {
-  appState.changeState("presenting", {
+  appState.set({
     documentId,
     presentingUserId: "LOCAL_USER_ID",
   });
