@@ -349,7 +349,7 @@ inkingManager.importRaw(strokes);
 
 #### Export strokes as an SVG
 
-You can also export your entire drawing within the `InkingManager` to an SVG. The SVG contents will be returned as a string, which you can then store in your server as an `.svg` file.
+You can export your entire drawing within the `InkingManager` to a scalable vector graphic (SVG). The SVG contents are returned as a string, which you can then store in your server as an .svg file extension.
 
 ```javascript
 // Export raw strokes
