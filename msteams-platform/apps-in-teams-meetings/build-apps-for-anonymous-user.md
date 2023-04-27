@@ -12,8 +12,7 @@ ms.localizationpriority: medium
 Anonymous users don't have an Azure Active Directory (Azure AD) identity and aren't federated with a tenant. The anonymous participants are like external users but their identity isn't shown in the meeting. An anonymous user can be a presenter or an attendee but can't be an organizer. You can build bots, messaging extensions, and cards and task modules in your app to engage with anonymous meeting participants.
 
 > [!NOTE]
-> Apps for anonymous users is supported in Teams mobile client only.
-> Apps for anonymous users isn't supported in channel meetings.
+> Apps for anonymous users is supported in Teams mobile client only and isn't supported in channel meetings.
 
 For anonymous users to interact with the apps in Teams meetings, ensure the following:
 
