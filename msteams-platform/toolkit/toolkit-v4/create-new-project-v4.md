@@ -1,5 +1,5 @@
 ---
-title: Create a new Teams app
+title: Create a new Teams app using Teams Toolkit v4
 author: zyxiaoyuer
 description: In this module, learn how to create a new Teams app using Teams Toolkit v4.
 ms.author: surbhigupta
@@ -8,7 +8,7 @@ ms.topic: overview
 ms.date: 03/14/2022
 zone_pivot_groups: teams-app-platform
 ---
-# Create a new Teams project
+# Create a new Teams project using Teams Toolkit v4
 
 In this section, you can learn how to create a new Teams project using Microsoft Visual Studio Code and Visual Studio.
 
@@ -95,7 +95,7 @@ The following example shows a basic Teams tab app directory structure:
 | - `.fx\configs\projectSettings.json` | Global project settings that apply to all environments. |
 | `tabs` | Code for the Tab capability needed at runtime, such as the privacy notice, terms of use, and configuration tabs. |
 | - `tabs\src\index.jsx` | Entry point for the front-end app, where the main app component is rendered with `ReactDOM.render()`. |
-| - `tabs\src\components\App.jsx` | Code for handling URL routing in the app. It calls the [Microsoft Teams JavaScript client library](../tabs/how-to/using-teams-client-library.md) to establish communication between your app and Teams. |
+| - `tabs\src\components\App.jsx` | Code for handling URL routing in the app. It calls the [Microsoft Teams JavaScript client library](~/tabs/how-to/using-teams-client-library.md) to establish communication between your app and Teams. |
 | - `tabs\src\components\Tab.jsx` | Code to implement the UI of your app. |
 | - `tabs\src\components\TabConfig.jsx` | Code to implement the UI that configures your app. |
 | `templates\appPackage` | App manifest template files, and the app icons: color.png and outline.png. |
@@ -278,7 +278,7 @@ After the project is created, Teams Toolkit automatically opens **GettingStarted
 * [Teams Toolkit Overview](teams-toolkit-fundamentals-v4.md)
 * [Build a Teams app with Blazor](~/sbs-gs-blazorupdate.yml)
 * [Build a Teams app with C# or .NET](~/sbs-gs-csharp.yml)
-* [Prerequisites for all types of environment and create your Teams app](tools-prerequisites.md)
-* [Prepare to build apps using Microsoft Teams Toolkit](build-environments.md)
+* [Prerequisites for all types of environment and create your Teams app](tools-prerequisites-v4.md)
+* [Prepare to build apps using Microsoft Teams Toolkit](build-environments-v4.md)
 * [Provision cloud resources using Visual Studio](provision-cloud-resources.md)
-* [Deploy Teams app to the cloud using Visual Studio](deploy.md#deploy-teams-app-to-the-cloud-using-visual-studio)
+* [Deploy Teams app to the cloud using Visual Studio](deploy-v4.md#deploy-teams-app-to-the-cloud-using-visual-studio)

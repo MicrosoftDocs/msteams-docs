@@ -1,7 +1,7 @@
 ---
-title: Add single sign-on to your Teams apps
+title: Add single sign-on of Teams Toolkit v4 to your Teams apps
 author: surbhigupta
-description: In this module, learn how to add single sign-on (SSO) of Teams Toolkit, enable SSO support, update your application to use SSO
+description: In this module, learn how to add single sign-on (SSO) of Teams Toolkit v4, enable SSO support, update your application to use SSO
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
@@ -9,7 +9,7 @@ ms.date: 05/20/2022
 zone_pivot_groups: teams-app-platform
 ---
 
-# Add single sign-on to Teams app
+# Add single sign-on of Teams Toolkit v4 to Teams app
 
 Microsoft Teams provides single sign-on (SSO) function for an app to obtain signed in Teams user token to access Microsoft Graph and other APIs. Teams Toolkit facilitates the interaction by abstracting some of the Microsoft Azure Active Directory (Azure AD) flows and integrations behind some simple APIs. This enables you to add SSO features easily to your Teams app.
 
@@ -427,7 +427,7 @@ To make this work in your app:
 
 ## Debug your app
 
-Press **F5** to debug your application. Teams Toolkit uses the Azure AD manifest file to register an Azure AD app for SSO. For Teams Toolkit local debug functionalities, see [how to debug your Teams app locally](debug-local.md).
+Press **F5** to debug your application. Teams Toolkit uses the Azure AD manifest file to register an Azure AD app for SSO. For Teams Toolkit local debug functionalities, see [how to debug your Teams app locally](debug-local-v4.md).
 
 ## Customize Azure AD app registration
 
@@ -444,8 +444,8 @@ SSO authentication in Azure AD silently refreshes the authentication token to mi
 
 Teams tabs and bots have similar flow for SSO support. For more information, see:
 
-1. [SSO authentication in Tabs](../tabs/how-to/authentication/tab-sso-overview.md)
-1. [SSO authentication in Bots](../bots/how-to/authentication/auth-aad-sso-bots.md)
+1. [SSO authentication in Tabs](~/tabs/how-to/authentication/tab-sso-overview.md)
+1. [SSO authentication in Bots](~/bots/how-to/authentication/auth-aad-sso-bots.md)
 
 ### Simplified SSO with TeamsFx
 

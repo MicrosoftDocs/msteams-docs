@@ -1,5 +1,5 @@
 ---
-title: Add Resources to Teams apps
+title: Add Resources of Teams Toolkit v4 to Teams apps
 author: MuyangAmigo
 description: Learn how to add resources of Teams Toolkit v4, advantages, limitations, and capabilities.
 ms.author: zhany
@@ -8,7 +8,7 @@ ms.topic: overview
 ms.date: 11/29/2021
 ---
 
-# Add cloud resources to Teams app
+# Add cloud resources of Teams Toolkit v4 to Teams app
 
 Teams Toolkit allows you to provision the cloud resources for hosting your app. You can add the cloud resources according to your development needs. The advantage of adding more cloud resources in TeamsFx is that you can autogenerate all configuration files and connect to Teams app by using Teams Toolkit.
 

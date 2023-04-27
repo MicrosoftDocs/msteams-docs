@@ -162,7 +162,7 @@ You can use this method to verify sideloading permission only after you have cre
 1. Select **Teams Toolkit** from the Visual Studio Code activity bar.
 
    > [!NOTE]
-   > If you're unable to see the option, see [install Teams Toolkit](install-Teams-Toolkit.md) to install Teams Toolkit extension in Visual Studio Code.
+   > If you're unable to see the option, see [install Teams Toolkit](install-Teams-Toolkit-v4.md) to install Teams Toolkit extension in Visual Studio Code.
 
 1. Create a new Teams Toolkit app project or open an existing app project.
 

@@ -1,15 +1,15 @@
 ---
 title: Customize Teams App Manifest in Teams Toolkit v4
 author: surbhigupta
-description: In this module, learn how to edit, preview and customize Teams App Manifest in different environment.
-ms.author: v-amprasad
+description: In this module, learn how to edit, preview and customize Teams App Manifest in different environment in Teams Toolkit v4.
+ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/13/2022
 zone_pivot_groups: teams-app-platform
 ---
 
-# Customize Teams app manifest
+# Customize Teams app manifest in Teams Toolkit v4
 
 ::: zone pivot="visual-studio-code"
 
@@ -371,4 +371,4 @@ When you create a Teams command bot using Visual Studio, two app IDs are registe
 * [Manage multiple environments](TeamsFx-multi-env-v4.md)
 * [Public developer preview for Microsoft Teams](~/resources/dev-preview/developer-preview-intro.md)
 * [Provision cloud resources using Visual Studio](provision-cloud-resources.md)
-* [Deploy Teams app to the cloud using Visual Studio](deploy.md#deploy-teams-app-to-the-cloud-using-visual-studio)
+* [Deploy Teams app to the cloud using Visual Studio](deploy-v4.md#deploy-teams-app-to-the-cloud-using-visual-studio)

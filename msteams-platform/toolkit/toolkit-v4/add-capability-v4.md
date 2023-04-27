@@ -1,5 +1,5 @@
 ---
-title: Add Capabilities to Your Teams apps
+title: Add Capabilities of Teams Toolkit v4 to Your Teams apps
 author: surbhigupta
 description:  In this module, learn how to add Capabilities of Teams Toolkit v4
 ms.author: surbhigupta
@@ -8,7 +8,7 @@ ms.topic: overview
 ms.date: 11/29/2021
 ---
 
-# Add capabilities to Microsoft Teams app
+# Add capabilities of Teams Toolkit v4 to Microsoft Teams app
 
 Adding capabilities with Teams Toolkit allows you to extend the functionality of your existing Microsoft Teams app. The advantage of adding more capabilities is that you can add more functions to your app by using Teams Toolkit to automatically add necessary code and project files. You can select different capabilities based on the app project you've created for your Teams app. The following table lists the Teams app capabilities:
 

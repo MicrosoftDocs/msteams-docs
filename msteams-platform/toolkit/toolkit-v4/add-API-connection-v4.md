@@ -1,14 +1,14 @@
 ---
-title: Integrate existing third-party APIs
+title: Integrate existing third-party APIs using Teams Toolkit v4
 author: MuyangAmigo
-description: Learn how toolkit allows bootstrap sample access to existing APIs. List of different authentication types.
+description: Learn how toolkit v4 allows bootstrap sample access to existing APIs. List of different authentication types.
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: Overview
 ms.date: 05/20/2022
 ---
 
-# Integrate existing third-party APIs
+# Integrate existing third-party APIs using Teams Toolkit v4
 
 Teams Toolkit allows you to access and use existing APIs for building Teams apps. Your organization or a third-party might have developed these APIs. When you use Teams Toolkit to connect to an existing API, Teams Toolkit performs the following functions:
 
@@ -132,4 +132,4 @@ The base command of this feature is `teamsfx add api-connection [authentication 
 ## See also
 
 * [Teams Toolkit Overview](teams-toolkit-fundamentals-v4.md)
-* [Publish Teams apps using Teams Toolkit](publish.md)
+* [Publish Teams apps using Teams Toolkit](publish-v4.md)

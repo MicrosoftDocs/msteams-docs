@@ -276,7 +276,7 @@ You need to interact with Azure AD application during various stages of your Tea
 
 1. **To create Project**
 
-      You can create a project with Teams Toolkit that comes with single sign-on (SSO) support by default such as `SSO-enabled tab`. For more information on how to create a new app, see [create new Teams application using Teams Toolkit](create-new-project.md). An Azure AD manifest file is automatically created for you in `templates\appPackage\aad.template.json`. Teams Toolkit creates or updates the Azure AD application during local development or while you move the application to the cloud.
+      You can create a project with Teams Toolkit that comes with single sign-on (SSO) support by default such as `SSO-enabled tab`. For more information on how to create a new app, see [create new Teams application using Teams Toolkit](create-new-project-v4.md). An Azure AD manifest file is automatically created for you in `templates\appPackage\aad.template.json`. Teams Toolkit creates or updates the Azure AD application during local development or while you move the application to the cloud.
 
 2. **To add SSO to your Bot or Tab**
 
@@ -342,5 +342,5 @@ You need to interact with Azure AD application during various stages of your Tea
 - [Teams Toolkit Overview](teams-toolkit-fundamentals-v4.md)
 - [Azure AD manifest](/azure/active-directory/develop/reference-app-manifest)
 - [Preview and Customize app manifest in Toolkit](TeamsFx-preview-and-customize-app-manifest-v4.md)
-- [Debug your Teams app](debug-overview.md)
-- [Debug your Teams app locally](debug-local.md)
+- [Debug your Teams app](debug-overview-v4.md)
+- [Debug your Teams app locally](debug-local-v4.md)

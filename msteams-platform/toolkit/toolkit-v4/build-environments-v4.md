@@ -63,7 +63,7 @@ Azure Functions provides "compute on-demand" in two significant ways:
 1. Allows implementing system's logic into your readily available blocks of code. These blocks are called functions.
 1. Meets the requirement with as many resources and function instances as necessary as the requests increase.
 
-Azure Functions integrates with an array of [cloud services](add-resource.md#types-of-cloud-resources) to provide feature-rich implementations. The following are the common scenarios for Azure Functions:
+Azure Functions integrates with an array of [cloud services](add-resource-v4.md#types-of-cloud-resources) to provide feature-rich implementations. The following are the common scenarios for Azure Functions:
 
 * Building a web API
 * Processing to database changes
@@ -74,5 +74,5 @@ Azure Functions integrates with an array of [cloud services](add-resource.md#typ
 
 * [Teams Toolkit Overview](teams-toolkit-fundamentals-v4.md)
 * [Developer Portal for Teams](~/concepts/build-and-test/teams-developer-portal.md)
-* [Create a new Teams project](create-new-project.md)
+* [Create a new Teams project](create-new-project-v4.md)
 * [Build your first Teams app](~/get-started/get-started-overview.md#build-your-first-teams-app)
