@@ -14,6 +14,15 @@ The Teams AI SDK simplifies the process of creating and powering bots with AI ca
 
 DevOps, an Azure-powered application, enables users to track work items to manage projects, track bugs, or plan complex project management scenarios. To increase engagement, DevOps Teams bots will use GPT (Generative Pre-trained Transformer) capabilities. The key entity with which DevOps Bot operates is work items. All bugs are also categorized as work items for the purposes of this document.
 
+## Pre-requisites
+
+To get started, set up migration guide and start GPT setup guide:
+
+1. [Set up migration guide](https://github.com/microsoft/botbuilder-m365/blob/main/getting-started/00.MIGRATION.md)
+1. [Start GPT setup guide](https://github.com/microsoft/botbuilder-m365/blob/main/getting-started/01.GPT-SETUP.md)
+1. [API-REFERENCE](https://github.com/microsoft/botbuilder-m365/blob/main/getting-started/02.API-REFERENCE.md)
+1. [PROMPT-INJECTION](https://github.com/microsoft/botbuilder-m365/blob/main/getting-started/PROMPT-INJECTION.md)
+
 This document is intended to help Teams developers to GPTify their bots and spark creativity.
 
 1. Setup the SDK

@@ -12,11 +12,6 @@ This SDK is designed to help you build bots that can interact with Teams and Mic
 
 The SDK also facilitates the creation of bots that uses an OpenAI API key to provide an AI-driven conversational experience, or the same using Azure Foundry.
 
-To get started, Set up migration guide and start GPT setup guide
-
-1. [Set up migration guide](https://github.com/microsoft/botbuilder-m365/blob/main/getting-started/00.MIGRATION.md)
-1. [Start GPT setup guide](https://github.com/microsoft/botbuilder-m365/blob/main/getting-started/01.GPT-SETUP.md)
-
 ## Message-extension query
 
 The Teams Conversational AI SDK offers bot developers a more intuitive approach to creating handlers for various message-extension query commands when compared to previous iterations of Teams Bot Framework SDK. The new SDK works alongside the existing Teams Bot Framework SDK and does not replace it.
