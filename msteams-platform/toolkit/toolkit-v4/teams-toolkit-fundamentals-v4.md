@@ -126,6 +126,6 @@ You can access Teams Developer Portal quickly, where you can configure, distribu
 * [Build bots for Teams](~/bots/what-are-bots.md)
 * [Build Message extensions](~/messaging-extensions/what-are-messaging-extensions.md)
 * [Create a new Teams app](create-new-project-v4.md)
-* [Provision cloud resources](provision-cloud-resources.md)
+* [Provision cloud resources](provision-v4.md)
 * [Deploy Teams app to the cloud](deploy-v4.md)
 * [Publish Teams apps](publish-v4.md)

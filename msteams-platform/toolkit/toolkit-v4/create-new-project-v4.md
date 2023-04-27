@@ -280,5 +280,5 @@ After the project is created, Teams Toolkit automatically opens **GettingStarted
 * [Build a Teams app with C# or .NET](~/sbs-gs-csharp.yml)
 * [Prerequisites for all types of environment and create your Teams app](tools-prerequisites-v4.md)
 * [Prepare to build apps using Microsoft Teams Toolkit](build-environments-v4.md)
-* [Provision cloud resources using Visual Studio](provision-cloud-resources.md)
+* [Provision cloud resources using Visual Studio](provision-v4.md)
 * [Deploy Teams app to the cloud using Visual Studio](deploy-v4.md#deploy-teams-app-to-the-cloud-using-visual-studio)

@@ -120,6 +120,6 @@ The other way to preview your app:
 * [Create multi-capability Teams apps](add-capability-v4.md)
 * [Add cloud resources to Microsoft Teams app](add-resource-v4.md)
 * [Create new Teams app in Visual Studio](create-new-project-v4.md#create-new-teams-app-in-visual-studio)
-* [Provision cloud resources using Visual Studio](provision-cloud-resources.md)
-* [Edit Teams app manifest using Visual Studio](VS-TeamsFx-preview-and-customize-app-manifest.md)
+* [Provision cloud resources using Visual Studio](provision-v4.md)
+* [Edit Teams app manifest using Visual Studio](TeamsFx-preview-and-customize-app-manifest-v4.md)
 * [Debug your Teams app locally using Visual Studio](debug-local-v4.md#debug-your-teams-app-locally-using-visual-studio)
