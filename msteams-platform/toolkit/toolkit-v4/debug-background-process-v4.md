@@ -35,7 +35,7 @@ Teams Toolkit checks the following prerequisites during the debug process:
   |Bot |  14, 16 (recommended)|
   |Message extension | 14, 16 (recommended) |
 
-For more information, see [Node.js version compatibility table for project type](tools-prerequisites.md#nodejs-version-compatibility-table-for-project-type).
+For more information, see [Node.js version compatibility table for project type](tools-prerequisites-v4.md#nodejs-version-compatibility-table-for-project-type).
 
 * Teams Toolkit prompts you to sign in to Microsoft 365 account, if you haven't signed in with your valid credentials.
 * Custom app uploading or sideloading for your developer tenant is turned on, to prevent local debug termination.
@@ -177,8 +177,8 @@ You can view the project folders and files under **Explorer** in Visual Studio C
 
 ## See also
 
-* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
-* [Debug your Teams app using Teams Toolkit](debug-local.md)
-* [Use Teams Toolkit to provision cloud resources](provision.md)
-* [Deploy to the cloud](deploy.md)
-* [Preview and customize Teams app manifest](TeamsFx-preview-and-customize-app-manifest.md)
+* [Teams Toolkit Overview](teams-toolkit-fundamentals-v4.md)
+* [Debug your Teams app using Teams Toolkit](debug-local-v4.md)
+* [Use Teams Toolkit to provision cloud resources](provision-v4.md)
+* [Deploy to the cloud](deploy-v4.md)
+* [Preview and customize Teams app manifest](TeamsFx-preview-and-customize-app-manifest-v4.md)
