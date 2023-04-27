@@ -9,7 +9,7 @@ ms.localizationpriority: high
 
 # Deep link to an application
 
-Application can open the profile dialog through deep links and help users to learn more about the application, permissions, and more. You can create a deep link for the app after the app is listed in the Teams store. To create a link to launch Teams, append the app ID to the URL, `https://teams.microsoft.com/l/app/<your-app-id>`. A dialog appears to install or open the app.
+Application can open the profile dialog through deep links and help users to learn more about the application, permissions, and more. You can create a deep link for the app after the app is listed in the Teams store. To create a link to launch Teams, append the app ID to the URL, `https://teams.microsoft.com/l/app/<appId>`. A dialog appears to install or open the app.
 
 If your app is approved for mobile platform, you can deep link to an app on mobile. Apple App Store Connect Team ID is required additionally for the deep link to work on Teams-iOS. For more information, see [how to update Apple App Store Connect Team ID](../deploy-and-publish/appsource/prepare/update-apple-store-team-connect-id.md).
 
@@ -21,7 +21,7 @@ Deep link to an app isn't supported for custom apps.
 
 You can open an app install dialog from your Teams app and also can install the app in other contexts. Use the following deep link format to open an app install dialog from your Teams:
 
-`https://teams.microsoft.com/l/app/<your-app-id>`, where `<your-app-id>` is the application ID.
+`https://teams.microsoft.com/l/app/<appId>`, where `<appId>` is the application ID.
 
 Applications can use the TeamsJS library to open the dialog without manually generating the deep link. Following is an example to open the app install dialog using TeamsJS:
 
@@ -30,7 +30,7 @@ Applications can use the TeamsJS library to open the dialog without manually gen
 ```javascript
 // Open an app install dialog from your tab
 if(appInstallDialog.isSupported()) {
-    const dialogPromise = appInstallDialog.openAppInstallDialog(<appId>);
+    const dialogPromise = appInstallDialog.openAppInstallDialog({ appId: "<appId>" });
     dialogPromise.
       then((result) => {/*Successful operation*/}).
       catch((error) => {/*Unsuccessful operation*/});
