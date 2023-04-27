@@ -1,7 +1,7 @@
 ---
 title: Sideload and test app in Teams environment v4
 author: zyxiaoyuer
-description: In this module, learn how to sideload and test app in different environment v4
+description: In this module, learn how to sideload and test app in different environment using Teams toolkit v4.
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview

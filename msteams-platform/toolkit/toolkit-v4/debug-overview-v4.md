@@ -1,7 +1,7 @@
 ---
 title: Debug your Teams app v4
 author: surbhigupta 
-description: In this module, learn how to debug your Teams app v4, and key features of Teams Toolkit
+description: In this module, learn how to debug your Teams app, and key features of Teams Toolkit v4.
 ms.author: surbhigupta 
 ms.localizationpriority: high
 ms.topic: overview

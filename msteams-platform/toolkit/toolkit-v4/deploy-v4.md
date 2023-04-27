@@ -1,7 +1,7 @@
 ---
 title: Deploy to the cloud v4
 author: MuyangAmigo
-description: Learn how to deploy app to the cloud v4, Azure, or SharePoint using Teams Toolkit in Visual Studio Code and Visual Studio.
+description: Learn how to deploy app to the cloud, Azure, or SharePoint using Teams Toolkit v4 in Visual Studio Code and Visual Studio.
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
@@ -102,7 +102,7 @@ The other way to preview your app:
 1. Right-click on your project **MyTeamsApp4** under **Solution Explorer**.
 1. Select **Teams Toolkit** > **Preview in Teams** to launch the Teams app in web browser.
 
-   :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/vs-deploy-preview-teams_2.png" alt-text="Preview teams app in web browser":::
+   :::image type="content" source="images/vs-deploy-preview-teams2-v4.png" alt-text="Preview teams app in web browser":::
 
    > [!NOTE]
    > The same menu options are available in Project menu.

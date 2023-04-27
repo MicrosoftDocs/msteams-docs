@@ -1,7 +1,7 @@
 ---
 title: FAQ v4
 author: MuyangAmigo
-description:  In this module, See FAQ v4 for Teams Toolkit using Visual Studio Code
+description:  In this module, See FAQ for Teams Toolkit v4 using Visual Studio Code
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview

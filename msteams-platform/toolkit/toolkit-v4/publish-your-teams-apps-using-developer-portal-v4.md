@@ -22,7 +22,7 @@ The following are the steps to publish your app in Teams Developer Portal:
 
 1. In **Teams Toolkit**, under **DEPLOYMENT** select **Developer Portal for Teams**.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams toolkit fundamentals/dev-portal-ttk_1.png" alt-text="Developer Portal for Teams":::
+    :::image type="content" source="images/dev-portal-ttk_1-v4.png" alt-text="Developer Portal for Teams":::
 
    Developer Portal opens in a browser.
 

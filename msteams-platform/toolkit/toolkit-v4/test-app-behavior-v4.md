@@ -1,7 +1,7 @@
 ---
 title: Test app behavior in different environment v4
 author: surbhigupta
-description: In this module, learn how to test app behavior in different environment v4
+description: In this module, learn how to test app behavior in different environment using Teams toolkit v4.
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
