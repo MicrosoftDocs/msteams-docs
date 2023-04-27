@@ -65,7 +65,7 @@ In the following scenarios, TeamsFx integrates the Azure services with your Team
 
 * [Azure Functions](/azure/azure-functions/functions-overview): A serverless solution to meet your on-demand requirements, such as creating web APIs for your Teams app back-end.
 * [Azure SQL Database](/azure/azure-sql/database/sql-database-paas-overview): A platform as a service (PaaS) database engine to serve as your Teams app data store.
-* [Azure API Management](deploy.md): An API gateway can be used to administer APIs created for Teams apps and publish them so other apps can consume them, such as Power app.
+* [Azure API Management](deploy-v4.md): An API gateway can be used to administer APIs created for Teams apps and publish them so other apps can consume them, such as Power app.
 * [Azure Key Vault](/azure/key-vault/general/overview): Safeguard cryptographic keys and other secrets used by cloud apps and services.
 
 ## Changes after adding Azure resources
