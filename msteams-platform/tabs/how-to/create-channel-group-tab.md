@@ -915,7 +915,7 @@ To build and run your app:
 
     Your photograph and details appear in your **Channel Tab**.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/user-tab-info.png" alt-text="Screenshot12 of your Channel Tab displaying basic information":::
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/tab-user-info_1.png" alt-text="Screenshot12 of your channel Tab displaying basic information":::
 
     You can do normal debugging activities, such as setting breakpoints, as if it were any other web application. The app supports hot reloading.  If you change any file within the project, the page will be reloaded.
 
