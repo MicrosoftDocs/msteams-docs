@@ -336,7 +336,7 @@ You can clear all strokes in the canvas by calling `inkingManager.clear()`. This
 
 #### Import and export raw strokes
 
-Live Share Canvas supports importing and exporting raw strokes from `InkingManager`, which enables you to export them to your backend for later use in a future session.
+Live Share Canvas supports importing and exporting raw strokes from `InkingManager`, which enables you to export them to your back-end for later use in a future session.
 
 ```javascript
 // Export raw strokes
