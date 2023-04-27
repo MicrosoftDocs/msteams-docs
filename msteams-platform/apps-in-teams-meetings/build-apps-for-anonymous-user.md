@@ -13,7 +13,7 @@ Anonymous users don't have an Azure Active Directory (Azure AD) identity and are
 
 > [!NOTE]
 > Apps for anonymous users is supported in Teams mobile client only.
-> Apps for anonymous users isn't supported in channel meetings
+> Apps for anonymous users isn't supported in channel meetings.
 
 For anonymous users to interact with the apps in Teams meetings, ensure the following:
 
