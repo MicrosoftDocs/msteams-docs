@@ -21,7 +21,7 @@ Organizations use it to connect with their customers, provide services, and shar
 
 Let's look at some areas where an app helps to meet a business need.
 
-:::image type="content" source="../msteams-platform/assets/images/overview/why-teams-apps.png" alt-text="Why should you build Teams apps?":::
+:::image type="content" border="false" source="../msteams-platform/assets/images/overview/why-teams-apps.png" alt-text="Why should you build Teams apps?":::
 
 | **Development options** | **Business opportunities** |
 | --- | --- |
@@ -55,15 +55,17 @@ Here's why Teams is best-suited for your app needs:
 
 - **Common business processes**
 
-    Tasks like creating and sharing a sales call report, tracking your project timeline, reserving common resources, submitting help desk requests are repetitive tasks. They make for effective Teams apps.
-
-    In addition to automating repetitive workflows, you can use apps to help with communication issues. A chat bot is an easy replacement for emails and phone calls to IT or HR departments.
-
+    Tasks like creating and sharing a sales call report, tracking your project timeline, reserving common resources, submitting help desk requests, expense reports are repetitive tasks. They make for effective Teams apps.
+    
     :::image type="content" border="false" source="../msteams-platform/assets/images/overview/scenario-approval-flow.png" alt-text="Teams app for internal use":::
 
-- **Teams store advantage**
+- **Personal apps with tabs and bots**
 
-    Push your app on Teams store to improve app's availability and you can use it as a marketing opportunity. If you're running a startup, Teams platform helps to increase awareness of your products. Teams store marketplace can be a great platform for large audiences to discover your app.
+    One-to-one conversational bots are one of the more open-ended features in Teams. The conversation is just between the bot and your user. You have the flexibility of including task modules to simplify complex sets of information.
+
+    For example, if your app is a design tool with multiple collaborators, a shared bot that notifies all users helps to build user engagement.
+
+    Additionally, a chat bot can be an easy replacement for emails and phone calls to IT or HR departments.
 
 - **Surface existing app**
 
@@ -71,11 +73,9 @@ Here's why Teams is best-suited for your app needs:
 
     :::image type="content" border="false" source="../msteams-platform/assets/images/overview/scenario-dashboard.png" alt-text="SharePoint site ported as a Teams tab":::
 
-- **Personal apps with tabs and bots**
+- **Teams store advantage**
 
-    One-to-one conversational bots are one of the more open-ended features in Teams. The conversation is just between the bot and your user. You have the flexibility of including task modules to simplify complex sets of information.
-
-    For example, if your app is a design tool with multiple collaborators, a shared bot that notifies all users helps to build user engagement.
+    Push your app on Teams store to improve app's availability and you can use it as a marketing opportunity. If you're running a startup, Teams platform helps to increase awareness of your products. Teams store marketplace can be a great platform for large audiences to discover your app.
 
 ## Next step
 
