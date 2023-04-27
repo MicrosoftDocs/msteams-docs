@@ -69,7 +69,7 @@ You can identify and use different types of cards based on your application requ
 >
 > * For Adaptive Cards in Incoming Webhooks, all native Adaptive Card schema elements, except `Action.Submit`, are fully supported. The supported actions are [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html), [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html), and [**Action.Execute**](/adaptive-cards/authoring-cards/universal-action-model#actionexecute).
 >
-> * Adaptive Cards are supported in connectors for Microsoft 365 groups when the [Adaptive Card is sent using Incoming Webhook](../../webhooks-and-connectors/how-to/connectors-using.md#send-adaptive-cards-using-an-incoming-webhook).
+> * Adaptive Card supports only Incoming Webhook connectors for Microsoft 365 groups type and not any other connectors for Microsoft 365 group types. For these connectors, You can send the [Adaptive Card is sent using Incoming Webhook](../../webhooks-and-connectors/how-to/connectors-using.md#send-adaptive-cards-using-an-incoming-webhook).
 
 ## Common properties for all cards
 
