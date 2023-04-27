@@ -32,7 +32,7 @@ If you're hosting your bot locally during development, you need to use a tunneli
 ngrok http <port> --host-header=localhost:<port>
 ```
 
-Use the https endpoint provided by ngrok in your app manifest.
+Use the https endpoint provided by ngrok in your [app manifest](../../../resources/schema/manifest-schema.md).
 
 > [!NOTE]
 > If you close your command window and restart, a new URL is generated and you need to update your bot endpoint address to use it.
