@@ -41,15 +41,46 @@ To create a new bot for Teams:
 
 The next section provides a list of application permissions supported for calls and online meetings.
 
-## Add RSC permissions
-
-Resource-specific consent (RSC) is an authorization framework built by Microsoft Teams and Microsoft identity platform that allows for granting scoped access to an app. Through RSC, an authorized user can give an app access to the data of a specific instance of a resource type. For more information, see [RSC permissions for a chat or meeting](../../graph-api/rsc/resource-specific-consent.md#rsc-permissions-for-a-chat-or-meeting)
-
 ## Add Graph permissions
 
-The Graph provides granular permissions to control the access that apps have to resources. You decide which permissions for Graph your app requests. The Graph calling APIs support application permissions, which are used by apps that run without a signed-in user present. A tenant administrator must grant consent to application permissions.
+The Graph provides granular permissions to control the access that apps have to resources. You decide which permissions for Graph your app requests. The Graph calling APIs support Resource-specific consent (RSC) permissions and application permissions.
+
+### Add RSC permissions
+
+Resource-specific consent (RSC) is an authorization framework built by Microsoft Teams and Microsoft identity platform that allows for granting scoped access to an app. Through RSC, an authorized user can give an app access to the data of a specific instance of a resource type.
+
+#### RSC permissions for a chat or meeting
+
+If a chat has a meeting or a call associated with it, then the relevant RSC permissions apply to those resources as well.
+
+The following table provides RSC application permissions for a chat or meeting:
+
+| Permission name | Action |
+| ----- | ----- |
+| `Calls.AccessMedia.Chat` | Access media streams in calls associated with this chat or meeting. |
+| `Calls.JoinGroupCalls.Chat` | Join calls associated with this chat or meeting. |
+| `ChatSettings.Read.Chat`| Read this chat's settings.|
+| `ChatSettings.ReadWrite.Chat`| Read and write this chat's settings. |
+| `ChatMessage.Read.Chat` | Read this chat's messages.|
+| `ChatMessage.Send.Chat` | Send messages to this chat. |
+| `ChatMessageReadReceipt.Read.Chat` | Read the ID of the last seen message in this chat. |
+| `ChatMember.Read.Chat` | Read this chat's members. |
+| `Chat.Manage.Chat` | Manage this chat. |
+| `TeamsTab.Read.Chat`| Read this chat's tabs. |
+| `TeamsTab.Create.Chat` | Create tabs in this chat. |
+| `TeamsTab.Delete.Chat` | Delete this chat's tabs. |
+| `TeamsTab.ReadWrite.Chat` | Manage this chat's tabs. |
+| `TeamsAppInstallation.Read.Chat` | Read the apps that are installed in the chat. |
+| `TeamsActivity.Send.Chat` | Send activity feed notifications to users in this chat. |
+| `OnlineMeetingTranscript.Read.Chat` | Read the transcripts of the meeting associated with this chat. |
+| `OnlineMeetingParticipant.Read.Chat` | Read the participants of the meetings associated with this chat.|
+| `OnlineMeeting.ReadBasic.Chat` | Read basic properties of meetings associated with this chat, such as name, schedule, organizer, join link, and start or end notifications. |
+| `OnlineMeetingRecording.Read.Chat` | Read the recordings of the meetings associated with this chat. |
+| `OnlineMeetingNotification.Send.Chat` | Send notifications in the meetings associated with this chat. |
 
 ### Application permissions for calls
+
+The application permissions for calls are used by apps that run without a signed-in user present. A tenant administrator must grant consent to application permissions.
 
 The following table provides a list of application permissions for calls:
 
