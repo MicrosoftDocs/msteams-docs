@@ -6,7 +6,7 @@ ms.topic: reference
 ---
 # Get started
 
-Welcome to Get started for building and deploying customized apps for Microsoft Teams!
+Let's get started for building apps for Microsoft Teams and beyond!
 
 Walk through the steps to build a basic, real-world Teams app. The Get started also introduces you to common tools, fundamental concepts, and more advanced features.
 
@@ -18,11 +18,9 @@ Here's an idea of what you'll learn:
 * Configure and build different types of Teams apps.
 * Learn about extending your Teams app across Microsoft 365.
 
-Let's take a quick glance at the build environment options you can choose from, and the road-map to build and deploy a Teams app.
+## App capabilities and development tools
 
 :::image type="content" border="false" source="../assets/images/get-started/get-started.png" alt-text="Illustration showing your choices to build Teams app":::
-
-## App capabilities and development tools
 
 Depending on the capabilities you want for your app, choose an appropriate development tool set.
 

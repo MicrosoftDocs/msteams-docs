@@ -9,7 +9,7 @@ ms.date: 05/24/2021
 ---
 # Teams app that fits
 
-Microsoft Teams offers a collection of apps that are provided by Microsoft or external services. Teams apps can be tabs, bots, or message extensions or any combination of the three. These apps expand the value of your Teams collaborative experience.
+Microsoft Teams offers a collection of apps that are provided by Microsoft or external services. Teams apps can be tabs, bots, or message extensions or any combination of the three. Teams apps can be built to work on Outlook and Microsoft 365 App, too. These apps expand the value of your Teams collaborative experience.
 
 Apps can be personal or shared. A personal app enables a one-on-one communication, and a shared app lets multiple users share app space to collaborate.
 
@@ -31,6 +31,10 @@ Let's look at some areas where an app helps to meet a business need.
 
 You can build apps with Teams Developer platform by extending Teams capabilities to fit your needs. Create something brand new for Teams or integrate an existing app.
 
+Take a look at these example developer personas and app scenarios:
+
+:::image type="content" border="false" source="assets/images/overview/dev-persona.png" alt-text="Screenshot showing the developer persona and user stories.":::
+
 ## Build apps with Microsoft Teams platform
 
 Teams apps help your collaborative workspace to be more productive by bringing key information, common tools, and trusted processes to where people increasingly gather, learn, and work. Apps are how you extend the capabilities of Team platform to fit your requirements. Create something brand new or integrate an existing app, and you utilize benefits of Teams platform for your particular business needs.
@@ -47,7 +51,7 @@ Here's why Teams is best-suited for your app needs:
 
     Teams is a social platform; custom social-focused apps encourage your team to extend your company culture into your collaboration space. Use apps for sending polls, letting people share feedback with each other, enabling connection, and communication.
 
-    :::image type="content" source="../msteams-platform/assets/images/overview/teams-apps-social.png" alt-text="Teams app for building team culture":::
+    :::image type="content" border="false" source="../msteams-platform/assets/images/overview/scenario-social.png" alt-text="Teams app for building team culture":::
 
 - **Common business processes**
 
@@ -55,7 +59,7 @@ Here's why Teams is best-suited for your app needs:
 
     In addition to automating repetitive workflows, you can use apps to help with communication issues. A chat bot is an easy replacement for emails and phone calls to IT or HR departments.
 
-    :::image type="content" source="../msteams-platform/assets/images/overview/teams-apps-bot.png" alt-text="Teams app for internal use":::
+    :::image type="content" border="false" source="../msteams-platform/assets/images/overview/scenario-approval-flow.png" alt-text="Teams app for internal use":::
 
 - **Teams store advantage**
 
@@ -65,7 +69,7 @@ Here's why Teams is best-suited for your app needs:
 
     If you've got an existing web app, SharePoint site (or SPFx extension), PowerApp, or other web-based application, it may make sense to enable some or all of it in Teams. Extending existing apps and porting interactive functionalities to Teams helps to grow user base and user engagement for your app.
 
-    :::image type="content" source="../msteams-platform/assets/images/overview/teams-apps-sp.png" alt-text="SharePoint site ported as a Teams tab":::
+    :::image type="content" border="false" source="../msteams-platform/assets/images/overview/scenario-dashboard.png" alt-text="SharePoint site ported as a Teams tab":::
 
 - **Personal apps with tabs and bots**
 

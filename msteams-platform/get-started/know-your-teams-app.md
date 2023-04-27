@@ -31,19 +31,13 @@ For building other basic Teams app, see link to: Tools and SDKs > TTk v5 > TTk T
 
 You can build a Teams app that is suitable for a particular scenario or use-case. For example, a notification bot is suitable to send notifications but not to chat.
 
-You can build Teams app to suit your business needs as shown in the following scenarios:
-
-:::image type="content" source="../assets/images/get-started/info-graphic-build-a-scenario-based-app.png" alt-text="Screenshot showing the developer persona and user stories.":::
-
 You can start by building a [scenario-based app](../sbs-gs-notificationbot.yml)
 For building other basic Teams app, see Tools and SDKs > TTk v5 > TTk Tutorials Scenario-based apps.
 
 ### Extend your Teams app across Microsoft 365
 
-* Content for extending the app.
-* Introduce unified app manifest.
-* To do list – code sample, no sbs yet.
+If you previously have built some Teams apps, now you can extend your apps across Microsoft 365 by updating the app manifest. Configure the properties in the Teams app manifest to make your app accessible over Outlook and Microsoft 365.
 
-Extend your Teams app across Microsoft 365 by updating the Teams unified app manifest. Configure the properties in the Teams app manifest to make your app accessible over Outlook and Office.
+:::image type="content" border="false" source="../assets/images/overview/app-manifest.png" alt-text="Screenshot showing the configuration of properties in the Teams app manifest.":::
 
-:::image type="content" source="../assets/images/get-started/unified-app-manifest.png" alt-text="Screenshot showing the configuration of properties in the Teams app manifest.":::
+If you would like to extend existing apps, learn how at [Extend Teams apps across Microsoft 365](../m365-apps/overview.md) section.
