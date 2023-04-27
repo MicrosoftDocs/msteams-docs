@@ -893,7 +893,7 @@ To build and run your app:
 
     Teams is loaded in a web browser.
 
-1. Select **Add to a Teams** when prompted to install the app to Teams.
+1. Select **Add to a team** when prompted to install the app to Teams.
 
     :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/blazor-add-app_2.png" alt-text="Screenshot8 of BlazorApp local debug with Add option highlighted in red.":::
 
@@ -903,17 +903,17 @@ To build and run your app:
 
 1. Move through the page to view the user details.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/authorize-user-info_1.png" alt-text="Screenshot10 of Microsoft Teams with Authorize option highlighted in red.":::
-
 1. Select **Authorize** to let your app retrieve user details using Microsoft Graph.
 
     The app requests permission to grant access for displaying user details.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/ms-graph-permission_1.png" alt-text="Screenshot11 of Permissions requested displaying the App info.":::
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/authorize-user-info_1.png" alt-text="Screenshot10 of Microsoft Teams with Authorize option highlighted in red.":::
 
 1. Select **Accept** to let your app access user details.
 
-    Your photograph and details appear in your **Channel Tab**.
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/ms-graph-permission_1.png" alt-text="Screenshot11 of Permissions requested displaying the App info.":::
+
+    Your photograph and details appear in your channel tab.
 
     :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/tab-user-info_1.png" alt-text="Screenshot12 of your channel Tab displaying basic information":::
 
