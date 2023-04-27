@@ -637,7 +637,7 @@ A `Container` allows you to group a set of related elements together.
 
 Follow these guidelines when including images in your cards.
 
-* **Do**: Design images for high DPI screens to avoid pixelation. It's better to display a 100x100-pixel image at 50x50 pixels than the other way around.
+* **Do**: Design images for high DPI screens to avoid pixelation. It's better to display a 100 x 100 pixel image at 50 x 50 pixels than the other way around.
 * **Do**: If you need to control the exact size of your images, use the `width` and `height` properties.
 * **Don't**: Include padding with your images. This typically introduces undesirable spacing and layout issues.
 * Regarding background color:
