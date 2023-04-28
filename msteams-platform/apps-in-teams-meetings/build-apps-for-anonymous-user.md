@@ -30,12 +30,6 @@ To allow anonymous users to interact with the tab app, update the `supportsAnony
 
 For more information, see [app manifest schema.](~/resources/schema/manifest-schema.md#meetingextensiondefinition)
 
-> [!IMPORTANT]
->
-> * If you want to implement a new generally available (GA) Teams feature, it requires a new manifest version 1.13 or later, which includes the requirement that the partner also implement a pre-GA set of features as part of MetaOS.
-> * If the new feature is required for the app, the partners must update the manifest schema to v1.16 or later and make the app MetaOS ready.
-> * If the new feature isn't required for the app, the partner can use the older version of the manifest schema.
-
 ## Anonymous user authentication flow
 
 Anonymous users can't be authenticated through Azure AD authentication or `getAuthToken` from the client SDK as they aren't Azure AD accounts. `getAuthToken` fails for anonymous users by returning the error `useGetAuthToken: Failed with error - User is not authenticated`. If you need to authenticate anonymous users, your app must identify anonymous users and provide an alternative authentication experience in the meetings. You can determine if a user is anonymous by validating [user's context](#in-meeting-getcontext-from-teams-client-library).
