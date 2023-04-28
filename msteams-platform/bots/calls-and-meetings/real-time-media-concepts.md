@@ -59,6 +59,12 @@ To develop an application-hosted media bot, you must install the [Microsoft.Grap
 
 Application-hosted media bots require .NET or C# and Windows Server. For more information, see [requirements and considerations for application-hosted media bots](requirements-considerations-application-hosted-media-bots.md#c-or-net-and-windows-server-for-development).
 
+## Code sample
+
+| **Sample name** | **Description** | **.NET** |
+|---------------|----------|--------|
+| AudioVideoPlaybackBot |  This sample demonstrates how a bot can do a video stream and change screen sharing role. | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/a3943bafd73ce0df780c0e1ac3428e3de13a101f/Samples/V1.0Samples/LocalMediaSamples/AudioVideoPlaybackBot) |
+
 ## Next step
 
 > [!div class="nextstepaction"]
