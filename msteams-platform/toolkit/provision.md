@@ -408,6 +408,10 @@ SECRET_BOT_PASSWORD=<value of Azure AD application's client secret>
 
 ::: zone-end
 
+::: zone pivot="visual-studio"
+
+::: zone-end
+
 ## See also
 
 * [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
