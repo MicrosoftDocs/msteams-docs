@@ -4,8 +4,8 @@ description: Learn how to update your personal tab app to run in Outlook and Mic
 ms.date: 02/28/2023
 ms.author: mosdevdocs
 ms.topic: tutorial
-ms.custom: m365apps
 ms.localizationpriority: medium
+ms.subservice: m365apps
 ---
 # Extend a Teams personal tab across Microsoft 365 app
 

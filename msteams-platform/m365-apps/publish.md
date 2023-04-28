@@ -4,8 +4,8 @@ description: Learn how to make your Microsoft 365-enabled Teams apps discoverabl
 ms.date: 10/10/2022
 ms.author: mosdevdocs
 ms.topic: conceptual
-ms.custom: m365apps
 ms.localizationpriority: medium
+ms.subservice: m365apps
 ---
 # Publish Teams apps for Microsoft 365
 

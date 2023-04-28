@@ -4,8 +4,8 @@ description: Learn how to update your search-based message extension to run in O
 ms.date: 01/31/2023
 ms.author: mosdevdocs
 ms.topic: tutorial
-ms.custom: m365apps
 ms.localizationpriority: high
+ms.subservice: m365apps
 ---
 # Extend a Teams message extension across Microsoft 365
 

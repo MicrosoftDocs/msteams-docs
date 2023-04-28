@@ -4,8 +4,8 @@ description: Learn how to extend Teams apps across Microsoft 365 (running in Tea
 ms.date: 02/28/2023
 ms.author: mosdevdocs
 ms.topic: Conceptual
-ms.custom: m365apps
 ms.localizationpriority: medium
+ms.subservice: m365apps
 ---
 # Extend Teams apps across Microsoft 365
 
