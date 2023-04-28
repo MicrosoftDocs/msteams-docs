@@ -1382,7 +1382,7 @@ Prior to TeamsJS version 2.0, all deep linking scenarios were handled using `sha
 
 - **Deep links into your app.** Use `pages.shareDeepLink` (known as *shareDeepLink* prior to TeamsJS v.2.0) to generate and display a copyable link for the user to share. When clicked, a user will be prompted to install the app if it's not already installed for the application host (specified in the link path).
 
-- **Navigation within your app.** Use the new [`pages.currentApp`](/javascript/api/@microsoft/teams-js/pages.currentapp) namespace to navigate within your app within the hosting application. Specifically, the function `navigateTo(NavigateWithinAppParams)` to allow navigation to a specific tab within the current app and the function `navigateToDefaultPage()` to navigate to the first tab defined in the app's manifest. For more information, see [Navigate within a tab app](tab-navigation.md). 
+- **Navigation within your app.** Use the new [`pages.currentApp`](/javascript/api/@microsoft/teams-js/pages.currentapp) namespace to navigate within your app within the hosting application. Specifically, the function `navigateTo(NavigateWithinAppParams)` to allow navigation to a specific tab within the current app and the function `navigateToDefaultPage()` to navigate to the first tab defined in the app's manifest. For more information, see [Navigate within a tab app](../tabs/how-to/tab-navigation.md). 
 
     These APIs provide the equivalent of navigating to a deep link (as the now deprecated *executeDeepLink* was once used for) without requiring your app to construct a URL or manage different deep link formats for different application hosts.
 
