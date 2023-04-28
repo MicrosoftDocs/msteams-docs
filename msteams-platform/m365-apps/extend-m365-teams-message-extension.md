@@ -78,7 +78,7 @@ To start with a [sample message extension](https://github.com/OfficeDev/TeamsFx-
 1. Open the command palette (`Ctrl+Shift+P`) and type `Teams: Deploy to the cloud` to deploy the sample code to the provisioned resources in Azure and start the app.
 1. Select **Deploy**.
 
-From here, you can skip ahead to [Add Microsoft 365 channel for your bot](#add-microsoft-365-extensions-channel-for-your-bot) to complete the final step of enabling the Teams message extension to work in Outlook. (The app manifest is already referencing the correct version, so no updates are necessary).
+From here, you can skip ahead to [Add Microsoft 365 channel for your bot](#add-microsoft-365-channel-for-your-bot) to complete the final step of enabling the Teams message extension to work in Outlook. (The app manifest is already referencing the correct version, so no updates are necessary).
 
 ## Update the app manifest
 
