@@ -32,7 +32,7 @@ For more information, see [app manifest schema.](~/resources/schema/manifest-sch
 
 > [!IMPORTANT]
 >
-> * If you want to implement a new generally available (GA) Teams feature, it requires a new manifest version (v1.13 or higher), which includes the requirement that the partner also implement a pre-GA set of features as part of MetaOS.
+> * If you want to implement a new generally available (GA) Teams feature, it requires a new manifest version (v1.13 or later), which includes the requirement that the partner also implement a pre-GA set of features as part of MetaOS.
 > * If the new feature is critical for the app, the partners must update the manifest schema to v1.16 or later and make the app MetaOS ready.
 > * If the new feature is not super-critical for the app, the partner must maintain an older version of the manifest schema.
 
