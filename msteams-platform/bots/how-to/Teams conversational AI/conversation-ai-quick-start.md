@@ -213,12 +213,27 @@ WI_priority = find_WI_priority(conversation.history.newpriority)
 Update_WI(WI#, WI_priority)
 }
 ```
+-->
 
-## Responsible AI: Ethical way to use GPT -->
-
-# Get started
+# Get started with Teams conversational AI
 
 The Teams AI SDK simplifies the process of creating and powering bots with AI capabilities. It provides APIs to access and manipulate data, as well as a range of controls and components to create custom user interfaces.
+
+## Pick your capabilities
+
+Next step is to pick the capabilities needed. You need to use the SDK to scaffold bot and adaptive card handlers to the source file.
+
+**Bot handler**: Add it to the main activity manager file. Once you've configured your Open AI API, you need to create a Bot Activity Handler class. This class will contain all the logic for handling user requests and responding with the appropriate response.
+
+```javascript
+import { 
+CloudAdapter, 
+ConfigurationBotFrameworkAuthentication, ConfigurationBotFrameworkAuthenticationOptions, 
+MemoryStorage, 
+ActivityTypes } from 'botbuilder';
+
+const adapter = new CloudAdapter(botFrameworkAuthentication);
+```
 
 ## Create AI Components
 
@@ -272,22 +287,13 @@ const app = new Application<ApplicationTurnState>({
 
 ## Prompt
 
+Prompts are pieces of text that can be used to create conversational experiences. They're used to start conversations, ask questions, and generate responses. They can be used to create natural language experiences for chatbots, virtual assistants, and other conversational user interfaces. The use of prompts can help reduce the complexity of creating conversational experiences and make them more engaging for the user.
+
 Create a folder called prompts, and define your prompts in the folder.
 
 * skprompt.txt: Define all your text prompts. Contains the prompts text and supports template variables and functions.
-
-  ```text
-    The following is a conversation with an AI assistant. 
-    The AI is Santa Clause and the Human is a child meeting Santa for the first time. 
-    The AI should always reply the way Santa would. 
-    The AI should always greet the human the way Santa would, ask them their name, and then what they would like for Christmas.
-    
-    {{$history}}
-    Human: {{$input}}
-    AI:
-  ```
   
-* config.json: Configure `max_tokens`, `temperature`, and other properties to pass into open AI or Azure AI. Contains the prompts model settings.
+* config.json: Provide the right configuration to ensure bot responses are aligned with your business requirement. Configure `max_tokens`, `temperature`, and other properties to pass into open AI or Azure AI. Contains the prompts model settings.
 
    ```json
    {
@@ -312,6 +318,17 @@ Create a folder called prompts, and define your prompts in the folder.
 
 Plans let the model perform actions or say things to the user. You can create a schema of the plan and add a list of actions that you support. It can perform an action and pass arguments. GPT can  figure out what actions it wants to use and then extract all the entities and pass those in as arguments to the action call.
 
+```text
+    The following is a conversation with an AI assistant. 
+    The AI is Santa Clause and the Human is a child meeting Santa for the first time. 
+    The AI should always reply the way Santa would. 
+    The AI should always greet the human the way Santa would, ask them their name, and then what they would like for Christmas.
+    
+    {{$history}}
+    Human: {{$input}}
+    AI:
+  ```
+
 ### Prompt Template
 
 You can add functions to call a callback and return any kind of data you want.
@@ -322,7 +339,7 @@ You can add functions to call a callback and return any kind of data you want.
 
 * {{$history}}: Inserts the conversation history.​
 
-* {{$<scope>.<property>}}: Inserts state properties.
+* {{$< scope >. < property >}}: Inserts state properties.
 
 ## Actions
 
@@ -344,9 +361,13 @@ app.ai.action(AI.FlaggedOutputActionName, async (context: TurnContext, state: Ap
 
 ### Register Action Handlers
 
-Register a handler for each action listed in the prompt and add a handler to deal with unknown actions.
+Action handlers help users achieve the goals which is shared in the user intents.
 
-In the following example of a light bot, we have the `LightsOn`, `LightsOff` and `Pause`  action. Every time an action is called, you return true or false. ​Returning false from a handler prevents the planner from running additional DO or SAY commands. When the bot receives an unknown action we're telling the bot to terminate the action.
+One of the key aspects in action handlers is that you must first register the actions in the prompts and then help user achieve the goal.
+
+You must register a handler for each action listed in the prompt and also add a handler to deal with unknown actions.
+
+In the following example of a light bot, we have the `LightsOn`, `LightsOff` and `Pause`  action. Every time an action is called, you return true or false. ​Returning false from a handler prevents the planner from running additional DO or SAY commands. When the bot receives an unknown action, we're telling the bot to terminate the action.
 
 ```javascript
 // Register action handlers
