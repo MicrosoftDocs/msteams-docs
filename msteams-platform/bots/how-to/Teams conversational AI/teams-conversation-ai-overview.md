@@ -24,7 +24,7 @@ The following are some of the main features available through Teams Conversation
 1. [Responsible AI](#responsible-ai)
 1. [Predictive Engine for Mapping Intents to Actions](#predictive-engine-for-mapping-intents-to-actions)
 
-:::image type="content" source="../../../assets/images/bots/Teams-ai-sdk-features.png" alt-text="Graphic shows the main features available through Teams conversation AI SDK.":::
+:::image type="content" source="../../../assets/images/bots/Teams-ai-sdk-features.png" alt-text="Graphic shows the main features available through Teams conversation AI SDK." border="false":::
 
 ### Simple Teams-Centric Component Scaffolding
 
@@ -78,13 +78,7 @@ Teams Conversational AI SDK makes Teams apps truly conversational, not driven by
 
 Here are some key benefits of the Teams conversational AI SDK:
 
-* Bots are conversational​.
-
-* Apps can register skills.
-
-* Extract user intent from natural language.
-
-* ​Strong POV with Teams app components​. You can instantiate your bot activity handler and you invoke any Teams capabilities by just invoking the function.
+* ​Strong POV with Teams app components​. You can instantiate your bot activity handler and invoke any Teams capabilities by just invoking the function.
 
 * ​Easy to leverage powerful conversational language models vs building on your own​.
 
