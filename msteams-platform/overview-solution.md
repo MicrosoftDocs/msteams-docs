@@ -46,7 +46,7 @@ You can build a Teams app as per your app's requirements. Based on factors, such
 
 A Teams app offers you the flexibility of choosing your build environment. It includes tools, framework, and languages to approach your app development.
 
-:::image type="content" source="../msteams-platform/assets/images/overview/tools-of-your-choice.png" alt-text="Business need app":::
+:::image type="content" source="../msteams-platform/assets/images/overview/sdk-api.png" alt-text="Business need app":::
 
 Build your Teams app in the environment that works for your particular requirements. You can even select a combination.
 
