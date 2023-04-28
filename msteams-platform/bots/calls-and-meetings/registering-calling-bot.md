@@ -47,7 +47,7 @@ The Graph provides granular permissions to control the access that apps have to 
 
 ### RSC permissions for calls
 
-Resource-specific consent (RSC) is an authorization framework built by Teams and Microsoft identity platform that allows for granting scoped access to an app. Through RSC, an authorized user can give an app access to the data of a specific instance of a resource type.
+RSC is an authorization framework built by Teams and Microsoft identity platform that allows for granting scoped access to an app. Through RSC, an authorized user can give an app access to the data of a specific instance of a resource type.
 
 If a chat has a meeting or a call associated with it, then the relevant RSC permissions apply to those resources as well.
 
