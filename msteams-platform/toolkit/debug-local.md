@@ -20,7 +20,7 @@ Teams Toolkit helps you to debug and preview your Microsoft Teams app locally. D
 Teams Toolkit in Microsoft Visual Studio Code gives you the features to automate debugging of your Teams app locally. Visual Studio Code allows you to debug tab, bot, and message extension. You need to set up Teams Toolkit before you debug your app.
 
 > [!NOTE]
-> You can upgrade your old Teams Toolkit project to use new tasks, for more information, see [debug settings doc](https://aka.ms/teamsfx-debug-upgrade-new-tasks)
+> Your old Teams Toolkit project will be upgraded to use new tasks, for more information, see [tasks doc]
 
 ## Set up your Teams Toolkit for debugging
 
@@ -41,7 +41,7 @@ The following steps help you set up your Teams Toolkit before you initiate the d
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/microsoft365-signin.png" alt-text="Sign in":::
 
    > [!TIP]
-   > You can select **Read more** to learn about Microsoft 365 Developer Program. Your default web browser opens to let you sign-in to your Microsoft 365 account with your credentials.
+   > You can select **Create a Microsoft 365 Testing Tenant** to learn about Microsoft 365 Developer Program. Your default web browser opens to let you sign-in to your Microsoft 365 account with your credentials.
 
 4. Select **Install** to install the development certificate for localhost.
 
@@ -71,7 +71,7 @@ Toolkit launches a new Microsoft Edge or Chrome browser instance based on your s
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/microsoft365-signin.png" alt-text="Sign into M365 account":::
 
    > [!TIP]
-   > You can select **Read more** to learn about Microsoft 365 Developer Program. Your default web browser opens to let you sign-in to your Microsoft 365 account using your credentials.
+   > You can select **Create a Microsoft 365 Testing Tenant** to learn about Microsoft 365 Developer Program. Your default web browser opens to let you sign-in to your Microsoft 365 account using your credentials.
 
 4. Select **Install** to install the development certificate for localhost.
 
@@ -98,13 +98,18 @@ After the initial setup process, Teams Toolkit starts the following processes:
 
 ### Starts app services
 
-Runs tasks as defined in `.vscode/tasks.json`.
+Runs tasks as defined in `.vscode/tasks.json`. By default the task name is `"Start application"`. If your project contains more than one components, there will be more dependent tasks.
 
-|  Component |  Task name  | Folder |
-| --- | --- | --- |
-|  Tab |  **Start Frontend** |  tabs |
-|  Bot or message extensions |  **Start Bot** |  bot |
-|  Azure Functions |  **Start Backend** |  API |
+    ```JSON
+// .vscode/tasks.json
+{
+    "label": "Start application",
+    "dependsOn": [
+        "Start Frontend", // Tab
+        "Start Backend", // Azure Functions
+        "Start Bot" // Bot or message extensions
+    ]
+}
 
 The following image displays task names in the **OUTPUT** and **TERMINAL** tabs of the Visual Studio Code while running tab, bot or message extension, and Azure Functions.
 
@@ -120,17 +125,17 @@ The following table lists the debug configuration names and types for project wi
 
 |  Component |  Debug configuration name  | Debug configuration type |
 | --- | --- | --- |
-|  Tab |  **Attach to Frontend (Edge)** or  **Attach to Frontend (Chrome)**  |  pwa-msedge or pwa-chrome  |
-|  Bot or message extensions |   **Attach to Bot** |  pwa-node |
-| Azure Functions |   **Attach to Backend** |  pwa-node |
+|  Tab |  **Attach to Frontend (Edge)** or  **Attach to Frontend (Chrome)**  |  msedge or chrome  |
+|  Bot or message extensions |   **Attach to Bot** |  node |
+| Azure Functions |   **Attach to Backend** |  node |
 
 The following table lists the debug configuration names and types for project with bot app, Azure Functions and without tab app:
 
 |  Component |  Debug configuration name  | Debug configuration type  |
 | --- | --- | --- |
-|  Bot or message extension  | **Launch Bot (Edge)** or  **Launch Bot (Chrome)**  |   pwa-msedge or pwa-chrome  |
-|  Bot or message extension  |   **Attach to Bot** |  pwa-node  |
-|  Azure Functions |  **Attach to Backend** |  pwa-node |
+|  Bot or message extension  | **Launch Bot (Edge)** or  **Launch Bot (Chrome)**  |   msedge or chrome  |
+|  Bot or message extension  |   **Attach to Bot** |  node  |
+|  Azure Functions |  **Attach to Backend** |  node |
 
 ### Sideloads the Teams app
 
