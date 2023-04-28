@@ -28,7 +28,7 @@ However, your project file can reference values by name defined in the environme
 
 The .env files follow the naming convention of .env.{environment-name}. For each lifecycle execution required to provide an environment name (local, dev, etc) and Teams Toolkit will load the corresponding .env.{environment-name} into the execution process.
 
-You can also define variables in your current shell environment, Teams Toolkit will load these environment variables when running a lifecycle stage. Environment variables defined in the current shell overwrites variables defined in .env files when there's a name conflict.
+You can also define variables in your current shell environment, Teams Toolkit will load these environment variables when running a lifecycle stage. Environment variables defined in the current shell overwrite variables defined in .env files when there's a name conflict.
 
 ## Environment file location
 
@@ -56,10 +56,10 @@ To create a new environment:
 1. Select + Create new environment under ENVIRONMENT.
 (Image)
 
-If you've more than one environment, you need to select an existing environment to create the new environment.
+If you have more than one environment, you need to select an existing environment to create the new environment.
 
 ### Target environment
 
-Teams Toolkit prompts you to select a target environment when you've multiple remote environments.
+Teams Toolkit prompts you to select a target environment when you have multiple remote environments.
 
 (Image)
