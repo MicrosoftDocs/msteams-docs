@@ -914,7 +914,7 @@ Delegated permissions allow the app to access data on behalf of the signed-in us
 
 **Optional** - array
 
-The set of extensions for this app. Used to specify Outlook add-ins for Teams apps that are extended across Microsoft 365, when the app is used in Outlook.
+The set of extensions for this app. Used to specify Outlook Add-ins within a unified manifest for simplified distribution and acquisition within the Microsoft 365 ecosystem.
 
 > [!NOTE]
 > Only one extension per app is supported.
@@ -930,7 +930,7 @@ The set of extensions for this app. Used to specify Outlook add-ins for Teams ap
 |`alternates`| array | | | Specifies backwards compatibility with an equivalent COM add-in, XLL, or both. For more information, see the [EquivalentAddins - See also](/javascript/api/manifest/equivalentaddins) for background information. |
 |`audienceClaimUrl`| string | 2048 | | The url for your extension, used to validate Exchange user identity tokens. |
 
-For additional details, see the [extension property](/office/dev/add-ins/develop/json-manifest-overview) in the Office add-ins manifest documentation.
+For additional details, see the [extension property](/office/dev/add-ins/develop/json-manifest-overview) in the Office add-ins Unified Microsoft 365 manifest documentation.
 
 ## Create a manifest file
 
