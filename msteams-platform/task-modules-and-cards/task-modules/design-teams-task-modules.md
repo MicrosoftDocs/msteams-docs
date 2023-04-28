@@ -95,7 +95,7 @@ Task modules are a great place to surface forms with sequential user inputs and 
 
 ### Sign in
 
-Create a focused sign in or sign-up flow with a series of task modules, letting users move easily through sequential steps.
+Create a focused sign in or sign up flow with a series of task modules, letting users move easily through sequential steps.
 
 #### Mobile
 

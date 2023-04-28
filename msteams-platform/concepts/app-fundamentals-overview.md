@@ -33,7 +33,7 @@ Teams as a platform offers you toolkits, libraries, and apps at every stage of a
 
 Understanding the user and their concern are the first indicators of how a Teams app can help. Build your use case around the problem, determine how an app can solve it, and draw a solution.
 
-* **Understand your use case and Teams App Features**: Understand your user's requirement and you can identify the right features.
+* **Understand your use case and Teams app features**: Understand your user's requirement and you can identify the right features.
 
 * **Map your use cases**: Map common use cases to Teams features based on requirements, such as sharing, collaborating, workflows, relevant social platforms, and more.
 
@@ -70,17 +70,19 @@ Government Community Cloud (GCC) is a government focused copy of the commercial 
 
 The following table includes Teams features and availability for GCC, GCC-High, and DOD:
 
-| Features   | GCC | GCC-High | DOD |
+| &nbsp; | GCC | GCC-High | DOD |
 |-------------|---------|---|---|
-| Teams owned apps as in internally developed apps | ✔️ App is enabled if it has GCC. | ✔️ App is enabled if it has GCC-High. | ✔️ App is enabled if it has DOD. |
+| **Apps** | &nbsp; | &nbsp; | &nbsp; |
 | Microsoft apps | ✔️ Microsoft apps compliant with GCC. | ✔️ Microsoft apps compliant with GCC-High. | ✔️ Microsoft apps compliant with DOD. |
 | 3P or third-party apps | ✔️ Third-party apps are available. Disabled by default and tenant admin use their own discretion to enable it. | ❌ | ❌ |
-| Bots | ✔️ | ✔️ | ❌ |
-| Custom or Lob tab apps |  ✔️ | ✔️ | ✔️ |
-| Sideloading apps | ✔️ | ❌ | ❌ |
-| Custom or Lob bots | ✔️ | ✔️ | ❌ |
-| Custom message extensions | ✔️ | ✔️ | ❌ |
-| Custom connectors | ✔️ | ❌ | ❌ |
+|Line-of-business apps| ✔️ | ❌ | ❌ |
+|Custom apps| ✔️ | ✔️ | ✔️ |
+|Sideloading apps | ✔️ | ❌ | ❌ |
+| **Capabilities** | &nbsp; | &nbsp; | &nbsp; |
+| Tabs | ✔️ | ✔️ | ✔️ |
+| Bots | ✔️ | ✔️ | ✔️ |
+| Message extensions | ✔️ | ✔️ | ✔️ |
+| Connectors | ✔️ | ❌ | ❌ |
 
 **Compliance UI**: By enabling third-party communications, customers accept that such communication is being processed through the third party and not Microsoft. The customer is solely responsible for mitigating risks associated with connecting with third party bots in their services. Microsoft doesn't endorse and makes no warranties, express, or implied concerning the security of third parties the customer allows to connect with their service. Enabling bots will extend your system boundary beyond this tenant based on the bot you choose to leverage. It is your responsibility to ensure that this meets your compliance requirements including FedRAMP, DFARS, ITAR, and so on. It is your responsibility to evaluate the risk and compliance of any endpoint and URL that you connect to.
 

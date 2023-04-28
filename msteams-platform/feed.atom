@@ -1,12 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<title>Microsoft Teams Platform</title>
-	<updated>2023-03-02T04:15:01+05:30</updated>
+	<updated>2023-04-13T04:15:01+05:30</updated>
 	<generator>https://github.com/jpmonette/feed</generator>
 	<subtitle>Updated articles for Microsoft Teams Platform</subtitle>
 	<rights>https://learn.microsoft.com/legal/termsofuse</rights>
 	<category term="new"/>
 	<category term="updated"/>
+	<entry>
+		<title type="html"><![CDATA[Platform update: Set up Microsoft license management]]></title>
+		<id>https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/manage-third-party-apps-license</id>
+		<link href="https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/manage-third-party-apps-license?referrer=whats.new.rssfeed"/>
+		<updated>2023-04-06T11:04:01+05:30</updated>
+		<summary type="html"><![CDATA[Independent software vendors (ISVs) can configure Microsoft license management for third-party SaaS apps in Partner Center as part of the offer publishing. This allows Teams admins or users to easily assign, unassign, use, and track SaaS licenses for their third-party app subscriptions within Teams. </br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20learn.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%20273416d6-635b-e334-76ed-037473249a6d%0A*%20Version%20Independent%20ID%3A%20273416d6-635b-e334-76ed-037473249a6d%0A*%20Content%3A%20%5BSet%20up%20Microsoft%20license%20management%20-%20Teams%5D(https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fconcepts%2Fdeploy-and-publish%2Fappsource%2Fprepare%2Fmanage-third-party-apps-license)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Fconcepts%2Fdeploy-and-publish%2Fappsource%2Fprepare%2Fmanage-third-party-apps-license.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fconcepts%2Fdeploy-and-publish%2Fappsource%2Fprepare%2Fmanage-third-party-apps-license.md)%0A*%20Service%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40heath-hamilton%0A*%20Microsoft%20Alias%3A%20**surbhigupta**">feedback</a>? It is important to us.]]></summary>
+		<category label="new" term="new"/>
+	</entry>
+	<entry>
+		<title type="html"><![CDATA[Platform update: Tab apps in shared channels are available in DOD]]></title>
+		<id>https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/shared-channels</id>
+		<link href="https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/shared-channels?referrer=whats.new.rssfeed"/>
+		<updated>2023-04-04T11:04:01+05:30</updated>
+		<summary type="html"><![CDATA[Tab apps in shared channels are available in Government Community Cloud (GCC), GCC-High, and Department of Defense (DOD) environments. </br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20learn.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%20ad6cb84d-7e44-02db-512f-7da7c8018976%0A*%20Version%20Independent%20ID%3A%20ad6cb84d-7e44-02db-512f-7da7c8018976%0A*%20Content%3A%20%5BTeams%20Connect%20shared%20channels%20-%20Teams%5D(https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fconcepts%2Fbuild-and-test%2Fshared-channels)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Fconcepts%2Fbuild-and-test%2Fshared-channels.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fconcepts%2Fbuild-and-test%2Fshared-channels.md)%0A*%20Service%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40Rajeshwari-v%0A*%20Microsoft%20Alias%3A%20**surbhigupta**">feedback</a>? It is important to us.]]></summary>
+		<category label="new" term="new"/>
+	</entry>
+	<entry>
+		<title type="html"><![CDATA[Platform update: Bots and Message Extensions are available in DOD]]></title>
+		<id>https://learn.microsoft.com/en-us/microsoftteams/platform/bots/what-are-bots</id>
+		<link href="https://learn.microsoft.com/en-us/microsoftteams/platform/bots/what-are-bots?referrer=whats.new.rssfeed"/>
+		<updated>2023-03-20T11:04:01+05:30</updated>
+		<summary type="html"><![CDATA[Conversational Bots and Message Extensions are now available in DOD. </br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20learn.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%203af8496d-46be-a691-11e1-16734f71f891%0A*%20Version%20Independent%20ID%3A%20be0ff3e1-8bef-5ca7-8d9c-566e89e3fd41%0A*%20Content%3A%20%5BBots%20in%20Microsoft%20Teams%20-%20Teams%5D(https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fwhat-are-bots)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Fbots%2Fwhat-are-bots.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fwhat-are-bots.md)%0A*%20Service%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40surbhigupta%0A*%20Microsoft%20Alias%3A%20**anclear**">feedback</a>? It is important to us.]]></summary>
+		<category label="new" term="new"/>
+	</entry>
 	<entry>
 		<title type="html"><![CDATA[Platform update: Add third party authentication to Adaptive Cards Universal Actions]]></title>
 		<id>https://learn.microsoft.com/en-us/microsoftteams/platform/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/authentication-flow-in-universal-action-for-adaptive-cards</id>
@@ -100,28 +124,4 @@
 		<summary type="html"><![CDATA[Deep links are a navigation mechanism that helps users to connect with features and information within Teams and Teams app. Understand how to deep link to an application, Teams chat, or to a workflow in Teams. </br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20learn.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%2045541337-ecd7-5cf6-cbe4-3f0d2f39aa79%0A*%20Version%20Independent%20ID%3A%206b4203f0-2844-06c9-eaa3-9cc03e6f76c0%0A*%20Content%3A%20%5BDeep%20links%20overview%20-%20Teams%5D(https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fconcepts%2Fbuild-and-test%2Fdeep-links)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Fconcepts%2Fbuild-and-test%2Fdeep-links.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fconcepts%2Fbuild-and-test%2Fdeep-links.md)%0A*%20Service%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40surbhigupta%0A*%20Microsoft%20Alias%3A%20**lajanuar**">feedback</a>? It is important to us. ]]></summary>
 		<category label="new" term="new"/>
 	</entry>
-	<entry>
-		<title type="html"><![CDATA[Doc update: Frequently asked questions]]></title>
-		<id>https://learn.microsoft.com/en-us/microsoftteams/platform/teams-faq</id>
-		<link href="https://learn.microsoft.com/en-us/microsoftteams/platform/teams-faq?referrer=whats.new.rssfeed"/>
-		<updated>2022-12-08T11:04:01+05:30</updated>
-		<summary type="html"><![CDATA[This section contains the frequently asked questions and the answers.</br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20learn.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%204aa620a9-03b4-a34e-49c9-5c6b024428d0%0A*%20Version%20Independent%20ID%3A%204aa620a9-03b4-a34e-49c9-5c6b024428d0%0A*%20Content%3A%20%5BFrequently%20asked%20questions%20for%20Teams%20developer%20document%20-%20Teams%5D(https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fteams-faq)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Fteams-faq.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fteams-faq.md)%0A*%20Service%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40surbhigupta%0A*%20Microsoft%20Alias%3A%20**lajanuar**">feedback</a>? It is important to us. ]]></summary>
-		<category label="new" term="new"/>
-	</entry>
-	<entry>
-		<title type="html"><![CDATA[Doc update: Command bot in Teams]]></title>
-		<id>https://learn.microsoft.com/en-us/microsoftteams/platform/bots/how-to/conversations/command-bot-in-teams</id>
-		<link href="https://learn.microsoft.com/en-us/microsoftteams/platform/bots/how-to/conversations/command-bot-in-teams?referrer=whats.new.rssfeed"/>
-		<updated>2022-12-07T11:04:01+05:30</updated>
-		<summary type="html"><![CDATA[Microsoft Teams allows you to automate simple and repetitive tasks in a conversation. You can build a command bot that can respond to simple commands sent in chats with Adaptive Cards. You can create a command bot template in Teams Toolkit that responds to chat commands by displaying UI using an Adaptive Card. This enables users to send messages in Teams and your app can provide a response as required.</br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20learn.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%207d34d2c7-700e-f579-b7b2-0549ace809fd%0A*%20Version%20Independent%20ID%3A%207d34d2c7-700e-f579-b7b2-0549ace809fd%0A*%20Content%3A%20%5BCommand%20bot%20in%20Teams%20-%20Teams%5D(https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fconversations%2Fcommand-bot-in-teams)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Fbots%2Fhow-to%2Fconversations%2Fcommand-bot-in-teams.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fconversations%2Fcommand-bot-in-teams.md)%0A*%20Service%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40surbhigupta%0A*%20Microsoft%20Alias%3A%20**v-amprasad**">feedback</a>? It is important to us. ]]></summary>
-		<category label="new" term="new"/>
-	</entry>
-	<entry>
-		<title type="html"><![CDATA[Feature update: Notification bot in Teams]]></title>
-		<id>https://learn.microsoft.com/en-us/microsoftteams/platform/bots/how-to/conversations/notification-bot-in-teams?tabs=ts%2Cjsts%2Cts4</id>
-		<link href="https://learn.microsoft.com/en-us/microsoftteams/platform/bots/how-to/conversations/notification-bot-in-teams?referrer=whats.new.rssfeed"/>
-		<updated>2022-12-07T11:04:01+05:30</updated>
-		<summary type="html"><![CDATA[Microsoft Teams Toolkit enables you to build applications that capture events and send them as notifications to a personal, group chat, or a channel in Teams. You can send notifications as plain text or Adaptive Cards. The notification bot template creates an app that sends a message to Teams with Adaptive Cards triggered by HTTP post request.</br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20learn.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%2082fb7241-2342-61b4-b5eb-3d25ad391262%0A*%20Version%20Independent%20ID%3A%2082fb7241-2342-61b4-b5eb-3d25ad391262%0A*%20Content%3A%20%5BNotification%20bot%20in%20Teams%20-%20Teams%5D(https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fconversations%2Fnotification-bot-in-teams%3Ftabs%3Dts%252Cjsts%252Cts4)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Fbots%2Fhow-to%2Fconversations%2Fnotification-bot-in-teams.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fconversations%2Fnotification-bot-in-teams.md)%0A*%20Service%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40surbhigupta%0A*%20Microsoft%20Alias%3A%20**v-amprasad**">feedback</a>? It is important to us. ]]></summary>
-		<category label="new" term="new"/>
-	</entry>	
 </feed>

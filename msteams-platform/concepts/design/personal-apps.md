@@ -45,7 +45,7 @@ With a private workspace, users can view app content that's meaningful to them i
 
 #### **Configure and add multiple actions in NavBar**
 
-You can add multiple actions to the upper right NavBar and build an overflow menu for extra actions in an app. A maximum of five actions can be added in the NavBar, including the overflow menu.
+You can add multiple actions to the upper-right NavBar and build an overflow menu for extra actions in an app. A maximum of five actions can be added in the NavBar, including the overflow menu.
 
 :::image type="content" source="../../assets/images/overflow-menu-and-multiple-actionsoptions.png" alt-text="The screenshot is an example thats describes the NavBar and Overflow menu.":::
 
@@ -76,7 +76,7 @@ microsoftTeams.menus.setNavBarMenu(menuItems, (id: string) => {
 |Counter|Description|
 |----------|-----------|
 |A|**Tabs**: Provides navigation for your personal app.|
-|1|**webview**: Displays your app content.|
+|1|**Webview**: Displays your app content.|
 
 #### Desktop
 
@@ -200,7 +200,7 @@ Your content should progress in a logical order that helps users make sense of i
 
 #### Do: Include a first-run experience
 
-There should be at least a welcome screen the first time you use a personal app. For bots, describe what your bot can do and provide quick actions, such as a sign-in button.
+There should be at least a welcome screen the first time you use a personal app. For bots, describe what your bot can do and provide quick actions, such as a sign in.
 
 :::image type="content" source="../../assets/images/personal-apps/personal-tab-fre-do.png" alt-text="Example shows what to do during a personal app first-run experience.":::
 
@@ -246,7 +246,7 @@ Unless you created your app specifically for Teams, you probably have features t
 
 ## Code sample
 
-|Sample name | Description | Typescript|
+|Sample name | Description | TypeScript|
 |----------------|--------------------------------------------------------|--------------|
 | Meeting app | Sample to show navbar-menu in personal tab app. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-navbar-menu/ts) |
 
