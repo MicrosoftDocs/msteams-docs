@@ -914,81 +914,23 @@ Delegated permissions allow the app to access data on behalf of the signed-in us
 
 **Optional** - array
 
-The set of extensions for this app.
+The set of extensions for this app. Used to specify Outlook add-ins for Teams apps that are extended across Microsoft 365, when the app is used in Outlook.
 
 > [!NOTE]
 > Only one extension per app is supported.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`requirements`|object| TBD |TBD| TBD |
-|`runtimes`|array|TBD| TBD | TBD |
-|`ribbons`|array|TBD| TBD | TBD |
-|`autoRunEvents`|array|TBD| TBD | TBD |
-|`alternates`|array|TBD| TBD | TBD |
-|`audienceClaimUrl`|string|2048| TBD | The url for your extension, used to validate Exchange user identity tokens. |
+|`requirements.capabilities`| array | | | Identifies the requirement sets that the add-in needs to be installable. Each object in the array is made up of three strings `name` (required), `minVersion`, and `maxVersion`. |
+|`requirements.scopes`| array | 1 | | Identifies the Office applications, by enum, in which the add-in can be installed. The only supported enum value is `mail`. |
+|`requirements.formFactors`| array | | | Identifies the form factor(s), by enum `mobile` and/or `desktop`, in which the add-in can be installed. |
+|`runtimes`| array | | | Configures various kinds of add-ins that have little or no UI, such as custom function-only add-ins and [function commands](/office/dev/add-ins/design/add-in-commands). |
+|`ribbons`| array | | | The ribbons that the add-in customizes. This property is an array of objects that combine the child properties `requirements`, `contexts`, and `tabs`. `Contexts` specify the command surfaces that the add-in customizes, while the `tabs` property configures custom ribbon tabs. |
+|`autoRunEvents`| array | | | Configures an event handler for a specified event. |
+|`alternates`| array | | | Specifies backwards compatibility with an equivalent COM add-in, XLL, or both. For more information, see the [EquivalentAddins - See also](/javascript/api/manifest/equivalentaddins) for background information. |
+|`audienceClaimUrl`| string | 2048 | | The url for your extension, used to validate Exchange user identity tokens. |
 
-### extensions.requirements
-
-**TBD** - object
-
-TBD
-
-|Name| Type| Maximum size | Required | Description|
-|---|---|---|---|---|
-|`capabilities`|array| TBD |TBD | TBD |
-|`scopes`|array|TBD| TBD | TBD |
-|`formFactors`|array|TBD| TBD | TBD |
-
-### extensions.runtimes
-
-**TBD** - array
-
-A runtime environment for a page or script
-
-|Name| Type| Maximum size | Required | Description|
-|---|---|---|---|---|
-|`requirements`|object| TBD |TBD| TBD |
-|`id`|string|64 characters | TBD | A unique identifier for this runtime within the app. |
-|`type`|string|TBD| TBD | TBD |
-|`code`|object|TBD| TBD | TBD |
-|`lifetime`|string|TBD| TBD | TBD |
-|`actions`|array|TBD| TBD | TBD |
-
-### extensions.ribbons
-
-**TBD** - array
-
-TBD
-
-|Name| Type| Maximum size | Required | Description|
-|---|---|---|---|---|
-|`requirements`|object| TBD |TBD | TBD |
-|`events`|array|TBD | ✔️ | TBD |
-
-### extensions.autorunevents
-
-**TBD** - array
-
-TBD
-
-|Name| Type| Maximum size | Required | Description|
-|---|---|---|---|---|
-|`requirements`|object| TBD |TBD | TBD |
-|`contexts`|array|TBD | TBD | TBD |
-|`tabs`|array|TBD| ✔️ | TBD |
-
-### extensions.alternates
-
-**TBD** - array
-
-TBD
-
-|Name| Type| Maximum size | Required | Description|
-|---|---|---|---|---|
-|`requirements`|object| TBD |TBD | TBD |
-|`prefer`|TBD|TBD | TBD | TBD |
-|`hide`|TBD|TBD| TBD | TBD |
+For additional details, see the [extension property](/office/dev/add-ins/develop/json-manifest-overview) in the Office add-ins manifest documentation.
 
 ## Create a manifest file
 
