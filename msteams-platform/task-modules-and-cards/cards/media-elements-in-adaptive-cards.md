@@ -35,39 +35,36 @@ You can media files to an existing or new Adaptive Card using [Teams Developer P
 
 1. From the left pane, under **Elements**, select **Media** and add it to your Adaptive Cards.
 
-   :::image type="content" source="../../assets/images/media-elements-in-adaptive-cards/media-elements.jpg" alt-text="Screenshot shows you the Adaptive Cards with media elements.":::
+   :::image type="content" source="../../assets/images/media-elements-in-adaptive-cards/media-element-in-ac.png" alt-text="Screenshot shows you the Adaptive Cards with media elements.":::
 
 1. Add your media files to OneDrive or SharePoint.
 
-1. [Create a sharing link or url for a DriveItem](/graph/api/driveitem-createlink). You can also get a link or url using the **Share**, **Copy link**, **Copy link at current time** options from OneDrive or SharePoint.
+1. [Create a sharing link or url for a DriveItem](/graph/api/driveitem-createlink). You can also get a link or url using the **Share**, **Copy link**, or **Copy link at current time** options from OneDrive or SharePoint.
 
    :::image type="content" source="../../assets/images/media-elements-in-adaptive-cards/share-link.png" alt-text="Screenshot shows you from where you can take a link.":::
 
     >[!NOTE]
-    > Adaptive Cards don't support media file links that are copied directly from the address bar.
+    > Adaptive Cards don't support media file links or url that are copied directly from the address bar.
 
 1. Under **Custom card structure title**, select **Media**. The **ELEMENT PROPERTIES** window appears.
 
 1. In **ELEMENT PROPERTIES** section, update the following fields:
 
-   * Under **Sources** section, add your media file url in the **URL** of Adaptive Cards media element properties.
-   * Under **Media** section, add image url in the **Poster URL** of Adaptive Cards media element properties. For more information, see [Adaptive Cards media](https://adaptivecards.io/explorer/Media.html).
+   * Under **Sources** section, enter your media file url in the **URL**.
+   * Under **Media** section, enter image url in the **Poster URL**. For more information, see [Adaptive Cards media](https://adaptivecards.io/explorer/Media.html).
+
+   :::image type="content" source="../../assets/images/media-elements-in-adaptive-cards/media-element-ac.png" alt-text="Screenshot shows you the Adaptive Cards schema with media elements.":::
 
     >[!NOTE]
     > Poster URL is supported only for mobile clients.
 
-|Field|REquired|Description|
-|---|---|---|
-|Data content|||
-|Only show when|||
-|id|||
-|Alternate text|||
-|Poster URL||You can add your |
-|Spacing|||
-|Horizontal alignment|||
-|Height|||
-|URL|Yes|Add your media file URL.|
-|MIME Type|Yes|Add type of your media file|
+1. Select **Save** and then select **Send me this card**.
+
+   :::image type="content" source="../../assets/images/media-elements-in-adaptive-cards/media-element-ac-save.png" alt-text="Screenshot shows you how to save your Adaptive card and send it to your Teams":::
+
+   Your Adaptive Card with media file is successfully save and sent to your Teams chat. Now, you can play your media file in your Adaptive Card.
+
+   :::image type="content" source="../../assets/images/media-elements-in-adaptive-cards/adaptive-card-teams.png" alt-text="Screenshot shows you the adaptive card with media files in Teams chat.":::
 
 ### Example
 
@@ -88,18 +85,6 @@ The following code shows an example of an Adaptive Cards with media elements:
           "mimeType": "video/mp4",
           "url": "https://adaptivecardsblob.blob.core.windows.net/assets/AdaptiveCardsOverviewVideo.mp4"
     }
-      ],
-      "captionSources": [
-      {
-      "mimeType": "vtt",
-      "label": "English (vtt)",
-      "url": "https://raw.githubusercontent.com/microsoft/AdaptiveCards/5ac07e8adb8d7dcd7480973321e57d279d1f7d2c/assets/ProductVideoSubtitles.vtt"
-        },
-    {
-        "mimeType": "srt",
-        "label": "English (srt)",
-        "url": "https://raw.githubusercontent.com/microsoft/AdaptiveCards/da2eb4ad4de60d14b37decc062d3952da9dbb790/assets/ProductVideoSubtitles.srt"
-        }
       ]
     }
   ]
