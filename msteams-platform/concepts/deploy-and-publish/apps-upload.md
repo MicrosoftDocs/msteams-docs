@@ -81,20 +81,28 @@ Teams provides several ways to open apps. For more information, see [access your
 
 ### Update your app
 
-You don't have to sideload your app again if you make code changes (these are reflected in Teams in real-time). However, you must reinstall if you change any app configurations.
+You don't have to sideload your app again if you make code changes (these are reflected in Teams in real-time). However, you must reinstall if you change any app configurations. For more information, see [Role of an admin in upgrading Teams apps](/MicrosoftTeams/apps-update-experience).
 
-If an update is available to your app, then the **Update available** option is enabled. To update, follow the steps:
+When a Teams app receives an update, the user must consent to update the app in any one context, and the app is automatically updated in all the related contexts (chats, channels, and meetings) where the app is installed. The user can update the app from any context.
 
-1. Select **Update available** to view update.
+If an update is available for your app, follow these steps to update your app from the Microsoft Teams store:
 
-     :::image type="content" source="~/assets/images/publish-app/update-available.png" alt-text="Update Teams app.":::
+1. Go to **Microsoft Teams**.
+1. Select **Apps** > **Manage your apps**.
 
-1. Select **View update**. A window with update option appears.
-1. Select **Update** to update your app.
+    :::image type="content" source="../../assets/images/publish-app/update-available-manage-apps.png" alt-text="Screenshot shows the Manage apps option in Teams.":::
 
-     :::image type="content" source="~/assets/images/publish-app/update-window.png" alt-text="Update Teams app in manage apps.":::
+1. Under the **Apps** tab, check for the **Update** option next to the app.
 
-     :::image type="content" source="~/assets/images/publish-app/updated-app.png" alt-text="Updated app.":::
+1. Select **Update**.
+
+   :::image type="content" source="../../assets/images/publish-app/update-available.png" alt-text="Update Teams app.":::
+
+1. Select **Update now**.
+
+   :::image type="content" source="../../assets/images/publish-app/update-window.png" alt-text="Update Teams app in manage apps.":::
+
+   The app is automatically updated in all the related contexts (chats, channels, and meetings) where the app is installed.
 
 ### Remove your app
 
@@ -102,13 +110,13 @@ To remove app from Teams, follow the steps:
 
 1. Find the app in **Manage your app**.
 
-1. Select &nbsp;:::image type="content" source="~/assets/images/publish-app/bin-icon.png" alt-text="Remove app in Teams.":::&nbsp; at the scope of the installed app.
+1. Select &nbsp;:::image type="content" source="../../assets/images/publish-app/bin-icon.png" alt-text="Remove app in Teams.":::&nbsp; at the scope of the installed app.
 
-    :::image type="content" source="~/assets/images/publish-app/uninstall-from-channel.png" alt-text="Remove app in a channel.":::
+    :::image type="content" source="../../assets/images/publish-app/uninstall-from-channel.png" alt-text="Remove app in a channel.":::
 
 1. Select **Remove** to remove your app.
 
-    :::image type="content" source="~/assets/images/publish-app/remove-app-teams.png" alt-text="Remove an app from Teams.":::
+    :::image type="content" source="../../assets/images/publish-app/remove-app-teams.png" alt-text="Remove an app from Teams.":::
 
 > [!NOTE]
 >
