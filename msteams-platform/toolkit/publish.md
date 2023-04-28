@@ -80,8 +80,7 @@ The following steps help you to publish the app from Teams Toolkit:
 1. Select your environment, Teams Toolkit will run the `publish` lifecycle defined in `teamsapp.yml.`
 (Image)
 
-> [!NOTE]
-> TThe app doesn't publish to your organization's app store yet. The step submits the app to the Teams admin center where you can approve it for publishing to your organization's app store.
+ TThe app doesn't publish to your organization's app store yet. The step submits the app to the Teams admin center where you can approve it for publishing to your organization's app store.
 
 ### Approve on Admin Center
 

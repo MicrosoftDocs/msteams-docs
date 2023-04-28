@@ -398,7 +398,9 @@ BOT_ID=<value of Azure AD application's client id (application id)> # example: 0
 SECRET_BOT_PASSWORD=<value of Azure AD application's client secret>
 ```
 
->[!NOTE] * Remember to update the environment variable names in the examples if you use different names in `writeToEnvironmentFile`.
+>[!NOTE]
+>
+> * Remember to update the environment variable names in the examples if you use different names in `writeToEnvironmentFile`.
 >
 > * If you don't use `botAadApp/create` action to create Azure AD application, you can add necessary environment variables with your preferred name without following above steps.
 >

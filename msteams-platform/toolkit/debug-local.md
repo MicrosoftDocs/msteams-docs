@@ -100,7 +100,7 @@ After the initial setup process, Teams Toolkit starts the following processes:
 
 Runs tasks as defined in `.vscode/tasks.json`. By default the task name is `"Start application"`. If your project contains more than one components, there will be more dependent tasks.
 
-    ```JSON
+```JSON
 // .vscode/tasks.json
 {
     "label": "Start application",
@@ -158,7 +158,9 @@ Teams Toolkit helps you to debug and preview your Microsoft Teams app locally. V
 Use command prompt to run this command:
 
 ```
+
 ngrok http 5130
+
 ```
 
 ### Set up your Teams Toolkit
