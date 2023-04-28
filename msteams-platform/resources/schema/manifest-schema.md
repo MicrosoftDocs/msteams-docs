@@ -930,7 +930,7 @@ The set of extensions for this app. Used to specify Outlook Add-ins within a uni
 |`alternates`| array | | | Specifies backwards compatibility with an equivalent COM add-in, XLL, or both. For more information, see the [EquivalentAddins - See also](/javascript/api/manifest/equivalentaddins) for background information. |
 |`audienceClaimUrl`| string | 2048 | | The url for your extension, used to validate Exchange user identity tokens. |
 
-For additional details, see the [extension property](/office/dev/add-ins/develop/json-manifest-overview) in the Office add-ins Unified Microsoft 365 manifest documentation.
+For additional details, see the [extension property](/office/dev/add-ins/develop/json-manifest-overview) in the Office Add-ins manifest documentation.
 
 ## Create a manifest file
 
