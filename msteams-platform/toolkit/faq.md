@@ -50,12 +50,12 @@ Before provision, the tool asks you if you want to create a new resource group o
 
 <details>
 
-<summary><b>How can I provision sharepoint-based app?</b></summary>
+<summary><b>How can I provision SharePoint-based app?</b></summary>
 
 You can follow [provision SharePoint-based app](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4).
 
 > [!NOTE]
-> Currently, the building Teams app with sharepoint framework with Teams Toolkit doesn't have direct integration with Azure, the contents in the doc doesn't apply to SPFx based apps.
+> Currently, the building Teams app with SharePoint framework with Teams Toolkit doesn't have direct integration with Azure, the contents in the doc doesn't apply to SPFx based apps.
 
 <br>
 

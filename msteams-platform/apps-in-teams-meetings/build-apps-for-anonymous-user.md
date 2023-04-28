@@ -231,13 +231,13 @@ Anonymous users can view and interact with Adaptive Cards in the meeting chat. A
 
 ## Known issues and limitations
 
-* Side panel tabs and content bubbles aren't available for anonymous users. Anonymous users can still see app content shared to the meeting stage.
-
 * For an anonymous user, the user ID from `getContext` and the user ID received by the bot are different. It's not possible to correlate the two directly. If you need to track the user's identity between your tab and bot, you must prompt the user to authenticate with an external identity provider.
 
 * Anonymous users will see a generic app icon on bot messages and cards, instead of the app's actual icon.
 
     :::image type="content" source="../assets/images/apps-in-meetings/app-icon.png" alt-text="Screenshot shows how the app icon displays for anonymous user.":::
+
+* Channel meeting isn't supported for anonymous users.
 
 ## Code sample
 
