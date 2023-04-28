@@ -43,31 +43,31 @@ You can media files to an existing or new Adaptive Card using [Teams Developer P
 
    :::image type="content" source="../../assets/images/media-elements-in-adaptive-cards/share-link.png" alt-text="Screenshot shows you from where you can take a link.":::
 
+    >[!NOTE]
+    > Adaptive Cards don't support media file links that are copied directly from the address bar.
+
 1. Under **Custom card structure title**, select **Media**. The **ELEMENT PROPERTIES** window appears.
 
-1. In **ELEMENT PROPERTIES**, update the following fields:
+1. In **ELEMENT PROPERTIES** section, update the following fields:
 
-|Field|Value|REquired|
+   * Under **Sources** section, add your media file url in the **URL** of Adaptive Cards media element properties.
+   * Under **Media** section, add image url in the **Poster URL** of Adaptive Cards media element properties. For more information, see [Adaptive Cards media](https://adaptivecards.io/explorer/Media.html).
+
+    >[!NOTE]
+    > Poster URL is supported only for mobile clients.
+
+|Field|REquired|Description|
 |---|---|---|
 |Data content|||
 |Only show when|||
 |id|||
 |Alternate text|||
-|Poster URL|||
+|Poster URL||You can add your |
 |Spacing|||
 |Horizontal alignment|||
 |Height|||
-|URL|||
-|MIME Type|||
-
-    *Add your media file url in the **URL** of Adaptive Cards media element properties.
-
-    >[!NOTE]
-    > Adaptive Cards don't support media file links that are copied directly from the address bar.
-
-1. Add your media file url in the `URL` of Adaptive Cards media element properties.
-
-1. Add image url in the `Poster URL` of Adaptive Cards media element properties. For more information, see [Adaptive Cards media](https://adaptivecards.io/explorer/Media.html).
+|URL|Yes|Add your media file URL.|
+|MIME Type|Yes|Add type of your media file|
 
 ### Example
 
