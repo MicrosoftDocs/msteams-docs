@@ -234,8 +234,6 @@ Anonymous users can view and interact with Adaptive Cards in the meeting chat. A
 
     :::image type="content" source="../assets/images/apps-in-meetings/app-icon.png" alt-text="Screenshot shows how the app icon displays for anonymous user.":::
 
-* Channel meeting isn't supported for anonymous users.
-
 ## Code sample
 
 |Sample name | Description | .NET |Node.js|
