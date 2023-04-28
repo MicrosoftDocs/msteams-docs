@@ -24,8 +24,6 @@ The following are some of the main features available through Teams Conversation
 1. [Responsible AI](#responsible-ai)
 1. [Predictive Engine for Mapping Intents to Actions](#predictive-engine-for-mapping-intents-to-actions)
 
-:::image type="content" source="../../../assets/images/bots/Teams-ai-sdk-features.png" alt-text="Graphic shows the main features available through Teams conversation AI SDK." border="false":::
-
 ### Simple Teams-Centric Component Scaffolding
 
 The Conversational AI SDK simplifies the Teams app model to focus on the extension needed vs the protocol required. Developers can leverage pre-built templates, and simply add their business logic to this scaffold to add modules like bots, message extensions, Adaptive Cards, link unfurling, and so on.  
