@@ -22,11 +22,11 @@ Environments are optional.
 
 Your project file can hard code cloud resources in their deployment targets. When you do this, you don't need a Teams Toolkit environment.
 
-However, your project file can reference values by name defined in the environment files. When you do this, you can supply different environment files,, and Teams Toolkit will deploy to the cloud resources defined in the environment file. In this way you can have a single set of deploy rules for an arbitrary number of environments.
+However, your project file can reference values by name defined in the environment files. When you do this, you can supply different environment files, and Teams Toolkit will deploy to the cloud resources defined in the environment file. In this way you can have a single set of deploy rules for an arbitrary number of environments.
 
 ## Environment file definition
 
-The .env files follow the naming convention of .env.{environment-name}. For each lifecycle execution you're required to provide an environment name (local, dev, etc) and Teams Toolkit will load the corresponding .env.{environment-name} into the execution process.
+The .env files follow the naming convention of .env.{environment-name}. For each lifecycle execution required to provide an environment name (local, dev, etc) and Teams Toolkit will load the corresponding .env.{environment-name} into the execution process.
 
 You can also define variables in your current shell environment, Teams Toolkit will load these environment variables when running a lifecycle stage. Environment variables defined in the current shell overwrites variables defined in .env files when there's a name conflict.
 
