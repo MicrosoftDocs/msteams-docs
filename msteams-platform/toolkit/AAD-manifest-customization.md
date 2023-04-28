@@ -123,94 +123,33 @@ You can customize Azure AD manifest template to update Azure AD application.
 
 <br>
 
-<details>
-<summary>3. Deploy Azure AD application changes for local environment</summary>
+3. Update Azure AD application changes for local/remote environment
 
    1. Select `Preview` CodeLens in `aad.template.json`.
   
       :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add deploy1.png" alt-text="deploy1":::
 
-   2. Select **local** environment.
+   1. Select **local** or **dev** environment.
   
       :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add deploy2.png" alt-text="deploy2":::
 
-   3. Select `Deploy Azure AD Manifest` CodeLens in `aad.local.json`.
+   1. Select `Deploy Azure AD Manifest` CodeLens in `aad.local.json` or `aad.dev.json`.
 
       :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add deploy3.png" alt-text="deploy3" lightbox="../assets/images/teams-toolkit-v2/manual/add deploy3.png":::
 
-   4. The changes for Azure AD application used in local environment are deployed.
+   1. The changes for Azure AD application used in local/dev environment are deployed.
+
+   1. Additionally you can open the command palette and select **Teams: Update Azure Active Directory App** to update Azure Active Directory app.
 
 <br>
-
-</details>
-  
-<br>
-
-<details>
-
-<summary>4. Deploy Azure AD application changes for remote environment</summary>
-
-- Open the command palette and select: **Teams: Deploy Azure Active Directory app manifest**.
-  
-     :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add deploy4.png" alt-text="deploy4":::
-
-- Additionally you can right click on the `aad.template.json` and select **Deploy Azure Active Directory app manifest** from the context menu.
-  
-    :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add deploy5.png" alt-text="deploy5":::
-
-<br>
-
-</details>
 
 ## Azure AD manifest template placeholders
 
-The Azure AD manifest file contains placeholder arguments with {{...}} statements, it's replaced during build for different environments. You can build references to config file, state file, and environment variables with the placeholder arguments.
-
-### Reference state file values in Azure AD manifest template
-
-The state file is located in `.fx\states\state.xxx.json`. The following example shows state file:
-
-``` JSON
-{
-    "solution": {
-        "teamsAppTenantId": "uuid",
-        ...
-    },
-    "fx-resource-aad-app-for-teams": {
-        "applicationIdUris": "api://xxx.com/uuid",
-        ...
-    }
-    ...
-}
-```
-
-> [!NOTE]
-> xxx represents different environment.
-
-You can use this placeholder argument in the Azure AD manifest. `{{state.fx-resource-aad-app-for-teams.applicationIdUris}}` to point out `applicationIdUris` value in `fx-resource-aad-app-for-teams` property.
-
-### Reference config file values in Azure AD manifest template
-
-The following config file is located in `.fx\configs\config.xxx.json`:
-
-``` JSON
-{
-  "$schema": "https://aka.ms/teamsfx-env-config-schema",
-  "description": "description.",
-  "manifest": {
-    "appName": {
-      "short": "app",
-      "full": "Full name for app"
-    }
-  }
-}
-```
-
-You can use the placeholder argument in the Azure AD manifest `{{config.manifest.appName.short}}` to refer `short` value.
+The Azure AD manifest file contains placeholder arguments with {{...}} statements, it's replaced during build for different environments. You can references to environment variables with the placeholder arguments.
 
 ### Reference environment variable in Azure AD manifest template
 
-When the value is a secret, you don't need to enter permanent values in Azure AD manifest template. Azure AD manifest template file supports reference environment variables values. You can use the syntax `{{env.YOUR_ENV_VARIABLE_NAME}}` in the tool as parameter values to resolve the current environment variable values.
+You don't need to enter permanent values in Azure AD manifest template and Azure AD manifest template file supports reference environment variables values. You can use the syntax `${{YOUR_ENV_VARIABLE_NAME}}` in the tool as parameter values to resolve the current environment variable values.
 
 ## Edit and preview Azure AD manifest with CodeLens
 
@@ -242,7 +181,7 @@ CodeLens shows the application name for the pre-authorized application ID for th
 
 ## View Azure AD application on the Azure portal
 
-1. Copy the Azure AD application client ID from `state.xxx.json` () file in the `fx-resource-aad-app-for-teams` property.
+1. Copy the Azure AD application client ID from `.env.xxx` () file in the `AAD_APP_CLIENT_ID` property.
   
      :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add view1.png" alt-text="view1" lightbox="../assets/images/teams-toolkit-v2/manual/add view1.png":::
 
@@ -276,11 +215,11 @@ You need to interact with Azure AD application during various stages of your Tea
 
 1. **To create Project**
 
-      You can create a project with Teams Toolkit that comes with single sign-on (SSO) support by default such as `SSO-enabled tab`. For more information on how to create a new app, see [create new Teams application using Teams Toolkit](create-new-project.md). An Azure AD manifest file is automatically created for you in `templates\appPackage\aad.template.json`. Teams Toolkit creates or updates the Azure AD application during local development or while you move the application to the cloud.
+      You can create a project with Teams Toolkit that comes with single sign-on (SSO) support by default such as `SSO-enabled tab`. For more information on how to create a new app, see [create new Teams application using Teams Toolkit](create-new-project.md). An Azure AD manifest file is automatically created for you in `aad.template.json`. Teams Toolkit creates or updates the Azure AD application during local development or while you move the application to the cloud.
 
 2. **To add SSO to your Bot or Tab**
 
-      After you create a Teams application without built-in SSO, Teams Toolkit progressively helps you to add SSO for the project. As a result, an Azure AD manifest file is automatically created for you in `templates\appPackage\aad.template.json`.
+      After you create a Teams application without built-in SSO, Teams Toolkit progressively helps you to add SSO for the project. As a result, an Azure AD manifest file is automatically created for you in `aad.template.json`.
 
       Teams Toolkit creates or updates the Azure AD application during next local development session or while you move the application to the cloud.
 
@@ -288,7 +227,7 @@ You need to interact with Azure AD application during various stages of your Tea
 
     Teams Toolkit performs the following functions during local development:
 
-    - Read the `state.local.json` file to find an existing Azure AD application. If an Azure AD application already exists, Teams Toolkit reuses the existing Azure AD application. Otherwise you need to create a new application using the `aad.template.json` file.
+    - Read the `.env.local` file to find an existing Azure AD application. If an Azure AD application already exists, Teams Toolkit reuses the existing Azure AD application. Otherwise you need to create a new application using the `aad.template.json` file.
 
     - Initially ignores some properties in the manifest file that requires more context, such as `replyUrls` property that requires a local development endpoint during the creation of a new Azure AD application with the manifest file.
 
@@ -300,7 +239,7 @@ You need to interact with Azure AD application during various stages of your Tea
 
       You need to provision cloud resources and deploy your application while moving your application to the cloud. At stages, such as local debug, Teams Toolkit:
 
-      - Reads the `state.{env}.json` file to find an existing Azure AD application. If an Azure AD application already exists, Teams Toolkit re-uses the existing Azure AD application. Otherwise you need to create a new application using the `aad.template.json` file.
+      - Reads the `.env.{env}` file to find an existing Azure AD application. If an Azure AD application already exists, Teams Toolkit re-uses the existing Azure AD application. Otherwise you need to create a new application using the `aad.template.json` file.
 
       - Ignores some properties in the manifest file initially that requires more context such as `replyUrls` property. This property requires frontend or bot endpoint during the creation of a new Azure AD application with the manifest file.
 
