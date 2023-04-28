@@ -88,7 +88,7 @@ You can also customize debug settings for your existing bot app.
 
 <summary><b>Learn how to use an existing bot for debugging</b></summary>
 
-Teams Toolkit creates Azure Active Directory apps for projects with bot by default using[`botAadApp/create`](https://github.com/OfficeDev/TeamsFx/wiki/Available-actions-in-Teams-Toolkit#botaadappcreate)` action.
+Teams Toolkit creates Azure Active Directory apps for projects with bot by default using  [`botAadApp/create`](https://github.com/OfficeDev/TeamsFx/wiki/Available-actions-in-Teams-Toolkit#botaadappcreate)` action.
 
 To use an existing bot, you can set `BOT_ID` and `SECRET_BOT_PASSWORD` in `env/.env.local` with your own values.
 
