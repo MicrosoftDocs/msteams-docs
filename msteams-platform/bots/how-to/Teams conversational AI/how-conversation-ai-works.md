@@ -8,15 +8,15 @@ ms.author: surbhigupta
 
 # Teams AI core capabilities
 
-This SDK is designed to help you build bots that can interact with Teams and Microsoft 365 apps. It is built on top of the Bot Framework SDK to make it easier to build Teams and M365-interacting bots.
+This SDK is designed to help you build bots that can interact with Teams and Microsoft 365 apps. It is built on top of the Bot Framework SDK to make it easier to build Teams and Microsoft 365-interacting bots.
 
 The SDK also facilitates the creation of bots that uses an OpenAI API key to provide an AI-driven conversational experience, or the same using Azure Foundry.
 
 ## Message-extension query
 
-The Teams Conversational AI SDK offers bot developers a more intuitive approach to creating handlers for various message-extension query commands when compared to previous iterations of Teams Bot Framework SDK. The new SDK works alongside the existing Teams Bot Framework SDK and does not replace it.
+The Teams Conversational AI SDK offers bot developers a more intuitive approach to create handlers for various message-extension query commands when compared to previous iterations of Teams Bot Framework SDK. The new SDK works alongside the existing Teams Bot Framework SDK.
 
-The following is an example of how a bot developer can structure their code to handle a message-extension query for the "searchCmd" command.
+The following is an example of how a bot developer can structure their code to handle a message-extension query for the `searchCmd` command.
 
 ```csharp
 // Listen for search actions
@@ -64,9 +64,9 @@ app.messageExtensions.selectItem(async (context, state, item) => {
 
 ## Bot logic for handling an action
 
-The code is for a simple bot that can turn lights on or off. We present a more complex bot for management of lists a little bit later in this document. The Bot responds to the user's input with the action "[lights on]" to turn the lights-on. This scenario was markedly more challenging to address before the GPT Language Model.
+ The Bot responds to the user's input with the action `lights on` to turn the lights-on.
 
-This example illustrates how the SDK makes it possible to neatly manage the bot logic for handling an action – LightsOn/LightsOff and connect it to the prompt used with GPT:
+The following example illustrates how the SDK makes it possible to manage the bot logic for handling an action `LightsOn` or `LightsOff` and connect it to the prompt used with GPT:
 
 ```csharp
 // Create prediction engine
@@ -179,7 +179,7 @@ Human: {{activity.text}}
 
 ## AI
 
-With our SDK, the bot logic is simplified to merely providing handlers for actions such as addItem, removeItem, findItem, and so on. This clear delineation between actions and the prompts that instruct the AI on how to execute them is an incredibly potent tool.
+The bot logic is simplified to merely providing handlers for actions such as addItem, removeItem, findItem, and so on. This clear delineation between actions and the prompts that instruct the AI on how to execute them is an incredibly potent tool.
 
 ```csharp
 app.ai.action('addItem', async (context, state, data: EntityData) => {

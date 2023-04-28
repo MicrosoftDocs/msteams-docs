@@ -1,22 +1,20 @@
 ---
-title: Conversation AI quick start
+title: Conversation AI quick start guide
 author: surbhigupta
-description:  In this module, learn how to quickly try the Teams AI SDK.
+description:  In this module, learn how to quickly try the Teams conversational AI SDK.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: v-ypalikila
 ms.date: 04/07/2022
 ---
 
-# Getting started
+<!-- # Getting started
 
 The Teams AI SDK simplifies the process of creating and powering bots with AI capabilities. It provides APIs to access and manipulate data, as well as a range of controls and components to create custom user interfaces. With the PredictionEngine (Open AI plugin), developers can easily add AI capabilities to their Teams applications.
 
-DevOps, an Azure-powered application, enables users to track work items to manage projects, track bugs, or plan complex project management scenarios. To increase engagement, DevOps Teams bots will use GPT (Generative Pre-trained Transformer) capabilities. The key entity with which DevOps Bot operates is work items. All bugs are also categorized as work items for the purposes of this document.
-
 ## Pre-requisites
 
-To get started, set up migration guide and start GPT setup guide:
+Before you get started, you must be familiar with the following steps:
 
 1. [Set up migration guide](https://github.com/microsoft/botbuilder-m365/blob/main/getting-started/00.MIGRATION.md)
 1. [Start GPT setup guide](https://github.com/microsoft/botbuilder-m365/blob/main/getting-started/01.GPT-SETUP.md)
@@ -210,11 +208,173 @@ Update_WI(WI#,find_user)
 WI_update_action = find_update_field(conversation.history.updateaction)
 Update_WI(WI#, WI_update_action)
 
-
 //TriageWI {
 WI_priority = find_WI_priority(conversation.history.newpriority)
 Update_WI(WI#, WI_priority)
 }
 ```
 
-## Responsible AI: Ethical way to use GPT
+## Responsible AI: Ethical way to use GPT -->
+
+# Get started
+
+The Teams AI SDK simplifies the process of creating and powering bots with AI capabilities. It provides APIs to access and manipulate data, as well as a range of controls and components to create custom user interfaces.
+
+## Create AI Components
+
+You can take your existing or a new bot framework app and add AI capabilities.
+
+**Planner**: Open AI planner is the main component that calls the LLM Open AI or Azure Open AI.
+
+**Prompt manager**: The prompt manager manages prompt creation. It calls functions and injects  from your code into the prompt. It can copy conversation state user state into the prompt for you automatically.
+
+**Moderator**: A moderator adds safety moderation to the bots input and output. allows you to look at what the user is trying to say to the model, and you can flag prompt injection techniques, review what's coming out of the LLM and run it through a business logic for filtering and ensure that the bot's not saying things that you don't want it to say. You can either moderate the input or the output, or both. Open AI moderator is the default moderator.
+
+```javascript
+// Create AI components
+const planner = new OpenAIPlanner({
+    apiKey: process.env.OpenAIKey!,
+    defaultModel: 'text-davinci-003',
+    logRequests: true
+});
+const moderator = new OpenAIModerator({
+    apiKey: process.env.OpenAIKey!,
+    moderate: 'both'
+});
+// You can also modify this to out the `chatGPT` prompt.
+const promptManager = new DefaultPromptManager(path.join(__dirname, '../src/prompts/chat'));
+
+```
+
+## Define storage and application
+
+The application object automatically manages the conversation and user state of your bot.
+
+* Storage: Create a storage provider to store conversation and user state for your bot. The `MemoryStorage()` function stores all the state for your bot.
+* Application: The application class replaces the ActivityHandler class in a typical BotFramework bot. You can configure your ai by adding the planner, moderator, prompt manager, default prompt and history.
+
+```javascript
+// Define storage and application
+const storage = new MemoryStorage();
+const app = new Application<ApplicationTurnState>({
+    storage,
+    ai: {
+        planner,
+        moderator,
+        promptManager,
+        prompt: 'skprompt',
+        history: {
+            assistantHistoryType: 'text'
+        }
+    }
+});
+```
+
+## Prompt
+
+Create a folder called prompts, and define your prompts in the folder.
+
+* skprompt.txt: Define all your text prompts. Contains the prompts text and supports template variables and functions.
+
+  ```text
+    The following is a conversation with an AI assistant. 
+    The AI is Santa Clause and the Human is a child meeting Santa for the first time. 
+    The AI should always reply the way Santa would. 
+    The AI should always greet the human the way Santa would, ask them their name, and then what they would like for Christmas.
+    
+    {{$history}}
+    Human: {{$input}}
+    AI:
+  ```
+  
+* config.json: Configure `max_tokens`, `temperature`, and other properties to pass into open AI or Azure AI. Contains the prompts model settings.
+
+   ```json
+   {
+    "schema": 1,
+    "description": "Chat with Santa Clause",
+    "type": "completion",
+    "completion": {
+      "max_tokens": 150,
+      "temperature": 0.9,
+      "top_p": 0.0,
+      "presence_penalty": 0.6,
+      "frequency_penalty": 0.0,
+      "stop_sequences": [
+        "Human:",
+        "AI:"
+      ]
+    }
+   }
+   ```
+
+### Prompt actions
+
+Plans let the model perform actions or say things to the user. You can create a schema of the plan and add a list of actions that you support. It can perform an action and pass arguments. GPT can  figure out what actions it wants to use and then extract all the entities and pass those in as arguments to the action call.
+
+### Prompt Template
+
+You can add functions to call a callback and return any kind of data you want.
+
+* {{function}}:  Calls a registered function and inserts its value.​
+
+* {{$input}}:  Inserts the message text.​
+
+* {{$history}}: Inserts the conversation history.​
+
+* {{$<scope>.<property>}}: Inserts state properties.
+
+## Actions
+
+Actions handle events triggered by AI components.
+
+`FlaggedInputAction` and `FlaggedOutputAction` are the built-in action handlers to handle the moderator flags. If the moderator flags an incoming message input, the moderator redirects to the `FlaggedInputAction` handler and `context.sendActivity` sends a message to the user about the flag.
+
+```javascript
+app.ai.action(AI.FlaggedInputActionName, async (context: TurnContext, state: TurnState, data: TData) => {
+    await context.sendActivity(`I'm sorry your message was flagged: ${JSON.stringify(data)}`);
+    return false;
+});
+
+app.ai.action(AI.FlaggedOutputActionName, async (context: TurnContext, state: ApplicationTurnState, data: TData) => {
+    await context.sendActivity(`I'm not allowed to talk about such things.`);
+    return false;
+});
+```
+
+### Register Action Handlers
+
+Register a handler for each action listed in the prompt and add a handler to deal with unknown actions.
+
+In the following example of a light bot, we have the `LightsOn`, `LightsOff` and `Pause`  action. Every time an action is called, you return true or false. ​Returning false from a handler prevents the planner from running additional DO or SAY commands. When the bot receives an unknown action we're telling the bot to terminate the action.
+
+```javascript
+// Register action handlers
+app.ai.action('LightsOn', async (context: TurnContext, state: ApplicationTurnState) => {
+    state.conversation.value.lightsOn = true;
+    await context.sendActivity(`[lights on]`);
+    return true;
+});
+
+app.ai.action('LightsOff', async (context: TurnContext, state: ApplicationTurnState) => {
+    state.conversation.value.lightsOn = false;
+    await context.sendActivity(`[lights off]`);
+    return true;
+});
+
+app.ai.action('Pause', async (context: TurnContext, state: ApplicationTurnState, data: TData) => {
+    const time = data.time ? parseInt(data.time) : 1000;
+    await context.sendActivity(`[pausing for ${time / 1000} seconds]`);
+    await new Promise((resolve) => setTimeout(resolve, time));
+    return true;
+});
+
+// Register a handler to handle unknown actions that might be predicted
+app.ai.action(
+    AI.UnknownActionName,
+    async (context: TurnContext, state: ApplicationTurnState, data: TData, action: string | undefined) => {
+        await context.sendActivity(responses.unknownAction(action || 'unknown'));
+        return false;
+    }
+);
+```

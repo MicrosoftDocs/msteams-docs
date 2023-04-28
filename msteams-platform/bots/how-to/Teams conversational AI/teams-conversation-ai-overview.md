@@ -6,13 +6,11 @@ ms.topic: overview
 ms.author: surbhigupta
 ---
 
-# Teams conversational AI Overview
+# Teams conversational AI
 
-Teams Conversational AI SDK is a Teams-centric interface to GPT-based common language models and user intent engines, moderating the need for developers to take on the complex and expensive task of writing and maintaining conversational bot logic to integrate with large language models (LLMs).
+Teams Conversational AI SDK is a Teams-centric interface to GPT-based common language models and user intent engines, moderating the need for you to take on the complex and expensive task of writing and maintaining conversational bot logic to integrate with large language models (LLMs).
 
 The SDK provides a simple capabilities-driven approach and helps you create intelligent apps quickly and easily with pre-built, reusable code snippets so that you can focus on building the business logic rather than learning the semantics of Teams conversational applications.
-
-Teams Conversational AI SDK makes Teams apps truly conversational, not driven by rigid command structures. The SDK is designed to seamlessly integrate with the Teams Bot Framework SDK.Building apps for Teams is drastically simpler, with rich natural language features out of the box that brings any app experience into the conversation.
 
 The following are some of the main features available through Teams Conversational AI SDK:
 
@@ -74,23 +72,47 @@ In summary, the Conversational AI SDK offers wide support from low code to compl
 
 A simple interface for actions and predictions allows bots to react when they have high confidence for taking action. Ambient presence lets bots learn intent, use prompts based on business logic, and generate responses. For example, if a user has been out of office and needs to quickly summarize a thread, the SDK understands the intent as summarization, allows prompts to make summarizations over a period of time, potentially focused on the user’s manager, and provides actions to summarize chat content for users to consume.
 
-## Bots Architecture overview
+## Why build apps with Teams conversational AI?
+
+Teams Conversational AI SDK makes Teams apps truly conversational, not driven by rigid command structures. The SDK is designed to seamlessly integrate with the Teams Bot Framework SDK. Building apps for Teams is drastically simpler, with rich natural language features out of the box that brings any app experience into the conversation.
+
+Here are some key benefits of the Teams conversational AI SDK:
+
+* Bots are conversational​.
+
+* Apps can register skills.
+
+* Extract user intent from natural language.
+
+* ​Strong POV with Teams app components​. You can instantiate your bot activity handler and you invoke any Teams capabilities by just invoking the function.
+
+* ​Easy to leverage powerful conversational language models vs building on your own​.
+
+* ​Guardrails to steer responsible conversation w/moderation​.
+
+* ​Out of the box localization w/LLMs.
+
+* ​Developers can choose any LLM.
+
+* ​Can talk to Teams apps like you’d talk to a human as opposed to a declarative set of commands​.
+
+* ​Any app leveraging the SDK offers consistency for interactions, and the app handles steering natural conversation into actionable outcomes.
+
+* Multiple safety layers to ensure that the bots work in a safe and responsible manner. The safety layers are as follows:
+
+  * SMBA (Skype Messaging Bot API): Endpoint for all bot related activities. Performs throttling and sanitization on bot payload.
+  * Other IC3 services: Bot roster membership check
+  * APS (Agent Provisioning Service): Bot metadata retrieval and bot validation
+  * Teams MT (Middle Tier): App policy or tenant settings checks
+  * PLS (Partner Lookup Service): User or tenant region lookups
+  * ECS (Experimental Config Service): Feature flags and scenario config data
+  * MSGraph: App install state and resource specific consent validation
+  * Bot Framework Services: Bot auth, SDK, and token store
+
+<!-- ## Bots Architecture overview
 
 The bot framework using Conversational AI SDK requires the following:
 
 * Support to OAuth S2S
 * Adherence to Activity schema for reading and writing JSON documents
-* Invoking Rest APIs to determine additional context required to handle a user's message, such as Azure Active Directory (Azure AD) ID and UPN of the user the bot is interacting with.
-
-## Safety layers
-
-Safety layers help ensure that the bots work in a safe and responsible manner. Communication between bots and users in Teams is subject to various layers of protections – including sanitization, eDiscovery, and DLP (Data Loss Prevention) checks.
-
-* SMBA (Skype Messaging Bot API): Endpoint for all bot related activities. Performs throttling and sanitization on bot payload.
-* Other IC3 services: Bot roster membership check
-* APS (Agent Provisioning Service): Bot metadata retrieval and bot validation
-* Teams MT (Middle Tier): App policy or tenant settings checks
-* PLS (Partner Lookup Service): User or tenant region lookups
-* ECS (Experimental Config Service): Feature flags and scenario config data
-* MSGraph: App install state and resource specific consent validation
-* Bot Framework Services: Bot auth, SDK, and token store
+* Invoking Rest APIs to determine additional context required to handle a user's message, such as Azure Active Directory (Azure AD) ID and UPN of the user the bot is interacting with. -->
