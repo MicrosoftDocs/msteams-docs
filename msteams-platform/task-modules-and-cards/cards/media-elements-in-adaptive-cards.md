@@ -53,14 +53,14 @@ You can media files to an existing or new Adaptive Card using [Teams Developer P
    * Under **Sources** section, enter your media file url in the **URL**.
    * Under **Media** section, enter image url in the **Poster URL**. For more information, see [Adaptive Cards media](https://adaptivecards.io/explorer/Media.html).
 
-   :::image type="content" source="../../assets/images/media-elements-in-adaptive-cards/media-element-ac.png" alt-text="Screenshot shows you the Adaptive Cards schema with media elements.":::
+   :::image type="content" source="../../assets/images/media-elements-in-adaptive-cards/media-element-ac.png" alt-text="Screenshot shows you the Adaptive Cards schema with media elements."lightbox="../../assets/images/media-elements-in-adaptive-cards/media-element-ac.png":::
 
     >[!NOTE]
     > Poster URL is supported only for mobile clients.
 
 1. Select **Save** and then select **Send me this card**.
 
-   :::image type="content" source="../../assets/images/media-elements-in-adaptive-cards/media-element-ac-save.png" alt-text="Screenshot shows you how to save your Adaptive card and send it to your Teams":::
+   :::image type="content" source="../../assets/images/media-elements-in-adaptive-cards/media-element-ac-save.png" alt-text="Screenshot shows you how to save your Adaptive card and send it to your Teams"lightbox="../../assets/images/media-elements-in-adaptive-cards/media-element-ac-save.png":::
 
    Your Adaptive Card with media file is successfully save and sent to your Teams chat. Now, you can play your media file in your Adaptive Card.
 
