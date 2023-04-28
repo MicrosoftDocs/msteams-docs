@@ -30,11 +30,11 @@ To allow anonymous users to interact with the tab app, update the `supportsAnony
 
 For more information, see [app manifest schema.](~/resources/schema/manifest-schema.md#meetingextensiondefinition)
 
-> [!NOTE]
+> [!IMPORTANT]
 >
-> * If you want to implement a generally available (GA) Teams feature, that requires a newer manifest version (v1.13 or higher) which includes the requirement that the partner also implement a pre-GA set of features as part of MetaOS.
-> * If the new feature is not super-critical for the app, the partner must maintain an older version of the manifest schema. This way, you don't need to invest efforts in building a MetaOS ready app.
-> * If the new feature is critical, the partners have to do the necessary work to make the app MetaOS ready.
+> * If you want to implement a new generally available (GA) Teams feature, it requires a new manifest version (v1.13 or higher) which includes the requirement that the partner also implement a pre-GA set of features as part of MetaOS.
+> * If the new feature is critical, the partners must update to manifest schema v1.16 or later and make the app MetaOS ready.
+> * If the new feature is not super-critical for the app, the partner must maintain an older version of the manifest schema.
 
 ## Anonymous user authentication flow
 
