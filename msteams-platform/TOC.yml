@@ -186,8 +186,8 @@
       - name: Publish Teams apps using Teams Toolkit 
         href: toolkit/publish.md
         displayName: license
-      - name: Integrate with Developer Portal
-        href: toolkit/Integrate-with-developer-portal.md
+      - name: Publish Teams apps using Developer Portal 
+        href: toolkit/publish-your-teams-apps-using-developer-portal.md
     - name: FAQ
       href: toolkit/faq.md  
   - name: TeamsFx SDK
@@ -203,6 +203,9 @@
     - name: Manage your apps in Developer Portal
       href: concepts/build-and-test/manage-your-apps-in-developer-portal.md
       displayName: AppID 
+    - name: Develop your apps with Teams Toolkit
+      href: concepts/build-and-test/develop-your-apps-with-teams-toolkit.md
+      displayName: visual studio code, visual studio, teams toolkit
     - name: Analyze your apps usage in Developer Portal
       href: concepts/build-and-test/analyze-your-apps-usage-in-developer-portal.md  
       displayName: dashboard
@@ -785,6 +788,12 @@
   - name: Test preview for monetized apps
     href: concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
     displayName: paid, AppSource, fee 
+  - name: Set up Microsoft license management
+    href: concepts/deploy-and-publish/appsource/prepare/manage-third-party-apps-license.md
+    displayName: ISVs, Manage, License, third party, SaaS, Partner Center, UsageRights
+  - name: Purchase and manage app subscriptions and licenses
+    href: concepts/deploy-and-publish/appsource/prepare/end-user-purchase-experience.md
+    displayName: Purchase, apps, License, manage
 - name: Grow your app
   items:
     - name: Strategize and execute growth for your app
