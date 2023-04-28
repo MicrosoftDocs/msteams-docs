@@ -79,7 +79,7 @@ Ensure that you can toggle breakpoints on the source codes of tabs, bots, messag
 
 ## Customize debug settings
 
-Teams Toolkit allows you to customize the debug settings to create your tab or bot. For more information on the full list of customizable options, see [debug settings doc](https://aka.ms/teamsfx-debug-tasks).
+Teams Toolkit allows you to customize the debug settings to create your tab or bot. For more information on the full list of customizable options, see [debug settings doc](https://github.com/OfficeDev/TeamsFx/wiki/Teams-Toolkit-Visual-Studio-Code-v5.0-Prerelease-Guide#debug-f5-in-visual-studio-code).
 
 You can also customize debug settings for your existing bot app.
 <br>
@@ -88,26 +88,25 @@ You can also customize debug settings for your existing bot app.
 
 <summary><b>Learn how to use an existing bot for debugging</b></summary>
 
-To use an existing bot, you can set it up using its `botId` and `botPassword` arguments in Set up bot task. This task is to register resources and prepare local launch information for Bot.
+Teams Toolkit creates Azure Active Directory apps for projects with bot by default using `[botAadApp/create](https://github.com/OfficeDev/TeamsFx/wiki/Available-actions-in-Teams-Toolkit#botaadappcreate)` action.
+
+To use an existing bot, you can set `BOT_ID` and `SECRET_BOT_PASSWORD` in `env/.env.local` with your own values.
 
 Use the following code snippet example to setup an existing bot for debugging:
 
-```json
-{
-    "label": "Set up Bot",
-    "type": "teamsfx",
-    "command": "debug-set-up-bot",
-    "args": {
-        //// Use your own AAD App for bot
-        // "botId": "",
-        // "botPassword": "", // use plain text or environment variable reference like ${env:BOT_PASSWORD}
-        "botMessagingEndpoint": "api/messages"
-    }
-}
-```
+```javascript
+# env/.env.local
 
-1. Update `botId` with the Azure AD app client id for your existing bot.
-1. Update `botPassword` with the Azure AD app client secret for your bot.
+# Built-in environment variables
+TEAMSFX_ENV=local
+
+# Generated during provision, you can also add your own variables.
+BOT_ID={YOUR_OWN_BOT_ID}
+...
+
+SECRET_BOT_PASSWORD={YOUR_OWN_BOT_PASSWORD}
+...
+```
 
 </details>
 
@@ -119,7 +118,7 @@ Here's a list of debug scenarios that you can use:
 
 <summary><b>Skip prerequisite checks</b></summary>
 
-In `.fx/configs/tasks.json` under `"Validate & install prerequisites"` > `"args"` > `"prerequisites"`, update the prerequisite checks you wish to skip.
+In `.vscode/tasks.json` under `"Validate prerequisites"` > `"args"` > `"prerequisites"`, update the prerequisite checks you wish to skip.
 
   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/skip-prerequisite-checks.png" alt-text="skip the prerequisite checks":::
 
@@ -128,17 +127,27 @@ In `.fx/configs/tasks.json` under `"Validate & install prerequisites"` > `"args"
 <details>
 <summary><b>Use your development certificate</b></summary>
 
-1. In `.fx/configs/tasks.json`, uncheck `"devCert"` under `"Validate & install prerequisites"` > `"args"` > `"prerequisites"`.
-1. Set "SSL_CRT_FILE" and "SSL_KEY_FILE" in `.env.teamsfx.local` to your certificate file path and key file path.
+1. In `teamsapp.local.yml`, remove `devCert` from `devTool/install` action (or remove the whole `devTool/install action` if it only contains `devCert`).
+1. In `teamsapp.local.yml`, set `"SSL_CRT_FILE"` and `"SSL_KEY_FILE"` in `file/createOrUpdateEnvironmentFile` action to your certificate file path and key file path.
 
 </details>
 
 <details>
-<summary><b>Customize npm install args</b></summary>
+<summary><b>Customize npm install command</b></summary>
 
-In `.fx/configs/tasks.json`, set npmInstallArgs under `"Install npm packages"`.
+In `teamsapp.local.yml`, edit `args` of `cli/runNpmCommand` action.
+
+:::image type="content" source="../assets/images/teams-toolkit-v2/debug/customize-npm-install.png" alt-text="Install npm package":::
   
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/customize-npm-install.png" alt-text="Install npm package":::
+```yml
+# teamsapp.local.yml
+...
+  - uses: cli/runNpmCommand
+    with:
+      # edit the npm command args
+      args: install --no-audit
+...
+```
 
 </details>
 
@@ -146,11 +155,11 @@ In `.fx/configs/tasks.json`, set npmInstallArgs under `"Install npm packages"`.
 <summary><b>Modify ports</b></summary>
 
 * Bot
-  1. Search for `"3978"` across your project and look for appearances in `tasks.json`, `ngrok.yml` and `index.js`.
+  1. Search for `"3978"` across your project and look for appearances in `tasks.json` and `index.js`.
   1. Replace it with your port.
      :::image type="content" source="../assets/images/teams-toolkit-v2/debug/modify-ports-bot.png" alt-text="Replace your port for bot":::
 * Tab
-  1. In `.fx/configs/tasks.json`, search for `"53000"`.
+  1. Search for `"53000"` across your project and look for appearances in `teamsapp.local.yml` and `tasks.json`.
   1. Replace it with your port.
      :::image type="content" source="../assets/images/teams-toolkit-v2/debug/modify-ports-tab.png" alt-text="Replace your port for tab":::
 
@@ -159,21 +168,48 @@ In `.fx/configs/tasks.json`, set npmInstallArgs under `"Install npm packages"`.
 <details>
 <summary><b>Use your own app package</b></summary>
 
-In `.fx/configs/tasks.json`, set `"appPackagePath"` under `"Build & upload Teams manifest"` to your app package's path.
+Teams Toolkit by default creates a set of teamsApp actions to manage app package. You can update those in teamsapp.local.yml to use your own app package.
 
-  :::image type="content" source="../assets/images/teams-toolkit-v2/debug/app-package-path.png" alt-text="use your own app package path":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/debug/app-package-path.png" alt-text="use your own app package path":::
+
+```yml
+# teamsapp.local.yml
+...
+  - uses: teamsApp/create # Creates a Teams app
+    ...
+  - uses: teamsApp/validateManifest # Validate using manifest schema
+    ...
+  - uses: teamsApp/zipAppPackage # Build Teams app package with latest env value
+    ...
+  - uses: teamsApp/validateAppPackage # Validate app package using validation rules
+    ...
+  - uses: teamsApp/update # Apply the Teams app manifest to an existing Teams app in Teams Developer Portal.
+    ...
+...
+```
 
 </details>
 
 <details>
 <summary><b>Use your own tunnel</b></summary>
 
-1. In `.fx/configs/tasks.json` under `"Start Teams App Locally"`, you can update `"Start Local tunnel"`.
+1. In `.vscode/tasks.json` under `"Start Teams App Locally"`, you can update `"Start Local tunnel"`.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/start-local-tunnel.png" alt-text="Use your own tunnel":::
-1. Launch your own tunnel service then update `"botMessagingEndpoint"` to your own message endpoint in `.fx/configs/tasks.json` under `"Set up bot"`.
+1. Launch your own tunnel service then update `"BOT_DOMAIN"` and `"BOT_ENDPOINT"` to your own values in `env/.env.local`.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/set-up-bot.png" alt-text="update messaging endpoint":::
+
+```javascript
+# env/.env.local
+
+# Built-in environment variables
+TEAMSFX_ENV=local
+...
+BOT_DOMAIN={YOUR_OWN_TUNNEL_DOMAIN}
+BOT_ENDPOINT={YOUR_OWN_TUNNEL_URL}
+...
+```
 
 </details>
 
@@ -181,7 +217,7 @@ In `.fx/configs/tasks.json`, set `"appPackagePath"` under `"Build & upload Teams
 
 <summary><b>Add environment variables</b></summary>
 
-You can add environment variables to `.env.teamsfx.local` file for tab, bot, message extension, and Azure Functions. Teams Toolkit loads the environment variables you added to start services during local debug.
+You can add environment variables to `.localConfigs` file for tab, bot, message extension, and Azure Functions. Teams Toolkit loads the environment variables you added to start services during local debug.
 
  > [!NOTE]
  > Ensure to start a new local debug after you add new environment variables, as the environment variables don't support hot reload.
@@ -203,7 +239,7 @@ Teams Toolkit utilizes Visual Studio Code multi-target debugging to debug tab, b
            // "Attach to Bot",
            // "Attach to Backend""
            ],
-           "preLaunchTask": "Pre Debug Check & Start All",
+           "preLaunchTask": "Start Teams App Locally",
            "presentation": {
                "group": "all",
                "order": 1
@@ -218,7 +254,7 @@ Teams Toolkit utilizes Visual Studio Code multi-target debugging to debug tab, b
    ```json
    {
                                            
-       "label": "Start All",
+       "label": "Start application",
        "dependsOn": [
            "Start Frontend",
              // "Start Backend",
@@ -307,7 +343,7 @@ You can set `siteEndpoint` configuration in the `.fx/configs/config.local.json` 
 
 ```JSON
 "bot": {
-    "siteEndpoint": "https://baidu.com"
+    "siteEndpoint": "https://contoso.com"
 }
 ```
 
