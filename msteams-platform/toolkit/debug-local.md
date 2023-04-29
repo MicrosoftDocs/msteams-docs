@@ -93,8 +93,8 @@ Teams Toolkit launches your browser instance and opens a web page to load Teams 
 After the initial setup process, Teams Toolkit starts the following processes:
 
 * [Starts app services](#starts-app-services)
-* [Launches debug configurations](#launches-debug-configurations)
-* [Sideloads the Teams app](#sideloads-the-teams-app)
+* [Launches debug configurations]
+* [Sideloads the Teams app]
 
 ### Starts app services
 

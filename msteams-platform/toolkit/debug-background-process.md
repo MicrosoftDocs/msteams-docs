@@ -32,9 +32,7 @@ Teams Toolkit checks the following prerequisites during the debugging process:
 * Teams Toolkit checks if custom app uploading or sideloading for your developer tenant is turned on. If it is not turned on, the debugging terminates.
 * Teams Toolkit checks if ports are available. If tab, bot, message extension, and Azure Functions ports are unavailable, the debugging terminates.
 
-When you select **Start Debugging (F5)**, Teams Toolkit output channel displays the progress and result after checking the prerequisites.
-
-:::image type="content" source="~/assets/images/teams-toolkit-v2/debug/validate-prerequisites.png" alt-text="Prerequisites check summary" lightbox="../assets/images/teams-toolkit-v2/debug/validate-prerequisites.png":::
+When you select **Start Debugging (F5)**, Teams Toolkit output channel displays the progress and result after checking the prerequisites. [image to be added]
 
 For more information on validating prerequisites, see [Validate prerequisites task].
 
