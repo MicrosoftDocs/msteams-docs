@@ -12,7 +12,7 @@ ms.date: 11/29/2021
 
  Teams Toolkit environments are principally a collection of cloud resources that are targets for a deployment. For example, the dev environment consists of a set of cloud resources that are used for development, and the prod environment consists of a set of cloud resources that are used for production.
 
- Teams Toolkit environments are defined in a .env file. There are several ways to create a .env file:
+ Teams Toolkit environments are in an .env file. There are several ways to create an .env file:
 
 * Using the provisioning lifecycle stage. Teams Toolkit will generate an environment file for you
 Manually.
@@ -22,7 +22,7 @@ Environments are optional.
 
 Your project file can hard code cloud resources in their deployment targets. When you do this, you don't need a Teams Toolkit environment.
 
-However, your project file can reference values by name defined in the environment files. When you do this, you can supply different environment files, and Teams Toolkit will deploy to the cloud resources defined in the environment file. In this way you can have a single set of deploy rules for an arbitrary number of environments.
+However, your project file can reference values by name defined in the environment files. When you do this, you can supply different environment files, and Teams Toolkit will deploy to the cloud resources defined in the environment file. In this way, you can have a single set of deploy rules for an arbitrary number of environments.
 
 ## Environment file definition
 
