@@ -458,16 +458,6 @@
       displayName: Obtain meeting details using user-level notification, tenant-level notification
     - name: Get transcripts
       href: /graph/api/resources/calltranscript
-  - name: Get meeting recording using Graph APIs
-    items:
-    - name: Overview
-      href: graph-api/meeting-recordings/overview-transcripts.md
-      displayName: get meeting transcripts, teams meeting transcript
-    - name: Fetch meeting ID and organizer ID
-      href: graph-api/meeting-recordings/fetch-id.md
-      displayName: Obtain meeting details using user-level notification, tenant-level notification
-    - name: Get transcripts
-      href: /graph/api/resources/calltranscript
   - name: Enhanced collaboration with Live Share
     items:
     - name: Overview
