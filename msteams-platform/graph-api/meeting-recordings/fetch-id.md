@@ -3,8 +3,10 @@ title: Obtain meeting ID and organizer ID for fetching meeting recordings
 description: In this learn module, learn the process of obtain meeting ID and organizer ID for fetching meeting recordings.
 ms.localizationpriority: high
 ms.topic: conceptual
+author: v-sdhakshina
+ms.author: v-sdhakshina
 ---
-# Obtain meeting ID and organizer ID
+# Obtain meeting ID and organizer ID for fetching meeting recordings
 
 Your app can fetch recordings of a meeting using the meeting ID and the user ID of the meeting organizer, also known as organizer ID. The Graph REST APIs fetch recordings based on the meeting ID and organizer ID that are passed as parameters in the API.
 

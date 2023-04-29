@@ -24,7 +24,7 @@ To fetch the recording for a particular meeting:
 
 - [Configure permissions on Azure AD to access recording](#configure-permissions-on-azure-ad-to-access-recording)
 - [Obtain meeting ID and organizer ID](fetch-id.md)
-- [Use Graph APIs to fetch recording](/graph/api/resources/callrecording)
+- Use Graph APIs to fetch recording - link to be added
 
 ## Configure permissions on Azure AD to access recording
 
@@ -45,7 +45,7 @@ For more information about the meeting-specific RSC permissions, see [RSC permis
 After you've configured the permissions, configure your app to receive change notifications for all relevant meeting events. Notifications contain meeting ID and organizer ID that help in accessing recording content. Your app can fetch the recording for a meeting when it's generated after it ends. The content of the recording is available as `.vtt` or `.docx` file.
 
 > [!NOTE]
-> The docx format for recordings will be deprecated starting May 31, 2023. For more information, see [Get callTranscript](/graph/api/callrecording-get).
+> The docx format for recordings will be deprecated starting May 31, 2023. For more information, see Get callTranscript - link to be added.
 
 For more information about how your app can know when the meetings ends, see [subscribe to change notifications](fetch-id.md#subscribe-to-change-notifications) and [use Bot Framework to get meeting ID and organizer ID](fetch-id.md#use-bot-framework-to-get-meeting-id-and-organizer-id).
 
