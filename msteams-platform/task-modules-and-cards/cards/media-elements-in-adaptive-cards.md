@@ -108,7 +108,7 @@ To improve the ability to deal with media files, following are the dynamic user-
 ## Limitations
 
 * Adaptive Card supports only the media files from SharePoint or OneDrive.
-* Ensure that users have access the media files available in the SharePoint or OneDrive.
+* Ensure that the users have access to the media files available in the SharePoint or OneDrive.
 
 ## See also
 
