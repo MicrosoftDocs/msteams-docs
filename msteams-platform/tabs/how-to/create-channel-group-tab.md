@@ -12,7 +12,7 @@ zone_pivot_groups: teams-app-environment-blazor
 
 Channel or group tabs deliver content to channels and group chats, which helps to create collaborative spaces around dedicated web-based content.
 
-Ensure that you have all the [prerequisites](~/tabs/how-to/tab-requirements.md) to build your channel or group tab.
+Ensure that you've all the [prerequisites](~/tabs/how-to/tab-requirements.md) to build your channel or group tab.
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
@@ -73,7 +73,7 @@ Ensure that you have all the [prerequisites](~/tabs/how-to/tab-requirements.md) 
 
     The default is yes; enter **n** to enter your Microsoft Partner ID.
 
-* **Enter your Microsoft Partner Id, if you have one? (Leave blank to skip)**
+* **Enter your Microsoft Partner Id, if you've one? (Leave blank to skip)**
 
     This field isn't required and must be used only if you're already part of the [Microsoft Partner Network](https://partner.microsoft.com).
 
@@ -205,7 +205,7 @@ gulp ngrok-serve
 
     :::image type="content" source="~/assets/images/tab-images/channeltabuploaded.png" alt-text="Channel tab uploaded":::
 
-    Now you have successfully created and added your channel or group tab in Teams.
+    Now you've successfully created and added your channel or group tab in Teams.
 
 ::: zone-end
 
@@ -328,7 +328,7 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
 1. In Visual Studio Solution Explorer, go to the **Pages** folder and open **Tab.cshtml**
 
-    Within **Tab.cshtml**, the application presents the user with two options for displaying the tab with a red or gray icon. The **Select Gray** or **Select Red** button triggers `saveGray()` or `saveRed()` respectively, sets `pages.config.setValidityState(true)`, and enables **Save** on the configuration page. This code lets Teams know that you have completed the requirements configuration and can proceed with the installation. The parameters of `pages.config.setConfig` are set. Finally, `saveEvent.notifySuccess()` is called to indicate that the content URL has been successfully resolved.
+    Within **Tab.cshtml**, the application presents the user with two options for displaying the tab with a red or gray icon. The **Select Gray** or **Select Red** button triggers `saveGray()` or `saveRed()` respectively, sets `pages.config.setValidityState(true)`, and enables **Save** on the configuration page. This code lets Teams know that you've completed the requirements configuration and can proceed with the installation. The parameters of `pages.config.setConfig` are set. Finally, `saveEvent.notifySuccess()` is called to indicate that the content URL has been successfully resolved.
 
 1. Update the `websiteUrl` and `contentUrl` values in each function with the HTTPS ngrok URL to your tab.
 
@@ -372,11 +372,11 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 1. Verify that **ngrok** is running and working properly by opening your browser and going to your content page via the ngrok HTTPS URL that was provided in your command prompt window.
 
     > [!TIP]
-    > You need to have both your application in Visual Studio and ngrok running to complete the steps provided in this article. If you need to stop running your application in Visual Studio to work on it, **keep ngrok running**. It listens and resumes routing your application's request when it restarts in Visual Studio. If you have to restart the ngrok service it returns a new URL and you have to update your application with the new URL.
+    > You need to have both your application in Visual Studio and ngrok running to complete the steps provided in this article. If you need to stop running your application in Visual Studio to work on it, **keep ngrok running**. It listens and resumes routing your application's request when it restarts in Visual Studio. If you've to restart the ngrok service it returns a new URL and you've to update your application with the new URL.
 
 <!--- TBD: This note seems to be removed from main. Commenting it for now.
 > [!NOTE]
-> App Studio can be used to edit your `manifest.json` file and upload the completed package to Teams. You can also manually edit the `manifest.json` file. If you do, ensure that you build the solution againto create the `tab.zip` file to upload.
+> App Studio can be used to edit your `manifest.json` file and upload the completed package to Teams. You can also manually edit the `manifest.json` file. If you do, ensure that you build the solution again to create the `tab.zip` file to upload.
 --->
 
 ## Update your app package with Developer Portal
@@ -421,7 +421,7 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
     :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="Channel tab ASPNET uploaded":::
 
-    Now you have successfully created and added your channel or group tab in Teams.
+    Now you've successfully created and added your channel or group tab in Teams.
 
 ::: zone-end
 
@@ -552,7 +552,7 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
 1. In Visual Studio Solution Explorer, go to the **Tab** folder and open **Tab.cshtml**
 
-    Within **Tab.cshtml**, the application presents the user with two options for displaying the tab with a red or gray icon. The **Select Gray** or **Select Red** button triggers `saveGray()` or `saveRed()` respectively, sets `pages.config.setValidityState(true)`, and enables **Save** on the configuration page. This code lets Teams know that you have completed the requirements configuration and can proceed with the installation. The parameters of `pages.config.setConfig` are set. Finally, `saveEvent.notifySuccess()` is called to indicate that the content URL has been successfully resolved.
+    Within **Tab.cshtml**, the application presents the user with two options for displaying the tab with a red or gray icon. The **Select Gray** or **Select Red** button triggers `saveGray()` or `saveRed()` respectively, sets `pages.config.setValidityState(true)`, and enables **Save** on the configuration page. This code lets Teams know that you've completed the requirements configuration and can proceed with the installation. The parameters of `pages.config.setConfig` are set. Finally, `saveEvent.notifySuccess()` is called to indicate that the content URL has been successfully resolved.
 
 1. Update the `websiteUrl` and `contentUrl` values in each function with the HTTPS ngrok URL to your tab.
 
@@ -596,7 +596,7 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 1. Verify that **ngrok** is running and working properly by opening your browser and going to your content page via the ngrok HTTPS URL that was provided in your command prompt window.
 
     > [!TIP]
-    > You need to have both your application in Visual Studio and ngrok running to complete the steps provided in this article. If you need to stop running your application in Visual Studio to work on it, **keep ngrok running**. It listens and resumes routing your application's request when it restarts in Visual Studio. If you have to restart the ngrok service it returns a new URL and you have to update your application with the new URL.
+    > You need to have both your application in Visual Studio and ngrok running to complete the steps provided in this article. If you need to stop running your application in Visual Studio to work on it, **keep ngrok running**. It listens and resumes routing your application's request when it restarts in Visual Studio. If you've to restart the ngrok service it returns a new URL and you've to update your application with the new URL.
 
 ## Update your app package with Developer Portal
 
@@ -636,7 +636,7 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
     :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="Channel tab ASPNET MVC uploaded":::
 
-    Now you have successfully created and added your channel or group tab in Teams.
+    Now you've successfully created and added your channel or group tab in Teams.
 
 ::: zone-end
 
@@ -644,7 +644,7 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
 Blazor lets you build interactive web UIs using C#, instead of JavaScript. You can create a tab app and a bot app  with Blazor and the latest version of Visual Studio.
 
-:::image type="content" source="~/assets/images/teams-toolkit-v2/blazor/your-blazor-helloworld-app.png" alt-text="Screenshot of the blazor app displaying the tab, Bot, and Message Extension output after you have successfully completed the step-by-step blazor guide.":::
+:::image type="content" source="~/assets/images/teams-toolkit-v2/blazor/your-blazor-helloworld-app.png" alt-text="Screenshot of the blazor app displaying the tab, Bot, and Message Extension output after you've successfully completed the step-by-step blazor guide.":::
 
 > [!NOTE]
 > Teams Toolkit doesn't support the message extension capability.
@@ -660,7 +660,7 @@ Here's a list of tools you require for building and deploying your app.
 
 ## Prepare development environment
 
-After you have installed the required tools, set up the development environment.
+After you've installed the required tools, set up the development environment.
 
 ### Install Microsoft Teams Toolkit
 
@@ -719,9 +719,9 @@ A tenant is like a space or a container for your organization in Teams, where yo
 
 ### Enable sideloading option
 
-After creating the app, you must load your app in Teams without distributing it. This process is known as sideloading. Sign into your Microsoft 365 account to view this option.
+After creating the app, you must load your app in Teams without distributing it. This process is known as sideloading. Sign in to your Microsoft 365 account to view this option.
 
-Do you already have a tenant, and do you have the admin access? Let's check if you really do!
+Do you already have a tenant, and do you've the admin access? Let's check if you really do!
 
 Verify if you can sideload apps in Teams:
 
@@ -745,19 +745,19 @@ If you don't have a Teams developer account, you can get it for free. Join the M
 
     :::image type="content" source="../../assets/images/build-your-first-app/dev-program-subscription.PNG" alt-text="Screenshot of Microsoft 365 Developer Program displaying your Microsoft 365 developer subscriptions for the blazor app.":::
 
-1. Sign into Teams using the administrator account you just set up. Verify that you have the **Upload a custom app** option in Teams.
+1. Sign in to Teams using the administrator account you just set up. Verify that you've the **Upload a custom app** option in Teams.
 
 ## Get a free Azure account
 
 If you wish to host your app or access resources in Azure, you must have an Azure subscription. [Create a free account](https://azure.microsoft.com/free/) before you begin.
 
-Now you have got all tools and set up your accounts. Next, let's set up your development environment and start building!
+Now you've got all tools and set up your accounts. Next, let's set up your development environment and start building!
 
 ## Create project workspace for your tab app
 
 Start Teams app development by creating your first app. This app uses the tab capability.
 
-:::image type="content" source="~/assets/images/teams-toolkit-v2/blazor/your-blazor-helloworld-app1.png" alt-text="Screenshot of Blazor app displaying the final output of tab app after you have successfully completed the step-by-step guide.":::
+:::image type="content" source="~/assets/images/teams-toolkit-v2/blazor/your-blazor-helloworld-app1.png" alt-text="Screenshot of Blazor app displaying the final output of tab app after you've successfully completed the step-by-step guide.":::
 
 This tutorial walks you through the steps to create, run, and deploy your first Teams app using .NET/Blazor.
 
@@ -841,7 +841,7 @@ Watch this short recap for creating a Teams tab app.
 
 ### Take a tour of the source code for Teams tab app
 
-After project creation, you have the components to build a basic personal app. You can view the project directory structure in the **Solution Explorer** pane of the Visual Studio.
+After project creation, you've the components to build a basic personal app. You can view the project directory structure in the **Solution Explorer** pane of the Visual Studio.
 
 :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor/blazor-app-solution-explorer_1.png" alt-text="Screenshot4 of Solution explorer displaying the components to build a basic personal app.":::
 
@@ -969,7 +969,7 @@ You have learned to create, build, and run Teams app with tab capability. The fo
 
     :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/view-resource.PNG" alt-text="Screenshot17 of Teams Toolkit with View Provisioned Resources highlighted in red.":::
 
-1. Sign into your Azure portal account on sign-in prompt.
+1. Sign in to your Azure portal account on sign-in prompt.
 
     Your app-dev-rg appears.
 
