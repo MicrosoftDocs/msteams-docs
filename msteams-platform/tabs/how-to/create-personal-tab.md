@@ -699,11 +699,11 @@ If you don't have a Teams developer account, you can get it for free. Join the M
 
 If you wish to host your app or access resources in Azure, you must have an Azure subscription. [Create a free account](https://azure.microsoft.com/free/) before you begin.
 
-Now you've got all tools and set up your accounts. Next, let's set up your development environment and start building!
+Now you've got all the tools and set up your accounts. Next, let's set up your development environment and start building!
 
 ## Create project workspace for your tab app
 
-Start Teams app development by creating your first app. This app uses the tab capability.
+Start Teams app development by creating your first app. This app uses tab capability.
 
 :::image type="content" source="~/assets/images/teams-toolkit-v2/blazor/your-blazor-helloworld-app1.png" alt-text="Screenshot of Blazor app displaying the final output of tab app after you've successfully completed the step-by-step guide.":::
 
