@@ -283,13 +283,13 @@ The following table includes the response codes:
 | **403** | The app is unable to send the signal. 403 response code can occur because of various reasons, such as the tenant admin disables and blocks the app during live site migration. In this case, the payload contains a detailed error message. |
 | **404** | The meeting chat doesn't exist. |
 
-## Targeted meeting notification API
+## Targeted meeting notification and visual indicator API
 
-The `targetedMeetingNotification` API allows apps to send targeted in-meeting notifications to specific participants in a meeting. Apps send targeted in-meeting notifications based on user action. The API is available through bot API.
+The `targetedMeetingNotification` API allows apps to send targeted in-meeting notifications and shows visual indicator to specific participants in a meeting. Apps send targeted in-meeting notifications and visual indicator based on user action. The API is available through bot API.
 
 ### Prerequisite
 
-You must configure your app manifest with [RSC permissions](../graph-api/rsc/resource-specific-consent.md) under the `webApplicationInfo` property to send targeted in-meeting notifications to specific participants in a meeting. Use the following examples to configure your manifest:
+You must configure your app manifest with [RSC permissions](../graph-api/rsc/resource-specific-consent.md) under the `webApplicationInfo` property to send targeted in-meeting notifications and shows visual indicator to specific participants in a meeting. Use the following examples to configure your manifest:
 
 <br>
 
@@ -342,14 +342,14 @@ You must configure your app manifest with [RSC permissions](../graph-api/rsc/res
 > * The API payload only permits a task module with a URL.
 > * The user ID formats **aadObjectid** and **UPN** aren't supported.
 
-Get supported user ID format for targeted in-meeting notification:
+Get supported user ID format for targeted in-meeting notification and visual indicator:
 
 * [Get participant API](#get-participant-api)
 * [Get members API](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile)
 
 ### Example
 
-Following is an example of request payload for targeted in-meeting notification:
+Following is an example of request payload for targeted in-meeting notification and visual indicator:
 
 ```http
 POST /v1/meetings/{meetingId}/notification
