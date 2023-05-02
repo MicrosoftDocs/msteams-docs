@@ -75,6 +75,8 @@ landingContent:
 
     - linkListType: whats-new
       links:
+      - text: Deep link to the meeting side panel
+        url: apps-in-teams-meetings/build-tabs-for-meeting.md
       - text: Set up Microsoft license management
         url: concepts/deploy-and-publish/appsource/prepare/manage-third-party-apps-license.md
       - text: Apps for Teams meetings support anonymous users
