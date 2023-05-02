@@ -10,7 +10,7 @@ ms.date: 11/29/2021
 
 # Collaborate on Teams project using Microsoft Teams Toolkit
 
-Multiple developers can work together to debug, provision and deploy the same Teams Toolkit project, but it requires manually setting the right permissions of Teams App and Microsoft Azure Active Directory (Azure AD). Teams Toolkit's collaboration feature simplifies this process between developers and project owners.
+Multiple developers can work together to debug, provision, and deploy the same Teams Toolkit project, but it requires manually setting the right permissions of Teams App and Microsoft Azure Active Directory (Azure AD). Teams Toolkit's collaboration feature simplifies this process between developers and project owners.
 
 ## Collaborate with other developers
 
@@ -29,34 +29,34 @@ The following sections guide us to understand the collaboration process as proje
 
      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/add collaborators.png" alt-text="collaborators":::
 
-  1. Select **Add App Owners** to add other Microsoft 365 account email address as collaborator::
+  1. Select **Add App Owners** to add other Microsoft 365 account email address as collaborator.
 
      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/add-owner.png" alt-text="Add project owner":::
 
-        * Select the apps you want to add app owners for [collaboration-select-app]
-        * (Optional) Select and confirm Teams `manifest.json` file[collaboration-select-manifest]
-        * (Optional) Select and confirm Azure Active Directory app `aad.manifest.json` file [collaboration-select-aad-manifest]
-        * Input the M365 account email address you want to add as app owner. The account to be added must be on the same tenant as project owner for remote debug as shown in the image [collaboration-input-collaborator]
+        * Select the apps you want to add app owners for. [image]
+        * (Optional) Select and confirm Teams `manifest.json` file. [image]
+        * (Optional) Select and confirm Azure AD app `aad.manifest.json` file. [image]
+        * Input the M365 account email address you want to add as app owner. The account to be added must be on the same tenant as project owner for remote debug as shown in the image. [image]
 
-  1. Select **List App Owners** to view collaborators in current environment:
+  1. Select **List App Owners** to view collaborators in current environment.
 
      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/list of collaborators.png" alt-text="list":::
 
-        * Select the apps you want to add app owners for [collaboration-select-app]
-        * (Optional) Select and confirm Teams `manifest.json` file [collaboration-select-manifest]
-        * (Optional) Select and confirm Azure Active Directory app `aad.manifest.json` file [collaboration-select-aad-manifest]
-        * Input the M365 account email address you want to add as app owner. The account to be added must be on the same tenant as project owner for remote debug as shown in the image [collaboration-input-collaborator]
-        * Then you can see collaborators listed in the output channel as shown in following image: [collaboration-list-owners]
+        * Select the apps you want to add app owners for. [image]
+        * (Optional) Select and confirm Teams `manifest.json` file. [image]
+        * (Optional) Select and confirm Azure AD app `aad.manifest.json` file. [image]
+        * Input the M365 account email address you want to add as app owner. The account to be added must be on the same tenant as project owner for remote debug as shown in the image. [image]
+        * Then you can see collaborators listed in the output channel as shown in following image: [image]
 
   1. Push the project to GitHub.
 
      > [!NOTE]
-     > The newly added collaborators do not receive any notification. The Project owner needs to notify collaborator.
+     > The newly added collaborators don't receive any notification. The Project owner needs to notify collaborator.
 
 ### As project collaborator
 
   1. Clone the project from GitHub.
-  2. Log on to Microsoft 365 account.
+  2. Log in to Microsoft 365 account.
   3. Log in to Azure account, it has contributor permission required by the project for all Azure resources.
   4. To preview your Teams app, deploy the project to remote.
   5. Launch remote to have a preview of the Teams app.
@@ -76,15 +76,15 @@ Removing collaborators requires the following manual steps:
 
 * Using Azure Active Directory
 
-  * Go to [Azure Active Directory](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps), select **App registration** from left panel, and find your Azure AD App.
-  * Select **Owners** from left panel in Azure AD App management page.
+  * Go to [Azure Active Directory](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps), select **App registration** from left panel, and find your Azure AD app.
+  * Select **Owners** from left panel in Azure AD app management page.
   * Select and remove the collaborator.
 
     > [!NOTE]
     >
     > * Collaborator added to your project doesn't receive any notification. Project owner needs to notify collaborator offline.
     > * Azure related permissions must be set manually by Azure subscription administrator on Azure portal.
-    > * Azure account must have contributor role for the subscription so that developers can work together to provision, and deploy TeamsFx project.
+    > * Azure account must have contributor role for the subscription so that developers can work together to provision and deploy TeamsFx project.
 
 ## See also
 

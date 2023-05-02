@@ -61,14 +61,14 @@ Install `teamsfx-cli` from `npm` and run `teamsfx -h` to check all available com
 
 `teamsfx` commands runs in interactive mode by default. You can work in non-interactive mode by setting `--interactive` flag to `false`.
 
-`teamsfx new`
+## `teamsfx new`
 
 By default, `teamsfx` new is in interactive mode and guides to create new Teams application. You can work in non-interactive mode by setting `--interactive` flag to `false`.
 
 | Command | Description |
 |:----------------  |:-------------|
 | `teamsfx new template` | Create an app from an existing template |
-| `teamsfx new template list`     | List all the available templates |
+| `teamsfx new template list` | List all the available templates |
 
 ### Parameters for `teamsfx new`
 

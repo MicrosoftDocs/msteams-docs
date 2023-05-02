@@ -60,9 +60,9 @@ You can customize Azure AD manifest template to update Azure AD application.
 
     The following permissions are used property IDs:
 
-    - The `resourceAppId` property is used for different APIs. For `Microsoft Graph`, and `Office 365 SharePoint Online` enter the name directly instead of UUID, and for other APIs use UUID.
+    - The `resourceAppId` property is used for different APIs. For `Microsoft Graph` and `Office 365 SharePoint Online`, enter the name directly instead of UUID, and for other APIs use UUID.
 
-    - The `resourceAccess.id` property is used for different permissions. For `Microsoft Graph`, and `Office 365 SharePoint Online` enter the permission name directly instead of UUID, and for other APIs use UUID.
+    - The `resourceAccess.id` property is used for different permissions. For `Microsoft Graph` and `Office 365 SharePoint Online`, enter the permission name directly instead of UUID, and for other APIs use UUID.
 
     - The `resourceAccess.type` property is used for delegated permission or application permission. `Scope` means delegated permission and `Role` means application permission.
 
@@ -123,7 +123,7 @@ You can customize Azure AD manifest template to update Azure AD application.
 
 <br>
 
-3. Update Azure AD application changes for local/remote environment
+3. Update Azure AD application changes for local or remote environment.
 
    1. Select `Preview` CodeLens in `aad.template.json`.
   
@@ -137,19 +137,19 @@ You can customize Azure AD manifest template to update Azure AD application.
 
       :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add deploy3.png" alt-text="deploy3" lightbox="../assets/images/teams-toolkit-v2/manual/add deploy3.png":::
 
-   1. The changes for Azure AD application used in local/dev environment are deployed.
+   1. The changes for Azure AD application used in local or dev environment are deployed.
 
-   1. Additionally you can open the command palette and select **Teams: Update Azure Active Directory App** to update Azure Active Directory app.
+   1. Additionally, you can open the command palette and select **Teams: Update Azure Active Directory App** to update Azure Active Directory app.
 
 <br>
 
 ## Azure AD manifest template placeholders
 
-The Azure AD manifest file contains placeholder arguments with {{...}} statements, it's replaced during build for different environments. You can references to environment variables with the placeholder arguments.
+The Azure AD manifest file contains placeholder arguments with {{...}} statements, it's replaced during build for different environments. You can reference to environment variables with the placeholder arguments.
 
 ### Reference environment variable in Azure AD manifest template
 
-You don't need to enter permanent values in Azure AD manifest template and Azure AD manifest template file supports reference environment variables values. You can use the syntax `${{YOUR_ENV_VARIABLE_NAME}}` in the tool as parameter values to resolve the current environment variable values.
+You don't need to enter permanent values in Azure AD manifest template and Azure AD manifest template file supports reference environment variable values. You can use the syntax `${{YOUR_ENV_VARIABLE_NAME}}` in the tool as parameter values to resolve the current environment variable values.
 
 ## Edit and preview Azure AD manifest with CodeLens
 
@@ -239,7 +239,7 @@ You need to interact with Azure AD application during various stages of your Tea
 
       You need to provision cloud resources and deploy your application while moving your application to the cloud. At stages, such as local debug, Teams Toolkit:
 
-      - Reads the `.env.{env}` file to find an existing Azure AD application. If an Azure AD application already exists, Teams Toolkit re-uses the existing Azure AD application. Otherwise you need to create a new application using the `aad.template.json` file.
+      - Reads the `.env.{env}` file to find an existing Azure AD application. If an Azure AD application already exists, Teams Toolkit reuses the existing Azure AD application. Otherwise you need to create a new application using the `aad.template.json` file.
 
       - Ignores some properties in the manifest file initially that requires more context such as `replyUrls` property. This property requires frontend or bot endpoint during the creation of a new Azure AD application with the manifest file.
 
