@@ -26,7 +26,7 @@
     href: get-started/get-started-overview.md
     displayName: First Teams app, Python, .NET, Java, Node.js
   - name: Teams app tutorials and code samples v4.md
-    href: get-started/Teams-app-tutorials-and-code-samples-v4
+    href: get-started/Teams-app-tutorials-and-code-samples-v4.md
   - name: Code samples
     href: https://github.com/OfficeDev/Microsoft-Teams-Samples
 - name: Plan your app
