@@ -72,15 +72,18 @@ When the app is ready for use in production, you can submit the app using the Te
 The following steps help you to publish the app from Teams Toolkit:
 
 1. You can publish your Teams app in one of the following ways:
-     * Select **Publish** under **LIFECYCLE**
-     * Select **View** > **Command Palette...** > **Teams: Publish to Teams**.
+     * Select **Publish** under **LIFECYCLE**.
+     * Select **View** > **Command Palette...** > **Teams: Publish to Teams**. [below image to be updated]
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-publish_1.png" alt-text="Select Publish":::
 
-1. Select your environment, Teams Toolkit will run the `publish` lifecycle defined in `teamsapp.yml.`
+1. Select your environment, Teams Toolkit will run the `publish` lifecycle defined in `teamsapp.yml`.
 (Image)
 
- TThe app doesn't publish to your organization's app store yet. The step submits the app to the Teams admin center where you can approve it for publishing to your organization's app store.
+Now the app is available on the Manage apps of Microsoft Teams admin center, where you and the admin can review and approve it.
+
+> [!NOTE]
+> The app doesn't publish to your organization's app store yet. The step submits the app to the Teams admin center where you can approve it for publishing to your organization's app store.
 
 ### Approve on Admin Center
 

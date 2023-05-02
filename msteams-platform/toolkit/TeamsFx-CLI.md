@@ -120,7 +120,7 @@ The following table lists the cloud service accounts, such as Azure and Microsof
 | Command | Description |
 |:----------------  |:-------------|
 | `teamsfx account login`  | Log in to the selected cloud service. Service options are Microsoft 365 or Azure. |
-| `teamsfx account logout`  | log out of selected cloud service. Service options are Microsoft 365 or Azure. |
+| `teamsfx account logout`  | Log out of selected cloud service. Service options are Microsoft 365 or Azure. |
 | `teamsfx account show` | Display all connected cloud accounts information. |
 
 ## `teamsfx env`
@@ -157,7 +157,7 @@ Running `teamsfx provision --env local` will trigger the provision stage in `tea
 
 Run the deploy stage in `teamsapp.yml`.
 
-Running `teamsfx deploy --env local` will trigger the deploy stage in `teamsapp.local.yml` `instead.
+Running `teamsfx deploy --env local` will trigger the deploy stage in `teamsapp.local.yml` instead.
 
 ### Parameters for `teamsfx deploy`
 
@@ -175,8 +175,8 @@ Validate the Teams app using manifest schema or validation rules.
 | Parameter | Required | Description |
 |:----------------  |:-------------|:-------------|
 | `--env` | Yes | Select an existing environment for the project. |
-| `--manifest-path` | No | Select the input Teams app manifest file path, defaults to `${folder}/` |
-|`--app-package-file-path` | No | Select the zipped Teams app package path, defaults to '${folder}/appPackage/build/appPackage.${env}.zip'. This package will be validated with validation rules. |
+| `--manifest-path` | No | Select the input Teams app manifest file path, defaults to `${folder}/appPackage/manifest.json`. This manifest will be validated using manifest schema. |
+|`--app-package-file-path` | No | Select the zipped Teams app package path, defaults to `${folder}/appPackage/build/appPackage.${env}.zip`. This package will be validated with validation rules. |
 | `--folder` | No | Select root folder of the project. Defaults to `./`. |
 
 ## `teamsfx publish`
@@ -202,8 +202,8 @@ Build your Teams app into a package for publishing.
 |:----------------  |:-------------|:-------------|
 | `--env` | Yes | Select an existing environment for the project. |
 | `--manifest-file-path` | No | Select the Teams app manifest template path, defaults to `${folder}/appPackage/manifest.json`. |
-| `--output-zip-path` | No | Select the output path of the zipped app package, defaults to `${folder}/appPackage/build/appPackage.${env}.zip` |
-| `--output-manifest-path` | No | Select the output path of the generated manifest path, defaults to `${folder}/appPackage/build/manifest.${env}.json` |
+| `--output-zip-path` | No | Select the output path of the zipped app package, defaults to `${folder}/appPackage/build/appPackage.${env}.zip`. |
+| `--output-manifest-path` | No | Select the output path of the generated manifest path, defaults to `${folder}/appPackage/build/manifest.${env}.json`. |
 | `--folder` | No | Select root folder of the project. Defaults to `./`. |
 
 ## `teamsfx preview`
@@ -217,41 +217,41 @@ Preview the current application.
 | `--folder` | No | Select root folder of the project. Defaults to `./`. |
 | `--env` | No | Select an existing env for the project. Defaults to `local`. |
 | `--manifest-file-path` | No | Select the Teams app `manifest file path`, defaults to `${folder}/appPackage/manifest.json`. |
-| `--run-command` | No | The command to start local service. Work for 'local' environment only. If undefined, `teamsfx` will use the auto detected one from project type (npm run dev:`teamsfx` or dotnet run or func start). If empty, `teamsfx` will skip starting local service. |
-| `--running-pattern` | No | The ready signal output that service is launched. Work for 'local' environment only. If undefined, `teamsfx` will use the default common pattern (`started|successfully|finished|crashed|failed`). If empty, `teamsfx` treats process start as ready signal. |
-| `--open-only` | No | Work for 'local' environment only. If true, directly open web client without launching local service. Defaults to `false`. |
-| `--m365-host` | No | Preview the application in Teams, Outlook or the Microsoft 365 app [string] [choices: `teams`, `outlook`, `office`]. Defaults to "teams".
+| `--run-command` | No | The command to start local service. Work for `local` environment only. If undefined, `teamsfx` will use the auto detected one from project type (`npm run dev:teamsfx` or `dotnet run` or `func start`). If empty, `teamsfx` will skip starting local service. |
+| `--running-pattern` | No | The ready signal output that service is launched. Work for `local` environment only. If undefined, `teamsfx` will use the default common pattern ("started|successfully|finished|crashed|failed"). If empty, `teamsfx` treats process start as ready signal. |
+| `--open-only` | No | Work for `local` environment only. If true, directly open web client without launching local service. Defaults to `false`. |
+| `--m365-host` | No | Preview the application in Teams, Outlook, or the Microsoft 365 app [string] [choices: `teams`, `outlook`, `office`]. Defaults to `teams`.
 | `--browser` | No | Select browser to open Teams web client [string] [choices: `chrome`, `edge`, `default`]. Defaults to `default`.
-| `--browser-arg` | No | Argument to pass to the browser (e.g. --browser-args=`--guest`). |
+| `--browser-arg` | No | Argument to pass to the browser, for example, --browser-args="--guest. |
 
-Scenarios for `teamsfx preview`
+### Scenarios for `teamsfx preview`
 
-The following list provides the common scenarios for`teamsfx preview:
+The following list provides the common scenarios for `teamsfx preview`:
 
-`teamsfx preview` expects users have already ran `teamsfx` provision and `teamsfx` deploy.
+`teamsfx preview` expects users have already ran `teamsfx provision` and `teamsfx deploy`.
 
 * Local Preview
 
-Dependencies:
+  Dependencies:
 
-* Node.js
-* .NET SDK
-* Azure Functions Core Tools
+  * Node.js
+  * .NET SDK
+  * Azure Functions Core Tools
 
-```typescript
-teamsfx preview --env --local
-teamsfx preview --env --local --browser chrome
-```
+  ```typescript
+  teamsfx preview --env --local
+  teamsfx preview --env --local --browser chrome
+  ```
 
-Remote Preview
+* Remote Preview
 
-```typescript
-teamsfx preview --env --remote
-teamsfx preview --env --remote --browser edge
-```
+  ```typescript
+  teamsfx preview --env --remote
+  teamsfx preview --env --remote --browser edge
+  ```
 
-> [!NOTE]
-> The logs of the background services, such as React is saved in ~/.fx/cli-log/local-preview/.
+  > [!NOTE]
+  > The logs of the background services, such as React is saved in ~/.fx/cli-log/local-preview/.
 
 ## `teamsfx config`
 
@@ -261,25 +261,25 @@ Configure user settings.
 
 | Command | Description |
 |:----------------  |:-------------|
-| `teamsfx` config get [option] | Get user global settings. |
-| `teamsfx` config set | Set user settings. |
+| `teamsfx config get [option]` | Get user global settings. |
+| `teamsfx config set` | Set user settings. |
 
-Scenarios for `teamsfx config`
+### Scenarios for `teamsfx config`
 
 * Stop sending telemetry data
 
-```typescript
-teamsfx config set telemetry off
-```
+  ```typescript
+  teamsfx config set telemetry off
+  ```
 
 ## `teamsfx permission`
 
-Check, grant and list user permission.
+Check, grant, and list user permission.
 
-| command | Description |
+| Command | Description |
 |:----------------  |:-------------|
-| `teamsfx` permission grant | Check user's permission. |
-| `teamsfx` permission status | Show permission status for the project. |
+| `teamsfx permission grant` | Check user's permission. |
+| `teamsfx permission status` | Show permission status for the project. |
 
 ### Parameters for `teamsfx permission grant`
 
@@ -291,41 +291,43 @@ Check, grant and list user permission.
 | `--teams-app-manifest` | No | Manifest of Your Teams app |
 | `--aad-app-manifest` | No | Manifest of your Azure AD app. |
 
-Parameters for `teamsfx permission status`
-|:----------------  |:-------------|:-------------|
+### Parameters for `teamsfx permission status`
+
 | Parameter | Required | Description |
+|:----------------  |:-------------|:-------------|
 | `--env` | Yes | Select an existing environment for the project. |
-| `--folder` | No | Select root folder of the project. Defaults to `./` |
+| `--folder` | No | Select root folder of the project. Defaults to `./`. |
 | `--teams-app-manifest` | No | Manifest of Your Teams app. |
 | `--aad-app-manifest` | No | Manifest of your Azure AD app. |
 | `--list-all-collaborators` | No | To list all collaborators |
 
-Scenarios for `teamsfx permission`
+### Scenarios for `teamsfx permission`
 
 * Grant Permission
 
-Project creator and collaborators can use `teamsfx` permission grant command to add a new collaborator to the project:
+  Project creator and collaborators can use `teamsfx` permission grant command to add a new collaborator to the project:
 
-```typescript
-teamsfx permission grant --env dev --email user-email@user-tenant.com
-```
+  ```typescript
+  teamsfx permission grant --env dev --email user-email@user-tenant.com
+  ```
 
-After receiving required permission, project creator and collaborators can share the project with the new collaborator by GitHub, and the new collaborator can have all the permissions for Microsoft 365 account.
+  After receiving required permission, project creator and collaborators can share the project with the new collaborator by GitHub, and the new collaborator can have all the permissions for Microsoft 365 account.
 
 * Show Permission Status
 
-Project creator and collaborators can use `teamsfx permission status` command to view Microsoft 365 account permission for specific env:
+  Project creator and collaborators can use `teamsfx permission status` command to view Microsoft 365 account permission for specific env:
 
-```typescript
-teamsfx permission status --env dev
-```
+  ```typescript
+  teamsfx permission status --env dev
+  ```
 
-List All Collaborators
-Project creator and collaborators can use `teamsfx permission status` command to view all collaborators for specific env:
+* List All Collaborators
 
-```typescript
-teamsfx permission status --env dev --list-all-collaborators
-```
+  Project creator and collaborators can use `teamsfx permission status` command to view all collaborators for specific env:
+
+  ```typescript
+  teamsfx permission status --env dev --list-all-collaborators
+  ```
 
 ## `teamsfx update`
 
@@ -333,8 +335,8 @@ Update the specific application manifest file.
 
 | Command | Description |
 |:----------------  |:-------------|
-| `teamsfx` update aad-app | Update the AAD App in the current application. |
-| `teamsfx`update teams-app | Update the Teams App manifest to Teams Developer Portal. |
+| `teamsfx update aad-app` | Update the AAD App in the current application. |
+| `teamsfx update teams-app` | Update the Teams App manifest to Teams Developer Portal. |
 
 ### Parameters for `teamsfx update aad-app`
 
@@ -360,4 +362,4 @@ Upgrade the project to work with the latest version of Teams Toolkit.
 
 |Parameter | Required | Description |
 |:----------------  |:-------------|:-------------|
-| `--force` | No | Force upgrade the project to work with the latest version of Teams Toolkit. Defaults to false. |
+| `--force` | No | Force upgrade the project to work with the latest version of Teams Toolkit. Defaults to `false`. |

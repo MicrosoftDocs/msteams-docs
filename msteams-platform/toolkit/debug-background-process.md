@@ -1,7 +1,7 @@
 ---
 title: Debug background processes
 author: surbhigupta
-description: In this module, learn how Visual Studio Code and Teams Toolkit work during local debug process. Also learn how to register and configure your Teams app.
+description: In this module, learn how Visual Studio Code and Teams Toolkit work during debugging process. Also learn how to register and configure your Teams app.
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
@@ -10,9 +10,9 @@ ms.date: 03/03/2022
 
 # Debug background process
 
-The debugging process involves the `.vscode/launch.json` and `.vscode/tasks.json` files to configure the debuggers in Visual Studio Code. Visual Studio Code launches Node debugger and browser debugger, Microsoft Edge or Google Chrome which launches a new browser instance.
+The debugging process involves the `.vscode/launch.json` and `.vscode/tasks.json` files to configure the debuggers in Visual Studio Code. Visual Studio Code launches Node debugger and browser debugger, and Microsoft Edge or Google Chrome launches a new browser instance.
 
-The debug process workflow is as follows:
+The debugging process workflow is as follows:
 
 1. `launch.json` file configures the debugger in Visual Studio Code.
 
