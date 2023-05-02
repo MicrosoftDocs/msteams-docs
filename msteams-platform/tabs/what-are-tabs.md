@@ -30,7 +30,7 @@ You can [create a content page](~/tabs/how-to/create-tab-pages/content-page.md) 
 
 > [!NOTE]
 >
-> * Adaptive Card tabs will be deprecated in the New Teams (expected by June 2023). If your app is using Adaptive Card tabs, it's recommended to rebuild the tab as a web-based tab. For more information, see [Build tabs for Teams](what-are-tabs.md).
+> * Adaptive Card tabs will be deprecated in Teams 2.1 which is expected by June 2023. If your app is using Adaptive Card tabs, it's recommended to rebuild the tab as a web-based tab. For more information, see [Build tabs for Teams](what-are-tabs.md).
 > * **Posts** and **Files** can't be moved from their positions.
 
 ## Tab features
