@@ -3,7 +3,7 @@ title: Teams app tutorials and code samples v4
 description: Build your first Microsoft Teams app based on language (Node.js, C#, Java, and Python) and developement environment, understand app capabilities, SDKs.
 ms.localizationpriority: high
 ms.topic: reference
-ms.author: vganr
+ms.author: surbhigupta
 ---
 # Teams app tutorials and code samples v4
 
