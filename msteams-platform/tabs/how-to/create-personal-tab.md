@@ -12,7 +12,7 @@ zone_pivot_groups: teams-app-environment
 
 Personal tabs, along with personally-scoped bots, are part of personal apps and are scoped to a single user. They can be pinned to the left pane for easy access. You can also [reorder](#reorder-static-personal-tabs) your personal tabs.
 
-Ensure that you have all the [prerequisites](~/tabs/how-to/tab-requirements.md) to build your personal tab.
+Ensure that you've all the [prerequisites](~/tabs/how-to/tab-requirements.md) to build your personal tab.
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
@@ -82,7 +82,7 @@ Following are the steps to create a personal tab:
 
       The default is yes; enter **n** to enter your Microsoft Partner ID.
 
-    * **Enter your Microsoft Partner Id, if you have one? (Leave blank to skip)**
+    * **Enter your Microsoft Partner Id, if you've one? (Leave blank to skip)**
 
       This field isn't required and must be used only if you're already part of the [Microsoft Partner Network](https://partner.microsoft.com).
 
@@ -258,7 +258,7 @@ After your tab is uploaded to Microsoft Teams through **ngrok** and successfully
 
    Now you've successfully created and added your personal tab in Teams.
   
-   As you have your personal tab in Teams, you can also [reorder](#reorder-static-personal-tabs) your personal tab.
+   As you've your personal tab in Teams, you can also [reorder](#reorder-static-personal-tabs) your personal tab.
 
 ::: zone-end
 
@@ -413,7 +413,7 @@ ngrok http 3978 --host-header=localhost
 
    Now you've successfully created and added your personal tab in Teams.
   
-   As you have your personal tab in Teams, you can also [reorder](#reorder-static-personal-tabs) your personal tab.
+   As you've your personal tab in Teams, you can also [reorder](#reorder-static-personal-tabs) your personal tab.
 
 ::: zone-end
 
@@ -584,7 +584,7 @@ ngrok http 3978 --host-header=localhost
   
    Now you've successfully created and added your personal tab in Teams.
 
-   As you have your personal tab in Teams, you can also [reorder](#reorder-static-personal-tabs) your personal tab.
+   As you've your personal tab in Teams, you can also [reorder](#reorder-static-personal-tabs) your personal tab.
 
 ::: zone-end
 
@@ -669,7 +669,7 @@ A tenant is like a space or a container for your organization in Teams, where yo
 
 After creating the app, you must load your app in Teams without distributing it. This process is known as sideloading. Sign in to your Microsoft 365 account to view this option.
 
-Do you already have a tenant, and do you have the admin access? Let's check if you really do!
+Do you already have a tenant, and do you've the admin access? Let's check if you really do!
 
 Verify if you can sideload apps in Teams:
 
@@ -693,7 +693,7 @@ If you don't have a Teams developer account, you can get it for free. Join the M
 
     :::image type="content" source="../../assets/images/build-your-first-app/dev-program-subscription.PNG" alt-text="Screenshot of Microsoft 365 Developer Program displaying your Microsoft 365 developer subscriptions for the blazor app.":::
 
-1. Sign in to Teams using the administrator account you just set up. Verify that you have the **Upload a custom app** option in Teams.
+1. Sign in to Teams using the administrator account you just set up. Verify that you've the **Upload a custom app** option in Teams.
 
 ## Get a free Azure account
 
@@ -789,7 +789,7 @@ Watch this short recap for creating a Teams tab app.
 
 ### Take a tour of the source code for Teams tab app
 
-After project creation, you have the components to build a basic personal app. You can view the project directory structure in the **Solution Explorer** pane of the Visual Studio.
+After project creation, you've the components to build a basic personal app. You can view the project directory structure in the **Solution Explorer** pane of the Visual Studio.
 
 :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor/blazor-app-solution-explorer_1.png" alt-text="Screenshot4 of Solution explorer displaying the components to build a basic personal app.":::
 
@@ -841,9 +841,9 @@ To build and run your app:
 
     Teams is loaded in a web browser.
 
-1. Select **Add** when prompted to install the app to Teams.
+1. Select **Add to a chat** when prompted to install the app to Teams.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/blazor-add-app_1.png" alt-text="Screenshot8 of BlazorApp local debug with Add option highlighted in red.":::
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/blazor-app.png" alt-text="Screenshot8 of BlazorApp local debug with Add option highlighted in red.":::
 
     Congratulations, your first tab app is running in your local environment!
 
@@ -851,15 +851,15 @@ To build and run your app:
 
 1. Move through the page to view the user details.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/authorize-user-info.png" alt-text="Screenshot10 of Microsoft Teams with Authorize option highlighted in red.":::
-
 1. Select **Authorize** to let your app retrieve user details using Microsoft Graph.
 
     The app requests permission to grant access for displaying user details.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/ms-graph-permission_1.png" alt-text="Screenshot11 of Permissions requested displaying the App info.":::
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/authorize-user-info.png" alt-text="Screenshot10 of Microsoft Teams with Authorize option highlighted in red.":::
 
 1. Select **Accept** to let your app access user details.
+
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/ms-graph-permission_1.png" alt-text="Screenshot11 of Permissions requested displaying the App info.":::
 
     Your photograph and details appear in your **Personal Tab**.
 
@@ -879,7 +879,7 @@ To build and run your app:
 
 ## Preview your first Teams tab app
 
-You've learned to create, build, and run Teams app with tab capability. The following final steps are to deploy your app on Azure and Preview in Teams:
+You have learned to create, build, and run Teams app with tab capability. The following final steps are to deploy your app on Azure and Preview in Teams:
 
 1. [Provision your tab app in the cloud](#to-provision-your-tab-app-in-the-cloud): You can provision your tab app in the cloud.
 1. [Deploy your tab app to cloud](#to-deploy-your-tab-app-to-cloud): You can deploy your tab app to cloud.
@@ -951,17 +951,17 @@ You've learned to create, build, and run Teams app with tab capability. The foll
 
     :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/blazor-tab-app-azure.PNG" alt-text="Screenshot23 of Microsoft Teams with Your app is running in your Azure environment highlighted in red.":::
 
-1. Move through the page to view the user details.
-
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/authorize-user-info.png" alt-text="Screenshot24 of Microsoft Teams with Authorize option under Personal Tab highlighted in red.":::
+    Move through the page to view the user details.
 
 1. Select **Authorize** to let your app retrieve user details using Microsoft Graph.
 
     The app requests permission to grant access for displaying user details.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/ms-graph-permission_1.png" alt-text="Screenshot25 of Permissions requested displaying the App info.":::
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/authorize-user-info.png" alt-text="Screenshot24 of Microsoft Teams with Authorize option under Personal Tab highlighted in red.":::
 
 1. Select **Accept** to let your app access user details.
+
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/ms-graph-permission_1.png" alt-text="Screenshot25 of Permissions requested displaying the App info.":::
 
     Your photograph and details appear in your **Personal Tab**.
 
@@ -969,9 +969,9 @@ You've learned to create, build, and run Teams app with tab capability. The foll
 
 ## Congratulations
 
-You've done it!
+You have done it!
 
-You've completed the tutorial to build a tab app with Blazor.
+You have completed the tutorial to build a tab app with Blazor.
 
 ::: zone-end
 
