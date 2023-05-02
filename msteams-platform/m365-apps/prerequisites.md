@@ -108,15 +108,14 @@ Install the Microsoft 365 app to preview your Teams personal tab app running on 
 1. Open your profile **(Me) > Settings** and scroll to the bottom of the menu.
 1. Ensure that you use Microsoft 365 app version 16.0.15726.20000 or later and Outlook app version 4.2247.1 (52247812) or later for Android.
 
-
 #### iOS
 
 You can preview Teams personal tabs running in Outlook and Microsoft 365 app for iOS by installing the prerelease version on the [TestFlight app](https://testflight.apple.com/) on your iOS device.
 
 1. To access the preview version on TestFlight, please reach out to the product group through your CSAM/Account Manager for an Invitation.
-1. Install the TestFlight app from the Apple App on your testing device of choice.
-1. In your email client, accept the email invitation or follow the public link invitation to install the beta app.
-1. Open the Outlook app and sign in with your test tenant credentials.
+1. Install the TestFlight app from the **App Store** on your testing device of choice.
+1. Open your email invitation, accept the email invitation, or follow the public link invitation to install the beta app.
+1. Launch the Outlook app and sign in with your test tenant credentials.
 1. Open your profile **(Me) > Settings** and scroll to the bottom of the menu.
 1. Ensure that you use Microsoft 365 app version 2.72.23030700 or later and Outlook app version 4.2310.0 (18999702) or later for iOS.
 
