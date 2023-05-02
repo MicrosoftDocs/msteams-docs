@@ -459,6 +459,9 @@
     - name: Fetch meeting ID and organizer ID
       href: graph-api/meeting-transcripts/fetch-id.md
       displayName: Obtain meeting details using user-level notification, tenant-level notification
+    - name: Get notified when transcript becomes available
+      href: graph/teams-change-notification-in-microsoft-teams-overview
+      displayName: Get notified when transcript becomes available
     - name: Get transcripts
       href: /graph/api/resources/calltranscript
   - name: Get meeting recordings using Graph APIs
@@ -469,6 +472,11 @@
     - name: Fetch meeting ID and organizer ID
       href: graph-api/meeting-recordings/fetch-id.md
       displayName: Obtain meeting details using user-level notification, tenant-level notification
+    - name: Get notified when recording becomes available
+      href: graph/teams-change-notification-in-microsoft-teams-overview
+      displayName: Get notified when transcript becomes available
+    - name: Get recordings 
+      href: /graph/api/resources/calltranscript
   - name: Enhanced collaboration with Live Share
     items:
     - name: Overview
