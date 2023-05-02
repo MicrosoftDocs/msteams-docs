@@ -1,7 +1,7 @@
 ---
 title: TeamsFx Command Line Interface
 author: MuyangAmigo
-description: In this module, learn `TeamsFx` Command Line Interface, `TeamsFx` library, supported commands and its scenarios
+description: In this module, learn TeamsFx Command Line Interface, TeamsFx library, supported commands and its scenarios
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
@@ -10,7 +10,7 @@ ms.date: 11/29/2021
 
 # TeamsFx command line interface
 
-`TeamsFx` CLI is a text-based command line interface that accelerates Teams application development. It aims to provide keyboard centric experience while building Teams applications.
+TeamsFx CLI is a text-based command line interface that accelerates Teams application development. It aims to provide keyboard centric experience while building Teams applications.
 
 For more information, see:
 
@@ -19,15 +19,15 @@ For more information, see:
 
 ## TeamsFx Library
 
-Microsoft Teams Framework (`TeamsFx`) is a library encapsulating common functionality and integration patterns, such as simplified access to Microsoft Identity. You can build apps for Microsoft Teams with zero configuration.
+Microsoft Teams Framework (TeamsFx) is a library encapsulating common functionality and integration patterns, such as simplified access to Microsoft Identity. You can build apps for Microsoft Teams with zero configuration.
 
-Following is a list of main `TeamsFx` features:
+Following is a list of main TeamsFx features:
 
-* **`TeamsFx` Collaboration**: Lets developers and project owner invite other collaborators to the `TeamsFx` project. You can collaborate to debug and deploy a `TeamsFx` project.
+* **TeamsFx Collaboration**: Lets developers and project owner invite other collaborators to the TeamsFx project. You can collaborate to debug and deploy a TeamsFx project.
 
-* **`TeamsFx` CLI**: Accelerates Teams application development. It also enables CI/CD scenario where you can integrate CLI in scripts for automation.
+* **TeamsFx CLI**: Accelerates Teams application development. It also enables CI/CD scenario where you can integrate CLI in scripts for automation.
 
-* **`TeamsFx` SDK**: Provides access to database, such as the primary `TeamsFx` code library containing simple authentication for both client and server-side code tailored for Teams developers.
+* **TeamsFx SDK**: Provides access to database, such as the primary TeamsFx code library containing simple authentication for both client and server-side code tailored for Teams developers.
 
 ## Get Started
 
@@ -63,7 +63,7 @@ Install `teamsfx-cli` from `npm` and run `teamsfx -h` to check all available com
 
 ## `teamsfx new`
 
-By default, `teamsfx` new is in interactive mode and guides to create new Teams application. You can work in non-interactive mode by setting `--interactive` flag to `false`.
+By default, `teamsfx new` is in interactive mode and guides to create new Teams application. You can work in non-interactive mode by setting `--interactive` flag to `false`.
 
 | Command | Description |
 |:----------------  |:-------------|
@@ -83,7 +83,7 @@ By default, `teamsfx` new is in interactive mode and guides to create new Teams 
 |`--spfx-web part-name`| No | Applicable if `SPFx tab` capability is selected. The default value is "helloworld".|
 |`--bot-host-type-trigger`| No | Applicable if `Notification bot` capability is selected. The options are `http-restify`, `http-functions`, and `timer-functions`. The default value is `http-restify`.|
 
-### Scenarios for teamsfx new
+### Scenarios for `teamsfx new`
 
 You can use interactive mode to create a Teams app. The following list provides scenarios on controlling all the parameters with `teamsfx new`:
 
@@ -153,24 +153,24 @@ Running `teamsfx provision --env local` will trigger the provision stage in `tea
 | `--env` | Yes | Select an environment for the project. |
 | `--folder` | No | Select root folder of the project. Defaults to `./` |
 
-## teamsfx deploy
+## `teamsfx deploy`
 
 Run the deploy stage in `teamsapp.yml`.
 
 Running `teamsfx deploy --env local` will trigger the deploy stage in `teamsapp.local.yml` `instead.
 
-### Parameters for teamsfx deploy
+### Parameters for `teamsfx deploy`
 
 | Parameter | Required | Description |
 |:----------------  |:-------------|:-------------|
 | `--env` | Yes | Select an environment for the project. |
 | `--folder` | No | Select root folder of the project. Defaults to `./`. |
 
-## teamsfx validate
+## `teamsfx validate`
 
 Validate the Teams app using manifest schema or validation rules.
 
-### Parameters for teamsfx validate
+### Parameters for `teamsfx validate`
 
 | Parameter | Required | Description |
 |:----------------  |:-------------|:-------------|
@@ -179,13 +179,13 @@ Validate the Teams app using manifest schema or validation rules.
 |`--app-package-file-path` | No | Select the zipped Teams app package path, defaults to '${folder}/appPackage/build/appPackage.${env}.zip'. This package will be validated with validation rules. |
 | `--folder` | No | Select root folder of the project. Defaults to `./`. |
 
-## teamsfx publish
+## `teamsfx publish`
 
 Run the publish stage in `teamsapp.yml`.
 
 Running `teamsfx publish --env local` will trigger the publish stage in `teamsapp.local.yml` instead.
 
-### Parameters for teamsfx publish
+### Parameters for `teamsfx publish`
 
 | Parameter | Required | Description |
 |:----------------  |:-------------|:-------------|
@@ -196,7 +196,7 @@ Running `teamsfx publish --env local` will trigger the publish stage in `teamsap
 
 Build your Teams app into a package for publishing.
 
-### Parameters for `teamsfx` package
+### Parameters for `teamsfx package`
 
 |Parameter | Required | Description |
 |:----------------  |:-------------|:-------------|
@@ -206,11 +206,11 @@ Build your Teams app into a package for publishing.
 | `--output-manifest-path` | No | Select the output path of the generated manifest path, defaults to `${folder}/appPackage/build/manifest.${env}.json` |
 | `--folder` | No | Select root folder of the project. Defaults to `./`. |
 
-## teamsfx preview
+## `teamsfx preview`
 
 Preview the current application.
 
-### Parameters for teamsfx preview
+### Parameters for `teamsfx preview`
 
 | Parameter | Required | Description |
 |:----------------  |:-------------|:-------------|
@@ -253,18 +253,18 @@ teamsfx preview --env --remote --browser edge
 > [!NOTE]
 > The logs of the background services, such as React is saved in ~/.fx/cli-log/local-preview/.
 
-## teamsfx config
+## `teamsfx config`
 
 Configure user settings.
 
-### Parameters for teamsfx config
+### Parameters for `teamsfx config`
 
 | Command | Description |
 |:----------------  |:-------------|
 | `teamsfx` config get [option] | Get user global settings. |
 | `teamsfx` config set | Set user settings. |
 
-Scenarios for `teamsfx` config
+Scenarios for `teamsfx config`
 
 * Stop sending telemetry data
 
@@ -272,7 +272,7 @@ Scenarios for `teamsfx` config
 teamsfx config set telemetry off
 ```
 
-## teamsfx permission
+## `teamsfx permission`
 
 Check, grant and list user permission.
 
@@ -327,7 +327,7 @@ Project creator and collaborators can use `teamsfx permission status` command to
 teamsfx permission status --env dev --list-all-collaborators
 ```
 
-## teamsfx update
+## `teamsfx update`
 
 Update the specific application manifest file.
 
@@ -336,7 +336,7 @@ Update the specific application manifest file.
 | `teamsfx` update aad-app | Update the AAD App in the current application. |
 | `teamsfx`update teams-app | Update the Teams App manifest to Teams Developer Portal. |
 
-### Parameters for teamsfx update aad-app
+### Parameters for `teamsfx update aad-app`
 
 | Parameter | Required |Description |
 |:----------------  |:-------------|:-------------|
@@ -344,7 +344,7 @@ Update the specific application manifest file.
 | `--folder` | No | Select root folder of the project. Defaults to `./` |
 | `--manifest-file-path` | No | Enter the AAD app manifest template file path, it's a relative path to project root folder, defaults to `./aad.manifest.json`. |
 
-### Parameters for teamsfx update teams-app
+### Parameters for `teamsfx update teams-app`
 
 | Parameter | Required | Description |
 |:----------------  |:-------------|:-------------|
@@ -352,11 +352,11 @@ Update the specific application manifest file.
 | `--folder` | No | Select root folder of the project. Defaults to `./` |
 | `--manifest-file-path` | No | Enter the Teams app manifest template file path, it's a relative path to project root folder, defaults to `./appPackage/manifest.json`.
 
-## teamsfx upgrade
+## `teamsfx upgrade`
 
 Upgrade the project to work with the latest version of Teams Toolkit.
 
-### Parameters for teamsfx upgrade
+### Parameters for `teamsfx upgrade`
 
 |Parameter | Required | Description |
 |:----------------  |:-------------|:-------------|
