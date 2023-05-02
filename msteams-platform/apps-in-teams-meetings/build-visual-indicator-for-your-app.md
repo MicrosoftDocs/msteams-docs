@@ -11,7 +11,7 @@ ms.localizationpriority: medium
 
 Visual indicator on Teams UI bar helps you to keep engaged with the apps loaded in the meeting even when the side panel isn't opened. The indicator shows on the app UI, whenever there’s a new activity on the app during the meeting and it catches the users attention more easily.
 
-Use the [targeted meeting notification API](meeting-apps-apis.md#targeted-meeting-notification-api) to trigger the visual indicator on the app UI and pass the MRI IDs of the intended recipients along with `meetingTabIcon` in the surfaces param to get the end users attention.
+Use the [targeted meeting notification API](meeting-apps-apis.md#targeted-meeting-notification-and-visual-indicator-api) to trigger the visual indicator on the app UI and pass the MRI IDs of the intended recipients along with `meetingTabIcon` in the surfaces param to get the end users attention.
 
 > [!NOTE]
 >
@@ -48,14 +48,14 @@ To enable visual indicator for your Teams app:
     }
     ```
 
-    ​Whenever there’s a new activity for which the app wants to get the end user’s attention, the app calls [targeted meeting notification API](meeting-apps-apis.md#targeted-meeting-notification-api) and pass the MRI IDs of the intended recipients along with `meetingTabIcon` in the surfaces parameter.
+    ​Whenever there’s a new activity for which the app wants to get the end user’s attention, the app calls [targeted meeting notification API](meeting-apps-apis.md#targeted-meeting-notification-and-visual-indicator-api) and pass the MRI IDs of the intended recipients along with `meetingTabIcon` in the surfaces parameter.
 
 This API already supports Targeted In-Meeting Notifications for the `meetingStage` surface and apps can define multiple surfaces in the same API call if there are relevant scenarios.
 
 App can define the following objects under the `surface` parameter:
 
- * `meetingTabIcon` which shows an indicator on the app icon. 
- * `meetingStage` which shows an in-meeting notification on the meeting stage for the same users.
+* `meetingTabIcon` which shows an indicator on the app icon.
+* `meetingStage` which shows an in-meeting notification on the meeting stage for the same users.
 
 > [!NOTE]
 > ​The app can optionally pass the tab entity ID if there are multiple instances of the tab added to the same meeting. If the tab entity ID isn't passed by the app, then Teams shows the indicator on the first tab icon visible on the user’s meeting window.
@@ -85,4 +85,4 @@ The following are the limitations:
 ## See also
 
 * [Build in-meeting notification for Teams meeting](in-meeting-notification-for-meeting.md)
-* [Targeted meeting notification API](meeting-apps-apis.md#targeted-meeting-notification-api)
+* [Targeted meeting notification API](meeting-apps-apis.md#targeted-meeting-notification-and-visual-indicator-api)
