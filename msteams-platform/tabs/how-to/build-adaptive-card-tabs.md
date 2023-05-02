@@ -9,8 +9,8 @@ ms.localizationpriority: high
 
 # Build tabs with Adaptive Cards
 
-> [!IMPORTANT]
-> Adaptive Card tabs will be deprecated in Teams 2.1 which is expected by June 2023. If your app is using Adaptive Card tabs, it's recommended to rebuild the tab as a web-based tab. For more information, see [Build tabs for Teams](../what-are-tabs.md).
+> [!WARNING]
+> Adaptive Card tabs will be deprecated in the new Microsoft Teams, which is expected to release by June 2023. If your app is using Adaptive Card tabs, it's recommended to rebuild the tab as a web-based tab. For more information, see [Build tabs for Teams](../what-are-tabs.md).
 
 When developing a tab using the traditional method, you might run into these issues:
 
