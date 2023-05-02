@@ -857,9 +857,11 @@ To build and run your app:
 
     The app requests permission to grant access for displaying user details.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/ms-graph-permission_1.png" alt-text="Screenshot11 of Permissions requested displaying the App info.":::
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/authorize-user-info.png" alt-text="Screenshot10 of Microsoft Teams with Authorize option highlighted in red.":::
 
 1. Select **Accept** to let your app access user details.
+
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/ms-graph-permission_1.png" alt-text="Screenshot11 of Permissions requested displaying the App info.":::
 
     Your photograph and details appear in your **Personal Tab**.
 
@@ -951,17 +953,17 @@ You've learned to create, build, and run Teams app with tab capability. The foll
 
     :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/blazor-tab-app-azure.PNG" alt-text="Screenshot23 of Microsoft Teams with Your app is running in your Azure environment highlighted in red.":::
 
-1. Move through the page to view the user details.
-
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/authorize-user-info.png" alt-text="Screenshot24 of Microsoft Teams with Authorize option under Personal Tab highlighted in red.":::
+    Move through the page to view the user details.
 
 1. Select **Authorize** to let your app retrieve user details using Microsoft Graph.
 
     The app requests permission to grant access for displaying user details.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/ms-graph-permission_1.png" alt-text="Screenshot25 of Permissions requested displaying the App info.":::
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/authorize-user-info.png" alt-text="Screenshot24 of Microsoft Teams with Authorize option under Personal Tab highlighted in red.":::
 
 1. Select **Accept** to let your app access user details.
+
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/ms-graph-permission_1.png" alt-text="Screenshot25 of Permissions requested displaying the App info.":::
 
     Your photograph and details appear in your **Personal Tab**.
 
