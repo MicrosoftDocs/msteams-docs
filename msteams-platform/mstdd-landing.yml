@@ -52,6 +52,8 @@ landingContent:
         url: https://gitter.im/OfficeDev/home
     - linkListType: whats-new
       links:
+      - text: Media elements in Adaptive Card
+        url: task-modules-and-cards/cards/media-elements-in-adaptive-cards.md
       - text: Develop your apps with Teams Toolkit
         url: concepts/build-and-test/develop-your-apps-with-teams-toolkit.md
       - text: Contextless app update
@@ -70,8 +72,6 @@ landingContent:
         url:  concepts/deploy-and-publish/appsource/post-publish/app-growth/overview-app-growth.md
       - text: Build a dashboard tab app
         url:  tabs/how-to/build-a-dashboard-tab-app.md
-      - text: Targeted in-meeting notification (Developer preview)
-        url: apps-in-teams-meetings/in-meeting-notification-for-meeting.md#targeted-in-meeting-notification
 
     - linkListType: whats-new
       links:
