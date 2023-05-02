@@ -424,6 +424,10 @@ The following code shows a reissued request example:
 |----------------|-----------------|--------------|--------------|--------------|
 | Show Adaptive Cards in Teams tab | Microsoft Teams tab sample code, which demonstrates how to show Adaptive Cards in Teams. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/csharp)| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/nodejs) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/csharp/demo-manifest/tab-adaptive-card.zip)|
 
+## Step-by-step guide
+
+Follow the [step-by-step](../../sbs-tab-with-adaptive-cards.yml) guide to build tab with Adaptive Cards.
+
 ## Next step
 
 > [!div class="nextstepaction"]
