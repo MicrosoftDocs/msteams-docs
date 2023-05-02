@@ -75,7 +75,7 @@ The following image shows a tab added to the meeting details page in the Teams m
 
 #### Deeplink to meeting sidepanel
 
-When app users in selects the deeplink is selected to meeting sidepanel is selected in the meeting stage, it opens the sidepanel in the meeting stage. If the deeplink to meeting sidepanel is selected anywhere other than meeting stage, deeplink opens pre-meeting or post-meeting tab.
+You can create a deeplink to your tab app that can open in meeting sidepanel. When app users in a meeting selects the deeplink, it opens the meeting sidepanel in the meeting stage. If the deeplink to meeting sidepanel is selected anywhere other than meeting stage, deeplink opens pre-meeting or post-meeting tab.
 
 ### Meeting stage view
 
