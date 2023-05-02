@@ -149,12 +149,11 @@ For deep links to share content to stage, see [deep link to share content to sta
 
 ## Deep link to meeting side panel
 
-You can also generate a deep link to [meeting side panel](~/apps-in-teams-meetings/build-tabs-for-meeting#deeplink-to-meeting-sidepanel) in a meeting. Use the following format for a deep link to the meeting side panel:
+You can also generate a deep link to [meeting side panel](~/apps-in-teams-meetings/build-tabs-for-meeting.md#deeplink-to-meeting-sidepanel) in a meeting. Use the following format for a deep link to the meeting side panel:
 
 `https://teams.microsoft.com/l/entity/<appId>/<entityId>?webUrl=<entityWebUrl>&label=<entityLabel>&context=<context>`.
 
-For query parameters see, [deep link to a tab](~/concepts/build-and-test/deep-link-application#generate-a-deep-link-to-your-tab)
-
+For query parameters see, [deep link to a tab](~/concepts/build-and-test/deep-link-application.md#generate-a-deep-link-to-your-tab)
 
 Example:
 
