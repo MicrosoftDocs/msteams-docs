@@ -92,9 +92,11 @@ The following code shows an example of an Adaptive Card with media elements:
 
 ```
 
-Following are the different scenarios:
+## Scenarios
 
-**Line Of Business (LOB) scenarios**
+Following are the scenarios for Line Of Business (LOB) and third party partner:
+
+**LOB scenarios**
 
 Video or audio files are directly uploaded to OneDrive or SharePoint and accessible within the tenant and Adaptive Card plays the file through OnePlayer.
 
