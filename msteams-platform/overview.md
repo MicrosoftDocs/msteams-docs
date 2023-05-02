@@ -75,7 +75,7 @@ Here's why Teams is best-suited for your app needs:
 
 - **Build once, run everywhere**
 
-    Using the latest app manifest and Teams JavaScript client library versions, your personal tab and message extension apps run in other Microsoft 365 experiences in addition to Teams. Reach users on platforms like Outlook and Microsoft 365 app all with the same codebase, broadening the reach of your app and streamlining your development and distribution processes.  
+    Use the latest app manifest and Teams JavaScript client library versions, for your personal tab and message extension apps run in other Microsoft 365 experiences in addition to Teams. You can reach the users on other platforms like Outlook and Microsoft 365 app all with the same codebase. It helps your app to streamline the development and distribution process.  
 
 ## Next step
 
