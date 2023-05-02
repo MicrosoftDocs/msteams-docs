@@ -20,6 +20,46 @@ Use the [targeted meeting notification API](meeting-apps-apis.md#targeted-meetin
 
 (image to be added)
 
+## Enable visual indicator for your Teams app
+
+Visual indicator requires the app to have integrated with Bot SDK and have a tab app that supports meeting side panel context. ​The tab should be installed in the meeting for which the app makes the notification call.
+
+The [targeted meeting notification API](in-meeting-notification-for-meeting.md#enable-targeted-in-meeting-notification) in our Bot SDK has been extended to support this capability of showing a visual indicator on the app icon.
+
+To enable visual indicator for your Teams app:
+
+1. Add `meetingTabIcon` value in the `surfaces` parameter. The following is an example of a payload:
+
+    ```json
+    {
+        "type": "targetedMeetingNotification",
+        "value": {
+            "recipients": [
+                "<participant1 MRI>",
+                "<participant2 MRI>" 
+            ],
+            "surfaces": [
+                {
+                    "surface": "MeetingTabIcon",
+                    "tabEntityId": "<tab id from tab sdk>" // optional           
+                }
+            ]
+        }
+    }
+    ```
+
+    ​Whenever there’s a new activity for which the app wants to get the end user’s attention, the app calls [targeted meeting notification API](meeting-apps-apis.md#targeted-meeting-notification-api) and pass the MRI IDs of the intended recipients along with `meetingTabIcon` in the surfaces parameter.
+
+This API already supports Targeted In-Meeting Notifications for the `meetingStage` surface and apps can define multiple surfaces in the same API call if there are relevant scenarios.
+
+App can define the following objects under the `surface` parameter:
+
+ * `meetingTabIcon` which shows an indicator on the app icon. 
+ * `meetingStage` which shows an in-meeting notification on the meeting stage for the same users.
+
+> [!NOTE]
+> ​The app can optionally pass the tab entity ID if there are multiple instances of the tab added to the same meeting. If the tab entity ID isn't passed by the app, then Teams shows the indicator on the first tab icon visible on the user’s meeting window.
+
 ## Scenarios
 
 The following are the different example scenarios in which visual indicator can be used:
@@ -32,63 +72,13 @@ The following are the different example scenarios in which visual indicator can 
 
 In the above scenario's, the app initiates the SDK call from User A’s side panel as soon as User A completes the said action.
 
-## Enable visual indicator for your Teams app
-
-Visual indicator requires the app to have integrated with Bot SDK and have a tab app that supports meeting side panel context. ​The tab should be installed in the meeting for which the app makes the notification call.
-
-The [targeted meeting notification API](in-meeting-notification-for-meeting.md#enable-targeted-in-meeting-notification) in our Bot SDK has been extended to support this capability of showing a visual indicator on the app icon.
-
-1. Add `meetingTabIcon` value in the `surfaces` parameter.
-
-1. ​Whenever there’s a new activity for which the app wants to get the end user’s attention, the app calls [targeted meeting notification API](meeting-apps-apis.md#targeted-meeting-notification-api) and pass the MRI IDs of the intended recipients along with `meetingTabIcon` in the surfaces parameter.
-
-The following is an example of a payload:
-
-```json
-{
-    "type": "targetedMeetingNotification",
-    "value": {
-        "recipients": [
-            "<participant1 MRI>",
-            "<participant2 MRI>" 
-        ],
-        "surfaces": [
-            {
-                "surface": "MeetingTabIcon",
-                "tabEntityId": "<tab id from tab sdk>" // optional           
-            }
-        ]
-    }
-}
-```
-
-This API already supports Targeted In-Meeting Notifications for the `meetingStage` surface and thus apps can define multiple surfaces in the same API call if there are relevant scenarios.
-
-The app can define two objects under the surfaces parameter, one for `meetingTabIcon` which shows an indicator on the app icon and the other for `meetingStage`which shows an in-meeting notification on the meeting stage for the same users.
-
-> [!NOTE]
-> ​The app can optionally pass the tab entity ID if there are multiple instances of the tab added to the same meeting. If the tab entity ID isn't passed by the app, then Teams shows the indicator on the first tab icon visible on the user’s meeting window.
-
-## Response codes
-
-The following table includes the response codes and its description:
-
-|Response code|Description|
-|---|---|
-| **202** | Notification is successfully sent.  |
-| **207** | Notifications are sent only to a few participants. |
-| **400** | Meeting notification request payload validation failed. |
-| **401** | Bot token is invalid. |
-| **403** | Bot isn't allowed to send the notification.  |
-| **404** | Meeting chat isn't found or none of the participants were found in the roster. |
-
 ## Limitations
 
 The following are the limitations:
 
-* The indicator shows only one notification per minute per user per meeting.
+* The visual indicator shows only one notification per minute per user per meeting.
 
-* The indicator shows to a maximum of first 50 in the array of participants in a particular meeting. For the above 50 participants it shows an error.
+* The visual indicator shows to a maximum of first 50 in the array of participants in a particular meeting. For the above 50 participants it shows an error.
 
 * The app and its corresponding JS SDK bridge are terminated within the Teams ecosystem as soon as it's closed.
 
