@@ -56,9 +56,11 @@ Example:
 ```javascript
 import { LiveShareClient } from "@microsoft/live-share";
 import { InkingManager, LiveCanvas } from "@microsoft/live-share-canvas";
+import { LiveShareHost } from "@microsoft/teams-js";
 
 // Setup the Fluid container
-const liveShare = new LiveShareClient();
+const host = LiveShareHost.create(host);
+const liveShare = new LiveShareClient(host);
 const schema = {
   initialObjects: { liveCanvas: LiveCanvas },
 };
@@ -71,6 +73,8 @@ const inkingManager = new InkingManager(canvasHostElement);
 
 // Begin synchronization for LiveCanvas
 await liveCanvas.initialize(inkingManager);
+
+inkingManager.activate();
 ```
 
 # [TypeScript](#tab/typescript)
@@ -78,10 +82,12 @@ await liveCanvas.initialize(inkingManager);
 ```TypeScript
 import { LiveShareClient } from "@microsoft/live-share";
 import { InkingManager, LiveCanvas } from "@microsoft/live-share-canvas";
+import { LiveShareHost } from "@microsoft/teams-js";
 import { ContainerSchema } from "fluid-framework";
 
 // Setup the Fluid container
-const liveShare = new LiveShareClient();
+const host = LiveShareHost.create(host);
+const liveShare = new LiveShareClient(host);
 const schema: ContainerSchema = {
   initialObjects: { liveCanvas: LiveCanvas },
 };
@@ -94,6 +100,8 @@ const inkingManager = new InkingManager(canvasHostElement);
 
 // Begin synchronization for LiveCanvas
 await liveCanvas.initialize(inkingManager);
+
+inkingManager.activate();
 ```
 
 ---
@@ -265,7 +273,7 @@ import {
 
 // Change the selected tool to laser pointer
 document.getElementById("laser").onclick = () => {
-  inkingManager.tool = InkingTool.highlighter;
+  inkingManager.tool = InkingTool.laserPointer;
 };
 // Change the selected color for laser pointer
 document.getElementById("laser-color").onchange = () => {
@@ -325,6 +333,28 @@ document.getElementById("line-tip-size").onclick = () => {
 #### Clear all strokes
 
 You can clear all strokes in the canvas by calling `inkingManager.clear()`. This deletes all strokes from the canvas.
+
+#### Import and export raw strokes
+
+Live Share Canvas supports importing and exporting raw strokes from `InkingManager`, which enables you to export them to your back-end for later use in a future session.
+
+```javascript
+// Export raw strokes
+const strokes = inkingManager.exportRaw();
+
+// Optionally clear out existing strokes, and import strokes
+inkingManager.clear();
+inkingManager.importRaw(strokes);
+```
+
+#### Export strokes as an SVG
+
+You can export your entire drawing within the `InkingManager` to a scalable vector graphic (SVG). The SVG contents are returned as a string, which you can then store in your server as an .svg file extension.
+
+```javascript
+// Export raw strokes
+const svgText = inkingManager.exportSVG();
+```
 
 ### Cursors
 
@@ -441,10 +471,10 @@ Both the scenarios work well because the content can be viewed the same on all d
 
 ## Code samples
 
-| Sample name          | Description                            | JavaScript                                                                                |
-| -------------------- | -------------------------------------- | ----------------------------------------------------------------------------------------- |
-| Live Canvas demo     | Simple whiteboard application.         | [View](https://github.com/microsoft/live-share-sdk/tree/main/samples/03.live-canvas-demo) |
-| React media template | Draw over a synchronized video player. | [View](https://aka.ms/liveshare-mediatemplate)                                            |
+| Sample name | Description | JavaScript |
+| ------ | ----- | ---- |
+| Live Canvas demo | Simple whiteboard application. | [View](https://github.com/microsoft/live-share-sdk/tree/main/samples/javascript/03.live-canvas-demo) |
+| React media template | Draw over a synchronized video player. | [View](https://aka.ms/liveshare-mediatemplate) |
 
 ## Next step
 
@@ -453,7 +483,8 @@ Both the scenarios work well because the content can be viewed the same on all d
 
 ## See also
 
+- [Apps for Teams meetings](teams-apps-in-meetings.md)
 - [Live Share SDK FAQ](teams-live-share-faq.md)
 - [Live Share SDK reference docs](/javascript/api/@microsoft/live-share/)
 - [Live Share Canvas SDK reference docs](/javascript/api/@microsoft/live-share-canvas/)
-- [Teams apps in meetings](teams-apps-in-meetings.md)
+- [Use Fluid with Teams](../tabs/how-to/using-fluid-msteam.md)

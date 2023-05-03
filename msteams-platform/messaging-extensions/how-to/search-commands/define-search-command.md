@@ -40,7 +40,7 @@ To add the search command to your app manifest, you must add a new `composeExten
 
 ### Create a search command using Developer Portal
 
-The prerequisite to create a search command is that you must already have created a message extension. For information on how to create a message extension, see [create a message extension](~/messaging-extensions/how-to/create-messaging-extension.md).
+The prerequisite to create a search command is that you must already have created a message extension. For information on how to create a message extension, see [create a message extension](../../../sbs-gs-msgext.yml).
 
 **To create an action command**
 
@@ -144,9 +144,9 @@ For the complete app manifest, see [App manifest schema](~/resources/schema/mani
 
 ## Code sample
 
-| Sample Name           | Description | .NET    | Node.js   |
-|:---------------------|:--------------|:---------|:--------|
-|Teams message extension search   |  Describes how to define search commands and respond to searches.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
+| Sample name           | Description | .NET    | Node.js   | Manifest|
+|:---------------------|:--------------|:---------|:--------|:--------------|
+|Teams message extension search   |  This sample shows how to build a Search-based Message Extension. It searches nudget packages and displays the results in search based messaging extension.        |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp/demo-manifest/msgext-search.zip)
 
 ## Step-by-step guide
 
@@ -156,3 +156,11 @@ Follow the [step-by-step guide](../../../sbs-messagingextension-searchcommand.ym
 
 > [!div class="nextstepaction"]
 > [Respond to the search commands](~/messaging-extensions/how-to/search-commands/respond-to-search.md).
+
+## See also
+
+* [Cards](../../../task-modules-and-cards/what-are-cards.md)
+* [Task modules](../../../task-modules-and-cards/what-are-task-modules.md)
+* [App manifest schema for Teams](../../../resources/schema/manifest-schema.md)
+* [Developer Portal for Teams](../../../concepts/build-and-test/teams-developer-portal.md)
+* [Message extensions](../../what-are-messaging-extensions.md)

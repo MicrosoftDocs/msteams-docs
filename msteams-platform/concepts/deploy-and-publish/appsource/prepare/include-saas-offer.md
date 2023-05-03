@@ -66,132 +66,15 @@ For complete instructions and API reference, see the [SaaS Fulfillment APIs docu
 * When users are assigned a subscription plan, notify them through a Teams bot or email. In the messaging, include information on how to add the app to Teams and get started.
 * Support the idea of multiple admins. In other words, multiple users in the same org can purchase and manage their own subscriptions.
 
-## Manage license for third party apps in Teams
-
-Teams allows independent software vendors (ISVs) admins or users to manage SaaS licenses for third party apps purchased from Teams storefront. ISV admins or users can easily assign, unassign, use, and track SaaS licenses.
-
-To enable license management for an app in Teams, follow the steps:
-
-1. [Create an offer in Partner Center](#create-an-offer-in-partner-center)
-1. [Update your Teams app](#update-your-teams-app)
-1. [Post purchase](#post-purchase)
-1. [Integrate with Graph Usage Right API](#integrate-with-graph-usage-right-api)
-
-### Create an offer in Partner Center
-
-1. Sign in to [Partner Center](https://partner.microsoft.com/) and select **Partner Center**.
-
-   :::image type="content" source="~/assets/images/first-party-license-mgt/partner-center-home-page.png" alt-text="The screenshots shows how to login to the Partner Center account.":::
-
-1. In the **Home** page, select **Marketplace offers** tab to define commercial marketplace offers.
-
-   :::image type="content" source="~/assets/images/first-party-license-mgt/home-page.png" alt-text="The screenshots shows the home page and Marketplace offer tab in the Partner Center.":::
-
-1. Select **Overview** from the left pane.
-
-1. Select **New Offer** > **Software as a Service**.
-
-   :::image type="content" source="~/assets/images/first-party-license-mgt/commercial-marketplace.png" alt-text="The screenshots shows the marketplace offer page where you can select new offer.":::
-
-1. Enter **Offer ID** and **Offer alias** and select **Create**.
-
-   > [!NOTE]
-   > If you're creating an offer for testing purpose, add the text **-ISVPILOT** to the end of your offer alias. This indicates the certification team that the offer is for testing purposes. Microsoft delete offers with **-ISVPILOT** periodically. So, don't use this tag for reasons other than testing the license management capability.
-
-   :::image type="content" source="~/assets/images/first-party-license-mgt/saas.png" alt-text="The screenshots shows how to enter Offer ID and Offer alias in the Partner Center.":::
-
-1. In Offer setup page, under setup details, select the checkbox **Yes, I would like Microsoft to manage customer licenses on my behalf**.
-
-   :::image type="content" source="~/assets/images/first-party-license-mgt/saas-isvpilot.png" alt-text="The screenshots shows the offer setup page to setup license to manage for your app within Teams.":::
-
-   > [!NOTE]
-   >
-   > * This is a one-time setting and you can't change it once your offer is published. This allows the customer to manage licenses for your app within Teams.
-   > * The App manifest supports only one offer for an app. Choose an appropriate license management solution for all the plans available in your offer and you can't change this option after the offer is pushed to live.
-
-1. Select **Save draft**.
-
-1. Select **Plan overview** from the left pane, and then select **Create new plan**.
-
-   > [!NOTE]
-   > You need to add at least one plan.
-
-   :::image type="content" source="~/assets/images/first-party-license-mgt/plan-overview.png" alt-text="The screenshots shows plan overview to create a new plan for your apps in the Partner Center.":::
-
-1. Enter Plan ID and Plan name, and then select **Create**.
-
-1. Enter the **Plan name** and **Plan description**.
-
-   > [!NOTE]
-   > The plan information displays on Teams marketplace and [Appsource](https://appsource.microsoft.com/) under offer listing (plans section).
-
-   :::image type="content" source="~/assets/images/first-party-license-mgt/plan-listing.png" alt-text="The screenshots shows plan page to add plan name and plan description for your app.":::
-
-1. Select **Save draft**.
-
-1. Select **Pricing and availability** from the left pane.
-
-1. Add pricing and availability details.
-
-   :::image type="content" source="~/assets/images/first-party-license-mgt/pricing-availability.png" alt-text="The screenshots shows pricing and availability page to add SaaS offer for your app.":::
-
-1. Select **Save draft**.
-
-1. Select **Plan overview** at the top of the page to go to the listing page that shows all the plans you've created for this offer.
-
-   :::image type="content" source="~/assets/images/first-party-license-mgt/list-of-plans-created.png" alt-text="The screenshots shows plan listing page with service ID, pricing model, availability, status and action.":::
-
-1. Copy the service ID of the plan you created to integrate with Microsoft Graph Usage Rights API.
-
-### Update your Teams app
-
-Update your Teams app to map to the paid functionality and [Map your Teams app](https://aka.ms/TMTG) to your offer and publish.
-
-### Post purchase
-
-1. After activation, customer is redirected from landing page to Teams License Management.
-
-1. Upon successful completion of subscription purchase, the customer is redirected to the app landing page for subscription activation. This is the existing experience for user purchasing [monetized apps in Teams](https://aka.ms/TMTG).
-
-1. After the customer activates the subscription purchase on landing page, customer is redirected to subscriptions page in Teams via a [redirect URL](https://teams.microsoft.com/_#/subscriptionManagement) link or button that the customer selects on the publisher landing page.
-
-### Integrate with Graph Usage Right API
-
-Integrate with Graph Usage Right API to manage user permissions at the time of app launch by a customer who has a purchase license. You're required to determine the user’s permissions for the app with a Graph call to the Usage Rights API.
-
-You can call Graph APIs to determine if the currently logged in user with a valid subscription of the plan has access to your app. To call Graph UsageRight API to check user permissions, follow the steps:
-
-1. Get user OBO token: [Get access on behalf of a user - Microsoft Graph | Microsoft Docs](/graph/auth-v2-user).
-
-1. Call Graph to get user’s object ID: [Use the Microsoft Graph API - Microsoft Graph | Microsoft Docs](/graph/use-the-api).
-
-1. Call UsageRights API to determine the user has License to the plan [List user usageRights - Microsoft Graph beta | Microsoft Docs](/graph/api/user-list-usagerights?view=graph-rest-beta&tabs=http&preserve-view=true).
-
-   > [!NOTE]
-   > You need to have minimum `User.Read` permissions to call UsageRights.
-   > The UsageRights API is currently in beta version. After the version is updated to V1, ISV users should upgrade from beta to V1 version.
-
-### Check license usage in Partner Center analytics
-
-1. Sign in to [Partner Center](https://partner.microsoft.com/).
-1. In the left pane, go to **Commercial Marketplace > Analyze > Licensing**.
-1. Select **Plan and Tenant** in the reporting widget to see the month wise usage.
-
 ## Build a landing page for subscription management
 
 When someone finishes buying a subscription plan for your app in the Teams store, the commercial marketplace will direct them to your landing page where they can manage the subscription (such as assign a license to a specific user in their org).
 
-Select **No, I would prefer to manage customer licenses myself** in such cases.
-
 For complete instructions, see [build the landing page for your SaaS offer](/azure/marketplace/azure-ad-transactable-saas-landing-page).
-
-When someone finishes buying a subscription plan for your app and wants to stay in the Teams, without directing them to your landing page, select **Yes, I would like Microsoft to manage customer licenses on my behalf**.
-
-For more information, see [manage license for third party apps in Teams](#manage-license-for-third-party-apps-in-teams).
 
 ### Best practices for landing pages
 
-Consider the following approaches when building a landing page for the Teams app you’re monetizing. See an example landing page in the [end-user purchasing experience](#end-user-purchasing-experience).
+Consider the following approaches when building a landing page for the Teams app you’re monetizing. See an example landing page in the [End-user purchase experience](end-user-purchase-experience.md).
 
 * Users must be able to sign in to your landing page with the same Azure AD credentials they used to buy the subscription. For more information, see [Azure AD and transactable SaaS offers in the commercial marketplace](/azure/marketplace/azure-ad-saas).
 * Allow users to take the following actions on your landing page. Don’t forget to consider what’s appropriate for a user’s role and permissions. For example, you may want to allow only subscription admins to search for users):
@@ -260,6 +143,9 @@ You’ve published your SaaS offer, but you still must link it to your Teams app
         }
    ```
 
+> [!NOTE]
+> The `subscriptionOffer` property is supported in manifest schema version 1.10 or later.
+
 ## Publish your app
 
 You’ve created your SaaS offer and linked it to your Teams app—now it's time to publish your app to the Teams store. For complete instructions, see [publish your app to the Teams store](~/concepts/deploy-and-publish/appsource/publish.md).
@@ -271,38 +157,6 @@ You’ve created your SaaS offer and linked it to your Teams app—now it's time
 
 Once published, users will see a **Buy a subscription** option in the app details dialog when they try to add your app to Teams.
 
-## End-user purchasing experience
-
-The following example shows how users can purchase subscription plans for a fictional Teams app called *Recloud*.
-
-1. In the Teams store, find and select the *Recloud* app.
-
-1. In the app details dialog, select **Buy a subscription**.
-
-    :::image type="content" source="~/assets/images/saas-offer/buysubscriptionplan.png" alt-text="Buying the subscription for the selected app.":::
-
-1. Select your country to see subscription plans for your location.
-
-1. In the **Choose a subscription plan** dialog, choose the plan you want and select **Checkout**. (Note: Private plans are visible only to users in orgs you're providing the offer to. These plans are indicated with a **Special offer** :::image type="icon" source="~/assets/icons/special-icon.png"::: icon.)
-
-    :::image type="content" source="~/assets/images/saas-offer/choosingsubscriptionplan.png" alt-text="Selecting the appropriate subscription plan.":::
-
-1. In the **Checkout** dialog, provide any required information and select **Place order**.
-
-    :::image type="content" source="~/assets/images/saas-offer/placesubscriptionorder.png" alt-text="Placing the subscription order.":::
-
-1. When prompted, select **Set up now** to set up your subscription.
-
-    :::image type="content" source="~/assets/images/saas-offer/saas-offer-set-up.png" alt-text="Setting up the subscription.":::
-
-1. Manage your subscription plan through the *Recloud* website (also known as a [landing page](#build-a-landing-page-for-subscription-management)).
-
-    :::image type="content" source="~/assets/images/saas-offer/subscriptionlicenses.png" alt-text="Configuring user licenses.":::
-
-## Admin purchasing experience
-
-Admins can purchase app subscription plans in the [Teams admin center](/MicrosoftTeams/purchase-third-party-apps).
-
 ## Remove a SaaS offer from your app
 
 If you unlink a SaaS offer included in your Teams store listing, you must republish your app to see the change in the store.
@@ -310,11 +164,18 @@ If you unlink a SaaS offer included in your Teams store listing, you must republ
 1. Go to the [Developer Portal](https://dev.teams.microsoft.com/) and select **Apps**.
 1. On the **Apps** page, select the app you're removing the offer from.
 1. Go to the **Plans and pricing** page and select **Revert**.
-1. Once the offer's unlinked, do the following to update your store listing:
+1. After the offer is unlinked, do the following to update your store listing:
    1. Select **Distribute > Publish to the Teams store**.
    1. Select **Open Partner Center** to begin the process of republishing your app without the offer.
 
+## Code sample
+
+| **Sample name** | **Description** | **Node.js** | **Manifest**|
+|-----------------|-----------------|----------------|----------------|----------------|
+| Tab App Monetization | This is an sample tab application which shows how to open purchase dialog and trigger purchase flow using Teams JS SDK.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-app-monetization/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-app-monetization/nodejs/demo-manifest/tab-app-monetization.zip)|
+
 ## See also
 
+* [Monetize your app](monetize-overview.md)
 * [Maintaining and supporting your published app](../post-publish/overview.md)
 * [Validation guidelines for apps linked to SaaS offer](teams-store-validation-guidelines.md#apps-linked-to-saas-offer)

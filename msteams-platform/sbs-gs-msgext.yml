@@ -2,7 +2,7 @@
 title: Build your first message extension app using JavaScript
 metadata:
   title: Hello World with JavaScript
-  description: In this tutorial, you'll learn to build Hello World app with JavaScript by setting up a new project with Teams Toolkit, build and deploy message extension app.
+  description: In this tutorial, you can learn to build Hello World app with JavaScript by setting up a new project with Teams Toolkit, build and deploy message extension app.
   audience: Developer
   level: Beginner
   ms.date: 05/26/2022
@@ -15,14 +15,14 @@ items:
 - durationInMinutes: 1
   content: |
     Start Microsoft Teams app development with your first Teams app. 
-    You'll create a message extension Teams app. 
+    You can create a message extension Teams app. 
 
     Your app will have a capability, which comes with its own UI and UX:
     
     :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/your-helloworld-app.png" alt-text="Diagram showing this app has three features.":::
     
     
-    In this tutorial, you'll learn:
+    In this tutorial, you can learn:
 
     - How to set up a new project with Teams Toolkit.
     - How to build a message extension app.
@@ -32,14 +32,14 @@ items:
   durationInMinutes: 1
   content: |
 
-   Here's a list of tools you'll need for building and deploying your apps.
+   Here's a list of tools you need for building and deploying your apps.
 
    | &nbsp; | Install | For using... |
    | --- | --- | --- |
    | **Required** | &nbsp; | &nbsp; |
    | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript or TypeScript, build environments. Use latest version. |
    | &nbsp; | [Teams Toolkit](#install-the-teams-toolkit) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use version 4.0.0.|
-   | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. Use version 14 or 16.|
+   | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](toolkit/tools-prerequisites.md#nodejs-version-compatibility-table-for-project-type).|
    | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call and all in one place.|
    | &nbsp; | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
    | &nbsp; | [Microsoft 365 developer account](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | Access to Teams account with the appropriate permissions to install an app. |
@@ -69,17 +69,20 @@ items:
    # [Visual Studio Code](#tab/vscode)
 
    1. Open Visual Studio Code and select the **Extensions** view (**Ctrl+Shift+X** / **⌘⇧-X** or **View > Extensions**).
-   1. In the search box, enter **Teams Toolkit**.
+   1. In the search box, enter **Teams toolkit**.
    1. Select **Install** next to the Teams Toolkit.
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/install-toolkit-vscodeversion.png" alt-text="Illustration shows the Teams Toolkit extension installation.":::
 
-    The Teams Toolkit icon appears in the Visual Studio Code sidebar after it's installed.
+    The Teams Toolkit icon appears in the Visual Studio Code **Activity Bar** after it's installed.
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/hw-teams-toolkit-sidebar-icon.png" alt-text="Illustration shows the Teams Toolkit icon in Visual Studio Code sidebar.":::
 
    You can also find the Teams Toolkit on the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
+   > [!NOTE]
+   > The latest version of Teams Toolkit is 4.2.0.
+   
    # [Command line](#tab/cli)
 
    To install the TeamsFx CLI, use the `npm` package manager:
@@ -173,7 +176,7 @@ items:
     > Message extensions rely on bots to provide a dialog between the user and your code.
 
 
-    In this tutorial, you'll learn:
+    In this tutorial, you learn:
 
     1. [How to set up a new Message Extension project with Teams Toolkit.](#create-your-message-extension-project-workspace)
     1. [About the directory structure of your app project.](#take-a-tour-of-the-message-extension-app-source-code)
@@ -188,9 +191,9 @@ items:
     # [Visual Studio Code](#tab/vsc)
 
     1. Open Visual Studio Code.
-    1. Select the Teams Toolkit :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
+    1. Select the Teams Toolkit :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code **Activity Bar**.
 
-    1. Select **Create a new Teams app**.
+    1. Select **Create a new app**.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/create-project.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar.":::
 
@@ -222,13 +225,9 @@ items:
 
             :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/select-folder.png" alt-text="Screenshot showing how to select the folder.":::
 
-    1. Enter a suitable name for your app. Ensure that the app's name is alphanumeric. Select **Enter**.
+    1. Enter a suitable name for your app. Select **Enter**.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/enter-project-name.png" alt-text="Screenshot showing how to enter the app name.":::
-
-    1. By default, project opens in new window within 10 seconds. If you want to open in current window, select **Open in current window**.
-
-         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/new-window-notification.png" alt-text="New window notification.":::
 
         Teams Toolkit creates the app in a few seconds.
 
@@ -299,7 +298,7 @@ items:
   durationInMinutes: 1
   content: |
 
-    After you set up your project workspace with Teams Toolkit, build your project. You'll need to sign in to your Microsoft 365 account.
+    After you set up your project workspace with Teams Toolkit, build your project. You need to sign in to your Microsoft 365 account.
 
     ## Sign in to your Microsoft 365 account
 

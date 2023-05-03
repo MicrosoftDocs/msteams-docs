@@ -43,9 +43,24 @@ The next section provides a list of application permissions supported for calls 
 
 ## Add Graph permissions
 
-The Graph provides granular permissions to control the access that apps have to resources. You decide which permissions for Graph your app requests. The Graph calling APIs support application permissions, which are used by apps that run without a signed-in user present. A tenant administrator must grant consent to application permissions.
+The Graph provides granular permissions to control the access that apps have to resources. You decide which permissions for Graph your app requests. The Graph calling APIs support Resource-specific consent (RSC) permissions and application permissions.
+
+### RSC permissions for calls
+
+RSC is an authorization framework built by Teams and Microsoft identity platform that allows for granting scoped access to an app. Through RSC, an authorized user can give an app access to the data of a specific instance of a resource type.
+
+If a chat has a meeting or a call associated with it, then the relevant RSC permissions apply to those resources as well.
+
+The following table provides RSC application permissions for calls:
+
+| Permission name | Action |
+| ----- | ----- |
+| `Calls.AccessMedia.Chat` | Access media streams in calls associated with this chat or meeting. |
+| `Calls.JoinGroupCalls.Chat` | Join calls associated with this chat or meeting. |
 
 ### Application permissions for calls
+
+The application permissions for calls are used by apps that run without a signed-in user present. A tenant administrator must grant consent to application permissions.
 
 The following table provides a list of application permissions for calls:
 
@@ -87,7 +102,7 @@ You can rely on an administrator to grant the permissions your app needs at the 
 
 ## Code sample
 
-| **Sample name** | **Description** | **C#** |
+| **Sample name** | **Description** | **.NET** |
 |---------------|----------|--------|
 | Calling and meeting bot | The sample app demonstrates how Bot can create call, join meeting and transfer call. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-calling-meeting/csharp) |
 | Realtime meeting events |The sample app demonstrates how Bot can receive real-time meeting events.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp)|
@@ -103,7 +118,9 @@ Follow the [step-by-step guide](../../sbs-calling-and-meeting.yml) to set up Tea
 
 ## See also
 
-* [Incoming call notifications](~/bots/calls-and-meetings/call-notifications.md)
+* [Build bots for Teams](../what-are-bots.md)
+* [Calls and online meetings bots](calls-meetings-bots-overview.md)
 * [Develop calling and online meeting bots on your local PC](~/bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md)
-* [View app permission and grant admin consent](/MicrosoftTeams/app-permissions-admin-center)
-* [Working with the cloud communications API in Microsoft Graph](/graph/api/resources/communications-api-overview)
+* [View app permission and grant admin consent](/microsoftteams/app-permissions-admin-center)
+* [Work with the cloud communications API in Microsoft Graph](/graph/api/resources/communications-api-overview)
+* [Webhooks and connectors](../../webhooks-and-connectors/what-are-webhooks-and-connectors.md)

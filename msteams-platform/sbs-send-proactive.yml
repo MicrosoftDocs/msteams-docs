@@ -23,11 +23,11 @@ items:
 
     * Proactive hello message in chat.  
 
-      :::image type="content" source="~/assets/images/proactive-scenario/proactive-helo1.png" alt-text="Proactive Hello message":::
+      :::image type="content" source="~/assets/images/proactive-scenario/proactive-helo1.png" alt-text="Screenshot shows the Proactive Hello message in Teams chat.":::
 
     * Proactive hello message as an Adaptive Card.
     
-      :::image type="content" source="~/assets/images/proactive-scenario/proactive-helo-in-adaptive-card.png" alt-text="Proactive Hello message in adaptive card"::: 
+      :::image type="content" source="~/assets/images/proactive-scenario/proactive-helo-in-adaptive-card.png" alt-text="Screenshot shows the Proactive Hello message in Adaptive Card."::: 
 
 - title: Prerequisites 
   durationInMinutes: 2
@@ -37,7 +37,7 @@ items:
     | &nbsp; | Install | For using... |
      | --- | --- | --- |
      | **Required** | &nbsp; | &nbsp; |
-     | &nbsp; | [Visual Studio 2022 version 17.3](https://visualstudio.microsoft.com)<br> Install one of the following two workloads:<br> • ASP.NET and web development <br> • .NET Core cross-platform development | You can install the enterprise version in Visual Studio 2022, and install the workloads. |
+     | &nbsp; | [Visual Studio 2022 version 17.3](https://visualstudio.microsoft.com)<br> Install the <br> ASP.NET and web development workload. | You can install the enterprise version in Visual Studio 2022, and install the workloads. |
      | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots, message extensions, and incoming webhooks) require inbound connections. A tunnel connects your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
      | &nbsp; | [Microsoft 365 developer account](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | Access to Teams account with the appropriate permissions to install an app. |
      | &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and distribute your Teams app including to your organization or the Teams store. |
@@ -45,11 +45,11 @@ items:
 - title: Set up local environment
   durationInMinutes: 3
   content: |
-    1.	Download the [sample code](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/assets/downloads/SendProactiveMessages.zip) (Zip file) and extract the files.
+    1.	Download the [sample code](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/assets/downloads/SendProactiveMessages.zip) (.zip file) and extract the files.
     1.	Go to the extracted files and double-click **ProactiveBot.csproj**. The solution opens in Visual Studio.
     1.	In Visual Studio, right-click the project (**ProactiveBot**) and select **Build** to build the solution.
 
-        :::image type="content" source="~/assets/images/proactive-scenario/proactivebot-project1.png" alt-text="Proactive Bot Project":::
+        :::image type="content" source="~/assets/images/proactive-scenario/proactivebot-project1.png" alt-text="Screenshot shows the Proactive Bot Project in Visual Studio and with the Build highlighted in red.":::
 
         <br>
 
@@ -80,17 +80,17 @@ items:
         
     1. From ngrok, copy the HTTPS URL. 
 
-        :::image type="content" source="~/assets/images/proactive-scenario/ngrok-base-url1.png" alt-text="ngrok base URL."lightbox="~/assets/images/proactive-scenario/ngrok-base-url1.png":::   
+        :::image type="content" source="~/assets/images/proactive-scenario/ngrok-base-url1.png" alt-text="Screenshot shows the ngrok base URL highlighted in red."lightbox="~/assets/images/proactive-scenario/ngrok-base-url1.png":::   
 
 - title: Enable developer preview
   durationInMinutes: 1
   content: |
     1. Enable uploading of apps in the admin console of your tenant.
         1. Sign in to [Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) with your admin credentials.
-        1. In the left panel, select **Show All**.
+        1. In the left pane, select **Show All**.
         1. Select **Teams**.
     
-           :::image type="content" source="./assets/images/meeting-token-generator/meeting-token-generator-admincenter_1.png" alt-text="Admin center menu" border="true":::
+           :::image type="content" source="./assets/images/meeting-token-generator/meeting-token-generator-admincenter_1.png" alt-text="Screenshot shows the Admin centers menu with Teams highlighted in red." border="true":::
 
 - title: Create and install Teams app
   durationInMinutes: 5
@@ -99,45 +99,57 @@ items:
 
        The following page appears:
 
-       :::image type="content" source="~/assets/images/proactive-scenario/developer-portal-intro.png" alt-text="Developer Portal Introduction":::
+       :::image type="content" source="~/assets/images/proactive-scenario/developer-portal-intro.png" alt-text="Screenshot shows the Developer Portal Home page.":::
  
     1. Select **Apps** > **Import app**.
 
-        :::image type="content" source="~/assets/images/proactive-scenario/upload-app-package.png" alt-text="Select-upload package":::  
+        :::image type="content" source="~/assets/images/proactive-scenario/upload-app-package.png" alt-text="Screenshot shows how to upload an app package. The Apps option in the left pane and Import app are highlighted in red.":::  
 
     1. Select **AppManifest** and select **Open**.
 
-        :::image type="content" source="~/assets/images/proactive-scenario/select-app-package.png" alt-text="Select App package":::
+        :::image type="content" source="~/assets/images/proactive-scenario/select-app-package.png" alt-text="Screenshot shows the SendProactiveMessages folder where AppManifest zip folder is selected and the Open option highlighted in red.":::
 
     1. Select **Import**.
 
-         :::image type="content" source="~/assets/images/proactive-scenario/select-import.png" alt-text="Select Import":::
+         :::image type="content" source="~/assets/images/proactive-scenario/select-import.png" alt-text="Screenshot shows the App package has errors screen with Import option highlighted in red.":::
 
         The following page appears:
 
-         :::image type="content" source="~/assets/images/proactive-scenario/proactive-message.png" alt-text="Proactive Message."lightbox="~/assets/images/proactive-scenario/proactive-message.png"::: 
-
-    1. Select **App Features** > **Bot**.
+         :::image type="content" source="~/assets/images/proactive-scenario/proactive-message.png" alt-text="Screenshot shows the Basic information screen of Proactive Message in Developer Portal."lightbox="~/assets/images/proactive-scenario/proactive-message.png"::: 
     
-        :::image type="content" source="~/assets/images/proactive-scenario/select-app-features.png" alt-text="Select App Features":::
+         An **App ID** is automatically generated by Microsoft for your app and is available under **Basic information**..
+
+    1. Under **Descriptions**, add the **Short description** and **Long description** for your app.
+
+    1. Under **Developer information**, add developer or company name and in **Website (must be a valid HTTPS URL)** give your ngrok HTTPS URL.
+
+    1. Under **App URLs**, update the **Privacy policy** to `https://<yourngrokurl>/privacy` and **Terms of use** to `https://<yourngrokurl>/termsofuse`.
+
+    1. Select **Save**.
+
+    1. Under **Domains**, select **Add a domain** and enter your ngrok URL without the HTTPS prefix `<yourngrokurl>.ngrok.io`.
+    
+    1. Select **App features** > **Bot**.
+    
+        :::image type="content" source="~/assets/images/proactive-scenario/select-app-features.png" alt-text="Screenshot shows App features screen of Proactive Message. The App features option under Configure and Bot options are highlighted in red.":::
 
     1. Select **Create a new bot**.
 
-        :::image type="content" source="~/assets/images/proactive-scenario/select-bot.png" alt-text="Select bot":::     
+        :::image type="content" source="~/assets/images/proactive-scenario/select-bot.png" alt-text="Screenshot shows the Select an existing bot option with the Create a new bot option highlighted in red.":::     
         
     1. Select **New Bot**. 
     
-        :::image type="content" source="~/assets/images/proactive-scenario/create-new-bot.png" alt-text="Create new bot":::
+        :::image type="content" source="~/assets/images/proactive-scenario/create-new-bot.png" alt-text="Screenshot of Azure Portal with the New Bot option highlighted in red.":::
 
         The **Add bot** window appears.
 
     1. Enter **Proactive Message bot** and select **Add**.
 
-         :::image type="content" source="~/assets/images/proactive-scenario/enter-proactive-message.png" alt-text="Enter Proactive Message":::
+         :::image type="content" source="~/assets/images/proactive-scenario/enter-proactive-message.png" alt-text="Screenshot of Add bot screen with Add option highlighted in red.":::
 
-        Now the Bot Proactive Message bot is successfully added to the application. You can see the **Bot Name** and **Bot ID**.
+        Now the Bot, Proactive Message bot, is successfully added to the application. You can see the **Bot Name** and **Bot ID**.
 
-         :::image type="content" source="~/assets/images/proactive-scenario/bot-name.png" alt-text="Bot Name and ID":::
+         :::image type="content" source="~/assets/images/proactive-scenario/bot-name.png" alt-text="Screenshot of Bot management screen that shows Proactive Message bot added successfully message and the Bot Name and ID.":::
 
        > [!TIP]
        > Save the **Bot ID** for future reference.
@@ -148,75 +160,75 @@ items:
 
     1. Select **Configure** and set the **Endpoint address** in the form of `https://your ngrok/api/messages`.
 
-        :::image type="content" source="~/assets/images/proactive-scenario/select-configure.png" alt-text="Select Configure":::
+        :::image type="content" source="~/assets/images/proactive-scenario/select-configure.png" alt-text="Screenshot of Proactive Message bot with Save option under Configure highlighted in red.":::
 
     1. Select **Client secrets** > **Add a client secret for your bot**.
 
-        :::image type="content" source="~/assets/images/proactive-scenario/secret.png" alt-text="Select Secret":::
+        :::image type="content" source="~/assets/images/proactive-scenario/secret.png" alt-text="Screenshot of Proactive Message bot with Client secrets in the left pane and Add a client secret for your bot highlighted in red.":::
 
     1. The **New client secret generated** window appears and select **OK**.    
 
-        :::image type="content" source="~/assets/images/proactive-scenario/new-secret.png" alt-text="New Secret":::
+        :::image type="content" source="~/assets/images/proactive-scenario/new-secret.png" alt-text="Screenshot shows the New client secret generated window with copy to clipboard icon and OK button highlighted in red.":::
 
         > [!TIP]
         > Save the **New client secret** value for future reference.
 
     1. Select the Apps :::image type="icon" source="~/assets/images/proactive-scenario/apps-icon.png"::: icon and select **Proactive Message Demo**.
 
-         :::image type="content" source="~/assets/images/proactive-scenario/select-apps.png" alt-text="Select Apps":::
+         :::image type="content" source="~/assets/images/proactive-scenario/select-apps.png" alt-text="Screenshot shows the Apps screen with Apps icon in the left pane and Proactive Message Demo highlighted in red.":::
 
         The following page appears:
 
-         :::image type="content" source="~/assets/images/proactive-scenario/overview-page.png" alt-text="Overview page":::
+         :::image type="content" source="~/assets/images/proactive-scenario/overview-page.png" alt-text="Screenshot shows the Overview page of your app in Developer Portal.":::
 
     1. Select **App Features** under **Configure** and select **Bot**.
 
-         :::image type="content" source="~/assets/images/proactive-scenario/select-app-features1.png" alt-text="Select app features":::
+         :::image type="content" source="~/assets/images/proactive-scenario/select-app-features1.png" alt-text="Screenshot shows App features screen of Proactive Message. The App features option under Configure and Bot options are highlighted in red.":::
 
     1. Select **Proactive Message bot** from the **Select an existing bot** dropdown.
 
-         :::image type="content" source="~/assets/images/proactive-scenario/select-send-proactive-message.png" alt-text="Select send proactive messages":::
+         :::image type="content" source="~/assets/images/proactive-scenario/select-send-proactive-message.png" alt-text="Screenshot of Identify your bot that shows the selection of Select an existing bot option.":::
 
     1. Select **Personal** > **Save**.
 
-        :::image type="content" source="~/assets/images/proactive-scenario/select-personal.png" alt-text="Select personal":::
+        :::image type="content" source="~/assets/images/proactive-scenario/select-personal.png" alt-text="Screenshot shows the selection of scope and the Save option highlighted in red.":::
 
     1. Open the **appsettings.json** file in Visual Studio and update the following information:
 
         * Set **MicrosoftAppID** to your bot ID.
         * Set **MicrosoftAppPassword** to your client secret ID value.
 
-       :::image type="content" source="~/assets/images/proactive-scenario/appsettings.png" alt-text="App Settings file":::
+       :::image type="content" source="~/assets/images/proactive-scenario/appsettings.png" alt-text="Screenshot of appsettings.json file with Microsoft App ID and Password information entered.":::
 
     1. Select **Debug** > **Start Debugging**.
 
-        :::image type="content" source="~/assets/images/proactive-scenario/debug.png" alt-text="Select Debug":::
+        :::image type="content" source="~/assets/images/proactive-scenario/debug.png" alt-text="Screenshot of Debug dropdown menu with Start Debugging option highlighted in red.":::
 
        The corresponding proactive message sample appears:
 
-        :::image type="content" source="~/assets/images/proactive-scenario/proactive-confirm.png" alt-text="Proactive Confirm":::
+        :::image type="content" source="~/assets/images/proactive-scenario/proactive-confirm.png" alt-text="Screenshot shows your bot is ready in browser.":::
 
     1. Go back to Developer Portal, select **Preview in Teams**.
         
-        :::image type="content" source="~/assets/images/proactive-scenario/preview-teams.png" alt-text="Preview Teams":::
+        :::image type="content" source="~/assets/images/proactive-scenario/preview-teams.png" alt-text="Screenshot shows Preview in Teams option highlighted in red.":::
 
     1. Select **Add**.
 
-        :::image type="content" source="~/assets/images/proactive-scenario/select-add.png" alt-text="Select Add":::
+        :::image type="content" source="~/assets/images/proactive-scenario/select-add.png" alt-text="Screenshot shows Proactive Message bot in Teams with Add option highlighted in red.":::
 
        The following page appears.
 
-        :::image type="content" source="~/assets/images/proactive-scenario/teams-open1.png" alt-text="Teams Open":::
+        :::image type="content" source="~/assets/images/proactive-scenario/teams-open1.png" alt-text="Screenshot shows Proactive Message bot in your Teams.":::
 
-       Open the browser.
+    1. Open the browser.
 
     1. Copy and paste the `http://localhost:3978/api/notify` URL in browser to get a proactive hello message in the chat.
 
-        :::image type="content" source="~/assets/images/proactive-scenario/url-paste.png" alt-text="URL Paste":::
+        :::image type="content" source="~/assets/images/proactive-scenario/url-paste.png" alt-text="Screenshot shows the URL in browser to get a proactive hello message in the chat.":::
 
     1. Go to Teams. You receive a proactive hello message from the bot when installation is successful.
 
-        :::image type="content" source="~/assets/images/proactive-scenario/proactive-reply.png" alt-text="Proactive reply":::
+        :::image type="content" source="~/assets/images/proactive-scenario/proactive-reply.png" alt-text="Screenshot shows the proactive message reply.":::
     
 
 - title: Add Adaptive Card to proactive message
@@ -224,24 +236,24 @@ items:
   content: |
     1. In Visual Studio, stop the debugging process.
 
-        :::image type="content" source="~/assets/images/proactive-scenario/stop-debugging.png" alt-text="Stop Debugging":::
+        :::image type="content" source="~/assets/images/proactive-scenario/stop-debugging.png" alt-text="Screenshot shows stop debug icon highlighted in red.":::
 
     1. Right-click **Dependencies**, select **Manage NuGet Packages**.
 
-        :::image type="content" source="~/assets/images/proactive-scenario/dependencies.png" alt-text="Proactive Dependencies":::
+        :::image type="content" source="~/assets/images/proactive-scenario/dependencies.png" alt-text="Screenshot shows Solution screen. The menu item titled Manage NuGet Packages under Dependencies highlighted in red.":::
 
     1. In **NuGet ProactiveBot**, select **Browse** and search for **AdaptiveCards**. 
     1. Select **Install**. 
 
-        :::image type="content" source="~/assets/images/proactive-scenario/select-adaptive cards.png" alt-text="select Adaptive Cards":::
+        :::image type="content" source="~/assets/images/proactive-scenario/select-adaptive cards.png" alt-text="Screenshot shows the NuGet: Proactive Bot screen with Adaptive Cards option and Install highlighted in red.":::
 
     1. In **Preview changes** window, select **OK**.
 
-        :::image type="content" source="~/assets/images/proactive-scenario/select-ok.png" alt-text="select Ok":::
+        :::image type="content" source="~/assets/images/proactive-scenario/select-ok.png" alt-text="Screenshot shows the preview changes window with the OK option highlighted in red.":::
 
     1. Open the **NotifyController.cs** file under **Controllers**.
 
-        :::image type="content" source="~/assets/images/proactive-scenario/select-notify.png" alt-text="Select Notify":::
+        :::image type="content" source="~/assets/images/proactive-scenario/select-notify.png" alt-text="Screenshot shows how to select notifycontroller.cs under Controllers folder highlighted in red.":::
 
     1. Replace the existing `BotCallback` code with the following code to send the Adaptive Card message:     
         
@@ -275,7 +287,7 @@ items:
 
        The corresponding proactive message sample appears:
 
-        :::image type="content" source="~/assets/images/proactive-scenario/proactive-confirm.png" alt-text="Proactive Confirm":::
+        :::image type="content" source="~/assets/images/proactive-scenario/proactive-confirm.png" alt-text="Screenshot shows that your Proactive Message bot is ready.":::
 
     1. Go to Teams and uninstall your app. 
 
@@ -288,7 +300,7 @@ items:
   content: |
     Did you come up with something like this? This is how the proactive hello message in Adaptive Card appears:
     
-    :::image type="content" source="~/assets/images/proactive-scenario/proactive-helo-in-adaptive-card.png" alt-text="Proactive Hello message in adaptive card":::
+    :::image type="content" source="~/assets/images/proactive-scenario/proactive-helo-in-adaptive-card.png" alt-text="Screenshot shows the Proactive Hello message in adaptive card.":::
 
 - content: |
     You've completed the scenario.

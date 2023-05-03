@@ -1,7 +1,7 @@
 ---
 title: Meeting apps APIs
 author: v-sdhakshina
-description: In this article, learn meeting apps API references that are available for Teams client and Bot Framework SDK's with examples, code samples, and response codes.
+description: Learn meeting apps API references that are available for Teams client and Bot Framework SDKs with examples, code samples, and response codes.
 ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
@@ -17,21 +17,21 @@ The meeting extensibility provides APIs to enhance meeting experience. You can p
 * Select required APIs to improve the meeting experience.
 
 > [!NOTE]
-> Use Teams [JavaScript SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) (*Version*: 1.10 and later) for SSO to work in meeting side panel.
+> Use the [Microsoft Teams JavaScript client library (TeamsJS)](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) (*Version*: 1.10 and later) for single sign-on (SSO) to work in meeting side panel.
 
 The following table provides a list of APIs available across the Microsoft Teams JavaScript library and Microsoft Bot Framework SDKs:
 
 |Method| Description| Source|
 |---|---|----|
-|[**Get user context**](#get-user-context-api)| Get contextual information to display relevant content in a Microsoft Teams tab.| [Microsoft Teams JavaScript library SDK](/microsoftteams/platform/tabs/how-to/access-teams-context#get-context-by-using-the-microsoft-teams-javascript-library) |
+|[**Get user context**](#get-user-context-api)| Get contextual information to display relevant content in a Microsoft Teams tab.| [TeamsJS library](/microsoftteams/platform/tabs/how-to/access-teams-context#get-context-by-using-the-microsoft-teams-javascript-library) |
 |[**Get participant**](#get-participant-api)| Fetch participant information by meeting ID and participant ID. | [Microsoft Bot Framework SDK](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetingparticipantasync?view=botbuilder-dotnet-stable&preserve-view=true)
-|[**Send in-meeting notification**](#send-an-in-meeting-notification)| Provide meeting signals using the existing conversation notification API for user-bot chat and allows to notify user action that shows an in-meeting notification. | [Microsoft Bot Framework SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityextensions.teamsnotifyuser?view=botbuilder-dotnet-stable&preserve-view=true) |
+|[**Send in-meeting notification**](#send-an-in-meeting-notification)| Provides meeting signals using the existing conversation notification API for user-bot chat and allows to notify user action that shows an in-meeting notification. | [Microsoft Bot Framework SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityextensions.teamsnotifyuser?view=botbuilder-dotnet-stable&preserve-view=true) |
 |[**Get meeting details**](#get-meeting-details-api)| Get a meeting's static metadata. | [Microsoft Bot Framework SDK](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetinginfoasync?view=botbuilder-dotnet-stable&preserve-view=true) |
-|[**Send real-time captions**](#send-real-time-captions-api)| Send real-time captions to an ongoing meeting. | [Microsoft Teams JavaScript library SDK](/azure/cognitive-services/speech-service/speech-sdk?tabs=nodejs%2Cubuntu%2Cios-xcode%2Cmac-xcode%2Candroid-studio#get-the-speech-sdk&preserve-view=true) |
-|[**Share app content to stage**](build-apps-for-teams-meeting-stage.md#share-app-content-to-stage-api)| Share specific parts of the app to meeting stage from the app side panel in a meeting. | [Microsoft Teams JavaScript library SDK](/javascript/api/@microsoft/teams-js/meeting) |
+|[**Send real-time captions**](#send-real-time-captions-api)| Send real-time captions to an ongoing meeting. | [TeamsJS library](/azure/cognitive-services/speech-service/speech-sdk?tabs=nodejs%2Cubuntu%2Cios-xcode%2Cmac-xcode%2Candroid-studio#get-the-speech-sdk&preserve-view=true) |
+|[**Share app content to stage**](build-apps-for-teams-meeting-stage.md#share-app-content-to-stage-api)| Share specific parts of the app to meeting stage from the app side panel in a meeting. | [TeamsJS library](/javascript/api/@microsoft/teams-js/meeting) |
 |[**Get real-time Teams meeting events**](#get-real-time-teams-meeting-events-api)|Fetch real-time meeting events, such as actual start and end time.| [Microsoft Bot Framework SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingstartasync?view=botbuilder-dotnet-stable&preserve-view=true) |
-| [**Get incoming audio state**](#get-incoming-audio-state) | Allows an app to get the incoming audio state setting for the meeting user.| [Microsoft Teams JavaScript library SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
-| [**Toggle incoming audio**](#toggle-incoming-audio) | Allows an app to toggle the incoming audio state setting for the meeting user from mute to unmute or vice-versa.| [Microsoft Teams JavaScript library SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
+| [**Get incoming audio state**](#get-incoming-audio-state) | Allows an app to get the incoming audio state setting for the meeting user.| [TeamsJS library](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
+| [**Toggle incoming audio**](#toggle-incoming-audio) | Allows an app to toggle the incoming audio state setting for the meeting user from mute to unmute or vice-versa.| [TeamsJS library](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
 
 ## Get user context API
 
@@ -43,7 +43,7 @@ The `GetParticipant` API must have a bot registration and ID to generate auth to
 
 > [!NOTE]
 >
-> * The user type is not included in the **getParticipantRole** API.
+> * The user type isn't included in the **getParticipantRole** API.
 > * Do not cache participant roles since the meeting organizer can change the roles any time.
 > * Currently, the `GetParticipant` API is only supported for distributions lists or rosters with less than 350 participants.
 
@@ -52,45 +52,60 @@ The `GetParticipant` API must have a bot registration and ID to generate auth to
 > [!TIP]
 > Get participant IDs and tenant IDs from the [tab SSO authentication](../tabs/how-to/authentication/tab-sso-overview.md).
 
-The `Meeting` API must have `meetingId`, `participantId`, and `tenantId` as URL parameters. The parameters are available as part of the Teams Client SDK and bot activity.
+The `Meeting` API must have `meetingId`, `participantId`, and `tenantId` as URL parameters. The parameters are available as part of the Microsoft Teams JavaScript client library (TeamsJS) library and bot activity.
 
 The following table includes the query parameters:
 
 |Value|Type|Required|Description|
 |---|---|----|---|
-|**meetingId**| String | Yes | The meeting identifier is available through Bot Invoke and Teams Client SDK.|
-|**participantId**| String | Yes | The participant ID is the user ID. It's available in Tab SSO, Bot Invoke, and Teams Client SDK. It's recommended to get a participant ID from the Tab SSO. |
-|**tenantId**| String | Yes | The tenant ID is required for the tenant users. It's available in Tab SSO, Bot Invoke, and Teams Client SDK. It's recommended to get a tenant ID from the Tab SSO. |
+|**meetingId**| String | Yes | The meeting identifier is available through Bot Invoke and TeamsJS library. |
+|**participantId**| String | Yes | The participant ID is the user ID. It's available in Tab SSO, Bot Invoke, and TeamsJS library. It's recommended to get a participant ID from the Tab SSO. |
+|**tenantId**| String | Yes | The tenant ID is required for the tenant users. It's available in Tab SSO, Bot Invoke, and TeamsJS library. It's recommended to get a tenant ID from the Tab SSO. |
 
 ### Example
 
 # [C#](#tab/dotnet)
 
+* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetingparticipantasync?view=botbuilder-dotnet-stable&preserve-view=true)  
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-context-app/csharp/MeetingContextApp/Bots/MeetingContextBot.cs#L33)
+
 ```csharp
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
 {
+  // Gets the details for the given meeting participant. 
+  // This only works in Teams meeting scoped conversations.
   TeamsMeetingParticipant participant = await TeamsInfo.GetMeetingParticipantAsync(turnContext, "yourMeetingId", "yourParticipantId", "yourParticipantTenantId").ConfigureAwait(false);
   TeamsChannelAccount member = participant.User;
   MeetingParticipantInfo meetingInfo = participant.Meeting;
   ConversationAccount conversation = participant.Conversation;
 
+  // Sends a message activity to the sender of the incoming activity. 
   await turnContext.SendActivityAsync(MessageFactory.Text($"The participant role is: {meetingInfo.Role}"), cancellationToken);
 }
 ```
 
 # [JavaScript](#tab/javascript)
 
+* [SDK reference](/javascript/api/botbuilder/teamsinfo?view=botbuilder-ts-latest#botbuilder-teamsinfo-getmeetingparticipant&preserve-view=true)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-token-app/nodejs/server/bot/botActivityHandler.js#L30)
+
 ```typescript
 export class MyBot extends TeamsActivityHandler {
     constructor() {
         super();
         this.onMessage(async (context, next) => {
+
+            // getMeetingParticipant : Gets the details for the given meeting participant. 
+            // This only works in Teams meeting scoped conversations.
             TeamsMeetingParticipant participant = getMeetingParticipant(turnContext, "yourMeetingId", "yourParticipantId", "yourTenantId");
             let member = participant.user;
             let meetingInfo = participant.meeting;
             let conversation = participant.conversation;
-            
+
+            // Sends a message activity to the sender of the incoming activity. 
             await context.sendActivity(`The participant role is: '${meetingInfo.role}'`);
+
+            // By calling next() you ensure that the next BotHandler is run.
             await next();
         });
     }
@@ -161,10 +176,11 @@ The following table provides the response codes:
 
 All users in a meeting receive the notifications sent through in-meeting notification payload. In-meeting notification payload triggers an in-meeting notification and enables you to provide meeting signals that are delivered using the existing conversation notification API for user-bot chat. You can send an in-meeting notification based on user action. The payload is available through Bot Services.
 
+You can also send targeted in-meeting notification to a specific participant in a meeting. For more information, see [Targeted in-meeting notification](in-meeting-notification-for-meeting.md#targeted-in-meeting-notification).
+
 > [!NOTE]
 >
 > * When an in-meeting notification is invoked, the content is presented as a chat message.
-> * Currently, sending targeted notifications and support for webapp are not supported.
 > * You must invoke the [submitTask()](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-task-module) function to dismiss automatically after a user takes an action in the web view. This is a requirement for app submission. For more information, see [Teams SDK task module](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true).
 > * If you want your app to support anonymous users, initial invoke request payload must rely on `from.id` request metadata in `from` object, not `from.aadObjectId` request metadata. `from.id` is the user ID and `from.aadObjectId` is the Microsoft Azure Active Directory (Azure AD) ID of the user. For more information, see [using task modules in tabs](../task-modules-and-cards/task-modules/task-modules-tabs.md) and [create and send the task module](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
 
@@ -178,7 +194,7 @@ The following table includes the query parameter:
 
 ### Examples
 
-The `Bot ID` is declared in the manifest and the bot receives a result object.
+`Bot ID` is declared in the manifest and the bot receives a result object.
 
 > [!NOTE]
 >
@@ -188,15 +204,27 @@ The `Bot ID` is declared in the manifest and the bot receives a result object.
 
 # [C#](#tab/dotnet)
 
+* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityextensions.teamsnotifyuser?view=botbuilder-dotnet-stable#microsoft-bot-builder-teams-teamsactivityextensions-teamsnotifyuser(microsoft-bot-schema-iactivity)&preserve-view=true)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-proactive-messaging/csharp/proactive-cmd/Program.cs#L178)
+
 ```csharp
+// Specifies the type of text data in a message attachment.
 Activity activity = MessageFactory.Text("This is a meeting signal test");
+
+// Configures the current activity to generate a notification within Teams.
 activity.TeamsNotifyUser(true, "https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID");
+
+// Sends a message activity to the sender of the incoming activity. 
 await turnContext.SendActivityAsync(activity).ConfigureAwait(false);
 ```
 
 # [JavaScript](#tab/javascript)
 
+* [SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#botbuilder-core-turncontext-sendactivity&preserve-view=true)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L74)
+
 ```javascript
+// MessageFactory.text(): Specifies the type of text data in a message attachment.
 const replyActivity = MessageFactory.text('Hi'); // this could be an adaptive card instead
 replyActivity.channelData = {
     notification: {
@@ -204,6 +232,8 @@ replyActivity.channelData = {
         externalResourceUrl: 'https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID’
     }
 };
+
+// Sends a message activity to the sender of the incoming activity.
 await context.sendActivity(replyActivity);
 ```
 
@@ -214,7 +244,7 @@ POST /v3/conversations/{conversationId}/activities
 ```
 
 ```json
-
+// In-meeting notification response
 {
     "type": "message",
     "text": "John Phillips assigned you a weekly todo",
@@ -239,8 +269,8 @@ POST /v3/conversations/{conversationId}/activities
 | **channelData.notification.alertInMeeting** | Boolean indicating if a notification is to be shown to the user while in a meeting. |
 | **channelData.notification.externalResourceUrl** | The value of the notification's external resource URL.|
 | **replyToId** | The ID of the parent or root message of the thread. |
-| **APP_ID** | App Id declared in manifest. |
-| **completionBotId** | Bot app Id |
+| **APP_ID** | App ID declared in manifest. |
+| **completionBotId** | Bot app ID. |
 
 ### Response codes
 
@@ -252,6 +282,148 @@ The following table includes the response codes:
 | **401** | The app responds with an invalid token. |
 | **403** | The app is unable to send the signal. 403 response code can occur because of various reasons, such as the tenant admin disables and blocks the app during live site migration. In this case, the payload contains a detailed error message. |
 | **404** | The meeting chat doesn't exist. |
+
+## Targeted meeting notification API
+
+The `targetedMeetingNotification` API allows apps to send targeted in-meeting notifications to specific participants in a meeting. Apps send targeted in-meeting notifications based on user action. The API is available through bot API.
+
+### Prerequisite
+
+You must configure your app manifest with [RSC permissions](../graph-api/rsc/resource-specific-consent.md) under the `webApplicationInfo` property to send targeted in-meeting notifications to specific participants in a meeting. Use the following examples to configure your manifest:
+
+<br>
+
+<details>
+
+<summary><b>For app manifest version 1.12 and later</b></summary>
+
+```json
+"webApplicationInfo": {
+    "id": "<<MICROSOFT-APP-ID>>",
+    "resource": "https://RscBasedStoreApp"  },
+  "authorization": {
+    "permissions": {
+      "resourceSpecific": [
+            {
+                "name": "OnlineMeetingNotification.Send.Chat",
+                "type": "Application"
+            }
+        ]    
+    }
+}
+ ```
+
+<br>
+
+</details>
+
+<br>
+
+<details>
+
+<summary><b>For app manifest version 1.11 and earlier</b></summary>
+
+```json
+"webApplicationInfo": {
+    "id": "<<MICROSOFT-APP-ID>>",
+    "resource": "https://RscBasedStoreApp",
+    "applicationPermissions": [
+      "OnlineMeetingNotification.Send.Chat"
+    ]
+}
+ ```
+
+<br>
+
+</details>
+
+> [!NOTE]
+>
+> * The API payload only permits a task module with a URL.
+> * The user ID formats **aadObjectid** and **UPN** aren't supported.
+
+Get supported user ID format for targeted in-meeting notification:
+
+* [Get participant API](#get-participant-api)
+* [Get members API](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile)
+
+### Example
+
+Following is an example of request payload for targeted in-meeting notification:
+
+```http
+POST /v1/meetings/{meetingId}/notification
+```
+
+```json
+{
+
+  "type": "targetedMeetingNotification",
+  "value": {
+    "recipients": [ 
+"29:1I12M_iy2wTa97T6LbjTh4rJCWrtw2PZ3lxpD3yFv8j2YPnweY2lpCPPAn3RI0PP7rghfHauUz48I1t7ANhj4CA"
+     ], 
+    "surfaces": [ 
+      { 
+        "surface": "meetingStage", 
+        "contentType": "task", 
+        "content": { 
+          "value": { 
+            "height": "300", 
+            "width": "400", 
+            "title": "Targeted meeting Notification", 
+            "url": "https://somevalidurl.com"           
+}
+        } 
+      } 
+    ] 
+  },
+  "channelData": { // optional if a developer doesn't want to support user attributes.
+    "onBehalfOf": [ 
+      { 
+        "itemid": 0, 
+        "mentionType": "person", 
+        "mri": "29:1mDOCfGM9825lMHlwP8NjIVMJeQAbN-ojYBT5VzQfPpnst1IFQeYB1QXC8Zupn2RhgfLIW27HmynQk-4bdx_YhA", 
+        "displayName": "yunny chung"      } 
+    ] 
+  }
+}
+```
+
+| Property name | Description |
+|---|---|
+| `meetingId` | The meeting ID is available through bot invoke and TeamsJS library. |
+| `type` |`targetedMeetingNotification` |
+| `recipients` | List of user IDs. Get user IDs for meeting participants through [Get participant API](#get-participant-api). Get the entire list of chat roster using [Get members API](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile). Empty or null recipients list will return 400.|
+| `surface` | A type of surface. The supported surface type is `meetingStage`. |
+| `surfaces` | List of surfaces where notifications can be rendered. |
+| `contentType` | Type of content that the targeted in-meeting notification renders. The supported value is `task`. |
+| `content` | [TaskModuleContinueResponse](/dotnet/api/microsoft.bot.schema.teams.taskmodulecontinueresponse?view=botbuilder-dotnet-stable&preserve-view=true) |
+| `content.value.height` | **Optional**; requested height of the notification. |
+|`content.value.width` | **Optional**; requested width of the notification. |
+| `content.value.title` | **Optional**; title of the notification. |
+| `content.value.url` | **Optional**; URL to be rendered in the notification. Make sure the URL is part of `validDomains` in app manifest. If empty string or no URL is provided, nothing will be rendered on a meeting notification. |
+| `ChannelData.OnBehalfOf` | **Optional**; this is to support [User attributes](../messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md#user-attribution-for-bots-messages). |
+| `onBehalfOf.itemid` | Describes identification of the item. Its value must be 0. |
+| `onBehalfOf.mentionType` |`person` keyword. Describes the mention of a person. |
+| `onBehalfOf.mri` | User MRI shown as sender. |
+| `onBehalfOf.displayName` | **Optional**; name of the `person`. Used as fallback in case the name resolution is unavailable. |
+
+> [!NOTE]
+> If you provide an invalid input, the API returns the status code 400.
+
+### Response code
+
+The following table includes the response codes:
+
+| Response code | Description |
+|---|---|
+| **202** | Notification is successfully sent. |
+| **207** | Notifications are sent only to a few participants. |
+| **400** | Meeting notification request payload validation failed. |
+| **401** | Bot token is invalid. |
+| **403** | Bot isn't allowed to send the notification. |
+| **404** | Meeting chat isn't found or none of the participants were found in the roster. |
 
 ## Get meeting details API
 
@@ -356,14 +528,20 @@ The following table lists the query parameter:
 
 |Value|Type|Required|Description|
 |---|---|----|---|
-|**meetingId**| String | Yes | The meeting identifier is available through Bot Invoke and Teams Client SDK. |
+|**meetingId**| String | Yes | The meeting identifier is available through Bot Invoke and the TeamsJS library.|
 
 ### Example
 
 # [C#](#tab/dotnet)
 
+* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetinginfoasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-teams-teamsinfo-getmeetinginfoasync(microsoft-bot-builder-iturncontext-system-string-system-threading-cancellationtoken)&preserve-view=true)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/graph-meeting-notification/csharp/MeetingNotification/Bots/MeetingNotificationBot.cs#L56)
+
 ```csharp
+// Gets the information for the given meeting id.
 MeetingInfo result = await TeamsInfo.GetMeetingInfoAsync(turnContext);
+
+// Sends a message activity to the sender of the incoming activity. 
 await turnContext.SendActivityAsync(JsonConvert.SerializeObject(result));
 ```
 
@@ -533,9 +711,9 @@ The JSON response body for Meeting Details API is as follows:
 
 In case of Recurring meeting type,
 
-**startDate**: Specifies the date to start applying the pattern. The value of startDate must correspond to the date value of the start property on the event resource. Note that the first occurrence of the meeting may not occur on this date if it doesn't fit the pattern.
+**startDate**: Specifies the date to start applying the pattern. The value of startDate must correspond to the date value of the start property on the event resource. The first occurrence of the meeting might not occur on this date if it doesn't fit the pattern.
 
-**endDate**: Specifies the date to stop applying the pattern. Note that the last occurrence of the meeting may not occur on this date if it doesn't fit the pattern.
+**endDate**: Specifies the date to stop applying the pattern. The last occurrence of the meeting might not occur on this date if it doesn't fit the pattern.
 
 ## Send real-time captions API
 
@@ -551,7 +729,7 @@ The CART URL includes the following query parameters:
 
 |Value|Type|Required|Description|
 |---|---|----|----|
-|**meetingId**| String | Yes |The meeting identifier is available through Bot Invoke and Teams Client SDK. <br/>For example, meetingid=%7b%22tId%22%3a%2272f234bf-86f1-41af-91ab-2d7cd0321b47%22%2c%22oId%22%3a%22e071f268-4241-47f8-8cf3-fc6b84437f23%22%2c%22thId%22%3a%2219%3ameeting_NzJiMjNkMGQtYzk3NS00ZDI1LWJjN2QtMDgyODVhZmI3NzJj%40thread.v2%22%2c%22mId%22%3a%220%22%7d|
+|**meetingId**| String | Yes |The meeting identifier is available through Bot Invoke and the TeamsJS library. <br/>For example, meetingid=%7b%22tId%22%3a%2272f234bf-86f1-41af-91ab-2d7cd0321b47%22%2c%22oId%22%3a%22e071f268-4241-47f8-8cf3-fc6b84437f23%22%2c%22thId%22%3a%2219%3ameeting_NzJiMjNkMGQtYzk3NS00ZDI1LWJjN2QtMDgyODVhZmI3NzJj%40thread.v2%22%2c%22mId%22%3a%220%22%7d|
 |**token**| String | Yes |Authorization token.<br/> For example, token=04751eac |
 
 #### Example
@@ -667,18 +845,35 @@ The following code shows how to capture the metadata of a meeting that is `Meeti
 
 Meeting Start Event
 
+* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingstartasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-teams-teamsactivityhandler-onteamsmeetingstartasync(microsoft-bot-schema-teams-meetingstarteventdetails-microsoft-bot-builder-iturncontext((microsoft-bot-schema-ieventactivity))-system-threading-cancellationtoken)&preserve-view=true)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L34)
+
+* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingstartasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-teams-teamsactivityhandler-onteamsmeetingstartasync(microsoft-bot-schema-teams-meetingstarteventdetails-microsoft-bot-builder-iturncontext((microsoft-bot-schema-ieventactivity))-system-threading-cancellationtoken)&preserve-view=true)
+
 ```csharp
+// Invoked when a Teams Meeting Start event activity is received from the connector.
 protected override async Task OnTeamsMeetingStartAsync(MeetingStartEventDetails meeting, ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken)
 {
+    // Sends a message activity to the sender of the incoming activity. 
     await turnContext.SendActivityAsync(JsonConvert.SerializeObject(meeting));
 }
 ```
 
 Meeting End Event
 
+* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingendasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-teams-teamsactivityhandler-onteamsmeetingendasync(microsoft-bot-schema-teams-meetingendeventdetails-microsoft-bot-builder-iturncontext((microsoft-bot-schema-ieventactivity))-system-threading-cancellationtoken)&preserve-view=true)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L51)
+
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L51)
+
+* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingendasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-teams-teamsactivityhandler-onteamsmeetingendasync(microsoft-bot-schema-teams-meetingendeventdetails-microsoft-bot-builder-iturncontext((microsoft-bot-schema-ieventactivity))-system-threading-cancellationtoken)&preserve-view=true)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L51)
+
 ```csharp
+// Invoked when a Teams Meeting End event activity is received from the connector.
 protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meeting, ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken)
 {
+    // Sends a message activity to the sender of the incoming activity.
     await turnContext.SendActivityAsync(JsonConvert.SerializeObject(meeting));
 }
 ```
@@ -800,11 +995,11 @@ The following code provides an example of meeting end event payload:
 | **conversation.isGroup** | Boolean indicating whether conversation has more than two participants. |
 | **conversation.tenantId** | Azure Active Directory tenant ID of the conversation or meeting. |
 | **conversation.id** | The meeting chat ID. |
-| **recipient.id** | ID of the user that receive the request. |
-| **recipient.name** | Name of the user that receive the request. |
-| **entities.locale** | entity which contains metadata about locale. |
-| **entities.country** | entity which contains metadata about country. |
-| **entities.type** | entity which contains metadata about client. |
+| **recipient.id** | ID of the user that receives the request. |
+| **recipient.name** | Name of the user that receives the request. |
+| **entities.locale** | entity that contains metadata about locale. |
+| **entities.country** | entity that contains metadata about country. |
+| **entities.type** | entity that contains metadata about client. |
 | **channelData.tenant.id** | Azure Active Directory tenant ID. |
 | **channelData.source** | The source name from where event is fired or invoked. |
 | **channelData.meeting.id** | The default ID associated with the meeting. |
@@ -818,11 +1013,11 @@ The following code provides an example of meeting end event payload:
 
 ## Get incoming audio state
 
-The `getIncomingClientAudioState` API allows an app to get the incoming audio state setting for the meeting user. The API is available through the Teams client SDK.
+The `getIncomingClientAudioState` API allows an app to get the incoming audio state setting for the meeting user. The API is available through the TeamsJS library.
 
 > [!NOTE]
 >
-> * The `getIncomingClientAudioState` API for mobile is currently available in [Public Developer Preview](../resources/dev-preview/developer-preview-intro.md).
+> * The `getIncomingClientAudioState` API for mobile is available in [Public Developer Preview](../resources/dev-preview/developer-preview-intro.md).
 > * Resource specific consent is available for manifest version 1.12 and later versions, hence this API doesn't work for manifest version 1.11 and earlier versions.
 
 ### Manifest
@@ -851,7 +1046,7 @@ callback = (errcode, result) => {
             // Handle success code
         }
     }
-
+// The getIncomingClientAudioState API shows the current audio state.
 microsoftTeams.meeting.getIncomingClientAudioState(this.callback)
 ```
 
@@ -875,11 +1070,11 @@ The following table provides the response codes:
 
 ## Toggle incoming audio
 
-The `toggleIncomingClientAudio` API allows an app to toggle the incoming audio state setting for the meeting user from mute to unmute or vice-versa. The API is available through the Teams client SDK.
+The `toggleIncomingClientAudio` API allows an app to toggle the incoming audio state setting for the meeting user from mute to unmute or vice-versa. The API is available through the TeamsJS library.
 
 > [!NOTE]
 >
-> * The `toggleIncomingClientAudio` API for mobile is currently available in [Public Developer Preview](../resources/dev-preview/developer-preview-intro.md).
+> * The `toggleIncomingClientAudio` API for mobile is available in [Public Developer Preview](../resources/dev-preview/developer-preview-intro.md).
 > * Resource specific consent is available for manifest version 1.12 and later versions, hence this API doesn't work for manifest version 1.11 and earlier versions.
 
 ### Manifest
@@ -908,7 +1103,7 @@ callback = (error, result) => {
             // Handle success code
         }
     }
-
+// The toggleIncomingClientAudio API allows an app to toggle the incoming audio state.
 microsoftTeams.meeting.toggleIncomingClientAudio(this.callback)
 ```
   
@@ -932,15 +1127,14 @@ The following table provides the response codes:
 
 ## Code sample
 
-|Sample name | Description | C# | Node.js |
-|----------------|-----------------|--------------|--------------|
-| Meetings extensibility | Teams meeting extensibility sample for passing tokens. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
-| Meeting content bubble bot | Teams meeting extensibility sample for interacting with content bubble bot in a meeting. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
-| Meeting side panel | Teams meeting extensibility sample for interacting with the side panel in-meeting. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs)|
-| Details Tab in Meeting | Teams meeting extensibility sample for interacting with Details Tab in-meeting. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/nodejs)|
-| Meeting Events Sample | Sample app to show real-time Teams meeting events|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/nodejs)|
-| Meeting Recruitment Sample |Sample app to show meeting experience for recruitment scenario.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/nodejs)|
-| App installation using QR code |Sample app that generates the QR code and installs the app using the QR code|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-installation-using-qr-code/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-installation-using-qr-code/nodejs)|
+|Sample name | Description | .NET | Node.js | Manifest|
+|----------------|-----------------|--------------|--------------|------|
+| Meetings extensibility | Teams meeting extensibility sample for passing tokens. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp/demo-manifest/meetings-token-app.zip)|
+| In-meeting notification | Demonstrates how to implement in-meeting notification using bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-notification/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-notification/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-notification/csharp/demo-manifest/meetings-notification.zip) |
+| Meeting side panel | Teams meeting extensibility sample for interacting with the side panel in-meeting. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs)||
+| Details Tab in Meeting | This sample app shows Teams meeting extensibility feature where user can create a poll, and members can answer the poll in meeting.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/csharp/demo-manifest/meetings-details-tab.zip)|
+| Meeting Events Sample | This sample shows real-time Teams meeting events using bot.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp/demo-manifest/Meetings-Events.zip)|
+| Meeting Recruitment Sample |This sample app shows a meeting experience for recruitment scenario using Apps In Meetings.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/csharp/demo-manifest/Meeting-Recruitment-App.zip)|
 
 ## See also
 
@@ -948,7 +1142,6 @@ The following table provides the response codes:
 * [Apps for Teams meetings](teams-apps-in-meetings.md)
 * [Live Share SDK](teams-live-share-overview.md)
 * [Teams cloud meeting recording](/microsoftteams/cloud-recording)
-
-## Next steps
-
-[Build tabs for meeting](build-tabs-for-meeting.md)
+* [Get the attendance report for an online meeting](/graph/api/meetingattendancereport-get)
+* [Build in-meeting notification for Teams meeting](in-meeting-notification-for-meeting.md)
+* [Get notifications for Teams meeting call updates](/graph/changenotifications-for-onlinemeeting)

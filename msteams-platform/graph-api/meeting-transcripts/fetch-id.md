@@ -9,14 +9,14 @@ ms.topic: conceptual
 Your app can fetch transcripts of a meeting using the meeting ID and the user ID of the meeting organizer, also known as organizer ID. The Graph REST APIs fetch transcripts based on the meeting ID and organizer ID that are passed as parameters in the API.
 
 > [!NOTE]
-> The meeting ID for scheduled meetings may expire in some days if it's unused. It can be revived by using the meeting URL to join the meeting. For more information about meeting expiration timeline for different meeting types, see [Meeting expiration](/microsoftteams/limits-specifications-teams#meeting-expiration).
+> The meeting ID for scheduled meetings may expire in some days if it's unused. It can be revived by using the meeting URL to join the meeting. For more information about meeting expiration timeline for different meeting types, see [meeting expiration](/microsoftteams/limits-specifications-teams#meeting-expiration).
 
 To obtain meeting ID and organizer ID for fetching the transcript, choose one of the two ways:
 
 - [Subscribe to change notifications](#subscribe-to-change-notifications)
 - [Use Bot Framework](#use-bot-framework-to-get-meeting-id-and-organizer-id)
 
-### Subscribe to change notifications
+## Subscribe to change notifications
 
 You can subscribe your app to receive change notifications for scheduled meeting events. When your app is notified about the subscribed meeting events, it can obtain transcripts, if it's authorized via required Azure AD permissions.
 
@@ -27,11 +27,11 @@ Your app receives notification for the type of meeting events for which it's sub
 
 When your app is notified of a subscribed meeting event, it can retrieve the meeting ID and organizer ID from the notification message. Based on the meeting details obtained, your app can fetch the meeting transcripts after the meeting has ended.
 
-#### Obtain meeting details using user-level notification
+## Obtain meeting details using user-level notification
 
 Choose to subscribe your app to user-level notifications for getting transcripts of a particular user's meeting event. When a meeting is scheduled for that user, your app is notified. Your app can receive meeting notifications using calendar events as well.
 
-For subscribing your app to calendar events, see [Change notifications for Outlook resources in Microsoft Graph](/graph/outlook-change-notifications-overview).
+For subscribing your app to calendar events, see [change notifications for Outlook resources in Microsoft Graph](/graph/outlook-change-notifications-overview).
 
 Use the following example to subscribe to user-level notifications:
 
@@ -74,7 +74,7 @@ To obtain meeting ID and organizer ID from user-level notification:
 
 2. **Get meeting URL**: Use the event ID to retrieve `joinUrl` that contains the meeting URL.
 
-    For more information, see [Get event](/graph/api/event-get).
+    For more information, see [get event](/graph/api/event-get).
 
     Use the following example to request the meeting URL:
 
@@ -151,17 +151,17 @@ To obtain meeting ID and organizer ID from user-level notification:
 
     The chat ID is contained in `threadId`.
 
-4. **Subscribe to chat messages**: Use chat ID to subscribe your app to receive chat messages for that particular meeting. For more information, see [Subscribe to messages in a chat](/graph/teams-changenotifications-chatmessage#subscribe-to-messages-in-a-chat).
+4. **Subscribe to chat messages**: Use chat ID to subscribe your app to receive chat messages for that particular meeting. For more information, see [subscribe to messages in a chat](/graph/teams-changenotifications-chatmessage#subscribe-to-messages-in-a-chat).
 
-    If you want your app to subscribe to messages with specific text, see [Subscribe to messages in a chat that contain certain text](/graph/teams-changenotifications-chatmessage#example-2-subscribe-to-messages-in-a-chat-that-contain-certain-text).
+    If you want your app to subscribe to messages with specific text, see [subscribe to messages in a chat that contain certain text](/graph/teams-changenotifications-chatmessage#example-2-subscribe-to-messages-in-a-chat-that-contain-certain-text).
 
 5. Follow steps for [tenant-level notifications](#obtain-meeting-details-using-tenant-level-notification) to obtain meeting ID and organizer ID.
 
-#### Obtain meeting details using tenant-level notification
+### Obtain meeting details using tenant-level notification
 
 Tenant-level notifications are useful if your app is authorized to access all meeting transcripts across the tenant. Subscribe your app to be notified for events when transcription starts or call ends for scheduled online Teams meetings. After the meeting ends, your app can access and retrieve the meeting transcript.
 
-For subscribing your app to tenant-level notifications, see [Get change notifications](/graph/teams-changenotifications-chatmessage#subscribe-to-messages-across-all-chats).
+For subscribing your app to tenant-level notifications, see [get change notifications](/graph/teams-changenotifications-chatmessage#subscribe-to-messages-across-all-chats).
 
 When your app is notified about subscribed meeting events, it searches through the notifications for transcription started and meeting ended events. These events contain the chat ID, which is used to obtain chat entity, and eventually meeting ID and organizer ID.
 
@@ -251,7 +251,7 @@ To obtain meeting ID and organizer ID from tenant-level notification:
 
 2. **Get chat entity**: Your app can retrieve the chat entity using the chat ID obtained in Step 1. Use the chat entity to get the URL for joining the call. The `joinWebUrl` member of the `onlineMeetingInfo` property contains this URL, and is used to obtain meeting ID eventually. The organizer ID is also a part of the response payload.
 
-    For more information about chat entity, see [Get chat](/graph/api/chat-get).
+    For more information about chat entity, see [get chat](/graph/api/chat-get).
 
     Use the following example to request chat entity based on the chat ID:
 
@@ -266,7 +266,7 @@ To obtain meeting ID and organizer ID from tenant-level notification:
         - If the meeting is an online Teams meeting, the `joinWebUrl` member of the `onlineMeetingInfo` property contains this URL.
         - If the meeting wasn't created as an online meeting from Teams client or Outlook client, it contains the `calendarEventId` member in the `onlineMeetingInfo` property. Your app can use the `calendarEventId` to obtain `joinUrl`, which is the same as `joinWebUrl`.
 
-      For more information about events, see [Get event](/graph/api/event-get?view=graph-rest-1.0&tabs=http&preserve-view=true).
+      For more information about events, see [get event](/graph/api/event-get?view=graph-rest-1.0&tabs=http&preserve-view=true).
 
       Examples for response payload scenarios depending on the type of join meeting URL:
 
@@ -474,6 +474,7 @@ The response payload contains:
 - The meeting ID in the `msGraphResourceId` member of the `details` property.
 - The organizer ID in the `id` member of the `organizer` property.
 <br>
+
 <details>
 <summary><b>Example</b>: Response payload for getting meeting details</b></summary>
 
@@ -518,7 +519,7 @@ After your app obtains the meeting ID and the organizer ID, it triggers the Grap
 
 You can try the following code sample for a bot app:
 
-| **Sample name** | **Description** | **C#** | **Node.js** |
+| **Sample name** | **Description** | **.NET** | **Node.js** |
 |----------------|-----------------|--------------|--------------|--------------|
 | Meeting transcription | This is a sample application which demonstrates how to get Transcript using Graph API and show it in the task module. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-transcription/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-transcription/nodejs) |
 
@@ -526,3 +527,9 @@ You can try the following code sample for a bot app:
 
 > [!div class="nextstepaction"]
 > [Graph APIs for fetching transcripts](/graph/api/resources/calltranscript)
+
+## See also
+
+- [Apps for Teams meetings and calls](../../apps-in-teams-meetings/teams-apps-in-meetings.md)
+- [API reference for the Bot Framework Connector service](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference)
+- [Receive notifications for Teams meetings start, end, and roster events](/graph/changenotifications-for-onlinemeeting)

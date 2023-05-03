@@ -7,7 +7,7 @@ ms.localizationpriority: medium
 ms.author: anclear
 ---
 
-# Update and delete messages sent from bot 
+# Update and delete messages sent from bot
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
@@ -21,31 +21,49 @@ It is not necessary for the new message to match the original in type. For examp
 
 # [C#](#tab/dotnet)
 
-To update an existing message, pass a new `Activity` object with the existing activity ID to the `UpdateActivityAsync` method of the `TurnContext` class. For more information, see [TurnContextClass](/dotnet/api/microsoft.bot.builder.turncontext?view=botbuilder-dotnet-stable&preserve-view=true).
+* [SDK reference](/dotnet/api/microsoft.bot.builder.turncontext.updateactivityasync)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L266)
+
+To update an existing message, pass a new `Activity` object with the existing activity ID to the `UpdateActivityAsync` method of the `TurnContext` class.
 
 ```csharp
+// MessageFactory.Text(): Specifies the type of text data in a message attachment.
 var newActivity = MessageFactory.Text("The new text for the activity");
 newActivity.Id = activityId;
+
+// UpdateActivityAsync(): A method that can participate in update activity events for the current turn.
 await turnContext.UpdateActivityAsync(newActivity, cancellationToken);
 ```
 
 # [TypeScript](#tab/typescript)
 
-To update an existing message, pass a new `Activity` object with the existing activity ID to the `updateActivity` method of the `TurnContext` object. For more information, see [updateActivity](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#updateactivity-partial-activity--&preserve-view=true).
+* [SDK reference](/javascript/api/botbuilder-core/turncontext#botbuilder-core-turncontext-updateactivity)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L162)
+
+To update an existing message, pass a new `Activity` object with the existing activity ID to the `updateActivity` method of the `TurnContext` object.
 
 ```typescript
+// MessageFactory.Text(): Specifies the type of text data in a message attachment.
 const newActivity = MessageFactory.text('The new text for the activity');
 newActivity.id = activityId;
+
+// A method that can participate in update activity events for the current turn.
 await turnContext.updateActivity(newActivity);
 ```
 
 # [Python](#tab/python)
 
-To update an existing message, pass a new `Activity` object with the existing activity ID to the `update_activity` method of the `TurnContext` class. See [TurnContextClass](/python/api/botbuilder-core/botbuilder.core.turncontext?view=botbuilder-py-latest&preserve-view=true).
+* [SDK reference](/python/api/botbuilder-core/botbuilder.core.turncontext#botbuilder-core-turncontext-update-activity)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L156)
+
+To update an existing message, pass a new `Activity` object with the existing activity ID to the `update_activity` method of the `TurnContext` class.
 
 ```python
+# MessageFactory.Text(): Specifies the type of text data in a message attachment.
 new_activity = MessageFactory.text("The new text for the activity")
 new_activity.id = activity_id
+
+# A method that can participate in update activity events for the current turn.
 update_result = await context.update_activity(new_activity)
 ```
 
@@ -73,33 +91,51 @@ Now that you have updated messages, update the existing card on button selection
 
 To update the existing card on button selection, you can use `ReplyToId` of incoming activity.
 
-# [C#/.NET](#tab/dotnet)
+# [C#](#tab/dotnet)
 
-To update existing card on a button selection, pass a new `Activity` object with updated card and `ReplyToId` as activity ID to the `UpdateActivityAsync` method of the `TurnContext` class. See [TurnContextClass](/dotnet/api/microsoft.bot.builder.turncontext?view=botbuilder-dotnet-stable&preserve-view=true).
+* [SDK reference](/dotnet/api/microsoft.bot.builder.turncontext.updateactivityasync#microsoft-bot-builder-turncontext-updateactivityasync(microsoft-bot-schema-iactivity-system-threading-cancellationtoken))
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L266)
+
+To update existing card on a button selection, pass a new `Activity` object with updated card and `ReplyToId` as activity ID to the `UpdateActivityAsync` method of the `TurnContext` class.
 
 ```csharp
+// Returns a message activity that contains an attachment.
 var activity = MessageFactory.Attachment(card.ToAttachment());
 activity.Id = turnContext.Activity.ReplyToId;
+
+// A method that can participate in update activity events for the current turn.
 await turnContext.UpdateActivityAsync(activity, cancellationToken);
 ```
 
 # [TypeScript](#tab/typescript)
 
-To update existing card on a button selection, pass a new `Activity` object with updated card and `replyToId` as activity ID to the `updateActivity` method of the `TurnContext` object. See [updateActivity](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#updateactivity-partial-activity--&preserve-view=true).
+* [SDK reference](/javascript/api/botbuilder-core/turncontext#botbuilder-core-turncontext-updateactivity)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L162)
+
+To update existing card on a button selection, pass a new `Activity` object with updated card and `replyToId` as activity ID to the `updateActivity` method of the `TurnContext` object.
 
 ```typescript
+// MessageFactory.attachment(): Returns a message activity that contains an attachment.
 const message = MessageFactory.attachment(card);
 message.id = context.activity.replyToId;
+
+// updateActivity(): A method that can participate in update activity events for the current turn.
 await context.updateActivity(message);
 ```
 
 # [Python](#tab/python)
 
-To update existing card on a button click, pass a new `Activity` object with updated card and `reply_to_id` as activity ID to the `update_activity` method of the `TurnContext` class. See [TurnContextClass](/python/api/botbuilder-core/botbuilder.core.turncontext?view=botbuilder-py-latest&preserve-view=true).
+* [SDK reference](/python/api/botbuilder-core/botbuilder.core.turncontext?view=botbuilder-py-latest&preserve-view=true#botbuilder-core-turncontext-update-activity)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L156)
+
+To update existing card on a button click, pass a new `Activity` object with updated card and `reply_to_id` as activity ID to the `update_activity` method of the `TurnContext` class.
 
 ```python
+# MessageFactory.attachment(): Returns a message activity that contains an attachment.
 updated_activity = MessageFactory.attachment(CardFactory.hero_card(card))
 updated_activity.id = turn_context.activity.reply_to_id
+
+# update_activity(): A method that can participate in update activity events for the current turn.
 await turn_context.update_activity(updated_activity)
 ```
 
@@ -128,31 +164,43 @@ In the Bot Framework, every message has its unique activity identifier. Messages
 
 # [C#](#tab/dotnet)
 
-To delete a message, pass that activity's ID to the `DeleteActivityAsync` method of the `TurnContext` class. For more information, see [TurnContext.DeleteActivityAsync Method](/dotnet/api/microsoft.bot.builder.turncontext.deleteactivityasync?view=botbuilder-dotnet-stable&preserve-view=true).
+* [SDK reference](/dotnet/api/microsoft.bot.builder.botadapter.deleteactivityasync#microsoft-bot-builder-botadapter-deleteactivityasync(microsoft-bot-builder-iturncontext-microsoft-bot-schema-conversationreference-system-threading-cancellationtoken)&preserve-view=true)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L165)
+
+To delete a message, pass that activity's ID to the `DeleteActivityAsync` method of the `TurnContext` class.
 
 ```csharp
 foreach (var activityId in _list)
 {
+    // When overridden in a derived class, deletes an existing activity in the conversation.
     await turnContext.DeleteActivityAsync(activityId, cancellationToken);
 }
 ```
 
 # [TypeScript](#tab/typescript)
 
-To delete a message, pass that activity's ID to the `deleteActivity` method of the `TurnContext` object. For more information, see [deleteActivity](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#deleteactivity-string---partial-conversationreference--&preserve-view=true).
+* [SDK reference](/javascript/api/botbuilder-core/turncontext#botbuilder-core-turncontext-deleteactivity)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L255)
+
+To delete a message, pass that activity's ID to the `deleteActivity` method of the `TurnContext` object.
 
 ```typescript
 for (let i = 0; i < activityIds.length; i++) {
+    // deleteActivity(): deletes an existing activity in the conversation.
     await turnContext.deleteActivity(activityIds[i]);
 }
 ```
 
 # [Python](#tab/python)
 
-To delete that message, pass that activity's ID to the `delete_activity` method of the `TurnContext` object. For more information, see [activity-update-and-delete](https://github.com/microsoft/botbuilder-python/blob/c04ecacb22c1f4b43a671fe2f1e4782218391975/tests/teams/scenarios/activity-update-and-delete/bots/activity_update_and_delete_bot.py).
+* [SDK reference](/python/api/botbuilder-core/botbuilder.core.turncontext#botbuilder-core-turncontext-delete-activity)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L227)
+
+To delete that message, pass that activity's ID to the `delete_activity` method of the `TurnContext` object.
 
 ```python
 for each activity_id in _list:
+    # delete_activity(): deletes an existing activity in the conversation.
     await TurnContext.delete_activity(activity_id)
 ```
 
@@ -174,11 +222,17 @@ DELETE /v3/conversations/{conversationId}/activities/{activityId}
 
 The following code sample demonstrates basics of conversations:
 
-| **Sample name** | **Description** | **.NET** | **Node.js** | **Python** |
-|----------------------|-----------------|--------|-------------|--------|
-| Teams Conversation Basics  | Demonstrates basics of conversations in Teams including message update and delete. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
+| **Sample name** | **Description** | **.NET** | **Node.js** | **Python** | **Manifest**|
+|----------------------|-----------------|--------|-------------|--------|--------|
+| Teams Conversation Basics  | This sample shows how to use different bot conversation events available in bot framework v4 for personal and teams scope. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/python) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp/demo-manifest/bot-conversation.zip) |
 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Get Teams context](~/bots/how-to/get-teams-context.md)
+> [Get Teams specific context for your bot](get-teams-context.md)
+
+## See also
+
+* [Build bots for Teams](../what-are-bots.md)
+* [Conversation basics](conversations/conversation-basics.md)
+* [Cards](../../task-modules-and-cards/what-are-cards.md)

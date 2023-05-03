@@ -146,6 +146,9 @@ Now you’ve successfully added the Collaboration controls to your application. 
 
 You can define settings for Collaboration controls for the business entity such as the table created in [new model-driven app](#create-a-new-model-driven-app-with-collaboration-controls-for-teams).
 
+> [!NOTE]
+> For information on how to configure Collaboration Manager for Loans product, see [Collaboration Manager for Loans](/industry/financial-services/collaboration-manager/configure).
+
 The settings that you can apply are as follows:
 
 |Settings|Used by|
@@ -318,3 +321,8 @@ Approvals allow users to request sign out from others when working in a record. 
 1. Select the approval to view the details.
 
 For more information on Approvals, See [create an approval](https://support.microsoft.com/en-us/office/create-an-approval-6548a338-f837-4e3c-ad02-8214fc165c84).
+
+## See also
+
+* [Integrate web apps](integrate-web-apps-overview.md)
+* [Understand the Microsoft Teams app structure](../concepts/design/app-structure.md)

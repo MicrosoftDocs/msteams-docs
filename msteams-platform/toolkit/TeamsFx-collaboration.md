@@ -2,7 +2,7 @@
 title: Collaborate on TeamsFx Project using Teams Toolkit
 author: surbhigupta
 description: In this article, learn how to collaborate on TeamsFx Project using Teams Toolkit and collaborate with other developers.
-ms.author: v-amprasad
+ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
@@ -51,7 +51,7 @@ The following sections guide us to understand the collaboration process as proje
   5. Launch remote to have a preview of the Teams app.
 
      > [!NOTE]
-     > Collaborators must log in using the account that project owner adds under the same tenant with project owner. For more information, see [build and run your Teams app in remote environment](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=3&branch).
+     > Collaborators must log in using the account that project owner adds under the same tenant with project owner. For more information, see [build and run your Teams app in remote environment](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=3).
 
 ## Remove Collaborators
 
@@ -77,6 +77,7 @@ If you want to remove collaborators from Teams Toolkit extension, you need to re
 
 ## See also
 
+* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
 * [Provision cloud resources](provision.md)
 * [Deploy Teams app to the cloud](deploy.md)
 * [Manage multiple environments](TeamsFx-multi-env.md)

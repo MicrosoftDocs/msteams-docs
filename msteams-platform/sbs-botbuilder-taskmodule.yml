@@ -35,7 +35,7 @@ items:
      | --- | --- | --- |
      | **Required** | &nbsp; | &nbsp; |
      | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call and all in one place.|
-     | &nbsp; | [Visual Studio 2022 version 17.3](https://visualstudio.microsoft.com)<br> Install one of the following two workloads:<br> • ASP.NET and web development <br> • .NET Core cross-platform development | You can install the enterprise version in Visual Studio 2022, and install the workloads. |
+     | &nbsp; | [Visual Studio 2022 version 17.3](https://visualstudio.microsoft.com)<br> Install the <br> ASP.NET and web development workload. | You can install the enterprise version in Visual Studio 2022, and install the workloads. |
      | &nbsp; | [.NET Core SDK version 3.1](https://dotnet.microsoft.com/en-us/download) | Customized bindings for local debugging and Azure Functions app deployments. If you haven't installed the .NET 3.1 (or later) SDK globally, the portable version can be installed. |
      | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots, message extensions, and incoming webhooks) require inbound connections. A tunnel connects your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
 
@@ -47,13 +47,13 @@ items:
 - title: Set up local environment
   durationInMinutes: 1
   content: |
-   Clone `BotBuilder-Samples` repository to your local GitHub:  
+   Clone `Microsoft-Teams-Samples` repository to your local GitHub:  
 
-    1. Open [BotBuilder Samples](https://github.com/microsoft/BotBuilder-Samples).
+    1. Open [Microsoft-Teams-Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples).
     1. Select **Code**.
     1. Select **Open with GitHub Desktop** from the dropdown menu.
 
-       :::image type="content" source="~/assets/images/Teams-task-module/clonerepository_2.png" alt-text="Clone repository":::
+       :::image type="content" source="~/assets/images/Teams-task-module/clone-repository.png" alt-text="Clone repository":::
 
     1. Select **Clone**. 
 
@@ -331,7 +331,7 @@ items:
   content: |
     1. Go to **appsettings.json** in the cloned repository.
 
-        :::image type="content" source="~/assets/images/Teams-task-module/appsettingslocation_1.png" alt-text="App settings location":::
+        :::image type="content" source="~/assets/images/Teams-task-module/appsettings-file-location.png" alt-text="App settings location":::
 
     1. Open **appsettings.json** in the latest version of Visual Studio and update the following information:  
 
@@ -345,7 +345,7 @@ items:
 
     1. Go to **manifest.json** in the cloned repository.
 
-        :::image type="content" source="~/assets/images/Teams-task-module/manifestlocation_1.png" alt-text="Manifest file location":::
+        :::image type="content" source="~/assets/images/Teams-task-module/manifest-file-location.png" alt-text="Manifest file location":::
     
     1. Open **manifest.json** in the latest version of Visual Studio and make the following changes:
 
@@ -366,19 +366,13 @@ items:
     
           :::image type="content" source="~/assets/images/Teams-task-module/VSopenfile.png" alt-text="Screenshot shows the open file with folder location.":::
 
-       1. Select **TeamsTaskModule.csproj** file from **54.teams-task-module** folder.
+       1. Select **TeamsTaskModule.csproj** file from **samples** > **bot-task-module** > **csharp** folder.
 
-          :::image type="content" source="~/assets/images/Teams-task-module/csprojfileopen_1.png" alt-text="CS proj file":::
+          :::image type="content" source="~/assets/images/Teams-task-module/project-file-location.png" alt-text="CS proj file":::
 
        1. Open **Solution Explorer** from **View**.
 
           :::image type="content" source="~/assets/images/Teams-task-module/solutionexplorer_1.png" alt-text="Screenshot shows the open solution explorer.":::
-
-       1. Right-click to select **TeamsTaskModule**.
-
-       1. Select **Set as Startup Project**.
-
-          :::image type="content" source="~/assets/images/Teams-task-module/startup_1.png" alt-text="Screenshot shows how to select set as startup project.":::
 
        1. Press **F5** to run the project.
     
@@ -393,41 +387,39 @@ items:
         
     # [Command line](#tab/cli)
 
-    Go to **BotBuilder-Samples > samples > csharp_dotnetcore > 54.teams-task-module** in Command Prompt window and enter the following command:
+    Go to **Microsoft-Teams-Samples** > **samples** > **bot-task-module** > **csharp** in Command Prompt window and enter the following command:
 
     ```bash
     dotnet run
     ```
    
-    :::image type="content" source="~/assets/images/Teams-task-module/dotnetruncmd.png" alt-text="Screenshot shows the command prompt of dotnet run."::: 
+    :::image type="content" source="~/assets/images/Teams-task-module/dotnetrun.png" alt-text="Screenshot shows the command prompt of dotnet run."::: 
 
 - title: Upload Task Module app
   durationInMinutes: 1
   content: |
-    1. In your cloned repository, go to **csharp_dotnetcore > 54.teams-task-module > TeamsAppManifest**.
+    1. In your cloned repository, go to **samples** > **bot-task-module** > **csharp** > **TeamsAppManifest**.
 
     1. Create a .zip with the following files that are present in the **TeamsAppManifest** folder: 
        * manifest.json
        * icon-outline.png
        * icon-color.png
 
-       :::image type="content" source="~/assets/images/Teams-task-module/zip-file_1.png" alt-text="Zip file"::: 
+       :::image type="content" source="~/assets/images/Teams-task-module/manifest-file-zip.png" alt-text="Zip file"::: 
 
     1. Go to **Microsoft Teams**.
 
-    1. Select **Apps**.
-  
-    1. Select **Manage your apps**.
+    1. Select **Apps** > **Manage your apps**.
 
        :::image type="content" source="~/assets/images/Teams-task-module/manage-apps_3.png" alt-text="Manage apps":::
    
-    1. Select **Upload a custom app**. 
+    1. Select **Upload an app** and select **Upload a custom app**. 
 
-       :::image type="content" source="~/assets/images/Teams-task-module/upload-app_1.png" alt-text="Upload custom app":::
-
+       :::image type="content" source="~/assets/images/upload-a-custom-app.png" alt-text="Screenshot showing the selection of Upload a custom app highlighted in red.":::
+       
     1. Select **Open** to upload the .zip file that you created in the **TeamsAppManifest** folder.
 
-       :::image type="content" source="~/assets/images/Teams-task-module/select-zip_1.png" alt-text="Select zip file":::
+       :::image type="content" source="~/assets/images/Teams-task-module/upload-manifest-zip.png" alt-text="Select zip file":::
 
     1. Select **Add**.
 

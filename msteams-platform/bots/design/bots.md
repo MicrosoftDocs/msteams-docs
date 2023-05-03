@@ -11,7 +11,7 @@ ms.author: lajanuar
 Bots are conversational apps that perform a specific set of tasks. Based on the <a href="https://dev.botframework.com/" target="_blank">Microsoft Bot Framework</a>, bots communicate with users, respond to their questions, and proactively notify them about changes and other events. They're a great way to reach out.
 
 > [!IMPORTANT]
-> Bots are available in Government Community Cloud (GCC) and GCC High environments but not in Department of Defense (DoD) environments.
+> Bots are available in [Government Community Cloud (GCC), GCC-High, and Department of Defense (DOD)](~/concepts/app-fundamentals-overview.md#government-community-cloud) environments.
 
 To guide your app design, the following information describes and illustrates how people can add, use, and manage bots in Teams.
 
@@ -139,8 +139,9 @@ You can use bots in the following contexts:
 |1|**App name and icon**|
 |2|**Chat tab**: Opens the space to talk with your bot (applicable only to personal apps).|
 |3|**Custom tabs**: Opens other content related to your app.|
-|4|**Chat bubble**: Bot conversations use the Teams messaging framework.|
-|5|**Adaptive Card**: If your bot's responses include Adaptive Cards, the card takes up the full width of the chat bubble.|
+|4|**About tab**: Displays basic information about your app.|
+|5|**Chat bubble**: Bot conversations use the Teams messaging framework.|
+|6|**Adaptive Card**: If your bot's responses include Adaptive Cards, the card takes up the full width of the chat bubble.|
 
 #### Desktop
 
