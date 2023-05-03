@@ -10,7 +10,7 @@ ms.date: 04/07/2022
 
 # Conversation AI quick start guide
 
-Get started with Teams conversation AI SDK using the SantaBot sample/ It's designed to quickly run a Teams conversation AI SDK based Santa bot sample on your computer's localhost.
+Get started with Teams conversation AI SDK using the SantaBot sample. It's designed to quickly run a Teams conversation AI SDK based Santa bot sample on your computer's localhost.
 
 ## Set up your development environment
 
@@ -71,7 +71,9 @@ To get started, install:
 1. Update the .env configuration for the bot to use the Microsoft App Id and App Password from the Bot Framework registration.
 
    > [!NOTE]
-   > The App Password is referred to as the **client secret** in the azure portal and you can always create a new client secret anytime.
+   >
+   > * The App Password is referred to as the **client secret** in the azure portal and you can always create a new client secret anytime.
+   > * You'll also need to create an account on [OpenAI](https://openai.com/api/) and generate an OpenAI APY KEY.
 
    ```text
     MicrosoftAppId=<your bot's ID>
@@ -95,7 +97,7 @@ To get started, install:
    ```
 
 1. Sideload the app manifest zip file in Teams.
-1. Invoke @ mention and talk to it in plain language.
+1. Invoke the bot using @ mention in Teams chat and talk to it in plain language
 
    The bot uses the text-davinci-003 model to chat with Teams users and respond in a polite and respectful manner, staying within the scope of the conversation.
 
