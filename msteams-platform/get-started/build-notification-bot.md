@@ -43,16 +43,16 @@ To use codespaces for creating a Teams notification bot:
 > You need to allow pop-ups so that Codespace can sideload the app to Teams client in another tab.
 
 > [!TIP]
-> [GitHub Codespaces](https://github.com/features/codespaces) offers the free plan up to a fixed amount of usage every month. If you need to free up the space, go to [github.com/codespaces](https://github.com/codespaces) and delete the codespaces that you no longer need.
+> [GitHub codespaces](https://github.com/features/codespaces) offers the free plan up to a fixed amount of usage every month. If you need to free up the space, go to [github.com/codespaces](https://github.com/codespaces) and delete the codespaces that you no longer need.
 
 ## Use step-by-step guide to build a notification bot
 
 If you would like to learn how to start a project with Teams Toolkit from scratch, let's go through the step-by-step guide together.
 
-Unlike Codespaces, where everything you need is packaged for you already, you will need to set you your development environment. Let's start with [Prerequisites](../toolkit/tools-prerequisites.md) section first before start building.
+Unlike codespaces, where everything you need is packaged for you already, you will need to set you your development environment. Let's start with [Prerequisites](../toolkit/tools-prerequisites.md) section first before start building.
 
 > [!div class="nextstepaction"]
 > [Prerequisites](../toolkit/tools-prerequisites.md)
 
 > [!div class="nextstepaction"]
-> [Start building a basic tab app](../sbs-gs-notificationbot.yml)
+> [Start building a notification bot](../sbs-gs-notificationbot.yml)
