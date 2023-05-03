@@ -170,7 +170,7 @@ The following is the sample manifest schema:
                         {
                             "name": "keyword",
                             "title": "Search keywords",
-                            "inputType": "text",
+                            "inputType": "choiceset",
                             "description": "Enter the keywords to search for",
                             "value": "Initial value for the parameter",
                             "choices": [

@@ -567,7 +567,7 @@ The following code shows an example of Adaptive Cards with `invoke` action with 
 |3|Adaptive cards|Demonstrates how the multi-turn dialog can use a card to get user input for name and age.|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/07.using-adaptive-cards)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/07.using-adaptive-cards)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/07.using-adaptive-cards)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/java_springboot/07.using-adaptive-cards)|
 
 > [!NOTE]
-> Media elements are not supported for adaptive card in Teams
+> Media elements are not supported for Adaptive Card in Teams.
 
 ## Next step
 
