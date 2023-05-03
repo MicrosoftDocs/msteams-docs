@@ -351,7 +351,7 @@ For more information on shared channels, see [shared channels](~/concepts/build-
 
 You can register your app to be informed if the theme changes by calling `microsoftTeams.app.registerOnThemeChangeHandler(function(theme) { /* ... */ })`.
 
-The `theme` argument in the function is a string with a value of `default`, `dark`, or `contrast`. The following is an example of the theme in Teams:
+The `theme` argument in the function is a string with a value of `default`, `dark`, or `contrast`.
 
 # [Default](#tab/default)
 
