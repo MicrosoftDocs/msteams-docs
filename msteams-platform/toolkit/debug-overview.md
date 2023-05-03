@@ -88,11 +88,11 @@ You can also customize debug settings for your existing bot app.
 
 <summary><b>Learn how to use an existing bot for debugging</b></summary>
 
-Teams Toolkit creates Azure Active Directory apps for projects with bot by default using  [`botAadApp/create`](https://github.com/OfficeDev/TeamsFx/wiki/Available-actions-in-Teams-Toolkit#botaadappcreate)` action.
+Teams Toolkit creates Azure AD apps for projects with bot by default using  [`botAadApp/create`](https://github.com/OfficeDev/TeamsFx/wiki/Available-actions-in-Teams-Toolkit#botaadappcreate) action.
 
 To use an existing bot, you can set `BOT_ID` and `SECRET_BOT_PASSWORD` in `env/.env.local` with your own values.
 
-Use the following code snippet example to setup an existing bot for debugging:
+Use the following code snippet example to set up an existing bot for debugging:
 
 ```javascript
 # env/.env.local
@@ -127,8 +127,27 @@ In `.vscode/tasks.json` under `"Validate prerequisites"` > `"args"` > `"prerequi
 <details>
 <summary><b>Use your development certificate</b></summary>
 
-1. In `teamsapp.local.yml`, remove `devCert` from `devTool/install` action (or remove the whole `devTool/install action` if it only contains `devCert`).
+1. In `teamsapp.local.yml`, remove `devCert` from `devTool/install` action (or remove the whole `devTool/install` action if it only contains `devCert`).
 1. In `teamsapp.local.yml`, set `"SSL_CRT_FILE"` and `"SSL_KEY_FILE"` in `file/createOrUpdateEnvironmentFile` action to your certificate file path and key file path.
+
+```yml
+# teamsapp.local.yml
+...
+  # Remove devCert or this whole action
+  - uses: devTool/install
+    with:
+      # devCert:
+  ...
+  - uses: file/createOrUpdateEnvironmentFile
+    with:
+      target: ./.localSettings
+      envs:
+        ...
+        # set your own cert values
+        SSL_CRT_FILE: ...
+        SSL_KEY_FILE: ...
+...
+```
 
 </details>
 
@@ -168,7 +187,7 @@ In `teamsapp.local.yml`, edit `args` of `cli/runNpmCommand` action.
 <details>
 <summary><b>Use your own app package</b></summary>
 
-Teams Toolkit by default creates a set of teamsApp actions to manage app package. You can update those in teamsapp.local.yml to use your own app package.
+Teams Toolkit by default creates a set of `teamsApp` actions to manage app package. You can update those in `teamsapp.local.yml` to use your own app package.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/debug/app-package-path.png" alt-text="use your own app package path":::
 
@@ -286,7 +305,7 @@ Teams Toolkit automates app startup services, initiates debug, and side loads Te
 | &nbsp; | Install | For using... |
 | --- | --- | --- |
 | &nbsp; | **Required** | &nbsp; |
-| &nbsp; | Visual Studio 2022 version 17.3 | You can install the enterprise edition of Visual Studio, and install the "ASP.NET "workload and Microsoft Teams Development Tools. |
+| &nbsp; | Visual Studio 2022 version 17.3 | You can install the enterprise edition of Visual Studio, and install the "ASP.NET" workload and Microsoft Teams Development Tools. |
 | &nbsp; | Teams Toolkit | A Visual Studio extension that creates a project scaffolding for your app. Use latest version. |
 | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call - all in one place. |
 | &nbsp; | [Prepare your Microsoft 365 tenant](../concepts/build-and-test/prepare-your-o365-tenant.md) | Access to Teams account with the appropriate permissions to install an app. |
