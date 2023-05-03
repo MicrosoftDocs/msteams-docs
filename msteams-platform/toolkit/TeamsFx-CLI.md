@@ -213,12 +213,12 @@ Preview the current application.
 ### Parameters for `teamsfx preview`
 
 | Parameter | Required | Description |
- |:---------------- | :------------- | :------------- |
+|:---------------- | :------------- | :------------- |
 | `--folder` | No | Select root folder of the project. Defaults to `./`. |
 | `--env` | No | Select an existing env for the project. Defaults to `local`. |
 | `--manifest-file-path` | No | Select the Teams app `manifest file path`, defaults to `${folder}/appPackage/manifest.json`. |
 | `--run-command` | No | The command to start local service. Work for `local` environment only. If undefined, `teamsfx` will use the auto detected one from project type (`npm run dev:teamsfx` or `dotnet run` or `func start`). If empty, `teamsfx` will skip starting local service. |
-| `--running-pattern` | No | The ready signal output that service is launched. Work for `local` environment only. If undefined, `teamsfx` will use the default common pattern ("started|successfully|finished|crashed|failed"). If empty, `teamsfx` treats process start as ready signal. |
+| `--running-pattern` | No | The ready signal output that service is launched. Work for `local` environment only. If undefined, `teamsfx` will use the default common pattern ("started/successfully/finished/crashed/failed"). If empty, `teamsfx` treats process start as ready signal. |
 | `--open-only` | No | Work for `local` environment only. If true, directly open web client without launching local service. Defaults to `false`. |
 | `--m365-host` | No | Preview the application in Teams, Outlook, or the Microsoft 365 app [string] [choices: `teams`, `outlook`, `office`]. Defaults to `teams`. |
 | `--browser` | No | Select browser to open Teams web client [string] [choices: `chrome`, `edge`, `default`]. Defaults to `default`. |
