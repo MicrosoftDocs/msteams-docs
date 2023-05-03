@@ -6,16 +6,18 @@ ms.topic: reference
 ---
 # Teams app tutorials and code samples
 
-Now, let's build your first Teams app. Use the following language (or framework) and prepare your development environment.
+You can build your own Teams app with different capabilities using the step-by-step guide or tutorial and code samples.
 
-| &nbsp; | **Tab** | **Bot** | **Message extension** | &nbsp; |
-| **Basic app** | • [Basic tab using JavaScript](../sbs-gs-javascript.yml) <br> •  [basic tab using C#](../sbs-gs-csharp.yml) <br> • [basic tab using Node.js](../sbs-gs-nodejs.yml) <br> • [SPFx tab using JavaScript](../sbs-gs-spfx.yml) <br> • Blazor | [Basic bot using JavaScript](../sbs-gs-bot.yml) <br> • [Basic bot using C#](../sbs-gs-blazorupdate.yml) <br> • Blazor |  [Basic message extension using JavaScript](../sbs-gs-msgext.yml) |
-| &nbsp; |  &nbsp; | &nbsp; | &nbsp; | &nbsp; |
-| **Scenario-based app** | NA | SBS: notification bot using JS | NA | NA |
-| | | SBS: command bot using JS | | |
-| | | SBS: workflow bot using JS | | |
-| Extend app across Microsoft 365 | A code sample of a To-do list (tab) exists, but there’s no SBS afaik. | | | |
+## Teams app tutorials
+
+Now, let's build your first Teams app. You can use the following language (or framework) and prepare your development environment to build your app.
+
+| &nbsp; | **Tab** | **Bot** | **Message extension** |
+| --- | --- | --- | --- |
+| **Basic app** | • [Build your first tab app using JavaScript](../sbs-gs-javascript.yml) <br> •  [Build your first app using C#](../sbs-gs-csharp.yml) <br> • [Build your first app using Node.js](../sbs-gs-nodejs.yml) <br> • [Build your first app with SPFx](../sbs-gs-spfx.yml) <br> • [Build your first app using Blazor](../sbs-gs-blazorupdate.yml) | • [Build your first bot app using JavaScript](../sbs-gs-bot.yml)) <br> • [Build your first app using Blazor](../sbs-gs-blazorupdate.yml) | [Build your first message extension app using JavaScript](../sbs-gs-msgext.yml)|
+| **Scenario-based app** | NA | • [Build notification bot with JavaScript](../sbs-gs-notificationbot.yml) <br> • [Build command bot with JavaScript](../sbs-gs-commandbot.yml) <br> • [Create Teams workflow bot](../sbs-gs-workflow-bot.yml) | NA |
+| **Extend app across Microsoft 365** | A code sample of a To-do list (tab) exists, but there’s no step-by-step guide. | NA| NA|
 
 ## Code samples
 
-Samples built using new generation of Teams development tool - Teams Toolkit. Learn more about [code samples](https://github.com/OfficeDev/Microsoft-Teams-Samples).
+Code samples are designed to help understand and build your own Microsoft Teams app with different capabilities and scenarios. To learn more about list of code samples, see [microsoft Teams Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples).
