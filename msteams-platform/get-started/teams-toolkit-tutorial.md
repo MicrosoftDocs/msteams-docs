@@ -4,13 +4,13 @@ description: This tutorial helps you to select the app that you want to build.
 ms.localizationpriority: medium
 ms.topic: reference
 ---
-# Teams toolkit tutorials
+# Teams app tutorials and code samples
 
-| &nbsp; |  &nbsp; |  App capabilities |  &nbsp; |  Multi-capability |
-| --- | --- | --- | --- | --- |
+Now, let's build your first Teams app. Use the following language (or framework) and prepare your development environment.
+
 | &nbsp; | **Tab** | **Bot** | **Message extension** | &nbsp; |
-| **Basic app** | [Basic tab using JavaScript](../sbs-gs-javascript.yml) <br> [basic tab using C#, Blazor](../sbs-gs-csharp.yml) | [Basic bot using JavaScript](../sbs-gs-bot.yml) <br> [Basic bot using C#](../sbs-gs-blazorupdate.yml), Blazor |  [Basic message extension using JavaScript](../sbs-gs-msgext.yml) | [basic tab using Node.js](../sbs-gs-nodejs.yml) |
-| &nbsp; | [SPFx tab using JavaScript](../sbs-gs-spfx.yml) &nbsp; | &nbsp; | &nbsp; | &nbsp; |
+| **Basic app** | • [Basic tab using JavaScript](../sbs-gs-javascript.yml) <br> •  [basic tab using C#](../sbs-gs-csharp.yml) <br> • [basic tab using Node.js](../sbs-gs-nodejs.yml) <br> • [SPFx tab using JavaScript](../sbs-gs-spfx.yml) <br> • Blazor | [Basic bot using JavaScript](../sbs-gs-bot.yml) <br> • [Basic bot using C#](../sbs-gs-blazorupdate.yml) <br> • Blazor |  [Basic message extension using JavaScript](../sbs-gs-msgext.yml) |
+| &nbsp; |  &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 | **Scenario-based app** | NA | SBS: notification bot using JS | NA | NA |
 | | | SBS: command bot using JS | | |
 | | | SBS: workflow bot using JS | | |
