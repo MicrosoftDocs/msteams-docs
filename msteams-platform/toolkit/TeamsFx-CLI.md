@@ -59,7 +59,7 @@ Install `teamsfx-cli` from `npm` and run `teamsfx -h` to check all available com
 
 ## Interactive mode
 
-`teamsfx` commands runs in interactive mode by default. You can work in non-interactive mode by setting `--interactive` flag to `false`.
+`teamsfx` command runs in interactive mode by default. You can work in non-interactive mode by setting `--interactive` flag to `false`.
 
 ## `teamsfx new`
 
@@ -67,8 +67,8 @@ By default, `teamsfx new` is in interactive mode and guides to create new Teams 
 
 | Command | Description |
 |:----------------  |:-------------|
-| `teamsfx new template` | Create an app from an existing template |
-| `teamsfx new template list` | List all the available templates |
+| `teamsfx new template` | Create an app from an existing template. |
+| `teamsfx new template list` | List all the available templates. |
 
 ### Parameters for `teamsfx new`
 
@@ -213,15 +213,15 @@ Preview the current application.
 ### Parameters for `teamsfx preview`
 
 | Parameter | Required | Description |
-|:----------------  |:-------------|:-------------|
+ |:---------------- | :------------- | :------------- |
 | `--folder` | No | Select root folder of the project. Defaults to `./`. |
 | `--env` | No | Select an existing env for the project. Defaults to `local`. |
 | `--manifest-file-path` | No | Select the Teams app `manifest file path`, defaults to `${folder}/appPackage/manifest.json`. |
 | `--run-command` | No | The command to start local service. Work for `local` environment only. If undefined, `teamsfx` will use the auto detected one from project type (`npm run dev:teamsfx` or `dotnet run` or `func start`). If empty, `teamsfx` will skip starting local service. |
 | `--running-pattern` | No | The ready signal output that service is launched. Work for `local` environment only. If undefined, `teamsfx` will use the default common pattern ("started|successfully|finished|crashed|failed"). If empty, `teamsfx` treats process start as ready signal. |
 | `--open-only` | No | Work for `local` environment only. If true, directly open web client without launching local service. Defaults to `false`. |
-| `--m365-host` | No | Preview the application in Teams, Outlook, or the Microsoft 365 app [string] [choices: `teams`, `outlook`, `office`]. Defaults to `teams`.
-| `--browser` | No | Select browser to open Teams web client [string] [choices: `chrome`, `edge`, `default`]. Defaults to `default`.
+| `--m365-host` | No | Preview the application in Teams, Outlook, or the Microsoft 365 app [string] [choices: `teams`, `outlook`, `office`]. Defaults to `teams`. |
+| `--browser` | No | Select browser to open Teams web client [string] [choices: `chrome`, `edge`, `default`]. Defaults to `default`. |
 | `--browser-arg` | No | Argument to pass to the browser, for example, --browser-args="--guest. |
 
 ### Scenarios for `teamsfx preview`
@@ -288,7 +288,7 @@ Check, grant, and list user permission.
 | `--env` | Yes | Select an existing environment for the project. |
 | `--folder` | No | Select root folder of the project. Defaults to `./` |
 | `--email` | No | Input email address of collaborator. |
-| `--teams-app-manifest` | No | Manifest of Your Teams app |
+| `--teams-app-manifest` | No | Manifest of Your Teams app. |
 | `--aad-app-manifest` | No | Manifest of your Azure AD app. |
 
 ### Parameters for `teamsfx permission status`
@@ -299,7 +299,7 @@ Check, grant, and list user permission.
 | `--folder` | No | Select root folder of the project. Defaults to `./`. |
 | `--teams-app-manifest` | No | Manifest of Your Teams app. |
 | `--aad-app-manifest` | No | Manifest of your Azure AD app. |
-| `--list-all-collaborators` | No | To list all collaborators |
+| `--list-all-collaborators` | No | To list all collaborators. |
 
 ### Scenarios for `teamsfx permission`
 

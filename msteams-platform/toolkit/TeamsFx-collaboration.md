@@ -51,7 +51,7 @@ The following sections guide us to understand the collaboration process as proje
   1. Push the project to GitHub.
 
      > [!NOTE]
-     > The newly added collaborators don't receive any notification. The Project owner needs to notify collaborator.
+     > The newly added collaborators don't receive any notification. The project owner needs to notify collaborator.
 
 ### As project collaborator
 

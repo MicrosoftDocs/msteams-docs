@@ -139,7 +139,7 @@ You can customize Azure AD manifest template to update Azure AD application.
 
    1. The changes for Azure AD application used in local or dev environment are deployed.
 
-   1. Additionally, you can open the command palette and select **Teams: Update Azure Active Directory App** to update Azure Active Directory app.
+   1. Additionally, you can open the command palette and select **Teams: Update Azure Active Directory App** to update Azure AD app.
 
 <br>
 
