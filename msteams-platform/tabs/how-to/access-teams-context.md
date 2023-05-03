@@ -347,7 +347,7 @@ For more information on shared channels, see [shared channels](~/concepts/build-
 ## Handle theme change
 
 > [!IMPORTANT]
-> Teams supports light theme as the default theme for apps in Teams meetings.
+> Teams supports default (light), dark, and contrast themes for apps in Teams meetings. The `app.theme` property returns the light theme as default.
 
 You can register your app to be informed if the theme changes by calling `microsoftTeams.app.registerOnThemeChangeHandler(function(theme) { /* ... */ })`.
 
