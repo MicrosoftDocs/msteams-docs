@@ -20,16 +20,16 @@ The debugging process workflow is as follows:
 
 3. Visual Studio Code then launches the debuggers specified in the compound configurations, such as **Attach to Bot**, **Attach to Backend**, **Attach to Frontend**, and **Launch Bot**.
 
-4. The browser debugger Microsoft Edge or Google Chrome launches a new browser instance and opens a web page to load Teams client.
+4. The browser debugger, Microsoft Edge or Google Chrome, launches a new browser instance and opens a web page to load Teams client.
 
 ## Validate prerequisites
 
 Teams Toolkit checks the following prerequisites during the debugging process:
 
-* Teams Toolkit checks if Node.js is installed. If Node.js is not installed, the debugging terminates.
-* Teams Toolkit checks if Node.js version matches the versions defined in `package.json` file. If the version does not match, Teams Toolkit displays a warning message in output channel.
-* Teams Toolkit prompts you to sign-in to Microsoft 365 account, if you haven't signed in with your valid credentials.
-* Teams Toolkit checks if custom app uploading or sideloading for your developer tenant is turned on. If it is not turned on, the debugging terminates.
+* Teams Toolkit checks if Node.js is installed. If Node.js isn't installed, the debugging terminates.
+* Teams Toolkit checks if Node.js version matches the versions defined in `package.json` file. If the version doesn't match, Teams Toolkit displays a warning message in output channel.
+* Teams Toolkit prompts you to sign in to Microsoft 365 account, if you haven't signed in with your valid credentials.
+* Teams Toolkit checks if custom app uploading or sideloading for your developer tenant is turned on. If it isn't turned on, the debugging terminates.
 * Teams Toolkit checks if ports are available. If tab, bot, message extension, and Azure Functions ports are unavailable, the debugging terminates.
 
 When you select **Start Debugging (F5)**, Teams Toolkit output channel displays the progress and result after checking the prerequisites. [image to be added]
@@ -46,7 +46,7 @@ Teams Toolkit executes lifecycle `provision` defined in `teamsapp.local.yml` to 
 
 ## Build project
 
-Teams Toolkit executes lifecycle deploy defined in teamsapp.local.yml to build the project. For more information, see [Deploy task] and [available actions].
+Teams Toolkit executes lifecycle `deploy` defined in `teamsapp.local.yml` to build the project. For more information, see [Deploy task] and [available actions].
 
 ## Take a tour of your app source code
 
@@ -54,9 +54,9 @@ You can view the project folders and files under **Explorer** in Visual Studio C
 
 | Folder name| Contents| Debug configuration type |
 | --- | --- | --- |
-|  `teamsapp.local.yml` | The main Teams Toolkit project file for debugging | This file defines the lifecycles and actions required for debugging. |
+|  `teamsapp.local.yml` | The main Teams Toolkit project file for debugging | This file defines the life cycles and actions required for debugging. |
 |  `env/.env.local` | Environment variables file for Teams Toolkit project | The values of each environment variable are consumed or generated during debugging. |
-|  `.localConfigs`  | Environment variables file for the app code | The values of each environment variable are generated during debugging. |
+| `.localConfigs` | Environment variables file for the app code | The values of each environment variable are generated during debugging. |
 
 For more information on the project folder structure, see [Teams Toolkit project].
 
