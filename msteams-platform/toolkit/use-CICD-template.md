@@ -15,12 +15,12 @@ TeamsFx helps to automate your development workflow while building Teams applica
 |Tools and Templates | Description |
 |---|---|
 |[TeamsFx-CLI-Action](https://github.com/OfficeDev/teamsfx-cli-action)|GitHub action that integrates with TeamsFx CLI.|
-|[Teams Toolkit in Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)| Visual Studio Code extension that helps you to develop Teams app and automation workflows for GitHub, Azure DevOps, and Jenkins. |
-|[TeamsFx CLI](https://www.npmjs.com/package/@microsoft/teamsfx-cli) | Command Line tool that helps you to develop Teams app and automation workflows for GitHub, Azure DevOps, and Jenkins.|
-|github/ci.yml github/cd.azure.yml github/cd.spfx.yml github/provision.azure.yml github/provision.spfx.yml github/publish.yml | Templates for automation on GitHub|
-|azdo/ci.yml azdo/cd.azure.yml azdo/cd.spfx.yml azdo/provision.azure.yml azdo/provision.spfx.yml azdo/publish.yml| Templates for automation on Azure DevOps|
-|jenkins/Jenkinsfile.ci jenkins/Jenkinsfile.azure.cd jenkins/Jenkinsfile.spfx.cd jenkins/Jenkinsfile.azure.provision jenkins/Jenkinsfile.spfx.provision jenkins/Jenkinsfile.publish | Templates for automation on Jenkins|
-|others/ci.sh others/cd.azure.sh others/cd.spfx.sh others/provision.azure.sh others/provision.spfx.sh others/publish.sh | Script templates for automation outside of GitHub, Azure DevOps or Jenkins |
+|[Teams Toolkit for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)| Visual Studio Code extension that helps you to develop Teams app and automation workflows for GitHub, Azure DevOps, and Jenkins. |
+|[Teams Toolkit for CLI](https://www.npmjs.com/package/@microsoft/teamsfx-cli) | Command Line tool that helps you to develop Teams app and automation workflows for GitHub, Azure DevOps, and Jenkins.|
+|[github/ci.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd/github/ci.yml) <br> [github/cd.azure.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd/github/cd.azure.yml) <br> [github/cd.spfx.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd/github/cd.spfx.yml) <br> [github/provision.azure.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd/github/provision.azure.yml) <br> [github/provision.spfx.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd/github/provision.spfx.yml) <br> [github/publish.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd/github/publish.yml) | Templates for automation on GitHub.|
+|[azdo/ci.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd/azdo/ci.yml) <br> [azdo/cd.azure.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd/azdo/cd.azure.yml) <br> [azdo/cd.spfx.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd/azdo/cd.spfx.yml) <br> [azdo/provision.azure.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd/azdo/provision.azure.yml) <br> [azdo/provision.spfx.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd/azdo/provision.spfx.yml) <br> [azdo/publish.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd/azdo/publish.yml)| Templates for automation on Azure DevOps.|
+|[jenkins/Jenkinsfile.ci](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd/jenkins/Jenkinsfile.ci) <br> [jenkins/Jenkinsfile.azure.cd](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd/jenkins/Jenkinsfile.azure.cd) <br> [jenkins/Jenkinsfile.spfx.cd](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd/jenkins/Jenkinsfile.spfx.cd) <br> [jenkins/Jenkinsfile.azure.provision](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd/jenkins/Jenkinsfile.azure.provision) <br> [jenkins/Jenkinsfile.spfx.provision](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd/jenkins/Jenkinsfile.spfx.provision) <br> [jenkins/Jenkinsfile.publish](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd/jenkins/Jenkinsfile.publish) | Templates for automation on Jenkins.|
+|[others/ci.sh](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd/others/ci.sh) <br> [others/cd.azure.sh](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd/others/cd.azure.sh) <br> [others/cd.spfx.sh](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd/others/cd.spfx.sh) <br> [others/provision.azure.sh](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd/others/provision.azure.sh) <br> [others/provision.spfx.sh](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd/others/provision.spfx.sh) <br> [others/publish.sh](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd/others/publish.sh) | Script templates for automation outside of GitHub, Azure DevOps, or Jenkins. |
 
 ## Set up pipelines
 
@@ -35,17 +35,17 @@ You can set up pipelines with the following platforms:
 
 TeamsFx supports four types of workflow templates:
 
-1. CI - Help checkout code, build and run test.
-1. CD - Help checkout code, build, test and deploy to cloud.
-1. Provision - Help create/update resources in cloud and Teams app registrations.
-1. Publish - Help publish Teams app to tenants.
+1. **CI** - Help checkout code, build, and run test.
+1. **CD** - Help checkout code, build, test, and deploy to cloud.
+1. **Provision** - Help create or update resources in cloud and Teams app registrations.
+1. **Publish** - Help publish Teams app to tenants.
 
 ## Prepare credentials
 
 Two categories of login credentials are involved in CI/CD workflows:
 
-1. M365 - M365 credentials are required for running Provision, Publish and SPFx based projects' CD workflows.
-2. Azure - Azure credentials are required for running Azure hosted projects' Provision and CD workflows.
+1. **M365** - M365 credentials are required for running Provision, Publish, and SPFx based projects' CD workflows.
+2. **Azure** - Azure credentials are required for running Azure hosted projects' Provision and CD workflows.
 
 > [!NOTE]
 > Azure subscription id is required to be set in environment variable or `env/.env.*` files before running Provision workflows. The variable name used is `AZURE_SUBSCRIPTION_ID`. Also, please don't forget to commit and push files `env/.env.*` into Git repositories or set pipelines' environment variables as they are ignored by `.gitignore` file by default.
@@ -58,7 +58,7 @@ Two categories of login credentials are involved in CI/CD workflows:
 |AZURE_TENANT_ID |To identify the tenant in which the subscription resides.|
 |M365_ACCOUNT_NAME |The Microsoft 365 account for creating and publishing the Teams App.|
 |M365_ACCOUNT_PASSWORD |The password of the Microsoft 365 account.|
-|M365_TENANT_ID |To identify the tenant in which the Teams App will be created/published. This value is optional unless you have a multi-tenant account and you want to use another tenant. Read more on how to find your Microsoft 365 tenant ID.|
+|M365_TENANT_ID |To identify the tenant in which the Teams App will be created or published. This value is optional unless you have a multi-tenant account and you want to use another tenant. Read more on how to find your Microsoft 365 tenant ID.|
 
 > [!NOTE]
 >
@@ -67,7 +67,7 @@ Two categories of login credentials are involved in CI/CD workflows:
 
 ## Host types
 
-Templates varies in host types (Azure or SPFx) by which Provision and CD workflow templates are splited into copies. CI, Publish workflow templates are host-type independent. If you're working on Azure hosted projects, please download those templates with file name of azure infixes. Or if you're working on SPFx hosted projects, please download those templates with file name of `spfx` infixes.
+Templates vary in host types (Azure or SPFx) by which Provision and CD workflow templates are splited into copies. CI, Publish workflow templates are host-type independent. If you're working on Azure hosted projects, please download those templates with file name of `azure` infixes. If you're working on SPFx hosted projects, please download those templates with file name of `spfx` infixes.
 
 ## Set up workflows with GitHub
 
@@ -126,7 +126,7 @@ To set up pipelines with Azure DevOps for CI/CD:
 1. Commit and push these template files into remote repositories.
 1. Create corresponding Azure DevOps pipelines by following [Create your first Azure DevOps Pipeline].
 1. Add necessary [Azure DevOps Pipeline variables] for your pipelines.
-1. Trigger your pipelines automatically, manually or do customization (Check the `trigger`: or `pr`: section in yml files to find the triggers). More about triggers in Azure DevOps, refer to [Triggers in Azure pipelines].
+1. Trigger your pipelines automatically, manually, or do customization (Check the `trigger:` or `pr:` section in yml files to find the triggers). More about triggers in Azure DevOps, refer to [Triggers in Azure pipelines].
 
 ### Customize CI pipeline
 
@@ -202,7 +202,7 @@ The scripts are based on a cross-platform TeamsFx command line tool [TeamsFx-CLI
 > [!NOTE]
 >
 > * To enable `@microsoft/teamsfx-cli` running in CI mode, turn on `CI_ENABLED` by `export CI_ENABLED=true`. In CI mode, `@microsoft/teamsfx-cli` is friendly for CI/CD.
-> * To enable `@microsoft/teamsfx-cli` running in the non-interactive mode, set a global config with command: `teamsfx config set -g interactive false`. In the non-interactive mode, `@microsoft/teamsfx-cli` does not prompt for inputs.
+> * To enable `@microsoft/teamsfx-cli` running in the non-interactive mode, set a global config with command: `teamsfx config set -g interactive false`. In the non-interactive mode, `@microsoft/teamsfx-cli` doesn't prompt for inputs.
 
 Ensure to set up Azure and Microsoft 365 credentials in your environment variables safely. For example, if you're using GitHub as your source code repository, see [GitHub Secrets](https://docs.github.com/en/actions/reference/encrypted-secrets).
 
@@ -234,7 +234,7 @@ Perform the following steps to publish your app:
 1. Sign in to [Developer portal for Teams](https://dev.teams.microsoft.com) using the corresponding account.
 2. Import your app package in zip, select **App** > **Import app** > **Replace**.
 3. Select the target app in app list.
-4. Publish your app, select `Publish -> Publish to your org`.
+4. Select `Publish -> Publish to your org` to publish your app.
 
 ## See also
 
