@@ -26,6 +26,8 @@ Teams platform features that are available to all app developers.
 
 **2023 April**
 
+* ***April 24, 2023***: [Develop your apps with Teams Toolkit](concepts/build-and-test/develop-your-apps-with-teams-toolkit.md)
+
 * ***April 14, 2023***: [Contextless app update](concepts/deploy-and-publish/apps-upload.md#update-your-app).
 
 * ***April 6, 2023***: [Set up Microsoft license management](concepts/deploy-and-publish/appsource/prepare/manage-third-party-apps-license.md)
@@ -363,9 +365,9 @@ Discover Microsoft Teams platform features that are deprecated. You can now get 
 
 Teams platform features that aren't available.
 
-**2022 August**
+* ***May 05, 2023***: Adaptive Card tabs will be deprecated in the new Microsoft Teams. Apps are expected to be available in the new Microsoft Teams by June 2023. If your app is using Adaptive Card tabs, it's recommended to rebuild the tab as a [web-based tab](tabs/what-are-tabs.md).
 
-***August 01, 2022***: App Studio is deprecated, use [Developer Portal](concepts/build-and-test/teams-developer-portal.md) for Teams.
+* ***August 01, 2022***: App Studio is deprecated, use [Developer Portal](concepts/build-and-test/teams-developer-portal.md) for Teams.
 
 :::column-end:::
 :::row-end:::
