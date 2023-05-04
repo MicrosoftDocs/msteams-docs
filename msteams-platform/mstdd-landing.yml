@@ -52,6 +52,10 @@ landingContent:
         url: https://gitter.im/OfficeDev/home
     - linkListType: whats-new
       links:
+      - text: Develop your apps with Teams Toolkit
+        url: concepts/build-and-test/develop-your-apps-with-teams-toolkit.md
+      - text: Contextless app update
+        url: concepts/deploy-and-publish/apps-upload.md#update-your-app
       - text: Resource-specific consent for your Teams app
         url: graph-api/rsc/resource-specific-consent.md      
       - text: Drive customer adoption of your app
@@ -68,10 +72,6 @@ landingContent:
         url:  tabs/how-to/build-a-dashboard-tab-app.md
       - text: Targeted in-meeting notification (Developer preview)
         url: apps-in-teams-meetings/in-meeting-notification-for-meeting.md#targeted-in-meeting-notification
-      - text: Enable app caching for your tab app (Developer preview)
-        url: apps-in-teams-meetings/build-tabs-for-meeting.md#app-caching
-      - text: Update and soft delete event notifications in bot
-        url: bots/how-to/conversations/conversation-messages.md#update-message
 
     - linkListType: whats-new
       links:
