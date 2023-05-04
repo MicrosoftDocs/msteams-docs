@@ -63,7 +63,7 @@ Application-hosted media bots require .NET or C# and Windows Server. For more in
 
 | **Sample name** | **Description** | **.NET** |
 |---------------|----------|--------|
-| Audio Video and PlaybackBot |  This sample demonstrates how a bot can do a video stream and change screen sharing role. | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/a3943bafd73ce0df780c0e1ac3428e3de13a101f/Samples/V1.0Samples/LocalMediaSamples/AudioVideoPlaybackBot) |
+| Audio and video playback bot |  This sample demonstrates how a bot can do a video stream and change screen sharing role. | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/a3943bafd73ce0df780c0e1ac3428e3de13a101f/Samples/V1.0Samples/LocalMediaSamples/AudioVideoPlaybackBot) |
 
 ## Next step
 
