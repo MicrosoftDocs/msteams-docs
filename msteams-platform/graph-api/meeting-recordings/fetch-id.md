@@ -38,16 +38,7 @@ For subscribing your app to calendar events, see [change notifications for Outlo
 Use the following example to subscribe to user-level notifications:
 
 ```http
-    
-POST https://graph.microsoft.com/v1.0/subscriptions/
-{
-    "changeType": "created,updated,deleted",
-    "notificationUrl": "https://webhook.azurewebsites.net/api/send/myNotifyClient",
-    "resource": "users('1273a016-201d-4f95-8083-1b7f99b3edeb')/events",
-    "expirationDateTime": "2022-05-05T14:58:56.7951795+00:00",
-    "clientState": "ClientSecret",
-    "includeResourceData": false
-}
+
 ```
 
 When your app is notified about a subscribed meeting event, it looks for calendar event ID in the notification. Use the event ID to get `JoinWebUrl` for retrieving a specific chat ID and subscribing to its messages. After your app has subscribed to the chat messages, follow the steps given for [tenant-level notifications](#obtain-meeting-details-using-tenant-level-notification) to obtain meeting ID and organizer ID.
@@ -60,15 +51,7 @@ To obtain meeting ID and organizer ID from user-level notification:
     <summary><b>Example</b>: Notification payload</summary>
 
     ```json
-    {
-        "subscriptionId": "ef30cdc6-b5ae-4702-b924-f458fd9e5fc3",
-        "changeType": "created",
-        "tenantId": "2432b57b-0abd-43db-aa7b-16eadd115d34",
-        "clientState": "ClientSecret",
-        "subscriptionExpirationDateTime": "2022-05-05T07:54:53.1886542-07:00",
-        "resource": "Users/1273a016-201d-4f95-8083-1b7f99b3edeb/Events/AAMkADY0NjM1MjRhLTNiNjAtNDBiOC1hYTQxLThkMjAxN2QzMjZhYQBGAAAAAAC03Gz8aL_JQp2Kxvw5a29SBwDFFWHjtoMRTqdrVyQ1h8yLAAAAAAENAADFFWHjtoMRTqdrVyQ1h8yLAAFwC7nAAAA=",
-        "resourceData": {}
-    }
+    
     ```
 
     In this example, the `eventID` contained within `resource` is *AAMkADY0NjM1MjRhLTNiNjAtNDBiOC1hYTQxLThkMjAxN2QzMjZhYQBGAAAAAAC03Gz8aL_JQp2Kxvw5a29SBwDFFWHjtoMRTqdrVyQ1h8yLAAAAAAENAADFFWHjtoMRTqdrVyQ1h8yLAAFwC7nAAAA=*.
@@ -81,7 +64,7 @@ To obtain meeting ID and organizer ID from user-level notification:
     Use the following example to request the meeting URL:
 
     ```http
-    GET https://graph.microsoft.com/v1.0/users/1273a016-201d-4f95-8083-1b7f99b3edeb/events/AAMkADY0NjM1MjRhLTNiNjAtNDBiOC1hYTQxLThkMjAxN2QzMjZhYQBGAAAAAAC03Gz8aL_JQp2Kxvw5a29SBwDFFWHjtoMRTqdrVyQ1h8yLAAAAAAENAADFFWHjtoMRTqdrVyQ1h8yLAAFwC7nAAAA=
+   
     ```
 
     The response payload contains `joinURL`.
@@ -90,25 +73,7 @@ To obtain meeting ID and organizer ID from user-level notification:
     <summary><b>Example</b>: Response payload for getting meeting URL</summary>
 
     ```json
-    {
-        "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users('1273a016-201d-4f95-8083-1b7f99b3edeb')/events/$entity",
-        "@odata.etag": "W/\"xRVh47aDEU6na1ckNYfMiwABb2Twsg==\"",
-        "id": "AAMkADY0NjM1MjRhLTNiNjAtNDBiOC1hYTQxLThkMjAxN2QzMjZhYQBGAAAAAAC03Gz8aL_JQp2Kxvw5a29SBwDFFWHjtoMRTqdrVyQ1h8yLAAAAAAENAADFFWHjtoMRTqdrVyQ1h8yLAAFwC7nAAAA=",    
-        "start": {
-            "dateTime": "2022-05-06T15:00:00.0000000",
-            "timeZone": "UTC"
-        },
-        "end": {
-            "dateTime": "2022-05-06T15:30:00.0000000",
-            "timeZone": "UTC"
-        },
-            
-        "onlineMeeting": {
-            "joinUrl": "https://teams.microsoft.com/l/meetup-join/19%3ameeting_MjExYzJiMTItZDY1MS00ZGZkLWE5YzQtZTBmNWI1MDg2M2Uw%40thread.v2/0?context=%7b%22Tid%22%3a%222432b57b-0abd-43db-aa7b-16eadd115d34%22%2c%22Oid%22%3a%221273a016-201d-4f95-8083-1b7f99b3edeb%22%7d",
-            "conferenceId": "438824583",
-            "tollNumber": "+1 213-279-1007"
-        }    
-    }
+    
     ```
 
     </details>
@@ -120,7 +85,7 @@ To obtain meeting ID and organizer ID from user-level notification:
     Use the following example to request the thread ID:
 
     ``` http
-    GET https://graph.microsoft.com/v1.0/users('14b779ae-cb64-47e7-a512-52fd50a4154d')/onlineMeetings?$filter=JoinWebUrl%20eq%20'https://teams.microsoft.com/l/meetup-join/19%3ameeting_MTM5OTY3MGUtNmY4Mi00Yjg4LTk2MDUtY2IyZGRlNmU1ZjA2%40thread.v2/0?context=%7b%22Tid%22%3a%222432b57b-0abd-43db-aa7b-16eadd115d34%22%2c%22Oid%22%3a%2214b779ae-cb64-47e7-a512-52fd50a4154d%22%7d'
+    
     ```
 
     The response payload contains the `threadID` member in the `chatInfo` property.
@@ -129,24 +94,7 @@ To obtain meeting ID and organizer ID from user-level notification:
     <summary><b>Example</b>: Response payload with thread ID</summary>
 
     ```json
-    {
-        "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users('14b779ae-cb64-47e7-a512-52fd50a4154d')/onlineMeetings",
-        "value": [
-            {
-                "id": "MSoxNGI3NzlhZS1jYjY0LTQ3ZTctYTUxMi01MmZkNTBhNDE1NGQqMCoqMTk6bWVldGluZ19NVE01T1RZM01HVXRObVk0TWkwMFlqZzRMVGsyTURVdFkySXlaR1JsTm1VMVpqQTJAdGhyZWFkLnYy",
-                "creationDateTime": "2022-04-26T07:41:17.3736455Z",
-                "startDateTime": "2022-04-26T10:30:00Z",
-                "endDateTime": "2022-04-26T11:00:00Z",
-                "joinUrl": "https://teams.microsoft.com/l/meetup-join/19%3ameeting_MTM5OTY3MGUtNmY4Mi00Yjg4LTk2MDUtY2IyZGRlNmU1ZjA2%40thread.v2/0?context=%7b%22Tid%22%3a%222432b57b-0abd-43db-aa7b-16eadd115d34%22%2c%22Oid%22%3a%2214b779ae-cb64-47e7-a512-52fd50a4154d%22%7d",
-                "joinWebUrl": "https://teams.microsoft.com/l/meetup-join/19%3ameeting_MTM5OTY3MGUtNmY4Mi00Yjg4LTk2MDUtY2IyZGRlNmU1ZjA2%40thread.v2/0?context=%7b%22Tid%22%3a%222432b57b-0abd-43db-aa7b-16eadd115d34%22%2c%22Oid%22%3a%2214b779ae-cb64-47e7-a512-52fd50a4154d%22%7d",
-                "chatInfo": {
-                    "threadId": "19:meeting_MTM5OTY3MGUtNmY4Mi00Yjg4LTk2MDUtY2IyZGRlNmU1ZjA2@thread.v2",
-                    "messageId": "0",
-                    "replyChainMessageId": null
-                }
-            }
-        ]
-    }
+    
     ```
 
     </details>
@@ -177,39 +125,7 @@ To obtain meeting ID and organizer ID from tenant-level notification:
         <summary><b>Example</b>: Payload for recording started event</summary>
 
         ```json
-        {
-        "subscriptionId": "1217470f-564c-4fe3-b51f-ebd962cb8797",
-        "changeType": "created",
-        "tenantId": "2432b57b-0abd-43db-aa7b-16eadd115d34",
-        "resource": "chats('19:meeting_ZjVkMjc0ZWYtNThkMy00ZGI1LWFiYjAtYjg3ZGU0ZWI3MzZk@thread.v2')/messages('1649787549174')",
-        "contentDecryptedBySimulator": {
-            "@odata.context": "https://graph.microsoft.com/$metadata#chats('19%3Ameeting_ZjVkMjc0ZWYtNThkMy00ZGI1LWFiYjAtYjg3ZGU0ZWI3MzZk%40thread.v2')/messages/$entity",
-            "messageType": "systemEventMessage",
-            "createdDateTime": "2022-04-12T18:19:09.174Z",
-            "lastModifiedDateTime": "2022-04-12T18:19:09.174Z",
-            "chatId": "19:meeting_ZjVkMjc0ZWYtNThkMy00ZGI1LWFiYjAtYjg3ZGU0ZWI3MzZk@thread.v2",
-            "body": {
-                "contentType": "html",
-                "content": "<systemEventMessage/>"
-            },
-            "channelIdentity": null,
-            "eventDetail": {
-                "@odata.type": "#Microsoft.Teams.GraphSvc.callRecordingEventMessageDetail",
-                "callId": "16481de8-3262-419b-abc7-0139e6239515",
-                "callRecordingICalUid": "",
-                "meetingOrganizer": {
-                    "application": null,
-                    "device": null,
-                    "user": {
-                    "userIdentityType": "aadUser",
-                        "id": "14b779ae-cb64-47e7-a512-52fd50a4154d",
-                        "displayName": null
-                        }
-                    }
-                }
-            },
-            "encryptedContent": {}
-        }
+        
         ```
 
         </details>
@@ -220,33 +136,7 @@ To obtain meeting ID and organizer ID from tenant-level notification:
         <summary><b>Example</b>: Payload for call ended event</summary>
 
         ```json
-        {
-            "subscriptionId": "1217470f-564c-4fe3-b51f-ebd962cb8797",
-            "changeType": "created",
-            "tenantId": "2432b57b-0abd-43db-aa7b-16eadd115d34",
-            "resource": "chats('19:meeting_ZjVkMjc0ZWYtNThkMy00ZGI1LWFiYjAtYjg3ZGU0ZWI3MzZk@thread.v2')/messages('1649787585457')",
-            "resourceData": {},
-            "contentDecryptedBySimulator": {
-                "@odata.context": "https://graph.microsoft.com/$metadata#chats('19%3Ameeting_ZjVkMjc0ZWYtNThkMy00ZGI1LWFiYjAtYjg3ZGU0ZWI3MzZk%40thread.v2')/messages/$entity",
-                "createdDateTime": "2022-04-12T18:19:45.457Z",
-                "lastModifiedDateTime": "2022-04-12T18:19:45.457Z",     
-                "chatId": "19:meeting_ZjVkMjc0ZWYtNThkMy00ZGI1LWFiYjAtYjg3ZGU0ZWI3MzZk@thread.v2",
-                "eventDetail": {
-                    "@odata.type": "#Microsoft.Teams.GraphSvc.callEndedEventMessageDetail",
-                    "callId": null,
-                    "callDuration": "PT1M44S",
-                    "callEventType": "meeting",
-                    "callParticipants": [
-                    ],
-                    "initiator": {
         
-                    }
-                }
-            },
-            "encryptedContent": {
-                    
-            }
-        }
         ```
 
         </details>
@@ -258,7 +148,7 @@ To obtain meeting ID and organizer ID from tenant-level notification:
     Use the following example to request chat entity based on the chat ID:
 
     ``` http
-    GET https://graph.microsoft.com/v1.0/chats/19:meeting_NmU0NTkxYzMtM2Y2My00NzRlLWFmN2YtNTFiMGM5OWM3ZjY2@thread.v2
+   
     ```
 
     The response payload contains the following elements:
@@ -278,26 +168,7 @@ To obtain meeting ID and organizer ID from tenant-level notification:
             <summary><b>Example</b>: Response payload for online meeting</b></summary>
 
             ```json
-            {
-                "@odata.context": "https://graph.microsoft.com/beta/$metadata#chats/$entity",
-                "id": "19:meeting_NmU0NTkxYzMtM2Y2My00NzRlLWFmN2YtNTFiMGM5OWM3ZjY2@thread.v2",
-                "topic": "Test Meet Create Online Meeting",
-                "createdDateTime": "2022-04-14T11:30:45.903Z",
-                "lastUpdatedDateTime": "2022-04-26T06:27:45.265Z",
-                "chatType": "meeting",
-                "webUrl": "https://teams.microsoft.com/l/chat/19%3Ameeting_NmU0NTkxYzMtM2Y2My00NzRlLWFmN2YtNTFiMGM5OWM3ZjY2%40thread.v2/0?tenantId=2432b57b-0abd-43db-aa7b-16eadd115d34",
-                "tenantId": "2432b57b-0abd-43db-aa7b-16eadd115d34",
-                "viewpoint": null,
-                "onlineMeetingInfo": {
-                "calendarEventId": null,
-                    "joinWebUrl": "https://teams.microsoft.com/l/meetup-join/19%3ameeting_NmU0NTkxYzMtM2Y2My00NzRlLWFmN2YtNTFiMGM5OWM3ZjY2%40thread.v2/0?context=%7b%22Tid%22%3a%222432b57b-0abd-43db-aa7b-16eadd115d34%22%2c%22Oid%22%3a%2214b779ae-cb64-47e7-a512-52fd50a4154d%22%7d",
-                    "organizer": {
-                        "id": "14b779ae-cb64-47e7-a512-52fd50a4154d",
-                        "displayName": null,
-                        "userIdentityType": "aadUser"
-                    }
-                }
-            }
+            
             ```
 
             </details>
@@ -308,26 +179,7 @@ To obtain meeting ID and organizer ID from tenant-level notification:
             <summary><b>Example</b>: Response payload for meeting not marked as online</summary>
 
             ```json
-            {
-                "@odata.context": "https://graph.microsoft.com/beta/$metadata#chats/$entity",
-                "id": "19:meeting_YzM1NGFiZWYtOGFiOS00NjM5LTg4OTktYmU0MjI4NTQyNGZm@thread.v2",
-                "topic": "Non Online Meeting Teams Client",
-                "createdDateTime": "2022-04-26T09:43:23.711Z",
-                "lastUpdatedDateTime": "2022-04-26T09:43:46.157Z",
-                "chatType": "meeting",
-                "webUrl": "https://teams.microsoft.com/l/chat/19%3Ameeting_YzM1NGFiZWYtOGFiOS00NjM5LTg4OTktYmU0MjI4NTQyNGZm%40thread.v2/0?tenantId=2432b57b-0abd-43db-aa7b-16eadd115d34",
-                "tenantId": "2432b57b-0abd-43db-aa7b-16eadd115d34",
-                "viewpoint": null,
-                "onlineMeetingInfo": {
-                    "calendarEventId": "AAMkAGE3NjJhOTVhLTNkZDQtNDE2OS05ZjU0LTJmOGQ0YTY2YTdiZQBGAAAAAAD3AG5jNnlgQJvdCL_KgXJIBwBsww5BlIxtT7iFyYWrXV3AAAAAAAENAABsww5BlIxtT7iFyYWrXV3AAACSDwYeAAA=",
-                    "joinWebUrl": null,
-                    "organizer": {
-                        "id": "14b779ae-cb64-47e7-a512-52fd50a4154d",
-                        "displayName": null,
-                        "userIdentityType": "aadUser"
-                    }
-                }
-            }
+            
             ```
 
             </details>
@@ -335,7 +187,7 @@ To obtain meeting ID and organizer ID from tenant-level notification:
             - Use the following example to get `joinWebUrl` from the `calendarEventId`:
 
               ``` http
-                GET https://graph.microsoft.com/beta/users/14b779ae-cb64-47e7-a512-52fd50a4154d/events/AAMkAGE3NjJhOTVhLTNkZDQtNDE2OS05ZjU0LTJmOGQ0YTY2YTdiZQBGAAAAAAD3AG5jNnlgQJvdCL_KgXJIBwBsww5BlIxtT7iFyYWrXV3AAAAAAAENAABsww5BlIxtT7iFyYWrXV3AAACSDwYdAAA=
+              
               ```
 
               In this example:
@@ -352,24 +204,7 @@ To obtain meeting ID and organizer ID from tenant-level notification:
               <summary><b>Example</b>: Response payload that contains the URL to join meeting</summary>
 
               ```json
-              {
-                "@odata.context": "https://graph.microsoft.com/beta/$metadata#users('14b779ae-cb64-47e7-a512-52fd50a4154d')/events/$entity",
-                "@odata.etag": "W/\"bMMOQZSMbU+4hcmFq11dwAAAkc3Tmw==\"",
-                "id": "AAMkAGE3NjJhOTVhLTNkZDQtNDE2OS05ZjU0LTJmOGQ0YTY2YTdiZQBGAAAAAAD3AG5jNnlgQJvdCL_KgXJIBwBsww5BlIxtT7iFyYWrXV3AAAAAAAENAABsww5BlIxtT7iFyYWrXV3AAACSDwYdAAA=",    
-                "start": {
-                    "dateTime": "2022-04-26T10:30:00.0000000",
-                    "timeZone": "UTC"
-                },
-                "end": {
-                    "dateTime": "2022-04-26T11:00:00.0000000",
-                    "timeZone": "UTC"
-                },    
-                "onlineMeeting": {
-                    "joinUrl": "https://teams.microsoft.com/l/meetup-join/19%3ameeting_MTM5OTY3MGUtNmY4Mi00Yjg4LTk2MDUtY2IyZGRlNmU1ZjA2%40thread.v2/0?context=%7b%22Tid%22%3a%222432b57b-0abd-43db-aa7b-16eadd115d34%22%2c%22Oid%22%3a%2214b779ae-cb64-47e7-a512-52fd50a4154d%22%7d"
-                },
-                "calendar@odata.associationLink": "https://graph.microsoft.com/beta/users('14b779ae-cb64-47e7-a512-52fd50a4154d')/calendars('AAMkAGE3NjJhOTVhLTNkZDQtNDE2OS05ZjU0LTJmOGQ0YTY2YTdiZQAuAAAAAAD3AG5jNnlgQJvdCL_KgXJIAQBsww5BlIxtT7iFyYWrXV3AAAAAAAENAAA=')/$ref",
-                "calendar@odata.navigationLink": "https://graph.microsoft.com/beta/users('14b779ae-cb64-47e7-a512-52fd50a4154d')/calendars('AAMkAGE3NjJhOTVhLTNkZDQtNDE2OS05ZjU0LTJmOGQ0YTY2YTdiZQAuAAAAAAD3AG5jNnlgQJvdCL_KgXJIAQBsww5BlIxtT7iFyYWrXV3AAAAAAAENAAA=')"
-                }
+              
                 ```
 
               </details>
@@ -379,7 +214,7 @@ To obtain meeting ID and organizer ID from tenant-level notification:
     Use the following example to request the online meeting ID:
 
     ``` http
-    GET https://graph.microsoft.com/beta/users('14b779ae-cb64-47e7-a512-52fd50a4154d')/onlineMeetings?$filter=JoinWebUrl%20eq%20'https://teams.microsoft.com/l/meetup-join/19%3ameeting_MTM5OTY3MGUtNmY4Mi00Yjg4LTk2MDUtY2IyZGRlNmU1ZjA2%40thread.v2/0?context=%7b%22Tid%22%3a%222432b57b-0abd-43db-aa7b-16eadd115d34%22%2c%22Oid%22%3a%2214b779ae-cb64-47e7-a512-52fd50a4154d%22%7d'
+    
     ```
 
     The response payload contains the meeting ID in the `id` member of the `value` property.
@@ -388,24 +223,7 @@ To obtain meeting ID and organizer ID from tenant-level notification:
     <summary><b>Example</b>: Response payload with meeting ID</summary>
 
     ```json
-    {
-        "@odata.context": "https://graph.microsoft.com/beta/$metadata#users('14b779ae-cb64-47e7-a512-52fd50a4154d')/onlineMeetings",
-        "value": [
-            {
-                "id": "MSoxNGI3NzlhZS1jYjY0LTQ3ZTctYTUxMi01MmZkNTBhNDE1NGQqMCoqMTk6bWVldGluZ19NVE01T1RZM01HVXRObVk0TWkwMFlqZzRMVGsyTURVdFkySXlaR1JsTm1VMVpqQTJAdGhyZWFkLnYy",
-                "creationDateTime": "2022-04-26T07:41:17.3736455Z",
-                "startDateTime": "2022-04-26T10:30:00Z",
-                "endDateTime": "2022-04-26T11:00:00Z",
-                "joinUrl": "https://teams.microsoft.com/l/meetup-join/19%3ameeting_MTM5OTY3MGUtNmY4Mi00Yjg4LTk2MDUtY2IyZGRlNmU1ZjA2%40thread.v2/0?context=%7b%22Tid%22%3a%222432b57b-0abd-43db-aa7b-16eadd115d34%22%2c%22Oid%22%3a%2214b779ae-cb64-47e7-a512-52fd50a4154d%22%7d",
-                "joinWebUrl": "https://teams.microsoft.com/l/meetup-join/19%3ameeting_MTM5OTY3MGUtNmY4Mi00Yjg4LTk2MDUtY2IyZGRlNmU1ZjA2%40thread.v2/0?context=%7b%22Tid%22%3a%222432b57b-0abd-43db-aa7b-16eadd115d34%22%2c%22Oid%22%3a%2214b779ae-cb64-47e7-a512-52fd50a4154d%22%7d",
-                "chatInfo": {
-                    "threadId": "19:meeting_MTM5OTY3MGUtNmY4Mi00Yjg4LTk2MDUtY2IyZGRlNmU1ZjA2@thread.v2",
-                    "messageId": "0",
-                    "replyChainMessageId": null
-                }
-            }
-        ]
-    }
+   
     ```
 
     </details>
@@ -419,7 +237,7 @@ To obtain meeting ID and organizer ID from tenant-level notification:
        Use the following example to request the recording ID:
 
         ```http
-        GET https://graph.microsoft.com/beta/users('14b779ae-cb64-47e7-a512-52fd50a4154d')/onlineMeetings('MSoxNGI3NzlhZS1jYjY0LTQ3ZTctYTUxMi01MmZkNTBhNDE1NGQqMCoqMTk6bWVldGluZ19ObVUwTlRreFl6TXRNMlkyTXkwME56UmxMV0ZtTjJZdE5URmlNR001T1dNM1pqWTJAdGhyZWFkLnYy')/recordings
+      
         ```
 
         In this example:
@@ -435,16 +253,7 @@ To obtain meeting ID and organizer ID from tenant-level notification:
         <summary><b>Example</b>: Response payload for getting recording ID</summary>
 
         ```json
-        {
-            "@odata.context": "https://graph.microsoft.com/beta/$metadata#users('14b779ae-cb64-47e7-a512-52fd50a4154d')/onlineMeetings('MSoxNGI3NzlhZS1jYjY0LTQ3ZTctYTUxMi01MmZkNTBhNDE1NGQqMCoqMTk6bWVldGluZ19ObVUwTlRreFl6TXRNMlkyTXkwME56UmxMV0ZtTjJZdE5URmlNR001T1dNM1pqWTJAdGhyZWFkLnYy')/recordings",
-            "@odata.count": 1,
-            "value": [
-                {
-                    "id": "MSMjMCMjMDEyNjJmNjgtOTc2Zi00MzIxLTlhNDQtYThmMmY4ZjQ1ZjVh",
-                    "createdDateTime": "2022-04-14T11:34:39.5662792Z"
-                }
-            ]
-        }
+        
         ```
 
         In this example, the recording ID is *MSMjMCMjMDEyNjJmNjgtOTc2Zi00MzIxLTlhNDQtYThmMmY4ZjQ1ZjVh*.
@@ -455,8 +264,6 @@ To obtain meeting ID and organizer ID from tenant-level notification:
 
         Use the following example to request the recordings for a specific meeting in the `.vtt` format:
 
-        ```http
-        GET https://graph.microsoft.com/beta/users('14b779ae-cb64-47e7-a512-52fd50a4154d')/onlineMeetings('MSoxNGI3NzlhZS1jYjY0LTQ3ZTctYTUxMi01MmZkNTBhNDE1NGQqMCoqMTk6bWVldGluZ19ObVUwTlRreFl6TXRNMlkyTXkwME56UmxMV0ZtTjJZdE5URmlNR001T1dNM1pqWTJAdGhyZWFkLnYy')/recordings('MSMjMCMjMDEyNjJmNjgtOTc2Zi00MzIxLTlhNDQtYThmMmY4ZjQ1ZjVh')/content?$format=text/vtt
         ```
 
         The response payload will contain the recordings in `.vtt` format.
@@ -481,29 +288,7 @@ The response payload contains:
 <summary><b>Example</b>: Response payload for getting meeting details</b></summary>
 
 ```json
-{
-  details: {
-    id: "MCMxOTptZWV0aW5nX05XTTFNVEk1TnpNdE5qZ3pNeTAwWVdRNExUaG1PV1F0WlRnM01UQm1PVGczWW1VekB0aHJlYWQudjIjMA==",
-    msGraphResourceId: "MSo2NzAyYWZiNi0xMDliLTRjMzItYTE0MS02ZTY1NDY5NTAyYjkqMCoqMTk6bWVldGluZ19OV00xTVRJNU56TXROamd6TXkwMFlXUTRMVGhtT1dRdFpUZzNNVEJtT1RnM1ltVXpAdGhyZWFkLnYy",
-    scheduledStartTime: {
-    },
-    scheduledEndTime: {
-    },
-    joinUrl: "https://teams.microsoft.com/l/meetup-join/19%3ameeting_NWM1MTI5NzMtNjgzMy00YWQ4LThmOWQtZTg3MTBmOTg3YmUz%40thread.v2/0?context=%7b%22Tid%22%3a%22b3cdf1c8-024a-49e2-a994-f67f830b02f3%22%2c%22Oid%22%3a%226702afb6-109b-4c32-a141-6e65469502b9%22%7d",
-    title: "Testing meeting bot 1 - Hun",
-    type: "Scheduled",
-  },
-  conversation: {
-    id: "19:meeting_NWM1MTI5NzMtNjgzMy00YWQ4LThmOWQtZTg3MTBmOTg3YmUz@thread.v2",
-    isGroup: true,
-    conversationType: "groupChat",
-  },
-  organizer: {
-    id: "29:1VZkVr77S3GW_RdAXKrfgFeytpqMegL3tkKvEbwrPqoCVvmqrlKtVrfKWUY7xIM-bZIx4Sq-p1MjdjSZnb5W20w",
-    tenantId: "b3cdf1c8-024a-49e2-a994-f67f830b02f3",
-    aadObjectId: "6702afb6-109b-4c32-a141-6e65469502b9",
-  },
-}
+
 ```
 
 In this example:
@@ -520,7 +305,7 @@ After your app obtains the meeting ID and the organizer ID, it triggers the Grap
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Graph APIs for fetching recordings](/graph/api/resources/callrecording)
+> [Graph APIs for fetching recordings](/graph/api/resources/callrecording.md)
 
 ## See also
 
