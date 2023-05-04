@@ -13,7 +13,7 @@ Your app can fetch recordings of a meeting using the meeting ID and the user ID 
 > [!NOTE]
 > The meeting ID for scheduled meetings may expire in some days if it's unused. It can be revived by using the meeting URL to join the meeting. For more information about meeting expiration timeline for different meeting types, see [meeting expiration](/microsoftteams/limits-specifications-teams#meeting-expiration).
 
-To obtain meeting ID and organizer ID for fetching the transcript, choose one of the two ways:
+To obtain meeting ID and organizer ID for fetching the recording, choose one of the two ways:
 
 - [Subscribe to change notifications](#subscribe-to-change-notifications)
 - [Use Bot Framework](#use-bot-framework-to-get-meeting-id-and-organizer-id)
@@ -161,11 +161,11 @@ To obtain meeting ID and organizer ID from user-level notification:
 
 ### Obtain meeting details using tenant-level notification
 
-Tenant-level notifications are useful if your app is authorized to access all meeting recordings across the tenant. Subscribe your app to be notified for events when transcription starts or call ends for scheduled online Teams meetings. After the meeting ends, your app can access and retrieve the meeting transcript.
+Tenant-level notifications are useful if your app is authorized to access all meeting recordings across the tenant. Subscribe your app to be notified for events when recording starts or call ends for scheduled online Teams meetings. After the meeting ends, your app can access and retrieve the meeting recording.
 
 For subscribing your app to tenant-level notifications, see [get change notifications](/graph/teams-changenotifications-chatmessage#subscribe-to-messages-across-all-chats).
 
-When your app is notified about subscribed meeting events, it searches through the notifications for transcription started and meeting ended events. These events contain the chat ID, which is used to obtain chat entity, and eventually meeting ID and organizer ID.
+When your app is notified about subscribed meeting events, it searches through the notifications for recording started and meeting ended events. These events contain the chat ID, which is used to obtain chat entity, and eventually meeting ID and organizer ID.
 
 To obtain meeting ID and organizer ID from tenant-level notification:
 
@@ -174,7 +174,7 @@ To obtain meeting ID and organizer ID from tenant-level notification:
     - Transcription started event: `callRecordingEventMessageDetail` event type
 
         <details>
-        <summary><b>Example</b>: Payload for transcription started event</summary>
+        <summary><b>Example</b>: Payload for recording started event</summary>
 
         ```json
         {
@@ -410,7 +410,7 @@ To obtain meeting ID and organizer ID from tenant-level notification:
 
     </details>
 
-4. **Fetch transcript**: The organizer ID and meeting ID obtained in the Steps 2 and 3 let your app fetch the recordings for that particular meeting event.
+4. **Fetch recording**: The organizer ID and meeting ID obtained in the Steps 2 and 3 let your app fetch the recordings for that particular meeting event.
 
     To fetch recordings, you'll need to:
 
