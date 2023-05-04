@@ -171,7 +171,7 @@ To obtain meeting ID and organizer ID from tenant-level notification:
 
 1. **Get chat ID**: Your app gets the `chatId` property from the notification to make subsequent calls. Your app can get the chat ID from the payloads of:
 
-    - Transcription started event: `callTranscriptEventMessageDetail` event type
+    - Transcription started event: `callRecordingEventMessageDetail` event type
 
         <details>
         <summary><b>Example</b>: Payload for transcription started event</summary>
@@ -194,9 +194,9 @@ To obtain meeting ID and organizer ID from tenant-level notification:
             },
             "channelIdentity": null,
             "eventDetail": {
-                "@odata.type": "#Microsoft.Teams.GraphSvc.callTranscriptEventMessageDetail",
+                "@odata.type": "#Microsoft.Teams.GraphSvc.callRecordingEventMessageDetail",
                 "callId": "16481de8-3262-419b-abc7-0139e6239515",
-                "callTranscriptICalUid": "",
+                "callRecordingICalUid": "",
                 "meetingOrganizer": {
                     "application": null,
                     "device": null,
@@ -517,18 +517,10 @@ dGluZ19OV00xTVRJNU56TXROamd6TXkwMFlXUTRMVGhtT1dRdFpUZzNNVEJtT1RnM
 
 After your app obtains the meeting ID and the organizer ID, it triggers the Graph APIs to fetch recording content using these meeting details.
 
-### Code samples
-
-You can try the following code sample for a bot app:
-
-| **Sample name** | **Description** | **.NET** | **Node.js** |
-|----------------|-----------------|--------------|--------------|--------------|
-| Meeting transcription | This is a sample application which demonstrates how to get Transcript using Graph API and show it in the task module. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-transcription/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-transcription/nodejs) |
-
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Graph APIs for fetching recordings](/graph/api/resources/calltranscript)
+> [Graph APIs for fetching recordings](/graph/api/resources/callrecording)
 
 ## See also
 
