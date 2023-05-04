@@ -914,7 +914,7 @@ Delegated permissions allow the app to access data on behalf of the signed-in us
 
 **Optional** - array
 
-The set of extensions for this app. Used to specify Outlook Add-ins within a unified manifest for simplified distribution and acquisition within the Microsoft 365 ecosystem.
+Contains objects that define the set of extensions for the app. Used to specify Outlook Add-ins within a unified manifest for simplified distribution and acquisition within the Microsoft 365 ecosystem.
 
 > [!NOTE]
 > Only one extension per app is supported.
