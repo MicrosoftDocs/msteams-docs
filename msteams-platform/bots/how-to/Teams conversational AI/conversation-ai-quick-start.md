@@ -16,11 +16,12 @@ Get started with Teams conversation AI SDK using the SantaBot sample. It's desig
 
 To get started, install:
 
-* Microsoft Teams is installed and you have an account
-* NodeJS (version 16.x)
-* ngrok or equivalent tunnelling solution
+* Microsoft Teams is installed and you have an account.
+* NodeJS (version 16.x).
+* ngrok or equivalent tunnelling solution.
+* OpenAI key for leveraging GPT.
 
-## Build and run the Santa bit sample app
+## Build and run the santaBot sample app
 
 1. Go to the [sample](https://github.com/microsoft/botbuilder-m365/tree/main/js/samples/04.ai.a.naturalLanguage.santaBot).
 
@@ -51,19 +52,19 @@ To get started, install:
    > [!NOTE]
    > If you already ran `yarn install` and `yarn build` in the `js` folder, you are ready to get started with ngrok. Otherwise, you need to run `yarn install` and `yarn build` in the js folder.
 
-1. Run the following command to go to the santabot app folder:
+1. Run the following command to go to the santaBot app folder:
 
    ```bash
    cd samples/js/samples/04.ai.naturalLanguage.santaBot
    ```
 
-1. Run ngrok tunneling service and point to port 3978
+1. Run ngrok tunneling service and point to port 3978.
 
    ```bash
    ngrok http --host-header=rewrite 3978
    ```
 
-1. Create Bot Framework registration resource in Azure.
+1. Create [Bot Framework registration](/azure/bot-service/bot-service-quickstart-registration) resource in Azure.
    1. Use the current https URL you were given by running ngrok. Append with the path /api/messages used by this sample.
    1. Ensure that you've enabled the Teams Channel
    1. If you don't have an Azure account you can use this Bot Framework registration.
@@ -73,7 +74,6 @@ To get started, install:
    > [!NOTE]
    >
    > * The App Password is referred to as the **client secret** in the azure portal and you can always create a new client secret anytime.
-   > * You'll also need to create an account on [OpenAI](https://openai.com/api/) and generate an OpenAI APY KEY.
 
    ```text
     MicrosoftAppId=<your bot's ID>
@@ -85,7 +85,7 @@ To get started, install:
 
 1. Open manifest.json in Visual Studio and set `YOUR-MICROSOFT-APP-OR-BOT-ID` to Microsoft App ID.
 
-1. Create a .zip with the following files that are present in the Manifest folder:
+1. Create a .zip file with the following files that are present in the Manifest folder:
    * manifest.json
    * icon-outline.png
    * icon-color.png
@@ -96,8 +96,8 @@ To get started, install:
    yarn start
    ```
 
-1. Sideload the app manifest zip file in Teams.
-1. Invoke the bot using @ mention in Teams chat and talk to it in plain language
+1. Sideload the app manifest .zip file in Teams and add the app to your meeting.
+1. Invoke the bot using @ mention in Teams chat and talk to it in plain language.
 
    The bot uses the text-davinci-003 model to chat with Teams users and respond in a polite and respectful manner, staying within the scope of the conversation.
 
