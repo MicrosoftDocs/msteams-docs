@@ -11,6 +11,9 @@ ms.localizationpriority: medium
 
 Anonymous users don't have an Azure Active Directory (Azure AD) identity and aren't federated with a tenant. The anonymous participants are like external users but their identity isn't shown in the meeting. An anonymous user can be a presenter or an attendee but can't be an organizer. You can build bots, messaging extensions, and cards and task modules in your app to engage with anonymous meeting participants.
 
+> [!NOTE]
+> Apps for anonymous users is supported in Teams mobile client only and isn't supported in channel meetings.
+
 For anonymous users to interact with the apps in Teams meetings, ensure the following:
 
 1. Update your [app manifest](#app-manifest-update-for-anonymous-users).
@@ -230,8 +233,6 @@ Anonymous users can view and interact with Adaptive Cards in the meeting chat. A
 * Anonymous users will see a generic app icon on bot messages and cards, instead of the app's actual icon.
 
     :::image type="content" source="../assets/images/apps-in-meetings/app-icon.png" alt-text="Screenshot shows how the app icon displays for anonymous user.":::
-
-* Channel meeting isn't supported for anonymous users.
 
 ## Code sample
 
