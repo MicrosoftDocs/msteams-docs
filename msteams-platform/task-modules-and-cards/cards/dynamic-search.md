@@ -416,3 +416,4 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
 
 * [Cards and task modules](../cards-and-task-modules.md)
 * [Universal Actions for Adaptive Cards](Universal-actions-for-adaptive-cards/Overview.md)
+* [Media elements in Adaptive Card](media-elements-in-adaptive-cards.md)

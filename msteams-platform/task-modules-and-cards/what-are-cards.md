@@ -64,6 +64,10 @@ In addition to Adaptive Cards, Teams supports two other types of cards:
 
 Typeahead search added as an input control in Adaptive Cards enable [dynamic search](~/task-modules-and-cards/cards/dynamic-search.md) experience from a dynamically loaded dataset. It also allows users to do a type-ahead static search within a list with limited number of choices. The mobile and desktop clients support type ahead dynamic search experience.
 
+### Media elements in Adaptive Cards
+
+Media elements in Adaptive Card provides enhanced media experience and increases engagement with the Adaptive Card. You can add media files such as audio or video clips to your Adaptive Card. For more information, see me[Media elements in Adaptive Card](cards/media-elements-in-adaptive-cards.md).
+
 ### Adaptive Cards and Incoming Webhooks
 
 > [!NOTE]
