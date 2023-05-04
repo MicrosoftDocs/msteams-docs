@@ -17,6 +17,8 @@
     displayName: Teams app user experience
   - name: Explore Teams platform features
     href: overview-explore.md
+  - name: Explore Tools and SDKs
+    href: overview-tools-and-sdks.md
   - name: The Teams solution
     href: overview-solution.md
 - name: Get started

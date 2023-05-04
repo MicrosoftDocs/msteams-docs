@@ -37,7 +37,7 @@ To use codespaces for creating a Teams notification bot:
    Teams Toolkit codespaces builds the app. A dialog appears to prompt you to open the app in a browser.
 1. Select the option to preview the app in the browser.
    The app is sideloaded to Teams and opens in the browser.
-1. One the app dialog appears, select **Add** to install the app in Teams client.
+1. Once the app dialog appears, select **Add** to install the app in Teams client.
 
 > [!NOTE]
 > Your browser may block a pop-up to prevent to open a new browser tab or window.  
