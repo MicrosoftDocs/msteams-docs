@@ -63,7 +63,7 @@ Application-hosted media bots require .NET or C# and Windows Server. For more in
 
 | **Sample name** | **Description** | **Graph** |
 |---------------|----------|--------|
-| Policy recording bot |  This sample demonstrates how a bot can do a video stream and change screen sharing role. | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/LocalMediaSamples/PolicyRecordingBot) |
+| Policy recording bot | This sample demonstrates how a bot can receive media streams for recording. | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/LocalMediaSamples/PolicyRecordingBot) |
 
 ## Next step
 
