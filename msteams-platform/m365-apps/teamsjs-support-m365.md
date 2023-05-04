@@ -1164,6 +1164,12 @@ Preview. Subcapability for interacting with adaptive card dialogs.
 
 Preview. Subcapability for interaction with adaptive card dialogs that need to communicate with the Bot Framework.
 
+### `dialog.update`
+
+[Reference](/javascript/api/@microsoft/teams-js/dialog.update) | [Sample](https://github.com/vikramtha/TeamsJS_CC_App/blob/main/tabs/src/components/capabilities/DialogUpdate.tsx)
+
+Preview. Namespace for updating dialogs.
+
 ### `dialog.url`
 
 [Reference](/javascript/api/@microsoft/teams-js/dialog.url) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teamsjs-cc-app/tabs/src/components/capabilities/Dialog.tsx)
@@ -1719,7 +1725,7 @@ Prior to TeamsJS version 2.0, all deep linking scenarios were handled using `sha
             <td></td>
         </tr>
         <tr>
-            <th><a href="#pagestab">pages.tab</a></th>
+            <th><a href="#pagestabs">pages.tabs</a></th>
             <td>&#x2713;</td>
             <td></td>
             <td></td>
