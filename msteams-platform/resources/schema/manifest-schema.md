@@ -335,7 +335,7 @@ The schema defines the following properties:
 
 Optional, but recommended—string
 
-The https:// URL referencing the JSON Schema for the manifest.
+The <https://> URL referencing the JSON Schema for the manifest.
 
 ## manifestVersion
 
@@ -373,9 +373,9 @@ Specifies information about your company. For apps submitted to the Teams store,
 |Name| Maximum size | Required | Description|
 |---|---|---|---|
 |`name`|32 characters|✔️|The display name for the developer.|
-|`websiteUrl`|2048 characters|✔️|The https:// URL to the developer's website. This link must take users to your company or product-specific landing page.|
-|`privacyUrl`|2048 characters|✔️|The https:// URL to the developer's privacy policy.|
-|`termsOfUseUrl`|2048 characters|✔️|The https:// URL to the developer's terms of use.|
+|`websiteUrl`|2048 characters|✔️|The <https://> URL to the developer's website. This link must take users to your company or product-specific landing page.|
+|`privacyUrl`|2048 characters|✔️|The <https://> URL to the developer's privacy policy.|
+|`termsOfUseUrl`|2048 characters|✔️|The <https://> URL to the developer's terms of use.|
 |`mpnId`|10 characters| |**Optional** The Microsoft Partner Network ID that identifies the partner organization building the app.|
 
 ## name
@@ -448,7 +448,7 @@ Used when your app experience has a team channel tab experience that requires ex
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`configurationUrl`|string|2048 characters|✔️|The https:// URL to use when configuring the tab.|
+|`configurationUrl`|string|2048 characters|✔️|The <https://> URL to use when configuring the tab.|
 |`scopes`|array of enums|2|✔️|Currently, configurable tabs support only the `team` and `groupChat` scopes. |
 |`canUpdateConfiguration`|Boolean|||A value indicating whether an instance of the tab's configuration can be updated by the user after creation. Default: **true**.|
 |`meetingSurfaces`|array of enums|2||The set of `meetingSurfaceItem` scopes where a [tab is supported](../../tabs/how-to/access-teams-context.md). Default: **[sidepanel, stage]**. |
@@ -468,10 +468,10 @@ This item is an array (maximum of 16 elements) with all elements of the type `ob
 |---|---|---|---|---|
 |`entityId`|string|64 characters|✔️|A unique identifier for the entity that the tab displays.|
 |`name`|string|128 characters||The display name of the tab in the channel interface.|
-|`contentUrl`|string|||The https:// URL that points to the entity UI to be displayed in the Teams canvas.|
+|`contentUrl`|string|||The <https://> URL that points to the entity UI to be displayed in the Teams canvas.|
 |`contentBotId`|string|||The Microsoft app ID specified for the bot in the [Bot Framework portal](https://dev.botframework.com/bots).|
-|`websiteUrl`|string|||The https:// URL to point to if a user opts to view in a browser.|
-|`searchUrl`|string|||The https:// URL to point to for a user's search queries.|
+|`websiteUrl`|string|||The <https://> URL to point to if a user opts to view in a browser.|
+|`searchUrl`|string|||The <https://> URL to point to for a user's search queries.|
 |`scopes`|array of enums|3|✔️|Currently, static tabs support only the `personal` scope, which means it can be provisioned only as part of the personal experience.|
 |`context` | array of enums| 8|| The set of `contextItem` scopes where a [tab is supported](../../tabs/how-to/access-teams-context.md). Default: **[personalTab, channelTab, privateChatTab, meetingChatTab, meetingDetailsTab, meetingStage, meetingSidepanel, teamLevelApp]**.|
 
@@ -523,7 +523,7 @@ The object is an array (maximum of one element) with all elements of type `objec
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`configurationUrl`|string|2048 characters|✔️|The https:// URL to use when configuring the connector.|
+|`configurationUrl`|string|2048 characters|✔️|The <https://> URL to use when configuring the connector.|
 |`scopes`|array of enums|1|✔️|Specifies whether the Connector offers an experience in the context of a channel in a `team`, or an experience scoped to an individual user alone (`personal`). Currently, only the `team` scope is supported.|
 |`connectorId`|string|64 characters|✔️|A unique identifier for the Connector that matches its ID in the [Connectors Developer Dashboard](https://aka.ms/connectorsdashboard).|
 
@@ -735,7 +735,7 @@ Define the properties your app uses to post a user activity feed.
 
 ## defaultInstallScope
 
-**Optional** - string
+**Optional**—string
 
 Specifies the install scope defined for this app by default. The defined scope will be the option displayed on the button when a user tries to add the app. Options are:
 
@@ -746,7 +746,7 @@ Specifies the install scope defined for this app by default. The defined scope w
 
 ## defaultGroupCapability
 
-**Optional** - object
+**Optional**—object
 
 When a group install scope is selected, it will define the default capability when the user installs the app. Options are:
 
@@ -762,7 +762,7 @@ When a group install scope is selected, it will define the default capability wh
 
 ## configurableProperties
 
-**Optional** - array
+**Optional**—array
 
 The `configurableProperties` block defines the app properties that Teams admins can customize. For more information, see [enable app customization](~/concepts/design/enable-app-customization.md). The app customization feature isn't supported in custom or LOB apps.
 
@@ -783,7 +783,7 @@ You can define any of the following properties:
 
 ## supportedChannelTypes
 
-**Optional** - array
+**Optional**—array
 
 Enables your app in non-standard channels. If your app supports a team scope and this property is defined, Teams enables your app in each channel type accordingly. Currently, the private and shared channel types are supported.
 
@@ -794,13 +794,13 @@ Enables your app in non-standard channels. If your app supports a team scope and
 
 ## defaultBlockUntilAdminAction
 
-**Optional** - Boolean
+**Optional**—Boolean
 
 When `defaultBlockUntilAdminAction` property is set to **true**, the app is hidden from users by default until admin allows it. If set to **true**, the app is hidden for all tenants and end users. The tenant admins can see the app in the Teams admin center and take action to allow or block the app. The default value is **false**. For more information on default app block, see [Block apps by default for users until an admin approves](../../concepts/deploy-and-publish/add-default-install-scope.md#block-apps-by-default-for-users-until-an-admin-approves).
 
 ## publisherDocsUrl
 
-**Optional** - string
+**Optional**—string
 
 **Maximum size** - 128 characters
 
@@ -808,7 +808,7 @@ The `publisherDocsUrl` is a HTTPS URL to an information page for admins to get g
 
 ## subscriptionOffer
 
-**Optional** - object
+**Optional**—object
 
 Specifies the SaaS offer associated with your app.
 
@@ -818,7 +818,7 @@ Specifies the SaaS offer associated with your app.
 
 ## meetingExtensionDefinition
 
-**Optional** - object
+**Optional**—object
 
 Specify meeting extension definition. For more information, see [custom Together Mode scenes in Teams](../../apps-in-teams-meetings/teams-together-mode.md).
 
@@ -841,7 +841,7 @@ Specify meeting extension definition. For more information, see [custom Together
 
 ## authorization
 
-**Optional** — object
+**Optional**—object
 
 > [!NOTE]
 > `authorization` is only supported for manifest version 1.12 or later.
@@ -912,7 +912,7 @@ Delegated permissions allow the app to access data on behalf of the signed-in us
 
 ## extensions
 
-**Optional** - array
+**Optional**—array
 
 The set of extensions for this app. Used to specify Outlook Add-ins within a unified manifest for simplified distribution and acquisition within the Microsoft 365 ecosystem.
 
