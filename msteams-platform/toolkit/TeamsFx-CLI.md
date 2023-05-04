@@ -352,7 +352,7 @@ Update the specific application manifest file.
 |:----------------  |:-------------|:-------------|
 | `--env` | Yes | Select an existing environment for the project. |
 | `--folder` | No | Select root folder of the project. Defaults to `./` |
-| `--manifest-file-path` | No | Enter the Teams app manifest template file path, it's a relative path to project root folder, defaults to `./appPackage/manifest.json`.
+| `--manifest-file-path` | No | Enter the Teams app manifest template file path, it's a relative path to project root folder, defaults to `./appPackage/manifest.json`. |
 
 ## `teamsfx upgrade`
 
