@@ -15,8 +15,6 @@ In this tutorial, get familiarize with the scenario-based Teams app in one of th
 * [Quick start with a codespace instance](#use-teams-toolkit-codespaces-to-build-a-notification-bot) or
 * [Step-by-step](#use-step-by-step-guide-to-build-a-notification-bot) to build a bot
 
-:::image type="content" border="false" source="../assets/images/get-started/codescpaces-vs-manual.png" alt-text="Illustration showing your choices to build Teams app - Codespaces bundles all you need and it only takes several minutes to rey, while getting started manually will take time but you learn step-by-step":::
-
 ## Use Teams Toolkit codespaces to build a notification bot
 
 The codespace instance allows you to experience a Teams app almost instantaneously. It opens Visual Studio Code, where Teams Toolkit extension, the app source code, and all dependencies are pre-packaged for you. You just need to select the following button to begin.
