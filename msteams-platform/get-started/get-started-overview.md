@@ -10,7 +10,7 @@ Let's get started for building apps for Microsoft Teams and beyond!
 
 Walk through the steps to build a basic, real-world Teams app. The Get started also introduces you to common tools, fundamental concepts, and more advanced features.
 
-Here's an idea of what you'll learn:
+Here's an idea of what you learn:
 
 * Get up and running quickly with the Microsoft Teams Toolkit (a Visual Studio Code extension).
 * Learn to build scenario-based apps, such as a notification bot.
@@ -22,7 +22,7 @@ Here's an idea of what you'll learn:
 
 (Note: please edit the content!)
 
-In this section, you will learn these three major app capabilities-- tabs, bot, and message extension. And each tutorial, you have two ways to learn. One way is a quickstart using a GitHub Codespaces instance, and another way takes longer but you learn step by step.
+In this section, you will learn these three major app capabilities--tab, bot, and message extension. And each tutorial, you have two ways to learn. One way is a quickstart using a GitHub Codespaces instance, and another way takes longer but you learn step by step.
 
 :::image type="content" border="false" source="../assets/images/get-started/codescpaces-vs-manual.png" alt-text="Illustration showing your choices to build Teams app - Codespaces bundles all you need and it only takes several minutes to rey, while getting started manually will take time but you learn step-by-step":::
 
