@@ -9,7 +9,7 @@ ms.author: v-sdhakshina
 
 # Media elements in Adaptive Card
 
-Media elements in the Adaptive Card provides enhanced media experience to the users and increases engagement with the Adaptive Card. You can add media files such as audio or video clips to your Adaptive Card.
+Media elements in Adaptive Card provides enhanced media experience to the users and increases engagement with the Adaptive Card. You can add media files such as audio or video clips to your Adaptive Card.
 
 Adaptive Card plays the video or audio clips by accessing the media files available in OneDrive or SharePoint. You can view the media files within the Adaptive Card in Teams.
 
@@ -25,17 +25,11 @@ The following screenshot shows you the media elements in your Adaptive Card:
 
 ---
 > [!NOTE]
-> For desktop clients, Adaptive cards support inline and full screen playback, whereas for mobile clients, the experience is limited to full screen and picture-in-picture (PiP), which allows you to watch video in floating window when you open the other apps.
+> For desktop clients, Adaptive cards support inline and full screen playback, whereas for mobile clients, the experience is limited to full screen and picture-in-picture (PiP) (which allows you to watch video in floating window when you open the other apps).
 
 ## Add media elements to your Adaptive Card
 
 You can add media files to an existing or new Adaptive Card using [Teams Developer Portal](https://dev.teams.microsoft.com/cards) or [Adaptive Card Designer](https://adaptivecards.io/designer). To add media files to your Adaptive Card, follow the steps:
-
-1. Open an existing Adaptive Card or create a new Adaptive Card using [Teams Developer Portal](https://dev.teams.microsoft.com/cards) or [Adaptive Card Designer](https://adaptivecards.io/designer).
-
-1. From the left pane, under **Elements**, select **Media** and add it to your Adaptive Card.
-
-   :::image type="content" source="../../assets/images/media-elements-in-adaptive-cards/media-element-in-ac.png" alt-text="Screenshot shows you the Adaptive Card with media elements.":::
 
 1. Add your media files to OneDrive or SharePoint.
 
@@ -45,6 +39,12 @@ You can add media files to an existing or new Adaptive Card using [Teams Develop
 
     >[!NOTE]
     > Adaptive Card don't support media file links or url that are copied directly from the address bar.
+
+1. Open an existing Adaptive Card or create a new Adaptive Card using [Teams Developer Portal](https://dev.teams.microsoft.com/cards) or [Adaptive Card Designer](https://adaptivecards.io/designer).
+
+1. From the left pane, under **Elements**, select **Media** and add it to your Adaptive Card.
+
+   :::image type="content" source="../../assets/images/media-elements-in-adaptive-cards/media-element-in-ac.png" alt-text="Screenshot shows you the Adaptive Card with media elements.":::
 
 1. Under **Custom card structure title**, select **Media**. The **ELEMENT PROPERTIES** window appears.
 
@@ -91,21 +91,6 @@ The following code shows an example of an Adaptive Card with media elements:
 }
 
 ```
-
-## Scenarios
-
-Following are the scenarios for Line Of Business (LOB) and third party partner:
-
-**LOB scenarios**
-
-Video or audio files are directly uploaded to OneDrive or SharePoint and accessible within the tenant and Adaptive Card plays the file through OnePlayer.
-
-**Third party partner scenarios**
-
-To improve the ability to deal with media files, following are the dynamic user-uploaded scenarios where users upload video or audio files within OneDrive or SharePoint in other tenants and be able to link to them:
-
-* Files are directly uploaded to OneDrive or SharePoint external to the current tenant.
-* You can add files that are available in external storage with SSO or authentication. For example, Google Drive, Dropbox, and so on.
 
 ## Limitations
 
