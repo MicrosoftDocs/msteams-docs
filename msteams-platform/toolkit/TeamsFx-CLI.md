@@ -286,7 +286,7 @@ Check, grant, and list user permission.
 | Parameter | Required | Description |
 |:----------------  |:-------------|:-------------|
 | `--env` | Yes | Select an existing environment for the project. |
-| `--folder` | No | Select root folder of the project. Defaults to `./` |
+| `--folder` | No | Select root folder of the project. Defaults to `./`. |
 | `--email` | No | Input email address of collaborator. |
 | `--teams-app-manifest` | No | Manifest of Your Teams app. |
 | `--aad-app-manifest` | No | Manifest of your Azure AD app. |
