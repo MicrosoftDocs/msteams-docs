@@ -18,9 +18,18 @@ Here's an idea of what you'll learn:
 * Configure and build different types of Teams apps.
 * Learn about extending your Teams app across Microsoft 365.
 
+## Choose your path to learn
+
+(Note: please edit the content!)
+
+In this section, you will learn these three major app capabilities-- tabs, bot, and message extension. And each tutorial, you have two ways to learn. One way is a quickstart using a GitHub Codespaces instance, and another way takes longer but you learn step by step.
+
+:::image type="content" border="false" source="../assets/images/get-started/codescpaces-vs-manual.png" alt-text="Illustration showing your choices to build Teams app - Codespaces bundles all you need and it only takes several minutes to rey, while getting started manually will take time but you learn step-by-step":::
+
 ## App capabilities and development tools
 
-:::image type="content" border="false" source="../assets/images/get-started/get-started.png" alt-text="Illustration showing your choices to build Teams app":::
+(Note: Move some content to Overview > Tools and SDKs (title TBD))
+
 
 Depending on the capabilities you want for your app, choose an appropriate development tool set.
 

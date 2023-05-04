@@ -31,7 +31,7 @@ Collate and map requirements to Teams features:
 
 **Teams app solution**: A Teams *personal chat bot* app that checks and *sends forecast notification* to *registered users* before their travel date.
 
-:::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-solution.png" alt-text="A developer at a travel agency builds a bot for Teams that sends weather forecast to customers so that they can plan ahead their traveling dates":::
+:::image type="content" border="false" source="../msteams-platform/assets/images/overview/developer-scenario-solution.png" alt-text="A developer at a travel agency builds a bot for Teams that sends weather forecast to customers so that they can plan ahead their traveling dates":::
 
 Teams offers these and many more capabilities to bring your users a feature-rich app solution. To develop this app:
 
@@ -42,23 +42,25 @@ Teams offers these and many more capabilities to bring your users a feature-rich
 
 ## Choose what suits you
 
+(Notes: This section about SDKs and tools will be on its own. These diagrams aren't enough to explain what each dev needs and which SDL/tools are the optional, so they need to be described well with text too. Also, the second tools diagram needs to be updated later, but I am including it as a placeholder! Thank you!)
+
 You can build a Teams app as per your app's requirements. Based on factors, such as business needs, development environment, domain knowledge, select the environment and tools you want to build your app.
 
 A Teams app offers you the flexibility of choosing your build environment. It includes tools, framework, and languages to approach your app development.
 
-:::image type="content" source="../msteams-platform/assets/images/overview/sdk-api.png" alt-text="Business need app":::
+:::image type="content" source="../msteams-platform/assets/images/overview/sdk-api.png" alt-text="Available SDKs and tools to build Teams apps":::
 
 Build your Teams app in the environment that works for your particular requirements. You can even select a combination.
 
 For example, you can use Teams Toolkit to build an app with JavaScript and host it on a SharePoint site.
+
+:::image type="content" source="../msteams-platform/assets/images/overview/choose-what-you-need.png" alt-text="Pick SDKs and tools you need":::
 
 ## Teams collaborative platform
 
 A Teams app brings your users the advantages of a collaborative workspace.
 
 As a platform for building apps, Teams offers the full range of apps and toolkits. Teams platform supports you at every stage from planning your app to distributing it.
-
-:::image type="content" source="../msteams-platform/assets/images/overview/teams-dev-life-cycle.png" alt-text="Describing a life cycle of Teams app development. Plan, Design, Build, Extend, Test, Deploy, Distribute. Details shown in a bullet list below.":::
 
 From designing to building and distributing a Teams app, you can use various tools and services. An example development flow can be:
 
