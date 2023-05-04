@@ -94,8 +94,8 @@ The following code shows an example of an Adaptive Card with media elements:
 
 ## Limitations
 
-* Adaptive Card supports only the media files from SharePoint or OneDrive.
-* Ensure that users have access the media files available in the SharePoint or OneDrive.
+* Adaptive Card supports only the media files uploaded in SharePoint or OneDrive.
+* Ensure that the users have access to the media files available in the SharePoint or OneDrive.
 
 ## See also
 
