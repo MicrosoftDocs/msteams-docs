@@ -1016,15 +1016,23 @@ The following code provides an example of meeting end event payload:
 
 ## Participant events
 
-When a bot is built through Developer Portal, you can subscribe to participant join and leave events. To subscribe to these events, follow the steps:
+When a bot is built through Developer Portal, you can subscribe to participant join and leave events. To subscribe to participant events ensure to add the following [RSC delegated permissions](~/resources/schema/manifest-schema#rsc-delegated-permissions) to your app:
+
+* `OnlineMeetingParticipant.Read.Chat` for scheduled private meetings.
+* `ChannelMeetingParticipant.Read.Group` for scheduled channel meetings.
+
+> [NOTE!]
+> Participant events is supported in scheduled private and channel meetings only.
+
+To subscribe to these events, follow the steps:
 
 1. Go to Developer Portal and open your bot app.
 1. In the **Meeting events** section of the registered bot app, select the required events.
 1. Select **Save**
 
-:::image type="content" source="~/assets/images/apps-in-meetings/participant-events.png" alt-text="Screenshot shows how developer portal display for participant events.":::
+   :::image type="content" source="~/assets/images/apps-in-meetings/participant-events.png" alt-text="Screenshot shows how developer portal display for participant events.":::
 
-The bot receives the participant events only when the app is added to the meeting before a participant joins or leaves the meeting.
+The bot receives the participant events only when the app is added to the meeting before a participant joins or leaves the meeting. 
 
 ### Participant join event
 
