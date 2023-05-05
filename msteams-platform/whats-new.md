@@ -24,7 +24,7 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 Teams platform features that are available to all app developers.
 
-**2023 April**
+**2023 May**
 
 ***May 05, 2023***: [Deep link to meeting side panel](apps-in-teams-meetings/build-tabs-for-meeting.md#deep-link-to-meeting-side-panel)
 
