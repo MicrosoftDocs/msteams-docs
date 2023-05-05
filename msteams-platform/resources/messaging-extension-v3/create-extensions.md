@@ -337,7 +337,7 @@ Here's an example of the response:
 }
 ```
 
-Once the user completes the installation, your bot receives another invoke message with `name = composeExtension/submitAction` and `value.data.msteams.justInTimeInstall = true`.
+Once the user completes the installation, your bot will receive another invoke message with `name = composeExtension/submitAction` and `value.data.msteams.justInTimeInstall = true`.
 
 Here's an example of the invoke:
 
@@ -367,7 +367,7 @@ Respond to the invoke with the same task response you would have responded with 
 
 ## Responding to submit
 
-Once a user completes entering their input, bot receives a `composeExtension/submitAction` event with the command ID and parameter values set.
+Once a user completes entering their input, bot will receive a `composeExtension/submitAction` event with the command ID and parameter values set.
 
 These are the different expected responses to a `submitAction`.
 
