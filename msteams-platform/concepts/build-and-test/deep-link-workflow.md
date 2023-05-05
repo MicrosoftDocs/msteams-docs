@@ -159,6 +159,8 @@ Example:
 
 `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456?context={"chatId": "17:b42de192376346a7906a7dd5cb84b673@thread.v2","contextType":"chat"}`
 
+For query parameters and if you want to open deep link directly in the app rather than the meeting side panel, see [deep link to a tab](~/concepts/build-and-test/deep-link-application.md#generate-a-deep-link-to-your-tab).
+
 ## Deep link to join a meeting
 
 Application can read, join a meeting URL through Graph APIs. This deep link brings up the UI for the user to join that meeting.
