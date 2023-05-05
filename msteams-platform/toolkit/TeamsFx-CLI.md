@@ -190,7 +190,7 @@ Running `teamsfx publish --env local` will trigger the publish stage in `teamsap
 | Parameter | Required | Description |
 |:----------------  |:-------------|:-------------|
 | `--env` | Yes | Select an environment for the project. |
-| `--folder` | No |Select root folder of the project. Defaults to "./". |
+| `--folder` | No |Select root folder of the project. Defaults to `./`. |
 
 ## `teamsfx package`
 

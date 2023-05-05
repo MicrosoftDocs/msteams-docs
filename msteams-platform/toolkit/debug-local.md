@@ -20,7 +20,7 @@ Teams Toolkit helps you to debug and preview your Microsoft Teams app locally. D
 Teams Toolkit in Microsoft Visual Studio Code gives you the features to automate debugging of your Teams app locally. Visual Studio Code allows you to debug tab, bot, and message extension. You need to set up Teams Toolkit before you debug your app.
 
 > [!NOTE]
-> Your old Teams Toolkit project will be upgraded to use new tasks, for more information, see [tasks doc].
+> Your old Teams Toolkit project will be upgraded to use new tasks, for more information, see [tasks doc](https://aka.ms/teamsfx-tasks).
 
 ## Set up your Teams Toolkit for debugging
 
@@ -71,7 +71,7 @@ Toolkit launches a new Microsoft Edge or Chrome browser instance based on your s
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/microsoft365-signin.png" alt-text="Sign into M365 account":::
 
    > [!TIP]
-   > You can select **Create a Microsoft 365 Testing Tenant** to learn about Microsoft 365 Developer Program. Your default web browser opens to let you sign-in to your Microsoft 365 account using your credentials.
+   > You can select **Create a Microsoft 365 Testing Tenant** to learn about Microsoft 365 Developer Program. Your default web browser opens to let you sign in to your Microsoft 365 account using your credentials.
 
 4. Select **Install** to install the development certificate for localhost.
 
@@ -93,8 +93,8 @@ Teams Toolkit launches your browser instance and opens a web page to load Teams 
 After the initial setup process, Teams Toolkit starts the following processes:
 
 * [Starts app services](#starts-app-services)
-* [Launches debug configurations]
-* [Sideloads the Teams app]
+* [Launches debug configurations](#launches-debug-configurations)
+* [Sideloads the Teams app](#sideloads-the-teams-app)
 
 ### Starts app services
 

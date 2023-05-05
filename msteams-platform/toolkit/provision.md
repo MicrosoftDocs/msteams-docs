@@ -160,7 +160,7 @@ This action will create a new Azure Active Directory (AAD) application to authen
 
 #### What resource it operates
 
-Azure Active Directory in your Microsoft 365 tenant.
+AAD in your Microsoft 365 tenant.
 
 #### How to use it
 
@@ -197,7 +197,7 @@ This action will update your AAD application based on give AAD app manifest. It 
 
 #### What resource it operates
 
-Azure Active Directory in your Microsoft 365 tenant.
+AAD in your Microsoft 365 tenant.
 
 #### How to use it
 
@@ -218,7 +218,7 @@ This action will create a new or reuse an existing AAD application for bot.
 
 #### What resource it operates
 
-Azure Active Directory in your Microsoft 365 tenant.
+AAD in your Microsoft 365 tenant.
 
 #### How to use it
 
@@ -356,7 +356,7 @@ You can customize your bot or the Teams app by adding environment variables to u
 
 #### Use an existing Azure AD app for your Teams app
 
-You can follow below steps to add environment variables to the .env files to use an Azure AD app created for your Teams app. If you don't have an Azure AD app yet or you already have one but don't know where to find the correct value, see how to use existing Azure AD app in TeamsFx project.
+You can follow below steps to add environment variables to the .env files to use an Azure AD app created for your Teams app. If you don't have an Azure AD app yet or you already have one but don't know where to find the correct value, see [how to use existing Azure AD app in TeamsFx project](https://github.com/devdiv-azure-service-dmitryr/teamsfx-docs/blob/main/V5-doc-update/use-existing-aad-app.md).
 
 1. Open `teamsapp.yml` and find the `aadApp/create` action.
 
@@ -401,7 +401,7 @@ You can follow below steps to add environment variables to the .env files to use
 
 #### Use an existing Azure AD app for your bot
 
-You can follow below steps to add environment variables to the .env files to use an Azure AD app created for your Teams app. If you don't have an Azure AD app for your bot yet or you already have one but don't know where to find the correct values, see [how to use existing Azure AD app in TeamsFx project].
+You can follow below steps to add environment variables to the .env files to use an Azure AD app created for your Teams app. If you don't have an Azure AD app for your bot yet or you already have one but don't know where to find the correct values, see [how to use existing Azure AD app in TeamsFx project](https://github.com/devdiv-azure-service-dmitryr/teamsfx-docs/blob/main/V5-doc-update/use-existing-aad-app.md).
 
 1. Open `teamsapp.yml` and find the `botAadApp/create` action.
 

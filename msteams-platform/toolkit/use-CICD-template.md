@@ -12,6 +12,8 @@ ms.date: 04/20/2022
 
 TeamsFx helps to automate your development workflow while building Teams application. The following are the tools and templates you can use to set up CI/CD pipelines, create workflow templates, and customize CI/CD workflow with GitHub, Azure DevOps, Jenkins, and other platforms. To provision resources, you can create Azure service principals and use the Provision pipeline or do it manually by leveraging bicep files. To publish Teams app, you can use the Publish pipeline or do it manually by leveraging [Developer Portal for Teams](https://dev.teams.microsoft.com/home).
 
+## Tools and Templates
+
 |Tools and Templates | Description |
 |---|---|
 |[TeamsFx-CLI-Action](https://github.com/OfficeDev/teamsfx-cli-action)|GitHub action that integrates with TeamsFx CLI.|
@@ -48,7 +50,7 @@ Two categories of login credentials are involved in CI/CD workflows:
 2. **Azure** - Azure credentials are required for running Azure hosted projects' Provision and CD workflows.
 
 > [!NOTE]
-> Azure subscription id is required to be set in environment variable or `env/.env.*` files before running Provision workflows. The variable name used is `AZURE_SUBSCRIPTION_ID`. Also, please don't forget to commit and push files `env/.env.*` into Git repositories or set pipelines' environment variables as they are ignored by `.gitignore` file by default.
+> Azure subscription id is required to be set in environment variable or `env/.env.*` files before running Provision workflows. The variable name used is `AZURE_SUBSCRIPTION_ID`. Also, please don't forget to commit and push files `env/.env.*` into Git repositories or set pipelines' environment variables as they're ignored by `.gitignore` file by default.
 
 |Name | Description |
 |---|---|
@@ -62,8 +64,8 @@ Two categories of login credentials are involved in CI/CD workflows:
 
 > [!NOTE]
 >
-> * Currently, a non-interactive authentication style for Microsoft 365 is used in CI/CD workflows, so please ensure that your Microsoft 365 account has sufficient privileges in your tenant and doesn't have multi-factor authentication or other advanced security features enabled. Please refer to the [Configure Microsoft 365 Credentials] to make sure you have disabled Multi-factor Authentication and Security Defaults for the credentials used in the workflow.
-> * Currently, service principal for Azure is used in CI/CD workflows, and to create Azure service principals for use, refer to [here].
+> * Currently, a non-interactive authentication style for Microsoft 365 is used in CI/CD workflows, so please ensure that your Microsoft 365 account has sufficient privileges in your tenant and doesn't have multi-factor authentication or other advanced security features enabled. Please refer to the [Configure Microsoft 365 Credentials](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md#configure-m365azure-credentials-as-github-secret) to make sure you have disabled Multi-factor Authentication and Security Defaults for the credentials used in the workflow.
+> * Currently, service principal for Azure is used in CI/CD workflows, and to create Azure service principals for use, refer to [here](https://github.com/devdiv-azure-service-dmitryr/teamsfx-docs/blob/main/V5-doc-update/cicd.md#how-to-create-azure-service-principals-for-use).
 
 ## Host types
 
@@ -78,12 +80,12 @@ To set up pipelines with GitHub for CI/CD:
 
 ### Create CI/CD workflows
 
-1. Download the corresponding template files from [Tools and Templates].
+1. Download the corresponding template files from [Tools and Templates](#tools-and-templates).
 1. Rename the downloaded template files by your needs.
 1. Put them under `.github/workflows` which is the designated folder for GitHub Actions.
 1. Commit and push these template files into remote repositories.
-1. Add necessary [encrypted secrets] for your workflows.
-1. Trigger your workflows. Check more [details] about how to trigger a workflow on GitHub.
+1. Add necessary [encrypted secrets](https://docs.github.com/en/actions/security-guides/encrypted-secrets) for your workflows.
+1. Trigger your workflows. Check more [details](https://docs.github.com/en/actions/using-workflows/triggering-a-workflow) about how to trigger a workflow on GitHub.
 
 ### Customize CI workflow
 
@@ -120,13 +122,13 @@ To set up pipelines with Azure DevOps for CI/CD:
 
 ### Create CI/CD pipelines
 
-1. Download the corresponding template files from [Tools and Templates].
+1. Download the corresponding template files from [Tools and Templates](#tools-and-templates).
 1. Rename the downloaded template files by your needs.
 1. Put them under `.azure/pipelines` which is the conventional folder for Azure Pipelines.
 1. Commit and push these template files into remote repositories.
-1. Create corresponding Azure DevOps pipelines by following [Create your first Azure DevOps Pipeline].
-1. Add necessary [Azure DevOps Pipeline variables] for your pipelines.
-1. Trigger your pipelines automatically, manually, or do customization (Check the `trigger:` or `pr:` section in yml files to find the triggers). More about triggers in Azure DevOps, refer to [Triggers in Azure pipelines].
+1. Create corresponding Azure DevOps pipelines by following [Create your first Azure DevOps Pipeline](/azure/devops/pipelines/create-first-pipeline).
+1. Add necessary [Azure DevOps Pipeline variables](/azure/devops/pipelines/process/variables) for your pipelines.
+1. Trigger your pipelines automatically, manually, or do customization (Check the `trigger:` or `pr:` section in yml files to find the triggers). More about triggers in Azure DevOps, refer to [Triggers in Azure pipelines](/azure/devops/pipelines/build/triggers).
 
 ### Customize CI pipeline
 
@@ -163,7 +165,7 @@ To set up pipelines with Jenkins for CI/CD:
 
 ### Create CI/CD pipelines
 
-1. Download the corresponding template files from [Tools and Templates].
+1. Download the corresponding template files from [Tools and Templates](#tools-and-templates).
 1. Rename the downloaded template files by your needs.
 1. Put them under `.jenkins/pipelines` which can be a conventional folder for Jenkins Pipelines.
 
@@ -195,7 +197,7 @@ To customize the Provision and Publish pipeline, you can do the following:
 
 ## Set up pipelines for other platforms
 
-You can follow the predefined listed example bash scripts from [Tools and Templates] to build and customize CI/CD pipelines on the other platforms:
+You can follow the predefined listed example bash scripts from [Tools and Templates](#tools-and-templates) to build and customize CI/CD pipelines on the other platforms:
 
 The scripts are based on a cross-platform TeamsFx command line tool [TeamsFx-CLI](https://www.npmjs.com/package/@microsoft/teamsfx-cli). You can install it with `npm install -g @microsoft/teamsfx-cli` and follow the [documentation](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) to customize the scripts.
 
@@ -234,7 +236,7 @@ Perform the following steps to publish your app:
 1. Sign in to [Developer portal for Teams](https://dev.teams.microsoft.com) using the corresponding account.
 2. Import your app package in zip, select **App** > **Import app** > **Replace**.
 3. Select the target app in app list.
-4. Select `Publish -> Publish to your org` to publish your app.
+4. To publish your app, select `Publish -> Publish to your org` .
 
 ## See also
 

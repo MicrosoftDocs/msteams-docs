@@ -34,19 +34,19 @@ Teams Toolkit checks the following prerequisites during the debugging process:
 
 When you select **Start Debugging (F5)**, Teams Toolkit output channel displays the progress and result after checking the prerequisites. [image to be added]
 
-For more information on validating prerequisites, see [Validate prerequisites task].
+For more information on validating prerequisites, see [Validate prerequisites task](https://aka.ms/teamsfx-tasks/check-prerequisites).
 
 ## Start local tunnel
 
-For bot and message extension, Teams Toolkit starts a local tunnel service to make the bot messaging endpoint public. For more information, see [Start local tunnel task].
+For bot and message extension, Teams Toolkit starts a local tunnel service to make the bot messaging endpoint public. For more information, see [Start local tunnel task](https://aka.ms/teamsfx-tasks/local-tunnel).
 
 ## Create the debug resources
 
-Teams Toolkit executes lifecycle `provision` defined in `teamsapp.local.yml` to create Teams app related resources required for debugging. For more information, see [Provision] task and [available actions].
+Teams Toolkit executes lifecycle `provision` defined in `teamsapp.local.yml` to create Teams app related resources required for debugging. For more information, see [Provision task](https://aka.ms/teamsfx-tasks/provision) and [available actions](https://aka.ms/teamsfx-actions).
 
 ## Build project
 
-Teams Toolkit executes lifecycle `deploy` defined in `teamsapp.local.yml` to build the project. For more information, see [Deploy task] and [available actions].
+Teams Toolkit executes lifecycle `deploy` defined in `teamsapp.local.yml` to build the project. For more information, see [Deploy task](https://aka.ms/teamsfx-tasks/deploy) and [available actions](https://aka.ms/teamsfx-actions).
 
 ## Take a tour of your app source code
 
@@ -58,7 +58,7 @@ You can view the project folders and files under **Explorer** in Visual Studio C
 |  `env/.env.local` | Environment variables file for Teams Toolkit project | The values of each environment variable are consumed or generated during debugging. |
 | `.localConfigs` | Environment variables file for the app code | The values of each environment variable are generated during debugging. |
 
-For more information on the project folder structure, see [Teams Toolkit project].
+For more information on the project folder structure, see [Teams Toolkit project](https://aka.ms/teamsfx-v5.0-guide#teams-toolkit-project).
 
 ## See also
 
