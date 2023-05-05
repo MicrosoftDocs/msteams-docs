@@ -1014,17 +1014,17 @@ The following code provides an example of meeting end event payload:
 | **value.EndTime** | The meeting end time in UTC. |
 | **locale**| The locale of the message set by the client. |
 
-## Participant events
+## Get participant events
 
 When a bot is built through Developer Portal, you can subscribe to participant join and leave events. To subscribe to participant events ensure to add the following [RSC delegated permissions](~/resources/schema/manifest-schema.md#rsc-delegated-permissions) to your app:
 
 * `OnlineMeetingParticipant.Read.Chat` for scheduled private meetings.
 * `ChannelMeetingParticipant.Read.Group` for scheduled channel meetings.
 
-> [NOTE!]
+> [!NOTE]
 > Participant events is supported in scheduled private and channel meetings only.
 
-To subscribe to these events, follow the steps:
+To subscribe to participant events, follow the steps:
 
 1. Go to Developer Portal and open your bot app.
 1. In the **Meeting events** section of the registered bot app, select the required events.
