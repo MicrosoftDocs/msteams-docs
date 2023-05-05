@@ -1016,12 +1016,20 @@ The following code provides an example of meeting end event payload:
 
 ## Get participant events
 
-You can subscribe to participant join and leave events for a bot app through Developer Portal. To subscribe to participant events ensure to add the following [RSC delegated permissions](~/resources/schema/manifest-schema.md#rsc-delegated-permissions) to your app manifest:
+Get participant events will provide your bot with real-time meeting participant events such as participant join and leave events. For example, if you want your app to notify or return the time stamp when an attendee joined or left the meeting or when an  has left meeting ticipant events will help your app to determine the participant joinning and leaving information 
+
+
+For a bot to receive participant events, ensure that you add the bot to the meeting before a participant joins or leaves the meeting.
+
+
+#### Prerequisite
+
+Your app manifest must have the following RSC delegated permissions to receive the participant join and leave events:
 
 * `OnlineMeetingParticipant.Read.Chat` for scheduled private meetings.
 * `ChannelMeetingParticipant.Read.Group` for scheduled channel meetings.
 
-Use the following examples to configure your manifest:
+Use the following examples to configure your app manifest:
 
 <br>
 
@@ -1078,9 +1086,11 @@ Use the following examples to configure your manifest:
 > [!NOTE]
 > Participant events is supported in scheduled private and channel meetings only.
 
+[RSC delegated permissions](~/resources/schema/manifest-schema.md#rsc-delegated-permissions)
+
 To subscribe to participant events, follow the steps:
 
-1. Go to [Developer Portal](https://dev.teams.microsoft.com/) and open your bot app.
+1. open your bot app through [Developer Portal](https://dev.teams.microsoft.com/).
 1. In the **Meeting events** section, select the required events from the following:
     * Participant join the meeting
     * Participant leave the meeting
@@ -1088,9 +1098,7 @@ To subscribe to participant events, follow the steps:
 
    :::image type="content" source="~/assets/images/apps-in-meetings/participant-events.png" alt-text="Screenshot shows how developer portal display for participant events.":::
 
-For a bot to receive participant events, ensure that you add the bot to the meeting before a participant joins or leaves the meeting.
-
-### Participant join event
+# [Participant join event](#tab/Participant join event) 
 
 The following code provides an example of the participant join event payload:
 
@@ -1140,7 +1148,7 @@ The following code provides an example of the participant join event payload:
 } 
 ```
 
-### Participant leave event
+# [Participant leave event](#tab/Participant leave event) 
 
 The following code provides an example of the participant leave event payload:
 
@@ -1189,6 +1197,8 @@ The following code provides an example of the participant leave event payload:
     } 
 } 
 ```
+
+---
 
 ## Get incoming audio state
 
