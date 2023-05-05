@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 
 # Visual indicator for your Teams app
 
-Visual indicator for an app helps meeting participants identify any app activity during a meeting. Participants get activity notification for the meeting apps, even when the side panel is closed.
+Visual indicator for an app helps meeting participants identify any app activity during a meeting. Participants get activity notification for the meeting apps.
 
 When there's new activity during the meeting, the app calls the targeted meeting notification API and displays a red indicator on the app icon in the meeting unified bar (U-bar). When the participants select the app icon, the app opens in a meeting side panel, and the indicator goes away.
 
