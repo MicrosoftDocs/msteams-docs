@@ -1016,7 +1016,7 @@ The following code provides an example of meeting end event payload:
 
 ## Participant events
 
-When a bot is built through Developer Portal, you can subscribe to participant join and leave events. To subscribe to participant events ensure to add the following [RSC delegated permissions](~/resources/schema/manifest-schema#rsc-delegated-permissions) to your app:
+When a bot is built through Developer Portal, you can subscribe to participant join and leave events. To subscribe to participant events ensure to add the following [RSC delegated permissions](~/resources/schema/manifest-schema.md#rsc-delegated-permissions) to your app:
 
 * `OnlineMeetingParticipant.Read.Chat` for scheduled private meetings.
 * `ChannelMeetingParticipant.Read.Group` for scheduled channel meetings.
