@@ -9,13 +9,13 @@ ms.localizationpriority: medium
 
 # Visual indicator for your Teams app
 
-Visual indicator in Teams helps you to keep engaged with the apps added in the meeting even when the side panel isn't open.
+The Visual indicator on the Ubar indicates the meeting participants don't miss any real-time information from meeting apps, even when the side panel is closed. The app calls meeting notification API, whenever there's new activity during the meeting, which displays a red indicator on the app icon in the meeting Ubar, seeking participants attention to the activity.
 
-The indicator is displayed on the app icon in the Teams UI, whenever there’s a new activity in the app during the meeting and it attracts the users attention more easily.
+For example, a meeting participant A adds a new comment to a file during real-time collaboration, the app calls meeting notification API from meeting participant A’s side panel as soon as meeting participant A added the new comment. All other meeting participants can see the visual indicator on the app icon.
 
-(image to be added)
+The following image shows you the visual indicator on the app icon in the meeting Ubar:
 
-For example, if the user A add a new comment to a file during real-time collaboration, the app initiates the SDK call from user A’s side panel as soon as user A added the new comment. All other meeting participants can see the visual indicator on the app icon.
+[Image to be added]
 
 > [!NOTE]
 >
@@ -24,9 +24,7 @@ For example, if the user A add a new comment to a file during real-time collabor
 
 ## Enable visual indicator for your Teams app
 
-For a visual indicator, your Teams app must be integrated with bot SDK and support `meetingSidePanel` context.
-
-The [targeted meeting notification API](in-meeting-notification-for-meeting.md#enable-targeted-in-meeting-notification) in bot SDK has been extended to support the visual indicator capability on the app icon and pass the MRI IDs of the intended recipients.
+For a visual indicator, your Teams app must be integrated with bot SDK and have `meetingSidePanel` [context](build-tabs-for-meeting.md#context). The [targeted meeting notification API](in-meeting-notification-for-meeting.md#enable-targeted-in-meeting-notification) in bot SDK has been extended to support the visual indicator capability on the app icon and pass the MRI IDs of the intended recipients.
 
 To enable visual indicator for your Teams app:
 
@@ -62,6 +60,8 @@ App can define the following objects under the `surface` parameter:
 * The visual indicator is displayed only one notification for a user in a minute per meeting.
 
 * The visual indicator is displayed to a maximum of first 50 participants in the array for a particular meeting.
+
+*
 
 ## Code sample
 
